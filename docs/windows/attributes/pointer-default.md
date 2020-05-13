@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - pointer_default attribute
 ms.assetid: 2d0c7bbc-a1e8-4337-9e54-e304523e2735
-ms.openlocfilehash: c70c372e5f1c3a9c2f620a1fa3505fb9d0436e79
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d0c5832623c1e418f4c6e8bdb606d1d363503483
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514260"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166540"
 ---
 # <a name="pointer_default"></a>pointer_default
 
@@ -28,13 +28,13 @@ ms.locfileid: "69514260"
 *value*<br/>
 Значение типа, описывающее тип указателя: **ptr**, **ref**или **UNIQUE**.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Атрибут **pointer_default** C++ имеет те же функциональные возможности, что и атрибут [pointer_default](/windows/win32/Midl/pointer-default) MIDL.
 
 ## <a name="example"></a>Пример
 
-Пример использования **pointer_default**см. в примере для [DefaultValue](defaultvalue.md) .
+См. пример для [DefaultValue](defaultvalue.md) для примера использования **pointer_default**.
 
 ## <a name="requirements"></a>Требования
 
@@ -42,14 +42,14 @@ ms.locfileid: "69514260"
 
 |||
 |-|-|
-|**Относится к**|**interface**|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Отсутствуют|
-|**Недопустимые атрибуты**|Отсутствуют|
+|**Применение**|**interface**|
+|**Повторяемый**|нет|
+|**Обязательные атрибуты**|None|
+|**Недопустимые атрибуты**|None|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты интерфейса](interface-attributes.md)

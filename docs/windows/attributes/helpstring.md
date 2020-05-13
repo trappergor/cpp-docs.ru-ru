@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpstring attribute [C++]
 ms.assetid: 0401e905-a63e-4fad-98d0-d1efea111966
-ms.openlocfilehash: 47a07ee94ad774bde46dce00ea46612fae3a4eca
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d22ecf5a7131a1368abf2b1fbd8261ec6195b51e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69490877"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166969"
 ---
 # <a name="helpstring"></a>helpstring
 
@@ -25,10 +25,10 @@ ms.locfileid: "69490877"
 
 ### <a name="parameters"></a>Параметры
 
-*string*<br/>
+*строка*<br/>
 Текст строки справки.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Атрибут **helpString** C++ имеет те же функциональные возможности, что и атрибут [helpString](/windows/win32/Midl/helpstring) MIDL.
 
@@ -42,14 +42,14 @@ ms.locfileid: "69490877"
 
 |||
 |-|-|
-|**Относится к**|**Interface**, **typedef**, **класс**, метод, свойство|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Отсутствуют|
-|**Недопустимые атрибуты**|Отсутствуют|
+|**Применение**|**Interface**, **typedef**, **класс**, метод, свойство|
+|**Повторяемый**|нет|
+|**Обязательные атрибуты**|None|
+|**Недопустимые атрибуты**|None|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты интерфейса](interface-attributes.md)<br/>

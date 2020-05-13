@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C1113
 ms.assetid: 1c7c3ce7-2827-4822-9c63-0abc8615ea39
-ms.openlocfilehash: c92b22e25a3620010b883c45c2343d9cb4d5a5f7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3f70b62d2699a0d6a6e2caa5b750fe3690a9e8b3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182630"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203657"
 ---
 # <a name="fatal-error-c1113"></a>Неустранимая ошибка C1113
 
-\#Сбой на «файл»
+\#с ошибкой в файле "File"
 
-Можно передать только файл в формате Microsoft Intermediate Language (MSIL) [#using](../../preprocessor/hash-using-directive-cpp.md) директива. [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) параметры компилятора позволяют создать выходной файл MSIL. Другие языки Visual Studio также создают файлы MSIL.
+В директиву [#using](../../preprocessor/hash-using-directive-cpp.md) можно передать только файл в формате MSIL. Параметр компилятора [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) позволяет создать выходной файл MSIL. Другие языки Visual Studio также создают файлы MSIL.

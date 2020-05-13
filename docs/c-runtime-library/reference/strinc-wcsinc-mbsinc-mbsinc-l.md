@@ -1,11 +1,13 @@
 ---
 title: _strinc, _wcsinc, _mbsinc, _mbsinc_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsinc
 - _wcsinc
 - _mbsinc_l
 - _strinc
+- _o__mbsinc
+- _o__mbsinc_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -43,12 +46,12 @@ helpviewer_keywords:
 - _tcsinc function
 - tcsinc function
 ms.assetid: 54685943-8e2c-45e9-a559-2d94930dc6b4
-ms.openlocfilehash: a468438d747a9497e974b10f9974bb79ffef1add
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a53102f991ec7467fd74e1997f8d5b7419b15aa1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958253"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919983"
 ---
 # <a name="_strinc-_wcsinc-_mbsinc-_mbsinc_l"></a>_strinc, _wcsinc, _mbsinc, _mbsinc_l
 
@@ -89,16 +92,18 @@ unsigned char *_mbsinc_l(
 
 Каждая из этих подпрограмм возвращает указатель на символ, который непосредственно следует за *текущим*.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Функция **_mbsinc** возвращает указатель на первый байт многобайтового символа, который непосредственно следует за *текущим*. **_mbsinc** распознает последовательности многобайтовых символов в соответствии с используемой в данный момент [многобайтовой кодовой страницей](../../c-runtime-library/code-pages.md) . **_mbsinc_l** является идентичным за исключением того, что вместо этого использует переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+Функция **_mbsinc** возвращает указатель на первый байт многобайтового символа, который непосредственно следует за *текущим*. **_mbsinc** распознает последовательности многобайтовых символов в соответствии с используемой в данный момент [многобайтовой кодовой страницей](../../c-runtime-library/code-pages.md) ; **_mbsinc_l** является идентичным за исключением того, что вместо этого использует переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-Функция Generic-Text **_tcsinc**, определенная в файле Tchar. h, сопоставляется с **_mbsinc** , если уже определен **_MBCS** , или с **_wcsinc** , если был определен **_UNICODE** . В противном случае **_tcsinc** сопоставляется с **_strinc**. **_strinc** и **_wcsinc** — это версии **_mbsinc**для однобайтовых символов и расширенных символов. **_strinc** и **_wcsinc** предоставляются только для этого сопоставления и не должны использоваться в других случаях. Дополнительные сведения см. в разделах [Использование универсальных текстовых сопоставлений](../../c-runtime-library/using-generic-text-mappings.md) и [Универсальные текстовые сопоставления](../../c-runtime-library/generic-text-mappings.md).
+Функция Generic-Text **_tcsinc**, определенная в файле Tchar. h, сопоставляется с **_mbsinc** , если определена **_MBCS** , или для **_wcsinc** , если определено **_UNICODE** . В противном случае **_tcsinc** сопоставляется с **_strinc**. **_strinc** и **_wcsinc** — это версии **_mbsinc**для однобайтовых символов и расширенных символов. **_strinc** и **_wcsinc** предоставляются только для этого сопоставления и не должны использоваться в других случаях. Дополнительные сведения см. в разделах [Использование универсальных текстовых сопоставлений](../../c-runtime-library/using-generic-text-mappings.md) и [Универсальные текстовые сопоставления](../../c-runtime-library/generic-text-mappings.md).
 
 Если *Current* имеет **значение NULL**, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция возвращает **еинвал** и **устанавливает значение** переводится в **еинвал**.
 
 > [!IMPORTANT]
 > Эти функции могут быть подвержены угрозам переполнения буфера. Переполнение буфера можно использовать для атак на систему, поскольку оно может привести к несанкционированному повышению уровня привилегий. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](/windows/win32/SecBP/avoiding-buffer-overruns).
+
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -109,11 +114,11 @@ unsigned char *_mbsinc_l(
 |**_strinc**|\<tchar.h>|
 |**_wcsinc**|\<tchar.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Операции со строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Управление строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_strdec, _wcsdec, _mbsdec, _mbsdec_l](strdec-wcsdec-mbsdec-mbsdec-l.md)<br/>
 [_strnextc, _wcsnextc, _mbsnextc, _mbsnextc_l](strnextc-wcsnextc-mbsnextc-mbsnextc-l.md)<br/>
 [_strninc, _wcsninc, _mbsninc, _mbsninc_l](strninc-wcsninc-mbsninc-mbsninc-l.md)<br/>

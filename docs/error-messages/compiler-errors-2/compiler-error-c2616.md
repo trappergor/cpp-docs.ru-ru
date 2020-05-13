@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C2616
 ms.assetid: 8d0c02d6-a0b0-4135-b10f-438d67da68c6
-ms.openlocfilehash: bc0afc67985a71b2e7a48c3af323a00df1ed89c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c83b9031b0e11052235d03bdd9ba8013a3848d9b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62329586"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177265"
 ---
 # <a name="compiler-error-c2616"></a>Ошибка компилятора C2616
 
-«Преобразование»: невозможно выполнить неявное преобразование, не являющееся левосторонним «тип1» в «тип2», не являющееся константным
+"преобразование": невозможно неявно преобразовать тип "тип1", отличный от lvalue, в "тип2", не являющийся константой
 
-Не удается инициализировать ссылку из, не являющееся левосторонним.
+Ссылка не может быть инициализирована из типа, отличного от lvalue.
 
-Это ошибка в режиме совместимости с ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) и предупреждения в расширениях Microsoft (**/Ze**).
+Это ошибка при совместимости с ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) и предупреждение в разделе расширения Майкрософт ( **/Ze**).

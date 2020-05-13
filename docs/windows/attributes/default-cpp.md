@@ -8,12 +8,12 @@ helpviewer_keywords:
 - attributes [C#], default attribute
 - defaults, default attribute
 ms.assetid: 0cdca716-1ba8-46d7-9399-167e55492870
-ms.openlocfilehash: 291e16ad0967acd1869874fcc9fa6eb5529e4b44
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b789f82f4b5a09b86d72dfde5d783665cf2e918a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501686"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167190"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -37,7 +37,7 @@ ms.locfileid: "69501686"
 
 Если исходный интерфейс по умолчанию не указан, в качестве интерфейса по умолчанию используется первый исходный интерфейс.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Атрибут **default** языка C++ имеет ту же функциональность, что и атрибут [default](/windows/win32/Midl/default) языка MIDL. Атрибут **default** также используется вместе с атрибутом [case](case-cpp.md) .
 
@@ -99,14 +99,14 @@ int main() {
 
 |||
 |-|-|
-|**Относится к**|**класс**, **Структура**, элемент данных|
-|**Повторяемый**|Нет|
+|**Применение**|**класс**, **Структура**, элемент данных|
+|**Повторяемый**|нет|
 |**Обязательные атрибуты**|**coclass** (при применении к **классу** или **структуре**)|
-|**Недопустимые атрибуты**|Отсутствуют|
+|**Недопустимые атрибуты**|None|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты классов](class-attributes.md)<br/>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - source attribute
 ms.assetid: 1878d05d-7709-4e97-b114-c62f38f5140e
-ms.openlocfilehash: 79614a345e6c07b03df351da93a847fe12e4b110
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5f961513b948c3195aea864d97313ac09e97344e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514023"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166228"
 ---
 # <a name="source-c"></a>source (C++)
 
@@ -25,10 +25,10 @@ ms.locfileid: "69514023"
 
 ### <a name="parameters"></a>Параметры
 
-*interfaces*<br/>
+*интерфейс*<br/>
 Один или несколько интерфейсов, которые указываются при применении атрибута Source к классу. Этот параметр не используется, если источник применяется к свойству или методу.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 **Исходный** C++ атрибут имеет те же функциональные возможности, что и [Исходный](/windows/win32/Midl/source) атрибут MIDL.
 
@@ -74,14 +74,14 @@ class NN : public b
 
 |||
 |-|-|
-|**Относится к**|**класс**, **Структура**, **интерфейс**|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|`coclass`(при применении к классу или структуре)|
-|**Недопустимые атрибуты**|Отсутствуют|
+|**Применение**|**класс**, **Структура**, **интерфейс**|
+|**Повторяемый**|нет|
+|**Обязательные атрибуты**|`coclass` (при применении к классу или структуре)|
+|**Недопустимые атрибуты**|None|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты классов](class-attributes.md)<br/>

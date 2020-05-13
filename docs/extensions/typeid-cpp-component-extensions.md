@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - typeid keyword [C++]
 ms.assetid: e9706cae-e7c4-4d6d-b474-646d73df3e70
-ms.openlocfilehash: ec64388d5f71cff01207129e337cf20bb151db1a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 8b22481fecb4b7de5106921fec1c3a43fab81a48
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515989"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181750"
 ---
 # <a name="typeid--ccli-and-ccx"></a>typeid (C++/CLI и C++/CX)
 
@@ -45,7 +45,7 @@ Platform::Type^ type = T::typeid;
 *T*<br/>
 Имя типа.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 В C++/CX typeid возвращает значение [Platform::Type](../cppcx/platform-type-class.md), создаваемое из данных типа во время выполнения.
 
@@ -66,7 +66,7 @@ type::typeid
 *type*<br/>
 Имя типа (абстрактный декларатор), для которого требуется объект `System::Type`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 `typeid` используется для получения <xref:System.Type> для типа во время компиляции.
 
@@ -188,6 +188,6 @@ int::typeid != pointer_to_int::typeid, as expected
 int::typeid == handle_to_int::typeid, as expected
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Расширения компонентов для .NET и UWP](component-extensions-for-runtime-platforms.md)

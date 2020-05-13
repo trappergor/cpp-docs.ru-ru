@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1169
 ms.assetid: e079d518-f184-48cd-8b38-969bf137af54
-ms.openlocfilehash: f167c82c28834d1de82578735e5557d0e9d6b5f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19ac8bb8bd28f42b28fb86e64e72f4ea01f01ab1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242725"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183999"
 ---
 # <a name="linker-tools-error-lnk1169"></a>Ошибка средств компоновщика LNK1169
 
-один или несколько обнаружен многократно определенный символ
+обнаружен один или несколько определенных символов
 
-Ошибка сборки из-за несколько определений одного или нескольких символов. Эта ошибка предшествует ошибка [LNK2005](../../error-messages/tool-errors/linker-tools-error-lnk2005.md).
+Сбой сборки из-за нескольких определений одного или нескольких символов. Этой ошибке предшествует ошибка [LNK2005](../../error-messages/tool-errors/linker-tools-error-lnk2005.md).
 
-[/FORCE](../../build/reference/force-force-file-output.md) или **/FORCE: Multiple** параметр переопределяет эту ошибку.
+Параметр [/Force](../../build/reference/force-force-file-output.md) или **/Force: Multiple** переопределяет эту ошибку.

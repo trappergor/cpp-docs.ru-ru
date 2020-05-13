@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -TSAWARE linker option
 - TSAWARE linker option
 ms.assetid: fe1c1846-de5b-4839-b562-93fbfe36cd29
-ms.openlocfilehash: 981158125cf978c2f685501117f95553df9c3c89
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 0b3fa8bcfd973949e73fdf701db2adb6c58be687
+ms.sourcegitcommit: 2f9ff2041d70c406df76c5053151192aad3937ea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498190"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82587379"
 ---
 # <a name="tsaware-create-terminal-server-aware-application"></a>/TSAWARE (создание приложения, поддерживающего сервер терминалов)
 
@@ -36,7 +36,7 @@ ms.locfileid: "69498190"
 
 Параметр/TSAWARE включен по умолчанию для Windows и консольных приложений. Сведения см. в разделе [/SUBSYSTEM](subsystem-specify-subsystem.md) и [/Version](version-version-information.md) .
 
-Параметр/TSAWARE является недопустимым для драйверов, VxD или DLL.
+Параметр/TSAWARE недопустим для драйверов и библиотек DLL.
 
 Если приложение было связано с параметром/TSAWARE, [то в](headers.md) подмассиве DUMPBIN будет отображаться информация об этом результате.
 
@@ -54,9 +54,9 @@ ms.locfileid: "69498190"
 
 - См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.TerminalServerAware%2A>.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Справочник по компоновщику MSVC](linking.md)<br/>
-[Параметры компоновщика MSVC](linker-options.md)<br/>
+[Параметры компоновщика КОМПИЛЯТОРОМ MSVC](linker-options.md)<br/>
 [Хранение сведений, относящихся к пользователю](/windows/win32/TermServ/storing-user-specific-information)<br/>
 [Устаревшие приложения в среде служб терминалов](https://msdn.microsoft.com/library/aa382957.aspx)

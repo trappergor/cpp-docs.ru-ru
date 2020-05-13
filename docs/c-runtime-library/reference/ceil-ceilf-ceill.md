@@ -1,10 +1,11 @@
 ---
 title: ceil, ceilf, ceill
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - ceilf
 - ceil
 - ceill
+- _o_ceil
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +19,7 @@ api_location:
 - ucrtbase.dll
 - ntdll.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +34,12 @@ helpviewer_keywords:
 - ceil function
 - ceilf function
 ms.assetid: f4e5acab-5c8f-4b10-9ae2-9561e6453718
-ms.openlocfilehash: 0be81354c19da646fa96f6eb58fbc7c76eeddb33
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: bca6053b9dc5ecaf83ab8d63566308e3b573614e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943190"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917336"
 ---
 # <a name="ceil-ceilf-ceill"></a>ceil, ceilf, ceill
 
@@ -72,15 +74,17 @@ long double ceill(
 
 Функции **ceil** возвращают значение с плавающей запятой, представляющее наименьшее целое число, которое больше или равно *x*. Ошибка не возвращается.
 
-|Ввод|Исключение SEH|Исключение Matherr|
+|Входные данные|Исключение SEH|Исключение Matherr|
 |-----------|-------------------|-----------------------|
-|± **КНАН**, **С**|none|**_DOMAIN**|
+|± **КНАН**, **с**|нет|**_DOMAIN**|
 
 **ceil** имеет реализацию, использующую Streaming SIMD Extensions 2 (SSE2). Сведения о реализации SSE2 и ограничениях на ее использование см. в разделе [_set_SSE2_enable](set-sse2-enable.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Поскольку C++ допускает перегрузку, можно вызывать перегрузки **ceil** , которые принимают типы **float** или **Long** типа **Double** . В программе на языке C **ceil** всегда принимает и возвращает значение **типа Double**.
+
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -88,13 +92,13 @@ long double ceill(
 |-------------|---------------------|
 |**ceil**, **ceilf**, **цеилл**|\<math.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
 См. пример для [floor](floor-floorf-floorl.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [floor, floorf, floorl](floor-floorf-floorl.md)<br/>

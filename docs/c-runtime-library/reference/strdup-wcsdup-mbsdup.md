@@ -1,10 +1,12 @@
 ---
 title: _strdup, _wcsdup, _mbsdup
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _strdup
 - _mbsdup
 - _wcsdup
+- _o__strdup
+- _o__wcsdup
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -45,19 +48,19 @@ helpviewer_keywords:
 - tcsdup function
 - _tcsdup function
 ms.assetid: 8604f8bb-95e9-45d3-93ef-20397ebf247a
-ms.openlocfilehash: c96e0a8f9f72b811f891217deabe758626b03186
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 42b4a890c1c7f350b83bb92a548d716ee6d9ebfc
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958181"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914475"
 ---
 # <a name="_strdup-_wcsdup-_mbsdup"></a>_strdup, _wcsdup, _mbsdup
 
 Повторяющиеся строки.
 
 > [!IMPORTANT]
-> **_mbsdup** нельзя использовать в приложениях, выполняемых в среда выполнения Windows. Дополнительные сведения см. [в разделе функции CRT, которые не поддерживаются в универсальная платформа Windows приложениях](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsdup** нельзя использовать в приложениях, которые выполняются в среда выполнения Windows. Дополнительные сведения см. [в разделе функции CRT, которые не поддерживаются в универсальная платформа Windows приложениях](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -82,21 +85,23 @@ unsigned char *_mbsdup(
 
 Каждая из этих функций возвращает указатель на место хранения копируемой строки или **значение NULL** , если не удается выделить хранилище.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Функция **_strdup** вызывает функцию [malloc](malloc.md) , чтобы выделить место для хранения копии *Стрсаурце* , а затем копирует *стрсаурце* в выделенное пространство.
 
-**_wcsdup** и **_mbsdup** — это версии **_strdup**для расширенных символов и многобайтовых символов. Аргументы и возвращаемое значение **_wcsdup** являются строками расширенных символов. **_mbsdup** являются строками многобайтовых символов. В остальном эти три функции ведут себя идентично.
+**_wcsdup** и **_mbsdup** — это версии **_strdup**для расширенных символов и многобайтовых символов. Аргументы и возвращаемое значение **_wcsdup** являются строками расширенных символов; **_mbsdup** являются строками многобайтовых символов. В остальном эти три функции ведут себя идентично.
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsdup**|**_strdup**|**_mbsdup**|**_wcsdup**|
 
-Поскольку **_strdup** вызывает функцию **malloc** для выделения места на диске для копии *стрсаурце*, рекомендуется всегда освобождать эту память, вызывая [бесплатную](free.md) подпрограммы для указателя, возвращаемого вызовом **_strdup**.
+Поскольку **_strdup** вызывает функцию **malloc** для выделения места для хранения копии *стрсаурце*, рекомендуется всегда освобождать эту память, вызывая [бесплатную](free.md) подпрограммы для указателя, возвращаемого вызовом метода **_strdup**.
 
-Если определены **_DEBUG** и **_CRTDBG_MAP_ALLOC** , то **_strdup** и **_wcsdup** заменяются вызовами **_strdup_dbg** и **_wcsdup_dbg** для разрешения отладки выделения памяти. Для получения дополнительной информации см. [_strdup_dbg, _wcsdup_dbg](strdup-dbg-wcsdup-dbg.md).
+Если определены **_DEBUG** и **_CRTDBG_MAP_ALLOC** , то **_strdup** и **_wcsdup** заменяются вызовами **_strdup_dbg** и **_wcsdup_dbg** , что позволяет выполнять отладку выделения памяти. Дополнительные сведения см. в разделе [_strdup_dbg, _wcsdup_dbg](strdup-dbg-wcsdup-dbg.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -106,7 +111,7 @@ unsigned char *_mbsdup(
 |**_wcsdup**|\<string.h> или \<wchar.h>|
 |**_mbsdup**|\<mbstring.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -132,9 +137,9 @@ Original: This is the buffer text
 Copy:     This is the buffer text
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Операции со строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Управление строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [memset, wmemset](memset-wmemset.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>

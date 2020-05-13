@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - _com_error class
 ms.assetid: 70dafa69-b1fb-4a5c-9249-e857e0793d42
-ms.openlocfilehash: 828a1ec68fef631700d5b64e6aeeec6660acf9a8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 0c33791fbe6011a3eddc6e535a3a4ed838e5e06c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498742"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180814"
 ---
 # <a name="_com_error-class"></a>Класс _com_error
 
 **Блок, относящийся только к системам Microsoft**
 
-Объект **_com_error** представляет условие исключения, обнаруженное функциями-оболочками обработки ошибок в файлах заголовков, созданных из библиотеки типов или одним из классов поддержки COM. Класс **_com_error** инкапсулирует код ошибки HRESULT и любой связанный `IErrorInfo Interface` объект.
+Объект **_com_error** представляет условие исключения, обнаруженное функциями-оболочками обработки ошибок в файлах заголовков, созданных из библиотеки типов или одним из классов поддержки COM. Класс **_com_error** инкапсулирует код ошибки HRESULT и связанный объект `IErrorInfo Interface`.
 
-### <a name="construction"></a>Создание экземпляра
+### <a name="construction"></a>Строительство
 
 |||
 |-|-|
@@ -59,18 +59,18 @@ ms.locfileid: "69498742"
 
 |||
 |-|-|
-|[хресулттовкоде](../cpp/com-error-hresulttowcode.md)|Сопоставляет 32-разрядное значение HRESULT с 16 `wCode`-разрядным.|
-|[вкодетохресулт](../cpp/com-error-wcodetohresult.md)|Сопоставляет 16-бит `wCode` с 32-битным значением HRESULT.|
+|[хресулттовкоде](../cpp/com-error-hresulttowcode.md)|Сопоставляет 32-разрядное значение HRESULT с 16-разрядным `wCode`.|
+|[вкодетохресулт](../cpp/com-error-wcodetohresult.md)|Сопоставляет 16-разрядный `wCode` с 32-битным значением HRESULT.|
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<> comdef. h
+**Заголовок:** \<comdef. h >
 
-`Lib:`комсуппв. lib или комсуппвд. lib (Дополнительные сведения см. в разделе [/Zc: wchar_t (wchar_t Native Type)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) )
+`Lib:` комсуппв. lib или комсуппвд. lib (Дополнительные сведения см. в разделе [/Zc: wchar_t (wchar_t Native Type)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) )
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Классы поддержки модели COM компилятора](../cpp/compiler-com-support-classes.md)<br/>
 [Интерфейс IErrorInfo](/windows/win32/api/oaidl/nn-oaidl-ierrorinfo)

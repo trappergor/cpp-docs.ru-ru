@@ -1,9 +1,11 @@
 ---
 title: _mbsnbset_s, _mbsnbset_s_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnbset_s_l
 - _mbsnbset_s
+- _o__mbsnbset_s
+- _o__mbsnbset_s_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - _tcsnset_s function
 - tcsnset_s_l function
 ms.assetid: 811f92c9-cc31-4bbd-8017-2d1bfc6fb96f
-ms.openlocfilehash: 7addd7e053816c462ae430443506445b878464a0
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: b4880e774d6ad1b07052529461910ceff6897351
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625113"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915537"
 ---
 # <a name="_mbsnbset_s-_mbsnbset_s_l"></a>_mbsnbset_s, _mbsnbset_s_l
 
@@ -88,7 +91,7 @@ errno_t _mbsnbset_s_l(
 *size*<br/>
 Размер строкового буфера.
 
-*c*<br/>
+*ц*<br/>
 Однобайтовый или многобайтовый параметр.
 
 *count*<br/>
@@ -101,21 +104,23 @@ errno_t _mbsnbset_s_l(
 
 Ноль в случае успешного выполнения; в противном случае — код ошибки.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
-Функции **_mbsnbset_s** и **_mbsnbset_s_l** задаются не чаще первого *числа* байтов *str* в *c*. Если параметр *Count* превышает длину *str*, вместо *Count*используется длина *str* . Если *c* является многобайтовым символом и не может быть полностью задано до последнего байта, указанного параметром *Count*, последний байт дополняется пустым символом. **_mbsnbset_s** и **_mbsnbset_s_l** не помещают завершающее значение NULL в конце *str*.
+Функции **_mbsnbset_s** и **_mbsnbset_s_l** заданы не чаще первого *числа* байтов *str* в *c*. Если параметр *Count* превышает длину *str*, вместо *Count*используется длина *str* . Если *c* является многобайтовым символом и не может быть полностью задано до последнего байта, указанного параметром *Count*, последний байт дополняется пустым символом. **_mbsnbset_s** и **_mbsnbset_s_l** не помещают завершающее значение NULL в конце *str*.
 
-**_mbsnbset_s** и **_mbsnbset_s_l** похожи на **_mbsnset**, за исключением того, что они задают *число* байтов, а не *количество* символов *в c*.
+**_mbsnbset_s** и **_mbsnbset_s_l** похожи **_mbsnset**, за исключением того, что они задают *число* байтов, а не *количество* символов *в c*.
 
 Если *str* имеет **значение NULL** или *Count* равно нулю, эта функция создает исключение недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено **, для** параметра **еинвал** устанавливается значение, а функция возвращает **значение NULL**. Кроме того, если *c* не является допустимым многобайтовым символом, то параметру " **еинвал** **" присваивается** значение ", а вместо этого используется пробел.
 
-На выходное значение влияет параметр категории **LC_CTYPE** языкового стандарта. Дополнительные сведения см. [в разделе setlocale, _wsetlocale](setlocale-wsetlocale.md) . **_Mbsnbset_s** версия этой функции использует текущий языковой стандарт для этого поведения, зависящего от языкового стандарта; версия **_mbsnbset_s_l** идентична, за исключением того, что вместо этого использует переданный параметр языкового стандарта. Дополнительные сведения см. в разделе [Locale](../../c-runtime-library/locale.md).
+На выходное значение влияет параметр категории **LC_CTYPE** языкового стандарта. Дополнительные сведения см. [в разделе setlocale, _wsetlocale](setlocale-wsetlocale.md) . **_Mbsnbset_sная** версия этой функции использует текущий языковой стандарт для этого поведения, зависящего от языкового стандарта; версия **_mbsnbset_s_l** идентична, за исключением того, что вместо этого использует переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 В C++ использование этих функций упрощено шаблонными перегрузками; перегрузки могут определить длину буфера автоматически, устранена необходимость указывать аргумент size. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../../c-runtime-library/secure-template-overloads.md).
 
 Версии отладочной библиотеки этих функций сначала заполняют буфер 0xFE. Чтобы отключить это поведение, используйте [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Процедура Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|
@@ -157,7 +162,7 @@ After:  **** is a test
 
 ## <a name="see-also"></a>См. также
 
-[Операции со строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Управление строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
 [_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)<br/>
 [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>

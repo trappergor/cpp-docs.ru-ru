@@ -2,12 +2,12 @@
 title: Тривиальные типы, типы стандартной структуры, POD и типы литералов
 ms.date: 04/05/2018
 ms.assetid: 2b23a7be-9bad-49fc-8298-31a9a7c556b0
-ms.openlocfilehash: 2745302b3ebd7927e9d839e4661e884a2bd91042
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 6fe237386e63fcdd96621edabf2b0b66ce72e4f8
+ms.sourcegitcommit: 435133128b18cdd02d33d929b16c33e7ec40e9eb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79423708"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81664134"
 ---
 # <a name="trivial-standard-layout-pod-and-literal-types"></a>Тривиальные типы, типы стандартной структуры, POD и типы литералов
 
@@ -32,17 +32,17 @@ ms.locfileid: "79423708"
 ```cpp
 struct Trivial
 {
-      int i;
+   int i;
 private:
    int j;
-   };
+};
 
 struct Trivial2
 {
    int i;
    Trivial2(int a, int b) : i(a), j(b) {}
    Trivial2() = default;
-   private:
+private:
    int j;   // Different access control
 };
 ```
@@ -137,15 +137,15 @@ protected:
 // Neither trivial nor standard-layout
 struct A : B
 {
-      int a;
+   int a;
    int b;
    void Foo() override {} // Virtual function
 };
 
 // Trivial but not standard-layout
 struct C
-   {
-      int a;
+{
+   int a;
 private:
    int b;   // Different access control
 };
@@ -183,16 +183,16 @@ int main()
 }
 ```
 
-## <a name="literal_types"></a> Типы литералов
+## <a name="literal-types"></a><a name="literal_types"></a> Типы литералов
 
 Тип литерала — это такой тип, макет которого может быть определен во время компиляции. Ниже указаны типы литералов.
 
-- аннулировать
+- void
 - скалярные типы
-- ссылки
+- Ссылки
 - Массивы void, скалярных типов или ссылок
 - Класс, имеющий тривиальный деструктор, а также один или несколько конструкторов constexpr, которые не являются конструкторами перемещений или копий. Кроме того, все его нестатические данные-члены и базовые классы должны быть типами литералов и не должны изменяться.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
-[Основные понятия](../cpp/basic-concepts-cpp.md)
+[Основные концепции](../cpp/basic-concepts-cpp.md)

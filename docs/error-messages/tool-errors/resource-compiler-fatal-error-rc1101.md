@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - RC1101
 ms.assetid: ff273384-b819-464a-8c0e-d5951e4a28b4
-ms.openlocfilehash: abe16bb949fff46f01b51efee842f065d8e37cae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 45ffe1d687cc54268af489a268a5927d00ad3224
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374291"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182517"
 ---
 # <a name="resource-compiler-fatal-error-rc1101"></a>Неустранимая ошибка компилятора ресурсов RC1101
 
-> Нет ресурсов указано имя двоичного файла
+> не указано имя двоичного файла ресурса
 
-Переименования выходного файла (/ fo) параметра не было указано имя файла.
+За параметром Rename Output (/FO) не следует имя файла.
 
-Используйте следующий синтаксис для /fo-параметр:
+Используйте следующий синтаксис для параметра/FO:
 
-> **Версия-КАНДИДАТ /fo** *outfilename* <em>infilename</em>**.rc**
+> **RC/FO** *filename имя_файла* <em>infilename</em> **. RC**

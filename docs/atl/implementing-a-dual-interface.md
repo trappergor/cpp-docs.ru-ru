@@ -1,51 +1,51 @@
 ---
-title: Реализация сдвоенного интерфейса (ATL)
+title: Реализация двойного интерфейса (ATL)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - IDispatchImpl class, implementing dual interfaces
 - dual interfaces, implementing
 ms.assetid: d1da3633-b445-4dcd-8a0a-3efdafada3ea
-ms.openlocfilehash: ecd6a0cc90ca4175c4ae898f2e9aa8bf00508a3e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a85597adad045bee3edb5cc3ed63c72a22fa08fe
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262233"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319469"
 ---
-# <a name="implementing-a-dual-interface"></a>Реализация сдвоенного интерфейса
+# <a name="implementing-a-dual-interface"></a>Реализация двойного интерфейса
 
-Вы можете реализовать сдвоенного интерфейса с помощью [IDispatchImpl](../atl/reference/idispatchimpl-class.md) класс, который предоставляет реализацию по умолчанию `IDispatch` методы в сдвоенный интерфейс. Дополнительные сведения см. в разделе [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
+Вы можете реализовать двойной интерфейс с помощью класса [IDispatchImpl,](../atl/reference/idispatchimpl-class.md) который обеспечивает реализацию `IDispatch` методов по умолчанию в двойном интерфейсе. Дополнительные сведения см. в разделе [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
 
-Чтобы использовать этот класс:
+Для использования этого класса:
 
-- Определите ваш сдвоенного интерфейса в библиотеке типов.
+- Определите ваш двойной интерфейс в библиотеке типов.
 
-- Создайте класс, производный от специализации `IDispatchImpl` (передать сведения о библиотеке интерфейс и тип как аргументы шаблонов).
+- Извлеките свой класс `IDispatchImpl` из специализации (передайте информацию об интерфейсе и библиотеке ввода в качестве аргументов шаблона).
 
-- Добавить запись (или записи) в сопоставление COM для предоставления сдвоенный интерфейс, через `QueryInterface`.
+- Добавьте запись (или записи) на карту COM, `QueryInterface`чтобы разоблачить двойной интерфейс через .
 
-- Реализация vtable частью интерфейса в классе.
+- Реализуйте vtable часть интерфейса в классе.
 
-- Убедитесь, что библиотеки типов, содержащей определение интерфейса для объектов во время выполнения.
+- Убедитесь, что библиотека типов, содержащая определение интерфейса, доступна для объектов во время выполнения.
 
 ## <a name="atl-simple-object-wizard"></a>Мастер простых объектов ATL
 
-Если вы хотите создать новый интерфейс и новый класс для его реализации, можно использовать [диалоговое окно Добавление класса ATL](../ide/add-class-dialog-box.md), а затем [мастер простых объектов ATL](../atl/reference/atl-simple-object-wizard.md).
+Если вы хотите создать новый интерфейс и новый класс для его реализации, вы можете использовать [поле диалога ATL Add Class,](../ide/add-class-dialog-box.md)а затем [ATL Simple Object Wizard.](../atl/reference/atl-simple-object-wizard.md)
 
 ## <a name="implement-interface-wizard"></a>Мастер реализации интерфейсов
 
-Если у вас есть существующий интерфейс, можно использовать [мастер реализации интерфейса](../atl/reference/adding-a-new-interface-in-an-atl-project.md) Добавление необходимые базового класса, записей сопоставления COM и реализации каркас метода к существующему классу.
+Если у вас есть существующий интерфейс, вы можете использовать [мастер интерфейса реализации,](../atl/reference/adding-a-new-interface-in-an-atl-project.md) чтобы добавить необходимый базовый класс, записи карты COM и реализации скелетного метода к существующему классу.
 
 > [!NOTE]
->  Может потребоваться изменить созданный базовый класс, таким образом, чтобы основной и дополнительный номера версии библиотеки типов, передаются как аргументы шаблонов для вашей `IDispatchImpl` базового класса. Мастер реализации интерфейса не проверяет номер версии библиотеки типов.
+> Возможно, потребуется настроить сгенерированный базовый класс таким образом, чтобы основные и `IDispatchImpl` незначительные номера версий библиотеки типов передавались в качестве аргументов шаблона в базовый класс. Мастер интерфейса реализации не проверяет номер библиотеки типа для вас.
 
-## <a name="implementing-idispatch"></a>Реализация интерфейса IDispatch
+## <a name="implementing-idispatch"></a>Внедрение IDispatch
 
-Можно использовать `IDispatchImpl` базовый класс для предоставления реализации disp-интерфейсом, просто указав соответствующую запись в карту COM (с помощью [COM_INTERFACE_ENTRY2](reference/com-interface-entry-macros.md#com_interface_entry2) или [COM_INTERFACE_ENTRY_IID](reference/com-interface-entry-macros.md#com_interface_entry_iid) макрос) до тех пор, пока у вас есть библиотеку типов, описывающий соответствующий сдвоенный интерфейс. Довольно часто для реализации `IDispatch` интерфейса таким образом, например. Мастер простых объектов ATL и оба предполагается, что вы планируете реализовать мастера реализации интерфейса `IDispatch` таким образом, поэтому они добавит соответствующую запись на карту.
+Базовый `IDispatchImpl` класс можно использовать для обеспечения реализации дисинтерфейса, просто указав соответствующую запись на карте COM (с помощью [COM_INTERFACE_ENTRY2](reference/com-interface-entry-macros.md#com_interface_entry2) или [COM_INTERFACE_ENTRY_IID](reference/com-interface-entry-macros.md#com_interface_entry_iid) макроса), если у вас есть библиотека типов, описывающая соответствующий двойной интерфейс. Например, довольно часто `IDispatch` можно реализовать интерфейс таким образом. AtL Simple Object Wizard и Implement Interface Wizard `IDispatch` предполагают, что вы собираетесь реализовать таким образом, поэтому они добавят соответствующую запись на карту.
 
 > [!NOTE]
->  Предлагает ATL [IDispEventImpl](../atl/reference/idispeventimpl-class.md) и [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) классы для реализации диспетчерских без необходимости библиотеку типов, содержащие определение совместимых сдвоенный интерфейс.
+> ATL предлагает классы [IDispEventImpl](../atl/reference/idispeventimpl-class.md) и [IDispEventSimpleImpl,](../atl/reference/idispeventsimpleimpl-class.md) чтобы помочь вам реализовать дисинтерфейсы, не требуя библиотеки типов, содержащей определение совместимого двойного интерфейса.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Сдвоенные интерфейсы и ATL](../atl/dual-interfaces-and-atl.md)
+[Двойные интерфейсы и ATL](../atl/dual-interfaces-and-atl.md)

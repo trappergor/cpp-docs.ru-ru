@@ -114,18 +114,18 @@ helpviewer_keywords:
 - CMFCRibbonPanel [MFC], SetKeys
 - CMFCRibbonPanel [MFC], ShowPopup
 ms.assetid: 51d70749-1140-4386-b103-f14082049ba6
-ms.openlocfilehash: 1ba7057405da2ebd7fd1bf699a69f97a650fa47c
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 5d622b5c36729daca81a6093e9f21573ce86940e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425769"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753549"
 ---
 # <a name="cmfcribbonpanel-class"></a>Класс CMFCRibbonPanel
 
 Реализует панель, содержащую набор элементов ленты. Если выводится панель, она отображает столько элементов, сколько возможно, учитывая ее размер.
 
-Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
+Для получения более подробной информации смотрите исходный код, расположенный в папке **VC\\atlmfc\\src\\mfc** установки Visual Studio.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -133,81 +133,81 @@ ms.locfileid: "79425769"
 class CMFCRibbonPanel : public CObject
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="protected-constructors"></a>Защищенные конструкторы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|[CMFCRibbonPanel:: CMFCRibbonPanel](#cmfcribbonpanel)|Создает и инициализирует объект `CMFCRibbonPanel`.|
+|[CMFCRibbonPanel::CMFCRibbonPanel](#cmfcribbonpanel)|Создает и инициализирует объект `CMFCRibbonPanel`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|[CMFCRibbonPanel:: Add](#add)|Добавляет элемент ленты на панель.|
-|[CMFCRibbonPanel:: Аддсепаратор](#addseparator)|Добавляет разделитель на панель ленты.|
-|[CMFCRibbonPanel:: Аддтулбар](#addtoolbar)|Добавляет панель инструментов на панель ленты.|
-|[CMFCRibbonPanel:: Финдбидата](#findbydata)||
-|[CMFCRibbonPanel:: Финдбид](#findbyid)|Возвращает элемент, идентифицируемый по указанному ИДЕНТИФИКАТОРу команды.|
-|[CMFCRibbonPanel:: Жеткаптионхеигхт](#getcaptionheight)||
-|[CMFCRibbonPanel:: NOCOUNT](#getcount)|Возвращает количество элементов на панели ленты.|
-|[CMFCRibbonPanel:: GetData](#getdata)|Возвращает определяемые пользователем данные, связанные с панелью.|
-|[CMFCRibbonPanel:: Жетдефаултбуттон](#getdefaultbutton)||
-|[CMFCRibbonPanel:: Жетдроппеддовн](#getdroppeddown)||
-|[CMFCRibbonPanel:: элемент](#getelement)|Возвращает элемент Ribbon, расположенный по указанному индексу.|
-|[CMFCRibbonPanel:: наэлементы](#getelements)|Извлекает все элементы, содержащиеся на панели ленты.|
-|[CMFCRibbonPanel:: Жетелементсбид](#getelementsbyid)||
-|[CMFCRibbonPanel:: с фокусировкой](#getfocused)|Возвращает элемент, имеющий фокус ввода.|
-|[CMFCRibbonPanel:: Жетгаллерирект](#getgalleryrect)|Возвращает ограничивающий прямоугольник элемента коллекции.|
-|[CMFCRibbonPanel:: выделять](#gethighlighted)||
-|[CMFCRibbonPanel:: onindex](#getindex)||
-|[CMFCRibbonPanel:: Жетитемидслист](#getitemidslist)||
-|[CMFCRibbonPanel:: Name](#getname)||
-|[CMFCRibbonPanel:: Жетпарентбуттон](#getparentbutton)||
-|[CMFCRibbonPanel:: Жетпаренткатегори](#getparentcategory)|Возвращает родительскую категорию для панели ленты.|
-|[CMFCRibbonPanel:: Жетпарентменубар](#getparentmenubar)||
-|[CMFCRibbonPanel:: Жетпрефередменулокатион](#getpreferedmenulocation)||
-|[CMFCRibbonPanel:: Press](#getpressed)||
-|[CMFCRibbonPanel:: коrect](#getrect)||
-|[CMFCRibbonPanel:: Жетвисиблилементс](#getvisibleelements)|Получает массив видимых элементов.|
-|[CMFCRibbonPanel:: Хаселемент](#haselement)||
-|[CMFCRibbonPanel:: HitTest](#hittest)||
-|[CMFCRibbonPanel:: Хиттестекс](#hittestex)||
-|[CMFCRibbonPanel:: INSERT](#insert)|Вставляет элемент ленты в заданную позиции.|
-|[CMFCRibbonPanel:: Инсертсепаратор](#insertseparator)|Вставляет разделитель в заданной позиции.|
-|[CMFCRibbonPanel:: Исцентерколумнверт](#iscentercolumnvert)|Указывает, следует ли центрировать все элементы панели по вертикали (по столбцам).|
-|[CMFCRibbonPanel:: "свернуто"](#iscollapsed)||
-|[CMFCRibbonPanel:: выделять](#ishighlighted)||
-|[CMFCRibbonPanel:: Исжустификолумнс](#isjustifycolumns)|Указывает, имеют ли все столбцы панели одинаковую ширину.|
-|[CMFCRibbonPanel:: Исмаинпанел](#ismainpanel)||
-|[CMFCRibbonPanel:: Исменумоде](#ismenumode)||
-|[CMFCRibbonPanel:: Макегаллеритемвисибле](#makegalleryitemvisible)|Прокручивает коллекцию, чтобы сделать указанный элемент ленты видимым.|
-|[CMFCRibbonPanel:: Онкэй](#onkey)||
-|[CMFCRibbonPanel:: Рекалквидсс](#recalcwidths)||
-|[CMFCRibbonPanel:: Remove](#remove)|Удаляет и при необходимости удаляет элемент, расположенный по указанному индексу.|
-|[CMFCRibbonPanel:: RemoveAll](#removeall)|Удаляет все элементы с панели ленты.|
-|[CMFCRibbonPanel:: Replace](#replace)|Заменяет один элемент другим в зависимости от соответствующих значений индекса.|
-|[CMFCRibbonPanel:: Реплацебид](#replacebyid)|Заменяет один элемент другим, основываясь на указанном ИДЕНТИФИКАТОРе команды.|
-|[CMFCRibbonPanel:: Сетцентерколумнверт](#setcentercolumnvert)|Упорядочивает панель, чтобы выравнивать элементы по вертикали по столбцам.|
-|[CMFCRibbonPanel:: SetData](#setdata)|Связывает определяемые пользователем данные с панелью ленты.|
-|[CMFCRibbonPanel:: Сетелементмену](#setelementmenu)|Назначает всплывающее меню элементу с заданным ИДЕНТИФИКАТОРом команды.|
-|[CMFCRibbonPanel:: Сетелементртк](#setelementrtc)|Добавляет элемент Ribbon, заданный предоставленными сведениями о классе среды выполнения, на панель ленты.|
-|[CMFCRibbonPanel:: Сетелементрткбид](#setelementrtcbyid)|Добавляет элемент Ribbon, заданный предоставленными сведениями о классе среды выполнения, на панель ленты.|
-|[CMFCRibbonPanel:: Сетфокусед](#setfocused)|Устанавливает фокус на указанный элемент ленты.|
-|[CMFCRibbonPanel:: Сетжустификолумнс](#setjustifycolumns)|Включает или отключает обоснование столбца.|
-|[CMFCRibbonPanel:: Сеткэйс](#setkeys)|Задает сочетание клавиш, которое отображает панель ленты.|
-|[CMFCRibbonPanel:: ShowPopup](#showpopup)||
+|[CMFCRibbonPanel::Добавить](#add)|Добавляет элемент ленты в панель.|
+|[CMFCRibbonPanel::AddSeparator](#addseparator)|Добавляет сепаратор к ленточной панели.|
+|[CMFCRibbonPanel::AddToolBar](#addtoolbar)|Добавляет панель инструментов в ленточной панели.|
+|[CMFCRibbonPanel::FindbyData](#findbydata)||
+|[CMFCRibbonPanel::FindbyID](#findbyid)|Возвращает элемент, идентифицированный указанным идентификатором команды.|
+|[CMFCRibbonPanel::GetCaptionHeight](#getcaptionheight)||
+|[CMFCRibbonPanel::GetCount](#getcount)|Возвращает количество элементов в ленте панели.|
+|[CMFCRibbonPanel::GetData](#getdata)|Возвращает данные, определяемые пользователем, связанные с панелью.|
+|[CMFCRibbonPanel::GetDefaultButton](#getdefaultbutton)||
+|[CMFCRibbonPanel::GetDroppedDown](#getdroppeddown)||
+|[CMFCRibbonPanel::GetElement](#getelement)|Возвращает элемент ленты, расположенный в указанном индексе.|
+|[CMFCRibbonPanel::GetElements](#getelements)|Извлекает все элементы, которые содержатся в ленте панели.|
+|[CMFCRibbonPanel::GetelementsbyID](#getelementsbyid)||
+|[CMFCRibbonPanel::GetFocused](#getfocused)|Возвращает элемент, имеющий фокус ввода.|
+|[CMFCRibbonPanel::GetGalleryRect](#getgalleryrect)|Возвращает ограничивающий прямоугольник элемента Галереи.|
+|[CMFCRibbonPanel::GetHighlighted](#gethighlighted)||
+|[CMFCRibbonPanel::GetIndex](#getindex)||
+|[CMFCRibbonPanel::GetItemIDsList](#getitemidslist)||
+|[CMFCRibbonPanel::GetName](#getname)||
+|[CMFCRibbonPanel::GetParentButton](#getparentbutton)||
+|[CMFCRibbonPanel::GetParentCategory](#getparentcategory)|Возвращает родительскую категорию лентовой панели.|
+|[CMFCRibbonPanel::GetParentMenuBar](#getparentmenubar)||
+|[CMFCRibbonPanel::GetPreferedMenuLocation](#getpreferedmenulocation)||
+|[CMFCRibbonPanel::GetPressed](#getpressed)||
+|[CMFCRibbonPanel::GetRect](#getrect)||
+|[CMFCRibbonPanel::GetVisibleElements](#getvisibleelements)|Получает массив видимых элементов.|
+|[CMFCRibbonPanel::HasElement](#haselement)||
+|[CMFCRibbonPanel::HitTest](#hittest)||
+|[CMFCRibbonPanel::HitTestEx](#hittestex)||
+|[CMFCRibbonPanel::Вставьте](#insert)|Вставляет элемент ленты в заданное положение.|
+|[CMFCRibbonPanel::InsertSeparator](#insertseparator)|Вставляет сепаратор в данной позиции.|
+|[CMFCRibbonPanel::IsCenterColumnVert](#iscentercolumnvert)|Определяет, должны ли все элементы панели быть центрированы (выровнены) вертикально, по столбецу.|
+|[CMFCRibbonPanel:: Свернутый](#iscollapsed)||
+|[CMFCRibbonPanel::Ishighlighted](#ishighlighted)||
+|[CMFCRibbonPanel::IsJustifyКолонки](#isjustifycolumns)|Определяет, имеют ли все столбцы панели одинаковую ширину.|
+|[CMFCRibbonPanel::IsMainPanel](#ismainpanel)||
+|[CMFCRibbonPanel::IsMenuMode](#ismenumode)||
+|[CMFCRibbonPanel::MakeGalleryItemVisible](#makegalleryitemvisible)|Прокрутите галерею, чтобы сделать указанный элемент ленты видимым.|
+|[CMFCRibbonPanel::OnKey](#onkey)||
+|[CMFCRibbonPanel::RecalcWidths](#recalcwidths)||
+|[CMFCRibbonPanel::Удалить](#remove)|Удаляет и по желанию удаляет элемент, расположенный в указанном индексе.|
+|[CMFCRibbonPanel::RemoveAll](#removeall)|Удаляет все элементы с лентой панели.|
+|[CMFCRibbonPanel::Замена](#replace)|Заменяет один элемент на другой на основе соответствующих значений индекса.|
+|[CMFCRibbonPanel::ReplacebyID](#replacebyid)|Заменяет один элемент на другой на основе заданного идентификатора команды.|
+|[CMFCRibbonPanel::SetCenterColumnVert](#setcentercolumnvert)|Приказы панели выравнивать элементы вертикально, по столбецу.|
+|[CMFCRibbonPanel::SetData](#setdata)|Ассоциирует данные, определяемые пользователем, с ленточной панелью.|
+|[CMFCRibbonPanel::SetElementMenu](#setelementmenu)|Присваивает всплывающее меню элементу, который имеет данный идентификатор команды.|
+|[CMFCRibbonPanel::SetElementRTC](#setelementrtc)|Добавляет элемент ленты, указанный информацией о классе времени выполнения, в ленточку.|
+|[CMFCRibbonPanel::SetElementRTCByID](#setelementrtcbyid)|Добавляет элемент ленты, указанный информацией о классе времени выполнения, в ленточку.|
+|[CMFCRibbonPanel::SetFocused](#setfocused)|Устанавливает фокус на указанный элемент Ленты.|
+|[CMFCRibbonPanel::SetJustifyКолонки](#setjustifycolumns)|Позволяет или отсваивает обоснование столбца.|
+|[CMFCRibbonPanel::SetKeys](#setkeys)|Устанавливает ярлык клавиатуры, который отображает ленточной панели.|
+|[CMFCRibbonPanel::ShowPopup](#showpopup)||
 
 ## <a name="remarks"></a>Remarks
 
-Панели ленты — это логические группы связанных задач, создаваемых в категориях ленты. При изменении размера ленты макет панели автоматически настраивается на отображение максимально возможного количества элементов.
+Ленточные панели являются логическими группировками связанных задач, которые вы создаете в категориях ленты. По мере изменения размера ленты макет панели автоматически настраивается на отображение как можно больше элементов.
 
-Можно получить панели ленты, содержащиеся в категории ленты, вызвав метод [кмфкриббонкатегори::-Panel](../../mfc/reference/cmfcribboncategory-class.md#getpanel) .
+Вы можете получить ленты панелей, которые содержатся в категории ленты, позвонив [cmFCRibbonCategory::GetPanel](../../mfc/reference/cmfcribboncategory-class.md#getpanel) метод.
 
 ## <a name="example"></a>Пример
 
-В следующем примере показано, как настроить объект `CMFCRibbonPanel` с помощью различных методов класса `CMFCRibbonPanel`. В примере показано, как задать сочетание клавиш, которое отображает панель ленты, выравнивать элементы на панели по вертикали по столбцам и включать выравнивание столбцов. Этот фрагмент кода является частью [демонстрационного примера MS Office 2007](../../overview/visual-cpp-samples.md).
+В следующем примере показано, `CMFCRibbonPanel` как настроить объект с `CMFCRibbonPanel` помощью различных методов в классе. На примере показано, как настроить ярлык клавиатуры, который отображает ленточной панели, выравнивать элементы панели вертикально по столбецу и включить обоснование столбца. Этот фрагмент кода является частью [образца MS Office 2007 Demo.](../../overview/visual-cpp-samples.md)
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#10](../../mfc/reference/codesnippet/cpp/cmfcribbonpanel-class_1.cpp)]
 
@@ -219,11 +219,11 @@ class CMFCRibbonPanel : public CObject
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** афксриббонпанел. h
+**Заголовок:** afxRibbonPanel.h
 
-##  <a name="add"></a>CMFCRibbonPanel:: Add
+## <a name="cmfcribbonpaneladd"></a><a name="add"></a>CMFCRibbonPanel::Добавить
 
-Добавляет указанный элемент Ribbon в массив элементов ленты, который содержится на панели ленты.
+Придаток указанного элемента ленты к массиву элементов ленты, который содержится в ленте панели.
 
 ```
 virtual void Add(CMFCRibbonBaseElement* pElem);
@@ -231,14 +231,14 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
 
 ### <a name="parameters"></a>Параметры
 
-*пелем*<br/>
-[вход, выход] Указатель на элемент ленты.
+*pElem*<br/>
+(в, вне) Указатель на элемент ленты.
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="addseparator"></a>CMFCRibbonPanel:: Аддсепаратор
+## <a name="cmfcribbonpaneladdseparator"></a><a name="addseparator"></a>CMFCRibbonPanel::AddSeparator
 
-Добавляет разделитель на панель ленты.
+Добавляет сепаратор к ленточной панели.
 
 ```
 virtual void AddSeparator();
@@ -246,11 +246,11 @@ virtual void AddSeparator();
 
 ### <a name="remarks"></a>Remarks
 
-Вызовите этот метод, чтобы добавить разделитель на панель ленты. Разделитель будет добавлен рядом с элементом ленты, добавленным предыдущим вызовом метода [CMFCRibbonPanel:: Add](#add). Чтобы вставить разделитель в заданной позиции, вызовите [CMFCRibbonPanel:: инсертсепаратор](#insertseparator).
+Вызовите этот метод, чтобы добавить сепаратор к ленточной панели. Сепаратор будет добавлен рядом с элементом ленты, который был добавлен предыдущим вызовом на [CMFCRibbonPanel::Add](#add). Чтобы вставить сепаратор в заданной позиции, позвоните [CMFCRibbonPanel::InsertSeparator](#insertseparator).
 
-##  <a name="addtoolbar"></a>CMFCRibbonPanel:: Аддтулбар
+## <a name="cmfcribbonpaneladdtoolbar"></a><a name="addtoolbar"></a>CMFCRibbonPanel::AddToolBar
 
-Добавляет панель инструментов на панель ленты.
+Добавляет панель инструментов в ленточной панели.
 
 ```
 CMFCRibbonButtonsGroup* AddToolBar(
@@ -262,29 +262,29 @@ UINT uiDisabledResID = 0);
 
 ### <a name="parameters"></a>Параметры
 
-*уитулбарресид*<br/>
-окне Указывает идентификатор ресурса добавляемой панели инструментов.
+*uiToolbarResID*<br/>
+(в) Упоняет идентификатор панели ресурсов для добавления.
 
-*уиколдресид*<br/>
-окне Указывает идентификатор ресурса для холодного изображения панели инструментов.
+*uiColdResID*<br/>
+(в) Определяет идентификатор ресурсов холодных изображений панели инструментов.
 
-*уихотресид*<br/>
-окне Указывает идентификатор ресурса для горячего изображения панели инструментов.
+*uiHotResID*<br/>
+(в) Упоняет идентификатор ресурса горячих изображений панели инструментов.
 
-*уидисабледресид*<br/>
-окне Указывает идентификатор ресурса для отключенных изображений панели инструментов.
+*uiDisabledResID*<br/>
+(в) Упоняет идентификатор ресурсов отключенных изображений панели инструментов.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Вызовите этот метод, чтобы добавить панель инструментов на панель ленты. Панель инструментов будет добавлена рядом с элементом Ribbon, добавленным предыдущим вызовом метода [CMFCRibbonPanel:: Add](#add).
+Вызовите этот метод, чтобы добавить панель инструментов в ленточной панели. Панель инструментов будет добавлена рядом с элементом ленты, добавленной предыдущим вызовом на [CMFCRibbonPanel::Add](#add).
 
 ### <a name="remarks"></a>Remarks
 
-Дополнительные сведения о панелях инструментов, активных изображениях, холодном образах и отключенных образах см. в разделе [Класс CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md).
+Для получения дополнительной информации о панели инструментов, горячие изображения, холодные изображения, и отключены изображения, [см.](../../mfc/reference/cmfctoolbar-class.md)
 
-##  <a name="cmfcribbonpanel"></a>CMFCRibbonPanel:: CMFCRibbonPanel
+## <a name="cmfcribbonpanelcmfcribbonpanel"></a><a name="cmfcribbonpanel"></a>CMFCRibbonPanel::CMFCRibbonPanel
 
-Создает и инициализирует объект [CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md) .
+Строит и инициализирует объект [CMFCRibbonPanel.](../../mfc/reference/cmfcribbonpanel-class.md)
 
 ```
 CMFCRibbonPanel(
@@ -296,16 +296,16 @@ CMFCRibbonPanel(CMFCRibbonGallery* pPaletteButton);
 
 ### <a name="parameters"></a>Параметры
 
-*лпсзнаме*<br/>
-окне Имя панели ленты.
+*lpszName*<br/>
+(в) Название лентяйной панели.
 
 *hIcon*<br/>
-окне Маркер для значка кнопки по умолчанию на панели ленты.
+(в) Ручка к значку кнопки по умолчанию для лентой панели.
 
-*ппалеттебуттон*<br/>
-окне Указатель на коллекцию лент для панели ленты.
+*pPaletteButton*<br/>
+(в) Указатель на ленту галерея для ленты панели.
 
-##  <a name="findbydata"></a>CMFCRibbonPanel:: Финдбидата
+## <a name="cmfcribbonpanelfindbydata"></a><a name="findbydata"></a>CMFCRibbonPanel::FindbyData
 
 Извлекает элемент ленты, связанный с указанными данными.
 
@@ -315,18 +315,18 @@ CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData) const;
 
 ### <a name="parameters"></a>Параметры
 
-*двдата*<br/>
-окне Данные, связанные с элементом Ribbon.
+*dwData*<br/>
+(в) Данные, связанные с элементом ленты.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на элемент ленты, если метод выполнен успешно; в противном случае — NULL.
+Указатель на элемент ленты, если метод был успешным; в противном случае NULL.
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="findbyid"></a>CMFCRibbonPanel:: Финдбид
+## <a name="cmfcribbonpanelfindbyid"></a><a name="findbyid"></a>CMFCRibbonPanel::FindbyID
 
-Извлекает элемент ленты, идентифицируемый по указанному ИДЕНТИФИКАТОРу команды.
+Извлекает элемент ленты, идентифицированный указанным идентификатором команды.
 
 ```
 CMFCRibbonBaseElement* FindByID(UINT uiCmdID) const;
@@ -334,16 +334,16 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID) const;
 
 ### <a name="parameters"></a>Параметры
 
-*уикмдид*<br/>
-окне Идентификатор команды элемента Ribbon.
+*uiCmdID*<br/>
+(в) Идентификатор команды элемента ленты.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Элемент Ribbon, идентифицируемый по указанному ИДЕНТИФИКАТОРу команды; значение NULL, если ни один элемент ленты не определен с указанным ИДЕНТИФИКАТОРом команды.
+Элемент ленты, идентифицированный указанным идентификатором команды; в противном случае NULL, если элемент ленты не идентифицируется с указанным идентификатором команды.
 
-##  <a name="getcaptionheight"></a>CMFCRibbonPanel:: Жеткаптионхеигхт
+## <a name="cmfcribbonpanelgetcaptionheight"></a><a name="getcaptionheight"></a>CMFCRibbonPanel::GetCaptionHeight
 
-Получает высоту заголовка для панели ленты.
+Извлекает высоту подписи к ленте панели.
 
 ```
 int GetCaptionHeight() const;
@@ -351,13 +351,13 @@ int GetCaptionHeight() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Высота (в пикселях) заголовка для панели ленты.
+Высота, в пикселях, подписи к ленте панели.
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="getcount"></a>CMFCRibbonPanel:: NOCOUNT
+## <a name="cmfcribbonpanelgetcount"></a><a name="getcount"></a>CMFCRibbonPanel::GetCount
 
-Извлекает количество элементов ленты, содержащихся на панели ленты.
+Извлекает количество элементов ленты, которые содержатся в ленте панели.
 
 ```
 int GetCount() const;
@@ -365,11 +365,11 @@ int GetCount() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Число элементов ленты, содержащихся на панели ленты.
+Количество лентэлементов, содержащихся в ленте панели.
 
-##  <a name="getdata"></a>CMFCRibbonPanel:: GetData
+## <a name="cmfcribbonpanelgetdata"></a><a name="getdata"></a>CMFCRibbonPanel::GetData
 
-Возвращает определяемые пользователем данные, связанные с панелью.
+Возвращает данные, определяемые пользователем, связанные с панелью.
 
 ```
 DWORD_PTR GetData() const;
@@ -377,11 +377,11 @@ DWORD_PTR GetData() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Определяемые пользователем данные, связанные с панелью.
+Данные, определяемые пользователем, связанные с панелью.
 
-##  <a name="getdefaultbutton"></a>CMFCRibbonPanel:: Жетдефаултбуттон
+## <a name="cmfcribbonpanelgetdefaultbutton"></a><a name="getdefaultbutton"></a>CMFCRibbonPanel::GetDefaultButton
 
-Возвращает кнопку по умолчанию для панели ленты.
+Извлекает кнопку по умолчанию для ленточной панели.
 
 ```
 CMFCRibbonButton& GetDefaultButton();
@@ -389,15 +389,15 @@ CMFCRibbonButton& GetDefaultButton();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Кнопка по умолчанию для панели ленты.
+Кнопка по умолчанию для ленточной панели.
 
 ### <a name="remarks"></a>Remarks
 
-Кнопка по умолчанию отображается, когда на панели ленты недостаточно места для отображения элементов ленты.
+Кнопка по умолчанию отображается, когда ленточной панели недостаточно места для отображения элементов ленты.
 
-##  <a name="getdroppeddown"></a>CMFCRibbonPanel:: Жетдроппеддовн
+## <a name="cmfcribbonpanelgetdroppeddown"></a><a name="getdroppeddown"></a>CMFCRibbonPanel::GetDroppedDown
 
-Получает указатель на элемент ленты, если его всплывающее меню отбрасывается вниз.
+Получает указатель на элемент ленты, если его всплывающее меню опущено.
 
 ```
 CMFCRibbonBaseElement* GetDroppedDown() const;
@@ -405,15 +405,15 @@ CMFCRibbonBaseElement* GetDroppedDown() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на элемент ленты, для которого выбрасывается всплывающее меню; в противном случае значение NULL, если во всплывающем меню нет элемента ленты.
+Указатель на элемент ленты, который имеет свое всплывающее меню упал; в противном случае NULL, если ни один элемент ленты не имеет всплывающее меню упал.
 
 ### <a name="remarks"></a>Remarks
 
-Проверяются только элементы ленты, содержащиеся на панели ленты.
+Проверяются только элементы ленты, содержащиеся в ленточной панели.
 
-##  <a name="getelement"></a>CMFCRibbonPanel:: элемент
+## <a name="cmfcribbonpanelgetelement"></a><a name="getelement"></a>CMFCRibbonPanel::GetElement
 
-Возвращает элемент Ribbon, расположенный по указанному индексу.
+Возвращает элемент ленты, расположенный в указанном индексе.
 
 ```
 CMFCRibbonBaseElement* GetElement(int nIndex) const;
@@ -421,33 +421,33 @@ CMFCRibbonBaseElement* GetElement(int nIndex) const;
 
 ### <a name="parameters"></a>Параметры
 
-*ниндекс*<br/>
-окне Указывает отсчитываемый от нуля индекс извлекаемого элемента.
+*Nindex*<br/>
+(в) Определяет нулевой индекс элемента для извлечения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Допустимый указатель на базовый элемент Ribbon, расположенный в позиции *ниндекс* на панели ленты, или значение null, если в указанном индексе отсутствует элемент.
+Действительный указатель на базовый элемент ленты, расположенный в позиции *nIndex* в ленточной панели, или NULL, если нет элемента в указанном индексе.
 
-##  <a name="getelements"></a>CMFCRibbonPanel:: наэлементы
+## <a name="cmfcribbonpanelgetelements"></a><a name="getelements"></a>CMFCRibbonPanel::GetElements
 
-Извлекает все элементы ленты, содержащиеся на панели ленты.
+Извлекает все элементы ленты, которые содержатся в ленте панели.
 
-```
+```cpp
 void GetElements(CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*арелементс*<br/>
-заполняет Массив, который заполняется всеми элементами ленты, содержащимися на панели ленты.
+*arElements*<br/>
+(ваут) Массив для заполнения со всеми элементами ленты, которые содержатся в ленте панели.
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="getelementsbyid"></a>CMFCRibbonPanel:: Жетелементсбид
+## <a name="cmfcribbonpanelgetelementsbyid"></a><a name="getelementsbyid"></a>CMFCRibbonPanel::GetelementsbyID
 
-Добавляет элементы ленты, которые имеют указанный идентификатор команды, в указанный массив.
+Добавляет элементы ленты с указанным идентификатором команды в указанный массив.
 
-```
+```cpp
 void GetElementsByID(
 UINT uiCmdID,
 CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
@@ -455,19 +455,19 @@ CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 
 ### <a name="parameters"></a>Параметры
 
-*уикмдид*<br/>
-окне Идентификатор команды для элемента ленты.
+*uiCmdID*<br/>
+(в) Идентификатор команды для элемента ленты.
 
-*арелементс*<br/>
-окне Массив элементов ленты.
+*arElements*<br/>
+(в) Массив элементов ленты.
 
 ### <a name="remarks"></a>Remarks
 
-Проверяются только элементы ленты, содержащиеся на панели ленты.
+Проверяются только элементы ленты, содержащиеся в ленточной панели.
 
-##  <a name="gethighlighted"></a>CMFCRibbonPanel:: выделять
+## <a name="cmfcribbonpanelgethighlighted"></a><a name="gethighlighted"></a>CMFCRibbonPanel::GetHighlighted
 
-Извлекает элемент ленты, выделенный на панели ленты.
+Извлекает элемент ленты, который выделен на ленточной панели.
 
 ```
 CMFCRibbonBaseElement* GetHighlighted() const;
@@ -475,13 +475,13 @@ CMFCRibbonBaseElement* GetHighlighted() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на элемент ленты, выделенный на панели ленты.
+Указатель на элемент ленты, который подсвечивается на ленте панели.
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="getindex"></a>CMFCRibbonPanel:: onindex
+## <a name="cmfcribbonpanelgetindex"></a><a name="getindex"></a>CMFCRibbonPanel::GetIndex
 
-Извлекает Отсчитываемый от нуля индекс указанного элемента ленты из массива элементов ленты, содержащихся на панели ленты.
+Извлекает нулевой индекс указанного элемента ленты из массива элементов ленты, содержащихся в ленточной панели.
 
 ```
 virtual int GetIndex(CMFCRibbonBaseElement* pElem) const;
@@ -489,33 +489,33 @@ virtual int GetIndex(CMFCRibbonBaseElement* pElem) const;
 
 ### <a name="parameters"></a>Параметры
 
-*пелем*<br/>
-окне Указатель на элемент ленты.
+*pElem*<br/>
+(в) Указатель на элемент ленты.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Отсчитываемый от нуля индекс указанного элемента ленты, если метод был успешным; в противном случае — 1.
+Нулевой индекс указанного элемента ленты, если метод был успешным; в противном случае -1.
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="getitemidslist"></a>CMFCRibbonPanel:: Жетитемидслист
+## <a name="cmfcribbonpanelgetitemidslist"></a><a name="getitemidslist"></a>CMFCRibbonPanel::GetItemIDsList
 
-Получает идентификаторы команд для всех элементов ленты на панели ленты.
+Извлекает иные данные команды для всех элементов ленты в ленте панели.
 
-```
+```cpp
 void GetItemIDsList(CList<UINT, UINT>& lstItems) const;
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*лститемс*<br/>
-заполняет Список идентификаторов команд для элементов ленты, содержащихся на панели ленты.
+*lstItems*<br/>
+(ваут) Список интпредтов команд для элементов ленты, которые содержатся в ленте панели.
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="getname"></a>CMFCRibbonPanel:: Name
+## <a name="cmfcribbonpanelgetname"></a><a name="getname"></a>CMFCRibbonPanel::GetName
 
-Возвращает имя панели ленты.
+Извлекает название ленты панели.
 
 ```
 LPCTSTR GetName() const;
@@ -523,11 +523,11 @@ LPCTSTR GetName() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Имя панели ленты.
+Название лентяйной панели.
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="getparentbutton"></a>CMFCRibbonPanel:: Жетпарентбуттон
+## <a name="cmfcribbonpanelgetparentbutton"></a><a name="getparentbutton"></a>CMFCRibbonPanel::GetParentButton
 
 ```
 CMFCRibbonBaseElement* GetParentButton() const;
@@ -537,9 +537,9 @@ CMFCRibbonBaseElement* GetParentButton() const;
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="getparentcategory"></a>CMFCRibbonPanel:: Жетпаренткатегори
+## <a name="cmfcribbonpanelgetparentcategory"></a><a name="getparentcategory"></a>CMFCRibbonPanel::GetParentCategory
 
-Возвращает родительскую категорию для панели ленты.
+Возвращает родительскую категорию лентовой панели.
 
 ```
 CMFCRibbonCategory* GetParentCategory() const;
@@ -547,9 +547,9 @@ CMFCRibbonCategory* GetParentCategory() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на категорию ленты, которая содержит эту панель ленты.
+Указатель на ленту категории, которая содержит эту ленту панели.
 
-##  <a name="getparentmenubar"></a>CMFCRibbonPanel:: Жетпарентменубар
+## <a name="cmfcribbonpanelgetparentmenubar"></a><a name="getparentmenubar"></a>CMFCRibbonPanel::GetParentMenuBar
 
 ```
 CMFCRibbonPanelMenuBar* GetParentMenuBar() const;
@@ -559,9 +559,9 @@ CMFCRibbonPanelMenuBar* GetParentMenuBar() const;
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="getpreferedmenulocation"></a>CMFCRibbonPanel:: Жетпрефередменулокатион
+## <a name="cmfcribbonpanelgetpreferedmenulocation"></a><a name="getpreferedmenulocation"></a>CMFCRibbonPanel::GetPreferedMenuLocation
 
-Извлекает предпочтительный отображаемый прямоугольник для всплывающего меню на панели ленты.
+Извлекает предпочтительный прямоугольник дисплея для всплывающее меню ленточной панели.
 
 ```
 virtual BOOL GetPreferedMenuLocation(CRect& rect);
@@ -570,19 +570,19 @@ virtual BOOL GetPreferedMenuLocation(CRect& rect);
 ### <a name="parameters"></a>Параметры
 
 *rect*<br/>
-заполняет Этот параметр не используется.
+(ваут) Этот параметр не используется.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Всегда возвращает значение FALSE.
+Всегда возвращает FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод всегда возвращает значение FALSE. Переопределите этот метод, чтобы получить предпочтительный отображаемый прямоугольник для всплывающего меню на панели ленты.
+Этот метод всегда возвращает FALSE. Переопределить этот метод, чтобы получить предпочтительный прямоугольник дисплея для всплывающее меню ленточной панели.
 
-##  <a name="getpressed"></a>CMFCRibbonPanel:: Press
+## <a name="cmfcribbonpanelgetpressed"></a><a name="getpressed"></a>CMFCRibbonPanel::GetPressed
 
-Получает указатель на элемент ленты на панели ленты, если пользователь в данный момент нажимает ее.
+Получает указатель на элемент ленты на ленте панели, если пользователь в настоящее время нажимает на него.
 
 ```
 CMFCRibbonBaseElement* GetPressed() const;
@@ -590,13 +590,13 @@ CMFCRibbonBaseElement* GetPressed() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на элемент ленты, если пользователь в данный момент нажимает его; в противном случае — NULL.
+Указатель на элемент ленты, если пользователь в настоящее время нажимает на него; в противном случае NULL.
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="getrect"></a>CMFCRibbonPanel:: коrect
+## <a name="cmfcribbonpanelgetrect"></a><a name="getrect"></a>CMFCRibbonPanel::GetRect
 
-Извлекает отображаемый прямоугольник для панели ленты.
+Извлекает прямоугольник дисплея для ленточной панели.
 
 ```
 const CRect& GetRect() const;
@@ -604,13 +604,13 @@ const CRect& GetRect() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Отображаемый прямоугольник для панели ленты.
+Прямоугольник дисплея для ленточной панели.
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="haselement"></a>CMFCRibbonPanel:: Хаселемент
+## <a name="cmfcribbonpanelhaselement"></a><a name="haselement"></a>CMFCRibbonPanel::HasElement
 
-Указывает, содержит ли панель ленты указанный элемент ленты.
+Указывает, содержит ли лента панель указанного элемента ленты.
 
 ```
 BOOL HasElement(const CMFCRibbonBaseElement* pElem) const;
@@ -618,18 +618,18 @@ BOOL HasElement(const CMFCRibbonBaseElement* pElem) const;
 
 ### <a name="parameters"></a>Параметры
 
-*пелем*<br/>
-окне Указатель на элемент ленты.
+*pElem*<br/>
+(в) Указатель на элемент ленты.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-TRUE, если панель ленты содержит указанный элемент ленты; в противном случае — FALSE.
+TRUE, если лента панели содержит указанный элемент ленты; в противном случае FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="highlight"></a>CMFCRibbonPanel:: выделение
+## <a name="cmfcribbonpanelhighlight"></a><a name="highlight"></a>CMFCRibbonPanel::Высвет
 
-Задает цвет выделения для выбранной панели ленты и для элемента ленты, заданного точкой.
+Устанавливает цвет выделения для выбранной ленты панели и для элемента ленты, указанной точкой.
 
 ```
 virtual void Highlight(
@@ -639,17 +639,17 @@ CPoint point);
 
 ### <a name="parameters"></a>Параметры
 
-*бхигхлигхт*<br/>
-окне Значение TRUE, чтобы выделить панель ленты; Значение FALSE, чтобы отменять выделение панели ленты.
+*bHighlight*<br/>
+(в) TRUE, чтобы выделить ленту панели; FALSE, чтобы не выделить ленту панели.
 
-*point*<br/>
-окне Координаты x и y указателя, относительно левого верхнего угла окна.
+*Точки*<br/>
+(в) X и y координаты указателя, относительно верхнего левого угла окна.
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="hittest"></a>CMFCRibbonPanel:: HitTest
+## <a name="cmfcribbonpanelhittest"></a><a name="hittest"></a>CMFCRibbonPanel::HitTest
 
-Извлекает элемент ленты, если указанная точка находится в ней.
+Извлекает элемент ленты, если указанная точка находится в нем.
 
 ```
 virtual CMFCRibbonBaseElement* HitTest(
@@ -659,23 +659,23 @@ BOOL bCheckPanelCaption = FALSE);
 
 ### <a name="parameters"></a>Параметры
 
-*point*<br/>
-окне Координаты x и y указателя, относительно левого верхнего угла окна.
+*Точки*<br/>
+(в) X и y координаты указателя, относительно верхнего левого угла окна.
 
-*бчеккпанелкаптион*<br/>
-окне Значение TRUE, чтобы проверить заголовок панели ленты; в противном случае — FALSE.
+*bCheckPanelCaption*<br/>
+(в) TRUE для проверки заголовок ленты панели; в противном случае FALSE.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на элемент ленты, если указанная точка находится в ней; в противном случае — NULL.
+Указатель на элемент ленты, если указанная точка находится в нем; в противном случае NULL.
 
 ### <a name="remarks"></a>Remarks
 
-Проверяются только элементы ленты, содержащиеся на панели ленты.
+Проверяются только элементы ленты, содержащиеся в ленточной панели.
 
-##  <a name="hittestex"></a>CMFCRibbonPanel:: Хиттестекс
+## <a name="cmfcribbonpanelhittestex"></a><a name="hittestex"></a>CMFCRibbonPanel::HitTestEx
 
-Возвращает отсчитываемый от нуля индекс элемента ленты, в котором находится указанная точка.
+Извлекает нулевой индекс элемента ленты, который имеет указанную точку, расположенную в нем.
 
 ```
 virtual int HitTestEx(CPoint point) const;
@@ -683,20 +683,20 @@ virtual int HitTestEx(CPoint point) const;
 
 ### <a name="parameters"></a>Параметры
 
-*point*<br/>
-окне Координаты x и y указателя, относительно левого верхнего угла окна.
+*Точки*<br/>
+(в) X и y координаты указателя, относительно верхнего левого угла окна.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Отсчитываемый от нуля индекс элемента ленты, в котором находится указанная точка; в противном случае — 1.
+Индекс нулевой основе элемента ленты, который имеет указанную точку, расположенную в нем; в противном случае -1.
 
 ### <a name="remarks"></a>Remarks
 
-Проверяются только элементы ленты, содержащиеся на панели ленты.
+Проверяются только элементы ленты, содержащиеся в ленточной панели.
 
-##  <a name="insert"></a>CMFCRibbonPanel:: INSERT
+## <a name="cmfcribbonpanelinsert"></a><a name="insert"></a>CMFCRibbonPanel::Вставьте
 
-Вставляет указанный элемент ленты в указанную позиции в массиве элементов ленты, который содержится на панели ленты.
+Вставляет указанный элемент ленты в указанном положении в массив элементов ленты, который содержится в ленте панели.
 
 ```
 virtual BOOL Insert(
@@ -706,23 +706,23 @@ int nIndex);
 
 ### <a name="parameters"></a>Параметры
 
-*пелем*<br/>
-[вход, выход] Указатель на элемент ленты.
+*pElem*<br/>
+(в, вне) Указатель на элемент ленты.
 
-*ниндекс*<br/>
-окне Отсчитываемый от нуля значение в диапазоне от-1 до количества элементов ленты, содержащихся в массиве.
+*Nindex*<br/>
+(в) Значение на основе нулевой величины, начиная от -1 до количества элементов ленты, содержащихся в массиве.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если элемент ленты успешно вставлен; в противном случае — FALSE.
+TRUE, если элемент ленты был вставлен успешно; в противном случае FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Если значение *ниндекс* равно-1 или *ниндекс* равно количеству элементов ленты в массиве, указанный элемент ленты добавляется в конец массива. Если значение *ниндекс* выходит за пределы допустимого диапазона, метод завершится ошибкой.
+Если значение *nIndex* -1 или если *nIndex* равно числу элементов ленты в массиве, указанный элемент ленты добавляется к концу массива. Если значение *nIndex* находится вне диапазона, метод выйдет из строя.
 
-##  <a name="insertseparator"></a>CMFCRibbonPanel:: Инсертсепаратор
+## <a name="cmfcribbonpanelinsertseparator"></a><a name="insertseparator"></a>CMFCRibbonPanel::InsertSeparator
 
-Вставляет разделитель в заданной позиции.
+Вставляет сепаратор в данной позиции.
 
 ```
 virtual BOOL InsertSeparator(int nIndex);
@@ -730,20 +730,20 @@ virtual BOOL InsertSeparator(int nIndex);
 
 ### <a name="parameters"></a>Параметры
 
-*ниндекс*<br/>
-окне Указывает отсчитываемый от нуля индекс, по которому вставляется разделитель.
+*Nindex*<br/>
+(в) Определяет индекс нулевой основе, в котором вставляется сепаратор.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если разделитель был успешно вставлен; в противном случае — значение FALSE.
+TRUE, если сепаратор был вставлен успешно; в противном случае, FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Вызовите этот метод, чтобы вставить разделитель в позиции, указанной параметром *ниндекс*. Чтобы вставить разделитель рядом с последним добавленным элементом ленты, вызовите метод [CMFCRibbonPanel:: аддсепаратор](#addseparator).
+Вызовите этот метод, чтобы вставить сепаратор в положении, указанном *nIndex.* Чтобы вставить сепаратор рядом с недавно добавленным элементом ленты, позвоните [CMFCRibbonPanel::AddSeparator](#addseparator).
 
-##  <a name="iscentercolumnvert"></a>CMFCRibbonPanel:: Исцентерколумнверт
+## <a name="cmfcribbonpaneliscentercolumnvert"></a><a name="iscentercolumnvert"></a>CMFCRibbonPanel::IsCenterColumnVert
 
-Указывает, центрированы ли вертикальные позиции элементов ленты в пределах отображаемого прямоугольника.
+Указывает, сосредоточены ли вертикальные положения элементов ленты в прямоугольнике дисплея.
 
 ```
 BOOL IsCenterColumnVert() const;
@@ -751,11 +751,11 @@ BOOL IsCenterColumnVert() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если вертикальные позиции элементов ленты центрируются в пределах отображаемого прямоугольника; в противном случае — FALSE.
+TRUE, если вертикальные положения элементов ленты сосредоточены в их прямоугольнике дисплея; в противном случае FALSE.
 
-##  <a name="iscollapsed"></a>CMFCRibbonPanel:: "свернуто"
+## <a name="cmfcribbonpaneliscollapsed"></a><a name="iscollapsed"></a>CMFCRibbonPanel:: Свернутый
 
-Указывает, является ли отображаемый размер панели ленты минимальным в горизонтальном направлении.
+Указывает, минимизирован ли размер дисплея ленточной панели в горизонтальном направлении.
 
 ```
 BOOL IsCollapsed() const;
@@ -763,15 +763,15 @@ BOOL IsCollapsed() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если отображаемый размер панели ленты является минимальным в горизонтальном направлении; в противном случае — FALSE.
+TRUE, если размер дисплея ленточной панели сведен к минимуму в горизонтальном направлении; в противном случае FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Когда панель ленты свернута, она отображает только ее кнопку по умолчанию, ее имя и стрелку раскрывающегося списка.
+Когда ленточной панели рухнула, она отображает только свою кнопку по умолчанию, его имя и выпадающую стрелку.
 
-##  <a name="ishighlighted"></a>CMFCRibbonPanel:: выделять
+## <a name="cmfcribbonpanelishighlighted"></a><a name="ishighlighted"></a>CMFCRibbonPanel::Ishighlighted
 
-Указывает, выделено ли отображение панели ленты.
+Указывает, выделен ли дисплей ленточной панели.
 
 ```
 BOOL IsHighlighted() const;
@@ -779,15 +779,15 @@ BOOL IsHighlighted() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если отображение панели ленты выделено; в противном случае — FALSE.
+TRUE, если выделена лента панели; в противном случае FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Отображение панели ленты выделяется при наведении на нее указателя.
+Отображение ленточной панели выделяется, когда указатель над ним.
 
-##  <a name="isjustifycolumns"></a>CMFCRibbonPanel:: Исжустификолумнс
+## <a name="cmfcribbonpanelisjustifycolumns"></a><a name="isjustifycolumns"></a>CMFCRibbonPanel::IsJustifyКолонки
 
-Указывает, установлены ли одинаковая ширина отображаемых размеров элементов ленты, наявляющихся в одном столбце на панели ленты.
+Указывает, установлены ли размеры дисплея элементов ленты, налетаемых в одной колонне в ленточной панели, на одну и ту же ширину.
 
 ```
 BOOL IsJustifyColumns() const;
@@ -795,11 +795,11 @@ BOOL IsJustifyColumns() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если размеры отображаемых элементов ленты, наявляющихся в одном столбце на панели ленты, имеют одинаковую ширину. в противном случае — FALSE.
+ПРАВДА, если размеры дисплея элементов ленты, которые находятся в той же колонке в ленте панели установлены на той же ширине; в противном случае FALSE.
 
-##  <a name="ismainpanel"></a>CMFCRibbonPanel:: Исмаинпанел
+## <a name="cmfcribbonpanelismainpanel"></a><a name="ismainpanel"></a>CMFCRibbonPanel::IsMainPanel
 
-Указывает, является ли панель ленты основной панелью ленты.
+Указывает, является ли лента панели основной лентой панели.
 
 ```
 virtual BOOL IsMainPanel() const;
@@ -807,15 +807,15 @@ virtual BOOL IsMainPanel() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Всегда возвращает значение FALSE.
+Всегда возвращает FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод всегда возвращает значение FALSE. Переопределите этот метод, чтобы указать, является ли панель ленты основной панелью ленты.
+Этот метод всегда возвращает FALSE. Переопределить этот метод, чтобы указать, является ли лента панели основной лентой панели.
 
-Основная панель ленты отображается, когда пользователь нажимает кнопку приложение.
+Основная лента панели отображается, когда пользователь выбирает кнопку приложения.
 
-##  <a name="ismenumode"></a>CMFCRibbonPanel:: Исменумоде
+## <a name="cmfcribbonpanelismenumode"></a><a name="ismenumode"></a>CMFCRibbonPanel::IsMenuMode
 
 ```
 BOOL IsMenuMode() const;
@@ -825,7 +825,7 @@ BOOL IsMenuMode() const;
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="onkey"></a>CMFCRibbonPanel:: Онкэй
+## <a name="cmfcribbonpanelonkey"></a><a name="onkey"></a>CMFCRibbonPanel::OnKey
 
 ```
 virtual BOOL OnKey(UINT nChar);
@@ -833,15 +833,15 @@ virtual BOOL OnKey(UINT nChar);
 
 ### <a name="parameters"></a>Параметры
 
-окне Тип *nchar*<br/>
+(в) *nChar*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="recalcwidths"></a>CMFCRibbonPanel:: Рекалквидсс
+## <a name="cmfcribbonpanelrecalcwidths"></a><a name="recalcwidths"></a>CMFCRibbonPanel::RecalcWidths
 
-Повторно вычисляет ширину каждой конфигурации макета экрана для панели ленты.
+Пересчитывает ширину каждой конфигурации макета дисплея для ленточной панели.
 
 ```
 virtual void RecalcWidths(
@@ -852,18 +852,18 @@ int nHeight);
 ### <a name="parameters"></a>Параметры
 
 *pDC*<br/>
-окне Указатель на контекст устройства для панели ленты.
+(в) Указатель на контекст устройства для ленточной панели.
 
-*нхеигхт*<br/>
-окне Высота панели ленты.
+*nВысота*<br/>
+(в) Высота лентяевной панели.
 
 ### <a name="remarks"></a>Remarks
 
-Панель ленты изменяет конфигурацию макета при изменении доступной ширины.
+Ленточной панели изменяет конфигурацию макета по мере изменения доступной ширины.
 
-##  <a name="remove"></a>CMFCRibbonPanel:: Remove
+## <a name="cmfcribbonpanelremove"></a><a name="remove"></a>CMFCRibbonPanel::Удалить
 
-Удаляет и при необходимости удаляет элемент, расположенный по указанному индексу.
+Удаляет и по желанию удаляет элемент, расположенный в указанном индексе.
 
 ```
 BOOL Remove(
@@ -873,35 +873,35 @@ BOOL bDelete = TRUE);
 
 ### <a name="parameters"></a>Параметры
 
-*ниндекс*<br/>
-окне Задает отсчитываемый от нуля индекс элемента, который удаляется с панели ленты.
+*Nindex*<br/>
+(в) Определяет нулевой индекс элемента, который удаляется из ленточной панели.
 
-*бделете*<br/>
-окне Значение TRUE, чтобы удалить элемент, который удаляется; в противном случае — значение FALSE.
+*bУдалить*<br/>
+(в) TRUE для удаления удаленного элемента; в противном случае, FALSE.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если элемент был удален и удален (если *бделете* имеет значение true); Значение FALSE, если элемент не был удален или отсутствует элемент ленты, расположенный по адресу *ниндекс*.
+TRUE, если элемент был удален и удален (если *bDelete* является правдой); FALSE, если элемент не был удален или если нет элемента ленты, расположенной на *nIndex.*
 
 ### <a name="remarks"></a>Remarks
 
-Вызовите этот метод, чтобы удалить элемент из панели ленты.
+Вызовите этот метод, чтобы удалить элемент из ленты панели.
 
-##  <a name="removeall"></a>CMFCRibbonPanel:: RemoveAll
+## <a name="cmfcribbonpanelremoveall"></a><a name="removeall"></a>CMFCRibbonPanel::RemoveAll
 
-Удаляет все элементы ленты из панели ленты.
+Удаляет все элементы ленты с лентой панели.
 
-```
+```cpp
 void RemoveAll();
 ```
 
 ### <a name="remarks"></a>Remarks
 
-Все элементы ленты удаляются с панели ленты и уничтожаются.
+Все элементы ленты удаляются с лентой панели и уничтожаются.
 
-##  <a name="replace"></a>CMFCRibbonPanel:: Replace
+## <a name="cmfcribbonpanelreplace"></a><a name="replace"></a>CMFCRibbonPanel::Замена
 
-Заменяет один элемент другим в зависимости от значения индекса.
+Заменяет один элемент на другой на основе их значения индекса.
 
 ```
 BOOL Replace(
@@ -911,23 +911,23 @@ CMFCRibbonBaseElement* pElem);
 
 ### <a name="parameters"></a>Параметры
 
-*ниндекс*<br/>
-окне Указывает отсчитываемый от нуля индекс заменяемого элемента.
+*Nindex*<br/>
+(в) Определяет нулевой индекс элемента для замены.
 
-*пелем*<br/>
-[вход, выход] Допустимый указатель на элемент, который заменяет исходный элемент.
+*pElem*<br/>
+(в, вне) Действительный указатель на элемент, который заменяет исходный элемент.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если исходный элемент ленты был успешно заменен новым элементом ленты; Значение FALSE, если элемент Ribbon не был заменен или отсутствует элемент по указанному индексу.
+TRUE, если оригинальный элемент ленты был успешно заменен новым элементом ленты; FALSE, если элемент ленты не был заменен или если нет элемента в указанном индексе.
 
 ### <a name="remarks"></a>Remarks
 
-Чтобы заменить элемент Ribbon по ИДЕНТИФИКАТОРу команды, вызовите [CMFCRibbonPanel:: реплацебид](#replacebyid).
+Чтобы заменить элемент ленты командным идентификатором, позвоните [cmfcRibbonPanel::ReplaceByID](#replacebyid).
 
-##  <a name="replacebyid"></a>CMFCRibbonPanel:: Реплацебид
+## <a name="cmfcribbonpanelreplacebyid"></a><a name="replacebyid"></a>CMFCRibbonPanel::ReplacebyID
 
-Заменяет один элемент другим, основываясь на указанном ИДЕНТИФИКАТОРе команды.
+Заменяет один элемент на другой на основе заданного идентификатора команды.
 
 ```
 BOOL ReplaceByID(
@@ -937,55 +937,55 @@ CMFCRibbonBaseElement* pElem);
 
 ### <a name="parameters"></a>Параметры
 
-*уикмдид*<br/>
-окне Указывает идентификатор команды для замены.
+*uiCmdID*<br/>
+(в) Уфиксирует идентификатор команды элемента для замены.
 
-*пелем*<br/>
-[вход, выход] Допустимый указатель на элемент, который заменит исходный элемент.
+*pElem*<br/>
+(в, вне) Действительный указатель на элемент, который заменит исходный элемент.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если исходный элемент ленты был успешно заменен новым элементом ленты; Значение FALSE, если элемент Ribbon не был заменен, или если элемент с указанным ИДЕНТИФИКАТОРом команды фактически не существует.
+TRUE, если оригинальный элемент ленты был успешно заменен новым элементом ленты; FALSE, если элемент ленты не был заменен или если элемент с указанным идентификатором команды фактически не существует.
 
 ### <a name="remarks"></a>Remarks
 
-Чтобы заменить элемент ленты на основе расположения, вызовите [CMFCRibbonPanel:: Replace](#replace).
+Чтобы заменить элемент ленты в зависимости от положения, позвоните [CMFCRibbonPanel::Заменить](#replace).
 
-##  <a name="setcentercolumnvert"></a>CMFCRibbonPanel:: Сетцентерколумнверт
+## <a name="cmfcribbonpanelsetcentercolumnvert"></a><a name="setcentercolumnvert"></a>CMFCRibbonPanel::SetCenterColumnVert
 
-Включает или отключает центрирование вертикальных позиций элементов ленты в пределах отображаемого прямоугольника.
+Позволяет или отстраняет центрирование вертикальных положений элементов ленты в их прямоугольнике дисплея.
 
-```
+```cpp
 void SetCenterColumnVert(BOOL bSet = TRUE);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Управляемое bSet*<br/>
-окне Значение TRUE, чтобы центрировать вертикальные позиции элементов ленты в пределах отображаемого прямоугольника; Значение FALSE, чтобы отключить эту функцию.
+*bSet*<br/>
+(в) TRUE для центрировать вертикальные положения элементов ленты в их прямоугольнике дисплея; FALSE, чтобы отключить эту функцию.
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="setdata"></a>CMFCRibbonPanel:: SetData
+## <a name="cmfcribbonpanelsetdata"></a><a name="setdata"></a>CMFCRibbonPanel::SetData
 
-Связывает определяемые пользователем данные с панелью ленты.
+Ассоциирует данные, определяемые пользователем, с ленточной панелью.
 
-```
+```cpp
 void SetData(DWORD_PTR dwData);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*двдата*<br/>
-окне Задает определяемые пользователем данные для задания.
+*dwData*<br/>
+(в) Определяет данные, определяемые пользователем, для настройки.
 
 ### <a name="remarks"></a>Remarks
 
-Вызовите этот метод, чтобы связать определяемые пользователем данные с панелью ленты.
+Вызовите этот метод, чтобы связать данные, определяемые пользователем, с ленточной панелью.
 
-##  <a name="setelementmenu"></a>CMFCRibbonPanel:: Сетелементмену
+## <a name="cmfcribbonpanelsetelementmenu"></a><a name="setelementmenu"></a>CMFCRibbonPanel::SetElementMenu
 
-Назначает всплывающее меню элементу с заданным ИДЕНТИФИКАТОРом команды.
+Присваивает всплывающее меню элементу, который имеет данный идентификатор команды.
 
 ```
 BOOL SetElementMenu(
@@ -1003,32 +1003,32 @@ BOOL bRightAlign = FALSE);
 
 ### <a name="parameters"></a>Параметры
 
-*уикмдид*<br/>
-окне Указывает идентификатор команды элемента ленты, в которую добавляется меню.
+*uiCmdID*<br/>
+(в) Уотреженный идентификатор команды элемента ленты, где добавлено меню.
 
 *hMenu*<br/>
-окне Задает маркер меню Windows для добавления на панель ленты.
+(в) Упоньте ручку в меню Windows, чтобы добавить в ленту панели.
 
-*бисдефауткомманд*<br/>
-окне Значение TRUE, чтобы указать, что команда, связанная с элементом Ribbon, должна выполняться при щелчке элемента ленты. В этом случае меню открывается, только когда пользователь щелкает стрелку рядом с элементом Ribbon. Значение FALSE, чтобы указать, что команда, связанная с элементом Ribbon, не должна выполняться при щелчке элемента ленты. В этом случае всплывающее меню отображается независимо от того, где пользователь щелкает элемент.
+*bIsDefautCommand*<br/>
+(в) ПРАВДА указать, что команда, связанная с элементом ленты, должна быть выполнена при нажатии элемента ленты. В этом случае меню открывается только тогда, когда пользователь нажимает на стрелку рядом с элементом ленты. FALSE указать, что команда, связанная с элементом ленты, не должна выполняться при нажатии элемента ленты. В этом случае всплывающее меню отображается независимо от того, где пользователь нажимает на элемент.
 
-*бригхталигн*<br/>
-окне Значение TRUE, чтобы указать, что всплывающее меню выровняйтеся по правому краю; в противном случае — значение FALSE.
+*bRightAlign*<br/>
+(в) TRUE указать, что всплывающее меню является право выровнены; в противном случае, FALSE.
 
-*уименуресид*<br/>
-окне Указывает идентификатор ресурса меню, добавляемого на панель ленты.
+*uiMenuResID*<br/>
+(в) Учреждайте идентификатор ресурса меню для добавления в ленточной панели.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если меню было назначено элементу Ribbon. в противном случае — значение FALSE.
+TRUE, если меню было назначено элементу ленты; в противном случае, FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Вызовите этот метод, чтобы назначить всплывающее меню элементу ленты с заданным ИДЕНТИФИКАТОРом команды.
+Вызовите этот метод, чтобы назначить всплывающее меню элементу ленты, который имеет данный идентификатор команды.
 
-##  <a name="setelementrtc"></a>CMFCRibbonPanel:: Сетелементртк
+## <a name="cmfcribbonpanelsetelementrtc"></a><a name="setelementrtc"></a>CMFCRibbonPanel::SetElementRTC
 
-Добавляет элемент Ribbon, указанный предоставленными сведениями о классе среды выполнения, на панель ленты.
+Добавляет элемент ленты, указанный информацией о классе времени выполнения, в ленточку.
 
 ```
 CMFCRibbonBaseElement* SetElementRTC(
@@ -1038,23 +1038,23 @@ CRuntimeClass* pRTC);
 
 ### <a name="parameters"></a>Параметры
 
-*ниндекс*<br/>
-окне Указывает отсчитываемый от нуля индекс добавляемого элемента ленты.
+*Nindex*<br/>
+(в) Определяет нулевой индекс элемента ленты для добавления.
 
 *pRTC*<br/>
-[вход, выход] Указатель на сведения о классе среды выполнения для элемента Ribbon, добавляемого на панель ленты.
+(в, вне) Указатель на информацию о классе времени выполнения для элемента ленты, который добавляется к ленте панели.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Элемент Ribbon, созданный с помощью указанных сведений о классе среды выполнения.
+Элемент ленты, созданный с помощью указанной информации о классе времени выполнения.
 
 ### <a name="remarks"></a>Remarks
 
-Если вы хотите добавить настраиваемый элемент (например, кнопку цвета) на панель ленты, необходимо указать сведения о классе среды выполнения пользовательского элемента. Лента хранит эти сведения, создает настраиваемый элемент и заменяет существующий элемент, который расположен (определяется) указанным ИДЕНТИФИКАТОРом команды. Затем лента возвращает указатель на только что созданный элемент.
+Если требуется добавить пользовательский элемент (например, кнопку цвета) в ленточной панели, необходимо указать информацию о классе времени выполнения пользовательского элемента. Лента хранит эту информацию, создает пользовательский элемент и заменяет существующий элемент, который находится (идентифицируется) указанным идентификатором команды. Затем лента возвращает указатель на вновь созданный элемент.
 
-##  <a name="setelementrtcbyid"></a>CMFCRibbonPanel:: Сетелементрткбид
+## <a name="cmfcribbonpanelsetelementrtcbyid"></a><a name="setelementrtcbyid"></a>CMFCRibbonPanel::SetElementRTCByID
 
-Добавляет элемент Ribbon, указанный предоставленными сведениями о классе среды выполнения, на панель ленты.
+Добавляет элемент ленты, указанный информацией о классе времени выполнения, в ленточку.
 
 ```
 CMFCRibbonBaseElement* SetElementRTCByID(
@@ -1064,23 +1064,23 @@ CRuntimeClass* pRTC);
 
 ### <a name="parameters"></a>Параметры
 
-*уикмдид*<br/>
-окне Указывает идентификатор команды добавляемого элемента ленты.
+*uiCmdID*<br/>
+(в) Уфиксирует идентификатор команды элемента ленты для добавления.
 
 *pRTC*<br/>
-[вход, выход] Указатель на сведения о классе среды выполнения, связанный с элементом ленты, который добавляется на панель ленты.
+(в, вне) Указатель на информацию о классе времени выполнения, связанную с элементом ленты, который добавляется к панели ленты.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Элемент Ribbon, созданный с помощью указанных сведений о классе среды выполнения.
+Элемент ленты, созданный с помощью указанной информации о классе времени выполнения.
 
 ### <a name="remarks"></a>Remarks
 
-Если вы хотите добавить настраиваемый элемент (например, кнопку цвета) на панель ленты, необходимо указать сведения о классе среды выполнения пользовательского элемента. Лента хранит эти сведения, создает настраиваемый элемент и заменяет существующий элемент, расположенный по указанному ИДЕНТИФИКАТОРу команды. Затем он возвращает указатель на только что созданный элемент.
+Если требуется добавить пользовательский элемент (например, кнопку цвета) в ленточной панели, необходимо указать информацию о классе времени выполнения пользовательского элемента. Лента хранит эту информацию, создает пользовательский элемент и заменяет существующий элемент, расположенный в указанном идентификаторе команды. Затем он возвращает указатель на вновь созданный элемент.
 
 ### <a name="example"></a>Пример
 
-В следующем примере показано, как использовать метод `SetElementRTCByID`.
+В следующем примере показано, как использовать `SetElementRTCByID` метод:
 
 ```
 
@@ -1104,43 +1104,43 @@ pColorButton->EnableAutomaticButton(_T("Automatic"),
     0));
 ```
 
-##  <a name="setjustifycolumns"></a>CMFCRibbonPanel:: Сетжустификолумнс
+## <a name="cmfcribbonpanelsetjustifycolumns"></a><a name="setjustifycolumns"></a>CMFCRibbonPanel::SetJustifyКолонки
 
-Включает или отключает корректировку ширины элементов ленты в том же столбце.
+Позволяет или отражает регулировку ширины элементов ленты в одном столбце.
 
-```
+```cpp
 void SetJustifyColumns(BOOL bSet = TRUE);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Управляемое bSet*<br/>
-окне Значение TRUE, чтобы настроить ширину элементов ленты в том же столбце до ширины самого крупного элемента ленты в столбце; Значение FALSE, чтобы отключить эту настройку ширины.
+*bSet*<br/>
+(в) TRUE настроить ширину элементов ленты в одной колонке к ширине самого большого элемента ленты в колонке; FALSE, чтобы отключить эту регулировку ширины.
 
 ### <a name="remarks"></a>Remarks
 
-Если эта функция включена на панели ленты, ширина элементов ленты в одном столбце корректируется по ширине самого крупного элемента ленты в том же столбце.
+Когда эта функция включена в ленточной панели, ширина элементов ленты в той же колонке корректируется на ширину самого большого элемента ленты в той же колонке.
 
-##  <a name="setkeys"></a>CMFCRibbonPanel:: Сеткэйс
+## <a name="cmfcribbonpanelsetkeys"></a><a name="setkeys"></a>CMFCRibbonPanel::SetKeys
 
-Задает keytip для кнопки по умолчанию на панели ленты.
+Устанавливает клавиатуру для кнопки по умолчанию ленточной панели.
 
-```
+```cpp
 void SetKeys(LPCTSTR lpszKeys);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*лпсзкэйс*<br/>
-окне Keytip для кнопки по умолчанию на панели ленты.
+*lpszKeys*<br/>
+(в) Ключевой наконечник для кнопки по умолчанию лентой панели.
 
 ### <a name="remarks"></a>Remarks
 
-Кнопка по умолчанию отображается, когда на панели ленты недостаточно места для отображения элементов ленты.
+Кнопка по умолчанию отображается, когда ленточной панели недостаточно места для отображения элементов ленты.
 
-##  <a name="showpopup"></a>CMFCRibbonPanel:: ShowPopup
+## <a name="cmfcribbonpanelshowpopup"></a><a name="showpopup"></a>CMFCRibbonPanel::ShowPopup
 
-Создает и отображает всплывающее меню для панели ленты.
+Создает и отображает всплывающее меню для ленты панели.
 
 ```
 CMFCRibbonPanelMenu* ShowPopup(CMFCRibbonDefaultPanelButton* pButton = NULL);
@@ -1148,50 +1148,50 @@ CMFCRibbonPanelMenu* ShowPopup(CMFCRibbonDefaultPanelButton* pButton = NULL);
 
 ### <a name="parameters"></a>Параметры
 
-*пбуттон*<br/>
-окне Указатель на кнопку по умолчанию для панели ленты.
+*pButton*<br/>
+(в) Указатель на кнопку по умолчанию для ленточной панели.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на всплывающее меню для панели ленты, если метод выполнен успешно; в противном случае — NULL.
+Указатель на всплывающее меню для лентой панели, если метод был успешным; в противном случае NULL.
 
 ### <a name="remarks"></a>Remarks
 
-Всплывающее меню для панели ленты доступно только в том случае, если панель ленты свернута.
+Всплывающее меню для ленты панели доступна только тогда, когда дисплей ленты панели рухнул.
 
-##  <a name="setfocused"></a>CMFCRibbonPanel:: Сетфокусед
+## <a name="cmfcribbonpanelsetfocused"></a><a name="setfocused"></a>CMFCRibbonPanel::SetFocused
 
-Устанавливает фокус на указанный элемент ленты.
+Устанавливает фокус на указанный элемент Ленты.
 
-```
+```cpp
 void SetFocused(CMFCRibbonBaseElement* pNewFocus);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*пневфокус*<br/>
+*pNewFocus*<br/>
 Указатель на элемент ленты, который получает фокус.
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="makegalleryitemvisible"></a>CMFCRibbonPanel:: Макегаллеритемвисибле
+## <a name="cmfcribbonpanelmakegalleryitemvisible"></a><a name="makegalleryitemvisible"></a>CMFCRibbonPanel::MakeGalleryItemVisible
 
-Прокручивает коллекцию, чтобы сделать указанный элемент ленты видимым.
+Прокрутите галерею, чтобы сделать указанный элемент ленты видимым.
 
-```
+```cpp
 void MakeGalleryItemVisible(CMFCRibbonBaseElement* pItem);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*питем*<br/>
-Указатель на элемент ленты, который необходимо отобразить.
+*pItem*<br/>
+Указатель на элемент ленты, чтобы показать.
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="iswindows7look"></a>CMFCRibbonPanel:: IsWindows7Look
+## <a name="cmfcribbonpaneliswindows7look"></a><a name="iswindows7look"></a>CMFCRibbonPanel::IsWindows7Look
 
-Указывает, имеет ли родительская лента вид Windows 7 (кнопка приложения с небольшим прямоугольным представлением).
+Указывает, имеет ли родительская лента внешний вид Windows 7 (маленькая прямоугольная кнопка приложения).
 
 ```
 BOOL IsWindows7Look() const;
@@ -1199,15 +1199,15 @@ BOOL IsWindows7Look() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если у родительской ленты есть Windows 7; в противном случае — FALSE.
+ПРАВДА, если родительская лента имеет Windows 7 вид; в противном случае FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="getvisibleelements"></a>CMFCRibbonPanel:: Жетвисиблилементс
+## <a name="cmfcribbonpanelgetvisibleelements"></a><a name="getvisibleelements"></a>CMFCRibbonPanel::GetVisibleElements
 
 Извлекает массив видимых элементов.
 
-```
+```cpp
 void GetVisibleElements(
 CArray<CMFCRibbonBaseElement*,
 CMFCRibbonBaseElement*>& arElements);
@@ -1215,14 +1215,14 @@ CMFCRibbonBaseElement*>& arElements);
 
 ### <a name="parameters"></a>Параметры
 
-*арелементс*<br/>
-При возврате функции этот параметр содержит массив видимых элементов.
+*arElements*<br/>
+Когда функция возвращается, этот параметр содержит массив видимых элементов.
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="getgalleryrect"></a>CMFCRibbonPanel:: Жетгаллерирект
+## <a name="cmfcribbonpanelgetgalleryrect"></a><a name="getgalleryrect"></a>CMFCRibbonPanel::GetGalleryRect
 
-Возвращает ограничивающий прямоугольник элемента коллекции.
+Возвращает ограничивающий прямоугольник элемента Галереи.
 
 ```
 CRect GetGalleryRect();
@@ -1230,11 +1230,11 @@ CRect GetGalleryRect();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Размер и расположение элемента коллекции на этой панели.
+Размер и положение элемента Галереи в этой панели.
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="getfocused"></a>CMFCRibbonPanel:: с фокусировкой
+## <a name="cmfcribbonpanelgetfocused"></a><a name="getfocused"></a>CMFCRibbonPanel::GetFocused
 
 Возвращает элемент, имеющий фокус ввода.
 
@@ -1244,7 +1244,7 @@ CMFCRibbonBaseElement* GetFocused() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на элемент с сортировкой или значение NULL.
+Указатель на сфокусированный элемент или NULL.
 
 ### <a name="remarks"></a>Remarks
 
@@ -1253,5 +1253,5 @@ CMFCRibbonBaseElement* GetFocused() const;
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)<br/>
 [Класс CObject](../../mfc/reference/cobject-class.md)<br/>
-[Класс CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md)<br/>
+[Класс CMFCRibbonКатегория](../../mfc/reference/cmfcribboncategory-class.md)<br/>
 [Класс CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)

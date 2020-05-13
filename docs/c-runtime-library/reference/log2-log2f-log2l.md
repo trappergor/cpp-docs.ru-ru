@@ -1,10 +1,13 @@
 ---
 title: log2, log2f, log2l
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - log2
 - log2l
 - log2f
+- _o_log2
+- _o_log2f
+- _o_log2l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,17 +20,18 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
 - apiref
 ms.assetid: 94d11b38-70b7-4d3a-94ac-523153c92b2e
-ms.openlocfilehash: bf1734ea2f96fa1c09b3b0d1f43b681fc31c8f9f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 58da7790e6fbce915c16a02a1b0d972a6fe1049e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953159"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911418"
 ---
 # <a name="log2-log2f-log2l"></a>log2, log2f, log2l
 
@@ -68,7 +72,7 @@ long double log2l(
 
 В случае неудачи может возвращать одно из следующих значений:
 
-|Проблемы|Назад|
+|Проблема|Возвращает|
 |-----------|------------|
 |*x* < 0|NaN|
 |*x* = ± 0|-INFINITY|
@@ -78,11 +82,13 @@ long double log2l(
 |ошибка домена|NaN|
 |Ошибка полюса|-HUGE_VAL, -HUGE_VALF или -HUGE_VALL|
 
-Ошибки сообщаются, как указано в [_matherr](matherr.md).
+Сообщает об ошибках, как указано в [_matherr](matherr.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Если x является целым числом, эта функция фактически возвращает отсчитываемый от нуля индекс наиболее значимого 1 бита *x*.
+
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -90,9 +96,9 @@ long double log2l(
 |--------------|--------------|------------------|
 |**log2**, **log2f**, **log2l**|\<math.h>|\<cmath>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Алфавитный указатель функций](crt-alphabetical-function-reference.md)<br/>
 [exp2, exp2f, exp2l](exp2-exp2f-exp2l.md)<br/>

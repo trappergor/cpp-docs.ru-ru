@@ -1,39 +1,39 @@
 ---
-title: Набор записей. Добавление записей (ODBC)
+title: Набор записей. Добавление нескольких записей (ODBC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC recordsets, adding records
 - recordsets, adding records
 - bulk record additions to recordsets
 ms.assetid: 4685f656-14b9-4f10-a1c5-147b2b89a0b4
-ms.openlocfilehash: a2c3eab8bb4c0e8db76fceb5a2dafd16a4a07079
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f561cb0275933a973e97ef0518148e81e14a0234
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395668"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213022"
 ---
-# <a name="recordset-adding-records-in-bulk-odbc"></a>Набор записей. Добавление записей (ODBC)
+# <a name="recordset-adding-records-in-bulk-odbc"></a>Набор записей. Добавление нескольких записей (ODBC)
 
 Этот раздел относится к классам ODBC библиотеки MFC.
 
-MFC [CRecordset](../../mfc/reference/crecordset-class.md) класс имеет добавлены средства оптимизации позволяет повысить эффективность при добавлении новых записей в пакетном режиме в таблицу.
+Класс MFC [CRecordset](../../mfc/reference/crecordset-class.md) имеет новую оптимизацию, которая повышает эффективность при добавлении в таблицу новых записей.
 
 > [!NOTE]
-> Этот раздел относится к объектам, производным от `CRecordset` в какой строке массовой выборка не был реализован. Если вы используете выборка строк, см. в разделе [набор записей: Пакетная выборка строк (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> Этот раздел относится к объектам, производным от `CRecordset`, в которых пакетное получение строк не реализовано. Если используется многострочная выборка строк, см. раздел [набор записей: групповая выборка записей (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-Новый параметр для *dwOptions* параметр [CRecordset::Open](../../mfc/reference/crecordset-class.md#open) функции-члена `optimizeBulkAdd`, улучшает производительность при добавлении нескольких записей последовательно без вызова `Requery` или `Close`. Только те поля, которые "грязные" перед первым `Update` вызов помечаются как "грязный" для последующих `AddNew` / `Update` вызовов.
+Новый параметр для параметра *двоптионс* функции-члена [CRecordset:: Open](../../mfc/reference/crecordset-class.md#open) , `optimizeBulkAdd`, повышает производительность при последовательном добавлении нескольких записей без вызова `Requery` или `Close`. Только те поля, которые являются "грязными" до первого вызова `Update`, помечаются как "грязные" для последующих вызовов `AddNew`/`Update`.
 
-Если вы используете классы баз данных пользоваться преимуществами `::SQLSetPos` функции ODBC API для добавления, редактирования и удаления записей, эта оптимизация не требуется.
+Если вы используете классы базы данных, чтобы воспользоваться преимуществами функции API `::SQLSetPos` ODBC для добавления, изменения и удаления записей, такая оптимизация не требуется.
 
-Если загружается библиотека курсоров ODBC или драйвер ODBC не поддерживает добавление, изменение и удаление с помощью `::SQLSetPos`, эта оптимизация повысит Массовое добавление производительности. Чтобы включить такую оптимизацию, установите *dwOptions* параметр в `Open` вызова для набора записей следующее:
+Если библиотека курсоров ODBC загружена или драйвер ODBC не поддерживает добавление, изменение и удаление с помощью `::SQLSetPos`, эта оптимизация повышает производительность. Чтобы включить эту оптимизацию, установите параметр *двоптионс* в вызове `Open` для набора записей следующим образом:
 
 ```
 appendOnly | optimizeBulkAdd
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Набор записей (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Набор записей. Добавление, обновление и удаление записей (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)<br/>
-[Набор записей. Блокирование записей (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
+[Набор записей. Блокировка (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

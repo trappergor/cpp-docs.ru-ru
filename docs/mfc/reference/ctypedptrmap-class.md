@@ -1,5 +1,5 @@
 ---
-title: Ctypedptrmap-класс
+title: Класс CTypedPtrMap
 ms.date: 11/04/2016
 f1_keywords:
 - CTypedPtrMap
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - CTypedPtrMap [MFC], RemoveKey
 - CTypedPtrMap [MFC], SetAt
 ms.assetid: 9f377385-c6e9-4471-8b40-8fe220c50164
-ms.openlocfilehash: bc164125f867cf3e2f27b74e69b826cbed31ff1d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 410f0101fd0f8cda271fe0f2353b06b9e8d773b8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323574"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754361"
 ---
-# <a name="ctypedptrmap-class"></a>Ctypedptrmap-класс
+# <a name="ctypedptrmap-class"></a>Класс CTypedPtrMap
 
 Предоставляет типобезопасную "программу-оболочку" для объектов классов карты указателей `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr`и `CMapStringToPtr`.
 
@@ -35,38 +35,38 @@ class CTypedPtrMap : public BASE_CLASS
 #### <a name="parameters"></a>Параметры
 
 *BASE_CLASS*<br/>
-Базовый класс для класса map типизированных указателей; должен быть классом карты указатель ( `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr`, или `CMapStringToPtr`).
+Базовый класс типа набранной указатель карты; должен быть класс карты `CMapPtrToPtr`указателя (, `CMapPtrToWord`, `CMapWordToPtr`или `CMapStringToPtr`).
 
-*KEY*<br/>
-Класс объекта, используемое в качестве ключа к схеме.
+*Ключ*<br/>
+Класс объекта, используемого в качестве ключа к карте.
 
-*ЗНАЧЕНИЕ*<br/>
-Класс объекта, хранимый в сопоставлении.
+*Значение*<br/>
+Класс объекта, хранящегося на карте.
 
 ## <a name="members"></a>Участники
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CTypedPtrMap::GetNextAssoc](#getnextassoc)|Получает следующий элемент для выполнения итерации.|
-|[CTypedPtrMap::Lookup](#lookup)|Возвращает `KEY` на основе `VALUE`.|
-|[CTypedPtrMap::RemoveKey](#removekey)|Удаляет элемент, указанный с помощью ключа.|
-|[CTypedPtrMap::SetAt](#setat)|Вставляет элемент в сопоставление; заменяет существующий элемент, если найден соответствующий ключ.|
+|[CTypedPtrMap::GetNextAssoc](#getnextassoc)|Получает следующий элемент для итерации.|
+|[CTypedPtrMap::Поиск](#lookup)|Возвращает `KEY` на основе `VALUE`.|
+|[CTypedPtrMap::RemoveKey](#removekey)|Удаляет элемент, указанный ключом.|
+|[CTypedPtrMap::SetAt](#setat)|Вставляет элемент на карту; заменяет существующий элемент при обнаружении соответствующего ключа.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CTypedPtrMap::operator \[ \]](#operator_at)|Вставляет элемент в схеме.|
+|[CTypedPtrMap::оператор \[\]](#operator_at)|Вставляет элемент в карту.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-При использовании `CTypedPtrMap`, средство проверки типов C++ помогает устранить ошибки, вызванные типы несоответствие указателей.
+При использовании, `CTypedPtrMap`средство проверки типа СЗ помогает устранить ошибки, вызванные несовместимыми типами указателей.
 
-Так как все `CTypedPtrMap` функции, встроенные, использование этого шаблона незначительно повлиять на размер или скорость кода.
+Поскольку `CTypedPtrMap` все функции являются внеочередными, использование этого шаблона не оказывает существенного влияния на размер или скорость кода.
 
-Дополнительные сведения об использовании `CTypedPtrMap`, см. в статьях [коллекций](../../mfc/collections.md) и [классы на основе шаблона](../../mfc/template-based-classes.md).
+Для получения дополнительной `CTypedPtrMap`информации об [Template-Based Classes](../../mfc/template-based-classes.md)использовании , [см.](../../mfc/collections.md)
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -78,11 +78,11 @@ class CTypedPtrMap : public BASE_CLASS
 
 **Заголовок:** afxtempl.h
 
-##  <a name="getnextassoc"></a>  CTypedPtrMap::GetNextAssoc
+## <a name="ctypedptrmapgetnextassoc"></a><a name="getnextassoc"></a>CTypedPtrMap::GetNextAssoc
 
-Извлекает элемент карты по `rNextPosition`, а затем обновляет `rNextPosition` для обращения к следующему элементу в сопоставлении.
+Извлекает элемент карты `rNextPosition`на, `rNextPosition` затем обновляется для обозначения следующего элемента на карте.
 
-```
+```cpp
 void GetNextAssoc(
     POSITION& rPosition,
     KEY& rKey,
@@ -92,31 +92,31 @@ void GetNextAssoc(
 ### <a name="parameters"></a>Параметры
 
 *rPosition*<br/>
-Задает ссылку на значение ПОЗИЦИИ, возвращенное предыдущим `GetNextAssoc` или `BASE_CLASS` **:: GetStartPosition** вызова.
+Упоняет ссылку на значение POSITION, возвращенное предыдущим `GetNextAssoc` `BASE_CLASS` **или:GetStartPosition.**
 
-*KEY*<br/>
-Параметр шаблона, указывающий тип карты ключей.
+*Ключ*<br/>
+Параметры шаблона, определяющие тип ключей карты.
 
 *rKey*<br/>
-Указывает возвращаемый ключ полученного элемента.
+Определяет возвращенный ключ извлеченного элемента.
 
-*ЗНАЧЕНИЕ*<br/>
-Параметр шаблона, указывающий тип значения карты.
+*Значение*<br/>
+Параметры шаблона, определяющие тип значений карты.
 
-*rValue*<br/>
-Указывает возвращаемое значение полученного элемента.
+*Rvalue*<br/>
+Определяет возвращенное значение извлеченного элемента.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Эта функция наиболее полезна для перебора всех элементов в сопоставлении. Обратите внимание на то, что последовательность позиция не обязательно так же, как последовательности значение ключа.
+Эта функция наиболее полезна для итерации всех элементов на карте. Обратите внимание, что последовательность положения не обязательно совпадает с последовательностью значения ключа.
 
-Если полученного элемента является последним в сопоставлении, то новое значение `rNextPosition` имеет значение NULL.
+Если извлеченный элемент является последним на карте, то `rNextPosition` новое значение устанавливается на NULL.
 
-Это встраиваемая функция вызывает `BASE_CLASS` **:: GetNextAssoc**.
+Эта влиневая функция вызывает `BASE_CLASS` **::GetNextAssoc**.
 
-##  <a name="lookup"></a>  CTypedPtrMap::Lookup
+## <a name="ctypedptrmaplookup"></a><a name="lookup"></a>CTypedPtrMap::Поиск
 
-`Lookup` использует алгоритм хэширования для быстрого поиска элемента карты с ключом, обеспечивающее точное совпадение.
+`Lookup`использует алгоритм хэширования, чтобы быстро найти элемент карты с ключом, который точно соответствует.
 
 ```
 BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
@@ -125,28 +125,28 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 ### <a name="parameters"></a>Параметры
 
 *BASE_CLASS*<br/>
-Параметр шаблона, указывающий базовый класс для класса этой карты.
+Параметры шаблона, определяющие базовый класс класса этой карты.
 
 *key*<br/>
-Ключ элемента, который требуется найти.
+Ключ элемента, который будет смотреть вверх.
 
-*ЗНАЧЕНИЕ*<br/>
-Параметр шаблона, указывающий тип значения, хранящиеся в данном сопоставлении.
+*Значение*<br/>
+Параметры шаблона, определяющие тип значений, хранящихся на этой карте.
 
-*rValue*<br/>
-Указывает возвращаемое значение полученного элемента.
+*Rvalue*<br/>
+Определяет возвращенное значение извлеченного элемента.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ненулевое значение, если элемент найден; в противном случае 0.
+Nonzero, если элемент был найден; в противном случае 0.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Это встраиваемая функция вызывает `BASE_CLASS` **:: подстановки**.
+Эта влиневая функция вызывает `BASE_CLASS` **::Lookup**.
 
-##  <a name="operator_at"></a>  CTypedPtrMap::operator [ ]
+## <a name="ctypedptrmapoperator--"></a><a name="operator_at"></a>CTypedPtrMap::оператор
 
-Этот оператор может использоваться только в левой части оператора присваивания (l значение).
+Этот оператор может быть использован только на левой стороне оператора назначения (l-значение).
 
 ```
 VALUE& operator[ ](base_class ::base_arg_key key);
@@ -154,22 +154,22 @@ VALUE& operator[ ](base_class ::base_arg_key key);
 
 ### <a name="parameters"></a>Параметры
 
-*ЗНАЧЕНИЕ*<br/>
-Параметр шаблона, указывающий тип значения, хранящиеся в данном сопоставлении.
+*Значение*<br/>
+Параметры шаблона, определяющие тип значений, хранящихся на этой карте.
 
 *BASE_CLASS*<br/>
-Параметр шаблона, указывающий базовый класс для класса этой карты.
+Параметры шаблона, определяющие базовый класс класса этой карты.
 
 *key*<br/>
-Ключ элемента для поиска или создания в сопоставлении.
+Ключ элемента, который будет рассмотрен или создан на карте.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Если ни один элемент карты с указанным ключом, то создается новый элемент. Нет нет» справа от оператора» (r-значение) эквивалентно этот оператор так как есть вероятность, что ключ не может находиться в схеме. Используйте `Lookup` функция-член для извлечения элемента.
+Если нет элемента карты с указанным ключом, создается новый элемент. Нет "правой стороны" (r-value) эквивалентного этому оператору, поскольку существует вероятность того, что ключ может не быть найден на карте. Используйте `Lookup` функцию члена для поиска элементов.
 
-##  <a name="removekey"></a>  CTypedPtrMap::RemoveKey
+## <a name="ctypedptrmapremovekey"></a><a name="removekey"></a>CTypedPtrMap::RemoveKey
 
-Эта функция-член вызывает `BASE_CLASS` **:: RemoveKey**.
+Эта функция `BASE_CLASS`участника **вызывает::RemoveKey**.
 
 ```
 BOOL RemoveKey(KEY key);
@@ -177,48 +177,48 @@ BOOL RemoveKey(KEY key);
 
 ### <a name="parameters"></a>Параметры
 
-*KEY*<br/>
-Параметр шаблона, указывающий тип карты ключей.
+*Ключ*<br/>
+Параметры шаблона, определяющие тип ключей карты.
 
 *key*<br/>
-Ключ элемента, который требуется удалить.
+Ключ для удаления элемента.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ненулевое значение, если элемент был найден и успешно удален; в противном случае 0.
+Nonzero, если запись была найдена и успешно удалена; в противном случае 0.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Дополнительные примечания, см. в разделе [CMapStringToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey).
+Для более подробных замечаний, см [Cmapstringtoob::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey).
 
-##  <a name="setat"></a>  CTypedPtrMap::SetAt
+## <a name="ctypedptrmapsetat"></a><a name="setat"></a>CTypedPtrMap::SetAt
 
-Эта функция-член вызывает `BASE_CLASS` **:: SetAt**.
+Эта функция `BASE_CLASS`участника **вызывает ::SetAt**.
 
-```
+```cpp
 void SetAt(KEY key, VALUE newValue);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*KEY*<br/>
-Параметр шаблона, указывающий тип карты ключей.
+*Ключ*<br/>
+Параметры шаблона, определяющие тип ключей карты.
 
 *key*<br/>
-Указывает значение ключа новое значение.
+Определяет ключевую стоимость нового value.
 
-*новое значение*<br/>
-Задает указатель на объект, который является значением нового элемента.
+*newValue*<br/>
+Определяет указатель объекта, который является значением нового элемента.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Дополнительные примечания, см. в разделе [CMapStringToOb::SetAt](../../mfc/reference/cmapstringtoob-class.md#setat).
+Для более подробных замечаний, см [Cmapstringtoob::Setat](../../mfc/reference/cmapstringtoob-class.md#setat).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Пример MFC СБОР](../../overview/visual-cpp-samples.md)<br/>
+[MFC Образец COLLECT](../../overview/visual-cpp-samples.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)<br/>
 [Класс CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)<br/>
-[Класс CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)<br/>
+[Класс CmapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)<br/>
 [Класс CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)

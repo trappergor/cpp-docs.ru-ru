@@ -1,8 +1,9 @@
 ---
 title: _heapmin
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _heapmin
+- _o__heapmin
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +32,12 @@ helpviewer_keywords:
 - _heapmin function
 - heapmin function
 ms.assetid: c0bccdf6-2d14-4d7b-a7ff-d6a17bdb410f
-ms.openlocfilehash: c36a1028e42d59217586cc50adcb612e78072b03
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9a98dfffc784d05a93f65a51a5250c31fe1dd596
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954804"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920111"
 ---
 # <a name="_heapmin"></a>_heapmin
 
@@ -53,9 +55,11 @@ int _heapmin( void );
 
 Дополнительные сведения об этом и других кодах возврата см. в статье [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Функция **_heapmin** позволяет сокращать кучу, освобождая неиспользуемую память кучи от операционной системы. Если операционная система не поддерживает **_heapmin**(например, Windows 98), функция **возвращает значение-1 и устанавливает для** функции возврата к **еносис**.
+Функция **_heapmin** свертывает кучу, освобождая неиспользуемую память кучи от операционной системы. Если операционная система не поддерживает **_heapmin**(например, Windows 98), функция **возвращает значение-1 и устанавливает для** **еносис**.
+
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -63,12 +67,12 @@ int _heapmin( void );
 |-------------|---------------------|---------------------|
 |**_heapmin**|\<malloc.h>|\<errno.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Выделение памяти](../../c-runtime-library/memory-allocation.md)<br/>
-[free](free.md)<br/>
+[свободный](free.md)<br/>
 [_heapadd](../../c-runtime-library/heapadd.md)<br/>
 [_heapchk](heapchk.md)<br/>
 [_heapset](../../c-runtime-library/heapset.md)<br/>

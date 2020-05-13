@@ -1,10 +1,12 @@
 ---
 title: setlocale, _wsetlocale
-description: Описывает функции библиотеки Microsoft C Runtime (CRT), setlocale и _wsetlocale.
-ms.date: 01/28/2020
+description: Описывает функции setlocale библиотеки среды выполнения Microsoft C (CRT) и _wsetlocale.
+ms.date: 4/2/2020
 api_name:
 - _wsetlocale
 - setlocale
+- _o__wsetlocale
+- _o_setlocale
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +40,12 @@ ms.assetid: 3ffb684e-5990-4202-9553-b5339af9520d
 no-loc:
 - setlocale
 - _wsetlocale
-ms.openlocfilehash: b1c7b739e671caebc51022945a369a632ecebb9e
-ms.sourcegitcommit: f38f770bfda1c174d2b81fabda7c893b15bd83a1
+ms.openlocfilehash: 312fd8e9f794368d334ea353e2c92241d701ab0b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77473865"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918854"
 ---
 # <a name="setlocale-_wsetlocale"></a>setlocale, _wsetlocale
 
@@ -63,10 +66,10 @@ wchar_t *_wsetlocale(
 
 ### <a name="parameters"></a>Параметры
 
-*категория*\
+*категори*\
 Категория, на которую влияет языковой стандарт.
 
-\ *языкового стандарта*
+*языкового стандарта*\
 Указатель языкового стандарта.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -87,13 +90,15 @@ en-US
 
 Вы можете скопировать строку, возвращенную **setlocale** , для восстановления этой части информации о языковых стандартах программы. Глобальное или локальное хранилище потока используется для строки, возвращаемой **setlocale**. Последующие вызовы **setlocale** перезапишут строку, которая делает недействительными указатели строк, возвращаемые предыдущими вызовами.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Используйте функцию **setlocale** , чтобы задать, изменить или запросить некоторые или все сведения о локали текущей программы, заданные *локальным языком* и *категорией*. *языковой стандарт* — это локальность (страна, регион и язык), для которой можно настроить определенные аспекты программы. К некоторым категориям, зависящим от языкового стандарта, относится формат дат и отображения денежных значений. Если для языкового *стандарта* задана строка по умолчанию для языка с несколькими формами, поддерживаемыми на компьютере, следует проверить возвращаемое значение **setlocale** , чтобы узнать, какой язык действует. Например, если задать для параметра *locale* значение "Китайский", то возвращаемым значением может быть "китайский-упрощенный" или "Китайский (традиционное письмо)".
 
 **_wsetlocale** — это версия **setlocale**для расширенных символов; Аргумент *локали* и возвращаемое значение **_wsetlocale** являются строками расширенных символов. поведение **_wsetlocale** и **setlocale** идентично в противном случае.
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|
@@ -154,15 +159,15 @@ LC_COLLATE=en-US;LC_CTYPE=en-US;LC_MONETARY=fr-FR;LC_NUMERIC=en-US;LC_TIME=en-US
 
 - `setlocale( LC_ALL, "<localename>" );`
 
-   Задает языковой стандарт согласно имени языкового стандарта, отображаемому *\<localename>* . Кодовая страница задается в качестве значения [LOCALE_IDEFAULTANSICODEPAGE](/windows/win32/intl/locale-idefault-constants) для указанного имени локали по [GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex).
+   Задает языковой стандарт для имени локали, которое указывается * \<localename>*. Кодовая страница задается в качестве значения [LOCALE_IDEFAULTANSICODEPAGE](/windows/win32/intl/locale-idefault-constants) для указанного имени локали по [GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex).
 
 - `setlocale( LC_ALL, "<language>_<country>" );`
 
-   Задает языковой стандарт согласно языку и стране или региону, отображаемым *\<language>* и *\<country>* , вместе с кодовой страницей по умолчанию, полученной от операционной системы. Кодовая страница задается в качестве значения [LOCALE_IDEFAULTANSICODEPAGE](/windows/win32/intl/locale-idefault-constants) для указанного имени локали по [GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex).
+   Задает языковой стандарт и страну или регион, указанные в поле * \<Language>* и * \<Country>*, а также кодовую страницу по умолчанию, полученную из операционной системы узла. Кодовая страница задается в качестве значения [LOCALE_IDEFAULTANSICODEPAGE](/windows/win32/intl/locale-idefault-constants) для указанного имени локали по [GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex).
 
 - `setlocale( LC_ALL, "<language>_<country>.<code_page>" );`
 
-   Задает языковой стандарт для языка, страны или региона, а также кодовую страницу, определяемую *\<языком >* , *\<country >* и *\<* code_page строками. Можно использовать различные сочетания языка, страны или региона и кодовой страницы. Например, этот вызов устанавливает языковой стандарт "французский (Канада)" с кодовой страницей 1252.
+   Задает языковой стандарт для языка, страны или региона, а также кодовую страницу, определяемую * \<языковой>*, * \<страной>* и * \<code_page строк>* . Можно использовать различные сочетания языка, страны или региона и кодовой страницы. Например, этот вызов устанавливает языковой стандарт "французский (Канада)" с кодовой страницей 1252.
 
    `setlocale( LC_ALL, "French_Canada.1252" );`
 
@@ -176,7 +181,7 @@ LC_COLLATE=en-US;LC_CTYPE=en-US;LC_MONETARY=fr-FR;LC_NUMERIC=en-US;LC_TIME=en-US
 
 - `setlocale( LC_ALL, "<language>" );`
 
-   Задает языковой стандарт согласно языку, отображаемому *\<language>* , и использует страну или регион по умолчанию для определенного языка и заданную по умолчанию для пользователя кодовую страницу ANSI для этой страны или региона согласно данным, полученным от операционной системы. Например, следующие вызовы **setlocale** функционально эквивалентны:
+   Устанавливает языковой стандарт для языка, указанного в * \<>языка *, и использует страну или регион по умолчанию для указанного языка и кодовую страницу пользователя по умолчанию ANSI для этой страны или региона, полученную из операционной системы узла. Например, следующие вызовы **setlocale** функционально эквивалентны:
 
    `setlocale( LC_ALL, "en-US" );`
 
@@ -188,7 +193,7 @@ LC_COLLATE=en-US;LC_CTYPE=en-US;LC_MONETARY=fr-FR;LC_NUMERIC=en-US;LC_TIME=en-US
 
 - `setlocale( LC_ALL, ".<code_page>" );`
 
-   Задает кодовую страницу согласно значению, отображаемому *<code_page>* , вместе с языком и страной или регионом по умолчанию (согласно определению операционной системы) для заданной кодовой страницы.
+   Задает кодовую страницу согласно значению, отображаемому *<code_page>*, вместе с языком и страной или регионом по умолчанию (согласно определению операционной системы) для заданной кодовой страницы.
 
 Для изменения кодовой страницы категория должна быть либо **LC_ALL** , либо **LC_CTYPE** . Например, если страна или регион по умолчанию и язык операционной системы узла имеют значение "США" и "Английский", следующие два вызова **setlocale** функционально эквивалентны:
 
@@ -207,7 +212,7 @@ LC_COLLATE=en-US;LC_CTYPE=en-US;LC_MONETARY=fr-FR;LC_NUMERIC=en-US;LC_TIME=en-US
 |**setlocale**|\<locale.h>|
 |**_wsetlocale**|\<locale.h> или \<wchar.h>|
 
-Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -313,20 +318,20 @@ The thread locale is now set to de-DE.
 The time in de-DE locale is: 'Mittwoch, 12. Mai 2004'
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-[Строки имени языкового стандарта, языка и страны и региона](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)\
+[Имена языковых стандартов, языки и строки страны или региона](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)\
 [_configthreadlocale](configthreadlocale.md)\
 [_create_locale, _wcreate_locale](create-locale-wcreate-locale.md)\
-[Языковой стандарт](../../c-runtime-library/locale.md)\
+[Языкового стандарта](../../c-runtime-library/locale.md)\
 [localeconv](localeconv.md)\
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)\
 [strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)\
-[mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)\
+[функции mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)\
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)\
 [_setmbcp](setmbcp.md)\
 [Функции strcoll](../../c-runtime-library/strcoll-functions.md)\
 [strftime, wcsftime, _strftime_l, _wcsftime_l](strftime-wcsftime-strftime-l-wcsftime-l.md)\
-[strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)\
+[стрксфрм, вксксфрм, _strxfrm_l, _wcsxfrm_l](strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)\
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)\
 [wctomb, _wctomb_l](wctomb-wctomb-l.md)

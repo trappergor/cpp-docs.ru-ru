@@ -8,40 +8,40 @@ helpviewer_keywords:
 - results, __cdecl call
 - results, __stdcall call
 ms.assetid: aa70a7cb-ba1d-4aa6-bd0a-ba783da2e642
-ms.openlocfilehash: dcd1f9002362b7726883c6ce4f74fda9ab593544
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: edbeb187e568b833673d91ef70ff57fbd460659c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62268070"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179059"
 ---
 # <a name="results-of-calling-example"></a>Пример результатов вызова
 
 **Блок, относящийся только к системам Microsoft**
 
-## <a name="cdecl"></a>__cdecl
+## <a name="__cdecl"></a>__cdecl
 
-— Имя функции на языке C `_MyFunc`.
+Имя функции с декорированием языка C — `_MyFunc`.
 
-![Соглашение о вызовах CDECL](../cpp/media/vc37i01.gif "соглашение о вызовах CDECL") <br/>
-**__Cdecl** соглашение о вызовах
+![Соглашение о вызовах CDECL](../cpp/media/vc37i01.gif "Соглашение о вызовах CDECL") <br/>
+Соглашение о вызовах **__cdecl**
 
-## <a name="stdcall-and-thiscall"></a>__stdcall и thiscall
+## <a name="__stdcall-and-thiscall"></a>__stdcall и thiscall
 
-C внутреннее имя (**__stdcall**) является `_MyFunc@20`. Имя C++ декорированные зависит от реализации.
+Внутреннее имя C ( **__stdcall**) `_MyFunc@20`. C++ Декорированное имя зависит от реализации.
 
-![&#95;&#95;STDCALL и соглашения о вызовах thiscall](../cpp/media/vc37i02.gif "&#95;&#95;stdcall и соглашения о вызовах thiscall") <br/>
+![&#95;&#95;соглашения о вызовах STDCALL и thiscall](../cpp/media/vc37i02.gif "&#95;&#95;соглашения о вызовах STDCALL и thiscall") <br/>
 Соглашения о вызовах __stdcall и thiscall
 
-## <a name="fastcall"></a>__fastcall
+## <a name="__fastcall"></a>__fastcall
 
-C внутреннее имя (**__fastcall**) является `@MyFunc@20`. Имя C++ декорированные зависит от реализации.
+Внутреннее имя C ( **__fastcall**) `@MyFunc@20`. C++ Декорированное имя зависит от реализации.
 
-![Соглашение о вызовах для &#95; &#95;fastcall](../cpp/media/vc37i03.gif "соглашение о вызовах для &#95; &#95;fastcall") <br/>
+![Соглашение о вызовах для &#95; &#95;fastcall](../cpp/media/vc37i03.gif "Соглашение о вызовах для &#95; &#95;fastcall") <br/>
 Соглашение о вызовах __fastcall
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пример вызова. Прототип и вызов функции](../cpp/calling-example-function-prototype-and-call.md)

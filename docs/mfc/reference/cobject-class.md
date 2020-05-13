@@ -1,5 +1,5 @@
 ---
-title: CObject, класс
+title: Класс CObject
 ms.date: 11/04/2016
 f1_keywords:
 - CObject
@@ -20,14 +20,14 @@ helpviewer_keywords:
 - CObject [MFC], IsSerializable
 - CObject [MFC], Serialize
 ms.assetid: 95e9acd3-d9eb-4ac0-b52b-ca4a501a7a3a
-ms.openlocfilehash: 515c4e90ee6ab77a6c7c1ae108393ea1aafb7c17
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 66d76e0062d13b2bd5a16d9b07f99db9e989805a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79424023"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753988"
 ---
-# <a name="cobject-class"></a>CObject, класс
+# <a name="cobject-class"></a>Класс CObject
 
 Основной базовый класс для всех исключений библиотеки классов Microsoft Foundation.
 
@@ -37,53 +37,53 @@ ms.locfileid: "79424023"
 class AFX_NOVTABLE CObject
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="protected-constructors"></a>Защищенные конструкторы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|[CObject:: CObject](#cobject)|Конструктор по умолчанию.|
+|[Объект::Объект](#cobject)|Конструктор по умолчанию.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|[CObject:: AssertValid](#assertvalid)|Проверяет целостность этого объекта.|
-|[CObject::D УМП](#dump)|Создает диагностический дамп этого объекта.|
-|[CObject:: Жетрунтимекласс](#getruntimeclass)|Возвращает структуру `CRuntimeClass`, соответствующую классу данного объекта.|
-|[CObject:: IsKindOf](#iskindof)|Проверяет связь этого объекта с заданным классом.|
-|[CObject:: Serializable](#isserializable)|Проверяет, можно ли сериализовать этот объект.|
-|[CObject:: Serialize](#serialize)|Загружает или сохраняет объект из или в архив.|
+|[Объект::AssertValid](#assertvalid)|Проверяет целостность этого объекта.|
+|[Кобъект::D](#dump)|Производит диагностическую свалку этого объекта.|
+|[Объект::GetRuntimeClass](#getruntimeclass)|Возвращает `CRuntimeClass` структуру, соответствующую классу этого объекта.|
+|[Объект::IsKindOf](#iskindof)|Тестирует отношение этого объекта к данному классу.|
+|[CObject::IsSerializable](#isserializable)|Тесты, чтобы увидеть, можно ли сериализировать этот объект.|
+|[CObject::Serialize](#serialize)|Загружает или хранит объект из/в архив.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|[Удаление CObject:: operator](#operator_delete)|Специальный оператор **Delete** .|
-|[CObject:: оператор New](#operator_new)|Специальный оператор **New** .|
+|[CObject::оператор удалить](#operator_delete)|Специальный оператор **удаления.**|
+|[CObject::оператор новый](#operator_new)|Специальный **новый** оператор.|
 
 ## <a name="remarks"></a>Remarks
 
-Он выступает в качестве корня не только для классов библиотек, таких как `CFile` и `CObList`, но также и для классов, которые вы пишете. `CObject` предоставляет базовые службы, включая
+Он служит корнем не только для `CFile` `CObList`библиотечных классов, таких как и , но и для классов, которые вы пишете. `CObject`основные услуги, в том числе
 
 - Поддержка сериализации
 
-- Сведения о классе времени выполнения
+- Информация о забеге класса
 
-- Вывод диагностики объектов
+- Вывод ы диагностики объектов
 
 - Совместимость с классами коллекций
 
-Обратите внимание, что `CObject` не поддерживает множественное наследование. Производные классы могут иметь только один базовый класс `CObject`, который `CObject` должен быть крайним левым в иерархии. Однако допускается наличие структур и классов, производных от `CObject`, в правой части ветвей с множественным наследованием.
+Обратите `CObject` внимание, что не поддерживает несколько наследований. Ваши классы могут иметь `CObject` только один `CObject` базовый класс, и он должен быть оставлен в иерархии. Допустимо, однако, иметь структуры и `CObject`не-полученные классы в правосторонних ветвях с несколькими наследственными.
 
-При использовании некоторых необязательных макросов в реализации и объявлениях класса вы получите значительные преимущества от `CObject`ного наследования.
+Вы поймете основные преимущества от `CObject` производной, если вы используете некоторые из дополнительных макросов в реализации и декларациях класса.
 
-Макросы первого уровня, [DECLARE_DYNAMIC](run-time-object-model-services.md#declare_dynamic) и [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic), допускают доступ во время выполнения к имени класса и его положению в иерархии. Это, в свою очередь, допускает осмысленную диагностическую копию.
+Макросы первого уровня, [DECLARE_DYNAMIC](run-time-object-model-services.md#declare_dynamic) и [IMPLEMENT_DYNAMIC,](run-time-object-model-services.md#implement_dynamic)позволяют получить доступ к названию класса и его положению в иерархии. Это, в свою очередь, позволяет осмысленно проводить диагностический демпинг.
 
-Макросы второго уровня, [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial) и [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial), включают все функциональные возможности макросов первого уровня, и они позволяют «сериализовать» объект в «архив» и «из него».
+Макросы второго уровня, [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial) и [IMPLEMENT_SERIAL,](run-time-object-model-services.md#implement_serial)включают в себя все функциональные возможности макросов первого уровня, и они позволяют объекту быть «серийным» к «архиву» и из него.
 
-Сведения о наследовании классов и C++ классов Microsoft Foundation в целом и использовании `CObject`см. в разделе [Использование CObject](../../mfc/using-cobject.md) и [Serialization](../../mfc/serialization-in-mfc.md).
+Для получения информации о произвобальных классах `CObject`Фонда Майкрософт и [Serialization](../../mfc/serialization-in-mfc.md)классах СЗ в целом и [см.](../../mfc/using-cobject.md)
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -93,7 +93,7 @@ class AFX_NOVTABLE CObject
 
 **Заголовок:** afx.h
 
-##  <a name="assertvalid"></a>CObject:: AssertValid
+## <a name="cobjectassertvalid"></a><a name="assertvalid"></a>Объект::AssertValid
 
 Проверяет целостность этого объекта.
 
@@ -103,25 +103,25 @@ virtual void AssertValid() const;
 
 ### <a name="remarks"></a>Remarks
 
-`AssertValid` выполняет проверку достоверности этого объекта, проверяя его внутреннее состояние. В отладочной версии библиотеки `AssertValid` может утверждать и, таким же, завершать программу сообщением, в котором отображается номер строки и имя файла, в котором произошел сбой утверждения.
+`AssertValid`выполняет проверку достоверности этого объекта, проверяя его внутреннее состояние. В версии Debug библиотеки `AssertValid` может утверждать и, таким образом, прекращать программу с сообщением, в котором перечислены номер строки и имя файла, где утверждение не удалось.
 
-При написании собственного класса следует переопределить функцию `AssertValid`, чтобы предоставить службы диагностики для себя и других пользователей класса. Переопределенный `AssertValid` обычно вызывает функцию `AssertValid` своего базового класса перед проверкой элементов данных, уникальных для производного класса.
+Когда вы пишете свой собственный `AssertValid` класс, вы должны переопределить функцию для предоставления диагностических услуг для себя и других пользователей вашего класса. Перерегистрированный `AssertValid` обычно `AssertValid` вызывает функцию своего базового класса, прежде чем проверять данные, уникальные для производного класса.
 
-Поскольку `AssertValid` является функцией **const** , вы не имеете права изменять состояние объекта во время теста. Пользовательские функции `AssertValid` производного класса не должны вызывать исключения, а должны утверждать, обнаруживают ли они недопустимые данные объекта.
+Поскольку `AssertValid` функция **const** является недопустимой для изменения состояния объекта во время теста. Ваши собственные функции производных классов `AssertValid` не должны бросать исключения, а должны утверждать, обнаруживают ли они недействительные данные объектов.
 
-Определение "допустимости" зависит от класса объекта. Как правило, функция должна выполнить «полную проверку». То есть, если объект содержит указатели на другие объекты, он должен проверить, не имеет ли указатель значение null, но не должен выполнять проверку на наличие объектов, на которые ссылаются указатели.
+Определение "действительность" зависит от класса объекта. Как правило, функция должна выполнять "неглубокую проверку". То есть, если объект содержит указатели на другие объекты, он должен проверить, не являются ли указатели недействительными, но он не должен выполнять тестирование действительности на объектах, упомянутых указатели.
 
 ### <a name="example"></a>Пример
 
-Список `CAge` класса, используемого во всех примерах `CObject`, см. в разделе [коблист:: коблист](../../mfc/reference/coblist-class.md#coblist) .
+Смотрите [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) для перечисления класса, используемого `CAge` во всех `CObject` примерах.
 
 [!code-cpp[NVC_MFCCObjectSample#7](../../mfc/codesnippet/cpp/cobject-class_1.cpp)]
 
-Другой пример см. в разделе [афксдофораллобжектс](diagnostic-services.md#afxdoforallobjects).
+Для другого [AfxDoForAllObjects](diagnostic-services.md#afxdoforallobjects)примера см.
 
-##  <a name="cobject"></a>CObject:: CObject
+## <a name="cobjectcobject"></a><a name="cobject"></a>Объект::Объект
 
-Эти функции являются стандартными `CObject` конструкторами.
+Эти функции `CObject` являются стандартными конструкторами.
 
 ```
 CObject();
@@ -130,26 +130,26 @@ CObject(const CObject& objectSrc);
 
 ### <a name="parameters"></a>Параметры
 
-*обжектсрк*<br/>
-Ссылка на другой `CObject`
+*objectSrc*<br/>
+Ссылка на другой`CObject`
 
 ### <a name="remarks"></a>Remarks
 
-Версия по умолчанию автоматически вызывается конструктором производного класса.
+Версия по умолчанию автоматически вызывается конструктором вашего производной класса.
 
-Если класс является сериализуемым (он включает в себя IMPLEMENT_SERIAL макрос), то в объявлении класса должен быть конструктор по умолчанию (конструктор без аргументов). Если конструктор по умолчанию не нужен, объявите закрытый или защищенный конструктор "Empty". Дополнительные сведения см. [в разделе Использование CObject](../../mfc/using-cobject.md).
+Если ваш класс является сериализируемым (он включает IMPLEMENT_SERIAL макрос), то в декларации класса должен быть конструктор по умолчанию (конструктор без аргументов). Если вам не нужен конструктор по умолчанию, объявите частный или защищенный "пустой" конструктор. Для получения дополнительной информации [см.](../../mfc/using-cobject.md)
 
-Стандартный C++ конструктор копии класса по умолчанию выполняет копирование по элементу. Наличие закрытого `CObject` конструктора копий гарантирует сообщение об ошибке компилятора, если конструктор копии класса необходим, но недоступен. Поэтому необходимо предоставить конструктор копии, если класс требует этой возможности.
+Стандартный конструктор копирования класса «СИ» по умолчанию выполняет копию по составу. Наличие конвейера `CObject` частной копии гарантирует сообщение об ошибке компилятора, если конструктор копирования вашего класса необходим, но недоступен. Поэтому необходимо предоставить конструктор копий, если вашему классу требуется эта возможность.
 
 ### <a name="example"></a>Пример
 
-Список `CAge` класса, используемого в примерах `CObject`, см. в разделе [коблист:: коблист](../../mfc/reference/coblist-class.md#coblist) .
+Смотрите [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) для перечисления класса, используемого `CAge` в примерах. `CObject`
 
 [!code-cpp[NVC_MFCCObjectSample#8](../../mfc/codesnippet/cpp/cobject-class_2.cpp)]
 
-##  <a name="dump"></a>CObject::D УМП
+## <a name="cobjectdump"></a><a name="dump"></a>Кобъект::D
 
-Выводит содержимое объекта в объект [CDumpContext](../../mfc/reference/cdumpcontext-class.md) .
+Сбрасывает содержимое объекта на объект [CDumpContext.](../../mfc/reference/cdumpcontext-class.md)
 
 ```
 virtual void Dump(CDumpContext& dc) const;
@@ -157,33 +157,33 @@ virtual void Dump(CDumpContext& dc) const;
 
 ### <a name="parameters"></a>Параметры
 
-*dc*<br/>
-Контекст диагностического дампа для дампа обычно `afxDump`.
+*Dc*<br/>
+Контекст диагностической свалки для `afxDump`сброса, как правило.
 
 ### <a name="remarks"></a>Remarks
 
-При написании собственного класса следует переопределить функцию `Dump`, чтобы предоставить службы диагностики для себя и других пользователей класса. Переопределенный `Dump` обычно вызывает функцию `Dump` своего базового класса перед печатью элементов данных, уникальных для производного класса. `CObject::Dump` выводит имя класса, если в классе используется макрос `IMPLEMENT_DYNAMIC` или IMPLEMENT_SERIAL.
+Когда вы пишете свой собственный `Dump` класс, вы должны переопределить функцию для предоставления диагностических услуг для себя и других пользователей вашего класса. `Dump` Переивереобычное `Dump` обычно вызывает функцию своего базового класса, прежде чем печатать данные, уникальные для производного класса. `CObject::Dump`печатает название класса, если `IMPLEMENT_DYNAMIC` ваш класс использует IMPLEMENT_SERIAL макрос.
 
 > [!NOTE]
->  Функция `Dump` не должна печатать символ новой строки в конце выходных данных.
+> Функция `Dump` не должна печатать новый символ в конце его вывода.
 
-`Dump` вызовы имеют смысл только в отладочной версии библиотека Microsoft Foundation Class. Для условной компиляции необходимо в скобках вызывать, объявления функций и реализации функций **#ifdef _DEBUG**/ `#endif`.
+`Dump`звонки имеют смысл только в версии Debug библиотеки класса Microsoft Foundation. Вы должны скобки вызовов, функции деклараций и функции реализации с **#ifdef _DEBUG** /  `#endif` заявления для условной компиляции.
 
-Поскольку `Dump` является функцией **const** , вы не имеете права изменять состояние объекта во время создания дампа.
+Поскольку `Dump` функция const является **конст-функцией,** вам не разрешается изменять состояние объекта во время сброса.
 
-[Оператор вставки CDumpContext (< <)](../../mfc/reference/cdumpcontext-class.md#operator_lt_lt) вызывает `Dump` при вставке `CObject` указателя.
+Оператор [вставки CDumpContext (<<)](../../mfc/reference/cdumpcontext-class.md#operator_lt_lt) вызывает при `Dump` вставке `CObject` указателя.
 
-`Dump` позволяет создавать дампы объектов только "ациклический". Можно создать дамп списка объектов, например, но если один из объектов является самим списком, то в конечном итоге стек будет переполнен.
+`Dump`разрешает только "ациклический" сброс предметов. Например, можно сбросить список объектов, но если одним из объектов является сам список, вы в конечном итоге переполните стек.
 
 ### <a name="example"></a>Пример
 
-Список `CAge` класса, используемого во всех примерах `CObject`, см. в разделе [коблист:: коблист](../../mfc/reference/coblist-class.md#coblist) .
+Смотрите [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) для перечисления класса, используемого `CAge` во всех `CObject` примерах.
 
 [!code-cpp[NVC_MFCCObjectSample#9](../../mfc/codesnippet/cpp/cobject-class_3.cpp)]
 
-##  <a name="getruntimeclass"></a>CObject:: Жетрунтимекласс
+## <a name="cobjectgetruntimeclass"></a><a name="getruntimeclass"></a>Объект::GetRuntimeClass
 
-Возвращает структуру `CRuntimeClass`, соответствующую классу данного объекта.
+Возвращает `CRuntimeClass` структуру, соответствующую классу этого объекта.
 
 ```
 virtual CRuntimeClass* GetRuntimeClass() const;
@@ -191,35 +191,35 @@ virtual CRuntimeClass* GetRuntimeClass() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на структуру [крунтимекласс](../../mfc/reference/cruntimeclass-structure.md) , соответствующую классу данного объекта; никогда не **имеет значения NULL**.
+Указатель на структуру [CRuntimeClass,](../../mfc/reference/cruntimeclass-structure.md) соответствующую классу этого объекта; никогда не **NULL**.
 
 ### <a name="remarks"></a>Remarks
 
-Для каждого класса, производного от `CObject`, существует одна `CRuntimeClass`ая структура. Члены структуры выглядят следующим образом:
+Существует одна `CRuntimeClass` структура `CObject`для каждого -производного класса. Члены структуры являются следующими:
 
-- **LPCSTR m_lpszClassName** Строка, заканчивающаяся нулем и содержащая имя класса ASCII.
+- **LPCSTR m_lpszClassName** Строка с нулевым завершением, содержащая имя класса ASCII.
 
-- **m_nObjectSize int** Размер объекта в байтах. Если объект содержит элементы данных, указывающие на выделенную память, размер этой памяти не включается.
+- **m_nObjectSize** Размер объекта, в байтах. Если у объекта есть члены данных, которые указывают на выделенную память, размер этой памяти не включен.
 
-- **M_wSchema uint** Номер схемы (-1 для несериализуемых классов). Описание номера схемы см. в макросе [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial) .
+- **UINT m_wSchema** Число схем ( - 1 для несерийных классов). Ознакомьтесь с IMPLEMENT_SERIAL макросом для описания числа схем. [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)
 
-- **CObject\* (PASCAL\* m_pfnCreateObject) ()** Указатель на функцию конструктора по умолчанию, который создает объект класса (действителен, только если класс поддерживает динамическое создание; в противном случае возвращает **значение NULL**).
+- **CObject\* (PASCAL\* m_pfnCreateObject)( )** Функция указатель на конструктор по умолчанию, который создает объект вашего класса (действительно только если класс поддерживает динамическое создание; в противном случае, возвращает **NULL**).
 
-- **\* крунтимекласс (PASCAL\* m_pfn_GetBaseClass) ()** Если приложение динамически связано с AFXDLL версией MFC, то указатель на функцию, возвращающую структуру `CRuntimeClass` базового класса.
+- **CRuntimeClass\* (PASCAL\* m_pfn_GetBaseClass)( ( (** Если ваше приложение динамически связано с версией AFXDLL MFC, указатель на функцию, которая возвращает `CRuntimeClass` структуру базового класса.
 
-- **Крунтимекласс\* m_pBaseClass** Если приложение статически связано с MFC, то указатель на структуру `CRuntimeClass` базового класса.
+- **CRuntimeClass\* m_pBaseClass** Если ваше приложение статически связано с `CRuntimeClass` MFC, указатель на структуру базового класса.
 
-Эта функция требует использования макроса [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic), [IMPLEMENT_DYNCREATE](run-time-object-model-services.md#implement_dyncreate)или [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial) в реализации класса. В противном случае будут получены неверные результаты.
+Эта функция требует использования [IMPLEMENT_DYNAMIC,](run-time-object-model-services.md#implement_dynamic) [IMPLEMENT_DYNCREATE](run-time-object-model-services.md#implement_dyncreate)или [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial) макроса в реализации класса. В противном случае вы получите неправильные результаты.
 
 ### <a name="example"></a>Пример
 
-Список `CAge` класса, используемого во всех примерах `CObject`, см. в разделе [коблист:: коблист](../../mfc/reference/coblist-class.md#coblist) .
+Смотрите [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) для перечисления класса, используемого `CAge` во всех `CObject` примерах.
 
 [!code-cpp[NVC_MFCCObjectSample#10](../../mfc/codesnippet/cpp/cobject-class_4.cpp)]
 
-##  <a name="iskindof"></a>CObject:: IsKindOf
+## <a name="cobjectiskindof"></a><a name="iskindof"></a>Объект::IsKindOf
 
-Проверяет связь этого объекта с заданным классом.
+Тестирует отношение этого объекта к данному классу.
 
 ```
 BOOL IsKindOf(const CRuntimeClass* pClass) const;
@@ -227,28 +227,28 @@ BOOL IsKindOf(const CRuntimeClass* pClass) const;
 
 ### <a name="parameters"></a>Параметры
 
-*пкласс*<br/>
-Указатель на структуру [крунтимекласс](../../mfc/reference/cruntimeclass-structure.md) , связанную с классом, производным от `CObject`.
+*pClass*<br/>
+Указатель на структуру [CRuntimeClass,](../../mfc/reference/cruntimeclass-structure.md) связанную с классом, полученным в вашем `CObject`классе.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ненулевое значение, если объект соответствует классу; в противном случае — 0.
+Nonzero, если объект соответствует классу; в противном случае 0.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция проверяет *пкласс* , чтобы определить, является ли он объектом указанного класса или (2) является объектом класса, производного от указанного класса. Эта функция работает только для классов, объявленных с помощью макроса [DECLARE_DYNAMIC](run-time-object-model-services.md#declare_dynamic), [DECLARE_DYNCREATE](run-time-object-model-services.md#declare_dyncreate)или [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial) .
+Эта функция тестирует *pClass,* чтобы увидеть, если (1) это объект указанного класса или (2) это объект класса, полученный из указанного класса. Эта функция работает только для классов, заявленных с [DECLARE_DYNAMIC,](run-time-object-model-services.md#declare_dynamic) [DECLARE_DYNCREATE](run-time-object-model-services.md#declare_dyncreate)или [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial) макросом.
 
-Не используйте эту функцию широко, C++ так как она нарушает функцию полиморфизма. Вместо этого используйте виртуальные функции.
+Не используйте эту функцию широко, потому что она побеждает функцию полиморфизма СЗ. Вместо этого используйте виртуальные функции.
 
 ### <a name="example"></a>Пример
 
-Список `CAge` класса, используемого во всех примерах `CObject`, см. в разделе [коблист:: коблист](../../mfc/reference/coblist-class.md#coblist) .
+Смотрите [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) для перечисления класса, используемого `CAge` во всех `CObject` примерах.
 
 [!code-cpp[NVC_MFCCObjectSample#11](../../mfc/codesnippet/cpp/cobject-class_5.cpp)]
 
-##  <a name="isserializable"></a>CObject:: Serializable
+## <a name="cobjectisserializable"></a><a name="isserializable"></a>CObject::IsSerializable
 
-Проверяет, подходит ли этот объект для сериализации.
+Тестирует, имеет ли этот объект право на сериализацию.
 
 ```
 BOOL IsSerializable() const;
@@ -256,26 +256,26 @@ BOOL IsSerializable() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ненулевое значение, если этот объект можно сериализовать; в противном случае — 0.
+Nonzero, если этот объект может быть сериализован; в противном случае 0.
 
 ### <a name="remarks"></a>Remarks
 
-Чтобы класс был сериализуемым, его объявление должно содержать макрос [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial) , а реализация должна содержать макрос [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial) .
+Для того чтобы класс был сериализируемым, его декларация должна содержать [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial) макрос, а реализация должна содержать [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial) макрос.
 
 > [!NOTE]
->  Не переопределяйте эту функцию.
+> Не перекрывайте эту функцию.
 
 ### <a name="example"></a>Пример
 
-Список `CAge` класса, используемого во всех примерах `CObject`, см. в разделе [коблист:: коблист](../../mfc/reference/coblist-class.md#coblist) .
+Смотрите [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) для перечисления класса, используемого `CAge` во всех `CObject` примерах.
 
 [!code-cpp[NVC_MFCCObjectSample#12](../../mfc/codesnippet/cpp/cobject-class_6.cpp)]
 
-##  <a name="operator_delete"></a>Удаление CObject:: operator
+## <a name="cobjectoperator-delete"></a><a name="operator_delete"></a>CObject::оператор удалить
 
-Для окончательной версии библиотеки оператор **Delete** освобождает память, выделенную оператором **New**.
+Для версии выпуска библиотеки оператор **удаляет** высвобожденную память, выделенную оператором, **новую.**
 
-```
+```cpp
 void PASCAL operator delete(void* p);
 
 void PASCAL operator delete(
@@ -290,29 +290,29 @@ void PASCAL operator delete(
 
 ### <a name="remarks"></a>Remarks
 
-В отладочной версии оператор **Delete** участвует в схеме мониторинга распределения, предназначенной для обнаружения утечек памяти.
+В версии Debug **оператор удаляет** участие в схеме мониторинга распределения, предназначенной для обнаружения утечек памяти.
 
-При использовании строки кода
+Если вы используете строку кода
 
 [!code-cpp[NVC_MFCCObjectSample#14](../../mfc/codesnippet/cpp/cobject-class_7.cpp)]
 
-перед любой из реализаций в. CPP, будет использоваться третья версия **удаления** , в которой будут храниться имя файла и номер строки в выделенном блоке для последующего создания отчетов. Вам не нужно беспокоиться о предоставлении дополнительных параметров. за вас позаботится макрос.
+перед любой из ваших реализаций в . Файл CPP, затем будет использоваться третья версия **удаления,** хранение имени файла и номера строки в выделенном блоке для последующей отчетности. Вам не придется беспокоиться о поставке дополнительных параметров; макрозаботится о том, что для вас.
 
-Даже если вы не используете DEBUG_NEW в режиме отладки, вы по-прежнему получаете возможность обнаружения утечек, но без описанных выше отчетов с исходными файлами.
+Даже если вы не используете DEBUG_NEW в режиме Debug, вы все равно получаете обнаружение утечки, но без описанной выше отчетов о номере строки исходного файла.
 
-При переопределении операторов **New** и **Delete**Эта диагностическая функция теряется.
+Если вы переопределяете **новых** операторов и **удаляете,** вы лишаетесь этой диагностической возможности.
 
 ### <a name="example"></a>Пример
 
-Список `CAge` класса, используемого в примерах `CObject`, см. в разделе [коблист:: коблист](../../mfc/reference/coblist-class.md#coblist) .
+Смотрите [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) для перечисления класса, используемого `CAge` в примерах. `CObject`
 
 [!code-cpp[NVC_MFCCObjectSample#15](../../mfc/codesnippet/cpp/cobject-class_8.cpp)]
 
-##  <a name="operator_new"></a>CObject:: оператор New
+## <a name="cobjectoperator-new"></a><a name="operator_new"></a>CObject::оператор новый
 
-Для окончательной версии библиотеки оператор **New** выполняет оптимальное выделение памяти таким же образом, как `malloc`.
+Для версии выпуска библиотеки оператор **новый** выполняет оптимальное `malloc`распределение памяти таким же образом, как .
 
-```
+```cpp
 void* PASCAL operator new(size_t nSize);
 void* PASCAL operator new(size_t, void* p);
 
@@ -324,26 +324,26 @@ void* PASCAL operator new(
 
 ### <a name="remarks"></a>Remarks
 
-В отладочной версии оператор **New** участвует в схеме мониторинга распределения, предназначенной для обнаружения утечек памяти.
+В версии Debug оператор **участвует** в схеме мониторинга распределения, предназначенной для обнаружения утечек памяти.
 
-При использовании строки кода
+Если вы используете строку кода
 
 [!code-cpp[NVC_MFCCObjectSample#14](../../mfc/codesnippet/cpp/cobject-class_7.cpp)]
 
-перед любой из реализаций в. CPP, будет использоваться вторая версия **New** , в которой будут храниться имя файла и номер строки в выделенном блоке для последующего создания отчетов. Вам не нужно беспокоиться о предоставлении дополнительных параметров. за вас позаботится макрос.
+перед любой из ваших реализаций в . Файл CPP, затем будет использоваться вторая версия **новой,** хранящее имя файла и номер строки в выделенном блоке для последующей отчетности. Вам не придется беспокоиться о поставке дополнительных параметров; макрозаботится о том, что для вас.
 
-Даже если вы не используете DEBUG_NEW в режиме отладки, вы по-прежнему получаете возможность обнаружения утечек, но без описанных выше отчетов с исходными файлами.
+Даже если вы не используете DEBUG_NEW в режиме Debug, вы все равно получаете обнаружение утечки, но без описанной выше отчетов о номере строки исходного файла.
 
 > [!NOTE]
->  При переопределении этого оператора необходимо также переопределить **Delete**. Не используйте стандартную библиотеку `_new_handler` функцию.
+> Если вы переопределяете этого оператора, вы также должны переопределить **удаление.** Не используйте стандартную функцию библиотеки. `_new_handler`
 
 ### <a name="example"></a>Пример
 
-Список `CAge` класса, используемого в примерах `CObject`, см. в разделе [коблист:: коблист](../../mfc/reference/coblist-class.md#coblist) .
+Смотрите [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) для перечисления класса, используемого `CAge` в примерах. `CObject`
 
 [!code-cpp[NVC_MFCCObjectSample#16](../../mfc/codesnippet/cpp/cobject-class_9.h)]
 
-##  <a name="serialize"></a>CObject:: Serialize
+## <a name="cobjectserialize"></a><a name="serialize"></a>CObject::Serialize
 
 Считывает этот объект из архива или записывает в него.
 
@@ -353,24 +353,24 @@ virtual void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>Параметры
 
-*AR*<br/>
+*ar*<br/>
 Объект `CArchive` для сериализации в или из.
 
 ### <a name="remarks"></a>Remarks
 
-Необходимо переопределить `Serialize` для каждого класса, который предполагается сериализовать. Переопределенный `Serialize` должен сначала вызвать функцию `Serialize` своего базового класса.
+Вы должны `Serialize` переопределить для каждого класса, который вы собираетесь сериализовать. `Serialize` Переивергемый `Serialize` должен сначала вызвать функцию своего базового класса.
 
-Необходимо также использовать макрос [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial) в объявлении класса, и в реализации необходимо использовать макрос [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial) .
+Вы также должны использовать [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial) макрос в декларации класса, и вы должны использовать [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial) макрос в реализации.
 
-Используйте [CArchive:: Load](../../mfc/reference/carchive-class.md#isloading) или [CArchive::](../../mfc/reference/carchive-class.md#isstoring) , чтобы определить, загружается ли архив или сохраняется.
+Используйте [CArchive::IsLoading](../../mfc/reference/carchive-class.md#isloading) или [CArchive::Istoring,](../../mfc/reference/carchive-class.md#isstoring) чтобы определить, является ли архив загрузкой или хранением.
 
-`Serialize` вызывается с помощью [CArchive:: вызове ReadObject](../../mfc/reference/carchive-class.md#readobject) и [CArchive:: WriteObject](../../mfc/reference/carchive-class.md#writeobject). Эти функции связаны с оператором вставки `CArchive` ( **<\<** ) и оператором извлечения ( **>>** ).
+`Serialize`называется [CArchive:ReadObject](../../mfc/reference/carchive-class.md#readobject) и [CArchive::WriteObject](../../mfc/reference/carchive-class.md#writeobject). Эти функции связаны с оператором `CArchive` вставки () ** < **и оператором экстракции (). **>>**
 
-Примеры сериализации см. в статье [сериализация объекта](../../mfc/serialization-serializing-an-object.md).
+Для примеров сериализации [Serialization: Serializing an Object](../../mfc/serialization-serializing-an-object.md)см.
 
 ### <a name="example"></a>Пример
 
-Список `CAge` класса, используемого во всех примерах `CObject`, см. в разделе [коблист:: коблист](../../mfc/reference/coblist-class.md#coblist) .
+Смотрите [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) для перечисления класса, используемого `CAge` во всех `CObject` примерах.
 
 [!code-cpp[NVC_MFCCObjectSample#13](../../mfc/codesnippet/cpp/cobject-class_10.cpp)]
 

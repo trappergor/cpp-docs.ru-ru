@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpfile attribute
 ms.assetid: d75161c1-1363-4019-ae09-e7e3b8a3971e
-ms.openlocfilehash: 538cdbb38ac525cfee03a641f3e62e22a69f8e2b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1f928fa281c99630ad52ce1fde184c44e9387263
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501542"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166982"
 ---
 # <a name="helpfile"></a>helpfile
 
@@ -28,7 +28,7 @@ ms.locfileid: "69501542"
 *filename*<br/>
 Имя файла, содержащего разделы справки.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Атрибут **HelpFile** C++ имеет те же функциональные возможности, что и атрибут [HelpFile](/windows/win32/Midl/helpfile) MIDL.
 
@@ -42,14 +42,14 @@ ms.locfileid: "69501542"
 
 |||
 |-|-|
-|**Относится к**|**Interface**, **typedef**, **класс**, метод, **свойство**|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Отсутствуют|
-|**Недопустимые атрибуты**|Отсутствуют|
+|**Применение**|**Interface**, **typedef**, **класс**, метод, **свойство**|
+|**Повторяемый**|нет|
+|**Обязательные атрибуты**|None|
+|**Недопустимые атрибуты**|None|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты интерфейса](interface-attributes.md)<br/>

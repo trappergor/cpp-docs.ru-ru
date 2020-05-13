@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - MessageHandler function
 ms.assetid: 8a0acf97-1b0d-4226-91b9-75446634a03c
-ms.openlocfilehash: aa044ef88ba3c872c2652cd774ac50024e52c68c
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 65a8ce08e4f8606f168b101aa4daba23ef541051
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492311"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168674"
 ---
 # <a name="messagehandler"></a>MessageHandler
 
@@ -18,7 +18,7 @@ ms.locfileid: "69492311"
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 LRESULT MessageHandler(
     UINT uMsg,
     WPARAM wParam,
@@ -29,13 +29,13 @@ LRESULT MessageHandler(
 ### <a name="parameters"></a>Параметры
 
 *Uiacp*<br/>
-Указывает сообщение.
+Задает сообщение.
 
 *wParam*<br/>
-Дополнительные сведения, относящиеся к конкретному сообщению.
+Дополнительные сведения, относящиеся к сообщению.
 
 *lParam*<br/>
-Дополнительные сведения, относящиеся к конкретному сообщению.
+Дополнительные сведения, относящиеся к сообщению.
 
 *бхандлед*<br/>
 Схема сообщений устанавливает для *бхандлед* значение true перед `MessageHandler` вызовом метода. Если `MessageHandler` не полностью обрабатывает сообщение, необходимо установить *бхандлед* в значение false, чтобы указать, что сообщение требует дальнейшей обработки.
@@ -44,7 +44,7 @@ LRESULT MessageHandler(
 
 Результат обработки сообщения. 0 в случае успеха.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Пример использования этого обработчика сообщений в схеме сообщений см. в разделе [MESSAGE_HANDLER](reference/message-map-macros-atl.md#message_handler).
 

@@ -1,8 +1,9 @@
 ---
 title: _lsearch
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _lsearch
+- _o__lsearch
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +32,12 @@ helpviewer_keywords:
 - searching, linear
 - lsearch function
 ms.assetid: 8200f608-159a-46f0-923b-1a37ee1af7e0
-ms.openlocfilehash: 6dc610c4ab120d81bfb2b3b5e64a54a104bea97f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 73bc82ed57692dee348448d2b523961324203ca9
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438145"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911329"
 ---
 # <a name="_lsearch"></a>_lsearch
 
@@ -67,7 +69,7 @@ void *_lsearch(
 *width*<br/>
 Ширина каждого элемента массива.
 
-*compare*<br/>
+*равенств*<br/>
 Указатель на подпрограмму сравнения. Первый параметр — это указатель на ключ для поиска. Второй параметр — это указатель на элемент массива, который будет сравниваться с ключом.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -82,13 +84,15 @@ void *_lsearch(
 
 Эта функция проверяет свои параметры. Если *параметр Compare*, *ключ* или *число* имеет **значение NULL**или *Если Base* имеет **значение NULL** , а *Number* имеет ненулевое значение или если *Width* меньше нуля, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено **, для** параметра **еинвал** устанавливается значение, а функция возвращает **значение NULL**.
 
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
+
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
 |**_lsearch**|\<search.h>|
 
-Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -134,7 +138,7 @@ wordlist after _lsearch: hello thanks bye extra
 
 ## <a name="see-also"></a>См. также раздел
 
-[Сортировка и поиск](../../c-runtime-library/searching-and-sorting.md)<br/>
+[Поиск и сортировка](../../c-runtime-library/searching-and-sorting.md)<br/>
 [bsearch](bsearch.md)<br/>
 [_lfind](lfind.md)<br/>
 [_lsearch_s](lsearch-s.md)<br/>

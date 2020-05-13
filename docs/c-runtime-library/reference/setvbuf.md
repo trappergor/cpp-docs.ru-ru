@@ -1,8 +1,9 @@
 ---
 title: setvbuf
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - setvbuf
+- _o_setvbuf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - stream buffering
 - setvbuf function
 ms.assetid: 6aa5aa37-3408-4fa0-992f-87f9f9c4baea
-ms.openlocfilehash: 38b6474f550107a8edd941c7112ba98891ab3c12
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 907d02e94c79acf09dfa99a8b42e9f448d32dcfa
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948185"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915755"
 ---
 # <a name="setvbuf"></a>setvbuf
 
@@ -53,14 +55,14 @@ int setvbuf(
 *вышестоящий*<br/>
 Указатель на структуру **FILE**.
 
-*buffer*<br/>
+*двойной*<br/>
 Выделенный пользователем буфер.
 
 *mode*<br/>
 Режим буферизации.
 
 *size*<br/>
-Размер буфера в байтах. Допустимый диапазон: 2 < = *размер* < = INT_MAX (2147483647). На внутреннем уровне значение, заданное для параметра *size* , округляется вниз до ближайшего числа, кратного 2.
+Размер буфера в байтах. Допустимый диапазон: 2 <= *size* <= INT_MAX (2147483647). На внутреннем уровне значение, заданное для параметра *size* , округляется вниз до ближайшего числа, кратного 2.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -70,11 +72,11 @@ int setvbuf(
 
 Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Функция **setvbuf** позволяет программе управлять как буферизацией, так и размером буфера для *потока*. *поток* должен ссылаться на открытый файл, который не проходил операцию ввода-вывода с момента открытия. Массив, на который указывает *buffer* , используется в качестве буфера, если он не равен **null**, в этом случае **setvbuf** использует автоматически выделяемый буфер *размера*/2 \* 2 байта.
 
-Режим должен быть **_IOFBF**, **_IOLBF**или **_IONBF**. Если *mode* имеет значение **_IOFBF** или **_IOLBF**, то *size* используется в качестве размера буфера. Если параметр *mode* имеет значение **_IONBF**, поток не буферизован, а *Размер* и *буфер* не учитываются. Значения для *mode* и их значений:
+Режим должен быть **_IOFBF**, **_IOLBF**или **_IONBF**. Если параметр *mode* имеет значение **_IOFBF** или **_IOLBF**, то в качестве размера буфера используется *size* . Если параметр *mode* имеет значение **_IONBF**, поток не буферизован, а *Размер* и *буфер* не учитываются. Значения для *mode* и их значений:
 
 |значение *режима*|Значение|
 |-|-|
@@ -82,13 +84,15 @@ int setvbuf(
 | **_IOLBF** | В некоторых системах таким образом осуществляется линейная буферизация. Однако для Win32 поведение аналогично **_IOFBF** -полной буферизации. |
 | **_IONBF** | Буфер не используется, независимо от размера *буфера* или *размеров*. |
 
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
+
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
 |**setvbuf**|\<stdio.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Библиотеки
 
@@ -131,7 +135,7 @@ int main( void )
 'stream2' now has no buffer
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)<br/>
 [fclose, _fcloseall](fclose-fcloseall.md)<br/>

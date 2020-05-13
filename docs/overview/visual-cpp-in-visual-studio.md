@@ -5,17 +5,17 @@ ms.date: 07/02/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
-ms.openlocfilehash: 0a4093860c7d06e8240e03b1487546f80da24b88
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: f00ec21db29299549821aae09064f788f92bd667
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416105"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365211"
 ---
 # <a name="c-in-visual-studio"></a>C++ в Visual Studio
 
 > [!NOTE]
-> Эта документация для разработчиков применима к Visual Studio 2015 и более поздней версии. Выберите нужную версию Visual Studio с помощью раскрывающего списка в верхнем углу страницы слева.
+> Эта документация для разработчиков применима к Visual Studio 2015 и более поздней версии. Чтобы ознакомиться с документацией по предпочтительной версии Visual Studio, используйте селектор **Версия**. Он находится в верхней части оглавления на этой странице.
 >
 > Если вам нужен определенный распространяемый пакет Visual C++ для запуска программы, перейдите в [Центр загрузки Майкрософт](https://www.microsoft.com/download/) и введите в поле поиска **Visual C++** .
 
@@ -26,7 +26,7 @@ Visual Studio 2015, 2017 и 2019 можно установить паралле
 ## <a name="whats-new-and-conformance-history"></a>Новые возможности и журнал соответствий
 
 [Новые возможности C++ в Visual Studio](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
-Новые возможности в Visual Studio.
+Новые возможности в Visual Studio.
 
 [Новые возможности C++ в версиях Visual Studio с 2003 до 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
 Новые возможности C++ для каждой версии Visual Studio с 2003 до 2015.
@@ -65,7 +65,7 @@ Visual Studio 2015, 2017 и 2019 можно установить паралле
 [Знакомство с Visual C++](../build/vscpp-step-1-create.md)<br/>
 Начало изучения C++.
 
-[Примеры кода на Visual C++](visual-cpp-samples.md)<br/>
+[Примеры кода Visual Studio C++](visual-cpp-samples.md)<br/>
 Информация о примерах.
 
 ## <a name="c-development-tools"></a>Средства разработки C++

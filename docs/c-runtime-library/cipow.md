@@ -1,8 +1,9 @@
 ---
 title: _CIpow
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _CIpow
+- _o__CIpow
 api_location:
 - msvcr100.dll
 - msvcr110.dll
@@ -12,6 +13,7 @@ api_location:
 - msvcrt.dll
 - msvcr90.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -23,12 +25,12 @@ helpviewer_keywords:
 - CIpow intrinsic
 - _CIpow intrinsic
 ms.assetid: 477aaf0c-ac58-4252-89dd-9f3e35d47536
-ms.openlocfilehash: b32d7c550d465052f7c1dcd4a81baab803ec28f0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 80acead0f40896db6c27cca8440a3069a18c5332
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940519"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917966"
 ---
 # <a name="_cipow"></a>_CIpow
 
@@ -36,21 +38,23 @@ ms.locfileid: "70940519"
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 void __cdecl _CIpow();
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Эта версия функции `pow` включает специальные соглашения о вызовах, распознаваемые компилятором. Это ускоряет выполнение, поскольку исключает создание копий и помогает распределять регистры.
 
 Полученное значение помещается в верхнюю часть стека.
 
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](global-state.md).
+
 ## <a name="requirements"></a>Требования
 
 **Платформа:** x86
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Алфавитный указатель функций](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [pow, powf, powl](../c-runtime-library/reference/pow-powf-powl.md)

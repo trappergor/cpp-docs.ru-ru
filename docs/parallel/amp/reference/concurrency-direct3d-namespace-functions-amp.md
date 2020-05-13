@@ -21,32 +21,32 @@ f1_keywords:
 - amp/Concurrency::direct3d::step
 - amp/Concurrency::direct3d::umin
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
-ms.openlocfilehash: 438d211ac2f15bf781b704a7d0d7484d1542f131
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: e21b1f2869ab81973b341abc5371714fbf8580e2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79424983"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375933"
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Функции пространства имен Concurrency::direct3d (AMP)
 
 ||||
 |-|-|-|
-|[abs](#abs)|[фиксаци](#clamp)|[каунтбитс](#countbits)|
+|[Abs](#abs)|[Зажим](#clamp)|[счет-биты](#countbits)|
 |[create_accelerator_view](#create_accelerator_view)|[d3d_access_lock](#d3d_access_lock)||
-|[d3d_access_try_lock](#d3d_access_try_lock)|[d3d_access_unlock](#d3d_access_unlock)|[фирстбисигх](#firstbithigh)|
-|[фирстбитлов](#firstbitlow)|[get_buffer](#get_buffer)|[get_device](#get_device)|
-|[имакс](#imax)|[имин](#imin)|[is_timeout_disabled](#is_timeout_disabled)|
-|[отслеживания](#mad)|[make_array](#make_array)|[учитываем](#noise)|
-|[радианах](#radians)|[rcp](#rcp)|[реверсебитс](#reversebits)|
-|[насытить](#saturate)|[sign](#sign)|[смусстеп](#smoothstep)|
-|[первом](#step)|[Компания](#umax)|[умин](#umin)|
+|[d3d_access_try_lock](#d3d_access_try_lock)|[d3d_access_unlock](#d3d_access_unlock)|[firstbithigh](#firstbithigh)|
+|[firstbitlow](#firstbitlow)|[get_buffer](#get_buffer)|[get_device](#get_device)|
+|[iMax](#imax)|[имин](#imin)|[is_timeout_disabled](#is_timeout_disabled)|
+|[Сумасшедший](#mad)|[make_array](#make_array)|[Шум](#noise)|
+|[Радианах](#radians)|[rcp](#rcp)|[реверсбиты](#reversebits)|
+|[Насытить](#saturate)|[Знак](#sign)|[гладкий шаг](#smoothstep)|
+|[Шаг](#step)|[Umax](#umax)|[Umin](#umin)|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** **пространство имен** amp. h: Concurrency
+**Заголовок:** amp.h **Namespace:** Параллелизм
 
-## <a name="abs"></a>  abs
+## <a name="abs"></a><a name="abs"></a>Abs
 
 Возвращает абсолютное значение аргумента
 
@@ -56,16 +56,16 @@ inline int abs(int _X) restrict(amp);
 
 ### <a name="parameters"></a>Параметры
 
-*_X*<br/>
-Целое значение
+*_x*<br/>
+Целочисленное значение
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Возвращает абсолютное значение аргумента.
 
-## <a name="clamp"></a>фиксаци
+## <a name="clamp"></a><a name="clamp"></a>Зажим
 
-Выполняет вычисление значения первого указанного аргумента, который задается в диапазоне, определяемом вторым и третьим указанными аргументами.
+Вычисляет значение первого указанного аргумента, зажатого к диапазону, определенному вторым и третьим указанным аргументами.
 
 ```cpp
 inline float clamp(
@@ -81,22 +81,22 @@ inline int clamp(
 
 ### <a name="parameters"></a>Параметры
 
-*_X*<br/>
-Значение для фиксации
+*_x*<br/>
+Значение, подавленное
 
 *_Min*<br/>
-Нижняя граница диапазона срезов.
+Нижняя граница диапазона зажима.
 
 *_Max*<br/>
-Верхняя граница диапазона срезов.
+Верхняя граница зажима.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение `_X`.
+Зажатое `_X`значение .
 
-## <a name="countbits"></a>каунтбитс
+## <a name="countbits"></a><a name="countbits"></a>счет-биты
 
-Подсчитывает количество битов набора в _X
+Подсчитывает количество наборбитов в _X
 
 ```cpp
 inline unsigned int countbits(unsigned int _X) restrict(amp);
@@ -104,16 +104,16 @@ inline unsigned int countbits(unsigned int _X) restrict(amp);
 
 ### <a name="parameters"></a>Параметры
 
-*_X*<br/>
-Целочисленное значение без знака
+*_x*<br/>
+Неподписанное значение ажероприра
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает число бит набора в _X
+Возвращает количество набор битов в _X
 
-## <a name="create_accelerator_view"></a>create_accelerator_view
+## <a name="create_accelerator_view"></a><a name="create_accelerator_view"></a>create_accelerator_view
 
-Создает объект [accelerator_view](accelerator-view-class.md) из указателя на интерфейс устройства Direct3D.
+Создает [accelerator_view](accelerator-view-class.md) объект от указателя до интерфейса устройства Direct3D.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -131,32 +131,32 @@ accelerator_view create_accelerator_view(
 ### <a name="parameters"></a>Параметры
 
 *_Accelerator*<br/>
-Ускоритель, в котором создается новый accelerator_view.
+Ускоритель, на котором будет создан новый accelerator_view.
 
 *_D3D_device*<br/>
 Указатель на интерфейс устройства Direct3D.
 
 *_Disable_timeout*<br/>
-Логический параметр, указывающий, следует ли отключать время ожидания для только что созданного accelerator_view. Это соответствует флагу D3D11_CREATE_DEVICE_DISABLE_GPU_TIMEOUT для создания устройства Direct3D и используется, чтобы указать, должна ли операционная система разрешать выполнение рабочих нагрузок, выполняющих более 2 секунд, без сброса устройства в течение времени ожидания Windows. механизм обнаружения и восстановления. Этот флаг рекомендуется использовать, если необходимо выполнять длительные задачи на accelerator_view.
+Параметр Boolean, который определяет, следует ли отключать тайм-аут для вновь созданных accelerator_view. Это соответствует D3D11_CREATE_DEVICE_DISABLE_GPU_TIMEOUT флагу для создания устройства Direct3D и используется для указания, должна ли операционная система позволить выполнять рабочие нагрузки, которые занимают более 2 секунд, не сбросив устройство на механизм обнаружения и восстановления тайм-аута Windows. Использование этого флага рекомендуется, если вам нужно выполнять трудоемкие задачи на accelerator_view.
 
 *_Qmode*<br/>
-[Queuing_mode](concurrency-namespace-enums-amp.md#queuing_mode) , используемый для вновь созданной accelerator_view. Этот параметр имеет значение по умолчанию `queuing_mode_automatic`.
+Queuing_mode [queuing_mode](concurrency-namespace-enums-amp.md#queuing_mode) будет использоваться для вновь созданных accelerator_view. Этот параметр имеет `queuing_mode_automatic`значение по умолчанию.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Объект `accelerator_view`, созданный из переданного интерфейса устройства Direct3D.
+Объект, `accelerator_view` созданный из интерфейса устройства Direct3D.
 
 ## <a name="remarks"></a>Remarks
 
-Эта функция создает новый объект `accelerator_view` из существующего указателя на интерфейс устройства Direct3D. Если вызов функции выполнен, то счетчик ссылок параметра увеличивается на единицу, используя `AddRef` вызове интерфейса. Вы можете безопасно освободить объект, если он больше не требуется в коде DirectX. При сбое вызова метода выдается [runtime_exception](runtime-exception-class.md) .
+Эта функция создает `accelerator_view` новый объект от существующего указателя до интерфейса устройства Direct3D. Если вызов функции удается, количество ссылок параметра приращается с помощью `AddRef` вызова к интерфейсу. Вы можете безопасно освободить объект, когда он больше не требуется в коде DirectX. Если вызов метода не удается, [runtime_exception](runtime-exception-class.md) брошен.
 
-Объект `accelerator_view`, создаваемый с помощью этой функции, является потокобезопасным. Необходимо синхронизировать одновременное использование объекта `accelerator_view`. Несинхронизированное одновременное использование объекта `accelerator_view` и необработанного интерфейса ID3D11Device приводит к неопределенному поведению.
+Объект, созданный `accelerator_view` с помощью этой функции, является безопасным потоком. Необходимо синхронизировать одновременное `accelerator_view` использование объекта. Несинхронизированное одновременное использование `accelerator_view` объекта и необработанного интерфейса ID3D11Device вызывает неопределенное поведение.
 
-Среда C++ выполнения amp предоставляет подробные сведения об ошибке в режиме отладки с помощью слоя отладки D3D, если используется флаг `D3D11_CREATE_DEVICE_DEBUG`.
+Время выполнения AMP предоставляет подробную информацию об ошибках в режиме отладки, используя слой D3D Debug при использовании флага. `D3D11_CREATE_DEVICE_DEBUG`
 
-## <a name="d3d_access_lock"></a>d3d_access_lock
+## <a name="d3d_access_lock"></a><a name="d3d_access_lock"></a>d3d_access_lock
 
-Получите блокировку на accelerator_view для безопасного выполнения операций D3D с ресурсами, которые совместно используются accelerator_view. Accelerator_view и все C++ ресурсы amp, связанные с этим accelerator_view, внутренне принимают эту блокировку при выполнении операций и блокируются, пока другой поток удерживает блокировку на доступ к D3D. Эта блокировка не является рекурсивной: это не определено поведение для вызова этой функции из потока, который уже владеет блокировкой. Это поведение не определено для выполнения операций с accelerator_view или любым контейнером данных, связанным с accelerator_view из потока, в котором находится блокировка доступа D3D. См. также scoped_d3d_access_lock, класс в стиле RAII для блокировки доступа D3D на основе области.
+Приобретите блокировку accelerator_view с целью безопасного выполнения D3D-операций на ресурсах, совместно с accelerator_view. Accelerator_view и все ресурсы АМП, связанные с этим accelerator_view внутренне забирают этот замок при выполнении операций и будут блокировать, в то время как другой поток удерживает блокировку доступа D3D. Этот замок не рекурсивный: вызов этой функции из потока, который уже удерживает блокировку, неопределенен. Неопределенный тип поведения выполняет операции на accelerator_view или любой контейнер данных, связанный с accelerator_view из потока, вмещающего блокировку доступа D3D. Смотрите также scoped_d3d_access_lock, класс RAII-стиля для блокировки доступа D3D на основе области.
 
 ```cpp
 void __cdecl d3d_access_lock(accelerator_view& _Av);
@@ -165,11 +165,11 @@ void __cdecl d3d_access_lock(accelerator_view& _Av);
 ### <a name="parameters"></a>Параметры
 
 *_Av*<br/>
-Accelerator_view для блокировки.
+Accelerator_view зафиксировать.
 
-## <a name="d3d_access_try_lock"></a>d3d_access_try_lock
+## <a name="d3d_access_try_lock"></a><a name="d3d_access_try_lock"></a>d3d_access_try_lock
 
-Попытка получить блокировку доступа D3D на accelerator_view без блокировки.
+Попытка приобрести блокировку доступа D3D на accelerator_view без блокировки.
 
 ```cpp
 bool __cdecl d3d_access_try_lock(accelerator_view& _Av);
@@ -178,15 +178,15 @@ bool __cdecl d3d_access_try_lock(accelerator_view& _Av);
 ### <a name="parameters"></a>Параметры
 
 *_Av*<br/>
-Accelerator_view для блокировки.
+Accelerator_view зафиксировать.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-значение true, если блокировка была получена, или false, если она в данный момент удерживается другим потоком.
+верно, если блокировка была приобретена, или ложная, если она в настоящее время удерживается другим потоком.
 
-## <a name="d3d_access_unlock"></a>d3d_access_unlock
+## <a name="d3d_access_unlock"></a><a name="d3d_access_unlock"></a>d3d_access_unlock
 
-Освобождение блокировки доступа D3D на заданном accelerator_view. Если вызывающий поток не удерживает блокировку accelerator_view результаты не определены.
+Освободите блокировку доступа D3D на данном accelerator_view. Если поток вызова не удерживает блокировку на accelerator_view результаты не определены.
 
 ```cpp
 void __cdecl d3d_access_unlock(accelerator_view& _Av);
@@ -195,11 +195,11 @@ void __cdecl d3d_access_unlock(accelerator_view& _Av);
 ### <a name="parameters"></a>Параметры
 
 *_Av*<br/>
-Accelerator_view, для которого снимается блокировка.
+В accelerator_view, для которого блокировка должна быть освобождена.
 
-## <a name="firstbithigh"></a>фирстбисигх
+## <a name="firstbithigh"></a><a name="firstbithigh"></a>firstbithigh
 
-Возвращает расположение первого набора бит в _X, начиная с бита с наивысшим порядковым номером и Переходя к биту наименьшего порядка.
+Получает расположение первого бита в _X, начиная с бита самого высокого порядка и двигаясь к биту с самым низким уровнем порядка.
 
 ```cpp
 inline int firstbithigh(int _X) restrict(amp);
@@ -207,16 +207,16 @@ inline int firstbithigh(int _X) restrict(amp);
 
 ### <a name="parameters"></a>Параметры
 
-*_X*<br/>
-Целое значение
+*_x*<br/>
+Целочисленное значение
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Расположение первого набора бит
 
-## <a name="firstbitlow"></a>фирстбитлов
+## <a name="firstbitlow"></a><a name="firstbitlow"></a>firstbitlow
 
-Возвращает расположение первого набора бит в _X, начиная с младшего бита и заканчивая битом наивысшего порядка.
+Получает расположение первого бита в _X, начиная с бита с самым низким заказом и работая в направлении бита самого высокого порядка.
 
 ```cpp
 inline int firstbitlow(int _X) restrict(amp);
@@ -224,16 +224,16 @@ inline int firstbitlow(int _X) restrict(amp);
 
 ### <a name="parameters"></a>Параметры
 
-*_X*<br/>
-Целое значение
+*_x*<br/>
+Целочисленное значение
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает расположение первого набора бит
+Возвращает местоположение первого бита набора
 
-## <a name="get_buffer"></a>get_buffer
+## <a name="get_buffer"></a><a name="get_buffer"></a>get_buffer
 
-Получение интерфейса буфера Direct3D, лежащего в основе указанного массива.
+Получите интерфейс буфера Direct3D, лежащий в основе указанного массива.
 
 ```cpp
 template<
@@ -246,8 +246,8 @@ IUnknown *get_buffer(
 
 ### <a name="parameters"></a>Параметры
 
-*value_type*<br/>
-Тип элементов массива.
+*Value_type*<br/>
+Тип элементов в массиве.
 
 *_Rank*<br/>
 Ранг массива.
@@ -257,11 +257,11 @@ IUnknown *get_buffer(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель интерфейса IUnknown, соответствующий буферу Direct3D, который является базовым для массива.
+Указатель интерфейса IUnknown, соответствующий буферу Direct3D, лежащему в основе массива.
 
-## <a name="a-nameget_device-get_device"></a><a name="get_device"> get_device
+## <a name="a-nameget_device-get_device"></a><a name="get_device">get_device
 
-Получение интерфейса устройства D3D, лежащего в основе accelerator_view.
+Получите интерфейс устройства D3D, лежащий в основе accelerator_view.
 
 ```cpp
 IUnknown* get_device(const accelerator_view Av);
@@ -269,16 +269,16 @@ IUnknown* get_device(const accelerator_view Av);
 
 ### <a name="parameters"></a>Параметры
 
-*АВ*<br/>
-D3D-accelerator_view, для которого возвращается базовый интерфейс устройства D3D.
+*Av*<br/>
+D3D accelerator_view для которого возвращается базовый интерфейс устройства D3D.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель интерфейса `IUnknown` устройства D3D, лежащего в основе accelerator_view.
+Указатель `IUnknown` интерфейса устройства D3D, лежащего в основе accelerator_view.
 
-## <a name="imax"></a>имакс
+## <a name="imax"></a><a name="imax"></a>Imax
 
-Определение максимального числового значения аргументов
+Определение максимального численного значения аргументов
 
 ```cpp
 inline int imax(
@@ -288,19 +288,19 @@ inline int imax(
 
 ### <a name="parameters"></a>Параметры
 
-*_X*<br/>
-Целое значение
+*_x*<br/>
+Целочисленное значение
 
-*_Y*<br/>
-Целое значение
+*_y*<br/>
+Целочисленное значение
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возврат максимального числового значения аргументов
+Вернуть максимальное числовое значение аргументов
 
-## <a name="imin"></a>имин
+## <a name="imin"></a><a name="imin"></a>имин
 
-Определение минимального числового значения аргументов
+Определение минимального численного значения аргументов
 
 ```cpp
 inline int imin(
@@ -310,19 +310,19 @@ inline int imin(
 
 ### <a name="parameters"></a>Параметры
 
-*_X*<br/>
-Целое значение
+*_x*<br/>
+Целочисленное значение
 
-*_Y*<br/>
-Целое значение
+*_y*<br/>
+Целочисленное значение
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возврат минимального числового значения аргументов
+Вернуть минимальное числовое значение аргументов
 
-## <a name="is_timeout_disabled"></a>is_timeout_disabled
+## <a name="is_timeout_disabled"></a><a name="is_timeout_disabled"></a>is_timeout_disabled
 
-Возвращает логический флаг, указывающий, отключено ли время ожидания для указанного accelerator_view. Соответствует флагу D3D11_CREATE_DEVICE_DISABLE_GPU_TIMEOUT для создания устройства Direct3D.
+Возвращает флаг boolean с указанием, если тайм-аут отключен для указанного accelerator_view. Это соответствует D3D11_CREATE_DEVICE_DISABLE_GPU_TIMEOUT флагу для создания устройства Direct3D.
 
 ```cpp
 bool __cdecl is_timeout_disabled(const accelerator_view& _Accelerator_view);
@@ -331,15 +331,15 @@ bool __cdecl is_timeout_disabled(const accelerator_view& _Accelerator_view);
 ### <a name="parameters"></a>Параметры
 
 *_Accelerator_view*<br/>
-Accelerator_view, для которого запрашиваются параметры с отключенным временем ожидания.
+В accelerator_view, для которых параметр тайм-аута отключен.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Логический флаг, указывающий, отключено ли время ожидания для указанного accelerator_view.
+Флаг boolean, указывающий, отключен ли тайм-аут для указанного accelerator_view.
 
-## <a name="mad"></a>отслеживания
+## <a name="mad"></a><a name="mad"></a>Сумасшедший
 
-Выполняет вычисление произведения первого и второго указанных аргументов, а затем добавляет третий указанный аргумент.
+Вычисляет продукт первого и второго указанного аргумента, затем добавляет третий указанный аргумент.
 
 ```cpp
 inline float mad(
@@ -365,10 +365,10 @@ inline unsigned int mad(
 
 ### <a name="parameters"></a>Параметры
 
-*_X*<br/>
+*_x*<br/>
 Первый указанный аргумент.
 
-*_Y*<br/>
+*_y*<br/>
 Второй указанный аргумент.
 
 *_Z*<br/>
@@ -376,11 +376,11 @@ inline unsigned int mad(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Результат `_X` \* `_Y` + `_Z`.
+`_X` \* Результат `_Y`  + . `_Z`
 
-## <a name="make_array"></a>make_array
+## <a name="make_array"></a><a name="make_array"></a>make_array
 
-Создание массива из указателя интерфейса буфера Direct3D.
+Создайте массив из указателя интерфейса буфера Direct3D.
 
 ```cpp
 template<
@@ -395,28 +395,28 @@ array<value_type, _Rank> make_array(
 
 ### <a name="parameters"></a>Параметры
 
-*value_type*<br/>
+*Value_type*<br/>
 Тип элемента создаваемого массива.
 
 *_Rank*<br/>
-Ранг создаваемого массива.
+Ранг массива, который будет создан.
 
 *_Extent*<br/>
-Экстент, описывающий форму статистического выражения массива.
+Степень, описывающая форму агрегата массива.
 
 *_Rv*<br/>
-Представление D3D Accelerator, на котором создается массив.
+Представление ускорителя D3D, на котором должен быть создан массив.
 
 *_D3D_buffer*<br/>
-Указатель интерфейса IUnknown буфера D3D, из которого создается массив.
+IUnknown интерфейс указатель буфера D3D для создания массива из.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Массив, созданный с помощью предоставленного буфера Direct3D.
 
-## <a name="noise"></a>учитываем
+## <a name="noise"></a><a name="noise"></a>Шум
 
-Создает случайное значение с помощью алгоритма шума Perl
+Генерирует случайное значение с помощью алгоритма шума Perlin
 
 ```cpp
 inline float noise(float _X) restrict(amp);
@@ -424,16 +424,16 @@ inline float noise(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Параметры
 
-*_X*<br/>
-Значение с плавающей запятой, из которого формируется шум Perl
+*_x*<br/>
+Значение плавающей точки, из которого можно создавать шум Perlin
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение шума Perl в диапазоне от-1 до 1
+Возвращает значение шума Perlin в диапазоне от -1 до 1
 
-## <a name="radians"></a>радианах
+## <a name="radians"></a><a name="radians"></a>Радианах
 
-Преобразует _X из градусов в радианы
+Преобразует _X из степеней в радианов
 
 ```cpp
 inline float radians(float _X) restrict(amp);
@@ -441,16 +441,16 @@ inline float radians(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Параметры
 
-*_X*<br/>
+*_x*<br/>
 Значение с плавающей запятой
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает _X, преобразованное из градусов в радианы
+Возвращает _X преобразованы из степеней в радианов
 
-## <a name="rcp"></a>rcp
+## <a name="rcp"></a><a name="rcp"></a>Rcp
 
-Выполняет вычисление обратной величины указанного аргумента с помощью быстрой аппроксимации.
+Вычисляет взаимный указанный аргумент с помощью быстрого приближения.
 
 ```cpp
 inline float rcp(float _X) restrict(amp);
@@ -460,16 +460,16 @@ inline double rcp(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Параметры
 
-*_X*<br/>
-Значение, для которого требуется вычислить обратную величину.
+*_x*<br/>
+Значение, для которого вычислять взаимное.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Обратная часть указанного аргумента.
+Взаимный указанный аргумент.
 
-## <a name="reversebits"></a>реверсебитс
+## <a name="reversebits"></a><a name="reversebits"></a>реверсбиты
 
-Изменяет порядок битов в _X
+Обратный порядок битов в _X
 
 ```cpp
 inline unsigned int reversebits(unsigned int _X) restrict(amp);
@@ -477,16 +477,16 @@ inline unsigned int reversebits(unsigned int _X) restrict(amp);
 
 ### <a name="parameters"></a>Параметры
 
-*_X*<br/>
-Целочисленное значение без знака
+*_x*<br/>
+Неподписанное значение ажероприра
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение с битовым порядком, обратным в _X
+Возвращает значение с ордером бита, отмененным в _X
 
-## <a name="saturate"></a>насытить
+## <a name="saturate"></a><a name="saturate"></a>Насытить
 
-Фиксации _X в диапазоне от 0 до 1
+Зажимы _X в пределах от 0 до 1
 
 ```cpp
 inline float saturate(float _X) restrict(amp);
@@ -494,16 +494,16 @@ inline float saturate(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Параметры
 
-*_X*<br/>
+*_x*<br/>
 Значение с плавающей запятой
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает _X с фиксацией в диапазоне от 0 до 1
+Возвращает _X зажат в пределах 0 к 1
 
-## <a name="sign"></a>писать
+## <a name="sign"></a><a name="sign"></a>Знак
 
-Определяет знак указанного аргумента.
+Определяет признак указанного аргумента.
 
 ```cpp
 inline int sign(int _X) restrict(amp);
@@ -511,16 +511,16 @@ inline int sign(int _X) restrict(amp);
 
 ### <a name="parameters"></a>Параметры
 
-*_X*<br/>
-Целое значение
+*_x*<br/>
+Целочисленное значение
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Знак аргумента.
+Признак аргумента.
 
-## <a name="smoothstep"></a>смусстеп
+## <a name="smoothstep"></a><a name="smoothstep"></a>гладкий шаг
 
-Возвращает гладкую Хермите интерполяцию между 0 и 1, если _X находится в диапазоне [_Min, _Max].
+Возвращает гладкую интерполяцию отherситов между 0 и 1, если _X находится в диапазоне «_Min, _Max».
 
 ```cpp
 inline float smoothstep(
@@ -537,16 +537,16 @@ inline float smoothstep(
 *_Max*<br/>
 Значение с плавающей запятой
 
-*_X*<br/>
+*_x*<br/>
 Значение с плавающей запятой
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает 0, если _X меньше _Min; 1, если _X больше _Max; в противном случае значение от 0 до 1, если _X находится в диапазоне [_Min, _Max]
+Возвращает 0, если _X меньше _Min; 1, если _X больше, чем _Max; в противном случае значение от 0 до 1, если _X находится в диапазоне «_Min, _Max»
 
-## <a name="step"></a>первом
+## <a name="step"></a><a name="step"></a>Шаг
 
-Сравнивает два значения, возвращая 0 или 1 в зависимости от того, какое значение больше
+Сравнивает два значения, возвращающие 0 или 1 на основе того значения, которое больше
 
 ```cpp
 inline float step(
@@ -556,19 +556,19 @@ inline float step(
 
 ### <a name="parameters"></a>Параметры
 
-*_Y*<br/>
+*_y*<br/>
 Значение с плавающей запятой
 
-*_X*<br/>
+*_x*<br/>
 Значение с плавающей запятой
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение 1, если _X больше или равно _Y; в противном случае 0
+Возвращает 1, если _X больше или равен _Y; в противном случае, 0
 
-## <a name="umax"></a>Компания
+## <a name="umax"></a><a name="umax"></a>Umax
 
-Определение максимального числового значения аргументов
+Определение максимального численного значения аргументов
 
 ```cpp
 inline unsigned int umax(
@@ -578,19 +578,19 @@ inline unsigned int umax(
 
 ### <a name="parameters"></a>Параметры
 
-*_X*<br/>
-Целое значение
+*_x*<br/>
+Целочисленное значение
 
-*_Y*<br/>
-Целое значение
+*_y*<br/>
+Целочисленное значение
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возврат максимального числового значения аргументов
+Вернуть максимальное числовое значение аргументов
 
-## <a name="umin"></a>умин
+## <a name="umin"></a><a name="umin"></a>Umin
 
-Определение минимального числового значения аргументов
+Определение минимального численного значения аргументов
 
 ```cpp
 inline unsigned int umin(
@@ -600,15 +600,15 @@ inline unsigned int umin(
 
 ### <a name="parameters"></a>Параметры
 
-*_X*<br/>
-Целое значение
+*_x*<br/>
+Целочисленное значение
 
-*_Y*<br/>
-Целое значение
+*_y*<br/>
+Целочисленное значение
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возврат минимального числового значения аргументов
+Вернуть минимальное числовое значение аргументов
 
 ## <a name="see-also"></a>См. также раздел
 

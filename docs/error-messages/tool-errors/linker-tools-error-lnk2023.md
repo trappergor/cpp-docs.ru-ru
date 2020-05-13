@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2023
 ms.assetid: c99e35a8-739a-4a20-a715-29b8c3744703
-ms.openlocfilehash: c5bc70aeb3a7e39bc60bb745060e7a5740ad7a28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 363b6ef0ea9991ff5d657044282e99c558257fb9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386308"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194633"
 ---
 # <a name="linker-tools-error-lnk2023"></a>Ошибка средств компоновщика LNK2023
 
-Неверная библиотека dll или точка входа \<dll или точки входа >
+Неправильная библиотека DLL или точка входа \<DLL или точка входа >
 
-Компоновщик загружается неправильная версия библиотеки msobj90.dll. Убедитесь, что link.exe и библиотеки msobj90.dll в пути имеют ту же версию.
+Компоновщик загружает неправильную версию msobj90. dll. Убедитесь, что файлы Link. exe и msobj90. dll в пути имеют одинаковую версию.
 
-Зависимости библиотеки msobj90.dll может отсутствовать. Список зависимостей для библиотеки msobj90.dll является:
+Возможно, отсутствует зависимость от msobj90. dll. Список зависимостей для msobj90. dll:
 
-- Msvcr90.dll
+- Msvcr90. dll
 
 - Kernel32.dll
 
-Проверьте свой компьютер и другие копии библиотеки msobj90.dll, которые могут быть устаревшими.
+Проверьте, не устарели ли на вашем компьютере копии msobj90. dll, которые могут устареть.

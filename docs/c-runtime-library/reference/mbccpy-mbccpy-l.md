@@ -1,9 +1,11 @@
 ---
 title: _mbccpy, _mbccpy_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbccpy
 - _mbccpy_l
+- _o__mbccpy
+- _o__mbccpy_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +40,12 @@ helpviewer_keywords:
 - _mbccpy function
 - mbccpy_l function
 ms.assetid: 13f4de6e-7792-41ac-b319-dd9b135433aa
-ms.openlocfilehash: 98ae2eb75949077d02b98ba3aec75da534e93884
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a265a37ba4c16dd15e6b50035dcc65bc8afbe7c7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952702"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919583"
 ---
 # <a name="_mbccpy-_mbccpy_l"></a>_mbccpy, _mbccpy_l
 
@@ -76,22 +79,24 @@ void _mbccpy_l(
 *locale*<br/>
 Используемый языковой стандарт.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Функция **_mbccpy** копирует один многобайтовый символ из *src* в *dest*.
 
 Эта функция проверяет свои параметры. Если **_mbccpy** передается пустой указатель для *dest* или *src*, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено **, для** параметра **еинвал**задается значение.
 
-**_mbccpy** использует текущий языковой стандарт для любого поведения, зависящего от языкового стандарта. **_mbccpy_l** идентичен **_mbccpy** , за исключением того, что **_mbccpy_l** использует переданный языковой стандарт для любого поведения, зависящего от языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+**_mbccpy** использует текущий языковой стандарт для любого поведения, зависящего от языкового стандарта. **_mbccpy_l** идентична **_mbccpy** за исключением того, что **_mbccpy_l** использует языковой стандарт, переданный для поведения, зависящего от языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 **Примечание о безопасности.** Следует использовать строку, оканчивающуюся нуль-символом. Длина строки, завершающейся нуль-символом, не должна превышать размер буфера назначения. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](/windows/win32/SecBP/avoiding-buffer-overruns). Проблемы переполнения буфера — это распространенный метод атак на системы, который приводит к несанкционированному повышению уровня прав.
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Процедура Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tccpy**|Сопоставляется макросу или встраиваемой функции|**_mbccpy**|Сопоставляется макросу или встраиваемой функции|
-|**_tccpy_l**|Н/Д|**_mbccpy_l**|Н/Д|
+|**_tccpy_l**|н/д|**_mbccpy_l**|н/д|
 
 ## <a name="requirements"></a>Требования
 
@@ -100,10 +105,10 @@ void _mbccpy_l(
 |**_mbccpy**|\<mbctype.h>|
 |**_mbccpy_l**|\<mbctype.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Языковой стандарт](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Интерпретация последовательностей многобайтовых символов](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>

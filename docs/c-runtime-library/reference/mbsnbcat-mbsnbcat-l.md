@@ -1,9 +1,11 @@
 ---
 title: _mbsnbcat, _mbsnbcat_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnbcat_l
 - _mbsnbcat
+- _o__mbsnbcat
+- _o__mbsnbcat_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - _mbsnbcat function
 - tcsncat function
 ms.assetid: aa0f1d30-0ddd-48d1-88eb-c6884b20fd91
-ms.openlocfilehash: 117171ec75ec0dddc3d7447f4110556165343258
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 25df567525fc190be94529fba3b7de131122e6b5
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952348"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915671"
 ---
 # <a name="_mbsnbcat-_mbsnbcat_l"></a>_mbsnbcat, _mbsnbcat_l
 
@@ -96,9 +99,9 @@ unsigned char *_mbsnbcat_l(
 
 **_mbsnbcat** возвращает указатель на строку назначения. Нет зарезервированных возвращаемых значений для указания ошибки.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Функция **_mbsnbcat** добавляет не более первого *числа* байтов *src* в *dest*. Если байт, непосредственно предшествующий NULL в *dest* , является старшим байтом, начальный байт *src* перезаписывает этот старший байт. В противном случае начальный байт *src* перезаписывает завершающий нуль символ для *dest*. Если в *src* перед добавлением *числа* байтов отображается нуль-байт, **_mbsnbcat** добавляет все байты из *src*до символа null. Если параметр *Count* больше длины *src*, то вместо *Count*используется длина *src* . Результирующая строка завершается нуль-символом. Если копирование производится между перекрывающимися строками, поведение не определено.
+Функция **_mbsnbcat** добавляет (не более) первое *число* байтов из *src* в *dest*. Если байт, непосредственно предшествующий NULL в *dest* , является старшим байтом, начальный байт *src* перезаписывает этот старший байт. В противном случае начальный байт *src* перезаписывает завершающий нуль символ для *dest*. Если в *src* перед добавлением *числа* байтов отображается нуль-байт, **_mbsnbcat** добавляет все байты из *src*до символа null. Если параметр *Count* больше длины *src*, то вместо *Count*используется длина *src* . Результирующая строка завершается нуль-символом. Если копирование производится между перекрывающимися строками, поведение не определено.
 
 Выходное значение зависит от настройки категории **LC_CTYPE** языкового стандарта; дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). **_Mbsnbcat** версия функции использует текущий языковой стандарт для этого поведения, зависящего от языкового стандарта; версия **_mbsnbcat_l** идентична, за исключением того, что они используют переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
@@ -106,9 +109,11 @@ unsigned char *_mbsnbcat_l(
 
 Если *dest* или *src* имеет **значение NULL**, функция создаст ошибку недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если ошибка обработана, функция возвращает **еинвал** **и устанавливает значение** переводится в **еинвал**.
 
-В C++ эти функции имеют шаблонные перегрузки, которые вызывают более новые и безопасные аналоги этих функций. Дополнительные сведения см. в разделе [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+В C++ эти функции имеют шаблонные перегрузки, которые вызывают более новые и безопасные аналоги этих функций. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../../c-runtime-library/secure-template-overloads.md).
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Процедура Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|
@@ -122,11 +127,11 @@ unsigned char *_mbsnbcat_l(
 |**_mbsnbcat**|\<mbstring.h>|
 |**_mbsnbcat_l**|\<mbstring.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Операции со строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Управление строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcmp, _mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md)<br/>
 [_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l](strncnt-wcsncnt-mbsnbcnt-mbsnbcnt-l-mbsnccnt-mbsnccnt-l.md)<br/>
 [_mbsnbcpy, _mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md)<br/>

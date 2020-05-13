@@ -1,10 +1,13 @@
 ---
 title: atanh, atanhf, atanhl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - atanhl
 - atanhf
 - atanh
+- _o_atanh
+- _o_atanhf
+- _o_atanhl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +34,12 @@ helpviewer_keywords:
 - atanhl function
 - atanh funciton
 ms.assetid: 83a43b5b-2580-4461-854f-dc84236d9f32
-ms.openlocfilehash: 539d015d5691f62f990faf650ab738f60066a2a6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ce40cf25fde12c6413e88519906b807f2ee65faa
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939587"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920053"
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh, atanhf, atanhl
 
@@ -63,14 +67,16 @@ long double atanh( long double x );  // C++ only
 
 Функции **ATANH** возвращают обратный гиперболический тангенс (дугу гиперболического тангенса) *x*. Если значение *x* больше 1 или меньше-1, то параметру " **Едом** " передаются значения "% **", а** результатом является скрытое значение NaN. Если значение *x* равно 1 или-1, то возвращается положительная или отрицательная бесконечность, соответственно, **а параметру** переводится значение **ERANGE**.
 
-|Ввод|Исключение SEH|**Matherr** Об|
+|Входные данные|Исключение SEH|**Matherr** Об|
 |-----------|-------------------|-------------------------|
-|± КНАН, С|none|none|
-|*X* ≥ 1; *x* ≤ -1|none|none|
+|± КНАН, С|нет|нет|
+|*X* ≥ 1; *x* ≤-1|нет|нет|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **ATANH** , которые принимают и возвращают значения **типа float** или **Long** . В программе на языке C **ATANH** всегда принимает и возвращает **Double**.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **ATANH** , которые принимают и возвращают значения **типа float** или **Long** **double** . В программе на языке C **ATANH** всегда принимает и возвращает **Double**.
+
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -78,7 +84,7 @@ long double atanh( long double x );  // C++ only
 |--------------|--------------|------------------|
 |**ATANH**, **атанхф**, **атанхл**|\<math.h>|\<cmath> или \<math.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -108,7 +114,7 @@ tanh( 0.785398 ) = 0.655794
 atanh( 0.655794 ) = 0.785398
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>

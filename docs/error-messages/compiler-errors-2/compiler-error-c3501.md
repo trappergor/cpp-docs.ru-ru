@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C3501
 ms.assetid: cad69fab-2687-41ac-961f-25dc4c51b167
-ms.openlocfilehash: cbe4437b79031da3cb0cfbd7151cc9387a23dffd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5c00628832c6dc8f0d67656bb32236f9e1347bab
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300315"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200828"
 ---
 # <a name="compiler-error-c3501"></a>Ошибка компилятора C3501
 
-нет библиотеки типов, зарегистрированной для ProgID «идентификатор программы»
+нет библиотеки типов, зарегистрированной для ProgID "ProgID"
 
-Идентификатор класса для заданного идентификатора программы не связана библиотека типов. Таким образом, невозможно передать это идентификатор progid для `#import` инструкции.
+Идентификатор класса для данного ProgID не имеет связанной библиотеки типов. Поэтому этот идентификатор ProgID нельзя передать в оператор `#import`.

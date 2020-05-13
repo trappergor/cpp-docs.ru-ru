@@ -1,9 +1,11 @@
 ---
 title: _ismbbprint, _ismbbprint_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ismbbprint_l
 - _ismbbprint
+- _o__ismbbprint
+- _o__ismbbprint_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - _ismbbprint function
 - _ismbbprint_l function
 ms.assetid: d08a061c-18a8-48f2-a75d-bff4870aec9d
-ms.openlocfilehash: c40ddc931faa5f1dcff914d7c615207ed57d11cf
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 63aa7d9af3b756bc7807cae55fe969d492ec43cf
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954045"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918641"
 ---
 # <a name="_ismbbprint-_ismbbprint_l"></a>_ismbbprint, _ismbbprint_l
 
@@ -56,7 +59,7 @@ int _ismbbprint_l(
 
 ### <a name="parameters"></a>Параметры
 
-*c*<br/>
+*ц*<br/>
 Целое число, которое требуется проверить.
 
 *locale*<br/>
@@ -68,7 +71,11 @@ int _ismbbprint_l(
 
 `isprint(c) || _ismbbkprint(c)`
 
-параметр имеет ненулевое значение для *языка c*или значение 0, если нет. **_ismbbprint** использует текущий языковой стандарт для любого поведения, зависящего от языкового стандарта. **_ismbbprint_l** является идентичным за исключением того, что использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+параметр имеет ненулевое значение для *языка c*или значение 0, если нет. **_ismbbprint** использует текущий языковой стандарт для любого поведения, зависящего от языкового стандарта. **_ismbbprint_l** является идентичным, за исключением того, что использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+
+## <a name="remarks"></a>Remarks
+
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -77,9 +84,9 @@ int _ismbbprint_l(
 |**_ismbbprint**|\<mbctype.h>|
 |**_ismbbprint_l**|\<mbctype.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Классификация байтов](../../c-runtime-library/byte-classification.md)<br/>
-[Подпрограммы _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>
+[подпрограммы _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C1051
 ms.assetid: 87dcbd3b-0952-499a-bd42-64f9e8de2605
-ms.openlocfilehash: afc851cc9e46df0555d3702db982d5c3890d99ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fa897d6e7f4d1d5d6bdd06dba33d0eeb1c238049
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243689"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204507"
 ---
 # <a name="fatal-error-c1051"></a>Неустранимая ошибка C1051
 
-файл базы данных программы, «pdbfile», имеет формат, удалите его и повторите компиляцию
+файл базы данных программы "пдбфиле" имеет устаревший формат, удалите его и выполните повторную компиляцию.
 
-Компилятору не удается обновить файл базы данных программы, который имеет устаревший номер версии. Удалите файл и выполните повторную компиляцию программы с **/ZI** или **/ZI**. Дополнительные сведения см. в разделе  [ /Z7, / Zi, /ZI (формат отладочной информации)](../../build/reference/z7-zi-zi-debug-information-format.md)
+Компилятор не может обновить файл базы данных программы, имеющий более старый номер версии. Удалите файл и перекомпилируйте программу с **/Zi** или **/Zi**. Дополнительные сведения см. в разделе [/Z7,/Zi,/Zi (формат отладочной информации)](../../build/reference/z7-zi-zi-debug-information-format.md) .

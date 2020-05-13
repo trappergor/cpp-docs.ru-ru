@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - ErrorInfo method [C++]
 ms.assetid: 071b446c-4395-4fb8-bd3d-300a8b25f5cd
-ms.openlocfilehash: 59ada8a7e098e57cca5641a439365851bbae2485
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cedb9ccadc63166c43d980333d93a195254700d8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155076"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180710"
 ---
-# <a name="comerrorerrorinfo"></a>_com_error::ErrorInfo
+# <a name="_com_errorerrorinfo"></a>_com_error::ErrorInfo
 
 **Блок, относящийся только к системам Microsoft**
 
@@ -29,12 +29,12 @@ IErrorInfo * ErrorInfo( ) const throw( );
 
 Необработанный элемент `IErrorInfo`, переданный в конструктор.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Получает инкапсулированный `IErrorInfo` элемент `_com_error` объекта, или значение NULL, если нет `IErrorInfo` элемента записывается. Вызывающий объект должен вызвать `Release` для возвращенного объекта после завершения с помощью его.
+Извлекает инкапсулированный `IErrorInfo` элемент в объекте `_com_error` или значение NULL, если элемент `IErrorInfo` не записывается. Вызывающий объект должен вызвать `Release` для возвращенного объекта, когда он завершил использовать его.
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс _com_error](../cpp/com-error-class.md)

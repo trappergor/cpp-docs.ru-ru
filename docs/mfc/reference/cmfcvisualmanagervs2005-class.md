@@ -38,16 +38,16 @@ helpviewer_keywords:
 - CMFCVisualManagerVS2005 [MFC], OnFillMiniFrameCaption
 - CMFCVisualManagerVS2005 [MFC], OnUpdateSystemColors
 ms.assetid: ea39b9ae-327e-4a51-bce7-dc84c78f005b
-ms.openlocfilehash: 4d1ef0c9087e876f3e8f43430b58fc80f3923ba6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b92077ecf4670dd5395296327c767ee3c7b848ba
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338120"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319905"
 ---
 # <a name="cmfcvisualmanagervs2005-class"></a>Класс CMFCVisualManagerVS2005
 
-`CMFCVisualManagerVS2005` Придает приложению внешний вид Microsoft Visual Studio 2005.
+`CMFCVisualManagerVS2005`дает приложению microsoft Visual Studio 2005 внешний вид.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -59,34 +59,34 @@ class CMFCVisualManagerVS2005 : public CMFCVisualManagerOffice2003
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CMFCVisualManagerVS2005::GetDockingTabsBordersSize](#getdockingtabsborderssize)|Этот метод вызывается платформой при рисовании область, в которой будет закреплен и с вкладками. (Переопределяет [CMFCVisualManager::GetDockingTabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getdockingtabsborderssize).)|
-|[CMFCVisualManagerVS2005::GetMDITabsBordersSize](#getmditabsborderssize)|Платформа вызывает этот метод, чтобы определить размер границы окна MDITabs, прежде чем выполняется рисование окна. (Переопределяет [CMFCVisualManager::GetMDITabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize).)|
-|[CMFCVisualManagerVS2005::GetPropertyGridGroupColor](#getpropertygridgroupcolor)|(Переопределяет [CMFCVisualManagerOffice2003::GetPropertyGridGroupColor](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#getpropertygridgroupcolor).)|
-|[CMFCVisualManagerVS2005::GetTabFrameColors](#gettabframecolors)|(Переопределяет [CMFCVisualManagerOffice2003::GetTabFrameColors](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#gettabframecolors).)|
-|[CMFCVisualManagerVS2005::HasOverlappedAutoHideButtons](#hasoverlappedautohidebuttons)|Возвращает, перекрываются ли кнопки автоматического скрытия в текущем наглядный диспетчер. (Переопределяет [CMFCVisualManager::HasOverlappedAutoHideButtons](../../mfc/reference/cmfcvisualmanager-class.md#hasoverlappedautohidebuttons).)|
-|[CMFCVisualManagerVS2005::OnDrawAutoHideButtonBorder](#ondrawautohidebuttonborder)|(Переопределяет [CMFCVisualManagerOffice2003::OnDrawAutoHideButtonBorder](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#ondrawautohidebuttonborder).)|
-|[CMFCVisualManagerVS2005::OnDrawCaptionButton](#ondrawcaptionbutton)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawCaptionButton`.)|
-|[CMFCVisualManagerVS2005::OnDrawPaneCaption](#ondrawpanecaption)|(Переопределяет [CMFCVisualManagerOffice2003::OnDrawPaneCaption](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#ondrawpanecaption).)|
-|[CMFCVisualManagerVS2005::OnDrawSeparator](#ondrawseparator)|(Переопределяет [CMFCVisualManagerOffice2003::OnDrawSeparator](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#ondrawseparator).)|
-|[CMFCVisualManagerVS2005::OnDrawTab](#ondrawtab)|(Переопределяет [CMFCVisualManagerOffice2003::OnDrawTab](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#ondrawtab).)|
-|[CMFCVisualManagerVS2005::OnDrawToolBoxFrame](#ondrawtoolboxframe)|(Переопределяет [CMFCVisualManager::OnDrawToolBoxFrame](../../mfc/reference/cmfcvisualmanager-class.md#ondrawtoolboxframe).)|
-|[CMFCVisualManagerVS2005::OnEraseTabsArea](#onerasetabsarea)|(Переопределяет [CMFCVisualManagerOffice2003::OnEraseTabsArea](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#onerasetabsarea).)|
-|[CMFCVisualManagerVS2005::OnFillAutoHideButtonBackground](#onfillautohidebuttonbackground)|(Переопределяет [CMFCVisualManagerOffice2003::OnFillAutoHideButtonBackground](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#onfillautohidebuttonbackground).)|
-|[CMFCVisualManagerVS2005::OnFillHighlightedArea](#onfillhighlightedarea)|(Переопределяет [CMFCVisualManagerOffice2003::OnFillHighlightedArea](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#onfillhighlightedarea).)|
-|[CMFCVisualManagerVS2005::OnFillMiniFrameCaption](#onfillminiframecaption)|(Переопределяет `CMFCVisualManagerOfficeXP::OnFillMiniFrameCaption`.)|
-|[CMFCVisualManagerVS2005::OnUpdateSystemColors](#onupdatesystemcolors)|(Переопределяет [CMFCVisualManagerOffice2003::OnUpdateSystemColors](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#onupdatesystemcolors).)|
+|[CMFCVisualManagerVS2005:GetDockingTabsBordersSize](#getdockingtabsborderssize)|Фрейм вызывает этот метод, когда он рисует панель, которая пристыкована и вкладками. (Обогнает [CMFCVisualManager::GetDockingTabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getdockingtabsborderssize).)|
+|[CMFCVisualManagerVS2005:GetMDITabsBordersSize](#getmditabsborderssize)|Рамочная система вызывает этот метод для определения размера границы окна MDITabs до того, как он рисует окно. (Переопределяет [CMFCVisualManager::GetMDITabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize).)|
+|[CMFCVisualManagerVS2005:GetPropertyGridGroupColor](#getpropertygridgroupcolor)|(Переопределяет [CMFCVisualManagerOffice2003:GetPropertyGridGroupColor](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#getpropertygridgroupcolor).)|
+|[CMFCVisualManagerVS2005:GetTabFrameColors](#gettabframecolors)|(Переопределяет [CMFCVisualManagerOffice2003:GetTabFrameColors](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#gettabframecolors).)|
+|[CMFCVisualManagerVS2005:HasOverlappedAutoHideButtons](#hasoverlappedautohidebuttons)|Возвращает ли автоматические кнопки укрытия перекрываться в текущем визуальном менеджере. (Переопределяет [CMFCVisualManager::HasOverlappedAutoHideButtons](../../mfc/reference/cmfcvisualmanager-class.md#hasoverlappedautohidebuttons).)|
+|[CMFCVisualManagerVS2005:OndrawAutoHideButtonBorder](#ondrawautohidebuttonborder)|(Отменяет [CMFCVisualManagerOffice2003:OndrawAutohidebuttonborder](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#ondrawautohidebuttonborder).)|
+|[CMFCVisualManagerVS2005:OndrawCaptionButton](#ondrawcaptionbutton)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawCaptionButton`.)|
+|[CMFCVisualManagerVS2005:OnDrawPaneCaption](#ondrawpanecaption)|(Отменяет [CMFCVisualManagerOffice2003::OnDrawPaneCaption](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#ondrawpanecaption).)|
+|[CMFCVisualManagerVS2005:OnDrawСепаратор](#ondrawseparator)|(Переопределяет [CMFCVisualManagerOffice2003::OnDrawSeparator](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#ondrawseparator).)|
+|[CMFCVisualManagerVS2005:OndrawTab](#ondrawtab)|(Переопределяет [CMFCVisualManagerOffice2003::OndrawTab](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#ondrawtab).)|
+|[CMFCVisualManagerVS2005:OndrawToolBoxFrame](#ondrawtoolboxframe)|(Переопределяет [CMFCVisualManager::OndrawToolBoxFrame](../../mfc/reference/cmfcvisualmanager-class.md#ondrawtoolboxframe).)|
+|[CMFCVisualManagerVS2005:OnEraseTabsArea](#onerasetabsarea)|(Переопределяет [CMFCVisualManagerOffice2003:OnEraseTabsArea](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#onerasetabsarea).)|
+|[CMFCVisualManagerVS2005:OnfillAutohidebuttonbackground](#onfillautohidebuttonbackground)|(Переопределяет [CMFCVisualManagerOffice2003::OnfillAutohidebuttonbackground](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#onfillautohidebuttonbackground).)|
+|[CMFCVisualManagerVS2005:OnFillHighlightedArea](#onfillhighlightedarea)|(Переопределяет [CMFCVisualManagerOffice2003::OnFillHighlightedArea](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#onfillhighlightedarea).)|
+|[CMFCVisualManagerVS2005:OnfillminiFrameCaption](#onfillminiframecaption)|(Переопределяет `CMFCVisualManagerOfficeXP::OnFillMiniFrameCaption`.)|
+|[CMFCVisualManagerVS2005:OnUpdateSystemColors](#onupdatesystemcolors)|(Переопределяет [CMFCVisualManagerOffice2003::UpdateSystemColors](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#onupdatesystemcolors).)|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Класс CMFCVisualManagerVS2005 используется для изменения внешнего вида приложения, аналогично Microsoft Visual Studio 2005.
+Вы используете класс CMFCVisualManagerVS2005, чтобы изменить внешний вид приложения, чтобы напоминать внешний вид Microsoft Visual Studio 2005.
 
-Все члены этого класса являются виртуальных функций, которые являются производными от предка этого класса [класс CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md).
+Все члены этого класса являются виртуальными функциями, которые являются производными от предка этого класса, [CMFCVisualManager класса](../../mfc/reference/cmfcvisualmanager-class.md).
 
 ## <a name="example"></a>Пример
 
-В следующем примере демонстрируется использование наглядный диспетчер VS 2005. Этот фрагмент кода является частью [Desktop оповещения демонстрационного](../../overview/visual-cpp-samples.md).
+Ниже приводится следующий пример, как использовать визуальный менеджер VS 2005. Этот фрагмент кода является частью [образца демо-версии оповещения рабочего стола.](../../overview/visual-cpp-samples.md)
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#9](../../mfc/reference/codesnippet/cpp/cmfcvisualmanagervs2005-class_1.cpp)]
 
@@ -94,7 +94,7 @@ class CMFCVisualManagerVS2005 : public CMFCVisualManagerOffice2003
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CMFCBaseVisualManager](../../mfc/reference/cmfcbasevisualmanager-class.md)
+[CMFCBaseВизуальныйМенеджер](../../mfc/reference/cmfcbasevisualmanager-class.md)
 
 [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)
 
@@ -108,7 +108,7 @@ class CMFCVisualManagerVS2005 : public CMFCVisualManagerOffice2003
 
 **Заголовок:** afxvisualmanagervs2005.h
 
-##  <a name="getdockingtabsborderssize"></a>  CMFCVisualManagerVS2005::GetDockingTabsBordersSize
+## <a name="cmfcvisualmanagervs2005getdockingtabsborderssize"></a><a name="getdockingtabsborderssize"></a>CMFCVisualManagerVS2005:GetDockingTabsBordersSize
 
 ```
 virtual int GetDockingTabsBordersSize();
@@ -116,9 +116,9 @@ virtual int GetDockingTabsBordersSize();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="getmditabsborderssize"></a>  CMFCVisualManagerVS2005::GetMDITabsBordersSize
+## <a name="cmfcvisualmanagervs2005getmditabsborderssize"></a><a name="getmditabsborderssize"></a>CMFCVisualManagerVS2005:GetMDITabsBordersSize
 
 ```
 virtual int GetMDITabsBordersSize();
@@ -126,9 +126,9 @@ virtual int GetMDITabsBordersSize();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="getpropertygridgroupcolor"></a>  CMFCVisualManagerVS2005::GetPropertyGridGroupColor
+## <a name="cmfcvisualmanagervs2005getpropertygridgroupcolor"></a><a name="getpropertygridgroupcolor"></a>CMFCVisualManagerVS2005:GetPropertyGridGroupColor
 
 ```
 virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
@@ -136,13 +136,13 @@ virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *pPropList*<br/>
+(в) *pPropList*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="gettabframecolors"></a>  CMFCVisualManagerVS2005::GetTabFrameColors
+## <a name="cmfcvisualmanagervs2005gettabframecolors"></a><a name="gettabframecolors"></a>CMFCVisualManagerVS2005:GetTabFrameColors
 
 ```
 virtual void GetTabFrameColors(
@@ -159,19 +159,19 @@ virtual void GetTabFrameColors(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *pTabWnd*<br/>
-[in] *clrDark*<br/>
-[in] *clrBlack*<br/>
-[in] *clrHighlight*<br/>
-[in] *clrFace*<br/>
-[in] *clrDarkShadow*<br/>
-[in] *clrLight*<br/>
-[in] *pbrFace*<br/>
-[in] *pbrBlack*<br/>
+(в) *pTabWnd*<br/>
+(в) *clrDark*<br/>
+(в) *clrBlack*<br/>
+(в) *clrHighlight*<br/>
+(в) *clrFace*<br/>
+(в) *clrDarkShadow*<br/>
+(в) *clrLight*<br/>
+(в) *pbrFace*<br/>
+(в) *pbrBlack*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="hasoverlappedautohidebuttons"></a>  CMFCVisualManagerVS2005::HasOverlappedAutoHideButtons
+## <a name="cmfcvisualmanagervs2005hasoverlappedautohidebuttons"></a><a name="hasoverlappedautohidebuttons"></a>CMFCVisualManagerVS2005:HasOverlappedAutoHideButtons
 
 ```
 virtual BOOL HasOverlappedAutoHideButtons() const;
@@ -179,9 +179,9 @@ virtual BOOL HasOverlappedAutoHideButtons() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ondrawautohidebuttonborder"></a>  CMFCVisualManagerVS2005::OnDrawAutoHideButtonBorder
+## <a name="cmfcvisualmanagervs2005ondrawautohidebuttonborder"></a><a name="ondrawautohidebuttonborder"></a>CMFCVisualManagerVS2005:OndrawAutoHideButtonBorder
 
 ```
 virtual void OnDrawAutoHideButtonBorder(
@@ -193,14 +193,14 @@ virtual void OnDrawAutoHideButtonBorder(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
-[in] *rectBounds*<br/>
-[in] *rectBorderSize*<br/>
-[in] *pButton*<br/>
+(в) *pDC*<br/>
+(в) *rectBounds*<br/>
+(в) *rectBorderSize*<br/>
+(в) *pButton*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ondrawcaptionbutton"></a>  CMFCVisualManagerVS2005::OnDrawCaptionButton
+## <a name="cmfcvisualmanagervs2005ondrawcaptionbutton"></a><a name="ondrawcaptionbutton"></a>CMFCVisualManagerVS2005:OndrawCaptionButton
 
 ```
 virtual void OnDrawCaptionButton(
@@ -215,17 +215,17 @@ virtual void OnDrawCaptionButton(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
-[in] *pButton*<br/>
-[in] *bActive*<br/>
-[in] *bHorz*<br/>
-[in] *bMaximized*<br/>
-[in] *bDisabled*<br/>
-[in] *nImageID*<br/>
+(в) *pDC*<br/>
+(в) *pButton*<br/>
+(в) *bАктивный*<br/>
+(в) *bHorz*<br/>
+(в) *bMaximized*<br/>
+(в) *bDisabled*<br/>
+(в) *nImageID*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ondrawpanecaption"></a>  CMFCVisualManagerVS2005::OnDrawPaneCaption
+## <a name="cmfcvisualmanagervs2005ondrawpanecaption"></a><a name="ondrawpanecaption"></a>CMFCVisualManagerVS2005:OnDrawPaneCaption
 
 ```
 virtual COLORREF OnDrawPaneCaption(
@@ -238,17 +238,17 @@ virtual COLORREF OnDrawPaneCaption(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
-[in] *pBar*<br/>
-[in] *bActive*<br/>
-[in] *rectCaption*<br/>
-[in] *rectButtons*<br/>
+(в) *pDC*<br/>
+(в) *pBar*<br/>
+(в) *bАктивный*<br/>
+(в) *rectCaption*<br/>
+(в) *rectButtons*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ondrawseparator"></a>  CMFCVisualManagerVS2005::OnDrawSeparator
+## <a name="cmfcvisualmanagervs2005ondrawseparator"></a><a name="ondrawseparator"></a>CMFCVisualManagerVS2005:OnDrawСепаратор
 
 ```
 virtual void OnDrawSeparator(
@@ -260,14 +260,14 @@ virtual void OnDrawSeparator(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
-[in] *pBar*<br/>
+(в) *pDC*<br/>
+(в) *pBar*<br/>
 [in] *rect*<br/>
-[in] *bIsHoriz*<br/>
+(в) *bIsHoriz*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ondrawtab"></a>  CMFCVisualManagerVS2005::OnDrawTab
+## <a name="cmfcvisualmanagervs2005ondrawtab"></a><a name="ondrawtab"></a>CMFCVisualManagerVS2005:OndrawTab
 
 ```
 virtual void OnDrawTab(
@@ -280,15 +280,15 @@ virtual void OnDrawTab(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
-[in] *rectTab*<br/>
+(в) *pDC*<br/>
+(в) *rectTab*<br/>
 [in] *iTab*<br/>
-[in] *bIsActive*<br/>
-[in] *pTabWnd*<br/>
+(в) *bIsActive*<br/>
+(в) *pTabWnd*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ondrawtoolboxframe"></a>  CMFCVisualManagerVS2005::OnDrawToolBoxFrame
+## <a name="cmfcvisualmanagervs2005ondrawtoolboxframe"></a><a name="ondrawtoolboxframe"></a>CMFCVisualManagerVS2005:OndrawToolBoxFrame
 
 ```
 virtual void OnDrawToolBoxFrame(
@@ -298,12 +298,12 @@ virtual void OnDrawToolBoxFrame(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
+(в) *pDC*<br/>
 [in] *rect*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="onerasetabsarea"></a>  CMFCVisualManagerVS2005::OnEraseTabsArea
+## <a name="cmfcvisualmanagervs2005onerasetabsarea"></a><a name="onerasetabsarea"></a>CMFCVisualManagerVS2005:OnEraseTabsArea
 
 ```
 virtual void OnEraseTabsArea(
@@ -314,13 +314,13 @@ virtual void OnEraseTabsArea(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
+(в) *pDC*<br/>
 [in] *rect*<br/>
-[in] *pTabWnd*<br/>
+(в) *pTabWnd*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="onfillautohidebuttonbackground"></a>  CMFCVisualManagerVS2005::OnFillAutoHideButtonBackground
+## <a name="cmfcvisualmanagervs2005onfillautohidebuttonbackground"></a><a name="onfillautohidebuttonbackground"></a>CMFCVisualManagerVS2005:OnfillAutohidebuttonbackground
 
 ```
 virtual void OnFillAutoHideButtonBackground(
@@ -331,13 +331,13 @@ virtual void OnFillAutoHideButtonBackground(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
+(в) *pDC*<br/>
 [in] *rect*<br/>
-[in] *pButton*<br/>
+(в) *pButton*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="onfillhighlightedarea"></a>  CMFCVisualManagerVS2005::OnFillHighlightedArea
+## <a name="cmfcvisualmanagervs2005onfillhighlightedarea"></a><a name="onfillhighlightedarea"></a>CMFCVisualManagerVS2005:OnFillHighlightedArea
 
 ```
 virtual void OnFillHighlightedArea(
@@ -349,14 +349,14 @@ virtual void OnFillHighlightedArea(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
+(в) *pDC*<br/>
 [in] *rect*<br/>
-[in] *pBrush*<br/>
-[in] *pButton*<br/>
+(в) *pBrush*<br/>
+(в) *pButton*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="onfillminiframecaption"></a>  CMFCVisualManagerVS2005::OnFillMiniFrameCaption
+## <a name="cmfcvisualmanagervs2005onfillminiframecaption"></a><a name="onfillminiframecaption"></a>CMFCVisualManagerVS2005:OnfillminiFrameCaption
 
 ```
 virtual COLORREF OnFillMiniFrameCaption(
@@ -368,28 +368,28 @@ virtual COLORREF OnFillMiniFrameCaption(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
-[in] *rectCaption*<br/>
-[in] *pFrameWnd*<br/>
-[in] *bActive*<br/>
+(в) *pDC*<br/>
+(в) *rectCaption*<br/>
+(в) *pFrameWnd*<br/>
+(в) *bАктивный*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="onupdatesystemcolors"></a>  CMFCVisualManagerVS2005::OnUpdateSystemColors
+## <a name="cmfcvisualmanagervs2005onupdatesystemcolors"></a><a name="onupdatesystemcolors"></a>CMFCVisualManagerVS2005:OnUpdateSystemColors
 
 ```
 virtual void OnUpdateSystemColors();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)<br/>
 [Класс CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)<br/>
-[Класс CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)<br/>
-[Класс CMFCVisualManagerWindows](../../mfc/reference/cmfcvisualmanagerwindows-class.md)<br/>
-[Класс CMFCVisualManagerOffice2003](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)
+[CMFCVisualManagerOfficeXP Класс](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)<br/>
+[CmFCVisualManagerWindows Класс](../../mfc/reference/cmfcvisualmanagerwindows-class.md)<br/>
+[CMFCVisualManagerOffice2003 Класс](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)

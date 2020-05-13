@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Module::GenericReleaseNotifier::GenericReleaseNotifier, constructor
 - Microsoft::WRL::Module::GenericReleaseNotifier::Invoke method
 ms.assetid: 244a8fbe-f89b-409b-aa65-db3e37f9b125
-ms.openlocfilehash: 318415c9726426cbd60c205759a6ff8572cc555e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3cc8e33d596fb1d3ecc4a94fee7971a50ffe596
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325056"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371309"
 ---
 # <a name="modulegenericreleasenotifier-class"></a>Класс Module::GenericReleaseNotifier
 
@@ -40,21 +40,21 @@ class GenericReleaseNotifier : public ReleaseNotifier;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-name                                                                                                     | Описание
+Имя                                                                                                     | Описание
 -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------
-[Module::genericreleasenotifier:: genericreleasenotifier](#genericreleasenotifier-genericreleasenotifier) | Инициализирует новый экземпляр класса `Module::GenericReleaseNotifier`.
+[Модуль::GenericReleaseNotifier::GenericReleaseNotifier](#genericreleasenotifier-genericreleasenotifier) | Инициализирует новый экземпляр класса `Module::GenericReleaseNotifier`.
 
 ### <a name="public-methods"></a>Открытые методы
 
-name                                                                     | Описание
+Имя                                                                     | Описание
 ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------
-[Module::GenericReleaseNotifier:: Invoke](#genericreleasenotifier-invoke) | Вызывает обработчик событий, связанный с текущим `Module::GenericReleaseNotifier` объекта.
+[Модуль::GenericReleaseNotifier::Invoke](#genericreleasenotifier-invoke) | Вызывает обработчик событий, `Module::GenericReleaseNotifier` связанный с текущим объектом.
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-name                                                                          | Описание
+Имя                                                                          | Описание
 ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------
-[Module::GenericReleaseNotifier::callback_](#genericreleasenotifier-callback) | Содержит лямбда-выражения, функтором или обработчик событий указателя на функцию, связанный с текущим `Module::GenericReleaseNotifier` объекта.
+[Модуль::GenericReleaseNotifier::callback_](#genericreleasenotifier-callback) | Удерживает лямбду, фанктор или обработчик событий, связанный `Module::GenericReleaseNotifier` с текущим объектом.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -68,15 +68,15 @@ name                                                                          | 
 
 **Пространство имен:** Microsoft::WRL
 
-## <a name="genericreleasenotifier-callback"></a>Module::GenericReleaseNotifier::callback_
+## <a name="modulegenericreleasenotifiercallback_"></a><a name="genericreleasenotifier-callback"></a>Модуль::GenericReleaseNotifier::callback_
 
-Содержит лямбда-выражения, функтором или обработчик событий указателя на функцию, связанный с текущим `Module::GenericReleaseNotifier` объекта.
+Удерживает лямбду, фанктор или обработчик событий, связанный `Module::GenericReleaseNotifier` с текущим объектом.
 
 ```cpp
 T callback_;
 ```
 
-## <a name="genericreleasenotifier-genericreleasenotifier"></a>Module::genericreleasenotifier:: genericreleasenotifier
+## <a name="modulegenericreleasenotifiergenericreleasenotifier"></a><a name="genericreleasenotifier-genericreleasenotifier"></a>Модуль::GenericReleaseNotifier::GenericReleaseNotifier
 
 Инициализирует новый экземпляр класса `Module::GenericReleaseNotifier`.
 
@@ -90,14 +90,14 @@ GenericReleaseNotifier(
 ### <a name="parameters"></a>Параметры
 
 *обратный вызов*<br/>
-Лямбда-выражения, функтором или обработчик событий указателя на функцию, который может быть вызван с помощью функции оператор «скобки» (`()`).
+Lambda, functor, или обработчик событий указателя к функции, который может быть`()`вызван с оператором функции скобки ( ).
 
-*release*<br/>
-Укажите `true` для включения вызова базового [модуль:: ReleaseNotifier::Release()](module-releasenotifier-class.md#releasenotifier-release) метода; в противном случае укажите `false`.
+*Выпуска*<br/>
+Указать, `true` чтобы включить вызов основного [модуля::ReleaseNotifier::Release()](module-releasenotifier-class.md#releasenotifier-release) метод; в противном случае, укажите `false`.
 
-## <a name="genericreleasenotifier-invoke"></a>Module::GenericReleaseNotifier:: Invoke
+## <a name="modulegenericreleasenotifierinvoke"></a><a name="genericreleasenotifier-invoke"></a>Модуль::GenericReleaseNotifier::Invoke
 
-Вызывает обработчик событий, связанный с текущим `Module::GenericReleaseNotifier` объекта.
+Вызывает обработчик событий, `Module::GenericReleaseNotifier` связанный с текущим объектом.
 
 ```cpp
 void Invoke();

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - nonextensible attribute
 ms.assetid: c7ef1554-809f-4ea0-a7cd-dc7786d40c3e
-ms.openlocfilehash: f2947e223d068ea6cc92a41abe19cb7f920112b2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2a1cd4d685e2fd141c6e11feaea488f44a884c80
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514393"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214699"
 ---
 # <a name="nonextensible"></a>nonextensible
 
-Указывает, что `IDispatch` реализация включает только свойства и методы, перечисленные в описании интерфейса, и не может быть расширена с помощью дополнительных элементов во время выполнения.
+Указывает, что реализация `IDispatch` включает только свойства и методы, перечисленные в описании интерфейса, и не может быть расширена с помощью дополнительных элементов во время выполнения.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -23,7 +23,7 @@ ms.locfileid: "69514393"
 [nonextensible]
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 **Нерасширяемый** C++ атрибут имеет те же функциональные возможности, что и [нерасширяемый](/windows/win32/Midl/nonextensible) атрибут MIDL.
 
@@ -54,14 +54,14 @@ __interface IFireTabCtrl
 
 |||
 |-|-|
-|**Относится к**|**interface**|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|`dual`и `oleautomation`, или`dispinterface`|
-|**Недопустимые атрибуты**|Отсутствуют|
+|**Применение**|**interface**|
+|**Повторяемый**|нет|
+|**Обязательные атрибуты**|`dual` и `oleautomation`или `dispinterface`|
+|**Недопустимые атрибуты**|None|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты интерфейса](interface-attributes.md)

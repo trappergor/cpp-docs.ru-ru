@@ -1,6 +1,6 @@
 ---
 title: _strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnicoll_l
 - _mbsnicoll
@@ -8,6 +8,12 @@ api_name:
 - _strnicoll
 - _strnicoll_l
 - _wcsnicoll
+- _o__mbsnicoll
+- _o__mbsnicoll_l
+- _o__strnicoll
+- _o__strnicoll_l
+- _o__wcsnicoll
+- _o__wcsnicoll_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,6 +27,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -63,12 +70,12 @@ helpviewer_keywords:
 - tcsnicoll function
 - _strnicoll function
 ms.assetid: abf0c569-725b-428d-9ff2-924f430104b4
-ms.openlocfilehash: c1a26690f4913cb35486886f6548927fc09efc89
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7694edda5ef2b214a1ca391ab1b922b8bfbf35e0
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947084"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914189"
 ---
 # <a name="_strnicoll-_wcsnicoll-_mbsnicoll-_strnicoll_l-_wcsnicoll_l-_mbsnicoll_l"></a>_strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l
 
@@ -136,15 +143,17 @@ int _mbsnicoll_l(
 |0|*строка1* совпадает с *строка2*|
 |> 0|*строка1* больше, чем *строка2*|
 
-Каждая из этих функций возвращает **_NLSCMPERROR**. Чтобы использовать **_NLSCMPERROR**, включите либо строку. H или MBSTRING. Высоты. **_wcsnicoll** может завершиться ошибкой, если *строка1* или *строка_замены* содержат коды расширенных символов за пределами домена в последовательности сортировки. При возникновении ошибки **_wcsnicoll** может установить значение " **No**" для **еинвал**. Чтобы проверить наличие ошибки в вызове **_wcsnicoll** **, задайте значение** 0, а затем проверьте право **после вызова** **_wcsnicoll**.
+Каждая из этих функций возвращает **_NLSCMPERROR**. Чтобы использовать **_NLSCMPERROR**, включите либо строку. H или MBSTRING. Высоты. **_wcsnicoll** может завершиться ошибкой, если *строка1* или *строка_замены* содержат коды расширенных символов за пределами домена последовательности сортировки. При возникновении ошибки **_wcsnicoll** **может установить значение** **еинвал**. Чтобы проверить наличие ошибки при вызове **_wcsnicoll** **, задайте значение** 0, а затем проверьте правозвонку **после** вызова **_wcsnicoll**.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Каждая из этих функций выполняет сравнение знаков первого *числа* в строках *строка1* и *строка2* с учетом регистра в соответствии с кодовой страницей. Эти функции следует использовать только в том случае, когда есть различие между порядком символов в наборе и лексикографическим порядком символов в кодовой странице, и это различие представляет интерес при сравнении строк. Версии этих функций без суффикса **_l** используют текущий языковой стандарт и кодовую страницу. Версии с суффиксом **_l** идентичны, за исключением того, что они используют переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-Все эти функции проверяют свои параметры. Если *строка1* или *строка2* являются пустым указателем или count больше **INT_MAX**, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md) . Если выполнение может быть продолжено, эти функции возвращают **_NLSCMPERROR** и применяют **значение "** **еинвал**".
+Все эти функции проверяют свои параметры. Если *строка1* или *строка2* являются пустым указателем или count больше **INT_MAX**, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md) . Если выполнение может быть продолжено, эти функции возвращают **_NLSCMPERROR** и присвойте параметру " **еинвал**" значение **No** .
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|
@@ -160,13 +169,13 @@ int _mbsnicoll_l(
 |**_wcsnicoll**, **_wcsnicoll_l**|\<wchar.h> или \<string.h>|
 |**_mbsnicoll**, **_mbsnicoll_l**|\<mbstring.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Языковой стандарт](../../c-runtime-library/locale.md)<br/>
-[Операции со строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Функции strcoll](../../c-runtime-library/strcoll-functions.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[Управление строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[strcoll Functions](../../c-runtime-library/strcoll-functions.md)<br/>
 [localeconv](localeconv.md)<br/>
 [_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l](mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)<br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>

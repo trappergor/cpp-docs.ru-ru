@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::front_insert_iterator [C++], container_type
 - std::front_insert_iterator [C++], reference
 ms.assetid: a9a9c075-136a-4419-928b-c4871afa033c
-ms.openlocfilehash: 176fac8053d352d6a7a72ce62d5a8ee7a64b9811
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 455db433aff1c1aa241beeb6e2435807959b7dd4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79424791"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317150"
 ---
 # <a name="front_insert_iterator-class"></a>Класс front_insert_iterator
 
@@ -30,7 +30,7 @@ class front_insert_iterator;
 
 ### <a name="parameters"></a>Параметры
 
-\ *контейнера*
+*Контейнер*\
 Тип контейнера, в переднюю часть которого итератор `front_insert_iterator` вставит элементы.
 
 ## <a name="remarks"></a>Remarks
@@ -39,32 +39,32 @@ class front_insert_iterator;
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Description|
+|Конструктор|Описание|
 |-|-|
 |[front_insert_iterator](#front_insert_iterator)|Создает итератор, может вставлять элементы с передней стороны указанного объекта контейнера.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Description|
+|Имя типа|Описание|
 |-|-|
 |[container_type](#container_type)|Тип, представляющий контейнер, в переднюю часть которого будет осуществляться вставка.|
-|[reference](#reference)|Тип, который предоставляет ссылку на элемент последовательности под управлением связанного контейнера.|
+|[Ссылки](#reference)|Тип, который предоставляет ссылку на элемент последовательности под управлением связанного контейнера.|
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Description|
+|Оператор|Описание|
 |-|-|
-|[operator*](#op_star)|Оператор разыменования, используемый для реализации выражения итератора вывода \* `i` = `x` для вставки в начало.|
-|[оператор++](#op_add_add)|Увеличивает `front_insert_iterator` до следующего местоположения, в котором можно сохранить значение.|
-|[оператор=](#op_eq)|Оператор присваивания, используемый для реализации выражения итератора вывода \* `i` = `x` для вставки в начало.|
+|[оператор](#op_star)|Оператор dereferencing используется для реализации выражения \* `i`  =  `x` вывода итератора для передней вставки.|
+|[оператор](#op_add_add)|Увеличивает `front_insert_iterator` до следующего местоположения, в котором можно сохранить значение.|
+|[оператора](#op_eq)|Оператор назначения используется для реализации выражения \* `i`  =  `x` вывода итератора для передней вставки.|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<iterator>
+**Заголовок** \<: итератор>
 
 **Пространство имен:** std
 
-## <a name="container_type"></a>  front_insert_iterator::container_type
+## <a name="front_insert_iteratorcontainer_type"></a><a name="container_type"></a>front_insert_iterator::container_type
 
 Тип, представляющий контейнер, в переднюю часть которого будет осуществляться вставка.
 
@@ -106,7 +106,7 @@ The list L2 is: ( 40 10 20 ).
 */
 ```
 
-## <a name="front_insert_iterator"></a>  front_insert_iterator::front_insert_iterator
+## <a name="front_insert_iteratorfront_insert_iterator"></a><a name="front_insert_iterator"></a>front_insert_iterator::front_insert_iterator
 
 Создает итератор, может вставлять элементы с передней стороны указанного объекта контейнера.
 
@@ -169,7 +169,7 @@ After the front insertions, the list L is:
 */
 ```
 
-## <a name="op_star"></a>front_insert_iterator:: operator\*
+## <a name="front_insert_iteratoroperator"></a><a name="op_star"></a>front_insert_iterator::оператор\*
 
 Разыменовывает итератор вставки и возвращает адресованный элемент.
 
@@ -183,7 +183,7 @@ front_insert_iterator<Container>& operator*();
 
 ### <a name="remarks"></a>Remarks
 
-Используется для применения выражения итератора вывода **\*Iter** = **value**. Если `Iter` является итератором, который обращается к элементу последовательности, то **\*Iter** = **значение** заменяет этот элемент значением и не изменяет общее число элементов в последовательности.
+Используется для реализации значения**value** =  ** \*** итератора вывода Iter. Если `Iter` итератор обращается к элементу в последовательности, то = **value** ** \*** значение Iter заменяет этот элемент значением и не изменяет общее количество элементов в последовательности.
 
 ### <a name="example"></a>Пример
 
@@ -230,7 +230,7 @@ After the front insertions, the list L is:
 */
 ```
 
-## <a name="op_add_add"></a>  front_insert_iterator::operator++
+## <a name="front_insert_iteratoroperator"></a><a name="op_add_add"></a>front_insert_iterator::оператор
 
 Увеличивает `back_insert_iterator` до следующего местоположения, в котором можно сохранить значение.
 
@@ -281,7 +281,7 @@ The list L1 is: ( 30 20 10 ).
 */
 ```
 
-## <a name="op_eq"></a>  front_insert_iterator::operator=
+## <a name="front_insert_iteratoroperator"></a><a name="op_eq"></a>front_insert_iterator::оператор
 
 Добавляет (заносит) значение в переднюю часть контейнера.
 
@@ -293,7 +293,7 @@ front_insert_iterator<Container>& operator=(typename Container::value_type&& val
 
 ### <a name="parameters"></a>Параметры
 
-*val*\
+*Валь*\
 Значение, которое должно быть присвоено контейнеру.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -343,7 +343,7 @@ The list L1 is: ( 30 20 10 ).
 */
 ```
 
-## <a name="reference"></a>  front_insert_iterator::reference
+## <a name="front_insert_iteratorreference"></a><a name="reference"></a>front_insert_iterator::ссылка
 
 Тип, который предоставляет ссылку на элемент последовательности под управлением связанного контейнера.
 
@@ -389,6 +389,6 @@ The first element in the list L is: 30.
 
 ## <a name="see-also"></a>См. также раздел
 
-[\<iterator>](../standard-library/iterator.md)\
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)
+[\<итератор>](../standard-library/iterator.md)\
+[Безопасность резьбы в стандартной библиотеке СЗ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Стандартная библиотечная справка по СЗ](../standard-library/cpp-standard-library-reference.md)

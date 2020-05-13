@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetRange
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
-ms.openlocfilehash: ec9060ba60c4d9877e5ee32bc68da0134f0ccf20
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 577dde7f4f4209f15590825fdb87fe23f788a1ce
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79424449"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754613"
 ---
 # <a name="cdatetimectrl-class"></a>Класс CDateTimeCtrl
 
@@ -57,42 +57,42 @@ ms.locfileid: "79424449"
 class CDateTimeCtrl : public CWnd
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|[CDateTimeCtrl:: CDateTimeCtrl](#cdatetimectrl)|Формирует объект `CDateTimeCtrl`.|
+|[CDateTimeCtrl::CDateTimeCtrl](#cdatetimectrl)|Формирует объект `CDateTimeCtrl`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|[CDateTimeCtrl:: Клосемонскал](#closemonthcal)|Закрывает текущий элемент управления выбор даты и времени.|
-|[CDateTimeCtrl:: Create](#create)|Создает элемент управления выбора даты и времени и прикрепляет его к объекту `CDateTimeCtrl`.|
-|[CDateTimeCtrl:: Жетдатетимепиккеринфо](#getdatetimepickerinfo)|Извлекает сведения о текущем элементе управления средства выбора даты и времени.|
-|[CDateTimeCtrl:: Жетидеалсизе](#getidealsize)|Возвращает идеальный размер элемента управления "Выбор даты и времени", необходимого для вывода текущей даты или времени.|
-|[CDateTimeCtrl:: Жетмонскалколор](#getmonthcalcolor)|Извлекает цвет для заданной части месячного календаря в элементе управления выбора даты и времени.|
-|[CDateTimeCtrl:: Жетмонскалктрл](#getmonthcalctrl)|Извлекает объект `CMonthCalCtrl`, связанный с элементом управления "Выбор даты и времени".|
-|[CDateTimeCtrl:: Жетмонскалфонт](#getmonthcalfont)|Извлекает шрифт, который в настоящее время используется элементом управления "Календарь" элемента управления "Выбор даты и времени".|
-|[CDateTimeCtrl:: Жетмонскалстиле](#getmonthcalstyle)|Возвращает стиль текущего элемента управления "Выбор даты и времени".|
-|[CDateTimeCtrl:: Range](#getrange)|Извлекает текущее минимальное и максимальное разрешенное системное время для элемента управления выбора даты и времени.|
-|[CDateTimeCtrl:: во время](#gettime)|Извлекает выбранное в данный момент время из элемента выбора даты и времени и помещает его в указанную структуру `SYSTEMTIME`.|
-|[CDateTimeCtrl:: Сетформат](#setformat)|Задает отображение элемента управления "Выбор даты и времени" в соответствии с заданной строкой формата.|
-|[CDateTimeCtrl:: Сетмонскалколор](#setmonthcalcolor)|Задает цвет для заданной части месячного календаря в элементе управления выбора даты и времени.|
-|[CDateTimeCtrl:: Сетмонскалфонт](#setmonthcalfont)|Задает шрифт, который будет использоваться элементом управления "Календарь дочернего месяца" элемента управления "Выбор даты и времени".|
-|[CDateTimeCtrl:: Сетмонскалстиле](#setmonthcalstyle)|Задает стиль текущего элемента управления "Выбор даты и времени".|
-|[CDateTimeCtrl:: SetRange](#setrange)|Задает минимальное и максимально допустимое системное время для элемента управления выбора даты и времени.|
-|[CDateTimeCtrl:: SetTime](#settime)|Задает время в элементе управления выбора даты и времени.|
+|[CDateTimeCtrl::CloseMonthCal](#closemonthcal)|Закрывает текущий контроль времени и времени сборщика.|
+|[CDateTimeCtrl::Создание](#create)|Создает управление сборщиком даты и времени `CDateTimeCtrl` и прикрепляет его к объекту.|
+|[CDateTimeCtrl::GetDateTimePickerInfo](#getdatetimepickerinfo)|Извлекает информацию о текущей дате и времени управления сборщика.|
+|[CDateTimeCtrl::GetIdealSize](#getidealsize)|Возвращает идеальный размер управления сборщика даты и времени, который необходим для отображения текущей даты или времени.|
+|[CDateTimeCtrl::GetMonthCalColor](#getmonthcalcolor)|Получает цвет для данной части месячного календаря в пределах контроля за датой и временем сборщика.|
+|[CDateTimeCtrl::GetMonthCalCtrl](#getmonthcalctrl)|Извлекает `CMonthCalCtrl` объект, связанный с управлением сборщика даты и времени.|
+|[CDateTimeCtrl::GetMonthCalFont](#getmonthcalfont)|Извлекает шрифт, используемый в настоящее время в управлении календарем детского месяца управления дочерним элементом насборщика данных.|
+|[CDateTimeCtrl::GetMonthCalStyle](#getmonthcalstyle)|Получает стиль текущего контроля надативную дату и время сборщика.|
+|[CDateTimeCtrl:GetRange](#getrange)|Получает текущее минимальное и максимально допустимое время системы для управления сборщиком даты и времени.|
+|[CDateTimeCtrl::GetTime](#gettime)|Извлекает выбранное в настоящее время время из управления сборщика даты и времени и помещает его в заданную `SYSTEMTIME` структуру.|
+|[CDateTimeCtrl::SetFormat](#setformat)|Устанавливает отображение управления сборщиком даты и времени в соответствии с заданной строкой формата.|
+|[CDateTimeCtrl::SetMonthCalColor](#setmonthcalcolor)|Устанавливает цвет для заданной части месячного календаря в пределах контроля сборщика даты и времени.|
+|[CDateTimeCtrl::SetMonthCalFont](#setmonthcalfont)|Устанавливает шрифт, который будет использовать элемент управления детского месяца управления датой и временем.|
+|[CDateTimeCtrl::SetMonthCalStyle](#setmonthcalstyle)|Устанавливает стиль текущего управления сборщиком даты и времени.|
+|[CDateTimeCtrl:SetRange](#setrange)|Устанавливает минимальное и максимально допустимое время системы для управления сборщиком даты и времени.|
+|[CDateTimeCtrl:SetTime](#settime)|Устанавливает время в контроле сборщика даты и времени.|
 
 ## <a name="remarks"></a>Remarks
 
-Элемент управления "Выбор даты и времени" (DTP Control) предоставляет простой интерфейс для обмена данными о дате и времени с пользователем. Этот интерфейс содержит поля, каждый из которых отображает часть сведений о дате и времени, хранящихся в элементе управления. Пользователь может изменить сведения, хранящиеся в элементе управления, изменив содержимое строки в заданном поле. Пользователь может перейти от поля к полю с помощью мыши или клавиатуры.
+Контроль навыборщика даты и времени (управление DTP) обеспечивает простой интерфейс для обмена информацией о дате и времени с пользователем. Этот интерфейс содержит поля, каждое из которых отображает часть информации о дате и времени, хранящейся в элементе управления. Пользователь может изменить информацию, хранящуюся в элементе управления, изменяя содержимое строки в заданном поле. Пользователь может перемещаться с поля на поле с помощью мыши или клавиатуры.
 
-Элемент управления выбора даты и времени можно настроить, применяя разнообразные стили к объекту при его создании. Дополнительные сведения о стилях, относящихся к элементу управления "Выбор даты и времени", см. в разделе [стили элементов управления "Выбор даты и времени](/windows/win32/Controls/date-and-time-picker-control-styles) " в Windows SDK. Формат вывода элемента управления DTP можно задать с помощью стилей форматирования. Эти стили форматирования описаны в разделе "стили форматирования" в Windows SDK разделе [стили элемента управления "Выбор даты и времени](/windows/win32/Controls/date-and-time-picker-control-styles)".
+Вы можете настроить управление сборщиком даты и времени, применяя различные стили к объекту при его создании. Для получения дополнительной информации о стилях, характерных для управления сборщиком дат и времени, можно ознакомиться с стилями управления сборщиком данных [и времен.](/windows/win32/Controls/date-and-time-picker-control-styles) Вы можете настроить формат отображения управления DTP с помощью стилей формата. Эти стили формата описаны в "Формат стилей" в Теме Windows SDK [Дата и время Picker управления стили](/windows/win32/Controls/date-and-time-picker-control-styles).
 
-Элемент управления "Выбор даты и времени" также использует уведомления и обратные вызовы, описанные в разделе [Использование CDateTimeCtrl](../../mfc/using-cdatetimectrl.md).
+Контроль насборщика даты и времени также использует уведомления и обратные вызовы, которые описаны в [использовании CDateTimeCtrl.](../../mfc/using-cdatetimectrl.md)
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -106,9 +106,9 @@ class CDateTimeCtrl : public CWnd
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** афксдтктл. h
+**Заголовок:** afxdtctl.h
 
-##  <a name="cdatetimectrl"></a>CDateTimeCtrl:: CDateTimeCtrl
+## <a name="cdatetimectrlcdatetimectrl"></a><a name="cdatetimectrl"></a>CDateTimeCtrl::CDateTimeCtrl
 
 Формирует объект `CDateTimeCtrl`.
 
@@ -116,33 +116,33 @@ class CDateTimeCtrl : public CWnd
 CDateTimeCtrl();
 ```
 
-##  <a name="closemonthcal"></a>CDateTimeCtrl:: Клосемонскал
+## <a name="cdatetimectrlclosemonthcal"></a><a name="closemonthcal"></a>CDateTimeCtrl::CloseMonthCal
 
-Закрывает текущий элемент управления выбор даты и времени.
+Закрывает текущий контроль времени и времени сборщика.
 
-```
+```cpp
 void CloseMonthCal() const;
 ```
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод отправляет [DTM_CLOSEMONTHCAL](/windows/win32/Controls/dtm-closemonthcal) сообщение, описанное в Windows SDK.
+Этот метод отправляет [DTM_CLOSEMONTHCAL](/windows/win32/Controls/dtm-closemonthcal) сообщение, которое описано в SDK Windows.
 
 ### <a name="example"></a>Пример
 
-В следующем примере кода определяется переменная, *m_dateTimeCtrl*, которая используется для программного доступа к элементу выбора даты и времени. Эта переменная используется в следующем примере.
+Следующий пример кода определяет переменную, *m_dateTimeCtrl,* которая используется для программного доступа к управлению сборщиком даты и времени. Эта переменная используется в следующем примере.
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_1.h)]
 
 ### <a name="example"></a>Пример
 
-В следующем примере кода закрывается раскрывающийся календарь для текущего элемента управления выбор даты и времени.
+Следующий пример кода закрывает календарь выпадения для текущего управления сборщиком даты и времени.
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#5](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_2.cpp)]
 
-##  <a name="create"></a>CDateTimeCtrl:: Create
+## <a name="cdatetimectrlcreate"></a><a name="create"></a>CDateTimeCtrl::Создание
 
-Создает элемент управления выбора даты и времени и прикрепляет его к объекту `CDateTimeCtrl`.
+Создает управление сборщиком даты и времени `CDateTimeCtrl` и прикрепляет его к объекту.
 
 ```
 virtual BOOL Create(
@@ -154,39 +154,39 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Параметры
 
-*двстиле*<br/>
-Задает сочетание стилей управления датой и временем. Дополнительные сведения о стилях выбора даты и времени см. в разделе [стили элементов управления выбор даты и времени](/windows/win32/Controls/date-and-time-picker-control-styles) в Windows SDK.
+*dwStyle*<br/>
+Определяет сочетание стилей контроля времени даты. Для получения дополнительной информации о стилях сборщика дат [и времени](/windows/win32/Controls/date-and-time-picker-control-styles) смотрите в SDK Windows для получения дополнительной информации о стилях сборщика дат и времени.
 
 *rect*<br/>
-Ссылка на структуру [Rect](/previous-versions/dd162897\(v=vs.85\)) , которая является позицией и размером элемента управления выбора даты и времени.
+Ссылка на структуру [RECT,](/windows/win32/api/windef/ns-windef-rect) которая является положением и размером контроля насборщика даты и времени.
 
-*ппарентвнд*<br/>
-Указатель на объект [CWnd](../../mfc/reference/cwnd-class.md) , который является родительским окном элемента управления выбора даты и времени. Оно не должно иметь значение NULL.
+*pParentWnd*<br/>
+Указатель на объект [CWnd,](../../mfc/reference/cwnd-class.md) который является родительским окном управления сборщиком даты и времени. Она не должна быть NULL.
 
 *nID*<br/>
-Задает идентификатор элемента управления средства выбора даты и времени.
+Упогоняет идентификатор управления элементом управления по дате и времени.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ненулевое значение, если создание прошло успешно; в противном случае — 0.
+Nonzero, если создание было успешным; в противном случае 0.
 
 ### <a name="remarks"></a>Remarks
 
-##### <a name="to-create-a-date-and-time-picker-control"></a>Создание элемента управления "Выбор даты и времени"
+##### <a name="to-create-a-date-and-time-picker-control"></a>Создание управления сборщиком даты и времени
 
-1. Вызовите [CDateTimeCtrl](#cdatetimectrl) для создания объекта `CDateTimeCtrl`.
+1. Позвоните [CDateTimeCtrl,](#cdatetimectrl) чтобы построить `CDateTimeCtrl` объект.
 
-1. Вызовите эту функцию члена, которая создает элемент управления выбора даты и времени Windows и присоединяет его к объекту `CDateTimeCtrl`.
+1. Вызов исключайте эту функцию участника, которая создает дату `CDateTimeCtrl` и управление сборщиком времени Windows и прикрепляет его к объекту.
 
-При вызове `Create`инициализируются стандартные элементы управления.
+При вызове `Create`общие элементы управления инициализированы.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl#1](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_3.cpp)]
 
-##  <a name="getdatetimepickerinfo"></a>CDateTimeCtrl:: Жетдатетимепиккеринфо
+## <a name="cdatetimectrlgetdatetimepickerinfo"></a><a name="getdatetimepickerinfo"></a>CDateTimeCtrl::GetDateTimePickerInfo
 
-Извлекает сведения о текущем элементе управления средства выбора даты и времени.
+Извлекает информацию о текущей дате и времени управления сборщика.
 
 ```
 BOOL GetDateTimePickerInfo(LPDATETIMEPICKERINFO pDateTimePickerInfo) const;
@@ -194,33 +194,33 @@ BOOL GetDateTimePickerInfo(LPDATETIMEPICKERINFO pDateTimePickerInfo) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Description|
+|Параметр|Описание|
 |---------------|-----------------|
-|*пдатетимепиккеринфо*|заполняет Указатель на структуру [датетимепиккеринфо](/windows/win32/api/commctrl/ns-commctrl-datetimepickerinfo) , которая получает описание текущего элемента управления "Выбор даты и времени".<br /><br /> Вызывающий объект отвечает за выделение этой структуры. Однако этот метод инициализирует элемент *кбсизе* структуры.|
+|*pDatePickerInfo*|(ваут) Указатель на структуру [DATETIMEPICKERINFO,](/windows/win32/api/commctrl/ns-commctrl-datetimepickerinfo) которая получает описание текущей даты и времени насборщика управления.<br /><br /> Звонящее отвечает за выделение этой структуры. Тем не менее, этот метод инициализирует *cbSize* член структуры.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если этот метод успешно выполнен; в противном случае — значение FALSE.
+ПРАВДА, если этот метод является успешным; в противном случае, FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод отправляет [DTM_GETDATETIMEPICKERINFO](/windows/win32/Controls/dtm-getdatetimepickerinfo) сообщение, описанное в Windows SDK.
+Этот метод отправляет [сообщение DTM_GETDATETIMEPICKERINFO,](/windows/win32/Controls/dtm-getdatetimepickerinfo) которое описано в SDK Windows.
 
 ### <a name="example"></a>Пример
 
-В следующем примере кода определяется переменная, *m_dateTimeCtrl*, которая используется для программного доступа к элементу выбора даты и времени. Эта переменная используется в следующем примере.
+Следующий пример кода определяет переменную, *m_dateTimeCtrl,* которая используется для программного доступа к управлению сборщиком даты и времени. Эта переменная используется в следующем примере.
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_1.h)]
 
 ### <a name="example"></a>Пример
 
-В следующем примере кода показано, возвращает ли он сведения о текущем элементе управления "Выбор даты и времени".
+Следующий пример кода показывает, успешно ли он получает информацию о текущем управлении сборщиком даты и времени.
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#4](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_4.cpp)]
 
-##  <a name="getmonthcalcolor"></a>CDateTimeCtrl:: Жетмонскалколор
+## <a name="cdatetimectrlgetmonthcalcolor"></a><a name="getmonthcalcolor"></a>CDateTimeCtrl::GetMonthCalColor
 
-Извлекает цвет для заданной части месячного календаря в элементе управления выбора даты и времени.
+Получает цвет для данной части месячного календаря в пределах контроля за датой и временем сборщика.
 
 ```
 COLORREF GetMonthCalColor(int iColor) const;
@@ -228,24 +228,24 @@ COLORREF GetMonthCalColor(int iColor) const;
 
 ### <a name="parameters"></a>Параметры
 
-*иколор*<br/>
-Значение **типа int** , указывающее цветовую область календаря месяца для извлечения. Список значений см. в описании параметра *иколор* для [сетмонскалколор](#setmonthcalcolor).
+*iColor*<br/>
+**Значение int,** определяющее, какую цветовую область календаря месяца получить. Список значений можно узнать на примере *iColor* для [SetMonthCalColor.](#setmonthcalcolor)
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение COLORREF, представляющее параметр цвета для указанной части элемента управления "месячный календарь" в случае успешного выполнения. Функция возвращает значение-1 в случае неудачи.
+Значение COLORREF, представляющее настройку цвета для заданной части месячного календарного элемента, если она будет успешной. Функция возвращается -1 в случае неудачи.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция члена реализует поведение сообщения Win32 [DTM_GETMCCOLOR](/windows/win32/Controls/dtm-getmccolor), как описано в Windows SDK.
+Эта функция члена реализует поведение сообщения Win32 [DTM_GETMCCOLOR,](/windows/win32/Controls/dtm-getmccolor)как описано в SDK Windows.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl#2](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_5.cpp)]
 
-##  <a name="getmonthcalctrl"></a>CDateTimeCtrl:: Жетмонскалктрл
+## <a name="cdatetimectrlgetmonthcalctrl"></a><a name="getmonthcalctrl"></a>CDateTimeCtrl::GetMonthCalCtrl
 
-Извлекает объект `CMonthCalCtrl`, связанный с элементом управления "Выбор даты и времени".
+Извлекает `CMonthCalCtrl` объект, связанный с управлением сборщика даты и времени.
 
 ```
 CMonthCalCtrl* GetMonthCalCtrl() const;
@@ -253,19 +253,19 @@ CMonthCalCtrl* GetMonthCalCtrl() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на объект [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md) или значение NULL в случае неудачи или, если окно не отображается.
+Указатель на объект [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md) или NULL, если он не работает или если окно не видно.
 
 ### <a name="remarks"></a>Remarks
 
-Элементы управления "Выбор даты и времени" создают элемент управления "календарь за дочерний месяц", когда пользователь щелкает стрелку раскрывающегося списка. Если объект `CMonthCalCtrl` больше не нужен, он уничтожается, поэтому приложение не должно полагаться на хранение объекта, представляющего дочерний календарь месяца элемента управления "Выбор даты и времени".
+Элементы управления сборщиком дат и времени создают управление календарем детского месяца, когда пользователь нажимает на стрелку выпадения. Когда `CMonthCalCtrl` объект больше не нужен, он уничтожается, поэтому приложение не должно полагаться на хранение объекта, представляющего календарь детского месяца управления таймингом.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl#3](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_6.cpp)]
 
-##  <a name="getmonthcalfont"></a>CDateTimeCtrl:: Жетмонскалфонт
+## <a name="cdatetimectrlgetmonthcalfont"></a><a name="getmonthcalfont"></a>CDateTimeCtrl::GetMonthCalFont
 
-Возвращает шрифт, используемый в настоящее время элементом управления "календарь месяца" элемента управления "Выбор даты и времени".
+Получает шрифт, используемый в настоящее время в управлении календарем месячного управления управления сборщиком даты и времени.
 
 ```
 CFont* GetMonthCalFont() const;
@@ -273,15 +273,15 @@ CFont* GetMonthCalFont() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на объект [кфонт](../../mfc/reference/cfont-class.md) или значение NULL в случае неудачи.
+Указатель на объект [CFont](../../mfc/reference/cfont-class.md) или NULL, если он не увенчался успехом.
 
 ### <a name="remarks"></a>Remarks
 
-Объект `CFont`, на который указывает возвращаемое значение, является временным объектом и уничтожается во время следующей обработки простоя.
+Объект, `CFont` на который указывает сятвое значение возврата, является временным объектом и уничтожается во время следующего простоя обработки.
 
-##  <a name="getmonthcalstyle"></a>CDateTimeCtrl:: Жетмонскалстиле
+## <a name="cdatetimectrlgetmonthcalstyle"></a><a name="getmonthcalstyle"></a>CDateTimeCtrl::GetMonthCalStyle
 
-Возвращает стиль элемента управления "месячный календарь", связанный с текущим элементом управления "Выбор даты и времени".
+Получает стиль управления календарем месяца, связанный с текущей датой и контролем сборщика времени.
 
 ```
 DWORD GetMonthCalStyle() const;
@@ -289,15 +289,15 @@ DWORD GetMonthCalStyle() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Стиль элемента управления календаря в виде раскрывающегося списка, который является побитовым сочетанием (или) стилей элемента управления "Выбор даты и времени". Дополнительные сведения см. в разделе [стили элементов управления "месячный календарь](/windows/win32/Controls/month-calendar-control-styles)".
+Стиль управления календарем в течение месяца, который представляет собой битную комбинацию (OR) стилей управления сборщиком дат и времени. Для получения дополнительной [Month Calendar Control Styles](/windows/win32/Controls/month-calendar-control-styles)информации см.
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод отправляет [DTM_GETMCSTYLE](/windows/win32/Controls/dtm-getmcstyle) сообщение, описанное в Windows SDK.
+Этот метод отправляет [DTM_GETMCSTYLE](/windows/win32/Controls/dtm-getmcstyle) сообщение, которое описано в SDK Windows.
 
-##  <a name="getrange"></a>CDateTimeCtrl:: Range
+## <a name="cdatetimectrlgetrange"></a><a name="getrange"></a>CDateTimeCtrl:GetRange
 
-Извлекает текущее минимальное и максимальное разрешенное системное время для элемента управления выбора даты и времени.
+Получает текущее минимальное и максимально допустимое время системы для управления сборщиком даты и времени.
 
 ```
 DWORD GetRange(
@@ -311,35 +311,35 @@ DWORD GetRange(
 
 ### <a name="parameters"></a>Параметры
 
-*пминранже*<br/>
-Указатель на объект [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) или [CTime](../../atl-mfc-shared/reference/ctime-class.md) , содержащий самое раннее время, допустимое в объекте `CDateTimeCtrl`.
+*pMinRange*<br/>
+Указатель на объект [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) или объект [CTime,](../../atl-mfc-shared/reference/ctime-class.md) содержащий `CDateTimeCtrl` самое раннее время, разрешенное в объекте.
 
-*пмаксранже*<br/>
-Указатель на `COleDateTime` объект или объект `CTime`, содержащий Последнее время, разрешенное в объекте `CDateTimeCtrl`.
+*pMaxRange*<br/>
+Указатель на `COleDateTime` объект или `CTime` объект, содержащий последнее `CDateTimeCtrl` время, разрешенное в объекте.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение типа DWORD, содержащее флаги, указывающие, какие диапазоны задаются. Если
+Значение DWORD, содержащее флаги, указывающие, какие диапазоны установлены. Если
 
 `return value & GDTR_MAX` == 0
 
-Второй параметр является допустимым. Аналогично, если
+затем второй параметр действителен. Аналогичным образом, если
 
 `return value & GDTR_MIN` == 0
 
-Первый параметр является допустимым.
+затем первый параметр действителен.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция члена реализует поведение сообщения Win32 [DTM_GETRANGE](/windows/win32/Controls/dtm-getrange), как описано в Windows SDK. В реализации MFC можно указать `COleDateTime` или `CTime` использования.
+Эта функция члена реализует поведение сообщения Win32 [DTM_GETRANGE,](/windows/win32/Controls/dtm-getrange)как описано в SDK Windows. В реализации MFC можно указать либо `COleDateTime` `CTime` или обычаи.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl#4](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_7.cpp)]
 
-##  <a name="gettime"></a>CDateTimeCtrl:: во время
+## <a name="cdatetimectrlgettime"></a><a name="gettime"></a>CDateTimeCtrl::GetTime
 
-Извлекает выбранное в данный момент время из элемента выбора даты и времени и помещает его в указанную структуру `SYSTEMTIME`.
+Извлекает выбранное в настоящее время время из управления сборщика даты и времени и помещает его в заданную `SYSTEMTIME` структуру.
 
 ```
 BOOL GetTime(COleDateTime& timeDest) const;
@@ -349,29 +349,29 @@ DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
 
 ### <a name="parameters"></a>Параметры
 
-*тимедест*<br/>
-В первой версии — ссылка на объект [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) , который будет принимать сведения о системном времени. Во второй версии — ссылка на объект [CTime](../../atl-mfc-shared/reference/ctime-class.md) , который будет принимать сведения о системном времени.
+*timeDest*<br/>
+В первой версии ссылка на объект [COleDateTime,](../../atl-mfc-shared/reference/coledatetime-class.md) который будет получать информацию о времени системы. Во второй версии ссылка на объект [CTime,](../../atl-mfc-shared/reference/ctime-class.md) который будет получать информацию о времени системы.
 
-*птимедест*<br/>
-Указатель на структуру [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) для получения сведений о системном времени. Не может иметь значение NULL.
+*pTimeDest*<br/>
+Указатель на структуру [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) для получения информации о времени системы. Не должно быть NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-В первой версии ненулевое значение, если время успешно записано в объект `COleDateTime`; в противном случае — 0. Во второй и третьей версиях значение DWORD, равное набору элементов *dwFlag* в структуре [нмдатетимечанже](/windows/win32/api/commctrl/ns-commctrl-nmdatetimechange) . Дополнительные сведения см. в разделе **"Примечания"** ниже.
+В первой версии, ненулевой, если `COleDateTime` время успешно написано на объект; в противном случае 0. Во второй и третьей версиях значение DWORD, равное члену *dwFlag,* установленное в структуре [NMDATETIMECHANGE.](/windows/win32/api/commctrl/ns-commctrl-nmdatetimechange) Для получения дополнительной информации ниже приведен раздел **«Замечания».**
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция члена реализует поведение сообщения Win32 [DTM_GETSYSTEMTIME](/windows/win32/Controls/dtm-getsystemtime), как описано в Windows SDK. В реализации MFC `GetTime`можно использовать классы `COleDateTime` или `CTime` либо можно использовать структуру `SYSTEMTIME` для хранения сведений о времени.
+Эта функция члена реализует поведение сообщения Win32 [DTM_GETSYSTEMTIME,](/windows/win32/Controls/dtm-getsystemtime)как описано в SDK Windows. В `GetTime`реализации MFC, вы `COleDateTime` `CTime` можете использовать или классов, или вы можете использовать структуру, `SYSTEMTIME` для хранения информации о времени.
 
-Возвращаемое значение DWORD во второй и третьей версиях, приведенном выше, указывает, установлен ли элемент управления "Выбор даты и времени" в состояние "без даты", как указано в *dwFlagsе*элемента структуры [нмдатетимечанже](/windows/win32/api/commctrl/ns-commctrl-nmdatetimechange) . Если возвращенное значение равно GDT_NONE, то элементу управления присваивается состояние "нет даты" и используется стиль DTS_SHOWNONE. Если возвращенное значение равно GDT_VALID, системное время успешно хранится в целевом расположении.
+Значение возврата DWORD во второй и третьей версиях, выше, указывает, является ли дата и время управления сборщика установлен на "нет даты" статус, как указано в [nMDATETIMECHANGE](/windows/win32/api/commctrl/ns-commctrl-nmdatetimechange) структуры члена *dwFlags*. Если возвратное значение равно GDT_NONE, элемент управления устанавливается в статусе "без даты" и использует DTS_SHOWNONE стиль. Если возврат номинал равняется GDT_VALID, время системы успешно хранится в месте назначения.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl#5](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_8.cpp)]
 
-##  <a name="getidealsize"></a>CDateTimeCtrl:: Жетидеалсизе
+## <a name="cdatetimectrlgetidealsize"></a><a name="getidealsize"></a>CDateTimeCtrl::GetIdealSize
 
-Возвращает идеальный размер элемента управления "Выбор даты и времени", необходимого для вывода текущей даты или времени.
+Возвращает идеальный размер управления сборщика даты и времени, который необходим для отображения текущей даты или времени.
 
 ```
 BOOL GetIdealSize(LPSIZE psize) const;
@@ -379,33 +379,33 @@ BOOL GetIdealSize(LPSIZE psize) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Description|
+|Параметр|Описание|
 |---------------|-----------------|
-|*псизе*|заполняет Указатель на структуру [размера](/windows/win32/api/windef/ns-windef-size) , которая содержит идеальный размер элемента управления.|
+|*psize*|(ваут) Указатель на структуру [СИЗЕ,](/windows/win32/api/windef/ns-windef-size) которая содержит идеальный размер для управления.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращаемое значение всегда равно TRUE.
+Значение возврата всегда верно.
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод отправляет [DTM_GETIDEALSIZE](/windows/win32/Controls/dtm-getidealsize) сообщение, описанное в Windows SDK.
+Этот метод отправляет [DTM_GETIDEALSIZE](/windows/win32/Controls/dtm-getidealsize) сообщение, которое описано в SDK Windows.
 
 ### <a name="example"></a>Пример
 
-В следующем примере кода определяется переменная, *m_dateTimeCtrl*, которая используется для программного доступа к элементу выбора даты и времени. Эта переменная используется в следующем примере.
+Следующий пример кода определяет переменную, *m_dateTimeCtrl,* которая используется для программного доступа к управлению сборщиком даты и времени. Эта переменная используется в следующем примере.
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_1.h)]
 
 ### <a name="example"></a>Пример
 
-Следующий пример кода извлекает идеальный размер для вывода элемента управления выбора даты и времени.
+Следующий пример кода получает идеальный размер для отображения управления сборщиком даты и времени.
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_9.cpp)]
 
-##  <a name="setformat"></a>CDateTimeCtrl:: Сетформат
+## <a name="cdatetimectrlsetformat"></a><a name="setformat"></a>CDateTimeCtrl::SetFormat
 
-Задает отображение элемента управления "Выбор даты и времени" в соответствии с заданной строкой формата.
+Устанавливает отображение управления сборщиком даты и времени в соответствии с заданной строкой формата.
 
 ```
 BOOL SetFormat(LPCTSTR pstrFormat);
@@ -413,27 +413,27 @@ BOOL SetFormat(LPCTSTR pstrFormat);
 
 ### <a name="parameters"></a>Параметры
 
-*пстрформат*<br/>
-Указатель на строку формата с нулевым нулем, которая определяет требуемый вид. Если задать для этого параметра значение NULL, элемент управления будет сброшен в строку форматирования по умолчанию для текущего стиля.
+*стр.Формат*<br/>
+Указатель на строку формата с нулевым завершением, определяющую нужный дисплей. Установка этого параметра в NULL сброс элемента управления в строку формата по умолчанию для текущего стиля.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Имеет ненулевое значение в случае успешного выполнения, иначе — 0.
 
 > [!NOTE]
->  Ввод данных пользователем не определяет успешность или неудачу для этого вызова.
+> Пользовательский ввод не определяет успех или сбой для этого вызова.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция члена реализует поведение сообщения Win32 [DTM_SETFORMAT](/windows/win32/Controls/dtm-setformat), как описано в Windows SDK.
+Эта функция члена реализует поведение сообщения Win32 [DTM_SETFORMAT,](/windows/win32/Controls/dtm-setformat)как описано в SDK Windows.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl#6](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_10.cpp)]
 
-##  <a name="setmonthcalcolor"></a>CDateTimeCtrl:: Сетмонскалколор
+## <a name="cdatetimectrlsetmonthcalcolor"></a><a name="setmonthcalcolor"></a>CDateTimeCtrl::SetMonthCalColor
 
-Задает цвет для заданной части месячного календаря в элементе управления выбора даты и времени.
+Устанавливает цвет для заданной части месячного календаря в пределах контроля сборщика даты и времени.
 
 ```
 COLORREF SetMonthCalColor(
@@ -443,38 +443,38 @@ COLORREF SetMonthCalColor(
 
 ### <a name="parameters"></a>Параметры
 
-*иколор*<br/>
-значение **типа int** , указывающее, какую область элемента управления календаря месяца необходимо задать. Это значение может быть одним из следующих.
+*iColor*<br/>
+**значение int,** определяющее, какую область элемента календаря месяца установить. Это значение может быть одним из следующих.
 
 |Значение|Значение|
 |-----------|-------------|
-|MCSC_BACKGROUND|Задает цвет фона, отображаемый в интервале между месяцами.|
-|MCSC_MONTHBK|Задайте цвет фона, отображаемый в течение месяца.|
-|MCSC_TEXT|Задайте цвет, используемый для показа текста в течение месяца.|
-|MCSC_TITLEBK|Задайте цвет фона, отображаемый в заголовке календаря.|
-|MCSC_TITLETEXT|Задайте цвет, используемый для показа текста в заголовке календаря.|
-|MCSC_TRAILINGTEXT|Задает цвет, используемый для вывода текста верхнего и конечного дней. Дни заголовков и конечных дней — это дни предыдущего и следующего месяцев, которые отображаются в текущем календаре.|
+|MCSC_BACKGROUND|Установите цвет фона отображается между месяцами.|
+|MCSC_MONTHBK|Установите цвет фона отображается в течение месяца.|
+|MCSC_TEXT|Установите цвет, используемый для отображения текста в течение месяца.|
+|MCSC_TITLEBK|Установите цвет фона, отображаемый в заголовке календаря.|
+|MCSC_TITLETEXT|Установите цвет, используемый для отображения текста в заголовке календаря.|
+|MCSC_TRAILINGTEXT|Установите цвет, используемый для отображения заголовка и задней день текста. Заголовки и задние дни являются днями предыдущих и последующих месяцев, которые отображаются в текущем календаре.|
 
-*ref*;<br/>
-Значение COLORREF, представляющее цвет, который будет задан для указанной области в месячном календаре.
+*ref*<br/>
+Значение COLORREF, представляющее цвет, который будет установлен для указанной области месячного календаря.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение COLORREF, представляющее предыдущий цвет для указанной части элемента управления "календарь месяца" в случае успеха. В противном случае сообщение возвращает значение-1.
+Значение COLORREF, представляющее предыдущую настройку цвета для заданной части месячного календарного элемента, если она будет успешной. В противном случае сообщение возвращается -1.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция члена реализует поведение сообщения Win32 [DTM_SETMCCOLOR](/windows/win32/Controls/dtm-setmccolor), как описано в Windows SDK.
+Эта функция члена реализует поведение сообщения Win32 [DTM_SETMCCOLOR,](/windows/win32/Controls/dtm-setmccolor)как описано в SDK Windows.
 
 ### <a name="example"></a>Пример
 
-  См. пример для [CDateTimeCtrl:: жетмонскалколор](#getmonthcalcolor).
+  Смотрите пример [Для CDateTimeCtrl::GetMonthCalColor](#getmonthcalcolor).
 
-##  <a name="setmonthcalfont"></a>CDateTimeCtrl:: Сетмонскалфонт
+## <a name="cdatetimectrlsetmonthcalfont"></a><a name="setmonthcalfont"></a>CDateTimeCtrl::SetMonthCalFont
 
-Задает шрифт, который будет использоваться элементом управления "Календарь дочернего месяца" элемента управления "Выбор даты и времени".
+Устанавливает шрифт, который будет использовать элемент управления детского месяца управления датой и временем.
 
-```
+```cpp
 void SetMonthCalFont(
     HFONT hFont,
     BOOL bRedraw = TRUE);
@@ -482,26 +482,26 @@ void SetMonthCalFont(
 
 ### <a name="parameters"></a>Параметры
 
-*хфонт*<br/>
-Обработано шрифтом, который будет установлен.
+*hFont*<br/>
+Ручка к шрифту, который будет установлен.
 
 *bRedraw*<br/>
-Указывает, должен ли элемент управления перерисоваться сразу после установки шрифта. Если задать для этого параметра значение TRUE, элемент управления будет перерисовываться самим собой.
+Уточняется, следует ли перенарисовать элемент управления сразу же после установки шрифта. Установка этого параметра на TRUE вызывает элемент управления, чтобы перерисовать себя.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция члена реализует поведение сообщения Win32 [DTM_SETMCFONT](/windows/win32/Controls/dtm-setmcfont), как описано в Windows SDK.
+Эта функция члена реализует поведение сообщения Win32 [DTM_SETMCFONT,](/windows/win32/Controls/dtm-setmcfont)как описано в SDK Windows.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl#7](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_11.cpp)]
 
 > [!NOTE]
->  При использовании этого кода необходимо сделать членом класса, производного от `CDialog`, называемого *m_MonthFont* типа `CFont`.
+> Если вы используете этот код, вы хотите `CDialog`сделать члена вашего `CFont`класса, полученного под названием *m_MonthFont* типа.
 
-##  <a name="setmonthcalstyle"></a>CDateTimeCtrl:: Сетмонскалстиле
+## <a name="cdatetimectrlsetmonthcalstyle"></a><a name="setmonthcalstyle"></a>CDateTimeCtrl::SetMonthCalStyle
 
-Задает стиль элемента управления "месячный календарь", связанный с текущим элементом управления "Выбор даты и времени".
+Устанавливает стиль управления календарем месяца, связанного с текущим управлением сборщиком дат и времени.
 
 ```
 DWORD SetMonthCalStyle(DWORD dwStyle);
@@ -509,33 +509,33 @@ DWORD SetMonthCalStyle(DWORD dwStyle);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Description|
+|Параметр|Описание|
 |---------------|-----------------|
-|*двстиле*|окне Новый месячный стиль элемента управления Calendar, который представляет собой побитовое сочетание (или) стилей элемента управления "месячный календарь". Дополнительные сведения см. в разделе [стили элементов управления "месячный календарь](/windows/win32/Controls/month-calendar-control-styles)".|
+|*dwStyle*|(в) Новый стиль управления календарем месяца, который является билистой комбинацией (OR) стилей управления календарем месяца. Для получения дополнительной [Month Calendar Control Styles](/windows/win32/Controls/month-calendar-control-styles)информации см.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Предыдущий стиль элемента управления "месячный календарь".
+Предыдущий стиль управления календарем займом в месяц.
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод отправляет [DTM_SETMCSTYLE](/windows/win32/Controls/dtm-setmcstyle) сообщение, описанное в Windows SDK.
+Этот метод отправляет [DTM_SETMCSTYLE](/windows/win32/Controls/dtm-setmcstyle) сообщение, которое описано в SDK Windows.
 
 ### <a name="example"></a>Пример
 
-В следующем примере кода определяется переменная, *m_dateTimeCtrl*, которая используется для программного доступа к элементу выбора даты и времени. Эта переменная используется в следующем примере.
+Следующий пример кода определяет переменную, *m_dateTimeCtrl,* которая используется для программного доступа к управлению сборщиком даты и времени. Эта переменная используется в следующем примере.
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_1.h)]
 
 ### <a name="example"></a>Пример
 
-В следующем примере кода элемент управления выбор даты и времени задается для отображения номеров недель, сокращенных названий дней недели и отсутствия текущего индикатора.
+В следующем примере кода устанавливается контроль за датой и временем выбора для отображения недельных номеров, сокращенных названий дней недели и индикатора «сегодня нет».
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#3](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_12.cpp)]
 
-##  <a name="setrange"></a>CDateTimeCtrl:: SetRange
+## <a name="cdatetimectrlsetrange"></a><a name="setrange"></a>CDateTimeCtrl:SetRange
 
-Задает минимальное и максимально допустимое системное время для элемента управления выбора даты и времени.
+Устанавливает минимальное и максимально допустимое время системы для управления сборщиком даты и времени.
 
 ```
 BOOL SetRange(
@@ -549,11 +549,11 @@ BOOL SetRange(
 
 ### <a name="parameters"></a>Параметры
 
-*пминранже*<br/>
-Указатель на объект [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) или [CTime](../../atl-mfc-shared/reference/ctime-class.md) , содержащий самое раннее время, допустимое в объекте `CDateTimeCtrl`.
+*pMinRange*<br/>
+Указатель на объект [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) или объект [CTime,](../../atl-mfc-shared/reference/ctime-class.md) содержащий `CDateTimeCtrl` самое раннее время, разрешенное в объекте.
 
-*пмаксранже*<br/>
-Указатель на `COleDateTime` объект или объект `CTime`, содержащий Последнее время, разрешенное в объекте `CDateTimeCtrl`.
+*pMaxRange*<br/>
+Указатель на `COleDateTime` объект или `CTime` объект, содержащий последнее `CDateTimeCtrl` время, разрешенное в объекте.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -561,15 +561,15 @@ BOOL SetRange(
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция члена реализует поведение сообщения Win32 [DTM_SETRANGE](/windows/win32/Controls/dtm-setrange), как описано в Windows SDK. В реализации MFC можно указать `COleDateTime` или `CTime` использования. Если объект `COleDateTime` имеет состояние NULL, диапазон будет удален. Если `CTime`ный указатель или указатель `COleDateTime` имеют значение NULL, диапазон будет удален.
+Эта функция члена реализует поведение сообщения Win32 [DTM_SETRANGE,](/windows/win32/Controls/dtm-setrange)как описано в SDK Windows. В реализации MFC можно указать либо `COleDateTime` `CTime` или обычаи. Если `COleDateTime` объект имеет статус NULL, диапазон будет удален. Если `CTime` указатель или `COleDateTime` указатель NULL, диапазон будет удален.
 
 ### <a name="example"></a>Пример
 
-  См. пример для [CDateTimeCtrl::/Range](#getrange).
+  Смотрите пример [для CDateTimeCtrl::GetRange](#getrange).
 
-##  <a name="settime"></a>CDateTimeCtrl:: SetTime
+## <a name="cdatetimectrlsettime"></a><a name="settime"></a>CDateTimeCtrl:SetTime
 
-Задает время в элементе управления выбора даты и времени.
+Устанавливает время в контроле сборщика даты и времени.
 
 ```
 BOOL SetTime(const COleDateTime& timeNew);
@@ -579,11 +579,11 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew = NULL);
 
 ### <a name="parameters"></a>Параметры
 
-*тименев*<br/>
-Ссылка на объект [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) , содержащий элемент, для которого будет установлен элемент управления.
+*времяНовые*<br/>
+Ссылка на объект [COleDateTime,](../../atl-mfc-shared/reference/coledatetime-class.md) содержащий элемент, на который будет установлен элемент управления.
 
-*птименев*<br/>
-Во второй версии, приведенной выше, указатель на объект [CTime](../../atl-mfc-shared/reference/ctime-class.md) , содержащий время, в которое будет задаваться элемент управления. В третьей версии, приведенной выше, указатель на структуру [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) , содержащую время, в которое будет задаваться элемент управления.
+*pTimeNew*<br/>
+Во второй версии выше указатель на объект [CTime,](../../atl-mfc-shared/reference/ctime-class.md) содержащий время, к которому будет установлен элемент управления. В третьей версии выше указатель на структуру [SYSTEMTIME,](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) содержащую время, к которому будет установлен элемент управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -591,7 +591,7 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew = NULL);
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция члена реализует поведение сообщения Win32 [DTM_SETSYSTEMTIME](/windows/win32/Controls/dtm-setsystemtime), как описано в Windows SDK. В реализации MFC `SetTime`можно использовать классы `COleDateTime` или `CTime` либо можно использовать структуру `SYSTEMTIME`, чтобы задать сведения о времени.
+Эта функция члена реализует поведение сообщения Win32 [DTM_SETSYSTEMTIME,](/windows/win32/Controls/dtm-setsystemtime)как описано в SDK Windows. `SetTime`В реализации MFC, вы `COleDateTime` можете `CTime` использовать или классов, `SYSTEMTIME` или вы можете использовать структуру, чтобы установить информацию о времени.
 
 ### <a name="example"></a>Пример
 
@@ -599,7 +599,7 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew = NULL);
 
 ## <a name="see-also"></a>См. также раздел
 
-[Пример CMNCTRL1 для MFC](../../overview/visual-cpp-samples.md)<br/>
+[MFC Образец CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
 [Класс CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)

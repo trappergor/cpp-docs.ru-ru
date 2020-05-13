@@ -1,10 +1,11 @@
 ---
 title: tan, tanf, tanl
-ms.date: 04/10/2018
+ms.date: 4/2/2020
 api_name:
 - tan
 - tanf
 - tanl
+- _o_tan
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +37,12 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-ms.openlocfilehash: c79c56555e04c865b70d52a6b1a6e3da1ce94c87
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d35ed6ca8dd4c3ea7a149e0fb2085aa8a97b11b4
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946901"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912377"
 ---
 # <a name="tan-tanf-tanl"></a>tan, tanf, tanl
 
@@ -68,14 +70,16 @@ long double tan( long double x );  // C++ only
 
 Функции **Tan** возвращают тангенс *x*. Если значение *x* больше или равно 263 или меньше или равно-263, то происходит отрицательное значение в результате.
 
-|Ввод|Исключение SEH|**Matherr** Об|
+|Входные данные|Исключение SEH|**Matherr** Об|
 |-----------|-------------------|-------------------------|
-|± КНАН, С|none|_DOMAIN|
-|± INF|**НЕДОПУСТИМЫЙ**|_DOMAIN|
+|± КНАН, С|нет|_DOMAIN|
+|± INF|**Недопустимый**|_DOMAIN|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Поскольку C++ допускает перегрузку, можно вызывать перегрузки **Tan** , которые принимают и возвращают **значения типа** **float** или **Long** . В программе на языке **Tan** всегда принимает и возвращает **Double**.
+
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -83,7 +87,7 @@ long double tan( long double x );  // C++ only
 |-------------|---------------------|-|
 |**Tan**, **TANF**, **танл**|\<math.h>|\<cmath> или \<math.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -109,7 +113,7 @@ int main( void )
 tan( 0.785398 ) = 1.000000
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - _penter function
 - -Gh compiler option [C++]
 ms.assetid: 1510a082-8a0e-486e-a309-6add814b494f
-ms.openlocfilehash: bf7734a7b81c9550c060d43c2eabf5cb05332407
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 87815b5f0e0450b84acbe3c35b7ef4f31216ec72
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292590"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749290"
 ---
-# <a name="gh-enable-penter-hook-function"></a>/Gh (Включение функции обработчика _penter)
+# <a name="gh-enable-_penter-hook-function"></a>/Gh (Включение функции обработчика _penter)
 
-Приводит к вызову `_penter` функции в начале каждого метода или функции.
+Вызывает вызов функции `_penter` в начале каждого метода или функции.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -26,21 +26,21 @@ ms.locfileid: "62292590"
 /Gh
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-`_penter` Функция не является частью любой библиотеки, и это необходимо указать определение `_penter`.
+Функция `_penter` не является частью какой-либо библиотеки, и `_penter`это до вас, чтобы предоставить определение для .
 
-Если вы не планируете явным образом вызвать `_penter`, не нужно предоставлять прототип. Функция должна выглядеть так, как если бы она имела следующий прототип, и он должен отправка содержимого регистров на запись и отображение без изменений содержимого при выходе:
+Если вы не планируете явно звонить, `_penter`вам не нужно предоставлять прототип. Функция должна отображаться так, как если бы у нее был следующий прототип, и она должна толкать содержимое всех регистров на входе и высвобожда неизмененное содержимое на выходе:
 
-```
+```cpp
 void __declspec(naked) __cdecl _penter( void );
 ```
 
-Это объявление не доступен для 64-разрядных проектов.
+Эта декларация недоступна для 64-битных проектов.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Подробнее см. в статье [Настройка компилятора C++ и свойства сборки в Visual Studio](../working-with-project-properties.md).
 
 1. Откройте папку **C/C++** .
 
@@ -54,7 +54,7 @@ void __declspec(naked) __cdecl _penter( void );
 
 ## <a name="example"></a>Пример
 
-В следующем коде, при компиляции с **/Gh**, показано, как `_penter` вызывается дважды; один раз при вводе функции `main` и один раз при вводе функции `x`.
+Следующий код, когда компилируется `_penter` с **/Gh**, показывает, как называется дважды; один раз `main` при вводе `x`функции и один раз при вводе функции.
 
 ```cpp
 // Gh_compiler_option.cpp
@@ -98,7 +98,7 @@ In a function!
 In a function!
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Параметры компилятора MSVC](compiler-options.md)<br/>
-[Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)
+[MSVC Компилятор Командно-линейный синтаксис](compiler-command-line-syntax.md)

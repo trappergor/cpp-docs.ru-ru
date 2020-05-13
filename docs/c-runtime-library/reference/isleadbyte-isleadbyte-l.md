@@ -1,9 +1,11 @@
 ---
 title: isleadbyte, _isleadbyte_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _isleadbyte_l
 - isleadbyte
+- _o__isleadbyte_l
+- _o_isleadbyte
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - istleadbyte function
 - isleadbyte function
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
-ms.openlocfilehash: 6b853dcea82c2afea91b2e0545d253786c88ae5e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 078efc2fa5499e23ce7f2fb6f8fc0ffc5123de1e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954312"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909545"
 ---
 # <a name="isleadbyte-_isleadbyte_l"></a>isleadbyte, _isleadbyte_l
 
@@ -54,22 +57,24 @@ int _isleadbyte_l( int c );
 
 ### <a name="parameters"></a>Параметры
 
-*c*<br/>
+*ц*<br/>
 Проверяемое целое число.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 **ислеадбите** возвращает ненулевое значение, если аргумент удовлетворяет условию теста, или 0, если нет. В языковых стандартах "C" и в национальных кодировках однобайтовых кодировок (SBCS) **ислеадбите** всегда возвращает 0.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Макрос **ислеадбите** возвращает ненулевое значение, если его аргумент является первым байтом многобайтового символа. **ислеадбите** дает осмысленный результат для любого целочисленного аргумента от-1 (**EOF**) до **UCHAR_MAX** (0xFF) включительно.
+Макрос **ислеадбите** возвращает ненулевое значение, если его аргумент является первым байтом многобайтового символа. **ислеадбите** дает значимый результат для любого целочисленного аргумента от-1 (**EOF**) до **UCHAR_MAX** (0xFF) включительно.
 
 Ожидаемый тип аргумента для **ислеадбите** — **int**; Если передается знак подписывания, компилятор может преобразовать его в целое число по расширению знака, что приведет к непредсказуемым результатам.
 
 Версия этой функции с суффиксом **_l** идентична за исключением того, что использует переданный языковой стандарт вместо текущего языкового стандарта для поведения, зависящего от языкового стандарта.
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|
@@ -82,10 +87,10 @@ int _isleadbyte_l( int c );
 |**isleadbyte**|\<ctype.h>|
 |**_isleadbyte_l**|\<ctype.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Классификация байтов](../../c-runtime-library/byte-classification.md)<br/>
-[Языковой стандарт](../../c-runtime-library/locale.md)<br/>
-[Подпрограммы _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[подпрограммы _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

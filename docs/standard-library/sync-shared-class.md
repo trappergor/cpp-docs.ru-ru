@@ -12,16 +12,16 @@ helpviewer_keywords:
 - stdext::sync_shared [C++], deallocate
 - stdext::sync_shared [C++], equals
 ms.assetid: cab3af9e-3d1a-4f2c-8580-0f89e5687d8e
-ms.openlocfilehash: 72ed21d3a0fb519bca2e19b7fbface05d5ac64ce
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 029edea59f29534491232d5d99353ccb093447bd
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450249"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376524"
 ---
-# <a name="syncshared-class"></a>Класс sync_shared
+# <a name="sync_shared-class"></a>Класс sync_shared
 
-Описывает [фильтр синхронизации](../standard-library/allocators-header.md), использующий мьютекс для управления доступом к объекту кэша, который является общим для всех распределителей.
+Описывает [фильтр синхронизации,](../standard-library/allocators-header.md) который использует mutex для управления доступом к объекту кэша, который является общим для всех разглашений.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,12 +36,12 @@ class sync_shared
 |---------------|-----------------|
 |*Кэш*|Тип кэша, связанный с фильтром синхронизации. Возможные типы: [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) или [cache_suballoc](../standard-library/cache-suballoc-class.md).|
 
-### <a name="member-functions"></a>Функции-члены
+### <a name="member-functions"></a>Функции элементов
 
-|Функция Member|Описание|
+|Функция-член|Описание|
 |-|-|
-|[allocate](#allocate)|Выделяет блок памяти.|
-|[deallocate](#deallocate)|Освобождает указанное число объектов из памяти, начиная с заданной позиции.|
+|[Выделить](#allocate)|Выделяет блок памяти.|
+|[Освобождения](#deallocate)|Освобождает указанное число объектов из памяти, начиная с заданной позиции.|
 |[equals](#equals)|Сравнивает два кэша на равенство.|
 
 ## <a name="requirements"></a>Требования
@@ -50,7 +50,7 @@ class sync_shared
 
 **Пространство имен:** stdext
 
-## <a name="allocate"></a>  sync_shared::allocate
+## <a name="sync_sharedallocate"></a><a name="allocate"></a>sync_shared::
 
 Выделяет блок памяти.
 
@@ -62,17 +62,17 @@ void *allocate(std::size_t count);
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*count*|Число элементов в массиве, которые нужно выделить.|
+|*count*|Число выделяемых элементов в массиве.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Указатель на выделяемый объект.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Функция-член блокирует мьютекс, вызывает метод `cache.allocate(count)`, разблокирует мьютекс и возвращает результат более раннего вызова `cache.allocate(count)`. `cache` представляет текущий объект кэша.
 
-## <a name="deallocate"></a>  sync_shared::deallocate
+## <a name="sync_shareddeallocate"></a><a name="deallocate"></a>sync_shared::d
 
 Освобождает указанное число объектов из памяти, начиная с заданной позиции.
 
@@ -84,14 +84,14 @@ void deallocate(void* ptr, std::size_t count);
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*ptr*|Указатель на первый объект, который необходимо освободить из хранилища.|
+|*Ptr*|Указатель на первый объект, который должен быть освобожден из хранилища.|
 |*count*|Количество объектов для освобождения из хранилища.|
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта функция-член блокирует мьютекс, вызывает метод `cache.deallocate(ptr, count)`, где `cache` представляет объект кэша, а затем разблокирует мьютекс.
 
-## <a name="equals"></a>  sync_shared::equals
+## <a name="sync_sharedequals"></a><a name="equals"></a>sync_shared::равные
 
 Сравнивает два кэша на равенство.
 
@@ -104,14 +104,14 @@ bool equals(const sync_shared<Cache>& Other) const;
 |Параметр|Описание|
 |---------------|-----------------|
 |*Кэш*|Тип кэша, связанный с фильтром синхронизации.|
-|*Другое*|Кэш для сравнения на равенство.|
+|*Прочее*|Кэш для сравнения на равенство.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true** , если результат `cache.equals(Other.cache)`, где `cache` представляет объект кэша, имеет **значение true**; в противном случае — **значение false**.
+**верно,** если `cache.equals(Other.cache)`результат `cache` , где представляет объект кэша, **это правда;** в противном случае, **ложные**.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<>-подлатыватели](../standard-library/allocators-header.md)

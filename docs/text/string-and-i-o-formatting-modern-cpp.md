@@ -1,19 +1,19 @@
 ---
 title: Форматирование строк и ввода-вывода (современный C++)
-description: Варианты форматированной строки ввода-вывода, доступные в C++современных.
+description: Выбор форматированных строк ВВ/О доступен в современном СЗ.
 ms.date: 05/30/2019
 ms.topic: conceptual
 ms.assetid: 3954e8de-a59b-4175-89c9-4ee842ab89ed
-ms.openlocfilehash: 7ea858a8a8126d3754783edee0dd3ea5409e5f73
-ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.openlocfilehash: a3fc93b0baf414759eb50c787c4057fb85dcb370
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898831"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375774"
 ---
 # <a name="string-and-io-formatting-modern-c"></a>Форматирование строк и ввода-вывода (современный C++)
 
-C++[\<iostream >](../standard-library/iostream.md) классы, функции и операторы поддерживают форматированные строковые операции ввода-вывода. Например, в следующем коде показано, как задать `cout` для форматирования целого числа в шестнадцатеричном формате. Во-первых, он сохраняет текущее состояние, чтобы сбросить его впоследствии, так как после передачи состояния формата в `cout`оно остается таким образом, пока оно не изменится. Он не просто применяется к одной строке кода.
+>классов, функций и операторов поддержки отформатированных строк вв/осек. [ \<](../standard-library/iostream.md) Например, в следующем коде `cout` показано, как установить для форматирования рядового вывода в гексадецималь. Во-первых, это экономит текущее состояние, чтобы сбросить его `cout`потом, потому что как только состояние формата передается, он остается таким образом, пока не изменится. Это относится не только к одной строке кода.
 
 ```cpp
 #include <iostream>
@@ -39,23 +39,23 @@ int main()
 }
 ```
 
-Этот подход является типобезопасным и расширяемым, но он также является сложным и подробным.
+Этот подход является типобезопасным и расширяемым, но он также является сложным и многословным.
 
-## <a name="alternative-format-options"></a>Альтернативные параметры формата
+## <a name="alternative-format-options"></a>Альтернативные варианты формата
 
-В качестве альтернативы можно использовать `Boost.Format` из библиотек Boost C++ , даже если это нестандартное. Вы можете скачать любую библиотеку Boost с веб-сайта [Boost](https://www.boost.org/) .
+В качестве альтернативы можно `Boost.Format` использовать библиотеки Boost C, даже если это нестандартно. Вы можете скачать любую библиотеку Boost с веб-сайта [Boost.](https://www.boost.org/)
 
-Некоторые преимущества `Boost.Format`:
+Некоторые `Boost.Format` преимущества:
 
-- Безопасность: строго типизированный и вызывает исключение для ошибок, например спецификацию слишком мало или слишком много элементов.
+- Безопасный: Тип-безопасный, и бросает исключение для ошибок, например, спецификация слишком мало или слишком много элементов.
 
-- Расширяемый: работает для любого типа, который может быть передан в потоке.
+- Расширяемый: Работает для любого типа, который может передаваться.
 
-- Удобно: стандартные POSIX и строки формата.
+- Удобно: Стандартный POSIX и аналогичные строки формата.
 
-Хотя `Boost.Format` основан на C++ [\<ах > iostream](../standard-library/iostream-programming.md) , которые являются надежными и расширяемыми, они не оптимизированы для производительности. При необходимости оптимизации производительности рассмотрите возможность использования функций [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) и [sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md), которые быстро и просты в использовании. Однако они не являются расширяемыми и не защищены от уязвимостей. (Безопасные версии существуют, но они оказывают небольшое отрицательное влияние на производительность.) Дополнительные сведения см. в разделе [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md) и [sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)).
+Несмотря `Boost.Format` на то, [ \<](../standard-library/iostream-programming.md) что она построена на>объектов, которые являются безопасными и расширяемыми, они не оптимизированы для повышения производительности. Если требуется оптимизация производительности, рассмотрим C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) и [sprintf,](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)которые быстро и просты в использовании. Тем не менее, они не расширяемы или защищены от уязвимостей. (Безопасные версии существуют, но они несут небольшое наказание производительности. Для получения дополнительной информации [см. printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md) и [sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l).](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)
 
-Следующий код демонстрирует некоторые из функций поддержки форматирования.
+Следующий код демонстрирует некоторые функции форматирования Boost.
 
 ```cpp
     string s = str( format("%2% %2% %1%\n") % "world" % "hello" );
@@ -67,11 +67,11 @@ int main()
     // Jean de Lattre de Tassigny              +33 (0) 987 654 321
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-[Добро пожаловать обратно вC++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
-[Справочник по языку C++](../cpp/cpp-language-reference.md)<br/>
-[Стандартная библиотека C++](../standard-library/cpp-standard-library-reference.md)<br/>
-[\<iostream>](../standard-library/iostream.md)<br/>
-[\<limits>](../standard-library/limits.md)<br/>
+[Добро пожаловать обратно в СЗ](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Языковая справка к СЗ](../cpp/cpp-language-reference.md)<br/>
+[Стандартная библиотека СЗ](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<>йострим](../standard-library/iostream.md)<br/>
+[\<ограничения>](../standard-library/limits.md)<br/>
 [\<iomanip>](../standard-library/iomanip.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::ArrayReference Class
 ms.assetid: 9ab3b15e-8a60-4600-8fcb-7d6c86284f4b
-ms.openlocfilehash: f7e587902f1c99b294ed79255397aeffccee26b5
-ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
+ms.openlocfilehash: e9dd16ad6c3f53c5562b0419197a582c06fbc642
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72587906"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81354791"
 ---
 # <a name="platformarrayreference-class"></a>Класс Platform::ArrayReference
 
@@ -24,26 +24,26 @@ ms.locfileid: "72587906"
 class ArrayReference
 ```
 
-### <a name="members"></a>Члены
+### <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Название|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[ArrayReference:: ArrayReference](#ctor)|Инициализирует новый экземпляр класса `ArrayReference` .|
+|[ArrayСправка::ArrayСправка](#ctor)|Инициализирует новый экземпляр класса `ArrayReference`.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Название|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[Оператор ArrayReference::operator()](#operator-call)|Преобразует этот объект `ArrayReference` в `Platform::Array<T>^*`.|
+|[ArrayСправка:Оператор() Оператор](#operator-call)|Преобразует этот объект `ArrayReference` в `Platform::Array<T>^*`.|
 |[Оператор ArrayReference::operator=](#operator-assign)|Назначает содержимое другой ссылки `ArrayReference` этому экземпляру.|
 
 ## <a name="exceptions"></a>Исключения
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-Использование `ArrayReference` для заполнения массива в стиле языка C позволяет избежать дополнительной операции копирования, которая потребовалось бы при копировании сначала в переменную `Platform::Array` , а затем в массив в стиле языка C. При использовании `ArrayReference`выполняется только одна операция копирования. Пример кода см. в разделе [Array и WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
+Использование `ArrayReference` для заполнения массива в стиле языка C позволяет избежать дополнительной операции копирования, которая потребовалось бы при копировании сначала в переменную `Platform::Array` , а затем в массив в стиле языка C. При использовании `ArrayReference`выполняется только одна операция копирования. Для примера кода см. [Array и WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
 
 ### <a name="requirements"></a>Требования
 
@@ -55,9 +55,9 @@ class ArrayReference
 
 **Заголовок:** vccorlib.h
 
-## <a name="ctor"></a>Конструктор ArrayReference:: ArrayReference
+## <a name="arrayreferencearrayreference-constructor"></a><a name="ctor"></a>ArrayСправка::ArrayReference Конструктор
 
-Инициализирует новый экземпляр класса [Platform:: ArrayReference](../cppcx/platform-arrayreference-class.md) .
+Инициализирует новый экземпляр [платформы::ArrayReference](../cppcx/platform-arrayreference-class.md) класса.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -68,20 +68,20 @@ ArrayReference(ArrayReference&& otherArg)
 
 ### <a name="parameters"></a>Параметры
 
-*датаарг*<br/>
+*dataArg*<br/>
 Указатель на данные массива.
 
-*сизеарг*<br/>
+*sizeArg*<br/>
 Количество элементов в исходном массиве.
 
-*осерарг*<br/>
+*otherArg*<br/>
 Объект `ArrayReference`, данные которого будут перемещены для инициализации нового экземпляра.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-## <a name="operator-assign"></a>Оператор ArrayReference:: operator =
+## <a name="arrayreferenceoperator-operator"></a><a name="operator-assign"></a>ArrayСправка::Оператор » Оператор
 
-Присваивает указанный объект текущему объекту [Platform:: ArrayReference](../cppcx/platform-arrayreference-class.md) с помощью семантики перемещения.
+Присваивает указанный объект текущей [платформе::ArrayReference](../cppcx/platform-arrayreference-class.md) object с помощью семантики перемещения.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -91,20 +91,20 @@ ArrayReference& operator=(ArrayReference&& otherArg);
 
 ### <a name="parameters"></a>Параметры
 
-*осерарг*<br/>
+*otherArg*<br/>
 Присваивает перемещенный объект текущему объекту `ArrayReference`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Ссылка на объект типа `ArrayReference`.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 `Platform::ArrayReference` — это стандартный шаблон класса C++, а не ссылочный класс.
 
-## <a name="operator-call"></a>Оператор ArrayReference:: operator ()
+## <a name="arrayreferenceoperator-operator"></a><a name="operator-call"></a>ArrayСправка:Оператор() Оператор
 
-Преобразует текущий объект [Platform:: ArrayReference](../cppcx/platform-arrayreference-class.md) обратно в класс [Platform:: Array](../cppcx/platform-array-class.md) .
+Преобразует текущую [платформу::ArrayReference](../cppcx/platform-arrayreference-class.md) объект обратно в [платформу::Array](../cppcx/platform-array-class.md) класса.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -116,10 +116,10 @@ Array<TArg>^ operator ();
 
 Дескриптор для объекта типа `Array<TArg>^`
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-[Platform:: ArrayReference](../cppcx/platform-arrayreference-class.md) является стандартным C++ шаблоном класса, а [Platform:: Array](../cppcx/platform-array-class.md) — ссылочным классом.
+[Платформа::ArrayReference](../cppcx/platform-arrayreference-class.md) является стандартным шаблоном класса СЗ, а [платформа::Array](../cppcx/platform-array-class.md) - это класс рефери.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Platform](../cppcx/platform-namespace-c-cx.md)

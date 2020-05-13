@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - out_of_memory class
 ms.assetid: 3aa7e682-8f13-4ae6-9188-31fb423956e4
-ms.openlocfilehash: 4edc1db3c1a70a41f9a0493bd3dc484e27f99b44
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: e716d4952bdb9634cc0d195285d3a65c5c06b0a1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126452"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336806"
 ---
 # <a name="out_of_memory-class"></a>out_of_memory - класс
 
-Исключение, возникающее при сбое метода из-за нехватки памяти системы или устройства.
+Исключение, которое выбрасывается, когда метод выходит из строя из-за отсутствия системы или памяти устройства.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -25,13 +25,13 @@ ms.locfileid: "77126452"
 class out_of_memory : public runtime_exception;
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|[Конструктор out_of_memory](#ctor)|Инициализирует новый экземпляр класса `out_of_memory`.|
+|[out_of_memory конструктор](#ctor)|Инициализирует новый экземпляр класса `out_of_memory`.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -43,10 +43,11 @@ class out_of_memory : public runtime_exception;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** ампрт. h
+**Заголовок:** amprt.h
 
 **Пространство имен** : Concurrency
-## <a name="ctor"></a>out_of_memory
+
+## <a name="out_of_memory"></a><a name="ctor"></a>out_of_memory
 
 Инициализирует новый экземпляр класса.
 
@@ -70,4 +71,4 @@ out_of_memory () throw();
 
 ## <a name="see-also"></a>См. также раздел
 
-[Пространство имен Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)
+[Пространство имен параллелизма (КЗ АМП)](concurrency-namespace-cpp-amp.md)

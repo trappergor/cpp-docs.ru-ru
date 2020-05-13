@@ -20,12 +20,12 @@ helpviewer_keywords:
 - MAX_DIR constant
 - MAX_EXT constant
 ms.assetid: 2b5d0e43-1347-45b4-8397-24a8a45c444e
-ms.openlocfilehash: 89609de3fc5584a960480bff83566f5e38c8be1f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 8db9961bd2d5b5b3ea9d3addad3c26737b4f5199
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477536"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171402"
 ---
 # <a name="path-field-limits"></a>Пределы поля "Путь"
 
@@ -35,11 +35,11 @@ ms.locfileid: "50477536"
 #include <stdlib.h>
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Эти константы определяют максимальную длину пути и отдельных полей в пути.
 
-|Константа|Значение|
+|Постоянно|Значение|
 |--------------|-------------|
 |`_MAX_DIR`|Максимальная длина компонента каталога|
 |`_MAX_DRIVE`|Максимальная длина компонента диска|
@@ -50,6 +50,6 @@ ms.locfileid: "50477536"
 > [!NOTE]
 > Среда выполнения языка C поддерживает длину пути до 32768 символов, но поддержка таких длинных путей зависит от операционной системы, а именно, от файловой системы. Для полной обратной совместимости с файловыми системами FAT32 общая длина полей не должна превышать `_MAX_PATH`. Файловая система Windows NTFS поддерживает пути длиной до 32 768 символов, но только при использовании API Юникода. Если вы используете длинные пути, указывайте в начале пути символы \\\\?\ и используйте версии для Юникода функций среды выполнения языка С.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Глобальные константы](../c-runtime-library/global-constants.md)

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4220
 ms.assetid: ba0cddfc-9c56-4a09-8207-f7b840a24b4d
-ms.openlocfilehash: d21be7e32eb133f031545d8186ad638461570693
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed572f0bb18e4b5a515f1512bd1001f7f21d8c93
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410191"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183076"
 ---
 # <a name="linker-tools-warning-lnk4220"></a>Предупреждение средств компоновщика LNK4220
 
-Недопустимый «параметр компоновщика» значение «значение»; принятой по умолчанию
+Недопустимое значение "параметр" компоновщика "значение"; принято по умолчанию
 
-Указанное значение диапазону [/TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md) параметр. Значение по умолчанию для **/TLBID** -1.
+В параметре [/TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md) указано значение вне допустимого диапазона. Значение по умолчанию для **/TLBID** равно 1.

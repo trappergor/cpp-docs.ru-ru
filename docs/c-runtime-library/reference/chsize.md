@@ -1,8 +1,9 @@
 ---
 title: _chsize
-ms.date: 03/29/2018
+ms.date: 4/2/2020
 api_name:
 - _chsize
+- _o__chsize
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - files [C++], changing size
 - chsize function
 ms.assetid: b3e881c5-7b27-4837-a3d4-c51591ab10ff
-ms.openlocfilehash: 7fe07b2261396be491b833ff52186024edd0b919
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5b9b58cf3ca4e167b5d54f871ac31c5295adc48b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942966"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917201"
 ---
 # <a name="_chsize"></a>_chsize
 
@@ -50,7 +52,7 @@ int _chsize(
 
 ### <a name="parameters"></a>Параметры
 
-*fd*<br/>
+*демо*<br/>
 Дескриптор файла, ссылающийся на открытый файл.
 
 *size*<br/>
@@ -58,15 +60,17 @@ int _chsize(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**_chsize** возвращает значение 0, если размер файла успешно изменен. Возвращаемое значение, равное- **1, указывает на ошибку:** если указанный файл доступен только для чтения или указанный файл заблокирован для доступа, **значение EBADF** , **еноспк** , если на устройстве не осталось пробелов, или **Еинвал** , если *Размер* меньше нуля.
+**_chsize** возвращает значение 0, если размер файла успешно изменен. Возвращаемое значение, равное- **1, указывает на ошибку:** если **EACCES** указанный файл доступен только для чтения или указанный файл заблокирован для доступа, **значение EBADF** , **еноспк** , если на устройстве не осталось пробелов, или **еинвал** , если *Размер* меньше нуля.
 
-Дополнительные сведения об этих и других кодах возврата см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Дополнительные сведения об этих и других кодах возврата см. в разделе [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Функция **_chsize** расширяет или усекает файл, связанный с *демоном* , до длины, указанной в параметре *size*. Файл должен быть открыт в режиме, позволяющем выполнять запись. Если файл доступен для расширения, к нему добавляются нули ('\0'). Если файл усекается, все данные в конце сокращенного файла усекаются до длины исходного файла.
 
 Эта функция проверяет свои параметры. Если *Размер* меньше нуля или *демон демона* является неверным дескриптором файла, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).
+
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -74,7 +78,7 @@ int _chsize(
 |-------------|---------------------|---------------------|
 |**_chsize**|\<io.h>|\<errno.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -116,7 +120,7 @@ Size successfully changed
 File length after:  329678
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Обработка файлов](../../c-runtime-library/file-handling.md)<br/>
 [_close](close.md)<br/>

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - generic classes
 - generics [C++], declaring generic classes
 ms.assetid: 0beb99e1-1ec4-4fee-9836-ce9657d67a3a
-ms.openlocfilehash: 71850807f6332f31195ef9bafbd9468f48cb6fb3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 78f4bf3abb98aab5e626e8ada538a22bdbca2912
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516389"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172364"
 ---
 # <a name="generic-classes-ccli"></a>Универсальные классы (C++/CLI)
 
@@ -33,11 +33,11 @@ class-body
 } [declarators] [;]
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 В приведенном синтаксисе используются следующие элементы.
 
-*Атрибуты*<br/>
+*attributes*<br/>
 (Необязательно) Дополнительные описательные данные. Дополнительные сведения об атрибутах и классах атрибутов см. в разделе "Атрибуты".
 
 *class-key*<br/>
@@ -48,10 +48,10 @@ class-body
 *constraint-clauses*<br/>
 Список (не разделенный запятыми) предложений **where**, определяющих ограничения параметров типа. Имеет следующий вид:
 
-> **where** *type-parameter-identifier* **:** *constraint-list*  **...**
+> **где** *Type-Parameter-идентификатор* **:** *constraint-List*  **...**
 
 *constraint-list*<br/>
-*class-or-interface*[`,` *...*]
+*Class-или-Interface*[`,` *...* ]
 
 *accessibility-modifiers*<br/>
 Модификаторы доступа для универсального класса. Для среды выполнения Windows разрешен только модификатор **private**. Для среды CLR разрешены модификаторы **private** и **public**.
@@ -276,7 +276,7 @@ Test1
 
 Методы в универсальных классах, не имеющие дополнительных параметров типа, обычно называются неуниверсальными, хотя неявно параметризуются включающим универсальным классом.
 
-В сигнатуре неуниверсального метода может присутствовать один или несколько параметров типа включающего класса непосредственно или в виде открытого сконструированного типа. Например:
+В сигнатуре неуниверсального метода может присутствовать один или несколько параметров типа включающего класса непосредственно или в виде открытого сконструированного типа. Пример:
 
 `void MyMethod(MyClass<ItemType> x) {}`
 
@@ -341,7 +341,7 @@ Amount: $123.00**
 
 ## <a name="generic-methods-in-generic-classes"></a>Универсальные методы в универсальных классах
 
-Универсальные методы можно объявлять в универсальных и неуниверсальных классах. Например:
+Универсальные методы можно объявлять в универсальных и неуниверсальных классах. Пример:
 
 ## <a name="example"></a>Пример
 
@@ -710,6 +710,6 @@ The field is assigned the double value: 0.123
 The field is assigned the string: Hello Generics!
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Универсальные шаблоны](generics-cpp-component-extensions.md)

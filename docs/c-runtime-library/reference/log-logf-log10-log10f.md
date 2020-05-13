@@ -1,6 +1,6 @@
 ---
-title: log, логф, логл, LOG10, log10f, log10l
-ms.date: 04/05/2018
+title: log, logf, logl, log10, log10f, log10l
+ms.date: 4/2/2020
 api_name:
 - log10f
 - logf
@@ -8,6 +8,8 @@ api_name:
 - log
 - log10l
 - logl
+- _o_log
+- _o_log10
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -43,14 +46,14 @@ helpviewer_keywords:
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-ms.openlocfilehash: f610ead4d71a877051fdec8df2a1564089141eea
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0acfbefb1fb01215e543538b9fdb8d554b10f8c1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953230"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911482"
 ---
-# <a name="log-logf-logl-log10-log10f-log10l"></a>log, логф, логл, LOG10, log10f, log10l
+# <a name="log-logf-logl-log10-log10f-log10l"></a>log, logf, logl, log10, log10f, log10l
 
 Вычисляет логарифмы.
 
@@ -81,17 +84,19 @@ long double log10( long double x );  // C++ only
 
 Функции **журнала** возвращают натуральный логарифм (основание *e*) *x* в случае успеха. Функции **LOG10** возвращают десятичный логарифм. Если *x* является отрицательным, эти функции по умолчанию возвращают неопределенное значение («вывод»). Если *x* равно 0, они возвращают бесконечность (INF).
 
-|Ввод|Исключение SEH|Исключение Matherr|
+|Входные данные|Исключение SEH|Исключение Matherr|
 |-----------|-------------------|-----------------------|
-|± КНАН, С|none|_DOMAIN|
+|± КНАН, С|нет|_DOMAIN|
 |± 0|ZERODIVIDE|_SING|
 |*x* < 0|INVALID|_DOMAIN|
 
 в **log** и **LOG10** реализована реализация, использующая Streaming SIMD Extensions 2 (SSE2). Сведения о реализации SSE2 и ограничения на использование реализации SSE2 см. в разделе [_set_SSE2_enable](set-sse2-enable.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-C++допускает перегрузку, поэтому можно вызывать перегрузки **log** и **LOG10** , которые принимают и возвращают значения **типа float** или **Long** . В программе на языке C **log** и **LOG10** всегда принимают и возвращают **double**.
+C++ допускает перегрузку, поэтому можно вызывать перегрузки **log** и **LOG10** , которые принимают и возвращают значения **типа float** или **Long** . В программе на языке C **log** и **LOG10** всегда принимают и возвращают **double**.
+
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -99,7 +104,7 @@ C++допускает перегрузку, поэтому можно вызыв
 |-------------|---------------------|
 |**log**, **логф**, **логл**, **LOG10**, **log10f**, **log10l**|\<math.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -156,7 +161,7 @@ int main()
 Log base 2 of 65536.000000 is 16.000000
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md) <br/>
 [exp, expf, expl](exp-expf.md) <br/>

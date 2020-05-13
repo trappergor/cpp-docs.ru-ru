@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - InterfaceList structure
 ms.assetid: 6ec3228d-eb3e-4b7e-aef1-7dcf17bdf61a
-ms.openlocfilehash: 745348e81888b5a87c57fbb99d397fcd423c3ee1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7fd06f71bc4d8097366dc0e87d7ff92c5a12a790
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398216"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213867"
 ---
 # <a name="interfacelist-structure"></a>InterfaceList - структура
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+Поддерживает инфраструктуру WRL и не предназначен для непосредственного использования в коде.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -28,23 +28,23 @@ struct InterfaceList;
 ### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Имя интерфейса; Первый интерфейс в списке рекурсивной.
+Имя интерфейса; Первый интерфейс в рекурсивном списке.
 
 *U*<br/>
-Имя интерфейса; остальные интерфейсы в списке рекурсивной.
+Имя интерфейса; остальные интерфейсы в рекурсивном списке.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Используется для создания рекурсивный список интерфейсов.
+Используется для создания рекурсивного списка интерфейсов.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
-### <a name="public-typedefs"></a>Общедоступные определения типов
+### <a name="public-typedefs"></a>Открытые определения типов
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|`FirstT`|Синоним параметра-шаблона *T*.|
-|`RestT`|Синоним параметра-шаблона *U*.|
+|`FirstT`|Синоним для параметра шаблона *T*.|
+|`RestT`|Синоним для параметра шаблона *U*.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -52,10 +52,10 @@ struct InterfaceList;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** implements.h
+**Заголовок:** Implements. h
 
-**Пространство имен:** Microsoft::WRL::Details
+**Пространство имен:** Microsoft:: WRL::D состояния
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Microsoft::WRL::Details](microsoft-wrl-details-namespace.md)

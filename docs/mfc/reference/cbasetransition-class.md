@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CBaseTransition [MFC], m_transition
 - CBaseTransition [MFC], m_type
 ms.assetid: dfe84007-bbc5-43b7-b5b8-fae9145573bf
-ms.openlocfilehash: 37bf536403d0edfc16b098929a4758a6c6958cf1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9abe4ae55d9d84ea435cd5d82925ff8b8a544480
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164154"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752961"
 ---
 # <a name="cbasetransition-class"></a>Класс CBaseTransition
 
@@ -65,46 +65,46 @@ class CBaseTransition : public CObject;
 
 ### <a name="public-enumerations"></a>Открытые перечисления
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[Перечисление CBaseTransition::TRANSITION_TYPE](#transition_type_enumeration)|Определяет типы перехода, в настоящее время поддерживает реализацию MFC Windows API анимации.|
+|[CBaseПереход:::TRANSITION_TYPE Иномерация](#transition_type_enumeration)|Определяет типы переходов, поддерживаемые в настоящее время внедрением MFC API анимации Windows.|
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CBaseTransition::CBaseTransition](#cbasetransition)|Создает объект базового перехода.|
-|[CBaseTransition:: ~ CBaseTransition](#_dtorcbasetransition)|Деструктор Вызывается при уничтожении объекта перехода.|
+|[CBaseПереход::CBaseПереход](#cbasetransition)|Строит базовый переходный объект.|
+|[CBaseПереход::](#_dtorcbasetransition)|Деструктор Вызывается при уничтожении объекта перехода.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CBaseTransition::AddToStoryboard](#addtostoryboard)|Добавляет переход к раскадровке.|
-|[CBaseTransition::AddToStoryboardAtKeyframes](#addtostoryboardatkeyframes)|Добавляет переход к раскадровке.|
-|[CBaseTransition::Clear](#clear)|Выпуски инкапсулированы IUIAnimationTransition COM-объекта.|
-|[CBaseTransition::Create](#create)|Создает COM переход.|
-|[CBaseTransition::GetEndKeyframe](#getendkeyframe)|Возвращает начала опорного кадра.|
-|[CBaseTransition::GetRelatedVariable](#getrelatedvariable)|Возвращает указатель на связанных переменной.|
-|[CBaseTransition::GetStartKeyframe](#getstartkeyframe)|Возвращает начала опорного кадра.|
-|[CBaseTransition::GetTransition](#gettransition)|Перегружен. Возвращает указатель на базовый объект COM перехода.|
-|[CBaseTransition::GetType](#gettype)|Возвращает типа перехода.|
-|[CBaseTransition::IsAdded](#isadded)|Указывает, добавлен ли переход к раскадровке.|
-|[CBaseTransition::SetKeyframes](#setkeyframes)|Задает опорные кадры для перехода.|
-|[CBaseTransition::SetRelatedVariable](#setrelatedvariable)|Устанавливает связь между переменной анимации и перехода.|
+|[CBaseTransition::AddtoStoryboard](#addtostoryboard)|Добавляет переход к раскадровке.|
+|[CBaseПереход::AddToStoryboardAtKeyframes](#addtostoryboardatkeyframes)|Добавляет переход к раскадровке.|
+|[CBaseПереход::Ясно](#clear)|Выпускает инкапсулированный объект IUIAnimationTransition COM.|
+|[CBaseПереход::Создание](#create)|Создает переход COM.|
+|[CBaseПереход::GetEndKeyframe](#getendkeyframe)|Возвращает запуск ключевой кадра.|
+|[CBaseПереход::GetRelatedVariable](#getrelatedvariable)|Возвращает указатель на соответствующую переменную.|
+|[CBaseПереход::GetStartKeyframe](#getstartkeyframe)|Возвращает запуск ключевой кадра.|
+|[CBaseПереход::GetTransition](#gettransition)|Перегружен. Возвращает указатель на базовый объект перехода COM.|
+|[CBaseПереход::GetType](#gettype)|Возвращает тип перехода.|
+|[CBaseПереход::Добавлено](#isadded)|Сообщает, был ли добавлен переход в раскадровку.|
+|[CBaseПереход::SetKeyframes](#setkeyframes)|Устанавливает ключевые кадры для перехода.|
+|[CBaseПереход::SetСвязанныйПеременный](#setrelatedvariable)|Устанавливает связь между переменной анимации и переходом.|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CBaseTransition::m_bAdded](#m_badded)|Указывает, добавлен ли переход к раскадровке.|
-|[CBaseTransition::m_pEndKeyframe](#m_pendkeyframe)|Хранит указатель указывает окончание перехода опорный кадр.|
-|[CBaseTransition::m_pRelatedVariable](#m_prelatedvariable)|Указатель на переменную анимации, который анимируется с переходом, хранящиеся в m_transition.|
-|[CBaseTransition::m_pStartKeyframe](#m_pstartkeyframe)|Содержит указатель на начало перехода опорный кадр.|
-|[CBaseTransition::m_transition](#m_transition)|Содержит указатель на IUIAnimationTransition. Значение NULL, если COM-объект перехода не был создан.|
-|[CBaseTransition::m_type](#m_type)|Сохраняет тип перехода.|
+|[CBaseПереход::m_bAdded](#m_badded)|Уточняется, был ли добавлен переход в раскадровку.|
+|[CBaseПереход::m_pEndKeyframe](#m_pendkeyframe)|Хранит указатель на клавиатуру, которая определяет конец перехода.|
+|[CBaseПереход::m_pRelatedVariable](#m_prelatedvariable)|Указатель на переменную анимации, которая анимируется с переходом, хранящимся в m_transition.|
+|[CBaseПереход:::m_pStartKeyframe](#m_pstartkeyframe)|Хранит указатель на клавиатуру, которая определяет начало перехода.|
+|[CBaseПереход::m_transition](#m_transition)|Хранит указатель на IUIAnimationTransition. NULL, если объект перехода COM не создан.|
+|[CBaseПереход::m_type](#m_type)|Хранит тип перехода.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Этот класс инкапсулирует интерфейс IUIAnimationTransition и служит базовым классом для всех переходов.
 
@@ -118,7 +118,7 @@ class CBaseTransition : public CObject;
 
 **Заголовок:** afxanimationcontroller.h
 
-##  <a name="_dtorcbasetransition"></a>  CBaseTransition:: ~ CBaseTransition
+## <a name="cbasetransitioncbasetransition"></a><a name="_dtorcbasetransition"></a>CBaseПереход::
 
 Деструктор Вызывается при уничтожении объекта перехода.
 
@@ -126,7 +126,7 @@ class CBaseTransition : public CObject;
 virtual ~CBaseTransition();
 ```
 
-##  <a name="addtostoryboard"></a>  CBaseTransition::AddToStoryboard
+## <a name="cbasetransitionaddtostoryboard"></a><a name="addtostoryboard"></a>CBaseTransition::AddtoStoryboard
 
 Добавляет переход к раскадровке.
 
@@ -137,17 +137,17 @@ BOOL AddToStoryboard(IUIAnimationStoryboard* pStoryboard);
 ### <a name="parameters"></a>Параметры
 
 *pStoryboard*<br/>
-Указатель на раскадровки, который анимируется связанных переменной.
+Указатель на раскадровку, которая будет оживить соответствующую переменную.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если переход был успешно добавлен к раскадровке.
+ПРАВДА, если переход был успешно добавлен в раскадровку.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Относится переход к соответствующим переменной в раскадровке. Если это первый переход к этой переменной в этой раскадровке, переход начинается в начале раскадровки. В противном случае переход добавляется перехода, наиболее недавно добавлена в переменную.
+Применяет переход к соответствующей переменной в раскадровке. Если это первый переход, применяемый к этой переменной в этой раскадровке, переход начинается в начале раскадровки. В противном случае переход прилагается к переходу, добавленному совсем недавно к переменной.
 
-##  <a name="addtostoryboardatkeyframes"></a>  CBaseTransition::AddToStoryboardAtKeyframes
+## <a name="cbasetransitionaddtostoryboardatkeyframes"></a><a name="addtostoryboardatkeyframes"></a>CBaseПереход::AddToStoryboardAtKeyframes
 
 Добавляет переход к раскадровке.
 
@@ -158,39 +158,39 @@ BOOL AddToStoryboardAtKeyframes(IUIAnimationStoryboard* pStoryboard);
 ### <a name="parameters"></a>Параметры
 
 *pStoryboard*<br/>
-Указатель на раскадровки, который анимируется связанных переменной.
+Указатель на раскадровку, которая будет оживить соответствующую переменную.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если переход был успешно добавлен к раскадровке.
+ПРАВДА, если переход был успешно добавлен в раскадровку.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Относится переход к соответствующим переменной в раскадровке. Если был задан опорный кадр start, переход начинается с этого опорного кадра. Если указан конечный опорный кадр, переход начинается с начала опорный кадр и останавливается на окончания опорного кадра. Если переход был создан с параметром длительность указано, это время перезаписывается время между опорными кадрами начала и окончания. Если было указано без опорного кадра, переход добавляется перехода, наиболее недавно добавлена в переменную.
+Применяет переход к соответствующей переменной в раскадровке. Если был указан ключевой элемент запуска, переход начинается на этом ключевом кадре. Если конечная клавиатура была указана, переход начинается в начальной клавиатуре и останавливается на конце ключевой. Если переход был создан с указанным параметром продолжительности, эта продолжительность перезаписана с продолжительностью времени между ключами запуска и конца. Если не было указано, переход прилагается к переходу, добавленному совсем недавно к переменной.
 
-##  <a name="cbasetransition"></a>  CBaseTransition::CBaseTransition
+## <a name="cbasetransitioncbasetransition"></a><a name="cbasetransition"></a>CBaseПереход::CBaseПереход
 
-Создает объект базового перехода.
+Строит базовый переходный объект.
 
 ```
 CBaseTransition();
 ```
 
-##  <a name="clear"></a>  CBaseTransition::Clear
+## <a name="cbasetransitionclear"></a><a name="clear"></a>CBaseПереход::Ясно
 
-Выпуски инкапсулированы IUIAnimationTransition COM-объекта.
+Выпускает инкапсулированный объект IUIAnimationTransition COM.
 
-```
+```cpp
 void Clear();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод должен вызываться из производного класса метода Create во избежание утечки IUITransition интерфейс.
+Этот метод следует вызывать из метода создания производного класса, чтобы предотвратить утечку интерфейса IUITransition.
 
-##  <a name="create"></a>  CBaseTransition::Create
+## <a name="cbasetransitioncreate"></a><a name="create"></a>CBaseПереход::Создание
 
-Создает COM переход.
+Создает переход COM.
 
 ```
 virtual BOOL Create(
@@ -201,22 +201,22 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Параметры
 
 *pLibrary*<br/>
-Указатель на библиотеку перехода, которая создает стандартные переходов. Он может иметь значение NULL для пользовательских переходов.
+Указатель на библиотеку перехода, которая создает стандартные переходы. Это может быть NULL для пользовательских переходов.
 
 *pFactory*<br/>
-Указатель на фабрику перехода, которая создает пользовательские переходы. Он может иметь значение NULL для стандартных переходов.
+Указатель на фабрику перехода, которая создает пользовательские переходы. Это может быть NULL для стандартных переходов.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если переход COM-объект был успешно создан; в противном случае — значение FALSE.
+TRUE, если объект transition COM был создан успешно; в противном случае FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Это чистой виртуальной функции, которое должно быть переопределено в производном классе. Он вызывается платформой для создания базового COM-объект перехода.
+Это чистая виртуальная функция, которая должна быть переопределена в производном классе. Она называется инфраструктурой для мгновенного мгновенного изменения базового объекта перехода COM.
 
-##  <a name="getendkeyframe"></a>  CBaseTransition::GetEndKeyframe
+## <a name="cbasetransitiongetendkeyframe"></a><a name="getendkeyframe"></a>CBaseПереход::GetEndKeyframe
 
-Возвращает начала опорного кадра.
+Возвращает запуск ключевой кадра.
 
 ```
 CBaseKeyFrame* GetEndKeyframe();
@@ -224,15 +224,15 @@ CBaseKeyFrame* GetEndKeyframe();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Допустимый указатель опорного кадра, или значение NULL, если не нужно включать переход между опорными кадрами.
+Действительный указатель на ключевой кадр, или NULL, если переход не должен быть вставлен между ключевыми кадрами.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод может использоваться для доступа к объект опорный кадр, который был ранее установлен с SetKeyframes. Она вызвана кода верхнего уровня, при добавлении переходы на раскадровку.
+Этот метод можно использовать для доступа к объекту клавиатуры, который ранее был установлен SetKeyframes. Это называется кодом верхнего уровня, когда переходы добавляются в раскадровку.
 
-##  <a name="getrelatedvariable"></a>  CBaseTransition::GetRelatedVariable
+## <a name="cbasetransitiongetrelatedvariable"></a><a name="getrelatedvariable"></a>CBaseПереход::GetRelatedVariable
 
-Возвращает указатель на связанных переменной.
+Возвращает указатель на соответствующую переменную.
 
 ```
 CAnimationVariable* GetRelatedVariable();
@@ -240,15 +240,15 @@ CAnimationVariable* GetRelatedVariable();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Допустимый указатель на переменную анимации или значение NULL, если переменной анимации не задал SetRelatedVariable.
+Действительный указатель на переменную анимации, или NULL, если переменная анимации не была установлена SetRelatedVariable.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Это метод доступа к переменной связанных анимации.
+Это аксессуар к соответствующей переменной анимации.
 
-##  <a name="getstartkeyframe"></a>  CBaseTransition::GetStartKeyframe
+## <a name="cbasetransitiongetstartkeyframe"></a><a name="getstartkeyframe"></a>CBaseПереход::GetStartKeyframe
 
-Возвращает начала опорного кадра.
+Возвращает запуск ключевой кадра.
 
 ```
 CBaseKeyFrame* GetStartKeyframe();
@@ -256,15 +256,15 @@ CBaseKeyFrame* GetStartKeyframe();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Допустимый указатель опорного кадра, или значение NULL, если переход не должен запускаться после опорного кадра.
+Действительный указатель на ключевой кадр, или NULL, если переход не должен начинаться после ключа.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод может использоваться для доступа к объект опорный кадр, который был ранее установлен с SetKeyframes. Она вызвана кода верхнего уровня, при добавлении переходы на раскадровку.
+Этот метод можно использовать для доступа к объекту клавиатуры, который ранее был установлен SetKeyframes. Это называется кодом верхнего уровня, когда переходы добавляются в раскадровку.
 
-##  <a name="gettransition"></a>  CBaseTransition::GetTransition
+## <a name="cbasetransitiongettransition"></a><a name="gettransition"></a>CBaseПереход::GetTransition
 
-Возвращает указатель на базовый объект COM перехода.
+Возвращает указатель на базовый объект перехода COM.
 
 ```
 IUIAnimationTransition* GetTransition(
@@ -277,22 +277,22 @@ IUIAnimationTransition* GetTransition();
 ### <a name="parameters"></a>Параметры
 
 *pLibrary*<br/>
-Указатель на библиотеку перехода, которая создает стандартные переходов. Он может иметь значение NULL для пользовательских переходов.
+Указатель на библиотеку перехода, которая создает стандартные переходы. Это может быть NULL для пользовательских переходов.
 
 *pFactory*<br/>
-Указатель на фабрику перехода, которая создает пользовательские переходы. Он может иметь значение NULL для стандартных переходов.
+Указатель на фабрику перехода, которая создает пользовательские переходы. Это может быть NULL для стандартных переходов.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Не удалось создать допустимый указатель IUIAnimationTransition или значение NULL, если базовый переход.
+Действительный указатель на IUIAnimationTransition или NULL, если базовый переход не может быть создан.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод возвращает указатель на базовый объект COM перехода и при необходимости создает его.
+Этот метод возвращает указатель на базовый объект перехода COM и при необходимости создает его.
 
-##  <a name="gettype"></a>  CBaseTransition::GetType
+## <a name="cbasetransitiongettype"></a><a name="gettype"></a>CBaseПереход::GetType
 
-Возвращает типа перехода.
+Возвращает тип перехода.
 
 ```
 TRANSITION_TYPE GetType() const;
@@ -300,15 +300,15 @@ TRANSITION_TYPE GetType() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Один из TRANSITION_TYPE значений перечисления.
+Одно из TRANSITION_TYPE перечисленных значений.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод может использоваться для идентификации объекта перехода по его типу. Тип задается в конструкторе производного класса.
+Этот метод можно использовать для определения объекта перехода по его типу. Тип устанавливается в конструкторе в производном классе.
 
-##  <a name="isadded"></a>  CBaseTransition::IsAdded
+## <a name="cbasetransitionisadded"></a><a name="isadded"></a>CBaseПереход::Добавлено
 
-Указывает, добавлен ли переход к раскадровке.
+Сообщает, был ли добавлен переход в раскадровку.
 
 ```
 BOOL IsAdded();
@@ -316,65 +316,65 @@ BOOL IsAdded();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение TRUE, если переход был добавлен к раскадровке, в противном случае — значение FALSE.
+Возвращает TRUE, если переход был добавлен в раскадровку, в противном случае FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот флаг установлен внутренне кода верхнего уровня добавляет переходы на раскадровку.
+Этот флаг устанавливается внутренне, когда код верхнего уровня добавляет переходы к раскадровке.
 
-##  <a name="m_badded"></a>  CBaseTransition::m_bAdded
+## <a name="cbasetransitionm_badded"></a><a name="m_badded"></a>CBaseПереход::m_bAdded
 
-Указывает, добавлен ли переход к раскадровке.
+Уточняется, был ли добавлен переход в раскадровку.
 
 ```
 BOOL m_bAdded;
 ```
 
-##  <a name="m_pendkeyframe"></a>  CBaseTransition::m_pEndKeyframe
+## <a name="cbasetransitionm_pendkeyframe"></a><a name="m_pendkeyframe"></a>CBaseПереход::m_pEndKeyframe
 
-Хранит указатель указывает окончание перехода опорный кадр.
+Хранит указатель на клавиатуру, которая определяет конец перехода.
 
 ```
 CBaseKeyFrame* m_pEndKeyframe;
 ```
 
-##  <a name="m_prelatedvariable"></a>  CBaseTransition::m_pRelatedVariable
+## <a name="cbasetransitionm_prelatedvariable"></a><a name="m_prelatedvariable"></a>CBaseПереход::m_pRelatedVariable
 
-Указатель на переменную анимации, который анимируется с переходом, хранящиеся в m_transition.
+Указатель на переменную анимации, которая анимируется с переходом, хранящимся в m_transition.
 
 ```
 CAnimationVariable* m_pRelatedVariable;
 ```
 
-##  <a name="m_pstartkeyframe"></a>  CBaseTransition::m_pStartKeyframe
+## <a name="cbasetransitionm_pstartkeyframe"></a><a name="m_pstartkeyframe"></a>CBaseПереход:::m_pStartKeyframe
 
-Содержит указатель на начало перехода опорный кадр.
+Хранит указатель на клавиатуру, которая определяет начало перехода.
 
 ```
 CBaseKeyFrame* m_pStartKeyframe;
 ```
 
-##  <a name="m_transition"></a>  CBaseTransition::m_transition
+## <a name="cbasetransitionm_transition"></a><a name="m_transition"></a>CBaseПереход::m_transition
 
-Содержит указатель на IUIAnimationTransition. Значение NULL, если COM-объект перехода не был создан.
+Хранит указатель на IUIAnimationTransition. NULL, если объект перехода COM не создан.
 
 ```
 ATL::CComPtr<IUIAnimationTransition> m_transition;
 ```
 
-##  <a name="m_type"></a>  CBaseTransition::m_type
+## <a name="cbasetransitionm_type"></a><a name="m_type"></a>CBaseПереход::m_type
 
-Сохраняет тип перехода.
+Хранит тип перехода.
 
 ```
 TRANSITION_TYPE m_type;
 ```
 
-##  <a name="setkeyframes"></a>  CBaseTransition::SetKeyframes
+## <a name="cbasetransitionsetkeyframes"></a><a name="setkeyframes"></a>CBaseПереход::SetKeyframes
 
-Задает опорные кадры для перехода.
+Устанавливает ключевые кадры для перехода.
 
-```
+```cpp
 void SetKeyframes(
     CBaseKeyFrame* pStart = NULL,
     CBaseKeyFrame* pEnd = NULL);
@@ -383,44 +383,44 @@ void SetKeyframes(
 ### <a name="parameters"></a>Параметры
 
 *pStart*<br/>
-Опорный кадр, который задает начало перехода.
+Ключевая рамка, опоначальнащая начало перехода.
 
-*Отложить*<br/>
-Опорный кадр, который указывает конец перехода.
+*pEnd*<br/>
+Ключевая рамка, опоедая конец перехода.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод указывает перехода для запуска после указанного опорного кадра и, при необходимости, если ожидаемый не равно NULL, в конце до указанного опорного кадра. Если переход был создан с параметром длительность указано, это время перезаписывается время между опорными кадрами начала и окончания.
+Этот метод сообщает о переходе к запуску после указанного ключевого кадра и, по желанию, если pEnd не является NULL, заканчивается до указанного ключевого кадра. Если переход был создан с указанным параметром продолжительности, эта продолжительность перезаписана с продолжительностью времени между ключами запуска и конца.
 
-##  <a name="setrelatedvariable"></a>  CBaseTransition::SetRelatedVariable
+## <a name="cbasetransitionsetrelatedvariable"></a><a name="setrelatedvariable"></a>CBaseПереход::SetСвязанныйПеременный
 
-Устанавливает связь между переменной анимации и перехода.
+Устанавливает связь между переменной анимации и переходом.
 
-```
+```cpp
 void SetRelatedVariable(CAnimationVariable* pVariable);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*pVariable*<br/>
-Указатель на переменную связанных анимации.
+*pПеременный*<br/>
+Указатель на соответствующую переменную анимации.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Устанавливает связь между переменной анимации и перехода. Переход может применяться только к одной переменной.
+Устанавливает связь между переменной анимации и переходом. Переход может применяться только к одной переменной.
 
-##  <a name="transition_type_enumeration"></a>  Перечисление CBaseTransition::TRANSITION_TYPE
+## <a name="cbasetransitiontransition_type-enumeration"></a><a name="transition_type_enumeration"></a>CBaseПереход:::TRANSITION_TYPE Иномерация
 
-Определяет типы перехода, в настоящее время поддерживает реализацию MFC Windows API анимации.
+Определяет типы переходов, поддерживаемые в настоящее время внедрением MFC API анимации Windows.
 
 ```
 enum TRANSITION_TYPE;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Тип перехода задается в конструкторе класса определенного перехода. Например CSinusoidalTransitionFromRange задает SINUSOIDAL_FROM_RANGE его тип.
+Тип перехода устанавливается в конструкторе конкретного перехода. Например, CSinusoidalTransitionFromRange устанавливает свой тип для SINUSOIDAL_FROM_RANGE.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Классы](../../mfc/reference/mfc-classes.md)

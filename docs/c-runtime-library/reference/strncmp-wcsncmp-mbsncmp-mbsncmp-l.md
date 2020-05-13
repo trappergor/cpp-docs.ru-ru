@@ -1,11 +1,13 @@
 ---
 title: strncmp, wcsncmp, _mbsncmp, _mbsncmp_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - strncmp
 - _mbsncmp
 - wcsncmp
 - _mbsncmp_l
+- _o__mbsncmp
+- _o__mbsncmp_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,6 +23,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -52,12 +55,12 @@ helpviewer_keywords:
 - characters [C++], comparing
 - _ftcsnccmp function
 ms.assetid: 2fdbf4e6-77da-4b59-9086-488f6066b8af
-ms.openlocfilehash: 597db3825d1d6165fb6bd4b98b8d469ea8947b59
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: deae95f8cf7d538dfe22ebbe0e86524765d9d234
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947352"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919318"
 ---
 # <a name="strncmp-wcsncmp-_mbsncmp-_mbsncmp_l"></a>strncmp, wcsncmp, _mbsncmp, _mbsncmp_l
 
@@ -117,26 +120,28 @@ int _mbsncmp_l(
 |0|Строка *строка1* совпадает с подстрокой *строка_замены*|
 |> 0|Строка *строка1* больше, чем *строка2* подстроки|
 
-При ошибке проверки параметров **_mbsncmp** и **_mbsncmp_l** возвращают **_NLSCMPERROR**, который определен в \<> String. h > и \<mbstring. h.
+При ошибке проверки параметров **_mbsncmp** и **_mbsncmp_l** возвращают **_NLSCMPERROR**, которые определены в \<> String. h> и \<mbstring. h.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Функция **strncmp** выполняет порядковое сравнение не более чем *из первых символов* в *строка1* и *строка_замены* и возвращает значение, указывающее связь между подстроками. **strncmp** — это зависящая от регистра версия **_strnicmp**. **wcsncmp** и **_mbsncmp** — это зависящие от регистра версии **_wcsnicmp** и **_mbsnicmp**.
 
 **wcsncmp** и **_mbsncmp** — это версии **strncmp**для расширенных символов и многобайтовых символов. Аргументы **wcsncmp** — это строки расширенных символов; **_mbsncmp** являются строками многобайтовых символов. **_mbsncmp** распознает последовательности многобайтовых символов в соответствии с многобайтовой кодовой страницей и возвращает **_NLSCMPERROR** об ошибке.
 
-Кроме того, **_mbsncmp** и **_mbsncmp_l** проверяют параметры. Если *строка1* или *строка_замены* является пустым указателем, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, **_mbsncmp** и **_Mbsncmp_l** возвращают **_NLSCMPERROR** и присвойте параметру " **No** " значение " **еинвал**". **strncmp** и **wcsncmp** не проверяют свои параметры. В остальном эти функции ведут себя одинаково.
+Кроме того, **_mbsncmp** и **_mbsncmp_l** проверить параметры. Если *строка1* или *строка_замены* является пустым указателем, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, **_mbsncmp** и **_mbsncmp_l** возвращают **_NLSCMPERROR** **и установите значение** **еинвал**. **strncmp** и **wcsncmp** не проверяют свои параметры. В остальном эти функции ведут себя одинаково.
 
-Поведение сравнения **_mbsncmp** и **_mbsncmp_l** зависит от настройки категории **LC_CTYPE** для языкового стандарта. Эта категория определяет обнаружение начальных и конечных байтов в многобайтовых символах. Дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Функция **_mbsncmp** использует текущий языковой стандарт для этого поведения, зависящего от языкового стандарта. Функция **_mbsncmp_l** идентична, за исключением того, что вместо него используется параметр *locale* . Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md). Если языковой стандарт является однобайтовым локальным языком, поведение этих функций идентично **strncmp**.
+Поведение сравнения **_mbsncmp** и **_mbsncmp_l** зависит от значения параметра категории **LC_CTYPE** для языкового стандарта. Эта категория определяет обнаружение начальных и конечных байтов в многобайтовых символах. Дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Функция **_mbsncmp** использует текущий языковой стандарт для этого поведения, зависящего от языкового стандарта. Функция **_mbsncmp_l** идентична, за исключением того, что вместо нее используется параметр *locale* . Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md). Если языковой стандарт является однобайтовым локальным языком, поведение этих функций идентично **strncmp**.
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsnccmp**|**strncmp**|**_mbsncmp**|**wcsncmp**|
 |**_tcsncmp**|**strncmp**|**_mbsnbcmp**|**wcsncmp**|
 |**_tccmp**|Сопоставляется макросу или встраиваемой функции|**_mbsncmp**|Сопоставляется макросу или встраиваемой функции|
-|**Неприменимо**|**Неприменимо**|**_mbsncmp_l**|**Неприменимо**|
+|**неприменимо**|**неприменимо**|**_mbsncmp_l**|**неприменимо**|
 
 ## <a name="requirements"></a>Требования
 
@@ -146,7 +151,7 @@ int _mbsncmp_l(
 |**wcsncmp**|\<string.h> или \<wchar.h>|
 |**_mbsncmp**, **_mbsncmp_l**|\<mbstring.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -197,15 +202,15 @@ Function:   strnicmp _strnicmp (first 10 characters only)
 Result:      String 1 is equal to string 2
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Операции со строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Языковой стандарт](../../c-runtime-library/locale.md)<br/>
+[Управление строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Интерпретация последовательностей многобайтовых символов](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcmp, _mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md)<br/>
 [_mbsnbicmp, _mbsnbicmp_l](mbsnbicmp-mbsnbicmp-l.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
-[Функции strcoll](../../c-runtime-library/strcoll-functions.md)<br/>
+[strcoll Functions](../../c-runtime-library/strcoll-functions.md)<br/>
 [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>
 [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>
 [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>

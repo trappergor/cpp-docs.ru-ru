@@ -1,6 +1,6 @@
 ---
 title: _strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnbcnt_l
 - _mbsnccnt
@@ -8,6 +8,10 @@ api_name:
 - _strncnt
 - _mbsnccnt_l
 - _mbsnbcnt
+- _o__mbsnbcnt
+- _o__mbsnbcnt_l
+- _o__mbsnccnt
+- _o__mbsnccnt_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +24,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -53,19 +58,19 @@ helpviewer_keywords:
 - _mbsnccnt function
 - _wcsncnt function
 ms.assetid: 2a022e9e-a307-4acb-a66b-e56e5357f848
-ms.openlocfilehash: 4c00ae3ff845dfbc3daf4a3ea6ce5c34c43e475f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 020b844d884182ae7553fec9e9db746987189910
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947301"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914214"
 ---
 # <a name="_strncnt-_wcsncnt-_mbsnbcnt-_mbsnbcnt_l-_mbsnccnt-_mbsnccnt_l"></a>_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l
 
 Возвращает число символов или байтов в пределах указанного количества.
 
 > [!IMPORTANT]
-> **_mbsnbcnt**, **_mbsnbcnt_l**, **_mbsnccnt**и **_mbsnccnt_l** нельзя использовать в приложениях, которые выполняются в среда выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsnbcnt**, **_mbsnbcnt_l**, **_mbsnccnt**и **_mbsnccnt_l** не могут использоваться в приложениях, выполняемых в среда выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -115,25 +120,27 @@ size_t _mbsnccnt_l(
 
 **_strncnt** возвращает число символов в первом *числе* байтов строкового *str*в однобайтовой строке. **_wcsncnt** возвращает число символов в первых расширенных символах *строки расширенных* *символов.*
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-**_mbsnbcnt** и **_mbsnbcnt_l** подсчитывает число байтов, найденных в первом *количестве* многобайтовых символов *str*. **_mbsnbcnt** и **_mbsnbcnt_l** заменяют **МТОБ** и должны использоваться вместо **МТОБ**.
+**_mbsnbcnt** и **_mbsnbcnt_l** подсчитывает число байтов, найденных в первом *количестве* многобайтовых символов *str*. **_mbsnbcnt** и **_mbsnbcnt_l** замените **МТОБ** и должны использоваться вместо **МТОБ**.
 
-**_mbsnccnt** и **_mbsnccnt_l** подсчитывает количество символов, найденных в первом *числе* байтов *str*. Если **_mbsnccnt** и **_mbsnccnt_l** встречает символ NULL во втором байте двухбайтовых символов, первый байт также считается нулевым и не включается в возвращаемое значение Count. **_mbsnccnt** и **_mbsnccnt_l** заменяют **бтом** и должны использоваться вместо **бтом**.
+**_mbsnccnt** и **_mbsnccnt_l** подсчитывает количество символов, найденных в первом *числе* байтов *str*. Если во втором байте двухбайтовых символов **_mbsnccnt** и **_mbsnccnt_l** встречает символ null, то первый байт также считается нулевым и не включается в возвращаемое значение Count. **_mbsnccnt** и **_mbsnccnt_l** замените **бтом** и должны использоваться вместо **бтом**.
 
 Если *str* является **пустым** указателем или значение *Count* равно 0, эти функции вызывают обработчик недопустимых параметров, как описано в разделе [Проверка параметров, параметру](../../c-runtime-library/parameter-validation.md)"передано **" задано** значение **еинвал**, а функция возвращает 0.
 
 Выходное значение зависит от настройки категории **LC_CTYPE** языкового стандарта; дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Версии этих функций без суффикса **_l** используют текущий языковой стандарт для данного поведения, зависящего от языкового стандарта; версии с суффиксом **_l** идентичны, за исключением того, что они используют переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Подпрограмма|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |-------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsnbcnt**|**_strncnt**|**_mbsnbcnt**|**_wcsncnt**|
-|**_tcsnccnt**|**_strncnt**|**_mbsnbcnt**|Н/Д|
-|**_wcsncnt**|Н/Д|Н/Д|**_mbsnbcnt**|
-|**_wcsncnt**|Н/Д|Н/Д|**_mbsnccnt**|
-|Н/Д|Н/Д|**_mbsnbcnt_l**|**_mbsnccnt_l**|
+|**_tcsnccnt**|**_strncnt**|**_mbsnbcnt**|н/д|
+|**_wcsncnt**|н/д|н/д|**_mbsnbcnt**|
+|**_wcsncnt**|н/д|н/д|**_mbsnccnt**|
+|н/д|н/д|**_mbsnbcnt_l**|**_mbsnccnt_l**|
 
 ## <a name="requirements"></a>Требования
 
@@ -146,7 +153,7 @@ size_t _mbsnccnt_l(
 |**_strncnt**|\<tchar.h>|
 |**_wcsncnt**|\<tchar.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -177,7 +184,7 @@ The first 10 characters are single-byte.
 
 ## <a name="see-also"></a>См. также
 
-[Операции со строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Языковой стандарт](../../c-runtime-library/locale.md)<br/>
+[Управление строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Интерпретация последовательностей многобайтовых символов](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>

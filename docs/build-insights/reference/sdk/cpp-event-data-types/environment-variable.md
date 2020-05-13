@@ -1,6 +1,6 @@
 ---
-title: Класс EnvironmentVariable
-description: Справочник C++ по классу SDK для Build Insights EnvironmentVariable.
+title: Окружающая средаПеременный класс
+description: Ссылка на класс SDK Build Insights SDK EnvironmentVariable.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 19e9278e76fb2116dac30a0e790fba86c6c56484
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 963c52e0ea9e048448c6f2b3ac62d9938817467e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334928"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325020"
 ---
-# <a name="environmentvariable-class"></a>Класс EnvironmentVariable
+# <a name="environmentvariable-class"></a>Окружающая средаПеременный класс
 
 ::: moniker range="<=vs-2015"
 
-Пакет C++ SDK для Build Insights совместим с Visual Studio 2017 и более поздних версий. Чтобы просмотреть документацию по этим версиям, присвойте элементу управления "Выбор версий Visual Studio" для этой статьи значение Visual Studio 2017 или Visual Studio 2019.
+SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Класс `EnvironmentVariable` используется с функциями [матчевент](../functions/match-event.md), [матчевентинмемберфунктион](../functions/match-event-in-member-function.md), [матчевентстакк](../functions/match-event-stack.md)и [матчевентстаккинмемберфунктион](../functions/match-event-stack-in-member-function.md) . Используйте его для сопоставления с событием [ENVIRONMENT_VARIABLE](../event-table.md#environment-variable) .
+Класс `EnvironmentVariable` используется с функциями [MatchEvent,](../functions/match-event.md) [MatchEventInMemberFunction,](../functions/match-event-in-member-function.md) [MatchEventStack](../functions/match-event-stack.md)и [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Используйте его для соответствия [ENVIRONMENT_VARIABLE](../event-table.md#environment-variable) событию.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -40,9 +40,9 @@ public:
 };
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
-Вместе с наследуемыми членами из своего базового класса [симпливент](simple-event.md) класс `EnvironmentVariable` содержит следующие члены:
+Наряду с унаследованных членов из `EnvironmentVariable` своего базового класса [SimpleEvent,](simple-event.md) класс содержит следующие члены:
 
 ### <a name="constructors"></a>Конструкторы
 
@@ -50,10 +50,10 @@ public:
 
 ### <a name="functions"></a>Функции
 
-[имя](#name)
-[значение](#value)
+[Name](#name)
+[Значение](#value) имени
 
-## <a name="environment-variable"></a>EnvironmentVariable
+## <a name="environmentvariable"></a><a name="environment-variable"></a>Окружающая средаПеременная
 
 ```cpp
 EnvironmentVariable(const RawEvent& event);
@@ -61,10 +61,10 @@ EnvironmentVariable(const RawEvent& event);
 
 ### <a name="parameters"></a>Параметры
 
-*event*\
-Событие [ENVIRONMENT_VARIABLE](../event-table.md#environment-variable) .
+*Событие*\
+[Событие ENVIRONMENT_VARIABLE.](../event-table.md#environment-variable)
 
-## <a name="name"></a> Name
+## <a name="name"></a><a name="name"></a>Имя
 
 ```cpp
 const wchar_t Name() const;
@@ -74,7 +74,7 @@ const wchar_t Name() const;
 
 Имя переменной среды.
 
-## <a name="value"></a>Значений
+## <a name="value"></a><a name="value"></a> Значение
 
 ```cpp
 const wchar_t Value() const;

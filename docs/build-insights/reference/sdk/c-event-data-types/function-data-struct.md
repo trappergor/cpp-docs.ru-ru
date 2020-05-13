@@ -1,6 +1,6 @@
 ---
-title: Структура FUNCTION_DATA
-description: В C++ пакете SDK для аналитики сборки FUNCTION_DATA ссылка на структуру.
+title: структура FUNCTION_DATA
+description: Ссылка на структуру SDK Build Insights sDK FUNCTION_DATA.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 718e93bed798786a4596ccb3e724b2b54d4fe79d
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: ec715192e3480932d351cdb4be1443c329a4868b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78335180"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325537"
 ---
-# <a name="function_data-structure"></a>Структура FUNCTION_DATA
+# <a name="function_data-structure"></a>структура FUNCTION_DATA
 
 ::: moniker range="<=vs-2015"
 
-Пакет C++ SDK для Build Insights совместим с Visual Studio 2017 и более поздних версий. Чтобы просмотреть документацию по этим версиям, присвойте элементу управления "Выбор версий Visual Studio" для этой статьи значение Visual Studio 2017 или Visual Studio 2019.
+SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
@@ -37,10 +37,10 @@ typedef struct FUNCTION_DATA_TAG
 } FUNCTION_DATA;
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 |  |  |
 |--|--|
-| `Name` | Имя функции в кодировке UTF-8. |
+| `Name` | Название функции, закодированное в UTF-8. |
 
 ::: moniker-end

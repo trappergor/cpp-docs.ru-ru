@@ -1,5 +1,5 @@
 ---
-title: Класс Ккомтеароффобжект
+title: Класс CComTearOffObject
 ms.date: 11/04/2016
 f1_keywords:
 - CComTearOffObject
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - tear-off interfaces
 - CComTearOffObject class
 ms.assetid: d974b598-c6b2-42b1-8360-9190d9d0fbf3
-ms.openlocfilehash: 0d27a6fa3c0070cd32c78971a7544327c51d4393
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: de7528d3972991c233ee4b9037f609b89d0f7434
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496914"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327311"
 ---
-# <a name="ccomtearoffobject-class"></a>Класс Ккомтеароффобжект
+# <a name="ccomtearoffobject-class"></a>Класс CComTearOffObject
 
-Этот класс реализует интерфейс разрыва.
+Этот класс реализует отрывной интерфейс.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -35,49 +35,49 @@ class CComTearOffObject : public Base
 
 #### <a name="parameters"></a>Параметры
 
-*Из*<br/>
-Класс отрыва, производный от `CComTearOffObjectBase` , и интерфейсы, которые должен поддерживать ваш объект отрыва.
+*Базы*<br/>
+Ваш класс отрыва, полученный из `CComTearOffObjectBase` интерфейсов, которые вы хотите, чтобы ваш объект отрыва в поддержку.
 
-ATL реализует `CComTearOffObjectBase` интерфейсы разрыва в два этапа — методы обработают счетчик ссылок и `QueryInterface`, в своюмся `CComTearOffObject` , реализуют [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown).
+ATL реализует свои отрыва явные интерфейсы `CComTearOffObjectBase` в два этапа `QueryInterface`- `CComTearOffObject` методы обрабатывать подсчет ссылок и , в то время как реализует [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown).
 
 ## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[Ккомтеароффобжект:: Ккомтеароффобжект](#ccomtearoffobject)|Конструктор.|
-|[Ккомтеароффобжект:: ~ Ккомтеароффобжект](#dtor)|Деструктор|
+|[CComTearOffObject::CcomtearoffObject](#ccomtearoffobject)|Конструктор.|
+|[CComTearOffObject:::CComTearoffObject](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[Ккомтеароффобжект:: AddRef](#addref)|Увеличивает значение счетчика ссылок для `CComTearOffObject` объекта.|
-|[Ккомтеароффобжект:: QueryInterface](#queryinterface)|Возвращает указатель на запрошенный интерфейс либо в классе отрыва, либо в классе Owner.|
-|[Ккомтеароффобжект:: Release](#release)|Уменьшает значение счетчика ссылок для `CComTearOffObject` объекта и уничтожает его.|
+|[CComTearOffObject:AddRef](#addref)|Приращения отсчета `CComTearOffObject` ссылки на объект.|
+|[CComTearOffObject::QueryInterface](#queryinterface)|Возвращает указатель на запрашиваемый интерфейс либо на класс отрыва, либо на класс владельца.|
+|[CComTearOffObject::Release](#release)|Декретирует значение ссылки `CComTearOffObject` на объект и уничтожает его.|
 
-### <a name="ccomtearoffobjectbase-methods"></a>Методы Ккомтеароффобжектбасе
-
-|||
-|-|-|
-|[ккомтеароффобжектбасе](#ccomtearoffobjectbase)|Конструктор.|
-
-### <a name="ccomtearoffobjectbase-data-members"></a>Элементы данных Ккомтеароффобжектбасе
+### <a name="ccomtearoffobjectbase-methods"></a>Методы CComTearOffObjectBase
 
 |||
 |-|-|
-|[m_pOwner](#m_powner)|Указатель на `CComObject` производный от класса Owner.|
+|[CComTearOffObjectBase](#ccomtearoffobjectbase)|Конструктор.|
 
-## <a name="remarks"></a>Примечания
+### <a name="ccomtearoffobjectbase-data-members"></a>CComTearOffObjectBase данных членов
 
-`CComTearOffObject`реализует интерфейс разрыва как отдельный объект, который создается только при запросе к этому интерфейсу. Разрыв удаляется, когда счетчик ссылок становится равным нулю. Как правило, создается интерфейс разрыва для интерфейса, который редко используется, поскольку при использовании разрыва сохраняется указатель vtable во всех экземплярах основного объекта.
+|||
+|-|-|
+|[m_pOwner](#m_powner)|Указатель на `CComObject` производные от класса владельца.|
 
-Класс, реализующий отрыв, должен быть производным от `CComTearOffObjectBase` любого интерфейса, который должен поддерживать ваш объект отрыва. `CComTearOffObjectBase`преобразованный в классе owner и потоковой модели. Класс owner — это класс объекта, для которого реализуется отрыв. Если не указать модель потоков, используется модель потоков по умолчанию.
+## <a name="remarks"></a>Remarks
 
-Необходимо создать карту COM для класса отрыва. Когда библиотека ATL создает экземпляр, он создает `CComTearOffObject<CYourTearOffClass>` или. `CComCachedTearOffObject<CYourTearOffClass>`
+`CComTearOffObject`реализует интерфейс отрыва в виде отдельного объекта, который мгновенно выполняется только тогда, когда этот интерфейс запрашивается. Разрыв удаляется, когда количество ссылок становится нулевым. Как правило, вы создаете интерфейс отрыва для интерфейса, который используется редко, так как использование отрыва сохраняет указатель vtable во всех экземплярах вашего основного объекта.
 
-Например, в образце `CBeeper2` BEEPER класс является классом отрыва, `CBeeper` а класс является классом-владельцем:
+Вы должны получить класс реализации отрыва от `CComTearOffObjectBase` и от того, какие интерфейсы вы хотите, чтобы ваш объект отрыва для поддержки. `CComTearOffObjectBase`шаблонируется на классе владельца и модели потока. Класс владельца — это класс объекта, для которого осуществляется разрыв. Если не указано модель потока, используется модель потока по умолчанию.
+
+Вы должны создать карту COM для вашего класса отрыва. Когда ATL мгновенно отрыв, он будет создавать `CComTearOffObject<CYourTearOffClass>` `CComCachedTearOffObject<CYourTearOffClass>`или .
+
+Например, в образце BEEPER `CBeeper2` класс является классом `CBeeper` отрыва, а класс — классом владельца:
 
 [!code-cpp[NVC_ATL_COM#43](../../atl/codesnippet/cpp/ccomtearoffobject-class_1.h)]
 
@@ -89,11 +89,11 @@ ATL реализует `CComTearOffObjectBase` интерфейсы разрыв
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** атлком. h
+**Заголовок:** atlcom.h
 
-##  <a name="addref"></a>Ккомтеароффобжект:: AddRef
+## <a name="ccomtearoffobjectaddref"></a><a name="addref"></a>CComTearOffObject:AddRef
 
-Увеличивает значение счетчика `CComTearOffObject` ссылок объекта на единицу.
+Приращения отсчета `CComTearOffObject` ссылки объекта по одному.
 
 ```
 STDMETHOD_(ULONG, AddRef)();
@@ -103,7 +103,7 @@ STDMETHOD_(ULONG, AddRef)();
 
 Значение, которое может быть полезно для диагностики и тестирования.
 
-##  <a name="ccomtearoffobject"></a>Ккомтеароффобжект:: Ккомтеароффобжект
+## <a name="ccomtearoffobjectccomtearoffobject"></a><a name="ccomtearoffobject"></a>CComTearOffObject::CcomtearoffObject
 
 Конструктор.
 
@@ -113,14 +113,14 @@ CComTearOffObject(void* pv);
 
 ### <a name="parameters"></a>Параметры
 
-*PV*<br/>
-окне Указатель, который будет преобразован в указатель на `CComObject<Owner>` объект.
+*Pv*<br/>
+(в) Указатель, который будет преобразован в `CComObject<Owner>` указатель на объект.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Увеличивает счетчик ссылок владельца на единицу.
+Приращения счета ссылки владельца на один.
 
-##  <a name="dtor"></a>Ккомтеароффобжект:: ~ Ккомтеароффобжект
+## <a name="ccomtearoffobjectccomtearoffobject"></a><a name="dtor"></a>CComTearOffObject:::CComTearoffObject
 
 Деструктор
 
@@ -128,11 +128,11 @@ CComTearOffObject(void* pv);
 ~CComTearOffObject();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Освобождает все выделенные ресурсы, вызывает Финалрелеасе и уменьшает число блокировок модуля.
+Освобождает все выделенные ресурсы, вызывает FinalRelease и высчитывает количество блокировки модуля.
 
-##  <a name="ccomtearoffobjectbase"></a>Ккомтеароффобжект:: Ккомтеароффобжектбасе
+## <a name="ccomtearoffobjectccomtearoffobjectbase"></a><a name="ccomtearoffobjectbase"></a>CComTearOffObject::CcomtearoffObjectBase
 
 Конструктор.
 
@@ -140,13 +140,13 @@ CComTearOffObject(void* pv);
 CComTearOffObjectBase();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Инициализирует член [m_pOwner](#m_powner) значением NULL.
+Инициализирует [m_pOwner](#m_powner) член NULL.
 
-##  <a name="m_powner"></a>Ккомтеароффобжект:: m_pOwner
+## <a name="ccomtearoffobjectm_powner"></a><a name="m_powner"></a>CComTearOffObject:::m_pOwner
 
-Указатель на объект [CComObject](../../atl/reference/ccomobject-class.md) , производный от *owner*.
+Указатель на объект [CComObject,](../../atl/reference/ccomobject-class.md) полученный от *владельца.*
 
 ```
 CComObject<Owner>* m_pOwner;
@@ -155,13 +155,13 @@ CComObject<Owner>* m_pOwner;
 ### <a name="parameters"></a>Параметры
 
 *Владелец*<br/>
-окне Класс, для которого реализуется отрыв.
+(в) Класс, для которого осуществляется разрыв.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Во время создания указатель инициализируется значением NULL.
+Указатель инициализирован до NULL во время строительства.
 
-##  <a name="queryinterface"></a>Ккомтеароффобжект:: QueryInterface
+## <a name="ccomtearoffobjectqueryinterface"></a><a name="queryinterface"></a>CComTearOffObject::QueryInterface
 
 Извлекает указатель на запрошенный интерфейс.
 
@@ -171,23 +171,23 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Параметры
 
-*IID*<br/>
-окне IID запрашиваемого интерфейса.
+*Iid*<br/>
+(в) IID запрашиваемого интерфейса.
 
-*ппвобжект*<br/>
-заполняет Указатель на указатель интерфейса, идентифицируемый по *IID*, или значение null, если интерфейс не найден.
+*ppvObject*<br/>
+(ваут) Указатель на указатель интерфейса, идентифицированный *iid,* или NULL, если интерфейс не найден.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Сначала запросы для интерфейсов в классе отрыва. Если интерфейс отсутствует, запрашивает интерфейс для объекта-владельца. Если запрошенный интерфейс имеет `IUnknown`значение, возвращает `IUnknown` объект владельца.
+Запросы сначала для интерфейсов на вашем отрыв-офф класса. Если интерфейса нет, запросы для интерфейса на объекте владельца. Если запрашиваемый `IUnknown`интерфейс, `IUnknown` возвращает владельца.
 
-##  <a name="release"></a>Ккомтеароффобжект:: Release
+## <a name="ccomtearoffobjectrelease"></a><a name="release"></a>CComTearOffObject::Release
 
-Уменьшает значение счетчика ссылок на единицу и, если счетчик ссылок равен нулю, удаляет `CComTearOffObject`.
+Декретирует количество ссылок на один и, если количество `CComTearOffObject`ссылок равно нулю, удаляет .
 
 ```
 STDMETHOD_ULONG Release();
@@ -195,9 +195,9 @@ STDMETHOD_ULONG Release();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-В сборках, не относящихся к отладке, всегда возвращает ноль. В отладочных сборках возвращает значение, которое может быть полезно для диагностики или тестирования.
+В неотлибуговых сборках всегда возвращается ноль. В сборках отладок возвращается значение, которое может быть полезно для диагностики или тестирования.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md)<br/>
-[Обзор класса](../../atl/atl-class-overview.md)
+[Общие сведения о классах](../../atl/atl-class-overview.md)

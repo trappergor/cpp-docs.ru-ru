@@ -1,0 +1,530 @@
+- name: Разработка на UWP
+  href: ../cppcx/universal-windows-apps-cpp.md
+- name: Справочник по языку C++/CX
+  expanded: false
+  items:
+    - name: Справочник по языку C++/CX
+      href: ../cppcx/visual-c-language-reference-c-cx.md
+    - name: Краткий справочник
+      href: ../cppcx/quick-reference-c-cx.md
+    - name: Система типов
+      expanded: false
+      items:
+        - name: Система типов
+          href: ../cppcx/type-system-c-cx.md
+        - name: Пространства имен и видимость типов (C++/CX)
+          href: ../cppcx/namespaces-and-type-visibility-c-cx.md
+        - name: Фундаментальные типы
+          href: ../cppcx/fundamental-types-c-cx.md
+        - name: Строки
+          href: ../cppcx/strings-c-cx.md
+        - name: Классы Array и WriteOnlyArray
+          href: ../cppcx/array-and-writeonlyarray-c-cx.md
+        - name: Классы и структуры ссылки
+          href: ../cppcx/ref-classes-and-structs-c-cx.md
+        - name: Классы и структуры значения
+          href: ../cppcx/value-classes-and-structs-c-cx.md
+        - name: Разделяемые классы
+          href: ../cppcx/partial-classes-c-cx.md
+        - name: Свойства
+          href: ../cppcx/properties-c-cx.md
+        - name: Коллекции
+          href: ../cppcx/collections-c-cx.md
+        - name: Классы ссылки шаблонов
+          href: ../cppcx/template-ref-classes-c-cx.md
+        - name: Интерфейсы
+          href: ../cppcx/interfaces-c-cx.md
+        - name: Перечисления
+          href: ../cppcx/enums-c-cx.md
+        - name: Делегаты
+          href: ../cppcx/delegates-c-cx.md
+        - name: Исключения
+          href: ../cppcx/exceptions-c-cx.md
+        - name: События
+          href: ../cppcx/events-c-cx.md
+        - name: Приведение
+          href: ../cppcx/casting-c-cx.md
+        - name: Упаковка
+          href: ../cppcx/boxing-c-cx.md
+        - name: Атрибуты
+          href: ../cppcx/attributes-c-cx.md
+        - name: Перевод типов и членов в разряд нерекомендуемых
+          href: ../cppcx/deprecating-types-and-members-c-cx.md
+    - name: Построение приложений и библиотек
+      expanded: false
+      items:
+        - name: Сборка приложений и библиотек
+          href: ../cppcx/building-apps-and-libraries-c-cx.md
+        - name: Параметры компилятора и компоновщика
+          href: ../cppcx/compiler-and-linker-options-c-cx.md
+        - name: Статические библиотеки
+          href: ../cppcx/static-libraries-c-cx.md
+        - name: библиотеки DLL
+          href: ../cppcx/dlls-c-cx.md
+    - name: Взаимодействие с другими языками
+      expanded: false
+      items:
+        - name: Взаимодействие с другими языками
+          href: ../cppcx/interoperating-with-other-languages-c-cx.md
+        - name: Интеграция с JavaScript
+          href: ../cppcx/javascript-integration-c-cx.md
+        - name: Интеграция со средой CLR
+          href: ../cppcx/clr-integration-c-cx.md
+        - name: Интеграция с WRL
+          href: ../cppcx/wrl-integration-c-cx.md
+    - name: Получение указателей на буферы данных
+      href: ../cppcx/obtaining-pointers-to-data-buffers-c-cx.md
+    - name: Работа с потоками и маршалинг
+      href: ../cppcx/threading-and-marshaling-c-cx.md
+    - name: Слабые ссылки и устранение циклов
+      href: ../cppcx/weak-references-and-breaking-cycles-c-cx.md
+    - name: Справочник по пространствам имен
+      expanded: false
+      items:
+        - name: Справочник по пространствам имен
+          href: ../cppcx/namespaces-reference-c-cx.md
+        - name: Пространство имен default
+          expanded: false
+          items:
+            - name: Пространство имен default
+              href: ../cppcx/default-namespace.md
+            - name: 'default::(имя_типа)::Equals'
+              href: ../cppcx/default-type-name-equals-method.md
+            - name: 'default::(имя_типа)::GetHashCode'
+              href: ../cppcx/default-type-name-gethashcode-method.md
+            - name: 'default::(имя_типа)::GetType'
+              href: ../cppcx/default-type-name-gettype-method.md
+            - name: 'default::(имя_типа)::ToString'
+              href: ../cppcx/default-type-name-tostring-method.md
+        - name: Пространство имен Platform
+          expanded: false
+          items:
+            - name: Пространство имен Platform
+              href: ../cppcx/platform-namespace-c-cx.md
+            - name: 'Класс Platform::AccessDeniedException'
+              href: ../cppcx/platform-accessdeniedexception-class.md
+            - name: 'Класс Platform::Agile'
+              href: ../cppcx/platform-agile-class.md
+            - name: 'Класс Platform::Array'
+              href: ../cppcx/platform-array-class.md
+            - name: 'Класс Platform::ArrayReference'
+              href: ../cppcx/platform-arrayreference-class.md
+            - name: 'Класс значений Platform::Boolean'
+              href: ../cppcx/platform-boolean-value-class.md
+            - name: 'Класс Platform::Box'
+              href: ../cppcx/platform-box-class.md
+            - name: 'Перечисление Platform::CallbackContext'
+              href: ../cppcx/platform-callbackcontext-enumeration.md
+            - name: 'Класс Platform::ChangedStateException'
+              href: ../cppcx/platform-changedstateexception-class.md
+            - name: 'Класс Platform::ClassNotRegisteredException'
+              href: ../cppcx/platform-classnotregisteredexception-class.md
+            - name: 'Класс Platform::COMException'
+              href: ../cppcx/platform-comexception-class.md
+            - name: 'Класс Platform::Delegate'
+              href: ../cppcx/platform-delegate-class.md
+            - name: 'Класс Platform::DisconnectedException'
+              href: ../cppcx/platform-disconnectedexception-class.md
+            - name: 'Класс Platform::Enum'
+              href: ../cppcx/platform-enum-class.md
+            - name: 'Класс Platform::Exception'
+              href: ../cppcx/platform-exception-class.md
+            - name: 'Класс Platform::FailureException'
+              href: ../cppcx/platform-failureexception-class.md
+            - name: 'Класс значения Platform::Guid'
+              href: ../cppcx/platform-guid-value-class.md
+            - name: 'Интерфейс Platform::IBox'
+              href: ../cppcx/platform-ibox-interface.md
+            - name: 'Интерфейс Platform::IBoxArray'
+              href: ../cppcx/platform-iboxarray-interface.md
+            - name: 'Интерфейс Platform::IDisposable'
+              href: ../cppcx/platform-idisposable-interface.md
+            - name: 'Класс значения Platform::IntPtr'
+              href: ../cppcx/platform-intptr-value-class.md
+            - name: 'Класс Platform::InvalidArgumentException'
+              href: ../cppcx/platform-invalidargumentexception-class.md
+            - name: 'Класс Platform::InvalidCastException'
+              href: ../cppcx/platform-invalidcastexception-class.md
+            - name: 'Интерфейс Platform::IValueType'
+              href: ../cppcx/platform-ivaluetype-interface.md
+            - name: 'Класс Platform::MTAThreadAttribute'
+              href: ../cppcx/platform-mtathreadattribute-class.md
+            - name: 'Класс Platform::NotImplementedException'
+              href: ../cppcx/platform-notimplementedexception-class.md
+            - name: 'Класс Platform::NullReferenceException'
+              href: ../cppcx/platform-nullreferenceexception-class.md
+            - name: 'Класс Platform::Object'
+              href: ../cppcx/platform-object-class.md
+            - name: 'Класс Platform::ObjectDisposedException'
+              href: ../cppcx/platform-objectdisposedexception-class.md
+            - name: 'Класс Platform::OperationCanceledException'
+              href: ../cppcx/platform-operationcanceledexception-class.md
+            - name: 'Класс Platform::OutOfBoundsException'
+              href: ../cppcx/platform-outofboundsexception-class.md
+            - name: 'Класс Platform::OutOfMemoryException'
+              href: ../cppcx/platform-outofmemoryexception-class.md
+            - name: 'Platform::ReCreateException'
+              href: ../cppcx/platform-recreateexception-method.md
+            - name: 'Класс значения Platform::SizeT'
+              href: ../cppcx/platform-sizet-value-class.md
+            - name: 'Класс Platform::STAThreadAttribute'
+              href: ../cppcx/platform-stathreadattribute-class.md
+            - name: 'Класс Platform::String'
+              href: ../cppcx/platform-string-class.md
+            - name: 'Класс Platform::StringReference'
+              href: ../cppcx/platform-stringreference-class.md
+            - name: 'Класс Platform::Type'
+              href: ../cppcx/platform-type-class.md
+            - name: 'Оператор Platform::Type^'
+              href: ../cppcx/operator-type-hat.md
+            - name: 'Перечисление Platform::TypeCode'
+              href: ../cppcx/platform-typecode-enumeration.md
+            - name: 'Класс значений Platform::UIntPtr'
+              href: ../cppcx/platform-uintptr-value-class.md
+            - name: 'Класс Platform::ValueType'
+              href: ../cppcx/platform-valuetype-class.md
+            - name: 'Класс Platform::WeakReference'
+              href: ../cppcx/platform-weakreference-class.md
+            - name: 'Класс Platform::WriteOnlyArray'
+              href: ../cppcx/platform-writeonlyarray-class.md
+            - name: 'Класс Platform::WrongThreadException'
+              href: ../cppcx/platform-wrongthreadexception-class.md
+        - name: 'Пространство имен Platform::Collections'
+          expanded: false
+          items:
+            - name: 'Пространство имен Platform::Collections'
+              href: ../cppcx/platform-collections-namespace.md
+            - name: 'Класс Platform::Collections::BackInsertIterator'
+              href: ../cppcx/platform-collections-backinsertiterator-class.md
+            - name: 'Класс Platform::Collections::InputIterator'
+              href: ../cppcx/platform-collections-inputiterator-class.md
+            - name: 'Класс Platform::Collections::Map'
+              href: ../cppcx/platform-collections-map-class.md
+            - name: 'Класс Platform::Collections::MapView'
+              href: ../cppcx/platform-collections-mapview-class.md
+            - name: 'Класс Platform::Collections::UnorderedMap'
+              href: ../cppcx/platform-collections-unorderedmap-class.md
+            - name: 'Класс Platform::Collections::UnorderedMapView'
+              href: ../cppcx/platform-collections-unorderedmapview-class.md
+            - name: 'Класс Platform::Collections::Vector'
+              href: ../cppcx/platform-collections-vector-class.md
+            - name: 'Класс Platform::Collections::VectorIterator'
+              href: ../cppcx/platform-collections-vectoriterator-class.md
+            - name: 'Класс Platform::Collections::VectorView'
+              href: ../cppcx/platform-collections-vectorview-class.md
+            - name: 'Класс Platform::Collections::VectorViewIterator'
+              href: ../cppcx/platform-collections-vectorviewiterator-class.md
+        - name: 'Пространство имен Platform::Collections::Details'
+          href: ../cppcx/platform-collections-details-namespace.md
+        - name: 'Пространство имен Platform::Details'
+          expanded: false
+          items:
+            - name: 'Пространство имен Platform::Details'
+              href: ../cppcx/platform-details-namespace.md
+            - name: 'Структура Platform::Details::__GUID'
+              href: ../cppcx/platform-details-guid-struct.md
+            - name: 'Класс Platform::Details::Console'
+              href: ../cppcx/platform-details-console-class.md
+            - name: 'Класс Platform::Details::Heap'
+              href: ../cppcx/platform-details-heap-class.md
+            - name: 'Перечисление Platform::Details::HeapAllocationTrackingLevel'
+              href: ../cppcx/platform-details-heapallocationtrackinglevel-enumeration.md
+            - name: 'Делегат Platform::Details::HeapEntryHandler'
+              href: ../cppcx/platform-details-heapentryhandler-delegate.md
+            - name: 'Интерфейс Platform::Details::IEquatable'
+              href: ../cppcx/platform-details-iequatable-interface.md
+            - name: 'Интерфейс Platform::Details::IPrintable'
+              href: ../cppcx/platform-details-iprintable-interface.md
+        - name: 'Пространство имен Platform::Metadata'
+          expanded: false
+          items:
+            - name: 'Пространство имен Platform::Metadata'
+              href: ../cppcx/platform-metadata-namespace.md
+            - name: 'Атрибут Platform::Metadata::Attribute'
+              href: ../cppcx/platform-metadata-attribute-attribute.md
+            - name: 'Атрибут Platform::Metadata::DefaultMemberAttribute'
+              href: ../cppcx/platform-metadata-defaultmemberattribute-attribute.md
+            - name: 'Атрибут Platform::Metadata::FlagsAttribute'
+              href: ../cppcx/platform-metadata-flagsattribute-attribute.md
+            - name: 'Platform::Metadata::RuntimeClassName'
+              href: ../cppcx/platform-metadata-runtimeclassname.md
+        - name: 'Пространство имен Platform::Runtime::CompilerServices'
+          href: ../cppcx/platform-runtime-compilerservices-namespace.md
+        - name: 'Пространство имен Platform::Runtime::InteropServices'
+          href: ../cppcx/platform-runtime-interopservices-namespace.md
+        - name: 'Пространство имен Windows::Foundation::Collections'
+          expanded: false
+          items:
+            - name: 'Пространство имен Windows::Foundation::Collections'
+              href: ../cppcx/windows-foundation-collections-namespace-c-cx.md
+            - name: Функция back_inserter
+              href: ../cppcx/back-inserter-function.md
+            - name: Функция begin
+              href: ../cppcx/begin-function.md
+            - name: Функция end
+              href: ../cppcx/end-function.md
+            - name: Функция to_vector
+              href: ../cppcx/to-vector-function.md
+        - name: 'Оператор Windows::UI::Xaml::Interop::TypeName'
+          href: ../cppcx/operator-windows-ui-xaml-interop-typename.md
+    - name: 'Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows'
+      href: ../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md
+- name: Библиотека шаблонов C++ среды выполнения Windows (WRL)
+  expanded: false
+  items:
+    - name: Библиотека шаблонов C++ среды выполнения Windows (WRL)
+      href: ../cppcx/wrl/windows-runtime-cpp-template-library-wrl.md
+    - name: Практическое руководство. Активация и использование компонента среды выполнения Windows с помощью WRL
+      href: ../cppcx/wrl/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md
+    - name: Практическое руководство. Завершение асинхронных операций с использованием WRL
+      href: ../cppcx/wrl/how-to-complete-asynchronous-operations-using-wrl.md
+    - name: Практическое руководство. Обработка событий с использованием WRL
+      href: ../cppcx/wrl/how-to-handle-events-using-wrl.md
+    - name: "Пошаговое руководство. Создание приложения UWP с использованием WRL и Media\_Foundation"
+      href: ../cppcx/wrl/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md
+    - name: Практическое руководство. Создание классического компонента COM с помощью WRL
+      href: ../cppcx/wrl/how-to-create-a-classic-com-component-using-wrl.md
+    - name: Практическое руководство. Непосредственное создание экземпляров компонентов WRL
+      href: ../cppcx/wrl/how-to-instantiate-wrl-components-directly.md
+    - name: Практическое руководство. Использование winmdidl.exe и midlrt.exe для создания H-файлов из метаданных Windows
+      href: ../cppcx/wrl/use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md
+    - name: Основные API WRL по категориям
+      href: ../cppcx/wrl/key-wrl-apis-by-category.md
+    - name: Справочник по WRL
+      expanded: false
+      items:
+        - name: Справочник по WRL
+          href: ../cppcx/wrl/wrl-reference.md
+        - name: 'Пространство имен Microsoft::WRL'
+          expanded: false
+          items:
+            - name: 'Пространство имен Microsoft::WRL'
+              href: ../cppcx/wrl/microsoft-wrl-namespace.md
+            - name: Макросы ActivatableClass
+              href: ../cppcx/wrl/activatableclass-macros.md
+            - name: Класс ActivationFactory
+              href: ../cppcx/wrl/activationfactory-class.md
+            - name: Класс AgileActivationFactory
+              href: ../cppcx/wrl/agileactivationfactory-class.md
+            - name: Класс AgileEventSource
+              href: ../cppcx/wrl/agileeventsource-class.md
+            - name: Функция AsWeak
+              href: ../cppcx/wrl/asweak-function.md
+            - name: Класс AsyncBase
+              href: ../cppcx/wrl/asyncbase-class.md
+            - name: Перечисление AsyncResultType
+              href: ../cppcx/wrl/asyncresulttype-enumeration.md
+            - name: Функция Callback (WRL)
+              href: ../cppcx/wrl/callback-function-wrl.md
+            - name: Перечисление CancelTransitionPolicy
+              href: ../cppcx/wrl/canceltransitionpolicy-enumeration.md
+            - name: Структура ChainInterfaces
+              href: ../cppcx/wrl/chaininterfaces-structure.md
+            - name: Класс ClassFactory
+              href: ../cppcx/wrl/classfactory-class.md
+            - name: Структура CloakedIid
+              href: ../cppcx/wrl/cloakediid-structure.md
+            - name: Класс ComposableBase
+              href: ../cppcx/wrl/composablebase-class.md
+            - name: Класс ComPtr
+              href: ../cppcx/wrl/comptr-class.md
+            - name: Функция CreateActivationFactory
+              href: ../cppcx/wrl/createactivationfactory-function.md
+            - name: Функция CreateClassFactory
+              href: ../cppcx/wrl/createclassfactory-function.md
+            - name: Класс DeferrableEventArgs
+              href: ../cppcx/wrl/deferrableeventargs-class.md
+            - name: Класс EventSource
+              href: ../cppcx/wrl/eventsource-class.md
+            - name: Перечисление FactoryCacheFlags
+              href: ../cppcx/wrl/factorycacheflags-enumeration.md
+            - name: Класс FtmBase
+              href: ../cppcx/wrl/ftmbase-class.md
+            - name: Функция GetModuleBase
+              href: ../cppcx/wrl/getmodulebase-function.md
+            - name: Структура Implements
+              href: ../cppcx/wrl/implements-structure.md
+            - name: Макрос InspectableClass
+              href: ../cppcx/wrl/inspectableclass-macro.md
+            - name: Структура InvokeModeOptions
+              href: ../cppcx/wrl/invokemodeoptions-structure.md
+            - name: Функция Make
+              href: ../cppcx/wrl/make-function.md
+            - name: Структура MixIn
+              href: ../cppcx/wrl/mixin-structure.md
+            - name: Класс Module
+              expanded: false
+              items:
+                - name: Module - класс
+                  href: ../cppcx/wrl/module-class.md
+                - name: 'Класс Module::GenericReleaseNotifier'
+                  href: ../cppcx/wrl/module-genericreleasenotifier-class.md
+                - name: 'Класс Module::MethodReleaseNotifier'
+                  href: ../cppcx/wrl/module-methodreleasenotifier-class.md
+                - name: 'Класс Module::ReleaseNotifier'
+                  href: ../cppcx/wrl/module-releasenotifier-class.md
+            - name: Перечисление ModuleType
+              href: ../cppcx/wrl/moduletype-enumeration.md
+            - name: 'Оператор operator!= (Microsoft::WRL)'
+              href: ../cppcx/wrl/operator-inequality-operator-microsoft-wrl.md
+            - name: 'Оператор operator== (Microsoft::WRL)'
+              href: ../cppcx/wrl/operator-equality-operator-microsoft-wrl.md
+            - name: 'Оператор operator< (Microsoft::WRL)'
+              href: ../cppcx/wrl/operator-less-than-operator-microsoft-wrl.md
+            - name: Класс RuntimeClass
+              href: ../cppcx/wrl/runtimeclass-class.md
+            - name: Структура RuntimeClassFlags
+              href: ../cppcx/wrl/runtimeclassflags-structure.md
+            - name: Перечисление RuntimeClassType
+              href: ../cppcx/wrl/runtimeclasstype-enumeration.md
+            - name: Класс SimpleActivationFactory
+              href: ../cppcx/wrl/simpleactivationfactory-class.md
+            - name: Класс SimpleClassFactory
+              href: ../cppcx/wrl/simpleclassfactory-class.md
+            - name: Класс WeakRef
+              href: ../cppcx/wrl/weakref-class.md
+        - name: 'Пространство имен Microsoft::WRL::Details'
+          expanded: false
+          items:
+            - name: 'Пространство имен Microsoft::WRL::Details'
+              href: ../cppcx/wrl/microsoft-wrl-details-namespace.md
+            - name: Функция ActivationFactoryCallback
+              href: ../cppcx/wrl/activationfactorycallback-function.md
+            - name: Структура ArgTraits
+              href: ../cppcx/wrl/argtraits-structure.md
+            - name: Структура ArgTraitsHelper
+              href: ../cppcx/wrl/argtraitshelper-structure.md
+            - name: Перечисление AsyncStatusInternal
+              href: ../cppcx/wrl/asyncstatusinternal-enumeration.md
+            - name: Структура BoolStruct
+              href: ../cppcx/wrl/boolstruct-structure.md
+            - name: Класс ComPtrRef
+              href: ../cppcx/wrl/comptrref-class.md
+            - name: Класс ComPtrRefBase
+              href: ../cppcx/wrl/comptrrefbase-class.md
+            - name: Структура CreatorMap
+              href: ../cppcx/wrl/creatormap-structure.md
+            - name: Структура DerefHelper
+              href: ../cppcx/wrl/derefhelper-structure.md
+            - name: Класс DontUseNewUseMake
+              href: ../cppcx/wrl/dontusenewusemake-class.md
+            - name: Структура EnableIf
+              href: ../cppcx/wrl/enableif-structure.md
+            - name: Класс EventTargetArray
+              href: ../cppcx/wrl/eventtargetarray-class.md
+            - name: Структура FactoryCache
+              href: ../cppcx/wrl/factorycache-structure.md
+            - name: Структура ImplementsBase
+              href: ../cppcx/wrl/implementsbase-structure.md
+            - name: Структура ImplementsHelper
+              href: ../cppcx/wrl/implementshelper-structure.md
+            - name: Структура InterfaceList
+              href: ../cppcx/wrl/interfacelist-structure.md
+            - name: Структура InterfaceListHelper
+              href: ../cppcx/wrl/interfacelisthelper-structure.md
+            - name: Структура InterfaceTraits
+              href: ../cppcx/wrl/interfacetraits-structure.md
+            - name: Структура InvokeHelper
+              href: ../cppcx/wrl/invokehelper-structure.md
+            - name: Структура IsBaseOfStrict
+              href: ../cppcx/wrl/isbaseofstrict-structure.md
+            - name: Структура IsSame
+              href: ../cppcx/wrl/issame-structure.md
+            - name: Класс MakeAllocator
+              href: ../cppcx/wrl/makeallocator-class.md
+            - name: Функция MakeAndInitialize
+              href: ../cppcx/wrl/makeandinitialize-function.md
+            - name: Класс ModuleBase
+              href: ../cppcx/wrl/modulebase-class.md
+            - name: Функция Move
+              href: ../cppcx/wrl/move-function.md
+            - name: Структура Nil
+              href: ../cppcx/wrl/nil-structure.md
+            - name: Функция RaiseException
+              href: ../cppcx/wrl/raiseexception-function.md
+            - name: Класс RemoveIUnknown
+              href: ../cppcx/wrl/removeiunknown-class.md
+            - name: Структура RemoveReference
+              href: ../cppcx/wrl/removereference-structure.md
+            - name: Структура RuntimeClassBase
+              href: ../cppcx/wrl/runtimeclassbase-structure.md
+            - name: Структура RuntimeClassBaseT
+              href: ../cppcx/wrl/runtimeclassbaset-structure.md
+            - name: Функция Swap (WRL)
+              href: ../cppcx/wrl/swap-function-wrl.md
+            - name: Функция TerminateMap
+              href: ../cppcx/wrl/terminatemap-function.md
+            - name: Структура VerifyInheritanceHelper
+              href: ../cppcx/wrl/verifyinheritancehelper-structure.md
+            - name: Структура VerifyInterfaceHelper
+              href: ../cppcx/wrl/verifyinterfacehelper-structure.md
+            - name: Класс WeakReference
+              href: ../cppcx/wrl/weakreference-class.md
+        - name: 'Пространство имен Microsoft::WRL::Wrappers'
+          expanded: false
+          items:
+            - name: 'Пространство имен Microsoft::WRL::Wrappers'
+              href: ../cppcx/wrl/microsoft-wrl-wrappers-namespace.md
+            - name: Класс CriticalSection
+              href: ../cppcx/wrl/criticalsection-class.md
+            - name: Класс Event (WRL)
+              href: ../cppcx/wrl/event-class-wrl.md
+            - name: Класс HandleT
+              href: ../cppcx/wrl/handlet-class.md
+            - name: Класс HString
+              href: ../cppcx/wrl/hstring-class.md
+            - name: Класс HStringReference
+              href: ../cppcx/wrl/hstringreference-class.md
+            - name: Mutex класс
+              href: ../cppcx/wrl/mutex-class.md
+            - name: Класс RoInitializeWrapper
+              href: ../cppcx/wrl/roinitializewrapper-class.md
+            - name: Класс Semaphore
+              href: ../cppcx/wrl/semaphore-class.md
+            - name: Класс SRWLock
+              href: ../cppcx/wrl/srwlock-class.md
+        - name: 'Пространство имен Microsoft::WRL::Wrappers::Details'
+          expanded: false
+          items:
+            - name: 'Пространство имен Microsoft::WRL::Wrappers::Details'
+              href: ../cppcx/wrl/microsoft-wrl-wrappers-details-namespace.md
+            - name: Метод CompareStringOrdinal
+              href: ../cppcx/wrl/comparestringordinal-method.md
+            - name: Класс SyncLockT
+              href: ../cppcx/wrl/synclockt-class.md
+            - name: Класс SyncLockWithStatusT
+              href: ../cppcx/wrl/synclockwithstatust-class.md
+        - name: 'Пространство имен Microsoft::WRL::Wrappers::HandleTraits'
+          expanded: false
+          items:
+            - name: 'Пространство имен Microsoft::WRL::Wrappers::HandleTraits'
+              href: ../cppcx/wrl/microsoft-wrl-wrappers-handletraits-namespace.md
+            - name: Структура CriticalSectionTraits
+              href: ../cppcx/wrl/criticalsectiontraits-structure.md
+            - name: Структура EventTraits
+              href: ../cppcx/wrl/eventtraits-structure.md
+            - name: Структура FileHandleTraits
+              href: ../cppcx/wrl/filehandletraits-structure.md
+            - name: Структура HANDLENullTraits
+              href: ../cppcx/wrl/handlenulltraits-structure.md
+            - name: Структура HANDLETraits
+              href: ../cppcx/wrl/handletraits-structure.md
+            - name: Структура MutexTraits
+              href: ../cppcx/wrl/mutextraits-structure.md
+            - name: Структура SemaphoreTraits
+              href: ../cppcx/wrl/semaphoretraits-structure.md
+            - name: Структура SRWLockExclusiveTraits
+              href: ../cppcx/wrl/srwlockexclusivetraits-structure.md
+            - name: Структура SRWLockSharedTraits
+              href: ../cppcx/wrl/srwlocksharedtraits-structure.md
+        - name: 'Пространство имен Windows::Foundation'
+          expanded: false
+          items:
+            - name: 'Пространство имен Windows::Foundation'
+              href: ../cppcx/wrl/windows-foundation-namespace.md
+            - name: Функция ActivateInstance
+              href: ../cppcx/wrl/activateinstance-function.md
+            - name: Функция GetActivationFactory
+              href: ../cppcx/wrl/getactivationfactory-function.md
+        - name: IID_PPV_ARGS_Helper - функция
+          href: ../cppcx/wrl/iid-ppv-args-helper-function.md

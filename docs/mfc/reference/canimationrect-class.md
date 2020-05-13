@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CAnimationRect [MFC], m_szInitial
 - CAnimationRect [MFC], m_topValue
 ms.assetid: 0294156d-241e-4a57-92b2-31234fe557d6
-ms.openlocfilehash: 84c4cf92894a9ece2021417445c9d7ab94ee6bdf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 273ea2b548d35722ebf937d2db2b589fef5e69fa
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378184"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755133"
 ---
 # <a name="canimationrect-class"></a>Класс CAnimationRect
 
@@ -59,55 +59,55 @@ class CAnimationRect : public CAnimationBaseObject;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CAnimationRect::CAnimationRect](#canimationrect)|Перегружен. Создает объект rect анимации.|
+|[CAnimationRect::CAnimationRect](#canimationrect)|Перегружен. Строит объект прямой кишки анимации.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CAnimationRect::AddTransition](#addtransition)|Добавляет переходов слева, сверху, справа и нижней координат.|
-|[CAnimationRect::GetBottom](#getbottom)|Предоставляет доступ к CAnimationVariable, представляющий Нижняя координата.|
-|[CAnimationRect::GetDefaultValue](#getdefaultvalue)|Возвращает значения по умолчанию для границы прямоугольника.|
-|[CAnimationRect::GetLeft](#getleft)|Предоставляет доступ к CAnimationVariable, представляющий левая координата.|
-|[CAnimationRect::GetRight](#getright)|Предоставляет доступ к CAnimationVariable, представляющий Правая координата.|
-|[CAnimationRect::GetTop](#gettop)|Предоставляет доступ к CAnimationVariable, представляющий верхнюю координаты.|
+|[CAnimationRect::AddTransition](#addtransition)|Добавляет переходы для левых, верхних, правых и нижних координат.|
+|[CAnimationRect::GetBottom](#getbottom)|Обеспечивает доступ к CAnimationVariable, представляющей нижние координаты.|
+|[CAnimationRect::GetDefaultValue](#getdefaultvalue)|Возвращает значения по умолчанию для границ прямоугольника.|
+|[CAnimationRect::GetLeft](#getleft)|Обеспечивает доступ к CAnimationVariable, представляющей левую координату.|
+|[CAnimationRect::GetRight](#getright)|Предоставляет доступ к CAnimationVariable, представляющей правильную координату.|
+|[CAnimationRect::GetTop](#gettop)|Обеспечивает доступ к CAnimationVariable, представляющей верхние координаты.|
 |[CAnimationRect::GetValue](#getvalue)|Возвращает текущее значение.|
-|[CAnimationRect::SetDefaultValue](#setdefaultvalue)|Задает значение по умолчанию.|
+|[CAnimationRect::SetDefaultValue](#setdefaultvalue)|Устанавливает значение по умолчанию.|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CAnimationRect::GetAnimationVariableList](#getanimationvariablelist)|Помещает инкапсулированный анимации переменные в список. (Переопределяет [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|
+|[CAnimationRect::GetAnimationVariableList](#getanimationvariablelist)|Помещает инкапсулированные переменные анимации в список. (Оверлет [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CAnimationRect::operator RECT](#operator_rect)|Преобразует CAnimationRect параметра RECT.|
-|[CAnimationRect::operator =](#operator_eq)|Назначает rect CAnimationRect.|
+|[CAnimationRect::оператор RECT](#operator_rect)|Преобразует CAnimationRect в RECT.|
+|[CAnimationRect::оператор](#operator_eq)|Присваивает прямой к CAnimationRect.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CAnimationRect::m_bFixedSize](#m_bfixedsize)|Указывает, является ли прямоугольник фиксированный размер.|
+|[CAnimationRect::m_bFixedSize](#m_bfixedsize)|Определяет, имеет ли прямоугольник фиксированный размер.|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CAnimationRect::m_bottomValue](#m_bottomvalue)|Инкапсулированный анимации переменной, представляющей нижней границы анимации прямоугольника.|
-|[CAnimationRect::m_leftValue](#m_leftvalue)|Инкапсулированный анимации переменной, представляющей слева граница анимации прямоугольника.|
-|[CAnimationRect::m_rightValue](#m_rightvalue)|Инкапсулированный анимации переменной, представляющей справа граница анимации прямоугольника.|
-|[CAnimationRect::m_szInitial](#m_szinitial)|Задает первоначальный размер анимации прямоугольника.|
-|[CAnimationRect::m_topValue](#m_topvalue)|Инкапсулированный анимации переменной, представляющей верхней границы анимации прямоугольника.|
+|[CAnimationRect::m_bottomValue](#m_bottomvalue)|Инкапсулированная переменная анимации, представляющая нижнюю границу прямоугольника анимации.|
+|[CAnimationRect::m_leftValue](#m_leftvalue)|Инкапсулированная переменная анимации, представляющая левую границу прямоугольника анимации.|
+|[CAnimationRect::m_rightValue](#m_rightvalue)|Инкапсулированная переменная анимации, представляющая правую границу прямоугольника анимации.|
+|[CAnimationRect::m_szInitial](#m_szinitial)|Определяет начальный размер прямоугольника анимации.|
+|[CAnimationRect::m_topValue](#m_topvalue)|Инкапсулированная переменная анимации, представляющая верхнюю границу прямоугольника анимации.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Класс CAnimationRect инкапсулирует четыре объекта CAnimationVariable и может представлять в приложениях прямоугольник. Чтобы использовать этот класс в приложении, просто создать экземпляр объекта этого класса, добавьте его к контроллеру анимации с помощью CAnimationController::AddAnimationObject и вызова AddTransition для каждого перехода для применения к левой, правой верхней и нижней частях координаты.
+Класс CAnimationRect инкапсулирует четыре объекта CAnimationVariable и может представлять в приложениях прямоугольник. Чтобы использовать этот класс в приложении, просто мгновенно объект этого класса, добавьте его в контроллер анимации с помощью CAnimationController::AddAnimationObject и вызов AddTransition для каждого перехода, который будет применяться к левой, правой верхней и нижней координат.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -121,11 +121,11 @@ class CAnimationRect : public CAnimationBaseObject;
 
 **Заголовок:** afxanimationcontroller.h
 
-##  <a name="addtransition"></a>  CAnimationRect::AddTransition
+## <a name="canimationrectaddtransition"></a><a name="addtransition"></a>CAnimationRect::AddTransition
 
-Добавляет переходов слева, сверху, справа и нижней координат.
+Добавляет переходы для левых, верхних, правых и нижних координат.
 
-```
+```cpp
 void AddTransition(
     CBaseTransition* pLeftTransition,
     CBaseTransition* pTopTransition,
@@ -136,24 +136,24 @@ void AddTransition(
 ### <a name="parameters"></a>Параметры
 
 *pLeftTransition*<br/>
-Задает переход левой стороны.
+Определяет переход на левую сторону.
 
-*pTopTransition*<br/>
-Указывает перехода для верхней стороны.
+*pTopПереход*<br/>
+Определяет переход для верхней стороны.
 
 *pRightTransition*<br/>
-Указывает перехода для справа от оператора.
+Определяет переход для правой стороны.
 
 *pBottomTransition*<br/>
-Указывает перехода для нижней стороны.
+Определяет переход для нижней стороны.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Вызывайте эту функцию, чтобы добавить указанный переходы во внутренний список переходов для применения к анимации переменных для каждой стороны прямоугольника. Добавляя переходы, они не в силу немедленно, хранятся во внутренний список. Переходы применяются (Добавление раскадровки для определенного значения) при вызове CAnimationController::AnimateGroup. Если вам не нужно применить переход к одной из сторон прямоугольника, можно передать значение NULL.
+Вызовите эту функцию, чтобы добавить указанные переходы во внутренний список переходов, которые будут применяться к переменным анимации для каждой прямоугольника сторон. При добавлении переходов они не применяются немедленно и хранятся во внутреннем списке. Переходы применяются (добавлены к раскадровке для определенного значения) при вызове CAnimationController::AnimateGroup. Если вам не нужно применять переход к одной из сторон прямоугольника, вы можете пройти NULL.
 
-##  <a name="canimationrect"></a>  CAnimationRect::CAnimationRect
+## <a name="canimationrectcanimationrect"></a><a name="canimationrect"></a>CAnimationRect::CAnimationRect
 
-Создает объект CAnimationRect.
+Строит объект CAnimationRect.
 
 ```
 CAnimationRect();
@@ -184,42 +184,42 @@ CAnimationRect(
 ### <a name="parameters"></a>Параметры
 
 *rect*<br/>
-Указывает прямоугольник по умолчанию.
+Определяет прямоугольник по умолчанию.
 
 *nGroupID*<br/>
-Указывает идентификатор группы.
+Определяет идентификатор группы.
 
 *nObjectID*<br/>
-Указывает идентификатор объекта.
+Определяет идентификатор объекта.
 
 *dwUserData*<br/>
-Задает определяемые пользователем данные.
+Определяет данные, определяемые пользователем.
 
-*pt*<br/>
-Координата верхнего левого угла.
+*пт*<br/>
+Координация верхнего левого угла.
 
-*sz*<br/>
+*Sz*<br/>
 Размер прямоугольника.
 
-*nLeft*<br/>
-Задает координату левой границы.
+*nСлева*<br/>
+Определяет координаты левой границы.
 
-*nTop*<br/>
-Задает координату верхнего привязан.
+*Ntop*<br/>
+Определяет координаты верхней границы.
 
-*nRight*<br/>
-Задает координату правой границы.
+*nПраво*<br/>
+Определяет координаты правой границы.
 
-*nBottom*<br/>
-Задает координату нижней привязки.
+*nБоттом*<br/>
+Определяет координаты нижней границы.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Объект создается со значениями по умолчанию для слева, сверху, справа и снизу, идентификатор объекта и идентификатор группы, в которой будет указано значение 0. Они могут быть изменены во время выполнения, используя SetDefaultValue и SetID.
+Объект построен с значениями по умолчанию для левого, верхнего, правого и нижнего, идентификатора объекта и идентификатора группы, который будет установлен на 0. Они могут быть изменены позже во время выполнения с помощью SetDefaultValue и SetID.
 
-##  <a name="getanimationvariablelist"></a>  CAnimationRect::GetAnimationVariableList
+## <a name="canimationrectgetanimationvariablelist"></a><a name="getanimationvariablelist"></a>CAnimationRect::GetAnimationVariableList
 
-Помещает инкапсулированный анимации переменные в список.
+Помещает инкапсулированные переменные анимации в список.
 
 ```
 virtual void GetAnimationVariableList(
@@ -229,12 +229,12 @@ virtual void GetAnimationVariableList(
 
 ### <a name="parameters"></a>Параметры
 
-*lst*<br/>
-При возврате функции, здесь есть указатели на четыре CAnimationVariable объекты, представляющие координаты прямоугольника.
+*Lst*<br/>
+Когда функция возвращается, она содержит указатели на четыре CAnimationПеременные объекты, представляющие координаты прямоугольника.
 
-##  <a name="getbottom"></a>  CAnimationRect::GetBottom
+## <a name="canimationrectgetbottom"></a><a name="getbottom"></a>CAnimationRect::GetBottom
 
-Предоставляет доступ к CAnimationVariable, представляющий Нижняя координата.
+Обеспечивает доступ к CAnimationVariable, представляющей нижние координаты.
 
 ```
 CAnimationVariable& GetBottom();
@@ -242,15 +242,15 @@ CAnimationVariable& GetBottom();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ссылка на инкапсулированный CAnimationVariable, представляющий Нижняя координата.
+Ссылка на инкапсулированный CAnimationVariable, представляющий нижние координаты.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Можно вызвать этот метод, чтобы получить прямой доступ к базовой CAnimationVariable, представляющий Нижняя координата.
+Этот метод можно назвать прямым доступом к базовому CAnimationVariable, представляющему нижнюю координату.
 
-##  <a name="getdefaultvalue"></a>  CAnimationRect::GetDefaultValue
+## <a name="canimationrectgetdefaultvalue"></a><a name="getdefaultvalue"></a>CAnimationRect::GetDefaultValue
 
-Возвращает значения по умолчанию для границы прямоугольника.
+Возвращает значения по умолчанию для границ прямоугольника.
 
 ```
 CRect GetDefaultValue();
@@ -258,15 +258,15 @@ CRect GetDefaultValue();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-CRect значение, содержащее значения по умолчанию для левой, правой, верхней и нижней.
+Значение CRect, содержащее значения по умолчанию для левого, правого, верхнего и нижнего.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Вызывайте эту функцию для получения значения по умолчанию, который был ранее установлен конструктор или SetDefaultValue.
+Вызовите эту функцию для получения значения по умолчанию, которое ранее было установлено конструктором или SetDefaultValue.
 
-##  <a name="getleft"></a>  CAnimationRect::GetLeft
+## <a name="canimationrectgetleft"></a><a name="getleft"></a>CAnimationRect::GetLeft
 
-Предоставляет доступ к CAnimationVariable, представляющий левая координата.
+Обеспечивает доступ к CAnimationVariable, представляющей левую координату.
 
 ```
 CAnimationVariable& GetLeft();
@@ -274,15 +274,15 @@ CAnimationVariable& GetLeft();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ссылка на инкапсулированный CAnimationVariable, представляющий левая координата.
+Ссылка на инкапсулированный CAnimationVariable, представляющий левую координату.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Можно вызвать этот метод, чтобы получить прямой доступ к базовой CAnimationVariable, представляющее координату левого.
+Вы можете вызвать этот метод, чтобы получить прямой доступ к основной CAnimationVariable, представляющей левую координату.
 
-##  <a name="getright"></a>  CAnimationRect::GetRight
+## <a name="canimationrectgetright"></a><a name="getright"></a>CAnimationRect::GetRight
 
-Предоставляет доступ к CAnimationVariable, представляющий Правая координата.
+Предоставляет доступ к CAnimationVariable, представляющей правильную координату.
 
 ```
 CAnimationVariable& GetRight();
@@ -290,15 +290,15 @@ CAnimationVariable& GetRight();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ссылка на инкапсулированный CAnimationVariable, представляющий Правая координата.
+Ссылка на инкапсулированный CAnimationVariable, представляющий правильную координату.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Можно вызвать этот метод, чтобы получить прямой доступ к базовой CAnimationVariable, представляющий Правая координата.
+Вы можете вызвать этот метод, чтобы получить прямой доступ к основной CAnimationVariable, представляющей правильную координатку.
 
-##  <a name="gettop"></a>  CAnimationRect::GetTop
+## <a name="canimationrectgettop"></a><a name="gettop"></a>CAnimationRect::GetTop
 
-Предоставляет доступ к CAnimationVariable, представляющий верхнюю координаты.
+Обеспечивает доступ к CAnimationVariable, представляющей верхние координаты.
 
 ```
 CAnimationVariable& GetTop();
@@ -306,13 +306,13 @@ CAnimationVariable& GetTop();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ссылка на инкапсулированный CAnimationVariable, представляющий верхнюю координаты.
+Ссылка на инкапсулированный CAnimationVariable, представляющий верхние координаты.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Можно вызвать этот метод, чтобы получить прямой доступ к базовой CAnimationVariable, представляющее координату верхнего.
+Вы можете назвать этот метод, чтобы получить прямой доступ к основной CAnimationVariable, представляющей верхнюю координат.
 
-##  <a name="getvalue"></a>  CAnimationRect::GetValue
+## <a name="canimationrectgetvalue"></a><a name="getvalue"></a>CAnimationRect::GetValue
 
 Возвращает текущее значение.
 
@@ -323,71 +323,71 @@ BOOL GetValue(CRect& rect);
 ### <a name="parameters"></a>Параметры
 
 *rect*<br/>
-Выходные данные. Содержит текущее значение при возвращении данного метода.
+Выходные данные. Содержит текущее значение при возврате этого метода.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если текущее значение было успешно извлечено; в противном случае — значение FALSE.
+ПРАВДА, если текущее значение было успешно извлечено; в противном случае FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Вызывайте эту функцию для получения текущего значения анимации прямоугольника. Если этот метод завершается ошибкой или базового COM-объектов для слева, сверху, справа и снизу, не инициализированы, rect содержит значение по умолчанию, которое ранее было задано в конструкторе или SetDefaultValue.
+Вызов используйте эту функцию, чтобы получить текущее значение прямоугольника анимации. Если этот метод не удается или основные объекты COM для левого, верхнего, правого и снизу не были инициализированы, rect содержит значение по умолчанию, которое ранее было установлено в конструкторе или SetDefaultValue.
 
-##  <a name="m_bfixedsize"></a>  CAnimationRect::m_bFixedSize
+## <a name="canimationrectm_bfixedsize"></a><a name="m_bfixedsize"></a>CAnimationRect::m_bFixedSize
 
-Указывает, является ли прямоугольник фиксированный размер.
+Определяет, имеет ли прямоугольник фиксированный размер.
 
 ```
 BOOL m_bFixedSize;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Если этот элемент имеет значение true, размер прямоугольника, является фиксированным и справа, и минимальные значения вычисляются заново каждый раз, когда верхнего левого угла перемещается в соответствии с фиксированного размера. Это значение равно TRUE, чтобы легко смещения прямоугольника по экрану. В этом случае переходы к координаты вправо и вниз, игнорируются. При создании объекта, или вызов SetDefaultValue размер сохраняются внутренне. По умолчанию этот элемент имеет значение FALSE.
+Если этот участник истинен, то размер прямоугольника фиксируется, а правые и нижние значения пересчитываются каждый раз, когда верхний левый угол перемещается в соответствии с фиксированным размером. Установите это значение для TRUE, чтобы легко перемещать прямоугольник вокруг экрана. В этом случае игнорируются переходы, применяемые к правым и нижним координатам. Размер хранится внутренне при построении объекта и/или вызове SetDefaultValue. По умолчанию этот участник установлен на FALSE.
 
-##  <a name="m_bottomvalue"></a>  CAnimationRect::m_bottomValue
+## <a name="canimationrectm_bottomvalue"></a><a name="m_bottomvalue"></a>CAnimationRect::m_bottomValue
 
-Инкапсулированный анимации переменной, представляющей нижней границы анимации прямоугольника.
+Инкапсулированная переменная анимации, представляющая нижнюю границу прямоугольника анимации.
 
 ```
 CAnimationVariable m_bottomValue;
 ```
 
-##  <a name="m_leftvalue"></a>  CAnimationRect::m_leftValue
+## <a name="canimationrectm_leftvalue"></a><a name="m_leftvalue"></a>CAnimationRect::m_leftValue
 
-Инкапсулированный анимации переменной, представляющей слева граница анимации прямоугольника.
+Инкапсулированная переменная анимации, представляющая левую границу прямоугольника анимации.
 
 ```
 CAnimationVariable m_leftValue;
 ```
 
-##  <a name="m_rightvalue"></a>  CAnimationRect::m_rightValue
+## <a name="canimationrectm_rightvalue"></a><a name="m_rightvalue"></a>CAnimationRect::m_rightValue
 
-Инкапсулированный анимации переменной, представляющей справа граница анимации прямоугольника.
+Инкапсулированная переменная анимации, представляющая правую границу прямоугольника анимации.
 
 ```
 CAnimationVariable m_rightValue;
 ```
 
-##  <a name="m_szinitial"></a>  CAnimationRect::m_szInitial
+## <a name="canimationrectm_szinitial"></a><a name="m_szinitial"></a>CAnimationRect::m_szInitial
 
-Задает первоначальный размер анимации прямоугольника.
+Определяет начальный размер прямоугольника анимации.
 
 ```
 CSize m_szInitial;
 ```
 
-##  <a name="m_topvalue"></a>  CAnimationRect::m_topValue
+## <a name="canimationrectm_topvalue"></a><a name="m_topvalue"></a>CAnimationRect::m_topValue
 
-Инкапсулированный анимации переменной, представляющей верхней границы анимации прямоугольника.
+Инкапсулированная переменная анимации, представляющая верхнюю границу прямоугольника анимации.
 
 ```
 CAnimationVariable m_topValue;
 ```
 
-##  <a name="operator_rect"></a>  CAnimationRect::operator RECT
+## <a name="canimationrectoperator-rect"></a><a name="operator_rect"></a>CAnimationRect::оператор RECT
 
-Преобразует CAnimationRect параметра RECT.
+Преобразует CAnimationRect в RECT.
 
 ```
 operator RECT();
@@ -395,46 +395,46 @@ operator RECT();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Текущее значение анимации прямоугольник в качестве параметра RECT.
+Текущее значение прямоугольника анимации как RECT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Эта функция вызывает GetValue. Если GetValue для какой-либо причине происходит сбой, возвращенный RECT будет содержать значения по умолчанию для всех координат прямоугольника.
+Эта функция внутренне вызывает GetValue. Если GetValue по какой-либо причине выходит из строя, возвращенный RECT будет содержать значения по умолчанию для всех координат прямоугольника.
 
-##  <a name="operator_eq"></a>  CAnimationRect::operator =
+## <a name="canimationrectoperator"></a><a name="operator_eq"></a>CAnimationRect::оператор
 
-Назначает rect CAnimationRect.
+Присваивает прямой к CAnimationRect.
 
-```
+```cpp
 void operator=(const RECT& rect);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *rect*<br/>
-Новое значение анимации прямоугольника.
+Новое значение прямоугольника анимации.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Мы рекомендуем сделать это до начала анимации, так как этот оператор вызывает SetDefaultValue, заново базовые объекты COM для компонентов цвета, если они были созданы. Если подписка этого объекта анимации на события (ValueChanged или IntegerValueChanged), необходимо включить эти события.
+Рекомендуется сделать это до начала анимации, потому что этот оператор вызывает SetDefaultValue, который воссоздает основные объекты COM для цветовых компонентов, если они были созданы. Если вы подписались на этот объект анимации на события (ValueChanged или IntegerValue), необходимо повторно включить эти события.
 
-##  <a name="setdefaultvalue"></a>  CAnimationRect::SetDefaultValue
+## <a name="canimationrectsetdefaultvalue"></a><a name="setdefaultvalue"></a>CAnimationRect::SetDefaultValue
 
-Задает значение по умолчанию.
+Устанавливает значение по умолчанию.
 
-```
+```cpp
 void SetDefaultValue(const CRect& rect);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *rect*<br/>
-Задает новые значения по умолчанию для левую, сверху, справа и снизу.
+Определяет новые значения по умолчанию для левого, верхнего, правого и нижнего.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Эта функция используется для задания значения по умолчанию для объекта анимации. Этот метод назначает значения по умолчанию границы прямоугольника. Он также воссоздает базовых объектов COM, если они были созданы. Если подписка этого объекта анимации на события (ValueChanged или IntegerValueChanged), необходимо включить эти события.
+Используйте эту функцию для установки значения по умолчанию для объекта анимации. Этот метод присваивает значения по умолчанию границам прямоугольника. Он также воссоздает основные объекты COM, если они были созданы. Если вы подписались на этот объект анимации на события (ValueChanged или IntegerValue), необходимо повторно включить эти события.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Классы](../../mfc/reference/mfc-classes.md)

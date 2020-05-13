@@ -5,30 +5,30 @@ f1_keywords:
 - LNK4286
 helpviewer_keywords:
 - LNK4286
-ms.openlocfilehash: 43ed18808ba5ce632dd7dc7095f7bc30e4497ec9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d0205ba065f6e410383c38a0f1c2eaa0da55fe93
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352441"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173872"
 ---
 # <a name="linker-tools-warning-lnk4286"></a>Предупреждение средств компоновщика LNK4286
 
-> символ "*символ*«определен в»*filename_1.obj*«импортируется путем»*filename_2.obj*"
+> символ "*symbol*", определенный в "*filename_1. obj*", импортируется "*filename_2. obj*"
 
-[__declspec(dllimport)](../../cpp/dllexport-dllimport.md) был указан для *символ* несмотря на то, что этот символ определен в объектном файле *filename_1.obj* в одном образе. Удалить `__declspec(dllimport)` модификатор, чтобы устранить это предупреждение.
+для *symbol* был указан [__declspec (dllimport)](../../cpp/dllexport-dllimport.md) , хотя символ определен в объектном файле *filename_1. obj* в том же образе. Удалите модификатор `__declspec(dllimport)`, чтобы устранить это предупреждение.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Предупреждение LNK4286 — общими версия [Предупреждение средств компоновщика LNK4217](linker-tools-warning-lnk4217.md). Компоновщик создает LNK4286 предупреждение, когда он сообщает, какой файл объекта ссылка символа, но не функции.
+Предупреждение LNK4286 — это более общая версия [средств компоновщика LNK4217 Warning](linker-tools-warning-lnk4217.md). Компоновщик создает предупреждение LNK4286, когда он может определить, какой объектный файл ссылается на символ, но не какая функция.
 
-Чтобы устранить LNK4286, удалите `__declspec(dllimport)` модификатора объявления из опережающее объявление типа *символ* в *filename_2.obj*.
+Чтобы разрешить LNK4286, удалите модификатор объявления `__declspec(dllimport)` из прямого объявления *символа* , указанного в *filename_2. obj*.
 
-Несмотря на то, что последний созданный код работает правильно, код, созданный для вызова импортированной функции является менее эффективным, чем непосредственный вызов функции. Это предупреждение не отображается при компиляции с помощью [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) параметр.
+Хотя окончательный созданный код работает правильно, код, созданный для вызова импортированной функции, менее эффективен, чем вызов функции напрямую. Это предупреждение не появляется при компиляции с параметром [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) .
 
-Дополнительные сведения о импорта и экспорта данных объявления, см. в разделе [dllexport, dllimport](../../cpp/dllexport-dllimport.md).
+Дополнительные сведения об объявлениях импорта и экспорта данных см. в разделе [dllexport, dllimport](../../cpp/dllexport-dllimport.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Предупреждение средств компоновщика LNK4049](linker-tools-warning-lnk4049.md) \
 [Предупреждение средств компоновщика LNK4217](linker-tools-warning-lnk4217.md) \

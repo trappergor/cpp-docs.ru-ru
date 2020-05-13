@@ -8,11 +8,11 @@ helpviewer_keywords:
 - null values, expressions
 ms.assetid: 72576ce6-26d0-4379-be65-fee522088790
 ms.openlocfilehash: 4fdfa2283e40856ccaffd55daacb697b1344134b
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148456"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64343415"
 ---
 # <a name="null-statement-c"></a>Оператор NULL (C)
 

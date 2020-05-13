@@ -1,9 +1,11 @@
 ---
 title: putc, putwc
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - putwc
 - putc
+- _o_putc
+- _o_putwc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - _puttc function
 - puttc function
 ms.assetid: a37b2e82-9d88-4565-8190-ff8d04c0ddb9
-ms.openlocfilehash: 2fcd0ea2263cd858b0b4ce855f96c0389956ccc3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2a30302a72d228d709cd16d25d7b62d9ce64a8ba
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950100"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918913"
 ---
 # <a name="putc-putwc"></a>putc, putwc
 
@@ -58,7 +61,7 @@ wint_t putwc(
 
 ### <a name="parameters"></a>Параметры
 
-*c*<br/>
+*ц*<br/>
 Символ, который требуется записать.
 
 *вышестоящий*<br/>
@@ -70,13 +73,15 @@ wint_t putwc(
 
 Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Подпрограммы **putc** записывает один символ *c* в выходной *поток* в текущей позиции. Любое целое число может быть передано в **putc**, но записываются только младшие 8 бит. Подпрограммы **putchar** идентичны `putc( c, stdout )`. Если возникает ошибка чтения, то в каждой подпрограмме для каждого потока устанавливается индикатор ошибки. **putc** и **putchar** похожи на **fputc** и **_fputchar**соответственно, но реализуются как функции и как макросы (см. раздел [Выбор между функциями и макросами](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)). **putwc** и **putwchar** — это версии **putc** и **putchar**для расширенных символов соответственно. поведение **putwc** и **putc** идентично, если поток открыт в режиме ANSI. **putc** в настоящее время не поддерживает вывод в поток Юникода.
 
 Версии с суффиксом **_nolock** идентичны за исключением того, что они не защищены от помех со стороны других потоков. Дополнительные сведения см. в разделе **_putc_nolock, _putwc_nolock**.
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|
@@ -89,7 +94,7 @@ wint_t putwc(
 |**putc**|\<stdio.h>|
 |**putwc**|\<stdio.h> или \<wchar.h>|
 
-Консоль не поддерживается в приложениях универсальная платформа Windows (UWP). Стандартные дескрипторы потока, связанные с консолью, **stdin**, **stdout**и **stderr**, должны быть перенаправляться до того, как функции времени выполнения C смогут использовать их в приложениях UWP. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Консоль не поддерживается в приложениях универсальная платформа Windows (UWP). Стандартные дескрипторы потока, связанные с консолью, **stdin**, **stdout**и **stderr**, должны быть перенаправляться до того, как функции времени выполнения C смогут использовать их в приложениях UWP. Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Библиотеки
 

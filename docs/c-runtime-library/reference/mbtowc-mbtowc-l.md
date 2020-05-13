@@ -1,9 +1,11 @@
 ---
 title: mbtowc, _mbtowc_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - mbtowc
 - _mbtowc_l
+- _o__mbtowc_l
+- _o_mbtowc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - api-ms-win-crt-convert-l1-1-0.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +32,12 @@ helpviewer_keywords:
 - _mbtowc_l function
 - mbtowc_l function
 ms.assetid: dfd1c8a7-e73a-4307-9353-53b70b45d4d1
-ms.openlocfilehash: 655f5288738d2f2329b50a27381c00cb06e35e6d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 54e50da06fbe009184894edc60b6267e372aefc1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952019"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915415"
 ---
 # <a name="mbtowc-_mbtowc_l"></a>mbtowc, _mbtowc_l
 
@@ -58,7 +61,7 @@ int _mbtowc_l(
 
 ### <a name="parameters"></a>Параметры
 
-*wchar*<br/>
+*WCHAR*<br/>
 Адрес расширенного символа (тип **wchar_t**).
 
 *мбчар*<br/>
@@ -74,9 +77,11 @@ int _mbtowc_l(
 
 Если **мбчар** не **равно NULL** и объект, который *мбчар* указывает на форму допустимого многобайтового символа, **mbtowc** возвращает длину многобайтового символа в байтах. Если *мбчар* имеет **значение NULL** или объект, на который он указывает, является расширенным символом NULL (L ' \ 0 '), функция возвращает значение 0. Если объект, на который указывает *мбчар* , не формирует допустимый многобайтовый символ в первых символах *Count* , возвращается значение-1.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Функция **mbtowc** преобразует *число* байтов, на которое указывает *мбчар*, если *мбчар* не равно **null**, в соответствующий расширенный символ. **mbtowc** сохраняет полученный расширенный символ в параметре *WCHAR,* если *WCHAR* не равен **null**. **mbtowc** не проверяет более **MB_CUR_MAX** байт. **mbtowc** использует текущий языковой стандарт для поведения, зависящего от языкового стандарта; **_mbtowc_l** является идентичным за исключением того, что использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+Функция **mbtowc** преобразует *число* байтов, на которое указывает *мбчар*, если *мбчар* не равно **null**, в соответствующий расширенный символ. **mbtowc** сохраняет полученный расширенный символ в параметре *WCHAR,* если *WCHAR* не равен **null**. **mbtowc** не анализирует больше **MB_CUR_MAX** байтов. **mbtowc** использует текущий языковой стандарт для поведения, зависящего от языкового стандарта; **_mbtowc_l** является идентичным, за исключением того, что использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -85,7 +90,7 @@ int _mbtowc_l(
 |**mbtowc**|\<stdlib.h>|
 |**_mbtowc_l**|\<stdlib.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Библиотеки
 
@@ -147,11 +152,11 @@ Attempt to convert a NULL pointer to a wide character:
    Bytes converted: 0
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Преобразование данных](../../c-runtime-library/data-conversion.md)<br/>
 [MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
-[Языковой стандарт](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Интерпретация последовательностей многобайтовых символов](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>

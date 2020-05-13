@@ -1,48 +1,52 @@
 ---
-title: Регистратор ATL и деревьях синтаксического анализа
+title: Регистратор ATL и деревья синтаксического анализа
 ms.date: 11/04/2016
 helpviewer_keywords:
 - parse trees
 ms.assetid: 668ce2dd-a1c3-4ca0-8135-b25267cb6a85
-ms.openlocfilehash: e1aea573e78e6f6a9a86bc4e3987ee448815f329
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: de2cea9b0e7b7c62236f708f9aa8217eaa5df51d
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62196172"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168700"
 ---
 # <a name="understanding-parse-trees"></a>Основные сведения о деревьях синтаксического анализа
 
-Можно определить один или несколько деревьях синтаксического анализа в скрипте регистратора, где каждое дерево синтаксического анализа имеет следующий вид:
+В скрипте регистратора можно определить одно или несколько деревьев синтаксического анализа, где каждое дерево синтаксического анализа имеет следующую форму:
 
-```
-<root key>{<registry expression>}+
-```
+> \<корневой ключ>\<{выражение реестра>} +
 
-Здесь:
+Где:
 
-```
-<root key> ::= HKEY_CLASSES_ROOT | HKEY_CURRENT_USER |
-    HKEY_LOCAL_MACHINE | HKEY_USERS |
-    HKEY_PERFORMANCE_DATA | HKEY_DYN_DATA |
-    HKEY_CURRENT_CONFIG | HKCR | HKCU |
-    HKLM | HKU | HKPD | HKDD | HKCC
-<registry expression> ::= <Add Key> | <Delete Key>
-<Add Key> ::= [ForceRemove | NoRemove | val]<Key Name> [<Key Value>][{<Add Key>}]
-<Delete Key> ::= Delete<Key Name>
-<Key Name> ::= '<AlphaNumeric>+'
-<AlphaNumeric> ::= any character not NULL, i.e. ASCII 0
-<Key Value> ::== <Key Type><Key Name>
-<Key Type> ::= s | d
-<Key Value> ::= '<AlphaNumeric>'
-```
+> \<корневой ключ>:: = HKEY_CLASSES_ROOT | HKEY_CURRENT_USER | \
+> &nbsp;&nbsp;&nbsp;&nbsp;HKEY_LOCAL_MACHINE | HKEY_USERS | \
+> &nbsp;&nbsp;&nbsp;&nbsp;HKEY_PERFORMANCE_DATA | HKEY_DYN_DATA | \
+> &nbsp;&nbsp;&nbsp;&nbsp;HKEY_CURRENT_CONFIG | HKCR | HKCU | \
+> &nbsp;&nbsp;&nbsp;&nbsp;HKLM | HKU | ХКПД | ХКДД | хккк
+
+> \<выражение реестра>:: = \<добавить ключ> | \<Удалить ключ>
+
+> \<Добавьте ключевое>:: = [**ForceRemove** | **Удаление** | **Val**]\<имя ключа> [\<значение ключа>] [{\<добавить ключ>}]
+
+> \<Удалите ключ>:: = **Delete**\<имя ключа>
+
+> \<Имя ключа>:: = **"**\<буквенно-цифровой>+**"**
+
+> \<Буквенно-цифровые>:: = *любой символ, не равный null, т. е. ASCII 0*
+
+> \<Значение ключа>:: = \<тип ключа>\<имя ключа>
+
+> \<Тип ключа>:: = **s** | **d**
+
+> \<Значение ключа>:: = **"**\<буквенно-цифровой>**"**
 
 > [!NOTE]
-> `HKEY_CLASSES_ROOT` и `HKCR` эквивалентны; `HKEY_CURRENT_USER` и `HKCU` эквивалентны; и т. д.
+> `HKEY_CLASSES_ROOT`и `HKCR` являются эквивалентными; `HKEY_CURRENT_USER` и `HKCU` являются эквивалентными; и т. д.
 
-Дерево синтаксического анализа можно добавить несколько разделов и подразделов для \<корневой ключ >. Таким образом, он поддерживает подраздел дескриптор открытым завершения синтаксического анализа, все его подразделы средство синтаксического анализа. Этот подход более эффективен, чем работе один ключ одновременно, как показано в следующем примере:
+Дерево синтаксического анализа может добавлять к \<корневому ключу несколько ключей и подразделов>. В этом случае обработчик подраздела остается открытым до тех пор, пока синтаксический анализатор не завершит анализ всех подразделов. Этот подход более эффективен, чем работа с одним ключом за раз, как показано в следующем примере:
 
-```
+```rgs
 HKEY_CLASSES_ROOT
 {
     'MyVeryOwnKey'
@@ -55,8 +59,8 @@ HKEY_CLASSES_ROOT
 }
 ```
 
-Здесь, изначально открывает регистратор (создает) `HKEY_CLASSES_ROOT\MyVeryOwnKey`. Затем видит, что `MyVeryOwnKey` содержит подраздел. Вместо закрыть ключ, чтобы `MyVeryOwnKey`, регистратор сохраняет дескриптор и откроется (создает) `HasASubKey` использования этого дескриптора родительского. (Системного реестра может быть медленнее при открытом не дескриптор родительского.) Таким образом, открыв `HKEY_CLASSES_ROOT\MyVeryOwnKey` и открытия `HasASubKey` с `MyVeryOwnKey` как родительский выполняется быстрее, чем Открытие `MyVeryOwnKey`, закрытие `MyVeryOwnKey`, а затем откройте `MyVeryOwnKey\HasASubKey`.
+Здесь сначала открывается регистратор (создает) `HKEY_CLASSES_ROOT\MyVeryOwnKey`. Затем он видит, `MyVeryOwnKey` что имеет подраздел. Вместо того, чтобы `MyVeryOwnKey`закрывать ключ, регистратор удерживает этот обработчик и открывает (создает) `HasASubKey` его с помощью этого родительского маркера. (Если родительский обработчик не открыт, системный реестр может быть медленнее.) Таким образом, `HKEY_CLASSES_ROOT\MyVeryOwnKey` открытие, а `HasASubKey` затем `MyVeryOwnKey` открытие с помощью в качестве родителя выполняется `MyVeryOwnKey`быстрее, `MyVeryOwnKey`чем открытие, закрытие `MyVeryOwnKey\HasASubKey`, а затем открытие.
 
 ## <a name="see-also"></a>См. также
 
-[Создание скриптов регистратора](../atl/creating-registrar-scripts.md)
+[Creating Registrar Scripts](../atl/creating-registrar-scripts.md)

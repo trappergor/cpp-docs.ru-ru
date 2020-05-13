@@ -1,8 +1,9 @@
 ---
 title: _putw
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _putw
+- _o__putw
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-ms.openlocfilehash: be2ee5c1b3706b1f2a0847415ab4a82a6a4bbe4f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: c54490a5625bfa2f9ffc95d616c2d73a7acf98e5
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443721"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916085"
 ---
 # <a name="_putw"></a>_putw
 
@@ -59,11 +61,13 @@ int _putw(
 
 Возвращает записанное значение. Возвращаемое значение **EOF** может указывать на ошибку. Поскольку **EOF** также является допустимым целочисленным значением, используйте **ferror** для проверки ошибки. Если *Stream* является пустым указателем, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция **устанавливает** **Еинвал** и возвращает **EOF**.
 
-Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Remarks
 
 Функция **_putw** записывает двоичное значение типа **int** в текущее расположение *потока.* **_putw** не влияет на выравнивание элементов в потоке и не предполагает никакого особого выравнивания. **_putw** в первую очередь для совместимости с предыдущими библиотеками. Проблемы переносимости могут возникать с **_putw** , так как размер **целого** числа и порядок байтов в пределах **целого** числа различаются в разных системах.
+
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -71,7 +75,7 @@ int _putw(
 |-------------|---------------------|
 |**_putw**|\<stdio.h>|
 
-Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Библиотеки
 
@@ -109,13 +113,13 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Выходные данные
+### <a name="output"></a>Вывод
 
 ```Output
 Wrote ten words
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)<br/>
 [_getw](getw.md)<br/>

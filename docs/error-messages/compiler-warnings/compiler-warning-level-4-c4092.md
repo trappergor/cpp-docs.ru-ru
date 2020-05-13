@@ -1,20 +1,20 @@
 ---
-title: Компилятор предупреждение (уровень 4) C4092
+title: Предупреждение компилятора (уровень 4) C4092
 ms.date: 11/04/2016
 f1_keywords:
 - C4092
 helpviewer_keywords:
 - C4092
 ms.assetid: 396ae826-a892-4327-bd66-f4762376d72b
-ms.openlocfilehash: a6949586cf3faa00aafed37a72e58c1b80266cf5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6786d692785dbca575d4b241b7b3e3d40575b686
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401388"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198553"
 ---
-# <a name="compiler-warning-level-4-c4092"></a>Компилятор предупреждение (уровень 4) C4092
+# <a name="compiler-warning-level-4-c4092"></a>Предупреждение компилятора (уровень 4) C4092
 
-sizeof возвращает «unsigned long»
+sizeof возвращает "unsigned long"
 
-Операнд `sizeof` оператор был очень велик, поэтому `sizeof` возвращается неподписанный **long**. Это предупреждение возникает при использовании расширений Майкрософт ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)). В режиме совместимости с ANSI (/Za) результат усекается вместо этого.
+Операнд оператора `sizeof` был очень большим, поэтому `sizeof` возвращал неподписанный **Long**. Это предупреждение появляется в разделе расширения Майкрософт ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)). В режиме совместимости с ANSI (/ZA) результат усекается.

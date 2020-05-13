@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4399
 ms.assetid: f58d9ba7-71a0-4c3b-b26f-f946dda8af30
-ms.openlocfilehash: 56fe0f314142d873fc02136bc2c3fe65e71f4dda
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a556fbffad41d04b3eb0ea1acfd5e8739ddd5b68
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408346"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186807"
 ---
 # <a name="compiler-warning-level-1-c4399"></a>Предупреждение компилятора (уровень 1) C4399
 
-> "*символ*": символ для каждого процесса не должны быть помечены __declspec(dllimport) при компиляции с параметром/clr: pure
+> "*символ*": символ для каждого процесса не должен помечаться __declspec (dllimport) при компиляции с параметром/clr: pure
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-**/CLR: pure** параметр компилятора в Visual Studio 2015 не рекомендуется и не поддерживается в Visual Studio 2017.
+Параметр компилятора **/clr: pure** является устаревшим в visual Studio 2015 и не поддерживается в visual Studio 2017.
 
-Данные из образа в машинном коде или изображения с машинным кодом или конструкции среды CLR не могут импортироваться в чистом образе. Чтобы устранить это предупреждение, компиляцию с параметром **/CLR** (не **/CLR: pure**) или удалить `__declspec(dllimport)`.
+Данные из машинного образа или образа с собственными конструкциями и структурами CLR не могут быть импортированы в чистый образ. Чтобы устранить это предупреждение, Скомпилируйте с **параметром/CLR** (не **/clr: pure**) или удалите `__declspec(dllimport)`.
 
 ## <a name="example"></a>Пример
 

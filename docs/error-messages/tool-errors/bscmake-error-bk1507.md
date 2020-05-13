@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - BK1507
 ms.assetid: 3c5220d7-ccb3-45b4-9da0-cb06147311f6
-ms.openlocfilehash: 35e21ce2db086506d06bb3ea40781d1c68c7a75f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6f4a642c712f9973b8d7c696dd981a00777c8641
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279779"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197734"
 ---
 # <a name="bscmake-error-bk1507"></a>Ошибка BSCMAKE BK1507
 
-не удается открыть временный файл «имя_файла» [: причина]
+не удается открыть временный файл "имяфайла" [: причина]
 
-BSCMAKE не удается открыть временный файл.
+BSCMAKE не может открыть временный файл.
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>Чтобы устранить ошибку, проверьте указанные ниже возможные причины ее возникновения.
 
-1. **TMP** переменная среды не задано допустимое диск и каталог.
+1. Переменной среды **tmp** не задан допустимый диск и каталог.
 
-1. Диск переполнен.
+1. Полный диск.

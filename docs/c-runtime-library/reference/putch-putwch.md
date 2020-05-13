@@ -1,9 +1,11 @@
 ---
 title: _putch, _putwch
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _putwch
 - _putch
+- _o__putch
+- _o__putwch
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - putch function
 - console, writing characters to
 ms.assetid: 3babc7cf-e333-405d-8449-c788d61d51aa
-ms.openlocfilehash: 8e7d7d57f5418e8c15aa02f015d3346298fa0422
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5d327030f816b4ad4d68e0366225d27fee00a7bf
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950049"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916180"
 ---
 # <a name="_putch-_putwch"></a>_putch, _putwch
 
@@ -60,20 +63,22 @@ wint_t _putwch(
 
 ### <a name="parameters"></a>Параметры
 
-*c*<br/>
+*ц*<br/>
 Символ, который требуется вывести.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение *c* в случае успешного выполнения. Если **_putch** завершается сбоем, возвращается **EOF**; Если **_putwch** завершается сбоем, возвращается **WEOF**.
+Возвращает значение *c* в случае успешного выполнения. При сбое **_putch** возвращается **EOF**; Если **_putwch** не выполняется, возвращается значение **WEOF**.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Эти функции записывают символ *c* напрямую, без буферизации, в консоль. В Windows NT функция **_putwch** записывает символы Юникода, используя текущие настройки языкового стандарта консоли.
 
 Версии с суффиксом **_nolock** идентичны за исключением того, что они не защищены от помех со стороны других потоков. Дополнительные сведения см. в разделе **_putch_nolock**, **_putwch_nolock**.
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Процедура Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|
@@ -86,7 +91,7 @@ wint_t _putwch(
 |**_putch**|\<conio.h>|
 |**_putwch**|\<conio.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Библиотеки
 
@@ -96,8 +101,8 @@ wint_t _putwch(
 
 См. пример для [_getch](getch-getwch.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Ввод-вывод на консоль и порт](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[Ввод-вывод в консоль и порт](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
 [_getch, _getwch](getch-getwch.md)<br/>

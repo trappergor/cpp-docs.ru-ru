@@ -7,12 +7,12 @@ f1_keywords:
 - atlcom/ATL::IMPLEMENTED_CATEGORY
 - atlcom/ATL::REQUIRED_CATEGORY
 ms.assetid: 223578cb-6180-4787-a8d8-ba3787a5d3ee
-ms.openlocfilehash: 411e06cc795827eef356018ba427510fd9eb7c06
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 2b677ac6e7dac4eed5fc920ece064d94119ceb97
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79423498"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168440"
 ---
 # <a name="category-macros"></a>Макросы категорий
 
@@ -29,11 +29,11 @@ ms.locfileid: "79423498"
 
 **Заголовок:** атлком. h
 
-##  <a name="begin_category_map"></a>BEGIN_CATEGORY_MAP
+## <a name="begin_category_map"></a><a name="begin_category_map"></a>BEGIN_CATEGORY_MAP
 
 Помечает начало таблицы категорий.
 
-```
+```cpp
 BEGIN_CATEGORY_MAP(theClass)
 ```
 
@@ -51,7 +51,7 @@ BEGIN_CATEGORY_MAP(theClass)
 Категории компонентов, перечисленные на карте, будут регистрироваться автоматически при регистрации модуля, если класс имеет связанную [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) или [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto).
 
 > [!NOTE]
->  ATL использует стандартный диспетчер категорий компонентов для регистрации категорий компонентов. Если диспетчер отсутствует в системе при регистрации модуля, регистрация будет выполнена, но категории компонентов не будут зарегистрированы для этого класса.
+> ATL использует стандартный диспетчер категорий компонентов для регистрации категорий компонентов. Если диспетчер отсутствует в системе при регистрации модуля, регистрация будет выполнена, но категории компонентов не будут зарегистрированы для этого класса.
 
 Дополнительные сведения о категориях компонентов см. в разделе [что такое категории компонентов и как они работают](/windows/win32/com/component-categories-and-how-they-work) в Windows SDK.
 
@@ -59,11 +59,11 @@ BEGIN_CATEGORY_MAP(theClass)
 
 [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]
 
-##  <a name="end_category_map"></a>END_CATEGORY_MAP
+## <a name="end_category_map"></a><a name="end_category_map"></a>END_CATEGORY_MAP
 
 Отмечает конец таблицы категорий.
 
-```
+```cpp
 END_CATEGORY_MAP()
 ```
 
@@ -71,11 +71,11 @@ END_CATEGORY_MAP()
 
 См. пример для [BEGIN_CATEGORY_MAP](#begin_category_map).
 
-##  <a name="implemented_category"></a>IMPLEMENTED_CATEGORY
+## <a name="implemented_category"></a><a name="implemented_category"></a>IMPLEMENTED_CATEGORY
 
 Добавьте IMPLEMENTED_CATEGORYный макрос к [карте категории](#begin_category_map) компонента, чтобы указать, что он должен быть зарегистрирован в качестве реализации категории, определяемой параметром *CATID* .
 
-```
+```cpp
 IMPLEMENTED_CATEGORY(catID)
 ```
 
@@ -94,7 +94,7 @@ IMPLEMENTED_CATEGORY(catID)
 
 ### <a name="a-selection-of-stock-categories"></a>Выбор категорий запасов
 
-|Description|Символ|GUID реестра|
+|Описание|Символ|GUID реестра|
 |-----------------|------------|-------------------|
 |Безопасность в сценариях|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
 |Безопасность для инициализации|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|
@@ -108,11 +108,11 @@ IMPLEMENTED_CATEGORY(catID)
 
 [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]
 
-##  <a name="required_category"></a>REQUIRED_CATEGORY
+## <a name="required_category"></a><a name="required_category"></a>REQUIRED_CATEGORY
 
 Добавьте REQUIRED_CATEGORYный макрос к [карте категории](#begin_category_map) компонента, чтобы указать, что она должна быть зарегистрирована как обязательная Категория, определяемая параметром *CATID* .
 
-```
+```cpp
 REQUIRED_CATEGORY( catID )
 ```
 
@@ -131,7 +131,7 @@ REQUIRED_CATEGORY( catID )
 
 ### <a name="a-selection-of-stock-categories"></a>Выбор категорий запасов
 
-|Description|Символ|GUID реестра|
+|Описание|Символ|GUID реестра|
 |-----------------|------------|-------------------|
 |Безопасность в сценариях|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
 |Безопасность для инициализации|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|
@@ -145,6 +145,6 @@ REQUIRED_CATEGORY( catID )
 
 [!code-cpp[NVC_ATL_Windowing#135](../../atl/codesnippet/cpp/category-macros_2.h)]
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Макросы](../../atl/reference/atl-macros.md)

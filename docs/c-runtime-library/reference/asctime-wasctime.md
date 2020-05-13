@@ -1,9 +1,11 @@
 ---
 title: asctime, _wasctime
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wasctime
 - asctime
+- _o__wasctime
+- _o_asctime
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - time structure conversion
 - time, converting
 ms.assetid: 974f1727-10ff-4ed4-8cac-2eb2d681f576
-ms.openlocfilehash: 9ca9bbcbfff3d2bef41443ff1744a1b612727c20
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 00c6be8ee409d76b80d323102950f8c1d6420ba3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939674"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909424"
 ---
 # <a name="asctime-_wasctime"></a>asctime, _wasctime
 
@@ -64,16 +67,16 @@ wchar_t *_wasctime(
 
 **asctime** возвращает указатель на результат символьной строки; **_wasctime** возвращает указатель на результат строки расширенных символов. Код ошибки не возвращается.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Существуют более безопасные версии этих функций; см. раздел [asctime_s, _wasctime_s](asctime-s-wasctime-s.md).
 
 Функция **asctime** преобразует время, хранящееся в виде структуры, в символьную строку. Значение *timeptr* обычно получается из вызова **gmtime** или **localtime**, который возвращает указатель на структуру **TM** , определенную во времени. Высоты.
 
-|Член timeptr|Значение|
+|Член timeptr|Применение|
 |--------------------|-----------|
 |**tm_hour**|Часов после полуночи (0-23)|
-|**tm_isdst**|Положительно, если действует летнее время; 0 если летнее время не действует; отрицательно, если состояние летнего времени неизвестно. Библиотека времени выполнения C принимает правила Соединенных Штатов для реализации проверки на летнее время (DST).|
+|**tm_isdst**|Положительно, если действует летнее время; 0 если летнее время не действует; отрицательно, если состояние летнего времени неизвестно. Библиотека времени выполнения C принимает правила США для реализации проверки на летнее время (DST).|
 |**tm_mday**|День месяца (1-31)|
 |**tm_min**|Минут после часа (0-59)|
 |**tm_mon**|Месяц (0-11; Январь = 0)|
@@ -86,9 +89,11 @@ wchar_t *_wasctime(
 
 Строковый результат, формируемый **asctime** , содержит ровно 26 символов и имеет `Wed Jan 02 02:03:55 1980\n\0`форму. Время в 24-часовом формате. Все поля имеют постоянную ширину. Символ новой строки и нуль-символ занимают две последние позиции строки. **asctime** использует один статически выделенный буфер для хранения возвращаемой строки. Каждый вызов этой функции уничтожает результат предыдущего вызова.
 
-**_wasctime** — это версия **asctime**для расширенных символов. в противном случае **_wasctime** и **asctime** ведут себя одинаково.
+**_wasctime** — это версия **asctime**с расширенными символами. в противном случае **_wasctime** и **asctime** работают одинаково.
 
 Эти функции проверяют свои параметры. Если *timeptr* является пустым указателем или содержит значения вне допустимого диапазона, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает **значение NULL** и **устанавливает** для **еинвал**.
+
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mapping"></a>Сопоставление универсальных текстовых функций
 
@@ -135,9 +140,9 @@ int main( void )
 Current date and time: Sun Feb 03 11:38:58 2002
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Управление временем](../../c-runtime-library/time-management.md)<br/>
+[Операции управления временем](../../c-runtime-library/time-management.md)<br/>
 [ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)<br/>
 [_ftime, _ftime32, _ftime64](ftime-ftime32-ftime64.md)<br/>
 [gmtime, _gmtime32, _gmtime64](gmtime-gmtime32-gmtime64.md)<br/>

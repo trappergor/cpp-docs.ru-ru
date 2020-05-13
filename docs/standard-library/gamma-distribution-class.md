@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::gamma_distribution [C++], param_type
 - std::gamma_distribution [C++], param_type
 ms.assetid: 2a6798ac-6152-41d7-8ef6-d684d92f1572
-ms.openlocfilehash: ab71ada5b1fb8b604b94ed098a46820b86a65c63
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 4bcc17ada430c1e3b14ef1ef67ea97e863dbdd5d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689610"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370675"
 ---
 # <a name="gamma_distribution-class"></a>Класс gamma_distribution
 
@@ -70,15 +70,15 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*Реалтипе* \
-Тип результата операции с плавающей запятой по умолчанию равен **Double**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*RealType*\
+Тип результата плавающей точки, по **умолчанию**удвоиться. Для возможных типов см [ \<>. ](../standard-library/random.md)
 
-*Ргсч* \
-Единый механизм генератора случайных чисел. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*Ргсч*\
+Единый генератор случайных чисел. Для возможных типов см [ \<>. ](../standard-library/random.md)
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
-Шаблон класса описывает распределение, которое создает значения определяемого пользователем типа с плавающей запятой, или тип **Double** , если значение не указано, распределяется в соответствии с гамма-распределением. В следующей таблице представлены ссылки на статьи об отдельных членах.
+Шаблон класса описывает распределение, которое производит значения определенного пользователем типа плавающей точки, или **введите двойной,** если ни один не предоставляется, распределенный в соответствии с Гамма-распределением. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
 ||||
 |-|-|-|
@@ -95,7 +95,7 @@ public:
 
 Функции-члены `operator()` возвращают следующее значение, созданное механизмом РГСЧ, из текущего или указанного пакета параметров.
 
-Дополнительные сведения о классах распределений и их членах см. в разделе [\<random>](../standard-library/random.md).
+Для получения дополнительной информации о классах распределения и их членах [ \<>](../standard-library/random.md)см.
 
 Подробные сведения о гамма-распределении см. в статье в Wolfram MathWorld [Гамма-распределение](https://go.microsoft.com/fwlink/p/?linkid=401111).
 
@@ -188,7 +188,7 @@ Distribution for 10 samples:
 
 **Пространство имен:** std
 
-## <a name="gamma_distribution"></a>  gamma_distribution::gamma_distribution
+## <a name="gamma_distributiongamma_distribution"></a><a name="gamma_distribution"></a>gamma_distribution::gamma_distribution
 
 Формирует распределение.
 
@@ -199,16 +199,16 @@ explicit gamma_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Параметры
 
-*альфа* -\
+*Альфа*\
 Параметр распределения `alpha`.
 
-*бета-* \
+*Бета-версия*\
 Параметр распределения `beta`.
 
-*parm* \
+*парм*\
 Структура параметров, используемая для формирования распределения.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 **Предварительные условия:** `0.0 < alpha` и `0.0 < beta`
 
@@ -216,7 +216,7 @@ explicit gamma_distribution(const param_type& parm);
 
 Второй конструктор создает объект, хранимые параметры которого инициализируются из *parm*. Вы можете получить и задать текущие параметры существующего распределения, вызвав функцию-член `param()`.
 
-## <a name="param_type"></a>  gamma_distribution::param_type
+## <a name="gamma_distributionparam_type"></a><a name="param_type"></a>gamma_distribution::pарам-тип
 
 Сохраняет параметры распределения.
 
@@ -234,21 +234,21 @@ struct param_type {
 
 ### <a name="parameters"></a>Параметры
 
-*альфа* -\
+*Альфа*\
 Параметр распределения `alpha`.
 
-*бета-* \
+*Бета-версия*\
 Параметр распределения `beta`.
 
-*справа* \
+*Правильно*\
 Экземпляр `param_type` для сравнения.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 **Предварительные условия:** `0.0 < alpha` и `0.0 < beta`
 
 Эту структуру можно передать конструктору класса распределения во время создания экземпляра, функции-члену `param()` для установки хранимых параметров существующего распределения и `operator()` для использования вместо хранимых параметров.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[\<random>](../standard-library/random.md)
+[\<случайные>](../standard-library/random.md)

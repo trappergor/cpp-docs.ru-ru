@@ -1,5 +1,5 @@
 ---
-title: Класс Иконнектионпоинтимпл
+title: Класс IConnectionPointImpl
 ms.date: 11/04/2016
 f1_keywords:
 - IConnectionPointImpl
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - connection points [C++], implementing
 - IConnectionPointImpl class
 ms.assetid: 27992115-3b86-45dd-bc9e-54f32876c557
-ms.openlocfilehash: bd88fd5d00df0347c0bd2161129b8cfa3ca35406
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c62ac3310a579379674674a7a9a517e3f2fd60e5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496083"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329857"
 ---
-# <a name="iconnectionpointimpl-class"></a>Класс Иконнектионпоинтимпл
+# <a name="iconnectionpointimpl-class"></a>Класс IConnectionPointImpl
 
 Этот класс реализует точку соединения.
 
@@ -35,39 +35,39 @@ class ATL_NO_VTABLE IConnectionPointImpl : public _ICPLocator<piid>
 #### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Класс, производный от `IConnectionPointImpl`.
+Ваш класс, полученный из `IConnectionPointImpl`.
 
 *пиид*<br/>
-Указатель на идентификатор IID интерфейса, представленного объектом точки подключения.
+Указатель на IID интерфейса, представленный объектом точки соединения.
 
-*КДВ*<br/>
-Класс, управляющий соединениями. Значение по умолчанию — [ккомдинамикункаррай](../../atl/reference/ccomdynamicunkarray-class.md), что позволяет устанавливать неограниченное число подключений. Можно также использовать [ккомункаррай](../../atl/reference/ccomunkarray-class.md), который указывает фиксированное число соединений.
+*Cdv*<br/>
+Класс, управляющий соединениями. Значение по умолчанию [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md), что позволяет неограниченное количество подключений. Вы также можете использовать [CComUnkArray](../../atl/reference/ccomunkarray-class.md), который определяет фиксированное количество соединений.
 
 ## <a name="members"></a>Участники
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[Иконнектионпоинтимпл:: Advise](#advise)|Устанавливает соединение между точкой подключения и приемником.|
-|[Иконнектионпоинтимпл:: Енумконнектионс](#enumconnections)|Создает перечислитель для прохода по соединениям для точки подключения.|
-|[Иконнектионпоинтимпл:: Жетконнектионинтерфаце](#getconnectioninterface)|Возвращает идентификатор IID интерфейса, представленного точкой подключения.|
-|[Иконнектионпоинтимпл:: Жетконнектионпоинтконтаинер](#getconnectionpointcontainer)|Извлекает указатель интерфейса на объект, который можно подключить.|
-|[Иконнектионпоинтимпл:: unadvise](#unadvise)|Завершает соединение, установленное ранее с `Advise`помощью.|
+|[IConnectionPointImpl::Консультация](#advise)|Устанавливает связь между точкой соединения и раковиной.|
+|[IConnectionPointImpl::EnumConnections](#enumconnections)|Создает регистратор для итерата через соединения для точки соединения.|
+|[IConnectionPointImpl::GetConnectionInterface](#getconnectioninterface)|Извлекает IID интерфейса, представленного точкой соединения.|
+|[IConnectionPointImpl::GetConnectionPointContainer](#getconnectionpointcontainer)|Извлекает указатель интерфейса на подключаемый объект.|
+|[IConnectionPointImpl::Unadvise](#unadvise)|Прекращает подключение, ранее `Advise`установленное через .|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[Иконнектионпоинтимпл:: m_vec](#m_vec)|Управляет соединениями для точки подключения.|
+|[IConnectionPointImpl::m_vec](#m_vec)|Управляет соединениями для точки соединения.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-`IConnectionPointImpl`реализует точку подключения, которая позволяет объекту предоставлять клиенту исходящий интерфейс. Клиент реализует этот интерфейс для объекта, называемого приемником.
+`IConnectionPointImpl`реализует точку соединения, которая позволяет объекту предоставить исходящий интерфейс клиенту. Клиент реализует этот интерфейс на объекте, называемом раковиной.
 
-ATL использует [иконнектионпоинтконтаинеримпл](../../atl/reference/iconnectionpointcontainerimpl-class.md) для реализации объекта, доступного для соединения. Каждая точка подключения в подключаемом объекте представляет исходящий интерфейс, идентифицируемый *пиид*. Класс *КДВ* управляет соединениями между точкой подключения и приемником. Каждое соединение однозначно идентифицируется с помощью "cookie".
+ATL использует [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md) для реализации подключаемого объекта. Каждая точка соединения в соединимом объекте представляет собой исходящий интерфейс, идентифицированный *piid.* Класс *CDV* управляет соединениями между точкой соединения и раковиной. Каждое соединение однозначно идентифицируется "cookie".
 
-Дополнительные сведения об использовании точек подключения в ATL см. в статье [точки подключения](../../atl/atl-connection-points.md).
+Для получения дополнительной информации об использовании [Connection Points](../../atl/atl-connection-points.md)точек соединения в ATL, см.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -77,11 +77,11 @@ ATL использует [иконнектионпоинтконтаинерим
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** атлком. h
+**Заголовок:** atlcom.h
 
-##  <a name="advise"></a>Иконнектионпоинтимпл:: Advise
+## <a name="iconnectionpointimpladvise"></a><a name="advise"></a>IConnectionPointImpl::Консультация
 
-Устанавливает соединение между точкой подключения и приемником.
+Устанавливает связь между точкой соединения и раковиной.
 
 ```
 STDMETHOD(Advise)(
@@ -89,73 +89,73 @@ STDMETHOD(Advise)(
     DWORD* pdwCookie);
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Чтобы завершить вызов соединения, используйте параметр [unadvise](#unadvise) .
+Используйте [Unadvise](#unadvise) для завершения вызова соединения.
 
-См. раздел [IConnectionPoint:: Advise](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-advise) в Windows SDK.
+Смотрите [IConnectionPoint::Консультация](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-advise) в Windows SDK.
 
-##  <a name="enumconnections"></a>Иконнектионпоинтимпл:: Енумконнектионс
+## <a name="iconnectionpointimplenumconnections"></a><a name="enumconnections"></a>IConnectionPointImpl::EnumConnections
 
-Создает перечислитель для прохода по соединениям для точки подключения.
+Создает регистратор для итерата через соединения для точки соединения.
 
 ```
 STDMETHOD(EnumConnections)(IEnumConnections** ppEnum);
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-См. раздел [IConnectionPoint:: енумконнектионс](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-enumconnections) в Windows SDK.
+Смотрите [IConnectionPoint::EnumConnections](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-enumconnections) в Windows SDK.
 
-##  <a name="getconnectioninterface"></a>Иконнектионпоинтимпл:: Жетконнектионинтерфаце
+## <a name="iconnectionpointimplgetconnectioninterface"></a><a name="getconnectioninterface"></a>IConnectionPointImpl::GetConnectionInterface
 
-Возвращает идентификатор IID интерфейса, представленного точкой подключения.
+Извлекает IID интерфейса, представленного точкой соединения.
 
 ```
 STDMETHOD(GetConnectionInterface)(IID* piid2);
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-См. раздел [IConnectionPoint:: жетконнектионинтерфаце](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-getconnectioninterface) в Windows SDK.
+Смотрите [IConnectionPoint::GetConnectionInterface](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-getconnectioninterface) в Windows SDK.
 
-##  <a name="getconnectionpointcontainer"></a>Иконнектионпоинтимпл:: Жетконнектионпоинтконтаинер
+## <a name="iconnectionpointimplgetconnectionpointcontainer"></a><a name="getconnectionpointcontainer"></a>IConnectionPointImpl::GetConnectionPointContainer
 
-Извлекает указатель интерфейса на объект, который можно подключить.
+Извлекает указатель интерфейса на подключаемый объект.
 
 ```
 STDMETHOD(GetConnectionPointContainer)(IConnectionPointContainer** ppCPC);
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-См. раздел [IConnectionPoint:: жетконнектионпоинтконтаинер](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-getconnectionpointcontainer) в Windows SDK.
+Смотрите [IConnectionPoint::GetConnectionPointContainer](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-getconnectionpointcontainer) в Windows SDK.
 
-##  <a name="m_vec"></a>Иконнектионпоинтимпл:: m_vec
+## <a name="iconnectionpointimplm_vec"></a><a name="m_vec"></a>IConnectionPointImpl::m_vec
 
-Управляет соединениями между объектом точки подключения и приемником.
+Управляет соединениями между объектом точки соединения и раковиной.
 
 ```
 CDV m_vec;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-По умолчанию `m_vec` имеет тип [ккомдинамикункаррай](../../atl/reference/ccomdynamicunkarray-class.md).
+По умолчанию, `m_vec` является [типом CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md).
 
-##  <a name="unadvise"></a>Иконнектионпоинтимпл:: unadvise
+## <a name="iconnectionpointimplunadvise"></a><a name="unadvise"></a>IConnectionPointImpl::Unadvise
 
-Завершает подключение, установленное ранее с помощью [advise](#advise).
+Прекращает подключение, ранее установленное через [Advise.](#advise)
 
 ```
 STDMETHOD(Unadvise)(DWORD dwCookie);
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-См. раздел [IConnectionPoint:: unadvise](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-unadvise) в Windows SDK.
+Смотрите [IConnectionPoint::Unadvise](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-unadvise) в Windows SDK.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [IConnectionPoint](/windows/win32/api/ocidl/nn-ocidl-iconnectionpoint)<br/>
-[Обзор класса](../../atl/atl-class-overview.md)
+[Общие сведения о классах](../../atl/atl-class-overview.md)

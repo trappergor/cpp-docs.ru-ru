@@ -22,16 +22,16 @@ helpviewer_keywords:
 - GetMoniker method
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-ms.openlocfilehash: 23467caf46d38175a74dab061f60e11009f1f481
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d0fa5f381dba4f67934007d59dbdaf4450bcfb60
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230844"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211800"
 ---
 # <a name="cenumerator-class"></a>Класс CEnumerator
 
-Использует объект перечисления OLE DB, который предоставляет [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85)) интерфейс, чтобы вернуть набор строк, описывающий все источники данных и перечислителей.
+Использует объект перечислителя OLE DB, который предоставляет интерфейс [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85)) для возврата набора строк, описывающего все источники данных и перечислители.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -44,23 +44,23 @@ class CEnumerator :
 
 **Заголовок:** atldbcli.h
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="methods"></a>Методы
 
 |||
 |-|-|
-|[Find](#find)|Перебирает доступных поставщиков (источники данных), поиск с указанным именем.|
-|[GetMoniker](#getmoniker)|Извлекает `IMoniker` интерфейс для текущей записи.|
+|[Поиск](#find)|Выполняет поиск по доступным поставщикам (источникам данных), ищут один из них с указанным именем.|
+|[Моникер](#getmoniker)|Извлекает интерфейс `IMoniker` для текущей записи.|
 |[Открыть](#open)|Открывает перечислитель.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Вы можете получить `ISourcesRowset` данных косвенно от этого класса.
+Данные `ISourcesRowset` можно извлекать косвенно из этого класса.
 
-## <a name="find"></a> CEnumerator::Find
+## <a name="cenumeratorfind"></a><a name="find"></a>CEnumerator:: Find
 
-Выполняет поиск указанного имени среди доступных поставщиков.
+Ищет указанное имя между доступными поставщиками.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -70,20 +70,20 @@ bool Find(TCHAR* szSearchName) throw();
 
 #### <a name="parameters"></a>Параметры
 
-*szSearchName*<br/>
-[in] Имя для поиска.
+*сзсеарчнаме*<br/>
+окне Искомое имя.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** Если имя найдено. В противном случае **false**.
+**значение true** , если имя было найдено. В противном случае — **false**.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Это имя сопоставляется `SOURCES_NAME` членом [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85)) интерфейс.
+Это имя сопоставляется с `SOURCES_NAME` членом интерфейса [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85)) .
 
-## <a name="getmoniker"></a> CEnumerator::GetMoniker
+## <a name="cenumeratorgetmoniker"></a><a name="getmoniker"></a>CEnumerator:: моникер
 
-Выполняет синтаксический анализ отображаемое имя извлекаемого компонента строки, который можно преобразовать в моникер.
+Анализирует отображаемое имя, чтобы извлечь компонент строки, который можно преобразовать в моникер.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -96,19 +96,19 @@ HRESULT GetMoniker(LPMONIKER* ppMoniker,
 
 #### <a name="parameters"></a>Параметры
 
-*ppMoniker*<br/>
-[out] Синтаксический анализ моникера из отображаемого имени ([CEnumeratorAccessor::m_szParseName](../../data/oledb/cenumeratoraccessor-m-szparsename.md)) текущей строки.
+*ппмоникер*<br/>
+заполняет Моникер, проанализированный из отображаемого имени ([CEnumeratorAccessor:: m_szParseName](../../data/oledb/cenumeratoraccessor-m-szparsename.md)) текущей строки.
 
-*lpszDisplayName*<br/>
-[in] Отображаемое имя для синтаксического анализа.
+*лпсздисплайнаме*<br/>
+окне Отображаемое имя для синтаксического анализа.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Стандартный HRESULT.
+Стандартное значение HRESULT.
 
-## <a name="open"></a> CEnumerator::Open
+## <a name="cenumeratoropen"></a><a name="open"></a>CEnumerator:: Open
 
-Привязывает моникера для перечислителя, если один указан, а затем получает набор строк для перечислителя, вызывая [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)).
+Привязывает моникер для перечислителя, если он указан, а затем получает набор строк для перечислителя путем вызова [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -122,21 +122,21 @@ HRESULT Open(const CEnumerator& enumerator) throw();
 
 #### <a name="parameters"></a>Параметры
 
-*pMoniker*<br/>
-[in] Указатель на моникер для перечислителя.
+*пмоникер*<br/>
+окне Указатель на моникер для перечислителя.
 
-*pClsid*<br/>
-[in] Указатель на `CLSID` перечислителя.
+*пклсид*<br/>
+окне Указатель на `CLSID` перечислителя.
 
 *enumerator*<br/>
-[in] Ссылка на перечислитель.
+окне Ссылка на перечислитель.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Стандартный HRESULT.
+Стандартное значение HRESULT.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[DBViewer](../../overview/visual-cpp-samples.md)<br/>
-[Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[дбвиевер](../../overview/visual-cpp-samples.md)<br/>
+[Шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

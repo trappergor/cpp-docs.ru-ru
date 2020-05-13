@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4958
 ms.assetid: e79b9e9c-d572-4a3a-a3b6-60962b70864a
-ms.openlocfilehash: 96b73975f391493340dd01d85ad30a8c888b44c0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 63371d91367902c1eab539cb370e55440fcbf917
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208075"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164889"
 ---
 # <a name="compiler-warning-c4958"></a>Предупреждение компилятора C4958
 
-> "*операции*": арифметика указателей не поддается проверке
+> "*Операция*": арифметика указателей не поддается проверке
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Использование арифметики указателей создает непроверяемый образ.
 
-Дополнительные сведения см. в разделе [чистый и проверяемый код (C++выполняет)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Дополнительные сведения см. в разделе [чистый и проверяемый кодC++(/CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
-**/CLR: safe** параметр компилятора в Visual Studio 2015 не рекомендуется и не поддерживается в Visual Studio 2017.
+Параметр компилятора **/clr: Сейф** является устаревшим в visual Studio 2015 и не поддерживается в visual Studio 2017.
 
 Это предупреждение выдается в качестве ошибки, и его можно отключить с помощью прагмы [warning](../../preprocessor/warning.md) или параметра компилятора [/wd](../../build/reference/compiler-option-warning-level.md) .
 

@@ -1,6 +1,6 @@
 ---
-title: 'C++Пакет SDK для Build Insights: таблица событий'
-description: Справочник по событиям для пакета C++ SDK для Visual Studio Build Insights
+title: 'СЗ Сборка Исследования SDK: таблица событий'
+description: Ссылка на события для Визуальной студии СЗ Построить Исследования SDK
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,25 +9,25 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 2ccc8a4ef707942963b85edc6db9e21e05610b54
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 932b78347e05d313e7962da2fdff8c3454dec963
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422964"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324146"
 ---
-# <a name="c-build-insights-sdk-event-table"></a>C++Пакет SDK для Build Insights: таблица событий
+# <a name="c-build-insights-sdk-event-table"></a>СЗ Сборка Исследования SDK: таблица событий
 
 ::: moniker range="<=vs-2015"
 
-Пакет C++ SDK для Build Insights совместим с Visual Studio 2017 и более поздних версий. Чтобы просмотреть документацию по этим версиям, присвойте элементу управления "Выбор версий Visual Studio" для этой статьи значение Visual Studio 2017 или Visual Studio 2019.
+SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-## <a name="compiler-events"></a>События компилятора
+## <a name="compiler-events"></a>Мероприятия компилятора
 
-\ [компилятора](#compiler)
+[Компилятора](#compiler)\
 [COMMAND_LINE](#command-line)\
 [ENVIRONMENT_VARIABLE](#environment-variable)\
 [FILE_INPUT](#file-input)\
@@ -35,27 +35,27 @@ ms.locfileid: "79422964"
 [FRONT_END_PASS](#front-end-pass)\
 [BACK_END_PASS](#back-end-pass)
 
-## <a name="compiler-front-end-events"></a>События внешнего интерфейса компилятора
+## <a name="compiler-front-end-events"></a>Компилятор фронт-энд событий
 
 [C1_DLL](#c1-dll)\
 [FRONT_END_FILE](#front-end-file)\
 [TEMPLATE_INSTANTIATION](#template-instantiation)\
 [SYMBOL_NAME](#symbol-name)
 
-## <a name="compiler-back-end-events"></a>События серверной части компилятора
+## <a name="compiler-back-end-events"></a>События компилятора бэк-энда
 
 [C2_DLL](#c2-dll)\
 [WHOLE_PROGRAM_ANALYSIS](#whole-program-analysis)\
 [TOP_DOWN](#top-down)\
 [BOTTOM_UP](#bottom-up)\
 [CODE_GENERATION](#code-generation)\
-\ [потоков](#thread)
-\ [функции](#function)
+[Поток](#thread)\
+[Функции](#function)\
 [FORCE_INLINEE](#force-inlinee)
 
-## <a name="linker-events"></a>События компоновщика
+## <a name="linker-events"></a>События Linker
 
-\ [компоновщика](#linker)
+[Компоновщик](#linker)\
 [COMMAND_LINE](#command-line)\
 [ENVIRONMENT_VARIABLE](#environment-variable)\
 [FILE_INPUT](#file-input)\
@@ -73,193 +73,193 @@ ms.locfileid: "79422964"
 
 ## <a name="event-table"></a>Таблица событий
 
-| Событие | Свойство | Description |
+| Событие | Свойство | Описание |
 |--|--|--|
 | <a name="back-end-pass"></a>BACK_END_PASS | Тип | Действие |
-|  | Parents | [КОМПИЛЯТОРА](#compiler) |
+|  | Parents | [Компилятора](#compiler) |
 |  | Дети | [C2_DLL](#c2-dll) |
-|  | Свойства | — Абсолютный путь к входному исходному файлу<br/>-Абсолютный путь к выходному файлу объекта |
-|  | Классы отслеживания | [Действие](cpp-event-data-types/activity.md)<br/>[компилерпасс](cpp-event-data-types/compiler-pass.md)<br/>[баккендпасс](cpp-event-data-types/back-end-pass.md) |
-|  | Description | Возникает при запуске и окончании этапа серверной части компилятора. Этот проход отвечает за оптимизацию проанализированного кода C/C++ Source и его преобразование в машинный код. |
+|  | Свойства | - Абсолютный путь к исходным файлам ввода<br/>- Абсолютный путь к файлу объекта вывода |
+|  | Классы захвата | [Действие](cpp-event-data-types/activity.md)<br/>[CompilerPass](cpp-event-data-types/compiler-pass.md)<br/>[BackEndPass](cpp-event-data-types/back-end-pass.md) |
+|  | Описание | Происходит в начале и остановке компилятора бэк-энд проход. Этот пропуск отвечает за оптимизацию разображенный исходный код C/C и преобразование его в машинный код. |
 | <a name="bottom-up"></a>BOTTOM_UP | Тип | Действие |
 |  | Parents | [WHOLE_PROGRAM_ANALYSIS](#whole-program-analysis) |
-|  | Дети | None |
-|  | Свойства | None |
-|  | Классы отслеживания | [Действие](cpp-event-data-types/activity.md)<br/>[боттомуп](cpp-event-data-types/bottom-up.md) |
-|  | Description | Происходит при запуске и окончании прохода "на весь анализ программы". |
+|  | Дети | Отсутствуют |
+|  | Свойства | Отсутствуют |
+|  | Классы захвата | [Действие](cpp-event-data-types/activity.md)<br/>[БоттомАп](cpp-event-data-types/bottom-up.md) |
+|  | Описание | Происходит в начале и остановке прохода снизу вверх всего программного анализа. |
 | <a name="c1-dll"></a>C1_DLL | Тип | Действие |
 |  | Parents | [FRONT_END_PASS](#front-end-pass) |
 |  | Дети | [FRONT_END_FILE](#front-end-file)<br/>[SYMBOL_NAME](#symbol-name)<br/>[TEMPLATE_INSTANTIATION](#template-instantiation) |
-|  | Свойства | None |
-|  | Классы отслеживания | [Действие](cpp-event-data-types/activity.md)<br/>[C1DLL](cpp-event-data-types/c1-dll.md) |
-|  | Description | Происходит при запуске и окончании вызова *C1. dll* или *c1xx. dll* . Эти библиотеки DLL являются C и C++ внешним интерфейсом компилятора. Они вызываются только драйвером компилятора (*CL. exe*). |
+|  | Свойства | Отсутствуют |
+|  | Классы захвата | [Действие](cpp-event-data-types/activity.md)<br/>[C1DLL](cpp-event-data-types/c1-dll.md) |
+|  | Описание | Происходит в начале и остановке *c1.dll* или *c1xx.dll* вызова. Эти DLL являются передней оконечной передней частью компилятора C и C.'. Они вызываются исключительно драйвером компилятора *(cl.exe*). |
 | <a name="c2-dll"></a>C2_DLL | Тип | Действие |
 |  | Parents | [BACK_END_PASS](#back-end-pass)<br/>[LTCG](#ltcg) |
 |  | Дети | [CODE_GENERATION](#code-generation)<br/>[WHOLE_PROGRAM_ANALYSIS](#whole-program-analysis) |
-|  | Свойства | None |
-|  | Классы отслеживания | [Действие](cpp-event-data-types/activity.md)<br/>[C2DLL](cpp-event-data-types/c2-dll.md) |
-|  | Description | Происходит при запуске и окончании вызова *C2. dll* . Эта библиотека DLL является серверной частью компилятора. Он вызывается драйвером компилятора (*CL. exe*). Он также вызывается компоновщиком (*Link. exe*) при использовании создания кода во время компоновки. |
+|  | Свойства | Отсутствуют |
+|  | Классы захвата | [Действие](cpp-event-data-types/activity.md)<br/>[C2DLL](cpp-event-data-types/c2-dll.md) |
+|  | Описание | Происходит в начале и остановке *вызова c2.dll.* Этот DLL является задней частью компилятора. Это называется драйвером компилятора *(cl.exe*). Он также вызывается linker *(link.exe*), когда используется генерация кода времени ссылки. |
 | <a name="code-generation"></a>CODE_GENERATION | Тип | Действие |
 |  | Parents | [C2_DLL](#c2-dll) |
-|  | Дети | [FUNCTION](#function)<br/>[ПОТОК](#thread) |
-|  | Свойства | None |
-|  | Классы отслеживания | [Действие](cpp-event-data-types/activity.md)<br/>[Стратегию](cpp-event-data-types/code-generation.md) |
-|  | Description | Происходит при запуске и прекращении этапа формирования кода серверной части. |
+|  | Дети | [Функции](#function)<br/>[Поток](#thread) |
+|  | Свойства | Отсутствуют |
+|  | Классы захвата | [Действие](cpp-event-data-types/activity.md)<br/>[CodeGeneration](cpp-event-data-types/code-generation.md) |
+|  | Описание | Происходит в начале и остановке фазы генерации кода задней части. |
 | <a name="command-line"></a>COMMAND_LINE | Тип | Простое событие |
-|  | Parents | [КОМПИЛЯТОРА](#compiler)<br/>[КОМПОНОВЩИКА](#linker) |
-|  | Дети | None |
-|  | Свойства | — Командная строка, которая использовалась для вызова *CL. exe* или *Link. exe.* |
-|  | Классы отслеживания | [симпливент](cpp-event-data-types/simple-event.md)<br/>[Команд](cpp-event-data-types/command-line.md) |
-|  | Description | Происходит, когда компилятор и компоновщик выполняются для вычисления командной строки. Вычисленная Командная строка включает все параметры *CL. exe* и *Link. exe* , переданные через файл ответов. Он также включает параметры для *CL. exe* и *Link. exe* , переданные через переменные среды, такие как cl, \_CL\_, link и \_Link\_. |
-| <a name="compiler"></a>КОМПИЛЯТОРА | Тип | Действие |
-|  | Parents | None |
+|  | Parents | [Компилятора](#compiler)<br/>[Компоновщик](#linker) |
+|  | Дети | Отсутствуют |
+|  | Свойства | - Командная строка, которая использовалась для ссылки *cl.exe* или *link.exe* |
+|  | Классы захвата | [SimpleEvent](cpp-event-data-types/simple-event.md)<br/>[Командный пункт](cpp-event-data-types/command-line.md) |
+|  | Описание | Происходит, когда компилятор и связующий выполняются оценки командной строки. Оцененная командная строка включает в себя все параметры *cl.exe* и *link.exe,* передаваемые через файл ответа. Она также включает в себя параметры *cl.exe* и *link.exe* \_передается через переменные среды, такие как CL, CL\_, LINK, и \_LINK\_. |
+| <a name="compiler"></a>Компилятора | Тип | Действие |
+|  | Parents | Отсутствуют |
 |  | Дети | [BACK_END_PASS](#back-end-pass)<br/>[COMMAND_LINE](#command-line)<br/>[ENVIRONMENT_VARIABLE](#environment-variable)<br/>[FILE_INPUT](#file-input)<br/>[OBJ_OUTPUT](#obj-output)<br/>[FRONT_END_PASS](#front-end-pass) |
-|  | Свойства | — Версия компилятора<br/>— Рабочий каталог<br/>— Абсолютный путь к вызываемому файлу *CL. exe* |
-|  | Классы отслеживания | [Действие](cpp-event-data-types/activity.md)<br/>[Вызов](cpp-event-data-types/invocation.md)<br/>[Компилятора](cpp-event-data-types/compiler.md) |
-|  | Description | Происходит при запуске и остановкой вызова *CL. exe* . |
+|  | Свойства | - Вариант компилятора<br/>- Рабочий каталог<br/>- Абсолютный путь к вызываемому *cl.exe* |
+|  | Классы захвата | [Действие](cpp-event-data-types/activity.md)<br/>[Вызов](cpp-event-data-types/invocation.md)<br/>[Компилятор](cpp-event-data-types/compiler.md) |
+|  | Описание | Происходит в начале и остановке *вызова cl.exe.* |
 | <a name="environment-variable"></a>ENVIRONMENT_VARIABLE | Тип | Простое событие |
-|  | Parents | [КОМПИЛЯТОРА](#compiler)<br/>[КОМПОНОВЩИКА](#linker) |
-|  | Дети | None |
-|  | Свойства | — Имя переменной среды;<br/>— Значение переменной среды. |
-|  | Классы отслеживания | [симпливент](cpp-event-data-types/simple-event.md)<br/>[EnvironmentVariable](cpp-event-data-types/environment-variable.md) |
-|  | Description | Происходит один раз для каждой существующей переменной среды во время вызова *CL. exe* или *Link. exe* . |
+|  | Parents | [Компилятора](#compiler)<br/>[Компоновщик](#linker) |
+|  | Дети | Отсутствуют |
+|  | Свойства | - Название переменной среды<br/>- Значение переменной среды. |
+|  | Классы захвата | [SimpleEvent](cpp-event-data-types/simple-event.md)<br/>[EnvironmentVariable](cpp-event-data-types/environment-variable.md) |
+|  | Описание | Происходит один раз для каждой существующей переменной среды в момент вызова *cl.exe* или *link.exe.* |
 | <a name="executable-image-output"></a>EXECUTABLE_IMAGE_OUTPUT | Тип | Простое событие |
-|  | Parents | [КОМПОНОВЩИКА](#linker) |
-|  | Дети | None |
-|  | Свойства | — Абсолютный путь к DLL или исполняемому файлу. |
-|  | Классы отслеживания | [симпливент](cpp-event-data-types/simple-event.md)<br/>[филеаутпут](cpp-event-data-types/file-output.md)<br/>[ексекутаблеимажеаутпут](cpp-event-data-types/executable-image-output.md) |
-|  | Description | Происходит, когда один из входных данных компоновщика является библиотекой DLL или исполняемым файлом образа. |
+|  | Parents | [Компоновщик](#linker) |
+|  | Дети | Отсутствуют |
+|  | Свойства | - Абсолютный путь к DLL или исполняемый выходный файл. |
+|  | Классы захвата | [SimpleEvent](cpp-event-data-types/simple-event.md)<br/>[ФайлВыход](cpp-event-data-types/file-output.md)<br/>[ИсполняемыйИзображениеВыход](cpp-event-data-types/executable-image-output.md) |
+|  | Описание | Происходит, когда одним из входов ссылок является DLL или исполняемый файл изображения. |
 | <a name="exp-output"></a>EXP_OUTPUT | Тип | Простое событие |
-|  | Parents | [КОМПОНОВЩИКА](#linker) |
-|  | Дети | None |
-|  | Свойства | — Абсолютный путь к выходному файлу *. exp* . |
-|  | Классы отслеживания | [симпливент](cpp-event-data-types/simple-event.md)<br/>[филеаутпут](cpp-event-data-types/file-output.md)<br/>[експаутпут](cpp-event-data-types/exp-output.md) |
-|  | Description | Происходит, когда один из выходных данных компоновщика является *exp* -файлом. |
+|  | Parents | [Компоновщик](#linker) |
+|  | Дети | Отсутствуют |
+|  | Свойства | - Абсолютный путь к выходу файла *.exp.* |
+|  | Классы захвата | [SimpleEvent](cpp-event-data-types/simple-event.md)<br/>[ФайлВыход](cpp-event-data-types/file-output.md)<br/>[ExpOutput](cpp-event-data-types/exp-output.md) |
+|  | Описание | Происходит, когда один из выходов связующим звеном является файлом *.exp.* |
 | <a name="file-input"></a>FILE_INPUT | Тип | Простое событие |
-|  | Parents | [КОМПИЛЯТОРА](#compiler)<br/>[КОМПОНОВЩИКА](#linker) |
-|  | Дети | None |
-|  | Свойства | — Абсолютный путь к входному файлу;<br/>— Тип входного файла. |
-|  | Классы отслеживания | [симпливент](cpp-event-data-types/simple-event.md)<br/>[филеинпут](cpp-event-data-types/file-input.md) |
-|  | Description | Возникает, чтобы объявить входные данные *CL. exe* или *Link. exe* . |
+|  | Parents | [Компилятора](#compiler)<br/>[Компоновщик](#linker) |
+|  | Дети | Отсутствуют |
+|  | Свойства | - Абсолютный путь к вхотвому файлу<br/>- Тип ввода файла |
+|  | Классы захвата | [SimpleEvent](cpp-event-data-types/simple-event.md)<br/>[FileInput](cpp-event-data-types/file-input.md) |
+|  | Описание | Происходит объявление *о ввода cl.exe* или *link.exe.* |
 | <a name="force-inlinee"></a>FORCE_INLINEE | Тип | Простое событие |
-|  | Parents | [FUNCTION](#function) |
-|  | Дети | None |
-|  | Свойства | — Имя функции принудительного встраивания.<br/>— Размер встроенной функции Force, представленной в виде промежуточного числа инструкций. |
-|  | Классы отслеживания | [Действие](cpp-event-data-types/activity.md)<br/>[форцеинлини](cpp-event-data-types/force-inlinee.md) |
-|  | Description | Возникает, когда функция принудительно встроена в другую функцию с помощью ключевого слова `__forceinline`. |
+|  | Parents | [Функции](#function) |
+|  | Дети | Отсутствуют |
+|  | Свойства | - Название силовой функции.<br/>- Размер функции, подстеженной силой, представленкакой промежуточным подсчетом инструкций. |
+|  | Классы захвата | [Действие](cpp-event-data-types/activity.md)<br/>[ForceInlinee](cpp-event-data-types/force-inlinee.md) |
+|  | Описание | Происходит, когда функция в настоящее время силой встроены в другую функцию с помощью `__forceinline` ключевого слова. |
 | <a name="front-end-file"></a>FRONT_END_FILE | Тип | Действие |
 |  | Parents | [C1_DLL](#c1-dll)<br/>[FRONT_END_FILE](#front-end-file) |
 |  | Дети | [FRONT_END_FILE](#front-end-file)<br/>[TEMPLATE_INSTANTIATION](#template-instantiation) |
-|  | Свойства | — Абсолютный путь к файлу. |
-|  | Классы отслеживания | [Действие](cpp-event-data-types/activity.md)<br/>[фронтендфиле](cpp-event-data-types/front-end-file.md) |
-|  | Description | Происходит при запуске и остановке обработки файла внешним интерфейсом компилятора. Это событие является рекурсивным. Рекурсия происходит, когда внешний интерфейс анализирует включенные файлы. |
+|  | Свойства | - Абсолютный путь к файлу. |
+|  | Классы захвата | [Действие](cpp-event-data-types/activity.md)<br/>[FrontEndFile](cpp-event-data-types/front-end-file.md) |
+|  | Описание | Происходит, когда передний конец компилятора запускается и останавливает обработку файла. Это событие является рекурсивным. Рекурсия происходит, когда передний конец разбора включены файлы. |
 | <a name="front-end-pass"></a>FRONT_END_PASS | Тип | Действие |
-|  | Parents | [КОМПИЛЯТОРА](#compiler) |
+|  | Parents | [Компилятора](#compiler) |
 |  | Дети | [C1_DLL](#c1-dll) |
-|  | Свойства | — Абсолютный путь к входному исходному файлу<br/>-Абсолютный путь к выходному файлу объекта |
-|  | Классы отслеживания | [Действие](cpp-event-data-types/activity.md)<br/>[компилерпасс](cpp-event-data-types/compiler-pass.md)<br/>[фронтендпасс](cpp-event-data-types/front-end-pass.md) |
-|  | Description | Происходит при запуске и окончании прохода внешнего интерфейса компилятора. Этот проход отвечает за анализ исходного кода C/C++ и его преобразование в промежуточный язык. |
-| <a name="function"></a>ФУНКЦИЙ | Тип | Действие |
-|  | Parents | [CODE_GENERATION](#code-generation)<br/>[ПОТОК](#thread)<br/>[TOP_DOWN](#top-down) |
+|  | Свойства | - Абсолютный путь к исходным файлам ввода<br/>- Абсолютный путь к файлу объекта вывода |
+|  | Классы захвата | [Действие](cpp-event-data-types/activity.md)<br/>[CompilerPass](cpp-event-data-types/compiler-pass.md)<br/>[FrontEndPass](cpp-event-data-types/front-end-pass.md) |
+|  | Описание | Происходит в начале и остановке переднего прохода компилятора. Этот пропуск отвечает за разбор исходного кода C/C и преобразование его на промежуточный язык. |
+| <a name="function"></a>Функции | Тип | Действие |
+|  | Parents | [CODE_GENERATION](#code-generation)<br/>[Поток](#thread)<br/>[TOP_DOWN](#top-down) |
 |  | Дети | [FORCE_INLINEE](#force-inlinee) |
-|  | Свойства | — Имя функции. |
-|  | Классы отслеживания | [Действие](cpp-event-data-types/activity.md)<br/>[Компонент](cpp-event-data-types/function.md) |
-|  | Description | Происходит при запуске и завершении создания кода для функции. |
+|  | Свойства | - Название функции |
+|  | Классы захвата | [Действие](cpp-event-data-types/activity.md)<br/>[Функция](cpp-event-data-types/function.md) |
+|  | Описание | Происходит при запуске и завершении генерации кода для функции. |
 | <a name="imp-lib-output"></a>IMP_LIB_OUTPUT | Тип | Простое событие |
-|  | Parents | [КОМПОНОВЩИКА](#linker) |
-|  | Дети | None |
-|  | Свойства | — Абсолютный путь к выходному файлу библиотеки импорта. |
-|  | Классы отслеживания | [симпливент](cpp-event-data-types/simple-event.md)<br/>[филеаутпут](cpp-event-data-types/file-output.md)<br/>[имплибаутпут](cpp-event-data-types/imp-lib-output.md) |
-|  | Description | Происходит, когда один из выходных данных компоновщика является библиотекой импорта. |
+|  | Parents | [Компоновщик](#linker) |
+|  | Дети | Отсутствуют |
+|  | Свойства | - Абсолютный путь к файлу вывода библиотеки импорта. |
+|  | Классы захвата | [SimpleEvent](cpp-event-data-types/simple-event.md)<br/>[ФайлВыход](cpp-event-data-types/file-output.md)<br/>[ImpLibOutput](cpp-event-data-types/imp-lib-output.md) |
+|  | Описание | Происходит, когда один из выходов linker является библиотекой импорта. |
 | <a name="lib-output"></a>LIB_OUTPUT | Тип | Простое событие |
-|  | Parents | [КОМПОНОВЩИКА](#linker) |
-|  | Дети | None |
-|  | Свойства | — Абсолютный путь к выходному файлу статической библиотеки. |
-|  | Классы отслеживания | [симпливент](cpp-event-data-types/simple-event.md)<br/>[филеаутпут](cpp-event-data-types/file-output.md)<br/>[либаутпут](cpp-event-data-types/lib-output.md) |
-|  | Description | Происходит, когда один из выходных данных компоновщика является статической библиотекой. |
-| <a name="linker"></a>КОМПОНОВЩИКА | Тип | Действие |
-|  | Parents | None |
+|  | Parents | [Компоновщик](#linker) |
+|  | Дети | Отсутствуют |
+|  | Свойства | - Абсолютный путь к статическому файлу вывода библиотеки. |
+|  | Классы захвата | [SimpleEvent](cpp-event-data-types/simple-event.md)<br/>[ФайлВыход](cpp-event-data-types/file-output.md)<br/>[LibOutput](cpp-event-data-types/lib-output.md) |
+|  | Описание | Происходит, когда один из выходов связующим является статической библиотекой. |
+| <a name="linker"></a>Компоновщик | Тип | Действие |
+|  | Parents | Отсутствуют |
 |  | Дети | [COMMAND_LINE](#command-line)<br/>[ENVIRONMENT_VARIABLE](#environment-variable)<br/>[EXECUTABLE_IMAGE_OUTPUT](#executable-image-output)<br/>[EXP_OUTPUT](#exp-output)<br/>[FILE_INPUT](#file-input)<br/>[IMP_LIB_OUTPUT](#imp-lib-output)<br/>[LIB_OUTPUT](#lib-output)<br/>[PASS1](#pass1)<br/>[PASS2](#pass2) |
-|  | Свойства | -Версия компоновщика<br/>— Рабочий каталог<br/>— Абсолютный путь к вызываемому *Link. exe* |
-|  | Классы отслеживания | [Действие](cpp-event-data-types/activity.md)<br/>[Вызов](cpp-event-data-types/invocation.md)<br/>[Компоновщик](cpp-event-data-types/linker.md) |
-|  | Description | Происходит при запуске и остановкой вызова *Link. exe* . |
+|  | Свойства | - Ссылка версия<br/>- Рабочий каталог<br/>- Абсолютный путь к вызываемым *link.exe* |
+|  | Классы захвата | [Действие](cpp-event-data-types/activity.md)<br/>[Вызов](cpp-event-data-types/invocation.md)<br/>[Компоновщик](cpp-event-data-types/linker.md) |
+|  | Описание | Происходит в начале и остановке *link.exe* вызова. |
 | <a name="ltcg"></a>LTCG | Тип | Действие |
 |  | Parents | [PASS1](#pass1) |
 |  | Дети | [C2_DLL](#c2-dll) |
-|  | Свойства | None |
-|  | Классы отслеживания | [Действие](cpp-event-data-types/activity.md)<br/>[LTCG](cpp-event-data-types/ltcg.md) |
-|  | Description | Происходит при запуске и окончании создания кода во время компоновки. |
+|  | Свойства | Отсутствуют |
+|  | Классы захвата | [Действие](cpp-event-data-types/activity.md)<br/>[LTCG](cpp-event-data-types/ltcg.md) |
+|  | Описание | Происходит в начале и остановке генерации кода времени ссылки. |
 | <a name="obj-output"></a>OBJ_OUTPUT | Тип | Простое событие |
-|  | Parents | [КОМПИЛЯТОРА](#compiler) |
-|  | Дети | None |
-|  | Свойства | — Абсолютный путь к выходному файлу *obj.* |
-|  | Классы отслеживания | [симпливент](cpp-event-data-types/simple-event.md)<br/>[филеаутпут](cpp-event-data-types/file-output.md)<br/>[обжаутпут](cpp-event-data-types/obj-output.md) |
-|  | Description | Происходит один раз для каждого вывода *obj* -файла, созданного *CL. exe*. |
+|  | Parents | [Компилятора](#compiler) |
+|  | Дети | Отсутствуют |
+|  | Свойства | - Абсолютный путь к выходу *файла .obj* |
+|  | Классы захвата | [SimpleEvent](cpp-event-data-types/simple-event.md)<br/>[ФайлВыход](cpp-event-data-types/file-output.md)<br/>[ObjOutput](cpp-event-data-types/obj-output.md) |
+|  | Описание | Происходит один раз для каждого *выхода .obj* произведенного *cl.exe*. |
 | <a name="opt-icf"></a>OPT_ICF | Тип | Действие |
 |  | Parents | [PASS1](#pass1) |
-|  | Дети | None |
-|  | Свойства | None |
-|  | Классы отслеживания | [Действие](cpp-event-data-types/activity.md)<br/>[оптикф](cpp-event-data-types/opt-icf.md) |
-|  | Description | Происходит при запуске и отмене идентичной оптимизации компоновщика COMDAT (/OPT: ICF). |
+|  | Дети | Отсутствуют |
+|  | Свойства | Отсутствуют |
+|  | Классы захвата | [Действие](cpp-event-data-types/activity.md)<br/>[OptICF](cpp-event-data-types/opt-icf.md) |
+|  | Описание | Происходит в начале и остановке идентичной оптимизации связующего соединения COMDAT (/OPT:ICF). |
 | <a name="opt-lbr"></a>OPT_LBR | Тип | Действие |
 |  | Parents | [PASS1](#pass1) |
-|  | Дети | None |
-|  | Свойства | None |
-|  | Классы отслеживания | [Действие](cpp-event-data-types/activity.md)<br/>[оптлбр](cpp-event-data-types/opt-lbr.md) |
-|  | Description | Происходит при запуске и окончании оптимизации компоновщика длинной ветви (/OPT: ЛБР). |
+|  | Дети | Отсутствуют |
+|  | Свойства | Отсутствуют |
+|  | Классы захвата | [Действие](cpp-event-data-types/activity.md)<br/>[OptLBR](cpp-event-data-types/opt-lbr.md) |
+|  | Описание | Происходит в начале и остановке длинной ветки (/OPT:LBR) оптимизация связующим звеном. |
 | <a name="opt-ref"></a>OPT_REF | Тип | Действие |
 |  | Parents | [PASS1](#pass1) |
-|  | Дети | None |
-|  | Свойства | None |
-|  | Классы отслеживания | [Действие](cpp-event-data-types/activity.md)<br/>[оптреф](cpp-event-data-types/opt-ref.md) |
-|  | Description | Происходит при запуске и окончании оптимизации компоновщика нессылочных функций и исключения данных (/OPT: REF). |
+|  | Дети | Отсутствуют |
+|  | Свойства | Отсутствуют |
+|  | Классы захвата | [Действие](cpp-event-data-types/activity.md)<br/>[OptRef](cpp-event-data-types/opt-ref.md) |
+|  | Описание | Происходит в начале и остановке неоплачиваемых функций и устранения данных (/OPT:REF) оптимизация связующим звеном. |
 | <a name="pass1"></a>PASS1 | Тип | Действие |
-|  | Parents | [КОМПОНОВЩИКА](#linker) |
+|  | Parents | [Компоновщик](#linker) |
 |  | Дети | [LTCG](#ltcg)<br/>[OPT_ICF](#opt-icf)<br/>[OPT_LBR](#opt-lbr)<br/>[OPT_REF](#opt-ref) |
-|  | Свойства | None |
-|  | Классы отслеживания | [Действие](cpp-event-data-types/activity.md)<br/>[Pass1](cpp-event-data-types/pass1.md) |
-|  | Description | Происходит при запуске и окончании прохода компоновщика 1. |
+|  | Свойства | Отсутствуют |
+|  | Классы захвата | [Действие](cpp-event-data-types/activity.md)<br/>[Pass1](cpp-event-data-types/pass1.md) |
+|  | Описание | Происходит в начале и остановке прохода связующее 1. |
 | <a name="pass2"></a>PASS2 | Тип | Действие |
-|  | Parents | [КОМПОНОВЩИКА](#linker) |
-|  | Дети | None |
-|  | Свойства | None |
-|  | Классы отслеживания | [Действие](cpp-event-data-types/activity.md)<br/>[Pass2](cpp-event-data-types/pass2.md) |
-|  | Description | Происходит при запуске и окончании прохода компоновщика 2. |
+|  | Parents | [Компоновщик](#linker) |
+|  | Дети | Отсутствуют |
+|  | Свойства | Отсутствуют |
+|  | Классы захвата | [Действие](cpp-event-data-types/activity.md)<br/>[Pass2](cpp-event-data-types/pass2.md) |
+|  | Описание | Происходит в начале и остановке прохода связующее 2. |
 | <a name="pre-ltcg-opt-ref"></a>PRE_LTCG_OPT_REF | Тип | Действие |
 |  | Parents | [PASS1](#pass1) |
-|  | Дети | None |
-|  | Свойства | None |
-|  | Классы отслеживания | [Действие](cpp-event-data-types/activity.md)<br/>[прелткгоптреф](cpp-event-data-types/pre-ltcg-opt-ref.md) |
-|  | Description | Происходит при запуске и окончании этапа оптимизации компоновщика, который исключает функции и данные без ссылок (/OPT: REF). Это делается до создания кода во время компоновки. |
+|  | Дети | Отсутствуют |
+|  | Свойства | Отсутствуют |
+|  | Классы захвата | [Действие](cpp-event-data-types/activity.md)<br/>[ПреЛТКГОпреф](cpp-event-data-types/pre-ltcg-opt-ref.md) |
+|  | Описание | Происходит в начале и остановке пропуска оптимизации связующее звено, который устраняет неотъемлимые функции и данные (/OPT:REF). Это делается до генерации кода времени ссылки. |
 | <a name="symbol-name"></a>SYMBOL_NAME | Тип | Простое событие |
 |  | Parents | [C1_DLL](#c1-dll) |
-|  | Дети | None |
-|  | Свойства | — Ключ типа<br/> — Имя типа; |
-|  | Классы отслеживания | [симпливент](cpp-event-data-types/simple-event.md)<br/>[симболнаме](cpp-event-data-types/symbol-name.md) |
-|  | Description | Происходит в конце первого этапа передачи: один раз для каждого типа, вовлеченного в создание экземпляров шаблона. Ключ является числовым идентификатором для типа, а имя — его текстовым представлением. Ключи типа уникальны в анализируемой трассировке. Однако разные ключи, поступающие из разных интерфейсных проходов компилятора, могут указывать на один и тот же тип. Сравнение типов между разными проходами внешнего интерфейса компилятора требует использования их имен. SYMBOL_NAME события выдаются в конце внешнего прохода компилятора, после того, как все экземпляры шаблонов созданы. |
+|  | Дети | Отсутствуют |
+|  | Свойства | - Тип ключа<br/> - Имя типа |
+|  | Классы захвата | [SimpleEvent](cpp-event-data-types/simple-event.md)<br/>[СимволИ](cpp-event-data-types/symbol-name.md) |
+|  | Описание | Происходит в конце переднего конца прохода: один раз для каждого типа, участвующих в шаблон моментов. Ключ является числовым идентификатором для типа, в то время как имя является его текстовым представлением. Введите ключи являются уникальными в пределах трассировки. Тем не менее, различные клавиши, поступающие из различных компилятор передний конец проходит может указывать на тот же тип. Сравнение типов между различными передними проходами компилятора требует использования их имен. SYMBOL_NAME события излучаются в конце переднего прохода компилятора, после того, как все моментгности шаблона имели место. |
 | <a name="template-instantiation"></a>TEMPLATE_INSTANTIATION | Тип | Действие |
 |  | Parents | [C1_DLL](#c1-dll)<br/>[FRONT_END_FILE](#front-end-file)<br/>[TEMPLATE_INSTANTIATION](#template-instantiation) |
 |  | Дети | [TEMPLATE_INSTANTIATION](#template-instantiation) |
-|  | Свойства | — Ключ для специализированного типа<br/>— Ключ для типа первичного шаблона;<br/>— Тип шаблона, экземпляр которого был создан |
-|  | Классы отслеживания | [Действие](cpp-event-data-types/activity.md)<br/>[темплатеинстантиатион](cpp-event-data-types/template-instantiation.md) |
-|  | Description | Происходит в начале и в конце создания экземпляра шаблона. Создается экземпляр основного типа шаблона (например, `vector`), что приводит к созданию специализированного типа (например, `std::vector<int>`). Ключ предоставляется для обоих типов. Используйте событие [SYMBOL_NAME](#symbol-name) для преобразования ключа в имя типа. Ключи типа уникальны в анализируемой трассировке. Однако разные ключи, поступающие из разных интерфейсных проходов компилятора, могут указывать на один и тот же тип. Для сравнения типов между различными интерфейсными передачами компилятора требуется использовать имена символов. Это событие является рекурсивным. Рекурсия происходит в некоторых случаях, когда внешний интерфейс создает экземпляр вложенных шаблонов. |
-| <a name="thread"></a>ПОТОК | Тип | Действие |
+|  | Свойства | - Ключ для специализированного типа<br/>- Ключ для типа первичного шаблона<br/>- Вид шаблона, который был мгновенно |
+|  | Классы захвата | [Действие](cpp-event-data-types/activity.md)<br/>[ШаблонМеймикция](cpp-event-data-types/template-instantiation.md) |
+|  | Описание | Происходит в начале и конце мгновенного шаблона. Основной тип шаблона `vector`(например, ) мгновенно, в результате `std::vector<int>`чего специализированный тип (например, ). Ключ дается для обоих типов. Используйте [событие SYMBOL_NAME](#symbol-name) для преобразования ключа в имя типа. Введите ключи являются уникальными в пределах трассировки. Тем не менее, различные клавиши, поступающие из различных компилятор передний конец проходит может указывать на тот же тип. Сравнение типов между различными передними проходами компилятора требует использования имен символов. Это событие является рекурсивным. Рекурсия происходит в некоторых случаях, когда передний конец мгновенно вложенных шаблонов. |
+| <a name="thread"></a>Поток | Тип | Действие |
 |  | Parents | [CODE_GENERATION](#code-generation)<br/>[TOP_DOWN](#top-down) |
-|  | Дети | [FUNCTION](#function) |
-|  | Свойства | None |
-|  | Классы отслеживания | [Действие](cpp-event-data-types/activity.md)<br/>[Поток](cpp-event-data-types/thread.md) |
-|  | Description | Происходит в начале и в конце выполнения серверного потока компилятора. Приостановленный поток считается завершенным. Пробуждении поток считается запущенным. |
+|  | Дети | [Функции](#function) |
+|  | Свойства | Отсутствуют |
+|  | Классы захвата | [Действие](cpp-event-data-types/activity.md)<br/>[Поток](cpp-event-data-types/thread.md) |
+|  | Описание | Происходит в начале и конце выполнения обратного потока компилятора. Приостановленный поток считается завершенным. Просевшаяся поток считается запущенной. |
 | <a name="top-down"></a>TOP_DOWN | Тип | Действие |
 |  | Parents | [WHOLE_PROGRAM_ANALYSIS](#whole-program-analysis) |
-|  | Дети | [FUNCTION](#function)<br/>[ПОТОК](#thread) |
-|  | Свойства | None |
-|  | Классы отслеживания | [Действие](cpp-event-data-types/activity.md)<br/>[топдовн](cpp-event-data-types/top-down.md) |
-|  | Description | Происходит при запуске и окончании прохода по всему анализу программы. |
+|  | Дети | [Функции](#function)<br/>[Поток](#thread) |
+|  | Свойства | Отсутствуют |
+|  | Классы захвата | [Действие](cpp-event-data-types/activity.md)<br/>[ТопДаун](cpp-event-data-types/top-down.md) |
+|  | Описание | Происходит в начале и остановке пропуска сверху вниз всего анализа программы. |
 | <a name="whole-program-analysis"></a>WHOLE_PROGRAM_ANALYSIS | Тип | Действие |
 |  | Parents | [C2_DLL](#c2-dll) |
 |  | Дети | [BOTTOM_UP](#bottom-up)<br/>[TOP_DOWN](#top-down) |
-|  | Свойства | None |
-|  | Классы отслеживания | [Действие](cpp-event-data-types/activity.md)<br/>[вхолепрограманалисис](cpp-event-data-types/whole-program-analysis.md) |
-|  | Description | Происходит при запуске и окончании фазы анализа всей программы при создании кода во время компоновки. |
+|  | Свойства | Отсутствуют |
+|  | Классы захвата | [Действие](cpp-event-data-types/activity.md)<br/>[ЦельПрограммноеАнализ](cpp-event-data-types/whole-program-analysis.md) |
+|  | Описание | Происходит в начале и остановке фазы анализа всей программы генерации кода времени ссылки. |
 
 ::: moniker-end

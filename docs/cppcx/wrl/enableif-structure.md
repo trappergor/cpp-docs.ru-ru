@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - EnableIf structure
 ms.assetid: 7825b283-e6b2-4f39-a4b9-c03bcd431b8e
-ms.openlocfilehash: daaba919acaa35615af56831f9458831c3d35427
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 44c6293b56e9e03c23d0d8cebf2a112e6fcf3664
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398528"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214036"
 ---
 # <a name="enableif-structure"></a>EnableIf - структура
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+Поддерживает инфраструктуру WRL и не предназначен для непосредственного использования в коде.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,19 +34,19 @@ struct EnableIf<true, T>;
 Тип.
 
 *b*<br/>
-Выражение типа Boolean.
+Логическое выражение.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Определяет данные-член типа, указанного в качестве второго параметра шаблона, если первый параметр шаблона, результатом которого является **true**.
+Определяет элемент данных типа, заданного вторым параметром шаблона, если первый параметр шаблона имеет **значение true**.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
-### <a name="public-typedefs"></a>Общедоступные определения типов
+### <a name="public-typedefs"></a>Открытые определения типов
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|`type`|Если параметр шаблона *b* принимает значение **true**, частичная специализация определяет данные-член `type` типа `T`.|
+|`type`|Если параметру шаблона *b* присвоено **значение true**, то частичная специализация определяет `type` элементов данных как тип `T`.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -54,10 +54,10 @@ struct EnableIf<true, T>;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** internal.h
+**Заголовок:** internal. h
 
-**Пространство имен:** Microsoft::WRL::Details
+**Пространство имен:** Microsoft:: WRL::D состояния
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Microsoft::WRL::Details](microsoft-wrl-details-namespace.md)

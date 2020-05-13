@@ -9,12 +9,12 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-ms.openlocfilehash: 1e47a138fece021cf015884222d8cf5c766655fd
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: 6b3add1c0de8aa1f8ec66e8d220443c4a0efd704
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "79544763"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172469"
 ---
 # <a name="component-extensions-for-net-and-uwp"></a>Расширения компонентов для .NET и UWP
 
@@ -37,12 +37,12 @@ C++/CLI расширяет стандарт C++ ISO/ANSI и определяет
 
 В следующей таблице перечислены ключевые слова в расширении языка C++.
 
-|Ключевое слово|Контекстно-зависимое?|Назначение|Ссылки|
+|Ключевое слово|Контекстно-зависимое?|Назначение|Справочник|
 |-------------|-----------------------|-------------|---------------|
-|**ref class**<br /><br /> **ref struct**|Нет|Объявляет класс.|[Классы и структуры](classes-and-structs-cpp-component-extensions.md)|
-|**value class**<br /><br /> **value struct**|Нет|Объявляет класс значения.|[Классы и структуры](classes-and-structs-cpp-component-extensions.md)|
-|**Класс interface**<br /><br /> **interface struct**|Нет|Объявляет интерфейс.|[Класс interface](interface-class-cpp-component-extensions.md)|
-|**Класс перечисления**<br /><br /> **enum struct**|Нет|Объявляет перечисление.|[Класс перечисления](enum-class-cpp-component-extensions.md)|
+|**ref class**<br /><br /> **ref struct**|нет|Объявляет класс.|[Классы и структуры](classes-and-structs-cpp-component-extensions.md)|
+|**value class**<br /><br /> **value struct**|нет|Объявляет класс значения.|[Классы и структуры](classes-and-structs-cpp-component-extensions.md)|
+|**Класс interface**<br /><br /> **interface struct**|нет|Объявляет интерфейс.|[Класс interface](interface-class-cpp-component-extensions.md)|
+|**Класс перечисления**<br /><br /> **enum struct**|нет|Объявляет перечисление.|[Класс перечисления](enum-class-cpp-component-extensions.md)|
 |**property**|Да|Объявляет свойство.|[property](property-cpp-component-extensions.md)|
 |**delegate**|Да|Объявляет делегат.|[Делегат (C++/CLI и C++/CX)](delegate-cpp-component-extensions.md)|
 |**event**|Да|Объявление события.|[event](event-cpp-component-extensions.md)|
@@ -51,10 +51,10 @@ C++/CLI расширяет стандарт C++ ISO/ANSI и определяет
 
 Для указания поведения переопределения при наследовании можно использовать указанные ниже ключевые слова. Хотя ключевое слово **new** (новый) не является расширением C++, оно приведено здесь, поскольку его можно использовать в дополнительном контексте. Некоторые спецификаторы также допустимы для машинного программирования. Дополнительные сведения см. [в разделе инструкции. объявление описателей переопределения в компиляциях в машинном код (C++/CLI)](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
 
-|Ключевое слово|Контекстно-зависимое?|Назначение|Ссылки|
+|Ключевое слово|Контекстно-зависимое?|Назначение|Справочник|
 |-------------|-----------------------|-------------|---------------|
 |**abstract**|Да|Указывает, что функции или классы являются абстрактными.|[abstract](abstract-cpp-component-extensions.md)|
-|**новую**|Нет|Указывает, что функция не является переопределением версии базового класса.|[new (новая ячейка в таблице vtable)](new-new-slot-in-vtable-cpp-component-extensions.md)|
+|**новую**|нет|Указывает, что функция не является переопределением версии базового класса.|[new (новая ячейка в таблице vtable)](new-new-slot-in-vtable-cpp-component-extensions.md)|
 |**override**|Да|Указывает, что метод должен быть переопределением версии базового класса.|[override](override-cpp-component-extensions.md)|
 |**sealed**|Да|Предотвращает использование классов в качестве базовых классов.|[sealed](sealed-cpp-component-extensions.md)|
 
@@ -64,28 +64,28 @@ C++/CLI расширяет стандарт C++ ISO/ANSI и определяет
 
 |Ключевое слово|Контекстно-зависимое?|Назначение|
 |-------------|-----------------------|-------------|
-|**generic**|Нет|Объявляет универсальный тип.|
+|**generic**|нет|Объявляет универсальный тип.|
 |**where**|Да|Определяет ограничения, применяемые к параметру универсального типа.|
 
 ## <a name="miscellaneous-keywords"></a>Прочие ключевые слова
 
 В расширения C++ добавлены следующие ключевые слова.
 
-|Ключевое слово|Контекстно-зависимое?|Назначение|Ссылки|
+|Ключевое слово|Контекстно-зависимое?|Назначение|Справочник|
 |-------------|-----------------------|-------------|---------------|
 |**finally**|Да|Указывает поведение обработки исключений по умолчанию.|[Обработка исключений](exception-handling-cpp-component-extensions.md)|
-|**for each, in**|Нет|Перечисляет элементы коллекции.|[for each, in](../dotnet/for-each-in.md)|
-|**gcnew**|Нет|Выделяет типы в куче со сбором мусора. Используйте вместо **new** и **delete**.|[ref new, gcnew](ref-new-gcnew-cpp-component-extensions.md)|
+|**for each, in**|нет|Перечисляет элементы коллекции.|[for each, in](../dotnet/for-each-in.md)|
+|**gcnew**|нет|Выделяет типы в куче со сбором мусора. Используйте вместо **new** и **delete**.|[ref new, gcnew](ref-new-gcnew-cpp-component-extensions.md)|
 |**ref new**|Да|Выделяет тип среды выполнения Windows. Используйте вместо **new** и **delete**.|[ref new, gcnew](ref-new-gcnew-cpp-component-extensions.md)|
 |**initonly**|Да|Указывает, что член можно инициализировать только в объявлении или в статическом конструкторе.|[initonly (C++/CLI)](../dotnet/initonly-cpp-cli.md)|
 |**literal**|Да|Создает переменную литерала.|[literal](literal-cpp-component-extensions.md)|
-|**nullptr**|Нет|Означает, что обработчик или указатель не указывает на объект.|[nullptr](nullptr-cpp-component-extensions.md)|
+|**nullptr**|нет|Означает, что обработчик или указатель не указывает на объект.|[nullptr](nullptr-cpp-component-extensions.md)|
 
 ## <a name="template-constructs"></a>Конструкции шаблонов
 
 Перечисленные ниже языковые конструкции реализуются в виде шаблонов, а не ключевых слов. При указании параметра компилятора `/ZW` они определяются в пространстве имен `lang`. При указании параметра компилятора `/clr` они определяются в пространстве имен `cli`.
 
-|Ключевое слово|Назначение|Ссылки|
+|Ключевое слово|Назначение|Справочник|
 |-------------|-------------|---------------|
 |**array**.|Объявляет массив.|[Массивы](arrays-cpp-component-extensions.md)|
 |**interior_ptr**|(Только для среды CLR). Указывает на данные в ссылочном типе.|[interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md)|
@@ -97,7 +97,7 @@ C++/CLI расширяет стандарт C++ ISO/ANSI и определяет
 
 Следующие деклараторы типа указывают среде выполнения на необходимость автоматически управлять временем существования и удалением выделенных объектов.
 
-|Оператор|Назначение|Ссылки|
+|Оператор|Назначение|Справочник|
 |--------------|-------------|---------------|
 |`^`|Объявляет дескриптор объекта, то есть указатель на объект среды выполнения Windows или объект CLR, который автоматически удаляется, если больше не используется.|[Оператор дескриптора объекта (^)](handle-to-object-operator-hat-cpp-component-extensions.md)|
 |`%`|Объявляет отслеживаемую ссылку, то есть ссылку на объект среды выполнения Windows или объект CLR, который автоматически удаляется, если больше не используется.|[Оператор отслеживания ссылок](tracking-reference-operator-cpp-component-extensions.md)|
@@ -106,7 +106,7 @@ C++/CLI расширяет стандарт C++ ISO/ANSI и определяет
 
 В этом разделе перечислены дополнительные программные конструкции и разделы, относящиеся к среде CLR.
 
-|Раздел|Описание|
+|Раздел|Description|
 |-----------|-----------------|
 |[__identifier (C++/CLI)](identifier-cpp-cli.md)|(Среда выполнения Windows и среда CLR) Позволяет использовать ключевые слова как идентификаторы.|
 |[Списки аргументов переменной длины (...) (C++/CLI)](variable-argument-lists-dot-dot-dot-cpp-cli.md)|(Среда выполнения Windows и среда CLR) Позволяет функции принимать переменное число аргументов.|
@@ -130,7 +130,7 @@ C++/CLI расширяет стандарт C++ ISO/ANSI и определяет
 |[Директива #using](../preprocessor/hash-using-directive-cpp.md)|Импортирует внешние сборки.|
 |[Документация XML](../build/reference/xml-documentation-visual-cpp.md)|Пояснения к документации кода на основе XML с использованием [/doc (обработка комментариев к документации) (C/C++)](../build/reference/doc-process-documentation-comments-c-cpp.md)|
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Программирование .NET с использованием C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
 [Взаимодействие исходного кода и платформы.NET](../dotnet/native-and-dotnet-interoperability.md)

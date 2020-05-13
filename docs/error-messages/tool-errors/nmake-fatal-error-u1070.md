@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - U1070
 ms.assetid: 8639fc39-b4b1-48f5-ac91-0e9fb61680fd
-ms.openlocfilehash: 35bea47f6626dfe283a537d3d96340921c37f3f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 008d49df3460cb7cf760e4b278db20da444555fe
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367243"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182777"
 ---
 # <a name="nmake-fatal-error-u1070"></a>Неустранимая ошибка NMAKE U1070
 
-Циклическая зависимость в макроопределении «имя макроса»
+цикл в определении макроса "имямакроса"
 
-Указанное Макроопределение содержит макрос, определение которого содержится оно само. Циклическое определение макросов являются недопустимыми.
+Заданное определение макроса содержит макрос, определение которого содержало данный макрос. Недопустимые циклические определения макросов.
 
 ## <a name="example"></a>Пример
 
@@ -28,7 +28,7 @@ ONE=$(TWO)
 TWO=$(ONE)
 ```
 
-возникает следующая ошибка:
+приводит к следующей ошибке:
 
 ```
 cycle in macro definition 'TWO'

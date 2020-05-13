@@ -7,12 +7,12 @@ helpviewer_keywords:
 - source files, specifying in compiler
 - source programs
 ms.assetid: 18bb2826-17da-48e5-92a2-10e649f1bc9f
-ms.openlocfilehash: 4562f8397e9d2d3e044086b8da8d56ba25047ebd
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: ac906925be551c6ee4da08e200d4028047b3d041
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152538"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349886"
 ---
 # <a name="source-files-and-source-programs"></a>Файлы с исходным кодом и исходные программы
 
@@ -21,17 +21,17 @@ ms.locfileid: "56152538"
 ## <a name="syntax"></a>Синтаксис
 
 *translation-unit*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*external-declaration* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*внешнее декларирование* <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*translation-unit* *external-declaration*
 
 *external-declaration*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*function-definition*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaration*
+&nbsp;&nbsp;&nbsp;&nbsp;*функция-определение*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Декларации*
 
 В статье [Общие сведения об объявлениях](../c-language/overview-of-declarations.md) описывается синтаксис нетерминала `declaration`, а в *справочнике по препроцессору* поясняется, как происходит обработка [записи преобразования](../preprocessor/phases-of-translation.md).
 
 > [!NOTE]
->  Описание соглашений о синтаксисе ANSI вы найдете во введении к статье [Общие сведения о синтаксисе языка C](../c-language/c-language-syntax-summary.md).
+> Описание соглашений о синтаксисе ANSI вы найдете во введении к статье [Общие сведения о синтаксисе языка C](../c-language/c-language-syntax-summary.md).
 
 Компонентами блока трансляции являются внешние объявления, которые включают в себя определения функций и объявления идентификаторов. Эти объявления и определения могут находиться в исходных файлах, файлах заголовков, библиотеках и других файлах, которые необходимы программе. Чтобы создать программу, необходимо скомпилировать каждый блок трансляции и скомпоновать полученный объектный файл.
 
@@ -39,6 +39,6 @@ ms.locfileid: "56152538"
 
 Исходные файлы не должны содержать исполняемых операторов. К примеру, в один исходный файл можно поместить все определения переменных, а затем в другом исходном файле, в котором эти переменные используются, объявить ссылки на них. Этот метод позволяет легко находить и при необходимости изменять определения. По этой же причине константы и макросы часто организуются в отдельные файлы — так называемые включаемые файлы, или файлы заголовка. По мере необходимости на них можно ссылаться из исходных файлов. Сведения о [макросах](../preprocessor/macros-c-cpp.md) и [включаемых файлах](../preprocessor/hash-include-directive-c-cpp.md) см. в *справочнике по препроцессору*.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Структура программы](../c-language/program-structure.md)

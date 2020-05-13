@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::mutex [C++], native_handle
 - std::mutex [C++], try_lock
 - std::mutex [C++], unlock
-ms.openlocfilehash: 099cf17db7b99f9cd1d953a603db70f75c33358e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 84e6e3a46903a204444df9886556ae2c563304a9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457060"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364848"
 ---
 # <a name="mutex-class-c-standard-library"></a>Класс mutex (Стандартная библиотека C++)
 
-Представляет *тип мьютекса*. Используйте объекты этого типа для принудительного взаимного исключения в программе.
+Представляет *тип mutex*. Используйте объекты этого типа для принудительного взаимного исключения в программе.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -37,27 +37,27 @@ class mutex;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[Мьютекс](#mutex)|Создает объект `mutex`.|
+|[мьютекс](#mutex)|Формирует объект `mutex`.|
 |[Деструктор mutex::~mutex](#dtormutex_destructor)|Освобождает ресурсы, используемые объектом `mutex`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[lock](#lock)|Блокирует вызывающий поток до тех пор, пока этот поток не получит права владельца объекта `mutex`.|
 |[native_handle](#native_handle)|Возвращает тип реализации, представляющий дескриптор мьютекса.|
 |[try_lock](#try_lock)|Попытки получить права владельца объекта `mutex` без блокировки.|
-|[unlock](#unlock)|Освобождает права владения объектом `mutex`.|
+|[Разблокировать](#unlock)|Освобождает права владения объектом `mutex`.|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<> мьютекса
+**Заголовок:** \<mutex>
 
 **Пространство имен:** std
 
-## <a name="lock"></a>мьютекс:: Lock
+## <a name="mutexlock"></a><a name="lock"></a>mutex::lock
 
 Блокирует вызывающий поток до тех пор, пока этот поток не получит права владельца объекта `mutex`.
 
@@ -65,11 +65,11 @@ class mutex;
 void lock();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Если вызывающий поток уже является владельцем `mutex`, поведение не определено.
 
-## <a name="mutex"></a>  Конструктор mutex::mutex
+## <a name="mutexmutex-constructor"></a><a name="mutex"></a>mutex::mutex Конструктор
 
 Создает объект `mutex`, который не заблокирован.
 
@@ -77,7 +77,7 @@ void lock();
 constexpr mutex() noexcept;
 ```
 
-## <a name="dtormutex_destructor"></a>  Деструктор mutex::~mutex
+## <a name="mutexmutex-destructor"></a><a name="dtormutex_destructor"></a>mutex:::-mutex Destructor
 
 Освобождает все ресурсы, используемые объектом `mutex`.
 
@@ -85,11 +85,11 @@ constexpr mutex() noexcept;
 ~mutex();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Если при выполнении деструктора объект заблокирован, поведение не определено.
 
-## <a name="native_handle"></a>  mutex::native_handle
+## <a name="mutexnative_handle"></a><a name="native_handle"></a>mutex::native_handle
 
 Возвращает тип реализации, представляющий дескриптор мьютекса. Дескриптор мьютекса может использоваться разными способами в зависимости от реализации.
 
@@ -101,7 +101,7 @@ native_handle_type native_handle();
 
 `native_handle_type`определяется как `Concurrency::critical_section *`, которое приводится к `void *`.
 
-## <a name="try_lock"></a>  mutex::try_lock
+## <a name="mutextry_lock"></a><a name="try_lock"></a>mutex::try_lock
 
 Попытки получить права владельца объекта `mutex` без блокировки.
 
@@ -111,13 +111,13 @@ bool try_lock();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true** , если метод успешно получает владение `mutex`; в противном случае — **значение false**.
+**верно,** если метод успешно получает `mutex`право собственности на ; в противном случае, **ложные**.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Если вызывающий поток уже является владельцем `mutex`, поведение не определено.
 
-## <a name="unlock"></a>  mutex::unlock
+## <a name="mutexunlock"></a><a name="unlock"></a>mutex::разблокировка
 
 Освобождает права владения объектом `mutex`.
 
@@ -125,11 +125,11 @@ bool try_lock();
 void unlock();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Если вызывающий поток не является владельцем `mutex`, поведение не определено.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)\
+[Справка по файлам заголовка](../standard-library/cpp-standard-library-header-files.md)\
 [\<mutex>](../standard-library/mutex.md)

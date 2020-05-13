@@ -1,5 +1,5 @@
 ---
-title: Реализация окна с помощью CWindowImpl
+title: Реализация окна с CWindowImpl
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ATL, windows
@@ -9,61 +9,61 @@ helpviewer_keywords:
 - subclassing ATL window classes
 - superclassing, ATL
 ms.assetid: 3fc40550-f1d6-4702-8b7c-4cf682b6a855
-ms.openlocfilehash: 265c3145d8ceacae540286f72939dc046e7c8b35
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e5fdbf15ddd7edc69f0667a9b7e08c7c5e531a5e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197849"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319448"
 ---
-# <a name="implementing-a-window-with-cwindowimpl"></a>Реализация окна с помощью CWindowImpl
+# <a name="implementing-a-window-with-cwindowimpl"></a>Реализация окна с CWindowImpl
 
-Чтобы реализовать окна, являются производными от класса `CWindowImpl`. В производном классе объявите схему сообщений и функций обработчиков сообщений. Теперь можно использовать класс тремя разными способами:
+Для реализации окна, получить `CWindowImpl`класс из . В своем классе выводимых объявлений объявите карту сообщений и функции обработчика сообщений. Теперь вы можете использовать свой класс тремя различными способами:
 
-- [Создать окно, в зависимости от нового класса Windows](#_atl_creating_a_window_based_on_a_new_windows_class)
+- [Создание окна на основе нового класса Windows](#_atl_creating_a_window_based_on_a_new_windows_class)
 
-- [Суперкласс существующий класс Windows](#_atl_superclassing_an_existing_windows_class)
+- [Суперкласс существующего класса Windows](#_atl_superclassing_an_existing_windows_class)
 
-- [Подкласс существующему окну](#_atl_subclassing_an_existing_window)
+- [Подкласс существующего окна](#_atl_subclassing_an_existing_window)
 
-##  <a name="_atl_creating_a_window_based_on_a_new_windows_class"></a> Создание окна на основе нового класса Windows
+## <a name="creating-a-window-based-on-a-new-windows-class"></a><a name="_atl_creating_a_window_based_on_a_new_windows_class"></a>Создание окна на основе нового класса Windows
 
-`CWindowImpl` содержит [DECLARE_WND_CLASS](reference/window-class-macros.md#declare_wnd_class) макрос для объявления сведения о классе Windows. Реализует этот макрос `GetWndClassInfo` функцию, которая использует [CWndClassInfo](../atl/reference/cwndclassinfo-class.md) задать сведения о нового класса Windows. Когда `CWindowImpl::Create` вызывается этот Windows класс регистрируется и создается новое окно.
+`CWindowImpl`содержит [DECLARE_WND_CLASS](reference/window-class-macros.md#declare_wnd_class) макрос для декларировать информацию о классе Windows. Этот макрос `GetWndClassInfo` реализует функцию, которая использует [CWndClassInfo](../atl/reference/cwndclassinfo-class.md) для определения информации нового класса Windows. При `CWindowImpl::Create` вызове этот класс Windows регистрируется и создается новое окно.
 
 > [!NOTE]
->  `CWindowImpl` передает значение NULL, чтобы `DECLARE_WND_CLASS` макросом, который означает, что ATL создаст имя класса Windows. Чтобы указать собственное имя, передать строку DECLARE_WND_CLASS в вашей `CWindowImpl`-производного класса.
+> `CWindowImpl`передает NULL `DECLARE_WND_CLASS` макросу, что означает, что ATL будет генерировать имя класса Windows. Чтобы указать свое имя, передайте `CWindowImpl`строку DECLARE_WND_CLASS в классе, полученном.
 
 ## <a name="example"></a>Пример
 
-Ниже приведен пример класса, который реализует окно, в зависимости от нового класса Windows.
+Ниже приводится пример класса, который реализует окно на основе нового класса Windows:
 
 [!code-cpp[NVC_ATL_Windowing#64](../atl/codesnippet/cpp/implementing-a-window-with-cwindowimpl_1.h)]
 
-Чтобы создать окно, создайте экземпляр `CMyWindow` , а затем вызвать `Create` метод.
+Чтобы создать окно, создайте `CMyWindow` экземпляр, `Create` а затем вызовите метод.
 
 > [!NOTE]
->  Чтобы переопределить сведения о классе Windows по умолчанию, реализовать `GetWndClassInfo` метод в производном классе, задав `CWndClassInfo` участникам соответствующие значения.
+> Чтобы переопределить информацию о классе `GetWndClassInfo` Windows по умолчанию, `CWndClassInfo` реализуйте метод в своем производном классе, установив члены соответствующим значениям.
 
-##  <a name="_atl_superclassing_an_existing_windows_class"></a> Создание надклассов существующий класс Windows
+## <a name="superclassing-an-existing-windows-class"></a><a name="_atl_superclassing_an_existing_windows_class"></a>Суперклассирование существующего класса Windows
 
-[DECLARE_WND_SUPERCLASS](reference/window-class-macros.md#declare_wnd_superclass) макрос позволяет создать окно, является суперклассом существующих Windows класса. Укажите этот макрос в вашей `CWindowImpl`-производного класса. Как и любое другое окно ATL сообщения обрабатываются виртуальной схемы сообщений.
+Макрос [DECLARE_WND_SUPERCLASS](reference/window-class-macros.md#declare_wnd_superclass) позволяет создать окно, которое классифицировать существующий класс Windows. Укажите этот `CWindowImpl`макрос в классе выбытых. Как и любое другое окно ATL, сообщения обрабатываются картой сообщений.
 
-При использовании DECLARE_WND_SUPERCLASS будет зарегистрирован новый класс Windows. Этот новый класс будет совпадать с именем существующего класса, указать, но приведет к замене процедуру окна с `CWindowImpl::WindowProc` (или функцией, который переопределяет этот метод).
+При использовании DECLARE_WND_SUPERCLASS будет зарегистрирован новый класс Windows. Этот новый класс будет таким же, как и указанный `CWindowImpl::WindowProc` вами класс, но заменит процедуру окна (или с функцией, которая перекрывает этот метод).
 
 ## <a name="example"></a>Пример
 
-Следуя приведен пример класса, является суперклассом стандартный изменить класс:
+Ниже приводится пример класса, который классирует стандартный класс edit:
 
 [!code-cpp[NVC_ATL_Windowing#65](../atl/codesnippet/cpp/implementing-a-window-with-cwindowimpl_2.h)]
 
-Чтобы создать суперкласса окно редактирования, создайте экземпляр `CMyEdit` , а затем вызвать `Create` метод.
+Чтобы создать суперклассифицированное окно edit, `CMyEdit` создайте `Create` экземпляр, а затем вызовите метод.
 
-##  <a name="_atl_subclassing_an_existing_window"></a> Создание подкласса существующему окну
+## <a name="subclassing-an-existing-window"></a><a name="_atl_subclassing_an_existing_window"></a>Подклассирование существующего окна
 
-Подкласс существующему окну, являются производными от класса `CWindowImpl` и объявите схему сообщений, как и в предыдущих двух случаях. Тем не менее, не указать любые сведения о классе в Windows, так как подкласс будет уже существующему окну.
+Чтобы подклассифицировать существующее `CWindowImpl` окно, вывести класс из и объявить карту сообщений, как в двух предыдущих случаях. Обратите внимание, однако, что вы не указываете информацию о классе Windows, так как вы подклассифицируете уже существующее окно.
 
-Вместо вызова метода `Create`, вызовите `SubclassWindow` и передать его дескриптор в открытом окне, необходимо создать подкласс. Если окно является подклассом, он будет использовать `CWindowImpl::WindowProc` (или функцию, который переопределяет этот метод) для направления сообщений в схеме сообщений. Чтобы отсоединить выведенных в подклассы окна из объекта, вызовите `UnsubclassWindow`. Будет восстановлена окна исходную процедуру окна.
+Вместо `Create`вызова, `SubclassWindow` вызова и передачи его ручку в существующее окно вы хотите подкласс. После того, как окно подклассно, оно будет использовать `CWindowImpl::WindowProc` (или функцию, которая перекрывает этот метод) для направления сообщений на карту сообщений. Чтобы отсоединить подклассифицированное окно `UnsubclassWindow`от объекта, позвоните. Затем будет восстановлена оригинальная процедура окна.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Реализация окна](../atl/implementing-a-window.md)

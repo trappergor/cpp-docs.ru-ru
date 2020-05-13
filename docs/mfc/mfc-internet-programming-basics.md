@@ -16,35 +16,35 @@ helpviewer_keywords:
 - Internet content [MFC]
 - WinInet classes [MFC]
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
-ms.openlocfilehash: eee045e198f61c088e302c40deb2de406adab428
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 5a8fb7bf07ec631869075c5977dcec468143ad56
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449716"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366289"
 ---
 # <a name="mfc-internet-programming-basics"></a>Основы программирования для интернет-решений MFC
 
-Корпорация Майкрософт предоставляет множество интерфейсов API для программирования клиентских и серверных приложений. Многие новые приложения написаны для Интернета и технологии, возможностей браузера и изменение параметров безопасности, будут записаны новые типы приложений. Браузеры запуска на клиентских компьютерах, предоставление доступа к Интернет и отображении HTML-страниц, содержащих текст, графики, элементы управления ActiveX и документы. Серверы FTP, HTTP и gopher служб и запуску приложений расширения сервера, с помощью CGI. Пользовательское приложение может получить сведения и предоставления данных в Интернете.
+Корпорация Майкрософт предоставляет множество AI для программирования как клиентских, так и серверных приложений. Многие новые приложения пишутся для Интернета, и по мере изменения технологий, возможностей браузера и параметров безопасности будут писаться новые типы приложений. Браузеры работают на клиентских компьютерах, предоставляя доступ к Всемирной паутине и отображая HTML-страницы, содержащие текст, графику, элементы управления ActiveX и документы. Серверы предоставляют услуги FTP, HTTP и gopher, а также заходят приложения для расширения серверов с помощью CGI. Пользовательское приложение может получать информацию и предоставлять данные в Интернете.
 
 >[!IMPORTANT]
-> ActiveX — это устаревшая технология, которая не следует использовать для разработки новых приложений. Дополнительные сведения см. в разделе [элементы управления ActiveX](activex-controls.md).
+> ActiveX является устаревшей технологией, которая не должна использоваться для новых разработок. Для получения дополнительной информации [см.](activex-controls.md)
 
-![Клиентские и серверные приложения](../mfc/media/vc38bq1.gif "клиентские и серверные приложения")
+![Клиентские и серверные приложения](../mfc/media/vc38bq1.gif "Клиентские и серверные приложения")
 
-MFC предоставляет классы, поддерживающие программирование для Интернета. Можно использовать [COleControl](../mfc/reference/colecontrol-class.md) и [CDocObjectServer](../mfc/reference/cdocobjectserver-class.md) и связанных классов MFC для создания элементов управления ActiveX и активные документы. Можно использовать классы MFC, такие как [CInternetSession](../mfc/reference/cinternetsession-class.md), [CFtpConnection](../mfc/reference/cftpconnection-class.md), и [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md) для извлечения файлов и данных с помощью протоколов Интернета, таких как FTP, HTTP и gopher.
+MFC предоставляет классы, поддерживающие интернет-программирование. Для записи элементов управления ActiveX и активных документов можно использовать [COleControl](../mfc/reference/colecontrol-class.md) и [CDocObjectServer](../mfc/reference/cdocobjectserver-class.md) и связанные с ними классы MFC. Вы можете использовать классы MFC, такие как [CInternetSession,](../mfc/reference/cinternetsession-class.md) [CFtpConnection](../mfc/reference/cftpconnection-class.md)и [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md) для получения файлов и информации с помощью интернет-протоколов, таких как FTP, HTTP и суслик.
 
-## <a name="in-this-section"></a>В этом разделе
+## <a name="in-this-section"></a>в этом разделе
 
-- [Классы MFC, связанные с Интернетом](../mfc/internet-related-mfc-classes.md)
+- [Занятия МФЦ, связанные с Интернетом](../mfc/internet-related-mfc-classes.md)
 
-- [Сведения о работе с Интернетом по разделам](../mfc/internet-information-by-topic.md)
+- [Информация в Интернете по темам](../mfc/internet-information-by-topic.md)
 
 - [Сведения о работе с Интернетом по задачам](../mfc/internet-information-by-task.md)
 
-- [Технология Active в Интернете](../mfc/active-technology-on-the-internet.md)
+- [Активные технологии в Интернете](../mfc/active-technology-on-the-internet.md)
 
-- [Основные сведения о WinInet](../mfc/wininet-basics.md)
+- [Основы WinInet](../mfc/wininet-basics.md)
 
 - [Основы HTML](../mfc/html-basics.md)
 
@@ -64,18 +64,18 @@ MFC предоставляет классы, поддерживающие про
 
 - [Тестирование интернет-приложений](../mfc/testing-internet-applications.md)
 
-- [Internet Security](../mfc/internet-security-cpp.md)
+- [Интернет-безопасность](../mfc/internet-security-cpp.md)
 
-- [Поддержка элементов управления DHTML в ATL](../atl/atl-support-for-dhtml-controls.md)
+- [Поддержка ATL для управления DHTML](../atl/atl-support-for-dhtml-controls.md)
 
-##  <a name="_core_web_sites_for_more_information"></a> Веб-сайтов Дополнительные сведения
+## <a name="web-sites-for-more-information"></a><a name="_core_web_sites_for_more_information"></a>Веб-сайты для получения дополнительной информации
 
-Дополнительные сведения о технологии Microsoft Internet см. в разделе [Microsoft Developer Network (MSDN)](https://go.microsoft.com/fwlink/p/?linkid=56322) веб-сайта. (Ссылки могут изменяться без уведомления).
+Для получения дополнительной информации об Интернет-технологиях Майкрософт можно ознакомиться на веб-сайте [Microsoft Developer Network (MSDN).](https://go.microsoft.com/fwlink/p/?linkid=56322) (Ссылки могут меняться без предварительного уведомления.)
 
-Этот веб-сайт для разработчиков, содержит сведения об использовании средства разработки Майкрософт и технологий и Важнейшие материалы о недавно прошедшие и предстоящие конференциях. На этой странице можно перейти к многие дополнительные сайты для разработчиков, включая .NET, а также центры разработчиков XML. Можно также загрузить бета-версии SDK и примеры.
+Этот веб-сайт для разработчиков содержит информацию об использовании инструментов и технологий разработки Майкрософт, а также топ-истории о последних и предстоящих конференциях. С этой страницы вы можете перейти на многие связанные сайты разработчиков, включая .NET, и XML Центры разработчиков. Вы также можете скачать бета-версии SDKs и образцы.
 
-[World Wide Web Consortium (W3C)](https://go.microsoft.com/fwlink/p/?linkid=37125) публикует спецификации для HTML, HTTP, CGI и других веб-технологий.
+[Консорциум World Wide Web Consortium (W3C)](https://go.microsoft.com/fwlink/p/?linkid=37125) публикует спецификации для HTML, HTTP, CGI и других технологий World Wide Web.
 
-##  <a name="_core_more_internet_help"></a> Дополнительная помощь по Интернету
+## <a name="more-internet-help"></a><a name="_core_more_internet_help"></a>Больше справки для интернета
 
-В разделе "OLE" пакета SDK для Windows содержит дополнительные сведения о программировании OLE. Эти сведения содержат сведения об использовании функций Win32 WinInet, напрямую, а не через классы MFC. Он также содержит общие сведения о технологии Интернета.
+Раздел OLE SDK Windows содержит дополнительную информацию о программировании OLE. Эта информация содержит подробную информацию об использовании функций Win32 WinInet напрямую, а не через классы MFC. Он также содержит обзорную информацию об интернет-технологиях.

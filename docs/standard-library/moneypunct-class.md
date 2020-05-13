@@ -46,16 +46,16 @@ helpviewer_keywords:
 - std::moneypunct [C++], positive_sign
 - std::moneypunct [C++], thousands_sep
 ms.assetid: cf2650da-3e6f-491c-95d5-23e57f582ee6
-ms.openlocfilehash: 7960ee8b5e9ce6b27494e896e38bbf6b5256fe7e
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 3a277b2f97fd53c52b705051c30eb18faf6364d0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425427"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366251"
 ---
 # <a name="moneypunct-class"></a>Класс moneypunct
 
-Шаблон класса описывает объект, который может служить в качестве аспекта языкового стандарта для описания последовательностей типа *CharType* , используемых для представления денежного поля ввода или денежного поля вывода. Если параметр шаблона *Intl* имеет *значение true*, наблюдаются международные соглашения.
+Шаблон класса описывает объект, который может служить в качестве аспекта локализации для описания последовательностей типа *CharType,* используемых для представления поля ввода денежных данных или денежного поля вывода. Если параметр шаблона *Intl* *верен,* соблюдаются международные конвенции.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -66,10 +66,10 @@ class moneypunct;
 
 ### <a name="parameters"></a>Параметры
 
-*CharType*\
+*Chartype*\
 Тип, используемый внутри программы для кодирования символов.
 
-*Международные*\
+*Международный*\
 Флаг, указывающий, должны ли соблюдаться международные конвенции.
 
 ## <a name="remarks"></a>Remarks
@@ -80,20 +80,20 @@ class moneypunct;
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Description|
+|Конструктор|Описание|
 |-|-|
 |[moneypunct](#moneypunct)|Конструктор объектов типа `moneypunct`.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Description|
+|Имя типа|Описание|
 |-|-|
 |[char_type](#char_type)|Тип, используемый для описания символа, используемого языковым стандартом.|
 |[string_type](#string_type)|Тип, описывающий строку, содержащую символы типа `CharType`.|
 
 ### <a name="member-functions"></a>Функции элементов
 
-|Функция-член|Description|
+|Функция-член|Описание|
 |-|-|
 |[curr_symbol](#curr_symbol)|Возвращает последовательность элементов определенного языкового стандарта для использования в качестве символа валюты.|
 |[decimal_point](#decimal_point)|Возвращает последовательность элементов определенного языкового стандарта для использования в качестве символа десятичного разделителя.|
@@ -107,7 +107,7 @@ class moneypunct;
 |[do_positive_sign](#do_positive_sign)|Защищенная виртуальная функция-член, которая вызывается, чтобы возвратить последовательность элементов определенного языкового стандарта для использования в качестве символа знака положительного числа.|
 |[do_thousands_sep](#do_thousands_sep)|Защищенная виртуальная функция-член, которая вызывается, чтобы возвратить последовательность элементов определенного языкового стандарта для использования в качестве символа разделителя тысяч.|
 |[frac_digits](#frac_digits)|Возвращает определенное языковым стандартом количество цифр, которое будет отображаться справа от любого десятичного разделителя.|
-|[grouping](#grouping)|Возвращает определенное языковым стандартом правило группирования цифр слева от любого десятичного разделителя.|
+|[Группировки](#grouping)|Возвращает определенное языковым стандартом правило группирования цифр слева от любого десятичного разделителя.|
 |[neg_format](#neg_format)|Возвращает определенное языковым стандартом правило форматирования выходных значений с отрицательными числами.|
 |[negative_sign](#negative_sign)|Возвращает последовательность элементов определенного языкового стандарта для использования в качестве символа отрицательного числа.|
 |[pos_format](#pos_format)|Возвращает определенное языковым стандартом правило форматирования выходных значений с положительными числами.|
@@ -116,11 +116,11 @@ class moneypunct;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<языковой стандарт >
+**Заголовок:** \<locale>
 
 **Пространство имен:** std
 
-## <a name="char_type"></a>  moneypunct::char_type
+## <a name="moneypunctchar_type"></a><a name="char_type"></a>moneypunct::char_type
 
 Тип, используемый для описания символа, используемого языковым стандартом.
 
@@ -130,9 +130,9 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Remarks
 
-Этот тип является синонимом для параметра-шаблона **CharType**.
+Тип является синонимом для параметра-шаблона **Chartype**.
 
-## <a name="curr_symbol"></a>  moneypunct::curr_symbol
+## <a name="moneypunctcurr_symbol"></a><a name="curr_symbol"></a>moneypunct::curr_symbol
 
 Возвращает последовательность элементов определенного языкового стандарта для использования в качестве символа валюты.
 
@@ -169,7 +169,7 @@ int main( )
 };
 ```
 
-## <a name="decimal_point"></a>  moneypunct::decimal_point
+## <a name="moneypunctdecimal_point"></a><a name="decimal_point"></a>moneypunct::decimal
 
 Возвращает последовательность элементов определенного языкового стандарта для использования в качестве символа десятичного разделителя.
 
@@ -215,7 +215,7 @@ German_Germany.1252 international decimal point ,
 German_Germany.1252 domestic decimal point ,
 ```
 
-## <a name="do_curr_symbol"></a>  moneypunct::do_curr_symbol
+## <a name="moneypunctdo_curr_symbol"></a><a name="do_curr_symbol"></a>moneypunct::do'curr'symbol
 
 Защищенная виртуальная функция-член, которая возвращает последовательность элементов определенного языкового стандарта для использования в качестве символа валюты.
 
@@ -231,7 +231,7 @@ virtual string_type do_curr_symbol() const;
 
 См. пример для [curr_symbol](#curr_symbol), где виртуальная функция-член вызывается из `curr_symbol`.
 
-## <a name="do_decimal_point"></a>  moneypunct::do_decimal_point
+## <a name="moneypunctdo_decimal_point"></a><a name="do_decimal_point"></a>moneypunct::do-decimal
 
 Защищенная виртуальная функция-член, которая возвращает последовательность элементов определенного языкового стандарта для использования в качестве символа десятичного разделителя.
 
@@ -247,7 +247,7 @@ virtual CharType do_decimal_point() const;
 
 См. пример для [decimal_point](#decimal_point), где виртуальная функция-член вызывается из `decimal_point`.
 
-## <a name="do_frac_digits"></a>  moneypunct::do_frac_digits
+## <a name="moneypunctdo_frac_digits"></a><a name="do_frac_digits"></a>moneypunct::do'frac-digits
 
 Защищенная виртуальная функция-член, которая возвращает определенное языковым стандартом количество цифр, которое будет отображаться справа от любого десятичного разделителя.
 
@@ -263,7 +263,7 @@ virtual int do_frac_digits() const;
 
 См. пример для [frac_digits](#frac_digits), где виртуальная функция-член вызывается из `frac_digits`.
 
-## <a name="do_grouping"></a>  moneypunct::do_grouping
+## <a name="moneypunctdo_grouping"></a><a name="do_grouping"></a>moneypunct::do-grouping
 
 Защищенная виртуальная функция-член, которая возвращает определенное языковым стандартом правило группирования цифр слева от любого десятичного разделителя.
 
@@ -277,9 +277,9 @@ virtual string do_grouping() const;
 
 ### <a name="example"></a>Пример
 
-См. пример для [группирования](#grouping), где виртуальная функция-член вызывается `grouping`.
+См пример для [группировки,](#grouping)где виртуальная `grouping`функция члена вызывается .
 
-## <a name="do_neg_format"></a>  moneypunct::do_neg_format
+## <a name="moneypunctdo_neg_format"></a><a name="do_neg_format"></a>moneypunct::do-neg
 
 Защищенная виртуальная функция-член вызывается для возвращения определенного языковым стандартом правила форматирования выходных значений, содержащих отрицательные числа.
 
@@ -289,27 +289,27 @@ virtual pattern do_neg_format() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Защищенная виртуальная функция-член возвращает определенное языковым стандартом правило формирования денежного поля вывода для отрицательного значения. Каждый из четырех элементов `pattern::field` может иметь следующие значения:
+Защищенная виртуальная функция-член возвращает определенное языковым стандартом правило формирования денежного поля вывода для отрицательного значения. Каждый из четырех `pattern::field` элементов может иметь значения:
 
-- `none`, чтобы сопоставить ноль или больше пробелов или ничего не создавать.
+- `none`соответствовать нулю или больше пробелов или ничего не генерировать.
 
-- `sign` для сопоставления или создания положительного или отрицательного знака.
+- `sign`для соответствия или создания положительного или отрицательного знака.
 
-- `space` для сопоставления нуля или более пробелов или создания пробела.
+- `space`для сопоставления нуля или более пробелов или создания пространства.
 
-- `symbol` для сопоставления или создания символа валюты.
+- `symbol`для соответствия или создания символа валюты.
 
-- `value` для сопоставления или создания денежного значения.
+- `value`для сопоставления или создания денежной стоимости.
 
-Генерируются компоненты поля денежного вывода, а компоненты денежного поля ввода сопоставляются в том порядке, в котором эти элементы отображаются в `pattern::field`. Каждое из значений `sign`, `symbol`, `value`и либо `none`, либо `space` должны быть ровно один раз. Значение `none` не должно быть первым. Значение space **не должно** быть первым или последним. Если `Intl` имеет значение true, порядок `symbol`, `sign`, `none`, а затем `value`.
+Компоненты денежного поля вывода генерируются и компоненты денежного ввода поля `pattern::field`сопоставляются в порядке, в котором эти элементы появляются в . Каждое из `sign`значений, `symbol` `value`, `none` `space` , и либо или должны появиться ровно один раз. Значение `none` не должно отображаться первым. Значение space **не должно** быть первым или последним. Если `Intl` это правда, `symbol`порядок, `sign` `none` `value`то .
 
-Версия шаблона `moneypunct`\< **CharType**, **Intl**> Возвращает `{`**money_base:: symbol**, **money_base:: sign**, **money_base:: value**, **money_base:: None**`}`.
+Версия-шаблон `moneypunct`\< **CharType**, **Intl**> возвращает `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`.
 
 ### <a name="example"></a>Пример
 
 См. пример для [neg_format](#neg_format), где виртуальная функция-член вызывается из `neg_format`.
 
-## <a name="do_negative_sign"></a>  moneypunct::do_negative_sign
+## <a name="moneypunctdo_negative_sign"></a><a name="do_negative_sign"></a>moneypunct::do'негативного знака
 
 Защищенная виртуальная функция-член, которая вызывается, чтобы возвратить последовательность элементов определенного языкового стандарта для использования в качестве символа знака отрицательного числа.
 
@@ -325,7 +325,7 @@ virtual string_type do_negative_sign() const;
 
 См. пример для [negative_sign](#negative_sign), где виртуальная функция-член вызывается из `negative_sign`.
 
-## <a name="do_pos_format"></a>  moneypunct::do_pos_format
+## <a name="moneypunctdo_pos_format"></a><a name="do_pos_format"></a>moneypunct::do-pos-формат
 
 Защищенная виртуальная функция-член вызывается для возвращения определенного языковым стандартом правила форматирования выходных значений, содержащих положительные числа.
 
@@ -335,15 +335,15 @@ virtual pattern do_pos_format() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Защищенная виртуальная функция-член возвращает определенное языковым стандартом правило формирования денежного поля вывода для положительного значения. (Он также определяет, как сопоставлять компоненты поля денежного ввода.) Кодировка такая же, как и для [do_neg_format](#do_neg_format).
+Защищенная виртуальная функция-член возвращает определенное языковым стандартом правило формирования денежного поля вывода для положительного значения. (Он также определяет, как сопоставить компоненты поля денежных вводимых вод.) Кодирование такое же, как и для [do_neg_format.](#do_neg_format)
 
-Версия шаблона moneypunct\< **CharType**, **инпутлтератор**> Возвращает `{`**money_base:: symbol**, **money_base:: sign**, **money_base:: value**, **money_base:: None**`}`.
+Версия-шаблон moneypunct\< **CharType**, **Inputlterator**> возвращает `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`.
 
 ### <a name="example"></a>Пример
 
 См. пример для [pos_format](#pos_format), где виртуальная функция-член вызывается из `pos_format`.
 
-## <a name="do_positive_sign"></a>  moneypunct::do_positive_sign
+## <a name="moneypunctdo_positive_sign"></a><a name="do_positive_sign"></a>moneypunct::do-положительный знак
 
 Защищенная виртуальная функция-член, которая возвращает последовательность элементов определенного языкового стандарта для использования в качестве символа положительного значения.
 
@@ -359,7 +359,7 @@ virtual string_type do_positive_sign() const;
 
 См. пример для [positive_sign](#positive_sign), где виртуальная функция-член вызывается из `positive_sign`.
 
-## <a name="do_thousands_sep"></a>  moneypunct::do_thousands_sep
+## <a name="moneypunctdo_thousands_sep"></a><a name="do_thousands_sep"></a>moneypunct::do-thousands
 
 Защищенная виртуальная функция-член, которая возвращает определенный языковым стандартом элемент для использования в качестве разделителя групп цифр слева от любого десятичного разделителя.
 
@@ -375,7 +375,7 @@ virtual CharType do_thousands_sep() const;
 
 См. пример для [thousands_sep](#thousands_sep), где виртуальная функция-член вызывается из `thousands_sep`.
 
-## <a name="frac_digits"></a>  moneypunct::frac_digits
+## <a name="moneypunctfrac_digits"></a><a name="frac_digits"></a>moneypunct::frac_digits
 
 Возвращает определенное языковым стандартом количество цифр, которое будет отображаться справа от любого десятичного разделителя.
 
@@ -444,7 +444,7 @@ German_Germany.1252 domestic frac_digits
 to the right of the radix character: 2
 ```
 
-## <a name="grouping"></a>  moneypunct::grouping
+## <a name="moneypunctgrouping"></a><a name="grouping"></a>moneypunct::grouping
 
 Возвращает определенное языковым стандартом правило группирования цифр слева от любого десятичного разделителя.
 
@@ -513,7 +513,7 @@ German_Germany.1252 domestic frac_digits
 to the right of the radix character: 2
 ```
 
-## <a name="moneypunct"></a>  moneypunct::moneypunct
+## <a name="moneypunctmoneypunct"></a><a name="moneypunct"></a>moneypunct::moneypunct
 
 Конструктор объектов типа `moneypunct`.
 
@@ -523,24 +523,24 @@ explicit moneypunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Параметры
 
-*_Refs*\
+*_refs*\
 Целочисленное значение, используемое для указания типа управления памятью для объекта.
 
 ### <a name="remarks"></a>Remarks
 
-Возможные значения параметра *_Refs* и их значимость:
+Возможные значения для *параметра _Refs* и их значение:
 
 - 0: время существования объекта управляется языковыми стандартами, которые его содержат.
 
 - 1: время существования объекта должно управляться вручную.
 
-- \> 1: эти значения не определены.
+- \>1: Эти значения не определены.
 
 Прямые примеры привести нельзя, так как деструктор защищен.
 
-Конструктор инициализирует свой базовый объект с [locale::facet](../standard-library/locale-class.md#facet_class)(_ *Refs*).
+Конструктор инициализирует свой базовый объект с [помощью локализации::facet](../standard-library/locale-class.md#facet_class) *(я. Рефы).*
 
-## <a name="neg_format"></a>  moneypunct::neg_format
+## <a name="moneypunctneg_format"></a><a name="neg_format"></a>moneypunct::neg_format
 
 Возвращает определенное языковым стандартом правило форматирования выходных значений с отрицательными числами.
 
@@ -588,7 +588,7 @@ int main( ) {
 }
 ```
 
-## <a name="negative_sign"></a>  moneypunct::negative_sign
+## <a name="moneypunctnegative_sign"></a><a name="negative_sign"></a>moneypunct::negative_sign
 
 Возвращает последовательность элементов определенного языкового стандарта для использования в качестве символа отрицательного числа.
 
@@ -650,7 +650,7 @@ French_France.1252 international negative sign: -
 French_France.1252 domestic negative sign: -
 ```
 
-## <a name="pos_format"></a>  moneypunct::pos_format
+## <a name="moneypunctpos_format"></a><a name="pos_format"></a>moneypunct::pos-format
 
 Возвращает определенное языковым стандартом правило форматирования выходных значений с положительными числами.
 
@@ -698,7 +698,7 @@ int main() {
 }
 ```
 
-## <a name="positive_sign"></a>  moneypunct::positive_sign
+## <a name="moneypunctpositive_sign"></a><a name="positive_sign"></a>moneypunct::positive
 
 Возвращает последовательность элементов определенного языкового стандарта для использования в качестве символа положительного числа.
 
@@ -760,9 +760,9 @@ French_France.1252 international positive sign:
 French_France.1252 domestic positive sign:
 ```
 
-## <a name="string_type"></a>  moneypunct::string_type
+## <a name="moneypunctstring_type"></a><a name="string_type"></a>moneypunct::string_type
 
-Тип, который описывает строку, содержащую символы типа **CharType**.
+Тип, который описывает строку символов типа **CharType**.
 
 ```cpp
 typedef basic_string<CharType, Traits, Allocator> string_type;
@@ -770,9 +770,9 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>Remarks
 
-Тип описывает специализацию шаблона класса [basic_string](../standard-library/basic-string-class.md) , объекты которой могут хранить копии последовательностей пунктуации.
+Тип описывает специализацию шаблона класса [basic_string](../standard-library/basic-string-class.md) объекты которых могут хранить копии последовательностей знаков препинания.
 
-## <a name="thousands_sep"></a>  moneypunct::thousands_sep
+## <a name="moneypunctthousands_sep"></a><a name="thousands_sep"></a>moneypunct::thousands_sep
 
 Возвращает последовательность элементов определенного языкового стандарта для использования в качестве символа разделителя тысяч.
 
@@ -835,5 +835,5 @@ English_Canada.1252 domestic thousands separator: ,
 
 ## <a name="see-also"></a>См. также раздел
 
-[\<locale>](../standard-library/locale.md)\
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[\<локализовая>](../standard-library/locale.md)\
+[Безопасность резьбы в стандартной библиотеке СЗ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

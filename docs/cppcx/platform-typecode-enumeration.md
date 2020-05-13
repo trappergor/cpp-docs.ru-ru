@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::TypeCode Enumeration
 ms.assetid: 93c1305f-eb16-4bec-aead-f88d9518b4cf
-ms.openlocfilehash: ac3e0fda473cf50c8adc10e603d9b6c3beee05be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 86bc17c45f36a5a72b089340e166df11e9a4334d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183046"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214290"
 ---
 # <a name="platformtypecode-enumeration"></a>Перечисление Platform::TypeCode
 
@@ -24,22 +24,22 @@ ms.locfileid: "62183046"
 enum class TypeCode {};
 ```
 
-### <a name="members"></a>Участники
+### <a name="members"></a>Члены
 
-|Код типа|Описание|
+|Код типа|Description|
 |---------------|-----------------|
-|Boolean|Тип Platform::Boolean.|
+|Логическое|Тип Platform::Boolean.|
 |Char16|Тип default::char16.|
-|DateTime|Тип DateTime.|
-|Десятичное число|Числовой тип.|
+|Дата и время|Тип DateTime.|
+|Decimal|Числовой тип.|
 |Double|Тип default::float64.|
 |Empty|Void|
 |Int16|Тип default::int16.|
 |Int32|Тип default::int32.|
 |Int64|Тип default::int64.|
 |Int8|Тип default::int8.|
-|Object|Тип Platform::Object.|
-|Single|Тип default::float32.|
+|Объект|Тип Platform::Object.|
+|Один|Тип default::float32.|
 |String|Тип Platform::String.|
 |UInt16|Тип default::uint16.|
 |UInt32|Тип default::uint32.|

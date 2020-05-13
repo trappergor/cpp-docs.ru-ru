@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2441
 ms.assetid: ffbd6573-777a-48dd-892f-5cf4a758dcab
-ms.openlocfilehash: 7fcf333f62253eb676c0f0ada1c927ab962ae1ca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4e5d5335717ec77c61069ad08e209f9e1851dc2f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338926"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205313"
 ---
 # <a name="compiler-error-c2441"></a>Ошибка компилятора C2441
 
-> "*переменной*": символ, объявленный с параметром __declspec(process), должен быть константой в/CLR: pure режим
+> "*переменная*": символ, объявленный с __declspec (Process), должен быть константой в режиме/clr: pure
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-**/CLR: pure** и **/CLR: safe** параметры компилятора признаны устаревшими в Visual Studio 2015 и не поддерживается в Visual Studio 2017.
+Параметры компилятора **/clr: pure** и **/clr: Сейф** являются устаревшими в Visual Studio 2015 и не поддерживаются в Visual Studio 2017.
 
-По умолчанию, переменные находятся в каждом домене приложения, в разделе **/CLR: pure**. Переменная, помеченная как `__declspec(process)` под **/CLR: pure** может привести к ошибкам, если изменения в одном домене приложения и чтения в другом.
+По умолчанию переменные задаются для каждого домена приложения в **параметре/CLR: pure**. Переменная, помеченная `__declspec(process)` в **параметре/CLR: pure** , подвержена ошибкам, если изменена в одном домене приложения и прочитана в другом.
 
-Таким образом, компилятор применяет правило каждого процесса, переменные быть `const` под **/CLR: pure**, что делает их чтения только во всех доменах приложения.
+Таким образом, компилятор принудительно применяет переменные для каждого процесса `const` в **параметре/CLR: pure**, делая их только для чтения во всех доменах приложений.
 
-Дополнительные сведения см. в разделе [процесс](../../cpp/process.md) и [/CLR (компиляция CLR)](../../build/reference/clr-common-language-runtime-compilation.md).
+Дополнительные сведения см. в разделе [Process](../../cpp/process.md) и [/CLR (компиляция общеязыковой среды выполнения)](../../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Пример
 

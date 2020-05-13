@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - naked functions [C++]
 ms.assetid: ff203858-2dd3-4a76-8a57-d0d06817adef
-ms.openlocfilehash: ec5c7d635dbbb63af7177395c5ad08356e1a26f0
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 1eb2875514621e567701b6197d3ad6695457506b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857311"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178955"
 ---
 # <a name="rules-and-limitations-for-naked-functions"></a>Правила и ограничения для функций с атрибутом naked
 
-**Блок, относящийся только к системам Майкрософт**
+**Блок, относящийся только к системам Microsoft**
 
 Для функций с атрибутом naked действуют следующие правила и ограничения:
 
@@ -33,7 +33,7 @@ ms.locfileid: "74857311"
 
 - При компиляции с [параметром/CLR](../build/reference/clr-common-language-runtime-compilation.md)ключевое слово **naked** игнорируется.
 
-- Для функций [__fastcall](../cpp/fastcall.md) с атрибутом naked каждый раз, когда в CC++ /Code имеется ссылка на один из аргументов регистра, в коде пролога должны храниться значения этого регистра в расположении стека для этой переменной. Например:
+- Для функций [__fastcall](../cpp/fastcall.md) с атрибутом naked каждый раз, когда в CC++ /Code имеется ссылка на один из аргументов регистра, в коде пролога должны храниться значения этого регистра в расположении стека для этой переменной. Пример:
 
 ```cpp
 // nkdfastcl.cpp
@@ -72,6 +72,6 @@ __declspec(naked) int __fastcall  power(int i, int j) {
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Вызовы функций с атрибутом naked](../cpp/naked-function-calls.md)

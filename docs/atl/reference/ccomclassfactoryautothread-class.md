@@ -1,5 +1,5 @@
 ---
-title: Класс Ккомклассфакторяутосреад
+title: Класс CComClassFactoryПоток
 ms.date: 11/04/2016
 f1_keywords:
 - CComClassFactoryAutoThread
@@ -9,19 +9,19 @@ f1_keywords:
 helpviewer_keywords:
 - CComClassFactoryAutoThread class
 ms.assetid: 22008042-533f-4dd9-bf7e-191ee571f9a1
-ms.openlocfilehash: 73879a73a48290e19d2a27307884953129826df7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e997d92adfa9df46c82dacbd297db495b037c6e6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497493"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320909"
 ---
-# <a name="ccomclassfactoryautothread-class"></a>Класс Ккомклассфакторяутосреад
+# <a name="ccomclassfactoryautothread-class"></a>Класс CComClassFactoryПоток
 
-Этот класс реализует интерфейс [IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory) и позволяет создавать объекты в нескольких подразделениях.
+Этот класс реализует интерфейс [IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory) и позволяет создавать объекты в нескольких квартирах.
 
 > [!IMPORTANT]
->  Этот класс и его члены не могут использоваться в приложениях, выполняемых в среда выполнения Windows.
+> Этот класс и его члены не могут быть использованы в приложениях, выполняемых в Windows Runtime.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -35,16 +35,16 @@ class CComClassFactoryAutoThread
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[Ккомклассфакторяутосреад:: CreateInstance](#createinstance)|Создает объект указанного идентификатора CLSID.|
-|[Ккомклассфакторяутосреад:: Локксервер](#lockserver)|Блокирует фабрику класса в памяти.|
+|[CComClassFactoryAutoThread::CreateInstance](#createinstance)|Создает объект указанного CLSID.|
+|[CComClassFactoryAutoThread::LockServer](#lockserver)|Запирает фабрику классов в памяти.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-`CComClassFactoryAutoThread`аналогичен [ккомклассфактори](../../atl/reference/ccomclassfactory-class.md), но позволяет создавать объекты в нескольких апартаментах. Чтобы воспользоваться этой поддержкой, создайте свой модуль EXE из [ккомаутосреадмодуле](../../atl/reference/ccomautothreadmodule-class.md).
+`CComClassFactoryAutoThread`похож на [CComClassFactory](../../atl/reference/ccomclassfactory-class.md), но позволяет объекты, которые будут созданы в нескольких квартирах. Чтобы воспользоваться этой поддержкой, выберите модуль EXE из [CComAutoThreadModule.](../../atl/reference/ccomautothreadmodule-class.md)
 
-Объекты ATL обычно получают фабрику классов путем наследования от [CComCoClass](../../atl/reference/ccomcoclass-class.md). Этот класс включает макрос [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory), который объявляет [ккомклассфактори](../../atl/reference/ccomclassfactory-class.md) в качестве фабрики классов по умолчанию. Чтобы использовать `CComClassFactoryAutoThread`, укажите макрос [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) в определении класса объекта. Например:
+Объекты ATL обычно приобретают фабрику класса, произвнося из [CComCoClass.](../../atl/reference/ccomcoclass-class.md) Этот класс включает в себя [макроDECLARE_CLASSFACTORY,](aggregation-and-class-factory-macros.md#declare_classfactory)который объявляет [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) фабрикой класса по умолчанию. Для `CComClassFactoryAutoThread`использования укажите [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) макрос в определении класса объекта. Пример:
 
 [!code-cpp[NVC_ATL_COM#9](../../atl/codesnippet/cpp/ccomclassfactoryautothread-class_1.h)]
 
@@ -60,11 +60,11 @@ class CComClassFactoryAutoThread
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** атлком. h
+**Заголовок:** atlcom.h
 
-##  <a name="createinstance"></a>Ккомклассфакторяутосреад:: CreateInstance
+## <a name="ccomclassfactoryautothreadcreateinstance"></a><a name="createinstance"></a>CComClassFactoryAutoThread::CreateInstance
 
-Создает объект указанного идентификатора CLSID и получает указатель интерфейса на этот объект.
+Создает объект указанного CLSID и получает указатель интерфейса к этому объекту.
 
 ```
 STDMETHODIMP CreateInstance(
@@ -75,26 +75,26 @@ STDMETHODIMP CreateInstance(
 
 ### <a name="parameters"></a>Параметры
 
-*пункаутер*<br/>
-окне Если объект создается как часть агрегата, *пункаутер* должен быть внешним неизвестным. В противном случае *пункаутер* должен иметь значение null.
+*pUnkOuter*<br/>
+(в) Если объект создается как часть агрегата, то *pUnkOuter* должен быть внешним неизвестным. В противном *случае, pUnkOuter* должен быть NULL.
 
 *riid*<br/>
-окне IID запрашиваемого интерфейса. Если *пункаутер* не равен null, *riid* должен иметь `IID_IUnknown`значение.
+(в) IID запрашиваемого интерфейса. Если *pUnkOuter* не является NULL, `IID_IUnknown` *риид* должен быть .
 
-*ппвобж*<br/>
-заполняет Указатель на указатель интерфейса, идентифицируемый *riid*. Если объект не поддерживает этот интерфейс, *ппвобж* имеет значение null.
+*ppvObj*<br/>
+(ваут) Указатель на указатель интерфейса, идентифицированный *riid*. Если объект не поддерживает этот интерфейс, *ppvObj* настроен на NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Если модуль является производным от [ккомаутосреадмодуле](../../atl/reference/ccomautothreadmodule-class.md), `CreateInstance` сначала выбирает поток для создания объекта в связанном апартаменте.
+Если модуль происходит от [CComAutoThreadModule,](../../atl/reference/ccomautothreadmodule-class.md) `CreateInstance` сначала выбирает поток для создания объекта в сопутствующая квартира.
 
-##  <a name="lockserver"></a>Ккомклассфакторяутосреад:: Локксервер
+## <a name="ccomclassfactoryautothreadlockserver"></a><a name="lockserver"></a>CComClassFactoryAutoThread::LockServer
 
-Увеличивает и уменьшает счетчик блокировок модуля, вызывая `_Module::Lock` и `_Module::Unlock`соответственно.
+Приращения и декреты блокировки `_Module::Lock` модуля отсчитываются по вызову и, `_Module::Unlock`соответственно.
 
 ```
 STDMETHODIMP LockServer(BOOL fLock);
@@ -102,24 +102,24 @@ STDMETHODIMP LockServer(BOOL fLock);
 
 ### <a name="parameters"></a>Параметры
 
-*флокк*<br/>
-окне Если значение равно TRUE, счетчик блокировок увеличивается; в противном случае счетчик блокировок уменьшается.
+*Стадо*<br/>
+(в) Если true, количество блокировки приращено; в противном случае количество блокировки является decremented.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-При использовании `CComClassFactoryAutoThread` `_Module` обычно относится к глобальному экземпляру [ккомаутосреадмодуле](../../atl/reference/ccomautothreadmodule-class.md).
+При `CComClassFactoryAutoThread`использовании , как правило, `_Module` относится к глобальному экземпляру [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).
 
-Вызов `LockServer` позволяет клиенту хранить фабрику класса, чтобы можно было быстро создавать несколько объектов.
+Вызов `LockServer` позволяет клиенту удерживать фабрику класса, чтобы быстро создать несколько объектов.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory)<br/>
 [Класс CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md)<br/>
-[Класс CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md)<br/>
+[Класс CComClassFactoryСинглтон](../../atl/reference/ccomclassfactorysingleton-class.md)<br/>
 [Класс CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)<br/>
-[ккомглобалссреадмодел](atl-typedefs.md#ccomglobalsthreadmodel)<br/>
-[Обзор класса](../../atl/atl-class-overview.md)
+[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)<br/>
+[Общие сведения о классах](../../atl/atl-class-overview.md)

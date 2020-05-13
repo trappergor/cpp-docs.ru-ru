@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Wrappers namespace
 ms.assetid: 36ac38c7-1fc3-42da-a879-5c68661dc9e1
-ms.openlocfilehash: 4b88ad0da31321a696c1238f1c9838d3b3a1c927
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ece26b3f9928d44a593de830cf8a25c57e4c2d89
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392002"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213750"
 ---
 # <a name="microsoftwrlwrappers-namespace"></a>Пространство имен Microsoft::WRL::Wrappers
 
@@ -24,34 +24,34 @@ ms.locfileid: "62392002"
 namespace Microsoft::WRL::Wrappers;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="typedefs"></a>Определения типов
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |`FileHandle`|`HandleT<HandleTraits::FileHandleTraits>`|
 
 ### <a name="classes"></a>Классы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |[Класс CriticalSection](criticalsection-class.md)|Представляет объект критической секции.|
 |[Класс Event (WRL)](event-class-wrl.md)|Представляет событие.|
 |[Класс HandleT](handlet-class.md)|Представляет дескриптор объекта.|
-|[Класс HString](hstring-class.md)|Обеспечивает поддержку манипулирования дескрипторами HSTRING.|
+|[Класс HString](hstring-class.md)|Обеспечивает поддержку манипуляций с дескрипторами HSTRING.|
 |[Класс HStringReference](hstringreference-class.md)|Представляет HSTRING, созданный из существующей строки.|
 |[Класс Mutex](mutex-class.md)|Представляет объект синхронизации, который исключительно управляет общим ресурсом.|
-|[Класс RoInitializeWrapper](roinitializewrapper-class.md)|Инициализирует среду выполнения Windows.|
+|[Класс RoInitializeWrapper](roinitializewrapper-class.md)|Инициализирует среда выполнения Windows.|
 |[Класс Semaphore](semaphore-class.md)|Представляет объект синхронизации, который управляет общим ресурсом и поддерживает ограниченное число пользователей.|
 |[Класс SRWLock](srwlock-class.md)|Представляет тонкую блокировку чтения и записи.|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** corewrappers.h
+**Заголовок:** кореврапперс. h
 
-**Пространство имен:** Microsoft::WRL::Wrappers
+**Пространство имен:** Программы Microsoft:: WRL:: оболочки
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Microsoft::WRL](microsoft-wrl-namespace.md)

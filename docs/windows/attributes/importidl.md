@@ -1,21 +1,21 @@
 ---
-title: importidl (атрибут COM C++)
+title: импортидл (C++ атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.importidl
 helpviewer_keywords:
 - importidl attribute
 ms.assetid: 4b0a4b55-6c57-4e6e-bc7b-a12cc8063941
-ms.openlocfilehash: 9db62d4f2a36b8cc0592c924b113077a758915c0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e41a98bef079c92b6df6e7eff203301aa9ceae4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409438"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166826"
 ---
 # <a name="importidl"></a>importidl
 
-Вставляет указанный IDL-файла в созданного IDL-файла.
+Вставляет указанный IDL-файл в созданный IDL-файл.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -26,13 +26,13 @@ ms.locfileid: "62409438"
 ### <a name="parameters"></a>Параметры
 
 *idl_file*<br/>
-Определяет имя IDL-файла, которые необходимо объединить с IDL-файла, создаваемого для вашего приложения.
+Определяет имя IDL-файла, который необходимо объединить с IDL-файлом, который будет создан для приложения.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-**Importidl** C++ атрибут помещает разделе за пределами блока библиотеки (в *idl_file*) в вашей программе созданного IDL-файла и в разделе библиотеки (в *idl_file*) в разделе library созданного IDL-файла программы.
+Атрибут **импортидл** C++ помещает раздел за пределами блока библиотеки (в *idl_file*) в созданный IDL-файл программы и раздел библиотеки (в *idl_file*) в раздел Library созданного idl-файла программы.
 
-Вы можете использовать **importidl**, например, если вы хотите использовать с вашей созданного IDL-файла вручную IDL-файл.
+Можно использовать **импортидл**, например, если вы хотите использовать idl-файл с собственной кодировкой с созданным файлом IDL.
 
 ## <a name="example"></a>Пример
 
@@ -50,13 +50,13 @@ ms.locfileid: "62409438"
 |||
 |-|-|
 |**Применение**|В любом месте|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Нет|
-|**Недопустимые атрибуты**|Нет|
+|**Повторяемый**|нет|
+|**Обязательные атрибуты**|None|
+|**Недопустимые атрибуты**|None|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты компилятора](compiler-attributes.md)<br/>
 [Изолированные атрибуты](stand-alone-attributes.md)<br/>

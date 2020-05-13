@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - __crtLCMapStringW
 ms.assetid: 45b4ac0e-438c-4fa3-b4d1-34195f4467d9
-ms.openlocfilehash: 8d9458529e5772f31e3ae5463d3a6ff5a7b726e9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: f239d95c0dfd50f765b6f23d7874f01dce085054
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940451"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170999"
 ---
 # <a name="__crtlcmapstringw"></a>__crtLCMapStringW
 
@@ -45,7 +45,7 @@ int __crtLCMapStringW(
 
 #### <a name="parameters"></a>Параметры
 
-*Языковой стандарт*<br/>
+*Локаль*<br/>
 Идентификатор языкового стандарта. Языковой стандарт предоставляет контекст для сопоставления строк или создания ключа сортировки. Приложение может использовать макрос `MAKELCID` для создания идентификатора языкового стандарта.
 
 *dwMapFlags*<br/>
@@ -73,7 +73,7 @@ int __crtLCMapStringW(
 
 Нулевое значение означает сбой. Чтобы получить расширенные сведения об ошибке, следует вызвать функцию `GetLastError` .
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Если значение `cchSrc` больше нуля и параметр `lpSrcStr` представляет собой строку, завершающуюся нуль-символом, то функция `__crtLCMapStringW` устанавливает для параметра `cchSrc` значение, равное длине строки. Затем функция `__crtLCMapStringW` вызывает версию для расширенных символов (Юникод) функции `LCMapString` с указанными параметрами. Дополнительные сведения о параметрах и значениях, возвращаемых этой функцией, см. в разделе о функции [LCMapString](/windows/win32/api/winnls/nf-winnls-lcmapstringw).
 

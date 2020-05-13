@@ -6,64 +6,64 @@ f1_keywords:
 helpviewer_keywords:
 - _com_ptr_t class
 ms.assetid: 3753a8a0-03d4-4cfd-8a9a-74872ea53971
-ms.openlocfilehash: ce19dbc5f55460bb4bdbdee17f4fbbbcc8c6fd60
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eeaab22ded537cbbb211a79596b8383251af3ab7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154907"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189912"
 ---
-# <a name="comptrt-class"></a>Класс _com_ptr_t
+# <a name="_com_ptr_t-class"></a>Класс _com_ptr_t
 
 **Блок, относящийся только к системам Microsoft**
 
-Объект **_com_ptr_t** объект инкапсулирует указатель на интерфейс COM и называется «интеллектуальными» указатель. Этот класс шаблона управляет выделением и освобождением посредством вызовов функций для ресурсов `IUnknown` функций-членов: `QueryInterface`, `AddRef`, и `Release`.
+Объект **_com_ptr_t** инкапсулирует указатель на интерфейс COM и называется "смарт-указателем". Этот класс шаблона управляет выделением и освобождением ресурсов с помощью вызовов функций к `IUnknown` функциям-членам: `QueryInterface`, `AddRef`и `Release`.
 
-Интеллектуальный указатель обычно ссылаются определения typedef, предоставляемого макросом _COM_SMARTPTR_TYPEDEF. Этот макрос принимает имя интерфейса и IID и объявляет специализацию объекта **_com_ptr_t** с именем интерфейса и суффикс `Ptr`. Пример:
+Ссылка на интеллектуальный указатель обычно осуществляется с помощью определения typedef, предоставляемого макросом _COM_SMARTPTR_TYPEDEF. Этот макрос принимает имя интерфейса и IID и объявляет специализацию **_com_ptr_t** с именем интерфейса и суффиксом `Ptr`. Пример:
 
 ```cpp
 _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
 ```
 
-объявляет **_com_ptr_t** специализации `IMyInterfacePtr`.
+объявляет `IMyInterfacePtr`специализации **_com_ptr_t** .
 
-Набор [функции шаблонов](../cpp/relational-function-templates.md), не являющихся членами этого шаблона класса, поддерживает сравнение с интеллектуальным указателем в правой части оператора сравнения.
+Набор [шаблонов функций](../cpp/relational-function-templates.md), не входящих в этот класс шаблона, поддерживает сравнение со смарт-указателем в правой части оператора сравнения.
 
-### <a name="construction"></a>Создание экземпляра
+### <a name="construction"></a>Строительство
 
 |||
 |-|-|
-|[_com_ptr_t](../cpp/com-ptr-t-com-ptr-t.md)|Создает **_com_ptr_t** объекта.|
+|[_com_ptr_t](../cpp/com-ptr-t-com-ptr-t.md)|Конструирует объект **_com_ptr_t** .|
 
 ### <a name="low-level-operations"></a>Низкоуровневые операции
 
 |||
 |-|-|
-|[AddRef](../cpp/com-ptr-t-addref.md)|Вызовы `AddRef` функцию-член `IUnknown` на инкапсулированный указатель на интерфейс.|
-|[Attach](../cpp/com-ptr-t-attach.md)|Инкапсулирует необработанный указатель на интерфейс для типа этого интеллектуального указателя.|
-|[CreateInstance](../cpp/com-ptr-t-createinstance.md)|Создает новый экземпляр объекта, учитывая `CLSID` или `ProgID`.|
-|[Detach](../cpp/com-ptr-t-detach.md)|Извлекает и возвращает инкапсулированный указатель на интерфейс.|
-|[GetActiveObject](../cpp/com-ptr-t-getactiveobject.md)|Присоединяет к существующему экземпляру объекта, учитывая `CLSID` или `ProgID`.|
-|[GetInterfacePtr](../cpp/com-ptr-t-getinterfaceptr.md)|Возвращает инкапсулированный указатель на интерфейс.|
-|[QueryInterface](../cpp/com-ptr-t-queryinterface.md)|Вызовы `QueryInterface` функцию-член `IUnknown` на инкапсулированный указатель на интерфейс.|
-|[Релиз](../cpp/com-ptr-t-release.md)|Вызовы `Release` функцию-член `IUnknown` на инкапсулированный указатель на интерфейс.|
+|[AddRef](../cpp/com-ptr-t-addref.md)|Вызывает функцию члена `AddRef` `IUnknown` в инкапсулированном указателе интерфейса.|
+|[Присоединить](../cpp/com-ptr-t-attach.md)|Инкапсулирует необработанный указатель на интерфейс для типа этого интеллектуального указателя.|
+|[CreateInstance](../cpp/com-ptr-t-createinstance.md)|Создает новый экземпляр объекта с заданным `CLSID` или `ProgID`.|
+|[Отсоединить](../cpp/com-ptr-t-detach.md)|Извлекает и возвращает инкапсулированный указатель на интерфейс.|
+|[жетактивеобжект](../cpp/com-ptr-t-getactiveobject.md)|Присоединяется к существующему экземпляру объекта, заданному `CLSID` или `ProgID`.|
+|[жетинтерфацептр](../cpp/com-ptr-t-getinterfaceptr.md)|Возвращает инкапсулированный указатель на интерфейс.|
+|[QueryInterface](../cpp/com-ptr-t-queryinterface.md)|Вызывает функцию члена `QueryInterface` `IUnknown` в инкапсулированном указателе интерфейса.|
+|[Выпуск](../cpp/com-ptr-t-release.md)|Вызывает функцию члена `Release` `IUnknown` в инкапсулированном указателе интерфейса.|
 
 ### <a name="operators"></a>Операторы
 
 |||
 |-|-|
-|[оператор =](../cpp/com-ptr-t-operator-equal.md)|Назначает новое значение к существующему **_com_ptr_t** объекта.|
-|[операторы: ==,! =, \<, >, \<=, > =](../cpp/com-ptr-t-relational-operators.md)|Сравнение объекта интеллектуального указателя с другим интеллектуальным указателем, необработанным указателем на интерфейс, или значение NULL.|
+|[Оператор =](../cpp/com-ptr-t-operator-equal.md)|Присваивает новое значение существующему объекту **_com_ptr_t** .|
+|[операторы = =,! =, \<, >, \<=, > =](../cpp/com-ptr-t-relational-operators.md)|Сравнивают объект интеллектуального указателя с другим интеллектуальным указателем, необработанным указателем на интерфейс или значением NULL.|
 |[Средства извлечения](../cpp/com-ptr-t-extractors.md)|Извлекают инкапсулированный указатель на COM-интерфейс.|
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<comip.h >
+**Заголовок:** \<comip. h >
 
-**LIB:** comsuppw.lib или comsuppwd.lib (см. в разделе [/Zc: wchar_t (wchar_t — собственный тип)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) Дополнительные сведения)
+**Lib:** комсуппв. lib или комсуппвд. lib (Дополнительные сведения см. в разделе [/Zc: wchar_t (wchar_t является собственным типом)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Классы поддержки модели COM компилятора](../cpp/compiler-com-support-classes.md)

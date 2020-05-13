@@ -43,12 +43,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Module::UnregisterObjects method
 - Microsoft::WRL::Module::UnregisterWinRTObject method
 ms.assetid: dd67e3b8-c2e1-4f53-8c0f-565a140ba649
-ms.openlocfilehash: db3eb123382ac70f6198d094c5eb3fe44d3bbcd9
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: afd2edacefdf5d62b50a03c0a8c37f13ee5d9c9f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345788"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371315"
 ---
 # <a name="module-class"></a>Module - класс
 
@@ -69,68 +69,70 @@ class Module<OutOfProc> : public Module<InProc>;
 
 ### <a name="parameters"></a>Параметры
 
-*Тип модуля*<br/>
-Сочетание одного или нескольких [ModuleType](moduletype-enumeration.md) значений перечисления.
+*модульType*<br/>
+Комбинация одного или нескольких значений перечисления [ModuleType.](moduletype-enumeration.md)
 
 ## <a name="members"></a>Участники
 
 ### <a name="protected-classes"></a>Защищенные классы
 
-name                                                                                | Описание
+Имя                                                                                | Описание
 ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-[Module::GenericReleaseNotifier](module-genericreleasenotifier-class.md) | Вызывает обработчик событий при освобождении последнего объекта в текущем модуле. Обработчик событий задается лямбда-выражением, функтором или указателем на функцию.
-[Module::MethodReleaseNotifier](module-methodreleasenotifier-class.md)   | Вызывает обработчик событий при освобождении последнего объекта в текущем модуле. Обработчик событий заданного объекта и ее члена указатель на метод.
-[Module::ReleaseNotifier](module-releasenotifier-class.md)               | Вызывает обработчик событий при освобождении последнего объекта в модуле.
+[Модуль::GenericReleaseНофикер](module-genericreleasenotifier-class.md) | Вызывает обработчик событий при освобождении последнего объекта в текущем модуле. Обработчик событий задается лямбда-выражением, функтором или указателем на функцию.
+[Модуль:MethodReleaseNotifier](module-methodreleasenotifier-class.md)   | Вызывает обработчик событий при освобождении последнего объекта в текущем модуле. Обработчик события определяется объектом и его элементом указателя на метод.
+[Модуль:ReleaseNotifier](module-releasenotifier-class.md)               | Вызывает обработчик событий при освобождении последнего объекта в модуле.
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-name                             | Описание
+Имя                             | Описание
 -------------------------------- | -----------------------------------------------------------
-[Модуль:: ~ Module](#tilde-module) | Деинициализирует текущий экземпляр `Module` класса.
+[Модуль:::Модуль](#tilde-module) | Деприиратизирует текущий `Module` экземпляр класса.
 
 ### <a name="protected-constructors"></a>Защищенные конструкторы
 
-name                      | Описание
+Имя                      | Описание
 ------------------------- | ---------------------------------------------------
-[Module::module](#module) | Инициализирует новый экземпляр класса `Module`.
+[Модуль::Модуль](#module) | Инициализирует новый экземпляр класса `Module`.
 
 ### <a name="public-methods"></a>Открытые методы
 
-name                                                    | Описание
+Имя                                                    | Описание
 ------------------------------------------------------- | --------------------------------------------------------------------------------------------------
-[Module::CREATE](#create)                               | Создает экземпляр модуля.
-[Module::DecrementObjectCount](#decrementobjectcount)   | Уменьшает число объектов, отслеживаемых модулем.
-[Module::GetActivationFactory](#getactivationfactory)   | Получает фабрику активации для модуля.
-[Module::GetClassObject](#getclassobject)               | Извлекает кэш фабрик классов.
-[Module::GetModule](#getmodule)                         | Создает экземпляр модуля.
-[Module::GetObjectCount](#getobjectcount)               | Извлекает количество объектов, управляемых этим модулем.
-[Module::IncrementObjectCount](#incrementobjectcount)   | Увеличивает число объектов, отслеживаемых модулем.
-[Module::RegisterCOMObject](#registercomobject)         | Регистрирует один или несколько объектов модели COM, чтобы другие приложения могли к ним подключиться.
-[Module::RegisterObjects](#registerobjects)             | Регистрирует объекты COM или среду выполнения Windows, чтобы другие приложения могли подключиться к ним.
-[Module::RegisterWinRTObject](#registerwinrtobject)     | Регистрирует один или несколько объектов среды выполнения Windows, чтобы другие приложения могли подключиться к ним.
-[Module::Terminate](#terminate)                         | Приводит к завершению работы всех экземпляров фабрик, созданных модулем.
-[Module::UnregisterCOMObject](#unregistercomobject)     | Отменяет регистрацию одного или нескольких объектов модели COM, что предотвращает подключение к ним других приложений.
-[Module::UnregisterObjects](#unregisterobjects)         | Отменяет регистрацию объектов в указанном модуле. Таким образом другие приложения не смогут подключиться к ним.
-[Module::UnregisterWinRTObject](#unregisterwinrtobject) | Отменяет регистрацию одного или нескольких объектов среды выполнения Windows, таким образом, чтобы другие приложения не смогут подключиться к ним.
+[Модуль::Создание](#create)                               | Создает экземпляр модуля.
+[Модуль::DecrementObjectCount](#decrementobjectcount)   | Декретирует количество объектов, отслеживаемых модулем.
+[Модуль::GetActivationFactory](#getactivationfactory)   | Получает фабрику активации для модуля.
+[Модуль::GetClassObject](#getclassobject)               | Извлекает кэш фабрик класса.
+[Модуль::GetModule](#getmodule)                         | Создает экземпляр модуля.
+[Модуль::GetObjectCount](#getobjectcount)               | Извлекает количество объектов, управляемых этим модулем.
+[Модуль::ИнкрементныйОбъективКтом](#incrementobjectcount)   | Приравливки количество объектов, отслеживаемых модулем.
+[Модуль::RegisterCOMObject](#registercomobject)         | Регистрирует один или несколько объектов модели COM, чтобы другие приложения могли к ним подключиться.
+[Модуль:РегистрацияОбъекты](#registerobjects)             | Регистрирует объекты COM или Windows Runtime, чтобы другие приложения могли подключиться к ним.
+[Модуль::RegisterWinRTObject](#registerwinrtobject)     | Регистрирует один или несколько объектов Windows Runtime, чтобы другие приложения могли подключиться к ним.
+[Модуль::Прекращение](#terminate)                         | Приводит к завершению работы всех экземпляров фабрик, созданных модулем.
+[Модуль::UnregisterCOMObject](#unregistercomobject)     | Отменяет регистрацию одного или нескольких объектов модели COM, что предотвращает подключение к ним других приложений.
+[Модуль::Нерегистраемыеобъекты](#unregisterobjects)         | Отменяет регистрацию объектов в указанном модуле. Таким образом другие приложения не смогут подключиться к ним.
+[Модуль::UnregisterWinRTObject](#unregisterwinrtobject) | Отменить регистрацию одного или нескольких объектов Windows Runtime, чтобы другие приложения не могли подключиться к ним.
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-name                      | Описание
+Имя                      | Описание
 ------------------------- | --------------------------------
-[Module::CREATE](#create) | Создает экземпляр модуля.
+[Модуль::Создание](#create) | Создает экземпляр модуля.
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-name                                         | Описание
+Имя                                         | Описание
 -------------------------------------------- | --------------------------------------------------------------------------------------------------------
-[Module::objectCount_](#objectcount)         | Следит за сколько классы были созданы при помощи [сделать](make-function.md) функции.
-[Module::releaseNotifier_](#releasenotifier) | Содержит указатель на `ReleaseNotifier` объект.
+[Модуль::objectCount_](#objectcount)         | Отслеживает, сколько классов было создано с функцией [Make.](make-function.md)
+[Модуль::releaseNotifier_](#releasenotifier) | Удерживает указатель `ReleaseNotifier` на объект.
 
 ### <a name="macros"></a>Макросы
 
-Имя | Описание------| --- [ActivatableClass](activatableclass-macros.md) |  Заполняет внутренний кэш, содержащий фабрику, можно создать экземпляр указанного класса. Этот макрос задает параметры идентификатора фабрики и группы по умолчанию.
-[ActivatableClassWithFactory](activatableclass-macros.md) | Заполняет внутренний кэш, содержащий фабрику, можно создать экземпляр указанного класса. Этот макрос можно указать параметр конкретной фабрике.
-[ActivatableClassWithFactoryEx](activatableclass-macros.md) | Заполняет внутренний кэш, содержащий фабрику, можно создать экземпляр указанного класса. Этот макрос можно задать такие параметры идентификатора группы и конкретной фабрике.
+Имя                                                                   | Описание
+---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[ActivatableClass](activatableclass-macros.md)              | Заполняет внутренний кэш, содержащий фабрику, которая может создать экземпляр указанного класса. Этот макрос определяет параметры фабрики по умолчанию и идентификатора группы.
+[ActivatableClassWithFactory](activatableclass-macros.md)   | Заполняет внутренний кэш, содержащий фабрику, которая может создать экземпляр указанного класса. Этот макрос позволяет указать определенный параметр завода.
+[ActivatableClassWithFactoryEx](activatableclass-macros.md) | Заполняет внутренний кэш, содержащий фабрику, которая может создать экземпляр указанного класса. Этот макрос позволяет указать определенные параметры идентификатора фабрично-заводской и группы.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -146,15 +148,15 @@ name                                         | Описание
 
 **Пространство имен:** Microsoft::WRL
 
-## <a name="tilde-module"></a>Модуль:: ~ Module
+## <a name="modulemodule"></a><a name="tilde-module"></a>Модуль:::Модуль
 
-Деинициализирует текущий экземпляр `Module` класса.
+Деприиратизирует текущий `Module` экземпляр класса.
 
 ```cpp
 virtual ~Module();
 ```
 
-## <a name="create"></a>Module::CREATE
+## <a name="modulecreate"></a><a name="create"></a>Модуль::Создание
 
 Создает экземпляр модуля.
 
@@ -177,21 +179,21 @@ WRL_NOTHROW static Module& Create(
 Тип модуля.
 
 *обратный вызов*<br/>
-Вызывается при освобождении последнего объекта экземпляр модуля.
+Вызывается при освобождении объекта последнего экземпляра модуля.
 
-*object*<br/>
-*Объект* и *метод* параметры используются в сочетании. Указывает на последний объект экземпляра при освобождении последнего объекта экземпляра в модуле.
+*Объекта*<br/>
+Параметры *объекта* и *метода* используются в комбинации. Указывает на объект последнего экземпляра при освобождении объекта последнего экземпляра в модуле.
 
-*Метод*<br/>
-*Объект* и *метод* параметры используются в сочетании. Указывает метод последнего экземпляра объекта при освобождении последнего объекта экземпляра в модуле.
+*method*<br/>
+Параметры *объекта* и *метода* используются в комбинации. Указывает на метод объекта последней инстанции при освобождении объекта последнего экземпляра в модуле.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Ссылка на модуль.
 
-## <a name="decrementobjectcount"></a>Module::DecrementObjectCount
+## <a name="moduledecrementobjectcount"></a><a name="decrementobjectcount"></a>Модуль::DecrementObjectCount
 
-Уменьшает число объектов, отслеживаемых модулем.
+Декретирует количество объектов, отслеживаемых модулем.
 
 ```cpp
 virtual long DecrementObjectCount();
@@ -199,9 +201,9 @@ virtual long DecrementObjectCount();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Число, прежде чем операция уменьшения.
+Подсчет перед операцией по декретуму.
 
-## <a name="getactivationfactory"></a>Module::GetActivationFactory
+## <a name="modulegetactivationfactory"></a><a name="getactivationfactory"></a>Модуль::GetActivationFactory
 
 Получает фабрику активации для модуля.
 
@@ -221,14 +223,14 @@ WRL_NOTHROW HRESULT GetActivationFactory(
 *ppIFactory*<br/>
 Представляет интерфейс IActivationFactory указанного класса среды выполнения.
 
-*Имя_сервера*<br/>
-Имя подмножества фабрик класса в текущем модуле. Укажите имя сервера, используемое в [ActivatableClassWithFactoryEx](activatableclass-macros.md) макрос, или указать `nullptr` для получения имени сервера по умолчанию.
+*Имя _сервера*<br/>
+Имя подмножества фабрик класса в текущем модуле. Укажите имя сервера, используемое в макросе `nullptr` [ActivatableWithFactoryEx,](activatableclass-macros.md) или укажите, чтобы получить имя сервера по умолчанию.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, возвращаемое GetActivationFactory.
 
-## <a name="getclassobject"></a>Module::GetClassObject
+## <a name="modulegetclassobject"></a><a name="getclassobject"></a>Модуль::GetClassObject
 
 Извлекает кэш фабрик классов.
 
@@ -243,25 +245,25 @@ HRESULT GetClassObject(
 
 ### <a name="parameters"></a>Параметры
 
-*CLSID*<br/>
+*clsid*<br/>
 Идентификатор класса.
 
 *riid*<br/>
 Запрошенный идентификатор интерфейса.
 
-*ppv*<br/>
+*Ppv*<br/>
 Указатель на возвращаемый объект.
 
-*Имя_сервера*<br/>
+*Имя _сервера*<br/>
 Имя сервера, указанное в макросе `ActivatableClassWithFactory`, `ActivatableClassWithFactoryEx` или `ActivatableClass`; в противном случае — значение `nullptr` для получения имени сервера по умолчанию.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод можно используйте только для модели COM, а не среду выполнения Windows. Этот метод предоставляет только `IClassFactory` методы.
+Используйте этот метод только для COM, а не для Windows Runtime. Этот метод предоставляет `IClassFactory` только методы.
 
-## <a name="getmodule"></a>Module::GetModule
+## <a name="modulegetmodule"></a><a name="getmodule"></a>Модуль::GetModule
 
 Создает экземпляр модуля.
 
@@ -274,7 +276,7 @@ WRL_NOTHROW static Module& GetModule();
 
 Ссылка на модуль.
 
-## <a name="getobjectcount"></a>Module::GetObjectCount
+## <a name="modulegetobjectcount"></a><a name="getobjectcount"></a>Модуль::GetObjectCount
 
 Извлекает количество объектов, управляемых этим модулем.
 
@@ -286,9 +288,9 @@ virtual long GetObjectCount() const;
 
 Текущее количество объектов, управляемых этим модулем.
 
-## <a name="incrementobjectcount"></a>Module::IncrementObjectCount
+## <a name="moduleincrementobjectcount"></a><a name="incrementobjectcount"></a>Модуль::ИнкрементныйОбъективКтом
 
-Увеличивает число объектов, отслеживаемых модулем.
+Приравливки количество объектов, отслеживаемых модулем.
 
 ```cpp
 virtual long IncrementObjectCount();
@@ -296,9 +298,9 @@ virtual long IncrementObjectCount();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Счетчик перед выполнением операции инкремента.
+Подсчет перед операцией приращения.
 
-## <a name="module"></a>Module::module
+## <a name="modulemodule"></a><a name="module"></a>Модуль::Модуль
 
 Инициализирует новый экземпляр класса `Module`.
 
@@ -306,19 +308,19 @@ virtual long IncrementObjectCount();
 Module();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот конструктор является защищенным и не может быть вызван ключевым словом `new`. Вместо этого вызовите [Module::GetModule](#getmodule) или [Module::Create](#create).
+Этот конструктор является защищенным и не может быть вызван ключевым словом `new`. Вместо этого позвоните либо [в модуль::GetModule](#getmodule) или [Модуль::Создать](#create).
 
-## <a name="objectcount"></a>Module::objectCount_
+## <a name="moduleobjectcount_"></a><a name="objectcount"></a>Модуль::objectCount_
 
-Следит за сколько классы были созданы при помощи [сделать](make-function.md) функции.
+Отслеживает, сколько классов было создано с функцией [Make.](make-function.md)
 
 ```cpp
 volatile long objectCount_;
 ```
 
-## <a name="registercomobject"></a>Module::RegisterCOMObject
+## <a name="moduleregistercomobject"></a><a name="registercomobject"></a>Модуль::RegisterCOMObject
 
 Регистрирует один или несколько объектов модели COM, чтобы другие приложения могли к ним подключиться.
 
@@ -333,16 +335,16 @@ WRL_NOTHROW virtual HRESULT RegisterCOMObject(
 
 ### <a name="parameters"></a>Параметры
 
-*Имя_сервера*<br/>
+*Имя _сервера*<br/>
 Полное имя сервера.
 
-*идентификаторов CLSID*<br/>
+*clsids*<br/>
 Массив регистрируемых идентификаторов CLSID.
 
-*фабрики*<br/>
+*Заводов*<br/>
 Массив интерфейсов IUnknown объектов класса, чья доступность публикуется.
 
-*Файлы cookie*<br/>
+*Печенье*<br/>
 После завершения операции представляет массив указателей на значения, которые определяют зарегистрированные объекты класса. Эти значения в дальнейшем используются для отмены регистрации.
 
 *count*<br/>
@@ -352,15 +354,15 @@ WRL_NOTHROW virtual HRESULT RegisterCOMObject(
 
 Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT (например, CO_E_OBJISREG), указывающее причину неудачного завершения операции.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 COM-объекты зарегистрированы с помощью перечислителя CLSCTX_LOCAL_SERVER перечисления CLSCTX.
 
-Тип подключения к зарегистрированным объектам определяется сочетание текущего *comflag* параметр шаблона и перечислителя REGCLS_SUSPENDED перечисления.
+Тип соединения с зарегистрированными объектами определяется комбинацией текущего параметра шаблона *comflag* и REGCLS_SUSPENDED перечисления в перечислении REGCLS.
 
-## <a name="registerobjects"></a>Module::RegisterObjects
+## <a name="moduleregisterobjects"></a><a name="registerobjects"></a>Модуль:РегистрацияОбъекты
 
-Регистрирует объекты COM или среду выполнения Windows, чтобы другие приложения могли подключиться к ним.
+Регистрирует объекты COM или Windows Runtime, чтобы другие приложения могли подключиться к ним.
 
 ```cpp
 HRESULT RegisterObjects(
@@ -370,19 +372,19 @@ HRESULT RegisterObjects(
 
 ### <a name="parameters"></a>Параметры
 
-*module*<br/>
-Массив объектов COM или среду выполнения Windows.
+*Модуль*<br/>
+Массив объектов COM или Windows Runtime.
 
-*Имя_сервера*<br/>
+*Имя _сервера*<br/>
 Имя сервера, который создал объекты.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее причину неудачного завершения операции.
 
-## <a name="registerwinrtobject"></a>Module::RegisterWinRTObject
+## <a name="moduleregisterwinrtobject"></a><a name="registerwinrtobject"></a>Модуль::RegisterWinRTObject
 
-Регистрирует один или несколько объектов среды выполнения Windows, чтобы другие приложения могли подключиться к ним.
+Регистрирует один или несколько объектов Windows Runtime, чтобы другие приложения могли подключиться к ним.
 
 ```cpp
 HRESULT RegisterWinRTObject(const wchar_t* serverName,
@@ -393,13 +395,13 @@ HRESULT RegisterWinRTObject(const wchar_t* serverName,
 
 ### <a name="parameters"></a>Параметры
 
-*Имя_сервера*<br/>
+*Имя _сервера*<br/>
 Имя, которое определяет подмножество объектов, затронутых этой операцией.
 
-*activatableClassIds*<br/>
+*активироватьКлассныеи*<br/>
 Массив активируемых идентификаторов CLSID для регистрации.
 
-*Файл cookie*<br/>
+*Cookie*<br/>
 Значение, которое идентифицирует зарегистрированные объекты класса. Это значение в дальнейшем используется для отмены регистрации.
 
 *count*<br/>
@@ -409,15 +411,15 @@ HRESULT RegisterWinRTObject(const wchar_t* serverName,
 
 Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT (например, CO_E_OBJISREG), указывающее причину неудачного завершения операции.
 
-## <a name="releasenotifier"></a>Module::releaseNotifier_
+## <a name="modulereleasenotifier_"></a><a name="releasenotifier"></a>Модуль::releaseNotifier_
 
-Содержит указатель на `ReleaseNotifier` объект.
+Удерживает указатель `ReleaseNotifier` на объект.
 
 ```cpp
 ReleaseNotifier *releaseNotifier_;
 ```
 
-## <a name="terminate"></a>Module::Terminate
+## <a name="moduleterminate"></a><a name="terminate"></a>Модуль::Прекращение
 
 Приводит к завершению работы всех экземпляров фабрик, созданных модулем.
 
@@ -425,11 +427,11 @@ ReleaseNotifier *releaseNotifier_;
 void Terminate();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Освобождает фабрики в кэше.
 
-## <a name="unregistercomobject"></a>Module::UnregisterCOMObject
+## <a name="moduleunregistercomobject"></a><a name="unregistercomobject"></a>Модуль::UnregisterCOMObject
 
 Отменяет регистрацию одного или нескольких объектов модели COM, что предотвращает подключение к ним других приложений.
 
@@ -442,11 +444,11 @@ virtual HRESULT UnregisterCOMObject(
 
 ### <a name="parameters"></a>Параметры
 
-*Имя_сервера*<br/>
+*Имя _сервера*<br/>
 (Не используется)
 
-*Файлы cookie*<br/>
-Массив указателей на значения, которые идентифицируют объекты класса для отмены регистрации. Массив был создан с [RegisterCOMObject](#registercomobject) метод.
+*Печенье*<br/>
+Массив указателей на значения, которые идентифицируют объекты класса для отмены регистрации. Массив был создан методом [RegisterCOMObject.](#registercomobject)
 
 *count*<br/>
 Количество классов для отмены регистрации.
@@ -455,7 +457,7 @@ virtual HRESULT UnregisterCOMObject(
 
 Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее причину неудачного завершения операции.
 
-## <a name="unregisterobjects"></a>Module::UnregisterObjects
+## <a name="moduleunregisterobjects"></a><a name="unregisterobjects"></a>Модуль::Нерегистраемыеобъекты
 
 Отменяет регистрацию объектов в указанном модуле. Таким образом другие приложения не смогут подключиться к ним.
 
@@ -467,19 +469,19 @@ HRESULT UnregisterObjects(
 
 ### <a name="parameters"></a>Параметры
 
-*module*<br/>
+*Модуль*<br/>
 Указатель на модуль.
 
-*Имя_сервера*<br/>
+*Имя _сервера*<br/>
 Представляет имя, которое определяет подмножество объектов, затронутых этой операцией.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее причину неудачного завершения операции.
 
-## <a name="unregisterwinrtobject"></a>Module::UnregisterWinRTObject
+## <a name="moduleunregisterwinrtobject"></a><a name="unregisterwinrtobject"></a>Модуль::UnregisterWinRTObject
 
-Отменяет регистрацию одного или нескольких объектов среды выполнения Windows, таким образом, чтобы другие приложения не смогут подключиться к ним.
+Отменить регистрацию одного или нескольких объектов Windows Runtime, чтобы другие приложения не могли подключиться к ним.
 
 ```cpp
 virtual HRESULT UnregisterWinRTObject(
@@ -490,5 +492,5 @@ virtual HRESULT UnregisterWinRTObject(
 
 ### <a name="parameters"></a>Параметры
 
-*Файл cookie*<br/>
+*Cookie*<br/>
 Указатель на значение, определяющее объект класса, регистрация которого должна быть отменена.

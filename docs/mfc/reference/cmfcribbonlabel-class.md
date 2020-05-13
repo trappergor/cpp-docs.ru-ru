@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CMFCRibbonLabel [MFC], CMFCRibbonLabel
 - CMFCRibbonLabel [MFC], SetACCData
 ms.assetid: 0346c891-83bf-4f20-b8a1-c84cf2aadced
-ms.openlocfilehash: b79d6191d2deb0a295e81da1150cc7b38fd81232
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd30e374441661368d3ea7abf5177424f8dffb3c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388414"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375123"
 ---
 # <a name="cmfcribbonlabel-class"></a>Класс CMFCRibbonLabel
 
@@ -31,24 +31,24 @@ class CMFCRibbonLabel : public CMFCRibbonButton
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CMFCRibbonLabel::CMFCRibbonLabel](#cmfcribbonlabel)|Создает и инициализирует `CMFCRibbonLabel` объект с указанной текстовой строки.|
+|[CMFCRibbonLabel::CMFCRibbonLabel](#cmfcribbonlabel)|Строит и инициализирует `CMFCRibbonLabel` объект с указанной строкой текста.|
 |`CMFCRibbonLabel::~CMFCRibbonLabel`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |`CMFCRibbonLabel::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|
-|`CMFCRibbonLabel::GetThisClass`|Используется инфраструктурой, чтобы получить указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|
-|[CMFCRibbonLabel::SetACCData](#setaccdata)|Определяет, какие данные специальных возможностей для текущего элемента метка ленты. (Переопределяет [CMFCRibbonButton::SetACCData](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|
+|`CMFCRibbonLabel::GetThisClass`|Используется фректором для получения указателя на объект [CRuntimeClass,](../../mfc/reference/cruntimeclass-structure.md) связанный с этим типом класса.|
+|[CMFCRibbonLabel::SetACCData](#setaccdata)|Определяет данные доступности для текущего элемента ленточной метки. (Переопределяет [CMFCRibbonButton::SetACCData](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-После создания метка на ленте, добавьте его на панель, вызвав [CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add).
+После создания ленты этикетки, добавить его в панель, позвонив [CMFCRibbonPanel::Добавить](../../mfc/reference/cmfcribbonpanel-class.md#add).
 
-Невозможно добавить метку ленты, панель быстрого доступа.
+Вы не можете добавить ленту этикетку для панели инструментов быстрого доступа.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -64,9 +64,9 @@ class CMFCRibbonLabel : public CMFCRibbonButton
 
 **Заголовок:** afxRibbonLabel.h
 
-##  <a name="cmfcribbonlabel"></a>  CMFCRibbonLabel::CMFCRibbonLabel
+## <a name="cmfcribbonlabelcmfcribbonlabel"></a><a name="cmfcribbonlabel"></a>CMFCRibbonLabel::CMFCRibbonLabel
 
-Создает и инициализирует [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) объекта, который отображает заданную текстовую строку.
+Строит и инициализирует объект [CMFCRibbonLabel,](../../mfc/reference/cmfcribbonlabel-class.md) который отображает указанную строку текста.
 
 ```
 CMFCRibbonLabel(
@@ -77,14 +77,14 @@ CMFCRibbonLabel(
 ### <a name="parameters"></a>Параметры
 
 *lpszText*<br/>
-[in] Текст, появляющийся в метке.
+(в) Текст, который будет отображаться на этикетке.
 
 *bIsMultiLine*<br/>
-[in] Значение TRUE, чтобы указать, что метка Многострочная метка; в противном случае — значение FALSE.
+(в) TRUE указать, что этикетка является многолинейной этикеткой; в противном случае, FALSE.
 
-##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData
+## <a name="cmfcribbonlabelsetaccdata"></a><a name="setaccdata"></a>CMFCRibbonLabel::SetACCData
 
-Определяет, какие данные специальных возможностей для текущего элемента метка ленты.
+Определяет данные доступности для текущего элемента ленточной метки.
 
 ```
 virtual BOOL SetACCData(
@@ -94,17 +94,17 @@ virtual BOOL SetACCData(
 
 ### <a name="parameters"></a>Параметры
 
-*pParent*<br/>
-[in] Представляет родительское окно метку ленты.
+*pРодитель*<br/>
+(в) Представляет родительское окно текущей ленты.
 
-*data*<br/>
-[out] Объект типа `CAccessibilityData` заполняется данные специальных возможностей текущей метки ленты.
+*данные*<br/>
+(ваут) Объект типа, `CAccessibilityData` населенный данными о доступности текущей метки ленты.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если *данных* параметр был успешно заполнен данные специальных возможностей текущей метки ленты; в противном случае — значение FALSE.
+TRUE, если параметр *данных* был успешно заселен данными о доступности текущей метки ленты; в противном случае, FALSE.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)<br/>

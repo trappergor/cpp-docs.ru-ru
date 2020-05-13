@@ -1,11 +1,13 @@
 ---
 title: strspn, wcsspn, _mbsspn, _mbsspn_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsspn_l
 - wcsspn
 - strspn
 - _mbsspn
+- _o__mbsspn
+- _o__mbsspn_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +22,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -44,12 +47,12 @@ helpviewer_keywords:
 - mbsspn_l function
 - _tcsspn function
 ms.assetid: d077284a-809f-4068-959e-c6d6262677eb
-ms.openlocfilehash: 8e65e466e95464dbd928ff0d80d975ce23fc180c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b63ca5f7d22b6522ca3e3c58ea5486d612b671ae
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946758"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911106"
 ---
 # <a name="strspn-wcsspn-_mbsspn-_mbsspn_l"></a>strspn, wcsspn, _mbsspn, _mbsspn_l
 
@@ -95,20 +98,22 @@ size_t _mbsspn_l(
 
 Возвращает целочисленное значение, задающее длину подстроки в *str* , которая состоит исключительно из символов в *стрчарсет*. Если *str* начинается с символа, не *стрчарсет*, функция возвращает 0.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Функция **strspn** возвращает индекс первого символа в *str* , не принадлежащего набору символов в *стрчарсет*. Поиск не включает завершающие нуль-символы.
 
-**wcsspn** и **_mbsspn** — это версии **strspn**для расширенных символов и многобайтовых символов. Аргументы **wcsspn** — это строки расширенных символов; **_mbsspn** являются строками многобайтовых символов. **_mbsspn** проверяет свои параметры. Если *str* или *Стрчарсет* имеет **значение NULL**, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md) . Если выполнение может быть продолжено , _mbspn **устанавливает значение** переводится в **еинвал** и возвращает 0. **strspn** и **wcsspn** не проверяют свои параметры. В остальном эти три функции ведут себя идентично.
+**wcsspn** и **_mbsspn** — это версии **strspn**для расширенных символов и многобайтовых символов. Аргументы **wcsspn** — это строки расширенных символов; **_mbsspn** являются строками многобайтовых символов. **_mbsspn** проверяет свои параметры. Если *str* или *Стрчарсет* имеет **значение NULL**, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md) . Если выполнение может быть продолжено **_mbspn** , _mbspn **устанавливает** значение **еинвал** и возвращает 0. **strspn** и **wcsspn** не проверяют свои параметры. В остальном эти три функции ведут себя идентично.
 
 Выходное значение зависит от настройки категории **LC_CTYPE** языкового стандарта; дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Версии этих функций без суффикса **_l** используют текущий языковой стандарт для данного поведения, зависящего от языкового стандарта; версии с суффиксом **_l** идентичны, за исключением того, что они используют переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsspn**|**strspn**|**_mbsspn**|**wcsspn**|
-|**Н/Д**|**Н/Д**|**_mbsspn_l**|**Н/Д**|
+|**н/д**|**н/д**|**_mbsspn_l**|**н/д**|
 
 ## <a name="requirements"></a>Требования
 
@@ -118,7 +123,7 @@ size_t _mbsspn_l(
 |**wcsspn**|\<string.h> или \<wchar.h>|
 |**_mbsspn**, **_mbsspn_l**|\<mbstring.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -147,10 +152,10 @@ int main( void )
 The portion of 'cabbage' containing only a, b, or c is 5 bytes long
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Операции со строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Языковой стандарт](../../c-runtime-library/locale.md)<br/>
+[Управление строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Интерпретация последовательностей многобайтовых символов](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l](strspnp-wcsspnp-mbsspnp-mbsspnp-l.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>

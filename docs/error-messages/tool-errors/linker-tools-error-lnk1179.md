@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1179
 ms.assetid: 4b1536d7-0d3d-4f29-a9c1-6fa5cf6cb665
-ms.openlocfilehash: 71aba1f20cfaf5b6b9ec33d43ebde594e381921f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d85693cec11ef53a6bbbb60d8ced716d2a0bb131
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391417"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754344"
 ---
 # <a name="linker-tools-error-lnk1179"></a>Ошибка средств компоновщика LNK1179
 
-Недопустимый или поврежденный файл: повторяющийся COMDAT «имя_файла»
+недействительный или поврежденный файл: дубликат «файленое имя» COMDAT
 
-Модуль объекта содержит два или более COMDAT с тем же именем.
+Модуль объекта содержит два или более COMDATs с тем же именем.
 
-Эта ошибка может возникнуть при использовании [/H](../../build/reference/h-restrict-length-of-external-names.md), который ограничивает длину внешних имен, и [/Gy](../../build/reference/gy-enable-function-level-linking.md), какие пакеты функций COMDAT.
+Эта ошибка может быть вызвана использованием [/H](../../build/reference/h-restrict-length-of-external-names.md), который ограничивает длину внешних имен, и [/Gy](../../build/reference/gy-enable-function-level-linking.md), который упаковывает функции в COMDATs.
 
 ## <a name="example"></a>Пример
 
-В следующем коде `function1` и `function2` идентичны в первые восемь символов. Компиляция с **/Gy** и **/H8** возникает ошибка компоновки.
+В следующем коде, `function1` и `function2` идентичны в первых восьми символов. Компиляция с **/Gy** и **/H8** создает ошибку ссылки.
 
-```
+```cpp
 void function1(void);
 void function2(void);
 

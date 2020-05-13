@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - usesgetlasterror attribute
 ms.assetid: d149e33d-35a7-46cb-9137-ae6883d86122
-ms.openlocfilehash: b14316bd929f4b41b13a76c41e94b31b7534e9d8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f58929db01a1710e811a973c0559ad29b242b4eb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513891"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166137"
 ---
 # <a name="usesgetlasterror"></a>usesgetlasterror
 
-Сообщает вызывающему, что при возникновении ошибки при вызове этой функции вызывающий объект может вызвать метод `GetLastError` , чтобы получить код ошибки.
+Сообщает вызывающему, что при возникновении ошибки при вызове этой функции вызывающий объект может вызвать `GetLastError`, чтобы получить код ошибки.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -23,7 +23,7 @@ ms.locfileid: "69513891"
 [usesgetlasterror]
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Атрибут **усесжетластеррор** C++ имеет те же функциональные возможности, что и атрибут [усесжетластеррор](/windows/win32/Midl/usesgetlasterror) MIDL.
 
@@ -37,13 +37,13 @@ ms.locfileid: "69513891"
 
 |||
 |-|-|
-|**Относится к**|атрибут **module**|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Отсутствуют|
-|**Недопустимые атрибуты**|Отсутствуют|
+|**Применение**|атрибут **module**|
+|**Повторяемый**|нет|
+|**Обязательные атрибуты**|None|
+|**Недопустимые атрибуты**|None|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)

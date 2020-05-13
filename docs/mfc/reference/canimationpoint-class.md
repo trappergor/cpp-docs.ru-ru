@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CAnimationPoint [MFC], m_xValue
 - CAnimationPoint [MFC], m_yValue
 ms.assetid: 5dc4d46f-e695-4681-b15c-544b78b3e317
-ms.openlocfilehash: 15f06d2fa3478570d2f784879a13e7b68515e746
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fcdd07efb46c97d27a9f1349c297688b5705f176
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62218542"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755151"
 ---
 # <a name="canimationpoint-class"></a>Класс CAnimationPoint
 
@@ -47,44 +47,44 @@ class CAnimationPoint : public CAnimationBaseObject;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CAnimationPoint::CAnimationPoint](#canimationpoint)|Перегружен. Создает объект CAnimationPoint.|
+|[CAnimationPoint::CAnimationPoint](#canimationpoint)|Перегружен. Строит объект CAnimationPoint.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CAnimationPoint::AddTransition](#addtransition)|Добавляет переходы для X и Y-координаты.|
-|[CAnimationPoint::GetDefaultValue](#getdefaultvalue)|Возвращает значения по умолчанию для X и Y-координаты.|
+|[CAnimationPoint::AddTransition](#addtransition)|Добавляет переходы для координат X и Y.|
+|[CAnimationPoint::GetDefaultValue](#getdefaultvalue)|Возвращает значения по умолчанию для координат X и Y.|
 |[CAnimationPoint::GetValue](#getvalue)|Возвращает текущее значение.|
-|[CAnimationPoint::GetX](#getx)|Предоставляет доступ к CAnimationVariable для координату X.|
-|[CAnimationPoint::GetY](#gety)|Предоставляет доступ к CAnimationVariable для координаты по оси Y.|
-|[CAnimationPoint::SetDefaultValue](#setdefaultvalue)|Задает значение по умолчанию.|
+|[CAnimationPoint::GetX](#getx)|Предоставляет доступ к CAnimationПеременный для X координат.|
+|[CAnimationPoint::GetY](#gety)|Предоставляет доступ к CAnimationПеременный для Y координат.|
+|[CAnimationPoint::SetDefaultValue](#setdefaultvalue)|Устанавливает значение по умолчанию.|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CAnimationPoint::GetAnimationVariableList](#getanimationvariablelist)|Помещает инкапсулированный анимации переменные в список. (Переопределяет [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|
+|[CAnimationPoint::GetAnimationVariableList](#getanimationvariablelist)|Помещает инкапсулированные переменные анимации в список. (Оверлет [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CAnimationPoint::operator CPoint](#operator_cpoint)|Преобразует CAnimationPoint CPoint.|
-|[CAnimationPoint::operator =](#operator_eq)|Назначает ptSrc CAnimationPoint.|
+|[CAnimationPoint:оператор CPoint](#operator_cpoint)|Преобразует CAnimationPoint в CPoint.|
+|[CAnimationPoint::оператор](#operator_eq)|Присваивает ptSrc CAnimationPoint.|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CAnimationPoint::m_xValue](#m_xvalue)|Инкапсулированный анимации переменной, представляющей X координат точки анимации.|
-|[CAnimationPoint::m_yValue](#m_yvalue)|Переменная инкапсулированный анимации, представляющее координату Y точки анимации.|
+|[CAnimationPoint::m_xValue](#m_xvalue)|Инкапсулированная переменная анимации, представляющая X-координаты точки анимации.|
+|[CAnimationPoint::m_yValue](#m_yvalue)|Инкапсулированная переменная анимации, представляющая y-координаты точки анимации.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Класс CAnimationPoint инкапсулирует два объекта CAnimationVariable и может представлять в приложениях точку. Например этот класс можно использовать для анимации позицию любого объекта на экране (например, текстовая строка, круг, точки и т.д.). Чтобы использовать этот класс в приложении, просто создать экземпляр объекта этого класса, добавьте его к контроллеру анимации с помощью CAnimationController::AddAnimationObject и вызова AddTransition для каждого перехода для применения к координатам X и Y.
+Класс CAnimationPoint инкапсулирует два объекта CAnimationVariable и может представлять в приложениях точку. Например, этот класс можно использовать для анимирования положения любого объекта на экране (например, строки текста, круга, точки и т.д.). Чтобы использовать этот класс в приложении, просто мгновенно объект этого класса, добавьте его в контроллер анимации с помощью CAnimationController::AddAnimationObject и вызов AddTransition для каждого перехода, который будет применяться к X и / или Y координаты.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -98,11 +98,11 @@ class CAnimationPoint : public CAnimationBaseObject;
 
 **Заголовок:** afxanimationcontroller.h
 
-##  <a name="addtransition"></a>  CAnimationPoint::AddTransition
+## <a name="canimationpointaddtransition"></a><a name="addtransition"></a>CAnimationPoint::AddTransition
 
-Добавляет переходы для X и Y-координаты.
+Добавляет переходы для координат X и Y.
 
-```
+```cpp
 void AddTransition(
     CBaseTransition* pXTransition,
     CBaseTransition* pYTransition);
@@ -110,19 +110,19 @@ void AddTransition(
 
 ### <a name="parameters"></a>Параметры
 
-*pXTransition*<br/>
-Указатель на переход для X координаты.
+*pXПереход*<br/>
+Указатель на переход для X координат.
 
 *pYTransition*<br/>
-Указатель на переход для Y координации.
+Указатель перехода для Y-координата.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Вызывайте эту функцию для добавления указанного переходы во внутренний список переходов для применения к анимации переменные для X и Y-координаты. Добавляя переходы, они не в силу немедленно, хранятся во внутренний список. Переходы применяются (Добавление раскадровки для определенного значения) при вызове CAnimationController::AnimateGroup. Если вам не нужно применить переход к одному из координат, можно передать значение NULL.
+Вызовите эту функцию, чтобы добавить указанные переходы во внутренний список переходов, которые будут применяться к переменным анимации для координат X и Y. При добавлении переходов они не применяются немедленно и хранятся во внутреннем списке. Переходы применяются (добавлены к раскадровке для определенного значения) при вызове CAnimationController::AnimateGroup. Если вам не нужно применять переход к одной из координат, вы можете пройти NULL.
 
-##  <a name="canimationpoint"></a>  CAnimationPoint::CAnimationPoint
+## <a name="canimationpointcanimationpoint"></a><a name="canimationpoint"></a>CAnimationPoint::CAnimationPoint
 
-Создает объект CAnimationPoint.
+Строит объект CAnimationPoint.
 
 ```
 CAnimationPoint();
@@ -137,24 +137,24 @@ CAnimationPoint(
 ### <a name="parameters"></a>Параметры
 
 *ptDefault*<br/>
-Задает координаты точки по умолчанию.
+Определяет координаты точек по умолчанию.
 
 *nGroupID*<br/>
-Указывает идентификатор группы.
+Определяет идентификатор группы.
 
 *nObjectID*<br/>
-Указывает идентификатор объекта.
+Определяет идентификатор объекта.
 
 *dwUserData*<br/>
-Задает определяемые пользователем данные.
+Определяет данные, определяемые пользователем.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Создает объект CAnimationPoint со свойствами по умолчанию: по умолчанию координаты точки, идентификатор группы и идентификатор объекта присваивается значение 0.
+Строит объект CAnimationPoint с свойствами по умолчанию: координаты точки по умолчанию, идентификатор группы и идентификатор объекта настроены до 0.
 
-##  <a name="getanimationvariablelist"></a>  CAnimationPoint::GetAnimationVariableList
+## <a name="canimationpointgetanimationvariablelist"></a><a name="getanimationvariablelist"></a>CAnimationPoint::GetAnimationVariableList
 
-Помещает инкапсулированный анимации переменные в список.
+Помещает инкапсулированные переменные анимации в список.
 
 ```
 virtual void GetAnimationVariableList(CList<CAnimationVariable*, CAnimationVariable*>& lst);
@@ -162,12 +162,12 @@ virtual void GetAnimationVariableList(CList<CAnimationVariable*, CAnimationVaria
 
 ### <a name="parameters"></a>Параметры
 
-*lst*<br/>
-При возврате функции, здесь есть указатели на два CAnimationVariable объекты, представляющие координаты X и Y.
+*Lst*<br/>
+Когда функция возвращается, она содержит указатели на два CAnimationПеременные объекты, представляющие X и Y координаты.
 
-##  <a name="getdefaultvalue"></a>  CAnimationPoint::GetDefaultValue
+## <a name="canimationpointgetdefaultvalue"></a><a name="getdefaultvalue"></a>CAnimationPoint::GetDefaultValue
 
-Возвращает значения по умолчанию для X и Y-координаты.
+Возвращает значения по умолчанию для координат X и Y.
 
 ```
 CPoint GetDefaultValue();
@@ -175,13 +175,13 @@ CPoint GetDefaultValue();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Точка содержащего значение по умолчанию.
+Точка, содержащая значение по умолчанию.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Вызывайте эту функцию для получения значения по умолчанию, который был ранее установлен конструктор или SetDefaultValue.
+Вызовите эту функцию для получения значения по умолчанию, которое ранее было установлено конструктором или SetDefaultValue.
 
-##  <a name="getvalue"></a>  CAnimationPoint::GetValue
+## <a name="canimationpointgetvalue"></a><a name="getvalue"></a>CAnimationPoint::GetValue
 
 Возвращает текущее значение.
 
@@ -192,19 +192,19 @@ BOOL GetValue(CPoint& ptValue);
 ### <a name="parameters"></a>Параметры
 
 *ptValue*<br/>
-Выходные данные. Содержит текущее значение при возвращении данного метода.
+Выходные данные. Содержит текущее значение при возврате этого метода.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если текущее значение было успешно извлечено; в противном случае — значение FALSE.
+ПРАВДА, если текущее значение было успешно извлечено; в противном случае FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Вызывайте эту функцию для получения текущего значения анимации точки. Если этот метод завершается ошибкой или базового COM-объектов для X и Y-координаты не был инициализирован, ptValue содержит значение по умолчанию, которое ранее было задано в конструкторе или SetDefaultValue.
+Вызов используйте эту функцию, чтобы получить текущее значение точки анимации. Если этот метод выходит из строя или основные объекты COM для координат X и Y не были инициализированы, ptValue содержит значение по умолчанию, которое ранее было установлено в конструкторе или SetDefaultValue.
 
-##  <a name="getx"></a>  CAnimationPoint::GetX
+## <a name="canimationpointgetx"></a><a name="getx"></a>CAnimationPoint::GetX
 
-Предоставляет доступ к CAnimationVariable для координату X.
+Предоставляет доступ к CAnimationПеременный для X координат.
 
 ```
 CAnimationVariable& GetX();
@@ -212,15 +212,15 @@ CAnimationVariable& GetX();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ссылку на инкапсулированный CAnimationVariable, представляющий X координации.
+Ссылка на инкапсулированный CAnimationVariable, представляющий X-координаты.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Можно вызвать этот метод, чтобы получить прямой доступ к базовой CAnimationVariable, представляющий X координации.
+Вы можете назвать этот метод, чтобы получить прямой доступ к основной CAnimationVariable, представляющей X-координаты.
 
-##  <a name="gety"></a>  CAnimationPoint::GetY
+## <a name="canimationpointgety"></a><a name="gety"></a>CAnimationPoint::GetY
 
-Предоставляет доступ к CAnimationVariable для координаты по оси Y.
+Предоставляет доступ к CAnimationПеременный для Y координат.
 
 ```
 CAnimationVariable& GetY();
@@ -228,31 +228,31 @@ CAnimationVariable& GetY();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ссылка на инкапсулированный CAnimationVariable, представляющее координату по оси y.
+Ссылка на инкапсулированный CAnimationVariable, представляющий Y координаты.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Можно вызвать этот метод, чтобы получить прямой доступ к базовой CAnimationVariable, представляющее координату по оси y.
+Вы можете вызвать этот метод, чтобы получить прямой доступ к основной CAnimationVariable, представляющей Y координаты.
 
-##  <a name="m_xvalue"></a>  CAnimationPoint::m_xValue
+## <a name="canimationpointm_xvalue"></a><a name="m_xvalue"></a>CAnimationPoint::m_xValue
 
-Инкапсулированный анимации переменной, представляющей X координат точки анимации.
+Инкапсулированная переменная анимации, представляющая X-координаты точки анимации.
 
 ```
 CAnimationVariable m_xValue;
 ```
 
-##  <a name="m_yvalue"></a>  CAnimationPoint::m_yValue
+## <a name="canimationpointm_yvalue"></a><a name="m_yvalue"></a>CAnimationPoint::m_yValue
 
-Переменная инкапсулированный анимации, представляющее координату Y точки анимации.
+Инкапсулированная переменная анимации, представляющая y-координаты точки анимации.
 
 ```
 CAnimationVariable m_yValue;
 ```
 
-##  <a name="operator_cpoint"></a>  CAnimationPoint::operator CPoint
+## <a name="canimationpointoperator-cpoint"></a><a name="operator_cpoint"></a>CAnimationPoint:оператор CPoint
 
-Преобразует CAnimationPoint CPoint.
+Преобразует CAnimationPoint в CPoint.
 
 ```
 operator CPoint();
@@ -262,44 +262,44 @@ operator CPoint();
 
 Текущее значение CAnimationPoint как CPoint.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Эта функция вызывает GetValue. Если GetValue для какой-либо причине происходит сбой, возвращенный точка будет содержать значения по умолчанию для X и Y-координаты.
+Эта функция внутренне вызывает GetValue. Если GetValue по какой-либо причине выходит из строя, возвращается точка будет содержать значения по умолчанию для координат X и Y.
 
-##  <a name="operator_eq"></a>  CAnimationPoint::operator =
+## <a name="canimationpointoperator"></a><a name="operator_eq"></a>CAnimationPoint::оператор
 
-Назначает ptSrc CAnimationPoint.
+Присваивает ptSrc CAnimationPoint.
 
-```
+```cpp
 void operator=(const CPoint& ptSrc);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *ptSrc*<br/>
-Ссылается на CPoint или ТОЧКИ.
+Относится к CPoint или POINT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Назначает ptSrc CAnimationPoint. Рекомендуется сделать, что до начала анимации, так как этот оператор вызывает SetDefaultValue, который повторно создает основной COM объектов для координаты X и Y, если они были созданы. Если подписка этого объекта анимации на события (ValueChanged или IntegerValueChanged), необходимо включить эти события.
+Присваивает ptSrc CAnimationPoint. Рекомендуется сделать это до начала анимации, потому что этот оператор вызывает SetDefaultValue, который воссоздает основные объекты COM для координат X и Y, если они были созданы. Если вы подписались на этот объект анимации на события (ValueChanged или IntegerValue), необходимо повторно включить эти события.
 
-##  <a name="setdefaultvalue"></a>  CAnimationPoint::SetDefaultValue
+## <a name="canimationpointsetdefaultvalue"></a><a name="setdefaultvalue"></a>CAnimationPoint::SetDefaultValue
 
-Задает значение по умолчанию.
+Устанавливает значение по умолчанию.
 
-```
+```cpp
 void SetDefaultValue(const POINT& ptDefault);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *ptDefault*<br/>
-Указывает значение по умолчанию точки.
+Определяет значение точки по умолчанию.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Эта функция используется для задания значения по умолчанию для объекта анимации. Это значение по умолчанию методы назначает значения координат X и Y точки анимации. Он также воссоздает базовых объектов COM, если они были созданы. Если подписка этого объекта анимации на события (ValueChanged или IntegerValueChanged), необходимо включить эти события.
+Используйте эту функцию для установки значения по умолчанию для объекта анимации. Этот метод присваивает значения по умолчанию координатам Анимации X и Y. Он также воссоздает основные объекты COM, если они были созданы. Если вы подписались на этот объект анимации на события (ValueChanged или IntegerValue), необходимо повторно включить эти события.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Классы](../../mfc/reference/mfc-classes.md)

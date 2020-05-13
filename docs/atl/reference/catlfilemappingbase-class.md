@@ -16,23 +16,23 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMappingBase class
 ms.assetid: be555723-2790-4f57-a8fb-be4d68460775
-ms.openlocfilehash: a20a8f6c00f9404aa819b87a6a69ad2c08fb4561
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 75177c195e83a4ab3ad2a6bd4d608d07f8c2234f
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70739551"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168089"
 ---
 # <a name="catlfilemappingbase-class"></a>Класс Катлфилемаппингбасе
 
 Этот класс представляет размещенный в памяти файл.
 
 > [!IMPORTANT]
->  Этот класс и его члены не могут использоваться в приложениях, выполняемых в среда выполнения Windows.
+> Этот класс и его члены не могут использоваться в приложениях, выполняемых в среда выполнения Windows.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 class CAtlFileMappingBase
 ```
 
@@ -40,14 +40,14 @@ class CAtlFileMappingBase
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[Катлфилемаппингбасе:: Катлфилемаппингбасе](#catlfilemappingbase)|Конструктор.|
 |[Катлфилемаппингбасе:: ~ Катлфилемаппингбасе](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[Катлфилемаппингбасе:: CopyFrom](#copyfrom)|Вызовите этот метод для копирования из объекта сопоставления файлов.|
 |[Катлфилемаппингбасе:: GetData](#getdata)|Вызовите этот метод, чтобы получить данные из объекта сопоставления файлов.|
@@ -60,11 +60,11 @@ class CAtlFileMappingBase
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[Катлфилемаппингбасе:: operator =](#operator_eq)|Задает текущий объект сопоставления файлов для другого объекта сопоставления файлов.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Сопоставление файлов — это привязка содержимого файла к части виртуального адресного пространства процесса. Этот класс предоставляет методы для создания объектов сопоставления файлов, которые позволяют программам легко получать доступ к данным и предоставлять к ним общий доступ.
 
@@ -74,11 +74,11 @@ class CAtlFileMappingBase
 
 **Заголовок:** атлфиле. h
 
-##  <a name="catlfilemappingbase"></a>Катлфилемаппингбасе:: Катлфилемаппингбасе
+## <a name="catlfilemappingbasecatlfilemappingbase"></a><a name="catlfilemappingbase"></a>Катлфилемаппингбасе:: Катлфилемаппингбасе
 
 Конструктор.
 
-```
+```cpp
 CAtlFileMappingBase(CAtlFileMappingBase& orig);
 CAtlFileMappingBase() throw();
 ```
@@ -88,7 +88,7 @@ CAtlFileMappingBase() throw();
 *Orig*<br/>
 Исходный объект сопоставления файлов для копирования для создания нового объекта.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Создает новый объект сопоставления файлов, при необходимости используя существующий объект. По-прежнему необходимо вызвать [катлфилемаппингбасе:: файл сопоставления](#mapfile) , чтобы открыть или создать объект сопоставления файлов для определенного файла.
 
@@ -96,23 +96,23 @@ CAtlFileMappingBase() throw();
 
 [!code-cpp[NVC_ATL_Utilities#71](../../atl/codesnippet/cpp/catlfilemappingbase-class_1.cpp)]
 
-##  <a name="dtor"></a>Катлфилемаппингбасе:: ~ Катлфилемаппингбасе
+## <a name="catlfilemappingbasecatlfilemappingbase"></a><a name="dtor"></a>Катлфилемаппингбасе:: ~ Катлфилемаппингбасе
 
 Деструктор
 
-```
+```cpp
 ~CAtlFileMappingBase() throw();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Освобождает все ресурсы, выделенные классом, и вызывает метод [катлфилемаппингбасе::](#unmap) uncall.
 
-##  <a name="copyfrom"></a>Катлфилемаппингбасе:: CopyFrom
+## <a name="catlfilemappingbasecopyfrom"></a><a name="copyfrom"></a>Катлфилемаппингбасе:: CopyFrom
 
 Вызовите этот метод для копирования из объекта сопоставления файлов.
 
-```
+```cpp
 HRESULT CopyFrom(CAtlFileMappingBase& orig) throw();
 ```
 
@@ -123,13 +123,13 @@ HRESULT CopyFrom(CAtlFileMappingBase& orig) throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="getdata"></a>Катлфилемаппингбасе:: GetData
+## <a name="catlfilemappingbasegetdata"></a><a name="getdata"></a>Катлфилемаппингбасе:: GetData
 
 Вызовите этот метод, чтобы получить данные из объекта сопоставления файлов.
 
-```
+```cpp
 void* GetData() const throw();
 ```
 
@@ -137,11 +137,11 @@ void* GetData() const throw();
 
 Возвращает указатель на данные.
 
-##  <a name="gethandle"></a>Катлфилемаппингбасе:: getHandler
+## <a name="catlfilemappingbasegethandle"></a><a name="gethandle"></a>Катлфилемаппингбасе:: getHandler
 
 Вызовите этот метод, чтобы вернуть маркер для объекта сопоставления файлов.
 
-```
+```cpp
 HANDLE GetHandle() throw ();
 ```
 
@@ -149,11 +149,11 @@ HANDLE GetHandle() throw ();
 
 Возвращает маркер объекта сопоставления файлов.
 
-##  <a name="getmappingsize"></a>Катлфилемаппингбасе:: Жетмаппингсизе
+## <a name="catlfilemappingbasegetmappingsize"></a><a name="getmappingsize"></a>Катлфилемаппингбасе:: Жетмаппингсизе
 
 Вызовите этот метод, чтобы получить размер сопоставления из объекта сопоставления файлов.
 
-```
+```cpp
 SIZE_T GetMappingSize() throw();
 ```
 
@@ -165,11 +165,11 @@ SIZE_T GetMappingSize() throw();
 
 См. пример для [катлфилемаппингбасе:: катлфилемаппингбасе](#catlfilemappingbase).
 
-##  <a name="mapfile"></a>Катлфилемаппингбасе:: файла сопоставления
+## <a name="catlfilemappingbasemapfile"></a><a name="mapfile"></a>Катлфилемаппингбасе:: файла сопоставления
 
 Вызовите этот метод, чтобы открыть или создать объект сопоставления файлов для указанного файла.
 
-```
+```cpp
 HRESULT MapFile(
     HANDLE hFile,
     SIZE_T nMappingSize = 0,
@@ -181,7 +181,7 @@ HRESULT MapFile(
 ### <a name="parameters"></a>Параметры
 
 *hFile*<br/>
-Обработайте с файлом, из которого создается объект сопоставления. *hFile* должен быть допустимым и не может быть установлен в INVALID_HANDLE_VALUE.
+Обработайте с файлом, из которого создается объект сопоставления. *hFile* должен быть допустимым и не может принимать значение INVALID_HANDLE_VALUE.
 
 *нмаппингсизе*<br/>
 Размер сопоставления. Если значение равно 0, максимальный размер объекта сопоставления файлов равен текущему размеру файла, определенного параметром *hFile.*
@@ -197,9 +197,9 @@ HRESULT MapFile(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 После того как объект сопоставления файлов создан, размер файла не должен превышать размер объекта сопоставления файлов; Если это так, не все содержимое файла будет доступно для общего доступа. Дополнительные сведения см. в разделе [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga) и [MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) в Windows SDK.
 
@@ -207,11 +207,11 @@ HRESULT MapFile(
 
 См. пример для [катлфилемаппингбасе:: катлфилемаппингбасе](#catlfilemappingbase).
 
-##  <a name="mapsharedmem"></a>Катлфилемаппингбасе:: Мапшаредмем
+## <a name="catlfilemappingbasemapsharedmem"></a><a name="mapsharedmem"></a>Катлфилемаппингбасе:: Мапшаредмем
 
 Вызовите этот метод, чтобы создать объект сопоставления файлов, разрешающий полный доступ ко всем процессам.
 
-```
+```cpp
 HRESULT MapSharedMem(
     SIZE_T nMappingSize,
     LPCTSTR szName,
@@ -236,24 +236,24 @@ HRESULT MapSharedMem(
 Указатель на `SECURITY_ATTRIBUTES` структуру, которая определяет, может ли возвращаемый маркер наследоваться дочерними процессами. См. раздел *лпаттрибутес* в [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga) в Windows SDK.
 
 *двмаппингпротектион*<br/>
-Защита, необходимая для представления файлов при сопоставлении файла. См . раздел `CreateFileMapping` флпротект в Windows SDK.
+Защита, необходимая для представления файлов при сопоставлении файла. См *flProtect* . раздел `CreateFileMapping` флпротект в Windows SDK.
 
 *дввиевдесиредакцесс*<br/>
 Указывает тип доступа к представлению файла и, таким образом, защиту страниц, сопоставленных с файлом. См. раздел *двдесиредакцесс* в [MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) в Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 `MapShareMem`позволяет совместно использовать существующий объект сопоставления файлов, созданный [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga), между процессами.
 
-##  <a name="openmapping"></a>Катлфилемаппингбасе:: Опенмаппинг
+## <a name="catlfilemappingbaseopenmapping"></a><a name="openmapping"></a>Катлфилемаппингбасе:: Опенмаппинг
 
 Вызовите этот метод, чтобы открыть именованный объект сопоставления файлов для указанного файла.
 
-```
+```cpp
 HRESULT OpenMapping(
     LPCTSTR szName,
     SIZE_T nMappingSize,
@@ -277,17 +277,17 @@ HRESULT OpenMapping(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 В отладочных сборках возникнет ошибка утверждения, если входные параметры являются недопустимыми.
 
-##  <a name="operator_eq"></a>Катлфилемаппингбасе:: operator =
+## <a name="catlfilemappingbaseoperator-"></a><a name="operator_eq"></a>Катлфилемаппингбасе:: operator =
 
 Задает текущий объект сопоставления файлов для другого объекта сопоставления файлов.
 
-```
+```cpp
 CAtlFileMappingBase& operator=(CAtlFileMappingBase& orig);
 ```
 
@@ -300,23 +300,23 @@ CAtlFileMappingBase& operator=(CAtlFileMappingBase& orig);
 
 Возвращает ссылку на текущий объект.
 
-##  <a name="unmap"></a>Катлфилемаппингбасе:: отмена сопоставления
+## <a name="catlfilemappingbaseunmap"></a><a name="unmap"></a>Катлфилемаппингбасе:: отмена сопоставления
 
 Вызовите этот метод, чтобы отменить сопоставление объекта сопоставления файлов.
 
-```
+```cpp
 HRESULT Unmap() throw();
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Дополнительные сведения см. в разделе [UnmapViewOfFile](/windows/win32/api/memoryapi/nf-memoryapi-unmapviewoffile) в Windows SDK.
 
 ## <a name="see-also"></a>См. также
 
-[Класс CAtlFileMapping](../../atl/reference/catlfilemapping-class.md)<br/>
-[Обзор класса](../../atl/atl-class-overview.md)
+[Класс Катлфилемаппинг](../../atl/reference/catlfilemapping-class.md)<br/>
+[Общие сведения о классах](../../atl/atl-class-overview.md)

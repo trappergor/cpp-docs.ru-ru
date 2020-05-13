@@ -1,6 +1,6 @@
 ---
-title: Перечисление TRANSLATION_UNIT_PASS_CODE
-description: В C++ пакете SDK для аналитики сборки TRANSLATION_UNIT_PASS_CODE ссылка перечисления.
+title: TRANSLATION_UNIT_PASS_CODE enum
+description: SDK Build Insights TRANSLATION_UNIT_PASS_CODE ссылку.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,33 +9,33 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 1219eed98fd01e8c91d8750977e2d8ca4498d649
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: b0162d7e53bb7ee7035b94a6b640f6db87cd8b8d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78335048"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325288"
 ---
-# <a name="translation_unit_pass_code-enum"></a>Перечисление TRANSLATION_UNIT_PASS_CODE
+# <a name="translation_unit_pass_code-enum"></a>TRANSLATION_UNIT_PASS_CODE enum
 
 ::: moniker range="<=vs-2015"
 
-Пакет C++ SDK для Build Insights совместим с Visual Studio 2017 и более поздних версий. Чтобы просмотреть документацию по этим версиям, присвойте элементу управления "Выбор версий Visual Studio" для этой статьи значение Visual Studio 2017 или Visual Studio 2019.
+SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Перечисление `TRANSLATION_UNIT_PASS_CODE`.
+В `TRANSLATION_UNIT_PASS_CODE` enum.
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
-| Имя | Значение | Description |
+| name | Значение | Описание |
 |--|--|--|
-| `TRANSLATION_UNIT_PASS_CODE_FRONT_END` | 0 (0x00000000) | Интерфейсный этап, отвечающий за анализ исходного кода и его преобразование в промежуточный язык. |
-| `TRANSLATION_UNIT_PASS_CODE_BACK_END` | 1 (0x00000001) | Серверный этап, отвечающий за оптимизацию промежуточного языка и его преобразование в машинный код. |
+| `TRANSLATION_UNIT_PASS_CODE_FRONT_END` | 0 (0x0000000000) | Передний проход, ответственный за разбор исходного кода и преобразование его в промежуточный язык. |
+| `TRANSLATION_UNIT_PASS_CODE_BACK_END` | 1 (0x00000001) | Обратный проход, ответственный за оптимизацию промежуточного языка и преобразование его в машинный код. |
 
 ## <a name="remarks"></a>Remarks
 
-Используется в функциях пакета SDK C.
+Используется функциями C SDK.
 
 ::: moniker-end

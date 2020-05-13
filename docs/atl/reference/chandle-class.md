@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - CHandle class
 ms.assetid: 883e9db5-40ec-4e29-9c74-4dd2ddd2e35d
-ms.openlocfilehash: 86d2cba6c3ee2e914d96ae2a09b642d556d46027
-ms.sourcegitcommit: 07b34ca1c1fecced9fadc95de15dc5fee4f31e5a
+ms.openlocfilehash: 4b883bdf3159c40f8d74866f04f655ae73d82a8a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67693398"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747692"
 ---
 # <a name="chandle-class"></a>Класс CHandle
 
-Этот класс предоставляет методы для создания и использования объекта дескриптора.
+Этот класс предоставляет методы для создания и использования объекта рукоятки.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -33,61 +33,61 @@ class CHandle
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[CHandle::CHandle](#chandle)|Конструктор.|
-|[CHandle:: ~ CHandle](#dtor)|Деструктор|
+|[CHandle:::»CHandle](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CHandle::Attach](#attach)|Вызовите этот метод для присоединения `CHandle` объект для существующего дескриптора.|
-|[CHandle::Close](#close)|Вызовите этот метод, чтобы закрыть `CHandle` объекта.|
-|[CHandle::Detach](#detach)|Вызовите этот метод для отсоединения дескриптора из `CHandle` объекта.|
+|[CHandle::Attach](#attach)|Вызовите этот `CHandle` метод, чтобы прикрепить объект к существующей ручке.|
+|[CHandle::Закрыть](#close)|Вызовите этот `CHandle` метод, чтобы закрыть объект.|
+|[CHandle::Detach](#detach)|Вызовите этот метод, чтобы `CHandle` отделить ручку от объекта.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CHandle::operator ДЕСКРИПТОР](#operator_handle)|Возвращает значение хранимых дескриптора.|
-|[CHandle::operator =](#operator_eq)|Оператор присвоения.|
+|[CHandle::оператор HANDLE](#operator_handle)|Возвращает значение сохраненной ручки.|
+|[CHandle::оператор](#operator_eq)|Оператор присвоения.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CHandle::m_h](#m_h)|Переменную-член, сохраняет дескриптор.|
+|[CHandle::m_h](#m_h)|Переменная участника, которая хранит ручку.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Объект `CHandle` объект можно использовать всякий раз, когда дескриптор является обязательным: основное различие заключается в, `CHandle` объект будет автоматически удален.
+Объект `CHandle` может использоваться всякий раз, когда требуется `CHandle` ручка: основное отличие состоит в том, что объект будет автоматически удален.
 
 > [!NOTE]
->  Некоторые функции API будет используйте NULL в качестве пустой или недопустимый дескриптор, а другие — в значение INVALID_HANDLE_VALUE. `CHandle` использует только значение NULL, а также будет считать значение INVALID_HANDLE_VALUE реальных дескриптор. Если вызвать API, которая может вернуть значение INVALID_HANDLE_VALUE, необходимо проверить это значение перед вызовом [CHandle::Attach](#attach) или передается командлету `CHandle` конструктор и вместо этого передайте значение NULL.
+> Некоторые функции API будут использовать NULL как пустую или недействительную ручку, в то время как другие — INVALID_HANDLE_VALUE. `CHandle`использует только NULL и будет рассматривать INVALID_HANDLE_VALUE как реальную ручку. Если вы вызываете API, который может вернуть INVALID_HANDLE_VALUE, вы должны проверить это значение, прежде чем звонить [CHandle::Attach](#attach) или передать его `CHandle` конструктору, и вместо этого передать NULL.
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** atlbase.h
 
-##  <a name="attach"></a>  CHandle::Attach
+## <a name="chandleattach"></a><a name="attach"></a>CHandle::Attach
 
-Вызовите этот метод для присоединения `CHandle` объект для существующего дескриптора.
+Вызовите этот `CHandle` метод, чтобы прикрепить объект к существующей ручке.
 
-```
+```cpp
 void Attach(HANDLE h) throw();
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*h*<br/>
-`CHandle` будет стать владельцем дескриптора *h*.
+*H*<br/>
+`CHandle`возьмет на себя ответственность за ручку *h*.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Назначает `CHandle` объект *h* дескриптор, а затем вызывает **h.Detach()** . В сборках отлаживает ATLASSERT будет вызвано, если *h* имеет значение NULL. Проверка других допустимость дескриптора не проводится.
+Присваивает `CHandle` объект ручке *h,* а затем вызывает **h.Detach ()**. В сборках отладок, ATLASSERT будет поднят, если *ч* является NULL. Никакой другой проверки достоверности ручки не производится.
 
-##  <a name="chandle"></a>  CHandle::CHandle
+## <a name="chandlechandle"></a><a name="chandle"></a>CHandle::CHandle
 
 Конструктор.
 
@@ -99,14 +99,14 @@ explicit CHandle(HANDLE h) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*h*<br/>
-Дескриптор существующей или `CHandle`.
+*H*<br/>
+Существующая ручка или `CHandle`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Создает новый `CHandle` объекта, при необходимости с помощью существующего дескриптора или `CHandle` объекта.
+Создает новый `CHandle` объект, по желанию `CHandle` используя существующую ручку или объект.
 
-##  <a name="dtor"></a>  CHandle:: ~ CHandle
+## <a name="chandlechandle"></a><a name="dtor"></a>CHandle:::»CHandle
 
 Деструктор
 
@@ -114,25 +114,25 @@ explicit CHandle(HANDLE h) throw();
 ~CHandle() throw();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Освобождает `CHandle` путем вызова метода [CHandle::Close](#close).
+Освобождает `CHandle` объект, позвонив [CHandle::Закрыть](#close).
 
-##  <a name="close"></a>  CHandle::Close
+## <a name="chandleclose"></a><a name="close"></a>CHandle::Закрыть
 
-Вызовите этот метод, чтобы закрыть `CHandle` объекта.
+Вызовите этот `CHandle` метод, чтобы закрыть объект.
 
-```
+```cpp
 void Close() throw();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Закрывает дескриптор open объекта. Если дескриптор имеет значение NULL, который будет в том случае, если `Close` уже был вызван, ATLASSERT возникает в отладочных сборках.
+Закрывает открытую ручку объекта. Если ручка NULL, что будет `Close` в случае, если уже вызвано, ATLASSERT будет поднят в отладке сборки.
 
-##  <a name="detach"></a>  CHandle::Detach
+## <a name="chandledetach"></a><a name="detach"></a>CHandle::Detach
 
-Вызовите этот метод для отсоединения дескриптора из `CHandle` объекта.
+Вызовите этот метод, чтобы `CHandle` отделить ручку от объекта.
 
 ```
 HANDLE Detach() throw();
@@ -140,23 +140,23 @@ HANDLE Detach() throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает дескриптор отключается.
+Возвращает отсоединиваемую ручку.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Освобождает владение дескриптор.
+Выпускает право собственности на рукоятку.
 
-##  <a name="m_h"></a>  CHandle::m_h
+## <a name="chandlem_h"></a><a name="m_h"></a>CHandle::m_h
 
-Переменную-член, сохраняет дескриптор.
+Переменная участника, которая хранит ручку.
 
 ```
 HANDLE m_h;
 ```
 
-##  <a name="operator_eq"></a>  CHandle::operator =
+## <a name="chandleoperator-"></a><a name="operator_eq"></a>CHandle::оператор
 
-Оператор присваивания.
+Оператор назначения.
 
 ```
 CHandle& operator=(CHandle& h) throw();
@@ -164,29 +164,29 @@ CHandle& operator=(CHandle& h) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*h*<br/>
-`CHandle` будет стать владельцем дескриптора *h*.
+*H*<br/>
+`CHandle`возьмет на себя ответственность за ручку *h*.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает ссылку на новый `CHandle` объекта.
+Возвращает ссылку на `CHandle` новый объект.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Если `CHandle` объект в настоящее время содержит дескриптор, он будет закрыт. `CHandle` Объекта, передаваемого будет иметь его дескриптор ссылки, присваивается значение NULL. Это гарантирует, что два `CHandle` объектов никогда не будет содержать том же дескрипторе active.
+Если `CHandle` объект в настоящее время содержит ручку, он будет закрыт. Объект, `CHandle` передаваемый в будет иметь свою ручку ссылки на NULL. Это гарантирует, `CHandle` что два объекта никогда не будут содержать одну и ту же активную ручку.
 
-##  <a name="operator_handle"></a>  CHandle::operator ДЕСКРИПТОР
+## <a name="chandleoperator-handle"></a><a name="operator_handle"></a>CHandle::оператор HANDLE
 
-Возвращает значение хранимых дескриптора.
+Возвращает значение сохраненной ручки.
 
 ```
 operator HANDLE() const throw();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Возвращает значение, хранящееся в [CHandle::m_h](#m_h).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Общие сведения о классе](../../atl/atl-class-overview.md)
+[Общие сведения о классах](../../atl/atl-class-overview.md)

@@ -1,6 +1,6 @@
 ---
-title: Структура RELOG_DESCRIPTOR
-description: В C++ пакете SDK для аналитики сборки RELOG_DESCRIPTOR ссылка на структуру.
+title: структура RELOG_DESCRIPTOR
+description: Ссылка на структуру СЗ Build Insights SDK RELOG_DESCRIPTOR.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: f6f20835ed6535dd05def629200c113772e8f077
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: c3aee49fe9f609ca37082693ddcfd5e838cc96a1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333974"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328941"
 ---
-# <a name="relog_descriptor-structure"></a>Структура RELOG_DESCRIPTOR
+# <a name="relog_descriptor-structure"></a>структура RELOG_DESCRIPTOR
 
 ::: moniker range="<=vs-2015"
 
-Пакет C++ SDK для Build Insights совместим с Visual Studio 2017 и более поздних версий. Чтобы просмотреть документацию по этим версиям, присвойте элементу управления "Выбор версий Visual Studio" для этой статьи значение Visual Studio 2017 или Visual Studio 2019.
+SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Структура `RELOG_DESCRIPTOR` используется с функциями [релога](../functions/relog-a.md) и [релогв](../functions/relog-w.md) . В нем описывается, как следует регистрировать трассировку трассировки событий Windows (ETW).
+Структура `RELOG_DESCRIPTOR` используется с функциями [RelogA](../functions/relog-a.md) и [RelogW.](../functions/relog-w.md) В нем описывается, как следует перезавести отслеживание событий для Windows (ETW).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -41,23 +41,23 @@ typedef struct RELOG_DESCRIPTOR_TAG
 } RELOG_DESCRIPTOR;
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 |  |  |
 |--|--|
-| `NumberOfAnalysisPasses` | Количество проходов анализа, которые должны быть выполнены над трассировкой ETW во время фазы анализа сеанса повторного ведения журнала. |
-| `AnalysisCallbacks` | Объект [ANALYSIS_CALLBACKS](analysis-callbacks-struct.md) , указывающий, какие функции следует вызывать на этапе анализа сеанса перезаписи в журнал. |
-| `RelogCallbacks` | Объект [RELOG_CALLBACKS](relog-callbacks-struct.md) , указывающий, какие функции следует вызывать на этапе переведения журнала сеанса перезаписи журнала. |
-| `SystemEventsRetentionFlags` | Битовая маска [RELOG_RETENTION_SYSTEM_EVENT_FLAGS](relog-retention-system-event-flags-constants.md) , указывающая системные события ETW, которые должны оставаться в журнале трассировки. |
-| `AnalysisContext` | Предоставленный пользователем контекст, который передается в качестве аргумента всем функциям обратного вызова, указанным в `AnalysisCallbacks` |
-| `RelogContext` | Предоставленный пользователем контекст, который передается в качестве аргумента всем функциям обратного вызова, указанным в `RelogCallbacks` |
+| `NumberOfAnalysisPasses` | Количество проходов анализа, которое должно быть сделано по следу ETW на этапе анализа сеанса повторного проведения. |
+| `AnalysisCallbacks` | Объект [ANALYSIS_CALLBACKS,](analysis-callbacks-struct.md) который определяет, какие функции можно вызвать на этапе анализа сеанса записи. |
+| `RelogCallbacks` | Объект [RELOG_CALLBACKS,](relog-callbacks-struct.md) который определяет, какие функции можно вызвать во время фазы перезаписи сеанса. |
+| `SystemEventsRetentionFlags` | Один [RELOG_RETENTION_SYSTEM_EVENT_FLAGS](relog-retention-system-event-flags-constants.md) бит-маски, которая определяет, какая система ETW событий держать в перелогированных след. |
+| `AnalysisContext` | Контекст, предоставленный пользователем, который передается в качестве аргумента для всех функций обратного вызова, указанных в`AnalysisCallbacks` |
+| `RelogContext` | Контекст, предоставленный пользователем, который передается в качестве аргумента для всех функций обратного вызова, указанных в`RelogCallbacks` |
 
 ## <a name="remarks"></a>Remarks
 
-Пользователь с помощью функций обратного вызова, указанных в `RelogCallbacks`, управляет перезаписью событий ETW во время сеанса перезаписи в систему. Однако системные события ETW, такие как примеры ЦП, не пересылаются в эти функции обратного вызова. Используйте поле `SystemEventsRetentionFlags` для управления перезаписью системных событий трассировки событий Windows.
+Повторное перезапись событий ETW во время сеанса перезаписи контролируется `RelogCallbacks`пользователем через функции обратного вызова, указанные в. Однако события системы ETW, такие как образцы процессора, не перенаправляются на эти функции обратного вызова. Используйте `SystemEventsRetentionFlags` поле для управления перезаписью системных событий ETW.
 
-Структуры `AnalysisCallbacks` и `RelogCallbacks` принимают указатели только на функции, не являющиеся членами. Это ограничение можно обойти, задав для них указатель на объект. Этот указатель на объект будет передан как аргумент для всех функций обратного вызова, не являющихся членами. Этот указатель используется для вызова функций-членов из функций обратного вызова, не являющихся членами.
+Структуры `AnalysisCallbacks` `RelogCallbacks` и структуры принимают только указатели на функции, не являещиеся членами. Вы можете обойти это ограничение, установив их на указатель объекта. Этот указатель объекта будет передан в качестве аргумента всем вашим функциям обратного вызова, не являешься участником. Используйте этот указатель для вызова функций членов из ваших функций обратного вызова, не являваемых членами.
 
-Фаза анализа сеанса перезаписи всегда выполняется до этапа перезаписи в журнал.
+Этап анализа сеанса перезаписи всегда выполняется до этапа перезаписи.
 
 ::: moniker-end

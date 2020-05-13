@@ -1,5 +1,5 @@
 ---
-title: /constexpr (управлять вычислением constexpr)
+title: /constexpr (управление вычислениями constexpr)
 ms.date: 08/15/2017
 f1_keywords:
 - /constexpr
@@ -9,50 +9,50 @@ helpviewer_keywords:
 - -constexpr control constexpr evaluation [C++]
 - constexpr control constexpr evaluation [C++]
 ms.assetid: 76d56784-f5ad-401d-841d-09d1059e8b8c
-ms.openlocfilehash: 178acc548fb9c89dcfde104d2a12d85637440e28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d3f33a64dcebfc40778f81354cb5067a5239ace
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294256"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825595"
 ---
-# <a name="constexpr-control-constexpr-evaluation"></a>/constexpr (управлять вычислением constexpr)
+# <a name="constexpr-control-constexpr-evaluation"></a>/constexpr (управление вычислениями constexpr)
 
-Используйте **/constexpr** параметры компилятора, параметры управления **constexpr** оценки во время компиляции.
+Используйте параметры компилятора **/constexpr** , чтобы управлять параметрами для оценки **constexpr** во время компиляции.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **/constexpr:Depth**<em>N</em>
->  **/constexpr:backtrace**<em>N</em>
->  **/constexpr:steps** <em>N</em>
+> **/constexpr: глубина**<em>N</em>\
+> **/constexpr: отследить**<em>N</em>\
+> **/constexpr: шаги**<em>N</em>
 
 ## <a name="arguments"></a>Аргументы
 
-**Глубина**<em>N</em> ограничение глубины рекурсивной **constexpr** вызов к функции *N* уровней. Значение по умолчанию — 512.
+**глубина**<em>n</em> . Ограничьте глубину вызова рекурсивной функции **constexpr** до *N* уровней. Значение по умолчанию — 512.
 
-**backtrace**<em>N</em> Показать до *N* **constexpr** оценок в системе диагностики. Значение по умолчанию — 10.
+в программе **untrace**<em>n</em> отображаются до *n* оценок **constexpr** в диагностике. Значение по умолчанию равно 10.
 
-**действия**<em>N</em> Terminate **constexpr** оценки после *N* действия. Значение по умолчанию равно 100 000.
+**шаги**<em>n</em> завершают вычисление **constexpr** после *N* шагов. Значение по умолчанию — 100 000.
 
 ## <a name="remarks"></a>Примечания
 
-**/Constexpr** компилятора параметры управляют вычисление во время компиляции **constexpr** выражения. Чтобы запретить компилятору выполнять тратит слишком много времени на осуществляется по оценке продуктов, уровней рекурсии и глубина backtrace **constexpr** оценки. Дополнительные сведения о **constexpr** элемента языка, см. в разделе [constexpr (C++)](../../cpp/constexpr-cpp.md).
+Параметры компилятора **/constexpr** управляют вычислением выражений **constexpr** во время компиляции. Этапы оценки, уровни рекурсии и глубина обратной трассировки управляются так, чтобы компилятор не тратил слишком много времени на оценку **constexpr** . Дополнительные сведения об элементе языка **constexpr** см. в разделе [constexpr (C++)](../../cpp/constexpr-cpp.md).
 
-**/Constexpr** параметры будут доступны, начиная с Visual Studio 2015.
+Параметры **/constexpr** доступны начиная с Visual Studio 2015.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
-1. Откройте свой проект **страницы свойств** диалоговое окно.
+1. Откройте диалоговое окно **страницы свойств** проекта.
 
-2. В разделе **свойства конфигурации**, разверните **C/C++** папку и выберите **командной строки** страницу свойств.
+2. В разделе **Свойства конфигурации**разверните папку **C/C++** и выберите страницу свойств **Командная строка** .
 
-3. Введите любой **/constexpr** параметров компилятора в **Дополнительные параметры** поле. Выберите **ОК** или **применить** для сохранения изменений.
+3. Введите любые параметры компилятора **/constexpr** в поле **Дополнительные параметры** . Нажмите кнопку **ОК** или **Применить** , чтобы сохранить изменения.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Установка данного параметра компилятора программным способом
 
 - См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Параметры компилятора MSVC](compiler-options.md)<br/>
-[Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)
+[Параметры компилятора КОМПИЛЯТОРОМ MSVC](compiler-options.md)<br/>
+[Синтаксис командной строки компилятора КОМПИЛЯТОРОМ MSVC](compiler-command-line-syntax.md)

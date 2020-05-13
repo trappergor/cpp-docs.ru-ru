@@ -1,21 +1,21 @@
 ---
-title: satype (атрибут COM C++)
+title: сатипе (C++ атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.satype
 helpviewer_keywords:
 - satype attribute
 ms.assetid: 1716590b-6bcb-4aba-b1bc-82f7335f02c3
-ms.openlocfilehash: 7588e8d855d648309c46d981898cfbbf7888f4c9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4619deec6d5e4e9083fbc7bcab53caee0101285c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407306"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166280"
 ---
 # <a name="satype"></a>satype
 
-Указывает тип данных `SAFEARRAY` структуры.
+Указывает тип данных структуры `SAFEARRAY`.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -26,7 +26,7 @@ ms.locfileid: "62407306"
 ### <a name="parameters"></a>Параметры
 
 *data_type*<br/>
-Тип данных для `SAFEARRAY` структура данных, которая передается как параметр метода интерфейса.
+Тип данных `SAFEARRAY` структуры данных, передаваемой в качестве параметра методу интерфейса.
 
 ## <a name="requirements"></a>Требования
 
@@ -35,16 +35,16 @@ ms.locfileid: "62407306"
 |||
 |-|-|
 |**Применение**|Параметр интерфейса, метод интерфейса|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Нет|
-|**Недопустимые атрибуты**|Нет|
+|**Повторяемый**|нет|
+|**Обязательные атрибуты**|None|
+|**Недопустимые атрибуты**|None|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-**Satype** C++ атрибут указывает тип данных `SAFEARRAY`.
+Атрибут **сатипе** C++ задает тип данных `SAFEARRAY`.
 
 > [!NOTE]
-> Уровень косвенности удаляется из `SAFEARRAY` указатель на созданного IDL-файла из как объявлено в CPP-файл.
+> Уровень косвенного обращения удаляется из указателя `SAFEARRAY` в созданном IDL-файле из того, как он объявлен в cpp-файле.
 
 ## <a name="example"></a>Пример
 
@@ -59,9 +59,9 @@ __interface A {
 };
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты компилятора](compiler-attributes.md)<br/>
 [Атрибуты параметра](parameter-attributes.md)<br/>
 [Атрибуты метода](method-attributes.md)<br/>
-[id](id.md)
+[идентификатор](id.md)

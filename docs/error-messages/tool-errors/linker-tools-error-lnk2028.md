@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2028
 ms.assetid: e2b03293-6066-464d-a050-ce747bcf7f0e
-ms.openlocfilehash: ed2dc1a95d4dd7c447b360da21b5046e20f79083
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef9e3eae655a4fbee1c3da74f6036e5fb22434b1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298988"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194620"
 ---
 # <a name="linker-tools-error-lnk2028"></a>Ошибка средств компоновщика LNK2028
 
-"*exported_function*" (*decorated_name*) на которые ссылается функция "*function_containing_function_call*" (*decorated_name*)
+"*exported_function*" (*decorated_name*), на который указывает ссылка в функции "*function_containing_function_call*" (*decorated_name*)
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-При попытке импортировать неуправляемую функцию в чистом образе, помните, что неявные соглашения о вызовах различаются между внутренней и чистой компиляции.
+При попытке импортировать собственную функцию в чистый образ Помните, что неявные соглашения о вызовах отличаются от собственных и чистых компиляций.
 
-**/CLR: pure** параметр компилятора в Visual Studio 2015 не рекомендуется и не поддерживается в Visual Studio 2017.
+Параметр компилятора **/clr: pure** является устаревшим в visual Studio 2015 и не поддерживается в visual Studio 2017.
 
 ## <a name="example"></a>Пример
 
-Этот пример кода создает компонент с функцией экспортированного, native, которого соглашение о вызовах является неявно [__cdecl](../../cpp/cdecl.md).
+Этот пример кода создает компонент с экспортированной собственной функцией, соглашение о вызовах которого неявно [__cdecl](../../cpp/cdecl.md).
 
 ```cpp
 // LNK2028.cpp
@@ -37,7 +37,7 @@ __declspec(dllexport) int func() {
 
 ## <a name="example"></a>Пример
 
-В следующем примере создается чистый клиент, использующий внутреннюю функцию. Тем не менее соглашение о вызовах в разделе **/CLR: pure** — [__clrcall](../../cpp/clrcall.md). Следующий пример приводит к возникновению ошибки LNK2028.
+В следующем примере создается чистый клиент, использующий собственную функцию. Однако соглашение о вызовах в **/clr: pure** [__clrcall](../../cpp/clrcall.md). Следующий пример приводит к возникновению ошибки LNK2028.
 
 ```cpp
 // LNK2028_b.cpp

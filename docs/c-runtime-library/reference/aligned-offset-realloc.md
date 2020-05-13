@@ -1,8 +1,9 @@
 ---
 title: _aligned_offset_realloc
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _aligned_offset_realloc
+- _o__aligned_offset_realloc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - aligned_offset_realloc function
 - _aligned_offset_realloc function
 ms.assetid: e0263533-991e-41b0-acc9-1b8a51ab9ecd
-ms.openlocfilehash: a24aef5c7d96cb8308ecfec424d0d59b48447f7b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c719f62a089b1c233bac193f3431d0375af826eb
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943848"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910263"
 ---
 # <a name="_aligned_offset_realloc"></a>_aligned_offset_realloc
 
@@ -56,7 +58,7 @@ void * _aligned_offset_realloc(
 *size*<br/>
 Размер выделения памяти.
 
-*Выравнивание*<br/>
+*выравнивание*<br/>
 Значение выравнивания, которое должно быть целой степенью числа 2.
 
 *offset*<br/>
@@ -68,13 +70,15 @@ void * _aligned_offset_realloc(
 
 **_aligned_offset_realloc** `__declspec(noalias)` помечается `__declspec(restrict)`и, что означает, что функция гарантированно не изменяет глобальные переменные и что возвращаемый указатель не имеет псевдонима. Дополнительные сведения см. в разделах [noalias](../../cpp/noalias.md) и [restrict](../../cpp/restrict.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Как и [_aligned_offset_malloc](aligned-offset-malloc.md), **_aligned_offset_realloc** позволяет выстроить структуру по смещению в пределах структуры.
 
-**_aligned_offset_realloc** основан на **malloc**. Дополнительные сведения об использовании **_aligned_offset_malloc**см. в разделе [malloc](malloc.md). Если *мемблокк* имеет **значение NULL**, функция вызывает **_aligned_offset_malloc** внутренним образом.
+**_aligned_offset_realloc** основан на **malloc**. Дополнительные сведения об использовании **_aligned_offset_malloc**см. в разделе [malloc](malloc.md). Если *мемблокк* имеет **значение NULL**, функция вызывает **_aligned_offset_malloc** внутренне.
 
-Эта **функция устанавливает** **еномем** в случае сбоя выделения памяти или если запрошенный размер был больше **_HEAP_MAXREQ**. Дополнительные сведения о параметре " [право_doserrno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)" см **. в разделе**"переданные", "_sys_errlist" и "_sys_nerr". Кроме того, **_aligned_offset_realloc** проверяет свои параметры. Если параметр *alignment* не является степенью 2 или *смещение* больше или равно *размеру* и не равно нулю, эта функция вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция возвращает **значение NULL** **и устанавливает для** **еинвал**.
+Эта **функция устанавливает значение** **еномем** , если выделение памяти завершилось ошибкой, или если запрошенный размер был больше **_HEAP_MAXREQ**. Дополнительные **сведения об этом см. в разделе** [пере_doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Кроме того, **_aligned_offset_realloc** проверяет свои параметры. Если параметр *alignment* не является степенью 2 или *смещение* больше или равно *размеру* и не равно нулю, эта функция вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция возвращает **значение NULL** **и устанавливает для** **еинвал**.
+
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -86,6 +90,6 @@ void * _aligned_offset_realloc(
 
 Дополнительные сведения см. в разделе [_aligned_malloc](aligned-malloc.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Выравнивание данных](../../c-runtime-library/data-alignment.md)<br/>

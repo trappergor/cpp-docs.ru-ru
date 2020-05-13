@@ -1,6 +1,6 @@
 ---
-title: старттраЦингсессионв
-description: Справочник C++ по функциям SDK для Build Insights старттраЦингсессионв.
+title: StartTracingRacingW
+description: Ссылка на функцию «Си- Сборка» SDK StartTracingSessionW.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 072b02166f2841e6d210306ef75c9fc64fea9778
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: af67c3be50cb19ccbfb7fe286e5d61cd1d241bf8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334250"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323797"
 ---
-# <a name="starttracingsessionw"></a>старттраЦингсессионв
+# <a name="starttracingsessionw"></a>StartTracingRacingW
 
 ::: moniker range="<=vs-2015"
 
-Пакет C++ SDK для Build Insights совместим с Visual Studio 2017 и более поздних версий. Чтобы просмотреть документацию по этим версиям, присвойте элементу управления "Выбор версий Visual Studio" для этой статьи значение Visual Studio 2017 или Visual Studio 2019.
+SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Функция `StartTracingSessionW` запускает сеанс трассировки. Исполняемые файлы, вызывающие эту функцию, должны иметь права администратора.
+Функция `StartTracingSessionW` запускает сеанс отслеживания. Исполнители вызова этой функции должны иметь привилегии администратора.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -38,13 +38,13 @@ enum RESULT_CODE StartTracingSessionW(
 ### <a name="parameters"></a>Параметры
 
 *sessionName*\
-Имя запускаемого сеанса трассировки. Используйте то же имя при вызове [стоптраЦингсессионв](stop-tracing-session-w.md)или любой другой функции трассировки.
+Название сеанса отслеживания для начала. Используйте одно и то же имя при [вызове StopTracingSessionW](stop-tracing-session-w.md)или любой другой функции стоп-следа.
 
-\ *параметров*
-Указатель на объект [TRACING_SESSION_OPTIONS](../other-types/tracing-session-options-struct.md) . Этот объект используется для выбора событий, собираемых сеансом трассировки.
+*Параметры*\
+Указатель на [TRACING_SESSION_OPTIONS](../other-types/tracing-session-options-struct.md) объект. Используйте этот объект, чтобы выбрать, какие события должны быть собраны сеансом отслеживания.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Код результата из перечисления [RESULT_CODE](../other-types/result-code-enum.md) .
+Код результата из [RESULT_CODE](../other-types/result-code-enum.md) enum.
 
 ::: moniker-end

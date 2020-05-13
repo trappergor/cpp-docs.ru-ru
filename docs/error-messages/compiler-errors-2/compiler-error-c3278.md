@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3278
 ms.assetid: 56f818f5-85a6-4792-843b-54fe16327658
-ms.openlocfilehash: 7618336c08dd111e495d7e4102b8e61c6e927c39
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec51064853afa37f75022042c8c6121b6c5248a4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382092"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201439"
 ---
 # <a name="compiler-error-c3278"></a>Ошибка компилятора C3278
 
-> прямой вызов метода интерфейса или чистого метода "*метод*" приведет к сбою во время выполнения
+> прямой вызов интерфейса или чистого метода "*метод*" завершится ошибкой во время выполнения
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Вызван метод интерфейса или чистый метод, что недопустимо.
 

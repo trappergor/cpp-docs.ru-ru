@@ -1,9 +1,11 @@
 ---
 title: mbstowcs, _mbstowcs_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - mbstowcs
 - _mbstowcs_l
+- _o__mbstowcs_l
+- _o_mbstowcs
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +32,12 @@ helpviewer_keywords:
 - mbstowcs_l function
 - mbstowcs function
 ms.assetid: 96696b27-e068-4eeb-8006-3f7a0546ae6d
-ms.openlocfilehash: 3df851b08edfa9dfe5bf9b42b9abfd45a8939606
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 23dd4f2c98f99c0c526cb29553793574f2b7f7d3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952037"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915472"
 ---
 # <a name="mbstowcs-_mbstowcs_l"></a>mbstowcs, _mbstowcs_l
 
@@ -90,7 +93,7 @@ size_t _mbstowcs_l(
 > [!IMPORTANT]
 > Убедитесь, что *вкстр* и *мбстр* не перекрываются, и что *Счетчик* правильно отражает число преобразуемых многобайтовых символов.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Функция **функции mbstowcs** преобразует до *максимального числа многобайтовых* символов, на которое указывает *мбстр* , в строку соответствующих расширенных символов, определяемых текущим языковым стандартом. Она сохраняет полученную строку расширенных символов по адресу, представленному *вкстр*. Результат аналогичен ряду вызовов [mbtowc](mbtowc-mbtowc-l.md). Если **функции mbstowcs** встречает однобайтовый нуль-символ ("\ 0") как до, так и *после,* он преобразует символ NULL в символ null (L "\ 0") в расширенную кодировку и останавливается. Поэтому строка расширенных символов в *вкстр* завершается нулем, только если во время преобразования обнаружен символ null. Если последовательности, на которые указывает *вкстр* и *мбстр* , перекрываются, поведение не определено.
 
@@ -98,9 +101,11 @@ size_t _mbstowcs_l(
 
 Если аргумент *мбстр* имеет **значение NULL**или параметр *Count* равен > **INT_MAX**, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md) . Если выполнение может быть продолжено, параметру **еинвал** присваивается значение, а функция возвращает-1.
 
-**функции mbstowcs** использует текущий языковой стандарт для любого поведения, зависящего от языкового стандарта; **_mbstowcs_l** является идентичным за исключением того, что использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+**функции mbstowcs** использует текущий языковой стандарт для любого поведения, зависящего от языкового стандарта; **_mbstowcs_l** является идентичным, за исключением того, что использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-В C++ эти функции имеют шаблонные перегрузки, которые вызывают более новые и безопасные аналоги этих функций. Дополнительные сведения см. в разделе [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+В C++ эти функции имеют шаблонные перегрузки, которые вызывают более новые и безопасные аналоги этих функций. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../../c-runtime-library/secure-template-overloads.md).
+
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -109,7 +114,7 @@ size_t _mbstowcs_l(
 |**mbstowcs**|\<stdlib.h>|
 |**_mbstowcs_l**|\<stdlib.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -206,10 +211,10 @@ Convert back to wide-character string:
    Hex value of first 2 wide characters: 0x3042 0x3043
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Преобразование данных](../../c-runtime-library/data-conversion.md)<br/>
-[Языковой стандарт](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Интерпретация последовательностей многобайтовых символов](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>

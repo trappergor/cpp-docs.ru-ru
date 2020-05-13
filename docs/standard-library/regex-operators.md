@@ -10,22 +10,22 @@ f1_keywords:
 - regex/std::operator==
 - regex/std::operator<<
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-ms.openlocfilehash: 8795d0f1c387fb87c44f2d68c45aa27d1edbfb79
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: ebed98daaea895fa88dc654189fb3c3068d2b508
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689073"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366416"
 ---
 # <a name="ltregexgt-operators"></a>Операторы &lt;regex&gt;
 
 ||||
 |-|-|-|
-|[оператор!= ](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|
-|[оператор==](#op_eq_eq)|
+|[оператора!](#op_neq)|[Оператор&gt;](#op_gt)|[Оператор&gt;=](#op_gt_eq)|
+|[Оператор&lt;](#op_lt)|[Оператор&lt;&lt;](#op_lt_lt)|[Оператор&lt;=](#op_lt_eq)|
+|[оператора](#op_eq_eq)|
 
-## <a name="op_neq"></a> operator!=
+## <a name="operator"></a><a name="op_neq"></a>оператора!
 
 Сравнение различных объектов на неравенство.
 
@@ -66,22 +66,22 @@ bool operator!=(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>Параметры
 
-@No__t_1 с *двунаправленным письмом*
+*BidIt*\
 Тип итератора.
 
-*Иотраитс* \
+*Иотраиты*\
 Класс характеристик строки.
 
-@No__t_1 *выделения*
+*Alloc*\
 Класс распределителя.
 
-*left* \
+*Левой*\
 Левый из сравниваемых объектов.
 
-*справа* \
+*Правильно*\
 Правый из сравниваемых объектов.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Каждый оператор-шаблон возвращает `!(left == right)`.
 
@@ -144,7 +144,7 @@ sub != "aab" == true
 sub != 'a' == true
 ```
 
-## <a name="op_lt"></a> operator&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>Оператор&lt;
 
 Сравнение "меньше, чем" для различных объектов.
 
@@ -181,24 +181,24 @@ bool operator<(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Параметры
 
-@No__t_1 с *двунаправленным письмом*
+*BidIt*\
 Тип итератора.
 
-*Иотраитс* \
+*Иотраиты*\
 Класс характеристик строки.
 
-@No__t_1 *выделения*
+*Alloc*\
 Класс распределителя.
 
-*left* \
+*Левой*\
 Левый из сравниваемых объектов.
 
-*справа* \
+*Правильно*\
 Правый из сравниваемых объектов.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-Каждый оператор-шаблон преобразует свои аргументы в строковый тип и возвращает значение true, только если преобразованное значение *Left* сравнивается со значением *right*.
+Каждый оператор шаблона преобразует свои аргументы в тип строки и возвращается верно только в том случае, если преобразованное значение *левой* сравнивает меньше, чем преобразованное значение *права.*
 
 ### <a name="example"></a>Пример
 
@@ -254,7 +254,7 @@ sub < "aab" == true
 sub < 'a' == false
 ```
 
-## <a name="op_lt_lt"></a> operator&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a>Оператор&lt;&lt;
 
 Вставляет в поток sub_match.
 
@@ -266,25 +266,25 @@ basic_ostream<Elem, IOtraits>& operator<<(basic_ostream<Elem, IOtraits>& os,
 
 ### <a name="parameters"></a>Параметры
 
-*Elem* \
+*Elem*\
 Тип элемента.
 
-*Иотраитс* \
+*Иотраиты*\
 Класс характеристик строки.
 
-@No__t_1 *выделения*
+*Alloc*\
 Класс распределителя.
 
-@No__t_1 с *двунаправленным письмом*
+*BidIt*\
 Тип итератора.
 
-\ *ОС*
+*Os*\
 Выходной поток.
 
-*справа* \
-Вставляемый объект.
+*Правильно*\
+Объект для вставки.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Оператор-шаблон возвращает `os << right.str()`.
 
@@ -314,7 +314,7 @@ int main()
 whole match: caaa
 ```
 
-## <a name="op_lt_eq"></a> operator&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>Оператор&lt;=
 
 Сравнение "меньше или равно" для различных объектов.
 
@@ -351,22 +351,22 @@ bool operator<=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Параметры
 
-@No__t_1 с *двунаправленным письмом*
+*BidIt*\
 Тип итератора.
 
-*Иотраитс* \
+*Иотраиты*\
 Класс характеристик строки.
 
-@No__t_1 *выделения*
+*Alloc*\
 Класс распределителя.
 
-*left* \
+*Левой*\
 Левый из сравниваемых объектов.
 
-*справа* \
+*Правильно*\
 Правый из сравниваемых объектов.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Каждый оператор-шаблон возвращает `!(right < left)`.
 
@@ -424,7 +424,7 @@ sub <= "aab" == true
 sub <= 'a' == false
 ```
 
-## <a name="op_eq_eq"></a> operator==
+## <a name="operator"></a><a name="op_eq_eq"></a>оператора
 
 Сравнение различных объектов на равенство.
 
@@ -465,32 +465,32 @@ bool operator==(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>Параметры
 
-@No__t_1 с *двунаправленным письмом*
+*BidIt*\
 Тип итератора.
 
-*Иотраитс* \
+*Иотраиты*\
 Класс характеристик строки.
 
-@No__t_1 *выделения*
+*Alloc*\
 Класс распределителя.
 
-*left* \
+*Левой*\
 Левый из сравниваемых объектов.
 
-*справа* \
+*Правильно*\
 Правый из сравниваемых объектов.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Каждый оператор-шаблон преобразует каждый из своих аргументов в тип string и возвращает результат сравнения преобразованных объектов на равенство.
 
 При преобразовании аргументов в тип string оператор-шаблон использует первое из следующего списка преобразований, которое можно применить:
 
-аргументы, типы которых являются специализацией шаблона класса `match_results` или `sub_match` преобразуются путем вызова `str` функции-члена.
+аргументы, типы которых являются `match_results` специализацией шаблона класса или `sub_match` преобразуются путем вызова функции `str` участника;
 
-аргументы, типы которых являются специализацией шаблона класса `basic_string`, не изменяются;
+аргументы, типы которых являются специализацией шаблона `basic_string` класса, остаются неизменными;
 
-все остальные типы аргументов преобразуются путем передачи значения аргумента в конструктор для соответствующей специализации шаблона класса `basic_string`.
+все другие типы аргументов преобразуются путем передачи значения аргумента конструктору для соответствующей специализации шаблона `basic_string`класса.
 
 ### <a name="example"></a>Пример
 
@@ -551,7 +551,7 @@ sub == "aab" == false
 sub == 'a' == false
 ```
 
-## <a name="op_gt"></a> operator&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>Оператор&gt;
 
 Сравнение "больше, чем" для различных объектов.
 
@@ -588,22 +588,22 @@ bool operator>(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Параметры
 
-@No__t_1 с *двунаправленным письмом*
+*BidIt*\
 Тип итератора.
 
-*Иотраитс* \
+*Иотраиты*\
 Класс характеристик строки.
 
-@No__t_1 *выделения*
+*Alloc*\
 Класс распределителя.
 
-*left* \
+*Левой*\
 Левый из сравниваемых объектов.
 
-*справа* \
+*Правильно*\
 Правый из сравниваемых объектов.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Каждый оператор-шаблон возвращает `right < left`.
 
@@ -661,7 +661,7 @@ sub > "aab" == false
 sub > 'a' == true
 ```
 
-## <a name="op_gt_eq"></a> operator&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>Оператор&gt;=
 
 Сравнение "больше или равно" для различных объектов.
 
@@ -698,22 +698,22 @@ bool operator>=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Параметры
 
-@No__t_1 с *двунаправленным письмом*
+*BidIt*\
 Тип итератора.
 
-*Иотраитс* \
+*Иотраиты*\
 Класс характеристик строки.
 
-@No__t_1 *выделения*
+*Alloc*\
 Класс распределителя.
 
-*left* \
+*Левой*\
 Левый из сравниваемых объектов.
 
-*справа* \
+*Правильно*\
 Правый из сравниваемых объектов.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Каждый оператор-шаблон возвращает `!(left < right)`.
 
@@ -771,13 +771,13 @@ sub >= "aab" == false
 sub >= 'a' == true
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [\<regex>](../standard-library/regex.md)\
-\ [класса regex_constants](../standard-library/regex-constants-class.md)
-\ [класса regex_error](../standard-library/regex-error-class.md)
-[функции > \<regex](../standard-library/regex-functions.md) \
-\ [класса regex_iterator](../standard-library/regex-iterator-class.md)
-\ [класса regex_token_iterator](../standard-library/regex-token-iterator-class.md)
-\ [класса regex_traits](../standard-library/regex-traits-class.md)
-[Определения типов \<regex>](../standard-library/regex-typedefs.md)
+[класс regex_constants](../standard-library/regex-constants-class.md)\
+[regex_error класс](../standard-library/regex-error-class.md)\
+[\<функции regex>](../standard-library/regex-functions.md)\
+[класс regex_iterator](../standard-library/regex-iterator-class.md)\
+[класс regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
+[класс regex_traits](../standard-library/regex-traits-class.md)\
+[\<regex> typedefs](../standard-library/regex-typedefs.md)

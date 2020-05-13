@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2720
 ms.assetid: 9ee3aab7-711b-4f5a-b2f1-cb62b130f1ce
-ms.openlocfilehash: c6499fd3f279099ea7c5b31860e70bdaa285e3f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 24f4329ee631eafc7c2670d9ebf28609c22e7592
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383052"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202142"
 ---
 # <a name="compiler-error-c2720"></a>Ошибка компилятора C2720
 
-> "*идентификатор*": "*описатель*" спецификатор класса хранения недопустим для членов
+> "*идентификатор*": спецификатор класса хранения "*спецификатор*" недопустим для членов
 
-Класс хранения нельзя использовать для членов класса вне объявления. Чтобы устранить эту ошибку, удалите ненужный [класс хранения](../../cpp/storage-classes-cpp.md) описатель из определения члена вне объявления класса.
+Класс хранения нельзя использовать для членов класса вне объявления. Чтобы устранить эту ошибку, удалите ненужный спецификатор [класса хранения](../../cpp/storage-classes-cpp.md) из определения члена за пределами объявления класса.
 
 ## <a name="example"></a>Пример
 

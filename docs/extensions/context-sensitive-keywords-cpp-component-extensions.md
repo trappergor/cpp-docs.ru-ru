@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - context-sensitive keywords
 ms.assetid: e33da089-f434-44e9-8cce-4668d05a8939
-ms.openlocfilehash: ca289a7ebd4578d5c67bb5d3e403d2a9a2756520
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 53fcaf13eb56ae14841861bffd1a29376304b8d6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516129"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182179"
 ---
 # <a name="context-sensitive-keywords--ccli-and-ccx"></a>Контекстно-зависимые ключевые слова (C++/CLI и C++/CX)
 
@@ -20,7 +20,7 @@ ms.locfileid: "65516129"
 
 ## <a name="all-runtimes"></a>Все среды выполнения
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Ниже приведен список контекстно-зависимых ключевых слов:
 
@@ -42,7 +42,7 @@ ms.locfileid: "65516129"
 
 - [override](override-cpp-component-extensions.md)
 
-- [свойство](property-cpp-component-extensions.md)
+- [property](property-cpp-component-extensions.md)
 
 - [sealed](sealed-cpp-component-extensions.md)
 
@@ -52,7 +52,7 @@ ms.locfileid: "65516129"
 
 ## <a name="windows-runtime"></a>Среда выполнения Windows
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 (Отсутствуют комментарии для данной возможности в рамках этой платформы).
 
@@ -62,7 +62,7 @@ ms.locfileid: "65516129"
 
 ## <a name="common-language-runtime"></a>Среда CLR
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 (Отсутствуют комментарии для данной возможности в рамках этой платформы).
 
@@ -99,6 +99,6 @@ int main() {
 100
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Расширения компонентов для .NET и UWP](component-extensions-for-runtime-platforms.md)

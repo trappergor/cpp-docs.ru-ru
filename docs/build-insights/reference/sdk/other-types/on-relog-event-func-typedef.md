@@ -1,6 +1,6 @@
 ---
-title: Определение типа Онреложевентфунк
-description: Справочник C++ по ОНРЕЛОЖЕВЕНТФУНК typedef SDK для Build Insights.
+title: OnRelogEventFunc typedef
+description: Ссылка на шрифт SDK OnRelogEventFunc.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 619f9a142ad19a7809b867eda93f2db634825a8f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 2df8646d530c089b1239978d716b2b619a5b4b61
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334028"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329070"
 ---
-# <a name="onrelogeventfunc-typedef"></a>Определение типа Онреложевентфунк
+# <a name="onrelogeventfunc-typedef"></a>OnRelogEventFunc typedef
 
 ::: moniker range="<=vs-2015"
 
-Пакет C++ SDK для Build Insights совместим с Visual Studio 2017 и более поздних версий. Чтобы просмотреть документацию по этим версиям, присвойте элементу управления "Выбор версий Visual Studio" для этой статьи значение Visual Studio 2017 или Visual Studio 2019.
+SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`OnRelogEventFunc` typedef — одна из сигнатур функций, используемых в структуре [RELOG_CALLBACKS](relog-callbacks-struct.md) .
+Typedef `OnRelogEventFunc` является одной из подписей функций, используемых в [структуре RELOG_CALLBACKS.](relog-callbacks-struct.md)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -38,17 +38,17 @@ typedef enum CALLBACK_CODE (BUILD_INSIGHTS_API *OnRelogEventFunc)(
 
 ### <a name="parameters"></a>Параметры
 
-*евентстакк*\
-Стек событий для текущего события. Дополнительные сведения о стеках событий см. в разделе [события](../event-table.md).
+*EventStack*\
+Стек события для текущего события. Для получения дополнительной информации [Events](../event-table.md)о стеках событий см.
 
-*релогсессион*\
-Указатель сеанса перезаписи, используемый при вызове [инжектевент](../functions/inject-event.md).
+*relogСессия*\
+Указатель сеанса для использования при вызове [In-Event.](../functions/inject-event.md)
 
-*callbackContext*\
-Значение контекста, заданное для этого обратного вызова в [RELOG_DESCRIPTOR](analysis-descriptor-struct.md).
+*обратный вызовКонтекст*\
+Значение контекста, которое было установлено для этого обратного вызова [в RELOG_DESCRIPTOR.](analysis-descriptor-struct.md)
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение [CALLBACK_CODE](callback-code-enum.md) , которое определяет, что должно происходить далее.
+[Значение CALLBACK_CODE,](callback-code-enum.md) которое контролирует, что должно произойти дальше.
 
 ::: moniker-end

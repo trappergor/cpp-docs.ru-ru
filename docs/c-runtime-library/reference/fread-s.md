@@ -1,8 +1,9 @@
 ---
 title: fread_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - fread_s
+- _o_fread_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -23,12 +25,12 @@ f1_keywords:
 - fread_s
 - stdio/fread_s
 ms.assetid: ce735de0-f005-435d-a8f2-6f4b80ac775e
-ms.openlocfilehash: d1f1756af7427ecdfc8ff332f4a2211984a177d8
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 340d8188deb34166b1bea58cfc4fe7985cdc5e05
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956838"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919465"
 ---
 # <a name="fread_s"></a>fread_s
 
@@ -48,7 +50,7 @@ size_t fread_s(
 
 ### <a name="parameters"></a>Параметры
 
-*buffer*<br/>
+*двойной*<br/>
 Место хранения данных.
 
 *bufferSize*<br/>
@@ -69,11 +71,13 @@ size_t fread_s(
 
 Дополнительные сведения об этих кодах ошибки см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Функция **fread_s** считывает до *Count* элементов из входного *потока* *elementSize* и сохраняет их в *буфер*.  Указатель файла, связанный с *потоком* (при его наличии), увеличивается на число фактически считанных байтов. Если данный поток открыт в текстовом режиме, пары переводов строки возврата каретки заменяются символами однострочного перевода строки. Замена не влияет на указатель файла или возвращаемое значение. В случае ошибки позиция указателя файла будет неопределенной. Значение частично считанного элемента не может быть определено.
+Функция **fread_s** считывает *количество* элементов *elementSize* байт из входного *потока* и сохраняет их в *буфер*.  Указатель файла, связанный с *потоком* (при его наличии), увеличивается на число фактически считанных байтов. Если данный поток открыт в текстовом режиме, пары переводов строки возврата каретки заменяются символами однострочного перевода строки. Замена не влияет на указатель файла или возвращаемое значение. В случае ошибки позиция указателя файла будет неопределенной. Значение частично считанного элемента не может быть определено.
 
 Эта функция блокирует работу других потоков. Если требуется версия без блокировки, используйте **_fread_nolock**.
+
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -81,7 +85,7 @@ size_t fread_s(
 |--------------|---------------------|
 |**fread_s**|\<stdio.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -150,7 +154,7 @@ Contents of buffer after write/read:
         zyxwvutsrqponmlkjihgfe
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)<br/>
 [fwrite](fwrite.md)<br/>

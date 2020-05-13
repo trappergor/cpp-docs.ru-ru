@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - out attribute
 ms.assetid: 5051b1bf-4949-4bf1-b82f-35e14f0f244b
-ms.openlocfilehash: 11c8e4473f0b849fab7846a825b90da3ed9f036f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6ab8fdf691e2220087f5c5d64bb70c5deb27675c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514286"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214701"
 ---
 # <a name="out-c"></a>out (C++)
 
@@ -23,7 +23,7 @@ ms.locfileid: "69514286"
 [out]
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Атрибут **out** языка C++ имеет ту же функциональность, как и атрибут [out](/windows/win32/Midl/out-idl) языка MIDL.
 
@@ -37,16 +37,16 @@ ms.locfileid: "69514286"
 
 |||
 |-|-|
-|**Относится к**|Параметр интерфейса|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Отсутствуют|
-|**Недопустимые атрибуты**|Отсутствуют|
+|**Применение**|Параметр интерфейса|
+|**Повторяемый**|нет|
+|**Обязательные атрибуты**|None|
+|**Недопустимые атрибуты**|None|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты параметра](parameter-attributes.md)<br/>
 [defaultvalue](defaultvalue.md)<br/>
-[id](id.md)
+[идентификатор](id.md)

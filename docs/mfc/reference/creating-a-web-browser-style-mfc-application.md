@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Web browsers
 - Web applications [MFC], creating
 ms.assetid: 257f8c03-33c3-428c-832e-0b70aff6168d
-ms.openlocfilehash: d928d8de34c6caab0f86e9205d0aea45b5ed737c
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: e02e928f65ab4cd918e730135abc62ed3237decf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079450"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215128"
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>Создание приложения MFC в стиле браузера
 
 Веб-приложение в стиле браузера может получать доступ к информации из Интернета (например, к HTML или активным документам) или интрасети, а также к папкам в локальной файловой системе и сети. Если класс представления приложения является производным от [CHtmlView](../../mfc/reference/chtmlview-class.md), то фактически вы делаете приложение веб-браузером, предоставляя представление с элементом управления WebBrowser.
 
-### <a name="to-create-a-web-browser-application-based-on-the-mfc-documentview-architecture"></a>Создание приложения веб-браузера на основе архитектуры "документ-представление MFC"
+## <a name="to-create-a-web-browser-application-based-on-the-mfc-documentview-architecture"></a>Создание приложения веб-браузера на основе архитектуры "документ-представление MFC"
 
 1. Следуйте инструкциям по [созданию приложения MFC](../../mfc/reference/creating-an-mfc-application.md).
 
@@ -35,7 +35,7 @@ ms.locfileid: "80079450"
 Элемент управления WebBrowser поддерживает просмотр веб-страниц через гиперссылки и навигацию по URL-адресу. Элемент управления поддерживает список журналов, позволяющий пользователю просматривать и просматривать ранее просмотренные сайты, папки и документы. Элемент управления непосредственно обрабатывает навигацию, гиперссылки, списки журналов, избранное и безопасность. Приложения могут использовать элемент управления WebBrowser в качестве активного контейнера документа для размещения активных документов. Таким образом, документы с расширенным форматированием, такие как электронные таблицы Microsoft Excel или документы Word, можно открывать и редактировать на месте с помощью элемента управления WebBrowser. Элемент управления WebBrowser также является контейнером элементов управления ActiveX, который может размещать любой элемент управления ActiveX.
 
 > [!NOTE]
->  Элемент управления ActiveX WebBrowser (и, следовательно `CHtmlView`) доступен только для приложений, работающих под управлением версий Windows, в которых установлен Internet Explorer 4,0 или более поздней версии.
+> Элемент управления ActiveX WebBrowser (и, следовательно `CHtmlView`) доступен только для приложений, работающих под управлением версий Windows, в которых установлен Internet Explorer 4,0 или более поздней версии.
 
 Поскольку `CHtmlView` просто реализует элемент управления веб-браузера Майкрософт, его поддержка печати не похожа на другие классы, производные от [CView](../../mfc/reference/cview-class.md). Вместо этого элемент управления WebBrowser реализует пользовательский интерфейс принтера и печать. В результате `CHtmlView` не поддерживает предварительный просмотр, а платформа не предоставляет другие функции поддержки печати: например, [CView:: онпрепарепринтинг](../../mfc/reference/cview-class.md#onprepareprinting), [CView:: онбегинпринтинг](../../mfc/reference/cview-class.md#onbeginprinting)и [CView:: онендпринтинг](../../mfc/reference/cview-class.md#onendprinting), которые доступны в других приложениях MFC.
 
@@ -54,7 +54,7 @@ void CWebView::OnInitialUpdate()
 }
 ```
 
-Вы можете заменить этот сайт собственным или использовать функцию-член [лоадфромресаурце](../../mfc/reference/chtmlview-class.md#loadfromresource) , чтобы открыть HTML-страницу, которая находится в скрипте ресурсов проекта в качестве содержимого по умолчанию для представления. Например:
+Вы можете заменить этот сайт собственным или использовать функцию-член [лоадфромресаурце](../../mfc/reference/chtmlview-class.md#loadfromresource) , чтобы открыть HTML-страницу, которая находится в скрипте ресурсов проекта в качестве содержимого по умолчанию для представления. Пример:
 
 ```cpp
 void CWebView::OnInitialUpdate()
@@ -67,9 +67,9 @@ void CWebView::OnInitialUpdate()
 }
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-[Пример MFCIE для MFC](https://github.com/Microsoft/VCSamples)<br/>
+[Пример MFCIE для MFC](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/internet)<br/>
 [Мастер приложений MFC](../../mfc/reference/mfc-application-wizard.md)<br/>
 [Настройка компилятора и свойств сборки](../../build/working-with-project-properties.md)<br/>
 [Страницы свойств](../../build/reference/property-pages-visual-cpp.md)<br/>

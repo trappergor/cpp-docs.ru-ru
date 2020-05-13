@@ -1,9 +1,11 @@
 ---
 title: system, _wsystem
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - system
 - _wsystem
+- _o__wsystem
+- _o_system
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-ms.openlocfilehash: 82b39f012bebb41772cdc7350eb08dba48678fdd
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 09353c9cda2bc85d91f57806bc3497e49a19f803
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957680"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912392"
 ---
 # <a name="system-_wsystem"></a>system, _wsystem
 
@@ -59,7 +62,7 @@ int _wsystem(
 
 ### <a name="parameters"></a>Параметры
 
-*command*<br/>
+*.*<br/>
 Команда для выполнения.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -69,34 +72,36 @@ int _wsystem(
 |||
 |-|-|
 | **E2BIG** | Список аргументов (который зависит от системы) слишком велик. |
-| **ENOENT** | Интерпретатор команд не найден. |
+| **еноент** | Интерпретатор команд не найден. |
 | **ENOEXEC** | Файл интерпретатора команд не может быть выполнен из-за недопустимого формата. |
-| **ENOMEM** | Недостаточно доступной памяти для выполнения команды; или доступная память повреждена; или существует недопустимый блок, что указывает на неправильное выделение памяти для процесса, который выполняет вызов. |
+| **еномем** | Недостаточно доступной памяти для выполнения команды; или доступная память повреждена; или существует недопустимый блок, что указывает на неправильное выделение памяти для процесса, который выполняет вызов. |
 
 Дополнительные сведения об этих кодах возврата см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 **Системная** функция передает *команду* интерпретатору команд, который выполняет строку в качестве команды операционной системы. **система** использует переменные среды **ComSpec** и **path** для поиска файла интерпретатора команд Cmd. exe. Если *Команда* имеет **значение NULL**, функция просто проверяет, существует ли интерпретатор команд.
 
-Необходимо явным образом очистить с помощью [fflush](fflush.md) или [_flushall](flushall.md)или закрыть любой поток перед вызовом **System**.
+Необходимо явно очистить с помощью [fflush](fflush.md) или [_flushall](flushall.md)или закрыть любой поток перед вызовом **System**.
 
 **_wsystem** — это версия **системы**с расширенными символами; Аргумент *команды* для **_wsystem** является строкой расширенных символов. В остальном эти функции ведут себя одинаково.
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tsystem**|**system**|**system**|**_wsystem**|
+|**_tsystem**|**система**|**система**|**_wsystem**|
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
-|**system**|\<process.h> или \<stdlib.h>|
+|**система**|\<process.h> или \<stdlib.h>|
 |**_wsystem**|\<process.h> или \<stdlib.h> или \<wchar.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -130,7 +135,7 @@ Line two.
 ## <a name="see-also"></a>См. также
 
 [Управление процессами и средой](../../c-runtime-library/process-and-environment-control.md)<br/>
-[Функции _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[_exec, функции _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [_flushall](flushall.md)<br/>
 [Функции _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)<br/>

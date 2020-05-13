@@ -1,11 +1,15 @@
 ---
 title: atof, _atof_l, _wtof, _wtof_l
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _wtof_l
 - atof
 - _atof_l
 - _wtof
+- _o__atof_l
+- _o__wtof
+- _o__wtof_l
+- _o_atof
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -49,12 +54,12 @@ helpviewer_keywords:
 - _wtof function
 - string conversion, to floating point values
 ms.assetid: eb513241-c9a9-4f5c-b7e7-a49b14abfb75
-ms.openlocfilehash: a624ae9f900395ed2117ed2bb89e2768c64daba9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5200b93a5745dfb8e9b31cd5663452b84cb3058a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939568"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909109"
 ---
 # <a name="atof-_atof_l-_wtof-_wtof_l"></a>atof, _atof_l, _wtof, _wtof_l
 
@@ -93,7 +98,7 @@ double _wtof_l(
 
 Во всех случаях **, когда выходит** из диапазона, для параметра « **ERANGE**» задано значение «нет». Если переданный параметр имеет **значение NULL**, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции **устанавливают** значение **еинвал** и возвращают 0.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Эти функции преобразуют строку символов в значение двойной точности с плавающей запятой.
 
@@ -101,7 +106,7 @@ double _wtof_l(
 
 Аргумент *str* для **атоф** и **_wtof** имеет следующую форму:
 
-[*пробел*] [*Sign*] [*цифры*] [ __.__ *цифры*] [{**e** &#124; **e** } [*знак*]*цифры*]
+[*пробел*] [*Sign*] [*цифры*] [__.__ *цифры*] [{**e** &#124; **e** } [*знак*]*цифры*]
 
 *Пробелы* состоят из пробелов или символов табуляции, которые игнорируются; *знак* «плюс» (+) или «минус» (-); *цифры* и являются одной или несколькими десятичными цифрами. Если перед десятичной запятой никаких цифр нет, после нее должен отображаться хотя бы один символ. За десятичными цифрами может следовать показатель степени, состоящий из вводной буквы (**e**или **e**) и необязательного десятичного целого числа со знаком.
 
@@ -109,7 +114,9 @@ UCRT версии этих функций не поддерживают прео
 
 Версии этих функций с суффиксом **_l** идентичны за исключением того, что они используют переданный параметр *языкового стандарта* вместо текущего языкового стандарта.
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|
@@ -174,11 +181,11 @@ Function: atof("  -2,309e-25") = -2.000000e+00
 Function: _atof_l("  -2,309e-25", fr)) = -2.309000e-25
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Преобразование данных](../../c-runtime-library/data-conversion.md)<br/>
 [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
-[Языковой стандарт](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

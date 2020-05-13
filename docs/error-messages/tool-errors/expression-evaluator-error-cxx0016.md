@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CAN0016
 - CXX0016
 ms.assetid: af94a2ae-e835-4da6-8d2f-5c879f72eda2
-ms.openlocfilehash: 8e8e8ed3e8b374786414a59bb65e22701b816f65
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f280eeb6d59eb2f81d6d27225441f807664ce27
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359921"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196031"
 ---
 # <a name="expression-evaluator-error-cxx0016"></a>Ошибка вычислителя выражений CXX0016
 
 слишком большая константа
 
-Вычислитель выражений C не может принимать константу целое число без знака, размер которых превышает 4 294 967 295 (0FFFFFFFF в шестнадцатеричной записи), или константы с плавающей запятой, величина которого больше, чем 1.8E + 308.
+Вычислитель выражений C не может принимать целочисленную константу без знака, превышающую 4 294 967 295 (шестнадцатеричное число 0FFFFFFFF) или константу с плавающей запятой, величина которой больше приблизительно 1,8 E + 308.
 
-Эта ошибка идентична ошибке CAN0016.
+Эта ошибка идентична CAN0016.

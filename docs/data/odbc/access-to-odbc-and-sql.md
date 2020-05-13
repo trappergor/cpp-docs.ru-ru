@@ -9,21 +9,21 @@ helpviewer_keywords:
 - SQL [C++], calling ODBC API functions
 - ODBC [C++], API functions
 ms.assetid: 5613d7dc-00b7-4646-99ae-1116c05c52b4
-ms.openlocfilehash: 7a539d911bbf4f4d9582da0ebedaeffaa0d8fa7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b590ce9309cbbe95285001cc5befe70a1d1961f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396006"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213334"
 ---
 # <a name="access-to-odbc-and-sql"></a>Доступ к ODBC и SQL
 
-Библиотеки Microsoft Foundation Class инкапсулирует большого числа вызовов Windows API и по-прежнему позволяет напрямую вызывать любой функции Windows API. Классы баз данных дают такую же гибкость, что и ODBC API. Хотя классы баз данных обходить сложности ODBC, можно вызывать функции ODBC API непосредственно из любого места в программе.
+Библиотека Microsoft Foundation Class инкапсулирует множество вызовов API Windows и по-прежнему позволяет напрямую вызывать любую функцию Windows API. Классы баз данных обеспечивают ту же гибкость, что и API ODBC. Хотя классы базы данных защищают от большей части сложности ODBC, вы можете вызывать функции API ODBC непосредственно из любого места в программе.
 
-Аналогично, классы баз данных позволит предотвратить работы с [SQL](../../data/odbc/sql.md), но вы можете использовать SQL напрямую, если требуется. Объекты набора записей можно настроить путем передачи пользовательские инструкции SQL (или часть параметров инструкцию по умолчанию) при открытии набора записей. Вы также можете напрямую с помощью вызовов SQL [ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql) функция-член класса [CDatabase](../../mfc/reference/cdatabase-class.md).
+Аналогичным образом, классы базы данных защищают от необходимости работы с [SQL](../../data/odbc/sql.md), но вы можете использовать SQL напрямую, если хотите. Объекты набора записей можно настроить, передав пользовательскую инструкцию SQL (или настроив части инструкции по умолчанию) при открытии набора записей. Также можно выполнять вызовы SQL непосредственно с помощью функции члена [ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql) класса [CDatabase](../../mfc/reference/cdatabase-class.md).
 
-Дополнительные сведения см. в разделе [ODBC: Вызов ODBC API напрямую функции](../../data/odbc/odbc-calling-odbc-api-functions-directly.md) и [SQL: Выполнение прямых вызовов SQL (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md).
+Дополнительные сведения см. в разделе [ODBC: вызов функций API ODBC напрямую](../../data/odbc/odbc-calling-odbc-api-functions-directly.md) и [SQL: выполнение прямых вызовов SQL (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [ODBC и MFC](../../data/odbc/odbc-and-mfc.md)

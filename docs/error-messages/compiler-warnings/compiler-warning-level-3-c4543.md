@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C4543
 ms.assetid: a09b39a7-d3b8-435c-86a3-2233c512f24b
-ms.openlocfilehash: dcbaf0931be9f1e056e881fb3b75da7d000f6562
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4deaeb1e1443723ed7dd3357552696eacf61fed
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401856"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198657"
 ---
 # <a name="compiler-warning-level-3-c4543"></a>Предупреждение компилятора (уровень 3) C4543
 
-Подставляемый текст запрещен атрибутом «no_injected_text»
+Внедренный текст, запрещенный атрибутом "no_injected_text"
 
-[No_injected_text](../../windows/no-injected-text.md) появился атрибут в исходном коде, который означает, что компилятор не позволит атрибуты вставку кода.
+В исходном коде присутствует атрибут [no_injected_text](../../windows/no-injected-text.md) , что означает, что компилятор не сможет внедрять код.
 
-Это предупреждение является напомнить, что атрибуты не сможете ввести код.
+Это предупреждение предназначено для напоминания о том, что атрибуты не смогут внедрять код.

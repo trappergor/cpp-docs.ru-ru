@@ -1,30 +1,30 @@
 ---
-title: Глобальные функции преобразования «пиксель-HIMETRIC»
+title: Глобальные функции преобразования Pixel-HIMETRIC
 ms.date: 11/04/2016
 f1_keywords:
 - atlwin/ATL::AtlHiMetricToPixel
 - atlwin/ATL::AtlPixelToHiMetric
 ms.assetid: ecb1b1b2-7e9d-4fbc-a855-16252d2d794c
-ms.openlocfilehash: 43a12985f259603a9b67f22f7a7891bf847c0b0f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 08c72c0d8f3d061950d6945d9fb412c0a16355da
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79423018"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326142"
 ---
-# <a name="pixelhimetric-conversion-global-functions"></a>Глобальные функции преобразования пикселей и HIMETRIC
+# <a name="pixelhimetric-conversion-global-functions"></a>Глобальные функции преобразования Pixel/HIMETRIC
 
-Эти функции обеспечивают поддержку преобразования в Пиксели и HIMETRIC единицы измерения.
+Эти функции обеспечивают поддержку для преобразования в и из пикселей и HIMETRIC единиц.
 
 > [!IMPORTANT]
->  Функции, перечисленные в следующей таблице, нельзя использовать в приложениях, выполняемых в среда выполнения Windows.
+> Функции, перечисленные в следующей таблице, не могут использоваться в приложениях, выполняемых в Windows Runtime.
 
 |||
 |-|-|
-|[атлхиметриктопиксел](#atlhimetrictopixel)|Преобразует единицы HIMETRIC (каждая единица — 0,01 мм) в пиксели.|
-|[атлпикселтохиметрик](#atlpixeltohimetric)|Преобразует Пиксели в HIMETRIC единицы (каждая единица — 0,01 мм).|
+|[AtlHiMetricToPixel](#atlhimetrictopixel)|Преобразует единицы HIMETRIC (каждая единица составляет 0,01 миллиметра) в пиксели.|
+|[AtlPixelToHiMetric](#atlpixeltohimetric)|Преобразует пиксели в единицы HIMETRIC (каждая единица составляет 0,01 миллиметра).|
 
-##  <a name="atlhimetrictopixel"></a>атлхиметриктопиксел
+## <a name="atlhimetrictopixel"></a><a name="atlhimetrictopixel"></a>AtlHiMetricToPixel
 
 Преобразует размер объекта в единицах HIMETRIC (каждая единица равна 0,01 мм) в размер в пикселях на экране устройства.
 
@@ -36,11 +36,11 @@ extern void AtlHiMetricToPixel(
 
 ### <a name="parameters"></a>Параметры
 
-*лпсизеинхиметрик*<br/>
-окне Указатель на размер объекта в единицах HIMETRIC.
+*lpsizeinhimetric*<br/>
+(в) Указатель на размер объекта в единицах HIMETRIC.
 
-*лпсизеинпикс*<br/>
-заполняет Указатель на место, где должен возвращаться размер объекта в пикселях.
+*lpSizeinpix*<br/>
+(ваут) Указатель на то, где размер объекта в пикселях должен быть возвращен.
 
 ### <a name="example"></a>Пример
 
@@ -48,9 +48,9 @@ extern void AtlHiMetricToPixel(
 
 ### <a name="requirements"></a>Требования
 
-**Заголовок:** atlwin. h
+**Заголовок:** atlwin.h
 
-##  <a name="atlpixeltohimetric"></a>атлпикселтохиметрик
+## <a name="atlpixeltohimetric"></a><a name="atlpixeltohimetric"></a>AtlPixelToHiMetric
 
 Преобразует размер объекта в пикселях на экране устройства в единицы HIMETRIC (каждая единица равна 0,01 мм).
 
@@ -62,11 +62,11 @@ extern void AtlPixelToHiMetric(
 
 ### <a name="parameters"></a>Параметры
 
-*лпсизеинпикс*<br/>
-окне Указатель на размер объекта в пикселях.
+*lpSizeinpix*<br/>
+(в) Указатель на размер объекта в пикселях.
 
-*лпсизеинхиметрик*<br/>
-заполняет Указатель на место, где должен возвращаться размер объекта в единицах HIMETRIC.
+*lpsizeinhimetric*<br/>
+(ваут) Указатель на место, где должен быть возвращен размер объекта в единицах HIMETRIC.
 
 ### <a name="example"></a>Пример
 
@@ -74,7 +74,7 @@ extern void AtlPixelToHiMetric(
 
 ### <a name="requirements"></a>Требования
 
-**Заголовок:** atlwin. h
+**Заголовок:** atlwin.h
 
 ## <a name="see-also"></a>См. также раздел
 

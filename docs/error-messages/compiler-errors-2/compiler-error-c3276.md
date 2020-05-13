@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C3276
 ms.assetid: dd6b4fd2-094d-4d34-a467-a9afd59789f7
-ms.openlocfilehash: 671fda26958d50340ccc628a8d50d19ea74f7939
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4037c5191c0b7316218100123f1cf1823f9d135b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382103"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201452"
 ---
 # <a name="compiler-error-c3276"></a>Ошибка компилятора C3276
 
-«ключевое_слово»: перехода из блока __finally/finally не определено поведение при обработке завершения
+"ключевое слово": переход из __finally блока/финалли имеет неопределенное поведение во время обработки завершения
 
-Эта ошибка является таким же, как [C4532](../../error-messages/compiler-warnings/compiler-warning-level-1-c4532.md) предупреждение. Тем не менее, при использовании/CLR, это условие не может быть отключено с [предупреждение](../../preprocessor/warning.md) директивы pragma.
+Эта ошибка аналогична предупреждению [C4532](../../error-messages/compiler-warnings/compiler-warning-level-1-c4532.md) . Однако при использовании/CLR это условие нельзя отключить с помощью директивы pragma [warning](../../preprocessor/warning.md) .

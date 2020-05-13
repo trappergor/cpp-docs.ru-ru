@@ -1,16 +1,16 @@
 ---
-title: Практическое руководство. Изменение свойств проекта C++ и целевые объекты, не изменяя файл проекта
+title: 'Как: Изменить свойства и цели проекта СЗ без изменения файла проекта'
 ms.date: 11/28/2018
 helpviewer_keywords:
 - project properties [C++], modifying outside project file
-ms.openlocfilehash: ad527d8ee69a1786be7d325571f9c9ac4f9a8574
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72107b572e35f222c0b03959e0edd2d23bd0130a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273343"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328460"
 ---
-# <a name="how-to-modify-c-project-properties-and-targets-without-changing-the-project-file"></a>Практическое руководство. Изменение свойств проекта C++ и целевые объекты, не изменяя файл проекта
+# <a name="how-to-modify-c-project-properties-and-targets-without-changing-the-project-file"></a>Как: Изменить свойства и цели проекта СЗ без изменения файла проекта
 
 Вы можете переопределить свойства проекта и целевые объекты из командной строки MSBuild, не изменяя файл проекта. Это удобно в том случае, если вы хотите применять некоторые свойства лишь временно или периодически. Для этого нужно обладать некоторыми знаниями о MSBuild. Дополнительные сведения см. в разделе [MSBuild](https://docs.microsoft.com/visualstudio/msbuild/msbuild).
 

@@ -1,5 +1,5 @@
 ---
-title: Класс Ипропертипажеимпл
+title: IPropertyPageImpl класс
 ms.date: 11/04/2016
 f1_keywords:
 - IPropertyPageImpl
@@ -31,19 +31,19 @@ helpviewer_keywords:
 - IPropertyPage ATL implementation
 - IPropertyPageImpl class
 ms.assetid: f9b7c8b1-7a04-4eab-aa63-63efddb740fa
-ms.openlocfilehash: 69842e77aecaa94be66432e5fbba437a6fa3c5a4
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 154bfb5beb258ff26649f44f0bd4c23fb8708977
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79423072"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745861"
 ---
-# <a name="ipropertypageimpl-class"></a>Класс Ипропертипажеимпл
+# <a name="ipropertypageimpl-class"></a>IPropertyPageImpl класс
 
-Этот класс реализует `IUnknown` и предоставляет реализацию интерфейса [ипропертипаже](/windows/win32/api/ocidl/nn-ocidl-ipropertypage) по умолчанию.
+Этот класс `IUnknown` реализует и обеспечивает реализацию интерфейса [IPropertyPage](/windows/win32/api/ocidl/nn-ocidl-ipropertypage) по умолчанию.
 
 > [!IMPORTANT]
->  Этот класс и его члены не могут использоваться в приложениях, выполняемых в среда выполнения Windows.
+> Этот класс и его члены не могут быть использованы в приложениях, выполняемых в Windows Runtime.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -55,52 +55,52 @@ class IPropertyPageImpl
 #### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Класс, производный от `IPropertyPageImpl`.
+Ваш класс, полученный из `IPropertyPageImpl`.
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|[Ипропертипажеимпл:: Ипропертипажеимпл](#ipropertypageimpl)|Конструктор.|
+|[IPropertyPageImpl::IPropertyPageImpl](#ipropertypageimpl)|Конструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|[Ипропертипажеимпл:: Activate](#activate)|Создает окно диалогового окна для страницы свойств.|
-|[Ипропертипажеимпл:: Apply](#apply)|Применяет текущие значения страницы свойств к базовым объектам, заданным с помощью `SetObjects`. Реализация ATL возвращает S_OK.|
-|[Ипропертипажеимпл::D еактивате](#deactivate)|Уничтожает окно, созданное с помощью `Activate`.|
-|[Ипропертипажеимпл:: Жетпажеинфо](#getpageinfo)|Извлекает сведения о странице свойств.|
-|[Ипропертипажеимпл:: Help](#help)|Вызывает справку Windows для страницы свойств.|
-|[Ипропертипажеимпл:: Испажедирти](#ispagedirty)|Указывает, изменилась ли страница свойств с момента ее активации.|
-|[Ипропертипажеимпл:: Move](#move)|Определяет положение и изменяет размер диалогового окна страницы свойств.|
-|[Ипропертипажеимпл:: Сетдирти](#setdirty)|Помечает состояние страницы свойств как измененное или неизмененное.|
-|[Ипропертипажеимпл:: Сетобжектс](#setobjects)|Предоставляет массив `IUnknown`ных указателей для объектов, связанных со страницей свойств. Эти объекты получают текущие значения страницы свойств с помощью вызова метода `Apply`.|
-|[Ипропертипажеимпл:: Сетпажесите](#setpagesite)|Предоставляет страницу свойств с указателем `IPropertyPageSite`, через который страница свойств взаимодействует с рамкой свойства.|
-|[Ипропертипажеимпл:: показывать](#show)|Делает диалоговое окно страницы свойств видимым или невидимым.|
-|[Ипропертипажеимпл:: TranslateAccelerator](#translateaccelerator)|Обрабатывает заданное нажатие клавиши.|
+|[IPropertyPageImpl::Активировать](#activate)|Создает окно окна окна диалогового окна для страницы свойств.|
+|[IPropertyPageImpl::Apply](#apply)|Применяет текущие значения страницы свойств к `SetObjects`базовым объектам, указанным через. Реализация ATL возвращает S_OK.|
+|[IPropertyPageImpl::Dэактив](#deactivate)|Разрушает окно, созданное с помощью `Activate`.|
+|[IPropertyPageImpl::GetPageInfo](#getpageinfo)|Извлекает информацию о странице свойств.|
+|[IPropertyPageImpl::Помощь](#help)|Вызывает помощь Windows для страницы свойств.|
+|[IPropertyPageImpl::IsPageDirty](#ispagedirty)|Указывается, изменилась ли страница свойств с момента ее активации.|
+|[IPropertyPageImpl::Движение](#move)|Позиции и изражает поле диалога страницы свойств.|
+|[IPropertyPageImpl::SetDirty](#setdirty)|Флаги состояния страницы свойств как измененные или неизмененные.|
+|[IPropertyPageImpl::SetObjects](#setobjects)|Предоставляет массив `IUnknown` указателей для объектов, связанных со страницей свойств. Эти объекты получают текущие значения страницы свойств через `Apply`вызов.|
+|[IPropertyPageImpl::SetPageSite](#setpagesite)|Предоставляет страницу свойств `IPropertyPageSite` указателем, через который страница свойств общается с рамкой свойств.|
+|[IPropertyPageImpl::Показать](#show)|Делает поле диалога страницы свойств видимым или невидимым.|
+|[IPropertyPageImpl::TranslateAccelerator](#translateaccelerator)|Обрабатывает указанный нажатие клавиши.|
 
-### <a name="public-data-members"></a>Открытые элементы данных
+### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|[Ипропертипажеимпл:: m_bDirty](#m_bdirty)|Указывает, изменилось ли состояние страницы свойств.|
-|[Ипропертипажеимпл:: m_dwDocString](#m_dwdocstring)|Хранит идентификатор ресурса, связанный с текстовой строкой, описывающей страницу свойств.|
-|[Ипропертипажеимпл:: m_dwHelpContext](#m_dwhelpcontext)|Содержит идентификатор контекста для раздела справки, связанного со страницей свойств.|
-|[Ипропертипажеимпл:: m_dwHelpFile](#m_dwhelpfile)|Хранит идентификатор ресурса, связанный с именем файла справки, описывающего страницу свойств.|
-|[Ипропертипажеимпл:: m_dwTitle](#m_dwtitle)|Хранит идентификатор ресурса, связанный с текстовой строкой, отображаемой на вкладке страницы свойств.|
-|[Ипропертипажеимпл:: m_nObjects](#m_nobjects)|Хранит количество объектов, связанных со страницей свойств.|
-|[Ипропертипажеимпл:: m_pPageSite](#m_ppagesite)|Указывает на интерфейс `IPropertyPageSite`, через который страница свойств взаимодействует с рамкой свойства.|
-|[Ипропертипажеимпл:: m_ppUnk](#m_ppunk)|Указывает на массив `IUnknown`ных указателей на объекты, связанные со страницей свойств.|
-|[Ипропертипажеимпл:: m_size](#m_size)|Сохраняет высоту и ширину диалогового окна страницы свойств в пикселях.|
+|[IPropertyPageImpl::m_bDirty](#m_bdirty)|Определяет, изменилось ли состояние страницы свойства.|
+|[IPropertyPageImpl::m_dwDocString](#m_dwdocstring)|Хранит идентификатор ресурса, связанный с текстовой строкой, описывающей страницу свойств.|
+|[IPropertyPageImpl::m_dwHelpContext](#m_dwhelpcontext)|Хранит идентификатор контекста для темы справки, связанной со страницей свойств.|
+|[IPropertyPageImpl::m_dwHelpFile](#m_dwhelpfile)|Хранит идентификатор ресурса, связанный с именем файла справки, описывающего страницу свойств.|
+|[IPropertyPageImpl::m_dwTitle](#m_dwtitle)|Хранит идентификатор ресурса, связанный с строкой текста, которая отображается во вкладке для страницы свойств.|
+|[IPropertyPageImpl::m_nObjects](#m_nobjects)|Хранит количество объектов, связанных со страницей свойств.|
+|[IPropertyPageImpl::m_pPageSite](#m_ppagesite)|Указывает на `IPropertyPageSite` интерфейс, через который страница свойств общается с рамкой свойств.|
+|[IPropertyPageImpl::m_ppUnk](#m_ppunk)|Указывает на массив `IUnknown` указателей на объекты, связанные со страницей свойств.|
+|[IPropertyPageImpl::m_size](#m_size)|Хранит высоту и ширину диалогового окна страницы свойств в пикселях.|
 
 ## <a name="remarks"></a>Remarks
 
-Интерфейс [ипропертипаже](/windows/win32/api/ocidl/nn-ocidl-ipropertypage) позволяет объекту управлять определенной страницей свойств в пределах страницы свойств. Класс `IPropertyPageImpl` предоставляет реализацию этого интерфейса по умолчанию и реализует `IUnknown`, отправляя сведения в устройство дампа в отладочных сборках.
+Интерфейс [IPropertyPage](/windows/win32/api/ocidl/nn-ocidl-ipropertypage) позволяет объекту управлять определенной страницей свойств в листе свойств. Класс `IPropertyPageImpl` обеспечивает реализацию этого интерфейса `IUnknown` по умолчанию и реализует, отправляя информацию на устройство свалки в отладочных сборках.
 
-Руководство по **сопутствующим статьям** [ATL](../../atl/active-template-library-atl-tutorial.md), [Создание проекта ATL](../../atl/reference/creating-an-atl-project.md)
+**Похожие статьи** [ATL Учебник](../../atl/active-template-library-atl-tutorial.md), Создание проекта [ATL](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -110,11 +110,11 @@ class IPropertyPageImpl
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** атлктл. h
+**Заголовок:** atlctl.h
 
-##  <a name="activate"></a>Ипропертипажеимпл:: Activate
+## <a name="ipropertypageimplactivate"></a><a name="activate"></a>IPropertyPageImpl::Активировать
 
-Создает окно диалогового окна для страницы свойств.
+Создает окно окна окна диалогового окна для страницы свойств.
 
 ```
 HRESULT Activate(
@@ -125,13 +125,13 @@ HRESULT Activate(
 
 ### <a name="remarks"></a>Remarks
 
-По умолчанию диалоговое окно всегда является немодальным, независимо от значения параметра *бмодал* .
+По умолчанию диалоговая коробка всегда беспрейрана, независимо от значения параметра *bModal.*
 
-См. раздел [ипропертипаже:: Activate](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-activate) в Windows SDK.
+Смотрите [IPropertyPage::Активируйте](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-activate) в Windows SDK.
 
-##  <a name="apply"></a>Ипропертипажеимпл:: Apply
+## <a name="ipropertypageimplapply"></a><a name="apply"></a>IPropertyPageImpl::Apply
 
-Применяет текущие значения страницы свойств к базовым объектам, заданным с помощью `SetObjects`.
+Применяет текущие значения страницы свойств к `SetObjects`базовым объектам, указанным через.
 
 ```
 HRESULT Apply();
@@ -143,11 +143,11 @@ HRESULT Apply();
 
 ### <a name="remarks"></a>Remarks
 
-См. раздел [ипропертипаже:: Apply](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-apply) в Windows SDK.
+Смотрите [IPropertyPage:: Применить](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-apply) в Windows SDK.
 
-##  <a name="deactivate"></a>Ипропертипажеимпл::D еактивате
+## <a name="ipropertypageimpldeactivate"></a><a name="deactivate"></a>IPropertyPageImpl::Dэактив
 
-Уничтожает окно диалогового окна, созданного с помощью [активации](#activate).
+Уничтожает окно окна окна диалогового окна, созданного с [помощью Activate.](#activate)
 
 ```
 HRESULT Deactivate();
@@ -155,11 +155,11 @@ HRESULT Deactivate();
 
 ### <a name="remarks"></a>Remarks
 
-См. раздел [ипропертипаже::D еактивате](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-deactivate) в Windows SDK.
+Смотрите [IPropertyPage: :Dактивировать](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-deactivate) в Windows SDK.
 
-##  <a name="getpageinfo"></a>Ипропертипажеимпл:: Жетпажеинфо
+## <a name="ipropertypageimplgetpageinfo"></a><a name="getpageinfo"></a>IPropertyPageImpl::GetPageInfo
 
-Заполняет структуру *ппажеинфо* данными, содержащимися в элементах данных.
+Заполняет структуру *pPageInfo* информацией, содержащейся в данных членов.
 
 ```
 HRESULT GetPageInfo(PROPPAGEINFO* pPageInfo);
@@ -167,13 +167,13 @@ HRESULT GetPageInfo(PROPPAGEINFO* pPageInfo);
 
 ### <a name="remarks"></a>Remarks
 
-`GetPageInfo` загружает строковые ресурсы, связанные с [m_dwDocString](#m_dwdocstring), [m_dwHelpFile](#m_dwhelpfile)и [m_dwTitle](#m_dwtitle).
+`GetPageInfo`загружает строки ресурсов, связанных с [m_dwDocString,](#m_dwdocstring) [m_dwHelpFile](#m_dwhelpfile)и [m_dwTitle.](#m_dwtitle)
 
-См. раздел [ипропертипаже:: жетпажеинфо](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-getpageinfo) в Windows SDK.
+Смотрите [IPropertyPage::GetPageInfo](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-getpageinfo) в Windows SDK.
 
-##  <a name="help"></a>Ипропертипажеимпл:: Help
+## <a name="ipropertypageimplhelp"></a><a name="help"></a>IPropertyPageImpl::Помощь
 
-Вызывает справку Windows для страницы свойств.
+Вызывает помощь Windows для страницы свойств.
 
 ```
 HRESULT Help(PROPPAGEINFO* pPageInfo);
@@ -181,9 +181,9 @@ HRESULT Help(PROPPAGEINFO* pPageInfo);
 
 ### <a name="remarks"></a>Remarks
 
-См. раздел [ипропертипаже:: Help](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-help) в Windows SDK.
+Смотрите [IPropertyPage::Помощь](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-help) в Windows SDK.
 
-##  <a name="ipropertypageimpl"></a>Ипропертипажеимпл:: Ипропертипажеимпл
+## <a name="ipropertypageimplipropertypageimpl"></a><a name="ipropertypageimpl"></a>IPropertyPageImpl::IPropertyPageImpl
 
 Конструктор.
 
@@ -193,11 +193,11 @@ IPropertyPageImpl();
 
 ### <a name="remarks"></a>Remarks
 
-Инициализирует все элементы данных.
+Инициализирует всех участников данных.
 
-##  <a name="ispagedirty"></a>Ипропертипажеимпл:: Испажедирти
+## <a name="ipropertypageimplispagedirty"></a><a name="ispagedirty"></a>IPropertyPageImpl::IsPageDirty
 
-Указывает, изменилась ли страница свойств с момента ее активации.
+Указывается, изменилась ли страница свойств с момента ее активации.
 
 ```
 HRESULT IsPageDirty(void);
@@ -205,17 +205,17 @@ HRESULT IsPageDirty(void);
 
 ### <a name="remarks"></a>Remarks
 
-`IsPageDirty` возвращает S_OK, если страница изменилась с момента ее активации.
+`IsPageDirty`возвращает S_OK, если страница изменилась с момента ее активации.
 
-##  <a name="m_bdirty"></a>Ипропертипажеимпл:: m_bDirty
+## <a name="ipropertypageimplm_bdirty"></a><a name="m_bdirty"></a>IPropertyPageImpl::m_bDirty
 
-Указывает, изменилось ли состояние страницы свойств.
+Определяет, изменилось ли состояние страницы свойства.
 
 ```
 BOOL m_bDirty;
 ```
 
-##  <a name="m_nobjects"></a>Ипропертипажеимпл:: m_nObjects
+## <a name="ipropertypageimplm_nobjects"></a><a name="m_nobjects"></a>IPropertyPageImpl::m_nObjects
 
 Хранит количество объектов, связанных со страницей свойств.
 
@@ -223,15 +223,15 @@ BOOL m_bDirty;
 ULONG m_nObjects;
 ```
 
-##  <a name="m_dwhelpcontext"></a>Ипропертипажеимпл:: m_dwHelpContext
+## <a name="ipropertypageimplm_dwhelpcontext"></a><a name="m_dwhelpcontext"></a>IPropertyPageImpl::m_dwHelpContext
 
-Содержит идентификатор контекста для раздела справки, связанного со страницей свойств.
+Хранит идентификатор контекста для темы справки, связанной со страницей свойств.
 
 ```
 DWORD m_dwHelpContext;
 ```
 
-##  <a name="m_dwdocstring"></a>Ипропертипажеимпл:: m_dwDocString
+## <a name="ipropertypageimplm_dwdocstring"></a><a name="m_dwdocstring"></a>IPropertyPageImpl::m_dwDocString
 
 Хранит идентификатор ресурса, связанный с текстовой строкой, описывающей страницу свойств.
 
@@ -239,7 +239,7 @@ DWORD m_dwHelpContext;
 UINT m_dwDocString;
 ```
 
-##  <a name="m_dwhelpfile"></a>Ипропертипажеимпл:: m_dwHelpFile
+## <a name="ipropertypageimplm_dwhelpfile"></a><a name="m_dwhelpfile"></a>IPropertyPageImpl::m_dwHelpFile
 
 Хранит идентификатор ресурса, связанный с именем файла справки, описывающего страницу свойств.
 
@@ -247,41 +247,41 @@ UINT m_dwDocString;
 UINT m_dwHelpFile;
 ```
 
-##  <a name="m_dwtitle"></a>Ипропертипажеимпл:: m_dwTitle
+## <a name="ipropertypageimplm_dwtitle"></a><a name="m_dwtitle"></a>IPropertyPageImpl::m_dwTitle
 
-Хранит идентификатор ресурса, связанный с текстовой строкой, отображаемой на вкладке страницы свойств.
+Хранит идентификатор ресурса, связанный с строкой текста, которая отображается во вкладке для страницы свойств.
 
 ```
 UINT m_dwTitle;
 ```
 
-##  <a name="m_ppagesite"></a>Ипропертипажеимпл:: m_pPageSite
+## <a name="ipropertypageimplm_ppagesite"></a><a name="m_ppagesite"></a>IPropertyPageImpl::m_pPageSite
 
-Указывает на интерфейс [ипропертипажесите](/windows/win32/api/ocidl/nn-ocidl-ipropertypagesite) , через который страница свойств взаимодействует с рамкой свойства.
+Указывает на интерфейс [IPropertyPageSite,](/windows/win32/api/ocidl/nn-ocidl-ipropertypagesite) через который страница свойств общается с рамкой свойств.
 
 ```
 IPropertyPageSite* m_pPageSite;
 ```
 
-##  <a name="m_ppunk"></a>Ипропертипажеимпл:: m_ppUnk
+## <a name="ipropertypageimplm_ppunk"></a><a name="m_ppunk"></a>IPropertyPageImpl::m_ppUnk
 
-Указывает на массив `IUnknown`ных указателей на объекты, связанные со страницей свойств.
+Указывает на массив `IUnknown` указателей на объекты, связанные со страницей свойств.
 
 ```
 IUnknown** m_ppUnk;
 ```
 
-##  <a name="m_size"></a>Ипропертипажеимпл:: m_size
+## <a name="ipropertypageimplm_size"></a><a name="m_size"></a>IPropertyPageImpl::m_size
 
-Сохраняет высоту и ширину диалогового окна страницы свойств в пикселях.
+Хранит высоту и ширину диалогового окна страницы свойств в пикселях.
 
 ```
 SIZE m_size;
 ```
 
-##  <a name="move"></a>Ипропертипажеимпл:: Move
+## <a name="ipropertypageimplmove"></a><a name="move"></a>IPropertyPageImpl::Движение
 
-Определяет положение и изменяет размер диалогового окна страницы свойств.
+Позиции и изражает поле диалога страницы свойств.
 
 ```
 HRESULT Move(LPCRECT pRect);
@@ -289,28 +289,28 @@ HRESULT Move(LPCRECT pRect);
 
 ### <a name="remarks"></a>Remarks
 
-См. раздел [ипропертипаже:: Move](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-move) в Windows SDK.
+Смотрите [IPropertyPage:: Перемещение](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-move) в Windows SDK.
 
-##  <a name="setdirty"></a>Ипропертипажеимпл:: Сетдирти
+## <a name="ipropertypageimplsetdirty"></a><a name="setdirty"></a>IPropertyPageImpl::SetDirty
 
-Помечает состояние страницы свойств как измененное или неизмененное, в зависимости от значения *бдирти*.
+Флаги состояние страницы свойства, как изменены или без изменений, в зависимости от значения *bDirty*.
 
-```
+```cpp
 void SetDirty(BOOL bDirty);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*бдирти*<br/>
-окне Если значение — TRUE, состояние страницы свойств помечается как измененное. В противном случае он помечается как неизмененный.
+*bDirty*<br/>
+(в) Если true, состояние страницы свойства помечено как измененное. В противном случае он помечается как неизменный.
 
 ### <a name="remarks"></a>Remarks
 
-При необходимости `SetDirty` информирует кадр о том, что изменилась страница свойств.
+При необходимости сообщает `SetDirty` кадр о том, что страница свойств изменилась.
 
-##  <a name="setobjects"></a>Ипропертипажеимпл:: Сетобжектс
+## <a name="ipropertypageimplsetobjects"></a><a name="setobjects"></a>IPropertyPageImpl::SetObjects
 
-Предоставляет массив `IUnknown`ных указателей для объектов, связанных со страницей свойств.
+Предоставляет массив `IUnknown` указателей для объектов, связанных со страницей свойств.
 
 ```
 HRESULT SetObjects(ULONG nObjects, IUnknown** ppUnk);
@@ -318,11 +318,11 @@ HRESULT SetObjects(ULONG nObjects, IUnknown** ppUnk);
 
 ### <a name="remarks"></a>Remarks
 
-См. раздел [ипропертипаже:: сетобжектс](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-setobjects) в Windows SDK.
+Смотрите [IPropertyPage:: SetObjects](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-setobjects) в Windows SDK.
 
-##  <a name="setpagesite"></a>Ипропертипажеимпл:: Сетпажесите
+## <a name="ipropertypageimplsetpagesite"></a><a name="setpagesite"></a>IPropertyPageImpl::SetPageSite
 
-Предоставляет страницу свойств с указателем [ипропертипажесите](/windows/win32/api/ocidl/nn-ocidl-ipropertypagesite) , через который страница свойств взаимодействует с рамкой свойства.
+Предоставляет страницу свойств указателем [IPropertyPageSite,](/windows/win32/api/ocidl/nn-ocidl-ipropertypagesite) через который страница свойств общается с рамкой свойств.
 
 ```
 HRESULT SetPageSite(IPropertyPageSite* pPageSite);
@@ -330,11 +330,11 @@ HRESULT SetPageSite(IPropertyPageSite* pPageSite);
 
 ### <a name="remarks"></a>Remarks
 
-См. раздел [ипропертипаже:: сетпажесите](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-setpagesite) в Windows SDK.
+Смотрите [IPropertyPage::SetPageSite](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-setpagesite) в SDK Windows.
 
-##  <a name="show"></a>Ипропертипажеимпл:: показывать
+## <a name="ipropertypageimplshow"></a><a name="show"></a>IPropertyPageImpl::Показать
 
-Делает диалоговое окно страницы свойств видимым или невидимым.
+Делает поле диалога страницы свойств видимым или невидимым.
 
 ```
 HRESULT Show(UINT nCmdShow);
@@ -342,11 +342,11 @@ HRESULT Show(UINT nCmdShow);
 
 ### <a name="remarks"></a>Remarks
 
-См. раздел [ипропертипаже:: показывать](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-show) в Windows SDK.
+Смотрите [IPropertyPage::Показать](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-show) в Windows SDK.
 
-##  <a name="translateaccelerator"></a>Ипропертипажеимпл:: TranslateAccelerator
+## <a name="ipropertypageimpltranslateaccelerator"></a><a name="translateaccelerator"></a>IPropertyPageImpl::TranslateAccelerator
 
-Обрабатывает нажатие клавиши, заданное в `pMsg`.
+Процессы нажатия `pMsg`клавиши, указанные в .
 
 ```
 HRESULT TranslateAccelerator(MSG* pMsg);
@@ -354,11 +354,11 @@ HRESULT TranslateAccelerator(MSG* pMsg);
 
 ### <a name="remarks"></a>Remarks
 
-См. раздел [ипропертипаже:: TranslateAccelerator](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-translateaccelerator) в Windows SDK.
+Смотрите [IPropertyPage::TranslateAccelerator](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-translateaccelerator) в Windows SDK.
 
 ## <a name="see-also"></a>См. также раздел
 
-[Класс IPropertyPage2Impl](../../atl/reference/ipropertypage2impl-class.md)<br/>
-[Класс IPerPropertyBrowsingImpl](../../atl/reference/iperpropertybrowsingimpl-class.md)<br/>
-[Класс ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md)<br/>
-[Обзор класса](../../atl/atl-class-overview.md)
+[IPropertyPage2Impl класс](../../atl/reference/ipropertypage2impl-class.md)<br/>
+[IPerPropertyБражИмпл класс](../../atl/reference/iperpropertybrowsingimpl-class.md)<br/>
+[ISpecifyPropertyPagesImpl класс](../../atl/reference/ispecifypropertypagesimpl-class.md)<br/>
+[Общие сведения о классах](../../atl/atl-class-overview.md)

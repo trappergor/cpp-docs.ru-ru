@@ -5,19 +5,19 @@ f1_keywords:
 - atlbase/ATL::AtlWinModuleAddCreateWndData
 - atlbase/ATL::AtlWinModuleExtractCreateWndData
 ms.assetid: 8ce45a5b-26a7-491f-9096-c09ceca5f2c2
-ms.openlocfilehash: 0e7450ea2a42c0b35dc5a6d1b77dfb0f2acb9520
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d7d001a2835514cc5385a7069c0bcda58cdd88e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62196863"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329363"
 ---
 # <a name="winmodule-global-functions"></a>Глобальные функции WinModule
 
-Эти функции обеспечивают поддержку `_AtlCreateWndData` структуры операций.
+Эти функции `_AtlCreateWndData` обеспечивают поддержку операций структуры.
 
 > [!IMPORTANT]
-> Функции, перечисленные в следующей таблице, не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+> Функции, перечисленные в следующей таблице, не могут использоваться в приложениях, выполняемых в Windows Runtime.
 
 |||
 |-|-|
@@ -28,7 +28,7 @@ ms.locfileid: "62196863"
 
 **Заголовок:** atlbase.h
 
-##  <a name="atlwinmoduleaddcreatewnddata"></a>  AtlWinModuleAddCreateWndData
+## <a name="atlwinmoduleaddcreatewnddata"></a><a name="atlwinmoduleaddcreatewnddata"></a>AtlWinModuleAddCreateWndData
 
 Эта функция используется для инициализации и добавления структуры `_AtlCreateWndData`.
 
@@ -42,19 +42,19 @@ ATLINLINE ATLAPI_(void) AtlWinModuleAddCreateWndData(
 ### <a name="parameters"></a>Параметры
 
 *pWinModule*<br/>
-Указатель на модуль [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md) структуры.
+Указатель на [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md) структуру модуля.
 
-*pData*<br/>
-Указатель на [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) структуры для инициализации и добавления к текущему модулю.
+*Pdata*<br/>
+Указатель на [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) структуру, которая будет инициализирована и добавлена к текущему модулю.
 
 *pObject*<br/>
-Указатель на объект **это** указатель.
+Указатель на объект **этот** указатель.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Инициализирует `_AtlCreateWndData` структуру, которая используется для хранения **это** указатель используется для обращения к экземплярам класса и добавляет его в список, ссылаются модуля `_ATL_WIN_MODULE70` структуры. Вызывается средой [CAtlWinModule::AddCreateWndData](catlwinmodule-class.md#addcreatewnddata).
+Инициализирует структуру, `_AtlCreateWndData` которая используется для хранения **этого** указателя, используемого для обозначения экземпляров `_ATL_WIN_MODULE70` класса, и добавляет его в список, на который ссылается структура модуля. Вызывается [CAtlWinModule::AddCreateWndData](catlwinmodule-class.md#addcreatewnddata).
 
-##  <a name="atlwinmoduleextractcreatewnddata"></a>  AtlWinModuleExtractCreateWndData
+## <a name="atlwinmoduleextractcreatewnddata"></a><a name="atlwinmoduleextractcreatewnddata"></a>AtlWinModuleExtractCreateWndData
 
 Вызывайте эту функцию для извлечения существующей структуры `_AtlCreateWndData`.
 
@@ -65,16 +65,16 @@ ATLINLINE ATLAPI_(void*) AtlWinModuleExtractCreateWndData(_ATL_WIN_MODULE* pWinM
 ### <a name="parameters"></a>Параметры
 
 *pWinModule*<br/>
-Указатель на модуль [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md) структуры.
+Указатель на [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md) структуру модуля.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает указатель на [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) структуры.
+Возвращает указатель в [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) структуру.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Эта функция будет извлечения существующей `_AtlCreateWndData` структуру из списка ссылается модуля `_ATL_WIN_MODULE70` структуры.
+Эта функция будет `_AtlCreateWndData` извлекать существующую структуру из `_ATL_WIN_MODULE70` списка, на который ссылается структура модуля.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Функции](../../atl/reference/atl-functions.md)

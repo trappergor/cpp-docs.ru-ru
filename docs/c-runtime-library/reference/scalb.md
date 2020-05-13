@@ -1,9 +1,10 @@
 ---
 title: _scalb, _scalbf
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _scalb
 - _scalbf
+- _o__scalb
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +32,12 @@ helpviewer_keywords:
 - _scalbf function
 - scalb function
 ms.assetid: 148cf5a8-b405-44bf-a1f0-7487adba2421
-ms.openlocfilehash: 630a5e3db2c39cb40d31c71e6a6dfa214ed91e34
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: debb617afea26437df16150592e631461d82c6b8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948882"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918225"
 ---
 # <a name="_scalb-_scalbf"></a>_scalb, _scalbf
 
@@ -59,7 +61,7 @@ float _scalbf(
 *x*<br/>
 Число двойной точности с плавающей запятой.
 
-*exp*<br/>
+*расширением*<br/>
 Показатель степени — длинное целое число.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -68,9 +70,11 @@ float _scalbf(
 
 Дополнительные сведения об этом и других кодах возврата см. в статье [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Функция **_scalb** вычисляет значение<sup>*exp*</sup> *x* \* 2.
+
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -78,9 +82,9 @@ float _scalbf(
 |-------------|---------------------|
 |**_scalb**, **_scalbf**|\<float.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [ldexp](ldexp.md)<br/>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpcontext attribute
 ms.assetid: 6fbb022d-a4b7-4989-a02f-7f18a9b0ad96
-ms.openlocfilehash: 8ec13d785ae491a4082d0bbdc908448cb1b8a49c
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 292db21e8092284a92b09ef3f889bb0475d0d886
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69490916"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167008"
 ---
 # <a name="helpcontext"></a>helpcontext
 
@@ -25,10 +25,10 @@ ms.locfileid: "69490916"
 
 ### <a name="parameters"></a>Параметры
 
-*id*<br/>
-Идентификатор контекста раздела справки. См [. справку HTML: Контекстно-зависимая справка для](../../mfc/html-help-context-sensitive-help-for-your-programs.md) ваших программ для получения дополнительных сведений об идентификаторах контекста.
+*идентификатор*<br/>
+Идентификатор контекста раздела справки. Дополнительные сведения об идентификаторах контекста см. в разделе [HTML Help: контекстно-зависимая справка для ваших программ](../../mfc/html-help-context-sensitive-help-for-your-programs.md) .
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Атрибут **HelpContext** C++ имеет те же функциональные возможности, что и атрибут MIDL для [HelpContext](/windows/win32/Midl/helpcontext) .
 
@@ -42,14 +42,14 @@ ms.locfileid: "69490916"
 
 |||
 |-|-|
-|**Относится к**|**Interface**, **typedef**, **класс**, метод, свойство|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Отсутствуют|
-|**Недопустимые атрибуты**|Отсутствуют|
+|**Применение**|**Interface**, **typedef**, **класс**, метод, свойство|
+|**Повторяемый**|нет|
+|**Обязательные атрибуты**|None|
+|**Недопустимые атрибуты**|None|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты интерфейса](interface-attributes.md)<br/>

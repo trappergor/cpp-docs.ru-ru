@@ -5,24 +5,24 @@ f1_keywords:
 - hash_map/std::operator!=
 - hash_map/std::operator==
 ms.assetid: 24b9bb9e-e983-4060-bce5-2c7c8161ee61
-ms.openlocfilehash: 50a6c2784b4c861f7cf3bbb4d1e1c8ebd0eea72d
-ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
+ms.openlocfilehash: ed143349f3afc7a27ad565c1cc929c6ecb5f6ad8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80150749"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375450"
 ---
 # <a name="lthash_mapgt-operators"></a>Операторы &lt;hash_map&gt;
 
 |||
 |-|-|
-|[operator!=](#op_neq)|[operator!= (multimap)](#op_neq_mm)|
-|[operator==](#op_eq_eq)|[оператор== (multimap)](#op_eq_eq_mm)|
+|[оператора!](#op_neq)|[оператор! (мультикарта)](#op_neq_mm)|
+|[оператора](#op_eq_eq)|[оператор (мультикарта)](#op_eq_eq_mm)|
 
-## <a name="operator"></a><a name="op_neq"></a> operator!=
+## <a name="operator"></a><a name="op_neq"></a>оператора!
 
 > [!NOTE]
-> Этот API устарел. Вместо него следует использовать [класс unordered_map](unordered-map-class.md).
+> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](unordered-map-class.md).
 
 Проверяет неравенство объекта hash_map слева от оператора и объекта hash_map справа от оператора.
 
@@ -32,10 +32,10 @@ bool operator!=(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*Левой*\
 Объект типа `hash_map`.
 
-*справа*\
+*Правильно*\
 Объект типа `hash_map`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -46,7 +46,7 @@ bool operator!=(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 Сравнение между объектами hash_map основывается на попарном сравнении их элементов. Два объекта hash_map равны, если они содержат одинаковое количество элементов, а их соответствующие элементы имеют одинаковые значения. В противном случае они не равны.
 
-Члены [< hash_map >](hash-map.md) и [< hash_set](hash-set.md) > заголовков в [пространстве имен stdext](stdext-namespace.md).
+Члены [<hash_map>](hash-map.md) и [<hash_set>](hash-set.md) заголовки в [stdext Namespace](stdext-namespace.md).
 
 ### <a name="example"></a>Пример
 
@@ -88,10 +88,10 @@ The hash_maps hm1 and hm2 are not equal.
 The hash_maps hm1 and hm3 are equal.
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a> operator==
+## <a name="operator"></a><a name="op_eq_eq"></a>оператора
 
 > [!NOTE]
-> Этот API устарел. Вместо него следует использовать [класс unordered_map](unordered-map-class.md).
+> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](unordered-map-class.md).
 
 Проверяет равенство объекта hash_map слева от оператора и объекта hash_map справа от оператора.
 
@@ -101,10 +101,10 @@ bool operator==(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*Левой*\
 Объект типа `hash_map`.
 
-*справа*\
+*Правильно*\
 Объект типа `hash_map`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -155,10 +155,10 @@ The hash_maps hm1 and hm2 are not equal.
 The hash_maps hm1 and hm3 are equal.
 ```
 
-## <a name="operator-hash_multimap"></a><a name="op_neq_mm"></a>operator! = (hash_multimap)
+## <a name="operator-hash_multimap"></a><a name="op_neq_mm"></a>оператор! ( hash_multimap)
 
 > [!NOTE]
-> Этот API устарел. Вместо него следует использовать [класс unordered_multimap](unordered-multimap-class.md).
+> Этот элемент API устарел. Вместо него следует использовать [unordered_multimap Class](unordered-multimap-class.md).
 
 Проверяет неравенство объекта hash_multimap слева от оператора и объекта hash_multimap справа от оператора.
 
@@ -168,10 +168,10 @@ bool operator!=(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*Левой*\
 Объект типа `hash_multimap`.
 
-*справа*\
+*Правильно*\
 Объект типа `hash_multimap`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -222,10 +222,10 @@ The hash_multimaps hm1 and hm2 are not equal.
 The hash_multimaps hm1 and hm3 are equal.
 ```
 
-## <a name="operator--hash_multimap"></a><a name="op_eq_eq_mm"></a>оператор = = (hash_multimap)
+## <a name="operator--hash_multimap"></a><a name="op_eq_eq_mm"></a>оператор (hash_multimap)
 
 > [!NOTE]
-> Этот API устарел. Вместо него следует использовать [класс unordered_multimap](unordered-multimap-class.md).
+> Этот элемент API устарел. Вместо него следует использовать [unordered_multimap Class](unordered-multimap-class.md).
 
 Проверяет равенство объекта hash_multimap слева от оператора и объекта hash_multimap справа от оператора.
 
@@ -235,10 +235,10 @@ bool operator==(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*Левой*\
 Объект типа `hash_multimap`.
 
-*справа*\
+*Правильно*\
 Объект типа `hash_multimap`.
 
 ### <a name="return-value"></a>Возвращаемое значение

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CRT, security enhancements
 - parameters [C++], validation
 ms.assetid: d9568b08-9514-49cd-b3dc-2454ded195a3
-ms.openlocfilehash: cf8bee39d6ec0f41049586d3861dcf450b7b2aaa
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 1b42c766a7b75cb3f4d5c20d715968905d529d04
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746947"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81361007"
 ---
 # <a name="security-features-in-the-crt"></a>Возможности безопасности в CRT
 
@@ -52,7 +52,7 @@ char szBuf[10];
 strcpy(szBuf, "test"); // warning: deprecated
 ```
 
-Задание символа `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` равным 1 устраняет предупреждение, заменяя вызов функции `strcpy` вызовом функции `strcpy_s`, которая предотвращает переполнение буфера. Дополнительные сведения см. в разделе [Secure Template Overloads](../c-runtime-library/secure-template-overloads.md).
+Задание символа `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` равным 1 устраняет предупреждение, заменяя вызов функции `strcpy` вызовом функции `strcpy_s`, которая предотвращает переполнение буфера. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../c-runtime-library/secure-template-overloads.md).
 
 Для тех нерекомендуемых функций, у которых нет безопасных шаблонных перегрузок, определенно стоит рассмотреть возможность обновления кода вручную для использования безопасных функций.
 
@@ -64,11 +64,11 @@ strcpy(szBuf, "test"); // warning: deprecated
 
 - `Parameter Validation`. Параметры, передаваемые в функции CRT, проверяются и в безопасных функциях, и во многих существовавших ранее версиях функций. Эти проверки включают:
 
-   - Проверка на значение **NULL**, переданное в функции.
+  - Проверка на значение **NULL**, переданное в функции.
 
-   - Проверка допустимости перечислимых значений.
+  - Проверка допустимости перечислимых значений.
 
-   - Проверка принадлежности целочисленных значений допустимым диапазонам.
+  - Проверка принадлежности целочисленных значений допустимым диапазонам.
 
 - Дополнительные сведения см. в разделе [Проверка параметров](../c-runtime-library/parameter-validation.md).
 
@@ -86,8 +86,8 @@ strcpy(szBuf, "test"); // warning: deprecated
 
 - `Format string syntax checking`. Недопустимые строки обнаруживаются, например, с помощью символов полей неправильного типа в строках формата`printf`.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Проверка параметров](../c-runtime-library/parameter-validation.md)<br/>
-[Безопасные перегрузки шаблонов](../c-runtime-library/secure-template-overloads.md)<br/>
-[Функции библиотеки CRT](../c-runtime-library/crt-library-features.md)
+[Безопасный шаблон перегрузки](../c-runtime-library/secure-template-overloads.md)<br/>
+[Особенности библиотеки CRT](../c-runtime-library/crt-library-features.md)

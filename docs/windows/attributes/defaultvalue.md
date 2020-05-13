@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - defaultvalue attribute
 ms.assetid: efa5d050-b2cc-4d9e-9b8e-79954f218d3a
-ms.openlocfilehash: b2057658b5881efd0c3ff095d51e5ee88c9c533e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: aaa2290c871df3a2482294794461e53afe00568d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69490918"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214852"
 ---
 # <a name="defaultvalue"></a>defaultvalue
 
@@ -26,9 +26,9 @@ ms.locfileid: "69490918"
 ### <a name="parameters"></a>Параметры
 
 *value*<br/>
-Значение по умолчанию для параметра.
+Значение параметра по умолчанию.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Атрибут **DefaultValue** C++ имеет те же функциональные возможности, что и атрибут MIDL [DefaultValue](/windows/win32/Midl/defaultvalue) .
 
@@ -60,19 +60,19 @@ __interface IFireTabCtrl : IDispatch {
 
 |||
 |-|-|
-|**Относится к**|Параметр интерфейса|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Отсутствуют|
-|**Недопустимые атрибуты**|Отсутствуют|
+|**Применение**|Параметр интерфейса|
+|**Повторяемый**|нет|
+|**Обязательные атрибуты**|None|
+|**Недопустимые атрибуты**|None|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты параметра](parameter-attributes.md)<br/>
 [out](out-cpp.md)<br/>
 [retval](retval.md)<br/>
-[in](in-cpp.md)<br/>
+[В поле](in-cpp.md)<br/>
 [pointer_default](pointer-default.md)<br/>
 [unique](unique-cpp.md)

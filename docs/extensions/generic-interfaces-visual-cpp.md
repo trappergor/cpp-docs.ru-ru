@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic interfaces
 - interfaces, generic [C++}
 ms.assetid: f3da788a-ba83-4db7-9dcf-9b95a8fb9d1a
-ms.openlocfilehash: 035636f2723cd949f5a1852b3d5500a20f5fb493
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 35dba37f1441144a3f7276388be1f61bebc84139
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516369"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182023"
 ---
 # <a name="generic-interfaces-ccli"></a>Универсальные интерфейсы (C++/CLI)
 
@@ -30,15 +30,15 @@ ms.locfileid: "65516369"
 [type-parameter-constraints-clauses][accesibility-modifiers] interface class identifier [: base-list] {   interface-body} [declarators] ;
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-*Атрибуты*<br/>
+*attributes*<br/>
 (Необязательно) Дополнительные описательные данные. Дополнительные сведения об атрибутах и классах атрибутов см. в разделе **Атрибуты**.
 
 *class-key*<br/>
 **class** или **typename**
 
-*type-parameter-identifier(s)*<br/>
+*Идентификаторы type-parameter*<br/>
 Разделенный запятыми список идентификаторов.
 
 *type-parameter-constraints-clauses*<br/>
@@ -313,6 +313,6 @@ The integer field contains: 1234
 The String field contains: My string
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Универсальные шаблоны](generics-cpp-component-extensions.md)

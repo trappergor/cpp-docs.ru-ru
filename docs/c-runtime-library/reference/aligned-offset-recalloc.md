@@ -1,8 +1,9 @@
 ---
 title: _aligned_offset_recalloc
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _aligned_offset_recalloc
+- _o__aligned_offset_recalloc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - aligned_offset_recalloc function
 - _aligned_offset_recalloc function
 ms.assetid: a258f54e-eeb4-4853-96fc-007d710f98e9
-ms.openlocfilehash: ef8e68622c86e4504745a63cb0c2c3be4e916163
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4c71bc701beaabe179676656b331fcce966d1db1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944139"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917170"
 ---
 # <a name="_aligned_offset_recalloc"></a>_aligned_offset_recalloc
 
@@ -54,13 +56,13 @@ void * _aligned_offset_recalloc(
 *memblock*<br/>
 Указатель текущего блока памяти.
 
-*Нумерация*<br/>
+*number*<br/>
 Число элементов.
 
 *size*<br/>
 Длина каждого элемента в байтах.
 
-*Выравнивание*<br/>
+*выравнивание*<br/>
 Значение выравнивания, которое должно быть целой степенью числа 2.
 
 *offset*<br/>
@@ -72,13 +74,15 @@ void * _aligned_offset_recalloc(
 
 **_aligned_offset_recalloc** `__declspec(noalias)` помечается `__declspec(restrict)`и, что означает, что функция гарантированно не изменяет глобальные переменные и что возвращаемый указатель не имеет псевдонима. Дополнительные сведения см. в разделах [noalias](../../cpp/noalias.md) и [restrict](../../cpp/restrict.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Как и [_aligned_offset_malloc](aligned-offset-malloc.md), **_aligned_offset_recalloc** позволяет выстроить структуру по смещению в пределах структуры.
 
-**_aligned_offset_recalloc** основан на **malloc**. Дополнительные сведения об использовании **_aligned_offset_malloc**см. в разделе [malloc](malloc.md). Если *мемблокк* имеет **значение NULL**, функция вызывает **_aligned_offset_malloc** внутренним образом.
+**_aligned_offset_recalloc** основан на **malloc**. Дополнительные сведения об использовании **_aligned_offset_malloc**см. в разделе [malloc](malloc.md). Если *мемблокк* имеет **значение NULL**, функция вызывает **_aligned_offset_malloc** внутренне.
 
-Эта **функция устанавливает значение** **еномем** , если выделение памяти завершилось ошибкой, или если запрошенный размер (*Размер* *номера* * ) больше **_HEAP_MAXREQ**. Дополнительные сведения о параметре " [право_doserrno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)" см **. в разделе**"переданные", "_sys_errlist" и "_sys_nerr". Кроме того, **_aligned_offset_recalloc** проверяет свои параметры. Если параметр *alignment* не является степенью 2 или *смещение* больше или равно запрошенному размеру и не равно нулю, эта функция вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция возвращает **значение NULL** **и устанавливает для** **еинвал**.
+Эта **функция устанавливает значение** **еномем** , если выделение памяти завершилось ошибкой или если запрошенный размер (*Размер**номера* * ) превышает **_HEAP_MAXREQ**. Дополнительные **сведения об этом см. в разделе** [пере_doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Кроме того, **_aligned_offset_recalloc** проверяет свои параметры. Если параметр *alignment* не является степенью 2 или *смещение* больше или равно запрошенному размеру и не равно нулю, эта функция вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция возвращает **значение NULL** **и устанавливает для** **еинвал**.
+
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -86,7 +90,7 @@ void * _aligned_offset_recalloc(
 |-------------|---------------------|
 |**_aligned_offset_recalloc**|\<malloc.h>|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Выравнивание данных](../../c-runtime-library/data-alignment.md)<br/>
 [_recalloc](recalloc.md)<br/>

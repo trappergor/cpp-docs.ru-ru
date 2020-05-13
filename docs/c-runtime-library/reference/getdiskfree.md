@@ -1,8 +1,9 @@
 ---
 title: _getdiskfree
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _getdiskfree
+- _o__getdiskfree
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - disk size
 - getdiskfree function
 ms.assetid: 47a3f6cf-4816-452a-8f3d-1c3ae02a0f2a
-ms.openlocfilehash: 0feee21ee76d076263ea3750d00fd0142f26b7d9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f94e8ecd314ed55d8519363d80dda57f661f18e5
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955101"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913818"
 ---
 # <a name="_getdiskfree"></a>_getdiskfree
 
@@ -64,7 +66,7 @@ unsigned _getdiskfree(
 
 Если вызов функции заканчивается удачно, возвращается нулевое значение. Если функция завершается с ошибкой, возвращается значение кода ошибки. Значение « **No** i» задается для любых ошибок, возвращаемых операционной системой. Дополнительные сведения об условиях ошибки, обозначенных как "Автоописание **", см**. в разделе " [константы](../../c-runtime-library/errno-constants.md)".
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Структура **_diskfree_t** определена в Direct. h.
 
@@ -79,13 +81,15 @@ struct _diskfree_t {
 
 Эта функция проверяет свои параметры. Если указатель *дривеинфо* имеет **значение NULL** или *диск* указывает недопустимый диск, эта функция вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает **еинвал** **и устанавливает значение** переводится в **еинвал**. Допустимый диапазон дисков: от 0 до 26. Значение *диска* 0 указывает текущий диск; После этого числа сопоставляются с буквами английского алфавита, что означает, что 1 указывает на диск A, 3 — на диск C и т. д.
 
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
+
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
 |**_getdiskfree**|\<direct.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -189,6 +193,6 @@ void utoiRightJustified(TCHAR* szLeft, TCHAR* szRight, unsigned uVal) {
 ======================================================================
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Управление каталогами](../../c-runtime-library/directory-control.md)<br/>

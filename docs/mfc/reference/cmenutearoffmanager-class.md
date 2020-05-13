@@ -24,18 +24,18 @@ helpviewer_keywords:
 - CMenuTearOffManager [MFC], SetInUse
 - CMenuTearOffManager [MFC], SetupTearOffMenus
 ms.assetid: ab7ca272-ce42-4678-95f7-6ad75038f5a0
-ms.openlocfilehash: 8b92ddad9d3a6de41cf6914dee268f6e54b5d420
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6aef644cb7364184df91a6e8caee18cac65af4cc
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62163712"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751805"
 ---
 # <a name="cmenutearoffmanager-class"></a>Класс CMenuTearOffManager
 
 Управление перемещаемыми меню. Перемещаемое меню — это меню в строке меню. Пользователь может удалить перемещаемое меню из строки меню, превращая перемещаемое меню в плавающее.
 
-   Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
+   Для получения более подробной информации смотрите исходный код, расположенный в папке **VC\\atlmfc\\src\\mfc** установки Visual Studio.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -47,30 +47,30 @@ class CMenuTearOffManager : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CMenuTearOffManager::CMenuTearOffManager](#cmenutearoffmanager)|Создает объект `CMenuTearOffManager`.|
+|[CMenuTearOffManager::CMenuTearOffManager](#cmenutearoffmanager)|Формирует объект `CMenuTearOffManager`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[CMenuTearOffManager::Build](#build)||
 |[CMenuTearOffManager::GetRegPath](#getregpath)||
-|[CMenuTearOffManager::Initialize](#initialize)|Инициализирует `CMenuTearOffManager` объекта.|
-|[CMenuTearOffManager::IsDynamicID](#isdynamicid)||
+|[CMenuTearOffManager::Первоначальнизировать](#initialize)|Инициализирует объект `CMenuTearOffManager`.|
+|[CMenuTearOffManager:: IsDynamicID](#isdynamicid)||
 |[CMenuTearOffManager::Parse](#parse)||
-|[CMenuTearOffManager::Reset](#reset)||
-|[CMenuTearOffManager::SetInUse](#setinuse)||
+|[CMenuTearOffManager::Перезагрузка](#reset)||
+|[Cmenutearoffmanager::Setinuse](#setinuse)||
 |[CMenuTearOffManager::SetupTearOffMenus](#setuptearoffmenus)||
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Чтобы использовать перемещаемые меню в приложении, необходимо иметь `CMenuTearOffManager` объекта. В большинстве случаев не создать или инициализировать `CMenuTearOffManager` объекта напрямую. Это осуществляется автоматически при вызове [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus) функции.
+Для того, чтобы использовать в приложении отрывные `CMenuTearOffManager` меню, необходимо иметь объект. В большинстве случаев вы не будете `CMenuTearOffManager` создавать или инициализировать объект напрямую. Это обрабатывается для вас, когда вы звоните [cWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus) функции.
 
 ## <a name="example"></a>Пример
 
-В следующем примере показано, как для создания и инициализации `CMenuTearOffManager` путем вызова метода `CWinAppEX::EnableTearOffMenus` метод. Этот фрагмент кода входит в состав [примера Word Pad](../../overview/visual-cpp-samples.md).
+Следующий пример показывает, как построить `CMenuTearOffManager` и инициализировать объект, вызывая `CWinAppEX::EnableTearOffMenus` метод. Этот фрагмент кода входит в состав [примера Word Pad](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#12](../../mfc/reference/codesnippet/cpp/cmenutearoffmanager-class_1.cpp)]
 
@@ -84,9 +84,9 @@ class CMenuTearOffManager : public CObject
 
 **Заголовок:** afxmenutearoffmanager.h
 
-##  <a name="build"></a>  CMenuTearOffManager::Build
+## <a name="cmenutearoffmanagerbuild"></a><a name="build"></a>CMenuTearOffManager::Build
 
-```
+```cpp
 void Build(
     UINT uiTearOffBarID,
     CString& strText);
@@ -94,25 +94,25 @@ void Build(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *uiTearOffBarID*<br/>
+(в) *uiTearOffBarID*<br/>
 
-[in] *strText*<br/>
+(в) *strText*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="cmenutearoffmanager"></a>  CMenuTearOffManager::CMenuTearOffManager
+## <a name="cmenutearoffmanagercmenutearoffmanager"></a><a name="cmenutearoffmanager"></a>CMenuTearOffManager::CMenuTearOffManager
 
-Создает [CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md) объекта.
+Строит объект [CMenuTearOffManager.](../../mfc/reference/cmenutearoffmanager-class.md)
 
 ```
 CMenuTearOffManager();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-В большинстве случаев не следует создавать `CMenuTearOffManager` вручную. Платформа приложения создает `CMenuTearOffManager` объекта при вызове [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus).
+В большинстве случаев не `CMenuTearOffManager` следует создавать вручную. Рамки приложения создают `CMenuTearOffManager` объект при вызове [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus).
 
-##  <a name="getregpath"></a>  CMenuTearOffManager::GetRegPath
+## <a name="cmenutearoffmanagergetregpath"></a><a name="getregpath"></a>CMenuTearOffManager::GetRegPath
 
 ```
 LPCTSTR GetRegPath() const;
@@ -120,11 +120,11 @@ LPCTSTR GetRegPath() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="initialize"></a>  CMenuTearOffManager::Initialize
+## <a name="cmenutearoffmanagerinitialize"></a><a name="initialize"></a>CMenuTearOffManager::Первоначальнизировать
 
-Инициализирует [CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md) объекта.
+Инициализирует объект [CMenuTearOffManager.](../../mfc/reference/cmenutearoffmanager-class.md)
 
 ```
 BOOL Initialize(
@@ -136,23 +136,23 @@ BOOL Initialize(
 ### <a name="parameters"></a>Параметры
 
 *lpszRegEntry*<br/>
-[in] Строка, содержащая путь к записи реестра. Приложений сохраняет параметры для перемещаемой панелей в этой записи реестра.
+(в) Строка, содержащая путь ввода реестра. Ваши приложения хранят настройки для оторваний баров в этом реестре.
 
-*uiTearOffMenuFirst*<br/>
-[in] Первый идентификатор меню перемещаемое меню.
+*uiTearOffMenuПервый*<br/>
+(в) Первый идентификатор меню для отрыва меню.
 
 *uiTearOffMenuLast*<br/>
-[in] Идентификатор последнего меню для перемещаемое меню.
+(в) Последний идентификатор меню для отрыва меню.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Имеет ненулевое значение в случае успешного выполнения, иначе — 0.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Диапазон идентификаторов, меню из *uiTearOffMenuFirst* для *uiTearOffMenuLast* должен быть непрерывный интервал. Интервал определяет количество перемещаемые меню, которые могут присутствовать в то же время, в приложении.
+Диапазон идотов меню от *uiTearOffMenuFirst* до *uiTearOffMenuLast* должен быть непрерывным интервалом. Интервал определяет количество отрывных меню, которые могут отображаться в то же время в приложении.
 
-##  <a name="isdynamicid"></a>  CMenuTearOffManager::IsDynamicID
+## <a name="cmenutearoffmanagerisdynamicid"></a><a name="isdynamicid"></a>CMenuTearOffManager:: IsDynamicID
 
 ```
 BOOL IsDynamicID(UINT uiID) const;
@@ -160,13 +160,13 @@ BOOL IsDynamicID(UINT uiID) const;
 
 ### <a name="parameters"></a>Параметры
 
-[in] *uiID*<br/>
+(в) *uiID*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="parse"></a>  CMenuTearOffManager::Parse
+## <a name="cmenutearoffmanagerparse"></a><a name="parse"></a>CMenuTearOffManager::Parse
 
 ```
 UINT Parse(CString& str);
@@ -174,27 +174,27 @@ UINT Parse(CString& str);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *str*<br/>
+(в) *str*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="reset"></a>  CMenuTearOffManager::Reset
+## <a name="cmenutearoffmanagerreset"></a><a name="reset"></a>CMenuTearOffManager::Перезагрузка
 
-```
+```cpp
 void Reset(HMENU hmenu);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-[in] *hmenu*<br/>
+(в) *мену*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="setinuse"></a>  CMenuTearOffManager::SetInUse
+## <a name="cmenutearoffmanagersetinuse"></a><a name="setinuse"></a>Cmenutearoffmanager::Setinuse
 
-```
+```cpp
 void SetInUse(
     UINT uiCmdId,
     BOOL bUse = TRUE);
@@ -202,25 +202,25 @@ void SetInUse(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *uiCmdId*<br/>
+(в) *uiCmdId*<br/>
 
-[in] *bUse*<br/>
+(в) *bUse*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="setuptearoffmenus"></a>  CMenuTearOffManager::SetupTearOffMenus
+## <a name="cmenutearoffmanagersetuptearoffmenus"></a><a name="setuptearoffmenus"></a>CMenuTearOffManager::SetupTearOffMenus
 
-```
+```cpp
 void SetupTearOffMenus(HMENU hMenu);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-[in] *hMenu*<br/>
+(в) *hMenu*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)<br/>

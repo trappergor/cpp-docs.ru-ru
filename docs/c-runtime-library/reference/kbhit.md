@@ -1,8 +1,9 @@
 ---
 title: _kbhit
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _kbhit
+- _o__kbhit
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +34,12 @@ helpviewer_keywords:
 - _kbhit function
 - keyboards, checking input
 ms.assetid: e82a1cc9-bbec-4150-b678-a7e433220fe4
-ms.openlocfilehash: 972b060dd98b5d267fa1f529c898573d4b82bb61
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: bfe26a988c491c4d137bfc1badc093d56cde4010
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438090"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916552"
 ---
 # <a name="_kbhit"></a>_kbhit
 
@@ -61,13 +63,15 @@ int _kbhit( void );
 
 Функция **_kbhit** проверяет консоль на наличие недавних нажатий клавиш. Если функция возвращает ненулевое значение, нажатие клавиши ожидает в буфере. Чтобы получить нажатие клавиши, программа может вызвать **_getch** или **_getche** .
 
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
+
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
 |**_kbhit**|\<conio.h>|
 
-Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Библиотеки
 
@@ -107,4 +111,4 @@ Key struck was 'q'
 
 ## <a name="see-also"></a>См. также раздел
 
-[Ввод-вывод на консоль и порт](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[Ввод-вывод в консоль и порт](../../c-runtime-library/console-and-port-i-o.md)<br/>

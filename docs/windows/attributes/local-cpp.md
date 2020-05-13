@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - local attribute
 ms.assetid: 35cdd668-bd8e-492a-b7b8-263e7b662437
-ms.openlocfilehash: 853331ce191f8fe41d5967d2d625a3dac8543a4d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d3710eee748a43a1daa5c07d8b3feb6beb8f64fa
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514412"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214751"
 ---
 # <a name="local-c"></a>local (C++)
 
@@ -23,7 +23,7 @@ ms.locfileid: "69514412"
 [local]
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 **Локальный** C++ атрибут имеет те же функциональные возможности, что и [локальный](/windows/win32/Midl/local) атрибут MIDL.
 
@@ -37,14 +37,14 @@ ms.locfileid: "69514412"
 
 |||
 |-|-|
-|**Относится к**|**интерфейс**, метод интерфейса|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Отсутствуют|
+|**Применение**|**интерфейс**, метод интерфейса|
+|**Повторяемый**|нет|
+|**Обязательные атрибуты**|None|
 |**Недопустимые атрибуты**|`dispinterface`|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты интерфейса](interface-attributes.md)<br/>

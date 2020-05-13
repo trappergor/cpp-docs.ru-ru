@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4959
 ms.assetid: 3a128f3e-4d8a-4565-ba1a-5d32fdeb5982
-ms.openlocfilehash: 646347dec7bc2bac7fa73c8f754d2f9549cb2ba6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 13d2ed705bff7b42eb3c348692a5829bd54158b0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388669"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164876"
 ---
 # <a name="compiler-warning-c4959"></a>Предупреждение компилятора C4959
 
-> не удается определить неуправляемую структуру "*тип*" в/CLR: safe, поскольку доступ к ее членам выдает код, недоступный для проверки
+> не удается определить неуправляемую структуру "*тип*" в/CLR: Сейф, так как доступ к ее членам дает непроверяемый код
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Обращение к члену неуправляемого типа приводит к формированию непроверяемого (peverify.exe) образа.
 
-Дополнительные сведения см. в разделе [чистый и проверяемый код (C++выполняет)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Дополнительные сведения см. в разделе [чистый и проверяемый кодC++(/CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
-**/CLR: safe** параметр компилятора в Visual Studio 2015 не рекомендуется и не поддерживается в Visual Studio 2017.
+Параметр компилятора **/clr: Сейф** является устаревшим в visual Studio 2015 и не поддерживается в visual Studio 2017.
 
 Это предупреждение выдается в качестве ошибки, и его можно отключить с помощью прагмы [warning](../../preprocessor/warning.md) или параметра компилятора [/wd](../../build/reference/compiler-option-warning-level.md) .
 

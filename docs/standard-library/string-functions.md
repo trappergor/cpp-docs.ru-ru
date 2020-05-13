@@ -28,23 +28,23 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::to_string [C++]
 - std::to_wstring [C++]
-ms.openlocfilehash: 459e46f6aa144c591173a159c282658b120b1af3
-ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
-ms.translationtype: HT
+ms.openlocfilehash: 3f1dca71a6bb9d5461150378191b9373f907ecd1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80150607"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376663"
 ---
 # <a name="ltstringgt-functions"></a>Функции &lt;string&gt;
 
 ||||
 |-|-|-|
-|[getline](#getline)|[stod](#stod)|[stof](#stof)|
-|[stoi](#stoi)|[stol](#stol)|[stold](#stold)|
+|[getline](#getline)|[stod](#stod)|[стус](#stof)|
+|[стои](#stoi)|[stol](#stol)|[stold](#stold)|
 |[stoll](#stoll)|[stoul](#stoul)|[stoull](#stoull)|
-|[swap](#swap)|[to_string](#to_string)|[to_wstring](#to_wstring)|
+|[Своп](#swap)|[to_string](#to_string)|[to_wstring](#to_wstring)|
 
-## <a name="getline"></a><a name="getline"></a>  getline
+## <a name="getline"></a><a name="getline"></a>получить линию
 
 Извлекает строки из входного потока, последовательно по одной строке.
 
@@ -52,70 +52,70 @@ ms.locfileid: "80150607"
 // (1) delimiter as parameter
 template <class CharType, class Traits, class Allocator>
 basic_istream<CharType, Traits>& getline(
-    basic_istream<CharType, Traits>& is,
+    basic_istream<CharType, Traits>& in_stream,
     basic_string<CharType, Traits, Allocator>& str,
-    CharType delim);
+    CharType delimiter);
 
 template <class CharType, class Traits, class Allocator>
 basic_istream<CharType, Traits>& getline(
-    basic_istream<CharType, Traits>&& is,
+    basic_istream<CharType, Traits>&& in_stream,
     basic_string<CharType, Traits, Allocator>& str,
-    const CharType delim);
+    const CharType delimiter);
 
 // (2) default delimiter used
 template <class CharType, class Traits, class Allocator>
 basic_istream<CharType, Traits>& getline(
-    basic_istream<CharType, Traits>& is,
+    basic_istream<CharType, Traits>& in_stream,
     basic_string<CharType, Traits, Allocator>& str);
 
 template <class Allocator, class Traits, class Allocator>
 basic_istream<Allocator, Traits>& getline(
-    basic_istream<Allocator, Traits>&& is,
+    basic_istream<Allocator, Traits>&& in_stream,
     basic_string<Allocator, Traits, Allocator>& str);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*is*\
+*in_stream*\
 Входной поток, из которого извлекается строка.
 
-\ *str*
+*Ул*\
 Строка, в которую считываются символы из входного потока.
 
-*delim*\
+*Разделитель*\
 Разделитель строк.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Входной поток *—* .
+Вхотогий поток *in_stream*.
 
 ### <a name="remarks"></a>Remarks
 
-Пара подписей функций, помеченных `(1)` извлечения символов из *,* до тех пор, пока не будет найден *delim* , сохраняя их в *str*.
+Пара сигнатур `(1)` функций с пометкой экстракт символов из *in_stream* до тех пор, пока *делимитер* не будет найден, храним их в *str.*
 
-Пара подписей функций, помеченных `(2)`, использует новую строку в качестве разделителя по умолчанию и ведет себя как во **встроенном**(`is`, `str`, `is`. `widen`(' `\n`')).
+Пара отмеченных `(2)` подписей функций использует newline в качестве `getline(in_stream, str, in_stream. widen('\n'))`делимитера линии по умолчанию и ведет себя как.
 
 Вторая функция каждой пары аналогична первой и поддерживает [ссылки rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md).
 
 Извлечение останавливается при возникновении одного из следующих условий.
 
-- В конце файла, в этом случае флаг внутреннего состояния *имеет* значение `ios_base::eofbit`.
+- В конце файла, и в этом случае внутренний государственный флаг *in_stream* установлен на `ios_base::eofbit`.
 
-- после того как функция извлечет элемент, который оценивается как эквивалентный `delim`, и в этом случае элемент не возвращается и не добавляется в управляемую последовательность;
+- После функции извлекает элемент, который сравнивается с *делимитетом.* Элемент не возвращается или не пригоздале к контролируемой последовательности.
 
-- После того как функция извлекает `str.`[max_size](../standard-library/basic-string-class.md#max_size) элементы, в этом случае флаг внутреннего состояния *имеет* значение `ios_base::failbit`.
+- После функции `str.`извлекает [max_size](../standard-library/basic-string-class.md#max_size) элементы. Внутренний государственный *in_stream* флаг in_stream `ios_base::failbit`установлен на .
 
-- Другая ошибка, отличная от перечисленных ранее. в этом случае флаг внутреннего состояния *имеет* значение `ios_base::badbit`
+- Некоторые другие ошибки, кроме ранее перечисленных; внутренний государственный *in_stream* флаг in_stream `ios_base::badbit`установлен на .
 
 Сведения о внутренних флагах состояния см. в разделе [ios_base::iostate](../standard-library/ios-base-class.md#iostate).
 
-Если функция не извлекает ни одного элемента, флаг внутреннего состояния *имеет* значение `ios_base::failbit`. В любом случае `getline` возвращает *значение*.
+Если функция не извлекает элементов, *in_stream* внутренний флаг `ios_base::failbit`состояния in_stream установлен. В любом `getline` случае, *возвращается in_stream*.
 
-Если возникает исключение, *то имеет значение* , а *str* остается в допустимом состоянии.
+Если исключение брошено, *in_stream* и *str* остаются в допустимом состоянии.
 
 ### <a name="example"></a>Пример
 
-Следующий код демонстрирует `getline()` в двух режимах: в первом с разделителем — символом новой строки (по умолчанию), во втором с разделителем — пробелом. Символ конца файла (CTRL-Z на клавиатуре) используется для управления завершением циклов while. При этом внутренний флаг состояния `cin` устанавливается в значение `eofbit`, которое необходимо очистить с помощью [basic_ios::clear()](../standard-library/basic-ios-class.md#clear), чтобы второй цикл while мог правильно работать.
+Следующий код демонстрирует `getline()` в двух режимах: в первом с разделителем — символом новой строки (по умолчанию), во втором с разделителем — пробелом. Символ конца файла (CTRL-Z на клавиатуре) используется для управления завершением циклов while. Это значение устанавливает внутренний `cin` `eofbit`флаг состояния к, который должен быть очищен с [basic_ios::ясным()](../standard-library/basic-ios-class.md#clear) до второго, в то время как цикл будет работать должным образом.
 
 ```cpp
 // compile with: /EHsc /W4
@@ -156,9 +156,9 @@ int main()
 }
 ```
 
-## <a name="stod"></a><a name="stod"></a>  stod
+## <a name="stod"></a><a name="stod"></a>stod
 
-Преобразует последовательность символов в значение **типа Double**.
+Преобразует последовательность символов **`double`** в .
 
 ```cpp
 double stod(
@@ -173,20 +173,21 @@ double stod(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Description|
-|---------------|-----------------|
-|*str*|Последовательность символов для преобразования.|
-|*IDX*|Значение индекса первого непреобразованного символа.|
+*Ул*\
+Последовательность символов для преобразования.
+
+*Idx*\
+Значение индекса первого непреобразованного символа.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение **типа Double** .
+Значение. **`double`**
 
 ### <a name="remarks"></a>Remarks
 
-Функция преобразует последовательность элементов в *str* в значение `val` типа **Double** , как при вызове `strtod( str.c_str(), _Eptr)`, где `_Eptr` является объектом, внутренним с функцией. Если `str.c_str() == *_Eptr`, то создается объект типа `invalid_argument`. Если такой вызов задает `errno`, то создается объект типа `out_of_range`. В противном случае, если *idx* не является пустым указателем, функция сохраняет `*_Eptr -  str.c_str()` в `*idx` и возвращает `val`.
+Функция преобразует последовательность элементов в *str* в **`double`** значение типа, как будто вызывая, `strtod( str.c_str(), _Eptr)`где `_Eptr` объект внутренний к функции. Если `str.c_str() == *_Eptr`он бросает объект типа. `invalid_argument` Если такой вызов задает `errno`, то создается объект типа `out_of_range`. В противном случае, если *idx* не является `*_Eptr -  str.c_str()` `*idx` нулевой указатель, функция хранит и возвращает значение.
 
-## <a name="stof"></a><a name="stof"></a>  stof
+## <a name="stof"></a><a name="stof"></a>стус
 
 Преобразует последовательность символов в число с плавающей запятой.
 
@@ -202,20 +203,21 @@ float stof(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Description|
-|---------------|-----------------|
-|*str*|Последовательность символов для преобразования.|
-|*IDX*|Значение индекса первого непреобразованного символа.|
+*Ул*\
+Последовательность символов для преобразования.
+
+*Idx*\
+Значение индекса первого непреобразованного символа.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение с плавающей запятой.
+Значение. **`float`**
 
 ### <a name="remarks"></a>Remarks
 
-Функция преобразует последовательность элементов в *str* в значение `val` типа **float** , как при вызове `strtof( str.c_str(), _Eptr)`, где `_Eptr` является объектом, внутренним с функцией. Если `str.c_str() == *_Eptr`, то создается объект типа `invalid_argument`. Если такой вызов задает `errno`, то создается объект типа `out_of_range`. В противном случае, если *idx* не является пустым указателем, функция сохраняет `*_Eptr -  str.c_str()` в `*idx` и возвращает `val`.
+Функция преобразует последовательность элементов в *str* в **`float`** значение типа, как будто вызывая, `strtof( str.c_str(), _Eptr)`где `_Eptr` объект внутренний к функции. Если `str.c_str() == *_Eptr`он бросает объект типа. `invalid_argument` Если такой вызов задает `errno`, то создается объект типа `out_of_range`. В противном случае, если *idx* не является `*_Eptr -  str.c_str()` `*idx` нулевой указатель, функция хранит и возвращает значение.
 
-## <a name="stoi"></a><a name="stoi"></a>  stoi
+## <a name="stoi"></a><a name="stoi"></a>стои
 
 Преобразует последовательность символов в целое число.
 
@@ -237,23 +239,26 @@ int stoi(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Description|
-|---------------|-----------------|
-|*str*|Последовательность символов для преобразования.|
-|*IDX*|Содержит индекс первого возвращенного непреобразованного символа.|
-|*base*|Используемое числовое основание.|
+*Ул*\
+Последовательность символов для преобразования.
+
+*Idx*\
+Значение индекса первого непреобразованного символа.
+
+*Базы*\
+Используемое числовое основание.
 
 ### <a name="remarks"></a>Remarks
 
-Функция `stoi` преобразует последовательность символов в *str* в значение типа **int** и возвращает значение. Например, если передать последовательность символов "10", `stoi` возвращает целочисленное значение 10.
+Функция `stoi` преобразует последовательность символов в *str* в **`int`** значение типа и возвращает значение. Например, если передать последовательность символов "10", `stoi` возвращает целочисленное значение 10.
 
-`stoi` работает аналогично функции `strtol` для однобайтовых символов при вызове `strtol( str.c_str(), _Eptr, idx)`, где `_Eptr` — внутренний объект функции; или `wcstol` для двухбайтовых символов при вызове `wcstol(Str.c_str(), _Eptr, idx)`. Дополнительные сведения см. в разделе [strtol, wcstol, _strtol_l, _wcstol_l](../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md).
+`stoi`ведет себя аналогично функции `strtol` для однобайных символов, когда она `strtol( str.c_str(), _Eptr, idx)`называется таким образом, где `_Eptr` объект внутренний к функции; или `wcstol` для широких символов, когда это `wcstol(Str.c_str(), _Eptr, idx)`называется аналогичным образом, . Дополнительные сведения см. в разделе [strtol, wcstol, _strtol_l, _wcstol_l](../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md).
 
-Если `str.c_str() == *_Eptr`, `stoi` создает объект типа `invalid_argument`. Если такой вызов будет установлен `errno`или если возвращаемое значение не может быть представлено в виде объекта типа **int**, то создается объект типа `out_of_range`. В противном случае, если *idx* не является пустым указателем, функция сохраняет `*_Eptr - str.c_str()` в `*idx`.
+`str.c_str() == *_Eptr`Если, `stoi` бросает объект типа `invalid_argument`. Если такой вызов `errno`будет установлен, или если возвращенное значение не **`int`** может быть представлено как `out_of_range`объект типа, он бросает объект типа. В противном случае, если *idx* не является `*_Eptr - str.c_str()` `*idx`нулевой указатель, функция хранится в .
 
-## <a name="stol"></a><a name="stol"></a>  stol
+## <a name="stol"></a><a name="stol"></a>Штол
 
-Преобразует последовательность символов в значение **типа Long**.
+Преобразует последовательность символов **`long`** в .
 
 ```cpp
 long stol(
@@ -269,11 +274,14 @@ long stol(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Description|
-|---------------|-----------------|
-|*str*|Последовательность символов для преобразования.|
-|*IDX*|Значение индекса первого непреобразованного символа.|
-|*base*|Используемое числовое основание.|
+*Ул*\
+Последовательность символов для преобразования.
+
+*Idx*\
+Значение индекса первого непреобразованного символа.
+
+*Базы*\
+Используемое числовое основание.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -281,11 +289,11 @@ long stol(
 
 ### <a name="remarks"></a>Remarks
 
-Функция преобразует последовательность элементов в *str* в значение `val` типа **Long** , если выполняется вызов `strtol( str.c_str(), _Eptr, idx)`, где `_Eptr` является объектом, внутренним с функцией. Если `str.c_str() == *_Eptr`, то создается объект типа `invalid_argument`. Если такой вызов задает `errno`, то создается объект типа `out_of_range`. В противном случае, если *idx* не является пустым указателем, функция сохраняет `*_Eptr -  str.c_str()` в `*idx` и возвращает `val`.
+Функция преобразует последовательность элементов в *str* в **`long`** значение типа, как будто вызывая, `strtol( str.c_str(), _Eptr, idx)`где `_Eptr` объект внутренний к функции. Если `str.c_str() == *_Eptr`он бросает объект типа. `invalid_argument` Если такой вызов задает `errno`, то создается объект типа `out_of_range`. В противном случае, если *idx* не является `*_Eptr -  str.c_str()` `*idx` нулевой указатель, функция хранит и возвращает значение.
 
-## <a name="stold"></a><a name="stold"></a>  stold
+## <a name="stold"></a><a name="stold"></a>stold
 
-Преобразует последовательность символов в **длинное двойное**значение.
+Преобразует последовательность символов **`long double`** в .
 
 ```cpp
 double stold(
@@ -299,22 +307,23 @@ double stold(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Description|
-|---------------|-----------------|
-|*str*|Последовательность символов для преобразования.|
-|*IDX*|Значение индекса первого непреобразованного символа.|
+*Ул*\
+Последовательность символов для преобразования.
+
+*Idx*\
+Значение индекса первого непреобразованного символа.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**Длинное двойное** значение.
+Значение. **`long double`**
 
 ### <a name="remarks"></a>Remarks
 
-Функция преобразует последовательность элементов в *str* в значение `val` типа **long double** , как при вызове `strtold( str.c_str(), _Eptr)`, где `_Eptr` является объектом, внутренним с функцией. Если `str.c_str() == *_Eptr`, то создается объект типа `invalid_argument`. Если такой вызов задает `errno`, то создается объект типа `out_of_range`. В противном случае, если *idx* не является пустым указателем, функция сохраняет `*_Eptr -  str.c_str()` в `*idx` и возвращает `val`.
+Функция преобразует последовательность элементов в *str* в **`long double`** значение типа, как будто вызывая, `strtold( str.c_str(), _Eptr)`где `_Eptr` объект внутренний к функции. Если `str.c_str() == *_Eptr`он бросает объект типа. `invalid_argument` Если такой вызов задает `errno`, то создается объект типа `out_of_range`. В противном случае, если *idx* не является `*_Eptr -  str.c_str()` `*idx` нулевой указатель, функция хранит и возвращает значение.
 
-## <a name="stoll"></a><a name="stoll"></a>  stoll
+## <a name="stoll"></a><a name="stoll"></a>Stoll
 
-Преобразует последовательность символов в **длинную длину**.
+Преобразует последовательность символов **`long long`** в .
 
 ```cpp
 long long stoll(
@@ -330,21 +339,24 @@ long long stoll(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Description|
-|---------------|-----------------|
-|*str*|Последовательность символов для преобразования.|
-|*IDX*|Значение индекса первого непреобразованного символа.|
-|*base*|Используемое числовое основание.|
+*Ул*\
+Последовательность символов для преобразования.
+
+*Idx*\
+Значение индекса первого непреобразованного символа.
+
+*Базы*\
+Используемое числовое основание.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**Длинное** значение long.
+Значение. **`long long`**
 
 ### <a name="remarks"></a>Remarks
 
-Функция преобразует последовательность элементов в *str* в значение `val` типа **Long** , если при вызове `strtoll( str.c_str(), _Eptr, idx)`, где `_Eptr` является объектом, внутренним с функцией. Если `str.c_str() == *_Eptr`, то создается объект типа `invalid_argument`. Если такой вызов задает `errno`, то создается объект типа `out_of_range`. В противном случае, если *idx* не является пустым указателем, функция сохраняет `*_Eptr -  str.c_str()` в `*idx` и возвращает `val`.
+Функция преобразует последовательность элементов в *str* в **`long long`** значение типа, как будто вызывая, `strtoll( str.c_str(), _Eptr, idx)`где `_Eptr` объект внутренний к функции. Если `str.c_str() == *_Eptr`он бросает объект типа. `invalid_argument` Если такой вызов задает `errno`, то создается объект типа `out_of_range`. В противном случае, если *idx* не является `*_Eptr -  str.c_str()` `*idx` нулевой указатель, функция хранит и возвращает значение.
 
-## <a name="stoul"></a><a name="stoul"></a>  stoul
+## <a name="stoul"></a><a name="stoul"></a>stoul
 
 Преобразует последовательность символов в длинное целое без знака.
 
@@ -362,11 +374,14 @@ unsigned long stoul(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Description|
-|---------------|-----------------|
-|*str*|Последовательность символов для преобразования.|
-|*IDX*|Значение индекса первого непреобразованного символа.|
-|*base*|Используемое числовое основание.|
+*Ул*\
+Последовательность символов для преобразования.
+
+*Idx*\
+Значение индекса первого непреобразованного символа.
+
+*Базы*\
+Используемое числовое основание.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -374,11 +389,11 @@ unsigned long stoul(
 
 ### <a name="remarks"></a>Remarks
 
-Функция преобразует последовательность элементов в *str* в значение `val` типа **без знака** , как если бы он вызывал `strtoul( str.c_str(), _Eptr, idx)`, где `_Eptr` является объектом, внутренним с функцией. Если `str.c_str() == *_Eptr`, то создается объект типа `invalid_argument`. Если такой вызов задает `errno`, то создается объект типа `out_of_range`. В противном случае, если *idx* не является пустым указателем, функция сохраняет `*_Eptr -  str.c_str()` в `*idx` и возвращает `val`.
+Функция преобразует последовательность элементов в *str* в **`unsigned long`** значение типа, как будто вызывая, `strtoul( str.c_str(), _Eptr, idx)`где `_Eptr` объект внутренний к функции. Если `str.c_str() == *_Eptr`он бросает объект типа. `invalid_argument` Если такой вызов задает `errno`, то создается объект типа `out_of_range`. В противном случае, если *idx* не является `*_Eptr -  str.c_str()` `*idx` нулевой указатель, функция хранит и возвращает значение.
 
-## <a name="stoull"></a><a name="stoull"></a>  stoull
+## <a name="stoull"></a><a name="stoull"></a>stoull
 
-Преобразует последовательность символов в **длинную длину без знака**.
+Преобразует последовательность символов **`unsigned long long`** в .
 
 ```cpp
 unsigned long long stoull(
@@ -394,21 +409,24 @@ unsigned long long stoull(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Description|
-|---------------|-----------------|
-|*str*|Последовательность символов для преобразования.|
-|*IDX*|Значение индекса первого непреобразованного символа.|
-|*base*|Используемое числовое основание.|
+*Ул*\
+Последовательность символов для преобразования.
+
+*Idx*\
+Значение индекса первого непреобразованного символа.
+
+*Базы*\
+Используемое числовое основание.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Длинное целое значение **без знака** .
+Значение. **`unsigned long long`**
 
 ### <a name="remarks"></a>Remarks
 
-Функция преобразует последовательность элементов в *str* в значение `val` типа **без знака Long** , как если бы вызывался метод `strtoull( str.c_str(), _Eptr, idx)`, где `_Eptr` является объектом, внутренним с функцией. Если `str.c_str() == *_Eptr`, то создается объект типа `invalid_argument`. Если такой вызов задает `errno`, то создается объект типа `out_of_range`. В противном случае, если *idx* не является пустым указателем, функция сохраняет `*_Eptr -  str.c_str()` в `*idx` и возвращает `val`.
+Функция преобразует последовательность элементов в *str* в **`unsigned long long`** значение типа, как будто вызывая, `strtoull( str.c_str(), _Eptr, idx)`где `_Eptr` объект внутренний к функции. Если `str.c_str() == *_Eptr`он бросает объект типа. `invalid_argument` Если такой вызов задает `errno`, то создается объект типа `out_of_range`. В противном случае, если *idx* не является `*_Eptr -  str.c_str()` `*idx` нулевой указатель, функция хранит и возвращает значение.
 
-## <a name="swap"></a><a name="swap"></a>  swap
+## <a name="swap"></a><a name="swap"></a>Своп
 
 Меняет местами массивы символов двух строк.
 
@@ -419,15 +437,15 @@ void swap(basic_string<CharType, Traits, Allocator>& left, basic_string<CharType
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
-Одна строка, элементы которой будут заменены на элементы другой строки.
+*Левой*\
+Одна строка, элементы которой должны быть заменены с элементами другой строки.
 
-*справа*\
+*Правильно*\
 Другая строка, элементы которой будут заменены на элементы первой строки.
 
 ### <a name="remarks"></a>Remarks
 
-Функция шаблона выполняет специализированную функцию члена *Left*. [Переключение](../standard-library/basic-string-class.md#swap)(*right*) для строк, что гарантирует постоянную сложность.
+Функция шаблона выполняет функцию специализированного члена *слева.* [своп](../standard-library/basic-string-class.md#swap)*(справа)* для строк, что гарантирует постоянную сложность.
 
 ### <a name="example"></a>Пример
 
@@ -464,27 +482,26 @@ The basic_string s1 = Tweedledum.
 The basic_string s2 = Tweedledee.
 ```
 
-## <a name="to_string"></a><a name="to_string"></a>  to_string
+## <a name="to_string"></a><a name="to_string"></a>to_string
 
 Преобразует значение в `string`.
 
 ```cpp
-string to_string(int Val);
-string to_string(unsigned int Val);
-string to_string(long Val);
-string to_string(unsigned long Val);
-string to_string(long long Val);
-string to_string(unsigned long long Val);
-string to_string(float Val);
-string to_string(double Val);
-string to_string(long double Val);
+string to_string(int value);
+string to_string(unsigned int value);
+string to_string(long value);
+string to_string(unsigned long value);
+string to_string(long long value);
+string to_string(unsigned long long value);
+string to_string(float value);
+string to_string(double value);
+string to_string(long double value);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Description|
-|---------------|-----------------|
-|*Val*|Преобразуемое значение.|
+*Значение*\
+Преобразуемое значение.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -492,47 +509,46 @@ string to_string(long double Val);
 
 ### <a name="remarks"></a>Remarks
 
-Функция преобразует *Val* в последовательность элементов, хранящихся в объекте массива `Buf` внутренне с функцией, как при вызове `sprintf(Buf, Fmt, Val)`, где `Fmt`
+Функция преобразует *значение* в последовательность элементов, `Buf` хранящихся в объекте массива внутри функции, как будто вызывая, `sprintf(Buf, Fmt, value)`где `Fmt`
 
-- `"%d"`, если `Val` имеет тип **int**
+- `"%d"`если *значение* типа**`int`**
 
-- `"%u"`, если `Val` имеет тип **без знака int**
+- `"%u"`если *значение* типа**`unsigned int`**
 
-- `"%ld"`, если `Val` имеет тип **Long**
+- `"%ld"`если *значение* типа**`long`**
 
-- `"%lu"`, если `Val` имеет тип **без знака Long**
+- `"%lu"`если *значение* типа**`unsigned long`**
 
-- `"%lld"`, если `Val` имеет **тип long**
+- `"%lld"`если *значение* типа**`long long`**
 
-- `"%llu"`, если `Val` имеет тип **без знака** Long
+- `"%llu"`если *значение* типа**`unsigned long long`**
 
-- `"%f"`, если `Val` имеет тип **float** или **Double**
+- `"%f"`если *значение* имеет **`float`** тип или**`double`**
 
-- `"%Lf"`, если `Val` имеет тип **long double**
+- `"%Lf"`если *значение* типа**`long double`**
 
 Функция возвращает `string(Buf)`.
 
-## <a name="to_wstring"></a><a name="to_wstring"></a>  to_wstring
+## <a name="to_wstring"></a><a name="to_wstring"></a>to_wstring
 
 Преобразует значение в расширенную строку.
 
 ```cpp
-wstring to_wstring(int Val);
-wstring to_wstring(unsigned int Val);
-wstring to_wstring(long Val);
-wstring to_wstring(unsigned long Val);
-wstring to_wstring(long long Val);
-wstring to_wstring(unsigned long long Val);
-wstring to_wstring(float Val);
-wstring to_wstring(double Val);
-wstring to_wstring(long double Val);
+wstring to_wstring(int value);
+wstring to_wstring(unsigned int value);
+wstring to_wstring(long value);
+wstring to_wstring(unsigned long value);
+wstring to_wstring(long long value);
+wstring to_wstring(unsigned long long value);
+wstring to_wstring(float value);
+wstring to_wstring(double value);
+wstring to_wstring(long double value);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Description|
-|---------------|-----------------|
-|`Val`|Преобразуемое значение.|
+*Значение*\
+Преобразуемое значение.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -540,26 +556,26 @@ wstring to_wstring(long double Val);
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция преобразовывает `Val` в последовательность элементов, хранящихся в объекте массива `Buf`, размещенного внутри функции, как если бы выполнялся вызов `swprintf(Buf, Len, Fmt, Val)`, где `Fmt` равняется
+Функция преобразует *значение* в последовательность элементов, `Buf` хранящихся в объекте массива внутри функции, как будто вызывая, `swprintf(Buf, Len, Fmt, value)`где `Fmt`
 
-- `L"%d"`, если `Val` имеет тип **int**
+- `L"%d"`если *значение* типа**`int`**
 
-- `L"%u"`, если `Val` имеет тип **без знака int**
+- `L"%u"`если *значение* типа**`unsigned int`**
 
-- `L"%ld"`, если `Val` имеет тип **Long**
+- `L"%ld"`если *значение* типа**`long`**
 
-- `L"%lu"`, если `Val` имеет тип **без знака Long**
+- `L"%lu"`если *значение* типа**`unsigned long`**
 
-- `L"%lld"`, если `Val` имеет **тип long**
+- `L"%lld"`если *значение* типа**`long long`**
 
-- `L"%llu"`, если `Val` имеет тип **без знака** Long
+- `L"%llu"`если *значение* типа**`unsigned long long`**
 
-- `L"%f"`, если `Val` имеет тип **float** или **Double**
+- `L"%f"`если *значение* имеет **`float`** тип или**`double`**
 
-- `L"%Lf"`, если `Val` имеет тип **long double**
+- `L"%Lf"`если *значение* типа**`long double`**
 
 Функция возвращает `wstring(Buf)`.
 
 ## <a name="see-also"></a>См. также раздел
 
-[\<string>](../standard-library/string.md)
+[\<струнная>](../standard-library/string.md)

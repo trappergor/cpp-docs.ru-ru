@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - WCodeToHRESULT method [C++]
 ms.assetid: 0ec43a4b-ca91-42d5-b270-3fde9c8412ea
-ms.openlocfilehash: f2fc84be53d95754d21c30eaea8dd981447453d6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2194e0e54a93d3227b84d893f9d3f208d972d09
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154933"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180515"
 ---
-# <a name="comerrorwcodetohresult"></a>_com_error::WCodeToHRESULT
+# <a name="_com_errorwcodetohresult"></a>_com_error::WCodeToHRESULT
 
 **Блок, относящийся только к системам Microsoft**
 
-Сопоставляет 16-разрядный *wCode* 32-разрядное значение HRESULT.
+Сопоставляет 16-разрядное *wCode* с 32-БИТНЫМ значением HRESULT.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -29,20 +29,20 @@ static HRESULT WCodeToHRESULT(
 
 #### <a name="parameters"></a>Параметры
 
-*WCode*<br/>
-16-разрядный *wCode* сопоставляться с 32-разрядное значение HRESULT.
+*wCode*<br/>
+16-разрядный *wCode* сопоставляется с 32-БИТНЫМ значением HRESULT.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-32-разрядное значение HRESULT, сопоставленное с 16-разрядной *wCode*.
+32-разрядный HRESULT, сопоставленный из 16-разрядного *wCode*.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-См. в разделе [WCode](../cpp/com-error-wcode.md) функция-член.
+См. функцию члена [wCode](../cpp/com-error-wcode.md) .
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [_com_error::WCode](../cpp/com-error-wcode.md)<br/>
 [_com_error::HRESULTToWCode](../cpp/com-error-hresulttowcode.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: Класс Ккомконтаинедобжект
+title: Класс CComContainedObject
 ms.date: 11/04/2016
 f1_keywords:
 - CComContainedObject
@@ -14,19 +14,19 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComContainedObject class
 ms.assetid: e8616b41-c200-47b8-bf2c-fb9f713ebdad
-ms.openlocfilehash: c5e2fa64cc0938e632a37eac7dd1d6e9111c3d98
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 72ba27c3be6576621995ffb8c98995c6abc9324c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497323"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320786"
 ---
-# <a name="ccomcontainedobject-class"></a>Класс Ккомконтаинедобжект
+# <a name="ccomcontainedobject-class"></a>Класс CComContainedObject
 
-Этот класс реализует [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) , делегируя его объекту `IUnknown`Owner.
+Этот класс реализует [IUnknown,](/windows/win32/api/unknwn/nn-unknwn-iunknown) делегируя объекту `IUnknown`владельца.
 
 > [!IMPORTANT]
->  Этот класс и его члены не могут использоваться в приложениях, выполняемых в среда выполнения Windows.
+> Этот класс и его члены не могут быть использованы в приложениях, выполняемых в Windows Runtime.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -37,30 +37,30 @@ class CComContainedObject : public Base
 
 #### <a name="parameters"></a>Параметры
 
-*Из*<br/>
-Класс, производный от [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) или [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md).
+*Базы*<br/>
+Ваш класс, полученный от [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) или [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md).
 
 ## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[Ккомконтаинедобжект:: Ккомконтаинедобжект](#ccomcontainedobject)|Конструктор. Инициализирует указатель элемента для объекта `IUnknown`владельца.|
-|[Ккомконтаинедобжект:: ~ Ккомконтаинедобжект](#dtor)|Деструктор|
+|[CComContainedObject::CComContainedObject](#ccomcontainedobject)|Конструктор. Инициализирует указатель участника на `IUnknown`объект владельца.|
+|[CComContainedObject::](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[Ккомконтаинедобжект:: AddRef](#addref)|Увеличивает значение счетчика ссылок на объекте Owner.|
-|[CComContainedObject::GetControllingUnknown](#getcontrollingunknown)|Получает объект `IUnknown`владельца.|
-|[Ккомконтаинедобжект:: QueryInterface](#queryinterface)|Извлекает указатель на интерфейс, запрошенный для объекта-владельца.|
-|[Ккомконтаинедобжект:: Release](#release)|Уменьшает значение счетчика ссылок на объекте Owner.|
+|[CComcontainedObject:AddRef](#addref)|Приращения, ссылка рассчитывает на объект владельца.|
+|[CComContainedПредмет::GetControllingНеизвестный](#getcontrollingunknown)|Извлекает объект `IUnknown`владельца.|
+|[CComContainedПредмет::QueryInterface](#queryinterface)|Извлекает указатель на запрашиваемый интерфейс на объекте владельца.|
+|[CComContainedObject::Release](#release)|Декреты эталона рассчитывают на объект владельца.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-ATL использует `CComContainedObject` в классах [CComAggObject](../../atl/reference/ccomaggobject-class.md), [CComPolyObject](../../atl/reference/ccompolyobject-class.md)и [ккомкачедтеароффобжект](../../atl/reference/ccomcachedtearoffobject-class.md). `CComContainedObject`реализует [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) , делегируя его объекту `IUnknown`Owner. (Владельцем является либо внешний объект агрегата, либо объект, для которого создается интерфейс разрыва.) `CComContainedObject` вызовы`CComObjectRootEx` ,`OuterRelease` и,`Base`все наследуются через. `OuterAddRef` `OuterQueryInterface`
+ATL `CComContainedObject` использует в классах [CComAggObject](../../atl/reference/ccomaggobject-class.md), [CComPolyObject](../../atl/reference/ccompolyobject-class.md), и [CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md). `CComContainedObject`реализует [IUnknown,](/windows/win32/api/unknwn/nn-unknwn-iunknown) делегируя объекту `IUnknown`владельца. (Владелец является либо внешним объектом агрегации, либо объектом, для которого создается интерфейс отрыва.) `CComContainedObject` звонки `CComObjectRootEx` `OuterQueryInterface`'s `OuterAddRef`, `OuterRelease`, и `Base`, все унаследованные через .
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -70,11 +70,11 @@ ATL использует `CComContainedObject` в классах [CComAggObject]
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** атлком. h
+**Заголовок:** atlcom.h
 
-##  <a name="addref"></a>Ккомконтаинедобжект:: AddRef
+## <a name="ccomcontainedobjectaddref"></a><a name="addref"></a>CComcontainedObject:AddRef
 
-Увеличивает значение счетчика ссылок на объекте Owner.
+Приращения, ссылка рассчитывает на объект владельца.
 
 ```
 STDMETHOD_(ULONG, AddRef)();
@@ -84,7 +84,7 @@ STDMETHOD_(ULONG, AddRef)();
 
 Значение, которое может быть полезно для диагностики или тестирования.
 
-##  <a name="ccomcontainedobject"></a>Ккомконтаинедобжект:: Ккомконтаинедобжект
+## <a name="ccomcontainedobjectccomcontainedobject"></a><a name="ccomcontainedobject"></a>CComContainedObject::CComContainedObject
 
 Конструктор.
 
@@ -94,14 +94,14 @@ CComContainedObject(void* pv);
 
 ### <a name="parameters"></a>Параметры
 
-*PV*<br/>
-окне Объект `IUnknown`Owner.
+*Pv*<br/>
+(в) Объект `IUnknown`владельца.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Устанавливает для указателя на `Base`член (наследуется через класс) значение ПС `m_pOuterUnknown` .
+Устанавливает `m_pOuterUnknown` указатель участника (наследуемый `Base` через класс) на *pv*.
 
-##  <a name="dtor"></a>Ккомконтаинедобжект:: ~ Ккомконтаинедобжект
+## <a name="ccomcontainedobjectccomcontainedobject"></a><a name="dtor"></a>CComContainedObject::
 
 Деструктор
 
@@ -109,13 +109,13 @@ CComContainedObject(void* pv);
 ~CComContainedObject();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Освобождает все выделенные ресурсы.
 
-##  <a name="getcontrollingunknown"></a>Ккомконтаинедобжект:: Жетконтроллингункновн
+## <a name="ccomcontainedobjectgetcontrollingunknown"></a><a name="getcontrollingunknown"></a>CComContainedПредмет::GetControllingНеизвестный
 
-Возвращает указатель `m_pOuterUnknown` на элемент (наследуется через *базовый* класс), который содержит объект `IUnknown`-владелец.
+Возвращает `m_pOuterUnknown` указатель участника (наследуемого через *базовый* класс), `IUnknown`который удерживает объект владельца.
 
 ```
 IUnknown* GetControllingUnknown();
@@ -123,15 +123,15 @@ IUnknown* GetControllingUnknown();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Объект `IUnknown`Owner.
+Объект `IUnknown`владельца.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод может быть виртуальным `Base` , если объявлен макрос [DECLARE_GET_CONTROLLING_UNKNOWN](aggregation-and-class-factory-macros.md#declare_get_controlling_unknown) .
+Этот метод может `Base` быть виртуальным, если объявлен [DECLARE_GET_CONTROLLING_UNKNOWN](aggregation-and-class-factory-macros.md#declare_get_controlling_unknown) макрос.
 
-##  <a name="queryinterface"></a>Ккомконтаинедобжект:: QueryInterface
+## <a name="ccomcontainedobjectqueryinterface"></a><a name="queryinterface"></a>CComContainedПредмет::QueryInterface
 
-Извлекает указатель на интерфейс, запрошенный для объекта-владельца.
+Извлекает указатель на запрашиваемый интерфейс на объекте владельца.
 
 ```
 STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
@@ -141,22 +141,22 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 
 ### <a name="parameters"></a>Параметры
 
-*IID*<br/>
-окне Идентификатор запрашиваемого интерфейса.
+*Iid*<br/>
+(в) Идентификатор запрашиваемого интерфейса.
 
-*ппвобжект*<br/>
-заполняет Указатель на указатель интерфейса, идентифицируемый по *IID*. Если объект не поддерживает этот интерфейс, *ппвобжект* имеет значение null.
+*ppvObject*<br/>
+(ваут) Указатель на указатель интерфейса, идентифицированный *iid.* Если объект не поддерживает этот интерфейс, *ppvObject* настроен на NULL.
 
-*PP*<br/>
-заполняет Указатель на указатель интерфейса, идентифицируемый по типу `Q`. Если объект не поддерживает этот интерфейс, *PP* имеет значение null.
+*Pp*<br/>
+(ваут) Указатель на указатель интерфейса, `Q`идентифицированный по типу. Если объект не поддерживает этот интерфейс, *pp* настроен на NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Стандартное значение HRESULT.
 
-##  <a name="release"></a>Ккомконтаинедобжект:: Release
+## <a name="ccomcontainedobjectrelease"></a><a name="release"></a>CComContainedObject::Release
 
-Уменьшает значение счетчика ссылок на объекте Owner.
+Декреты эталона рассчитывают на объект владельца.
 
 ```
 STDMETHOD_(ULONG, Release)();
@@ -164,8 +164,8 @@ STDMETHOD_(ULONG, Release)();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-В отладочных сборках `Release` возвращает значение, которое может быть полезно для диагностики или тестирования. В сборках, не относящихся к отладке, `Release` всегда возвращает 0.
+В сборках отладок возвращается значение, `Release` которое может быть полезно для диагностики или тестирования. В неотлибуговых `Release` сборках всегда возвращается 0.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Обзор класса](../../atl/atl-class-overview.md)
+[Общие сведения о классах](../../atl/atl-class-overview.md)

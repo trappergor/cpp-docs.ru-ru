@@ -1,8 +1,9 @@
 ---
 title: _CIatan2
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _CIatan2
+- _o__CIatan2
 api_location:
 - msvcr80.dll
 - msvcrt.dll
@@ -12,6 +13,7 @@ api_location:
 - msvcr100.dll
 - msvcr90.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -23,34 +25,36 @@ helpviewer_keywords:
 - _CIatan2 intrinsic
 - CIatan2 intrinsic
 ms.assetid: 31f8cc78-b79f-4576-b73b-8add18e08680
-ms.openlocfilehash: dee536b41ccb4c45284fa418e92b99807e51c53a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 62baae97cec3c572f14a01f2f5c0ad189cb4dbfd
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940533"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918107"
 ---
 # <a name="_ciatan2"></a>_CIatan2
 
-Вычисляет арктангенс *x* / *y*, где *x* и *y* представляют собой значения из верхней части стека.
+Вычисляет арктангенс для *x* / *y* , где *x* и *y* — значения в верхней части стека.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 void __cdecl _CIatan2();
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Эта версия функции `atan2` включает специальные соглашения о вызовах, распознаваемые компилятором. Это ускоряет выполнение, поскольку исключает создание копий и помогает распределять регистры.
 
 Полученное значение помещается в верхнюю часть стека.
 
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](global-state.md).
+
 ## <a name="requirements"></a>Требования
 
 **Платформа:** x86
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Алфавитный указатель функций](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [atan, atanf, atanl, atan2, atan2f, atan2l](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)

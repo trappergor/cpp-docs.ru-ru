@@ -1,22 +1,22 @@
 ---
-title: Класс CMFCDragFrameImpl
+title: CMFCDragFrameImpИмпл класс
 ms.date: 10/18/2018
 f1_keywords:
 - CMFCDragFrameImpl
 helpviewer_keywords:
 - CMFCDragFrameImpl class [MFC]
 ms.assetid: 500cd824-8188-43c2-8754-b7bb46b5648a
-ms.openlocfilehash: 05b4426da6bee0443a407cff583f47bee60262e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 527fd089962e05c44a7e47b1ae52345116da4470
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348618"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752439"
 ---
-# <a name="cmfcdragframeimpl-class"></a>Класс CMFCDragFrameImpl
+# <a name="cmfcdragframeimpl-class"></a>CMFCDragFrameImpИмпл класс
 
-`CMFCDragFrameImpl` Класс рисует прямоугольник перетаскивания, который появляется, когда пользователь перетаскивает область в стандартном режиме закрепления.
-Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
+Класс `CMFCDragFrameImpl` рисует прямоугольник перетаскивания, который появляется, когда пользователь перетаскивает панель в стандартном режиме док.
+Для получения более подробной информации смотрите исходный код, расположенный в папке **VC\\atlmfc\\src\\mfc** установки Visual Studio.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -24,11 +24,11 @@ ms.locfileid: "62348618"
 class CMFCDragFrameImpl
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Объект этого класса внедряется в каждом [класс CPane](../../mfc/reference/cpane-class.md) объекта. Таким образом, для каждой области, который использует `CanFloat` метод отображает прямоугольника перетаскивания, когда пользователь перетаскивает его.
+Объект этого класса встраивается в каждый объект [класса CPane.](../../mfc/reference/cpane-class.md) Таким образом, каждая `CanFloat` панель, используюая метод, отображает прямоугольник перетаскивания, когда пользователь перетаскивает его.
 
-Ширина прямоугольника перетаскивания можно управлять с помощью [AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat](afx-global-data-structure.md#m_ndragframethicknessfloat) и [AFX_GLOBAL_DATA::m_nDragFrameThicknessDock](afx-global-data-structure.md#m_ndragframethicknessdock).
+Вы можете контролировать толщину прямоугольника перетаскивания, используя [AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat](afx-global-data-structure.md#m_ndragframethicknessfloat) и [AFX_GLOBAL_DATA::m_nDragFrameThicknessDock](afx-global-data-structure.md#m_ndragframethicknessdock).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -38,45 +38,45 @@ class CMFCDragFrameImpl
 
 **Заголовок:** afxdragframeimpl.h
 
-##  <a name="enddrawdragframe"></a>  CMFCDragFrameImpl::EndDrawDragFrame
+## <a name="cmfcdragframeimplenddrawdragframe"></a><a name="enddrawdragframe"></a>CMFCDragFrameImpl::EndDrawDragFrame
 
-```
+```cpp
 void EndDrawDragFrame(BOOL bClearInternalRects = TRUE);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-[in] *bClearInternalRects*<br/>
+(в) *bClearInternalRects*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="init"></a>  CMFCDragFrameImpl::Init
+## <a name="cmfcdragframeimplinit"></a><a name="init"></a>CMFCDragFrameImpl::Init
 
-```
+```cpp
 void Init(CWnd* pDraggedWnd);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-[in] *pDraggedWnd*<br/>
+(в) *pDraggedWnd*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="movedragframe"></a>  CMFCDragFrameImpl::MoveDragFrame
+## <a name="cmfcdragframeimplmovedragframe"></a><a name="movedragframe"></a>CMFCDragFrameImpl::MoveDragFrame
 
-```
+```cpp
 void MoveDragFrame(BOOL bForceMove = FALSE);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-[in] *bForceMove*<br/>
+(в) *bForceMove*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="placetabpredocking"></a>  CMFCDragFrameImpl::PlaceTabPreDocking
+## <a name="cmfcdragframeimplplacetabpredocking"></a><a name="placetabpredocking"></a>CMFCDragFrameImpl::PлейтакТабДокинг
 
-```
+```cpp
 void PlaceTabPreDocking(
     CBaseTabbedPane* pTabbedBar,
     BOOL bFirstTime);
@@ -86,36 +86,36 @@ void PlaceTabPreDocking(CWnd* pCBarToPlaceOn);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *pTabbedBar*<br/>
+(в) *pTabbedBar*<br/>
 
-[in] *bFirstTime*<br/>
+(в) *bFirstTime*<br/>
 
-[in] *pCBarToPlaceOn*<br/>
+(в) *pCbartoplaceon*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="removetabpredocking"></a>  CMFCDragFrameImpl::RemoveTabPreDocking
+## <a name="cmfcdragframeimplremovetabpredocking"></a><a name="removetabpredocking"></a>CMFCDragFrameImpl::RemoveTabPreDocking
 
-```
+```cpp
 void RemoveTabPreDocking(CDockablePane* pOldTargetBar = NULL);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-[in] *pOldTargetBar*<br/>
+(в) *pOldTargetBar*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="resetstate"></a>  CMFCDragFrameImpl::ResetState
+## <a name="cmfcdragframeimplresetstate"></a><a name="resetstate"></a>CMFCDragFrameImpl::Resetstate
 
-```
+```cpp
 void ResetState();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)<br/>
-[Класс CPane](../../mfc/reference/cpane-class.md)
+[CPane Class](../../mfc/reference/cpane-class.md)

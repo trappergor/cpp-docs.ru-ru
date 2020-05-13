@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::IDisposable Interface
 ms.assetid: f4344056-7030-42ed-bc98-b140edffddcd
-ms.openlocfilehash: f114959321c0ed3879a089b944a5ff1b19843118
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0024edbad0bb3311a0497be67fc8bcfc954602e1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257833"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214244"
 ---
 # <a name="platformidisposable-interface"></a>Platform::IDisposable - интерфейс
 
@@ -26,11 +26,11 @@ public interface class IDisposable
 
 ## <a name="attributes"></a>Атрибуты
 
-**GuidAttribute**(«de0cbaea-8065-4a45-b196-c9d443f9bab3»)
+**GuidAttribute**("de0cbaea-8065-4a45-b196-c9d443f9bab3")
 
-**VersionAttribute**(NTDDI_WIN8)
+**Версионаттрибуте**(NTDDI_WIN8)
 
-### <a name="members"></a>Участники
+### <a name="members"></a>Члены
 
 Интерфейс IDisposable наследует от интерфейса IUnknown. Интерфейс IDisposable также имеет следующие типы членов.
 
@@ -38,9 +38,9 @@ public interface class IDisposable
 
 Интерфейс IDisposable содержит следующие методы.
 
-|Метод|Описание|
+|Метод|Description|
 |------------|-----------------|
-|Ликвидировать|Используется для освобождения неуправляемых ресурсов.|
+|Dispose|Используется для освобождения неуправляемых ресурсов.|
 
 ### <a name="requirements"></a>Требования
 

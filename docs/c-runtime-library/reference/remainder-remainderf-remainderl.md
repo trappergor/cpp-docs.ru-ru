@@ -1,10 +1,13 @@
 ---
 title: remainder, remainderf, remainderl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - remainderl
 - remainder
 - remainderf
+- _o_remainder
+- _o_remainderf
+- _o_remainderl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +34,12 @@ helpviewer_keywords:
 - remainderl
 - remainder
 ms.assetid: 5f721fb3-8b78-4597-9bc0-ca9bcd1f1d0e
-ms.openlocfilehash: 851f022325bb617cb2b0ae9a331b680b9d9fd303
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6b2a1a94fa39f9e9474f7bc3da3150bf4134d35f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949415"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917851"
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder, remainderf, remainderl
 
@@ -59,18 +63,20 @@ long double remainder( long double x, long double y ); /* C++ only */
 *x*<br/>
 Числитель.
 
-*y*<br/>
+*&*<br/>
 Знаменатель.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Остаток от деления *x* / *y*на число с плавающей запятой. Если значение *y* равно 0,0, то функция **остаток** возвращает нетихом NaN. Сведения о представлении нескрытого числа NaN в семействе **printf** см. в разделе [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Функции **остатка** вычисляют значение *r*  / *y* остатка с *плавающей*запятой таким, что *x* = *n* \* *y* + *r*, где *n* целое число, ближайшее к значению *x* / *y* и *n*, &#124; даже если *n* - *x* / *y* &#124; = 1/2. Если *r* = 0, *r* имеет тот же знак, что и *x*.
+Функции **остатка** вычисляют значение *x* / *y* остатка с плавающей запятой таким, что *x* = *n* \* *y* + *r*, где *n*— целое *число,* ближайшее к значению *x* / *y* , а *n*— даже каждый раз, когда &#124; *n* - *x* / *y* &#124; = 1/2. Если *r* = 0, *r* имеет тот же знак, что и *x*.
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **остатка** , которые принимают и возвращают **значения** **типа float** или long. В программе на языке C функция **остаток** всегда принимает два аргумента **Double** и возвращает значение **типа double**.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **остатка** , которые принимают и возвращают **long** **значения типа** **float** или long. В программе на языке C функция **остаток** всегда принимает два аргумента **Double** и возвращает значение **типа double**.
+
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -102,7 +108,7 @@ int main( void )
 The remainder of -10.00 / 3.00 is -1.000000
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [ldiv, lldiv](ldiv-lldiv.md)<br/>

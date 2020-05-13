@@ -1,8 +1,9 @@
 ---
 title: __p__fmode
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - __p__fmode
+- _o___p__fmode
 api_location:
 - msvcr80.dll
 - msvcr120.dll
@@ -12,6 +13,7 @@ api_location:
 - msvcr110_clr0400.dll
 - msvcr100.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -21,12 +23,12 @@ f1_keywords:
 helpviewer_keywords:
 - __p__fmode
 ms.assetid: 1daa1394-81eb-43aa-a71b-4cc6acf3207b
-ms.openlocfilehash: 6f7676fc5c9958be3d0567e6bf22a11367094150
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: dfd9962c49b03dbb30223d1d7403b791ed6dbec9
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939984"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919872"
 ---
 # <a name="__p__fmode"></a>__p__fmode
 
@@ -43,11 +45,13 @@ int* __p__fmode(
 
 Указатель на глобальную переменную `_fmode`.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Функция `__p__fmode` предназначена только для внутреннего пользования и не должна вызываться из кода пользователя.
 
 Режим трансляции файлов определяет трансляцию `binary` или `text` для операций ввода-вывода [_open](../c-runtime-library/reference/open-wopen.md) и [_pipe](../c-runtime-library/reference/pipe.md). Дополнительные сведения см. в разделе [_fmode](../c-runtime-library/fmode.md).
+
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](global-state.md).
 
 ## <a name="requirements"></a>Требования
 

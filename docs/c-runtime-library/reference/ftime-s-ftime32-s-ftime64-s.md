@@ -1,10 +1,12 @@
 ---
 title: _ftime_s, _ftime32_s, _ftime64_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ftime_s
 - _ftime64_s
 - _ftime32_s
+- _o__ftime32_s
+- _o__ftime64_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +41,12 @@ helpviewer_keywords:
 - _ftime_s function
 - _ftime32_s function
 ms.assetid: d03080d9-a520-45be-aa65-504bdb197e8b
-ms.openlocfilehash: b45a22afc824a33e81170f954e6f99088b629f83
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a77d149f367c7f565141fbc3be1db1bfc3f3f362
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956328"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909952"
 ---
 # <a name="_ftime_s-_ftime32_s-_ftime64_s"></a>_ftime_s, _ftime32_s, _ftime64_s
 
@@ -66,7 +69,7 @@ errno_t _ftime64_s( struct __timeb64 *timeptr );
 
 Нуль в случае успеха или код ошибки в случае неудачи. Если *timeptr* имеет значение **null**, возвращается значение **еинвал**.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Функция **_ftime_s** возвращает текущее местное время и сохраняет его в структуре, на которую указывает *timeptr*. Структуры **_timeb**, **__timeb32**и **__timeb64** определены в файле sys\timeb.h. Они содержат четыре поля, которые описываются в следующей таблице.
 
@@ -77,11 +80,13 @@ errno_t _ftime64_s( struct __timeb64 *timeptr );
 |**time**|Время представляется в виде числа секунд, истекших после полуночи (00:00:00) 1 января 1970 года, время в формате UTC.|
 |**стандарт**|Разница в минутах между временем UTC и местным временем при движении в западном направлении. Значение **часового пояса** задается на основе значения глобальной переменной **_timezone** (см. **_tzset**).|
 
-Функция **_ftime64_s** , которая использует структуру **__timeb64** , позволяет выражать даты создания файлов до 23:59:59, 31 декабря 3000, UTC; в то время как **_ftime32_s** представляет даты только до 23:59:59 18 января 2038 года в формате UTC. Полночь 1 января 1970 года — нижняя граница диапазона дат для всех этих функций.
+Функция **_ftime64_s** , использующая структуру **__timeb64** , позволяет выражать даты создания файлов до 23:59:59, 31 декабря 3000, UTC; в то время как **_ftime32_s** представляет только даты до 23:59:59 января 2038 года, в формате UTC. Полночь 1 января 1970 года — нижняя граница диапазона дат для всех этих функций.
 
-Функция **_ftime_s** эквивалентна **_ftime64_s**, а **_timeb** содержит 64-разрядное время, если только не определено **_USE_32BIT_TIME_T** , в этом случае действует старое поведение. **_ftime_s** использует 32-разрядное время и **_timeb** содержит 32-бит времени.
+Функция **_ftime_s** эквивалентна **_ftime64_s**, а **_timeb** содержит 64-разрядное время, если только не определен **_USE_32BIT_TIME_T** , в этом случае действует старое поведение. **_ftime_s** использует 32-разрядное время, а **_timeb** содержит 32-бит времени.
 
 **_ftime_s** проверяет свои параметры. Если в качестве *timeptr*передается пустой указатель, функция вызывает обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, **функция устанавливает значение** по **еинвал**.
+
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -91,7 +96,7 @@ errno_t _ftime64_s( struct __timeb64 *timeptr );
 |**_ftime32_s**|\<sys/types.h> и \<sys/timeb.h>|
 |**_ftime64_s**|\<sys/types.h> и \<sys/timeb.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Библиотеки
 
@@ -150,9 +155,9 @@ Daylight savings time flag (1 means Daylight time is in effect): 1
 The time is Mon Apr 28 11:08:54.230 2003
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Управление временем](../../c-runtime-library/time-management.md)<br/>
+[Операции управления временем](../../c-runtime-library/time-management.md)<br/>
 [asctime, _wasctime](asctime-wasctime.md)<br/>
 [ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)<br/>
 [gmtime, _gmtime32, _gmtime64](gmtime-gmtime32-gmtime64.md)<br/>

@@ -14,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - WRL namespace
 ms.assetid: 01118a8f-f564-4859-b87e-9444848585a1
-ms.openlocfilehash: 749469c7ae2acf3a0da92d24a51bbfca9b68971d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c92251dacbfa17e8f1ac0cbdc41aa9b06118ac91
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392028"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213776"
 ---
 # <a name="microsoftwrl-namespace"></a>Пространство имен Microsoft::WRL
 
-Определяет основные типы, составляющие библиотека шаблонов C++ среды выполнения Windows.
+Определяет фундаментальные типы, составляющие библиотеку шаблонов среда выполнения Windows C++ .
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -31,24 +31,24 @@ ms.locfileid: "62392028"
 namespace Microsoft::WRL;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="typedefs"></a>Определения типов
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |`InhibitWeakReferencePolicy`|`RuntimeClassFlags<WinRt | InhibitWeakReference>`|
 
 ### <a name="classes"></a>Классы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |[Класс ActivationFactory](activationfactory-class.md)|Позволяет одному или нескольким классам быть активированными средой выполнения Windows.|
 |[Класс AsyncBase](asyncbase-class.md)|Реализует асинхронный конечный автомат среды выполнения Windows.|
 |[Класс ClassFactory](classfactory-class.md)|Реализует базовую функциональность интерфейса `IClassFactory`.|
 |[Класс ComPtr](comptr-class.md)|Создает тип *интеллектуальный указатель* , который представляет интерфейс, определяемый параметром шаблона. ComPtr автоматически поддерживает счетчик ссылок для указателя базового интерфейса и освобождает интерфейс, когда счетчик ссылок становится равен нулю.|
 |[Класс DeferrableEventArgs](deferrableeventargs-class.md)|Класс шаблона, используемый для типов аргументов событий для задержек.|
-|[Класс EventSource](eventsource-class.md)|Представляет событие. Функции-члены `EventSource` добавляют, удаляют и вызывают обработчики событий.|
+|[EventSource](eventsource-class.md)|Представляет событие. Функции-члены `EventSource` добавляют, удаляют и вызывают обработчики событий.|
 |[Класс FtmBase](ftmbase-class.md)|Представляет свободнопоточный объект маршаллера.|
 |[Класс Module](module-class.md)|Представляет коллекцию связанных объектов.|
 |[Класс RuntimeClass](runtimeclass-class.md)|Представляет экземпляр класса, который наследует указанное число интерфейсов и предоставляет указанную среду выполнения Windows, классическую COM-модель и поддержку слабых ссылок.|
@@ -58,38 +58,38 @@ namespace Microsoft::WRL;
 
 ### <a name="structures"></a>Структуры
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |[Структура ChainInterfaces](chaininterfaces-structure.md)|Указывает функции проверки и инициализации, которые могут применяться к набору идентификаторов интерфейсов.|
-|[Структура CloakedIid](cloakediid-structure.md)|Указывает `RuntimeClass`, `Implements` и `ChainInterfaces` шаблоны, что заданный интерфейс недоступен в списке IID.|
+|[Структура CloakedIid](cloakediid-structure.md)|Указывает на шаблоны `RuntimeClass`, `Implements` и `ChainInterfaces`, которые указанный интерфейс недоступен в списке IID.|
 |[Структура Implements](implements-structure.md)|Реализует `QueryInterface` и `GetIid` для указанных интерфейсов.|
 |[Структура MixIn](mixin-structure.md)|Гарантирует, что класс среды выполнения является производным от интерфейсов среды выполнения Windows, если таковые имеются, а затем от интерфейсов классической модели COM.|
 |[Структура RuntimeClassFlags](runtimeclassflags-structure.md)|Содержит тип для экземпляра [RuntimeClass](runtimeclass-class.md).|
 
 ### <a name="enumerations"></a>Перечисления
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[Перечисление AsyncResultType](asyncresulttype-enumeration.md)|Указывает тип результата, возвращенный `GetResults()` метод.|
+|[Перечисление AsyncResultType](asyncresulttype-enumeration.md)|Задает тип результата, возвращаемого методом `GetResults()`.|
 |[Перечисление ModuleType](moduletype-enumeration.md)|Указывает, должен ли модуль поддерживать внутрипроцессный или внепроцессный сервер.|
-|[Перечисление RuntimeClassType](runtimeclasstype-enumeration.md)|Указывает тип [RuntimeClass](runtimeclass-class.md) экземпляр, который поддерживается.|
+|[Перечисление RuntimeClassType](runtimeclasstype-enumeration.md)|Указывает поддерживаемый тип экземпляра [RuntimeClass](runtimeclass-class.md) .|
 
 ### <a name="functions"></a>Функции
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |[Функция AsWeak](asweak-function.md)|Извлекает слабую ссылку на определенный экземпляр.|
 |[Функция Callback (WRL)](callback-function-wrl.md)|Создает объект, функция-член которого является методом обратного вызова.|
 |[Функция CreateActivationFactory](createactivationfactory-function.md)|Создает фабрику, производящую экземпляры указанного класса, которые могут быть активированы средой выполнения Windows.|
 |[Функция CreateClassFactory](createclassfactory-function.md)|Создает фабрику, которая создает экземпляры указанного класса.|
-|[Функция Make](make-function.md)|Инициализирует указанный класс среды выполнения Windows.|
+|[Функция Make](make-function.md)|Инициализирует указанный класс среда выполнения Windows.|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** async.h, client.h, corewrappers.h, event.h, ftm.h, implements.h, internal.h, module.h
+**Заголовок:** Async. h, Client. h, кореврапперс. h, Event. h, FTM. h, реализует. h, internal. h, Module. h
 
 **Пространство имен:** Microsoft::WRL
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Microsoft::WRL::Wrappers](microsoft-wrl-wrappers-namespace.md)

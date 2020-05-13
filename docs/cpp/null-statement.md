@@ -6,16 +6,16 @@ helpviewer_keywords:
 - null statement
 - null values, expressions
 ms.assetid: 606f5953-55f0-40c8-ae03-3ee3a819b851
-ms.openlocfilehash: 2797937b184bebe0e29f8e5eae428f601c824811
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 167a1e579c15fd59da1979efd9aa979184318115
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245184"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177811"
 ---
 # <a name="null-statement"></a>Оператор NULL
 
-«Оператор null» — это инструкция выражения с *выражение* отсутствует. Она полезна, если синтаксис языка требует инструкции, но не оценки выражения. Она состоит из точки с запятой.
+Оператор null является оператором выражения с отсутствующим *выражением* . Она полезна, если синтаксис языка требует инструкции, но не оценки выражения. Она состоит из точки с запятой.
 
 Инструкции null часто используются как местозаполнители в инструкциях итерации или как инструкции, в которых нужно разместить метки в конце сложных инструкций или функций.
 
@@ -41,6 +41,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Оператор выражений](../cpp/expression-statement.md)

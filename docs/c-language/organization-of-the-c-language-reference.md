@@ -3,11 +3,11 @@ title: Организация Справочника по языку C
 ms.date: 11/04/2016
 ms.assetid: 7e42daa4-9c9e-4c2d-bbc4-e45405803c20
 ms.openlocfilehash: 864cef5fe7a6fc2a737d5cc0e850e3db760bddc6
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148183"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64343185"
 ---
 # <a name="organization-of-the-c-language-reference"></a>Организация Справочника по языку C
 
@@ -29,4 +29,4 @@ ms.locfileid: "56148183"
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по языку C#](../c-language/c-language-reference.md)
+[Справочник по языку C](../c-language/c-language-reference.md)

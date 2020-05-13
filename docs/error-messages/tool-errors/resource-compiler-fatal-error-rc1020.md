@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - RC1020
 ms.assetid: 3e073ebf-9136-4bf8-ac6a-3c642ed64594
-ms.openlocfilehash: ac4a9d521728b22966f6d8824479d13cc7394601
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ff4cc5564f59d0adf74ae86149130dd5d017a9ae
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297350"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182686"
 ---
 # <a name="resource-compiler-fatal-error-rc1020"></a>Неустранимая ошибка компилятора ресурсов RC1020
 
-Непредвиденный «#endif»
+непредвиденный "#endif"
 
-`#endif` Директива указана без соответствующей `#if`, **#ifdef**, или **#ifndef** директива.
+Директива `#endif` встречалась без соответствующей директивы `#if`, **#ifdef**или **#ifndef** .
 
-Убедитесь, что имеется соответствующий `#endif` для каждого `#if`, **#ifdef**, и **#ifndef** инструкции.
+Убедитесь, что имеется соответствующий `#endif` для каждой инструкции `#if`, **#ifdef**и **#ifndef** .

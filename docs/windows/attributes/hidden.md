@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - hidden attribute
 ms.assetid: 199c96dd-fc07-46c7-af93-92020aebebe7
-ms.openlocfilehash: 75b03877b1204d6e1c4770f5ba9c8c88338b3394
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6b420e8f50bd217de460a81f5faaf9583c701376
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501451"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168100"
 ---
 # <a name="hidden"></a>hidden
 
@@ -23,7 +23,7 @@ ms.locfileid: "69501451"
 [hidden]
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Атрибут **Hidden** C++ имеет те же функциональные возможности, что и [скрытый](/windows/win32/Midl/hidden) атрибут MIDL.
 
@@ -37,14 +37,14 @@ ms.locfileid: "69501451"
 
 |||
 |-|-|
-|**Относится к**|**интерфейс**, **класс**, **Структура**, метод, свойство|
-|**Повторяемый**|Нет|
+|**Применение**|**интерфейс**, **класс**, **Структура**, метод, свойство|
+|**Повторяемый**|нет|
 |**Обязательные атрибуты**|**coclass** (при применении к **классу** или **структуре**)|
-|**Недопустимые атрибуты**|Отсутствуют|
+|**Недопустимые атрибуты**|None|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты интерфейса](interface-attributes.md)<br/>

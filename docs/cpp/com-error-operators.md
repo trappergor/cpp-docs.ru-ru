@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - _com_error class [C++], operators
 ms.assetid: 0c4a1532-59b7-41ea-8aeb-1c486898db4d
-ms.openlocfilehash: 76f4f16c13e0bf4cdf9b36614edc6b84bc0284a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 86e31233bbdbf925e5b2445054436a165225c7c5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154920"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189911"
 ---
-# <a name="comerror-operators"></a>Операторы _com_error
+# <a name="_com_error-operators"></a>Операторы _com_error
 
-Сведения о **_com_error** операторов, см. в разделе [класс _com_error](../cpp/com-error-class.md).
+Дополнительные сведения об операторах **_com_error** см. в разделе [класс _com_error](../cpp/com-error-class.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс _com_error](../cpp/com-error-class.md)

@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2393
 ms.assetid: 4bd95728-e813-4ce8-844a-c6ebe235ca82
-ms.openlocfilehash: 39ca693aed3f08e7b2df3d687f94d93384393f23
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cc3c124f1a4daea0f2517a93c6b354b8233aa5e5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302401"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205989"
 ---
 # <a name="compiler-error-c2393"></a>Ошибка компилятора C2393
 
-> "*символ*": символ по доменам приложения не может быть помещен в сегмент "*сегмент*"
+> "*символ*": символ для каждого домена приложения не может быть выделен в сегменте "*сегмент*"
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-**/CLR: pure** и **/CLR: safe** параметры компилятора признаны устаревшими в Visual Studio 2015 и не поддерживается в Visual Studio 2017.
+Параметры компилятора **/clr: pure** и **/clr: Сейф** являются устаревшими в Visual Studio 2015 и не поддерживаются в Visual Studio 2017.
 
-Использование [appdomain](../../cpp/appdomain.md) переменные подразумевает, что при компиляции с **/CLR: pure** или **/CLR: safe**, и образ safe или pure не может содержать сегменты данных.
+Использование переменных [AppDomain](../../cpp/appdomain.md) предполагает, что компиляция выполняется с **параметрами/clr: pure** или **/clr: Сейф**, а безопасный или чистый образ не может содержать сегменты данных.
 
-См. в разделе [/CLR (компиляция CLR)](../../build/reference/clr-common-language-runtime-compilation.md) Дополнительные сведения.
+Дополнительные сведения см. в разделе [/CLR (компиляция CLR)](../../build/reference/clr-common-language-runtime-compilation.md) .
 
 ## <a name="example"></a>Пример
 
-Следующий пример приводит к возникновению ошибки C2393. Чтобы устранить эту проблему, не создавайте сегмента данных.
+Следующий пример приводит к возникновению ошибки C2393. Чтобы устранить эту проблему, не создавайте сегмент данных.
 
 ```cpp
 // C2393.cpp

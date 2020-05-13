@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CTooltipManager [MFC], SetTooltipText
 - CTooltipManager [MFC], UpdateTooltips
 ms.assetid: c71779d7-8b6e-47ef-8500-d4552731fe86
-ms.openlocfilehash: e8b88f2722f5a4379276f13c2ef159aa4d120533
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4e721740fc100a34ea08dd7ff5f9291eea2d9b36
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323756"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752164"
 ---
 # <a name="ctooltipmanager-class"></a>Класс CTooltipManager
 
@@ -37,7 +37,7 @@ class CTooltipManager : public CObject
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[CTooltipManager::CreateToolTip](#createtooltip)|Создает элемент управления "Всплывающая подсказка" для указанных типов  элементов управления Windows.|
 |[CTooltipManager::DeleteToolTip](#deletetooltip)|Удаляет элемент управления "Всплывающая подсказка".|
@@ -45,9 +45,9 @@ class CTooltipManager : public CObject
 |[CTooltipManager::SetTooltipText](#settooltiptext)|Задает текст и описание для элемента управления "Всплывающая подсказка".|
 |[CTooltipManager::UpdateTooltips](#updatetooltips)||
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Используйте [класс CMFCToolTipCtrl](../../mfc/reference/cmfctooltipctrl-class.md), `CMFCToolTipInfo`, и `CTooltipManager` друг с другом, чтобы реализовать в своем приложении настроенные всплывающие подсказки. Пример использования этих классов см. в разделе [класс CMFCToolTipCtrl](../../mfc/reference/cmfctooltipctrl-class.md) раздела.
+Используйте [CMFCToolTipCtrl класса](../../mfc/reference/cmfctooltipctrl-class.md), `CMFCToolTipInfo`и `CTooltipManager` вместе для реализации индивидуальных инструментов в вашем приложении. Пример того, как использовать эти классы наборов инструментов, можно ознакомьтесь с темой [класса CMFCToolToolTipCtrl.](../../mfc/reference/cmfctooltipctrl-class.md)
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -59,9 +59,9 @@ class CTooltipManager : public CObject
 
 **Заголовок:** afxtooltipmanager.h
 
-##  <a name="createtooltip"></a>  CTooltipManager::CreateToolTip
+## <a name="ctooltipmanagercreatetooltip"></a><a name="createtooltip"></a>CTooltipManager::CreateToolTip
 
-Создает элемент управления tooltip.
+Создает инструментарий управления.
 
 ```
 static BOOL CreateToolTip(
@@ -73,41 +73,41 @@ static BOOL CreateToolTip(
 ### <a name="parameters"></a>Параметры
 
 *pToolTip*<br/>
-[out] Ссылка на указатель всплывающей подсказки. Он настраивается для только что созданный всплывающей подсказки при возврате функции.
+(ваут) Ссылка на указатель наборов инструментов. Он устанавливается, чтобы указать на вновь созданный набор инструментов, когда функция возвращается.
 
 *pWndParent*<br/>
-[in] Родительский объект подсказки.
+(в) Родитель инструментария.
 
 *nType*<br/>
-[in] Тип подсказки.
+(в) Тип инструментария.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ненулевое значение, если всплывающая подсказка будет создан.
+Nonzero, если набор инструментов был успешно создан.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Необходимо вызвать [CTooltipManager::DeleteToolTip](#deletetooltip) удалить элемент управления всплывающей подсказки, который передается обратно в *pToolTip*.
+Вы должны позвонить [CTooltipManager::DeleteToolTip,](#deletetooltip) чтобы удалить элемент управления, который передается обратно в *pToolTip*.
 
-[CTooltipManager](../../mfc/reference/ctooltipmanager-class.md) тип наборы параметров визуальному представлению каждого подсказки, он создает основанные на всплывающей подсказки, который *nType* указывает. Чтобы изменить параметры для одного или нескольких типов всплывающей подсказки, вызовите [CTooltipManager::SetTooltipParams](#settooltipparams).
+[CTooltipManager](../../mfc/reference/ctooltipmanager-class.md) устанавливает параметры визуального отображения каждого набора инструментов, которые он создает, на основе типа инструментария, который указывает *nType.* Чтобы изменить параметры для одного или нескольких типов инструментов, позвоните [CTooltipManager::SetTooltipParams](#settooltipparams).
 
-Типы допустимых всплывающей подсказки, перечислены в следующей таблице.
+Действительные типы наборов инструментов перечислены в следующей таблице:
 
-|Тип подсказки|Категория элемента управления|Пример типов|
+|Тип инструментария|Категория управления|Типы примеров|
 |------------------|----------------------|-------------------|
 |AFX_TOOLTIP_TYPE_BUTTON|Кнопка.|CMFCButton|
-|AFX_TOOLTIP_TYPE_CAPTIONBAR|Заголовок окна.|CMFCCaptionBar|
-|AFX_TOOLTIP_TYPE_DEFAULT|Любой элемент управления, который не умещается другую категорию.|Отсутствует.|
-|AFX_TOOLTIP_TYPE_DOCKBAR|Закрепляемая область.|CDockablePane|
-|AFX_TOOLTIP_TYPE_EDIT|Текстовое поле.|Отсутствует.|
-|AFX_TOOLTIP_TYPE_MINIFRAME|Области.|CPaneFrameWnd|
-|AFX_TOOLTIP_TYPE_PLANNER|Планировщик.|Отсутствует.|
-|AFX_TOOLTIP_TYPE_RIBBON|Панели ленты.|CMFCRibbonBar, CMFCRibbonPanelMenuBar|
-|AFX_TOOLTIP_TYPE_TAB|Набор вкладок.|CMFCTabCtrl|
-|AFX_TOOLTIP_TYPE_TOOLBAR|Панель инструментов.|CMFCToolBar CMFCPopupMenuBar|
-|AFX_TOOLTIP_TYPE_TOOLBOX|Панель инструментов.|Отсутствует.|
+|AFX_TOOLTIP_TYPE_CAPTIONBAR|Заголовок бар.|CMFCCaptionBar|
+|AFX_TOOLTIP_TYPE_DEFAULT|Любой элемент управления, который не соответствует другой категории.|Нет.|
+|AFX_TOOLTIP_TYPE_DOCKBAR|Док-панель.|CDockablePane|
+|AFX_TOOLTIP_TYPE_EDIT|Текстовое поле.|Нет.|
+|AFX_TOOLTIP_TYPE_MINIFRAME|Миникадр.|CPaneFrameWnd|
+|AFX_TOOLTIP_TYPE_PLANNER|Планировщик.|Нет.|
+|AFX_TOOLTIP_TYPE_RIBBON|Ленточный бар.|CMFCRibbonBar, CMFCRibbonPanelMenuBar|
+|AFX_TOOLTIP_TYPE_TAB|Контроль вкладок.|CMFCTabCtrl|
+|AFX_TOOLTIP_TYPE_TOOLBAR|Панель инструментов.|CMFCToolBar, CMFCPopupMenuBar|
+|AFX_TOOLTIP_TYPE_TOOLBOX|Набор инструментов.|Нет.|
 
-##  <a name="deletetooltip"></a>  CTooltipManager::DeleteToolTip
+## <a name="ctooltipmanagerdeletetooltip"></a><a name="deletetooltip"></a>CTooltipManager::DeleteToolTip
 
 Удаляет элемент управления "Всплывающая подсказка".
 
@@ -118,17 +118,17 @@ static void DeleteToolTip(CToolTipCtrl*& pToolTip);
 ### <a name="parameters"></a>Параметры
 
 *pToolTip*<br/>
-[in, out] Ссылка на указатель на всплывающей подсказки будут уничтожены.
+(в, вне) Ссылка на указатель на инструмент, который должен быть уничтожен.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод вызывается для каждого [класс CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) , созданный с [CTooltipManager::CreateToolTip](#createtooltip). Родительский элемент управления должны вызывать этот метод из его `OnDestroy` обработчика. Это необходимо для правильного удаления подсказки из .NET framework. Этот метод задает *pToolTip* значение NULL, перед возвращением.
+Назовите этот метод для каждого [класса CToolTipCtrl,](../../mfc/reference/ctooltipctrl-class.md) созданного [CTooltipManager::CreateToolTip](#createtooltip). Родительский элемент должен вызвать `OnDestroy` этот метод из его обработчика. Это необходимо для правильного удаления инструментария из платформы. Этот метод устанавливает *pToolTip* в NULL, прежде чем он вернется.
 
-##  <a name="settooltipparams"></a>  CTooltipManager::SetTooltipParams
+## <a name="ctooltipmanagersettooltipparams"></a><a name="settooltipparams"></a>CTooltipManager::SetTooltipParams
 
-Настраивает внешний вид элемента управления всплывающей подсказки для указанных типов элемента управления Windows.
+Настраивает внешний вид управления набором инструментов для указанных типов управления Windows.
 
-```
+```cpp
 void SetTooltipParams(
     UINT nTypes,
     CRuntimeClass* pRTC=RUNTIME_CLASS(CMFCToolTipCtrl),
@@ -137,32 +137,32 @@ void SetTooltipParams(
 
 ### <a name="parameters"></a>Параметры
 
-*nTypes*<br/>
-[in] Указывает типы элементов управления.
+*nТипы*<br/>
+(в) Определяет типы управления.
 
 *pRTC*<br/>
-[in] Класс среды выполнения пользовательскую подсказку.
+(в) Runtime класс пользовательских инструментов.
 
 *pParams*<br/>
-[in] Параметры всплывающей подсказки.
+(в) Параметры Tooltip.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод задает класс среды выполнения и начальные параметры, [CToolTipManager](../../mfc/reference/ctooltipmanager-class.md) использует при создании подсказки. Когда элемент управления вызывает [CTooltipManager::CreateToolTip](#createtooltip) и передает в подсказке типа, который является одним из типов, обозначается *nTypes*, диспетчера всплывающих подсказок создает элемент управления всплывающей подсказки, который является экземпляром класса класс среды выполнения, определяемое *pRTC* и передает параметрам, указанным *pParams* на новый элемент управления tooltip.
+Этот метод устанавливает класс времени выполнения и начальные параметры, которые использует [CToolTipManager](../../mfc/reference/ctooltipmanager-class.md) при создаете инструменты. Когда элемент управления вызывает [CTooltipManager::CreateToolTip](#createtooltip) и передает сярприза в типе tooltip, который является одним из типов, указанных *nTypes,* менеджер инструментария создает элементуправления, который является экземпляром класса времени выполнения, указанного *pRTC,* и передает параметры, указанные *pParams,* в новый набор инструментов.
 
-При вызове этого метода, все существующие владельцы подсказки сообщение AFX_WM_UPDATETOOLTIPS и их необходимо повторно создать их подсказки с помощью [CTooltipManager::CreateToolTip](#createtooltip).
+При вызове этого метода все существующие владельцы наборов инструментов получают AFX_WM_UPDATETOOLTIPS сообщение, и они должны воссоздать свои инструменты с помощью [CTooltipManager::CreateToolTip](#createtooltip).
 
-*nTypes* может быть любое сочетание допустимых подсказки типы, которые [CTooltipManager::CreateToolTip](#createtooltip) использует или он может быть AFX_TOOLTIP_TYPE_ALL. Если передать AFX_TOOLTIP_TYPE_ALL, влияют на все типы всплывающей подсказки.
+*nTypes* может быть любой комбинацией действительных типов инструментов, которые использует [CTooltipManager::CreateToolTip,](#createtooltip) или это может быть AFX_TOOLTIP_TYPE_ALL. Если вы проходите AFX_TOOLTIP_TYPE_ALL, все типы tooltip затронуты.
 
 ### <a name="example"></a>Пример
 
-Следующий пример демонстрирует, как использовать `SetTooltipParams` метод `CTooltipManager` класса. Этот фрагмент кода входит в состав [примера Draw Client](../../overview/visual-cpp-samples.md).
+В следующем примере показано, `SetTooltipParams` как `CTooltipManager` использовать метод класса. Этот фрагмент кода входит в состав [примера Draw Client](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#11](../../mfc/reference/codesnippet/cpp/ctooltipmanager-class_1.cpp)]
 
-##  <a name="settooltiptext"></a>  CTooltipManager::SetTooltipText
+## <a name="ctooltipmanagersettooltiptext"></a><a name="settooltiptext"></a>CTooltipManager::SetTooltipText
 
-Задает текст и описание для всплывающей подсказки.
+Устанавливает текст и описание для инструментария.
 
 ```
 static void SetTooltipText(
@@ -175,36 +175,36 @@ static void SetTooltipText(
 
 ### <a name="parameters"></a>Параметры
 
-*pTI*<br/>
-[in] Указатель на объект TOOLINFO.
+*Pti*<br/>
+(в) Указатель на объект TOOLINFO.
 
 *pToolTip*<br/>
-[in, out] Указатель на элемент управления tooltip, для которого требуется задать текст и описание.
+(в, вне) Указатель на элемент управления набором инструментов, для которого можно установить текст и описание.
 
 *nType*<br/>
-[in] Указывает тип элемента управления, с которым связан этот всплывающей подсказки.
+(в) Определяет тип управления, с которым связан этот набор инструментов.
 
 *strText*<br/>
-[in] Текст, набор в виде текста всплывающей подсказки.
+(в) Текст для установки в качестве текста tooltip.
 
 *lpszDescr*<br/>
-[in] Указатель на описание элемента tooltip. Может иметь значение NULL.
+(в) Указатель на описание инструментария. Может иметь значение NULL.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Значение *nType* должно быть то же значение, что *nType* параметр [CTooltipManager::CreateToolTip](#createtooltip) при создании всплывающей подсказки.
+Значение *nType* должно быть таким же значением, как и параметр *nType* [CTooltipManager::CreateToolTip](#createtooltip) при создании инструментария.
 
-##  <a name="updatetooltips"></a>  CTooltipManager::UpdateTooltips
+## <a name="ctooltipmanagerupdatetooltips"></a><a name="updatetooltips"></a>CTooltipManager::UpdateTooltips
 
-Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
+Для получения более подробной информации смотрите исходный код, расположенный в папке **VC\\atlmfc\\src\\mfc** установки Visual Studio.
 
-```
+```cpp
 void UpdateTooltips();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)<br/>

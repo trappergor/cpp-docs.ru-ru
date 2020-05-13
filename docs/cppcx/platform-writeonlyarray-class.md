@@ -12,18 +12,18 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::WriteOnlyArray Class
 ms.assetid: 92d7dd56-ec58-4b8c-88ba-9c903668b687
-ms.openlocfilehash: 5652123d4866262515f804dba790af51610eb426
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d06ed19b7c041f9ae73f862ba521449a206aa321
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500523"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374645"
 ---
 # <a name="platformwriteonlyarray-class"></a>Класс Platform::WriteOnlyArray
 
 Представляет одномерный массив, который используется в качестве входного параметра, когда вызывающая сторона передает массив в метод для заполнения.
 
-Этот класс ссылок объявлен в vccorlib.h как закрытый; следовательно, он не передается в метаданные и использовать его можно только из С++. Этот класс предназначен для использования только в качестве входного параметра, который получает массив, выделенный вызывающим объектом. Его невозможно построить из пользовательского кода. Оно позволяет методу C++ осуществлять запись непосредственно в этот массив — шаблон, известный как *FillArray* . Дополнительные сведения см. в разделе [Array и WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
+Этот класс ссылок объявлен в vccorlib.h как закрытый; следовательно, он не передается в метаданные и использовать его можно только из С++. Этот класс предназначен для использования только в качестве входного параметра, который получает массив, выделенный вызывающим объектом. Его невозможно построить из пользовательского кода. Оно позволяет методу C++ осуществлять запись непосредственно в этот массив — шаблон, известный как *FillArray* . Для получения дополнительной информации [см.](../cppcx/array-and-writeonlyarray-c-cx.md)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -37,13 +37,13 @@ private ref class WriteOnlyArray<T, 1>
 
 Эти методы имеют внутреннюю доступность, то есть доступны только в компоненте или приложении С++.
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[WriteOnlyArray:: Begin](#begin)|Итератор, который указывает на первый элемент массива.|
-|[WriteOnlyArray::D ATA](#data)|Указатель на буфер данных.|
-|[WriteOnlyArray:: end](#end)|Итератор, указывающий на элемент, следующий за последним элементом в массиве.|
-|[WriteOnlyArray:: FastPass](#fastpass)|Указывает, сможет ли массив использовать механизм FastPass, то есть прозрачную оптимизацию, выполняемую системой. Не используйте его в коде|
-|[WriteOnlyArray:: Length](#length)|Возвращает число элементов в массиве.|
+|[WriteOnlyArray::начало](#begin)|Итератор, который указывает на первый элемент массива.|
+|[WriteOnlyArray::Data](#data)|Указатель на буфер данных.|
+|[WriteOnlyArray::end](#end)|Итератор, указывающий на элемент, следующий за последним элементом в массиве.|
+|[WriteOnlyArray::FastPass](#fastpass)|Указывает, сможет ли массив использовать механизм FastPass, то есть прозрачную оптимизацию, выполняемую системой. Не используйте его в коде|
+|[WriteOnlyArray::Длина](#length)|Возвращает число элементов в массиве.|
 |[WriteOnlyArray::set](#set)|Присваивает заданному элементу заданное значение.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
@@ -52,13 +52,13 @@ private ref class WriteOnlyArray<T, 1>
 
 ### <a name="requirements"></a>Требования
 
-Параметр компилятора: **/ZW**
+Вариант компилятора: **/ ЗВ**
 
-**Метаданных** Platform. winmd
+**Метаданные:** Platform.winmd
 
-**Пространство имен:** Платформа
+**Пространство имен:** Platform
 
-## <a name="begin"></a>  Метод WriteOnlyArray::begin
+## <a name="writeonlyarraybegin-method"></a><a name="begin"></a>WriteOnlyArray::начало метода
 
 Возвращает указатель на первый элемент массива.
 
@@ -72,11 +72,11 @@ T* begin() const;
 
 Указатель на первый элемент массива.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Этот итератор можно использовать с алгоритмами STL, такими как `std::sort`, для выполнения действий с элементами в массиве.
 
-## <a name="data"></a>  Свойство WriteOnlyArray::Data
+## <a name="writeonlyarraydata-property"></a><a name="data"></a>WriteOnlyArray::Data Недвижимость
 
 Указатель на буфер данных.
 
@@ -92,7 +92,7 @@ property T* Data{
 
 Указатель на необработанные байты массива.
 
-## <a name="end"></a>  Метод WriteOnlyArray::end
+## <a name="writeonlyarrayend-method"></a><a name="end"></a>WriteOnlyArray::end Метод
 
 Возвращает указатель на элемент, следующий за последним элементом в массиве.
 
@@ -106,11 +106,11 @@ T* end() const;
 
 Итератор указателя на элемент, следующий за последним элементом в массиве.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Этот итератор можно использовать с алгоритмами STL для выполнения операций, таких как `std::sort`, в элементах массива.
 
-## <a name="fastpass"></a>  Свойство WriteOnlyArray::FastPass
+## <a name="writeonlyarrayfastpass-property"></a><a name="fastpass"></a>WriteOnlyArray::FastPass Недвижимость
 
 Указывает, можно ли выполнить внутреннюю оптимизацию FastPass. Не предназначен для использования в пользовательском коде.
 
@@ -126,7 +126,7 @@ property bool FastPass{
 
 Логическое значение, указывающее, является ли массив FastPass.
 
-## <a name="get"></a>Метод WriteOnlyArray:: Get
+## <a name="writeonlyarrayget-method"></a><a name="get"></a>WriteOnlyArray::получить метод
 
 Возвращает элемент по указанному индексу.
 
@@ -138,12 +138,12 @@ T& get(unsigned int indexArg) const;
 
 ### <a name="parameters"></a>Параметры
 
-*индексарг*<br/>
-Используемый индекс.
+*индексАрг*<br/>
+Индекс для использования.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-## <a name="length"></a>  Свойство WriteOnlyArray::Length
+## <a name="writeonlyarraylength-property"></a><a name="length"></a>WriteOnlyArray:: Недвижимость длины
 
 Возвращает число элементов в выделенном вызывающим объектом массиве.
 
@@ -159,7 +159,7 @@ property unsigned int Length{
 
 Количество элементов в массиве.
 
-## <a name="set"></a>  Функция WriteOnlyArray::set
+## <a name="writeonlyarrayset-function"></a><a name="set"></a>WriteOnlyArray::set Function
 
 Задает указанное значение по заданному индексу массива.
 
@@ -173,21 +173,21 @@ T& set(
 
 ### <a name="parameters"></a>Параметры
 
-*индексарг*<br/>
+*индексАрг*<br/>
 Задаваемый индекс элемента.
 
-*валуеарг*<br/>
+*valueArg*<br/>
 Задаваемое в `indexArg` значение.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Ссылка на элемент, который только что был установлен.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Дополнительные сведения о том, как интерпретировать значение HRESULT, см. в разделе [структура кодов ошибок COM](/windows/win32/com/structure-of-com-error-codes).
+Для получения дополнительной информации о том, как интерпретировать значение HRESULT, [см.](/windows/win32/com/structure-of-com-error-codes)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Пространство имен платформы](platform-namespace-c-cx.md)<br/>
+[Название платформы](platform-namespace-c-cx.md)<br/>
 [Создание компонентов среды выполнения Windows в C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

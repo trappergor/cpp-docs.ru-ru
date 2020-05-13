@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4002
 ms.assetid: 09f81af5-e51c-496c-a6eb-2863e85375c3
-ms.openlocfilehash: aef73971c4f39b6e063e84d3e86001b9137aec30
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40b2d60b6ce64703e34e3ec3c9b61f9b96bd0856
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298624"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194386"
 ---
 # <a name="linker-tools-warning-lnk4002"></a>Предупреждение средств компоновщика LNK4002
 
-символ определен в объекте
+символ, определенный в объекте
 
-Символ, отображаемый в декорированном виде, был указан в недекорированной форме в `object`, но не удалось найти уникальное соответствие декорированным символом. Это предупреждение всегда предшествует предупреждение [LNK4022](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md) и Неустранимая ошибка [LNK1152](../../error-messages/tool-errors/linker-tools-error-lnk1152.md).
+Символ, отображаемый в декорированной форме, был указан в недекорированной форме в `object`, но не удалось найти уникальное совпадение с декорированным символом. Этому предупреждению всегда предшествует предупреждение [LNK4022](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md) , за которым следует Неустранимая ошибка [LNK1152](../../error-messages/tool-errors/linker-tools-error-lnk1152.md).

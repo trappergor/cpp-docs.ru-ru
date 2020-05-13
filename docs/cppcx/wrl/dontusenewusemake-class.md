@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::DontUseNewUseMake class
 - Microsoft::WRL::Details::DontUseNewUseMake::operator new operator
 ms.assetid: 8b38d07b-fc14-4cea-afb9-4c1a7dde0093
-ms.openlocfilehash: 02420f2657c7d7d6a7a0294f0321717a3bb2b5d7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ae67373b4f2f2d4a199b939b06e6f526f1365446
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398541"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371553"
 ---
 # <a name="dontusenewusemake-class"></a>DontUseNewUseMake - класс
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из кода.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -26,17 +26,17 @@ ms.locfileid: "62398541"
 class DontUseNewUseMake;
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Предотвращает использование оператора `new` в `RuntimeClass`. Следовательно, необходимо использовать [функция](make-function.md) вместо этого.
+Предотвращает использование `new` оператора `RuntimeClass`в . Следовательно, вместо этого необходимо использовать [функцию Make.](make-function.md)
 
 ## <a name="members"></a>Участники
 
 ### <a name="public-operators"></a>Открытые операторы
 
-name                                             | Описание
+Имя                                             | Описание
 ------------------------------------------------ | ---------------------------------------------------------------------------
-[Новый DontUseNewUseMake::operator](#operator-new) | Перегружает оператор `new` и предотвращает использование в `RuntimeClass`.
+[DontUseNewUseMake::оператор новый](#operator-new) | Перегружает `new` оператора и предотвращает его `RuntimeClass`использования в.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -46,11 +46,11 @@ name                                             | Описание
 
 **Заголовок:** implements.h
 
-**Пространство имен:** Microsoft::WRL::Details
+**Пространство имен:** Microsoft:WRL::Details
 
-## <a name="operator-new"></a>Новый DontUseNewUseMake::operator
+## <a name="dontusenewusemakeoperator-new"></a><a name="operator-new"></a>DontUseNewUseMake::оператор новый
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из кода.
 
 ```cpp
 void* operator new(
@@ -64,13 +64,13 @@ void* operator new(
 *__unnamed0*<br/>
 Неименованный параметр, который определяет количество байт памяти для выделения.
 
-*Размещение*<br/>
+*Размещения*<br/>
 Выделяемый тип.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Предоставляет способ передачи дополнительных аргументов при перегрузке оператора `new`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Перегружает оператор `new` и предотвращает использование в `RuntimeClass`.
+Перегружает `new` оператора и предотвращает его `RuntimeClass`использования в.

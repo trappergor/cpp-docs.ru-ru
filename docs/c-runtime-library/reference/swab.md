@@ -1,9 +1,10 @@
 ---
 title: _swab
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _swab
 - stdlib/_swab
+- _o__swab
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - swab function
 - bytes, swapping
 ms.assetid: 017142f2-050c-4f6a-8b49-6b094f58ec94
-ms.openlocfilehash: b0faba55c42023f4d66adae68de6be2c1ab009a0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7353081fab92fcc3324a214688be28a4f651b05f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946291"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912415"
 ---
 # <a name="_swab"></a>_swab
 
@@ -65,11 +67,13 @@ void _swab(
 
 Функция **сваб** не возвращает значение. Функция задает значение **еинвал** **, если** указатель *src* или *dest* имеет значение null или *n* меньше нуля, и вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).
 
-Дополнительные сведения об этих и других кодах возврата см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Дополнительные сведения об этих и других кодах возврата см. в статьях [_doserrno, пере_sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Если *n* является четным, функция **_swab** копирует *n* байт из *src*, меняет местами каждую пару смежных байтов и сохраняет результат в *dest*. Если *n* является нечетным, **_swab** копирует и меняет местами первые *n*-1 байта *src*, а последний байт не копируется. Функция **_swab** обычно используется для подготовки двоичных данных для перемещения на компьютер, использующий другой порядок байтов.
+
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -77,7 +81,7 @@ void _swab(
 |-------------|---------------------|
 |**_swab**|C: \<stdlib.h> C++: \<cstdlib> или \<stdlib.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -106,6 +110,6 @@ After:  BADCFEHGJILKNMPORQTSVUXWZY
         ABCDEFGHIJKLMNOPQRSTUVWXYZ.
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Манипуляция буфером](../../c-runtime-library/buffer-manipulation.md)<br/>

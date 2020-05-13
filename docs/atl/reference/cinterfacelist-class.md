@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CInterfaceList class
 ms.assetid: 2077764d-25e5-4b3d-96c8-08a287bbcd25
-ms.openlocfilehash: e740d891e279bb29eeef898de52698dc3f04fc67
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a7fd781c63e4ea084cf078e49fc9efb9cfa2d85
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258641"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326779"
 ---
 # <a name="cinterfacelist-class"></a>Класс CInterfaceList
 
-Этот класс предоставляет методы, используемые при построении списка указателей интерфейса СОМ.
+Этот класс предоставляет полезные методы при построении списка указателей интерфейса COM.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -30,29 +30,29 @@ class CInterfaceList
 
 #### <a name="parameters"></a>Параметры
 
-*I*<br/>
-COM-интерфейс, указав тип указателя для сохранения.
+*Я*<br/>
+Интерфейс COM с указанием типа указателя для хранения.
 
-*piid*<br/>
-Указатель на идентификатор IID *я*.
+*пиид*<br/>
+Указатель на IID *I*.
 
 ## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CInterfaceList::CInterfaceList](#cinterfacelist)|Конструктор для списке интерфейсов.|
+|[CInterfaceList::CInterfaceList](#cinterfacelist)|Конструктор для списка интерфейсов.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Этот класс предоставляет конструктор и производные методы для создания списка указателей интерфейса СОМ. Используйте [CInterfaceArray](../../atl/reference/cinterfacearray-class.md) когда необходима массив.
+Этот класс предоставляет конструктор и выведенные методы для создания списка указателей интерфейса COM. Используйте [CInterfaceArray,](../../atl/reference/cinterfacearray-class.md) когда требуется массив.
 
-Дополнительные сведения см. в разделе [классы коллекций ATL](../../atl/atl-collection-classes.md).
+Для получения дополнительной информации, [см.](../../atl/atl-collection-classes.md)
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
-[CAtlList](../../atl/reference/catllist-class.md)
+[Catllist](../../atl/reference/catllist-class.md)
 
 `CInterfaceList`
 
@@ -60,9 +60,9 @@ COM-интерфейс, указав тип указателя для сохра
 
 **Заголовок:** atlcoll.h
 
-##  <a name="cinterfacelist"></a>  CInterfaceList::CInterfaceList
+## <a name="cinterfacelistcinterfacelist"></a><a name="cinterfacelist"></a>CInterfaceList::CInterfaceList
 
-Конструктор для списке интерфейсов.
+Конструктор для списка интерфейсов.
 
 ```
 CInterfaceList(UINT nBlockSize = 10) throw();
@@ -71,15 +71,15 @@ CInterfaceList(UINT nBlockSize = 10) throw();
 ### <a name="parameters"></a>Параметры
 
 *nBlockSize*<br/>
-Размер блока по умолчанию 10.
+Размер блока, с значением по умолчанию 10.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Размер блока — это мера объем памяти, выделяемый при новый элемент является обязательным. Увеличенный размер блока, уменьшите количество вызовов процедур выделения памяти, но использовать больше ресурсов.
+Размер блока — это мера объема памяти, выделенного при необходимости нового элемента. Большие размеры блоков уменьшают вызовы для процедур распределения памяти, но используют больше ресурсов.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс CAtlList](../../atl/reference/catllist-class.md)<br/>
-[Класс CComQIPtr](../../atl/reference/ccomqiptr-class.md)<br/>
-[Класс CComQIPtrElementTraits](../../atl/reference/ccomqiptrelementtraits-class.md)<br/>
-[Общие сведения о классе](../../atl/atl-class-overview.md)
+[Класс CCom-IPtr](../../atl/reference/ccomqiptr-class.md)<br/>
+[Класс CCom-IPtrElementTraits](../../atl/reference/ccomqiptrelementtraits-class.md)<br/>
+[Общие сведения о классах](../../atl/atl-class-overview.md)

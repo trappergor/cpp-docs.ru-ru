@@ -5,23 +5,23 @@ helpviewer_keywords:
 - ODBC, ODBC classes
 - MFC, database applications
 ms.assetid: 88aabe65-84e3-4122-b636-5d334a5fe570
-ms.openlocfilehash: b57d71ae2dc4e81f10855dc4075713170af952e4
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 380000deef40cdfaf18bde4bf9e5cc626c518007
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "79544498"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336824"
 ---
-# <a name="mfc-database-classes"></a>Классы баз данных MFC
+# <a name="mfc-database-classes"></a>MFC-классы баз данных
 
 > [!NOTE]
->  Корпорация Майкрософт рекомендует использовать ODBC через Microsoft ODBC Driver 13 (или более поздней версии) для SQL Server новых проектов. DAO больше не поддерживается.
+> Корпорация Майкрософт рекомендует использовать ODBC через Microsoft ODBC Driver 13 (или позже) для сервера S'L для новых проектов. DAO больше не поддерживается.
 
 Дополнительные сведения см. в следующих разделах:
 
-- [Журнал драйверов для Microsoft SQL Server](/sql/connect/connect-history)
+- [История драйверов для Microsoft SQL Server](/sql/connect/connect-history)
 
-- [Выпущен драйвер ODBC 13,1 для SQL Server](https://blogs.technet.microsoft.com/dataplatforminsider/2016/08/03/odbc-driver-13-1-for-sql-server-released/) Драйвер Microsoft ODBC 13 для SQL Server следует использовать для создания новых приложений или улучшения существующих приложений, которым необходимо использовать преимущества новых функций SQL Server 2016.
+- [Выпущен драйвер ODBC 13.1 для сервера S'L](https://blogs.technet.microsoft.com/dataplatforminsider/2016/08/03/odbc-driver-13-1-for-sql-server-released/) Microsoft ODBC Driver 13 для сервера S'L должна использоваться для создания новых приложений или расширения существующих приложений, которые должны воспользоваться новыми функциями S'L Server 2016.
 
 - [ODBC и MFC](../data/odbc/odbc-and-mfc.md)
 
@@ -29,6 +29,6 @@ ms.locfileid: "79544498"
 
 - [Использование классов баз данных без документов и представлений](../data/mfc-using-database-classes-without-documents-and-views.md)
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-[Программирование доступа к данным (библиотеки MFC/ATL)](../data/data-access-programming-mfc-atl.md)
+[Программирование доступа к данным (MFC/ATL)](../data/data-access-programming-mfc-atl.md)

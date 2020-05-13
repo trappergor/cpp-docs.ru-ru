@@ -9,26 +9,26 @@ helpviewer_keywords:
 - EDITBIN program
 - COFF files, editing
 ms.assetid: efdda03b-3dfc-4d31-90e6-caf5b3977914
-ms.openlocfilehash: 45c2967a55e85ae31bb77bb2e8d50415eafbea46
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 266347de063b4e050cb032aa2d8d74e7934b8081
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62293034"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328339"
 ---
 # <a name="editbin-reference"></a>Справочник ЕDITBIN
 
-Двоичный редактор файла COFF Майкрософт ((программа EDITBIN). (EXE) изменяет двоичные файлы общих объекта файла формат COFF. (Программа EDITBIN) можно использовать для изменения объектных файлов, исполняемых файлов и библиотек динамической компоновки (DLL).
+Редактор двоичного файла Microsoft COFF (EDITBIN. EXE) изменяет двоичные файлы Common Object File Format (COFF). Можно использовать EDITBIN для изменения файлов объектов, исполняемых файлов и библиотек динамической ссылки (DLL).
 
 > [!NOTE]
->  Это средство можно запустить только из командной строки Visual Studio. В системной командной строке или проводнике это невозможно.
+> Запустить этот инструмент можно только с запроса команды Visual Studio. В системной командной строке или проводнике это невозможно.
 
-(Программа EDITBIN) недоступен для использования в файлах, созданных с помощью [/GL](gl-whole-program-optimization.md) параметр компилятора. Изменения в двоичные файлы, созданные с параметром /GL будет достигаться компиляцию и компоновку.
+EDITBIN недоступен для использования в файлах, созданных с опцией компилятора [/GL.](gl-whole-program-optimization.md) Любые изменения в бинарных файлах, производимых с /GL, должны быть достигнуты путем перекомпиляции и ссылок.
 
 - [Командная строка EDITBIN](editbin-command-line.md)
 
-- [Параметры EDITBIN](editbin-options.md)
+- [Варианты EDITBIN](editbin-options.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Средства сборки дополнительных MSVC](c-cpp-build-tools.md)
+[Дополнительные инструменты сборки MSVC](c-cpp-build-tools.md)

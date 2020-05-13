@@ -1,10 +1,12 @@
 ---
 title: _popen, _wpopen
-description: Справочник по функциям библиотеки Microsoft C Runtime (CRT), _popen и _wpopen.
-ms.date: 01/28/2020
+description: Справочник по функциям _popen библиотеки среды выполнения Microsoft C (CRT) и _wpopen.
+ms.date: 4/2/2020
 api_name:
 - _popen
 - _wpopen
+- _o__popen
+- _o__wpopen
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -46,12 +49,12 @@ no-loc:
 - _sys_errlist
 - _sys_nerr
 - EINVAL
-ms.openlocfilehash: 68531256fd688b50b659c885635ffa17d17773a5
-ms.sourcegitcommit: 684181561490e0d1955cf601d222f67f09af6d00
+ms.openlocfilehash: 37e5bb491234e46a0e3330bc2fd42c16e54793fc
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76894324"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915293"
 ---
 # <a name="_popen-_wpopen"></a>_popen, _wpopen
 
@@ -75,10 +78,10 @@ FILE *_wpopen(
 
 ### <a name="parameters"></a>Параметры
 
-*командная*\
+*кнопки*\
 Команда для выполнения.
 
-*режим*\
+*режима*\
 Режим возвращенного потока.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -87,21 +90,23 @@ FILE *_wpopen(
 
 Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
 Функция **_popen** создает канал. Затем он асинхронно выполняет порожденную копию обработчика команд и использует *команду* в качестве командной строки. Строка символов *mode* определяет запрошенный тип доступа, как показано ниже.
 
 |Режим доступа|Описание|
 |-|-|
-|**"r"**|Вызывающий процесс может считывать инициируемый поток вывода команд с помощью возвращенного потока.|
-|**"w"**|Вызывающий процесс может записывать инициируемый поток ввода команд с помощью возвращенного потока.|
-|**"b"**|Открыть в двоичном режиме.|
-|**"t"**|Открыть в текстовом режиме.|
+|**Cерверный**|Вызывающий процесс может считывать инициируемый поток вывода команд с помощью возвращенного потока.|
+|**Белая**|Вызывающий процесс может записывать инициируемый поток ввода команд с помощью возвращенного потока.|
+|**&**|Открыть в двоичном режиме.|
+|**t**|Открыть в текстовом режиме.|
 
 > [!NOTE]
 > При использовании в программе Windows функция **_popen** возвращает недопустимый указатель на файл, который приводит к тому, что программа перестает отвечать на запросы неограниченно долго. **_popen** правильно работает в консольном приложении. Сведения о создании приложения Windows, которое перенаправляет ввод и вывод, см. в разделе [Создание дочернего процесса с перенаправленным входом и выходом](/windows/win32/ProcThread/creating-a-child-process-with-redirected-input-and-output) в Windows SDK.
 
 **_wpopen** — это версия **_popen**для расширенных символов; Аргумент *пути* к **_wpopen** является строкой расширенных символов. в противном случае **_wpopen** и **_popen** ведут себя одинаково.
+
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
@@ -166,7 +171,7 @@ int main( void )
 }
 ```
 
-В выходных данных предполагается, что в текущем каталоге имеется только один файл с расширением `.c`.
+В этом выходных данных предполагается, что в текущем каталоге есть только один файл `.c` с расширением имени файла.
 
 ```Output
 Volume in drive C is CDRIVE
@@ -181,8 +186,8 @@ Directory of D:\proj\console\test1
 Process returned 0
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-\ [управления процессами и средой](../../c-runtime-library/process-and-environment-control.md)
+[Управление процессами и средой](../../c-runtime-library/process-and-environment-control.md)\
 [_pclose](pclose.md)\
 [_pipe](pipe.md)

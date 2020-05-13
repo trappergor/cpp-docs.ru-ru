@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - delegate keyword [C++]
 ms.assetid: 03caf23d-7873-4a23-9b34-becf42aaf429
-ms.openlocfilehash: 29bf305ed5e4845437b90ed672d1ab0c0de9ced6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 388ccb28c9311b4727199e6b7324771c24c2906d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516489"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172442"
 ---
 # <a name="delegate--ccli-and-ccx"></a>delegate (C++/CLI и C++/CX)
 
@@ -23,11 +23,11 @@ ms.locfileid: "65516489"
 
 Среда выполнения Windows, как и среда CLR, поддерживает делегаты.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 **delegate** — контекстно-зависимое ключевое слово. Дополнительные сведения см. в статье [Context-Sensitive Keywords (C++/CLI and C++/CX)](context-sensitive-keywords-cpp-component-extensions.md) (Контекстно-зависимые ключевые слова (C++/CLI и C++/CX)).
 
-Используйте признак типа `__is_delegate()` для определения во время компиляции является ли тип делегатом. Дополнительные сведения см. в статье [Compiler Support for Type Traits (C++/CLI and C++/CX)](compiler-support-for-type-traits-cpp-component-extensions.md) (Поддержка характеристик типов компилятором (C++/CLI and C++/CX)).
+Используйте признак типа `__is_delegate()` для определения во время компиляции является ли тип делегатом. Подробные сведения см. в статье [Compiler Support for Type Traits (C++/CLI and C++/CX)](compiler-support-for-type-traits-cpp-component-extensions.md) (Поддержка характеристик типов компилятором (C++/CLI and C++/CX)).
 
 ## <a name="windows-runtime"></a>Среда выполнения Windows
 
@@ -59,7 +59,7 @@ delegate-type-identifier
 *parameters*<br/>
 Типы и идентификаторы прототипа функции (необязательно).
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Используйте параметр *delegate-type-identifier* для объявления события с таким же прототипом, что и у делегата. Дополнительные сведения см. в статье [Delegates (C++/CX)](../cppcx/delegates-c-cx.md) (Делегаты (C++/CX)).
 
@@ -89,7 +89,7 @@ function_declaration
 
 Для определения непривязанного делегата первый параметр в области *function_declaration* должен быть типом указателя **this** для объекта.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Делегаты являются многоадресной рассылкой: "указатель функции" можно привязать к одному или нескольким методам в управляемом классе. Ключевое слово **delegate** определяет тип делегата многоадресной рассылки с помощью сигнатуры определенного метода.
 
@@ -200,6 +200,6 @@ in func2 10
 in static func3 11
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Расширения компонентов для .NET и UWP](component-extensions-for-runtime-platforms.md)

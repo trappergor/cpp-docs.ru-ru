@@ -1,10 +1,13 @@
 ---
 title: asinh, asinhf, asinhl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - asinh
 - asinhf
 - asinhl
+- _o_asinh
+- _o_asinhf
+- _o_asinhl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +34,12 @@ helpviewer_keywords:
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-ms.openlocfilehash: f4d93f121c0124293a5bdff9041d0adfaab5d83c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a200aa6e511ab83866fbf1df2beabb827c611c46
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939643"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919623"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh, asinhf, asinhl
 
@@ -63,21 +67,23 @@ long double asinh( long double x );  // C++ only
 
 Функции **ASINH** возвращают обратный гиперболический синус (дугу гиперболического синуса) *x*. Эта функция допустима для домена чисел с плавающей запятой. Если *x* является недействительным неопределенным или бесконечностью, то возвращается одно и то же значение.
 
-|Ввод|Исключение SEH|**_matherr** Об|
+|Входные данные|Исключение SEH|**_matherr** Об|
 |-----------|-------------------|--------------------------|
-|± КНАН, ТО ЖЕ, INF|none|none|
+|± КНАН, ТО ЖЕ, INF|нет|нет|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-C++При использовании можно вызывать перегрузки **ASINH** , которые принимают и возвращают значения **типа float** или **Long** . В программе на языке C **ASINH** всегда принимает и возвращает **Double**.
+При использовании C++ можно вызывать перегрузки **ASINH** , которые принимают и возвращают значения **типа float** или **Long** **double** . В программе на языке C **ASINH** всегда принимает и возвращает **Double**.
+
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
 |Функция|Обязательный заголовок C|Обязательный заголовок C++|
 |--------------|--------------|------------------|
-|**ASINH**, **асинхф**, **асинхл**|\<math.h>|\<cmath > или \<Math. h <|
+|**ASINH**, **асинхф**, **асинхл**|\<math.h>|\<cmath> или \<Math. h<|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -107,7 +113,7 @@ sinh( 0.785398 ) = 0.868671
 asinh( 0.868671 ) = 0.785398
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>

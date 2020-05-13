@@ -1,5 +1,5 @@
 ---
-title: Класс IPersistStreamInitImpl
+title: IPersistStreamInitImpl класс
 ms.date: 11/04/2016
 f1_keywords:
 - IPersistStreamInitImpl
@@ -15,19 +15,19 @@ helpviewer_keywords:
 - IPersistStreamInitImpl class
 - streams, ATL
 ms.assetid: ef217c3c-020f-4cf8-871e-ef68e57865b8
-ms.openlocfilehash: 7a350a4349cb825795a18dd860a2482952b04dcb
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 0d6ac4639ac0cfb97416ca80b7a2ec3903d7b8e6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496153"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326463"
 ---
-# <a name="ipersiststreaminitimpl-class"></a>Класс IPersistStreamInitImpl
+# <a name="ipersiststreaminitimpl-class"></a>IPersistStreamInitImpl класс
 
-Этот класс реализует `IUnknown` интерфейс [иперсистстреаминит](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit) и предоставляет реализацию по умолчанию.
+Этот класс `IUnknown` реализует и обеспечивает реализацию интерфейса [IPersistStreamInit](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit) по умолчанию.
 
 > [!IMPORTANT]
->  Этот класс и его члены не могут использоваться в приложениях, выполняемых в среда выполнения Windows.
+> Этот класс и его члены не могут быть использованы в приложениях, выполняемых в Windows Runtime.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -40,26 +40,26 @@ class ATL_NO_VTABLE IPersistStreamInitImpl
 #### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Класс, производный от `IPersistStreamInitImpl`.
+Ваш класс, полученный из `IPersistStreamInitImpl`.
 
 ## <a name="members"></a>Участники
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[IPersistStreamInitImpl::, ClassID](#getclassid)|Получает CLSID объекта.|
-|[IPersistStreamInitImpl:: Жетсиземакс](#getsizemax)|Возвращает размер потока, необходимого для сохранения данных объекта. Реализация ATL возвращает значение E_NOTIMPL.|
-|[IPersistStreamInitImpl:: InitNew](#initnew)|Инициализирует вновь созданный объект.|
-|[IPersistStreamInitImpl:: IsDirty](#isdirty)|Проверяет, изменились ли данные объекта со времени последнего сохранения.|
-|[IPersistStreamInitImpl:: Load](#load)|Загружает свойства объекта из указанного потока.|
-|[IPersistStreamInitImpl:: Save](#save)|Сохраняет свойства объекта в указанный поток.|
+|[IPersistStreamInitImpl::GetClassID](#getclassid)|Извлекает CLSID объекта.|
+|[IPersistStreamInitImpl::GetSizeMax](#getsizemax)|Извлекает размер потока, необходимый для сохранения данных объекта. Реализация ATL возвращает E_NOTIMPL.|
+|[IPersistStreamInitImpl::InitNew](#initnew)|Инициализирует вновь созданный объект.|
+|[IPersistStreamInitImpl::IsDirty](#isdirty)|Проверяет, изменились ли данные объекта с момента его последнего сохранения.|
+|[IPersistStreamInitImpl::Load](#load)|Загружает свойства объекта из указанного потока.|
+|[IPersistStreamInitImpl::Сохранить](#save)|Сохраняет свойства объекта в указанном потоке.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Интерфейс [иперсистстреаминит](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit) позволяет клиенту запрашивать загрузку объекта и сохранять его постоянные данные в один поток. Класс `IPersistStreamInitImpl` предоставляет реализацию этого интерфейса по умолчанию и реализует `IUnknown` , отправляя сведения в устройство дампа в отладочных сборках.
+Интерфейс [IPersistStreamInit](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit) позволяет клиенту запрашивать, чтобы ваш объект загружал и сохраняет свои постоянные данные в одном потоке. Класс `IPersistStreamInitImpl` обеспечивает реализацию этого интерфейса `IUnknown` по умолчанию и реализует, отправляя информацию на устройство свалки в отладочных сборках.
 
-**Связанные статьи** [Учебник по ATL](../../atl/active-template-library-atl-tutorial.md), [Создание проекта ATL](../../atl/reference/creating-an-atl-project.md)
+**Похожие статьи** [ATL Учебник](../../atl/active-template-library-atl-tutorial.md), Создание проекта [ATL](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -69,23 +69,23 @@ class ATL_NO_VTABLE IPersistStreamInitImpl
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** атлком. h
+**Заголовок:** atlcom.h
 
-##  <a name="getclassid"></a>IPersistStreamInitImpl::, ClassID
+## <a name="ipersiststreaminitimplgetclassid"></a><a name="getclassid"></a>IPersistStreamInitImpl::GetClassID
 
-Получает CLSID объекта.
+Извлекает CLSID объекта.
 
 ```
 STDMETHOD(GetClassID)(CLSID* pClassID);
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-См. [IPersist:: ClassID](/windows/win32/api/objidl/nf-objidl-ipersist-getclassid) в Windows SDK.
+Смотрите [IPersist::GetClassID](/windows/win32/api/objidl/nf-objidl-ipersist-getclassid) в Windows SDK.
 
-##  <a name="getsizemax"></a>IPersistStreamInitImpl:: Жетсиземакс
+## <a name="ipersiststreaminitimplgetsizemax"></a><a name="getsizemax"></a>IPersistStreamInitImpl::GetSizeMax
 
-Возвращает размер потока, необходимого для сохранения данных объекта.
+Извлекает размер потока, необходимый для сохранения данных объекта.
 
 ```
 STDMETHOD(GetSizeMax)(ULARGE_INTEGER FAR* pcbSize);
@@ -93,13 +93,13 @@ STDMETHOD(GetSizeMax)(ULARGE_INTEGER FAR* pcbSize);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение E_NOTIMPL.
+Возвращает E_NOTIMPL.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-См. раздел [иперсистстреаминит:: жетсиземакс](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-getsizemax) в Windows SDK.
+Смотрите [IPersistStreamInit::GetSizeMax](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-getsizemax) в Windows SDK.
 
-##  <a name="initnew"></a>IPersistStreamInitImpl:: InitNew
+## <a name="ipersiststreaminitimplinitnew"></a><a name="initnew"></a>IPersistStreamInitImpl::InitNew
 
 Инициализирует вновь созданный объект.
 
@@ -107,23 +107,23 @@ STDMETHOD(GetSizeMax)(ULARGE_INTEGER FAR* pcbSize);
 STDMETHOD(InitNew)();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-См. раздел [иперсистстреаминит:: InitNew](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-initnew) в Windows SDK.
+Смотрите [IPersistStreamInit::InitNew](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-initnew) в Windows SDK.
 
-##  <a name="isdirty"></a>IPersistStreamInitImpl:: IsDirty
+## <a name="ipersiststreaminitimplisdirty"></a><a name="isdirty"></a>IPersistStreamInitImpl::IsDirty
 
-Проверяет, изменились ли данные объекта со времени последнего сохранения.
+Проверяет, изменились ли данные объекта с момента его последнего сохранения.
 
 ```
 STDMETHOD(IsDirty)();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-См. раздел [иперсистстреаминит:: IsDirty](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-isdirty) в Windows SDK.
+Смотрите [IPersistStreamInit::Грязный](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-isdirty) в Windows SDK.
 
-##  <a name="load"></a>IPersistStreamInitImpl:: Load
+## <a name="ipersiststreaminitimplload"></a><a name="load"></a>IPersistStreamInitImpl::Load
 
 Загружает свойства объекта из указанного потока.
 
@@ -131,27 +131,27 @@ STDMETHOD(IsDirty)();
 STDMETHOD(Load)(LPSTREAM pStm);
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Для получения этих сведений в ATL используется схема свойств объекта.
+ATL использует карту свойств объекта для получения этой информации.
 
-См. раздел [иперсистстреаминит:: Load](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-load) в Windows SDK.
+Смотрите [IPersistStreamInit::Загрузка](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-load) в Windows SDK.
 
-##  <a name="save"></a>IPersistStreamInitImpl:: Save
+## <a name="ipersiststreaminitimplsave"></a><a name="save"></a>IPersistStreamInitImpl::Сохранить
 
-Сохраняет свойства объекта в указанный поток.
+Сохраняет свойства объекта в указанном потоке.
 
 ```
 STDMETHOD(Save)(LPSTREAM pStm, BOOL fClearDirty);
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Для хранения этих сведений в ATL используется схема свойств объекта.
+ATL использует карту свойств объекта для хранения этой информации.
 
-См. раздел [иперсистстреаминит:: Save](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-save) в Windows SDK.
+Смотрите [IPersistStreamInit::Сохранить](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-save) в Windows SDK.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Хранилища и потоки](/windows/win32/Stg/storages-and-streams)<br/>
-[Обзор класса](../../atl/atl-class-overview.md)
+[Общие сведения о классах](../../atl/atl-class-overview.md)

@@ -1,6 +1,6 @@
 ---
-title: Класс Обжаутпут
-description: Справочник C++ по классу SDK для Build Insights обжаутпут.
+title: Класс ObjOutput
+description: Ссылка на класс SDK ObjOutput.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 26cf110bcd086ab051174ebf0017a73370c0aa5e
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 194253e8995401114e2529b868b36c9823510a4f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334664"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324494"
 ---
-# <a name="objoutput-class"></a>Класс Обжаутпут
+# <a name="objoutput-class"></a>Класс ObjOutput
 
 ::: moniker range="<=vs-2015"
 
-Пакет C++ SDK для Build Insights совместим с Visual Studio 2017 и более поздних версий. Чтобы просмотреть документацию по этим версиям, присвойте элементу управления "Выбор версий Visual Studio" для этой статьи значение Visual Studio 2017 или Visual Studio 2019.
+SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Класс `ObjOutput` используется с функциями [матчевент](../functions/match-event.md), [матчевентинмемберфунктион](../functions/match-event-in-member-function.md), [матчевентстакк](../functions/match-event-stack.md)и [матчевентстаккинмемберфунктион](../functions/match-event-stack-in-member-function.md) . Используйте его для сопоставления с событием [OBJ_OUTPUT](../event-table.md#obj-output) .
+Класс `ObjOutput` используется с функциями [MatchEvent,](../functions/match-event.md) [MatchEventInMemberFunction,](../functions/match-event-in-member-function.md) [MatchEventStack](../functions/match-event-stack.md)и [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Используйте его для соответствия [OBJ_OUTPUT](../event-table.md#obj-output) событию.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -37,15 +37,15 @@ public:
 };
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
-Вместе с наследуемыми членами из своего базового класса [филеаутпут](file-output.md) класс `ObjOutput` содержит следующие члены:
+Наряду с унаследованных членов из `ObjOutput` своего базового класса [FileOutput,](file-output.md) класс содержит следующие члены:
 
 ### <a name="constructors"></a>Конструкторы
 
-[обжаутпут](#obj-output)
+[ObjOutput](#obj-output)
 
-## <a name="obj-output"></a>обжаутпут
+## <a name="objoutput"></a><a name="obj-output"></a>ObjOutput
 
 ```cpp
 ObjOutput(const RawEvent& event);
@@ -53,7 +53,7 @@ ObjOutput(const RawEvent& event);
 
 ### <a name="parameters"></a>Параметры
 
-*event*\
-Событие [OBJ_OUTPUT](../event-table.md#obj-output) .
+*Событие*\
+[Событие OBJ_OUTPUT.](../event-table.md#obj-output)
 
 ::: moniker-end

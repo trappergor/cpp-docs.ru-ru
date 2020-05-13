@@ -5,22 +5,22 @@ f1_keywords:
 - allocators/std::operator!=
 - allocators/std::operator==
 ms.assetid: b55d67cb-3c69-46bf-ad40-e845fb096c4e
-ms.openlocfilehash: b7429e298cdf14d727fc481db6c4a3bf8574b5e7
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 7bc37e98ed85582cac8fc7ae21e54a6d5da9e06f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79424059"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364963"
 ---
 # <a name="ltallocatorsgt-operators"></a>Операторы &lt;allocator&gt;
 
-Это функции операторов глобального шаблона, определенные в &lt;распределителя&gt;. Функции оператора члена класса см. в документации по классу.
+Это функции глобального шаблонного оператора, определяемые в &lt;раздателях.&gt; Для функций оператора-члена класса см.
 
 |||
 |-|-|
-|[operator!=](#op_neq)|[operator==](#op_eq_eq)|
+|[оператора!](#op_neq)|[оператора](#op_eq_eq)|
 
-## <a name="op_neq"></a>  operator!=
+## <a name="operator"></a><a name="op_neq"></a>оператора!
 
 Проверяет на неравенство между объектами распределителя указанного класса.
 
@@ -33,10 +33,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Description|
+|Параметр|Описание|
 |---------------|-----------------|
-|*left*|Один из объектов allocator для проверки на неравенство.|
-|*right*|Один из объектов allocator для проверки на неравенство.|
+|*Левой*|Один из объектов allocator для проверки на неравенство.|
+|*Правильно*|Один из объектов allocator для проверки на неравенство.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -44,9 +44,9 @@ bool operator!=(
 
 ### <a name="remarks"></a>Remarks
 
-Оператор шаблона возвращает `!(left == right)`.
+Оператор-шаблон возвращает `!(left == right)`.
 
-## <a name="op_eq_eq"></a> operator==
+## <a name="operator"></a><a name="op_eq_eq"></a>оператора
 
 Проверяет на равенство объекты распределителя указанного класса.
 
@@ -59,10 +59,10 @@ bool operator==(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Description|
+|Параметр|Описание|
 |---------------|-----------------|
-|*left*|Один из объектов allocator для проверки на равенство.|
-|*right*|Один из объектов allocator для проверки на равенство.|
+|*Левой*|Один из объектов allocator для проверки на равенство.|
+|*Правильно*|Один из объектов allocator для проверки на равенство.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -74,4 +74,4 @@ bool operator==(
 
 ## <a name="see-also"></a>См. также раздел
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<>-подлатыватели](../standard-library/allocators-header.md)

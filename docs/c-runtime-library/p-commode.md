@@ -1,8 +1,9 @@
 ---
 title: __p__commode
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - __p__commode
+- _o___p__commode
 api_location:
 - msvcr110.dll
 - msvcrt.dll
@@ -12,6 +13,7 @@ api_location:
 - msvcr80.dll
 - msvcr110_clr0400.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -21,12 +23,12 @@ f1_keywords:
 helpviewer_keywords:
 - __p__commode
 ms.assetid: 4380acb8-e3e4-409c-a60f-6205ac5189ce
-ms.openlocfilehash: 930eb45e8069bdd71b5a7986e229b229318d0be8
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 057a0146aed87a50fc2e8c444b97a8b7b51eada1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944120"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919504"
 ---
 # <a name="__p__commode"></a>__p__commode
 
@@ -43,11 +45,13 @@ int * __p__commode(
 
 Указатель на глобальную переменную `_commode`.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Функция `__p__commode` предназначена только для внутреннего пользования и не должна вызываться из кода пользователя.
 
 Режим фиксации файлов указывает, когда на диск записываются критические данные. Дополнительные сведения см. в разделе [fflush](../c-runtime-library/reference/fflush.md).
+
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](global-state.md).
 
 ## <a name="requirements"></a>Требования
 

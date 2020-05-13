@@ -1,6 +1,6 @@
 ---
-title: релогв
-description: Справочник C++ по функциям SDK для Build Insights релогв.
+title: RelogW
+description: Ссылка на функцию «Исследования сборки SDK RelogW».
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 563b1aa92877ff5bc1216bc914c1c661de06dfc0
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: c5d5f6e35c7cd24d2324ce1d8a0434d9048b1d85
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334292"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323808"
 ---
-# <a name="relogw"></a>релогв
+# <a name="relogw"></a>RelogW
 
 ::: moniker range="<=vs-2015"
 
-Пакет C++ SDK для Build Insights совместим с Visual Studio 2017 и более поздних версий. Чтобы просмотреть документацию по этим версиям, присвойте элементу управления "Выбор версий Visual Studio" для этой статьи значение Visual Studio 2017 или Visual Studio 2019.
+SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Функция `RelogW` используется для чтения событий КОМПИЛЯТОРОМ MSVC из трассировки входных данных трассировки событий Windows (ETW) и их записи в новую, измененную трассировку ETW.
+Функция `RelogW` используется для чтения событий MSVC из отслеживания входных событий для отслеживания Windows (ETW) и записывания их в новый, измененный след ETW.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -38,17 +38,17 @@ enum RESULT_CODE RelogW(
 
 ### <a name="parameters"></a>Параметры
 
-*инпутлогфиле*\
-Входная трассировка ETW, из которой требуется считать события.
+*вхотливыйLogFile*\
+Входный след ETW, из которого вы хотите прочитать события.
 
-*аутпутлогфиле*\
-Файл, в который записываются новые события.
+*выходНопок*\
+Файл, в котором можно написать новые события.
 
-*релогдескриптор*\
-Указатель на объект [RELOG_DESCRIPTOR](../other-types/relog-descriptor-struct.md) . Используйте этот объект для настройки сеанса повторного ведения журнала.
+*релогДескриптор*\
+Указатель на [RELOG_DESCRIPTOR](../other-types/relog-descriptor-struct.md) объект. Используйте этот объект для настройки сеанса перезаписи.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Код результата из перечисления [RESULT_CODE](../other-types/result-code-enum.md) .
+Код результата из [RESULT_CODE](../other-types/result-code-enum.md) enum.
 
 ::: moniker-end

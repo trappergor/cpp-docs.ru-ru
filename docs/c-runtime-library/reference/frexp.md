@@ -1,8 +1,9 @@
 ---
-title: frexp, фрекспф, фрекспл
-ms.date: 04/05/2018
+title: frexp, frexpf, frexpl
+ms.date: 4/2/2020
 api_name:
 - frexp
+- _o_frexp
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,14 +32,14 @@ helpviewer_keywords:
 - frexp function
 - floating-point functions, mantissa and exponent
 ms.assetid: 9b020f2e-3967-45ec-a6a8-d467a071aa55
-ms.openlocfilehash: 3a67ced9bd6653a7c40c98a8cf015663c37457bb
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d539a9ebb4042b18e6ec1ef8ed204a61cc7bb8cc
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956640"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911609"
 ---
-# <a name="frexp-frexpf-frexpl"></a>frexp, фрекспф, фрекспл
+# <a name="frexp-frexpf-frexpl"></a>frexp, frexpf, frexpl
 
 Возвращает мантиссу и степень числа с плавающей запятой.
 
@@ -78,11 +80,13 @@ long double frexp(
 
 **frexp** возвращает мантисса. Если *x* равно 0, функция возвращает 0 для мантиссаа и экспоненты. Если *експптр* имеет **значение NULL**, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция **устанавливает** **еинвал** и возвращает 0.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Функция **frexp** разбивает значение с плавающей запятой (*x*) в мантисса (*m*) и экспоненту (*n*) таким, что абсолютное значение *m* больше или равно 0,5 и меньше 1,0, и *x*  =  *m* * 2<sup>*n*</sup>. Целочисленная экспонента *n* хранится в расположении, на которое указывает *експптр*.
+Функция **frexp** разбивает значение с плавающей запятой (*x*) в мантисса (*m*) и экспоненту (*n*) таким, что абсолютное значение *m* больше или равно 0,5 и меньше 1,0, а *x* = *m* * 2<sup>*n*</sup>. Целочисленная экспонента *n* хранится в расположении, на которое указывает *експптр*.
 
-C++допускает перегрузку, поэтому можно вызывать перегрузки **frexp**. В программе на языке C **frexp** всегда принимает указатель типа **Double** и **int** и возвращает значение **типа Double**.
+C++ допускает перегрузку, поэтому можно вызывать перегрузки **frexp**. В программе на языке C **frexp** всегда принимает указатель типа **Double** и **int** и возвращает значение **типа Double**.
+
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -90,7 +94,7 @@ C++допускает перегрузку, поэтому можно вызыв
 |--------------|---------------------|
 |**frexp**, **фрекспф**, **фрекспл**|\<math.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -117,7 +121,7 @@ int main( void )
 frexp( 16.400000, &n ) = 0.512500, n = 5
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [ldexp](ldexp.md)<br/>

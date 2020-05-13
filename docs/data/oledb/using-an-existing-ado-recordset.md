@@ -6,18 +6,18 @@ helpviewer_keywords:
 - OLE DB consumer templates, ADO recordsets
 - recordsets [C++], using in OLE DB
 ms.assetid: a9b1de8a-d379-49b1-a26e-578741e9f6a8
-ms.openlocfilehash: eb558bb319bb5ddb61d0383846099d708f99c627
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48f6eb3bac34b37f495b9492e19b4197ed69cca3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389012"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209356"
 ---
 # <a name="using-an-existing-ado-recordset"></a>Использование существующего набора записей ADO
 
-Создайте шаблоны потребителей OLE DB и Active Data Objects (ADO), открыть набор записей (соответствующий набор строк в шаблоны потребителей OLE DB) с помощью ADO. Если у вас есть набор записей, выполните следующие действия для подключения к набор строк OLE DB.
+Чтобы смешать OLE DB шаблоны потребителей и активные объекты данных (ADO), используйте ADO для открытия набора записей (соответствующего набору строк в шаблонах потребителя OLE DB). Если у вас есть набор записей, выполните следующие действия, чтобы подключиться к набору строк OLE DB.
 
-1. Вызовите `QueryInterface` для `IRowset` и `IAccessor` указатели.
+1. Вызовите `QueryInterface` для указателей `IRowset` и `IAccessor`.
 
     ```cpp
     IRowset* lpRowset = NULL;
@@ -27,9 +27,9 @@ ms.locfileid: "62389012"
     ```
 
     > [!NOTE]
-    > *lpUnk* указывает `IUnknown` объекта набора записей ADO.
+    > *лпунк* указывает на объект `IUnknown` набора записей ADO.
 
-1. Назначить их соответствующие классы шаблонов потребителей OLE DB для доступа и строк.
+1. Присоедините метод доступа и набор строк к соответствующим OLE DB классам шаблонов потребителей.
 
     ```cpp
     CRowset rs;
@@ -40,6 +40,6 @@ ms.locfileid: "62389012"
     rs.SetAccessor(accessor);
     ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Использование методов доступа](../../data/oledb/using-accessors.md)

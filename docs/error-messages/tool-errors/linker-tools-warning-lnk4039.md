@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4039
 ms.assetid: ed7b1783-a7b2-4d3e-8afb-ca1648dae2c2
-ms.openlocfilehash: 4716fa316ee8c5f7e8efdf79fdd049c0c8b9d596
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 362e658ad86fb00409645b4ef42650a08b08ad0b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410295"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194178"
 ---
 # <a name="linker-tools-warning-lnk4039"></a>Предупреждение средств компоновщика LNK4039
 
-раздел «name», указанный в параметре/Section не существует
+раздел "Name", указанный с параметром/SECTION, не существует
 
-[(Программа DUMPBIN)](../../build/reference/dumpbin-reference.md) или [EDITBIN](../../build/reference/editbin-reference.md) не удалось найти раздел `name` во входном файле.
+[Dumpbin](../../build/reference/dumpbin-reference.md) или [EDITBIN](../../build/reference/editbin-reference.md) не удалось найти раздел с именем `name` во входном файле.
 
-Для просмотра разделов в файле, запустить DUMPBIN с [/Headers](../../build/reference/headers.md) параметр.
+Чтобы просмотреть разделы в файле, выполните DUMPBIN с параметром [/headers](../../build/reference/headers.md) .

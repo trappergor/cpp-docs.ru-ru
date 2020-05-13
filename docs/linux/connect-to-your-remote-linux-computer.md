@@ -2,12 +2,12 @@
 title: Подключение к целевой системе Linux из Visual Studio
 description: Подключение к удаленному компьютеру Linux или подсистеме Windows для Linux из проекта C++ в Visual Studio.
 ms.date: 01/17/2020
-ms.openlocfilehash: d0065b63d7a81d3ae3d68b26184c88aca77f601c
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: 624dce6bb05e4f4a961628e0c6f455e11c14dff8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518222"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364367"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Подключение к целевой системе Linux из Visual Studio
 
@@ -150,10 +150,10 @@ ms.locfileid: "76518222"
 
 В Visual Studio 2019 версии 16.1 добавлена собственная поддержка для использования C++ с [подсистемой Windows для Linux (WSL)](/windows/wsl/about). Это значит, что сборка и отладка локальной установки WSL выполняются напрямую. Больше не нужно добавлять удаленное подключение или настраивать SSH. Дополнительные сведения [об установке WSL](/windows/wsl/install-win10) можно найти здесь.
 
-Чтобы настроить установку WSL для работы с Visual Studio, потребуется установить следующие средства: gcc или clang, gdb, make, rsync и zip. Их можно установить на дистрибутивах, использующих apt, с помощью этой команды, которая также устанавливает компилятор g++:
+Чтобы настроить установку WSL для работы с Visual Studio, потребуется установить следующие средства: gcc or clang, gdb, make, ninja-build (требуется только для проектов CMake с использованием Visual Studio 2019 версии 16.6 и более поздней), rsync и zip. Их можно установить на дистрибутивах, использующих apt, с помощью этой команды, которая также устанавливает компилятор g++:
 
 ```bash
-sudo apt install g++ gdb make rsync zip
+sudo apt install g++ gdb make ninja-build rsync zip
 ```
 
 Ознакомьтесь с дополнительными сведениями о [скачивании, установке и настройке рабочей нагрузки для Linux](download-install-and-setup-the-linux-development-workload.md).

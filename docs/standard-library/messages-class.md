@@ -22,16 +22,16 @@ helpviewer_keywords:
 - std::messages [C++], get
 - std::messages [C++], open
 ms.assetid: c4c71f40-4f24-48ab-9f7c-daccd8d5bd83
-ms.openlocfilehash: 704ee2ce40b4026cc066213181c96cf0f744d152
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: deb9eaedba3c99bb2fcb8399ac412ccedb11545f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425433"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375925"
 ---
 # <a name="messages-class"></a>Класс messages
 
-Шаблон класса описывает объект, который можно использовать в качестве аспекта языкового стандарта для извлечения локализованных сообщений из каталога международных сообщений для заданного языкового стандарта.
+Шаблон класса описывает объект, который может служить в качестве аспекта локализации для получения локализованных сообщений из каталога интернационализированных сообщений для данного языка.
 
 В настоящее время при использовании данного класса сообщений сообщения не создаются.
 
@@ -44,7 +44,7 @@ class messages : public messages_base;
 
 ### <a name="parameters"></a>Параметры
 
-*CharType*\
+*Chartype*\
 Тип, используемый внутри программы для кодирования символов в языковом стандарте.
 
 ## <a name="remarks"></a>Remarks
@@ -55,22 +55,22 @@ class messages : public messages_base;
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Description|
+|Конструктор|Описание|
 |-|-|
-|[messages](#messages)|Функция конструктора аспекта сообщения.|
+|[Сообщения](#messages)|Функция конструктора аспекта сообщения.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Description|
+|Имя типа|Описание|
 |-|-|
 |[char_type](#char_type)|Тип символа, используемого для отображения сообщений.|
 |[string_type](#string_type)|Тип, описывающий строку типа `basic_string`, содержащую символы типа `CharType`.|
 
 ### <a name="member-functions"></a>Функции элементов
 
-|Функция-член|Description|
+|Функция-член|Описание|
 |-|-|
-|[close](#close)|Закрывает каталог сообщений.|
+|[Закрыть](#close)|Закрывает каталог сообщений.|
 |[do_close](#do_close)|Виртуальная функция, вызываемая для закрытия каталога сообщений.|
 |[do_get](#do_get)|Виртуальная функция, вызываемая для извлечения каталога сообщений.|
 |[do_open](#do_open)|Виртуальная функция, вызываемая для открытия каталога сообщений.|
@@ -79,11 +79,11 @@ class messages : public messages_base;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<языковой стандарт >
+**Заголовок:** \<locale>
 
 **Пространство имен:** std
 
-## <a name="char_type"></a>  messages::char_type
+## <a name="messageschar_type"></a><a name="char_type"></a>сообщения::char_type
 
 Тип символа, используемого для отображения сообщений.
 
@@ -93,9 +93,9 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Remarks
 
-Этот тип является синонимом для параметра-шаблона **CharType**.
+Тип является синонимом для параметра-шаблона **Chartype**.
 
-## <a name="close"></a>  messages::close
+## <a name="messagesclose"></a><a name="close"></a>сообщения::закрыть
 
 Закрывает каталог сообщений.
 
@@ -112,7 +112,7 @@ void close(catalog _Catval) const;
 
 Функция-член вызывает [do_close](#do_close)(_ *Catval*).
 
-## <a name="do_close"></a>  messages::do_close
+## <a name="messagesdo_close"></a><a name="do_close"></a>сообщения::do-close
 
 Виртуальная функция, вызываемая для закрытия каталога сообщений.
 
@@ -127,7 +127,7 @@ virtual void do_close(catalog _Catval) const;
 
 ### <a name="remarks"></a>Remarks
 
-Защищенная функция Member закрывает каталог сообщений *_Catval*, который должен быть открыт предыдущим вызовом функции [do_open](#do_open).
+Защищенная функция участника закрывает каталог сообщений *_Catval,* который должен быть открыт более ранним вызовом [do_open.](#do_open)
 
 Значение *_Catval* должно быть получено из ранее открытого каталога, который не закрыт.
 
@@ -135,7 +135,7 @@ virtual void do_close(catalog _Catval) const;
 
 См. пример для [close](#close), в котором вызывается `do_close`.
 
-## <a name="do_get"></a>  messages::do_get
+## <a name="messagesdo_get"></a><a name="do_get"></a>сообщения::do-get
 
 Виртуальная функция, вызываемая для извлечения каталога сообщений.
 
@@ -163,17 +163,17 @@ virtual string_type do_get(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Он возвращает копию *_Dfault* при сбое. В противном случае он возвращает копию указанной последовательности сообщений.
+Он возвращает копию *_Dfault* на сбой. В противном случае он возвращает копию указанной последовательности сообщений.
 
 ### <a name="remarks"></a>Remarks
 
-Защищенная функция-член пытается получить последовательность сообщений из каталога сообщений *_Catval*. Это может использовать *_Set*, *_message*и *_Dfault* .
+Защищенная функция члена пытается получить последовательность сообщений из каталога сообщений *_Catval*. Он может использовать *_Set,* *_Message,* и *_Dfault* при этом.
 
 ### <a name="example"></a>Пример
 
-См. пример для [get](#get), который вызывает `do_get`.
+См. пример для [get](#get), в котором вызывается `do_get`.
 
-## <a name="do_open"></a>  messages::do_open
+## <a name="messagesdo_open"></a><a name="do_open"></a>сообщения::do-open
 
 Виртуальная функция, вызываемая для открытия каталога сообщений.
 
@@ -197,7 +197,7 @@ virtual catalog do_open(
 
 ### <a name="remarks"></a>Remarks
 
-Защищенная функция-член пытается открыть каталог сообщений, имя которого *_Catname*. Он может использовать языковой стандарт *_Loc*
+Защищенная функция участника пытается открыть каталог сообщений, имя которого *_Catname.* Он может использовать *_Loc* в этом
 
 Возвращаемое значение следует использовать как аргумент для последующего вызова [close](#close).
 
@@ -205,7 +205,7 @@ virtual catalog do_open(
 
 См. пример для [open](#open), в котором вызывается `do_open`.
 
-## <a name="get"></a>  messages::get
+## <a name="messagesget"></a><a name="get"></a>сообщения::получить
 
 Извлекает каталог сообщений.
 
@@ -233,13 +233,13 @@ string_type get(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Он возвращает копию *_Dfault* при сбое. В противном случае он возвращает копию указанной последовательности сообщений.
+Он возвращает копию *_Dfault* на сбой. В противном случае он возвращает копию указанной последовательности сообщений.
 
 ### <a name="remarks"></a>Remarks
 
-Функция-член возвращает [do_get](#do_get)(`_Catval`, `_Set`, `_Message`, `_Dfault`).
+Функция участника [do_get](#do_get)возвращает `_Catval`do_get `_Set` `_Message`(, , , `_Dfault`).
 
-## <a name="messages"></a>  messages::messages
+## <a name="messagesmessages"></a><a name="messages"></a>сообщения::сообщения
 
 Функция конструктора аспекта сообщения.
 
@@ -254,7 +254,7 @@ protected: messages(
 
 ### <a name="parameters"></a>Параметры
 
-*_Refs*\
+*_refs*\
 Целочисленное значение, используемое для указания типа управления памятью для объекта.
 
 *_Locname*\
@@ -262,19 +262,19 @@ protected: messages(
 
 ### <a name="remarks"></a>Remarks
 
-Возможные значения параметра *_Refs* и их значимость:
+Возможные значения для *параметра _Refs* и их значение:
 
 - 0: время существования объекта управляется языковыми стандартами, которые его содержат.
 
 - 1: время существования объекта должно управляться вручную.
 
-- \> 1: эти значения не определены.
+- \>1: Эти значения не определены.
 
 Прямые примеры привести нельзя, так как деструктор защищен.
 
-Конструктор инициализирует свой базовый объект с **locale::** [facet](../standard-library/locale-class.md#facet_class)(`_Refs`).
+Конструктор инициализирует свой базовый объект с `_Refs` **помощью локализации::**[грань](../standard-library/locale-class.md#facet_class)( ).
 
-## <a name="open"></a>  messages::open
+## <a name="messagesopen"></a><a name="open"></a>сообщения::открыто
 
 Открывает каталог сообщений.
 
@@ -298,9 +298,9 @@ catalog open(
 
 ### <a name="remarks"></a>Remarks
 
-Функция-член возвращает [do_open](#do_open)(`_Catname`, `_Loc`).
+Функция участника [do_open](#do_open)возвращает `_Catname`do_open `_Loc`(, ).
 
-## <a name="string_type"></a>  messages::string_type
+## <a name="messagesstring_type"></a><a name="string_type"></a>сообщения::string_type
 
 Тип, описывающий строку типа `basic_string`, содержащую символы типа `CharType`.
 
@@ -310,10 +310,10 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>Remarks
 
-Тип описывает специализацию шаблона класса [basic_string](../standard-library/basic-string-class.md) , объекты которой могут хранить копии последовательностей сообщений.
+Тип описывает специализацию шаблона класса [basic_string](../standard-library/basic-string-class.md) объекты которого могут хранить копии последовательностей сообщений.
 
 ## <a name="see-also"></a>См. также раздел
 
-[\<locale>](../standard-library/locale.md)\
-[Класс messages_base](../standard-library/messages-base-class.md)\
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[\<локализовая>](../standard-library/locale.md)\
+[класс messages_base](../standard-library/messages-base-class.md)\
+[Безопасность резьбы в стандартной библиотеке СЗ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

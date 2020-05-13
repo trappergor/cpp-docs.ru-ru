@@ -1,11 +1,13 @@
 ---
 title: _strdec, _wcsdec, _mbsdec, _mbsdec_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wcsdec
 - _strdec
 - _mbsdec
 - _mbsdec_l
+- _o__mbsdec
+- _o__mbsdec_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -43,12 +46,12 @@ helpviewer_keywords:
 - wcsdec function
 - _mbsdec function
 ms.assetid: ae37c223-800f-48a9-ae8e-38c8d20af2dd
-ms.openlocfilehash: ffb2b81f5ce5a251fb931099a1023a441ca4d496
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c3988beac1a3c1b3d7fa831405208ddc564456a3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958208"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914500"
 ---
 # <a name="_strdec-_wcsdec-_mbsdec-_mbsdec_l"></a>_strdec, _wcsdec, _mbsdec, _mbsdec_l
 
@@ -92,26 +95,28 @@ unsigned char *_mbsdec_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**_mbsdec**, **_mbsdec_l**, **_strdec**и **_wcsdec** возвращают указатель на символ, который находится непосредственно перед *текущим*; **_mbsdec** возвращает **значение NULL** , если значение *Start* больше или равно значению *Current*. **_tcsdec** сопоставляется с одной из этих функций, и ее возвращаемое значение зависит от сопоставления.
+**_mbsdec**, **_mbsdec_l**, **_strdec**и **_wcsdec** каждый из них возвращает указатель на символ, который находится непосредственно перед *текущим*; **_mbsdec** возвращает **значение NULL** , если значение *Start* больше или равно значению *Current*. **_tcsdec** сопоставляется с одной из этих функций, и ее возвращаемое значение зависит от сопоставления.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Функции **_mbsdec** и **_mbsdec_l** возвращают указатель на первый байт многобайтового символа, непосредственно предшествующий *текущему* в строке, содержащей *Start*.
 
-На выходное значение влияет параметр категории **LC_CTYPE** языкового стандарта. Дополнительные сведения см. [в разделе setlocale, _wsetlocale](setlocale-wsetlocale.md) .  **_mbsdec** распознает последовательности многобайтовых символов в соответствии с используемым в данный момент языковым стандартом, а **_mbsdec_l** является идентичным за исключением того, что вместо этого использует переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+На выходное значение влияет параметр категории **LC_CTYPE** языкового стандарта. Дополнительные сведения см. [в разделе setlocale, _wsetlocale](setlocale-wsetlocale.md) .  **_mbsdec** распознает последовательности многобайтовых символов в соответствии с используемым в данный момент языковым стандартом, а **_mbsdec_l** идентично, за исключением того, что вместо этого использует переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 Если *Start* или *Current* имеет **значение NULL**, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция возвращает **еинвал** и **устанавливает значение** переводится в **еинвал**.
 
 > [!IMPORTANT]
 > Эти функции могут быть подвержены угрозам переполнения буфера. Переполнение буфера можно использовать для атак на систему, поскольку оно может привести к несанкционированному повышению уровня привилегий. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Процедура Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsdec**|**_strdec**|**_mbsdec**|**_wcsdec**|
 
-**_strdec** и **_wcsdec** — версии **_mbsdec** и **_mbsdec_l**для однобайтовых символов и расширенных символов. **_strdec** и **_wcsdec** предоставляются только для этого сопоставления и не должны использоваться в других случаях.
+**_strdec** и **_wcsdec** — версии **_mbsdec** и **_mbsdec_l**с однобайтовыми символами и расширенными символами. **_strdec** и **_wcsdec** предоставляются только для этого сопоставления и не должны использоваться в других случаях.
 
 Дополнительные сведения см. в разделах [Использование универсальных текстовых сопоставлений](../../c-runtime-library/using-generic-text-mappings.md) и [Универсальные текстовые сопоставления](../../c-runtime-library/generic-text-mappings.md).
 
@@ -124,7 +129,7 @@ unsigned char *_mbsdec_l(
 |**_strdec**|\<tchar.h>||
 |**_wcsdec**|\<tchar.h>||
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -181,9 +186,9 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Операции со строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Управление строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_strinc, _wcsinc, _mbsinc, _mbsinc_l](strinc-wcsinc-mbsinc-mbsinc-l.md)<br/>
 [_strnextc, _wcsnextc, _mbsnextc, _mbsnextc_l](strnextc-wcsnextc-mbsnextc-mbsnextc-l.md)<br/>
 [_strninc, _wcsninc, _mbsninc, _mbsninc_l](strninc-wcsninc-mbsninc-mbsninc-l.md)<br/>

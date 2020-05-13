@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ac4c64e9f7e96f214d8a7e40b2c77236c989d0e2
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: 87dbe5b9c26997047984d6cb90917d1bb2667cfb
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "68244476"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81384918"
 ---
 > [!NOTE]
->  Отображаемые на компьютере имена или расположения некоторых элементов пользовательского интерфейса Visual Studio могут отличаться от указанных в следующих инструкциях. Это зависит от имеющегося выпуска Visual Studio и используемых параметров. Дополнительные сведения см. в разделе [Персонализация среды IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).
+> Отображаемые на компьютере имена или расположения некоторых элементов пользовательского интерфейса Visual Studio могут отличаться от указанных в следующих инструкциях. Это зависит от имеющегося выпуска Visual Studio и используемых параметров. Для получения дополнительной [информации](/visualstudio/ide/personalizing-the-visual-studio-ide)см.

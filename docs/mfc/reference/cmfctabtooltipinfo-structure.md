@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCTabToolTipInfo struct
 ms.assetid: 9c3b3fb9-1497-4d59-932b-0da9348dd5e2
-ms.openlocfilehash: 87c8820bc33f3a344933faa797a9fc60d2422b13
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a507d1e69b3524074e50fde0e87fc5ebb6e5ca03
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252962"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367344"
 ---
 # <a name="cmfctabtooltipinfo-structure"></a>Структура CMFCTabToolTipInfo
 
-Эта структура предоставляет сведения о вкладке MDI, пользователь перемещается указатель.
+Эта структура предоставляет информацию о вкладке MDI, над которым зависает пользователь.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -27,19 +27,19 @@ struct CMFCTabToolTipInfo
 
 ### <a name="data-members"></a>Элементы данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CMFCTabToolTipInfo::m_nTabIndex](#m_ntabindex)|Указывает индекс элемента управления вкладки.|
+|[CMFCTabToolTipInfo::m_nTabIndex](#m_ntabindex)|Определяет индекс управления вкладками.|
 |[CMFCTabToolTipInfo::m_pTabWnd](#m_ptabwnd)|Указатель на элемент управления вкладки.|
 |[CMFCTabToolTipInfo::m_strText](#m_strtext)|Текст подсказки.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Указатель на `CMFCTabToolTipInfo` структуры передается как параметр AFX_WM_ON_GET_TAB_TOOLTIP сообщения. Это сообщение появляется в том случае, если включены вкладок MDI и наведении указателя мыши на элемент управления вкладками.
+Указатель на `CMFCTabToolTipInfo` структуру передается как параметр AFX_WM_ON_GET_TAB_TOOLTIP сообщения. Это сообщение генерируется при включении вкладок MDI и нависает над управлением вкладками.
 
 ## <a name="example"></a>Пример
 
-В следующем примере показан как `CMFCTabToolTipInfo` используется в [примере MDITabsDemo: Приложение MDI с вкладками MFC](../../overview/visual-cpp-samples.md).
+Ниже приводится `CMFCTabToolTipInfo` следующий пример, как используется в [MDITabsDemo Образец: MFC Tabbed MDI приложение](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
@@ -51,25 +51,25 @@ struct CMFCTabToolTipInfo
 
 **Заголовок:** afxbasetabctrl.h
 
-##  <a name="m_ntabindex"></a>  CMFCTabToolTipInfo::m_nTabIndex
+## <a name="cmfctabtooltipinfom_ntabindex"></a><a name="m_ntabindex"></a>CMFCTabToolTipInfo::m_nTabIndex
 
-Указывает индекс элемента управления вкладки.
+Определяет индекс управления вкладками.
 
 ```
 int m_nTabIndex;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Индекс вкладки, по которому пользователь перемещается.
+Индекс вкладки, над которой зависает пользователь.
 
 ### <a name="example"></a>Пример
 
-В следующем примере показан как `m_nTabIndex` используется в [примере MDITabsDemo: Приложение MDI с вкладками MFC](../../overview/visual-cpp-samples.md).
+Ниже приводится `m_nTabIndex` следующий пример, как используется в [MDITabsDemo Образец: MFC Tabbed MDI приложение](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
-##  <a name="m_ptabwnd"></a>  CMFCTabToolTipInfo::m_pTabWnd
+## <a name="cmfctabtooltipinfom_ptabwnd"></a><a name="m_ptabwnd"></a>CMFCTabToolTipInfo::m_pTabWnd
 
 Указатель на элемент управления вкладки.
 
@@ -79,11 +79,11 @@ CMFCBaseTabCtrl* m_pTabWnd;
 
 ### <a name="example"></a>Пример
 
-В следующем примере показан как `m_pTabWnd` используется в [примере MDITabsDemo: Приложение MDI с вкладками MFC](../../overview/visual-cpp-samples.md).
+Ниже приводится `m_pTabWnd` следующий пример, как используется в [MDITabsDemo Образец: MFC Tabbed MDI приложение](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
-##  <a name="m_strtext"></a>  CMFCTabToolTipInfo::m_strText
+## <a name="cmfctabtooltipinfom_strtext"></a><a name="m_strtext"></a>CMFCTabToolTipInfo::m_strText
 
 Текст подсказки.
 
@@ -91,17 +91,17 @@ CMFCBaseTabCtrl* m_pTabWnd;
 CString m_strText;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Если строка пуста, подсказка не отображается.
+Если строка пуста, набор инструментов не отображается.
 
 ### <a name="example"></a>Пример
 
-В следующем примере показан как `m_strText` используется в [примере MDITabsDemo: Приложение MDI с вкладками MFC](../../overview/visual-cpp-samples.md).
+Ниже приводится `m_strText` следующий пример, как используется в [MDITabsDemo Образец: MFC Tabbed MDI приложение](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)

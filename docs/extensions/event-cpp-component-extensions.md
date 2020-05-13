@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C++]
 ms.assetid: c4998e42-883c-4419-bbf4-36cdc979dd27
-ms.openlocfilehash: 8b34a4f146cc7961ee1176580def6319185693e9
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 90682ba699f6316cb6b38a3b78c44e853cd5473f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "79544660"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172390"
 ---
 # <a name="event--ccli-and-ccx"></a>event (C++/CLI и C++/CX)
 
@@ -55,7 +55,7 @@ modifiereventdelegate^ event_name
 *parameters*<br/>
 (Необязательно) Параметры для метода `raise`, соответствующие сигнатуре параметра *delegate*.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Событие — это связь между делегатом и функцией-членом (обработчиком событий), которая отвечает за инициацию события и позволяет клиентам из любого класса регистрировать методы, соответствующие сигнатуре и типу возвращаемого значения базового делегата.
 
@@ -73,7 +73,7 @@ modifiereventdelegate^ event_name
 
 ## <a name="windows-runtime"></a>Среда выполнения Windows
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Дополнительные сведения см. в статье [Events (C++/CX)](../cppcx/events-c-cx.md) (События (C++/CX)).
 
@@ -119,7 +119,7 @@ modifiereventdelegate^ event_name
 *parameters*<br/>
 (Необязательно) Параметры для метода `raise`, соответствующие сигнатуре параметра *delegate*.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Событие — это связь между делегатом и функцией-членом (обработчиком событий), которая отвечает за инициацию события и позволяет клиентам из любого класса регистрировать методы, соответствующие сигнатуре и типу возвращаемого значения базового делегата.
 
@@ -270,6 +270,6 @@ int main() {
 688
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Расширения компонентов для .NET и UWP](component-extensions-for-runtime-platforms.md)

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - structures, incomplete
 ms.assetid: 01bc0cf6-9fa7-458c-9371-ecbe54ea6aee
 ms.openlocfilehash: e7a5cd7624b55e7bce0fbd09451ab42426f5bc37
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232901"
 ---
 # <a name="incomplete-types"></a>Неполные типы
 
@@ -44,7 +44,7 @@ ms.locfileid: "56151732"
     }                   /* student structure now completed */
     ```
 
-- Чтобы создать неполный тип массива, объявите тип массива, не указывая для него число повторений. Например:
+- Чтобы создать неполный тип массива, объявите тип массива, не указывая для него число повторений. Пример:
 
     ```C
     char a[];  /* a has incomplete type */

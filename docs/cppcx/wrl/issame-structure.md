@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::IsSame structure
 - Microsoft::WRL::Details::IsSame::value constant
 ms.assetid: 1eddbc3f-3cc5-434f-8495-e4477e1f868e
-ms.openlocfilehash: b659f832756b79289181db34fa8d6fc0d974609d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fcaf33309521b44163022e0ffa9b1e03e53e2551
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161281"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371348"
 ---
 # <a name="issame-structure"></a>IsSame - структура
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из кода.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -38,7 +38,7 @@ struct IsSame<T1, T1>;
 *T2*<br/>
 Другой тип.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Определяет, совпадают ли указанные типы друг с другом.
 
@@ -46,9 +46,9 @@ struct IsSame<T1, T1>;
 
 ### <a name="public-constants"></a>Открытые константы
 
-name                    | Описание
+Имя                    | Описание
 ----------------------- | --------------------------------------------------
-[IsSame::value](#value) | Указывает, совпадают ли заданные типы друг с другом.
+[IsSame::стоимость](#value) | Указывает, совпадают ли заданные типы друг с другом.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -58,11 +58,11 @@ name                    | Описание
 
 **Заголовок:** internal.h
 
-**Пространство имен:** Microsoft::WRL::Details
+**Пространство имен:** Microsoft:WRL::Details
 
-## <a name="value"></a>IsSame::value
+## <a name="issamevalue"></a><a name="value"></a>IsSame::стоимость
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из кода.
 
 ```cpp
 template <typename T1, typename T2>
@@ -78,8 +78,8 @@ struct IsSame<T1, T1>
 };
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Указывает, совпадают ли заданные типы друг с другом.
 
-`value` — **true** Если параметров шаблона являются одинаковыми, и **false** Если параметры шаблона различаются.
+`value`**верно,** если параметры шаблона одинаковы, и **ложны,** если параметры шаблона отличаются.

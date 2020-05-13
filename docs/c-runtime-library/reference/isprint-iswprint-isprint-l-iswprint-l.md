@@ -1,11 +1,13 @@
 ---
 title: isprint, iswprint, _isprint_l, _iswprint_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - iswprint
 - isprint
 - _isprint_l
 - _iswprint_l
+- _o_isprint
+- _o_iswprint
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -19,6 +21,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +40,12 @@ helpviewer_keywords:
 - iswprint_l function
 - _isprint_l function
 ms.assetid: a8bbcdb0-e8d0-4d8c-ae4e-56d3bdee6ca3
-ms.openlocfilehash: 282b72fcec84f8096ce0d54cd114e756aeafbc85
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9921164220bc5289a7ae4a211c88107b4dac8e9c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953748"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918508"
 ---
 # <a name="isprint-iswprint-_isprint_l-_iswprint_l"></a>isprint, iswprint, _isprint_l, _iswprint_l
 
@@ -69,7 +72,7 @@ int _iswprint_l(
 
 ### <a name="parameters"></a>Параметры
 
-*c*<br/>
+*ц*<br/>
 Проверяемое целое число.
 
 *locale*<br/>
@@ -79,15 +82,19 @@ int _iswprint_l(
 
 Каждая из этих подпрограмм возвращает ненулевое значение, если *c* является определенным представлением печатного символа. Функция **Print** возвращает ненулевое значение, если *c* является печатаемым символом, включая символ пробела (0x20 – 0x7E). **исвпринт** возвращает ненулевое значение, если *c* является расширенным символом для печати, включая символ расширенного пробела. Каждая из этих подпрограмм возвращает 0, если *c* не удовлетворяет условию теста.
 
-Результат условия теста для этих функций зависит от настройки категории **LC_CTYPE** языкового стандарта. Дополнительные сведения см. [в разделе setlocale, _wsetlocale](setlocale-wsetlocale.md) . Версии этих функций, не имеющие суффикса **_l** , используют текущий языковой стандарт для любого поведения, зависящего от языкового стандарта. версии с суффиксом **_l** идентичны, за исключением того, что они используют переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+Результат условия теста для этих функций зависит от параметра категории **LC_CTYPE** языкового стандарта. Дополнительные сведения см. [в разделе setlocale, _wsetlocale](setlocale-wsetlocale.md) . Версии этих функций, не имеющие суффикса **_l** , используют текущий языковой стандарт для любого поведения, зависящего от языкового стандарта. версии, у которых есть суффикс **_l** , идентичны, за исключением того, что они используют переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-Поведение функций **Print** и **_isprint_l** не определено, если *c* не является EOF или находится в диапазоне от 0 до 0xFF включительно. Если используется библиотека отладки CRT и *c* не является одним из этих значений, функции создают утверждение.
+Поведение функций **печати** и **_isprint_l** не определено, если *c* не является EOF или находится в диапазоне от 0 до 0xFF включительно. Если используется библиотека отладки CRT и *c* не является одним из этих значений, функции создают утверждение.
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
-|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_unicode определено|
+|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_** **истпринт**|**isprint**|[_ismbcprint](ismbcgraph-functions.md)|**iswprint**|
+
+## <a name="remarks"></a>Remarks
+
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -98,10 +105,10 @@ int _iswprint_l(
 |**_isprint_l**|\<ctype.h>|
 |**_iswprint_l**|\<ctype.h> или \<wchar.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Классификация символов](../../c-runtime-library/character-classification.md)<br/>
-[Языковой стандарт](../../c-runtime-library/locale.md)<br/>
-[Подпрограммы is, isw](../../c-runtime-library/is-isw-routines.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[Процедуры is, isw](../../c-runtime-library/is-isw-routines.md)<br/>

@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - C-style casts and /clr
 ms.assetid: d2a4401a-156a-4da9-8d12-923743e26913
-ms.openlocfilehash: d9544e3002cfa489e9700b83367b15b164e9b513
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 2b7e492c62047e3b38224637f842d8a7fcbae84f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516139"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172598"
 ---
 # <a name="c-style-casts-with-clr-ccli"></a>Приведение в стиле C с использованием параметра /clr (C++/CLI)
 
@@ -30,7 +30,7 @@ ms.locfileid: "65516139"
 
 Если ни одно из указанных выше приведений не является допустимым и если тип выражения и целевой тип являются ссылочными типами CLR, приведение в стиле C отображается на проверку во время выполнения (инструкция castclass MSIL). В противном случае приведение в стиле C считается недействительным, и компилятор выдает ошибку.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Приведение в стиле C не рекомендуется. При компиляции с помощью параметра [/CLR (компиляция CLR)](../build/reference/clr-common-language-runtime-compilation.md) необходимо использовать [safe_cast](safe-cast-cpp-component-extensions.md).
 
@@ -160,6 +160,6 @@ int main() {
 
 Параметр компилятора: `/clr`
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Расширения компонентов для .NET и UWP](component-extensions-for-runtime-platforms.md)

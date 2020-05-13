@@ -11,16 +11,16 @@ helpviewer_keywords:
 - CComSimpleThreadAllocator class
 - ATL threads, allocating
 ms.assetid: 66b2166a-8c50-49fd-b8e4-7f293470327d
-ms.openlocfilehash: ef1f86ca832674ba5710083b08b67f0a775a7a33
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a3cce492db4db9f46aeb4efe738ee6a594ddcfc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246157"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327348"
 ---
 # <a name="ccomsimplethreadallocator-class"></a>Класс CComSimpleThreadAllocator
 
-Этот класс управляет выделения потока для класса `CComAutoThreadModule`.
+Этот класс управляет выбором `CComAutoThreadModule`потоков для класса.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,21 +32,21 @@ class CComSimpleThreadAllocator
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[CComSimpleThreadAllocator::GetThread](#getthread)|Выбирает поток.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-`CComSimpleThreadAllocator` Управляет Выбор потоков для [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md). `CComSimpleThreadAllocator::GetThread` просто выполняет циклический переход по каждому потоку и возвращает следующим в последовательности.
+`CComSimpleThreadAllocator`управляет выбором потоков для [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md). `CComSimpleThreadAllocator::GetThread`просто циклы через каждый поток и возвращает следующий в последовательности.
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** atlbase.h
 
-##  <a name="getthread"></a>  CComSimpleThreadAllocator::GetThread
+## <a name="ccomsimplethreadallocatorgetthread"></a><a name="getthread"></a>CComSimpleThreadAllocator::GetThread
 
-Выбирает поток, указав следующий поток в последовательности.
+Выберите поток, указав следующий поток в последовательности.
 
 ```
 int GetThread(CComApartment* /* pApt */, int nThreads);
@@ -55,22 +55,22 @@ int GetThread(CComApartment* /* pApt */, int nThreads);
 ### <a name="parameters"></a>Параметры
 
 *pApt*<br/>
-Не используется в реализации библиотеки ATL по умолчанию.
+Не используется при реализации по умолчанию ATL.
 
 *nThreads*<br/>
-Максимальное число потоков в модуле exe-файла.
+Максимальное количество потоков в модуле EXE.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Целое число от нуля и (*nThreads* - 1). Определяет один из потоков в модуле exe-файла.
+Многокомнатная между нулем и *(nThreads* - 1). Идентифицирует одну из потоков в модуле EXE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Можно переопределить `GetThread` предоставить другой метод выделения или сделать использование *pApt* параметра.
+Вы можете `GetThread` переопределить, чтобы обеспечить другой метод отбора или использовать параметр *pApt.*
 
-`GetThread` вызывается [CComAutoThreadModule::CreateInstance](../../atl/reference/ccomautothreadmodule-class.md#createinstance).
+`GetThread`называется [CComAutoThreadModule::CreateInstance](../../atl/reference/ccomautothreadmodule-class.md#createinstance).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс CComApartment](../../atl/reference/ccomapartment-class.md)<br/>
-[Общие сведения о классе](../../atl/atl-class-overview.md)
+[Общие сведения о классах](../../atl/atl-class-overview.md)

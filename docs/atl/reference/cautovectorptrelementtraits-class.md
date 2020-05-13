@@ -9,19 +9,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoVectorPtrElementTraits class
 ms.assetid: 16b81a56-55fb-46ca-b376-66a1884231a6
-ms.openlocfilehash: 168670709470d7b7fdd77edb3c29d5a9f4049ca3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 956fe39c4d3ba89bb9def2f996dca59905753edb
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260088"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318746"
 ---
 # <a name="cautovectorptrelementtraits-class"></a>Класс CAutoVectorPtrElementTraits
 
-Этот класс предоставляет методы, статические функции и определения типов, полезных при создании коллекции с помощью вектора новый интеллектуальных указателей и удалять операторов.
+Этот класс предоставляет методы, статические функции и полезные для создания коллекций интеллектуальных указателей с использованием новых векторных операторов и удаляют их.
 
 > [!IMPORTANT]
->  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+> Этот класс и его члены не могут быть использованы в приложениях, выполняемых в Windows Runtime.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -40,14 +40,14 @@ class CAutoVectorPtrElementTraits :
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CAutoVectorPtrElementTraits::INARGTYPE](#inargtype)|Тип данных, который нужно использовать для добавления элементов в объекте класса коллекции.|
-|[CAutoVectorPtrElementTraits::OUTARGTYPE](#outargtype)|Тип данных, который нужно использовать для извлечения элементов из объекта класса коллекции.|
+|[CAutoVectorPtrElementTraits::INARGTYPE](#inargtype)|Тип данных для добавления элементов в объект класса сбора.|
+|[CAutoVectorPtrElementTraits::OUTARGTYPE](#outargtype)|Тип данных для извлечения элементов из объекта класса сбора.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Этот класс предоставляет методы, статические функции и определения типов для создания объектов класса коллекции, содержащий интеллектуальные указатели. В отличие от [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md), этот класс использует векторные новых и удаленных операторах.
+Этот класс предоставляет методы, статические функции и типы для сособничания созданию объектов класса коллекции, содержащих интеллектуальные указатели. В отличие от [CAutoPtrElementTraits,](../../atl/reference/cautoptrelementtraits-class.md)этот класс использует вектор новых и удалить операторов.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -57,7 +57,7 @@ class CAutoVectorPtrElementTraits :
 
 [CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)
 
-[CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)
+[CDefaultЭлементТхрытс](../../atl/reference/cdefaultelementtraits-class.md)
 
 `CAutoVectorPtrElementTraits`
 
@@ -65,24 +65,24 @@ class CAutoVectorPtrElementTraits :
 
 **Заголовок:** atlcoll.h
 
-##  <a name="inargtype"></a>  CAutoVectorPtrElementTraits::INARGTYPE
+## <a name="cautovectorptrelementtraitsinargtype"></a><a name="inargtype"></a>CAutoVectorPtrElementTraits::INARGTYPE
 
-Тип данных, который нужно использовать для добавления элементов в объекте класса коллекции.
+Тип данных для добавления элементов в объект класса сбора.
 
 ```
 typedef CAutoVectorPtr<T>& INARGTYPE;
 ```
 
-##  <a name="outargtype"></a>  CAutoVectorPtrElementTraits::OUTARGTYPE
+## <a name="cautovectorptrelementtraitsoutargtype"></a><a name="outargtype"></a>CAutoVectorPtrElementTraits::OUTARGTYPE
 
-Тип данных, который нужно использовать для извлечения элементов из объекта класса коллекции.
+Тип данных для извлечения элементов из объекта класса сбора.
 
 ```
 typedef T*& OUTARGTYPE;
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)<br/>
 [Класс CAutoVectorPtr](../../atl/reference/cautovectorptr-class.md)<br/>
-[Общие сведения о классе](../../atl/atl-class-overview.md)
+[Общие сведения о классах](../../atl/atl-class-overview.md)

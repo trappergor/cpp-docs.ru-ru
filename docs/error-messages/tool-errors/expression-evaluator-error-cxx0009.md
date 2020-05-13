@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CXX0009
 - CAN0009
 ms.assetid: b6f26a46-56f3-430f-a6db-b42934ddf331
-ms.openlocfilehash: 761bc5562802a6834f3a2953b6361009f0635dbb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9fb325b317b92c1d6420aba42f1fc033549723d6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406045"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196194"
 ---
 # <a name="expression-evaluator-error-cxx0009"></a>Ошибка вычислителя выражений CXX0009
 
 отсутствует "после символьной константы
 
-Одиночная кавычка, ожидаемая в конце символьной константы отсутствует. Перепишите выражение, заключив символьную константу в одинарные кавычки.
+В конце символьной константы ожидалась одинарная кавычка. Введите выражение снова, заключив символьную константу в одинарные кавычки.
 
-Эта ошибка идентична ошибке CAN0009.
+Эта ошибка идентична CAN0009.

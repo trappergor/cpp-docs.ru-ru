@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CLinearTransition [MFC], m_dblFinalValue
 - CLinearTransition [MFC], m_duration
 ms.assetid: 7fcb2dba-beb8-4933-9f5d-3b7fb1585ef0
-ms.openlocfilehash: 1a6348d1afd0117683bd31af61324b14e16f710c
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1d3bc50255dae93bfa80e8212c2349db66db4eb6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505746"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372282"
 ---
 # <a name="clineartransition-class"></a>Класс CLinearTransition
 
@@ -35,42 +35,42 @@ class CLinearTransition : public CBaseTransition;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[Клинеартранситион:: Клинеартранситион](#clineartransition)|Создает объект линейного перехода и инициализирует его с помощью значения Duration и Final.|
+|[CLinearTransition::CLinearTransition](#clineartransition)|Строит линейный переходный объект и инициализирует его с длительностью и конечным значением.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[Клинеартранситион:: Create](#create)|Вызывает библиотеку переходов для создания COM-объекта инкапсулированного перехода. (Переопределяет [CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create).)|
+|[CLinearTransition::Создание](#create)|Вызывает библиотеку перехода для создания инкапсулированного объекта переходного COM. (Переопределяет [CBaseПереход::Создание](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[Клинеартранситион:: m_dblFinalValue](#m_dblfinalvalue)|Значение переменной анимации в конце перехода.|
-|[Клинеартранситион:: m_duration](#m_duration)|Длительность перехода.|
+|[CLinearTransition::m_dblFinalValue](#m_dblfinalvalue)|Значение переменной анимации в конце перехода.|
+|[CLinearTransition::m_duration](#m_duration)|Продолжительность перехода.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Во время линейного перехода значение переменной анимации переходит линейно от начального значения к указанному конечному значению. Так как все переходы очищаются автоматически, рекомендуется выделять их с помощью оператора New. Инкапсулированный COM-объект Иуианиматионтранситион создается методом Каниматионконтроллер:: Аниматеграуп, пока он не будет равен NULL. Изменение переменных-членов после создания этого объекта COM не имеет силы.
+Во время линейного перехода значение переменной анимации линейно переходит от исходного значения к определенному конечному значению. Поскольку все переходы очищаются автоматически, рекомендуется выделять их с помощью нового оператора. Инкапсулированный объект IUIAnimationTransition COM создается CAnimationController::AnimateGroup, до тех пор это NULL. Изменение переменных членов после создания этого объекта COM не имеет эффекта.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CBaseTransition](../../mfc/reference/cbasetransition-class.md)
+[CBaseПереход](../../mfc/reference/cbasetransition-class.md)
 
-[клинеартранситион](../../mfc/reference/clineartransition-class.md)
+[CLinearTransition](../../mfc/reference/clineartransition-class.md)
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** afxanimationcontroller.h
 
-##  <a name="clineartransition"></a>Клинеартранситион:: Клинеартранситион
+## <a name="clineartransitionclineartransition"></a><a name="clineartransition"></a>CLinearTransition::CLinearTransition
 
-Создает объект линейного перехода и инициализирует его с помощью значения Duration и Final.
+Строит линейный переходный объект и инициализирует его с длительностью и конечным значением.
 
 ```
 CLinearTransition(
@@ -80,15 +80,15 @@ CLinearTransition(
 
 ### <a name="parameters"></a>Параметры
 
-*длитель*<br/>
-Длительность перехода.
+*Длительность*<br/>
+Продолжительность перехода.
 
-*дблфиналвалуе*<br/>
+*dblFinalValue*<br/>
 Значение переменной анимации в конце перехода.
 
-##  <a name="create"></a>Клинеартранситион:: Create
+## <a name="clineartransitioncreate"></a><a name="create"></a>CLinearTransition::Создание
 
-Вызывает библиотеку переходов для создания COM-объекта инкапсулированного перехода.
+Вызывает библиотеку перехода для создания инкапсулированного объекта переходного COM.
 
 ```
 virtual BOOL Create(
@@ -98,14 +98,14 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Параметры
 
-*плибрари*<br/>
-Указатель на [интерфейс иуианиматионтранситионлибрари](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), который определяет библиотеку стандартных переходов.
+*pLibrary*<br/>
+Указатель на [интерфейс IUIAnimationTransitionLibrary,](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)который определяет библиотеку стандартных переходов.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если переход успешно создан; в противном случае — FALSE.
+TRUE, если переход создан успешно; в противном случае FALSE.
 
-##  <a name="m_dblfinalvalue"></a>Клинеартранситион:: m_dblFinalValue
+## <a name="clineartransitionm_dblfinalvalue"></a><a name="m_dblfinalvalue"></a>CLinearTransition::m_dblFinalValue
 
 Значение переменной анимации в конце перехода.
 
@@ -113,14 +113,14 @@ virtual BOOL Create(
 DOUBLE m_dblFinalValue;
 ```
 
-##  <a name="m_duration"></a>Клинеартранситион:: m_duration
+## <a name="clineartransitionm_duration"></a><a name="m_duration"></a>CLinearTransition::m_duration
 
-Длительность перехода.
+Продолжительность перехода.
 
 ```
 UI_ANIMATION_SECONDS m_duration;
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Классы](../../mfc/reference/mfc-classes.md)

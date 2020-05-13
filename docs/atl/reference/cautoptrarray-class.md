@@ -1,5 +1,5 @@
 ---
-title: Класс CAutoPtrArray
+title: Класс Каутоптраррай
 ms.date: 11/04/2016
 f1_keywords:
 - CAutoPtrArray
@@ -8,45 +8,45 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoPtrArray class
 ms.assetid: 880a70da-8c81-4427-8ac6-49aa8d424244
-ms.openlocfilehash: beb0184a9945990b8d92efe03d4f54baa76ca380
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 11f39eac8b8d080fd840f6454f393e33ebcb9e1c
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246815"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82167667"
 ---
-# <a name="cautoptrarray-class"></a>Класс CAutoPtrArray
+# <a name="cautoptrarray-class"></a>Класс Каутоптраррай
 
-Этот класс предоставляет методы, используемые при создании массива интеллектуальных указателей.
+Этот класс предоставляет методы, полезные при построении массива смарт-указателей.
 
 > [!IMPORTANT]
->  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+> Этот класс и его члены не могут использоваться в приложениях, выполняемых в среда выполнения Windows.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 template <typename E>
 class CAutoPtrArray : public CAtlArray<
                         ATL::CAutoPtr<E>,
                         CAutoPtrElementTraits<E>>
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-*E*<br/>
+*&*<br/>
 Тип указателя.
 
 ## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CAutoPtrArray::CAutoPtrArray](#cautoptrarray)|Конструктор.|
+|[Каутоптраррай:: Каутоптраррай](#cautoptrarray)|Конструктор.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Этот класс предоставляет конструктор и методы из производного [CAtlArray](../../atl/reference/catlarray-class.md) и [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) для упрощения создания объекта класса коллекции, хранение интеллектуальные указатели.
+Этот класс предоставляет конструктор и наследует методы от [CAtlArray](../../atl/reference/catlarray-class.md) и [каутоптрелементтраитс](../../atl/reference/cautoptrelementtraits-class.md) для облегчения создания объекта класса коллекции, в котором хранятся интеллектуальные указатели.
 
 Дополнительные сведения см. в разделе [классы коллекций ATL](../../atl/atl-collection-classes.md).
 
@@ -58,23 +58,23 @@ class CAutoPtrArray : public CAtlArray<
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atlcoll.h
+**Заголовок:** атлколл. h
 
-##  <a name="cautoptrarray"></a>  CAutoPtrArray::CAutoPtrArray
+## <a name="cautoptrarraycautoptrarray"></a><a name="cautoptrarray"></a>Каутоптраррай:: Каутоптраррай
 
 Конструктор.
 
-```
+```cpp
 CAutoPtrArray() throw();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Инициализирует этот массив смарт-указатель.
+Инициализирует массив интеллектуальных указателей.
 
 ## <a name="see-also"></a>См. также
 
 [Класс CAtlArray](../../atl/reference/catlarray-class.md)<br/>
-[Класс CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)<br/>
-[Класс CAutoPtrList](../../atl/reference/cautoptrlist-class.md)<br/>
-[Общие сведения о классе](../../atl/atl-class-overview.md)
+[Класс Каутоптрелементтраитс](../../atl/reference/cautoptrelementtraits-class.md)<br/>
+[Класс Каутоптрлист](../../atl/reference/cautoptrlist-class.md)<br/>
+[Общие сведения о классах](../../atl/atl-class-overview.md)

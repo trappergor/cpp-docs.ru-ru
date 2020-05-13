@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits::GetInvalidValue method
 - Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits::Unlock method
 ms.assetid: c515a1b5-4eb0-40bc-9035-c4d9352c9de7
-ms.openlocfilehash: ce904ecbd9a5855c63fd43f07f88c215cef544ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 05c93bf6a2765bd11489075067c627ab3c3ab691
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398606"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372583"
 ---
 # <a name="criticalsectiontraits-structure"></a>CriticalSectionTraits - структура
 
-Специализируется `CriticalSection` объекта для поддержки недопустимую критическую секцию или функцию для освобождения критического раздела.
+Специализируется `CriticalSection` на объекте для поддержки либо недействительного критического раздела, либо функции для выпуска критического раздела.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,16 +32,16 @@ struct CriticalSectionTraits;
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-name   | Описание
+Имя   | Описание
 ------ | -----------------------------------------------------------------------------------------------------------------
-`Type` | Объект `typedef` указатель, определяющий критической секции. `Type` определяется как `typedef CRITICAL_SECTION* Type;`.
+`Type` | A, `typedef` определяющий указатель на критический раздел. `Type` определяется как `typedef CRITICAL_SECTION* Type;`.
 
 ### <a name="public-methods"></a>Открытые методы
 
-name                                                       | Описание
+Имя                                                       | Описание
 ---------------------------------------------------------- | -----------------
-[CriticalSectionTraits::GetInvalidValue](#getinvalidvalue) | Специализируется `CriticalSection` шаблона, чтобы шаблон всегда является недопустимым.
-[CriticalSectionTraits::Unlock](#unlock)                   | Специализируется `CriticalSection` шаблона, так что он поддерживает снятию владения объектом указанного критический раздел.
+[КритическиеСекционныеобласти::GetInvalidValue](#getinvalidvalue) | Специализируется `CriticalSection` на шаблоне, чтобы шаблон всегда был недействительным.
+[CriticalSectionTraits::Разблокировать](#unlock)                   | Специализируется `CriticalSection` на шаблоне таким образом, чтобы он поддерживал освобождение права собственности на указанный объект критического раздела.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -51,11 +51,11 @@ name                                                       | Описание
 
 **Заголовок:** corewrappers.h
 
-**Пространство имен:** Microsoft::WRL::Wrappers::HandleTraits
+**Пространство имен:** Microsoft::WRL::Wrappers:: HandleTraits
 
-## <a name="getinvalidvalue"></a>CriticalSectionTraits::GetInvalidValue
+## <a name="criticalsectiontraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>КритическиеСекционныеобласти::GetInvalidValue
 
-Специализируется `CriticalSection` шаблона, чтобы шаблон всегда является недопустимым.
+Специализируется `CriticalSection` на шаблоне, чтобы шаблон всегда был недействительным.
 
 ```cpp
 inline static Type GetInvalidValue();
@@ -65,13 +65,13 @@ inline static Type GetInvalidValue();
 
 Всегда возвращает указатель на недопустимую критическую секцию.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Модификатор `Type` определен как `typedef CRITICAL_SECTION* Type;`.
 
-## <a name="unlock"></a>CriticalSectionTraits::Unlock
+## <a name="criticalsectiontraitsunlock"></a><a name="unlock"></a>CriticalSectionTraits::Разблокировать
 
-Специализируется `CriticalSection` шаблона, так что он поддерживает снятию владения объектом указанного критический раздел.
+Специализируется `CriticalSection` на шаблоне таким образом, чтобы он поддерживал освобождение права собственности на указанный объект критического раздела.
 
 ```cpp
 inline static void Unlock(
@@ -82,10 +82,10 @@ inline static void Unlock(
 ### <a name="parameters"></a>Параметры
 
 *cs*<br/>
-Указатель на объект критической секции.
+Указатель на объект критического сечения.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Модификатор `Type` определен как `typedef CRITICAL_SECTION* Type;`.
 
-Дополнительные сведения см. в разделе **функция LeaveCriticalSection** в **функций синхронизации** раздел документации Windows API.
+Для получения дополнительной информации см. **функцию LeaveCriticalSection** в разделе **функции синхронизации** документации Windows API.

@@ -1,0 +1,54 @@
+- name: Руководство по переносу и обновлению Microsoft C++
+  href: ../porting/visual-cpp-porting-and-upgrading-guide.md
+- name: 'Обновление проектов, созданных в предыдущих версиях'
+  items:
+    - name: 'Обновление проектов, созданных в предыдущих версиях'
+      href: ../porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md
+    - name: 'Общие сведения о возможных проблемах, возникающих при обновлении'
+      href: ../porting/overview-of-potential-upgrade-issues-visual-cpp.md
+    - name: Обновление кода для универсальной среды выполнения
+      href: ../porting/upgrade-your-code-to-the-universal-crt.md
+    - name: Обновление WINVER и _WIN32_WINNT
+      href: ../porting/modifying-winver-and-win32-winnt.md
+    - name: Исправление зависимостей от внутренних компонентов библиотеки
+      href: ../porting/fix-your-dependencies-on-library-internals.md
+    - name: Проблемы при миграции с плавающей запятой
+      href: ../porting/floating-point-migration-issues.md
+    - name: Использование собственного многоплатформенного нацеливания в Visual Studio для сборки старых проектов
+      href: ../porting/use-native-multi-targeting.md
+    - name: "Нерекомендуемые возможности C++ в Visual Studio\_2019"
+      href: ../porting/features-deprecated-in-visual-studio.md
+    - name: Сравнение VCBuild и MSBuild
+      href: ../porting/build-system-changes.md
+    - name: Перенос сторонних библиотек
+      href: ../porting/porting-third-party-libraries.md
+    - name: Перенос приложений для обработки данных
+      href: ../data/data-access-programming-mfc-atl.md
+- name: Средства интегрированной среды разработки для обновления кода C++
+  href: ../porting/ide-tools-for-upgrading-code.md
+- name: Журнал изменений Visual C++ 2003–2015
+  href: ../porting/visual-cpp-change-history-2003-2015.md
+- name: Новые возможности Visual C++ 2003–2015
+  href: ../porting/visual-cpp-what-s-new-2003-through-2015.md
+- name: Совместимость на уровне двоичного кода C++ 2015–2019
+  href: ../porting/binary-compat-2015-2017.md
+- name: 'Перенос и обновление: примеры и конкретные случаи'
+  items:
+    - name: Примеры и конкретные случаи
+      href: ../porting/porting-and-upgrading-examples-and-case-studies.md
+    - name: Руководство по переносу. MFC Scribble
+      href: ../porting/porting-guide-mfc-scribble.md
+    - name: Руководство по переносу. COM Spy
+      href: ../porting/porting-guide-com-spy.md
+    - name: Руководство по переносу. Spy++
+      href: ../porting/porting-guide-spy-increment.md
+- name: Знакомство с Microsoft C++ для пользователей UNIX
+  href: ../porting/introduction-to-visual-cpp-for-unix-users.md
+- name: Запуск программ Linux в Windows
+  href: ../porting/porting-from-unix-to-win32.md
+- name: Перенос на универсальную платформу Windows (C++)
+  items:
+    - name: Перенос на универсальную платформу Windows (C++)
+      href: ../porting/porting-to-the-universal-windows-platform-cpp.md
+    - name: Практическое руководство. Использование существующего кода C++ в приложении универсальной платформы Windows
+      href: ../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md

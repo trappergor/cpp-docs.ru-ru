@@ -1,6 +1,6 @@
 ---
-title: C++Пакет SDK для сборки Insights
-description: Обзор пакета SDK для Visual Studio C++ Build Insights.
+title: СЗ Сборка Исследования SDK
+description: Обзор Визуальной студии СЗ Построить Исследования SDK.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -10,90 +10,90 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 5aafcc65bc30de77131d1945c9f4e78361db14ed
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 126abb0d039227eb269500966d46ef0a729763ee
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334034"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323264"
 ---
-# <a name="c-build-insights-sdk"></a>C++Пакет SDK для сборки Insights
+# <a name="c-build-insights-sdk"></a>СЗ Сборка Исследования SDK
 
 ::: moniker range="<=vs-2015"
 
-Пакет C++ SDK для Build Insights совместим с Visual Studio 2017 и более поздних версий. Чтобы просмотреть документацию по этим версиям, присвойте элементу управления "Выбор версий Visual Studio" для этой статьи значение Visual Studio 2017 или Visual Studio 2019.
+SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Пакет C++ SDK для Build Insights — это набор интерфейсов API, позволяющих создавать персонализированные средства на основе платформы C++ Build Insights. На этой странице представлен общий обзор, который поможет вам приступить к работе.
+SDK Build Insights — это коллекция AI, которая позволяет создавать персонализированные инструменты поверх платформы «С» Build Insights. Эта страница предоставляет обзор на высоком уровне, чтобы помочь вам начать работу.
 
-## <a name="obtaining-the-sdk"></a>Получение пакета SDK
+## <a name="obtaining-the-sdk"></a>Получение SDK
 
-Пакет SDK для C++ сборки Insights можно скачать как пакет NuGet, выполнив следующие действия.
+Вы можете скачать sDK Build Insights в виде пакета NuGet, высовывая следующие действия:
 
-1. В Visual Studio 2017 и более поздних версиях создайте C++ новый проект.
-1. В области **Обозреватель решений** щелкните проект правой кнопкой мыши.
-1. В контекстном меню выберите пункт **Управление пакетами NuGet** .
-1. В правом верхнем углу выберите источник пакета **NuGet.org** .
-1. Найдите последнюю версию пакета Microsoft. cpp. Буилдинсигхтс.
-1. Нажмите кнопку **установить**.
-1. Примите условия лицензии.
+1. Из Visual Studio 2017 и выше, создайте новый проект СЗЗ.
+1. В панели **Solution Explorer** нажмите на ваш проект.
+1. Выберите **пакеты Управления NuGet** из контекстного меню.
+1. В правом верхнем правом положении выберите источник **nuget.org** пакет.
+1. Поиск последней версии пакета Microsoft.Cpp.BuildInsights.
+1. Выберите **Установить**.
+1. Примите лицензию.
 
-Ознакомьтесь со сведениями об общих понятиях, связанных с пакетом SDK. Для просмотра примеров реальных C++ приложений, использующих пакет SDK, можно также получить доступ к официальному [ C++ репозиторию примеров для Application Insights GitHub](https://github.com/microsoft/cpp-build-insights-samples) .
+Читайте дальше для получения информации об общих концепциях, окружающих SDK. Вы также можете получить доступ к официальным [образцам GitHub, которые используют репозиторий GitHub,](https://github.com/microsoft/cpp-build-insights-samples) чтобы увидеть примеры реальных приложений СЗ, которые используют SDK.
 
-## <a name="collecting-a-trace"></a>Сбор данных трассировки
+## <a name="collecting-a-trace"></a>Сбор следа
 
-С помощью C++ пакета SDK для Build Insights для анализа событий, исходящих из компилятором MSVC цепочки инструментов, необходимо сначала собрать трассировку. Пакет SDK использует средство трассировки событий Windows (ETW) в качестве базовой технологии трассировки. Сбор данных трассировки может осуществляться двумя способами:
+Использование SDK Build Insights для анализа событий, выходящих из цепочки инструментов MSVC, требует, чтобы вы сначала собрали след. SDK использует отслеживание событий для Windows (ETW) в качестве основной технологии отслеживания. Сбор следа можно сделать двумя способами:
 
-### <a name="method-1-using-vcperf-in-visual-studio-2019-and-above"></a>Метод 1. Использование вкперф в Visual Studio 2019 и более поздних версий
+### <a name="method-1-using-vcperf-in-visual-studio-2019-and-above"></a>Метод 1: использование vcperf в Visual Studio 2019 и выше
 
-1. Откройте командная строка Native Tools x64 с повышенными правами для VS 2019.
+1. Откройте повышенный x64 Родные инструменты Команды Подсказка для VS 2019.
 1. Выполните следующую команду: `vcperf /start MySessionName`
 1. Выполните сборку проекта.
 1. Выполните следующую команду: `vcperf /stopnoanalyze MySessionName outputTraceFile.etl`
 
    > [!IMPORTANT]
-   > Используйте команду `/stopnoanalyze` при остановке трассировки с помощью вкперф. Пакет SDK для C++ Build Insights нельзя использовать для анализа трассировок, остановленных обычной командой `/stop`.
+   > Используйте `/stopnoanalyze` команду при остановке трассы с помощью vcperf. Для анализа следов, остановленных обычной `/stop` командой, нельзя использовать SDK Build Insights SDK.
 
-### <a name="method-2-programmatically"></a>Метод 2. программный
+### <a name="method-2-programmatically"></a>Метод 2: программно
 
-Используйте любую из этих C++ функций сбора данных трассировки пакета SDK для аналитики, чтобы программно запускать и прекращать трассировку. **Программа, выполняющая эти вызовы функций, должна иметь права администратора.** Права администратора требуются только для функций трассировки запуск и завершение. Все остальные функции пакета SDK C++ для Build Insights можно выполнять без них.
+Используйте любую из этих функций сбора следов SDK Build Insights SDK, чтобы начать и остановить отслеживание программно. **Программа, выполняя эти вызовы функций, должна иметь административные привилегии.** Только функции отслеживания запуска и остановки требуют административных привилегий. Все остальные функции в SDK Build Insights могут быть выполнены без них.
 
-### <a name="sdk-functions-related-to-trace-collection"></a>Функции пакета SDK, относящиеся к сбору трассировки
+### <a name="sdk-functions-related-to-trace-collection"></a>Функции SDK, связанные со сбором следов
 
 | Функциональность | API C++ | API C |
 |--|--|--|
-| Запуск трассировки | [старттраЦингсессион](functions/start-tracing-session.md) | [старттраЦингсессиона](functions/start-tracing-session-a.md)<br />[старттраЦингсессионв](functions/start-tracing-session-w.md) |
-| Остановка трассировки | [стоптраЦингсессион](functions/stop-tracing-session.md) | [стоптраЦингсессиона](functions/stop-tracing-session-a.md)<br />[стоптраЦингсессионв](functions/stop-tracing-session-w.md) |
-| Остановка трассировки и<br />немедленное анализ результата | [стопанданализетраЦингсессион](functions/stop-and-analyze-tracing-session.md) | [стопанданализетраЦингсессиона](functions/stop-and-analyze-tracing-session-a.md)<br />[стопанданализетраЦингсессион](functions/stop-and-analyze-tracing-session-w.md) |
-| Остановка трассировки и<br />немедленное перезапись результатов | [стопандрелогтраЦингсессион](functions/stop-and-relog-tracing-session.md) | [стопандрелогтраЦингсессиона](functions/stop-and-relog-tracing-session-a.md)<br />[стопандрелогтраЦингсессионв](functions/stop-and-relog-tracing-session-w.md) |
+| Запуск трассы | [StartTracingSession](functions/start-tracing-session.md) | [StartTracingSessionA](functions/start-tracing-session-a.md)<br />[StartTracingRacingW](functions/start-tracing-session-w.md) |
+| Остановка следа | [StopTracingSession](functions/stop-tracing-session.md) | [СтопТрейсингИя](functions/stop-tracing-session-a.md)<br />[StopTracingRacingSessionW](functions/stop-tracing-session-w.md) |
+| Остановка следа и<br />немедленно анализируя результат | [StopandAnalyzeTracingSession](functions/stop-and-analyze-tracing-session.md) | [СтопэндАнализТрейсингЕЯ](functions/stop-and-analyze-tracing-session-a.md)<br />[StopandAnalyzeTracingSession](functions/stop-and-analyze-tracing-session-w.md) |
+| Остановка следа и<br />немедленное повторное завораживание результата | [СтопАндрелогТрейсингСессия](functions/stop-and-relog-tracing-session.md) | [СтопАндрелогТрейсингСея](functions/stop-and-relog-tracing-session-a.md)<br />[СтопАндрелогТрейсингСессияW](functions/stop-and-relog-tracing-session-w.md) |
 
-В следующих разделах показано, как настроить анализ или сеанс повторного ведения журнала. Он необходим для функций Объединенных функций, таких как [стопанданализетраЦингсессион](functions/stop-and-analyze-tracing-session.md).
+Следующие разделы показывают, как настроить анализ или сеанс перезаписи. Это необходимо для комбинированных функций функциональности, таких как [StopAndAnalyzeTracingSession](functions/stop-and-analyze-tracing-session.md).
 
-## <a name="consuming-a-trace"></a>Использование трассировки
+## <a name="consuming-a-trace"></a>Потребление следа
 
-После трассировки ETW используйте пакет SDK для C++ сборки Insights, чтобы распаковать его. Пакет SDK предоставляет события в формате, который позволяет быстро разрабатывать средства. Мы не рекомендуем использовать необработанную трассировку ETW без использования пакета SDK. Формат событий, используемый КОМПИЛЯТОРОМ MSVC, не документирован, оптимизирован для увеличения масштаба до огромных сборок и сложно понять. Кроме того, C++ API пакета SDK для аналитики сборки является стабильным, в то время как Необработанный формат трассировки ETW может быть изменен без предварительного уведомления.
+Если у вас есть след ETW, используйте SDK Build Insights SDK, чтобы распаковать его. SDK дает вам события в формате, который позволяет быстро разрабатывать инструменты. Мы не рекомендуем вам потреблять сырой след ETW без использования SDK. Формат мероприятия, используемый MSVC, не документирован, оптимизирован для масштабирования до огромных сборок и трудно понять. Кроме того, API SDK Build Insights sDK является стабильным, в то время как необработанный формат трассировки ETW может быть изменен без предварительного уведомления.
 
-### <a name="sdk-types-and-functions-related-to-trace-consumption"></a>Типы и функции пакета SDK, связанные с потреблением трассировки
+### <a name="sdk-types-and-functions-related-to-trace-consumption"></a>Типы и функции SDK, связанные с потреблением следов
 
 | Функциональность | API C++ | API C | Примечания |
 |--|--|--|--|
-| Настройка обратных вызовов событий | [ианализер](other-types/ianalyzer-class.md)<br />[ирелогжер](other-types/irelogger-class.md) | [ANALYSIS_CALLBACKS](other-types/analysis-callbacks-struct.md)<br />[RELOG_CALLBACKS](other-types/relog-callbacks-struct.md) | Пакет C++ SDK для Build Insights предоставляет события с помощью функций обратного вызова. В C++Реализуйте функции обратного вызова, создав анализатор или класс повторного ведения журнала, который наследует интерфейс Ианализер или ирелогжер. В языке C реализуйте обратные вызовы в глобальных функциях и налагаюте указатели на них в структуре ANALYSIS_CALLBACKS или RELOG_CALLBACKS. |
-| Создание групп | [макестатиканализерграуп](functions/make-static-analyzer-group.md)<br />[макестатикрелогжерграуп](functions/make-static-relogger-group.md)<br />[макединамиканализерграуп](functions/make-dynamic-analyzer-group.md)<br />[макединамикрелогжерграуп](functions/make-dynamic-relogger-group.md) |  | C++ API предоставляет вспомогательные функции и типы для объединения нескольких анализаторов и объектов многократного ведения журнала. Группы — это аккуратный способ разделить сложный анализ на более простые шаги. [вкперф](https://github.com/microsoft/vcperf) организованы таким образом. |
-| Анализ или повторный вход | [Анализ](functions/analyze.md)<br />[Загрузить](functions/relog.md) | [Анализ](functions/analyze-a.md)<br />[анализев](functions/analyze-w.md)<br />[релога](functions/relog-a.md)<br />[релогв](functions/relog-w.md) |  |
+| Настройка обратных вызовов событий | [IAnalyzer](other-types/ianalyzer-class.md)<br />[IRelogger](other-types/irelogger-class.md) | [ANALYSIS_CALLBACKS](other-types/analysis-callbacks-struct.md)<br />[RELOG_CALLBACKS](other-types/relog-callbacks-struct.md) | SDK Build Insights обеспечивает события с помощью функций обратного вызова. В c', реализуйте функции обратного вызова, создав класс анализатора или перелога, который наследует интерфейс IAnalyzer или IRelogger. В C реализуйте обратные вызовы в глобальных функциях и предоставляйте указатели на них в ANALYSIS_CALLBACKS или RELOG_CALLBACKS структуре. |
+| Строительные группы | [MakeStaticAnalyzerGroup](functions/make-static-analyzer-group.md)<br />[MakeStaticReloggerGroup](functions/make-static-relogger-group.md)<br />[MakeDynamicAnalyzerGroup](functions/make-dynamic-analyzer-group.md)<br />[MakeDynamicReloggerGroup](functions/make-dynamic-relogger-group.md) |  | API СЗ обеспечивает функции и типы помощников для группы нескольких объектов анализатора и перелога. Группы – это аккуратный способ разделить сложный анализ на более простые шаги. [vcperf](https://github.com/microsoft/vcperf) организован таким образом. |
+| Анализ или перезапись | [Анализировать](functions/analyze.md)<br />[Релог](functions/relog.md) | [АнализA](functions/analyze-a.md)<br />[АнализW](functions/analyze-w.md)<br />[Релога](functions/relog-a.md)<br />[RelogW](functions/relog-w.md) |  |
 
-### <a name="analyzing-and-relogging"></a>Анализ и повторный вход
+### <a name="analyzing-and-relogging"></a>Анализ и перезапись
 
-Использование трассировки выполняется либо в сеансе анализа, либо в сеансе повторного ведения журнала.
+Потребление трассировки осуществляется либо через сеанс анализа, либо через сеанс перезаписи.
 
-Использование обычного анализа подходит для большинства сценариев. Этот метод предоставляет гибкие возможности выбора формата выходных данных: `printf` Text, XML, JSON, Database, Calls и т. д.
+Использование регулярного анализа подходит для большинства сценариев. Этот метод позволяет вам гибко выбирать `printf` формат вывода: текст, xml, JSON, база данных, REST звонки и так далее.
 
-Повторное ведение журнала предназначено для анализа специальных целей, требующих создания выходного файла ETW. С помощью повторного ведения журнала можно преобразовать C++ события сборки Insights в собственный формат событий ETW. Подходящее использование переведения журнала — привязать C++ данные аналитики к существующим средствам и инфраструктуре ETW. Например, [вкперф](https://github.com/microsoft/vcperf) использует интерфейсы перезаписи в журнал. Это обусловлено тем, что он должен создавать данные, которые может понять анализатор производительности Windows, средство ETW. Некоторые знания о том, как работает ETW, необходимы, если вы планируете использовать интерфейсы повторного протоколирования.
+Повторирование предназначено для специальных анализов, которые должны производить выходной файл ETW. Используя relogging, вы можете перевести события «Сборка» в свой собственный формат событий ETW. Надлежащее использование перезаписи было бы подключить данные по сборке с существующими инструментами и инфраструктурой ETW. Например, [vcperf](https://github.com/microsoft/vcperf) использует интерфейсы перезаписи. Это потому, что он должен производить данные Windows Производительность анализатор, инструмент ETW, может понять. Некоторые предварительные знания о том, как работает ETW, необходимы, если вы планируете использовать интерфейсы перезаписи.
 
-### <a name="creating-analyzer-groups"></a>Создание групп анализаторов
+### <a name="creating-analyzer-groups"></a>Создание аналитических групп
 
-Важно уметь создавать группы. Ниже приведен пример, в котором показано, как создать группу анализаторов, которая выводит *Hello, World!* для каждого события начала действия, которое он получает.
+Важно знать, как создавать группы. Вот пример, который показывает, как создать группу анализаторов, которая печатает *Hello, World!* для каждого события начала действия, которое оно получает.
 
 ```cpp
 using namespace Microsoft::Cpp::BuildInsights;
@@ -147,83 +147,83 @@ int main()
 
 | Функциональность | API C++ | API C | Примечания |
 |--|--|--|--|
-| Сопоставление и фильтрация событий | [матчевентстаккинмемберфунктион](functions/match-event-stack-in-member-function.md)<br />[матчевентстакк](functions/match-event-stack.md)<br />[матчевентинмемберфунктион](functions/match-event-in-member-function.md)<br />[матчевент](functions/match-event.md) |  | C++ API предоставляет функции, которые позволяют легко извлекать события, которые вам интересуют. При использовании C API Эта фильтрация должна выполняться вручную. |
-| Типы данных событий | [Действие](cpp-event-data-types/activity.md)<br />[баккендпасс](cpp-event-data-types/back-end-pass.md)<br />[боттомуп](cpp-event-data-types/bottom-up.md)<br />[C1DLL](cpp-event-data-types/c1-dll.md)<br />[C2DLL](cpp-event-data-types/c2-dll.md)<br />[Стратегию](cpp-event-data-types/code-generation.md)<br />[Команд](cpp-event-data-types/command-line.md)<br />[Компилятора](cpp-event-data-types/compiler.md)<br />[компилерпасс](cpp-event-data-types/compiler-pass.md)<br />[EnvironmentVariable](cpp-event-data-types/environment-variable.md)<br />[Событие](cpp-event-data-types/event.md)<br />[EventGroup](cpp-event-data-types/event-group.md)<br />[евентстакк](cpp-event-data-types/event-stack.md)<br />[ексекутаблеимажеаутпут](cpp-event-data-types/executable-image-output.md)<br />[експаутпут](cpp-event-data-types/exp-output.md)<br />[филеинпут](cpp-event-data-types/file-input.md)<br />[филеаутпут](cpp-event-data-types/file-output.md)<br />[форцеинлини](cpp-event-data-types/force-inlinee.md)<br />[фронтендфиле](cpp-event-data-types/front-end-file.md)<br />[фронтендфилеграуп](cpp-event-data-types/front-end-file-group.md)<br />[фронтендпасс](cpp-event-data-types/front-end-pass.md)<br />[Компонент](cpp-event-data-types/function.md)<br />[имплибаутпут](cpp-event-data-types/imp-lib-output.md)<br />[Вызов](cpp-event-data-types/invocation.md)<br />[инвокатионграуп](cpp-event-data-types/invocation-group.md)<br />[либаутпут](cpp-event-data-types/lib-output.md)<br />[Компоновщик](cpp-event-data-types/linker.md)<br />[линкерграуп](cpp-event-data-types/linker-group.md)<br />[линкерпасс](cpp-event-data-types/linker-pass.md)<br />[LTCG](cpp-event-data-types/ltcg.md)<br />[обжаутпут](cpp-event-data-types/obj-output.md)<br />[оптикф](cpp-event-data-types/opt-icf.md)<br />[оптлбр](cpp-event-data-types/opt-lbr.md)<br />[оптреф](cpp-event-data-types/opt-ref.md)<br />[Pass1](cpp-event-data-types/pass1.md)<br />[Pass2](cpp-event-data-types/pass2.md)<br />[прелткгоптреф](cpp-event-data-types/pre-ltcg-opt-ref.md)<br />[симпливент](cpp-event-data-types/simple-event.md)<br />[симболнаме](cpp-event-data-types/symbol-name.md)<br />[темплатеинстантиатион](cpp-event-data-types/template-instantiation.md)<br />[темплатеинстантиатионграуп](cpp-event-data-types/template-instantiation-group.md)<br />[Поток](cpp-event-data-types/thread.md)<br />[топдовн](cpp-event-data-types/top-down.md)<br />[TraceInfo](cpp-event-data-types/trace-info.md)<br />[вхолепрограманалисис](cpp-event-data-types/whole-program-analysis.md) | [CL_PASS_DATA](c-event-data-types/cl-pass-data-struct.md)<br />[EVENT_COLLECTION_DATA](c-event-data-types/event-collection-data-struct.md)<br />[EVENT_DATA](c-event-data-types/event-data-struct.md)<br />[EVENT_ID](c-event-data-types/event-id-enum.md)<br />[FILE_DATA](c-event-data-types/file-data-struct.md)<br />[FILE_TYPE_CODE](c-event-data-types/file-type-code-enum.md)<br />[FRONT_END_FILE_DATA](c-event-data-types/front-end-file-data-struct.md)<br />[FUNCTION_DATA](c-event-data-types/function-data-struct.md)<br />[FUNCTION_FORCE_INLINEE_DATA](c-event-data-types/function-force-inlinee-data-struct.md)<br />[INVOCATION_DATA](c-event-data-types/invocation-data-struct.md)<br />[INVOCATION_VERSION_DATA](c-event-data-types/invocation-version-data-struct.md)<br />[MSVC_TOOL_CODE](c-event-data-types/msvc-tool-code-enum.md)<br />[NAME_VALUE_PAIR_DATA](c-event-data-types/name-value-pair-data-struct.md)<br />[SYMBOL_NAME_DATA](c-event-data-types/symbol-name-data-struct.md)<br />[TEMPLATE_INSTANTIATION_DATA](c-event-data-types/template-instantiation-data-struct.md)<br />[TEMPLATE_INSTANTIATION_KIND_CODE](c-event-data-types/template-instantiation-kind-code-enum.md)<br />[TRACE_INFO_DATA](c-event-data-types/trace-info-data-struct.md)<br />[TRANSLATION_UNIT_PASS_CODE](c-event-data-types/translation-unit-pass-code-enum.md) |  |
+| Соответствие и фильтрация событий | [MatchEventstackinMemberФункция](functions/match-event-stack-in-member-function.md)<br />[MatchEventStack](functions/match-event-stack.md)<br />[MatchEventInMemberФункция](functions/match-event-in-member-function.md)<br />[МатчСобытие](functions/match-event.md) |  | API-нацим с точки вашего усмотрения предлагает функции, которые позволяют легко извлечь из ваших следов события, которые вам заблагорудуны. С помощью C API эта фильтрация должна быть выполнена вручную. |
+| Типы данных событий | [Действие](cpp-event-data-types/activity.md)<br />[BackEndPass](cpp-event-data-types/back-end-pass.md)<br />[БоттомАп](cpp-event-data-types/bottom-up.md)<br />[C1DLL](cpp-event-data-types/c1-dll.md)<br />[C2DLL](cpp-event-data-types/c2-dll.md)<br />[CodeGeneration](cpp-event-data-types/code-generation.md)<br />[Командный пункт](cpp-event-data-types/command-line.md)<br />[Компилятор](cpp-event-data-types/compiler.md)<br />[CompilerPass](cpp-event-data-types/compiler-pass.md)<br />[EnvironmentVariable](cpp-event-data-types/environment-variable.md)<br />[Событие](cpp-event-data-types/event.md)<br />[EventGroup](cpp-event-data-types/event-group.md)<br />[EventStack](cpp-event-data-types/event-stack.md)<br />[ИсполняемыйИзображениеВыход](cpp-event-data-types/executable-image-output.md)<br />[ExpOutput](cpp-event-data-types/exp-output.md)<br />[FileInput](cpp-event-data-types/file-input.md)<br />[ФайлВыход](cpp-event-data-types/file-output.md)<br />[ForceInlinee](cpp-event-data-types/force-inlinee.md)<br />[FrontEndFile](cpp-event-data-types/front-end-file.md)<br />[FrontEndFileGroup](cpp-event-data-types/front-end-file-group.md)<br />[FrontEndPass](cpp-event-data-types/front-end-pass.md)<br />[Функция](cpp-event-data-types/function.md)<br />[ImpLibOutput](cpp-event-data-types/imp-lib-output.md)<br />[Вызов](cpp-event-data-types/invocation.md)<br />[Призывгруппа](cpp-event-data-types/invocation-group.md)<br />[LibOutput](cpp-event-data-types/lib-output.md)<br />[Компоновщик](cpp-event-data-types/linker.md)<br />[ЛинкерГрупп](cpp-event-data-types/linker-group.md)<br />[LinkerPass](cpp-event-data-types/linker-pass.md)<br />[LTCG](cpp-event-data-types/ltcg.md)<br />[ObjOutput](cpp-event-data-types/obj-output.md)<br />[OptICF](cpp-event-data-types/opt-icf.md)<br />[OptLBR](cpp-event-data-types/opt-lbr.md)<br />[OptRef](cpp-event-data-types/opt-ref.md)<br />[Pass1](cpp-event-data-types/pass1.md)<br />[Pass2](cpp-event-data-types/pass2.md)<br />[ПреЛТКГОпреф](cpp-event-data-types/pre-ltcg-opt-ref.md)<br />[SimpleEvent](cpp-event-data-types/simple-event.md)<br />[СимволИ](cpp-event-data-types/symbol-name.md)<br />[ШаблонМеймикция](cpp-event-data-types/template-instantiation.md)<br />[TemplateInstantiationGroup](cpp-event-data-types/template-instantiation-group.md)<br />[Поток](cpp-event-data-types/thread.md)<br />[ТопДаун](cpp-event-data-types/top-down.md)<br />[TraceInfo](cpp-event-data-types/trace-info.md)<br />[ЦельПрограммноеАнализ](cpp-event-data-types/whole-program-analysis.md) | [CL_PASS_DATA](c-event-data-types/cl-pass-data-struct.md)<br />[EVENT_COLLECTION_DATA](c-event-data-types/event-collection-data-struct.md)<br />[EVENT_DATA](c-event-data-types/event-data-struct.md)<br />[EVENT_ID](c-event-data-types/event-id-enum.md)<br />[FILE_DATA](c-event-data-types/file-data-struct.md)<br />[FILE_TYPE_CODE](c-event-data-types/file-type-code-enum.md)<br />[FRONT_END_FILE_DATA](c-event-data-types/front-end-file-data-struct.md)<br />[FUNCTION_DATA](c-event-data-types/function-data-struct.md)<br />[FUNCTION_FORCE_INLINEE_DATA](c-event-data-types/function-force-inlinee-data-struct.md)<br />[INVOCATION_DATA](c-event-data-types/invocation-data-struct.md)<br />[INVOCATION_VERSION_DATA](c-event-data-types/invocation-version-data-struct.md)<br />[MSVC_TOOL_CODE](c-event-data-types/msvc-tool-code-enum.md)<br />[NAME_VALUE_PAIR_DATA](c-event-data-types/name-value-pair-data-struct.md)<br />[SYMBOL_NAME_DATA](c-event-data-types/symbol-name-data-struct.md)<br />[TEMPLATE_INSTANTIATION_DATA](c-event-data-types/template-instantiation-data-struct.md)<br />[TEMPLATE_INSTANTIATION_KIND_CODE](c-event-data-types/template-instantiation-kind-code-enum.md)<br />[TRACE_INFO_DATA](c-event-data-types/trace-info-data-struct.md)<br />[TRANSLATION_UNIT_PASS_CODE](c-event-data-types/translation-unit-pass-code-enum.md) |  |
 
-### <a name="activities-and-simple-events"></a>Действия и простые события
+### <a name="activities-and-simple-events"></a>Мероприятия и простые мероприятия
 
-События бывают двух категорий: *действия* и *простые события*. Действия — это непрерывные процессы, имеющие начало и конец. Простые события являются пунктуал вхождениями и не имеют длительности. При анализе трассировок КОМПИЛЯТОРОМ MSVC с помощью C++ пакета SDK для Build Insights вы получаете отдельные события при запуске и остановке действия. При возникновении простого события будет получено только одно событие.
+События бывают двух категорий: *мероприятия* и *простые события.* Мероприятия являются текущими процессами во времени, которые имеют начало и конец. Простые события являются пунктуальными случаями и не имеют продолжительности. При анализе следов MSVC с помощью SDK Build Insights, вы будете получать отдельные события, когда действие начинается и останавливается. Вы получите только одно событие, когда происходит простое событие.
 
-### <a name="parent-child-relationships"></a>Связи типа «родители-потомки»
+### <a name="parent-child-relationships"></a>Отношения между родителями и детьми
 
-Действия и простые события связаны друг с другом через связи типа «родители-потомки». Родителем действия или простого события является охватывающая операция, в которой они происходят. Например, при компиляции исходного файла компилятор должен проанализировать файл, а затем создать код. Операции синтаксического анализа и создания кода являются дочерними элементами действия компилятора.
+Мероприятия и простые события связаны друг с другом через отношения между родителями и детьми. Родительским элементом действия или простого события является охватывающая деятельность, в которой они происходят. Например, при компиляции исходного файла компилятор должен разобрать файл, а затем сгенерировать код. Действия по разбору и генерации кода являются детьми деятельности компилятора.
 
-Простые события не имеют длительности, поэтому в них не может быть ничего другого. Таким образом, они никогда не имеют дочерних элементов.
+Простые события не имеют продолжительности, так что ничего не может произойти внутри них. Таким образом, у них никогда не бывает детей.
 
-Связи типа «родители-потомки» для каждого действия и простого события указываются в [таблице событий](event-table.md). Знание этих связей важно при использовании событий C++ сборки Insights. Часто приходится полагаться на них, чтобы понять полный контекст события.
+Отношения между родителями и детьми каждого действия и простого события указаны в [таблице событий.](event-table.md) Знание этих отношений важно при потреблении событий « сборка знаний». Часто приходится полагаться на них, чтобы понять весь контекст события.
 
 ### <a name="properties"></a>Свойства
 
-Все события имеют следующие свойства.
+Все события имеют следующие свойства:
 
-| Свойство | Description |
+| Свойство | Описание |
 |--|--|
-| Идентификатор типа | Число, уникально идентифицирующее тип события. |
-| Идентификатор экземпляра | Число, однозначно идентифицирующее событие в трассировке. Если в трассировке встречаются два события одного типа, то они получают уникальный идентификатор экземпляра. |
-| Время начала | Время начала действия или время возникновения простого события. |
-| Идентификатор процесса | Число, идентифицирующее процесс, в котором произошло событие. |
-| Идентификатор потока | Число, идентифицирующее поток, в котором произошло событие. |
-| Индекс процессора | Отсчитываемый от нуля индекс, указывающий, в каком логическом процессоре было создано событие. |
+| Тип идентификатора | Номер, который однозначно идентифицирует тип события. |
+| Идентификатор инстанции | Номер, который однозначно идентифицирует событие в пределах трассы. Если два события одного и того же типа происходят в следе, оба получают уникальный идентификатор экземпляра. |
+| Время начала | Время начала действия действия или время, когда произошло простое событие. |
+| Идентификатор процесса | Номер, идентифицирующие процесс, в котором произошло событие. |
+| Идентификатор потока | Номер, идентифицирующие поток, в котором произошло событие. |
+| Индекс процессора | Индекс с нулевым уровнем, указывающий на то, каким логическим процессором было испущено событием. |
 | Имя события | Строка, описывающая тип события. |
 
-Все действия, Кроме простых событий, также имеют следующие свойства:
+Все действия, кроме простых событий, также имеют следующие свойства:
 
-| Свойство | Description |
+| Свойство | Описание |
 |--|--|
-| Время окончания | Время остановки действия. |
-| Эксклюзивная длительность | Время, затраченное на действие, за исключением времени, затраченного на его дочерние действия. |
-| время ЦП; | Время, затраченное ЦП на выполнение кода в потоке, присоединенном к действию. Он не включает время, когда поток, присоединенный к действию, находится в спящем режиме. |
-| Эксклюзивное время ЦП | То же, что и время ЦП, но не исключая время ЦП, потраченное дочерними действиями. |
-| Ответственность за почасовое время | Вклад действия в общее время стены. При работе с простенными часами учитывается параллелизм между действиями. Например, предположим, что два несвязанных действия выполняются параллельно. Оба имеют длительность в 10 секунд и точно такие же время начала и окончания. В этом случае при сборке Insights настраивается время работы со временем простенки 5 секунд. В противоположность этому, если эти действия выполняются друг за другом, не перекрываются, им одновременно назначается время прочтения на стене, равное 10 секундам. |
-| Ответственность за эксклюзивное время на стене | Это то же самое, что и почасовая обязанность, но не включает в себя ответственность за время работы дочерних действий. |
+| Время остановки | Время, когда действие остановлено. |
+| Эксклюзивная продолжительность | Время, проведенное в деятельности, за исключением времени, затраченного на его деятельность ребенка. |
+| время ЦП; | Время, которое процессор потратил на выполнение кода в потоке, прилагаемом к действию. Он не включает время, когда поток, прикрепленный к действию, спал. |
+| Эксклюзивное время процессора | То же, что и время процессора, но за исключением времени процессора, затраченного на действия ребенка. |
+| Ответственность за время ввлатых часов | Вклад деятельности в общее время настенных часов. Ответственность за время работы с настенными часами учитывает параллелизм между видами деятельности. Например, предположим, что два несвязанных действия выполняться параллельно. Оба имеют продолжительность 10 секунд, и точно такой же старт и время остановки. В этом случае Build Insights назначает как ответственность за время настенных часов в 5 секунд. В отличие от этого, если эти действия работают один за другим без перекрытия, они оба назначены стены часы ответственность 10 секунд. |
+| Эксклюзивная ответственность за время настенных часов | То же самое, что и ответственность за время работы на стеночном часе, но исключает ответственность за деятельность ребенка. |
 
-Некоторые события имеют собственные свойства за пределами упомянутых. В этом случае эти дополнительные свойства перечислены в [таблице событий](event-table.md).
+Некоторые события имеют свои собственные свойства за пределами упомянутых. В этом случае эти дополнительные свойства перечислены в [таблице событий.](event-table.md)
 
-### <a name="consuming-events-provided-by-the-c-build-insights-sdk"></a>Использование событий, предоставленных пакетом SDK для C++ Build Insights
+### <a name="consuming-events-provided-by-the-c-build-insights-sdk"></a>Потребление событий, предоставляемых SDK Build Insights
 
 #### <a name="the-event-stack"></a>Стек событий
 
-Каждый раз C++ , когда пакет SDK для аналитики создает событие, он поступает в виде стека. Последняя запись в стеке — это текущее событие, а записи до его родительской иерархии. Например, события начала и окончания [LTCG](event-table.md#ltcg) возникают во время прохода 1 из компоновщика. В этом случае полученный стек содержит: \[[Компоновщик](event-table.md#linker), [PASS1](event-table.md#pass1), LTCG\]. Родительская иерархия удобна, так как вы можете отследить событие до его корневого элемента. Если указанное выше действие LTCG работает медленно, можно сразу узнать, какой вызов компоновщика был задействован.
+Всякий раз, когда SDK Build Insights дает вам событие, оно происходит в виде стека. Последней записью в стеке является текущее событие, а записи— перед его родительской иерархией. Например, события запуска и остановки [LTCG](event-table.md#ltcg) происходят во время прохождения 1 ссылки. В этом случае стек, который \[вы получите, содержит:\] [LINKER,](event-table.md#linker) [PASS1](event-table.md#pass1), LTCG . Родительская иерархия удобна тем, что можно отследить событие до его корня. Если деятельность LTCG, упомянутая выше, является медленной, вы можете сразу узнать, какой ссылка вызов был вовлечен.
 
-#### <a name="matching-events-and-event-stacks"></a>Сопоставление событий и стеков событий
+#### <a name="matching-events-and-event-stacks"></a>Соответствие событиям и стекам событий
 
-Пакет C++ SDK для Build Insights предоставляет все события в трассировке, но в большинстве случаев вы только Следите за их подмножеством. В некоторых случаях может потребоваться только подмножество *стеков событий*. Пакет SDK предоставляет средства, помогающие быстро извлечь нужные события или стек событий, а также отклонить их. Это можно сделать с помощью соответствующих функций:
+SDK Build Insights дает вам каждое событие в след, но большую часть времени вы заботитесь только о подмножестве из них. В некоторых случаях вы можете заботиться только о подмножестве *стеков событий.* SDK предоставляет средства, которые помогут вам быстро извлечь нужные события или стек событий и отклонить те, которые вы не делаете. Это делается с помощью этих соответствующих функций:
 
 |  |  |
 |--|--|
-| [матчевент](functions/match-event.md) | Сохраняет событие, если оно соответствует одному из указанных типов. Пересылка сопоставленных событий в лямбда-или другие вызываемые типы. Эта функция не учитывает родительскую иерархию события. |
-| [матчевентинмемберфунктион](functions/match-event-in-member-function.md) | Сохраняет событие, если оно соответствует типу, указанному в параметре функции-члена. Пересылка сопоставленных событий функции члена. Эта функция не учитывает родительскую иерархию события. |
-| [матчевентстакк](functions/match-event-stack.md) | Сохраняет событие, если оба события и его родительская иерархия соответствуют указанным типам. Перешлите события и сопоставленные события родительской иерархии в лямбда-или другой вызываемый тип. |
-| [матчевентстаккинмемберфунктион](functions/match-event-stack-in-member-function.md) | Сохраняет событие, если оба события и его родительская иерархия соответствуют типам, указанным в списке параметров функции-члена. Перешлите события и сопоставленные события родительской иерархии функции члена. |
+| [МатчСобытие](functions/match-event.md) | Храните событие, если оно соответствует одному из указанных типов. Форвард сопоставлял события с лямбдой или другим вызываемым типом. Иерархия родительской функции события не учитывается этой функцией. |
+| [MatchEventInMemberФункция](functions/match-event-in-member-function.md) | Храните событие, если оно соответствует типу, указанному в параметре функции элемента. Форвард сопоставлял события с функцией участника. Иерархия родительской функции события не учитывается этой функцией. |
+| [MatchEventStack](functions/match-event-stack.md) | Сохраняйте событие, если и событие, и его родительская иерархия совпадают с указанными типами. Переадрестив событие и совпадающие события родительской иерархии на lambda или другой вызываемый тип. |
+| [MatchEventstackinMemberФункция](functions/match-event-stack-in-member-function.md) | Сохраняйте событие, если событие и его родительская иерархия совпадают с типами, указанными в списке параметров функции участника. Переадрестив событие и совпадающие события родительской иерархии в функцию участника. |
 
-Функции сопоставления стека событий, такие как `MatchEventStack`, допускают разрывы при описании соответствия родительской иерархии. Например, вы можете сказать, что вас интересует \[[компоновщика](event-table.md#linker), [LTCG](event-table.md#ltcg)\] Stack. Он также будет соответствовать \[КОМПОНОВЩИКа, [PASS1](event-table.md#pass1), LTCG\] Stack. Последний указанный тип должен быть типом события для сопоставления и не является частью родительской иерархии.
+Функции сопоставления стеков событий, такие как `MatchEventStack` позволяют сопоставить пробелы при описании родительской иерархии. Например, вы можете сказать, что \[вас интересует стек [LINKER,](event-table.md#linker) [LTCG.](event-table.md#ltcg) \] Он также будет \[соответствовать LINKER,\] [PASS1](event-table.md#pass1), LTCG стек. Последний указанный тип должен соответствовать типу события и не является частью родительской иерархии.
 
-#### <a name="capture-classes"></a>Классы отслеживания
+#### <a name="capture-classes"></a>Классы захвата
 
-Для использования функций `Match*` необходимо указать типы, которые необходимо сопоставить. Эти типы выбираются из списка *классов отслеживания*. Классы отслеживания бывают в нескольких категориях, описанных ниже.
+Использование `Match*` функций требует указания типов, которые вы хотите сопоставить. Эти типы выбираются из списка *классов захвата.* Классы захвата бывают нескольких категорий, описанных ниже.
 
-| Категория | Description |
+| Категория | Описание |
 |--|--|
-| Exact | Эти классы отслеживания используются для сопоставления определенного типа событий и других. Примером является класс [компилятора](cpp-event-data-types/compiler.md) , который соответствует событию [компилятора](event-table.md#compiler) . |
-| Подстановочный знак | Эти классы отслеживания можно использовать для сопоставления любого события из списка поддерживаемых им событий. Например, шаблон [действия](cpp-event-data-types/activity.md) соответствует любому событию действия. Другим примером является подстановочный знак [компилерпасс](cpp-event-data-types/compiler-pass.md) , который может соответствовать [FRONT_END_PASS](event-table.md#front-end-pass) или [BACK_END_PASS](event-table.md#back-end-pass) события. |
-| Группа | Имена классов отслеживания группы, заканчивающиеся на " *Группа*". Они используются для сопоставления нескольких событий одного типа в строке без учета пропусков. Они имеют смысл только при сопоставлении рекурсивных событий, так как неизвестно, сколько существует в стеке событий. Например, [FRONT_END_FILE](event-table.md#front-end-file) действие происходит каждый раз, когда компилятор анализирует файл. Это действие является рекурсивным, так как компилятор может найти директиву include при анализе файла. Класс [фронтендфиле](cpp-event-data-types/front-end-file.md) соответствует только одному событию FRONT_END_FILE в стеке. Используйте класс [фронтендфилеграуп](cpp-event-data-types/front-end-file-group.md) для сопоставления всей иерархии include. |
-| Группа подстановочных знаков | Группа с подстановочными знаками объединяет свойства подстановочных знаков и групп. Единственным классом этой категории является [инвокатионграуп](cpp-event-data-types/invocation-group.md), который сопоставляет и записывает все события [компоновщика](event-table.md#linker) и [компилятора](event-table.md#compiler) в одном стеке событий. |
+| Exact | Эти классы захвата используются для сопоставления определенного типа события и ни одного другого. Примером является класс [Компилятора,](cpp-event-data-types/compiler.md) который соответствует событию [COMPILER.](event-table.md#compiler) |
+| Подстановочный знак | Эти классы захвата могут быть использованы для сопоставления любого события из списка событий, которые они поддерживают. Например, подстановочные [знаки активности](cpp-event-data-types/activity.md) совпадает с любым событием активности. Другим примером является подстановочный знак [CompilerPass,](cpp-event-data-types/compiler-pass.md) который может соответствовать [FRONT_END_PASS](event-table.md#front-end-pass) или [BACK_END_PASS](event-table.md#back-end-pass) событию. |
+| Группа | Названия классов захвата групп заканчиваются в *группе*. Они используются для сопоставления нескольких событий одного и того же типа подряд, игнорируя пробелы. Они имеют смысл только при сопоставлении рекурсивных событий, потому что вы не знаете, сколько существует в стеке событий. Например, [FRONT_END_FILE](event-table.md#front-end-file) действие происходит каждый раз, когда компилятор разбирает файл. Это действие является повторяющейся, поскольку компилятор может найти директиву включить во время разбора файла. Класс [FrontEndFile](cpp-event-data-types/front-end-file.md) соответствует только одному FRONT_END_FILE событию в стеке. Используйте класс [FrontEndFileGroup,](cpp-event-data-types/front-end-file-group.md) чтобы соответствовать всей иерархии. |
+| Группа Wildcard | Группа подстановочных знаков сочетает в себе свойства подстановочных знаков и групп. Единственным классом этой категории является [InvocationGroup](cpp-event-data-types/invocation-group.md), который соответствует и захватывает все события [LINKER](event-table.md#linker) и [COMPILER](event-table.md#compiler) в одном стеке событий. |
 
-Сведения о том, какие классы отслеживания можно использовать для сопоставления каждого события, см. в [таблице событий](event-table.md) .
+Обратитесь к [таблице событий,](event-table.md) чтобы узнать, какие классы захвата могут быть использованы для соответствия каждому событию.
 
 #### <a name="after-matching-using-captured-events"></a>После сопоставления: использование захваченных событий
 
-После успешного завершения сопоставления функции `Match*` создают объекты класса Capture и пересылают их в указанную функцию. Используйте эти объекты класса Capture для доступа к свойствам событий.
+После успешного завершения матча `Match*` функции строят объекты класса захвата и направляют их в заданную функцию. Используйте эти объекты класса захвата для доступа к свойствам событий.
 
 #### <a name="example"></a>Пример
 

@@ -1,6 +1,6 @@
 ---
-title: Класс вызова
-description: Справочник C++ по классу вызова SDK для аналитики сборки.
+title: Класс призыва
+description: Ссылка на класс SDK Invocation.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 0c4698300a3eeaf77210ad74f84b0c0cd219b457
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: fcb087d46ea445251b0108f811545a44c26f421e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334748"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324643"
 ---
-# <a name="invocation-class"></a>Класс вызова
+# <a name="invocation-class"></a>Класс призыва
 
 ::: moniker range="<=vs-2015"
 
-Пакет C++ SDK для Build Insights совместим с Visual Studio 2017 и более поздних версий. Чтобы просмотреть документацию по этим версиям, присвойте элементу управления "Выбор версий Visual Studio" для этой статьи значение Visual Studio 2017 или Visual Studio 2019.
+SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Класс `Invocation` используется с функциями [матчевент](../functions/match-event.md), [матчевентинмемберфунктион](../functions/match-event-in-member-function.md), [матчевентстакк](../functions/match-event-stack.md)и [матчевентстаккинмемберфунктион](../functions/match-event-stack-in-member-function.md) . Используйте его для сопоставления с [компилятором](../event-table.md#compiler) или событием [компоновщика](../event-table.md#linker) .
+Класс `Invocation` используется с функциями [MatchEvent,](../functions/match-event.md) [MatchEventInMemberFunction,](../functions/match-event-in-member-function.md) [MatchEventStack](../functions/match-event-stack.md)и [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Используйте его, чтобы соответствовать событию [COMPILER](../event-table.md#compiler) или [LINKER.](../event-table.md#linker)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -52,9 +52,9 @@ public:
 };
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
-Наряду с наследуемыми членами от базового класса [Activity](activity.md) класс `Invocation` содержит следующие члены:
+Наряду с унаследованные члены `Invocation` из своего базового класса [деятельности,](activity.md) класс содержит следующие члены:
 
 ### <a name="constructors"></a>Конструкторы
 
@@ -63,12 +63,12 @@ public:
 ### <a name="functions"></a>Функции
 
 [ToolPath](#tool-path)
-[тулверсион](#tool-version)
-[тулверсионстринг](#tool-version-string)
-[тип](#type)
+[ToolVersion](#tool-version)
+[ToolVersionString](#tool-version-string)
+[Тип](#type)
 [WorkingDirectory](#working-directory)
 
-## <a name="invocation"></a>Вызова
+## <a name="invocation"></a><a name="invocation"></a>Вызова
 
 ```cpp
 Invocation(const RawEvent& event);
@@ -76,10 +76,10 @@ Invocation(const RawEvent& event);
 
 ### <a name="parameters"></a>Параметры
 
-*event*\
-[Компилятор](../event-table.md#compiler) или событие [компоновщика](../event-table.md#linker) .
+*Событие*\
+Событие [COMPILER](../event-table.md#compiler) или [LINKER.](../event-table.md#linker)
 
-## <a name="tool-path"></a>ToolPath
+## <a name="toolpath"></a><a name="tool-path"></a>ИнструментПат
 
 ```cpp
 const wchar_t* ToolPath() const;
@@ -87,9 +87,9 @@ const wchar_t* ToolPath() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Абсолютный путь к вызываемому средству.
+Абсолютный путь к инструменту, который был вызван.
 
-## <a name="tool-version"></a>тулверсион
+## <a name="toolversion"></a><a name="tool-version"></a>ToolVersion
 
 ```cpp
 const INVOCATION_VERSION_DATA& ToolVersion() const;
@@ -97,9 +97,9 @@ const INVOCATION_VERSION_DATA& ToolVersion() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Версия средства, которая была вызвана, как ссылка на [INVOCATION_VERSION_DATA](../c-event-data-types/invocation-version-data-struct.md) .
+Версия инструмента, которая была вызвана, в качестве [INVOCATION_VERSION_DATA](../c-event-data-types/invocation-version-data-struct.md) ссылки.
 
-## <a name="tool-version-string"></a>тулверсионстринг
+## <a name="toolversionstring"></a><a name="tool-version-string"></a>ToolVersionString
 
 ```cpp
 const char* ToolVersionString() const;
@@ -107,9 +107,9 @@ const char* ToolVersionString() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Версия вызываемого инструмента в виде строки ANSI.
+Версия инструмента, который был вызван, как строка ANSI.
 
-## <a name="type"></a>Тип
+## <a name="type"></a>Тип <a name="type"></a>
 
 ```cpp
 Type Type() const;
@@ -117,9 +117,9 @@ Type Type() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Код, указывающий на вызванное средство.
+Код, указывающий на инструмент, который был вызван.
 
-## <a name="working-directory"></a>WorkingDirectory
+## <a name="workingdirectory"></a><a name="working-directory"></a>Workingdirectory
 
 ```cpp
 const wchar_t* WorkingDirectory() const;

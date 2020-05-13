@@ -14,16 +14,16 @@ helpviewer_keywords:
 - IConvertTypeImpl class
 - CanConvert method
 ms.assetid: 7f81e79e-7d3f-4cbe-b93c-d632a94b15f6
-ms.openlocfilehash: 546a5a007f9e4c1c2a0e581eff2e7984947bdbb5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3b76be2a1f1edfcdc1139a3dd396835923c2b4a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408996"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210695"
 ---
 # <a name="iconverttypeimpl-class"></a>Класс IConvertTypeImpl
 
-Предоставляет реализацию [IConvertType](/previous-versions/windows/desktop/ms715926(v=vs.85)) интерфейс.
+Предоставляет реализацию интерфейса [Интерфейс IConvertType](/previous-versions/windows/desktop/ms715926(v=vs.85)) .
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,27 +36,27 @@ class ATL_NO_VTABLE IConvertTypeImpl
 ### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Ваш класс, производный от `IConvertTypeImpl`.
+Класс, производный от `IConvertTypeImpl`.
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** atldb.h
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="interface-methods"></a>Методы интерфейса
 
 |||
 |-|-|
-|[CanConvert](#canconvert)|Сведения о доступности преобразований типа команды или для набора строк.|
+|[канконверт](#canconvert)|Предоставляет сведения о доступности преобразований типов в команде или в наборе строк.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Этот интерфейс является обязательным на команды, наборы строк и наборов строк индекса. `IConvertTypeImpl` реализует интерфейс путем делегирования для преобразования объекта, заданного параметром OLE DB.
+Этот интерфейс является обязательным для команд, наборов строк и наборов строк индекса. `IConvertTypeImpl` реализует интерфейс путем делегирования к объекту преобразования, предоставленному OLE DB.
 
-## <a name="canconvert"></a> IConvertTypeImpl::CanConvert
+## <a name="iconverttypeimplcanconvert"></a><a name="canconvert"></a>Иконверттипеимпл:: Канконверт
 
-Сведения о доступности преобразований типа команды или для набора строк.
+Предоставляет сведения о доступности преобразований типов в команде или в наборе строк.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -68,13 +68,13 @@ STDMETHOD(CanConvert)(DBTYPE wFromType,
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [IConvertType::CanConvert](/previous-versions/windows/desktop/ms711224(v=vs.85)) в *справочнике программиста OLE DB*.
+См. раздел [Интерфейс IConvertType:: канконверт](/previous-versions/windows/desktop/ms711224(v=vs.85)) в *справочнике программиста OLE DB*.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Использует преобразования данных OLE DB в `MSADC.DLL`.
+Использует OLE DB преобразование данных в `MSADC.DLL`.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

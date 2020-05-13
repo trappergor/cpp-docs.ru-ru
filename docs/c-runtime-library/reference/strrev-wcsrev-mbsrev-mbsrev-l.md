@@ -1,11 +1,13 @@
 ---
 title: _strrev, _wcsrev, _mbsrev, _mbsrev_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wcsrev
 - _mbsrev
 - _strrev
 - _mbsrev_l
+- _o__mbsrev
+- _o__mbsrev_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +22,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -50,12 +53,12 @@ helpviewer_keywords:
 - tcsrev function
 - _tcsrev function
 ms.assetid: 87863e89-4fa0-421c-af48-25d8516fe72f
-ms.openlocfilehash: 3a7255d173e369b4269459a0cea4de8e7867c7c0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d0f03f84045d6fc036e6c8111da7b8484f2b8622
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946835"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911162"
 ---
 # <a name="_strrev-_wcsrev-_mbsrev-_mbsrev_l"></a>_strrev, _wcsrev, _mbsrev, _mbsrev_l
 
@@ -94,23 +97,25 @@ unsigned char *_mbsrev_l(
 
 Возвращает указатель на измененную строку. Нет зарезервированных возвращаемых значений для указания ошибки.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Функция **_strrev** изменяет порядок символов в *str*на обратный. Завершающий нуль-символ остается на месте. **_wcsrev** и **_mbsrev** — это версии **_strrev**для расширенных символов и многобайтовых символов. Аргументы и возвращаемое значение **_wcsrev** являются строками расширенных символов. **_mbsrev** являются строками многобайтовых символов. Для **_mbsrev**порядок байтов в каждом многобайтовой кодировке в *str* не изменяется. В остальном эти три функции ведут себя идентично.
+Функция **_strrev** меняет порядок символов в *str*. Завершающий нуль-символ остается на месте. **_wcsrev** и **_mbsrev** — это версии **_strrev**для расширенных символов и многобайтовых символов. Аргументы и возвращаемое значение **_wcsrev** являются строками расширенных символов; **_mbsrev** являются строками многобайтовых символов. Для **_mbsrev**порядок байтов в каждом многобайтовой кодировке в *str* не изменяется. В остальном эти три функции ведут себя идентично.
 
-**_mbsrev** проверяет свои параметры. Если либо *строка1* , либо *строка2* являются пустым указателем, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено **, _mbsrev** возвращает значение NULL **и устанавливает в** качестве **значения** по **еинвал**. **_strrev** и **_wcsrev** не проверяют свои параметры.
+**_mbsrev** проверяет свои параметры. Если либо *строка1* , либо *строка2* являются пустым указателем, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, **_mbsrev** возвращает **значение NULL** **и устанавливает для** **еинвал**. **_strrev** и **_wcsrev** не проверяют их параметры.
 
-На выходное значение влияет параметр категории **LC_CTYPE** языкового стандарта. Дополнительные сведения см. [в разделе setlocale, _wsetlocale](setlocale-wsetlocale.md) . Версии этих функций идентичны, за исключением того, что у тех, кто не имеет суффикса **_l** , используется текущий языковой стандарт, а вместо этого суффикс **_l** использует переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+На выходное значение влияет параметр категории **LC_CTYPE** языкового стандарта. Дополнительные сведения см. [в разделе setlocale, _wsetlocale](setlocale-wsetlocale.md) . Версии этих функций идентичны, за исключением того, что у тех, кто не имеет суффикса **_l** , используется текущий языковой стандарт, а вместо суффикса **_l** используется переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 > [!IMPORTANT]
 > Эти функции могут быть подвержены угрозам переполнения буфера. Переполнение буфера можно использовать для атак на систему, поскольку оно может привести к несанкционированному повышению уровня привилегий. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsrev**|**_strrev**|**_mbsrev**|**_wcsrev**|
-|**Н/Д**|**Н/Д**|**_mbsrev_l**|**Н/Д**|
+|**н/д**|**н/д**|**_mbsrev_l**|**н/д**|
 
 ## <a name="requirements"></a>Требования
 
@@ -120,7 +125,7 @@ unsigned char *_mbsrev_l(
 |**_wcsrev**|\<string.h> или \<wchar.h>|
 |**_mbsrev**, **_mbsrev_l**|\<mbstring.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -152,10 +157,10 @@ int main( void )
 The string "Able was I ere I saw Elba" is a palindrome
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Операции со строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Языковой стандарт](../../c-runtime-library/locale.md)<br/>
+[Управление строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Интерпретация последовательностей многобайтовых символов](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcpy, wcscpy, _mbscpy](strcpy-wcscpy-mbscpy.md)<br/>
 [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>

@@ -22,33 +22,33 @@ helpviewer_keywords:
 - SAFEARRAY, marshaling
 - ADO.NET [C++], marshaling SAFEARRAY types
 ms.assetid: b0cd987d-1ea7-4f76-ba01-cbd52503d06d
-ms.openlocfilehash: b258e574b912b1c32e5ffae7ba29cfc5f9903685
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 35633449c4c01f5c103dcd54b81c0d6aa7c08cdc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209096"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364414"
 ---
 # <a name="data-access-using-adonet-ccli"></a>Доступ к данным с помощью ADO.NET (C++/CLI)
 
-ADO.NET — это API платформы .NET Framework для доступа к данным и предоставляет широкие возможности и легкость использования, возможности, недоступные в предыдущих решений доступа данных. В этом разделе описываются некоторые вопросы, касающиеся ADO.NET, которые уникальны для пользователей Visual C++, например маршалинг типов.
+ADO.NET является API .NET Framework для доступа к данным и обеспечивает мощность и простоту использования, не имеюую аналогов предыдущим решениям для доступа к данным. В этом разделе описаны некоторые проблемы, связанные с ADO.NET, которые являются уникальными для пользователей Visual C, такие как маршалинг нативных типов.
 
-ADO.NET выполняется в группе Common Language Runtime (CLR). Таким образом любое приложение, которое взаимодействует с ADO.NET должны быть рассчитаны на среде CLR. Однако это означает, что собственные приложения не смогут использовать ADO.NET. Эти примеры будут демонстрируют способы взаимодействия с базой данных ADO.NET из машинного кода.
+ADO.NET работает в рамках общего языка Runtime (CLR). Поэтому любое приложение, взаимодействуя с ADO.NET, также должно быть нацелено на CLR. Однако это не означает, что нативные приложения не могут использовать ADO.NET. Эти примеры покажут, как взаимодействовать с ADO.NET базой данных из родного кода.
 
-## <a name="marshal_ansi"></a> Маршалинг строк ANSI для ADO.NET
+## <a name="marshal-ansi-strings-for-adonet"></a><a name="marshal_ansi"></a>Маршал ANSI струны для ADO.NET
 
-Демонстрирует способы добавления собственных строк (`char *`) для базы данных и каким образом следует маршалировать <xref:System.String?displayProperty=fullName> из базы данных в собственную строку.
+Демонстрирует, как добавить родную строку ()`char *`в <xref:System.String?displayProperty=fullName> базу данных и как маршал из базы данных в родную строку.
 
 ### <a name="example"></a>Пример
 
-В этом примере класса DatabaseClass создается класс для взаимодействия с ADO.NET <xref:System.Data.DataTable> объекта. Обратите внимание, что этот класс является машинного кода C++ `class` (по сравнению с `ref class` или `value class`). Это необходимо, поскольку мы будем использовать этот класс из машинного кода, а управляемые типы не может использоваться в машинном коде. Этот класс компилируется для среды CLR, в соответствии с `#pragma managed` директива, перед объявлением класса. Дополнительные сведения об этой директиве см. в разделе [управляемые, неуправляемые](../preprocessor/managed-unmanaged.md).
+В этом примере класс DatabaseClass создан для <xref:System.Data.DataTable> взаимодействия с ADO.NET объектом. Обратите внимание, что этот класс `class` является родным `ref class` СЗ (по сравнению с или `value class`). Это необходимо, потому что мы хотим использовать этот класс из родного кода, и вы не можете использовать управляемые типы в родном коде. Этот класс будет составлен для целевой CLR, `#pragma managed` как указано в директиве, предшествующей декларации класса. Для получения дополнительной информации об этой директиве [см.](../preprocessor/managed-unmanaged.md)
 
-Обратите внимание, закрытый член класса класса DatabaseClass: `gcroot<DataTable ^> table`. Поскольку собственные типы не могут содержать управляемые типы `gcroot` ключевое слово не требуется. Дополнительные сведения о `gcroot`, см. в разделе [как: Объявление дескрипторов в собственных типах](../dotnet/how-to-declare-handles-in-native-types.md).
+Обратите внимание на частного участника `gcroot<DataTable ^> table`класса DatabaseClass: . Поскольку типы native не `gcroot` могут содержать управляемые типы, ключевое слово необходимо. Для получения `gcroot`дополнительной информации о , см. [Как: Объявить ручки в родных типов](../dotnet/how-to-declare-handles-in-native-types.md).
 
-Остальная часть кода в этом примере — машинный код C++, как указано в `#pragma unmanaged` директиву перед `main`. В этом примере мы создания нового экземпляра класса DatabaseClass и вызов его методов, чтобы создать таблицу и заполнить некоторые строки в таблице. Обратите внимание, что собственные строки C++ передаются как значения для столбца базы данных StringCol. Внутри класса DatabaseClass эти строки маршалируются в управляемые строки с помощью механизма маршалинга в <xref:System.Runtime.InteropServices?displayProperty=fullName> пространства имен. В частности, метод <xref:System.Runtime.InteropServices.Marshal.PtrToStringAnsi%2A> используется для маршалирования `char *` для <xref:System.String>и метод <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A> используется для маршалирования <xref:System.String> для `char *`.
+Остальная часть кода в этом примере является родным кодом `#pragma unmanaged` СЗ, как указано в предыдущей `main`директиве. В этом примере мы создаем новый экземпляр DatabaseClass и вызываем его методы для создания таблицы и заполнения некоторых строк в таблице. Обратите внимание, что родные строки C'' передаются в качестве значений для столбца базы данных StringCol. Внутри DatabaseClass эти строки перекладываются на управляемые строки <xref:System.Runtime.InteropServices?displayProperty=fullName> с помощью функциональности маршалинга, найденной в пространстве имен. В частности, <xref:System.Runtime.InteropServices.Marshal.PtrToStringAnsi%2A> метод используется `char *` для <xref:System.String>маршала <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A> a to a, и метод используется для маршала a <xref:System.String> to a `char *`.
 
 > [!NOTE]
->  Память, выделенную <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A> должна освобождаться с помощью вызова <xref:System.Runtime.InteropServices.Marshal.FreeHGlobal%2A> или `GlobalFree`.
+> Память, выделенная <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A> должны быть deallocated путем вызова либо <xref:System.Runtime.InteropServices.Marshal.FreeHGlobal%2A> или `GlobalFree`.
 
 ```cpp
 // adonet_marshal_string_native.cpp
@@ -155,26 +155,26 @@ StringCol: This is string 2.
 
 ### <a name="compiling-the-code"></a>Компиляция кода
 
-- Чтобы скомпилировать код из командной строки, сохраните пример кода в файл под названием adonet_marshal_string_native.cpp и введите следующую инструкцию:
+- Чтобы компилировать код из командной строки, сохраните пример кода в файле, названном adonet_marshal_string_native.cpp, и введите следующее утверждение:
 
     ```
     cl /clr /FU System.dll /FU System.Data.dll /FU System.Xml.dll adonet_marshal_string_native.cpp
     ```
 
-## <a name="marshal_bstr"></a> Маршалинг строк BSTR для ADO.NET
+## <a name="marshal-bstr-strings-for-adonet"></a><a name="marshal_bstr"></a>Маршал BSTR струны для ADO.NET
 
-Демонстрирует способы добавления строк COM (`BSTR`) для базы данных и каким образом следует маршалировать <xref:System.String?displayProperty=fullName> из базы данных `BSTR`.
+Демонстрирует, как добавить строку COM ()`BSTR`в <xref:System.String?displayProperty=fullName> базу данных `BSTR`и как маршал из базы данных в .
 
 ### <a name="example"></a>Пример
 
-В этом примере класса DatabaseClass создается класс для взаимодействия с ADO.NET <xref:System.Data.DataTable> объекта. Обратите внимание, что этот класс является машинного кода C++ `class` (по сравнению с `ref class` или `value class`). Это необходимо, поскольку мы будем использовать этот класс из машинного кода, а управляемые типы не может использоваться в машинном коде. Этот класс компилируется для среды CLR, в соответствии с `#pragma managed` директива, перед объявлением класса. Дополнительные сведения об этой директиве см. в разделе [управляемые, неуправляемые](../preprocessor/managed-unmanaged.md).
+В этом примере класс DatabaseClass создан для <xref:System.Data.DataTable> взаимодействия с ADO.NET объектом. Обратите внимание, что этот класс `class` является родным `ref class` СЗ (по сравнению с или `value class`). Это необходимо, потому что мы хотим использовать этот класс из родного кода, и вы не можете использовать управляемые типы в родном коде. Этот класс будет составлен для целевой CLR, `#pragma managed` как указано в директиве, предшествующей декларации класса. Для получения дополнительной информации об этой директиве [см.](../preprocessor/managed-unmanaged.md)
 
-Обратите внимание, закрытый член класса класса DatabaseClass: `gcroot<DataTable ^> table`. Поскольку собственные типы не могут содержать управляемые типы `gcroot` ключевое слово не требуется. Дополнительные сведения о `gcroot`, см. в разделе [как: Объявление дескрипторов в собственных типах](../dotnet/how-to-declare-handles-in-native-types.md).
+Обратите внимание на частного участника `gcroot<DataTable ^> table`класса DatabaseClass: . Поскольку типы native не `gcroot` могут содержать управляемые типы, ключевое слово необходимо. Для получения `gcroot`дополнительной информации о , см. [Как: Объявить ручки в родных типов](../dotnet/how-to-declare-handles-in-native-types.md).
 
-Остальная часть кода в этом примере — машинный код C++, как указано в `#pragma unmanaged` директиву перед `main`. В этом примере мы создания нового экземпляра класса DatabaseClass и вызов его методов, чтобы создать таблицу и заполнить некоторые строки в таблице. Обратите внимание, что строки COM передаются как значения для столбца базы данных StringCol. Внутри класса DatabaseClass эти строки маршалируются в управляемые строки с помощью механизма маршалинга в <xref:System.Runtime.InteropServices?displayProperty=fullName> пространства имен. В частности, метод <xref:System.Runtime.InteropServices.Marshal.PtrToStringBSTR%2A> используется для маршалирования `BSTR` для <xref:System.String>и метод <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> используется для маршалирования <xref:System.String> для `BSTR`.
+Остальная часть кода в этом примере является родным кодом `#pragma unmanaged` СЗ, как указано в предыдущей `main`директиве. В этом примере мы создаем новый экземпляр DatabaseClass и вызываем его методы для создания таблицы и заполнения некоторых строк в таблице. Обратите внимание, что строки COM передаются в качестве значений для столбца базы данных StringCol. Внутри DatabaseClass эти строки перекладываются на управляемые строки <xref:System.Runtime.InteropServices?displayProperty=fullName> с помощью функциональности маршалинга, найденной в пространстве имен. В частности, <xref:System.Runtime.InteropServices.Marshal.PtrToStringBSTR%2A> метод используется `BSTR` для <xref:System.String>маршала <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> a to a, и метод используется для маршала a <xref:System.String> to a `BSTR`.
 
 > [!NOTE]
->  Память, выделенную <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> должна освобождаться с помощью вызова <xref:System.Runtime.InteropServices.Marshal.FreeBSTR%2A> или `SysFreeString`.
+> Память, выделенная <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> должны быть deallocated путем вызова либо <xref:System.Runtime.InteropServices.Marshal.FreeBSTR%2A> или `SysFreeString`.
 
 ``` cpp
 // adonet_marshal_string_bstr.cpp
@@ -289,26 +289,26 @@ StringCol: This is string 2.
 
 ### <a name="compiling-the-code"></a>Компиляция кода
 
-- Чтобы скомпилировать код из командной строки, сохраните пример кода в файл под названием adonet_marshal_string_native.cpp и введите следующую инструкцию:
+- Чтобы компилировать код из командной строки, сохраните пример кода в файле, названном adonet_marshal_string_native.cpp, и введите следующее утверждение:
 
     ```
     cl /clr /FU System.dll /FU System.Data.dll /FU System.Xml.dll adonet_marshal_string_native.cpp
     ```
 
-## <a name="marshal_unicode"></a> Маршалинг строк Юникода для ADO.NET
+## <a name="marshal-unicode-strings-for-adonet"></a><a name="marshal_unicode"></a>Маршал Unicode строки для ADO.NET
 
-Демонстрирует способы добавления собственных строк Юникода (`wchar_t *`) для базы данных и каким образом следует маршалировать <xref:System.String?displayProperty=fullName> из базы данных в собственную строку Юникода.
+Демонстрирует, как добавить родную`wchar_t *`строку Unicode () <xref:System.String?displayProperty=fullName> в базу данных и как повысить от базы данных к родной строке Unicode.
 
 ### <a name="example"></a>Пример
 
-В этом примере класса DatabaseClass создается класс для взаимодействия с ADO.NET <xref:System.Data.DataTable> объекта. Обратите внимание, что этот класс является машинного кода C++ `class` (по сравнению с `ref class` или `value class`). Это необходимо, поскольку мы будем использовать этот класс из машинного кода, а управляемые типы не может использоваться в машинном коде. Этот класс компилируется для среды CLR, в соответствии с `#pragma managed` директива, перед объявлением класса. Дополнительные сведения об этой директиве см. в разделе [управляемые, неуправляемые](../preprocessor/managed-unmanaged.md).
+В этом примере класс DatabaseClass создан для <xref:System.Data.DataTable> взаимодействия с ADO.NET объектом. Обратите внимание, что этот класс `class` является родным `ref class` СЗ (по сравнению с или `value class`). Это необходимо, потому что мы хотим использовать этот класс из родного кода, и вы не можете использовать управляемые типы в родном коде. Этот класс будет составлен для целевой CLR, `#pragma managed` как указано в директиве, предшествующей декларации класса. Для получения дополнительной информации об этой директиве [см.](../preprocessor/managed-unmanaged.md)
 
-Обратите внимание, закрытый член класса класса DatabaseClass: `gcroot<DataTable ^> table`. Поскольку собственные типы не могут содержать управляемые типы `gcroot` ключевое слово не требуется. Дополнительные сведения о `gcroot`, см. в разделе [как: Объявление дескрипторов в собственных типах](../dotnet/how-to-declare-handles-in-native-types.md).
+Обратите внимание на частного участника `gcroot<DataTable ^> table`класса DatabaseClass: . Поскольку типы native не `gcroot` могут содержать управляемые типы, ключевое слово необходимо. Для получения `gcroot`дополнительной информации о , см. [Как: Объявить ручки в родных типов](../dotnet/how-to-declare-handles-in-native-types.md).
 
-Остальная часть кода в этом примере — машинный код C++, как указано в `#pragma unmanaged` директиву перед `main`. В этом примере мы создания нового экземпляра класса DatabaseClass и вызов его методов, чтобы создать таблицу и заполнить некоторые строки в таблице. Обратите внимание, что строки Юникода для C++ передаются как значения для столбца базы данных StringCol. Внутри класса DatabaseClass эти строки маршалируются в управляемые строки с помощью механизма маршалинга в <xref:System.Runtime.InteropServices?displayProperty=fullName> пространства имен. В частности, метод <xref:System.Runtime.InteropServices.Marshal.PtrToStringUni%2A> используется для маршалирования `wchar_t *` для <xref:System.String>и метод <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalUni%2A> используется для маршалирования <xref:System.String> для `wchar_t *`.
+Остальная часть кода в этом примере является родным кодом `#pragma unmanaged` СЗ, как указано в предыдущей `main`директиве. В этом примере мы создаем новый экземпляр DatabaseClass и вызываем его методы для создания таблицы и заполнения некоторых строк в таблице. Обратите внимание, что строки Unicode C'' передаются в качестве значений для столбца базы данных StringCol. Внутри DatabaseClass эти строки перекладываются на управляемые строки <xref:System.Runtime.InteropServices?displayProperty=fullName> с помощью функциональности маршалинга, найденной в пространстве имен. В частности, <xref:System.Runtime.InteropServices.Marshal.PtrToStringUni%2A> метод используется `wchar_t *` для <xref:System.String>маршала <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalUni%2A> a to a, и метод используется для маршала a <xref:System.String> to a `wchar_t *`.
 
 > [!NOTE]
->  Память, выделенную <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalUni%2A> должна освобождаться с помощью вызова <xref:System.Runtime.InteropServices.Marshal.FreeHGlobal%2A> или `GlobalFree`.
+> Память, выделенная <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalUni%2A> должны быть deallocated путем вызова либо <xref:System.Runtime.InteropServices.Marshal.FreeHGlobal%2A> или `GlobalFree`.
 
 ```cpp
 // adonet_marshal_string_wide.cpp
@@ -415,23 +415,23 @@ StringCol: This is string 2.
 
 ### <a name="compiling-the-code"></a>Компиляция кода
 
-- Чтобы скомпилировать код из командной строки, сохраните пример кода в файл adonet_marshal_string_wide.cpp и введите следующую инструкцию:
+- Чтобы компилировать код из командной строки, сохраните пример кода в файле под названием adonet_marshal_string_wide.cpp и введите следующее утверждение:
 
     ```
     cl /clr /FU System.dll /FU System.Data.dll /FU System.Xml.dll adonet_marshal_string_wide.cpp
     ```
 
-## <a name="marshal_variant"></a> Маршалинг VARIANT для ADO.NET
+## <a name="marshal-a-variant-for-adonet"></a><a name="marshal_variant"></a>Маршал ВАРИАНТ для ADO.NET
 
-Демонстрирует способы добавления собственного `VARIANT` базу данных и каким образом следует маршалировать <xref:System.Object?displayProperty=fullName> из базы данных в собственный `VARIANT`.
+Демонстрирует, как добавить `VARIANT` родной в базу <xref:System.Object?displayProperty=fullName> данных и как `VARIANT`маршал из базы данных в родной .
 
 ### <a name="example"></a>Пример
 
-В этом примере класса DatabaseClass создается класс для взаимодействия с ADO.NET <xref:System.Data.DataTable> объекта. Обратите внимание, что этот класс является машинного кода C++ `class` (по сравнению с `ref class` или `value class`). Это необходимо, поскольку мы будем использовать этот класс из машинного кода, а управляемые типы не может использоваться в машинном коде. Этот класс компилируется для среды CLR, в соответствии с `#pragma managed` директива, перед объявлением класса. Дополнительные сведения об этой директиве см. в разделе [управляемые, неуправляемые](../preprocessor/managed-unmanaged.md).
+В этом примере класс DatabaseClass создан для <xref:System.Data.DataTable> взаимодействия с ADO.NET объектом. Обратите внимание, что этот класс `class` является родным `ref class` СЗ (по сравнению с или `value class`). Это необходимо, потому что мы хотим использовать этот класс из родного кода, и вы не можете использовать управляемые типы в родном коде. Этот класс будет составлен для целевой CLR, `#pragma managed` как указано в директиве, предшествующей декларации класса. Для получения дополнительной информации об этой директиве [см.](../preprocessor/managed-unmanaged.md)
 
-Обратите внимание, закрытый член класса класса DatabaseClass: `gcroot<DataTable ^> table`. Поскольку собственные типы не могут содержать управляемые типы `gcroot` ключевое слово не требуется. Дополнительные сведения о `gcroot`, см. в разделе [как: Объявление дескрипторов в собственных типах](../dotnet/how-to-declare-handles-in-native-types.md).
+Обратите внимание на частного участника `gcroot<DataTable ^> table`класса DatabaseClass: . Поскольку типы native не `gcroot` могут содержать управляемые типы, ключевое слово необходимо. Для получения `gcroot`дополнительной информации о , см. [Как: Объявить ручки в родных типов](../dotnet/how-to-declare-handles-in-native-types.md).
 
-Остальная часть кода в этом примере — машинный код C++, как указано в `#pragma unmanaged` директиву перед `main`. В этом примере мы создания нового экземпляра класса DatabaseClass и вызов его методов, чтобы создать таблицу и заполнить некоторые строки в таблице. Обратите внимание, что машинные `VARIANT` типы передаются как значения для столбца базы данных ObjectCol. Внутри класса DatabaseClass эти `VARIANT` типы маршалируются в управляемые объекты, с помощью механизма маршалинга в <xref:System.Runtime.InteropServices?displayProperty=fullName> пространства имен. В частности, метод <xref:System.Runtime.InteropServices.Marshal.GetObjectForNativeVariant%2A> используется для маршалирования `VARIANT` для <xref:System.Object>и метод <xref:System.Runtime.InteropServices.Marshal.GetNativeVariantForObject%2A> используется для маршалирования <xref:System.Object> для `VARIANT`.
+Остальная часть кода в этом примере является родным кодом `#pragma unmanaged` СЗ, как указано в предыдущей `main`директиве. В этом примере мы создаем новый экземпляр DatabaseClass и вызываем его методы для создания таблицы и заполнения некоторых строк в таблице. Обратите внимание, что типы native `VARIANT` передаются как значения для столбца базы данных ObjectCol. Внутри DatabaseClass `VARIANT` эти типы маршируются на управляемые объекты <xref:System.Runtime.InteropServices?displayProperty=fullName> с помощью функциональности маршалинга, найденной в пространстве имен. В <xref:System.Runtime.InteropServices.Marshal.GetObjectForNativeVariant%2A> частности, метод используется `VARIANT` для <xref:System.Object>маршала <xref:System.Runtime.InteropServices.Marshal.GetNativeVariantForObject%2A> к , и <xref:System.Object> метод `VARIANT`используется для маршала к .
 
 ```cpp
 // adonet_marshal_variant.cpp
@@ -556,23 +556,23 @@ ObjectCol: 42
 
 ### <a name="compiling-the-code"></a>Компиляция кода
 
-- Чтобы скомпилировать код из командной строки, сохраните пример кода в файл adonet_marshal_variant.cpp и введите следующую инструкцию:
+- Чтобы компилировать код из командной строки, сохраните пример кода в файле, названном adonet_marshal_variant.cpp, и введите следующее утверждение:
 
     ```
     cl /clr /FU System.dll /FU System.Data.dll /FU System.Xml.dll adonet_marshal_variant.cpp
     ```
 
-## <a name="marshal_safearray"></a> Маршалинг безопасного массива SAFEARRAY для ADO.NET
+## <a name="marshal-a-safearray-for-adonet"></a><a name="marshal_safearray"></a>Маршал САСФАРЕЙ для ADO.NET
 
-Демонстрирует способы добавления собственного `SAFEARRAY` способ маршалинга управляемого массива из базы данных в машинном коде и базы данных `SAFEARRAY`.
+Демонстрирует, как добавить `SAFEARRAY` родной в базу данных и как маршал `SAFEARRAY`управляемого массива из базы данных в родной .
 
 ### <a name="example"></a>Пример
 
-В этом примере класса DatabaseClass создается класс для взаимодействия с ADO.NET <xref:System.Data.DataTable> объекта. Обратите внимание, что этот класс является машинного кода C++ `class` (по сравнению с `ref class` или `value class`). Это необходимо, поскольку мы будем использовать этот класс из машинного кода, а управляемые типы не может использоваться в машинном коде. Этот класс компилируется для среды CLR, в соответствии с `#pragma managed` директива, перед объявлением класса. Дополнительные сведения об этой директиве см. в разделе [управляемые, неуправляемые](../preprocessor/managed-unmanaged.md).
+В этом примере класс DatabaseClass создан для <xref:System.Data.DataTable> взаимодействия с ADO.NET объектом. Обратите внимание, что этот класс `class` является родным `ref class` СЗ (по сравнению с или `value class`). Это необходимо, потому что мы хотим использовать этот класс из родного кода, и вы не можете использовать управляемые типы в родном коде. Этот класс будет составлен для целевой CLR, `#pragma managed` как указано в директиве, предшествующей декларации класса. Для получения дополнительной информации об этой директиве [см.](../preprocessor/managed-unmanaged.md)
 
-Обратите внимание, закрытый член класса класса DatabaseClass: `gcroot<DataTable ^> table`. Поскольку собственные типы не могут содержать управляемые типы `gcroot` ключевое слово не требуется. Дополнительные сведения о `gcroot`, см. в разделе [как: Объявление дескрипторов в собственных типах](../dotnet/how-to-declare-handles-in-native-types.md).
+Обратите внимание на частного участника `gcroot<DataTable ^> table`класса DatabaseClass: . Поскольку типы native не `gcroot` могут содержать управляемые типы, ключевое слово необходимо. Для получения `gcroot`дополнительной информации о , см. [Как: Объявить ручки в родных типов](../dotnet/how-to-declare-handles-in-native-types.md).
 
-Остальная часть кода в этом примере — машинный код C++, как указано в `#pragma unmanaged` директиву перед `main`. В этом примере мы создания нового экземпляра класса DatabaseClass и вызов его методов, чтобы создать таблицу и заполнить некоторые строки в таблице. Обратите внимание, что машинные `SAFEARRAY` типы передаются как значения для столбца базы данных ArrayIntsCol. Внутри класса DatabaseClass эти `SAFEARRAY` типы маршалируются в управляемые объекты, с помощью механизма маршалинга в <xref:System.Runtime.InteropServices?displayProperty=fullName> пространства имен. В частности, метод <xref:System.Runtime.InteropServices.Marshal.Copy%2A> используется для маршалирования `SAFEARRAY` в управляемый массив целых чисел, а также метод <xref:System.Runtime.InteropServices.Marshal.Copy%2A> используется для маршалирования в управляемый массив целых чисел `SAFEARRAY`.
+Остальная часть кода в этом примере является родным кодом `#pragma unmanaged` СЗ, как указано в предыдущей `main`директиве. В этом примере мы создаем новый экземпляр DatabaseClass и вызываем его методы для создания таблицы и заполнения некоторых строк в таблице. Обратите внимание, что типы native `SAFEARRAY` передаются как значения для столбца базы данных ArrayIntsCol. Внутри DatabaseClass `SAFEARRAY` эти типы маршируются на управляемые объекты <xref:System.Runtime.InteropServices?displayProperty=fullName> с помощью функциональности маршалинга, найденной в пространстве имен. В частности, <xref:System.Runtime.InteropServices.Marshal.Copy%2A> метод используется `SAFEARRAY` для маршала к управляемому массиву <xref:System.Runtime.InteropServices.Marshal.Copy%2A> целых рядов, и метод используется `SAFEARRAY`для маршала управляемого массива целых чипов до .
 
 ```cpp
 // adonet_marshal_safearray.cpp
@@ -709,27 +709,27 @@ int main()
 
 ### <a name="compiling-the-code"></a>Компиляция кода
 
-- Чтобы скомпилировать код из командной строки, сохраните пример кода в файл adonet_marshal_safearray.cpp и введите следующую инструкцию:
+- Чтобы компилировать код из командной строки, сохраните пример кода в файле, названном adonet_marshal_safearray.cpp, и введите следующее утверждение:
 
     ```
     cl /clr /FU System.dll /FU System.Data.dll /FU System.Xml.dll adonet_marshal_safearray.cpp
     ```
 
-## <a name="net-framework-security"></a>Безопасность платформы .NET Framework
+## <a name="net-framework-security"></a>Безопасность .NET Framework
 
-Сведения о вопросах безопасности, связанные с ADO.NET, см. в разделе [защита приложений ADO.NET](/dotnet/framework/data/adonet/securing-ado-net-applications).
+Для получения информаци [ADO.NETи](/dotnet/framework/data/adonet/securing-ado-net-applications)о вопросах безопасности, связанных с ADO.NET, см.
 
 ## <a name="related-sections"></a>Связанные разделы
 
-|Раздел|Описание|
+|Section|Описание|
 |-------------|-----------------|
-|[ADO.NET](/dotnet/framework/data/adonet/index)|Обзор ADO.NET, набор классов, предоставляющих службы доступа к данным программисту .NET.|
+|[ADO.NET](/dotnet/framework/data/adonet/index)|Предоставляет обзор ADO.NET, набор классов, которые предоставляют службы доступа к данным для программиста .NET.|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Программирование .NET с использованием C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
 
-[Взаимодействие исходного кода и платформы.NET](../dotnet/native-and-dotnet-interoperability.md)
+[Взаимосвязь между коренными жителями и .NET](../dotnet/native-and-dotnet-interoperability.md)
 
 <xref:System.Runtime.InteropServices>
 

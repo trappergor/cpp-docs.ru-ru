@@ -13,16 +13,16 @@ helpviewer_keywords:
 - CStrBufT class
 - shared classes, CStrBufT
 ms.assetid: 6b50fa8f-87e8-4ed4-a229-157ce128710f
-ms.openlocfilehash: 81c3b429089eab3ba95c178e3fc7cf2bf55783a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71d7b6f7d53e9613b1ac26013d73c1dbd1ef0aab
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223497"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746928"
 ---
 # <a name="cstrbuft-class"></a>Класс CStrBufT
 
-Этот класс предоставляет автоматическое освобождение ресурстов для `GetBuffer` и `ReleaseBuffer` вызывает на существующем `CStringT` объекта.
+Этот класс обеспечивает автоматическую `GetBuffer` `ReleaseBuffer` очистку ресурсов `CStringT` и вызовы на существующий объект.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,75 +34,75 @@ class CStrBufT
 #### <a name="parameters"></a>Параметры
 
 *TCharType*<br/>
-Тип символа для `CStrBufT` класса. Ниже указаны доступные значения.
+Тип персонажа `CStrBufT` класса. Может применяться один из перечисленных ниже типов.
 
-- **char** (для символьных строк ANSI)
+- **символ** (для строк anSI символов)
 
-- **wchar_t** (для символьных строк в Юникоде)
+- **wchar_t** (для строк символов Unicode)
 
-- TCHAR (для символьных строк ANSI и Юникода)
+- TCHAR (для строк символов ANSI и Unicode)
 
 ## <a name="members"></a>Участники
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|PCXSTR|Указатель на строковую константу.|
+|PCXSTR|Указатель на постоянную строку.|
 |PXSTR|Указатель на строку.|
-|`StringType`|Строковый тип, буфер которого должен управляться специализации этого класса шаблона.|
+|`StringType`|Тип строки, буфером которого должны манипулировать специализации этого шаблона класса.|
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[CStrBufT::CStrBufT](#cstrbuft)|Конструктор для объекта буфера строки.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CStrBufT::SetLength](#setlength)|Задает длину буфера знаков соответствующий строковый объект.|
+|[CStrBufT::SetLength](#setlength)|Устанавливает длину буфера символов связанного объекта строки.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CStrBufT::operator PCXSTR](#operator_pcxstr)|Извлекает **const** указатель на буфер символов соответствующий строковый объект.|
-|[CStrBufT::operator PXSTR](#operator_pxstr)|Извлекает указатель на буфер символов соответствующий строковый объект.|
+|[CStrBufT:Оператор PCXSTR](#operator_pcxstr)|Извлекает **указатель** конст-указателя на буфер символов связанного объекта строки.|
+|[CStrBufT::оператор PXSTR](#operator_pxstr)|Извлекает указатель на буфер символов связанного объекта строки.|
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CStrBufT::AUTO_LENGTH](#auto_length)|Автоматически Определите новые длину строки на момент выпуска.|
-|[CStrBufT::SET_LENGTH](#set_length)|Задайте длину строкового объекта во время GetBuffer|
+|[CStrBufT::AUTO_LENGTH](#auto_length)|Автоматически определите новую длину строки при выпуске.|
+|[CStrBufT::SET_LENGTH](#set_length)|Установите длину объекта строки во время GetBuffer|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Этот класс используется как класс-оболочку для замены вызовов [GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) и [ReleaseBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#releasebuffer), или [GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength) и `ReleaseBuffer`.
+Этот класс используется в качестве обертки класса для замены вызовов [GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) и [ReleaseBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#releasebuffer), или [GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength) и `ReleaseBuffer`.
 
-В первую очередь созданы как вспомогательный класс `CStrBufT` предоставляет удобный способ работы с буфер символов строкового объекта, не беспокоясь о том, как разработчик или когда вызывать `ReleaseBuffer`. Это можно сделать, так как объект-оболочка выходит за пределы области, естественным образом в случае исключения или несколько существующих частей кода; вызывает деструктор для освобождения строкового ресурса.
+В первую очередь разработан `CStrBufT` в качестве помощника класса, обеспечивает удобный способ для разработчика для работы с символом буфера строки объекта, не беспокоясь о том, как и когда звонить `ReleaseBuffer`. Это возможно, потому что объект обертки естественно выходит из сферы применения в случае исключения или нескольких путей выхода кода; в результате чего его деструктор, чтобы освободить строку ресурса.
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** atlsimpstr.h
 
-##  <a name="auto_length"></a>  CStrBufT::AUTO_LENGTH
+## <a name="cstrbuftauto_length"></a><a name="auto_length"></a>CStrBufT::AUTO_LENGTH
 
-Автоматически Определите новые длину строки на момент выпуска.
+Автоматически определите новую длину строки при выпуске.
 
 ```
 static const DWORD AUTO_LENGTH = 0x01;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Автоматически Определите новые длину строки на момент выпуска. Строка должна быть нулем.
+Автоматически определите новую длину строки при выпуске. Строка должна быть нулевым.
 
-##  <a name="cstrbuft"></a>  CStrBufT::CStrBufT
+## <a name="cstrbuftcstrbuft"></a><a name="cstrbuft"></a>CStrBufT::CStrBufT
 
-Создает объект буфера.
+Строит буферный объект.
 
 ```
 CStrBufT(StringType& str, int nMinLength, DWORD dwFlags = AUTO_LENGTH) throw(...);
@@ -111,28 +111,28 @@ explicit CStrBufT(StringType& str) throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*str*<br/>
-Строковый объект, связанный с буфером. Как правило, разработчик будет использовать предварительно заданных определений типов из `CStrBuf` (TCHAR вариант), `CStrBufA` (**char** вариант) и `CStrBufW` (**wchar_t** вариант).
+*Ул*<br/>
+Объект строки, связанный с буфером. Как правило, разработчик использует предопределенные `CStrBuf` типофы `CStrBufA` (вариант TCHAR), (вариант**char)** и `CStrBufW` **(wchar_t** вариант).
 
 *nMinLength*<br/>
-Минимальная длина буфера знаков.
+Минимальная длина буфера символов.
 
 *dwFlags*<br/>
-Определяет, если длина строки определяется автоматически. Ниже указаны доступные значения.
+Определяет, определяется ли длина строки автоматически. Может применяться один из перечисленных ниже типов.
 
-- Длина строки AUTO_LENGTH является автоматически определяется при [CSimpleStringT::Release](../../atl-mfc-shared/reference/csimplestringt-class.md#releasebuffer) вызывается. Строка должна быть нулем. Значение по умолчанию.
+- AUTO_LENGTH длина строки автоматически определяется, когда [CSimpleStringT::Release](../../atl-mfc-shared/reference/csimplestringt-class.md#releasebuffer) вызывается. Строка должна быть нулевым. Значение по умолчанию.
 
-- Длина строки SET_LENGTH задается, если [CSimpleStringT::GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) вызывается.
+- SET_LENGTH длина строки устанавливается, когда [CSimpleStringT::GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) называется.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Создает строковый буфер для соответствующий строковый объект. Во время построения [CSimpleStringT::GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) или [CSimpleStringT::GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength) вызывается.
+Создает буфер строки для связанного объекта строки. Во время строительства, [CSimpleStringT::GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) или [CSimpleStringT::GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength) называется.
 
-Обратите внимание, что конструктор копии **частного**.
+Обратите внимание, что конвейер является **частным.**
 
-##  <a name="operator_pcxstr"></a>  CStrBufT::operator PCXSTR
+## <a name="cstrbuftoperator-pcxstr"></a><a name="operator_pcxstr"></a>CStrBufT:Оператор PCXSTR
 
-Напрямую обращается к символов, сохраненных в соответствующий строковый объект в виде строки C-стиля.
+Непосредственно получает доступ к символам, хранящимся в связанном объекте строки, как строка C-стиля.
 
 ```
 operator PCXSTR() const throw();
@@ -140,15 +140,15 @@ operator PCXSTR() const throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Символ указатель на строку данных.
+Указатель символов к данным строки.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Вызывайте эту функцию для возврата указателя на буфер символов строкового объекта. Содержимое объекта string не может изменяться с помощью этого указателя.
+Вызовите эту функцию, чтобы вернуть указатель в буфер символов объекта строки. Содержимое объекта строки не может быть изменено с помощью этого указателя.
 
-##  <a name="operator_pxstr"></a>  CStrBufT::operator PXSTR
+## <a name="cstrbuftoperator-pxstr"></a><a name="operator_pxstr"></a>CStrBufT::оператор PXSTR
 
-Напрямую обращается к символов, сохраненных в соответствующий строковый объект в виде строки C-стиля.
+Непосредственно получает доступ к символам, хранящимся в связанном объекте строки, как строка C-стиля.
 
 ```
 operator PXSTR() throw();
@@ -156,21 +156,21 @@ operator PXSTR() throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Символ указатель на строку данных.
+Указатель символов к данным строки.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Вызывайте эту функцию для возврата указателя на буфер символов строкового объекта. Разработчик может изменять содержимое объекта string с помощью этого указателя.
+Вызовите эту функцию, чтобы вернуть указатель в буфер символов объекта строки. Разработчик может изменить содержимое объекта строки с помощью этого указателя.
 
-##  <a name="pcxstr"></a>  CStrBufT::PCXSTR
+## <a name="cstrbuftpcxstr"></a><a name="pcxstr"></a>CStrBufT::PCXSTR
 
-Указатель на строковую константу.
+Указатель на постоянную строку.
 
 ```
 typedef CSimpleStringT<TCharType>::PCXSTR PCXSTR;
 ```
 
-##  <a name="pxstr"></a>  CStrBufT::PXSTR
+## <a name="cstrbuftpxstr"></a><a name="pxstr"></a>CStrBufT::PXSTR
 
 Указатель на строку.
 
@@ -178,53 +178,53 @@ typedef CSimpleStringT<TCharType>::PCXSTR PCXSTR;
 typedef CSimpleStringT<TCharType>::PXSTR PXSTR;
 ```
 
-##  <a name="set_length"></a>  CStrBufT::SET_LENGTH
+## <a name="cstrbuftset_length"></a><a name="set_length"></a>CStrBufT::SET_LENGTH
 
-Задайте длину строкового объекта в `GetBuffer` времени.
+Установите длину объекта `GetBuffer` строки вовремя.
 
 ```
 static const DWORD SET_LENGTH = 0x02;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Задайте длину строкового объекта во время GetBuffer.
+Установите длину объекта строки во время GetBuffer.
 
-Определяет, если [CSimpleStringT::GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) и [CSimpleStringT::GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength) вызываются при создании объекта буфера строки.
+Определяет, если [CSimpleStringT::GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) и [CSimpleStringT::GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength) называются, когда объект буфера строки построен.
 
-##  <a name="setlength"></a>  CStrBufT::SetLength
+## <a name="cstrbuftsetlength"></a><a name="setlength"></a>CStrBufT::SetLength
 
-Задает длину буфера знаков.
+Устанавливает длину буфера символов.
 
-```
+```cpp
 void SetLength(int nLength);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*nLength*<br/>
-Новая длина буфера символ объекта строки.
+*nДлина*<br/>
+Новая длина буфера символов объекта строки.
 
 > [!NOTE]
->  Должно быть меньше или равно длине минимальный размер буфера, указанный в конструкторе класса `CStrBufT`.
+> Должна быть меньше или равна минимальной длине `CStrBufT`буфера, указанной в конструкторе.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Вызывайте эту функцию, чтобы задать длину строки, представленные объектом буфера.
+Вызовите эту функцию, чтобы установить длину строки, представленной буферным объектом.
 
-##  <a name="stringtype"></a>  CStrBufT::StringType
+## <a name="cstrbuftstringtype"></a><a name="stringtype"></a>CStrBufT::StringType
 
-Строковый тип, буфер которого должен управляться специализации этого класса шаблона.
+Тип строки, буфером которого должны манипулировать специализации этого шаблона класса.
 
 ```
 typedef CSimpleStringT<TCharType> StringType;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-`TCharType` используется ли тип символа для специализации шаблона класса.
+`TCharType`— это тип символов, используемый для специализации шаблона класса.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
-[Общие классы ATL и MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
+[Общие классы ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)

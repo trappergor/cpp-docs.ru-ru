@@ -1,8 +1,9 @@
 ---
 title: setbuf
-ms.date: 04/08/2019
+ms.date: 4/2/2020
 api_name:
 - setbuf
+- _o_setbuf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -25,12 +27,12 @@ helpviewer_keywords:
 - setbuf function
 - stream buffering
 ms.assetid: 13beda22-7b56-455d-8a6c-f2eb636885b9
-ms.openlocfilehash: c6c78297b1818131dcfcb10f4f2eaadd752d8ef4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 40f23db88abf9733eada9e775aacda83cba5829a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948282"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910335"
 ---
 # <a name="setbuf"></a>setbuf
 
@@ -50,14 +52,16 @@ void setbuf(
 *вышестоящий*<br/>
 Указатель на структуру **FILE**.
 
-*buffer*<br/>
+*двойной*<br/>
 Выделенный пользователем буфер.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Функция **setbuf** управляет буферизацией *потока*. Аргумент *потока* должен ссылаться на открытый файл, который еще не был прочитан или не записан. Если аргумент *buffer* имеет **значение NULL**, поток не буферизован. В противном случае буфер должен указывать на массив символов длины **буфсиз**, где **буфсиз** — размер буфера, как определено в stdio. Высоты. Вместо буфера, по умолчанию выделенного системой для данного потока, для буферизации ввода-вывода используется указанный пользователем буфер. Поток **stderr** по умолчанию не буферизован, но можно использовать **setbuf** для назначения буферов в **stderr**.
 
 **setbuf** был заменен [setvbuf](setvbuf.md), который является предпочтительной подпрограммой для нового кода. В отличие от **setvbuf**, **setbuf** не может сообщать об ошибках. **setvbuf** также позволяет управлять режимом буферизации и размером буфера. **setbuf** существует для совместимости с существующим кодом.
+
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -65,7 +69,7 @@ void setbuf(
 |-------------|---------------------|
 |**setbuf**|\<stdio.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -106,7 +110,7 @@ stream1 set to user-defined buffer at: 0012FCDC
 stream2 buffering disabled
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)<br/>
 [fclose, _fcloseall](fclose-fcloseall.md)<br/>

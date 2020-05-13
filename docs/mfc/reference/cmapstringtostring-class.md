@@ -1,5 +1,5 @@
 ---
-title: Класс Кмапстрингтостринг
+title: Класс CMapStringToString
 ms.date: 11/04/2016
 f1_keywords:
 - CMapStringToString
@@ -42,14 +42,14 @@ helpviewer_keywords:
 - CMapStringToString [MFC], RemoveKey
 - CMapStringToString [MFC], SetAt
 ms.assetid: b45794c2-fe6b-4edb-a8ca-faa03b57b4a8
-ms.openlocfilehash: a2ffcf7ce7ee6eccc56382501a5969ddec6c9e22
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 544154569c50369b805ba296aa975849f245d4ad
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442591"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370117"
 ---
-# <a name="cmapstringtostring-class"></a>Класс Кмапстрингтостринг
+# <a name="cmapstringtostring-class"></a>Класс CMapStringToString
 
 Поддерживает сопоставления объектов `CString` , зашифрованных объектами `CString` .
 
@@ -59,9 +59,9 @@ ms.locfileid: "79442591"
 class CMapStringToString : public CObject
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
-Функции элементов `CMapStringToString` похожи на функции членов класса [кмапстрингтуб](../../mfc/reference/cmapstringtoob-class.md). Из-за этой схожести для изучения этой функции-члена можно использовать справочную документацию по классу `CMapStringToOb`. Когда вы видите `CObject` указатель в качестве возвращаемого значения или параметра функции Output, замените указатель на **char**. Когда вы видите `CObject` указатель в качестве параметра функции ввода, замените указатель на **char**.
+Функции `CMapStringToString` члена аналогичны функциям-членам класса [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Из-за этой схожести для изучения этой функции-члена можно использовать справочную документацию по классу `CMapStringToOb`. Везде, где `CObject` вы видите указатель в качестве значения возврата или параметра функции "выход", замените указатель на **символ.** Везде, где `CObject` вы видите указатель в качестве параметра функции "ввода", замените указатель на **символ.**
 
 `BOOL CMapStringToString::Lookup(LPCTSTR<key>, CString&<rValue>) const;`
 
@@ -69,54 +69,54 @@ class CMapStringToString : public CObject
 
 `BOOL CMapStringToOb::Lookup(const char*<key>, CObject*&<rValue>) const;`
 
-### <a name="public-structures"></a>Открытые структуры
+### <a name="public-structures"></a>Общественные структуры
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|[Кмапстрингтостринг:: Кпаир](#cpair)|Вложенная структура, содержащая значение ключа и значение связанного объекта String.|
+|[CMapstringTostring::CPair](#cpair)|Вложенная структура, содержащая ключевое значение и значение связанного объекта строки.|
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|[Кмапстрингтостринг:: Кмапстрингтостринг](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|Конструктор.|
+|[CMapstringtostring::Cmapstringtostring](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|Конструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|[Кмапстрингтостринг:: NOCOUNT](../../mfc/reference/cmapstringtoob-class.md#getcount)|Возвращает число элементов в этой карте.|
-|[Кмапстрингтостринг:: Жесаштаблесизе](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|Определяет текущее количество элементов в хэш-таблице.|
-|[Кмапстрингтостринг:: Жетнекстассок](../../mfc/reference/cmapstringtoob-class.md#getnextassoc)|Возвращает следующий элемент для итерации.|
-|[Кмапстрингтостринг:: DataSize](../../mfc/reference/cmapstringtoob-class.md#getsize)|Возвращает число элементов в этой карте.|
-|[Кмапстрингтостринг:: Жетстартпоситион](../../mfc/reference/cmapstringtoob-class.md#getstartposition)|Возвращает расположение первого элемента.|
-|[Кмапстрингтостринг:: Хашкэй](../../mfc/reference/cmapstringtoob-class.md#hashkey)|Вычисляет хэш-значение указанного ключа.|
-|[Кмапстрингтостринг:: Инисаштабле](../../mfc/reference/cmapstringtoob-class.md#inithashtable)|Инициализирует хэш-таблицу.|
-|[Кмапстрингтостринг:: IsEmpty](../../mfc/reference/cmapstringtoob-class.md#isempty)|Проверяет условие на пустую карту (нет элементов).|
-|[Кмапстрингтостринг:: Lookup](../../mfc/reference/cmapstringtoob-class.md#lookup)|Ищет указатель void на основе ключа указателя void. Значение указателя, а не сущность, на которое он указывает, используется для сравнения ключей.|
-|[Кмапстрингтостринг:: LookupKey](../../mfc/reference/cmapstringtoob-class.md#lookupkey)|Возвращает ссылку на ключ, связанный с указанным значением ключа.|
-|[Кмапстрингтостринг::P Жетфирстассок](#pgetfirstassoc)|Возвращает указатель на первый `CString` в сопоставлении.|
-|[Кмапстрингтостринг::P Жетнекстассок](#pgetnextassoc)|Возвращает указатель на следующее `CString` для итерации.|
-|[Кмапстрингтостринг::P Поиск](#plookup)|Возвращает указатель на `CString`, значение которого соответствует указанному значению.|
-|[Кмапстрингтостринг:: RemoveAll](../../mfc/reference/cmapstringtoob-class.md#removeall)|Удаляет все элементы из этой схемы.|
-|[Кмапстрингтостринг:: Ремовекэй](../../mfc/reference/cmapstringtoob-class.md#removekey)|Удаляет элемент, указанный ключом.|
-|[Кмапстрингтостринг:: SetAt](../../mfc/reference/cmapstringtoob-class.md#setat)|Вставляет элемент в карту; заменяет существующий элемент, если найден соответствующий ключ.|
+|[CMapstringTostring::GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|Возвращает количество элементов на этой карте.|
+|[CMapStringToString::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|Определяет текущее количество элементов в таблице хэша.|
+|[CMapstringTostring::GetNextAssoc](../../mfc/reference/cmapstringtoob-class.md#getnextassoc)|Получает следующий элемент для итерации.|
+|[CMapstringtostring::GetSize](../../mfc/reference/cmapstringtoob-class.md#getsize)|Возвращает количество элементов на этой карте.|
+|[CMapstringtostring::GetStartposition](../../mfc/reference/cmapstringtoob-class.md#getstartposition)|Возвращает положение первого элемента.|
+|[CMapStringToString::HashKey](../../mfc/reference/cmapstringtoob-class.md#hashkey)|Рассчитывает хэш-значение указанного ключа.|
+|[CMapStringToString::InitHashTable](../../mfc/reference/cmapstringtoob-class.md#inithashtable)|Инициализирует хэш-таблицу.|
+|[CMapstringtostring::Isempty](../../mfc/reference/cmapstringtoob-class.md#isempty)|Тесты на состояние пустой карты (без элементов).|
+|[CMapstringToString::Lookup](../../mfc/reference/cmapstringtoob-class.md#lookup)|Ищет пустоту указатель на основе ключа указателя пустоты. Значение указателя, а не сущность, на которое он указывает, используется для сравнения ключей.|
+|[CMapstringToString::LookupKey](../../mfc/reference/cmapstringtoob-class.md#lookupkey)|Возвращает ссылку на ключ, связанный с указанным значением ключа.|
+|[CMapstringTostring::PGetFirstAssoc](#pgetfirstassoc)|Получает указатель на `CString` первый на карте.|
+|[CMapstringTostring::PGetNextAssoc](#pgetnextassoc)|Получает указатель на `CString` следующий для итерации.|
+|[CMapstringToString::PLookup](#plookup)|Возвращает указатель в `CString` значение, значение которого соответствует указанному значению.|
+|[CMapstringTostring::Removeall](../../mfc/reference/cmapstringtoob-class.md#removeall)|Удаляет все элементы с этой карты.|
+|[CMapstringTostring::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey)|Удаляет элемент, указанный ключом.|
+|[CMapstringTostring::SetAt](../../mfc/reference/cmapstringtoob-class.md#setat)|Вставляет элемент на карту; заменяет существующий элемент при обнаружении соответствующего ключа.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|[Кмапстрингтостринг:: operator \[ \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Вставляет элемент в Map — подстановку оператора для `SetAt`.|
+|[CMapStringTostring::оператор \[\]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Вставляет элемент в карту - `SetAt`замена оператора для .|
 
 ## <a name="remarks"></a>Remarks
 
-`CMapStringToString` использует макрос `IMPLEMENT_SERIAL` для поддержки сериализации и записи элементов в дамп. Каждый элемент сериализуется в свою очередь, если схема хранится в архиве с помощью перегруженного оператора вставки ( **<<** ) или с помощью функции-члена `Serialize`.
+`CMapStringToString` использует макрос `IMPLEMENT_SERIAL` для поддержки сериализации и записи элементов в дамп. Каждый элемент сериализуется по очереди, если карта хранится в архиве, либо с перегруженной вставкой () **<<** оператором или с функцией `Serialize` члена.
 
-Если требуется дамп отдельных `CString`- `CString` элементов, необходимо установить глубину контекста дампа в 1 или более.
+Если вам нужна свалка отдельных `CString` -  `CString` элементов, необходимо установить глубину контекста дампа до 1 или более.
 
-При удалении объекта `CMapStringToString` или при удалении его элементов `CString` объекты удаляются соответствующим образом.
+Когда `CMapStringToString` объект удаляется или когда его элементы `CString` удаляются, объекты удаляются по мере необходимости.
 
-Дополнительные сведения о `CMapStringToString`см. в статье [коллекции](../../mfc/collections.md)статей.
+Для получения `CMapStringToString`дополнительной информации о , см. [Collections](../../mfc/collections.md)
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -126,31 +126,31 @@ class CMapStringToString : public CObject
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** афксколл. h
+**Заголовок:** afxcoll.h
 
-##  <a name="cpair"></a>Кмапстрингтостринг:: Кпаир
+## <a name="cmapstringtostringcpair"></a><a name="cpair"></a>CMapstringTostring::CPair
 
-Содержит значение ключа и значение связанного строкового объекта.
+Содержит ключевое значение и значение связанного объекта строки.
 
 ### <a name="remarks"></a>Remarks
 
-Это вложенная структура в классе [кмапстрингтостринг](../../mfc/reference/cmapstringtostring-class.md).
+Это вложенная структура в классе [CMapStringToString.](../../mfc/reference/cmapstringtostring-class.md)
 
 Структура состоит из двух полей:
 
-- `key` фактическое значение типа ключа.
+- `key`Фактическое значение ключевого типа.
 
-- `value` значение связанного объекта.
+- `value`Значение связанного объекта.
 
-Он используется для хранения возвращаемых значений из [кмапстрингтостринг::P Lookup](#plookup), [Кмапстрингтостринг::P жетфирстассок](#pgetfirstassoc)и [кмапстрингтостринг::P жетнекстассок](#pgetnextassoc).
+Он используется для хранения значений возврата от [CMapStringToString: :PLookup](#plookup), [CMapStringToString: :PGetFirstAssoc](#pgetfirstassoc), и [CMapStringToString: :PGetNextAssoc](#pgetnextassoc).
 
 ### <a name="example"></a>Пример
 
-  Пример использования см. в примере для [кмапстрингтостринг::P Lookup](#plookup).
+  Для примера использования см. пример [CMapStringToString::PLookup](#plookup).
 
-##  <a name="pgetfirstassoc"></a>Кмапстрингтостринг::P Жетфирстассок
+## <a name="cmapstringtostringpgetfirstassoc"></a><a name="pgetfirstassoc"></a>CMapstringTostring::PGetFirstAssoc
 
-Возвращает первую запись объекта Map.
+Возвращает первую запись объекта карты.
 
 ```
 const CPair* PGetFirstAssoc() const;
@@ -160,19 +160,19 @@ CPair* PGetFirstAssoc();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на первую запись в сопоставлении; см. раздел [кмапстрингтостринг:: кпаир](#cpair). Если схема пуста, значение равно NULL.
+Указатель на первую запись на карте; [см. CmapstringTostring::CPair](#cpair). Если карта пуста, значение NULL.
 
 ### <a name="remarks"></a>Remarks
 
-Вызовите эту функцию, чтобы вернуть указатель на первый элемент в объекте Map.
+Вызовите эту функцию, чтобы вернуть указатель первого элемента объекта карты.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCCollections#73](../../mfc/codesnippet/cpp/cmapstringtostring-class_1.cpp)]
 
-##  <a name="pgetnextassoc"></a>Кмапстрингтостринг::P Жетнекстассок
+## <a name="cmapstringtostringpgetnextassoc"></a><a name="pgetnextassoc"></a>CMapstringTostring::PGetNextAssoc
 
-Извлекает элемент Map, на который указывает *пассокрек*.
+Извлекает элемент карты, на который указывает *pAssocRec*.
 
 ```
 const CPair *PGetNextAssoc(const CPair* pAssoc) const;
@@ -182,24 +182,24 @@ CPair *PGetNextAssoc(const CPair* pAssoc);
 
 ### <a name="parameters"></a>Параметры
 
-*пассок*<br/>
-Указывает на запись Map, возвращенную предыдущим вызовом [пжетнекстассок](#pgetnextassoc) или [пжетфирстассок](#pgetfirstassoc) .
+*pAssoc*<br/>
+Очки на запись карты, возвращенную предыдущим вызовом [PGetNextAssoc](#pgetnextassoc) или [PGetFirstAssoc.](#pgetfirstassoc)
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на следующую запись в сопоставлении; см. раздел [кмапстрингтостринг:: кпаир](#cpair). Если элемент является последним в сопоставлении, значение равно NULL.
+Указатель на следующую запись на карте; [см. CmapstringTostring::CPair](#cpair). Если элемент является последним на карте, значение NULL.
 
 ### <a name="remarks"></a>Remarks
 
-Вызовите этот метод, чтобы выполнить итерацию всех элементов в сопоставлении. Извлеките первый элемент с помощью вызова `PGetFirstAssoc`, а затем последовательно выполняйте последовательные вызовы к `PGetNextAssoc`.
+Назовите этот метод итератом через все элементы карты. Извлеките первый элемент `PGetFirstAssoc` с вызовом, а затем итерировать через карту с последовательными вызовами. `PGetNextAssoc`
 
 ### <a name="example"></a>Пример
 
-  См. пример для [кмапстрингтостринг::P жетфирстассок](#pgetfirstassoc).
+  Смотрите пример [CMapStringToString: :PGetFirstAssoc](#pgetfirstassoc).
 
-##  <a name="plookup"></a>Кмапстрингтостринг::P Поиск
+## <a name="cmapstringtostringplookup"></a><a name="plookup"></a>CMapstringToString::PLookup
 
-Выполняет поиск значения, сопоставленного с заданным ключом.
+Ищет значение, отображено к заданного ключу.
 
 ```
 const CPair* PLookup(LPCTSTR key) const;
@@ -209,8 +209,8 @@ CPair* PLookup(LPCTSTR key);
 
 ### <a name="parameters"></a>Параметры
 
-*key*<br/>
-Указатель на ключ для искомого элемента.
+*Ключ*<br/>
+Указатель на ключ для элемента, который будет искать.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -218,7 +218,7 @@ CPair* PLookup(LPCTSTR key);
 
 ### <a name="remarks"></a>Remarks
 
-Вызовите этот метод, чтобы найти элемент Map с ключом, который точно соответствует заданному ключу.
+Вызовите этот метод для поиска элемента карты с ключом, который точно соответствует заданного ключа.
 
 ### <a name="example"></a>Пример
 
@@ -226,6 +226,6 @@ CPair* PLookup(LPCTSTR key);
 
 ## <a name="see-also"></a>См. также раздел
 
-[Пример СОБРАНий MFC](../../overview/visual-cpp-samples.md)<br/>
+[MFC Образец COLLECT](../../overview/visual-cpp-samples.md)<br/>
 [Класс CObject](../../mfc/reference/cobject-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - IRowsetIdentityImpl class
 - IsSameRow method
 ms.assetid: 56821edf-e045-40c8-96bd-231552cd5799
-ms.openlocfilehash: 3e8c976fcb23bf41d88d88be3887db4dde52379d
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 20f558099c02d7de8a20b3cf631812b44a742a48
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545897"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210411"
 ---
 # <a name="irowsetidentityimpl-class"></a>Класс IRowsetIdentityImpl
 
@@ -67,11 +67,11 @@ STDMETHOD(IsSameRow )(HROW hThisRow,
 
 См. раздел [ировсетидентити:: IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) в *справочнике программиста OLE DB*.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Для сравнения дескрипторов строк этот метод приводит `HROW` дескрипторы к `RowClass`ным элементам и вызывает `memcmp` для указателей.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

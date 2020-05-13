@@ -1,6 +1,6 @@
 ---
-title: Структура ANALYSIS_DESCRIPTOR
-description: В C++ пакете SDK для аналитики сборки ANALYSIS_DESCRIPTOR ссылка на структуру.
+title: структура ANALYSIS_DESCRIPTOR
+description: Ссылка на структуру SDK Build Insights sDK ANALYSIS_DESCRIPTOR.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: fc11ce11e1faaae02edb36aac447c18ea8107e35
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 1de7f2a5bc3f02a327daaecf8c2cebc44687ba43
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334106"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323613"
 ---
-# <a name="analysis_descriptor-structure"></a>Структура ANALYSIS_DESCRIPTOR
+# <a name="analysis_descriptor-structure"></a>структура ANALYSIS_DESCRIPTOR
 
 ::: moniker range="<=vs-2015"
 
-Пакет C++ SDK для Build Insights совместим с Visual Studio 2017 и более поздних версий. Чтобы просмотреть документацию по этим версиям, присвойте элементу управления "Выбор версий Visual Studio" для этой статьи значение Visual Studio 2017 или Visual Studio 2019.
+SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Структура `ANALYSIS_DESCRIPTOR` используется с функциями [Analyze](../functions/analyze-a.md) и [анализев](../functions/analyze-w.md) . В нем описывается анализ трассировки событий Windows (ETW).
+Структура `ANALYSIS_DESCRIPTOR` используется с функциями [AnalyseA](../functions/analyze-a.md) и [AnalyseW.](../functions/analyze-w.md) В нем описывается, как следует анализировать отслеживание событий для Windows (ETW).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -38,16 +38,16 @@ typedef struct ANALYSIS_DESCRIPTOR_TAG
 } ANALYSIS_DESCRIPTOR;
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 |  |  |
 |--|--|
-| `NumberOfPasses` | Количество проходов анализа, которые следует выполнить по трассировке ETW. |
-| `Callbacks` | Объект [ANALYSIS_CALLBACKS](analysis-callbacks-struct.md) , указывающий, какие функции следует вызывать во время сеанса анализа. |
-| `Context` | Предоставленный пользователем контекст, передаваемый в качестве аргумента всем функциям обратного вызова, указанным в `Callbacks` |
+| `NumberOfPasses` | Количество проходов анализа, которое должно быть сделано по следу ETW. |
+| `Callbacks` | Объект [ANALYSIS_CALLBACKS,](analysis-callbacks-struct.md) который определяет, какие функции можно вызвать во время сеанса анализа. |
+| `Context` | Контекст, предоставляемый пользователем, который передается в качестве аргумента для всех функций обратного вызова, указанных в`Callbacks` |
 
 ## <a name="remarks"></a>Remarks
 
-Структура `Callbacks` принимает указатели только на функции, не являющиеся членами. Это ограничение можно обойти, установив для `Context` указатель на объект. Этот указатель на объект будет передан как аргумент для всех функций обратного вызова, не являющихся членами. Этот указатель используется для вызова функций-членов из функций обратного вызова, не являющихся членами.
+Структура `Callbacks` принимает только указатели на функции, не являщиеся членами. Это ограничение можно обойти, `Context` установив указатель объекта. Этот указатель объекта будет передан в качестве аргумента всем вашим функциям обратного вызова, не являешься участником. Используйте этот указатель для вызова функций членов из ваших функций обратного вызова, не являваемых членами.
 
 ::: moniker-end

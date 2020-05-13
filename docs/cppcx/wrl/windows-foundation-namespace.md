@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - Foundation namespace
 ms.assetid: 96a6b5e0-ddee-4b21-ae4e-da5feeb945c3
-ms.openlocfilehash: cd16a888594e928214ef45cbdddb1e0fdac7c82a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c8bc578fd9657fb964bc6148e3acc24b0cb5328
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396058"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213529"
 ---
 # <a name="windowsfoundation-namespace"></a>Пространство имен Windows::Foundation
 
-Обеспечивает основные функциональные возможности среды выполнения Windows, например создание объекта и фабрики.
+Включает фундаментальные функции среда выполнения Windows, такие как создание объекта и фабрики.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -25,13 +25,13 @@ ms.locfileid: "62396058"
 namespace Windows::Foundation;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="functions"></a>Функции
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[Функция ActivateInstance](activateinstance-function.md)|Регистрирует и возвращает экземпляр заданного типа, определенного в идентификатор указанного класса.|
+|[Функция ActivateInstance](activateinstance-function.md)|Регистрирует и извлекает экземпляр указанного типа, определенного в указанном ИДЕНТИФИКАТОРе класса.|
 |[Функция GetActivationFactory](getactivationfactory-function.md)|Извлекает фабрику активации для типа, указанного в параметре шаблона.|
 
 ## <a name="requirements"></a>Требования
@@ -40,6 +40,6 @@ namespace Windows::Foundation;
 
 **Пространство имен:** Windows
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространства имен Windows UWP](/uwp/api/)

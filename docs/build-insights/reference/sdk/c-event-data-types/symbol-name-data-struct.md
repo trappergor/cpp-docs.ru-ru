@@ -1,6 +1,6 @@
 ---
-title: Структура SYMBOL_NAME_DATA
-description: В C++ пакете SDK для аналитики сборки SYMBOL_NAME_DATA ссылка на структуру.
+title: структура SYMBOL_NAME_DATA
+description: Ссылка на структуру СЗ Build Insights SDK SYMBOL_NAME_DATA.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 618e84f198c20aa089dc7e06e1e6c09b96b6d273
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 1217572f20a772fde629533d6ab170c14dc5b5e0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78335096"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325341"
 ---
-# <a name="symbol_name_data-structure"></a>Структура SYMBOL_NAME_DATA
+# <a name="symbol_name_data-structure"></a>структура SYMBOL_NAME_DATA
 
 ::: moniker range="<=vs-2015"
 
-Пакет C++ SDK для Build Insights совместим с Visual Studio 2017 и более поздних версий. Чтобы просмотреть документацию по этим версиям, присвойте элементу управления "Выбор версий Visual Studio" для этой статьи значение Visual Studio 2017 или Visual Studio 2019.
+SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Структура `SYMBOL_NAME_DATA` описывает интерфейсный символ компилятора.
+Структура `SYMBOL_NAME_DATA` описывает фронтовой символ компилятора.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -38,15 +38,15 @@ typedef struct SYMBOL_NAME_DATA_TAG
 } SYMBOL_NAME_DATA;
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 |  |  |
 |--|--|
-| `Key` | Ключ символа. Это значение уникально в анализируемой трассировке. |
-| `Name` | Имя символа. |
+| `Key` | Ключ символа. Это значение является уникальным в анализируемом следе. |
+| `Name` | Название символа. |
 
 ## <a name="remarks"></a>Remarks
 
-Символы, поступающие из двух разных интерфейсных проходов компилятора, могут иметь одно и то же имя, но разные ключи. В этом случае используйте имена символов, чтобы определить, совпадают ли два типа.
+Символы, исходящие от двух различных компилятора переднего конца проходит может иметь то же имя, но другой ключ. В этом случае используйте имена символов, чтобы определить, одинаковы ли два типа.
 
 ::: moniker-end

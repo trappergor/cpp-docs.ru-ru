@@ -9,16 +9,16 @@ helpviewer_keywords:
 - databases [C++], MFC programming model
 - Windows programming MFC symbols [C++]
 ms.assetid: c1e689c4-45d7-40a3-8ee9-f47676cc3bbb
-ms.openlocfilehash: e9e4f9f62a3004e171eea9e3552d8a0f58923075
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 76279b24002460b51bc2f67d4395ff271752d964
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376463"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215180"
 ---
 # <a name="mfc-predefined-symbols"></a>Предопределенные символы MFC
 
-Проекты MFC всегда содержат несколько файлов заголовков, которые поддерживают windows. Они добавляются с помощью `#include` инструкций в `StdAfx.h` файла:
+Проекты MFC всегда содержат несколько файлов заголовков, которые поддерживают Windows. Они добавляются с помощью инструкций `#include` в файл `StdAfx.h`:
 
 ```cpp
 #include <afxwin.h>      //MFC core and standard components
@@ -28,7 +28,7 @@ ms.locfileid: "62376463"
 #include <afxcmn.h>      //MFC support for Windows common controls.
 ```
 
-Файлы заголовков, которые содержат значения Идентификаторов символов для общих значений MFC. Эти символы доступны только при работе в проекте MFC. `AFX_` За префиксом следует стандартные префиксы имени символа.
+Файлы заголовков содержат значения ИДЕНТИФИКАТОРов символов для общих значений MFC. Эти символы доступны только при работе в проекте MFC. За префиксом `AFX_` следуют стандартные префиксы имени символа.
 
 |||
 |-|-|
@@ -89,14 +89,14 @@ ms.locfileid: "62376463"
 |AFX_IDP_DAO_OBJECT_NOT_OPEN|AFX_IDP_DAO_ROWTOOSHORT|
 |AFX_IDP_DLL_BAD_VERSION|AFX_IDP_DLL_LOAD_FAILED|
 |AFX_IDP_E_BADFILEMODE|AFX_IDP_E_BADFILENAME|
-|AFX_IDP_E_ BADFILENAMEORNUMBER|AFX_IDP_E_BADRECORDLENGTH|
+|AFX_IDP_E_ БАДФИЛЕНАМЕОРНУМБЕР|AFX_IDP_E_BADRECORDLENGTH|
 |AFX_IDP_E_BADREDORDNUMBER|AFX_IDP_E_CANTSAVEFILETOEMP|
 |AFX_IDP_E_DEVICEIOERROR|AFX_IDP_E_DEVICEUNAVAILABLE|
 |AFX_IDP_E_DISKFULL|AFX_IDP_E_DISKNOTREADY|
 |AFX_IDP_E_DIVISIONBYZERO|AFX_IDP_E_FILEALREADYEXISTS|
 |AFX_IDP_E_FILEALREADYOPEN|AFX_IDP_E_FILENOTFOUND|
-|AFX_IDP_E_GETNOTSUPPORTED|AFX_IDP_E_ GETNOTSUPPORTEDATRUNTIME|
-|AFX_IDP_E_ILLEGALFUNCTIONCALL|AFX_IDP_E_ INVALIDCLIPBOARDFORMAT|
+|AFX_IDP_E_GETNOTSUPPORTED|AFX_IDP_E_ ЖЕТНОТСУППОРТЕДАТРУНТИМЕ|
+|AFX_IDP_E_ILLEGALFUNCTIONCALL|AFX_IDP_E_ ИНВАЛИДКЛИПБОАРДФОРМАТ|
 |AFX_IDP_E_INVALIDFILEFORMAT|AFX_IDP_E_INVALIDPATTERNSTRING|
 |AFX_IDP_E_INVALIDPICTURE|AFX_IDP_E_ INVALIDPROPERTYARRAYINDEX|
 |AFX_IDP_E_INVALIDPROPERTYVALUE|AFX_IDP_E_INVALIDUSEOFNULL|
@@ -106,7 +106,7 @@ ms.locfileid: "62376463"
 |AFX_IDP_E_PERMISSIONDENIED|AFX_IDP_E_PRINTERERROR|
 |AFX_IDP_E_PROPERTYNOTFOUND|AFX_IDP_E_REPLACEMENTSTOOLONG|
 |AFX_IDP_E_SEARCHTEXTNOTFOUND|AFX_IDP_E_SETNOTPERMITTED|
-|AFX_IDP_E_SETNOTSUPPORTED|AFX_IDP_E_ SETNOTSUPPORTEDATRUNTIME|
+|AFX_IDP_E_SETNOTSUPPORTED|AFX_IDP_E_ СЕТНОТСУППОРТЕДАТРУНТИМЕ|
 |AFX_IDP_E_TOOMANYFILES|AFX_IDP_FAILED_ACCESS_READ|
 |AFX_IDP_FAILED_ACCESS_WRITE|AFX_IDP_FAILED_DISK_FULL|
 |AFX_IDP_FAILED_INVALID_FORMAT|AFX_IDP_FAILED_INVALID_PATH|
@@ -152,7 +152,7 @@ ms.locfileid: "62376463"
 |AFX_IDS_BOLD|AFX_IDS_BOLDITALIC|
 |AFX_IDS_BORDERSTYLE_0|AFX_IDS_BORDERSTYLE_1|
 |AFX_IDS_CHANGE_LINK|AFX_IDS_CHECKLISTBOX_CHECK|
-|AFX_IDS_CHECKLISTBOX_MIXED|СНИМИТЕ ФЛАЖОК AFX_IDS_CHECKLISTBOX_|
+|AFX_IDS_CHECKLISTBOX_MIXED|AFX_IDS_CHECKLISTBOX_ СНЯТЬ ФЛАЖОК|
 |AFX_IDS_COLOR_ACTIVEBAR|AFX_IDS_COLOR_ACTIVEBORDER|
 |AFX_IDS_COLOR_ACTIVETEXT|AFX_IDS_COLOR_APPWORKSPACE|
 |AFX_IDS_COLOR_BTNFACE|AFX_IDS_COLOR_BTNHIGHLIGHT|
@@ -211,9 +211,9 @@ ms.locfileid: "62376463"
 |AFX_IDS_UPDATING_ITEMS|AFX_IDS_USER_EXCEPTION|
 |AFX_IDS_VERB_EDIT|AFX_IDS_VERB_PROPERTIES|
 
-## <a name="mfc-database-programming"></a>MFC программирование баз данных
+## <a name="mfc-database-programming"></a>Программирование баз данных MFC
 
-Символы в этой таблице появляются только в проекте MFC при была добавлена поддержка баз данных. Они поддерживают подключение MFC для серверов SQL Server и программирования базы данных.
+Символы в этой таблице отображаются только в проекте MFC, если добавлена поддержка базы данных. Они поддерживают подключение MFC к серверам SQL Server и программированию баз данных.
 
 |||
 |-|-|
@@ -221,7 +221,7 @@ ms.locfileid: "62376463"
 |AFX_IDP_SQL_BOOKMARKS_ NOT_SUPPORTED|AFX_IDP_SQL_CONNECT_FAIL|
 |AFX_IDP_SQL_DATA_TRUNCATED|AFX_IDP_SQL_DYNAMIC_CURSOR_ NOT_SUPPORTED|
 |AFX_IDP_SQL_DYNASET_ NOT_SUPPORTED|AFX_IDP_SQL_EMPTY_COLUMN_LIST|
-|AFX_IDP_SQL_FIELD_NOT_FOUND|AFX_IDP_SQL_FILED_SCHEMA_ MISMATCH|
+|AFX_IDP_SQL_FIELD_NOT_FOUND|НЕСООТВЕТСТВИЕ AFX_IDP_SQL_FILED_SCHEMA_|
 |AFX_IDP_SQL_ILLEGAL_MODE|AFX_IDP_SQL_INCORRECT_ODBC|
 |AFX_IDP_SQL_LOCK_MODE_ NOT_SUPPORTED|AFX_IDP_SQL_MULTIPLE_ ROWS_AFFECTED|
 |AFX_IDP_SQL_NO_CURRENT_RECORD|AFX_IDP_SQL_NO_DATA_FOUND|
@@ -232,11 +232,11 @@ ms.locfileid: "62376463"
 |AFX_IDP_SQL_SNAPSHOT_ NOT_SUPPORTED|AFX_IDP_SQL_SQL_CONFORMANCE|
 |AFX_IDP_SQL_SQL_NO_TOTAL|AFX_IDP_SQL_UPDATE_DELETE_FAILED|
 
-## <a name="mfc-windows-programming"></a>Программирование MFC Windows
+## <a name="mfc-windows-programming"></a>Программирование MFC для Windows
 
-Эти символы также являются частью файлов поддержки MFC, но они поддерживают стандартные функции приложения Windows и действия. Эти символы используются с меню.
+Эти символы также являются частью файлов поддержки MFC, но поддерживают стандартные функции и действия приложения Windows. Эти символы используются с меню.
 
-При работе с меню в **редактор меню**, эти символы будут отображаться в **свойство** окно, связанное с общих команд меню. Например если приложение имеет **файл** меню с **выхода** команды, что команда будет связана с символом ID_APP_EXIT в [окно "Свойства"](/visualstudio/ide/reference/properties-window).
+При работе с меню в **редакторе меню**эти символы будут отображаться в окне **свойств** , связанном с командами общего меню. Например, если в приложении есть меню **файл** с командой **выхода** , эта команда будет связана с символом ID_APP_EXIT в [окно свойств](/visualstudio/ide/reference/properties-window).
 
 ||||
 |-|-|-|
@@ -258,7 +258,7 @@ ms.locfileid: "62376463"
 |ID_FILE_SAVE|ID_FILE_SAVE_AS|ID_FILE_SAVE_COPY_AS|
 |ID_FILE_SEND_MAIL|ID_FILE_UPDATE|ID_FORMAT_FONT|
 |ID_HELP|ID_HELP_FINDER|ID_HELP_INDEX|
-|ID_HELP + С ПОМОЩЬЮ|ID_INDICATOR_CAPS|ID_INDICATOR_EXT|
+|ID_HELP + USING|ID_INDICATOR_CAPS|ID_INDICATOR_EXT|
 |ID_INDICATOR_KANA|ID_INDICATOR_NUM|ID_INDICATOR_OVR|
 |ID_INDICATOR_REC|ID_INDICATOR_SCRL|ID_NEXT_PANE|
 |ID_OLE_EDIT_CHANGE_ICON|ID_OLE_EDIT_CONVERT|ID_OLE_EDIT_LINKS|
@@ -268,7 +268,7 @@ ms.locfileid: "62376463"
 |ID_VIEW_AUTOARRANGE|ID_VIEW_BYNAME|ID_VIEW_DETAILS|
 |ID_VIEW_LARGEICON|ID_VIEW_LINEUP|ID_VIEW_LIST|
 |ID_VIEW_REBAR|ID_VIEW_SMALLICON|ID_VIEW_STATUS_BAR|
-|СОБЫТИЯ ID_VIEW_TOOLBAR|ID_WINDOW_ARRANGE|ID_WINDOW_CASCADE|
+|ID_VIEW_TOOLBAR|ID_WINDOW_ARRANGE|ID_WINDOW_CASCADE|
 |ID_WINDOW_NEW|ID_WINDOW_SPLIT|ID_WINDOW_TILE_HORIZ|
 |ID_WINDOW_TILE_VERT|ID_WIZBACK|ID_WIZFINISH|
 |ID_WIZNEXT|IDABORT|IDC_STATIC|
@@ -280,7 +280,7 @@ ms.locfileid: "62376463"
 
 MFC
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Стандартные идентификаторы символов](../windows/predefined-symbol-ids.md)<br/>
 [Предопределенные символы ATL](../windows/atl-predefined-symbols.md)<br/>

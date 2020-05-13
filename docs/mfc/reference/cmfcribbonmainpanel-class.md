@@ -16,16 +16,16 @@ helpviewer_keywords:
 - CMFCRibbonMainPanel [MFC], AddToRight
 - CMFCRibbonMainPanel [MFC], GetCommandsFrame
 ms.assetid: 1af78798-5e75-4365-9c81-a54aa5679602
-ms.openlocfilehash: e4bd1ab8cffc87d5079518cf9a1d6e430ca40fd9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0fd1cd2fec31f9da0c2bec36d08586780f4f95c3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403598"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753579"
 ---
 # <a name="cmfcribbonmainpanel-class"></a>Класс CMFCRibbonMainPanel
 
-Реализует панель ленты, которое отображается при нажатии кнопки [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md).
+Реализует ленточной панели, которая отображаетприжается при нажатии кнопки [CMFCRibbonApplicationButton.](../../mfc/reference/cmfcribbonapplicationbutton-class.md)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -37,32 +37,32 @@ class CMFCRibbonMainPanel : public CMFCRibbonPanel
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |`CMFCRibbonMainPanel::CMFCRibbonMainPanel`|Конструктор по умолчанию.|
 |`CMFCRibbonMainPanel::~CMFCRibbonMainPanel`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CMFCRibbonMainPanel::Add](#add)|Добавляет элемент ленты в левой части панели кнопку приложения. (Переопределяет [CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add).)|
-|[CMFCRibbonMainPanel::AddRecentFilesList](#addrecentfileslist)|Добавляет текстовую строку меню списка последних файлов.|
-|[CMFCRibbonMainPanel::AddToBottom](#addtobottom)|Добавляет элемент ленты в нижней части окна приложения панель ленты.|
-|[CMFCRibbonMainPanel::AddToRight](#addtoright)|Добавляет элемент ленты справа панели кнопку приложения.|
+|[CMFCRibbonMainPanel::Добавить](#add)|Добавляет элемент ленты в левое стекло панели кнопки приложения. (Переопределяет [CMFCRibbonPanel::Добавить](../../mfc/reference/cmfcribbonpanel-class.md#add).)|
+|[CMFCRibbonMainPanel::AddRecentFilesList](#addrecentfileslist)|Добавляет строку текста в меню списка последних файлов.|
+|[CMFCRibbonMainPanel::Addtobottom](#addtobottom)|Добавляет элемент ленты в нижнюю панель панели приложения ленты.|
+|[CMFCRibbonMainPanel::AddtoRight](#addtoright)|Добавляет элемент ленты к правому стеку панели кнопки приложения.|
 |`CMFCRibbonMainPanel::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|
-|[CMFCRibbonMainPanel::GetCommandsFrame](#getcommandsframe)|Возвращает прямоугольник, представляющий область элемента главной панели ленты.|
-|`CMFCRibbonMainPanel::GetThisClass`|Используется инфраструктурой, чтобы получить указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|
+|[CMFCRibbonMainPanel::GetCommandsFrame](#getcommandsframe)|Возвращает прямоугольник, представляющий область основной панели ленты.|
+|`CMFCRibbonMainPanel::GetThisClass`|Используется фректором для получения указателя на объект [CRuntimeClass,](../../mfc/reference/cruntimeclass-structure.md) связанный с этим типом класса.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Платформа отображает `CMFCRibbonMainPanel` при открытии панели приложения. Он содержит три панели:
+Рамочная платформа `CMFCRibbonMainPanel` отображает при открытии панели приложений. Он содержит три стекла:
 
-- Левая панель содержит команды, связанные с файлами, такие как **откройте**, **Сохранить**, **печати**, и **закрыть**. Чтобы добавить команду на эту панель, вызовите [CMFCRibbonMainPanel::Add](#add).
+- Левое стекло содержит команды, связанные с файлами, такие как **Open,** **Save,** **Print**и **Close.** Чтобы добавить команду к этой панели, позвоните [CMFCRibbonMainPanel::Добавить](#add).
 
-- На правой панели содержатся параметры, измените команду, выбранного в области слева. Например, если щелкнуть **Сохранить как** на левой панели правой панели можно отобразить типы файлов. Чтобы добавить элемент в эту область, вызовите [CMFCRibbonMainPanel::AddToRight](#addtoright).
+- Правое стекло содержит параметры, которые изменяют команду, которую вы нажимаете в левом стеку. Например, если вы нажмете **Сохранить Как** из левого стекла, правое стекло может отображать доступные типы файлов. Чтобы добавить элемент в эту панель, позвоните [CMFCRibbonMainPanel::AddToRight](#addtoright).
 
-- На нижней панели содержит кнопки, чтобы изменить параметры приложения и выйти из программы. Чтобы добавить элемент в эту область, вызовите [CMFCRibbonMainPanel::AddToBottom](#addtobottom).
+- Нижняя панель содержит кнопки, которые позволяют изменить настройки приложения и выйти из программы. Чтобы добавить элемент в эту панель, позвоните [CMFCRibbonMainPanel::AddToBottom](#addtobottom).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -76,9 +76,9 @@ class CMFCRibbonMainPanel : public CMFCRibbonPanel
 
 **Заголовок:** afxRibbonMainPanel.h
 
-##  <a name="add"></a>  CMFCRibbonMainPanel::Add
+## <a name="cmfcribbonmainpaneladd"></a><a name="add"></a>CMFCRibbonMainPanel::Добавить
 
-Добавляет элемент ленты в левой части панели кнопку приложения.
+Добавляет элемент ленты в левое стекло панели кнопки приложения.
 
 ```
 virtual void Add(CMFCRibbonBaseElement* pElem);
@@ -87,17 +87,17 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
 ### <a name="parameters"></a>Параметры
 
 *pElem*<br/>
-[in, out] Указатель на элемент, добавляемый на главной панели ленты.
+(в, вне) Указатель на элемент ленты, чтобы добавить к основной панели.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Добавляет элемент ленты на панель. Элементы, добавленные с помощью этого метода будет находиться в левом столбце главной панели.
+Добавляет элемент ленты в панель. Элементы, добавленные с помощью этого метода, будут расположены в левой колонке основной панели.
 
-##  <a name="addrecentfileslist"></a>  CMFCRibbonMainPanel::AddRecentFilesList
+## <a name="cmfcribbonmainpaneladdrecentfileslist"></a><a name="addrecentfileslist"></a>CMFCRibbonMainPanel::AddRecentFilesList
 
-Добавляет текстовую строку меню списка последних файлов.
+Добавляет строку текста в меню списка последних файлов.
 
-```
+```cpp
 void AddRecentFilesList(
     LPCTSTR lpszLabel,
     int nWidth = 300);
@@ -106,33 +106,33 @@ void AddRecentFilesList(
 ### <a name="parameters"></a>Параметры
 
 *lpszLabel*<br/>
-Строка, добавляемый в список последних файлов.
+Определяет строку для добавления в последний список файлов.
 
 *nWidth*<br/>
-Задает ширину в пикселях панели списка последних файлов.
+Определяет ширину в пикселях последней панели списка файлов.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="addtobottom"></a>  CMFCRibbonMainPanel::AddToBottom
+## <a name="cmfcribbonmainpaneladdtobottom"></a><a name="addtobottom"></a>CMFCRibbonMainPanel::Addtobottom
 
-Добавляет элемент ленты в нижней части окна приложения панель ленты.
+Добавляет элемент ленты в нижнюю панель панели приложения ленты.
 
-```
+```cpp
 void AddToBottom(CMFCRibbonMainPanelButton* pElem);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *pElem*<br/>
-[in, out] Указатель на элемент, добавляемый в нижней части главной панели ленты.
+(в, вне) Указатель на элемент ленты, чтобы добавить в нижней части основной панели.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="addtoright"></a>  CMFCRibbonMainPanel::AddToRight
+## <a name="cmfcribbonmainpaneladdtoright"></a><a name="addtoright"></a>CMFCRibbonMainPanel::AddtoRight
 
-Добавляет элемент ленты справа панели кнопку приложения.
+Добавляет элемент ленты к правому стеку панели кнопки приложения.
 
-```
+```cpp
 void AddToRight(
     CMFCRibbonBaseElement* pElem,
     int nWidth = 300);
@@ -141,18 +141,18 @@ void AddToRight(
 ### <a name="parameters"></a>Параметры
 
 *pElem*<br/>
-Указатель на элемент ленты, добавляемых к правой части главной панели.
+Указатель на элемент ленты, который будет добавлен в правую сторону основной панели.
 
 *nWidth*<br/>
-Задает ширину в пикселях элементов на правой панели.
+Определяет ширину в пикселях правой панели.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Эта функция используется для добавления элемента ленты в правую панель. Правая панель обычно отображается список последних файлов, но можно добавить любой другой ленте элемент здесь.
+Используйте эту функцию, чтобы добавить элемент ленты в правую панель. Правая панель обычно отображает последний список файлов, но здесь можно добавить любой другой элемент ленты.
 
-##  <a name="getcommandsframe"></a>  CMFCRibbonMainPanel::GetCommandsFrame
+## <a name="cmfcribbonmainpanelgetcommandsframe"></a><a name="getcommandsframe"></a>CMFCRibbonMainPanel::GetCommandsFrame
 
-Возвращает прямоугольник, представляющий область элемента главной панели ленты.
+Возвращает прямоугольник, представляющий область основной панели ленты.
 
 ```
 CRect GetCommandsFrame() const;
@@ -160,9 +160,9 @@ CRect GetCommandsFrame() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Прямоугольник, представляющий область элемента главной панели ленты.
+Прямоугольник, представляющий область ленты основной панели.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)<br/>

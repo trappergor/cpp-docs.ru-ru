@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - threading attribute
 ms.assetid: 9b558cd6-fbf0-4602-aed5-31c068550ce3
-ms.openlocfilehash: db2940ec3536ae8ea29ba40db84ea869ecb3d0ac
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b249eaf61266ed9964e44f6f0ad1c2f12a1b1067
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513928"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214504"
 ---
 # <a name="threading-c"></a>threading (C++)
 
@@ -28,23 +28,23 @@ ms.locfileid: "69513928"
 *model*<br/>
 Используемых Одна из следующих потоков моделей:
 
-- `apartment`(потоковое разделение)
+- `apartment` (потоковое разделение)
 
-- `neutral`(.NET Framework компонентов без пользовательского интерфейса)
+- `neutral` (.NET Framework компонентов без пользовательского интерфейса)
 
-- `single`(простая организация потоков)
+- `single` (простые потоки)
 
-- `free`(свободная организация)
+- `free` (свободная организация)
 
-- `both`(потоковая подразделение и свободная организация)
+- `both` (потоковая подразделение и свободная организация)
 
-Значение по умолчанию — `apartment`.
+Значение по умолчанию — `apartment`.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Атрибут потоковой обработки не отображается в созданном IDL-файле, но будет использоваться в реализации объекта COM. C++
+C++ Атрибут **потоковой обработки** не отображается в созданном IDL-файле, но будет использоваться в реализации объекта COM.
 
-В проектах ATL, если имеется также атрибут [coclass](coclass.md) , потоковая модель, заданная *моделью* , передается в качестве параметра шаблона в `coclass` класс [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) , который вставляется атрибутом.
+В проектах ATL, если атрибут [coclass](coclass.md) также имеется, потоковая модель, заданная *моделью* , передается в качестве параметра шаблона классу [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) , вставленному атрибутом `coclass`.
 
 Атрибут **потоковой обработки** также защищает доступ к [event_source](event-source.md).
 
@@ -58,14 +58,14 @@ ms.locfileid: "69513928"
 
 |||
 |-|-|
-|**Относится к**|**класс**, **Структура**|
-|**Повторяемый**|Нет|
+|**Применение**|**класс**, **Структура**|
+|**Повторяемый**|нет|
 |**Обязательные атрибуты**|**кокласс**|
-|**Недопустимые атрибуты**|Отсутствуют|
+|**Недопустимые атрибуты**|None|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты COM](com-attributes.md)<br/>
 [Атрибуты Typedef, Enum, Union и Struct](typedef-enum-union-and-struct-attributes.md)<br/>

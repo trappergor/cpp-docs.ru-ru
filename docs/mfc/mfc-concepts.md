@@ -3,24 +3,24 @@ title: Основные понятия MFC
 ms.date: 01/09/2018
 f1_keywords:
 - Concepts
-ms.openlocfilehash: 5617051dc700bb1dd594a13627c9e3d01ef9caa9
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 3273538e4fdffbf68fbe01c7f912584380505d1b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927908"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178526"
 ---
 # <a name="mfc-concepts"></a>Основные понятия MFC
 
 В этом разделе содержатся общие сведения и разделы на основе задач, которые помогут программировать работу с библиотекой Microsoft Foundation Class (MFC).
 
-## <a name="in-this-section"></a>В этом разделе
+## <a name="in-this-section"></a>в этом разделе
 
 [Общие разделы по MFC](../mfc/general-mfc-topics.md)<br/>
 Описание технических деталей библиотеки MFC.
 
 [Использование CObject](../mfc/using-cobject.md)<br/>
-Предоставляет ссылки на использование `CObject`базового класса для большинства классов в MFC.
+Предоставляет ссылки на использование `CObject`, базового класса для большинства классов в MFC.
 
 [Коллекции](../mfc/collections.md)<br/>
 Обсуждаются классы коллекций, созданные из C++ шаблонов и не созданные.
@@ -29,7 +29,7 @@ ms.locfileid: "70927908"
 Содержит ссылки на разделы, посвященные использованию MFC в качестве даты и времени.
 
 [Файлы](../mfc/files-in-mfc.md)<br/>
-`CFile` Описание и способы управления файлами в MFC.
+Обсуждаются `CFile` и методы управления файлами в MFC.
 
 [Управление памятью (MFC)](../mfc/memory-management.md)<br/>
 Описывает, как использовать преимущества служб общего назначения, связанных с управлением памятью.
@@ -40,7 +40,7 @@ ms.locfileid: "70927908"
 [Сериализация](../mfc/serialization-in-mfc.md)<br/>
 Описание механизма сериализации, обеспечивающего сохранение объектов между запусками программы.
 
-## <a name="related-sections"></a>Связанные разделы
+## <a name="related-sections"></a>См. также
 
 [Обработка исключений (MFC)](../mfc/exception-handling-in-mfc.md)<br/>
 Описывает механизмы обработки исключений, доступные в MFC.
@@ -66,5 +66,5 @@ ms.locfileid: "70927908"
 [Справочник по MFC](../mfc/mfc-desktop-applications.md)<br/>
 Предоставляет справочные материалы по библиотеке MFC, а также набор классов, образующих исполняющую среду, т.е. платформу приложения, написанного для интерфейса Windows API.
 
-[Примеры MFC](../overview/visual-cpp-samples.md)<br/>
+[Примеры MFC](../overview/visual-cpp-samples.md#mfc-samples)<br/>
 Содержит ссылки на примеры, демонстрирующие использование MFC в классических приложениях, библиотеках DLL, приложениях баз данных, элементах управления, веб-приложениях и многом другим.

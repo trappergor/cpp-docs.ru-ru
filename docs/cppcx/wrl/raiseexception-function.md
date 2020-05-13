@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - RaiseException function
 ms.assetid: f9c74f6d-112a-4d2e-900f-622f795d5dbf
-ms.openlocfilehash: 08305c5d59d7e272aac87ad9aa183c8e82588632
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3270057bf5b1b27a98bef1ab236291eab15d27ab
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62231357"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213633"
 ---
 # <a name="raiseexception-function"></a>RaiseException - функция
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+Поддерживает инфраструктуру WRL и не предназначен для непосредственного использования в коде.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -28,24 +28,24 @@ inline void __declspec(noreturn)   RaiseException(
 
 ### <a name="parameters"></a>Параметры
 
-*hr*<br/>
-Код исключения объекта исключения; то есть значение HRESULT неудачной операции.
+*кадров*<br/>
+Код исключения вызванного исключения; то есть значение HRESULT невыполненной операции.
 
-*dwExceptionFlags*<br/>
-Флаг, указывающий, допускающее исключения (значение флага равно нулю) или noncontinuable исключение (флаг значение отлично от нуля). По умолчанию исключение делающего продолжение невозможным.
+*двексцептионфлагс*<br/>
+Флаг, указывающий на непрерывное исключение (значение флага равно нулю) или непостоянное исключение (значение флага не равно нулю). По умолчанию исключение недоступно.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Вызывает исключение в вызывающем потоке.
 
-Дополнительные сведения см. в разделе Windows `RaiseException` функции.
+Дополнительные сведения см. в описании функции Windows `RaiseException`.
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** internal.h
+**Заголовок:** internal. h
 
-**Пространство имен:** Microsoft::WRL::Details
+**Пространство имен:** Microsoft:: WRL::D состояния
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Microsoft::WRL::Details](microsoft-wrl-details-namespace.md)

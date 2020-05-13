@@ -1,9 +1,11 @@
 ---
 title: memcpy_s, wmemcpy_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - memcpy_s
 - wmemcpy_s
+- _o_memcpy_s
+- _o_wmemcpy_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +31,12 @@ helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-ms.openlocfilehash: 8078590df6950201ef81356ba6c28173e80572ee
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7b3df3542974f99009285c8df652cff1fd4fa173
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952802"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915409"
 ---
 # <a name="memcpy_s-wmemcpy_s"></a>memcpy_s, wmemcpy_s
 
@@ -74,20 +77,22 @@ errno_t wmemcpy_s(
 
 Возвращает нуль в случае успеха или код ошибки в случае неудачи.
 
-### <a name="error-conditions"></a>Условия ошибок
+### <a name="error-conditions"></a>Ситуации, которые могут привести к ошибке
 
 |*dest*|*дестсизе*|*src*|*count*|Возвращаемое значение|Содержимое конечного *объекта*|
 |------------|----------------|-----------|---|------------------|------------------------|
-|Любое действие|Любое действие|Любое действие|0|0|Без изменений|
-|**NULL**|Любое действие|Любое действие|ненулевое значение|**EINVAL**|Без изменений|
-|Любое действие|Любое действие|**NULL**|ненулевое значение|**EINVAL**|*конечный адрес* обнулен|
-|Любое действие|< *расчета*|Любое действие|ненулевое значение|**ERANGE**|*конечный адрес* обнулен|
+|any|any|any|0|0|Без изменений|
+|**ЗАКАНЧИВАЮЩ**|any|any|ненулевое значение|**еинвал**|Без изменений|
+|any|any|**ЗАКАНЧИВАЮЩ**|ненулевое значение|**еинвал**|*конечный адрес* обнулен|
+|any|< *расчета*|any|ненулевое значение|**ERANGE**|*конечный адрес* обнулен|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-**memcpy_s** копирует *число* байтов из *src* в *dest*; **wmemcpy_s** копирует символы расширенного *числа* (2 байта). Если источник и назначение перекрываются, поведение **memcpy_s** не определено. Используйте **memmove_s** для управления перекрывающимися областями.
+**memcpy_s** копирует *число* байтов из *src* в *dest*; **wmemcpy_s** *количество* копий расширенных символов (2 байта). Если источник и назначение перекрываются, поведение **memcpy_s** не определено. Используйте **memmove_s** для управления перекрывающимися областями.
 
 Эти функции проверяют свои параметры. Если *Count* не равно нулю, а *dest* или *src* является пустым указателем, или *дестсизе* меньше *Count*, эти функции вызывают обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают **еинвал** или **ERANGE** и применяют **к возвращаемому** значению.
+
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -96,7 +101,7 @@ errno_t wmemcpy_s(
 |**memcpy_s**|\<memory.h> или \<string.h>|
 |**wmemcpy_s**|\<wchar.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -138,7 +143,7 @@ int main()
 0 1 4 9 16 25 36 49 64 81
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Манипуляция буфером](../../c-runtime-library/buffer-manipulation.md)<br/>
 [_memccpy](memccpy.md)<br/>

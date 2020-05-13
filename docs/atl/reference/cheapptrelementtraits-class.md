@@ -9,19 +9,19 @@ f1_keywords:
 helpviewer_keywords:
 - CHeapPtrElementTraits class
 ms.assetid: 910e0e06-3c8b-4242-bf00-b57eb74fbc77
-ms.openlocfilehash: e535afb3a49a5720c8394cc1ab9186c360527fea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f09da968b264463eba759372e4e0756397e9978e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258927"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326874"
 ---
 # <a name="cheapptrelementtraits-class"></a>Класс CHeapPtrElementTraits
 
-Этот класс предоставляет методы, статические функции и определения типов полезно при создании коллекций указателей кучи.
+Этот класс предоставляет методы, статические функции и полезные при создании коллекций указателей кучи.
 
 > [!IMPORTANT]
->  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+> Этот класс и его члены не могут быть использованы в приложениях, выполняемых в Windows Runtime.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,25 +34,25 @@ class CHeapPtrElementTraits :
 #### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Тип объекта для сохранения в класс коллекции.
+Тип объекта, который будет храниться в классе коллекции.
 
-*Распределитель*<br/>
-Класс выделения памяти для использования. По умолчанию используется [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).
+*Распределителя*<br/>
+Класс распределения памяти для использования. По умолчанию [ccRTAllocator](../../atl/reference/ccrtallocator-class.md).
 
 ## <a name="members"></a>Участники
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CHeapPtrElementTraits::INARGTYPE](#inargtype)|Тип данных, который нужно использовать для добавления элементов в объекте класса коллекции.|
-|[CHeapPtrElementTraits::OUTARGTYPE](#outargtype)|Тип данных, который нужно использовать для извлечения элементов из объекта класса коллекции.|
+|[CHeapPtrElementTraits::INARGTYPE](#inargtype)|Тип данных для добавления элементов в объект класса сбора.|
+|[CHeapPtrElementTraits::OUTARGTYPE](#outargtype)|Тип данных для извлечения элементов из объекта класса сбора.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Этот класс предоставляет методы, статические функции и определения типов для создания объектов класса коллекции, содержащие указатели кучи. Класс `CHeapPtrList` является производным от `CHeapPtrElementTraits`.
+Этот класс предоставляет методы, статические функции и типы для сособничания созданию объектов класса коллекции, содержащих кучи указателей. Класс `CHeapPtrList` происходит от `CHeapPtrElementTraits`.
 
-Дополнительные сведения см. в разделе [классы коллекций ATL](../../atl/atl-collection-classes.md).
+Для получения дополнительной информации, [см.](../../atl/atl-collection-classes.md)
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -62,7 +62,7 @@ class CHeapPtrElementTraits :
 
 [CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)
 
-[CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)
+[CDefaultЭлементТхрытс](../../atl/reference/cdefaultelementtraits-class.md)
 
 `CHeapPtrElementTraits`
 
@@ -70,24 +70,24 @@ class CHeapPtrElementTraits :
 
 **Заголовок:** atlcoll.h
 
-##  <a name="inargtype"></a>  CHeapPtrElementTraits::INARGTYPE
+## <a name="cheapptrelementtraitsinargtype"></a><a name="inargtype"></a>CHeapPtrElementTraits::INARGTYPE
 
-Тип данных, который нужно использовать для добавления элементов в объекте класса коллекции.
+Тип данных для добавления элементов в объект класса сбора.
 
 ```
 typedef CHeapPtr<T, Allocator>& INARGTYPE;
 ```
 
-##  <a name="outargtype"></a>  CHeapPtrElementTraits::OUTARGTYPE
+## <a name="cheapptrelementtraitsoutargtype"></a><a name="outargtype"></a>CHeapPtrElementTraits::OUTARGTYPE
 
-Тип данных, который нужно использовать для извлечения элементов из объекта класса коллекции.
+Тип данных для извлечения элементов из объекта класса сбора.
 
 ```
 typedef T *& OUTARGTYPE;
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)<br/>
 [Класс CComHeapPtr](../../atl/reference/ccomheapptr-class.md)<br/>
-[Общие сведения о классе](../../atl/atl-class-overview.md)
+[Общие сведения о классах](../../atl/atl-class-overview.md)

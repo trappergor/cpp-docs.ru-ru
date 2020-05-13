@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - TerminateMap function
 ms.assetid: 1c314a61-da5d-49bb-ac44-c34ee3c23b66
-ms.openlocfilehash: 2a451bf68bfb543ee5e82a9a48097cac7e8a9821
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 560f563e43fc8b818b04cd0bda6b01fbc916cb84
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398125"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213555"
 ---
 # <a name="terminatemap-function"></a>Функция TerminateMap
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+Поддерживает инфраструктуру WRL и не предназначен для непосредственного использования в коде.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -30,28 +30,28 @@ inline bool TerminateMap(
 ### <a name="parameters"></a>Параметры
 
 *module*<br/>
-Объект [модуль](module-class.md).
+[Модуль](module-class.md).
 
-*Имя_сервера*<br/>
-Имя подмножества фабрик классов в модуль, указанный параметром *модуль*.
+*serverName*<br/>
+Имя подмножества фабрик класса в модуле, заданном *модулем*параметров.
 
-*forceTerminate*<br/>
-**значение true,** завершить класс фабрик, независимо от того, они активны; **false** чтобы не завершать работу фабрик классов, если какая-либо активен.
+*форцетерминате*<br/>
+**значение true** , чтобы завершить фабрики класса независимо от того, активны они. **значение false** , чтобы не завершать фабрики класса, если активна какая-либо фабрика.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** Если всех фабрик классов была завершена; в противном случае — значение **false**.
+**значение true** , если все фабрики класса были завершены. в противном случае — **значение false**.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Завершает работу фабрик классов в указанном модуле.
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** module.h
+**Заголовок:** Module. h
 
-**Пространство имен:** Microsoft::WRL::Details
+**Пространство имен:** Microsoft:: WRL::D состояния
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Microsoft::WRL::Details](microsoft-wrl-details-namespace.md)

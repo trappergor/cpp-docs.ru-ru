@@ -1,24 +1,24 @@
 ---
-title: Компилятор предупреждение (уровень 1) C4124
+title: Предупреждение компилятора (уровень 1) C4124
 ms.date: 11/04/2016
 f1_keywords:
 - C4124
 helpviewer_keywords:
 - C4124
 ms.assetid: c08c3a65-9584-47a1-a147-44f00c4b230e
-ms.openlocfilehash: 04732619571420e777244b81bf4b93b775477a20
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6408185c99a54d5411fa5b1058cd5ec09d3326d6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310985"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176316"
 ---
-# <a name="compiler-warning-level-1-c4124"></a>Компилятор предупреждение (уровень 1) C4124
+# <a name="compiler-warning-level-1-c4124"></a>Предупреждение компилятора (уровень 1) C4124
 
-__fastcall с проверкой стека неэффективно
+__fastcall с проверкой стека неэффективна
 
-`__fastcall` Было использовано ключевое слово при включенном режиме проверки стека.
+Для включения проверки стека использовалось ключевое слово `__fastcall`.
 
-`__fastcall` Соглашение создает код быстрее, но проверка стека замедляет. При использовании `__fastcall`, отключить проверку стека с **check_stack** директивы pragma или/GS.
+Соглашение `__fastcall` создает более быстрый код, но проверка стека вызывает медленный код. При использовании `__fastcall`отключите проверку стека с помощью директивы pragma **check_stack** или/ГС.
 
 Это предупреждение выдается только для первой функции, объявленной в этих условиях.

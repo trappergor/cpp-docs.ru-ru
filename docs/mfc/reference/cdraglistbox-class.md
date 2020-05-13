@@ -20,16 +20,16 @@ helpviewer_keywords:
 - CDragListBox [MFC], Dropped
 - CDragListBox [MFC], ItemFromPt
 ms.assetid: fee20b42-60ae-4aa9-83f9-5a3d9b96e33b
-ms.openlocfilehash: d8afc5b14f5f52ca7a4d28a3d3c3c5440b7c819f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d1ae94948e1143a5bac17985423c4bd1bfbaf65
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164050"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374035"
 ---
 # <a name="cdraglistbox-class"></a>Класс CDragListBox
 
-Помимо предоставления функциональных возможностей списка Windows, `CDragListBox` класс позволяет пользователю перемещать элементы списка, такие как имена файлов, в поле со списком.
+В дополнение к функциональности окна списка Windows, `CDragListBox` класс позволяет пользователю перемещать элементы списка поле, такие как имена файлов, в поле списка.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -41,30 +41,30 @@ class CDragListBox : public CListBox
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CDragListBox::CDragListBox](#cdraglistbox)|Создает объект `CDragListBox`.|
+|[CdragListBox::CdragListBox](#cdraglistbox)|Формирует объект `CDragListBox`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CDragListBox::BeginDrag](#begindrag)|Вызывается платформой, когда начинается операция перетаскивания.|
-|[CDragListBox::CancelDrag](#canceldrag)|Вызывается платформой, когда операция перетаскивания была отменена.|
-|[CDragListBox::Dragging](#dragging)|Вызывается платформой при выполнении операции перетаскивания.|
-|[CDragListBox::DrawInsert](#drawinsert)|Рисует направляющая окна списка перетаскивания.|
-|[CDragListBox::Dropped](#dropped)|Вызвано структурой после элемента был удален.|
-|[CDragListBox::ItemFromPt](#itemfrompt)|Возвращает координаты перетаскиваемый элемент.|
+|[CDragListBox::BeginDrag](#begindrag)|Вызывается по фреймворку при запуске операции перетаскивания.|
+|[CDragListBox::CancelDrag](#canceldrag)|Вызывается системой при отмене операции перетаскивания.|
+|[CDragListBox::D](#dragging)|Вызывается фреймворками во время операции перетаскивания.|
+|[CDragListBox::Drawinsert](#drawinsert)|Рисует руководство по вставке в поле списка перетаскивания.|
+|[CDragListBox::Dопроза](#dropped)|Вызывается рамкой после того, как элемент был удален.|
+|[Cdraglistbox::ItemFromPt](#itemfrompt)|Возвращает координаты перетаскиваемого элемента.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Списки с множественным благодаря этой возможности позволяют упорядочить элементы в списке любым способом, наиболее полезным для них. По умолчанию поле со списком будет переместить элемент в новое расположение, в списке. Тем не менее `CDragListBox` объектов можно настроить для копирования элементов, а не их перемещения.
+Список ящиков с этой возможностью позволяет пользователям заказывать элементы в списке в любой способ является наиболее полезным для них. По умолчанию поле списка переместит элемент в новое место в списке. Тем `CDragListBox` не менее, объекты могут быть настроены для копирования элементов, а не их перемещения.
 
-Окно списка связанных с `CDragListBox` класс не должен иметь LBS_SORT или LBS_MULTIPLESELECT стиль. Описание стили окна списка, см. в разделе [стили списков](../../mfc/reference/styles-used-by-mfc.md#list-box-styles).
+Управление полем списка, `CDragListBox` связанное с классом, не должно иметь LBS_SORT или LBS_MULTIPLESELECT стиле. Для описания стилей списка поле, см [List-Box стили](../../mfc/reference/styles-used-by-mfc.md#list-box-styles).
 
-Чтобы использовать перетащите список в существующем диалоговом окне приложения, добавьте элемент управления списком для шаблона диалогового окна с помощью редактора диалоговых окон, а затем назначьте переменную-член (категории `Control` и тип переменной `CDragListBox`) соответствующее поле со списком Управление шаблона диалогового окна.
+Чтобы использовать поле списка перетаскивания в существующем диалоговом поле вашего приложения, добавьте управление полем списка в `Control` шаблон `CDragListBox`диалогового шаблона с помощью редактора диалогов, а затем назначьте переменную участника (категории и переменного типа), соответствующую управлению полем списка в шаблоне диалогов.
 
-Дополнительные сведения о назначении элементы управления для переменных-членов см. в разделе [ярлык для определения переменных-членов для элементов управления диалоговых окон](../../windows/defining-member-variables-for-dialog-controls.md).
+Для получения дополнительной информации о назначении [Shortcut for Defining Member Variables for Dialog Controls](../../windows/defining-member-variables-for-dialog-controls.md)элементов управления переменным членов см.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -82,9 +82,9 @@ class CDragListBox : public CListBox
 
 **Заголовок:** afxcmn.h
 
-##  <a name="begindrag"></a>  CDragListBox::BeginDrag
+## <a name="cdraglistboxbegindrag"></a><a name="begindrag"></a>CDragListBox::BeginDrag
 
-Вызывается структурой при возникновении события, может начать операцию перетаскивания, например нажатие левой кнопки мыши.
+Вызывается в фреймворке при возникновении события, которое может начать операцию перетаскивания, например нажатие кнопки левой мыши.
 
 ```
 virtual BOOL BeginDrag(CPoint pt);
@@ -92,20 +92,20 @@ virtual BOOL BeginDrag(CPoint pt);
 
 ### <a name="parameters"></a>Параметры
 
-*pt*<br/>
-Объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , содержащий координаты перетаскиваемый элемент.
+*пт*<br/>
+Объект [CPoint,](../../atl-mfc-shared/reference/cpoint-class.md) содержащий координаты перетаскиваемого элемента.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ненулевое значение, если перетаскивание может, в противном случае 0.
+Nonzero, если перетаскивание разрешено, в противном случае 0.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Переопределите эту функцию, если вы хотите контролировать, что происходит, когда начинается операция перетаскивания. Реализация по умолчанию захватывает мышь и остается в режиме перетаскивания, пока пользователь нажимает кнопку мыши влево или вправо или нажмет клавишу ESC, после чего отменяется операция перетаскивания.
+Переопределить эту функцию, если вы хотите контролировать то, что происходит при начале операции перетаскивания. Реализация по умолчанию захватывает мышь и остается в режиме перетаскивания до тех пор, пока пользователь не нажмет левую или правую кнопку мыши или не нажмет ESC, после чего операция перетаскивания отменяется.
 
-##  <a name="canceldrag"></a>  CDragListBox::CancelDrag
+## <a name="cdraglistboxcanceldrag"></a><a name="canceldrag"></a>CDragListBox::CancelDrag
 
-Вызывается платформой, когда операция перетаскивания была отменена.
+Вызывается системой при отмене операции перетаскивания.
 
 ```
 virtual void CancelDrag(CPoint pt);
@@ -113,24 +113,24 @@ virtual void CancelDrag(CPoint pt);
 
 ### <a name="parameters"></a>Параметры
 
-*pt*<br/>
-Объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , содержащий координаты перетаскиваемый элемент.
+*пт*<br/>
+Объект [CPoint,](../../atl-mfc-shared/reference/cpoint-class.md) содержащий координаты перетаскиваемого элемента.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Переопределите эту функцию для обработки всей специальной обработки для элемента управления поля списка.
+Переопределить эту функцию для обработки любой специальной обработки для управления окном списка.
 
-##  <a name="cdraglistbox"></a>  CDragListBox::CDragListBox
+## <a name="cdraglistboxcdraglistbox"></a><a name="cdraglistbox"></a>CdragListBox::CdragListBox
 
-Создает объект `CDragListBox`.
+Формирует объект `CDragListBox`.
 
 ```
 CDragListBox();
 ```
 
-##  <a name="dragging"></a>  CDragListBox::Dragging
+## <a name="cdraglistboxdragging"></a><a name="dragging"></a>CDragListBox::D
 
-Вызывается платформой, когда перетаскиваемый элемент списка в `CDragListBox` объекта.
+Вызывается инфраструктурой при перетаскивании `CDragListBox` элемента полесписка в объекте.
 
 ```
 virtual UINT Dragging(CPoint pt);
@@ -138,8 +138,8 @@ virtual UINT Dragging(CPoint pt);
 
 ### <a name="parameters"></a>Параметры
 
-*pt*<br/>
-Объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , содержащий x и y экранные координаты курсора.
+*пт*<br/>
+Объект [CPoint,](../../atl-mfc-shared/reference/cpoint-class.md) содержащий координаты экрана x и y курсора.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -147,17 +147,17 @@ virtual UINT Dragging(CPoint pt);
 
 - DL_COPYCURSOR указывает, что элемент будет скопирован.
 
-- DL_MOVECURSOR указывает, что элемент перемещается.
+- DL_MOVECURSOR указывает на то, что элемент будет перемещен.
 
-- DL_STOPCURSOR указывает, что текущего конечного места перетаскивания не допускается.
+- DL_STOPCURSOR указывает на то, что текущая цель падения неприемлема.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Поведение по умолчанию возвращает DL_MOVECURSOR. Переопределите эту функцию, если вы хотите предоставлять дополнительные функциональные возможности.
+Поведение по умолчанию возвращает DL_MOVECURSOR. Переопределить эту функцию, если вы хотите предоставить дополнительную функциональность.
 
-##  <a name="drawinsert"></a>  CDragListBox::DrawInsert
+## <a name="cdraglistboxdrawinsert"></a><a name="drawinsert"></a>CDragListBox::Drawinsert
 
-Вызывается платформой для изображения направляющих перед элементом с указанным индексом.
+Вызывается рамкой, чтобы нарисовать руководство по вставке перед пунктом с указанным индексом.
 
 ```
 virtual void DrawInsert(int nItem);
@@ -166,15 +166,15 @@ virtual void DrawInsert(int nItem);
 ### <a name="parameters"></a>Параметры
 
 *nItem*<br/>
-Отсчитываемый от нуля индекс курсора.
+Нулевой индекс точки вставки.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Значение - 1 очищает направляющая. Переопределите эту функцию для изменения внешнего вида и поведения направляющая.
+Значение - 1 очищает руководство вставки. Переизвейдите эту функцию, чтобы изменить внешний вид или поведение руководства по вставке.
 
-##  <a name="dropped"></a>  CDragListBox::Dropped
+## <a name="cdraglistboxdropped"></a><a name="dropped"></a>CDragListBox::Dопроза
 
-Вызывается платформой при удалении элемента в пределах `CDragListBox` объекта.
+Вызывается инфраструктурой при падении `CDragListBox` элемента внутри объекта.
 
 ```
 virtual void Dropped(
@@ -185,18 +185,18 @@ virtual void Dropped(
 ### <a name="parameters"></a>Параметры
 
 *nSrcIndex*<br/>
-Указывает отсчитываемый от нуля индекс удаленной строки.
+Определяет нулевой индекс упавной строки.
 
-*pt*<br/>
-Объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , содержащий координаты узла размещения.
+*пт*<br/>
+Объект [CPoint,](../../atl-mfc-shared/reference/cpoint-class.md) содержащий координаты места падения.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Поведение по умолчанию копирует элемента списка и его данных в новое расположение, а затем удаляет исходный элемент. Переопределите эту функцию для настройки поведения по умолчанию, таких как включение копии элементов списка для переноса в другие расположения в пределах списка.
+Поведение по умолчанию копирует элемент коробки списка и его данные в новое место, а затем удаляет исходный элемент. Переопределить эту функцию для настройки поведения по умолчанию, например, возможность перетасовки копий элементов списка в ашего листе.
 
-##  <a name="itemfrompt"></a>  CDragListBox::ItemFromPt
+## <a name="cdraglistboxitemfrompt"></a><a name="itemfrompt"></a>Cdraglistbox::ItemFromPt
 
-Вызов этой функции для получения отсчитываемый от нуля индекс элемента списка, расположенный *pt*.
+Вызовите эту функцию, чтобы получить нулевой индекс элемента коробки списка, расположенного в *pt.*
 
 ```
 int ItemFromPt(
@@ -206,19 +206,19 @@ int ItemFromPt(
 
 ### <a name="parameters"></a>Параметры
 
-*pt*<br/>
-Объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объект, содержащий координаты точки в поле со списком.
+*пт*<br/>
+Объект [CPoint,](../../atl-mfc-shared/reference/cpoint-class.md) содержащий координаты точки в поле списка.
 
 *bAutoScroll*<br/>
-Ненулевое значение, если разрешена прокрутка, в противном случае 0.
+Nonzero, если прокрутка разрешена, в противном случае 0.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Отсчитываемый от нуля индекс элемента списка перетаскивания.
+Нулевой индекс элемента ящика списка перетаскивания.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Пример MFC TSTCON](../../overview/visual-cpp-samples.md)<br/>
+[MFC Образец TSTCON](../../overview/visual-cpp-samples.md)<br/>
 [Класс CListBox](../../mfc/reference/clistbox-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс CListBox](../../mfc/reference/clistbox-class.md)

@@ -38,16 +38,16 @@ helpviewer_keywords:
 - CD2DGeometrySink [MFC], SetSegmentFlags
 - CD2DGeometrySink [MFC], m_pSink
 ms.assetid: e5e07f41-0343-4ab1-9d6b-8c62ed33c04a
-ms.openlocfilehash: 48c88f0b837b2e49e4c87f07a9aa28c16a66c1e3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bb5d2b53fa5899ac84608dc4ace6a84a3e5a7575
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391261"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754774"
 ---
 # <a name="cd2dgeometrysink-class"></a>Класс CD2DGeometrySink
 
-Оболочка для ID2D1GeometrySink.
+Обертка для ID2D1GeometrySink.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -59,41 +59,41 @@ class CD2DGeometrySink;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CD2DGeometrySink::CD2DGeometrySink](#cd2dgeometrysink)|Создает объект CD2DGeometrySink из CD2DPathGeometry объекта.|
-|[CD2DGeometrySink:: ~ CD2DGeometrySink](#_dtorcd2dgeometrysink)|Деструктор Вызывается при уничтожении объекта D2D геометрии в качестве приемника.|
+|[CD2DGeometrySink::CD2DGeometrySink](#cd2dgeometrysink)|Строит объект CD2DGeometrySink с объекта CD2DPathGeometry.|
+|[CD2DGeometrySink:: »CD2DGeometrySink](#_dtorcd2dgeometrysink)|Деструктор Вызывается при уничтожении объекта раковины геометрии D2D.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CD2DGeometrySink::AddArc](#addarc)|Добавляет один дуги по геометрическому пути|
+|[CD2DGeometrySink::AddArc](#addarc)|Добавляет одну дугу к геометрии пути|
 |[CD2DGeometrySink::AddBezier](#addbezier)|Создает кривую Безье третьего порядка между текущей и заданной конечной точками.|
-|[CD2DGeometrySink::AddBeziers](#addbeziers)|Создает набор кривых Безье третьего порядка и добавляет их в приемник geometry.|
-|[CD2DGeometrySink::AddLine](#addline)|Создает сегмент линии между текущей точкой и заданной конечной точкой и добавляет его в приемник geometry.|
-|[CD2DGeometrySink::AddLines](#addlines)|Создает последовательность строк, используя указанные точки и добавляет их в приемник geometry.|
-|[CD2DGeometrySink::AddQuadraticBezier](#addquadraticbezier)|Создает кривую Безье второго порядка между текущей и заданной конечной точками.|
-|[CD2DGeometrySink::AddQuadraticBeziers](#addquadraticbeziers)|Добавляет последовательность сегментов кривых Безье второго как массив в одном вызове.|
-|[CD2DGeometrySink::BeginFigure](#beginfigure)|Открывает новую фигуру в указанной точке.|
-|[CD2DGeometrySink::Close](#close)|Закрывает приемника geometry|
-|[CD2DGeometrySink::EndFigure](#endfigure)|Заканчивает текущую фигуру; При необходимости закрывает его.|
-|[CD2DGeometrySink::Get](#get)|Возвращает интерфейс ID2D1GeometrySink|
-|[CD2DGeometrySink::IsValid](#isvalid)|Проверяет допустимость геометрии в качестве приемника|
-|[CD2DGeometrySink::SetFillMode](#setfillmode)|Указывает метод, используемый для определения, какие точки находятся внутри геометрического объекта, описываемого этим приемником geometry, а какие точки находятся за пределами.|
-|[CD2DGeometrySink::SetSegmentFlags](#setsegmentflags)|Указывает параметры обводки и соединения для применения к новые сегменты, добавляемый в приемник geometry.|
+|[CD2DGeometrySink::AddBeziers](#addbeziers)|Создает последовательность кубических кривых Безье и добавляет их в раковину геометрии.|
+|[CD2DGeometrySink::AddLine](#addline)|Создает сегмент линии между текущей точкой и указанной конечной точкой и добавляет ее в раковину геометрии.|
+|[CD2DGeometrySIn::AddLines](#addlines)|Создает последовательность линий, используя указанные точки и добавляет их в раковину геометрии.|
+|[CD2DGeometrySink::AddquadraticBezier](#addquadraticbezier)|Создает кривую Безье второго порядка между текущей и заданной конечной точками.|
+|[CD2DGeometrySink:AddquadraticBeziers](#addquadraticbeziers)|Добавляет последовательность сегментов квадрата Безье в качестве массива в одном вызове.|
+|[CD2DGeometryS': БегинаРисунка](#beginfigure)|Запускает новую фигуру в указанной точке.|
+|[CD2DGeometrySin::Закрыть](#close)|Закрывает раковину геометрии|
+|[CD2DGeometrySink::EndFigure](#endfigure)|Завершает текущую цифру; дополнительно, закрывает его.|
+|[CD2DGeometryS': Получить](#get)|Возвращает интерфейс ID2D1GeometrySink|
+|[CD2DGeometrySink::IsValid](#isvalid)|Проверка достоверности геометрии раковины|
+|[CD2DGeometrySink::SetFillMode](#setfillmode)|Определяет метод, используемый для определения того, какие точки находятся внутри геометрии, описанной этой раковиной геометрии, и какие точки находятся снаружи.|
+|[CD2DGeometrySink::SetSegmentFlags](#setsegmentflags)|Обрабражает параметры штриха и соединения, которые будут применяться к новым сегментам, добавленным к раковине геометрии.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CD2DGeometrySink::operator ID2D1GeometrySink *](#operator_id2d1geometrysink_star)|Возвращает интерфейс ID2D1GeometrySink|
+|[CD2DGeometrySink::оператор ID2D1GeometrySink](#operator_id2d1geometrysink_star)|Возвращает интерфейс ID2D1GeometrySink|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CD2DGeometrySink::m_pSink](#m_psink)|Указатель на ID2D1GeometrySink.|
+|[CD2DGeometryS:::m_pSink](#m_psink)|Указатель на ID2D1GeometrySink.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -103,45 +103,45 @@ class CD2DGeometrySink;
 
 **Заголовок:** afxrendertarget.h
 
-##  <a name="_dtorcd2dgeometrysink"></a>  CD2DGeometrySink:: ~ CD2DGeometrySink
+## <a name="cd2dgeometrysinkcd2dgeometrysink"></a><a name="_dtorcd2dgeometrysink"></a>CD2DGeometrySink:: »CD2DGeometrySink
 
-Деструктор Вызывается при уничтожении объекта D2D геометрии в качестве приемника.
+Деструктор Вызывается при уничтожении объекта раковины геометрии D2D.
 
 ```
 virtual ~CD2DGeometrySink();
 ```
 
-##  <a name="addarc"></a>  CD2DGeometrySink::AddArc
+## <a name="cd2dgeometrysinkaddarc"></a><a name="addarc"></a>CD2DGeometrySink::AddArc
 
-Добавляет один дуги по геометрическому пути
+Добавляет одну дугу к геометрии пути
 
-```
+```cpp
 void AddArc(const D2D1_ARC_SEGMENT& arc);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *Дуги*<br/>
-Чтобы добавить к рисунку, сегмент дуги
+Сегмент дуги для добавления к рисунку
 
-##  <a name="addbezier"></a>  CD2DGeometrySink::AddBezier
+## <a name="cd2dgeometrysinkaddbezier"></a><a name="addbezier"></a>CD2DGeometrySink::AddBezier
 
 Создает кривую Безье третьего порядка между текущей и заданной конечной точками.
 
-```
+```cpp
 void AddBezier(const D2D1_BEZIER_SEGMENT& bezier);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *Безье*<br/>
-Структура, описывающая контрольные точки и конечной точки кривой Безье для добавления.
+Структура, описывающая точки управления и конечную точку кривой Безье для добавления.
 
-##  <a name="addbeziers"></a>  CD2DGeometrySink::AddBeziers
+## <a name="cd2dgeometrysinkaddbeziers"></a><a name="addbeziers"></a>CD2DGeometrySink::AddBeziers
 
-Создает набор кривых Безье третьего порядка и добавляет их в приемник geometry.
+Создает последовательность кубических кривых Безье и добавляет их в раковину геометрии.
 
-```
+```cpp
 void AddBeziers(
     const CArray<D2D1_BEZIER_SEGMENT,
     D2D1_BEZIER_SEGMENT>& beziers);
@@ -149,27 +149,27 @@ void AddBeziers(
 
 ### <a name="parameters"></a>Параметры
 
-*кривые Безье*<br/>
-Массив сегментов Безье, описывающий кривых Безье, для создания. Кривую извлекается из текущей точки в приемник геометрии (конечная точка рисуется последнего сегмента или расположении, заданном параметром BeginFigure) в конечную точку из первого сегмента в массиве. Если массив содержит дополнительные сегменты Безье, каждый последующий сегмент Безье использует конечную точку предыдущего сегмента в качестве начальной точки.
+*Безье*<br/>
+Массив сегментов Безье, описывающий кривые Безье для создания. Кривая нарисована из текущей точки раковины геометрии (конечная точка последнего сегмента или местоположения, указанного BeginFigure) до конечной точки первого сегмента Безье в массиве. если массив содержит дополнительные сегменты Bezier, каждый последующий сегмент Bezier использует конечную точку предыдущего сегмента Bezier в качестве отправной точки.
 
-##  <a name="addline"></a>  CD2DGeometrySink::AddLine
+## <a name="cd2dgeometrysinkaddline"></a><a name="addline"></a>CD2DGeometrySink::AddLine
 
-Создает сегмент линии между текущей точкой и заданной конечной точкой и добавляет его в приемник geometry.
+Создает сегмент линии между текущей точкой и указанной конечной точкой и добавляет ее в раковину геометрии.
 
-```
+```cpp
 void AddLine(CD2DPointF point);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*point*<br/>
+*Точки*<br/>
 Конечная точка линии для рисования.
 
-##  <a name="addlines"></a>  CD2DGeometrySink::AddLines
+## <a name="cd2dgeometrysinkaddlines"></a><a name="addlines"></a>CD2DGeometrySIn::AddLines
 
-Создает последовательность строк, используя указанные точки и добавляет их в приемник geometry.
+Создает последовательность линий, используя указанные точки и добавляет их в раковину геометрии.
 
-```
+```cpp
 void AddLines(
     const CArray<CD2DPointF,
     CD2DPointF>& points);
@@ -178,26 +178,26 @@ void AddLines(
 ### <a name="parameters"></a>Параметры
 
 *Точки*<br/>
-Массив из одной или нескольких точек, которые описывают строки для рисования. Линия с текущего места в приемник геометрии (конечная точка рисуется последнего сегмента или расположении, заданном параметром BeginFigure) точки в массиве. Если массив содержит дополнительные точки, линия с первой точки для второй точки в массиве, из второй точки третья точка и т. д. Массив из последовательности из конечных точек для рисования линий.
+Массив одного или нескольких точек, описывающие линии для рисования. Линия нарисована из текущей точки раковины геометрии (конечная точка последнего сегмента или местоположения, указанного BeginFigure) до первой точки массива. если массив содержит дополнительные точки, то линия нарисована от первой точки до второй точки массива, от второй точки до третьей точки и так далее. Массив последовательности конечных точек линий для рисования.
 
-##  <a name="addquadraticbezier"></a>  CD2DGeometrySink::AddQuadraticBezier
+## <a name="cd2dgeometrysinkaddquadraticbezier"></a><a name="addquadraticbezier"></a>CD2DGeometrySink::AddquadraticBezier
 
 Создает кривую Безье второго порядка между текущей и заданной конечной точками.
 
-```
+```cpp
 void AddQuadraticBezier(const D2D1_QUADRATIC_BEZIER_SEGMENT& bezier);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *Безье*<br/>
-Структура, описывающая контрольная точка и кривая Безье второго порядка, чтобы добавить конечную точку.
+Структура, описывающая контрольную точку и конечную точку квадратной кривой Безье, чтобы добавить.
 
-##  <a name="addquadraticbeziers"></a>  CD2DGeometrySink::AddQuadraticBeziers
+## <a name="cd2dgeometrysinkaddquadraticbeziers"></a><a name="addquadraticbeziers"></a>CD2DGeometrySink:AddquadraticBeziers
 
-Добавляет последовательность сегментов кривых Безье второго как массив в одном вызове.
+Добавляет последовательность сегментов квадрата Безье в качестве массива в одном вызове.
 
-```
+```cpp
 void AddQuadraticBeziers(
     const CArray<D2D1_QUADRATIC_BEZIER_SEGMENT,
     D2D1_QUADRATIC_BEZIER_SEGMENT>& beziers);
@@ -205,14 +205,14 @@ void AddQuadraticBeziers(
 
 ### <a name="parameters"></a>Параметры
 
-*кривые Безье*<br/>
-Массив из последовательности сегментов кривых Безье второго.
+*Безье*<br/>
+Массив последовательности сегментов квадратного Безье.
 
-##  <a name="beginfigure"></a>  CD2DGeometrySink::BeginFigure
+## <a name="cd2dgeometrysinkbeginfigure"></a><a name="beginfigure"></a>CD2DGeometryS': БегинаРисунка
 
-Открывает новую фигуру в указанной точке.
+Запускает новую фигуру в указанной точке.
 
-```
+```cpp
 void BeginFigure(
     CD2DPointF startPoint,
     D2D1_FIGURE_BEGIN figureBegin);
@@ -221,14 +221,14 @@ void BeginFigure(
 ### <a name="parameters"></a>Параметры
 
 *startPoint*<br/>
-Точка, с которого начинается новый рисунок.
+Точка, с которой начать новую фигуру.
 
-*figureBegin*<br/>
-Новой фигуры должны ли пустой или заполнены.
+*фигурыБегеБег*<br/>
+Должна ли новая фигура быть полой или заполненной.
 
-##  <a name="cd2dgeometrysink"></a>  CD2DGeometrySink::CD2DGeometrySink
+## <a name="cd2dgeometrysinkcd2dgeometrysink"></a><a name="cd2dgeometrysink"></a>CD2DGeometrySink::CD2DGeometrySink
 
-Создает объект CD2DGeometrySink из CD2DPathGeometry объекта.
+Строит объект CD2DGeometrySink с объекта CD2DPathGeometry.
 
 ```
 CD2DGeometrySink(CD2DPathGeometry& pathGeometry);
@@ -236,12 +236,12 @@ CD2DGeometrySink(CD2DPathGeometry& pathGeometry);
 
 ### <a name="parameters"></a>Параметры
 
-*pathGeometry*<br/>
+*Pathgeometry*<br/>
 Существующий объект CD2DPathGeometry.
 
-##  <a name="close"></a>  CD2DGeometrySink::Close
+## <a name="cd2dgeometrysinkclose"></a><a name="close"></a>CD2DGeometrySin::Закрыть
 
-Закрывает приемника geometry
+Закрывает раковину геометрии
 
 ```
 BOOL Close();
@@ -249,22 +249,22 @@ BOOL Close();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ненулевое значение, если выполнение прошло успешно; в противном случае — значение FALSE.
+Nonzero, если успешно; в противном случае FALSE.
 
-##  <a name="endfigure"></a>  CD2DGeometrySink::EndFigure
+## <a name="cd2dgeometrysinkendfigure"></a><a name="endfigure"></a>CD2DGeometrySink::EndFigure
 
-Заканчивает текущую фигуру; При необходимости закрывает его.
+Завершает текущую цифру; дополнительно, закрывает его.
 
-```
+```cpp
 void EndFigure(D2D1_FIGURE_END figureEnd);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *figureEnd*<br/>
-Значение, указывающее, закрыт ли текущую фигуру. Если замкнутой, линия проводится между текущей точкой и заданные BeginFigure начальную точку.
+Значение, указывавое на то, закрыто ли текущее значение. Если фигура закрыта, проводится линия между текущей точкой и точкой старта, указанной BeginFigure.
 
-##  <a name="get"></a>  CD2DGeometrySink::Get
+## <a name="cd2dgeometrysinkget"></a><a name="get"></a>CD2DGeometryS': Получить
 
 Возвращает интерфейс ID2D1GeometrySink
 
@@ -274,11 +274,11 @@ ID2D1GeometrySink* Get();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на интерфейс ID2D1GeometrySink или значение NULL, если объект еще не инициализирован.
+Указатель на интерфейс ID2D1GeometrySink или NULL, если объект еще не инициализирован.
 
-##  <a name="isvalid"></a>  CD2DGeometrySink::IsValid
+## <a name="cd2dgeometrysinkisvalid"></a><a name="isvalid"></a>CD2DGeometrySink::IsValid
 
-Проверяет допустимость геометрии в качестве приемника
+Проверка достоверности геометрии раковины
 
 ```
 BOOL IsValid() const;
@@ -286,9 +286,9 @@ BOOL IsValid() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если приемник geometry является допустимым; в противном случае — значение FALSE.
+TRUE, если геометрия раковина действительна; в противном случае FALSE.
 
-##  <a name="m_psink"></a>  CD2DGeometrySink::m_pSink
+## <a name="cd2dgeometrysinkm_psink"></a><a name="m_psink"></a>CD2DGeometryS:::m_pSink
 
 Указатель на ID2D1GeometrySink.
 
@@ -296,7 +296,7 @@ BOOL IsValid() const;
 ID2D1GeometrySink* m_pSink;
 ```
 
-##  <a name="operator_id2d1geometrysink_star"></a>  CD2DGeometrySink::operator ID2D1GeometrySink *
+## <a name="cd2dgeometrysinkoperator-id2d1geometrysink"></a><a name="operator_id2d1geometrysink_star"></a>CD2DGeometrySink::оператор ID2D1GeometrySink
 
 Возвращает интерфейс ID2D1GeometrySink
 
@@ -306,34 +306,34 @@ operator ID2D1GeometrySink*();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на интерфейс ID2D1GeometrySink или значение NULL, если объект еще не инициализирован.
+Указатель на интерфейс ID2D1GeometrySink или NULL, если объект еще не инициализирован.
 
-##  <a name="setfillmode"></a>  CD2DGeometrySink::SetFillMode
+## <a name="cd2dgeometrysinksetfillmode"></a><a name="setfillmode"></a>CD2DGeometrySink::SetFillMode
 
-Указывает метод, используемый для определения, какие точки находятся внутри геометрического объекта, описываемого этим приемником geometry, а какие точки находятся за пределами.
+Определяет метод, используемый для определения того, какие точки находятся внутри геометрии, описанной этой раковиной геометрии, и какие точки находятся снаружи.
 
-```
+```cpp
 void SetFillMode(D2D1_FILL_MODE fillMode);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *fillMode*<br/>
-Метод, используемый для определения, является ли заданная точка частью геометрии.
+Метод, используемый для определения того, является ли заданная точка частью геометрии.
 
-##  <a name="setsegmentflags"></a>  CD2DGeometrySink::SetSegmentFlags
+## <a name="cd2dgeometrysinksetsegmentflags"></a><a name="setsegmentflags"></a>CD2DGeometrySink::SetSegmentFlags
 
-Указывает параметры обводки и соединения для применения к новые сегменты, добавляемый в приемник geometry.
+Обрабражает параметры штриха и соединения, которые будут применяться к новым сегментам, добавленным к раковине геометрии.
 
-```
+```cpp
 void SetSegmentFlags(D2D1_PATH_SEGMENT vertexFlags);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*vertexFlags*<br/>
-Приемник параметры обводки и соединения для применения к новые сегменты, добавить к данной геометрии.
+*вершиныФлаги*<br/>
+Инсульт и соедините параметры, которые будут применены к новым сегментам, добавленным к раковине геометрии.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Классы](../../mfc/reference/mfc-classes.md)

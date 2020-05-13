@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - __raise keyword [C++]
 ms.assetid: 6f1ae418-5f0f-48b6-9f6e-8ea7e66b239a
-ms.openlocfilehash: c5703c87945667f4ac65647019a72b304363bee2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eb3ab24378071663b2a6a1abab700b81c3172419
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244508"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317223"
 ---
-# <a name="raise"></a>__raise
+# <a name="__raise"></a>__raise
 
 Выделяет место вызова события.
 
@@ -24,14 +24,14 @@ ms.locfileid: "62244508"
 __raise method-declarator;
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Событие из управляемого кода можно вызвать только в пределах класса, где оно определено. См. в разделе [событий](../extensions/event-cpp-component-extensions.md) Дополнительные сведения.
+Событие из управляемого кода можно вызвать только в пределах класса, где оно определено. Дополнительную информацию можно узнать на [мероприятии.](../extensions/event-cpp-component-extensions.md)
 
-Ключевое слово **__raise** вызывает ошибку, которая возникает при вызове непредвиденных событий.
+Ключевое слово **__raise** вызывает ошибку, которая должна быть издана, если вы называете не-событие.
 
 > [!NOTE]
->  Класс-шаблон или структура не могут содержать события.
+> Класс-шаблон или структура не могут содержать события.
 
 ## <a name="example"></a>Пример
 
@@ -59,8 +59,8 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Ключевые слова](../cpp/keywords-cpp.md)<br/>
+[Keywords](../cpp/keywords-cpp.md)<br/>
 [Обработка событий](../cpp/event-handling.md)<br/>
 [Расширения компонентов для платформ среды выполнения](../extensions/component-extensions-for-runtime-platforms.md)

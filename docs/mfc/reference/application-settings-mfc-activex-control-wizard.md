@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, application settings
 ms.assetid: 48475194-cc63-467f-8499-f142269a4c1c
-ms.openlocfilehash: 3201b5882a1de4064d924fbb28ee1c575ab8ccbe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 55f202ffabe945e55589ab1fc771a1757e23ca2f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62151309"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372478"
 ---
 # <a name="application-settings-mfc-activex-control-wizard"></a>Параметры приложения, мастер элементов управления ActiveX MFC
 
@@ -30,16 +30,16 @@ ms.locfileid: "62151309"
 
    При создании файлов справки с помощью мастера в проект будет включено следующее:
 
-   - VCPROJ-файл содержит код для построения и настройки файла справки при построении проекта.
+  - VCPROJ-файл содержит код для построения и настройки файла справки при построении проекта.
 
-   - Файл *projnamePropPage*.cpp включает функцию [SetHelpInfo](../../mfc/reference/colepropertypage-class.md#sethelpinfo) в конструктор.
+  - Файл *projnamePropPage*.cpp включает функцию [SetHelpInfo](../../mfc/reference/colepropertypage-class.md#sethelpinfo) в конструктор.
 
-   - Файл projname.hpj — это файл проекта справки, который используется компилятором справки для создания файла справки элемента управления ActiveX. HPJ-файл — это текстовый файл, содержащий сведения о построении файла справки и путях к дополнительным файлам (например, к точечным рисункам) в файле справки.
+  - Файл projname.hpj — это файл проекта справки, который используется компилятором справки для создания файла справки элемента управления ActiveX. HPJ-файл — это текстовый файл, содержащий сведения о построении файла справки и путях к дополнительным файлам (например, к точечным рисункам) в файле справки.
 
-   - Проект включает каталог HLP, который содержит файлы точечных рисунков справки проекта и файлы разделов справки (*projname*.rtf). Файл раздела справки содержит стандартные разделы справки для общих свойств, событий и методов, поддерживаемых большинством элементов управления ActiveX. Вы можете изменить RTF-файл, чтобы добавить или удалить определенные разделы справки.
+  - Проект включает каталог HLP, который содержит файлы точечных рисунков справки проекта и файлы разделов справки (*projname*.rtf). Файл раздела справки содержит стандартные разделы справки для общих свойств, событий и методов, поддерживаемых большинством элементов управления ActiveX. Вы можете изменить RTF-файл, чтобы добавить или удалить определенные разделы справки.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Мастер элементов ActiveX MFC](../../mfc/reference/mfc-activex-control-wizard.md)<br/>
-[Имена элементов управления, мастер элементов ActiveX MFC](../../mfc/reference/control-names-mfc-activex-control-wizard.md)<br/>
-[Страница "Параметры элемента управления" мастера управления ActiveX MFC](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)
+[Мастер управления MFC ActiveX](../../mfc/reference/mfc-activex-control-wizard.md)<br/>
+[Имена элементов управления, мастер элементов управления ActiveX MFC](../../mfc/reference/control-names-mfc-activex-control-wizard.md)<br/>
+[Параметры управления, MFC ActiveX Мастер управления](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)

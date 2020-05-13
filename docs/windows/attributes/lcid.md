@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LCID attribute
 ms.assetid: 7f248c69-ee1c-42c3-9411-39cf27c9f43d
-ms.openlocfilehash: 7c737661bb8429e416b515e4e7fcaf54956385d0
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: bb9e44d34c675e4f5d955c5f422a6dd35259ec8d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514529"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214803"
 ---
 # <a name="lcid"></a>lcid
 
@@ -23,9 +23,9 @@ ms.locfileid: "69514529"
 [lcid]
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Атрибут **LCID** C++ реализует функциональные возможности атрибута [LCID](/windows/win32/Midl/lcid) MIDL. Если требуется реализовать языковой стандарт для библиотечного блока, используйте параметр **LCID =** `lcid` в атрибуте [module](module-cpp.md) .
+Атрибут **LCID** C++ реализует функциональные возможности атрибута [LCID](/windows/win32/Midl/lcid) MIDL. Если требуется реализовать языковой стандарт для библиотечного блока, используйте параметр **LCID =** `lcid` для атрибута [module](module-cpp.md) .
 
 ## <a name="example"></a>Пример
 
@@ -48,14 +48,14 @@ __interface IStatic {
 
 |||
 |-|-|
-|**Относится к**|Параметр интерфейса|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Отсутствуют|
-|**Недопустимые атрибуты**|Отсутствуют|
+|**Применение**|Параметр интерфейса|
+|**Повторяемый**|нет|
+|**Обязательные атрибуты**|None|
+|**Недопустимые атрибуты**|None|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты параметра](parameter-attributes.md)

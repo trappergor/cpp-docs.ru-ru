@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::binomial_distribution [C++], param_type
 - std::binomial_distribution [C++], param_type
 ms.assetid: b7c8a26a-da8c-45a5-a3a8-208f7a3609ce
-ms.openlocfilehash: e3d2d02bc6781ed447d7583ce15a60e983251350
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: dc9bb1c3edf9187b1e5dc1e924298b9dbb02e2ba
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688374"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376715"
 ---
 # <a name="binomial_distribution-class"></a>Класс binomial_distribution
 
@@ -71,22 +71,22 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*Инттипе* \
-Целочисленный тип результата, по умолчанию, равен **int**. Возможные типы см. в разделе [\<random >](../standard-library/random.md).
+*IntType*\
+Тип результата, по умолчанию **int**. Для возможных типов см [ \<>. ](../standard-library/random.md)
 
-*Ргсч* \
-Единый механизм генератора случайных чисел. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*Ргсч*\
+Единый генератор случайных чисел. Для возможных типов см [ \<>. ](../standard-library/random.md)
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
-Шаблон класса описывает распределение, которое создает значения указанного пользователем целочисленного типа или тип **int** , если он не указан, распределяется в соответствии с дискретным распределением по модели вероятности. В следующей таблице представлены ссылки на статьи об отдельных членах.
+Шаблон класса описывает распределение, которое производит значения определенного пользовательского интегрального типа, или введите **Int,** если не предусмотрено, распределенное в соответствии с функцией дискретной вероятности Binomial Distribution. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
 ||||
 |-|-|-|
 |[binomial_distribution](#binomial_distribution)|`binomial_distribution::t`|`binomial_distribution::param`|
 |`binomial_distribution::operator()`|`binomial_distribution::p`|[param_type](#param_type)|
 
-Члены свойств `t()` и `p()` возвращают текущие сохраненные значения параметров распределения *t* и *p* соответственно.
+Члены `t()` свойств `p()` и возвращают сохраненные в настоящее время значения параметров распределения *t* и *p* соответственно.
 
 Член свойства `param()` устанавливает или возвращает хранимый пакет параметров распределения `param_type`.
 
@@ -96,7 +96,7 @@ public:
 
 Функции-члены `operator()` возвращают следующее значение, созданное механизмом РГСЧ, из текущего или указанного пакета параметров.
 
-Дополнительные сведения о классах распределений и их членах см. в разделе [\<random>](../standard-library/random.md).
+Для получения дополнительной информации о классах распределения и их членах [ \<>](../standard-library/random.md)см.
 
 Дополнительные сведения о дискретной функции вероятности биномиального распределения см. в статье [Биномиальное распределение](https://go.microsoft.com/fwlink/p/?linkid=398469) на веб-сайте Wolfram MathWorld.
 
@@ -231,7 +231,7 @@ Histogram for 100 samples:
 
 **Пространство имен:** std
 
-## <a name="binomial_distribution"></a>  binomial_distribution::binomial_distribution
+## <a name="binomial_distributionbinomial_distribution"></a><a name="binomial_distribution"></a>binomial_distribution::binomial_distribution
 
 Формирует распределение.
 
@@ -242,24 +242,24 @@ explicit binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Параметры
 
-*t* \
+*T*\
 Параметр распределения `t`.
 
-*p* \
+*P*\
 Параметр распределения `p`.
 
-*parm* \
+*парм*\
 Структура `param_type`, используемая для формирования распределения.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 **Предварительные условия:** `0 ≤ t` и `0.0 ≤ p ≤ 1.0`
 
-Первый конструктор конструирует объект, хранимое значение *p* которого содержит значение *p* , а хранимое значение *t* содержит значение *t*.
+Первый конструктор строит объект, сохраненное *значение р* имеет значение *р* и значение которого хранится *в т,* имеет значение *t.*
 
 Второй конструктор создает объект, хранимые параметры которого инициализируются из *parm*. Вы можете получить и задать текущие параметры существующего распределения, вызвав функцию-член `param()`.
 
-## <a name="param_type"></a>  binomial_distribution::param_type
+## <a name="binomial_distributionparam_type"></a><a name="param_type"></a>binomial_distribution::pараматип
 
 Сохраняет все параметры распределения.
 
@@ -277,21 +277,21 @@ struct param_type {
 
 ### <a name="parameters"></a>Параметры
 
-*t* \
+*T*\
 Параметр распределения `t`.
 
-*p* \
+*P*\
 Параметр распределения `p`.
 
-*справа* \
+*Правильно*\
 Объект `param_type`, который требуется сравнить с данным объектом.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 **Предварительные условия:** `0 ≤ t` и `0.0 ≤ p ≤ 1.0`
 
 Эту структуру можно передать конструктору класса распределения во время создания экземпляра, функции-члену `param()` для установки хранимых параметров существующего распределения и `operator()` для использования вместо хранимых параметров.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[\<random>](../standard-library/random.md)
+[\<случайные>](../standard-library/random.md)

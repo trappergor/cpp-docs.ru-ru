@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - tile_barrier class
 ms.assetid: b4ccdccb-0032-4e11-b7bd-dc9d43445dee
-ms.openlocfilehash: 757309a10da3e6d1c9c053430cce2cf603380b1f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: c00f1e41e70e723be185959eeff176390def7647
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79427497"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374725"
 ---
 # <a name="tile_barrier-class"></a>Класс tile_barrier
 
-Синхронизирует выполнение потоков, выполняющихся в группе потоков (плитке), с помощью методов `wait`. Только среда выполнения может создать экземпляр этого класса.
+Синхронизирует выполнение потоков, работающих в группе потоков (плитка) `wait` с помощью методов. Только время выполнения может мгновенно изврать этот класс.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -29,22 +29,22 @@ ms.locfileid: "79427497"
 class tile_barrier;
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|[Конструктор tile_barrier](#ctor)|Инициализирует новый экземпляр класса `tile_barrier`.|
+|[tile_barrier конструктор](#ctor)|Инициализирует новый экземпляр класса `tile_barrier`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|[ожидания](#wait)|Указывает всем потокам в группе потоков (плитке), что выполнение прекращается до завершения ожидания всех потоков в плитке.|
-|[wait_with_all_memory_fence](#wait_with_all_memory_fence)|Блокирует выполнение всех потоков в плитке до тех пор, пока не будут завершены все доступ к памяти и все потоки в плитке достигли этого вызова.|
-|[wait_with_global_memory_fence](#wait_with_global_memory_fence)|Блокирует выполнение всех потоков в плитке до тех пор, пока не завершится полный доступ к глобальной памяти и все потоки в плитке достигли этого вызова.|
-|[wait_with_tile_static_memory_fence](#wait_with_tile_static_memory_fence)|Блокирует выполнение всех потоков в плитке до тех пор, пока не будут завершены все `tile_static` доступ к памяти и все потоки в плитке достигли этого вызова.|
+|[Подожди](#wait)|Инструктирует все потоки в группе потоков (плитка) прекратить выполнение до тех пор, пока все потоки в плитке не закончат ожидание.|
+|[wait_with_all_memory_fence](#wait_with_all_memory_fence)|Блоки выполнения всех потоков в плитке до тех пор, пока все доступы к памяти не будут завершены и все потоки в плитке не достигнут этого вызова.|
+|[wait_with_global_memory_fence](#wait_with_global_memory_fence)|Блоки выполнения всех потоков в плитке до тех пор, пока все глобальные доступы к памяти не будут завершены и все потоки в плитке не достигнут этого вызова.|
+|[wait_with_tile_static_memory_fence](#wait_with_tile_static_memory_fence)|Блоки выполнения всех потоков в `tile_static` плитке до тех пор, пока все доступы к памяти не будут завершены и все потоки в плитке не достигнут этого вызова.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -56,9 +56,9 @@ class tile_barrier;
 
 **Пространство имен** : Concurrency
 
-## <a name="ctor"></a>Конструктор tile_barrier
+## <a name="tile_barrier-constructor"></a><a name="ctor"></a>tile_barrier конструктор
 
-Инициализирует новый экземпляр класса путем копирования существующего.
+Инициализирует новый экземпляр класса, копируя существующий экземпляр.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -74,7 +74,7 @@ tile_barrier(
 
 ## <a name="wait"></a>wait
 
-Указывает всем потокам в группе потоков (плитке), что выполнение будет прервано до завершения ожидания всех потоков в плитке.
+Инструктирует все потоки в группе потоков (плитка) остановить выполнение до тех пор, пока все потоки в плитке не закончат ожидание.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -82,9 +82,9 @@ tile_barrier(
 void wait() const restrict(amp);
 ```
 
-## <a name="wait_with_all_memory_fence"></a>wait_with_all_memory_fence
+## <a name="wait_with_all_memory_fence"></a><a name="wait_with_all_memory_fence"></a>wait_with_all_memory_fence
 
-Блокирует выполнение всех потоков в плитке до тех пор, пока все потоки в плитке не достигли этого вызова. Это гарантирует, что все доступ к памяти будут видны другим потокам в плитке потока и выполнены в порядке программ.
+Блоки выполнения всех потоков в плитке до тех пор, пока все потоки в плитке не достигнут этого вызова. Это гарантирует, что все доступы к памяти будут видны другим потокам в плитке потока и выполнены в порядке программы.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -92,9 +92,9 @@ void wait() const restrict(amp);
 void wait_with_all_memory_fence() const restrict(amp);
 ```
 
-## <a name="a-namewait_with_global_memory_fence-wait_with_global_memory_fence"></a><a name="wait_with_global_memory_fence"> wait_with_global_memory_fence
+## <a name="a-namewait_with_global_memory_fence-wait_with_global_memory_fence"></a><a name="wait_with_global_memory_fence">wait_with_global_memory_fence
 
-Блокирует выполнение всех потоков в плитке до тех пор, пока все потоки в плитке не достигли этого вызова. Это гарантирует, что все доступ к глобальной памяти будут видны другим потокам в плитке потока и выполнены в порядке программ.
+Блоки выполнения всех потоков в плитке до тех пор, пока все потоки в плитке не достигнут этого вызова. Это гарантирует, что все глобальные доступы к памяти будут видны другим потокам в плитке потока и выполнены в порядке программы.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -102,9 +102,9 @@ void wait_with_all_memory_fence() const restrict(amp);
 void wait_with_global_memory_fence() const  restrict(amp);
 ```
 
-## <a name="a-namewait_with_tile_static_memory_fence-wait_with_tile_static_memory_fence"></a><a name="wait_with_tile_static_memory_fence"> wait_with_tile_static_memory_fence
+## <a name="a-namewait_with_tile_static_memory_fence-wait_with_tile_static_memory_fence"></a><a name="wait_with_tile_static_memory_fence">wait_with_tile_static_memory_fence
 
-Блокирует выполнение всех потоков в плитке до тех пор, пока все потоки в плитке не достигли этого вызова. Это гарантирует, что доступ к `tile_static` памяти будет виден другим потокам в плитке потока и выполнен в порядке программ.
+Блоки выполнения всех потоков в плитке до тех пор, пока все потоки в плитке не достигнут этого вызова. Это гарантирует, `tile_static` что доступ к памяти будет виден другим потокам в плитке потока и выполнен в порядке программы.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -114,4 +114,4 @@ void wait_with_tile_static_memory_fence() const restrict(amp);
 
 ## <a name="see-also"></a>См. также раздел
 
-[Пространство имен Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)
+[Пространство имен параллелизма (КЗ АМП)](concurrency-namespace-cpp-amp.md)

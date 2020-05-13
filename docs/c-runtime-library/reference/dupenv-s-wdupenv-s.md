@@ -1,9 +1,11 @@
 ---
 title: _dupenv_s, _wdupenv_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _dupenv_s
 - _wdupenv_s
+- _o__dupenv_s
+- _o__wdupenv_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - dupenv_s function
 - tdupenv_s function
 ms.assetid: b729ecc2-a31d-4ccf-92a7-5accedb8f8c8
-ms.openlocfilehash: f66828e0941c2324d75797cbb1fa77bdfa184205
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 39184eff5db511dfb920782c3e29bf2b0cc9340e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942026"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915184"
 ---
 # <a name="_dupenv_s-_wdupenv_s"></a>_dupenv_s, _wdupenv_s
 
@@ -67,7 +70,7 @@ errno_t _wdupenv_s(
 
 ### <a name="parameters"></a>Параметры
 
-*buffer*<br/>
+*двойной*<br/>
 Буфер для хранения значения переменной.
 
 *numberOfElements*<br/>
@@ -84,9 +87,9 @@ errno_t _wdupenv_s(
 
 Если эти функции не могут выделить достаточно памяти, они устанавливают для *buffer* **значение NULL** , а *numberOfElements* — на 0 и возвращают **еномем**.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Функция **_dupenv_s** выполняет поиск в списке переменных среды для *VarName*. Если переменная найдена, **_dupenv_s** выделяет буфер и копирует значение переменной в буфер. Адрес и длина буфера возвращаются в *buffer* и *numberOfElements*. Выделяя сам буфер, **_dupenv_s** предоставляет более удобную альтернативу [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md).
+Функция **_dupenv_s** выполняет поиск в списке переменных среды для *VarName*. Если переменная найдена, **_dupenv_s** выделяет буфер и копирует значение переменной в буфер. Адрес и длина буфера возвращаются в *buffer* и *numberOfElements*. Выделяя сам буфер, **_dupenv_s** предоставляет более удобную альтернативу [getenv_s _wgetenv_s](getenv-s-wgetenv-s.md).
 
 > [!NOTE]
 > Ответственность за освобождение памяти путем вызова функции [free](free.md) лежит на вызывающей программе.
@@ -95,13 +98,15 @@ errno_t _wdupenv_s(
 
 Если вы не заинтересованы в размере буфера, вы можете передать **значение NULL** для *numberOfElements*.
 
-**_dupenv_s** не учитывает регистр в операционной системе Windows. **_dupenv_s** использует копию среды, на которую указывает глобальная переменная **_environ** для доступа к среде. Обсуждение **_environ**см. в примечаниях в [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md) .
+**_dupenv_s** не учитывает регистр в операционной системе Windows. **_dupenv_s** использует копию среды, на которую указывает глобальная переменная **_environ** для доступа к среде. Обсуждение **_environ**см. в примечаниях в [getenv_s _wgetenv_s](getenv-s-wgetenv-s.md) .
 
 Значение в поле *buffer* является копией значения переменной среды; изменение этого действия не влияет на среду. Чтобы изменить значение переменной среды, используйте функцию [_putenv_s, _wputenv_s](putenv-s-wputenv-s.md).
 
-**_wdupenv_s** — это версия **_dupenv_s**для расширенных символов; аргументы **_wdupenv_s** — это строки расширенных символов. Глобальная переменная **_wenviron** — это версия **_environ**для расширенных символов. Дополнительные сведения об **_wenviron**см. в комментариях в [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md) .
+**_wdupenv_s** — это версия **_dupenv_s**для расширенных символов; аргументы **_wdupenv_s** являются строками расширенных символов. **_Wenviron** глобальная переменная — это версия **_environ**для расширенных символов. Дополнительные сведения об **_wenviron**см. в примечаниях в [getenv_s _wgetenv_s](getenv-s-wgetenv-s.md) .
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|
@@ -114,7 +119,7 @@ errno_t _wdupenv_s(
 |**_dupenv_s**|\<stdlib.h>|
 |**_wdupenv_s**|\<stdlib.h> или \<wchar.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -142,7 +147,7 @@ pathext = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.pl
 nonexistentvariable = (null)
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Управление процессами и средой](../../c-runtime-library/process-and-environment-control.md)<br/>
 [Константы среды](../../c-runtime-library/environmental-constants.md)<br/>

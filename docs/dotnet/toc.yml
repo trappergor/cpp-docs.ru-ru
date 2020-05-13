@@ -1,0 +1,366 @@
+- name: Программирование .NET с использованием C++/CLI
+  href: ../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md
+- name: 'Пошаговое руководство. Компиляция программы C++/CLI, предназначенной для среды CLR'
+  href: ../dotnet/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md
+- name: Задачи C++/CLI
+  expanded: false
+  items:
+    - name: Задачи C++/CLI
+      href: ../dotnet/cpp-cli-tasks.md
+    - name: Практическое руководство. Создание пустых проектов CLR
+      href: ../dotnet/how-to-create-clr-empty-projects.md
+    - name: Практическое руководство. Создание консольных приложений CLR
+      href: ../dotnet/how-to-create-clr-console-applications-cpp-cli.md
+    - name: Практическое руководство. Использование отслеживаемых ссылок в C++/CLI
+      href: ../dotnet/how-to-use-tracking-references-in-cpp-cli.md
+    - name: Практическое руководство. Использование массивов в C++/CLI
+      href: ../dotnet/how-to-use-arrays-in-cpp-cli.md
+    - name: Практическое руководство. Определение и использование классов и структур
+      href: ../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md
+    - name: Семантика стека C++ для ссылочных типов
+      href: ../dotnet/cpp-stack-semantics-for-reference-types.md
+    - name: Определяемые пользователем операторы
+      href: ../dotnet/user-defined-operators-cpp-cli.md
+    - name: Пользовательские преобразования
+      href: ../dotnet/user-defined-conversions-cpp-cli.md
+    - name: initonly
+      href: ../dotnet/initonly-cpp-cli.md
+    - name: Практическое руководство. Определение и использование делегатов
+      href: ../dotnet/how-to-define-and-use-delegates-cpp-cli.md
+    - name: Практическое руководство. Определение и использование перечислений в C++/CLI
+      href: ../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md
+    - name: Практическое руководство. Использование событий в C++/CLI
+      href: ../dotnet/how-to-use-events-in-cpp-cli.md
+    - name: Практическое руководство. Определение статического конструктора интерфейса
+      href: ../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md
+    - name: Практическое руководство. Объявление описателей переопределения в компиляциях в машинный код
+      href: ../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md
+    - name: Практическое руководство. Использование свойств в C++/CLI
+      href: ../dotnet/how-to-use-properties-in-cpp-cli.md
+    - name: Практическое руководство. Использование safe_cast в C++/CLI
+      href: ../dotnet/how-to-use-safe-cast-in-cpp-cli.md
+    - name: Регулярные выражения
+      href: ../dotnet/regular-expressions-cpp-cli.md
+    - name: Работа с файлами и операции ввода-вывода
+      href: ../dotnet/file-handling-and-i-o-cpp-cli.md
+    - name: Работа с графикой
+      href: ../dotnet/graphics-operations-cpp-cli.md
+    - name: Операции Windows
+      href: ../dotnet/windows-operations-cpp-cli.md
+    - name: Доступ к данным с помощью ADO.NET
+      href: ../dotnet/data-access-using-adonet-cpp-cli.md
+- name: Взаимодействие машинного кода и платформы.NET
+  expanded: false
+  items:
+    - name: Взаимодействие машинного кода и платформы.NET
+      href: ../dotnet/native-and-dotnet-interoperability.md
+    - name: Совместимость с другими языками .NET
+      href: ../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md
+    - name: Смешанные (собственные и управляемые) сборки
+      expanded: false
+      items:
+        - name: Смешанные (собственные и управляемые) сборки
+          href: ../dotnet/mixed-native-and-managed-assemblies.md
+        - name: Практическое руководство. Переход на -clr
+          href: ../dotnet/how-to-migrate-to-clr.md
+        - name: Практическое руководство. Компиляция кода MFC и ATL с помощью -clr
+          href: ../dotnet/how-to-compile-mfc-and-atl-code-by-using-clr.md
+        - name: Инициализация смешанных сборок
+          href: ../dotnet/initialization-of-mixed-assemblies.md
+        - name: Поддержка библиотек для смешанных сборок
+          href: ../dotnet/library-support-for-mixed-assemblies.md
+        - name: Вопросы производительности взаимодействия (C++)
+          href: ../dotnet/performance-considerations-for-interop-cpp.md
+        - name: Домены приложений и Visual C++
+          href: ../dotnet/application-domains-and-visual-cpp.md
+        - name: Двойное преобразование (С++)
+          href: ../dotnet/double-thunking-cpp.md
+        - name: 'Способы избегания исключений во время завершения работы среды CLR при использовании COM-объектов, собранных с помощью -clr'
+          href: ../dotnet/avoiding-exceptions-on-clr-shutdown-when-consuming-com-objects-built-with-clr.md
+        - name: Практическое руководство. Создание приложения с частичным доверием путем удаления зависимости от библиотеки DLL CRT
+          href: ../dotnet/create-a-partially-trusted-application.md
+    - name: Использование пользовательского элемента управления формы Windows Forms в MFC
+      expanded: false
+      items:
+        - name: Использование пользовательского элемента управления формы Windows Forms в MFC
+          href: ../dotnet/using-a-windows-form-user-control-in-mfc.md
+        - name: Различия в программировании Windows Forms и MFC
+          href: ../dotnet/windows-forms-mfc-programming-differences.md
+        - name: Размещение пользовательского элемента управления формы Windows Forms в диалоговом окне MFC
+          expanded: false
+          items:
+            - name: Размещение пользовательского элемента управления формы Windows Forms в диалоговом окне MFC
+              href: ../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md
+            - name: Практическое руководство. Создание пользовательского элемента управления и ведущего приложения в диалоговом окне
+              href: ../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md
+            - name: Практическое руководство. Привязка данных DDX-DDV к элементам управления Windows Forms
+              href: ../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md
+            - name: Практическое руководство. Получение событий Windows Forms из собственных классов C++
+              href: ../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md
+        - name: Размещение пользовательского элемента управления формы Windows Forms в качестве представления MFC
+          expanded: false
+          items:
+            - name: Размещение пользовательского элемента управления формы Windows Forms в качестве представления MFC
+              href: ../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md
+            - name: Практическое руководство. Создание пользовательского элемента управления и просмотр ведущего интерфейса MDI
+              href: ../dotnet/how-to-create-the-user-control-and-host-mdi-view.md
+            - name: Практическое руководство. Добавление маршрутизации команд в элемент управления Windows Forms
+              href: ../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md
+            - name: Практическое руководство. Вызов свойств и методов элемента управления Windows Forms
+              href: ../dotnet/how-to-call-properties-and-methods-of-the-windows-forms-control.md
+        - name: Размещение пользовательского элемента управления формы Windows Forms в диалоговом окне MFC
+          href: ../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md
+    - name: Вызов неуправляемых функций из управляемого кода
+      expanded: false
+      items:
+        - name: Вызов неуправляемых функций из управляемого кода
+          href: ../dotnet/calling-native-functions-from-managed-code.md
+        - name: Использование явного вызова PInvoke в C++ (атрибут DllImport)
+          expanded: false
+          items:
+            - name: Использование явного вызова PInvoke в C++ (атрибут DllImport)
+              href: ../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md
+            - name: Практическое руководство. Вызов собственных библиотек DLL из управляемого кода с помощью PInvoke
+              href: ../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md
+            - name: Практическое руководство. Маршалинг строк с помощью PInvoke
+              href: ../dotnet/how-to-marshal-strings-using-pinvoke.md
+            - name: Практическое руководство. Маршалинг структур с помощью PInvoke
+              href: ../dotnet/how-to-marshal-structures-using-pinvoke.md
+            - name: Практическое руководство. Маршалинг массивов с помощью PInvoke
+              href: ../dotnet/how-to-marshal-arrays-using-pinvoke.md
+            - name: Практическое руководство. Маршалинг указателей функций с помощью PInvoke
+              href: ../dotnet/how-to-marshal-function-pointers-using-pinvoke.md
+            - name: Практическое руководство. Маршалинг внедренных указателей с помощью PInvoke
+              href: ../dotnet/how-to-marshal-embedded-pointers-using-pinvoke.md
+        - name: Использование взаимодействия языка C++ (неявный PInvoke)
+          expanded: false
+          items:
+            - name: Использование взаимодействия языка C++ (неявный PInvoke)
+              href: ../dotnet/using-cpp-interop-implicit-pinvoke.md
+            - name: Практическое руководство. Маршалинг строк ANSI с использованием взаимодействия C++
+              href: ../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md
+            - name: Практическое руководство. Маршалинг строк Юникода с использованием взаимодействия C++
+              href: ../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md
+            - name: Практическое руководство. Маршалинг строк СОМ с использованием взаимодействия C++
+              href: ../dotnet/how-to-marshal-com-strings-using-cpp-interop.md
+            - name: Практическое руководство. Маршалинг структур с помощью взаимодействия C++
+              href: ../dotnet/how-to-marshal-structures-using-cpp-interop.md
+            - name: Практическое руководство. Маршалинг массивов с помощью взаимодействия C++
+              href: ../dotnet/how-to-marshal-arrays-using-cpp-interop.md
+            - name: Практическое руководство. Маршалинг обратных вызовов и делегатов с помощью взаимодействия C++
+              href: ../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md
+            - name: Практическое руководство. Маршалинг встроенных указателей с помощью взаимодействия C++
+              href: ../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md
+            - name: Практическое руководство. Расширение библиотеки маршалинга
+              href: ../dotnet/how-to-extend-the-marshaling-library.md
+            - name: 'Практическое руководство. Доступ к символам в System::String'
+              href: ../dotnet/how-to-access-characters-in-a-system-string.md
+            - name: 'Практическое руководство. Преобразование строки char * в массив System::Byte'
+              href: ../dotnet/how-to-convert-char-star-string-to-system-byte-array.md
+            - name: 'Практическое руководство. Преобразование типа System::String в wchar_t* или char*'
+              href: ../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md
+            - name: 'Практическое руководство. Преобразование строки System::String в стандартную строку'
+              href: ../dotnet/how-to-convert-system-string-to-standard-string.md
+            - name: 'Практическое руководство. Преобразование стандартной строки в System::String'
+              href: ../dotnet/how-to-convert-standard-string-to-system-string.md
+            - name: Практическое руководство. Получение указателя на массив байтов
+              href: ../dotnet/how-to-obtain-a-pointer-to-byte-array.md
+            - name: Практическое руководство. Загрузка неуправляемых ресурсов в массив байтов
+              href: ../dotnet/how-to-load-unmanaged-resources-into-a-byte-array.md
+            - name: Практическое руководство. Изменение ссылочного класса в собственной функции
+              href: ../dotnet/how-to-modify-reference-class-in-a-native-function.md
+            - name: 'Практическое руководство. Машинный код или среда CLR: определение цели созданного образа'
+              href: ../dotnet/how-to-determine-if-an-image-is-native-or-clr.md
+            - name: Практическое руководство. Добавление собственной библиотеки DLL в глобальный кэш сборок
+              href: ../dotnet/how-to-add-native-dll-to-global-assembly-cache.md
+            - name: Практическое руководство. Хранение ссылки на тип значения в собственном типе
+              href: ../dotnet/how-to-hold-reference-to-value-type-in-native-type.md
+            - name: Практическое руководство. Хранение ссылки на объект в неуправляемой памяти
+              href: ../dotnet/how-to-hold-object-reference-in-unmanaged-memory.md
+            - name: Практическое руководство. Определение компиляции с помощью -clr
+              href: ../dotnet/how-to-detect-clr-compilation.md
+            - name: 'Практическое руководство. Преобразование между классами System::Guid и _GUID'
+              href: ../dotnet/how-to-convert-between-system-guid-and-guid.md
+            - name: Практическое руководство. Определение выходного параметра
+              href: ../dotnet/how-to-specify-an-out-parameter.md
+            - name: Практическое руководство. Использование собственного типа в компиляции с помощью -clr
+              href: ../dotnet/how-to-use-a-native-type-in-a-clr-compilation.md
+            - name: Практическое руководство. Объявление дескрипторов в собственных типах
+              href: ../dotnet/how-to-declare-handles-in-native-types.md
+            - name: 'Практическое руководство. Создание программы-оболочки собственного класса для использования в C#'
+              href: ../dotnet/how-to-wrap-native-class-for-use-by-csharp.md
+- name: Чистый и проверяемый код
+  expanded: false
+  items:
+    - name: Чистый и проверяемый код
+      href: ../dotnet/pure-and-verifiable-code-cpp-cli.md
+    - name: Практическое руководство. Создание проверяемых проектов C++
+      href: ../dotnet/how-to-create-verifiable-cpp-projects-cpp-cli.md
+    - name: Использование проверяемых сборок с SQL Server
+      href: ../dotnet/using-verifiable-assemblies-with-sql-server-cpp-cli.md
+    - name: Преобразование проектов из смешанного режима в чистый промежуточный язык
+      href: ../dotnet/converting-projects-from-mixed-mode-to-pure-intermediate-language.md
+- name: Сериализация
+  href: ../dotnet/serialization-cpp-cli.md
+- name: Дружественные сборки (C++)
+  href: ../dotnet/friend-assemblies-cpp.md
+- name: Управляемые типы
+  href: ../dotnet/managed-types-cpp-cli.md
+- name: Отражение
+  href: ../dotnet/reflection-cpp-cli.md
+- name: Сборки со строгими именами (подписывание сборок)
+  href: ../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md
+- name: Класс Debug
+  href: ../dotnet/debug-class-cpp-cli.md
+- name: Справочник по библиотеке STL/CLR
+  expanded: false
+  items:
+    - name: Справочник по библиотеке STL/CLR
+      href: ../dotnet/stl-clr-library-reference.md
+    - name: Пространство имен cliext
+      href: ../dotnet/cliext-namespace.md
+    - name: Контейнеры STL/CLR
+      href: ../dotnet/stl-clr-containers.md
+    - name: Требования к элементам-контейнерам STL/CLR
+      href: ../dotnet/requirements-for-stl-clr-container-elements.md
+    - name: Практическое руководство. Преобразование из коллекции .NET в контейнер STL/CLR
+      href: ../dotnet/how-to-convert-from-a-dotnet-collection-to-a-stl-clr-container.md
+    - name: Практическое руководство. Преобразование из контейнера STL/CLR в коллекцию .NET
+      href: ../dotnet/how-to-convert-from-a-stl-clr-container-to-a-dotnet-collection.md
+    - name: Практическое руководство. Предоставление контейнера STL/CLR из сборки
+      href: ../dotnet/how-to-expose-an-stl-clr-container-from-an-assembly.md
+    - name: 'for each, in'
+      href: ../dotnet/for-each-in.md
+    - name: adapter (STL/CLR)
+      href: ../dotnet/adapter-stl-clr.md
+    - name: algorithm (STL/CLR)
+      href: ../dotnet/algorithm-stl-clr.md
+    - name: deque (STL/CLR)
+      href: ../dotnet/deque-stl-clr.md
+    - name: functional (STL/CLR)
+      href: ../dotnet/functional-stl-clr.md
+    - name: hash_map (STL/CLR)
+      href: ../dotnet/hash-map-stl-clr.md
+    - name: hash_multimap (STL/CLR)
+      href: ../dotnet/hash-multimap-stl-clr.md
+    - name: hash_multiset (STL/CLR)
+      href: ../dotnet/hash-multiset-stl-clr.md
+    - name: hash_set (STL/CLR)
+      href: ../dotnet/hash-set-stl-clr.md
+    - name: list (STL/CLR)
+      href: ../dotnet/list-stl-clr.md
+    - name: map (STL/CLR)
+      href: ../dotnet/map-stl-clr.md
+    - name: multimap (STL/CLR)
+      href: ../dotnet/multimap-stl-clr.md
+    - name: multiset (STL/CLR)
+      href: ../dotnet/multiset-stl-clr.md
+    - name: числовой (STL/CLR)
+      href: ../dotnet/numeric-stl-clr.md
+    - name: priority_queue (STL/CLR)
+      href: ../dotnet/priority-queue-stl-clr.md
+    - name: queue (STL/CLR)
+      href: ../dotnet/queue-stl-clr.md
+    - name: set (STL/CLR)
+      href: ../dotnet/set-stl-clr.md
+    - name: stack (STL/CLR)
+      href: ../dotnet/stack-stl-clr.md
+    - name: utility (STL/CLR)
+      href: ../dotnet/utility-stl-clr.md
+    - name: vector (STL/CLR)
+      href: ../dotnet/vector-stl-clr.md
+- name: Библиотека поддержки C++
+  expanded: false
+  items:
+    - name: Библиотека поддержки C++
+      href: ../dotnet/cpp-support-library.md
+    - name: Общие сведения о маршалинге в C++
+      expanded: false
+      items:
+        - name: Общие сведения о маршалинге в C++
+          href: ../dotnet/overview-of-marshaling-in-cpp.md
+        - name: marshal_as
+          href: ../dotnet/marshal-as.md
+        - name: Класс marshal_context
+          href: ../dotnet/marshal-context-class.md
+    - name: Пространство имен msclr
+      href: ../dotnet/msclr-namespace.md
+    - name: Классы управления ресурсами
+      expanded: false
+      items:
+        - name: Классы управления ресурсами
+          href: ../dotnet/resource-management-classes.md
+        - name: auto_gcroot
+          expanded: false
+          items:
+            - name: auto_gcroot
+              href: ../dotnet/auto-gcroot.md
+            - name: Класс auto_gcroot
+              href: ../dotnet/auto-gcroot-class.md
+            - name: Функция swap (auto_gcroot)
+              href: ../dotnet/swap-function-auto-gcroot.md
+        - name: auto_handle
+          href: ../dotnet/auto-handle.md
+          items:
+            - name: auto_handle
+              href: ../dotnet/auto-handle.md
+            - name: Класс auto_handle
+              href: ../dotnet/auto-handle-class.md
+            - name: Функция swap (auto_handle)
+              href: ../dotnet/swap-function-auto-handle.md
+    - name: Синхронизация (класс lock)
+      expanded: false
+      items:
+        - name: Синхронизация (класс lock)
+          href: ../dotnet/synchronization-lock-class.md
+        - name: lock
+          expanded: false
+          items:
+            - name: lock
+              href: ../dotnet/lock.md
+            - name: Класс lock
+              href: ../dotnet/lock-class.md
+            - name: Перечисление lock_when
+              href: ../dotnet/lock-when-enum.md
+    - name: Вызов функций в конкретном домене приложения
+      expanded: false
+      items:
+        - name: Вызов функций в конкретном домене приложения
+          href: ../dotnet/calling-functions-in-a-specific-application-domain.md
+        - name: Функция call_in_appdomain
+          href: ../dotnet/call-in-appdomain-function.md
+    - name: 'com::ptr'
+      expanded: false
+      items:
+        - name: 'com::ptr'
+          href: ../dotnet/com-ptr.md
+        - name: 'Класс com::ptr'
+          href: ../dotnet/com-ptr-class.md
+- name: Исключения в C++/CLI
+  expanded: false
+  items:
+    - name: Исключения в C++/CLI
+      href: ../dotnet/exceptions-in-cpp-cli.md
+    - name: Основные принципы использования управляемых исключений
+      href: ../dotnet/basic-concepts-in-using-managed-exceptions.md
+    - name: Различия в поведении при обработке исключений в -clr
+      href: ../dotnet/differences-in-exception-handling-behavior-under-clr.md
+    - name: finally
+      href: ../dotnet/finally.md
+    - name: 'Практическое руководство. Перехват исключений в машинном коде, создаваемых MSIL'
+      href: ../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md
+    - name: Практическое руководство. Определение и установка глобального обработчика исключений
+      href: ../dotnet/how-to-define-and-install-a-global-exception-handler.md
+- name: Упаковка
+  expanded: false
+  items:
+    - name: Упаковка
+      href: ../dotnet/boxing-cpp-cli.md
+    - name: Практическое руководство. Явный запрос упаковки-преобразования
+      href: ../dotnet/how-to-explicitly-request-boxing.md
+    - name: Практическое руководство. Использование gcnew для создания типов значений и использование неявной упаковки-преобразования
+      href: ../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md
+    - name: Практическое руководство. Распаковка
+      href: ../dotnet/how-to-unbox.md
+    - name: Стандартные преобразования и неявная упаковка-преобразование
+      href: ../dotnet/standard-conversions-and-implicit-boxing.md

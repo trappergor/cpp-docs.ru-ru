@@ -1,6 +1,6 @@
 ---
-title: Константы RELOG_RETENTION_SYSTEM_EVENT_FLAGS
-description: В C++ пакете SDK для аналитики сборки RELOG_RETENTION_SYSTEM_EVENT_FLAGS ссылки на константы.
+title: RELOG_RETENTION_SYSTEM_EVENT_FLAGS константы
+description: Ссылка на констант SDK Build Insights sDK RELOG_RETENTION_SYSTEM_EVENT_FLAGS.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 74afc10faa26ba39a669a05aa3e3cabd1a211293
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 7110f809a819357b31951c203c1fa6ac9fb9f42e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333968"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323474"
 ---
-# <a name="relog_retention_system_event_flags-constants"></a>Константы RELOG_RETENTION_SYSTEM_EVENT_FLAGS
+# <a name="relog_retention_system_event_flags-constants"></a>RELOG_RETENTION_SYSTEM_EVENT_FLAGS константы
 
 ::: moniker range="<=vs-2015"
 
-Пакет C++ SDK для Build Insights совместим с Visual Studio 2017 и более поздних версий. Чтобы просмотреть документацию по этим версиям, присвойте элементу управления "Выбор версий Visual Studio" для этой статьи значение Visual Studio 2017 или Visual Studio 2019.
+SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Константы `RELOG_RETENTION_SYSTEM_EVENT_FLAGS` используются для описания системных событий, которые должны оставаться в журнале трассировки. Используйте их для инициализации поля `SystemEventsRetentionFlags` структуры [RELOG_DESCRIPTOR](relog-descriptor-struct.md) .
+Константы `RELOG_RETENTION_SYSTEM_EVENT_FLAGS` используются для описания событий системы для сохранения перезаписи. Используйте их для [RELOG_DESCRIPTOR](relog-descriptor-struct.md) инициализации `SystemEventsRetentionFlags` поля RELOG_DESCRIPTOR структуры.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -37,12 +37,12 @@ static const unsigned long long
     RELOG_RETENTION_SYSTEM_EVENT_FLAGS_ALL         = 0xFFFFFFFFFFFFFFFFULL;
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 |  |  |
 |--|--|
-| `RELOG_RETENTION_SYSTEM_EVENT_FLAGS_CPU_SAMPLES` | Сохраняет системные события выборки ЦП в трассировке с повторным протоколированием. |
-| `RELOG_RETENTION_SYSTEM_EVENT_FLAGS_ALL` | Все системные события следует записывать в журнал трассировки. |
+| `RELOG_RETENTION_SYSTEM_EVENT_FLAGS_CPU_SAMPLES` | Храните события образца системы процессора в перезаписи. |
+| `RELOG_RETENTION_SYSTEM_EVENT_FLAGS_ALL` | Храните все события системы в перезаписи. |
 
 ## <a name="remarks"></a>Remarks
 

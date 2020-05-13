@@ -1,9 +1,11 @@
 ---
 title: _chdir, _wchdir
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wchdir
 - _chdir
+- _o__chdir
+- _o__wchdir
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - chdir function
 - directories [C++], changing
 ms.assetid: 85e9393b-62ac-45d5-ab2a-fa2217f6152e
-ms.openlocfilehash: 2b54e0978626779be21900e543a546bfae05efe2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a54b42ee92392971fdb6979ee2dc3a3b9c65f184
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939374"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917043"
 ---
 # <a name="_chdir-_wchdir"></a>_chdir, _wchdir
 
@@ -66,7 +69,7 @@ int _wchdir(
 
 В случае успешного выполнения эти функции возвращают значение 0. Возвращаемое значение, равное-1, означает сбой. Если не удалось найти указанный **путь, для** параметра « **еноент**» задается значение «ошибка». Если *dirname* имеет **значение NULL**, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено **,** параметру **еинвал** присваивается значение, а функция возвращает-1.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Функция **_chdir** изменяет текущий рабочий каталог на каталог, указанный параметром *dirname*. Параметр *dirname* должен ссылаться на существующий каталог. Эта функция может изменить текущий рабочий каталог на любом диске. Если в *dirname*указана новая буква диска, также будет изменена буква диска по умолчанию. Например, если А — буква диска по умолчанию, и \BIN — текущий рабочий каталог, следующий вызов изменит текущий рабочий каталог для диска C и установит C как новый диск по умолчанию:
 
@@ -74,9 +77,11 @@ int _wchdir(
 _chdir("c:\temp");
 ```
 
-При использовании необязательной обратной косой **&#92;** черты () в путях необходимо поместить две обратные косые **&#92;** черты () в строковый литерал C для представления одной **&#92;** обратной косой черты ().
+Если в путях используется необязательный символ обратной косой черты (**&#92;**), необходимо поместить две обратные косые черты (**&#92;&#92;**) в строковый литерал C, чтобы представить одну обратную косую черту (**&#92;**).
 
 **_wchdir** — это версия **_chdir**для расширенных символов; Аргумент *dirname* для **_wchdir** является строкой расширенных символов. в противном случае **_wchdir** и **_chdir** ведут себя одинаково.
+
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mapping"></a>Сопоставление универсальных текстовых функций:
 
@@ -91,7 +96,7 @@ _chdir("c:\temp");
 |**_chdir**|\<direct.h>|\<errno.h>|
 |**_wchdir**|\<direct.h> или \<wchar.h>|\<errno.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -152,7 +157,7 @@ Directory of c:\windows
                0 Dir(s)  67,326,029,824 bytes free
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Управление каталогами](../../c-runtime-library/directory-control.md)<br/>
 [_mkdir, _wmkdir](mkdir-wmkdir.md)<br/>

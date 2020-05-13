@@ -10,28 +10,28 @@ f1_keywords:
 helpviewer_keywords:
 - CA2WEX class
 ms.assetid: 317d9ffb-e84f-47e8-beda-57e28fb19124
-ms.openlocfilehash: 927b9f5031bb6262c2f4a071b535802eb9e6990a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a710034c5d94a8fb093a2b6a2a52373e2bab2d6d
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497952"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168505"
 ---
 # <a name="ca2wex-class"></a>Класс CA2WEX
 
 Этот класс используется макросами преобразования строк CA2TEX, CA2CTEX, CT2WEX и CT2CWEX и typedef CA2W.
 
 > [!IMPORTANT]
->  Этот класс и его члены не могут использоваться в приложениях, выполняемых в среда выполнения Windows.
+> Этот класс и его члены не могут использоваться в приложениях, выполняемых в среда выполнения Windows.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 template <int t_nBufferLength = 128>
 class CA2WEX
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 *t_nBufferLength*<br/>
 Размер буфера, используемого в процессе перевода. Длина по умолчанию составляет 128 байт.
@@ -40,31 +40,31 @@ class CA2WEX
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[CA2WEX::CA2WEX](#ca2wex)|Конструктор.|
 |[CA2WEX:: ~ CA2WEX](#dtor)|Деструктор|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[CA2WEX:: operator LPWSTR](#operator_lpwstr)|Оператор преобразования.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CA2WEX::m_psz](#m_psz)|Элемент данных, в котором хранится исходная строка.|
-|[CA2WEX::m_szBuffer](#m_szbuffer)|Статический буфер, используемый для хранения преобразованной строки.|
+|[CA2WEX:: m_psz](#m_psz)|Элемент данных, в котором хранится исходная строка.|
+|[CA2WEX:: m_szBuffer](#m_szbuffer)|Статический буфер, используемый для хранения преобразованной строки.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Если не требуется дополнительных функций, используйте в коде CA2TEX, CA2CTEX, CT2WEX, CT2CWEX или CA2W.
 
 Этот класс содержит статический буфер фиксированного размера, который используется для хранения результата преобразования. Если результат слишком велик для использования в статическом буфере, класс выделяет память с помощью функции **malloc**, освобождая память, когда объект выходит из области. Это гарантирует, что, в отличие от макросов преобразования текста, доступных в предыдущих версиях ATL, этот класс можно использовать в циклах, и он не будет переполнен стек.
 
-Если класс пытается выделить память в куче и завершается ошибкой, он будет вызываться `AtlThrow` с аргументом E_OUTOFMEMORY.
+Если класс пытается выделить память в куче и завершается ошибкой, он вызывается `AtlThrow` с аргументом E_OUTOFMEMORY.
 
 По умолчанию классы и макросы преобразования ATL используют для преобразования кодовую страницу ANSI текущего потока. Если вы хотите переопределить это поведение для конкретного преобразования, укажите кодовую страницу в качестве второго параметра для конструктора класса.
 
@@ -92,11 +92,11 @@ class CA2WEX
 
 **Заголовок:** атлконв. h
 
-##  <a name="ca2wex"></a>CA2WEX::CA2WEX
+## <a name="ca2wexca2wex"></a><a name="ca2wex"></a>CA2WEX::CA2WEX
 
 Конструктор.
 
-```
+```cpp
 CA2WEX(LPCSTR psz, UINT nCodePage) throw(...);
 CA2WEX(LPCSTR psz) throw(...);
 ```
@@ -109,43 +109,43 @@ CA2WEX(LPCSTR psz) throw(...);
 *нкодепаже*<br/>
 Кодовая страница, используемая для выполнения преобразования. Дополнительные сведения см. в обсуждении параметров кодовой страницы для функции Windows SDK [MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar) .
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Выделяет буфер, используемый в процессе перевода.
 
-##  <a name="dtor"></a>CA2WEX:: ~ CA2WEX
+## <a name="ca2wexca2wex"></a><a name="dtor"></a>CA2WEX:: ~ CA2WEX
 
 Деструктор
 
-```
+```cpp
 ~CA2WEX() throw();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Освобождает выделенный буфер.
 
-##  <a name="m_psz"></a>CA2WEX::m_psz
+## <a name="ca2wexm_psz"></a><a name="m_psz"></a>CA2WEX:: m_psz
 
 Элемент данных, в котором хранится исходная строка.
 
-```
+```cpp
 LPWSTR m_psz;
 ```
 
-##  <a name="m_szbuffer"></a>CA2WEX::m_szBuffer
+## <a name="ca2wexm_szbuffer"></a><a name="m_szbuffer"></a>CA2WEX:: m_szBuffer
 
 Статический буфер, используемый для хранения преобразованной строки.
 
-```
+```cpp
 wchar_t m_szBuffer[t_nBufferLength];
 ```
 
-##  <a name="operator_lpwstr"></a>CA2WEX:: operator LPWSTR
+## <a name="ca2wexoperator-lpwstr"></a><a name="operator_lpwstr"></a>CA2WEX:: operator LPWSTR
 
 Оператор преобразования.
 
-```
+```cpp
 operator LPWSTR() const throw();
 ```
 
@@ -160,4 +160,4 @@ operator LPWSTR() const throw();
 [Класс CW2AEX](../../atl/reference/cw2aex-class.md)<br/>
 [Класс CW2CWEX](../../atl/reference/cw2cwex-class.md)<br/>
 [Класс CW2WEX](../../atl/reference/cw2wex-class.md)<br/>
-[Обзор класса](../../atl/atl-class-overview.md)
+[Общие сведения о классах](../../atl/atl-class-overview.md)

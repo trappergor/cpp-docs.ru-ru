@@ -16,12 +16,12 @@ helpviewer_keywords:
 - stdext::max_none [C++], released
 - stdext::max_none [C++], saved
 ms.assetid: 12ab5376-412e-479c-86dc-2c3d6a3559b6
-ms.openlocfilehash: b296c641be68efac7410328a448a4ad2bd0fa88e
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: c49ceec72be62d8ff3125f04d97bbb6952501677
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626832"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370982"
 ---
 # <a name="max_none-class"></a>Класс max_none
 
@@ -38,16 +38,16 @@ class max_none
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*Max*|Класс max, который определяет максимальное количество элементов для хранения в `freelist`.|
+|*Макс*|Класс max, который определяет максимальное количество элементов для хранения в `freelist`.|
 
-### <a name="member-functions"></a>Функции-члены
+### <a name="member-functions"></a>Функции элементов
 
-|Функция Member|Описание|
+|Функция-член|Описание|
 |-|-|
 |[allocated](#allocated)|Увеличивает счетчик выделенных блоков памяти.|
-|[deallocated](#deallocated)|Уменьшает счетчик выделенных блоков памяти.|
-|[full](#full)|Возвращает значение, указывающее, следует ли добавить дополнительные блоки памяти для свободного списка.|
-|[released](#released)|Уменьшает количество блоков памяти в свободном списке.|
+|[Освобождена](#deallocated)|Уменьшает счетчик выделенных блоков памяти.|
+|[Полный](#full)|Возвращает значение, указывающее, следует ли добавить дополнительные блоки памяти для свободного списка.|
+|[Выпущен](#released)|Уменьшает количество блоков памяти в свободном списке.|
 |[saved](#saved)|Увеличивает количество блоков памяти в свободном списке.|
 
 ## <a name="requirements"></a>Требования
@@ -56,7 +56,7 @@ class max_none
 
 **Пространство имен:** stdext
 
-## <a name="allocated"></a>  max_none::allocated
+## <a name="max_noneallocated"></a><a name="allocated"></a>max_none::выделено
 
 Увеличивает счетчик выделенных блоков памяти.
 
@@ -70,11 +70,11 @@ void allocated(std::size_t _Nx = 1);
 |---------------|-----------------|
 |*_Nx*|Значение приращения.|
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-Эта функция-член ничего не делает. Он вызывается после каждого успешного вызова с `cache_freelist::allocate` оператора **New**. Аргумент *_Nx* — это количество блоков памяти в блоке, выделенном оператором **New**.
+Эта функция-член ничего не делает. Оно вызвано после каждого `cache_freelist::allocate` успешного звонока к оператору **новому**. Аргументом *_Nx* является количество блоков памяти в блоке, выделенном оператором **новым.**
 
-## <a name="deallocated"></a>  max_none::deallocated
+## <a name="max_nonedeallocated"></a><a name="deallocated"></a>max_none::dвыделено
 
 Уменьшает счетчик выделенных блоков памяти.
 
@@ -88,11 +88,11 @@ void deallocated(std::size_t _Nx = 1);
 |---------------|-----------------|
 |*_Nx*|Значение приращения.|
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-Эта функция-член ничего не делает. Эта функция-член вызывается после каждого вызова с помощью `cache_freelist::deallocate` оператору **Delete**. Аргумент *_Nx* — это количество блоков памяти в блоке, освобожденных оператором **Delete**.
+Эта функция-член ничего не делает. Эта функция участника вызывается `cache_freelist::deallocate` после каждого вызова оператором **удаления.** Аргументом *_Nx* является количество блоков памяти в сделке, размещенной оператором, **удаляется.**
 
-## <a name="full"></a>  max_none::full
+## <a name="max_nonefull"></a><a name="full"></a>max_none::полный
 
 Возвращает значение, указывающее, следует ли добавить дополнительные блоки памяти для свободного списка.
 
@@ -102,13 +102,13 @@ bool full();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Эта функция члена всегда возвращает **значение true**.
+Эта функция члена всегда **возвращается верно**.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-Эта функция-член вызывается `cache_freelist::deallocate`. Если вызов возвращает **значение true**, `deallocate` помещает блок памяти в свободный список; Если возвращается **значение false**, `deallocate` вызывает оператор **Delete** для освобождения блока.
+Эта функция-член вызывается `cache_freelist::deallocate`. Если вызов возвращается `deallocate` **верно,** помещает блок памяти в свободный список; если он возвращает `deallocate` **ложные,** вызовы оператора **удалить,** чтобы разблокировать блок.
 
-## <a name="released"></a>  max_none::released
+## <a name="max_nonereleased"></a><a name="released"></a>max_none::выпущен
 
 Уменьшает количество блоков памяти в свободном списке.
 
@@ -116,11 +116,11 @@ bool full();
 void released();
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Эта функция-член ничего не делает. Функция-член `released` текущего класса max вызывается `cache_freelist::allocate` каждый раз при удалении блока памяти из свободного списка.
 
-## <a name="saved"></a>  max_none::saved
+## <a name="max_nonesaved"></a><a name="saved"></a>max_none:::сохранено
 
 Увеличивает количество блоков памяти в свободном списке.
 
@@ -128,10 +128,10 @@ void released();
 void saved();
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Эта функция-член ничего не делает. Вызывается методом `cache_freelist::deallocate` каждый раз, когда он помещает блок памяти свободного списка.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<>-подлатыватели](../standard-library/allocators-header.md)

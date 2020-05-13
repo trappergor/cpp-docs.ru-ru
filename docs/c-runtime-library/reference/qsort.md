@@ -1,8 +1,9 @@
 ---
 title: qsort
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - qsort
+- _o_qsort
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - sorting arrays
 - arrays [CRT], sorting
 ms.assetid: d6cb33eb-d209-485f-8d41-229eb743c027
-ms.openlocfilehash: f445158bb72c50507af913986aff2d225ee50928
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3d9c3481b37e94dbb59ee7356caafc53501045ea
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949702"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913256"
 ---
 # <a name="qsort"></a>qsort
 
@@ -56,16 +58,16 @@ void qsort(
 *base*<br/>
 Начало целевого массива.
 
-*Нумерация*<br/>
+*number*<br/>
 Размер массива в элементах.
 
 *width*<br/>
 Размер элементов в байтах.
 
-*compare*<br/>
+*равенств*<br/>
 Указатель на пользовательскую подпрограмму, которая сравнивает два элемента массива и возвращает значение, показывающее, как соотносятся их значения.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Функция **qsort** реализует алгоритм быстрой сортировки для сортировки массива *числовых* элементов, каждый из которых имеет *ширину* в байтах. *Основание* аргумента — это указатель на базовую часть массива, который необходимо отсортировать. **qsort** перезаписывает этот массив с помощью отсортированных элементов.
 
@@ -87,13 +89,15 @@ compare( (void *) & elem1, (void *) & elem2 );
 
 Эта функция проверяет свои параметры. Если *параметр Compare* или *Number* имеет **значение NULL**или *Если Base* имеет **значение NULL** , а *Number* имеет ненулевое значение или если *Width* меньше нуля, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает значение, а параметру " **No** " — **еинвал**.
 
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
+
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
 |**qsort**|\<stdlib.h> и \<search.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -139,8 +143,8 @@ int compare( const void *arg1, const void *arg2 )
 boy deserves every favor good
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Сортировка и поиск](../../c-runtime-library/searching-and-sorting.md)<br/>
+[Поиск и сортировка](../../c-runtime-library/searching-and-sorting.md)<br/>
 [bsearch](bsearch.md)<br/>
 [_lsearch](lsearch.md)<br/>

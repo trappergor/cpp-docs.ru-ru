@@ -1,8 +1,9 @@
 ---
 title: _eof
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _eof
+- _o__eof
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - testing, for end-of-file
 - end of file
 ms.assetid: 265703f4-d07e-4005-abf3-b1d0cdd9e0b0
-ms.openlocfilehash: 5b5c27f1de3369369776dd030df21be05cf20b7a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5d00be1da0f329c43f1b6ea0f912ede74b307bbb
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942000"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915060"
 ---
 # <a name="_eof"></a>_eof
 
@@ -50,16 +52,18 @@ int _eof(
 
 ### <a name="parameters"></a>Параметры
 
-*fd*<br/>
+*демо*<br/>
 Дескриптор файла, ссылающийся на открытый файл.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**_eof** возвращает 1, если текущая точка — конец файла, или 0, если нет. Возвращаемое значение, равное-1, указывает на ошибку; в этом случае вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено **, для** параметра **значение EBADF**устанавливается значение, указывающее на недопустимый дескриптор файла.
+**_eof** возвращает значение 1, если текущая точка — конец файла, или значение 0, если это не так. Возвращаемое значение, равное-1, указывает на ошибку; в этом случае вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено **, для** параметра **значение EBADF**устанавливается значение, указывающее на недопустимый дескриптор файла.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Функция **_eof** определяет, был ли достигнут конец файла, связанного с *демоном* .
+
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -67,7 +71,7 @@ int _eof(
 |--------------|---------------------|---------------------|
 |**_eof**|\<io.h>|\<errno.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 

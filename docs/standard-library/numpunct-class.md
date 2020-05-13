@@ -30,16 +30,16 @@ helpviewer_keywords:
 - std::numpunct [C++], thousands_sep
 - std::numpunct [C++], truename
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
-ms.openlocfilehash: 07285f5c014db1ddf419c372913cac0364538a55
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 0bdd6556df892e5e231919dbc4ae95d14a6f95fe
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425313"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373614"
 ---
 # <a name="numpunct-class"></a>Класс numpunct
 
-Шаблон класса, описывающий объект, который может служить локальным аспектом для описания последовательностей типа `CharType` используемое для представления сведений о форматировании и пунктуации числовых и логических выражений.
+Шаблон класса, описывающий объект, который может служить локальным аспектом для описания последовательностей типа, `CharType` используемых для представления информации о форматировании и пунктуации численных и булеанных выражений.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -50,7 +50,7 @@ class numpunct : public locale::facet;
 
 ### <a name="parameters"></a>Параметры
 
-*CharType*\
+*Chartype*\
 Тип, используемый внутри программы для кодирования символов в языковом стандарте.
 
 ## <a name="remarks"></a>Remarks
@@ -59,39 +59,39 @@ class numpunct : public locale::facet;
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Description|
+|Конструктор|Описание|
 |-|-|
 |[numpunct](#numpunct)|Конструктор для объектов типа `numpunct`.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Description|
+|Имя типа|Описание|
 |-|-|
 |[char_type](#char_type)|Тип, используемый для описания символа, используемого языковым стандартом.|
 |[string_type](#string_type)|Тип, описывающий строку, содержащую символы типа `CharType`.|
 
 ### <a name="member-functions"></a>Функции элементов
 
-|Функция-член|Description|
+|Функция-член|Описание|
 |-|-|
 |[decimal_point](#decimal_point)|Возвращает элемент определенного языкового стандарта для использования в качестве десятичного разделителя.|
 |[do_decimal_point](#do_decimal_point)|Защищенная виртуальная функция-член, которая вызывается, чтобы возвратить элемент определенного языкового стандарта для использования в качестве десятичного разделителя.|
-|[do_falsename](#do_falsename)|Защищенная виртуальная функция-член, которая вызывается для возврата строки, используемой в качестве текстового представления значения **false**.|
+|[do_falsename](#do_falsename)|Защищенная функция виртуального члена, которая называется для возврата строки для использования в качестве текстового представления **ложного**значения.|
 |[do_grouping](#do_grouping)|Защищенная виртуальная функция-член, вызываемая для того, чтобы возвратить определенное языковым стандартом правило группирования цифр слева от любого десятичного разделителя.|
 |[do_thousands_sep](#do_thousands_sep)|Защищенная виртуальная функция-член, которая вызывается, чтобы возвратить элемент определенного языкового стандарта для использования в качестве разделителя тысяч.|
 |[do_truename](#do_truename)|Защищенная виртуальная функция-член, вызываемая для возврата строки, которая будет использоваться как текстовое представление значения **true**.|
 |[falsename](#falsename)|Возвращает строку, которая будет использоваться как текстовое представление значения **false**.|
-|[grouping](#grouping)|Возвращает определенное языковым стандартом правило группирования цифр слева от любого десятичного разделителя.|
+|[Группировки](#grouping)|Возвращает определенное языковым стандартом правило группирования цифр слева от любого десятичного разделителя.|
 |[thousands_sep](#thousands_sep)|Возвращает элемент определенного языкового стандарта для использования в качестве разделителя тысяч.|
 |[truename](#truename)|Возвращает строку, которая будет использоваться как текстовое представление значения **true**.|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<языковой стандарт >
+**Заголовок:** \<locale>
 
 **Пространство имен:** std
 
-## <a name="char_type"></a>  numpunct::char_type
+## <a name="numpunctchar_type"></a><a name="char_type"></a>numpunct::char_type
 
 Тип, используемый для описания символа, используемого языковым стандартом.
 
@@ -101,9 +101,9 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Remarks
 
-Тип является синонимом для параметра-шаблона **Chartype.**
+Тип является синонимом параметра **шаблона CharType.**
 
-## <a name="decimal_point"></a>  numpunct::decimal_point
+## <a name="numpunctdecimal_point"></a><a name="decimal_point"></a>numpunct::decimal
 
 Возвращает элемент определенного языкового стандарта для использования в качестве десятичного разделителя.
 
@@ -146,7 +146,7 @@ German_Germany.1252 decimal point ,
 German_Germany.1252 thousands separator .
 ```
 
-## <a name="do_decimal_point"></a>  numpunct::do_decimal_point
+## <a name="numpunctdo_decimal_point"></a><a name="do_decimal_point"></a>numpunct::do-decimal'point
 
 Защищенная виртуальная функция-член, которая вызывается, чтобы возвратить элемент определенного языкового стандарта для использования в качестве десятичного разделителя.
 
@@ -162,7 +162,7 @@ virtual CharType do_decimal_point() const;
 
 См. пример для [decimal_point](#decimal_point), где виртуальная функция-член вызывается из `decimal_point`.
 
-## <a name="do_falsename"></a>  numpunct::do_falsename
+## <a name="numpunctdo_falsename"></a><a name="do_falsename"></a>numpunct::do-falsename
 
 Защищенная виртуальная функция-член возвращает последовательность, которая будет использоваться как текстовое представление значения **false**.
 
@@ -182,7 +182,7 @@ virtual string_type do_falsename() const;
 
 См. пример для [falsename](#falsename), где виртуальная функция-член вызывается из `falsename`.
 
-## <a name="do_grouping"></a>  numpunct::do_grouping
+## <a name="numpunctdo_grouping"></a><a name="do_grouping"></a>numpunct::do-grouping
 
 Защищенная виртуальная функция-член, вызываемая для того, чтобы возвратить определенное языковым стандартом правило группирования цифр слева от любого десятичного разделителя.
 
@@ -200,9 +200,9 @@ virtual string do_grouping() const;
 
 ### <a name="example"></a>Пример
 
-См. пример для [группирования](#grouping), где виртуальная функция-член вызывается `grouping`.
+См пример для [группировки,](#grouping)где виртуальная `grouping`функция члена вызывается .
 
-## <a name="do_thousands_sep"></a>  numpunct::do_thousands_sep
+## <a name="numpunctdo_thousands_sep"></a><a name="do_thousands_sep"></a>numpunct::do-thousands
 
 Защищенная виртуальная функция-член, которая вызывается, чтобы возвратить элемент определенного языкового стандарта для использования в качестве разделителя тысяч.
 
@@ -216,13 +216,13 @@ virtual CharType do_thousands_sep() const;
 
 ### <a name="remarks"></a>Remarks
 
-Защищенная виртуальная функция-член возвращает элемент типа `CharType`, зависящий от языкового стандарта, для использования в качестве разделителя групп слева от любой десятичной запятой.
+Защищенная функция виртуального члена возвращает элемент `CharType` типа, специфичный для локального типа, для использования в качестве группового сепаратора слева от любой десятичной точки.
 
 ### <a name="example"></a>Пример
 
 См. пример для [thousands_sep](#thousands_sep), где виртуальная функция-член вызывается из `thousands_sep`.
 
-## <a name="do_truename"></a>  numpunct::do_truename
+## <a name="numpunctdo_truename"></a><a name="do_truename"></a>numpunct::do-truename
 
 Защищенная виртуальная функция-член, вызываемая для возврата строки, которая будет использоваться как текстовое представление значения **true**.
 
@@ -240,7 +240,7 @@ virtual string_type do_truename() const;
 
 См. пример для [truename](#truename), где виртуальная функция-член вызывается из `truename`.
 
-## <a name="falsename"></a>  numpunct::falsename
+## <a name="numpunctfalsename"></a><a name="falsename"></a>numpunct::falsename
 
 Возвращает строку, которая будет использоваться как текстовое представление значения **false**.
 
@@ -250,7 +250,7 @@ string_type falsename() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Строка, содержащая последовательность `CharType`s для использования в качестве текстового представления значения **false**.
+Строка, содержащая последовательность `CharType`s для использования в качестве текстового представления значения **ложного.**
 
 ### <a name="remarks"></a>Remarks
 
@@ -289,7 +289,7 @@ French_France.1252 truename true
 French_France.1252 falsename false
 ```
 
-## <a name="grouping"></a>  numpunct::grouping
+## <a name="numpunctgrouping"></a><a name="grouping"></a>numpunct::grouping
 
 Возвращает определенное языковым стандартом правило группирования цифр слева от любого десятичного разделителя.
 
@@ -335,7 +335,7 @@ German_Germany.1252 international grouping:
 the 0th group to the left of the radix character is of size 3
 ```
 
-## <a name="numpunct"></a>  numpunct::numpunct
+## <a name="numpunctnumpunct"></a><a name="numpunct"></a>numpunct:numpunct
 
 Конструктор для объектов типа `numpunct`.
 
@@ -345,26 +345,26 @@ explicit numpunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Параметры
 
-*_Refs*\
+*_refs*\
 Целочисленное значение, используемое для указания типа управления памятью для объекта.
 
 ### <a name="remarks"></a>Remarks
 
-Возможные значения параметра *_Refs* и их значимость:
+Возможные значения для *параметра _Refs* и их значение:
 
 - 0: время существования объекта управляется языковыми стандартами, которые его содержат.
 
 - 1: время существования объекта должно управляться вручную.
 
-- \> 1: эти значения не определены.
+- \>1: Эти значения не определены.
 
 Прямые примеры привести нельзя, так как деструктор защищен.
 
-Конструктор инициализирует свой базовый объект с **языковым стандартом::** [Facet](../standard-library/locale-class.md#facet_class)(`_Refs`).
+Конструктор инициализирует свой базовый объект с`_Refs` **помощью локализации::**[грань](../standard-library/locale-class.md#facet_class)( ).
 
-## <a name="string_type"></a>  numpunct::string_type
+## <a name="numpunctstring_type"></a><a name="string_type"></a>numpunct::string_type
 
-Тип, который описывает строку, содержащую символы типа **CharType**.
+Тип, который описывает строку символов типа **CharType**.
 
 ```cpp
 typedef basic_string<CharType, Traits, Allocator> string_type;
@@ -372,9 +372,9 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>Remarks
 
-Тип описывает специализацию шаблона класса [basic_string](../standard-library/basic-string-class.md) , объекты которой могут хранить копии последовательностей пунктуации.
+Тип описывает специализацию шаблона класса [basic_string](../standard-library/basic-string-class.md) объекты которых могут хранить копии последовательностей знаков препинания.
 
-## <a name="thousands_sep"></a>  numpunct::thousands_sep
+## <a name="numpunctthousands_sep"></a><a name="thousands_sep"></a>numpunct::thousands_sep
 
 Возвращает элемент определенного языкового стандарта для использования в качестве разделителя тысяч.
 
@@ -417,7 +417,7 @@ German_Germany.1252 decimal point ,
 German_Germany.1252 thousands separator .
 ```
 
-## <a name="truename"></a>  numpunct::truename
+## <a name="numpuncttruename"></a><a name="truename"></a>numpunct::truename
 
 Возвращает строку, которая будет использоваться как текстовое представление значения **true**.
 
@@ -468,6 +468,6 @@ French_France.1252 falsename false
 
 ## <a name="see-also"></a>См. также раздел
 
-[\<locale>](../standard-library/locale.md)\
-[Класс facet](../standard-library/locale-class.md#facet_class)\
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[\<локализовая>](../standard-library/locale.md)\
+[класс граней](../standard-library/locale-class.md#facet_class)\
+[Безопасность резьбы в стандартной библиотеке СЗ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

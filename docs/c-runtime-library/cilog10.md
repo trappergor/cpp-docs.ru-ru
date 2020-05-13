@@ -1,8 +1,9 @@
 ---
 title: _CIlog10
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _CIlog10
+- _o__CIlog10
 api_location:
 - msvcr100.dll
 - msvcr120.dll
@@ -12,6 +13,7 @@ api_location:
 - msvcrt.dll
 - msvcr110.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -23,12 +25,12 @@ helpviewer_keywords:
 - _CIlog10 intrinsic
 - CIlog10 intrinsic
 ms.assetid: 05d7fcaa-3cff-4cc5-8d44-015e7cacba24
-ms.openlocfilehash: c99fdab859acf280afc8a595696a17b2d03a47e4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: ba5868892a352f071774a817e375c1f43505ed02
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944614"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918012"
 ---
 # <a name="_cilog10"></a>_CIlog10
 
@@ -36,21 +38,23 @@ ms.locfileid: "70944614"
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 void __cdecl _CIlog10();
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Эта версия функции `log10` включает специальные соглашения о вызовах, распознаваемые компилятором. Она ускоряет выполнение, так как исключает создание копий и помогает распределять регистры.
 
 Полученное значение помещается в верхнюю часть стека.
 
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](global-state.md).
+
 ## <a name="requirements"></a>Требования
 
 **Платформа:** x86
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Алфавитный указатель функций](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [log, logf, log10, log10f](../c-runtime-library/reference/log-logf-log10-log10f.md)

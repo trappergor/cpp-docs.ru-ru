@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - vararg attribute
 ms.assetid: 20fc3244-18e9-411c-990e-d5b4fa29a570
-ms.openlocfilehash: d1c6b1a4e049bccfcf3e16bae4b5f9b285d11192
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 4761f65e0862a8de07330305b292b5b3501cac68
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514896"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166020"
 ---
 # <a name="vararg"></a>vararg
 
@@ -23,7 +23,7 @@ ms.locfileid: "69514896"
 [vararg]
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Атрибут **vararg** C++ имеет те же функциональные возможности, что и атрибут [vararg](/windows/win32/Midl/vararg) в MIDL.
 
@@ -51,14 +51,14 @@ __interface X : public IUnknown
 
 |||
 |-|-|
-|**Относится к**|Метод интерфейса|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Отсутствуют|
-|**Недопустимые атрибуты**|Отсутствуют|
+|**Применение**|Метод интерфейса|
+|**Повторяемый**|нет|
+|**Обязательные атрибуты**|None|
+|**Недопустимые атрибуты**|None|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты метода](method-attributes.md)

@@ -11,30 +11,30 @@ helpviewer_keywords:
 - tables [C++], OLE DB Consumer Templates
 - OLE DB consumer templates, command support
 ms.assetid: 4bd3787b-6d26-40a9-be0c-083080537c12
-ms.openlocfilehash: b2cdf7a2b439af3a564f5801e015f6064fb141dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d5f6bd8d5f813497cba399e5c071f43dc1a7c4d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409099"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211527"
 ---
 # <a name="commands-and-tables"></a>Команды и таблицы
 
-Команды и таблицы дают возможность доступа к наборам строк; то есть откройте наборы строк, выполнять команды и привязывать столбцы. [CCommand](../../data/oledb/ccommand-class.md) и [CTable](../../data/oledb/ctable-class.md) классы, создания экземпляров объектов команд и таблиц, соответственно. Эти классы являются производными от [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) как показано на рисунке ниже.
+Команды и таблицы позволяют получить доступ к наборам строк; то есть открытые наборы строк, выполнение команд и привязка столбцов. Классы [CCommand](../../data/oledb/ccommand-class.md) и [CTable](../../data/oledb/ctable-class.md) создают экземпляры объектов Command и Table соответственно. Эти классы являются производными от [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) , как показано на следующем рисунке.
 
 ![CCommand и CTable](../../data/oledb/media/vccommandstables.gif "CCommand и CTable")<br/>
 Классы команд и таблиц
 
-В предыдущей таблице `TAccessor` может быть любым типом метода доступа, перечисленных в [типы методов доступа](../../data/oledb/accessors-and-rowsets.md). `TRowset` может быть любым типом набора строк, перечисленных в [типы наборов строк](../../data/oledb/accessors-and-rowsets.md). `TMultiple` Указывает тип результата (один или несколько результирующих наборов).
+В предыдущей таблице `TAccessor` может быть любым типом метода доступа, перечисленным в [типах методов доступа](../../data/oledb/accessors-and-rowsets.md). `TRowset` может быть любым типом набора строк, указанным в [типах наборов строк](../../data/oledb/accessors-and-rowsets.md). `TMultiple` указывает тип результата (один или несколько результирующих наборов).
 
-[Мастер потребителя ATL OLE DB](../../atl/reference/atl-ole-db-consumer-wizard.md) позволяет указать, следует ли объект команд или таблиц.
+[Мастер ATL OLE DB Consumer](../../atl/reference/atl-ole-db-consumer-wizard.md) позволяет указать, нужно ли использовать объект Command или Table.
 
-- Для источников данных без команды, можно использовать `CTable` класса. Обычно он используется для простых наборов строк, не указаны другие параметры и не требуется нескольких результатов. Этот простой класс открывает таблицу в источнике данных с помощью имени таблицы, указанной вами.
+- Для источников данных без команд можно использовать класс `CTable`. Обычно он используется для простых наборов строк, которые не задают никаких параметров и не требует нескольких результатов. Этот простой класс открывает таблицу в источнике данных, используя указанное имя таблицы.
 
-- Для источников данных, поддерживающих команды, можно использовать `CCommand` вместо этого класса. Чтобы выполнить команду, вызовите [откройте](../../data/oledb/ccommand-open.md) для данного класса. Кроме того, можно вызвать `Prepare` для подготовки команды, которую требуется выполнить более одного раза.
+- Для источников данных, поддерживающих команды, вместо них можно использовать класс `CCommand`. Чтобы выполнить команду, вызовите метод [Open](../../data/oledb/ccommand-open.md) для этого класса. В качестве альтернативы можно вызвать `Prepare` для подготовки команды, которую требуется выполнить более одного раза.
 
-   `CCommand` с тремя аргументами шаблона: тип метода доступа, тип набора строк и тип результата (`CNoMultipleResults`, по умолчанию или `CMultipleResults`). Если указать `CMultipleResults`, `CCommand` поддерживает класс `IMultipleResults` интерфейс и обрабатывает несколько наборов строк. [DBVIEWER](https://github.com/Microsoft/VCSamples) примере показано, как обрабатывать несколько результатов.
+   `CCommand` имеет три аргумента шаблона: тип метода доступа, тип набора строк и тип результата (`CNoMultipleResults`, по умолчанию или `CMultipleResults`). При указании `CMultipleResults`класс `CCommand` поддерживает интерфейс `IMultipleResults` и обрабатывает несколько наборов строк. В примере [дбвиевер](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer) показано, как управлять несколькими результатами.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+[Шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

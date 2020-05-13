@@ -11,16 +11,16 @@ helpviewer_keywords:
 - ActivatableClass
 - ActivatableClassWithFactoryEx
 ms.assetid: 9bd64709-ec2c-4678-8c96-ea5982622bdd
-ms.openlocfilehash: 7d38db9e7d3fa94c89195b6379e14692f26f7ee5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7bc3d789d6c0d304aa170d59dff23a97a67061d7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62304141"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214289"
 ---
 # <a name="activatableclass-macros"></a>Макрос ActivatableClass
 
-Заполняет внутренний кэш, содержащий фабрику, можно создать экземпляр указанного класса.
+Заполняет внутренний кэш, содержащий фабрику, которая может создать экземпляр указанного класса.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -46,22 +46,22 @@ ActivatableClassWithFactoryEx(
 *className*<br/>
 Имя создаваемого класса.
 
-*фабрики*<br/>
-Фабрика, которая будет создавать экземпляр указанного класса.
+*установлен*<br/>
+Фабрика, которая создаст экземпляр указанного класса.
 
-*Имя_сервера*<br/>
-Имя, которое определяет подмножество фабрики в модуле.
+*serverName*<br/>
+Имя, указывающее подмножество фабрик в модуле.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Не используйте эти макросы с помощью классической COM, если вы не используете `#undef` директиву, чтобы убедиться, что `__WRL_WINRT_STRICT__` удаляется определение макроса.
+Не используйте эти макросы с классической моделью COM, если не используется директива `#undef`, чтобы гарантировать удаление определения макроса `__WRL_WINRT_STRICT__`.
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** module.h
+**Заголовок:** Module. h
 
 **Пространство имен:** Microsoft::WRL
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс Module](module-class.md)

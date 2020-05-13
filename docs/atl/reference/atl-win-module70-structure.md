@@ -9,20 +9,20 @@ helpviewer_keywords:
 - _ATL_WIN_MODULE70 structure
 - ATL_WIN_MODULE70 structure
 ms.assetid: a0aaf3ea-ca77-46ec-bd53-4dfb61dffbea
-ms.openlocfilehash: 0b636d328852daf821269230aae443cef084578b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 770e78e4ad87338528aa654f5ecaa08b45315846
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260757"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168557"
 ---
-# <a name="atlwinmodule70-structure"></a>Структура _ATL_WIN_MODULE70
+# <a name="_atl_win_module70-structure"></a>Структура _ATL_WIN_MODULE70
 
-Используется кодом Управление окнами в ATL
+Используется в коде окон в ATL.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 struct _ATL_WIN_MODULE70 {
     UNIT cbSize;
     CRITICAL_SECTION m_csWindowCreate;
@@ -34,24 +34,24 @@ struct _ATL_WIN_MODULE70 {
 ## <a name="members"></a>Участники
 
 `cbSize`<br/>
-Размер структуры, используемые для управления версиями.
+Размер структуры, используемый для управления версиями.
 
 `m_csWindowCreate`<br/>
-Используется для сериализации доступа к коду окно регистрации. Используется системой ATL.
+Используется для сериализации доступа к коду регистрации окна. Используется внутренне библиотекой ATL.
 
 `m_pCreateWndList`<br/>
-Используется для привязки windows к соответствующим объектам. Используется системой ATL.
+Используется для привязки окон к своим объектам. Используется внутренне библиотекой ATL.
 
 `m_rgWindowClassAtoms`<br/>
-Используется для отслеживания регистрации класса окна, чтобы можно было правильно отменить регистрацию при завершении. Используется системой ATL.
+Используется для трассировки регистраций классов окон, чтобы их можно было правильно отменить регистрацию при завершении работы. Используется внутренне библиотекой ATL.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-[_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module) определяется как typedef типа `_ATL_WIN_MODULE70`.
+[_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module) определяется как typedef для `_ATL_WIN_MODULE70`.
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atlbase.h
+**Заголовок:** atlbase. h
 
 ## <a name="see-also"></a>См. также
 

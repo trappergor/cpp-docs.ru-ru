@@ -1,0 +1,658 @@
+- name: Параллельное программирование в MSVC
+  href: ../parallel/parallel-programming-in-visual-cpp.md
+- name: Автоматическая параллелизация и автоматическая векторизация
+  href: ../parallel/auto-parallelization-and-auto-vectorization.md
+- name: C++ Accelerated Massive Parallelism (AMP)
+  expanded: false
+  items:
+    - name: C++ AMP (C++ Accelerated Massive Parallelism)
+      href: ../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md
+    - name: Общие сведения о C++ AMP
+      href: ../parallel/amp/cpp-amp-overview.md
+    - name: Использование плиток
+      href: ../parallel/amp/using-tiles.md
+    - name: "Использование C++\_AMP в приложениях\_UWP"
+      href: ../parallel/amp/using-cpp-amp-in-windows-store-apps.md
+    - name: Пошаговое руководство. Умножение матриц
+      href: ../parallel/amp/walkthrough-matrix-multiplication.md
+    - name: Пошаговое руководство. Отладка приложения C++ AMP
+      href: ../parallel/amp/walkthrough-debugging-a-cpp-amp-application.md
+    - name: 'Использование лямбда-выражений, объектов функций и ограниченных функций'
+      href: ../parallel/amp/using-lambdas-function-objects-and-restricted-functions.md
+    - name: Графика (C++ AMP)
+      href: ../parallel/amp/graphics-cpp-amp.md
+    - name: Использование объектов accelerator и accelerator_view
+      href: ../parallel/amp/using-accelerator-and-accelerator-view-objects.md
+    - name: Справочник (C++ AMP)
+      expanded: false
+      items:
+        - name: Справочник (C++ AMP)
+          href: ../parallel/amp/reference/reference-cpp-amp.md
+        - name: Пространство имен Concurrency (C++ AMP)
+          expanded: false
+          items:
+            - name: Пространство имен Concurrency (C++ AMP)
+              href: ../parallel/amp/reference/concurrency-namespace-cpp-amp.md
+            - name: Функции пространства имен Concurrency (AMP)
+              href: ../parallel/amp/reference/concurrency-namespace-functions-amp.md
+            - name: Перечисления пространства имен Concurrency (AMP)
+              href: ../parallel/amp/reference/concurrency-namespace-enums-amp.md
+            - name: Операторы пространства имен Concurrency (AMP)
+              href: ../parallel/amp/reference/concurrency-namespace-operators-amp.md
+            - name: Константы пространства имен Concurrency (AMP)
+              href: ../parallel/amp/reference/concurrency-namespace-constants-amp.md
+            - name: Класс accelerator
+              href: ../parallel/amp/reference/accelerator-class.md
+            - name: Класс accelerator_view
+              href: ../parallel/amp/reference/accelerator-view-class.md
+            - name: Класс accelerator_view_removed
+              href: ../parallel/amp/reference/accelerator-view-removed-class.md
+            - name: array - класс
+              href: ../parallel/amp/reference/array-class.md
+            - name: array_view - класс
+              href: ../parallel/amp/reference/array-view-class.md
+            - name: Класс completion_future
+              href: ../parallel/amp/reference/completion-future-class.md
+            - name: Касс extent (C++ AMP)
+              href: ../parallel/amp/reference/extent-class.md
+            - name: Класс index
+              href: ../parallel/amp/reference/index-class.md
+            - name: Класс invalid_compute_domain
+              href: ../parallel/amp/reference/invalid-compute-domain-class.md
+            - name: Класс out_of_memory
+              href: ../parallel/amp/reference/out-of-memory-class.md
+            - name: Класс runtime_exception
+              href: ../parallel/amp/reference/runtime-exception-class.md
+            - name: Класс tile_barrier
+              href: ../parallel/amp/reference/tile-barrier-class.md
+            - name: Класс tiled_extent
+              href: ../parallel/amp/reference/tiled-extent-class.md
+            - name: Класс tiled_index
+              href: ../parallel/amp/reference/tiled-index-class.md
+            - name: Класс uninitialized_object
+              href: ../parallel/amp/reference/uninitialized-object-class.md
+            - name: Класс unsupported_feature
+              href: ../parallel/amp/reference/unsupported-feature-class.md
+        - name: 'Пространство имен Concurrency::direct3d'
+          expanded: false
+          items:
+            - name: 'Пространство имен Concurrency::direct3d'
+              href: ../parallel/amp/reference/concurrency-direct3d-namespace.md
+            - name: 'Функции пространства имен Concurrency::direct3d (AMP)'
+              href: ../parallel/amp/reference/concurrency-direct3d-namespace-functions-amp.md
+            - name: Структура adopt_d3d_access_lock_t
+              href: ../parallel/amp/reference/adopt-d3d-access-lock-t-structure.md
+            - name: Класс scoped_d3d_access_lock
+              href: ../parallel/amp/reference/scoped-d3d-access-lock-class.md
+        - name: 'Пространство имен Concurrency::fast_math'
+          expanded: false
+          items:
+            - name: 'Пространство имен Concurrency::fast_math'
+              href: ../parallel/amp/reference/concurrency-fast-math-namespace.md
+            - name: 'Функции пространства имен Concurrency::fast_math'
+              href: ../parallel/amp/reference/concurrency-fast-math-namespace-functions.md
+        - name: 'Пространство имен Concurrency::graphics'
+          expanded: false
+          items:
+            - name: 'Пространство имен Concurrency::graphics'
+              href: ../parallel/amp/reference/concurrency-graphics-namespace.md
+            - name: 'Пространство имен Concurrency::graphics::direct3d'
+              expanded: false
+              items:
+                - name: 'Пространство имен Concurrency::graphics::direct3d'
+                  href: ../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md
+                - name: 'Функции пространства имен Concurrency::graphics::direct3d'
+                  href: ../parallel/amp/reference/concurrency-graphics-direct3d-namespace-functions.md
+            - name: 'Функции пространства имен Concurrency::graphics'
+              href: ../parallel/amp/reference/concurrency-graphics-namespace-functions.md
+            - name: 'Перечисления пространства имен Concurrency::graphics'
+              href: ../parallel/amp/reference/concurrency-graphics-namespace-enums.md
+            - name: Класс double_2
+              href: ../parallel/amp/reference/double-2-class.md
+            - name: Класс double_3
+              href: ../parallel/amp/reference/double-3-class.md
+            - name: Класс double_4
+              href: ../parallel/amp/reference/double-4-class.md
+            - name: Класс float_2
+              href: ../parallel/amp/reference/float-2-class.md
+            - name: Класс float_3
+              href: ../parallel/amp/reference/float-3-class.md
+            - name: Класс float_4
+              href: ../parallel/amp/reference/float-4-class.md
+            - name: Класс int_2
+              href: ../parallel/amp/reference/int-2-class.md
+            - name: Класс int_3
+              href: ../parallel/amp/reference/int-3-class.md
+            - name: Класс int_4
+              href: ../parallel/amp/reference/int-4-class.md
+            - name: Класс norm
+              href: ../parallel/amp/reference/norm-class.md
+            - name: Класс norm_2
+              href: ../parallel/amp/reference/norm-2-class.md
+            - name: Класс norm_3
+              href: ../parallel/amp/reference/norm-3-class.md
+            - name: Класс norm_4
+              href: ../parallel/amp/reference/norm-4-class.md
+            - name: Класс sampler
+              href: ../parallel/amp/reference/sampler-class.md
+            - name: Структура short_vector
+              href: ../parallel/amp/reference/short-vector-structure.md
+            - name: Структура short_vector_traits
+              href: ../parallel/amp/reference/short-vector-traits-structure.md
+            - name: Класс texture
+              href: ../parallel/amp/reference/texture-class.md
+            - name: Класс texture_view
+              href: ../parallel/amp/reference/texture-view-class.md
+            - name: Класс writeonly_texture_view
+              href: ../parallel/amp/reference/writeonly-texture-view-class.md
+            - name: Класс uint_2
+              href: ../parallel/amp/reference/uint-2-class.md
+            - name: Класс uint_3
+              href: ../parallel/amp/reference/uint-3-class.md
+            - name: Класс uint_4
+              href: ../parallel/amp/reference/uint-4-class.md
+            - name: Класс unorm
+              href: ../parallel/amp/reference/unorm-class.md
+            - name: Класс unorm_2
+              href: ../parallel/amp/reference/unorm-2-class.md
+            - name: Класс unorm_3
+              href: ../parallel/amp/reference/unorm-3-class.md
+            - name: Класс unorm_4
+              href: ../parallel/amp/reference/unorm-4-class.md
+        - name: 'Пространство имен Concurrency::precise_math'
+          expanded: false
+          items:
+            - name: 'Пространство имен Concurrency::precise_math'
+              href: ../parallel/amp/reference/concurrency-precise-math-namespace.md
+            - name: 'Функции пространства имен Concurrency::precise_math'
+              href: ../parallel/amp/reference/concurrency-precise-math-namespace-functions.md
+- name: Среда выполнения с параллелизмом (ConCRT)
+  expanded: false
+  items:
+    - name: Среда выполнения с параллелизмом
+      href: ../parallel/concrt/concurrency-runtime.md
+    - name: Общие сведения о среде выполнения с параллелизмом
+      href: ../parallel/concrt/overview-of-the-concurrency-runtime.md
+    - name: Обработка исключений в среде выполнения с параллелизмом
+      href: ../parallel/concrt/exception-handling-in-the-concurrency-runtime.md
+    - name: Средства диагностики параллельного выполнения (среда выполнения с параллелизмом)
+      href: ../parallel/concrt/parallel-diagnostic-tools-concurrency-runtime.md
+    - name: "Создание асинхронных операций на\_C++ для приложений\_UWP"
+      href: ../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md
+    - name: Сравнение среды выполнения с параллелизмом с другими моделями параллелизма
+      expanded: false
+      items:
+        - name: Сравнение среды выполнения с параллелизмом с другими моделями параллелизма
+          href: ../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md
+        - name: Переход от OpenMP к среде выполнения с параллелизмом
+          expanded: false
+          items:
+            - name: Переход от OpenMP к среде выполнения с параллелизмом
+              href: ../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md
+            - name: Практическое руководство. Преобразование параллельного цикла for OpenMP для использования среды выполнения с параллелизмом
+              href: ../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md
+            - name: Практическое руководство. Преобразование цикла OpenMP с механизмом отмены для использования среды выполнения с параллелизмом
+              href: ../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md
+            - name: Практическое руководство. Преобразование цикла OpenMP с механизмом обработки исключений для использования среды выполнения с параллелизмом
+              href: ../parallel/concrt/convert-an-openmp-loop-that-uses-exception-handling.md
+            - name: Практическое руководство. Преобразование цикла OpenMP с переменной сокращения для использования среды выполнения с параллелизмом
+              href: ../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md
+    - name: Библиотека параллельных шаблонов
+      expanded: false
+      items:
+        - name: Библиотека параллельных шаблонов
+          href: ../parallel/concrt/parallel-patterns-library-ppl.md
+        - name: Параллелизм задач (среда выполнения с параллелизмом)
+          expanded: false
+          items:
+            - name: Параллелизм задач (среда выполнения с параллелизмом)
+              href: ../parallel/concrt/task-parallelism-concurrency-runtime.md
+            - name: Практическое руководство. Использование функции parallel_invoke для написания подпрограммы параллельной сортировки
+              href: ../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md
+            - name: Практическое руководство. Использование функции parallel_invoke для выполнения параллельных операций
+              href: ../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md
+            - name: 'Практическое руководство. Создание задачи, выполняемой после задержки'
+              href: ../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md
+        - name: Параллельные алгоритмы
+          expanded: false
+          items:
+            - name: Параллельные алгоритмы
+              href: ../parallel/concrt/parallel-algorithms.md
+            - name: Практическое руководство. Написание цикла parallel_for
+              href: ../parallel/concrt/how-to-write-a-parallel-for-loop.md
+            - name: Практическое руководство. Написание цикла parallel_for_each
+              href: ../parallel/concrt/how-to-write-a-parallel-for-each-loop.md
+            - name: Практическое руководство. Параллельное выполнение операций сопоставления и редукции числа элементов
+              href: ../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md
+        - name: Параллельные контейнеры и объекты
+          expanded: false
+          items:
+            - name: Параллельные контейнеры и объекты
+              href: ../parallel/concrt/parallel-containers-and-objects.md
+            - name: Практическое руководство. Использование параллельных контейнеров для повышения эффективности
+              href: ../parallel/concrt/how-to-use-parallel-containers-to-increase-efficiency.md
+            - name: Практическое руководство. Использование класса combinable для повышения производительности
+              href: ../parallel/concrt/how-to-use-combinable-to-improve-performance.md
+            - name: Практическое руководство. Использование класса combinable для комбинирования наборов
+              href: ../parallel/concrt/how-to-use-combinable-to-combine-sets.md
+        - name: Отмена в библиотеке параллельных шаблонов
+          expanded: false
+          items:
+            - name: Отмена в библиотеке параллельных шаблонов
+              href: ../parallel/concrt/cancellation-in-the-ppl.md
+            - name: Практическое руководство. Использование отмены для выхода из параллельного цикла
+              href: ../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md
+            - name: Практическое руководство. Использование обработки исключений для выхода из параллельного цикла
+              href: ../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md
+    - name: библиотеку асинхронных агентов
+      expanded: false
+      items:
+        - name: библиотеку асинхронных агентов
+          href: ../parallel/concrt/asynchronous-agents-library.md
+        - name: Асинхронные агенты
+          href: ../parallel/concrt/asynchronous-agents.md
+        - name: Асинхронные блоки сообщений
+          href: ../parallel/concrt/asynchronous-message-blocks.md
+        - name: Функции передачи сообщений
+          href: ../parallel/concrt/message-passing-functions.md
+        - name: "Практическое руководство. Реализация различных шаблонов \"объект-источник\_— объект-получатель\""
+          href: ../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md
+        - name: Практическое руководство. Предоставление рабочих функций классам call и transformer
+          href: ../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md
+        - name: Практическое руководство. Использование преобразователя в конвейере данных
+          href: ../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md
+        - name: Практическое руководство. Выбор среди завершенных задач
+          href: ../parallel/concrt/how-to-select-among-completed-tasks.md
+        - name: Практическое руководство. Отправка сообщений через определенные интервалы
+          href: ../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md
+        - name: Практическое руководство. Использование фильтра блоков сообщений
+          href: ../parallel/concrt/how-to-use-a-message-block-filter.md
+    - name: Структуры данных синхронизации
+      expanded: false
+      items:
+        - name: Структуры данных синхронизации
+          href: ../parallel/concrt/synchronization-data-structures.md
+        - name: Сравнение структур данных синхронизации с интерфейсом Windows API
+          href: ../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md
+    - name: Планировщик задач (среда выполнения с параллелизмом)
+      expanded: false
+      items:
+        - name: Планировщик задач (среда выполнения с параллелизмом)
+          href: ../parallel/concrt/task-scheduler-concurrency-runtime.md
+        - name: Экземпляры планировщика
+          expanded: false
+          items:
+            - name: Экземпляры планировщика
+              href: ../parallel/concrt/scheduler-instances.md
+            - name: Практическое руководство. Управление экземпляром планировщика
+              href: ../parallel/concrt/how-to-manage-a-scheduler-instance.md
+        - name: Политики планировщика
+          expanded: false
+          items:
+            - name: Политики планировщика
+              href: ../parallel/concrt/scheduler-policies.md
+            - name: Практическое руководство. Задание определенных политик планировщика
+              href: ../parallel/concrt/how-to-specify-specific-scheduler-policies.md
+            - name: 'Практическое руководство. Создание агентов, использующих определенные политики планировщика'
+              href: ../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md
+        - name: Группы расписаний
+          expanded: false
+          items:
+            - name: Группы расписаний
+              href: ../parallel/concrt/schedule-groups.md
+            - name: Практическое руководство. Использование групп расписаний для определения порядка выполнения
+              href: ../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md
+        - name: Упрощенные задачи
+          href: ../parallel/concrt/lightweight-tasks.md
+        - name: Контексты
+          expanded: false
+          items:
+            - name: Контексты
+              href: ../parallel/concrt/contexts.md
+            - name: 'Практическое руководство. Использование класса Context для реализации семафора, поддерживающего параллельный доступ'
+              href: ../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md
+            - name: Практическое руководство. Использование лимита подписки для устранения задержек
+              href: ../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md
+        - name: Функции управления памятью
+          expanded: false
+          items:
+            - name: Функции управления памятью
+              href: ../parallel/concrt/memory-management-functions.md
+            - name: Практическое руководство. Использование функций Alloc и Free для повышения производительности операций с памятью
+              href: ../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md
+    - name: Пошаговые руководства по среде выполнения с параллелизмом
+      expanded: false
+      items:
+        - name: Пошаговые руководства по среде выполнения с параллелизмом
+          href: ../parallel/concrt/concurrency-runtime-walkthroughs.md
+        - name: Пошаговое руководство. Подключение с использованием задач и HTTP-запросов XML
+          href: ../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md
+        - name: Пошаговое руководство. Создание приложения на основе агента
+          href: ../parallel/concrt/walkthrough-creating-an-agent-based-application.md
+        - name: Пошаговое руководство. Создание агента для обработки потоков данных
+          href: ../parallel/concrt/walkthrough-creating-a-dataflow-agent.md
+        - name: Пошаговое руководство. Создание сети обработки изображений
+          href: ../parallel/concrt/walkthrough-creating-an-image-processing-network.md
+        - name: Пошаговое руководство. Реализация фьючерсов
+          href: ../parallel/concrt/walkthrough-implementing-futures.md
+        - name: Пошаговое руководство. Использование класса join для предотвращения взаимоблокировки
+          href: ../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md
+        - name: 'Пошаговое руководство. Удаление задач из потока, обрабатывающего события от пользовательского интерфейса'
+          href: ../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md
+        - name: Пошаговое руководство. Использование среды выполнения с параллелизмом в приложении с поддержкой модели COM
+          href: ../parallel/concrt/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application.md
+        - name: Пошаговое руководство. Адаптация существующего кода для использования упрощенных задач
+          href: ../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md
+        - name: Пошаговое руководство. Создание пользовательского блока сообщений
+          href: ../parallel/concrt/walkthrough-creating-a-custom-message-block.md
+    - name: Рекомендации по работе со средой выполнения с параллелизмом
+      expanded: false
+      items:
+        - name: Рекомендации по работе со средой выполнения с параллелизмом
+          href: ../parallel/concrt/concurrency-runtime-best-practices.md
+        - name: Рекомендации по работе с библиотекой параллельных шаблонов
+          href: ../parallel/concrt/best-practices-in-the-parallel-patterns-library.md
+        - name: Рекомендации по работе с библиотекой асинхронных агентов
+          href: ../parallel/concrt/best-practices-in-the-asynchronous-agents-library.md
+        - name: Общие рекомендации в среде выполнения с параллелизмом
+          href: ../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md
+    - name: Справочники
+      expanded: false
+      items:
+        - name: Справочные материалы (среда выполнения с параллелизмом)
+          href: ../parallel/concrt/reference/reference-concurrency-runtime.md
+        - name: Пространство имен concurrency
+          expanded: false
+          items:
+            - name: Пространство имен concurrency
+              href: ../parallel/concrt/reference/concurrency-namespace.md
+            - name: Функции пространства имен concurrency
+              href: ../parallel/concrt/reference/concurrency-namespace-functions.md
+            - name: Операторы пространства имен concurrency
+              href: ../parallel/concrt/reference/concurrency-namespace-operators.md
+            - name: "Константы пространства имен concurrency\_1"
+              href: ../parallel/concrt/reference/concurrency-namespace-constants1.md
+            - name: Перечисления пространства имен concurrency
+              href: ../parallel/concrt/reference/concurrency-namespace-enums.md
+            - name: Класс affinity_partitioner
+              href: ../parallel/concrt/reference/affinity-partitioner-class.md
+            - name: Класс agent
+              href: ../parallel/concrt/reference/agent-class.md
+            - name: Класс auto_partitioner
+              href: ../parallel/concrt/reference/auto-partitioner-class.md
+            - name: Класс bad_target
+              href: ../parallel/concrt/reference/bad-target-class.md
+            - name: Класс call
+              href: ../parallel/concrt/reference/call-class.md
+            - name: Класс cancellation_token
+              href: ../parallel/concrt/reference/cancellation-token-class.md
+            - name: Класс cancellation_token_registration
+              href: ../parallel/concrt/reference/cancellation-token-registration-class.md
+            - name: Класс cancellation_token_source
+              href: ../parallel/concrt/reference/cancellation-token-source-class.md
+            - name: Класс choice
+              href: ../parallel/concrt/reference/choice-class.md
+            - name: Класс combinable
+              href: ../parallel/concrt/reference/combinable-class.md
+            - name: Класс concurrent_priority_queue
+              href: ../parallel/concrt/reference/concurrent-priority-queue-class.md
+            - name: Класс concurrent_queue
+              href: ../parallel/concrt/reference/concurrent-queue-class.md
+            - name: Класс concurrent_unordered_map
+              href: ../parallel/concrt/reference/concurrent-unordered-map-class.md
+            - name: Класс concurrent_unordered_multimap
+              href: ../parallel/concrt/reference/concurrent-unordered-multimap-class.md
+            - name: Класс concurrent_unordered_multiset
+              href: ../parallel/concrt/reference/concurrent-unordered-multiset-class.md
+            - name: Класс concurrent_unordered_set
+              href: ../parallel/concrt/reference/concurrent-unordered-set-class.md
+            - name: Класс concurrent_vector
+              href: ../parallel/concrt/reference/concurrent-vector-class.md
+            - name: Context - класс
+              href: ../parallel/concrt/reference/context-class.md
+            - name: Класс context_self_unblock
+              href: ../parallel/concrt/reference/context-self-unblock-class.md
+            - name: Класс context_unblock_unbalanced
+              href: ../parallel/concrt/reference/context-unblock-unbalanced-class.md
+            - name: Класс critical_section
+              href: ../parallel/concrt/reference/critical-section-class.md
+            - name: Класс CurrentScheduler
+              href: ../parallel/concrt/reference/currentscheduler-class.md
+            - name: Класс default_scheduler_exists
+              href: ../parallel/concrt/reference/default-scheduler-exists-class.md
+            - name: Структура DispatchState
+              href: ../parallel/concrt/reference/dispatchstate-structure.md
+            - name: Класс event
+              href: ../parallel/concrt/reference/event-class.md
+            - name: Структура IExecutionContext
+              href: ../parallel/concrt/reference/iexecutioncontext-structure.md
+            - name: Структура IExecutionResource
+              href: ../parallel/concrt/reference/iexecutionresource-structure.md
+            - name: Класс improper_lock
+              href: ../parallel/concrt/reference/improper-lock-class.md
+            - name: Класс improper_scheduler_attach
+              href: ../parallel/concrt/reference/improper-scheduler-attach-class.md
+            - name: Класс improper_scheduler_detach
+              href: ../parallel/concrt/reference/improper-scheduler-detach-class.md
+            - name: Класс improper_scheduler_reference
+              href: ../parallel/concrt/reference/improper-scheduler-reference-class.md
+            - name: Класс invalid_link_target
+              href: ../parallel/concrt/reference/invalid-link-target-class.md
+            - name: Класс invalid_multiple_scheduling
+              href: ../parallel/concrt/reference/invalid-multiple-scheduling-class.md
+            - name: Класс invalid_operation
+              href: ../parallel/concrt/reference/invalid-operation-class.md
+            - name: Класс invalid_oversubscribe_operation
+              href: ../parallel/concrt/reference/invalid-oversubscribe-operation-class.md
+            - name: Класс invalid_scheduler_policy_key
+              href: ../parallel/concrt/reference/invalid-scheduler-policy-key-class.md
+            - name: Класс invalid_scheduler_policy_thread_specification
+              href: ../parallel/concrt/reference/invalid-scheduler-policy-thread-specification-class.md
+            - name: Класс invalid_scheduler_policy_value
+              href: ../parallel/concrt/reference/invalid-scheduler-policy-value-class.md
+            - name: Структура IResourceManager
+              href: ../parallel/concrt/reference/iresourcemanager-structure.md
+            - name: Структура IScheduler
+              href: ../parallel/concrt/reference/ischeduler-structure.md
+            - name: Структура ISchedulerProxy
+              href: ../parallel/concrt/reference/ischedulerproxy-structure.md
+            - name: Класс ISource
+              href: ../parallel/concrt/reference/isource-class.md
+            - name: Класс ITarget
+              href: ../parallel/concrt/reference/itarget-class.md
+            - name: Структура IThreadProxy
+              href: ../parallel/concrt/reference/ithreadproxy-structure.md
+            - name: Структура ITopologyExecutionResource
+              href: ../parallel/concrt/reference/itopologyexecutionresource-structure.md
+            - name: Структура ITopologyNode
+              href: ../parallel/concrt/reference/itopologynode-structure.md
+            - name: Структура IUMSCompletionList
+              href: ../parallel/concrt/reference/iumscompletionlist-structure.md
+            - name: Структура IUMSScheduler
+              href: ../parallel/concrt/reference/iumsscheduler-structure.md
+            - name: Структура IUMSThreadProxy
+              href: ../parallel/concrt/reference/iumsthreadproxy-structure.md
+            - name: Структура IUMSUnblockNotification
+              href: ../parallel/concrt/reference/iumsunblocknotification-structure.md
+            - name: Структура IVirtualProcessorRoot
+              href: ../parallel/concrt/reference/ivirtualprocessorroot-structure.md
+            - name: Класс join
+              href: ../parallel/concrt/reference/join-class.md
+            - name: Класс location
+              href: ../parallel/concrt/reference/location-class.md
+            - name: Класс message
+              href: ../parallel/concrt/reference/message-class.md
+            - name: Класс message_not_found
+              href: ../parallel/concrt/reference/message-not-found-class.md
+            - name: Класс message_processor
+              href: ../parallel/concrt/reference/message-processor-class.md
+            - name: Класс missing_wait
+              href: ../parallel/concrt/reference/missing-wait-class.md
+            - name: Класс multi_link_registry
+              href: ../parallel/concrt/reference/multi-link-registry-class.md
+            - name: Класс multitype_join
+              href: ../parallel/concrt/reference/multitype-join-class.md
+            - name: Класс nested_scheduler_missing_detach
+              href: ../parallel/concrt/reference/nested-scheduler-missing-detach-class.md
+            - name: Класс network_link_registry
+              href: ../parallel/concrt/reference/network-link-registry-class.md
+            - name: Класс operation_timed_out
+              href: ../parallel/concrt/reference/operation-timed-out-class.md
+            - name: Класс ordered_message_processor
+              href: ../parallel/concrt/reference/ordered-message-processor-class.md
+            - name: Класс overwrite_buffer
+              href: ../parallel/concrt/reference/overwrite-buffer-class.md
+            - name: Класс progress_reporter
+              href: ../parallel/concrt/reference/progress-reporter-class.md
+            - name: Класс propagator_block
+              href: ../parallel/concrt/reference/propagator-block-class.md
+            - name: Класс reader_writer_lock
+              href: ../parallel/concrt/reference/reader-writer-lock-class.md
+            - name: Класс ScheduleGroup
+              href: ../parallel/concrt/reference/schedulegroup-class.md
+            - name: Класс Scheduler
+              href: ../parallel/concrt/reference/scheduler-class.md
+            - name: Структура scheduler_interface
+              href: ../parallel/concrt/reference/scheduler-interface-structure.md
+            - name: Класс scheduler_not_attached
+              href: ../parallel/concrt/reference/scheduler-not-attached-class.md
+            - name: Структура scheduler_ptr (среда выполнения с параллелизмом)
+              href: ../parallel/concrt/reference/scheduler-ptr-structure-concurrency-runtime.md
+            - name: Класс scheduler_resource_allocation_error
+              href: ../parallel/concrt/reference/scheduler-resource-allocation-error-class.md
+            - name: Класс scheduler_worker_creation_error
+              href: ../parallel/concrt/reference/scheduler-worker-creation-error-class.md
+            - name: Класс SchedulerPolicy
+              href: ../parallel/concrt/reference/schedulerpolicy-class.md
+            - name: Класс simple_partitioner
+              href: ../parallel/concrt/reference/simple-partitioner-class.md
+            - name: Класс single_assignment
+              href: ../parallel/concrt/reference/single-assignment-class.md
+            - name: Класс single_link_registry
+              href: ../parallel/concrt/reference/single-link-registry-class.md
+            - name: Класс source_block
+              href: ../parallel/concrt/reference/source-block-class.md
+            - name: Класс source_link_manager
+              href: ../parallel/concrt/reference/source-link-manager-class.md
+            - name: Класс static_partitioner
+              href: ../parallel/concrt/reference/static-partitioner-class.md
+            - name: Класс structured_task_group
+              href: ../parallel/concrt/reference/structured-task-group-class.md
+            - name: Класс target_block
+              href: ../parallel/concrt/reference/target-block-class.md
+            - name: Класс task (среда выполнения с параллелизмом)
+              href: ../parallel/concrt/reference/task-class.md
+            - name: Класс task_canceled
+              href: ../parallel/concrt/reference/task-canceled-class.md
+            - name: Класс task_completion_event
+              href: ../parallel/concrt/reference/task-completion-event-class.md
+            - name: Класс task_continuation_context
+              href: ../parallel/concrt/reference/task-continuation-context-class.md
+            - name: Класс task_group
+              href: ../parallel/concrt/reference/task-group-class.md
+            - name: Класс task_handle
+              href: ../parallel/concrt/reference/task-handle-class.md
+            - name: Класс task_options (среда выполнения с параллелизмом)
+              href: ../parallel/concrt/reference/task-options-class-concurrency-runtime.md
+            - name: Класс timer
+              href: ../parallel/concrt/reference/timer-class.md
+            - name: Класс transformer
+              href: ../parallel/concrt/reference/transformer-class.md
+            - name: Класс unbounded_buffer
+              href: ../parallel/concrt/reference/unbounded-buffer-class.md
+            - name: Класс unsupported_os
+              href: ../parallel/concrt/reference/unsupported-os-class.md
+        - name: Пространство имен std
+          expanded: false
+          items:
+            - name: Пространство имен std
+              href: ../parallel/concrt/reference/std-namespace.md
+            - name: Функция make_exception_ptr
+              href: ../parallel/concrt/reference/make-exception-ptr-function.md
+        - name: Пространство имен stdx
+          expanded: false
+          items:
+            - name: Пространство имен stdx
+              href: ../parallel/concrt/reference/stdx-namespace.md
+            - name: Функция declval
+              href: ../parallel/concrt/reference/declval-function.md
+- name: OpenMP
+  expanded: false
+  items:
+    - name: OpenMP в MSVC
+      href: ../parallel/openmp/openmp-in-visual-cpp.md
+    - name: Расширение SIMD
+      href: ../parallel/openmp/openmp-simd.md
+    - name: API OpenMP C и C++
+      expanded: false
+      items:
+        - name: API OpenMP C и C++
+          href: ../parallel/openmp/openmp-c-and-cpp-application-program-interface.md
+        - name: Вступление
+          href: ../parallel/openmp/1-introduction.md
+        - name: Директивы
+          href: ../parallel/openmp/2-directives.md
+        - name: Функции библиотеки среды выполнения
+          href: ../parallel/openmp/3-run-time-library-functions.md
+        - name: Переменные среды
+          href: ../parallel/openmp/4-environment-variables.md
+        - name: Приложения
+          items:
+            - name: Примеры
+              href: ../parallel/openmp/a-examples.md
+            - name: Заглушки для функций библиотеки среды выполнения
+              href: ../parallel/openmp/b-stubs-for-run-time-library-functions.md
+            - name: Грамматика OpenMP C и C++
+              href: ../parallel/openmp/c-openmp-c-and-cpp-grammar.md
+            - name: Предложение schedule
+              href: ../parallel/openmp/d-using-the-schedule-clause.md
+            - name: 'Поведения, определяемые реализацией, в OpenMP C/C++'
+              href: ../parallel/openmp/e-implementation-defined-behaviors-in-openmp-c-cpp.md
+            - name: "Новые функции и разъяснения в версии\_2.0"
+              href: ../parallel/openmp/f-new-features-and-clarifications-in-version-2-0.md
+    - name: Справочник по библиотекам OpenMP
+      expanded: false
+      items:
+        - name: Справочник по библиотекам OpenMP
+          href: ../parallel/openmp/reference/openmp-library-reference.md
+        - name: Директивы
+          href: ../parallel/openmp/reference/openmp-directives.md
+        - name: Предложения
+          href: ../parallel/openmp/reference/openmp-clauses.md
+        - name: Функции
+          href: ../parallel/openmp/reference/openmp-functions.md
+        - name: Переменные среды
+          href: ../parallel/openmp/reference/openmp-environment-variables.md
+- name: Поддержка многопоточности для устаревшего кода (C++)
+  expanded: false
+  items:
+    - name: Поддержка многопоточности для устаревшего кода (C++)
+      href: ../parallel/multithreading-support-for-older-code-visual-cpp.md
+    - name: Реализация многопоточности на языке C с помощью функций Win32
+      expanded: false
+      items:
+        - name: Реализация многопоточности на языке C с помощью функций Win32
+          href: ../parallel/multithreading-with-c-and-win32.md
+        - name: Образец многопоточной программы на C
+          href: ../parallel/sample-multithread-c-program.md
+        - name: Локальное хранилище потока (TLS)
+          href: ../parallel/thread-local-storage-tls.md
+    - name: Реализация многопоточности на языке C++ с помощью классов MFC
+      expanded: false
+      items:
+        - name: Реализация многопоточности на языке C++ с помощью классов MFC
+          href: ../parallel/multithreading-with-cpp-and-mfc.md
+        - name: 'Многопоточность. Создание потоков, обрабатывающих события от пользовательского интерфейса'
+          href: ../parallel/multithreading-creating-user-interface-threads.md
+        - name: Многопоточность. Создание рабочих потоков
+          href: ../parallel/multithreading-creating-worker-threads.md
+        - name: Многопоточность. Сценарии использования классов синхронизации
+          href: ../parallel/multithreading-when-to-use-the-synchronization-classes.md
+        - name: Многопоточность. Принцип использования классов синхронизации
+          href: ../parallel/multithreading-how-to-use-the-synchronization-classes.md
+        - name: Многопоточность. Завершение работы с потоками
+          href: ../parallel/multithreading-terminating-threads.md
+        - name: Многопоточность. Советы по программированию
+          href: ../parallel/multithreading-programming-tips.md
+    - name: Многопоточность и языковые стандарты
+      href: ../parallel/multithreading-and-locales.md

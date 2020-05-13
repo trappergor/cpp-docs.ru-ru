@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - ConvertBSTRToString function
 ms.assetid: ab6ce555-3d75-4e9c-9cb8-ada6d8ce43b1
-ms.openlocfilehash: df123dc218aa770a67536bf1bad7d8bafcf4c318
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d0ad8727dd4d5ec06a45ec26c67dd3ad268f524
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392327"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189530"
 ---
 # <a name="convertbstrtostring"></a>ConvertBSTRToString
 
 **Блок, относящийся только к системам Microsoft**
 
-Преобразует `BSTR` значение `char *`.
+Преобразует значение типа `BSTR` в значение типа `char *`.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -30,9 +30,9 @@ char* __stdcall ConvertBSTRToString(BSTR pSrc);
 *pSrc*<br/>
 Переменная BSTR.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-**ConvertBSTRToString** выделяет строку необходимо удалить.
+**Конвертбстртостринг** выделяет строку, которую необходимо удалить.
 
 ## <a name="example"></a>Пример
 
@@ -64,10 +64,10 @@ char * text: Test
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<comutil.h >
+**Заголовок:** \<комутил. h >
 
-**LIB:** comsuppw.lib или comsuppwd.lib (см. в разделе [/Zc: wchar_t (wchar_t — собственный тип)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) Дополнительные сведения)
+**Lib:** комсуппв. lib или комсуппвд. lib (Дополнительные сведения см. в разделе [/Zc: wchar_t (wchar_t является собственным типом)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Глобальные функции COM-модели компилятора](../cpp/compiler-com-global-functions.md)

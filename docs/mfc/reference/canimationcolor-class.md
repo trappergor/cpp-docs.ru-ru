@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CAnimationColor [MFC], m_gValue
 - CAnimationColor [MFC], m_rValue
 ms.assetid: 88bfabd4-efeb-4652-87e8-304253d8e48c
-ms.openlocfilehash: ee6003a22db78c2a510579c3d717fec887f8a6ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c1c98d739aa1c17bb30df2d9d4ce8c41558c76d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62151179"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750194"
 ---
 # <a name="canimationcolor-class"></a>Класс CAnimationColor
 
@@ -51,46 +51,46 @@ class CAnimationColor : public CAnimationBaseObject;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CAnimationColor::CAnimationColor](#canimationcolor)|Перегружен. Создает объект анимации цвета.|
+|[CAnimationColor::CAnimationColor](#canimationcolor)|Перегружен. Строит объект цвета анимации.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CAnimationColor::AddTransition](#addtransition)|Добавляет переходы для красного, зеленого и синего компонентов.|
-|[CAnimationColor::GetB](#getb)|Предоставляет доступ к CAnimationVariable, представляющий синего компонента.|
-|[CAnimationColor::GetDefaultValue](#getdefaultvalue)|Возвращает значения по умолчанию для компонентов цвета.|
-|[CAnimationColor::GetG](#getg)|Предоставляет доступ к CAnimationVariable, представляющий зеленого компонента.|
-|[CAnimationColor::GetR](#getr)|Предоставляет доступ к CAnimationVariable, представляющий красного компонента.|
+|[CAnimationColor::AddTransition](#addtransition)|Добавляет переходы для красных, зеленых и синих компонентов.|
+|[CAnimationColor::GetB](#getb)|Обеспечивает доступ к CAnimationVariable, представляющей синий компонент.|
+|[CAnimationColor::GetDefaultValue](#getdefaultvalue)|Возвращает значения по умолчанию для цветовых компонентов.|
+|[CAnimationColor::GetG](#getg)|Обеспечивает доступ к CAnimationVariable, представляющей зеленый компонент.|
+|[CAnimationColor::GetR](#getr)|Обеспечивает доступ к CAnimationVariable, представляющей красный компонент.|
 |[CAnimationColor::GetValue](#getvalue)|Возвращает текущее значение.|
-|[CAnimationColor::SetDefaultValue](#setdefaultvalue)|Задает значение по умолчанию.|
+|[CAnimationColor::SetDefaultValue](#setdefaultvalue)|Устанавливает значение по умолчанию.|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CAnimationColor::GetAnimationVariableList](#getanimationvariablelist)|Помещает инкапсулированный анимации переменные в список. (Переопределяет [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|
+|[CAnimationColor::GetAnimationVariableList](#getanimationvariablelist)|Помещает инкапсулированные переменные анимации в список. (Оверлет [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CAnimationColor::operator COLORREF](#operator_colorref)||
-|[CAnimationColor::operator =](#operator_eq)|Назначает цвет CAnimationColor.|
+|[CAnimationColor::оператор КОЛОРРЕФ](#operator_colorref)||
+|[CAnimationColor::оператор](#operator_eq)|Присваивает цвет CAnimationColor.|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CAnimationColor::m_bValue](#m_bvalue)|Инкапсулированный анимации переменной, представляющей синего компонента цвета анимации.|
-|[CAnimationColor::m_gValue](#m_gvalue)|Инкапсулированный анимации переменной, представляющей зеленого компонента цвета анимации.|
-|[CAnimationColor::m_rValue](#m_rvalue)|Инкапсулированный анимации переменной, представляющей красного компонента цвета анимации.|
+|[CAnimationColor::m_bValue](#m_bvalue)|Инкапсулированная переменная анимации, представляющая синий компонент цвета анимации.|
+|[CAnimationColor::m_gValue](#m_gvalue)|Инкапсулированная переменная анимации, представляющая зеленый компонент цвета анимации.|
+|[CAnimationColor::m_rValue](#m_rvalue)|Инкапсулированная переменная анимации, представляющая красный компонент цвета анимации.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Класс CAnimationColor инкапсулирует три объекта CAnimationVariable и может представлять в приложениях цвет. Например, этот класс можно использовать для анимации цвета любого объекта на экране (такие как цвет текста, цвет фона, и т.д.). Чтобы использовать этот класс в приложении, просто создать экземпляр объекта этого класса, добавьте его к контроллеру анимации с помощью CAnimationController::AddAnimationObject и вызова AddTransition для каждого перехода, применяемые к компонентам красного, зеленого и синего.
+Класс CAnimationColor инкапсулирует три объекта CAnimationVariable и может представлять в приложениях цвет. Например, вы можете использовать этот класс для анимировать цвета любого объекта на экране (например, цвет текста, цвет фона и т.д.). Чтобы использовать этот класс в приложении, просто мгновенно объект этого класса, добавьте его в контроллер анимации с помощью CAnimationController::AddAnimationObject и вызов AddTransition для каждого перехода, который будет применяться к красным, зеленым и синим компонентам.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -104,11 +104,11 @@ class CAnimationColor : public CAnimationBaseObject;
 
 **Заголовок:** afxanimationcontroller.h
 
-##  <a name="addtransition"></a>  CAnimationColor::AddTransition
+## <a name="canimationcoloraddtransition"></a><a name="addtransition"></a>CAnimationColor::AddTransition
 
-Добавляет переходы для красного, зеленого и синего компонентов.
+Добавляет переходы для красных, зеленых и синих компонентов.
 
-```
+```cpp
 void AddTransition(
     CBaseTransition* pRTransition,
     CBaseTransition* pGTransition,
@@ -120,19 +120,19 @@ void AddTransition(
 *pRTransition*<br/>
 Переход для красного компонента.
 
-*pGTransition*<br/>
+*pGПереход*<br/>
 Переход для зеленого компонента.
 
-*pBTransition*<br/>
-Переход для синего компонента.
+*pBПереход*<br/>
+Переход для компонента Blue.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Вызывайте эту функцию для добавления указанного переходы во внутренний список переходов для применения к анимации переменные, представляющие компонентов цвета. Добавляя переходы, они не в силу немедленно, хранятся во внутренний список. Переходы применяются (Добавление раскадровки для определенного значения) при вызове CAnimationController::AnimateGroup. Если вам не нужно применить переход к одному из компонентов цвета, можно передать значение NULL.
+Вызовите эту функцию, чтобы добавить указанные переходы во внутренний список переходов, которые будут применяться к переменным анимации, представляющим цветовые компоненты. При добавлении переходов они не применяются немедленно и хранятся во внутреннем списке. Переходы применяются (добавлены к раскадровке для определенного значения) при вызове CAnimationController::AnimateGroup. Если вам не нужно применять переход к одному из цветовых компонентов, вы можете пройти NULL.
 
-##  <a name="canimationcolor"></a>  CAnimationColor::CAnimationColor
+## <a name="canimationcolorcanimationcolor"></a><a name="canimationcolor"></a>CAnimationColor::CAnimationColor
 
-Создает объект CAnimationColor.
+Строит объект CAnimationColor.
 
 ```
 CAnimationColor();
@@ -146,25 +146,25 @@ CAnimationColor(
 
 ### <a name="parameters"></a>Параметры
 
-*color*<br/>
-Задает цвета по умолчанию.
+*Цвет*<br/>
+Определяет цвет по умолчанию.
 
 *nGroupID*<br/>
-Указывает идентификатор группы.
+Определяет идентификатор группы.
 
 *nObjectID*<br/>
-Указывает идентификатор объекта.
+Определяет идентификатор объекта.
 
 *dwUserData*<br/>
-Задает определяемые пользователем данные.
+Определяет данные, определяемые пользователем.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Объект создается со значениями по умолчанию для красный, зеленый, синий, идентификатор объекта и идентификатор группы, в которой будет указано значение 0. Они могут быть изменены во время выполнения, используя SetDefaultValue и SetID.
+Объект построен с значениями по умолчанию для красного, зеленого, синего, идентификатора объекта и идентификатора группы, который будет установлен на 0. Они могут быть изменены позже во время выполнения с помощью SetDefaultValue и SetID.
 
-##  <a name="getanimationvariablelist"></a>  CAnimationColor::GetAnimationVariableList
+## <a name="canimationcolorgetanimationvariablelist"></a><a name="getanimationvariablelist"></a>CAnimationColor::GetAnimationVariableList
 
-Помещает инкапсулированный анимации переменные в список.
+Помещает инкапсулированные переменные анимации в список.
 
 ```
 virtual void GetAnimationVariableList(CList<CAnimationVariable*>& lst);
@@ -172,12 +172,12 @@ virtual void GetAnimationVariableList(CList<CAnimationVariable*>& lst);
 
 ### <a name="parameters"></a>Параметры
 
-*lst*<br/>
-При возврате функции, здесь есть указатели на три CAnimationVariable объекты, представляющие красного, зеленого и синего компонентов.
+*Lst*<br/>
+Когда функция возвращается, она содержит указатели на три CAnimationПеременные объекты, представляющие красный, зеленый и синий компоненты.
 
-##  <a name="getb"></a>  CAnimationColor::GetB
+## <a name="canimationcolorgetb"></a><a name="getb"></a>CAnimationColor::GetB
 
-Предоставляет доступ к CAnimationVariable, представляющий синего компонента.
+Обеспечивает доступ к CAnimationVariable, представляющей синий компонент.
 
 ```
 CAnimationVariable& GetB();
@@ -185,15 +185,15 @@ CAnimationVariable& GetB();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ссылка на инкапсулированный CAnimationVariable, представляющий синего компонента.
+Ссылка на инкапсулированный CAnimationVariable, представляющий синий компонент.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Можно вызвать этот метод, чтобы получить прямой доступ к базовой CAnimationVariable, представляющий синего компонента.
+Этот метод можно назвать прямым доступом к базовому CAnimationVariable, представляющему синий компонент.
 
-##  <a name="getdefaultvalue"></a>  CAnimationColor::GetDefaultValue
+## <a name="canimationcolorgetdefaultvalue"></a><a name="getdefaultvalue"></a>CAnimationColor::GetDefaultValue
 
-Возвращает значения по умолчанию для компонентов цвета.
+Возвращает значения по умолчанию для цветовых компонентов.
 
 ```
 COLORREF GetDefaultValue();
@@ -201,15 +201,15 @@ COLORREF GetDefaultValue();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение COLORREF, содержащее значения по умолчанию для компонентов RGB.
+Значение COLORREF, содержащее по умолчанию для компонентов RGB.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Вызывайте эту функцию для получения значения по умолчанию, который был ранее установлен конструктор или SetDefaultValue.
+Вызовите эту функцию для получения значения по умолчанию, которое ранее было установлено конструктором или SetDefaultValue.
 
-##  <a name="getg"></a>  CAnimationColor::GetG
+## <a name="canimationcolorgetg"></a><a name="getg"></a>CAnimationColor::GetG
 
-Предоставляет доступ к CAnimationVariable, представляющий зеленого компонента.
+Обеспечивает доступ к CAnimationVariable, представляющей зеленый компонент.
 
 ```
 CAnimationVariable& GetG();
@@ -217,15 +217,15 @@ CAnimationVariable& GetG();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ссылка на компонент представления зеленый инкапсулированный CAnimationVariable.
+Ссылка на инкапсулированный CAnimationVariable, представляющий зеленый компонент.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Можно вызвать этот метод, чтобы получить прямой доступ к базовый компонент зеленого CAnimationVariable для представления.
+Этот метод можно назвать прямым доступом к базовому CAnimationVariable, представляющему зеленый компонент.
 
-##  <a name="getr"></a>  CAnimationColor::GetR
+## <a name="canimationcolorgetr"></a><a name="getr"></a>CAnimationColor::GetR
 
-Предоставляет доступ к CAnimationVariable, представляющий красного компонента.
+Обеспечивает доступ к CAnimationVariable, представляющей красный компонент.
 
 ```
 CAnimationVariable& GetR();
@@ -233,13 +233,13 @@ CAnimationVariable& GetR();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ссылка на инкапсулированный CAnimationVariable, представляющий красного компонента.
+Ссылка на инкапсулированный CAnimationVariable, представляющий красный компонент.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Можно вызвать этот метод, чтобы получить прямой доступ к базовой CAnimationVariable, представляющий красного компонента.
+Этот метод можно назвать прямым доступом к базовому CAnimationVariable, представляющему красный компонент.
 
-##  <a name="getvalue"></a>  CAnimationColor::GetValue
+## <a name="canimationcolorgetvalue"></a><a name="getvalue"></a>CAnimationColor::GetValue
 
 Возвращает текущее значение.
 
@@ -249,42 +249,42 @@ BOOL GetValue(COLORREF& color);
 
 ### <a name="parameters"></a>Параметры
 
-*color*<br/>
-Выходные данные. Содержит текущее значение при возвращении данного метода.
+*Цвет*<br/>
+Выходные данные. Содержит текущее значение при возврате этого метода.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если текущее значение было успешно извлечено; в противном случае — значение FALSE.
+ПРАВДА, если текущее значение было успешно извлечено; в противном случае FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Вызывайте эту функцию для получения текущего значения анимации цвета. Если этот метод завершается ошибкой, или базового COM-объектов для компонентов цвета не был инициализирован, цвет содержит значение по умолчанию, которое ранее было задано в конструкторе или SetDefaultValue.
+Вызовите эту функцию, чтобы получить текущее значение цвета анимации. Если этот метод не удается или базовые объекты COM для цветовых компонентов не были инициализированы, цвет содержит значение по умолчанию, которое ранее было установлено в конструкторе или SetDefaultValue.
 
-##  <a name="m_bvalue"></a>  CAnimationColor::m_bValue
+## <a name="canimationcolorm_bvalue"></a><a name="m_bvalue"></a>CAnimationColor::m_bValue
 
-Инкапсулированный анимации переменной, представляющей синего компонента цвета анимации.
+Инкапсулированная переменная анимации, представляющая синий компонент цвета анимации.
 
 ```
 CAnimationVariable m_bValue;
 ```
 
-##  <a name="m_gvalue"></a>  CAnimationColor::m_gValue
+## <a name="canimationcolorm_gvalue"></a><a name="m_gvalue"></a>CAnimationColor::m_gValue
 
-Инкапсулированный анимации переменной, представляющей зеленого компонента цвета анимации.
+Инкапсулированная переменная анимации, представляющая зеленый компонент цвета анимации.
 
 ```
 CAnimationVariable m_gValue;
 ```
 
-##  <a name="m_rvalue"></a>  CAnimationColor::m_rValue
+## <a name="canimationcolorm_rvalue"></a><a name="m_rvalue"></a>CAnimationColor::m_rValue
 
-Инкапсулированный анимации переменной, представляющей красного компонента цвета анимации.
+Инкапсулированная переменная анимации, представляющая красный компонент цвета анимации.
 
 ```
 CAnimationVariable m_rValue;
 ```
 
-##  <a name="operator_colorref"></a>  CAnimationColor::operator COLORREF
+## <a name="canimationcoloroperator-colorref"></a><a name="operator_colorref"></a>CAnimationColor::оператор КОЛОРРЕФ
 
 ```
 operator COLORREF();
@@ -292,40 +292,40 @@ operator COLORREF();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-##  <a name="operator_eq"></a>  CAnimationColor::operator=
+## <a name="canimationcoloroperator"></a><a name="operator_eq"></a>CAnimationColor::оператор
 
-Назначает цвет CAnimationColor.
+Присваивает цвет CAnimationColor.
 
-```
+```cpp
 void operator=(COLORREF color);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*color*<br/>
-Указывает новое значение анимации цвета.
+*Цвет*<br/>
+Определяет новое значение Анимация Цвет.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Мы рекомендуем сделать это до начала анимации, так как этот оператор вызывает SetDefaultValue, заново базовые объекты COM для компонентов цвета, если они были созданы. Если подписка этого объекта анимации на события (ValueChanged или IntegerValueChanged), необходимо включить эти события.
+Рекомендуется сделать это до начала анимации, потому что этот оператор вызывает SetDefaultValue, который воссоздает основные объекты COM для цветовых компонентов, если они были созданы. Если вы подписались на этот объект анимации на события (ValueChanged или IntegerValue), необходимо повторно включить эти события.
 
-##  <a name="setdefaultvalue"></a>  CAnimationColor::SetDefaultValue
+## <a name="canimationcolorsetdefaultvalue"></a><a name="setdefaultvalue"></a>CAnimationColor::SetDefaultValue
 
-Задает значение по умолчанию.
+Устанавливает значение по умолчанию.
 
-```
+```cpp
 void SetDefaultValue(COLORREF color);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*color*<br/>
-Задает новые значения по умолчанию для красного, зеленого и синего компонентов.
+*Цвет*<br/>
+Определяет новые значения по умолчанию для красных, зеленых и синих компонентов.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Эта функция используется для задания значения по умолчанию для объекта анимации. Этот метод назначает значения по умолчанию компонентов цвета анимации цвета. Он также воссоздает базовых объектов COM, если они были созданы. Если подписка этого объекта анимации на события (ValueChanged или IntegerValueChanged), необходимо включить эти события.
+Используйте эту функцию для установки значения по умолчанию для объекта анимации. Этот метод присваивает значения по умолчанию цветовым компонентам цвета анимации. Он также воссоздает основные объекты COM, если они были созданы. Если вы подписались на этот объект анимации на события (ValueChanged или IntegerValue), необходимо повторно включить эти события.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Классы](../../mfc/reference/mfc-classes.md)

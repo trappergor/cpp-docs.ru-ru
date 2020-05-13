@@ -1,6 +1,6 @@
 ---
 title: Класс TraceInfo
-description: Справочник C++ по классу SDK для Build Insights TraceInfo.
+description: Ссылка на класс SDK TraceInfo.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 5cf32c8dc954a803a11888231d35b1050ac81cc3
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 75d53937e3999f5692dee0ecf419e0ce5f49a274
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334502"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324174"
 ---
 # <a name="traceinfo-class"></a>Класс TraceInfo
 
 ::: moniker range="<=vs-2015"
 
-Пакет C++ SDK для Build Insights совместим с Visual Studio 2017 и более поздних версий. Чтобы просмотреть документацию по этим версиям, присвойте элементу управления "Выбор версий Visual Studio" для этой статьи значение Visual Studio 2017 или Visual Studio 2019.
+SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Класс `TraceInfo` используется для доступа к полезным свойствам анализируемой или регистрируемой трассировки.
+Класс `TraceInfo` используется для доступа к полезным свойствам о анализируемом или перелогированном следе.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -47,11 +47,11 @@ public:
 
 ## <a name="remarks"></a>Remarks
 
-Вычтите `StartTimestamp` из `StopTimestamp`, чтобы получить количество тактов, прошедших во время всей трассировки. Используйте `TickFrequency`, чтобы преобразовать полученное значение в единицу времени. Пример преобразования тактов в время см. в разделе [EVENT_DATA](../c-event-data-types/event-data-struct.md).
+`StartTimestamp` Вычтите `StopTimestamp` из, чтобы получить количество клещей, прошедших в течение всего следа. Используйте `TickFrequency` для преобразования полученного значения в единицу времени. Пример преобразования тиков во время можно [EVENT_DATA.](../c-event-data-types/event-data-struct.md)
 
-Если вы не хотите самостоятельно преобразовывать такты, класс `TraceInfo` предоставляет функцию-член, которая возвращает длительность трассировки в наносекундах. Используйте стандартную C++ библиотеку `chrono` для преобразования этого значения в другие единицы времени.
+Если вы не хотите преобразовывать `TraceInfo` тики самостоятельно, класс предоставляет функцию члена, которая возвращает продолжительность трассировки в наносекундах. Используйте стандартную `chrono` библиотеку СЗ, чтобы преобразовать это значение в другие единицы времени.
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="constructors"></a>Конструкторы
 
@@ -59,13 +59,13 @@ public:
 
 ### <a name="functions"></a>Функции
 
-[Duration](#duration)
-[логикалпроцессоркаунт](#logical-processor-count)
-[старттиместамп](#start-timestamp)
-[стоптиместамп](#stop-timestamp)
-[тиккфрекуенци](#tick-frequency)
+[Длительность](#duration)
+[LogicalProcessorCount](#logical-processor-count)
+[StartTimestamp](#start-timestamp)
+[StopTimestamp](#stop-timestamp)
+[TickFrequency](#tick-frequency)
 
-## <a name="duration"></a>Длитель
+## <a name="duration"></a><a name="duration"></a>Длительность
 
 ```cpp
 std::chrono::nanoseconds Duration() const;
@@ -73,9 +73,9 @@ std::chrono::nanoseconds Duration() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Длительность действия в наносекундах.
+Продолжительность активности в наносекундах.
 
-## <a name="logical-processor-count"></a>логикалпроцессоркаунт
+## <a name="logicalprocessorcount"></a><a name="logical-processor-count"></a>ЛогическийПроцессорCount
 
 ```cpp
 const unsigned long& LogicalProcessorCount() const;
@@ -83,9 +83,9 @@ const unsigned long& LogicalProcessorCount() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Число логических процессоров на компьютере, на котором была собрана трассировка.
+Количество логических процессоров на машине, где был собран след.
 
-## <a name="start-timestamp"></a>старттиместамп
+## <a name="starttimestamp"></a><a name="start-timestamp"></a>StartTimestamp
 
 ```cpp
 const long long& StartTimestamp() const;
@@ -93,9 +93,9 @@ const long long& StartTimestamp() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение Tick, захваченное во время запуска трассировки.
+Значение тика, захваченное во время запуска трассы.
 
-## <a name="stop-timestamp"></a>стоптиместамп
+## <a name="stoptimestamp"></a><a name="stop-timestamp"></a>Стоп-таймштамп
 
 ```cpp
 const long long& StopTimestamp() const;
@@ -103,9 +103,9 @@ const long long& StopTimestamp() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение Tick, захваченное на момент остановки трассировки.
+Значение тика, захваченное во время остановки трассы.
 
-## <a name="tick-frequency"></a>тиккфрекуенци
+## <a name="tickfrequency"></a><a name="tick-frequency"></a>ТикЧастота
 
 ```cpp
 const long long& TickFrequency() const;
@@ -113,9 +113,9 @@ const long long& TickFrequency() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Число тактов в секунду, используемое при вычислении длительности, измеряемой в тактах.
+Количество тиков в секунду для использования при оценке продолжительности, измеренной в клещах.
 
-## <a name="trace-info"></a>TraceInfo
+## <a name="traceinfo"></a><a name="trace-info"></a>TraceInfo
 
 ```cpp
 TraceInfo(const TRACE_INFO_DATA& data);
@@ -123,7 +123,7 @@ TraceInfo(const TRACE_INFO_DATA& data);
 
 ### <a name="parameters"></a>Параметры
 
-\ *данных*
-Данные, содержащие сведения о трассировке.
+*Данных*\
+Данные, содержащие информацию о следе.
 
 ::: moniker-end

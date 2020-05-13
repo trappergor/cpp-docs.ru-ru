@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CHtmlEditDoc [MFC], IsModified
 - CHtmlEditDoc [MFC], OpenURL
 ms.assetid: b2cca61f-e5d6-4099-b0d1-46bf85f0bd64
-ms.openlocfilehash: c2a00b2501647f6101fed8ed1d4cd23dad7ab209
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 8b500f651da1a73040fdb0469f2f023babe25e85
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346177"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81352173"
 ---
 # <a name="chtmleditdoc-class"></a>Класс CHtmlEditDoc
 
-С помощью [CHtmlEditView](../../mfc/reference/chtmleditview-class.md), предоставляет функции платформы редактирования WebBrowser в контексте архитектуры представления документов MFC.
+С [CHtmlEditView](../../mfc/reference/chtmleditview-class.md), обеспечивает функциональность платформы для редактирования WebBrowser в контексте архитектуры просмотра документов MFC.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -35,16 +35,16 @@ class AFX_NOVTABLE CHtmlEditDoc : public CDocument
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CHtmlEditDoc::CHtmlEditDoc](#chtmleditdoc)|Создает объект `CHtmlEditDoc`.|
+|[CHtmlEditDoc::HtmlEditDoc](#chtmleditdoc)|Формирует объект `CHtmlEditDoc`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CHtmlEditDoc::GetView](#getview)|Извлекает `CHtmlEditView` объект присоединен к этому документу.|
-|[CHtmlEditDoc::IsModified](#ismodified)|Возвращает, содержит ли элемент управления WebBrowser связанного представления документа, которые были изменены пользователем.|
+|[CHtmlEditDoc::GetView](#getview)|Извлекает `CHtmlEditView` объект, прикрепленный к этому документу.|
+|[CHtmlEditDoc::Изменено](#ismodified)|Возвращает вопрос о том, содержит ли элемент WebBrowser, связанный с ней, документ, который был изменен пользователем.|
 |[CHtmlEditDoc::OpenURL](#openurl)|Открывает URL-адрес.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
@@ -61,17 +61,17 @@ class AFX_NOVTABLE CHtmlEditDoc : public CDocument
 
 **Заголовок:** afxhtml.h
 
-##  <a name="chtmleditdoc"></a>  CHtmlEditDoc::CHtmlEditDoc
+## <a name="chtmleditdocchtmleditdoc"></a><a name="chtmleditdoc"></a>CHtmlEditDoc::HtmlEditDoc
 
-Создает объект `CHtmlEditDoc`.
+Формирует объект `CHtmlEditDoc`.
 
 ```
 CHtmlEditDoc();
 ```
 
-##  <a name="getview"></a>  CHtmlEditDoc::GetView
+## <a name="chtmleditdocgetview"></a><a name="getview"></a>CHtmlEditDoc::GetView
 
-Извлекает [CHtmlEditView](../../mfc/reference/chtmleditview-class.md) объект присоединен к этому документу.
+Извлекает объект [CHtmlEditView,](../../mfc/reference/chtmleditview-class.md) прикрепленный к этому документу.
 
 ```
 virtual CHtmlEditView* GetView() const;
@@ -79,17 +79,17 @@ virtual CHtmlEditView* GetView() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает указатель на документ `CHtmlEditView` объекта.
+Возвращает указатель на `CHtmlEditView` объект документа.
 
-##  <a name="ismodified"></a>  CHtmlEditDoc::IsModified
+## <a name="chtmleditdocismodified"></a><a name="ismodified"></a>CHtmlEditDoc::Изменено
 
-Возвращает, содержит ли элемент управления WebBrowser связанного представления документа, которые были изменены пользователем.
+Возвращает вопрос о том, содержит ли элемент WebBrowser, связанный с ней, документ, который был изменен пользователем.
 
 ```
 virtual BOOL IsModified();
 ```
 
-##  <a name="openurl"></a>  CHtmlEditDoc::OpenURL
+## <a name="chtmleditdocopenurl"></a><a name="openurl"></a>CHtmlEditDoc::OpenURL
 
 Открывает URL-адрес.
 
@@ -100,13 +100,13 @@ virtual BOOL OpenURL(LPCTSTR lpszURL);
 ### <a name="parameters"></a>Параметры
 
 *lpszURL*<br/>
-URL-адрес, чтобы открыть.
+URL-адрес, который нужно открыть.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.
+Возвращает TRUE на успех, FALSE на неудачу.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Пример HTMLEdit](../../overview/visual-cpp-samples.md)<br/>
+[Образец HTMLEdit](../../overview/visual-cpp-samples.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)

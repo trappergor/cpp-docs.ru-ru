@@ -22,23 +22,23 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlTemporaryFile class
 ms.assetid: 05f0f2a5-94f6-4594-8dae-b114292ff5f9
-ms.openlocfilehash: d6a7a61d1886a264f8575e8d7325d6639d21338d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f3d0be66bf0b5a6c07a72c8ae6cc9c90e176728f
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497714"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82167894"
 ---
 # <a name="catltemporaryfile-class"></a>Класс Катлтемпорарифиле
 
 Этот класс предоставляет методы для создания и использования временного файла.
 
 > [!IMPORTANT]
->  Этот класс и его члены не могут использоваться в приложениях, выполняемых в среда выполнения Windows.
+> Этот класс и его члены не могут использоваться в приложениях, выполняемых в среда выполнения Windows.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 class CAtlTemporaryFile
 ```
 
@@ -46,14 +46,14 @@ class CAtlTemporaryFile
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[Катлтемпорарифиле:: Катлтемпорарифиле](#catltemporaryfile)|Конструктор.|
 |[Катлтемпорарифиле:: ~ Катлтемпорарифиле](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[Катлтемпорарифиле:: Close](#close)|Вызовите этот метод, чтобы закрыть временный файл и либо удалить его содержимое, либо сохранить его по указанному имени файла.|
 |[Катлтемпорарифиле:: Create](#create)|Вызовите этот метод, чтобы создать временный файл.|
@@ -72,11 +72,11 @@ class CAtlTemporaryFile
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[ОБРАБОТЧИК Катлтемпорарифиле:: operator](#operator_handle)|Возвращает маркер для временного файла.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 `CAtlTemporaryFile`упрощает создание и использование временного файла. Файл автоматически называется, открывается, закрывается и удаляется. Если содержимое файла требуется после закрытия файла, их можно сохранить в новый файл с указанным именем.
 
@@ -88,15 +88,15 @@ class CAtlTemporaryFile
 
 См. пример для [катлтемпорарифиле:: катлтемпорарифиле](#catltemporaryfile).
 
-##  <a name="catltemporaryfile"></a>Катлтемпорарифиле:: Катлтемпорарифиле
+## <a name="catltemporaryfilecatltemporaryfile"></a><a name="catltemporaryfile"></a>Катлтемпорарифиле:: Катлтемпорарифиле
 
 Конструктор.
 
-```
+```cpp
 CAtlTemporaryFile() throw();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Файл на самом деле не открывается до тех пор, пока не будет выполнен вызов [катлтемпорарифиле:: Create](#create).
 
@@ -104,23 +104,23 @@ CAtlTemporaryFile() throw();
 
 [!code-cpp[NVC_ATL_Utilities#73](../../atl/codesnippet/cpp/catltemporaryfile-class_1.cpp)]
 
-##  <a name="dtor"></a>Катлтемпорарифиле:: ~ Катлтемпорарифиле
+## <a name="catltemporaryfilecatltemporaryfile"></a><a name="dtor"></a>Катлтемпорарифиле:: ~ Катлтемпорарифиле
 
 Деструктор
 
-```
+```cpp
 ~CAtlTemporaryFile() throw();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Деструктор вызывает [катлтемпорарифиле:: Close](#close).
 
-##  <a name="close"></a>Катлтемпорарифиле:: Close
+## <a name="catltemporaryfileclose"></a><a name="close"></a>Катлтемпорарифиле:: Close
 
 Вызовите этот метод, чтобы закрыть временный файл и либо удалить его содержимое, либо сохранить его по указанному имени файла.
 
-```
+```cpp
 HRESULT Close(LPCTSTR szNewName = NULL) throw();
 ```
 
@@ -131,17 +131,17 @@ HRESULT Close(LPCTSTR szNewName = NULL) throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
 ### <a name="example"></a>Пример
 
 См. пример для [катлтемпорарифиле:: катлтемпорарифиле](#catltemporaryfile).
 
-##  <a name="create"></a>Катлтемпорарифиле:: Create
+## <a name="catltemporaryfilecreate"></a><a name="create"></a>Катлтемпорарифиле:: Create
 
 Вызовите этот метод, чтобы создать временный файл.
 
-```
+```cpp
 HRESULT Create(LPCTSTR pszDir = NULL, DWORD dwDesiredAccess = GENERIC_WRITE) throw();
 ```
 
@@ -155,25 +155,25 @@ HRESULT Create(LPCTSTR pszDir = NULL, DWORD dwDesiredAccess = GENERIC_WRITE) thr
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
 ### <a name="example"></a>Пример
 
 См. пример для [катлтемпорарифиле:: катлтемпорарифиле](#catltemporaryfile).
 
-##  <a name="flush"></a>Катлтемпорарифиле:: Flush
+## <a name="catltemporaryfileflush"></a><a name="flush"></a>Катлтемпорарифиле:: Flush
 
 Вызовите этот метод, чтобы принудительно записать все данные, остающиеся в буфере файла, во временный файл.
 
-```
+```cpp
 HRESULT Flush() throw();
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Аналогично [катлтемпорарифиле:: хандсофф](#handsoff), за исключением того, что файл не закрыт.
 
@@ -181,11 +181,11 @@ HRESULT Flush() throw();
 
 См. пример для [катлтемпорарифиле:: катлтемпорарифиле](#catltemporaryfile).
 
-##  <a name="getposition"></a>Катлтемпорарифиле:: Disposition
+## <a name="catltemporaryfilegetposition"></a><a name="getposition"></a>Катлтемпорарифиле:: Disposition
 
 Вызовите этот метод, чтобы получить текущую позиции указателя файла.
 
-```
+```cpp
 HRESULT GetPosition(ULONGLONG& nPos) const throw();
 ```
 
@@ -196,17 +196,17 @@ HRESULT GetPosition(ULONGLONG& nPos) const throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Чтобы изменить положение указателя файла, используйте [катлтемпорарифиле:: Seek](#seek).
 
-##  <a name="getsize"></a>Катлтемпорарифиле:: DataSize
+## <a name="catltemporaryfilegetsize"></a><a name="getsize"></a>Катлтемпорарифиле:: DataSize
 
 Вызовите этот метод, чтобы получить размер временного файла в байтах.
 
-```
+```cpp
 HRESULT GetSize(ULONGLONG& nLen) const throw();
 ```
 
@@ -217,45 +217,45 @@ HRESULT GetSize(ULONGLONG& nLen) const throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="handsoff"></a>Катлтемпорарифиле:: Хандсофф
+## <a name="catltemporaryfilehandsoff"></a><a name="handsoff"></a>Катлтемпорарифиле:: Хандсофф
 
 Вызовите этот метод, чтобы разорвать связь файла `CAtlTemporaryFile` с объектом.
 
-```
+```cpp
 HRESULT HandsOff() throw();
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 `HandsOff`и [катлтемпорарифиле:: Хандсон](#handson) используются для того, чтобы разорвать связь файла с объектом и при необходимости повторно присоединить его. `HandsOff`принудительно записывает все данные, оставшиеся в буфере файла, во временный файл, а затем закрывает файл. Если вы хотите закрыть и удалить файл без возможности восстановления или хотите закрыть и хранить содержимое файла с заданным именем, используйте [катлтемпорарифиле:: Close](#close).
 
-##  <a name="handson"></a>Катлтемпорарифиле:: Хандсон
+## <a name="catltemporaryfilehandson"></a><a name="handson"></a>Катлтемпорарифиле:: Хандсон
 
 Вызовите этот метод, чтобы открыть существующий временный файл и поместить указатель в конец файла.
 
-```
+```cpp
 HRESULT HandsOn() throw();
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 [Катлтемпорарифиле:: хандсофф](#handsoff) и `HandsOn` используются для того, чтобы разорвать связь файла с объектом и при необходимости повторно присоединить его.
 
-##  <a name="lockrange"></a>Катлтемпорарифиле:: Локкранже
+## <a name="catltemporaryfilelockrange"></a><a name="lockrange"></a>Катлтемпорарифиле:: Локкранже
 
 Вызовите этот метод, чтобы заблокировать область во временном файле, чтобы предотвратить доступ других процессов к нему.
 
-```
+```cpp
 HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 ```
 
@@ -269,25 +269,25 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Блокировка байтов в файле предотвращает доступ других процессов к этим байтам. Можно заблокировать несколько регионов файла, но перекрывающиеся области не допускаются. Чтобы успешно разблокировать регион, используйте [катлтемпорарифиле:: унлоккранже](#unlockrange), гарантируя, что диапазон байтов точно соответствует региону, который ранее был заблокирован. `LockRange`не выполняет слияние смежных областей; Если два заблокированных региона являются смежными, каждый из них необходимо разблокировать отдельно.
 
-##  <a name="operator_handle"></a>ОБРАБОТЧИК Катлтемпорарифиле:: operator
+## <a name="catltemporaryfileoperator-handle"></a><a name="operator_handle"></a>ОБРАБОТЧИК Катлтемпорарифиле:: operator
 
 Возвращает маркер для временного файла.
 
-```
+```cpp
 operator HANDLE() throw();
 ```
 
-##  <a name="read"></a>Катлтемпорарифиле:: Read
+## <a name="catltemporaryfileread"></a><a name="read"></a>Катлтемпорарифиле:: Read
 
 Вызывайте этот метод для чтения данных из временного файла, начиная с позиции, указанной указателем файла.
 
-```
+```cpp
 HRESULT Read(
     LPVOID pBuffer,
     DWORD nBufSize,
@@ -303,13 +303,13 @@ HRESULT Read(
 Размер буфера в байтах.
 
 *нбитесреад*<br/>
-Количество прочитанных байтов.
+Число переданных байтов.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Вызывает [катлфиле:: Read](../../atl/reference/catlfile-class.md#read). Чтобы изменить положение указателя файла, вызовите метод [катлтемпорарифиле:: Seek](#seek).
 
@@ -317,11 +317,11 @@ HRESULT Read(
 
 См. пример для [катлтемпорарифиле:: катлтемпорарифиле](#catltemporaryfile).
 
-##  <a name="seek"></a>Катлтемпорарифиле:: Seek
+## <a name="catltemporaryfileseek"></a><a name="seek"></a>Катлтемпорарифиле:: Seek
 
 Вызовите этот метод, чтобы переместить указатель файла для временного файла.
 
-```
+```cpp
 HRESULT Seek(LONGLONG nOffset, DWORD dwFrom = FILE_CURRENT) throw();
 ```
 
@@ -335,9 +335,9 @@ HRESULT Seek(LONGLONG nOffset, DWORD dwFrom = FILE_CURRENT) throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Вызывает [катлфиле:: Seek](../../atl/reference/catlfile-class.md#seek). Чтобы получить текущую позиции указателя файла, вызовите [катлтемпорарифиле:: Disposition](#getposition).
 
@@ -345,11 +345,11 @@ HRESULT Seek(LONGLONG nOffset, DWORD dwFrom = FILE_CURRENT) throw();
 
 См. пример для [катлтемпорарифиле:: катлтемпорарифиле](#catltemporaryfile).
 
-##  <a name="setsize"></a>Катлтемпорарифиле:: SetSize
+## <a name="catltemporaryfilesetsize"></a><a name="setsize"></a>Катлтемпорарифиле:: SetSize
 
 Вызовите этот метод, чтобы задать размер временного файла.
 
-```
+```cpp
 HRESULT SetSize(ULONGLONG nNewLen) throw();
 ```
 
@@ -360,17 +360,17 @@ HRESULT SetSize(ULONGLONG nNewLen) throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Вызывает [катлфиле:: SetSize](../../atl/reference/catlfile-class.md#setsize). При возврате указатель файла размещается в конце файла.
 
-##  <a name="tempfilename"></a>Катлтемпорарифиле:: Темпфиленаме
+## <a name="catltemporaryfiletempfilename"></a><a name="tempfilename"></a>Катлтемпорарифиле:: Темпфиленаме
 
 Вызовите этот метод, чтобы вернуть имя временного файла.
 
-```
+```cpp
 LPCTSTR TempFileName() throw();
 ```
 
@@ -378,15 +378,15 @@ LPCTSTR TempFileName() throw();
 
 Возвращает LPCTSTR, указывающий на имя файла.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Имя файла создается в [катлтемпорарифиле:: катлтемпорарифиле](#catltemporaryfile) с вызовом функции [жеттемпфиле](/windows/win32/api/fileapi/nf-fileapi-gettempfilenamew)Windows SDK. Для временного файла всегда будет использоваться расширение файла «ТФР».
 
-##  <a name="unlockrange"></a>Катлтемпорарифиле:: Унлоккранже
+## <a name="catltemporaryfileunlockrange"></a><a name="unlockrange"></a>Катлтемпорарифиле:: Унлоккранже
 
 Вызовите этот метод, чтобы разблокировать регион временного файла.
 
-```
+```cpp
 HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 ```
 
@@ -400,17 +400,17 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Вызывает [катлфиле:: унлоккранже](../../atl/reference/catlfile-class.md#unlockrange).
 
-##  <a name="write"></a>Катлтемпорарифиле:: Write
+## <a name="catltemporaryfilewrite"></a><a name="write"></a>Катлтемпорарифиле:: Write
 
 Вызывайте этот метод для записи данных во временный файл, начиная с позиции, указанной указателем файла.
 
-```
+```cpp
 HRESULT Write(
     LPCVOID pBuffer,
     DWORD nBufSize,
@@ -425,14 +425,14 @@ HRESULT Write(
 *нбуфсизе*<br/>
 Число байтов, которое необходимо передать из буфера.
 
-*pnBytesWritten*<br/>
-Число записанных байтов.
+*пнбитесвриттен*<br/>
+Количество записанных байт.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Вызывает [катлфиле:: Write](../../atl/reference/catlfile-class.md#write).
 
@@ -442,5 +442,5 @@ HRESULT Write(
 
 ## <a name="see-also"></a>См. также
 
-[Обзор класса](../../atl/atl-class-overview.md)<br/>
-[Класс CAtlFile](../../atl/reference/catlfile-class.md)
+[Общие сведения о классах](../../atl/atl-class-overview.md)<br/>
+[Класс Катлфиле](../../atl/reference/catlfile-class.md)

@@ -1,8 +1,9 @@
 ---
 title: ___lc_codepage_func
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - ___lc_codepage_func
+- _o____lc_codepage_func
 api_location:
 - msvcr120.dll
 - msvcr110_clr0400.dll
@@ -11,6 +12,7 @@ api_location:
 - msvcr90.dll
 - msvcr110.dll
 - msvcrt.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -21,12 +23,12 @@ f1_keywords:
 helpviewer_keywords:
 - ___lc_codepage_func
 ms.assetid: 6a663bd0-5a63-4a2f-9507-872ec1582aae
-ms.openlocfilehash: dbadf8239652f5c96e7177dedd91d340e545b9fe
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: ea740bc335981ad7e1017ab4026fdc50b8fe8893
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944926"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914128"
 ---
 # <a name="___lc_codepage_func"></a>___lc_codepage_func
 
@@ -42,7 +44,7 @@ UINT ___lc_codepage_func(void);
 
 Текущая кодовая страница потока.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 `___lc_codepage_func` — это внутренняя функция CRT, которая используется другими функциями CRT для получения текущей кодовой страницы из локального хранилища потока для данных CRT. Эти сведения также доступны при использовании функции [_get_current_locale](../c-runtime-library/reference/get-current-locale.md).
 
@@ -50,13 +52,15 @@ UINT ___lc_codepage_func(void);
 
 Внутренние функции CRT связаны с конкретной реализацией и подлежат изменению в каждом выпуске. Мы не рекомендуем использовать их в коде.
 
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](global-state.md).
+
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
 |`___lc_codepage_func`|crt\src\setlocal.h|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [_get_current_locale](../c-runtime-library/reference/get-current-locale.md)<br/>
 [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>

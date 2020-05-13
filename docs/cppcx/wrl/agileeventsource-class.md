@@ -6,12 +6,12 @@ f1_keywords:
 - event/Microsoft::WRL::AgileEventSource
 helpviewer_keywords:
 - AgileEventSource class
-ms.openlocfilehash: 7a919c0b2aa778ba1db19c3bfc3871542e8f9569
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 71a70f783d8f8967d755bb788f4aae4861340d64
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441269"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214192"
 ---
 # <a name="agileeventsource-class"></a>Класс Агиливентсаурце
 
@@ -61,7 +61,7 @@ class AgileEventSource :
 |----------|-----------------|
 |[Метод Агиливентсаурце:: Add](#add)|Добавляет в набор обработчиков событий для текущего объекта **агиливентсаурце** обработчик событий Agile, представленный указанным интерфейсом делегата.|
 
-## <a name="add"></a>Метод Агиливентсаурце:: Add
+## <a name="agileeventsourceadd-method"></a><a name="add"></a>Метод Агиливентсаурце:: Add
 
 Добавляет обработчик событий, представленный указанным интерфейсом делегата, к набору обработчиков событий для текущего объекта [EventSource](eventsource-class.md) .
 

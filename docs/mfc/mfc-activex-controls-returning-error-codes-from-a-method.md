@@ -1,5 +1,5 @@
 ---
-title: Элементы ActiveX в MFC. Возврат кодов ошибок из метода
+title: Элементы управления ActiveX в MFC. Возврат кодов ошибок из метода
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], error codes
@@ -10,28 +10,28 @@ helpviewer_keywords:
 - SCODE, MFC ActiveX controls
 - ThrowError method [MFC]
 ms.assetid: 771fb9c9-2413-4dcc-b386-7bc4c4adeafd
-ms.openlocfilehash: 0800c1827c636dd81e2928e33c0ee2afde4c94ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5314545a3a903158362dbfa65c4a9a1b2143e86b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324276"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364540"
 ---
-# <a name="mfc-activex-controls-returning-error-codes-from-a-method"></a>Элементы ActiveX в MFC. Возврат кодов ошибок из метода
+# <a name="mfc-activex-controls-returning-error-codes-from-a-method"></a>Элементы управления ActiveX в MFC. Возврат кодов ошибок из метода
 
-В этой статье описывается, как возвращать коды ошибок из метода, элемент управления ActiveX.
+В этой статье описывается, как вернуть коды ошибок из метода управления ActiveX.
 
-Чтобы указать, что произошла ошибка в методе, следует использовать [COleControl::ThrowError](../mfc/reference/colecontrol-class.md#throwerror) функцией-членом, которая принимает SCODE (код состояния) как параметр. Можно использовать предопределенные SCODE или определить один из ваших собственных.
+Чтобы указать, что ошибка произошла в методе, следует использовать функцию [cOleControl::ThrowError,](../mfc/reference/colecontrol-class.md#throwerror) которая использует SCODE (код статуса) в качестве параметра. Вы можете использовать предопределенный SCODE или определить один из ваших собственных.
 
 > [!NOTE]
->  `ThrowError` предназначен для использования только с точки зрения сообщение об ошибке из внутри свойства Get или Set функция или метод автоматизации. Это только те представления времени, которые будут соответствующему обработчику исключений в стеке.
+> `ThrowError`предназначен для использования только в качестве средства возврата ошибки из функции Get или Set свойства или метода автоматизации. Это единственные случаи, когда соответствующий обработчик исключений будет присутствовать в стеке.
 
-Вспомогательные функции существуют для самых распространенных стандартными SCODEs, такими как [COleControl::SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported), [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported), и [COleControl::SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).
+Функции помощника существуют для наиболее распространенных предопределенных SCODEs, таких как [COleControl::SetNotSupported,](../mfc/reference/colecontrol-class.md#setnotsupported) [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported), и [COleControl::SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).
 
-Список предварительно определенных SCODEs и инструкции по определению пользовательских SCODEs, см. в разделе [обработка ошибок в ваш элемент управления ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) в элементах управления ActiveX: Дополнительные разделы.
+Список предопределенных СКОДЕ и инструкций по определению пользовательских [Handling Errors in Your ActiveX Control](../mfc/mfc-activex-controls-advanced-topics.md) СКОДЕ см.
 
-Дополнительные сведения о reporting исключения в других областях кода, см. в разделе [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror) и разделе [обработка ошибок в ваш элемент управления ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) в элементах управления ActiveX: Дополнительные разделы.
+Для получения дополнительной информации об исключениях в других областях кода [см. COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror) и раздел [Обработка ошибок в вашем ActiveX Control](../mfc/mfc-activex-controls-advanced-topics.md) в ActiveX Controls: Расширенные темы.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Элементы ActiveX библиотеки MFC](../mfc/mfc-activex-controls.md)

@@ -1,11 +1,13 @@
 ---
 title: strstr, wcsstr, _mbsstr, _mbsstr_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsstr
 - wcsstr
 - _mbsstr_l
 - strstr
+- _o__mbsstr
+- _o__mbsstr_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +22,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -47,12 +50,12 @@ helpviewer_keywords:
 - _mbsstr_l function
 - strstr function
 ms.assetid: 03d70c3f-2473-45cb-a5f8-b35beeb2748a
-ms.openlocfilehash: 8c113e02f308b634b6bcb8aea6e46fc14b9abd92
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1fb6c025ec324fceb1b11dd23ed61500f08b4535
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946588"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911002"
 ---
 # <a name="strstr-wcsstr-_mbsstr-_mbsstr_l"></a>strstr, wcsstr, _mbsstr, _mbsstr_l
 
@@ -132,23 +135,25 @@ const unsigned char *_mbsstr_l(
 
 Возвращает указатель на первое вхождение *стрсеарч* в *str*или значение null, если *стрсеарч* не отображается в *str*. Если *стрсеарч* указывает на строку нулевой длины, функция возвращает *str*.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Функция возвращает указатель на первое вхождение стрсеарч в *str*. `strstr` Поиск не включает завершающие нуль-символы. `wcsstr` является версией `strstr` с расширенными символами, а `_mbsstr` — версией с многобайтовыми символами. Аргументы и возвращаемое значение `wcsstr` представляют собой двухбайтовые строки; аргументы и возвращаемое значение `_mbsstr` представляют собой многобайтовые строки. `_mbsstr` проверяет свои параметры. Если *str* или *стрсеарч* имеет значение null, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md) . Если выполнение может быть продолжено `_mbsstr` , `errno` присваивает свойству значение еинвал и возвращает значение 0. Функции `strstr` и `wcsstr` не проверяют свои параметры. В остальном эти три функции ведут себя идентично.
+`strstr` Функция возвращает указатель на первое вхождение *стрсеарч* в *str*. Поиск не включает завершающие нуль-символы. `wcsstr` является версией `strstr` с расширенными символами, а `_mbsstr` — версией с многобайтовыми символами. Аргументы и возвращаемое значение `wcsstr` представляют собой двухбайтовые строки; аргументы и возвращаемое значение `_mbsstr` представляют собой многобайтовые строки. `_mbsstr` проверяет свои параметры. Если *str* или *стрсеарч* имеет значение null, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md) . Если выполнение может быть продолжено `_mbsstr` , `errno` ПРИСВАИВАЕТ свойству значение еинвал и возвращает значение 0. Функции `strstr` и `wcsstr` не проверяют свои параметры. В остальном эти три функции ведут себя идентично.
 
 > [!IMPORTANT]
 > Эти функции могут создать угрозу в связи с проблемой переполнения буфера. Проблемы переполнения буфера могут использоваться для атаки на систему, поскольку они могут допустить выполнение произвольного кода, приводящего к несанкционированному повышению прав доступа. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-В C эти функции принимают указатель **const** для первого аргумента. В языке C++ доступны две перегрузки. Перегрузка, которая принимает указатель на **const** , возвращает указатель на **константу**; версия, принимающая указатель на non-**const** , возвращает указатель на**неконстантный**. Макрос _CRT_CONST_CORRECT_OVERLOADS определяется, если доступны и **константные** , и**неконстантные** версии этих функций. Если требуется поведение, не являющееся**константой** , для C++ обеих перегрузок, определите символ _CONST_RETURN.
+В C эти функции принимают указатель **const** для первого аргумента. В языке C++ доступны две перегрузки. Перегрузка, которая принимает указатель на **const** , возвращает указатель на **константу**; версия, принимающая указатель на non-**const** , возвращает указатель на**неконстантный**. Макрос _CRT_CONST_CORRECT_OVERLOADS определен, если доступны и **константные** , и**неконстантные** версии этих функций. Если требуется поведение, не являющееся**константой** , для обеих перегрузок C++, определите символ _CONST_RETURN.
 
-На выходное значение влияет настройка LC_CTYPE в категории locale; Дополнительные сведения см. в разделе [setlocale, _wsetlocale](setlocale-wsetlocale.md). Версии этих функций, не имеющие суффикса **_l** , используют текущий языковой стандарт для этого поведения, зависящего от языкового стандарта. версии с суффиксом **_l** идентичны за исключением того, что вместо них используется переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+На выходное значение влияет настройка категории locale LC_CTYPE; Дополнительные сведения см. в разделе [setlocale, _wsetlocale](setlocale-wsetlocale.md). Версии этих функций, не имеющие суффикса **_l** , используют текущий языковой стандарт для этого поведения, зависящего от языкового стандарта. версии с суффиксом **_l** идентичны, за исключением того, что вместо них используется переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |`_tcsstr`|`strstr`|`_mbsstr`|`wcsstr`|
-|**Н/Д**|**Н/Д**|`_mbsstr_l`|**Н/Д**|
+|**н/д**|**н/д**|`_mbsstr_l`|**н/д**|
 
 ## <a name="requirements"></a>Требования
 
@@ -158,7 +163,7 @@ const unsigned char *_mbsstr_l(
 |`wcsstr`|\<string.h> или \<wchar.h>|
 |`_mbsstr`, `_mbsstr_l`|\<mbstring.h>|
 
-Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -197,14 +202,14 @@ String to be searched:
 lazy found at position 36
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Операции со строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Языковой стандарт](../../c-runtime-library/locale.md)<br/>
+[Управление строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Интерпретация последовательностей многобайтовых символов](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
 [strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l](strpbrk-wcspbrk-mbspbrk-mbspbrk-l.md)<br/>
 [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>
 [strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>
-[basic_string::find](../../standard-library/basic-string-class.md#find)<br/>
+[basic_string:: Find](../../standard-library/basic-string-class.md#find)<br/>

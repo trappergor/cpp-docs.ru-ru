@@ -1,9 +1,11 @@
 ---
 title: _rmdir, _wrmdir
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wrmdir
 - _rmdir
+- _o__rmdir
+- _o__wrmdir
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - _wrmdir function
 - wrmdir function
 ms.assetid: 652c2a5a-b0ac-4493-864e-1edf484333c5
-ms.openlocfilehash: 396e620bfabe240638dc070ff87582b16287ff60
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c0c5055a499614f364370b7aa90697898dc510ab
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949206"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916929"
 ---
 # <a name="_rmdir-_wrmdir"></a>_rmdir, _wrmdir
 
@@ -70,18 +73,20 @@ int _wrmdir(
 |Значение errno|Условие|
 |-|-|
 | **ENOTEMPTY** | Заданный путь не является каталогом, каталог не является пустым или каталог является текущим рабочим каталогом или корневым каталогом. |
-| **ENOENT** | Недопустимый путь. |
-| **EACCES** | Программа имеет открытый дескриптор каталога. |
+| **еноент** | Недопустимый путь. |
+| **еакцес** | Программа имеет открытый дескриптор каталога. |
 
 Дополнительные сведения об этих и других кодах возврата см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Функция **_rmdir** удаляет каталог, указанный параметром *dirname*. Каталог должен быть пустым и не должен являться текущим рабочим или корневым каталогом.
 
 **_wrmdir** — это версия **_rmdir**для расширенных символов; Аргумент *dirname* для **_wrmdir** является строкой расширенных символов. в противном случае **_wrmdir** и **_rmdir** ведут себя одинаково.
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Процедура Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|
@@ -94,7 +99,7 @@ int _wrmdir(
 |**_rmdir**|\<direct.h>|
 |**_wrmdir**|\<direct.h> или \<wchar.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Библиотеки
 
@@ -104,7 +109,7 @@ int _wrmdir(
 
 См. пример для функции [_mkdir](mkdir-wmkdir.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Управление каталогами](../../c-runtime-library/directory-control.md)<br/>
 [_chdir, _wchdir](chdir-wchdir.md)<br/>

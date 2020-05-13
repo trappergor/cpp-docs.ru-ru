@@ -13,12 +13,12 @@ helpviewer_keywords:
 - software exceptions [C++]
 - formats [C++], exception codes
 ms.assetid: be1376c3-c46a-4f52-ad1d-c2362840746a
-ms.openlocfilehash: 7c58ae2e2b6635345a162d11d2b75a9865d37751
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: f50d84bd034cc6eeb00dc17cb3b7272a988b6731
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246407"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179137"
 ---
 # <a name="raising-software-exceptions"></a>Создание программных исключений
 
@@ -36,7 +36,7 @@ ms.locfileid: "74246407"
 
 В файле \<Winerror. h > показан формат кодов исключений. Чтобы проверить, что определяемый код не будет конфликтовать с существующим кодом исключения, задайте для третьего наиболее значимого бита значение 1. Следует установить четыре наиболее значимых бита, как показано в следующей таблице.
 
-|Bits|Рекомендуемый двоичный параметр|Описание|
+|Bits|Рекомендуемый двоичный параметр|Description|
 |----------|--------------------------------|-----------------|
 |31-30|11|Эти два бита описываются основное состояние кода: 11 = ошибка, 00 = успех, 01 = информация, 10 = предупреждение.|
 |29|1|Бит клиента. Установите значение 1 для пользовательских кодов.|
@@ -61,7 +61,7 @@ if (lpstr == NULL)
 
 Если требуется просто создать исключение, можно установить для трех последних параметров значение 0. Три последних параметра полезны при передаче дополнительной информации и установке флага, который запрещает обработчикам продолжать выполнение. Дополнительные сведения см. в описании функции [RaiseException](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raiseexception) в Windows SDK.
 
-Затем можно проверить определенные коды в фильтрах обработки исключений. Например:
+Затем можно проверить определенные коды в фильтрах обработки исключений. Пример:
 
 ```cpp
 __try {
@@ -71,7 +71,7 @@ __except (GetExceptionCode() == STATUS_INSUFFICIENT_MEM ||
         GetExceptionCode() == STATUS_FILE_BAD_FORMAT )
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Написание обработчика исключений](../cpp/writing-an-exception-handler.md)<br/>
 [Структурированная обработка исключений (CC++/)](../cpp/structured-exception-handling-c-cpp.md)

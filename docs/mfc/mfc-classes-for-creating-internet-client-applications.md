@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Internet client applications [MFC], MFC
 - Internet applications [MFC], MFC
 ms.assetid: 67d34117-9839-4f4b-8bb8-0e4a9471c606
-ms.openlocfilehash: 9201859c6a5d9fe2b31c3fc4348a42ff9566fc8c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 578fd5b72e6c04610aa862f1a6631895a32a9bfe
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62239227"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81358217"
 ---
 # <a name="mfc-classes-for-creating-internet-client-applications"></a>Классы MFC для создания клиентских приложений в Интернете
 
-MFC предоставляет следующие классы и глобальные функции для написания клиентских приложений в Интернете. Отступ указывает, что класс является производным от основного класса над ним. `CGopherFile` и `CHttpFile` являются производными от `CInternetFile`, например. Эти классы и глобальные функции объявлены в AFXINET. H, за исключением `CFileFind`, которое объявлено в AFX. З.
+MFC предоставляет следующие классы и глобальные функции для написания приложений для интернет-клиентов. Отступ указывает на то, что класс происходит от неотвраченного класса над ним. `CGopherFile`и `CHttpFile` вытекают из, `CInternetFile`например. Эти классы и глобальные функции объявлены в AFXINET. H, `CFileFind`за исключением , который объявлен в AFX. H.
 
 ## <a name="classes"></a>Классы
 
@@ -25,27 +25,27 @@ MFC предоставляет следующие классы и глобаль
 
 - [CInternetConnection](../mfc/reference/cinternetconnection-class.md)
 
-   - [CFtpConnection](../mfc/reference/cftpconnection-class.md)
+  - [CFtpConnection](../mfc/reference/cftpconnection-class.md)
 
-   - [CGopherConnection](../mfc/reference/cgopherconnection-class.md)
+  - [CGopherConnection](../mfc/reference/cgopherconnection-class.md)
 
-   - [CHttpConnection](../mfc/reference/chttpconnection-class.md)
+  - [CHttpConnection](../mfc/reference/chttpconnection-class.md)
 
 - [CInternetFile](../mfc/reference/cinternetfile-class.md)
 
-   - [CGopherFile](../mfc/reference/cgopherfile-class.md)
+  - [CGopherFile](../mfc/reference/cgopherfile-class.md)
 
-   - [CHttpFile](../mfc/reference/chttpfile-class.md)
+  - [CHttpFile](../mfc/reference/chttpfile-class.md)
 
 - [CFileFind](../mfc/reference/cfilefind-class.md)
 
-   - [CFtpFileFind](../mfc/reference/cftpfilefind-class.md)
+  - [CFtpFileFind](../mfc/reference/cftpfilefind-class.md)
 
-   - [CGopherFileFind](../mfc/reference/cgopherfilefind-class.md)
+  - [CGopherFileFind](../mfc/reference/cgopherfilefind-class.md)
 
 - [CGopherLocator](../mfc/reference/cgopherlocator-class.md)
 
-- [CInternetException](../mfc/reference/cinternetexception-class.md)
+- [CInternetConnection](../mfc/reference/cinternetexception-class.md)
 
 ## <a name="global-functions"></a>Глобальные функции
 
@@ -55,8 +55,8 @@ MFC предоставляет следующие классы и глобаль
 
 - [AfxThrowInternetException](reference/internet-url-parsing-globals.md#afxthrowinternetexception)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Расширения Интернета Win32 (WinInet)](../mfc/win32-internet-extensions-wininet.md)<br/>
-[Необходимые компоненты для клиентских классов в Интернете](../mfc/prerequisites-for-internet-client-classes.md)<br/>
+[Предпосылки для занятий интернет-клиентов](../mfc/prerequisites-for-internet-client-classes.md)<br/>
 [Создание клиентских приложений в Интернете с использованием классов MFC WinInet](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)

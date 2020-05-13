@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ptr attribute
 ms.assetid: 95eaea57-a5be-45f6-a612-ba2c9bc4645a
-ms.openlocfilehash: e5f2d694f3525f27e4a8371f04efa28940f21bba
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e56d4e56135c0f32a1796ac98565a990c7225705
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514151"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166423"
 ---
 # <a name="ptr"></a>ptr
 
@@ -23,7 +23,7 @@ ms.locfileid: "69514151"
 [ptr]
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Атрибут **ptr** C++ имеет те же функциональные возможности, что и атрибут [ptr](/windows/win32/Midl/ptr) MIDL.
 
@@ -37,14 +37,14 @@ ms.locfileid: "69514151"
 
 |||
 |-|-|
-|**Относится к**|Параметр интерфейса, метод интерфейса, **Определение типа**|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Отсутствуют|
-|**Недопустимые атрибуты**|Отсутствуют|
+|**Применение**|Параметр интерфейса, метод интерфейса, **Определение типа**|
+|**Повторяемый**|нет|
+|**Обязательные атрибуты**|None|
+|**Недопустимые атрибуты**|None|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты интерфейса](interface-attributes.md)<br/>

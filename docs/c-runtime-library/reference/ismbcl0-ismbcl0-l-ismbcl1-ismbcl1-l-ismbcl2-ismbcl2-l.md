@@ -1,6 +1,6 @@
 ---
 title: _ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ismbcl2
 - _ismbcl1
@@ -8,6 +8,12 @@ api_name:
 - _ismbcl2_l
 - _ismbcl1_l
 - _ismbcl0_l
+- _o__ismbcl0
+- _o__ismbcl0_l
+- _o__ismbcl1
+- _o__ismbcl1_l
+- _o__ismbcl2
+- _o__ismbcl2_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -51,12 +58,12 @@ helpviewer_keywords:
 - _ismbcl2_l function
 - _ismbcl0 function
 ms.assetid: ee15ebd1-462c-4a43-95f3-6735836d626a
-ms.openlocfilehash: 04560b7dd3a7188531e247499bc2ffd18bc23ca5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 813e6359d17f2ea4c6c0ded87a97c2afda243642
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953856"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919729"
 ---
 # <a name="_ismbcl0-_ismbcl0_l-_ismbcl1-_ismbcl1_l-_ismbcl2-_ismbcl2_l"></a>_ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l
 
@@ -93,7 +100,7 @@ int _ismbcl2_l(
 
 ### <a name="parameters"></a>Параметры
 
-*c*<br/>
+*ц*<br/>
 Символ, который требуется проверить.
 
 *locale*<br/>
@@ -101,9 +108,9 @@ int _ismbcl2_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая из этих процедур возвращает ненулевое значение, если символ удовлетворяет условию теста, или 0, если не удовлетворяет. Если *c* < = 255 и имеется соответствующая подпрограммы **_ismbb** (например, **_ismbcalnum** соответствует **_ismbbalnum**), результатом является возвращаемое значение соответствующей подпрограммы **_ismbb** .
+Каждая из этих процедур возвращает ненулевое значение, если символ удовлетворяет условию теста, или 0, если не удовлетворяет. Если *c* <= 255 и имеется соответствующая **_ismbbая** под (например, **_ismbcalnum** соответствует **_ismbbalnum**), результатом является возвращаемое значение соответствующей подпрограммы **_ismbb** .
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Каждая из этих функций проверяет определенный многобайтовый символ на соответствие заданному условию.
 
@@ -111,16 +118,18 @@ int _ismbcl2_l(
 
 |Подпрограмма|Условие теста (только для кодовой страницы 932)|
 |-------------|-------------------------------------------|
-|**_ismbcl0**|JIS (не кандзи): 0x8140 < =*c*< = 0x889E.|
-|**_ismbcl0_l**|JIS (не кандзи): 0x8140 < =*c*< = 0x889E.|
-|**_ismbcl1**|JIS (уровень 1): 0x889F < =*c*< = 0x9872.|
-|**_ismbcl1_l**|JIS (уровень 1): 0x889F < =*c*< = 0x9872.|
-|**_ismbcl2**|JIS (уровень 2): 0x989F < =*c*< = 0xEAA4.|
-|**_ismbcl2_l**|JIS (уровень 2): 0x989F < =*c*< = 0xEAA4.|
+|**_ismbcl0**|JIS без кандзи: 0x8140<=*c*<= 0x889E.|
+|**_ismbcl0_l**|JIS без кандзи: 0x8140<=*c*<= 0x889E.|
+|**_ismbcl1**|JIS Level-1:0x889F<=*c*<= 0x9872.|
+|**_ismbcl1_l**|JIS Level-1:0x889F<=*c*<= 0x9872.|
+|**_ismbcl2**|JIS Level-2:0x989F<=*c*<= 0xEAA4.|
+|**_ismbcl2_l**|JIS Level-2:0x989F<=*c*<= 0xEAA4.|
 
 Функции проверяют, что указанное значение *c* соответствует условиям теста, описанным выше, но не проверяет, является ли *c* допустимым многобайтовым символом. Если младший байт находится в диапазонах 0x00–0x3F, 0x7F или 0xFD–0xFF, эти функции возвращают ненулевое значение, указывающее, что символ удовлетворяет условию теста. Чтобы проверить, является ли символ многобайтовым, используйте [_ismbbtrail](ismbbtrail-ismbbtrail-l.md).
 
-**Конец раздела для кодовой страницы 932**
+**Код конечной страницы 932**
+
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -133,10 +142,10 @@ int _ismbcl2_l(
 |**_ismbcl2**|\<mbstring.h>|
 |**_ismbcl2_l**|\<mbstring.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Классификация символов](../../c-runtime-library/character-classification.md)<br/>
-[Подпрограммы _ismbc](../../c-runtime-library/ismbc-routines.md)<br/>
-[Подпрограммы is, isw](../../c-runtime-library/is-isw-routines.md)<br/>
+[Процедуры _ismbc](../../c-runtime-library/ismbc-routines.md)<br/>
+[Процедуры is, isw](../../c-runtime-library/is-isw-routines.md)<br/>

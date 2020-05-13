@@ -1,5 +1,5 @@
 ---
-title: Класс CComFakeCriticalSection
+title: CComFakeCriticalSection класс
 ms.date: 11/04/2016
 f1_keywords:
 - CComFakeCriticalSection
@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComFakeCriticalSection class
 ms.assetid: a4811b97-96bb-493b-ab9f-62822aeddb10
-ms.openlocfilehash: 39a9859380eba1b72768234eb8f43d80fca0143f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a5b9ba3551397a9c3d59a343e9c6b55b1c1207e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259161"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327852"
 ---
-# <a name="ccomfakecriticalsection-class"></a>Класс CComFakeCriticalSection
+# <a name="ccomfakecriticalsection-class"></a>CComFakeCriticalSection класс
 
-Этот класс предоставляет те же методы, как [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) , но не предоставляет критический раздел.
+Этот класс предоставляет те же методы, что и [CComCriticalSection,](../../atl/reference/ccomcriticalsection-class.md) но не предоставляет критический раздел.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,26 +32,26 @@ class CComFakeCriticalSection
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CComFakeCriticalSection::Init](#init)|Не выполняет никаких действий, так как отсутствует критический раздел.|
-|[CComFakeCriticalSection::Lock](#lock)|Не выполняет никаких действий, так как отсутствует критический раздел.|
-|[CComFakeCriticalSection::Term](#term)|Не выполняет никаких действий, так как отсутствует критический раздел.|
-|[CComFakeCriticalSection::Unlock](#unlock)|Не выполняет никаких действий, так как отсутствует критический раздел.|
+|[CComFakeCriticalSection::Init](#init)|Ничего не делает, так как нет критического раздела.|
+|[CComFakeCriticalSection::Lock](#lock)|Ничего не делает, так как нет критического раздела.|
+|[CComFakeCriticalSection::Срок](#term)|Ничего не делает, так как нет критического раздела.|
+|[CComFakeCriticalSection::Разблокировка](#unlock)|Ничего не делает, так как нет критического раздела.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-`CComFakeCriticalSection` зеркально отражает методы, найденные в [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md). Тем не менее `CComFakeCriticalSection` не поддерживает критической секции; таким образом, ничего не делать его методы.
+`CComFakeCriticalSection`зеркала методы, найденные в [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md). Тем `CComFakeCriticalSection` не менее, не предоставляет критический раздел; поэтому его методы ничего не делают.
 
-Как правило, используется `CComFakeCriticalSection` через `typedef` имя, либо `AutoCriticalSection` или `CriticalSection`. При использовании [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) или [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md), оба этих `typedef` имена ссылок `CComFakeCriticalSection`. При использовании [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md), если они ссылаются на [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md) и `CComCriticalSection`, соответственно.
+Как правило, `CComFakeCriticalSection` вы `typedef` используете `AutoCriticalSection` `CriticalSection`через имя, либо . При использовании [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) или [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md), оба этих `typedef` названия ссылки. `CComFakeCriticalSection` При использовании [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md), они ссылаются [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md) и `CComCriticalSection`, соответственно.
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** файле atlcore.h
+**Заголовок:** atlcore.h
 
-##  <a name="init"></a>  CComFakeCriticalSection::Init
+## <a name="ccomfakecriticalsectioninit"></a><a name="init"></a>CComFakeCriticalSection::Init
 
-Не выполняет никаких действий, так как отсутствует критический раздел.
+Ничего не делает, так как нет критического раздела.
 
 ```
 HRESULT Init() throw();
@@ -59,11 +59,11 @@ HRESULT Init() throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK.
+Возвращает S_OK.
 
-##  <a name="lock"></a>  CComFakeCriticalSection::Lock
+## <a name="ccomfakecriticalsectionlock"></a><a name="lock"></a>CComFakeCriticalSection::Lock
 
-Не выполняет никаких действий, так как отсутствует критический раздел.
+Ничего не делает, так как нет критического раздела.
 
 ```
 HRESULT Lock() throw();
@@ -71,11 +71,11 @@ HRESULT Lock() throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK.
+Возвращает S_OK.
 
-##  <a name="term"></a>  CComFakeCriticalSection::Term
+## <a name="ccomfakecriticalsectionterm"></a><a name="term"></a>CComFakeCriticalSection::Срок
 
-Не выполняет никаких действий, так как отсутствует критический раздел.
+Ничего не делает, так как нет критического раздела.
 
 ```
 HRESULT Term() throw();
@@ -83,11 +83,11 @@ HRESULT Term() throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK.
+Возвращает S_OK.
 
-##  <a name="unlock"></a>  CComFakeCriticalSection::Unlock
+## <a name="ccomfakecriticalsectionunlock"></a><a name="unlock"></a>CComFakeCriticalSection::Разблокировка
 
-Не выполняет никаких действий, так как отсутствует критический раздел.
+Ничего не делает, так как нет критического раздела.
 
 ```
 HRESULT Unlock() throw();
@@ -95,8 +95,8 @@ HRESULT Unlock() throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK.
+Возвращает S_OK.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Общие сведения о классе](../../atl/atl-class-overview.md)
+[Общие сведения о классах](../../atl/atl-class-overview.md)

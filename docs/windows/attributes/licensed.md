@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - licensed attribute
 ms.assetid: 09cf3b4a-d3f2-43e3-9180-d420333b23bf
-ms.openlocfilehash: 0c637f9e3f6d99b9f197474f49a1a9843744f38b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 49585a697c7880da27357ebcafce9c5cefd89fd2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514451"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214764"
 ---
 # <a name="licensed"></a>licensed
 
-Указывает, что COM-объект, к которому применяется, имеет лицензию, и его необходимо создать `IClassFactory2`с помощью.
+Указывает, что COM-объект, к которому он применяется, имеет лицензию, и его необходимо создать с помощью `IClassFactory2`.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -23,7 +23,7 @@ ms.locfileid: "69514451"
 [licensed]
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Атрибут **Licensed** C++ имеет те же функциональные возможности, что и [лицензированный](/windows/win32/Midl/licensed) атрибут MIDL.
 
@@ -54,14 +54,14 @@ public:
 
 |||
 |-|-|
-|**Относится к**|**класс**, **Структура**|
-|**Повторяемый**|Нет|
+|**Применение**|**класс**, **Структура**|
+|**Повторяемый**|нет|
 |**Обязательные атрибуты**|`coclass`|
-|**Недопустимые атрибуты**|Отсутствуют|
+|**Недопустимые атрибуты**|None|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты классов](class-attributes.md)

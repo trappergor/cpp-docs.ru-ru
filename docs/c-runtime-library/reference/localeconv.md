@@ -1,8 +1,9 @@
 ---
 title: localeconv
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - localeconv
+- _o_localeconv
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - localeconv function
 - locales, getting information on
 ms.assetid: 7ecdb1f2-88f5-4037-a0e7-c754ab003660
-ms.openlocfilehash: ca7113903e1ed6e9ffb94bef79beba41e09bfb71
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c154af87f135f5bf119de26ea8cd0be545ed5382
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953363"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916410"
 ---
 # <a name="localeconv"></a>localeconv
 
@@ -45,9 +47,9 @@ struct lconv *localeconv( void );
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**localeconv** возвращает указатель на заполненный объект типа [struct lconv](../../c-runtime-library/standard-types.md). Значения, содержащиеся в объекте, копируются из параметров языкового стандарта в локальном хранилище потока и могут быть перезаписаны при последующих вызовах **localeconv**. Изменения, внесенные в значения в этом объекте, не изменяют параметры языкового стандарта. Вызовы [setlocale](setlocale-wsetlocale.md) со значениями *категории* **LC_ALL**, **LC_MONETARY**или **LC_NUMERIC** перезапишут содержимое структуры.
+**localeconv** возвращает указатель на заполненный объект типа [struct lconv](../../c-runtime-library/standard-types.md). Значения, содержащиеся в объекте, копируются из параметров языкового стандарта в локальном хранилище потока и могут быть перезаписаны при последующих вызовах **localeconv**. Изменения, внесенные в значения в этом объекте, не изменяют параметры языкового стандарта. Вызовы [setlocale](setlocale-wsetlocale.md) со значениями *категории* **LC_ALL**, **LC_MONETARY**или **LC_NUMERIC** перезаписать содержимое структуры.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Функция **localeconv** получает подробные сведения о форматировании чисел для текущего языкового стандарта. Эти сведения хранятся в структуре типа **lconv**. Структура **lconv**, определенная в LOCALE.H, содержит следующие члены:
 
@@ -72,13 +74,13 @@ n_sep_by_space|Задайте значение 1, если символ валю
 p_sign_posn|Позиция положительного знака в форматированных неотрицательных денежных значениях.
 n_sign_posn|Позиция положительного знака в форматированных отрицательных денежных значениях.
 
-За исключением указанных, элементы структуры **lconv** , имеющие `char *` версии и `wchar_t *` , являются указателями на строки. Любое из них, равное **""** (или **L ""** для **wchar_t** <strong>\*</strong>), имеет либо нулевую длину, либо не поддерживается в текущем языковом стандарте. Обратите внимание, что **decimal_point** и **_W_decimal_point** всегда поддерживаются и имеют ненулевую длину.
+За исключением указанных, элементы структуры **lconv** , имеющие `char *` версии и `wchar_t *` , являются указателями на строки. Любой из них, равный " **"** (или **L ""** для **wchar_t** <strong>\*</strong>), имеет либо нулевую длину, либо не поддерживается в текущем языковом стандарте. Обратите внимание, что **decimal_point** и **_W_decimal_point** всегда поддерживаются и имеют ненулевую длину.
 
 Элементы **char** структуры являются небольшими неотрицательными числами, а не символами. Любые из них, равные **CHAR_MAX**, не поддерживаются в текущем языковом стандарте.
 
 Значения **группирования** и **mon_grouping** интерпретируется в соответствии со следующими правилами.
 
-- **CHAR_MAX** — не выполнять дальнейшее группирование.
+- **CHAR_MAX** — не выполнять дальнейший группирование.
 
 - 0 — использовать предыдущий элемент для каждой из оставшихся цифр.
 
@@ -108,11 +110,13 @@ n_sign_posn|Позиция положительного знака в форма
 
 - 1 — строка подписи предшествует количеству и символу валюты.
 
-- 2\. Строка подписи соответствует символу "количество" и "обозначение валюты".
+- 2. Строка подписи соответствует символу "количество" и "обозначение валюты".
 
-- 3\. Строка подписи непосредственно перед символом валюты.
+- 3. Строка подписи непосредственно перед символом валюты.
 
-- 4\. Строка подписи сразу после символа валюты.
+- 4. Строка подписи сразу после символа валюты.
+
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -120,16 +124,16 @@ n_sign_posn|Позиция положительного знака в форма
 |-------------|---------------------|
 |**localeconv**|\<locale.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Библиотеки
 
 Все версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Языковой стандарт](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [setlocale](../../preprocessor/setlocale.md)<br/>
-[Функции strcoll](../../c-runtime-library/strcoll-functions.md)<br/>
+[strcoll Functions](../../c-runtime-library/strcoll-functions.md)<br/>
 [strftime, wcsftime, _strftime_l, _wcsftime_l](strftime-wcsftime-strftime-l-wcsftime-l.md)<br/>
 [strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)<br/>

@@ -9,14 +9,14 @@ helpviewer_keywords:
 - __asm keyword [C++], vs. asm blocks
 - __asm keyword [C++]
 ms.assetid: 77ff3bc9-a492-4b5e-85e1-fa4e414e79cd
-ms.openlocfilehash: 43c7ae02e465ce8de2871d78e7ba604221aa7426
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: de28e4c0fad6b89a62b4479c5c32f0b8606cf3af
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65445900"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169635"
 ---
-# <a name="asm"></a>__asm
+# <a name="__asm"></a>__asm
 
 **Блок, относящийся только к системам Microsoft**
 
@@ -27,31 +27,31 @@ ms.locfileid: "65445900"
 
 ## <a name="grammar"></a>Грамматика
 
-*блок ASM*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__asm** *инструкции ассемблера* **;** <sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__asm {** *assembly-instruction-list* **}** **;**<sub>opt</sub>
+*ASM-Block*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__asm** *инструкции сборки* **;** <sub>неявное согласие</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__asm {** *Assembly-инструкции-List* **}** **;** <sub>неявное согласие</sub>
 
-*список сборок инструкция*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*инструкции ассемблера* **;** <sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*assembly-instruction* **;** *assembly-instruction-list* **;**<sub>opt</sub>
+*список инструкций сборки*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*инструкции сборки* **;** <sub>неявное согласие</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*инструкции сборки* **;** *список инструкций сборки* **;** <sub>неявное согласие</sub>
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 При использовании без круглых скобок ключевое слово `__asm` означает, что остальная часть строки — это оператор на языке сборки. При использовании с фигурными скобками оно означает, что каждая строка между скобками — это оператор на языке сборки. Для обеспечения совместимости с предыдущими версиями `_asm` является синонимом `__asm`.
 
 Поскольку ключевое слово `__asm` является разделителем операторов, можно также помещать инструкции ассемблера на одной строке:
 
-До Visual Studio 2005, инструкция
+Перед тем как Visual Studio 2005, инструкция
 
 ```cpp
 __asm int 3
 ```
 
-не вызывает машинный код будет создан при компиляции с **/CLR**; компилятор преобразовывал инструкцию в инструкцию прерывания среды CLR.
+не вызывал создание машинного кода при компиляции с **параметром/CLR**; компилятор преобразует инструкцию в инструкцию о разрыве среды CLR.
 
-`__asm int 3` теперь приводит к созданию машинного кода для функции. Если функция вызывает точку останова в коде и этой функции, скомпилированные в MSIL, используйте [__debugbreak](../../intrinsics/debugbreak.md).
+`__asm int 3` теперь приводит к созданию машинного кода для функции. Если требуется, чтобы функция вызывала точку останова в коде и если необходима компиляция функции в MSIL, используйте [__debugbreak](../../intrinsics/debugbreak.md).
 
-Для совместимости с предыдущими версиями **_asm** является синонимом **__asm** Если параметр компилятора [/Za \(отключить расширения языка)](../../build/reference/za-ze-disable-language-extensions.md) указан.
+Для совместимости с предыдущими версиями **_asm** является синонимом для **__asm** , если только не указан параметр компилятора [/Za \(отключить расширения языка)](../../build/reference/za-ze-disable-language-extensions.md) .
 
 ## <a name="example"></a>Пример
 
@@ -85,7 +85,7 @@ __asm mov al, 2   __asm mov dx, 0xD007   __asm out dx, al
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Ключевые слова](../../cpp/keywords-cpp.md)<br/>
 [Встроенный сборщик](../../assembler/inline/inline-assembler.md)<br/>

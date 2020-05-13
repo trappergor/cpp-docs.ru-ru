@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4022
 ms.assetid: 890f487e-db98-45dd-a226-c7ccead82b1e
-ms.openlocfilehash: 1c9ccfe6ca201ae4deed69c7d01429c67cce4bda
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9b9ce09a7133c0bdc18957f6ade213583e9540eb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298470"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194191"
 ---
 # <a name="linker-tools-warning-lnk4022"></a>Предупреждение средств компоновщика LNK4022
 
-не удается найти уникальное соответствие для символа «символ»
+не удается найти уникальное соответствие для символа "Symbol"
 
-ССЫЛКА или LIB обнаружено несколько соответствует для упрощенного заданного символа и не может разрешить неоднозначность. Создается выходной файл не (.exe, .dll, .exp или .lib). Это предупреждение сопровождается одно предупреждение [LNK4002](../../error-messages/tool-errors/linker-tools-warning-lnk4002.md) для каждого Дублировать символ после чего возникает неустранимая ошибка [LNK1152](../../error-messages/tool-errors/linker-tools-error-lnk1152.md).
+LINK или LIB обнаружил несколько соответствий для заданного недекорированного символа, и ему не удалось разрешить неоднозначность. Выходной файл (exe, DLL, exp или LIB) не создается. За этим предупреждением следует одно предупреждение [LNK4002](../../error-messages/tool-errors/linker-tools-warning-lnk4002.md) для каждого повторяющегося символа, а затем — Неустранимая ошибка [LNK1152](../../error-messages/tool-errors/linker-tools-error-lnk1152.md).
 
-Чтобы устранить это предупреждение, укажите символ в декорированном виде. Запустите [DUMPBIN](../../build/reference/dumpbin-options.md) на объект для просмотра внутренних имен.
+Чтобы предотвратить это предупреждение, укажите символ в декорированной форме. Запустите [dumpbin](../../build/reference/dumpbin-options.md) для объекта, чтобы увидеть декорированные имена.

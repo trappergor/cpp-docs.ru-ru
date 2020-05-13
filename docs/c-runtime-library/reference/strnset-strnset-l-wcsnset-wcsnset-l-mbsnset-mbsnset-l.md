@@ -1,6 +1,6 @@
 ---
 title: _strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnset
 - _strnset
@@ -8,6 +8,9 @@ api_name:
 - _wcsnset_l
 - _wcsnset
 - _strnset_l
+- _o__mbsnset
+- _o__mbsnset_l
+- _o__wcsnset
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +25,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -69,16 +73,16 @@ helpviewer_keywords:
 - strings [C++], initializing
 - tcsnset_l function
 ms.assetid: 3f306489-5763-48e5-b939-aefee7c94ef5
-ms.openlocfilehash: bb2365684f9c35e1523b34aaad30c9ae6875b5c1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2bd0c31b025b9a11cbdb10e8607a283d6ae1f84b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946976"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911188"
 ---
 # <a name="_strnset-_strnset_l-_wcsnset-_wcsnset_l-_mbsnset-_mbsnset_l"></a>_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l
 
-Инициализирует символы строки в соответствии с указанным символом. Существуют более безопасные версии этих функций; см. раздел [_strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l](strnset-s-strnset-s-l-wcsnset-s-wcsnset-s-l-mbsnset-s-mbsnset-s-l.md).
+Инициализирует символы строки в конкретный символ. Существуют более безопасные версии этих функций; см. раздел [_strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l](strnset-s-strnset-s-l-wcsnset-s-wcsnset-s-l-mbsnset-s-mbsnset-s-l.md).
 
 > [!IMPORTANT]
 > **_mbsnset** и **_mbsnset_l** нельзя использовать в приложениях, которые выполняются в среда выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -126,7 +130,7 @@ unsigned char *_mbsnset_l(
 *str*<br/>
 Строка, которую требуется изменить.
 
-*c*<br/>
+*ц*<br/>
 Параметр символов.
 
 *count*<br/>
@@ -139,17 +143,19 @@ unsigned char *_mbsnset_l(
 
 Возвращает указатель на измененную строку.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Функция **_strnset** задает не более первого символа *подсчета* *str* в *c* (преобразуется в **char**). Если параметр *Count* превышает длину *str*, вместо *Count*используется длина *str* .
 
-**_wcsnset** и **_mbsnset** — это версии **_strnset**для расширенных символов и многобайтовых символов. Строковые аргументы и возвращаемое значение **_wcsnset** являются строками расширенных символов. **_mbsnset** являются строками многобайтовых символов. В остальном эти три функции ведут себя идентично.
+**_wcsnset** и **_mbsnset** — это версии **_strnset**для расширенных символов и многобайтовых символов. Строковые аргументы и возвращаемое значение **_wcsnset** являются строками расширенных символов; **_mbsnset** являются строками многобайтовых символов. В остальном эти три функции ведут себя идентично.
 
-**_mbsnset** проверяет свои параметры; Если *str* является пустым указателем, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md) . Если выполнение может быть продолжено **, _mbsnset** возвращает значение NULL **и устанавливает в** качестве **значения** по **еинвал**. **_strnset** и **_wcsnset** не проверяют свои параметры.
+**_mbsnset** проверяет свои параметры; Если *str* является пустым указателем, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md) . Если выполнение может быть продолжено, **_mbsnset** возвращает **значение NULL** **и устанавливает для** **еинвал**. **_strnset** и **_wcsnset** не проверяют их параметры.
 
 Выходное значение зависит от настройки категории **LC_CTYPE** языкового стандарта; дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Версии этих функций без суффикса **_l** используют текущий языковой стандарт для данного поведения, зависящего от языкового стандарта; версии с суффиксом **_l** идентичны, за исключением того, что они используют переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|
@@ -166,7 +172,7 @@ unsigned char *_mbsnset_l(
 |**_wcsnset_l**|\<tchar.h>|
 |**_mbsnset**, **_mbsnset_l**|\<mbstring.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -192,10 +198,10 @@ Before: This is a test
 After:  **** is a test
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Операции со строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Языковой стандарт](../../c-runtime-library/locale.md)<br/>
+[Управление строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Интерпретация последовательностей многобайтовых символов](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>

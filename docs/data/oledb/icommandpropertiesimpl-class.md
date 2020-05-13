@@ -14,12 +14,12 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
-ms.openlocfilehash: 165f7124657cbaf0c0f94171eaf9394011796aea
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: cbf2e6d7241d019a00132c10638993d60d78beac
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545975"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210812"
 ---
 # <a name="icommandpropertiesimpl-class"></a>Класс ICommandPropertiesImpl
 
@@ -54,7 +54,7 @@ class ATL_NO_VTABLE ICommandPropertiesImpl
 |[GetProperties](#getproperties)|Возвращает список свойств в группе свойств набора строк, запрашиваемых в данный момент для набора строк.|
 |[SetProperties](#setproperties)|Задает свойства в группе свойств набора строк.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Это обязательно для команд. Реализация обеспечивается статической функцией, определенной [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) макросом.
 
@@ -75,7 +75,7 @@ STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,
 
 См. раздел [ICommandProperties:: Properties](/previous-versions/windows/desktop/ms723119(v=vs.85)) в *справочнике программиста OLE DB*.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 См. раздел [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
@@ -94,7 +94,7 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 
 См. раздел [ICommandProperties:: SetProperties](/previous-versions/windows/desktop/ms711497(v=vs.85)) в *справочнике программиста OLE DB*.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

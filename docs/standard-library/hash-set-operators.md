@@ -5,24 +5,24 @@ f1_keywords:
 - hash_set/std::operator!=
 - hash_set/std::operator==
 ms.assetid: 403d8e4e-0b3f-43fb-bc5a-8100c4f331c5
-ms.openlocfilehash: 3900e9c6e4fb7f5a163279165a51b440d138a8e5
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 5830c9e459c0d778e85c5ab5900d39c3190df178
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79424719"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368573"
 ---
 # <a name="lthash_setgt-operators"></a>Операторы &lt;hash_set&gt;
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[operator!= (hash_multiset)](#op_neq_hash_multiset)|[operator==](#op_eq_eq)|
-|[operator== (hash_multiset)](#op_eq_eq_hash_multiset)|
+|[оператора!](#op_neq)|[operator!= (hash_multiset)](#op_neq_hash_multiset)|[оператора](#op_eq_eq)|
+|[оператор (hash_multiset)](#op_eq_eq_hash_multiset)|
 
-## <a name="op_neq"></a>  operator!=
+## <a name="operator"></a><a name="op_neq"></a>оператора!
 
 > [!NOTE]
-> Этот API устарел. Альтернатива — [класс unordered_set](../standard-library/unordered-set-class.md).
+> Этот элемент API устарел. Вместо него следует использовать [класс unordered_set](../standard-library/unordered-set-class.md).
 
 Проверяет неравенство объекта hash_set слева от оператора и объекта hash_set справа от оператора.
 
@@ -32,10 +32,10 @@ bool operator!=(const hash_set <Key, Traits, Allocator>& left, const hash_set <K
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*Левой*\
 Объект типа `hash_set`.
 
-*справа*\
+*Правильно*\
 Объект типа `hash_set`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -46,7 +46,7 @@ bool operator!=(const hash_set <Key, Traits, Allocator>& left, const hash_set <K
 
 Сравнение между объектами hash_set основывается на попарном сравнении их элементов. Два объекта hash_set равны, если они содержат одинаковое количество элементов, а их соответствующие элементы имеют одинаковые значения. В противном случае они не равны.
 
-Элементы [< hash_map >](../standard-library/hash-map.md) и [< hash_set](../standard-library/hash-set.md) > заголовков находятся в [пространстве имен stdext](../standard-library/stdext-namespace.md).
+Члены [<hash_map>](../standard-library/hash-map.md) и [файлы заголовка<hash_set>](../standard-library/hash-set.md) находятся в [stdext Namespace.](../standard-library/stdext-namespace.md)
 
 ### <a name="example"></a>Пример
 
@@ -87,10 +87,10 @@ The hash_sets hs1 and hs2 are not equal.
 The hash_sets hs1 and hs3 are equal.
 ```
 
-## <a name="op_eq_eq"></a> operator==
+## <a name="operator"></a><a name="op_eq_eq"></a>оператора
 
 > [!NOTE]
-> Этот API устарел. Альтернатива — [класс unordered_set](../standard-library/unordered-set-class.md).
+> Этот элемент API устарел. Вместо него следует использовать [класс unordered_set](../standard-library/unordered-set-class.md).
 
 Проверяет равенство объекта hash_set слева от оператора и объекта hash_set справа от оператора.
 
@@ -100,10 +100,10 @@ bool operator!==(const hash_set <Key, Traits, Allocator>& left, const hash_set <
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*Левой*\
 Объект типа `hash_set`.
 
-*справа*\
+*Правильно*\
 Объект типа `hash_set`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -153,10 +153,10 @@ The hash_sets s1 and s2 are not equal.
 The hash_sets s1 and s3 are equal.
 ```
 
-## <a name="op_neq_hash_multiset"></a>  operator!= (hash_multiset)
+## <a name="operator-hash_multiset"></a><a name="op_neq_hash_multiset"></a>оператор! ( hash_multiset)
 
 > [!NOTE]
-> Этот API устарел. Альтернатива — [класс unordered_set](../standard-library/unordered-set-class.md).
+> Этот элемент API устарел. Вместо него следует использовать [класс unordered_set](../standard-library/unordered-set-class.md).
 
 Проверяет неравенство объекта hash_multiset слева от оператора и объекта hash_multiset справа от оператора.
 
@@ -166,10 +166,10 @@ bool operator!=(const hash_multiset <Key, Traits, Allocator>& left, const hash_m
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*Левой*\
 Объект типа `hash_multiset`.
 
-*справа*\
+*Правильно*\
 Объект типа `hash_multiset`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -219,10 +219,10 @@ The hash_multisets hs1 and hs2 are not equal.
 The hash_multisets hs1 and hs3 are equal.
 ```
 
-## <a name="op_eq_eq_hash_multiset"></a>  operator== (hash_multiset)
+## <a name="operator-hash_multiset"></a><a name="op_eq_eq_hash_multiset"></a>оператор (hash_multiset)
 
 > [!NOTE]
-> Этот API устарел. Альтернатива — [класс unordered_set](../standard-library/unordered-set-class.md).
+> Этот элемент API устарел. Вместо него следует использовать [класс unordered_set](../standard-library/unordered-set-class.md).
 
 Проверяет равенство объекта hash_multiset слева от оператора и объекта hash_multiset справа от оператора.
 
@@ -232,10 +232,10 @@ bool operator!==(const hash_multiset <Key, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*Левой*\
 Объект типа `hash_multiset`.
 
-*справа*\
+*Правильно*\
 Объект типа `hash_multiset`.
 
 ### <a name="return-value"></a>Возвращаемое значение

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - max_is attribute
 ms.assetid: 7c851f5c-6649-4d77-a792-247c37d8f560
-ms.openlocfilehash: f2e6db997891817620c1b2c1f70cb310818dd346
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b4931962febb1e68701aa3fe271e08f3aa8d9238
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514429"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166761"
 ---
 # <a name="max_is"></a>max_is
 
@@ -28,7 +28,7 @@ ms.locfileid: "69514429"
 *expression*<br/>
 Одно или несколько выражений языка C. Пустые слоты аргументов разрешены.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Атрибут **max_is** C++ имеет те же функциональные возможности, что и атрибут [max_is](/windows/win32/Midl/max-is) MIDL.
 
@@ -38,9 +38,9 @@ ms.locfileid: "69514429"
 
 |||
 |-|-|
-|**Относится к**|Поле в **структуре** или **объединении**, параметр интерфейса, метод интерфейса|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Отсутствуют|
+|**Применение**|Поле в **структуре** или **объединении**, параметр интерфейса, метод интерфейса|
+|**Повторяемый**|нет|
+|**Обязательные атрибуты**|None|
 |**Недопустимые атрибуты**|**size_is**|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
@@ -49,7 +49,7 @@ ms.locfileid: "69514429"
 
 Пример указания раздела массива см. в разделе [first_is](first-is.md) .
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты Typedef, Enum, Union и Struct](typedef-enum-union-and-struct-attributes.md)<br/>

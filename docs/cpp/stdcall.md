@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - __stdcall keyword [C++]
 ms.assetid: e212594b-1827-4d07-9527-7d412b300df8
-ms.openlocfilehash: df753241c093db75202a10b106631ce36cf73379
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 3abd1d020e4181a42a7bc38319e5e17e69ef0507
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857285"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178546"
 ---
 # <a name="__stdcall"></a>__stdcall
 
@@ -23,7 +23,7 @@ ms.locfileid: "74857285"
 
 > *return-Type* **\_\_STDCALL** *-имя функции*[ **(** *Argument-List* **)** ]
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
 В следующем списке показана реализация этого соглашения о вызовах.
 
@@ -33,7 +33,7 @@ ms.locfileid: "74857285"
 |Соглашение о передаче аргументов|По значению, кроме случаев передачи указателя или ссылочного типа.|
 |Обязанность по обслуживанию стека|Вызываемая функция извлекает свои аргументы из стека.|
 |Соглашение об оформлении имен|К имени добавляется префикс в виде символа подчеркивания (_). После имени добавляется знак @, за которым следует количество байтов (в десятичном представлении) в списке аргументов. Поэтому функция, объявленная как `int func( int a, double b )` декорируется следующим образом: `_func@12`|
-|Соглашение о преобразовании регистра|Нет|
+|Соглашение о преобразовании регистра|None|
 
 Параметр компилятора [/gz](../build/reference/gd-gr-gv-gz-calling-convention.md) указывает **__stdcall** для всех функций, которые не были явно объявлены с другим соглашением о вызовах.
 
@@ -51,7 +51,7 @@ struct CMyClass {
 };
 ```
 
-this
+, чтобы маршрутизировать этот трафик с направлением
 
 ```cpp
 void CMyClass::mymethod() { return; }
@@ -74,7 +74,7 @@ void __stdcall CMyClass::mymethod() { return; }
 typedef BOOL (__stdcall *funcname_ptr)(void * arg1, const char * arg2, DWORD flags, ...);
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Передача аргументов и соглашения об именовании](../cpp/argument-passing-and-naming-conventions.md)<br/>
 [Ключевые слова](../cpp/keywords-cpp.md)

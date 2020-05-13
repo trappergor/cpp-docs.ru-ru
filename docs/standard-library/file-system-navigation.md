@@ -1,17 +1,18 @@
 ---
 title: Навигация по файловой системе
-ms.date: 11/04/2016
+description: Как использовать АПЫ файловой файловой системы стандартных библиотек для навигации по файловой системе.
+ms.date: 04/13/2020
 ms.assetid: f7cc5f5e-a541-4e00-87c7-a3769ef6096d
-ms.openlocfilehash: f5fe8d29baae76b1e7fb851bf04f4c6b32215a8e
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 412d865582a14da7b8c31d9f07a43106b0c49491
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076533"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368432"
 ---
 # <a name="file-system-navigation"></a>Навигация по файловой системе
 
-Заголовок \<<filesystem> реализует техническую спецификацию файловой системы ISO/IEC TS 18822:2015 (окончательный вариант: [ISO/IEC JTC 1/SC 22/WG 21 N4100](https://wg21.link/n4100)), а также имеет типы и функции, позволяющие разрабатывать независимый от платформы код для навигации по файловой системе. Так как он является кроссплатформенным, он содержит API-интерфейсы, которые не являются релевантными для систем Windows. Например, это означает, что `is_fifo(const path&)` всегда возвращает **значение false** в Windows.
+Заголовок \<<filesystem> реализует техническую спецификацию файловой системы ISO/IEC TS 18822:2015 (окончательный вариант: [ISO/IEC JTC 1/SC 22/WG 21 N4100](https://wg21.link/n4100)), а также имеет типы и функции, позволяющие разрабатывать независимый от платформы код для навигации по файловой системе. Поскольку он является кросс-платформенным, он содержит AA, которые не актуальны для систем Windows. Например, `is_fifo(const path&)` всегда **возвращается ложно** на Windows.
 
 ## <a name="overview"></a>Обзор
 
@@ -23,7 +24,7 @@ ms.locfileid: "80076533"
 
 - составление, разделение и сравнение путей;
 
-- создание, копирование и удаление каталогов;
+- создавать, копировать и удалять каталоги
 
 - копирование и удаление файлов.
 
@@ -33,7 +34,7 @@ ms.locfileid: "80076533"
 
 ### <a name="constructing-and-composing-paths"></a>Создание и составление путей
 
-Пути в Windows (начиная с XP) изначально хранятся в Юникоде. Класс [path](../standard-library/path-class.md) автоматически выполняет все необходимые преобразования строк. Он принимает аргументы массивов широких и узких символов, а также типы `std::string` и `std::wstring` в формате UTF8 или UTF16. Класс `path` также автоматически нормализует разделители путей. В аргументах конструктора в качестве разделителя каталогов можно использовать одиночную косую черту. Это позволяет применять одинаковые строки для хранения путей в средах Windows и UNIX:
+Пути в Windows (начиная с XP) изначально хранятся в Юникоде. Класс [путей](../standard-library/path-class.md) автоматически выполняет все необходимые преобразования строк. Он принимает аргументы как широких, так и `std::string` `std::wstring` узких массивов символов, а также как типов, отформатированных как UTF8 или UTF16. Класс `path` также автоматически нормализует разделители путей. В аргументах конструктора в качестве разделителя каталогов можно использовать одиночную косую черту. Этот сепаратор позволяет использовать одни и те же строки для хранения путей в средах Windows и UNIX:
 
 ```cpp
 path pathToDisplay(L"/FileSystemTest/SubDir3");     // OK!
@@ -41,7 +42,7 @@ path pathToDisplay2(L"\\FileSystemTest\\SubDir3");  // Still OK as always
 path pathToDisplay3(LR"(\FileSystemTest\SubDir3)"); // Raw string literals are OK, too.
 ```
 
-Для объединения двух путей можно использовать перегруженные операторы `/` и `/=` , которые аналогичны операторам `+` и `+=` в `std::string` и `std::wstring`. Объект `path` будет удобным образом предоставлять разделители, если это не так.
+Для объединения двух путей можно использовать перегруженные операторы `/` и `/=` , которые аналогичны операторам `+` и `+=` в `std::string` и `std::wstring`. Объект `path` будет удобно поставлять сепараторы, если вы этого не сделаете.
 
 ```cpp
 path myRoot("C:/FileSystemTest");  // no trailing separator, no problem!
@@ -50,18 +51,18 @@ myRoot /= path("SubDirRoot");      // C:/FileSystemTest/SubDirRoot
 
 ### <a name="examining-paths"></a>Проверка путей
 
-Класс пути содержит несколько методов, которые возвращают сведения о различных путях для самого пути, в отличие от сущности файловой системы, на которую он может ссылаться. Можно получить корень, относительный путь, имя файла, расширение файла и другие сведения. Можно выполнять итерацию по объекту path для проверки всех папок в иерархии. В следующем примере показано, как выполнять итерацию по пути (не по каталогу, на который он ссылается) и получать сведения о его частях.
+Класс пути имеет несколько методов, которые возвращают информацию о различных частях самого пути. Эта информация отличается от информации о сущности файловой системы, на что она может ссылаться. Можно получить корень, относительный путь, имя файла, расширение файла и другие сведения. Можно выполнять итерацию по объекту path для проверки всех папок в иерархии. Следующий пример показывает, как итерировать над объектом пути. И, как получить информацию о его частях.
 
 ```cpp
 // filesystem_path_example.cpp
-// compile by using: /EHsc
+// compile by using: /EHsc /W4 /permissive- /std:c++17 (or /std:c++latest)
 #include <string>
 #include <iostream>
 #include <sstream>
 #include <filesystem>
 
 using namespace std;
-using namespace std::experimental::filesystem;
+using namespace std::filesystem;
 
 wstring DisplayPathInfo()
 {
@@ -88,7 +89,7 @@ wstring DisplayPathInfo()
     return wos.str();
 }
 
-int main(int argc, char* argv[])
+int main()
 {
     wcout << DisplayPathInfo() << endl;
     // wcout << ComparePaths() << endl; // see following example
@@ -119,7 +120,7 @@ extension() = .txt
 
 ### <a name="comparing-paths"></a>Сравнение путей
 
-Класс `path` перегружает операторы сравнения на равенство как `std::string` и `std::wstring`. При сравнении двух путей строгое сравнение строк выполняется после нормализации разделителей. Если заключительная косая черта (или обратная косая черта) отсутствует, она не добавляется, и это влияет на результат сравнения. В следующем примере показано, как выполняется сравнение значений пути:
+Класс `path` перегружает операторы сравнения на равенство как `std::string` и `std::wstring`. При сравнении двух путей, вы делаете сравнение строки после того, как сепараторы были нормализованы. Если отстающая слэш (или слэш) отсутствует, она не добавляется, и это влияет на сравнение. В следующем примере показано, как выполняется сравнение значений пути:
 
 ```cpp
 wstring ComparePaths()
@@ -154,22 +155,22 @@ C:\Documents\2014\ < D:\Documents\2013\Reports\: true
 
 ### <a name="converting-between-path-and-string-types"></a>Преобразование между типами пути и строки
 
-Объект `path` может быть неявно преобразован в `std::wstring` или `std::string`. Это означает, что путь можно передать в функции, например в [wofstream::open](../standard-library/basic-ofstream-class.md#open), как показано в следующем примере:
+Объект `path` может быть неявно преобразован в `std::wstring` или `std::string`. Это означает, что вы можете пройти путь к таким функциям, как [wofstream::Открыть](../standard-library/basic-ofstream-class.md#open), как показано в этом примере:
 
 ```cpp
 // filesystem_path_conversion.cpp
-// compile by using: /EHsc
+// compile by using: /EHsc /W4 /permissive- /std:c++17 (or /std:c++latest)
 #include <string>
 #include <iostream>
 #include <fstream>
 #include <filesystem>
 
 using namespace std;
-using namespace std::experimental::filesystem;
+using namespace std::filesystem;
 
-int main(int argc, char* argv[])
+int main()
 {
-    wchar_t* p = L"C:/Users/Public/Documents";
+    const wchar_t* p{ L"C:/Users/Public/Documents" };
     path filePath(p);
 
     filePath /= L"NewFile.txt";
@@ -209,4 +210,4 @@ Press Enter to exit
 
 Заголовок \<filesystem> предоставляет тип [directory_iterator](../standard-library/directory-iterator-class.md) для выполнения итерации по одиночным каталогам, а также класс [recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md) для рекурсивного выполнения итерации по каталогу и его подкаталогам. После создания итератора путем передачи ему объекта `path` итератор указывает на первое значение directory_entry в пути. Создайте конечный итератор путем вызова конструктора по умолчанию.
 
-При проходе по каталогу можно обнаружить элементы нескольких типов, включая каталоги, файлы, символические ссылки и файлы сокетов, но не ограничиваясь ими. `directory_iterator` возвращает свои элементы как объекты [directory_entry](../standard-library/directory-entry-class.md).
+При итерации через каталог, Есть несколько видов элементов, которые вы можете обнаружить. Эти элементы включают каталоги, файлы, символические ссылки, файлы розетки и другие. `directory_iterator` возвращает свои элементы как объекты [directory_entry](../standard-library/directory-entry-class.md).

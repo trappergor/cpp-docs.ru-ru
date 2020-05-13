@@ -19,12 +19,12 @@ helpviewer_keywords:
 - throwing exceptions [C++]
 - throw keyword [C++], throw() vs. throw(...)
 ms.assetid: 15e6a87b-b8a5-4032-a7ef-946c644ba12a
-ms.openlocfilehash: 31ed5f7a17b9b45dbbecf5ccb29d2b51a7635eaa
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 03f7f6f5a1a2842ad7fb0ba2715fada130277e70
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245144"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187990"
 ---
 # <a name="try-throw-and-catch-statements-c"></a>Операторы try, throw и catch (C++)
 
@@ -72,7 +72,7 @@ MyData GetNetworkResource()
 }
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Код после предложения **try** является защищенным разделом кода. Выражение **throw** вызывает *,* то есть вызывает исключение. Блок кода после предложения **catch** является обработчиком исключений. Это обработчик, который *перехватывает* исключение, возникающее, если типы в выражениях **throw** и **catch** совместимы. Список правил, регулирующих сопоставление типов в блоках **catch** , см. в разделе [Вычисление блоков catch](../cpp/how-catch-blocks-are-evaluated-cpp.md). Если оператор **catch** задает многоточие (...) вместо типа, блок **catch** обрабатывает все типы исключений. При компиляции с параметром [/EHa](../build/reference/eh-exception-handling-model.md) они могут включать структурированные исключения C и созданные системой или асинхронные исключения, такие как защита памяти, деление на ноль и нарушения операций с плавающей запятой. Так как блоки **catch** обрабатываются в порядке программ для поиска соответствующего типа, обработчик многоточия должен быть последним обработчиком для связанного блока **try** . Используйте `catch(...)` осторожно, не позволяйте программе продолжать выполнение, если блоку catch не известно, как обработать конкретное перехваченное исключение. Как правило, блок `catch(...)` используется для ведения журнала ошибок и выполнения специальной очистки перед остановкой выполнения программы.
 
@@ -91,7 +91,7 @@ catch(...) {
 }
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Современные C++ рекомендации по исключениям и обработке ошибок](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
 [Ключевые слова](../cpp/keywords-cpp.md)<br/>

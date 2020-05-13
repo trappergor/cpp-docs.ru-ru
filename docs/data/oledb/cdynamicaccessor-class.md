@@ -124,12 +124,12 @@ helpviewer_keywords:
 - SetStatus method
 - SetValue method
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
-ms.openlocfilehash: a2dcb946b4161c03fe34f02608cfb3dbbca21695
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 160e5b6d8eb4b45850dc071299413d9ad2cfcee9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075851"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212070"
 ---
 # <a name="cdynamicaccessor-class"></a>Класс CDynamicAccessor
 
@@ -172,7 +172,7 @@ class CDynamicAccessor : public CAccessorBase
 |[SetStatus](#setstatus)|Задает состояние указанного столбца.|
 |[SetValue](#setvalue)|Сохраняет данные в буфер.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Для получения таких сведений о столбцах, как имена столбцов, число столбцов, тип данных и т. д., используйте `CDynamicAccessor` методы. Затем эти сведения о столбце используются для динамического создания метода доступа во время выполнения.
 
@@ -199,7 +199,7 @@ HRESULT AddBindEntry(const DBCOLUMNINFO& info) throw();
 
 Одно из стандартных значений HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Используйте этот метод при переопределении метода доступа по умолчанию, созданного с помощью `CDynamicAccessor` (см. раздел [как извлечь данные?](../../data/oledb/fetching-data.md)).
 
@@ -222,7 +222,7 @@ CDynamicAccessor(DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,
 *нблобсизе*<br/>
 Максимальный размер большого двоичного объекта в байтах; данные столбца по этому значению рассматриваются как большой двоичный объект. Значение по умолчанию — 8 000. Дополнительные сведения см. в разделе [сетблобсизелимит](../../data/oledb/cdynamicaccessor-setblobsizelimit.md) .
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 При использовании конструктора для инициализации объекта `CDynamicAccessor` можно указать, как он будет привязывать большие двоичные объекты. BLOB-объекты могут содержать двоичные данные, такие как графика, звук или скомпилированный код. Поведение по умолчанию состоит в том, чтобы обрабатывать столбцы более 8 000 байт в виде больших двоичных объектов и пытаться привязать их к объекту `ISequentialStream`. Однако можно указать другое значение в качестве размера большого двоичного объекта.
 
@@ -248,7 +248,7 @@ void Close() throw();
 const DBBLOBHANDLINGENUM GetBlobHandling() const;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Возвращает значение обработки BLOB-объекта *еблобхандлинг* , заданное параметром [сетблобхандлинг](../../data/oledb/cdynamicaccessor-setblobhandling.md).
 
@@ -262,7 +262,7 @@ const DBBLOBHANDLINGENUM GetBlobHandling() const;
 const DBLENGTH GetBlobSizeLimit() const;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Возвращает значение обработки BLOB-объекта *нблобсизе* , заданное параметром [сетблобсизелимит](../../data/oledb/cdynamicaccessor-setblobsizelimit.md).
 
@@ -285,7 +285,7 @@ HRESULT GetBookmark(CBookmark< >* pBookmark) const throw();
 
 Одно из стандартных значений HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Чтобы получить закладку, необходимо задать для `DBPROP_IRowsetLocate` значение VARIANT_TRUE.
 
@@ -326,7 +326,7 @@ bool GetColumnFlags(DBORDINAL nColumn,
 
 Возвращает **значение true** , если характеристики столбца успешно получены. В противном случае возвращается значение **false**.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Номер столбца смещается с единицы. Нулевой столбец является особым случаем. Это закладка, если она доступна.
 
@@ -361,7 +361,7 @@ HRESULT GetColumnInfo(IRowset* pRowset,
 
 Одно из стандартных значений HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Сведения о типах данных `DBORDINAL`, `DBCOLUMNINFO`и `OLECHAR`см. в разделе [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) в *справочнике программиста OLE DB* .
 
@@ -439,7 +439,7 @@ bool GetLength(const WCHAR* pColumnName,
 
 Возвращает **значение true** , если указанный столбец найден. В противном случае эта функция возвращает **значение false**.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Первое переопределение принимает номер столбца, а второе и третье переопределения принимают имя столбца в формате ANSI или Unicode соответственно.
 
@@ -544,7 +544,7 @@ bool GetValue(const WCHAR* pColumnName, ctype* pData) const throw();
 
 Для всех других типов данных проще использовать шаблонные версии `GetValue`. Версии в шаблоне возвращают **значение true** при успешном выполнении или **false** в случае сбоя.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Используйте нешаблонные версии для возврата столбцов, содержащих строки, и шаблонных версий для столбцов, содержащих другие типы данных.
 
@@ -563,7 +563,7 @@ bool SetBlobHandling(DBBLOBHANDLINGENUM eBlobHandling);
 #### <a name="parameters"></a>Параметры
 
 *еблобхандлинг*<br/>
-Указывает способ обработки данных большого двоичного объекта. Возможны следующие значения:
+Указывает способ обработки данных большого двоичного объекта. Этот параметр может принимать перечисленные ниже значения.
 
 - DBBLOBHANDLING_DEFAULT: обрабатывайте данные столбцов, размер которых превышает *нблобсизе* (задается `SetBlobSizeLimit`) как данные большого двоичного объекта и извлекают их через объект `ISequentialStream` или `IStream`. Этот параметр попытается привязать каждый столбец, содержащий данные, превышающие *нблобсизе* , или список DBTYPE_IUNKNOWN как данные большого двоичного объекта.
 
@@ -571,7 +571,7 @@ bool SetBlobHandling(DBBLOBHANDLINGENUM eBlobHandling);
 
 - DBBLOBHANDLING_SKIP: пропустить (не привязывать) столбцы, уточняющие их как содержащие большие двоичные объекты (метод доступа не будет выполнять привязку или извлечь значение столбца, но он по-прежнему будет получать состояние и длину столбца).
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Перед вызовом `SetBlobHandling` следует вызвать метод `Open`.
 
@@ -592,7 +592,7 @@ void SetBlobSizeLimit(DBLENGTH nBlobSize);
 *нблобсизе*<br/>
 Указывает предельный размер большого двоичного объекта.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Задает максимальный размер большого двоичного объекта в байтах; данные столбца, превышающие это значение, рассматриваются как большие ДВОИЧные объекты. Некоторые поставщики предоставляют очень большие размеры столбцов (например, 2 ГБ). Вместо того, чтобы пытаться выделить память для столбца такого размера, обычно вы пытаетесь привязать эти столбцы как большие двоичные объекты. Таким образом, вам не придется выделять всю память, но вы все равно можете читать все данные, не опасаясь усечения. Однако в некоторых случаях может потребоваться принудительное `CDynamicAccessor` для привязки больших столбцов в собственных типах данных. Для этого вызовите `SetBlobSizeLimit` перед вызовом `Open`.
 
@@ -705,7 +705,7 @@ bool SetValue(
 
 Для всех других типов данных проще использовать шаблонные версии `GetValue`. Версии в шаблоне возвращают **значение true** при успешном выполнении или **false** в случае сбоя.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>

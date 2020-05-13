@@ -1,5 +1,5 @@
 ---
-title: Класс Кмоникерфиле
+title: Класс CMonikerFile
 ms.date: 11/04/2016
 f1_keywords:
 - CMonikerFile
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - CMonikerFile [MFC], Open
 - CMonikerFile [MFC], CreateBindContext
 ms.assetid: 87be5966-f4f7-4235-bce2-1fa39e9417de
-ms.openlocfilehash: 56283b56a1c0832d34ce23c7db47c47d9480aec8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: fc74ad2499fcde63faa2c5859a87fd9ffd2846eb
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504572"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319774"
 ---
-# <a name="cmonikerfile-class"></a>Класс Кмоникерфиле
+# <a name="cmonikerfile-class"></a>Класс CMonikerFile
 
-Представляет поток данных ( [IStream](/windows/win32/api/objidl/nn-objidl-istream)) с именем [IMoniker](/windows/win32/api/objidl/nn-objidl-imoniker).
+Представляет поток данных [(IStream](/windows/win32/api/objidl/nn-objidl-istream)), названный [IMoniker](/windows/win32/api/objidl/nn-objidl-imoniker).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -39,72 +39,72 @@ class CMonikerFile : public COleStreamFile
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[Кмоникерфиле:: Кмоникерфиле](#cmonikerfile)|Создает объект `CMonikerFile`.|
+|[CMonikerFile::CMonikerFile](#cmonikerfile)|Формирует объект `CMonikerFile`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[Кмоникерфиле:: Close](#close)|Отсоединяет и освобождает поток и освобождает моникер.|
-|[Кмоникерфиле::D етач](#detach)|Отсоединяет объект `CMonikerFile`отэтогообъекта `IMoniker` .|
-|[Кмоникерфиле:: моникер](#getmoniker)|Возвращает текущий моникер.|
-|[Кмоникерфиле:: Open](#open)|Открывает указанный файл для получения потока.|
+|[CMonikerFile::Закрыть](#close)|Отсоединяет и выпускает поток и выпускает кличка.|
+|[CMonikerFile::Detach](#detach)|Отделяет `IMoniker` от этого `CMonikerFile` объекта.|
+|[CMonikerFile::GetMoniker](#getmoniker)|Возвращает текущее прозвище.|
+|[CMonikerFile::Открыто](#open)|Открывает указанный файл для получения потока.|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[Кмоникерфиле:: Креатебиндконтекст](#createbindcontext)|Получает контекст привязки или создает инициализированный контекст привязки по умолчанию.|
+|[CMonikerFile::CreateBindContext](#createbindcontext)|Получает контекст связывания или создает инициализированный контекст связывания по умолчанию.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Моникер содержит информацию, похожую на путь к файлу. Если у вас есть указатель на `IMoniker` интерфейс объекта моникера, можно получить доступ к определенному файлу, не имея никаких других сведений о том, где фактически находится файл.
+Кличка содержит информацию, похожую на имя пути к файлу. Если у вас есть указатель на интерфейс `IMoniker` объекта моникера, вы можете получить доступ к идентифицированному файлу без какой-либо другой конкретной информации о том, где файл на самом деле находится.
 
-Производный `COleStreamFile`от `CMonikerFile` , принимает моникер или строковое представление, которое можно преобразовать в моникер и привязывает к потоку, для которого имя моникера является именем. Затем можно выполнять чтение и запись в этот поток. Реальная цель `CMonikerFile` заключается в том, чтобы предоставить простой доступ `IStream`к с именем `IMoniker`с помощью s, чтобы не привязываться к потоку самостоятельно, но в `CFile` нем есть функции для потока.
+Полученные `COleStreamFile`из `CMonikerFile` , берет прозвище или строки представление он может сделать в прозвище и связывается с потоком, для которого прозвище имя. Затем вы можете читать и писать в этот поток. `CMonikerFile` Реальная цель заключается в `IStream`том, `IMoniker`чтобы обеспечить простой доступ к s имени `CFile` s так, что вам не придется связываться с потоком самостоятельно, но есть функциональность для потока.
 
-`CMonikerFile`не может использоваться для привязки к чему-либо, кроме потока. Если требуется выполнить привязку к хранилищу или объекту, необходимо напрямую использовать `IMoniker` интерфейс.
+`CMonikerFile`не может быть использован для привязки к чему-либо, кроме потока. Если вы хотите привязаться к хранению `IMoniker` или объекту, вы должны использовать интерфейс напрямую.
 
-Дополнительные сведения о потоках и моникерах см. в разделе [колестреамфиле](../../mfc/reference/colestreamfile-class.md) в справочнике по *MFC* и [IStream](/windows/win32/api/objidl/nn-objidl-istream) и [IMoniker](/windows/win32/api/objidl/nn-objidl-imoniker) в Windows SDK.
+Для получения дополнительной информации о потоках и кличках, [см. COleStreamFile](../../mfc/reference/colestreamfile-class.md) в *MFC Reference* и [IStream](/windows/win32/api/objidl/nn-objidl-istream) и [IMoniker](/windows/win32/api/objidl/nn-objidl-imoniker) в Windows SDK.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[кфиле](../../mfc/reference/cfile-class.md)
+[CFile](../../mfc/reference/cfile-class.md)
 
-[колестреамфиле](../../mfc/reference/colestreamfile-class.md)
+[COleStreamFile](../../mfc/reference/colestreamfile-class.md)
 
 `CMonikerFile`
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** афксоле. h
+**Заголовок:** afxole.h
 
-##  <a name="close"></a>Кмоникерфиле:: Close
+## <a name="cmonikerfileclose"></a><a name="close"></a>CMonikerFile::Закрыть
 
-Вызовите эту функцию, чтобы отсоединить и освободить поток и освободить моникер.
+Вызовите эту функцию, чтобы отсоединить и освободить поток и выпустить кличка.
 
 ```
 virtual void Close();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Может вызываться для неоткрытых или уже закрытых потоков.
+Можно вызвать неоткрытые или уже закрытые потоки.
 
-##  <a name="cmonikerfile"></a>Кмоникерфиле:: Кмоникерфиле
+## <a name="cmonikerfilecmonikerfile"></a><a name="cmonikerfile"></a>CMonikerFile::CMonikerFile
 
-Создает объект `CMonikerFile`.
+Формирует объект `CMonikerFile`.
 
 ```
 CMonikerFile();
 ```
 
-##  <a name="createbindcontext"></a>Кмоникерфиле:: Креатебиндконтекст
+## <a name="cmonikerfilecreatebindcontext"></a><a name="createbindcontext"></a>CMonikerFile::CreateBindContext
 
-Вызовите эту функцию, чтобы создать инициализированный по умолчанию контекст привязки.
+Вызовите эту функцию, чтобы создать инициализированный контекст связывания по умолчанию.
 
 ```
 IBindCtx* CreateBindContext(CFileException* pError);
@@ -112,18 +112,18 @@ IBindCtx* CreateBindContext(CFileException* pError);
 
 ### <a name="parameters"></a>Параметры
 
-*pError*<br/>
-Указатель на исключение файла. В случае ошибки будет задана причина.
+*pОшибка*<br/>
+Указатель на исключение файла. В случае ошибки, она будет установлена на причину.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на контекст привязки [IBindCtx](/windows/win32/api/objidl/nn-objidl-ibindctx) для привязки в случае успеха; в противном случае — NULL. Если экземпляр был открыт с помощью `IBindHost` интерфейса, контекст привязки извлекается `IBindHost`из. `IBindHost` Если интерфейс отсутствует или интерфейс не может вернуть контекст привязки, создается контекст привязки. Описание интерфейса [ибиндхост](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775076\(v=vs.85\)) см. Windows SDK.
+Указатель на контекст связывать [IBindCtx,](/windows/win32/api/objidl/nn-objidl-ibindctx) чтобы связать с в случае успеха; в противном случае NULL. Если экземпляр был открыт `IBindHost` с интерфейсом, контекст связывания извлекается из `IBindHost`. Если интерфейс `IBindHost` отсутствует или интерфейс не возвращает контекст связывания, создается контекст связывания. Для описания интерфейса [IBindHost](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775076\(v=vs.85\)) см.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Контекст привязки — это объект, хранящий сведения о конкретной операции привязки моникера. Эту функцию можно переопределить для предоставления пользовательского контекста привязки.
+Контекст связывания — это объект, который хранит информацию о конкретной операции связывания моникера. Эту функцию можно переопределить, чтобы обеспечить пользовательский контекст связывания.
 
-##  <a name="detach"></a>Кмоникерфиле::D етач
+## <a name="cmonikerfiledetach"></a><a name="detach"></a>CMonikerFile::Detach
 
 Вызовите эту функцию, чтобы закрыть поток.
 
@@ -133,16 +133,16 @@ BOOL Detach(CFileException* pError = NULL);
 
 ### <a name="parameters"></a>Параметры
 
-*pError*<br/>
-Указатель на исключение файла. В случае ошибки будет задана причина.
+*pОшибка*<br/>
+Указатель на исключение файла. В случае ошибки, она будет установлена на причину.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Имеет ненулевое значение в случае успешного выполнения, иначе — 0.
 
-##  <a name="getmoniker"></a>Кмоникерфиле:: моникер
+## <a name="cmonikerfilegetmoniker"></a><a name="getmoniker"></a>CMonikerFile::GetMoniker
 
-Вызовите эту функцию, чтобы получить указатель на текущий моникер.
+Вызов исправьте эту функцию, чтобы получить указатель к текущему прозвищу.
 
 ```
 IMoniker* GetMoniker() const;
@@ -150,15 +150,15 @@ IMoniker* GetMoniker() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на текущий интерфейс моникера ( [IMoniker](/windows/win32/api/objidl/nn-objidl-imoniker)).
+Указатель на текущий интерфейс моникера [(IMoniker](/windows/win32/api/objidl/nn-objidl-imoniker)).
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Поскольку `CMonikerFile` не является интерфейсом, возвращаемый указатель не увеличивает число ссылок (через [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)), а моникер освобождается при `CMonikerFile` освобождении объекта. Если вы хотите хранить моникер или освободить его самостоятельно, вам необходимо `AddRef` .
+Поскольку `CMonikerFile` это не интерфейс, возврат указателя не приращает количество ссылок (через [AddRef),](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)и прозвище освобождается при освобождении `CMonikerFile` объекта. Если вы хотите, чтобы держаться за прозвище или `AddRef` освободить его самостоятельно, вы должны его.
 
-##  <a name="open"></a>Кмоникерфиле:: Open
+## <a name="cmonikerfileopen"></a><a name="open"></a>CMonikerFile::Открыто
 
-Вызовите эту функцию-член, чтобы открыть файл или объект моникера.
+Вызовите эту функцию участника, чтобы открыть файл или объект моникера.
 
 ```
 virtual BOOL Open(
@@ -172,24 +172,24 @@ virtual BOOL Open(
 
 ### <a name="parameters"></a>Параметры
 
-*лпсзурл*<br/>
-URL-адрес или имя файла, который будет открыт.
+*lpszURL*<br/>
+URL или имя файла, которое будет открыто.
 
-*pError*<br/>
-Указатель на исключение файла. В случае ошибки будет задана причина.
+*pОшибка*<br/>
+Указатель на исключение файла. В случае ошибки, она будет установлена на причину.
 
-*пмоникер*<br/>
-Указатель на интерфейс `IMoniker` моникера, используемый для получения потока.
+*pMoniker*<br/>
+Указатель на интерфейс `IMoniker` моникера, который будет использоваться для получения потока.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Имеет ненулевое значение в случае успешного выполнения, иначе — 0.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Параметр *лпсзурл* нельзя использовать для Macintosh. Для Macintosh `Open` можно использовать только форму пмоникер.
+Параметр *lpszURL* не может быть использован на Macintosh. Только *pMoniker* форма `Open` может быть использована на Macintosh.
 
-Для параметра *лпсзурл* можно использовать URL-адрес или имя файла. Например:
+Для параметра *lpszURL* можно использовать URL или имя файла. Пример:
 
 [!code-cpp[NVC_MFCWinInet#6](../../mfc/codesnippet/cpp/cmonikerfile-class_1.cpp)]
 
@@ -197,8 +197,8 @@ URL-адрес или имя файла, который будет открыт.
 
 [!code-cpp[NVC_MFCWinInet#7](../../mfc/codesnippet/cpp/cmonikerfile-class_2.cpp)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Класс COleStreamFile](../../mfc/reference/colestreamfile-class.md)<br/>
+[Класс ColeStreamFile](../../mfc/reference/colestreamfile-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс CAsyncMonikerFile](../../mfc/reference/casyncmonikerfile-class.md)

@@ -11,12 +11,12 @@ f1_keywords:
 - iosfwd/std::wstringbuf
 - iosfwd/std::wstringstream
 ms.assetid: d102edd2-ecea-4a35-a398-cf96e58dd422
-ms.openlocfilehash: e8f5a20b976d196090ac9300510044e84470c462
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: c25d3fa66b5105ad2e1ff5a08ebdde90d1d156be
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425139"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336636"
 ---
 # <a name="ltsstreamgt-typedefs"></a>Определения типов &lt;sstream&gt;
 
@@ -26,9 +26,9 @@ ms.locfileid: "79425139"
 |[stringstream](#stringstream)|[wistringstream](#wistringstream)|[wostringstream](#wostringstream)|
 |[wstringbuf](#wstringbuf)|[wstringstream](#wstringstream)|
 
-## <a name="istringstream"></a>  istringstream
+## <a name="istringstream"></a><a name="istringstream"></a>istringstream
 
-Создает тип, `basic_istringstream` специализированный для параметра шаблона **char** .
+Создает тип, `basic_istringstream` специализирующийся на параметре шаблона **char.**
 
 ```cpp
 typedef basic_istringstream<char> istringstream;
@@ -36,11 +36,11 @@ typedef basic_istringstream<char> istringstream;
 
 ### <a name="remarks"></a>Remarks
 
-Тип является синонимом [basic_istringstream](../standard-library/basic-istringstream-class.md)шаблона класса, специализированного для элементов типа **char**.
+Тип является синонимом шаблона класса [basic_istringstream,](../standard-library/basic-istringstream-class.md)специализируемого на элементах типа **char.**
 
-## <a name="ostringstream"></a>  ostringstream
+## <a name="ostringstream"></a><a name="ostringstream"></a>ostringstream
 
-Создает тип, `basic_ostringstream` специализированный для параметра шаблона **char** .
+Создает тип, `basic_ostringstream` специализирующийся на параметре шаблона **char.**
 
 ```cpp
 typedef basic_ostringstream<char> ostringstream;
@@ -48,11 +48,11 @@ typedef basic_ostringstream<char> ostringstream;
 
 ### <a name="remarks"></a>Remarks
 
-Тип является синонимом [basic_ostringstream](../standard-library/basic-ostringstream-class.md)шаблона класса, специализированного для элементов типа **char**.
+Тип является синонимом шаблона класса [basic_ostringstream,](../standard-library/basic-ostringstream-class.md)специализируемого на элементах **символа**типа.
 
-## <a name="stringbuf"></a>  stringbuf
+## <a name="stringbuf"></a><a name="stringbuf"></a>stringbuf
 
-Создает тип, `basic_stringbuf` специализированный для параметра шаблона **char** .
+Создает тип, `basic_stringbuf` специализирующийся на параметре шаблона **char.**
 
 ```cpp
 typedef basic_stringbuf<char> stringbuf;
@@ -60,11 +60,11 @@ typedef basic_stringbuf<char> stringbuf;
 
 ### <a name="remarks"></a>Remarks
 
-Тип является синонимом [basic_stringbuf](../standard-library/basic-stringbuf-class.md)шаблона класса, специализированного для элементов типа **char**.
+Тип является синонимом шаблона класса [basic_stringbuf,](../standard-library/basic-stringbuf-class.md)специализируемого на элементах **символа**типа.
 
-## <a name="stringstream"></a>  stringstream
+## <a name="stringstream"></a><a name="stringstream"></a>струнный поток
 
-Создает тип, `basic_stringstream` специализированный для параметра шаблона **char** .
+Создает тип, `basic_stringstream` специализирующийся на параметре шаблона **char.**
 
 ```cpp
 typedef basic_stringstream<char> stringstream;
@@ -72,11 +72,11 @@ typedef basic_stringstream<char> stringstream;
 
 ### <a name="remarks"></a>Remarks
 
-Тип является синонимом [basic_stringstream](../standard-library/basic-stringstream-class.md)шаблона класса, специализированного для элементов типа **char**.
+Тип является синонимом шаблона класса [basic_stringstream,](../standard-library/basic-stringstream-class.md)специализируемого на элементах типа **char.**
 
-## <a name="wistringstream"></a>  wistringstream
+## <a name="wistringstream"></a><a name="wistringstream"></a>wistringstream
 
-Создает тип, `basic_istringstream` специализированный для параметра шаблона **wchar_t** .
+Создает тип, `basic_istringstream` специализирующийся на параметре **шаблона wchar_t.**
 
 ```cpp
 typedef basic_istringstream<wchar_t> wistringstream;
@@ -84,11 +84,11 @@ typedef basic_istringstream<wchar_t> wistringstream;
 
 ### <a name="remarks"></a>Remarks
 
-Тип является синонимом [basic_istringstream](../standard-library/basic-istringstream-class.md)шаблона класса, специализированного для элементов типа **wchar_t**.
+Тип является синонимом [basic_istringstream](../standard-library/basic-istringstream-class.md)шаблона класса, специализируемого на элементах **типа wchar_t.**
 
-## <a name="wostringstream"></a>  wostringstream
+## <a name="wostringstream"></a><a name="wostringstream"></a>wostringstream
 
-Создает тип, `basic_ostringstream` специализированный для параметра шаблона **wchar_t** .
+Создает тип, `basic_ostringstream` специализирующийся на параметре **шаблона wchar_t.**
 
 ```cpp
 typedef basic_ostringstream<wchar_t> wostringstream;
@@ -96,11 +96,11 @@ typedef basic_ostringstream<wchar_t> wostringstream;
 
 ### <a name="remarks"></a>Remarks
 
-Тип является синонимом [basic_ostringstream](../standard-library/basic-ostringstream-class.md)шаблона класса, специализированного для элементов типа **wchar_t**.
+Тип является синонимом шаблона класса [basic_ostringstream,](../standard-library/basic-ostringstream-class.md)специализируемого на элементах типа **wchar_t.**
 
-## <a name="wstringbuf"></a>  wstringbuf
+## <a name="wstringbuf"></a><a name="wstringbuf"></a>wstringbuf
 
-Создает тип, `basic_stringbuf` специализированный для параметра шаблона **wchar_t** .
+Создает тип, `basic_stringbuf` специализирующийся на параметре **шаблона wchar_t.**
 
 ```cpp
 typedef basic_stringbuf<wchar_t> wstringbuf;
@@ -108,11 +108,11 @@ typedef basic_stringbuf<wchar_t> wstringbuf;
 
 ### <a name="remarks"></a>Remarks
 
-Тип является синонимом [basic_stringbuf](../standard-library/basic-stringbuf-class.md)шаблона класса, специализированного для элементов типа **wchar_t**.
+Тип является синонимом [basic_stringbuf](../standard-library/basic-stringbuf-class.md)шаблона класса, специализировавшегося на элементах типа **wchar_t.**
 
-## <a name="wstringstream"></a>  wstringstream
+## <a name="wstringstream"></a><a name="wstringstream"></a>wstringstream
 
-Создает тип, `basic_stringstream` специализированный для параметра шаблона **wchar_t** .
+Создает тип, `basic_stringstream` специализирующийся на параметре **шаблона wchar_t.**
 
 ```cpp
 typedef basic_stringstream<wchar_t> wstringstream;
@@ -120,7 +120,7 @@ typedef basic_stringstream<wchar_t> wstringstream;
 
 ### <a name="remarks"></a>Remarks
 
-Тип является синонимом [basic_stringstream](../standard-library/basic-stringstream-class.md)шаблона класса, специализированного для элементов типа **wchar_t**.
+Тип является синонимом [basic_stringstream](../standard-library/basic-stringstream-class.md)шаблона класса, специализируемого на элементах **wchar_t**типа.
 
 ## <a name="see-also"></a>См. также раздел
 

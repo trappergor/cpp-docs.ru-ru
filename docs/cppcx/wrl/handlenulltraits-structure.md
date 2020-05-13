@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::Close method
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::GetInvalidValue method
 ms.assetid: 88a29a14-c516-40cb-a0ca-ee897a668623
-ms.openlocfilehash: d70425f414b998eb67e3937c2c126dd3eda0c00d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 41e06cc50f36a077a34d992c416a543e5bf9b593
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398385"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371475"
 ---
 # <a name="handlenulltraits-structure"></a>HANDLENullTraits - структура
 
-Определяет общие характеристики дескриптора неинициализированным.
+Определяет общие характеристики непервоначальной ручки.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,16 +32,16 @@ struct HANDLENullTraits;
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-name   | Описание
+Имя   | Описание
 ------ | ---------------------
 `Type` | Синоним для HANDLE.
 
 ### <a name="public-methods"></a>Открытые методы
 
-name                                                  | Описание
+Имя                                                  | Описание
 ----------------------------------------------------- | -----------------------------
-[HANDLENullTraits::Close](#close)                     | Закрывает указанный дескриптор.
-[HANDLENullTraits::GetInvalidValue](#getinvalidvalue) | Представляет недопустимый дескриптор.
+[HANDLENullTraits::Закрыть](#close)                     | Закрывает указанную ручку.
+[HANDLENullTraits::GetInvalidValue](#getinvalidvalue) | Представляет недействительную ручку.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -51,11 +51,11 @@ name                                                  | Описание
 
 **Заголовок:** corewrappers.h
 
-**Пространство имен:** Microsoft::WRL::Wrappers::HandleTraits
+**Пространство имен:** Microsoft::WRL::Wrappers:: HandleTraits
 
-## <a name="close"></a>HANDLENullTraits::Close
+## <a name="handlenulltraitsclose"></a><a name="close"></a>HANDLENullTraits::Закрыть
 
-Закрывает указанный дескриптор.
+Закрывает указанную ручку.
 
 ```cpp
 inline static bool Close(
@@ -65,16 +65,16 @@ inline static bool Close(
 
 ### <a name="parameters"></a>Параметры
 
-*h*<br/>
-Чтобы закрыть дескриптор.
+*H*<br/>
+Ручка, чтобы закрыть.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** Если обрабатывать *h* Закрыто успешно; в противном случае — значение **false**.
+**верно,** если ручка *h* закрыта успешно; в противном случае, **ложные**.
 
-## <a name="getinvalidvalue"></a>HANDLENullTraits::GetInvalidValue
+## <a name="handlenulltraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>HANDLENullTraits::GetInvalidValue
 
-Представляет недопустимый дескриптор.
+Представляет недействительную ручку.
 
 ```cpp
 inline static Type GetInvalidValue();

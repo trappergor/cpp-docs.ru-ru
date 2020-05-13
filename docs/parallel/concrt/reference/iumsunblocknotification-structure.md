@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - IUMSUnblockNotification structure
 ms.assetid: eaca9529-c1cc-472b-8ec6-722a1ff0fa2a
-ms.openlocfilehash: d4fd95b1f11ed6edac26cb03e41e8b650acfafa3
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 0b88ddd4184e982a5e07c536efc301eaa16f4a41
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77139985"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368063"
 ---
 # <a name="iumsunblocknotification-structure"></a>Структура IUMSUnblockNotification
 
@@ -26,14 +26,14 @@ ms.locfileid: "77139985"
 struct IUMSUnblockNotification;
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|[Иумсунблоккнотификатион:: SPContext](#getcontext)|Возвращает интерфейс `IExecutionContext` для контекста выполнения, связанного с прокси-сервером потока, который был разблокирован. После того как этот метод возвращает управление, а базовый контекст выполнения был перепланирован с помощью вызова метода `IThreadProxy::SwitchTo`, этот интерфейс больше не является допустимым.|
-|[Иумсунблоккнотификатион:: Жетнекстунблоккнотификатион](#getnextunblocknotification)|Возвращает следующий интерфейс `IUMSUnblockNotification` в цепочке, возвращенной из метода `IUMSCompletionList::GetUnblockNotifications`.|
+|[УВЕДОМИт о ней : Вопрос:](#getcontext)|Возвращает `IExecutionContext` интерфейс для контекста выполнения, связанного с разблокированным прокси потока. После того, как этот метод возвращается и основной `IThreadProxy::SwitchTo` контекст выполнения был перенесен через вызов к методу, этот интерфейс больше не действителен.|
+|[УВЕДОМИтельно-изовещение О УМСУнблок::GetNextunblockNotification](#getnextunblocknotification)|Возвращает следующий `IUMSUnblockNotification` интерфейс в цепочке, возвращенный из метода. `IUMSCompletionList::GetUnblockNotifications`|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -41,13 +41,13 @@ struct IUMSUnblockNotification;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** concrtrm. h
+**Заголовок:** concrtrm.h
 
-**Пространство имен:** concurrency
+**Название:** параллелизм
 
-## <a name="getcontext"></a>Метод Иумсунблоккнотификатион:: oncontext
+## <a name="iumsunblocknotificationgetcontext-method"></a><a name="getcontext"></a>УВЕДОМЛЕНИЕ О НЕйизмом::Метод GetContext
 
-Возвращает интерфейс `IExecutionContext` для контекста выполнения, связанного с прокси-сервером потока, который был разблокирован. После того как этот метод возвращает управление, а базовый контекст выполнения был перепланирован с помощью вызова метода `IThreadProxy::SwitchTo`, этот интерфейс больше не является допустимым.
+Возвращает `IExecutionContext` интерфейс для контекста выполнения, связанного с разблокированным прокси потока. После того, как этот метод возвращается и основной `IThreadProxy::SwitchTo` контекст выполнения был перенесен через вызов к методу, этот интерфейс больше не действителен.
 
 ```cpp
 virtual IExecutionContext* GetContext() = 0;
@@ -55,11 +55,11 @@ virtual IExecutionContext* GetContext() = 0;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Интерфейс `IExecutionContext` для контекста выполнения для прокси-сервера потока, который был разблокирован.
+Интерфейс `IExecutionContext` для контекста выполнения к прокси-серверу потока, который разблокирован.
 
-## <a name="getnextunblocknotification"></a>Метод Иумсунблоккнотификатион:: Жетнекстунблоккнотификатион
+## <a name="iumsunblocknotificationgetnextunblocknotification-method"></a><a name="getnextunblocknotification"></a>УВЕДОМЛЕНИЕ О НЕй::Метод уведомления GetNextUnblockNotification
 
-Возвращает следующий интерфейс `IUMSUnblockNotification` в цепочке, возвращенной из метода `IUMSCompletionList::GetUnblockNotifications`.
+Возвращает следующий `IUMSUnblockNotification` интерфейс в цепочке, возвращенный из метода. `IUMSCompletionList::GetUnblockNotifications`
 
 ```cpp
 virtual IUMSUnblockNotification* GetNextUnblockNotification() = 0;
@@ -67,7 +67,7 @@ virtual IUMSUnblockNotification* GetNextUnblockNotification() = 0;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Следующий интерфейс `IUMSUnblockNotification` в цепочке, возвращаемой методом `IUMSCompletionList::GetUnblockNotifications`.
+Следующий `IUMSUnblockNotification` интерфейс в цепочке `IUMSCompletionList::GetUnblockNotifications`вернулся из метода.
 
 ## <a name="see-also"></a>См. также раздел
 

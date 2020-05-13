@@ -1,8 +1,9 @@
 ---
-title: free
-ms.date: 11/04/2016
+title: свободный
+ms.date: 4/2/2020
 api_name:
 - free
+- _o_free
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -25,14 +27,14 @@ helpviewer_keywords:
 - memory blocks, deallocating
 - free function
 ms.assetid: 74ded9cf-1863-432e-9306-327a42080bb8
-ms.openlocfilehash: 7e09bec7c83eae64064e3997f2e8d5632a47258a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0e0a53dd9d24634442c8dd456e4f9d38f742e292
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956728"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920426"
 ---
-# <a name="free"></a>free
+# <a name="free"></a>свободный
 
 Освобождает блок памяти.
 
@@ -49,7 +51,7 @@ void free(
 *memblock*<br/>
 Ранее выделенный блок памяти, который требуется освободить.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Функция **Free освобождает** блок памяти (*мемблокк*), который был ранее выделен вызовом **calloc**, **malloc**или **realloc**. Число освобожденных байтов эквивалентно числу байтов, запрошенных при выделении или повторном выделении блока (в случае **перераспределения**). Если *мемблокк* имеет **значение NULL**, указатель пропускается, и функция **Free** немедленно возвращается. Попытка освободить недопустимый указатель (указатель на блок памяти, который не был выделен с помощью **calloc**, **malloc**или **перераспределения**) может повлиять на последующие запросы на выделение и привести к ошибкам.
 
@@ -63,19 +65,21 @@ void free(
 
 Для освобождения памяти, которая выделена функцией [_malloca](malloca.md), используйте функцию [_freea](freea.md).
 
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
+
 ## <a name="requirements"></a>Требования
 
 |Функция|Обязательный заголовок|
 |--------------|---------------------|
-|**free**|\<stdlib.h> и \<malloc.h>|
+|**свободный**|\<stdlib.h> и \<malloc.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
 См. пример для функции [malloc](malloc.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Выделение памяти](../../c-runtime-library/memory-allocation.md)<br/>
 [_alloca](alloca.md)<br/>

@@ -1,21 +1,21 @@
 ---
-title: no_injected_text (C++ атрибут COM)
+title: no_injected_text (C++ атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.no_injected_text
 helpviewer_keywords:
 - no_injected_text attribute
 ms.assetid: 5256f808-e41e-4f4a-9ea5-e447919f5696
-ms.openlocfilehash: 354643020e704a87daa2e56e923b6a0a704bf0b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f98be3478b2e1eeb4b464f1784f3f4ece22d8a4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409295"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166618"
 ---
-# <a name="noinjectedtext"></a>no_injected_text
+# <a name="no_injected_text"></a>no_injected_text
 
-Запрещает компилятору вставку кода в результате использования атрибута.
+Не позволяет компилятору внедрять код в результате использования атрибута.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -25,12 +25,12 @@ ms.locfileid: "62409295"
 
 ### <a name="parameters"></a>Параметры
 
-*Логическое значение*<br/>
-(Необязательно) **true** Если нет кода, подставленного, **false** чтобы кода, которые следует вставить. **значение true,** используется по умолчанию.
+*boolean*<br/>
+Используемых **значение true** , если не нужно внедрять код, **значение false** , чтобы разрешить внедрение кода. **значение true** используется по умолчанию.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Наиболее распространенное использование **no_injected_text** C++ атрибут должен быть, [/Fx](../../build/reference/fx-merge-injected-code.md) параметр компилятора, который вставляет **no_injected_text** атрибут в MRG-файла.
+Наиболее распространенным применением атрибута **no_injected_text** C++ является параметр компилятора [/FX](../../build/reference/fx-merge-injected-code.md) , который вставляет атрибут **no_injected_text** в MRG-файл.
 
 ## <a name="requirements"></a>Требования
 
@@ -39,12 +39,12 @@ ms.locfileid: "62409295"
 |||
 |-|-|
 |**Применение**|В любом месте|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Нет|
-|**Недопустимые атрибуты**|Нет|
+|**Повторяемый**|нет|
+|**Обязательные атрибуты**|None|
+|**Недопустимые атрибуты**|None|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты компилятора](compiler-attributes.md)

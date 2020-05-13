@@ -1,8 +1,9 @@
 ---
 title: clearerr
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - clearerr
+- _o_clearerr
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - resetting stream error indicator
 - clearerr function
 ms.assetid: a9711cd4-3335-43d4-a018-87bbac5b3bac
-ms.openlocfilehash: 9fd2f7e7dfcf272e806a887b356418b7555913f5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: fc9ce31c4bdb0f7bedba461dd48b4072bfc50613
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942952"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916973"
 ---
 # <a name="clearerr"></a>clearerr
 
@@ -50,7 +52,7 @@ void clearerr(
 *вышестоящий*<br/>
 Указатель на структуру **FILE**.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Функция **клеарерр** сбрасывает индикатор ошибки и индикатор конца файла для *Stream*. Индикаторы ошибок не очищаются автоматически; После того как индикатор ошибки для указанного потока установлен, операции в этом потоке продолжают возвращать значение ошибки до тех пор, пока не будет вызван **клеарерр**, [fseek](fseek-fseeki64.md), **fsetpos**или [Rewind](rewind.md) .
 
@@ -58,13 +60,15 @@ void clearerr(
 
 Существует более безопасная версия этой функции, см. раздел [clearerr_s](clearerr-s.md).
 
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
+
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
 |**clearerr**|\<stdio.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -100,7 +104,7 @@ int main( void )
 }
 ```
 
-### <a name="input"></a>Ввод
+### <a name="input"></a>Входные данные
 
 ```Input
 n

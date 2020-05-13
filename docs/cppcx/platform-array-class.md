@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
-ms.openlocfilehash: 7d9fca4de954b5ba9c7cbcb3bdfce0fe3263dbd7
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: d625d80df67a3c8207467ad629afd4c2bf88db18
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445797"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318659"
 ---
 # <a name="platformarray-class"></a>Класс Platform::Array
 
@@ -28,43 +28,43 @@ private ref class Array<TArg, 1> :
     public IBoxArray<TArg>
 ```
 
-### <a name="members"></a>Члены
+### <a name="members"></a>Участники
 
-Platform:: Array наследует все свои методы от [класса Platform:: WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md) и реализует свойство `Value` [интерфейса Platform:: IBoxArray](../cppcx/platform-iboxarray-interface.md).
+Платформа::Array наследует все свои методы от [платформы::WriteOnlyArray класса](../cppcx/platform-writeonlyarray-class.md) и реализует `Value` свойство [платформы::IBoxArray Интерфейс](../cppcx/platform-iboxarray-interface.md).
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|[Конструкторы массивов](#ctor)|Инициализирует одномерный, изменяемый массив типов, заданный параметром шаблона класса *T*.|
+|[Конструкторы массивов](#ctor)|Инициализирует одномерный, изменяемый массив типов, указанный параметром шаблона класса, *T*.|
 
 ### <a name="methods"></a>Методы
 
-См. [класс Platform:: WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md).
+Смотрите [платформу::WriteOnlyArray класса](../cppcx/platform-writeonlyarray-class.md).
 
 ### <a name="properties"></a>Свойства
 
 |||
 |-|-|
-|[Массив:: значение](#value)|Получает дескриптор текущего массива.|
+|[Массив::Значение](#value)|Получает дескриптор текущего массива.|
 
 ### <a name="remarks"></a>Remarks
 
 Класс Array является запечатанным и наследовать его нельзя.
 
-Система типов среда выполнения Windows не поддерживает концепцию массива массивов и, следовательно, нельзя передать IVector < Platform:: Array\<T > > в качестве возвращаемого значения или параметра метода. Для передачи массива массивов или последовательности массивов в ABI используйте `IVector<IVector<T>^>`.
+Система типа Windows Runtime не поддерживает концепцию зубчатых массивов и поэтому не\<может пройти iVector<Platform::Array T>> как значение возврата или параметр метода. Для передачи массива массивов или последовательности массивов в ABI используйте `IVector<IVector<T>^>`.
 
-Дополнительные сведения о том, когда и как использовать Platform:: Array, см. в разделе [Array и WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
+Для получения дополнительной информации о том, когда и как использовать платформу:: Array, [см.](../cppcx/array-and-writeonlyarray-c-cx.md)
 
-Этот класс определен в заголовке vccorlib.h, который автоматически включается компилятором. Он отображается в IntelliSense, но не в обозревателе объектов, так как он не является общедоступным типом, определенным в Platform. winmd.
+Этот класс определен в заголовке vccorlib.h, который автоматически включается компилятором. Это видно в IntelliSense, но не в объекте браузера, потому что это не публичный тип, определенный в platform.winmd.
 
 ### <a name="requirements"></a>Требования
 
-Параметр компилятора: **/ZW**
+Вариант компилятора: **/ ЗВ**
 
-## <a name="ctor"></a>Конструкторы массивов
+## <a name="array-constructors"></a><a name="ctor"></a>Конструкторы массивов
 
-Инициализирует одномерный, изменяемый массив типов, заданный параметром шаблона класса *T*.
+Инициализирует одномерный, изменяемый массив типов, указанный параметром шаблона класса, *T*.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -78,17 +78,17 @@ Array(T* data, unsigned int size);
 *T*<br/>
 Параметр шаблона класса.
 
-*size*<br/>
+*Размер*<br/>
 Количество элементов в массиве.
 
-*data*<br/>
+*данные*<br/>
 Указатель на массив данных типа `T`, используемый для инициализации данного объекта Array.
 
 ### <a name="remarks"></a>Remarks
 
-Дополнительные сведения о создании экземпляров Platform:: Array см. в разделе [Array и WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
+Для получения дополнительной информации о том, как создавать экземпляры Платформы:: Array, [см. Array и WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
 
-## <a name="get"></a>Метод Array:: Get
+## <a name="arrayget-method"></a><a name="get"></a>Array::получить метод
 
 Извлекает ссылку на элемент массива с указанным индексом.
 
@@ -100,14 +100,14 @@ T& get(unsigned int index)  const;
 
 #### <a name="parameters"></a>Параметры
 
-*index*<br/>
-Отсчитываемый от нуля индекс, указывающий на элемент в массиве. Минимальный индекс равен 0, а максимальный индекс — значению, заданному параметром `size` в [конструкторе массива](#ctor).
+*Индекс*<br/>
+Отсчитываемый от нуля индекс, указывающий на элемент в массиве. Минимальный индекс равен 0, а максимальным `size` индексом является значение, указанное параметром в [конструкторе Array.](#ctor)
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Элемент массива, заданный параметром `index`.
 
-## <a name="value"></a>Свойство массива:: value
+## <a name="arrayvalue-property"></a><a name="value"></a>Array::Значение свойства
 
 Получает дескриптор текущего массива.
 

@@ -1,12 +1,16 @@
 ---
 title: _mbclen, mblen, _mblen_l, _mbclen_l
 description: Описывает функции _mbclen, mblen, _mblen_l и _mbclen_l в библиотеке времени выполнения Microsoft C (CRT).
-ms.date: 01/08/2020
+ms.date: 4/2/2020
 api_name:
 - _mbclen
 - mblen
 - _mblen_l
 - _mbclen_l
+- _o__mbclen
+- _o__mbclen_l
+- _o__mblen_l
+- _o_mblen
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +24,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -43,12 +48,12 @@ helpviewer_keywords:
 - mbclen function
 - mblen function
 ms.assetid: d5eb92a0-b7a3-464a-aaf7-9890a8e3ed70
-ms.openlocfilehash: 4676d850448af386a5aface69f616a4ac6f85cbf
-ms.sourcegitcommit: 7bd3567fc6a0e7124aab51cad63bbdb44a99a848
+ms.openlocfilehash: b004babc9e7c82d25cd52ec036c3061c99b5f367
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75755067"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914359"
 ---
 # <a name="_mbclen-mblen-_mblen_l-_mbclen_l"></a>_mbclen, mblen, _mblen_l, _mbclen_l
 
@@ -80,16 +85,16 @@ int _mblen_l(
 
 ### <a name="parameters"></a>Параметры
 
-\ *в c*
+*ц*\
 Многобайтовый символ.
 
 *мбстр*\
 Адрес последовательности байтов (многобайтовый символ).
 
-*количество*\
+*расчета*\
 Число проверяемых байтов.
 
-\ *языкового стандарта*
+*языкового стандарта*\
 Используемый языковой стандарт.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -98,7 +103,7 @@ int _mblen_l(
 
 Если *мбстр* не **равно NULL**, **mblen** и **_mblen_l** возвращают длину многобайтового символа в байтах. Функции **mblen** и **_mblen_l** правильно работают в кодировке UTF-8 и могут возвращать значение от 1 до 3. Если *мбстр* имеет **значение NULL** (или указывает на широкий символ null), **mblen** и **_mblen_l** возвращают 0. Объект, на который указывает *мбстр* , должен образовывать допустимый многобайтовый символ в первые символы *Count* , или **mblen** , а **_mblen_l** возвращать-1.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
 Функция **_mbclen** возвращает длину многобайтового символа *c*в байтах. Если *c* не указывает на старший байт многобайтового символа (как определено неявным вызовом [_ismbblead](ismbblead-ismbblead-l.md), результат **_mbclen** является непредсказуемым.
 
@@ -107,6 +112,8 @@ int _mblen_l(
 На выходное значение влияет параметр категории **LC_CTYPE** языкового стандарта. Версии этих функций без суффикса **_l** используют текущий языковой стандарт для этого поведения, зависящего от языкового стандарта. **_L** версии с суффиксами ведут себя одинаково, но они используют переданный параметр языкового стандарта. Дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md) и [locale](../../c-runtime-library/locale.md).
 
 **_mbclen**, **_mblen_l**и **_Mbclen_l** являются специфичными для Майкрософт, а не частью стандартной библиотеки C. Мы не рекомендуем использовать их в том месте, где нужен переносимый код. Для стандартной совместимости C используйте вместо него **mblen** или **мбрлен** .
+
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
@@ -163,10 +170,10 @@ Length in bytes of multibyte character 61: 1
 Length in bytes of NULL multibyte character 0: 0
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Классификация символов](../../c-runtime-library/character-classification.md)\
-[Языковой стандарт](../../c-runtime-library/locale.md)\
+[Языкового стандарта](../../c-runtime-library/locale.md)\
 [Интерпретация последовательностей многобайтовых символов](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)\
 [_mbccpy, _mbccpy_l](mbccpy-mbccpy-l.md)\
 [мбрлен](mbrlen.md)\

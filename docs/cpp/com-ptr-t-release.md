@@ -7,31 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - Release method [C++]
 ms.assetid: db448b34-0efa-4f02-b701-ad1ca3ae6ca5
-ms.openlocfilehash: cf4cea35386d1f781d6d2946c1730ba2e18dacea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73de3c2d19063f0738b8b0a3c510ea520f58de0b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399230"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745060"
 ---
-# <a name="comptrtrelease"></a>_com_ptr_t::Release
+# <a name="_com_ptr_trelease"></a>_com_ptr_t::Release
 
-**Блок, относящийся только к системам Microsoft**
+**Microsoft Специфический**
 
-Вызовы **выпуска** функцию-член `IUnknown` на инкапсулированный указатель на интерфейс.
+Вызывает **Release** функцию участника `IUnknown` выпуска на инкапсулированном указателе интерфейса.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 void Release( );
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Вызовы `IUnknown::Release` на инкапсулированный указатель на интерфейс, вызов `E_POINTER` ошибка, если этот указатель интерфейса имеет значение NULL.
+Вызовы `IUnknown::Release` на инкапсулированный указатель `E_POINTER` интерфейса, поднимая ошибку, если этот указатель интерфейса NULL.
 
-**Завершение блока, относящегося только к системам Майкрософт**
+**END Microsoft Специфический**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Класс _com_ptr_t](../cpp/com-ptr-t-class.md)
+[класс _com_ptr_t](../cpp/com-ptr-t-class.md)

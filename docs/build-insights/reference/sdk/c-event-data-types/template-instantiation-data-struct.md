@@ -1,6 +1,6 @@
 ---
-title: Структура TEMPLATE_INSTANTIATION_DATA
-description: В C++ пакете SDK для аналитики сборки TEMPLATE_INSTANTIATION_DATA ссылка на структуру.
+title: структура TEMPLATE_INSTANTIATION_DATA
+description: Ссылка на структуру СЗ Build Insights SDK TEMPLATE_INSTANTIATION_DATA.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 9aa669d715dbe56ce7e889330f46f307f520710f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: a38d19368e7c0a9912907f1da6e7a2e31ffe8d90
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78335084"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325334"
 ---
-# <a name="template_instantiation_data-structure"></a>Структура TEMPLATE_INSTANTIATION_DATA
+# <a name="template_instantiation_data-structure"></a>структура TEMPLATE_INSTANTIATION_DATA
 
 ::: moniker range="<=vs-2015"
 
-Пакет C++ SDK для Build Insights совместим с Visual Studio 2017 и более поздних версий. Чтобы просмотреть документацию по этим версиям, присвойте элементу управления "Выбор версий Visual Studio" для этой статьи значение Visual Studio 2017 или Visual Studio 2019.
+SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Структура `TEMPLATE_INSTANTIATION_DATA` описывает создание экземпляра шаблона.
+Структура `TEMPLATE_INSTANTIATION_DATA` описывает мгновенное значение шаблона.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -39,16 +39,16 @@ typedef struct TEMPLATE_INSTANTIATION_DATA_TAG
 } TEMPLATE_INSTANTIATION_DATA;
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 |  |  |
 |--|--|
-| `SpecializationSymbolKey` | Ключ для типа специализации шаблона. Это значение уникально в анализируемой трассировке. |
-| `PrimaryTemplateSymbolKey` | Ключ для типа основного шаблона, который был специализированным. Это значение уникально в анализируемой трассировке. |
-| `KindCode` | Тип экземпляра шаблона. Дополнительные сведения см. в разделе [TEMPLATE_INSTANTIATION_KIND_CODE](template-instantiation-kind-code-enum.md). |
+| `SpecializationSymbolKey` | Ключ для типа специализации шаблона. Это значение является уникальным в анализируемом следе. |
+| `PrimaryTemplateSymbolKey` | Ключ для основного типа шаблона, который был специализированным. Это значение является уникальным в анализируемом следе. |
+| `KindCode` | Тип мгновенного шаблона. Для получения дополнительной информации смотрите [TEMPLATE_INSTANTIATION_KIND_CODE](template-instantiation-kind-code-enum.md). |
 
 ## <a name="remarks"></a>Remarks
 
-Ключи в структуре `TEMPLATE_INSTANTIATION_DATA` уникальны в анализируемой трассировке. Однако два разных ключа, поступающих от разных проходов внешнего интерфейса компилятора, могут указывать на два идентичных типа. При использовании `TEMPLATE_INSTANTIATION_DATA` данных из нескольких интерфейсных проходов компилятора используйте события [SYMBOL_NAME](../event-table.md#symbol-name) , чтобы определить, совпадают ли два типа. `SymbolName` события выдаются в конце внешнего прохода компилятора, после того, как все экземпляры шаблонов созданы.
+Ключи в `TEMPLATE_INSTANTIATION_DATA` структуре уникальны в анализируемом следе. Тем не менее, два разных ключа, поступающие из разных проходов фронт-энда компилятора, могут указывать на два одинаковых типа. При `TEMPLATE_INSTANTIATION_DATA` употреблении информации из нескольких проходов фронт-энда компилятора используйте [SYMBOL_NAME](../event-table.md#symbol-name) события, чтобы определить, являются ли два типа одинаковыми. `SymbolName`события излучаются в конце переднего прохода компилятора, после того, как все моменты шаблона имели место.
 
 ::: moniker-end

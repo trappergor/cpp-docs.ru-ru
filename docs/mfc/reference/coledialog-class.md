@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - COleDialog [MFC], GetLastError
 ms.assetid: b1ed0aca-3914-4b00-af34-4a4fb491aec7
-ms.openlocfilehash: 353e2ed312fa7dbb9ef7bdfabc2b174abf8e1e1d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a1983d426e97dd8063aee2857dc36557aa20677
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375721"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366097"
 ---
 # <a name="coledialog-class"></a>Класс COleDialog
 
@@ -29,13 +29,13 @@ class COleDialog : public CCommonDialog
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[COleDialog::GetLastError](#getlasterror)|Получает код ошибки, возвращаемый диалоговым окном.|
+|[ColeDialog::GetLastError](#getlasterror)|Возвращает код ошибки в диалоговое окно.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Библиотеки Microsoft Foundation Class предоставляет несколько классов, производных от `COleDialog`:
+Библиотека класса Фонда Майкрософт предоставляет `COleDialog`несколько классов, полученных из:
 
 - [COleInsertDialog](../../mfc/reference/coleinsertdialog-class.md)
 
@@ -55,7 +55,7 @@ class COleDialog : public CCommonDialog
 
 - [COleChangeSourceDialog](../../mfc/reference/colechangesourcedialog-class.md)
 
-Дополнительные сведения о конкретных OLE диалоговым окнам см. в статье [диалоговые окна в OLE](../../mfc/dialog-boxes-in-ole.md).
+Для получения дополнительной информации о OL-специфических диалоговых ящиков, [см.](../../mfc/dialog-boxes-in-ole.md)
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -75,9 +75,9 @@ class COleDialog : public CCommonDialog
 
 **Заголовок:** afxodlgs.h
 
-##  <a name="getlasterror"></a>  COleDialog::GetLastError
+## <a name="coledialoggetlasterror"></a><a name="getlasterror"></a>ColeDialog::GetLastError
 
-Вызовите `GetLastError` функция-член для получения дополнительных сведений об ошибке при `DoModal` возвращает IDABORT.
+Позвоните `GetLastError` функции участника, чтобы `DoModal` получить дополнительную информацию об ошибке при возврате IDABORT.
 
 ```
 UINT GetLastError() const;
@@ -85,13 +85,13 @@ UINT GetLastError() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Коды ошибок, возвращенные `GetLastError` зависят от конкретного диалогового окна.
+Коды ошибок, `GetLastError` возвращенные в зависимости от отображаемого окна диалога.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-См. в разделе `DoModal` функция-член в производных классах, сведения о специальных сообщений об ошибках.
+Просматривайте `DoModal` функцию участника в производных классах для получения информации о конкретных сообщениях об ошибках.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Класс CCommonDialog](../../mfc/reference/ccommondialog-class.md)<br/>
+[Класс CCommonДиалог](../../mfc/reference/ccommondialog-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)

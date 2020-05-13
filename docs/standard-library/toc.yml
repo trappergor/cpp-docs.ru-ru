@@ -1,0 +1,1548 @@
+- name: Справочник по стандартной библиотеке C++
+  href: ../standard-library/cpp-standard-library-reference.md
+- name: Файлы заголовков стандартной библиотеки C++
+  expanded: false
+  items:
+    - name: Файлы заголовков стандартной библиотеки C++
+      href: ../standard-library/cpp-standard-library-header-files.md
+    - name: <algorithm>
+      expanded: false
+      items:
+        - name: <algorithm>
+          href: ../standard-library/algorithm.md
+        - name: Функции<algorithm>
+          href: ../standard-library/algorithm-functions.md
+    - name: <allocators>
+      expanded: false
+      items:
+        - name: <allocators>
+          href: ../standard-library/allocators-header.md
+        - name: Функции<allocators>
+          href: ../standard-library/allocators-functions.md
+        - name: Операторы <allocators>
+          href: ../standard-library/allocators-operators.md
+        - name: Класс allocator_base
+          href: ../standard-library/allocator-base-class.md
+        - name: Класс allocator_chunklist
+          href: ../standard-library/allocator-chunklist-class.md
+        - name: Класс allocator_fixed_size
+          href: ../standard-library/allocator-fixed-size-class.md
+        - name: Класс allocator_newdel
+          href: ../standard-library/allocator-newdel-class.md
+        - name: Класс allocator_suballoc
+          href: ../standard-library/allocator-suballoc-class.md
+        - name: Класс allocator_unbounded
+          href: ../standard-library/allocator-unbounded-class.md
+        - name: Класс allocator_variable_size
+          href: ../standard-library/allocator-variable-size-class.md
+        - name: Класс cache_chunklist
+          href: ../standard-library/cache-chunklist-class.md
+        - name: Класс cache_freelist
+          href: ../standard-library/cache-freelist-class.md
+        - name: Класс cache_suballoc
+          href: ../standard-library/cache-suballoc-class.md
+        - name: Класс freelist
+          href: ../standard-library/freelist-class.md
+        - name: Класс max_fixed_size
+          href: ../standard-library/max-fixed-size-class.md
+        - name: Класс max_none
+          href: ../standard-library/max-none-class.md
+        - name: Класс max_unbounded
+          href: ../standard-library/max-unbounded-class.md
+        - name: Класс max_variable_size
+          href: ../standard-library/max-variable-size-class.md
+        - name: Класс rts_alloc
+          href: ../standard-library/rts-alloc-class.md
+        - name: Класс sync_none
+          href: ../standard-library/sync-none-class.md
+        - name: Класс sync_per_container
+          href: ../standard-library/sync-per-container-class.md
+        - name: Класс sync_per_thread
+          href: ../standard-library/sync-per-thread-class.md
+        - name: Класс sync_shared
+          href: ../standard-library/sync-shared-class.md
+    - name: <any>
+      expanded: false
+      items:
+        - name: <any>
+          href: ../standard-library/any.md
+        - name: Функции<any>
+          href: ../standard-library/any-functions.md
+        - name: Класс any (стандартная библиотека C++)
+          href: ../standard-library/any-class.md
+    - name: <array>
+      expanded: false
+      items:
+        - name: <array>
+          href: ../standard-library/array.md
+        - name: Функции<array>
+          href: ../standard-library/array-functions.md
+        - name: Операторы <array>
+          href: ../standard-library/array-operators.md
+        - name: Класс array (стандартная библиотека C++)
+          href: ../standard-library/array-class-stl.md
+    - name: <atomic>
+      expanded: false
+      items:
+        - name: <atomic>
+          href: ../standard-library/atomic.md
+        - name: Структура atomic
+          href: ../standard-library/atomic-structure.md
+        - name: Структура atomic_flag
+          href: ../standard-library/atomic-flag-structure.md
+        - name: Функции<atomic>
+          href: ../standard-library/atomic-functions.md
+        - name: Перечисления <atomic>
+          href: ../standard-library/atomic-enums.md
+    - name: <bitset>
+      expanded: false
+      items:
+        - name: <bitset>
+          href: ../standard-library/bitset.md
+        - name: Операторы <bitset>
+          href: ../standard-library/bitset-operators.md
+        - name: Класс bitset
+          href: ../standard-library/bitset-class.md
+    - name: <cassert>
+      href: ../standard-library/cassert.md
+    - name: <ccomplex>
+      href: ../standard-library/ccomplex.md
+    - name: <cctype>
+      href: ../standard-library/cctype.md
+    - name: <cerrno>
+      href: ../standard-library/cerrno.md
+    - name: <cfenv>
+      href: ../standard-library/cfenv.md
+    - name: <cfloat>
+      href: ../standard-library/cfloat.md
+    - name: <chrono>
+      expanded: false
+      items:
+        - name: <chrono>
+          href: ../standard-library/chrono.md
+        - name: Функции<chrono>
+          href: ../standard-library/chrono-functions.md
+        - name: Операторы <chrono>
+          href: ../standard-library/chrono-operators.md
+        - name: литералы chrono
+          href: ../standard-library/chrono-literals.md
+        - name: Структура common_type
+          href: ../standard-library/common-type-structure.md
+        - name: Класс duration
+          href: ../standard-library/duration-class.md
+        - name: Структура duration_values
+          href: ../standard-library/duration-values-structure.md
+        - name: Структура steady_clock
+          href: ../standard-library/steady-clock-struct.md
+        - name: Структура system_clock
+          href: ../standard-library/system-clock-structure.md
+        - name: Класс time_point
+          href: ../standard-library/time-point-class.md
+        - name: Структура treat_as_floating_point
+          href: ../standard-library/treat-as-floating-point-structure.md
+    - name: <cinttypes>
+      href: ../standard-library/cinttypes.md
+    - name: <ciso646>
+      href: ../standard-library/ciso646.md
+    - name: <climits>
+      href: ../standard-library/climits.md
+    - name: <clocale>
+      href: ../standard-library/clocale.md
+    - name: <cmath>
+      href: ../standard-library/cmath.md
+    - name: <codecvt>
+      expanded: false
+      items:
+        - name: <codecvt>
+          href: ../standard-library/codecvt.md
+        - name: Перечисления <codecvt>
+          href: ../standard-library/codecvt-enums.md
+        - name: codecvt_utf8
+          href: ../standard-library/codecvt-utf8-class.md
+        - name: codecvt_utf8_utf16
+          href: ../standard-library/codecvt-utf8-utf16-class.md
+        - name: codecvt_utf16
+          href: ../standard-library/codecvt-utf16-class.md
+    - name: <complex>
+      expanded: false
+      items:
+        - name: <complex>
+          href: ../standard-library/complex.md
+        - name: Функции<complex>
+          href: ../standard-library/complex-functions.md
+        - name: Операторы <complex>
+          href: ../standard-library/complex-operators.md
+        - name: Класс complex
+          href: ../standard-library/complex-class.md
+        - name: complex<double>
+          href: ../standard-library/complex-double.md
+        - name: complex<float>
+          href: ../standard-library/complex-float.md
+        - name: complex<long double>
+          href: ../standard-library/complex-long-double.md
+    - name: <condition_variable>
+      expanded: false
+      items:
+        - name: <condition_variable>
+          href: ../standard-library/condition-variable.md
+        - name: Перечисления <condition_variable>
+          href: ../standard-library/condition-variable-enums.md
+        - name: Класс condition_variable
+          href: ../standard-library/condition-variable-class.md
+        - name: Класс condition_variable_any
+          href: ../standard-library/condition-variable-any-class.md
+    - name: <csetjmp>
+      href: ../standard-library/csetjmp.md
+    - name: <csignal>
+      href: ../standard-library/csignal.md
+    - name: <cstdalign>
+      href: ../standard-library/cstdalign.md
+    - name: <cstdarg>
+      href: ../standard-library/cstdarg.md
+    - name: <cstdbool>
+      href: ../standard-library/cstdbool.md
+    - name: <cstddef>
+      href: ../standard-library/cstddef.md
+    - name: <cstdint>
+      href: ../standard-library/cstdint.md
+    - name: <cstdio>
+      href: ../standard-library/cstdio.md
+    - name: <cstdlib>
+      href: ../standard-library/cstdlib.md
+    - name: <cstring>
+      href: ../standard-library/cstring.md
+    - name: <ctgmath>
+      href: ../standard-library/ctgmath.md
+    - name: <ctime>
+      href: ../standard-library/ctime.md
+    - name: <cuchar>
+      href: ../standard-library/cuchar.md
+    - name: <cvt-wbuffer>
+      href: ../standard-library/cvt-wbuffer.md
+    - name: <cvt-wstring>
+      href: ../standard-library/cvt-wstring.md
+    - name: <cwchar>
+      href: ../standard-library/cwchar.md
+    - name: <cwctype>
+      href: ../standard-library/cwctype.md
+    - name: <deque>
+      expanded: false
+      items:
+        - name: <deque>
+          href: ../standard-library/deque.md
+        - name: Функции<deque>
+          href: ../standard-library/deque-functions.md
+        - name: Операторы <deque>
+          href: ../standard-library/deque-operators.md
+        - name: Класс deque
+          href: ../standard-library/deque-class.md
+    - name: <exception>
+      expanded: false
+      items:
+        - name: <exception>
+          href: ../standard-library/exception.md
+        - name: Функции<exception>
+          href: ../standard-library/exception-functions.md
+        - name: Определения типов <exception>
+          href: ../standard-library/exception-typedefs.md
+        - name: Класс bad_exception
+          href: ../standard-library/bad-exception-class.md
+        - name: Класс exception
+          href: ../standard-library/exception-class.md
+    - name: <execution>
+      href: ../standard-library/execution.md
+    - name: <filesystem>
+      expanded: false
+      items:
+        - name: <filesystem>
+          href: ../standard-library/filesystem.md
+        - name: Операторы <filesystem>
+          href: ../standard-library/filesystem-operators.md
+        - name: Функции<filesystem>
+          href: ../standard-library/filesystem-functions.md
+        - name: Перечисления <filesystem>
+          href: ../standard-library/filesystem-enumerations.md
+        - name: Класс directory_entry
+          href: ../standard-library/directory-entry-class.md
+        - name: Класс directory_iterator
+          href: ../standard-library/directory-iterator-class.md
+        - name: Класс file_status
+          href: ../standard-library/file-status-class.md
+        - name: Класс filesystem_error
+          href: ../standard-library/filesystem-error-class.md
+        - name: Класс path
+          href: ../standard-library/path-class.md
+        - name: Класс recursive_directory_iterator
+          href: ../standard-library/recursive-directory-iterator-class.md
+        - name: Структура space_info
+          href: ../standard-library/space-info-structure.md
+    - name: <forward_list>
+      expanded: false
+      items:
+        - name: <forward_list>
+          href: ../standard-library/forward-list.md
+        - name: Функции <forward_list>
+          href: ../standard-library/forward-list-functions.md
+        - name: Операторы <forward_list>
+          href: ../standard-library/forward-list-operators.md
+        - name: Класс forward_list
+          href: ../standard-library/forward-list-class.md
+    - name: <fstream>
+      expanded: false
+      items:
+        - name: <fstream>
+          href: ../standard-library/fstream.md
+        - name: Определения типов <fstream>
+          href: ../standard-library/fstream-typedefs.md
+        - name: Класс basic_filebuf
+          href: ../standard-library/basic-filebuf-class.md
+        - name: Класс basic_fstream
+          href: ../standard-library/basic-fstream-class.md
+        - name: Класс basic_ifstream
+          href: ../standard-library/basic-ifstream-class.md
+        - name: Класс basic_ofstream
+          href: ../standard-library/basic-ofstream-class.md
+    - name: <functional>
+      expanded: false
+      items:
+        - name: <functional>
+          href: ../standard-library/functional.md
+        - name: Функции<functional>
+          href: ../standard-library/functional-functions.md
+        - name: Операторы <functional>
+          href: ../standard-library/functional-operators.md
+        - name: Объект _1
+          href: ../standard-library/1-object.md
+        - name: Класс bad_function_call
+          href: ../standard-library/bad-function-call-class.md
+        - name: Структура binary_function
+          href: ../standard-library/binary-function-struct.md
+        - name: Класс binary_negate
+          href: ../standard-library/binary-negate-class.md
+        - name: Класс binder1st
+          href: ../standard-library/binder1st-class.md
+        - name: Класс binder2nd
+          href: ../standard-library/binder2nd-class.md
+        - name: Класс const_mem_fun_ref_t
+          href: ../standard-library/const-mem-fun-ref-t-class.md
+        - name: Класс const_mem_fun_t
+          href: ../standard-library/const-mem-fun-t-class.md
+        - name: Класс const_mem_fun1_ref_t
+          href: ../standard-library/const-mem-fun1-ref-t-class.md
+        - name: Класс const_mem_fun1_t
+          href: ../standard-library/const-mem-fun1-t-class.md
+        - name: Структура divides
+          href: ../standard-library/divides-struct.md
+        - name: Структура equal_to
+          href: ../standard-library/equal-to-struct.md
+        - name: Класс function
+          href: ../standard-library/function-class.md
+        - name: Структура greater
+          href: ../standard-library/greater-struct.md
+        - name: Структура greater_equal
+          href: ../standard-library/greater-equal-struct.md
+        - name: Класс hash
+          href: ../standard-library/hash-class.md
+        - name: Класс is_bind_expression
+          href: ../standard-library/is-bind-expression-class.md
+        - name: Класс is_placeholder
+          href: ../standard-library/is-placeholder-class.md
+        - name: Структура less
+          href: ../standard-library/less-struct.md
+        - name: Структура less_equal
+          href: ../standard-library/less-equal-struct.md
+        - name: Структура logical_and
+          href: ../standard-library/logical-and-struct.md
+        - name: Структура logical_not
+          href: ../standard-library/logical-not-struct.md
+        - name: Структура logical_or
+          href: ../standard-library/logical-or-struct.md
+        - name: Класс mem_fun_ref_t
+          href: ../standard-library/mem-fun-ref-t-class.md
+        - name: Класс mem_fun_t
+          href: ../standard-library/mem-fun-t-class.md
+        - name: Класс mem_fun1_ref_t
+          href: ../standard-library/mem-fun1-ref-t-class.md
+        - name: Класс mem_fun1_t
+          href: ../standard-library/mem-fun1-t-class.md
+        - name: Структура minus
+          href: ../standard-library/minus-struct.md
+        - name: Структура modulus
+          href: ../standard-library/modulus-struct.md
+        - name: Структура multiplies
+          href: ../standard-library/multiplies-struct.md
+        - name: Структура negate
+          href: ../standard-library/negate-struct.md
+        - name: Структура not_equal_to
+          href: ../standard-library/not-equal-to-struct.md
+        - name: Структура plus
+          href: ../standard-library/plus-struct.md
+        - name: Класс pointer_to_binary_function
+          href: ../standard-library/pointer-to-binary-function-class.md
+        - name: Класс pointer_to_unary_function
+          href: ../standard-library/pointer-to-unary-function-class.md
+        - name: Класс reference_wrapper
+          href: ../standard-library/reference-wrapper-class.md
+        - name: Структура unary_function
+          href: ../standard-library/unary-function-struct.md
+        - name: Класс unary_negate
+          href: ../standard-library/unary-negate-class.md
+    - name: <future>
+      expanded: false
+      items:
+        - name: <future>
+          href: ../standard-library/future.md
+        - name: Функции<future>
+          href: ../standard-library/future-functions.md
+        - name: Перечисления <future>
+          href: ../standard-library/future-enums.md
+        - name: Класс future
+          href: ../standard-library/future-class.md
+        - name: Класс future_error
+          href: ../standard-library/future-error-class.md
+        - name: Структура is_error_code_enum
+          href: ../standard-library/is-error-code-enum-structure.md
+        - name: Класс packaged_task
+          href: ../standard-library/packaged-task-class.md
+        - name: Класс promise
+          href: ../standard-library/promise-class.md
+        - name: Класс shared_future
+          href: ../standard-library/shared-future-class.md
+        - name: Структура uses_allocator
+          href: ../standard-library/uses-allocator-structure.md
+    - name: <hash_map>
+      expanded: false
+      items:
+        - name: <hash_map>
+          href: ../standard-library/hash-map.md
+        - name: Функции <hash_map>
+          href: ../standard-library/hash-map-functions.md
+        - name: Операторы <hash_map>
+          href: ../standard-library/hash-map-operators.md
+        - name: Класс hash_compare
+          href: ../standard-library/hash-compare-class.md
+        - name: Класс hash_map
+          href: ../standard-library/hash-map-class.md
+        - name: Класс hash_multimap
+          href: ../standard-library/hash-multimap-class.md
+        - name: Класс value_compare
+          href: ../standard-library/value-compare-class.md
+    - name: <hash_set>
+      expanded: false
+      items:
+        - name: <hash_set>
+          href: ../standard-library/hash-set.md
+        - name: Класс hash_set
+          href: ../standard-library/hash-set-class.md
+        - name: Класс hash_multiset
+          href: ../standard-library/hash-multiset-class.md
+        - name: Функции <hash_set>
+          href: ../standard-library/hash-set-functions.md
+        - name: Операторы <hash_set>
+          href: ../standard-library/hash-set-operators.md
+    - name: <initializer_list>
+      expanded: false
+      items:
+        - name: <initializer_list>
+          href: ../standard-library/initializer-list.md
+        - name: Класс initializer_list
+          href: ../standard-library/initializer-list-class.md
+    - name: <iomanip>
+      expanded: false
+      items:
+        - name: <iomanip>
+          href: ../standard-library/iomanip.md
+        - name: Функции<iomanip>
+          href: ../standard-library/iomanip-functions.md
+    - name: <ios>
+      expanded: false
+      items:
+        - name: <ios>
+          href: ../standard-library/ios.md
+        - name: Функции<ios>
+          href: ../standard-library/ios-functions.md
+        - name: Определения типов <ios>
+          href: ../standard-library/ios-typedefs.md
+        - name: Класс basic_ios
+          href: ../standard-library/basic-ios-class.md
+        - name: Класс fpos
+          href: ../standard-library/fpos-class.md
+        - name: Класс ios_base
+          href: ../standard-library/ios-base-class.md
+    - name: <iosfwd>
+      href: ../standard-library/iosfwd.md
+    - name: <iostream>
+      href: ../standard-library/iostream.md
+    - name: <istream>
+      expanded: false
+      items:
+        - name: <istream>
+          href: ../standard-library/istream.md
+        - name: Функции<istream>
+          href: ../standard-library/istream-functions.md
+        - name: Операторы <istream>
+          href: ../standard-library/istream-operators.md
+        - name: Определения типов <istream>
+          href: ../standard-library/istream-typedefs.md
+        - name: Класс basic_iostream
+          href: ../standard-library/basic-iostream-class.md
+        - name: Класс basic_istream
+          href: ../standard-library/basic-istream-class.md
+    - name: <iterator>
+      expanded: false
+      items:
+        - name: <iterator>
+          href: ../standard-library/iterator.md
+        - name: Функции<iterator>
+          href: ../standard-library/iterator-functions.md
+        - name: Операторы <iterator>
+          href: ../standard-library/iterator-operators.md
+        - name: Класс back_insert_iterator
+          href: ../standard-library/back-insert-iterator-class.md
+        - name: Структура bidirectional_iterator_tag
+          href: ../standard-library/bidirectional-iterator-tag-struct.md
+        - name: Класс checked_array_iterator
+          href: ../standard-library/checked-array-iterator-class.md
+        - name: Структура forward_iterator_tag
+          href: ../standard-library/forward-iterator-tag-struct.md
+        - name: Класс front_insert_iterator
+          href: ../standard-library/front-insert-iterator-class.md
+        - name: Структура input_iterator_tag
+          href: ../standard-library/input-iterator-tag-struct.md
+        - name: Класс insert_iterator
+          href: ../standard-library/insert-iterator-class.md
+        - name: Класс istream_iterator
+          href: ../standard-library/istream-iterator-class.md
+        - name: Класс istreambuf_iterator
+          href: ../standard-library/istreambuf-iterator-class.md
+        - name: Структура iterator
+          href: ../standard-library/iterator-struct.md
+        - name: Структура iterator_traits
+          href: ../standard-library/iterator-traits-struct.md
+        - name: Класс move_iterator
+          href: ../standard-library/move-iterator-class.md
+        - name: Класс ostream_iterator
+          href: ../standard-library/ostream-iterator-class.md
+        - name: Класс ostreambuf_iterator
+          href: ../standard-library/ostreambuf-iterator-class.md
+        - name: Структура output_iterator_tag
+          href: ../standard-library/output-iterator-tag-struct.md
+        - name: Структура random_access_iterator_tag
+          href: ../standard-library/random-access-iterator-tag-struct.md
+        - name: Класс reverse_iterator
+          href: ../standard-library/reverse-iterator-class.md
+        - name: Класс unchecked_array_iterator
+          href: ../standard-library/unchecked-array-iterator-class.md
+    - name: <limits>
+      expanded: false
+      items:
+        - name: <limits>
+          href: ../standard-library/limits.md
+        - name: Перечисления <limits>
+          href: ../standard-library/limits-enums.md
+        - name: Класс numeric_limits
+          href: ../standard-library/numeric-limits-class.md
+    - name: <list>
+      expanded: false
+      items:
+        - name: <list>
+          href: ../standard-library/list.md
+        - name: <list> операторы
+          href: ../standard-library/list-operators.md
+        - name: Класс list
+          href: ../standard-library/list-class.md
+    - name: <locale>
+      expanded: false
+      items:
+        - name: <locale>
+          href: ../standard-library/locale.md
+        - name: Функции<locale>
+          href: ../standard-library/locale-functions.md
+        - name: Класс codecvt
+          href: ../standard-library/codecvt-class.md
+        - name: Класс codecvt_base
+          href: ../standard-library/codecvt-base-class.md
+        - name: Класс codecvt_byname
+          href: ../standard-library/codecvt-byname-class.md
+        - name: Класс collate
+          href: ../standard-library/collate-class.md
+        - name: Класс collate_byname
+          href: ../standard-library/collate-byname-class.md
+        - name: Класс ctype
+          href: ../standard-library/ctype-class.md
+        - name: Класс ctype<char>
+          href: ../standard-library/ctype-char-class.md
+        - name: Класс ctype_base
+          href: ../standard-library/ctype-base-class.md
+        - name: Класс ctype_byname
+          href: ../standard-library/ctype-byname-class.md
+        - name: Класс locale
+          href: ../standard-library/locale-class.md
+        - name: Класс messages
+          href: ../standard-library/messages-class.md
+        - name: Класс messages_base
+          href: ../standard-library/messages-base-class.md
+        - name: Класс messages_byname
+          href: ../standard-library/messages-byname-class.md
+        - name: Класс money_base
+          href: ../standard-library/money-base-class.md
+        - name: Класс money_get
+          href: ../standard-library/money-get-class.md
+        - name: Класс money_put
+          href: ../standard-library/money-put-class.md
+        - name: Класс moneypunct
+          href: ../standard-library/moneypunct-class.md
+        - name: Класс moneypunct_byname
+          href: ../standard-library/moneypunct-byname-class.md
+        - name: Класс num_get
+          href: ../standard-library/num-get-class.md
+        - name: Класс num_put
+          href: ../standard-library/num-put-class.md
+        - name: Класс numpunct
+          href: ../standard-library/numpunct-class.md
+        - name: Класс numpunct_byname
+          href: ../standard-library/numpunct-byname-class.md
+        - name: Класс time_base
+          href: ../standard-library/time-base-class.md
+        - name: Класс time_get
+          href: ../standard-library/time-get-class.md
+        - name: Класс time_get_byname
+          href: ../standard-library/time-get-byname-class.md
+        - name: Класс time_put
+          href: ../standard-library/time-put-class.md
+        - name: Класс time_put_byname
+          href: ../standard-library/time-put-byname-class.md
+        - name: Класс wbuffer_convert
+          href: ../standard-library/wbuffer-convert-class.md
+        - name: Класс wstring_convert
+          href: ../standard-library/wstring-convert-class.md
+    - name: <map>
+      expanded: false
+      items:
+        - name: <map>
+          href: ../standard-library/map.md
+        - name: Функции<map>
+          href: ../standard-library/map-functions.md
+        - name: Операторы <map>
+          href: ../standard-library/map-operators.md
+        - name: Класс map
+          href: ../standard-library/map-class.md
+        - name: Класс multimap
+          href: ../standard-library/multimap-class.md
+        - name: Класс value_compare (<map>)
+          href: ../standard-library/value-compare-class-map.md
+    - name: <memory>
+      expanded: false
+      items:
+        - name: <memory>
+          href: ../standard-library/memory.md
+        - name: Функции<memory>
+          href: ../standard-library/memory-functions.md
+        - name: Операторы <memory>
+          href: ../standard-library/memory-operators.md
+        - name: Перечисления <memory>
+          href: ../standard-library/memory-enums.md
+        - name: Класс allocator
+          href: ../standard-library/allocator-class.md
+        - name: Класс allocator<void>
+          href: ../standard-library/allocator-void-class.md
+        - name: Класс allocator_traits
+          href: ../standard-library/allocator-traits-class.md
+        - name: Класс auto_ptr
+          href: ../standard-library/auto-ptr-class.md
+        - name: Класс bad_weak_ptr
+          href: ../standard-library/bad-weak-ptr-class.md
+        - name: Класс enable_shared_from_this
+          href: ../standard-library/enable-shared-from-this-class.md
+        - name: Структура pointer_traits
+          href: ../standard-library/pointer-traits-struct.md
+        - name: Класс raw_storage_iterator
+          href: ../standard-library/raw-storage-iterator-class.md
+        - name: Класс shared_ptr
+          href: ../standard-library/shared-ptr-class.md
+        - name: Класс unique_ptr
+          href: ../standard-library/unique-ptr-class.md
+        - name: weak_ptr - класс
+          href: ../standard-library/weak-ptr-class.md
+    - name: <memory_resource>
+      expanded: false
+      items:
+        - name: <memory_resource>
+          href: ../standard-library/memory-resource.md
+        - name: Функции <memory_resource>
+          href: ../standard-library/memory-resource-functions.md
+        - name: Операторы <memory_resource>
+          href: ../standard-library/memory-resource-operators.md
+        - name: Класс memory_resource
+          href: ../standard-library/memory-resource-class.md
+    - name: <mutex>
+      expanded: false
+      items:
+        - name: <mutex>
+          href: ../standard-library/mutex.md
+        - name: Функции<mutex>
+          href: ../standard-library/mutex-functions.md
+        - name: Структура adopt_lock_t
+          href: ../standard-library/adopt-lock-t-structure.md
+        - name: Структура defer_lock_t
+          href: ../standard-library/defer-lock-t-structure.md
+        - name: Класс lock_guard
+          href: ../standard-library/lock-guard-class.md
+        - name: Класс mutex (стандартная библиотека C++)
+          href: ../standard-library/mutex-class-stl.md
+        - name: Структура once_flag
+          href: ../standard-library/once-flag-structure.md
+        - name: Класс recursive_mutex
+          href: ../standard-library/recursive-mutex-class.md
+        - name: Класс recursive_timed_mutex
+          href: ../standard-library/recursive-timed-mutex-class.md
+        - name: Класс timed_mutex
+          href: ../standard-library/timed-mutex-class.md
+        - name: Структура try_to_lock_t
+          href: ../standard-library/try-to-lock-t-structure.md
+        - name: Класс unique_lock
+          href: ../standard-library/unique-lock-class.md
+    - name: <new>
+      expanded: false
+      items:
+        - name: <new>
+          href: ../standard-library/new.md
+        - name: Функции<new>
+          href: ../standard-library/new-functions.md
+        - name: Определения типов <new>
+          href: ../standard-library/new-typedefs.md
+        - name: Операторы <new>
+          href: ../standard-library/new-operators.md
+        - name: Класс bad_alloc
+          href: ../standard-library/bad-alloc-class.md
+        - name: Структура nothrow_t
+          href: ../standard-library/nothrow-t-structure.md
+    - name: <numeric>
+      expanded: false
+      items:
+        - name: <numeric>
+          href: ../standard-library/numeric.md
+        - name: Функции<numeric>
+          href: ../standard-library/numeric-functions.md
+    - name: <optional>
+      expanded: false
+      items:
+        - name: <optional>
+          href: ../standard-library/optional.md
+        - name: Функции<optional>
+          href: ../standard-library/optional-functions.md
+        - name: Операторы <optional>
+          href: ../standard-library/optional-operators.md
+        - name: необязательный класс
+          href: ../standard-library/optional-class.md
+    - name: <ostream>
+      expanded: false
+      items:
+        - name: <ostream>
+          href: ../standard-library/ostream.md
+        - name: basic_ostream - класс
+          href: ../standard-library/basic-ostream-class.md
+        - name: Функции<ostream>
+          href: ../standard-library/ostream-functions.md
+        - name: Операторы <ostream>
+          href: ../standard-library/ostream-operators.md
+        - name: Определения типов <ostream>
+          href: ../standard-library/ostream-typedefs.md
+    - name: <queue>
+      expanded: false
+      items:
+        - name: <queue>
+          href: ../standard-library/queue.md
+        - name: Операторы <queue>
+          href: ../standard-library/queue-operators.md
+        - name: Класс priority_queue
+          href: ../standard-library/priority-queue-class.md
+        - name: Класс queue
+          href: ../standard-library/queue-class.md
+    - name: <random>
+      expanded: false
+      items:
+        - name: <random>
+          href: ../standard-library/random.md
+        - name: Функции<random>
+          href: ../standard-library/random-functions.md
+        - name: Класс bernoulli_distribution
+          href: ../standard-library/bernoulli-distribution-class.md
+        - name: Класс binomial_distribution
+          href: ../standard-library/binomial-distribution-class.md
+        - name: Класс cauchy_distribution
+          href: ../standard-library/cauchy-distribution-class.md
+        - name: Класс chi_squared_distribution
+          href: ../standard-library/chi-squared-distribution-class.md
+        - name: Класс discard_block_engine
+          href: ../standard-library/discard-block-engine-class.md
+        - name: Класс discrete_distribution
+          href: ../standard-library/discrete-distribution-class.md
+        - name: Класс exponential_distribution
+          href: ../standard-library/exponential-distribution-class.md
+        - name: Класс extreme_value_distribution
+          href: ../standard-library/extreme-value-distribution-class.md
+        - name: Класс fisher_f_distribution
+          href: ../standard-library/fisher-f-distribution-class.md
+        - name: Класс gamma_distribution
+          href: ../standard-library/gamma-distribution-class.md
+        - name: Класс geometric_distribution
+          href: ../standard-library/geometric-distribution-class.md
+        - name: Класс independent_bits_engine
+          href: ../standard-library/independent-bits-engine-class.md
+        - name: Класс linear_congruential_engine
+          href: ../standard-library/linear-congruential-engine-class.md
+        - name: Класс lognormal_distribution
+          href: ../standard-library/lognormal-distribution-class.md
+        - name: Класс mersenne_twister_engine
+          href: ../standard-library/mersenne-twister-engine-class.md
+        - name: Класс negative_binomial_distribution
+          href: ../standard-library/negative-binomial-distribution-class.md
+        - name: Класс normal_distribution
+          href: ../standard-library/normal-distribution-class.md
+        - name: Класс piecewise_constant_distribution
+          href: ../standard-library/piecewise-constant-distribution-class.md
+        - name: Класс piecewise_linear_distribution
+          href: ../standard-library/piecewise-linear-distribution-class.md
+        - name: Класс poisson_distribution
+          href: ../standard-library/poisson-distribution-class.md
+        - name: Класс random_device
+          href: ../standard-library/random-device-class.md
+        - name: Класс seed_seq
+          href: ../standard-library/seed-seq-class.md
+        - name: Класс shuffle_order_engine
+          href: ../standard-library/shuffle-order-engine-class.md
+        - name: Класс student_t_distribution
+          href: ../standard-library/student-t-distribution-class.md
+        - name: Класс subtract_with_carry_engine
+          href: ../standard-library/subtract-with-carry-engine-class.md
+        - name: Класс uniform_int_distribution
+          href: ../standard-library/uniform-int-distribution-class.md
+        - name: Класс uniform_real_distribution
+          href: ../standard-library/uniform-real-distribution-class.md
+        - name: Класс weibull_distribution
+          href: ../standard-library/weibull-distribution-class.md
+    - name: <ratio>
+      href: ../standard-library/ratio.md
+    - name: <regex>
+      expanded: false
+      items:
+        - name: <regex>
+          href: ../standard-library/regex.md
+        - name: Функции<regex>
+          href: ../standard-library/regex-functions.md
+        - name: Операторы <regex>
+          href: ../standard-library/regex-operators.md
+        - name: Определения типов <regex>
+          href: ../standard-library/regex-typedefs.md
+        - name: Класс basic_regex
+          href: ../standard-library/basic-regex-class.md
+        - name: Класс match_results
+          href: ../standard-library/match-results-class.md
+        - name: Пространство имен regex_constants
+          href: ../standard-library/regex-constants-class.md
+        - name: Класс regex_error
+          href: ../standard-library/regex-error-class.md
+        - name: Класс regex_iterator
+          href: ../standard-library/regex-iterator-class.md
+        - name: Класс regex_token_iterator
+          href: ../standard-library/regex-token-iterator-class.md
+        - name: Класс regex_traits
+          href: ../standard-library/regex-traits-class.md
+        - name: Класс regex_traits<char>
+          href: ../standard-library/regex-traits-char-class.md
+        - name: Класс regex_traits<wchar_t>
+          href: ../standard-library/regex-traits-wchar-t-class.md
+        - name: Класс sub_match
+          href: ../standard-library/sub-match-class.md
+    - name: <scoped_allocator>
+      expanded: false
+      items:
+        - name: <scoped_allocator>
+          href: ../standard-library/scoped-allocator.md
+        - name: Операторы <scoped_allocator>
+          href: ../standard-library/scoped-allocator-operators.md
+        - name: Класс scoped_allocator_adaptor
+          href: ../standard-library/scoped-allocator-adaptor-class.md
+    - name: <set>
+      expanded: false
+      items:
+        - name: <set>
+          href: ../standard-library/set.md
+        - name: Функции<set>
+          href: ../standard-library/set-functions.md
+        - name: Операторы <set>
+          href: ../standard-library/set-operators.md
+        - name: Класс set
+          href: ../standard-library/set-class.md
+        - name: Класс multiset
+          href: ../standard-library/multiset-class.md
+    - name: <shared_mutex>
+      href: ../standard-library/shared-mutex.md
+    - name: <sstream>
+      expanded: false
+      items:
+        - name: <sstream>
+          href: ../standard-library/sstream.md
+        - name: Функции<sstream>
+          href: ../standard-library/sstream-functions.md
+        - name: Определения типов <sstream>
+          href: ../standard-library/sstream-typedefs.md
+        - name: Класс basic_stringbuf
+          href: ../standard-library/basic-stringbuf-class.md
+        - name: Класс basic_istringstream
+          href: ../standard-library/basic-istringstream-class.md
+        - name: Класс basic_ostringstream
+          href: ../standard-library/basic-ostringstream-class.md
+        - name: Класс basic_stringstream
+          href: ../standard-library/basic-stringstream-class.md
+    - name: <stack>
+      expanded: false
+      items:
+        - name: <stack>
+          href: ../standard-library/stack.md
+        - name: Операторы <stack>
+          href: ../standard-library/stack-operators.md
+        - name: Класс stack
+          href: ../standard-library/stack-class.md
+    - name: <stdexcept>
+      expanded: false
+      items:
+        - name: <stdexcept>
+          href: ../standard-library/stdexcept.md
+        - name: Класс domain_error
+          href: ../standard-library/domain-error-class.md
+        - name: Класс invalid_argument
+          href: ../standard-library/invalid-argument-class.md
+        - name: Класс length_error
+          href: ../standard-library/length-error-class.md
+        - name: Класс logic_error
+          href: ../standard-library/logic-error-class.md
+        - name: Класс out_of_range
+          href: ../standard-library/out-of-range-class.md
+        - name: Класс overflow_error
+          href: ../standard-library/overflow-error-class.md
+        - name: Класс range_error
+          href: ../standard-library/range-error-class.md
+        - name: Класс runtime_error
+          href: ../standard-library/runtime-error-class.md
+        - name: Класс underflow_error
+          href: ../standard-library/underflow-error-class.md
+    - name: <streambuf>
+      expanded: false
+      items:
+        - name: <streambuf>
+          href: ../standard-library/streambuf.md
+        - name: Определения типов <streambuf>
+          href: ../standard-library/streambuf-typedefs.md
+        - name: Класс basic_streambuf
+          href: ../standard-library/basic-streambuf-class.md
+    - name: <string>
+      expanded: false
+      items:
+        - name: <string>
+          href: ../standard-library/string.md
+        - name: Функции<string>
+          href: ../standard-library/string-functions.md
+        - name: Операторы <string>
+          href: ../standard-library/string-operators.md
+        - name: Определения типов <string>
+          href: ../standard-library/string-typedefs.md
+        - name: Класс basic_string
+          href: ../standard-library/basic-string-class.md
+        - name: Структура char_traits
+          href: ../standard-library/char-traits-struct.md
+        - name: Структура char_traits<char>
+          href: ../standard-library/char-traits-char-struct.md
+        - name: Структура char_traits<char16_t>
+          href: ../standard-library/char-traits-char16-t-struct.md
+        - name: Структура char_traits<char32_t>
+          href: ../standard-library/char-traits-char32-t-struct.md
+        - name: Структура char_traits<wchar_t>
+          href: ../standard-library/char-traits-wchar-t-struct.md
+    - name: <string_view>
+      expanded: false
+      items:
+        - name: <string_view>
+          href: ../standard-library/string-view.md
+        - name: Операторы <string_view>
+          href: ../standard-library/string-view-operators.md
+        - name: Определения типов <string_view>
+          href: ../standard-library/string-view-typedefs.md
+        - name: Класс basic_string_view
+          href: ../standard-library/basic-string-view-class.md
+        - name: Специализация hash<string_view>
+          href: ../standard-library/string-view-hash.md
+    - name: <strstream>
+      expanded: false
+      items:
+        - name: <strstream>
+          href: ../standard-library/strstream.md
+        - name: Класс strstreambuf
+          href: ../standard-library/strstreambuf-class.md
+        - name: Класс istrstream
+          href: ../standard-library/istrstream-class.md
+        - name: Класс ostrstream
+          href: ../standard-library/ostrstream-class.md
+        - name: Класс strstream
+          href: ../standard-library/strstream-class.md
+    - name: <system_error>
+      expanded: false
+      items:
+        - name: <system_error>
+          href: ../standard-library/system-error.md
+        - name: Функции <system_error>
+          href: ../standard-library/system-error-functions.md
+        - name: Операторы <system_error>
+          href: ../standard-library/system-error-operators.md
+        - name: Перечисления <system_error>
+          href: ../standard-library/system-error-enums.md
+        - name: Класс error_category
+          href: ../standard-library/error-category-class.md
+        - name: Класс error_code
+          href: ../standard-library/error-code-class.md
+        - name: Класс error_condition
+          href: ../standard-library/error-condition-class.md
+        - name: Класс is_error_code_enum
+          href: ../standard-library/is-error-code-enum-class.md
+        - name: Класс is_error_condition_enum
+          href: ../standard-library/is-error-condition-enum-class.md
+        - name: Класс system_error
+          href: ../standard-library/system-error-class.md
+    - name: <thread>
+      expanded: false
+      items:
+        - name: <thread>
+          href: ../standard-library/thread.md
+        - name: Функции<thread>
+          href: ../standard-library/thread-functions.md
+        - name: Операторы <thread>
+          href: ../standard-library/thread-operators.md
+        - name: Структура hash (стандартная библиотека C++)
+          href: ../standard-library/hash-structure-stl.md
+        - name: Класс thread
+          href: ../standard-library/thread-class.md
+    - name: <tuple>
+      expanded: false
+      items:
+        - name: <tuple>
+          href: ../standard-library/tuple.md
+        - name: Функции<tuple>
+          href: ../standard-library/tuple-functions.md
+        - name: Операторы <tuple>
+          href: ../standard-library/tuple-operators.md
+        - name: Класс tuple
+          href: ../standard-library/tuple-class.md
+        - name: Класс tuple_element <tuple>
+          href: ../standard-library/tuple-element-class-tuple.md
+        - name: Класс tuple_size <tuple>
+          href: ../standard-library/tuple-size-class-tuple.md
+    - name: <type_traits>
+      expanded: false
+      items:
+        - name: <type_traits>
+          href: ../standard-library/type-traits.md
+        - name: Класс add_const
+          href: ../standard-library/add-const-class.md
+        - name: Класс add_cv
+          href: ../standard-library/add-cv-class.md
+        - name: Класс add_lvalue_reference
+          href: ../standard-library/add-lvalue-reference-class.md
+        - name: Класс add_rvalue_reference
+          href: ../standard-library/add-rvalue-reference-class.md
+        - name: Класс add_pointer
+          href: ../standard-library/add-pointer-class.md
+        - name: Класс add_volatile
+          href: ../standard-library/add-volatile-class.md
+        - name: Класс aligned_storage
+          href: ../standard-library/aligned-storage-class.md
+        - name: Класс aligned_union
+          href: ../standard-library/aligned-union-class.md
+        - name: Класс alignment_of
+          href: ../standard-library/alignment-of-class.md
+        - name: Класс common_type
+          href: ../standard-library/common-type-class.md
+        - name: Класс conditional
+          href: ../standard-library/conditional-class.md
+        - name: Класс decay
+          href: ../standard-library/decay-class.md
+        - name: Класс enable_if
+          href: ../standard-library/enable-if-class.md
+        - name: Класс extent
+          href: ../standard-library/extent-class.md
+        - name: Класс integer_sequence
+          href: ../standard-library/integer-sequence-class.md
+        - name: 'Класс integral_constant, класс bool_constant'
+          href: ../standard-library/integral-constant-class-bool-constant-class.md
+        - name: Класс invoke_result
+          href: ../standard-library/invoke-result-class.md
+        - name: Класс is_abstract
+          href: ../standard-library/is-abstract-class.md
+        - name: Класс is_arithmetic
+          href: ../standard-library/is-arithmetic-class.md
+        - name: Класс is_array
+          href: ../standard-library/is-array-class.md
+        - name: Класс is_assignable
+          href: ../standard-library/is-assignable-class.md
+        - name: Класс is_base_of
+          href: ../standard-library/is-base-of-class.md
+        - name: Класс is_class
+          href: ../standard-library/is-class-class.md
+        - name: Класс is_compound
+          href: ../standard-library/is-compound-class.md
+        - name: Класс is_const
+          href: ../standard-library/is-const-class.md
+        - name: Класс is_constructible
+          href: ../standard-library/is-constructible-class.md
+        - name: Класс is_convertible
+          href: ../standard-library/is-convertible-class.md
+        - name: Класс is_copy_assignable
+          href: ../standard-library/is-copy-assignable-class.md
+        - name: Класс is_copy_constructible
+          href: ../standard-library/is-copy-constructible-class.md
+        - name: Класс is_default_constructible
+          href: ../standard-library/is-default-constructible-class.md
+        - name: Класс is_destructible
+          href: ../standard-library/is-destructible-class.md
+        - name: Класс is_empty
+          href: ../standard-library/is-empty-class.md
+        - name: Класс is_enum
+          href: ../standard-library/is-enum-class.md
+        - name: Класс is_final
+          href: ../standard-library/is-final-class.md
+        - name: Класс is_floating_point
+          href: ../standard-library/is-floating-point-class.md
+        - name: Класс is_function
+          href: ../standard-library/is-function-class.md
+        - name: Класс is_fundamental
+          href: ../standard-library/is-fundamental-class.md
+        - name: Класс is_integral
+          href: ../standard-library/is-integral-class.md
+        - name: Класс is_invocable
+          href: ../standard-library/is-invocable-classes.md
+        - name: Класс is_literal_type
+          href: ../standard-library/is-literal-type-class.md
+        - name: Класс is_lvalue_reference
+          href: ../standard-library/is-lvalue-reference-class.md
+        - name: Класс is_member_function_pointer
+          href: ../standard-library/is-member-function-pointer-class.md
+        - name: Класс is_member_object_pointer
+          href: ../standard-library/is-member-object-pointer-class.md
+        - name: Класс is_member_pointer
+          href: ../standard-library/is-member-pointer-class.md
+        - name: Класс is_move_assignable
+          href: ../standard-library/is-move-assignable-class.md
+        - name: Класс is_move_constructible
+          href: ../standard-library/is-move-constructible-class.md
+        - name: Класс is_nothrow_assignable
+          href: ../standard-library/is-nothrow-assignable-class.md
+        - name: Класс is_nothrow_constructible
+          href: ../standard-library/is-nothrow-constructible-class.md
+        - name: Класс is_nothrow_copy_assignable
+          href: ../standard-library/is-nothrow-copy-assignable-class.md
+        - name: Класс is_nothrow_copy_constructible
+          href: ../standard-library/is-nothrow-copy-constructible-class.md
+        - name: Класс is_nothrow_default_constructible
+          href: ../standard-library/is-nothrow-default-constructible-class.md
+        - name: Класс is_nothrow_destructible
+          href: ../standard-library/is-nothrow-destructible-class.md
+        - name: Класс is_nothrow_move_assignable
+          href: ../standard-library/is-nothrow-move-assignable-class.md
+        - name: Класс is_nothrow_move_constructible
+          href: ../standard-library/is-nothrow-move-constructible-class.md
+        - name: Класс is_null_pointer
+          href: ../standard-library/is-null-pointer-class.md
+        - name: Класс is_object
+          href: ../standard-library/is-object-class.md
+        - name: Класс is_pod
+          href: ../standard-library/is-pod-class.md
+        - name: Класс is_pointer
+          href: ../standard-library/is-pointer-class.md
+        - name: Класс is_polymorphic
+          href: ../standard-library/is-polymorphic-class.md
+        - name: Класс is_reference
+          href: ../standard-library/is-reference-class.md
+        - name: Класс is_rvalue_reference
+          href: ../standard-library/is-rvalue-reference-class.md
+        - name: Класс is_same
+          href: ../standard-library/is-same-class.md
+        - name: Класс is_scalar
+          href: ../standard-library/is-scalar-class.md
+        - name: Класс is_signed
+          href: ../standard-library/is-signed-class.md
+        - name: Класс is_standard_layout
+          href: ../standard-library/is-standard-layout-class.md
+        - name: Класс is_trivial
+          href: ../standard-library/is-trivial-class.md
+        - name: Класс is_trivially_assignable
+          href: ../standard-library/is-trivially-assignable-class.md
+        - name: Класс is_trivially_constructible
+          href: ../standard-library/is-trivially-constructible-class.md
+        - name: Класс is_trivially_copy_assignable
+          href: ../standard-library/is-trivially-copy-assignable-class.md
+        - name: Класс is_trivially_copy_constructible
+          href: ../standard-library/is-trivially-copy-constructible-class.md
+        - name: Класс is_trivially_copyable
+          href: ../standard-library/is-trivially-copyable-class.md
+        - name: Класс is_trivially_default_constructible
+          href: ../standard-library/is-trivially-default-constructible-class.md
+        - name: Класс is_trivially_destructible
+          href: ../standard-library/is-trivially-destructible-class.md
+        - name: Класс is_trivially_move_assignable
+          href: ../standard-library/is-trivially-move-assignable-class.md
+        - name: Класс is_trivially_move_constructible
+          href: ../standard-library/is-trivially-move-constructible-class.md
+        - name: Класс is_union
+          href: ../standard-library/is-union-class.md
+        - name: Класс is_unsigned
+          href: ../standard-library/is-unsigned-class.md
+        - name: Класс is_void
+          href: ../standard-library/is-void-class.md
+        - name: Класс is_volatile
+          href: ../standard-library/is-volatile-class.md
+        - name: Класс make_signed
+          href: ../standard-library/make-signed-class.md
+        - name: Класс make_unsigned
+          href: ../standard-library/make-unsigned-class.md
+        - name: Класс rank
+          href: ../standard-library/rank-class.md
+        - name: remove_all_extents class
+          href: ../standard-library/remove-all-extents-class.md
+        - name: Класс remove_const
+          href: ../standard-library/remove-const-class.md
+        - name: Класс remove_cv
+          href: ../standard-library/remove-cv-class.md
+        - name: Класс remove_extent
+          href: ../standard-library/remove-extent-class.md
+        - name: Класс remove_pointer
+          href: ../standard-library/remove-pointer-class.md
+        - name: Класс remove_reference
+          href: ../standard-library/remove-reference-class.md
+        - name: Класс remove_volatile
+          href: ../standard-library/remove-volatile-class.md
+        - name: Класс result_of
+          href: ../standard-library/result-of-class.md
+        - name: Класс underlying_type
+          href: ../standard-library/underlying-type-class.md
+        - name: Функции <type_traits>
+          href: ../standard-library/type-traits-functions.md
+        - name: Определения типов <type_traits>
+          href: ../standard-library/type-traits-typedefs.md
+    - name: <typeindex>
+      expanded: false
+      items:
+        - name: <typeindex>
+          href: ../standard-library/typeindex.md
+        - name: Структура hash
+          href: ../standard-library/hash-structure.md
+        - name: Класс type_index
+          href: ../standard-library/type-index-class.md
+    - name: <typeinfo>
+      href: ../standard-library/typeinfo.md
+    - name: <unordered_map>
+      expanded: false
+      items:
+        - name: <unordered_map>
+          href: ../standard-library/unordered-map.md
+        - name: Функции <unordered_map>
+          href: ../standard-library/unordered-map-functions.md
+        - name: Операторы <unordered_map>
+          href: ../standard-library/unordered-map-operators.md
+        - name: Класс unordered_map
+          href: ../standard-library/unordered-map-class.md
+        - name: Класс unordered_multimap
+          href: ../standard-library/unordered-multimap-class.md
+    - name: <unordered_set>
+      expanded: false
+      items:
+        - name: <unordered_set>
+          href: ../standard-library/unordered-set.md
+        - name: Функции <unordered_set>
+          href: ../standard-library/unordered-set-functions.md
+        - name: Операторы <unordered_set>
+          href: ../standard-library/unordered-set-operators.md
+        - name: Класс unordered_set
+          href: ../standard-library/unordered-set-class.md
+        - name: Класс unordered_multiset
+          href: ../standard-library/unordered-multiset-class.md
+    - name: <utility>
+      expanded: false
+      items:
+        - name: <utility>
+          href: ../standard-library/utility.md
+        - name: Функции<utility>
+          href: ../standard-library/utility-functions.md
+        - name: Операторы <utility>
+          href: ../standard-library/utility-operators.md
+        - name: Структура identity
+          href: ../standard-library/identity-structure.md
+        - name: Структура pair
+          href: ../standard-library/pair-structure.md
+    - name: <valarray>
+      expanded: false
+      items:
+        - name: <valarray>
+          href: ../standard-library/valarray.md
+        - name: Функции<valarray>
+          href: ../standard-library/valarray-functions.md
+        - name: Операторы <valarray>
+          href: ../standard-library/valarray-operators.md
+        - name: Класс gslice
+          href: ../standard-library/gslice-class.md
+        - name: Класс gslice_array
+          href: ../standard-library/gslice-array-class.md
+        - name: Класс indirect_array
+          href: ../standard-library/indirect-array-class.md
+        - name: Класс mask_array
+          href: ../standard-library/mask-array-class.md
+        - name: Класс slice
+          href: ../standard-library/slice-class.md
+        - name: Класс slice_array
+          href: ../standard-library/slice-array-class.md
+        - name: Класс valarray
+          href: ../standard-library/valarray-class.md
+        - name: valarray<bool> - класс
+          href: ../standard-library/valarray-bool-class.md
+    - name: <variant>
+      expanded: false
+      items:
+        - name: <variant>
+          href: ../standard-library/variant.md
+        - name: Функции<variant>
+          href: ../standard-library/variant-functions.md
+        - name: Операторы <variant>
+          href: ../standard-library/variant-operators.md
+        - name: класс variant
+          href: ../standard-library/variant-class.md
+    - name: <vector>
+      expanded: false
+      items:
+        - name: <vector>
+          href: ../standard-library/vector.md
+        - name: vector - класс
+          href: ../standard-library/vector-class.md
+        - name: vector<bool> - класс
+          expanded: false
+          items:
+            - name: Класс vector<bool>
+              href: ../standard-library/vector-bool-class.md
+            - name: 'Класс vector<bool>::reference'
+              href: ../standard-library/vector-bool-reference-class.md
+              expanded: false
+              items:
+                - name: 'vector<bool>::reference::flip'
+                  href: ../standard-library/vector-bool-reference-flip.md
+                - name: 'vector<bool>::reference::operator bool'
+                  href: ../standard-library/vector-bool-reference-operator-bool.md
+                - name: 'vector<bool>::reference::operator='
+                  href: ../standard-library/vector-bool-reference-operator-assign.md
+        - name: Функции<vector>
+          href: ../standard-library/vector-functions.md
+        - name: Операторы <vector>
+          href: ../standard-library/vector-operators.md
+- name: Общие сведения о стандартной библиотеке C++
+  expanded: false
+  items:
+    - name: Общие сведения о стандартной библиотеке C++
+      href: ../standard-library/cpp-standard-library-overview.md
+    - name: Использование заголовков библиотеки C++
+      href: ../standard-library/using-cpp-library-headers.md
+    - name: Соглашения библиотеки C++
+      href: ../standard-library/cpp-library-conventions.md
+    - name: Запуск и завершение программ C++
+      href: ../standard-library/cpp-program-startup-and-termination.md
+    - name: 'Безопасные библиотеки: Стандартная библиотека C++'
+      href: ../standard-library/safe-libraries-cpp-standard-library.md
+      expanded: false
+      items:
+        - name: _ITERATOR_DEBUG_LEVEL
+          href: ../standard-library/iterator-debug-level.md
+        - name: _SCL_SECURE_NO_WARNINGS
+          href: ../standard-library/scl-secure-no-warnings.md
+        - name: Проверяемые итераторы
+          expanded: false
+          items:
+            - name: Проверяемые итераторы
+              href: ../standard-library/checked-iterators.md
+            - name: _SECURE_SCL
+              href: ../standard-library/secure-scl.md
+        - name: Поддержка итераторов при отладке
+          expanded: false
+          items:
+            - name: Поддержка итераторов при отладке
+              href: ../standard-library/debug-iterator-support.md
+            - name: _HAS_ITERATOR_DEBUGGING
+              href: ../standard-library/has-iterator-debugging.md
+    - name: Потокобезопасность в стандартной библиотеке C++
+      href: ../standard-library/thread-safety-in-the-cpp-standard-library.md
+    - name: Пространство имен stdext
+      href: ../standard-library/stdext-namespace.md
+- name: Контейнеры стандартной библиотеки C++
+  expanded: false
+  items:
+    - name: Контейнеры стандартной библиотеки C++
+      href: ../standard-library/stl-containers.md
+    - name: <sample container>
+      expanded: false
+      items:
+        - name: <sample container>
+          href: ../standard-library/sample-container.md
+        - name: Операторы <sample container>
+          expanded: false
+          items:
+            - name: Операторы <sample container>
+              href: ../standard-library/sample-container-operators.md
+            - name: operator!=
+              href: ../standard-library/operator-inequality.md
+            - name: operator== (<sample container>)
+              href: ../standard-library/operator-equality-sample-container.md
+            - name: operator< (<sample container>)
+              href: ../standard-library/operator-less-than-sample-container.md
+            - name: operator<= (<sample container>)
+              href: ../standard-library/operator-less-or-equal-sample-container.md
+            - name: operator> (<sample container>)
+              href: ../standard-library/operator-greater-than-sample-container.md
+            - name: operator>=
+              href: ../standard-library/operator-greater-or-equal.md
+        - name: Специализированные функции шаблонов <sample container>
+          expanded: false
+          items:
+            - name: Специализированные функции шаблонов <sample container>
+              href: ../standard-library/sample-container-specialized-template-functions.md
+            - name: swap (<sample container>)
+              href: ../standard-library/swap-sample-container.md
+        - name: Классы <sample container>
+          expanded: false
+          items:
+            - name: Классы <sample container>
+              href: ../standard-library/sample-container-classes.md
+            - name: Пример класса контейнера
+              expanded: false
+              items:
+                - name: Пример класса контейнера
+                  href: ../standard-library/sample-container-class.md
+                - name: Члены образца контейнера
+                  href: ../standard-library/sample-container-members.md
+                - name: Определения типов (Typedefs) образца контейнера
+                  expanded: false
+                  items:
+                    - name: Определения типов (Typedefs) образца контейнера
+                      href: ../standard-library/sample-container-typedefs.md
+                    - name: 'Класс контейнера::const_iterator'
+                      href: ../standard-library/container-class-const-iterator.md
+                    - name: 'Класс контейнера::const_reference'
+                      href: ../standard-library/container-class-const-reference.md
+                    - name: 'Класс контейнера::const_reverse_iterator'
+                      href: ../standard-library/container-class-const-reverse-iterator.md
+                    - name: 'Класс контейнера::difference_type'
+                      href: ../standard-library/container-class-difference-type.md
+                    - name: 'Класс контейнера::iterator'
+                      href: ../standard-library/container-class-iterator.md
+                    - name: 'Класс контейнера::reference'
+                      href: ../standard-library/container-class-reference.md
+                    - name: 'Класс контейнера::reverse_iterator'
+                      href: ../standard-library/container-class-reverse-iterator.md
+                    - name: 'Класс контейнера::size_type'
+                      href: ../standard-library/container-class-size-type.md
+                    - name: 'Класс контейнера::value_type'
+                      href: ../standard-library/container-class-value-type.md
+                - name: Функции-члены образца контейнера
+                  expanded: false
+                  items:
+                    - name: Функции-члены образца контейнера
+                      href: ../standard-library/sample-container-member-functions.md
+                    - name: 'Класс контейнера::begin'
+                      href: ../standard-library/container-class-begin.md
+                    - name: 'Класс контейнера::clear'
+                      href: ../standard-library/container-class-clear.md
+                    - name: 'Класс контейнера::empty'
+                      href: ../standard-library/container-class-empty.md
+                    - name: 'Класс контейнера::end'
+                      href: ../standard-library/container-class-end.md
+                    - name: 'Класс контейнера::erase'
+                      href: ../standard-library/container-class-erase.md
+                    - name: 'Класс контейнера::max_size'
+                      href: ../standard-library/container-class-max-size.md
+                    - name: 'Класс контейнера::rbegin'
+                      href: ../standard-library/container-class-rbegin.md
+                    - name: 'Класс контейнера::rend'
+                      href: ../standard-library/container-class-rend.md
+                    - name: 'Класс контейнера::size'
+                      href: ../standard-library/container-class-size.md
+                    - name: 'Класс контейнера::swap'
+                      href: ../standard-library/container-class-swap.md
+- name: Iterators
+  href: ../standard-library/iterators.md
+- name: Алгоритмы
+  href: ../standard-library/algorithms.md
+- name: Распределители
+  href: ../standard-library/allocators.md
+- name: Объекты функции в стандартной библиотеке C++
+  href: ../standard-library/function-objects-in-the-stl.md
+- name: Программирование iostream
+  expanded: false
+  items:
+    - name: iostream - программирование
+      href: ../standard-library/iostream-programming.md
+    - name: Форматирование строк и ввода-вывода
+      href: ../text/string-and-i-o-formatting-modern-cpp.md
+    - name: Что такое поток
+      expanded: false
+      items:
+        - name: Что такое поток
+          href: ../standard-library/what-a-stream-is.md
+        - name: Альтернативные варианты ввода и вывода
+          href: ../standard-library/input-output-alternatives.md
+    - name: Потоки вывода
+      expanded: false
+      items:
+        - name: Потоки вывода
+          href: ../standard-library/output-streams.md
+        - name: Построение объектов потока вывода
+          href: ../standard-library/constructing-output-stream-objects.md
+        - name: Использование операторов вставки и управление форматом
+          href: ../standard-library/using-insertion-operators-and-controlling-format.md
+        - name: Функции-члены потока выходного файла
+          href: ../standard-library/output-file-stream-member-functions.md
+        - name: Эффекты буферизации
+          href: ../standard-library/effects-of-buffering.md
+        - name: Двоичные выходные файлы
+          href: ../standard-library/binary-output-files.md
+        - name: Перегрузка оператора << для собственных классов
+          href: ../standard-library/overloading-the-output-operator-for-your-own-classes.md
+        - name: Создание собственных манипуляторов без аргументов
+          href: ../standard-library/writing-your-own-manipulators-without-arguments.md
+    - name: Входные потоки
+      expanded: false
+      items:
+        - name: Входные потоки
+          href: ../standard-library/input-streams.md
+        - name: Построение объектов входных потоков
+          href: ../standard-library/constructing-input-stream-objects.md
+        - name: Использование операторов извлечения
+          href: ../standard-library/using-extraction-operators.md
+        - name: Проверка на наличие ошибок извлечения
+          href: ../standard-library/testing-for-extraction-errors.md
+        - name: Манипуляторы входных потоков
+          href: ../standard-library/input-stream-manipulators.md
+        - name: Функции-члены входного потока
+          href: ../standard-library/input-stream-member-functions.md
+        - name: Перегрузка оператора >> для собственных классов
+          href: ../standard-library/overloading-the-input-operator-for-your-own-classes.md
+    - name: Потоки ввода-вывода
+      href: ../standard-library/input-output-streams.md
+    - name: Соглашения iostreams
+      href: ../standard-library/iostreams-conventions.md
+    - name: Пользовательские манипуляторы с аргументами
+      expanded: false
+      items:
+        - name: Пользовательские манипуляторы с аргументами
+          href: ../standard-library/custom-manipulators-with-arguments.md
+        - name: Манипуляторы выходных потоков с одним аргументом (int или long)
+          href: ../standard-library/output-stream-manipulators-with-one-argument-int-or-long.md
+        - name: Прочие манипуляторы выходного потока с одним аргументом
+          href: ../standard-library/other-one-argument-output-stream-manipulators.md
+- name: Регулярные выражения (C++)
+  href: ../standard-library/regular-expressions-cpp.md
+- name: Навигация по файловой системе
+  href: ../standard-library/file-system-navigation.md

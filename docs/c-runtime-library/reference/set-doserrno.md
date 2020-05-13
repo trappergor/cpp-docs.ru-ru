@@ -1,8 +1,9 @@
 ---
 title: _set_doserrno
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _set_doserrno
+- _o__set_doserrno
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - set_doserrno function
 - _doserrno global variable
 ms.assetid: 8686c159-3797-4705-a53e-7457869ca6f3
-ms.openlocfilehash: e4060992477e5d30dfad0725948cbc719b4d0270
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9de5ff8ccc4673468628275c3c3366681edc3776
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948617"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913069"
 ---
 # <a name="_set_doserrno"></a>_set_doserrno
 
@@ -54,9 +56,11 @@ errno_t _set_doserrno( int error_value );
 
 Возвращает нуль при успешном завершении.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Возможные значения макроса определяются в Errno.h.
+
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -64,9 +68,9 @@ errno_t _set_doserrno( int error_value );
 |-------------|---------------------|---------------------|
 |**_set_doserrno**|\<stdlib.h>|\<errno.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [_get_doserrno](get-doserrno.md)<br/>
-[errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>
+[errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>

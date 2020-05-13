@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - type forwarding, C++
 ms.assetid: ae730b69-0c27-41cc-84e1-3132783866ea
-ms.openlocfilehash: c5148c05e5580942d885b310e35f3b629224a654
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 0803ecc2ffb2da2748b1ef063481aa2571f27f50
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515979"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171935"
 ---
 # <a name="type-forwarding-ccli"></a>Перенаправление типов (C++/CLI)
 
@@ -33,13 +33,13 @@ ms.locfileid: "65515979"
 
 ### <a name="parameters"></a>Параметры
 
-*new*<br/>
+*новую*<br/>
 Сборка, в которую перемещается определение типа.
 
 *type*<br/>
 Тип, определение которого перемещается в другую сборку.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 После поставки компонента (сборки) и его использования клиентскими приложениями можно применить перенаправление типа, чтобы переместить тип из этого компонента (сборки) в другую сборку. После поставки обновленного компонента (и всех необходимых дополнительных сборок) клиентские приложения будут работать без повторной компиляции.
 
@@ -63,7 +63,7 @@ ms.locfileid: "65515979"
 
 Перечисленные ниже типы переадресовывать нельзя:
 
-- универсальные типы;
+- Универсальные типы
 
 - собственные типы;
 

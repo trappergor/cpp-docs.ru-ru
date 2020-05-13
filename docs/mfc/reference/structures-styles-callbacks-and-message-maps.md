@@ -7,35 +7,35 @@ helpviewer_keywords:
 - message classes [MFC], MFC
 - structures, MFC
 ms.assetid: 27566602-7d84-4089-880c-8e90fb04fa56
-ms.openlocfilehash: e1fa072c5395c9171e0abdd4f3dab3251cd27229
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 9f3d5c6d23084f91196c091d9d0d41304d37ce2c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611681"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215115"
 ---
 # <a name="structures-styles-callbacks-and-message-maps"></a>Структуры, стили, обратные вызовы и схемы сообщений
 
-В данном разделе описываются структуры, стили и функции обратного вызова, используемые библиотеки Microsoft Foundation Class и схемы сообщений MFC.
+В этом разделе описываются структуры, стили и функции обратного вызова, используемые библиотека Microsoft Foundation Class и картами сообщений MFC.
 
-## <a name="in-this-section"></a>В этом разделе
+## <a name="in-this-section"></a>в этом разделе
 
 [Структуры, используемые MFC](../../mfc/reference/structures-used-by-mfc.md)<br/>
-Ссылки на структуры, называемые из различных функций-членов.
+Предоставляет ссылки на структуры, вызываемые из различных функций элементов.
 
 [Стили, используемые MFC](../../mfc/reference/styles-used-by-mfc.md)<br/>
-Ссылки на стили, используемые при создании объектов MFC.
+Содержит ссылки на стили, используемые при создании объектов MFC.
 
 [Функции обратного вызова, используемые MFC](../../mfc/reference/callback-functions-used-by-mfc.md)<br/>
-Ссылки в функции обратного вызова, в библиотеку MFC.
+Содержит ссылки на функции обратного вызова, отображаемые в библиотеке MFC.
 
 [Схемы сообщений](../../mfc/reference/message-maps-mfc.md)<br/>
-Описывает макросы сопоставления сообщений и `CWnd` записей карты.
+Описание макросов сопоставления сообщений и `CWnd` записей схемы сообщений.
 
-## <a name="related-sections"></a>Связанные разделы
+## <a name="related-sections"></a>См. также
 
 [Общие сведения о библиотеке классов](../../mfc/class-library-overview.md)<br/>
 Перечисляет классы в библиотеке MFC по категориям.
 
-[Примеры MFC](../../overview/visual-cpp-samples.md)<br/>
+[Примеры MFC](../../overview/visual-cpp-samples.md#mfc-samples)<br/>
 Содержит ссылки на примеры, демонстрирующие использование библиотеки MFC.

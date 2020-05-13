@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCPropertyGridColorProperty [MFC], SetColumnsNumber
 - CMFCPropertyGridColorProperty [MFC], SetOriginalValue
 ms.assetid: af37be93-a91e-40a2-9a65-0f3412c6f0f8
-ms.openlocfilehash: 95dcbbc2b445e2ff67979b90816daed0fb0c0fba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 393a871a881aa4bddd786b1d4333e02d5e0dbef1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403611"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751829"
 ---
 # <a name="cmfcpropertygridcolorproperty-class"></a>Класс CMFCPropertyGridColorProperty
 
@@ -41,35 +41,35 @@ class CMFCPropertyGridColorProperty : public CMFCPropertyGridProperty
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CMFCPropertyGridColorProperty::CMFCPropertyGridColorProperty](#cmfcpropertygridcolorproperty)|Создает объект `CMFCPropertyGridColorProperty`.|
+|[CMFCPropertyGridColorProperty::CMFCPropertyGridColorProperty](#cmfcpropertygridcolorproperty)|Формирует объект `CMFCPropertyGridColorProperty`.|
 |`CMFCPropertyGridColorProperty::~CMFCPropertyGridColorProperty`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CMFCPropertyGridColorProperty::EnableAutomaticButton](#enableautomaticbutton)|Позволяет *автоматического* кнопку в диалоговом окне выбора цвета. (Метка стандартной кнопки автоматического выбора **автоматического**.)|
-|[CMFCPropertyGridColorProperty::EnableOtherButton](#enableotherbutton)|Позволяет *других* кнопку в диалоговом окне выбора цвета. (Стандартной меткой другая кнопка **Дополнительные цвета**.)|
-|`CMFCPropertyGridColorProperty::FormatProperty`|Форматирует текстовое представление значения свойства. (Переопределяет [CMFCPropertyGridProperty::FormatProperty](../../mfc/reference/cmfcpropertygridproperty-class.md#formatproperty).)|
+|[CMFCPropertyGridColorProperty::EnableAutomaticButton](#enableautomaticbutton)|Включает *автоматическую* кнопку в диалоговом поле выбора цвета. (Стандартная автоматическая кнопка помечена **как автоматическая**.)|
+|[CMFCPropertyGridColorProperty::EnableOtherButton](#enableotherbutton)|Включает *другую* кнопку в диалоговом поле выбора цвета. (Стандартная другая кнопка помечена **больше цветов**.)|
+|`CMFCPropertyGridColorProperty::FormatProperty`|Форматирует текстовое представление значения свойства. (Переопределяет [CMFCPropertyGridProperty::ФорматНедвижимость](../../mfc/reference/cmfcpropertygridproperty-class.md#formatproperty).)|
 |[CMFCPropertyGridColorProperty::GetColor](#getcolor)|Возвращает текущий цвет свойства.|
-|`CMFCPropertyGridColorProperty::GetThisClass`|Используется инфраструктурой, чтобы получить указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|
+|`CMFCPropertyGridColorProperty::GetThisClass`|Используется фректором для получения указателя на объект [CRuntimeClass,](../../mfc/reference/cruntimeclass-structure.md) связанный с этим типом класса.|
 |`CMFCPropertyGridColorProperty::OnClickButton`|Вызывается платформой, когда пользователь нажимает кнопку, содержащуюся в свойстве. (Переопределяет [CMFCPropertyGridProperty::OnClickButton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton).)|
-|`CMFCPropertyGridColorProperty::OnDrawValue`|Вызывается платформой для отображения значения свойства. (Переопределяет [CMFCPropertyGridProperty::OnDrawValue](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawvalue).)|
+|`CMFCPropertyGridColorProperty::OnDrawValue`|Вызывается платформой для отображения значения свойства. (Переопределяет [CMFCPropertyGridProperty::OndrawValue](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawvalue).)|
 |`CMFCPropertyGridColorProperty::OnEdit`|Вызывается платформой непосредственно перед изменением значения свойства пользователем. (Переопределяет [CMFCPropertyGridProperty::OnEdit](../../mfc/reference/cmfcpropertygridproperty-class.md#onedit).)|
 |`CMFCPropertyGridColorProperty::OnUpdateValue`|Вызывается платформой при присвоении изменяемому свойству нового значения. (Переопределяет [CMFCPropertyGridProperty::OnUpdateValue](../../mfc/reference/cmfcpropertygridproperty-class.md#onupdatevalue).)|
 |[CMFCPropertyGridColorProperty::SetColor](#setcolor)|Задает новый цвет свойства.|
 |[CMFCPropertyGridColorProperty::SetColumnsNumber](#setcolumnsnumber)|Задает число столбцов в текущей таблице свойств цвета.|
 |[CMFCPropertyGridColorProperty::SetOriginalValue](#setoriginalvalue)|Задает изменяемому свойству изначальное значение.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Класс `CMFCPropertyGridColorProperty` поддерживает свойство цвета, которое можно добавить в элемент управления "список свойств". Дополнительные сведения см. в разделе [класс CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md).
+Класс `CMFCPropertyGridColorProperty` поддерживает свойство цвета, которое можно добавить в элемент управления "список свойств". Для получения дополнительной [информации](../../mfc/reference/cmfcpropertygridctrl-class.md)см.
 
 ## <a name="example"></a>Пример
 
-В следующем примере демонстрируется создание объекта класса `CMFCPropertyGridColorProperty` и его настройка с помощью различных методов класса `CMFCPropertyGridColorProperty`. В коде показывается, как можно задействовать кнопки автоматического выбора и выбора другого цвета, а также выполняется назначение цвета и количества столбцов. Этот пример является частью [пример новых элементов управления](../../overview/visual-cpp-samples.md).
+В следующем примере демонстрируется создание объекта класса `CMFCPropertyGridColorProperty` и его настройка с помощью различных методов класса `CMFCPropertyGridColorProperty`. В коде показывается, как можно задействовать кнопки автоматического выбора и выбора другого цвета, а также выполняется назначение цвета и количества столбцов. Этот пример является частью [образца новых элементов управления.](../../overview/visual-cpp-samples.md)
 
 [!code-cpp[NVC_MFC_NewControls#13](../../mfc/reference/codesnippet/cpp/cmfcpropertygridcolorproperty-class_1.cpp)]
 
@@ -85,9 +85,9 @@ class CMFCPropertyGridColorProperty : public CMFCPropertyGridProperty
 
 **Заголовок:** afxpropertygridctrl.h
 
-##  <a name="cmfcpropertygridcolorproperty"></a>  CMFCPropertyGridColorProperty::CMFCPropertyGridColorProperty
+## <a name="cmfcpropertygridcolorpropertycmfcpropertygridcolorproperty"></a><a name="cmfcpropertygridcolorproperty"></a>CMFCPropertyGridColorProperty::CMFCPropertyGridColorProperty
 
-Создает объект `CMFCPropertyGridColorProperty`.
+Формирует объект `CMFCPropertyGridColorProperty`.
 
 ```
 CMFCPropertyGridColorProperty(
@@ -103,23 +103,23 @@ CMFCPropertyGridColorProperty(
 *strName*<br/>
 [in] Имя свойства.
 
-*color*<br/>
-[in] Значение цвета свойства.
+*Цвет*<br/>
+(в) Цветовая стоимость свойства.
 
 *pPalette*<br/>
-[in] Указатель на палитру цветов. Значение по умолчанию имеет значение NULL.
+(в) Указатель на палитру цветов. Значение по умолчанию — NULL.
 
 *lpszDescr*<br/>
-[in] Описание свойства. Значение по умолчанию имеет значение NULL.
+(в) Описание свойства. Значение по умолчанию — NULL.
 
 *dwData*<br/>
-[in] Данные приложения, такие как целое число или указатель с другими данными, который связан со свойством. Значение по умолчанию — 0.
+(в) Данные, связанные с приложениями, такие как целый ряд или указатель на другие данные, связанные с свойством. Значение по умолчанию — 0.
 
-##  <a name="enableautomaticbutton"></a>  CMFCPropertyGridColorProperty::EnableAutomaticButton
+## <a name="cmfcpropertygridcolorpropertyenableautomaticbutton"></a><a name="enableautomaticbutton"></a>CMFCPropertyGridColorProperty::EnableAutomaticButton
 
-Позволяет *автоматического* кнопку в диалоговом окне выбора цвета. (Метка стандартной кнопки автоматического выбора **автоматического**.)
+Включает *автоматическую* кнопку в диалоговом поле выбора цвета. (Стандартная автоматическая кнопка помечена **как автоматическая**.)
 
-```
+```cpp
 void EnableAutomaticButton(
     LPCTSTR lpszLabel,
     COLORREF colorAutomatic,
@@ -129,21 +129,21 @@ void EnableAutomaticButton(
 ### <a name="parameters"></a>Параметры
 
 *lpszLabel*<br/>
-[in] Текст метки автоматической кнопки.
+(в) Текст этикетки автоматической кнопки.
 
 *colorAutomatic*<br/>
-[in] Значение цвета RGB цвета автоматически (по умолчанию).
+(в) Значение цвета RGB автоматического (по умолчанию) цвета.
 
 *bEnable*<br/>
-[in] Значение TRUE для включения автоматической кнопки; в противном случае — значение FALSE. Значение по умолчанию — TRUE.
+(в) TRUE для включения автоматической кнопки; в противном случае, FALSE. Значение по умолчанию — TRUE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="enableotherbutton"></a>  CMFCPropertyGridColorProperty::EnableOtherButton
+## <a name="cmfcpropertygridcolorpropertyenableotherbutton"></a><a name="enableotherbutton"></a>CMFCPropertyGridColorProperty::EnableOtherButton
 
-Позволяет *других* кнопку в диалоговом окне выбора цвета. (Стандартной меткой другая кнопка **Дополнительные цвета**.)
+Включает *другую* кнопку в диалоговом поле выбора цвета. (Стандартная другая кнопка помечена **больше цветов**.)
 
-```
+```cpp
 void EnableOtherButton(
     LPCTSTR lpszLabel,
     BOOL bAltColorDlg = TRUE,
@@ -153,17 +153,17 @@ void EnableOtherButton(
 ### <a name="parameters"></a>Параметры
 
 *lpszLabel*<br/>
-[in] Текст метки другие кнопки.
+(в) Текст метки другой кнопки.
 
 *bAltColorDlg*<br/>
-[in] True, если `CMFCColorDialog` диалоговом окне; Значение FALSE, чтобы отобразить диалоговое окно выбора стандартный цвет. Значение по умолчанию — TRUE.
+(в) TRUE для `CMFCColorDialog` отображения диалогового окна; FALSE для отображения стандартного цветовыбора диалогового окна. Значение по умолчанию — TRUE.
 
 *bEnable*<br/>
-[in] Значение TRUE для отображения кнопки; в противном случае — значение FALSE.  Значение по умолчанию — TRUE.
+(в) TRUE для отображения другой кнопки; в противном случае, FALSE.  Значение по умолчанию — TRUE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="getcolor"></a>  CMFCPropertyGridColorProperty::GetColor
+## <a name="cmfcpropertygridcolorpropertygetcolor"></a><a name="getcolor"></a>CMFCPropertyGridColorProperty::GetColor
 
 Возвращает текущий цвет свойства.
 
@@ -175,41 +175,41 @@ COLORREF GetColor() const;
 
 Значение цвета RGB.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="setcolor"></a>  CMFCPropertyGridColorProperty::SetColor
+## <a name="cmfcpropertygridcolorpropertysetcolor"></a><a name="setcolor"></a>CMFCPropertyGridColorProperty::SetColor
 
 Задает новый цвет свойства.
 
-```
+```cpp
 void SetColor(COLORREF color);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*color*<br/>
-[in] Значение цвета RGB.
+*Цвет*<br/>
+(в) Значение цвета RGB.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="setcolumnsnumber"></a>  CMFCPropertyGridColorProperty::SetColumnsNumber
+## <a name="cmfcpropertygridcolorpropertysetcolumnsnumber"></a><a name="setcolumnsnumber"></a>CMFCPropertyGridColorProperty::SetColumnsNumber
 
 Задает число столбцов в текущей таблице свойств цвета.
 
-```
+```cpp
 void SetColumnsNumber(int nColumnsNumber);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*nColumnsNumber*<br/>
-[in] Предпочтительный количество столбцов в таблице свойств цвета.
+*nКолонкиНомер*<br/>
+(в) Предпочтительное количество столбцов в сетке цветного свойства.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод задает значение `m_nColumnsNumber` защищенный элемент данных.
+Этот метод устанавливает значение `m_nColumnsNumber` защищенного члена данных.
 
-##  <a name="setoriginalvalue"></a>  CMFCPropertyGridColorProperty::SetOriginalValue
+## <a name="cmfcpropertygridcolorpropertysetoriginalvalue"></a><a name="setoriginalvalue"></a>CMFCPropertyGridColorProperty::SetOriginalValue
 
 Задает изменяемому свойству изначальное значение.
 
@@ -220,13 +220,13 @@ virtual void SetOriginalValue(const COleVariant& varValue);
 ### <a name="parameters"></a>Параметры
 
 *varValue*<br/>
-[in] Значение.
+(в) Значение.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Используйте [CMFCPropertyGridProperty::ResetOriginalValue](../../mfc/reference/cmfcpropertygridproperty-class.md#resetoriginalvalue) метод, чтобы восстановить исходное значение измененного свойства.
+Используйте метод [CMFCPropertyGridProperty::ResetOriginalValue](../../mfc/reference/cmfcpropertygridproperty-class.md#resetoriginalvalue) для сброса исходного значения отредактированного свойства.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)<br/>

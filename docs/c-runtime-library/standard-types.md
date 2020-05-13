@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CRT_REPORT_HOOK type
 - _finddata_t type
 ms.assetid: 23312dd2-4a6a-4d70-9b48-2a5d0d8c9f28
-ms.openlocfilehash: c93cf4bf138fc6bc648d33c180edbed0dbe5014e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: d8d7abe0f5562250e51e011014a8f9587bc7636e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500635"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367932"
 ---
 # <a name="standard-types"></a>Стандартные типы
 
@@ -173,7 +173,7 @@ ms.locfileid: "69500635"
 
 ### <a name="fixed-width-integral-types-stdinth"></a>Целочисленные типы фиксированной ширины (stdint.h)
 
-|name|Эквивалентный встроенный тип|
+|Имя|Эквивалентный встроенный тип|
 |----------|-------------------------------|
 |int8\_t, uint8\_t|char со знаком, char без знака|
 |int16\_t, uint16\_t|short, short без знака|
@@ -189,7 +189,7 @@ ms.locfileid: "69500635"
 |int_fast64_t, uint_fast64_t|long long, long long без знака|
 |intmax_t, uintmax_t|long long, long long без знака|
 
-|Тип|ОПИСАНИЕ|Объявляется в|
+|Тип|Описание|Объявляется в|
 |----------|-----------------|-----------------|
 |`clock_t` (long)|Хранит значения времени; используется [часами](../c-runtime-library/reference/clock.md).|TIME.H|
 |Структура `_complex`|Хранит реальные и мнимые части сложных чисел; используется в [_cabs](../c-runtime-library/reference/cabs.md).|MATH.H|
@@ -198,7 +198,7 @@ ms.locfileid: "69500635"
 |Структура `_CrtMemState`|Содержит сведения о текущем состоянии отладочной кучи времени выполнения C.|CRTDBG.H|
 |`_CRT_REPORT_HOOK`,<br /><br /> `_CRT_REPORT_HOOKW`,<br /><br /> `_CRT_REPORT_HOOKW_M`|Определение типа для функции обратного вызова, к которой обращается [_CrtDbgReport](../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md).<br /><br /> Параметры для данной функции: тип отчета, выходное сообщение и возвращаемое значение функции обратного вызова.|CRTDBG.H|
 |`dev_t`, `_dev_t` короткое целое или целое без знака|Представляет дескрипторы устройства.|SYS\TYPES.H|
-|Структура `_diskfree_t`|Содержит сведения о диске. Используется в [_getdiskfree](../c-runtime-library/reference/getdiskfree.md) **.**|DOS.H и DIRECT.H|
+|Структура `_diskfree_t`|Содержит сведения о диске. Используется в [_getdiskfree](../c-runtime-library/reference/getdiskfree.md)**.**|DOS.H и DIRECT.H|
 |Структуры `div_t`, `ldiv_t` и `lldiv_t`|Хранят значения, возвращаемые [div](../c-runtime-library/reference/div.md), [ldiv](../c-runtime-library/reference/ldiv-lldiv.md) и [lldiv](../c-runtime-library/reference/ldiv-lldiv.md), соответственно.|STDLIB.H|
 |Целое число `errno_t`|Используется для параметра или типа возвращаемого функцией значения, который относится к кодам ошибок `errno`.|STDDEF.H,<br /><br /> CRTDEFS.H|
 |Структура `_exception`|Хранит сведения об ошибке для [_matherr](../c-runtime-library/reference/matherr.md).|MATH.H|
@@ -214,10 +214,10 @@ ms.locfileid: "69500635"
 |`ino_t`, `_ino_t` (short без знака)|Для возвращения информации о состоянии.|WCHAR.H|
 |`intmax_t`|Тип целого числа со знаком, способный представлять любое значение любого типа целого числа со знаком.|stdint.h|
 |`intptr_t` (длинное целое или `__int64`, в зависимости от целевой платформы)|Хранит указатель (или ДЕСКРИПТОР) как на платформе Win32, так и на Win64.|STDDEF.H и другое, включая файлы|
-|Массив `jmp_buf`|Используется [setjmp](../c-runtime-library/reference/setjmp.md) и [longjmp](../c-runtime-library/reference/longjmp.md) для сохранения и восстановления окружения программы.|SETJMP.H|
+|`jmp_buf` массив|Используется [setjmp](../c-runtime-library/reference/setjmp.md) и [longjmp](../c-runtime-library/reference/longjmp.md) для сохранения и восстановления окружения программы.|SETJMP.H|
 |Структура `lconv`|Содержит правила форматирования для числовых значений в разных странах и регионах. Используется в [localeconv](../c-runtime-library/reference/localeconv.md).|LOCALE.H|
 |`_LDOUBLE`,<br /><br /> `_LONGDOUBLE`,<br /><br /> `_LDBL12` (длинное double или массив char без знака)|Используются для представления значения long double.|STDLIB.H|
-|Структура `_locale_t`|Сохраняет текущие значения языкового стандарта; используется во всех библиотеках времени выполнения C, привязанных к языковому стандарту.|CRTDEF.H|
+|Структура `_locale_t`|Сохраняет текущие значения языкового стандарта; используется во всех библиотеках времени выполнения C, привязанных к языковому стандарту.|CRTDEFS.H|
 |`mbstate_t`|Отслеживает состояние преобразования многобайтового символа.|WCHAR.H|
 |`off_t`, `_off_t` длинное целое|Представляет значение смещения файла.|WCHAR.H, SYS\TYPES.H|
 |`_onexit_t`,<br /><br /> Указатель `_onexit_m_t`|Возвращается из [_onexit _onexit_m](../c-runtime-library/reference/onexit-onexit-m.md).|STDLIB.H|
@@ -253,6 +253,6 @@ ms.locfileid: "69500635"
 |Целое число `wctype_t`|Может представлять все символы любой кодировки языка.|WCHAR.H,<br /><br /> CRTDEFS.H|
 |Целое число `wint_t`|Тип объекта данных, который может содержать любой расширенный символ или расширенное значение конца файла.|WCHAR.H,<br /><br /> CRTDEFS.H|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Справочник по библиотеке времени выполнения C](../c-runtime-library/c-run-time-library-reference.md)

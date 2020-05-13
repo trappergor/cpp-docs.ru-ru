@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2434
 ms.assetid: 01329e26-7c74-4219-b74f-69e3a40c9738
-ms.openlocfilehash: c73a8d4fcde945ddf2495cc2d0d7dc47216f2db3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 869db3b49075fa477860e045e59306e22a381ca4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166338"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205469"
 ---
 # <a name="compiler-error-c2434"></a>Ошибка компилятора C2434
 
-> "*символ*": символ, объявленный с параметром __declspec(process), невозможно динамически инициализировать в/CLR: pure режим
+> "*символ*": символ, объявленный с __declspec (Process), не может быть динамически инициализирован в режиме/clr: pure
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-**/CLR: pure** и **/CLR: safe** параметры компилятора признаны устаревшими в Visual Studio 2015 и не поддерживается в Visual Studio 2017.
+Параметры компилятора **/clr: pure** и **/clr: Сейф** являются устаревшими в Visual Studio 2015 и не поддерживаются в Visual Studio 2017.
 
-Невозможно динамически инициализировать переменную на уровне процесса, в разделе **/CLR: pure**. Дополнительные сведения см. в разделе [/CLR (компиляция CLR)](../../build/reference/clr-common-language-runtime-compilation.md) и [процесс](../../cpp/process.md).
+Невозможно динамически инициализировать переменную для каждого процесса в **параметре/CLR: pure**. Дополнительные сведения см. в разделе [/CLR (компиляция среды CLR)](../../build/reference/clr-common-language-runtime-compilation.md) и [Обработка](../../cpp/process.md).
 
 ## <a name="example"></a>Пример
 
-Следующий пример приводит к возникновению ошибки C2434. Чтобы устранить эту проблему, используйте константы для инициализации `process` переменные.
+Следующий пример приводит к возникновению ошибки C2434. Чтобы устранить эту проблему, используйте константы для инициализации переменных `process`.
 
 ```cpp
 // C2434.cpp

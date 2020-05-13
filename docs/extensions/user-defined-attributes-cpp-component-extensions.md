@@ -6,12 +6,12 @@ helpviewer_keywords:
 - metadata, extending
 - custom attributes, extending metadata
 ms.assetid: 98b29048-a3ea-4698-8441-f149cdaec9fb
-ms.openlocfilehash: 6d200c36946e7bc7d441c2c4db1bdfe96d4aeef9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: aed36ac7fed7eb1f16f8648f7bcd7efb37f43a75
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515999"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171896"
 ---
 # <a name="user-defined-attributes--ccli-and-ccx"></a>Пользовательские атрибуты (C++/CLI и C++/CX)
 
@@ -31,7 +31,7 @@ C++/CLI и C++/CX позволяют вам создать специфичес�
 
 Настраиваемый атрибут можно определить, указав тип и создав для него базовый класс <xref:System.Attribute>, а также при необходимости применив атрибут <xref:System.AttributeUsageAttribute>.
 
-Дополнительные сведения:
+Дополнительные сведения см. в разделе:
 
 - [Целевые объекты атрибутов](attribute-targets-cpp-component-extensions.md)
 
@@ -192,6 +192,6 @@ ref struct A : Attribute {
 ref struct B {};
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Расширения компонентов для .NET и UWP](component-extensions-for-runtime-platforms.md)

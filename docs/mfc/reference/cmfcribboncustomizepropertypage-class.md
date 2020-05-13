@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CMFCRibbonCustomizePropertyPage [MFC], AddCustomCategory
 - CMFCRibbonCustomizePropertyPage [MFC], OnOK
 ms.assetid: ea32a99a-dfbe-401e-8975-aa191552532f
-ms.openlocfilehash: 8c790ca249f34a3c9b36d1bd77dafdc4a91bd352
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57fbd1e1f574beebff8baab014e7ab615f56333f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237055"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754170"
 ---
 # <a name="cmfcribboncustomizepropertypage-class"></a>Класс CMFCRibbonCustomizePropertyPage
 
-Реализует пользовательскую страницу для **Настройка** диалоговое окно в приложениях, основанных на Ribbon.
+Реализует пользовательскую страницу для **настраиваемых** диалоговых коробок в приложениях на основе ленты.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -35,27 +35,27 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
 
 |||
 |-|-|
-|name|Описание|
-|[CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage](#cmfcribboncustomizepropertypage)|Создает объект `CMFCRibbonCustomizePropertyPage`.|
+|Имя|Описание|
+|[CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage](#cmfcribboncustomizepropertypage)|Формирует объект `CMFCRibbonCustomizePropertyPage`.|
 |`CMFCRibbonCustomizePropertyPage::~CMFCRibbonCustomizePropertyPage`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
 |||
 |-|-|
-|name|Описание|
-|[CMFCRibbonCustomizePropertyPage::AddCustomCategory](#addcustomcategory)|Добавляет пользовательскую категорию для **команды** поле со списком.|
+|Имя|Описание|
+|[CMFCRibbonCustomEPropertyPage:AddCustomКатегория](#addcustomcategory)|Добавляет пользовательскую категорию в комбо-коробку **Команд.**|
 |`CMFCRibbonCustomizePropertyPage::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|
-|`CMFCRibbonCustomizePropertyPage::GetThisClass`|Используется инфраструктурой, чтобы получить указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|
-|[CMFCRibbonCustomizePropertyPage::OnOK](#onok)|Вызывается системой, когда пользователь щелкает **ОК** на **Настройка** диалоговое окно.|
+|`CMFCRibbonCustomizePropertyPage::GetThisClass`|Используется фректором для получения указателя на объект [CRuntimeClass,](../../mfc/reference/cruntimeclass-structure.md) связанный с этим типом класса.|
+|[CMFCRibbonНастройкаНедвижимостьСтраница::OnOK](#onok)|Вызывается системой, когда пользователь нажимает **OK** на **настраиваемый диалоговый** ящик.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Если вы хотите добавить пользовательские команды **Настройка** диалоговом окне необходимо обрабатывать сообщения AFX_WM_ON_RIBBON_CUSTOMIZE. В обработчике сообщений, создать экземпляр `CMFCRibbonCustomizePropertyPage` объект в стеке. Создать список пользовательских команд, а затем вызвать `AddCustomCategory` для добавления новой страницы, **Настройка** диалоговое окно.
+Если вы хотите добавить пользовательские команды в поле **настраиваемых** диалогов, необходимо обрабатывать AFX_WM_ON_RIBBON_CUSTOMIZE сообщение. В обработчике сообщений `CMFCRibbonCustomizePropertyPage` мгновенно объект в стеке. Создайте список пользовательских команд, `AddCustomCategory` а затем позвоните, чтобы добавить новую страницу в поле **настраиваемых** диалогов.
 
 ## <a name="example"></a>Пример
 
-В следующем примере демонстрируется создание `CMFCRibbonCustomizePropertyPage` объекта и добавления пользовательской категории.
+В следующем примере показано, `CMFCRibbonCustomizePropertyPage` как построить объект и добавить пользовательскую категорию.
 
 [!code-cpp[NVC_MFC_RibbonApp#22](../../mfc/reference/codesnippet/cpp/cmfcribboncustomizepropertypage-class_1.cpp)]
 
@@ -73,17 +73,17 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
 
 [CMFCPropertyPage](../../mfc/reference/cmfcpropertypage-class.md)
 
-[CMFCRibbonCustomizePropertyPage](../../mfc/reference/cmfcribboncustomizepropertypage-class.md)
+[CMFCRibbonНастройкаНедвижимостьСтраница](../../mfc/reference/cmfcribboncustomizepropertypage-class.md)
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** afxribboncustomizedialog.h
 
-##  <a name="addcustomcategory"></a>  CMFCRibbonCustomizePropertyPage::AddCustomCategory
+## <a name="cmfcribboncustomizepropertypageaddcustomcategory"></a><a name="addcustomcategory"></a>CMFCRibbonCustomEPropertyPage:AddCustomКатегория
 
-Добавляет пользовательскую категорию для **команды** поле со списком.
+Добавляет пользовательскую категорию в комбо-коробку **Команд.**
 
-```
+```cpp
 void AddCustomCategory(
     LPCTSTR lpszName,
     const CList<UINT, UINT>& lstIDS);
@@ -94,16 +94,16 @@ void AddCustomCategory(
 |||
 |-|-|
 |Параметр|Описание|
-|*lpszName*|[in] Задает имя пользовательской категории.|
-|*lstIDS*|[in] Содержит идентификаторы команд ленты для отображения в пользовательской категории.|
+|*lpszName*|(в) Определяет пользовательское название категории.|
+|*lstIDS*|(в) Содержит идоты команд ленты, которые будут отображаться в пользовательской категории.|
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод добавляет категорию с именем *lpszName* для **команды** поле со списком. Когда пользователь выбирает категорию, команды, которые указаны в *lstIDS* отображаются в списке команд.
+Этот метод добавляет категорию под названием *lpszName* в комбо-поле **Команд.** Когда пользователь выбирает категорию, команды, указанные в *lstIDS,* отображаются в списке команд.
 
-##  <a name="cmfcribboncustomizepropertypage"></a>  CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage
+## <a name="cmfcribboncustomizepropertypagecmfcribboncustomizepropertypage"></a><a name="cmfcribboncustomizepropertypage"></a>CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage
 
-Создает объект `CMFCRibbonCustomizePropertyPage`.
+Формирует объект `CMFCRibbonCustomizePropertyPage`.
 
 ```
 CMFCRibbonCustomizePropertyPage(CMFCRibbonBar* pRibbonBar = NULL);
@@ -112,21 +112,21 @@ CMFCRibbonCustomizePropertyPage(CMFCRibbonBar* pRibbonBar = NULL);
 ### <a name="parameters"></a>Параметры
 
 *pRibbonBar*<br/>
-[in] Указатель на элемент управления ленты, для которого параметры для настройки.
+(в) Указатель на ребератор управления, для которого варианты для настройки.
 
-##  <a name="onok"></a>  CMFCRibbonCustomizePropertyPage::OnOK
+## <a name="cmfcribboncustomizepropertypageonok"></a><a name="onok"></a>CMFCRibbonНастройкаНедвижимостьСтраница::OnOK
 
-Calleld системой, когда пользователь щелкает **ОК** на **Настройка** диалоговое окно.
+Calleld системой, когда пользователь нажимает **OK** на **настраиваемый** диалоговый ящик.
 
 ```
 virtual void OnOK();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Реализация по умолчанию применяет параметры, выбранные в **Настройка** диалоговое окно в панель быстрого доступа.
+Реализация по умолчанию применяет параметры, выбранные в поле **настраиваемых** диалогов, к панели инструментов быстрого доступа.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)

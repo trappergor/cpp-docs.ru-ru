@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - GetAddress method [C++]
 ms.assetid: 09bc9180-867e-4ee5-b22a-8339dc663142
-ms.openlocfilehash: 4d51539d2afbb2fbcc860b6c4d821df119aca418
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca78bd1b607ba4a86bbc824887a7ec767cd5476e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393900"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181256"
 ---
-# <a name="bstrtgetaddress"></a>_bstr_t::GetAddress
+# <a name="_bstr_tgetaddress"></a>_bstr_t::GetAddress
 
 **Блок, относящийся только к системам Microsoft**
 
@@ -29,16 +29,16 @@ BSTR* GetAddress( );
 
 Указатель на строку `BSTR`, инкапсулированную объектом `_bstr_t`.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-**GetAddress** влияет на все `_bstr_t` объектов данной общей папки `BSTR`. Более одного `_bstr_t` могут совместно использовать `BSTR` при помощи конструктора копии и **оператор =**.
+Действие " **Субадрес** " влияет на все объекты `_bstr_t`, которые совместно используют `BSTR`. Несколько `_bstr_t` могут совместно использовать `BSTR` с помощью конструктора копирования и **оператора =** .
 
 ## <a name="example"></a>Пример
 
-См. в разделе [_bstr_t::Assign](../cpp/bstr-t-assign.md) пример с использованием **GetAddress**.
+Пример использования метода- **Address**см. в разделе [_Bstr_t:: Assign](../cpp/bstr-t-assign.md) .
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [_bstr_t Class](../cpp/bstr-t-class.md)

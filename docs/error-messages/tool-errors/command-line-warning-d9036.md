@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - D9036
 ms.assetid: 68276e84-8d4e-4d4a-a9db-2874c81dfe66
-ms.openlocfilehash: 2dd6cd528f6a3799176c77435ebd62d103303806
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16e97819c7e3752285b8f8caa69517d5a06a4701
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62213800"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196629"
 ---
 # <a name="command-line-warning-d9036"></a>Предупреждение командной строки D9036
 
-> "*параметр\_2*«вместо of»*параметр\_1*"
+> "*option\_2*" вместо "*Option\_1*"
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Предупреждение D9036 является продолжением [Предупреждение командной строки D9035](../../error-messages/tool-errors/command-line-warning-d9035.md). Если один параметр компилятора вместо устаревший параметр, он будет указан. Ссылки на дополнительные сведения см. в разделе [нерекомендуемые и удаленные компилятора параметры](../../build/reference/compiler-options-listed-by-category.md#deprecated-and-removed-compiler-options).
+Предупреждение D9036 — продолжение [командной строки с предупреждением D9035](../../error-messages/tool-errors/command-line-warning-d9035.md). Если вместо устаревшего параметра был выбран один параметр компилятора, он будет указан здесь. Ссылки на дополнительные сведения см. в разделе [устаревшие и удаленные параметры компилятора](../../build/reference/compiler-options-listed-by-category.md#deprecated-and-removed-compiler-options).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Нерекомендуемые и удаленные параметры компилятора](../../build/reference/compiler-options-listed-by-category.md#deprecated-and-removed-compiler-options)<br/>
 [Предупреждение командной строки D9035](command-line-warning-d9035.md)

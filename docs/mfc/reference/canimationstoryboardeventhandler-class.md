@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CAnimationStoryboardEventHandler [MFC], OnStoryboardUpdated
 - CAnimationStoryboardEventHandler [MFC], SetAnimationController
 ms.assetid: 10a7e86b-c02d-4124-9a2e-61ecf8ac62fc
-ms.openlocfilehash: d12f38491cf3aafca41756ce97e1cad44deb67d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 986555ca91d19dfa838f807665f2cbf9a003bcef
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338263"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755105"
 ---
 # <a name="canimationstoryboardeventhandler-class"></a>Класс CAnimationStoryboardEventHandler
 
@@ -37,22 +37,22 @@ class CAnimationStoryboardEventHandler : public CUIAnimationStoryboardEventHandl
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CAnimationStoryboardEventHandler::CAnimationStoryboardEventHandler](#canimationstoryboardeventhandler)|Создает объект `CAnimationStoryboardEventHandler`.|
+|[CAnimationStoryboardEventHandler::CAnimationStoryboardEvent](#canimationstoryboardeventhandler)|Формирует объект `CAnimationStoryboardEventHandler`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CAnimationStoryboardEventHandler::CreateInstance](#createinstance)|Создает экземпляр класса `CAnimationStoryboardEventHandler` обратного вызова.|
-|[CAnimationStoryboardEventHandler::OnStoryboardStatusChanged](#onstoryboardstatuschanged)|Обрабатывает `OnStoryboardStatusChanged` событий, которые происходят при изменении состояния раскадровки (переопределяет `CUIAnimationStoryboardEventHandlerBase::OnStoryboardStatusChanged`.)|
-|[CAnimationStoryboardEventHandler::OnStoryboardUpdated](#onstoryboardupdated)|Обрабатывает `OnStoryboardUpdated` событий, которые происходят при обновлении раскадровки (переопределяет `CUIAnimationStoryboardEventHandlerBase::OnStoryboardUpdated`.)|
-|[CAnimationStoryboardEventHandler::SetAnimationController](#setanimationcontroller)|Содержит указатель на контроллер анимации для маршрутизации события.|
+|[CAnimationStoryboardEventHandler::CreateInstance](#createinstance)|Создает экземпляр `CAnimationStoryboardEventHandler` обратного вызова.|
+|[CAnimationStoryboardEventHandler::OnStoryboardStatusChanged](#onstoryboardstatuschanged)|Обработка `OnStoryboardStatusChanged` событий, которые возникают при изменении статуса раскадровки (Overrides.) `CUIAnimationStoryboardEventHandlerBase::OnStoryboardStatusChanged`|
+|[CAnimationStoryboardEventHandler::OnStoryboardUpdated](#onstoryboardupdated)|Обработка `OnStoryboardUpdated` событий, которые происходят при обновлении раскадровки (Overrides `CUIAnimationStoryboardEventHandlerBase::OnStoryboardUpdated`.)|
+|[CAnimationStoryboardEventHandler::SetAnimationController](#setanimationcontroller)|Хранит указатель контроллера анимации для маршрутизатора событий.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Этот обработчик событий создается и передается `IUIAnimationStoryboard::SetStoryboardEventHandler` при вызове метода `CAnimationController::EnableStoryboardEventHandler`.
+Обработчик событий создается `IUIAnimationStoryboard::SetStoryboardEventHandler` и передается `CAnimationController::EnableStoryboardEventHandler`методу при вызове.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -66,17 +66,17 @@ class CAnimationStoryboardEventHandler : public CUIAnimationStoryboardEventHandl
 
 **Заголовок:** afxanimationcontroller.h
 
-##  <a name="canimationstoryboardeventhandler"></a>  CAnimationStoryboardEventHandler::CAnimationStoryboardEventHandler
+## <a name="canimationstoryboardeventhandlercanimationstoryboardeventhandler"></a><a name="canimationstoryboardeventhandler"></a>CAnimationStoryboardEventHandler::CAnimationStoryboardEvent
 
-Создает объект CAnimationStoryboardEventHandler.
+Строит объект CAnimationStoryboardEventHandler.
 
 ```
 CAnimationStoryboardEventHandler();
 ```
 
-##  <a name="createinstance"></a>  CAnimationStoryboardEventHandler::CreateInstance
+## <a name="canimationstoryboardeventhandlercreateinstance"></a><a name="createinstance"></a>CAnimationStoryboardEventHandler::CreateInstance
 
-Создает экземпляр CAnimationStoryboardEventHandler обратного вызова.
+Создает экземпляр обратного вызова CAnimationStoryboardEventHandler.
 
 ```
 static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
@@ -86,18 +86,18 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 
 ### <a name="parameters"></a>Параметры
 
-*pAnimationController*<br/>
+*pAnimationКонтроллер*<br/>
 Указатель на контроллер анимации, который будет получать события.
 
 *ppHandler*
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если метод завершается успешно, возвращается значение S_OK. В противном случае он возвращает код ошибки HRESULT.
+Если метод завершается успешно, возвращает значение S_OK. В противном случае он возвращает код ошибки HRESULT.
 
-##  <a name="onstoryboardstatuschanged"></a>  CAnimationStoryboardEventHandler::OnStoryboardStatusChanged
+## <a name="canimationstoryboardeventhandleronstoryboardstatuschanged"></a><a name="onstoryboardstatuschanged"></a>CAnimationStoryboardEventHandler::OnStoryboardStatusChanged
 
-Обрабатывает OnStoryboardStatusChanged событий, которые происходят при изменении состояния раскадровки
+Обработка onStoryboardStatusChanged событий, которые происходят при изменении статуса раскадровки
 
 ```
 IFACEMETHOD(OnStoryboardStatusChanged) (
@@ -108,22 +108,22 @@ IFACEMETHOD(OnStoryboardStatusChanged) (
 
 ### <a name="parameters"></a>Параметры
 
-*раскадровки*<br/>
-Указатель на раскадровки, состояние которого изменилось.
+*Раскадровки*<br/>
+Указатель на раскадровку, статус которого изменился.
 
 *newStatus*<br/>
-Указывает новое состояние раскадровки.
+Определяет новый статус раскадровки.
 
-*previousStatus*<br/>
-Указывает прежнее состояние раскадровки.
+*предыдущийСтатус*<br/>
+Определяет предыдущий статус раскадровки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL.
+S_OK, если метод удается; в противном случае E_FAIL.
 
-##  <a name="onstoryboardupdated"></a>  CAnimationStoryboardEventHandler::OnStoryboardUpdated
+## <a name="canimationstoryboardeventhandleronstoryboardupdated"></a><a name="onstoryboardupdated"></a>CAnimationStoryboardEventHandler::OnStoryboardUpdated
 
-Обрабатывает OnStoryboardUpdated события, возникающие при обновлении раскадровки
+Ручки OnStoryboardUpdated события, которые происходят при обновлении раскадровки
 
 ```
 IFACEMETHOD(OnStoryboardUpdated) (__in IUIAnimationStoryboard* storyboard);
@@ -131,26 +131,26 @@ IFACEMETHOD(OnStoryboardUpdated) (__in IUIAnimationStoryboard* storyboard);
 
 ### <a name="parameters"></a>Параметры
 
-*раскадровки*<br/>
+*Раскадровки*<br/>
 Указатель на раскадровку, которая была обновлена.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL.
+S_OK, если метод удается; в противном случае E_FAIL.
 
-##  <a name="setanimationcontroller"></a>  CAnimationStoryboardEventHandler::SetAnimationController
+## <a name="canimationstoryboardeventhandlersetanimationcontroller"></a><a name="setanimationcontroller"></a>CAnimationStoryboardEventHandler::SetAnimationController
 
-Содержит указатель на контроллер анимации для маршрутизации события.
+Хранит указатель контроллера анимации для маршрутизатора событий.
 
-```
+```cpp
 void SetAnimationController(CAnimationController* pAnimationController);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*pAnimationController*<br/>
+*pAnimationКонтроллер*<br/>
 Указатель на контроллер анимации, который будет получать события.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Классы](../../mfc/reference/mfc-classes.md)

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4612
 ms.assetid: 21ac02b2-51cd-4aff-9b70-d543511d5962
-ms.openlocfilehash: ed5458fc52c1c9c9f12187095e4658204613d1a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f9478caef9eaba9c72dc282179100daf2d94c6d5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406370"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185988"
 ---
 # <a name="compiler-warning-level-1-c4612"></a>Предупреждение компилятора (уровень 1) C4612
 
 > ошибка в имени включаемого файла
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Это предупреждение возникает с **#pragma include_alias** , когда имя файла указано неправильно или отсутствует.
 
-Аргументы для **#pragma include_alias** инструкции можно использовать в форме предложения (»*filename*«) или форму с угловыми (\<*filename*>), но обе должны Используйте ту же форму.
+Аргументы инструкции **#pragma include_alias** могут использовать форму кавычек ("*filename*") или форму угловой скобки (\<*filename*>), но обе должны использовать одну и ту же форму.
 
 ## <a name="example"></a>Пример
 

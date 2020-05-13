@@ -1,9 +1,11 @@
 ---
 title: _access_s, _waccess_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _access_s
 - _waccess_s
+- _o__access_s
+- _o__waccess_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - _access_s function
 - _waccess_s function
 ms.assetid: fb3004fc-dcd3-4569-8b27-d817546e947e
-ms.openlocfilehash: 0550b8fb42cb62d1a175960d6b0d4ed4dbecdcac
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c3893b3d78a2c142ffc9e10eb6bbf299c5fddb9b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939904"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916896"
 ---
 # <a name="_access_s-_waccess_s"></a>_access_s, _waccess_s
 
@@ -71,15 +74,15 @@ errno_t _waccess_s(
 
 |Значение errno|Условие|
 |-|-|
-`EACCES`|Доступ запрещен. Настройка разрешений файла не допускает указанный доступ.
+`EACCES`|Access denied. (Недопустимое значение {значение_утверждения} для утверждения {имя_утверждения}. Доступ запрещен.) Настройка разрешений файла не допускает указанный доступ.
 `ENOENT`|Имя файла или путь не найдены.
 `EINVAL`|Недопустимый параметр.
 
 Дополнительные сведения см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-При использовании с файлами Функция **_access_s** определяет, существует ли указанный файл, и доступ к нему можно получить, как указано в параметре *mode*. При использовании с каталогами **_access_s** определяет только то, существует ли указанный каталог. В операционных системах Windows 2000 и более поздних версий все каталоги имеют доступ на чтение и запись.
+При использовании с файлами Функция **_access_s** определяет, существует ли указанный файл, и доступ к нему можно получить, как указано в параметре *mode*. При использовании с каталогами **_access_s** определяет, существует ли указанный каталог. В операционных системах Windows 2000 и более поздних версий все каталоги имеют доступ на чтение и запись.
 
 |значение режима|Проверяет файл на|
 |----------------|---------------------|
@@ -88,13 +91,15 @@ errno_t _waccess_s(
 |04|Разрешение на чтение.|
 |06|Разрешение на чтение и запись.|
 
-Сами по себе разрешения на чтение или запись файла не обеспечивают возможность открывать файл. Например, если файл заблокирован другим процессом, он может быть недоступен, даже если **_access_s** возвращает 0.
+Сами по себе разрешения на чтение или запись файла не обеспечивают возможность открывать файл. Например, если файл заблокирован другим процессом, он может быть недоступен, хотя **_access_s** возвращает 0.
 
-**_waccess_s** — это версия **_access_s**с расширенными символами, где аргумент *path* для **_waccess_s** является строкой расширенных символов. В противном случае поведение **_waccess_s** и **_access_s** работает одинаково.
+**_waccess_s** — это версия **_access_s**для расширенных символов, где аргумент *пути* к **_waccess_s** является строкой расширенных символов. В противном случае **_waccess_s** и **_access_s** ведут себя одинаково.
 
 Эти функции проверяют свои параметры. Если параметр *path* имеет значение null или *режим* не указывает допустимый режим, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции устанавливают параметр `errno` в значение `EINVAL` и возвращают значение `EINVAL`.
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Процедура Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|
@@ -151,11 +156,11 @@ File crt_access_s.c exists.
 File crt_access_s.c does not have write permission.
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Обработка файлов](../../c-runtime-library/file-handling.md)<br/>
 [_access, _waccess](access-waccess.md)<br/>
 [_chmod, _wchmod](chmod-wchmod.md)<br/>
 [_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>
 [_open, _wopen](open-wopen.md)<br/>
-[_stat, _wstat Functions](stat-functions.md)
+[Функции _stat, _wstat](stat-functions.md)

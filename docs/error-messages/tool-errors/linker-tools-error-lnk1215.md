@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1215
 ms.assetid: 0774d8e6-f0c1-4efb-8723-7e1be6863d81
-ms.openlocfilehash: cc9763771778118a823d8c54f922026215b534f2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d35279d9f47735489902fde284314a2c94f7a682
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242777"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195075"
 ---
 # <a name="linker-tools-error-lnk1215"></a>Ошибка средств компоновщика LNK1215
 
 Сбой операции с метаданными (HRESULT): ошибка
 
-Компоновщик получена ошибка от среды выполнения .NET при попытке выполнения обновления метаданных через среду выполнения .NET.
+Компоновщик получил ошибку от среды выполнения .NET при попытке обновить метаданные с помощью среды выполнения .NET.
 
-`HRESULT` представляет собой значение HRESULT из метода среды выполнения .NET. `error` является. Текст, предоставляемый NET.
+`HRESULT` является значением HRESULT из метода среды выполнения .NET. `error` —. Текст, указанный в NET.
 
-Возможно, компоновщик не соответствует и среда выполнения .NET; Переустановите Visual C++.
+Возможно, у вас есть непарный компоновщик и среда выполнения .NET. Переустановите C++Visual.

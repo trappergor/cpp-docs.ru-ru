@@ -15,14 +15,14 @@ helpviewer_keywords:
 - operator != [C++], relational operators
 - == operator [C++], with specific Visual C++ objects
 ms.assetid: 141bacb8-41a2-44dd-b3c0-4ad1f884f4ea
-ms.openlocfilehash: e0d26247868440f47c73422510ac0e998f8e8dee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e0d7ea1a0bcaf8329cff0cdfb0c01154f3c5a73b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403299"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187574"
 ---
-# <a name="variantt-relational-operators"></a>Операторы отношения _variant_t
+# <a name="_variant_t-relational-operators"></a>Операторы отношения _variant_t
 
 **Блок, относящийся только к системам Microsoft**
 
@@ -43,22 +43,22 @@ bool operator!=(
 
 #### <a name="parameters"></a>Параметры
 
-*varSrc*<br/>
-Объект `VARIANT` для сравнения с `_variant_t` объекта.
+*варсрк*<br/>
+`VARIANT`, сравниваемый с объектом `_variant_t`.
 
 *pSrc*<br/>
-Указатель на `VARIANT` для сравнения с `_variant_t` объекта.
+Указатель на `VARIANT`, сравниваемый с объектом `_variant_t`.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает **true** если содержит сравнение, **false** в противном случае.
+Возвращает **значение true** , если сравнение содержит, **значение false** , если нет.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Сравнивает `_variant_t` со `VARIANT`, проверки равенства или неравенства.
+Сравнивает объект `_variant_t` с `VARIANT`, проверяя на равенство или неравенство.
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс _variant_t](../cpp/variant-t-class.md)

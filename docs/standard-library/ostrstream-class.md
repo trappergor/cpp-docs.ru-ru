@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::ostrstream [C++], rdbuf
 - std::ostrstream [C++], str
 ms.assetid: e2e34679-b266-4728-a8e1-8eda5d400e46
-ms.openlocfilehash: c73ab13d3cb2531ff3d741766bc86f8354a0be9d
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b52ba70607a5214a6aa28f04cdded0b19a56b2f6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458062"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373545"
 ---
 # <a name="ostrstream-class"></a>Класс ostrstream
 
@@ -29,7 +29,7 @@ ms.locfileid: "68458062"
 class ostrstream : public ostream
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Объект сохраняет объект класса `strstreambuf`.
 
@@ -42,14 +42,14 @@ class ostrstream : public ostream
 |-|-|
 |[ostrstream](#ostrstream)|Создает объект типа `ostrstream`.|
 
-### <a name="member-functions"></a>Функции-члены
+### <a name="member-functions"></a>Функции элементов
 
-|Функция Member|Описание|
+|Функция-член|Описание|
 |-|-|
-|[freeze](#freeze)|Делает буфер потока недоступным для операций с буфером потока.|
+|[Заморозить](#freeze)|Делает буфер потока недоступным для операций с буфером потока.|
 |[pcount](#pcount)|Возвращает число элементов, записанных в управляемую последовательность.|
 |[rdbuf](#rdbuf)|Возвращает указатель на объект `strstreambuf`, связанный с потоком.|
-|[str](#str)|Вызывает метод [freeze](../standard-library/strstreambuf-class.md#freeze), а затем возвращает указатель на начало управляемой последовательности.|
+|[Ул](#str)|Вызывает [freeze](../standard-library/strstreambuf-class.md#freeze), затем возвращает указатель на начало управляемой последовательности.|
 
 ## <a name="requirements"></a>Требования
 
@@ -57,7 +57,7 @@ class ostrstream : public ostream
 
 **Пространство имен:** std
 
-## <a name="freeze"></a>  ostrstream::freeze
+## <a name="ostrstreamfreeze"></a><a name="freeze"></a>ostrstream::заморозка
 
 Делает буфер потока недоступным для операций с буфером потока.
 
@@ -68,17 +68,17 @@ void freeze(bool _Freezeit = true);
 ### <a name="parameters"></a>Параметры
 
 *_Freezeit*\
-**Логическое** значение, указывающее, нужно ли заморозить поток.
+**Bool** с указанием, хотите ли вы, чтобы поток был заморожен.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Функция-член вызывает метод [rdbuf](#rdbuf) -> [freeze](../standard-library/strstreambuf-class.md#freeze)(_ *Freezeit*).
+Функция члена вызывает[замораживание](../standard-library/strstreambuf-class.md#freeze) [rdbuf](#rdbuf) -> (яФроит). *Freezeit*
 
 ### <a name="example"></a>Пример
 
-Пример, в котором используется `freeze`, см. в разделе [strstream:: Freeze](../standard-library/strstreambuf-class.md#freeze) .
+См [strstream::заморозить](../standard-library/strstreambuf-class.md#freeze) для `freeze`примера, который использует .
 
-## <a name="ostrstream"></a>  ostrstream::ostrstream
+## <a name="ostrstreamostrstream"></a><a name="ostrstream"></a>ostrstream::ostrstream
 
 Создает объект типа `ostrstream`.
 
@@ -92,24 +92,24 @@ ostrstream(char* ptr,
 
 ### <a name="parameters"></a>Параметры
 
-*указатель*\
+*Ptr*\
 Буфер.
 
-*расчета*\
+*Рассчитывать*\
 Размер буфера в байтах.
 
-*_Mode*\
+*_mode*\
 Режим ввода-вывода буфера. См. раздел [ios_base::openmode](../standard-library/ios-base-class.md#openmode) для получения дополнительной информации.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Оба конструктора инициализируют базовый класс путем вызова [ostream](../standard-library/ostream-typedefs.md#ostream)(**SB**), где `sb` — это хранимый объект класса [strstreambuf](../standard-library/strstreambuf-class.md). Первый конструктор также инициализируется `sb` путем вызова. `strstreambuf` Второй конструктор инициализирует базовый класс одним из двух способов:
+Оба конструктора инициализируют базовый класс, вызывая [ostream](../standard-library/ostream-typedefs.md#ostream)**(sb),** где `sb` хранится объект класса [strstreambuf.](../standard-library/strstreambuf-class.md) Первый конструктор также инициализирует, `sb` вызывая `strstreambuf`. Второй конструктор инициализирует базовый класс одним из двух способов:
 
-- Если `_Mode` `strstreambuf` `count` `count`  `ptr` `ptr`ios_base:: App = = 0, то должен обозначать первый элемент массива элементов, а конструктор вызывает (,,  &  `ptr`).
+- Если `_Mode`  &  **ios_base::app**No 0, `ptr` то необходимо обозначить `count` первый элемент массива элементов, `strstreambuf`и конструктор вызывает (,`ptr` `count`, `ptr`).
 
-- `ptr` `ptr` `strstreambuf`В противном случае `count`должен обозначать первый элемент массива элементов count, содержащий строку C, первый элемент которой обозначен, и конструктор вызывает (,, `ptr` `ptr` + `strlen`( `ptr`) ).
+- В `ptr` противном случае необходимо обозначить первый элемент массива элементов подсчета, содержащий строку C, первый элемент которой обозначен `ptr`, и вызовы `strstreambuf`конструктора`ptr`(, `count` `ptr`  +  `strlen`( ). `ptr`
 
-## <a name="pcount"></a>  ostrstream::pcount
+## <a name="ostrstreampcount"></a><a name="pcount"></a>ostrstream::pсчет
 
 Возвращает число элементов, записанных в управляемую последовательность.
 
@@ -121,15 +121,15 @@ streamsize pcount() const;
 
 Число элементов, записанных в управляемую последовательность.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Функция-член возвращает [rdbuf](#rdbuf) -> [pcount](../standard-library/strstreambuf-class.md#pcount).
+Функция члена возвращает [rdbuf](#rdbuf) -> [pcount.](../standard-library/strstreambuf-class.md#pcount)
 
 ### <a name="example"></a>Пример
 
 См. раздел [strstream::pcount](../standard-library/strstreambuf-class.md#pcount) с примером использования `pcount`.
 
-## <a name="rdbuf"></a>  ostrstream::rdbuf
+## <a name="ostrstreamrdbuf"></a><a name="rdbuf"></a>ostrstream::rdbuf
 
 Возвращает указатель на объект strstreambuf, связанный с потоком.
 
@@ -141,17 +141,17 @@ strstreambuf *rdbuf() const
 
 Указатель на объект strstreambuf, связанный с потоком.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Функция члена возвращает адрес буфера сохраненного потока типа `pointer` в [strstreambuf](../standard-library/strstreambuf-class.md).
+Функция участника возвращает адрес сохраненного буфера `pointer` потока типа [в strstreambuf.](../standard-library/strstreambuf-class.md)
 
 ### <a name="example"></a>Пример
 
 См. пример использования `rdbuf` в разделе [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount).
 
-## <a name="str"></a>  ostrstream::str
+## <a name="ostrstreamstr"></a><a name="str"></a>ostrstream::str
 
-Вызывает метод [freeze](../standard-library/strstreambuf-class.md#freeze), а затем возвращает указатель на начало управляемой последовательности.
+Вызывает [freeze](../standard-library/strstreambuf-class.md#freeze), затем возвращает указатель на начало управляемой последовательности.
 
 ```cpp
 char *str();
@@ -161,17 +161,17 @@ char *str();
 
 Указатель на начало управляемой последовательности.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Функция-член возвращает [rdbuf](#rdbuf) -> [str](../standard-library/strstreambuf-class.md#str).
+Функция члена возвращает [rdbuf](#rdbuf) -> [str](../standard-library/strstreambuf-class.md#str).
 
 ### <a name="example"></a>Пример
 
-Пример, в котором используется `str`, см. в разделе [strstream:: str](../standard-library/strstreambuf-class.md#str) .
+Смотрите [strstream::str](../standard-library/strstreambuf-class.md#str) для образца, который использует `str`.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[ostream](../standard-library/ostream-typedefs.md#ostream)\
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Программирование iostream](../standard-library/iostream-programming.md)\
-[Соглашения iostreams](../standard-library/iostreams-conventions.md)
+[Ostream](../standard-library/ostream-typedefs.md#ostream)\
+[Безопасность резьбы в стандартной библиотеке СЗ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[программирование йострима](../standard-library/iostream-programming.md)\
+[iostreams Конвенций](../standard-library/iostreams-conventions.md)

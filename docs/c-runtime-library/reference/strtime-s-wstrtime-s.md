@@ -1,9 +1,11 @@
 ---
 title: _strtime_s, _wstrtime_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wstrtime_s
 - _strtime_s
+- _o__strtime_s
+- _o__wstrtime_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - time, copying
 - _strtime_s function
 ms.assetid: 42acf013-c334-485d-b610-84c0af8a46ec
-ms.openlocfilehash: c74e7359f68469fd8322ba1c9348acffd636282a
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 54828bf894ffc9062125c9680ec087cdf929b1a2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625921"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910928"
 ---
 # <a name="_strtime_s-_wstrtime_s"></a>_strtime_s, _wstrtime_s
 
@@ -67,7 +70,7 @@ errno_t _wstrtime_s(
 
 ### <a name="parameters"></a>Параметры
 
-*buffer*<br/>
+*двойной*<br/>
 Буфер длиной не менее 10 символов, в который будет записано время.
 
 *numberOfElements*<br/>
@@ -79,22 +82,22 @@ errno_t _wstrtime_s(
 
 Если возникает ошибка, вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). В случае сбоя возвращаемое значение представляет собой код ошибки. Коды ошибок определены в ERRNO.H; ошибки, создаваемые этой функцией, см. в таблице ниже. Дополнительные сведения о кодах ошибок см. в разделе [Константы errno](../../c-runtime-library/errno-constants.md).
 
-### <a name="error-conditions"></a>Условия ошибок
+### <a name="error-conditions"></a>Ситуации, которые могут привести к ошибке
 
-|*buffer*|*numberOfElements*|Назад|Содержимое *буфера*|
+|*двойной*|*numberOfElements*|Возвращает|Содержимое *буфера*|
 |--------------|------------------------|------------|--------------------------|
-|**NULL**|(любые)|**EINVAL**|Без изменений|
-|Not **null** (указывает на допустимый буфер)|0|**EINVAL**|Без изменений|
-|Not **null** (указывает на допустимый буфер)|0 < size < 9|**EINVAL**|Пустая строка|
+|**ЗАКАНЧИВАЮЩ**|(любые)|**еинвал**|Без изменений|
+|Not **null** (указывает на допустимый буфер)|0|**еинвал**|Без изменений|
+|Not **null** (указывает на допустимый буфер)|0 < size < 9|**еинвал**|Пустая строка.|
 |Not **null** (указывает на допустимый буфер)|Size > 9|0|Текущая дата в формате, указанном в разделе "Примечания"|
 
-## <a name="security-issues"></a>Проблемы безопасности
+## <a name="security-issues"></a>Проблемы с безопасностью
 
 Передача недопустимого значения, отличного от**null** , для буфера приведет к нарушению прав доступа, если параметр *numberOfElements* больше 9.
 
 Передача значения для *numberOfElements* , превышающих фактический размер буфера, приведет к переполнению буфера.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
 Эти функции предоставляют более безопасные версии [_strtime](strtime-wstrtime.md) и [_wstrtime](strtime-wstrtime.md). Функция **_strtime_s** копирует текущее местное время в буфер, на который указывает *тиместр*. Время форматируется как **чч: мм: СС** , где **чч** — две цифры, представляющие час в 24-часовом формате, а **mm** — две цифры, представляющие минуты после часа, а **SS** — две цифры, представляющие секунды. Например, строка **18:23:44** представляет 23 минуты и 44 секунд после 18:00 Размер буфера должен составлять не менее 9 байт; фактический размер указывается в качестве второго параметра.
 
@@ -103,6 +106,8 @@ errno_t _wstrtime_s(
 В C++ использование данных функций упрощено наличием шаблонных перегрузок; перегруженные методы могут автоматически определять длину буфера (что исключает необходимость указания аргумента с размером буфера), а также они могут автоматически заменять более старые, незащищенные функции их новыми безопасными аналогами. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../../c-runtime-library/secure-template-overloads.md).
 
 Версии отладочной библиотеки этих функций сначала заполняют буфер 0xFE. Чтобы отключить это поведение, используйте [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mapping"></a>Сопоставление универсальных текстовых функций:
 
@@ -117,7 +122,7 @@ errno_t _wstrtime_s(
 |**_strtime_s**|\<time.h>|
 |**_wstrtime_s**|\<time.h> или \<wchar.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -162,9 +167,9 @@ OS time:            14:37:49
 OS date:            04/25/03
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Управление временем](../../c-runtime-library/time-management.md)<br/>
+[Операции управления временем](../../c-runtime-library/time-management.md)<br/>
 [asctime_s, _wasctime_s](asctime-s-wasctime-s.md)<br/>
 [ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)<br/>
 [gmtime_s, _gmtime32_s, _gmtime64_s](gmtime-s-gmtime32-s-gmtime64-s.md)<br/>

@@ -3,12 +3,12 @@ layout: LandingPage
 title: Документация по разработке для Linux на C++
 description: Создание и отладка приложений на платформе Linux.
 ms.topic: landing-page
-ms.openlocfilehash: 9c09e9bd590ece013a2ee7d85017b3e046394232
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: d7e3622c3c390bdf4a594e36706d937ff7ef3909
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441518"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364326"
 ---
 # <a name="linux-development-with-c-documentation"></a>Документация по разработке для Linux на C++
 

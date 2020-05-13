@@ -1,20 +1,20 @@
 ---
-title: Функция Swap (WRL)
+title: Функция swap (WRL)
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - internal/Microsoft::WRL::Details::Swap
 ms.assetid: ed134a08-ceb7-4279-aa02-a183c3a426ea
-ms.openlocfilehash: 97d24f1f4453e948c621651e029254db1b0de712
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e665dbca025da56ba81c3fdf1749b2d653b78c00
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398151"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213568"
 ---
-# <a name="swap-function-wrl"></a>Функция Swap (WRL)
+# <a name="swap-function-wrl"></a>Функция swap (WRL)
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+Поддерживает инфраструктуру WRL и не предназначен для непосредственного использования в коде.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -35,16 +35,16 @@ WRL_NOTHROW inline void Swap(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Меняет местами значения двух заданных аргументов.
+Меняет местами значения двух указанных аргументов.
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** internal.h
+**Заголовок:** internal. h
 
-**Пространство имен:** Microsoft::WRL::Details
+**Пространство имен:** Microsoft:: WRL::D состояния
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Microsoft::WRL::Details](microsoft-wrl-details-namespace.md)

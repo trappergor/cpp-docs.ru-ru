@@ -13,12 +13,12 @@ helpviewer_keywords:
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-ms.openlocfilehash: dd58f32d031068785cd6020549f9eea4b2182786
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 78cf7cf16c4ccf29f72038fd79c5d7a1689c05ac
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "79544666"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172572"
 ---
 # <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>ref class и ref struct (C++/CLI и C++/CX)
 
@@ -57,7 +57,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 Дополнительные сведения см. в описаниях этого параметра для конкретного языка в разделах "Среда выполнения Windows" и "Среда CLR".
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Специальные возможности по умолчанию элемента объекта, объявленного с помощью **ref class** или **value class**, являются **private**. Специальные возможности по умолчанию элемента объекта, объявленного с помощью **ref struct** или **value struct**, являются **public**.
 
@@ -85,7 +85,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 ## <a name="windows-runtime"></a>Среда выполнения Windows
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 См. разделы [Классы и структуры ссылки (C++/CX)](../cppcx/ref-classes-and-structs-c-cx.md) и [Классы и структуры значений (C++/CX)](../cppcx/value-classes-and-structs-c-cx.md).
 
@@ -104,7 +104,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 ## <a name="common-language-runtime"></a>Среда CLR
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 В следующей таблице перечислены отличия от синтаксиса, показанного в разделе **Все среды выполнения**, которые характерны для C++/CLI.
 
@@ -121,6 +121,6 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 Параметр компилятора: `/clr`
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Расширения компонентов для .NET и UWP](component-extensions-for-runtime-platforms.md)

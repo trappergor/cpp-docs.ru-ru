@@ -1,21 +1,21 @@
 ---
-title: регистр (атрибут COM C++)
+title: Case (C++ атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.case
 helpviewer_keywords:
 - case attribute
 ms.assetid: 6fb883c3-0526-4932-a901-b4564dcaeb7d
-ms.openlocfilehash: b3058f2fe6f35e1b11d4790780cb0fcdcaada706
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da72fff3bb600b5db2fba0ecdfe9c6a768836f3c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148449"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167345"
 ---
 # <a name="case-c"></a>case (C++)
 
-Используется с [switch_type](switch-type.md) атрибут в **объединение**.
+Используется с атрибутом [switch_type](switch-type.md) в **объединении**.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -26,7 +26,7 @@ ms.locfileid: "62148449"
 #### <a name="parameters"></a>Параметры
 
 *value*<br/>
-Возможное значение ввода, для которого вы хотите предоставить обработки. Тип **значение** может принимать одно из следующих типов:
+Возможное входное значение, для которого необходимо обеспечить обработку. Тип **значения** может быть одним из следующих типов:
 
 - `int`
 
@@ -38,13 +38,13 @@ ms.locfileid: "62148449"
 
 или идентификатор такого типа.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-**Случай** атрибут C++ имеет ту же функциональность, что **случай** описании атрибута MIDL. Этот атрибут используется только с [switch_type](switch-type.md) атрибута.
+Атрибут **case** C++ имеет те же функциональные возможности, что **и атрибут MIDL.** Этот атрибут используется только с атрибутом [switch_type](switch-type.md) .
 
 ## <a name="example"></a>Пример
 
-В следующем коде показано использование **случай** атрибут:
+В следующем коде показано использование атрибута **case** :
 
 ```cpp
 // cpp_attr_ref_case.cpp
@@ -69,14 +69,14 @@ struct SizedValue2 {
 
 |||
 |-|-|
-|**Применение**|Член **класс** или **структуры**|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Нет|
-|**Недопустимые атрибуты**|Нет|
+|**Применение**|Член **класса** или **структуры**|
+|**Повторяемый**|нет|
+|**Обязательные атрибуты**|None|
+|**Недопустимые атрибуты**|None|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты Typedef, Enum, Union и Struct](typedef-enum-union-and-struct-attributes.md)<br/>

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::CallbackContext Enumeration
 ms.assetid: 60e0c7cb-5d8f-482a-bdca-ca9335ae4899
-ms.openlocfilehash: 7f4e020ab0b1e377456c27d3b4666e15b5a4f7a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1daa3988fcb985dab9d3083233a3703a20cc2fdb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161684"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214287"
 ---
 # <a name="platformcallbackcontext-enumeration"></a>Platform::CallbackContext - перечисление
 
@@ -24,12 +24,12 @@ ms.locfileid: "62161684"
 enum class CallbackContext {};
 ```
 
-### <a name="members"></a>Участники
+### <a name="members"></a>Члены
 
-|Код типа|Описание|
+|Код типа|Description|
 |---------------|-----------------|
 |Любой|Функция обратного вызова может выполняться в любом контексте потока.|
-|То же|Функция обратного вызова может выполняться в контексте потока, запустившего асинхронную операцию.|
+|Аналогично|Функция обратного вызова может выполняться в контексте потока, запустившего асинхронную операцию.|
 
 ### <a name="requirements"></a>Требования
 

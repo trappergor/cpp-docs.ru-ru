@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - __interface keyword [C++]
 ms.assetid: ca5d400b-d6d8-4ba2-89af-73f67e5ec056
-ms.openlocfilehash: 7c95e3700b4124c4793e0214ed3b06ecfeee72f1
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 9b265dcbaca9f8fa836795cca990804371813647
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222075"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178215"
 ---
-# <a name="interface"></a>__interface
+# <a name="__interface"></a>__interface
 
 **Блок, относящийся только к системам Microsoft**
 
-Microsoft C++ интерфейса могут быть определены следующим образом:
+Интерфейс Майкрософт C++ можно определить следующим образом:
 
 - Может наследовать от произвольного (включая 0) числа базовых интерфейсов.
 
@@ -37,9 +37,9 @@ Microsoft C++ интерфейса могут быть определены сл
 modifier __interface interface-name {interface-definition};
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Объект C++ [класс](../cpp/class-cpp.md) или [структуры](../cpp/struct-cpp.md) могут быть реализованы с учетом этих правил, но **__interface** применяет их.
+C++ [Класс](../cpp/class-cpp.md) или [Структура](../cpp/struct-cpp.md) можно реализовать с помощью этих правил, но **__interface** применяет их.
 
 Например, ниже приведен пример определения интерфейса:
 
@@ -50,7 +50,7 @@ __interface IMyInterface {
 };
 ```
 
-Сведения об управляемых интерфейсах см. в разделе [класс интерфейса](../extensions/interface-class-cpp-component-extensions.md).
+Дополнительные сведения об управляемых интерфейсах см. в разделе [класс интерфейса](../extensions/interface-class-cpp-component-extensions.md).
 
 Обратите внимание — нет необходимости явно указывать, что функции `CommitX` и `get_X` являются чистой виртуальными. Эквивалентное объявление для первой функции могло бы быть следующим:
 
@@ -58,7 +58,7 @@ __interface IMyInterface {
 virtual HRESULT CommitX() = 0;
 ```
 
-**__interface** подразумевает [novtable](../cpp/novtable.md) **__declspec** модификатор.
+**__interface** подразумевает модификатор [novtable](../cpp/novtable.md) **__declspec** в параметре vtable.
 
 ## <a name="example"></a>Пример
 
@@ -144,7 +144,7 @@ bstr_data = Testing
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Ключевые слова](../cpp/keywords-cpp.md)<br/>
 [Атрибуты интерфейса](../windows/attributes/interface-attributes.md)

@@ -1,11 +1,15 @@
 ---
 title: _mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbctohira
 - _mbctohira_l
 - _mbctokata
 - _mbctokata_l
+- _o__mbctohira
+- _o__mbctohira_l
+- _o__mbctokata
+- _o__mbctokata_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -41,12 +46,12 @@ helpviewer_keywords:
 - _mbctohira function
 - mbctokata function
 ms.assetid: f949afd7-44d4-4f08-ac8f-1fef2c915a1c
-ms.openlocfilehash: 6e158e933442256b1d712ba42afc28b94e2b123c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b5af94932fc90e6bcaee584e16f3056ee36dab51
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952548"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914380"
 ---
 # <a name="_mbctohira-_mbctohira_l-_mbctokata-_mbctokata_l"></a>_mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
 
@@ -76,7 +81,7 @@ unsigned int _mbctokata_l(
 
 ### <a name="parameters"></a>Параметры
 
-*c*<br/>
+*ц*<br/>
 Многобайтовый символ для преобразования.
 
 *locale*<br/>
@@ -86,7 +91,7 @@ unsigned int _mbctokata_l(
 
 Каждая из этих функций возвращает преобразованный символ *c*, если это возможно. В противном случае возвращается символ *c* без изменений.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Функции **_mbctohira** и **_mbctokata** проверяют символ *c* и, если это возможно, применяют одно из следующих преобразований.
 
@@ -95,9 +100,11 @@ unsigned int _mbctokata_l(
 |**_mbctohira**, **_mbctohira_l**|Многобайтовые символы катакана в многобайтовые символы хирагана.|
 |**_mbctokata**, **_mbctokata_l**|Многобайтовые символы хирагана в многобайтовые символы катакана.|
 
-Выходное значение зависит от настройки категории **LC_CTYPE** языкового стандарта; дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Версии этих функций идентичны, за исключением того, что не имеют суффикса **_l** , используют текущий языковой стандарт для этого поведения, зависящего от языкового стандарта, и те, у которых есть суффикс **_l** , вместо этого используют переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+Выходное значение зависит от настройки категории **LC_CTYPE** языкового стандарта; дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Версии этих функций идентичны, за исключением того, что не имеет суффикса **_l** использовать текущий языковой стандарт для этого поведения, зависящего от языкового стандарта, и те, у которых есть **_l** суффикс, вместо этого используют переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-В более ранних версиях **_mbctohira** назывался **жтохира** и **_mbctokata** назывался **жтоката**. В новом коде используйте новые имена.
+В более ранних версиях **_mbctohira** был назван **жтохира** и **_mbctokata** назывался **жтоката**. В новом коде используйте новые имена.
+
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -108,9 +115,9 @@ unsigned int _mbctokata_l(
 |**_mbctokata**|\<mbstring.h>|
 |**_mbctokata_l**|\<mbstring.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Преобразование данных](../../c-runtime-library/data-conversion.md)<br/>
 [_mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l](mbcjistojms-mbcjistojms-l-mbcjmstojis-mbcjmstojis-l.md)<br/>

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2834
 ms.assetid: 28f9f6eb-ab2a-4e64-aaaa-9d14f955de41
-ms.openlocfilehash: fb4a0e6f3f6ec227b978ae0b7d3864b2134de986
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a6a7bc0591fd51c808c303e94eeaaffd6111ffcd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406825"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201933"
 ---
 # <a name="compiler-error-c2834"></a>Ошибка компилятора C2834
 
-«оператор» должен иметь глобальное полное имя
+"operator оператор" должен быть глобально полным
 
-`new` И `delete` операторы привязаны к классу, где они находятся. Разрешение области не может использоваться для выбора версии `new` или `delete` от другого класса. Чтобы реализовать несколько форм `new` или `delete` оператор, создайте версию оператора с дополнительными формальными параметрами.
+Операторы `new` и `delete` привязаны к классу, где они находятся. Разрешение области нельзя использовать для выбора версии `new` или `delete` из другого класса. Чтобы реализовать несколько форм оператора `new` или `delete`, создайте версию оператора с дополнительными формальными параметрами.

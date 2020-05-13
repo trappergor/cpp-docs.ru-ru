@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C4536
 ms.assetid: ab4d0686-f813-4e88-a264-b40d3630ed6c
-ms.openlocfilehash: ac651b7cf6ea3e3f5e7e68d5f6097af78accff77
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d3c81282f7299317eef8bd69e340076a3a3fc96
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62220957"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198371"
 ---
 # <a name="compiler-warning-level-4-c4536"></a>Предупреждение компилятора (уровень 4) C4536
 
-«имя_типа»: имя типа превышает ограничение метаданных «limit» знаков
+"имя типа": имя типа превышает ограничение метаданных в символах "Limit"
 
-Имя типа могут быть усечены в метаданных, если он был управляемый тип. См. в разделе [C3180](../../error-messages/compiler-errors-2/compiler-error-c3180.md) Дополнительные сведения.
+Имя типа будет усечено в метаданных, если это был управляемый тип. Дополнительные сведения см. в разделе [C3180](../../error-messages/compiler-errors-2/compiler-error-c3180.md) .
 
 Это предупреждение отключено по умолчанию. Подробнее: [Выключенные по умолчанию предупреждения компилятора](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .

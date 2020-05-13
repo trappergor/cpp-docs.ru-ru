@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - VectorView Class
 ms.assetid: 05cd461d-dce7-49d3-b0e7-2e5c78ed8192
-ms.openlocfilehash: 02b5e15a816ec057bfb0a8201b7591e628c3ea2c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f12c7b926cd8d3d8fc892cff6f2245e7c216219
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161385"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032230"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Класс Platform::Collections::VectorView
 
@@ -36,28 +36,28 @@ template <typename T, typename E>
 Тип элементов, содержащихся в объекте `VectorView` .
 
 *E*<br/>
-Определяет бинарный предикат для проверки равенства со значениями типа `T`. Значение по умолчанию — `std::equal_to<T>`.
+Определяет бинарный предикат для проверки равенства со значениями типа `T`. Значение по умолчанию — `std::equal_to<T>`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-`VectorView` Класс реализует [Windows::Foundation::Collections::IVectorView\<T >](/uwp/api/Windows.Foundation.Collections.IVectorView_T_) интерфейс, а также поддержку итераторов библиотеки стандартных шаблонов.
+Класс `VectorView` реализует [Windows::Foundation::Collections:::IVectorView\<T>](/uwp/api/windows.foundation.collections.ivectorview-1) интерфейс и поддержку итераторов библиотеки Standard Template.
 
 ### <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[VectorView::VectorView](#ctor)|Инициализирует новый экземпляр класса VectorView.|
+|[Векторвид::ВекторВьюй](#ctor)|Инициализирует новый экземпляр класса VectorView.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[VectorView::First](#first)|Возвращает итератор, указывающий первый элемент объекта VectorView.|
-|[VectorView::GetAt](#getat)|Извлекает элемент текущего VectorView, указанный заданным индексом.|
-|[VectorView::GetMany](#getmany)|Извлекает последовательность элементов из текущего объекта VectorView, начиная с указанного индекса.|
-|[VectorView::IndexOf](#indexof)|Выполняет поиск указанного элемента в текущем объекте VectorView и возвращает его индекс, если он найден.|
+|[ВекторВид::Первый](#first)|Возвращает итератор, указывающий первый элемент объекта VectorView.|
+|[Векторвид::GetAt](#getat)|Извлекает элемент текущего VectorView, указанный заданным индексом.|
+|[ВекторВид::GetMany](#getmany)|Извлекает последовательность элементов из текущего объекта VectorView, начиная с указанного индекса.|
+|[Векторвид:Индекс](#indexof)|Выполняет поиск указанного элемента в текущем объекте VectorView и возвращает его индекс, если он найден.|
 |[VectorView::Size](#size)|Возвращает количество элементов в текущем объекте VectorView.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
@@ -70,7 +70,7 @@ template <typename T, typename E>
 
 **Пространство имен:** Platform::Collections
 
-## <a name="first"></a>  Метод VectorView::First
+## <a name="vectorviewfirst-method"></a><a name="first"></a>VectorView::Первый метод
 
 Возвращает итератор, указывающий первый элемент объекта VectorView.
 
@@ -86,11 +86,11 @@ virtual Windows::Foundation::Collections::IIterator<T>^
 
 Итератор, указывающий первый элемент объекта VectorView.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Удобный способ сохранения итератора, возвращаемого методом First() — присвоить возвращаемое значение переменной, объявленной с **автоматически** ключевым словом вывода типа. Например, `auto x = myVectorView->First();`.
+Удобный способ удержания итератора, возвращенного First() заключается в присвоении значения возврата переменной, которая задекларирована с ключевым словом **автоматического** типа вычета. Например, `auto x = myVectorView->First();`.
 
-## <a name="getat"></a>  Метод VectorView::GetAt
+## <a name="vectorviewgetat-method"></a><a name="getat"></a>Векторвид::Метод GetAt
 
 Извлекает элемент текущего VectorView, указанный заданным индексом.
 
@@ -112,7 +112,7 @@ T GetAt(
 
 Элемент, заданный параметром `index`. Тип элемента указан параметром шаблона VectorView, *T*.
 
-## <a name="getmany"></a>  Метод VectorView::GetMany
+## <a name="vectorviewgetmany-method"></a><a name="getmany"></a>VectorView::GetMany Метод
 
 Извлекает последовательность элементов из текущего объекта VectorView, начиная с указанного индекса.
 
@@ -138,7 +138,7 @@ virtual unsigned int GetMany(
 
 Количество извлеченных элементов.
 
-## <a name="indexof"></a>  Метод VectorView::IndexOf
+## <a name="vectorviewindexof-method"></a><a name="indexof"></a>Векторвид::Индексметод
 
 Выполняет поиск указанного элемента в текущем объекте VectorView и возвращает его индекс, если он найден.
 
@@ -160,13 +160,13 @@ virtual bool IndexOf(
 *Индекс*<br/>
 Отсчитываемый от нуля индекс элемента, если параметр `value` найден; в противном случае — 0.
 
-*Индекс* параметр равен 0, если один из элементов имеет первый элемент `VectorView` или элемент не найден. Если возвращается значение **true**, элемент был найден и он является первым элементом; в противном случае элемент не найден.
+Параметр *индекса* растеряет 0, если `VectorView` элемент является первым элементом или не найден элемент. Если значение возврата **верно,** элемент был найден, и это первый элемент; в противном случае товар не найден.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** Если указанный элемент найден; в противном случае — значение **false**.
+**верно,** если указанный элемент найден; в противном случае, **ложные**.
 
-## <a name="size"></a>  Метод VectorView::Size
+## <a name="vectorviewsize-method"></a><a name="size"></a>VectorView::Метод размера
 
 Возвращает количество элементов в текущем объекте VectorView.
 
@@ -181,7 +181,7 @@ virtual property unsigned int Size;
 
 Количество элементов в текущем объекте VectorView.
 
-## <a name="ctor"></a>  Конструктор VectorView::VectorView
+## <a name="vectorviewvectorview-constructor"></a><a name="ctor"></a>Векторвид::ВекторВид Конструктор
 
 Инициализирует новый экземпляр класса VectorView.
 
@@ -241,13 +241,13 @@ VectorView(
 
 ### <a name="parameters"></a>Параметры
 
-*InIt*<br/>
+*Init*<br/>
 Тип коллекции объектов, используемой для инициализации текущего объекта VectorView.
 
-*il*<br/>
-Объект [std::initializer_list](../standard-library/initializer-list-class.md) , элементы которого будут использоваться для инициализации объекта VectorView.
+*Il*<br/>
+[Std::initializer_list](../standard-library/initializer-list-class.md) чьи элементы будут использованы для инициализации VectorView.
 
-*N*<br/>
+*Нет*<br/>
 Количество элементов в коллекции объектов, используемой для инициализации текущего объекта VectorView.
 
 *size*<br/>
@@ -256,25 +256,25 @@ VectorView(
 *value*<br/>
 Значение, используемое для инициализации каждого элемента в текущем объекте VectorView.
 
-*v*<br/>
-[Значения lvalue и rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md) для [std::vector](../standard-library/vector-class.md) , используемый для инициализации текущего объекта VectorView.
+*V*<br/>
+[Lvalues и Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) к [std::vector,](../standard-library/vector-class.md) который используется для инициализации текущего VectorView.
 
-*ptr*<br/>
+*Ptr*<br/>
 Указатель на объект `std::vector`, используемый для инициализации текущего объекта VectorView.
 
-*arr*<br/>
-Объект [Platform::Array](../cppcx/platform-array-class.md) объект, используемый для инициализации текущего объекта VectorView.
+*Arr*<br/>
+[Платформа::Объект Array,](../cppcx/platform-array-class.md) который используется для инициализации текущего VectorView.
 
 *a*<br/>
-Объект [std::array](../standard-library/array-class-stl.md) объект, используемый для инициализации текущего объекта VectorView.
+[Std::array](../standard-library/array-class-stl.md) объект, который используется для инициализации текущего VectorView.
 
 *Первый*<br/>
-Первый элемент в последовательности объектов, используемых для инициализации текущего объекта VectorView. Тип `first` передается с помощью параметра *точную пересылку*. Дополнительные сведения см. в статье [Декларатор ссылки Rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
+Первый элемент в последовательности объектов, используемых для инициализации текущего объекта VectorView. Тип `first` передается с помощью *идеальной пересылки.* Дополнительные сведения см. в статье [Декларатор ссылки Rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-*последний*<br/>
-Последний элемент в последовательности объектов, используемых для инициализации текущего объекта VectorView. Тип `last` передается с помощью параметра *точную пересылку*. Дополнительные сведения см. в статье [Декларатор ссылки Rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
+*Последний*<br/>
+Последний элемент в последовательности объектов, используемых для инициализации текущего объекта VectorView. Тип `last` передается с помощью *идеальной пересылки.* Дополнительные сведения см. в статье [Декларатор ссылки Rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Пространство имен Platform](platform-namespace-c-cx.md)<br/>
+[Название платформы](platform-namespace-c-cx.md)<br/>
 [Создание компонентов среды выполнения Windows в C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

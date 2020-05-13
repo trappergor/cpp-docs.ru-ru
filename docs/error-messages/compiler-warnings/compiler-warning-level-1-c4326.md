@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4326
 ms.assetid: d44d2c4e-9456-42d3-b35b-4ba4b2d42ec7
-ms.openlocfilehash: d14a1902db4dcf2224ce6a58db120a81ebb5620f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 32bcd85b1cd1bb6c89678daae02f4f31a9318b6d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327357"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162976"
 ---
 # <a name="compiler-warning-level-1-c4326"></a>Предупреждение компилятора (уровень 1) C4326
 
-> Тип возвращаемого значения "*функция*«должно быть»*тип1*«вместо of»*тип2*"
+> возвращаемый тип "*функция*" должен быть "*тип1*", а не "*тип2*"
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Функция возвращает тип, отличное от *тип1*. Например, с помощью [/Za](../../build/reference/za-ze-disable-language-extensions.md), **основной** не возвратил **int**.
+Функция вернула тип, отличный от *Type1*. Например, при использовании [/Za](../../build/reference/za-ze-disable-language-extensions.md)значения/ZA **Main** не возвращает **целое**число.
 
 ## <a name="example"></a>Пример
 
-Следующий пример приводит к возникновению ошибки C4326 и показаны способы ее устранения:
+В следующем примере создается C4326 и демонстрируется его устранение.
 
 ```cpp
 // C4326.cpp

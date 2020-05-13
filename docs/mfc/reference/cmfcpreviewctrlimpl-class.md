@@ -36,16 +36,16 @@ helpviewer_keywords:
 - CMFCPreviewCtrlImpl [MFC], m_font
 - CMFCPreviewCtrlImpl [MFC], m_pDocument
 ms.assetid: 06257fa0-54c9-478d-9d68-c9698c3f93ed
-ms.openlocfilehash: f66ed8478023bd42e185da4f21740d1de2536140
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0c0a594a84b45ce7bf6f2c2fa5d1a547fa10eaa6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403637"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751848"
 ---
 # <a name="cmfcpreviewctrlimpl-class"></a>Класс CMFCPreviewCtrlImpl
 
-Этот класс реализует окно, которое помещается в окне узла, заданного оболочкой для расширенного просмотра.
+Этот класс реализует окно, которое помещается на окно хоста, предоставленное Shell для Rich Preview.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -57,39 +57,39 @@ class CMFCPreviewCtrlImpl : public CWnd;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CMFCPreviewCtrlImpl::~CMFCPreviewCtrlImpl](#dtor)|Разрушается объект предварительного просмотра элемента управления.|
-|[CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl](#cmfcpreviewctrlimpl)|Создает объект управления предварительной версии.|
+|[CMFCPreviewCtrlImpl:: »CMFCPreviewCtrlImpl](#dtor)|Уничтожает объект управления предварительным просмотром.|
+|[CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl](#cmfcpreviewctrlimpl)|Строит объект управления предварительным просмотром.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CMFCPreviewCtrlImpl::Create](#create)|Перегружен. Вызывается обработчик просмотра широкие возможности для создания окна Windows.|
-|[CMFCPreviewCtrlImpl::Destroy](#destroy)|Вызывается обработчиком расширенного просмотра, проявляющуюся при необходимости удаления этого элемента управления.|
-|[CMFCPreviewCtrlImpl::Focus](#focus)|Устанавливает фокус на элемент управления "поле ввода".|
-|[CMFCPreviewCtrlImpl::GetDocument](#getdocument)|Возвращает документ, подключенных к этому элементу управления предварительной версии.|
-|[CMFCPreviewCtrlImpl::Redraw](#redraw)|Сообщает этот элемент управления для повторной отрисовки поверхности.|
-|[CMFCPreviewCtrlImpl::SetDocument](#setdocument)|Вызывается обработчик просмотра, чтобы создать связь между реализацией документа и элемента управления просмотра.|
-|[CMFCPreviewCtrlImpl::SetHost](#sethost)|Задает новый родительский элемент для данного элемента управления.|
-|[CMFCPreviewCtrlImpl::SetPreviewVisuals](#setpreviewvisuals)|Вызывается обработчиком расширенного просмотра проявляющуюся при необходимости задать визуальные элементы из широкие возможности просмотра содержимого.|
-|[CMFCPreviewCtrlImpl::SetRect](#setrect)|Задает новый ограничивающий прямоугольник для данного элемента управления.|
+|[CMFCPreviewCtrlImpl::Создание](#create)|Перегружен. Для создания окна Windows был вызван обработчик Rich Preview.|
+|[CMFCPreviewCtrlImpl::Destroy](#destroy)|Вызывается Rich Preview обработчик, когда он должен уничтожить этот контроль.|
+|[CMFCPreviewCtrlImpl:Фокус](#focus)|Устанавливает фокус на этот элемент управления.|
+|[CMFCPreviewCtrlImpl::GetDocument](#getdocument)|Возвращает документ, подключенный к этому элементу предварительного просмотра.|
+|[CMFCPreviewCtrlImpl::Redraw](#redraw)|Говорит этому элементу перерисовать.|
+|[CMFCPreviewCtrlImpl::SetDocument](#setdocument)|Вызывается обработчиком предварительного просмотра для создания взаимосвязи между реализацией документа и контролем предварительного просмотра.|
+|[CMFCPreviewCtrlImpl::SetHost](#sethost)|Устанавливает новый элемент управления.|
+|[CMFCPreviewCtrlImpl::SetPreviewВизуальные](#setpreviewvisuals)|Вызывается Rich Preview обработчик, когда он должен установить визуальные эффекты богатого содержимого предварительного просмотра.|
+|[CMFCPreviewCtrlImpl::SetRect](#setrect)|Устанавливает новый прямоугольник для этого элемента управления.|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CMFCPreviewCtrlImpl::DoPaint](#dopaint)|Вызывается платформой для визуализации предварительного просмотра.|
+|[CMFCPreviewCtrlImpl::DoPaint](#dopaint)|Вызывается инфраструктурой для отобрагиваемого предварительного просмотра.|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CMFCPreviewCtrlImpl::m_clrBackColor](#m_clrbackcolor)|Цвет фона окна предварительного просмотра.|
-|[CMFCPreviewCtrlImpl::m_clrTextColor](#m_clrtextcolor)|Цвет текста окна предварительного просмотра.|
+|[CMFCPreviewCtrlImpl::m_clrBackColor](#m_clrbackcolor)|Фоновый цвет окна предварительного просмотра.|
+|[CMFCPreviewCtrlImpl::m_clrTextColor](#m_clrtextcolor)|Текстовый цвет окна предварительного просмотра.|
 |[CMFCPreviewCtrlImpl::m_font](#m_font)|Шрифт, используемый для отображения текста в окне предварительного просмотра.|
-|[CMFCPreviewCtrlImpl::m_pDocument](#m_pdocument)|Указатель на документ, содержимое которого отображается в элементе управления.|
+|[CMFCPreviewCtrlImpl::m_pDocument](#m_pdocument)|Указатель на документ, содержимое которого просматривается в элементе управления.|
 
 ## <a name="requirements"></a>Требования
 
@@ -105,17 +105,17 @@ class CMFCPreviewCtrlImpl : public CWnd;
 
 [CMFCPreviewCtrlImpl](../../mfc/reference/cmfcpreviewctrlimpl-class.md)
 
-## <a name="cmfcpreviewctrlimpl"></a> CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl
+## <a name="cmfcpreviewctrlimplcmfcpreviewctrlimpl"></a><a name="cmfcpreviewctrlimpl"></a>CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl
 
-Создает объект управления предварительной версии.
+Строит объект управления предварительным просмотром.
 
 ### <a name="syntax"></a>Синтаксис
 
 CMFCPreviewCtrlImpl();
 
-## <a name="create"></a> CMFCPreviewCtrlImpl::Create
+## <a name="cmfcpreviewctrlimplcreate"></a><a name="create"></a>CMFCPreviewCtrlImpl::Создание
 
-Перегружен. Вызывается обработчик просмотра широкие возможности для создания окна Windows.
+Перегружен. Для создания окна Windows был вызван обработчик Rich Preview.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -134,10 +134,10 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Параметры
 
 *hWndParent*<br/>
-Дескриптор главного окна, предоставленный оболочкой для расширенного просмотра.
+Ручка к окну хоста, поставляемая Shell для Rich Preview.
 
-*КНР*<br/>
-Задает первоначальный размер и положение окна.
+*Кнр*<br/>
+Определяет начальный размер и положение окна.
 
 *pContext*<br/>
 Указатель на контекст создания.
@@ -146,9 +146,9 @@ virtual BOOL Create(
 
 Значение TRUE, если создание прошло успешно; в противном случае — значение FALSE.
 
-## <a name="destroy"></a> CMFCPreviewCtrlImpl::Destroy
+## <a name="cmfcpreviewctrlimpldestroy"></a><a name="destroy"></a>CMFCPreviewCtrlImpl::Destroy
 
-Вызывается обработчиком расширенного просмотра, проявляющуюся при необходимости удаления этого элемента управления.
+Вызывается Rich Preview обработчик, когда он должен уничтожить этот контроль.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -156,9 +156,9 @@ virtual BOOL Create(
 virtual void Destroy();
 ```
 
-## <a name="dopaint"></a> CMFCPreviewCtrlImpl::DoPaint
+## <a name="cmfcpreviewctrlimpldopaint"></a><a name="dopaint"></a>CMFCPreviewCtrlImpl::DoPaint
 
-Вызывается платформой для визуализации предварительного просмотра.
+Вызывается инфраструктурой для отобрагиваемого предварительного просмотра.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -173,9 +173,9 @@ virtual void DoPaint(
 *pDC*<br/>
 Указатель на контекст устройства для рисования.
 
-## <a name="focus"></a> CMFCPreviewCtrlImpl::Focus
+## <a name="cmfcpreviewctrlimplfocus"></a><a name="focus"></a>CMFCPreviewCtrlImpl:Фокус
 
-Устанавливает фокус на элемент управления "поле ввода".
+Устанавливает фокус на этот элемент управления.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -183,9 +183,9 @@ virtual void DoPaint(
 virtual void Focus();
 ```
 
-## <a name="getdocument"></a> CMFCPreviewCtrlImpl::GetDocument
+## <a name="cmfcpreviewctrlimplgetdocument"></a><a name="getdocument"></a>CMFCPreviewCtrlImpl::GetDocument
 
-Возвращает документ, подключенных к этому элементу управления предварительной версии.
+Возвращает документ, подключенный к этому элементу предварительного просмотра.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -195,11 +195,11 @@ ATL::IDocument* GetDocument();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на документ, содержимое которых представлен в элементе управления.
+Указатель на документ, содержимое которого просматривается в элементе управления.
 
-## <a name="m_clrbackcolor"></a> CMFCPreviewCtrlImpl::m_clrBackColor
+## <a name="cmfcpreviewctrlimplm_clrbackcolor"></a><a name="m_clrbackcolor"></a>CMFCPreviewCtrlImpl::m_clrBackColor
 
-Цвет фона окна предварительного просмотра.
+Фоновый цвет окна предварительного просмотра.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -207,9 +207,9 @@ ATL::IDocument* GetDocument();
 COLORREF m_clrBackColor;
 ```
 
-## <a name="m_clrtextcolor"></a> CMFCPreviewCtrlImpl::m_clrTextColor
+## <a name="cmfcpreviewctrlimplm_clrtextcolor"></a><a name="m_clrtextcolor"></a>CMFCPreviewCtrlImpl::m_clrTextColor
 
-Цвет текста окна предварительного просмотра.
+Текстовый цвет окна предварительного просмотра.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -217,7 +217,7 @@ COLORREF m_clrBackColor;
 COLORREF m_clrTextColor;
 ```
 
-## <a name="m_font"></a> CMFCPreviewCtrlImpl::m_font шрифт, используемый для отображения текста в окне предварительного просмотра.
+## <a name="cmfcpreviewctrlimplm_font--font-used-to-display-text-in-the-preview-window"></a><a name="m_font"></a>CMFCPreviewCtrlImpl::m_font шрифт используется для отображения текста в окне предварительного просмотра.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -225,9 +225,9 @@ COLORREF m_clrTextColor;
 CFont m_font;
 ```
 
-## <a name="m_pdocument"></a> CMFCPreviewCtrlImpl::m_pDocument
+## <a name="cmfcpreviewctrlimplm_pdocument"></a><a name="m_pdocument"></a>CMFCPreviewCtrlImpl::m_pDocument
 
-Указатель на документ, содержимое которого отображается в элементе управления.
+Указатель на документ, содержимое которого просматривается в элементе управления.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -235,9 +235,9 @@ CFont m_font;
 ATL::IDocument* m_pDocument;
 ```
 
-## <a name="redraw"></a> CMFCPreviewCtrlImpl::Redraw
+## <a name="cmfcpreviewctrlimplredraw"></a><a name="redraw"></a>CMFCPreviewCtrlImpl::Redraw
 
-Сообщает этот элемент управления для повторной отрисовки поверхности.
+Говорит этому элементу перерисовать.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -245,13 +245,13 @@ ATL::IDocument* m_pDocument;
 virtual void Redraw();
 ```
 
-## <a name="setdocument"></a> CMFCPreviewCtrlImpl::SetDocument
+## <a name="cmfcpreviewctrlimplsetdocument"></a><a name="setdocument"></a>CMFCPreviewCtrlImpl::SetDocument
 
-Вызывается обработчик просмотра, чтобы создать связь между реализацией документа и элемента управления просмотра.
+Вызывается обработчиком предварительного просмотра для создания взаимосвязи между реализацией документа и контролем предварительного просмотра.
 
 ### <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 void SetDocument(
    IDocument* pDocument
 );
@@ -259,12 +259,12 @@ void SetDocument(
 
 ### <a name="parameters"></a>Параметры
 
-*pDocument*<br/>
+*pДокумент*<br/>
 Указатель на реализацию документа.
 
-## <a name="sethost"></a> CMFCPreviewCtrlImpl::SetHost
+## <a name="cmfcpreviewctrlimplsethost"></a><a name="sethost"></a>CMFCPreviewCtrlImpl::SetHost
 
-Задает новый родительский элемент для данного элемента управления.
+Устанавливает новый элемент управления.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -279,9 +279,9 @@ virtual void SetHost(
 *hWndParent*<br/>
 Дескриптор нового родительского окна.
 
-## <a name="setpreviewvisuals"></a> CMFCPreviewCtrlImpl::SetPreviewVisuals
+## <a name="cmfcpreviewctrlimplsetpreviewvisuals"></a><a name="setpreviewvisuals"></a>CMFCPreviewCtrlImpl::SetPreviewВизуальные
 
-Вызывается обработчиком расширенного просмотра проявляющуюся при необходимости задать визуальные элементы из широкие возможности просмотра содержимого.
+Вызывается Rich Preview обработчик, когда он должен установить визуальные эффекты богатого содержимого предварительного просмотра.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -296,17 +296,17 @@ virtual void SetPreviewVisuals(
 ### <a name="parameters"></a>Параметры
 
 *clrBack*<br/>
-Цвет фона окна предварительного просмотра.
+Фоновый цвет окна предварительного просмотра.
 
 *clrText*<br/>
-Цвет текста окна предварительного просмотра.
+Текстовый цвет окна предварительного просмотра.
 
-*plf*<br/>
+*Plf*<br/>
 Шрифт, используемый для отображения текста в окне предварительного просмотра.
 
-##  <a name="setrect"></a> CMFCPreviewCtrlImpl::SetRect
+## <a name="cmfcpreviewctrlimplsetrect"></a><a name="setrect"></a>CMFCPreviewCtrlImpl::SetRect
 
-Задает новый ограничивающий прямоугольник для данного элемента управления.
+Устанавливает новый прямоугольник для этого элемента управления.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -319,19 +319,19 @@ virtual void SetRect(
 
 ### <a name="parameters"></a>Параметры
 
-*КНР*<br/>
-Указывает новый размер и положение элемента управления предварительной версии.
+*Кнр*<br/>
+Определяет новый размер и положение элемента предварительного просмотра.
 
 *bRedraw*<br/>
-Указывает ли перерисовки элемента управления.
+Определяет, следует ли перерисовывать элемент управления.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Обычно новый ограничивающий прямоугольник имеет значение при изменении размера элемента управления ведущего приложения.
+Обычно при повторном размере элемента управления хоста устанавливается новый прямоугольник.
 
-## <a name="dtor"></a> CMFCPreviewCtrlImpl::~CMFCPreviewCtrlImpl
+## <a name="cmfcpreviewctrlimplcmfcpreviewctrlimpl"></a><a name="dtor"></a>CMFCPreviewCtrlImpl:: »CMFCPreviewCtrlImpl
 
-Разрушается объект предварительного просмотра элемента управления.
+Уничтожает объект управления предварительным просмотром.
 
 ### <a name="syntax"></a>Синтаксис
 

@@ -1,8 +1,9 @@
 ---
 title: _close
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _close
+- _o__close
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - close function
 - files [C++], closing
 ms.assetid: 4708a329-8acf-4cd9-b7b0-a952e1897247
-ms.openlocfilehash: e274cd45c42a5cf49430ecce69e111cbbf6fe88b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c642820bf1bc2e2afbd14e17832fb3fdb6f865b8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942936"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919856"
 ---
 # <a name="_close"></a>_close
 
@@ -47,14 +49,14 @@ int _close(
 
 ### <a name="parameters"></a>Параметры
 
-*fd*<br/>
+*демо*<br/>
 Дескриптор файла, ссылающийся на открытый файл.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 **_close** возвращает 0, если файл был успешно закрыт. Возвращаемое значение, равное-1, указывает на ошибку.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Функция **_close** закрывает файл, связанный с *демоном*.
 
@@ -62,19 +64,21 @@ int _close(
 
 Эта функция проверяет свои параметры. Если *демон демона* является неверным дескриптором файла, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функции возвращают значение-1 **, а для** возврата — **значение EBADF**.
 
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
+
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок|Необязательный заголовок|
 |-------------|---------------------|---------------------|
 |**_close**|\<io.h>|\<errno.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
 См. пример для [_open](open-wopen.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Низкоуровневый ввод-вывод](../../c-runtime-library/low-level-i-o.md)<br/>
 [_chsize](chsize.md)<br/>

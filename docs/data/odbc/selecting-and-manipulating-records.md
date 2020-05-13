@@ -6,12 +6,12 @@ helpviewer_keywords:
 - record selection, MFC ODBC classes
 - ODBC recordsets, selecting records
 ms.assetid: 7f0b3a4a-9941-4475-a612-9ec8d15b7691
-ms.openlocfilehash: 8388cd5c8c53a4595dc9b44430077421ee8680bf
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 596ee602b5358fbd854888f43f21748fd4d85b7a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079799"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212710"
 ---
 # <a name="selecting-and-manipulating-records"></a>Выбор и операции с записями
 
@@ -36,6 +36,6 @@ ms.locfileid: "80079799"
 
 После завершения работы с объектом набора записей его необходимо закрыть и уничтожить. Дополнительные сведения о наборах записей см. в разделе [Набор записей (ODBC)](../../data/odbc/recordset-odbc.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [ODBC и MFC](../../data/odbc/odbc-and-mfc.md)

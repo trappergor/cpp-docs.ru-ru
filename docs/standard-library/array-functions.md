@@ -10,22 +10,22 @@ helpviewer_keywords:
 - std::array [C++], get
 - std::get [C++]
 - std::swap [C++]
-ms.openlocfilehash: 61b5404d0f22cd902e35f6bee680df3c719804f2
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: d54e430853959c77b4042092409a8640a169e4c8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79424071"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364929"
 ---
 # <a name="ltarraygt-functions"></a>Функции &lt;array&gt;
 
-Заголовок \<массива > содержит две функции, не являющиеся членами, `get` и `swap`, которые работают с объектами **массива** .
+Заголовок массива \<> включает в `get` себя `swap`две функции, не являющиеся членами, и , которые работают на объектах **массива.**
 
 |||
 |-|-|
-|[get](#get)|[swap](#swap)|
+|[get](#get)|[Своп](#swap)|
 
-## <a name="get"></a>  get
+## <a name="get"></a><a name="get"></a>Получить
 
 Возвращает ссылку на указанный элемент массива.
 
@@ -51,7 +51,7 @@ constexpr T&& get(array<T, N>&& arr) noexcept;
 *N*\
 Количество элементов в массиве.
 
-\ *arr*
+*Arr*\
 Массив для выбора элемента.
 
 ### <a name="example"></a>Пример
@@ -86,9 +86,9 @@ int main()
 1 3
 ```
 
-## <a name="swap"></a>  swap
+## <a name="swap"></a><a name="swap"></a>Своп
 
-Специализация шаблона, не являющейся членом `std::swap`, которая меняет местами два объекта **массива** .
+Шаблон, не являющиеся `std::swap` членами организации, который меняет два объекта **массива.**
 
 ```cpp
 template <class Ty, std::size_t N>
@@ -103,15 +103,15 @@ void swap(array<Ty, N>& left, array<Ty, N>& right);
 *N*\
 Размер массива.
 
-*left*\
+*Левой*\
 Первый массив для обмена.
 
-*справа*\
+*Правильно*\
 Второй массив для обмена.
 
 ### <a name="remarks"></a>Remarks
 
-Функция шаблона выполняет метод `left.swap(right)`.
+Эта функция шаблона выполняет `left.swap(right)`.
 
 ### <a name="example"></a>Пример
 
@@ -161,4 +161,4 @@ int main()
 
 ## <a name="see-also"></a>См. также раздел
 
-[\<array>](../standard-library/array.md)
+[\<массив>](../standard-library/array.md)

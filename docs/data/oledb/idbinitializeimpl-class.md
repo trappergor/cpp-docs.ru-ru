@@ -38,12 +38,12 @@ helpviewer_keywords:
 - m_dwStatus
 - m_pCUtlPropInfo
 ms.assetid: e4182f81-0443-44f5-a0d3-e7e075d6f883
-ms.openlocfilehash: 1fc60db6db341d0667e24a81ae0f1394f54497ff
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: ff74ae93f01c7e8588a0eff1f48d3f6f0e6d5e81
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79546065"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210773"
 ---
 # <a name="idbinitializeimpl-class"></a>Класс IDBInitializeImpl
 
@@ -87,7 +87,7 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 |[m_dwStatus](#dwstatus)|Флаги источника данных.|
 |[m_pCUtlPropInfo](#pcutlpropinfo)|Указатель на реализацию свойств базы данных.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Обязательный интерфейс для объектов источника данных и необязательный интерфейс для перечислителей.
 
@@ -101,7 +101,7 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 IDBInitializeImpl();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Инициализирует все элементы данных.
 
@@ -115,7 +115,7 @@ IDBInitializeImpl();
 STDMETHOD(Initialize)(void);
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 См. раздел [IDBInitialize:: Initialize](/previous-versions/windows/desktop/ms718026(v=vs.85)) в *справочнике программиста OLE DB*.
 
@@ -129,7 +129,7 @@ STDMETHOD(Initialize)(void);
 STDMETHOD(Uninitialize)(void);
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 См. раздел [IDBInitialize:: Uninitialize](/previous-versions/windows/desktop/ms719648(v=vs.85)) в *справочнике программиста OLE DB*.
 
@@ -143,7 +143,7 @@ STDMETHOD(Uninitialize)(void);
 DWORD m_dwStatus;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эти флаги указывают или указывают состояние различных атрибутов для объекта источника данных. Содержит одно или несколько из следующих **перечисляемых** значений:
 
@@ -171,7 +171,7 @@ enum DATASOURCE_FLAGS {
 CUtlPropInfo< T >* m_pCUtlPropInfo;
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

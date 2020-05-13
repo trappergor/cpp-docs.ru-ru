@@ -6,23 +6,23 @@ helpviewer_keywords:
 - application deployment [C++], ClickOnce
 - ClickOnce deployment [C++], C++ applications
 ms.assetid: 9988c546-0936-452c-932f-9c76daa42157
-ms.openlocfilehash: 4408db9d129c03ee5df9b006b03c6586df02afb1
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 4726fda8c5eca70ce7acde19f141a7c096395e95
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513766"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81316612"
 ---
 # <a name="clickonce-deployment-for-visual-c-applications"></a>Развертывание с помощью технологии ClickOnce для приложений Visual C++
 
-Visual Studio предоставляет две различные технологии развертывания приложений Windows: развертывание ClickOnce и развертывание [установщика Windows](/windows/win32/Msi/windows-installer-portal).
+Visual Studio предоставляет две различных технологии развертывания приложений Windows: ClickOnce и [установщик Windows](/windows/win32/Msi/windows-installer-portal).
 
 ## <a name="clickonce-deployment-in-c"></a>Развертывание с помощью технологии ClickOnce в C++
 
-Среда визуальной C++ разработки не поддерживает развертывание проектов Visual Studio C++ напрямую с помощью ClickOnce, но для его использования доступны средства.
+Среда разработки Visual C' не поддерживает непосредственно развертывание проектов Visual Studio СЗ с помощью ClickOnce, но доступны инструменты для его использования.
 
 > [!NOTE]
->  Visual Studio поддерживает ClickOnce в средах развертывания Visual C# и Visual Basic. Если проект Visual Studio C++ является зависимостью визуального C# проекта, можно опубликовать приложение (включая его зависимости) с помощью развертывания ClickOnce из среды визуальной C# разработки.
+> Visual Studio поддерживает ClickOnce в средах развертывания Visual C# и Visual Basic. Если проект Visual Studio C', зависит от проекта Visual C, вы можете опубликовать приложение (включая его зависимости) с помощью развертывания ClickOnce из среды разработки Visual C.
 
 Для развертывания приложения Visual C++ с помощью ClickOnce сначала нужно создать [Манифест приложения ClickOnce](/visualstudio/deployment/clickonce-application-manifest) и [Манифест развертывания ClickOnce](/visualstudio/deployment/clickonce-deployment-manifest) с помощью [Mage.exe](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool) (Инструмент создания и изменения манифестов) или его версий для графического пользовательского интерфейса (сведения см. в разделе [MageUI.exe (средство создания и редактирования манифестов, графический клиент)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)).
 
@@ -38,14 +38,14 @@ Visual Studio предоставляет две различные технол�
 
 Подробные сведения об этой технологии представлены в разделе [Развертывание и безопасность технологии ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment). Подробный пример развертывания ClickOnce см. в разделе [Пошаговое руководство. Развертывание вручную приложения ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Mage.exe (средство создания и редактирования манифеста)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)<br>
-[MageUI.exe (средство создания и редактирования манифестов, графический клиент)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)<br>
+[Mage.exe (Manifest Поколения и Редактирование инструмент)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)<br>
+[MageUI.exe (Manifest Поколения и Редактирование инструмент, графический клиент)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)<br>
 [Makecert.exe (средство создания сертификатов)](/windows/win32/SecCrypto/makecert)<br>
 [Развертывание классических приложений](deploying-native-desktop-applications-visual-cpp.md)<br>
 [Развертывание приложений, служб и компонентов](/visualstudio/deployment/deploying-applications-services-and-components)<br>
-[Развертывание и безопасность технологии ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)<br>
+[ClickOnce безопасности и развертывания](/visualstudio/deployment/clickonce-security-and-deployment)<br>
 [Создание пакетов загрузчика](/visualstudio/deployment/creating-bootstrapper-packages)<br>
 [Программирование .NET с использованием C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br>
-[Взаимодействие исходного кода и платформы.NET](../dotnet/native-and-dotnet-interoperability.md)
+[Взаимосвязь между коренными жителями и .NET](../dotnet/native-and-dotnet-interoperability.md)

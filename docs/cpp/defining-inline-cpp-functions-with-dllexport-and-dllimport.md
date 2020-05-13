@@ -7,16 +7,16 @@ helpviewer_keywords:
 - dllimport attribute [C++], inline functions
 - dllexport attribute [C++], inline functions
 ms.assetid: 3b48678b-e7b8-4eda-bb46-b5d34dcf7817
-ms.openlocfilehash: 88fbb497aab4d794d3ef84a902a72c4e044e51de
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 9620706e6ac477246ce323a7fc3624291bb1dd6b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857571"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180203"
 ---
 # <a name="defining-inline-c-functions-with-dllexport-and-dllimport"></a>Определение встроенных функций C++ с помощью dllexport и dllimport
 
-**Блок, относящийся только к системам Майкрософт**
+**Блок, относящийся только к системам Microsoft**
 
 Можно определить как встроенную функцию с атрибутом **dllexport** . В этом случае всегда создается экземпляр функции и она экспортируется независимо от того, ссылается ли на нее какой-либо модуль в программе. Предполагается, что функция должна импортироваться другой программой.
 
@@ -28,6 +28,6 @@ ms.locfileid: "74857571"
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [dllexport, dllimport](../cpp/dllexport-dllimport.md)

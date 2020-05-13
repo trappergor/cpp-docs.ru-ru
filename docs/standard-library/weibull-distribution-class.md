@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::weibull_distribution [C++], param_type
 - std::weibull_distribution [C++], param_type
 ms.assetid: f20b49d3-1b9a-41af-8db4-baf800eaa02b
-ms.openlocfilehash: 8524ec61f1d785c8ab4a7b3dbef76bba69ddb6d6
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 01640cd700f54facba06f65f63e172abc668a5be
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075532"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366377"
 ---
 # <a name="weibull_distribution-class"></a>Класс weibull_distribution
 
@@ -70,12 +70,12 @@ class weibull_distribution
 
 ### <a name="parameters"></a>Параметры
 
-*Реалтипе*\
-Тип результата операции с плавающей запятой по умолчанию равен **Double**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*RealType*\
+Тип результата плавающей точки, по **умолчанию**удвоиться. Для возможных типов см [ \<>. ](../standard-library/random.md)
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Шаблон класса описывает распределение, которое создает значения определяемого пользователем типа с плавающей запятой или типа **Double** , если значение не указано, распределяется в соответствии с распределением Вейбулла. В следующей таблице представлены ссылки на статьи об отдельных членах.
+Шаблон класса описывает распределение, которое производит значения указанного пользователем типа плавающей точки, или **введите двойной** тип, если ни один не предоставляется, распределенный в соответствии с распределением Weibull. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
 ||||
 |-|-|-|
@@ -84,7 +84,7 @@ class weibull_distribution
 
 Функции свойств `a()` и `b()` возвращают соответствующие значения для хранимых параметров распределения *a* и *b*.
 
-Член свойства `param()` устанавливает или возвращает пакет хранимого пакета распределения `param_type`.
+Член свойства `param()` устанавливает или возвращает хранимый пакет параметров распределения `param_type`.
 
 Функции-члены `min()` и `max()` возвращают наименьший и наибольший из возможных результатов соответственно.
 
@@ -92,7 +92,7 @@ class weibull_distribution
 
 Функции-члены `operator()` возвращают следующее значение, созданное механизмом РГСЧ, из текущего или указанного пакета параметров.
 
-Дополнительные сведения о классах распределения и их членах см. в разделе [\<random>](../standard-library/random.md).
+Для получения дополнительной информации о классах распределения и их членах [ \<>](../standard-library/random.md)см.
 
 Подробные сведения о распределении Вейбулла см. в статье [Распределение Вейбулла](https://mathworld.wolfram.com/WeibullDistribution.html) в Wolfram MathWorld.
 
@@ -155,7 +155,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Вывод
+## <a name="output"></a>Выходные данные
 
 Первый запуск:
 
@@ -209,11 +209,11 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<случайный >
+**Заголовок:** \<random>
 
 **Пространство имен:** std
 
-## <a name="weibull_distributionweibull_distribution"></a><a name="weibull_distribution"></a>  weibull_distribution::weibull_distribution
+## <a name="weibull_distributionweibull_distribution"></a><a name="weibull_distribution"></a>weibull_distribution::weibull_distribution
 
 ```cpp
 explicit weibull_distribution(result_type a = 1.0, result_type b = 1.0);
@@ -222,24 +222,24 @@ explicit weibull_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Параметры
 
-*\*
+*a*\
 Параметр распределения `a`.
 
-*b*\
+*B*\
 Параметр распределения `b`.
 
-*parm*\
+*парм*\
 Структура `param_type`, используемая для формирования распределения.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-**Предусловие:** `0.0 < a` и `0.0 < b`
+**Предварительные условия:** `0.0 < a` и `0.0 < b`
 
 Первый конструктор создает объект, хранимое значение `a` которого содержит значение *a*, а значение `b` содержит значение *b*.
 
 Второй конструктор создает объект, хранимые параметры которого инициализируются из *parm*. Вы можете получить и задать текущие параметры существующего распределения, вызвав функцию-член `param()`.
 
-## <a name="weibull_distributionparam_type"></a><a name="param_type"></a>  weibull_distribution::param_type
+## <a name="weibull_distributionparam_type"></a><a name="param_type"></a>weibull_distribution::pараматип
 
 Сохраняет параметры распределения.
 
@@ -257,21 +257,21 @@ struct param_type {
 
 ### <a name="parameters"></a>Параметры
 
-*\*
+*a*\
 Параметр распределения `a`.
 
-*b*\
+*B*\
 Параметр распределения `b`.
 
-*справа*\
+*Правильно*\
 Объект `param_type`, который требуется сравнить с данным объектом.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-**Предусловие:** `0.0 < a` и `0.0 < b`
+**Предварительные условия:** `0.0 < a` и `0.0 < b`
 
 Эту структуру можно передать конструктору класса распределения во время создания экземпляра, функции-члену `param()` для установки хранимых параметров существующего распределения и `operator()` для использования вместо хранимых параметров.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-[\<random>](../standard-library/random.md)
+[\<случайные>](../standard-library/random.md)

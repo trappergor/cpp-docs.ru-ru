@@ -1,8 +1,9 @@
 ---
 title: _aligned_recalloc
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _aligned_recalloc
+- _o__aligned_recalloc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - aligned_recalloc function
 - _aligned_recalloc function
 ms.assetid: d3da3dcc-79ef-4273-8af5-ac7469420142
-ms.openlocfilehash: ef25769a04b27b02ccda16e86451a068ab0a0b84
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d425ff6c24cd7886c8d712b69e6e5d10da9dd6a2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943782"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909807"
 ---
 # <a name="_aligned_recalloc"></a>_aligned_recalloc
 
@@ -53,13 +55,13 @@ void * _aligned_recalloc(
 *memblock*<br/>
 Указатель текущего блока памяти.
 
-*Нумерация*<br/>
-Количество элементов
+*number*<br/>
+Число элементов.
 
 *size*<br/>
 Размер каждого элемента в байтах.
 
-*Выравнивание*<br/>
+*выравнивание*<br/>
 Значение выравнивания, которое должно быть целой степенью числа 2.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -68,11 +70,13 @@ void * _aligned_recalloc(
 
 Будет ошибкой повторно выделить память и изменить выравнивание блока.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 **_aligned_recalloc** основан на **malloc**. Дополнительные сведения об использовании **_aligned_offset_malloc**см. в разделе [malloc](malloc.md).
 
-Эта **функция устанавливает** **еномем** в случае сбоя выделения памяти или если запрошенный размер был больше **_HEAP_MAXREQ**. Дополнительные сведения о параметре " [право_doserrno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)" см **. в разделе**"переданные", "_sys_errlist" и "_sys_nerr". Кроме того, **_aligned_recalloc** проверяет свои параметры. Если значение *alignment* не является степенью числа 2, эта функция вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция возвращает **значение NULL** **и устанавливает для** **еинвал**.
+Эта **функция устанавливает значение** **еномем** , если выделение памяти завершилось ошибкой, или если запрошенный размер был больше **_HEAP_MAXREQ**. Дополнительные **сведения об этом см. в разделе** [пере_doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Кроме того, **_aligned_recalloc** проверяет свои параметры. Если значение *alignment* не является степенью числа 2, эта функция вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция возвращает **значение NULL** **и устанавливает для** **еинвал**.
+
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -80,7 +84,7 @@ void * _aligned_recalloc(
 |-------------|---------------------|
 |**_aligned_recalloc**|\<malloc.h>|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Выравнивание данных](../../c-runtime-library/data-alignment.md)<br/>
 [_recalloc](recalloc.md)<br/>

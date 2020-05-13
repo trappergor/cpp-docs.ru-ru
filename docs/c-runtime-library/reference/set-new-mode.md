@@ -1,8 +1,9 @@
 ---
 title: _set_new_mode
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _set_new_mode
+- _o__set_new_mode
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - _set_new_mode function
 - set_new_mode function
 ms.assetid: 4d14039a-e54e-4689-8c70-74a4b9834768
-ms.openlocfilehash: b248f1c97b1ec334b7441f33862b90473e08993f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f3635d462d2c7438ce985d74ff347120c02c82e0
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948443"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920104"
 ---
 # <a name="_set_new_mode"></a>_set_new_mode
 
@@ -53,17 +55,19 @@ int _set_new_mode( int newhandlermode );
 
 Возвращает предыдущий режим обработчика, установленный для **malloc**. Возвращаемое значение, равное 1, указывает, что при сбое выделения памяти **malloc** выделит ранее новую подпрограммы обработчика; Возвращаемое значение 0 указывает, что это не так. Если аргумент *невхандлермоде* не равен 0 или 1, возвращает значение-1.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Функция **_set_new_mode** C++ задает новый режим обработчика для [malloc](malloc.md). Новый режим обработчика указывает, что в случае сбоя **malloc** вызывает новую подпрограммы обработчика, заданную [_set_new_handler](set-new-handler.md). По умолчанию **malloc** не вызывает новую подпрограммы обработчика при сбое выделения памяти. Это поведение по умолчанию можно переопределить таким образом, что, когда **malloc** не сможет выделить память, **malloc** вызывает новую подпрограммы обработчика так же, как и оператор **New** в случае сбоя по той же причине. Дополнительные сведения см. в разделе об операторах [new](../../cpp/new-operator-cpp.md) и [delete](../../cpp/delete-operator-cpp.md) *справочника по языку C++* . Чтобы переопределить значение по умолчанию, вызовите:
+Функция **_set_new_mode** C++ задает новый режим обработчика для [malloc](malloc.md). Новый режим обработчика указывает, что в случае сбоя **malloc** вызывает новую подпрограммы обработчика, заданную [_set_new_handler](set-new-handler.md). По умолчанию **malloc** не вызывает новую подпрограммы обработчика при сбое выделения памяти. Это поведение по умолчанию можно переопределить таким образом, что, когда **malloc** не сможет выделить память, **malloc** вызывает новую подпрограммы обработчика так же, как и оператор **New** в случае сбоя по той же причине. Дополнительные сведения см. в разделе об операторах [new](../../cpp/new-operator-cpp.md) и [delete](../../cpp/delete-operator-cpp.md)*справочника по языку C++*. Чтобы переопределить значение по умолчанию, вызовите:
 
 ```cpp
 _set_new_mode(1);
 ```
 
-на ранних этапах программы или выполните компоновку с использованием Newmode.obj (см. раздел [Параметры ссылок](../../c-runtime-library/link-options.md)).
+ранее в программе или компоновке с помощью использованием NEWMODE. obj (см. раздел [Параметры связи](../../c-runtime-library/link-options.md)).
 
-Эта функция проверяет свои параметры. Если *невхандлермоде* имеет значение, отличное от 0 или 1, функция вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, <strong>_set_new_mode</strong> возвращает значение-1 **и устанавливает для** перекрывающегося на `EINVAL`.
+Эта функция проверяет свои параметры. Если *невхандлермоде* имеет значение, отличное от 0 или 1, функция вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, <strong>_set_new_mode</strong> возвращает значение-1 **и устанавливает для** возврата значение `EINVAL`.
+
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -71,13 +75,13 @@ _set_new_mode(1);
 |-------------|---------------------|
 |**_set_new_mode**|\<new.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Выделение памяти](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
-[free](free.md)<br/>
+[свободный](free.md)<br/>
 [realloc](realloc.md)<br/>
 [_query_new_handler](query-new-handler.md)<br/>
 [_query_new_mode](query-new-mode.md)<br/>

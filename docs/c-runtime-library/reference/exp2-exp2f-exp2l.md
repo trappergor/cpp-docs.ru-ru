@@ -1,10 +1,13 @@
 ---
 title: exp2, exp2f, exp2l
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - exp2
 - exp2f
 - exp2l
+- _o_exp2
+- _o_exp2f
+- _o_exp2l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +37,12 @@ helpviewer_keywords:
 - exp2f function
 - exp2l function
 ms.assetid: 526e3e10-201a-4610-a886-533f44ece344
-ms.openlocfilehash: 89e0448501cbd423278607bb22959c6cd1ed9464
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3a80efab34b45348ca00f09b2fd6e2ea5077fd86
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941570"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909632"
 ---
 # <a name="exp2-exp2f-exp2l"></a>exp2, exp2f, exp2l
 
@@ -77,7 +81,7 @@ long double exp2l(
 
 В случае успеха Возвращает экспоненту по основанию 2 *x*, то есть 2<sup>x</sup>. В противном случае возвращается одно из следующих значений:
 
-|Проблемы|Назад|
+|Проблема|Возвращает|
 |-----------|------------|
 |*x* = ± 0|1|
 |*x* =-бесконечность|+0|
@@ -86,11 +90,13 @@ long double exp2l(
 |Ошибка переполнения диапазона|+HUGE_VAL, +HUGE_VALF или +HUGE_VALL|
 |Ошибка недостаточного заполнения диапазона|Правильный результат, после округления|
 
-Ошибки сообщаются, как указано в [_matherr](matherr.md).
+Сообщает об ошибках, как указано в [_matherr](matherr.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Поскольку C++ допускает перегрузку, можно вызывать перегрузки **EXP2** , которые принимают и возвращают типы **float** и **long double** . В программе на языке C **EXP2** всегда принимает и возвращает значение **типа Double**.
+
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -98,9 +104,9 @@ long double exp2l(
 |-------------|--------------|------------------|
 |**exp**, **експф**, **експл**|\<math.h>|\<cmath>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Алфавитный указатель функций](crt-alphabetical-function-reference.md)<br/>
 [exp, expf, expl](exp-expf.md)<br/>

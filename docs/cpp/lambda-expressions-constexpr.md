@@ -1,19 +1,19 @@
 ---
-title: лямбда-выражения constexpr в C++
+title: лямбда-выражения constexpr вC++
 ms.date: 04/08/2019
 helpviewer_keywords:
 - lambda expressions [C++], constexpr
 ms.assetid: b56346cd-fbff-475f-aeaa-ed2010c6d6f7
-ms.openlocfilehash: d1bc60a6da813e54c857da38b0164f544216be00
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9467d9e404204012df6461adacd5dc4cdbdfe71d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368699"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179579"
 ---
-# <a name="constexpr-lambda-expressions-in-c"></a>лямбда-выражения constexpr в C++
+# <a name="constexpr-lambda-expressions-in-c"></a>лямбда-выражения constexpr вC++
 
-**Visual Studio 2017 версии 15.3 и более поздние версии** (состав [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Лямбда-выражение может быть объявлен как **constexpr** или использоваться в константном выражении, при инициализации каждого элемента данных, он фиксирует или вводит разрешено использовать в константном выражении.
+**Visual Studio 2017 версии 15,3 и более поздних версий** (доступно с [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): лямбда-выражение может быть объявлено как **constexpr** или использоваться в константном выражении, если инициализация каждого элемента данных, который он захватывает или вводит, разрешена в константном выражении.
 
 ```cpp
     int y = 32;
@@ -29,7 +29,7 @@ ms.locfileid: "62368699"
     }
 ```
 
-Лямбда-выражения является неявно **constexpr** Если результат не соответствует требованиям **constexpr** функции:
+Лямбда-выражение является неявно **constexpr** , если его результат удовлетворяет требованиям функции **constexpr** :
 
 ```cpp
     auto answer = [](int n)
@@ -40,7 +40,7 @@ ms.locfileid: "62368699"
     constexpr int response = answer(10);
 ```
 
-Если лямбда-выражение неявно или явно **constexpr**и его преобразования в указатель на функцию, полученная функция также **constexpr**:
+Если лямбда-выражение является неявно или явно и преобразуется в указатель **функции, то**результирующая функция также является **constexpr**:
 
 ```cpp
     auto Increment = [](int n)
@@ -51,7 +51,7 @@ ms.locfileid: "62368699"
     constexpr int(*inc)(int) = Increment;
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Справочник по языку C++](../cpp/cpp-language-reference.md)<br/>
 [Объекты функции в стандартной библиотеке C++](../standard-library/function-objects-in-the-stl.md)<br/>

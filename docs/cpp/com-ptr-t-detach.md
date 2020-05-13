@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - Detach method [C++]
 ms.assetid: 0652053e-af37-44e9-a278-2522212ebfed
-ms.openlocfilehash: affaefd8af4802836733587af62977171ba01410
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ba42f19e3474cc4a3199771f761b021221f430e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154972"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190018"
 ---
-# <a name="comptrtdetach"></a>_com_ptr_t::Detach
+# <a name="_com_ptr_tdetach"></a>_com_ptr_t::Detach
 
 **Блок, относящийся только к системам Microsoft**
 
@@ -25,12 +25,12 @@ ms.locfileid: "62154972"
 Interface* Detach( ) throw( );
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Извлекает и возвращает инкапсулированный указатель на интерфейс и затем очищает область хранения инкапсулированного указателя в значение NULL. Поэтому указатель на интерфейс удаляется из инкапсуляции. Это следует вызвать метод `Release` на возвращаемый указатель интерфейса.
+Извлекает и возвращает инкапсулированный указатель на интерфейс, а затем очищает область хранения инкапсулированного указателя, присваивая ему значение NULL. Поэтому указатель на интерфейс удаляется из инкапсуляции. Вы должны вызвать `Release` в возвращенном указателе интерфейса.
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс _com_ptr_t](../cpp/com-ptr-t-class.md)

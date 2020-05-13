@@ -1,11 +1,13 @@
 ---
 title: _strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsspnp
 - _wcsspnp
 - _mbsspnp_l
 - _strspnp
+- _o__mbsspnp
+- _o__mbsspnp_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -45,12 +48,12 @@ helpviewer_keywords:
 - _tcsspnp function
 - tcsspnp function
 ms.assetid: 1ce18100-2edd-4c3b-af8b-53f204d80233
-ms.openlocfilehash: af80f4970e5aad4355b0287c901f130809cc4f79
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 16c56f95fc89c1bb7b34c82cdf19c406b61c5a7e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946683"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911044"
 ---
 # <a name="_strspnp-_wcsspnp-_mbsspnp-_mbsspnp_l"></a>_strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l
 
@@ -96,21 +99,23 @@ unsigned char *_mbsspnp_l(
 
 **_strspnp**, **_wcsspnp**и **_mbsspnp** возвращают указатель на первый символ в *str* , который не принадлежит набору символов в *CharSet*. Каждая из этих функций возвращает **значение NULL** , если *str* состоит исключительно из символов из *CharSet*. Для каждой из этих подпрограмм отсутствуют зарезервированные возвращаемые значения для указания ошибки.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Функция **_mbsspnp** возвращает указатель на многобайтовый символ, который является первым символом в *str* , не принадлежащим набору символов в *CharSet*. **_mbsspnp** распознает последовательности многобайтовых символов в соответствии с используемой в данный момент [многобайтовой кодовой страницей](../../c-runtime-library/code-pages.md) . Поиск не включает завершающие нуль-символы.
 
 Если параметр *str* или *CharSet* является пустым указателем, эта функция вызывает обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает **значение NULL** и **устанавливает** для **еинвал**.
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Процедура Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsspnp**|**_strspnp**|**_mbsspnp**|**_wcsspnp**|
 
-**_strspnp** и **_wcsspnp** — это однобайтовые и версии **_mbsspnp**для расширенных символов. поведение **_strspnp** и **_wcsspnp** идентично **_mbsspnp** в противном случае. они предоставляются только для этого сопоставления и не должны использоваться по какой бы то ни было причине. Дополнительные сведения см. в разделах [Использование универсальных текстовых сопоставлений](../../c-runtime-library/using-generic-text-mappings.md) и [Универсальные текстовые сопоставления](../../c-runtime-library/generic-text-mappings.md).
+**_strspnp** и **_wcsspnp** — однобайтовые и версии **_mbsspnp**с расширенными символами. поведение **_strspnp** и **_wcsspnp** идентично **_mbsspnp** в противном случае. они предоставляются только для этого сопоставления и не должны использоваться по какой бы то ни было причине. Дополнительные сведения см. в разделах [Использование универсальных текстовых сопоставлений](../../c-runtime-library/using-generic-text-mappings.md) и [Универсальные текстовые сопоставления](../../c-runtime-library/generic-text-mappings.md).
 
-**_mbsspnp_l** является идентичным за исключением того, что использует переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+**_mbsspnp_l** является идентичным, за исключением того, что в нем используется переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -120,7 +125,7 @@ unsigned char *_mbsspnp_l(
 |**_strspnp**|\<tchar.h>|
 |**_wcsspnp**|\<tchar.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -146,8 +151,8 @@ abbage
 
 ## <a name="see-also"></a>См. также
 
-[Операции со строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Языковой стандарт](../../c-runtime-library/locale.md)<br/>
+[Управление строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Интерпретация последовательностей многобайтовых символов](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>
 [strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)<br/>

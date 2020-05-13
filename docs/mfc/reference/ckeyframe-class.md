@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CKeyFrame [MFC], m_pExistingKeyFrame
 - CKeyFrame [MFC], m_pTransition
 ms.assetid: d050a562-20f6-4c65-8ce5-ccb3aef1a20e
-ms.openlocfilehash: c2c6add30757e1d83b70001679b37a7a22b9d7d6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f535503338a82c7cc70455ae6a08cdab0f13c624
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392613"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372295"
 ---
 # <a name="ckeyframe-class"></a>Класс CKeyFrame
 
@@ -47,32 +47,32 @@ class CKeyFrame : public CBaseKeyFrame;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CKeyFrame::CKeyFrame](#ckeyframe)|Перегружен. Создает опорный кадр, зависящий от других опорного кадра.|
+|[CKeyFrame::CKeyFrame](#ckeyframe)|Перегружен. Строит ключевой кадр, который зависит от других ключевых рамок.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CKeyFrame::AddToStoryboard](#addtostoryboard)|Добавляет опорного кадра раскадровки. (Переопределяет [CBaseKeyFrame::AddToStoryboard](../../mfc/reference/cbasekeyframe-class.md#addtostoryboard).)|
-|[CKeyFrame::AddToStoryboardAfterTransition](#addtostoryboardaftertransition)|Добавляет кадр в раскадровку после перехода.|
-|[CKeyFrame::AddToStoryboardAtOffset](#addtostoryboardatoffset)|Добавляет опорный кадр на раскадровку смещением.|
-|[CKeyFrame::GetExistingKeyframe](#getexistingkeyframe)|Возвращает указатель на опорного кадра, от которых зависит этот опорный кадр.|
-|[CKeyFrame::GetOffset](#getoffset)|Возвращает смещение от других опорного кадра.|
-|[CKeyFrame::GetTransition](#gettransition)|Возвращает указатель на переход, от которых зависит этот опорный кадр.|
+|[CKeyFrame::AddtoStoryboard](#addtostoryboard)|Добавляет клавиатуру в раскадровку. (Переопределяет [CbaseKeyFrame::AddtoStoryboard](../../mfc/reference/cbasekeyframe-class.md#addtostoryboard).)|
+|[CKeyframe::AddtoStoryboardAfterTransition](#addtostoryboardaftertransition)|Добавляет клавиатуру в раскадровку после перехода.|
+|[CKeyFrame::AddtoStoryboardatOffset](#addtostoryboardatoffset)|Добавляет клавиатуру к раскадровке в смещении.|
+|[CKeyFrame::GetExistingKeyframe](#getexistingkeyframe)|Возвращает указатель на ключевой кадр, от чего зависит этот ключевой момент.|
+|[CKeyFrame::GetOffset](#getoffset)|Возвращает смещение с другого ключевого кадра.|
+|[CKeyFrame::GetTransition](#gettransition)|Возвращает указатель на переход, от этого зависит этот ключевой момент.|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CKeyFrame::m_offset](#m_offset)|Задает смещение этот опорный кадр из хранящихся в m_pExistingKeyFrame опорного кадра.|
-|[CKeyFrame::m_pExistingKeyFrame](#m_pexistingkeyframe)|Содержит указатель на существующий keframe. Этот ключевой кадр добавляется в раскадровку с m_offset существующий ключевой кадр.|
-|[CKeyFrame::m_pTransition](#m_ptransition)|Содержит указатель на перехода, которая начинается с этого опорного кадра.|
+|[CKeyFrame::m_offset](#m_offset)|Определяет смещение этого ключевого кадра с ключа, хранящегося в m_pExistingKeyFrame.|
+|[CKeyFrame::m_pExistingKeyFrame](#m_pexistingkeyframe)|Хранит указатель на существующий кефрейм. Этот ключ добавляется в раскадровку с m_offset к существующему ключу.|
+|[CKeyFrame::m_pTransition](#m_ptransition)|Хранит указатель на транситивание, которое начинается на этом ключевом кадре.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Этот класс реализует ключевой кадр анимации. Опорный кадр представляет момент времени в пределах раскадровки и может использоваться для укажите время начала и окончания переходов. Ключевой кадр может основываться на других опорных кадров и у него смещение (в секундах), или может основываться на переход и представляют на момент времени, когда заканчивается этот переход.
+Этот класс реализует клавиатуру анимации. Ключевой элемент представляет момент времени в раскадровке и может использоваться для указания времени начала и окончания переходов. Ключевой кадр может быть основан на другом ключевом кадре и иметь смещение (в секундах) от него, или может быть основан на переходе и представлять момент времени, когда этот переход заканчивается.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -86,9 +86,9 @@ class CKeyFrame : public CBaseKeyFrame;
 
 **Заголовок:** afxanimationcontroller.h
 
-##  <a name="addtostoryboard"></a>  CKeyFrame::AddToStoryboard
+## <a name="ckeyframeaddtostoryboard"></a><a name="addtostoryboard"></a>CKeyFrame::AddtoStoryboard
 
-Добавляет опорного кадра раскадровки.
+Добавляет клавиатуру в раскадровку.
 
 ```
 virtual BOOL AddToStoryboard(
@@ -102,19 +102,19 @@ virtual BOOL AddToStoryboard(
 Указатель на раскадровку.
 
 *bDeepAdd*<br/>
-Указывает, следует ли добавить опорный кадр или переход рекурсивно.
+Определяет, следует ли добавлять ключевой кадр или переход рекурсивно.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если кадр был успешно добавлен.
+ПРАВДА, если ключ был добавлен успешно.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод добавляет опорный кадр на раскадровку. Если он зависит от других опорного кадра или перехода и bDeepAdd имеет значение TRUE, этот метод пытается рекурсивно добавьте их.
+Этот метод добавляет клавиатуру к раскадровке. Если это зависит от других ключевых рамок или перехода и bDeepAdd является правдой, этот метод пытается добавить их рекурсивно.
 
-##  <a name="addtostoryboardaftertransition"></a>  CKeyFrame::AddToStoryboardAfterTransition
+## <a name="ckeyframeaddtostoryboardaftertransition"></a><a name="addtostoryboardaftertransition"></a>CKeyframe::AddtoStoryboardAfterTransition
 
-Добавляет кадр в раскадровку после перехода.
+Добавляет клавиатуру в раскадровку после перехода.
 
 ```
 BOOL AddToStoryboardAfterTransition(
@@ -128,19 +128,19 @@ BOOL AddToStoryboardAfterTransition(
 Указатель на раскадровку.
 
 *bDeepAdd*<br/>
-Указывает, следует ли добавить рекурсивно перехода.
+Определяет, следует ли добавлять переход рекурсивно.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если кадр был успешно добавлен.
+ПРАВДА, если ключ был добавлен успешно.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Эта функция вызывается платформой, чтобы добавить опорный кадр в раскадровку после перехода.
+Эта функция вызывается фректовой для добавления ключевой панели к раскадровке после перехода.
 
-##  <a name="addtostoryboardatoffset"></a>  CKeyFrame::AddToStoryboardAtOffset
+## <a name="ckeyframeaddtostoryboardatoffset"></a><a name="addtostoryboardatoffset"></a>CKeyFrame::AddtoStoryboardatOffset
 
-Добавляет опорный кадр на раскадровку смещением.
+Добавляет клавиатуру к раскадровке в смещении.
 
 ```
 virtual BOOL AddToStoryboardAtOffset(
@@ -154,19 +154,19 @@ virtual BOOL AddToStoryboardAtOffset(
 Указатель на раскадровку.
 
 *bDeepAdd*<br/>
-Указывает ли добавить опорный кадр данного опорного кадра зависеть рекурсивно.
+Определяет, следует ли добавлять ключевой кадр, от этого ключевого кадра зависит рекурсивно.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если кадр был успешно добавлен.
+ПРАВДА, если ключ был добавлен успешно.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Эта функция вызывается платформой, чтобы добавить опорный кадр на раскадровку смещением.
+Эта функция вызывается фректовой для добавления ключевой панели к раскадровке в смещении.
 
-##  <a name="ckeyframe"></a>  CKeyFrame::CKeyFrame
+## <a name="ckeyframeckeyframe"></a><a name="ckeyframe"></a>CKeyFrame::CKeyFrame
 
-Создает опорный кадр, зависящий от перехода.
+Строит ключевой элемент, зависят от перехода.
 
 ```
 CKeyFrame(CBaseTransition* pTransition);
@@ -181,19 +181,19 @@ CKeyFrame(
 *pTransition*<br/>
 Указатель на переход.
 
-*параметром pKeyframe*<br/>
-Указатель на основе опорных кадров.
+*pKeyframe*<br/>
+Указатель на клавиатуру.
 
-*offset*<br/>
-Смещение в секундах, от опорного кадра, заданного параметром pKeyframe.
+*Смещение*<br/>
+Смещение, в секундах, от клавиатуры, указанной pKeyframe.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Сконструированный опорный кадр будет представлять на момент времени в раскадровке, после окончания указанного перехода.
+Построенный ключевой кадр будет представлять момент времени в раскадровке, когда указанный переход заканчивается.
 
-##  <a name="getexistingkeyframe"></a>  CKeyFrame::GetExistingKeyframe
+## <a name="ckeyframegetexistingkeyframe"></a><a name="getexistingkeyframe"></a>CKeyFrame::GetExistingKeyframe
 
-Возвращает указатель на опорного кадра, от которых зависит этот опорный кадр.
+Возвращает указатель на ключевой кадр, от чего зависит этот ключевой момент.
 
 ```
 CBaseKeyFrame* GetExistingKeyframe();
@@ -201,15 +201,15 @@ CBaseKeyFrame* GetExistingKeyframe();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Допустимый указатель на кадр, или значение NULL, если этот кадр не зависит от других опорного кадра.
+Действительный указатель на ключевой кадр, или NULL, если этот ключевой кадр не зависит от других ключевых кадров.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Это метод доступа к опорного кадра, от которых зависит этот опорный кадр.
+Это доступ к ключевой кадр, от этого от этого ключа зависит.
 
-##  <a name="getoffset"></a>  CKeyFrame::GetOffset
+## <a name="ckeyframegetoffset"></a><a name="getoffset"></a>CKeyFrame::GetOffset
 
-Возвращает смещение от других опорного кадра.
+Возвращает смещение с другого ключевого кадра.
 
 ```
 UI_ANIMATION_SECONDS GetOffset();
@@ -217,15 +217,15 @@ UI_ANIMATION_SECONDS GetOffset();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Смещение в секундах от других опорного кадра.
+Смещение в секундах от другого ключевого кадра.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод должен вызываться для определения смещение в секундах от других опорного кадра.
+Этот метод должен быть вызван для определения смещения в секундах от другого ключевого кадра.
 
-##  <a name="gettransition"></a>  CKeyFrame::GetTransition
+## <a name="ckeyframegettransition"></a><a name="gettransition"></a>CKeyFrame::GetTransition
 
-Возвращает указатель на переход, от которых зависит этот опорный кадр.
+Возвращает указатель на переход, от этого зависит этот ключевой момент.
 
 ```
 CBaseTransition* GetTransition();
@@ -233,36 +233,36 @@ CBaseTransition* GetTransition();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Допустимый указатель на переход, или значение NULL, если этот кадр не зависит от перехода.
+Действительный указатель перехода, или NULL, если этот ключевой элемент не зависит от перехода.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Это метод доступа к переход, от которых зависит этот опорный кадр.
+Это элемент доступа к переходу, от этого ключа зависит.
 
-##  <a name="m_offset"></a>  CKeyFrame::m_offset
+## <a name="ckeyframem_offset"></a><a name="m_offset"></a>CKeyFrame::m_offset
 
-Задает смещение этот опорный кадр из хранящихся в m_pExistingKeyFrame опорного кадра.
+Определяет смещение этого ключевого кадра с ключа, хранящегося в m_pExistingKeyFrame.
 
 ```
 UI_ANIMATION_SECONDS m_offset;
 ```
 
-##  <a name="m_pexistingkeyframe"></a>  CKeyFrame::m_pExistingKeyFrame
+## <a name="ckeyframem_pexistingkeyframe"></a><a name="m_pexistingkeyframe"></a>CKeyFrame::m_pExistingKeyFrame
 
-Содержит указатель на существующий keframe. Этот ключевой кадр добавляется в раскадровку с m_offset существующий ключевой кадр.
+Хранит указатель на существующий кефрейм. Этот ключ добавляется в раскадровку с m_offset к существующему ключу.
 
 ```
 CBaseKeyFrame* m_pExistingKeyFrame;
 ```
 
-##  <a name="m_ptransition"></a>  CKeyFrame::m_pTransition
+## <a name="ckeyframem_ptransition"></a><a name="m_ptransition"></a>CKeyFrame::m_pTransition
 
-Содержит указатель на перехода, которая начинается с этого опорного кадра.
+Хранит указатель на транситивание, которое начинается на этом ключевом кадре.
 
 ```
 CBaseTransition* m_pTransition;
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Классы](../../mfc/reference/mfc-classes.md)

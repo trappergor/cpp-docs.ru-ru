@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C1210
 ms.assetid: e2208309-c284-425c-a7e8-48e96e66f35b
-ms.openlocfilehash: a90ca3e3b55642f1a6cd847997b83e4b7db46818
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 50bafa522c931c909b5ce163a78305ffc028765a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385853"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203389"
 ---
 # <a name="fatal-error-c1210"></a>Неустранимая ошибка C1210
 
 > Параметры /clr:pure и /clr:safe не поддерживаются установленной версией среды выполнения
 
-**/CLR: pure** и **/CLR: safe** параметры компилятора признаны устаревшими в Visual Studio 2015 и не поддерживается в Visual Studio 2017.
+Параметры компилятора **/clr: pure** и **/clr: Сейф** являются устаревшими в Visual Studio 2015 и не поддерживаются в Visual Studio 2017.
 
 Ошибка C1210 возникает, когда компилятор из текущего выпуска используется со средой CLR из предыдущего выпуска.
 

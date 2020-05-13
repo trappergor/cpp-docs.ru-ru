@@ -12,12 +12,12 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: ca0ba254-c7dc-4c52-abec-cf895a0c6a63
-ms.openlocfilehash: c1a3539ea4ea705ad8bd1e40acda965ef66e2051
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 0b36e4f85b855f162e11d96f8fef296c6c07597f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077718"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210305"
 ---
 # <a name="isessionpropertiesimpl-class"></a>Класс ISessionPropertiesImpl
 
@@ -53,7 +53,7 @@ class ATL_NO_VTABLE ISessionPropertiesImpl :
 |[GetProperties](#getproperties)|Возвращает список свойств в группе свойств сеанса, которые в настоящее время заданы в сеансе.|
 |[SetProperties](#setproperties)|Задает свойства в группе свойств сеанса.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Обязательный интерфейс в сеансах. Этот класс реализует свойства сеанса путем вызова статической функции, определенной в [сопоставлении набора свойств](../../data/oledb/begin-propset-map.md). Схема набора свойств должна быть указана в классе сеанса.
 
@@ -89,7 +89,7 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 
 См. раздел [исессионпропертиес:: SetProperties](/previous-versions/windows/desktop/ms714405(v=vs.85)) в *справочнике программиста OLE DB*.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

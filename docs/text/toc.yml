@@ -1,0 +1,61 @@
+- name: Текст и строки в MSVC
+  href: ../text/text-and-strings-in-visual-cpp.md
+- name: Юникод и многобайтовая кодировка
+  expanded: false
+  items:
+    - name: Юникод и многобайтовая кодировка
+      href: ../text/unicode-and-mbcs.md
+    - name: Использование на международном уровне
+      href: ../text/international-enabling.md
+    - name: Стратегии международного использования
+      href: ../text/internationalization-strategies.md
+    - name: Языковые стандарты и кодовые страницы
+      href: ../text/locales-and-code-pages.md
+    - name: Преимущества переносимости кодировки
+      href: ../text/benefits-of-character-set-portability.md
+- name: Поддержка Юникода
+  expanded: false
+  items:
+    - name: Поддержка Юникода
+      href: ../text/support-for-unicode.md
+    - name: Поддержка использования wmain
+      href: ../text/support-for-using-wmain.md
+    - name: Общие сведения о программировании Юникода
+      href: ../text/unicode-programming-summary.md
+- name: Поддержка многобайтовых кодировок
+  expanded: false
+  items:
+    - name: Поддержка многобайтовых кодировок
+      href: ../text/support-for-multibyte-character-sets-mbcss.md
+    - name: Поддержка многобайтовой кодировки в MSVC
+      href: ../text/mbcs-support-in-visual-cpp.md
+    - name: Советы по программированию многобайтовой кодировки
+      expanded: false
+      items:
+        - name: Советы по программированию многобайтовой кодировки
+          href: ../text/mbcs-programming-tips.md
+        - name: Общие советы по программированию многобайтовой кодировки
+          href: ../text/general-mbcs-programming-advice.md
+        - name: Увеличение и уменьшение значений указателей
+          href: ../text/incrementing-and-decrementing-pointers.md
+        - name: Индексы байтов
+          href: ../text/byte-indices.md
+        - name: Последний символ в строке
+          href: ../text/last-character-in-a-string.md
+        - name: Присваивание символов
+          href: ../text/character-assignment.md
+        - name: Сравнение символов
+          href: ../text/character-comparison.md
+        - name: Переполнение буфера
+          href: ../text/buffer-overflow.md
+- name: Поддержка ANSI
+  href: ../text/support-for-ansi.md
+- name: Универсальные текстовые сопоставления в файле tchar.h
+  expanded: false
+  items:
+    - name: Универсальные текстовые сопоставления в файле tchar.h
+      href: ../text/generic-text-mappings-in-tchar-h.md
+    - name: Использование типов данных TCHAR.H с кодом _MBCS
+      href: ../text/using-tchar-h-data-types-with-mbcs-code.md
+- name: Практическое руководство. Преобразование различных типов строк
+  href: ../text/how-to-convert-between-various-string-types.md

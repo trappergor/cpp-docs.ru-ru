@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4127
 ms.assetid: f59ded9e-5227-45bd-ac43-2aa861581363
-ms.openlocfilehash: 52a966bb321226058afbf4667a4192e4e814f0a1
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 9d4397c11c4d2f0f9013c7df914cbc4be9fd4e9d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075860"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198488"
 ---
 # <a name="compiler-warning-level-4-c4127"></a>Предупреждение компилятора (уровень 4) C4127
 
 > условное выражение является константой
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Управляющее выражение оператора **If** или цикла **while** вычисляет константу. Из-за общего использования идиоматическим, начиная с Visual Studio 2015 с обновлением 3, тривиальные константы, такие как 1 или **true** , не активируют предупреждение, если только они не являются результатом операции в выражении.
 

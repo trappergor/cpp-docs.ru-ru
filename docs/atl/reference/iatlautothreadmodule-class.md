@@ -1,5 +1,5 @@
 ---
-title: Класс IAtlAutoThreadModule
+title: IAtlAutoThreadModule Класс
 ms.date: 11/04/2016
 f1_keywords:
 - IAtlAutoThreadModule
@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - IAtlAutoThreadModule class
 ms.assetid: fcb58cf9-a427-4be9-89eb-04e1ab5cc3a1
-ms.openlocfilehash: f65ce43f3e88e1bbff0d2fc012b4ca75d77efc80
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4528ca4e4d72518f4da9f30e7aa71d951ddaf5b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276371"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330078"
 ---
-# <a name="iatlautothreadmodule-class"></a>Класс IAtlAutoThreadModule
+# <a name="iatlautothreadmodule-class"></a>IAtlAutoThreadModule Класс
 
-Этот класс представляет интерфейс для `CreateInstance` метод.
+Этот класс представляет собой `CreateInstance` интерфейс метода.
 
 > [!IMPORTANT]
->  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+> Этот класс и его члены не могут быть использованы в приложениях, выполняемых в Windows Runtime.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -27,14 +27,14 @@ ms.locfileid: "62276371"
 __interface IAtlAutoThreadModule
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Класс [CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md) является производным от `IAtlAutoThreadModule`, используя его для предоставления кода для создания объекта и получение указателя на интерфейс.
+Класс [CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md) происходит `IAtlAutoThreadModule`от, используя его для предоставления кода для создания объекта и извлечения указателя интерфейса.
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** atlbase.h
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Общие сведения о классе](../../atl/atl-class-overview.md)
+[Общие сведения о классах](../../atl/atl-class-overview.md)

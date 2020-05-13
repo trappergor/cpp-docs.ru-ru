@@ -8,20 +8,20 @@ helpviewer_keywords:
 - explicit virtual function overrides
 - explicit override of virtual function
 ms.assetid: ee583234-5cda-4e90-b55e-3f9fbf079ced
-ms.openlocfilehash: dbaf8b0d78093df522cfbc63bf20dd0acb6c477c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c3bf48b3dac9f23fd3894d7d3cdd41b7ec000ba4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184258"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189030"
 ---
 # <a name="explicit-overrides-c"></a>Явные переопределения (C++)
 
 **Блок, относящийся только к системам Microsoft**
 
-Если же виртуальная функция объявлена в двух и более [интерфейсы](../cpp/interface.md) и если класс является производным от этих интерфейсов, можно явным образом переопределить каждую виртуальную функцию.
+Если одна и та же виртуальная функция объявлена в двух или более [интерфейсах](../cpp/interface.md) , а класс является производным от этих интерфейсов, можно явно переопределить каждую виртуальную функцию.
 
-Сведения о явных переопределений в управляемом коде с помощью C++выполняет, см. в разделе [явное переопределение](../extensions/explicit-overrides-cpp-component-extensions.md).
+Сведения о явных переопределениях в управляемом C++коде с помощью/CLI см. в разделе [явные переопределения](../extensions/explicit-overrides-cpp-component-extensions.md).
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
@@ -119,6 +119,6 @@ In CMyClass::IMyInt2::mf2()
 In CMyClass::IMyInt2::mf2(int)
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Наследование](../cpp/inheritance-cpp.md)

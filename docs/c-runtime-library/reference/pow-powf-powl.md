@@ -1,10 +1,12 @@
 ---
 title: pow, powf, powl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - powl
 - pow
 - powf
+- _o_pow
+- _o_powf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - powf function
 - pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
-ms.openlocfilehash: 863d2b76ec131670b10eefc086fa3485bd0a983d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 38e79b547ad49c6f1c0f5a784d710838afdec388
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950290"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916797"
 ---
 # <a name="pow-powf-powl"></a>pow, powf, powl
 
@@ -68,7 +71,7 @@ long double pow( long double x, int y );  // C++ only
 *x*<br/>
 База.
 
-*y*<br/>
+*&*<br/>
 Экспонента.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -81,7 +84,7 @@ long double pow( long double x, int y );  // C++ only
 |*x* = = 0,0 и *y* = = 0,0|1|
 |*x* = = 0,0 и *y* < 0|INF|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 **Pow** не распознает целочисленные значения с плавающей запятой больше 2<sup>64</sup> (например, 1.0 E100).
 
@@ -91,13 +94,15 @@ long double pow( long double x, int y );  // C++ only
 
 Перегрузка `pow(int, int)` более не доступна. При использовании этой перегрузки компилятор может выдать [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md). Чтобы избежать этой проблемы, приведите первый параметр к типу **Double**, **float**или **Long** **Double**.
 
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
+
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок (C)|Обязательный заголовок (C++)|
 |-|-|-|
 |**Pow**, **powf**, **Повл**|\<math.h>|\<math.h> или \<cmath>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -120,7 +125,7 @@ int main( void )
 2.0 to the power of 3.0 is 8.0
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md) <br/>
 [exp, expf, expl](exp-expf.md) <br/>

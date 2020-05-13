@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4950
 ms.assetid: 50226a5c-c664-4d09-ac59-e9e874ca244f
-ms.openlocfilehash: 784179af68ff55ba70c61255c88688105ecb1738
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 52c4de94dfe087b4dcf407295e556c9350b2cb8b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208100"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164993"
 ---
 # <a name="compiler-warning-c4950"></a>Предупреждение компилятора C4950
 
 "тип_или_член": помечен как устаревший
 
-Член или тип был помечен как устаревший с помощью <xref:System.ObsoleteAttribute> атрибута.
+Элемент или тип был помечен атрибутом <xref:System.ObsoleteAttribute> как устаревший.
 
-C4950 всегда выдается как ошибка. Это предупреждение можно отключить с помощью [предупреждение](../../preprocessor/warning.md) директиву pragma или [/wd](../../build/reference/compiler-option-warning-level.md) параметр компилятора.
+C4950 всегда выдается как ошибка. Это предупреждение можно отключить с помощью директивы pragma [warning](../../preprocessor/warning.md) или параметра компилятора [/WD](../../build/reference/compiler-option-warning-level.md) .
 
 ## <a name="example"></a>Пример
 

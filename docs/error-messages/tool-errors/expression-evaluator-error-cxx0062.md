@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CAN0062
 - CGopherFile class, operations
 ms.assetid: 8e4165c4-7753-4f45-90e9-4542cbb9fc7a
-ms.openlocfilehash: 7f18ac438dd6411dbc86c8ac4c380c8ad2b59079
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9efb3347b6afecad79dd063bc3c897704416479c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299469"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184493"
 ---
 # <a name="expression-evaluator-error-cxx0062"></a>Ошибка вычислителя выражений CXX0062
 
-вызовы конструктора не поддерживается
+вызовы конструктора не поддерживаются
 
-Выражение выполнил вызов конструктора. Выражения не может явно вызывать конструкторы или выполнять преобразования, которые требуют вызова конструктора.
+Выражение выполнило вызов конструктора. Выражения не могут выполнять явные вызовы конструкторов или выполнять преобразования, требующие вызова конструктора.
 
-Эта ошибка идентична ошибке CAN0062.
+Эта ошибка идентична CAN0062.

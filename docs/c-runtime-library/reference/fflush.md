@@ -1,8 +1,9 @@
 ---
 title: fflush
-ms.date: 09/11/2019
+ms.date: 4/2/2020
 api_name:
 - fflush
+- _o_fflush
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - flushing
 - fflush function
 ms.assetid: 8bbc753f-dc74-4e77-b563-74da2835e92b
-ms.openlocfilehash: 4597a013054a549047b4467c5bfed605e55e7656
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: c5208c86484e1d9478f3879d91b32d57ba7c4a3a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077336"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912899"
 ---
 # <a name="fflush"></a>fflush
 
@@ -57,7 +59,7 @@ int fflush(
 > [!NOTE]
 > Если **fflush** возвращает **EOF**, данные могут быть потеряны из-за ошибки записи. При настройке критического обработчика ошибок можно безопасным образом отключить буферизацию с помощью функции **setvbuf** или использовать подпрограммы ввода-вывода низкого уровня, такие как **_open**, **_close**и **_Write** вместо функций потокового ввода-вывода.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Функция **fflush** очищает *поток*потока. Если поток был открыт в режиме записи, а также если он был открыт в режиме обновления и последней была выполнена операция записи, содержимое буфера потока записывается в базовый файл или на базовое устройство, после чего буфер очищается. Если поток был открыт в режиме чтения или поток не содержит буфер, вызов **fflush** не оказывает никакого влияния и сохраняется любой буфер. Вызов **fflush** инвертирует результат любого ранее вызова метода **ungetc** для потока. После вызова поток остается открытым.
 
@@ -69,13 +71,15 @@ int fflush(
 
 Функция блокирует вызывающий поток, поэтому она потокобезопасна. Сведения о версии без блокировки см. в разделе **_fflush_nolock**.
 
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
+
 ## <a name="requirements"></a>Требования
 
-|Компонент|Обязательный заголовок|
+|Функция|Обязательный заголовок|
 |--------------|---------------------|
 |**fflush**|\<stdio.h>|
 
-Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -127,7 +131,7 @@ int main(void)
 User selected 5
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)<br/>
 [fclose, _fcloseall](fclose-fcloseall.md)<br/>

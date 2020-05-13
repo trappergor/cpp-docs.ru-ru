@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - propputref attribute
 ms.assetid: 9b0aed74-fdc7-4e59-9117-949bea4f86dd
-ms.openlocfilehash: 9dc21494886f80890bcfde7f29bb3d6c86b4a51b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a9c4413e9bb8c7faa332bb842700dfcf84d6666a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514180"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166436"
 ---
 # <a name="propputref"></a>propputref
 
@@ -23,7 +23,7 @@ ms.locfileid: "69514180"
 [propputref]
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Атрибут **propputref** C++ имеет те же функциональные возможности, что и атрибут [propputref](/windows/win32/Midl/propputref) MIDL.
 
@@ -37,14 +37,14 @@ ms.locfileid: "69514180"
 
 |||
 |-|-|
-|**Относится к**|Метод|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Отсутствуют|
+|**Применение**|Метод|
+|**Повторяемый**|нет|
+|**Обязательные атрибуты**|None|
 |**Недопустимые атрибуты**|`propget`, `propput`|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты метода](method-attributes.md)<br/>

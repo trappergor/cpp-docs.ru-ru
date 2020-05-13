@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ClassFactory::QueryInterface method
 - Microsoft::WRL::ClassFactory::Release method
 ms.assetid: f13e6bce-722b-4f18-b7cf-3ffa6345c1db
-ms.openlocfilehash: ccc1c43e8c68053a773883c25704cdea086bd0b1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b738cc8f439e6653162ab99b0a26e87aa8fee36
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398738"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372668"
 ---
 # <a name="classfactory-class"></a>ClassFactory - класс
 
@@ -53,7 +53,7 @@ class ClassFactory :
 ### <a name="parameters"></a>Параметры
 
 *I0*<br/>
-Интерфейс признаками.
+Интерфейс нулевой.
 
 *I1*<br/>
 Первый интерфейс.
@@ -61,11 +61,11 @@ class ClassFactory :
 *I2*<br/>
 Второй интерфейс.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Использовать `ClassFactory` для обеспечения реализации пользовательской фабрики.
+Используйте `ClassFactory` для обеспечения реализации завода, определяемого пользователем.
 
-Следующий шаблон программирования демонстрирует использование [реализует](implements-structure.md) структура для указания более трех интерфейсов на фабрику класса.
+Следующий шаблон программирования демонстрирует, как использовать структуру [Implements](implements-structure.md) для указания более трех интерфейсов на фабрике класса.
 
 `struct MyFactory : ClassFactory<Implements<I1, I2, I3>, I4, I5>`
 
@@ -73,18 +73,18 @@ class ClassFactory :
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-name                                        | Описание
+Имя                                        | Описание
 ------------------------------------------- | -----------
-[ClassFactory::ClassFactory](#classfactory) |
+[Класс-фабрика::КлассФабрика](#classfactory) |
 
 ### <a name="public-methods"></a>Открытые методы
 
-name                                            | Описание
+Имя                                            | Описание
 ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------
-[ClassFactory::AddRef](#addref)                 | Увеличивает счетчик ссылок для текущего `ClassFactory` объекта.
-[ClassFactory::LockServer](#lockserver)         | Увеличивает или уменьшает число базовых объектов, отслеживаемых текущим `ClassFactory` объекта.
-[ClassFactory::QueryInterface](#queryinterface) | Извлекает указатель на интерфейс, заданный параметром.
-[ClassFactory::Release](#release)               | Уменьшает счетчик ссылок для текущего `ClassFactory` объекта.
+[КлассFactory::AddRef](#addref)                 | Приращения отсчета ссылок на текущий `ClassFactory` объект.
+[Класс-Фабрика:LockServer](#lockserver)         | Приращения или уменьшение количества основных объектов, отслеживаемых текущим `ClassFactory` объектом.
+[КлассНаяфабрика::Квиинтерфейс](#queryinterface) | Извлекает указатель на интерфейс, указанный по параметру.
+[КлассНаяфабрика::Освобождение](#release)               | Декретирует значение отсчета `ClassFactory` ссылок для текущего объекта.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -114,9 +114,9 @@ name                                            | Описание
 
 **Пространство имен:** Microsoft::WRL
 
-## <a name="addref"></a>ClassFactory::AddRef
+## <a name="classfactoryaddref"></a><a name="addref"></a>КлассFactory::AddRef
 
-Увеличивает счетчик ссылок для текущего `ClassFactory` объекта.
+Приращения отсчета ссылок на текущий `ClassFactory` объект.
 
 ```cpp
 STDMETHOD_(
@@ -129,15 +129,15 @@ STDMETHOD_(
 
 Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, описывающее тип сбоя.
 
-## <a name="classfactory"></a>ClassFactory::ClassFactory
+## <a name="classfactoryclassfactory"></a><a name="classfactory"></a>Класс-фабрика::КлассФабрика
 
 ```cpp
 WRL_NOTHROW ClassFactory();
 ```
 
-## <a name="lockserver"></a>ClassFactory::LockServer
+## <a name="classfactorylockserver"></a><a name="lockserver"></a>Класс-Фабрика:LockServer
 
-Увеличивает или уменьшает число базовых объектов, отслеживаемых текущим `ClassFactory` объекта.
+Приращения или уменьшение количества основных объектов, отслеживаемых текущим `ClassFactory` объектом.
 
 ```cpp
 STDMETHOD(
@@ -147,20 +147,20 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Параметры
 
-*fLock*<br/>
-**значение true,** для увеличения числа отслеживаемых объектов. **false** для уменьшения числа отслеживаемых объектов.
+*Стадо*<br/>
+**true** приращения числа отслеживаемых объектов. **ложное** для уничтожения числа отслеживаемых объектов.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Значение S_OK, если операция завершилась успешно; в противном случае — значение E_FAIL.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-`ClassFactory` следит за объектов в базовом экземпляре класса [модуль](module-class.md) класса.
+`ClassFactory`отслеживает объекты в базовом экземпляре класса [Модуль.](module-class.md)
 
-## <a name="queryinterface"></a>ClassFactory::QueryInterface
+## <a name="classfactoryqueryinterface"></a><a name="queryinterface"></a>КлассНаяфабрика::Квиинтерфейс
 
-Извлекает указатель на интерфейс, заданный параметром.
+Извлекает указатель на интерфейс, указанный по параметру.
 
 ```cpp
 STDMETHOD(
@@ -174,15 +174,15 @@ STDMETHOD(
 Идентификатор интерфейса.
 
 *ppvObject*<br/>
-После завершения операции, указатель на интерфейс, заданный параметром *riid*.
+Когда эта операция завершается, указатель на интерфейс, указанный по параметру *riid.*
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, описывающее тип сбоя.
 
-## <a name="release"></a>ClassFactory::Release
+## <a name="classfactoryrelease"></a><a name="release"></a>КлассНаяфабрика::Освобождение
 
-Уменьшает счетчик ссылок для текущего `ClassFactory` объекта.
+Декретирует значение отсчета `ClassFactory` ссылок для текущего объекта.
 
 ```cpp
 STDMETHOD_(

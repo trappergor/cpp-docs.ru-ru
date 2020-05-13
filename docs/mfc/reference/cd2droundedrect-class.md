@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CD2DRoundedRect [MFC], CD2DRoundedRect
 ms.assetid: 06207fb5-e92b-41c0-bceb-b45d8f466531
-ms.openlocfilehash: 51913a0d261a0bc91aef8f8504547a10c3e1cf36
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5189f3d824c008845570eac6eead4a35be1e483d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396266"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369075"
 ---
 # <a name="cd2droundedrect-class"></a>Класс CD2DRoundedRect
 
@@ -29,9 +29,9 @@ class CD2DRoundedRect : public D2D1_ROUNDED_RECT;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CD2DRoundedRect::CD2DRoundedRect](#cd2droundedrect)|Перегружен. Создает `CD2DRoundedRect` объекта из `D2D1_ROUNDED_RECT` объекта.|
+|[CD2DRoundedRect::CD2DRoundedRect](#cd2droundedrect)|Перегружен. Строит `CD2DRoundedRect` объект из `D2D1_ROUNDED_RECT` объекта.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -43,9 +43,9 @@ class CD2DRoundedRect : public D2D1_ROUNDED_RECT;
 
 **Заголовок:** afxrendertarget.h
 
-##  <a name="cd2droundedrect"></a>  CD2DRoundedRect::CD2DRoundedRect
+## <a name="cd2droundedrectcd2droundedrect"></a><a name="cd2droundedrect"></a>CD2DRoundedRect::CD2DRoundedRect
 
-Создает объект CD2DRoundedRect из CD2DRectF объект.
+Строит объект CD2DRoundedRect с объекта CD2DRectF.
 
 ```
 CD2DRoundedRect(
@@ -59,11 +59,11 @@ CD2DRoundedRect(const D2D1_ROUNDED_RECT* rectIn);
 ### <a name="parameters"></a>Параметры
 
 *rectIn*<br/>
-исходный прямоугольник
+источник прямоугольника
 
-*sizeRadius*<br/>
-размер RADIUS
+*размерРадиус*<br/>
+размер радиуса
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Классы](../../mfc/reference/mfc-classes.md)

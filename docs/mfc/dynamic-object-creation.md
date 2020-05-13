@@ -1,29 +1,30 @@
 ---
 title: Динамическое создание объектов
-ms.date: 11/04/2016
+ms.date: 03/27/2020
 helpviewer_keywords:
 - object creation [MFC], dynamically at run time
 - CObject class [MFC], dynamic object creation
 - objects [MFC], creating dynamically at run time
 - dynamic object creation [MFC]
 ms.assetid: 3e0f51cb-3e24-4231-817f-1c0ce9f2d5df
-ms.openlocfilehash: 3478e5481c177e0ebca1e6b5c2cd07509371c5ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40a17d3ed458d0634fd5bf27b54d0a36a65e35b9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173363"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364809"
 ---
 # <a name="dynamic-object-creation"></a>Динамическое создание объектов
 
-В этой статье объясняется, как создать объект динамически во время выполнения. В процедуре используются сведения о классе среды выполнения, как описано в статье [доступ к сведениям о классе среды выполнения](../mfc/accessing-run-time-class-information.md).
+В этой статье объясняется, как динамически создать объект во время выполнения. Процедура использует информацию о классе времени выполнения, о чем говорится в статье [Доступ к информации о run-Time Class.](../mfc/accessing-run-time-class-information.md)
 
-#### <a name="to-dynamically-create-an-object-given-its-run-time-class"></a>Для динамического создания объекта, заданного его класс времени выполнения
+#### <a name="dynamically-create-an-object-given-its-run-time-class"></a>Динамически создать объект с учетом его класса времени выполнения
 
-1. Используйте указанный ниже код для динамического создания объекта с помощью `CreateObject` функции `CRuntimeClass`. Обратите внимание, что в случае сбоя `CreateObject` возвращает **NULL** вместо активизации исключения:
+1. Используйте следующий код для динамического `CreateObject` создания `CRuntimeClass`объекта с использованием функции . При сбое возвращается `CreateObject` **NULL** вместо того, чтобы поднимать исключение:
 
    [!code-cpp[NVC_MFCCObjectSample#6](../mfc/codesnippet/cpp/dynamic-object-creation_1.cpp)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Использование CObject](../mfc/using-cobject.md)
+[Уничтожение оконных объектов](tn017-destroying-window-objects.md)
+[с помощью CObject](using-cobject.md)

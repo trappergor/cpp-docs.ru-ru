@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - Attach method [C++]
 ms.assetid: 8cad867e-40fc-435b-841f-0d412c2f58d3
-ms.openlocfilehash: 8601ebbea6a9ab837c07518b018e83e8c0df226d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 718efb9e3dac0d776678fe9efd912a602e041659
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385067"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749699"
 ---
-# <a name="bstrtattach"></a>_bstr_t::Attach
+# <a name="_bstr_tattach"></a>_bstr_t::Attach
 
-**Блок, относящийся только к системам Microsoft**
+**Microsoft Специфический**
 
 Связывает упаковщик `_bstr_t` со строкой `BSTR`.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 void Attach(
    BSTR s
 );
@@ -32,16 +32,16 @@ void Attach(
 *s*<br/>
 Ресурс `BSTR` для связывания с переменной `_bstr_t` или назначения ей.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Если переменная `_bstr_t` была ранее присоединена к другому ресурсу `BSTR`, `_bstr_t` очистит ресурсы `BSTR`, если другие переменные `_bstr_t` не используют `BSTR`.
 
 ## <a name="example"></a>Пример
 
-См. в разделе [_bstr_t::Assign](../cpp/bstr-t-assign.md) в качестве примера использования **Attach**.
+Смотрите [_bstr_t::Назначить](../cpp/bstr-t-assign.md) для примера с помощью **attach**.
 
-**Завершение блока, относящегося только к системам Майкрософт**
+**END Microsoft Специфический**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[_bstr_t Class](../cpp/bstr-t-class.md)
+[_bstr_t класс](../cpp/bstr-t-class.md)

@@ -1,9 +1,10 @@
 ---
 title: perror, _wperror
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wperror
 - perror
+- _o__wperror
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +35,12 @@ helpviewer_keywords:
 - _wperror function
 - perror function
 ms.assetid: 34fce792-16fd-4673-9849-cd88b54b6cd5
-ms.openlocfilehash: 755b638f320fcc583faecfe6aa82269e4e1b3d8f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 64b9abe6313cc13e1e20f8f66ba486cdeb3e4892
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951034"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919334"
 ---
 # <a name="perror-_wperror"></a>perror, _wperror
 
@@ -60,11 +62,13 @@ void _wperror(
 *message*<br/>
 Строковое сообщение для вывода.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Функция **perror** выводит сообщение об ошибке в **stderr**. **_wperror** — это версия **_perror**для расширенных символов; Аргумент *сообщения* для **_wperror** является строкой расширенных символов. в противном случае **_wperror** и **_perror** ведут себя одинаково.
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|
@@ -76,7 +80,7 @@ void _wperror(
 
 Чтобы получить точные результаты, вызовите **perror** сразу после того, как подпрограммы библиотеки возвращают ошибку. В противном случае последующие вызовы могут перезаписать **значение** перезаписи.
 
-В операционной системе **Windows некоторые значения** переводятся в список в диапазоне от а. H не используется. Эти значения зарезервированы для использования операционной системой UNIX. **Список значений,** используемых операционной системой Windows, см. в разделе _doserrno, перечисление, [_sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) . **perror** выводит пустую строку для **любого значения** очистки, которое не используется этими платформами.
+В операционной системе **Windows некоторые значения** переводятся в список в диапазоне от а. H не используется. Эти значения зарезервированы для использования операционной системой UNIX. **Список значений** , используемых операционной системой Windows, см. в разделе _doserrno, перечисление [, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) . **perror** выводит пустую строку для **любого значения** очистки, которое не используется этими платформами.
 
 ## <a name="requirements"></a>Требования
 
@@ -85,7 +89,7 @@ void _wperror(
 |**perror**|\<stdio.h> или \<stdlib.h>|
 |**_wperror**|\<stdio.h> или \<wchar.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Библиотеки
 
@@ -139,7 +143,7 @@ strerror says open failed: No such file or directory
 _strerror says open failed: No such file or directory
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Управление процессами и средой](../../c-runtime-library/process-and-environment-control.md)<br/>
 [clearerr](clearerr.md)<br/>

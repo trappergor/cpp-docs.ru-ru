@@ -1,9 +1,11 @@
 ---
 title: fputc, fputwc
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - fputc
 - fputwc
+- _o_fputc
+- _o_fputwc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - fputwc function
 - fputc function
 ms.assetid: 5a0a593d-43f4-4fa2-a401-ec4e23de4d2f
-ms.openlocfilehash: 3d289e54bca53be52d0b308d759f4200eca8599c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 90091bff6a8ee3ced050c359ed540f45afe74f6b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956960"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910210"
 ---
 # <a name="fputc-fputwc"></a>fputc, fputwc
 
@@ -57,7 +60,7 @@ wint_t fputwc(
 
 ### <a name="parameters"></a>Параметры
 
-*c*<br/>
+*ц*<br/>
 Символ, который требуется записать.
 
 *вышестоящий*<br/>
@@ -69,7 +72,7 @@ wint_t fputwc(
 
 Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Каждая из этих функций записывает один символ *c* в файл в позиции, указанной соответствующим индикатором позиции файла (если он определен), и перемещает индикатор соответствующим образом. В случае с **fputc** и **fputwc**файл связан с *потоком*. Если файл не поддерживает запросы позиционирования или был открыт в режиме добавления, символ добавляется в конец потока.
 
@@ -79,12 +82,14 @@ wint_t fputwc(
 
 Ниже приводятся примечания для конкретных подпрограмм.
 
-|Подпрограмма|Примечания|
+|Подпрограмма|Remarks|
 |-------------|-------------|
 |**fputc**|Эквивалентно **putc**, но реализован только как функция, а не как функция и макрос.|
 |**fputwc**|Версия **fputc**с расширенными символами. Записывает *c* в виде многобайтового символа или расширенного символа в зависимости от того, открыт ли *поток* в текстовом или двоичном режиме.|
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|
@@ -97,7 +102,7 @@ wint_t fputwc(
 |**fputc**|\<stdio.h>|
 |**fputwc**|\<stdio.h> или \<wchar.h>|
 
-Консоль не поддерживается в приложениях универсальная платформа Windows (UWP). Стандартные дескрипторы потока, связанные с консолью (**stdin**, **stdout**и **stderr**), необходимо перенаправить, прежде чем функции времени выполнения C смогут использовать их в приложениях UWP. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Консоль не поддерживается в приложениях универсальная платформа Windows (UWP). Стандартные дескрипторы потока, связанные с консолью (**stdin**, **stdout**и **stderr**), необходимо перенаправить, прежде чем функции времени выполнения C смогут использовать их в приложениях UWP. Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -124,7 +129,7 @@ int main( void )
 This is a test of fputc!!
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)<br/>
 [fgetc, fgetwc](fgetc-fgetwc.md)<br/>

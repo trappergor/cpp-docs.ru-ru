@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - retval attribute
 ms.assetid: bfa16f08-157d-4eea-afde-1232c54b8501
-ms.openlocfilehash: 2a2865c1eda229f1a2fcd457c22119b2908c1caa
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5aded4588614eb4171e31a588f125ea8aa8de7ee
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514046"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166345"
 ---
 # <a name="retval"></a>retval
 
@@ -23,7 +23,7 @@ ms.locfileid: "69514046"
 [retval]
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Атрибут **retval** C++ имеет те же функциональные возможности, что и атрибут [retval](/windows/win32/Midl/retval) в формате MIDL.
 
@@ -39,14 +39,14 @@ ms.locfileid: "69514046"
 
 |||
 |-|-|
-|**Относится к**|Параметр интерфейса, метод интерфейса|
-|**Повторяемый**|Нет|
+|**Применение**|Параметр интерфейса, метод интерфейса|
+|**Повторяемый**|нет|
 |**Обязательные атрибуты**|**out**|
-|**Недопустимые атрибуты**|**in**|
+|**Недопустимые атрибуты**|**В поле**|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты параметра](parameter-attributes.md)<br/>

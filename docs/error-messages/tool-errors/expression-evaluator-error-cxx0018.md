@@ -7,35 +7,35 @@ helpviewer_keywords:
 - CAN0018
 - CXX0018
 ms.assetid: d3d115d6-8981-4651-b615-566de867a263
-ms.openlocfilehash: 1c235e27199d79711c784e460824bf1cbb845f24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a894de22b0296a6a7ce9c52d2cbebfed057df92a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397124"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195920"
 ---
 # <a name="expression-evaluator-error-cxx0018"></a>Ошибка вычислителя выражений CXX0018
 
-Неправильное имя регистра
+неверное имя регистра
 
-Указанный регистр не существует или не может быть отображена.
+Указанный регистр не существует или не может быть отображен.
 
-Окно контрольных значений можно отобразить следующие регистры:
+Окно контрольных значений может отображать следующие регистры:
 
-AX SP ДОМЕННЫХ СЛУЖБ ACTIVE DIRECTORY, IP-АДРЕС
+IP-АДРЕС СЛУЖБ AX SP DS
 
-BX    BP    ES    FL
+BX BP, ФЛОРИДА
 
-CX SI SS GS
+GS SI SS
 
-DX    DI    CS    SS
+DX DI CS SS
 
-EIP ДОМЕННЫХ СЛУЖБ ACTIVE DIRECTORY EAX ESP
+EAX ESP DS EIP
 
-EBX EBP ES EFL
+EBX EBP ES ЕФЛ
 
-ECX    ESI    FS
+ECX ESI FS
 
-EDX    EDI    CS
+EDX EDI CS
 
-Эта ошибка идентична ошибке CAN0018.
+Эта ошибка идентична CAN0018.

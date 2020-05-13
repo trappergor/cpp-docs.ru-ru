@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4655
 ms.assetid: 540f2c7a-e4a1-49af-84b4-03eeea1bbf41
-ms.openlocfilehash: aff78dbed217a6d9c5bc2a315ef12a33fe6caf0d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4c409c2d69099853a872142e05ef0fcda5a7655
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374668"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199535"
 ---
 # <a name="compiler-warning-level-1-c4655"></a>Предупреждение компилятора (уровень 1) C4655
 
-> "*символ*": тип переменной с момента последней сборки или имеются разные объявления
+> "*символ*": тип переменной является новым с момента последней сборки или определен по-другому в другом расположении
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Вы изменили или добавили новый тип данных с момента последней успешной сборки. Функция "Изменить и продолжить" не поддерживает изменения существующих типов данных.
 

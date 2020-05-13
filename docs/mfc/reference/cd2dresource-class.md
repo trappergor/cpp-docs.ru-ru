@@ -22,16 +22,16 @@ helpviewer_keywords:
 - CD2DResource [MFC], m_bIsAutoDestroy
 - CD2DResource [MFC], m_pParentTarget
 ms.assetid: 34e3ee18-aab6-4c39-9294-de869e1f7820
-ms.openlocfilehash: e2cc6be7119a2df193aa2af415a9c8d4054f537c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e747eda42e625d0f4cf65859e471933bbb043ed
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396305"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369096"
 ---
 # <a name="cd2dresource-class"></a>Класс CD2DResource
 
-Абстрактный класс, который предоставляет интерфейс для создания и управления ими ресурсы D2D, например кистей, слоев и текстов.
+Абстрактный класс, предоставляющий интерфейс для создания и управления d2D-ресурсами, такими как кисти, слои и тексты.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -43,32 +43,32 @@ class CD2DResource : public CObject;
 
 ### <a name="protected-constructors"></a>Защищенные конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CD2DResource::CD2DResource](#cd2dresource)|Создает объект CD2DResource.|
-|[CD2DResource:: ~ CD2DResource](#_dtorcd2dresource)|Деструктор Вызывается при уничтожении объекта D2D ресурсов.|
+|[CD2DРесурс::CD2DРесурс](#cd2dresource)|Строит объект CD2DResource.|
+|[CD2DРесурс:: »CD2DРесурс](#_dtorcd2dresource)|Деструктор Вызывается при уничтожении объекта ресурса D2D.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CD2DResource::CREATE](#create)|Создает CD2DResource.|
-|[CD2DResource::destroy](#destroy)|Уничтожает объект CD2DResource.|
-|[CD2DResource::IsValid](#isvalid)|Проверяет допустимость ресурсов|
+|[CD2DРесурс::Создание](#create)|Создает CD2DРесурс.|
+|[CD2DРесурс::Dэсстрой](#destroy)|Уничтожает объект CD2DResource.|
+|[CD2DРесурс::Действительно](#isvalid)|Проверка достоверности ресурса|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CD2DResource::IsAutoDestroy](#isautodestroy)|Проверка автоматического уничтожить флаг.|
-|[CD2DResource::ReCreate](#recreate)|Повторно создает CD2DResource.|
+|[CD2DРесурс::Исавтористия](#isautodestroy)|Проверьте автоматическое уничтожение флага.|
+|[CD2DРесурс::Воссоздание](#recreate)|Воссоздает CD2DРесурс.|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CD2DResource::m_bIsAutoDestroy](#m_bisautodestroy)|Ресурс будет уничтожен владельца (CRenderTarget)|
-|[CD2DResource::m_pParentTarget](#m_pparenttarget)|Указатель на родительский CRenderTarget)|
+|[CD2DРесурс::m_bIsAutoDestroy](#m_bisautodestroy)|Ресурс будет уничтожен владельцем (CRenderTarget)|
+|[CD2DРесурс::m_pParentTarget](#m_pparenttarget)|Указатель на родительский CRenderTarget)|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -80,17 +80,17 @@ class CD2DResource : public CObject;
 
 **Заголовок:** afxrendertarget.h
 
-##  <a name="_dtorcd2dresource"></a>  CD2DResource:: ~ CD2DResource
+## <a name="cd2dresourcecd2dresource"></a><a name="_dtorcd2dresource"></a>CD2DРесурс:: »CD2DРесурс
 
-Деструктор Вызывается при уничтожении объекта D2D ресурсов.
+Деструктор Вызывается при уничтожении объекта ресурса D2D.
 
 ```
 virtual ~CD2DResource();
 ```
 
-##  <a name="cd2dresource"></a>  CD2DResource::CD2DResource
+## <a name="cd2dresourcecd2dresource"></a><a name="cd2dresource"></a>CD2DРесурс::CD2DРесурс
 
-Создает объект CD2DResource.
+Строит объект CD2DResource.
 
 ```
 CD2DResource(
@@ -101,14 +101,14 @@ CD2DResource(
 ### <a name="parameters"></a>Параметры
 
 *pParentTarget*<br/>
-Указатель на целевой объект отрисовки.
+Указатель на цель рендера.
 
 *bAutoDestroy*<br/>
-Указывает, что объект будет уничтожен владельца (pParentTarget).
+Означает, что объект будет уничтожен владельцем (pParentTarget).
 
-##  <a name="create"></a>  CD2DResource::CREATE
+## <a name="cd2dresourcecreate"></a><a name="create"></a>CD2DРесурс::Создание
 
-Создает CD2DResource.
+Создает CD2DРесурс.
 
 ```
 virtual HRESULT Create(CRenderTarget* pRenderTarget) = 0;
@@ -117,13 +117,13 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget) = 0;
 ### <a name="parameters"></a>Параметры
 
 *pRenderTarget*<br/>
-Указатель на целевой объект отрисовки.
+Указатель на цель рендера.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если метод завершается успешно, возвращается значение S_OK. В противном случае он возвращает код ошибки HRESULT.
+Если метод завершается успешно, возвращает значение S_OK. В противном случае он возвращает код ошибки HRESULT.
 
-##  <a name="destroy"></a>  CD2DResource::destroy
+## <a name="cd2dresourcedestroy"></a><a name="destroy"></a>CD2DРесурс::Dэсстрой
 
 Уничтожает объект CD2DResource.
 
@@ -131,9 +131,9 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget) = 0;
 virtual void Destroy() = 0;
 ```
 
-##  <a name="isautodestroy"></a>  CD2DResource::IsAutoDestroy
+## <a name="cd2dresourceisautodestroy"></a><a name="isautodestroy"></a>CD2DРесурс::Исавтористия
 
-Проверка автоматического уничтожить флаг.
+Проверьте автоматическое уничтожение флага.
 
 ```
 BOOL IsAutoDestroy() const;
@@ -141,11 +141,11 @@ BOOL IsAutoDestroy() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если объект будет уничтожен ее владельцем; в противном случае — значение FALSE.
+TRUE, если объект будет уничтожен его владельцем; в противном случае FALSE.
 
-##  <a name="isvalid"></a>  CD2DResource::IsValid
+## <a name="cd2dresourceisvalid"></a><a name="isvalid"></a>CD2DРесурс::Действительно
 
-Проверяет допустимость ресурсов
+Проверка достоверности ресурса
 
 ```
 virtual BOOL IsValid() const = 0;
@@ -153,17 +153,17 @@ virtual BOOL IsValid() const = 0;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если ресурс является допустимым; в противном случае — значение FALSE.
+TRUE, если ресурс действителен; в противном случае FALSE.
 
-##  <a name="m_bisautodestroy"></a>  CD2DResource::m_bIsAutoDestroy
+## <a name="cd2dresourcem_bisautodestroy"></a><a name="m_bisautodestroy"></a>CD2DРесурс::m_bIsAutoDestroy
 
-Ресурс будет уничтожен владельца (CRenderTarget)
+Ресурс будет уничтожен владельцем (CRenderTarget)
 
 ```
 BOOL m_bIsAutoDestroy;
 ```
 
-##  <a name="m_pparenttarget"></a>  CD2DResource::m_pParentTarget
+## <a name="cd2dresourcem_pparenttarget"></a><a name="m_pparenttarget"></a>CD2DРесурс::m_pParentTarget
 
 Указатель на родительский CRenderTarget)
 
@@ -171,9 +171,9 @@ BOOL m_bIsAutoDestroy;
 CRenderTarget* m_pParentTarget;
 ```
 
-##  <a name="recreate"></a>  CD2DResource::ReCreate
+## <a name="cd2dresourcerecreate"></a><a name="recreate"></a>CD2DРесурс::Воссоздание
 
-Повторно создает CD2DResource.
+Воссоздает CD2DРесурс.
 
 ```
 virtual HRESULT ReCreate(CRenderTarget* pRenderTarget);
@@ -182,12 +182,12 @@ virtual HRESULT ReCreate(CRenderTarget* pRenderTarget);
 ### <a name="parameters"></a>Параметры
 
 *pRenderTarget*<br/>
-Указатель на целевой объект отрисовки.
+Указатель на цель рендера.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если метод завершается успешно, возвращается значение S_OK. В противном случае он возвращает код ошибки HRESULT.
+Если метод завершается успешно, возвращает значение S_OK. В противном случае он возвращает код ошибки HRESULT.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Классы](../../mfc/reference/mfc-classes.md)

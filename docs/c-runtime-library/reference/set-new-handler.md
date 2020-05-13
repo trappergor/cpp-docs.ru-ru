@@ -1,8 +1,9 @@
 ---
 title: _set_new_handler
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _set_new_handler
+- _o__set_new_handler
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - error handling
 - transferring control to error handler
 ms.assetid: 1d1781b6-5cf8-486a-b430-f365e0bb023f
-ms.openlocfilehash: a1f340887efd657dd9ff9bf219534d77fdd90aa3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 06da25fb38d18691f78973f4e63a8b7b48d98ce1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948470"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913960"
 ---
 # <a name="_set_new_handler"></a>_set_new_handler
 
@@ -52,20 +54,22 @@ _PNH _set_new_handler( _PNH pNewHandler );
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает указатель на предыдущую функцию обработки исключений, зарегистрированную в **_set_new_handler**, чтобы предыдущую функцию можно было восстановить позже. Если Предыдущая функция не задана, возвращаемое значение можно использовать для восстановления поведения по умолчанию. Это значение может быть **равно NULL**.
+Возвращает указатель на предыдущую функцию обработки исключений, зарегистрированную **_set_new_handler**, чтобы Предыдущая функция могла быть восстановлена позже. Если Предыдущая функция не задана, возвращаемое значение можно использовать для восстановления поведения по умолчанию. Это значение может быть **равно NULL**.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-C++ Функция **_set_new_handler** указывает функцию обработки исключений, которая получает управление, если оператору **New** не удается выделить память. Если **Новая** ошибка не возникает, система времени выполнения автоматически вызывает функцию обработки исключений, которая была передана в качестве аргумента в **_set_new_handler**. **_PNH**, определенный в New. h, является указателем на функцию, возвращающую тип **int** и принимающую аргумент типа **size_t**. Используйте **size_t** , чтобы указать объем выделяемого пространства.
+Функция C++ **_set_new_handler** указывает функцию обработки исключений, которая получает управление, если оператору **New** не удается выделить память. В **случае неудачи система** времени выполнения автоматически вызывает функцию обработки исключений, которая была передана в качестве аргумента для **_set_new_handler**. **_PNH**, определенный в New. h, является указателем на функцию, возвращающую тип **int** и принимающую аргумент типа **size_t**. Используйте **size_t** , чтобы указать объем выделяемого пространства.
 
 Обработчик по умолчанию отсутствует.
 
 **_set_new_handler** — это, по сути, схема сбора мусора. Система времени выполнения делает попытку выделения памяти каждый раз, когда пользовательская функция возвращает ненулевое значение, и завершается неудачей, если пользовательская функция возвращает 0.
 
-Вхождение функции **_set_new_handler** в программу регистрирует функцию обработки исключений, указанную в списке аргументов, с системой времени выполнения:
+Вхождение функции **_set_new_handler** в программе регистрирует функцию обработки исключений, указанную в списке аргументов, с системой времени выполнения:
 
 ```cpp
 // set_new_handler1.cpp
+By default, this function's global state is scoped to the application. To change this, see [Global state in the CRT](../global-state.md).
+
 #include <new.h>
 
 int handle_program_memory_depletion( size_t )
@@ -80,7 +84,7 @@ int main( void )
 }
 ```
 
-Вы можете сохранить адрес функции, который был в последний раз передан функции **_set_new_handler** , и восстановить его позже:
+Вы можете сохранить адрес функции, который был в последний раз передан функции **_set_new_handler** , и возобновить ее позже:
 
 ```cpp
    _PNH old_handler = _set_new_handler( my_handler );
@@ -101,7 +105,7 @@ _set_new_mode(1);
 
 Если предоставлено определенное `operator new` пользователем значение, новые функции обработчика не вызываются автоматически при сбое.
 
-Дополнительные сведения см. в разделе [new](../../cpp/new-operator-cpp.md) и [delete](../../cpp/delete-operator-cpp.md) в *Справочнике по языку C++* .
+Дополнительные сведения см. в разделе [new](../../cpp/new-operator-cpp.md) и [delete](../../cpp/delete-operator-cpp.md) в *Справочнике по языку C++*.
 
 Существует один обработчик **_set_new_handler** для всех динамически связанных DLL-библиотек или исполняемых файлов. даже при вызове **_set_new_handler** обработчик может быть заменен другим или заменять обработчик, заданный другой библиотекой DLL или исполняемым файлом.
 
@@ -111,7 +115,7 @@ _set_new_mode(1);
 |-------------|---------------------|
 |**_set_new_handler**|\<new.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -163,9 +167,9 @@ This application has requested the Runtime to terminate it in an unusual way.
 Please contact the application's support team for more information.
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Выделение памяти](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
-[free](free.md)<br/>
+[свободный](free.md)<br/>
 [realloc](realloc.md)<br/>

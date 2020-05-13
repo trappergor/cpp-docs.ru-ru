@@ -1,9 +1,11 @@
 ---
 title: _fseek_nolock, _fseeki64_nolock
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _fseek_nolock
 - _fseeki64_nolock
+- _o__fseek_nolock
+- _o__fseeki64_nolock
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - _fseeki64_nolock function
 - seek file pointers
 ms.assetid: 2dd4022e-b715-462b-b935-837561605a02
-ms.openlocfilehash: c72f44b214893a6702f5da5594db7725a2f02136
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c09f9964416785131c0c928c214a0de5ec6dd859
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956531"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910161"
 ---
 # <a name="_fseek_nolock-_fseeki64_nolock"></a>_fseek_nolock, _fseeki64_nolock
 
@@ -67,16 +70,18 @@ int _fseeki64_nolock(
 *offset*<br/>
 Количество байт, начиная с *origin*.
 
-*origin*<br/>
+*лета*<br/>
 Первоначальная позиция.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 То же, что и [fseek](fseek-fseeki64.md) и [_fseeki64](fseek-fseeki64.md)соответственно.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Эти функции представляют собой неблокирующие версии [fseek](fseek-fseeki64.md) и [_fseeki64](fseek-fseeki64.md), соответственно. Они идентичны [fseek](fseek-fseeki64.md) и [_fseeki64](fseek-fseeki64.md) , за исключением того, что они не защищены от помех в других потоках. Они могут выполняться быстрее, так как не создают дополнительную нагрузку, связанную с блокировкой работы других потоков. Используйте эти функции только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.
+Эти функции представляют собой неблокирующие версии [fseek](fseek-fseeki64.md) и [_fseeki64](fseek-fseeki64.md)соответственно. Они идентичны [fseek](fseek-fseeki64.md) и [_fseeki64](fseek-fseeki64.md) за исключением того, что они не защищены от помех в других потоках. Они могут выполняться быстрее, так как не создают дополнительную нагрузку, связанную с блокировкой работы других потоков. Используйте эти функции только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.
+
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -84,9 +89,9 @@ int _fseeki64_nolock(
 |--------------|---------------------|
 |**_fseek_nolock**, **_fseeki64_nolock**|\<stdio.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)<br/>
 [ftell, _ftelli64](ftell-ftelli64.md)<br/>

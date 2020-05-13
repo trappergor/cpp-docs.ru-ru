@@ -1,5 +1,5 @@
 ---
-title: Класс IProvideClassInfo2Impl
+title: IProvideClassInfo2Impl класс
 ms.date: 11/04/2016
 f1_keywords:
 - IProvideClassInfo2Impl
@@ -13,16 +13,16 @@ helpviewer_keywords:
 - IProvideClassInfo2 ATL implementation
 - class information, ATL
 ms.assetid: d74956e8-9c69-4cba-b99d-ca1ac031bb9d
-ms.openlocfilehash: f0ff3607002d32b4e21f7fc2199cc5da3662af8b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 0d1ee9acc1cfabc71ecf33fcb5919d826899c671
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495539"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329568"
 ---
-# <a name="iprovideclassinfo2impl-class"></a>Класс IProvideClassInfo2Impl
+# <a name="iprovideclassinfo2impl-class"></a>IProvideClassInfo2Impl класс
 
-Этот класс предоставляет реализацию методов [IProvideClassInfo](/windows/win32/api/ocidl/nn-ocidl-iprovideclassinfo) и [IProvideClassInfo2](/windows/win32/api/ocidl/nn-ocidl-iprovideclassinfo2) по умолчанию.
+Этот класс обеспечивает реализацию по умолчанию методов [IProvideClassInfo](/windows/win32/api/ocidl/nn-ocidl-iprovideclassinfo) и [IProvideClassInfo2.](/windows/win32/api/ocidl/nn-ocidl-iprovideclassinfo2)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -37,50 +37,50 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
 
 #### <a name="parameters"></a>Параметры
 
-*пкоклсид*<br/>
-Указатель на идентификатор coclass.
+*пкоксид*<br/>
+Указатель на идентификатор кокласса.
 
-*псрЦид*<br/>
-Указатель на идентификатор исходящего disp-интерфейса по умолчанию coclass.
+*psrcid*<br/>
+Указатель на идентификатор для исходящего дистипа кокласса по умолчанию.
 
 *плибид*<br/>
-Указатель на идентификатор LIBID библиотеки типов, который содержит сведения об интерфейсе. По умолчанию передается библиотека типов на уровне сервера.
+Указатель на LIBID библиотеки типов, содержащей информацию об интерфейсе. По умолчанию библиотека типа сервера передается.
 
-*вмажор*<br/>
-Основной номер версии для библиотеки типов. Значение по умолчанию — 1.
+*wMajor*<br/>
+Основной номер версии для библиотеки типов. Значение по умолчанию — 1.
 
-*вминор*<br/>
+*wMinor*<br/>
 Дополнительный номер версии для библиотеки типов. Значение по умолчанию — 0.
 
-*тихкласс*<br/>
-Класс, используемый для управления информацией о типе coclass. Значение по умолчанию — `CComTypeInfoHolder`.
+*tihclass*<br/>
+Класс используется для управления информацией типа coclass. Значение по умолчанию — `CComTypeInfoHolder`.
 
 ## <a name="members"></a>Участники
 
 ### <a name="constructors"></a>Конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[IProvideClassInfo2Impl::IProvideClassInfo2Impl](#iprovideclassinfo2impl)|Конструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[IProvideClassInfo2Impl:: Жетклассинфо](#getclassinfo)|`ITypeInfo` Извлекает указатель на сведения о типе coclass.|
-|[IProvideClassInfo2Impl:: a GUID](#getguid)|Извлекает идентификатор GUID исходящего интерфейса пользователя объекта.|
+|[IProvideClassInfo2Impl::GetClassInfo](#getclassinfo)|Извлекает `ITypeInfo` указатель на информацию типа coclass.|
+|[IProvideClassinfo2Impl::GetGUID](#getguid)|Извлекает GUID для исходящего дисинтерфейса объекта.|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[IProvideClassInfo2Impl::_tih](#_tih)|Управляет сведениями о типе для компонентного класса.|
+|[IProvideClassInfo2Impl::_tih](#_tih)|Управляет информацией типа для coclass.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Интерфейс [IProvideClassInfo2](/windows/win32/api/ocidl/nn-ocidl-iprovideclassinfo2) расширяет `GetGUID` класс [IProvideClassInfo](/windows/win32/api/ocidl/nn-ocidl-iprovideclassinfo) , добавляя метод. Этот метод позволяет клиенту получить исходящий интерфейс IID объекта для набора событий по умолчанию. Класс `IProvideClassInfo2Impl` предоставляет реализацию `IProvideClassInfo` методов и `IProvideClassInfo2` по умолчанию.
+Интерфейс [IProvideClassInfo2](/windows/win32/api/ocidl/nn-ocidl-iprovideclassinfo2) расширяет [IProvideClassInfo,](/windows/win32/api/ocidl/nn-ocidl-iprovideclassinfo) `GetGUID` добавляя метод. Этот метод позволяет клиенту получить исходящий IID интерфейса объекта для набора событий по умолчанию. Класс `IProvideClassInfo2Impl` обеспечивает реализацию `IProvideClassInfo` и `IProvideClassInfo2` методы по умолчанию.
 
-`IProvideClassInfo2Impl`содержит статический член типа `CComTypeInfoHolder` , который управляет сведениями о типе для компонентного класса.
+`IProvideClassInfo2Impl`содержит статический член `CComTypeInfoHolder` типа, который управляет информацией типа для coclass.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -90,23 +90,23 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** атлком. h
+**Заголовок:** atlcom.h
 
-##  <a name="getclassinfo"></a>IProvideClassInfo2Impl:: Жетклассинфо
+## <a name="iprovideclassinfo2implgetclassinfo"></a><a name="getclassinfo"></a>IProvideClassInfo2Impl::GetClassInfo
 
-`ITypeInfo` Извлекает указатель на сведения о типе coclass.
+Извлекает `ITypeInfo` указатель на информацию типа coclass.
 
 ```
 STDMETHOD(GetClassInfo)(ITypeInfo** pptinfo);
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-См. раздел [IProvideClassInfo:: жетклассинфо](/windows/win32/api/ocidl/nf-ocidl-iprovideclassinfo-getclassinfo) в Windows SDK.
+Смотрите [IProvideClassInfo::GetClassInfo](/windows/win32/api/ocidl/nf-ocidl-iprovideclassinfo-getclassinfo) в Windows SDK.
 
-##  <a name="getguid"></a>IProvideClassInfo2Impl:: a GUID
+## <a name="iprovideclassinfo2implgetguid"></a><a name="getguid"></a>IProvideClassinfo2Impl::GetGUID
 
-Извлекает идентификатор GUID исходящего интерфейса пользователя объекта.
+Извлекает GUID для исходящего дисинтерфейса объекта.
 
 ```
 STDMETHOD(GetGUID)(
@@ -114,11 +114,11 @@ STDMETHOD(GetGUID)(
     GUID* pGUID);
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-См. [IProvideClassInfo2:: a GUID](/windows/win32/api/ocidl/nf-ocidl-iprovideclassinfo2-getguid) в Windows SDK.
+Смотрите [IProvideClassInfo2::GetGUID](/windows/win32/api/ocidl/nf-ocidl-iprovideclassinfo2-getguid) в Windows SDK.
 
-##  <a name="iprovideclassinfo2impl"></a>IProvideClassInfo2Impl::IProvideClassInfo2Impl
+## <a name="iprovideclassinfo2impliprovideclassinfo2impl"></a><a name="iprovideclassinfo2impl"></a>IProvideClassInfo2Impl::IProvideClassInfo2Impl
 
 Конструктор.
 
@@ -126,23 +126,23 @@ STDMETHOD(GetGUID)(
 IProvideClassInfo2Impl();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Вызывает `AddRef` для члена [_tih](#_tih) . Деструктор вызывает `Release`.
+Вызывает `AddRef` [_tih](#_tih) члена. Деструктор вызывает `Release`.
 
-##  <a name="_tih"></a>IProvideClassInfo2Impl::_tih
+## <a name="iprovideclassinfo2impl_tih"></a><a name="_tih"></a>IProvideClassInfo2Impl::_tih
 
-Этот статический элемент данных является экземпляром параметра шаблона класса *тихкласс*, который по умолчанию имеет `CComTypeInfoHolder`значение.
+Этот элемент статического данных является экземпляром параметра шаблона класса, *tihclass*, который по умолчанию является `CComTypeInfoHolder`.
 
 ```
 static  tihclass
     _tih;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-`_tih`управляет сведениями о типе для компонентного класса.
+`_tih`управляет информацией типа для coclass.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Обзор класса](../../atl/atl-class-overview.md)
+[Общие сведения о классах](../../atl/atl-class-overview.md)

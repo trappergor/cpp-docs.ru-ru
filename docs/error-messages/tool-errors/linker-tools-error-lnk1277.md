@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1277
 ms.assetid: afca3de0-50cc-4140-af7a-13493a170835
-ms.openlocfilehash: 137aa15dd9dad4b08d52af55da60a9cdf8b58055
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c00fb32e4b36eff119195efbb34d536d80df6a9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160553"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183661"
 ---
 # <a name="linker-tools-error-lnk1277"></a>Ошибка средств компоновщика LNK1277
 
-запись объекта не найдена в pgd (имя файла)
+запись объекта не найдена в PGD (имя файла)
 
-При использовании [/LTCG:PGOPTIMZE](../../build/reference/ltcg-link-time-code-generation.md), путь к одной из входных файлов LIB "," def "или" obj отличался от пути, на котором они были найдены во время/LTCG: PGINSTRUMENT. Это может объясняться изменение в переменной среды LIB после/LTCG: PGINSTRUMENT. Полный путь к входных файлов хранится в PGD-файла.
+При использовании [/LTCG: пгоптимзе](../../build/reference/ltcg-link-time-code-generation.md)путь к одному из файлов input. lib, DEF или obj отличается от пути, в котором они были найдены во время/LTCG: PGINSTRUMENT. Это можно объяснить путем изменения переменной среды LIB после/LTCG: PGINSTRUMENT. Полный путь к входным файлам хранится в PGD-файле.
 
-/ LTCG: PGOPTIMIZE требует идентична на этапе/LTCG: PGINSTRUMENT входные данные.
+Параметр/LTCG: PGOPTIMIZE требует, чтобы входные данные совпадали с фазой/LTCG: PGINSTRUMENT.
 
 Чтобы устранить это предупреждение, выполните одно из следующих действий.
 
-- Запуск/LTCG: PGINSTRUMENT, вернуть все тестовые запуски и запустите/LTCG: PGOPTIMIZE.
+- Выполните команду/LTCG: PGINSTRUMENT, повторите все тестовые запуски и выполните/LTCG: PGOPTIMIZE.
 
-- Изменение переменной среды LIB существовавшие при запуске/LTCG: PGINSTRUMENT.
+- Измените переменную среды LIB, чтобы она находилась при выполнении/LTCG: PGINSTRUMENT.
 
-Не рекомендуется решить LNK1277 с использованием/LTCG: PGUPDATE.
+Не рекомендуется обойти LNK1277 с помощью/LTCG: PGUPDATE.

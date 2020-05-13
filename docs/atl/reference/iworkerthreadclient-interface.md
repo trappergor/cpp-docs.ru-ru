@@ -9,19 +9,19 @@ f1_keywords:
 helpviewer_keywords:
 - IWorkerThreadClient interface
 ms.assetid: 56f4a2f5-007e-4a33-9e20-05187629f715
-ms.openlocfilehash: 1fa8a5e42d002260076f737d3d33cfa191ff297a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a68f25f153a0ad2cf42ebfaa374ff63c5746fcd
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197410"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326299"
 ---
 # <a name="iworkerthreadclient-interface"></a>Интерфейс IWorkerThreadClient
 
-`IWorkerThreadClient` — Это интерфейс, реализуемый клиентами [CWorkerThread](../../atl/reference/cworkerthread-class.md) класса.
+`IWorkerThreadClient`— интерфейс, реализованный клиентами класса [CWorkerThread.](../../atl/reference/cworkerthread-class.md)
 
 > [!IMPORTANT]
->  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+> Этот класс и его члены не могут быть использованы в приложениях, выполняемых в Windows Runtime.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -35,20 +35,20 @@ __interface IWorkerThreadClient
 
 |||
 |-|-|
-|[CloseHandle](#closehandle)|Реализуйте этот метод, чтобы закрыть дескриптор, связанный с данным объектом.|
-|[Execute](#execute)|Реализуйте этот метод для выполнения кода при оповещенным, дескриптор, связанный с данным объектом.|
+|[ЗакрытьРучку](#closehandle)|Реализация этого метода для закрытия ручки, связанной с этим объектом.|
+|[Выполнить](#execute)|Реализация этого метода для выполнения кода, когда ручка, связанная с этим объектом, становится сигнальной.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Реализуйте этот интерфейс, когда у вас есть код, который необходимо выполнить в рабочем потоке в ответ на сигнал дескриптор.
+Реализация этого интерфейса, когда у вас есть код, который должен выполняться на потоке рабочего в ответ на сигнализировать ручку.
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** файлов atlutil.h
+**Заголовок:** atlutil.h
 
-##  <a name="closehandle"></a>  IWorkerThreadClient::CloseHandle
+## <a name="iworkerthreadclientclosehandle"></a><a name="closehandle"></a>IWorkerThreadClient::: Близкий к работе
 
-Реализуйте этот метод, чтобы закрыть дескриптор, связанный с данным объектом.
+Реализация этого метода для закрытия ручки, связанной с этим объектом.
 
 ```
 HRESULT CloseHandle(HANDLE  hHandle);
@@ -57,25 +57,25 @@ HRESULT CloseHandle(HANDLE  hHandle);
 ### <a name="parameters"></a>Параметры
 
 *hHandle*<br/>
-Дескриптор будет закрыт.
+Ручка будет закрыта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK в случае успеха или ошибку HRESULT в случае сбоя.
+Возврат S_OK на успех, или ошибка HRESULT на неудачу.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Дескриптор, переданный этому методу был ранее связан с данным объектом, с помощью вызова [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).
+Ручка, переданная этому методу, ранее была связана с этим объектом путем вызова [cWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).
 
 ### <a name="example"></a>Пример
 
-В следующем коде показано простая реализация `IWorkerThreadClient::CloseHandle`.
+Следующий код показывает простую реализацию `IWorkerThreadClient::CloseHandle`.
 
 [!code-cpp[NVC_ATL_Utilities#135](../../atl/codesnippet/cpp/iworkerthreadclient-interface_1.cpp)]
 
-##  <a name="execute"></a>  IWorkerThreadClient::Execute
+## <a name="iworkerthreadclientexecute"></a><a name="execute"></a>IWorkerThreadClient:::
 
-Реализуйте этот метод для выполнения кода при оповещенным, дескриптор, связанный с данным объектом.
+Реализация этого метода для выполнения кода, когда ручка, связанная с этим объектом, становится сигнальной.
 
 ```
 HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
@@ -84,26 +84,26 @@ HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
 ### <a name="parameters"></a>Параметры
 
 *dwParam*<br/>
-Параметр user.
+Пользовательский параметр.
 
 *hObject*<br/>
-Дескриптор, который оповещения.
+Ручка, которая стала сигнальной.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK в случае успеха или ошибку HRESULT в случае сбоя.
+Возврат S_OK на успех, или ошибка HRESULT на неудачу.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Дескриптор и DWORD/указатель, переданный этому методу ранее был связан с данным объектом с помощью вызова [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).
+Ручка и DWORD/pointer, переданные этому методу, ранее были связаны с этим объектом путем вызова [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).
 
 ### <a name="example"></a>Пример
 
-В следующем коде показано простая реализация `IWorkerThreadClient::Execute`.
+Следующий код показывает простую реализацию `IWorkerThreadClient::Execute`.
 
 [!code-cpp[NVC_ATL_Utilities#136](../../atl/codesnippet/cpp/iworkerthreadclient-interface_2.cpp)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Классы](../../atl/reference/atl-classes.md)<br/>
 [Класс CWorkerThread](../../atl/reference/cworkerthread-class.md)

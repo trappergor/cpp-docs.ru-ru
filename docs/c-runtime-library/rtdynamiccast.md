@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - __RTDynamicCast
 ms.assetid: 56aa2d7a-aa47-46ef-830d-e37175611239
-ms.openlocfilehash: c4b0caadf20d6c5494acf47ee5a788b5ee009c47
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: a5384966ff96c4e4831ba06f7c67467156a9ecd2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957339"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170076"
 ---
 # <a name="__rtdynamiccast"></a>__RTDynamicCast
 
@@ -68,7 +68,7 @@ PVOID __RTDynamicCast (
 
 `bad_cast()`, если входное значение `dynamic_cast<>` является ссылкой и приведение завершается неудачей.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Преобразует `inptr` в объект типа `TargetType`. Тип операнда `inptr` должен быть указателем, если `TargetType` является указателем, или l-значением, если `TargetType` является ссылкой. Параметр `TargetType` должен быть указателем или ссылкой на ранее определенный тип класса или указателем на void.
 

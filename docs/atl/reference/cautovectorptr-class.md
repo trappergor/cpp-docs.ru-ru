@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoVectorPtr class
 ms.assetid: 0030362b-6bc4-4a47-9b5b-3c3899dceab4
-ms.openlocfilehash: f614318125f3c6bce4003fee5fb4a945c7c88129
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fc4bd4ba7a2f41a25679f1da718671f525519708
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260387"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748214"
 ---
 # <a name="cautovectorptr-class"></a>Класс CAutoVectorPtr
 
-Этот класс представляет объект интеллектуального указателя с помощью вектора новый и удалять операторов.
+Этот класс представляет собой интеллектуальный объект указателя с использованием новых векторных и удаленных операторов.
 
 > [!IMPORTANT]
->  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+> Этот класс и его члены не могут быть использованы в приложениях, выполняемых в Windows Runtime.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -43,46 +43,46 @@ class CAutoVectorPtr
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[CAutoVectorPtr::CAutoVectorPtr](#cautovectorptr)|Конструктор.|
-|[CAutoVectorPtr:: ~ CAutoVectorPtr](#dtor)|Деструктор|
+|[CAutoVectorPtr::](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CAutoVectorPtr::Allocate](#allocate)|Вызовите этот метод для выделения памяти, необходимый массив объектов, указываемых `CAutoVectorPtr`.|
-|[CAutoVectorPtr::Attach](#attach)|Вызовите этот метод, чтобы стать владельцем существующего указателя.|
-|[CAutoVectorPtr::Detach](#detach)|Вызовите этот метод для освобождения владения указатель.|
-|[CAutoVectorPtr::Free](#free)|Вызовите этот метод, чтобы удалить объект, на которые указывают `CAutoVectorPtr`.|
+|[CAutoVectorPtr::Выделение](#allocate)|Вызов иметод, чтобы выделить память, требуемую `CAutoVectorPtr`массивом объектов, на которые указывается.|
+|[CAutoVectorPtr::Attach](#attach)|Вызовите этот метод, чтобы взять на себя ответственность за существующий указатель.|
+|[CAutoVectorPtr::Detach](#detach)|Вызовите этот метод, чтобы освободить право собственности на указатель.|
+|[CAutoVectorPtr::Бесплатно](#free)|Вызовите этот метод, чтобы `CAutoVectorPtr`удалить объект, на который указывает .|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CAutoVectorPtr::operator T *](#operator_t__star)|Оператор приведения типов.|
-|[CAutoVectorPtr::operator =](#operator_eq)|Оператор присваивания.|
+|[CAutoVectorPtr::оператор T](#operator_t__star)|Оператор актерского состава.|
+|[CAutoVectorPtr::оператор](#operator_eq)|Оператор назначения.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CAutoVectorPtr::m_p](#m_p)|Указатель данных переменная-член.|
+|[CAutoVectorPtr::m_p](#m_p)|Переменная данных указателя.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Этот класс предоставляет методы для создания и управления смарт-указатель, который поможет защититься от утечки памяти, автоматически освобождение ресурсов, когда оно выпадает из области. `CAutoVectorPtr` аналогичен `CAutoPtr`, единственное отличие —, `CAutoVectorPtr` использует [вектор new&#91; &#93; ](../../standard-library/new-operators.md#op_new_arr) и [вектор delete&#91; &#93; ](../../standard-library/new-operators.md#op_delete_arr) для выделения и освобождения памяти вместо C++ **новый** и **удалить** операторы. См. в разделе [CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md) если коллекцию классов `CAutoVectorPtr` являются обязательными.
+Этот класс предоставляет методы создания и управления интеллектуальным указателем, которые помогут защититься от утечек памяти, автоматически освобождая ресурсы, когда она выпадает из сферы действия. `CAutoVectorPtr`похож на `CAutoPtr`, единственное `CAutoVectorPtr` различие в том, что использует [вектор новых&#91;&#93;](../../standard-library/new-operators.md#op_new_arr) и [вектор удалить&#91;&#93;](../../standard-library/new-operators.md#op_delete_arr) выделить и бесплатную память вместо **новых** и **удалить** операторов. Если требуются классы `CAutoVectorPtr` сбора, обратитесь к [CAutoVectorPtrElementTraitsTraits.](../../atl/reference/cautovectorptrelementtraits-class.md)
 
-См. в разделе [CAutoPtr](../../atl/reference/cautoptr-class.md) пример использования класса смарт-указатель.
+На примере использования класса «умный указатель» можно ознакомиться на [CAutoPtr.](../../atl/reference/cautoptr-class.md)
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** atlbase.h
 
-##  <a name="allocate"></a>  CAutoVectorPtr::Allocate
+## <a name="cautovectorptrallocate"></a><a name="allocate"></a>CAutoVectorPtr::Выделение
 
-Вызовите этот метод для выделения памяти, необходимый массив объектов, указываемых `CAutoVectorPtr`.
+Вызов иметод, чтобы выделить память, требуемую `CAutoVectorPtr`массивом объектов, на которые указывается.
 
 ```
 bool Allocate(size_t nElements) throw();
@@ -90,37 +90,37 @@ bool Allocate(size_t nElements) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nElements*<br/>
+*nЭлементы*<br/>
 Количество элементов в массиве.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение true, если память успешно выделен, значение false в случае сбоя.
+Возвращает сяпоние, если память успешно выделена, ложная при сбое.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-В отладочных сборках, произойдет сбой утверждения, если [CAutoVectorPtr::m_p](#m_p) переменную-член в текущий момент направлен к существующему значению; то есть не равно NULL.
+В отладочных сборках произойдет сбой утверждения, если переменная [CAutoVectorPtr::m_p](#m_p) в настоящее время указывает на существующее значение; то есть, он не равен NULL.
 
-##  <a name="attach"></a>  CAutoVectorPtr::Attach
+## <a name="cautovectorptrattach"></a><a name="attach"></a>CAutoVectorPtr::Attach
 
-Вызовите этот метод, чтобы стать владельцем существующего указателя.
+Вызовите этот метод, чтобы взять на себя ответственность за существующий указатель.
 
-```
+```cpp
 void Attach(T* p) throw();
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*p*<br/>
-`CAutoVectorPtr` Объект будет стать владельцем этого указателя.
+*P*<br/>
+Объект `CAutoVectorPtr` будет владеть этим указателем.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Когда `CAutoVectorPtr` объект принимает владение указатель, оно автоматически удалит указатель и все выделенные данные при его выходит за пределы области. Если [CAutoVectorPtr::Detach](#detach) — вызывается, программист еще раз данный ответственность за освобождение любой выделяются ресурсы.
+Когда `CAutoVectorPtr` объект становится владельцем указателя, он автоматически удаляет указатель и любые выделенные данные, когда он выходит за рамки. Если [cAutoVectorPtr::Detach](#detach) называется, программист снова получает ответственность за освобождение любых выделенных ресурсов.
 
-В отладочных сборках, произойдет сбой утверждения, если [CAutoVectorPtr::m_p](#m_p) переменную-член в текущий момент направлен к существующему значению; то есть не равно NULL.
+В отладочных сборках произойдет сбой утверждения, если переменная [CAutoVectorPtr::m_p](#m_p) в настоящее время указывает на существующее значение; то есть, он не равен NULL.
 
-##  <a name="cautovectorptr"></a>  CAutoVectorPtr::CAutoVectorPtr
+## <a name="cautovectorptrcautovectorptr"></a><a name="cautovectorptr"></a>CAutoVectorPtr::CAutoVectorPtr
 
 Конструктор.
 
@@ -132,14 +132,14 @@ CAutoVectorPtr(CAutoVectorPtr<T>& p) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*p*<br/>
-Существующего указателя.
+*P*<br/>
+Существующий указатель.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-`CAutoVectorPtr` Объект может быть создан с помощью существующего указателя, в этом случае он передает право владения указателем.
+Объект `CAutoVectorPtr` может быть создан с помощью существующего указателя, и в этом случае он передает право собственности на указатель.
 
-##  <a name="dtor"></a>  CAutoVectorPtr:: ~ CAutoVectorPtr
+## <a name="cautovectorptrcautovectorptr"></a><a name="dtor"></a>CAutoVectorPtr::
 
 Деструктор
 
@@ -147,13 +147,13 @@ CAutoVectorPtr(CAutoVectorPtr<T>& p) throw();
 ~CAutoVectorPtr() throw();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Освобождает все выделенные ресурсы. Вызовы [CAutoVectorPtr::Free](#free).
+Освобождает все выделенные ресурсы. Вызовы [CAutoVectorPtr::Бесплатно](#free).
 
-##  <a name="detach"></a>  CAutoVectorPtr::Detach
+## <a name="cautovectorptrdetach"></a><a name="detach"></a>CAutoVectorPtr::Detach
 
-Вызовите этот метод для освобождения владения указатель.
+Вызовите этот метод, чтобы освободить право собственности на указатель.
 
 ```
 T* Detach() throw();
@@ -163,37 +163,37 @@ T* Detach() throw();
 
 Возвращает копию указателя.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Освобождает права владения указателем, задает [CAutoVectorPtr::m_p](#m_p) переменную-член NULL и возвращает копию указателя. После вызова метода `Detach`, он на программиста, чтобы освободить все выделяется ресурсы по которому `CAutoVectorPtr` объект ранее предполагается ответственности.
+Выпускает право собственности на указатель, устанавливает [cAutoVectorPtr::m_p](#m_p) переменной члена null и возвращает копию указателя. После `Detach`вызова программист должен освободить все выделенные ресурсы, за которые `CAutoVectorPtr` объект, возможно, ранее взял на себя ответственность.
 
-##  <a name="free"></a>  CAutoVectorPtr::Free
+## <a name="cautovectorptrfree"></a><a name="free"></a>CAutoVectorPtr::Бесплатно
 
-Вызовите этот метод, чтобы удалить объект, на которые указывают `CAutoVectorPtr`.
+Вызовите этот метод, чтобы `CAutoVectorPtr`удалить объект, на который указывает .
 
-```
+```cpp
 void Free() throw();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Объект, на который указывает `CAutoVectorPtr` освобождается и [CAutoVectorPtr::m_p](#m_p) переменной-члена имеет значение NULL.
+Объект, на который `CAutoVectorPtr` указывается, освобождается, и [cAutoVectorPtr::m_p](#m_p) переменная члена установлена null.
 
-##  <a name="m_p"></a>  CAutoVectorPtr::m_p
+## <a name="cautovectorptrm_p"></a><a name="m_p"></a>CAutoVectorPtr::m_p
 
-Указатель данных переменная-член.
+Переменная данных указателя.
 
 ```
 T* m_p;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Эта переменная-член содержит информацию об указателях.
+Эта переменная члена содержит информацию указателя.
 
-##  <a name="operator_eq"></a>  CAutoVectorPtr::operator =
+## <a name="cautovectorptroperator-"></a><a name="operator_eq"></a>CAutoVectorPtr::оператор
 
-Оператор присваивания.
+Оператор назначения.
 
 ```
 CAutoVectorPtr<T>& operator= (CAutoVectorPtr<T>& p) throw();
@@ -201,30 +201,30 @@ CAutoVectorPtr<T>& operator= (CAutoVectorPtr<T>& p) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*p*<br/>
+*P*<br/>
 Указатель.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает ссылку на **CAutoVectorPtr\< T >**.
+Возвращает ссылку на **>CAutoVectorPtr\< **T .
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Оператор присваивания отсоединяет `CAutoVectorPtr` объект из любой текущий указатель и присоединяет новый указатель, *p*, вместо него.
+Оператор назначения отсоединяет `CAutoVectorPtr` объект от любого текущего указателя и прикрепляет новый указатель, *р,* на своем месте.
 
-##  <a name="operator_t__star"></a>  CAutoVectorPtr::operator T *
+## <a name="cautovectorptroperator-t-"></a><a name="operator_t__star"></a>CAutoVectorPtr::оператор T
 
-Оператор приведения типов.
+Оператор актерского состава.
 
 ```
 operator T*() const throw();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Возвращает указатель на тип данных объекта, определенный в шаблоне класса.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс CAutoPtr](../../atl/reference/cautoptr-class.md)<br/>
-[Общие сведения о классе](../../atl/atl-class-overview.md)
+[Общие сведения о классах](../../atl/atl-class-overview.md)

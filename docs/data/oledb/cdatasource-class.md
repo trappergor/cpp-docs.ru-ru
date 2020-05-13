@@ -56,12 +56,12 @@ helpviewer_keywords:
 - OpenWithPromptFileName method
 - OpenWithServiceComponents method
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-ms.openlocfilehash: d97138b548a3e303898ee2bafde88af38aa78f40
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 646d4b3548a1c5ee1bdfaf64f7823fa584abaac5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545771"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212038"
 ---
 # <a name="cdatasource-class"></a>Класс CDataSource
 
@@ -93,7 +93,7 @@ class CDataSource
 |[опенвиспромптфиленаме](#openwithpromptfilename)|Позволяет пользователю выбрать ранее созданный файл канала передачи данных, чтобы открыть соответствующий источник данных.|
 |[опенвиссервицекомпонентс](#openwithservicecomponents)|Открывает объект источника данных с помощью диалогового окна «связь данных».|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Для одного подключения можно создать один или несколько сеансов базы данных. Эти сеансы представлены `CSession`. Чтобы открыть подключение перед созданием сеанса с `CSession::Open`, необходимо вызвать метод [CDataSource:: Open](../../data/oledb/cdatasource-open.md) .
 
@@ -132,7 +132,7 @@ HRESULT GetInitializationString(BSTR* pInitializationString,
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Полученная строка инициализации может использоваться для повторного открытия этого соединения с источником данных.
 
@@ -157,7 +157,7 @@ HRESULT GetProperties(ULONG ulPropIDSets,
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Чтобы получить одно свойство, используйте [параметр-Property](../../data/oledb/cdatasource-getproperty.md).
 
@@ -188,7 +188,7 @@ HRESULT GetProperty(const GUID& guid,
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Чтобы получить несколько свойств, используйте [Свойства](../../data/oledb/cdatasource-getproperties.md).
 
@@ -276,7 +276,7 @@ HRESULT Open(LPCSTR szProgID,
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Перегрузка метода, использующая параметр *HWND* , открывает объект источника данных с компонентами службы в oledb32. dll; Эта библиотека DLL содержит реализацию функций компонентов службы, таких как создание пулов ресурсов, автоматическое прикрепление транзакций и т. д. Дополнительные сведения см. в справочнике по OLE DB в [руководстве программиста OLE DB](/previous-versions/windows/desktop/ms713643(v=vs.85)).
 
@@ -309,7 +309,7 @@ HRESULT OpenFromFileName(LPCOLESTR szFileName) throw();
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Этот метод открывает объект источника данных с помощью компонентов службы в oledb32.dll. Эта DLL-библиотека содержит реализацию возможностей компонентов службы, таких как создание пулов ресурсов, автоматическое прикрепление транзакций и т. д. Дополнительные сведения см. в справочнике по OLE DB в [руководстве программиста OLE DB](/previous-versions/windows/desktop/ms713643(v=vs.85)).
 
@@ -338,7 +338,7 @@ HRESULT OpenFromInitializationString(LPCOLESTR szInitializationString,
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Этот метод открывает объект источника данных с помощью компонентов службы в oledb32.dll. Эта DLL-библиотека содержит реализацию возможностей компонентов службы, таких как создание пулов ресурсов, автоматическое прикрепление транзакций и т. д.
 
@@ -369,7 +369,7 @@ HRESULT OpenWithPromptFileName(HWND hWnd = GetActiveWindow(   ),
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Этот метод открывает объект источника данных с помощью компонентов службы в oledb32.dll. Эта DLL-библиотека содержит реализацию возможностей компонентов службы, таких как создание пулов ресурсов, автоматическое прикрепление транзакций и т. д. Дополнительные сведения см. в справочнике по OLE DB в [руководстве программиста OLE DB](/previous-versions/windows/desktop/ms713643(v=vs.85)).
 
@@ -407,11 +407,11 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Этот метод открывает объект источника данных с помощью компонентов службы в oledb32.dll. Эта DLL-библиотека содержит реализацию возможностей компонентов службы, таких как создание пулов ресурсов, автоматическое прикрепление транзакций и т. д. Дополнительные сведения см. в справочнике по OLE DB в [руководстве программиста OLE DB](/previous-versions/windows/desktop/ms713643(v=vs.85)).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

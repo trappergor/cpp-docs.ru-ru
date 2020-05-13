@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C2958
 ms.assetid: 332bf6d3-7cd1-4b1a-8ddb-d4a8cbf01115
-ms.openlocfilehash: 3c287a1f4c7b52fb4c6e498822276bf5956aa2d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 22e94fbd6ab44b13f16213979eebaec3f23b4a2c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62256838"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176836"
 ---
 # <a name="compiler-error-c2958"></a>Ошибка компилятора C2958
 
-не сопоставлен левый разделитель найден в «location»
+левый разделитель, обнаруженный в "Location", неправильно сопоставлен
 
-Разделитель не сопоставлены должным образом.
+Неверное соответствие разделителя.
 
-Эта ошибка может быть вызвана Непарные скобки в объявлении шаблона функции.
+Эта ошибка может быть вызвана несовпадением круглых скобок в объявлении шаблона функции.

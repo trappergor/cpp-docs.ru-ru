@@ -1,11 +1,13 @@
 ---
 title: _mkgmtime, _mkgmtime32, _mkgmtime64
 description: Описывает функции библиотеки времени выполнения C _mkgmtime, _mkgmtime32 и _mkgmtime64 и приводит примеры их использования.
-ms.date: 12/04/2019
+ms.date: 4/2/2020
 api_name:
 - _mkgmtime32
 - _mkgmtime64
 - _mkgmtime
+- _o__mkgmtime32
+- _o__mkgmtime64
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -40,12 +43,12 @@ helpviewer_keywords:
 - _mkgmtime32 function
 - time, converting
 ms.assetid: b4ca2b67-e198-4f43-b3e2-e8ad6bd01867
-ms.openlocfilehash: 3d03fc62853705a68e1a2e408d6af833e8c6b02b
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 4b20073a2022c7da59a5e224a04051901b7b8a4f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857740"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914652"
 ---
 # <a name="_mkgmtime-_mkgmtime32-_mkgmtime64"></a>_mkgmtime, _mkgmtime32, _mkgmtime64
 
@@ -74,7 +77,7 @@ __time64_t _mkgmtime64(
 
 Количество типа **__time32_t** или **__time64_t** представляющее количество секунд, истекших с полуночи 1 января 1970 г. в формате UTC. Если дата выходит за пределы допустимого диапазона (см. раздел Примечания) или входные данные не могут быть интерпретированы как допустимое время, возвращаемое значение равно-1.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
 Функции **_mkgmtime32** и **_mkgmtime64** преобразуют время в формате UTC в тип **__time32_t** или **__time64_t** , представляющий время в формате UTC. Чтобы преобразовать местное время в время в формате UTC, используйте вместо него **функциях mktime**, **_mktime32**и **_mktime64** .
 
@@ -85,6 +88,8 @@ __time64_t _mkgmtime64(
 Диапазон функций **_mkgmtime32** — от полуночи 1 января 1970 г., utc — 23:59:59 18, 2038, UTC. Диапазон **_mkgmtime64** — от полуночи 1 января 1970 г., время в формате utc до 23:59:59, 31 декабря 3000, UTC. Дата вне диапазона приводит к возвращению значения-1. Диапазон **_mkgmtime** зависит от того, определен ли **_USE_32BIT_TIME_T** . Если она не определена по умолчанию, то диапазон будет таким же, как и **_mkgmtime64**. В противном случае диапазон ограничен 32-разрядным диапазоном **_mkgmtime32**.
 
 Как **gmtime** , так и **localtime** используют общий статический буфер для преобразования. Если указать этот буфер для **_mkgmtime**, предыдущее содержимое уничтожается.
+
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="examples"></a>Примеры
 
@@ -177,13 +182,13 @@ After calling _mkgmtime, t1 = Wed Feb 12 00:00:00 2003
 t.tm_yday = 42
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Управление временем](../../c-runtime-library/time-management.md)\
 [asctime, _wasctime](asctime-wasctime.md)\
 [asctime_s, _wasctime_s](asctime-s-wasctime-s.md)\
-[gmtime, _gmtime32, _gmtime64](gmtime-gmtime32-gmtime64.md)\
-[gmtime_s, _gmtime32_s, _gmtime64_s](gmtime-s-gmtime32-s-gmtime64-s.md)\
-[localtime_s, _localtime32_s, _localtime64_s](localtime-s-localtime32-s-localtime64-s.md)\
-[mktime, _mktime32, _mktime64](mktime-mktime32-mktime64.md)\
+[gmtime, _gmtime32 _gmtime64](gmtime-gmtime32-gmtime64.md)\
+[gmtime_s, _gmtime32_s _gmtime64_s](gmtime-s-gmtime32-s-gmtime64-s.md)\
+[localtime_s, _localtime32_s _localtime64_s](localtime-s-localtime32-s-localtime64-s.md)\
+[функциях mktime, _mktime32 _mktime64](mktime-mktime32-mktime64.md)\
 [time, _time32, _time64](time-time32-time64.md)

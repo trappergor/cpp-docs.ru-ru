@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CD2DBrushProperties [MFC], CD2DBrushProperties
 - CD2DBrushProperties [MFC], CommonInit
 ms.assetid: c77d717f-0a16-4d74-b2ce-0ae1766ed6f9
-ms.openlocfilehash: 5ca791af658ee719b2e6d6ea78f82e23a66edc98
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2db720fd09c62f8b86baecea9229d946f3892333
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62253736"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754186"
 ---
 # <a name="cd2dbrushproperties-class"></a>Класс CD2DBrushProperties
 
@@ -31,15 +31,15 @@ class CD2DBrushProperties : public D2D1_BRUSH_PROPERTIES;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CD2DBrushProperties::CD2DBrushProperties](#cd2dbrushproperties)|Перегружен. Создает `CD2D_BRUSH_PROPERTIES` структуры|
+|[CD2DbrushProperties::CD2DbrushProperties](#cd2dbrushproperties)|Перегружен. Создает `CD2D_BRUSH_PROPERTIES` структуру|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CD2DBrushProperties::CommonInit](#commoninit)|Инициализирует объект|
+|[CD2DbrushProperties::CommonInit](#commoninit)|Инициализация объекта|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -51,9 +51,9 @@ class CD2DBrushProperties : public D2D1_BRUSH_PROPERTIES;
 
 **Заголовок:** afxrendertarget.h
 
-##  <a name="cd2dbrushproperties"></a>  CD2DBrushProperties::CD2DBrushProperties
+## <a name="cd2dbrushpropertiescd2dbrushproperties"></a><a name="cd2dbrushproperties"></a>CD2DbrushProperties::CD2DbrushProperties
 
-Создает структуру CD2D_BRUSH_PROPERTIES
+Создает CD2D_BRUSH_PROPERTIES структуру
 
 ```
 CD2DBrushProperties();
@@ -67,19 +67,19 @@ CD2DBrushProperties(
 ### <a name="parameters"></a>Параметры
 
 *_opacity*<br/>
-Базовый непрозрачность кисти. Значение по умолчанию — 1,0.
+Базовая непрозрачность кисти. Значение по умолчанию — 1,0.
 
 *_transform*<br/>
-Преобразование, применяемое к кисти
+Преобразование для применения к кисти
 
-##  <a name="commoninit"></a>  CD2DBrushProperties::CommonInit
+## <a name="cd2dbrushpropertiescommoninit"></a><a name="commoninit"></a>CD2DbrushProperties::CommonInit
 
-Инициализирует объект
+Инициализация объекта
 
-```
+```cpp
 void CommonInit();
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Классы](../../mfc/reference/mfc-classes.md)

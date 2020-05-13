@@ -18,12 +18,12 @@ helpviewer_keywords:
 - vprintf function
 - formatted text [C++]
 ms.assetid: 02ac7c51-eab1-4bf0-bf4c-77065e3fa744
-ms.openlocfilehash: 3c04879c7ec90aaba1199264c0c2128b9d1ea27c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: db4927e983a27110e587dacd9acf909f0c735b87
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957237"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365674"
 ---
 # <a name="vprintf-functions"></a>Функции vprintf
 
@@ -38,13 +38,13 @@ ms.locfileid: "70957237"
 |[_vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l](../c-runtime-library/reference/vsprintf-p-vsprintf-p-l-vswprintf-p-vswprintf-p-l.md)|[vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l](../c-runtime-library/reference/vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md)|
 |[_vscprintf, _vscprintf_l, _vscwprintf, _vscwprintf_l](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|[_vsnprintf, _vsnwprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md)|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Функции `vprintf` выполняют те же действия, что и перечисленные в следующей таблице аналоги. Но при этом каждая функция `vprintf` принимает указатель на список аргументов, а их аналоги — сам список аргументов.
 
 Эти функции форматируют данные для вывода в назначение, как описано ниже.
 
-|Функция|Функция-аналог|Назначение выходных данных|Проверка параметров|Поддержка позиционных параметров|
+|Компонент|Функция-аналог|Назначение выходных данных|Проверка параметров|Поддержка позиционных параметров|
 |--------------|--------------------------|------------------------|--------------------------|----------------------------------|
 |`_vcprintf`|[_cprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|console|Проверка значений null.|Нет|
 |`_vcwprintf`|[_cwprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|console|Проверка значений null.|Нет|
@@ -81,12 +81,12 @@ ms.locfileid: "70957237"
 
 Версии этих функций с суффиксом **_p** позволяют указать порядок подстановки предоставленных аргументов в строку формата. Дополнительные сведения см. в разделе [Позиционные параметры printf_p](../c-runtime-library/printf-p-positional-parameters.md).
 
-Если копирование производится между перекрывающимися строками с использованием функций **vsprintf**, `vswprintf`, `_vsnprintf` или `_vsnwprintf`, их поведение не определено.
+Для **vsprintf** `_vsnprintf` , `_vsnwprintf` `vswprintf`и , если копирование происходит между строками, которые перекрываются, поведение не определено.
 
 > [!IMPORTANT]
->  Убедитесь, что *format* не является строкой, определяемой пользователем. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](/windows/win32/SecBP/avoiding-buffer-overruns). При использовании безопасных версий этих функций (с суффиксом **_s** или **_p**) со строкой формата, определяемой пользователем, может возникать исключение недопустимого параметра, если определяемая пользователем строка содержит недопустимые символы форматирования.
+> Убедитесь, что *format* не является строкой, определяемой пользователем. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](/windows/win32/SecBP/avoiding-buffer-overruns). При использовании безопасных версий этих функций (с суффиксом **_s** или **_p**) со строкой формата, определяемой пользователем, может возникать исключение недопустимого параметра, если определяемая пользователем строка содержит недопустимые символы форматирования.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Потоковый ввод-вывод](../c-runtime-library/stream-i-o.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>

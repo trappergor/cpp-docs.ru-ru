@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - defaultvtable attribute
 ms.assetid: 5b3ed483-f69e-44dd-80fc-952028eb9d73
-ms.openlocfilehash: 8ab37af4deab516dc01f55f986811668737cf18c
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a15b3552e6b67fb0347a14c48414741edf31ac93
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501651"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168270"
 ---
 # <a name="defaultvtable"></a>defaultvtable
 
@@ -28,7 +28,7 @@ ms.locfileid: "69501651"
 *interface*<br/>
 Указанный интерфейс, для которого требуется использовать vtable по умолчанию для COM-объекта.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Атрибут **defaultvtable** C++ имеет те же функциональные возможности, что и атрибут [defaultvtable](/windows/win32/Midl/defaultvtable) MIDL.
 
@@ -68,14 +68,14 @@ class CMyC3 : public IMyI3 {};
 
 |||
 |-|-|
-|**Относится к**|**класс**, **Структура**|
-|**Повторяемый**|Нет|
+|**Применение**|**класс**, **Структура**|
+|**Повторяемый**|нет|
 |**Обязательные атрибуты**|**кокласс**|
-|**Недопустимые атрибуты**|Отсутствуют|
+|**Недопустимые атрибуты**|None|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты классов](class-attributes.md)

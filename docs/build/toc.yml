@@ -1,0 +1,1462 @@
+- name: Проекты и системы сборки
+  href: ../build/projects-and-build-systems-cpp.md
+- name: "Проекты Visual Studio\_— C++"
+  expanded: false
+  items:
+    - name: "Проекты Visual Studio\_— C++"
+      href: ../build/creating-and-managing-visual-cpp-projects.md
+    - name: Настройка свойств компилятора C++ и сборки в Visual Studio
+      expanded: false
+      items:
+        - name: Настройка свойств компилятора C++ и сборки в Visual Studio
+          href: ../build/working-with-project-properties.md
+        - name: Совместное или повторное использование параметров проекта Visual Studio
+          href: ../build/create-reusable-property-configurations.md
+        - name: Наследование свойств проекта
+          href: ../build/project-property-inheritance.md
+        - name: Изменение свойств и целевых объектов без изменения файла проекта
+          href: ../build/modify-project-properties-without-changing-project-file.md
+    - name: Clang/LLVM в проектах Visual Studio (MSBuild)
+      href: ../build/clang-support-msbuild.md
+    - name: Использование эталонных библиотек и компонентов во время сборки
+      href: ../build/adding-references-in-visual-cpp-projects.md
+    - name: Упорядочение выходных файлов проекта
+      href: ../build/how-to-organize-project-output-files-for-builds.md
+    - name: Настраиваемые этапы сборки и события сборки
+      expanded: false
+      items:
+        - name: Настраиваемые этапы сборки и события сборки
+          href: ../build/understanding-custom-build-steps-and-build-events.md
+        - name: Задание пользовательских инструментов сборки
+          href: ../build/specifying-custom-build-tools.md
+        - name: Определение событий сборки
+          href: ../build/specifying-build-events.md
+        - name: Устранение неполадок с настройками сборки
+          href: ../build/troubleshooting-build-customizations.md
+        - name: Форматирование выходных данных этапа настраиваемой сборки или события сборки
+          href: ../build/formatting-the-output-of-a-custom-build-step-or-build-event.md
+    - name: Создание проекта на основе имеющегося кода
+      href: ../build/how-to-create-a-cpp-project-from-existing-code.md
+- name: Проекты "Открыть папку" для C++
+  expanded: false
+  items:
+    - name: Проекты "Открыть папку" для C++
+      href: ../build/open-folder-projects-cpp.md
+    - name: Справочник по схеме CppProperties.json
+      href: ../build/cppproperties-schema-reference.md
+    - name: Справочник по схеме Tasks.VS.JSON (C++)
+      href: ../build/tasks-vs-json-schema-reference-cpp.md
+    - name: Справочник по схеме Launch.vs.json (C++)
+      href: ../build/launch-vs-schema-reference-cpp.md
+- name: Проекты CMake
+  expanded: false
+  items:
+    - name: Проекты CMake
+      href: ../build/cmake-projects-in-visual-studio.md
+    - name: Учебник. Создание кроссплатформенных проектов C++ в Visual Studio
+      href: ../build/get-started-linux-cmake.md
+    - name: Clang для LLVM в проектах CMake
+      href: ../build/clang-support-cmake.md
+    - name: Настройка проекта Linux CMake
+      href: ../build/../linux/cmake-linux-project.md
+    - name: Настройка параметров сборки CMake
+      href: ../build/customize-cmake-settings.md
+    - name: Настройка сеансов отладки CMake
+      href: ../build/configure-cmake-debugging-sessions.md
+    - name: Справочник по CMakeSettings.json
+      href: ../build/cmakesettings-reference.md
+    - name: Справочник по предопределенной схеме конфигурации CMake
+      href: ../build/cmake-predefined-configuration-reference.md
+- name: "vcpkg: Диспетчер пакетов для\_C++"
+  href: ../build/vcpkg.md
+- name: Аналитика сборки C++
+  href: ../build-insights/get-started-with-cpp-build-insights.md
+- name: Файлы предкомпилированных заголовков
+  href: ../build/creating-precompiled-header-files.md
+- name: Сборки выпуска C++
+  expanded: false
+  items:
+    - name: Сборки выпуска C++
+      href: ../build/release-builds.md
+    - name: Практическое руководство. Создание сборки выпуска
+      href: ../build/how-to-create-a-release-build.md
+    - name: 'Распространенные проблемы, возникающие при создании сборок выпуска'
+      href: ../build/common-problems-when-creating-a-release-build.md
+    - name: Устранение проблем сборки выпуска
+      expanded: false
+      items:
+        - name: Устранение проблем сборки выпуска
+          href: ../build/fixing-release-build-problems.md
+        - name: Использование VERIFY вместо ASSERT
+          href: ../build/using-verify-instead-of-assert.md
+        - name: Использование отладочной сборки для проверки перезаписи памяти
+          href: ../build/using-the-debug-build-to-check-for-memory-overwrite.md
+        - name: Практическое руководство. Отладка сборки выпуска
+          href: ../build/how-to-debug-a-release-build.md
+        - name: Проверка перезаписи памяти
+          href: ../build/checking-for-memory-overwrites.md
+    - name: Оптимизация кода
+      expanded: false
+      items:
+        - name: Оптимизация кода
+          href: ../build/optimizing-your-code.md
+        - name: Директивы pragma и ключевые слова оптимизации
+          href: ../build/optimization-pragmas-and-keywords.md
+        - name: Улучшение производительности компилятора
+          href: ../build/improving-compiler-throughput.md
+        - name: Почему может уменьшиться точность чисел с плавающей запятой
+          href: ../build/why-floating-point-numbers-may-lose-precision.md
+        - name: IEEE-представление с плавающей запятой
+          href: ../build/ieee-floating-point-representation.md
+        - name: Рекомендации по оптимизации критичного по времени кода
+          href: ../build/tips-for-improving-time-critical-code.md
+        - name: При использовании имен функций без скобок () код не создается
+          href: ../build/using-function-name-without-parens-produces-no-code.md
+        - name: Рекомендации по оптимизации
+          href: ../build/optimization-best-practices.md
+        - name: Профильная оптимизация
+          expanded: false
+          items:
+            - name: Профильная оптимизация
+              href: ../build/profile-guided-optimizations.md
+            - name: Переменные среды для профильной оптимизации
+              href: ../build/environment-variables-for-profile-guided-optimizations.md
+            - name: PgoAutoSweep
+              href: ../build/pgoautosweep.md
+            - name: pgomgr
+              href: ../build/pgomgr.md
+            - name: pgosweep
+              href: ../build/pgosweep.md
+            - name: Практическое руководство. Слияние нескольких профилей для профильной оптимизации
+              href: ../build/how-to-merge-multiple-pgo-profiles-into-a-single-profile.md
+- name: Использование набора инструментов MSVC из командной строки
+  expanded: false
+  items:
+    - name: Использование набора инструментов MSVC из командной строки
+      href: ../build/building-on-the-command-line.md
+    - name: Пошаговое руководство. Компиляция собственной программы C++ из командной строки
+      href: ../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md
+    - name: Пошаговое руководство. Компиляция программы на языке C из командной строки
+      href: ../build/walkthrough-compile-a-c-program-on-the-command-line.md
+    - name: Пошаговое руководство. Компиляция программы на языке C++/CLI из командной строки
+      href: ../build/walkthrough-compiling-a-cpp-cli-program-on-the-command-line.md
+    - name: Пошаговое руководство. Компиляция программы на языке C++/CX из командной строки
+      href: ../build/walkthrough-compiling-a-cpp-cx-program-on-the-command-line.md
+    - name: Установка переменных пути и среды при сборке из командной строки
+      href: ../build/setting-the-path-and-environment-variables-for-command-line-builds.md
+- name: Использование MSBuild из командной строки
+  expanded: false
+  items:
+    - name: Использование MSBuild из командной строки
+      href: ../build/msbuild-visual-cpp.md
+    - name: Пошаговое руководство. Использование MSBuild для создания проекта C++
+      href: ../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md
+    - name: Практическое руководство. Использование событий сборки в проектах MSBuild
+      href: ../build/how-to-use-build-events-in-msbuild-projects.md
+    - name: Практическое руководство. Добавление пользовательского этапа сборки в проекты MSBuild
+      href: ../build/how-to-add-a-custom-build-step-to-msbuild-projects.md
+    - name: Практическое руководство. Добавление пользовательских средств сборки в проекты MSBuild
+      href: ../build/how-to-add-custom-build-tools-to-msbuild-projects.md
+    - name: Практическое руководство. Интеграция пользовательских средств в свойства проекта
+      href: ../build/how-to-integrate-custom-tools-into-the-project-properties.md
+    - name: Практическое руководство. Изменение требуемой версии платформы и набора средств платформы
+      href: ../build/how-to-modify-the-target-framework-and-platform-toolset.md
+- name: Пошаговое руководство. Создание и использование статической библиотеки (C++)
+  href: ../build/walkthrough-creating-and-using-a-static-library-cpp.md
+- name: Создание библиотек DLL C++ в Visual Studio
+  expanded: false
+  items:
+    - name: Создание библиотек DLL C++ в Visual Studio
+      href: ../build/dlls-in-visual-cpp.md
+    - name: Пошаговое руководство. Создание и использование библиотеки DLL (C++)
+      href: ../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md
+    - name: Виды библиотек DLL
+      expanded: false
+      items:
+        - name: Виды библиотек DLL
+          href: ../build/kinds-of-dlls.md
+        - name: 'Несовместимые с MFC библиотеки DLL: Обзор'
+          href: ../build/non-mfc-dlls-overview.md
+        - name: "Обычные библиотеки DLL MFC, статически связанные с\_MFC"
+          href: ../build/regular-dlls-statically-linked-to-mfc.md
+        - name: "Обычные библиотеки DLL MFC, динамически связанные с\_MFC"
+          href: ../build/regular-dlls-dynamically-linked-to-mfc.md
+        - name: 'Библиотеки DLL для расширения MFC: Обзор'
+          href: ../build/extension-dlls-overview.md
+    - name: Вопросы и ответы о библиотеках DLL MFC
+      href: ../build/dll-frequently-asked-questions.md
+    - name: "Связывание исполняемого файла с библиотекой\_DLL"
+      href: ../build/linking-an-executable-to-a-dll.md
+    - name: "Библиотеки\_DLL и поведение библиотеки времени выполнения MSVC"
+      href: ../build/run-time-library-behavior.md
+    - name: Функции LoadLibrary и AfxLoadLibrary
+      href: ../build/loadlibrary-and-afxloadlibrary.md
+    - name: GetProcAddress
+      href: ../build/getprocaddress.md
+    - name: Функции FreeLibrary и AfxFreeLibrary
+      href: ../build/freelibrary-and-afxfreelibrary.md
+    - name: "Состояния модулей обычной библиотеки DLL MFC, динамически связанной с\_MFC"
+      href: ../build/module-states-of-a-regular-dll-dynamically-linked-to-mfc.md
+    - name: Библиотеки DLL для расширения MFC
+      expanded: false
+      items:
+        - name: Библиотеки DLL для расширения MFC
+          href: ../build/extension-dlls.md
+        - name: "Использование библиотек\_DLL расширений\_MFC для баз данных, OLE и сокетов в обычных библиотеках DLL MFC"
+          href: ../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md
+    - name: 'Создание библиотек DLL, содержащих только ресурсы'
+      href: ../build/creating-a-resource-only-dll.md
+    - name: 'Локализованные ресурсы в приложениях MFC: вспомогательные библиотеки DLL'
+      href: ../build/localized-resources-in-mfc-applications-satellite-dlls.md
+    - name: Импорт и экспорт
+      expanded: false
+      items:
+        - name: Импорт и экспорт
+          href: ../build/importing-and-exporting.md
+        - name: Импорт в приложение
+          expanded: false
+          items:
+            - name: Импорт в приложение
+              href: ../build/importing-into-an-application.md
+            - name: Импорт в приложение с помощью __declspec(dllimport)
+              href: ../build/importing-into-an-application-using-declspec-dllimport.md
+            - name: Импорт вызовов функций с помощью __declspec(dllimport)
+              href: ../build/importing-function-calls-using-declspec-dllimport.md
+            - name: Импорт данных с помощью объявления __declspec(dllimport)
+              href: ../build/importing-data-using-declspec-dllimport.md
+            - name: Импорт с помощью DEF-файлов
+              href: ../build/importing-using-def-files.md
+        - name: Экспорт из библиотеки DLL
+          expanded: false
+          items:
+            - name: Экспорт из библиотеки DLL
+              href: ../build/exporting-from-a-dll.md
+            - name: Экспорт из библиотеки DLL с использованием DEF-файлов
+              href: ../build/exporting-from-a-dll-using-def-files.md
+            - name: Экспорт из библиотеки DLL с использованием __declspec(dllexport)
+              href: ../build/exporting-from-a-dll-using-declspec-dllexport.md
+            - name: Экспорт и импорт с использованием AFX_EXT_CLASS
+              href: ../build/exporting-and-importing-using-afx-ext-class.md
+            - name: 'Экспорт функций на языке C++ для использования в исполняемых модулях, исходный код которых написан на языке C'
+              href: ../build/exporting-cpp-functions-for-use-in-c-language-executables.md
+            - name: 'Экспорт функций на языке C для использования в исполняемых файлах, исходный код которых написан на языке C или C++'
+              href: ../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md
+            - name: Определение подходящего способа экспорта
+              href: ../build/determining-which-exporting-method-to-use.md
+            - name: 'Экспорт функций из библиотеки DLL по порядковому номеру, а не по имени'
+              href: ../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md
+        - name: Взаимный импорт
+          href: ../build/mutual-imports.md
+        - name: Импорт и экспорт встраиваемых функций
+          href: ../build/importing-and-exporting-inline-functions.md
+    - name: Технология Active и библиотеки DLL
+      href: ../build/active-technology-and-dlls.md
+    - name: Автоматизация в библиотеке DLL
+      href: ../build/automation-in-a-dll.md
+    - name: Вызов функций библиотек DLL из приложений Visual Basic
+      href: ../build/calling-dll-functions-from-visual-basic-applications.md
+- name: Создание изолированных приложений и параллельных сборок C/C++
+  expanded: false
+  items:
+    - name: Создание изолированных приложений и параллельных сборок C/C++
+      href: ../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md
+    - name: 'Основные понятия, связанные с изолированными приложениями и параллельными сборками'
+      href: ../build/concepts-of-isolated-applications-and-side-by-side-assemblies.md
+    - name: Создание изолированных приложений на C/C++
+      href: ../build/building-c-cpp-isolated-applications.md
+    - name: Создание параллельных сборок на C/C++
+      href: ../build/building-c-cpp-side-by-side-assemblies.md
+    - name: Практическое руководство. Сборка не требующих регистрации компонентов COM
+      href: ../build/how-to-build-registration-free-com-components.md
+    - name: 'Практическое руководство. Сборка изолированных приложений, использующих компоненты СОМ'
+      href: ../build/how-to-build-isolated-applications-to-consume-com-components.md
+    - name: Основные сведения о создании манифестов для программ на C/C++
+      expanded: false
+      items:
+        - name: Основные сведения о создании манифестов для программ на C/C++
+          href: ../build/understanding-manifest-generation-for-c-cpp-programs.md
+        - name: Создание манифестов в Visual Studio
+          href: ../build/manifest-generation-in-visual-studio.md
+        - name: Создание манифеста в командной строке
+          href: ../build/manifest-generation-at-the-command-line.md
+        - name: Практическое руководство. Внедрение манифеста в приложение на C/C++
+          href: ../build/how-to-embed-a-manifest-inside-a-c-cpp-application.md
+    - name: Устранение неполадок в изолированных приложениях и параллельных сборках на C/C++
+      href: ../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md
+- name: Настройка MSVC для 64-разрядных целевых платформ с архитектурой x64
+  expanded: false
+  items:
+    - name: Настройка MSVC для 64-разрядных целевых платформ с архитектурой x64
+      href: ../build/configuring-programs-for-64-bit-visual-cpp.md
+    - name: Практическое руководство. Настройка проектов C++ для 64-разрядных платформ с архитектурой x64
+      href: ../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md
+    - name: Практическое руководство. Использование набора 64-разрядных инструментов MSVC в командной строке
+      href: ../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md
+    - name: Общие сведения о миграции MSVC для 64-разрядных систем
+      href: ../build/common-visual-cpp-64-bit-migration-issues.md
+    - name: Программные соглашения для 64-разрядных систем
+      expanded: false
+      items:
+        - name: Программные соглашения для 64-разрядных систем
+          href: ../build/x64-software-conventions.md
+        - name: Соглашение о вызовах для 64-разрядных систем
+          href: ../build/x64-calling-convention.md
+        - name: Использование стека для 64-разрядных систем
+          href: ../build/stack-usage.md
+        - name: Пролог и эпилог для 64-разрядных систем
+          href: ../build/prolog-and-epilog.md
+        - name: Обработка исключений в 64-разрядных системах
+          href: ../build/exception-handling-x64.md
+- name: Настройка проектов C++ для процессоров ARM
+  expanded: false
+  items:
+    - name: Настройка проектов C++ для процессоров ARM
+      href: ../build/configuring-programs-for-arm-processors-visual-cpp.md
+    - name: Общие сведения о миграции MSVC для процессоров ARM
+      href: ../build/common-visual-cpp-arm-migration-issues.md
+    - name: Обзор соглашений ABI ARM
+      href: ../build/overview-of-arm-abi-conventions.md
+    - name: Общие сведения о соглашениях ABI ARM64
+      href: ../build/arm64-windows-abi-conventions.md
+    - name: Обработка исключений в ARM
+      href: ../build/arm-exception-handling.md
+    - name: Обработка исключений в ARM64
+      href: ../build/arm64-exception-handling.md
+- name: Настройка программ для Windows XP
+  href: ../build/configuring-programs-for-windows-xp.md
+- name: "Анализ кода для\_C/C++"
+  href: ../code-quality/
+- name: Справочник по компилятору и средствам сборки
+  expanded: false
+  items:
+    - name: Справочные сведения о сборке кода на C/C++
+      href: ../build/reference/c-cpp-building-reference.md
+    - name: Проекты С++. Справочник по MSBuild
+      expanded: false
+      items:
+        - name: Проекты С++. Справочник по MSBuild
+          href: ../build/reference/msbuild-reference-cpp.md
+        - name: Внутренние компоненты MSBuild для проектов C++
+          href: ../build/reference/msbuild-visual-cpp-overview.md
+        - name: Стандартные макросы для команд и свойств сборки
+          href: ../build/reference/common-macros-for-build-commands-and-properties.md
+        - name: 'Типы файлов, используемые в проектах С++'
+          expanded: false
+          items:
+            - name: 'Типы файлов, используемые в проектах С++'
+              href: ../build/reference/file-types-created-for-visual-cpp-projects.md
+            - name: Файлы проекта и решения
+              href: ../build/reference/project-and-solution-files.md
+            - name: Шаблоны проектов С++
+              href: ../build/reference/visual-cpp-project-types.md
+            - name: Новые шаблоны элементов C++
+              href: ../build/reference/using-visual-cpp-add-new-item-templates.md
+            - name: Файлы ресурсов
+              href: ../build/reference/resource-files-cpp.md
+            - name: 'Файлы, создаваемые для проектов CLR'
+              href: ../build/reference/files-created-for-clr-projects.md
+            - name: Программа ATL или управление файлами исходного кода и заголовков
+              href: ../build/reference/atl-program-or-control-source-and-header-files.md
+            - name: Программа MFC или управление файлами исходного кода и заголовков
+              href: ../build/reference/mfc-program-or-control-source-and-header-files.md
+            - name: Файлы справки HTML
+              href: ../build/reference/help-files-html-help.md
+            - name: Файлы справки WinHelp
+              href: ../build/reference/help-files-winhelp.md
+            - name: Файлы указаний для IntelliSense
+              href: ../build/reference/hint-files.md
+            - name: XML-файлы страницы свойств
+              href: ../build/reference/property-page-xml-files.md
+            - name: Структура файлов VCXPROJ и PROPS
+              href: ../build/reference/vcxproj-file-structure.md
+            - name: Пример файла проекта
+              href: ../build/reference/project-files.md
+            - name: Структура файла VCXPROJ.FILTERS
+              href: ../build/reference/vcxproj-filters-files.md
+        - name: Страницы свойств проекта C++
+          expanded: false
+          items:
+            - name: Справочник по свойствам проектов С++
+              href: ../build/reference/property-pages-visual-cpp.md
+            - name: Страница свойств "Общие" (проект)
+              href: ../build/reference/general-property-page-project.md
+            - name: Страница свойств "Общие"
+              href: ../build/reference/general-property-page-file.md
+            - name: Страница свойств "Дополнительно"
+              href: ../build/reference/advanced-property-page.md
+            - name: Страницы свойств отладки
+              href: ../build/reference/debugging-prop-pages.md
+            - name: Страница свойств каталогов VC++
+              href: ../build/reference/vcpp-directories-property-page.md
+            - name: Страницы свойств C/C++
+              href: ../build/reference/c-cpp-prop-page.md
+            - name: Страницы свойств компоновщика
+              href: ../build/reference/linker-property-pages.md
+            - name: Страницы свойств командной строки
+              href: ../build/reference/command-line-property-pages.md
+            - name: Страница свойств NMake
+              href: ../build/reference/nmake-property-page.md
+            - name: Страницы свойств сервиса манифестов
+              href: ../build/reference/manifest-tool-property-pages.md
+            - name: Страницы свойств ресурсов
+              href: ../build/reference/resources-property-pages.md
+            - name: Страница свойств управляемых ресурсов
+              href: ../build/reference/managed-resources-property-page.md
+            - name: Страницы свойств MIDL
+              href: ../build/reference/midl-property-pages.md
+            - name: Страница свойств веб-ссылок
+              href: ../build/reference/web-references-property-page.md
+            - name: Страница свойств "Инструмент создания XML-данных"
+              href: ../build/reference/xml-data-generator-tool-property-page.md
+            - name: Страницы свойств средства создания XML-документов
+              href: ../build/reference/xml-document-generator-tool-property-pages.md
+            - name: 'Страница свойств настраиваемого этапа сборки: Общее'
+              href: ../build/reference/custom-build-step-property-page-general.md
+            - name: Страницы свойств HLSL
+              href: ../build/reference/hlsl-property-pages.md
+    - name: Справочник по компилятору MSVC
+      expanded: false
+      items:
+        - name: Справочник по компилятору MSVC
+          href: ../build/reference/compiling-a-c-cpp-program.md
+        - name: Синтаксис командной строки компилятора MSVC
+          expanded: false
+          items:
+            - name: Синтаксис командной строки компилятора MSVC
+              href: ../build/reference/compiler-command-line-syntax.md
+            - name: Синтаксис имен файлов CL
+              href: ../build/reference/cl-filename-syntax.md
+            - name: Порядок параметров CL
+              href: ../build/reference/order-of-cl-options.md
+            - name: Возвращаемое программой cl.exe значение
+              href: ../build/reference/return-value-of-cl-exe.md
+        - name: Переменные среды CL
+          href: ../build/reference/cl-environment-variables.md
+        - name: Командные файлы компилятора CL
+          href: ../build/reference/cl-command-files.md
+        - name: Вызов компоновщика компилятором CL
+          href: ../build/reference/cl-invokes-the-linker.md
+        - name: Параметры компилятора MSVC
+          expanded: false
+          items:
+            - name: Параметры компилятора MSVC
+              href: ../build/reference/compiler-options.md
+            - name: 'Параметры компилятора, упорядоченные по категориям'
+              href: ../build/reference/compiler-options-listed-by-category.md
+            - name: Параметры компилятора в алфавитном порядке
+              expanded: false
+              items:
+                - name: Параметры компилятора в алфавитном порядке
+                  href: ../build/reference/compiler-options-listed-alphabetically.md
+                - name: '@ (указание файла ответов компилятора)'
+                  href: ../build/reference/at-specify-a-compiler-response-file.md
+                - name: /AI (указание каталогов метаданных)
+                  href: ../build/reference/ai-specify-metadata-directories.md
+                - name: /analyze (анализ кода)
+                  href: ../build/reference/analyze-code-analysis.md
+                - name: /arch (минимальная архитектура ЦП)
+                  expanded: false
+                  items:
+                    - name: /arch (минимальная архитектура ЦП)
+                      href: ../build/reference/arch-minimum-cpu-architecture.md
+                    - name: /arch (x86)
+                      href: ../build/reference/arch-x86.md
+                    - name: /arch (x64)
+                      href: ../build/reference/arch-x64.md
+                    - name: /arch (ARM)
+                      href: ../build/reference/arch-arm.md
+                - name: /await (включение поддержки соподпрограмм)
+                  href: ../build/reference/await-enable-coroutine-support.md
+                - name: /bigobj (увеличение количества разделов в OBJ-файле)
+                  href: ../build/reference/bigobj-increase-number-of-sections-in-dot-obj-file.md
+                - name: /C (сохранение комментариев в ходе предварительной обработки)
+                  href: ../build/reference/c-preserve-comments-during-preprocessing.md
+                - name: /c (компиляция без компоновки)
+                  href: ../build/reference/c-compile-without-linking.md
+                - name: /cgthreads (потоки создания кода)
+                  href: ../build/reference/cgthreads-code-generation-threads.md
+                - name: /clr (компиляция среды CLR)
+                  expanded: false
+                  items:
+                    - name: /clr (компиляция среды CLR)
+                      href: ../build/reference/clr-common-language-runtime-compilation.md
+                    - name: Ограничения /clr
+                      href: ../build/reference/clr-restrictions.md
+                - name: /constexpr (управление вычислениями constexpr)
+                  href: ../build/reference/constexpr-control-constexpr-evaluation.md
+                - name: /D (определения препроцессора)
+                  href: ../build/reference/d-preprocessor-definitions.md
+                - name: /diagnostics (параметры диагностики компилятора)
+                  href: ../build/reference/diagnostics-compiler-diagnostic-options.md
+                - name: /doc (обработка комментариев в документации) (C/C++)
+                  href: ../build/reference/doc-process-documentation-comments-c-cpp.md
+                - name: /E (Предварительная обработка до stdout)
+                  href: ../build/reference/e-preprocess-to-stdout.md
+                - name: /EH (модель обработки исключений)
+                  href: ../build/reference/eh-exception-handling-model.md
+                - name: '/EP (предварительная обработка в stdout без директив #line)'
+                  href: ../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md
+                - name: /errorReport (отчет о внутренних ошибках компилятора)
+                  href: ../build/reference/errorreport-report-internal-compiler-errors.md
+                - name: /execution/charset (указание кодировки для выполнения)
+                  href: ../build/reference/execution-charset-set-execution-character-set.md
+                - name: '/experimental:module'
+                  href: ../build/reference/experimental-module.md
+                - name: '/experimental:preprocessor'
+                  href: ../build/reference/experimental-preprocessor.md
+                - name: /F (указание размера стека)
+                  href: ../build/reference/f-set-stack-size.md
+                - name: Параметры выходного файла (/F)
+                  expanded: false
+                  items:
+                    - name: Параметры выходного файла (/F)
+                      href: ../build/reference/output-file-f-options.md
+                    - name: '/FA, /Fa (файл листинга)'
+                      href: ../build/reference/fa-fa-listing-file.md
+                    - name: Указание пути
+                      href: ../build/reference/specifying-the-pathname.md
+                    - name: /FD (минимальное перестроение IDE)
+                      href: ../build/reference/fd-ide-minimal-rebuild.md
+                    - name: /Fd (имя файла базы данных программы)
+                      href: ../build/reference/fd-program-database-file-name.md
+                    - name: /Fe (именование EXE-файла)
+                      href: ../build/reference/fe-name-exe-file.md
+                    - name: /Fi (предварительная обработка имени выходного файла)
+                      href: ../build/reference/fi-preprocess-output-file-name.md
+                    - name: /FI (имя принудительно включаемого файла)
+                      href: ../build/reference/fi-name-forced-include-file.md
+                    - name: /Fm (имя файла сопоставления)
+                      href: ../build/reference/fm-name-mapfile.md
+                    - name: /Fo (имя объектного файла)
+                      href: ../build/reference/fo-object-file-name.md
+                    - name: /Fp (имя PCH-файла)
+                      href: ../build/reference/fp-name-dot-pch-file.md
+                    - name: '/FR, /Fr (создание файла SBR)'
+                      href: ../build/reference/fr-fr-create-dot-sbr-file.md
+                    - name: /FU (именование файла с принудительно используемым
+                      href: ../build/reference/fu-name-forced-hash-using-file.md
+                    - name: /Fx (слияние подставляемого кода)
+                      href: ../build/reference/fx-merge-injected-code.md
+                - name: /favor (оптимизация для особенностей архитектуры)
+                  href: ../build/reference/favor-optimize-for-architecture-specifics.md
+                - name: /FC (полный путь к файлу исходного кода в папке Diagnostics)
+                  href: ../build/reference/fc-full-path-of-source-code-file-in-diagnostics.md
+                - name: /fp (определение поведения с плавающей запятой)
+                  href: ../build/reference/fp-specify-floating-point-behavior.md
+                - name: /FS (принудительное выполнение синхронных записей PDB)
+                  href: ../build/reference/fs-force-synchronous-pdb-writes.md
+                - name: /GA (оптимизация для приложений Windows)
+                  href: ../build/reference/ga-optimize-for-windows-application.md
+                - name: '/Gd, /Gr, /Gv, /Gz (соглашение о вызовах)'
+                  href: ../build/reference/gd-gr-gv-gz-calling-convention.md
+                - name: /Ge (включение проверки стека)
+                  href: ../build/reference/ge-enable-stack-probes.md
+                - name: /GF (исключение повторяющихся строк)
+                  href: ../build/reference/gf-eliminate-duplicate-strings.md
+                - name: /GH (включение функции-обработчика _pexit)
+                  href: ../build/reference/gh-enable-pexit-hook-function.md
+                - name: /Gh (включение функции-обработчика _penter)
+                  href: ../build/reference/gh-enable-penter-hook-function.md
+                - name: /GL (оптимизация всей программы)
+                  href: ../build/reference/gl-whole-program-optimization.md
+                - name: /Gm (включение минимального перестроения)
+                  href: ../build/reference/gm-enable-minimal-rebuild.md
+                - name: /GR (Предоставление информации о типах во время выполнения)
+                  href: ../build/reference/gr-enable-run-time-type-information.md
+                - name: /GS (проверка безопасности буфера)
+                  href: ../build/reference/gs-buffer-security-check.md
+                - name: /Gs (управление вызовами проверки стека)
+                  href: ../build/reference/gs-control-stack-checking-calls.md
+                - name: /guard (включение защиты потока управления)
+                  href: ../build/reference/guard-enable-control-flow-guard.md
+                - name: '/GT (поддержка локальной памяти потока, безопасной относительно волокон)'
+                  href: ../build/reference/gt-support-fiber-safe-thread-local-storage.md
+                - name: /Gw (оптимизация глобальных данных)
+                  href: ../build/reference/gw-optimize-global-data.md
+                - name: /GX (включение обработки исключений)
+                  href: ../build/reference/gx-enable-exception-handling.md
+                - name: /Gy (включение компоновки на уровне функций)
+                  href: ../build/reference/gy-enable-function-level-linking.md
+                - name: /GZ (включение проверки на наличие ошибок кадра стека во время выполнения)
+                  href: ../build/reference/gz-enable-stack-frame-run-time-error-checking.md
+                - name: /H (ограничение длины внешних имен)
+                  href: ../build/reference/h-restrict-length-of-external-names.md
+                - name: /HELP (файл справки по компилятору командной строки)
+                  href: ../build/reference/help-compiler-command-line-help.md
+                - name: /homeparams (копирование параметров регистров в стек)
+                  href: ../build/reference/homeparams-copy-register-parameters-to-stack.md
+                - name: '/hotpatch (создание образа, допускающего оперативное обновление)'
+                  href: ../build/reference/hotpatch-create-hotpatchable-image.md
+                - name: /I (дополнительные каталоги включения)
+                  href: ../build/reference/i-additional-include-directories.md
+                - name: /J (тип символа по умолчанию не подписан)
+                  href: ../build/reference/j-default-char-type-is-unsigned.md
+                - name: /JMC (отладка "Только мой код")
+                  href: ../build/reference/jmc.md
+                - name: /kernel (создание двоичного файла режима ядра)
+                  href: ../build/reference/kernel-create-kernel-mode-binary.md
+                - name: /link (передача параметров компоновщику)
+                  href: ../build/reference/link-pass-options-to-linker.md
+                - name: /LN (создание модуля MSIL)
+                  href: ../build/reference/ln-create-msil-module.md
+                - name: '/MD, /MT, /LD (использование библиотеки времени выполнения)'
+                  href: ../build/reference/md-mt-ld-use-run-time-library.md
+                - name: /MP (сборка с несколькими процессами)
+                  href: ../build/reference/mp-build-with-multiple-processes.md
+                - name: /nologo (отключение загрузочного баннера) (C/C++)
+                  href: ../build/reference/nologo-suppress-startup-banner-c-cpp.md
+                - name: Параметры /O (оптимизация кода)
+                  expanded: false
+                  items:
+                    - name: Параметры /O (оптимизация кода)
+                      href: ../build/reference/o-options-optimize-code.md
+                    - name: '/O1, /O2 (минимизация размера, максимизация скорости)'
+                      href: ../build/reference/o1-o2-minimize-size-maximize-speed.md
+                    - name: /Ob (расширение встраиваемых функций)
+                      href: ../build/reference/ob-inline-function-expansion.md
+                    - name: /Od (Выключение (отладчика))
+                      href: ../build/reference/od-disable-debug.md
+                    - name: /Og (виды глобальной оптимизации)
+                      href: ../build/reference/og-global-optimizations.md
+                    - name: /Oi (создание встроенных функций)
+                      href: ../build/reference/oi-generate-intrinsic-functions.md
+                    - name: '/Os, /Ot (приоритет размера или скорости кода)'
+                      href: ../build/reference/os-ot-favor-small-code-favor-fast-code.md
+                    - name: /Ox (включение большинства видов оптимизации скорости)
+                      href: ../build/reference/ox-full-optimization.md
+                    - name: /Oy (подавление указателей фрейма)
+                      href: ../build/reference/oy-frame-pointer-omission.md
+                - name: "/openmp (включение поддержки OpenMP\_2.0)"
+                  href: ../build/reference/openmp-enable-openmp-2-0-support.md
+                - name: /P (вывод результатов предварительной обработки в файл)
+                  href: ../build/reference/p-preprocess-to-a-file.md
+                - name: /permissive- (соответствие стандартам)
+                  href: ../build/reference/permissive-standards-conformance.md
+                - name: Параметры /Q (низкоуровневые операции)
+                  expanded: false
+                  items:
+                    - name: Параметры /Q (низкоуровневые операции)
+                      href: ../build/reference/q-options-low-level-operations.md
+                    - name: /Qfast_transcendentals (принудительное использование быстрых трансцендентных функций)
+                      href: ../build/reference/qfast-transcendentals-force-fast-transcendentals.md
+                    - name: /QIfist (Suppress _ftol)
+                      href: ../build/reference/qifist-suppress-ftol.md
+                    - name: /Qimprecise_fwaits (удаление элементов fwait в блоке try)
+                      href: ../build/reference/qimprecise-fwaits-remove-fwaits-inside-try-blocks.md
+                    - name: /QIntel-jcc-erratum
+                      href: ../build/reference/qintel-jcc-erratum.md
+                    - name: /Qpar (автоматический параллелизатор)
+                      href: ../build/reference/qpar-auto-parallelizer.md
+                    - name: /Qpar-report (уровень отчетности автоматического параллелизатора)
+                      href: ../build/reference/qpar-report-auto-parallelizer-reporting-level.md
+                    - name: /Qsafe_fp_loads
+                      href: ../build/reference/qsafe-fp-loads.md
+                    - name: /Qspectre
+                      href: ../build/reference/qspectre.md
+                    - name: /Qspectre-load
+                      href: ../build/reference/qspectre-load.md
+                    - name: /Qspectre-load-cf
+                      href: ../build/reference/qspectre-load-cf.md
+                    - name: /Qvec-report (уровень отчетности автоматического векторизатора)
+                      href: ../build/reference/qvec-report-auto-vectorizer-reporting-level.md
+                - name: /RTC (проверки ошибок во время выполнения)
+                  href: ../build/reference/rtc-run-time-error-checks.md
+                - name: /sdl (включение дополнительных проверок безопасности)
+                  href: ../build/reference/sdl-enable-additional-security-checks.md
+                - name: /showIncludes (список включаемых файлов)
+                  href: ../build/reference/showincludes-list-include-files.md
+                - name: /source-charset (задание исходной кодировки)
+                  href: ../build/reference/source-charset-set-source-character-set.md
+                - name: /std (определение стандартной версии языка)
+                  href: ../build/reference/std-specify-language-standard-version.md
+                - name: '/Tc, /Tp, /TC, /TP (определение типа исходного файла)'
+                  href: ../build/reference/tc-tp-tc-tp-specify-source-file-type.md
+                - name: '/U, /u (отмена определения символов)'
+                  href: ../build/reference/u-u-undefine-symbols.md
+                - name: /utf-8 (указание UTF-8 в качестве исходной кодировки и кодировки исполняемого файла)
+                  href: ../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md
+                - name: /V (номер версии)
+                  href: ../build/reference/v-version-number.md
+                - name: /validate-charset (проверка совместимости символов)
+                  href: ../build/reference/validate-charset-validate-for-compatible-characters.md
+                - name: /vd (отключение смещений при выполнении конструктора)
+                  href: ../build/reference/vd-disable-construction-displacements.md
+                - name: '/vmb, /vmg (метод представления)'
+                  href: ../build/reference/vmb-vmg-representation-method.md
+                - name: '/vmm, /vms и /vmv (представление общего назначения)'
+                  href: ../build/reference/vmm-vms-vmv-general-purpose-representation.md
+                - name: /volatile (интерпретация ключевого слова volatile)
+                  href: ../build/reference/volatile-volatile-keyword-interpretation.md
+                - name: '/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, /we, /wo, /Wv, /WX (уровень предупреждения)'
+                  href: ../build/reference/compiler-option-warning-level.md
+                - name: /WL (включение вывода однострочных диагностических сообщений)
+                  href: ../build/reference/wl-enable-one-line-diagnostics.md
+                - name: /Wp64 (выявление проблем переносимости на 64-разрядные платформы)
+                  href: ../build/reference/wp64-detect-64-bit-portability-issues.md
+                - name: /X (игнорирование стандартных путей включения)
+                  href: ../build/reference/x-ignore-standard-include-paths.md
+                - name: /Y (предкомпилированные заголовки)
+                  expanded: false
+                  items:
+                    - name: /Y (предкомпилированные заголовки)
+                      href: ../build/reference/y-precompiled-headers.md
+                    - name: /Y- (пропуск параметров предкомпилированного заголовка)
+                      href: ../build/reference/y-ignore-precompiled-header-options.md
+                    - name: /Yc (создание предкомпилированного файла заголовка)
+                      href: ../build/reference/yc-create-precompiled-header-file.md
+                    - name: /Yd (размещение отладочной информации в объектном файле)
+                      href: ../build/reference/yd-place-debug-information-in-object-file.md
+                    - name: /Yl (вставка ссылки на файл PCH для библиотеки отладки)
+                      href: ../build/reference/yl-inject-pch-reference-for-debug-library.md
+                    - name: /Yu (использование файла предкомпилированного заголовка)
+                      href: ../build/reference/yu-use-precompiled-header-file.md
+                - name: '/Z7, /Zi, /ZI (формат отладочной информации)'
+                  href: ../build/reference/z7-zi-zi-debug-information-format.md
+                - name: '/Za, /Ze (отключение расширений языка)'
+                  expanded: false
+                  items:
+                    - name: '/Za, /Ze (отключение расширений языка)'
+                      href: ../build/reference/za-ze-disable-language-extensions.md
+                    - name: Расширения Майкрософт для языков C и C++
+                      href: ../build/reference/microsoft-extensions-to-c-and-cpp.md
+                - name: /Zc (соответствие)
+                  expanded: false
+                  items:
+                    - name: /Zc (соответствие)
+                      href: ../build/reference/zc-conformance.md
+                    - name: '/Zc:alignedNew (выделение С++17 с избыточным выравниванием)'
+                      href: ../build/reference/zc-alignednew.md
+                    - name: '/Zc:auto (выведение типа переменной)'
+                      href: ../build/reference/zc-auto-deduce-variable-type.md
+                    - name: '/Zc:__cplusplus (включить обновленный макрос __cplusplus)'
+                      href: ../build/reference/zc-cplusplus.md
+                    - name: '/Zc:externConstexpr (включение внешних переменных constexpr)'
+                      href: ../build/reference/zc-externconstexpr.md
+                    - name: '/Zc:forScope (принудительное обеспечение соответствия в области цикла for)'
+                      href: ../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md
+                    - name: '/Zc:implicitNoexcept (неявные описатели исключений)'
+                      href: ../build/reference/zc-implicitnoexcept-implicit-exception-specifiers.md
+                    - name: '/Zc:inline (удаление COMDAT без ссылки)'
+                      href: ../build/reference/zc-inline-remove-unreferenced-comdat.md
+                    - name: '/Zc:noexceptTypes (правила noexcept C++17)'
+                      href: ../build/reference/zc-noexcepttypes.md
+                    - name: '/Zc:referenceBinding (принудительное применение правил привязки ссылок)'
+                      href: ../build/reference/zc-referencebinding-enforce-reference-binding-rules.md
+                    - name: '/Zc:rvalueCast (принудительное применение правил преобразования типов)'
+                      href: ../build/reference/zc-rvaluecast-enforce-type-conversion-rules.md
+                    - name: '/Zc:sizedDealloc (включение глобальных размерных функций удаления)'
+                      href: ../build/reference/zc-sizeddealloc-enable-global-sized-dealloc-functions.md
+                    - name: '/Zc:strictStrings (отключение преобразования типов строковых литералов)'
+                      href: ../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md
+                    - name: '/Zc:ternary (принудительное применение правил для условного оператора)'
+                      href: ../build/reference/zc-ternary.md
+                    - name: '/Zc:threadSafeInit (потокобезопасная локальная статическая инициализация)'
+                      href: ../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md
+                    - name: '/Zc:throwingNew (новые исключения оператора assume)'
+                      href: ../build/reference/zc-throwingnew-assume-operator-new-throws.md
+                    - name: '/Zc:trigraphs (подстановка триграфов)'
+                      href: ../build/reference/zc-trigraphs-trigraphs-substitution.md
+                    - name: '/Zc:twoPhase- (отключение двухэтапного поиска имени)'
+                      href: ../build/reference/zc-twophase.md
+                    - name: '/Zc:wchar_t (собственный тип wchar_t)'
+                      href: ../build/reference/zc-wchar-t-wchar-t-is-native-type.md
+                - name: /Zf (ускоренное создание PDB-файла)
+                  href: ../build/reference/zf.md
+                - name: /Zg (создание прототипов функций)
+                  href: ../build/reference/zg-generate-function-prototypes.md
+                - name: /ZH (хэш-алгоритм для контрольной суммы в отладочной информации)
+                  href: ../build/reference/zh.md
+                - name: /Zl (опущенное имя библиотеки по умолчанию)
+                  href: ../build/reference/zl-omit-default-library-name.md
+                - name: /Zm (определение ограничения на выделение памяти для предкомпилированного заголовка)
+                  href: ../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md
+                - name: /Zo (улучшение оптимизированной отладки)
+                  href: ../build/reference/zo-enhance-optimized-debugging.md
+                - name: /Zp (выравнивание члена структуры)
+                  href: ../build/reference/zp-struct-member-alignment.md
+                - name: /Zs (только синтаксическая проверка)
+                  href: ../build/reference/zs-syntax-check-only.md
+                - name: /ZW (компиляция среды выполнения Windows)
+                  href: ../build/reference/zw-windows-runtime-compilation.md
+        - name: Поддержка Юникода в компиляторе и компоновщике
+          href: ../build/reference/unicode-support-in-the-compiler-and-linker.md
+    - name: Справочник по компоновщику MSVC
+      expanded: false
+      items:
+        - name: Справочник по компоновщику MSVC
+          href: ../build/reference/linking.md
+        - name: Параметры компоновщика MSVC
+          expanded: false
+          items:
+            - name: Параметры компоновщика MSVC
+              href: ../build/reference/linker-options.md
+            - name: Управляемые компилятором параметры LINK
+              href: ../build/reference/compiler-controlled-link-options.md
+            - name: Входные LINK-файлы
+              expanded: false
+              items:
+                - name: Входные LINK-файлы
+                  href: ../build/reference/link-input-files.md
+                - name: OBJ-файлы в качестве входных файлов компоновщика
+                  href: ../build/reference/dot-obj-files-as-linker-input.md
+                - name: NETMODULE-файлы в качестве входных файлов компоновщика
+                  expanded: false
+                  items:
+                    - name: NETMODULE-файлы в качестве входных файлов компоновщика
+                      href: ../build/reference/netmodule-files-as-linker-input.md
+                    - name: Выбор формата входных файлов NETMODULE
+                      href: ../build/reference/choosing-the-format-of-netmodule-input-files.md
+                - name: LIB-файлы в качестве входных файлов компоновщика
+                  href: ../build/reference/dot-lib-files-as-linker-input.md
+                - name: EXP-файлы в качестве входных файлов компоновщика
+                  href: ../build/reference/dot-exp-files-as-linker-input.md
+                - name: DEF-файлы в качестве входных файлов компоновщика
+                  href: ../build/reference/dot-def-files-as-linker-input.md
+                - name: PDB-файлы в качестве входных файлов компоновщика
+                  href: ../build/reference/dot-pdb-files-as-linker-input.md
+                - name: RES-файлы в качестве входных файлов компоновщика
+                  href: ../build/reference/dot-res-files-as-linker-input.md
+                - name: EXE-файлы в качестве входных файлов компоновщика
+                  href: ../build/reference/dot-exe-files-as-linker-input.md
+                - name: TXT-файлы в качестве входных файлов компоновщика
+                  href: ../build/reference/dot-txt-files-as-linker-input.md
+                - name: ILK-файлы в качестве входных файлов компоновщика
+                  href: ../build/reference/dot-ilk-files-as-linker-input.md
+            - name: Выходные данные LINK
+              href: ../build/reference/link-output.md
+            - name: Зарезервированные слова
+              href: ../build/reference/reserved-words.md
+            - name: '@ (определение файла ответов компоновщика)'
+              href: ../build/reference/at-specify-a-linker-response-file.md
+            - name: /ALIGN (выравнивание разделов)
+              href: ../build/reference/align-section-alignment.md
+            - name: /ALLOWBIND (запрет привязки DLL)
+              href: ../build/reference/allowbind-prevent-dll-binding.md
+            - name: /ALLOWISOLATION (поиск манифеста)
+              href: ../build/reference/allowisolation-manifest-lookup.md
+            - name: "/APPCONTAINER (приложение UWP/Microsoft\_Store)"
+              href: ../build/reference/appcontainer-windows-store-app.md
+            - name: /ASSEMBLYDEBUG (добавление атрибута DebuggableAttribute)
+              href: ../build/reference/assemblydebug-add-debuggableattribute.md
+            - name: /ASSEMBLYLINKRESOURCE (связывание с ресурсом .NET Framework)
+              href: ../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md
+            - name: /ASSEMBLYMODULE (добавление модуля MSIL в сборку)
+              href: ../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md
+            - name: /ASSEMBLYRESOURCE (внедрение управляемого ресурса)
+              href: ../build/reference/assemblyresource-embed-a-managed-resource.md
+            - name: /BASE (базовый адрес)
+              href: ../build/reference/base-base-address.md
+            - name: /CETCOMPAT (совместимость с Control-flow Enforcement Technology)
+              href: ../build/reference/cetcompat.md
+            - name: /CGTHREADS (потоки компилятора)
+              href: ../build/reference/cgthreads-compiler-threads.md
+            - name: /CLRIMAGETYPE (указание типа образа среды CLR)
+              href: ../build/reference/clrimagetype-specify-type-of-clr-image.md
+            - name: /CLRSUPPORTLASTERROR (сохранение кода последней ошибки для вызовов PInvoke)
+              href: ../build/reference/clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls.md
+            - name: /CLRTHREADATTRIBUTE (установка атрибута потока среды CLR)
+              href: ../build/reference/clrthreadattribute-set-clr-thread-attribute.md
+            - name: /CLRUNMANAGEDCODECHECK (удалить атрибут SuppressUnmanagedCodeSecurityAttribute)
+              href: ../build/reference/clrunmanagedcodecheck-add-suppressunmanagedcodesecurityattribute.md
+            - name: /DEBUG (создание отладочной информации)
+              href: ../build/reference/debug-generate-debug-info.md
+            - name: /DEBUGTYPE (параметры отладочной информации)
+              href: ../build/reference/debugtype-debug-info-options.md
+            - name: /DEF (указание файла определения модуля)
+              href: ../build/reference/def-specify-module-definition-file.md
+            - name: /DEFAULTLIB (определение библиотеки по умолчанию)
+              href: ../build/reference/defaultlib-specify-default-library.md
+            - name: /DELAY (параметры импорта отложенной загрузки)
+              href: ../build/reference/delay-delay-load-import-settings.md
+            - name: /DELAYLOAD (импорт отложенной загрузки)
+              href: ../build/reference/delayload-delay-load-import.md
+            - name: /DELAYSIGN (частичное подписание сборки)
+              href: ../build/reference/delaysign-partially-sign-an-assembly.md
+            - name: /DEPENDENTLOADFLAG (установка флагов зависимой загрузки по умолчанию)
+              href: ../build/reference/dependentloadflag.md
+            - name: /DLL (построение библиотеки DLL)
+              href: ../build/reference/dll-build-a-dll.md
+            - name: /DRIVER (драйвер режима ядра Windows NT)
+              href: ../build/reference/driver-windows-nt-kernel-mode-driver.md
+            - name: /DYNAMICBASE (использование технологии Address Space Layout Randomization (ASRL))
+              href: ../build/reference/dynamicbase-use-address-space-layout-randomization.md
+            - name: /ENTRY (символ точки входа)
+              href: ../build/reference/entry-entry-point-symbol.md
+            - name: /ERRORREPORT (создание отчетов о внутренних ошибках компоновщика)
+              href: ../build/reference/errorreport-report-internal-linker-errors.md
+            - name: /EXPORT (экспорт функции)
+              href: ../build/reference/export-exports-a-function.md
+            - name: /FILEALIGN (выравнивание разделов в файлах)
+              href: ../build/reference/filealign.md
+            - name: /FIXED (фиксированный базовый адрес)
+              href: ../build/reference/fixed-fixed-base-address.md
+            - name: /FORCE (принудительный вывод файла)
+              href: ../build/reference/force-force-file-output.md
+            - name: '/FUNCTIONPADMIN (создание образа, допускающего оперативное обновление)'
+              href: ../build/reference/functionpadmin-create-hotpatchable-image.md
+            - name: '/GENPROFILE, /FASTGENPROFILE (создание инструментированной сборки профилирования)'
+              href: ../build/reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md
+            - name: /GUARD (включение проверок защиты)
+              href: ../build/reference/guard-enable-guard-checks.md
+            - name: /HEAP (задание размера кучи)
+              href: ../build/reference/heap-set-heap-size.md
+            - name: /HIGHENTROPYVA (поддержка 64-разрядной технологии ASLR)
+              href: ../build/reference/highentropyva-support-64-bit-aslr.md
+            - name: /IDLOUT (присвоение имен выходным файлам MIDL)
+              href: ../build/reference/idlout-name-midl-output-files.md
+            - name: /IGNORE (игнорирование определенных предупреждений)
+              href: ../build/reference/ignore-ignore-specific-warnings.md
+            - name: /IGNOREIDL (запрет преобразования атрибутов в MIDL)
+              href: ../build/reference/ignoreidl-don-t-process-attributes-into-midl.md
+            - name: /IMPLIB (именование библиотеки импорта)
+              href: ../build/reference/implib-name-import-library.md
+            - name: /INCLUDE (принудительные ссылки на символы)
+              href: ../build/reference/include-force-symbol-references.md
+            - name: /INCREMENTAL (инкрементная компоновка)
+              href: ../build/reference/incremental-link-incrementally.md
+            - name: /INTEGRITYCHECK (требование проверки подписи)
+              href: ../build/reference/integritycheck-require-signature-check.md
+            - name: /KEYCONTAINER (задание контейнера ключей для подписи сборки)
+              href: ../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md
+            - name: /KEYFILE (задание ключа или пары ключей для подписи сборки)
+              href: ../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md
+            - name: /LARGEADDRESSAWARE (обработка больших адресов)
+              href: ../build/reference/largeaddressaware-handle-large-addresses.md
+            - name: /LIBPATH (дополнительный параметр libpath)
+              href: ../build/reference/libpath-additional-libpath.md
+            - name: /LINKREPRO (связывание с именем каталога для воспроизведения)
+              href: ../build/reference/linkrepro.md
+            - name: /LINKREPROTARGET (связывание с именем файла для воспроизведения)
+              href: ../build/reference/linkreprotarget.md
+            - name: /LTCG (создание кода во время компоновки)
+              href: ../build/reference/ltcg-link-time-code-generation.md
+            - name: /MACHINE (определение целевой платформы)
+              href: ../build/reference/machine-specify-target-platform.md
+            - name: /MANIFEST (создание манифеста параллельной сборки)
+              href: ../build/reference/manifest-create-side-by-side-assembly-manifest.md
+            - name: /MANIFESTDEPENDENCY (определение зависимостей манифеста)
+              href: ../build/reference/manifestdependency-specify-manifest-dependencies.md
+            - name: /MANIFESTFILE (именование файла манифеста)
+              href: ../build/reference/manifestfile-name-manifest-file.md
+            - name: /MANIFESTINPUT (определение входных данных манифеста)
+              href: ../build/reference/manifestinput-specify-manifest-input.md
+            - name: /MANIFESTUAC (встраивает в манифест сведений об UAC)
+              href: ../build/reference/manifestuac-embeds-uac-information-in-manifest.md
+            - name: /MAP (создание файла сопоставления)
+              href: ../build/reference/map-generate-mapfile.md
+            - name: /MAPINFO (включение данных в файл сопоставления)
+              href: ../build/reference/mapinfo-include-information-in-mapfile.md
+            - name: /MERGE (слияние разделов)
+              href: ../build/reference/merge-combine-sections.md
+            - name: /MIDL (указание параметров командной строки MIDL)
+              href: ../build/reference/midl-specify-midl-command-line-options.md
+            - name: /NATVIS (добавление файла NATVIS в файл PDB)
+              href: ../build/reference/natvis-add-natvis-to-pdb.md
+            - name: /NOASSEMBLY (создание модуля MSIL)
+              href: ../build/reference/noassembly-create-a-msil-module.md
+            - name: /NODEFAULTLIB (игнорирование библиотек)
+              href: ../build/reference/nodefaultlib-ignore-libraries.md
+            - name: /NOENTRY (точка входа отсутствует)
+              href: ../build/reference/noentry-no-entry-point.md
+            - name: /NOLOGO (отмена вывода загрузочного баннера) (компоновщик)
+              href: ../build/reference/nologo-suppress-startup-banner-linker.md
+            - name: /NXCOMPAT (совместимо с предотвращением исполнения данных (DEP))
+              href: ../build/reference/nxcompat-compatible-with-data-execution-prevention.md
+            - name: Параметр /OPT (оптимизация)
+              href: ../build/reference/opt-optimizations.md
+            - name: /ORDER (размещение функций по порядку)
+              href: ../build/reference/order-put-functions-in-order.md
+            - name: /OUT (имя выходного файла)
+              href: ../build/reference/out-output-file-name.md
+            - name: /PDB (использование базы данных программы)
+              href: ../build/reference/pdb-use-program-database.md
+            - name: /PDBALTPATH (использование альтернативного пути к файлу PDB)
+              href: ../build/reference/pdbaltpath-use-alternate-pdb-path.md
+            - name: /PDBSTRIPPED (удаление закрытых символов)
+              href: ../build/reference/pdbstripped-strip-private-symbols.md
+            - name: /PGD (указание базы данных для профильной оптимизации)
+              href: ../build/reference/pgd-specify-database-for-profile-guided-optimizations.md
+            - name: /POGOSAFEMODE
+              href: ../build/reference/pogosafemode-linker-option.md
+            - name: /PROFILE (профилировщик средств оценки производительности)
+              href: ../build/reference/profile-performance-tools-profiler.md
+            - name: /RELEASE (установка контрольной суммы)
+              href: ../build/reference/release-set-the-checksum.md
+            - name: /SAFESEH (образ содержит безопасные обработчики исключений)
+              href: ../build/reference/safeseh-image-has-safe-exception-handlers.md
+            - name: /SECTION (указание атрибутов раздела)
+              href: ../build/reference/section-specify-section-attributes.md
+            - name: /SOURCELINK (включение файла Sourcelink в PDB-файл)
+              href: ../build/reference/sourcelink.md
+            - name: /STACK (выделение памяти в стеке)
+              href: ../build/reference/stack-stack-allocations.md
+            - name: /STUB (имя файла-заглушки MS-DOS)
+              href: ../build/reference/stub-ms-dos-stub-file-name.md
+            - name: /SUBSYSTEM (указание подсистемы)
+              href: ../build/reference/subsystem-specify-subsystem.md
+            - name: /SWAPRUN (загрузка выходных данных компоновщика в файл подкачки)
+              href: ../build/reference/swaprun-load-linker-output-to-swap-file.md
+            - name: /TLBID (указание идентификатора ресурса для TypeLib)
+              href: ../build/reference/tlbid-specify-resource-id-for-typelib.md
+            - name: /TLBOUT (именование файла TLB)
+              href: ../build/reference/tlbout-name-dot-tlb-file.md
+            - name: '/TSAWARE (создание приложения, поддерживающего сервер терминалов)'
+              href: ../build/reference/tsaware-create-terminal-server-aware-application.md
+            - name: /USEPROFILE
+              href: ../build/reference/useprofile.md
+            - name: /VERBOSE (печать сообщений о ходе выполнения)
+              href: ../build/reference/verbose-print-progress-messages.md
+            - name: /VERSION (сведения о версии)
+              href: ../build/reference/version-version-information.md
+            - name: /WHOLEARCHIVE (включение всех объектных файлов библиотеки)
+              href: ../build/reference/wholearchive-include-all-library-object-files.md
+            - name: /WINMD (создание метаданных Windows)
+              href: ../build/reference/winmd-generate-windows-metadata.md
+            - name: /WINMDFILE (указание файла WINMD)
+              href: ../build/reference/winmdfile-specify-winmd-file.md
+            - name: /WINMDKEYFILE (указание файла ключей WINMD)
+              href: ../build/reference/winmdkeyfile-specify-winmd-key-file.md
+            - name: /WINMDKEYCONTAINER (указание контейнера ключей)
+              href: ../build/reference/winmdkeycontainer-specify-key-container.md
+            - name: /WINMDDELAYSIGN (частичная подпись файла WINMD)
+              href: ../build/reference/winmddelaysign-partially-sign-a-winmd.md
+            - name: /WX (обработка предупреждений компоновщика как ошибок)
+              href: ../build/reference/wx-treat-linker-warnings-as-errors.md
+        - name: Внутренние имена
+          href: ../build/reference/decorated-names.md
+        - name: Файлы определения модуля (DEF)
+          expanded: false
+          items:
+            - name: Файлы определения модуля (DEF)
+              href: ../build/reference/module-definition-dot-def-files.md
+            - name: Правила для операторов определения модуля
+              expanded: false
+              items:
+                - name: Правила для операторов определения модуля
+                  href: ../build/reference/rules-for-module-definition-statements.md
+                - name: EXPORTS
+                  href: ../build/reference/exports.md
+                - name: LIBRARY
+                  href: ../build/reference/library.md
+                - name: HEAPSIZE
+                  href: ../build/reference/heapsize.md
+                - name: NAME (C/C++)
+                  href: ../build/reference/name-c-cpp.md
+                - name: Ключевое слово SECTIONS (C/C++)
+                  href: ../build/reference/sections-c-cpp.md
+                - name: STACKSIZE
+                  href: ../build/reference/stacksize.md
+                - name: STUB
+                  href: ../build/reference/stub.md
+                - name: VERSION (C/C++)
+                  href: ../build/reference/version-c-cpp.md
+        - name: Поддержка компоновщика для библиотек DLL с отложенной загрузкой
+          expanded: false
+          items:
+            - name: Поддержка компоновщика для библиотек DLL с отложенной загрузкой
+              href: ../build/reference/linker-support-for-delay-loaded-dlls.md
+            - name: Задание библиотек DLL с отложенной загрузкой
+              href: ../build/reference/specifying-dlls-to-delay-load.md
+            - name: Явная выгрузка библиотеки DLL с отложенной загрузкой
+              href: ../build/reference/explicitly-unloading-a-delay-loaded-dll.md
+            - name: Привязка Imports
+              href: ../build/reference/binding-imports.md
+            - name: Загрузка всех импортов для библиотеки DLL с отложенной загрузкой
+              href: ../build/reference/loading-all-imports-for-a-delay-loaded-dll.md
+            - name: Обработка ошибок и предупреждений
+              expanded: false
+              items:
+                - name: Обработка ошибок и предупреждений
+                  href: ../build/reference/error-handling-and-notification.md
+                - name: Обработчики уведомлений
+                  href: ../build/reference/notification-hooks.md
+                - name: Обработчики сбоев
+                  href: ../build/reference/failure-hooks.md
+                - name: Коды исключений при загрузке библиотек DLL (C/C++)
+                  href: ../build/reference/exceptions-c-cpp.md
+            - name: Сохранение отложенно загружаемых импортированных элементов
+              href: ../build/reference/dumping-delay-loaded-imports.md
+            - name: Ограничения библиотек DLL с отложенной загрузкой
+              href: ../build/reference/constraints-of-delay-loading-dlls.md
+            - name: Понятие вспомогательной функции
+              expanded: false
+              items:
+                - name: Понятие вспомогательной функции
+                  href: ../build/reference/understanding-the-helper-function.md
+                - name: "Изменения во вспомогательной функции отложенной загрузки библиотеки DLL по сравнению с Visual C++ версии\_6.0"
+                  href: ../build/reference/changes-in-the-dll-delayed-loading-helper-function-since-visual-cpp-6-0.md
+                - name: 'Соглашения о вызовах, параметры и тип возвращаемого значения'
+                  href: ../build/reference/calling-conventions-parameters-and-return-type.md
+                - name: Определения структур и констант
+                  href: ../build/reference/structure-and-constant-definitions.md
+                - name: Вычисление необходимых значений
+                  href: ../build/reference/calculating-necessary-values.md
+                - name: Выгрузка библиотеки DLL с отложенной загрузкой
+                  href: ../build/reference/unloading-a-delay-loaded-dll.md
+            - name: Разработка собственной вспомогательной функции
+              href: ../build/reference/developing-your-own-helper-function.md
+    - name: Дополнительные средства сборки MSVC
+      expanded: false
+      items:
+        - name: Дополнительные средства сборки MSVC
+          href: ../build/reference/c-cpp-build-tools.md
+        - name: Справочник по программе NMAKE
+          expanded: false
+          items:
+            - name: Справочник по программе NMAKE
+              href: ../build/reference/nmake-reference.md
+            - name: Проекты NMAKE в Visual Studio
+              href: ../build/reference/creating-a-makefile-project.md
+            - name: Запуск программы NMAKE
+              href: ../build/reference/running-nmake.md
+            - name: Содержимое файла makefile
+              expanded: false
+              items:
+                - name: Содержимое файла makefile
+                  href: ../build/reference/contents-of-a-makefile.md
+                - name: Использование подстановочных знаков в программе NMAKE
+                  href: ../build/reference/wildcards-and-nmake.md
+                - name: Длинные имена файлов в makefile
+                  href: ../build/reference/long-filenames-in-a-makefile.md
+                - name: Комментарии в файлах makefile
+                  href: ../build/reference/comments-in-a-makefile.md
+                - name: Специальные символы в файле makefile
+                  href: ../build/reference/special-characters-in-a-makefile.md
+                - name: Образец файла makefile
+                  href: ../build/reference/sample-makefile.md
+            - name: Блоки описания
+              href: ../build/reference/description-blocks.md
+            - name: Команды в файле makefile
+              expanded: false
+              items:
+                - name: Команды в файле makefile
+                  href: ../build/reference/commands-in-a-makefile.md
+                - name: Модификаторы команд
+                  href: ../build/reference/command-modifiers.md
+                - name: Обозначение компонентов имени файла
+                  href: ../build/reference/filename-parts-syntax.md
+                - name: Подставляемые файлы в makefile
+                  expanded: false
+                  items:
+                    - name: Подставляемые файлы в makefile
+                      href: ../build/reference/inline-files-in-a-makefile.md
+                    - name: Указание встроенного файла
+                      href: ../build/reference/specifying-an-inline-file.md
+                    - name: Создание встроенных текстовых стилей
+                      href: ../build/reference/creating-inline-file-text.md
+                    - name: Повторное использование встроенного файла
+                      href: ../build/reference/reusing-inline-files.md
+                    - name: Несколько встроенных файлов
+                      href: ../build/reference/multiple-inline-files.md
+            - name: Макросы и программа NMAKE
+              expanded: false
+              items:
+                - name: Макросы и программа NMAKE
+                  href: ../build/reference/macros-and-nmake.md
+                - name: Определение макроса NMAKE
+                  expanded: false
+                  items:
+                    - name: Определение макроса NMAKE
+                      href: ../build/reference/defining-an-nmake-macro.md
+                    - name: Специальные символы в макросах
+                      href: ../build/reference/special-characters-in-macros.md
+                    - name: Пустые и неопределенные макросы
+                      href: ../build/reference/null-and-undefined-macros.md
+                    - name: Где следует определять макросы
+                      href: ../build/reference/where-to-define-macros.md
+                    - name: Приоритет в макроопределениях
+                      href: ../build/reference/precedence-in-macro-definitions.md
+                - name: Использование макроса NMAKE
+                  expanded: false
+                  items:
+                    - name: Использование макроса NMAKE
+                      href: ../build/reference/using-an-nmake-macro.md
+                    - name: Макроподстановка
+                      href: ../build/reference/macro-substitution.md
+                - name: Специальные макросы NMAKE
+                  expanded: false
+                  items:
+                    - name: Специальные макросы NMAKE
+                      href: ../build/reference/special-nmake-macros.md
+                    - name: Макросы имени файла
+                      href: ../build/reference/filename-macros.md
+                    - name: Макросы рекурсии
+                      href: ../build/reference/recursion-macros.md
+                    - name: Макросы команд и параметров
+                      href: ../build/reference/command-macros-and-options-macros.md
+                    - name: Макросы переменных среды
+                      href: ../build/reference/environment-variable-macros.md
+            - name: Правила вывода
+              expanded: false
+              items:
+                - name: Правила зависимости
+                  href: ../build/reference/inference-rules.md
+                - name: Определение правила
+                  expanded: false
+                  items:
+                    - name: Определение правила
+                      href: ../build/reference/defining-a-rule.md
+                    - name: Пути поиска в правилах
+                      href: ../build/reference/search-paths-in-rules.md
+                - name: Правила пакетного режима
+                  href: ../build/reference/batch-mode-rules.md
+                - name: Предварительно определенные правила
+                  href: ../build/reference/predefined-rules.md
+                - name: Выводимые зависимости и правила
+                  href: ../build/reference/inferred-dependents-and-rules.md
+                - name: Приоритет правил зависимости
+                  href: ../build/reference/precedence-in-inference-rules.md
+            - name: Директивы с точками
+              href: ../build/reference/dot-directives.md
+            - name: Предварительная обработка файла makefile
+              expanded: false
+              items:
+                - name: Предварительная обработка файла makefile
+                  href: ../build/reference/makefile-preprocessing.md
+                - name: Директивы предварительной обработки файла makefile
+                  href: ../build/reference/makefile-preprocessing-directives.md
+                - name: Выражения в предобработке файлов makefile
+                  expanded: false
+                  items:
+                    - name: Выражения в предобработке файлов makefile
+                      href: ../build/reference/expressions-in-makefile-preprocessing.md
+                    - name: Операторы предварительной обработки файлов makefile
+                      href: ../build/reference/makefile-preprocessing-operators.md
+                    - name: Выполнение программ в ходе предварительной обработки
+                      href: ../build/reference/executing-a-program-in-preprocessing.md
+        - name: Справочник по LIB
+          expanded: false
+          items:
+            - name: Справочник по LIB
+              href: ../build/reference/lib-reference.md
+            - name: Общие сведения о LIB
+              expanded: false
+              items:
+                - name: Общие сведения о LIB
+                  href: ../build/reference/overview-of-lib.md
+                - name: "Практическое руководство. Параметры LIB.EXE в среде разработки Visual\_Studio"
+                  href: ../build/reference/how-to-set-lib-exe-options-in-the-visual-studio-development-environment.md
+                - name: Входные LIB-файлы
+                  href: ../build/reference/lib-input-files.md
+                - name: Выходные LIB-файлы
+                  href: ../build/reference/lib-output-files.md
+                - name: Прочие выходные данные LIB
+                  href: ../build/reference/other-lib-output.md
+                - name: Структура библиотеки
+                  href: ../build/reference/structure-of-a-library.md
+            - name: Запуск программы LIB
+              href: ../build/reference/running-lib.md
+            - name: Управление библиотекой
+              href: ../build/reference/managing-a-library.md
+            - name: Извлечение члена библиотеки
+              href: ../build/reference/extracting-a-library-member.md
+            - name: Работа с библиотеками импорта и файлами экспорта
+              expanded: false
+              items:
+                - name: Работа с библиотеками импорта и файлами экспорта
+                  href: ../build/reference/working-with-import-libraries-and-export-files.md
+                - name: Сборка библиотеки импорта и файла экспорта
+                  href: ../build/reference/building-an-import-library-and-export-file.md
+                - name: Использование библиотеки импорта и файла экспорта
+                  href: ../build/reference/using-an-import-library-and-export-file.md
+        - name: Справочник ЕDITBIN
+          expanded: false
+          items:
+            - name: Справочник ЕDITBIN
+              href: ../build/reference/editbin-reference.md
+            - name: Командная строка EDITBIN
+              href: ../build/reference/editbin-command-line.md
+            - name: Параметры EDITBIN
+              expanded: false
+              items:
+                - name: Параметры EDITBIN
+                  href: ../build/reference/editbin-options.md
+                - name: /ALLOWISOLATION
+                  href: ../build/reference/allowisolation.md
+                - name: /ALLOWBIND
+                  href: ../build/reference/allowbind.md
+                - name: /APPCONTAINER
+                  href: ../build/reference/appcontainer.md
+                - name: /BIND
+                  href: ../build/reference/bind.md
+                - name: /DYNAMICBASE
+                  href: ../build/reference/dynamicbase.md
+                - name: /ERRORREPORT (editbin.exe)
+                  href: ../build/reference/errorreport-editbin-exe.md
+                - name: /HEAP
+                  href: ../build/reference/heap.md
+                - name: /HIGHENTROPYVA
+                  href: ../build/reference/highentropyva.md
+                - name: /INTEGRITYCHECK
+                  href: ../build/reference/integritycheck.md
+                - name: /LARGEADDRESSAWARE
+                  href: ../build/reference/largeaddressaware.md
+                - name: /NOLOGO (EDITBIN)
+                  href: ../build/reference/nologo-editbin.md
+                - name: /NXCOMPAT
+                  href: ../build/reference/nxcompat.md
+                - name: /REBASE
+                  href: ../build/reference/rebase.md
+                - name: /RELEASE
+                  href: ../build/reference/release.md
+                - name: /SECTION (EDITBIN)
+                  href: ../build/reference/section-editbin.md
+                - name: /STACK
+                  href: ../build/reference/stack.md
+                - name: /SUBSYSTEM
+                  href: ../build/reference/subsystem.md
+                - name: /SWAPRUN
+                  href: ../build/reference/swaprun.md
+                - name: /TSAWARE
+                  href: ../build/reference/tsaware.md
+                - name: /VERSION
+                  href: ../build/reference/version.md
+        - name: Справочник по DUMPBIN
+          expanded: false
+          items:
+            - name: Справочник по DUMPBIN
+              href: ../build/reference/dumpbin-reference.md
+            - name: Командная строка DUMPBIN
+              href: ../build/reference/dumpbin-command-line.md
+            - name: Параметры DUMPBIN
+              expanded: false
+              items:
+                - name: Параметры DUMPBIN
+                  href: ../build/reference/dumpbin-options.md
+                - name: /ALL
+                  href: ../build/reference/all.md
+                - name: /ARCHIVEMEMBERS
+                  href: ../build/reference/archivemembers.md
+                - name: /CLRHEADER
+                  href: ../build/reference/clrheader.md
+                - name: /DEPENDENTS
+                  href: ../build/reference/dependents.md
+                - name: /DIRECTIVES
+                  href: ../build/reference/directives.md
+                - name: /DISASM
+                  href: ../build/reference/disasm.md
+                - name: /ERRORREPORT (dumpbin.exe)
+                  href: ../build/reference/errorreport-dumpbin-exe.md
+                - name: /EXPORTS
+                  href: ../build/reference/dash-exports.md
+                - name: /FPO
+                  href: ../build/reference/fpo.md
+                - name: /HEADERS
+                  href: ../build/reference/headers.md
+                - name: /IMPORTS (DUMPBIN)
+                  href: ../build/reference/imports-dumpbin.md
+                - name: /LINENUMBERS
+                  href: ../build/reference/linenumbers.md
+                - name: /LINKERMEMBER
+                  href: ../build/reference/linkermember.md
+                - name: /LOADCONFIG
+                  href: ../build/reference/loadconfig.md
+                - name: /NOPDB
+                  href: ../build/reference/nopdb.md
+                - name: /OUT (DUMPBIN)
+                  href: ../build/reference/out-dumpbin.md
+                - name: /PDATA
+                  href: ../build/reference/pdata.md
+                - name: /PDBPATH
+                  href: ../build/reference/pdbpath.md
+                - name: Параметр /RANGE
+                  href: ../build/reference/range.md
+                - name: /RAWDATA
+                  href: ../build/reference/rawdata.md
+                - name: /RELOCATIONS
+                  href: ../build/reference/relocations.md
+                - name: /SECTION (DUMPBIN)
+                  href: ../build/reference/section-dumpbin.md
+                - name: /SUMMARY
+                  href: ../build/reference/summary.md
+                - name: /SYMBOLS
+                  href: ../build/reference/symbols.md
+                - name: /TLS
+                  href: ../build/reference/tls.md
+        - name: Справочник по ERRLOOK
+          expanded: false
+          items:
+            - name: Справочник по ERRLOOK
+              href: ../build/reference/errlook-reference.md
+            - name: Элемент управления "Поле ввода значений"
+              href: ../build/reference/value-edit-control.md
+            - name: Элемент управления "Редактирование сообщения об ошибке"
+              href: ../build/reference/error-message-edit-control.md
+            - name: Кнопка "Модули"
+              href: ../build/reference/modules-button.md
+            - name: Кнопка "Найти"
+              href: ../build/reference/look-up-button.md
+        - name: Справочник по XDCMake
+          href: ../build/reference/xdcmake-reference.md
+        - name: Справочник по ВSCMAKE
+          expanded: false
+          items:
+            - name: Справочник по ВSCMAKE
+              href: ../build/reference/bscmake-reference.md
+            - name: 'Создание файлов информации об исходном коде: Обзор'
+              href: ../build/reference/building-browse-information-files-overview.md
+            - name: Сборка BSC-файла
+              expanded: false
+              items:
+                - name: Сборка BSC-файла
+                  href: ../build/reference/building-a-dot-bsc-file.md
+                - name: Создание SBR-файла
+                  href: ../build/reference/creating-an-dot-sbr-file.md
+                - name: Сборка BSC-файла с помощью программы BSCMAKE
+                  href: ../build/reference/how-bscmake-builds-a-dot-bsc-file.md
+            - name: Командная строка BSCMAKE
+              href: ../build/reference/bscmake-command-line.md
+            - name: Командный файл BSCMAKE (файл ответов)
+              href: ../build/reference/bscmake-command-file-response-file.md
+            - name: Параметры BSCMAKE
+              href: ../build/reference/bscmake-options.md
+            - name: Коды выхода BSCMAKE
+              href: ../build/reference/bscmake-exit-codes.md
+    - name: Ошибки компилятора и средств сборки
+      href: ../error-messages/
+    - name: Документация по XML для C++
+      expanded: false
+      items:
+        - name: Документация по XML для C++
+          href: ../build/reference/xml-documentation-visual-cpp.md
+        - name: Рекомендуемые теги для комментариев в документации по С++
+          expanded: false
+          items:
+            - name: Рекомендуемые теги для комментариев в документации по С++
+              href: ../build/reference/recommended-tags-for-documentation-comments-visual-cpp.md
+            - name: <c>
+              href: ../build/reference/c-visual-cpp.md
+            - name: <code>
+              href: ../build/reference/code-visual-cpp.md
+            - name: <example>
+              href: ../build/reference/example-visual-cpp.md
+            - name: <exception>
+              href: ../build/reference/exception-visual-cpp.md
+            - name: <include>
+              href: ../build/reference/include-visual-cpp.md
+            - name: <list>
+              href: ../build/reference/list-visual-cpp.md
+            - name: <para>
+              href: ../build/reference/para-visual-cpp.md
+            - name: <param>
+              href: ../build/reference/param-visual-cpp.md
+            - name: <paramref>
+              href: ../build/reference/paramref-visual-cpp.md
+            - name: <permission>
+              href: ../build/reference/permission-visual-cpp.md
+            - name: <remarks>
+              href: ../build/reference/remarks-visual-cpp.md
+            - name: <returns>
+              href: ../build/reference/returns-visual-cpp.md
+            - name: <see>
+              href: ../build/reference/see-visual-cpp.md
+            - name: <seealso>
+              href: ../build/reference/seealso-visual-cpp.md
+            - name: <summary>
+              href: ../build/reference/summary-visual-cpp.md
+            - name: <value>
+              href: ../build/reference/value-visual-cpp.md
+        - name: Обработка XML-файлов
+          href: ../build/reference/dot-xml-file-processing.md
+        - name: Разделители для тегов документации по C++
+          href: ../build/reference/delimiters-for-visual-cpp-documentation-tags.md

@@ -1,9 +1,10 @@
 ---
 title: _cexit, _c_exit
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _c_exit
 - _cexit
+- _o__cexit
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +34,12 @@ helpviewer_keywords:
 - _cexit function
 - c_exit function
 ms.assetid: f3072045-9924-4b1a-9fef-b0dcd6d12663
-ms.openlocfilehash: aa25d73bef1d85adfed77ba926e2d381e02e45e8
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 78675ef91c2ab68e18f6111b4908886017ae1f79
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939257"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917146"
 ---
 # <a name="_cexit-_c_exit"></a>_cexit, _c_exit
 
@@ -50,9 +52,9 @@ void _cexit( void );
 void _c_exit( void );
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Функция **_cexit** вызывает метод, в порядке "последним по, первым обслужен" (LIFO), функции, зарегистрированные с помощью **atexit** и **_onexit**. Затем **_cexit** сбрасывает все буферы ввода-вывода и закрывает все открытые потоки перед возвратом. **_c_exit** совпадает с **_exit** , но возвращается в вызывающий процесс без обработки **atexit** или **_onexit** или очистки буферов потока. Поведение функций **Exit**, **_exit**, **_cexit**и **_c_exit** показано в следующей таблице.
+Функция **_cexit** вызывает, в порядке "последним поatexit, первым обслужен" (ЛИФО) функции, зарегистрированные с помощью **atexit** и **_onexit**. Затем **_cexit** сбрасывает все буферы ввода-вывода и закрывает все открытые потоки перед возвратом. **_c_exit** совпадает с **_exit** , но возвращается в вызывающий процесс без обработки **atexit** или **_onexit** или очистки буферов потока. Поведение функций **Exit**, **_exit**, **_cexit**и **_c_exit** показано в следующей таблице.
 
 |Функция|Поведение|
 |--------------|--------------|
@@ -67,6 +69,8 @@ void _c_exit( void );
 myObject.myClass::~myClass( );
 ```
 
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
+
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок|
@@ -74,14 +78,14 @@ myObject.myClass::~myClass( );
 |**_cexit**|\<process.h>|
 |**_c_exit**|\<process.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Управление процессами и средой](../../c-runtime-library/process-and-environment-control.md)<br/>
-[abort](abort.md)<br/>
+[рвал](abort.md)<br/>
 [atexit](atexit.md)<br/>
-[Функции _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[_exec, функции _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [_onexit, _onexit_m](onexit-onexit-m.md)<br/>
 [Функции _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)<br/>

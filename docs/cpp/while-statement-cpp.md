@@ -7,16 +7,16 @@ helpviewer_keywords:
 - while keyword [C++]
 - while keyword [C++], syntax
 ms.assetid: 358dbe76-5e5e-4af5-b575-c2293c636899
-ms.openlocfilehash: 669618e9807109be18117968b1f5b6f49ec15e07
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0dfbbb2865c9cf0a23b04ce213a0e739e29c27da
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325420"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187327"
 ---
 # <a name="while-statement-c"></a>Оператор while (C++)
 
-Выполняет *statement* (инструкции) циклически, пока *expression* (выражение) не станет равно нулю.
+Выполняет *инструкцию* повторно, пока *выражение* не примет значение 0.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -25,13 +25,13 @@ while ( expression )
    statement
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Тест на *выражение* выполняется перед каждым выполнением цикла; таким образом, **хотя** цикл выполняется ноль или более раз. Выражение *expression* должно иметь целочисленный тип, тип указателя или тип класса с однозначным преобразованием в целочисленный тип или тип указателя.
+Перед каждым выполнением цикла выполняется проверка *выражения* . Таким образом, цикл **while** выполняется ноль или более раз. *выражение* должно иметь целочисленный тип, тип указателя или тип класса с однозначным преобразованием в целочисленный или тип указателя.
 
-Объект **хотя** цикл прерывается, если [break](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md), или [возвращают](../cpp/return-statement-cpp.md) в операторе выполняется тело. Используйте [по-прежнему](../cpp/continue-statement-cpp.md) чтобы прервать текущую итерацию без выхода из **хотя** цикла. **по-прежнему** передает управление следующей итерации **хотя** цикла.
+Цикл **while** может также завершаться, когда выполняется [break](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md)или [return](../cpp/return-statement-cpp.md) в теле оператора. Используйте [Continue](../cpp/continue-statement-cpp.md) , чтобы завершить текущую итерацию без выхода из цикла **while** . **Continue** передает управление следующей итерации цикла **while** .
 
-В следующем коде используется **хотя** цикла, чтобы удалить конечные символы подчеркивания из строки:
+В следующем коде цикл **while** используется для удаления конечных подчеркивания из строки:
 
 ```cpp
 // while_statement.cpp
@@ -62,10 +62,10 @@ int main()
 
 Условие завершения вычисляется в начале цикла. Если символов подчеркивания в конце строки нет, цикл никогда не выполняется.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Операторы итерации](../cpp/iteration-statements-cpp.md)<br/>
 [Ключевые слова](../cpp/keywords-cpp.md)<br/>
 [Оператор do-while (C)](../cpp/do-while-statement-cpp.md)<br/>
 [Оператор for (C++)](../cpp/for-statement-cpp.md)<br/>
-[Оператор for для диапазона (C++)](../cpp/range-based-for-statement-cpp.md)
+[Основанный на диапазоне оператор for (C++)](../cpp/range-based-for-statement-cpp.md)

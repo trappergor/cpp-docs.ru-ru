@@ -25,23 +25,23 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlTransactionManager class
 ms.assetid: b01732dc-1d16-4b42-bfac-b137fca2b740
-ms.openlocfilehash: d72867eaa449a20e676d4eddc4c94c02090334e5
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 968582feccd8ba9252ca009699eef6eae2c5c3d6
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497720"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82167829"
 ---
 # <a name="catltransactionmanager-class"></a>Класс Катлтрансактионманажер
 
 Класс Катлтрансактионманажер предоставляет оболочку для функций диспетчера транзакций ядра (KTM).
 
 > [!IMPORTANT]
->  Этот класс и его члены не могут использоваться в приложениях, выполняемых в среда выполнения Windows.
+> Этот класс и его члены не могут использоваться в приложениях, выполняемых в среда выполнения Windows.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 class CAtlTransactionManager;
 ```
 
@@ -49,18 +49,18 @@ class CAtlTransactionManager;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[~ Катлтрансактионманажер](#dtor)|Деструктор Катлтрансактионманажер.|
 |[катлтрансактионманажер](#catltransactionmanager)|Конструктор Катлтрансактионманажер.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[Закрыть](#close)|Закрывает один маркер транзакции.|
-|[Сохраните](#commit)|Запрашивает фиксацию транзакции.|
-|[Создания](#create)|Создает обработчик транзакции.|
+|[Фиксация](#commit)|Запрашивает фиксацию транзакции.|
+|[Создать](#create)|Создает обработчик транзакции.|
 |[CreateFile](#createfile)|Создает или открывает файл, файловый поток или каталог в качестве транзакционной операции.|
 |[DeleteFile](#deletefile)|Удаляет существующий файл как транзакционную операцию.|
 |[FindFirstFile](#findfirstfile)|Выполняет поиск файла или подкаталога в каталоге в качестве транзакционной операции.|
@@ -77,38 +77,38 @@ class CAtlTransactionManager;
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[m_bFallback](#m_bfallback)|Значение TRUE, если резервная поддержка поддерживается; В противном случае — значение FALSE.|
 |[m_hTransaction](#m_htransaction)|Маркер транзакции.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
-[ATL::CAtlTransactionManager](../../atl/reference/catltransactionmanager-class.md)
+[Библиотека ATL:: Катлтрансактионманажер](../../atl/reference/catltransactionmanager-class.md)
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** атлтрансактионманажер. h
 
-##  <a name="dtor"></a>~ Катлтрансактионманажер
+## <a name="catltransactionmanager"></a><a name="dtor"></a>~ Катлтрансактионманажер
 
 Деструктор Катлтрансактионманажер.
 
-```
+```cpp
 virtual ~CAtlTransactionManager();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 При нормальной обработке транзакция автоматически фиксируется и закрывается. Если деструктор вызывается во время очистки исключения, происходит откат и закрытие транзакции.
 
-##  <a name="catltransactionmanager"></a>катлтрансактионманажер
+## <a name="catltransactionmanager"></a><a name="catltransactionmanager"></a>катлтрансактионманажер
 
 Конструктор Катлтрансактионманажер.
 
-```
+```cpp
 CAtlTransactionManager(BOOL bFallback = TRUE, BOOL bAutoCreateTransaction = TRUE);
 ```
 
@@ -120,13 +120,13 @@ CAtlTransactionManager(BOOL bFallback = TRUE, BOOL bAutoCreateTransaction = TRUE
 *баутокреатетрансактион*<br/>
 Значение TRUE указывает, что обработчик транзакций создается в конструкторе автоматически. Значение FALSE указывает, что это не так.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="close"></a>Выхода
+## <a name="close"></a><a name="close"></a>Выхода
 
 Закрывает маркер транзакции.
 
-```
+```cpp
 inline BOOL Close();
 ```
 
@@ -134,15 +134,15 @@ inline BOOL Close();
 
 Значение TRUE, если успешно; в противном случае — FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта оболочка вызывает `CloseHandle` функцию. Метод автоматически вызывается в деструкторе.
 
-##  <a name="commit"></a>Сохраните
+## <a name="commit"></a><a name="commit"></a>Сохраните
 
 Запрашивает фиксацию транзакции.
 
-```
+```cpp
 inline BOOL Commit();
 ```
 
@@ -150,15 +150,15 @@ inline BOOL Commit();
 
 Значение TRUE, если успешно; в противном случае — FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта оболочка вызывает `CommitTransaction` функцию. Метод автоматически вызывается в деструкторе.
 
-##  <a name="create"></a>Создания
+## <a name="create"></a><a name="create"></a>Создания
 
 Создает обработчик транзакции.
 
-```
+```cpp
 inline BOOL Create();
 ```
 
@@ -166,15 +166,15 @@ inline BOOL Create();
 
 Значение TRUE, если успешно; в противном случае — FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта оболочка вызывает `CreateTransaction` функцию. Проверьте его на наличие
 
-##  <a name="createfile"></a>CreateFile
+## <a name="createfile"></a><a name="createfile"></a>CreateFile
 
 Создает или открывает файл, файловый поток или каталог в качестве транзакционной операции.
 
-```
+```cpp
 inline HANDLE CreateFile(
     LPCTSTR lpFileName,
     DWORD dwDesiredAccess,
@@ -191,10 +191,10 @@ inline HANDLE CreateFile(
 Имя объекта, который необходимо создать или открыть.
 
 *двдесиредакцесс*<br/>
-Доступ к объекту, который можно суммировать как чтение, запись, оба или ни один (ноль). Наиболее часто используемые значения: GENERIC_READ, GENERIC_WRITE или Both. GENERIC_READ &#124; GENERIC_WRITE.
+Доступ к объекту, который можно суммировать как чтение, запись, оба или ни один (ноль). Наиболее часто используемые значения — GENERIC_READ, GENERIC_WRITE или и то, и другое: GENERIC_READ &#124; GENERIC_WRITE.
 
 *двшаремоде*<br/>
-Режим общего доступа объекта, который может быть доступен для чтения, записи, обоих, удаления, всех этих объектов или ни одного: 0, FILE_SHARE_DELETE, FILE_SHARE_READ, FILE_SHARE_WRITE.
+Режим общего доступа объекта, который может быть доступен для чтения, записи, обоих, удаления, всех или пустых: 0, FILE_SHARE_DELETE, FILE_SHARE_READ, FILE_SHARE_WRITE.
 
 *лпсекуритяттрибутес*<br/>
 Указатель на структуру SECURITY_ATTRIBUTES, которая содержит необязательный дескриптор безопасности, а также определяет, может ли возвращаемый дескриптор быть унаследован дочерними процессами. Параметр может иметь значение NULL.
@@ -203,7 +203,7 @@ inline HANDLE CreateFile(
 Действие, выполняемое с файлами, которые существуют и не существуют. Этот параметр должен иметь одно из следующих значений, которые не могут быть объединены: CREATE_ALWAYS, CREATE_NEW, OPEN_ALWAYS, OPEN_EXISTING или TRUNCATE_EXISTING.
 
 *двфлагсандаттрибутес*<br/>
-Атрибуты и флаги файла. Этот параметр может включать любое сочетание доступных атрибутов файлов (FILE_ATTRIBUTE_ *). Все остальные атрибуты файла переопределяют FILE_ATTRIBUTE_NORMAL. Этот параметр также может содержать сочетания флагов (FILE_FLAG_\*) для управления поведением буферизации, режимами доступа и другими флагами специального назначения. Они объединяются с любыми значениями FILE_ATTRIBUTE_\* .
+Атрибуты и флаги файла. Этот параметр может включать любое сочетание доступных атрибутов файлов (FILE_ATTRIBUTE_ *). Все остальные атрибуты файла переопределяют FILE_ATTRIBUTE_NORMAL. Этот параметр также может содержать сочетания флагов (FILE_FLAG_\*) для управления поведением буферизации, режимами доступа и другими флагами специального назначения. Они объединяются с любыми FILE_ATTRIBUTE_ными\* значениями.
 
 *хтемплатефиле*<br/>
 Допустимый маркер файла шаблона с правом доступа GENERIC_READ. Файл шаблона предоставляет атрибуты файлов и дополнительные атрибуты для создаваемого файла. Этот параметр может иметь значение NULL.
@@ -212,15 +212,15 @@ inline HANDLE CreateFile(
 
 Возвращает маркер, который можно использовать для доступа к объекту.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта оболочка вызывает `CreateFileTransacted` функцию.
 
-##  <a name="deletefile"></a>DeleteFile
+## <a name="deletefile"></a><a name="deletefile"></a>DeleteFile
 
 Удаляет существующий файл как транзакционную операцию.
 
-```
+```cpp
 inline BOOL DeleteFile(LPCTSTR lpFileName);
 ```
 
@@ -229,15 +229,15 @@ inline BOOL DeleteFile(LPCTSTR lpFileName);
 *лпфиленаме*<br/>
 Имя файла, предназначенного для удаления.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта оболочка вызывает `DeleteFileTransacted` функцию.
 
-##  <a name="findfirstfile"></a>FindFirstFile
+## <a name="findfirstfile"></a><a name="findfirstfile"></a>FindFirstFile
 
 Выполняет поиск файла или подкаталога в каталоге в качестве транзакционной операции.
 
-```
+```cpp
 inline HANDLE FindFirstFile(
     LPCTSTR lpFileName,
     WIN32_FIND_DATA* pNextInfo);
@@ -255,15 +255,15 @@ inline HANDLE FindFirstFile(
 
 Если функция выполнена, возвращаемое значение является маркером поиска, используемым при последующем вызове `FindNextFile` метода `FindClose`или. Если функция завершается ошибкой или не находит файлы из строки поиска в параметре *лпфиленаме* , возвращается значение INVALID_HANDLE_VALUE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта оболочка вызывает `FindFirstFileTransacted` функцию.
 
-##  <a name="getfileattributes"></a>GetFileAttributes
+## <a name="getfileattributes"></a><a name="getfileattributes"></a>GetFileAttributes
 
 Получает атрибуты файловой системы для указанного файла или каталога в качестве транзакционной операции.
 
-```
+```cpp
 inline DWORD GetFileAttributes(LPCTSTR lpFileName);
 ```
 
@@ -272,15 +272,15 @@ inline DWORD GetFileAttributes(LPCTSTR lpFileName);
 *лпфиленаме*<br/>
 Имя файла или каталога.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта оболочка вызывает `GetFileAttributesTransacted` функцию.
 
-##  <a name="getfileattributesex"></a>Сбой getfileattributesex
+## <a name="getfileattributesex"></a><a name="getfileattributesex"></a>Сбой getfileattributesex
 
 Получает атрибуты файловой системы для указанного файла или каталога в качестве транзакционной операции.
 
-```
+```cpp
 inline BOOL GetFileAttributesEx(
     LPCTSTR lpFileName,
     GET_FILEEX_INFO_LEVELS fInfoLevelId,
@@ -298,29 +298,29 @@ inline BOOL GetFileAttributesEx(
 *лпфилеинформатион*<br/>
 Указатель на буфер, который получает сведения об атрибуте. Тип сведений об атрибутах, хранящихся в этом буфере, определяется значением *финфолевелид*. Если параметр *финфолевелид* имеет значение жетфиликсинфостандард, то этот параметр указывает на структуру WIN32_FILE_ATTRIBUTE_DATA.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта оболочка вызывает `GetFileAttributesTransacted` функцию.
 
-##  <a name="gethandle"></a>GetHandle
+## <a name="gethandle"></a><a name="gethandle"></a>GetHandle
 
 Возвращает маркер транзакции.
 
-```
+```cpp
 HANDLE GetHandle() const;
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает маркер транзакции для класса. Возвращает значение null, `CAtlTransactionManager` если не присоединен к маркеру.
+Возвращает маркер транзакции для класса. Возвращает значение NULL, `CAtlTransactionManager` если не присоединен к маркеру.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="isfallback"></a>Возврат
+## <a name="isfallback"></a><a name="isfallback"></a>Возврат
 
 Определяет, включены ли резервные вызовы.
 
-```
+```cpp
 BOOL IsFallback() const;
 ```
 
@@ -328,33 +328,33 @@ BOOL IsFallback() const;
 
 Возвращает значение TRUE, если класс поддерживает резервные вызовы. В противном случае — значение FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="m_bfallback"></a>m_bFallback
+## <a name="m_bfallback"></a><a name="m_bfallback"></a>m_bFallback
 
 Значение TRUE, если резервная поддержка поддерживается; В противном случае — значение FALSE.
 
-```
+```cpp
 BOOL m_bFallback;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="m_htransaction"></a>m_hTransaction
+## <a name="m_htransaction"></a><a name="m_htransaction"></a>m_hTransaction
 
 Маркер транзакции.
 
-```
+```cpp
 HANDLE m_hTransaction;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="movefile"></a>MoveFile
+## <a name="movefile"></a><a name="movefile"></a>MoveFile
 
 Перемещает существующий файл или каталог, включая его дочерние элементы, в качестве транзакционной операции.
 
-```
+```cpp
 inline BOOL MoveFile(LPCTSTR lpOldFileName, LPCTSTR lpNewFileName);
 ```
 
@@ -366,15 +366,15 @@ inline BOOL MoveFile(LPCTSTR lpOldFileName, LPCTSTR lpNewFileName);
 *лпневфиленаме*<br/>
 Новое имя для файла или каталога. Это имя уже не должно существовать. Новый файл может находиться в другой файловой системе или на диске. Новый каталог должен находиться на том же диске.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта оболочка вызывает `MoveFileTransacted` функцию.
 
-##  <a name="regcreatekeyex"></a>регкреатекэйекс
+## <a name="regcreatekeyex"></a><a name="regcreatekeyex"></a>регкреатекэйекс
 
 Создает указанный раздел реестра и связывает его с транзакцией. Если ключ уже существует, функция открывает его.
 
-```
+```cpp
 inline LSTATUS RegCreateKeyEx(
     HKEY hKey,
     LPCTSTR lpSubKey,
@@ -408,7 +408,7 @@ inline LSTATUS RegCreateKeyEx(
 Маска, указывающая права доступа для ключа.
 
 *лпсекуритяттрибутес*<br/>
-Указатель на структуру SECURITY_ATTRIBUTES, которая определяет, может ли возвращаемый маркер наследоваться дочерними процессами. Если *лпсекуритяттрибутес* имеет значение null, маркер не может быть унаследован.
+Указатель на структуру SECURITY_ATTRIBUTES определяет, может ли возвращаемый дескриптор быть унаследован дочерними процессами. Если *лпсекуритяттрибутес* имеет значение null, маркер не может быть унаследован.
 
 *фкресулт*<br/>
 Указатель на переменную, которая получает маркер для открытого или созданного ключа. Если ключ не является одним из предопределенных разделов реестра, вызовите `RegCloseKey` функцию после завершения использования маркера.
@@ -418,17 +418,17 @@ inline LSTATUS RegCreateKeyEx(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если функция выполнена удачно, возвращается значение ERROR_SUCCESS. Если функция завершается ошибкой, возвращаемое значение является ненулевым кодом ошибки, определенным в файле Winerror. h.
+Если функция выполнена, возвращаемое значение будет ERROR_SUCCESS. Если функция завершается ошибкой, возвращаемое значение является ненулевым кодом ошибки, определенным в файле Winerror. h.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта оболочка вызывает `RegCreateKeyTransacted` функцию.
 
-##  <a name="regdeletekey"></a>регделетекэй
+## <a name="regdeletekey"></a><a name="regdeletekey"></a>регделетекэй
 
 Удаляет подраздел и его значения из указанного представления реестра для конкретной платформы в качестве транзакционной операции.
 
-```
+```cpp
 inline LSTATUS RegDeleteKeyEx(HKEY hKey, LPCTSTR lpSubKey);
 ```
 
@@ -441,17 +441,17 @@ inline LSTATUS RegDeleteKeyEx(HKEY hKey, LPCTSTR lpSubKey);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если функция выполнена удачно, возвращается значение ERROR_SUCCESS. Если функция завершается ошибкой, возвращаемое значение является ненулевым кодом ошибки, определенным в файле Winerror. h.
+Если функция выполнена, возвращаемое значение будет ERROR_SUCCESS. Если функция завершается ошибкой, возвращаемое значение является ненулевым кодом ошибки, определенным в файле Winerror. h.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта оболочка вызывает `RegDeleteKeyTransacted` функцию.
 
-##  <a name="regopenkeyex"></a>RegOpenKeyEx
+## <a name="regopenkeyex"></a><a name="regopenkeyex"></a>RegOpenKeyEx
 
 Открывает указанный раздел реестра и связывает его с транзакцией.
 
-```
+```cpp
 inline LSTATUS RegOpenKeyEx(
     HKEY hKey,
     LPCTSTR lpSubKey,
@@ -479,17 +479,17 @@ inline LSTATUS RegOpenKeyEx(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если функция выполнена удачно, возвращается значение ERROR_SUCCESS. Если функция завершается ошибкой, возвращаемое значение является ненулевым кодом ошибки, определенным в файле Winerror. h.
+Если функция выполнена, возвращаемое значение будет ERROR_SUCCESS. Если функция завершается ошибкой, возвращаемое значение является ненулевым кодом ошибки, определенным в файле Winerror. h.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта оболочка вызывает `RegOpenKeyTransacted` функцию.
 
-##  <a name="rollback"></a>Отката
+## <a name="rollback"></a><a name="rollback"></a>Отката
 
 Запрашивает откат транзакции.
 
-```
+```cpp
 inline BOOL Rollback();
 ```
 
@@ -497,15 +497,15 @@ inline BOOL Rollback();
 
 Значение TRUE, если успешно; в противном случае — FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта оболочка вызывает `RollbackTransaction` функцию.
 
-##  <a name="setfileattributes"></a>сетфилеаттрибутес
+## <a name="setfileattributes"></a><a name="setfileattributes"></a>сетфилеаттрибутес
 
 Задает атрибуты для файла или каталога в качестве транзакционной операции.
 
-```
+```cpp
 inline BOOL SetFileAttributes(LPCTSTR lpFileName, DWORD dwAttributes);
 ```
 
@@ -517,7 +517,7 @@ inline BOOL SetFileAttributes(LPCTSTR lpFileName, DWORD dwAttributes);
 *дваттрибутес*<br/>
 Атрибуты файла, которые необходимо задать для файла. Дополнительные сведения см. в разделе [сетфилеаттрибутестрансактед](/windows/win32/api/winbase/nf-winbase-setfileattributestransactedw).
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта оболочка вызывает `SetFileAttributesTransacted` функцию.
 

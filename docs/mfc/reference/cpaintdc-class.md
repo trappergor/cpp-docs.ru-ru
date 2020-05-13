@@ -1,5 +1,5 @@
 ---
-title: Класс Кпаинтдк
+title: Класс CPaintDC
 ms.date: 11/04/2016
 f1_keywords:
 - CPaintDC
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CPaintDC [MFC], m_ps
 - CPaintDC [MFC], m_hWnd
 ms.assetid: 7e245baa-bf9b-403e-a637-7218adf28fab
-ms.openlocfilehash: d587f1cfa6ec38dd564da196da8130bffac11302
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 55342b03454a6dba07bc10ea5f0464c34e0e8db3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503140"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374779"
 ---
-# <a name="cpaintdc-class"></a>Класс Кпаинтдк
+# <a name="cpaintdc-class"></a>Класс CPaintDC
 
-Класс контекста устройства, производный от [CDC](../../mfc/reference/cdc-class.md).
+Класс «устройство-контекст», полученный из [CDC.](../../mfc/reference/cdc-class.md)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -33,29 +33,29 @@ class CPaintDC : public CDC
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CPaintDC::CPaintDC](#cpaintdc)|Конструирует объект, `CPaintDC` подключенный к заданному [CWnd](../../mfc/reference/cwnd-class.md).|
+|[CPaintDC:CPaintDC](#cpaintdc)|Строит подключенный `CPaintDC` к указанному [CWnd.](../../mfc/reference/cwnd-class.md)|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[Кпаинтдк:: m_ps](#m_ps)|Содержит [PAINTSTRUCT](/windows/win32/api/winuser/ns-winuser-paintstruct) , используемый для рисования клиентской области.|
+|[CPaintDC::m_ps](#m_ps)|Содержит [PAINTSTRUCT,](/windows/win32/api/winuser/ns-winuser-paintstruct) используемый для покраски клиентской области.|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[Кпаинтдк:: m_hWnd](#m_hwnd)|HWND, к которому присоединен `CPaintDC` этот объект.|
+|[CPaintDC::m_hWnd](#m_hwnd)|HWND, к `CPaintDC` которому прилагается этот объект.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Он выполняет [CWnd:: бегинпаинт](../../mfc/reference/cwnd-class.md#beginpaint) во время создания и [CWnd:: ендпаинт](../../mfc/reference/cwnd-class.md#endpaint) во время уничтожения.
+Он выполняет [CWnd::BeginPaint](../../mfc/reference/cwnd-class.md#beginpaint) во время строительства и [CWnd::EndPaint](../../mfc/reference/cwnd-class.md#endpaint) во время разрушения.
 
-Объект может использоваться только при ответе на сообщение [WM_PAINT](/windows/win32/gdi/wm-paint) `OnPaint` , обычно в функции-члене обработчика сообщений. `CPaintDC`
+Объект `CPaintDC` может использоваться только при [WM_PAINT](/windows/win32/gdi/wm-paint) ответе на `OnPaint` WM_PAINT сообщение, как правило, в функции обработчика сообщений.
 
-Дополнительные сведения об использовании `CPaintDC`см. в разделе контексты [устройств](../../mfc/device-contexts.md).
+Для получения дополнительной `CPaintDC`информации об использовании см. [Device Contexts](../../mfc/device-contexts.md)
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -69,9 +69,9 @@ class CPaintDC : public CDC
 
 **Заголовок:** afxwin.h
 
-##  <a name="cpaintdc"></a>Кпаинтдк:: Кпаинтдк
+## <a name="cpaintdccpaintdc"></a><a name="cpaintdc"></a>CPaintDC:CPaintDC
 
-Конструирует объект, готовит окно приложения для рисования и сохраняет структуру [PAINTSTRUCT](/windows/win32/api/winuser/ns-winuser-paintstruct) в переменной-члене [m_ps.](#m_ps) `CPaintDC`
+Строит `CPaintDC` объект, подготавливает окно приложения для покраски и хранит структуру [PAINTSTRUCT](/windows/win32/api/winuser/ns-winuser-paintstruct) в переменной [m_ps](#m_ps) члена.
 
 ```
 explicit CPaintDC(CWnd* pWnd);
@@ -79,55 +79,55 @@ explicit CPaintDC(CWnd* pWnd);
 
 ### <a name="parameters"></a>Параметры
 
-*Приводится*<br/>
-Указывает на `CWnd` объект `CPaintDC` , которому принадлежит объект.
+*pWnd*<br/>
+Указывает на `CWnd` объект, `CPaintDC` к которому принадлежит объект.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Исключение (типа `CResourceException`) выдается при сбое вызова Windows [GetDC](/windows/win32/api/winuser/nf-winuser-getdc) . Контекст устройства может быть недоступен, если в Windows уже выделены все доступные контексты устройств. Приложение будет конкурировать за пять распространенных контекстов вывода, доступных в любой момент в Windows.
+Исключение (типа) `CResourceException`брошено, если вызов Windows [GetDC](/windows/win32/api/winuser/nf-winuser-getdc) не удается. Контекст устройства может быть недоступен, если Windows уже выделила все доступные контексты устройства. Ваше приложение конкурирует за пять общих контекстов отображения, доступных в любой момент времени под Windows.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCDocView#97](../../mfc/codesnippet/cpp/cpaintdc-class_1.cpp)]
 
-##  <a name="m_hwnd"></a>Кпаинтдк:: m_hWnd
+## <a name="cpaintdcm_hwnd"></a><a name="m_hwnd"></a>CPaintDC::m_hWnd
 
-, `HWND` К которому присоединен `CPaintDC` этот объект.
+К `HWND` которому `CPaintDC` прилагается этот объект.
 
 ```
 HWND m_hWnd;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-*m_hWnd* — это защищенная ПЕРЕМЕННАЯ типа HWND.
+*m_hWnd* является защищенной переменной типа HWND.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCDocView#98](../../mfc/codesnippet/cpp/cpaintdc-class_2.cpp)]
 
-##  <a name="m_ps"></a>Кпаинтдк:: m_ps
+## <a name="cpaintdcm_ps"></a><a name="m_ps"></a>CPaintDC::m_ps
 
-`m_ps`— Это открытая переменная-член типа [PAINTSTRUCT](/windows/win32/api/winuser/ns-winuser-paintstruct).
+`m_ps`является общедоступной переменной типа [PAINTSTRUCT](/windows/win32/api/winuser/ns-winuser-paintstruct).
 
 ```
 PAINTSTRUCT m_ps;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Это объект `PAINTSTRUCT` , который передается и заполняется методом [CWnd:: бегинпаинт](../../mfc/reference/cwnd-class.md#beginpaint).
+Это то, `PAINTSTRUCT` что передается и заполнены [CWnd::BeginPaint](../../mfc/reference/cwnd-class.md#beginpaint).
 
-Содержит сведения, используемые приложением для заполнения клиентской области окна, связанного `CPaintDC` с объектом. `PAINTSTRUCT`
+Содержит `PAINTSTRUCT` информацию, которую приложение использует для окраски `CPaintDC` клиентской области окна, связанной с объектом.
 
-Обратите внимание, что доступ к обработчику контекста устройства можно `PAINTSTRUCT`получить с помощью. Тем не менее можно получить доступ к этому обработчику напрямую `m_hDC` через переменную `CPaintDC` -член, которая наследуется от CDC.
+Обратите внимание, что вы можете получить `PAINTSTRUCT`доступ к устройству-контексту ручек через . Тем не менее, вы можете `m_hDC` получить доступ `CPaintDC` к ручке более непосредственно через переменную члена, которая наследует от CDC.
 
 ### <a name="example"></a>Пример
 
-  См. пример для [кпаинтдк:: m_hWnd](#m_hwnd).
+  Смотрите пример [CPaintDC::m_hWnd](#m_hwnd).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Образец MDI-формы MFC](../../overview/visual-cpp-samples.md)<br/>
+[MFC Образец MDI](../../overview/visual-cpp-samples.md)<br/>
 [Класс CDC](../../mfc/reference/cdc-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)

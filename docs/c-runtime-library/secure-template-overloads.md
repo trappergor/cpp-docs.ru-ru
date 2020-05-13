@@ -11,12 +11,12 @@ helpviewer_keywords:
 - _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT
 - secure template overloads
 ms.assetid: 562741d0-39c0-485e-8529-73d740f29f8f
-ms.openlocfilehash: dfb13d5a48376efb72a845e2f5e2380407937f5b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 6dba60b57616a1656b2791958e460f0268eaa7fe
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744563"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81361126"
 ---
 # <a name="secure-template-overloads"></a>Безопасные перегрузки шаблонов
 
@@ -50,7 +50,7 @@ strcpy(szBuf, "test"); // ==> strcpy_s(szBuf, 10, "test")
 Макрос `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` не влияет на функции, которые принимают аргумент количества, например `strncpy`. Чтобы включить перегруженные шаблоны для функций, принимающих количество, определите `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` как значение "1". Однако перед этим действием следует убедиться, что код передает количество символов, а не размер буфера (частая ошибка). Кроме того, код, который явно записывает значение NULL в конец буфера после вызова функции, является необязательным, если вызывается безопасный вариант. Если требуется поведение усечения см. документацию [_TRUNCATE](../c-runtime-library/truncate.md).
 
 > [!NOTE]
->  Макрос `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` требует, чтобы `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` также был определен как значение "1". Если `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` определен как значение "1" и `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` определен как значение "0", в приложении не выполняются никакие перегрузки шаблонов.
+> Макрос `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` требует, чтобы `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` также был определен как значение "1". Если `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` определен как значение "1" и `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` определен как значение "0", в приложении не выполняются никакие перегрузки шаблонов.
 
 Если вы определите `_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES` со значением "1", включается перегрузка шаблонов безопасными вариантами (имена которых оканчиваются на "_s"). В этом случае, если `_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES` определен как значение "1", в исходном коде необходимо сделать одно небольшое изменение.
 
@@ -91,7 +91,7 @@ strcpy_s(szBuf, "test"); // doesn't compile; you have to change it to
                          // strcpy_s(szBuf, 10, "test");
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Функции безопасности в CRT](../c-runtime-library/security-features-in-the-crt.md)<br/>
-[Функции библиотеки CRT](../c-runtime-library/crt-library-features.md)
+[Особенности безопасности в CRT](../c-runtime-library/security-features-in-the-crt.md)<br/>
+[Особенности библиотеки CRT](../c-runtime-library/crt-library-features.md)

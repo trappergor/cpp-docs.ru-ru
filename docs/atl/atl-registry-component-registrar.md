@@ -10,27 +10,27 @@ helpviewer_keywords:
 - scripts, Registrar scripts
 - registry, Registrar
 ms.assetid: 106752ae-4cfc-4030-8cb2-d36a1d635a2e
-ms.openlocfilehash: c64d47be6df515a0bd4a8d2cfef51f8d56311f4a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9b4492ea393c01b3fa382828d3ca6097d52493f0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252018"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317363"
 ---
 # <a name="atl-registry-component-registrar"></a>Компонент реестра ATL (регистратор)
 
-Регистратор ATL предоставляет оптимизированного доступа в системный реестр через пользовательский интерфейс. Регистратор является свободнопотоковым и обеспечивает статическое связывание кода для клиентов C++.
+Регистратор ATL обеспечивает оптимизированный доступ к системному реестру через пользовательский интерфейс. Регистратор является свободным потоком и позволяет статическое соединение кода для клиентов СЗ.
 
 > [!NOTE]
->  Исходный код для регистратор ATL можно найти в atlmfc\include\atliface.h.
+> Исходный код регистратора ATL можно найти в atlmfc-include-atliface.h.
 
-## <a name="in-this-section"></a>В этом разделе
+## <a name="in-this-section"></a>в этом разделе
 
-[Создание скриптов регистратора](../atl/creating-registrar-scripts.md)<br/>
-Руководство по созданию скриптов регистратора. Содержит разделы, посвященные синтаксиса BNF, деревьях синтаксического анализа, реестра, примеры, использование подстановочных параметров и вызов скриптов скриптов.
+[Creating Registrar Scripts](../atl/creating-registrar-scripts.md)<br/>
+Руководство по созданию скриптов регистраторов. Включает темы синтаксиса BNF, разбора деревьев, примеров сценариев реестра, использование сменных параметров и вызывание скриптов.
 
-[Настройка статической ссылки на код регистратора (только C++)](../atl/setting-up-a-static-link-to-the-registrar-code-cpp-only.md)<br/>
-Перечислены шаги для настройки статическое связывание для регистратора.
+[Настройка статического соединения с кодом регистратора (только сС)](../atl/setting-up-a-static-link-to-the-registrar-code-cpp-only.md)<br/>
+Перечисляет шаги по настройке статических ссылок на Регистратор.
 
 ## <a name="related-sections"></a>Связанные разделы
 

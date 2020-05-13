@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CXX0008
 - CAN0008
 ms.assetid: 49e0968c-a6ce-4ba9-9762-02a55c08124e
-ms.openlocfilehash: 84fcd13610ca5d0b0b0e342a472934303ed8dca2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43d3f6833c3472011c119e53c109b471d1b1a23e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406149"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196241"
 ---
 # <a name="expression-evaluator-error-cxx0008"></a>Ошибка вычислителя выражений CXX0008
 
-**отсутствует «в конце строки**
+**отсутствует "в конце строки**
 
-Двойные кавычки в конце строки литерала отсутствует. Повторно введите выражение, заключив строковый литерал в двойные кавычки.
+Отсутствует двойная кавычка в конце строкового литерала. Введите выражение еще раз, заключите строковый литерал в двойные кавычки.
 
-Эта ошибка идентична ошибке CAN0008.
+Эта ошибка идентична CAN0008.

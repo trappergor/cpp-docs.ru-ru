@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::exponential_distribution [C++], param_type
 - std::exponential_distribution [C++], param_type
 ms.assetid: d54f3126-a09b-45f9-a30b-0d94d03bcdc9
-ms.openlocfilehash: 7418c0316f98f633d229b3bb544bd34d2ac0fb07
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: a281f7fd77c0a68fca3a8fcfa163758ec464f1d3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688090"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368716"
 ---
 # <a name="exponential_distribution-class"></a>Класс exponential_distribution
 
@@ -67,15 +67,15 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*Реалтипе* \
-Тип результата операции с плавающей запятой по умолчанию равен **Double**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*RealType*\
+Тип результата плавающей точки, по **умолчанию**удвоиться. Для возможных типов см [ \<>. ](../standard-library/random.md)
 
-*Ргсч* \
-Модуль генератора случайных чисел. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*Ргсч*\
+Двигатель генератора случайных чисел. Для возможных типов см [ \<>. ](../standard-library/random.md)
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
-Шаблон класса описывает распределение, которое формирует значения указанного пользователем целочисленного типа, или тип **Double** , если значение не указано, распределяется в соответствии с экспоненциальным распределением. В следующей таблице представлены ссылки на статьи об отдельных членах.
+Шаблон класса описывает распределение, которое производит значения определенного пользовательского интегрального типа, или **вдвастю дважды,** если ни один не предоставляется, распределенный в соответствии с Экспоненциальным распределением. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
 ||||
 |-|-|-|
@@ -86,7 +86,7 @@ public:
 
 Функция-член свойства `param()` устанавливает или возвращает пакет хранимого параметра распределения `param_type`.
 
-Дополнительные сведения о классах распределений и их членах см. в разделе [\<random>](../standard-library/random.md).
+Для получения дополнительной информации о классах распределения и их членах [ \<>](../standard-library/random.md)см.
 
 Дополнительные сведения об экспоненциальном распределении см. в статье [Экспоненциальное распределение](https://go.microsoft.com/fwlink/p/?linkid=401098) на веб-сайте Wolfram MathWorld.
 
@@ -171,7 +171,7 @@ Distribution for 10 samples:
 
 **Пространство имен:** std
 
-## <a name="exponential_distribution"></a>  exponential_distribution::exponential_distribution
+## <a name="exponential_distributionexponential_distribution"></a><a name="exponential_distribution"></a>exponential_distribution::exponential_distribution
 
 Формирует распределение.
 
@@ -182,21 +182,21 @@ explicit exponential_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Параметры
 
-*лямбда-* \
+*Лямбда*\
 Параметр распределения `lambda`.
 
-*parm* \
+*парм*\
 Пакет параметров, используемый для формирования распределения.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-**Предусловие:** `0.0 < lambda`
+**Предварительное условие:**`0.0 < lambda`
 
 Первый конструктор создает объект, хранимое значение `lambda` которого содержит значение *лямбда*.
 
 Второй конструктор создает объект, хранимые параметры которого инициализируются из *parm*. Вы можете получить и задать текущие параметры существующего распределения, вызвав функцию-член `param()`.
 
-## <a name="param_type"></a>  exponential_distribution::param_type
+## <a name="exponential_distributionparam_type"></a><a name="param_type"></a>exponential_distribution::pарам-тип
 
 Сохраняет параметры распределения.
 
@@ -213,18 +213,18 @@ struct param_type {
 
 ### <a name="parameters"></a>Параметры
 
-*лямбда-* \
+*Лямбда*\
 Параметр распределения `lambda`.
 
-*справа* \
+*Правильно*\
 Объект `param_type`, который требуется сравнить с данным объектом.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-**Предусловие:** `0.0 < lambda`
+**Предварительное условие:**`0.0 < lambda`
 
 Эту структуру можно передать конструктору класса распределения во время создания экземпляра, функции-члену `param()` для установки хранимых параметров существующего распределения и `operator()` для использования вместо хранимых параметров.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[\<random>](../standard-library/random.md)
+[\<случайные>](../standard-library/random.md)

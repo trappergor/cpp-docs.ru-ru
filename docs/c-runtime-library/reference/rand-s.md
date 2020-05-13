@@ -1,8 +1,9 @@
 ---
 title: rand_s
-ms.date: 01/02/2018
+ms.date: 4/2/2020
 api_name:
 - rand_s
+- _o_rand_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +32,12 @@ helpviewer_keywords:
 - cryptographically secure random numbers
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: 652521ab472736783ba1b4498ca7d7c3f297e7ee
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: cad1740e64c7bbda553ac1a6c777d7e2295152ba
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949659"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919543"
 ---
 # <a name="rand_s"></a>rand_s
 
@@ -56,13 +58,15 @@ errno_t rand_s(unsigned int* randomValue);
 
 Ноль в случае успешного выполнения; в противном случае — код ошибки. Если входной указатель _рандомвалуе_ является пустым указателем, функция вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает **еинвал** **и устанавливает значение** переводится в **еинвал**. Если функция завершается ошибкой по какой-либо другой причине, *_рандомвалуе_ имеет значение 0.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Функция **rand_s** Записывает целое число псевдослучайное в диапазоне от 0 до **UINT_MAX** в указатель ввода. Функция **rand_s** использует операционную систему для создания криптографически защищенных случайных чисел. Оно не использует начальное значение, созданное функцией [srand](srand.md) , и не влияет на последовательность случайных чисел, используемую [СЛЧИС](rand.md).
+Функция **rand_s** Записывает целое число псевдослучайное в диапазоне 0 для **UINT_MAX** в указатель ввода. Функция **rand_s** использует операционную систему для создания криптографически защищенных случайных чисел. Оно не использует начальное значение, созданное функцией [srand](srand.md) , и не влияет на последовательность случайных чисел, используемую [СЛЧИС](rand.md).
 
-Функция **rand_s** требует, чтобы константа **_CRT_RAND_S** была определена перед инструкцией включения для объявления функции, как показано в следующем примере:
+Функция **rand_s** требует, чтобы константа **_CRT_RAND_S** была определена до оператора включения для объявления функции, как показано в следующем примере:
 
 ```C
+By default, this function's global state is scoped to the application. To change this, see [Global state in the CRT](../global-state.md).
+
 #define _CRT_RAND_S
 #include <stdlib.h>
 ```
@@ -127,7 +131,7 @@ int main( void )
 }
 ```
 
-### <a name="sample-output"></a>Пример результатов выполнения
+### <a name="sample-output"></a>Пример выходных данных
 
 ```Output
 10
@@ -153,8 +157,8 @@ int main( void )
 65.0712
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
-[rand](rand.md)<br/>
+[Функция](rand.md)<br/>
 [srand](srand.md)<br/>

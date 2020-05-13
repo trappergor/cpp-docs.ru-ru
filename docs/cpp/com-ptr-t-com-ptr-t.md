@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - _com_ptr_t method [C++]
 ms.assetid: 0c00620a-28d2-4f60-ae4a-1696be36137e
-ms.openlocfilehash: 2c6a52f4b515761f260f86fba8ffe38138eecd55
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 96589d8be56b81e78ea7c474aea24803cc56ab21
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079955"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180489"
 ---
 # <a name="_com_ptr_t_com_ptr_t"></a>_com_ptr_t::_com_ptr_t
 
@@ -148,7 +148,7 @@ explicit _com_ptr_t(
 Необработанный указатель интерфейса, его тип отличается от типа интеллектуального указателя данного объекта **_com_ptr_t** .
 
 *варсрк*<br/>
-Объект `_variant_t`.
+Объект `_variant_t` .
 
 *этому*<br/>
 `CLSID` компонентного класса.
@@ -164,6 +164,6 @@ explicit _com_ptr_t(
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Класс _com_ptr_t](../cpp/com-ptr-t-class.md)

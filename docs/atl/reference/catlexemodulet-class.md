@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlExeModuleT class
 ms.assetid: 82245f3d-91d4-44fa-aa86-7cc7fbd758d9
-ms.openlocfilehash: d37cc8e97d29cbedfeb4ba79502d44529485399f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: b678c8a46f56337d76ec192869449797a4f66fb3
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79423432"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168801"
 ---
 # <a name="catlexemodulet-class"></a>Класс CAtlExeModuleT
 
@@ -35,28 +35,28 @@ ms.locfileid: "79423432"
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 template <class T>
 class ATL_NO_VTABLE CAtlExeModuleT : public CAtlModuleT<T>
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Класс, производный от `CAtlExeModuleT`.
+Класс, производный `CAtlExeModuleT`от.
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
 |[CAtlExeModuleT:: CAtlExeModuleT](#catlexemodulet)|Конструктор.|
 |[CAtlExeModuleT:: ~ CAtlExeModuleT](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
 |[CAtlExeModuleT:: Инитиализеком](#initializecom)|Инициализирует COM.|
 |[CAtlExeModuleT::P Арсекоммандлине](#parsecommandline)|Анализирует командную строку и при необходимости выполняет регистрацию.|
@@ -70,9 +70,9 @@ class ATL_NO_VTABLE CAtlExeModuleT : public CAtlModuleT<T>
 |[CAtlExeModuleT:: Unlock](#unlock)|Уменьшает счетчик блокировок модуля.|
 |[CAtlExeModuleT:: WinMain](#winmain)|Этот метод реализует код, необходимый для запуска EXE.|
 
-### <a name="public-data-members"></a>Открытые элементы данных
+### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
 |[CAtlExeModuleT:: m_bDelayShutdown](#m_bdelayshutdown)|Флаг, указывающий на задержку завершения работы модуля.|
 |[CAtlExeModuleT:: m_dwPause](#m_dwpause)|Значение паузы, используемое для обеспечения освобождения всех объектов до завершения работы.|
@@ -80,7 +80,7 @@ class ATL_NO_VTABLE CAtlExeModuleT : public CAtlModuleT<T>
 
 ## <a name="remarks"></a>Remarks
 
-`CAtlExeModuleT` представляет модуль для приложения (EXE) и содержит код, который поддерживает создание EXE-файла, обработку командной строки, регистрацию объектов класса, выполнение цикла сообщений и очистку при выходе.
+`CAtlExeModuleT`представляет модуль для приложения (EXE) и содержит код, который поддерживает создание EXE-файла, обработку командной строки, регистрацию объектов класса, выполнение цикла обработки сообщений и очистку при выходе.
 
 Этот класс предназначен для повышения производительности при постоянном создании и удалении COM-объектов на сервере EXE. После освобождения последнего объекта COM EXE-файл ожидает длительности, заданной элементом данных [CAtlExeModuleT:: m_dwTimeOut](#m_dwtimeout) . Если в течение этого периода действия не выполняются (то есть объекты COM не создаются), инициируется процесс завершения работы.
 
@@ -102,11 +102,11 @@ class ATL_NO_VTABLE CAtlExeModuleT : public CAtlModuleT<T>
 
 **Заголовок:** atlbase. h
 
-##  <a name="catlexemodulet"></a>CAtlExeModuleT:: CAtlExeModuleT
+## <a name="catlexemoduletcatlexemodulet"></a><a name="catlexemodulet"></a>CAtlExeModuleT:: CAtlExeModuleT
 
 Конструктор.
 
-```
+```cpp
 CAtlExeModuleT() throw();
 ```
 
@@ -114,11 +114,11 @@ CAtlExeModuleT() throw();
 
 Если не удалось инициализировать модуль EXE, то WinMain немедленно вернется без дальнейшей обработки.
 
-##  <a name="dtor"></a>CAtlExeModuleT:: ~ CAtlExeModuleT
+## <a name="catlexemoduletcatlexemodulet"></a><a name="dtor"></a>CAtlExeModuleT:: ~ CAtlExeModuleT
 
 Деструктор
 
-```
+```cpp
 ~CAtlExeModuleT() throw();
 ```
 
@@ -126,11 +126,11 @@ CAtlExeModuleT() throw();
 
 Освобождает все выделенные ресурсы.
 
-##  <a name="initializecom"></a>CAtlExeModuleT:: Инитиализеком
+## <a name="catlexemoduletinitializecom"></a><a name="initializecom"></a>CAtlExeModuleT:: Инитиализеком
 
 Инициализирует COM.
 
-```
+```cpp
 static HRESULT InitializeCom() throw();
 ```
 
@@ -140,15 +140,15 @@ static HRESULT InitializeCom() throw();
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод вызывается из конструктора и может быть переопределен для инициализации COM способом, отличным от реализации по умолчанию. Реализация по умолчанию либо вызывает `CoInitializeEx(NULL, COINIT_MULTITHREADED)`, либо `CoInitialize(NULL)` в зависимости от конфигурации проекта.
+Этот метод вызывается из конструктора и может быть переопределен для инициализации COM способом, отличным от реализации по умолчанию. Реализация по умолчанию либо `CoInitializeEx(NULL, COINIT_MULTITHREADED)` вызывает `CoInitialize(NULL)` , либо в зависимости от конфигурации проекта.
 
 Для переопределения этого метода обычно требуется переопределение [CAtlExeModuleT:: унинитиализеком](#uninitializecom).
 
-##  <a name="m_bdelayshutdown"></a>CAtlExeModuleT:: m_bDelayShutdown
+## <a name="catlexemoduletm_bdelayshutdown"></a><a name="m_bdelayshutdown"></a>CAtlExeModuleT:: m_bDelayShutdown
 
 Флаг, указывающий на задержку завершения работы модуля.
 
-```
+```cpp
 bool m_bDelayShutdown;
 ```
 
@@ -156,11 +156,11 @@ bool m_bDelayShutdown;
 
 Дополнительные сведения см. в [обзоре CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md) .
 
-##  <a name="m_dwpause"></a>CAtlExeModuleT:: m_dwPause
+## <a name="catlexemoduletm_dwpause"></a><a name="m_dwpause"></a>CAtlExeModuleT:: m_dwPause
 
 Значение паузы, используемое для проверки того, что все объекты исчезают перед завершением работы.
 
-```
+```cpp
 DWORD m_dwPause;
 ```
 
@@ -168,11 +168,11 @@ DWORD m_dwPause;
 
 Измените это значение после вызова [CAtlExeModuleT:: инитиализеком](#initializecom) , чтобы задать количество миллисекунд, используемых в качестве значения приостановки для завершения работы сервера. Значение по умолчанию — 1000 миллисекунд.
 
-##  <a name="m_dwtimeout"></a>CAtlExeModuleT:: m_dwTimeOut
+## <a name="catlexemoduletm_dwtimeout"></a><a name="m_dwtimeout"></a>CAtlExeModuleT:: m_dwTimeOut
 
 Значение времени ожидания, используемое для задержки выгрузки модуля.
 
-```
+```cpp
 DWORD m_dwTimeOut;
 ```
 
@@ -180,11 +180,11 @@ DWORD m_dwTimeOut;
 
 Измените это значение после вызова [CAtlExeModuleT:: инитиализеком](#initializecom) , чтобы определить количество миллисекунд, использованных в качестве значения времени ожидания при завершении работы сервера. Значение по умолчанию — 5000 миллисекунд. Дополнительные сведения см. в [обзоре CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md) .
 
-##  <a name="parsecommandline"></a>CAtlExeModuleT::P Арсекоммандлине
+## <a name="catlexemoduletparsecommandline"></a><a name="parsecommandline"></a>CAtlExeModuleT::P Арсекоммандлине
 
 Анализирует командную строку и при необходимости выполняет регистрацию.
 
-```
+```cpp
 bool ParseCommandLine(LPCTSTR lpCmdLine, HRESULT* pnRetCode) throw();
 ```
 
@@ -204,11 +204,11 @@ bool ParseCommandLine(LPCTSTR lpCmdLine, HRESULT* pnRetCode) throw();
 
 Этот метод вызывается из [CAtlExeModuleT:: WinMain](#winmain) и может быть переопределен для управления параметрами командной строки. Реализация по умолчанию проверяет аргументы командной строки **/regserver** и **/UnRegServer** и выполняет регистрацию или отмену регистрации.
 
-##  <a name="postmessageloop"></a>CAtlExeModuleT::P Остмессажелуп
+## <a name="catlexemoduletpostmessageloop"></a><a name="postmessageloop"></a>CAtlExeModuleT::P Остмессажелуп
 
 Этот метод вызывается сразу после завершения работы цикла сообщений.
 
-```
+```cpp
 HRESULT PostMessageLoop() throw();
 ```
 
@@ -220,11 +220,11 @@ HRESULT PostMessageLoop() throw();
 
 Переопределите этот метод для выполнения пользовательской очистки приложения. Реализация по умолчанию вызывает [CAtlExeModuleT:: ревокеклассобжектс](#revokeclassobjects).
 
-##  <a name="premessageloop"></a>CAtlExeModuleT::P Ремессажелуп
+## <a name="catlexemoduletpremessageloop"></a><a name="premessageloop"></a>CAtlExeModuleT::P Ремессажелуп
 
 Этот метод вызывается непосредственно перед входом в цикл обработки сообщений.
 
-```
+```cpp
 HRESULT PreMessageLoop(int nShowCmd) throw();
 ```
 
@@ -241,11 +241,11 @@ HRESULT PreMessageLoop(int nShowCmd) throw();
 
 Переопределите этот метод, чтобы добавить пользовательский код инициализации для приложения. Реализация по умолчанию регистрирует объекты класса.
 
-##  <a name="registerclassobjects"></a>CAtlExeModuleT:: Регистерклассобжектс
+## <a name="catlexemoduletregisterclassobjects"></a><a name="registerclassobjects"></a>CAtlExeModuleT:: Регистерклассобжектс
 
 Регистрирует объект класса в OLE, чтобы другие приложения могли подключаться к нему.
 
-```
+```cpp
 HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
 ```
 
@@ -261,11 +261,11 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
 
 Возвращает S_OK при успешном выполнении, S_FALSE, если отсутствуют классы для регистрации, или ошибку HRESULT при сбое.
 
-##  <a name="revokeclassobjects"></a>CAtlExeModuleT:: Ревокеклассобжектс
+## <a name="catlexemoduletrevokeclassobjects"></a><a name="revokeclassobjects"></a>CAtlExeModuleT:: Ревокеклассобжектс
 
 Удаляет объект класса.
 
-```
+```cpp
 HRESULT RevokeClassObjects() throw();
 ```
 
@@ -273,11 +273,11 @@ HRESULT RevokeClassObjects() throw();
 
 Возвращает S_OK при успешном выполнении, S_FALSE, если отсутствуют классы для регистрации, или ошибку HRESULT при сбое.
 
-##  <a name="run"></a>CAtlExeModuleT:: Run
+## <a name="catlexemoduletrun"></a><a name="run"></a>CAtlExeModuleT:: Run
 
 Этот метод выполняет код в модуле EXE для инициализации, выполнения цикла обработки сообщений и очистки.
 
-```
+```cpp
 HRESULT Run(int nShowCmd = SW_HIDE) throw();
 ```
 
@@ -294,11 +294,11 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 
 Этот метод можно переопределить. Однако на практике лучше переопределить [CAtlExeModuleT::P ремессажелуп](#premessageloop), [CAtlExeModuleT:: рунмессажелуп](#runmessageloop)или [CAtlExeModuleT::P остмессажелуп](#postmessageloop) .
 
-##  <a name="runmessageloop"></a>CAtlExeModuleT:: Рунмессажелуп
+## <a name="catlexemoduletrunmessageloop"></a><a name="runmessageloop"></a>CAtlExeModuleT:: Рунмессажелуп
 
 Этот метод выполняет цикл обработки сообщений.
 
-```
+```cpp
 void RunMessageLoop() throw();
 ```
 
@@ -306,11 +306,11 @@ void RunMessageLoop() throw();
 
 Этот метод можно переопределить, чтобы изменить поведение цикла обработки сообщений.
 
-##  <a name="uninitializecom"></a>CAtlExeModuleT:: Унинитиализеком
+## <a name="catlexemoduletuninitializecom"></a><a name="uninitializecom"></a>CAtlExeModuleT:: Унинитиализеком
 
 Отменяет инициализацию COM.
 
-```
+```cpp
 static void UninitializeCom() throw();
 ```
 
@@ -318,11 +318,11 @@ static void UninitializeCom() throw();
 
 По умолчанию этот метод просто вызывает метод [CoUninitialize](/windows/win32/api/combaseapi/nf-combaseapi-couninitialize) и вызывается из деструктора. Переопределите этот метод при переопределении [CAtlExeModuleT:: инитиализеком](#initializecom).
 
-##  <a name="unlock"></a>CAtlExeModuleT:: Unlock
+## <a name="catlexemoduletunlock"></a><a name="unlock"></a>CAtlExeModuleT:: Unlock
 
 Уменьшает счетчик блокировок модуля.
 
-```
+```cpp
 LONG Unlock() throw();
 ```
 
@@ -330,11 +330,11 @@ LONG Unlock() throw();
 
 Возвращает значение, которое может быть полезно для диагностики или тестирования.
 
-##  <a name="winmain"></a>CAtlExeModuleT:: WinMain
+## <a name="catlexemoduletwinmain"></a><a name="winmain"></a>CAtlExeModuleT:: WinMain
 
 Этот метод реализует код, необходимый для запуска EXE.
 
-```
+```cpp
 int WinMain(int nShowCmd) throw();
 ```
 
@@ -349,11 +349,11 @@ int WinMain(int nShowCmd) throw();
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод можно переопределить. Если переопределение [CAtlExeModuleT::P ремессажелуп](#premessageloop), [CAtlExeModuleT::P остмессажелуп](#postmessageloop)или [CAtlExeModuleT:: рунмессажелуп](#runmessageloop) не предоставляет достаточно гибкости, можно переопределить функцию `WinMain` с помощью этого метода.
+Этот метод можно переопределить. Если переопределение [CAtlExeModuleT::P ремессажелуп](#premessageloop), [CAtlExeModuleT::P остмессажелуп](#postmessageloop)или [CAtlExeModuleT:: рунмессажелуп](#runmessageloop) не предоставляет достаточно гибкости, можно переопределить `WinMain` функцию с помощью этого метода.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Пример ATLDuck](../../overview/visual-cpp-samples.md)<br/>
-[Класс CAtlModuleT](../../atl/reference/catlmodulet-class.md)<br/>
+[Класс Катлмодулет](../../atl/reference/catlmodulet-class.md)<br/>
 [Класс CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md)<br/>
-[Обзор класса](../../atl/atl-class-overview.md)
+[Общие сведения о классах](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: _AtlCreateWndData Structure
+title: Структура _AtlCreateWndData
 ms.date: 11/04/2016
 f1_keywords:
 - ATL::_AtlCreateWndData
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - _AtlCreateWndData structure
 - AtlCreateWndData structure
 ms.assetid: 76ed5382-bfbf-4b8b-8a29-912688dfd2ae
-ms.openlocfilehash: d6e3168b5c86de5bce3c3b9d3b0fbdea28ae604f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6453156a59b73bcb06c7c86920e1dc524874cef8
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261249"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168544"
 ---
-# <a name="atlcreatewnddata-structure"></a>_AtlCreateWndData Structure
+# <a name="_atlcreatewnddata-structure"></a>Структура _AtlCreateWndData
 
-Эта структура содержит данные экземпляра класса в коде управления окнами в ATL
+Эта структура содержит данные экземпляра класса в коде окна в ATL.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
     struct _AtlCreateWndData{
     void* m_pThis;
     DWORD m_dwThreadID;
@@ -33,17 +33,17 @@ ms.locfileid: "62261249"
 ## <a name="members"></a>Участники
 
 `m_pThis`<br/>
-**Это** указатель, используемый для получения доступа к экземпляру класса в процедуры окна.
+**Этот** указатель используется для получения доступа к экземпляру класса в процедурах окна.
 
 `m_dwThreadID`<br/>
-Идентификатор текущего экземпляра класса.
+Идентификатор потока текущего экземпляра класса.
 
 `m_pNext`<br/>
-Указатель на следующий `_AtlCreateWndData` объекта.
+Указатель на следующий `_AtlCreateWndData` объект.
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atlbase.h
+**Заголовок:** atlbase. h
 
 ## <a name="see-also"></a>См. также
 

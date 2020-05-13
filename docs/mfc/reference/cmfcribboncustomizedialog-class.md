@@ -1,5 +1,5 @@
 ---
-title: Класс CMFCRibbonCustomizeDialog
+title: CMFCRibbonНастройкаДиолог класс
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonCustomizeDialog
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCRibbonCustomizeDialog [MFC], CMFCRibbonCustomizeDialog
 ms.assetid: ce67de7f-5eaa-4c75-9b94-f290f36df073
-ms.openlocfilehash: d73fd05a775ac26f5d289a5233341102f40e9af3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a66c0a19c04e0a900b91c0c28c45bb9c766d25c0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237630"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375207"
 ---
-# <a name="cmfcribboncustomizedialog-class"></a>Класс CMFCRibbonCustomizeDialog
+# <a name="cmfcribboncustomizedialog-class"></a>CMFCRibbonНастройкаДиолог класс
 
-Лента отображается **Настройка** страницы.
+Отображает ленту **Настройка страницы.**
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -29,24 +29,24 @@ class CMFCRibbonCustomizeDialog : public CMFCPropertySheet
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CMFCRibbonCustomizeDialog::CMFCRibbonCustomizeDialog](#cmfcribboncustomizedialog)|Создает объект `CMFCRibbonCustomizeDialog`.|
+|[CMFCRibbonCustomizeДиалог::CMFCRibbonCustomizeДиалог](#cmfcribboncustomizedialog)|Формирует объект `CMFCRibbonCustomizeDialog`.|
 |`CMFCRibbonCustomizeDialog::~CMFCRibbonCustomizeDialog`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|`CMFCRibbonCustomizeDialog::GetThisClass`|Используется инфраструктурой, чтобы получить указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|
+|`CMFCRibbonCustomizeDialog::GetThisClass`|Используется фректором для получения указателя на объект [CRuntimeClass,](../../mfc/reference/cruntimeclass-structure.md) связанный с этим типом класса.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-MFC автоматически создает этот класс, если вы не обрабатывают сообщения AFX_WM_ON_RIBBON_CUSTOMIZE или если после возврата 0 из обработчик сообщений.
+MFC автоматически мгновенно обрабатывает этот класс, если вы не обрабатываете AFX_WM_ON_RIBBON_CUSTOMIZE сообщение, или если вы возвращаете 0 от обработчика сообщений.
 
-Если вы хотите использовать этот класс в приложении для отображения на ленте **Настройка** диалогового окна поле, просто создать его экземпляр и вызвать `DoModal` метод.
+Если вы хотите использовать этот класс в приложении для отображения ленточной `DoModal` **телефонной** настройки диалогового окна, просто мгновенно его и вызов метода.
 
-Поскольку этот класс является производным от [класс CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md), можно добавить пользовательские страницы с помощью `CMFCPropertySheet` API.
+Поскольку этот класс происходит от [cmFCPropertySheet Class,](../../mfc/reference/cmfcpropertysheet-class.md)вы `CMFCPropertySheet` можете добавлять пользовательские страницы с помощью API.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -60,15 +60,15 @@ MFC автоматически создает этот класс, если вы
 
 [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md)
 
-[CMFCRibbonCustomizeDialog](../../mfc/reference/cmfcribboncustomizedialog-class.md)
+[CMFCRibbonНастройкаДиалог](../../mfc/reference/cmfcribboncustomizedialog-class.md)
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** afxribboncustomizedialog.h
 
-##  <a name="cmfcribboncustomizedialog"></a>  CMFCRibbonCustomizeDialog::CMFCRibbonCustomizeDialog
+## <a name="cmfcribboncustomizedialogcmfcribboncustomizedialog"></a><a name="cmfcribboncustomizedialog"></a>CMFCRibbonCustomizeДиалог::CMFCRibbonCustomizeДиалог
 
-Создает объект `CMFCRibbonCustomizeDialog`.
+Формирует объект `CMFCRibbonCustomizeDialog`.
 
 ```
 CMFCRibbonCustomizeDialog(
@@ -79,22 +79,22 @@ CMFCRibbonCustomizeDialog(
 ### <a name="parameters"></a>Параметры
 
 *pWndParent*<br/>
-[in] Указатель на родительское окно (обычно главного фрейма).
+(в) Указатель на родительское окно (обычно основной кадр).
 
 *pRibbon*<br/>
-[in] Указатель на `CMFCRibbonBar` , который будет настраиваться.
+(в) Указатель на `CMFCRibbonBar` то, что должно быть настроено.
 
 ### <a name="example"></a>Пример
 
-В следующем примере демонстрируется создание `CMFCRibbonCustomizeDialog` объекта.
+В следующем примере показано, `CMFCRibbonCustomizeDialog` как построить объект.
 
 [!code-cpp[NVC_MFC_RibbonApp#18](../../mfc/reference/codesnippet/cpp/cmfcribboncustomizedialog-class_1.cpp)]
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Конструктор создает [класс CMFCRibbonCustomizePropertyPage](../../mfc/reference/cmfcribboncustomizepropertypage-class.md) и добавляет его в коллекцию страницы в лист свойств.
+Конструктор мгновенно увеличивает объект [класса CMFCRibbonCustomizePropertyPage](../../mfc/reference/cmfcribboncustomizepropertypage-class.md) и добавляет его в коллекцию страниц листа свойств.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)

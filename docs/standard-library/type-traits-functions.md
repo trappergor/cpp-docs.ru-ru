@@ -13,12 +13,12 @@ helpviewer_keywords:
 - std::is_trivially_copy_assignable
 - std::is_trivially_move_assignable
 - std::is_trivially_move_constructible
-ms.openlocfilehash: 40ebd24a286039391dedacf289d305ee5ec9ca95
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: bc25c82629139c5bc2f6fa53d3555068374dca35
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447474"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367986"
 ---
 # <a name="lttype_traitsgt-functions"></a>Функции &lt;type_traits&gt;
 
@@ -30,9 +30,9 @@ ms.locfileid: "79447474"
 |[is_swappable](#is_swappable)|[is_swappable_with](#is_swappable_with)|[is_trivially_copy_assignable](#is_trivially_copy_assignable)|
 |[is_trivially_move_assignable](#is_trivially_move_assignable)|[is_trivially_move_constructible](#is_trivially_move_constructible)|
 
-## <a name="is_assignable"></a>  is_assignable
+## <a name="is_assignable"></a><a name="is_assignable"></a>is_assignable
 
-Проверяет, может ли значение *из* типа быть присвоено типу *.*
+Тестирует, можно ли присвоить *типу* значение *From* type.
 
 ```cpp
 template <class To, class From>
@@ -41,17 +41,17 @@ struct is_assignable;
 
 ### <a name="parameters"></a>Параметры
 
-*Для*\
+*Кому*\
 Тип объекта, который получает назначение.
 
-*Из*\
+*От*\
 Тип объекта, который предоставляет значение.
 
 ### <a name="remarks"></a>Remarks
 
-Невычисленное выражение `declval<To>() = declval<From>()` должно иметь правильный формат. И *от* , и *до* должны быть полными типами, **void**или массивами неизвестной привязки.
+Невычисленное выражение `declval<To>() = declval<From>()` должно иметь правильный формат. Оба *от* и *то* должны быть полными типами, **недействительными,** или массивы неизвестных связанных.
 
-## <a name="is_copy_assignable"></a>  is_copy_assignable
+## <a name="is_copy_assignable"></a><a name="is_copy_assignable"></a>is_copy_assignable
 
 Проверяет, может ли тип быть скопирован при присвоении значения.
 
@@ -67,9 +67,9 @@ struct is_copy_assignable;
 
 ### <a name="remarks"></a>Remarks
 
-Экземпляр предиката типа содержит значение true, если тип *Ty* является классом с оператором присваивания копии, в противном случае — значение false. Эквивалентно is_assignable\<Ty&, const Ty&>.
+Экземпляр предиката типа соответствует действительности, если тип *Ty* является классом, который имеет оператора назначения копий, в противном случае он содержит ложное. Эквивалентно is_assignable\<Ty&, const Ty&>.
 
-## <a name="is_copy_constructible"></a>  is_copy_constructible
+## <a name="is_copy_constructible"></a><a name="is_copy_constructible"></a>is_copy_constructible
 
 Проверяет, есть ли у типа конструктор копии.
 
@@ -85,7 +85,7 @@ struct is_copy_constructible;
 
 ### <a name="remarks"></a>Remarks
 
-Экземпляр предиката типа содержит значение true, если тип *Ty* является классом с конструктором копии, в противном случае — значение false.
+Экземпляр предиката типа соответствует действительности, если тип *Ty* является классом, который имеет конструктор копий, в противном случае он содержит ложное.
 
 ### <a name="example"></a>Пример
 
@@ -121,7 +121,7 @@ is_copy_constructible<Copyable> == true
 is_copy_constructible<NotCopyable > == false
 ```
 
-## <a name="is_default_constructible"></a>  is_default_constructible
+## <a name="is_default_constructible"></a><a name="is_default_constructible"></a>is_default_constructible
 
 Проверяет, есть ли у типа конструктор по умолчанию.
 
@@ -137,7 +137,7 @@ struct is_default_constructible;
 
 ### <a name="remarks"></a>Remarks
 
-Экземпляр предиката типа содержит значение true, если тип *T* является типом класса с конструктором по умолчанию, в противном случае — значение false. Это эквивалентно предикату `is_constructible<T>`. Тип *T* должен быть полным типом, **void**или массивом неизвестной привязки.
+Экземпляр предиката типа соответствует действительности, если тип *T* является типом класса, который имеет конструктор по умолчанию, в противном случае он содержит ложное. Это эквивалентно предикату `is_constructible<T>`. Тип *T* должен быть полным типом, **пустотой**или массивом неизвестных границ.
 
 ### <a name="example"></a>Пример
 
@@ -173,9 +173,9 @@ is_default_constructible<Simple> == true
 is_default_constructible<Simple2> == false
 ```
 
-## <a name="is_move_assignable"></a>  is_move_assignable
+## <a name="is_move_assignable"></a><a name="is_move_assignable"></a>is_move_assignable
 
-Проверяет, является ли тип перемещаемым при присваивании.
+Проверяет, является ли тип присваиваемым при перемещении.
 
 ```cpp
 template <class T>
@@ -189,9 +189,9 @@ struct is_move_assignable;
 
 ### <a name="remarks"></a>Remarks
 
-Тип является тип присваиваемым при перемещении, если ссылку rvalue на тип можно присвоить ссылке на тип. Предикат типа эквивалентен `is_assignable<T&, T&&>`. Присваиваемые при перемещении типы включают ссылочные скалярные типы и типы классов, в которых есть созданные компилятором или определяемые пользователем операторы присваивания перемещением.
+Тип является тип присваиваемым при перемещении, если ссылку rvalue на тип можно присвоить ссылке на тип. Предикат типа эквивалентен `is_assignable<T&, T&&>`. Перемещаемые при присваивании типы включают ссылочные скалярные типы и типы классов, в которых есть созданные компилятором или определяемые пользователем операторы присваивания.
 
-## <a name="is_move_constructible"></a>  is_move_constructible
+## <a name="is_move_constructible"></a><a name="is_move_constructible"></a>is_move_constructible
 
 Проверяет, имеет ли тип конструктор перемещения.
 
@@ -207,9 +207,9 @@ struct is_move_constructible;
 
 ### <a name="remarks"></a>Remarks
 
-Предикат типа, который возвращает значение true, если тип *T* может быть создан с помощью операции перемещения. Этот предикат эквивалентен `is_constructible<T, T&&>`.
+Предикат типа, который оценивается как верный, если тип *T* может быть построен с помощью операции перемещения. Этот предикат эквивалентен `is_constructible<T, T&&>`.
 
-## <a name="is_nothrow_move_assignable"></a>  is_nothrow_move_assignable
+## <a name="is_nothrow_move_assignable"></a><a name="is_nothrow_move_assignable"></a>is_nothrow_move_assignable
 
 Проверяет, имеет ли тип оператор присваивания перемещения **nothrow**.
 
@@ -225,33 +225,33 @@ struct is_nothrow_move_assignable;
 
 ### <a name="remarks"></a>Remarks
 
-Экземпляр предиката типа содержит значение true, если тип *Ty* имеет оператор присваивания перемещения, в противном случае — значение false.
+Экземпляр предиката типа соответствует действительности, если тип *Ty* имеет оператора назначения nothrow move, в противном случае он содержит ложное.
 
-## <a name="is_nothrow_swappable"></a>is_nothrow_swappable
+## <a name="is_nothrow_swappable"></a><a name="is_nothrow_swappable"></a>is_nothrow_swappable
 
 ```cpp
 template <class T> struct is_nothrow_swappable;
 ```
 
-## <a name="is_nothrow_swappable_with"></a>is_nothrow_swappable_with
+## <a name="is_nothrow_swappable_with"></a><a name="is_nothrow_swappable_with"></a>is_nothrow_swappable_with
 
 ```cpp
 template <class T, class U> struct is_nothrow_swappable_with;
 ```
 
-## <a name="is_swappable"></a>is_swappable
+## <a name="is_swappable"></a><a name="is_swappable"></a>is_swappable
 
 ```cpp
 template <class T> struct is_swappable;
 ```
 
-## <a name="is_swappable_with"></a>is_swappable_with
+## <a name="is_swappable_with"></a><a name="is_swappable_with"></a>is_swappable_with
 
 ```cpp
 template <class T, class U> struct is_swappable_with;
 ```
 
-## <a name="is_trivially_copy_assignable"></a>  is_trivially_copy_assignable
+## <a name="is_trivially_copy_assignable"></a><a name="is_trivially_copy_assignable"></a>is_trivially_copy_assignable
 
 Проверяет, есть ли у типа тривиальный оператор присваивания копии.
 
@@ -267,11 +267,11 @@ struct is_trivially_copy_assignable;
 
 ### <a name="remarks"></a>Remarks
 
-Экземпляр предиката типа содержит значение true, если тип *T* является классом, имеющим тривиальный оператор присваивания копии, в противном случае — значение false.
+Экземпляр предиката типа соответствует действительности, если тип *T* является классом, который имеет тривиального оператора назначения копий, в противном случае он содержит ложное.
 
-Конструктор присваивания для класса *t* является тривиальным, если он неявно предоставляется, *у класса* *t* нет виртуальных функций, а классы всех нестатических элементов данных типа класса имеют тривиальные операторы присваивания, а классы всех нестатических элементов данных массива типов имеют тривиальные операторы присваивания.
+Конструктор назначения для класса *Т* тривиален, если он неявно предоставлен, класс *Т* не имеет виртуальных функций, класс *Т* не имеет виртуальных баз, классы всех нестатических членов данных типа имеют тривиальных операторов назначения, а классы всех нестатических членов данных типа типа имеют тривиальные операторы заданий.
 
-## <a name="is_trivially_move_assignable"></a>  is_trivially_move_assignable
+## <a name="is_trivially_move_assignable"></a><a name="is_trivially_move_assignable"></a>is_trivially_move_assignable
 
 Проверяет, есть ли у типа тривиальный оператор присваивания перемещением.
 
@@ -287,21 +287,21 @@ struct is_trivially_move_assignable;
 
 ### <a name="remarks"></a>Remarks
 
-Экземпляр предиката типа содержит значение true, если тип *Ty* является классом, имеющим тривиальный оператор присваивания перемещения, в противном случае — значение false.
+Экземпляр предиката типа соответствует действительности, если тип *Ty* является классом, который имеет тривиальный оператор назначения перемещения, в противном случае он содержит ложное.
 
-Оператор присваивания перемещения для класса *Ty* является тривиальным, если:
+Оператор назначения перемещения для класса *Ty* тривиален, если:
 
 он неявно предоставляется;
 
-у класса *Ty* нет виртуальных функций
+класс *Ty* не имеет виртуальных функций
 
-класс *Ty* не имеет виртуальных базовых классов
+класс *Ty* не имеет виртуальных баз
 
 классы всех нестатических элементов данных типа класса имеют тривиальные операторы присваивания перемещением;
 
 классы всех нестатических элементов данных массива типов класса имеют тривиальные операторы присваивания перемещением.
 
-## <a name="is_trivially_move_constructible"></a>  is_trivially_move_constructible
+## <a name="is_trivially_move_constructible"></a><a name="is_trivially_move_constructible"></a>is_trivially_move_constructible
 
 Проверяет, есть ли у типа тривиальный конструктор перемещения.
 
@@ -317,21 +317,21 @@ struct is_trivially_move_constructible;
 
 ### <a name="remarks"></a>Remarks
 
-Экземпляр предиката типа содержит значение true, если тип *Ty* является классом с тривиальным конструктором перемещения, в противном случае — значение false.
+Экземпляр предиката типа соответствует действительности, если тип *Ty* является классом, который имеет тривиальный конструктор перемещения, в противном случае он содержит ложное.
 
-Конструктор перемещения для класса *Ty* является тривиальным, если:
+Конструктор перемещения для класса *Ty* тривиален, если:
 
 он неявно объявлен;
 
 его типы параметров эквивалентны типам неявного объявления;
 
-у класса *Ty* нет виртуальных функций
+класс *Ty* не имеет виртуальных функций
 
-класс *Ty* не имеет виртуальных базовых классов
+класс *Ty* не имеет виртуальных баз
 
 класс не содержит изменчивых нестатических элементов данных;
 
-все прямые базовые классы класса *Ty* имеют тривиальные конструкторы перемещения
+все прямые основания класса *Ty* имеют тривиальные конструкторы перемещения
 
 классы всех нестатических элементов данных типа класса имеют тривиальные конструкторы перемещения;
 

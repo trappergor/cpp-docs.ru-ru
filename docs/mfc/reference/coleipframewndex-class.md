@@ -1,5 +1,5 @@
 ---
-title: Класс Колеипфрамевндекс
+title: Класс COleIPFrameWndEx
 ms.date: 11/04/2016
 f1_keywords:
 - COleIPFrameWndEx
@@ -94,17 +94,17 @@ helpviewer_keywords:
 - COleIPFrameWndEx [MFC], WinHelpA
 - COleIPFrameWndEx [MFC], InitUserToobars
 ms.assetid: ebff1560-a1eb-4854-af00-95d4a192bd55
-ms.openlocfilehash: 71c0db8d059ede0016caf7ceb72c7f3ab7da2718
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 1dd57494c6fe153346dd99e2472f507d1ebb1c26
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426885"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753855"
 ---
-# <a name="coleipframewndex-class"></a>Класс Колеипфрамевндекс
+# <a name="coleipframewndex-class"></a>Класс COleIPFrameWndEx
 
 Класс `COleIPFrameWndEx` реализует OLE-контейнер с поддержкой MFC. Необходимо создать встроенный класс окна фрейма для приложения, производный от класса `COleIPFrameWndEx` , вместо наследования его от класса [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md).
-Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
+Для получения более подробной информации смотрите исходный код, расположенный в папке **VC\\atlmfc\\src\\mfc** установки Visual Studio.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -112,61 +112,61 @@ ms.locfileid: "79426885"
 class COleIPFrameWndEx : public COleIPFrameWnd
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|[Колеипфрамевндекс:: Адддокксите](#adddocksite)||
-|[Колеипфрамевндекс:: Аддпане](#addpane)||
-|[Колеипфрамевндекс:: Аджустдоккинглайаут](#adjustdockinglayout)||
-|[Колеипфрамевндекс::D Оккпане](#dockpane)||
-|[Колеипфрамевндекс::D Оккпанелефтоф](#dockpaneleftof)|Закрепляет одну область слева от другой области.|
-|[Колеипфрамевндекс:: Енаблеаутохидепанес](#enableautohidepanes)||
-|[Колеипфрамевндекс:: Енабледоккинг](#enabledocking)||
-|[Колеипфрамевндекс:: Енаблепанемену](#enablepanemenu)||
-|[Колеипфрамевндекс:: Жетактивепопуп](#getactivepopup)|Возвращает указатель на отображаемое в данный момент контекстное меню.|
-|[Колеипфрамевндекс:: Жетконтаинерфрамевиндов](#getcontainerframewindow)||
-|[Колеипфрамевндекс:: Жетдефаултресид](#getdefaultresid)|Возвращает заданный при загрузке окна идентификатор ресурса для окна фрейма.|
-|[Колеипфрамевндекс:: Жетдоккфраме](#getdockframe)||
-|[Колеипфрамевндекс:: Жетдоккингманажер](#getdockingmanager)||
-|[Колеипфрамевндекс:: большие ЭВМ](#getmainframe)||
-|[Колеипфрамевндекс:: Жетменубар](#getmenubar)|Возвращает указатель на объект строки меню, прикрепленное к окну фрейма.|
-|[Колеипфрамевндекс:: "панель"](#getpane)||
-|[Колеипфрамевндекс:: Жеттеароффбарс](#gettearoffbars)|Возвращает список объектов области, которые находятся в состоянии перемещения.|
-|[Колеипфрамевндекс:: Жеттулбарбуттонтултиптекст](#gettoolbarbuttontooltiptext)|Вызывается платформой перед отображением подсказки для кнопки.|
-|[Колеипфрамевндекс:: Инсертпане](#insertpane)||
-|[Колеипфрамевндекс:: Исменубараваилабле](#ismenubaravailable)|Определяет, что указатель на объект строки меню не имеет значение `NULL`.|
-|[Колеипфрамевндекс:: Испоинтнеардокксите](#ispointneardocksite)||
-|[Колеипфрамевндекс:: Лоадфраме](#loadframe)|(Переопределяет `COleIPFrameWnd::LoadFrame`.)|
-|[Колеипфрамевндекс:: Онклоседоккингпане](#onclosedockingpane)||
-|[Колеипфрамевндекс:: Онклосеминифраме](#oncloseminiframe)||
-|[Колеипфрамевндекс:: Онклосепопупмену](#onclosepopupmenu)|Вызывается платформой, когда активное всплывающее меню обрабатывает сообщение WM_DESTROY.|
-|[Колеипфрамевндекс:: OnCmdMsg](#oncmdmsg)|(Переопределяет `CFrameWnd::OnCmdMsg`.)|
-|[Колеипфрамевндекс:: Ондравменуимаже](#ondrawmenuimage)|Вызывается платформой при отрисовке изображения, связанного с пунктом меню.|
-|[Колеипфрамевндекс:: Ондравменулого](#ondrawmenulogo)|Вызывается платформой при обработке сообщения WM_PAINT объектом [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md).|
-|[Колеипфрамевндекс:: Онменубуттонтулхиттест](#onmenubuttontoolhittest)|Вызывается платформой при обработке сообщения WM_NCHITTEST объектом [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md).|
-|[Колеипфрамевндекс:: Онмовеминифраме](#onmoveminiframe)||
-|[Колеипфрамевндекс:: Онсетпревиевмоде](#onsetpreviewmode)|Вызов этой функции-члена переключает окно главного фрейма приложения в режим предварительного просмотра и из него. (Переопределяет [CFrameWnd::OnSetPreviewMode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode).)|
-|[Колеипфрамевндекс:: Оншовкустомизепане](#onshowcustomizepane)||
-|[Колеипфрамевндекс:: Оншовпанес](#onshowpanes)||
-|[Колеипфрамевндекс:: Оншовпопупмену](#onshowpopupmenu)|Вызывается платформой при активации всплывающего меню.|
-|[Колеипфрамевндекс:: Онтеароффмену](#ontearoffmenu)|Вызывается платформой при активации меню с перемещаемой панелью.|
-|[Колеипфрамевндекс::P Анефромпоинт](#panefrompoint)||
-|[Колеипфрамевндекс::P Ретранслатемессаже](#pretranslatemessage)|(Переопределяет `COleIPFrameWnd::PreTranslateMessage`.)|
-|[Колеипфрамевндекс:: RecalcLayout](#recalclayout)|(Переопределяет `COleIPFrameWnd::RecalcLayout`.)|
-|[Колеипфрамевндекс:: Ремовепанефромдоккманажер](#removepanefromdockmanager)||
-|[Колеипфрамевндекс:: Сетдоккстате](#setdockstate)|Применяет указанное состояние закрепления к областям, принадлежащим окну фрейма.|
-|[Колеипфрамевндекс:: Сетуптулбармену](#setuptoolbarmenu)|Изменяет объект панели инструментов путем поиска фиктивных элементов и замены их указанными элементами, определяемыми пользователем.|
-|[Колеипфрамевндекс:: Шовпане](#showpane)||
-|[Колеипфрамевндекс:: WinHelp](#winhelpa)|Вызывается платформой для запуска приложения WinHelp или контекстной справки.|
+|[COleIPFrameWndEx::AddDockSite](#adddocksite)||
+|[COleIPFrameWndEx:AddPane](#addpane)||
+|[COleIPFrameWndEx::AdjustDockingLayout](#adjustdockinglayout)||
+|[COleIPFrameWndEx::DockPane](#dockpane)||
+|[ColeIPFrameWndEx::DockPaneLeftOf](#dockpaneleftof)|Закрепляет одну область слева от другой области.|
+|[COleIPFrameWndEx:EnableAutoHidePanes](#enableautohidepanes)||
+|[COleIPFrameWndEx::EnableDocking](#enabledocking)||
+|[COleIPFrameWndEx::EnablePaneMenu](#enablepanemenu)||
+|[COleIPFrameWndEx::GetActivePopup](#getactivepopup)|Возвращает указатель на отображаемое в данный момент контекстное меню.|
+|[COleIPFrameWndEx::GetContainerFrameWindow](#getcontainerframewindow)||
+|[ColeIPFrameWndEx::GetDefaultResId](#getdefaultresid)|Возвращает заданный при загрузке окна идентификатор ресурса для окна фрейма.|
+|[COleIPFrameWndEx::GetDockFrame](#getdockframe)||
+|[COleIPFrameWndEx::GetDockingManager](#getdockingmanager)||
+|[COleIPFrameWndEx::GetMainFrame](#getmainframe)||
+|[COleIPFrameWndEx::GetMenuBar](#getmenubar)|Возвращает указатель на объект строки меню, прикрепленное к окну фрейма.|
+|[COleIPFrameWndEx::GetPane](#getpane)||
+|[ColeIPFrameWndEx::GetTearOffBars](#gettearoffbars)|Возвращает список объектов области, которые находятся в состоянии перемещения.|
+|[COleIPFrameWndEx::GetToolbarButtonToolTipText](#gettoolbarbuttontooltiptext)|Вызывается платформой перед отображением подсказки для кнопки.|
+|[COleIPFrameWndEx::InsertPane](#insertpane)||
+|[COleIPFrameWndEx::IsMenuBarДоступно](#ismenubaravailable)|Определяет, что указатель на объект строки меню не имеет значение `NULL`.|
+|[COleIPFrameWndEx::IsPointNearDockSite](#ispointneardocksite)||
+|[COleIPFrameWndEx:LoadFrame](#loadframe)|(Переопределяет `COleIPFrameWnd::LoadFrame`.)|
+|[COleIPFrameWndEx::OnCloseDockingPane](#onclosedockingpane)||
+|[COleIPFrameWndEx::OnCloseMiniFrame](#oncloseminiframe)||
+|[COleIPFrameWndEx::OnClosePopupMenu](#onclosepopupmenu)|Вызывается платформой, когда активное всплывающее меню обрабатывает сообщение WM_DESTROY.|
+|[COleIPFrameWndEx::OnCmdMsg](#oncmdmsg)|(Переопределяет `CFrameWnd::OnCmdMsg`.)|
+|[COleIPFrameWndEx::OnDrawMenuImage](#ondrawmenuimage)|Вызывается платформой при отрисовке изображения, связанного с пунктом меню.|
+|[COleIPFrameWndEx::OnDrawMenuLogo](#ondrawmenulogo)|Вызывается платформой при обработке сообщения WM_PAINT объектом [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md).|
+|[COleIPFrameWndEx::OnMenuButtonToolHitTest](#onmenubuttontoolhittest)|Вызывается платформой при обработке сообщения WM_NCHITTEST объектом [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md).|
+|[COleIPFrameWndEx::OnMoveMiniFrame](#onmoveminiframe)||
+|[COleIPFrameWndEx::OnSetPreviewMode](#onsetpreviewmode)|Вызов этой функции-члена переключает окно главного фрейма приложения в режим предварительного просмотра и из него. (Переопределяет [CFrameWnd::OnSetPreviewMode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode).)|
+|[COleIPFrameWndEx::OnShowCustomizePane](#onshowcustomizepane)||
+|[COleIPFrameWndEx::OnShowPanes](#onshowpanes)||
+|[COleIPFrameWndEx::OnShowPopupMenu](#onshowpopupmenu)|Вызывается платформой при активации всплывающего меню.|
+|[COleIPFrameWndEx::OnTearOffMenu](#ontearoffmenu)|Вызывается платформой при активации меню с перемещаемой панелью.|
+|[COleIPFrameWndEx::PaneFromPoint](#panefrompoint)||
+|[COleIPFrameWndEx::PreTranslateMessage](#pretranslatemessage)|(Переопределяет `COleIPFrameWnd::PreTranslateMessage`.)|
+|[ColeIPFrameWndEx::RecalcLayout](#recalclayout)|(Переопределяет `COleIPFrameWnd::RecalcLayout`.)|
+|[COleIPFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)||
+|[COleIPFrameWndEx::SetDockState](#setdockstate)|Применяет указанное состояние закрепления к областям, принадлежащим окну фрейма.|
+|[COleIPFrameWndEx::SetupToolbarMenu](#setuptoolbarmenu)|Изменяет объект панели инструментов путем поиска фиктивных элементов и замены их указанными элементами, определяемыми пользователем.|
+|[COleIPFrameWndEx:ShowPane](#showpane)||
+|[COleIPFrameWndEx::WinHelpA](#winhelpa)|Вызывается платформой для запуска приложения WinHelp или контекстной справки.|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|[Колеипфрамевндекс:: Инитусертубарс](#initusertoobars)|Дает платформе команду инициализировать диапазон идентификаторов элементов управления, которые назначены панелям инструментов, определяемым пользователем.|
+|[COleIPFrameWndEx::InitUserToobars](#initusertoobars)|Дает платформе команду инициализировать диапазон идентификаторов элементов управления, которые назначены панелям инструментов, определяемым пользователем.|
 
 ## <a name="example"></a>Пример
 
@@ -192,15 +192,15 @@ class COleIPFrameWndEx : public COleIPFrameWnd
 
 **Заголовок:** afxoleipframewndex.h
 
-##  <a name="adddocksite"></a>Колеипфрамевндекс:: Адддокксите
+## <a name="coleipframewndexadddocksite"></a><a name="adddocksite"></a>COleIPFrameWndEx::AddDockSite
 
-```
+```cpp
 void AddDockSite();
 ```
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="addpane"></a>Колеипфрамевндекс:: Аддпане
+## <a name="coleipframewndexaddpane"></a><a name="addpane"></a>COleIPFrameWndEx:AddPane
 
 ```
 BOOL AddPane(
@@ -210,14 +210,14 @@ BOOL AddPane(
 
 ### <a name="parameters"></a>Параметры
 
-окне *пконтролбар*<br/>
-окне *бтаил*<br/>
+(в) *pControlBar*<br/>
+(в) *bTail*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="adjustdockinglayout"></a>Колеипфрамевндекс:: Аджустдоккинглайаут
+## <a name="coleipframewndexadjustdockinglayout"></a><a name="adjustdockinglayout"></a>COleIPFrameWndEx::AdjustDockingLayout
 
 ```
 virtual void AdjustDockingLayout(HDWP hdwp = NULL);
@@ -225,13 +225,13 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 
 ### <a name="parameters"></a>Параметры
 
-окне *хдвп*<br/>
+(в) *hdwp*<br/>
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="dockpane"></a>Колеипфрамевндекс::D Оккпане
+## <a name="coleipframewndexdockpane"></a><a name="dockpane"></a>COleIPFrameWndEx::DockPane
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID = 0,
@@ -240,13 +240,13 @@ void DockPane(
 
 ### <a name="parameters"></a>Параметры
 
-окне *пбар*<br/>
-окне *ндоккбарид*<br/>
-окне *лпрект*<br/>
+(в) *pBar*<br/>
+(в) *nDockBarID*<br/>
+(в) *lpRect*<br/>
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="dockpaneleftof"></a>Колеипфрамевндекс::D Оккпанелефтоф
+## <a name="coleipframewndexdockpaneleftof"></a><a name="dockpaneleftof"></a>ColeIPFrameWndEx::DockPaneLeftOf
 
 Закрепляет одну область слева от другой области.
 
@@ -258,21 +258,21 @@ BOOL DockPaneLeftOf(
 
 ### <a name="parameters"></a>Параметры
 
-*пбар*<br/>
-окне Указатель на область для закрепления.
+*pBar*<br/>
+(в) Указатель на стекол для стыковки.
 
 *плефтоф*<br/>
-окне Указатель на область, которая выступает в качестве источника.
+(в) Указатель на панель, которая служит в качестве происхождения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение TRUE, если операция выполнена успешно. В противном случае возвращает значение FALSE.
+Возвращает TRUE, если операция прошла успешно. В противном случае возвращает значение FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Вызывайте этот метод для закрепления нескольких объектов области в стандартном порядке. Этот метод закрепляет панель, заданную параметром *пбар* , слева от области, заданной параметром *плефтоф*.
+Вызовите этот метод для стыковки нескольких объектов панели в заранее определенном порядке. Этот метод пристыковивает стекло, указанное *pBar* слева от панели, указанной *pLeftOf.*
 
-##  <a name="enableautohidepanes"></a>Колеипфрамевндекс:: Енаблеаутохидепанес
+## <a name="coleipframewndexenableautohidepanes"></a><a name="enableautohidepanes"></a>COleIPFrameWndEx:EnableAutoHidePanes
 
 ```
 BOOL EnableAutoHidePanes(DWORD dwDockStyle);
@@ -280,13 +280,13 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 
 ### <a name="parameters"></a>Параметры
 
-окне *двдоккстиле*<br/>
+(в) *dwDockStyle*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="enabledocking"></a>Колеипфрамевндекс:: Енабледоккинг
+## <a name="coleipframewndexenabledocking"></a><a name="enabledocking"></a>COleIPFrameWndEx::EnableDocking
 
 ```
 BOOL EnableDocking(DWORD dwDockStyle);
@@ -294,15 +294,15 @@ BOOL EnableDocking(DWORD dwDockStyle);
 
 ### <a name="parameters"></a>Параметры
 
-окне *двдоккстиле*<br/>
+(в) *dwDockStyle*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="enablepanemenu"></a>Колеипфрамевндекс:: Енаблепанемену
+## <a name="coleipframewndexenablepanemenu"></a><a name="enablepanemenu"></a>COleIPFrameWndEx::EnablePaneMenu
 
-```
+```cpp
 void EnablePaneMenu(
     BOOL bEnable,
     UINT uiCustomizeCmd,
@@ -314,18 +314,18 @@ void EnablePaneMenu(
 
 ### <a name="parameters"></a>Параметры
 
-окне *бенабле*<br/>
-окне *уикустомизекмд*<br/>
-окне *стркустомизелабел*<br/>
-окне *уивиевтулбарсменуентрид*<br/>
-окне *бконтекстменушовстулбарсонли*<br/>
-окне *бвиевменушовстулбарсонли*<br/>
+(в) *bEnable*<br/>
+(в) *uiCustomizeCmd*<br/>
+(в) *strCustomizeLabel*<br/>
+(в) *uiViewToolbarsMenuEntryID*<br/>
+(в) *bКонтекстОШоуСТулбарыТолько*<br/>
+(в) *bViewMenuShowsToolbarsТолько*<br/>
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="getactivepopup"></a>Колеипфрамевндекс:: Жетактивепопуп
+## <a name="coleipframewndexgetactivepopup"></a><a name="getactivepopup"></a>COleIPFrameWndEx::GetActivePopup
 
-Возвращает указатель на текущее отображаемое всплывающее меню.
+Возвращает указатель в отображаемый в настоящее время всплывающее меню.
 
 ```
 CMFCPopupMenu* GetActivePopup() const;
@@ -333,13 +333,13 @@ CMFCPopupMenu* GetActivePopup() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на активное всплывающее меню; в противном случае — NULL.
+Указатель на активное всплывающее меню; в противном случае NULL.
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод используется для получения указателя на объект [класса CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) , который в настоящее время отображается.
+Используйте этот метод для получения указателя на объект [класса CMFCPopupMenu,](../../mfc/reference/cmfcpopupmenu-class.md) который в настоящее время отображается.
 
-##  <a name="getcontainerframewindow"></a>Колеипфрамевндекс:: Жетконтаинерфрамевиндов
+## <a name="coleipframewndexgetcontainerframewindow"></a><a name="getcontainerframewindow"></a>COleIPFrameWndEx::GetContainerFrameWindow
 
 ```
 COleCntrFrameWndEx* GetContainerFrameWindow();
@@ -349,9 +349,9 @@ COleCntrFrameWndEx* GetContainerFrameWindow();
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="getdefaultresid"></a>Колеипфрамевндекс:: Жетдефаултресид
+## <a name="coleipframewndexgetdefaultresid"></a><a name="getdefaultresid"></a>ColeIPFrameWndEx::GetDefaultResId
 
-Возвращает идентификатор ресурса меню, который был указан, когда окно фрейма загрузило меню.
+Возвращает идентификатор ресурса меню, указанный при загрузке окна кадра.
 
 ```
 UINT GetDefaultResId() const;
@@ -359,13 +359,13 @@ UINT GetDefaultResId() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает идентификатор ресурса меню или значение 0, если в окне фрейма нет строки меню.
+Возвращает идентификатор ресурсов меню или 0, если в окне кадра нет панели меню.
 
 ### <a name="remarks"></a>Remarks
 
-Вызовите эту функцию, чтобы получить идентификатор ресурса, который был указан, когда окно фрейма загрузило ресурс меню путем вызова `COleIPFrameWndEx::LoadFrame`.
+Вызов идентификатора ресурса, который был указан при загрузке `COleIPFrameWndEx::LoadFrame`окна меню, вызывая вызов.
 
-##  <a name="getdockframe"></a>Колеипфрамевндекс:: Жетдоккфраме
+## <a name="coleipframewndexgetdockframe"></a><a name="getdockframe"></a>COleIPFrameWndEx::GetDockFrame
 
 ```
 CFrameWnd* GetDockFrame();
@@ -375,7 +375,7 @@ CFrameWnd* GetDockFrame();
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="getdockingmanager"></a>Колеипфрамевндекс:: Жетдоккингманажер
+## <a name="coleipframewndexgetdockingmanager"></a><a name="getdockingmanager"></a>COleIPFrameWndEx::GetDockingManager
 
 ```
 CDockingManager* GetDockingManager();
@@ -385,7 +385,7 @@ CDockingManager* GetDockingManager();
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="getmainframe"></a>Колеипфрамевндекс:: большие ЭВМ
+## <a name="coleipframewndexgetmainframe"></a><a name="getmainframe"></a>COleIPFrameWndEx::GetMainFrame
 
 ```
 CFrameWnd* GetMainFrame();
@@ -395,7 +395,7 @@ CFrameWnd* GetMainFrame();
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="getmenubar"></a>Колеипфрамевндекс:: Жетменубар
+## <a name="coleipframewndexgetmenubar"></a><a name="getmenubar"></a>COleIPFrameWndEx::GetMenuBar
 
 Возвращает указатель на объект строки меню, прикрепленное к окну фрейма.
 
@@ -405,13 +405,13 @@ const CMFCMenuBar* GetMenuBar() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на объект строки меню.
+Указатель на объект панели меню.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция используется для получения указателя на объект строки меню, принадлежащий объекту `COleIPFrameWndEx`.
+Используйте эту функцию для извлечения указателя на `COleIPFrameWndEx` объект панели меню, принадлежащий объекту.
 
-##  <a name="getpane"></a>Колеипфрамевндекс:: "панель"
+## <a name="coleipframewndexgetpane"></a><a name="getpane"></a>COleIPFrameWndEx::GetPane
 
 ```
 CBasePane* GetPane(UINT nID);
@@ -419,13 +419,13 @@ CBasePane* GetPane(UINT nID);
 
 ### <a name="parameters"></a>Параметры
 
-окне *NID*<br/>
+(в) *nID*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="gettearoffbars"></a>Колеипфрамевндекс:: Жеттеароффбарс
+## <a name="coleipframewndexgettearoffbars"></a><a name="gettearoffbars"></a>ColeIPFrameWndEx::GetTearOffBars
 
 Возвращает список объектов области, которые находятся в состоянии перемещения.
 
@@ -435,13 +435,13 @@ const CObList& GetTearOffBars() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ссылка на объект `CObList`, содержащий коллекцию указателей на объекты, производные от [класса CBasePane](../../mfc/reference/cbasepane-class.md).
+Ссылка на `CObList` объект, содержащий набор указателей на [объекты класса CBasePane.](../../mfc/reference/cbasepane-class.md)
 
 ### <a name="remarks"></a>Remarks
 
-Объект `COleIPFrameWndEx` поддерживает коллекцию разделенных меню в виде списка объектов, производных от [класса CBasePane](../../mfc/reference/cbasepane-class.md). Используйте этот метод для получения ссылки на этот список.
+Объект `COleIPFrameWndEx` поддерживает сбор отрывных меню в виде списка объектов [класса CBasePane.](../../mfc/reference/cbasepane-class.md) Используйте этот метод для получения ссылки на этот список.
 
-##  <a name="gettoolbarbuttontooltiptext"></a>Колеипфрамевндекс:: Жеттулбарбуттонтултиптекст
+## <a name="coleipframewndexgettoolbarbuttontooltiptext"></a><a name="gettoolbarbuttontooltiptext"></a>COleIPFrameWndEx::GetToolbarButtonToolTipText
 
 Вызывается платформой перед отображением подсказки для кнопки.
 
@@ -453,11 +453,11 @@ virtual BOOL GetToolbarButtonToolTipText(
 
 ### <a name="parameters"></a>Параметры
 
-*пбуттон*<br/>
-окне Указатель на кнопку.
+*pButton*<br/>
+(в) Указатель на кнопку.
 
-*стртттекст*<br/>
-окне Указатель на текст подсказки.
+*strTTText*<br/>
+(в) Указатель на текст инструментария.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -465,13 +465,13 @@ virtual BOOL GetToolbarButtonToolTipText(
 
 ### <a name="remarks"></a>Remarks
 
-Переопределите эту функцию, чтобы настроить отображение подсказок на кнопках на панели инструментов.
+Переопределить эту функцию, чтобы настроить отображение наборов инструментов на кнопках панели инструментов.
 
-##  <a name="initusertoobars"></a>Колеипфрамевндекс:: Инитусертубарс
+## <a name="coleipframewndexinitusertoobars"></a><a name="initusertoobars"></a>COleIPFrameWndEx::InitUserToobars
 
-Задает диапазон идентификаторов элементов управления, которые платформа назначает определенным пользовательским панелям инструментов.
+Определяет ряд иных удостоверений управления, которые фреймворк присваивает определенным пользователям.
 
-```
+```cpp
 void InitUserToolbars(
     LPCTSTR lpszRegEntry,
     UINT uiUserToolbarFirst,
@@ -480,20 +480,20 @@ void InitUserToolbars(
 
 ### <a name="parameters"></a>Параметры
 
-*лпсзрежентри*<br/>
-окне Запись реестра, в которой библиотека хранит параметры пользовательской панели инструментов.
+*lpszRegEntry*<br/>
+(в) Запись реестра, где библиотека хранит настройки панели пользовательских инструментов.
 
-*уиусертулбарфирст*<br/>
-окне Идентификатор элемента управления, назначенный первой определяемой пользователем панели инструментов.
+*uiUserToolbarПервый*<br/>
+(в) Идентификатор управления, назначенный первой панели инструментов, определяемой пользователем.
 
-*уиусертулбарласт*<br/>
-окне Идентификатор элемента управления, назначенный последней пользовательской панели инструментов.
+*uiUserToolbarLast*<br/>
+(в) Идентификатор управления, назначенный последней панели инструментов, определяемой пользователем.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция используется для инициализации диапазона идентификаторов элементов управления для назначения панелям инструментов, определяемым пользователями динамически. Параметры *уиусертулбарфирст* и *уиусертулбарласт* определяют диапазон допустимых идентификаторов элементов управления ToolBar. Чтобы отключить создание пользовательских панелей инструментов, установите *уиусертулбарфирст* или *уиусертулбарласт* в значение-1.
+Используйте эту функцию для инициализации ряда иен управления для назначения в панели инструментов, которые пользователи определяют динамически. Параметры *uiUserToolbarFirst* и *uiUserToolbarLast* определяют диапазон допустимых идентифицированных систем управления инструментами. Чтобы отключить создание пользовательских панелей инструментов, установите *uiUserToolbarFirst* или *uiUserToolbarLast* до -1.
 
-##  <a name="insertpane"></a>Колеипфрамевндекс:: Инсертпане
+## <a name="coleipframewndexinsertpane"></a><a name="insertpane"></a>COleIPFrameWndEx::InsertPane
 
 ```
 BOOL InsertPane(
@@ -504,17 +504,17 @@ BOOL InsertPane(
 
 ### <a name="parameters"></a>Параметры
 
-окне *пконтролбар*<br/>
-окне *птаржет*<br/>
-окне *бафтер*<br/>
+(в) *pControlBar*<br/>
+(в) *pTarget*<br/>
+(в) *bПосле*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="ismenubaravailable"></a>Колеипфрамевндекс:: Исменубараваилабле
+## <a name="coleipframewndexismenubaravailable"></a><a name="ismenubaravailable"></a>COleIPFrameWndEx::IsMenuBarДоступно
 
-Определяет, является ли указатель на объект строки меню не РАВНым NULL
+Определяет, является ли указатель на объект панели меню не NULL
 
 ```
 BOOL IsMenuBarAvailable() const;
@@ -522,13 +522,13 @@ BOOL IsMenuBarAvailable() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает ненулевое значение, если в окне фрейма есть строка меню; в противном случае возвращает 0.
+Возвращает ненулевое значение, если в окне кадра есть панель меню; в противном случае возвращает 0.
 
 ### <a name="remarks"></a>Remarks
 
-Вызовите этот метод, чтобы определить, поддерживает ли окно фрейма указатель, отличный от NULL, на соответствующий объект строки меню.
+Вызовите этот метод, чтобы определить, поддерживает ли окно кадра неnull указатель на объект панели меню.
 
-##  <a name="ispointneardocksite"></a>Колеипфрамевндекс:: Испоинтнеардокксите
+## <a name="coleipframewndexispointneardocksite"></a><a name="ispointneardocksite"></a>COleIPFrameWndEx::IsPointNearDockSite
 
 ```
 BOOL IsPointNearDockSite(
@@ -539,15 +539,15 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>Параметры
 
-окне *точка*<br/>
-окне *двбаралигнмент*<br/>
-окне *баутередже*<br/>
+(в) *точки*<br/>
+(в) *dwBarAlignment*<br/>
+(в) *bOuterEdge*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="loadframe"></a>Колеипфрамевндекс:: Лоадфраме
+## <a name="coleipframewndexloadframe"></a><a name="loadframe"></a>COleIPFrameWndEx:LoadFrame
 
 ```
 virtual BOOL LoadFrame(
@@ -559,16 +559,16 @@ virtual BOOL LoadFrame(
 
 ### <a name="parameters"></a>Параметры
 
-окне *нидресаурце*<br/>
-окне *двдефаултстиле*<br/>
-окне *ппарентвнд*<br/>
-окне *пконтекст*<br/>
+(в) *nIDResource*<br/>
+(в) *dwDefaultStyle*<br/>
+(в) *pParentWnd*<br/>
+(в) *pКонтекст*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="onclosedockingpane"></a>Колеипфрамевндекс:: Онклоседоккингпане
+## <a name="coleipframewndexonclosedockingpane"></a><a name="onclosedockingpane"></a>COleIPFrameWndEx::OnCloseDockingPane
 
 ```
 virtual BOOL OnCloseDockingPane(CDockablePane*);
@@ -576,13 +576,13 @@ virtual BOOL OnCloseDockingPane(CDockablePane*);
 
 ### <a name="parameters"></a>Параметры
 
-окне *CDockablePane&#42;*<br/>
+(в) *CDockablePane&#42;*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="oncloseminiframe"></a>Колеипфрамевндекс:: Онклосеминифраме
+## <a name="coleipframewndexoncloseminiframe"></a><a name="oncloseminiframe"></a>COleIPFrameWndEx::OnCloseMiniFrame
 
 ```
 virtual BOOL OnCloseMiniFrame(CPaneFrameWnd*);
@@ -590,13 +590,13 @@ virtual BOOL OnCloseMiniFrame(CPaneFrameWnd*);
 
 ### <a name="parameters"></a>Параметры
 
-окне *Кпанефрамевнд&#42;*<br/>
+(в) *CPaneFrameWnd&#42;*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="onclosepopupmenu"></a>Колеипфрамевндекс:: Онклосепопупмену
+## <a name="coleipframewndexonclosepopupmenu"></a><a name="onclosepopupmenu"></a>COleIPFrameWndEx::OnClosePopupMenu
 
 Вызывается платформой, когда активное всплывающее меню обрабатывает сообщение WM_DESTROY.
 
@@ -606,14 +606,14 @@ virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 
 ### <a name="parameters"></a>Параметры
 
-*пменупопуп*<br/>
-окне Указатель на объект всплывающего меню.
+*pMenuPopup*<br/>
+(в) Указатель на всплывающий объект меню.
 
 ### <a name="remarks"></a>Remarks
 
-Переопределите этот метод, чтобы получать уведомления от `CMFCPopupMenu` объектов при обработке WM_DESTROY сообщений.
+Переопределить этот метод для `CMFCPopupMenu` получения уведомлений от объектов при обработке WM_DESTROY сообщений.
 
-##  <a name="oncmdmsg"></a>Колеипфрамевндекс:: OnCmdMsg
+## <a name="coleipframewndexoncmdmsg"></a><a name="oncmdmsg"></a>COleIPFrameWndEx::OnCmdMsg
 
 ```
 virtual BOOL OnCmdMsg(
@@ -625,18 +625,18 @@ virtual BOOL OnCmdMsg(
 
 ### <a name="parameters"></a>Параметры
 
-окне *NID*<br/>
-окне *нкоде*<br/>
-окне *пекстра*<br/>
-окне *фандлеринфо*<br/>
+(в) *nID*<br/>
+(в) *nКод*<br/>
+(в) *pExtra*<br/>
+(в) *pHandlerInfo*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="ondrawmenuimage"></a>Колеипфрамевндекс:: Ондравменуимаже
+## <a name="coleipframewndexondrawmenuimage"></a><a name="ondrawmenuimage"></a>COleIPFrameWndEx::OnDrawMenuImage
 
-Вызывается структурой при прорисовке изображения, связанного с пунктом меню.
+Вызывается фреймворком при нарисовании изображения, связанного с пунктом меню.
 
 ```
 virtual BOOL OnDrawMenuImage(
@@ -648,23 +648,23 @@ virtual BOOL OnDrawMenuImage(
 ### <a name="parameters"></a>Параметры
 
 *pDC*<br/>
-окне Указатель на контекст устройства.
+(в) Указатель на контекст устройства.
 
-*пменубуттон*<br/>
-окне Указатель на кнопку меню.
+*pMenuButton*<br/>
+(в) Указатель на кнопку меню.
 
-*ректимаже*<br/>
-окне Изображение, связанное с пунктом меню.
+*rectImage*<br/>
+(в) Изображение, связанное с пунктом меню.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Реализация по умолчанию не выполняет никаких действий и возвращает значение 0.
+Реализация по умолчанию ничего не делает и возвращает 0.
 
 ### <a name="remarks"></a>Remarks
 
-Переопределите этот метод, если необходимо настроить Рисование изображений для пунктов меню, принадлежащих строке меню, принадлежащей объекту, производным `COleIPFrameWndEx`.
+Переопределить этот метод, если вы хотите настроить рисунок изображения для элементов `COleIPFrameWndEx`меню, которые относятся к панели меню, принадлежащей объекту, полученному.
 
-##  <a name="ondrawmenulogo"></a>Колеипфрамевндекс:: Ондравменулого
+## <a name="coleipframewndexondrawmenulogo"></a><a name="ondrawmenulogo"></a>COleIPFrameWndEx::OnDrawMenuLogo
 
 Вызывается платформой при обработке сообщения WM_PAINT объектом [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md).
 
@@ -678,21 +678,21 @@ virtual void OnDrawMenuLogo(
 ### <a name="parameters"></a>Параметры
 
 *pDC*<br/>
-окне Указатель на контекст устройства.
+(в) Указатель на контекст устройства.
 
-*пмену*<br/>
-окне Указатель на объект всплывающего меню.
+*pMenu*<br/>
+(в) Указатель на объект всплывающем меню.
 
-*ректлого*<br/>
-окне Указатель на отображаемый логотип.
+*rectLogo*<br/>
+(в) Указатель на логотип для отображения.
 
 ### <a name="remarks"></a>Remarks
 
-Переопределите этот метод для отображения эмблемы во всплывающем меню, связанном с строкой меню, принадлежащей объекту, производным `COleIPFrameWndEx`. Реализация по умолчанию не выполняет никаких действий.
+Переопределить этот метод для отображения логотипа в всплывающем `COleIPFrameWndEx`меню, связанного с панелью меню, принадлежащей объекту, полученному. Реализация по умолчанию не выполняет никаких действий.
 
-##  <a name="onmenubuttontoolhittest"></a>Колеипфрамевндекс:: Онменубуттонтулхиттест
+## <a name="coleipframewndexonmenubuttontoolhittest"></a><a name="onmenubuttontoolhittest"></a>COleIPFrameWndEx::OnMenuButtonToolHitTest
 
-Вызывается платформой, когда объект [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)обрабатывает сообщение WM_NCHITTEST.
+Вызывается по системе, когда объект [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)обрабатывает WM_NCHITTEST сообщение.
 
 ```
 virtual BOOL OnMenuButtonToolHitTest(
@@ -702,19 +702,19 @@ virtual BOOL OnMenuButtonToolHitTest(
 
 ### <a name="parameters"></a>Параметры
 
-[in] Пбуттон указатель на кнопку меню.
+пукноч пупочечный к кнопке меню.
 
-[out] Пти указатель на структуру `TOOLINFO`.
+(из) pTI указатель `TOOLINFO` на структуру.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Реализация по умолчанию не выполняет никаких действий и возвращает значение 0. Ваша реализация должна возвращать ненулевое значение, если оно заполняет параметр *Пти* .
+Реализация по умолчанию ничего не делает и возвращает 0. Ваша реализация должна вернуть ненулевое значение, если она заполняет параметр *pTI.*
 
 ### <a name="remarks"></a>Remarks
 
-Переопределите этот метод, чтобы предоставить сведения о подсказке для определенного элемента меню.
+Переувисаем этот метод, чтобы предоставить ToolTip информацию о конкретном пункте меню.
 
-##  <a name="onmoveminiframe"></a>Колеипфрамевндекс:: Онмовеминифраме
+## <a name="coleipframewndexonmoveminiframe"></a><a name="onmoveminiframe"></a>COleIPFrameWndEx::OnMoveMiniFrame
 
 ```
 virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
@@ -722,13 +722,13 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 
 ### <a name="parameters"></a>Параметры
 
-окне *пфраме*<br/>
+(в) *pFrame*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="onsetpreviewmode"></a>Колеипфрамевндекс:: Онсетпревиевмоде
+## <a name="coleipframewndexonsetpreviewmode"></a><a name="onsetpreviewmode"></a>COleIPFrameWndEx::OnSetPreviewMode
 
 ```
 virtual void OnSetPreviewMode(
@@ -738,12 +738,12 @@ virtual void OnSetPreviewMode(
 
 ### <a name="parameters"></a>Параметры
 
-окне *бпревиев*<br/>
-окне *пстате*<br/>
+(в) *bPreview*<br/>
+(в) *pState*<br/>
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="onshowcustomizepane"></a>Колеипфрамевндекс:: Оншовкустомизепане
+## <a name="coleipframewndexonshowcustomizepane"></a><a name="onshowcustomizepane"></a>COleIPFrameWndEx::OnShowCustomizePane
 
 ```
 virtual BOOL OnShowCustomizePane(
@@ -753,14 +753,14 @@ virtual BOOL OnShowCustomizePane(
 
 ### <a name="parameters"></a>Параметры
 
-окне *пменупане*<br/>
-окне *уитулбарид*<br/>
+(в) *pMenuPane*<br/>
+(в) *uiToolbarID*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="onshowpanes"></a>Колеипфрамевндекс:: Оншовпанес
+## <a name="coleipframewndexonshowpanes"></a><a name="onshowpanes"></a>COleIPFrameWndEx::OnShowPanes
 
 ```
 virtual BOOL OnShowPanes(BOOL bShow);
@@ -768,15 +768,15 @@ virtual BOOL OnShowPanes(BOOL bShow);
 
 ### <a name="parameters"></a>Параметры
 
-окне *бшов*<br/>
+(в) *bShow*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="onshowpopupmenu"></a>Колеипфрамевндекс:: Оншовпопупмену
+## <a name="coleipframewndexonshowpopupmenu"></a><a name="onshowpopupmenu"></a>COleIPFrameWndEx::OnShowPopupMenu
 
-Вызывается платформой при отображении всплывающего меню.
+Вызывается по фреймворку при отображении всплывающее меню.
 
 ```
 virtual BOOL OnShowPopupMenu(CMFCPopupMenu* pMenuPopup);
@@ -784,20 +784,20 @@ virtual BOOL OnShowPopupMenu(CMFCPopupMenu* pMenuPopup);
 
 ### <a name="parameters"></a>Параметры
 
-*пменупопуп*<br/>
-окне Указатель на отображаемое всплывающее меню.
+*pMenuPopup*<br/>
+(в) Указатель на всплывающее меню для отображения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Реализация по умолчанию не выполняет никаких действий и возвращает ненулевое значение. Ваша реализация должна возвращать значение FALSE, если всплывающее меню не может быть отображено.
+Реализация по умолчанию ничего не делает и возвращает ненулевое значение. Ваша реализация должна вернуть FALSE, если всплывающее меню не может быть отображено.
 
 ### <a name="remarks"></a>Remarks
 
-Переопределите этот метод, чтобы настроить отображение всплывающего меню. Например, можно изменить кнопки меню на цветные кнопки или инициализировать отрезки.
+Переопределить этот метод, чтобы настроить отображение всплывающее меню. Например, можно изменить кнопки меню на кнопки цветного меню или инициализировать ски-офф.
 
-##  <a name="ontearoffmenu"></a>Колеипфрамевндекс:: Онтеароффмену
+## <a name="coleipframewndexontearoffmenu"></a><a name="ontearoffmenu"></a>COleIPFrameWndEx::OnTearOffMenu
 
-Вызывается структурой, когда пользователь выбирает меню с неразрывной полосой.
+Вызывается по фреймворку, когда пользователь выбирает меню с отрывом.
 
 ```
 virtual BOOL OnTearOffMenu(
@@ -807,21 +807,21 @@ virtual BOOL OnTearOffMenu(
 
 ### <a name="parameters"></a>Параметры
 
-*пменупопуп*<br/>
-окне Указатель на всплывающее меню, выбранное пользователем.
+*pMenuPopup*<br/>
+(в) Указатель на всплывающее меню, выбранное пользователем.
 
-*пбар*<br/>
-окне Указатель на область, в которой размещается меню.
+*pBar*<br/>
+(в) Указатель на панель, в котором размещено меню.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если требуется, чтобы платформа активировала всплывающее меню; в противном случае — FALSE. Значение по умолчанию — TRUE.
+ПРАВДА, если вы хотите, чтобы рамки активировать всплывающее меню; в противном случае FALSE. Значение по умолчанию — TRUE.
 
 ### <a name="remarks"></a>Remarks
 
-Переопределите эту функцию, если требуется настроить установку отрезков.
+Переопределить эту функцию, если вы хотите настроить настройку отрыва бар.
 
-##  <a name="panefrompoint"></a>Колеипфрамевндекс::P Анефромпоинт
+## <a name="coleipframewndexpanefrompoint"></a><a name="panefrompoint"></a>COleIPFrameWndEx::PaneFromPoint
 
 ```
 CBasePane* PaneFromPoint(
@@ -839,17 +839,17 @@ CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Параметры
 
-окне *точка*<br/>
-окне *нсенситивити*<br/>
-окне *бексактбар*<br/>
-окне *прткбартипе*<br/>
-окне *двалигнмент*<br/>
+(в) *точки*<br/>
+(в) *nЧувствительность*<br/>
+(в) *bExactBar*<br/>
+(в) *pRTCBarType*<br/>
+(в) *dwAlignment*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="pretranslatemessage"></a>Колеипфрамевндекс::P Ретранслатемессаже
+## <a name="coleipframewndexpretranslatemessage"></a><a name="pretranslatemessage"></a>COleIPFrameWndEx::PreTranslateMessage
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -863,7 +863,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="recalclayout"></a>Колеипфрамевндекс:: RecalcLayout
+## <a name="coleipframewndexrecalclayout"></a><a name="recalclayout"></a>ColeIPFrameWndEx::RecalcLayout
 
 ```
 virtual void RecalcLayout(BOOL bNotify = TRUE);
@@ -871,13 +871,13 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 ### <a name="parameters"></a>Параметры
 
-окне *бнотифи*<br/>
+(в) *bNotify*<br/>
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="removepanefromdockmanager"></a>Колеипфрамевндекс:: Ремовепанефромдоккманажер
+## <a name="coleipframewndexremovepanefromdockmanager"></a><a name="removepanefromdockmanager"></a>COleIPFrameWndEx::RemovePaneFromDockManager
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pControlBar,
     BOOL bDestroy,
@@ -888,36 +888,36 @@ void RemovePaneFromDockManager(
 
 ### <a name="parameters"></a>Параметры
 
-окне *пконтролбар*<br/>
-окне *бдестрой*<br/>
-окне *баджустлайаут*<br/>
-окне *баутохиде*<br/>
-окне *пбарреплацемент*<br/>
+(в) *pControlBar*<br/>
+(в) *bDestroy*<br/>
+(в) *bAdjustLayout*<br/>
+(в) *bAutoHide*<br/>
+(в) *pBarЗамена*<br/>
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="setdockstate"></a>Колеипфрамевндекс:: Сетдоккстате
+## <a name="coleipframewndexsetdockstate"></a><a name="setdockstate"></a>COleIPFrameWndEx::SetDockState
 
-Применяет указанное состояние закрепления к панелям, принадлежащим фрейму окна.
+Применяет указанное состояние стыковки к стеклам, принадлежащим окну рамы.
 
-```
+```cpp
 void SetDockState(const CDockState& state);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *state*<br/>
-окне Задает состояние закрепления.
+(в) Определяет состояние стыковки.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция используется для задания нового состояния закрепления для панелей, принадлежащих объекту `COleIPFrameWndEx`.
+Используйте эту функцию, чтобы указать новое состояние `COleIPFrameWndEx` стыковки для стекол, принадлежащих объекту.
 
-##  <a name="setuptoolbarmenu"></a>Колеипфрамевндекс:: Сетуптулбармену
+## <a name="coleipframewndexsetuptoolbarmenu"></a><a name="setuptoolbarmenu"></a>COleIPFrameWndEx::SetupToolbarMenu
 
 Изменяет объект панели инструментов путем поиска фиктивных элементов и замены их указанными элементами, определяемыми пользователем.
 
-```
+```cpp
 void SetupToolbarMenu(
     CMenu& menu,
     const UINT uiViewUserToolbarCmdFirst,
@@ -926,20 +926,20 @@ void SetupToolbarMenu(
 
 ### <a name="parameters"></a>Параметры
 
-*меню*<br/>
-окне Ссылка на изменяемый объект [кмену](../../mfc/reference/cmenu-class.md) .
+*Меню*<br/>
+(в) Ссылка на объект [CMenu,](../../mfc/reference/cmenu-class.md) который будет изменен.
 
-*уивиевусертулбаркмдфирст*<br/>
-окне Задает первую определяемую пользователем команду.
+*uiViewUserToolbarCmdПервый*<br/>
+(в) Определяет первую команду, определяемую пользователем.
 
-*уивиевусертулбаркмдласт*<br/>
-окне Задает последнюю команду, определяемую пользователем.
+*uiViewUserToolbarCmdLast*<br/>
+(в) Определяет последнюю команду, определяемую пользователем.
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="showpane"></a>Колеипфрамевндекс:: Шовпане
+## <a name="coleipframewndexshowpane"></a><a name="showpane"></a>COleIPFrameWndEx:ShowPane
 
-```
+```cpp
 void ShowPane(
     CBasePane* pBar,
     BOOL bShow,
@@ -949,14 +949,14 @@ void ShowPane(
 
 ### <a name="parameters"></a>Параметры
 
-окне *пбар*<br/>
-окне *бшов*<br/>
-окне *бделай*<br/>
-окне *бактивате*<br/>
+(в) *pBar*<br/>
+(в) *bShow*<br/>
+(в) *bDelay*<br/>
+(в) *bАктивировать*<br/>
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="winhelpa"></a>Колеипфрамевндекс:: WinHelp
+## <a name="coleipframewndexwinhelpa"></a><a name="winhelpa"></a>COleIPFrameWndEx::WinHelpA
 
 Вызывается платформой для запуска приложения WinHelp или контекстной справки.
 
@@ -968,10 +968,10 @@ virtual void WinHelp(
 
 ### <a name="parameters"></a>Параметры
 
-[in] Двдата указывает данные, необходимые для типа справки, указанной параметром *нкмд*.
+dwData определяет данные по мере необходимости для типа справки, указанной *nCmd.*
 
-*нкмд*<br/>
-окне Указывает тип запрошенной справки. Список возможных значений и их влияние на параметр *двдата* см. в описании [функции WinHelp](/windows/win32/api/winuser/nf-winuser-winhelpw) в Windows SDK.
+*nCmd*<br/>
+(в) Определяет тип запрашиваемых помощи. Список возможных значений и способы их влияния на параметр *dwData* можно узнать в [SDK](/windows/win32/api/winuser/nf-winuser-winhelpw) Windows.
 
 ### <a name="remarks"></a>Remarks
 

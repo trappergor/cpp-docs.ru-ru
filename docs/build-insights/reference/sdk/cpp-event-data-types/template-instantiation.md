@@ -1,6 +1,6 @@
 ---
-title: Класс Темплатеинстантиатион
-description: Справочник C++ по классу SDK для Build Insights темплатеинстантиатион.
+title: Класс TemplateInstantiation
+description: Ссылка на класс SDK TemplateInstantiation в отношении сборки информации о создании схемы.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 2c94f8d3a4613e072c03f6dd4c846798d3d2122b
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: ba8fd10efc6a536c9160f10b19e19e17bfaaad98
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334526"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324221"
 ---
-# <a name="templateinstantiation-class"></a>Класс Темплатеинстантиатион
+# <a name="templateinstantiation-class"></a>Класс TemplateInstantiation
 
 ::: moniker range="<=vs-2015"
 
-Пакет C++ SDK для Build Insights совместим с Visual Studio 2017 и более поздних версий. Чтобы просмотреть документацию по этим версиям, присвойте элементу управления "Выбор версий Visual Studio" для этой статьи значение Visual Studio 2017 или Visual Studio 2019.
+SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Класс `TemplateInstantiation` используется с функциями [матчевент](../functions/match-event.md), [матчевентинмемберфунктион](../functions/match-event-in-member-function.md), [матчевентстакк](../functions/match-event-stack.md)и [матчевентстаккинмемберфунктион](../functions/match-event-stack-in-member-function.md) . Используйте его для сопоставления [TEMPLATE_INSTANTIATIONного](../event-table.md#template-instantiation) события.
+Класс `TemplateInstantiation` используется с функциями [MatchEvent,](../functions/match-event.md) [MatchEventInMemberFunction,](../functions/match-event-in-member-function.md) [MatchEventStack](../functions/match-event-stack.md)и [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Используйте его для TEMPLATE_INSTANTIATION [события.](../event-table.md#template-instantiation)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -50,21 +50,21 @@ public:
 };
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
-Наряду с наследуемыми членами от базового класса [Activity](activity.md) класс `TemplateInstantiation` содержит следующие члены:
+Наряду с унаследованные члены `TemplateInstantiation` из своего базового класса [деятельности,](activity.md) класс содержит следующие члены:
 
 ### <a name="constructors"></a>Конструкторы
 
-[темплатеинстантиатион](#template-instantiation)
+[ШаблонМеймикция](#template-instantiation)
 
 ### <a name="functions"></a>Функции
 
-[Kind](#kind)
-[примаритемплатесимболкэй](#primary-template-symbol-key)
-[спеЦиализатионсимболкэй](#specialization-symbol-key)
+[Вид](#kind)
+[PrimaryTemplateСимволКей](#primary-template-symbol-key)
+[СпециализацияСимволКей](#specialization-symbol-key)
 
-## <a name="kind"></a>Особого
+## <a name="kind"></a><a name="kind"></a>Вид
 
 ```cpp
 Kind Kind() const;
@@ -72,9 +72,9 @@ Kind Kind() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Код, описывающий тип выполненного создания экземпляра шаблона.
+Код, описывающий тип мгновенного стимации шаблона, который был сделан.
 
-## <a name="primary-template-symbol-key"></a>примаритемплатесимболкэй
+## <a name="primarytemplatesymbolkey"></a><a name="primary-template-symbol-key"></a>PrimaryTemplateSymbolKey
 
 ```cpp
 const unsigned long long& PrimaryTemplateSymbolKey() const;
@@ -82,9 +82,9 @@ const unsigned long long& PrimaryTemplateSymbolKey() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Числовой идентификатор для типа шаблона, который был специализированным. Этот идентификатор уникален в рамках внешнего прохода компилятора.
+Численный идентификатор для специализированного типа шаблона. Этот идентификатор уникален в компиляторе переднего прохода.
 
-## <a name="specialization-symbol-key"></a>спеЦиализатионсимболкэй
+## <a name="specializationsymbolkey"></a><a name="specialization-symbol-key"></a>СпециализацияСимволКей
 
 ```cpp
 const unsigned long long& SpecializationSymbolKey() const;
@@ -92,9 +92,9 @@ const unsigned long long& SpecializationSymbolKey() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Числовой идентификатор для типа специализации. Этот идентификатор уникален в рамках внешнего прохода компилятора.
+Численный идентификатор для типа специализации. Этот идентификатор уникален в компиляторе переднего прохода.
 
-## <a name="template-instantiation"></a>темплатеинстантиатион
+## <a name="templateinstantiation"></a><a name="template-instantiation"></a>ШаблонМеймикция
 
 ```cpp
 TemplateInstantiation(const RawEvent& event);
@@ -102,7 +102,7 @@ TemplateInstantiation(const RawEvent& event);
 
 ### <a name="parameters"></a>Параметры
 
-*event*\
-Событие [TEMPLATE_INSTANTIATION](../event-table.md#template-instantiation) .
+*Событие*\
+Событие [TEMPLATE_INSTANTIATION.](../event-table.md#template-instantiation)
 
 ::: moniker-end

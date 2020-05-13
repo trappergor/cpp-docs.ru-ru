@@ -1,5 +1,5 @@
 ---
-title: Класс Ккомхеап
+title: Класс CComHeap
 ms.date: 11/04/2016
 f1_keywords:
 - CComHeap
@@ -11,19 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - CComHeap class
 ms.assetid: c74183ce-98ae-46fb-b186-93ea4cf0222b
-ms.openlocfilehash: 1ded73047b895a44a22bdd5730886f7fc088c77a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a38d1147e718870c03af84ec1487e226805b956e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497351"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327824"
 ---
-# <a name="ccomheap-class"></a>Класс Ккомхеап
+# <a name="ccomheap-class"></a>Класс CComHeap
 
-Этот класс реализует [иатлмеммгр](../../atl/reference/iatlmemmgr-class.md) с помощью функций выделения памяти com.
+Этот класс реализует [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) с использованием функций распределения памяти COM.
 
 > [!IMPORTANT]
->  Этот класс и его члены не могут использоваться в приложениях, выполняемых в среда выполнения Windows.
+> Этот класс и его члены не могут быть использованы в приложениях, выполняемых в Windows Runtime.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -35,20 +35,20 @@ class CComHeap : public IAtlMemMgr
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[Ккомхеап:: allocate](#allocate)|Вызовите этот метод, чтобы выделить блок памяти.|
-|[Ккомхеап:: Free](#free)|Вызовите этот метод, чтобы освободить блок памяти, выделенный этим диспетчером памяти.|
-|[Ккомхеап:: DataSize](#getsize)|Вызовите этот метод, чтобы получить выделенный размер блока памяти, выделенного этим диспетчером памяти.|
-|[Ккомхеап:: перераспределение](#reallocate)|Вызовите этот метод для перераспределения памяти, выделенной данным диспетчером памяти.|
+|[CComHeap::Выделение](#allocate)|Вызовите этот метод, чтобы выделить блок памяти.|
+|[CComHeap::Бесплатно](#free)|Вызовите этот метод, чтобы освободить блок памяти, выделенный этим менеджером памяти.|
+|[CComHeap::GetSize](#getsize)|Вызовите этот метод, чтобы получить выделенный размер блока памяти, выделенный этим менеджером памяти.|
+|[CComHeap::Перераспределить](#reallocate)|Вызовите этот метод для перераспределения памяти, выделенной данным диспетчером памяти.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-`CComHeap` реализует функции выделения памяти с помощью функций выделения COM, включая [CoTaskMemAlloc](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemalloc), [CoTaskMemFree](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree), [unalloc::GetSize](/windows/win32/api/objidlbase/nf-objidlbase-imalloc-getsize) и [CoTaskMemRealloc](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemrealloc). Максимальный объем памяти, который может быть выделен, равен INT_MAX (2147483647) байт.
+`CComHeap`реализует функции распределения памяти с использованием функций распределения COM, включая [CoTaskMemAlloc,](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemalloc) [CoTaskMemFree,](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree) [IMalloc::GetSize](/windows/win32/api/objidlbase/nf-objidlbase-imalloc-getsize)и [CoTaskMemRealloc.](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemrealloc) Максимальное количество памяти, которое может быть выделено, равно INT_MAX (2147483647) байтов.
 
 ## <a name="example"></a>Пример
 
-См. пример для [иатлмеммгр](../../atl/reference/iatlmemmgr-class.md).
+Смотрите пример [iAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -58,9 +58,9 @@ class CComHeap : public IAtlMemMgr
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок.** Атлкоммем. h
+**Заголовок:** ATLComMem.h
 
-##  <a name="allocate"></a>Ккомхеап:: allocate
+## <a name="ccomheapallocate"></a><a name="allocate"></a>CComHeap::Выделение
 
 Вызовите этот метод, чтобы выделить блок памяти.
 
@@ -70,22 +70,22 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nBytes*<br/>
+*nБайт*<br/>
 Запрошенное число байтов в новом блоке памяти.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Возвращает указатель на начало выделенного блока памяти.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Вызовите метод [ккомхеап:: Free](#free) или [ккомхеап:: reallocate](#reallocate) , чтобы освободить память, выделенную этим методом.
+Вызов [CComHeap::Free](#free) или [CComHeap::Перераспределите,](#reallocate) чтобы освободить память, выделенную этим методом.
 
-Реализуется с помощью функции [CoTaskMemAlloc](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemalloc).
+Реализовано с помощью [CoTaskMemAlloc](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemalloc).
 
-##  <a name="free"></a>Ккомхеап:: Free
+## <a name="ccomheapfree"></a><a name="free"></a>CComHeap::Бесплатно
 
-Вызовите этот метод, чтобы освободить блок памяти, выделенный этим диспетчером памяти.
+Вызовите этот метод, чтобы освободить блок памяти, выделенный этим менеджером памяти.
 
 ```
 virtual void Free(void* p) throw();
@@ -93,16 +93,16 @@ virtual void Free(void* p) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*p*<br/>
-Указатель на область памяти, выделенную ранее данным диспетчером памяти. Значение NULL является допустимым и не выполняет никаких действий.
+*P*<br/>
+Указатель на область памяти, выделенную ранее данным диспетчером памяти. NULL является действительным значением и ничего не делает.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Реализуется с помощью [CoTaskMemFree](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree).
+Реализовано с помощью [CoTaskMemFree](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree).
 
-##  <a name="getsize"></a>Ккомхеап:: DataSize
+## <a name="ccomheapgetsize"></a><a name="getsize"></a>CComHeap::GetSize
 
-Вызовите этот метод, чтобы получить выделенный размер блока памяти, выделенного этим диспетчером памяти.
+Вызовите этот метод, чтобы получить выделенный размер блока памяти, выделенный этим менеджером памяти.
 
 ```
 virtual size_t GetSize(void* p) throw();
@@ -110,18 +110,18 @@ virtual size_t GetSize(void* p) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*p*<br/>
+*P*<br/>
 Указатель на область памяти, выделенную ранее данным диспетчером памяти.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Возвращает размер выделенного блока памяти в байтах.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Реализуется с помощью [unalloc:: DataSize](/windows/win32/api/objidlbase/nf-objidlbase-imalloc-getsize).
+Реализовано с помощью [IMalloc::GetSize](/windows/win32/api/objidlbase/nf-objidlbase-imalloc-getsize).
 
-##  <a name="reallocate"></a>Ккомхеап:: перераспределение
+## <a name="ccomheapreallocate"></a><a name="reallocate"></a>CComHeap::Перераспределить
 
 Вызовите этот метод для перераспределения памяти, выделенной данным диспетчером памяти.
 
@@ -131,28 +131,28 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*p*<br/>
+*P*<br/>
 Указатель на область памяти, выделенную ранее данным диспетчером памяти.
 
-*nBytes*<br/>
+*nБайт*<br/>
 Запрошенное число байтов в новом блоке памяти.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Возвращает указатель на начало выделенного блока памяти.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Вызовите метод [ккомхеап:: Free](#free) , чтобы освободить память, выделенную этим методом.
+Вызов [CComHeap:: Бесплатно,](#free) чтобы освободить память, выделенную этим методом.
 
-Реализуется с помощью [котаскмемреаллок](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemrealloc).
+Реализовано с помощью [CoTaskMemRealloc](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemrealloc).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Пример Динамикконсумер](../../overview/visual-cpp-samples.md)<br/>
-[Обзор класса](../../atl/atl-class-overview.md)<br/>
-[Класс CWin32Heap](../../atl/reference/cwin32heap-class.md)<br/>
+[ДинамическийПотребительский образец](../../overview/visual-cpp-samples.md)<br/>
+[Общие сведения о классах](../../atl/atl-class-overview.md)<br/>
+[Класс CWin32 Heap](../../atl/reference/cwin32heap-class.md)<br/>
 [Класс CLocalHeap](../../atl/reference/clocalheap-class.md)<br/>
 [Класс CGlobalHeap](../../atl/reference/cglobalheap-class.md)<br/>
 [Класс CCRTHeap](../../atl/reference/ccrtheap-class.md)<br/>
-[Класс IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)
+[Класс IAtlMemgr](../../atl/reference/iatlmemmgr-class.md)

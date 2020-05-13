@@ -1,1073 +1,1074 @@
 ---
-title: Грамматика BNF Microsoft Macro Assembler
-description: BNF описание MASM для x64.
+title: Microsoft Макро сборщик BNF Грамматика
+description: Описание BNF MASM для x64.
 ms.date: 12/17/2019
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), BNF reference
-ms.openlocfilehash: 1a9577292e60db73838e5e6b850a4634db959fd6
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 738dce66cbae62939c9e001127e542f5b2798fc0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075466"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317965"
 ---
-# <a name="microsoft-macro-assembler-bnf-grammar"></a>Грамматика BNF Microsoft Macro Assembler
+# <a name="microsoft-macro-assembler-bnf-grammar"></a>Microsoft Макро сборщик BNF Грамматика
 
-На этой странице содержится BNF Описание грамматики MASM. Он предоставляется в качестве дополнения к справочным разделам и не гарантируется. Дополнительные сведения о ключевых словах, параметрах, операциях и т. д. см. в справочных материалах.
+Эта страница содержит описание ГРАММатики MASM BNF. Он предоставляется в качестве дополнения к ссылке и не гарантируется быть полным. Обратитесь к справке для получения полной информации о ключевых словах, параметрах, операциях и так далее.
 
-Чтобы проиллюстрировать использование BNF, на следующей схеме показано определение директивы TYPEDEF, начиная с нетерминального *типедефдир*.
+Чтобы проиллюстрировать использование BNF, на следующей диаграмме показано определение директивы TYPEDEF, начиная с нетерминальной. *`typedefDir`*
 
 ![Пример MASM BNF](media/bnf.png)
 
-Записи в каждой горизонтальной фигурной скобке — это терминалы (например, **NEAR16**, **NEAR32**, **FAR16**и **FAR32**) или Нетерминальные (такие как *квалификатор*, *куалифиедтипе*, *Distance*и *протоспек*), которые могут быть определены в дальнейшем. Каждое курсивное значение, нетерминальное в определении *типедефдир* , также является записью в BNF. Три точки по вертикали обозначают определение ветвления для нетерминального, которое, по простоте, не проиллюстрировано.
+Записи под каждой горизонтальной скобки **`NEAR16`** **`NEAR32`** терминалов, таких как , , **`FAR16`** и **`FAR32`**. Или, они nonterminals *`qualifier`* как, *`qualifiedType`* *`distance`*, *`protoSpec`* , , и то можно более далее определить. Каждый курсивом нетерминал в определении *`typedefDir`* также является записью в BNF. Три вертикальные точки указывают на определение ветвления для нетерминала, что, ради простоты, эта цифра не иллюстрирует.
 
-Грамматика BNF допускает рекурсивные определения. Например, грамматика использует Куалифиедтипе как возможное определение для Куалифиедтипе, которое также является компонентом определения квалификатора. Символ "|" указывает выбор между альтернативными выражениями, например *ендофлине* | *комментария*. Двойные фигурные скобки указывают необязательный параметр, например ⟦ *макропармлист* ⟧. Квадратные скобки фактически не отображаются в исходном коде.
+Грамматика БНФ позволяет рекурсивные определения. Например, грамматика использует qualifiedType в качестве возможного определения для qualifiedType, который также является компонентом определения для квалификатора. Символ «Я» определяет выбор между альтернативными выражениями, *`endOfLine`*  |  *`comment`* например. Двойные скобки указывают необязательный *`macroParmList`* параметр, например, . Кронштейны на самом деле не отображаются в исходном коде.
 
-## <a name="masm-nonterminals"></a>Нетерминальные программы MASM
+## <a name="masm-nonterminals"></a>MASM Нетерминалы
 
-*;;* \
-&nbsp;&nbsp;&nbsp;&nbsp;*ендофлине* | *Комментарий*
+*`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`endOfLine`* | *`comment`*
 
-*= Dir*\
-&nbsp;&nbsp;&nbsp;&nbsp;*id* = *иммекспр* ;;
+*`=Dir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`* = *`immExpr`* *`;;`*
 
-*аддоп*\
-&nbsp;&nbsp;&nbsp;&nbsp;+ | -
+*`addOp`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`+`** | **`-`**
 
-*аекспр*\
-&nbsp;&nbsp;&nbsp;&nbsp;*термин* | *аекспр* && *термин*
+*`aExpr`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`term`* | *`aExpr`* **`&&`** *`term`*
 
-*алтид*\
-&nbsp;&nbsp;&nbsp;&nbsp;*ID*
+*`altId`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`*
 
-*арбитраритекст*\
-&nbsp;&nbsp;&nbsp;&nbsp;*charlist*
+*`arbitraryText`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`charList`*
 
-*асминструктион*\
-&nbsp;&nbsp;&nbsp;&nbsp;*мнемоника* ⟦ *експрлист* ⟧
+*`asmInstruction`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`mnemonic`* ⟦ *`exprList`* ⟧
 
-*ассумедир*\
-&nbsp;&nbsp;&nbsp;&nbsp;**предполагается** *ассумелист* ;; \
-&nbsp;&nbsp;&nbsp;&nbsp;| **не предполагает ничего** ;;
+*`assumeDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`ASSUME`** *`assumeList`* *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`ASSUME NOTHING`** *`;;`*
 
-*ассумелист*\
-&nbsp;&nbsp;&nbsp;&nbsp;*ассумерегистер* | *ассумелист* , *ассумерегистер*\
+*`assumeList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`assumeRegister`* | *`assumeList`* **`,`** *`assumeRegister`*\
 
-*ассумерег*\
-&nbsp;&nbsp;&nbsp;&nbsp;*Register* : *ассумевал*
+*`assumeReg`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`register`* **`:`** *`assumeVal`*
 
-*ассумерегистер*\
-&nbsp;&nbsp;&nbsp;&nbsp;*ассумесегрег* | *ассумерег*
+*`assumeRegister`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`assumeSegReg`* | *`assumeReg`*
 
-*ассумесегрег*\
-&nbsp;&nbsp;&nbsp;&nbsp;*сегментрегистер* : *ассумесегвал*
+*`assumeSegReg`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`segmentRegister`* **`:`** *`assumeSegVal`*
 
-*ассумесегвал*\
-&nbsp;&nbsp;&nbsp;&nbsp;*фрамикспр* | **Nothing** | **Error**
+*`assumeSegVal`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`frameExpr`* | **`NOTHING`** | **`ERROR`**
 
-*ассумевал*\
-&nbsp;&nbsp;&nbsp;&nbsp;*куалифиедтипе* | **Nothing** | **Error**
+*`assumeVal`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`qualifiedType`* | **`NOTHING`** | **`ERROR`**
 
-*бкдконст*\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *Sign* ⟧ *декнумбер*
+*`bcdConst`*\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`sign`* ⟧ *`decNumber`*
 
-*бинарйоп*\
-&nbsp;&nbsp;&nbsp;&nbsp;= = |! = | > = | < = | > | < | &
+*`binaryOp`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`==`** | **`!=`** | **`>=`** | **`<=`** | **`>`** | **`<`** | **`&`**
 
-*битдеф*\
-&nbsp;&nbsp;&nbsp;&nbsp;*битфиелдид* : *Битфиелдсизе* ⟦ = *constExpr* ⟧
+*`bitDef`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`bitFieldId`* **`:`** *`bitFieldSize`* ⟦ **`=`** *`constExpr`* ⟧
 
-*битдефлист*\
-&nbsp;&nbsp;&nbsp;&nbsp;*битдеф* | *битдефлист* , ⟦;; ⟧ *битдеф*
+*`bitDefList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`bitDef`* | *`bitDefList`* **`,`** ⟦ *`;;`* ⟧ *`bitDef`*
 
-*битфиелдид*\
-&nbsp;&nbsp;&nbsp;&nbsp;*ID*
+*`bitFieldId`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`*
 
-*битфиелдсизе*\
-&nbsp;&nbsp;&nbsp;&nbsp;*constExpr*
+*`bitFieldSize`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`constExpr`*
 
-*блоккстатементс*\
-&nbsp;&nbsp;&nbsp;&nbsp;*директивелист*\
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. ПРОДОЛЖИТЬ** **. Если** *цекспр* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. Прервать** ⟦ **. Если** *цекспр* ⟧
+*`blockStatements`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`directiveList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.CONTINUE`** **`.IF`** *`cExpr`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.BREAK`** ⟦ **`.IF`** *`cExpr`* ⟧
 
-*bool*\
-&nbsp;&nbsp;&nbsp;&nbsp;**TRUE** | **false**
+*`bool`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`TRUE`** | **`FALSE`**
 
-*битерегистер*\
-&nbsp;&nbsp;&nbsp;&nbsp;AL | AH | CL | CH | DL | DH | BL | BH | R8B | R9B | R10B | R11B | R12B | R13B | R14B | R15B
+*`byteRegister`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`AL`** | **`AH`** | **`CL`** | **`CH`** | **`DL`** | **`DH`** | **`BL`** | **`BH`** | **`R8B`** | **`R9B`** | **`R10B`** | **`R11B`** | **`R12B`** | **`R13B`** | **`R14B`** | **`R15B`**
 
-*цекспр*\
-&nbsp;&nbsp;&nbsp;&nbsp;*аекспр* | *цекспр* || *аекспр*
+*`cExpr`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`aExpr`* | *`cExpr`* **`||`** *`aExpr`*
 
-*символьная*\
-&nbsp;&nbsp;&nbsp;&nbsp;любой символ с порядковым номером в диапазоне от 0 до 255, кроме перевода строки (10).
+*`character`*\
+&nbsp;&nbsp;&nbsp;&nbsp;Любой персонаж с ординатором в диапазоне 0-255, кроме linefeed (10).
 
-\ *charlist*
-&nbsp;&nbsp;&nbsp;&nbsp;*символ* | *charlist*
+*`charList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`character`* | *`charList`* *`character`*
 
-*className*\
-&nbsp;&nbsp;&nbsp;&nbsp;*строки*
+*`className`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`string`*
 
-*коммдекл*\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *неарфар* ⟧ ⟦ *лангтипе* ⟧ *ID* : *коммтипе*\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦: *constExpr* ⟧
+*`commDecl`*\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`nearfar`* ⟧ ⟦ *`langType`* ⟧ *`id`* **`:`** *`commType`*\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ **`:`** *`constExpr`* ⟧
 
-*коммдир*\
-&nbsp;&nbsp; **&nbsp;&nbsp;связи**\
-&nbsp;&nbsp;&nbsp;&nbsp;*коммлист* ;;
+*`commDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`COMM`**\
+&nbsp;&nbsp;&nbsp;&nbsp;*`commList`* *`;;`*
 
-\ *комментариев*
-&nbsp;&nbsp;&nbsp;&nbsp;; *текст* ;;
+*`comment`*\
+&nbsp;&nbsp;&nbsp;&nbsp;; *`text`* *`;;`*
 
-*комментдир*\
-&nbsp;&nbsp;&nbsp;разделитель **комментариев** *delimiter* &nbsp;\
-&nbsp;&nbsp;&nbsp;&nbsp;*text*\
-&nbsp;&nbsp;&nbsp;&nbsp;*text* *delimiter* *текст* разделителя текста;;
+*`commentDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`COMMENT`** *`delimiter`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`text`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`text`* *`delimiter`* *`text`* *`;;`*
 
-*коммлист*\
-&nbsp;&nbsp;&nbsp;&nbsp;*коммдекл* | *коммлист* , *коммдекл*
+*`commList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`commDecl`* | *`commList`* **`,`** *`commDecl`*
 
-*коммтипе*\
-&nbsp;&nbsp;&nbsp;&nbsp;*типа* | *constExpr*
+*`commType`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`type`* | *`constExpr`*
 
-*константные*\
-&nbsp;&nbsp;&nbsp;&nbsp;*digits* ⟦ *радиксоверриде* ⟧
+*`constant`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`digits`* ⟦ *`radixOverride`* ⟧
 
-\ *constExpr*
-&nbsp;&nbsp;&nbsp;&nbsp;*expr*
+*`constExpr`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`expr`*
 
-*контекстдир*\
-&nbsp;&nbsp;&nbsp;&nbsp;**пушконтекст** *контекститемлист* ;; \
-&nbsp;&nbsp;&nbsp;&nbsp;**попконтекст** *контекститемлист* ;;
+*`contextDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`PUSHCONTEXT`** *`contextItemList`* *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`POPCONTEXT`** *`contextItemList`* *`;;`*
 
-*контекститем*\
-&nbsp;&nbsp;&nbsp;&nbsp;**предполагает** | системы **счисления** | **список** | **ЦП** | **все**
+*`contextItem`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`ASSUMES`** | **`RADIX`** | **`LISTING`** | **`CPU`** | **`ALL`**
 
-*контекститемлист*\
-&nbsp;&nbsp;&nbsp;&nbsp;*контекститем* | *контекститемлист* , *контекститем*
+*`contextItemList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`contextItem`* | *`contextItemList`* **`,`** *`contextItem`*
 
-*контролблокк*\
-&nbsp;&nbsp;&nbsp;&nbsp;*вхилеблокк* | *репеатблокк*
+*`controlBlock`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`whileBlock`* | *`repeatBlock`*
 
-*контролдир*\
-&nbsp;&nbsp;&nbsp;&nbsp;*контролиф* | *контролблокк*
+*`controlDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`controlIf`* | *`controlBlock`*
 
-*контролелсеиф*\
-&nbsp;&nbsp;&nbsp;&nbsp; **. ELSEIF** &nbsp;&nbsp;&nbsp;&nbsp;*цекспр* ;; \
-&nbsp;&nbsp;&nbsp;&nbsp;*директивелист* \
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *контролелсеиф* ⟧
+*`controlElseif`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`.ELSEIF`** &nbsp;&nbsp;&nbsp;&nbsp;*`cExpr`* *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`directiveList`* \
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`controlElseif`* ⟧
 
-*контролиф*\
-&nbsp;&nbsp;&nbsp;&nbsp; **. Если** &nbsp;&nbsp;&nbsp;&nbsp;*цекспр* ;; \
-&nbsp;&nbsp;&nbsp;&nbsp;*директивелист*\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *контролелсеиф* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ **. ELSE** ;; \
-&nbsp;&nbsp;&nbsp;&nbsp;[*директивелист*⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp; **. ENDIF** ;;
+*`controlIf`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`.IF`** &nbsp;&nbsp;&nbsp;&nbsp;*`cExpr`* *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`directiveList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`controlElseif`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ **`.ELSE`** *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;[*`directiveList`*⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;**`.ENDIF`** *`;;`*
 
-\ *сопроцессора*
-&nbsp;&nbsp;&nbsp;&nbsp;. 8087 |. 287 |. 387 |. NO87
+*`coprocessor`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`.8087`** | **`.287`** | **`.387`** | **`.NO87`**
 
-*крефдир*\
-&nbsp;&nbsp;&nbsp;&nbsp;*крефоптион* ;;
+*`crefDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`crefOption`* *`;;`*
 
-*крефоптион*\
-&nbsp;&nbsp;&nbsp;&nbsp; **. CREF**\
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. КСКРЕФ** ⟦ *idList* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. НОКРЕФ** ⟦ *idList* ⟧
-
-*кксзекспр*\
-&nbsp;&nbsp;&nbsp;&nbsp;*expr*\
-&nbsp;&nbsp;&nbsp;&nbsp;|! *выражение*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *expr* = = expr \
-&nbsp;&nbsp;&nbsp;&nbsp;| *expr* ! = expr
-
-*датадекл*\
-&nbsp;&nbsp;&nbsp;&nbsp;DB | ХРАНИЛИЩЕ ДАННЫХ | ДД | DF | DQ | DT | *тип данных* | *typeId*
-
-*dataDir*\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *ИД* ⟧ *;;*
-
-\ *DataItem*
-&nbsp;&nbsp;&nbsp;&nbsp;*датадекл* *скаларинстлист*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *структтаг* *структинстлист*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *typeId* *структинстлист*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *унионтаг* *структинстлист*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *рекордтаг* *рекординстлист*
-
-\ *DataType*
-&nbsp;&nbsp;&nbsp;&nbsp;байт | SBYTE | WORD | ТЕХНОЛОГИЙ | DWORD | СДВОРД | ФВОРД | QWORD | СКВОРД | ТБИТЕ | ОВОРД | REAL4 | REAL8 | REAL10 | ММВОРД | КСММВОРД | иммворд
-
-*декдигит*\
-&nbsp;&nbsp;&nbsp;&nbsp;0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 8
-
-*декнумбер*\
-&nbsp;&nbsp;&nbsp;&nbsp;*декдигит*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *декнумбер* *декдигит*
-
-*разделитель*\
-&nbsp;&nbsp;&nbsp;&nbsp;любой символ, кроме *вхитеспацечарактер*
-
-*цифры*\
-&nbsp;&nbsp;&nbsp;&nbsp;*декдигит*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *digits* *декдигит*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *digits* хексдигит
-
-\ *директив*
-&nbsp;&nbsp;&nbsp;&nbsp;*женералдир* | *сегментдеф*
-
-*директивелист*\
-&nbsp;&nbsp;&nbsp;*директива* &nbsp; | *директива* *директивелист*
-
-*расстояние*\
-&nbsp;&nbsp;&nbsp;&nbsp;*неарфар* | **NEAR16** | **NEAR32** | **FAR16** | **FAR32**
-
-*e01*\
-&nbsp;&nbsp;&nbsp;&nbsp;E01 *Ороп* *E02* | *E02*
-
-*e02*\
-&nbsp;&nbsp;&nbsp;&nbsp;E02 **и** *E03* | *E03*
-
-*e03*\
-&nbsp;&nbsp; **&nbsp;&nbsp;** *E04* | *E04*
-
-*e04*\
-&nbsp;&nbsp;&nbsp;&nbsp;*E04* *relOp* *E05* | *E05*
-
-*e05*\
-&nbsp;&nbsp;&nbsp;&nbsp;*E05* *аддоп* *E06* | *E06*
-
-*e06*\
-&nbsp;&nbsp;&nbsp;&nbsp;*E06* *мулоп* *e07* | *E06* *шифтоп* *E07* | *E07*
-
-*e07*\
-&nbsp;&nbsp;&nbsp;&nbsp;*E07* *аддоп* *E08* | *E08*
-
-*e08*\
-&nbsp;&nbsp;&nbsp;&nbsp;**High** *E09*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **Low** *E09*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **HIGHWORD** *E09*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **LOWWORD** *E09*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *E09*
-
-*e09*\
-&nbsp;&nbsp;&nbsp;&nbsp;**offset** *E10*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **SEG** *E10*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **лроффсет** *E10*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **типа** *E10*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **этой** *E10*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *E09* **ptr** *E10*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *E09* : *E10*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *E10*
-
-*e10*\
-&nbsp;&nbsp;&nbsp;&nbsp;*E10* . *e11*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *E10* ⟦ *expr* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;| *E11*
-
-*e11*\
-&nbsp;&nbsp;&nbsp;&nbsp;( *expr* ) \
-&nbsp;&nbsp;&nbsp;&nbsp;| ⟦ *expr* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;| **Width** *ID*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **MASK** *ИД* маски\
-&nbsp;&nbsp;&nbsp;&nbsp;| **size** *сизеарг*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **sizeof** *сизеарг*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **length** *ID*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **LENGTHOF** *ID*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *рекордконст*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *строка*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *константа*\
-&nbsp;&nbsp;&nbsp;&nbsp;*тип* | \
-&nbsp;&nbsp;&nbsp;&nbsp;| *id*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **$**\
-&nbsp;&nbsp;&nbsp;&nbsp;| *сегментрегистер*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *регистр*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **ST**\
-&nbsp;&nbsp;&nbsp;&nbsp;| **St** ( *expr* )
-
-*ечодир*\
-&nbsp;&nbsp;&nbsp;&nbsp;**ECHO**\
-&nbsp;&nbsp;&nbsp;&nbsp;*арбитраритекст* ;; \
-%**OUT** *арбитраритекст* ;; \
-
-*елсеифблокк*\
-&nbsp;&nbsp;&nbsp;&nbsp;*елсеифстатемент* ;; \
-&nbsp;&nbsp;&nbsp;&nbsp;*директивелист*\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *елсеифблокк* ⟧ \
-
-*елсеифстатемент*\
-&nbsp;&nbsp;&nbsp;&nbsp;**ELSEIF** *constExpr*\
-&nbsp;&nbsp;&nbsp;&nbsp;| " **ElseIf** " *constExpr*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **елсеифб** *текститем*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **елсеифнб** *текститем*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **елсеифдеф** *ID*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **елсеифндеф** *ID*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **елсеифдиф** *текститем* , *текститем*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **елсеифдифи** *текститем* , *текститем*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **елсеифидн** *текститем* , *текститем*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **елсеифидни** *текститем* , *текститем*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **ELSEIF1**\
-&nbsp;&nbsp;&nbsp;&nbsp;| **ELSEIF2**
-
-*енддир*\
-&nbsp;&nbsp;&nbsp;&nbsp;**End** ⟦ *иммекспр* ⟧;;
-
-*ендпдир*\
-&nbsp;&nbsp;&nbsp;&nbsp;*procId* **ЕНДП** ;;
-
-*ендсдир*\
-&nbsp;&nbsp;&nbsp;&nbsp;*идентификатор* **заканчивается** ;;
-
-*екудир*\
-&nbsp;&nbsp;&nbsp;&nbsp;*текстмакроид* **равно** *екутипе* ;;
-
-*екутипе*\
-&nbsp;&nbsp;&nbsp;&nbsp;*иммекспр* | *текстлитерал*
-
-*еррордир*\
-&nbsp;&nbsp;&nbsp;&nbsp;*ерроропт* ;;
-
-*ерроропт*\
-&nbsp;&nbsp;&nbsp;&nbsp; **. ERR** ⟦ *текститем* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. ЕРРЕ** *constExpr* ⟦ *опттекст* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. ЕРРНЗ** *constExpr* ⟦ *опттекст* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. ЕРРБ** *текститем* ⟦ *опттекст* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. ЕРРНБ** *текститем* ⟦ *опттекст* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. ЕРРДЕФ** *ID* ⟦ *опттекст* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. ЕРРНДЕФ** *ID* ⟦ *опттекст* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. ЕРРДИФ** *текститем* , *текститем* ⟦ *опттекст* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. ЕРРДИФИ** *текститем* , *текститем* ⟦ *опттекст* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. ЕРРИДН** *текститем* , *текститем* ⟦ *опттекст* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. ЕРРИДНИ** *текститем* , *текститем* ⟦ *опттекст* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. ERR1** ⟦ *текститем* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. ERR2** ⟦ *текститем* ⟧
-
-*екситдир*\
-&nbsp;&nbsp;&nbsp;&nbsp; **. EXIT** &nbsp;&nbsp;&nbsp;&nbsp;⟦ *expr* ⟧;;
-
-*екситмдир*\
-&nbsp;&nbsp;&nbsp;&nbsp;: ЕКСИТМ | ЕКСИТМ *текститем*
-
-\ *экспоненты*
-&nbsp;&nbsp;&nbsp;&nbsp;E ⟦ *Sign* ⟧ *декнумбер*
-
-*выражение*\
-&nbsp;&nbsp;&nbsp;&nbsp;**Short** *E05*\
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. Введите** E01 \
-&nbsp;&nbsp;&nbsp;&nbsp;| **OPATTR** *E01*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *E01*
-
-*експрлист*\
-&nbsp;&nbsp;&nbsp;&nbsp;*expr* | *експрлист* , *expr*
-
-*екстерндеф*\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *лангтипе* ⟧ *ID* ⟦ ( *АЛТИД* ) ⟧: *екстернтипе*
-
-*екстерндир*\
-&nbsp;&nbsp;&nbsp;&nbsp;*екстернкэй* *екстернлист* ;;
-
-*екстернкэй*\
-&nbsp;&nbsp;&nbsp;&nbsp;**екстрн** | **extern** | **екстерндеф**
-
-*екстернлист*\
-&nbsp;&nbsp;&nbsp;&nbsp;*екстерндеф* | *екстернлист* , ⟦;; ⟧ *екстерндеф*
-
-*екстернтипе*\
-&nbsp;&nbsp;&nbsp;&nbsp;**ABS** | *куалифиедтипе*
-
-*фиелдалигн*\
-&nbsp;&nbsp;&nbsp;&nbsp;*constExpr*
-
-*фиелдинит*\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *инитвалуе* ⟧ | *структинстанце*
-
-*фиелдинитлист*\
-&nbsp;&nbsp;&nbsp;&nbsp;*фиелдинит* | *фиелдинитлист* , ⟦;; ⟧ *фиелдинит*
-
-*филечар*\
-&nbsp;&nbsp;&nbsp;&nbsp;*разделителем*
-
-*филечарлист*\
-&nbsp;&nbsp;&nbsp;&nbsp;*филечар* | *филечарлист* *филечар*
-
-*fileSpec*\
-&nbsp;&nbsp;&nbsp;&nbsp;*филечарлист* | *текстлитерал*
-
-*flagName*\
-&nbsp;&nbsp;&nbsp;&nbsp;**нуля?** | **выполнить?****переполнение  | ?** | **подписаться?** |  **?**
-
-*флоатнумбер*\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *Sign* ⟧ *декнумбер* . ⟦ *декнумбер* ⟧ ⟦ *экспонента* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;| *цифры* R | *цифры* r
-
-*форкдир*\
-&nbsp;&nbsp;&nbsp;&nbsp;**форк** | **ирпк**
-
-*фордир*\
-&nbsp;&nbsp;&nbsp;&nbsp;**для** | **IRP**
-
-*форпарм*\
-&nbsp;&nbsp;&nbsp;&nbsp;*ID* ⟦: *форпармтипе* ⟧
-
-*форпармтипе*\
-&nbsp;&nbsp;&nbsp;&nbsp;**req** | = *текстлитерал*
-
-*фпурегистер*\
-&nbsp;&nbsp; **&nbsp;&nbsp;** *expr*
-
-*фрамикспр*\
-&nbsp;&nbsp;&nbsp;&nbsp;**SEG** *ID*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **дграуп** : *ID*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *сегментрегистер* : *ID*\
-&nbsp;&nbsp;&nbsp;&nbsp;*идентификатор* | 
-
-*женералдир*\
-&nbsp;&nbsp;&nbsp;&nbsp;*моделдир* | *сегордердир* | *намедир*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *инклуделибдир* | *комментдир*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *граупдир* | *ассумедир*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *структдир* | *рекорддир* | *типедефдир*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *екстерндир* | *публикдир* | *коммдир* | *прототипедир*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *екудир* | = Dir | *текстдир*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *контекстдир* | *оптиондир* | *процессордир*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *радиксдир*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *титледир* | *пажедир* | *листдир*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *крефдир* | *ечодир*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *ифдир* | *еррордир* | *инклудедир*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *макродир* | *макрокалл* | *макрорепеат* | *пуржедир*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *макровхиле* | *макрофор* | *макрофорк*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *алиасдир*
-
-*гпрегистер*\
-&nbsp;&nbsp;&nbsp;&nbsp;AX | EAX | CX | ECX | DX | EDX | BX | EBX | DI | EDI | SI | ESI | BP | EBP | SP | ESP | RSP | R8W | R8D | R9W | R9D | R12D | R13W | R13D | R14W | R14D
-
-*граупдир*\
-&nbsp;&nbsp; *&nbsp;&nbsp;* **группы** *сегидлист*
-
-*groupId*\
-&nbsp;&nbsp;&nbsp;&nbsp;*ID*
-
-*хексдигит*\
-&nbsp;&nbsp;&nbsp;&nbsp;a | б | c | г | e | f | A | Б | C | Г | E | Ж
-
-*идентификатор*\
-&nbsp;&nbsp;&nbsp;&nbsp;первым символом идентификатора может быть алфавитный знак верхнего или нижнего регистра (`[A–Za-z]`) или любой из этих четырех символов: `@ _ $ ?` остальные символы могут быть любого из этих же символов или десятичной цифры (`[0–9]`). Максимальная длина — 247 символов.
-
-*idList*\
-&nbsp;&nbsp;&nbsp;&nbsp;*id* | *idList* , *ID*
-
-*ифдир*\
-&nbsp;&nbsp;&nbsp;&nbsp;*ифстатемент* ;; \
-&nbsp;&nbsp;&nbsp;&nbsp;*директивелист*\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *елсеифблокк* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ **else** ;; \
-&nbsp;&nbsp;&nbsp;&nbsp;*директивелист* ⟧;; \
-
-*ифстатемент*\
-&nbsp;&nbsp;&nbsp;&nbsp;, **Если** *constExpr*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **Ифе** *constExpr*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **ИФБ** *текститем*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **ифнб** *текститем*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **IFDEF** *ID*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **IFNDEF** *ID*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **ифдиф** *текститем* , *текститем*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **ифдифи** *текститем* , *текститем*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **ифидн** *текститем* , *текститем*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **ифидни** *текститем* , *текститем*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **IF1**\
-&nbsp;&nbsp;&nbsp;&nbsp;| **If2**
-
-*иммекспр*\
-&nbsp;&nbsp;&nbsp;&nbsp;*expr*
-
-*инклудедир*\
-&nbsp;&nbsp;&nbsp;&nbsp; **:** *filespec* ;;
-
-*инклуделибдир*\
-&nbsp;&nbsp;&nbsp;&nbsp;**инклуделиб** *;;*
-
-*инитвалуе*\
-&nbsp;&nbsp;&nbsp;&nbsp;*иммекспр*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *строка*\
-&nbsp;&nbsp;&nbsp;&nbsp;|? \
-&nbsp;&nbsp;&nbsp;&nbsp;| *constExpr* **DUP** ( *скаларинстлист* ) \
-&nbsp;&nbsp;&nbsp;&nbsp;| *флоатнумбер*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *бкдконст*
-
-*инсегдир*\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *лабелдеф* ⟧ *инсегментдир*
-
-*инсегдирлист*\
-&nbsp;&nbsp;&nbsp;&nbsp;*инсегдир* | *инсегдирлист* *инсегдир*
-
-*инсегментдир*\
-&nbsp;&nbsp;&nbsp;*инструкции* &nbsp;\
-&nbsp;&nbsp;&nbsp;&nbsp;| *dataDir*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *контролдир*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *стартупдир*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *екситдир*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *оффсетдир*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *лабелдир*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *прокдир* ⟦ *Локалдирлист* ⟧ ⟦ *инсегдирлист* ⟧ *ендпдир*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *инвокедир*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *женералдир*
-
-*инстрпрефикс*\
-&nbsp;&nbsp;&nbsp;&nbsp;**представитель** | **репе** | **репз** | **Репне** | **репнз** | **Lock**
-
-\ *инструкции*
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *инстрпрефикс* ⟧ *асминструктион*
-
-*инвокеарг*\
-&nbsp;&nbsp;&nbsp;&nbsp;*Register* :: *register* | *expr* | **addr** *expr*
-
-*инвокедир*\
-&nbsp;&nbsp;&nbsp;&nbsp;**Invoke** *expr* ⟦, ⟦;; ⟧ *инвокелист* ⟧;;
-
-*инвокелист*\
-&nbsp;&nbsp;&nbsp;&nbsp;*инвокеарг* | *инвокелист* , ⟦;; ⟧ *инвокеарг*
-
-*ключевое слово*\
-&nbsp;&nbsp;&nbsp;&nbsp;любого зарезервированного слова.
-
-*кэйвордлист*\
-&nbsp;&nbsp;&nbsp;&nbsp;*ключевое слово* | *ключевое слово* *кэйвордлист*
-
-*лабелдеф*\
-&nbsp;&nbsp;&nbsp;&nbsp;*ID* : | *идентификатор* :: | @@:
-
-*лабелдир*\
-&nbsp;&nbsp;&nbsp;&nbsp;*id* **метки** идентификатора *куалифиедтипе* ;;
-
-*лангтипе*\
-&nbsp;&nbsp;&nbsp;&nbsp;**C** | **PASCAL** | **FORTRAN** | **Basic** | **syscall** | **STDCALL**
-
-*листдир*\
-&nbsp;&nbsp;&nbsp;&nbsp;*листоптион* ;;
-
-*листоптион*\
-&nbsp;&nbsp;&nbsp;&nbsp; **.\ списка**
-&nbsp;&nbsp;&nbsp;&nbsp;|  **.** \ со списком
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. КСЛИСТ**\
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. ЛИСТАЛЛ**\
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. ЛИСТИФ**\
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. ЛФКОНД**\
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. НОЛИСТИФ**\
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. СФКОНД**\
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. ТФКОНД**\
-&nbsp;&nbsp;&nbsp;&nbsp;|  **.**  | листмакроалл **. ЛАЛЛ**\
-&nbsp;&nbsp;&nbsp;&nbsp;|  **.**  | нолистмакро **. Салл**\
-&nbsp;&nbsp;&nbsp;&nbsp;|  **.**  | листмакро **. КСАЛЛ**\
-
-*локалдеф*\
-&nbsp;&nbsp;&nbsp;&nbsp;**Local** *idList* ;;
-
-*локалдир*\
-&nbsp;&nbsp;&nbsp;&nbsp;**Local** *пармлист* ;;
-
-*локалдирлист*\
-&nbsp;&nbsp;&nbsp;&nbsp;*локалдир* | *локалдирлист* *локалдир*
-
-*локаллист*\
-&nbsp;&nbsp;&nbsp;&nbsp;*локалдеф* | *локаллист* *локалдеф*
-
-*макроарг*\
- % *constExpr*\
-&nbsp;&nbsp;&nbsp;&nbsp;| %*текстмакроид*\
-&nbsp;&nbsp;&nbsp;&nbsp;| %*макрофунЦид* ( *макроарглист* ) \
-&nbsp;&nbsp;&nbsp;&nbsp;| *строка*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *арбитраритекст*\
-&nbsp;&nbsp;&nbsp;&nbsp;| < *арбитраритекст* >
-
-*макроарглист*\
-&nbsp;&nbsp;&nbsp;&nbsp;*макроарг* | *макроарглист* , *макроарг*
-
-*макрободи*\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *локаллист* ⟧ *макростмтлист*
-
-*макрокалл*\
-&nbsp;&nbsp;&nbsp;&nbsp;*ID* *макроарглист* ;; \
-&nbsp;&nbsp;&nbsp;&nbsp;| *ID* ( *макроарглист* )
-
-*макродир*\
-&nbsp;&nbsp;&nbsp;&nbsp;*ID* **макрос** ⟦ *макропармлист* ⟧;; \
-&nbsp;&nbsp;&nbsp;&nbsp;*макрободи*\
-&nbsp;&nbsp;&nbsp;&nbsp;**ендм** ;;
-
-*макрофор*\
-&nbsp;&nbsp;&nbsp;&nbsp;*фордир* *Форпарм* , < *макроарглист* >;; \
-&nbsp;&nbsp;&nbsp;&nbsp;*макрободи*\
-&nbsp;&nbsp;&nbsp;&nbsp;**ендм** ;;
-
-*макрофорк*\
-&nbsp;&nbsp;&nbsp;&nbsp;*форкдир* *ID* , *текстлитерал* ;; \
-&nbsp;&nbsp;&nbsp;&nbsp;*макрободи*\
-&nbsp;&nbsp;&nbsp;&nbsp;**ендм** ;;
-
-*макрофунЦид*\
-&nbsp;&nbsp;&nbsp;&nbsp;*ID*
-
-*макроид*\
-&nbsp;&nbsp;&nbsp;&nbsp;*макропроЦид* | *макрофунЦид*
-
-*макроидлист*\
-&nbsp;&nbsp;&nbsp;&nbsp;*макроид* | *макроидлист* , *макроид*
-
-*макролабел*\
-&nbsp;&nbsp;&nbsp;&nbsp;*ID*
-
-*макропарм*\
-&nbsp;&nbsp;&nbsp;&nbsp;*ID* ⟦: *пармтипе* ⟧
-
-*макропармлист*\
-&nbsp;&nbsp;&nbsp;&nbsp;*макропарм* | *макропармлист* , ⟦;; ⟧ *макропарм*
-
-*макропроЦид*\
-&nbsp;&nbsp;&nbsp;&nbsp;*ID*
-
-*макрорепеат*\
-&nbsp;&nbsp;&nbsp;&nbsp;*репеатдир* *constExpr* ;; \
-&nbsp;&nbsp;&nbsp;&nbsp;*макрободи*\
-&nbsp;&nbsp;&nbsp;&nbsp;**ендм** ;;
-
-*макростмт*\
-&nbsp;&nbsp;&nbsp;*директива* &nbsp; \
-&nbsp;&nbsp;&nbsp;&nbsp;| *екситмдир*\
-&nbsp;&nbsp;&nbsp;&nbsp;| : *макролабел*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **GOTO**\
-&nbsp;&nbsp;&nbsp;&nbsp;*макролабел*
-
-*макростмтлист*\
-&nbsp;&nbsp;&nbsp;&nbsp;*макростмт* ;; \
-&nbsp;&nbsp;&nbsp;&nbsp;| *макростмтлист* *макростмт* ;; \
-
-*макровхиле*\
-&nbsp;&nbsp;&nbsp;&nbsp;**while** *constExpr* ;; \
-&nbsp;&nbsp;&nbsp;&nbsp;*макрободи*\
-&nbsp;&nbsp;&nbsp;&nbsp;**ендм** ;;
-
-*маптипе*\
-&nbsp;&nbsp;&nbsp;&nbsp;**все** | **нет** | **нотпублик**
-
-*мемоптион*\
-&nbsp;&nbsp;&nbsp;&nbsp;**крошечные** | **небольшие** | **средние** | **Compact** | **большие** | **огромные** ** | **
-
-*назначенная*\
-&nbsp;&nbsp;&nbsp;имя инструкции &nbsp;.
-
-*моделдир*\
-&nbsp;&nbsp;&nbsp;&nbsp; **.\ модели**
-&nbsp;&nbsp;&nbsp;&nbsp;*мемоптион* ⟦, *моделоптлист* ⟧;;
-
-*моделопт*\
-&nbsp;&nbsp;&nbsp;&nbsp;*лангтипе* | *стаккоптион*
-
-*моделоптлист*\
-&nbsp;&nbsp;&nbsp;&nbsp;*моделопт* | *моделоптлист* , *моделопт*
-
-\ *модуля*
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *директивелист* ⟧ *енддир*
-
-*мулоп*\
-&nbsp;&nbsp;&nbsp;&nbsp;\* | / | **Mod**
-
-*намедир*\
-&nbsp;&nbsp;&nbsp;&nbsp;**имя**\
-&nbsp;&nbsp;&nbsp;&nbsp;*ID* ;; \
-
-*неарфар*\
-&nbsp;&nbsp;&nbsp;&nbsp;**около** | **FAR**
-
-*нестедструкт*\
-&nbsp;&nbsp;&nbsp;&nbsp;*струксдр* ⟦ *ID* ⟧;; \
-&nbsp;&nbsp;&nbsp;&nbsp;*структбоди*\
-&nbsp;&nbsp;&nbsp;&nbsp;**заканчивается** ;; \
-
-*оффсетдир*\
-&nbsp;&nbsp;&nbsp;&nbsp;*оффсетдиртипе* ;;
-
-*оффсетдиртипе*\
-&nbsp;&nbsp;&nbsp;&nbsp;**даже** | **org** *иммекспр* | **Выравнивание** ⟦ *constExpr* ⟧
-
-*оффсеттипе*\
-&nbsp;&nbsp;&nbsp;&nbsp;**группу** | **сегмент** | **Flat**
-
-*олдрекордфиелдлист*\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *constExpr* ⟧ | *олдрекордфиелдлист* , ⟦ *constExpr* ⟧
-
-*оптиондир*\
-&nbsp;&nbsp;&nbsp;&nbsp;**параметр** *оптионлист* ;;
-
-*оптионитем*\
-&nbsp;&nbsp;&nbsp;&nbsp;**касемап** : *маптипе*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **дотнаме** | **нодотнаме**\
-&nbsp;&nbsp;&nbsp;&nbsp;| **эмулятор** | Emulator **\**
-&nbsp;&nbsp;&nbsp;&nbsp;| **эпилога** : *макроид*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **EXPR16** | **EXPR32**\
-&nbsp;&nbsp;&nbsp;&nbsp;| **Language** : *лангтипе*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **лжмп**
-| **нолжмп**\
-&nbsp;&nbsp;&nbsp;&nbsp;| **M510** | **NOM510**\
-&nbsp;&nbsp;&nbsp;&nbsp;| **ключевоеслово** : < *кэйвордлист* >\
-&nbsp;&nbsp;&nbsp;&nbsp;| **носигнекстенд**\
-&nbsp;&nbsp;&nbsp;&nbsp;| **offset** : *оффсеттипе*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **олдмакрос** | **нулдмакрос**\
-&nbsp;&nbsp;&nbsp;&nbsp;| **олдструктс** | **нулдструктс**\
-&nbsp;&nbsp;&nbsp;&nbsp;| **proc** : *овисибилити*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **пролога** : *макроид*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **только для** **чтения | \**
-&nbsp;&nbsp;&nbsp; **&nbsp;| с заданной областью** ** | ** \
-&nbsp;&nbsp;&nbsp;&nbsp;| **сегмент** : *сегсизе*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **SETIF2** : bool
-
-*оптионлист*\
-&nbsp;&nbsp;&nbsp;&nbsp;*оптионитем* | *оптионлист* , ⟦;; ⟧ *оптионитем*
-
-*опттекст*\
-&nbsp;&nbsp;&nbsp;&nbsp;, *текститем*
-
-*ороп*\
-&nbsp;&nbsp;&nbsp;&nbsp;**или** | **XOR**
-
-*овисибилити*\
-&nbsp;&nbsp;&nbsp;&nbsp;**PUBLIC** | **частный** | **Экспорт**
-
-*пажедир*\
-&nbsp;&nbsp;&nbsp;&nbsp;**Page** ⟦ *пажеекспр* ⟧;;
-
-*пажеекспр*\
-&nbsp;&nbsp;&nbsp;&nbsp;\+ | ⟦ *пажеленгс* ⟧ ⟦, *PageWidth* ⟧
-
-*пажеленгс*\
-&nbsp;&nbsp;&nbsp;&nbsp;*constExpr*
-
-*pageWidth*\
-&nbsp;&nbsp;&nbsp;&nbsp;*constExpr*
-
-*parm*\
-&nbsp;&nbsp;&nbsp;&nbsp;*пармид* ⟦: *куалифиедтипе* ⟧ | *пармид* ⟦ *constExpr* ⟧ ⟦: *куалифиедтипе* ⟧
-
-*пармид*\
-&nbsp;&nbsp;&nbsp;&nbsp;*ID*
-
-*пармлист*\
-&nbsp;&nbsp;&nbsp;&nbsp;*parm* | *пармлист* , ⟦;; ⟧ *ParM*
-
-*пармтипе*\
-&nbsp;&nbsp;&nbsp;&nbsp;**req** | = *текстлитерал* | **VARARG**
-
-*поптионс*\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *Distance* ⟧ ⟦ *Лангтипе* ⟧ ⟦ *овисибилити* ⟧
-
-*первичный*\
-&nbsp;&nbsp;&nbsp;&nbsp;*expr* *Бинарйоп* *expr* | *flagName* | *expr*
-
-*прокдир*\
-&nbsp;&nbsp;&nbsp;&nbsp;*procId* **proc**\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *поптионс* ⟧ ⟦ < *макроарглист* > ⟧
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *усесрегс* ⟧ ⟦ *прокпармлист* ⟧
-
-\ *процессора*
-&nbsp;&nbsp;&nbsp;&nbsp;|. 386 |. 386P |. 486 |. 486P \
-&nbsp;&nbsp;&nbsp;&nbsp;|. 586 |. 586P |. 686 |. 686P |. 387
-
-*процессордир*\
-&nbsp;&nbsp;&nbsp;&nbsp;*процессор* ;; \
-&nbsp;&nbsp;&nbsp;&nbsp;| *сопроцессора* ;;
-
-*procId*\
-&nbsp;&nbsp;&nbsp;&nbsp;*ID*
-
-*проЦитем*\
-&nbsp;&nbsp;&nbsp;&nbsp;*инстрпрефикс* | *dataDir* | *лабелдир* | *оффсетдир* | *женералдир*
-
-*прокпармлист*\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦, ⟦;; ⟧ *пармлист* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;⟦, ⟦;; ⟧ *пармид* : VARARG ⟧
-
-*протоарг*\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *ID* ⟧: *куалифиедтипе*
-
-*протоарглист*\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦, ⟦;; ⟧ *протолист* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;⟦, ⟦;; ⟧ ⟦ *ID* ⟧: VARARG ⟧
-
-*протолист*\
-&nbsp;&nbsp;&nbsp;&nbsp;*протоарг*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *протолист* , ⟦;; ⟧ *протоарг*
-
-*протоспек*\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *Distance* ⟧ ⟦ *Лангтипе* ⟧ ⟦ *протоарглист* ⟧ | *идентификатор* типа
-
-*прототипедир*\
-&nbsp;&nbsp;&nbsp;&nbsp;*ID* **PROTO** *протоспек*
-
-*пубдеф*\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *лангтипе* ⟧ *ID*
-
-*публикдир*\
-&nbsp;&nbsp;&nbsp;&nbsp;**Public** *публист* ;;
-
-*публист*\
-&nbsp;&nbsp;&nbsp;&nbsp;*пубдеф* | *публист* , ⟦;; ⟧ *пубдеф*
-
-*пуржедир*\
-&nbsp;&nbsp;&nbsp;&nbsp;**очистки** *макроидлист*
-
-*куалифиедтипе*\
-&nbsp;&nbsp;&nbsp;*тип* &nbsp;| ⟦ *Distance* ⟧ **ptr** ⟦ *куалифиедтипе* ⟧
-
-*квалификатор*\
-&nbsp;&nbsp;&nbsp;&nbsp;*куалифиедтипе* | **PROTO** *протоспек*
-
-*цитата*\
-&nbsp;&nbsp;&nbsp;&nbsp;"|"
-
-*квордрегистер*\
-&nbsp;&nbsp;&nbsp;&nbsp;RAX | РККС | RDX | РБКС | RDI | РСИ | РБП | R8 | R9 | R10 | R11 | R12 | R13 | R14 | R15
-
-*радиксдир*\
-&nbsp;&nbsp;&nbsp;&nbsp; **.**  *CONSTEXPR* системы счисления;;
-
-*радиксоверриде*\
-&nbsp;&nbsp;&nbsp;&nbsp;h | o | вопросы | t | y | H | O | Вопросы | T | &
+*`crefOption`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`.CREF`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.XCREF`**  ⟦ *`idList`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.NOCREF`** ⟦ *`idList`* ⟧
+
+*`cxzExpr`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`expr`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`!`** *`expr`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`expr`* **`==`** *`expr`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`expr`* **`!=`** *`expr`*
+
+*`dataDecl`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`DB`** | **`DW`** | **`DD`** | **`DF`** | **`DQ`** | **`DT`** | *`dataType`* | *`typeId`*
+
+*`dataDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`id`* ⟧ *`dataItem`* *`;;`*
+
+*`dataItem`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`dataDecl`* *`scalarInstList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`structTag`* *`structInstList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`typeId`* *`structInstList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`unionTag`* *`structInstList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`recordTag`* *`recordInstList`*
+
+*`dataType`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`BYTE`** | **`SBYTE`** | **`WORD`** | **`SWORD`** | **`DWORD`** | **`SDWORD`** | **`FWORD`** | **`QWORD`** | **`SQWORD`** | **`TBYTE`** | **`OWORD`** | **`REAL4`** | **`REAL8`** | **`REAL10`** | **`MMWORD`** | **`XMMWORD`** | **`YMMWORD`**
+
+*`decdigit`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`0`** | **`1`** | **`2`** | **`3`** | **`4`** | **`5`** | **`6`** | **`7`** | **`8`** | **`9`**
+
+*`decNumber`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`decdigit`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`decNumber`* *`decdigit`*
+
+*`delimiter`*\
+&nbsp;&nbsp;&nbsp;&nbsp;Любой символ, кроме*`whiteSpaceCharacter`*
+
+*`digits`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`decdigit`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`digits`* *`decdigit`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`digits`* *`hexdigit`*
+
+*`directive`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`generalDir`* | *`segmentDef`*
+
+*`directiveList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`directive`* | *`directiveList`* *`directive`*
+
+*`distance`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`nearfar`* | **`NEAR16`** | **`NEAR32`** | **`FAR16`** | **`FAR32`**
+
+*`e01`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`e01`* *`orOp`* *`e02`* | *`e02`*
+
+*`e02`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`e02`* **`AND`** *`e03`* | *`e03`*
+
+*`e03`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`NOT`** *`e04`* | *`e04`*
+
+*`e04`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`e04`* *`relOp`* *`e05`* | *`e05`*
+
+*`e05`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`e05`* *`addOp`* *`e06`* | *`e06`*
+
+*`e06`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`e06`* *`mulOp`* *`e07`* | *`e06`* *`shiftOp`* *`e07`* | *`e07`*
+
+*`e07`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`e07`* *`addOp`* *`e08`* | *`e08`*
+
+*`e08`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`HIGH`** *`e09`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`LOW`** *`e09`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`HIGHWORD`** *`e09`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`LOWWORD`** *`e09`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`e09`*
+
+*`e09`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`OFFSET`** *`e10`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`SEG`** *`e10`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`LROFFSET`** *`e10`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`TYPE`** *`e10`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`THIS`** *`e10`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`e09`* **`PTR`** *`e10`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`e09`* **`:`** *`e10`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`e10`*
+
+*`e10`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`e10`* **`.`** *`e11`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`e10`* ⟦ *`expr`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`e11`*
+
+*`e11`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`(`** *`expr`* **`)`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| ⟦ *`expr`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`WIDTH`** *`id`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`MASK`** *`id`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`SIZE`** *`sizeArg`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`SIZEOF`** *`sizeArg`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`LENGTH`** *`id`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`LENGTHOF`** *`id`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`recordConst`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`string`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`constant`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`type`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`id`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`$`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`segmentRegister`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`register`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`ST`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`ST`** **`(`** *`expr`* **`)`**
+
+*`echoDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`ECHO`**\
+&nbsp;&nbsp;&nbsp;&nbsp;*`arbitraryText`* *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`%OUT`** *`arbitraryText`* *`;;`*
+
+*`elseifBlock`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`elseifStatement`* *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`directiveList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`elseifBlock`* ⟧
+
+*`elseifStatement`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`ELSEIF`** *`constExpr`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`ELSEIFE`** *`constExpr`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`ELSEIFB`** *`textItem`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`ELSEIFNB`** *`textItem`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`ELSEIFDEF`** *`id`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`ELSEIFNDEF`** *`id`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`ELSEIFDIF`** *`textItem`* **`,`** *`textItem`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`ELSEIFDIFI`** *`textItem`* **`,`** *`textItem`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`ELSEIFIDN`** *`textItem`* **`,`** *`textItem`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`ELSEIFIDNI`** *`textItem`* **`,`** *`textItem`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`ELSEIF1`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`ELSEIF2`**
+
+*`endDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`END`** ⟦ *`immExpr`* ⟧ *`;;`*
+
+*`endpDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`procId`* **`ENDP`** *`;;`*
+
+*`endsDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`* **`ENDS`** *`;;`*
+
+*`equDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`textMacroId`* **`EQU`** *`equType`* *`;;`*
+
+*`equType`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`immExpr`* | *`textLiteral`*
+
+*`errorDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`errorOpt`* *`;;`*
+
+*`errorOpt`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`.ERR`** ⟦ *`textItem`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.ERRE`** *`constExpr`* ⟦ *`optText`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.ERRNZ`** *`constExpr`* ⟦ *`optText`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.ERRB`** *`textItem`* ⟦ *`optText`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.ERRNB`** *`textItem`* ⟦ *`optText`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.ERRDEF`** *`id`* ⟦ *`optText`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.ERRNDEF`** *`id`* ⟦ *`optText`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.ERRDIF`** *`textItem`* **`,`** *`textItem`* ⟦ *`optText`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.ERRDIFI`** *`textItem`* **`,`** *`textItem`* ⟦ *`optText`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.ERRIDN`** *`textItem`* **`,`** *`textItem`* ⟦ *`optText`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.ERRIDNI`** *`textItem`* **`,`** *`textItem`* ⟦ *`optText`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.ERR1`** ⟦ *`textItem`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.ERR2`** ⟦ *`textItem`* ⟧
+
+*`exitDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`.EXIT`** &nbsp;&nbsp;&nbsp;&nbsp;⟦ *`expr`* ⟧ *`;;`*
+
+*`exitmDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;: **`EXITM`** | **`EXITM`** *`textItem`*
+
+*`exponent`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`E`** ⟦ *`sign`* ⟧ *`decNumber`*
+
+*`expr`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`SHORT`** *`e05`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.TYPE`** *`e01`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`OPATTR`** *`e01`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`e01`*
+
+*`exprList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`expr`* | *`exprList`* **`,`** *`expr`*
+
+*`externDef`*\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`langType`* ⟧ *`id`* ⟦ **`(`** *`altId`* **`)`** ⟧ **`:`** *`externType`*
+
+*`externDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`externKey`* *`externList`* *`;;`*
+
+*`externKey`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`EXTRN`** | **`EXTERN`** | **`EXTERNDEF`**
+
+*`externList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`externDef`* | *`externList`* **`,`** ⟦ *`;;`* ⟧ *`externDef`*
+
+*`externType`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`ABS`** | *`qualifiedType`*
+
+*`fieldAlign`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`constExpr`*
+
+*`fieldInit`*\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`initValue`* ⟧ | *`structInstance`*
+
+*`fieldInitList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`fieldInit`* | *`fieldInitList`* **`,`** ⟦ *`;;`* ⟧ *`fieldInit`*
+
+*`fileChar`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`delimiter`*
+
+*`fileCharList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`fileChar`* | *`fileCharList`* *`fileChar`*
+
+*`fileSpec`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`fileCharList`* | *`textLiteral`*
+
+*`flagName`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`ZERO?`** | **`CARRY?`** | **`OVERFLOW?`** | **`SIGN?`** | **`PARITY?`**
+
+*`floatNumber`*\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`sign`* ⟧ *`decNumber`* **`.`** ⟦ *`decNumber`* ⟧ ⟦ *`exponent`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`digits`* **`R`** | *`digits`* **`r`**
+
+*`forcDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`FORC`** | **`IRPC`**
+
+*`forDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`FOR`** | **`IRP`**
+
+*`forParm`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`* ⟦ **`:`** *`forParmType`* ⟧
+
+*`forParmType`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`REQ`** | **`=`** *`textLiteral`*
+
+*`fpuRegister`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`ST`** *`expr`*
+
+*`frameExpr`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`SEG`** *`id`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`DGROUP`** **`:`** *`id`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`segmentRegister`* **`:`** *`id`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`id`*
+
+*`generalDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`modelDir`* | *`segOrderDir`* | *`nameDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`includeLibDir`* | *`commentDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`groupDir`* | *`assumeDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`structDir`* | *`recordDir`* | *`typedefDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`externDir`* | *`publicDir`* | *`commDir`* | *`protoTypeDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`equDir`* | *`=Dir`* | *`textDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`contextDir`* | *`optionDir`* | *`processorDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`radixDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`titleDir`* | *`pageDir`* | *`listDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`crefDir`* | *`echoDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`ifDir`* | *`errorDir`* | *`includeDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`macroDir`* | *`macroCall`* | *`macroRepeat`* | *`purgeDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`macroWhile`* | *`macroFor`* | *`macroForc`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`aliasDir`*
+
+*`gpRegister`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`AX`** | **`EAX`** | **`CX`** | **`ECX`** | **`DX`** | **`EDX`** | **`BX`** | **`EBX`** | **`DI`** | **`EDI`** | **`SI`** | **`ESI`** | **`BP`** | **`EBP`** | **`SP`** | **`ESP`** | **`RSP`** | **`R8W`** | **`R8D`** | **`R9W`** | **`R9D`** | **`R12D`** | **`R13W`** | **`R13D`** | **`R14W`** | **`R14D`**
+
+*`groupDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`groupId`* **`GROUP`** *`segIdList`*
+
+*`groupId`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`*
+
+*`hexdigit`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`a`** | **`b`** | **`c`** | **`d`** | **`e`** | **`f`** | **`A`** | **`B`** | **`C`** | **`D`** | **`E`** | **`F`**
+
+*`id`*\
+&nbsp;&nbsp;&nbsp;&nbsp;Первый символ идентификатора может быть верхний`[A–Za-z]`или нижний случай алфавитного `@ _ $ ?` символа ( ) или любой из этих четырех`[0–9]`символов: Остальные символы могут быть любой из тех же символов или десятичной цифры ( ). Максимальная длина - 247 символов.
+
+*`idList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`* | *`idList`* **`,`** *`id`*
+
+*`ifDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`ifStatement`* *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`directiveList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`elseifBlock`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ **`ELSE`** *`;;`* \
+&nbsp;&nbsp;&nbsp;&nbsp;*`directiveList`* ⟧ *`;;`*
+
+*`ifStatement`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`IF`** *`constExpr`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`IFE`** *`constExpr`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`IFB`** *`textItem`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`IFNB`** *`textItem`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`IFDEF`** *`id`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`IFNDEF`** *`id`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`IFDIF`** *`textItem`* **`,`** *`textItem`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`IFDIFI`** *`textItem`* **`,`** *`textItem`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`IFIDN`** *`textItem`* **`,`** *`textItem`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`IFIDNI`** *`textItem`* **`,`** *`textItem`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`IF1`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`IF2`**
+
+*`immExpr`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`expr`*
+
+*`includeDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`INCLUDE`** *`fileSpec`* *`;;`*
+
+*`includeLibDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`INCLUDELIB`** *`fileSpec`* *`;;`*
+
+*`initValue`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`immExpr`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`string`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`?`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`constExpr`* **`DUP`** ( *`scalarInstList`* )\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`floatNumber`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`bcdConst`*
+
+*`inSegDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`labelDef`* ⟧ *`inSegmentDir`*
+
+*`inSegDirList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`inSegDir`* | *`inSegDirList`* *`inSegDir`*
+
+*`inSegmentDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`instruction`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`dataDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`controlDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`startupDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`exitDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`offsetDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`labelDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`procDir`* ⟦ *`localDirList`* ⟧ ⟦ *`inSegDirList`* ⟧ *`endpDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`invokeDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`generalDir`*
+
+*`instrPrefix`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`REP`** | **`REPE`** | **`REPZ`** | **`REPNE`** | **`REPNZ`** | **`LOCK`**
+
+*`instruction`*\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`instrPrefix`* ⟧ *`asmInstruction`*
+
+*`invokeArg`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`register`* **`::`** *`register`* | *`expr`* | **`ADDR`** *`expr`*
+
+*`invokeDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`INVOKE`** *`expr`* ⟦ **`,`** ⟦ *`;;`* ⟧ *`invokeList`* ⟧ *`;;`*
+
+*`invokeList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`invokeArg`* | *`invokeList`* **`,`** ⟦ *`;;`* ⟧ *`invokeArg`*
+
+*`keyword`*\
+&nbsp;&nbsp;&nbsp;&nbsp;Любое зарезервированное слово.
+
+*`keywordList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`keyword`* | *`keyword`* *`keywordList`*
+
+*`labelDef`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`* **`:`** | *`id`* **`::`** | **`@@:`**
+
+*`labelDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`* **`LABEL`** *`qualifiedType`* *`;;`*
+
+*`langType`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`C`** | **`PASCAL`** | **`FORTRAN`** | **`BASIC`** | **`SYSCALL`** | **`STDCALL`**
+
+*`listDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`listOption`* *`;;`*
+
+*`listOption`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`.LIST`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.NOLIST`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.XLIST`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.LISTALL`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.LISTIF`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.LFCOND`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.NOLISTIF`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.SFCOND`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.TFCOND`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.LISTMACROALL`** | **`.LALL`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.NOLISTMACRO`** | **`.SALL`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.LISTMACRO`** | **`.XALL`**
+
+*`localDef`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`LOCAL`** *`idList`* *`;;`*
+
+*`localDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`LOCAL`** *`parmList`* *`;;`*
+
+*`localDirList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`localDir`* | *`localDirList`* *`localDir`*
+
+*`localList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`localDef`* | *`localList`* *`localDef`*
+
+*`macroArg`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`%`** *`constExpr`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`%`** *`textMacroId`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`%`** *`macroFuncId`* **`(`** *`macroArgList`* **`)`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`string`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`arbitraryText`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`<`** *`arbitraryText`* **`>`**
+
+*`macroArgList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`macroArg`* | *`macroArgList`* **`,`** *`macroArg`*
+
+*`macroBody`*\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`localList`* ⟧ *`macroStmtList`*
+
+*`macroCall`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`* *`macroArgList`* *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`id`* ( *`macroArgList`* )
+
+*`macroDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`* **`MACRO`** ⟦ *`macroParmList`* ⟧ *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`macroBody`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`ENDM`** *`;;`*
+
+*`macroFor`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`forDir`* *`forParm`* **`,`** **`<`** *`macroArgList`* **`>`** *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`macroBody`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`ENDM`** *`;;`*
+
+*`macroForc`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`forcDir`* *`id`* **`,`** *`textLiteral`* *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`macroBody`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`ENDM`** *`;;`*
+
+*`macroFuncId`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`*
+
+*`macroId`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`macroProcId`* | *`macroFuncId`*
+
+*`macroIdList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`macroId`* | *`macroIdList`* **`,`** *`macroId`*
+
+*`macroLabel`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`*
+
+*`macroParm`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`* ⟦ **`:`** *`parmType`* ⟧
+
+*`macroParmList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`macroParm`* | *`macroParmList`* **`,`** ⟦ *`;;`* ⟧ *`macroParm`*
+
+*`macroProcId`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`*
+
+*`macroRepeat`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`repeatDir`* *`constExpr`* *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`macroBody`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`ENDM`** *`;;`*
+
+*`macroStmt`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`directive`* \
+&nbsp;&nbsp;&nbsp;&nbsp;| *`exitmDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`:`** *`macroLabel`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`GOTO`** *`macroLabel`*
+
+*`macroStmtList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`macroStmt`* *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`macroStmtList`* *`macroStmt`* *`;;`*\
+
+*`macroWhile`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`WHILE`** *`constExpr`* *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`macroBody`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`ENDM`** *`;;`*
+
+*`mapType`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`ALL`** | **`NONE`** | **`NOTPUBLIC`**
+
+*`memOption`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`TINY`** | **`SMALL`** | **`MEDIUM`** | **`COMPACT`** | **`LARGE`** | **`HUGE`** | **`FLAT`**
+
+*`mnemonic`*\
+&nbsp;&nbsp;&nbsp;&nbsp;Название инструкции.
+
+*`modelDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`.MODEL`**\
+&nbsp;&nbsp;&nbsp;&nbsp;*`memOption`* ⟦ **`,`** *`modelOptlist`* ⟧ *`;;`*
+
+*`modelOpt`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`langType`* | *`stackOption`*
+
+*`modelOptlist`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`modelOpt`* | *`modelOptlist`* **`,`** *`modelOpt`*
+
+*`module`*\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`directiveList`* ⟧ *`endDir`*
+
+*`mulOp`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`*`** | **`/`** | **`MOD`**
+
+*`nameDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`NAME`**\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`* *`;;`*
+
+*`nearfar`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`NEAR`** | **`FAR`**
+
+*`nestedStruct`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`structHdr`* ⟦ *`id`* ⟧ *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`structBody`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`ENDS`** *`;;`*
+
+*`offsetDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`offsetDirType`* *`;;`*
+
+*`offsetDirType`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`EVEN`** | **`ORG`** *`immExpr`* | **`ALIGN`** ⟦ *`constExpr`* ⟧
+
+*`offsetType`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`GROUP`** | **`SEGMENT`** | **`FLAT`**
+
+*`oldRecordFieldList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`constExpr`* ⟧ | *`oldRecordFieldList`* **`,`** ⟦ *`constExpr`* ⟧
+
+*`optionDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`OPTION`** *`optionList`* *`;;`*
+
+*`optionItem`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`CASEMAP`** : *`mapType`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`DOTNAME`** | **`NODOTNAME`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`EMULATOR`** | **`NOEMULATOR`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`EPILOGUE`** **`:`** *`macroId`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`EXPR16`** | **`EXPR32`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`LANGUAGE`** **`:`** *`langType`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`LJMP`** | **`NOLJMP`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`M510`** | **`NOM510`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`NOKEYWORD`** **`:`** **`<`** *`keywordList`* **`>`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`NOSIGNEXTEND`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`OFFSET`** **`:`** *`offsetType`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`OLDMACROS`** | **`NOOLDMACROS`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`OLDSTRUCTS`** | **`NOOLDSTRUCTS`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`PROC`** **`:`** *`oVisibility`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`PROLOGUE`** : *`macroId`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`READONLY`** | **`NOREADONLY`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`SCOPED`** | **`NOSCOPED`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`SEGMENT`** **`:`** *`segSize`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`SETIF2`** **`:`** *`bool`*
+
+*`optionList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`optionItem`* | *`optionList`* **`,`** ⟦ *`;;`* ⟧ *`optionItem`*
+
+*`optText`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`,`** *`textItem`*
+
+*`orOp`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`OR`** | **`XOR`**
+
+*`oVisibility`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`PUBLIC`** | **`PRIVATE`** | **`EXPORT`**
+
+*`pageDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`PAGE`** ⟦ *`pageExpr`* ⟧ *`;;`*
+
+*`pageExpr`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`+`** | ⟦ *`pageLength`* ⟧ ⟦ **`,`** *`pageWidth`* ⟧
+
+*`pageLength`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`constExpr`*
+
+*`pageWidth`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`constExpr`*
+
+*`parm`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`parmId`* ⟦ **`:`** *`qualifiedType`* ⟧ | *`parmId`* ⟦ *`constExpr`* ⟧ ⟦ **`:`** *`qualifiedType`* ⟧
+
+*`parmId`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`*
+
+*`parmList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`parm`* | *`parmList`* **`,`** ⟦ *`;;`* ⟧ *`parm`*
+
+*`parmType`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`REQ`** | **`=`** *`textLiteral`* | **`VARARG`**
+
+*`pOptions`*\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`distance`* ⟧ ⟦ *`langType`* ⟧ ⟦ *`oVisibility`* ⟧
+
+*`primary`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`expr`* *`binaryOp`* *`expr`* | *`flagName`* | *`expr`*
+
+*`procDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`procId`* **`PROC`**\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`pOptions`* ⟧ ⟦ **`<`** *`macroArgList`* **`>`** ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`usesRegs`* ⟧ ⟦ *`procParmList`* ⟧
+
+*`processor`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.386`** | **`.386p`** | **`.486`** | **`.486P`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.586`** | **`.586P`** | **`.686`** | **`.686P`** | **`.387`**
+
+*`processorDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`processor`* *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`coprocessor`* *`;;`*
+
+*`procId`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`*
+
+*`procItem`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`instrPrefix`* | *`dataDir`* | *`labelDir`* | *`offsetDir`* | *`generalDir`*
+
+*`procParmList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ **`,`** ⟦ *`;;`* ⟧ *`parmList`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ **`,`** ⟦ *`;;`* ⟧ *`parmId`* **`:VARARG`** ⟧
+
+*`protoArg`*\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`id`* ⟧ **`:`** *`qualifiedType`*
+
+*`protoArgList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ **`,`** ⟦ *`;;`* ⟧ *`protoList`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ **`,`** ⟦ *`;;`* ⟧ ⟦ *`id`* ⟧ **`:VARARG`** ⟧
+
+*`protoList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`protoArg`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`protoList`* **`,`** ⟦ *`;;`* ⟧ *`protoArg`*
+
+*`protoSpec`*\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`distance`* ⟧ ⟦ *`langType`* ⟧ ⟦ *`protoArgList`* ⟧ | *`typeId`*
+
+*`protoTypeDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`* **`PROTO`** *`protoSpec`*
+
+*`pubDef`*\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`langType`* ⟧ *`id`*
+
+*`publicDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`PUBLIC`** *`pubList`* *`;;`*
+
+*`pubList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`pubDef`* | *`pubList`* **`,`** ⟦ *`;;`* ⟧ *`pubDef`*
+
+*`purgeDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`PURGE`** *`macroIdList`*
+
+*`qualifiedType`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`type`* | ⟦ *`distance`* ⟧ **`PTR`** ⟦ *`qualifiedType`* ⟧
+
+*`qualifier`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`qualifiedType`* | **`PROTO`** *`protoSpec`*
+
+*`quote`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`"`** | **`'`**
+
+*`qwordRegister`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`RAX`** | **`RCX`** | **`RDX`** | **`RBX`** | **`RDI`** | **`RSI`** | **`RBP`** | **`R8`** | **`R9`** | **`R10`** | **`R11`** | **`R12`** | **`R13`** | **`R14`** | **`R15`**
+
+*`radixDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`.RADIX`** *`constExpr`* *`;;`*
+
+*`radixOverride`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`h`** | **`o`** | **`q`** | **`t`** | **`y`** | **`H`** | **`O`** | **`Q`** | **`T`** | **`Y`**
+
+*`recordConst`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`recordTag`* **`{`** *`oldRecordFieldList`* **`}`** | *`recordTag`* **`<`** *`oldRecordFieldList`* **`>`**
+
+*`recordDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`recordTag`* **`RECORD`** *`bitDefList`* *`;;`*
 
-*рекордконст*\
-&nbsp;&nbsp;&nbsp;&nbsp;*рекордтаг* { *олдрекордфиелдлист* } | *рекордтаг* < *олдрекордфиелдлист* >
+*`recordFieldList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`constExpr`* ⟧ | *`recordFieldList`* **`,`** ⟦ *`;;`* ⟧ ⟦ *`constExpr`* ⟧
 
-*рекорддир*\
-&nbsp;&nbsp;&nbsp;&nbsp;*recordTag* **запись** рекордтаг *битдефлист* ;;
+*`recordInstance`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`{`** ⟦ *`;;`* ⟧ *`recordFieldList`* ⟦ *`;;`* ⟧ **`}`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`<`** *`oldRecordFieldList`* **`>`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`constExpr`* **`DUP`** **`(`** *`recordInstance`* **`)`**
 
-*рекордфиелдлист*\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *constExpr* ⟧ | *рекордфиелдлист* , ⟦;; ⟧ ⟦ *constExpr* ⟧
+*`recordInstList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`recordInstance`* | *`recordInstList`* **`,`** ⟦ *`;;`* ⟧ *`recordInstance`*
+
+*`recordTag`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`*
+
+*`register`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`specialRegister`* | *`gpRegister`* | *`byteRegister`* | *`qwordRegister`* |  *`fpuRegister`* | *`SIMDRegister`* | *`segmentRegister`*
+
+*`regList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`register`* | *`regList`* *`register`*
 
-*рекординстанце*\
- {⟦;; ⟧ *рекордфиелдлист* ⟦;; ⟧} \
-&nbsp;&nbsp;&nbsp;&nbsp;| < *олдрекордфиелдлист* >\
-&nbsp;&nbsp;&nbsp;&nbsp;| *constExpr* **DUP** ( *рекординстанце* )
-
-*рекординстлист*\
-&nbsp;&nbsp;&nbsp;&nbsp;*рекординстанце* | *рекординстлист* , ⟦;; ⟧ *рекординстанце*
-
-*рекордтаг*\
-&nbsp;&nbsp;&nbsp;&nbsp;*ID*
+*`relOp`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`EQ`** | **`NE`** | **`LT`** | **`LE`** | **`GT`** | **`GE`**
 
-*регистрация*\
-&nbsp;&nbsp;&nbsp;&nbsp;*спеЦиалрегистер* | *гпрегистер* | *битерегистер* | *квордрегистер* |  *фпурегистер* | *симдрегистер* | *сегментрегистер*
+*`repeatBlock`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`.REPEAT`** *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`blockStatements`* *`;;`*
+*`untilDir`* *`;;`*
 
-*реглист*\
-&nbsp;&nbsp;&nbsp;&nbsp;*register* | *regList* *регистр* реглист
+*`repeatDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`REPEAT`** | **`REPT`**
 
-*relOp*\
-&nbsp;&nbsp;&nbsp;&nbsp;EQ | NE | LT | LE | GT | GE
+*`scalarInstList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`initValue`* | *`scalarInstList`* **`,`** ⟦ *`;;`* ⟧ *`initValue`*
 
-*репеатблокк*\
-&nbsp;&nbsp;&nbsp;&nbsp; **. ПОВТОРИТЬ** ;; \
-&nbsp;&nbsp;&nbsp;&nbsp;*блоккстатементс* ;; Унтилдир;;
+*`segAlign`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`BYTE`** | **`WORD`** | **`DWORD`** | **`PARA`** | **`PAGE`**
 
-*репеатдир*\
-&nbsp;&nbsp;&nbsp;&nbsp;**повторить** | **REPT** повтор
+*`segAttrib`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`PUBLIC`** | **`STACK`** | **`COMMON`** | **`MEMORY`** | **`AT`** *`constExpr`* | **`PRIVATE`**
 
-*скаларинстлист*\
-&nbsp;&nbsp;&nbsp;&nbsp;*инитвалуе* | *скаларинстлист* , ⟦;; ⟧ *инитвалуе*
+*`segDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`.CODE`**\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *`segId`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.DATA`**\
+&nbsp;&nbsp;&nbsp;&nbsp;|  **`.DATA?`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.CONST`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.FARDATA`**⟦ *`segId`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;|  **`.FARDATA?`** ⟦ *`segId`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`.STACK`** ⟦ *`constExpr`* ⟧
 
-*сегалигн*\
-&nbsp;&nbsp;&nbsp;&nbsp;**BYTE** | **WORD** | **DWORD** | **абзац** | **Page**
+*`segId`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`*
 
-*сегаттриб*\
-&nbsp;&nbsp;&nbsp;&nbsp;**общедоступный** **стек** |  | **Общие** | **памяти** | **в** *constExpr* | **Private**
+*`segIdList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`segId`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`segIdList`* **`,`** *`segId`*
+
+*`segmentDef`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`segmentDir`* ⟦ *`inSegDirList`* ⟧ *`endsDir`* | *`simpleSegDir`* ⟦ *`inSegDirList`* ⟧ ⟦ *`endsDir`* ⟧
 
-*сегдир*\
-&nbsp;&nbsp;&nbsp;&nbsp; **.\ кода**
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *сегид* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;|  **.\ данных**
-&nbsp;&nbsp;&nbsp;&nbsp;|   **. ДАННЫЕ**\
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. КОНСТАНТное**\
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. ФАРДАТА**⟦ *сегид* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;|   **. ФАРДАТА?** ⟦ *сегид* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;|  **. STACK** ⟦ *constExpr* ⟧
+*`segmentDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`segId`* **`SEGMENT`** ⟦ *`segOptionList`* ⟧ *`;;`*
 
-*сегид*\
-&nbsp;&nbsp;&nbsp;&nbsp;*ID*
+*`segmentRegister`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`CS`** | **`DS`** | **`ES`** | **`FS`** | **`GS`** | **`SS`**
 
-*сегидлист*\
-&nbsp;&nbsp;&nbsp;&nbsp;*сегид*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *сегидлист* , *сегид*
+*`segOption`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`segAlign`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`segRO`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`segAttrib`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`segSize`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`className`*
 
-*сегментдеф*\
-&nbsp;&nbsp;&nbsp;&nbsp;*сегментдир* ⟦ *инсегдирлист* ⟧ *ендсдир* | *симплесегдир* ⟦ *инсегдирлист* ⟧ ⟦ *ендсдир* ⟧
+*`segOptionList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`segOption`* | *`segOptionList`* *`segOption`*
 
-*сегментдир*\
-&nbsp;&nbsp;&nbsp;&nbsp;*сегид* **сегмент** ⟦ *сегоптионлист* ⟧;;
+*`segOrderDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`.ALPHA`** | **`.SEQ`** | **`.DOSSEG`** | **`DOSSEG`**
 
-*сегментрегистер*\
-&nbsp;&nbsp;&nbsp;&nbsp;**CS** | **DS** | **ES** | **FS** | **GS** | **SS**
+*`segRO`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`READONLY`**
 
-*сегоптион*\
-&nbsp;&nbsp;&nbsp;&nbsp;*сегалигн*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *сегро*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *сегаттриб*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *сегсизе*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *className*
+*`segSize`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`USE16`** | **`USE32`** | **`FLAT`**
 
-*сегоптионлист*\
-&nbsp;&nbsp;&nbsp;&nbsp;*сегоптион* | *сегоптионлист* *сегоптион*
+*`shiftOp`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`SHR`** | **`SHL`**
 
-*сегордердир*\
-&nbsp;&nbsp;&nbsp;&nbsp; **. Альфа** - |  **. SEQ** |  **. ДОССЕГ** | **доссег**
+*`sign`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`+`** | **`-`**
 
-*сегро*\
-&nbsp;&nbsp;&nbsp;&nbsp;**ReadOnly**
+*`simdRegister`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`MM0`** | **`MM1`** | **`MM2`** | **`MM3`** | **`MM4`** | **`MM5`** | **`MM6`** | **`MM7`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`xmmRegister`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`YMM0`** | **`YMM1`** | **`YMM2`** | **`YMM3`** | **`YMM4`** | **`YMM5`** | **`YMM6`** | **`YMM7`** | **`YMM8`** | **`YMM9`** | **`YMM10`** | **`YMM11`** | **`YMM12`** | **`YMM13`** | **`YMM14`** | **`YMM15`**
 
-*сегсизе*\
-&nbsp;&nbsp;&nbsp;&nbsp;**USE16** | **USE32** | **Flat**
+*`simpleExpr`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`(`** *`cExpr`* **`)`** | *`primary`*
 
-*шифтоп*\
-&nbsp;&nbsp;&nbsp;&nbsp;**SHR** | **шл**
+*`simpleSegDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`segDir`* *`;;`*
 
-*Подписывание*\
- - | +
+*`sizeArg`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`* | *`type`* | *`e10`*
 
-*симдрегистер*\
-&nbsp;&nbsp;&nbsp;&nbsp;MM0 | MM1 | MM2 | MM3 | MM4 | MM5 | MM6 | MM7 | График xmmregister | YMM0 | YMM1 | YMM2 | YMM3 | YMM4 | YMM5 | YMM6 | YMM7 | YMM8 | YMM9 | YMM10 | YMM11 | YMM12 | YMM13 | YMM14 | YMM15
+*`specialChars`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`:`** | **`.`** | **`[`** | **`]`** | **`(`** | **`)`** | **`<`** | **`>`** | **`{`** | **`}`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`+`** | **`-`** | **`/`** | **`*`** | **`&`** | **`%`** | **`!`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`'`** | **`\`** | **`=`** | **`;`** | **`,`** | **`"`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`whiteSpaceCharacter`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`endOfLine`*
 
-*симпликспр*\
- ( *цекспр* ) | *основной*
+*`specialRegister`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`CR0`** | **`CR2`** | **`CR3`** | **`DR0`** | **`DR1`** | **`DR2`** | **`DR3`** | **`DR6`** | **`DR7`** | **`TR3`** | **`TR4`** | **`TR5`** | **`TR6`** | **`TR7`**
 
-*симплесегдир*\
-&nbsp;&nbsp;&nbsp;&nbsp;*сегдир* ;;
+*`stackOption`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`NEARSTACK`** | **`FARSTACK`**
 
-*сизеарг*\
-&nbsp;&nbsp;&nbsp;&nbsp;*ID* | *Type* | *E10*
+*`startupDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`.STARTUP`** *`;;`*
 
-*спеЦиалчарс*\
- : | . | ⟦ | ⟧ | ( | ) | < | > | { | } \
-&nbsp;&nbsp;&nbsp;&nbsp;| + | - | / | * | & | % | !\
-&nbsp;&nbsp;&nbsp;&nbsp;| ' | \ | = | ; | , | "\
-&nbsp;&nbsp;&nbsp;&nbsp;| *вхитеспацечарактер*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *ендофлине*
+*`stext`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`stringChar`* | *`stext`* *`stringChar`*
 
-*спеЦиалрегистер*\
-&nbsp;&nbsp;&nbsp;&nbsp;CR0 | CR2 | CR3 | DR0 | DR1 | DR2 | DR3 | DR6 | DR7 | TR3 | TR4 | TR5 | TR6 | TR7
+*`string`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`quote`* ⟦ *`stext`* ⟧ *`quote`*
 
-*стаккоптион*\
-&nbsp;&nbsp;&nbsp;&nbsp;**неарстакк** | **фарстакк**
+*`stringChar`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`quote`**`quote`* | Любой персонаж, кроме цитаты.
 
-*стартупдир*\
-&nbsp;&nbsp;&nbsp;&nbsp; **. Запуск** ;;
+*`structBody`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`structItem`* *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`structBody`* *`structItem`* *`;;`*
 
-*стекст*\
-&nbsp;&nbsp;&nbsp;&nbsp;*стрингчар* | *стекст* *стрингчар*
+*`structDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`structTag`* *`structHdr`* ⟦ *`fieldAlign`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ **`,`** **`NONUNIQUE`** ⟧ *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`structBody`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`structTag`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`ENDS`** *`;;`*
 
-*string*\
-&nbsp;&nbsp;&nbsp;&nbsp;*Quotes* ⟦ *стекст* ⟧ *quote*
+*`structHdr`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`STRUC`** | **`STRUCT`** | **`UNION`**
 
-*стрингчар*\
-&nbsp;&nbsp; *&nbsp;&nbsp;кавычки* *|* Любой символ, кроме кавычек.
+*`structInstance`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`<`** ⟦ *`fieldInitList`* ⟧ **`>`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`{`** ⟦ *`;;`* ⟧ ⟦ *`fieldInitList`* ⟧ ⟦ *`;;`* ⟧ **`}`**\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`constExpr`* **`DUP`** ( *`structInstList`* )
 
-*структбоди*\
-&nbsp;&nbsp;&nbsp;&nbsp;*структитем* ;; \
-&nbsp;&nbsp;&nbsp;&nbsp;| *структбоди* *структитем* ;;
+*`structInstList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`structInstance`* | *`structInstList`* **`,`** ⟦ *`;;`* ⟧ *`structInstance`*
 
-*структдир*\
-&nbsp;&nbsp;&nbsp;&nbsp;*структтаг* *струксдр* ⟦ *фиелдалигн* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;⟦, **неуникальный** ⟧;; \
-&nbsp;&nbsp;&nbsp;&nbsp;*структбоди*\
-&nbsp;&nbsp;&nbsp;&nbsp;*структтаг*\
-&nbsp;&nbsp;&nbsp;&nbsp;**завершается** ;;
+*`structItem`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`dataDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`generalDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`offsetDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`nestedStruct`*
 
-*струксдр*\
-&nbsp;&nbsp;&nbsp;&nbsp;**струк** | **STRUCT** | **Union**
+*`structTag`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`*
 
-*структинстанце*\
- < ⟦ *фиелдинитлист* ⟧ > \
-&nbsp;&nbsp;&nbsp;&nbsp;| {⟦;; ⟧ ⟦ *фиелдинитлист* ⟧ ⟦;; ⟧} \
-&nbsp;&nbsp;&nbsp;&nbsp;| *constExpr* **DUP** ( *структинстлист* ) \
+*`term`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`simpleExpr`* | **`!`** *`simpleExpr`*
 
-*структинстлист*\
-&nbsp;&nbsp;&nbsp;&nbsp;*структинстанце* | *структинстлист* , ⟦;; ⟧ *структинстанце*
+*`text`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`textLiteral`* | *`text`* характер **`!`** *`character`* *`text`* | *`character`* | **`!`***`character`*
 
-*структитем*\
-&nbsp;&nbsp;&nbsp;&nbsp;*dataDir*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *женералдир*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *оффсетдир*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *нестедструкт*
+*`textDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`* *`textMacroDir`* *`;;`*
 
-*структтаг*\
-&nbsp;&nbsp;&nbsp;&nbsp;*ID*
+*`textItem`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`textLiteral`* | *`textMacroId`* | **`%`** *`constExpr`*
 
-\ *термина*
-&nbsp;&nbsp;&nbsp;&nbsp;*симпликспр* |! *симпликспр*
+*`textLen`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`constExpr`*
 
-*text*\
-&nbsp;&nbsp;&nbsp;&nbsp;*текстлитерал* | *текстовый* символ |! *символьный* *текст* | *символ* |! *символ*
+*`textList`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`textItem`* | *`textList`* **`,`** ⟦ *`;;`* ⟧ *`textItem`*
 
-*текстдир*\
-&nbsp;&nbsp;&nbsp;&nbsp;*ID* *текстмакродир* ;;
+*`textLiteral`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`<`** *`text`* **`>`** **`;;`**
 
-*текститем*\
-&nbsp;&nbsp;&nbsp;&nbsp;*текстлитерал* | *текстмакроид* | % *constExpr*
+*`textMacroDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`CATSTR`** ⟦ *`textList`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`TEXTEQU`** ⟦ *`textList`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`SIZESTR`** *`textItem`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`SUBSTR`** *`textItem`* **`,`** *`textStart`* ⟦ **`,`** *`textLen`* ⟧\
+&nbsp;&nbsp;&nbsp;&nbsp;| **`INSTR`** ⟦ *`textStart`* **`,`** ⟧ *`textItem`* **`,`** *`textItem`*
 
-*текстлен*\
-&nbsp;&nbsp;&nbsp;&nbsp;*constExpr*
+*`textMacroId`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`*
 
-*текстлист*\
-&nbsp;&nbsp;&nbsp;&nbsp;*текститем* | *текстлист* , ⟦;; ⟧ *текститем*
+*`textStart`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`constExpr`*
 
-*текстлитерал*\
-&nbsp;&nbsp;&nbsp;&nbsp;< *text* >;;
+*`titleDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`titleType`* *`arbitraryText`* *`;;`*
 
-*текстмакродир*\
-&nbsp;&nbsp;&nbsp;&nbsp;**катстр** ⟦ *текстлист* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;| **текстеку** ⟦ *текстлист* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;| **сизестр** *текститем*\
-&nbsp;&nbsp;&nbsp;&nbsp;| **substr** *текститем* , *текстстарт* ⟦, *текстлен* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;| **InStr** ⟦ *Текстстарт* , ⟧ *текститем* , *текститем*
+*`titleType`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`TITLE`** | **`SUBTITLE`** | **`SUBTTL`**
 
-*текстмакроид*\
-&nbsp;&nbsp;&nbsp;&nbsp;*ID*
+*`type`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`structTag`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`unionTag`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`recordTag`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`distance`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`dataType`*\
+&nbsp;&nbsp;&nbsp;&nbsp;| *`typeId`*
 
-*текстстарт*\
-&nbsp;&nbsp;&nbsp;&nbsp;*constExpr*
+*`typedefDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`typeId`***`TYPEDEF`** квалификатор
 
-*титледир*\
-&nbsp;&nbsp;&nbsp;&nbsp;*титлетипе* *арбитраритекст* ;;
+*`typeId`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`*
 
-*титлетипе*\
-&nbsp;&nbsp;&nbsp;&nbsp;**title** | **подзаголовок** | **субттл**
+*`unionTag`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`id`*
 
-*type*\
-&nbsp;&nbsp;&nbsp;&nbsp;*структтаг*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *унионтаг*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *рекордтаг*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *расстояние*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *dataType*\
-&nbsp;&nbsp;&nbsp;&nbsp;| *typeId*
+*`untilDir`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`.UNTIL`** *`cExpr`* *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`.UNTILCXZ`** ⟦ *`cxzExpr`* ⟧ *`;;`*
 
-*типедефдир*\
-Квалификатор &nbsp;&nbsp;&nbsp;&nbsp;*typeId* **TYPEDEF**
+*`usesRegs`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`USES`** *`regList`*
 
-\ *typeId*
-&nbsp;&nbsp;&nbsp;&nbsp;*ID*
+*`whileBlock`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`.WHILE`**\
+&nbsp;&nbsp;&nbsp;&nbsp;*`cExpr`* *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;*`blockStatements`* *`;;`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`.ENDW`**
 
-*унионтаг*\
-&nbsp;&nbsp;&nbsp;&nbsp;*ID*
+*`whiteSpaceCharacter`*\
+&nbsp;&nbsp;&nbsp;&nbsp;ASCII 8, 9, 11-13, 26, 32
 
-*унтилдир*\
-&nbsp;&nbsp;&nbsp;&nbsp; **. ДО** *цекспр* ;; \
-&nbsp;&nbsp;&nbsp;&nbsp; **. УНТИЛККСЗ** ⟦ *кксзекспр* ⟧;;
-
-*усесрегс*\
-&nbsp;&nbsp;&nbsp;&nbsp;**использует** *реглист*
-
-*вхилеблокк*\
-&nbsp;&nbsp;&nbsp;&nbsp; **. При**\
-&nbsp;&nbsp;&nbsp;&nbsp;*цекспр* ;; \
-&nbsp;&nbsp;&nbsp;&nbsp;*блоккстатементс* ;; \
-&nbsp;&nbsp;&nbsp;&nbsp; **. ЕНДВ**
-
-*вхитеспацечарактер*\
-&nbsp;&nbsp;&nbsp;&nbsp;ASCII 8, 9, 11 – 13, 26, 32
-
-*график xmmregister*\
-&nbsp;&nbsp;&nbsp;&nbsp;XMM0 | XMM1 | XMM2 | XMM3 | XMM4 | XMM5 | XMM6 | XMM7 | XMM8 | XMM9 | XMM10 | XMM11 | XMM12 | XMM13 | XMM14 | XMM15\
+*`xmmRegister`*\
+&nbsp;&nbsp;&nbsp;&nbsp;**`XMM0`** | **`XMM1`** | **`XMM2`** | **`XMM3`** | **`XMM4`** | **`XMM5`** | **`XMM6`** | **`XMM7`** | **`XMM8`** | **`XMM9`** | **`XMM10`** | **`XMM11`** | **`XMM12`** | **`XMM13`** | **`XMM14`** | **`XMM15`**

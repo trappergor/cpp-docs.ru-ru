@@ -2,7 +2,7 @@
   tocHref: /
   topicHref: /
   items:
-    - name: Visual C++
+    - name: Microsoft C++
       tocHref: /cpp/
       topicHref: /cpp
       items:
@@ -10,13 +10,13 @@
           tocHref: /cpp/
           topicHref: /cpp/overview/visual-cpp-in-visual-studio
           items:
-            - name: "Язык\_C++"
+            - name: Язык C++
               tocHref: /cpp/cpp/
               topicHref: /cpp/cpp/cpp-language-reference
             - name: "Язык\_C"
               tocHref: /cpp/c-language/
               topicHref: /cpp/c-language/c-language-reference
-            - name: "Препроцессор\_C/C++"
+            - name: Препроцессор C/C++
               tocHref: /cpp/preprocessor/
               topicHref: /cpp/preprocessor/c-cpp-preprocessor-reference
             - name: Внутренние объекты компилятора и язык ассемблера
@@ -32,7 +32,7 @@
                 - name: MASM
                   tocHref: /cpp/assembler/masm/
                   topicHref: /cpp/assembler/masm/microsoft-macro-assembler-reference
-            - name: Библиотека времени выполнения C
+            - name: Библиотека среды выполнения C
               tocHref: /cpp/c-runtime-library/
               topicHref: /cpp/c-runtime-library/c-run-time-library-reference
               items:
@@ -45,27 +45,27 @@
             - name: Windows
               tocHref: /cpp/windows/
               topicHref: /cpp/windows/overview-of-windows-programming-in-cpp
+              items: null
+            - name: ATL
+              tocHref: /cpp/atl/
+              topicHref: /cpp/atl/atl-com-desktop-components
+            - name: MFC
+              tocHref: /cpp/mfc/
+              topicHref: /cpp/mfc/mfc-desktop-applications
               items:
-                - name: ATL
-                  tocHref: /cpp/atl/
-                  topicHref: /cpp/atl/atl-com-desktop-components
-                - name: MFC
-                  tocHref: /cpp/mfc/
-                  topicHref: /cpp/mfc/mfc-desktop-applications
-                  items:
-                    - name: Справочники
-                      tocHref: /cpp/mfc/reference/
-                      topicHref: /cpp/mfc/reference/mfc-classes
-                - name: Общие классы ATL и MFC
-                  tocHref: /cpp/atl-mfc-shared/
-                  topicHref: /cpp/atl-mfc-shared/atl-mfc-shared-classes
-                  items:
-                    - name: Справочники
-                      tocHref: /cpp/atl-mfc-shared/reference/
-                      topicHref: /cpp/atl-mfc-shared/reference/classes-shared-by-mfc-and-atl
-                - name: C++/CX
-                  tocHref: /cpp/cppcx/
-                  topicHref: /cpp/cppcx/visual-c-language-reference-c-cx
+                - name: Справочник
+                  tocHref: /cpp/mfc/reference/
+                  topicHref: /cpp/mfc/reference/mfc-classes
+            - name: Общие классы ATL и MFC
+              tocHref: /cpp/atl-mfc-shared/
+              topicHref: /cpp/atl-mfc-shared/atl-mfc-shared-classes
+              items:
+                - name: Справочник
+                  tocHref: /cpp/atl-mfc-shared/reference/
+                  topicHref: /cpp/atl-mfc-shared/reference/classes-shared-by-mfc-and-atl
+            - name: C++/CX
+              tocHref: /cpp/cppcx/
+              topicHref: /cpp/cppcx/visual-c-language-reference-c-cx
             - name: Linux
               tocHref: /cpp/linux/
               topicHref: /cpp/linux/download-install-and-setup-the-linux-development-workload
@@ -87,7 +87,7 @@
                   topicHref: /cpp/data/odbc/open-database-connectivity-odbc
             - name: 'Редактирование, навигация и рефакторинг кода'
               tocHref: /cpp/ide
-              topicHref: /cpp/overview-of-cpp-development
+              topicHref: /cpp/ide/read-and-understand-code-cpp
               items:
                 - name: IDE
                   tocHref: /cpp/ide/
@@ -96,13 +96,15 @@
               tocHref: /cpp/build/
               topicHref: /cpp/build/building-c-cpp-programs
               items:
-                - name: Справочник по сборке
+                - name: Указание сборки
                   tocHref: /cpp/build/reference/
                   topicHref: /cpp/build/reference/c-cpp-building-reference
-                  items:
-                    - name: Ошибки и предупреждения средства и компилятора
-                      tocHref: /cpp/error-messages/
-                      topicHref: /cpp/error-messages/compiler-errors-1/c-cpp-build-errors
+            - name: Аналитика сборки
+              tocHref: /cpp/build-insights/
+              topicHref: /cpp/build-insights/get-started-with-cpp-build-insights
+            - name: Ошибки и предупреждения
+              tocHref: /cpp/error-messages/
+              topicHref: /cpp/error-messages/compiler-errors-1/c-cpp-build-errors
             - name: Перенос и обновление
               tocHref: /cpp/porting/
               topicHref: /cpp/porting/visual-cpp-porting-and-upgrading-guide

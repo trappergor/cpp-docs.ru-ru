@@ -23,14 +23,14 @@ helpviewer_keywords:
 - std::bernoulli_distribution [C++], param_type
 - std::bernoulli_distribution [C++], param_type
 ms.assetid: 586bcde1-95ca-411a-bf17-4aaf19482f34
-ms.openlocfilehash: faadc99b6351af884331e6658e1e11de8def2195
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6a53707d823ced7316604f75691194dc6e05545e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447772"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364859"
 ---
-# <a name="bernoullidistribution-class"></a>Класс bernoulli_distribution
+# <a name="bernoulli_distribution-class"></a>Класс bernoulli_distribution
 
 Формирует распределение Бернулли.
 
@@ -66,12 +66,12 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*РГСЧ*\
-Единый механизм генератора случайных чисел. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*Ргсч*\
+Единый генератор случайных чисел. Для возможных типов см [ \<>. ](../standard-library/random.md)
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Класс описывает распределение, которое создает значения типа **bool**, распределенные в соответствии с дискретной функцией вероятности распределения Бернулли. В следующей таблице представлены ссылки на статьи об отдельных членах.
+Класс описывает распределение, которое производит значения типа **bool**, распределенные в соответствии с функцией дискретной вероятности распределения Bernoulli. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
 ||||
 |-|-|-|
@@ -88,7 +88,7 @@ public:
 
 Функции-члены `operator()` возвращают следующее значение, созданное механизмом РГСЧ, из текущего или указанного пакета параметров.
 
-Дополнительные сведения о классах распределения и их членах см. в разделе [\<random>](../standard-library/random.md).
+Для получения дополнительной информации о классах распределения и их членах [ \<>](../standard-library/random.md)см.
 
 Дополнительные сведения о дискретной функции вероятности распределения Бернулли см. в статье [Распределение Бернулли](https://go.microsoft.com/fwlink/p/?linkid=398467).
 
@@ -158,7 +158,7 @@ true :::::::::::::::::::::::::::::::::::::::::
 
 **Пространство имен:** std
 
-## <a name="bernoulli_distribution"></a>  bernoulli_distribution::bernoulli_distribution
+## <a name="bernoulli_distributionbernoulli_distribution"></a><a name="bernoulli_distribution"></a>bernoulli_distribution::bernoulli_distribution
 
 Формирует распределение.
 
@@ -169,39 +169,39 @@ explicit bernoulli_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Параметры
 
-*ш*\
+*P*\
 Хранимый параметр распределения `p`.
 
-*ParM*\
+*парм*\
 Структура `param_type`, используемая для формирования распределения.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-**Предусловие:** `0.0 ≤ p ≤ 1.0`
+**Предварительное условие:**`0.0 ≤ p ≤ 1.0`
 
 Первый конструктор создает объект, хранимое значение `p` которого содержит значение *p*.
 
 Второй конструктор создает объект, хранимые параметры которого инициализируются из *parm*. Вы можете получить и задать текущие параметры существующего распределения, вызвав функцию-член `param()`.
 
-## <a name="param_type"></a>  bernoulli_distribution::param_type
+## <a name="bernoulli_distributionparam_type"></a><a name="param_type"></a>bernoulli_distribution::pараматип
 
 Содержит параметры распределения.
 
-struct param_type { typedef bernoulli_distribution distribution_type; param_type(double p = 0.5); double p() const;
+структурировать param_type - typedef bernoulli_distribution distribution_type; param_type (двойной р 0,5); двойной р() конст;
 
    bool operator==(const param_type& right) const; bool operator!=(const param_type& right) const; };
 
 ### <a name="parameters"></a>Параметры
 
-*ш*\
+*P*\
 Хранимый параметр распределения `p`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-**Предусловие:** `0.0 ≤ p ≤ 1.0`
+**Предварительное условие:**`0.0 ≤ p ≤ 1.0`
 
 Эту структуру можно передать конструктору класса распределения во время создания экземпляра, функции-члену `param()` для установки хранимых параметров существующего распределения и `operator()` для использования вместо хранимых параметров.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[\<random>](../standard-library/random.md)
+[\<случайные>](../standard-library/random.md)

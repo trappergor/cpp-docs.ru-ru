@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2773
 ms.assetid: 8d564b26-1623-4d92-aabc-dff33f7b1145
-ms.openlocfilehash: dc4ff7174f6a801f0e1759ce8b4b306e74ec798a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 661c607183697b0ace12291d9d1305b262a80c6f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257209"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176992"
 ---
 # <a name="compiler-error-c2773"></a>Ошибка компилятора C2773
 
-\#Импорт и #using доступны только в компиляторе C++
+\#импорт и #using доступны только в C++ компиляторе
 
-Компилятор C не распознает `#import` директивы препроцессора. Источник компилировать как C++. Используйте [/TP](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) при необходимости.
+Компилятор C не распознает директиву препроцессора `#import`. Скомпилируйте источник как C++. При необходимости используйте значение [/TP](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) .

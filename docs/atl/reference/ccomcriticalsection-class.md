@@ -1,5 +1,5 @@
 ---
-title: Класс Ккомкритикалсектион
+title: Класс CComCriticalSection
 ms.date: 11/04/2016
 f1_keywords:
 - CComCriticalSection
@@ -13,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComCriticalSection class
 ms.assetid: 44e1edd2-90be-4bfe-9739-58e8b419e7d1
-ms.openlocfilehash: ee4ce32ed4ae04bc3b390af5cf104b8a0af599f8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f3991d217fbc201bd428ed2522a5c4c25e074928
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497283"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327968"
 ---
-# <a name="ccomcriticalsection-class"></a>Класс Ккомкритикалсектион
+# <a name="ccomcriticalsection-class"></a>Класс CComCriticalSection
 
-Этот класс предоставляет методы для получения и освобождения владения объектом критической секции.
+Этот класс предоставляет методы получения и освобождения права собственности на объект критического раздела.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,38 +34,38 @@ class CComCriticalSection
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[Ккомкритикалсектион:: Ккомкритикалсектион](#ccomcriticalsection)|Конструктор.|
+|[CComcriticalSection::CcomcriticalSection](#ccomcriticalsection)|Конструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[Ккомкритикалсектион:: init](#init)|Создает и инициализирует объект критической секции.|
-|[Ккомкритикалсектион:: Lock](#lock)|Получает владение объектом критической секции.|
-|[Ккомкритикалсектион:: Term](#term)|Освобождает системные ресурсы, используемые объектом критического раздела.|
-|[Ккомкритикалсектион:: Unlock](#unlock)|Освобождает владение объектом критического раздела.|
+|[CComCriticalSection::Init](#init)|Создает и инициализирует критический объект раздела.|
+|[CComCriticalSection::Lock](#lock)|Получает право собственности на объект критического сечения.|
+|[CComCriticalSection::Срок](#term)|Выпускает системные ресурсы, используемые критическим объектом секции.|
+|[CComCriticalSection::Разблокировка](#unlock)|Выпускает право собственности на объект критического раздела.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[Ккомкритикалсектион:: m_sec](#m_sec)|Объект CRITICAL_SECTION.|
+|[CComCriticalSection::m_sec](#m_sec)|Объект CRITICAL_SECTION.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-`CComCriticalSection`аналогичен классу [ккомаутокритикалсектион](../../atl/reference/ccomautocriticalsection-class.md), за исключением того, что необходимо явно инициализировать и освободить критический раздел.
+`CComCriticalSection`похож на класс [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md), за исключением того, что вы должны явно инициализовать и выпустить критический раздел.
 
-Обычно используется `CComCriticalSection` имя **typedef** [CriticalSection](ccommultithreadmodel-class.md#criticalsection). Это имя указывает `CComCriticalSection` , когда используется [ккоммултисреадмодел](../../atl/reference/ccommultithreadmodel-class.md) .
+Как правило, `CComCriticalSection` вы используете через **имя typedef** [CriticalSection.](ccommultithreadmodel-class.md#criticalsection) Это имя `CComCriticalSection` ссылается при использовании [CComMultiThreadModel.](../../atl/reference/ccommultithreadmodel-class.md)
 
-См. раздел [класс ккомкритсеклокк](../../atl/reference/ccomcritseclock-class.md) для более безопасного использования этого класса, нежели `Lock` вызов `Unlock` и непосредственно.
+См [CComCritSecLock класс](../../atl/reference/ccomcritseclock-class.md) для более безопасного `Lock` `Unlock` способа использования этого класса, чем вызов и непосредственно.
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** атлкоре. h
+**Заголовок:** atlcore.h
 
-##  <a name="ccomcriticalsection"></a>Ккомкритикалсектион:: Ккомкритикалсектион
+## <a name="ccomcriticalsectionccomcriticalsection"></a><a name="ccomcriticalsection"></a>CComcriticalSection::CcomcriticalSection
 
 Конструктор.
 
@@ -73,13 +73,13 @@ class CComCriticalSection
 CComCriticalSection() throw();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Задает для элемента данных [m_sec](#m_sec) значение null.
+Устанавливает m_sec [данных](#m_sec) в NULL.
 
-##  <a name="init"></a>Ккомкритикалсектион:: init
+## <a name="ccomcriticalsectioninit"></a><a name="init"></a>CComCriticalSection::Init
 
-Вызывает функцию Win32 [инитиализекритикалсектион](/windows/win32/api/synchapi/nf-synchapi-initializecriticalsection), которая инициализирует критически важный объект Section, содержащийся в элементе данных [m_sec](#m_sec) .
+Вызывает функцию Win32 [ИнициализацияCriticalSection](/windows/win32/api/synchapi/nf-synchapi-initializecriticalsection), которая инициализирует критический объект раздела, содержащийся в [m_sec](#m_sec) члене данных.
 
 ```
 HRESULT Init() throw();
@@ -87,11 +87,11 @@ HRESULT Init() throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении, E_OUTOFMEMORY или E_FAIL в случае сбоя.
+Возвращает S_OK на успех, E_OUTOFMEMORY или E_FAIL на неудачу.
 
-##  <a name="lock"></a>Ккомкритикалсектион:: Lock
+## <a name="ccomcriticalsectionlock"></a><a name="lock"></a>CComCriticalSection::Lock
 
-Вызывает функцию Win32 [EnterCriticalSection](/windows/win32/api/synchapi/nf-synchapi-entercriticalsection), которая ожидает, пока поток не сможет стать владельцем объекта критического раздела, содержащегося в элементе данных [m_sec](#m_sec) .
+Вызывает функцию Win32 [EnterCriticalSection](/windows/win32/api/synchapi/nf-synchapi-entercriticalsection), которая ждет, пока поток может взять на себя ответственность за критический объект раздела, содержащийся в [m_sec](#m_sec) членов данных.
 
 ```
 HRESULT Lock() throw();
@@ -99,23 +99,23 @@ HRESULT Lock() throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении, E_OUTOFMEMORY или E_FAIL в случае сбоя.
+Возвращает S_OK на успех, E_OUTOFMEMORY или E_FAIL на неудачу.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Объект критической секции сначала необходимо инициализировать с помощью вызова метода [init](#init) . После завершения выполнения защищенного кода поток должен вызвать [Unlock](#unlock) , чтобы освободить владение критической секцией.
+Объект критического раздела должен быть сначала инициализирован с помощью вызова к методу [Init.](#init) Когда защищенный код закончил выполнение, поток должен вызвать [Unlock,](#unlock) чтобы освободить право собственности на критический раздел.
 
-##  <a name="m_sec"></a>Ккомкритикалсектион:: m_sec
+## <a name="ccomcriticalsectionm_sec"></a><a name="m_sec"></a>CComCriticalSection::m_sec
 
-Содержит объект критической секции, используемый всеми `CComCriticalSection` методами.
+Содержит критический объект раздела, `CComCriticalSection` который используется всеми методами.
 
 ```
 CRITICAL_SECTION m_sec;
 ```
 
-##  <a name="term"></a>Ккомкритикалсектион:: Term
+## <a name="ccomcriticalsectionterm"></a><a name="term"></a>CComCriticalSection::Срок
 
-Вызывает функцию Win32 [делетекритикалсектион](/windows/win32/api/synchapi/nf-synchapi-deletecriticalsection), которая освобождает все ресурсы, используемые объектом критического раздела, содержащимся в элементе данных [m_sec](#m_sec) .
+Вызывает функцию Win32 [DeleteCriticalSection](/windows/win32/api/synchapi/nf-synchapi-deletecriticalsection), которая выпускает все ресурсы, используемые критическим объектом раздела, содержащимся в [m_sec](#m_sec) члене данных.
 
 ```
 HRESULT Term() throw();
@@ -123,15 +123,15 @@ HRESULT Term() throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK.
+Возвращает S_OK.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-После `Term` вызова критическая секция больше не может использоваться для синхронизации.
+После `Term` вызова критический раздел больше не может использоваться для синхронизации.
 
-##  <a name="unlock"></a>Ккомкритикалсектион:: Unlock
+## <a name="ccomcriticalsectionunlock"></a><a name="unlock"></a>CComCriticalSection::Разблокировка
 
-Вызывает функцию Win32 [LeaveCriticalSection](/windows/win32/api/synchapi/nf-synchapi-leavecriticalsection), которая освобождает владение объектом критической секции, содержащимся в члене данных [m_sec](#m_sec) .
+Вызывает функцию Win32 [LeaveCriticalSection](/windows/win32/api/synchapi/nf-synchapi-leavecriticalsection), которая выпускает право собственности на критический объект раздела, содержащийся в [m_sec](#m_sec) члене данных.
 
 ```
 HRESULT Unlock() throw();
@@ -139,14 +139,14 @@ HRESULT Unlock() throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK.
+Возвращает S_OK.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Чтобы сначала получить владение, поток должен вызвать метод [Lock](#lock) . Каждый вызов метода `Lock` требует соответствующего `Unlock` вызова, чтобы освободить владение критическим разделом.
+Для первого получения права собственности поток должен вызвать метод [блокировки.](#lock) Каждый `Lock` вызов требует соответствующего `Unlock` вызова для освобождения собственности на критический раздел.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Класс CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)<br/>
-[Обзор класса](../../atl/atl-class-overview.md)<br/>
+[CComFakeCriticalSection класс](../../atl/reference/ccomfakecriticalsection-class.md)<br/>
+[Общие сведения о классах](../../atl/atl-class-overview.md)<br/>
 [Класс CComCritSecLock](../../atl/reference/ccomcritseclock-class.md)

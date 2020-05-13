@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - literal keyword [C++]
 ms.assetid: 6b1a1f36-2e1d-4a23-8eb6-172f4f3c477f
-ms.openlocfilehash: d567f8270dcb8965ed2f882c9a0c005f295fc619
-ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
+ms.openlocfilehash: 8c40adaed32bae23ec43cd553c3f755ac2b54cfb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "79545459"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172143"
 ---
 # <a name="literal-ccli-and-ccx"></a>literal (C++/CLI и C++/CX)
 
@@ -21,13 +21,13 @@ ms.locfileid: "79545459"
 
 ## <a name="all-platforms"></a>Все платформы
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 (Отсутствуют комментарии для этой возможности языка, которая применяется во всех средах выполнения.)
 
 ## <a name="windows-runtime"></a>Среда выполнения Windows
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 (Отсутствуют комментарии для этой возможности языка, которая применяется только в среде выполнения Windows).
 
@@ -37,7 +37,7 @@ ms.locfileid: "79545459"
 
 ## <a name="common-language-runtime"></a>Среда CLR
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Элемент данных, помеченный как **literal**, необходимо инициализировать при объявлении, а его значение должно быть целочисленной константой, перечислением или строковым типом. Преобразование из типа выражения инициализации в тип статического константного элемента данных не должно требовать определенного пользователем преобразования.
 
@@ -125,6 +125,6 @@ class B {
 
 Параметр компилятора: `/clr`
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Расширения компонентов для .NET и UWP](component-extensions-for-runtime-platforms.md)

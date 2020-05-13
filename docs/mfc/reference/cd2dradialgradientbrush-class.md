@@ -38,16 +38,16 @@ helpviewer_keywords:
 - CD2DRadialGradientBrush [MFC], m_pRadialGradientBrush
 - CD2DRadialGradientBrush [MFC], m_RadialGradientBrushProperties
 ms.assetid: 6c76d84a-d831-4ee2-96f1-82c1f5b0d6a9
-ms.openlocfilehash: 22029ebcf8cf519571e81e11c84de146c9d54b26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 450314fdbf8441b0cc345430518d083573659add
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396331"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750315"
 ---
 # <a name="cd2dradialgradientbrush-class"></a>Класс CD2DRadialGradientBrush
 
-Оболочка для ID2D1RadialGradientBrush.
+Обертка для ID2D1RadialGradientBrush.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -59,47 +59,47 @@ class CD2DRadialGradientBrush : public CD2DGradientBrush;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CD2DRadialGradientBrush::CD2DRadialGradientBrush](#cd2dradialgradientbrush)|Создает объект CD2DLinearGradientBrush.|
-|[CD2DRadialGradientBrush:: ~ CD2DRadialGradientBrush](#_dtorcd2dradialgradientbrush)|Деструктор Вызывается при уничтожении объекта D2D кисть радиального градиента.|
+|[CD2DRadialGradientBrush::CD2DRadialGradientBrush](#cd2dradialgradientbrush)|Строит объект CD2DLinearGradientBrush.|
+|[CD2DRadialGradientBrush::CD2DRadialGradientBrush](#_dtorcd2dradialgradientbrush)|Деструктор Вызывается при уничтожении радиального градиента объекта D2D.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CD2DRadialGradientBrush::Attach](#attach)|Присоединяет существующий интерфейс ресурса к объекту|
-|[CD2DRadialGradientBrush::CREATE](#create)|Создает CD2DRadialGradientBrush. (Переопределяет [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
-|[CD2DRadialGradientBrush::destroy](#destroy)|Уничтожает объект CD2DRadialGradientBrush. (Переопределяет [CD2DGradientBrush::Destroy](../../mfc/reference/cd2dgradientbrush-class.md#destroy).)|
-|[CD2DRadialGradientBrush::Detach](#detach)|Отсоединяет интерфейс ресурса из объекта|
+|[CD2DRadialGradientBrush::Attach](#attach)|Прикрепляет существующий интерфейс ресурса к объекту|
+|[CD2DRadialGradientBrush::Создание](#create)|Создает CD2DRadialGradientBrush. (Переопределяет [CD2DРесурс::Создание](../../mfc/reference/cd2dresource-class.md#create).)|
+|[CD2DRadialGradientBrush::Destroy](#destroy)|Уничтожает объект CD2DRadialGradientBrush. (Отменяет [CD2DGradientBrush: :Destroy](../../mfc/reference/cd2dgradientbrush-class.md#destroy).)|
+|[CD2DRadialGradientBrush::Detach](#detach)|Открепите интерфейс ресурса с объекта|
 |[CD2DRadialGradientBrush::Get](#get)|Возвращает интерфейс ID2D1RadialGradientBrush|
-|[CD2DRadialGradientBrush::GetCenter](#getcenter)|Извлекает центра эллипса градиента|
-|[CD2DRadialGradientBrush::GetGradientOriginOffset](#getgradientoriginoffset)|Получает смещение от начала градиента относительно центра эллипса градиента|
-|[CD2DRadialGradientBrush::GetRadiusX](#getradiusx)|Возвращает x радиус эллипса градиента|
-|[CD2DRadialGradientBrush::GetRadiusY](#getradiusy)|Получает y радиус эллипса градиента|
-|[CD2DRadialGradientBrush::SetCenter](#setcenter)|Определяющее центр градиента эллипса в пространстве координат кисти|
-|[CD2DRadialGradientBrush::SetGradientOriginOffset](#setgradientoriginoffset)|Задает смещение начала градиента относительно центра эллипса градиента|
-|[CD2DRadialGradientBrush::SetRadiusX](#setradiusx)|Указывает x радиус эллипса градиента, в пространстве координат кисти|
-|[CD2DRadialGradientBrush::SetRadiusY](#setradiusy)|Указывает y радиус эллипса градиента, в пространстве координат кисти|
+|[CD2DRadialGradientBrush::GetCenter](#getcenter)|Извлекает центр градиента эллипса|
+|[CD2DRadialGradientBrush::GetGradientOriginOffset](#getgradientoriginoffset)|Извлекает смещение градиентного происхождения по отношению к центру градиента эллипса|
+|[CD2DRadialGradientBrush::GetRadiusX](#getradiusx)|Извлекает x-радиус градиентного эллипса|
+|[CD2DRadialGradientBrush::GetRadiusY](#getradiusy)|Извлекает y-радиус градиентного эллипса|
+|[CD2DRadialGradientBrush::SetCenter](#setcenter)|Определяет центр эллипса градиента в пространстве координат кисти|
+|[CD2DRadialGradientBrush::SetGradientOriginOffset](#setgradientoriginoffset)|Определяет смещение градиентного происхождения относительно центра градиента эллипса|
+|[CD2DRadialGradientBrush::SetRadiusX](#setradiusx)|Определяет x-радиус эллипса градиента в пространстве координат кисти|
+|[CD2DRadialGradientBrush::SetRadiusY](#setradiusy)|Определяет y-радиус градиентного эллипса в пространстве координат кисти|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CD2DRadialGradientBrush::operator ID2D1RadialGradientBrush *](#operator_id2d1radialgradientbrush_star)|Возвращает интерфейс ID2D1RadialGradientBrush|
+|[CD2DRadialGradientBrush::оператор ID2D1РадиалГрадиентБрур](#operator_id2d1radialgradientbrush_star)|Возвращает интерфейс ID2D1RadialGradientBrush|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[CD2DRadialGradientBrush::m_pRadialGradientBrush](#m_pradialgradientbrush)|Указатель на ID2D1RadialGradientBrush.|
-|[CD2DRadialGradientBrush::m_RadialGradientBrushProperties](#m_radialgradientbrushproperties)|Center, смещение начала градиента и радиус по оси x и y радиус кисти градиента.|
+|[CD2DRadialGradientBrush::m_RadialGradientBrushProperties](#m_radialgradientbrushproperties)|Центр, градиентное смещение происхождения, и X-радиус и y-радиус градиента кисти.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CD2DResource](../../mfc/reference/cd2dresource-class.md)
+[CD2DРесурс](../../mfc/reference/cd2dresource-class.md)
 
 [CD2DBrush](../../mfc/reference/cd2dbrush-class.md)
 
@@ -111,30 +111,30 @@ class CD2DRadialGradientBrush : public CD2DGradientBrush;
 
 **Заголовок:** afxrendertarget.h
 
-##  <a name="_dtorcd2dradialgradientbrush"></a>  CD2DRadialGradientBrush:: ~ CD2DRadialGradientBrush
+## <a name="cd2dradialgradientbrushcd2dradialgradientbrush"></a><a name="_dtorcd2dradialgradientbrush"></a>CD2DRadialGradientBrush::CD2DRadialGradientBrush
 
-Деструктор Вызывается при уничтожении объекта D2D кисть радиального градиента.
+Деструктор Вызывается при уничтожении радиального градиента объекта D2D.
 
 ```
 virtual ~CD2DRadialGradientBrush();
 ```
 
-##  <a name="attach"></a>  CD2DRadialGradientBrush::Attach
+## <a name="cd2dradialgradientbrushattach"></a><a name="attach"></a>CD2DRadialGradientBrush::Attach
 
-Присоединяет существующий интерфейс ресурса к объекту
+Прикрепляет существующий интерфейс ресурса к объекту
 
-```
+```cpp
 void Attach(ID2D1RadialGradientBrush* pResource);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *pResource*<br/>
-Существующий интерфейс ресурсов. Не может иметь значение NULL
+Существующий интерфейс ресурса. Не может быть NULL
 
-##  <a name="cd2dradialgradientbrush"></a>  CD2DRadialGradientBrush::CD2DRadialGradientBrush
+## <a name="cd2dradialgradientbrushcd2dradialgradientbrush"></a><a name="cd2dradialgradientbrush"></a>CD2DRadialGradientBrush::CD2DRadialGradientBrush
 
-Создает объект CD2DLinearGradientBrush.
+Строит объект CD2DLinearGradientBrush.
 
 ```
 CD2DRadialGradientBrush(
@@ -151,30 +151,30 @@ CD2DRadialGradientBrush(
 ### <a name="parameters"></a>Параметры
 
 *pParentTarget*<br/>
-Указатель на целевой объект отрисовки.
+Указатель на цель рендера.
 
 *gradientStops*<br/>
-Указатель на массив структур D2D1_GRADIENT_STOP.
+Указатель на массив D2D1_GRADIENT_STOP структур.
 
-*gradientStopsCount*<br/>
-Значение больше или равно 1, указывающее число ступеней градиента в массиве gradientStops.
+*градиентСтопсктом*<br/>
+Значение, превышающее или равное 1, которое определяет количество остановок градиента в массиве gradientStops.
 
-*RadialGradientBrushProperties*<br/>
-Center, смещение начала градиента и радиус по оси x и y радиус кисти градиента.
+*РадиалГрадиентБруриенсперты*<br/>
+Центр, градиентное смещение происхождения, и X-радиус и y-радиус градиента кисти.
 
-*colorInterpolationGamma*<br/>
-Место на диске, в какой цвет выполняется интерполяции между ограничениями градиента.
+*цветИнтерполацииГамма*<br/>
+Пространство, в котором выполняется цветовая интерполяция между остановками градиента.
 
 *extendMode*<br/>
-Поведение градиента за пределами диапазона нормализованное [0,1].
+Поведение градиента за пределами диапазона «0,1».
 
 *pBrushProperties*<br/>
-Указатель на непрозрачность и преобразования кисти.
+Указатель на непрозрачность и трансформацию кисти.
 
 *bAutoDestroy*<br/>
-Указывает, что объект будет уничтожен владельца (pParentTarget).
+Означает, что объект будет уничтожен владельцем (pParentTarget).
 
-##  <a name="create"></a>  CD2DRadialGradientBrush::CREATE
+## <a name="cd2dradialgradientbrushcreate"></a><a name="create"></a>CD2DRadialGradientBrush::Создание
 
 Создает CD2DRadialGradientBrush.
 
@@ -185,13 +185,13 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ### <a name="parameters"></a>Параметры
 
 *pRenderTarget*<br/>
-Указатель на целевой объект отрисовки.
+Указатель на цель рендера.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если метод завершается успешно, возвращается значение S_OK. В противном случае он возвращает код ошибки HRESULT.
+Если метод завершается успешно, возвращает значение S_OK. В противном случае он возвращает код ошибки HRESULT.
 
-##  <a name="destroy"></a>  CD2DRadialGradientBrush::destroy
+## <a name="cd2dradialgradientbrushdestroy"></a><a name="destroy"></a>CD2DRadialGradientBrush::Destroy
 
 Уничтожает объект CD2DRadialGradientBrush.
 
@@ -199,9 +199,9 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 virtual void Destroy();
 ```
 
-##  <a name="detach"></a>  CD2DRadialGradientBrush::Detach
+## <a name="cd2dradialgradientbrushdetach"></a><a name="detach"></a>CD2DRadialGradientBrush::Detach
 
-Отсоединяет интерфейс ресурса из объекта
+Открепите интерфейс ресурса с объекта
 
 ```
 ID2D1RadialGradientBrush* Detach();
@@ -209,9 +209,9 @@ ID2D1RadialGradientBrush* Detach();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на интерфейс отсоединенных ресурсов.
+Указатель на отдельный интерфейс ресурса.
 
-##  <a name="get"></a>  CD2DRadialGradientBrush::Get
+## <a name="cd2dradialgradientbrushget"></a><a name="get"></a>CD2DRadialGradientBrush::Get
 
 Возвращает интерфейс ID2D1RadialGradientBrush
 
@@ -221,11 +221,11 @@ ID2D1RadialGradientBrush* Get();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на интерфейс ID2D1RadialGradientBrush или значение NULL, если объект еще не инициализирован.
+Указатель на интерфейс ID2D1RadialGradientBrush или NULL, если объект еще не инициализирован.
 
-##  <a name="getcenter"></a>  CD2DRadialGradientBrush::GetCenter
+## <a name="cd2dradialgradientbrushgetcenter"></a><a name="getcenter"></a>CD2DRadialGradientBrush::GetCenter
 
-Извлекает центра эллипса градиента
+Извлекает центр градиента эллипса
 
 ```
 CD2DPointF GetCenter() const;
@@ -233,11 +233,11 @@ CD2DPointF GetCenter() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Центр градиента эллипса. Это значение выражается в пространстве координат кисти
+Центр градиентного эллипса. Это значение выражается в пространстве координат кисти
 
-##  <a name="getgradientoriginoffset"></a>  CD2DRadialGradientBrush::GetGradientOriginOffset
+## <a name="cd2dradialgradientbrushgetgradientoriginoffset"></a><a name="getgradientoriginoffset"></a>CD2DRadialGradientBrush::GetGradientOriginOffset
 
-Получает смещение от начала градиента относительно центра эллипса градиента
+Извлекает смещение градиентного происхождения по отношению к центру градиента эллипса
 
 ```
 CD2DPointF GetGradientOriginOffset() const;
@@ -245,11 +245,11 @@ CD2DPointF GetGradientOriginOffset() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Смещение начала градиента в центре градиента эллипса. Это значение выражается в пространстве координат кисти
+Смещение градиентного происхождения из центра градиентного эллипса. Это значение выражается в пространстве координат кисти
 
-##  <a name="getradiusx"></a>  CD2DRadialGradientBrush::GetRadiusX
+## <a name="cd2dradialgradientbrushgetradiusx"></a><a name="getradiusx"></a>CD2DRadialGradientBrush::GetRadiusX
 
-Возвращает x радиус эллипса градиента
+Извлекает x-радиус градиентного эллипса
 
 ```
 FLOAT GetRadiusX() const;
@@ -257,11 +257,11 @@ FLOAT GetRadiusX() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-X радиус эллипса градиента. Это значение выражается в пространстве координат кисти
+X-радиус градиентного эллипса. Это значение выражается в пространстве координат кисти
 
-##  <a name="getradiusy"></a>  CD2DRadialGradientBrush::GetRadiusY
+## <a name="cd2dradialgradientbrushgetradiusy"></a><a name="getradiusy"></a>CD2DRadialGradientBrush::GetRadiusY
 
-Получает y радиус эллипса градиента
+Извлекает y-радиус градиентного эллипса
 
 ```
 FLOAT GetRadiusY() const;
@@ -269,9 +269,9 @@ FLOAT GetRadiusY() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Y радиус эллипса градиента. Это значение выражается в пространстве координат кисти
+Y-радиус градиентного эллипса. Это значение выражается в пространстве координат кисти
 
-##  <a name="m_pradialgradientbrush"></a>  CD2DRadialGradientBrush::m_pRadialGradientBrush
+## <a name="cd2dradialgradientbrushm_pradialgradientbrush"></a><a name="m_pradialgradientbrush"></a>CD2DRadialGradientBrush::m_pRadialGradientBrush
 
 Указатель на ID2D1RadialGradientBrush.
 
@@ -279,15 +279,15 @@ Y радиус эллипса градиента. Это значение выр
 ID2D1RadialGradientBrush* m_pRadialGradientBrush;
 ```
 
-##  <a name="m_radialgradientbrushproperties"></a>  CD2DRadialGradientBrush::m_RadialGradientBrushProperties
+## <a name="cd2dradialgradientbrushm_radialgradientbrushproperties"></a><a name="m_radialgradientbrushproperties"></a>CD2DRadialGradientBrush::m_RadialGradientBrushProperties
 
-Center, смещение начала градиента и радиус по оси x и y радиус кисти градиента.
+Центр, градиентное смещение происхождения, и X-радиус и y-радиус градиента кисти.
 
 ```
 D2D1_RADIAL_GRADIENT_BRUSH_PROPERTIES m_RadialGradientBrushProperties;
 ```
 
-##  <a name="operator_id2d1radialgradientbrush_star"></a>  CD2DRadialGradientBrush::operator ID2D1RadialGradientBrush *
+## <a name="cd2dradialgradientbrushoperator-id2d1radialgradientbrush"></a><a name="operator_id2d1radialgradientbrush_star"></a>CD2DRadialGradientBrush::оператор ID2D1РадиалГрадиентБрур
 
 Возвращает интерфейс ID2D1RadialGradientBrush
 
@@ -297,60 +297,60 @@ operator ID2D1RadialGradientBrush*();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на интерфейс ID2D1RadialGradientBrush или значение NULL, если объект еще не инициализирован.
+Указатель на интерфейс ID2D1RadialGradientBrush или NULL, если объект еще не инициализирован.
 
-##  <a name="setcenter"></a>  CD2DRadialGradientBrush::SetCenter
+## <a name="cd2dradialgradientbrushsetcenter"></a><a name="setcenter"></a>CD2DRadialGradientBrush::SetCenter
 
-Определяющее центр градиента эллипса в пространстве координат кисти
+Определяет центр эллипса градиента в пространстве координат кисти
 
-```
+```cpp
 void SetCenter(CD2DPointF point);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*point*<br/>
-Центр градиента эллипса в пространстве координат кисти
+*Точки*<br/>
+Центр эллипса градиента, в пространстве координат кисти
 
-##  <a name="setgradientoriginoffset"></a>  CD2DRadialGradientBrush::SetGradientOriginOffset
+## <a name="cd2dradialgradientbrushsetgradientoriginoffset"></a><a name="setgradientoriginoffset"></a>CD2DRadialGradientBrush::SetGradientOriginOffset
 
-Задает смещение начала градиента относительно центра эллипса градиента
+Определяет смещение градиентного происхождения относительно центра градиента эллипса
 
-```
+```cpp
 void SetGradientOriginOffset(CD2DPointF gradientOriginOffset);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *gradientOriginOffset*<br/>
-Смещение начала градиента в центре градиента эллипса
+Смещение градиентного происхождения из центра градиентного эллипса
 
-##  <a name="setradiusx"></a>  CD2DRadialGradientBrush::SetRadiusX
+## <a name="cd2dradialgradientbrushsetradiusx"></a><a name="setradiusx"></a>CD2DRadialGradientBrush::SetRadiusX
 
-Указывает x радиус эллипса градиента, в пространстве координат кисти
+Определяет x-радиус эллипса градиента в пространстве координат кисти
 
-```
+```cpp
 void SetRadiusX(FLOAT radiusX);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *radiusX*<br/>
-X радиус эллипса градиента. Это значение задается в пространстве координат кисти
+X-радиус градиентного эллипса. Это значение находится в пространстве координат кисти
 
-##  <a name="setradiusy"></a>  CD2DRadialGradientBrush::SetRadiusY
+## <a name="cd2dradialgradientbrushsetradiusy"></a><a name="setradiusy"></a>CD2DRadialGradientBrush::SetRadiusY
 
-Указывает y радиус эллипса градиента, в пространстве координат кисти
+Определяет y-радиус градиентного эллипса в пространстве координат кисти
 
-```
+```cpp
 void SetRadiusY(FLOAT radiusY);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*radiusY*<br/>
-Y радиус эллипса градиента. Это значение задается в пространстве координат кисти
+*радиусY*<br/>
+Y-радиус градиентного эллипса. Это значение находится в пространстве координат кисти
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Классы](../../mfc/reference/mfc-classes.md)

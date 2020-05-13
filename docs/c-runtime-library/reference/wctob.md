@@ -1,8 +1,9 @@
 ---
 title: wctob
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - wctob
+- _o_wctob
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - wctob function
 - characters, converting
 ms.assetid: 46aec98b-c2f2-4e9d-9d89-7db99ba8a9a6
-ms.openlocfilehash: 151325b0d66e6d57156cdf94828ca1d4b151d437
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f402b090409c2eb5dc8db457776140a27f8f820e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944931"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910479"
 ---
 # <a name="wctob"></a>wctob
 
@@ -47,18 +49,20 @@ int wctob(
 
 ### <a name="parameters"></a>Параметры
 
-*wchar*<br/>
+*WCHAR*<br/>
 Значение, которое необходимо преобразовать.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Если **вктоб** успешно преобразует расширенный символ, он возвращает его представление многобайтового символа, только если многобайтовый символ имеет длину ровно один байт. Если **вктоб** встречает широкий символ, который не может быть преобразован в многобайтовый символ или многобайтовый символ, не должен быть длиннее одного байта, возвращается значение-1.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Функция **вктоб** преобразует широкий символ, содержащийся в параметре *WCHAR* , в соответствующий многобайтовый символ, передаваемый возвращаемым значением **int** , если многобайтовый символ имеет ровно один байт.
 
 Если **вктоб** завершился неудачей и не найден соответствующий многобайтовый символ, функция **устанавливает значение** "от" до **еилсек** и возвращает-1.
+
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -66,7 +70,7 @@ int wctob(
 |-------------|---------------------|
 |**wctob**|\<wchar.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -102,10 +106,10 @@ int main( void )
 Determined the corresponding multibyte character to be "A".
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Преобразование данных](../../c-runtime-library/data-conversion.md)<br/>
-[Языковой стандарт](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>

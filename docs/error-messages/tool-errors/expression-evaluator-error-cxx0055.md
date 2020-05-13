@@ -7,19 +7,19 @@ helpviewer_keywords:
 - CAN0055
 - CXX0055
 ms.assetid: bb2a81f9-35ea-4b02-a49e-6b2c7023aebd
-ms.openlocfilehash: 7584516f55af51107f2765b57986cf6ea4700fc5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 62197741ada96240e628b95b520bf94396bba5f7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299521"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184714"
 ---
 # <a name="expression-evaluator-error-cxx0055"></a>Ошибка вычислителя выражений CXX0055
 
 неоднозначный символ в операторе контекста
 
-Символ в операторе контекста (**{}**) ссылается на более чем один символ в программе.
+Символ в операторе контекста ( **{}** ) ссылается более чем на один символ в программе.
 
-Оператор разрешения области (`::`) можно попытаться устранить неоднозначность.
+Оператор разрешения области (`::`) может разрешить неоднозначность.
 
-Эта ошибка идентична ошибке CAN0055.
+Эта ошибка идентична CAN0055.

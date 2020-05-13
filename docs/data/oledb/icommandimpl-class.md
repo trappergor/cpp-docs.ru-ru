@@ -51,12 +51,12 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: 6e095e01d3131f98b44935705b2564291fb13844
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: f04885ef61841ac20f87ab07ce73d3c9342fe39c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545981"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212166"
 ---
 # <a name="icommandimpl-class"></a>Класс ICommandImpl
 
@@ -102,7 +102,7 @@ class ATL_NO_VTABLE ICommandImpl : public CommandBase
 |[m_bCancelWhenExecuting](#bcancelwhenexecuting)|Указывает, должна ли команда быть отменена при выполнении.|
 |[m_bIsExecuting](#bisexecuting)|Указывает, выполняется ли в данный момент команда.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Обязательный интерфейс для объекта Command.
 
@@ -116,7 +116,7 @@ class ATL_NO_VTABLE ICommandImpl : public CommandBase
 STDMETHOD(Cancel)();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 См. раздел [ICommand:: Cancel](/previous-versions/windows/desktop/ms714402(v=vs.85)) в *справочнике по OLE DB программиста*.
 
@@ -173,7 +173,7 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 
 Стандартное значение HRESULT. Список типичных значений см. в разделе `ICommand::Execute`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Чтобы создать несколько наборов строк или предоставить собственные условия для создания различных наборов строк, разместите разные вызовы `CreateRowset` из `Execute`.
 
@@ -197,7 +197,7 @@ HRESULT Execute(IUnknown* pUnkOuter,
 
 См. раздел [ICommand:: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) в *справочнике по OLE DB программиста*.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Запрошенный исходящий интерфейс будет интерфейсом, полученным из объекта набора строк, создаваемого этой функцией.
 
@@ -218,7 +218,7 @@ STDMETHOD (GetDBSession) (REFIID riid,
 
 См. раздел [ICommand:: жетдбсессион](/previous-versions/windows/desktop/ms719622(v=vs.85)) в *справочнике программиста OLE DB*.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Полезно для получения свойств из сеанса.
 
@@ -242,7 +242,7 @@ ICommandImpl();
 unsigned m_bCancel:1;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эту переменную можно получить в методе `Execute` класса Command и при необходимости отменить.
 
@@ -256,7 +256,7 @@ unsigned m_bCancel:1;
 unsigned m_bCancelWhenExecuting:1;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 По умолчанию **имеет значение true** (может быть отменено).
 
@@ -270,11 +270,11 @@ unsigned m_bCancelWhenExecuting:1;
 unsigned m_bIsExecuting:1;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Метод `Execute` класса Command может установить для этой переменной **значение true**.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -11,19 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - CNonStatelessWorker class
 ms.assetid: d00936c6-9e7d-49fb-b87d-417b963367d1
-ms.openlocfilehash: abfd3e585c843fcc4ed4ad273c8ed217eaaccb7d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6264bb6bc9070b5ce170b294f9db0d371e7b6b71
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245534"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747671"
 ---
 # <a name="cnonstatelessworker-class"></a>Класс CNonStatelessWorker
 
-Получает запросы из пула потоков и передают их в рабочий объект, который создается и уничтожается при каждом запросе.
+Получает запросы из пула потоков и передает их объекту рабочего, который создается и уничтожается по каждому запросу.
 
 > [!IMPORTANT]
->  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+> Этот класс и его члены не могут быть использованы в приложениях, выполняемых в Windows Runtime.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,53 +34,53 @@ class CNonStatelessWorker
 
 #### <a name="parameters"></a>Параметры
 
-*Рабочей роли*<br/>
-Класс рабочего потока, удовлетворяющие [рабочий архетип](../../atl/reference/worker-archetype.md) подходит для обработки запросов в очереди на [CThreadPool](../../atl/reference/cthreadpool-class.md).
+*Работник*<br/>
+Класс рабочего потока, соответствующий [архетипу рабочего,](../../atl/reference/worker-archetype.md) подходящий для обработки запросов в очереди на [CThreadPool.](../../atl/reference/cthreadpool-class.md)
 
 ## <a name="members"></a>Участники
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[CNonStatelessWorker::RequestType](#requesttype)|Реализация [WorkerArchetype::RequestType](worker-archetype.md#requesttype).|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CNonStatelessWorker::Execute](#execute)|Реализация [WorkerArchetype::Execute](worker-archetype.md#execute).|
-|[CNonStatelessWorker::Initialize](#initialize)|Реализация [WorkerArchetype::Initialize](worker-archetype.md#initialize).|
-|[CNonStatelessWorker::Terminate](#terminate)|Реализация [WorkerArchetype::Terminate](worker-archetype.md#terminate).|
+|[CNonStatelessWorker:::Исполнение](#execute)|Реализация [WorkerArchetype::Execute](worker-archetype.md#execute).|
+|[CNonStatelessWorker::](#initialize)|Реализация [WorkerArchetype::Первоначальная](worker-archetype.md#initialize).|
+|[CNonStatelessWorker::: Прекращение](#terminate)|Реализация [WorkerArchetype::Terminate](worker-archetype.md#terminate).|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Этот класс является простой рабочий поток для использования с [CThreadPool](../../atl/reference/cthreadpool-class.md). Этот класс не предоставляет все возможности обработки запросов, свои собственные. Вместо этого он создает один экземпляр *рабочих* каждого запроса и делегирует реализацию его методов к этому экземпляру.
+Этот класс является простой рабочей нитью для использования с [CThreadPool.](../../atl/reference/cthreadpool-class.md) Этот класс не предоставляет каких-либо собственных возможностей обработки запросов. Вместо этого он мгновенно устанавливает один экземпляр *Рабочего* на запрос и делегирует реализацию своих методов в этот экземпляр.
 
-Преимущество этого класса заключается в обеспечении удобный способ изменения состояния модели для существующих классов рабочих потоков. `CThreadPool` будет создан один сотрудник в течение времени существования потока, поэтому если рабочий класс содержит состояние, она будет содержать несколько запросов. Просто поместить этот класс в `CNonStatelessWorker` шаблона перед его с использованием `CThreadPool`, время существования рабочую роль и состояние, он содержит только один запрос.
+Преимущество этого класса заключается в том, что он обеспечивает удобный способ изменения модели состояния для существующих классов рабочих потоков. `CThreadPool`создаст один рабочий в течение всего срока службы потока, так что если класс рабочего удерживает состояние, он будет удерживать его в нескольких запросах. Просто обернув этот `CNonStatelessWorker` класс в `CThreadPool`шаблон, прежде чем использовать его с, срок службы работника и состояние, которое он держит ограничивается одним запросом.
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** файлов atlutil.h
+**Заголовок:** atlutil.h
 
-##  <a name="execute"></a>  CNonStatelessWorker::Execute
+## <a name="cnonstatelessworkerexecute"></a><a name="execute"></a>CNonStatelessWorker:::Исполнение
 
 Реализация [WorkerArchetype::Execute](worker-archetype.md#execute).
 
-```
+```cpp
 void Execute(
     Worker::RequestType request,
     void* pvWorkerParam,
     OVERLAPPED* pOverlapped);
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод создает экземпляр класса *рабочих* класс на стек и вызывает [инициализировать](worker-archetype.md#initialize) на этот объект. Если инициализация прошла успешно, этот метод также вызывает [Execute](worker-archetype.md#execute) и [Terminate](worker-archetype.md#terminate) того же объекта.
+Этот метод создает экземпляр класса *«Рабочий»* в стеке и вызывает [инициализацию](worker-archetype.md#initialize) на этом объекте. Если инициализация успешна, этот метод также вызывает [выполнение](worker-archetype.md#execute) и [прекращение](worker-archetype.md#terminate) на одном объекте.
 
-##  <a name="initialize"></a>  CNonStatelessWorker::Initialize
+## <a name="cnonstatelessworkerinitialize"></a><a name="initialize"></a>CNonStatelessWorker::
 
-Реализация [WorkerArchetype::Initialize](worker-archetype.md#initialize).
+Реализация [WorkerArchetype::Первоначальная](worker-archetype.md#initialize).
 
 ```
 BOOL Initialize(void* /* pvParam */) throw();
@@ -88,13 +88,13 @@ BOOL Initialize(void* /* pvParam */) throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Всегда возвращает значение TRUE.
+Всегда возвращается TRUE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот класс не выполняет инициализацию `Initialize`.
+Этот класс не делает никакой инициализации в `Initialize`.
 
-##  <a name="requesttype"></a>  CNonStatelessWorker::RequestType
+## <a name="cnonstatelessworkerrequesttype"></a><a name="requesttype"></a>CNonStatelessWorker::RequestType
 
 Реализация [WorkerArchetype::RequestType](worker-archetype.md#requesttype).
 
@@ -102,23 +102,23 @@ BOOL Initialize(void* /* pvParam */) throw();
 typedef Worker::RequestType RequestType;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот класс обрабатывает же тип рабочего элемента, как класс, используемый для *рабочих* параметр шаблона. См. в разделе [CNonStatelessWorker Обзор](../../atl/reference/cnonstatelessworker-class.md) подробные сведения.
+Этот класс обрабатывает тот же тип рабочего элемента, что и класс, используемый для параметра *шаблона «Рабочий».* Подробнее о ней читайте [в обзоре CNonStatelessWorker.](../../atl/reference/cnonstatelessworker-class.md)
 
-##  <a name="terminate"></a>  CNonStatelessWorker::Terminate
+## <a name="cnonstatelessworkerterminate"></a><a name="terminate"></a>CNonStatelessWorker::: Прекращение
 
 Реализация [WorkerArchetype::Terminate](worker-archetype.md#terminate).
 
-```
+```cpp
 void Terminate(void* /* pvParam */) throw();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот класс не выполняет очистку `Terminate`.
+Этот класс не делает никакой очистки в `Terminate`.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс CThreadPool](../../atl/reference/cthreadpool-class.md)<br/>
 [Рабочий архетип](../../atl/reference/worker-archetype.md)<br/>

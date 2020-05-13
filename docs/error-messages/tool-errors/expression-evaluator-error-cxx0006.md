@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CAN0006
 - CXX0006
 ms.assetid: 34a8e21c-5443-4817-aad9-bb3143cfcaa6
-ms.openlocfilehash: 984416af73fbf1da5d52404e1a73f918f99ccd6c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a082f24bc43878f240e9782e903474465e7c9ef8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406084"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196304"
 ---
 # <a name="expression-evaluator-error-cxx0006"></a>Ошибка вычислителя выражений CXX0006
 
-пропущена левая круглая скобка
+отсутствует левая круглая скобка
 
-В выражении найдены открывающих и закрывающих скобок. Повторно введите выражение с сбалансированной круглые скобки.
+В выражении обнаружены несбалансированные скобки. Введите выражение с сбалансированными круглыми скобками.
 
 Эта ошибка идентична CAN0006.

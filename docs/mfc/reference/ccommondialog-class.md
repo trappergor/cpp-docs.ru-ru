@@ -1,5 +1,5 @@
 ---
-title: Класс CCommonDialog
+title: Класс CCommonДиалог
 ms.date: 11/04/2016
 f1_keywords:
 - CCommonDialog
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - CCommonDialog [MFC], CCommonDialog
 ms.assetid: 1f68d65f-a0fd-4778-be22-ebbe51a95f95
-ms.openlocfilehash: 4fa7aa51d1ce482e00f68365045cd35c3fb7939b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 853a4756df3b70f4f33deb7159b4d1aee610092c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182271"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369447"
 ---
-# <a name="ccommondialog-class"></a>Класс CCommonDialog
+# <a name="ccommondialog-class"></a>Класс CCommonДиалог
 
 Базовый класс для классов, которые инкапсулируют функцию общих диалоговых окон Windows.
 
@@ -29,13 +29,13 @@ class CCommonDialog : public CDialog
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CCommonDialog::CCommonDialog](#ccommondialog)|Создает объект `CCommonDialog`.|
+|[CCommonДиалог::CCommonДиалог](#ccommondialog)|Формирует объект `CCommonDialog`.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Следующие классы инкапсулируют функцию общих диалоговых окон Windows:
+Следующие классы инкапсулируют функциональность общих диалогов Windows:
 
 - [CFileDialog](../../mfc/reference/cfiledialog-class.md)
 
@@ -49,7 +49,7 @@ class CCommonDialog : public CDialog
 
 - [CPrintDialogEx](../../mfc/reference/cprintdialogex-class.md)
 
-- [Диалоговое окно CFindReplaceDialog](../../mfc/reference/cfindreplacedialog-class.md)
+- [CFindReplaceDialog](../../mfc/reference/cfindreplacedialog-class.md)
 
 - [COleDialog](../../mfc/reference/coledialog-class.md)
 
@@ -69,9 +69,9 @@ class CCommonDialog : public CDialog
 
 **Заголовок:** afxdlgs.h
 
-##  <a name="ccommondialog"></a>  CCommonDialog::CCommonDialog
+## <a name="ccommondialogccommondialog"></a><a name="ccommondialog"></a>CCommonДиалог::CCommonДиалог
 
-Создает объект `CCommonDialog`.
+Формирует объект `CCommonDialog`.
 
 ```
 explicit CCommonDialog(CWnd* pParentWnd);
@@ -80,13 +80,13 @@ explicit CCommonDialog(CWnd* pParentWnd);
 ### <a name="parameters"></a>Параметры
 
 *pParentWnd*<br/>
-Указывает на объект окна родительский объект или владельца (типа [CWnd](../../mfc/reference/cwnd-class.md)), которому принадлежит объект диалогового окна. Если это значение NULL, родительское окно объекта диалогового окна будет присвоено главного окна приложения.
+Указывает на объект окна родителя или владельца (типа [CWnd),](../../mfc/reference/cwnd-class.md)к которому принадлежит объект диалога. Если это NULL, родительское окно объекта диалога устанавливается на основное окно приложения.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-См. в разделе [CDialog::CDialog](../../mfc/reference/cdialog-class.md#cdialog) полные сведения.
+Смотрите [CDialog::CDialog](../../mfc/reference/cdialog-class.md#cdialog) для получения полной информации.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс CDialog](../../mfc/reference/cdialog-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>

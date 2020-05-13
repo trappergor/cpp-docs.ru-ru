@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC2164
 ms.assetid: 23d7691d-80f3-4979-a519-378e5498d2d1
-ms.openlocfilehash: d9da84f6f59782f93d7a13d0e9aa46b1a88cc064
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6e01dabb2f6b13ea38de833fcd0a3e271e05c76
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396912"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191214"
 ---
 # <a name="resource-compiler-error-rc2164"></a>Ошибка компилятора ресурсов RC2164
 
-Непредвиденное значение в RCDATA
+непредвиденное значение в RCDATA
 
 Значения *необработанных данных* в операторе **RCDATA** должны быть целыми числами или строками и разделяться запятыми. Убедитесь, что вы не пропустили запятую или кавычки вокруг строки.

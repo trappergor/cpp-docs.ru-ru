@@ -13,16 +13,16 @@ f1_keywords:
 - AMP/Concurrency::tiled_extent::tile_dim2
 - AMP/Concurrency::tiled_extent::tile_extent
 ms.assetid: 671ecaf8-c7b0-4ac8-bbdc-e30bd92da7c0
-ms.openlocfilehash: e2248c770c7eedde59d1cb592f7d5d7c1bfbde9a
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: ce2710da1a745efedcd6e9e524355eda41e26de2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126426"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374712"
 ---
 # <a name="tiled_extent-class"></a>Класс tiled_extent
 
-Объект `tiled_extent` — это `extent` объект, соделенный от одного до трех измерений, который делит пространство экстента на один-, два или трехмерные плитки.
+Объект `tiled_extent` — `extent` это объект одного-трех измерений, который разделяет пространство в одно-, двух- или трехмерное.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -49,49 +49,49 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
 ### <a name="parameters"></a>Параметры
 
 *_Dim0*<br/>
-Длина наиболее значимого измерения.
+Длина наиболее значительного измерения.
 
 *_Dim1*<br/>
-Длина последующего и значительного измерения.
+Длина следующего к самому значительному измерению.
 
 *_Dim2*<br/>
 Длина наименее значимого измерения.
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|[Конструктор tiled_extent](#ctor)|Инициализирует новый экземпляр класса `tiled_extent`.|
+|[tiled_extent конструктор](#ctor)|Инициализирует новый экземпляр класса `tiled_extent`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|[get_tile_extent](#get_tile_extent)|Возвращает объект `extent`, который фиксирует значения аргументов шаблона `tiled_extent` `_Dim0`, `_Dim1`и `_Dim2`.|
-|[коммутаци](#pad)|Возвращает новый объект `tiled_extent` с разскорректированными экстентами, которые равномерно делятся по измерениям мозаики.|
-|[truncate](#truncate)|Возвращает новый объект `tiled_extent` с экстентами, которые настраиваются так, чтобы быть равномерно кратными измерениям мозаики.|
+|[get_tile_extent](#get_tile_extent)|Возвращает `extent` объект, который фиксирует `tiled_extent` значения аргументов шаблона, `_Dim0` `_Dim1`и `_Dim2`.|
+|[Площадку](#pad)|Возвращает новый `tiled_extent` объект с отрегулированными размерами, чтобы быть равномерно делится на размеры плитки.|
+|[truncate](#truncate)|Возвращает новый `tiled_extent` объект с скорректированными размерами, чтобы быть равномерно делится на размеры плитки.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|[оператор=](#operator_eq)|Копирует содержимое указанного объекта `tiled_index` в этот объект.|
+|[оператора](#operator_eq)|Копирует содержимое указанного `tiled_index` объекта в этот.|
 
 ### <a name="public-constants"></a>Открытые константы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|[Константа tile_dim0](#tile_dim0)|Хранит длину наиболее значимого измерения.|
-|[Константа tile_dim1](#tile_dim1)|Сохраняет длину последующего и значительного измерения.|
-|[Константа tile_dim2](#tile_dim2)|Хранит длину наименее значимого измерения.|
+|[tile_dim0 Констант](#tile_dim0)|Хранит длину наиболее значительного измерения.|
+|[tile_dim1 Констант](#tile_dim1)|Хранит длину следующего к самому значительному измерению.|
+|[tile_dim2 Констант](#tile_dim2)|Хранит длину наименее значительного измерения.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|[tile_extent](#tile_extent)|Возвращает объект `extent`, который фиксирует значения аргументов шаблона `tiled_extent` `_Dim0`, `_Dim1`и `_Dim2`.|
+|[tile_extent](#tile_extent)|Получает `extent` объект, который фиксирует `tiled_extent` значения аргументов шаблона, `_Dim0` `_Dim1`и `_Dim2`.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -105,7 +105,7 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
 
 **Пространство имен** : Concurrency
 
-## <a name="ctor"></a> конструктор tiled_extent
+## <a name="tiled_extent-constructor"></a><a name="ctor"> </a> tiled_extent конструктор
 
 Инициализирует новый экземпляр класса `tiled_extent`.
 
@@ -124,11 +124,11 @@ tiled_extent(
 ### <a name="parameters"></a>Параметры
 
 *_Other*<br/>
-Копируемый объект `extent` или `tiled_extent`.
+Объект `extent` `tiled_extent` или объект для копирования.
 
-## <a name="get_tile_extent"></a> get_tile_extent
+## <a name="get_tile_extent"></a><a name="get_tile_extent"> </a> get_tile_extent
 
-Возвращает объект `extent`, который фиксирует значения аргументов шаблона `tiled_extent` `_Dim0`, `_Dim1`и `_Dim2`.
+Возвращает `extent` объект, который фиксирует `tiled_extent` значения аргументов шаблона, `_Dim0` `_Dim1`и `_Dim2`.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -138,11 +138,11 @@ Concurrency::extent<rank> get_tile_extent() const restrict(amp,cpu);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Объект `extent`, который фиксирует измерения данного экземпляра `tiled_extent`.
+Объект, `extent` который фиксирует размеры этого `tiled_extent` экземпляра.
 
-## <a name="pad"></a> панель
+## <a name="pad"></a><a name="pad"> </a> колодка
 
-Возвращает новый объект `tiled_extent` с разскорректированными экстентами, которые равномерно делятся по измерениям мозаики.
+Возвращает новый `tiled_extent` объект с отрегулированными размерами, чтобы быть равномерно делится на размеры плитки.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -152,10 +152,11 @@ tiled_extent pad() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Новый объект `tiled_extent` по значению.
-## <a name="truncate"></a> усечение
+Новый `tiled_extent` объект, по стоимости.
 
-Возвращает новый объект `tiled_extent` с экстентами, которые настраиваются так, чтобы быть равномерно кратными измерениям мозаики.
+## <a name="truncate"></a><a name="truncate"> </a> усечение
+
+Возвращает новый `tiled_extent` объект с скорректированными размерами, чтобы быть равномерно делится на размеры плитки.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -165,11 +166,11 @@ tiled_extent truncate() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает новый объект `tiled_extent` с экстентами, которые настраиваются так, чтобы быть равномерно кратными измерениям мозаики.
+Возвращает новый `tiled_extent` объект с скорректированными размерами, чтобы быть равномерно делится на размеры плитки.
 
-## <a name="operator_eq"></a> оператор =
+## <a name="operator"></a><a name="operator_eq"> </a> оператора
 
-Копирует содержимое указанного объекта `tiled_index` в этот объект.
+Копирует содержимое указанного `tiled_index` объекта в этот.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -181,15 +182,15 @@ tiled_extent&  operator= (
 ### <a name="parameters"></a>Параметры
 
 *_Other*<br/>
-Объект `tiled_index`, из которого производится копирование.
+Объект `tiled_index` для копирования.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ссылка на этот экземпляр `tiled_index`.
+Ссылка на `tiled_index` этот экземпляр.
 
-## <a name="tile_dim0"></a> tile_dim0
+## <a name="tile_dim0"></a><a name="tile_dim0"> </a> tile_dim0
 
-Хранит длину наиболее значимого измерения.
+Хранит длину наиболее значительного измерения.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -197,9 +198,9 @@ tiled_extent&  operator= (
 static const int tile_dim0 = _Dim0;
 ```
 
-## <a name="tile_dim1"></a> tile_dim1
+## <a name="tile_dim1"></a><a name="tile_dim1"> </a> tile_dim1
 
-Сохраняет длину последующего и значительного измерения.
+Хранит длину следующего к самому значительному измерению.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -207,9 +208,9 @@ static const int tile_dim0 = _Dim0;
 static const int tile_dim1 = _Dim1;
 ```
 
-## <a name="tile_dim2"></a> tile_dim2
+## <a name="tile_dim2"></a><a name="tile_dim2"> </a> tile_dim2
 
-Хранит длину наименее значимого измерения.
+Хранит длину наименее значительного измерения.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -217,8 +218,9 @@ static const int tile_dim1 = _Dim1;
 static const int tile_dim2 = _Dim2;
 ```
 
-## <a name="tile_extent"></a> tile_extent
-  Возвращает объект `extent`, который фиксирует значения аргументов шаблона `tiled_extent` `_Dim0`, `_Dim1`и `_Dim2`.
+## <a name="tile_extent"></a><a name="tile_extent"> </a> tile_extent
+
+Получает `extent` объект, который фиксирует `tiled_extent` значения аргументов шаблона, `_Dim0` `_Dim1`и `_Dim2`.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -228,4 +230,4 @@ __declspec(property(get= get_tile_extent)) Concurrency::extent<rank> tile_extent
 
 ## <a name="see-also"></a>См. также раздел
 
-[Пространство имен Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)
+[Пространство имен параллелизма (КЗ АМП)](concurrency-namespace-cpp-amp.md)

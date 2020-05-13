@@ -1,8 +1,9 @@
 ---
 title: _getw
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _getw
+- _o__getw
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - integers, getting from streams
 - getw function
 ms.assetid: ef75facc-b84e-470f-9f5f-8746c90822a0
-ms.openlocfilehash: ad03c92ce90542ecae13609ee228ad094f64fc07
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: fc1dfcc54259dfe40d2fc37be1e1c0ab63ab7c4a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954881"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916311"
 ---
 # <a name="_getw"></a>_getw
 
@@ -54,9 +56,11 @@ int _getw(
 
 **_getw** возвращает считанное целочисленное значение. Возвращаемое значение **EOF** указывает на ошибку или конец файла. Однако поскольку значение **EOF** также является допустимым целым числом, используйте **feof** или **ferror** для проверки состояния конца файла или ошибки. Если *Stream* имеет **значение NULL**, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено **, для** параметра **еинвал** задается значение, а функция возвращает **EOF**.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Функция **_getw** считывает следующее двоичное значение типа **int** из файла, связанного с *потоком Stream* , и увеличивает связанный указатель файла (если таковой имеется), чтобы он указывал на следующий непрочтенный символ. **_getw** не предполагает никакого особого выравнивания элементов в потоке. Проблемы с переносом могут возникать с **_getw** , так как размер типа **int** и порядок байтов в типе **int** различаются в разных системах.
+
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -64,7 +68,7 @@ int _getw(
 |-------------|---------------------|
 |**_getw**|\<stdio.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 

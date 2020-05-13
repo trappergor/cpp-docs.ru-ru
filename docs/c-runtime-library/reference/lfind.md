@@ -1,8 +1,9 @@
 ---
 title: _lfind
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _lfind
+- _o__lfind
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - finding keys in arrays
 - _lfind function
 ms.assetid: a40ece70-1674-4b75-94bd-9f57cfff18f2
-ms.openlocfilehash: ec59340433b92334effa8004720e4f0756085670
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 4721ba96e145b3c2fde4ce0bb73157bbbcab4dff
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442918"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916456"
 ---
 # <a name="_lfind"></a>_lfind
 
@@ -66,7 +68,7 @@ void *_lfind(
 *width*<br/>
 Ширина элементов массива.
 
-*compare*<br/>
+*равенств*<br/>
 Указатель на подпрограмму сравнения. Первый параметр — это указатель на ключ для поиска. Второй параметр — это указатель на элемент массива, который будет сравниваться с ключом.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -79,13 +81,15 @@ void *_lfind(
 
 Эта функция проверяет свои параметры. Если *параметр Compare*, *ключ* или *число* имеет **значение NULL**или *Если Base* имеет **значение NULL** , а *Number* имеет ненулевое значение или если *Width* меньше нуля, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено **, для** параметра **еинвал** устанавливается значение, а функция возвращает **значение NULL**.
 
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
+
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
 |**_lfind**|\<search.h>|
 
-Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -126,7 +130,7 @@ Hello found
 
 ## <a name="see-also"></a>См. также раздел
 
-[Сортировка и поиск](../../c-runtime-library/searching-and-sorting.md)<br/>
+[Поиск и сортировка](../../c-runtime-library/searching-and-sorting.md)<br/>
 [_lfind_s](lfind-s.md)<br/>
 [bsearch](bsearch.md)<br/>
 [_lsearch](lsearch.md)<br/>

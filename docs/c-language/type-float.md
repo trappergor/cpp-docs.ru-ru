@@ -15,11 +15,11 @@ helpviewer_keywords:
 - lengths, exponent
 ms.assetid: 706e332b-17a0-4a30-b7d8-5d6cd372524b
 ms.openlocfilehash: 61bfd094801165e0c3e41e5de6fcbfb0c5e59504
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62346331"
 ---
 # <a name="type-float"></a>Тип float
 
@@ -29,7 +29,7 @@ ms.locfileid: "56151277"
 
 ### <a name="floating-point-types"></a>Типы с плавающей запятой
 
-|Тип|Значимые цифры|Число байтов|
+|Type|Значимые цифры|Число байтов|
 |----------|------------------------|---------------------|
 |float|6–7|4|
 |double|15–16|8|
@@ -40,7 +40,7 @@ ms.locfileid: "56151277"
 
 ### <a name="lengths-of-exponents-and-mantissas"></a>Длина экспонент и мантисс
 
-|Тип|Длина экспоненты|Длина мантиссы|
+|Type|Длина экспоненты|Длина мантиссы|
 |----------|---------------------|---------------------|
 |float|8 бит|23 бита|
 |double|11 бит|52 бита|
@@ -55,7 +55,7 @@ ms.locfileid: "56151277"
 
 ### <a name="range-of-floating-point-types"></a>Диапазон типов с плавающей запятой
 
-|Тип|Минимальное значение|Максимальное значение|
+|Type|Минимальное значение|Максимальное значение|
 |----------|-------------------|-------------------|
 |плавающее|1,175494351 E – 38|3,402823466 E + 38|
 |double|2,2250738585072014 E – 308|1,7976931348623158 E + 308|

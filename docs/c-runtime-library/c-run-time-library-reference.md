@@ -8,12 +8,12 @@ helpviewer_keywords:
 - run-time libraries
 - CRT, reference
 ms.assetid: a503e11c-8dca-4846-84fb-025a826c32b8
-ms.openlocfilehash: 4e45194e5dc5fcd3dc9e13ec3da4cd1c76980c2f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 9193e5c38c01f9dddcf0a8cd324d07f5dd90cb5e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589466"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81334429"
 ---
 # <a name="c-run-time-library-reference"></a>Справочник по библиотеке времени выполнения C
 
@@ -21,7 +21,7 @@ ms.locfileid: "50589466"
 
 В справочные разделы включены примеры программ для большинства подпрограмм из библиотеки.
 
-## <a name="in-this-section"></a>В этом разделе
+## <a name="in-this-section"></a>в этом разделе
 
 [CRT Library Features](../c-runtime-library/crt-library-features.md) (Функции библиотек времени выполнения)<br/>
 Описывает LIB-файлы, которые входят в библиотеки времени выполнения C.
@@ -34,6 +34,9 @@ ms.locfileid: "50589466"
 
 [Глобальные константы](../c-runtime-library/global-constants.md)<br/>
 Содержит ссылки на глобальные константы, определенные в библиотеке времени выполнения.
+
+[Глобальное государство](../c-runtime-library/global-state.md)<br/>
+Описывает масштабы глобального государства в библиотеке C run-time.
 
 [Алфавитный указатель функций](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 Содержит алфавитный список всех функций библиотеки времени выполнения C.

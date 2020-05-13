@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CXX0063
 - CAN0063
 ms.assetid: 2e131b7a-9c8f-4aa1-acac-8d87f602c24c
-ms.openlocfilehash: 24dee4f6a98f7216fb76bb3b35e9feb5c5eeccba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 53df00014bf6c864f6b0848a1c32fd9128293734
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299417"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184480"
 ---
 # <a name="expression-evaluator-error-cxx0063"></a>Ошибка вычислителя выражений CXX0063
 
-Перегруженный оператор "->" не поддерживается
+перегруженный оператор-> не поддерживается
 
-Оператор доступа к члену перегруженный класс использовать выражение (**->**).
+В выражении используется перегруженный оператор доступа к членам класса ( **->** ).
 
 Эта ошибка идентична CAN0063.

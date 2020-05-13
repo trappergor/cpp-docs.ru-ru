@@ -27,12 +27,12 @@ helpviewer_keywords:
 - char_traits struct
 - char_traits class
 ms.assetid: 568e59f0-4521-4207-9223-9dcf6a16d620
-ms.openlocfilehash: efb926bc8c2ae55835391f884a0e3430e3da8aca
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 3d707ff963170b6b4f14ad1f04e9420b8062b520
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79427269"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366707"
 ---
 # <a name="char_traits-struct"></a>Структура char_traits
 
@@ -47,12 +47,12 @@ struct char_traits;
 
 ### <a name="parameters"></a>Параметры
 
-*CharType*\
+*Chartype*\
 Тип данных элемента.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-В структуре шаблона описаны различные признаки символов для типа `CharType`. Шаблон класса [basic_string](../standard-library/basic-string-class.md) , а также несколько шаблонов классов iostream, в том числе [basic_ios](../standard-library/basic-ios-class.md), используйте эти сведения для управления элементами типа `CharType`. Для такого типа элемента не требуются явное создание или уничтожение. Он должен предоставлять конструктор по умолчанию, конструктор копирования и оператор присваивания с ожидаемой семантикой. Побитовое копирование должно иметь такой же эффект, как и присваивание. Ни одна из функций — членов структуры char_traits не может создавать исключения.
+Структура шаблона описывает различные черты характера для типа. `CharType` Шаблон класса [basic_string,](../standard-library/basic-string-class.md) а также несколько шаблонов класса iostream, включая `CharType` [basic_ios,](../standard-library/basic-ios-class.md)используют эту информацию для управления элементами типа. Для такого типа элемента не требуются явное создание или уничтожение. Он должен предоставлять конструктор по умолчанию, конструктор копирования и оператор присваивания с ожидаемой семантикой. Побитовое копирование должно иметь такой же эффект, как и присваивание. Ни одна из функций — членов структуры char_traits не может создавать исключения.
 
 ### <a name="typedefs"></a>Определения типов
 
@@ -64,21 +64,21 @@ struct char_traits;
 |[pos_type](#pos_type)|Целочисленный тип, который может представлять позиции в потоке.|
 |[state_type](#state_type)|Тип, представляющий состояние преобразования в многобайтовые символы в потоке.|
 
-### <a name="member-functions"></a>Функции-члены
+### <a name="member-functions"></a>Функции элементов
 
 |Функция-член|Описание|
 |-|-|
-|[assign](#assign)|Присваивает значение одного символа другому.|
-|[compare](#compare)|Сравнивает указанное количество символов в двух строках.|
-|[copy](#copy)|Копирует указанное количество символов из одной строки в другую. Не рекомендуется. Вместо этой функции используйте [char_traits::_Copy_s](#copy_s).|
+|[Назначить](#assign)|Присваивает значение одного символа другому.|
+|[Сравнить](#compare)|Сравнивает указанное количество символов в двух строках.|
+|[Копировать](#copy)|Копирует указанное количество символов из одной строки в другую. Не рекомендуется. Вместо этой функции используйте [char_traits::_Copy_s](#copy_s).|
 |[_Copy_s](#copy_s)|Копирует указанное количество символов из одной строки в другую.|
-|[eof](#eof)|Возвращает символ конца файла (EOF).|
-|[eq](#eq)|Проверяет два символа `char_type` на равенство.|
+|[Eof](#eof)|Возвращает символ конца файла (EOF).|
+|[Эквалайзер](#eq)|Проверяет два символа `char_type` на равенство.|
 |[eq_int_type](#eq_int_type)|Проверяет два символа, представленные как `int_type`, на равенство.|
-|[find](#find)|Выполняет поиск первого вхождения указанного символа в диапазоне символов.|
-|[length](#length)|Возвращает длину строки.|
-|[lt](#lt)|Проверяет, меньше ли один символ другого.|
-|[move](#move)|Копирует указанное количество символов в последовательности в другую, возможно, перекрывающуюся, последовательность. Не рекомендуется. Вместо этой функции используйте [char_traits::_Move_s](#move_s).|
+|[Найти](#find)|Выполняет поиск первого вхождения указанного символа в диапазоне символов.|
+|[длина](#length)|Возвращает длину строки.|
+|[Lt](#lt)|Проверяет, меньше ли один символ другого.|
+|[Переместить](#move)|Копирует указанное количество символов в последовательности в другую, возможно, перекрывающуюся, последовательность. Не рекомендуется. Вместо этой функции используйте [char_traits::_Move_s](#move_s).|
 |[_Move_s](#move_s)|Копирует указанное количество символов в последовательности в другую, возможно, перекрывающуюся, последовательность.|
 |[not_eof](#not_eof)|Проверяет, является ли символ символом конца файла (EOF).|
 |[to_char_type](#to_char_type)|Преобразует символ `int_type` в соответствующий символ `char_type` и возвращает результат.|
@@ -86,11 +86,11 @@ struct char_traits;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** строка \<>
+**Заголовок:** \<string>
 
 **Пространство имен:** std
 
-## <a name="assign"></a>  char_traits::assign
+## <a name="char_traitsassign"></a><a name="assign"></a>char_traits::assign
 
 Присваивает значение одного символа другому элементу или диапазону элементов в строке.
 
@@ -105,12 +105,12 @@ static char_type *assign(char_type* strTo,
 
 ### <a name="parameters"></a>Параметры
 
-**_** *Чарфром* символ, значение которого должно быть присвоено.
+**-** *CharFrom* Персонаж, значение которого должно быть присвоено.
 
 *_CharTo*\
 Элемент, которому должно быть присвоено это значение символа.
 
-*стрто*\
+*strTo*\
 Строка или массив символов, чьим начальным элементам должны присваиваться значения символов.
 
 *_Num*\
@@ -118,7 +118,7 @@ static char_type *assign(char_type* strTo,
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Вторая функция-член возвращает указатель на строку, первой *_Num* элементам которой были назначены значения *_CharFrom*.
+Функция второго элемента возвращает указатель строке, первые *_Num* элементы которой были назначены значения *_CharFrom.*
 
 ### <a name="example"></a>Пример
 
@@ -161,7 +161,7 @@ The target string s1 is: abcd-1234-abcd
 The result1 = assign ( s1 , 4 , 'f' ) is: ffff-1234-abcd
 ```
 
-## <a name="char_type"></a>  char_traits::char_type
+## <a name="char_traitschar_type"></a><a name="char_type"></a>char_traits::char_type
 
 Тип символа.
 
@@ -169,15 +169,15 @@ The result1 = assign ( s1 , 4 , 'f' ) is: ffff-1234-abcd
 typedef CharType char_type;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Этот тип является синонимом для параметра шаблона `CharType`.
 
 ### <a name="example"></a>Пример
 
-Пример объявления и использования `char_type` см. в примере для [copy](#copy).
+См. пример объявления и использования `char_type` в примере для [copy](#copy).
 
-## <a name="compare"></a>  char_traits::compare
+## <a name="char_traitscompare"></a><a name="compare"></a>char_traits::compare
 
 Сравнивает указанное количество символов в двух строках.
 
@@ -202,7 +202,7 @@ static int compare(const char_type* str1,
 
 Отрицательное значение, если первая строка меньше второй строки; 0, если две строки равны; или положительное значение, если первая строка больше второй.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Строки сравниваются поэлементно; сначала выполняется проверка на равенство, и если два соответствующих элемента в последовательных тестах оказываются не равны, то затем проверяется, кто из них меньше.
 
@@ -241,7 +241,7 @@ int main() {
 }
 ```
 
-## <a name="copy"></a>  char_traits::copy
+## <a name="char_traitscopy"></a><a name="copy"></a>char_traits::copy
 
 Копирует указанное количество символов из одной строки в другую.
 
@@ -268,7 +268,7 @@ static char_type *copy(char_type* _To,
 
 Первый элемент, скопированный в строку или массив символов, предназначенный для получения скопированной последовательности символов.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Исходная и целевая последовательности символов не должны перекрываться.
 
@@ -303,7 +303,7 @@ The destination string is: ABCD-1234
 The result1 = copy ( s1 , s2 , 4 ) is: ABCD-1234-abcd
 ```
 
-## <a name="copy_s"></a>  char_traits::_Copy_s
+## <a name="char_traits_copy_s"></a><a name="copy_s"></a>char_traits::_Copy_s
 
 Копирует указанное количество символов из одной строки в другую.
 
@@ -317,23 +317,23 @@ static char_type *_Copy_s(
 
 ### <a name="parameters"></a>Параметры
 
-*конечный*\
+*Dest*\
 Строка или массив символов, который должен получить копируемую последовательность символов.
 
 *dest_size*\
-Размер *dest*. Если `char_type` имеет **тип char**, то этот размер задается в байтах. Если `char_type` **wchar_t**, то этот размер задается в виде слов.
+Размер *dest*. Если `char_type` **char,** то этот размер находится в байтах. Если `char_type` **wchar_t,** то этот размер находится в словах.
 
 *_From*\
 Исходная строка или массив символов для копирования.
 
-*количество*\
+*Рассчитывать*\
 Число элементов, которые следует скопировать.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Строка или массив символов, который должен получить копируемую последовательность символов.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Исходная и целевая последовательности символов не должны перекрываться.
 
@@ -368,7 +368,7 @@ The destination string is: ABCD-1234
 The result1 = _Copy_s(s1, char_traits<char>::length(s1), s2, 4) is: ABCD-1234-abcd
 ```
 
-## <a name="eof"></a>  char_traits::eof
+## <a name="char_traitseof"></a><a name="eof"></a>char_traits::eof
 
 Возвращает символ конца файла (EOF).
 
@@ -380,11 +380,11 @@ static int_type eof();
 
 Символ конца файла (EOF).
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Значение типа, представляющее конец файла (например, EOF или WEOF).
+Значение, представляющее конец файла (например, EOF или WEOF).
 
-Стандарт C++ гласит, что это значение не должно соответствовать допустимому значению `char_type`. Компилятор Майкрософт C++ применяет это ограничение для типа **char**, но не для типа **wchar_t**. Это демонстрируется в приведенном ниже примере.
+Стандарт C++ гласит, что это значение не должно соответствовать допустимому значению `char_type`. Компилятор Microsoft C's применяет это ограничение для **символа**типа, но не для **wchar_t**типа. Это демонстрируется в приведенном ниже примере.
 
 ### <a name="example"></a>Пример
 
@@ -419,7 +419,7 @@ The eof marker for char_traits<char> is: -1
 The eof marker for char_traits<wchar_t> is: 65535
 ```
 
-## <a name="eq"></a>  char_traits::eq
+## <a name="char_traitseq"></a><a name="eq"></a>char_traits::eq
 
 Проверяет два символа `char_type` на равенство.
 
@@ -479,7 +479,7 @@ The character ch1 is not equal to the character ch2.
 The character ch1 is equal to the character ch3.
 ```
 
-## <a name="eq_int_type"></a>  char_traits::eq_int_type
+## <a name="char_traitseq_int_type"></a><a name="eq_int_type"></a>char_traits:::eq_int_type
 
 Проверяет, равны ли два символа, представленные как `int_type`.
 
@@ -490,7 +490,7 @@ static bool eq_int_type(const int_type& _Ch1, const int_type& _Ch2);
 ### <a name="parameters"></a>Параметры
 
 *_Ch1*\
-Первый из двух символов, которые должны быть проверены на равенство как `int_type`s.
+Первый из двух символов, которые `int_type`будут проверены на равенство, как s.
 
 *_Ch2*\
 Второй из двух символов для проверки на равенство, представленных как `int_type`.
@@ -564,7 +564,7 @@ The int_type representation of character ch1
 is equal to the int_type representation of ch3.
 ```
 
-## <a name="find"></a>  char_traits::find
+## <a name="char_traitsfind"></a><a name="find"></a>char_traits::найти
 
 Выполняет поиск первого вхождения указанного символа в диапазоне символов.
 
@@ -576,13 +576,13 @@ static const char_type* find(const char_type* str,
 
 ### <a name="parameters"></a>Параметры
 
-\ *str*
+*Ул*\
 Первый искомый символ в строке.
 
 *_Num*\
 Число позиций, отсчитываемых от первой, в диапазоне для поиска.
 
-*_Ch*\
+*_ch*\
 Символ для поиска в диапазоне.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -631,7 +631,7 @@ of the character 'd' is: d-1234-abcd
 The result2 of the search is NULL.
 ```
 
-## <a name="int_type"></a>  char_traits::int_type
+## <a name="char_traitsint_type"></a><a name="int_type"></a>char_traits::int_type
 
 Целочисленный тип, который может представлять символ типа `char_type` или символ конца файла (EOF).
 
@@ -639,15 +639,15 @@ The result2 of the search is NULL.
 typedef long int_type;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Необходимо иметь возможность вводить значение типа `CharType`, чтобы `int_type` затем возвращаться к `CharType` без изменения исходного значения.
+Это должно быть возможно ввести `CharType` литые значение типа, чтобы `int_type` затем вернуться к `CharType` без изменения исходного значения.
 
 ### <a name="example"></a>Пример
 
 Пример объявления и использования `int_type`[eq_int_type](#eq_int_type).
 
-## <a name="length"></a>  char_traits::length
+## <a name="char_traitslength"></a><a name="length"></a>char_traits::длина
 
 Возвращает длину строки.
 
@@ -657,7 +657,7 @@ static size_t length(const char_type* str);
 
 ### <a name="parameters"></a>Параметры
 
-\ *str*
+*Ул*\
 C-строка, длину которой нужно измерить.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -690,7 +690,7 @@ The C-string str1 is: Hello
 The length of C-string str1 is: 5.
 ```
 
-## <a name="lt"></a>  char_traits::lt
+## <a name="char_traitslt"></a><a name="lt"></a>char_traits::lt
 
 Проверяет, меньше ли один символ другого.
 
@@ -749,7 +749,7 @@ The character ch1 is less than the character ch2.
 The character ch3 is not less than the character ch2.
 ```
 
-## <a name="move"></a>  char_traits::move
+## <a name="char_traitsmove"></a><a name="move"></a>char_traits::move
 
 Копирует указанное количество символов из одной последовательности в другую, возможно перекрывающуюся последовательность.
 
@@ -774,9 +774,9 @@ static char_type *move(char_type* _To,
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Первый элемент *_TO* копируется в строку или массив символов, предназначенный для получения скопированной последовательности символов.
+Первый элемент *_To* скопирован в массив строки или символа, предназначенный для получения скопированной последовательности символов.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Исходный и целевой массивы или строки могут перекрываться.
 
@@ -826,7 +826,7 @@ The source/destination string sToFrom2 is: abcd-1234-ABCD
 The result2 = move ( sToFrom2 , findc , 8 ) is: cd-1234-4-ABCD
 ```
 
-## <a name="move_s"></a>  char_traits::_Move_s
+## <a name="char_traits_move_s"></a><a name="move_s"></a>char_traits::_Move_s
 
 Копирует указанное количество символов из одной последовательности в другую, возможно перекрывающуюся последовательность.
 
@@ -840,23 +840,23 @@ static char_type *_Move_s(
 
 ### <a name="parameters"></a>Параметры
 
-*конечный*\
+*Dest*\
 Элемент в начале строки или массива символов, предназначенного для получения скопированной последовательности символов.
 
 *dest_size*\
-Размер *dest*. Если `char_type` имеет **тип char**, то он находится в байтах. Если `char_type` **wchar_t**, то это слова.
+Размер *dest*. Если `char_type` **char,** то это находится в байтах. Если `char_type` **wchar_t,** то это на словах.
 
 *_From*\
 Элемент в начале исходной строки или массива символов для копирования.
 
-*количество*\
+*Рассчитывать*\
 Количество элементов для копирования из исходной строки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Первый *конечный* элемент, скопированный в строку или массив символов, предназначенный для получения скопированной последовательности символов.
+Первый элемент *dest* скопирован в строку или массив символов, предназначенный для получения скопированной последовательности символов.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Исходный и целевой массивы или строки могут перекрываться.
 
@@ -906,7 +906,7 @@ The source/destination string sToFrom2 is: abcd-1234-ABCD
 The result2 = _Move_s(sToFrom2, char_traits<char>::length(sToFrom2), findc, 8) is: cd-1234-4-ABCD
 ```
 
-## <a name="not_eof"></a>  char_traits::not_eof
+## <a name="char_traitsnot_eof"></a><a name="not_eof"></a>char_traits::not_eof
 
 Проверяет, не является ли символ символом конца файла (EOF).
 
@@ -916,12 +916,12 @@ static int_type not_eof(const int_type& _Ch);
 
 ### <a name="parameters"></a>Параметры
 
-*_Ch*\
+*_ch*\
 Символ, представленный как `int_type`, для проверки, не является ли он символом конца файла.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`int_type` представление проверяемого символа, если `int_type` символа не равно значению символа EOF.
+Представление `int_type` проверенного персонажа, если `int_type` персонаж не равен представлению персонажа EOF.
 
 Если значение `int_type` символа равно значению `int_type` символа конца файла, то возвращается значение **false**.
 
@@ -978,7 +978,7 @@ The eofTest1 returns: 120, which is the character: x.
 The eofTest2 indicates int2 is an EOF character.
 ```
 
-## <a name="off_type"></a>  char_traits::off_type
+## <a name="char_traitsoff_type"></a><a name="off_type"></a>char_traits::off_type
 
 Целочисленный тип, который может представлять смещения между позициями в потоке.
 
@@ -986,11 +986,11 @@ The eofTest2 indicates int2 is an EOF character.
 typedef streamoff off_type;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот тип представляет собой целое число со знаком, описывающее объект, который может хранить смещение в байтах, участвующее в различных операциях размещения потока. Обычно является синонимом для [streamoff](../standard-library/ios-typedefs.md#streamoff), но в основном имеет те же свойства, что и данный тип.
+Тип — целое число со знаком, описывающее объект, который может хранить смещение в байтах, участвующее в различных операциях размещения потока. Обычно является синонимом для [streamoff](../standard-library/ios-typedefs.md#streamoff), но в основном имеет те же свойства, что и данный тип.
 
-## <a name="pos_type"></a>  char_traits::pos_type
+## <a name="char_traitspos_type"></a><a name="pos_type"></a>char_traits::pо-тип
 
 Целочисленный тип, который может представлять позиции в потоке.
 
@@ -998,11 +998,11 @@ typedef streamoff off_type;
 typedef streampos pos_type;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Этот тип описывает объект, который может хранить все сведения, необходимые для восстановления произвольного указателя позиции файла в потоке. Обычно это синоним [streampos](../standard-library/ios-typedefs.md#streampos), но в любом случае он имеет практически те же свойства, что и этот тип.
 
-## <a name="state_type"></a>  char_traits::state_type
+## <a name="char_traitsstate_type"></a><a name="state_type"></a>char_traits::state_type
 
 Тип, который представляет состояние преобразования для многобайтовых символов в потоке.
 
@@ -1010,11 +1010,11 @@ typedef streampos pos_type;
 typedef implementation-defined state_type;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Тип описывает объект, который может представлять состояние преобразования. Обычно это синоним для `mbstate_t`, но в любом случае он имеет практически те же свойства, что и этот тип.
 
-## <a name="to_char_type"></a>  char_traits::to_char_type
+## <a name="char_traitsto_char_type"></a><a name="to_char_type"></a>char_traits::to_char_type
 
 Преобразует символ `int_type` в соответствующий символ `char_type` и возвращает результат.
 
@@ -1024,16 +1024,16 @@ static char_type to_char_type(const int_type& _Ch);
 
 ### <a name="parameters"></a>Параметры
 
-*_Ch*\
+*_ch*\
 Символ `int_type`, который должен быть представлен как `char_type`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Символ `char_type`, соответствующий символу `int_type`.
 
-Значение *_Ch* , которое не может быть представлено таким образом, дает неопределенный результат.
+Значение *_Ch,* которое не может быть представлено как таковое, дает неопределенный результат.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Операции преобразования [to_int_type](#to_int_type) и `to_char_type` являются обратными по отношению друг к другу, поэтому:
 
@@ -1120,7 +1120,7 @@ The recovered char_type of ch1 is equal to the original ch1.
 The recovered char_type of ch2 is equal to the original ch2.
 ```
 
-## <a name="to_int_type"></a>  char_traits::to_int_type
+## <a name="char_traitsto_int_type"></a><a name="to_int_type"></a>char_traits::to_int_type
 
 Преобразует символ `char_type` в соответствующий символ `int_type` и возвращает результат.
 
@@ -1130,20 +1130,20 @@ static int_type to_int_type(const char_type& _Ch);
 
 ### <a name="parameters"></a>Параметры
 
-*_Ch*\
+*_ch*\
 Символ `char_type`, который должен быть представлен как `int_type`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Символ `int_type`, соответствующий символу `char_type`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Операции преобразования `to_int_type` и [to_char_type](#to_char_type) являются обратными по отношению друг к другу, поэтому:
 
 `to_int_type` (`to_char_type` (*x*)) == *x*
 
-для любого `int_type` *x*и
+для `int_type` любого *x,* и
 
 `to_char_type` (`to_int_type` (*x*)) == *x*
 
@@ -1223,6 +1223,6 @@ The recovered char_type of ch1 is equal to the original ch1.
 The recovered char_type of ch2 is equal to the original ch2.
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Безопасность резьбы в стандартной библиотеке СЗ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

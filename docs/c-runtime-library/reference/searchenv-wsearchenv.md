@@ -1,9 +1,11 @@
 ---
 title: _searchenv, _wsearchenv
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _searchenv
 - _wsearchenv
+- _o__searchenv
+- _o__wsearchenv
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +40,12 @@ helpviewer_keywords:
 - searchenv function
 - environment paths
 ms.assetid: 9c944a27-d326-409b-aee6-410e8762d9d3
-ms.openlocfilehash: a3139ab87335ba581ef65707602c5da1819ce4a1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 83ba5663d569d449a0024db5abe2eb3ee903123b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948774"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913228"
 ---
 # <a name="_searchenv-_wsearchenv"></a>_searchenv, _wsearchenv
 
@@ -80,7 +83,7 @@ void _wsearchenv(
 
 ### <a name="parameters"></a>Параметры
 
-*filename*<br/>
+*файлов*<br/>
 Имя искомого файла.
 
 *varname*<br/>
@@ -89,15 +92,15 @@ void _wsearchenv(
 *контура*<br/>
 Буфер для хранения полного пути.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Подпрограммы **_searchenv** выполняет поиск целевого файла в указанном домене. Переменная *VarName* может быть любой средой или определяемой пользователем переменной, например **path**, **lib**или **include**, которая задает список путей к каталогам. Так как **_searchenv** учитывает регистр, переменная *имя_переменной* должна соответствовать регистру переменной среды.
+**_Searchenv** подпрограммы выполняет поиск целевого файла в указанном домене. Переменная *VarName* может быть любой средой или определяемой пользователем переменной, например **path**, **lib**или **include**, которая задает список путей к каталогам. Поскольку **_searchenv** учитывает регистр, переменная *имя_переменной* должна соответствовать регистру переменной среды.
 
 Сначала процедура выполняет поиск файла в текущем рабочем каталоге. Если файл не найден, он ищет его в каталогах, указанных в переменной среды. Если целевой файл находится в одном из этих каталогов, созданный путь копируется в *путь*. Если файл *имени* файла не найден, то *PathName* содержит пустую строку, завершающуюся нулем.
 
-Буфер *PathName* должен иметь длину не менее **_MAX_PATH** символов, чтобы соответствовать полной длине сформированного пути. В противном случае **_searchenv** может привести к переполнению буфера *PathName* и вызвать непредвиденное поведение.
+Буфер *PathName* должен содержать не менее **_MAX_PATH** символов, чтобы соответствовать полной длине сформированного пути. В противном случае **_searchenv** может привести к переполнению буфера *PathName* и вызвать непредвиденное поведение.
 
-**_wsearchenv** — это версия **_searchenv**для расширенных символов, а аргументы **_wsearchenv** — строки расширенных символов. в противном случае **_wsearchenv** и **_searchenv** ведут себя одинаково.
+**_wsearchenv** — это версия **_searchenv**для расширенных символов, а аргументы для **_wsearchenv** являются строками расширенных символов. в противном случае **_wsearchenv** и **_searchenv** ведут себя одинаково.
 
 Если *filename* является пустой строкой, эти функции возвращают **еноент**.
 
@@ -105,9 +108,11 @@ void _wsearchenv(
 
 Дополнительные сведения об ошибках **и кодах** ошибок см. в разделе " [константы](../../c-runtime-library/errno-constants.md)".
 
-В C++ эти функции имеют шаблонные перегрузки, которые вызывают более новые и безопасные аналоги этих функций. Дополнительные сведения см. в разделе [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+В C++ эти функции имеют шаблонные перегрузки, которые вызывают более новые и безопасные аналоги этих функций. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../../c-runtime-library/secure-template-overloads.md).
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Процедура Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|
@@ -120,7 +125,7 @@ void _wsearchenv(
 |**_searchenv**|\<stdlib.h>|
 |**_wsearchenv**|\<stdlib.h> или \<wchar.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -154,7 +159,7 @@ Path for CL.EXE:
 C:\Program Files\Microsoft Visual Studio 8\VC\BIN\CL.EXE
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Управление каталогами](../../c-runtime-library/directory-control.md)<br/>
 [getenv, _wgetenv](getenv-wgetenv.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: Класс CMFCColorPopupMenu
+title: CmFCColorPopupMenu класс
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCColorPopupMenu
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CMFCColorPopupMenu [MFC], GetMenuBar
 - CMFCColorPopupMenu [MFC], SetPropList
 ms.assetid: 0bf9efe8-aed5-4ab7-b23b-eb284b4668be
-ms.openlocfilehash: 0c2fed4aa239faa96abf692a46a27102ce9820a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 901a44c8f5fdecd1b277ebdecc995722a3afe9a3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403689"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752489"
 ---
-# <a name="cmfccolorpopupmenu-class"></a>Класс CMFCColorPopupMenu
+# <a name="cmfccolorpopupmenu-class"></a>CmFCColorPopupMenu класс
 
-Представляет контекстное меню, который используется пользователями для выбора цветов в документ или приложение.
+Представляет всплывающее меню, которое пользователи используют для выбора цветов в документе или приложении.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -37,33 +37,33 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
 
 |||
 |-|-|
-|name|Описание|
-|[CMFCColorPopupMenu::CMFCColorPopupMenu](#cmfccolorpopupmenu)|Создает объект `CMFCColorPopupMenu`.|
+|Имя|Описание|
+|[CMFCColorPopupMenu::CMFCColorPopupMenu](#cmfccolorpopupmenu)|Формирует объект `CMFCColorPopupMenu`.|
 |`CMFCColorPopupMenu::~CMFCColorPopupMenu`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
 |||
 |-|-|
-|name|Описание|
-|[CMFCColorPopupMenu::CreateTearOffBar](#createtearoffbar)|Создает фиксируемого перемещаемой цветовую шкалу. (Переопределяет [CMFCPopupMenu::CreateTearOffBar](../../mfc/reference/cmfcpopupmenu-class.md#createtearoffbar).)|
-|[CMFCColorPopupMenu::GetMenuBar](#getmenubar)|Возвращает [CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md) , внедренные во всплывающем меню. (Переопределяет [CMFCPopupMenu::GetMenuBar](../../mfc/reference/cmfcpopupmenu-class.md#getmenubar).)|
-|`CMFCColorPopupMenu::GetThisClass`|Используется инфраструктурой, чтобы получить указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|
-|[CMFCColorPopupMenu::SetPropList](#setproplist)|Задает свойство объекта элемента управления grid внедренной `CMFCColorBar` объекта.|
+|Имя|Описание|
+|[CMFCColorPopupМеню::CreateTearOffBar](#createtearoffbar)|Создает док-станцию разрыва цвета бар. (Перекрывает [CMFCPopupMenu::CreateTearOffBar](../../mfc/reference/cmfcpopupmenu-class.md#createtearoffbar).)|
+|[CMFCColorPopupМеню::GetMenuBar](#getmenubar)|Возвращает [CMFCPopupMenuBar,](../../mfc/reference/cmfcpopupmenubar-class.md) встроенный в всплывающее меню. (Переопределяет [CMFCPopupMenu::GetMenuBar](../../mfc/reference/cmfcpopupmenu-class.md#getmenubar).)|
+|`CMFCColorPopupMenu::GetThisClass`|Используется фректором для получения указателя на объект [CRuntimeClass,](../../mfc/reference/cruntimeclass-structure.md) связанный с этим типом класса.|
+|[CMFCColorPopupМеню::SetPropList](#setproplist)|Устанавливает объект управления сеткой `CMFCColorBar` свойства встроенного объекта.|
 
 ### <a name="data-members"></a>Элементы данных
 
 |||
 |-|-|
-|name|Описание|
-|`m_bEnabledInCustomizeMode`|Логическое значение, определяющее, следует ли отображать цветовую шкалу.|
-|`m_wndColorBar`|`CMFCColorBar` Объект, предоставляющий выбранный цвет.|
+|Имя|Описание|
+|`m_bEnabledInCustomizeMode`|Значение Boolean, определяющее, показывать ли цветовую панель.|
+|`m_wndColorBar`|Объект, `CMFCColorBar` обеспечивающий выбор цвета.|
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот класс наследует функциональные возможности всплывающего меню `CMFCPopupMenu` класса и управляет `CMFCColorBar` объект, предоставляющий выбранный цвет. Когда платформа панель инструментов находится в режим настройки и `m_bEnabledInCustomizeMode` члена имеет значение FALSE, цветовая панель объекта не отображается. Дополнительные сведения о режиме настройки, см. в разделе [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)
+Этот класс наследует функциональность всплывающее `CMFCPopupMenu` меню класса и `CMFCColorBar` управляет объектом, обеспечивающим выбор цвета. Когда платформа панели инструментов находится в `m_bEnabledInCustomizeMode` режиме настройки и участник настроен на FALSE, объект цветовой панели не отображается. Для получения дополнительной информации о режиме настройки см. [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)
 
-Дополнительные сведения о `CMFCColorBar`, см. в разделе [класс CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md).
+Для получения `CMFCColorBar`дополнительной информации о, см. [CMFCColorBar Class](../../mfc/reference/cmfccolorbar-class.md)
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -85,9 +85,9 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
 
 **Заголовок:** afxcolorpopupmenu.h
 
-##  <a name="cmfccolorpopupmenu"></a>  CMFCColorPopupMenu::CMFCColorPopupMenu
+## <a name="cmfccolorpopupmenucmfccolorpopupmenu"></a><a name="cmfccolorpopupmenu"></a>CMFCColorPopupMenu::CMFCColorPopupMenu
 
-Создает объект `CMFCColorPopupMenu`.
+Формирует объект `CMFCColorPopupMenu`.
 
 ```
 CMFCColorPopupMenu(
@@ -128,64 +128,64 @@ CMFCColorPopupMenu(
 ### <a name="parameters"></a>Параметры
 
 *Цвета*<br/>
-[in] Массив цветов, отображаемых структурой всплывающего меню.
+(в) Массив цветов, отображаемый фреймворками в всплывающем меню.
 
-*color*<br/>
-[in] Значение по умолчанию выбранный цвет.
+*Цвет*<br/>
+(в) Выбранный по умолчанию цвет.
 
 *lpszAutoColor*<br/>
-[in] Текстовая метка *автоматического* кнопка цвета (по умолчанию), или значение NULL.
+(в) Текстовая метка *автоматической* (по умолчанию) цветной кнопки, или NULL.
 
-Стандартную метку для автоматической кнопки — **автоматического**.
+Стандартная метка для автоматической кнопки **автоматическая**.
 
 *lpszOtherColor*<br/>
-[in] Текстовая метка *других* кнопка, отображающая более цвета, или значение NULL.
+(в) Текстовая метка *другой* кнопки, которая отображает больше цветов, или NULL.
 
-Стандартный метки другие кнопки **Дополнительные цвета...**.
+Стандартная метка для другой кнопки **больше цветов ...**.
 
 *lpszDocColors*<br/>
-[in] Текстовая подпись кнопки цветов документа. Палитра цветов документе перечислены все цвета, которые в настоящее время использует документ.
+(в) Текстовая метка кнопки цветов документа. В документе цветовая палитра перечисляет все цвета, которые документ использует в настоящее время.
 
 *lstDocColors*<br/>
-[in] Список цветов, которые в настоящее время использует документ.
+(в) Список цветов, которые в настоящее время используется документом.
 
 *nColumns*<br/>
-[in] Число столбцов, к которым имеет массив цветов.
+(в) Количество столбцов, которые есть у массива цветов.
 
 *nHorzDockRows*<br/>
-[in] Число строк, к которым имеет цветовой панели, когда она закреплена горизонтально.
+(в) Количество строк, которые имеет цветовая панель, когда она состыкована горизонтально.
 
-*nVertDockColumns*<br/>
-[in] Число столбцов, которые цветовой полосы при их закреплении по вертикали.
+*nVertDockКолонки*<br/>
+(в) Количество столбцов, которые имеет цветовая панель, когда она состыкована вертикально.
 
 *colorAutomatic*<br/>
-[in] Цвет по умолчанию, платформа применяется при нажатии кнопки автоматического.
+(в) Цвет по умолчанию, который применяется при нажатии кнопки автоматической.
 
 *uiCommandID*<br/>
-[in] ИД команды управления цветовой полосы.
+(в) Идентификатор команды управления цветовой панелью.
 
 *bStdColorDlg*<br/>
-[in] Логическое значение, указывающее, следует ли отображать диалоговое окно стандартный системный цвет или [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) диалоговое окно.
+(в) Boolean, который указывает, следует ли показывать стандартную систему цвет диалоговую коробку или диалоговое окно [CMFCColorDialog.](../../mfc/reference/cmfccolordialog-class.md)
 
 *pParentBtn*<br/>
-[in] Указатель на родительский кнопки.
+(в) Указатель на кнопку родительской кнопки.
 
 *nID*<br/>
-[in] Идентификатор команды.
+(в) Идентификатор команды.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Каждая перегрузка конструктора задает `m_bEnabledInCustomizeMode` член значение false.
+Каждый перегруженный конструктор `m_bEnabledInCustomizeMode` устанавливает член FALSE.
 
 ### <a name="example"></a>Пример
 
-В следующем примере демонстрируется создание `CMFCColorPopupMenu` объекта.
+В следующем примере показано, `CMFCColorPopupMenu` как построить объект.
 
 [!code-cpp[NVC_MFC_RibbonApp#34](../../mfc/reference/codesnippet/cpp/cmfccolorpopupmenu-class_1.cpp)]
 
-##  <a name="createtearoffbar"></a>  CMFCColorPopupMenu::CreateTearOffBar
+## <a name="cmfccolorpopupmenucreatetearoffbar"></a><a name="createtearoffbar"></a>CMFCColorPopupМеню::CreateTearOffBar
 
-Создает фиксируемого перемещаемой цветовую шкалу.
+Создает док-станцию разрыва цвета бар.
 
 ```
 virtual CPane* CreateTearOffBar(
@@ -199,21 +199,21 @@ virtual CPane* CreateTearOffBar(
 |||
 |-|-|
 |Параметр|Описание|
-|*pWndMain*|[in] Указатель на родительское окно перемещаемой панелью.|
-|*uiID*|[in] Идентификатор команды перемещаемой панелью.|
-|*lpszName*|[in] Текст окна перемещаемой панелью.|
+|*pWndMain*|(в) Указатель на родительское окно барной стойки.|
+|*uiID*|(в) Идентификатор команды бар отрыва.|
+|*lpszName*|(в) Текст окна отрыва бара.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на новый объект панели управления перемещаемой.
+Указатель на новый объект панели управления разрывом.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод создает [класс CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md) объекта и приводит его к [класс CPane](../../mfc/reference/cpane-class.md) указатель. Можно привести это значение к [класс CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md) указатель с помощью одного из макросы приведения, описанные в [тип-приведения для объектов классов MFC](../../mfc/reference/type-casting-of-mfc-class-objects.md).
+Этот метод создает объект [класса CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md) и отбрасывает его на указатель [класса CPane.](../../mfc/reference/cpane-class.md) Вы можете отбросить это значение обратно в указатель [класса CMFCColorBar,](../../mfc/reference/cmfccolorbar-class.md) используя один из макросов литья, описанных в [типе литья объектов класса MFC.](../../mfc/reference/type-casting-of-mfc-class-objects.md)
 
-##  <a name="getmenubar"></a>  CMFCColorPopupMenu::GetMenuBar
+## <a name="cmfccolorpopupmenugetmenubar"></a><a name="getmenubar"></a>CMFCColorPopupМеню::GetMenuBar
 
-Возвращает [CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md) , внедренные во всплывающем меню.
+Возвращает [CMFCPopupMenuBar,](../../mfc/reference/cmfcpopupmenubar-class.md) встроенный в всплывающее меню.
 
 ```
 virtual CMFCPopupMenuBar* GetMenuBar();
@@ -221,26 +221,26 @@ virtual CMFCPopupMenuBar* GetMenuBar();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на внедренном `CMFCPopupMenuBar`.
+Указатель на встроенный `CMFCPopupMenuBar`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Всплывающее меню цвета имеет встроенный [класс CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md) объекта. Переопределите этот метод в производном классе, если приложение использует различные внедренного типа.
+Цветное всплывающее меню имеет встроенный объект [класса CMFCPopupMenuBar.](../../mfc/reference/cmfcpopupmenubar-class.md) Переопределить этот метод в производном классе, если приложение использует другой встроенный тип.
 
-##  <a name="setproplist"></a>  CMFCColorPopupMenu::SetPropList
+## <a name="cmfccolorpopupmenusetproplist"></a><a name="setproplist"></a>CMFCColorPopupМеню::SetPropList
 
-Задает свойство объекта элемента управления grid внедренной `CMFCColorBar` объекта.
+Устанавливает объект управления сеткой `CMFCColorBar` свойства встроенного объекта.
 
-```
+```cpp
 void SetPropList(CMFCPropertyGridCtrl* pWndList);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *pWndList*<br/>
-[in] Указатель на объект элемента управления сетки свойств.
+(в) Указатель на объект управления сеткой свойств.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)

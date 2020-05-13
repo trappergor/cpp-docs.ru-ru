@@ -1,5 +1,5 @@
 ---
-title: Класс Кдоккаблепанеадаптер
+title: Класс CDockablePaneAdapter
 ms.date: 11/04/2016
 f1_keywords:
 - CDockablePaneAdapter
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - CDockablePaneAdapter [MFC], SaveState
 - CDockablePaneAdapter [MFC], SetWrappedWnd
 ms.assetid: 6ed6cf82-f39c-4d0c-bf7c-8641495cf8f3
-ms.openlocfilehash: 88c125c63f9dbfe272f5d543e996366575fc533b
-ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
+ms.openlocfilehash: 2fbaf99e4cc9bcbecf1a94012713b34e986f7ecb
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68866222"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375596"
 ---
-# <a name="cdockablepaneadapter-class"></a>Класс Кдоккаблепанеадаптер
+# <a name="cdockablepaneadapter-class"></a>Класс CDockablePaneAdapter
 
 Обеспечивает поддержку прикрепления производных панелей от `CWnd`.
 
@@ -35,36 +35,36 @@ class CDockablePaneAdapter : public CDockablePane
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[Кдоккаблепанеадаптер:: Жетвраппедвнд](#getwrappedwnd)|Возвращает окно в оболочке.|
-|[Кдоккаблепанеадаптер:: LoadState](#loadstate)|(Переопределяет [CDockablePane:: LoadState](cdockablepane-class.md#loadstate).)|
-|[Кдоккаблепанеадаптер:: SaveState](#savestate)|(Переопределяет [CDockablePane:: SaveState](cdockablepane-class.md).)|
-|[Кдоккаблепанеадаптер:: Сетвраппедвнд](#setwrappedwnd)||
+|[CDockablePaneAdapter::GetWrappedWnd](#getwrappedwnd)|Возвращает окно в оболочке.|
+|[CDockablePaneAdapter::LoadState](#loadstate)|(Перекрывает [CDockablePane::LoadState](cdockablepane-class.md#loadstate).)|
+|[CDockablePaneAdapter::SaveState](#savestate)|(Перекрывает [CDockablePane::SaveState](cdockablepane-class.md).)|
+|[CDockablePaneAdapter::SetWrappedWnd](#setwrappedwnd)||
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Как правило, платформа создает экземпляры объектов этого класса при использовании методов [CMFCBaseTabCtrl:: аддтаб](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) или [CMFCBaseTabCtrl:: инсерттаб](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab) .
+Обычно фреймворк мгновенно использует объекты этого класса при использовании методов [CMFCBaseTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) или [CMFCBaseTabCtrl::InsertTab.](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab)
 
-Если вы хотите настроить `CDockablePaneAdapter` поведение, просто создайте производный от него новый класс и задайте в качестве сведений о классе среды выполнения окно с вкладками с помощью [CMFCBaseTabCtrl:: SetDockingBarWrapperRTC](../../mfc/reference/cmfcbasetabctrl-class.md#setdockingbarwrapperrtc).
+Если вы хотите настроить `CDockablePaneAdapter` поведение, просто вывешите из него новый класс и установите информацию о классе выполнения в окно вкладок с помощью [CMFCBaseTabCtrl::SetDockingBarWrapperRTC.](../../mfc/reference/cmfcbasetabctrl-class.md#setdockingbarwrapperrtc)
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
-[CObject](../../mfc/reference/cobject-class.md)\
-└&nbsp;[От CCmdTarget](../../mfc/reference/ccmdtarget-class.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CWnd](../../mfc/reference/cwnd-class.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CBasePane](../../mfc/reference/cbasepane-class.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CPane](../../mfc/reference/cpane-class.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CDockablePane](../../mfc/reference/cdockablepane-class.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[Кдоккаблепанеадаптер](../../mfc/reference/cdockablepaneadapter-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)\
+&nbsp;[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Квн](../../mfc/reference/cwnd-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CBasePane](../../mfc/reference/cbasepane-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[КПэйне](../../mfc/reference/cpane-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;[CDockablePane](../../mfc/reference/cdockablepane-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;[CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md)
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** афксдоккаблепанеадаптер. h
+**Заголовок:** afxDockablePaneAdapter.h
 
-##  <a name="getwrappedwnd"></a>Кдоккаблепанеадаптер:: Жетвраппедвнд
+## <a name="cdockablepaneadaptergetwrappedwnd"></a><a name="getwrappedwnd"></a>CDockablePaneAdapter::GetWrappedWnd
 
-Возвращает базовое окно для адаптера закрепляемой панели.
+Возвращает базовое окно для адаптера сприминым стеклом.
 
 ```
 virtual CWnd* GetWrappedWnd() const;
@@ -72,13 +72,13 @@ virtual CWnd* GetWrappedWnd() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на окно с оболочкой.
+Указатель на завернутое окно.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Используйте эту функцию для доступа к окну с оболочкой.
+Используйте эту функцию для доступа к завернутому окну.
 
-##  <a name="loadstate"></a>Кдоккаблепанеадаптер:: LoadState
+## <a name="cdockablepaneadapterloadstate"></a><a name="loadstate"></a>CDockablePaneAdapter:LoadState
 
 Загружает состояние панели из реестра.
 
@@ -91,22 +91,22 @@ virtual BOOL LoadState(
 
 ### <a name="parameters"></a>Параметры
 
-*лпсзпрофиленаме*<br/>
-окне Имя профиля.
+*lpszProfileName*<br/>
+(в) Имя профиля.
 
-*ниндекс*<br/>
-окне Индекс профиля.
+*Nindex*<br/>
+(в) Индекс профиля.
 
 *uiID*<br/>
-окне Идентификатор области.
+(в) Идентификатор панели.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="savestate"></a>Кдоккаблепанеадаптер:: SaveState
+## <a name="cdockablepaneadaptersavestate"></a><a name="savestate"></a>CDockablePaneAdapter::SaveState
 
-Сохраняет состояние панели в реестре.
+Сохраняет состояние панели в реестр.
 
 ```
 virtual BOOL SaveState(
@@ -117,22 +117,22 @@ virtual BOOL SaveState(
 
 ### <a name="parameters"></a>Параметры
 
-*лпсзпрофиленаме*<br/>
-окне Имя профиля.
+*lpszProfileName*<br/>
+(в) Имя профиля.
 
-*ниндекс*<br/>
-окне Индекс профиля (по умолчанию используется идентификатор элемента управления окна).
+*Nindex*<br/>
+(в) Индекс профиля (по умолчанию в идентификатор управления окном).
 
 *uiID*<br/>
-окне Идентификатор области.
+(в) Идентификатор панели.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="setwrappedwnd"></a>Кдоккаблепанеадаптер:: Сетвраппедвнд
+## <a name="cdockablepaneadaptersetwrappedwnd"></a><a name="setwrappedwnd"></a>CDockablePaneAdapter::SetWrappedWnd
 
-Задает базовое окно для адаптера закрепляемой панели.
+Устанавливает базовое окно для адаптера сприминовными стеклами.
 
 ```
 virtual BOOL SetWrappedWnd(CWnd* pWnd);
@@ -140,15 +140,15 @@ virtual BOOL SetWrappedWnd(CWnd* pWnd);
 
 ### <a name="parameters"></a>Параметры
 
-*Приводится*<br/>
-окне Указатель на окно для адаптера панели, для которого необходимо выполнить перенос.
+*pWnd*<br/>
+(в) Указатель на окно для адаптера панели для упаковки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)<br/>
-[Класс CDockablePane](../../mfc/reference/cdockablepane-class.md)
+[CDockablePane Class](../../mfc/reference/cdockablepane-class.md)

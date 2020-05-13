@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2948
 ms.assetid: 780c6ed3-43a0-4112-8d00-b7bf79086c05
-ms.openlocfilehash: 85fc8bb308b06d52764af4bd59dda1a82307dcfd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: af759d424c61d9471c69891bbddb03a40fea2af9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363951"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176849"
 ---
 # <a name="compiler-error-c2948"></a>Ошибка компилятора C2948
 
-явное создание экземпляра; спецификатор класса хранения «спецификатор» не разрешен при специализации
+явное создание экземпляра; спецификатор класса хранения "спецификатор" не разрешен в специализации
 
-Нельзя использовать спецификаторы классов хранения (такие как `extern`) в специализации шаблона класса, который был ранее явно создан.
+Нельзя использовать описатели класса хранения (например, `extern`) в специализации класса шаблона, который ранее был создан явным образом.

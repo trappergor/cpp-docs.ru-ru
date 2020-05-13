@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - U1064
 ms.assetid: 7141e66e-cde6-4173-84df-a391f3ebcdd1
-ms.openlocfilehash: 71213391032989e5faf8889761b29194928125a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bfc42c458c1932287f17f367d09c4b23c2c201a4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367412"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182829"
 ---
 # <a name="nmake-fatal-error-u1064"></a>Неустранимая ошибка NMAKE U1064
 
-MAKEFILE не найден и конечный файл не указан
+ФАЙЛ MAKEFILE не найден, и не указан целевой объект
 
-NMAKE командной строки не указан файл makefile или целевой объект и текущий каталог не содержит файл makefile.
+В командной строке NMAKE не указан файл makefile или целевой объект, а текущий каталог не содержит файла с именем MAKEFILE.
 
-NMAKE требует makefile или целевой объект командной строки (или оба). Для предоставления makefile (NMAKE), укажите параметр /F или поместите файл makefile в текущем каталоге. NMAKE можно создать целевой объект командной строки с помощью правило определения, если не указан файл makefile.
+Для NMAKE требуется либо файл makefile, либо целевой объект командной строки (или оба). Чтобы сделать файл Makefile доступным для NMAKE, укажите параметр/F или поместите в текущий каталог файл с именем MAKEFILE. NMAKE может создать целевой объект командной строки с помощью правила вывода, если файл makefile не предоставлен.

@@ -1,31 +1,31 @@
 ---
-title: Макросы состояния объекта
+title: Макрос состояния объекта
 ms.date: 11/04/2016
 f1_keywords:
 - atlcom/ATL::DECLARE_OLEMISC_STATUS
 ms.assetid: 727dbef2-a342-4157-9d64-a421805d9747
-ms.openlocfilehash: dc50825d6b6e74dc263a097e86d8ea0d42989825
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5617ce7fb972c98775072f72244f91052d41ece3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495321"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326168"
 ---
-# <a name="object-status-macros"></a>Макросы состояния объекта
+# <a name="object-status-macros"></a>Макрос состояния объекта
 
-Этот макрос задает флаги, принадлежащие элементам управления ActiveX.
+На этом макросе устанавливаются флаги, принадлежащие элементам управления ActiveX.
 
 |||
 |-|-|
-|[DECLARE_OLEMISC_STATUS](#declare_olemisc_status)|Используется в элементах управления ActiveX ATL для установки флагов ОЛЕМИСК.|
+|[DECLARE_OLEMISC_STATUS](#declare_olemisc_status)|Используется в элементах управления ATL ActiveX для установки флагов OLEMISC.|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** атлком. h
+**Заголовок:** atlcom.h
 
-##  <a name="declare_olemisc_status"></a>DECLARE_OLEMISC_STATUS
+## <a name="declare_olemisc_status"></a><a name="declare_olemisc_status"></a>DECLARE_OLEMISC_STATUS
 
-Используется в элементах управления ActiveX ATL для установки флагов ОЛЕМИСК.
+Используется в элементах управления ATL ActiveX для установки флагов OLEMISC.
 
 ```
 DECLARE_OLEMISC_STATUS( miscstatus )
@@ -33,17 +33,17 @@ DECLARE_OLEMISC_STATUS( miscstatus )
 
 ### <a name="parameters"></a>Параметры
 
-*мискстатус*<br/>
-Все применимые флаги ОЛЕМИСК.
+*неверный*<br/>
+Все применимые флаги OLEMISC.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот макрос используется для установки флагов ОЛЕМИСК для элемента управления ActiveX. Дополнительные сведения см. в разделе [иолеобжект:: жетмискстатус](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getmiscstatus) .
+Этот макрос используется для установки флагов OLEMISC для управления ActiveX. Для получения более подробной информации обратитесь к [IOleObject::GetMiscStatus.](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getmiscstatus)
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Windowing#124](../../atl/codesnippet/cpp/object-status-macros_1.h)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Макросы](../../atl/reference/atl-macros.md)

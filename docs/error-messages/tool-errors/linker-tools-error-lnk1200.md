@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1200
 ms.assetid: 55771145-915e-4006-ac6c-ac702041eb2f
-ms.openlocfilehash: c99b25a83836f1ee0bc6ba622e42ea382c377172
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9dcc37bd74a25e29726529346b1578bb8b18ac3e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62213554"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195140"
 ---
 # <a name="linker-tools-error-lnk1200"></a>Ошибка средств компоновщика LNK1200
 
-Ошибка при чтении базы данных программы «имя_файла»
+Ошибка при чтении базы данных программы "имяфайла"
 
 Не удалось прочитать базу данных программы (PDB).
 
-Эта ошибка может быть вызвана повреждения файлов.
+Эта ошибка может быть вызвана повреждением файла.
 
-Если `filename` является PDB-ФАЙЛ для объектного файла, перекомпилировать файл объекта с помощью [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md).
+Если `filename` является PDB для объектного файла, перескомпилируйте объектный файл с помощью [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md).
 
-Если `filename` является PDB-ФАЙЛ для основного выходного файла, и эта ошибка возникает во время инкрементной компоновки, удалите PDB-ФАЙЛ и повторно скомпоновать.
+Если `filename` является PDB для основного выходного файла и эта ошибка произошла во время добавочной компоновки, удалите PDB-файл и перекомпоновку.

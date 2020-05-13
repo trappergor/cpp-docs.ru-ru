@@ -1,0 +1,125 @@
+- name: Расширения компонентов для .NET и UWP
+  href: ../extensions/component-extensions-for-runtime-platforms.md
+- name: Оператор отслеживания ссылок
+  href: ../extensions/tracking-reference-operator-cpp-component-extensions.md
+- name: Оператор дескриптора объекта (^)
+  href: ../extensions/handle-to-object-operator-hat-cpp-component-extensions.md
+- name: abstract
+  href: ../extensions/abstract-cpp-component-extensions.md
+- name: Массивы
+  href: ../extensions/arrays-cpp-component-extensions.md
+- name: Упаковка
+  href: ../extensions/boxing-cpp-component-extensions.md
+- name: Классы и структуры
+  href: ../extensions/classes-and-structs-cpp-component-extensions.md
+- name: 'Пространства имен Platform, default и cli'
+  href: ../extensions/platform-default-and-cli-namespaces-cpp-component-extensions.md
+- name: Поддержка характеристик типов компилятором
+  href: ../extensions/compiler-support-for-type-traits-cpp-component-extensions.md
+- name: Контекстные ключевые слова
+  href: ../extensions/context-sensitive-keywords-cpp-component-extensions.md
+- name: delegate
+  href: ../extensions/delegate-cpp-component-extensions.md
+- name: Класс перечисления
+  href: ../extensions/enum-class-cpp-component-extensions.md
+- name: event
+  href: ../extensions/event-cpp-component-extensions.md
+- name: Обработка исключений
+  href: ../extensions/exception-handling-cpp-component-extensions.md
+- name: Явные переопределения
+  href: ../extensions/explicit-overrides-cpp-component-extensions.md
+- name: 'ref new, gcnew'
+  href: ../extensions/ref-new-gcnew-cpp-component-extensions.md
+- name: Универсальные шаблоны
+  expanded: false
+  items:
+    - name: Универсальные шаблоны
+      href: ../extensions/generics-cpp-component-extensions.md
+    - name: Обзор универсальных типов в Visual C++
+      href: ../extensions/overview-of-generics-in-visual-cpp.md
+    - name: Универсальные функции
+      href: ../extensions/generic-functions-cpp-cli.md
+    - name: Универсальные классы
+      href: ../extensions/generic-classes-cpp-cli.md
+    - name: Универсальные интерфейсы
+      href: ../extensions/generic-interfaces-visual-cpp.md
+    - name: Универсальные делегаты
+      href: ../extensions/generic-delegates-visual-cpp.md
+    - name: 'Ограничения, применяемые к параметрам универсальных типов'
+      href: ../extensions/constraints-on-generic-type-parameters-cpp-cli.md
+    - name: Использование универсальных типов
+      href: ../extensions/consuming-generics-cpp-cli.md
+    - name: Универсальные типы и шаблоны
+      href: ../extensions/generics-and-templates-visual-cpp.md
+    - name: Практическое руководство. Повышение производительности с помощью универсальных шаблонов
+      href: ../extensions/how-to-improve-performance-with-generics-visual-cpp.md
+- name: Класс interface
+  href: ../extensions/interface-class-cpp-component-extensions.md
+- name: литерал
+  href: ../extensions/literal-cpp-component-extensions.md
+- name: Среда выполнения Windows и управляемые шаблоны
+  href: ../extensions/windows-runtime-and-managed-templates-cpp-component-extensions.md
+- name: new (новая ячейка в таблице vtable)
+  href: ../extensions/new-new-slot-in-vtable-cpp-component-extensions.md
+- name: nullptr
+  href: ../extensions/nullptr-cpp-component-extensions.md
+- name: Описатели переопределения
+  href: ../extensions/override-specifiers-cpp-component-extensions.md
+- name: override
+  href: ../extensions/override-cpp-component-extensions.md
+- name: partial
+  href: ../extensions/partial-cpp-component-extensions.md
+- name: свойство;
+  href: ../extensions/property-cpp-component-extensions.md
+- name: safe_cast
+  href: ../extensions/safe-cast-cpp-component-extensions.md
+- name: Строка
+  href: ../extensions/string-cpp-component-extensions.md
+- name: sealed
+  href: ../extensions/sealed-cpp-component-extensions.md
+- name: typeid
+  href: ../extensions/typeid-cpp-component-extensions.md
+- name: Пользовательские атрибуты
+  expanded: false
+  items:
+    - name: Пользовательские атрибуты
+      href: ../extensions/user-defined-attributes-cpp-component-extensions.md
+    - name: Типы параметров атрибутов
+      href: ../extensions/attribute-parameter-types-cpp-component-extensions.md
+    - name: Целевые объекты атрибутов
+      href: ../extensions/attribute-targets-cpp-component-extensions.md
+- name: 'Расширения, относящиеся к C++/CLI'
+  expanded: false
+  items:
+    - name: 'Расширения, относящиеся к C++/CLI'
+      href: ../extensions/extensions-that-are-specific-to-cpp-cli.md
+    - name: __identifier
+      href: ../extensions/identifier-cpp-cli.md
+    - name: Приведение в стиле C с использованием параметра -clr
+      href: ../extensions/c-style-casts-with-clr-cpp-cli.md
+    - name: interior_ptr
+      expanded: false
+      items:
+        - name: interior_ptr
+          href: ../extensions/interior-ptr-cpp-cli.md
+        - name: Практическое руководство. Объявление и использование внутренних указателей и управляемых массивов
+          href: ../extensions/how-to-declare-and-use-interior-pointers-and-managed-arrays-cpp-cli.md
+        - name: Практическое руководство. Объявление типов значений с использованием ключевого слова interior_ptr
+          href: ../extensions/how-to-declare-value-types-with-the-interior-ptr-keyword-cpp-cli.md
+        - name: Практическое руководство. Перегрузка функций с внутренними и собственными указателями
+          href: ../extensions/how-to-overload-functions-with-interior-pointers-and-native-pointers-cpp-cli.md
+        - name: Практическое руководство. Объявление внутренних указателей с использованием ключевого слова const
+          href: ../extensions/how-to-declare-interior-pointers-with-the-const-keyword-cpp-cli.md
+    - name: pin_ptr
+      expanded: false
+      items:
+        - name: pin_ptr
+          href: ../extensions/pin-ptr-cpp-cli.md
+        - name: Практическое руководство. Закрепление указателей и массивов
+          href: ../extensions/how-to-pin-pointers-and-arrays.md
+        - name: Практическое руководство. Объявление закрепляющих указателей и типов значений
+          href: ../extensions/how-to-declare-pinning-pointers-and-value-types.md
+    - name: Перенаправление типов
+      href: ../extensions/type-forwarding-cpp-cli.md
+    - name: Списки аргументов переменных (...)
+      href: ../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md

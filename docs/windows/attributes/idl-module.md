@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - idl_module attribute
 ms.assetid: 3578b337-e38a-4334-b747-15404c02dbc0
-ms.openlocfilehash: 8838a833552ae7066dbcf17b4f676d6626c069f8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6dd0a34d5d957838613bde2c9e05d5ef26a1f678
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514670"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168048"
 ---
 # <a name="idl_module"></a>idl_module
 
@@ -53,7 +53,7 @@ function declaration
 *объявление функции*<br/>
 Функция, которая будет определена.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Атрибут **idl_module** C++ позволяет указать точку входа в DLL-файле, который позволяет импортировать из DLL-файла.
 
@@ -61,7 +61,7 @@ function declaration
 
 Вы можете экспортировать содержимое из COM-объекта, который можно экспортировать из файла DLL, поместив точку входа DLL в блок библиотеки IDL-файла.
 
-Необходимо использовать **idl_module** в двух шагах. Во-первых, необходимо определить пару имя/DLL. Затем, если для указания точки входа используется **idl_module** , укажите имя и все дополнительные атрибуты.
+Необходимо использовать **idl_module** в двух шагах. Во-первых, необходимо определить пару имя/DLL. Затем при использовании **idl_module** для указания точки входа укажите имя и все дополнительные атрибуты.
 
 ## <a name="example"></a>Пример
 
@@ -82,14 +82,14 @@ void FuncName(int i);
 
 |||
 |-|-|
-|**Относится к**|В любом месте|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Отсутствуют|
-|**Недопустимые атрибуты**|Отсутствуют|
+|**Применение**|В любом месте|
+|**Повторяемый**|нет|
+|**Обязательные атрибуты**|None|
+|**Недопустимые атрибуты**|None|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Изолированные атрибуты](stand-alone-attributes.md)<br/>
