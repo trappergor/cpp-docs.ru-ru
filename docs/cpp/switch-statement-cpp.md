@@ -20,10 +20,10 @@ no-loc:
 ms.assetid: 6c3f3ed3-5593-463c-8f4b-b33742b455c6
 ms.openlocfilehash: d43a7a64b5a74f00833093ae8999d73edd7f5753
 ms.sourcegitcommit: c4cf8976939dd0e13e25b82930221323ba6f15d4
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83204163"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83389705"
 ---
 # <a name="switch-statement-c"></a>`switch`оператор (C++)
 
@@ -179,7 +179,7 @@ __`switch`__ Оператор может быть вложенным. При в�
 
 Microsoft C++ не ограничивает количество __`case`__ значений в __`switch`__ операторе. Это число ограничивается только объемом доступной памяти.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
-[Операторы выбора](../cpp/selection-statements-cpp.md)<br/>
+[Инструкции выбора](../cpp/selection-statements-cpp.md)<br/>
 [Ключевые слова](../cpp/keywords-cpp.md)
