@@ -8,20 +8,20 @@ helpviewer_keywords:
 ms.assetid: c4f1a5ca-0844-44a7-a384-eca584d4e3dd
 ms.openlocfilehash: a64317c75e48111148053cc7efb62fb5a6d79f7f
 ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/22/2020
 ms.locfileid: "81749193"
 ---
 # <a name="conditional-expression-operator"></a>Оператор Conditional-Expression
 
-В языке C есть один тернарный оператор: оператор условного выражения (**? :**).
+В языке C есть один тернарный оператор: оператор условного выражения ( **? :** ).
 
 ## <a name="syntax"></a>Синтаксис
 
-*условное выражение*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*логическо-ИЛИ-выражение*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logical-OR expression*  **?**  *выражение*  **:**  *условное выражение*
+*conditional-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*logical-OR-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*logical-OR expression*  **?**  *expression*  **:**  *conditional-expression*
 
 Выражение *logical-OR-expression* может иметь целочисленный тип, тип с плавающей запятой или тип указателя. Оно вычисляется с точки зрения эквивалентности значению 0. Точка последовательности следует за выражением *logical-OR-expression*. Вычисление операндов продолжается следующим образом.
 
@@ -68,6 +68,6 @@ int y;
 
 В этом примере объявляется две функции `f1` и `f2` и две переменные `x` и `y`. Далее в программе, если две переменные имеют одинаковое значение, вызывается функция `f1`. В противном случае вызывается функция `f2`.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Условный оператор: ? :](../cpp/conditional-operator-q.md)

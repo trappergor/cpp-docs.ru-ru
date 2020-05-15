@@ -3,11 +3,11 @@ title: Общие сведения об идентификаторах
 ms.date: 11/04/2016
 ms.assetid: 2fe74b88-79e4-4e09-9d87-c258905ec31a
 ms.openlocfilehash: b690e434705d20806573f61c48f528ced6dad82c
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157725"
 ---
 # <a name="summary-of-identifiers"></a>Общие сведения об идентификаторах
 
@@ -17,7 +17,7 @@ ms.locfileid: "56152863"
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier* *digit*
 
 *nondigit*: один из следующих символов:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**_ a b c d e f g h i j k l mn o p q r s t u v w x y z**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **_ a b c d e f g h i j k l mn o p q r s t u v w x y z**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**A B C D E F G H I J K L MN O P Q R S T U V W X Y Z**
 
 *digit*: один из следующих символов:<br/>

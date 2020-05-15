@@ -6,7 +6,7 @@ helpviewer_keywords:
 - CMake redefined configurations
 ms.openlocfilehash: a88b5ebbf05e11dc05e012c5bfbcc718d3742fb3
 ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/14/2020
 ms.locfileid: "81323009"
@@ -15,7 +15,7 @@ ms.locfileid: "81323009"
 
 ::: moniker range="vs-2015"
 
-Проекты CMake поддерживаются в Visual Studio 2017 и позже.
+Проекты CMake поддерживаются в Visual Studio версии 2017 и более поздних.
 
 ::: moniker-end
 
@@ -34,7 +34,7 @@ ms.locfileid: "81323009"
 - MinGW Debug
 - MinGW Release
 
-При выборе конфигурации она добавляется в файл *CMakeSettings.json* в корневой папке проекта. После этого ее можно использовать для сборки проекта. Для получения информации о [CMakeSettings reference](cmakesettings-reference.md)свойствах конфигурации см.
+При выборе конфигурации она добавляется в файл *CMakeSettings.json* в корневой папке проекта. После этого ее можно использовать для сборки проекта. Дополнительные сведения о свойствах конфигурации см. в [справочнике по CMakeSettings](cmakesettings-reference.md).
 
 ## <a name="linux-predefined-build-configurations"></a>Предопределенные конфигурации сборки Linux:
 
@@ -359,25 +359,25 @@ You can use these optional settings for more control:
 В проекте CMake конфигурации сборки хранятся в файле CMakeSettings.json. Если выбрать элемент **Управление конфигурациями** в раскрывающемся списке конфигураций сборки на главной панели инструментов, отображается диалоговое окно с конфигурациями CMake по умолчанию, доступными в Visual Studio:
 
 - x86 Debug
-- x86 Клегос Дебуг
+- x86 Clang Debug
 - x86 Release
-- x86 Кланг релиз
+- x86 Clang Release
 - x64 Debug
-- x64 Клеланг Дебуг
+- x64 Clang Debug
 - x64 Release
-- x64 Кланг релиз
+- x64 Clang Release
 - Linux-Debug
 - Linux-Release
 - Linux-Clang-Debug
-- Linux-Clang-релиз
+- Linux-Clang-Release
 - Существующий кэш (удаленный)
 - Существующий кэш
 - MinGW Debug
 - MinGW Release
-- WSL Дебуг
-- Выпуск WSL
-- WSL Кланг Дебуг
-- WSL Clang релиз
+- WSL Debug
+- WSL Release
+- WSL Clang Debug
+- WSL Clang Release
 - Clang
 
 При выборе конфигурации она добавляется в файл CMakeSettings.json в корневой папке проекта. После этого ее можно использовать для сборки проекта.
@@ -696,9 +696,9 @@ You can use these optional settings for more control:
 
 ::: moniker-end
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
-[Проекты CMake в визуальной студии](cmake-projects-in-visual-studio.md)<br/>
+[Проекты CMake в Visual Studio](cmake-projects-in-visual-studio.md)<br/>
 [Настройка проекта Linux CMake](../linux/cmake-linux-project.md)<br/>
 [Подключение к удаленному компьютеру Linux](../linux/connect-to-your-remote-linux-computer.md)<br/>
 [Настройка сеансов отладки CMake](configure-cmake-debugging-sessions.md)<br/>

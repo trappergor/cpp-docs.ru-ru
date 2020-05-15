@@ -1,5 +1,5 @@
 ---
-title: Тип возвращаемого значения
+title: Возвращаемый тип
 ms.date: 11/04/2016
 helpviewer_keywords:
 - function return types
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3e5b8a97-b341-48c5-8be8-8986980ef586
 ms.openlocfilehash: fe9280f434dd6267b03764df2ee663c494f007d8
 ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 12/05/2019
 ms.locfileid: "74857038"
 ---
-# <a name="return-type"></a>Тип возвращаемого значения
+# <a name="return-type"></a>Возвращаемый тип
 
 Тип возвращаемого значения функции задает размер и тип значения, возвращаемого функцией, и соответствует спецификатору типа в приведенном ниже синтаксисе.
 
@@ -26,7 +26,7 @@ ms.locfileid: "74857038"
 *function-definition*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *declarator* *declaration-list*<sub>opt</sub> *compound-statement*
 
-/\* *attribute-seq* — это \*, зависящее от Майкрософт /
+/\* *attribute-seq* поддерживается только компилятором Майкрософт \*/
 
 *declaration-specifiers*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub><br/>
@@ -38,10 +38,10 @@ ms.locfileid: "74857038"
 &nbsp;&nbsp;&nbsp;&nbsp;**char**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**short**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**int**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__int8** /\* \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__int16** /\* \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__int32** /\* \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__int64** /\* \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int8** /\* поддерживается только компилятором Майкрософт \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int16** /\* поддерживается только компилятором Майкрософт \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int32** /\* поддерживается только компилятором Майкрософт \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int64** /\* поддерживается только компилятором Майкрософт \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**long**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**float**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**double**<br/>
@@ -97,6 +97,6 @@ char *smallstr( char s1[], char s2[] )
 
 Объявлять функции с возвращаемым типом `int` перед их вызовом не требуется, хотя рекомендуется использовать прототипы, чтобы для аргументов и возвращаемых значений включалась правильная проверка типа.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Определения функций в C](../c-language/c-function-definitions.md)

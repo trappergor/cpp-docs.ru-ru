@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: 92ad3e38-24d7-4b89-90e6-5a16f5f998da
 ms.openlocfilehash: 09bf8485a352d6ec2c1297f8a1be508cb7476c31
 ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 03/24/2020
 ms.locfileid: "80169829"
@@ -30,7 +30,7 @@ ms.locfileid: "80169829"
 
 Выходные данные должны иметь следующий формат:
 
-> {<em>filename</em> **(** <em>строка #</em> \[ **,** <em>столбец #</em>] **)** &#124; *ToolName*} **:** \[ <em>любой текст</em> ] {**Error** &#124; **warning**} <em>код + номер</em> **:** <em>локализуемое строка</em> \[ <em>любого текста</em> ]
+> {<em>имя_файла</em> **(** <em>строка№</em>\[ **,** <em>столбец№</em>] **)** &#124; *toolname*} **:** \[ <em>любой текст</em> ] {**ошибка** &#124; **предупреждение**} <em>код+номер</em> **:** <em>локализуемая строка</em>\[ <em>любой текст</em> ]
 
 Где:
 
@@ -46,6 +46,6 @@ ms.locfileid: "80169829"
 >
 > ССЫЛКА : неустранимая ошибка LNK1104: не удается открыть файл "*somelib.lib*"
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Сведения об этапах настраиваемой сборки и событиях сборки](understanding-custom-build-steps-and-build-events.md)

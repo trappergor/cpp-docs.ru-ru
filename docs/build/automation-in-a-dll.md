@@ -14,17 +14,17 @@ ms.locfileid: "65220929"
 ---
 # <a name="automation-in-a-dll"></a>Автоматизация в библиотеке DLL
 
-При выборе параметр автоматизации в мастер библиотек DLL MFC, мастер предоставляет следующее:
+При выборе параметра "Автоматизация" в мастере библиотек DLL MFC мастер предоставляет следующее:
 
-- Язык описания объекта starter (. Файл ODL)
+- Файл языка описания начального объекта (ODL)
 
-- Директива include в файле STDAFX.h Afxole.h
+- Директива include в файле STDAFX h для Afxole.h
 
-- Реализация `DllGetClassObject` функцию, которая вызывает **AfxDllGetClassObject** функции
+- Реализация функции `DllGetClassObject`, которая вызывает функцию **AfxDllGetClassObject**
 
-- Реализация `DllCanUnloadNow` функцию, которая вызывает **AfxDllCanUnloadNow** функции
+- Реализация функции `DllCanUnloadNow`, которая вызывает функцию **AfxDllCanUnloadNow**
 
-- Реализация `DllRegisterServer` функцию, которая вызывает [COleObjectFactory::UpdateRegistryAll](../mfc/reference/coleobjectfactory-class.md#updateregistryall) функции
+- Реализация функции `DllRegisterServer`, которая вызывает функцию [COleObjectFactory::UpdateRegistryAll](../mfc/reference/coleobjectfactory-class.md#updateregistryall)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Дополнительные сведения
 
@@ -32,4 +32,4 @@ ms.locfileid: "65220929"
 
 ## <a name="see-also"></a>См. также
 
-[Создание библиотек DLL на C/C++ в Visual Studio](dlls-in-visual-cpp.md)
+[Создание библиотек DLL C/C++ в Visual Studio](dlls-in-visual-cpp.md)

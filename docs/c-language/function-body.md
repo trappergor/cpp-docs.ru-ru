@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: f7e74822-fac8-4dc8-8f3a-2b1611da4640
 ms.openlocfilehash: 2d2e04572de91b161237d999bb95cfda26256c54
 ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 12/05/2019
 ms.locfileid: "74857103"
@@ -23,7 +23,7 @@ ms.locfileid: "74857103"
 *function-definition*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *declarator* *declaration-list*<sub>opt</sub> *compound-statement*
 
-/\* *attribute-seq* — это \*, зависящее от Майкрософт /
+/\* *attribute-seq* поддерживается только компилятором Майкрософт \*/
 
 *compound-statement*: /\* Текст функции \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; **{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**
@@ -32,6 +32,6 @@ ms.locfileid: "74857103"
 
 Если функция должна вернуть значение, должен быть выполнен оператор **return**, который содержит выражение. Если оператор **return** не выполнен или если оператор **return** не содержит выражение, возвращаемое значение функции не будет определено.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Определения функций в C](../c-language/c-function-definitions.md)

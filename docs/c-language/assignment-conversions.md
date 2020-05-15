@@ -7,7 +7,7 @@ helpviewer_keywords:
 ms.assetid: 4ee01013-de32-4aae-b12e-0051d0cde927
 ms.openlocfilehash: f118c4a7fee493793b1410cb26f6a0af571c5fcc
 ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71998705"
@@ -20,9 +20,9 @@ ms.locfileid: "71998705"
 
 - [Преобразования из целочисленных типов без знака](../c-language/conversions-from-unsigned-integral-types.md)
 
-- [Преобразования из типов с плавающей запятой](../c-language/conversions-from-floating-point-types.md)
+- [Преобразования типов с плавающей запятой](../c-language/conversions-from-floating-point-types.md)
 
-- [Преобразования в типы указателей и из них](../c-language/conversions-to-and-from-pointer-types.md)
+- [Преобразования в типы указателей и из типов указателей](../c-language/conversions-to-and-from-pointer-types.md)
 
 - [Преобразования из других типов](../c-language/conversions-from-other-types.md)
 

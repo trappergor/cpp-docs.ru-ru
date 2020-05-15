@@ -12,11 +12,11 @@ helpviewer_keywords:
 - nested statements
 ms.assetid: d7fc16a0-fdbc-4f39-b596-76e1ca4ad4a5
 ms.openlocfilehash: b6df50d483a6e2958de3100a07c18b89b0c4f12f
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233064"
 ---
 # <a name="if-statement-c"></a>Оператор if (C)
 
@@ -24,13 +24,13 @@ ms.locfileid: "56152616"
 
 ## <a name="syntax"></a>Синтаксис
 
-*selection-statement*: **if (** *expression* **)** *statement*
+*selection-statement*: **if (**  *expression*  **)**  *statement*
 
 **if (**  *expression*  **)**  *statement*  **else**  *statement*
 
 В обоих формах оператора **if** выражение может иметь любое значение, кроме структуры, и его вычисление влечет за собой все соответствующие побочные эффекты.
 
-В первой форме синтаксиса оператор *statement* выполняется, если значение *expression* имеет значение true (не равно нулю). Если *выражение* возвращает false, *statement* пропускается. Во второй форме синтаксиса c предложением **else**, если *expression* имеет значение false, выполняется второй оператор *statement*. После этого управление передается (в обеих формах) из оператора **if** в следующий по порядку оператор программы, если выполняемый оператор не содержит операторов **break **,** continue`goto` или** .
+В первой форме синтаксиса оператор *statement* выполняется, если значение *expression* имеет значение true (не равно нулю). Если *выражение* возвращает false, *statement* пропускается. Во второй форме синтаксиса c предложением **else**, если *expression* имеет значение false, выполняется второй оператор *statement*. После этого управление передается (в обеих формах) из оператора **if** в следующий по порядку оператор программы, если выполняемый оператор не содержит операторов **break**, **continue** или `goto`.
 
 Ниже приведены примеры операторов **if**:
 

@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 18bb2826-17da-48e5-92a2-10e649f1bc9f
 ms.openlocfilehash: ac906925be551c6ee4da08e200d4028047b3d041
 ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/14/2020
 ms.locfileid: "81349886"
@@ -21,12 +21,12 @@ ms.locfileid: "81349886"
 ## <a name="syntax"></a>Синтаксис
 
 *translation-unit*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*внешнее декларирование* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*external-declaration* <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*translation-unit* *external-declaration*
 
 *external-declaration*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*функция-определение*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Декларации*
+&nbsp;&nbsp;&nbsp;&nbsp;*function-definition*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration*
 
 В статье [Общие сведения об объявлениях](../c-language/overview-of-declarations.md) описывается синтаксис нетерминала `declaration`, а в *справочнике по препроцессору* поясняется, как происходит обработка [записи преобразования](../preprocessor/phases-of-translation.md).
 
@@ -39,6 +39,6 @@ ms.locfileid: "81349886"
 
 Исходные файлы не должны содержать исполняемых операторов. К примеру, в один исходный файл можно поместить все определения переменных, а затем в другом исходном файле, в котором эти переменные используются, объявить ссылки на них. Этот метод позволяет легко находить и при необходимости изменять определения. По этой же причине константы и макросы часто организуются в отдельные файлы — так называемые включаемые файлы, или файлы заголовка. По мере необходимости на них можно ссылаться из исходных файлов. Сведения о [макросах](../preprocessor/macros-c-cpp.md) и [включаемых файлах](../preprocessor/hash-include-directive-c-cpp.md) см. в *справочнике по препроцессору*.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Структура программы](../c-language/program-structure.md)

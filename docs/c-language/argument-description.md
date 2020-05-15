@@ -25,7 +25,7 @@ ms.locfileid: "69492511"
 
 По соглашению параметр `argv` **[0]** содержит команду, которая использовалась для вызова программы.  Однако процесс можно инициализировать с помощью [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw), а если указаны и первый, и второй аргументы (`lpApplicationName` и `lpCommandLine`), то `argv` **[0]** не будет содержать имени исполняемого файла. Чтобы гарантированно получить имя исполняемого файла, используйте [GetModuleFileName](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulefilenamew).
 
-Последний указатель (`argv[argc]`) имеет значение **NULL**. (Альтернативный метод получения сведений о переменной среды см. в разделе [getenv](../c-runtime-library/reference/getenv-wgetenv.md) *Справочника по библиотеке времени выполнения*.)
+Последний указатель (`argv[argc]`) имеет значение **NULL**. (Альтернативный метод получения сведений о переменной среды см. в разделе [getenv](../c-runtime-library/reference/getenv-wgetenv.md)*Справочника по библиотеке времени выполнения*.)
 
 **Блок, относящийся только к системам Microsoft**
 

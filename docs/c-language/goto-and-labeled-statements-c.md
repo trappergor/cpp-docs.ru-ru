@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: 3d0473dc-4b18-4fcc-9616-31a38499d7d7
 ms.openlocfilehash: b5e0d602332c87510b1fe5f59db3e497b88f0acb
 ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 12/20/2019
 ms.locfileid: "75299121"
@@ -26,10 +26,10 @@ ms.locfileid: "75299121"
 &nbsp;&nbsp;&nbsp;&nbsp;*jump-statement*
 
 *оператор-перехода*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**goto***identifier* **;**
+&nbsp;&nbsp;&nbsp;&nbsp;**goto**  *identifier*  **;**
 
 *labeled-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier* **:** *оператор*
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier*  **:**  *statement*
 
 Метка оператора значима только для оператора `goto`; в любом другом контексте оператор с меткой выполняется независимо от нее.
 
@@ -67,6 +67,6 @@ int main()
 
 В этом примере оператор `goto` передает управление в точку с меткой `stop`, когда значение переменной `i` равно 5.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Операторы](../c-language/statements-c.md)
