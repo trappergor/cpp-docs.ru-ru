@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 3b8addec-e809-48e4-b1d0-5bad133bd4b8
 ms.openlocfilehash: e1559c75808a72cd3f9674399bec036cf392b44f
 ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/14/2020
 ms.locfileid: "81334584"
 ---
 # <a name="considerations-when-writing-prologepilog-code"></a>Вопросы, связанные с написанием кода пролога и эпилога
 
-**Microsoft Специфический**
+**Блок, относящийся только к системам Microsoft**
 
-Прежде чем писать собственные последовательности пролога и эпилог-кода, важно понять, как выкладывается рамка стека. Также полезно знать, как использовать **__LOCAL_SIZE** предопределенную константу.
+Перед написанием собственных последовательностей кодов пролога и эпилога важно понимать, как размещается кадр стека. Полезно также знать, как можно использовать предопределенную константу **__LOCAL_SIZE**.
 
-## <a name="cstack-frame-layout"></a><a name="_clang_c_stack_frame_layout"></a>Укладка кадров CStack
+## <a name="cstack-frame-layout"></a><a name="_clang_c_stack_frame_layout"></a> Схема кадра CStack
 
 В данном примере показан стандартный код пролога, который может присутствовать в 32-разрядной функции.
 
@@ -79,8 +79,8 @@ __declspec ( naked ) func()
 }
 ```
 
-**END Microsoft Специфический**
+**Завершение блока, относящегося только к системам Майкрософт**
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Функции naked](../c-language/naked-functions.md)

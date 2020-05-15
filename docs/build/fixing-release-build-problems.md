@@ -10,24 +10,24 @@ helpviewer_keywords:
 ms.assetid: a0c0818e-4c47-4fe0-a611-50d61a41bd88
 ms.openlocfilehash: 75dba6ecfc915fa22829491705fb5dc769ddf377
 ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62195290"
 ---
 # <a name="fixing-release-build-problems"></a>Устранение проблем построения выпуска
 
-Если ваш код создает ошибки компиляции, после переключения с отладочной сборки в выпускное построение, существуют некоторые области, которые необходимо проверить.
+Если код создает ошибки компиляции после переключения с отладочной сборки на сборку выпуска, необходимо проверить ряд аспектов.
 
-Может появиться предупреждения компилятора во время построения оптимизированного (выпуск), не был получен при отладочной сборке.
+Во время оптимизированной сборки (сборки выпуска) вы можете получать предупреждения компилятора, которых не было при отладочной сборке.
 
-- [Изучите операторы ASSERT](using-verify-instead-of-assert.md)
+- [Анализ операторов ASSERT](using-verify-instead-of-assert.md)
 
-- [Использование отладочного построения для проверки перезаписи памяти](using-the-debug-build-to-check-for-memory-overwrite.md)
+- [Использование отладочной сборки для проверки перезаписи памяти](using-the-debug-build-to-check-for-memory-overwrite.md)
 
-- [Включить создание отладочной информации для сборки выпуска](how-to-debug-a-release-build.md)
+- [Включение создания отладочной информации для сборки выпуска](how-to-debug-a-release-build.md)
 
-- [Проверка затирания памяти](checking-for-memory-overwrites.md)
+- [Проверка перезаписи памяти](checking-for-memory-overwrites.md)
 
 ## <a name="see-also"></a>См. также
 

@@ -12,25 +12,25 @@ helpviewer_keywords:
 - logical OR operator
 ms.assetid: c0a4e766-ad56-4300-bf76-b28dc0e19b43
 ms.openlocfilehash: 5df0c0f16bdf298c47a6a0699ec10c7392ab84ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326590"
 ---
 # <a name="c-logical-operators"></a>Логические операторы в C
 
-Логические операторы выполняют операции логического И (**&&**) и логического ИЛИ (**||**).
+Логические операторы выполняют операции логического И ( **&&** ) и логического ИЛИ ( **||** ).
 
 ## <a name="syntax"></a>Синтаксис
 
 *logical-AND-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*inclusive-OR-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logical-AND-expression* **&&** *inclusive-OR-expression*
+&nbsp;&nbsp;&nbsp;&nbsp;*logical-AND-expression*  **&&**  *inclusive-OR-expression*
 
 *logical-OR-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*logical-AND-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logical-OR-expression* **&#124;&#124;** *logical-AND-expression*
+&nbsp;&nbsp;&nbsp;&nbsp;*logical-OR-expression*  **&#124;&#124;**  *logical-AND-expression*
 
 ## <a name="remarks"></a>Примечания
 
@@ -38,7 +38,7 @@ ms.locfileid: "50651273"
 
 Логические операторы C описываются ниже.
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |--------------|-----------------|
 |**&&**|Логический оператор И создает значение 1, если оба операнда имеют ненулевое значение. Если любой из операндов имеет значение 0, результат равен 0. Если первый операнд операции логического И имеет значение 0, то второй операнд не вычисляется.|
 |**&#124;&#124;**|Оператор логического ИЛИ выполняет над своими операндами операцию включающего ИЛИ. Если оба операнда имеют значение 0, результат будет равен 0. Если любой из операндов имеет ненулевое значение, результат будет равен 1. Если первый операнд операции логического ИЛИ имеет ненулевое значение, то второй операнд не вычисляется.|

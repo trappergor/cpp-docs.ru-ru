@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: ebab23c8-6eb8-46f3-b21d-570cd8457a80
 ms.openlocfilehash: 5cf56375df417ac68b3e03d00f2bd7770ee571e8
 ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 12/05/2019
 ms.locfileid: "74857142"
@@ -36,7 +36,7 @@ ms.locfileid: "74857142"
 *function-definition*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *declarator* *declaration-list*<sub>opt</sub> *compound-statement*
 
-/\* *attribute-seq* — это \*, зависящее от Майкрософт /
+/\* *attribute-seq* поддерживается только компилятором Майкрософт \*/
 
 Параметры прототипа:
 
@@ -93,6 +93,6 @@ ms.locfileid: "74857142"
 
 Компоненты определения функции подробно рассматриваются в статьях [Атрибуты функций](../c-language/function-attributes.md), [Класс хранения](../c-language/storage-class.md), [Тип возвращаемого значения](../c-language/return-type.md), [Параметры](../c-language/parameters.md) и [Текст функции](../c-language/function-body.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Функции](../c-language/functions-c.md)

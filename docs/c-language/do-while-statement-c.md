@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: f2ac20a6-10c7-4a08-b5e3-c3b3639dbeaf
 ms.openlocfilehash: 3658fe7635ad77db6d6e08ff9d7c30e29d665721
 ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 03/17/2020
 ms.locfileid: "79438589"
@@ -19,7 +19,7 @@ ms.locfileid: "79438589"
 
 ## <a name="syntax"></a>Синтаксис
 
-*оператор итерации*: &nbsp;&nbsp;&nbsp;&nbsp;**Do***оператор***while (** *выражение* **);**
+*iteration-statement*: &nbsp;&nbsp;&nbsp;&nbsp;**do**  *statement*  **while (**  *expression*  **) ;**
 
 Выражение *expression* в операторе *do-while* вычисляется после выполнения тела цикла. Поэтому тело цикла всегда выполняется по крайней мере один раз.
 
@@ -43,6 +43,6 @@ do
 
 В этом операторе *do-while* два оператора `y = f( x );` и `x--;` выполняются независимо от начального значения переменной `x`. Затем вычисляется выражение `x > 0`. Если `x` больше 0, тело оператора выполняется еще раз и снова вычисляется выражение `x > 0`. Тело оператора многократно выполняется, пока значение переменной `x` остается больше 0. Выполнение оператора *do-while* завершается, когда значение переменной `x` становится равным 0 или отрицательным. Тело цикла выполняется по крайней мере один раз.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Оператор do-while (C)](../cpp/do-while-statement-cpp.md)

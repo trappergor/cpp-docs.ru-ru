@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 2580735c-f5bf-46ab-9468-0696893d82be
 ms.openlocfilehash: c2e372ebe93b9240ac6f489e8b1aefc1fbbded80
 ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 12/05/2019
 ms.locfileid: "74857155"
 ---
 # <a name="c-extended-storage-class-attributes"></a>Расширенные атрибуты классов хранения в C
 
-**Блок, относящийся только к системам Майкрософт**
+**Блок, относящийся только к системам Microsoft**
 
 Более актуальные сведения по этой теме вы найдете в [описании __declspec](../cpp/declspec.md) в справочнике по языку C++.
 
@@ -27,13 +27,13 @@ ms.locfileid: "74857155"
 ## <a name="syntax"></a>Синтаксис
 
 *storage-class-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__declspec (** *Extended-decl-Modifiers-seq* **)**  /\* \*, относящегося к Microsoft /
+&nbsp;&nbsp;&nbsp;&nbsp; **__declspec (** *extended-decl-modifier-seq* **)**  /\* поддерживается только компилятором Майкрософт \*/
 
-*Extended-decl-модификатор-seq*:&nbsp;&nbsp;&nbsp;&nbsp;/\* \*/<br/>
+*extended-decl-modifier-seq*:&nbsp;&nbsp;&nbsp;&nbsp;/\* Только для систем Майкрософт \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier-seq* *extended-decl-modifier*
 
-*Расширенный-decl-модификатор*:&nbsp;&nbsp;&nbsp;&nbsp;/\* \*/<br/>
+*extended-decl-modifier*:&nbsp;&nbsp;&nbsp;&nbsp;/\* Только для систем Майкрософт \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**thread**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**naked**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>
@@ -45,6 +45,6 @@ ms.locfileid: "74857155"
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Объявления и типы](../c-language/declarations-and-types.md)

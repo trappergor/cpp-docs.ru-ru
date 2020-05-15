@@ -32,7 +32,7 @@ helpviewer_keywords:
 ms.assetid: 11688dcb-c941-44e7-a636-3fc98e7dac40
 ms.openlocfilehash: e8ada96daaec249a05882aceae9b7d9e86b92065
 ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 03/24/2020
 ms.locfileid: "80168803"
@@ -45,7 +45,7 @@ ms.locfileid: "80168803"
 
 *assignment-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*conditional-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;присваивания *унарного выражения* *—* *выражение назначения* оператора
+&nbsp;&nbsp;&nbsp;&nbsp;*unary-expression* *assignment-operator* *assignment-expression*
 
 *assignment-operator*: один из следующих операторов:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; **=** **\*=** **/=** **%=** **+=** **-=** **\<\<=** **>>=** **&=** **^=** **|=**
@@ -68,6 +68,6 @@ ms.locfileid: "80168803"
 
 В ходе присваивания тип значения в правой части преобразуется в тип значения в левой части, а после выполнения операции значение сохраняется в левом операнде. Левый операнд не должен быть массивом, функцией или константой. Путь преобразования, который зависит от двух типов, подробнее описывается в разделе [Преобразования типов](../c-language/type-conversions-c.md).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 - [Операторы присваивания](../cpp/assignment-operators.md)

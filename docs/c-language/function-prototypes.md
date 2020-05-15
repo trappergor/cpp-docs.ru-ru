@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: d152f8e6-971e-432c-93ca-5a91400653c2
 ms.openlocfilehash: 9c42ce5b23e6f755dafd57bdb5a5f79cf1adb4ec
 ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 12/05/2019
 ms.locfileid: "74857090"
@@ -24,7 +24,7 @@ ms.locfileid: "74857090"
 *declaration*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *attribute-seq*<sub>opt</sub> *init-declarator-list*<sub>opt</sub> **;**
 
-/\* *атрибут-seq*<sub>opt</sub> — это \*, специфичное для Майкрософт /
+/\* *attribute-seq*<sub>opt</sub> поддерживается только компилятором Майкрософт \*/
 
 *declaration-specifiers*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub> <br/>
@@ -50,7 +50,7 @@ ms.locfileid: "74857090"
 
 Ниже перечислены важные случаи применения прототипов функций:
 
-- Они устанавливают тип возвращаемого значения для функций, возвращающих типы, отличные от **int**. Несмотря на то, что функции, возвращающие значения **типа int** , не нуждаются в прототипах, рекомендуется использовать прототипы.
+- Они указывают тип возвращаемого значения для функций, которые возвращают значения с типом, отличным от **int**. Хотя для функций, которые возвращают значения с типом **int**, прототипы не обязательны, рекомендуется их использовать.
 
 - Без полных прототипов выполняются стандартные преобразования, но не производится попытка сравнения типа или количества аргументов с количеством параметров.
 
@@ -85,6 +85,6 @@ void func1( struct S * );
 
 При использовании параметра **/Ze** этот тег будет по-прежнему находиться в глобальной области.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Функции](../c-language/functions-c.md)

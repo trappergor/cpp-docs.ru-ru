@@ -6,11 +6,11 @@ helpviewer_keywords:
 - unary operators
 ms.assetid: 743e00b1-f874-4c0d-b211-8c24d4af9739
 ms.openlocfilehash: c0978464c21eff315936b75aa46e1df24e72506d
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150406"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62312746"
 ---
 # <a name="c-unary-operators"></a>Унарные операторы C
 
@@ -30,7 +30,7 @@ ms.locfileid: "56150406"
 
 **sizeof (**  *type-name*  **)**
 
-*unary-operator*: один из операторов: **& \* + -** `~` **!**
+*unary-operator*: один из операторов **& \* + -** `~` **!**
 
 ## <a name="see-also"></a>См. также
 
