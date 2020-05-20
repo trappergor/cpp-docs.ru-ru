@@ -16,7 +16,7 @@ ms.locfileid: "81366822"
 
 В Visual Studio 2019 реализовано множество изменений и исправлений для среды Microsoft C++. Мы исправили множество ошибок и проблем с компилятором и средствами. Сообщения о многих из них были отправлены клиентами с помощью инструментов [Сообщить о проблеме](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2019) и [Отправить предложение](https://developercommunity.visualstudio.com/spaces/62/index.html) в разделе **Отправить отзыв**. Спасибо, что сообщаете нам об ошибках! Дополнительные сведения о новых возможностях всех компонентов Visual Studio см. на странице [What's new in Visual Studio 2019](/visualstudio/ide/whats-new-visual-studio-2019) (Новые возможности Visual Studio 2019). Сведения о новых возможностях для C++ в Visual Studio 2017 см. в статье [What's New for C++ in Visual Studio 2017](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2017) (Новые возможности для C++ в Visual Studio 2017). Сведения о новых возможностях для C++ в Visual Studio 2015 и более ранних версиях см. в статье [Visual C++ What's New 2003 through 2015](/cpp/porting/visual-cpp-what-s-new-2003-through-2015) (Новые возможности Visual C++ в версиях с 2003 по 2015).
 
-## <a name="c-compiler"></a>компилятор C++
+## <a name="c-compiler"></a>Компилятор C++
 
 - Улучшенная поддержка функций C++17 и корректирующие исправления, а также экспериментальная поддержка функций C++20, таких как модули и сопрограммы. Подробные сведения см. в статье [Улучшения соответствия C++ в Visual Studio 2019](cpp-conformance-improvements.md).
 
