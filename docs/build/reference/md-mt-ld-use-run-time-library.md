@@ -35,12 +35,12 @@ helpviewer_keywords:
 - LIBCMTD.lib
 - -MT compiler option [C++]
 ms.assetid: cf7ed652-dc3a-49b3-aab9-ad60e5395579
-ms.openlocfilehash: 4e734233d94bf57d6838bd4d37c023d55f1d5f6b
-ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.openlocfilehash: a66677ebbef984e9a4c8190f184ca3a9126a7b83
+ms.sourcegitcommit: d4da3693f83a24f840e320e35c24a4a07cae68e2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299762"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83550762"
 ---
 # <a name="md-mt-ld-use-run-time-library"></a>/MD, /MT, /LD (использование библиотеки времени выполнения)
 
@@ -54,7 +54,7 @@ ms.locfileid: "68299762"
 /LD[d]
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 |Параметр|Описание|
 |------------|-----------------|
@@ -67,19 +67,17 @@ ms.locfileid: "68299762"
 
 Дополнительные сведения о библиотеках времени выполнения C и о том, какие библиотеки используются при компиляции с параметром [/CLR (компиляция среды CLR)](clr-common-language-runtime-compilation.md), см. в разделе [функции библиотеки CRT](../../c-runtime-library/crt-library-features.md).
 
-Все модули, передаваемые в данный вызов компоновщика, должны быть скомпилированы с одним и тем же параметром компилятора библиотеки времени выполнения ( **/MD**, **/MT**, **/LD**).
+Все модули, передаваемые в данный вызов компоновщика, должны быть скомпилированы с одним и тем же параметром компилятора библиотеки времени выполнения (**/MD**, **/MT**, **/LD**).
 
 Дополнительные сведения об использовании отладочных версий библиотек среды выполнения см. в разделе [Справочник по библиотеке времени выполнения C](../../c-runtime-library/c-run-time-library-reference.md).
 
-Дополнительные сведения о библиотеках DLL см. [вC++ статье Создание C/DLL в Visual Studio](../dlls-in-visual-cpp.md).
+Дополнительные сведения о библиотеках DLL см. [в статье Создание библиотек DLL C/C++ в Visual Studio](../dlls-in-visual-cpp.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
 1. Откройте диалоговое окно **Страницы свойств** проекта. Подробнее см. в статье [Настройка компилятора C++ и свойства сборки в Visual Studio](../working-with-project-properties.md).
 
-1. Перейдите на страницу свойств **Свойства конфигурации** > **C/C++**  > **Командная строка**.
-
-1. Выберите страницу свойств **Создание кода** .
+1. Выберите страницу свойств **Свойства "**  >  Создание кода**C/C++**"  >  **Code Generation** .
 
 1. Измените свойство **Библиотека времени выполнения** .
 
@@ -87,7 +85,7 @@ ms.locfileid: "68299762"
 
 - См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.RuntimeLibrary%2A>.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Параметры компилятора MSVC](compiler-options.md)<br/>
-[Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)
+[Синтаксис командной строки компилятора КОМПИЛЯТОРОМ MSVC](compiler-command-line-syntax.md)

@@ -4,16 +4,16 @@ ms.date: 03/05/2018
 helpviewer_keywords:
 - move constructor [C++]
 ms.assetid: e75efe0e-4b74-47a9-96ed-4e83cfc4378d
-ms.openlocfilehash: 81f717162e2c7bebc62a9deeb208700380f62cb8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2c8fed15787ec4b347694d8c4e40bf7912f3421d
+ms.sourcegitcommit: d4da3693f83a24f840e320e35c24a4a07cae68e2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179371"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83550775"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Конструкторы move и операторы присваивания move (C++)
 
-В этом разделе описывается написание *конструктора перемещения* и оператора присваивания перемещения для C++ класса. Конструктор перемещения позволяет перемещать ресурсы, принадлежащие объекту rvalue, в lvalue без копирования. Дополнительные сведения о семантике перемещения см. в разделе [декларатор ссылок rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
+В этом разделе описывается написание *конструктора перемещения* и оператора присваивания перемещения для класса C++. Конструктор перемещения позволяет перемещать ресурсы, принадлежащие объекту rvalue, в lvalue без копирования. Дополнительные сведения о семантике перемещения см. в разделе [декларатор ссылок rvalue:  &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 Этот раздел построен на основе приведенного ниже класса C++ `MemoryBlock`, который управляет буфером памяти.
 
@@ -174,7 +174,7 @@ private:
 
 ```cpp
 // Move constructor.
-MemoryBlock(MemoryBlock&& other)
+MemoryBlock(MemoryBlock&& other) noexcept
    : _data(nullptr)
    , _length(0)
 {
@@ -193,7 +193,7 @@ MemoryBlock(MemoryBlock&& other)
 }
 
 // Move assignment operator.
-MemoryBlock& operator=(MemoryBlock&& other)
+MemoryBlock& operator=(MemoryBlock&& other) noexcept
 {
    std::cout << "In operator=(MemoryBlock&&). length = "
              << other._length << "." << std::endl;
@@ -219,7 +219,7 @@ MemoryBlock& operator=(MemoryBlock&& other)
 
 ## <a name="example"></a>Пример
 
-В следующем примере показано, как семантика перемещения может повысить производительность приложений. В примере добавляются два элемента в объект-вектор, а затем вставляется новый элемент между двумя существующими элементами. Класс `vector` использует семантику перемещения для эффективного выполнения операции вставки, перемещая элементы вектора вместо копирования.
+В следующем примере показано, как семантика перемещения может повысить производительность приложений. В примере добавляются два элемента в объект-вектор, а затем вставляется новый элемент между двумя существующими элементами. `vector`Класс использует семантику перемещения для эффективного выполнения операции вставки, перемещая элементы вектора вместо копирования.
 
 ```cpp
 // rvalue-references-move-semantics.cpp
@@ -241,22 +241,22 @@ int main()
 }
 ```
 
-В примере получается следующий вывод.
+В этом примере выводятся следующие данные:
 
 ```Output
 In MemoryBlock(size_t). length = 25.
 In MemoryBlock(MemoryBlock&&). length = 25. Moving resource.
 In ~MemoryBlock(). length = 0.
 In MemoryBlock(size_t). length = 75.
+In MemoryBlock(MemoryBlock&&). length = 75. Moving resource.
 In MemoryBlock(MemoryBlock&&). length = 25. Moving resource.
 In ~MemoryBlock(). length = 0.
-In MemoryBlock(MemoryBlock&&). length = 75. Moving resource.
 In ~MemoryBlock(). length = 0.
 In MemoryBlock(size_t). length = 50.
 In MemoryBlock(MemoryBlock&&). length = 50. Moving resource.
-In MemoryBlock(MemoryBlock&&). length = 50. Moving resource.
-In operator=(MemoryBlock&&). length = 75.
-In operator=(MemoryBlock&&). length = 50.
+In MemoryBlock(MemoryBlock&&). length = 25. Moving resource.
+In MemoryBlock(MemoryBlock&&). length = 75. Moving resource.
+In ~MemoryBlock(). length = 0.
 In ~MemoryBlock(). length = 0.
 In ~MemoryBlock(). length = 0.
 In ~MemoryBlock(). length = 25. Deleting resource.
@@ -289,7 +289,7 @@ In ~MemoryBlock(). length = 75. Deleting resource.
 
 Версия этого примера, в которой используется семантика перемещения, более эффективна, чем версия, в которой эта семантика не используется, поскольку в ней выполняется меньше операций копирования, выделения памяти и освобождения памяти.
 
-## <a name="robust-programming"></a>Надежное программирование
+## <a name="robust-programming"></a>Отказоустойчивость
 
 Во избежание утечки ресурсов (таких как память, дескрипторы файлов и сокеты) обязательно освобождайте их в операторе присваивания перемещения.
 
@@ -299,7 +299,7 @@ In ~MemoryBlock(). length = 75. Deleting resource.
 
 ```cpp
 // Move constructor.
-MemoryBlock(MemoryBlock&& other)
+MemoryBlock(MemoryBlock&& other) noexcept
    : _data(nullptr)
    , _length(0)
 {
@@ -307,9 +307,9 @@ MemoryBlock(MemoryBlock&& other)
 }
 ```
 
-Функция [std:: Move](../standard-library/utility-functions.md#move) сохраняет свойство rvalue *другого* параметра.
+Функция [std:: Move](../standard-library/utility-functions.md#move) преобразует lvalue `other` в rvalue.
 
 ## <a name="see-also"></a>См. также раздел
 
-[Декларатор ссылки Rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md)<br/>
+[Декларатор ссылки rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md)<br/>
 [std:: Move](../standard-library/utility-functions.md#move)
