@@ -41,12 +41,12 @@ helpviewer_keywords:
 - printf function, using
 - formatted text [C++]
 ms.assetid: 77a854ae-5b48-4865-89f4-f2dc5cf80f52
-ms.openlocfilehash: 7992649a13c2e103077c6311e1987fad80a99837
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3766ea24459423e730ab84ecae24d758d7f61e88
+ms.sourcegitcommit: 8c8ed02a6f3bcb5ee008e3fe30ba7595d7c4c922
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950195"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83759242"
 ---
 # <a name="printf-_printf_l-wprintf-_wprintf_l"></a>printf, _printf_l, wprintf, _wprintf_l
 
@@ -80,7 +80,7 @@ int _wprintf_l(
 *format*<br/>
 Формат объекта.
 
-*параметр*<br/>
+*argument*<br/>
 Необязательные аргументы.
 
 *locale*<br/>
@@ -90,9 +90,9 @@ int _wprintf_l(
 
 Возвращает число выведенных символов или отрицательное значение в случае ошибки. Если параметр *Format* имеет **значение NULL**, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция **возвращает значение-1 и устанавливает** для **еинвал**. Если в *аргументе*встречается **EOF** (0xFFFF), функция возвращает значение-1.
 
-Дополнительные **сведения о кодах ошибок и код** ошибки см. в разделе _doserrno, Code, [_sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Сведения о кодах ошибок, а именно об ошибках, см **. в разделе** _doserrno, код ошибки [, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Функция **printf** форматирует и выводит последовательность символов и значений в стандартный выходной поток, **stdout**. Если аргументы следуют за строкой *формата* , строка *формата* должна содержать спецификации, определяющие формат выходных данных для аргументов. функции **printf** и [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md) работают идентично, за исключением того, что **printf** записывает выходные данные в **stdout** , а не в назначение типа **File**.
 
@@ -100,9 +100,9 @@ int _wprintf_l(
 
 Версии этих функций с суффиксом **_l** идентичны за исключением того, что они используют переданный параметр языкового стандарта вместо локали текущего потока.
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
-|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_unicode определено|
+|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tprintf**|**printf**|**printf**|**wprintf**|
 
@@ -124,7 +124,7 @@ Line one
 > [!IMPORTANT]
 > Убедитесь, что *format* не является строкой, определяемой пользователем.
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Процедура Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|
@@ -138,7 +138,7 @@ Line one
 |**printf**, **_printf_l**|\<stdio.h>|
 |**wprintf**, **_wprintf_l**|\<stdio.h> или \<wchar.h>|
 
-Консоль не поддерживается в приложениях универсальная платформа Windows (UWP). Стандартные дескрипторы потока, связанные с консолью, **stdin**, **stdout**и **stderr**, должны быть перенаправляться до того, как функции времени выполнения C смогут использовать их в приложениях UWP. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Консоль не поддерживается в приложениях универсальная платформа Windows (UWP). Стандартные дескрипторы потока, связанные с консолью, **stdin**, **stdout**и **stderr**, должны быть перенаправляться до того, как функции времени выполнения C смогут использовать их в приложениях UWP. Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -199,7 +199,7 @@ int main( void )
 }
 ```
 
-### <a name="sample-output"></a>Пример результатов выполнения
+### <a name="sample-output"></a>Пример выходных данных
 
 ```Output
 Integer formats:
@@ -228,12 +228,13 @@ Address as:   0012FF3C
 
 ## <a name="see-also"></a>См. также
 
-[Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
+[Синтаксис спецификации формата: функции printf и wprintf](../format-specification-syntax-printf-and-wprintf-functions.md)<br/>
+[Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)<br/>
-[Языковой стандарт](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [fopen, _wfopen](fopen-wfopen.md)<br/>
 [_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l](fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [Функции vprintf](../../c-runtime-library/vprintf-functions.md)<br/>
 [_set_output_format](../../c-runtime-library/set-output-format.md)<br/>
