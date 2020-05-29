@@ -1,0 +1,111 @@
+### YamlMime:Landing
+title: Документация по языку C++
+summary: Узнайте, как использовать C++ и стандартную библиотеку C++.
+metadata:
+  title: Документация по C++. Начало работы, руководства, справочные материалы.
+  description: Справочник по программированию на C++ для пользователей Microsoft C++ и Visual Studio.
+  ms.topic: landing-page
+  ms.date: 05/08/2020
+  ms.openlocfilehash: d94a9821e28641c6297261f520359a7179006ff4
+  ms.sourcegitcommit: f7ebdfc3a260778c2ef938747cba1376c70ced15
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 05/27/2020
+  ms.locfileid: "84108624"
+landingContent:
+- title: Основы использования C++ в Visual Studio
+  linkLists:
+  - linkListType: download
+    links:
+    - text: Загрузите Visual Studio для Windows
+      url: https://visualstudio.microsoft.com/downloads
+    - text: Установка поддержки C/C++ в Visual Studio
+      url: ../build/vscpp-step-0-installation.md
+    - text: Загрузка только средств сборки из командной строки
+      url: https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019
+  - linkListType: get-started
+    links:
+    - text: Hello World в Visual Studio на C++
+      url: ../build/vscpp-step-1-create.md
+    - text: Создание калькулятора на C++
+      url: ../get-started/tutorial-console-cpp.md
+  - linkListType: video
+    links:
+    - text: Знакомство с C++ — языком и библиотекой общего назначения
+      url: https://channel9.msdn.com/Series/cplusplus-language-library
+  - linkListType: learn
+    links:
+    - text: Возвращение к C++ — современный C++
+      url: ../cpp/welcome-back-to-cpp-modern-cpp.md
+    - text: Примеры и архив примеров
+      url: ../overview/visual-cpp-samples.md
+- title: Новые возможности C++ в Visual Studio
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: Новые возможности C++ в Visual Studio
+      url: ../overview/what-s-new-for-visual-cpp-in-visual-studio.md
+    - text: Улучшение соответствия C++
+      url: ../overview/cpp-conformance-improvements.md
+  - linkListType: overview
+    links:
+    - text: Общие сведения о разработке на C++ в Visual Studio
+      url: ../overview/overview-of-cpp-development.md
+    - text: Поддерживаемые целевые платформы
+      url: ../overview/supported-platforms-visual-cpp.md
+    - text: Справка и ресурсы сообщества
+      url: ../overview/visual-cpp-help-and-community.md
+    - text: Сообщение о проблеме или внесение предложения
+      url: ../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md
+- title: Использование компилятора и средств
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Справочные сведения о сборке кода на C/C++
+      url: ../build/reference/c-cpp-building-reference.md
+    - text: Проекты и системы сборки
+      url: ../build/projects-and-build-systems-cpp.md
+    - text: Справочник по компилятору
+      url: ../build/reference/compiling-a-c-cpp-program.md
+    - text: Справочник по компоновщику
+      url: ../build/reference/linking.md
+    - text: Дополнительные средства сборки
+      url: ../build/reference/c-cpp-build-tools.md
+    - text: Ошибки и предупреждения
+      url: ../error-messages/compiler-errors-1/c-cpp-build-errors.md
+- title: Язык C++
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Справочник по языку C++
+      url: ../cpp/cpp-language-reference.md
+    - text: Ключевые слова C++
+      url: ../cpp/keywords-cpp.md
+    - text: Операторы C++
+      url: ../cpp/cpp-built-in-operators-precedence-and-associativity.md
+    - text: Справочник по препроцессору в C/C++
+      url: ../preprocessor/c-cpp-preprocessor-reference.md
+- title: Стандартная библиотека C++ (STL)
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Общие сведения о стандартной библиотеке C++
+      url: ../standard-library/cpp-standard-library-overview.md
+    - text: Справочник по стандартной библиотеке C++ по заголовкам
+      url: ../standard-library/cpp-standard-library-header-files.md
+    - text: Контейнеры стандартной библиотеки C++
+      url: ../standard-library/stl-containers.md
+    - text: Iterators
+      url: ../standard-library/iterators.md
+    - text: Алгоритмы
+      url: ../standard-library/algorithms.md
+    - text: Распределители
+      url: ../standard-library/allocators.md
+    - text: Объекты функций
+      url: ../standard-library/function-objects-in-the-stl.md
+    - text: iostream - программирование
+      url: ../standard-library/iostream-programming.md
+    - text: Регулярные выражения
+      url: ../standard-library/regular-expressions-cpp.md
+    - text: Навигация по файловой системе
+      url: ../standard-library/file-system-navigation.md
