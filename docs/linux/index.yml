@@ -1,0 +1,55 @@
+### YamlMime:Landing
+title: Разработка для Linux на C++ | Создание и отладка приложений для Linux
+summary: Используйте C++ в Visual Studio 2017 и более поздних версиях для создания и отладки приложений для Linux.
+metadata:
+  title: Разработка приложений для Linux на C++
+  description: Узнайте, как использовать C++ в Visual Studio 2017 и более поздних версиях для создания и отладки приложений для Linux.
+  ms.topic: landing-page
+  author: corob-msft
+  ms.author: corob
+  ms.date: 04/26/2020
+  ms.openlocfilehash: ac705ae3ae457d804ed2ca884143c8c6cb5a4758
+  ms.sourcegitcommit: f7ebdfc3a260778c2ef938747cba1376c70ced15
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 05/27/2020
+  ms.locfileid: "84108644"
+landingContent:
+- title: Создание приложений Linux C++ в Visual Studio
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Загрузка, установка и настройка рабочей нагрузки Linux
+      url: download-install-and-setup-the-linux-development-workload.md
+  - linkListType: how-to-guide
+    links:
+    - text: Подключение к целевой системе Linux
+      url: connect-to-your-remote-linux-computer.md
+  - linkListType: reference
+    links:
+    - text: Справка по ConnectionManager
+      url: connectionmanager-reference.md
+- title: Сборка проектов Linux в Visual Studio
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Создание проекта Linux
+      url: create-a-new-linux-project.md
+    - text: Настройка проекта Linux
+      url: configure-a-linux-project.md
+    - text: Развертывание, запуск и отладка проекта Linux
+      url: deploy-run-and-debug-your-linux-project.md
+  - linkListType: reference
+    links:
+    - text: Справочник по страницам свойств проекта Linux
+      url: prop-pages-linux.md
+- title: Сборка проектов Linux CMake в Visual Studio
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Создание и настройка проекта Linux CMake
+      url: cmake-linux-project.md
+  - linkListType: tutorial
+    links:
+    - text: Создание кроссплатформенных проектов C++ в Visual Studio
+      url: /cpp/build/get-started-linux-cmake
