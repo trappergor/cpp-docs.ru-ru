@@ -1,28 +1,27 @@
+- name: Аналитика сборки C++
+  href: ../build-insights/index.yml
 - name: Начало работы с аналитикой сборки C++
   href: ../build-insights/get-started-with-cpp-build-insights.md
 - name: Учебники
-  expanded: false
+  expanded: true
   items:
     - name: vcperf и Windows Performance Analyzer
       href: ../build-insights/tutorials/vcperf-and-wpa.md
     - name: Основы Windows Performance Analyzer
       href: ../build-insights/tutorials/wpa-basics.md
 - name: Справочник
-  expanded: false
   items:
     - name: команды vcperf
       href: ../build-insights/reference/vcperf-commands.md
     - name: Представления Windows Performance Analyzer
       href: ../build-insights/reference/wpa-views.md
     - name: Пакет SDK Аналитики сборки C++
-      expanded: false
       items:
         - name: Обзор
           href: ../build-insights/reference/sdk/overview.md
         - name: Таблица событий
           href: ../build-insights/reference/sdk/event-table.md
         - name: Функции
-          expanded: false
           items:
             - name: Анализ
               href: ../build-insights/reference/sdk/functions/analyze.md
@@ -79,7 +78,6 @@
             - name: StopTracingSessionW
               href: ../build-insights/reference/sdk/functions/stop-tracing-session-w.md
         - name: Типы данных событий (C++)
-          expanded: false
           items:
             - name: Действие
               href: ../build-insights/reference/sdk/cpp-event-data-types/activity.md
@@ -174,7 +172,6 @@
             - name: WholeProgramAnalysis
               href: ../build-insights/reference/sdk/cpp-event-data-types/whole-program-analysis.md
         - name: Типы данных событий (C)
-          expanded: false
           items:
             - name: CL_PASS_DATA
               href: ../build-insights/reference/sdk/c-event-data-types/cl-pass-data-struct.md
@@ -213,7 +210,6 @@
             - name: TRANSLATION_UNIT_PASS_CODE
               href: ../build-insights/reference/sdk/c-event-data-types/translation-unit-pass-code-enum.md
         - name: Другие типы
-          expanded: false
           items:
             - name: ANALYSIS_CALLBACKS
               href: ../build-insights/reference/sdk/other-types/analysis-callbacks-struct.md
