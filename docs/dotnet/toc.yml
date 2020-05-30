@@ -3,7 +3,6 @@
 - name: 'Пошаговое руководство. Компиляция программы C++/CLI, предназначенной для среды CLR'
   href: ../dotnet/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md
 - name: Задачи C++/CLI
-  expanded: false
   items:
     - name: Задачи C++/CLI
       href: ../dotnet/cpp-cli-tasks.md
@@ -50,14 +49,12 @@
     - name: Доступ к данным с помощью ADO.NET
       href: ../dotnet/data-access-using-adonet-cpp-cli.md
 - name: Взаимодействие машинного кода и платформы.NET
-  expanded: false
   items:
     - name: Взаимодействие машинного кода и платформы.NET
       href: ../dotnet/native-and-dotnet-interoperability.md
     - name: Совместимость с другими языками .NET
       href: ../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md
     - name: Смешанные (собственные и управляемые) сборки
-      expanded: false
       items:
         - name: Смешанные (собственные и управляемые) сборки
           href: ../dotnet/mixed-native-and-managed-assemblies.md
@@ -80,14 +77,12 @@
         - name: Практическое руководство. Создание приложения с частичным доверием путем удаления зависимости от библиотеки DLL CRT
           href: ../dotnet/create-a-partially-trusted-application.md
     - name: Использование пользовательского элемента управления формы Windows Forms в MFC
-      expanded: false
       items:
         - name: Использование пользовательского элемента управления формы Windows Forms в MFC
           href: ../dotnet/using-a-windows-form-user-control-in-mfc.md
         - name: Различия в программировании Windows Forms и MFC
           href: ../dotnet/windows-forms-mfc-programming-differences.md
         - name: Размещение пользовательского элемента управления формы Windows Forms в диалоговом окне MFC
-          expanded: false
           items:
             - name: Размещение пользовательского элемента управления формы Windows Forms в диалоговом окне MFC
               href: ../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md
@@ -98,7 +93,6 @@
             - name: Практическое руководство. Получение событий Windows Forms из собственных классов C++
               href: ../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md
         - name: Размещение пользовательского элемента управления формы Windows Forms в качестве представления MFC
-          expanded: false
           items:
             - name: Размещение пользовательского элемента управления формы Windows Forms в качестве представления MFC
               href: ../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md
@@ -111,12 +105,10 @@
         - name: Размещение пользовательского элемента управления формы Windows Forms в диалоговом окне MFC
           href: ../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md
     - name: Вызов неуправляемых функций из управляемого кода
-      expanded: false
       items:
         - name: Вызов неуправляемых функций из управляемого кода
           href: ../dotnet/calling-native-functions-from-managed-code.md
         - name: Использование явного вызова PInvoke в C++ (атрибут DllImport)
-          expanded: false
           items:
             - name: Использование явного вызова PInvoke в C++ (атрибут DllImport)
               href: ../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md
@@ -133,7 +125,6 @@
             - name: Практическое руководство. Маршалинг внедренных указателей с помощью PInvoke
               href: ../dotnet/how-to-marshal-embedded-pointers-using-pinvoke.md
         - name: Использование взаимодействия языка C++ (неявный PInvoke)
-          expanded: false
           items:
             - name: Использование взаимодействия языка C++ (неявный PInvoke)
               href: ../dotnet/using-cpp-interop-implicit-pinvoke.md
@@ -190,7 +181,6 @@
             - name: 'Практическое руководство. Создание программы-оболочки собственного класса для использования в C#'
               href: ../dotnet/how-to-wrap-native-class-for-use-by-csharp.md
 - name: Чистый и проверяемый код
-  expanded: false
   items:
     - name: Чистый и проверяемый код
       href: ../dotnet/pure-and-verifiable-code-cpp-cli.md
@@ -213,7 +203,6 @@
 - name: Класс Debug
   href: ../dotnet/debug-class-cpp-cli.md
 - name: Справочник по библиотеке STL/CLR
-  expanded: false
   items:
     - name: Справочник по библиотеке STL/CLR
       href: ../dotnet/stl-clr-library-reference.md
@@ -270,12 +259,10 @@
     - name: vector (STL/CLR)
       href: ../dotnet/vector-stl-clr.md
 - name: Библиотека поддержки C++
-  expanded: false
   items:
     - name: Библиотека поддержки C++
       href: ../dotnet/cpp-support-library.md
     - name: Общие сведения о маршалинге в C++
-      expanded: false
       items:
         - name: Общие сведения о маршалинге в C++
           href: ../dotnet/overview-of-marshaling-in-cpp.md
@@ -286,12 +273,10 @@
     - name: Пространство имен msclr
       href: ../dotnet/msclr-namespace.md
     - name: Классы управления ресурсами
-      expanded: false
       items:
         - name: Классы управления ресурсами
           href: ../dotnet/resource-management-classes.md
         - name: auto_gcroot
-          expanded: false
           items:
             - name: auto_gcroot
               href: ../dotnet/auto-gcroot.md
@@ -300,7 +285,6 @@
             - name: Функция swap (auto_gcroot)
               href: ../dotnet/swap-function-auto-gcroot.md
         - name: auto_handle
-          href: ../dotnet/auto-handle.md
           items:
             - name: auto_handle
               href: ../dotnet/auto-handle.md
@@ -309,12 +293,10 @@
             - name: Функция swap (auto_handle)
               href: ../dotnet/swap-function-auto-handle.md
     - name: Синхронизация (класс lock)
-      expanded: false
       items:
         - name: Синхронизация (класс lock)
           href: ../dotnet/synchronization-lock-class.md
         - name: lock
-          expanded: false
           items:
             - name: lock
               href: ../dotnet/lock.md
@@ -323,21 +305,18 @@
             - name: Перечисление lock_when
               href: ../dotnet/lock-when-enum.md
     - name: Вызов функций в конкретном домене приложения
-      expanded: false
       items:
         - name: Вызов функций в конкретном домене приложения
           href: ../dotnet/calling-functions-in-a-specific-application-domain.md
         - name: Функция call_in_appdomain
           href: ../dotnet/call-in-appdomain-function.md
     - name: 'com::ptr'
-      expanded: false
       items:
         - name: 'com::ptr'
           href: ../dotnet/com-ptr.md
         - name: 'Класс com::ptr'
           href: ../dotnet/com-ptr-class.md
 - name: Исключения в C++/CLI
-  expanded: false
   items:
     - name: Исключения в C++/CLI
       href: ../dotnet/exceptions-in-cpp-cli.md
@@ -352,7 +331,6 @@
     - name: Практическое руководство. Определение и установка глобального обработчика исключений
       href: ../dotnet/how-to-define-and-install-a-global-exception-handler.md
 - name: Упаковка
-  expanded: false
   items:
     - name: Упаковка
       href: ../dotnet/boxing-cpp-cli.md
