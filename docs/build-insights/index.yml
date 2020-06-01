@@ -1,0 +1,43 @@
+### YamlMime:Landing
+title: Аналитика сборки C++ | Автоматизация анализа цепочки средств сборки
+summary: Используйте аналитику сборки C++ для автоматического анализа и оптимизации сборки в режиме реального времени.
+metadata:
+  title: Аналитика сборки C++
+  description: Узнайте, как использовать аналитику сборки C++ для анализа и оптимизации сборок.
+  ms.topic: landing-page
+  author: corob-msft
+  ms.author: corob
+  ms.date: 05/26/2020
+  ms.openlocfilehash: e5a165888026c1485b77bd2784e22b3c9b36684a
+  ms.sourcegitcommit: 0df64a1b518a238c943986a898f40d12347b712f
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 05/28/2020
+  ms.locfileid: "84153542"
+landingContent:
+- title: Узнайте о выполнении сборки
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Начало работы с аналитикой сборки C++
+      url: get-started-with-cpp-build-insights.md
+  - linkListType: tutorial
+    links:
+    - text: vcperf и Windows Performance Analyzer
+      url: tutorials/vcperf-and-wpa.md
+    - text: Основы Windows Performance Analyzer
+      url: tutorials/wpa-basics.md
+- title: Измерение производительности сборки
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: команды vcperf
+      url: reference/vcperf-commands.md
+    - text: Представления Windows Performance Analyzer
+      url: reference/wpa-views.md
+- title: Создание собственного анализа производительности сборки
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Справочник по пакету SDK
+      url: reference/sdk/overview.md
