@@ -1,0 +1,87 @@
+### YamlMime:Landing
+title: Документация по языку C
+summary: Узнайте, как использовать C и библиотеку времени выполнения C.
+metadata:
+  title: Документация по C. Начало работы, руководства, справочные материалы.
+  description: Справочник по программированию на C для пользователей Microsoft C/C++ и Visual Studio.
+  ms.topic: landing-page
+  ms.date: 05/28/2020
+  ms.openlocfilehash: 74e65a2cb4e65bbbaaa51a9b1bdd358b96dff4eb
+  ms.sourcegitcommit: 0df64a1b518a238c943986a898f40d12347b712f
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 05/28/2020
+  ms.locfileid: "84153522"
+landingContent:
+- title: Начало работы с C в Visual Studio
+  linkLists:
+  - linkListType: download
+    links:
+    - text: Скачать Visual Studio для Windows
+      url: https://visualstudio.microsoft.com/downloads
+    - text: Установка поддержки C/C++ в Visual Studio
+      url: ../build/vscpp-step-0-installation.md
+    - text: Скачать только средств сборки для командной строки
+      url: https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019
+  - linkListType: tutorial
+    links:
+    - text: Компиляция программы на языке C из командной строки
+      url: ../build/walkthrough-compile-a-c-program-on-the-command-line.md
+- title: Использование компилятора и средств
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Справочные сведения о сборке кода на C/C++
+      url: ../build/reference/c-cpp-building-reference.md
+    - text: Проекты и системы сборки
+      url: ../build/projects-and-build-systems-cpp.md
+    - text: Справочник по компилятору
+      url: ../build/reference/compiling-a-c-cpp-program.md
+    - text: Справочник по компоновщику
+      url: ../build/reference/linking.md
+    - text: Дополнительные средства сборки
+      url: ../build/reference/c-cpp-build-tools.md
+    - text: Ошибки и предупреждения
+      url: ../error-messages/compiler-errors-1/c-cpp-build-errors.md
+- title: Язык C
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Справочник по языку C
+      url: ../c-language/c-language-reference.md
+    - text: Элементы языка C
+      url: ../c-language/elements-of-c.md
+    - text: Структура программы
+      url: ../c-language/program-structure.md
+    - text: Объявления и типы
+      url: ../c-language/declarations-and-types.md
+    - text: Выражения и присваивания
+      url: ../c-language/expressions-and-assignments.md
+    - text: Операторы
+      url: ../c-language/statements-c.md
+    - text: Функции
+      url: ../c-language/functions-c.md
+    - text: Краткие сведения о синтаксисе языка C
+      url: ../c-language/c-language-syntax-summary.md
+    - text: Поведение, определяемое реализацией
+      url: ../c-language/implementation-defined-behavior.md
+    - text: Справочник по препроцессору в C/C++
+      url: ../preprocessor/c-cpp-preprocessor-reference.md
+- title: Библиотека времени выполнения (CRT)
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Особенности библиотеки CRT
+      url: ../c-runtime-library/crt-library-features.md
+    - text: Алфавитный указатель функций
+      url: ../c-runtime-library/reference/crt-alphabetical-function-reference.md
+    - text: Подпрограммы среды выполнения C по категориям
+      url: ../c-runtime-library/run-time-routines-by-category.md
+    - text: Глобальные переменные и стандартные типы
+      url: ../c-runtime-library/global-variables-and-standard-types.md
+    - text: Глобальные константы
+      url: ../c-runtime-library/global-constants.md
+    - text: Глобальное состояние
+      url: ../c-runtime-library/global-state.md
+    - text: Универсальные текстовые сопоставления
+      url: ../c-runtime-library/generic-text-mappings.md

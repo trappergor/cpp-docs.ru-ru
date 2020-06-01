@@ -1,742 +1,692 @@
+- name: Документация по языку C
+  href: ../c-language/index.yml
 - name: "Справочник по языку\_C"
-  href: ../c-language/c-language-reference.md
-- name: Организация справочника по языку C
-  expanded: false
   items:
+    - name: "Справочник по языку\_C"
+      href: ../c-language/c-language-reference.md
     - name: Организация справочника по языку C
-      href: ../c-language/organization-of-the-c-language-reference.md
-    - name: Содержание данного руководства
-      href: ../c-language/scope-of-this-manual.md
-    - name: Соответствие ANSI
-      href: ../c-language/ansi-conformance.md
-- name: Элементы языка C
-  expanded: false
-  items:
+      items:
+        - name: Организация справочника по языку C
+          href: ../c-language/organization-of-the-c-language-reference.md
+        - name: Содержание данного руководства
+          href: ../c-language/scope-of-this-manual.md
+        - name: Соответствие ANSI
+          href: ../c-language/ansi-conformance.md
     - name: Элементы языка C
-      href: ../c-language/elements-of-c.md
-    - name: Токены C
-      expanded: false
       items:
+        - name: Элементы языка C
+          href: ../c-language/elements-of-c.md
         - name: Токены C
-          href: ../c-language/c-tokens.md
-        - name: Пробелы
-          href: ../c-language/white-space-characters.md
-        - name: Комментарии в C
-          href: ../c-language/c-comments.md
-        - name: Оценка токенов
-          href: ../c-language/evaluation-of-tokens.md
-    - name: Ключевые слова в C
-      href: ../c-language/c-keywords.md
-    - name: Идентификаторы C
-      expanded: false
-      items:
+          items:
+            - name: Токены C
+              href: ../c-language/c-tokens.md
+            - name: Пробелы
+              href: ../c-language/white-space-characters.md
+            - name: Комментарии в C
+              href: ../c-language/c-comments.md
+            - name: Оценка токенов
+              href: ../c-language/evaluation-of-tokens.md
+        - name: Ключевые слова в C
+          href: ../c-language/c-keywords.md
         - name: Идентификаторы C
-          href: ../c-language/c-identifiers.md
-        - name: Многобайтовая кодировка и расширенные символы
-          href: ../c-language/multibyte-and-wide-characters.md
-        - name: Триграфы
-          href: ../c-language/trigraphs.md
-    - name: Константы в C
-      expanded: false
-      items:
+          items:
+            - name: Идентификаторы C
+              href: ../c-language/c-identifiers.md
+            - name: Многобайтовая кодировка и расширенные символы
+              href: ../c-language/multibyte-and-wide-characters.md
+            - name: Триграфы
+              href: ../c-language/trigraphs.md
         - name: Константы в C
-          href: ../c-language/c-constants.md
-        - name: Константы с плавающей запятой в C
-          expanded: false
           items:
+            - name: Константы в C
+              href: ../c-language/c-constants.md
             - name: Константы с плавающей запятой в C
-              href: ../c-language/c-floating-point-constants.md
-            - name: Ограничения на константы с плавающей запятой
-              href: ../c-language/limits-on-floating-point-constants.md
-        - name: Целочисленные константы в C
-          expanded: false
-          items:
+              items:
+                - name: Константы с плавающей запятой в C
+                  href: ../c-language/c-floating-point-constants.md
+                - name: Ограничения на константы с плавающей запятой
+                  href: ../c-language/limits-on-floating-point-constants.md
             - name: Целочисленные константы в C
-              href: ../c-language/c-integer-constants.md
-            - name: Целочисленные типы
-              href: ../c-language/integer-types.md
-            - name: Пределы целых чисел в C и C++
-              href: ../c-language/cpp-integer-limits.md
-        - name: Символьные константы в C
-          expanded: false
-          items:
+              items:
+                - name: Целочисленные константы в C
+                  href: ../c-language/c-integer-constants.md
+                - name: Целочисленные типы
+                  href: ../c-language/integer-types.md
+                - name: Пределы целых чисел в C и C++
+                  href: ../c-language/cpp-integer-limits.md
             - name: Символьные константы в C
-              href: ../c-language/c-character-constants.md
-            - name: Символьные типы
-              href: ../c-language/character-types.md
-            - name: Кодировка исполнения
-              href: ../c-language/execution-character-set.md
-            - name: Escape-последовательности
-              href: ../c-language/escape-sequences.md
-            - name: Спецификации восьмеричных и шестнадцатеричных символов
-              href: ../c-language/octal-and-hexadecimal-character-specifications.md
-    - name: Строковые литералы в C
-      expanded: false
-      items:
+              items:
+                - name: Символьные константы в C
+                  href: ../c-language/c-character-constants.md
+                - name: Символьные типы
+                  href: ../c-language/character-types.md
+                - name: Кодировка исполнения
+                  href: ../c-language/execution-character-set.md
+                - name: Escape-последовательности
+                  href: ../c-language/escape-sequences.md
+                - name: Спецификации восьмеричных и шестнадцатеричных символов
+                  href: ../c-language/octal-and-hexadecimal-character-specifications.md
         - name: Строковые литералы в C
-          href: ../c-language/c-string-literals.md
-        - name: Тип для строковых литералов
-          href: ../c-language/type-for-string-literals.md
-        - name: Хранение строковых литералов
-          href: ../c-language/storage-of-string-literals.md
-        - name: Объединение строковых литералов
-          href: ../c-language/string-literal-concatenation.md
-        - name: Максимальная длина строки
-          href: ../c-language/maximum-string-length.md
-    - name: Знаки препинания и специальные символы
-      href: ../c-language/punctuation-and-special-characters.md
-- name: Структура программы
-  expanded: false
-  items:
+          items:
+            - name: Строковые литералы в C
+              href: ../c-language/c-string-literals.md
+            - name: Тип для строковых литералов
+              href: ../c-language/type-for-string-literals.md
+            - name: Хранение строковых литералов
+              href: ../c-language/storage-of-string-literals.md
+            - name: Объединение строковых литералов
+              href: ../c-language/string-literal-concatenation.md
+            - name: Максимальная длина строки
+              href: ../c-language/maximum-string-length.md
+        - name: Знаки препинания и специальные символы
+          href: ../c-language/punctuation-and-special-characters.md
     - name: Структура программы
-      href: ../c-language/program-structure.md
-    - name: Исходные файлы и исходные программы
-      expanded: false
       items:
-        - name: Файлы с исходным кодом и исходные программы
-          href: ../c-language/source-files-and-source-programs.md
-        - name: Директивы препроцессору
-          href: ../c-language/directives-to-the-preprocessor.md
-        - name: Прагмы C
-          href: ../c-language/c-pragmas.md
-        - name: Объявления и определения в C
-          href: ../c-language/c-declarations-and-definitions.md
-        - name: Объявления и определения функций
-          href: ../c-language/function-declarations-and-definitions.md
-        - name: Blocks
-          href: ../c-language/blocks.md
-        - name: Пример программы
-          href: ../c-language/example-program.md
-    - name: Функция main и выполнение программ
-      expanded: false
-      items:
+        - name: Структура программы
+          href: ../c-language/program-structure.md
+        - name: Исходные файлы и исходные программы
+          items:
+            - name: Файлы с исходным кодом и исходные программы
+              href: ../c-language/source-files-and-source-programs.md
+            - name: Директивы препроцессору
+              href: ../c-language/directives-to-the-preprocessor.md
+            - name: Прагмы C
+              href: ../c-language/c-pragmas.md
+            - name: Объявления и определения в C
+              href: ../c-language/c-declarations-and-definitions.md
+            - name: Объявления и определения функций
+              href: ../c-language/function-declarations-and-definitions.md
+            - name: Blocks
+              href: ../c-language/blocks.md
+            - name: Пример программы
+              href: ../c-language/example-program.md
         - name: Функция main и выполнение программ
-          href: ../c-language/main-function-and-program-execution.md
-        - name: Использование wmain
-          href: ../c-language/using-wmain.md
-        - name: Описание аргумента
-          href: ../c-language/argument-description.md
-        - name: Расширение аргументов-заполнителей
-          href: ../c-language/expanding-wildcard-arguments.md
-        - name: Анализ аргументов командной строки C
-          href: ../c-language/parsing-c-command-line-arguments.md
-        - name: Настройка обработки командной строки C
-          href: ../c-language/customizing-c-command-line-processing.md
-    - name: 'Время жизни, область, видимость и компоновка'
-      expanded: false
-      items:
+          items:
+            - name: Функция main и выполнение программ
+              href: ../c-language/main-function-and-program-execution.md
+            - name: Использование wmain
+              href: ../c-language/using-wmain.md
+            - name: Описание аргумента
+              href: ../c-language/argument-description.md
+            - name: Расширение аргументов-заполнителей
+              href: ../c-language/expanding-wildcard-arguments.md
+            - name: Анализ аргументов командной строки C
+              href: ../c-language/parsing-c-command-line-arguments.md
+            - name: Настройка обработки командной строки C
+              href: ../c-language/customizing-c-command-line-processing.md
         - name: 'Время жизни, область, видимость и компоновка'
-          href: ../c-language/lifetime-scope-visibility-and-linkage.md
-        - name: Время существования
-          href: ../c-language/lifetime.md
-        - name: Область и видимость
-          href: ../c-language/scope-and-visibility.md
-        - name: Сводка времени существования и видимости
-          href: ../c-language/summary-of-lifetime-and-visibility.md
-        - name: Компоновка
-          expanded: false
           items:
+            - name: 'Время жизни, область, видимость и компоновка'
+              href: ../c-language/lifetime-scope-visibility-and-linkage.md
+            - name: Время существования
+              href: ../c-language/lifetime.md
+            - name: Область и видимость
+              href: ../c-language/scope-and-visibility.md
+            - name: Сводка времени существования и видимости
+              href: ../c-language/summary-of-lifetime-and-visibility.md
             - name: Компоновка
-              href: ../c-language/linkage.md
-            - name: Внутренняя компоновка
-              href: ../c-language/internal-linkage.md
-            - name: Внешняя компоновка
-              href: ../c-language/external-linkage.md
-            - name: Без компоновки
-              href: ../c-language/no-linkage.md
-    - name: Пространства имен
-      href: ../c-language/name-spaces.md
-- name: Объявления и типы
-  expanded: false
-  items:
+              items:
+                - name: Компоновка
+                  href: ../c-language/linkage.md
+                - name: Внутренняя компоновка
+                  href: ../c-language/internal-linkage.md
+                - name: Внешняя компоновка
+                  href: ../c-language/external-linkage.md
+                - name: Без компоновки
+                  href: ../c-language/no-linkage.md
+        - name: Пространства имен
+          href: ../c-language/name-spaces.md
     - name: Объявления и типы
-      href: ../c-language/declarations-and-types.md
-    - name: Общие сведения об объявлениях
-      href: ../c-language/overview-of-declarations.md
-    - name: Классы хранения в C
-      expanded: false
       items:
-        - name: C - классы хранения
-          href: ../c-language/c-storage-classes.md
-        - name: Описатели классов хранения для объявлений внешнего уровня
-          href: ../c-language/storage-class-specifiers-for-external-level-declarations.md
-        - name: Описатели классов хранения для объявлений внутреннего уровня
-          expanded: false
-          items:
-            - name: Описатели классов хранения для объявлений внутреннего уровня
-              href: ../c-language/storage-class-specifiers-for-internal-level-declarations.md
-            - name: Описатель класса хранения auto
-              href: ../c-language/auto-storage-class-specifier.md
-            - name: Описатель класса хранения register
-              href: ../c-language/register-storage-class-specifier.md
-            - name: Описатель класса хранения static
-              href: ../c-language/static-storage-class-specifier.md
-            - name: Описатель класса хранения extern
-              href: ../c-language/extern-storage-class-specifier.md
-        - name: Описатели классов хранения с объявлениями функций
-          href: ../c-language/storage-class-specifiers-with-function-declarations.md
-    - name: Описатели типов C
-      expanded: false
-      items:
-        - name: Описатели типов C
-          href: ../c-language/c-type-specifiers.md
-        - name: Описатели и эквиваленты типов данных
-          href: ../c-language/data-type-specifiers-and-equivalents.md
-    - name: Описатели типов
-      href: ../c-language/type-qualifiers.md
-    - name: Деклараторы и объявления переменных
-      expanded: false
-      items:
-        - name: Деклараторы и объявления переменных
-          href: ../c-language/declarators-and-variable-declarations.md
-        - name: Простые объявления переменных
-          href: ../c-language/simple-variable-declarations.md
-        - name: Объявления перечислений C
-          href: ../c-language/c-enumeration-declarations.md
-        - name: Объявления структур
-          expanded: false
-          items:
-            - name: Объявления структур
-              href: ../c-language/structure-declarations.md
-            - name: Битовые поля в C
-              href: ../c-language/c-bit-fields.md
-            - name: Хранение и выравнивание структур
-              href: ../c-language/storage-and-alignment-of-structures.md
-        - name: Объявления объединений
-          expanded: false
-          items:
-            - name: Объявления объединений
-              href: ../c-language/union-declarations.md
-            - name: Хранение объединений
-              href: ../c-language/storage-of-unions.md
-        - name: Объявления массивов
-          expanded: false
-          items:
-            - name: Объявления массивов
-              href: ../c-language/array-declarations.md
-            - name: Хранение массивов
-              href: ../c-language/storage-of-arrays.md
-        - name: Объявления указателей
-          expanded: false
-          items:
-            - name: Объявления указателей
-              href: ../c-language/pointer-declarations.md
-            - name: Хранение адресов
-              href: ../c-language/storage-of-addresses.md
-        - name: Основанные указатели (C)
-          href: ../c-language/based-pointers-c.md
-        - name: Абстрактные деклараторы в C
-          href: ../c-language/c-abstract-declarators.md
-    - name: Интерпретация сложных деклараторов
-      href: ../c-language/interpreting-more-complex-declarators.md
-    - name: Инициализация
-      expanded: false
-      items:
-        - name: Инициализация
-          href: ../c-language/initialization.md
-        - name: Инициализация скалярных типов
-          href: ../c-language/initializing-scalar-types.md
-        - name: Инициализация агрегатных типов
-          href: ../c-language/initializing-aggregate-types.md
-        - name: Инициализация строк
-          href: ../c-language/initializing-strings.md
-    - name: Хранение базовых типов
-      expanded: false
-      items:
-        - name: Хранилище базовых типов
-          href: ../c-language/storage-of-basic-types.md
-        - name: Тип char
-          href: ../c-language/type-char.md
-        - name: Тип int
-          href: ../c-language/type-int.md
-        - name: Целочисленные типы размеров C
-          href: ../c-language/c-sized-integer-types.md
-        - name: Тип float
-          href: ../c-language/type-float.md
-        - name: Тип double
-          href: ../c-language/type-double.md
-        - name: Тип long double
-          href: ../c-language/type-long-double.md
-    - name: Неполные типы
-      href: ../c-language/incomplete-types.md
-    - name: Объявления Typedef
-      href: ../c-language/typedef-declarations.md
-    - name: Расширенные атрибуты классов хранения в C
-      expanded: false
-      items:
-        - name: Расширенные атрибуты классов хранения в C
-          href: ../c-language/c-extended-storage-class-attributes.md
-        - name: Импорт и экспорт DLL
-          href: ../c-language/dll-import-and-export.md
-        - name: Naked (C)
-          href: ../c-language/naked-c.md
-        - name: Локальное хранилище потока
-          href: ../c-language/thread-local-storage.md
-- name: Выражения и присваивания
-  expanded: false
-  items:
-    - name: Выражения и присваивания
-      href: ../c-language/expressions-and-assignments.md
-    - name: Операнды и выражения
-      expanded: false
-      items:
-        - name: Операнды и выражения
-          href: ../c-language/operands-and-expressions.md
-        - name: Первичные выражения в C
-          expanded: false
-          items:
-            - name: Первичные выражения в C
-              href: ../c-language/c-primary-expressions.md
-            - name: Идентификаторы в первичных выражениях
-              href: ../c-language/identifiers-in-primary-expressions.md
-            - name: Константы в первичных выражениях
-              href: ../c-language/constants-in-primary-expressions.md
-            - name: Строковые литералы в первичных выражениях
-              href: ../c-language/string-literals-in-primary-expressions.md
-            - name: Выражения в скобках
-              href: ../c-language/expressions-in-parentheses.md
-        - name: Выражения L-Value и R-Value
-          href: ../c-language/l-value-and-r-value-expressions.md
-        - name: Постоянные выражения C
-          href: ../c-language/c-constant-expressions.md
-        - name: Вычисление выражений (C)
-          expanded: false
-          items:
-            - name: Вычисление выражений (C)
-              href: ../c-language/expression-evaluation-c.md
-            - name: Побочные эффекты
-              href: ../c-language/side-effects.md
-            - name: Точки следования в C
-              href: ../c-language/c-sequence-points.md
-    - name: Операторы в C
-      expanded: false
-      items:
-        - name: Операторы в C
-          href: ../c-language/c-operators.md
-        - name: Приоритет и порядок оценки
-          href: ../c-language/precedence-and-order-of-evaluation.md
-        - name: Обычные арифметические преобразования
-          href: ../c-language/usual-arithmetic-conversions.md
-        - name: Постфиксные операторы
-          expanded: false
-          items:
-            - name: Постфиксные операторы
-              href: ../c-language/postfix-operators.md
-            - name: Одномерные массивы
-              href: ../c-language/one-dimensional-arrays.md
-            - name: Многомерные массивы (C)
-              href: ../c-language/multidimensional-arrays-c.md
-            - name: Вызов функции (C)
-              href: ../c-language/function-call-c.md
-            - name: Члены структур и объединений
-              href: ../c-language/structure-and-union-members.md
-            - name: Постфиксные операторы увеличения и уменьшения в C
-              href: ../c-language/c-postfix-increment-and-decrement-operators.md
-        - name: Унарные операторы C
-          expanded: false
-          items:
-            - name: Унарные операторы C
-              href: ../c-language/c-unary-operators.md
-            - name: Префиксные операторы инкремента и декремента
-              href: ../c-language/prefix-increment-and-decrement-operators.md
-            - name: Операторы косвенного обращения и взятия адреса
-              href: ../c-language/indirection-and-address-of-operators.md
-            - name: Унарные арифметические операторы
-              href: ../c-language/unary-arithmetic-operators.md
-            - name: Оператор sizeof (C)
-              href: ../c-language/sizeof-operator-c.md
-        - name: Операторы приведения
-          href: ../c-language/cast-operators.md
-        - name: Операторы умножения в C
-          href: ../c-language/c-multiplicative-operators.md
-        - name: Операторы сложения в C
-          expanded: false
-          items:
-            - name: Операторы сложения в C
-              href: ../c-language/c-additive-operators.md
-            - name: Сложение (+)
-              href: ../c-language/addition-plus.md
-            - name: Вычитание (-)
-              href: ../c-language/subtraction-minus.md
-            - name: Использование операторов сложения
-              href: ../c-language/using-the-additive-operators.md
-            - name: Расчеты указателей
-              href: ../c-language/pointer-arithmetic.md
-        - name: Операторы побитового сдвига
-          href: ../c-language/bitwise-shift-operators.md
-        - name: Операторы отношения и равенства в C
-          href: ../c-language/c-relational-and-equality-operators.md
-        - name: Побитовые операторы в C
-          href: ../c-language/c-bitwise-operators.md
-        - name: Логические операторы в C
-          href: ../c-language/c-logical-operators.md
-        - name: Оператор Conditional-Expression
-          href: ../c-language/conditional-expression-operator.md
-        - name: Операторы присваивания C
-          expanded: false
-          items:
-            - name: Операторы присваивания C
-              href: ../c-language/c-assignment-operators.md
-            - name: Простое присваивание (C)
-              href: ../c-language/simple-assignment-c.md
-            - name: Составное присваивание в C
-              href: ../c-language/c-compound-assignment.md
-        - name: Оператор последовательного вычисления
-          href: ../c-language/sequential-evaluation-operator.md
-    - name: Преобразования типов (C)
-      expanded: false
-      items:
-        - name: Преобразования типов (C)
-          href: ../c-language/type-conversions-c.md
-        - name: Преобразования присваиваний
-          expanded: false
-          items:
-            - name: Преобразования присваиваний
-              href: ../c-language/assignment-conversions.md
-            - name: Преобразования из целочисленных типов со знаком
-              href: ../c-language/conversions-from-signed-integral-types.md
-            - name: Преобразования из целочисленных типов без знака
-              href: ../c-language/conversions-from-unsigned-integral-types.md
-            - name: Преобразования типов с плавающей запятой
-              href: ../c-language/conversions-from-floating-point-types.md
-            - name: Преобразования в типы указателей и из типов указателей
-              href: ../c-language/conversions-to-and-from-pointer-types.md
-            - name: Преобразования из других типов
-              href: ../c-language/conversions-from-other-types.md
-        - name: Преобразования приведений типов
-          href: ../c-language/type-cast-conversions.md
-        - name: Преобразования вызова функции
-          href: ../c-language/function-call-conversions.md
-- name: Операторы (C)
-  expanded: false
-  items:
-    - name: Операторы (C)
-      href: ../c-language/statements-c.md
-    - name: Общие сведения об операторах в C
-      href: ../c-language/overview-of-c-statements.md
-    - name: Оператор break (C)
-      href: ../c-language/break-statement-c.md
-    - name: Составной оператор (C)
-      href: ../c-language/compound-statement-c.md
-    - name: Оператор continue (C)
-      href: ../c-language/continue-statement-c.md
-    - name: Оператор do-while (C)
-      href: ../c-language/do-while-statement-c.md
-    - name: Оператор выражений (C)
-      href: ../c-language/expression-statement-c.md
-    - name: Оператор for (C)
-      href: ../c-language/for-statement-c.md
-    - name: goto и помеченные операторы (C)
-      href: ../c-language/goto-and-labeled-statements-c.md
-    - name: Оператор if (C)
-      href: ../c-language/if-statement-c.md
-    - name: Оператор NULL (C)
-      href: ../c-language/null-statement-c.md
-    - name: Оператор return (C)
-      href: ../c-language/return-statement-c.md
-    - name: Оператор switch (C)
-      href: ../c-language/switch-statement-c.md
-    - name: Оператор try-except (C)
-      href: ../c-language/try-except-statement-c.md
-    - name: Оператор try-finally (C)
-      href: ../c-language/try-finally-statement-c.md
-    - name: Оператор while (C)
-      href: ../c-language/while-statement-c.md
-- name: Функции (C)
-  expanded: false
-  items:
-    - name: Функции (C)
-      href: ../c-language/functions-c.md
-    - name: Общие сведения о функциях
-      expanded: false
-      items:
-        - name: Общие сведения о функциях
-          href: ../c-language/overview-of-functions.md
-        - name: Устаревшие формы объявлений и определений функций
-          href: ../c-language/obsolete-forms-of-function-declarations-and-definitions.md
-    - name: Определения функций в C
-      expanded: false
-      items:
-        - name: Определения функций в C
-          href: ../c-language/c-function-definitions.md
-        - name: Атрибуты функций
-          expanded: false
-          items:
-            - name: Атрибуты функций
-              href: ../c-language/function-attributes.md
-            - name: Указание соглашений о вызовах
-              href: ../c-language/specifying-calling-conventions.md
-            - name: Встраиваемые функции
-              href: ../c-language/inline-functions.md
-            - name: Встроенный ассемблер (C)
-              href: ../c-language/inline-assembler-c.md
-        - name: Функции импорта и экспорта DLL
-          expanded: false
-          items:
-            - name: Функции импорта и экспорта DLL
-              href: ../c-language/dll-import-and-export-functions.md
-            - name: Определения и объявления (C)
-              href: ../c-language/definitions-and-declarations-c.md
-            - name: Определение встраиваемых функций C с помощью dllexport и dllimport
-              href: ../c-language/defining-inline-c-functions-with-dllexport-and-dllimport.md
-            - name: Правила и ограничения dllimport и dllexport
-              href: ../c-language/rules-and-limitations-for-dllimport-dllexport.md
-        - name: Функции с атрибутом naked
-          expanded: false
-          items:
-            - name: Функции с атрибутом naked
-              href: ../c-language/naked-functions.md
-            - name: Правила и ограничения при использовании функций с атрибутом naked
-              href: ../c-language/rules-and-limitations-for-using-naked-functions.md
-            - name: 'Вопросы, связанные с написанием кода пролога и эпилога'
-              href: ../c-language/considerations-when-writing-prolog-epilog-code.md
-        - name: Класс хранения
-          href: ../c-language/storage-class.md
-        - name: Возвращаемый тип
-          href: ../c-language/return-type.md
-        - name: Параметры
-          href: ../c-language/parameters.md
-        - name: Тело функции
-          href: ../c-language/function-body.md
-    - name: Прототипы функций
-      href: ../c-language/function-prototypes.md
-    - name: Вызовы функций
-      expanded: false
-      items:
-        - name: Вызовы функций
-          href: ../c-language/function-calls.md
-        - name: Аргументы
-          href: ../c-language/arguments.md
-        - name: Вызовы с переменным количеством аргументов
-          href: ../c-language/calls-with-a-variable-number-of-arguments.md
-        - name: Рекурсивные функции
-          href: ../c-language/recursive-functions.md
-- name: Краткие сведения о синтаксисе языка C
-  expanded: false
-  items:
-    - name: Краткие сведения о синтаксисе языка C
-      href: ../c-language/c-language-syntax-summary.md
-    - name: Определения и соглашения
-      href: ../c-language/definitions-and-conventions.md
-    - name: Лексическая грамматика
-      expanded: false
-      items:
-        - name: Лексическая грамматика
-          href: ../c-language/lexical-grammar.md
-        - name: Общие сведения о токенах
-          href: ../c-language/summary-of-tokens.md
-        - name: Общие сведения о ключевых словах
-          href: ../c-language/summary-of-keywords.md
-        - name: Общие сведения об идентификаторах
-          href: ../c-language/summary-of-identifiers.md
-        - name: Общие сведения о константах
-          href: ../c-language/summary-of-constants.md
-        - name: Общие сведения о строковых литералах
-          href: ../c-language/summary-of-string-literals.md
-        - name: Операторы (C)
-          href: ../c-language/operators-c.md
-        - name: Символы пунктуации
-          href: ../c-language/punctuators.md
-    - name: Грамматика структуры фразы
-      expanded: false
-      items:
-        - name: Грамматика структуры фразы
-          href: ../c-language/phrase-structure-grammar.md
-        - name: Общие сведения о выражениях
-          href: ../c-language/summary-of-expressions.md
+        - name: Объявления и типы
+          href: ../c-language/declarations-and-types.md
         - name: Общие сведения об объявлениях
-          href: ../c-language/summary-of-declarations.md
-        - name: Общие сведения об операторах
-          href: ../c-language/summary-of-statements.md
-        - name: Внешние определения
-          href: ../c-language/external-definitions.md
-- name: 'Поведение, определяемое реализацией'
-  expanded: false
-  items:
+          href: ../c-language/overview-of-declarations.md
+        - name: Классы хранения в C
+          items:
+            - name: C - классы хранения
+              href: ../c-language/c-storage-classes.md
+            - name: Описатели классов хранения для объявлений внешнего уровня
+              href: ../c-language/storage-class-specifiers-for-external-level-declarations.md
+            - name: Описатели классов хранения для объявлений внутреннего уровня
+              items:
+                - name: Описатели классов хранения для объявлений внутреннего уровня
+                  href: ../c-language/storage-class-specifiers-for-internal-level-declarations.md
+                - name: Описатель класса хранения auto
+                  href: ../c-language/auto-storage-class-specifier.md
+                - name: Описатель класса хранения register
+                  href: ../c-language/register-storage-class-specifier.md
+                - name: Описатель класса хранения static
+                  href: ../c-language/static-storage-class-specifier.md
+                - name: Описатель класса хранения extern
+                  href: ../c-language/extern-storage-class-specifier.md
+            - name: Описатели классов хранения с объявлениями функций
+              href: ../c-language/storage-class-specifiers-with-function-declarations.md
+        - name: Описатели типов C
+          items:
+            - name: Описатели типов C
+              href: ../c-language/c-type-specifiers.md
+            - name: Описатели и эквиваленты типов данных
+              href: ../c-language/data-type-specifiers-and-equivalents.md
+        - name: Описатели типов
+          href: ../c-language/type-qualifiers.md
+        - name: Деклараторы и объявления переменных
+          items:
+            - name: Деклараторы и объявления переменных
+              href: ../c-language/declarators-and-variable-declarations.md
+            - name: Простые объявления переменных
+              href: ../c-language/simple-variable-declarations.md
+            - name: Объявления перечислений C
+              href: ../c-language/c-enumeration-declarations.md
+            - name: Объявления структур
+              items:
+                - name: Объявления структур
+                  href: ../c-language/structure-declarations.md
+                - name: Битовые поля в C
+                  href: ../c-language/c-bit-fields.md
+                - name: Хранение и выравнивание структур
+                  href: ../c-language/storage-and-alignment-of-structures.md
+            - name: Объявления объединений
+              items:
+                - name: Объявления объединений
+                  href: ../c-language/union-declarations.md
+                - name: Хранение объединений
+                  href: ../c-language/storage-of-unions.md
+            - name: Объявления массивов
+              items:
+                - name: Объявления массивов
+                  href: ../c-language/array-declarations.md
+                - name: Хранение массивов
+                  href: ../c-language/storage-of-arrays.md
+            - name: Объявления указателей
+              items:
+                - name: Объявления указателей
+                  href: ../c-language/pointer-declarations.md
+                - name: Хранение адресов
+                  href: ../c-language/storage-of-addresses.md
+            - name: Основанные указатели (C)
+              href: ../c-language/based-pointers-c.md
+            - name: Абстрактные деклараторы в C
+              href: ../c-language/c-abstract-declarators.md
+        - name: Интерпретация сложных деклараторов
+          href: ../c-language/interpreting-more-complex-declarators.md
+        - name: Инициализация
+          items:
+            - name: Инициализация
+              href: ../c-language/initialization.md
+            - name: Инициализация скалярных типов
+              href: ../c-language/initializing-scalar-types.md
+            - name: Инициализация агрегатных типов
+              href: ../c-language/initializing-aggregate-types.md
+            - name: Инициализация строк
+              href: ../c-language/initializing-strings.md
+        - name: Хранение базовых типов
+          items:
+            - name: Хранилище базовых типов
+              href: ../c-language/storage-of-basic-types.md
+            - name: Тип char
+              href: ../c-language/type-char.md
+            - name: Тип int
+              href: ../c-language/type-int.md
+            - name: Целочисленные типы размеров C
+              href: ../c-language/c-sized-integer-types.md
+            - name: Тип float
+              href: ../c-language/type-float.md
+            - name: Тип double
+              href: ../c-language/type-double.md
+            - name: Тип long double
+              href: ../c-language/type-long-double.md
+        - name: Неполные типы
+          href: ../c-language/incomplete-types.md
+        - name: Объявления Typedef
+          href: ../c-language/typedef-declarations.md
+        - name: Расширенные атрибуты классов хранения в C
+          items:
+            - name: Расширенные атрибуты классов хранения в C
+              href: ../c-language/c-extended-storage-class-attributes.md
+            - name: Импорт и экспорт DLL
+              href: ../c-language/dll-import-and-export.md
+            - name: Naked (C)
+              href: ../c-language/naked-c.md
+            - name: Локальное хранилище потока
+              href: ../c-language/thread-local-storage.md
+    - name: Выражения и присваивания
+      items:
+        - name: Выражения и присваивания
+          href: ../c-language/expressions-and-assignments.md
+        - name: Операнды и выражения
+          items:
+            - name: Операнды и выражения
+              href: ../c-language/operands-and-expressions.md
+            - name: Первичные выражения в C
+              items:
+                - name: Первичные выражения в C
+                  href: ../c-language/c-primary-expressions.md
+                - name: Идентификаторы в первичных выражениях
+                  href: ../c-language/identifiers-in-primary-expressions.md
+                - name: Константы в первичных выражениях
+                  href: ../c-language/constants-in-primary-expressions.md
+                - name: Строковые литералы в первичных выражениях
+                  href: ../c-language/string-literals-in-primary-expressions.md
+                - name: Выражения в скобках
+                  href: ../c-language/expressions-in-parentheses.md
+            - name: Выражения L-Value и R-Value
+              href: ../c-language/l-value-and-r-value-expressions.md
+            - name: Постоянные выражения C
+              href: ../c-language/c-constant-expressions.md
+            - name: Вычисление выражений (C)
+              items:
+                - name: Вычисление выражений (C)
+                  href: ../c-language/expression-evaluation-c.md
+                - name: Побочные эффекты
+                  href: ../c-language/side-effects.md
+                - name: Точки следования в C
+                  href: ../c-language/c-sequence-points.md
+        - name: Операторы в C
+          items:
+            - name: Операторы в C
+              href: ../c-language/c-operators.md
+            - name: Приоритет и порядок оценки
+              href: ../c-language/precedence-and-order-of-evaluation.md
+            - name: Обычные арифметические преобразования
+              href: ../c-language/usual-arithmetic-conversions.md
+            - name: Постфиксные операторы
+              items:
+                - name: Постфиксные операторы
+                  href: ../c-language/postfix-operators.md
+                - name: Одномерные массивы
+                  href: ../c-language/one-dimensional-arrays.md
+                - name: Многомерные массивы (C)
+                  href: ../c-language/multidimensional-arrays-c.md
+                - name: Вызов функции (C)
+                  href: ../c-language/function-call-c.md
+                - name: Члены структур и объединений
+                  href: ../c-language/structure-and-union-members.md
+                - name: Постфиксные операторы увеличения и уменьшения в C
+                  href: ../c-language/c-postfix-increment-and-decrement-operators.md
+            - name: Унарные операторы C
+              items:
+                - name: Унарные операторы C
+                  href: ../c-language/c-unary-operators.md
+                - name: Префиксные операторы инкремента и декремента
+                  href: ../c-language/prefix-increment-and-decrement-operators.md
+                - name: Операторы косвенного обращения и взятия адреса
+                  href: ../c-language/indirection-and-address-of-operators.md
+                - name: Унарные арифметические операторы
+                  href: ../c-language/unary-arithmetic-operators.md
+                - name: Оператор sizeof (C)
+                  href: ../c-language/sizeof-operator-c.md
+            - name: Операторы приведения
+              href: ../c-language/cast-operators.md
+            - name: Операторы умножения в C
+              href: ../c-language/c-multiplicative-operators.md
+            - name: Операторы сложения в C
+              items:
+                - name: Операторы сложения в C
+                  href: ../c-language/c-additive-operators.md
+                - name: Сложение (+)
+                  href: ../c-language/addition-plus.md
+                - name: Вычитание (-)
+                  href: ../c-language/subtraction-minus.md
+                - name: Использование операторов сложения
+                  href: ../c-language/using-the-additive-operators.md
+                - name: Расчеты указателей
+                  href: ../c-language/pointer-arithmetic.md
+            - name: Операторы побитового сдвига
+              href: ../c-language/bitwise-shift-operators.md
+            - name: Операторы отношения и равенства в C
+              href: ../c-language/c-relational-and-equality-operators.md
+            - name: Побитовые операторы в C
+              href: ../c-language/c-bitwise-operators.md
+            - name: Логические операторы в C
+              href: ../c-language/c-logical-operators.md
+            - name: Оператор Conditional-Expression
+              href: ../c-language/conditional-expression-operator.md
+            - name: Операторы присваивания C
+              items:
+                - name: Операторы присваивания C
+                  href: ../c-language/c-assignment-operators.md
+                - name: Простое присваивание (C)
+                  href: ../c-language/simple-assignment-c.md
+                - name: Составное присваивание в C
+                  href: ../c-language/c-compound-assignment.md
+            - name: Оператор последовательного вычисления
+              href: ../c-language/sequential-evaluation-operator.md
+        - name: Преобразования типов (C)
+          items:
+            - name: Преобразования типов (C)
+              href: ../c-language/type-conversions-c.md
+            - name: Преобразования присваиваний
+              items:
+                - name: Преобразования присваиваний
+                  href: ../c-language/assignment-conversions.md
+                - name: Преобразования из целочисленных типов со знаком
+                  href: ../c-language/conversions-from-signed-integral-types.md
+                - name: Преобразования из целочисленных типов без знака
+                  href: ../c-language/conversions-from-unsigned-integral-types.md
+                - name: Преобразования типов с плавающей запятой
+                  href: ../c-language/conversions-from-floating-point-types.md
+                - name: Преобразования в типы указателей и из типов указателей
+                  href: ../c-language/conversions-to-and-from-pointer-types.md
+                - name: Преобразования из других типов
+                  href: ../c-language/conversions-from-other-types.md
+            - name: Преобразования приведений типов
+              href: ../c-language/type-cast-conversions.md
+            - name: Преобразования вызова функции
+              href: ../c-language/function-call-conversions.md
+    - name: Операторы (C)
+      items:
+        - name: Операторы (C)
+          href: ../c-language/statements-c.md
+        - name: Общие сведения об операторах в C
+          href: ../c-language/overview-of-c-statements.md
+        - name: Оператор break (C)
+          href: ../c-language/break-statement-c.md
+        - name: Составной оператор (C)
+          href: ../c-language/compound-statement-c.md
+        - name: Оператор continue (C)
+          href: ../c-language/continue-statement-c.md
+        - name: Оператор do-while (C)
+          href: ../c-language/do-while-statement-c.md
+        - name: Оператор выражений (C)
+          href: ../c-language/expression-statement-c.md
+        - name: Оператор for (C)
+          href: ../c-language/for-statement-c.md
+        - name: goto и помеченные операторы (C)
+          href: ../c-language/goto-and-labeled-statements-c.md
+        - name: Оператор if (C)
+          href: ../c-language/if-statement-c.md
+        - name: Оператор NULL (C)
+          href: ../c-language/null-statement-c.md
+        - name: Оператор return (C)
+          href: ../c-language/return-statement-c.md
+        - name: Оператор switch (C)
+          href: ../c-language/switch-statement-c.md
+        - name: Оператор try-except (C)
+          href: ../c-language/try-except-statement-c.md
+        - name: Оператор try-finally (C)
+          href: ../c-language/try-finally-statement-c.md
+        - name: Оператор while (C)
+          href: ../c-language/while-statement-c.md
+    - name: Функции (C)
+      items:
+        - name: Функции (C)
+          href: ../c-language/functions-c.md
+        - name: Общие сведения о функциях
+          items:
+            - name: Общие сведения о функциях
+              href: ../c-language/overview-of-functions.md
+            - name: Устаревшие формы объявлений и определений функций
+              href: ../c-language/obsolete-forms-of-function-declarations-and-definitions.md
+        - name: Определения функций в C
+          items:
+            - name: Определения функций в C
+              href: ../c-language/c-function-definitions.md
+            - name: Атрибуты функций
+              items:
+                - name: Атрибуты функций
+                  href: ../c-language/function-attributes.md
+                - name: Указание соглашений о вызовах
+                  href: ../c-language/specifying-calling-conventions.md
+                - name: Встраиваемые функции
+                  href: ../c-language/inline-functions.md
+                - name: Встроенный ассемблер (C)
+                  href: ../c-language/inline-assembler-c.md
+            - name: Функции импорта и экспорта DLL
+              items:
+                - name: Функции импорта и экспорта DLL
+                  href: ../c-language/dll-import-and-export-functions.md
+                - name: Определения и объявления (C)
+                  href: ../c-language/definitions-and-declarations-c.md
+                - name: Определение встраиваемых функций C с помощью dllexport и dllimport
+                  href: ../c-language/defining-inline-c-functions-with-dllexport-and-dllimport.md
+                - name: Правила и ограничения dllimport и dllexport
+                  href: ../c-language/rules-and-limitations-for-dllimport-dllexport.md
+            - name: Функции с атрибутом naked
+              items:
+                - name: Функции с атрибутом naked
+                  href: ../c-language/naked-functions.md
+                - name: Правила и ограничения при использовании функций с атрибутом naked
+                  href: ../c-language/rules-and-limitations-for-using-naked-functions.md
+                - name: 'Вопросы, связанные с написанием кода пролога и эпилога'
+                  href: ../c-language/considerations-when-writing-prolog-epilog-code.md
+            - name: Класс хранения
+              href: ../c-language/storage-class.md
+            - name: Возвращаемый тип
+              href: ../c-language/return-type.md
+            - name: Параметры
+              href: ../c-language/parameters.md
+            - name: Тело функции
+              href: ../c-language/function-body.md
+        - name: Прототипы функций
+          href: ../c-language/function-prototypes.md
+        - name: Вызовы функций
+          items:
+            - name: Вызовы функций
+              href: ../c-language/function-calls.md
+            - name: Аргументы
+              href: ../c-language/arguments.md
+            - name: Вызовы с переменным количеством аргументов
+              href: ../c-language/calls-with-a-variable-number-of-arguments.md
+            - name: Рекурсивные функции
+              href: ../c-language/recursive-functions.md
+    - name: Краткие сведения о синтаксисе языка C
+      items:
+        - name: Краткие сведения о синтаксисе языка C
+          href: ../c-language/c-language-syntax-summary.md
+        - name: Определения и соглашения
+          href: ../c-language/definitions-and-conventions.md
+        - name: Лексическая грамматика
+          items:
+            - name: Лексическая грамматика
+              href: ../c-language/lexical-grammar.md
+            - name: Общие сведения о токенах
+              href: ../c-language/summary-of-tokens.md
+            - name: Общие сведения о ключевых словах
+              href: ../c-language/summary-of-keywords.md
+            - name: Общие сведения об идентификаторах
+              href: ../c-language/summary-of-identifiers.md
+            - name: Общие сведения о константах
+              href: ../c-language/summary-of-constants.md
+            - name: Общие сведения о строковых литералах
+              href: ../c-language/summary-of-string-literals.md
+            - name: Операторы (C)
+              href: ../c-language/operators-c.md
+            - name: Символы пунктуации
+              href: ../c-language/punctuators.md
+        - name: Грамматика структуры фразы
+          items:
+            - name: Грамматика структуры фразы
+              href: ../c-language/phrase-structure-grammar.md
+            - name: Общие сведения о выражениях
+              href: ../c-language/summary-of-expressions.md
+            - name: Общие сведения об объявлениях
+              href: ../c-language/summary-of-declarations.md
+            - name: Общие сведения об операторах
+              href: ../c-language/summary-of-statements.md
+            - name: Внешние определения
+              href: ../c-language/external-definitions.md
     - name: 'Поведение, определяемое реализацией'
-      href: ../c-language/implementation-defined-behavior.md
-    - name: 'Перевод: Диагностика'
-      href: ../c-language/translation-diagnostics.md
-    - name: Среда
-      expanded: false
       items:
+        - name: 'Поведение, определяемое реализацией'
+          href: ../c-language/implementation-defined-behavior.md
+        - name: 'Перевод: Диагностика'
+          href: ../c-language/translation-diagnostics.md
         - name: Среда
-          href: ../c-language/environment.md
-        - name: Аргументы функции main
-          href: ../c-language/arguments-to-main.md
-        - name: Интерактивные устройства
-          href: ../c-language/interactive-devices.md
-    - name: Поведение идентификаторов
-      expanded: false
-      items:
+          items:
+            - name: Среда
+              href: ../c-language/environment.md
+            - name: Аргументы функции main
+              href: ../c-language/arguments-to-main.md
+            - name: Интерактивные устройства
+              href: ../c-language/interactive-devices.md
         - name: Поведение идентификаторов
-          href: ../c-language/behavior-of-identifiers.md
-        - name: Значимые символы без внешней компоновки
-          href: ../c-language/significant-characters-without-external-linkage.md
-        - name: Значимые символы с внешней компоновкой
-          href: ../c-language/significant-characters-with-external-linkage.md
-        - name: Верхний и нижний регистр
-          href: ../c-language/uppercase-and-lowercase.md
-    - name: Знаки
-      expanded: false
-      items:
+          items:
+            - name: Поведение идентификаторов
+              href: ../c-language/behavior-of-identifiers.md
+            - name: Значимые символы без внешней компоновки
+              href: ../c-language/significant-characters-without-external-linkage.md
+            - name: Значимые символы с внешней компоновкой
+              href: ../c-language/significant-characters-with-external-linkage.md
+            - name: Верхний и нижний регистр
+              href: ../c-language/uppercase-and-lowercase.md
         - name: Знаки
-          href: ../c-language/characters.md
-        - name: Кодировка ASCII
-          href: ../c-language/ascii-character-set.md
-        - name: Многобайтовые символы
-          href: ../c-language/multibyte-characters.md
-        - name: Число битов на символ
-          href: ../c-language/bits-per-character.md
-        - name: Кодировки1
-          href: ../c-language/character-sets1.md
-        - name: Непредставимые символьные константы
-          href: ../c-language/unrepresented-character-constants.md
-        - name: Расширенные символы
-          href: ../c-language/wide-characters.md
-        - name: Преобразование многобайтовых символов
-          href: ../c-language/converting-multibyte-characters.md
-        - name: Диапазон значений типа char
-          href: ../c-language/range-of-char-values.md
-    - name: Целые числа
-      expanded: false
-      items:
+          items:
+            - name: Знаки
+              href: ../c-language/characters.md
+            - name: Кодировка ASCII
+              href: ../c-language/ascii-character-set.md
+            - name: Многобайтовые символы
+              href: ../c-language/multibyte-characters.md
+            - name: Число битов на символ
+              href: ../c-language/bits-per-character.md
+            - name: Кодировки1
+              href: ../c-language/character-sets1.md
+            - name: Непредставимые символьные константы
+              href: ../c-language/unrepresented-character-constants.md
+            - name: Расширенные символы
+              href: ../c-language/wide-characters.md
+            - name: Преобразование многобайтовых символов
+              href: ../c-language/converting-multibyte-characters.md
+            - name: Диапазон значений типа char
+              href: ../c-language/range-of-char-values.md
         - name: Целые числа
-          href: ../c-language/integers.md
-        - name: Диапазон целочисленных значений
-          href: ../c-language/range-of-integer-values.md
-        - name: Понижение уровня целых чисел
-          href: ../c-language/demotion-of-integers.md
-        - name: Битовые операции со знаком
-          href: ../c-language/signed-bitwise-operations.md
-        - name: Остатки от деления
-          href: ../c-language/remainders.md
-        - name: Сдвиги вправо
-          href: ../c-language/right-shifts.md
-    - name: Вычисления с плавающей запятой
-      expanded: false
-      items:
+          items:
+            - name: Целые числа
+              href: ../c-language/integers.md
+            - name: Диапазон целочисленных значений
+              href: ../c-language/range-of-integer-values.md
+            - name: Понижение уровня целых чисел
+              href: ../c-language/demotion-of-integers.md
+            - name: Битовые операции со знаком
+              href: ../c-language/signed-bitwise-operations.md
+            - name: Остатки от деления
+              href: ../c-language/remainders.md
+            - name: Сдвиги вправо
+              href: ../c-language/right-shifts.md
         - name: Вычисления с плавающей запятой
-          href: ../c-language/floating-point-math.md
-        - name: Значения
-          href: ../c-language/values.md
-        - name: Приведение целочисленных значений к значениям с плавающей запятой
-          href: ../c-language/casting-integers-to-floating-point-values.md
-        - name: Усечение значений с плавающей запятой
-          href: ../c-language/truncation-of-floating-point-values.md
-    - name: Массивы и указатели
-      expanded: false
-      items:
+          items:
+            - name: Вычисления с плавающей запятой
+              href: ../c-language/floating-point-math.md
+            - name: Значения
+              href: ../c-language/values.md
+            - name: Приведение целочисленных значений к значениям с плавающей запятой
+              href: ../c-language/casting-integers-to-floating-point-values.md
+            - name: Усечение значений с плавающей запятой
+              href: ../c-language/truncation-of-floating-point-values.md
         - name: Массивы и указатели
-          href: ../c-language/arrays-and-pointers.md
-        - name: Максимальный размер массива
-          href: ../c-language/largest-array-size.md
-        - name: Вычитание указателей
-          href: ../c-language/pointer-subtraction.md
-    - name: 'Регистры: Доступность регистров'
-      href: ../c-language/registers-availability-of-registers.md
-    - name: 'Структуры, объединения, перечисления и битовые поля'
-      expanded: false
-      items:
+          items:
+            - name: Массивы и указатели
+              href: ../c-language/arrays-and-pointers.md
+            - name: Максимальный размер массива
+              href: ../c-language/largest-array-size.md
+            - name: Вычитание указателей
+              href: ../c-language/pointer-subtraction.md
+        - name: 'Регистры: Доступность регистров'
+          href: ../c-language/registers-availability-of-registers.md
         - name: 'Структуры, объединения, перечисления и битовые поля'
-          href: ../c-language/structures-unions-enumerations-and-bit-fields.md
-        - name: Неправильный доступ к объединению
-          href: ../c-language/improper-access-to-a-union.md
-        - name: Заполнение и выравнивание членов структуры
-          href: ../c-language/padding-and-alignment-of-structure-members.md
-        - name: Знак битовых полей
-          href: ../c-language/sign-of-bit-fields.md
-        - name: Хранение битовых полей
-          href: ../c-language/storage-of-bit-fields.md
-        - name: Тип перечисления
-          href: ../c-language/enum-type.md
-    - name: 'Квалификаторы: Доступ к временным объектам'
-      href: ../c-language/qualifiers-access-to-volatile-objects.md
-    - name: 'Деклараторы: максимальное число'
-      href: ../c-language/declarators-maximum-number.md
-    - name: 'Операторы: Пределы операторов switch'
-      href: ../c-language/statements-limits-on-switch-statements.md
-    - name: Директивы предварительной обработки
-      expanded: false
-      items:
+          items:
+            - name: 'Структуры, объединения, перечисления и битовые поля'
+              href: ../c-language/structures-unions-enumerations-and-bit-fields.md
+            - name: Неправильный доступ к объединению
+              href: ../c-language/improper-access-to-a-union.md
+            - name: Заполнение и выравнивание членов структуры
+              href: ../c-language/padding-and-alignment-of-structure-members.md
+            - name: Знак битовых полей
+              href: ../c-language/sign-of-bit-fields.md
+            - name: Хранение битовых полей
+              href: ../c-language/storage-of-bit-fields.md
+            - name: Тип перечисления
+              href: ../c-language/enum-type.md
+        - name: 'Квалификаторы: Доступ к временным объектам'
+          href: ../c-language/qualifiers-access-to-volatile-objects.md
+        - name: 'Деклараторы: максимальное число'
+          href: ../c-language/declarators-maximum-number.md
+        - name: 'Операторы: Пределы операторов switch'
+          href: ../c-language/statements-limits-on-switch-statements.md
         - name: Директивы предварительной обработки
-          href: ../c-language/preprocessing-directives.md
-        - name: Символьные константы и условное включение
-          href: ../c-language/character-constants-and-conditional-inclusion.md
-        - name: Включение имен файлов в скобках
-          href: ../c-language/including-bracketed-filenames.md
-        - name: Включение имен файлов в кавычках
-          href: ../c-language/including-quoted-filenames.md
-        - name: Последовательности символов
-          href: ../c-language/character-sequences.md
-        - name: Директивы pragma
-          href: ../c-language/pragmas.md
-        - name: Дата и время по умолчанию
-          href: ../c-language/default-date-and-time.md
-    - name: Функции библиотеки
-      expanded: false
-      items:
+          items:
+            - name: Директивы предварительной обработки
+              href: ../c-language/preprocessing-directives.md
+            - name: Символьные константы и условное включение
+              href: ../c-language/character-constants-and-conditional-inclusion.md
+            - name: Включение имен файлов в скобках
+              href: ../c-language/including-bracketed-filenames.md
+            - name: Включение имен файлов в кавычках
+              href: ../c-language/including-quoted-filenames.md
+            - name: Последовательности символов
+              href: ../c-language/character-sequences.md
+            - name: Директивы pragma
+              href: ../c-language/pragmas.md
+            - name: Дата и время по умолчанию
+              href: ../c-language/default-date-and-time.md
         - name: Функции библиотеки
-          href: ../c-language/library-functions.md
-        - name: Макрос NULL
-          href: ../c-language/null-macro.md
-        - name: 'Диагностика, напечатанная функцией assert'
-          href: ../c-language/diagnostic-printed-by-the-assert-function.md
-        - name: Тестирование символов
-          href: ../c-language/character-testing.md
-        - name: Ошибки домена
-          href: ../c-language/domain-errors.md
-        - name: Потеря точности значений с плавающей запятой
-          href: ../c-language/underflow-of-floating-point-values.md
-        - name: Функция fmod
-          href: ../c-language/fmod-function.md
-        - name: Функция signal (C)
-          href: ../c-language/signal-function-c.md
-        - name: Сигналы по умолчанию
-          href: ../c-language/default-signals.md
-        - name: Завершающие символы новой строки
-          href: ../c-language/terminating-newline-characters.md
-        - name: Пустые строки
-          href: ../c-language/blank-lines.md
-        - name: Символы NULL
-          href: ../c-language/null-characters.md
-        - name: Позиция файла в режиме добавления
-          href: ../c-language/file-position-in-append-mode.md
-        - name: Усечение текстовых файлов
-          href: ../c-language/truncation-of-text-files.md
-        - name: Буферизация файла
-          href: ../c-language/file-buffering.md
-        - name: Файлы нулевой длины
-          href: ../c-language/zero-length-files.md
-        - name: Имена файлов
-          href: ../c-language/filenames.md
-        - name: Ограничения доступа к файлам
-          href: ../c-language/file-access-limits.md
-        - name: Удаление открытых файлов
-          href: ../c-language/deleting-open-files.md
-        - name: Переименование с использованием существующего имени
-          href: ../c-language/renaming-with-a-name-that-exists.md
-        - name: Чтение значений указателя
-          href: ../c-language/reading-pointer-values.md
-        - name: Диапазоны чтения
-          href: ../c-language/reading-ranges.md
-        - name: Ошибки положения файла
-          href: ../c-language/file-position-errors.md
-        - name: 'Сообщения, создаваемые функцией perror'
-          href: ../c-language/messages-generated-by-the-perror-function.md
-        - name: Выделение обнуленной памяти
-          href: ../c-language/allocating-zero-memory.md
-        - name: Функция abort (C)
-          href: ../c-language/abort-function-c.md
-        - name: Функция atexit (C)
-          href: ../c-language/atexit-function-c.md
-        - name: Имена сред
-          href: ../c-language/environment-names.md
-        - name: Функция system
-          href: ../c-language/system-function.md
-        - name: Функция strerror
-          href: ../c-language/strerror-function.md
-        - name: Часовой пояс
-          href: ../c-language/time-zone.md
-        - name: Функция clock (C)
-          href: ../c-language/clock-function-c.md
+          items:
+            - name: Функции библиотеки
+              href: ../c-language/library-functions.md
+            - name: Макрос NULL
+              href: ../c-language/null-macro.md
+            - name: 'Диагностика, напечатанная функцией assert'
+              href: ../c-language/diagnostic-printed-by-the-assert-function.md
+            - name: Тестирование символов
+              href: ../c-language/character-testing.md
+            - name: Ошибки домена
+              href: ../c-language/domain-errors.md
+            - name: Потеря точности значений с плавающей запятой
+              href: ../c-language/underflow-of-floating-point-values.md
+            - name: Функция fmod
+              href: ../c-language/fmod-function.md
+            - name: Функция signal (C)
+              href: ../c-language/signal-function-c.md
+            - name: Сигналы по умолчанию
+              href: ../c-language/default-signals.md
+            - name: Завершающие символы новой строки
+              href: ../c-language/terminating-newline-characters.md
+            - name: Пустые строки
+              href: ../c-language/blank-lines.md
+            - name: Символы NULL
+              href: ../c-language/null-characters.md
+            - name: Позиция файла в режиме добавления
+              href: ../c-language/file-position-in-append-mode.md
+            - name: Усечение текстовых файлов
+              href: ../c-language/truncation-of-text-files.md
+            - name: Буферизация файла
+              href: ../c-language/file-buffering.md
+            - name: Файлы нулевой длины
+              href: ../c-language/zero-length-files.md
+            - name: Имена файлов
+              href: ../c-language/filenames.md
+            - name: Ограничения доступа к файлам
+              href: ../c-language/file-access-limits.md
+            - name: Удаление открытых файлов
+              href: ../c-language/deleting-open-files.md
+            - name: Переименование с использованием существующего имени
+              href: ../c-language/renaming-with-a-name-that-exists.md
+            - name: Чтение значений указателя
+              href: ../c-language/reading-pointer-values.md
+            - name: Диапазоны чтения
+              href: ../c-language/reading-ranges.md
+            - name: Ошибки положения файла
+              href: ../c-language/file-position-errors.md
+            - name: 'Сообщения, создаваемые функцией perror'
+              href: ../c-language/messages-generated-by-the-perror-function.md
+            - name: Выделение обнуленной памяти
+              href: ../c-language/allocating-zero-memory.md
+            - name: Функция abort (C)
+              href: ../c-language/abort-function-c.md
+            - name: Функция atexit (C)
+              href: ../c-language/atexit-function-c.md
+            - name: Имена сред
+              href: ../c-language/environment-names.md
+            - name: Функция system
+              href: ../c-language/system-function.md
+            - name: Функция strerror
+              href: ../c-language/strerror-function.md
+            - name: Часовой пояс
+              href: ../c-language/time-zone.md
+            - name: Функция clock (C)
+              href: ../c-language/clock-function-c.md
+- name: Справочник по препроцессору в C/C++
+  href: ../preprocessor/c-cpp-preprocessor-reference.md
+- name: Справочник по библиотеке времени выполнения C (CRT)
+  href: ../c-runtime-library/c-run-time-library-reference.md
