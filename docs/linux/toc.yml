@@ -3,7 +3,6 @@
 - name: 'Скачивание, установка и настройка рабочей нагрузки разработки Linux'
   href: ../linux/download-install-and-setup-the-linux-development-workload.md
 - name: Подключение к удаленному компьютеру Linux
-  expanded: true
   items:
     - name: Подключение к удаленному компьютеру Linux
       href: ../linux/connect-to-your-remote-linux-computer.md
@@ -11,40 +10,43 @@
       href: ../linux/set-up-fips-compliant-secure-remote-linux-development.md
     - name: Справка по ConnectionManager
       href: ../linux/connectionmanager-reference.md
-- name: Создание проекта Linux
-  href: ../linux/create-a-new-linux-project.md
-- name: Настройка проекта Linux
-  href: ../linux/configure-a-linux-project.md
-- name: Создание и настройка проекта Linux CMake
-  href: ../linux/cmake-linux-project.md
+- name: Сборка проектов Linux с помощью MSBuild в Visual Studio
+  items:
+    - name: Создание проекта Linux
+      href: ../linux/create-a-new-linux-project.md
+    - name: Настройка проекта Linux
+      href: ../linux/configure-a-linux-project.md
+    - name: 'Развертывание, запуск и отладка проекта Linux'
+      href: ../linux/deploy-run-and-debug-your-linux-project.md
+    - name: Справочник по страницам свойств проекта Linux
+      items:
+        - name: Справочник по страницам свойств проекта Linux
+          href: ../linux/prop-pages-linux.md
+        - name: Общие свойства (Linux)
+          href: ../linux/prop-pages/general-linux.md
+        - name: Свойства отладки (Linux)
+          href: ../linux/prop-pages/debugging-linux.md
+        - name: Свойства каталогов VC++ (Linux)
+          href: ../linux/prop-pages/directories-linux.md
+        - name: Свойства копирования источников (Linux)
+          href: ../linux/prop-pages/copy-sources-project.md
+        - name: Свойства C/C++ (Linux)
+          href: ../linux/prop-pages/c-cpp-linux.md
+        - name: Свойства компоновщика (Linux)
+          href: ../linux/prop-pages/linker-linux.md
+        - name: Свойства событий сборки (Linux)
+          href: ../linux/prop-pages/build-events-linux.md
+        - name: Свойства настраиваемого этапа сборки (Linux)
+          href: ../linux/prop-pages/custom-build-step-linux.md
+        - name: Свойства проекта Makefile (Linux)
+          href: ../linux/prop-pages/makefile-linux.md
+        - name: Свойства удаленного архива (Linux)
+          href: ../linux/prop-pages/remote-ar-linux.md
+- name: Сборка проектов Linux с помощью CMake в Visual Studio
+  items:
+    - name: Создание и настройка проекта Linux CMake
+      href: ../linux/cmake-linux-project.md
+    - name: Учебник. Создание кроссплатформенных проектов C++ в Visual Studio
+      href: ../build/get-started-linux-cmake.md
 - name: Настройка проектов Linux для использования санитайзера адресов
   href: ../linux/linux-asan-configuration.md
-- name: 'Развертывание, запуск и отладка проекта Linux'
-  href: ../linux/deploy-run-and-debug-your-linux-project.md
-- name: Учебник. Создание кроссплатформенных проектов C++ в Visual Studio
-  href: ../build/get-started-linux-cmake.md
-- name: Справочник по страницам свойств проекта Linux
-  expanded: false
-  items:
-    - name: Справочник по страницам свойств проекта Linux
-      href: ../linux/prop-pages-linux.md
-    - name: Общие свойства (Linux)
-      href: ../linux/prop-pages/general-linux.md
-    - name: Свойства отладки (Linux)
-      href: ../linux/prop-pages/debugging-linux.md
-    - name: Свойства каталогов VC++ (Linux)
-      href: ../linux/prop-pages/directories-linux.md
-    - name: Свойства копирования источников (Linux)
-      href: ../linux/prop-pages/copy-sources-project.md
-    - name: Свойства C/C++ (Linux)
-      href: ../linux/prop-pages/c-cpp-linux.md
-    - name: Свойства компоновщика (Linux)
-      href: ../linux/prop-pages/linker-linux.md
-    - name: Свойства событий сборки (Linux)
-      href: ../linux/prop-pages/build-events-linux.md
-    - name: Свойства настраиваемого этапа сборки (Linux)
-      href: ../linux/prop-pages/custom-build-step-linux.md
-    - name: Свойства проекта Makefile (Linux)
-      href: ../linux/prop-pages/makefile-linux.md
-    - name: Свойства удаленного архива (Linux)
-      href: ../linux/prop-pages/remote-ar-linux.md
