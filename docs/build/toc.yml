@@ -567,8 +567,10 @@
                   href: ../build/reference/gs-buffer-security-check.md
                 - name: /Gs (управление вызовами проверки стека)
                   href: ../build/reference/gs-control-stack-checking-calls.md
-                - name: /guard (включение защиты потока управления)
+                - name: '/guard:cf (включение защиты потока управления)'
                   href: ../build/reference/guard-enable-control-flow-guard.md
+                - name: '/guard:ehcont (включение метаданных продолжений для обработки исключений)'
+                  href: ../build/reference/guard-enable-eh-continuation-metadata.md
                 - name: '/GT (поддержка локальной памяти потока, безопасной относительно волокон)'
                   href: ../build/reference/gt-support-fiber-safe-thread-local-storage.md
                 - name: /Gw (оптимизация глобальных данных)
