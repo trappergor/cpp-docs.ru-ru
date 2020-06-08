@@ -30,12 +30,12 @@ helpviewer_keywords:
 - threadlocale.obj
 - pnoarg.obj
 ms.assetid: 05b5a77b-9dd1-494b-ae46-314598c770bb
-ms.openlocfilehash: ea71faab639a8c0a09d6e332618dd7e09159a4e5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 146722fb0dd3a4fc774ede692808b1e6bfb1e5c7
+ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81351101"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506862"
 ---
 # <a name="link-options"></a>Параметры ссылок
 
@@ -51,7 +51,7 @@ ms.locfileid: "81351101"
 |exe_initialize_mta.lib|Недоступно|Инициализирует подразделение MTA во время запуска EXE-файла, который позволяет использовать COM-объекты в глобальных интеллектуальных указателях. Так как этот параметр выдает ссылку на подразделение MTA во время завершения работы, не используйте его для библиотек DLL. Ссылка эквивалентна включению combase.h и определению _EXE_INITIALIZE_MTA. |
 |fp10.obj|Недоступно|Изменяет управление точностью по умолчанию на 64 бита. См. раздел [Поддержка чисел с плавающей запятой](../c-runtime-library/floating-point-support.md).|
 |invalidcontinue.obj|pinvalidcontinue.obj|Определяет обработчик недопустимых параметров по умолчанию, который не делает ничего, т. е. недопустимые параметры, передаваемые в функции CRT, получают значение errno и возвращают ошибку.|
-|legacy_stdio_float_rounding.obj|Недоступно|Исправлена печать значений плавающей точки (например, при использовании [printf)](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)с помощью Windows 10 19041 Universal C Runtime. Теперь он правильно раундов точно представлены плавающие точки номера, и уважает плавающей точки округления просил [fesetenv](../c-runtime-library/reference/fesetenv1.md). Это обновление поведения доступно в версии Visual Studio 2019 16.2 и позже. Наследие поведение используется в более ранних версиях Visual Studio, или, предоставляя эту ссылку вариант.|
+|legacy_stdio_float_rounding. obj|Недоступно|Устранена печать значений с плавающей запятой (например, при использовании [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)) с универсальной средой выполнения C Windows 10 19041. Теперь он правильно округляет точные числа с плавающей запятой и учитывает округление с плавающей запятой, запрошенное [fesetround](../c-runtime-library/reference/fegetround-fesetround2.md). Это обновление поведения доступно в Visual Studio 2019 версии 16,2 и более поздних версиях. Устаревшее поведение используется в более ранних версиях Visual Studio или с помощью этого параметра ссылки.|
 |loosefpmath.obj|Недоступно|Гарантирует, что код с плавающей точкой кода допускает нестандартные значения.|
 |newmode.obj|pnewmode.obj|Заставляет [malloc](../c-runtime-library/reference/malloc.md) в случае ошибки вызывать новый обработчик. См. разделы [_set_new_mode](../c-runtime-library/reference/set-new-mode.md), [_set_new_handler](../c-runtime-library/reference/set-new-handler.md), [calloc](../c-runtime-library/reference/calloc.md) и [realloc](../c-runtime-library/reference/realloc.md).|
 |noarg.obj|pnoarg.obj|Отключает обработку аргументов argc и argv.|
@@ -62,6 +62,6 @@ ms.locfileid: "81351101"
 |threadlocale.obj|pthreadlocale.obj|Включает языковой стандарт отдельного потока для всех новых потоков по умолчанию.|
 |wsetargv.obj|pwsetargv.obj|Включает расширение аргументов заполнителей в командной строке. См. раздел [Расширение аргументов заполнителей](../c-language/expanding-wildcard-arguments.md).|
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
-- [Особенности библиотеки CRT](../c-runtime-library/crt-library-features.md)
+- [Возможности библиотеки CRT](../c-runtime-library/crt-library-features.md)

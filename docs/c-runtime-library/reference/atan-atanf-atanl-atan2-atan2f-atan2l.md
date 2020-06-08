@@ -1,6 +1,6 @@
 ---
 title: atan, atanf, atanl, atan2, atan2f, atan2l
-ms.date: 4/2/2020
+ms.date: 6/5/2020
 api_name:
 - atan2f
 - atan2l
@@ -10,6 +10,7 @@ api_name:
 - atanl
 - _o_atan
 - _o_atan2
+- _o_atan2f
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -44,16 +45,16 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-ms.openlocfilehash: 34c4b124840572628c3e7cb10382e05b236e6292
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 41007e08884da6ccac09c7dc98cef12381e4b45a
+ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920077"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506784"
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan, atanf, atanl, atan2, atan2f, atan2l
 
-Вычисляет арктангенс значений **x** (**ATAN**, **атанф**и **атанл**) или арктангенс **y**/**x** (**atan2**, **atan2f**и **atan2l**).
+Вычисляет арктангенс значений **x** (**ATAN**, **атанф**и **атанл**) или арктангенс **y** / **x** (**atan2**, **atan2f**и **atan2l**).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -82,7 +83,7 @@ long double atan2( long double y, long double x );  // C++ only
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**ATAN** возвращает арктангенс *x* в диапазоне от-π/2 до π/2 радиан. **atan2** возвращает арктангенс *оси y*/*x* в диапазоне от-π до π радиан. Если *x* равно 0, **ATAN** возвращает 0. Если оба параметра **atan2** равны 0, функция возвращает 0. Все результаты даются в радианах.
+**ATAN** возвращает арктангенс *x* в диапазоне от-π/2 до π/2 радиан. **atan2** возвращает арктангенс *оси y* / *x* в диапазоне от-π до π радиан. Если *x* равно 0, **ATAN** возвращает 0. Если оба параметра **atan2** равны 0, функция возвращает 0. Все результаты даются в радианах.
 
 **atan2** использует символы обоих параметров для определения квадранта возвращаемого значения.
 
@@ -90,9 +91,9 @@ long double atan2( long double y, long double x );  // C++ only
 |-----------|-------------------|-----------------------|
 |± **КНАН**, **с**|нет|**_DOMAIN**|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
-Функция **ATAN** Вычисляет арктангенс (обратную функцию тангенса) для *x*. **atan2** Вычисляет арктангенс *y*/*x* (если *x* равен 0, **atan2** возвращает π/2, если *y* является положительным,-π/2, если *y* является отрицательным, или 0, если *y* равен 0).
+Функция **ATAN** Вычисляет арктангенс (обратную функцию тангенса) для *x*. **atan2** Вычисляет арктангенс *y* / *x* (если *x* равен 0, **atan2** возвращает π/2, если *y* является положительным,-π/2, если *y* является отрицательным, или 0, если *y* равен 0).
 
 **ATAN** имеет реализацию, использующую Streaming SIMD Extensions 2 (SSE2). Сведения о реализации SSE2 и ограничениях на ее использование см. в разделе [_set_SSE2_enable](set-sse2-enable.md).
 
@@ -137,9 +138,9 @@ Arctangent of 5.000000: 1.373401
 Arctangent of 0.500000 / 5.000000: 0.099669
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
-[Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
+[Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>
 [asin, asinf, asinl](asin-asinf-asinl.md)<br/>
 [cos, cosf, cosl](cos-cosf-cosl.md)<br/>
