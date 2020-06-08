@@ -1,6 +1,6 @@
 ---
 title: log, logf, logl, log10, log10f, log10l
-ms.date: 4/2/2020
+ms.date: 6/5/2020
 api_name:
 - log10f
 - logf
@@ -10,6 +10,8 @@ api_name:
 - logl
 - _o_log
 - _o_log10
+- _o_log10f
+- _o_logf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -46,12 +48,12 @@ helpviewer_keywords:
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-ms.openlocfilehash: 0acfbefb1fb01215e543538b9fdb8d554b10f8c1
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ce01a16e173ba3afb7ad8a0d55303559519fe19e
+ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911482"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84507044"
 ---
 # <a name="log-logf-logl-log10-log10f-log10l"></a>log, logf, logl, log10, log10f, log10l
 
@@ -92,7 +94,7 @@ long double log10( long double x );  // C++ only
 
 в **log** и **LOG10** реализована реализация, использующая Streaming SIMD Extensions 2 (SSE2). Сведения о реализации SSE2 и ограничения на использование реализации SSE2 см. в разделе [_set_SSE2_enable](set-sse2-enable.md).
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
 C++ допускает перегрузку, поэтому можно вызывать перегрузки **log** и **LOG10** , которые принимают и возвращают значения **типа float** или **Long** . В программе на языке C **log** и **LOG10** всегда принимают и возвращают **double**.
 
@@ -161,9 +163,9 @@ int main()
 Log base 2 of 65536.000000 is 16.000000
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
-[Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md) <br/>
+[Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md) <br/>
 [exp, expf, expl](exp-expf.md) <br/>
 [_matherr](matherr.md) <br/>
 [pow, powf, powl](pow-powf-powl.md) <br/>

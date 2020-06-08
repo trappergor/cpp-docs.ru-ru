@@ -41,12 +41,12 @@ helpviewer_keywords:
 - printf function, using
 - formatted text [C++]
 ms.assetid: 77a854ae-5b48-4865-89f4-f2dc5cf80f52
-ms.openlocfilehash: 3766ea24459423e730ab84ecae24d758d7f61e88
-ms.sourcegitcommit: 8c8ed02a6f3bcb5ee008e3fe30ba7595d7c4c922
+ms.openlocfilehash: 73de90667479fff647e399068f9b97453819d27c
+ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83759242"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84507057"
 ---
 # <a name="printf-_printf_l-wprintf-_wprintf_l"></a>printf, _printf_l, wprintf, _wprintf_l
 
@@ -92,7 +92,7 @@ int _wprintf_l(
 
 Сведения о кодах ошибок, а именно об ошибках, см **. в разделе** _doserrno, код ошибки [, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Комментарии
+## <a name="remarks"></a>Примечания
 
 Функция **printf** форматирует и выводит последовательность символов и значений в стандартный выходной поток, **stdout**. Если аргументы следуют за строкой *формата* , строка *формата* должна содержать спецификации, определяющие формат выходных данных для аргументов. функции **printf** и [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md) работают идентично, за исключением того, что **printf** записывает выходные данные в **stdout** , а не в назначение типа **File**.
 
@@ -139,6 +139,9 @@ Line one
 |**wprintf**, **_wprintf_l**|\<stdio.h> или \<wchar.h>|
 
 Консоль не поддерживается в приложениях универсальная платформа Windows (UWP). Стандартные дескрипторы потока, связанные с консолью, **stdin**, **stdout**и **stderr**, должны быть перенаправляться до того, как функции времени выполнения C смогут использовать их в приложениях UWP. Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
+
+> [!IMPORTANT]
+> Начиная с Windows 10 версии 2004 (сборка 19041), `printf` семейство функций выводит в соответствии с правилами IEEE 754 только округленные числа с плавающей запятой. В предыдущих версиях Windows полностью непредставленные числа с плавающей запятой, которые заканчиваются на "5", всегда округляются. IEEE 754 указывает, что они должны округляться до ближайшей четной цифры (также называемой "округление банка"). Например, оба 1,5 и 2,5 должны округляться в 2. Ранее 1,5 бы округлялись до 2 и 2,5, округляя до 3. Это изменение влияет только на точное представление чисел. Например, 2,35 (который, когда представлен в памяти, находится ближе к 2.35000000000000008), по-своему округляется до 2,4. Округление, выполненное этими функциями, теперь также учитывает режим округления с плавающей точкой, установленный [fesetround](fegetround-fesetround2.md). Раньше округление всегда выбрало FE_TONEARESTное поведение. Это изменение влияет только на программы, созданные с помощью Visual Studio 2019 версии 16,2 и более поздних версий. Чтобы использовать устаревшее поведение округления с плавающей точкой, свяжите с [legacy_stdio_float_rounding. obj](../link-options.md).
 
 ## <a name="example"></a>Пример
 
@@ -231,7 +234,7 @@ Address as:   0012FF3C
 [Синтаксис спецификации формата: функции printf и wprintf](../format-specification-syntax-printf-and-wprintf-functions.md)<br/>
 [Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Языкового стандарта](../../c-runtime-library/locale.md)<br/>
 [fopen, _wfopen](fopen-wfopen.md)<br/>
 [_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l](fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
