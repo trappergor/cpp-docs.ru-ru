@@ -9,12 +9,12 @@ helpviewer_keywords:
 - handlers [MFC], command
 - handlers [MFC], message
 ms.assetid: 51bc4e76-dbe3-4cc2-b026-3199d56b2fa9
-ms.openlocfilehash: 25805187f88c5423ea41cd7cbe346e44e7d7d36a
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: f9c5272b513a92dc6dcfa37559b00ae79b658918
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907459"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619976"
 ---
 # <a name="message-handlers"></a>Обработчики сообщений
 
@@ -24,8 +24,8 @@ ms.locfileid: "70907459"
 
 Что делает обработчик для сообщения, это делает то, что нужно сделать в ответ на это сообщение. Обработчики можно создавать с помощью [мастера классов](reference/mfc-class-wizard.md) класса, а затем заполнять код обработчика с помощью редактора исходного кода.
 
-Для написания обработчиков можно использовать все средства Microsoft Visual C++ и MFC. Список всех классов см. в разделе [Общие сведения о библиотеке классов](../mfc/class-library-overview.md) в *справочнике по MFC*.
+Вы можете использовать все функции Microsoft Visual C++ и MFC для написания обработчиков. Список всех классов см. в разделе [Общие сведения о библиотеке классов](class-library-overview.md) в *справочнике по MFC*.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Сообщения и команды платформы](../mfc/messages-and-commands-in-the-framework.md)
+[Сообщения и команды в платформе](messages-and-commands-in-the-framework.md)
