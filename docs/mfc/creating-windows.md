@@ -7,27 +7,27 @@ helpviewer_keywords:
 - CWnd objects [MFC]
 - CWnd objects [MFC], creating
 ms.assetid: f5ff91a6-4069-47d7-9177-1e6c80d3792c
-ms.openlocfilehash: 606593e3700f04972e031ef43eba0a7e8c134e79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fbaad1b973ce944d94dd61bcd368f13e85d73261
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241952"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626508"
 ---
 # <a name="creating-windows"></a>Создание окон
 
-Платформа автоматически создает большинство окон, которые используются в программе framework. [Создание документов и представлений](../mfc/document-view-creation.md) показано, как платформа создает фрейм окна, связанные с документов и представлений. Но для специальных целей, можно создать собственный windows, включая собственные дочерних окон, окон фреймов или представлений — вместе с windows, предоставляемого платформой.
+Платформа автоматически создает большинство окон, необходимых в программе платформы. [Создание документа/представления](document-view-creation.md) показывает, как платформа создает окна фрейма, связанные с документами и представлениями. Но для особых целей можно создать собственные окна, включая собственные дочерние окна фрейма или представления, а также окна, предоставляемые платформой.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Выберите для получения дополнительных сведений
+## <a name="what-do-you-want-to-know-more-about"></a>Что вы хотите узнать подробнее
 
-- [Регистрация классов «window»](../mfc/registering-window-classes.md) (в отличие от объекты окон с ++)
+- [Регистрация окна "классы"](registering-window-classes.md) (в отличие от объектов окна C++)
 
-- [Последовательность создания окна Общие](../mfc/general-window-creation-sequence.md)
+- [Общая последовательность создания окна](general-window-creation-sequence.md)
 
-- [Уничтожение объектов окон](../mfc/destroying-window-objects.md)
+- [Уничтожение объектов Window](destroying-window-objects.md)
 
-- [Работа с объектами окон](../mfc/working-with-window-objects.md)
+- [Использование объектов окон](working-with-window-objects.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Объекты окон](../mfc/window-objects.md)
+[Объекты окна](window-objects.md)

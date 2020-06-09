@@ -4,25 +4,25 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - sample applications [MFC], menus
 ms.assetid: 6d89c723-03d6-474e-8ca5-e98f93bd41cc
-ms.openlocfilehash: 1eab6947590375531df9027f853647ec6cb946f2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eb4d16a1aacb8a573b04dc1eb122289d9fba22bd
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219017"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626252"
 ---
 # <a name="menu-sample-list"></a>Список примеров меню
 
-См. следующие примеры программ, которые иллюстрируют создание, изменение и обновление меню:
+См. следующие примеры программ, демонстрирующих создание, изменение и обновление меню.
 
-*Пример интерфейса MDI. Включение и отключение пунктов меню*
+*Пример MDI: Включение и отключение пунктов меню*
 
 - [SCRIBBLE](../overview/visual-cpp-samples.md)
 
-*Динамически изменить меню*
+*Динамическое изменение меню*
 
-- [DYNAMENU](../overview/visual-cpp-samples.md)
+- [Пример](../overview/visual-cpp-samples.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Меню](../mfc/menus-mfc.md)
+[Меню](menus-mfc.md)

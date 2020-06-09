@@ -9,43 +9,43 @@ helpviewer_keywords:
 - registering custom Clipboard data formats
 - custom Clipboard data formats
 ms.assetid: aea58159-65ed-4385-aeaa-3d9d5281903b
-ms.openlocfilehash: 6f4e159cc1b6918843d4a164dcca88500eb7b038
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 52089364a6be423c69a7031cd0d99e1924de1444
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374606"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626063"
 ---
 # <a name="clipboard-adding-other-formats"></a>Буфер обмена. Добавление других форматов
 
-Эта тема объясняет, как расширить список поддерживаемых форматов, особенно для поддержки OLE. Тема [Clipboard: Копирование и вставки данных](../mfc/clipboard-copying-and-pasting-data.md) описывает минимальную реализацию, необходимую для поддержки копирования и вставки из Clipboard. Если это все, что вы реализуете, только форматы размещены на Clipboard **являются CF_METAFILEPICT,** **CF_EMBEDSOURCE,** **CF_OBJECTDESCRIPTOR,** и, возможно, **CF_LINKSOURCE**. Большинству приложений потребуется больше форматов на Clipboard, чем эти три.
+В этом разделе объясняется, как развернуть список поддерживаемых форматов, особенно для поддержки OLE. [Буфер обмена раздела. копирование и вставление данных](clipboard-copying-and-pasting-data.md) описывает минимальную реализацию, необходимую для поддержки копирования и вставления из буфера обмена. Если все это реализовано, то в буфер обмена помещаются только **CF_METAFILEPICT**, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**и, возможно, **CF_LINKSOURCE**. Большинству приложений потребуется больше форматов в буфере обмена, чем в этих трех.
 
 ## <a name="registering-custom-formats"></a><a name="_core_registering_custom_formats"></a>Регистрация пользовательских форматов
 
-Чтобы создать свои собственные форматы, следуйте той же процедуре, что и при регистрации любого пользовательского формата Clipboard: передайте название формата функции **RegisterClipboardFormat** и используйте его значение возврата в качестве идентификатора формата.
+Чтобы создать собственные пользовательские форматы, выполните ту же процедуру, которая использовалась при регистрации любого пользовательского формата буфера обмена: передайте имя формата в функцию **регистерклипбоардформат** и используйте его возвращаемое значение в качестве идентификатора формата.
 
-## <a name="placing-formats-on-the-clipboard"></a><a name="_core_placing_formats_on_the_clipboard"></a>Размещение форматов на буфере обмена
+## <a name="placing-formats-on-the-clipboard"></a><a name="_core_placing_formats_on_the_clipboard"></a>Размещение форматов в буфере обмена
 
-Чтобы добавить больше форматов к тем, которые размещены на Clipboard, необходимо переопределить `OnGetClipboardData` функцию в классе, который вы получили из любого `COleClientItem` или `COleServerItem` (в зависимости от того, являются ли данные, которые будут скопированы, родными). В этой функции следует использовать следующую процедуру.
+Чтобы добавить в буфер обмена дополнительные форматы, необходимо переопределить `OnGetClipboardData` функцию в классе, производном от, `COleClientItem` или `COleServerItem` (в зависимости от того, являются ли данные для копирования собственными). В этой функции следует использовать следующую процедуру.
 
-#### <a name="to-place-formats-on-the-clipboard"></a>Размещать форматы на Clipboard
+#### <a name="to-place-formats-on-the-clipboard"></a>Размещение форматов в буфере обмена
 
 1. Создание объекта `COleDataSource`.
 
-1. Передайте этот источник данных функции, которая добавляет ваши родные `COleDataSource::CacheGlobalData`форматы данных в список поддерживаемых форматов, вызывая:
+1. Передайте этот источник данных в функцию, которая добавляет собственные форматы данных в список поддерживаемых форматов путем вызова метода `COleDataSource::CacheGlobalData` .
 
-1. Добавьте стандартные `COleDataSource::CacheGlobalData` форматы, позвонив в каждый стандартный формат, который вы хотите поддержать.
+1. Добавьте стандартные форматы, вызвав `COleDataSource::CacheGlobalData` для каждого стандартного формата, который требуется поддерживать.
 
-Этот метод используется в программе mFC OLE образца `OnGetClipboardData` [HIERSVR](../overview/visual-cpp-samples.md) (изучить функцию члена класса **CServerItem).** Единственное отличие в этой выборке заключается в том, что третий этап не реализован, поскольку HIERSVR не поддерживает другие стандартные форматы.
+Этот метод используется в примере программы MFC OLE в приложении [HIERSVR](../overview/visual-cpp-samples.md) (изучите `OnGetClipboardData` функцию-член класса **ксерверитем** ). Единственное отличие в этом примере состоит в том, что третий шаг не реализован, так как HIERSVR не поддерживает другие стандартные форматы.
 
-### <a name="what-do-you-want-to-know-more-about"></a>Что вы хотите узнать больше о
+### <a name="what-do-you-want-to-know-more-about"></a>Что вы хотите узнать подробнее
 
-- [Объекты данных OLE и источники данных и единая передача данных](../mfc/data-objects-and-data-sources-ole.md)
+- [Объекты данных OLE и источники данных и унифицированная отправка данных](data-objects-and-data-sources-ole.md)
 
-- [Перетаскивание OLE](../mfc/drag-and-drop-ole.md)
+- [Перетаскивание OLE](drag-and-drop-ole.md)
 
-- [OLE](../mfc/ole-background.md)
+- [OLE](ole-background.md)
 
 ## <a name="see-also"></a>См. также раздел
 
-[Буфер обмена. Использование механизма буфера обмена OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
+[Буфер обмена. Использование механизма буфера обмена OLE](clipboard-using-the-ole-clipboard-mechanism.md)

@@ -6,30 +6,30 @@ helpviewer_keywords:
 - classes [MFC], MFC hierarchy
 - MFC, object model
 ms.assetid: 19d70341-e391-4a72-94c6-35755ce975d4
-ms.openlocfilehash: 703008b78994a9400bd5dfa1dfa64072fea949bd
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: f49580610b247605f1c3ca030c0927acab29db89
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611950"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84618725"
 ---
 # <a name="hierarchy-chart"></a>Диаграмма иерархии
 
-На следующем рисунке показаны классы MFC, производные от `CObject`:
+На следующем рисунке представлены классы MFC, производные от `CObject` :
 
-![Классы, производные от CObject](../mfc/media/mfc_hierarchy_chart1of3.png  "классы, производные от CObject")
+![Классы, унаследованные от CObject](../mfc/media/mfc_hierarchy_chart1of3.png  "Классы, унаследованные от CObject")
 
-На следующем рисунке показаны классы MFC, производные от `CWnd` и `CCmdTarget`:
+На следующем рисунке представлены классы MFC, производные от `CWnd` и `CCmdTarget` :
 
-![Классы, производные от CWnd или CCmdTarget](../mfc/media/mfc_hierarchy_chart2of3.png "классов, производных от CWnd или CCmdTarget")
+![Классы, унаследованные от CWnd или CCmdTarget](../mfc/media/mfc_hierarchy_chart2of3.png "Классы, унаследованные от CWnd или CCmdTarget")
 
-На следующем рисунке показаны классы MFC, не являющиеся производными `CObject`:
+На следующем рисунке представлены классы MFC, которые не являются производными от `CObject` :
 
-![Классы, не унаследованные от CObject](../mfc/media/mfc_hierarchy_chart3of3.png "классах, Непроизводных от CObject")
+![Классы, не унаследованные от CObject](../mfc/media/mfc_hierarchy_chart3of3.png "Классы, не унаследованные от CObject")
 
-Можно загрузить полную таблицу из следующего расположения: [Загрузка диаграммы иерархии MFC](https://aka.ms/hxgg8e).
+Вы можете скачать полную диаграмму из следующего расположения: [Загрузка диаграмм иерархии MFC](https://aka.ms/hxgg8e).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Категории таблицы иерархии](../mfc/hierarchy-chart-categories.md)<br/>
-[Общие сведения о классе](../mfc/class-library-overview.md)
+[Категории иерархических диаграмм](hierarchy-chart-categories.md)<br/>
+[Общие сведения о классах](class-library-overview.md)

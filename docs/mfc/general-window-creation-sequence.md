@@ -7,36 +7,36 @@ helpviewer_keywords:
 - windows [MFC], creating
 - sequence [MFC]
 ms.assetid: 9cd8c7ea-5e24-429e-b6d9-d7b6041d8ba6
-ms.openlocfilehash: fb10ced78e230316a6e2982f24c1fb6e2e52ed8d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0b09543d659448454bbc7c2cca6abee5de3013e5
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364270"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84618754"
 ---
 # <a name="general-window-creation-sequence"></a>Общая последовательность создания окна
 
-При создании собственного окна, например окна ребенка, в фреймворке используется тот же процесс, что и описано в [документе/посмотреть создание.](../mfc/document-view-creation.md)
+При создании собственного окна, например дочернего окна, платформа использует практически тот же процесс, который описан в разделе [Создание документа или представления](document-view-creation.md).
 
-Во всех классах окон, предоставляемых МФЦ, используется [двухступенчатая конструкция.](../mfc/one-stage-and-two-stage-construction-of-objects.md) То есть, во время вызова **нового** оператора СЗ, конструктор выделяет и инициализирует объект СЗ, но не создает соответствующее окно Windows. Это делается после этого, вызывая функцию члена [Создания](../mfc/reference/cwnd-class.md#create) объекта окна.
+Все классы окон, предоставляемые MFC, используют [конструкцию с двумя этапами](one-stage-and-two-stage-construction-of-objects.md). То есть при вызове оператора **New** в C++ конструктор выделяет и инициализирует объект C++, но не создает соответствующее окно Windows. Это можно сделать, вызвав функцию [создания](reference/cwnd-class.md#create) члена объекта Window.
 
-Функция `Create` члена делает окно Windows `HWND` и хранит его в общедоступных данных объекта [m_hWnd.](../mfc/reference/cwnd-class.md#m_hwnd) `Create`обеспечивает полную гибкость по параметрам создания. Прежде `Create`чем звонить, вы можете зарегистрировать класс окон с глобальной функцией [AfxRegisterWndClass,](../mfc/reference/application-information-and-management.md#afxregisterwndclass) чтобы установить значок и стили класса для кадра.
+`Create`Функция – член делает окно Windows и сохраняет его `HWND` в общедоступных элементах данных объекта C++ [m_hWnd](reference/cwnd-class.md#m_hwnd). `Create`обеспечивает полную гибкость по сравнению с параметрами создания. Перед вызовом `Create` может потребоваться зарегистрировать класс окна с глобальной функцией [афксрегистервндкласс](reference/application-information-and-management.md#afxregisterwndclass) , чтобы задать стили значков и классов для фрейма.
 
-Для окон кадра можно использовать функцию `Create`члена [LoadFrame](../mfc/reference/cframewnd-class.md#loadframe) вместо. `LoadFrame`делает окно Windows, используя меньше параметров. Он получает много значений по умолчанию из ресурсов, включая подпись кадра, значок, таблицу акселератора и меню.
+Для окон фрейма можно использовать функцию члена [лоадфраме](reference/cframewnd-class.md#loadframe) вместо `Create` . `LoadFrame`позволяет окну Windows использовать меньше параметров. Он получает множество значений по умолчанию из ресурсов, включая заголовок фрейма, значок, таблицу сочетаний клавиш и меню.
 
 > [!NOTE]
-> Ваш значок, таблица акселератора и ресурсы меню должны иметь общий идентификатор ресурсов, **например, IDR_MAINFRAME,** чтобы они были загружены LoadFrame.
+> Ресурсы "значок", "Таблица сочетаний клавиш" и "меню" должны иметь общий идентификатор ресурса, например **IDR_MAINFRAME**, чтобы их можно было загрузить с помощью лоадфраме.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Что вы хотите узнать больше о
+## <a name="what-do-you-want-to-know-more-about"></a>Что вы хотите узнать подробнее
 
-- [Объекты окон](../mfc/window-objects.md)
+- [Объекты окон](window-objects.md)
 
-- [Регистрация окна "классы"](../mfc/registering-window-classes.md)
+- [Регистрация окна "классы"](registering-window-classes.md)
 
-- [Уничтожение оконных объектов](../mfc/destroying-window-objects.md)
+- [Уничтожение объектов Window](destroying-window-objects.md)
 
-- [Создание окон фрейма документа](../mfc/creating-document-frame-windows.md)
+- [Создание окон фрейма документа](creating-document-frame-windows.md)
 
 ## <a name="see-also"></a>См. также раздел
 
-[Создание Windows](../mfc/creating-windows.md)
+[Создание Windows](creating-windows.md)

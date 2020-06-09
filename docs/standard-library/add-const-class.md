@@ -7,14 +7,14 @@ helpviewer_keywords:
 - add_const class
 - add_const
 ms.assetid: 1262a1eb-8c9c-4dd6-9f43-88ba280182f1
-ms.openlocfilehash: 6f27a8e4bc0bea3a469d46a56e8885dabe5894df
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c82a3fac8ef95da9e226ca3e2e9122b3c8774cbf
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456582"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620831"
 ---
-# <a name="addconst-class"></a>Класс add_const
+# <a name="add_const-class"></a>Класс add_const
 
 Создает тип const из типа.
 
@@ -30,9 +30,9 @@ struct add_const;
 *Ty*\
 Тип для изменения.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
-Экземпляр модификатора типа содержит модифицированный тип, *Ty* , если *Ty* является ссылкой, функцией или типом с квалификатором const, в противном случае `const Ty`.
+Экземпляр модификатора типа содержит модифицированный тип, *Ty* , если *Ty* является ссылкой, функцией или типом с квалификатором const, в противном случае `const Ty` .
 
 ## <a name="example"></a>Пример
 
@@ -60,11 +60,11 @@ add_const<int> == int
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<type_traits>
+**Заголовок:**\<type_traits>
 
 **Пространство имен:** std
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[<type_traits>](../standard-library/type-traits.md)\
-[Класс remove_const](../standard-library/remove-const-class.md)
+[<type_traits>](type-traits.md)\
+[Класс remove_const](remove-const-class.md)

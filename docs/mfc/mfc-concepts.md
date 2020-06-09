@@ -3,67 +3,67 @@ title: Основные понятия MFC
 ms.date: 01/09/2018
 f1_keywords:
 - Concepts
-ms.openlocfilehash: 3273538e4fdffbf68fbe01c7f912584380505d1b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b6f5e6bf84900a17b10104dbe9baf4b580ae5396
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178526"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84615500"
 ---
 # <a name="mfc-concepts"></a>Основные понятия MFC
 
 В этом разделе содержатся общие сведения и разделы на основе задач, которые помогут программировать работу с библиотекой Microsoft Foundation Class (MFC).
 
-## <a name="in-this-section"></a>в этом разделе
+## <a name="in-this-section"></a>В этом разделе
 
-[Общие разделы по MFC](../mfc/general-mfc-topics.md)<br/>
+[Общие разделы по MFC](general-mfc-topics.md)<br/>
 Описание технических деталей библиотеки MFC.
 
-[Использование CObject](../mfc/using-cobject.md)<br/>
-Предоставляет ссылки на использование `CObject`, базового класса для большинства классов в MFC.
+[Использование CObject](using-cobject.md)<br/>
+Предоставляет ссылки на использование `CObject` базового класса для большинства классов в MFC.
 
-[Коллекции](../mfc/collections.md)<br/>
-Обсуждаются классы коллекций, созданные из C++ шаблонов и не созданные.
+[Коллекции](collections.md)<br/>
+Обсуждаются классы коллекций, созданные из шаблонов C++ и не созданные из них.
 
 [Дата и время](../atl-mfc-shared/date-and-time.md)<br/>
 Содержит ссылки на разделы, посвященные использованию MFC в качестве даты и времени.
 
-[Файлы](../mfc/files-in-mfc.md)<br/>
-Обсуждаются `CFile` и методы управления файлами в MFC.
+[Файлы](files-in-mfc.md)<br/>
+Описание `CFile` и способы управления файлами в MFC.
 
-[Управление памятью (MFC)](../mfc/memory-management.md)<br/>
+[Управление памятью (MFC)](memory-management.md)<br/>
 Описывает, как использовать преимущества служб общего назначения, связанных с управлением памятью.
 
-[Обработка и сопоставление сообщений](../mfc/message-handling-and-mapping.md)<br/>
+[Обработка и сопоставление сообщений](message-handling-and-mapping.md)<br/>
 Описывает процесс обработки сообщений и команд платформой MFC и способ их подключения к их функциям обработчика.
 
-[Сериализация](../mfc/serialization-in-mfc.md)<br/>
+[Сериализация](serialization-in-mfc.md)<br/>
 Описание механизма сериализации, обеспечивающего сохранение объектов между запусками программы.
 
-## <a name="related-sections"></a>См. также
+## <a name="related-sections"></a>Связанные разделы
 
-[Обработка исключений (MFC)](../mfc/exception-handling-in-mfc.md)<br/>
+[Обработка исключений (MFC)](exception-handling-in-mfc.md)<br/>
 Описывает механизмы обработки исключений, доступные в MFC.
 
-[Основы программирования для интернет-решений MFC](../mfc/mfc-internet-programming-basics.md)<br/>
+[Основные сведения о программировании Интернета MFC](mfc-internet-programming-basics.md)<br/>
 Обсуждаются классы MFC, поддерживающие Интернет.
 
-[Задачи программирования для интернет-решений MFC](../mfc/mfc-internet-programming-tasks.md)<br/>
+[Задачи программирования для интернет-решений MFC](mfc-internet-programming-tasks.md)<br/>
 Описывает, как добавить в приложения поддержку Интернета.
 
-[Поддержка Юникода и многобайтовой кодировки](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)<br/>
+[Поддержка Юникода и многобайтовой кодировки (MBCS)](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)<br/>
 Объясняет, как использовать MFC и поддержку ATL для кодировки Юникод и многобайтовых кодировок.
 
-[MFC COM](../mfc/mfc-com.md)<br/>
+[MFC COM](mfc-com.md)<br/>
 Описывает подмножество MFC, предназначенное для поддержки модели COM, в то время как большая часть библиотеки шаблонов ATL предназначена для программирования COM.
 
 [Реализация многопоточности на языке C++ с помощью классов MFC](../parallel/multithreading-with-cpp-and-mfc.md)<br/>
 Описывает, какие процессы и потоки являются и обсуждают подход MFC к многопоточности.
 
-[Сокеты Windows в MFC](../mfc/windows-sockets.md)<br/>
+[Сокеты Windows в MFC](windows-sockets.md)<br/>
 Охватывает реализацию MFC сокетов Windows.
 
-[Справочник по MFC](../mfc/mfc-desktop-applications.md)<br/>
+[Справочник по MFC](mfc-desktop-applications.md)<br/>
 Предоставляет справочные материалы по библиотеке MFC, а также набор классов, образующих исполняющую среду, т.е. платформу приложения, написанного для интерфейса Windows API.
 
 [Примеры MFC](../overview/visual-cpp-samples.md#mfc-samples)<br/>

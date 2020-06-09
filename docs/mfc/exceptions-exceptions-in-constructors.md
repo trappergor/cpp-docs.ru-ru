@@ -1,26 +1,26 @@
 ---
-title: 'Исключения: Исключения в конструкторах'
+title: Исключения. Исключения в конструкторах
 ms.date: 11/04/2016
 helpviewer_keywords:
 - constructors [MFC], exceptions
 - throwing exceptions [MFC], in constructors
 - exceptions [MFC], in constructors
 ms.assetid: a78eae5a-5821-4b27-9478-1436320ed1e1
-ms.openlocfilehash: 0b11f5be18879d5ad4b9e204bb02e18b4617c6b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4089f4d44f03c7de3432f137b5d28f74189e1cb9
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405876"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84624618"
 ---
-# <a name="exceptions-exceptions-in-constructors"></a>Исключения: Исключения в конструкторах
+# <a name="exceptions-exceptions-in-constructors"></a>Исключения. Исключения в конструкторах
 
-При возникновении исключения в конструкторе, очистить все объекты и выделения памяти были внесены до возникновения исключения, как описано в [исключения: Создание исключений из собственных функций](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md).
+При возникновении исключения в конструкторе очистите все объекты и выделения памяти, сделанные до создания исключения, как описано в [исключениях: создание исключений из собственных функций](exceptions-throwing-exceptions-from-your-own-functions.md).
 
-При возникновении исключения в конструкторе, память для самого объекта уже выделен, к моменту вызова конструктора. Таким образом компилятор автоматически освободит память, занимаемая объектом, после исключения.
+При возникновении исключения в конструкторе память для самого объекта уже была выделена на момент вызова конструктора. Таким образом, компилятор автоматически освобождает память, занятую объектом, после возникновения исключения.
 
-Дополнительные сведения см. в разделе [исключения: Высвобождение объектов в исключениях](../mfc/exceptions-freeing-objects-in-exceptions.md).
+Дополнительные сведения см. [в разделе исключения: освобождение объектов в исключениях](exceptions-freeing-objects-in-exceptions.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Обработка исключений](../mfc/exception-handling-in-mfc.md)
+[Обработка исключений](exception-handling-in-mfc.md)

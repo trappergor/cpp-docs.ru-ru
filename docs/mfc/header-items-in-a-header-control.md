@@ -7,29 +7,29 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], header items in
 - controls [MFC], header
 ms.assetid: ac79ef1f-a671-4ab2-93e9-b1aa016a48bf
-ms.openlocfilehash: 31b6bcb134b62fc11df78a846b3c256a2ef69c14
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a70d1d9225d2ac8ef2f7ed3ad9f603a64a937bc7
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62240001"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620090"
 ---
 # <a name="header-items-in-a-header-control"></a>Элементы заголовка в элементе управления "Заголовок"
 
-У вас есть много возможностей управления внешним видом и поведением элементов заголовка, составляющие элемент управления заголовка ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)). Каждый элемент заголовка может иметь строку, растровый рисунок, образ из списка связанных изображений или связанные с ним значение 32-разрядных определяемые приложением. Строка, растрового изображения или изображения отображаются в верхнем колонтитуле.
+У вас есть значительный контроль над внешним видом и поведением элементов заголовка, составляющих элемент управления "заголовок" ([CHeaderCtrl](reference/cheaderctrl-class.md)). Каждый элемент заголовка может иметь строку, Растровое изображение, изображение из связанного списка изображений или определяемое приложением 32-разрядное значение. Строка, точечный рисунок или изображение отображаются в элементе заголовка.
 
-Можно настроить внешний вид и содержимое новых элементов, когда они создаются путем вызова [CHeaderCtrl::InsertItem](../mfc/reference/cheaderctrl-class.md#insertitem) или путем изменения существующего элемента, с помощью вызова [CHeaderCtrl::GetItem](../mfc/reference/cheaderctrl-class.md#getitem) и [ CHeaderCtrl::SetItem](../mfc/reference/cheaderctrl-class.md#setitem).
+Можно настроить внешний вид и содержимое новых элементов при их создании, вызвав [CHeaderCtrl:: InsertItem](reference/cheaderctrl-class.md#insertitem) или изменив существующий элемент с помощью вызова [CHeaderCtrl::-Item](reference/cheaderctrl-class.md#getitem) и [CHeaderCtrl:: сетитем](reference/cheaderctrl-class.md#setitem).
 
-## <a name="what-do-you-want-to-know-more-about"></a>Выберите для получения дополнительных сведений
+## <a name="what-do-you-want-to-know-more-about"></a>Что вы хотите узнать подробнее
 
-- [Настройка внешнего вида элемента заголовка](../mfc/customizing-the-header-item-s-appearance.md)
+- [Настройка внешнего вида элемента заголовка](customizing-the-header-item-s-appearance.md)
 
-- [Сортировка элементов в элементе управления заголовка](../mfc/ordering-items-in-the-header-control.md)
+- [Упорядочивание элементов в элементе управления "заголовок"](ordering-items-in-the-header-control.md)
 
-- [Предоставление поддержки перетаскивания и вставки для элементов заголовка](../mfc/providing-drag-and-drop-support-for-header-items.md)
+- [Предоставление поддержки перетаскивания для элементов заголовка](providing-drag-and-drop-support-for-header-items.md)
 
-- [Использование списков изображений с элементами управления заголовка](../mfc/using-image-lists-with-header-controls.md)
+- [Использование списков изображений с элементами управления "заголовок"](using-image-lists-with-header-controls.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Использование CHeaderCtrl](../mfc/using-cheaderctrl.md)
+[Использование CHeaderCtrl](using-cheaderctrl.md)

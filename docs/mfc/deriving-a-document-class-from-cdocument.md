@@ -8,27 +8,27 @@ helpviewer_keywords:
 - derived classes [MFC], functions often overridden
 - document classes [MFC], functions often overridden
 ms.assetid: e6a198e0-9799-43c0-83c5-04174d8b532c
-ms.openlocfilehash: 5998d5707eb741be0e8ac270f6ac5ce77a9ff8d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 399230446977636cc8769efe32b8f86fad466b83
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153272"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616114"
 ---
 # <a name="deriving-a-document-class-from-cdocument"></a>Наследование класса документов от CDocument
 
-Документы содержат данные и управляйте ими приложения. Использование класса документа, предоставляемую мастер приложений MFC, выполните следующие действия.
+Документы содержат данные вашего приложения и управляют ими. Чтобы использовать класс документов, предоставляемый мастером приложений MFC, необходимо выполнить следующие действия.
 
-- Наследуйте класс от `CDocument` для каждого типа документа.
+- Создайте класс, производный от, `CDocument` для каждого типа документа.
 
-- Добавьте переменные-члены для хранения данных каждого документа.
+- Добавьте переменные члена для хранения данных каждого документа.
 
-- Переопределить `CDocument`в `Serialize` функции-члена в классе документа. `Serialize` Записывает и читает данные документа и с диска.
+- Переопределение `CDocument` `Serialize` функции члена в классе документа. `Serialize`записывает и считывает данные документа на диск и обратно.
 
-## <a name="other-document-functions-often-overridden"></a>Часто переопределяемые функции других документов
+## <a name="other-document-functions-often-overridden"></a>Другие функции документов, которые часто переопределяются
 
-Можно также переопределить другие `CDocument` функций-членов. В частности, часто требуется переопределить [OnNewDocument](../mfc/reference/cdocument-class.md#onnewdocument) и [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) в инициализации членов данных документа и [DeleteContents](../mfc/reference/cdocument-class.md#deletecontents) для уничтожения динамически выделенные данные. Сведения о переопределяемые члены, см. в разделе класса [CDocument](../mfc/reference/cdocument-class.md) в *Справочник по библиотеке MFC*.
+Также может потребоваться переопределить другие `CDocument` функции элементов. В частности, часто требуется переопределить [онневдокумент](reference/cdocument-class.md#onnewdocument) и [OnOpenDocument](reference/cdocument-class.md#onopendocument) для инициализации элементов данных документа и [делетеконтентс](reference/cdocument-class.md#deletecontents) для уничтожения динамически выделяемых данных. Дополнительные сведения о переопределяемых членах см. в разделе класс [CDocument](reference/cdocument-class.md) в *справочнике по MFC*.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Использование документов](../mfc/using-documents.md)
+[Использование документов](using-documents.md)

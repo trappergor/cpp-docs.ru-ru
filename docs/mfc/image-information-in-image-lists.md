@@ -5,22 +5,22 @@ helpviewer_keywords:
 - CImageList class [MFC], image information in
 - image lists [MFC], image information in
 ms.assetid: 73c41543-fa91-405d-b15b-0feffa6a72c1
-ms.openlocfilehash: 7b83b7e5f7de6f8ccca95d732f71a5d73a97e943
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c12198c769585763095d22b73d11f7af3c9d6fc0
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363522"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84624498"
 ---
 # <a name="image-information-in-image-lists"></a>Сведения об изображениях в списках изображений
 
-[CImageList](../mfc/reference/cimagelist-class.md) включает ряд функций, получающих сведения из списка изображений. [GetImageInfo](../mfc/reference/cimagelist-class.md#getimageinfo) заполняет функция-член `IMAGEINFO` структуру сведениями о одно изображение, включая маркеры и маскировал точечные рисунки, число цветовых плоскостей и бит на пиксель и ограничивающий прямоугольник изображения в растрового изображения. Эти сведения можно использовать для прямого управления для изображения, точечные рисунки.
+[CImageList](reference/cimagelist-class.md) включает ряд функций, которые извлекают информацию из списка изображений. Функция-член [жетимажеинфо](reference/cimagelist-class.md#getimageinfo) заполняет `IMAGEINFO` структуру сведениями об отдельном изображении, включая маркеры точечных рисунков изображения и маски, число цветовых плоскостей и бит на пиксель, а также ограничивающий прямоугольник изображения в точечном рисунке изображения. Эти сведения можно использовать для непосредственного управления точечными рисунками изображения.
 
-[GetImageCount](../mfc/reference/cimagelist-class.md#getimagecount) функция-член возвращает число изображений в списке изображений.
+Функция члена [жетимажекаунт](reference/cimagelist-class.md#getimagecount) извлекает количество изображений в списке изображений.
 
-Можно создать на основе изображения и маски, в списке изображений с помощью значка [функции ExtractIcon](../mfc/reference/cimagelist-class.md#extracticon) функция-член. Функция возвращает дескриптор значок "Создать".
+Вы можете создать значок на основе изображения и маски в списке изображений с помощью функции члена [екстрактикон](reference/cimagelist-class.md#extracticon) . Функция возвращает маркер нового значка.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Использование CImageList](../mfc/using-cimagelist.md)<br/>
-[Элементы управления](../mfc/controls-mfc.md)
+[Использование CImageList](using-cimagelist.md)<br/>
+[Элементы управления](controls-mfc.md)

@@ -5,22 +5,22 @@ f1_keywords:
 - allocators/std::operator!=
 - allocators/std::operator==
 ms.assetid: b55d67cb-3c69-46bf-ad40-e845fb096c4e
-ms.openlocfilehash: 7bc37e98ed85582cac8fc7ae21e54a6d5da9e06f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a21708ca090b0db561391308f347d90b77c62645
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364963"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623563"
 ---
 # <a name="ltallocatorsgt-operators"></a>Операторы &lt;allocator&gt;
 
-Это функции глобального шаблонного оператора, определяемые в &lt;раздателях.&gt; Для функций оператора-члена класса см.
+Это функции операторов глобального шаблона, определенные в &lt; распределительах &gt; . Функции оператора члена класса см. в документации по классу.
 
 |||
 |-|-|
-|[оператора!](#op_neq)|[оператора](#op_eq_eq)|
+|[operator! =](#op_neq)|[Оператор = =](#op_eq_eq)|
 
-## <a name="operator"></a><a name="op_neq"></a>оператора!
+## <a name="operator"></a><a name="op_neq"></a>operator! =
 
 Проверяет на неравенство между объектами распределителя указанного класса.
 
@@ -35,18 +35,18 @@ bool operator!=(
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*Левой*|Один из объектов allocator для проверки на неравенство.|
+|*слева*|Один из объектов allocator для проверки на неравенство.|
 |*Правильно*|Один из объектов allocator для проверки на неравенство.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Значение **true**, если объекты allocator не равны; значение **false**, если объекты allocator равны.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Оператор-шаблон возвращает `!(left == right)`.
 
-## <a name="operator"></a><a name="op_eq_eq"></a>оператора
+## <a name="operator"></a><a name="op_eq_eq"></a>Оператор = =
 
 Проверяет на равенство объекты распределителя указанного класса.
 
@@ -61,17 +61,17 @@ bool operator==(
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*Левой*|Один из объектов allocator для проверки на равенство.|
+|*слева*|Один из объектов allocator для проверки на равенство.|
 |*Правильно*|Один из объектов allocator для проверки на равенство.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Значение **true**, если объекты allocator равны; значение **false**, если объекты allocator не равны.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Этот оператор шаблона возвращает `left.equals(right)`.
 
 ## <a name="see-also"></a>См. также раздел
 
-[\<>-подлатыватели](../standard-library/allocators-header.md)
+[\<allocators>](allocators-header.md)
