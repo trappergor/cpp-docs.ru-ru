@@ -15,12 +15,12 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 7bbae518-062e-4393-81f9-b22abd2e5f59
-ms.openlocfilehash: ae866b71d2a9f001c56b2c61d99749cab824b313
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d8b5491ee5321171ef358308f3c1548e43953d3
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392990"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616492"
 ---
 # <a name="accessing-all-members-of-a-collection"></a>Доступ ко всем членам коллекции
 
@@ -34,33 +34,33 @@ ms.locfileid: "62392990"
 
 - [Итерация схемы](#_core_to_iterate_a_map)
 
-### <a name="_core_to_iterate_an_array"></a> Итерация массива
+### <a name="to-iterate-an-array"></a><a name="_core_to_iterate_an_array"></a>Итерация массива
 
 1. Используйте последовательные номера индекса с функцией-членом `GetAt` .
 
-   [!code-cpp[NVC_MFCCollections#12](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_1.cpp)]
+   [!code-cpp[NVC_MFCCollections#12](codesnippet/cpp/accessing-all-members-of-a-collection_1.cpp)]
 
    В этом примере используется массив типизированных указателей, который содержит указатели на объекты `CPerson` . Массив является производным от класса `CObArray`, одного из нешаблонных предопределенных классов. `GetAt` возвращает указатель на объект `CPerson` . Для классов коллекций типизированных указателей (массивов или списков) первый параметр указывает базовый класс, второй параметр указывает тип для хранения.
 
-   `CTypedPtrArray` Класса также перегрузки **[]** оператора, которые можно использовать обычный синтаксис индекса для доступа к элементам массива. Альтернативой инструкции в теле **для** цикл выше
+   `CTypedPtrArray`Класс также перегружает оператор **[]** , чтобы можно было использовать синтаксис настраиваемого массива-подстрочных индексов для доступа к элементам массива. Альтернативой оператору в теле цикла **for** выше является
 
-   [!code-cpp[NVC_MFCCollections#13](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_2.cpp)]
+   [!code-cpp[NVC_MFCCollections#13](codesnippet/cpp/accessing-all-members-of-a-collection_2.cpp)]
 
    Этот оператор существует как в **константной** , так и в не**константной** версиях. **Константная** версия, которая вызывается для **константных** массивов, может отображаться только в правой части оператора присваивания.
 
-### <a name="_core_to_iterate_a_list"></a> Итерация списка
+### <a name="to-iterate-a-list"></a><a name="_core_to_iterate_a_list"></a> Итерация списка
 
 1. Для прохода по списку используйте функции-члены `GetHeadPosition` и `GetNext` :
 
-   [!code-cpp[NVC_MFCCollections#14](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_3.cpp)]
+   [!code-cpp[NVC_MFCCollections#14](codesnippet/cpp/accessing-all-members-of-a-collection_3.cpp)]
 
    В этом примере используется список типизированных указателей, который содержит указатели на объекты `CPerson` . Объявление списка напоминает объявление для массива в процедуре [Итерация массива](#_core_to_iterate_an_array) , но является производным от класса `CObList`. `GetNext` возвращает указатель на объект `CPerson` .
 
-### <a name="_core_to_iterate_a_map"></a> Итерация схемы
+### <a name="to-iterate-a-map"></a><a name="_core_to_iterate_a_map"></a> Итерация схемы
 
 1. Используйте `GetStartPosition` для перехода в начало схемы и `GetNextAssoc` для повторного получения следующего ключа и значения из схемы, как показано в следующем примере.
 
-   [!code-cpp[NVC_MFCCollections#15](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_4.cpp)]
+   [!code-cpp[NVC_MFCCollections#15](codesnippet/cpp/accessing-all-members-of-a-collection_4.cpp)]
 
    В этом примере применяется шаблон простой схемы (а не коллекция типизированных указателей), использующий ключи `CString` и сохраняющий указатели на объекты `CPerson` . При использовании функций доступа, таких как `GetNextAssoc`, класс предоставляет указатели на объекты `CPerson` . При использовании одной из коллекций нешаблонных схем необходимо привести возвращенный указатель `CObject` к указателю на `CPerson`.
 
@@ -69,10 +69,10 @@ ms.locfileid: "62392990"
 
    Шаблонное решение проще в использовании и помогает обеспечить более высокий уровень безопасности типов. Как видно из примера ниже, нешаблонный код более сложен.
 
-   [!code-cpp[NVC_MFCCollections#16](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_5.cpp)]
+   [!code-cpp[NVC_MFCCollections#16](codesnippet/cpp/accessing-all-members-of-a-collection_5.cpp)]
 
-Дополнительные сведения см. в разделе [Удаление всех объектов из коллекции CObject](../mfc/deleting-all-objects-in-a-cobject-collection.md).
+Дополнительные сведения см. в разделе [Удаление всех объектов из коллекции CObject](deleting-all-objects-in-a-cobject-collection.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Коллекции](../mfc/collections.md)
+[Коллекции](collections.md)

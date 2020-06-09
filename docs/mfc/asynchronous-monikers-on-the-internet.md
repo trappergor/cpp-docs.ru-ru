@@ -10,60 +10,60 @@ helpviewer_keywords:
 - optimization [MFC], asynchronous downloading across Internet
 - Internet [MFC], asynchronous downloading
 ms.assetid: 418b0c64-0046-4dae-8118-c9c762b5822e
-ms.openlocfilehash: e7a7ea51bca134e965747db8aac7f8a62822c9eb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 74add1ad894f883c67eefab888898c0abf518b83
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165844"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625031"
 ---
 # <a name="asynchronous-monikers-on-the-internet"></a>Асинхронные моникеры в Интернете
 
-Интернет требуются новые подходы к разработке приложения из-за его доступ к медленной сети. Приложения должны выполнять доступ к сети асинхронно, чтобы избежать замедляющих работу пользовательского интерфейса. Класс MFC [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md) предоставляет поддержку асинхронных операций для загрузки файлов.
+Интернет требует новых подходов к проектированию приложений из-за высокой скорости доступа к сети. Приложения должны выполнять асинхронный доступ к сети, чтобы предотвратить зависание пользовательского интерфейса. Класс MFC [касинкмоникерфиле](reference/casyncmonikerfile-class.md) обеспечивает асинхронную поддержку загрузки файлов.
 
-С помощью асинхронных моникеров вы можете расширить COM-приложения для загрузки асинхронно через Интернет и обеспечивают Прогрессивная отрисовка больших объектов, таких как точечные рисунки и VRML объектов. Асинхронные моникеры включить свойство элемента управления ActiveX или файл в Интернете, чтобы загрузить без блокировки отклика пользовательского интерфейса.
+С помощью асинхронных моникеров можно расширить приложение COM для асинхронного скачивания через Интернет и обеспечить последовательную отрисовку больших объектов, таких как точечные рисунки и объекты ВРМЛ. Асинхронные моникеры позволяют загрузить свойство элемента управления ActiveX или файл в Интернете, не блокируя ответ пользовательского интерфейса.
 
-## <a name="advantages-of-asynchronous-monikers"></a>Преимущества использования асинхронных моникеров
+## <a name="advantages-of-asynchronous-monikers"></a>Преимущества асинхронных моникеров
 
-Можно использовать асинхронные моникеры для:
+Асинхронные моникеры можно использовать для:
 
-- Загрузите код и файлы без блокировки.
+- Загрузка кода и файлов без блокировки.
 
-- Загрузка свойств элементов управления ActiveX без блокировки.
+- Скачивание свойств в элементах управления ActiveX без блокировки.
 
-- Получайте уведомления о ходе выполнения загрузки.
+- Получение уведомлений о ходе загрузки.
 
-- Отслеживание хода выполнения и сведения о состоянии "Готово".
+- Отслеживание хода выполнения и сведений о состоянии готовности.
 
-- Предоставить сведения о состоянии пользователю о ходе выполнения.
+- Предоставьте сведения о состоянии пользователю о ходе выполнения.
 
-- Разрешить пользователю отменить загрузку в любое время.
+- Разрешает пользователю отменить загрузку в любое время.
 
 ## <a name="mfc-classes-for-asynchronous-monikers"></a>Классы MFC для асинхронных моникеров
 
-[CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md) является производным от [CMonikerFile](../mfc/reference/cmonikerfile-class.md), который в свою очередь является производным от [COleStreamFile](../mfc/reference/colestreamfile-class.md). Объект `COleStreamFile` объект представляет поток данных; `CMonikerFile` объектов используют `IMoniker` для получения данных и `CAsyncMonikerFile` объект делает это асинхронно.
+[Касинкмоникерфиле](reference/casyncmonikerfile-class.md) является производным от [кмоникерфиле](reference/cmonikerfile-class.md), который, в свою очередь, является производным от [колестреамфиле](reference/colestreamfile-class.md). `COleStreamFile`Объект представляет поток данных; `CMonikerFile` объект использует `IMoniker` для получения данных, а `CAsyncMonikerFile` объект выполняет это асинхронно.
 
-Асинхронные моникеры используются главным образом в Интернет-приложений и элементов управления ActiveX для обеспечения создания быстродействующего пользовательского интерфейса во время передачи файлов. Хорошим примером этого является использование [CDataPathProperty](../mfc/reference/cdatapathproperty-class.md) для предоставления асинхронного свойств для элементов управления ActiveX.
+Асинхронные моникеры используются преимущественно в приложениях с поддержкой Интернета и в элементах управления ActiveX для обеспечения реагирования пользовательского интерфейса во время передачи файлов. Простым примером этого является использование [кдатапаспроперти](reference/cdatapathproperty-class.md) для предоставления асинхронных свойств для элементов управления ActiveX.
 
-## <a name="mfc-classes-for-data-paths-in-activex-controls"></a>Классы MFC для пути к данным в элементах управления ActiveX
+## <a name="mfc-classes-for-data-paths-in-activex-controls"></a>Классы MFC для путей к данным в элементах управления ActiveX
 
-Классы MFC `CDataPathProperty` и [CCachedDataPathProperty](../mfc/reference/ccacheddatapathproperty-class.md) реализовать свойства элемента управления ActiveX, которые могут быть загружены асинхронно. Асинхронные свойства загружаются после синхронного запуска. Асинхронные элементы управления ActiveX многократном запуске обратный вызов для указания доступности новых данных во время длительных свойство exchange.
+Классы MFC `CDataPathProperty` и [ккачеддатапаспроперти](reference/ccacheddatapathproperty-class.md) реализуют свойства элементов управления ActiveX, которые могут загружаться асинхронно. Асинхронные свойства загружаются после синхронной инициации. Асинхронные элементы управления ActiveX многократно вызывают обратный вызов для указания доступности новых данных во время длительного процесса обмена свойствами.
 
-Класс `CDataPathProperty` является производным от `CAsyncMonikerFile`. Класс `CCachedDataPathProperty` является производным от `CDataPathProperty`. Для реализации асинхронных свойств в элементах управления ActiveX, наследуйте класс от `CDataPathProperty` или `CCachedDataPathProperty`и Переопределите [OnDataAvailable](../mfc/reference/casyncmonikerfile-class.md#ondataavailable) и других уведомлений, вы хотите получать.
+Класс `CDataPathProperty` является производным от `CAsyncMonikerFile`. Класс `CCachedDataPathProperty` является производным от `CDataPathProperty`. Чтобы реализовать асинхронные свойства в элементах управления ActiveX, создайте класс, производный от `CDataPathProperty` или `CCachedDataPathProperty` , и переопределите [ондатааваилабле](reference/casyncmonikerfile-class.md#ondataavailable) и другие уведомления, которые вы хотите получать.
 
-#### <a name="to-download-a-file-using-asynchronous-monikers"></a>Чтобы загрузить файл, используя асинхронные моникеры
+#### <a name="to-download-a-file-using-asynchronous-monikers"></a>Загрузка файла с помощью асинхронных моникеров
 
-1. Объявите класс, производный от [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md).
+1. Объявите класс, производный от [касинкмоникерфиле](reference/casyncmonikerfile-class.md).
 
-1. Переопределить [OnDataAvailable](../mfc/reference/casyncmonikerfile-class.md#ondataavailable) для отображения данных.
+1. Переопределите [ондатааваилабле](reference/casyncmonikerfile-class.md#ondataavailable) для вывода данных.
 
-1. Переопределить другие функции-члены, включая [OnProgress](../mfc/reference/casyncmonikerfile-class.md#onprogress), [OnStartBinding](../mfc/reference/casyncmonikerfile-class.md#onstartbinding), и [OnStopBinding](../mfc/reference/casyncmonikerfile-class.md#onstopbinding).
+1. Переопределите другие функции члена, включая [OnProgress](reference/casyncmonikerfile-class.md#onprogress), [онстартбиндинг](reference/casyncmonikerfile-class.md#onstartbinding)и [онстопбиндинг](reference/casyncmonikerfile-class.md#onstopbinding).
 
-1. Объявите экземпляр этого класса и использовать его для открытия URL-адресов.
+1. Объявите экземпляр этого класса и используйте его для открытия URL-адресов.
 
-Сведения о загрузке асинхронно в элементе управления ActiveX, см. в разделе [элементы управления ActiveX в Интернете](../mfc/activex-controls-on-the-internet.md).
+Сведения о асинхронной загрузке в элементе управления ActiveX см. в разделе [элементы управления ActiveX в Интернете](activex-controls-on-the-internet.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Задачи программирования для интернет-решений MFC](../mfc/mfc-internet-programming-tasks.md)<br/>
-[Основы программирования для интернет-решений MFC](../mfc/mfc-internet-programming-basics.md)
+[Задачи программирования для интернет-решений MFC](mfc-internet-programming-tasks.md)<br/>
+[Основные сведения о программировании Интернета MFC](mfc-internet-programming-basics.md)

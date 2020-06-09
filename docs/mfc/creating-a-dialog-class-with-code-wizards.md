@@ -7,12 +7,12 @@ helpviewer_keywords:
 - code wizards
 - dialog classes [MFC], creating
 ms.assetid: a7157b9d-f1a8-4381-a4cf-180cd2c7f1b2
-ms.openlocfilehash: dd18a639bc94686bb3023d64c09074ca4d808546
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: 5c534219ec656318e2e70a47df8536ddfbe26ab7
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685854"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616338"
 ---
 # <a name="creating-a-dialog-class-with-code-wizards"></a>Создание класса диалогового окна с помощью мастеров кода
 
@@ -22,21 +22,21 @@ ms.locfileid: "71685854"
 
 |Задача|Применить к. . .|
 |----------|--------------------|
-|[Создайте новый класс, производный от класса CDialog](../mfc/creating-your-dialog-class.md) , для управления диалоговым окном.|Каждое диалоговое окно.|
-|[Сопоставьте сообщения Windows](../mfc/handling-windows-messages-in-your-dialog-box.md) с классом диалогового окна.|Каждое сообщение, которое необходимо обработать.|
+|[Создайте новый класс, производный от класса CDialog](creating-your-dialog-class.md) , для управления диалоговым окном.|Каждое диалоговое окно.|
+|[Сопоставьте сообщения Windows](handling-windows-messages-in-your-dialog-box.md) с классом диалогового окна.|Каждое сообщение, которое необходимо обработать.|
 |Объявите переменные члена класса для представления элементов управления в диалоговом окне.|Каждый элемент управления, который получает текстовое или числовое значение, к которому вы хотите получить доступ из программы.|
-|Укажите [способ обмена данными](../mfc/dialog-data-exchange-and-validation.md) между элементами управления и переменными-членами.|Каждый элемент управления, к которому требуется получить доступ из программы.|
-|Укажите [правила проверки](../mfc/dialog-data-exchange-and-validation.md) для переменных членов.|Каждый элемент управления, который при необходимости получает текстовое или числовое значение.|
+|Укажите [способ обмена данными](dialog-data-exchange-and-validation.md) между элементами управления и переменными-членами.|Каждый элемент управления, к которому требуется получить доступ из программы.|
+|Укажите [правила проверки](dialog-data-exchange-and-validation.md) для переменных членов.|Каждый элемент управления, который при необходимости получает текстовое или числовое значение.|
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Что вы хотите узнать подробнее
 
-- [Создание класса диалогового окна](../mfc/creating-your-dialog-class.md)
+- [Создание класса диалогового окна](creating-your-dialog-class.md)
 
-- [Обработка сообщений Windows в диалоговом окне](../mfc/handling-windows-messages-in-your-dialog-box.md)
+- [Обработка сообщений Windows в диалоговом окне](handling-windows-messages-in-your-dialog-box.md)
 
-- [Обмен и проверка данных диалоговых окон](../mfc/dialog-data-exchange-and-validation.md)
+- [Обмен и проверка данных диалоговых окон](dialog-data-exchange-and-validation.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Диалоговые окна](../mfc/dialog-boxes.md)<br/>
-[Работа с диалоговыми окнами в MFC](../mfc/life-cycle-of-a-dialog-box.md)
+[Диалоговые окна](dialog-boxes.md)<br/>
+[Работа с диалоговыми окнами в MFC](life-cycle-of-a-dialog-box.md)

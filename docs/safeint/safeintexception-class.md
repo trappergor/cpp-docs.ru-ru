@@ -11,19 +11,19 @@ helpviewer_keywords:
 - SafeIntException class
 - SafeIntException, constructor
 ms.assetid: 88bef958-1f48-4d55-ad4f-d1f9581a293a
-ms.openlocfilehash: e118d7e3cce47ebb93cef16319a8fc45aab1118b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8149a5e1216e26fafc1e0cd4a489cdad0551607c
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81349951"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84615413"
 ---
 # <a name="safeintexception-class"></a>Класс SafeIntException
 
 Класс `SafeInt` использует `SafeIntException` для определения причины, по которой не удается выполнить математическую операцию.
 
 > [!NOTE]
-> Последняя версия этой библиотеки [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt)находится по адресу .
+> Последняя версия этой библиотеки находится по адресу [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt) .
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -35,13 +35,13 @@ class SafeIntException;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-Имя                                                    | Описание
+name                                                    | Описание
 ------------------------------------------------------- | ------------------------------------
-[SafeIntException::SafeIntException](#safeintexception) | Создает объект `SafeIntException`.
+[SafeIntException:: SafeIntException](#safeintexception) | Создает объект `SafeIntException`.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
 
-[Класс SafeInt](../safeint/safeint-class.md) является единственным классом, который использует класс `SafeIntException`.
+[Класс SafeInt](safeint-class.md) является единственным классом, который использует класс `SafeIntException`.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -53,7 +53,7 @@ class SafeIntException;
 
 **Пространство имен:** msl::utilities
 
-## <a name="safeintexceptionsafeintexception"></a><a name="safeintexception"></a>SafeIntException::SafeIntException
+## <a name="safeintexceptionsafeintexception"></a><a name="safeintexception"></a>SafeIntException:: SafeIntException
 
 Создает объект `SafeIntException`.
 
@@ -67,10 +67,10 @@ SafeIntException(
 
 ### <a name="parameters"></a>Параметры
 
-*Код*<br/>
+*code*<br/>
 [in] Значение перечислимых данных, описывающее возникшую ошибку.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Возможные значения для параметра *code* определены в файле Safeint.h. Для удобства эти возможные значения также перечислены здесь.
 

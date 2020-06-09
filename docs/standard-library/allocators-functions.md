@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::CACHE_FREELIST [C++]
 - std::CACHE_SUBALLOC [C++]
 - std::SYNC_DEFAULT [C++]
-ms.openlocfilehash: a8b988511d0cdd46ae7f41bce29eb26f593a57c4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c2d9b84a2be42df38df36bb90c0b5aeee076bf6a
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364972"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623613"
 ---
 # <a name="ltallocatorsgt-macros"></a>Макросы &lt;распределителей&gt;
 
@@ -30,15 +30,15 @@ ms.locfileid: "81364972"
 
 ## <a name="allocator_decl"></a><a name="allocator_decl"></a>ALLOCATOR_DECL
 
-Дает шаблон класса разлесть.
+Возвращает шаблон класса распределителя.
 
 ```cpp
 #define ALLOCATOR_DECL(cache, sync, name) <alloc_template>
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
-Макродает `template <class Type> class name {.....}` определение шаблона и `template <> class name<void> {.....}` специализацию, которые вместе определяют шаблон класса разлктора, который использует фильтр `sync` синхронизации и кэш типа. `cache`
+Макрос создает определение шаблона `template <class Type> class name {.....}` и специализацию, `template <> class name<void> {.....}` которая вместе определяет шаблон класса распределителя, использующий фильтр синхронизации `sync` и кэш типа `cache` .
 
 Для компиляторов, которые могут компилировать повторную привязку, итоговое определение шаблона выглядит следующим образом:
 
@@ -76,7 +76,7 @@ public:
 #define CACHE_CHUNKLIST <cache_class>
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 ## <a name="cache_freelist"></a><a name="cache_freelist"></a>CACHE_FREELIST
 
@@ -86,7 +86,7 @@ public:
 #define CACHE_FREELIST(max) <cache_class>
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 ## <a name="cache_suballoc"></a><a name="cache_suballoc"></a>CACHE_SUBALLOC
 
@@ -96,7 +96,7 @@ public:
 #define CACHE_SUBALLOC <cache_class>
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 ## <a name="sync_default"></a><a name="sync_default"></a>SYNC_DEFAULT
 
@@ -106,10 +106,10 @@ public:
 #define SYNC_DEFAULT <sync_template>
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Если компилятор поддерживает компиляцию как однопоточных, так и многопоточных приложений, для однопоточных приложений макрос создает `stdext::allocators::sync_none`; для всех остальных случаев он создает `stdext::allocators::sync_shared`.
 
 ## <a name="see-also"></a>См. также раздел
 
-[\<>-подлатыватели](../standard-library/allocators-header.md)
+[\<allocators>](allocators-header.md)

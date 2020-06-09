@@ -15,12 +15,12 @@ helpviewer_keywords:
 - dialog boxes [MFC], retrieving data
 - retrieving dialog box data
 ms.assetid: 7d373554-7330-43ae-abf1-4bb14e437b4a
-ms.openlocfilehash: 651ec5779e3fe1190ff1a3f0f807fb0187e348f8
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: 1aaeea11dd7916332ab0c281561550039ee03498
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685748"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616777"
 ---
 # <a name="dialog-data-exchange-and-validation"></a>Обмен данными диалоговых окон и их проверка
 
@@ -28,11 +28,11 @@ ms.locfileid: "71685748"
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Что вы хотите узнать подробнее
 
-- [Обмен данными в диалоговом окне](../mfc/dialog-data-exchange.md)
+- [Обмен данными в диалоговом окне](dialog-data-exchange.md)
 
-- [Проверка данных диалогового окна](../mfc/dialog-data-validation.md)
+- [Проверка данных диалогового окна](dialog-data-validation.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Диалоговые окна](../mfc/dialog-boxes.md)<br/>
-[Работа с диалоговыми окнами в MFC](../mfc/life-cycle-of-a-dialog-box.md)
+[Диалоговые окна](dialog-boxes.md)<br/>
+[Работа с диалоговыми окнами в MFC](life-cycle-of-a-dialog-box.md)
