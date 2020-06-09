@@ -40,16 +40,16 @@ helpviewer_keywords:
 - std::allocator_traits [C++], destroy
 - std::allocator_traits [C++], max_size
 - std::allocator_traits [C++], select_on_container_copy_construction
-ms.openlocfilehash: 470b3086b4bdfa776558122eda9e496fa6c4bcdc
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: c9c03eb688a71e0587ca4faa14d89d8487d4ec59
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72690063"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84617414"
 ---
 # <a name="allocator_traits-class"></a>Класс allocator_traits
 
-Шаблон класса описывает объект, дополняющий *Тип распределителя*. Тип распределителя — это любой тип, описывающий объект allocator, который используется для управления выделенной памятью. В частности, для любого типа распределителя `Alloc` можно использовать `allocator_traits<Alloc>`, чтобы определить все сведения, необходимые контейнеру с распределителем. Дополнительные сведения см. в разделе [Класс allocator](../standard-library/allocator-class.md).
+Шаблон класса описывает объект, дополняющий *Тип распределителя*. Тип распределителя — это любой тип, описывающий объект allocator, который используется для управления выделенной памятью. В частности, для любого типа распределителя `Alloc` можно использовать `allocator_traits<Alloc>`, чтобы определить все сведения, необходимые контейнеру с распределителем. Дополнительные сведения см. в разделе [Класс allocator](allocator-class.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -58,9 +58,9 @@ template <class Alloc>
     class allocator_traits;
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Определения типов
 
 |||
 |-|-|
@@ -83,13 +83,13 @@ template <class Alloc>
 |||
 |-|-|
 |[allocate](#allocate)|Статический метод, который выделяет память с помощью указанного параметра распределителя.|
-|[construct](#construct)|Статический метод, который используется указанным распределителем для создания объекта.|
+|[создания](#construct)|Статический метод, который используется указанным распределителем для создания объекта.|
 |[deallocate](#deallocate)|Статический метод, который используется указанным распределителем для освобождения указанного количества объектов.|
-|[destroy](#destroy)|Статический метод, который используется указанным распределителем для вызова деструктора в объекте без освобождения его памяти.|
+|[завершить](#destroy)|Статический метод, который используется указанным распределителем для вызова деструктора в объекте без освобождения его памяти.|
 |[max_size](#max_size)|Статический метод, который используется указанным распределителем, чтобы определить максимальное число объектов, которые могут быть распределены.|
 |[select_on_container_copy_construction](#select_on_container_copy_construction)|Статический метод, который вызывает `select_on_container_copy_construction` в указанном распределителе.|
 
-### <a name="allocate"></a>памяти
+### <a name="allocate"></a><a name="allocate"></a>памяти
 
 Статический метод, который выделяет память с помощью указанного параметра распределителя.
 
@@ -102,13 +102,13 @@ static pointer allocate(Alloc& al, size_type count,
 
 #### <a name="parameters"></a>Параметры
 
-*al* \
+*Al*\
 Объект распределителя.
 
-*количество* \
+*расчета*\
 Число элементов для распределения.
 
-*указание* \
+*хинтинга*\
 `const_pointer`, который может помочь объекту allocator удовлетворить запрос хранилища, найдя адрес выделенного объекта до запроса. Пустой указатель рассматривается как отсутствие подсказки.
 
 #### <a name="return-value"></a>Возвращаемое значение
@@ -119,7 +119,7 @@ static pointer allocate(Alloc& al, size_type count,
 
 Второй метод возвращает `al.allocate(count, hint)`, если это выражение правильно сформировано; в противном случае возвращается `al.allocate(count)`.
 
-### <a name="construct"></a>создания
+### <a name="construct"></a><a name="construct"></a>создания
 
 Статический метод, который используется указанным распределителем для создания объекта.
 
@@ -130,20 +130,20 @@ static void construct(Alloc& al, Uty* ptr, Types&&... args);
 
 #### <a name="parameters"></a>Параметры
 
-*al* \
+*Al*\
 Объект распределителя.
 
-\ *ptr*
+*указатель*\
 Указатель места, в котором должен создаваться объект.
 
-*args* \
+*args*\
 Список аргументов, передаваемый в конструктор объекта.
 
-#### <a name="remarks"></a>Заметки
+#### <a name="remarks"></a>Комментарии
 
 Эта статическая функция-член вызывает `al.construct(ptr, args...)`, если выражение правильно сформировано; в противном случае оно оценивается как `::new (static_cast<void *>(ptr)) Uty(std::forward<Types>(args)...)`.
 
-### <a name="deallocate"></a>deallocate
+### <a name="deallocate"></a><a name="deallocate"></a>deallocate
 
 Статический метод, который используется указанным распределителем для освобождения указанного количества объектов.
 
@@ -155,22 +155,22 @@ static void deallocate(Alloc al,
 
 #### <a name="parameters"></a>Параметры
 
-*al* \
+*Al*\
 Объект распределителя.
 
-\ *ptr*
+*указатель*\
 Указатель на начальное расположение освобождаемых объектов.
 
-*количество* \
+*расчета*\
 Количество освобождаемых объектов.
 
-#### <a name="remarks"></a>Заметки
+#### <a name="remarks"></a>Комментарии
 
 Этот метод вызывает `al.deallocate(ptr, count)`.
 
 Этот метод ничего не создает.
 
-### <a name="destroy"></a>завершить
+### <a name="destroy"></a><a name="destroy"></a>завершить
 
 Статический метод, который используется указанным распределителем для вызова деструктора в объекте без освобождения его памяти.
 
@@ -181,17 +181,17 @@ template <class Uty>
 
 #### <a name="parameters"></a>Параметры
 
-*al* \
+*Al*\
 Объект распределителя.
 
-\ *ptr*
+*указатель*\
 Указатель на расположение объекта.
 
-#### <a name="remarks"></a>Заметки
+#### <a name="remarks"></a>Комментарии
 
 Этот метод вызывает `al.destroy(ptr)`, если выражение правильно сформировано; в противном случае оно оценивается как `ptr->~Uty()`.
 
-### <a name="max_size"></a>max_size
+### <a name="max_size"></a><a name="max_size"></a>max_size
 
 Статический метод, который используется указанным распределителем, чтобы определить максимальное число объектов, которые могут быть распределены.
 
@@ -201,14 +201,14 @@ static size_type max_size(const Alloc& al);
 
 #### <a name="parameters"></a>Параметры
 
-*al* \
+*Al*\
 Объект распределителя.
 
-#### <a name="remarks"></a>Заметки
+#### <a name="remarks"></a>Комментарии
 
 Этот метод возвращает `al.max_size()`, если это выражение правильно сформировано; в противном случае возвращается `numeric_limits<size_type>::max()`.
 
-### <a name="select_on_container_copy_construction"></a>select_on_container_copy_construction
+### <a name="select_on_container_copy_construction"></a><a name="select_on_container_copy_construction"></a>select_on_container_copy_construction
 
 Статический метод, который вызывает `select_on_container_copy_construction` в указанном распределителе.
 
@@ -218,13 +218,13 @@ static Alloc select_on_container_copy_construction(const Alloc& al);
 
 #### <a name="parameters"></a>Параметры
 
-*al* \
+*Al*\
 Объект распределителя.
 
 #### <a name="return-value"></a>Возвращаемое значение
 
-Этот метод возвращает `al.select_on_container_copy_construction()`, если этот тип имеет правильный формат; в противном случае возвращается значение *Al*.
+Этот метод возвращает `al.select_on_container_copy_construction()` , если этот тип имеет правильный формат; в противном случае возвращается значение *Al*.
 
-#### <a name="remarks"></a>Заметки
+#### <a name="remarks"></a>Комментарии
 
 Этот метод используется для указания распределителя при создании копии связанного контейнера.

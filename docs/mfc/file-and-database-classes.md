@@ -6,12 +6,12 @@ helpviewer_keywords:
 - database classes [MFC]
 - file classes [MFC]
 ms.assetid: 580b169c-e26e-4395-b128-5408d08c98fe
-ms.openlocfilehash: 0996810a2af835c5c98a4f3311d2411466d43583
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8874b9f99d3a5756b4ce66e2f5732f856bdd7078
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442399"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622632"
 ---
 # <a name="file-and-database-classes"></a>Классы файлов и баз данных
 
@@ -19,14 +19,14 @@ ms.locfileid: "79442399"
 
 Следующие категории классов поддерживают сохраняемость данных.
 
-- [Классы файлового ввода-вывода](../mfc/file-i-o-classes.md)
+- [Классов ввода-вывода файлов](file-i-o-classes.md)
 
-- [Классы OLE DB](../mfc/ole-db-classes.md)
+- [Классы OLE DB](ole-db-classes.md)
 
-- [Классы DAO](../mfc/dao-classes.md)
+- [Классы DAO](dao-classes.md)
 
-- [Классы ODBC](../mfc/odbc-classes.md)
+- [Классы ODBC](odbc-classes.md)
 
 ## <a name="see-also"></a>См. также раздел
 
-[Обзор класса](../mfc/class-library-overview.md)
+[Общие сведения о классах](class-library-overview.md)

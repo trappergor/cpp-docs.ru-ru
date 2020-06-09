@@ -2,12 +2,12 @@
 title: Настройка проекта C++ для Linux в Visual Studio
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 50d5df0e25e82238297458ec7fedb955654e525b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c60fd678caef20d8b5a715b0e40bba6a37407709
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "80150970"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623594"
 ---
 # <a name="configure-a-linux-project"></a>Настройка проекта Linux
 
@@ -126,7 +126,7 @@ sudo apt install zip
 ## <a name="see-also"></a>См. также
 
 [Настройка компилятора и свойств сборки](../build/working-with-project-properties.md)<br/>
-[Общие свойства C++ (Linux C++)](../linux/prop-pages/general-linux.md)<br/>
-[Каталоги VC++ (Linux C++)](../linux/prop-pages/directories-linux.md)<br/>
-[Свойства копирования источников проекта (Linux C++)](../linux/prop-pages/copy-sources-project.md)<br/>
-[Свойства событий сборки (Linux C++)](../linux/prop-pages/build-events-linux.md)
+[Общие свойства C++ (Linux C++)](prop-pages/general-linux.md)<br/>
+[Каталоги VC++ (Linux C++)](prop-pages/directories-linux.md)<br/>
+[Свойства копирования источников проекта (Linux C++)](prop-pages/copy-sources-project.md)<br/>
+[Свойства событий сборки (Linux C++)](prop-pages/build-events-linux.md)

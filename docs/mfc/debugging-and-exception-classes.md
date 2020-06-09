@@ -7,19 +7,19 @@ helpviewer_keywords:
 - debugging [MFC], exception classes
 - debugging [MFC], classes for debugging
 ms.assetid: 0d158efd-2e62-452e-9d2a-d3c30dfee7f9
-ms.openlocfilehash: 328d7a38c544b56f83ea3e8b1136b1122c4dfa14
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c7d1fc20556993c3c6690122786d7a767d895ad
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241188"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625939"
 ---
 # <a name="debugging-and-exception-classes"></a>Классы для отладки и работы с исключениями
 
-Эти классы обеспечивают поддержку для отладки динамическое выделение памяти, а также для передачи сведений об исключении из функции, где исключения функции где оно перехватывается.
+Эти классы обеспечивают поддержку отладки выделения динамической памяти и передачи сведений об исключениях из функции, в которой исключение вызывается для функции, в которой оно перехвачено.
 
-Используйте классы [CDumpContext](../mfc/reference/cdumpcontext-class.md) и [CMemoryState](../mfc/reference/cmemorystate-structure.md) во время разработки для помощи при отладке, как описано в разделе [отладка приложения MFC](/visualstudio/debugger/mfc-debugging-techniques). Используйте [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) определить класс любого объекта во время выполнения, как описано в статье [доступ к сведениям о классе среды выполнения](../mfc/accessing-run-time-class-information.md). Инфраструктура использует `CRuntimeClass` для динамического создания объектов определенного класса.
+Используйте классы [CDumpContext](reference/cdumpcontext-class.md) и [CMemoryState](reference/cmemorystate-structure.md) во время разработки, чтобы упростить отладку, как описано в разделе [Отладка приложений MFC](/visualstudio/debugger/mfc-debugging-techniques). Используйте [крунтимекласс](reference/cruntimeclass-structure.md) для определения класса любого объекта во время выполнения, как описано в статье [доступ к сведениям о классе времени выполнения](accessing-run-time-class-information.md). Платформа использует `CRuntimeClass` для динамического создания объектов определенного класса.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Общие сведения о классе](../mfc/class-library-overview.md)
+[Общие сведения о классах](class-library-overview.md)

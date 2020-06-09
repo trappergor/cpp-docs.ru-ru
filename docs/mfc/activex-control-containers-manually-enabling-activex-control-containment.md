@@ -6,36 +6,36 @@ helpviewer_keywords:
 - ActiveX control containers [MFC], enabling
 - ActiveX controls [MFC], enabling containers
 ms.assetid: 833bcde9-c9ad-4709-ad12-2fc2150fb6a5
-ms.openlocfilehash: 94ad6e8356b5dab54ae97dbdd90812039d1425c9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a8092a77020695163ce4fbacf7eeea2650ae9f86
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81322067"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625106"
 ---
 # <a name="activex-control-containers-manually-enabling-activex-control-containment"></a>Контейнеры элементов управления ActiveX. Включение вложения элемента управления ActiveX вручную
 
-Если вы не поддерживали поддержку управления ActiveX при использовании MFC Application Wizard для создания приложения, вам придется добавлять эту поддержку вручную. В этой статье описывается процесс ручного добавления элемента управления ActiveX в существующее контейнерное приложение OLE. Если вы заранее знаете, что вам нужна поддержка управления ActiveX в контейнере OLE, смотрите статью [Создание контейнера управления MFC ActiveX.](../mfc/reference/creating-an-mfc-activex-control-container.md)
+Если вы не включили поддержку элементов управления ActiveX при использовании мастера приложений MFC для создания приложения, вам потребуется добавить эту поддержку вручную. В этой статье описывается процесс добавления элемента управления ActiveX в существующее приложение контейнера OLE вручную. Если вы заранее знакомы с поддержкой элементов управления ActiveX в контейнере OLE, см. статью [Создание контейнера элементов управления ACTIVEX MFC](reference/creating-an-mfc-activex-control-container.md).
 
 >[!IMPORTANT]
-> ActiveX является устаревшей технологией, которая не должна использоваться для новых разработок. Для получения дополнительной информации о современных технологиях, которые заменяли ActiveX, [см.](activex-controls.md)
+> ActiveX — это устаревшая технология, которую не следует использовать для новой разработки. Дополнительные сведения о современных технологиях, которые заменяют ActiveX, см. в разделе [элементы управления ActiveX](activex-controls.md).
 
 > [!NOTE]
-> В этой статье в качестве примеров в процедурах и коде используется проект контейнера для управления ActiveX на основе диалога ActiveX под названием Container и встроенный элемент управления с именем Circ.
+> В этой статье используется проект контейнера элемента управления ActiveX с именем container и внедренный элемент управления с именем Circ в качестве примеров в процедурах и коде.
 
-Для поддержки элементов управления ActiveX необходимо добавить одну строку кода к двум файлам проекта.
+Для поддержки элементов управления ActiveX необходимо добавить одну строку кода в два файла проекта.
 
-- Измените функцию основного `InitInstance` диалога (находится в CONTAINER. CPP) Мастером приложения MFC, который звонит в [AfxEnableControlContainer,](reference/ole-initialization.md#afxenablecontrolcontainer)как в следующем примере:
+- Измените функцию главного диалогового окна `InitInstance` (находится в контейнере. CPP) с помощью мастера приложений MFC, выполняющего вызов [афксенаблеконтролконтаинер](reference/ole-initialization.md#afxenablecontrolcontainer), как показано в следующем примере:
 
-   [!code-cpp[NVC_MFCOleContainer#34](../mfc/codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_1.cpp)]
-    [!code-cpp[NVC_MFCOleContainer#35](../mfc/codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_2.cpp)]
+   [!code-cpp[NVC_MFCOleContainer#34](codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_1.cpp)]
+    [!code-cpp[NVC_MFCOleContainer#35](codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_2.cpp)]
 
-- Добавьте следующее в STDAFX вашего проекта. H файл заголовка:
+- Добавьте следующий фрагмент в файл STDAFX проекта. Файл заголовка H:
 
-   [!code-cpp[NVC_MFCOleContainer#36](../mfc/codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_3.h)]
+   [!code-cpp[NVC_MFCOleContainer#36](codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_3.h)]
 
-После завершения этих шагов перестроить проект, нажав на меню **Build.** **Build**
+После выполнения этих действий перестройте проект, щелкнув **Сборка** в меню **Сборка** .
 
 ## <a name="see-also"></a>См. также раздел
 
-[Контейнеры управления ActiveX](../mfc/activex-control-containers.md)
+[Контейнеры элементов управления ActiveX](activex-control-containers.md)

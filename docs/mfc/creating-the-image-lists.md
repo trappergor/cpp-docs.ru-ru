@@ -6,25 +6,25 @@ helpviewer_keywords:
 - image lists [MFC], creating for CListCtrl
 - lists [MFC], image
 ms.assetid: c2768515-deba-49e8-a6f3-5be6482afb19
-ms.openlocfilehash: 440ab6fdfe7663557f6c6a6607e617c793d26674
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bbba01a6a8e08ea53e164656733aa06e03dd87a7
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371572"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625951"
 ---
 # <a name="creating-the-image-lists"></a>Создание списков изображений
 
-Создание списков изображений является тем же, используете ли вы [CListView](../mfc/reference/clistview-class.md) или [CListCtrl.](../mfc/reference/clistctrl-class.md)
+Создание списков изображений одинаково при использовании [CListView](reference/clistview-class.md) или [CListCtrl](reference/clistctrl-class.md).
 
 > [!NOTE]
-> Вам нужны списки изображений только `LVS_ICON` в том случае, если элемент управления списком включает в себя стиль.
+> Если элемент управления "список" содержит стиль, необходимы только списки изображений `LVS_ICON` .
 
-Используйте `CImageList` класс для создания одного или нескольких списков изображений (для полноразмерных иконок, небольших иконок и состояний). См [CImageList](../mfc/reference/cimagelist-class.md)и [список просмотров](/windows/win32/Controls/using-list-view-controls) списков в SDK Windows.
+Класс используется `CImageList` для создания одного или нескольких списков изображений (для значков полного размера, мелких значков и состояний). См. раздел [CImageList](reference/cimagelist-class.md)и [Просмотр списка изображений](/windows/win32/Controls/using-list-view-controls) в Windows SDK.
 
-Звоните [cListCtrl::SetImageList](../mfc/reference/clistctrl-class.md#setimagelist) для каждого списка изображений; передать указатель на `CImageList` соответствующий объект.
+Вызовите [CListCtrl:: сетимажелист](reference/clistctrl-class.md#setimagelist) для каждого списка изображений. передайте указатель на соответствующий `CImageList` объект.
 
 ## <a name="see-also"></a>См. также раздел
 
-[Использование CListCtrl](../mfc/using-clistctrl.md)<br/>
-[Элементы управления](../mfc/controls-mfc.md)
+[Использование CListCtrl](using-clistctrl.md)<br/>
+[Элементы управления](controls-mfc.md)

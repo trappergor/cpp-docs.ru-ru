@@ -1,6 +1,6 @@
 ---
-title: Параметры /U и /u (отмена определения символа)
-ms.date: 11/04/2016
+title: /U, /u (отмена определения символов)
+ms.date: 06/08/2020
 f1_keywords:
 - VC.Project.VCCLCompilerTool.UndefinePreprocessorDefinitions
 - VC.Project.VCCLWCECompilerTool.UndefinePreprocessorDefinitions
@@ -13,67 +13,65 @@ helpviewer_keywords:
 - /U compiler option [C++]
 - U compiler option [C++]
 ms.assetid: 7bc0474f-6d1f-419b-807d-0d8816763b2a
-ms.openlocfilehash: bfc03ebd5c900bf8bf81b4a50eed02111baf85ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d7a2b3d5df2b22dc53eb7b58bfb78cdb1824b26
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317007"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616665"
 ---
-# <a name="u-u-undefine-symbols"></a>Параметры /U и /u (отмена определения символа)
+# <a name="u-u-undefine-symbols"></a>/U, /u (отмена определения символов)
 
-**/U** параметр компилятора отменяет определение заданного символа препроцессора. **/U** параметр компилятора отменяет определение символов для систем Майкрософт, определяемых компилятором.
+Параметр компилятора отменяет **`/U`** Определение указанного символа препроцессора. Параметр компилятора отменяет **`/u`** Определение символов, определяемых компилятором для Microsoft.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
-/U[ ]symbol
-/u
-```
+> **`/U`**\[]*символ*\
+> **`/u`**
 
 ## <a name="arguments"></a>Аргументы
 
-*Символ*<br/>
-Символ препроцессора для отмены определения.
+*знак*<br/>
+Символ препроцессора для деопределения.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
-Ни **/U** или **/u** может отменить определение символа, созданного с помощью **#define** директива.
+Ни один из **`/U`** параметров и не **`/u`** может отменить определение символа, созданного с помощью **`#define`** директивы.
 
-**/U** может отменить определение символа, который ранее был определен с помощью **/D** параметр.
+**`/U`** Параметр может отменить определение символа, который ранее был определен с помощью **`/D`** параметра.
 
-По умолчанию компилятор определяет следующие символы характерные для Майкрософт.
+По умолчанию компилятор может определить большое количество символов, характерных для Microsoft. Ниже приведены некоторые распространенные из них.
 
-|Символ|Функция|
-|------------|--------------|
-|_CHAR_UNSIGNED|Тип char по умолчанию не подписан. Определяется, если [/j](j-default-char-type-is-unsigned.md) параметра.|
-|_CPPRTTI|Определен для кода, компилируемого с [/GR](gr-enable-run-time-type-information.md) параметр.|
-|_CPPUNWIND|Определен для кода, компилируемого с [/EHsc](eh-exception-handling-model.md) параметр.|
-|_DLL|Определяется, если [/MD](md-mt-ld-use-run-time-library.md) параметра.|
-|_M_IX86|По умолчанию, определенные для 600 x86 целевых объектов.|
-|_MSC_VER|Для получения дополнительной информации см. [Predefined Macros](../../preprocessor/predefined-macros.md).|
-|_WIN32|Определяется для приложений WIN32. Определяется всегда.|
-|_MT|Определяется, если [/MD или/MT](md-mt-ld-use-run-time-library.md) параметра.|
+| Символ | Компонент |
+|--|--|
+| `_CHAR_UNSIGNED` | Тип char по умолчанию не подписан. Определяется при [**`/J`**](j-default-char-type-is-unsigned.md) указании параметра. |
+| `_CPPRTTI` | Определяется для кода, скомпилированного с [**`/GR`**](gr-enable-run-time-type-information.md) параметром. |
+| `_CPPUNWIND` | Определяется для кода, скомпилированного с [**`/EHsc`**](eh-exception-handling-model.md) параметром. |
+| `_DLL` | Определяется при [**`/MD`**](md-mt-ld-use-run-time-library.md) указании параметра. |
+| `_M_IX86` | По умолчанию для целевых объектов x86 определено значение 600. |
+| `_MSC_VER` | Определяется как уникальное целочисленное значение для каждой версии компилятора. Дополнительные сведения см. в разделе [стандартные макросы](../../preprocessor/predefined-macros.md). |
+| `_WIN32` | Определено для приложений WIN32. Определяется всегда. |
+| `_MT` | Определяется, если указан параметр [ **`/MD`** или **`/MT`** ](md-mt-ld-use-run-time-library.md) . |
+
+Полный список предварительно определенных макросов для Microsoft см. в разделе [предопределенные макросы](../../preprocessor/predefined-macros.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Подробнее см. в статье [Настройка компилятора C++ и свойства сборки в Visual Studio](../working-with-project-properties.md).
 
-1. Откройте папку **C/C++** .
+1. Выберите страницу свойств свойства **конфигурации**  >  **C/C++**  >  **Дополнительно** .
 
-1. Нажмите кнопку **Дополнительно** страницу свойств.
-
-1. Изменить **отменить определения препроцессора** или **отменить все определения препроцессора** свойства.
+1. Измените свойства **Отменить определения препроцессора** или **отменить определение всех определений препроцессора** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Установка данного параметра компилятора программным способом
 
 - См. описания свойств <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UndefineAllPreprocessorDefinitions%2A> и <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UndefinePreprocessorDefinitions%2A>.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Параметры компилятора MSVC](compiler-options.md)<br/>
 [Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)<br/>
-[/J (тип символа по умолчанию не подписан)](j-default-char-type-is-unsigned.md)<br/>
-[/GR (предоставление информации о типах во время выполнения)](gr-enable-run-time-type-information.md)<br/>
-[/EH (модель обработки исключений)](eh-exception-handling-model.md)<br/>
-[/MD, /MT, /LD (использование библиотеки времени выполнения)](md-mt-ld-use-run-time-library.md)
+[**`/J`**(Тип char по умолчанию не подписан)](j-default-char-type-is-unsigned.md)<br/>
+[**`/GR`**(Включить сведения о типах времени выполнения)](gr-enable-run-time-type-information.md)<br/>
+[**`/EH`**(Модель обработки исключений)](eh-exception-handling-model.md)<br/>
+[**`/MD`**, **`/MT`** , **`/LD`** (Использовать библиотеку времени выполнения)](md-mt-ld-use-run-time-library.md)

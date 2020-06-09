@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], creating
 - MFC dialog boxes [MFC], displaying
 ms.assetid: 1c5219ee-8b46-44bc-9708-83705d4f248b
-ms.openlocfilehash: 6d23e4d2c9249ce248eb8092963036f2ba5cacac
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: 649d64f8e8b894027b9d6850b62d357d79c1dafa
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685745"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616275"
 ---
 # <a name="creating-and-displaying-dialog-boxes"></a>Создание и отображение диалоговых окон
 
@@ -21,13 +21,13 @@ ms.locfileid: "71685745"
 
 ### <a name="dialog-creation"></a>Создание диалогового окна
 
-|Тип диалогового окна|Создание|
+|Тип диалога|Создание|
 |-----------------|----------------------|
-|[Модаль](../mfc/creating-modeless-dialog-boxes.md)|Создайте `CDialog`, а затем вызовите функцию `Create` члена.|
-|[Косы](../mfc/creating-modal-dialog-boxes.md)|Создайте `CDialog`, а затем вызовите функцию `DoModal` члена.|
+|[Модаль](creating-modeless-dialog-boxes.md)|Создайте `CDialog` , а затем вызовите `Create` функцию члена.|
+|[Косы](creating-modal-dialog-boxes.md)|Создайте `CDialog` , а затем вызовите `DoModal` функцию члена.|
 
-При необходимости можно создать диалоговое окно из созданного [шаблона диалогового окна в памяти](../mfc/using-a-dialog-template-in-memory.md) , а не из ресурса шаблона диалогового окна. Однако это дополнительная тема.
+При необходимости можно создать диалоговое окно из созданного [шаблона диалогового окна в памяти](using-a-dialog-template-in-memory.md) , а не из ресурса шаблона диалогового окна. Однако это дополнительная тема.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-[Работа с диалоговыми окнами в MFC](../mfc/life-cycle-of-a-dialog-box.md)
+[Работа с диалоговыми окнами в MFC](life-cycle-of-a-dialog-box.md)

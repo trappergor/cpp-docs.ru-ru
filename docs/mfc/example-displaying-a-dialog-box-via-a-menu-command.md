@@ -10,12 +10,12 @@ helpviewer_keywords:
 - examples [MFC], dialog boxes
 - menu items [MFC], examples
 ms.assetid: e8692549-acd7-478f-9c5e-ba310ce8cccd
-ms.openlocfilehash: ec4e0495519db3e30213d8abb9292409f2110e3c
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 281fa77f4954691002268d1e597146a615264695
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078831"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616038"
 ---
 # <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>Пример. Отображение диалогового окна через команду меню
 
@@ -25,7 +25,7 @@ ms.locfileid: "80078831"
 
 - Отображение немодального диалогового окна с помощью команды меню.
 
-Оба образца процедур предназначены для приложений MFC и будут работать в приложении, созданном с помощью [мастера приложений MFC](../mfc/reference/mfc-application-wizard.md).
+Оба образца процедур предназначены для приложений MFC и будут работать в приложении, созданном с помощью [мастера приложений MFC](reference/mfc-application-wizard.md).
 
 В процедурах используются следующие имена и значения:
 
@@ -44,7 +44,7 @@ ms.locfileid: "80078831"
 
 1. Добавьте класс для диалогового окна. Дополнительные сведения см. [в разделе Добавление класса](../ide/adding-a-class-visual-cpp.md) .
 
-1. В **представление классов**выберите класс Document (кдисплайдиалогдок). В окне **Свойства** нажмите кнопку **События**. Дважды щелкните идентификатор команды меню (ID_VIEW_TEST). Затем щелкните стрелку вниз и выберите **\<добавить > онвиевтест**.
+1. В **представление классов**выберите класс Document (кдисплайдиалогдок). В окне **Свойства** нажмите кнопку **События** . Дважды щелкните идентификатор команды меню (ID_VIEW_TEST). Затем щелкните стрелку вниз и выберите ** \<Add> онвиевтест**.
 
    Если вы добавили команду меню в мэйнфрейм приложения MDI, выберите вместо этого класс приложения (Кдисплайдиалогапп).
 
@@ -54,7 +54,7 @@ ms.locfileid: "80078831"
    #include "TestDialog.h"
    ```
 
-1. Добавьте следующий код, чтобы `OnViewTest` для реализации функции:
+1. Добавьте следующий код в, чтобы `OnViewTest` реализовать функцию:
 
    ```cpp
    CTestDialog testdlg;
@@ -99,7 +99,7 @@ ms.locfileid: "80078831"
    delete m_pTestDlg;
    ```
 
-   - Добавьте следующий код, чтобы `OnViewTest` для реализации функции:
+   - Добавьте следующий код в, чтобы `OnViewTest` реализовать функцию:
 
    ```cpp
    if (NULL == m_pTestDlg)
@@ -110,7 +110,7 @@ ms.locfileid: "80078831"
    m_pTestDlg->ShowWindow(SW_SHOW);
    ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-[Диалоговые окна](../mfc/dialog-boxes.md)<br/>
-[Модальные и немодальные диалоговые окна](../mfc/modal-and-modeless-dialog-boxes.md)
+[Диалоговые окна](dialog-boxes.md)<br/>
+[Модальные и немодальные диалоговые окна](modal-and-modeless-dialog-boxes.md)

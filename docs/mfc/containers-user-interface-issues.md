@@ -6,26 +6,26 @@ helpviewer_keywords:
 - OLE containers [MFC], user interface
 - user interface issues
 ms.assetid: c833c249-a633-4f1c-82d6-ec6b4892863a
-ms.openlocfilehash: 68a56983bccbdb2ed7f6701577ea5abaa7ea04c6
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 623b5f5948d2428ccb4dab37ca227516474f2c1f
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346072"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625959"
 ---
 # <a name="containers-user-interface-issues"></a>Контейнеры. Проблемы пользовательского интерфейса
 
-Необходимо добавить ряд функций пользовательского интерфейса приложения-контейнера справляются с управлением связанные и внедренные элементы. Эти функции включают в себя изменения структуры меню и на события, приложение обрабатывает. Подробные сведения о них см. в следующих статьях:
+Для адекватного управления связанными и внедренными элементами необходимо добавить ряд функций в пользовательский интерфейс приложения-контейнера. Эти функции подразумевают изменения в структуре меню и на события, обрабатываемые приложением. Подробные сведения о них см. в следующих статьях:
 
-|Сведения о|См.|
+|Для получения информации о|См.|
 |------------------------|---------|
-|Добавления меню для контейнеров|[Меню и ресурсы. Добавление контейнеров](../mfc/menus-and-resources-container-additions.md)|
-|Дополнительные ресурсы для контейнеров|[Меню и ресурсы. Добавление контейнеров](../mfc/menus-and-resources-container-additions.md)|
-|Рисование связанных или внедренных элементов|[Образец контейнера](../overview/visual-cpp-samples.md)|
-|Новые диалоговые окна для контейнеров|[Диалоговые окна в OLE](../mfc/dialog-boxes-in-ole.md)|
+|Добавления меню для контейнеров|[Меню и ресурсы. Добавление контейнеров](menus-and-resources-container-additions.md)|
+|Дополнительные ресурсы для контейнеров|[Меню и ресурсы. Добавление контейнеров](menus-and-resources-container-additions.md)|
+|Рисование связанных или внедренных элементов|[Пример контейнера](../overview/visual-cpp-samples.md)|
+|Новые диалоговые окна для контейнеров|[Диалоговые окна в OLE](dialog-boxes-in-ole.md)|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Контейнеры](../mfc/containers.md)<br/>
-[Контейнеры. Дополнительные возможности](../mfc/containers-advanced-features.md)<br/>
-[Меню и ресурсы (OLE)](../mfc/menus-and-resources-ole.md)
+[Контейнеры](containers.md)<br/>
+[Контейнеры. Дополнительные возможности](containers-advanced-features.md)<br/>
+[Меню и ресурсы (OLE)](menus-and-resources-ole.md)
