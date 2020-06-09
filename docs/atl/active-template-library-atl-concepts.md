@@ -4,12 +4,12 @@ ms.date: 05/06/2019
 helpviewer_keywords:
 - ATL, about ATL
 ms.assetid: a3960991-4d76-4da5-9568-3fa7fde53ff4
-ms.openlocfilehash: a7b6a40eaed05462f3aa5c877a1c4da3e19c0b03
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: cc96b5ed931713ca64a0582ca1cc18a8526ea8af
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65836996"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616687"
 ---
 # <a name="active-template-library-atl-concepts"></a>Основные понятия активной библиотеки шаблонных классов (ATL)
 
@@ -19,85 +19,85 @@ ms.locfileid: "65836996"
 
 ## <a name="in-this-section"></a>В этом разделе
 
-[Введение в модель COM и ATL](../atl/introduction-to-com-and-atl.md)<br/>
+[Введение в модель COM и ATL](introduction-to-com-and-atl.md)<br/>
 Объясняет основные понятия модели COM. В этой статье также приводится краткое описание библиотеки ATL и вариантов ее использования.
 
-[Основы COM-объектов ATL](../atl/fundamentals-of-atl-com-objects.md)<br/>
+[Основы COM-объектов ATL](fundamentals-of-atl-com-objects.md)<br/>
 Описание отношений между различными классами ATL и реализации этих классов.
 
-[Сдвоенные интерфейсы и ATL](../atl/dual-interfaces-and-atl.md)<br/>
+[Сдвоенные интерфейсы и ATL](dual-interfaces-and-atl.md)<br/>
 Описание сдвоенных интерфейсов с точки зрения ATL.
 
-[Коллекции и перечислители ATL](../atl/atl-collections-and-enumerators.md)<br/>
+[Коллекции и перечислители ATL](atl-collections-and-enumerators.md)<br/>
 Описание реализации и создания коллекций и перечислителей в ATL.
 
-[Основные сведения о составном элементе управления](../atl/atl-composite-control-fundamentals.md)<br/>
+[Основные сведения о составном элементе управления](atl-composite-control-fundamentals.md)<br/>
 Содержит пошаговые инструкции для создания составного элемента управления. Составной элемент управления — это тип элемента управления ActiveX, который может содержать другие элементы управления ActiveX или элементы управления Windows.
 
-[Часто задаваемые вопросы о вложении элементов управления ATL](../atl/atl-control-containment-faq.md)<br/>
+[Вложение элемента управления ATL: вопросы и ответы](atl-control-containment-faq.md)<br/>
 Рассматриваются основные вопросы, связанные с размещением элементов управления с помощью ATL.
 
-[Страницы свойств COM в ATL](../atl/atl-com-property-pages.md)<br/>
+[Страницы свойств ATL COM](atl-com-property-pages.md)<br/>
 Описывается, как указывать и реализовывать страницы свойств COM.
 
-[Поддержка элементов управления DHTML в ATL](../atl/atl-support-for-dhtml-controls.md)<br/>
+[Поддержка ATL для элементов управления DHTML](atl-support-for-dhtml-controls.md)<br/>
 Содержит пошаговые инструкции для создания элемента управления DHTML.
 
-[Точки подключения ATL](../atl/atl-connection-points.md)<br/>
+[Точки подключения ATL](atl-connection-points.md)<br/>
 Описание точек подключения и их реализации библиотекой ATL.
 
-[Обработка событий и ATL](../atl/event-handling-and-atl.md)<br/>
-Описание действий, которые необходимо выполнить для обработки событий COM с помощью классов библиотеки ATL [IDispEventImpl](../atl/reference/idispeventimpl-class.md) и [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md).
+[Обработка событий и ATL](event-handling-and-atl.md)<br/>
+Описание действий, которые необходимо выполнить для обработки событий COM с помощью классов библиотеки ATL [IDispEventImpl](reference/idispeventimpl-class.md) и [IDispEventSimpleImpl](reference/idispeventsimpleimpl-class.md).
 
-[ATL и упаковщик в режиме свободного потока](../atl/atl-and-the-free-threaded-marshaler.md)<br/>
+[ATL и бесплатный потоковый модуль упаковки](atl-and-the-free-threaded-marshaler.md)<br/>
 Содержит сведения о параметре мастера простых объектов ATL, который позволяет классу вычислять упаковщик в режиме свободного потока (FTM).
 
-[Указание потоковой модели проекта](../atl/specifying-the-threading-model-for-a-project-atl.md)<br/>
+[Указание потоковой модели проекта](specifying-the-threading-model-for-a-project-atl.md)<br/>
 Описывает макросы, доступные для контроля производительности в среде выполнения в связи с потоками в проекте.
 
-[Модульные классы ATL](../atl/atl-module-classes.md)<br/>
+[Классы модулей ATL](atl-module-classes.md)<br/>
 Описывает новые классы модуля в ATL 7.0. Классы модуля реализуют базовые возможности, необходимые для библиотеки ATL.
 
-[Службы ATL](../atl/atl-services.md)<br/>
+[Службы ATL](atl-services.md)<br/>
 Описывает последовательность событий, возникающих при реализации службы. Также рассказывает о некоторых понятиях, связанных с разработкой службы.
 
-[Классы окон ATL](../atl/atl-window-classes.md)<br/>
+[Классы окон ATL](atl-window-classes.md)<br/>
 Описывает способы создания и настройки суперкласса и подкласса окон в ATL. Классы окон ATL не совпадают с классами COM.
 
-[Классы коллекций ATL](../atl/atl-collection-classes.md)<br/>
+[Классы коллекций ATL](atl-collection-classes.md)<br/>
 Описывает, как использовать массивы и схемы в ATL.
 
-[Компонент реестра ATL (регистратор)](../atl/atl-registry-component-registrar.md)<br/>
+[Компонент реестра ATL (регистратор)](atl-registry-component-registrar.md)<br/>
 Описывает синтаксис и заменяемые параметры в скрипте ATL. Также описывает настройку статической ссылки на регистратор.
 
-[Программирование с использованием ATL и кода среды выполнения C](../atl/programming-with-atl-and-c-run-time-code.md)<br/>
+[Программирование с использованием ATL и кода среды выполнения C](programming-with-atl-and-c-run-time-code.md)<br/>
 Описывает преимущества статического или динамического связывания в библиотеке среды выполнения C (CRT).
 
-[Программирование с использованием CComBSTR](../atl/programming-with-ccombstr-atl.md)<br/>
+[Программирование с использованием CComBSTR](programming-with-ccombstr-atl.md)<br/>
 Рассматривает несколько ситуаций, требующих осторожности при программировании с использованием `CComBSTR`.
 
-[Справочник по кодировке](../atl/atl-encoding-reference.md)<br/>
+[Справочник по кодировке](atl-encoding-reference.md)<br/>
 Описывает функции и макросы, которые поддерживают кодирование в различных распространенных стандартах Интернета, например uuencode, шестнадцатеричная кодировка и UTF8 в atlenc.h.
 
-[Справочник по служебным программам](../atl/atl-utilities-reference.md)<br/>
-Предоставляет код для управления путями и URL-адресами в форме [CPathT](../atl/reference/cpatht-class.md) и [CUrl](../atl/reference/curl-class.md). Пул потоков [CThreadPool](../atl/reference/cthreadpool-class.md) можно использовать в собственных приложениях. Этот код можно найти в файлах atlpath.h и atlutil.h.
+[Справочник по служебным программам](atl-utilities-reference.md)<br/>
+Предоставляет код для управления путями и URL-адресами в форме [CPathT](reference/cpatht-class.md) и [CUrl](reference/curl-class.md). Пул потоков [CThreadPool](reference/cthreadpool-class.md) можно использовать в собственных приложениях. Этот код можно найти в файлах atlpath.h и atlutil.h.
 
 ## <a name="related-sections"></a>Связанные разделы
 
-[Учебник по ATL](../atl/active-template-library-atl-tutorial.md)<br/>
+[Учебник по ATL](active-template-library-atl-tutorial.md)<br/>
 Описывает создание элементов управления и демонстрирует некоторые основные сведения об ATL в процессе.
 
 [Примеры библиотек ATL](../overview/visual-cpp-samples.md)<br/>
 Предоставляет описания и ссылки на примеры программ ATL.
 
-[Создание проекта ATL](../atl/reference/creating-an-atl-project.md)<br/>
+[Создание проекта ATL](reference/creating-an-atl-project.md)<br/>
 Содержит сведения о мастере проектов ATL.
 
-[Мастер элементов управления ATL](../atl/reference/atl-control-wizard.md)<br/>
+[Мастер элементов управления ATL](reference/atl-control-wizard.md)<br/>
 Обсуждает способ добавления классов.
 
 [Атрибутивное программирование](../windows/attributed-programming-concepts.md)<br/>
 Общие сведения об использовании атрибутов для упрощения программирования с моделью COM, а также ссылки на более подробные разделы.
 
-[Общие сведения о классах ATL](../atl/atl-class-overview.md)<br/>
+[Общие сведения о классе ATL](atl-class-overview.md)<br/>
 Предоставляет справочные сведения и ссылки на классы ATL.

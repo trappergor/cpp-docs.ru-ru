@@ -7,35 +7,35 @@ helpviewer_keywords:
 - events [MFC], event-driven programming
 - message-driven programming [MFC]
 ms.assetid: d799ed8c-6a9f-4f05-be5d-29cb5bc6d185
-ms.openlocfilehash: 4ddfd0a5ff506e17efeb63624b7cb8c6a8b1eda4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: db529e2a22b45de3c6f6a659874bbaa941187217
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383793"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84624291"
 ---
 # <a name="messages-and-commands-in-the-framework"></a>Сообщения и команды платформы
 
-Приложения, написанные для Microsoft Windows, «message driven». В ответ на события, такие как щелчки мышью, нажатия клавиш, окно перемещений и т. д. Windows отправляет сообщения в окно «правильное». Платформа приложений обработки сообщений Windows, подобно любому другому приложению для Windows. Но платформа также предоставляет некоторые улучшения, которые делают обработку сообщений проще, упрощает управление системой и лучше инкапсулированный.
+Приложения, написанные для Microsoft Windows, являются "управляемым сообщением". В ответ на такие события, как щелчок мыши, нажатие клавиш, перемещение окон и т. д., Windows отправляет сообщения в соответствующее окно. Приложения платформы обрабатывают сообщения Windows, как и любые другие приложения для Windows. Но платформа также предоставляет некоторые усовершенствования, упрощающие обработку сообщений, более удобное и сопровождаемое.
 
-В следующих разделах рассматриваются основные термины, используемые в остальной части статьи семейства для обсуждения сообщения и команды:
+В следующих разделах представлены основные термины, используемые в остальной части семейства статей для обсуждения сообщений и команд.
 
-- [Сообщения](../mfc/messages.md)
+- [Сообщения](messages.md)
 
-- [Обработчики сообщений](../mfc/message-handlers.md)
+- [Обработчики сообщений](message-handlers.md)
 
-- [Категории сообщений](../mfc/message-categories.md)
+- [Категории сообщений](message-categories.md)
 
-- [Сообщения Windows и уведомление элемента управления](../mfc/message-categories.md)
+- [Сообщения Windows и уведомления об управлении](message-categories.md)
 
-- [Сообщения команды](../mfc/message-categories.md)
+- [Сообщения команды](message-categories.md)
 
-- [Схемы сообщений](../mfc/mapping-messages.md)
+- [Схемы сообщений](mapping-messages.md)
 
-- [Объекты пользовательского интерфейса и идентификаторы команд](../mfc/user-interface-objects-and-command-ids.md)
+- [Объекты пользовательского интерфейса и идентификаторы команд](user-interface-objects-and-command-ids.md)
 
-- [Целевые объекты команд](../mfc/command-targets.md)
+- [Целевые объекты команды](command-targets.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Обработка и сопоставление сообщений](../mfc/message-handling-and-mapping.md)
+[Обработка и сопоставление сообщений](message-handling-and-mapping.md)
