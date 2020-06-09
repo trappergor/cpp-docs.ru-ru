@@ -9,16 +9,16 @@ helpviewer_keywords:
 - stdext::allocators [C++], allocator_fixed_size
 - stdext::allocator_fixed_size
 ms.assetid: 138f3ef8-b0b3-49c3-9486-58f2213c172f
-ms.openlocfilehash: 5ee506838ea723b82f04bba301c19c0149d986bf
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 124c49b22566e44989fd30a3274c2d121532eef4
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450998"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84617480"
 ---
-# <a name="allocatorfixedsize-class"></a>Класс allocator_fixed_size
+# <a name="allocator_fixed_size-class"></a>Класс allocator_fixed_size
 
-Описывает объект, управляющий выделением и освобождением памяти для объектов типа *Type* , использующих кэш типа [cache_freelist](../standard-library/cache-freelist-class.md) с длиной, управляемой [max_fixed_size](../standard-library/max-fixed-size-class.md).
+Описывает объект, управляющий выделением и освобождением памяти для объектов типа *Type* , использующих кэш типа [cache_freelist](cache-freelist-class.md) с длиной, управляемой [max_fixed_size](max-fixed-size-class.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -33,16 +33,16 @@ class allocator_fixed_size;
 |---------------|-----------------|
 |*Type*|Тип элементов, распределяемых распределителем.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
-Макрос [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) передает этот класс в качестве параметра *Name* в следующей инструкции:`ALLOCATOR_DECL(CACHE_FREELIST(stdext::allocators::max_fixed_size<10>), SYNC_DEFAULT, allocator_fixed_size);`
+Макрос [ALLOCATOR_DECL](allocators-functions.md#allocator_decl) передает этот класс в качестве параметра *Name* в следующей инструкции:`ALLOCATOR_DECL(CACHE_FREELIST(stdext::allocators::max_fixed_size<10>), SYNC_DEFAULT, allocator_fixed_size);`
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<allocators>
+**Заголовок:**\<allocators>
 
 **Пространство имен:** stdext
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<allocators>](allocators-header.md)
