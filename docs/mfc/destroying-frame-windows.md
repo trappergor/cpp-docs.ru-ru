@@ -15,25 +15,25 @@ helpviewer_keywords:
 - OnClose method [MFC]
 - PostNcDestroy method [MFC]
 ms.assetid: 5affca77-1999-4507-a2b2-9aa226611b4b
-ms.openlocfilehash: b64298bd2b0f14c30c824d78947a17628adec8b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4bc7945ecd9aee9021ce97fa3ea05f512c58fe20
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394641"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621920"
 ---
 # <a name="destroying-frame-windows"></a>Уничтожение окон фрейма
 
-Платформа MFC управляет уничтожение окна, а также создание этих окон, связанных с framework документов и представлений. Если вы создаете дополнительные окна, вы несете ответственность для уничтожение.
+Платформа MFC управляет уничтожением окна, а также созданием окон, связанных с документами и представлениями платформы. Если вы создаете дополнительные окна, вы несете ответственность за их уничтожение.
 
-В структуре, когда пользователь закрывает окно фрейма окна по умолчанию [OnClose](../mfc/reference/cwnd-class.md#onclose) вызовов обработчика [DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow). Последняя функция-член вызывается при уничтожении окна Windows является [OnNcDestroy](../mfc/reference/cwnd-class.md#onncdestroy), выполняющий очистку, вызывает [по умолчанию](../mfc/reference/cwnd-class.md#default) член функции для выполнения очистки Windows и наконец вызывает виртуальная функция-член [PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy). [CFrameWnd](../mfc/reference/cframewnd-class.md) реализация `PostNcDestroy` удаляет объектом окна C++. Никогда не следует использовать C++ **удалить** оператора в окне рамки. Взамен рекомендуется использовать `DestroyWindow`.
+В платформе, когда пользователь закрывает окно фрейма, обработчик [OnClose](reference/cwnd-class.md#onclose) окна по умолчанию вызывает [дестройвиндов](reference/cwnd-class.md#destroywindow). Последняя функция-член, вызываемая при уничтожении окна Windows, — это [OnNcDestroy](reference/cwnd-class.md#onncdestroy), который выполняет некоторую очистку, вызывает функцию-член [по умолчанию](reference/cwnd-class.md#default) для выполнения очистки Windows и, наконец, вызывает виртуальную функцию-член [постнкдестрой](reference/cwnd-class.md#postncdestroy). Реализация [CFrameWnd](reference/cframewnd-class.md) `PostNcDestroy` удаляет объект окна C++. Не следует использовать оператор **Delete** C++ в окне фрейма. Взамен рекомендуется использовать `DestroyWindow`.
 
-При закрытии главного окна, закрытия приложения. Если изменяются несохраненные документы, платформа отображает окно сообщения для запроса, если документы должны сохраняться и гарантирует, что соответствующие документы сохраняются при необходимости.
+При закрытии главного окна приложение закрывается. При наличии измененных несохраненных документов платформа отображает окно сообщения, в котором следует указать, следует ли сохранять документы, и обеспечить сохранение соответствующих документов при необходимости.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Выберите для получения дополнительных сведений
+## <a name="what-do-you-want-to-know-more-about"></a>Что вы хотите узнать подробнее
 
-- [Создание окон фрейма документа](../mfc/creating-document-frame-windows.md)
+- [Создание окон фрейма документа](creating-document-frame-windows.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Использование окон фрейма](../mfc/using-frame-windows.md)
+[Использование окон фрейма](using-frame-windows.md)

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], modal
 - modal dialog boxes [MFC]
 ms.assetid: e83df336-5994-4b8f-8233-7942f997315b
-ms.openlocfilehash: 886229a2b66968bf76129ecb1da838bd36e66215
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: 857bb3ea9e66ca0be155413faea23c0aba2abc9e
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685178"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622211"
 ---
 # <a name="modal-and-modeless-dialog-boxes"></a>Модальные и немодальные диалоговые окна
 
-Класс [CDialog](../mfc/reference/cdialog-class.md) можно использовать для управления двумя видами диалоговых окон:
+Класс [CDialog](reference/cdialog-class.md) можно использовать для управления двумя видами диалоговых окон:
 
 - *Модальные диалоговые окна*, требующие ответа пользователя перед продолжением программы
 
@@ -32,9 +32,9 @@ ms.locfileid: "71685178"
 
 1. Соедините [элементы управления ресурса диалогового окна с обработчиками сообщений](../windows/adding-event-handlers-for-dialog-box-controls.md) в классе диалогового окна.
 
-1. Добавление элементов данных, связанных с элементами управления диалогового окна, и задание [обмена данными диалога](../mfc/dialog-data-exchange.md) и [проверки данных диалоговых окон](../mfc/dialog-data-validation.md) для элементов управления.
+1. Добавление элементов данных, связанных с элементами управления диалогового окна, и задание [обмена данными диалога](dialog-data-exchange.md) и [проверки данных диалоговых окон](dialog-data-validation.md) для элементов управления.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Диалоговые окна](../mfc/dialog-boxes.md)<br/>
-[Работа с диалоговыми окнами в MFC](../mfc/life-cycle-of-a-dialog-box.md)
+[Диалоговые окна](dialog-boxes.md)<br/>
+[Работа с диалоговыми окнами в MFC](life-cycle-of-a-dialog-box.md)

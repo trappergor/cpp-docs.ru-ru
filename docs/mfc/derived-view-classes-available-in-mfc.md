@@ -7,39 +7,39 @@ helpviewer_keywords:
 - derived classes [MFC], view classes
 - view classes [MFC], derived
 ms.assetid: dba42178-7459-4ccc-b025-f3d9b8a4b737
-ms.openlocfilehash: 12b31074e4fcc2ed6a83e3669e1044f5b9caedab
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dc0f0b10ea291db32c576a7d36b7fc19728fa6ce
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373506"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616987"
 ---
 # <a name="derived-view-classes-available-in-mfc"></a>Производные классы представлений, доступные в MFC
 
-В следующей таблице показаны классы представлений МФЦ и их отношения друг с другом. Возможности класса представления зависят от класса представления MFC, из которого он вытекает.
+В следующей таблице показаны классы представления MFC и их связи друг с другом. Возможности класса представления зависят от класса представления MFC, от которого он наследуется.
 
-### <a name="view-classes"></a>Просмотр классов
+### <a name="view-classes"></a>Классы представлений
 
-|Class|Описание|
+|Класс|Описание|
 |-----------|-----------------|
-|[CView](../mfc/reference/cview-class.md)|Базовый класс всех представлений.|
-|[CCtrlView](../mfc/reference/cctrlview-class.md)|Базовый `CTreeView`класс `CListView` `CEditView`, `CRichEditView`, , и . Эти классы позволяют использовать архитектуру документов/просмотров с указанными общими элементами управления Windows.|
-|[CEditView](../mfc/reference/ceditview-class.md)|Простое представление, основанное на управлении окном для отсвагиваем окни Windows. Позволяет вводить и редактировать текст и может быть использован в качестве основы для простого приложения редактор ассмеприра. Ознакомьтесь с командой `CRichEditView`.|
-|[CRichEditView](../mfc/reference/cricheditview-class.md)|Представление, содержащее объект [CRichEditCtrl.](../mfc/reference/cricheditctrl-class.md) Этот класс `CEditView`аналогин, `CEditView`но `CRichEditView` в отличие от, обрабатывает отформатированный текст.|
-|[CListView](../mfc/reference/clistview-class.md)|Представление, содержащее объект [CListCtrl.](../mfc/reference/clistctrl-class.md)|
-|[CTreeView](../mfc/reference/ctreeview-class.md)|Представление, содержащее объект [CTreeCtrl,](../mfc/reference/ctreectrl-class.md) для представлений, напоминающих окно Solution Explorer в Visual C.|
-|[CScrollView](../mfc/reference/cscrollview-class.md)|Базовый `CFormView`класс `CRecordView`, `CDaoRecordView`, и . Реализует прокрутку содержимого представления.|
-|[CFormView](../mfc/reference/cformview-class.md)|Представление формы, представление, содержащее элементы управления. Приложение на основе форм предоставляет один или несколько таких интерфейсов формы.|
-|[CHtmlView](../mfc/reference/chtmlview-class.md)|Представление веб-браузера, с помощью которого пользователь приложения может просматривать сайты во Всемирной паутине, а также папки в локальной файловой системе и в сети. Представление веб-браузера также может работать как контейнер active document.|
-|[CRecordView](../mfc/reference/crecordview-class.md)|Представление формы, отображающие записи базы данных ODBC в элементах управления. Если вы выберете поддержку ODBC в проекте, базовый класс представления — `CRecordView`это . Представление соединено с `CRowset` объектом.|
-|[CDaoRecordView](../mfc/reference/cdaorecordview-class.md)|Представление формы, отображающие записи базы данных DAO в элементах управления. Если вы выберете поддержку DAO в проекте, базовый класс представления — это `CDaoRecordView`. Представление соединено с `CDaoRecordset` объектом.|
-|[COleDBRecordView](../mfc/reference/coledbrecordview-class.md)|Представление формы, отображаемые записями OLE DB в элементах управления. Если вы выберете поддержку OLE DB в `COleDBRecordView`проекте, базовый класс представления — это . Представление соединено с `CRowset` объектом.|
+|[CView](reference/cview-class.md)|Базовый класс всех представлений.|
+|[CCtrlView](reference/cctrlview-class.md)|Базовый класс для `CTreeView` , `CListView` , `CEditView` и `CRichEditView` . Эти классы позволяют использовать архитектуру документов и представлений с указанными стандартными элементами управления Windows.|
+|[CEditView](reference/ceditview-class.md)|Простое представление, основанное на элементе управления "поле ввода Windows". Позволяет вводить и редактировать текст и может использоваться в качестве основания для простого текстового редактора. Ознакомьтесь с командой `CRichEditView`.|
+|[CRichEditView](reference/cricheditview-class.md)|Представление, содержащее объект [CRichEditCtrl](reference/cricheditctrl-class.md) . Этот класс аналогичен `CEditView` , но, в отличие от `CEditView` , `CRichEditView` обрабатывает форматированный текст.|
+|[CListView](reference/clistview-class.md)|Представление, содержащее объект [CListCtrl](reference/clistctrl-class.md) .|
+|[CTreeView](reference/ctreeview-class.md)|Представление, содержащее объект [CTreeCtrl](reference/ctreectrl-class.md) , для представлений, которые похожи на обозреватель решенийое окно в Visual C++.|
+|[CScrollView](reference/cscrollview-class.md)|Базовый класс для `CFormView` , `CRecordView` и `CDaoRecordView` . Реализует прокрутку содержимого представления.|
+|[CFormView](reference/cformview-class.md)|Представление формы, содержащее элементы управления. Приложение на основе форм предоставляет один или несколько таких интерфейсов форм.|
+|[CHtmlView](reference/chtmlview-class.md)|Представление веб-браузера, с помощью которого пользователь приложения может просматривать сайты в Интернете, а также папки в локальной файловой системе и в сети. Представление веб-браузера также может работать как активный контейнер документа.|
+|[CRecordView](reference/crecordview-class.md)|Представление формы, которое отображает записи базы данных ODBC в элементах управления. Если в проекте выбрана поддержка ODBC, то базовым классом представления будет `CRecordView` . Представление подключено к `CRowset` объекту.|
+|[CDaoRecordView](reference/cdaorecordview-class.md)|Представление формы, в котором отображаются записи базы данных DAO в элементах управления. Если в проекте выбрана поддержка DAO, то базовым классом представления будет `CDaoRecordView` . Представление подключено к `CDaoRecordset` объекту.|
+|[COleDBRecordView](reference/coledbrecordview-class.md)|Представление формы, которое отображает записи OLE DB в элементах управления. Если в проекте выбрать OLE DB поддержки, то базовым классом представления будет `COleDBRecordView` . Представление подключено к `CRowset` объекту.|
 
 > [!NOTE]
-> По состоянию на Версию `CEditView` MFC `CCtrlView`4.0, является производным от .
+> Начиная с MFC версии 4,0, `CEditView` является производным от `CCtrlView` .
 
-Чтобы использовать эти классы в приложении, извлекайте из них классы представления приложения. Для получения соответствующей информации [см.](../mfc/scrolling-and-scaling-views.md) Для получения дополнительной информации [Overview: Database Programming](../data/data-access-programming-mfc-atl.md)о классах баз данных см.
+Чтобы использовать эти классы в приложении, следует создать из них классы представления приложения. Связанные сведения см. в разделе [представления прокрутки и масштабирования](scrolling-and-scaling-views.md). Дополнительные сведения о классах базы данных см. в разделе [Обзор: программирование базы данных](../data/data-access-programming-mfc-atl.md).
 
 ## <a name="see-also"></a>См. также раздел
 
-[Использование представлений](../mfc/using-views.md)
+[Использование представлений](using-views.md)

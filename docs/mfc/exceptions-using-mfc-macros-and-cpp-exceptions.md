@@ -16,45 +16,45 @@ helpviewer_keywords:
 - heap corruption [MFC]
 - nested catch blocks [MFC]
 ms.assetid: d664a83d-879b-44d4-bdf0-029f0aca69e9
-ms.openlocfilehash: afad5335bedf001329ecb401a8a16c663afb5571
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d669c58da04a1cd0ead424d93f6fad6adcd4c56c
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371589"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622726"
 ---
 # <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>Исключения. Использование макросов MFC и исключений C++
 
-В этой статье рассматриваются соображения для написания кода, в который используются как макросы обработки исключений MFC, так и ключевые слова обработки исключений.
+В этой статье рассматриваются вопросы написания кода, использующего как макросы обработки исключений MFC, так и ключевые слова обработки исключений C++.
 
 В этой статье рассматриваются следующие темы:
 
-- [Смешивание ключевых слов и макросов исключений](#_core_mixing_exception_keywords_and_macros)
+- [Сочетание ключевых слов и макросов исключений](#_core_mixing_exception_keywords_and_macros)
 
-- [Попробуйте блоки внутри блоков ловли](#_core_try_blocks_inside_catch_blocks)
+- [Блоки try внутри блоков catch](#_core_try_blocks_inside_catch_blocks)
 
-## <a name="mixing-exception-keywords-and-macros"></a><a name="_core_mixing_exception_keywords_and_macros"></a>Смешивание ключевых слов исключений и макросов
+## <a name="mixing-exception-keywords-and-macros"></a><a name="_core_mixing_exception_keywords_and_macros"></a>Сочетание ключевых слов и макросов исключений
 
-В одной и той же программе можно смешивать макросы исключений MFC и ключевые слова исключения СЗ. Но нельзя смешивать макросы MFC с ключевыми словами исключения с КЗ в том же блоке, потому что макросы автоматически удаляют объекты исключений, когда они выходят за рамки, в то время как код, использующий ключевые слова обработки исключений, не выполняется. Для получения дополнительной информации см. [Exceptions: Catching and Deleting Exceptions](../mfc/exceptions-catching-and-deleting-exceptions.md)
+В одной программе можно смешивать макросы исключений MFC и ключевые слова исключений C++. Однако нельзя смешивать макросы MFC с ключевыми словами исключений C++ в одном блоке, так как макросы удаляют объекты исключений автоматически при выходе из области, а код, использующий ключевые слова для обработки исключений, — нет. Дополнительные сведения см. в статье [исключения: перехват и удаление исключений](exceptions-catching-and-deleting-exceptions.md).
 
-Основное различие между макросами и ключевыми словами заключается в том, что макросы "автоматически" удаляют пойманное исключение, когда исключение выходит за рамки. Код с использованием ключевых слов не делает; исключения, попавшие в блок улова, должны быть явно удалены. Смешивание макросов и ключевых слов исключения СЗ может привести к утечке памяти, когда объект исключения не удаляется, или к порче кучи, когда исключение удавливается дважды.
+Основное различие между макросами и ключевыми словами заключается в том, что макросы автоматически удаляют Перехваченное исключение, когда исключение выходит из области действия. Код, использующий ключевые слова, не имеет; исключения, перехваченные в блоке catch, должны быть явно удалены. Смешивание макросов и ключевых слов исключений C++ может вызвать утечку памяти, если объект исключения не удален, или повреждение кучи, когда исключение будет удалено дважды.
 
-Следующий код, например, аннулирует указатель исключений:
+Следующий код, например, делает недействительным указатель исключения:
 
-[!code-cpp[NVC_MFCExceptions#10](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_1.cpp)]
+[!code-cpp[NVC_MFCExceptions#10](codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_1.cpp)]
 
-Проблема возникает `e` из-за удаления, когда выполнение выходит из "внутреннего" блока **CATCH.** Использование **THROW_LAST** макроса вместо оператора **THROW** приведет к тому, что «внешний» блок **CATCH** получит действительный указатель:
+Проблема возникает потому, что `e` удаляется, когда выполнение передается из внутреннего блока **catch** . Использование макроса **THROW_LAST** вместо инструкции **throw** вызовет получение допустимого указателя для внешнего блока **catch** :
 
-[!code-cpp[NVC_MFCExceptions#11](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_2.cpp)]
+[!code-cpp[NVC_MFCExceptions#11](codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_2.cpp)]
 
-## <a name="try-blocks-inside-catch-blocks"></a><a name="_core_try_blocks_inside_catch_blocks"></a>Попробуйте блоки внутри блоков catch
+## <a name="try-blocks-inside-catch-blocks"></a><a name="_core_try_blocks_inside_catch_blocks"></a>Блоки try внутри блоков catch
 
-Вы не можете повторно выбросить текущее исключение из блока **try,** который находится внутри блока **CATCH.** Следующий пример является недействительным:
+Невозможно повторно создать текущее исключение из блока **try** внутри блока **catch** . Следующий пример является недопустимым:
 
-[!code-cpp[NVC_MFCExceptions#12](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_3.cpp)]
+[!code-cpp[NVC_MFCExceptions#12](codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_3.cpp)]
 
-Для получения дополнительной [информации см.](../mfc/exceptions-examining-exception-contents.md)
+Дополнительные сведения см. в разделе [исключения: Проверка содержимого исключений](exceptions-examining-exception-contents.md).
 
 ## <a name="see-also"></a>См. также раздел
 
-[Обработка исключений](../mfc/exception-handling-in-mfc.md)
+[Обработка исключений](exception-handling-in-mfc.md)

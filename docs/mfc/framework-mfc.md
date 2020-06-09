@@ -12,43 +12,43 @@ helpviewer_keywords:
 - Windows API [MFC], encapsulation by MFC
 - encapsulated Win32 API [MFC]
 ms.assetid: 3be0fec8-9843-4119-ae42-ece993ef500b
-ms.openlocfilehash: 387f53e3123b6863fcf218da39c7c5e356eb8219
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: b02d5a1862a278f46591895f20f58a97367b5ab2
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303404"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84618787"
 ---
 # <a name="framework-mfc"></a>Платформа (MFC)
 
-Работа с инфраструктурой библиотеки Microsoft Foundation Class (MFC) основана на нескольких основных классах и нескольких визуальных C++ средствах. Некоторые классы инкапсулируют большую часть прикладного программного интерфейса (API) Win32. Другие классы инкапсулируют концепции приложений, такие как документы, представления и само приложение. Все еще другие инкапсулируют функции OLE и функции доступа к данным ODBC и DAO.  (DAO поддерживается в Office 2013. DAO 3,6 — это окончательная версия, которая считается устаревшей.)
+Работа с инфраструктурой библиотеки Microsoft Foundation Class (MFC) основана на нескольких основных классах и нескольких Visual C++ных инструментах. Некоторые классы инкапсулируют большую часть прикладного программного интерфейса (API) Win32. Другие классы инкапсулируют концепции приложений, такие как документы, представления и само приложение. Все еще другие инкапсулируют функции OLE и функции доступа к данным ODBC и DAO.  (DAO поддерживается в Office 2013. DAO 3,6 — это окончательная версия, которая считается устаревшей.)
 
-Например, Win32's концепция окна инкапсулируется классом MFC `CWnd`. То есть C++ класс, именуемый `CWnd`, инкапсулирует или заключает в оболочку `HWND`ный обработчик, представляющий окно Windows. Аналогичным образом класс `CDialog` инкапсулирует диалоговые окна Win32.
+Например, Win32's Концепция Window инкапсулируется классом MFC `CWnd` . То есть класс C++ с именем `CWnd` инкапсулирует или заключает в оболочку `HWND` , представляющую окно Windows. Аналогичным образом, класс `CDialog` инкапсулирует диалоговые окна Win32.
 
-Инкапсуляция означает, что C++ класс `CWnd`, например, содержит переменную-член типа `HWND`, а функции-члены класса инкапсулируют вызовы функций Win32, которые принимают `HWND` в качестве параметра. Функции члена класса обычно имеют то же имя, что и функция Win32, которую они инкапсулируют.
+Инкапсуляция означает, что класс C++ `CWnd` , например, содержит переменную-член типа `HWND` , а функции-члены класса инкапсулируют вызовы функций Win32, которые принимают в `HWND` качестве параметра. Функции члена класса обычно имеют то же имя, что и функция Win32, которую они инкапсулируют.
 
 ## <a name="in-this-section"></a>В этом разделе
 
-[SDI и MDI](../mfc/sdi-and-mdi.md)
+[SDI и MDI](sdi-and-mdi.md)
 
-[Документы, представления и платформа](../mfc/documents-views-and-the-framework.md)
+[Документы, представления и платформа](documents-views-and-the-framework.md)
 
-[Мастера и редакторы ресурсов](../mfc/wizards-and-the-resource-editors.md)
+[Мастера и редакторы ресурсов](wizards-and-the-resource-editors.md)
 
 ## <a name="in-related-sections"></a>Содержание смежных разделов
 
-[Сборка в платформе](../mfc/building-on-the-framework.md)
+[Сборка на платформе](building-on-the-framework.md)
 
-[Вызовы кода со стороны платформы](../mfc/how-the-framework-calls-your-code.md)
+[Вызовы кода со стороны платформы](how-the-framework-calls-your-code.md)
 
-[CWinApp: класс приложений](../mfc/cwinapp-the-application-class.md)
+[CWinApp: класс приложений](cwinapp-the-application-class.md)
 
-[Шаблоны документов и процесс создания документа/представления](../mfc/document-templates-and-the-document-view-creation-process.md)
+[Шаблоны документов и процесс создания документа/представления](document-templates-and-the-document-view-creation-process.md)
 
-[Обработка и сопоставление сообщений](../mfc/message-handling-and-mapping.md)
+[Обработка и сопоставление сообщений](message-handling-and-mapping.md)
 
-[Объекты окон](../mfc/window-objects.md)
+[Объекты окна](window-objects.md)
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-[Использование классов для создания приложений для Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)
+[Использование классов для создания приложений для Windows](using-the-classes-to-write-applications-for-windows.md)

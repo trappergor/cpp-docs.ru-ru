@@ -10,113 +10,113 @@ helpviewer_keywords:
 - class libraries, MFC
 - class libraries
 ms.assetid: 9b0e3152-ac39-4f52-91b4-f20aa3a674aa
-ms.openlocfilehash: 9b307c4993a1a7a397741864381c0739a1f4c4ea
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bf30f1b0aa83ef002337b76601f04c7103963441
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374580"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620746"
 ---
 # <a name="class-library-overview"></a>Общие сведения о библиотеке классов
 
-В этом обзоре классифицируются и описываются классы в версии 9.0 Класс Microsoft Foundation Class Library (MFC). Классы в MFC, вместе взятые, представляют собой платформу приложения - рамки приложения, написанного для API Windows. Задачей программирования является заполнение кода, характерного для приложения.
+В этом обзоре классифицируются и описываются классы в библиотека Microsoft Foundation Class (MFC) версии 9,0. Классы в MFC вместе составляют платформу приложения — платформу приложения, написанную для Windows API. Задача программирования заключается в том, чтобы заполнять код, относящийся к конкретному приложению.
 
-Классы библиотеки представлены здесь в следующих категориях:
+Классы библиотеки представлены в следующих категориях:
 
-- [Корневой класс: CObject](../mfc/root-class-cobject.md)
+- [Корневой класс: CObject](root-class-cobject.md)
 
-- [Классы архитектуры приложения MFC](../mfc/mfc-application-architecture-classes.md)
+- [Классы архитектуры приложения MFC](mfc-application-architecture-classes.md)
 
-  - [Классы поддержки приложений и потоков](../mfc/application-and-thread-support-classes.md)
+  - [Классы поддержки приложений и потоков](application-and-thread-support-classes.md)
 
-  - [Классы командной реукторов](../mfc/command-routing-classes.md)
+  - [Классы маршрутизации команд](command-routing-classes.md)
 
-  - [Классы документов](../mfc/document-classes.md)
+  - [Классы документов](document-classes.md)
 
-  - [Классы представления (архитектура)](../mfc/view-classes-architecture.md)
+  - [Классы представления (архитектура)](view-classes-architecture.md)
 
-  - [Классы окна фрейма (архитектура)](../mfc/frame-window-classes-architecture.md)
+  - [Классы окна фрейма (архитектура)](frame-window-classes-architecture.md)
 
-  - [Классы документов-шаблонов](../mfc/document-template-classes.md)
+  - [Классы шаблонов документов](document-template-classes.md)
 
-- [Классы окон, диалогов и управления](../mfc/window-dialog-and-control-classes.md)
+- [Классы Window, DIALOG и Control](window-dialog-and-control-classes.md)
 
-  - [Классы окна кадра (Windows)](../mfc/frame-window-classes-windows.md)
+  - [Классы окон фрейма (Windows)](frame-window-classes-windows.md)
 
-  - [Классы просмотра (Windows)](../mfc/view-classes-windows.md)
+  - [Классы представлений (Windows)](view-classes-windows.md)
 
-  - [Классы Dialog Box](../mfc/dialog-box-classes.md)
+  - [Классы диалоговых окон](dialog-box-classes.md)
 
-  - [Контрольные классы](../mfc/control-classes.md)
+  - [Классы элементов управления](control-classes.md)
 
-  - [Классы панели управления](../mfc/control-bar-classes.md)
+  - [Классы панели элементов управления](control-bar-classes.md)
 
-- [Классы рисования и печати](../mfc/drawing-and-printing-classes.md)
+- [Классы рисования и печати](drawing-and-printing-classes.md)
 
-  - [Классы вывода (контекст устройства)](../mfc/output-device-context-classes.md)
+  - [Классы вывода (контекст устройства)](output-device-context-classes.md)
 
-  - [Классы инструмента рисования](../mfc/drawing-tool-classes.md)
+  - [Классы инструмента рисования](drawing-tool-classes.md)
 
-- [Простые классы типа данных](../mfc/simple-data-type-classes.md)
+- [Классы простых типов данных](simple-data-type-classes.md)
 
-- [Классы массивов, списков и схем](../mfc/array-list-and-map-classes.md)
+- [Классы массивов, списков и схем](array-list-and-map-classes.md)
 
-  - [Шаблонные классы для массивов, списков и карт](../mfc/template-classes-for-arrays-lists-and-maps.md)
+  - [Классы шаблонов для массивов, списков и сопоставлений](template-classes-for-arrays-lists-and-maps.md)
 
-  - [Готовые к использованию классы массивов](../mfc/ready-to-use-array-classes.md)
+  - [Готовые к использованию классы массивов](ready-to-use-array-classes.md)
 
-  - [Готовые классы списков](../mfc/ready-to-use-list-classes.md)
+  - [Готовые классы списков](ready-to-use-list-classes.md)
 
-  - [Классы готовой к использованию карты](../mfc/ready-to-use-map-classes.md)
+  - [Готовые к использованию классы карт](ready-to-use-map-classes.md)
 
-- [Классы файлов и баз данных](../mfc/file-and-database-classes.md)
+- [Классы файлов и баз данных](file-and-database-classes.md)
 
-  - [Классов ввода-вывода файлов](../mfc/file-i-o-classes.md)
+  - [Классов ввода-вывода файлов](file-i-o-classes.md)
 
-  - [Классы ДАО](../mfc/dao-classes.md)
+  - [Классы DAO](dao-classes.md)
 
-  - [Классы ODBC](../mfc/odbc-classes.md)
+  - [Классы ODBC](odbc-classes.md)
 
-  - [Классы OLE DB](../mfc/ole-db-classes.md)
+  - [Классы OLE DB](ole-db-classes.md)
 
-- [Классы Интернета и сетей](../mfc/internet-and-networking-classes.md)
+- [Классы Интернета и сети](internet-and-networking-classes.md)
 
-  - [Классы сокетов Windows](../mfc/windows-sockets-classes.md)
+  - [Классы сокетов Windows](windows-sockets-classes.md)
 
-  - [Win32 Интернет-классы](../mfc/win32-internet-classes.md)
+  - [Классы Win32 в Интернете](win32-internet-classes.md)
 
-- [Классы OLE](../mfc/ole-classes.md)
+- [Классы OLE](ole-classes.md)
 
-  - [Классы контейнера OLE](../mfc/ole-container-classes.md)
+  - [Классы контейнера OLE](ole-container-classes.md)
 
-  - [Серверные классы OLE](../mfc/ole-server-classes.md)
+  - [Серверные классы OLE](ole-server-classes.md)
 
-  - [OLE Перетащите и капли и передачи данных Классы](../mfc/ole-drag-and-drop-and-data-transfer-classes.md)
+  - [Классы перетаскивания и Передача данных классов OLE](ole-drag-and-drop-and-data-transfer-classes.md)
 
-  - [Классы общих диалоговых окон OLE](../mfc/ole-common-dialog-classes.md)
+  - [Классы общих диалоговых окон OLE](ole-common-dialog-classes.md)
 
-  - [Классы автоматизации OLE](../mfc/ole-automation-classes.md)
+  - [Классы автоматизации OLE](ole-automation-classes.md)
 
-  - [Классы элементов управления OLE](../mfc/ole-control-classes.md)
+  - [Классы элементов управления OLE](ole-control-classes.md)
 
-  - [Классы активных документов](../mfc/active-document-classes.md)
+  - [Классы активных документов](active-document-classes.md)
 
-  - [Классы, связанные с OLE](../mfc/ole-related-classes.md)
+  - [Классы, связанные с OLE](ole-related-classes.md)
 
-- [Классы отлады и исключения](../mfc/debugging-and-exception-classes.md)
+- [Классы отладки и исключений](debugging-and-exception-classes.md)
 
-  - [Отладка классов поддержки](../mfc/debugging-support-classes.md)
+  - [Отладка классов поддержки](debugging-support-classes.md)
 
-  - [Классы исключений](../mfc/exception-classes.md)
+  - [Классы исключений](exception-classes.md)
 
-В разделе [Философия дизайна общего класса](../mfc/general-class-design-philosophy.md) объясняет, как была разработана библиотека МФЦ.
+В разделе [Общие принципы проектирования классов](general-class-design-philosophy.md) объясняется, как была РАЗРАБОТАНА библиотека MFC.
 
-Для обзора платформы [см.](../mfc/using-the-classes-to-write-applications-for-windows.md) Некоторые из перечисленных выше классов являются классами общего назначения, которые могут использоваться вне рамок и предоставляют полезные абстракции, такие как коллекции, исключения, файлы и строки.
+Общие сведения о платформе см. в разделе [Использование классов для написания приложений для Windows](using-the-classes-to-write-applications-for-windows.md). Некоторые из перечисленных выше классов являются классами общего назначения, которые можно использовать за пределами платформы и предоставляют полезные абстракции, такие как коллекции, исключения, файлы и строки.
 
-Чтобы увидеть наследование класса, используйте [диаграмму иерархии классов.](../mfc/hierarchy-chart.md)
+Чтобы просмотреть наследование класса, используйте [диаграмму иерархия классов](hierarchy-chart.md).
 
-В дополнение к классам, перечисленным в этом обзоре, Библиотека MFC содержит ряд глобальных функций, глобальных переменных и макросов. Существует обзор и подробный список из них в теме [MFC Macros и Globals](../mfc/reference/mfc-macros-and-globals.md), который следует алфавитной ссылки на классы MFC.
+В дополнение к классам, перечисленным в этом обзоре, Библиотека MFC содержит ряд глобальных функций, глобальных переменных и макросов. В разделе [макросы и глобальные классы MFC](reference/mfc-macros-and-globals.md)представлен обзор и подробное описание этих элементов, которые следуют алфавитному представлению классов MFC.
 
 ## <a name="see-also"></a>См. также раздел
 
-[Приложения MFC для рабочего стола](../mfc/mfc-desktop-applications.md)
+[Приложения MFC для рабочего стола](mfc-desktop-applications.md)

@@ -7,29 +7,29 @@ helpviewer_keywords:
 - command handling [MFC], calling handlers and code in MFC
 - command routing [MFC], MFC
 ms.assetid: d79bceba-4ff6-417a-9d52-6b6af62a909d
-ms.openlocfilehash: b48d8ac93ca33bd80f9a8a8369291f63fc623f5b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3fcfcbdd224db66550e7f0ff27de6313c85f856a
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254012"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84618519"
 ---
 # <a name="how-the-framework-calls-a-handler"></a>Вызовы к обработчику со стороны платформы
 
-Следующие разделы сначала изучить, каким образом платформа перенаправляет команды, а затем проверьте, как другие сообщения и уведомления элементов управления отправляются в windows:
+В следующих разделах сначала рассматривается, как платформа маршрутизирует команды, а затем изучите, как отправляются в Windows другие сообщения и контрольные уведомления:
 
-- [Отправка и получение сообщений](../mfc/message-sending-and-receiving.md)
+- [Отправка и получение сообщений](message-sending-and-receiving.md)
 
-- [Доступ некомандных сообщений к обработчикам](../mfc/how-noncommand-messages-reach-their-handlers.md)
+- [Как Некомандные сообщения достигают обработчиков](how-noncommand-messages-reach-their-handlers.md)
 
-- [Маршрутизация команд](../mfc/command-routing.md)
+- [Маршрутизация команд](command-routing.md)
 
-- [Демонстрация маршрутизации команд](../mfc/command-routing-illustration.md)
+- [Демонстрация маршрутизации команд](command-routing-illustration.md)
 
-- [Обработчик OnCmdMsg](../mfc/oncmdmsg-handler.md)
+- [Обработчик OnCmdMsg](oncmdmsg-handler.md)
 
-- [Переопределение стандартной маршрутизации команд](../mfc/overriding-the-standard-command-routing.md)
+- [Переопределение стандартной маршрутизации команд](overriding-the-standard-command-routing.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Обработка и сопоставление сообщений](../mfc/message-handling-and-mapping.md)
+[Обработка и сопоставление сообщений](message-handling-and-mapping.md)

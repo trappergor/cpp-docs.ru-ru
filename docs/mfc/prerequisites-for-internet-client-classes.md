@@ -16,61 +16,61 @@ helpviewer_keywords:
 - prerequisites, Internet client classes [MFC]
 - Gopher client applications [MFC]
 ms.assetid: c51d1dfe-260c-4228-8100-e4efd90e9599
-ms.openlocfilehash: 6246db7dfb2837f5d94fa51f8433b46722c43663
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aaf5756df69728e8ae89fb278bc0671bfc6840b7
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62218810"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619834"
 ---
 # <a name="prerequisites-for-internet-client-classes"></a>Необходимые компоненты для клиентских классов в Интернете
 
-Некоторые действия, предпринимаемые Интернет-клиентом (чтение файла, например) имеют ряд предварительных действий (в данном случае, подключении к Интернету). В следующих таблицах перечислены необходимые компоненты для некоторых действий клиента.
+Некоторые действия, выполняемые Интернет-клиентом (например, чтение файла), имеют необходимые действия (в данном случае установка подключения к Интернету). В следующих таблицах перечислены предварительные требования для некоторых действий клиента.
 
-### <a name="general-internet-url-ftp-gopher-or-http"></a>Общие URL-адрес (FTP, Gopher или HTTP)
+### <a name="general-internet-url-ftp-gopher-or-http"></a>Общий URL-адрес в Интернете (FTP, Gopher или HTTP)
 
-|Действие|Предварительные требования|
+|Действие|Предварительное требование|
 |------------|------------------|
-|Установите подключение.|Создание [CInternetSession](../mfc/reference/cinternetsession-class.md) для установления основы для клиентских приложений в Интернете.|
-|Откройте URL-адрес.|Установите подключение. Вызовите [CInternetSession::OpenURL](../mfc/reference/cinternetsession-class.md#openurl). `OpenURL` Функция возвращает объект ресурсов только для чтения.|
-|URL-адрес чтения данных.|Откройте URL-адрес. Вызовите [CInternetFile::Read](../mfc/reference/cinternetfile-class.md#read).|
-|Настроить параметр Internet.|Установите подключение. Вызовите [CInternetSession::SetOption](../mfc/reference/cinternetsession-class.md#setoption).|
-|Установка функции может вызываться с использованием сведений о состоянии.|Установите подключение. Вызовите [CInternetSession::EnableStatusCallback](../mfc/reference/cinternetsession-class.md#enablestatuscallback). Переопределить [CInternetSession::OnStatusCallback](../mfc/reference/cinternetsession-class.md#onstatuscallback) для обработки вызовов.|
+|Установите подключение.|Создайте [Цинтернетсессион](reference/cinternetsession-class.md) , чтобы установить базу клиентского Интернет-приложения.|
+|Откройте URL-адрес.|Установите подключение. Вызовите [Цинтернетсессион:: OpenURL](reference/cinternetsession-class.md#openurl). `OpenURL`Функция возвращает объект ресурса, доступного только для чтения.|
+|Чтение данных URL-адреса.|Откройте URL-адрес. Вызовите [Цинтернетфиле:: Read](reference/cinternetfile-class.md#read).|
+|Задайте параметр Интернета.|Установите подключение. Вызовите [Цинтернетсессион:: SetOption](reference/cinternetsession-class.md#setoption).|
+|Задайте функцию, которая будет вызываться со сведениями о состоянии.|Установите подключение. Вызовите [Цинтернетсессион:: енаблестатускаллбакк](reference/cinternetsession-class.md#enablestatuscallback). Переопределите [Цинтернетсессион:: онстатускаллбакк](reference/cinternetsession-class.md#onstatuscallback) , чтобы обращаться к вызовам.|
 
 ### <a name="ftp"></a>FTP
 
-|Действие|Предварительные требования|
+|Действие|Предварительное требование|
 |------------|------------------|
-|Установите подключение к FTP.|Создание [CInternetSession](../mfc/reference/cinternetsession-class.md) основой этого клиентских приложений в Интернете. Вызовите [CInternetSession::GetFtpConnection](../mfc/reference/cinternetsession-class.md#getftpconnection) для создания [CFtpConnection](../mfc/reference/cftpconnection-class.md) объекта.|
-|Найти первый ресурс.|Установите подключение к FTP. Создание [CFtpFileFind](../mfc/reference/cftpfilefind-class.md) объекта. Вызовите [CFtpFileFind::FindFile](../mfc/reference/cftpfilefind-class.md#findfile).|
-|Перечислить все доступные ресурсы.|Найдите первый файл. Вызовите [CFtpFileFind::FindNextFile](../mfc/reference/cftpfilefind-class.md#findnextfile) пока не будет возвращено значение FALSE.|
-|Откройте файл FTP.|Установите подключение к FTP. Вызовите [CFtpConnection::OpenFile](../mfc/reference/cftpconnection-class.md#openfile) для создания и открытия [CInternetFile](../mfc/reference/cinternetfile-class.md) объекта.|
-|Чтение файла FTP.|Откройте файл FTP с доступом на чтение. Вызовите [CInternetFile::Read](../mfc/reference/cinternetfile-class.md#read).|
-|Запись в файл FTP.|Откройте файл FTP с доступом на запись. Вызовите [CInternetFile::Write](../mfc/reference/cinternetfile-class.md#write).|
-|Измените каталог клиента на сервере.|Установите подключение к FTP. Вызовите [CFtpConnection::SetCurrentDirectory](../mfc/reference/cftpconnection-class.md#setcurrentdirectory).|
-|Получите текущий каталог клиента на сервере.|Установите подключение к FTP. Вызовите [CFtpConnection::GetCurrentDirectory](../mfc/reference/cftpconnection-class.md#getcurrentdirectory).|
+|Установите соединение по FTP.|Создайте [Цинтернетсессион](reference/cinternetsession-class.md) в качестве основания для этого клиентского Интернет-приложения. Вызовите метод [Цинтернетсессион:: жетфтпконнектион](reference/cinternetsession-class.md#getftpconnection) , чтобы создать объект [кфтпконнектион](reference/cftpconnection-class.md) .|
+|Найти первый ресурс.|Установите соединение по FTP. Создайте объект [кфтпфилефинд](reference/cftpfilefind-class.md) . Вызовите [кфтпфилефинд:: финдфиле](reference/cftpfilefind-class.md#findfile).|
+|Перечисление всех доступных ресурсов.|Найти первый файл. Вызовите [кфтпфилефинд:: FindNextFile](reference/cftpfilefind-class.md#findnextfile) , пока не вернет значение false.|
+|Откройте FTP-файл.|Установите соединение по FTP. Вызовите метод [кфтпконнектион:: OpenFile](reference/cftpconnection-class.md#openfile) , чтобы создать и открыть объект [Цинтернетфиле](reference/cinternetfile-class.md) .|
+|Чтение файла FTP.|Откройте FTP-файл с доступом для чтения. Вызовите [Цинтернетфиле:: Read](reference/cinternetfile-class.md#read).|
+|Запись в файл FTP.|Откройте FTP-файл с доступом для записи. Вызовите [Цинтернетфиле:: Write](reference/cinternetfile-class.md#write).|
+|Измените каталог клиента на сервере.|Установите соединение по FTP. Вызовите [кфтпконнектион:: сеткуррентдиректори](reference/cftpconnection-class.md#setcurrentdirectory).|
+|Получение текущего каталога клиента на сервере.|Установите соединение по FTP. Вызовите [кфтпконнектион:: GetCurrentDirectory](reference/cftpconnection-class.md#getcurrentdirectory).|
 
 ### <a name="http"></a>HTTP
 
-|Действие|Предварительные требования|
+|Действие|Предварительное требование|
 |------------|------------------|
-|Установите подключение к HTTP.|Создание [CInternetSession](../mfc/reference/cinternetsession-class.md) основой этого клиентских приложений в Интернете. Вызовите [CInternetSession::GetHttpConnection](../mfc/reference/cinternetsession-class.md#gethttpconnection) для создания [CHttpConnection](../mfc/reference/chttpconnection-class.md) объекта.|
-|Откройте файл HTTP.|Установите подключение к HTTP. Вызовите [CHttpConnection::OpenRequest](../mfc/reference/chttpconnection-class.md#openrequest) для создания [CHttpFile](../mfc/reference/chttpfile-class.md) объекта. Вызовите [CHttpFile::AddRequestHeaders](../mfc/reference/chttpfile-class.md#addrequestheaders). Вызовите [CHttpFile::SendRequest](../mfc/reference/chttpfile-class.md#sendrequest).|
-|Файл для чтения HTTP.|Откройте файл HTTP. Вызовите [CInternetFile::Read](../mfc/reference/cinternetfile-class.md#read).|
-|Получение сведений о HTTP-запроса.|Установите подключение к HTTP. Вызовите [CHttpConnection::OpenRequest](../mfc/reference/chttpconnection-class.md#openrequest) для создания [CHttpFile](../mfc/reference/chttpfile-class.md) объекта. Вызовите [CHttpFile::QueryInfo](../mfc/reference/chttpfile-class.md#queryinfo).|
+|Установите HTTP-соединение.|Создайте [Цинтернетсессион](reference/cinternetsession-class.md) в качестве основания для этого клиентского Интернет-приложения. Вызовите метод [Цинтернетсессион:: жесттпконнектион](reference/cinternetsession-class.md#gethttpconnection) , чтобы создать объект [чттпконнектион](reference/chttpconnection-class.md) .|
+|Откройте HTTP-файл.|Установите HTTP-соединение. Вызовите метод [чттпконнектион:: опенрекуест](reference/chttpconnection-class.md#openrequest) , чтобы создать объект [чттпфиле](reference/chttpfile-class.md) . Вызовите [чттпфиле:: аддрекуессеадерс](reference/chttpfile-class.md#addrequestheaders). Вызовите [чттпфиле:: SendRequest](reference/chttpfile-class.md#sendrequest).|
+|Чтение файла HTTP.|Откройте HTTP-файл. Вызовите [Цинтернетфиле:: Read](reference/cinternetfile-class.md#read).|
+|Получение сведений о HTTP-запросе.|Установите HTTP-соединение. Вызовите метод [чттпконнектион:: опенрекуест](reference/chttpconnection-class.md#openrequest) , чтобы создать объект [чттпфиле](reference/chttpfile-class.md) . Вызовите [чттпфиле:: куеринфо](reference/chttpfile-class.md#queryinfo).|
 
-### <a name="gopher"></a>Gopher
+### <a name="gopher"></a>Протокол
 
-|Действие|Предварительные требования|
+|Действие|Предварительное требование|
 |------------|------------------|
-|Установите подключение gopher.|Создание [CInternetSession](../mfc/reference/cinternetsession-class.md) основой этого клиентских приложений в Интернете. Вызовите [CInternetSession::GetGopherConnection](../mfc/reference/cinternetsession-class.md#getgopherconnection) для создания [CGopherConnection](../mfc/reference/cgopherconnection-class.md).|
-|Найдите первый файл в текущем каталоге.|Установите подключение gopher. Создание [CGopherFileFind](../mfc/reference/cgopherfilefind-class.md) объекта. Вызовите [CGopherConnection::CreateLocator](../mfc/reference/cgopherconnection-class.md#createlocator) для создания [CGopherLocator](../mfc/reference/cgopherlocator-class.md) объекта. Передайте указатель для [CGopherFileFind::FindFile](../mfc/reference/cgopherfilefind-class.md#findfile). Вызовите [CGopherFileFind::GetLocator](../mfc/reference/cgopherfilefind-class.md#getlocator) для получения указателя файла, если оно понадобится позже.|
-|Перечислить все доступные файлы.|Найдите первый файл. Вызовите [CGopherFileFind::FindNextFile](../mfc/reference/cgopherfilefind-class.md#findnextfile) пока не будет возвращено значение FALSE.|
-|Откройте файл gopher.|Установите подключение gopher. Создание указателя gopher с [CGopherConnection::CreateLocator](../mfc/reference/cgopherconnection-class.md#createlocator) или найти указатель с [CGopherFileFind::GetLocator](../mfc/reference/cgopherfilefind-class.md#getlocator). Вызовите [CGopherConnection::OpenFile](../mfc/reference/cgopherconnection-class.md#openfile).|
-|Чтение файла gopher.|Откройте файл gopher. Используйте [CGopherFile](../mfc/reference/cgopherfile-class.md).|
+|Установите Gopher-подключение.|Создайте [Цинтернетсессион](reference/cinternetsession-class.md) в качестве основания для этого клиентского Интернет-приложения. Вызовите [Цинтернетсессион:: жетгоферконнектион](reference/cinternetsession-class.md#getgopherconnection) , чтобы создать [кгоферконнектион](reference/cgopherconnection-class.md).|
+|Найти первый файл в текущем каталоге.|Установите Gopher-подключение. Создайте объект [кгоферфилефинд](reference/cgopherfilefind-class.md) . Вызовите метод [кгоферконнектион:: CreateLocator](reference/cgopherconnection-class.md#createlocator) , чтобы создать объект [кгоферлокатор](reference/cgopherlocator-class.md) . Передайте указатель в [кгоферфилефинд:: финдфиле](reference/cgopherfilefind-class.md#findfile). Вызовите [кгоферфилефинд::-Locator](reference/cgopherfilefind-class.md#getlocator) , чтобы получить указатель файла, если он понадобится позже.|
+|Перечисление всех доступных файлов.|Найти первый файл. Вызовите [кгоферфилефинд:: FindNextFile](reference/cgopherfilefind-class.md#findnextfile) , пока не вернет значение false.|
+|Откройте файл gopher.|Установите Gopher-подключение. Создайте локатор gopher с помощью [кгоферконнектион:: CreateLocator](reference/cgopherconnection-class.md#createlocator) или найдите указатель с помощью [кгоферфилефинд::-Locator](reference/cgopherfilefind-class.md#getlocator). Вызовите [кгоферконнектион:: OpenFile](reference/cgopherconnection-class.md#openfile).|
+|Чтение файла gopher.|Откройте файл gopher. Используйте [CGopherFile](reference/cgopherfile-class.md).|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Расширения Интернета Win32 (WinInet)](../mfc/win32-internet-extensions-wininet.md)<br/>
-[Классы MFC для создания клиентских приложений в Интернете](../mfc/mfc-classes-for-creating-internet-client-applications.md)<br/>
-[Создание клиентских приложений в Интернете с использованием классов MFC WinInet](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)
+[Расширения Интернета Win32 (WinInet)](win32-internet-extensions-wininet.md)<br/>
+[Классы MFC для создания клиентских приложений в Интернете](mfc-classes-for-creating-internet-client-applications.md)<br/>
+[Создание клиентских приложений в Интернете с использованием классов MFC WinInet](writing-an-internet-client-application-using-mfc-wininet-classes.md)

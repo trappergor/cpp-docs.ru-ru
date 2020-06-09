@@ -4,24 +4,24 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC, Internet applications
 ms.assetid: 93a8b6c9-d274-492a-90b3-cf43a77edb1d
-ms.openlocfilehash: 7093d2e54a78ba4486ac8f2cb61249cdbcba734b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 132cbb0b8b4a812fb16f81d3e6fec0969fc12749
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352259"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621643"
 ---
 # <a name="internet-information-by-topic"></a>Сведения о работе с Интернетом по разделам
 
-Сведения о программировании с помощью специальной технологии Интернета см. в разделе:
+Сведения о программировании с использованием определенной Интернет-технологии см. в следующих статьях:
 
 ### <a name="wininet"></a>WinInet
 
 |||
 |-|-|
-|Разделы общих сведений|[WinInet (HTTP, FTP, Gopher)](../mfc/win32-internet-extensions-wininet.md)<br /><br /> [Основные сведения о WinInet](../mfc/wininet-basics.md)<br /><br /> [Расширения Интернета Win32 (WinInet)](../mfc/win32-internet-extensions-wininet.md)<br /><br /> [Использование WinInet для упрощения создания клиентских приложений в Интернете](../mfc/how-wininet-makes-it-easier-to-create-internet-client-applications.md)<br /><br /> [Использование MFC для упрощения создания клиентских приложений в Интернете](../mfc/how-mfc-makes-it-easier-to-create-internet-client-applications.md)|
-|Действия при создании приложений, WinInet|[Необходимые компоненты для клиентских классов в Интернете](../mfc/prerequisites-for-internet-client-classes.md)<br /><br /> [Создание клиентских приложений в Интернете с использованием классов MFC WinInet](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)<br /><br /> [Шаги для организации типичного клиентского приложения в Интернете](../mfc/steps-in-a-typical-internet-client-application.md)<br /><br /> [Шаги для организации типичного клиентского приложения FTP](../mfc/steps-in-a-typical-ftp-client-application.md)<br /><br /> [Шаги для организации типичного клиентского приложения HTTP](../mfc/steps-in-a-typical-http-client-application.md)<br /><br /> [Шаги для организации типичного клиентского приложения Gopher](../mfc/steps-in-a-typical-gopher-client-application.md)<br /><br /> [Шаги для организации типичного клиентского приложения HTTP](../mfc/steps-in-a-typical-http-client-application.md)|
+|Разделы общих сведений|[WinInet (HTTP, FTP, Gopher)](win32-internet-extensions-wininet.md)<br /><br /> [Основы WinInet](wininet-basics.md)<br /><br /> [Расширения Интернета Win32 (WinInet)](win32-internet-extensions-wininet.md)<br /><br /> [Использование WinInet для упрощения создания клиентских приложений в Интернете](how-wininet-makes-it-easier-to-create-internet-client-applications.md)<br /><br /> [Использование MFC для упрощения создания клиентских приложений в Интернете](how-mfc-makes-it-easier-to-create-internet-client-applications.md)|
+|Действия при создании приложений WinInet|[Необходимые условия для клиентских классов Интернета](prerequisites-for-internet-client-classes.md)<br /><br /> [Создание клиентских приложений в Интернете с использованием классов MFC WinInet](writing-an-internet-client-application-using-mfc-wininet-classes.md)<br /><br /> [Шаги для организации типичного клиентского приложения в Интернете](steps-in-a-typical-internet-client-application.md)<br /><br /> [Шаги для организации типичного клиентского приложения FTP](steps-in-a-typical-ftp-client-application.md)<br /><br /> [Шаги для организации типичного клиентского приложения HTTP](steps-in-a-typical-http-client-application.md)<br /><br /> [Шаги для организации типичного клиентского приложения Gopher](steps-in-a-typical-gopher-client-application.md)<br /><br /> [Шаги для организации типичного клиентского приложения HTTP](steps-in-a-typical-http-client-application.md)|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Основы программирования для интернет-решений MFC](../mfc/mfc-internet-programming-basics.md)
+[Основные сведения о программировании Интернета MFC](mfc-internet-programming-basics.md)

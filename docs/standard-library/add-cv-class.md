@@ -7,16 +7,16 @@ helpviewer_keywords:
 - add_cv class
 - add_cv
 ms.assetid: a5572c78-a097-45d7-b476-ed4876889dea
-ms.openlocfilehash: 0cc63558ea392976bd6a3c5a43735c592e4606b4
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 412dc8426112e65d00b572a65f064667d2709a0d
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456597"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620783"
 ---
-# <a name="addcv-class"></a>Класс add_cv
+# <a name="add_cv-class"></a>Класс add_cv
 
-Делает тип **const volatile** независимым от типа.
+Делает тип **const volatile независимым** от типа.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -33,9 +33,9 @@ using add_cv_t = typename add_cv<T>::type;
 *T*\
 Тип для изменения.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
-Экземпляр измененного `add_cv<T>` типа `type` имеет эквивалент **typedef** для элемента *T* , измененный как [add_volatile](../standard-library/add-volatile-class.md) , так и [add_const](../standard-library/add-const-class.md), если только у *T* нет квалификаторов КП, является ссылкой или является функций.
+Экземпляр измененного типа `add_cv<T>` имеет `type` эквивалент **typedef** для элемента *T* , измененный как [add_volatile](add-volatile-class.md) , так и [add_const](add-const-class.md), если только у *T* нет квалификаторов ОПС, является ссылкой или является функцией.
 
 Вспомогательный тип `add_cv_t<T>` является ярлыком для доступа к определению типа `type``add_cv<T>`.
 
@@ -86,12 +86,12 @@ invoked const volatile S.f()
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<type_traits>
+**Заголовок:**\<type_traits>
 
 **Пространство имен:** std
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[<type_traits>](../standard-library/type-traits.md)\
-[Класс remove_const](../standard-library/remove-const-class.md)\
-[Класс remove_volatile](../standard-library/remove-volatile-class.md)
+[<type_traits>](type-traits.md)\
+[Класс remove_const](remove-const-class.md)\
+[Класс remove_volatile](remove-volatile-class.md)

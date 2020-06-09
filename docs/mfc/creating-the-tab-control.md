@@ -10,55 +10,55 @@ helpviewer_keywords:
 - CTabCtrl class [MFC], creating
 - TCS_EX_FLATSEPARATORS extended style
 ms.assetid: 3a9c2d64-f5f4-41ea-84ab-fceb73c3dbdc
-ms.openlocfilehash: 4627009e2e07d1c5692d83d8d6262a9fcd37977e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d5aa6873966ecb4c845f1c503b24c07b6c0c7a3
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241966"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619612"
 ---
 # <a name="creating-the-tab-control"></a>Создание элемента управления "Вкладка"
 
-Создании вкладок зависит от того с помощью элемента управления в диалоговом окне или создав его в окно nondialog.
+Способ создания элемента управления "Вкладка" зависит от того, используется ли элемент управления в диалоговом окне или создается в диалоговом окне.
 
 ### <a name="to-use-ctabctrl-directly-in-a-dialog-box"></a>Использование CTabCtrl непосредственно в диалоговом окне
 
-1. В редакторе диалоговых окон добавьте набор вкладок для вашего ресурса шаблона диалоговых окон. Укажите идентификатор своего элемента управления.
+1. В редакторе диалоговых окон добавьте элемент управления "Вкладка" в ресурс шаблона диалогового окна. Укажите идентификатор элемента управления.
 
-1. Используйте [мастер добавления переменной члена](../ide/adding-a-member-variable-visual-cpp.md) добавить переменную-член типа [CTabCtrl](../mfc/reference/ctabctrl-class.md) со свойством элемента управления. Этот элемент можно использовать для вызова `CTabCtrl` функций-членов.
+1. Используйте [Мастер добавления переменной-члена](../ide/adding-a-member-variable-visual-cpp.md) , чтобы добавить переменную члена типа [CTabCtrl](reference/ctabctrl-class.md) с помощью свойства Control. Этот элемент можно использовать для вызова `CTabCtrl` функций членов.
 
-1. Сопоставьте функции обработчика в классе диалогового окна для любой вкладке уведомляющих сообщений элемента управления, необходимые для обработки. Дополнительные сведения см. в разделе [сопоставление сообщений с функциями](../mfc/reference/mapping-messages-to-functions.md).
+1. Функции обработчика сопоставляются в классе диалогового окна для любых сообщений уведомления элемента управления Tab, которые необходимо обработать. Дополнительные сведения см. [в разделе Сопоставление сообщений с функциями](reference/mapping-messages-to-functions.md).
 
-1. В [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog), установка стилей для `CTabCtrl`.
+1. В [онинитдиалог](reference/cdialog-class.md#oninitdialog)Задайте стили для `CTabCtrl` .
 
-### <a name="to-use-ctabctrl-in-a-nondialog-window"></a>Использование CTabCtrl в окне nondialog
+### <a name="to-use-ctabctrl-in-a-nondialog-window"></a>Использование CTabCtrl в недиалоговом окне
 
-1. Определите элемент управления в классе представления или окно.
+1. Определите элемент управления в классе представления или окна.
 
-1. Вызов элемента управления [создать](../mfc/reference/ctabctrl-class.md#create) функция-член, возможно в [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate), возможно уже родительского окна [OnCreate](../mfc/reference/cwnd-class.md#oncreate) функция обработчика (Если вы являетесь Создание подкласса элемента управления). Применить стиль для элемента управления.
+1. Вызовите функцию-член [CREATE](reference/ctabctrl-class.md#create) элемента управления, возможно, в [онинитиалупдате](reference/cview-class.md#oninitialupdate), которая может быть раньше, чем функция обработчика [OnCreate](reference/cwnd-class.md#oncreate) родительского окна (если вы подклассировать элемент управления). Задайте стили для элемента управления.
 
-После `CTabCtrl` объект был создан, можно установить или снять следующие расширенные стили:
+После `CTabCtrl` создания объекта можно задать или очистить следующие расширенные стили:
 
-- **TCS_EX_FLATSEPARATORS** вкладок элемента управления, рисующий разделители между элементов вкладки. Это расширенный стиль только влияет на вкладке элементов управления, имеющих **TCS_BUTTONS** и **TCS_FLATBUTTONS** стили. По умолчанию создание вкладок с **TCS_FLATBUTTONS** стиль устанавливает это расширенный стиль.
+- **TCS_EX_FLATSEPARATORS** Элемент управления "Вкладка" будет рисовать разделители между элементами вкладки. Этот расширенный стиль влияет только на элементы управления "Вкладка", которые имеют стили **TCS_BUTTONS** и **TCS_FLATBUTTONS** . По умолчанию при создании элемента управления "Вкладка" с **TCS_FLATBUTTONS** стилем задается этот расширенный стиль.
 
-- **TCS_EX_REGISTERDROP** создает элемент управления вкладки **TCN_GETOBJECT** объекта уведомляющих сообщений для запроса целевого объекта перетаскивания, когда объект перетаскивается над элементы вкладок в элементе управления.
+- **TCS_EX_REGISTERDROP** Элемент управления "Вкладка" создает **TCN_GETOBJECT** сообщения уведомления для запроса целевого объекта перетаскивания при перетаскивании объекта над элементами вкладки в элементе управления.
 
     > [!NOTE]
-    >  Для получения **TCN_GETOBJECT** уведомления, необходимо инициализировать библиотеки OLE с вызовом [AfxOleInit](../mfc/reference/ole-initialization.md#afxoleinit).
+    >  Чтобы получить уведомление **TCN_GETOBJECT** , необходимо инициализировать библиотеки OLE с помощью вызова [афксолеинит](reference/ole-initialization.md#afxoleinit).
 
-Эти стили можно получить и настроить, после создания элемента управления, с соответствующими вызовами [GetExtendedStyle](../mfc/reference/ctabctrl-class.md#getextendedstyle) и [SetExtendedStyle](../mfc/reference/ctabctrl-class.md#setextendedstyle) функций-членов.
+Эти стили можно получить и задать после создания элемента управления с соответствующими вызовами функций члена [жетекстендедстиле](reference/ctabctrl-class.md#getextendedstyle) и [сетекстендедстиле](reference/ctabctrl-class.md#setextendedstyle) .
 
-Например, задать **TCS_EX_FLATSEPARATORS** стиль, содержащий следующие строки кода:
+Например, задайте стиль **TCS_EX_FLATSEPARATORS** со следующими строками кода:
 
-[!code-cpp[NVC_MFCControlLadenDialog#33](../mfc/codesnippet/cpp/creating-the-tab-control_1.cpp)]
+[!code-cpp[NVC_MFCControlLadenDialog#33](codesnippet/cpp/creating-the-tab-control_1.cpp)]
 
-Очистить **TCS_EX_FLATSEPARATORS** стиля `CTabCtrl` объект, содержащий следующие строки кода:
+Удалите стиль **TCS_EX_FLATSEPARATORS** из `CTabCtrl` объекта со следующими строками кода:
 
-[!code-cpp[NVC_MFCControlLadenDialog#34](../mfc/codesnippet/cpp/creating-the-tab-control_2.cpp)]
+[!code-cpp[NVC_MFCControlLadenDialog#34](codesnippet/cpp/creating-the-tab-control_2.cpp)]
 
-Это приведет к удалению разделители, которые отображаются между кнопками из вашей `CTabCtrl` объекта.
+Это приведет к удалению разделителей между кнопками `CTabCtrl` объекта.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Использование CTabCtrl](../mfc/using-ctabctrl.md)<br/>
-[Элементы управления](../mfc/controls-mfc.md)
+[Использование CTabCtrl](using-ctabctrl.md)<br/>
+[Элементы управления](controls-mfc.md)

@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - add_rvalue_reference Class
 ms.assetid: 76b0cb7c-1031-45d0-b409-f03ab0297580
-ms.openlocfilehash: 64694f2428c1dd536df4d242a17f3f011cfb290c
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6d7cc1d45ed3b963de0a0a004c1696ddbf0af440
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456540"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623917"
 ---
-# <a name="addrvaluereference-class"></a>Класс add_rvalue_reference
+# <a name="add_rvalue_reference-class"></a>Класс add_rvalue_reference
 
 Создает ссылочный тип rvalue параметра-шаблона, если он является типом объекта или функции. В противном случае из-за семантики сворачивания ссылок этот тип является таким же, как параметр шаблона.
 
@@ -32,11 +32,11 @@ using add_rvalue_reference_t = typename add_rvalue_reference<T>::type;
 *T*\
 Тип для изменения.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
-Класс содержит член с именем `type`, который является псевдонимом для типа ссылки rvalue на параметр шаблона *T.* `add_rvalue_reference` Семантика свертывания ссылок подразумевает, что для типов, не являющихся объектами и не являющихся функциями t `T&&` , является *t*. Например, если *T* является ссылочным типом lvalue, `add_rvalue_reference<T>::type` то является ссылочным типом lvalue, а не ссылкой rvalue.
+`add_rvalue_reference`Класс содержит член с именем `type` , который является псевдонимом для типа ссылки rvalue на параметр шаблона *T*. Семантика свертывания ссылок подразумевает, что для типов, не являющихся объектами и не являющихся функциями *t*, `T&&` является *t*. Например, если *T* является ссылочным типом lvalue, `add_rvalue_reference<T>::type` то является ссылочным типом lvalue, а не ссылкой rvalue.
 
-Для удобства \<type_traits > определяет вспомогательный `add_rvalue_reference_t`шаблон, `add_rvalue_reference`который является псевдонимом `type` члена.
+Для удобства \<type_traits> определяет вспомогательный шаблон, `add_rvalue_reference_t` который является псевдонимом `type` члена `add_rvalue_reference` .
 
 ## <a name="example"></a>Пример
 
@@ -71,12 +71,12 @@ All static_assert tests of add_rvalue_reference passed.
 
 ## <a name="requirements"></a>Требования
 
-Заголовок: \<type_traits >
+Заголовок: \<type_traits>
 
-Пространство имен: STD
+Пространство имен: std
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[<type_traits>](../standard-library/type-traits.md)\
-[Класс add_lvalue_reference](../standard-library/add-lvalue-reference-class.md)\
-[Класс is_rvalue_reference](../standard-library/is-rvalue-reference-class.md)
+[<type_traits>](type-traits.md)\
+[Класс add_lvalue_reference](add-lvalue-reference-class.md)\
+[Класс is_rvalue_reference](is-rvalue-reference-class.md)

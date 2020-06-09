@@ -4,40 +4,40 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - customizations, MFC Extensions
 ms.assetid: 3b1b7532-8cc9-48dc-9bbe-7fd4060530b5
-ms.openlocfilehash: 42f4b21fb257646d4d505427760a8fe1c7056e77
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b7597c3709ed700e82af94c78450ee5aff2d99b
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241697"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622961"
 ---
 # <a name="customization-for-mfc"></a>Настройка для MFC
 
-В этом разделе приведены советы по настройке приложения MFC.
+В этом разделе приводятся советы по настройке приложения MFC.
 
 ## <a name="general-customizations"></a>Общие настройки
 
-Можно сохранить и загрузить состояние приложения в реестр. Если включить этот параметр, ваше приложение загрузит исходное состояние из реестра. Если изменить исходный макет закрепления для вашего приложения, необходимо очистить данные реестра для вашего приложения. В противном случае данные в реестре переопределит все изменения, внесенные в исходный макет.
+Вы можете сохранить и загрузить состояние приложения в реестр. При включении этого параметра приложение будет загружать свое начальное состояние из реестра. При изменении первоначального макета закрепления для приложения необходимо очистить данные реестра для приложения. В противном случае данные в реестре будут переопределять все изменения, внесенные в первоначальный макет.
 
-## <a name="class-specific-customizations"></a>Класс специальных настроек
+## <a name="class-specific-customizations"></a>Настройки, зависящие от класса
 
-Дополнительные настройки советы можно найти в следующих разделах:
+Дополнительные советы по настройке можно найти в следующих разделах:
 
-- [Класс CBasePane](../mfc/reference/cbasepane-class.md)
+- [Класс CBasePane](reference/cbasepane-class.md)
 
-- [Класс CDockablePane](../mfc/reference/cdockablepane-class.md)
+- [CDockablePane Class](reference/cdockablepane-class.md)
 
-- [Класс CDockingManager](../mfc/reference/cdockingmanager-class.md)
+- [Класс CDockingManager](reference/cdockingmanager-class.md)
 
-- [Класс CMFCBaseTabCtrl](../mfc/reference/cmfcbasetabctrl-class.md)
+- [CMFCBaseTabCtrl Class](reference/cmfcbasetabctrl-class.md)
 
-## <a name="additional-customization-tips"></a>Советы по дополнительной настройке
+## <a name="additional-customization-tips"></a>Дополнительные советы по настройке
 
-[Настройка мыши и клавиатуры](../mfc/keyboard-and-mouse-customization.md)
+[Настройка мыши и клавиатуры](keyboard-and-mouse-customization.md)
 
-[Инструменты, определяемые пользователем](../mfc/user-defined-tools.md)
+[Пользовательские средства](user-defined-tools.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Приложения MFC для рабочего стола](../mfc/mfc-desktop-applications.md)<br/>
-[Вопросы безопасности во время настройки](../mfc/security-implications-of-customization.md)
+[Приложения MFC для рабочего стола](mfc-desktop-applications.md)<br/>
+[Влияние настройки на безопасность](security-implications-of-customization.md)

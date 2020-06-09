@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dialog classes [MFC], Add Class Wizard
 - dialog classes [MFC], creating
 ms.assetid: d5321741-da41-47a8-bb1c-6a0e8b28c4c1
-ms.openlocfilehash: b8275754d46e9d76933624af55335e956736319a
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: fab75268e39d75b67db435ebb8d0af6c0b8371fd
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685651"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620504"
 ---
 # <a name="creating-your-dialog-class"></a>Создание классов диалоговых окон
 
@@ -23,7 +23,7 @@ ms.locfileid: "71685651"
 
 В h файл:
 
-- Объявление класса для диалогового класса. Класс является производным от класса [CDialog](../mfc/reference/cdialog-class.md).
+- Объявление класса для диалогового класса. Класс является производным от класса [CDialog](reference/cdialog-class.md).
 
 В cpp – файле:
 
@@ -31,9 +31,9 @@ ms.locfileid: "71685651"
 
 - Стандартный конструктор для диалогового окна.
 
-- Переопределение функции члена [DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange) . Измените эту функцию. Он используется для обмена данными диалоговых окон и проверки, как описано далее в разделе [Обмен и проверка данных диалоговых окон](../mfc/dialog-data-exchange-and-validation.md).
+- Переопределение функции члена [DoDataExchange](reference/cwnd-class.md#dodataexchange) . Измените эту функцию. Он используется для обмена данными диалоговых окон и проверки, как описано далее в разделе [Обмен и проверка данных диалоговых окон](dialog-data-exchange-and-validation.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Создание класса диалогового окна с помощью мастеров кода](../mfc/creating-a-dialog-class-with-code-wizards.md)<br/>
-[Работа с диалоговыми окнами в MFC](../mfc/life-cycle-of-a-dialog-box.md)
+[Создание класса диалогового окна с помощью мастеров кода](creating-a-dialog-class-with-code-wizards.md)<br/>
+[Работа с диалоговыми окнами в MFC](life-cycle-of-a-dialog-box.md)
