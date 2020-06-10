@@ -1,6 +1,6 @@
 ---
 title: strerror_s, _strerror_s, _wcserror_s, __wcserror_s
-ms.date: 4/2/2020
+ms.date: 06/09/2020
 api_name:
 - __wcserror_s
 - _strerror_s
@@ -46,12 +46,12 @@ helpviewer_keywords:
 - wcserror_s function
 - error messages, getting
 ms.assetid: 9e5b15a0-efe1-4586-b7e3-e1d7c31a03d6
-ms.openlocfilehash: b7361f626708672af5539dd3b3b9c0cf83fcd2d2
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 91be8803a0695670e7afe673b25b54fccde40a9c
+ms.sourcegitcommit: 8167c67d76de58a7c2df3b4dcbf3d53e3b151b77
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918400"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84664330"
 ---
 # <a name="strerror_s-_strerror_s-_wcserror_s-__wcserror_s"></a>strerror_s, _strerror_s, _wcserror_s, __wcserror_s
 
@@ -62,22 +62,22 @@ ms.locfileid: "82918400"
 ```C
 errno_t strerror_s(
    char *buffer,
-   size_t numberOfElements,
+   size_t sizeInBytes,
    int errnum
 );
 errno_t _strerror_s(
    char *buffer,
-   size_t numberOfElements,
+   size_t sizeInBytes,
    const char *strErrMsg
 );
 errno_t _wcserror_s(
    wchar_t *buffer,
-   size_t numberOfElements,
+   size_t sizeInWords,
    int errnum
 );
 errno_t __wcserror_s(
    wchar_t *buffer,
-   size_t numberOfElements,
+   size_t sizeInWords,
    const wchar_t *strErrMsg
 );
 template <size_t size>
@@ -107,8 +107,11 @@ errno_t __wcserror_s(
 *двойной*<br/>
 Буфер для строки ошибки.
 
-*numberOfElements*<br/>
-Размер буфера.
+*сизеинбитес*<br/>
+Количество байтов в буфере.
+
+*сизеинвордс*<br/>
+Число слов в буфере.
 
 *errnum*<br/>
 Номер ошибки.
@@ -122,9 +125,9 @@ errno_t __wcserror_s(
 
 ### <a name="error-condtions"></a>Условия ошибки
 
-|*двойной*|*numberOfElements*|*стреррмсг*|Содержимое *буфера*|
+|*двойной*|*Сизеинбитес/Сизеинвордс*|*стреррмсг*|Содержимое *буфера*|
 |--------------|------------------------|-----------------|--------------------------|
-|**ЗАКАНЧИВАЮЩ**|any|any|н/д|
+|**NULL**|any|any|Недоступно|
 |any|0|any|не изменено|
 
 ## <a name="remarks"></a>Remarks
@@ -141,7 +144,7 @@ if (( _access( "datafile",2 )) == -1 )
 
 Если *стреррмсг* имеет **значение NULL**, **_strerror_s** возвращает строку в *буфере* , содержащую системное сообщение об ошибке для последнего вызова библиотеки, вызвавшего ошибку. Строка сообщения об ошибке оканчивается символом новой строки ('\n'). Если *стреррмсг* не равно **NULL**, то **_strerror_s** возвращает строку в *буфере* , содержащую (по порядку) строковое сообщение, двоеточие, пробел, системное сообщение об ошибке для последнего вызова библиотеки, создающего ошибку, и символ новой строки. Длина сообщения строки не должна превышать 94 символа.
 
-Эти функции обрезают сообщение об ошибке, если его длина превышает *numberOfElements* -1. Результирующая строка в *буфере* всегда завершается нулем.
+Эти функции обрезают сообщение об ошибке, если его длина превышает размер буфера-1. Результирующая строка в *буфере* всегда будет завершаться нулем.
 
 Фактический номер ошибки для **_strerror_s** хранится в [переменной.](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Доступ к системным сообщениям об ошибках осуществляется через переменную [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), которая представляет собой массив сообщений об ошибке, отсортированный по номеру ошибки. **_strerror_s** обращается к соответствующему сообщению об ошибке, **используя значение пересчета в качестве** индекса для переменной **_sys_errlist**. Значение переменной [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) определяется как максимальное число элементов в массиве **_sys_errlist** . Чтобы получить точные результаты, вызовите **_strerror_s** сразу после возврата библиотечной программы с ошибкой. В противном случае последующие вызовы **strerror_s** или **_strerror_s** могут перезаписать **значение** перезаписи.
 
@@ -168,7 +171,7 @@ if (( _access( "datafile",2 )) == -1 )
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
 |**strerror_s**, **_strerror_s**|\<string.h>|
-|**_wcserror_s**, **__wcserror_s**|\<string.h> или \<wchar.h>|
+|**_wcserror_s**, **__wcserror_s**|\<string.h> либо \<wchar.h>|
 
 Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
@@ -176,7 +179,7 @@ if (( _access( "datafile",2 )) == -1 )
 
 См. пример для [perror](perror-wperror.md).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Управление строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [clearerr](clearerr.md)<br/>
