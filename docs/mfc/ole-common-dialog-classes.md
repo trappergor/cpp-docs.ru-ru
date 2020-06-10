@@ -7,47 +7,47 @@ helpviewer_keywords:
 - OLE common dialog classes [MFC]
 - common dialog classes [MFC]
 ms.assetid: 706526ae-f94f-4909-a0f8-6b5fe954fd97
-ms.openlocfilehash: b44a7b203c17f09f872cfedbb05798affb57f0f9
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 1854d19c540f5e3e64b47786f465a05213eced86
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447674"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84617795"
 ---
 # <a name="ole-common-dialog-classes"></a>Классы общих диалоговых окон OLE
 
 Эти классы обрабатывали общие задачи OLE, реализуя ряд стандартных диалоговых окон OLE. Они также предоставляют единообразный пользовательский интерфейс для функций OLE.
 
-[коледиалог](../mfc/reference/coledialog-class.md)<br/>
-Используется платформой для хранения общих реализаций для всех диалоговых окон OLE. Все классы диалоговых окон в категории пользовательского интерфейса являются производными от этого базового класса. `COleDialog` нельзя использовать напрямую.
+[COleDialog](reference/coledialog-class.md)<br/>
+Используется платформой для хранения общих реализаций для всех диалоговых окон OLE. Все классы диалоговых окон в категории пользовательского интерфейса являются производными от этого базового класса. `COleDialog`не может использоваться напрямую.
 
-[колеинсертдиалог](../mfc/reference/coleinsertdialog-class.md)<br/>
+[COleInsertDialog](reference/coleinsertdialog-class.md)<br/>
 Отображает диалоговое окно Вставка объекта — стандартный пользовательский интерфейс для вставки новых связанных или внедренных элементов OLE.
 
-[колепастеспеЦиалдиалог](../mfc/reference/colepastespecialdialog-class.md)<br/>
+[COlePasteSpecialDialog](reference/colepastespecialdialog-class.md)<br/>
 Отображает диалоговое окно Специальная вставка — стандартный пользовательский интерфейс для реализации команды изменить вставку специальной программы.
 
-[колелинксдиалог](../mfc/reference/colelinksdialog-class.md)<br/>
+[COleLinksDialog](reference/colelinksdialog-class.md)<br/>
 Отображает диалоговое окно изменение ссылок — стандартный пользовательский интерфейс для изменения сведений о связанных элементах.
 
-[колечанжеикондиалог](../mfc/reference/colechangeicondialog-class.md)<br/>
+[COleChangeIconDialog](reference/colechangeicondialog-class.md)<br/>
 Отображает диалоговое окно Изменение значка — стандартный пользовательский интерфейс для изменения значка, связанного с внедренным или связанным элементом OLE.
 
-[колеконвертдиалог](../mfc/reference/coleconvertdialog-class.md)<br/>
+[COleConvertDialog](reference/coleconvertdialog-class.md)<br/>
 Отображает диалоговое окно Преобразование — стандартный пользовательский интерфейс для преобразования элементов OLE из одного типа в другой.
 
-[колепропертиесдиалог](../mfc/reference/colepropertiesdialog-class.md)<br/>
+[COlePropertiesDialog](reference/colepropertiesdialog-class.md)<br/>
 Инкапсулирует диалоговое окно Общие свойства OLE Windows. Общие диалоговые окна свойств OLE предоставляют простой способ просмотра и изменения свойств элемента документа OLE способом, согласованным со стандартами Windows.
 
-[колеупдатедиалог](../mfc/reference/coleupdatedialog-class.md)<br/>
+[COleUpdateDialog](reference/coleupdatedialog-class.md)<br/>
 Отображает диалоговое окно Обновление — стандартный пользовательский интерфейс для обновления всех ссылок в документе. Диалоговое окно содержит индикатор выполнения, указывающий, как завершить процедуру обновления до завершения.
 
-[колечанжесаурцедиалог](../mfc/reference/colechangesourcedialog-class.md)<br/>
+[COleChangeSourceDialog](reference/colechangesourcedialog-class.md)<br/>
 Отображает диалоговое окно Изменение источника — стандартный пользовательский интерфейс для изменения назначения или источника ссылки.
 
-[колебусидиалог](../mfc/reference/colebusydialog-class.md)<br/>
-Отображает диалоговые окна сервер занят и сервер не отвечает — стандартный пользовательский интерфейс для обработки вызовов занятых приложений. Обычно автоматически отображается реализацией `COleMessageFilter`.
+[COleBusyDialog](reference/colebusydialog-class.md)<br/>
+Отображает диалоговые окна сервер занят и сервер не отвечает — стандартный пользовательский интерфейс для обработки вызовов занятых приложений. Обычно автоматически отображается `COleMessageFilter` реализацией.
 
 ## <a name="see-also"></a>См. также раздел
 
-[Обзор класса](../mfc/class-library-overview.md)
+[Общие сведения о классах](class-library-overview.md)
