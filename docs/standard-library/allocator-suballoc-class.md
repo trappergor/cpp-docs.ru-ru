@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - allocator_suballoc class
 ms.assetid: 50c6a5c0-d00d-4276-9285-d908fd4f6483
-ms.openlocfilehash: 3e5b69ef3f47a173ef768283bbae4f6e3b5f5190
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 01d282585133d55ee3f7ec96c212705c2afca9d1
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458143"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84617424"
 ---
-# <a name="allocatorsuballoc-class"></a>Класс allocator_suballoc
+# <a name="allocator_suballoc-class"></a>Класс allocator_suballoc
 
-Описывает объект, управляющий выделением и освобождением памяти для объектов типа *Type* , использующих кэш типа [cache_suballoc](../standard-library/cache-suballoc-class.md).
+Описывает объект, управляющий выделением и освобождением памяти для объектов типа *Type* , использующих кэш типа [cache_suballoc](cache-suballoc-class.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -31,16 +31,16 @@ class allocator_suballoc;
 |---------------|-----------------|
 |*Type*|Тип элементов, распределяемых распределителем.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
-Макрос [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) передает этот класс в качестве параметра *Name* в следующей инструкции:`ALLOCATOR_DECL(CACHE_SUBALLOC, SYNC_DEFAULT, allocator_suballoc);`
+Макрос [ALLOCATOR_DECL](allocators-functions.md#allocator_decl) передает этот класс в качестве параметра *Name* в следующей инструкции:`ALLOCATOR_DECL(CACHE_SUBALLOC, SYNC_DEFAULT, allocator_suballoc);`
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<allocators>
+**Заголовок:**\<allocators>
 
 **Пространство имен:** stdext
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<allocators>](allocators-header.md)

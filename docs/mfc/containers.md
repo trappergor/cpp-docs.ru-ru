@@ -8,32 +8,32 @@ helpviewer_keywords:
 - containers [MFC], OLE container applications
 - containers [MFC], container applications
 ms.assetid: b19d7c05-4d02-44bd-b76a-4a6c25994a62
-ms.openlocfilehash: 35416025339b8fc059ed44b2b3c55d9c38d18570
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a76bc9775e13350a031539c63476a4a8fae68ed0
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153012"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620635"
 ---
 # <a name="containers"></a>Контейнеры
 
-Приложения-контейнера — это приложение, которое может включать внедренные и связанные элементы в свои документы. Документы, управляемые приложения-контейнера должен иметь возможность хранения и отображения компонентов составных документов OLE, а также данные, созданные самим приложением. Приложения-контейнера необходимо также разрешить пользователям вставлять новые элементы или изменять существующие элементы.
+Приложение-контейнер — это приложение, которое может включать внедренные или связанные элементы в собственные документы. Документы, управляемые с помощью приложения-контейнера, должны иметь возможность сохранять и отображать составные компоненты документов OLE, а также данные, создаваемые самим приложением. Приложение-контейнер также должно разрешать пользователям вставлять новые элементы или изменять существующие элементы.
 
 ## <a name="in-this-section"></a>В этом разделе
 
-[Реализация контейнера](../mfc/containers-implementing-a-container.md)
+[Реализация контейнера](containers-implementing-a-container.md)
 
-[Элементы клиента контейнера](../mfc/containers-client-items.md)
+[Элементы клиента контейнера](containers-client-items.md)
 
-[Используйте составные файлы](../mfc/containers-compound-files.md)
+[Использование составных файлов](containers-compound-files.md)
 
-[Проблемы пользовательского интерфейса для контейнера](../mfc/containers-user-interface-issues.md)
+[Проблемы с пользовательским интерфейсом контейнера](containers-user-interface-issues.md)
 
-[Расширенные возможности контейнеров](../mfc/containers-advanced-features.md)
+[Дополнительные возможности контейнеров](containers-advanced-features.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[OLE](../mfc/ole-in-mfc.md)<br/>
-[Серверы](../mfc/servers.md)<br/>
-[Активация](../mfc/activation-cpp.md)<br/>
-[Меню и ресурсы (OLE)](../mfc/menus-and-resources-ole.md)
+[OLE](ole-in-mfc.md)<br/>
+[Серверы](servers.md)<br/>
+[Активация](activation-cpp.md)<br/>
+[Меню и ресурсы (OLE)](menus-and-resources-ole.md)

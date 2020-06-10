@@ -7,29 +7,29 @@ helpviewer_keywords:
 - window objects [MFC], destroying
 - window objects [MFC], removing
 ms.assetid: 3241fea0-c614-4a25-957d-20f21bd5fd0c
-ms.openlocfilehash: f50d198f9868a70d25370f6c1399b66efaa5490b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 22b483c1005931b229453ae229935c0e716ab726
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297246"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621862"
 ---
 # <a name="destroying-window-objects"></a>Уничтожение объектов окон
 
-Будьте осторожны с собственные дочерние окна для уничтожения объектом окна C++, когда пользователь завершил работу с окном. Если эти объекты не уничтожаются, приложение не восстановит их память. К счастью среда управляет уничтожение окна, а также создание окон фрейма, представлений и диалоговых окон. Если вы создаете дополнительные окна, вы несете ответственность для уничтожение.
+Будьте осторожны с собственными дочерними окнами, чтобы уничтожить объект окна C++, когда пользователь завершит работу с окном. Если эти объекты не уничтожаются, приложение не будет восстанавливать память. К счастью, платформа управляет уничтожением окна, а также созданием окон фрейма, представлений и диалогов. Если вы создаете дополнительные окна, вы несете ответственность за их уничтожение.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Выберите для получения дополнительных сведений
+## <a name="what-do-you-want-to-know-more-about"></a>Что вы хотите узнать подробнее
 
-- [Последовательность деструкции окна](../mfc/window-destruction-sequence.md)
+- [Последовательность уничтожения окна](window-destruction-sequence.md)
 
-- [Выделение и освобождение памяти окна](../mfc/allocating-and-deallocating-window-memory.md)
+- [Выделение и освобождение памяти окна](allocating-and-deallocating-window-memory.md)
 
-- [Отсоединение CWnd от HWND](../mfc/detaching-a-cwnd-from-its-hwnd.md)
+- [Отсоединение CWnd от HWND](detaching-a-cwnd-from-its-hwnd.md)
 
-- [Общая последовательность создания окна](../mfc/general-window-creation-sequence.md)
+- [Общая последовательность создания окна](general-window-creation-sequence.md)
 
-- [Уничтожение окон фрейма](../mfc/destroying-frame-windows.md)
+- [Уничтожение окон фрейма](destroying-frame-windows.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Объекты окон](../mfc/window-objects.md)
+[Объекты окна](window-objects.md)

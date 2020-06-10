@@ -5,36 +5,36 @@ helpviewer_keywords:
 - template classes [MFC], creating message maps
 - message maps [MFC], template classes
 ms.assetid: 4e7e24f8-06df-4b46-82aa-7435c8650de3
-ms.openlocfilehash: 676e698a899327eee8305731b5d609b5b95ece76
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 65ddc77b4e8fd466c7d651e54e93a504b4858da1
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389506"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620049"
 ---
 # <a name="how-to-create-a-message-map-for-a-template-class"></a>Практическое руководство. Создание виртуальной схемы сообщений для класса шаблона
 
-Сопоставление сообщений в MFC предоставляет эффективный способ для направления сообщений Windows соответствующий экземпляр объекта C++. Целевые объекты карты сообщения MFC примеры классы приложения, документа и Просмотр классов, классы элементов управления и т. д.
+Сопоставление сообщений в MFC обеспечивает эффективный способ направления сообщений Windows в соответствующий экземпляр объекта C++. Примеры целевых объектов схемы сообщений MFC включают классы приложений, классы документов и представлений, классы элементов управления и т. д.
 
-Традиционные схемы сообщений MFC объявляются с помощью [BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map) макрос для объявления начала схему сообщений, запись макроса для каждого метода класс обработчика сообщений и, наконец [END_MESSAGE_MAP](reference/message-map-macros-mfc.md#end_message_map)макрос для объявления в конец схемы сообщений.
+Традиционные схемы сообщений MFC объявляются с помощью макроса [BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map) , чтобы объявить начало схемы сообщения, запись макроса для каждого метода класса обработчика сообщений и, наконец, макрос [END_MESSAGE_MAP](reference/message-map-macros-mfc.md#end_message_map) для объявления конца схемы сообщения.
 
-Одно ограничение с [BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map) макрос происходит, когда он используется в сочетании с класс, содержащий аргументы шаблона. При использовании с классом шаблона, этот макрос приведет к ошибке времени компиляции из-за отсутствующих параметров шаблона во время расширения макроса. [BEGIN_TEMPLATE_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_template_message_map) макрос разработана для обеспечения сопоставляет классы, содержащие аргументом один шаблон для объявления свои собственные сообщения.
+При использовании макроса [BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map) возникает одно ограничение, если оно используется в сочетании с классом, содержащим аргументы шаблона. При использовании с классом шаблона этот макрос вызывает ошибку во время компиляции из-за отсутствующих параметров шаблона во время расширения макроса. Макрос [BEGIN_TEMPLATE_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_template_message_map) был разработан таким образом, чтобы позволить классам, содержащим один аргумент шаблона, объявлять свои собственные карты сообщений.
 
 ## <a name="example"></a>Пример
 
-Рассмотрим пример, где MFC [CListBox](../mfc/reference/clistbox-class.md) класс расширяется для синхронизации с внешним источником данных. Вымышленный `CSyncListBox` класс объявляется следующим образом:
+Рассмотрим пример, в котором класс [CLISTBOX](reference/clistbox-class.md) MFC расширен для обеспечения синхронизации с внешним источником данных. Вымышленный `CSyncListBox` класс объявляется следующим образом:
 
-[!code-cpp[NVC_MFC_CListBox#42](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_1.h)]
+[!code-cpp[NVC_MFC_CListBox#42](codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_1.h)]
 
-`CSyncListBox` Класс является шаблоном для одного типа, описывающий оно синхронизируется с источником данных. Он также объявляет три метода, которые будут участвовать в схеме сообщений класса: `OnPaint`, `OnDestroy`, и `OnSynchronize`. `OnSynchronize` Метод реализуется следующим образом:
+`CSyncListBox`Класс является шаблоном для одного типа, который описывает источник данных, с которым будет выполняться синхронизация. Он также объявляет три метода, которые будут участвовать в схеме сообщений класса: `OnPaint` , `OnDestroy` и `OnSynchronize` . `OnSynchronize`Метод реализуется следующим образом:
 
-[!code-cpp[NVC_MFC_CListBox#43](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_2.cpp)]
+[!code-cpp[NVC_MFC_CListBox#43](codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_2.cpp)]
 
-Выше реализация позволяет `CSyncListBox` класс специализированным на любой тип класса, реализующий `GetCount` метод, такой как `CArray`, `CList`, и `CMap`. `StringizeElement` Функция является функцией-шаблоном прототипом, следующие:
+Приведенная выше реализация позволяет `CSyncListBox` классу быть специализированным для любого типа класса, реализующего `GetCount` метод, например `CArray` , `CList` и `CMap` . `StringizeElement`Функция является шаблонной функцией, прототипом которой является следующим:
 
-[!code-cpp[NVC_MFC_CListBox#44](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_3.cpp)]
+[!code-cpp[NVC_MFC_CListBox#44](codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_3.cpp)]
 
-Как правило сопоставление сообщений для этого класса будет определено так:
+Как правило, схема сообщений для этого класса будет определяться следующим образом:
 
 ```cpp
 BEGIN_MESSAGE_MAP(CSyncListBox, CListBox)
@@ -44,23 +44,23 @@ BEGIN_MESSAGE_MAP(CSyncListBox, CListBox)
 END_MESSAGE_MAP()
 ```
 
-где **LBN_SYNCHRONIZE** настраиваемого пользовательского сообщения определяется приложением, такие как:
+где **LBN_SYNCHRONIZE** — это пользовательское сообщение, определяемое приложением, например:
 
-[!code-cpp[NVC_MFC_CListBox#45](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_4.cpp)]
+[!code-cpp[NVC_MFC_CListBox#45](codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_4.cpp)]
 
-Выше макроса карты не будет компилироваться, связано с тем фактом, что спецификация шаблона для `CSyncListBox` класса будут отсутствовать во время расширения макроса. **BEGIN_TEMPLATE_MESSAGE_MAP** макрос устраняет эту проблему путем включения параметра указанного шаблона в сопоставление расширенным макросом. Сопоставление сообщений для этого класса принимает следующий вид:
+Приведенная выше схема макроса не будет компилироваться из-за того, что спецификация шаблона для `CSyncListBox` класса будет отсутствовать во время расширения макроса. Макрос **BEGIN_TEMPLATE_MESSAGE_MAP** решает эту проблему, добавляя указанный параметр шаблона в развернутую карту макросов. Схема сообщений для этого класса выглядит следующим образом:
 
-[!code-cpp[NVC_MFC_CListBox#46](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_5.cpp)]
+[!code-cpp[NVC_MFC_CListBox#46](codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_5.cpp)]
 
-Следующий подход демонстрирует пример использования `CSyncListBox` используя `CStringList` объекта:
+Ниже демонстрируется пример использования `CSyncListBox` класса с помощью `CStringList` объекта:
 
-[!code-cpp[NVC_MFC_CListBox#47](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_6.cpp)]
+[!code-cpp[NVC_MFC_CListBox#47](codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_6.cpp)]
 
-Чтобы завершить проверку, `StringizeElement` функцию, специализированную для работы с `CStringList` класса:
+Для выполнения теста `StringizeElement` функция должна быть специализированной для работы с `CStringList` классом:
 
-[!code-cpp[NVC_MFC_CListBox#48](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_7.cpp)]
+[!code-cpp[NVC_MFC_CListBox#48](codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_7.cpp)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [BEGIN_TEMPLATE_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_template_message_map)<br/>
-[Обработка и сопоставление сообщений](../mfc/message-handling-and-mapping.md)
+[Обработка и сопоставление сообщений](message-handling-and-mapping.md)

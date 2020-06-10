@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - add_lvalue_reference
 ms.assetid: 9933afc2-ad0d-465d-98fe-7d547fa3efe2
-ms.openlocfilehash: 6317b6665adb7f3a06da564fcf049d0b64eb42e8
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 5f822e3393853c780bfe4ee86d5a5c799ec7646d
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456563"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84617679"
 ---
-# <a name="addlvaluereference-class"></a>Класс add_lvalue_reference
+# <a name="add_lvalue_reference-class"></a>Класс add_lvalue_reference
 
 Делает из типа ссылку на тип.
 
@@ -32,9 +32,9 @@ using add_lvalue_reference_t = typename add_lvalue_reference<T>::type;
 *T*\
 Тип для изменения.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
-Экземпляр модификатора типа содержит модифицированный тип, который равен *t* , если *t* является ссылкой lvalue, в противном случае `T&`— значение.
+Экземпляр модификатора типа содержит модифицированный тип, который равен *t* , если *t* является ссылкой lvalue, в противном случае — значение `T&` .
 
 ## <a name="example"></a>Пример
 
@@ -61,11 +61,11 @@ add_lvalue_reference_t<int> == int
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<type_traits>
+**Заголовок:**\<type_traits>
 
 **Пространство имен:** std
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[<type_traits>](../standard-library/type-traits.md)\
-[Класс remove_reference](../standard-library/remove-reference-class.md)
+[<type_traits>](type-traits.md)\
+[Класс remove_reference](remove-reference-class.md)

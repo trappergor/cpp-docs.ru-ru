@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC, ANSI deprecated methods
 ms.assetid: c7c5a6fd-95e4-4bee-b3d5-d3826c30947d
-ms.openlocfilehash: 88fb249e053a88a93510cb8f6f9b3092d41a0113
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bbcae085b76e2dbce79265c0695c2b4e933553e2
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153558"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616997"
 ---
 # <a name="deprecated-ansi-apis"></a>Нерекомендуемые API ANSI
 
-Библиотеки Microsoft Foundation Class (MFC) переход к классы и методы, которые основаны на наборе символов Юникод. Следовательно являются устаревшими версии ANSI нескольких методов MFC. Используете версии Юникод этих методов в будущих приложениях.
+Библиотека Microsoft Foundation Class (MFC) выполняет миграцию к классам и методам, основанным на кодировке Юникода. Поэтому версии нескольких методов MFC, поддерживающие ANSI, являются устаревшими. Используйте версии этих методов в Юникоде в будущих приложениях.
 
-Начиная с общих элементов управления Windows версии 6.1, который поставляется в Windows Vista, являются устаревшими следующие методы ANSI.
+Начиная с стандартных элементов управления Windows версии 6,1, которые входят в состав Windows Vista, следующие методы ANSI являются устаревшими.
 
 ## <a name="cbutton-class"></a>Класс CButton
 
@@ -150,6 +150,6 @@ AFX_ANSI_DEPRECATED HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 AFX_ANSI_DEPRECATED HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Требования к сборке для использования стандартных элементов управления в Windows Vista](../mfc/build-requirements-for-windows-vista-common-controls.md)
+[Требования к сборке для использования стандартных элементов управления в Windows Vista](build-requirements-for-windows-vista-common-controls.md)

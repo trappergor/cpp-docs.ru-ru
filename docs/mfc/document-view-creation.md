@@ -1,5 +1,5 @@
 ---
-title: Создание документа или представления
+title: Создание представления документа
 ms.date: 11/04/2016
 helpviewer_keywords:
 - documents [MFC], creating
@@ -12,29 +12,29 @@ helpviewer_keywords:
 - MFC, documents
 - tables [MFC], objects each MFC object creates
 ms.assetid: bda14f41-ed50-439d-af9e-591174e7dd64
-ms.openlocfilehash: b5f9b783e8e14744a816fd63b327ed95d9da8e8a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5441827188f5bff98638cc85cd29e2efd79f8ae8
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62240795"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620344"
 ---
 # <a name="documentview-creation"></a>Создание документа или представления
 
-Среда .NET framework предоставляет реализации **New** и **откройте** команд (среди прочего) на **файл** меню. Создание документа и его связанного представления и окна фрейма не координированное усилий среди объект приложения, шаблон документа, вновь созданных документах и только что созданный фрейм окна. В следующей таблице перечислены объекты, которые создать новые.
+Платформа предоставляет реализации команд **New** и **Open** (из других) в меню **файл** . Создание нового документа и связанного с ним представления и окна фрейма — это совместная работа между объектом приложения, шаблоном документа, вновь созданным документом и вновь созданным окном фрейма. В следующей таблице приводятся сводные сведения о том, какие объекты создают.
 
-### <a name="object-creators"></a>Средства создания объектов
+### <a name="object-creators"></a>Создатели объектов
 
-|Создание|Создает|
+|Автор|Приводит|
 |-------------|-------------|
-|Объект Application|Шаблон документа|
+|Объект приложения|Шаблон документа|
 |Шаблон документа|Document|
-|Шаблон документа|Окна фрейма|
-|Окна фрейма|Просмотр|
+|Шаблон документа|Окно фрейма|
+|Окно фрейма|Просмотр|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Шаблоны документов и процесс создания документов и представлений](../mfc/document-templates-and-the-document-view-creation-process.md)<br/>
-[Создание шаблонов документов](../mfc/document-template-creation.md)<br/>
-[Отношения между объектами MFC](../mfc/relationships-among-mfc-objects.md)<br/>
-[Создание документов, окон и представлений](../mfc/creating-new-documents-windows-and-views.md)
+[Шаблоны документов и процесс создания документа/представления](document-templates-and-the-document-view-creation-process.md)<br/>
+[Создание шаблонов документов](document-template-creation.md)<br/>
+[Связи между объектами MFC](relationships-among-mfc-objects.md)<br/>
+[Создание новых документов, окон и представлений](creating-new-documents-windows-and-views.md)
