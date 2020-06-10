@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Common Controls (MFC), build requirements
 - Common Controls (MFC)
 ms.assetid: 025f7d55-55a2-4dcd-8f62-02424e3dcc04
-ms.openlocfilehash: 9ea90f95ba8e704cba5b22c5e7338659f0c5f033
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: cf2139e04d2f72feb7951010caa351d67ccc5a93
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630849"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619744"
 ---
 # <a name="build-requirements-for-windows-common-controls"></a>Требования к сборке для стандартных элементов управления Windows
 
@@ -30,7 +30,7 @@ MFC поддерживает все версии стандартных элем
 /D_UNICODE /DUNICODE
 ```
 
-При построении приложения в интегрированной среде разработки (IDE) Visual Studio укажите параметр кодировки **Юникода** в свойстве кодировки в узле **Общие** в свойствах проекта.
+При построении приложения в интегрированной среде разработки (IDE) Visual Studio укажите параметр кодировки **Юникода** **в свойстве кодировки** в узле **Общие** в свойствах проекта.
 
 ## <a name="migration-requirements"></a>Требования к миграции
 
@@ -50,8 +50,8 @@ MFC поддерживает все версии стандартных элем
 #endif
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Общие разделы по MFC](../mfc/general-mfc-topics.md)<br/>
-[Диаграмма иерархии](../mfc/hierarchy-chart.md)<br/>
-[Нерекомендуемые API ANSI](../mfc/deprecated-ansi-apis.md)
+[Общие разделы по MFC](general-mfc-topics.md)<br/>
+[Диаграмма иерархии](hierarchy-chart.md)<br/>
+[Нерекомендуемые API ANSI](deprecated-ansi-apis.md)

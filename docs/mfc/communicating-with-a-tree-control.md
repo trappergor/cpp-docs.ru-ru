@@ -7,24 +7,24 @@ helpviewer_keywords:
 - communications, tree controls
 - tree controls
 ms.assetid: 680ad9ee-b11f-452d-93fa-501ca7d7e069
-ms.openlocfilehash: 920608724ebb362b91efdcb3eab50b80acd20474
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f480cdad2fce53f830b8067083a8a4be4b4e4848
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62151263"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619646"
 ---
 # <a name="communicating-with-a-tree-control"></a>Установка связи с древовидным элементом управления
 
-Использовать различные методы для вызова функций-членов [CTreeCtrl](../mfc/reference/ctreectrl-class.md) объект в зависимости от того, как был создан объект:
+Для вызова функций-членов в объекте [CTreeCtrl](reference/ctreectrl-class.md) используются различные методы в зависимости от способа создания объекта.
 
-- Если элемент дерева в диалоговом окне, используйте переменную-член типа `CTreeCtrl` , создаваемый в класса диалогового окна.
+- Если элемент управления "дерево" находится в диалоговом окне, используйте переменную-член типа `CTreeCtrl` , созданную в классе диалогового окна.
 
-- Если дерево дочернего окна, используйте `CTreeCtrl` объект (или указатель), используемый для создания объекта.
+- Если элемент управления "дерево" является дочерним окном, используйте `CTreeCtrl` объект (или указатель), который использовался для создания объекта.
 
-- Если вы используете `CTreeView` , используйте функцию [CTreeView::GetTreeCtrl](../mfc/reference/ctreeview-class.md#gettreectrl) для получения ссылки на дерево. Можно инициализировать другую ссылку с этим значением или назначить адрес ссылки для `CTreeCtrl` указатель.
+- Если вы используете `CTreeView` объект, используйте функцию [CTreeView:: GetTreeCtrl](reference/ctreeview-class.md#gettreectrl) , чтобы получить ссылку на элемент управления "дерево". Можно инициализировать другую ссылку с этим значением или назначить адрес ссылки на `CTreeCtrl` указатель.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Использование CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
-[Элементы управления](../mfc/controls-mfc.md)
+[Использование CTreeCtrl](using-ctreectrl.md)<br/>
+[Элементы управления](controls-mfc.md)
