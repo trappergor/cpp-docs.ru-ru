@@ -1,0 +1,185 @@
+### YamlMime:Hub
+title: Документация по Microsoft C++, C и ассемблеру
+summary: Узнайте, как использовать C++ и язык ассемблера для разработки приложений, служб и средств для платформ и устройств.
+brand: visual-studio
+metadata:
+  title: Документация по Microsoft C/C++
+  description: Узнайте, как использовать C++ для разработки приложений, служб и средств для платформ и устройств.
+  ms.prod: visual-cpp
+  ms.topic: hub-page
+  author: corob-msft
+  ms.author: corob
+  ms.date: 06/04/2020
+  ms.openlocfilehash: aa696ed1057c0c47ff8dd66a76dd1f65a46f10bb
+  ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 06/08/2020
+  ms.locfileid: "84507845"
+highlightedContent:
+  items:
+  - title: Установка Visual Studio и выбор рабочих нагрузок C++
+    itemType: download
+    url: build/vscpp-step-0-installation.md
+  - title: Вас приветствует C++ в Visual Studio
+    itemType: overview
+    url: overview/visual-cpp-in-visual-studio.md
+  - title: Начало работы с Visual Studio и C++
+    itemType: get-started
+    url: get-started/tutorial-console-cpp.md
+  - title: Новые возможности C++ в Visual Studio
+    itemType: whats-new
+    url: overview/what-s-new-for-visual-cpp-in-visual-studio.md
+conceptualContent:
+  title: Начало работы с C++ и С
+  items:
+  - title: Инструкции по использованию Visual Studio IDE
+    links:
+    - text: Интерактивный обзор Visual Studio
+      url: https://docs.microsoft.com/visualstudio/ide/visual-studio-ide
+      itemType: overview
+    - text: Открытие кода из репозитория
+      url: https://docs.microsoft.com/visualstudio/get-started/tutorial-open-project-from-repo
+      itemType: tutorial
+    - text: Создание и редактирование кода
+      url: https://docs.microsoft.com/visualstudio/ide/index-writing-code
+      itemType: tutorial
+    - text: Сборка кода
+      url: https://docs.microsoft.com/visualstudio/ide/compiling-and-building-in-visual-studio
+      itemType: tutorial
+    - text: Отладка кода
+      itemType: tutorial
+      url: https://docs.microsoft.com/visualstudio/debugger/quickstart-debug-with-cplusplus
+    - text: Тестирование кода
+      itemType: tutorial
+      url: https://docs.microsoft.com/visualstudio/test/writing-unit-tests-for-c-cpp
+  - title: Создание приложений C++ и C в Visual Studio
+    links:
+    - text: Создание консольного приложения
+      url: get-started/tutorial-console-cpp.md
+      itemType: tutorial
+    - text: Создание классического приложения Windows с помощью Win32
+      url: windows/walkthrough-creating-windows-desktop-applications-cpp.md
+      itemType: tutorial
+    - text: Создание классического приложения Windows с помощью MFC
+      url: mfc/reference/creating-an-mfc-application.md
+      itemType: tutorial
+    - text: Создание библиотеки Windows DLL
+      url: build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md
+      itemType: tutorial
+    - text: Создание статической библиотеки
+      url: build/walkthrough-creating-and-using-a-static-library-cpp.md
+      itemType: tutorial
+    - text: Создание компонента .NET
+      url: dotnet/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md
+      itemType: tutorial
+    - text: Создание приложения универсальной платформы Windows
+      url: /windows/uwp/cpp-and-winrt-apis/get-started
+      itemType: tutorial
+  - title: Использование программ командной строки
+    links:
+    - text: Компиляция кода C++
+      url: build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md
+      itemType: tutorial
+    - text: Компиляция кода C
+      url: build/walkthrough-compile-a-c-program-on-the-command-line.md
+      itemType: tutorial
+    - text: Компиляция C++/CX
+      url: build/walkthrough-compiling-a-cpp-cx-program-on-the-command-line.md
+      itemType: tutorial
+    - text: Компиляция C++/CLI
+      url: build/walkthrough-compiling-a-cpp-cli-program-on-the-command-line.md
+      itemType: tutorial
+  - title: Использование C++ и C в Visual Studio Code
+    links:
+    - text: Начало работы с Visual Studio Code
+      url: https://code.visualstudio.com/docs
+      itemType: tutorial
+    - text: Установка расширения Microsoft C/C++
+      url: https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools
+      itemType: tutorial
+    - text: Использование Microsoft C/C++ в Windows
+      url: https://code.visualstudio.com/docs/cpp/config-msvc
+      itemType: tutorial
+    - text: Использование C++ в подсистеме Windows для Linux
+      url: https://code.visualstudio.com/docs/cpp/config-wsl
+      itemType: tutorial
+    - text: Использование C++ в Linux
+      url: https://code.visualstudio.com/docs/cpp/config-linux
+      itemType: tutorial
+    - text: Использование C++ в MacOS
+      url: https://code.visualstudio.com/docs/cpp/config-clang-mac
+      itemType: tutorial
+tools:
+  title: Языки и платформы
+  items:
+  - title: C++
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Cplusplus.svg
+    url: cpp/index.yml
+  - title: В
+    imageSrc: https://docs.microsoft.com/media/logos/logo_C.svg
+    url: c-language/index.yml
+  - title: Ассемблер (Майкрософт)
+    imageSrc: media/index/logo-asm.svg
+    url: intrinsics/index.yml
+  - title: Использование C++/CX со средой выполнения Windows
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Cplusplus.svg
+    url: cppcx/visual-c-language-reference-c-cx.md
+  - title: C++/CLI для .NET
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Cplusplus.svg
+    url: dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md
+  - title: Библиотека шаблонных классов (ATL)
+    imageSrc: media/index/logo-atl.svg
+    url: atl/atl-com-desktop-components.md
+  - title: Microsoft Foundation Classes (MFC)
+    imageSrc: media/index/logo-mfc.svg
+    url: mfc/mfc-desktop-applications.md
+  - title: Использование C++/WinRT со средой выполнения Windows
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Cplusplus.svg
+    url: /windows/uwp/cpp-and-winrt-apis/
+additionalContent:
+  sections:
+  - title: Использование C++ и C с рабочими нагрузками, функциями и библиотеками
+    summary: Разрабатывайте на используемых вами платформах с помощью средств Visual Studio.
+    items:
+    - title: Рабочие нагрузки
+      links:
+      - text: Разработка с помощью универсальной платформы Windows
+        url: cppcx/universal-windows-apps-cpp.md
+      - text: Разработка классических приложений для Windows
+        url: windows/windows-desktop-applications-cpp.md
+      - text: Разработка для Linux
+        url: linux/index.yml
+      - text: Разработка мобильных приложений
+        url: cross-platform/index.yml
+      - text: Разработка игр
+        url: /windows/uwp/gaming/e2e/
+    - title: Функции
+      links:
+      - text: Редактирование и рефакторинг кода
+        url: ide/writing-and-refactoring-code-cpp.md
+      - text: Создание проектов с кодом
+        url: build/projects-and-build-systems-cpp.md
+      - text: Отладка кода
+        url: https://docs.microsoft.com/visualstudio/debugger/debugging-native-code
+      - text: Анализ кода
+        url: code-quality/index.yml
+      - text: Повышение производительности приложения
+        url: https://docs.microsoft.com/visualstudio/profiling
+      - text: Перенос и обновление кода
+        url: porting/visual-cpp-porting-and-upgrading-guide.md
+    - title: Библиотеки
+      links:
+      - text: Справочник по стандартной библиотеке C++
+        url: standard-library/cpp-standard-library-reference.md
+      - text: Справочник по библиотеке времени выполнения C
+        url: c-runtime-library/c-run-time-library-reference.md
+      - text: Библиотеки MFC и ATL для рабочих столов Windows
+        url: mfc/mfc-and-atl.md
+      - text: Библиотеки параллельного программирования
+        url: parallel/parallel-programming-in-visual-cpp.md
+      - text: Облачные и сетевые библиотеки
+        url: cloud/cloud-and-web-programming-in-visual-cpp.md
+      - text: Библиотеки универсальной платформы Windows
+        url: cppcx/namespaces-reference-c-cx.md
+  footer: '[Блоги](https://devblogs.microsoft.com/cppblog/) - [Twitter](https://twitter.com/visualc) - [Stack Overflow](https://stackoverflow.com/questions/tagged/visual-c++) - [Сообщить о проблеме](overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md) - [Сообщество разработчиков](https://developercommunity.visualstudio.com/spaces/62/index.html) — принять участие в разработке документации по C++: Ознакомьтесь с нашим [руководством для соавторов](https://docs.microsoft.com/contribute/).'

@@ -6,12 +6,12 @@ metadata:
   description: Научитесь анализировать качество кода C/C++ в Visual Studio.
   ms.topic: landing-page
   ms.date: 05/26/2020
-  ms.openlocfilehash: 95bba65d42138424efb8978a67666c8354384aea
-  ms.sourcegitcommit: f7ebdfc3a260778c2ef938747cba1376c70ced15
+  ms.openlocfilehash: cb4015d2890e24568373ff97d884e4aa24ddcf71
+  ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 05/27/2020
-  ms.locfileid: "84108411"
+  ms.lasthandoff: 06/08/2020
+  ms.locfileid: "84506759"
 landingContent:
 - title: Анализ кода C и C++
   linkLists:
@@ -27,8 +27,6 @@ landingContent:
     links:
     - text: Пошаговое руководство по анализу кода C/C++ на наличие дефектов
       url: walkthrough-analyzing-c-cpp-code-for-defects.md
-    - text: Использование аннотаций SAL для сокращения количества дефектов в коде C/C++
-      url: using-sal-annotations-to-reduce-c-cpp-code-defects.md
 - title: Справочник по анализу кода
   linkLists:
   - linkListType: overview
@@ -41,3 +39,29 @@ landingContent:
       url: code-analysis-for-cpp-corecheck.md
     - text: Предупреждения анализа кода C++
       url: code-analysis-for-c-cpp-warnings.md
+- title: Использование заметок SAL для сокращения числа дефектов
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Основные сведения о языке SAL
+      url: understanding-sal.md
+  - linkListType: get-started
+    links:
+    - text: Примеры SAL
+      url: best-practices-and-examples-sal.md
+  - linkListType: how-to-guide
+    links:
+    - text: Создание примечаний к параметрам и возвращаемым значениям функций
+      url: annotating-function-parameters-and-return-values.md
+    - text: Аннотация поведения функций
+      url: annotating-function-behavior.md
+    - text: Аннотация структур и классов
+      url: annotating-structs-and-classes.md
+    - text: Аннотация поведения блокировки
+      url: annotating-locking-behavior.md
+    - text: Определение времени и места применения примечания
+      url: specifying-when-and-where-an-annotation-applies.md
+  - linkListType: reference
+    links:
+    - text: Встроенные заметки SAL
+      url: intrinsic-functions.md
