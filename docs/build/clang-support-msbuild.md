@@ -1,15 +1,15 @@
 ---
 title: Поддержка Clang и LLVM в проектах Visual Studio
-ms.date: 08/30/2019
+ms.date: 06/02/2020
 ms.description: Configure a Visual Studio MSBuild project to use the Clang/LLVM toolchain.
 helpviewer_keywords:
 - Clang support for C++ MSBuild projects
-ms.openlocfilehash: 8d7d7fec979d3e7b8f665e56094ee1c309e3b686
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1a1dfef033bffd3d7f1d24233752d7beae11af8e
+ms.sourcegitcommit: d695bb727bd2b081af4d50127b0242a9a5bdce61
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323122"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84332283"
 ---
 # <a name="clangllvm-support-in-visual-studio-projects"></a>Поддержка Clang и LLVM в проектах Visual Studio
 
@@ -35,7 +35,7 @@ Visual Studio 2019 версии 16.2 с Clang можно использова�
 
 ![Установка компонентов Clang](media/clang-msbuild-prop-page.png)
 
-Если вы используете средства Clang, входящие в состав Visual Studio, никаких дополнительных действий не требуется. Для проектов Windows среда Visual Studio по умолчанию вызывает Clang в режиме [clang-cl](https://llvm.org/devmtg/2014-04/PDFs/Talks/clang-cl.pdf) и связывается с реализацией стандартной библиотеки Майкрософт. По умолчанию **clang-cl.exe** находится в `C:\Program Files (x86)\Microsoft Visual Studio\2019\Common7\IDE\CommonExtensions\Microsoft\Llvm\bin`.
+Если вы используете средства Clang, входящие в состав Visual Studio, никаких дополнительных действий не требуется. Для проектов Windows среда Visual Studio по умолчанию вызывает Clang в режиме [clang-cl](https://llvm.org/devmtg/2014-04/PDFs/Talks/clang-cl.pdf) и связывается с реализацией стандартной библиотеки Майкрософт. По умолчанию **clang-cl.exe** находится в каталогах *%VCINSTALLDIR%\\Tools\\Llvm\\bin\\* и *%VCINSTALLDIR%\\Tools\\Llvm\\x64\\bin\\* .
 
 Если используется настраиваемая установка Clang, можно изменить свойство **Проект** > **Свойства** > **Каталоги VC++**  > **Свойства конфигурации** > **Каталоги исполняемых файлов**, добавив корневой каталог настраиваемой установки Clang в качестве первого каталога, или изменить значение свойства `LLVMInstallDir`. Дополнительные сведения см. в разделе [Задание настраиваемого расположения LLVM](#custom_llvm_location).
 
