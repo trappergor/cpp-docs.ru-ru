@@ -1,25 +1,25 @@
 ---
 title: Обновление WINVER и _WIN32_WINNT
-description: Когда и как обновлять макросы WINVER и _WIN32_WINNT в обновленных проектах C++ Visual Studio.
-ms.date: 01/22/2020
+description: Когда и как обновлять макросы WINVER и _WIN32_WINNT в обновленных проектах Visual Studio C++.
+ms.date: 06/19/2020
 helpviewer_keywords:
 - WINVER in an upgraded Visual Studio C++ project
 - _WIN32_WINNT in an upgraded Visual Studio C++ project
 ms.assetid: 6a1f1d66-ae0e-48a7-81c3-524d8e8f3447
-ms.openlocfilehash: b81c7967732c7b0c23ff0eb73d2a866a9b33713b
-ms.sourcegitcommit: b67b08472b6f1ee8f1c5684bba7056d3e0fc745f
+ms.openlocfilehash: a0faed612517bf26cd89473e1aef248fb9e7b33e
+ms.sourcegitcommit: 493fd8747f832e1facb9a76c437a25a5c9fb55f6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725700"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141058"
 ---
 # <a name="update-winver-and-_win32_winnt"></a>Обновление WINVER и _WIN32_WINNT
 
-При использовании Windows SDK можно указать версии Windows, на которых может выполняться ваш код. Макросы препроцессора **WINVER** и **_WIN32_WINNT** указывают минимальную версию операционной системы, поддерживаемую кодом. Visual Studio и поддержка компилятора C++ Майкрософт для Windows 7 с пакетом обновления 1 (SP1) и более поздних версий. К старым наборам инструментов относятся поддержка Windows XP SP4, Windows Server 2003 SP4, Vista и Windows Server 2008. Windows 95, Windows 98, Windows ME, Windows NT и Windows 2000 не поддерживаются.
+При использовании Windows SDK можно указать версии Windows, на которых может выполняться ваш код. Макросы препроцессора **WINVER** и **_WIN32_WINNT** указывают минимальную версию операционной системы, поддерживаемую кодом. Visual Studio и компилятор Microsoft C++ поддерживают для Windows 7 с пакетом обновления 1 (SP1) и более поздних версий. К старым наборам инструментов относятся поддержка Windows XP SP2, Windows Server 2003 с пакетом обновления 1 (SP1), Vista и Windows Server 2008. Windows 95, Windows 98, Windows ME, Windows NT и Windows 2000 не поддерживаются.
 
 При обновлении более старого проекта может потребоваться обновить макросы **WINVER** или **_WIN32_WINNT** . Если им назначены значения для неподдерживаемой версии Windows, могут возникнуть ошибки компиляции, связанные с этими макросами.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Комментарии
 
 Чтобы изменить макросы, в файле заголовка (например, в *targetver. h*, который включен в некоторые шаблоны проектов, предназначенные для Windows), добавьте следующие строки.
 
@@ -96,6 +96,6 @@ ms.locfileid: "76725700"
 
 Дополнительные сведения о значении этих макросов см. в разделе [Использование заголовков Windows](/windows/win32/WinProg/using-the-windows-headers).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Журнал изменений Visual C++](../porting/visual-cpp-change-history-2003-2015.md)
