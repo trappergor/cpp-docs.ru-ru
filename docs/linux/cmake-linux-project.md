@@ -1,14 +1,14 @@
 ---
 title: Создание и настройка проекта Linux CMake в Visual Studio
 description: Создание, настройка, изменение и компиляция проекта Linux CMake в Visual Studio
-ms.date: 05/03/2020
+ms.date: 06/22/2020
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: c12e32801c992f6ba3675327b9ae537890202a4c
-ms.sourcegitcommit: 8a01ae145bc65f5bc90d6e47b4a1bdf47b073ee7
+ms.openlocfilehash: 2149b102c452149070d59c9645ce34a5977a6057
+ms.sourcegitcommit: f9344b09a734e8b05a7494415991a22b7aec5ae8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765764"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85269732"
 ---
 # <a name="create-and-configure-a-linux-cmake-project"></a>Создание и настройка проекта Linux CMake
 
@@ -120,7 +120,13 @@ Visual Studio по умолчанию выбирает первую удален
 
 ![Создание кэша CMake в Linux](media/cmake-linux-1.png "Создание кэша CMake в Linux")
 
+### <a name="intellisense"></a>IntelliSense
+
 Чтобы включить поддержку удаленных заголовков IntelliSense в удаленных системах Linux, Visual Studio автоматически копирует их с компьютера Linux в папку на локальном компьютере Windows. Подробнее см. в разделе [IntelliSense для удаленных заголовков](configure-a-linux-project.md#remote_intellisense).
+
+### <a name="locale"></a>Языковой стандарт
+
+См. дополнительные сведения о [языковом стандарте целевого объекта Linux](configure-a-linux-project.md#locale).
 
 ## <a name="debug-the-cmake-project"></a><a name="debug_cmake_project"></a> Отладка проекта CMake
 
