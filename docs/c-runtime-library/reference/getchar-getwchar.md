@@ -1,6 +1,6 @@
 ---
 title: getchar, getwchar
-ms.date: 4/2/2020
+ms.date: 06/23/2020
 api_name:
 - getchar
 - getwchar
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _gettchar function
 - standard input, reading from
 ms.assetid: 19fda588-3e33-415c-bb60-dd73c028086a
-ms.openlocfilehash: 2073f23583772f71489f1597b0df8e1e6abe2253
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c6a02f16c3ee3d3e3bc4f86026719a1bd2885416
+ms.sourcegitcommit: 8645408c7929558b8162f781776d0908d790a41c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920332"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85334978"
 ---
 # <a name="getchar-getwchar"></a>getchar, getwchar
 
@@ -53,13 +53,15 @@ wint_t getwchar();
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает считанный символ. Чтобы указать на ошибку чтения или конец файла, функция **GetChars** возвращает значение **EOF**, а **getwchar** возвращает **WEOF**. Для **GetChars**используйте **ferror** или **feof** для проверки ошибки или завершения файла.
+Возвращает считанный символ. Эти функции ожидают ввода и не возвращают, пока не будут доступны входные данные.
 
-## <a name="remarks"></a>Remarks
+Чтобы указать на ошибку чтения или конец файла, функция **GetChars** возвращает значение **EOF**, а **getwchar** возвращает **WEOF**. Для **GetChars**используйте **ferror** или **feof** для проверки ошибки или завершения файла.
+
+## <a name="remarks"></a>Комментарии
 
 Каждая подпрограммы считывает один символ из **stdin** и увеличивает связанный указатель файла, чтобы он указывал на следующий символ. Функция **GetChars** аналогична [_fgetchar](fgetc-fgetwc.md), но реализована в виде функции и макроса.
 
-Эти функции блокируют вызывающий поток, поэтому они потокобезопасны. Описание неблокирующей версии см. в разделе [_getchar_nolock, _getwchar_nolock](getchar-nolock-getwchar-nolock.md).
+Эти функции также блокируют вызывающий поток и являются потокобезопасными. Описание неблокирующей версии см. в разделе [_getchar_nolock, _getwchar_nolock](getchar-nolock-getwchar-nolock.md).
 
 По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
@@ -108,7 +110,7 @@ int main()
 This textInput was: This text
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)<br/>
 [getc, getwc](getc-getwc.md)<br/>
