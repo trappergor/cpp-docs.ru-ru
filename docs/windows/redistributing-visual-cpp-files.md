@@ -8,21 +8,21 @@ helpviewer_keywords:
 - file redistribution [C++]
 - redistributing applications [C++], about redistributing applications
 ms.assetid: d201b2ce-36f1-44e5-a96c-0db81a1ba652
-ms.openlocfilehash: 46192fe7ff5b29c22a5001cc460c74f5ddf6d1bb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 16a450f65689251c67a5326bd772d09d5c4abb74
+ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167931"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737501"
 ---
 # <a name="redistributing-visual-c-files"></a>Распространение файлов Visual C++
 
 > [!NOTE]
-> Вы попали сюда, так хотите скачать один из файлов среды выполнения Visual C++? Перейдите на [веб-сайт Майкрософт](https://www.microsoft.com/) и введите в поле поиска **распространяемый пакет визуализации C++**  . Скачайте и установите распространяемый пакет для архитектуры своего компьютера (например, x64, если у вас 64-разрядная версия Windows) и нужную версию Visual C++ (например, 2015).
+> Вы попали сюда, так хотите скачать один из файлов среды выполнения Visual C++? Перейдите на [веб-сайт Майкрософт](https://www.microsoft.com/) и введите **Visual C++ распространяемый пакет** в поле поиска. Скачайте и установите распространяемый пакет для архитектуры своего компьютера (например, x64, если у вас 64-разрядная версия Windows) и нужную версию Visual C++ (например, 2015).
 
 При развертывании приложения необходимо также развернуть файлы, поддерживающие это приложение. Если какие-либо из этих файлов предоставляются Майкрософт, убедитесь в наличии разрешений на их повторное распространение. Чтобы просмотреть условия лицензионного соглашения для Visual Studio, воспользуйтесь ссылкой "Условия лицензии" в диалоговом окне "О Microsoft Visual Studio" в интегрированной среде разработки или скачайте файл [Условия лицензионного соглашения на использование программного обеспечения корпорации Майкрософт](https://visualstudio.microsoft.com/license-terms/mlt687465/). Для просмотра "списка REDIST", на который ссылается раздел "Распространяемый код" условий лицензионного соглашения на использование программного обеспечения корпорации Майкрософт для некоторых выпусков Visual Studio, см. раздел [Распространяемый код для Microsoft Visual Studio 2017 и Microsoft Visual Studio 2017 SDK (включает служебные программы и файлы BuildServer)](/visualstudio/productinfo/2017-redistribution-vs), а для Visual Studio 2015 см. раздел [Распространяемый код для Microsoft Visual Studio 2015 и Microsoft Visual Studio 2015 SDK](/visualstudio/productinfo/2015-redistribution-vs). Дополнительные сведения о повторно распространяемых файлах см. в разделах [Определение библиотек DLL для распространения](determining-which-dlls-to-redistribute.md) и [Примеры развертывания](deployment-examples.md).
 
-Чтобы развернуть распространяемые файлы Visual C++, можно использовать распространяемые пакеты Visual C++ (VCRedist\_x86.exe, VCRedist\_x64.exe или VCRedist\_arm.exe), которые включены в Visual Studio. В Visual Studio 2017 эти файлы находятся в папке Program Files[ (x86)]\\Microsoft Visual Studio\\2017\\_выпуск_\\VC\\Redist\\MSVC\\_версия_библиотеки_, где _выпуск_ — это установленный выпуск Visual Studio, а _версия_библиотеки_ — это версия библиотек для распространения. В Visual Studio 2015 эти файлы находятся в каталоге установки Visual Studio — Program Files [(x86)]\Microsoft Visual Studio *версия*\VC\redist\\*языковой_стандарт*\\. Другой вариант — использовать распространяемые модули слияния (файлы MSM), которые в Visual Studio 2017 находятся в папке Program Files [(x86)]\\Microsoft Visual Studio\\2017\\_выпуск_\\VC\\Redist\\MSVC\\_версия_библиотеки_\\MergeModules\\. В Visual Studio 2015 они находятся в папке Program Files [(x86)]\Common Files\Merge Modules\\. Кроме того, можно напрямую установить распространяемые библиотеки DLL Visual C++ в *локальной папке приложений*, где содержится исполняемый файл приложения. По причинам, связанным с обслуживанием, не рекомендуется использовать это расположение установки.
+Чтобы развернуть распространяемые файлы Visual C++, можно использовать распространяемые пакеты Visual C++ (VCRedist\_x86.exe, VCRedist\_x64.exe или VCRedist\_arm.exe), которые включены в Visual Studio. В Visual Studio 2019 эти файлы можно найти в папке Program Files [(x86)] \\ Microsoft Visual Studio \\ 2019 \\ _Edition_ \\ VC \\ Redist \\ компилятором MSVC \\ v142 или в Program Files [(x86)] \\ Microsoft Visual Studio \\ 2019 \\ _Edition_ \\ VC \\ \\ компилятором MSVC \\ _lib-Version_ папка, где _Edition_ установлен выпуск Visual Studio, а _lib-Version_ — версия библиотек для повторного распространения. В Visual Studio 2017 эти файлы можно найти в папке Program Files [(x86)] \\ Microsoft Visual Studio \\ 2017 \\ _Edition_ \\ VC \\ Redist \\ компилятором MSVC \\ _lib-Version_ , где _Edition_ — это установленный выпуск Visual Studio, а _lib-Version_ — версия библиотек для повторного распространения. В Visual Studio 2015 эти файлы находятся в каталоге установки Visual Studio — Program Files [(x86)]\Microsoft Visual Studio *версия*\VC\redist\\*языковой_стандарт*\\. Другим вариантом является использование распространяемых модулей слияния (MSM-файлов), которые в Visual Studio 2019 можно найти в папке Program Files [(x86)] \\ Microsoft Visual Studio \\ 2019 \\ _Edition_ \\ VC \\ \\ компилятором MSVC \\ v142 \\ мержемодулес или в Program Files [(x86)] \\ 2019 Microsoft Visual Studio \\ компилятором MSVC \\ _выпуска_ \\ VC \\ \\ \\ _lib-version_ \\ Redistributable. В Visual Studio 2017 можно найти в папке Program Files [(x86)] \\ Microsoft Visual Studio \\ 2017 \\ _Edition_ \\ VC \\ Redist \\ компилятором MSVC \\ _lib-Version_ \\ мержемодулес. В Visual Studio 2015 они находятся в папке Program Files [(x86)]\Common Files\Merge Modules. Кроме того, можно напрямую установить распространяемые библиотеки DLL Visual C++ в *локальной папке приложений*, где содержится исполняемый файл приложения. По причинам, связанным с обслуживанием, не рекомендуется использовать это расположение установки.
 
 Распространяемые пакеты Visual C++ позволяют устанавливать и регистрировать все библиотеки Visual C++. Если такой пакет используется, необходимо задать его выполнение в целевой системе в качестве обязательного требования к установке приложения. Рекомендуется использовать эти пакеты для развертываний, поскольку они включают функцию автоматического обновления библиотек Visual C++. Пример использования этих пакетов см. в разделе [Пошаговое руководство. Развертывание приложения Visual C++ с помощью распространяемого пакета Visual C++](deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md).
 
@@ -38,11 +38,11 @@ ms.locfileid: "80167931"
 
 ## <a name="related-topics"></a>См. также
 
-|Title|Description|
+|Заголовок|Описание|
 |-----------|-----------------|
 |[Распространение с помощью модулей слияния](redistributing-components-by-using-merge-modules.md)|Здесь приводится описание использования распространяемых модулей слияния Visual C++ для установки библиотек времени выполнения Visual C++ в качестве общих библиотек DLL в папке %windir%\system32\.|
-|[Распространение элементов ActiveX Visual C++](redistributing-visual-cpp-activex-controls.md)|Описание процедуры повторного распространения приложения, которое использует элементы управления ActiveX.|
+|[Распространение элементов управления ActiveX в Visual C++](redistributing-visual-cpp-activex-controls.md)|Описание процедуры повторного распространения приложения, которое использует элементы управления ActiveX.|
 |[Распространение библиотеки MFC](redistributing-the-mfc-library.md)|Описание процедуры повторного распространения приложения, которое использует MFC.|
-|[Распространение приложения ATL](redistributing-an-atl-application.md)|Описание способа распространения приложения, которое использует ATL. Начиная с Visual Studio 2012, распространяемая библиотека для ATL не требуется.|
+|[Повторное распространение приложения ATL](redistributing-an-atl-application.md)|Описание способа распространения приложения, которое использует ATL. Начиная с Visual Studio 2012, распространяемая библиотека для ATL не требуется.|
 |[Примеры развертывания](deployment-examples.md)|Ссылки на примеры, демонстрирующие развертывание приложений Visual C++.|
 |[Развертывание классических приложений](deploying-native-desktop-applications-visual-cpp.md)|Представлены технологии развертывания Visual C++ и связанные понятия.|

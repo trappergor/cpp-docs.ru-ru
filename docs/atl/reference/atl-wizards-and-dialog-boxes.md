@@ -1,19 +1,19 @@
 ---
-title: ATL мастеры и диалоговые окна
-ms.date: 11/04/2016
+title: Мастера и диалоговые окна ATL
+ms.date: 06/26/2020
 helpviewer_keywords:
 - ATL, class wizards
 ms.assetid: 51cf002a-83bc-41ba-aeb8-364ea2331375
-ms.openlocfilehash: 1eea4e86d453939f5ba1bdda47906768c8012ba6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2ba981c771572f93e9a452db83c722c817b6428
+ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62247761"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737452"
 ---
-# <a name="atl-wizards-and-dialog-boxes"></a>ATL мастеры и диалоговые окна
+# <a name="atl-wizards-and-dialog-boxes"></a>Мастера и диалоговые окна ATL
 
-Active Template Library (ATL) мастер создает стандартный код для различных типов COM-объектов. Вы можете запустить мастера, открыв контекстное меню для проекта в **обозревателе решений** и выбрав **добавить**, **класс**.
+Мастера библиотеки активных шаблонов (ATL) создают стандартный код для различных типов COM-объектов. Чтобы запустить мастера, откройте контекстное меню проекта в **Обозреватель решений** и выберите **Добавить**, **класс**.
 
 ## <a name="related-articles"></a>Связанные статьи
 
@@ -21,11 +21,11 @@ Active Template Library (ATL) мастер создает стандартный
 |-----------|-----------------|
 |[Создание проекта ATL](../../atl/reference/creating-an-atl-project.md)|Описывает мастер проектов ATL и его параметры.|
 |[Простой объект ATL](../../atl/reference/adding-an-atl-simple-object.md)|Создает базовый объект.|
-|[Страницы свойств ATL](../../atl/reference/adding-an-atl-property-page.md)|Создает страницу основных свойств.|
-|[Поставщик OLE DB ATL](../../atl/reference/adding-an-atl-ole-db-provider.md)|Создает базовый поставщик OLE DB.|
-|[Потребителя ATL OLE DB](../../atl/reference/adding-an-atl-ole-db-consumer.md)|Создает базовый потребителя OLE DB.|
-|[Диалогового окна ATL](../../atl/reference/adding-an-atl-dialog-box.md)|Создает базовый диалоговое окно.|
+|[Свойства ATL](../../atl/reference/adding-an-atl-property-page.md)|Создает базовую страницу свойств.</br>Недоступно в Visual Studio 2019 и более поздних версиях.|
+|[Поставщик ATL OLE DB](../../atl/reference/adding-an-atl-ole-db-provider.md)|Создает базовый поставщик OLE DB.</br>Недоступно в Visual Studio 2019 и более поздних версиях.|
+|[Adding an ATL OLE DB Consumer](../../atl/reference/adding-an-atl-ole-db-consumer.md) (Добавление объекта-получателя ATL OLE DB)|Создает базовый OLE DB потребителя.</br>Недоступно в Visual Studio 2019 и более поздних версиях.|
+|[Диалоговое окно ATL](../../atl/reference/adding-an-atl-dialog-box.md)|Создает простое диалоговое окно.|
 |[Элемент управления ATL](../../atl/reference/adding-an-atl-control.md)|Создает базовый элемент управления ActiveX.|
-|[Компонент COM + 1.0 библиотеки ATL](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)|Создание базового компонента ATL COM + 1.0|
-|[ASP-компонента ATL](../../atl/reference/adding-an-atl-active-server-page-component.md)|Создание базового компонента ATL ASP-страницу.|
-|[Компоненты ATL COM Desktop](../../atl/atl-com-desktop-components.md)|Ссылки на документацию ATL.|
+|[Компонент COM+ 1.0 библиотеки ATL](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)|Создает базовый компонент ATL COM+ 1,0.</br>Недоступно в Visual Studio 2019 и более поздних версиях.|
+|[ASP-компонент библиотеки ATL](../../atl/reference/adding-an-atl-active-server-page-component.md)|Создает базовый компонент страницы Active Server ATL.</br>Недоступно в Visual Studio 2019 и более поздних версиях.|
+|[Компоненты ATL COM Desktop](../../atl/atl-com-desktop-components.md)|Ссылки на документацию по ATL.|

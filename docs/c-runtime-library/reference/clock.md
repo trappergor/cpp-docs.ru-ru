@@ -1,5 +1,5 @@
 ---
-title: часы
+title: clock
 ms.date: 11/04/2016
 api_name:
 - clock
@@ -28,14 +28,14 @@ helpviewer_keywords:
 - processor time used
 - calculating processor time used
 ms.assetid: 3e1853dd-498f-49ba-b06a-f2315f20904e
-ms.openlocfilehash: 836d0c6448adb4c99a251a0e97aa642e30362dcb
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 660c97882151127cc6c1caa64bb27f5728f169fb
+ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939118"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737468"
 ---
-# <a name="clock"></a>часы
+# <a name="clock"></a>clock
 
 Вычисляет реальное прошедшее время для процесса.
 
@@ -47,13 +47,13 @@ clock_t clock( void );
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Время, прошедшее с момента инициализации CRT в начале процесса, измеряется в **CLOCKS_PER_SEC** единицах в секунду. Если затраченное время недоступно или превышает максимальное положительное время, которое можно записать в качестве типа **clock_t** , функция возвращает значение `(clock_t)(-1)`.
+Время, прошедшее с момента инициализации CRT в начале процесса, измеряется в **CLOCKS_PER_SEC** единицах в секунду. Если затраченное время недоступно или превышает максимальное положительное время, которое можно записать как тип **clock_t** , функция возвращает значение `(clock_t)(-1)` .
 
 ## <a name="remarks"></a>Примечания
 
 Функция **Clock** сообщает, сколько времени пропускной способности прошло с момента инициализации CRT во время запуска процесса. Обратите внимание на то, что эта функция не является строго соответствующей стандарту ISO C, который определяет возвращаемое значение как чистое время ЦП. Чтобы получить время ЦП, используйте функцию [GetProcessTimes](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getprocesstimes) Win32. Чтобы определить затраченное время в секундах, разделите значение, возвращаемое функцией **Clock** , на **CLOCKS_PER_SEC**макроса.
 
-Учитывая достаточное время, значение, возвращаемое **часами** , может превышать максимальное положительное значение **clock_t**. Когда процесс выполняется дольше, значение, возвращаемое **часами** , всегда `(clock_t)(-1)`равно, как указано в стандарте ISO C99 Standard (7.23.2.1) и ISO C11 Standard (7.27.2.1). Корпорация Майкрософт реализует **clock_t** в виде **длинного**, 32-разрядного целого числа со знаком, а макрос **CLOCKS_PER_SEC** определяется как 1000. Это дает максимальное значение, возвращаемое функцией **Clock** , равное 2147483,647 секундам, или около 24,8 дней. Не полагайтесь на значение, возвращаемое **часами** в процессах, которые выполнялись дольше данного периода времени. Вы можете использовать функцию 64-разрядного [времени](time-time32-time64.md) или функцию Windows [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) для записи времени, прошедшего в течение многих лет.
+Учитывая достаточное время, значение, возвращаемое **часами** , может превышать максимальное положительное значение **clock_t**. Когда процесс выполняется дольше, значение, возвращаемое **часами** , всегда равно `(clock_t)(-1)` , как указано в стандарте ISO C99 Standard (7.23.2.1) и ISO C11 Standard (7.27.2.1). Корпорация Майкрософт реализует **clock_t** как **длинное**32-разрядное целое число со знаком, а макрос **CLOCKS_PER_SEC** определяется как 1000. Это дает максимальное значение, возвращаемое функцией **Clock** , равное 2147483,647 секундам, или около 24,8 дней. Не полагайтесь на значение, возвращаемое **часами** в процессах, которые выполнялись дольше данного периода времени. Вы можете использовать функцию 64-разрядного [времени](time-time32-time64.md) или функцию Windows [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) для записи времени, прошедшего в течение многих лет.
 
 ## <a name="requirements"></a>Требования
 
@@ -61,7 +61,7 @@ clock_t clock( void );
 |-------------|---------------------|
 |**clock**|\<time.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -75,7 +75,7 @@ clock_t clock( void );
 #include <stdlib.h>
 #include <time.h>
 
-// Pauses for a specified number of milliseconds.
+// Pauses for a specified number of clock cycles.
 void do_sleep( clock_t wait )
 {
    clock_t goal;
@@ -116,6 +116,6 @@ Time to do 600000000 empty loops is 1.354 seconds
 
 ## <a name="see-also"></a>См. также
 
-[Управление временем](../../c-runtime-library/time-management.md)<br/>
+[Операции управления временем](../../c-runtime-library/time-management.md)<br/>
 [difftime, _difftime32, _difftime64](difftime-difftime32-difftime64.md)<br/>
 [time, _time32, _time64](time-time32-time64.md)<br/>

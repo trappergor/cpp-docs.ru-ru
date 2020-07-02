@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CFileException [MFC], m_lOsError
 - CFileException [MFC], m_strFileName
 ms.assetid: f6491bb9-bfbc-42fd-a952-b33f9b62323f
-ms.openlocfilehash: f58ba02862e9c0f0c0c0d24797be939276ca8035
-ms.sourcegitcommit: 8167c67d76de58a7c2df3b4dcbf3d53e3b151b77
+ms.openlocfilehash: 85ff8d77bda30bcf0b107f733098d07c4fd80283
+ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84664343"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813526"
 ---
 # <a name="cfileexception-class"></a>Класс CFileException
 
@@ -45,7 +45,7 @@ class CFileException : public CException
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[Кфиликсцептион:: Кфиликсцептион](#cfileexception)|Формирует объект `CFileException`.|
 
@@ -61,13 +61,13 @@ class CFileException : public CException
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[Кфиликсцептион:: m_cause](#m_cause)|Содержит переносимый код, соответствующий причине исключения.|
 |[Кфиликсцептион:: m_lOsError](#m_loserror)|Содержит номер связанной ошибки операционной системы.|
 |[Кфиликсцептион:: m_strFileName](#m_strfilename)|Содержит имя файла для этого исключения.|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
 `CFileException`Класс содержит открытые члены данных, которые содержат переносимый код причины и номер ошибки, зависящий от операционной системы. Класс также предоставляет статические функции-члены для генерации исключений файлов и для возврата кодов причин ошибок операционной системы и ошибок времени выполнения C.
 
@@ -81,7 +81,7 @@ class CFileException : public CException
 
 `CFileException`
 
-## <a name="requirements"></a>Requirements (Требования)
+## <a name="requirements"></a>Требования
 
 **Заголовок:** AFX. h
 
@@ -107,7 +107,7 @@ CFileException(
 *лпсзарчивенаме*<br/>
 Указывает на строку, содержащую имя `CFile` объекта, вызвавшего исключение.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Примечания
 
 Не используйте этот конструктор напрямую, а вызовите глобальную функцию [афкссровфиликсцептион](exception-processing.md#afxthrowfileexception).
 
@@ -131,7 +131,7 @@ static int PASCAL ErrnoToException(int nErrno);
 
 Перечислимое значение, соответствующее указанному значению ошибки библиотеки времени выполнения.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Примечания
 
 Список возможных перечислимых значений см. в разделе [кфиликсцептион:: m_cause](#m_cause) .
 
@@ -165,7 +165,7 @@ virtual BOOL GetErrorMessage(
 
 Значение TRUE, если метод выполнен успешно; в противном случае — FALSE.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Примечания
 
 Если указанный буфер слишком мал, сообщение об ошибке усекается.
 
@@ -183,7 +183,7 @@ virtual BOOL GetErrorMessage(
 int m_cause;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Примечания
 
 Этот элемент данных является открытой переменной типа **int**. Ниже перечислены перечислители и их значения.
 
@@ -205,11 +205,11 @@ int m_cause;
 | `CFileException::diskFull` | 13: диск заполнен. |
 | `CFileException::endOfFile` | 14: достигнут конец файла. |
 
-    > [!NOTE]
-    >  These `CFileException` cause enumerators are distinct from the `CArchiveException` cause enumerators.
+> [!NOTE]
+> Перечислители причины `CFileException` отличаются от перечислителей причины `CArchiveException`.
 
-    > [!NOTE]
-    > `CArchiveException::generic` is deprecated. Use `genericException` instead. If **generic** is used in an application and built with /clr, the resulting syntax errors are not easy to decipher.
+> [!NOTE]
+> `CArchiveException::generic` не рекомендуется к использованию. Взамен рекомендуется использовать `genericException`. Если **универсальное** приложение используется в приложении и строится с помощью параметра/CLR, то в результате синтаксических ошибок не будет легко расшифроваться.
 
 ### <a name="example"></a>Пример
 
@@ -223,7 +223,7 @@ int m_cause;
 LONG m_lOsError;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Примечания
 
 Список кодов ошибок см. в техническом руководстве по операционной системе. Этот элемент данных является открытой переменной типа LONG.
 
