@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::error_category::message
 - std::error_category::name
 ms.assetid: e0a71e14-852d-4905-acd6-5f8ed426706d
-ms.openlocfilehash: 3ed2eceb60c2efa78181faea58a256b0e35d489f
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 136320ba3be36ec20fc08e0d83b1ce3274ed08ff
+ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076616"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737555"
 ---
 # <a name="error_category-class"></a>Класс error_category
 
@@ -41,20 +41,20 @@ error_category(const error_category&) = delete
 
 `error_category` реализуют два стандартных объекта: [generic_category](../standard-library/system-error-functions.md#generic_category) и [system_category](../standard-library/system-error-functions.md#system_category).
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Элементы
 
 ### <a name="typedefs"></a>Определения типов
 
 |||
 |-|-|
-|[value_type](#value_type)|Тип, представляющий сохраняемое значение кода ошибки.|
+|[value_type](#value_type)|Тип, представляющий сохраненное значение кода ошибки.|
 
 ### <a name="functions"></a>Функции
 
 |||
 |-|-|
 |[default_error_condition](#default_error_condition)|Сохраняет значение кода ошибки для объекта условия ошибки.|
-|[equivalent](#equivalent)|Возвращает значение, указывающее, эквивалентны ли объекты ошибок.|
+|[друг](#equivalent)|Возвращает значение, указывающее, эквивалентны ли объекты ошибок.|
 |[generic_category](#generic)||
 |[message](#message)|Возвращает имя указанного кода ошибки.|
 |[name](#name)|Возвращает имя категории.|
@@ -64,10 +64,10 @@ error_category(const error_category&) = delete
 
 |||
 |-|-|
-|[оператор=](#op_as)||
-|[operator==](#op_eq_eq)|Проверяет равенство между объектами `error_category`.|
-|[operator!=](#op_neq)|Проверяет неравенство между объектами `error_category`.|
-|[оператор<](#op_lt)|Проверяет, меньше ли объект [error_category](../standard-library/error-category-class.md) переданного для сравнения объекта `error_category`.|
+|[Оператор =](#op_as)||
+|[Оператор = =](#op_eq_eq)|Проверяет равенство между объектами `error_category`.|
+|[operator! =](#op_neq)|Проверяет неравенство между объектами `error_category`.|
+|[Оператор<](#op_lt)|Проверяет, меньше ли объект [error_category](../standard-library/error-category-class.md) переданного для сравнения объекта `error_category`.|
 
 ## <a name="default_error_condition"></a><a name="default_error_condition"></a>default_error_condition
 
@@ -79,7 +79,7 @@ virtual error_condition default_error_condition(int _Errval) const;
 
 ### <a name="parameters"></a>Параметры
 
-*_Errval*\
+`_Errval`\
 Значение кода ошибки для хранения в [error_condition](../standard-library/error-condition-class.md).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -88,7 +88,7 @@ virtual error_condition default_error_condition(int _Errval) const;
 
 ### <a name="remarks"></a>Примечания
 
-### <a name="equivalent"></a><a name="equivalent"></a>друг
+### <a name="equivalent"></a>Эквивалент <a name="equivalent"></a>
 
 Возвращает значение, указывающее, эквивалентны ли объекты ошибок.
 
@@ -137,16 +137,16 @@ virtual string message(error_code::value_type val) const = 0;
 
 #### <a name="parameters"></a>Параметры
 
-*val*\
+*Val*\
 Значение кода ошибки для описания.
 
 #### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает описательное имя кода ошибки *Val* для категории.
+Возвращает описательное имя кода ошибки *Val* для категории. Если код ошибки не распознан, возвращает `"unknown error"` .
 
 #### <a name="remarks"></a>Примечания
 
-### <a name="name"></a><a name="name"></a>безымян
+### <a name="name"></a>Имя в <a name="name"></a>
 
 Возвращает имя категории.
 
@@ -174,7 +174,7 @@ bool operator==(const error_category& right) const;
 
 #### <a name="parameters"></a>Параметры
 
-*справа*\
+*Правильно*\
 Объект для проверки на равенство.
 
 #### <a name="return-value"></a>Возвращаемое значение
@@ -195,18 +195,18 @@ bool operator!=(const error_category& right) const;
 
 #### <a name="parameters"></a>Параметры
 
-*справа*\
+*Правильно*\
 Объект для проверки на неравенство.
 
 #### <a name="return-value"></a>Возвращаемое значение
 
-**значение true** , если объект `error_category` не равен `error_category` объекту, переданному по *правому краю*; в противном случае — **false**.
+**значение true** , если `error_category` объект не равен объекту, `error_category` переданному по *правому краю*; в противном случае — **значение false**.
 
 #### <a name="remarks"></a>Примечания
 
 Оператор-член возвращает `(!*this == right)`.
 
-### <a name="operatorlt"></a><a name="op_lt">Оператор </a>&lt;
+### <a name="operatorlt"></a><a name="op_lt"></a>станции&lt;
 
 Проверяет, меньше ли объект [error_category](../standard-library/error-category-class.md) переданного для сравнения объекта `error_category`.
 
@@ -216,7 +216,7 @@ bool operator<(const error_category& right) const;
 
 #### <a name="parameters"></a>Параметры
 
-*справа*\
+*Правильно*\
 Сравниваемый объект `error_category`.
 
 #### <a name="return-value"></a>Возвращаемое значение
@@ -235,7 +235,7 @@ const error_category& system_category();
 
 ### <a name="value_type"></a><a name="value_type"></a>value_type
 
-Тип, представляющий сохраняемое значение кода ошибки.
+Тип, представляющий сохраненное значение кода ошибки.
 
 ```cpp
 typedef int value_type;

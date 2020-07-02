@@ -51,12 +51,12 @@ helpviewer_keywords:
 - std::span [C++], rend
 - std::span [C++], size
 - std::span [C++], size_bytes
-ms.openlocfilehash: b76c1db2176c27983ccdcd4742f889f5a4d95af6
-ms.sourcegitcommit: 1a8fac06478da8bee1f6d70e25afbad94144af1a
+ms.openlocfilehash: e77f57bc56a75406745349e19d03bc26edc5470d
+ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84226322"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813513"
 ---
 # <a name="span-class-c-standard-library"></a>класс Span (стандартная библиотека C++)
 
@@ -92,7 +92,7 @@ class span;
 | [element_type](#element_type) | Тип элемента Span. |
 | [итераци](#iterator) | Тип итератора для диапазона. |
 | [вид](#pointer) | Тип указателя на элемент. |
-| [IsReference](#reference) | Тип ссылки на элемент. |
+| [reference](#reference) | Тип ссылки на элемент. |
 | [reverse_iterator](#reverse_iterator) | Тип реверсивного итератора для диапазона. |
 | [size_type](#size_type) | Тип для результата неподписанного расстояния между двумя элементами в диапазоне. |
 | [value_type](#value_type) | Тип элемента, без `const` или `volatile` квалификации. |
@@ -100,7 +100,7 @@ class span;
 |[размещать](#span)| Создание `span` .|
 | **Поддержка итераторов** | **Описание** |
 |[начале](#begin) | Получение итератора, указывающего на первый элемент в диапазоне.|
-|[end](#end) | Получение итератора, указывающего на конец диапазона. |
+|[конце](#end) | Получение итератора, указывающего на конец диапазона. |
 |[rbegin](#rbegin) | Получение реверсивного итератора, указывающего на последний элемент в диапазоне; то есть начало инвертированного диапазона.|
 |[rend](#rend) | Возвращает обратный итератор, указывающий на начало диапазона. то есть в конце противоположного диапазона.|
 | **Элементы доступа**| **Описание** |
@@ -109,18 +109,18 @@ class span;
 |[крышку](#front) | Получение первого элемента в диапазоне.|
 |[станции\[\]](#op_at) | Доступ к элементу в указанной позиции.|
 | **Наблюдатели** | **Описание** |
-|[указано](#empty)| Проверьте, пуст ли диапазон.|
+|[empty](#empty)| Проверьте, пуст ли диапазон.|
 |[size](#size) | Возвращает количество элементов в диапазоне.|
 |[size_bytes](#size_bytes) | Возвращает размер диапазона в байтах.|
 | **Вложенные представления** | **Описание**|
-| [началь](#first_view) | Получение поддиапазона от начала диапазона.|
-| [Последняя](#last_view) | Получение поддиапазона от конца диапазона.|
+| [first](#first_view) | Получение поддиапазона от начала диапазона.|
+| [last](#last_view) | Получение поддиапазона от конца диапазона.|
 | [поддиапазон](#sub_view) | Получение поддиапазона из любого места в диапазоне.|
-| **Инструкции** | **Описание** |
+| **Операторы** | **Описание** |
 |[Span:: operator =](#op_eq)| Замените диапазон.|
 |[Оператор Span::\[\]](#op_at)| Получение элемента в указанной позиции. |
 
-## <a name="remarks"></a>Комментарии
+## <a name="remarks"></a>Примечания
 
 Все `span` функции элементов имеют неизменную сложность времени.
 
@@ -270,7 +270,7 @@ int main()
 using element_type = T;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Примечания
 
 Тип берется из параметра шаблона `T` при создании диапазона.
 
@@ -336,7 +336,7 @@ constexpr iterator end() const noexcept;
 
 Итератор, указывающий сразу за концом диапазона.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Примечания
 
 `end` используется для проверки того, прошел ли итератор конец диапазона.
 
@@ -371,7 +371,7 @@ template <size_t count> constexpr auto first() const noexcept;
 
 Диапазон, содержащий `count` элементы из начала этого диапазона.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Примечания
 
 Используйте версию шаблона этой функции, если это возможно, для проверки `count` во время компиляции и для сохранения сведений о диапазоне, так как он возвращает диапазон фиксированного экстента.
 
@@ -387,14 +387,14 @@ int main()
 {
     int a[] = { 0,1,2 };
     span<int> mySpan(a);
-    
+
     auto first2 = mySpan.first(2);
     cout << "mySpan.first(2): ";
     for (auto& i : first2)
     {
         cout << i;
     }
-    
+
     cout << "\nmySpan.first<2>: ";
     auto viewSpan = mySpan.first<2>();
     for (auto& i : viewSpan)
@@ -451,7 +451,7 @@ int main()
 using iterator = implementation-defined-iterator-type;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Примечания
 
 Этот тип выступает в качестве итератора над элементами в диапазоне.
 
@@ -496,7 +496,7 @@ template <size_t count> constexpr span<element_type, count> last() const noexcep
 
 Диапазон, содержащий последние `count` элементы из этого диапазона.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Примечания
 
 Используйте версию шаблона этой функции, если это возможно, для проверки `count` во время компиляции и для сохранения сведений о диапазоне, так как он возвращает диапазон фиксированного экстента.
 
@@ -512,14 +512,14 @@ int main()
 {
     int a[] = { 0,1,2 };
     span<int> mySpan(a);
-    
+
     auto first2 = mySpan.last(2);
     cout << "mySpan.last(2): ";
     for (auto& i : last2)
     {
         cout << i;
     }
-    
+
     cout << "\nmySpan.last<2>: ";
     auto viewSpan = mySpan.last<2>();
     for (auto& i : viewSpan)
@@ -588,7 +588,7 @@ constexpr span& operator=(const span& other) noexcept = default;
 
 `*this`
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Примечания
 
 Назначение выполняет неполную копию указателя данных и размера. Неполная копия является надежной, так как `span` не выделяет память для элементов, которые она содержит.
 
@@ -643,7 +643,7 @@ int main()
     span<int>::pointer ptr = &mySpan[2];
     *ptr = 9;
     cout << mySpan[2];
-    
+
     // const pointer
     span<int>::const_pointer cPtr = &mySpan[0];
     // *cPtr = 9; error - const
@@ -740,7 +740,7 @@ constexpr reverse_iterator rend() const noexcept;
 
 Обратный итератор на заполнитель, следующий за последним элементом в обращенном диапазоне; то есть заполнитель перед первым элементом в неинвертированном диапазоне.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Примечания
 
 `rend`используется с обратным диапазоном точно так же, как [span:: end](#end) используется с диапазоном. Используйте его, чтобы проверить, достиг ли обратный итератор конца своего диапазона.
 
@@ -954,7 +954,7 @@ span(const span<T, OtherExtent>& other) noexcept
 *Cерверный*\
 Создайте диапазон из этого диапазона.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Примечания
 
 Диапазон не освобождает память для элементов в диапазоне, так как он не владеет хранилищем объектов внутри него.
 
@@ -978,13 +978,13 @@ using namespace std;
 int main()
 {
     const int MAX=10;
-    
+
     int x[MAX];
     for (int i = 0; i < MAX; i++)
     {
         x[i] = i;
     }
-    
+
     span<int, MAX> span1{ x }; // fixed-size span: compiler error if size of x doesn't match template argument MAX
     span<int> span2{ x }; // size is inferred from x
     span<const int> span3 = span2; // converting constructor
@@ -1015,7 +1015,7 @@ constexpr auto subspan() const noexcept
 
 Диапазон, начинающийся с `offset` в этом диапазоне. Содержит `count` элементы.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Примечания
 
 Доступна версия шаблона этой функции, которая проверяет счетчик во время компиляции, что сохраняет сведения о диапазоне, возвращая диапазон фиксированного экстента.
 
@@ -1031,7 +1031,7 @@ int main()
 {
     int a[] = { 0,1,2 };
     span<int> mySpan(a);
-    
+
     cout << "mySpan.subspan(1,2): ";
     for (auto& i : mySpan.subspan(1,2))
     {
@@ -1115,7 +1115,7 @@ template <ranges::contiguous_range Rng>
 span(Rng &&) -> span<remove_reference_t<ranges::range_reference_t<Rng>>>;
 ```
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также
 
 [\<span>](../standard-library/span.md)  
 [Как использовать выведение аргументов шаблона класса](https://devblogs.microsoft.com/cppblog/how-to-use-class-template-argument-deduction/)

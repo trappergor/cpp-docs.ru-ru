@@ -1,6 +1,6 @@
 ---
 title: vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
-ms.date: 11/04/2016
+ms.date: 06/24/2020
 api_name:
 - _vsnprintf
 - _vsnprintf_l
@@ -55,16 +55,16 @@ helpviewer_keywords:
 - formatted text [C++]
 - vsnwprintf function
 ms.assetid: a97f92df-c2f8-4ea0-9269-76920d2d566a
-ms.openlocfilehash: abe34dc0f3baf9bdc63e0314ac70af3783d2bd9a
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 1cbb41d63669644f51b4d951d5b5507f64cf3da1
+ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857714"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737593"
 ---
 # <a name="vsnprintf-_vsnprintf-_vsnprintf_l-_vsnwprintf-_vsnwprintf_l"></a>vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
 
-Записывают форматированные выходные данные с помощью указателя на список аргументов. Существуют более безопасные версии этих функций; см. статью [vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l](vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md).
+Записывают форматированные выходные данные с помощью указателя на список аргументов. Существуют более безопасные версии этих функций; см. раздел [vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l](vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -142,7 +142,7 @@ int _vsnwprintf_l(
 
 ### <a name="parameters"></a>Параметры
 
-*buffer*<br/>
+*двойной*<br/>
 Место хранения выходных данных.
 
 *count*<br/>
@@ -161,15 +161,17 @@ int _vsnwprintf_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Функция **vsnprintf** возвращает число записанных символов без учета завершающего нуль символа. Если размер буфера, указанный в параметре *Count* , не достаточен для хранения выходных данных, указанных в *формате* и *аргптр*, возвращаемое значение **vsnprintf** — это количество символов, которые будут записаны без учета нуль-символа, если *количество* было достаточно большим. Если возвращаемое значение больше, чем *Count* -1, выходные данные усекаются. Возвращаемое значение –1 указывает, что произошла ошибка кодирования.
+Функция **vsnprintf** возвращает количество записанных символов, не считая завершающего нуль символа. Если размер буфера, указанный в параметре *Count* , не достаточен для хранения выходных данных, указанных в *формате* и *аргптр*, возвращаемое значение **vsnprintf** — это количество символов, которые будут записаны без учета null, если *количество* было достаточно большим. Если возвращаемое значение больше, чем *Count* -1, выходные данные усекаются. Возвращаемое значение –1 указывает, что произошла ошибка кодирования.
 
-Функции **_vsnprintf** и **_vsnwprintf** возвращают число записанных символов, если число записываемых символов меньше или равно значению параметра *Count*; Если число записываемых символов больше, чем *Count*, эти функции возвращают значение-1, указывающее на усечение выходных данных.
+Функции **_vsnprintf** и **_vsnwprintf** возвращают число записанных символов, если количество записываемых символов меньше или равно *Count*. Если число записываемых символов больше, чем *Count*, эти функции возвращают значение-1, указывающее на усечение выходных данных.
 
-Значение, возвращаемое этими функциями, не включает символ завершения NULL, независимо от того, был он записан или нет. Если параметр *Count* равен нулю, возвращаемое значение — это количество символов, которые будут записаны функциями, не включая завершающие нули. Этот результат можно использовать для выделения достаточного места в буфере для строки и ее завершающего символа NULL, а затем вызвать функцию снова для заполнения буфера.
+Значение, возвращаемое всеми этими функциями, не включает завершающее значение null, независимо от того, записано ли оно.
 
-Если *параметр format* имеет **значение NULL**или если *буфер* имеет **значение NULL** , а параметр *Count* не равен нулю, эти функции вызывают обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают-1 **и устанавливают для** **еинвал**значение.
+- Если параметр *Count* равен нулю, а *buffer* имеет **значение NULL**, возвращается число символов, которые будут записаны функциями. Значение не учитывает завершающее **значение NULL**. Этот результат можно использовать для выделения достаточного места в буфере для строки и ее завершающего символа NULL, а затем вызвать функцию снова для заполнения буфера.
+- Если *Count* равно нулю, но значение *buffer* не **равно NULL**, запись не производится и функция возвращает `-1` .
+- Если *параметр format* имеет **значение NULL**или если *буфер* равен **null** , а значение *Count* не равно нулю, эти функции вызывают обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают-1 **и устанавливают для** **еинвал**значение.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
 Каждая из этих функций принимает указатель на список аргументов, затем форматирует данные и записывает *их в память, на которую* указывает *буфер*. Функция **vsnprintf** всегда записывает знак завершения null, даже если он усекает выходные данные. При использовании **_vsnprintf** и **_vsnwprintf**буфер будет завершаться нулем, только если в конце есть место (то есть если количество символов для записи меньше, чем *Count*).
 
@@ -187,7 +189,7 @@ int _vsnwprintf_l(
 
 В C++ эти функции имеют шаблонные перегрузки, которые вызывают более новые и безопасные аналоги этих функций. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../../c-runtime-library/secure-template-overloads.md).
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|
@@ -201,7 +203,7 @@ int _vsnwprintf_l(
 |**vsnprintf**, **_vsnprintf** **_vsnprintf_l**|\<stdio.h>|\<stdio.h> или \<cstdio>|
 |**_vsnwprintf**, **_vsnwprintf_l**|\<stdio.h> или \<wchar.h>|\<stdio.h>, \<wchar.h>, \<cstdio> или \<cwchar>|
 
-Функции **_vsnprintf**, **_vsnprintf_l**, **_vsnwprintf** и **_vsnwprintf_l** являются специфичными для Microsoft. Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
+Функции **_vsnprintf**, **_vsnprintf_l**, **_vsnwprintf** и **_vsnwprintf_l** являются специфичными для Microsoft. Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -281,12 +283,12 @@ nSize: 9, buff: Hi there!
 nSize: 10, buff: Hi there!
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)<br/>
 [Функции vprintf](../../c-runtime-library/vprintf-functions.md)<br/>
-[Синтаксис описания формата: функции printf и wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)<br/>
+[Синтаксис спецификации формата: функции printf и wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [va_arg, va_copy, va_end, va_start](va-arg-va-copy-va-end-va-start.md)<br/>

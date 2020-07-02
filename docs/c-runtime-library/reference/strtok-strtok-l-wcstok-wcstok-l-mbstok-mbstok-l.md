@@ -1,6 +1,6 @@
 ---
 title: strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
-ms.date: 4/2/2020
+ms.date: 6/24/2020
 api_name:
 - _mbstok_l
 - _mbstok
@@ -53,12 +53,12 @@ helpviewer_keywords:
 - _tcstok_l function
 - strtok_l function
 ms.assetid: 904cb734-f0d7-4d77-ba81-4791ddf461ae
-ms.openlocfilehash: 7d8f0d889d58fe776e53f78955fff7fd1cdfa40f
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: bf59d34c17165f9f5165a5a4bdb82ad5a82c737e
+ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912636"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737531"
 ---
 # <a name="strtok-_strtok_l-wcstok-_wcstok_l-_mbstok-_mbstok_l"></a>strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
 
@@ -82,6 +82,11 @@ char *strtok_l(
 wchar_t *wcstok(
    wchar_t *strToken,
    const wchar_t *strDelimit
+);
+wchar_t *wcstok(
+   wchar_t *strToken,
+   const wchar_t *strDelimit,
+   wchar_t **context
 );
 wchar_t *wcstok_l(
    wchar_t *strToken,
@@ -110,13 +115,18 @@ unsigned char *_mbstok_l(
 *locale*<br/>
 Используемый языковой стандарт.
 
+*context*<br/>
+Указывает на память, используемую для хранения внутреннего состояния средства синтаксического анализа, чтобы средство синтаксического анализа можно было продолжить с того места, где он был отключен при следующем вызове **wcstok**.
+
 ## <a name="return-value"></a>Возвращаемое значение
 
 Возвращает указатель на следующий токен, найденный в *strToken*. Функции возвращают **значение NULL** , если больше не найдено маркеров. Каждый вызов изменяет *strToken* , подставив нуль-символ для первого разделителя, который находится после возвращаемого маркера.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
 Функция **strtok** находит следующий токен в *strToken*. Набор символов в *стрделимит* указывает возможные разделители токена, которые должны быть найдены в *strToken* в текущем вызове. **wcstok** и **_mbstok** — это версии **strtok**для расширенных символов и многобайтовых символов. Аргументы и возвращаемое значение **wcstok** являются строками расширенных символов. **_mbstok** являются строками многобайтовых символов. В остальном эти три функции ведут себя идентично.
+
+Две версии аргумента **wcstok** не являются стандартными. Если необходимо использовать эту версию, необходимо определить `_CRT_NON_CONFORMING_WCSTOK` перед вами `#include <wchar.h>` (или `#include <string.h>` ).
 
 > [!IMPORTANT]
 > Эти функции представляют потенциальную угрозу, связанную с проблемой переполнения буфера. Проблемы переполнения буфера — это распространенный метод атак на системы, который приводит к несанкционированному повышению уровня прав. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](/windows/win32/SecBP/avoiding-buffer-overruns).
@@ -145,6 +155,7 @@ unsigned char *_mbstok_l(
 |-------------|---------------------|
 |**strtok**|\<string.h>|
 |**wcstok**|\<string.h> или \<wchar.h>|
+|**_wcstok_l**|<tchar.h>|
 |**_mbstok**, **_mbstok_l**|\<mbstring.h>|
 
 Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
@@ -195,10 +206,10 @@ more
 tokens
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Управление строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Языкового стандарта](../../c-runtime-library/locale.md)<br/>
 [Интерпретация последовательностей многобайтовых символов](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>
