@@ -1,6 +1,7 @@
 ---
-title: /GH (включить функцию-обработчик _pexit)
-ms.date: 11/04/2016
+title: /GH (включение функции-обработчика _pexit)
+description: Описывает параметр компилятора/GH для задания локальной функции-обработчика _pexit.
+ms.date: 07/06/2020
 f1_keywords:
 - _pexit
 helpviewer_keywords:
@@ -9,50 +10,48 @@ helpviewer_keywords:
 - _pexit function
 - -Gh compiler option [C++]
 ms.assetid: 93181453-2676-42e5-bf63-3b19e07299b6
-ms.openlocfilehash: 5382ba90f490aaa12e9e55767fdf15170a69ced5
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
-ms.translationtype: MT
+ms.openlocfilehash: b8fc355503055af8b928874ced39cb8224901d3e
+ms.sourcegitcommit: 85d96eeb1ce41d9e1dea947f65ded672e146238b
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81749229"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86058611"
 ---
-# <a name="gh-enable-_pexit-hook-function"></a>/GH (включить функцию-обработчик _pexit)
+# <a name="gh-enable-_pexit-hook-function"></a>/GH (включение функции-обработчика _pexit)
 
 Вызывает `_pexit` функцию в конце каждого метода или функции.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
-/GH
-```
+> **`/GH`**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
-Функция `_pexit` не является частью какой-либо библиотеки, и `_pexit`это до вас, чтобы предоставить определение для .
+`_pexit`Функция не является частью какой бы то ни было библиотеки. Вы можете предоставить определение для `_pexit` .
 
-Если вы не планируете явно звонить, `_pexit`вам не нужно предоставлять прототип. Функция должна отображаться так, как если бы у нее был следующий прототип, и она должна толкать содержимое всех регистров на входе и высвобожда неизмененное содержимое на выходе:
+Если вы не планируете явно вызывать `_pexit` , вам не нужно предоставлять прототип. Функция должна отправить содержимое всех регистров на вход и открыть неизмененное содержимое при выходе. Оно должно выглядеть так, как если бы оно имело следующий прототип:
 
 ```cpp
 void __declspec(naked) __cdecl _pexit( void );
 ```
 
-`_pexit`похож на `_penter`; [например, например, написать функцию /Gh (Функция _penter функция крюка)](gh-enable-penter-hook-function.md) можно ознакомиться с изображением. `_pexit`
+Это объявление недоступно для 64-разрядных проектов.
+
+`_pexit`функция аналогична `_penter` функции; см. раздел [ `/Gh` (Enable _Penter функцию-ловушке)](gh-enable-penter-hook-function.md) в качестве примера того, как написать `_penter` функцию.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
 1. Откройте диалоговое окно **Страницы свойств** проекта. Подробнее см. в статье [Настройка компилятора C++ и свойства сборки в Visual Studio](../working-with-project-properties.md).
 
-1. Откройте папку **C/C++** .
+1. Откройте страницу свойств **конфигурации**  >  **C/C++**  >  **Командная строка** .
 
-1. Выберите страницу свойств **Командная строка** .
-
-1. Введите параметр компилятора в поле **Дополнительные параметры** .
+1. В поле **Дополнительные параметры** введите параметр компилятора.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Установка данного параметра компилятора программным способом
 
 - См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Параметры компилятора MSVC](compiler-options.md)<br/>
-[MSVC Компилятор Командно-линейный синтаксис](compiler-command-line-syntax.md)
+[Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)<br/>
+[`/Gh`(Включить функцию-обработчик _penter)](gh-enable-penter-hook-function.md)
