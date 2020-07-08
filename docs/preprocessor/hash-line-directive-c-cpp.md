@@ -11,6 +11,7 @@ helpviewer_keywords:
 ms.assetid: 585c1dc4-5184-4f01-98f4-80c1909744d7
 ms.openlocfilehash: 7b671cfdf5d5ce43024ac3e038c214396ac8679c
 ms.sourcegitcommit: 85d96eeb1ce41d9e1dea947f65ded672e146238b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 07/07/2020
 ms.locfileid: "86058624"
@@ -23,7 +24,7 @@ ms.locfileid: "86058624"
 
 > **`#line`***digit-Sequence* ["*имя_файла*"]
 
-## <a name="remarks"></a>Комментарии
+## <a name="remarks"></a>Remarks
 
 Номер строки и (необязательно) имя файла используется компилятором для указания на ошибки, которые он обнаруживает во время компиляции. Номер линии обычно указывает на текущую строку входных данных, а имя файла — на текущий входной файл. Номер строки увеличивается на единицу после обработки каждой строки.
 
@@ -72,6 +73,6 @@ This code is on line 21, in file hello.cpp
 __LINE__, __FILE__ );}
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Директивы препроцессора](../preprocessor/preprocessor-directives.md)
