@@ -1,33 +1,36 @@
 ---
 title: Предупреждение компилятора (уровень 1) C4750
-ms.date: 11/04/2016
+description: Описывает КОМПИЛЯТОРОМ MSVC предупреждение компилятора C4750 о возможном переполнении стека.
+ms.date: 07/08/2020
 f1_keywords:
 - C4750
 helpviewer_keywords:
 - C4750
 ms.assetid: b0b2c938-7d2a-4c36-8270-7daee15ffee3
-ms.openlocfilehash: 9ba0a37d2c213c35002b8e09d4377869a868d401
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9a22bdda407b02b8723b7198d62289d39f62792d
+ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80175172"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86180972"
 ---
 # <a name="compiler-warning-level-1-c4750"></a>Предупреждение компилятора (уровень 1) C4750
 
-"идентификатор": функция с _alloca() включена в цикл
+> "*идентификатор*": функция с _alloca (), встроенная в цикл
 
-Функция "идентификатор" принудительно выполняет встраиваемую подстановку функции [_alloca](../../c-runtime-library/reference/alloca.md) в цикле, что может привести к переполнению стека при выполнении цикла.
+## <a name="remarks"></a>Remarks
+
+Функция "*идентификатор*" принудительно поддает встроенное расширение [`_alloca`](../../c-runtime-library/reference/alloca.md) функции в цикле, что может привести к переполнению стека при выполнении цикла.
 
 ### <a name="to-correct-this-error"></a>Исправление ошибки
 
-1. Убедитесь, что функция "идентификатор" не будет изменена с помощью описателя [__forceinline](../../cpp/inline-functions-cpp.md) .
+1. Убедитесь, что функция "*идентификатор*" не изменена с помощью [`__forceinline`](../../cpp/inline-functions-cpp.md) описателя.
 
-1. Убедитесь, что функция "идентификатор" не содержит функцию [_alloca](../../c-runtime-library/reference/alloca.md) , которая включена в цикл.
+1. Убедитесь, что функция "*идентификатор*" не содержит [`_alloca`](../../c-runtime-library/reference/alloca.md) функцию, содержащуюся в цикле.
 
-1. Не указывайте параметр компиляции [/O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md), [/O2](../../build/reference/o1-o2-minimize-size-maximize-speed.md), [/Ox](../../build/reference/ox-full-optimization.md)или [/Og](../../build/reference/og-global-optimizations.md) .
+1. Не указывайте [`/O1`](../../build/reference/o1-o2-minimize-size-maximize-speed.md) [`/O2`](../../build/reference/o1-o2-minimize-size-maximize-speed.md) [`/Ox`](../../build/reference/ox-full-optimization.md) параметр компиляции,, или [`/Og`](../../build/reference/og-global-optimizations.md) .
 
-1. Поместите функцию [_alloca](../../c-runtime-library/reference/alloca.md) в [инструкцию try-except](../../cpp/try-except-statement.md) , которая будет перехватывать переполнение стека.
+1. Поместите [`_alloca`](../../c-runtime-library/reference/alloca.md) функцию в [оператор try-except](../../cpp/try-except-statement.md) , который будет перехватывать переполнение стека.
 
 ## <a name="example"></a>Пример
 
