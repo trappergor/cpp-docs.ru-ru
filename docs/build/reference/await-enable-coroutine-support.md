@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -await enable coroutine support [C++]
 - await enable coroutine support [C++]
 ms.assetid: 302c8e69-09b6-4c58-bcdd-0a6a8713a8df
-ms.openlocfilehash: eeab3f4a1afc73e341f04222a55c8ce429490742
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 53a6cf4b3d14ee97a324fa01f83c0d0fee61180b
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078445"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373701"
 ---
 # <a name="await-enable-coroutine-support"></a>/await (включение поддержки соподпрограмм)
 
@@ -24,9 +24,9 @@ ms.locfileid: "80078445"
 
 > /await
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Параметр компилятора **/await** обеспечивает поддержку компилятора для C++ соподпрограмм и ключевых слов **co_await**, **co_yield**и **co_return**. По умолчанию она отключена. Сведения о поддержке соподпрограмм в Visual Studio см. в [блоге группы разработчиков Visual Studio](https://blogs.msdn.microsoft.com/vcblog/category/coroutine/). Дополнительные сведения о стандартном предложении «коподпрограмми» см. в разделе [N4628 Working C++ Черновое техническое описание расширений для соподпрограмм](https://wg21.link/n4628).
+Параметр компилятора **/await** включает поддержку компилятора для соподпрограмм C++ и ключевых слов **co_await**, **co_yield**и **co_return**. По умолчанию она отключена. Сведения о поддержке соподпрограмм в Visual Studio см. в [блоге группы разработчиков Visual Studio](https://devblogs.microsoft.com/cppblog/category/coroutine/). Дополнительные сведения о стандартном предложении "коподпрограмми" см. в разделе [N4628 Working, техническая спецификация расширений C++ для соподпрограмм](https://wg21.link/n4628).
 
 Параметр **/await** доступен начиная с Visual Studio 2015.
 
@@ -34,7 +34,7 @@ ms.locfileid: "80078445"
 
 1. Откройте диалоговое окно **страницы свойств** проекта.
 
-1. В разделе **Свойства конфигурации**разверните папку **C/C++**  и выберите страницу свойств **Командная строка** .
+1. В разделе **Свойства конфигурации**разверните папку **C/C++** и выберите страницу свойств **Командная строка** .
 
 1. В поле **Дополнительные параметры** введите параметр компилятора **/await** . Нажмите кнопку **ОК** или **Применить** , чтобы сохранить изменения.
 
@@ -42,7 +42,7 @@ ms.locfileid: "80078445"
 
 - См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Параметры компилятора MSVC](compiler-options.md)<br/>
-[Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)
+[Синтаксис командной строки компилятора КОМПИЛЯТОРОМ MSVC](compiler-command-line-syntax.md)
