@@ -41,16 +41,16 @@ helpviewer_keywords:
 - _outpw function
 - _outp function
 ms.assetid: c200fe22-41f6-46fd-b0be-ebb805b35181
-ms.openlocfilehash: 3d0342ae94276c7875bcb737b0d1a64aabafd235
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: 0d28511cdf7487226635c0317b7c0ba21ab1d1be
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825932"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373480"
 ---
 # <a name="outp-outpw-_outp-_outpw-_outpd"></a>ыходной, аутпв, _outp, _outpw, _outpd
 
-Выходные данные, в порте, байт (`outp`, `_outp`), слово (`outpw`, `_outpw`) или двойное слово (`_outpd`).
+Выходные данные, в порте, байт ( `outp` , `_outp` ), слово ( `outpw` , `_outpw` ) или двойное слово ( `_outpd` ).
 
 > [!IMPORTANT]
 > Эти функции устарели. Начиная с Visual Studio 2015 они недоступны в CRT.
@@ -85,13 +85,13 @@ unsigned long _outpd(
 
 Функции возвращают выходные данные. Ошибка не возвращается.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Функции `_outp`, `_outpw`и `_outpd` пишут байт, слово и двойное слово, соответственно, на указанный порт вывода. Аргумент *Port* может быть любым целым числом без знака в диапазоне 0 – 65 535; *Byte* может быть любым целым числом в диапазоне 0-255; и " *слово* " может быть любым значением в диапазоне целого числа, короткого целого числа без знака и длинного целого числа без знака соответственно.
 
-Поскольку эти функции пишут непосредственно на порт ввода-вывода, они не могут использоваться в пользовательском коде. Для получения дополнительных сведений об использовании портов ввода-вывода в этих операционных системах, выполните поиск по запросу "Последовательная связь в Win32" в MSDN.
+Поскольку эти функции записываются непосредственно в порт ввода-вывода, они не могут использоваться в коде Windows пользовательского режима. Сведения об использовании портов ввода-вывода в операционной системе Windows см. в разделе [последовательная связь](https://docs.microsoft.com/previous-versions/ff802693(v=msdn.10)).
 
-Имена `outp` и `outpw` являются устаревшими, нерекомендуемыми именами для `_outp` функций `_outpw` и. Дополнительные сведения см. в разделе [имена функций POSIX](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
+`outp`Имена и `outpw` являются устаревшими, нерекомендуемыми именами для `_outp` `_outpw` функций и. Дополнительные сведения см. в разделе [имена функций POSIX](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
 
 ## <a name="requirements"></a>Требования
 

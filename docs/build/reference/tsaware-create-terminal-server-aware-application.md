@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -TSAWARE linker option
 - TSAWARE linker option
 ms.assetid: fe1c1846-de5b-4839-b562-93fbfe36cd29
-ms.openlocfilehash: 0b3fa8bcfd973949e73fdf701db2adb6c58be687
-ms.sourcegitcommit: 2f9ff2041d70c406df76c5053151192aad3937ea
+ms.openlocfilehash: 135d919278c8e969dc3a31381d5abbd1058c8663
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82587379"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373896"
 ---
 # <a name="tsaware-create-terminal-server-aware-application"></a>/TSAWARE (создание приложения, поддерживающего сервер терминалов)
 
@@ -24,7 +24,7 @@ ms.locfileid: "82587379"
 /TSAWARE[:NO]
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Параметр/TSAWARE устанавливает флаг в поле IMAGE_OPTIONAL_HEADER DllCharacteristics в необязательном заголовке образа программы. Если этот флаг установлен, сервер терминалов не будет вносить определенные изменения в приложение.
 
@@ -57,6 +57,6 @@ ms.locfileid: "82587379"
 ## <a name="see-also"></a>См. также раздел
 
 [Справочник по компоновщику MSVC](linking.md)<br/>
-[Параметры компоновщика КОМПИЛЯТОРОМ MSVC](linker-options.md)<br/>
+[Параметры компоновщика MSVC](linker-options.md)<br/>
 [Хранение сведений, относящихся к пользователю](/windows/win32/TermServ/storing-user-specific-information)<br/>
-[Устаревшие приложения в среде служб терминалов](https://msdn.microsoft.com/library/aa382957.aspx)
+[Устаревшие приложения в среде служб терминалов](https://docs.microsoft.com/previous-versions//aa382957(v=vs.85))

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /DYNAMICBASE linker option
 - DYNAMICBASE linker option
 ms.assetid: 6c0ced8e-fe9c-4b63-b956-eb8a55fbceb2
-ms.openlocfilehash: 66d6232ed43f9c842ebbb0e22b57c509cf610afa
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 206c054f383418e176e00f4155f9f6a25a37e253
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170063"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373714"
 ---
 # <a name="dynamicbase-use-address-space-layout-randomization"></a>/DYNAMICBASE (использование технологии Address Space Layout Randomization (ASRL))
 
@@ -21,7 +21,7 @@ ms.locfileid: "80170063"
 
 ## <a name="syntax"></a>Синтаксис
 
-> **/DynamicBase**[ **: нет**]
+> **/DynamicBase**[**: нет**]
 
 ## <a name="remarks"></a>Remarks
 
@@ -33,7 +33,7 @@ ms.locfileid: "80170063"
 
 1. Откройте диалоговое окно **Окна свойств** проекта. Подробнее см. в статье [Настройка компилятора C++ и свойств сборки в Visual Studio](../working-with-project-properties.md).
 
-1. Выберите **Свойства конфигурации** > **Компоновщик** > **Дополнительные** свойства.
+1. Выберите вкладку **Свойства конфигурации**  >  **компоновщика**  >  **Дополнительные** свойства.
 
 1. Измените свойство " **случайный базовый адрес** ".
 
@@ -46,4 +46,4 @@ ms.locfileid: "80170063"
 - [Справочник по компоновщику MSVC](linking.md)
 - [Параметры компоновщика MSVC](linker-options.md)
 - [/HIGHENTROPYVA](highentropyva-support-64-bit-aslr.md)
-- [Средства защиты программного обеспечения Windows ISV](https://msdn.microsoft.com/library/bb430720.aspx)
+- [Средства защиты программного обеспечения Windows ISV](https://docs.microsoft.com/previous-versions/bb430720(v=msdn.10))
