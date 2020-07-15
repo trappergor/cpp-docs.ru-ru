@@ -4,12 +4,12 @@ description: vcpkg — это диспетчер пакетов на базе �
 ms.date: 07/06/2020
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 2a179a25a7332a93486d42750f06f18658991b30
-ms.sourcegitcommit: 85d96eeb1ce41d9e1dea947f65ded672e146238b
+ms.openlocfilehash: 7131f301a22b2834b04ef932f3cee426b04dc7e5
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86058650"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373636"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: диспетчер пакетов C++ для Windows, Linux и macOS
 
@@ -167,7 +167,7 @@ zlib:x86-windows        1.2.11   A compression library
 
 ## <a name="target-linux-from-windows-via-wsl"></a>Создание файлов для Linux из Windows посредством WSL
 
-Можно создавать двоичные файлы для Linux на компьютере с Windows с помощью подсистемы Windows для Linux (WSL). Следуйте инструкциям, по [настройке WSL в Windows 10](/windows/wsl/install-win10). Затем настройте подсистему с помощью [расширения Visual Studio для Linux](https://blogs.msdn.microsoft.com/vcblog/2017/02/08/targeting-windows-subsystem-for-linux-from-visual-studio/). Все созданные библиотеки для Windows и Linux можно разместить в одной папке. Они доступны как в Windows, так и в WSL.
+Можно создавать двоичные файлы для Linux на компьютере с Windows с помощью подсистемы Windows для Linux (WSL). Следуйте инструкциям, по [настройке WSL в Windows 10](/windows/wsl/install-win10). Затем настройте подсистему с помощью [расширения Visual Studio для Linux](https://devblogs.microsoft.com/cppblog/targeting-windows-subsystem-for-linux-from-visual-studio/). Все созданные библиотеки для Windows и Linux можно разместить в одной папке. Они доступны как в Windows, так и в WSL.
 
 ## <a name="export-compiled-binaries-and-headers"></a><a name="export_binaries_per_project"></a> Экспорт скомпилированных двоичных файлов и файлов заголовков
 
