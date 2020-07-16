@@ -6,18 +6,18 @@ helpviewer_keywords:
 - databases [C++], ODBC
 - data access [C++], ODBC
 ms.assetid: 56b6067a-651e-4c10-a24d-d4a6a17ca5e4
-ms.openlocfilehash: fc72b0bda2bfebd116481d6eaa06d054f904d084
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 12e4c0b74caa95af4dc4ed00dc77d46e47029b59
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213087"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86403807"
 ---
 # <a name="open-database-connectivity-odbc"></a>Интерфейс ODBC (ODBC)
 
 Библиотека Microsoft Foundation Classes (MFC) предоставляет классы для разработки программ с использованием интерфейса ODBC. Начиная с Visual Studio 2015 и SQL Server 2012 ODBC является предпочтительным способом подключения к источникам данных SQL.
 
-Дополнительные сведения об использовании ODBC API без MFC см. в разделе пакет SDK для [Open Database Connectivity (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc) в MSDN.
+Дополнительные сведения об использовании ODBC API без MFC см. в документации по [открытому подключению баз данных (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc) .
 
 ## <a name="in-this-section"></a>в этом разделе
 
@@ -61,20 +61,20 @@ ms.locfileid: "80213087"
 
 - [Установка и начало работы с ODBC](installing-and-getting-started-with-odbc.md)
 
-- [Разработка и создание приложений баз данных ODBC](design-and-create-an-odbc-database-application.md)
+- [Разработка и создание приложения базы данных ODBC](design-and-create-an-odbc-database-application.md)
 
-- [Использование форм баз данных (представления записей) с ODBC](use-database-forms-record-views-with-odbc.md)
+- [Использование форм базы данных (представления записей) с ODBC](use-database-forms-record-views-with-odbc.md)
 
 - [Использование ODBC для работы с другими пользователями](use-odbc-to-work-with-other-users.md)
 
-- [Работа с подключениями базы данных ODBC](work-with-odbc-database-connections.md)
+- [Работа с подключениями к базам данных ODBC](work-with-odbc-database-connections.md)
 
 - [Работа с ODBC и драйверами](work-with-odbc-and-drivers.md)
 
 - [Использование библиотеки курсоров ODBC](use-the-odbc-cursor-library.md)
 
-- [Использование набора записей MFC ODBC](use-mfc-odbc-recordsets.md)
+- [Использование наборов записей ODBC MFC](use-mfc-odbc-recordsets.md)
 
 ## <a name="see-also"></a>См. также раздел
 
-[Программирование доступа к данным (библиотеки MFC/ATL)](../../data/data-access-programming-mfc-atl.md)
+[Программирование доступа к данным (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Internet content [MFC]
 - WinInet classes [MFC]
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
-ms.openlocfilehash: 3265bffb393eeff1d8a04a41357e2b138aa0ebf7
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c9825cdcb5cb0963a4e0d3acdeb36dfee54b70fc
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615564"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405030"
 ---
 # <a name="mfc-internet-programming-basics"></a>Основы программирования для интернет-решений MFC
 
@@ -34,7 +34,7 @@ ms.locfileid: "84615564"
 
 MFC предоставляет классы, поддерживающие Интернет. Для записи элементов ActiveX и активных документов можно использовать [COleControl](reference/colecontrol-class.md) и [кдокобжектсервер](reference/cdocobjectserver-class.md) , а также связанные классы MFC. Классы MFC, такие как [Цинтернетсессион](reference/cinternetsession-class.md), [кфтпконнектион](reference/cftpconnection-class.md)и [касинкмоникерфиле](reference/casyncmonikerfile-class.md) , можно использовать для получения файлов и информации с помощью Интернет-протоколов, таких как FTP, HTTP и gopher.
 
-## <a name="in-this-section"></a>В этом разделе
+## <a name="in-this-section"></a>в этом разделе
 
 - [Классы MFC, связанные с Интернетом](internet-related-mfc-classes.md)
 
@@ -48,7 +48,7 @@ MFC предоставляет классы, поддерживающие Инт
 
 - [Основы HTML](html-basics.md)
 
-## <a name="related-sections"></a>Связанные разделы
+## <a name="related-sections"></a>См. также
 
 - [Элементы управления ActiveX в Интернете](activex-controls-on-the-internet.md)
 
@@ -68,11 +68,9 @@ MFC предоставляет классы, поддерживающие Инт
 
 - [Поддержка ATL для элементов управления DHTML](../atl/atl-support-for-dhtml-controls.md)
 
-## <a name="web-sites-for-more-information"></a><a name="_core_web_sites_for_more_information"></a>Веб-сайты для получения дополнительных сведений
+## <a name="websites-for-more-information"></a><a name="_core_web_sites_for_more_information"></a>Веб-сайты для получения дополнительных сведений
 
-Дополнительные сведения о Microsoft Internet Technology см. на веб-сайте [Microsoft Developer Network (MSDN)](https://go.microsoft.com/fwlink/p/?linkid=56322) . (Ссылки могут измениться без предварительного уведомления.)
-
-Этот веб-сайт для разработчиков содержит сведения об использовании средств и технологий разработки Майкрософт, а главные статьи о последних и предстоящих конференциях. На этой странице можно перейти ко многим связанным сайтам разработчиков, включая .NET и центры разработчиков XML. Вы также можете загрузить бета-версии пакетов SDK и примеры.
+Дополнительные сведения о технологии Интернета Майкрософт см. в разделе [документация Майкрософт](https://docs.microsoft.com/).
 
 [Консорциум W3C (W3C)](https://go.microsoft.com/fwlink/p/?linkid=37125) публикует спецификации для HTML, HTTP, CGI и других Интернет-технологий.
 

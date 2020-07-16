@@ -11,12 +11,12 @@ helpviewer_keywords:
 - databases [MFC], exception handling
 - error codes [MFC], database exception handling
 ms.assetid: 28daf260-f824-4be6-aecc-1f859e6dec26
-ms.openlocfilehash: 98436e7519279197fe192d9ef8b7344b211b24bc
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 96f9e5f836205df71e03638858cb00b788d03c0b
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624672"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86403729"
 ---
 # <a name="exceptions-database-exceptions"></a>Исключения. Исключения баз данных
 
@@ -38,7 +38,7 @@ ms.locfileid: "84624672"
 
 Помимо кодов возврата, определенных платформой, которые имеют имена форм **AFX_SQL_ERROR_XXX**, некоторые [кдбексцептионс](reference/cdbexception-class.md) основаны на кодах возврата [ODBC](../data/odbc/odbc-basics.md) . Коды возврата для таких исключений имеют имена в форме **SQL_ERROR_XXX**.
 
-Коды возврата — как определяемые платформой, так и определяемые с помощью ODBC, которые могут возвращать классы базы данных, задокументированы в элементе данных [m_nRetCode](reference/cdbexception-class.md#m_nretcode) класса `CDBException`. Дополнительные сведения о кодах возврата, определенных ODBC, доступны в *справочнике программиста* по ODBC SDK в библиотеке MSDN.
+Коды возврата — как определяемые платформой, так и определяемые с помощью ODBC, которые могут возвращать классы базы данных, задокументированы в элементе данных [m_nRetCode](reference/cdbexception-class.md#m_nretcode) класса `CDBException`. Дополнительные сведения о кодах возврата, определенных ODBC, доступны в [справочнике программиста по ODBC](/sql/odbc/reference/odbc-programmer-s-reference).
 
 ### <a name="error-codes-used-for-dao-exceptions"></a>Коды ошибок, используемые для исключений DAO
 

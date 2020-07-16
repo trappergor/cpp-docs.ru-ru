@@ -8,16 +8,16 @@ f1_keywords:
 - C5001
 - C5012
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
-ms.openlocfilehash: 4f105558d7795210e1edb2470af4e50326f49de6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1cdbb40d06d2b3da7e6444e3a6743c6e6ae1c874
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182205"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405004"
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>Сообщения векторизатора и параллелизатора
 
-Можно использовать параметры компилятора Microsoft C++ [/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) и [/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) , чтобы задать [автоматическую параллелизации и автоматическую векторную обработку](../../parallel/auto-parallelization-and-auto-vectorization.md) для вывода кодов причин и информационных сообщений о его активности. В этой статье описываются коды причины и сообщения.
+Можно использовать параметры компилятора Microsoft C++ [/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) и [/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) , чтобы задать [автоматическую параллелизации и автоматическое](../../parallel/auto-parallelization-and-auto-vectorization.md) упорядочивание для вывода кодов причин и информационных сообщений о действиях. В этой статье описываются коды причины и сообщения.
 
 ## <a name="informational-messages"></a><a name="BKMK_InformationalMessages"></a>Информационные сообщения
 
@@ -25,7 +25,7 @@ ms.locfileid: "80182205"
 
 Сведения о кодах причины см. в следующей части статьи.
 
-|Информационное сообщение|Description|
+|Информационное сообщение|Описание|
 |---------------------------|-----------------|
 |5001|`Loop vectorized.`|
 |5002|`Loop not vectorized due to reason '*description*'.`|
@@ -39,7 +39,7 @@ ms.locfileid: "80182205"
 
 Коды причин 5*XX* применяются как к параллелизатора, так и к векторизатора.
 
-|Код причины|Объяснение|
+|Код причины|Пояснение|
 |-----------------|-----------------|
 |500|Универсальное сообщение, охватывающее несколько вариантов (например, цикл включает несколько выходов), или заголовок цикла не заканчивается путем увеличения переменной удержания.|
 |501|`Induction variable is not local; or upper bound is not loop-invariant.`|
@@ -202,7 +202,7 @@ void code_504(int *A) {
 
 Коды причин 10*XX* относятся к параллелизатора.
 
-|Код причины|Объяснение|
+|Код причины|Пояснение|
 |-----------------|-----------------|
 |1000|`The compiler detected a data dependency in the loop body.`|
 |1001|`The compiler detected a store to a scalar variable in the loop body, and that scalar has a use beyond the loop.`|
@@ -411,7 +411,7 @@ void code_1010()
 
 Коды причин 11*XX* применяются к векторизатора.
 
-|Код причины|Объяснение|
+|Код причины|Пояснение|
 |-----------------|-----------------|
 |1100|`Loop contains control flow—for example, "if" or "?".`|
 |1101|`Loop contains datatype conversion—perhaps implicit—that cannot be vectorized.`|
@@ -559,7 +559,7 @@ void code_1106(int *A)
 
 Коды причин 12*XX* относятся к векторизатора.
 
-|Код причины|Объяснение|
+|Код причины|Пояснение|
 |-----------------|-----------------|
 |1200|`Loop contains loop-carried data dependences that prevent vectorization. Different iterations of the loop interfere with each other such that vectorizing the loop would produce wrong answers, and the auto-vectorizer cannot prove to itself that there are no such data dependences.`|
 |1201|`Array base changes during the loop.`|
@@ -634,7 +634,7 @@ void code_1203(int *A)
 
 Коды причин 13*XX* относятся к векторизатора.
 
-|Код причины|Объяснение|
+|Код причины|Пояснение|
 |-----------------|-----------------|
 |1300|`Loop body contains no—or very little—computation.`|
 |1301|`Loop stride is not +1.`|
@@ -766,7 +766,7 @@ void code_1305( S_1305 *s, S_1305 x)
 
 Коды причины 14*XX* возникают, если задан какой-либо параметр, несовместимый с вектором.
 
-|Код причины|Объяснение|
+|Код причины|Пояснение|
 |-----------------|-----------------|
 |1400|`#pragma loop(no_vector) is specified.`|
 |1401|`/kernel switch is specified when targeting x86 or ARM.`|
@@ -838,7 +838,7 @@ void code_1404(int *A)
 
 Коды причины 15*XX* применяются к псевдонимам. Совмещение имен возникает, когда одно и тоже расположение в памяти доступно под двумя разными именами.
 
-|Код причины|Объяснение|
+|Код причины|Пояснение|
 |-----------------|-----------------|
 |1500|`Possible aliasing on multi-dimensional arrays.`|
 |1501|`Possible aliasing on arrays-of-structs.`|
@@ -964,10 +964,10 @@ void code_1505(int *A, int *B)
 
 ## <a name="see-also"></a>См. также раздел
 
-[В CC++ /компилятора и средствах сборки ошибки и предупреждения](../compiler-errors-1/c-cpp-build-errors.md)
-[автоматической параллелизации и автоматической обработки векторов](../../parallel/auto-parallelization-and-auto-vectorization.md) \
-[Автоматическое векторизатора в Visual Studio 2012 — обзор](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/) \
-[#pragma Loop ()](../../preprocessor/loop.md) \
+[Ошибки и предупреждения](../compiler-errors-1/c-cpp-build-errors.md) 
+ для компилятора C/C++ и средств сборки [Автомасштабирование и автовектор](../../parallel/auto-parallelization-and-auto-vectorization.md) \
+[Автоматическое векторизатора в Visual Studio 2012 — Обзор](/archive/blogs/nativeconcurrency/auto-vectorizer-in-visual-studio-2012-overview) \
+[цикл #pragma ()](../../preprocessor/loop.md) \
 [Параметры/q (низкоуровневые операции)](../../build/reference/q-options-low-level-operations.md) \
-[/Qpar-report (уровень отчетов Auto-параллелизатора)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) \
-[/Qvec/report (уровень отчетности автоматического векторизатора)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)
+[/Qpar-report (автоматический уровень отчетов Параллелизатора)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) \
+[/Qvec-report (автоматический уровень отчетов векторизатора)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)

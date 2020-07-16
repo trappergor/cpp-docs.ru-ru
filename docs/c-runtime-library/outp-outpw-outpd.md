@@ -41,12 +41,12 @@ helpviewer_keywords:
 - _outpw function
 - _outp function
 ms.assetid: c200fe22-41f6-46fd-b0be-ebb805b35181
-ms.openlocfilehash: 0d28511cdf7487226635c0317b7c0ba21ab1d1be
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: ceaaefbbe6f9debfb5ac8e1e8f5f3d1bbb36c8a8
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373480"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404064"
 ---
 # <a name="outp-outpw-_outp-_outpw-_outpd"></a>ыходной, аутпв, _outp, _outpw, _outpd
 
@@ -61,15 +61,15 @@ ms.locfileid: "86373480"
 ```cpp
 int _outp(
    unsigned short port,
-   int databyte
+   int data_byte
 );
 unsigned short _outpw(
    unsigned short port,
-   unsigned short dataword
+   unsigned short data_word
 );
 unsigned long _outpd(
    unsigned short port,
-   unsigned long dataword
+   unsigned long data_word
 );
 ```
 
@@ -78,18 +78,20 @@ unsigned long _outpd(
 *порту*\
 Номер порта.
 
-*Byte, слово*\
+*data_byte, data_word*\
 Выходные значения.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Функции возвращают выходные данные. Ошибка не возвращается.
+Функции возвращают выходные данные. Ошибки не возвращаются.
 
 ## <a name="remarks"></a>Remarks
 
-Функции `_outp`, `_outpw`и `_outpd` пишут байт, слово и двойное слово, соответственно, на указанный порт вывода. Аргумент *Port* может быть любым целым числом без знака в диапазоне 0 – 65 535; *Byte* может быть любым целым числом в диапазоне 0-255; и " *слово* " может быть любым значением в диапазоне целого числа, короткого целого числа без знака и длинного целого числа без знака соответственно.
+Функции `_outp`, `_outpw`и `_outpd` пишут байт, слово и двойное слово, соответственно, на указанный порт вывода. Аргумент *Port* может быть любым целым числом без знака в диапазоне от 0 до 65 535. *data_byte* может быть любым целым числом в диапазоне 0-255. *data_word* может быть любым значением в диапазоне целого числа, короткого целого числа без знака и длинного целого числа без знака соответственно.
 
-Поскольку эти функции записываются непосредственно в порт ввода-вывода, они не могут использоваться в коде Windows пользовательского режима. Сведения об использовании портов ввода-вывода в операционной системе Windows см. в разделе [последовательная связь](https://docs.microsoft.com/previous-versions/ff802693(v=msdn.10)).
+Поскольку эти функции записываются непосредственно в порт ввода-вывода, они не могут использоваться в коде Windows пользовательского режима.
+
+Сведения об использовании портов ввода-вывода в операционной системе Windows см. в разделе [последовательная связь](https://docs.microsoft.com/previous-versions/ff802693(v=msdn.10)).
 
 `outp`Имена и `outpw` являются устаревшими, нерекомендуемыми именами для `_outp` `_outpw` функций и. Дополнительные сведения см. в разделе [имена функций POSIX](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
 
@@ -110,4 +112,4 @@ unsigned long _outpd(
 ## <a name="see-also"></a>См. также раздел
 
 [Ввод-вывод в консоль и порт](../c-runtime-library/console-and-port-i-o.md)\
-[InP, инпв, _inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)
+[`inp`, `inpw`, `_inp`, `_inpw`, `_inpd`](../c-runtime-library/inp-inpw-inpd.md)

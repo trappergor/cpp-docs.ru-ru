@@ -42,12 +42,12 @@ helpviewer_keywords:
 - _tcsftime function
 - time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
-ms.openlocfilehash: 9d262371369681cbbd5975a733950d6c4150fd88
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 57fdd61a966cbeab07c0aeafdad0f6e6fb97cca1
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920023"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404324"
 ---
 # <a name="strftime-wcsftime-_strftime_l-_wcsftime_l"></a>strftime, wcsftime, _strftime_l, _wcsftime_l
 
@@ -123,7 +123,7 @@ size_t _wcsftime_l(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsftime**|**strftime**|**strftime**|**wcsftime**|
 
-Аргумент *формата* состоит из одного или нескольких кодов; как и в **printf**, кодам форматирования предшествует знак процента (**%**). Символы, которые не начинаются с **%** , копируются без изменений в *стрдест*. Категория **LC_TIME** текущего языкового стандарта влияет на форматирование выходных данных **strftime**. (Дополнительные сведения о **LC_TIME**см. в разделе [setlocale](setlocale-wsetlocale.md).) Функции **strftime** и **wcsftime** используют текущую национальную настройку. **_Strftime_l** и **_wcsftime_l** версии этих функций идентичны, за исключением того, что они принимают языковой стандарт в качестве параметра и используют их вместо текущего набора языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+Аргумент *формата* состоит из одного или нескольких кодов; как и в **printf**, кодам форматирования предшествует знак процента ( **%** ). Символы, которые не начинаются с **%** , копируются без изменений в *стрдест*. Категория **LC_TIME** текущего языкового стандарта влияет на форматирование выходных данных **strftime**. (Дополнительные сведения о **LC_TIME**см. в разделе [setlocale](setlocale-wsetlocale.md).) Функции **strftime** и **wcsftime** используют текущую национальную настройку. **_Strftime_l** и **_wcsftime_l** версии этих функций идентичны, за исключением того, что они принимают языковой стандарт в качестве параметра и используют их вместо текущего набора языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 Функции **strftime** поддерживают следующие коды форматирования:
 
@@ -179,14 +179,17 @@ size_t _wcsftime_l(
 
 Год на основе ISO 8601 Week и Week, созданный **% V**, **% g**и **% g**, использует неделю, которая начинается в понедельник, где неделя 1 — это неделя, которая содержит 4 января, то есть первая неделя, включающая не менее четырех дней года. Если первый понедельник года — второй, третий или четвертый, предыдущие дни — часть последней недели предыдущего года. В эти дни **% V** заменяется на 53, а обе **% g** и **% g** заменяются цифрами предыдущего года.
 
+> [!NOTE]
+> При использовании одной из `strftime` функций с `tm` указателем, возвращенным из `gmtime` , значения, выводимые с помощью `%Z` `%z` описателей и, не будут точными. Это обусловлено тем, что `tm` структура, заданная стандартом C, не содержит сведений о названии или смещении часового пояса. Вместо этого сведения о часовом поясе заполняются с помощью глобальных переменных [ `_timezone` и `_dstbias` ](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).
+
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
 |**strftime**|\<time.h>|
-|**wcsftime**|\<time.h> или \<wchar.h>|
+|**wcsftime**|\<time.h> либо \<wchar.h>|
 |**_strftime_l**|\<time.h>|
-|**_wcsftime_l**|\<time.h> или \<wchar.h>|
+|**_wcsftime_l**|\<time.h> либо \<wchar.h>|
 
 Функции **_strftime_l** и **_wcsftime_l** являются специфичными для Microsoft. Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
@@ -196,10 +199,10 @@ size_t _wcsftime_l(
 
 ## <a name="see-also"></a>См. также раздел
 
-[Locale](../../c-runtime-library/locale.md) <br/>
-[Операции управления временем](../../c-runtime-library/time-management.md) <br/>
+[Локаль](../../c-runtime-library/locale.md) <br/>
+[Управление временем](../../c-runtime-library/time-management.md) <br/>
 [Управление строками](../../c-runtime-library/string-manipulation-crt.md) <br/>
 [localeconv](localeconv.md) <br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md) <br/>
-[strcoll Functions](../../c-runtime-library/strcoll-functions.md) <br/>
+[Функции strcoll](../../c-runtime-library/strcoll-functions.md) <br/>
 [strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)<br/>
