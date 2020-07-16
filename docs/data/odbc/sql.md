@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SQL [C++], ODBC
 - ODBC [C++], SQL implementation
 ms.assetid: e3923bc4-b317-4e0b-afd8-3cd403eb0faf
-ms.openlocfilehash: e5ab824f850b6050e11c10734dd709330af416b5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cdceec9f4a6a39e9e1a50fc002d4220801e8d15a
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376441"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404272"
 ---
 # <a name="sql"></a>SQL
 
@@ -23,7 +23,7 @@ ms.locfileid: "81376441"
 
 Инструкции SQL начинаются с ключевого слова команды, например **CREATE** или **SELECT**. Язык SQL является мощным инструментом, поскольку даже одна инструкция может полностью изменить таблицу.
 
-Существует множество версий SQL, разработанных с учетом специфики конкретной СУБД, для которой они предназначены. Классы базы данных MFC распознают набор инструкций SQL, соответствующий проекту спецификации SQL для общей среды приложений (CAE), предложенному X/Open и SQL Access Group (1991). Подробнее о синтаксисе этих утверждений см. *ODBC SDK* *Programmer's Reference*
+Существует множество версий SQL, разработанных с учетом специфики конкретной СУБД, для которой они предназначены. Классы базы данных MFC распознают набор инструкций SQL, соответствующий проекту спецификации SQL для общей среды приложений (CAE), предложенному X/Open и SQL Access Group (1991). Сведения о синтаксисе этих инструкций см. в приложении C в [справочной документации программиста ODBC](/sql/odbc/reference/odbc-programmer-s-reference) .
 
 В этом разделе рассматриваются следующие вопросы.
 
@@ -31,11 +31,11 @@ ms.locfileid: "81376441"
 
 - [Распространенные ключевые слова SQL, используемые в классах базы данных](#_core_the_database_classes).
 
-- [Как классы баз данных используют S'L.](#_core_how_the_database_classes_use_sql)
+- [Как классы базы данных используют SQL](#_core_how_the_database_classes_use_sql).
 
-## <a name="open-database-connectivity-odbc"></a><a name="_core_open_database_connectivity_.28.odbc.29"></a> Открытый интерфейс доступа к базам данных (ODBC)
+## <a name="open-database-connectivity-odbc"></a><a name="_core_open_database_connectivity_.28.odbc.29"></a>Открытие подключения к базе данных (ODBC)
 
-Классы базы данных реализуются на основе интерфейса ODBC, который использует SQL в интерфейсе уровня вызова вместо того, чтобы внедрять команды SQL в код. Интерфейс ODBC использует SQL для связи с [источником данных](../../data/odbc/data-source-odbc.md) посредством драйверов ODBC. Эти драйверы интерпретируют инструкции SQL и при необходимости преобразуют их в формат, используемый конкретной базой данных, например Microsoft Access. Дополнительные сведения о том, как интерфейс ODBC использует SQL, см. в *справочнике программиста* по [ODBC](../../data/odbc/odbc-basics.md) и пакету SDK ODBC на компакт-диске с библиотекой MSDN.
+Классы базы данных реализуются на основе интерфейса ODBC, который использует SQL в интерфейсе уровня вызова вместо того, чтобы внедрять команды SQL в код. Интерфейс ODBC использует SQL для связи с [источником данных](../../data/odbc/data-source-odbc.md) посредством драйверов ODBC. Эти драйверы интерпретируют инструкции SQL и при необходимости преобразуют их в формат, используемый конкретной базой данных, например Microsoft Access. Дополнительные сведения о том, как ODBC использует SQL, см. в справочной документации по [ODBC](../../data/odbc/odbc-basics.md) и [программисту ODBC](/sql/odbc/reference/odbc-programmer-s-reference) .
 
 ## <a name="database-classes"></a><a name="_core_the_database_classes"></a> Классы базы данных
 
@@ -50,12 +50,12 @@ ms.locfileid: "81376441"
 
 |Ключевое слово SQL|Мастер и классы базы данных, в которых используется ключевое слово|
 |-----------------|---------------------------------------------|
-|**Выберите**|Определяет используемые таблицы и столбцы источника данных.|
+|**SELECT**|Определяет используемые таблицы и столбцы источника данных.|
 |**WHERE**|Применяет фильтр, ограничивающий выборку.|
 |**ORDER BY**|Применяет порядок сортировки к набору записей.|
-|**Вставить**|Добавляет новые записи в набор записей.|
-|**Удалить**|Удаляет записи из набора записей.|
-|**Обновление**|Изменяет поля записи.|
+|**INSERT**|Добавляет новые записи в набор записей.|
+|**DELETE**|Удаляет записи из набора записей.|
+|**UPDATE**|Изменяет поля записи.|
 
 Кроме того, классы базы данных распознают инструкции **CALL** ODBC, которые можно использовать для вызова предварительно определенного запроса (или хранимой процедуры) в отношении некоторых источников данных. Драйвер базы данных ODBC интерпретирует эти инструкции и подставляет команды, соответствующие конкретной СУБД.
 
@@ -64,11 +64,11 @@ ms.locfileid: "81376441"
 
 Если класс не распознает предоставленную пользователем инструкцию в `CRecordset::Open`, она интерпретируется как имя таблицы.
 
-Объяснение того, как фреймворк конструирует операторы S'L, [см.](../../data/odbc/recordset-how-recordsets-select-records-odbc.md) [SQL: Customizing Your Recordset's SQL Statement (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)
+Объяснение того, как платформа конструирует инструкции SQL, см. в разделе [набор записей: как наборы записей выбирают записи (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md) и [SQL: Настройка инструкции SQL набора записей (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
 
-Базы данных SQL используют типы данных, схожие с теми, что применяются в C и C++. Для обсуждения этих сходств [см.](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)
+Базы данных SQL используют типы данных, схожие с теми, что применяются в C и C++. Обсуждение этих сходства см. в разделе [SQL: SQL и C++ Data Types (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md).
 
-Вы можете найти более подробную информацию о S'L, в том числе список поддерживаемых заявлений S'L, типы данных, грамматику ядра S'L, а также список для чтения рекомендуемых публикаций о S'L, в *справке программиста* *ODBC SDK* на CD библиотеки MSDN.
+Дополнительные сведения о SQL, включая список поддерживаемых инструкций SQL, типы данных, грамматику SQL Core и список рекомендуемых публикаций SQL, см. в документации по [Microsoft SQL](/sql/) .
 
 ## <a name="how-the-database-classes-use-sql"></a><a name="_core_how_the_database_classes_use_sql"></a> Принципы использования SQL в классах базы данных
 
@@ -80,13 +80,13 @@ ms.locfileid: "81376441"
 
 В следующих разделах приводятся дополнительные сведения о том, как классы базы данных используют SQL.
 
-- [СЗЛ: Настройка заявления вашего рекордсета (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)
+- [SQL. Настройка инструкции SQL для набора записей (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)
 
-- [SQL. Типы данных SQL и C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)
+- [SQL: типы данных SQL и C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)
 
-- [SQL. Выполнение прямых вызовов SQL (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
+- [SQL: выполнение прямых вызовов SQL (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
 
 ## <a name="see-also"></a>См. также раздел
 
-[Открытая связь с базами данных (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
+[Открытие подключения к базе данных (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
 [Основы ODBC](../../data/odbc/odbc-basics.md)

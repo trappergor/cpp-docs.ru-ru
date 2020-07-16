@@ -2,12 +2,12 @@
 title: /HIGHENTROPYVA (поддержка 64-разрядной рандомизации ASLR)
 ms.date: 06/12/2018
 ms.assetid: fe35f9f7-d28e-4694-9aeb-a79db06168e0
-ms.openlocfilehash: 8f8601d89e8456461aac3d91f9fd2cfda216d7f5
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: 929d6aa71010c1f303bf7a1ce64109a01b8792e4
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373844"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404129"
 ---
 # <a name="highentropyva-support-64-bit-aslr"></a>/HIGHENTROPYVA (поддержка 64-разрядной рандомизации ASLR)
 
@@ -15,15 +15,15 @@ ms.locfileid: "86373844"
 
 ## <a name="syntax"></a>Синтаксис
 
-> **/highentropyva**[**: нет**]
+> **`/HIGHENTROPYVA`**[**`:NO`**]
 
 ## <a name="remarks"></a>Remarks
 
-**/Highentropyva** изменяет заголовок *исполняемого образа*, DLL-файла или EXE-файла, чтобы указать, может ли ASLR использовать все 64 разрядов адресного пространства. Если для исполняемого файла и всех модулей, от которых он зависит, задан этот параметр, то операционная система, поддерживающая 64-разрядную технологию, может переместить сегменты исполняемого образа во время загрузки, используя случайные адреса в 64-разрядном виртуальном адресном пространстве. Благодаря обширному адресному пространству злоумышленнику будет труднее догадаться о расположении определенной области в памяти.
+**`/HIGHENTROPYVA`** изменяет заголовок файла *исполняемого образа* (например, *`.dll`* *`.exe`* файла или), чтобы указать, может ли ASLR использовать все 64-битные адресные пространства.  Чтобы получить результат, задайте параметр как для исполняемого файла, так и для всех модулей, от которых он зависит. Затем операционная система, которая поддерживает 64-разрядный ASLR, может перераспределять сегменты исполняемого образа во время загрузки с помощью 64-битных случайных виртуальных адресов. Благодаря обширному адресному пространству злоумышленнику будет труднее догадаться о расположении определенной области в памяти.
 
-По умолчанию **/highentropyva** включается для 64-разрядных исполняемых образов. Для этого параметра требуется [/LARGEADDRESSAWARE](largeaddressaware-handle-large-addresses.md), который также включен по умолчанию для 64-разрядных изображений. **/Highentropyva** не применяется к 32-разрядным исполняемым образам, где компоновщик игнорирует параметр. Чтобы явно отключить этот параметр, используйте **/highentropyva: No**.
+По умолчанию **`/HIGHENTROPYVA`** включено для 64-разрядных исполняемых образов. Для этого параметра требуется [`/LARGEADDRESSAWARE`](largeaddressaware-handle-large-addresses.md) , который также включен по умолчанию для 64-разрядных изображений. **`/HIGHENTROPYVA`** не применяется к 32-разрядным исполняемым образам, где компоновщик игнорирует параметр. Чтобы явно отключить этот параметр, используйте **`/HIGHENTROPYVA:NO`** .
 
-Чтобы **/highentropyva** действовал во время загрузки, необходимо также включить [/DynamicBase](dynamicbase-use-address-space-layout-randomization.md) . **/DynamicBase** включен по умолчанию и требуется для включения ASLR в Windows Vista и более поздних операционных системах. В более ранних версиях Windows этот флаг игнорируется.
+Для **`/HIGHENTROPYVA`** , чтобы обеспечить воздействие на время загрузки, [`/DYNAMICBASE`](dynamicbase-use-address-space-layout-randomization.md) также необходимо включить. **`/DYNAMICBASE`** параметр включен по умолчанию и необходим для включения ASLR в Windows Vista и более поздних операционных системах. В более ранних версиях Windows этот флаг игнорируется.
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>Настройка этого параметра компоновщика в Visual Studio
 
@@ -37,6 +37,6 @@ ms.locfileid: "86373844"
 
 - [Справочник по компоновщику MSVC](linking.md)
 - [Параметры компоновщика MSVC](linker-options.md)
-- [/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)
-- [/LARGEADDRESSAWARE](largeaddressaware-handle-large-addresses.md)
+- [`/DYNAMICBASE`](dynamicbase-use-address-space-layout-randomization.md)
+- [`/LARGEADDRESSAWARE`](largeaddressaware-handle-large-addresses.md)
 - [Средства защиты программного обеспечения Windows ISV](https://docs.microsoft.com/previous-versions/bb430720(v=msdn.10))

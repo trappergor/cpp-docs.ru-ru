@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SAL annotations
 - code analysis, annotation
 ms.assetid: a16e47d0-6f3e-4ed6-8883-459b2874e9a4
-ms.openlocfilehash: bfd6a58c7dc8664dce91906279a62380768a5c65
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 1d47608137e2a9d9ed13740a5f4424cc0aff2902
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "79467117"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86403898"
 ---
 # <a name="using-sal-annotations-to-reduce-cc-code-defects"></a>Использование аннотаций SAL для сокращения количества дефектов в коде C/C++
 
@@ -51,10 +51,6 @@ SAL — это язык заметок исходного кода Майкро�
 - [Рекомендации и примеры](../code-quality/best-practices-and-examples-sal.md)
 
      Содержит примеры, демонстрирующие использование аннотаций SAL. Также описываются распространенные ошибки.
-
-## <a name="related-resources"></a>Связанные ресурсы
-
-[Блог команды разработчиков анализа кода](https://blogs.msdn.microsoft.com/codeanalysis/)
 
 ## <a name="see-also"></a>См. также:
 
