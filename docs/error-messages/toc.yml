@@ -4254,6 +4254,8 @@
           href: compiler-warnings/c5046.md
         - name: "Предупреждение компилятора (уровень\_1) C5105"
           href: compiler-warnings/c5105.md
+        - name: "Предупреждение компилятора (уровень\_1) C5208"
+          href: compiler-warnings/c5208.md
 - name: Предупреждения компилятора по версиям компилятора
   href: compiler-warnings/compiler-warnings-by-compiler-version.md
 - name: 'Предупреждения компилятора, выключенные по умолчанию'
