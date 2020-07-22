@@ -3,12 +3,12 @@ title: Развертывание, запуск и отладка проекта
 description: Компиляция, выполнение и отладка кода в удаленной системе в проекте C++ для Linux в Visual Studio.
 ms.date: 06/07/2019
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: e68feab3a71cd5bb3f6b88eee52f0872ef4bb213
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: df095d5561bea6dac94b9faa139c83c197802bbf
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "80077829"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404415"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Развертывание, запуск и отладка проекта Linux
 
@@ -195,7 +195,7 @@ IntelliSense предложит полный список всех устано�
 
 ## <a name="next-steps"></a>Следующие шаги
 
-- Для отладки устройств ARM в Linux см. записи блога: [Отладка встроенного устройства ARM в Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/).
+- Для отладки устройств ARM в Linux см. записи блога: [Отладка встроенного устройства ARM в Visual Studio](https://devblogs.microsoft.com/cppblog/debugging-an-embedded-arm-device-in-visual-studio/).
 
 ## <a name="see-also"></a>См. также
 
