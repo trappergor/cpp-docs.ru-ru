@@ -3,12 +3,12 @@ title: Улучшение соответствия C++
 ms.date: 05/18/2020
 description: Microsoft C++ в Visual Studio развивается в сторону полного соответствия стандарту языка C++20.
 ms.technology: cpp-language
-ms.openlocfilehash: c7c93de8b0e4c266290b858c76e7b34fccc0cabd
-ms.sourcegitcommit: 3f91111c0350c0237fddb82766c290307f20e659
+ms.openlocfilehash: 7796728c869e39270ee9e8fe82fb5e0e9a3a8630
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83630501"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405108"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Улучшения соответствия C++ в Visual Studio
 
@@ -177,7 +177,7 @@ const char8_t* s = u8"Hello"; // C++20
 
 [P0887R1 type_identity](https://wg21.link/p0887r1). Устаревшее расширение класса шаблонов `std::identity` было удалено и заменено на метафункцию `std::type_identity` и объект функции `std::identity` в C++20. Они доступны только в [/std:c++latest](../build/reference/std-specify-language-standard-version.md).
 
-В следующем примере становится устаревшим предупреждение C4996 для `std::identity` (определено в \<type_traits>) в Visual Studio 2017:
+В следующем примере становится устаревшим предупреждение C4996 для `std::identity` (определено в \<type_traits>) в Visual Studio 2017:
 
 ```cpp
 #include <type_traits>
@@ -237,7 +237,7 @@ void f() {
 - `starts_with()` и `ends_with()` для `basic_string` и `basic_string_view`.
 - `contains()` для ассоциативных контейнеров;
 - `remove()`, `remove_if()` и `unique()` для `list` и `forward_list` теперь возвращают `size_type`;
-- `shift_left()` и `shift_right()` добавлены к \<algorithm>.
+- `shift_left()`и `shift_right()` добавлены в \<algorithm>.
 
 ## <a name="conformance-improvements-in-162"></a><a name="improvements_162"></a> Улучшения соответствия C++ в 16.2
 
@@ -376,7 +376,7 @@ bool neq(const S& lhs, const S& rhs) {
 
 ### <a name="standard-library-improvements"></a>Улучшения стандартной библиотеки
 
-- \<charconv>`to_chars()` с фиксированной или научной точностью. (Общая точность в настоящее время запланирована на версию 16.4.)
+- \<charconv> `to_chars()` с фиксированной или научной точностью. (Общая точность в настоящее время запланирована на версию 16.4.)
 - [P0020R6](https://wg21.link/p0020r6): atomic\<float>, atomic\<double>, atomic\<long double>
 - [P0463R1](https://wg21.link/p0463r1): endian
 - [P0482R6](https://wg21.link/p0482r6): Поддержка библиотек для char8_t
@@ -456,7 +456,7 @@ extern "C" void f(int, int, int, BOOL){}
 
 ### <a name="standard-library-improvements"></a>Улучшения стандартной библиотеки
 
-Нестандартные заголовки \<stdexcpt.h> и \<typeinfo.>h были удалены. Код, который содержит их, должен включать стандартные заголовки \<exception> и \<typeinfo> соответственно.
+Нестандартные заголовки \<stdexcpt.h> и \<typeinfo.h> были удалены. Код, который содержит их, должен включать стандартные заголовки \<exception> и \<typeinfo> соответственно.
 
 ## <a name="conformance-improvements-in-visual-studio-2019-version-164"></a><a name="improvements_164"></a> Улучшения соответствия в Visual Studio 2019 версии 16.4
 
@@ -1276,7 +1276,7 @@ int main()
 
 Функция отладки итераторов теперь может правильно развертывать `std::move_iterator`. Например, `std::copy(std::move_iterator<std::vector<int>::iterator>, std::move_iterator<std::vector<int>::iterator>, int*)` теперь использует быстрый путь `memcpy`.
 
-### <a name="fixes-for-xkeycheckh-keyword-enforcement"></a>Исправления для принудительного применения ключевого слова \<xkeycheck.h >
+### <a name="fixes-for-xkeycheckh-keyword-enforcement"></a>Исправления для принудительного применения ключевого слова \<xkeycheck.h>
 
 Применение ключевого слова в стиле макроса стандартной библиотеки \<xkeycheck.h> было исправлено, чтобы выдавать ключевое слово фактически обнаруженной проблемы вместо сообщения общего характера. Также поддерживаются ключевые слова C ++ 20, а IntelliSense не сообщает, что случайные ключевые слова являются макросами.
 
@@ -1410,7 +1410,7 @@ struct Comparer  {
 
 ### <a name="c11-expression-sfinae-support-in-more-libraries"></a>C++11 Поддержка выражения SFINAE в большем числе библиотек
 
-Продолжается улучшение поддержки выражения SFINAE в компиляторе. Оно необходимо для дедукции и подстановки аргументов шаблона в тех случаях, когда выражения **decltype** и **constexpr** могут отображаться в качестве параметров шаблона. Дополнительные сведения см. в разделе [Усовершенствования выражения SFINAE в версии-кандидате Visual Studio 2017](https://blogs.msdn.microsoft.com/vcblog/2016/06/07/expression-sfinae-improvements-in-vs-2015-update-3).
+Продолжается улучшение поддержки выражения SFINAE в компиляторе. Оно необходимо для дедукции и подстановки аргументов шаблона в тех случаях, когда выражения **decltype** и **constexpr** могут отображаться в качестве параметров шаблона. Дополнительные сведения см. в разделе [Усовершенствования выражения SFINAE в версии-кандидате Visual Studio 2017](https://devblogs.microsoft.com/cppblog/expression-sfinae-improvements-in-vs-2015-update-3/).
 
 ### <a name="c14-nsdmi-for-aggregates"></a>C++14: NSDMI для статистических выражений
 
@@ -1698,7 +1698,7 @@ void sample(A<0> *p)
 
 ### <a name="c17-mathematical-special-functions"></a>C++17 Специальные математические функции
 
-[P0226R1](https://wg21.link/p0220r1). Включает предыдущие технические спецификации для специальных математических функций в стандарт \<cmath> header.
+[P0226R1](https://wg21.link/p0220r1). Включает предыдущие технические спецификации для специальных математических функций в стандартный заголовок \<cmath>.
 
 ### <a name="c17-deduction-guides-for-the-standard-library"></a>C++17 Рекомендации по удержанию для стандартной библиотеки
 

@@ -3,12 +3,12 @@ title: Справка и сообщество Visual C++
 ms.date: 11/30/2017
 ms.technology: cpp-ide
 ms.assetid: 6bc23c18-fcd9-47bc-bff2-17537700be4a
-ms.openlocfilehash: eb266354b818e95583c0d236c19209963a34f1f5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 66ff4844e34d1d3c781791b5e250387d6ac2a0d1
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "75791697"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405082"
 ---
 # <a name="visual-c-help-and-community"></a>Справка и сообщество Visual C++
 
@@ -18,13 +18,13 @@ ms.locfileid: "75791697"
 
 |Заголовок|Описание|
 |-----------|-----------------|
-|[Примеры кода от разработчиков](https://code.msdn.microsoft.com/)|Содержит загружаемые примеры кода от Microsoft и участников сообщества.|
+|[Примеры кода от разработчиков](https://docs.microsoft.com/samples)|Содержит загружаемые примеры кода от Microsoft и участников сообщества.|
 
 ## <a name="product-documentation"></a>Документация по продукту
 
 |Заголовок|Описание|
 |-----------|-----------------|
-|[C++ в Visual Studio](visual-cpp-in-visual-studio.md)|Содержит общую и справочную документацию по Visual C++. Часть библиотеки MSDN.|
+|[C++ в Visual Studio](visual-cpp-in-visual-studio.md)|Содержит общую и справочную документацию по Visual C++.|
 |[Центр разработчиков для Windows](https://developer.microsoft.com/windows/)|Содержит сведения об использовании C++ и других языков для разработки приложений для Windows 10. Часть центра разработчиков Windows; содержимое по C++ находится в разделе Документы > Справочник по языку.|
 
 ### <a name="online-and-offline-documentation"></a>Документация, доступная в сети и вне сети
@@ -39,7 +39,7 @@ ms.locfileid: "75791697"
 
 |Заголовок|Описание|
 |-----------|-----------------|
-|[Блог команды разработчиков Visual C++](https://blogs.msdn.microsoft.com/vcblog/)|Содержит записи, создаваемые экспертами из группы разработчиков Visual C++ по различным темам.|
-|[Канал 9](https://channel9.msdn.com/)|Содержит видеоинтервью и лекции. Используйте поле поиска на домашней странице канала 9 для поиска содержимого по C++.|
+|[Блог группы разработчиков C++](https://devblogs.microsoft.com/cppblog/)|Содержит записи, создаваемые экспертами из группы разработчиков C++ корпорации Майкрософт, по различным темам.|
+|[Channel 9](https://channel9.msdn.com/)|Содержит видеоинтервью и лекции. Используйте поле поиска на домашней странице канала 9 для поиска содержимого по C++.|
 |[Visual Studio](https://visualstudio.microsoft.com/)|Содержит статьи и новости о Visual Studio и связанных средствах разработки.|
-|[Форумы MSDN](https://social.msdn.microsoft.com/Forums/home?category=visualc) и [сообщество разработчиков](https://developercommunity.visualstudio.com)|Официальные форумы Майкрософт, где можно размещать вопросы по C++ и получать ответы от представителей Майкрософт и специалистов сообщества.|
+|[Форумы MSDN](https://social.msdn.microsoft.com/Forums/) и [Сообщество разработчиков](https://developercommunity.visualstudio.com) Visual Studio|Официальные форумы Майкрософт, где можно размещать вопросы по C++ и получать ответы от представителей Майкрософт и специалистов сообщества.|
