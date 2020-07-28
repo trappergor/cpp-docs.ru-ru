@@ -11,20 +11,20 @@ helpviewer_keywords:
 - std::fpos [C++], seekpos
 - std::fpos [C++], state
 ms.assetid: ffd0827c-fa34-47f4-b10e-5cb707fcde47
-ms.openlocfilehash: 7d60a31e69e8a1ad82086f715cac6dde064d1fac
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 37536443455ca4ddc40568e15951b814982d4ad9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81359204"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87193306"
 ---
 # <a name="fpos-class"></a>Класс fpos
 
-Шаблон класса описывает объект, который может хранить всю информацию, необходимую для восстановления произвольного индикатора положения файлов в любом потоке. Объект класса fpos \< **St** фактически хранит по крайней мере два объекта-члена:
+Шаблон класса описывает объект, который может хранить всю информацию, необходимую для восстановления произвольного индикатора положения файла в любом потоке. Объект класса fpos \< **St**> эффективно хранит по крайней мере два объекта члена:
 
 - Смещение в байтах типа [streamoff](../standard-library/ios-typedefs.md#streamoff).
 
-- Состояние преобразования, для использования объектом класса basic_filebuf, `St` `mbstate_t`типа, как правило.
+- Состояние преобразования, используемое объектом класса basic_filebuf типа `St` , обычно `mbstate_t` .
 
 Также можно хранить произвольное положение в файле для использования объектом класса [basic_filebuf](../standard-library/basic-filebuf-class.md) типа `fpos_t`. В среде с ограниченным размером файлов `streamoff` и `fpos_t` могут быть взаимозаменяемыми. В среде без потоков с кодированием, зависящим от состояния, `mbstate_t` может фактически не использоваться. Таким образом, число хранимых объектов-членов может различаться.
 
@@ -37,7 +37,7 @@ class fpos
 
 ### <a name="parameters"></a>Параметры
 
-*Состояниетипа*\
+*StateType*\
 Сведения о состоянии.
 
 ### <a name="constructors"></a>Конструкторы
@@ -51,27 +51,27 @@ class fpos
 |Функция-член|Описание|
 |-|-|
 |[seekpos](#seekpos)|Используется только внутренними механизмами стандартной библиотеки C++. Не вызывайте этот метод в коде.|
-|[Государства](#state)|Задает или возвращает состояние преобразования.|
+|[state](#state)|Задает или возвращает состояние преобразования.|
 
 ### <a name="operators"></a>Операторы
 
 |Оператор|Описание|
 |-|-|
-|[оператора!](#op_neq)|Проверяет индикаторы положений в файлах на неравенство.|
-|[оператор](#op_add)|Увеличивает значение положения в файле.|
-|[оператора](#op_add_eq)|Увеличивает значение положения в файле.|
-|[оператор-](#operator-)|Уменьшает значение положения в файле.|
-|[оператор-я](#operator-_eq)|Уменьшает значение положения в файле.|
-|[оператора](#op_eq_eq)|Проверяет индикаторы положений в файлах на равенство.|
+|[operator! =](#op_neq)|Проверяет индикаторы положений в файлах на неравенство.|
+|[operator +](#op_add)|Увеличивает значение положения в файле.|
+|[operator + =](#op_add_eq)|Увеличивает значение положения в файле.|
+|[станции](#operator-)|Уменьшает значение положения в файле.|
+|[Оператор-=](#operator-_eq)|Уменьшает значение положения в файле.|
+|[Оператор = =](#op_eq_eq)|Проверяет индикаторы положений в файлах на равенство.|
 |[operator streamoff](#op_streamoff)|Приводит объект типа `fpos` к объекту типа `streamoff`.|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<ios>
+**Заголовок:**\<ios>
 
 **Пространство имен:** std
 
-## <a name="fposfpos"></a><a name="fpos"></a>fpos:fpos
+## <a name="fposfpos"></a><a name="fpos"></a>fpos:: fpos
 
 Создает объект, содержащий сведения о положении (смещении) в потоке.
 
@@ -83,10 +83,10 @@ fpos(Statetype _State, fpos_t _Filepos);
 
 ### <a name="parameters"></a>Параметры
 
-*_off*\
+*_Off*\
 Смещение в поток.
 
-*_state*\
+*_State*\
 Начальное состояние объекта `fpos`.
 
 *_Filepos*\
@@ -94,11 +94,11 @@ fpos(Statetype _State, fpos_t _Filepos);
 
 ### <a name="remarks"></a>Remarks
 
-Первый конструктор хранит смещенный *_Off,* по отношению к началу файла и в исходном состоянии преобразования (если это имеет значение). Если *_Off* -1, полученный объект представляет собой недействительное положение потока.
+Первый конструктор сохраняет *_Off*смещения относительно начала файла и в начальном состоянии преобразования (если это важно). Если *_Off* равен-1, результирующий объект представляет недопустимую точку в потоке.
 
-Второй конструктор хранит нулевой смещения и объект *_State.*
+Второй конструктор сохраняет нулевое смещение и объект *_State*.
 
-## <a name="fposoperator"></a><a name="op_neq"></a>fpos::оператор!
+## <a name="fposoperator"></a><a name="op_neq"></a>fpos:: operator! =
 
 Проверяет индикаторы положений в файлах на неравенство.
 
@@ -113,7 +113,7 @@ bool operator!=(const fpos<Statetype>& right) const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**true**, если индикаторы положения в файле не равны; в противном случае — **false**.
+**`true`** значение, если индикаторы позиционирования файлов не равны; в противном случае — **`false`** .
 
 ### <a name="remarks"></a>Remarks
 
@@ -171,7 +171,7 @@ int main( )
 }
 ```
 
-## <a name="fposoperator"></a><a name="op_add"></a>fpos:оператор
+## <a name="fposoperator"></a><a name="op_add"></a>fpos:: operator +
 
 Увеличивает значение положения в файле.
 
@@ -181,7 +181,7 @@ fpos<Statetype> operator+(streamoff _Off) const;
 
 ### <a name="parameters"></a>Параметры
 
-*_off*\
+*_Off*\
 Смещение, на которое нужно увеличить индикатор положения в файле.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -196,7 +196,7 @@ fpos<Statetype> operator+(streamoff _Off) const;
 
 См. в [operator!=](#op_neq) пример применения `operator+`.
 
-## <a name="fposoperator"></a><a name="op_add_eq"></a>fpos:оператор
+## <a name="fposoperator"></a><a name="op_add_eq"></a>fpos:: operator + =
 
 Увеличивает значение положения в файле.
 
@@ -206,7 +206,7 @@ fpos<Statetype>& operator+=(streamoff _Off);
 
 ### <a name="parameters"></a>Параметры
 
-*_off*\
+*_Off*\
 Смещение, на которое нужно увеличить индикатор положения в файле.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -215,13 +215,13 @@ fpos<Statetype>& operator+=(streamoff _Off);
 
 ### <a name="remarks"></a>Remarks
 
-Функция участника добавляет *_Off* к сохраненной объекту смещения, а затем возвращает ** \*этот.** Для позиционирования в файле результат будет обычно действителен только для двоичных потоков, в которых не применяется зависящее от состояния кодирование.
+Функция члена добавляет *_Off* к сохраненному объекту смещения элемента, а затем возвращает ** \* this**. Для позиционирования в файле результат будет обычно действителен только для двоичных потоков, в которых не применяется зависящее от состояния кодирование.
 
 ### <a name="example"></a>Пример
 
 См. в [operator!=](#op_neq) пример применения `operator+=`.
 
-## <a name="fposoperator-"></a><a name="operator-"></a>fpos:оператор-
+## <a name="fposoperator-"></a><a name="operator-"></a>fpos:: operator —
 
 Уменьшает значение положения в файле.
 
@@ -236,7 +236,7 @@ fpos<Statetype> operator-(streamoff _Off) const;
 *Правильно*\
 Положение в файле.
 
-*_off*\
+*_Off*\
 Смещение потока.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -247,7 +247,7 @@ fpos<Statetype> operator-(streamoff _Off) const;
 
 См. в [operator!=](#op_neq) пример применения `operator-`.
 
-## <a name="fposoperator-"></a><a name="operator-_eq"></a>fpos:оператор-я
+## <a name="fposoperator-"></a><a name="operator-_eq"></a>fpos:: operator-=
 
 Уменьшает значение положения в файле.
 
@@ -257,7 +257,7 @@ fpos<Statetype>& operator-=(streamoff _Off);
 
 ### <a name="parameters"></a>Параметры
 
-*_off*\
+*_Off*\
 Смещение потока.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -272,7 +272,7 @@ fpos<Statetype>& operator-=(streamoff _Off);
 
 См. в [operator!=](#op_neq) пример применения `operator-=`.
 
-## <a name="fposoperator"></a><a name="op_eq_eq"></a>fpos:оператор
+## <a name="fposoperator"></a><a name="op_eq_eq"></a>fpos:: operator = =
 
 Проверяет индикаторы положений в файлах на равенство.
 
@@ -287,7 +287,7 @@ bool operator==(const fpos<Statetype>& right) const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**true**, если индикаторы положения в файле равны; в противном случае — **false**.
+**`true`** значение, если индикаторы позиционирования файлов равны; в противном случае — значение **`false`** .
 
 ### <a name="remarks"></a>Remarks
 
@@ -297,7 +297,7 @@ bool operator==(const fpos<Statetype>& right) const;
 
 См. в [operator!=](#op_neq) пример применения `operator+=`.
 
-## <a name="fposoperator-streamoff"></a><a name="op_streamoff"></a>fpos:оператор streamoff
+## <a name="fposoperator-streamoff"></a><a name="op_streamoff"></a>fpos:: operator streamoff
 
 Приводит объект типа `fpos` к объекту типа `streamoff`.
 
@@ -336,7 +336,7 @@ int main( )
 0
 ```
 
-## <a name="fposseekpos"></a><a name="seekpos"></a>fpos:seekpos
+## <a name="fposseekpos"></a><a name="seekpos"></a>fpos:: seekpos
 
 Этот метод используется только внутренними механизмами стандартной библиотеки C++. Не вызывайте этот метод в коде.
 
@@ -344,7 +344,7 @@ int main( )
 fpos_t seekpos() const;
 ```
 
-## <a name="fposstate"></a><a name="state"></a>fpos:государство
+## <a name="fposstate"></a><a name="state"></a>fpos:: State
 
 Задает или возвращает состояние преобразования.
 
@@ -356,7 +356,7 @@ void state(Statetype _State);
 
 ### <a name="parameters"></a>Параметры
 
-*_state*\
+*_State*\
 Новое состояние преобразования.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -365,7 +365,7 @@ void state(Statetype _State);
 
 ### <a name="remarks"></a>Remarks
 
-Функция первого члена возвращает значение, хранящееся в объекте-члене. `St` Функция второго *_State* члена хранит `St` _State в объекте-члене.
+Первая функция – член возвращает значение, хранящееся в `St` объекте члена. Вторая функция – член сохраняет *_State* в `St` объекте Member.
 
 ### <a name="example"></a>Пример
 
@@ -394,6 +394,6 @@ int main() {
 
 ## <a name="see-also"></a>См. также раздел
 
-[Безопасность резьбы в стандартной библиотеке СЗ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[программирование йострима](../standard-library/iostream-programming.md)\
-[iostreams Конвенций](../standard-library/iostreams-conventions.md)
+[Безопасность потоков в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Программирование iostream](../standard-library/iostream-programming.md)\
+[Соглашения iostream](../standard-library/iostreams-conventions.md)

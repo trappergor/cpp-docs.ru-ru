@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - true keyword [C++]
 ms.assetid: 96be2a70-51c3-4250-9752-874d25a5a11e
-ms.openlocfilehash: b497c3c9eb1b30074c9b7286c438d0077525e05b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f6420d0abea8bac1d385c1cfdfd58a5500cf5bd3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188042"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87185844"
 ---
 # <a name="true-c"></a>true (C++)
 
@@ -24,7 +24,7 @@ bool-expression logical-operator true ;
 
 ## <a name="remarks"></a>Remarks
 
-Это ключевое слово является одним из двух значений для переменной типа [bool](../cpp/bool-cpp.md) или условного выражения (условное выражение теперь является истинным логическим выражением). Если `i` имеет тип **bool**, инструкция `i = true;` присваивает **значение true** `i`.
+Это ключевое слово является одним из двух значений для переменной типа [bool](../cpp/bool-cpp.md) или условного выражения (условное выражение теперь является истинным логическим выражением). Если `i` имеет тип **`bool`** , инструкция присваивает оператору значение `i = true;` **`true`** `i` .
 
 ## <a name="example"></a>Пример
 

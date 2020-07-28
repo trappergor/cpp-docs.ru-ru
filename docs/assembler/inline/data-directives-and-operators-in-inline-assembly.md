@@ -13,21 +13,21 @@ helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), operators
 - structures [C++], MASM
 ms.assetid: fb7410c7-156a-4131-bcfc-211aa70533e3
-ms.openlocfilehash: 916dce0346bebfc5ff65ca558ae75317a187660a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: bcacb0cdd26181da3cf80a582866c1e30567d043
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169543"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87192357"
 ---
 # <a name="data-directives-and-operators-in-inline-assembly"></a>Директивы и операторы данных во встроенном коде на языке ассемблера
 
 **Блок, относящийся только к системам Microsoft**
 
-Хотя в блоке `__asm` можно ссылаться на типы данных и объекты языков C и C++, в нем невозможно определять объекты данных с помощью директив или операторов MASM. В частности, нельзя использовать директивы определения **DB**, `DW`, **DD**, `DQ`, `DT`и `DF`или операторы `DUP` или **this**. Структуры и записи MASM также недоступны. Встроенный ассемблер не принимает директивы `STRUC`, `RECORD`, **ширины**или **маски**.
+Хотя **`__asm`** блок может ссылаться на типы данных и объекты C или C++, он не может определять объекты данных с директивами и операторами MASM. В частности, нельзя использовать директивы определения **DB**, `DW` , **DD**,, `DQ` `DT` , и `DF` , или операторы `DUP` или. **THIS** Структуры и записи MASM также недоступны. Встроенный ассемблер не принимает директивы, `STRUC` `RECORD` , **ширину**или **маску**.
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Использование языка ассемблера в блоках __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

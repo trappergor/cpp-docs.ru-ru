@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - pointers, interior
 ms.assetid: 64e08b0e-9396-4046-ab51-8f6588f32330
-ms.openlocfilehash: 9515abb6fed2ffd2c818fc14eae321bfcc856ce5
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c5768487c9b720b1a49e50de88022a2bdc02d482
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172313"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214286"
 ---
 # <a name="how-to-declare-interior-pointers-with-the-const-keyword-ccli"></a>Практическое руководство. Объявление внутренних указателей с использованием ключевого слова const (C++/CLI)
 
-В приведенном ниже примере показано использование **const** в объявлении внутреннего указателя.
+В следующем примере показано, как использовать **`const`** в объявлении внутреннего указателя.
 
 > [!IMPORTANT]
 > Эта возможность языка поддерживается параметром компилятора `/clr`, а параметром компилятора `/ZW` не поддерживается.

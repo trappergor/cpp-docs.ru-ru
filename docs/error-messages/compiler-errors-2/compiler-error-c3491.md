@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3491
 ms.assetid: 7f0e71b2-46a0-4d25-bd09-6158a280f509
-ms.openlocfilehash: 78f90ee1c44a0d42e529a027b1e7fc90a0da3cdb
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: f6f20d9af424fdd4254fc15e0580d62b9dfba144
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74738327"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87184479"
 ---
 # <a name="compiler-error-c3491"></a>Ошибка компилятора C3491
 
@@ -21,7 +21,7 @@ ms.locfileid: "74738327"
 
 ### <a name="to-correct-this-error"></a>Исправление ошибки
 
-- Объявите лямбда-выражение с ключевым словом `mutable` или
+- Объявите лямбда-выражение с помощью **`mutable`** ключевого слова или
 
 - передайте переменную по ссылке в список передачи лямбда-выражения.
 
@@ -41,7 +41,7 @@ int main()
 
 ## <a name="example"></a>Пример
 
-В приведенном ниже примере ошибка C3491 устраняется путем объявления лямбда-выражения с ключевым словом `mutable` :
+В следующем примере разрешается C3491, объявляя лямбда-выражение с **`mutable`** ключевым словом:
 
 ```cpp
 // C3491b.cpp
@@ -53,6 +53,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Лямбда-выражения](../../cpp/lambda-expressions-in-cpp.md)

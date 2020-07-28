@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C2129
 ms.assetid: 21a8223e-1d22-4baa-9ca1-922b7f751dd0
-ms.openlocfilehash: a3e2268bfc5597668e8689d093a0c2bb7f18e037
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9cf414200dcfad8ae617e16e111bd26b19a315a6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80207289"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220435"
 ---
 # <a name="compiler-error-c2129"></a>Ошибка компилятора C2129
 
 статическая функция "функция" объявлена, но не определена
 
-Пересылка ссылки на функцию `static`, которая не определена.
+В **`static`** функцию, которая не определена, делается прямая ссылка.
 
-Функция `static` должна быть определена в области файла. Если функция определена в другом файле, ее необходимо объявить `extern`.
+**`static`** Функция должна быть определена в области файла. Если функция определена в другом файле, она должна быть объявлена **`extern`** .

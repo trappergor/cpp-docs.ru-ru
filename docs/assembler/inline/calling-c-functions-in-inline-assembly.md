@@ -9,18 +9,18 @@ helpviewer_keywords:
 - inline assembly, calling functions
 - __asm keyword [C++], calling functions
 ms.assetid: f8a8d568-d175-4e23-9b24-36ef60a4cab3
-ms.openlocfilehash: 94bbfda3a5fd15885f3d8276d506541418a9489f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 73be1142747dc608d683e6bd847639b9df718a13
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169595"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87192630"
 ---
 # <a name="calling-c-functions-in-inline-assembly"></a>Вызов функций C во встроенном коде на языке ассемблера
 
 **Блок, относящийся только к системам Microsoft**
 
-Блок `__asm` может вызывать функции языка C, включая библиотечные процедуры языка C. В следующем примере вызывается библиотечная процедура `printf`.
+**`__asm`** Блок может вызывать функции C, включая подпрограммы библиотеки C. В следующем примере вызывается библиотечная процедура `printf`.
 
 ```cpp
 // InlineAssembler_Calling_C_Functions_in_Inline_Assembly.cpp
@@ -60,6 +60,6 @@ printf( format, hello, world );
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
-[Встроенный сборщик](../../assembler/inline/inline-assembler.md)<br/>
+[Встроенный ассемблер](../../assembler/inline/inline-assembler.md)<br/>

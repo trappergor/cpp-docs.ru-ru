@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CRestrictions class
 - Open method
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
-ms.openlocfilehash: 4a4c86987ceff0f04986d32011ba941e0d2319fe
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9fb911b469497a007550c042ade97b5a463e78fe
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211306"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220448"
 ---
 # <a name="crestrictions-class"></a>Класс CRestrictions
 
@@ -47,7 +47,7 @@ class CRestrictions :
 
 **Заголовок:** атлдбсч. h
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Элементы
 
 ### <a name="methods"></a>Методы
 
@@ -82,7 +82,7 @@ HRESULT Open(const CSession& session,
 окне Задает ограничения для набора строк схемы.
 
 *ббинд*<br/>
-окне Указывает, следует ли автоматически привязывать карту столбцов. Значение по умолчанию — **true**, что приводит к автоматическому связыванию таблицы столбцов. Установка параметра *ббинд* в **значение false** предотвращает автоматическую привязку схемы столбца, чтобы можно было выполнить привязку вручную. (Ручная привязка особенно интересна для пользователей OLAP.)
+окне Указывает, следует ли автоматически привязывать карту столбцов. Значение по умолчанию равно **`true`** , что приводит к автоматическому связыванию таблицы столбцов. Установка параметра *ббинд* для **`false`** предотвращения автоматической привязки схемы столбца, чтобы можно было выполнить привязку вручную. (Ручная привязка особенно интересна для пользователей OLAP.)
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -97,5 +97,5 @@ HRESULT Open(const CSession& session,
 ## <a name="see-also"></a>См. также раздел
 
 [Шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
-[Классы Rowset и Typedef схемы](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)
+[Справочник по шаблонам потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Классы наборов строк схемы и классы typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)

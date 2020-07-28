@@ -33,12 +33,12 @@ helpviewer_keywords:
 - cabsf function
 - cabsl function
 ms.assetid: 6b8eb453-cc8f-4972-bebf-351cbdfdfc15
-ms.openlocfilehash: 62f297bba116550f572725a6bde094e5407777a4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ac31df51490880cdd831a34c8adeed9223aafc21
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939411"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220747"
 ---
 # <a name="cabs-cabsf-cabsl"></a>cabs, cabsf, cabsl
 
@@ -66,16 +66,16 @@ long double cabsl(
 
 ### <a name="parameters"></a>Параметры
 
-*z*<br/>
+*гармошкой*<br/>
 Комплексное число.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Абсолютное значение *z*.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **CAB** -файлов, принимающие значения **_Fcomplex** или **_Lcomplex** , и возвращать значения **типа float** или **Long** **Double** . В программе на языке **CAB** -файлов всегда принимает значение **_Dcomplex** и возвращает значение **типа double** .
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **CAB** -файлов, которые принимают **_Fcomplex** или **_Lcomplex** значения, а также возвращают **`float`** **`long double`** значения или. В программе на языке **CAB** -файлов всегда принимает **_Dcomplex** значение и возвращает **`double`** значение.
 
 ## <a name="requirements"></a>Требования
 
@@ -83,11 +83,11 @@ long double cabsl(
 |-------------|--------------|------------------|
 |**CAB**, **cabsf**, **CAB**|\<complex.h>|\<ccomplex>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Алфавитный указатель функций](crt-alphabetical-function-reference.md)<br/>
+[Алфавитный справочник по функциям](crt-alphabetical-function-reference.md)<br/>
 [norm, normf, norml](norm-normf-norml1.md)<br/>
 [creal, crealf, creall](creal-crealf-creall.md)<br/>
 [cproj, cprojf, cprojl](cproj-cprojf-cprojl.md)<br/>

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - message passing functions
 ms.assetid: 42477c9e-a8a6-4dc4-a98e-93c6dc8c4dd0
-ms.openlocfilehash: 4e1052a59f355c4ad5a7c6b57724268c24a209b4
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 3709e7b5280b96b2b77ec850a06ed15d0e42a7e5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143296"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87194632"
 ---
 # <a name="message-passing-functions"></a>Функции передачи сообщений
 
@@ -17,7 +17,7 @@ ms.locfileid: "77143296"
 
 Эти функции передачи сообщений используются с различными типами блоков сообщений. Дополнительные сведения о типах блоков сообщений, определяемых среда выполнения с параллелизмом, см. в разделе [асинхронные блоки сообщений](../../parallel/concrt/asynchronous-message-blocks.md).
 
-## <a name="top"></a> Разделы
+## <a name="sections"></a><a name="top"></a>Священ
 
 В этом разделе описаны следующие функции передачи сообщений:
 
@@ -27,49 +27,49 @@ ms.locfileid: "77143296"
 
 - [Примеры](#examples)
 
-## <a name="send"></a>Send и asend
+## <a name="send-and-asend"></a><a name="send"></a>Send и asend
 
-Функция [Concurrency:: send](reference/concurrency-namespace-functions.md#send) отправляет сообщение указанному целевому объекту синхронно, а функция [Concurrency:: asend](reference/concurrency-namespace-functions.md#asend) отправляет сообщение указанному целевому объекту асинхронно. Функции `send` и `asend` ожидают, пока целевой объект не обозначает, что в конечном итоге будет принимать или отклонять сообщение.
+Функция [Concurrency:: send](reference/concurrency-namespace-functions.md#send) отправляет сообщение указанному целевому объекту синхронно, а функция [Concurrency:: asend](reference/concurrency-namespace-functions.md#asend) отправляет сообщение указанному целевому объекту асинхронно. Обе `send` функции и `asend` ожидают, пока целевой объект не обозначает, что в конечном итоге будет принимать или отклонять сообщение.
 
-Функция `send` ожидает, пока целевой объект не примет или не отклонит сообщение перед возвратом. Функция `send` возвращает **значение true** , если сообщение было доставлено, и **false** в противном случае. Так как функция `send` работает синхронно, функция `send` ожидает получения сообщения целевым объектом перед возвратом.
+`send`Функция ожидает, пока целевой объект не примет или не отклонит сообщение перед возвратом. `send`Функция возвращает значение, **`true`** Если сообщение было доставлено, и **`false`** в противном случае. Так как `send` функция работает синхронно, она `send` ожидает получения сообщения целевым объектом перед возвратом.
 
-И наоборот, функция `asend` не ждет, пока целевой объект не примет или не отклонит сообщение перед возвратом. Вместо этого функция `asend` возвращает **значение true** , если целевой объект принимает сообщение и в конечном итоге получит его. В противном случае `asend` возвращает **значение false** , указывающее, что целевой объект отклонил сообщение или отказался от принятия решения о том, следует ли принимать сообщение.
+И наоборот, `asend` функция не ожидает принятия или отклонения сообщения целевым объектом перед возвратом. Вместо этого `asend` функция возвращает значение, **`true`** Если целевой объект принимает сообщение и в конечном итоге получит его. В противном случае `asend` возвращает **`false`** значение, указывающее, что целевой объект отклонил сообщение или отказался от принятия решения о том, следует ли принимать сообщение.
 
-[[В начало](#top)]
+[[Top](#top)]
 
-## <a name="receive"></a>получение и try_receive
+## <a name="receive-and-try_receive"></a><a name="receive"></a>получение и try_receive
 
-Функции [Concurrency:: Receive](reference/concurrency-namespace-functions.md#receive) и [concurrency:: try_receive](reference/concurrency-namespace-functions.md#try_receive) считывают данные из заданного источника. Функция `receive` ожидает, пока данные станут доступными, в то время как функция `try_receive` возвращает значение немедленно.
+Функции [Concurrency:: Receive](reference/concurrency-namespace-functions.md#receive) и [concurrency:: try_receive](reference/concurrency-namespace-functions.md#try_receive) считывают данные из заданного источника. `receive`Функция ожидает, пока данные станут доступными, в то время как `try_receive` функция возвращает значение немедленно.
 
-Используйте функцию `receive`, если необходимо, чтобы данные были продолжены. Используйте функцию `try_receive`, если не нужно блокировать текущий контекст или нет необходимости для продолжения работы с данными.
+Используйте `receive` функцию, если для продолжения работы требуются данные. Используйте `try_receive` функцию, если не следует блокировать текущий контекст или нет необходимости для продолжения работы с данными.
 
-[[В начало](#top)]
+[[Top](#top)]
 
-## <a name="examples"></a> Примеры
+## <a name="examples"></a><a name="examples"></a> Примеры
 
-Примеры использования функций `send` и `asend`, а также функции `receive` см. в следующих разделах:
+Примеры использования `send` функций и и см `asend` `receive` . в следующих разделах:
 
 - [Асинхронные блоки сообщений](../../parallel/concrt/asynchronous-message-blocks.md)
 
-- [Практическое руководство. Реализация различных шаблонов "источник-приемник"](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)
+- [Как реализовать различные шаблоны "производитель-получатель"](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)
 
-- [Практическое руководство. Предоставление рабочих функций классам call и transformer](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md)
+- [Руководство. предоставление рабочих функций классам Call и transformer](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md)
 
-- [Практическое руководство. Использование преобразователя в конвейере данных](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)
+- [Как использовать преобразователь в конвейере данных](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)
 
-- [Практическое руководство. Выбор среди завершенных задач](../../parallel/concrt/how-to-select-among-completed-tasks.md)
+- [Практические руководства. Выбор между завершенными задачами](../../parallel/concrt/how-to-select-among-completed-tasks.md)
 
-- [Практическое руководство. Отправка сообщений через определенные интервалы](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md)
+- [Как отправить сообщение с постоянным интервалом](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md)
 
-- [Практическое руководство. Использование фильтра блоков сообщений](../../parallel/concrt/how-to-use-a-message-block-filter.md)
+- [Как использовать фильтр блоков сообщений](../../parallel/concrt/how-to-use-a-message-block-filter.md)
 
-[[В начало](#top)]
+[[Top](#top)]
 
 ## <a name="see-also"></a>См. также раздел
 
-[Библиотека асинхронных агентов](../../parallel/concrt/asynchronous-agents-library.md)<br/>
+[библиотеку асинхронных агентов](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [Асинхронные блоки сообщений](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
 [Функция send](reference/concurrency-namespace-functions.md#send)<br/>
 [Функция asend](reference/concurrency-namespace-functions.md#asend)<br/>
-[Функция Receive](reference/concurrency-namespace-functions.md#receive)<br/>
+[Функция receive](reference/concurrency-namespace-functions.md#receive)<br/>
 [Функция try_receive](reference/concurrency-namespace-functions.md#try_receive)

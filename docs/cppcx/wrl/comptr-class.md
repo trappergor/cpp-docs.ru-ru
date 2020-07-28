@@ -51,12 +51,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ComPtr::Swap method
 - Microsoft::WRL::ComPtr::~ComPtr, destructor
 ms.assetid: a6551902-6819-478a-8df7-b6f312ab1fb0
-ms.openlocfilehash: 265553d29bcc153bbbb065443391d3aa4b3b0bd2
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 4f9462ca15f5db5c3f8c0de88ce5a76b142065b4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404555"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220552"
 ---
 # <a name="comptr-class"></a>Класс ComPtr
 
@@ -440,7 +440,7 @@ WRL_NOTHROW Microsoft::WRL::Details::RemoveIUnknown<InterfaceType>* operator->()
 
 ### <a name="remarks"></a>Remarks
 
-Эта вспомогательная функция удаляет лишнюю нагрузку, вызванную использованием макроса STDMETHOD. Эта функция создает `IUnknown` типы `private` , а не `virtual` .
+Эта вспомогательная функция удаляет лишнюю нагрузку, вызванную использованием макроса STDMETHOD. Эта функция создает `IUnknown` типы **`private`** , а не **`virtual`** .
 
 ## <a name="comptroperator"></a><a name="operator-assign"></a>ComPtr:: operator =
 
@@ -532,9 +532,9 @@ bool operator==(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Первый оператор возвращает значение `true` , если объект *a* равен объекту *b*; в противном случае — значение `false` .
+Первый оператор возвращает значение **`true`** , если объект *a* равен объекту *b*; в противном случае — значение **`false`** .
 
-Второй и третий операторы дают значение `true` , если объект *a* равен `nullptr` ; в противном случае — значение `false` .
+Второй и третий операторы дают значение **`true`** , если объект *a* равен **`nullptr`** ; в противном случае — значение **`false`** .
 
 ## <a name="comptroperator"></a><a name="operator-inequality"></a>ComPtr:: operator! =
 
@@ -567,9 +567,9 @@ bool operator!=(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Первый оператор возвращает значение `true` , если объект *a* не равен объекту *b*; в противном случае — значение `false` .
+Первый оператор дает значение **`true`** , если объект *a* не равен объекту *b*; в противном случае — значение **`false`** .
 
-Второй и третий операторы возвращают `true` , если объект *a* не равен `nullptr` ; в противном случае — `false` .
+Второй и третий операторы возвращают **`true`** , если объект *a* не равен **`nullptr`** ; в противном случае — **`false`** .
 
 ## <a name="comptroperator-microsoftwrldetailsbooltype"></a><a name="operator-microsoft-wrl-details-booltype"></a>ComPtr:: operator Microsoft:: WRL::D состояния:: BoolType
 
@@ -581,7 +581,7 @@ WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если интерфейс связан с этим `ComPtr` , то адрес элемента данных [BoolStruct:: Member](boolstruct-structure.md#member) ; в противном случае — значение `nullptr` .
+Если интерфейс связан с этим `ComPtr` , то адрес элемента данных [BoolStruct:: Member](boolstruct-structure.md#member) ; в противном случае — значение **`nullptr`** .
 
 ## <a name="comptrptr_"></a><a name="ptr"></a>ComPtr::p tr_
 
@@ -636,4 +636,4 @@ void Swap(
 ### <a name="parameters"></a>Параметры
 
 *r*<br/>
-`ComPtr`.
+Объект `ComPtr`.

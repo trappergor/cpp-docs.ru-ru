@@ -25,16 +25,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ComPtrRef::operator void** operator
 - Microsoft::WRL::Details::ComPtrRef::ReleaseAndGetAddressOf method
 ms.assetid: d6bdfd20-e977-45b4-9ac1-1b8efbdb77de
-ms.openlocfilehash: df9ded817227547493c04035e0abc3d948e24495
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f92a3e14018cf8c02dec40b664b72a0956f6220e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372625"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220539"
 ---
 # <a name="comptrref-class"></a>ComPtrRef - класс
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из кода.
+Поддерживает инфраструктуру WRL и не предназначен для непосредственного использования в коде.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -46,37 +46,37 @@ class ComPtrRef : public ComPtrRefBase<T>;
 ### <a name="parameters"></a>Параметры
 
 *T*<br/>
-[ComPtr\<T>](comptr-class.md) тип или тип, полученный из него, а не только интерфейс, представленный `ComPtr`.
+Тип [ComPtr \<T> ](comptr-class.md) или производный от него тип, а не просто интерфейс, представленный `ComPtr` .
 
 ## <a name="remarks"></a>Remarks
 
-Представляет собой ссылку на `ComPtr<T>`объект типа.
+Представляет ссылку на объект типа `ComPtr<T>` .
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Элементы
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
 Имя                               | Описание
 ---------------------------------- | -------------------------------------------------------------------------------------------------------------
-[ComPtrRef:ComPtrRef](#comptrref) | Инициализирует новый экземпляр `ComPtrRef` класса от `ComPtrRef` указанного указателя к другому объекту.
+[ComPtrRef:: ComPtrRef](#comptrref) | Инициализирует новый экземпляр `ComPtrRef` класса из указанного указателя на другой `ComPtrRef` объект.
 
 ### <a name="public-methods"></a>Открытые методы
 
-Имя                                                         | Описание
+name                                                         | Описание
 ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------
-[ComPtrRef:GetAddressOf](#getaddressof)                     | Извлекает адрес указателя на интерфейс, представленный `ComPtrRef` текущим объектом.
-[ComPtrRef::ReleaseandgetAddressof](#releaseandgetaddressof) | Удаляет текущий `ComPtrRef` объект и возвращает указатель в указатель на интерфейс, представленный `ComPtrRef` объектом.
+[ComPtrRef:: GetAddressOf](#getaddressof)                     | Извлекает адрес указателя на интерфейс, представленный текущим `ComPtrRef` объектом.
+[ComPtrRef:: ReleaseAndGetAddressOf](#releaseandgetaddressof) | Удаляет текущий `ComPtrRef` объект и возвращает указатель на указатель на интерфейс, представленный `ComPtrRef` объектом.
 
 ### <a name="public-operators"></a>Открытые операторы
 
 Имя                                                                     | Описание
 ------------------------------------------------------------------------ | -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[ComPtrRef::оператор ИнтерфейсТип](#operator-interfacetype-star-star) | Удаляет текущий `ComPtrRef` объект и возвращает указатель в указатель на интерфейс, представленный `ComPtrRef` объектом.
-[ComPtrRef::оператор ТЗ](#operator-t-star)                               | Возвращает значение [ptr_](comptrrefbase-class.md#ptr) члена данных текущего объекта ComPtrRef.
-[ComPtrRef::оператор пустота](#operator-void-star-star)                   | Удаляет текущий `ComPtrRef` объект, отбрасывает указатель на интерфейс, который `ComPtrRef` был представлен объектом в качестве `void`указателя на указатель к указателю, а затем возвращает указатель.
-[ComPtrRef:оператор](#operator-star)                                   | Извлекает указатель на интерфейс, представленный `ComPtrRef` текущим объектом.
-[ComPtrRef::оператор](#operator-equality)                              | Определение равенства двух объектов `ComPtrRef`.
-[ComPtrRef::оператор!](#operator-inequality)                            | Определяет неравенство двух объектов `ComPtrRef`.
+[ComPtrRef:: operator InterfaceType * *](#operator-interfacetype-star-star) | Удаляет текущий `ComPtrRef` объект и возвращает указатель на указатель на интерфейс, представленный `ComPtrRef` объектом.
+[ComPtrRef:: operator T *](#operator-t-star)                               | Возвращает значение элемента данных [ptr_](comptrrefbase-class.md#ptr) текущего объекта ComPtrRef.
+[ComPtrRef:: operator void * *](#operator-void-star-star)                   | Удаляет текущий `ComPtrRef` объект, приводит указатель к интерфейсу, представленному объектом, в `ComPtrRef` качестве указателя на указатель **`void`** , а затем возвращает указатель приведения.
+[ComPtrRef:: operator *](#operator-star)                                   | Получает указатель на интерфейс, представленный текущим `ComPtrRef` объектом.
+[ComPtrRef:: operator = =](#operator-equality)                              | Определение равенства двух объектов `ComPtrRef`.
+[ComPtrRef:: operator! =](#operator-inequality)                            | Определяет неравенство двух объектов `ComPtrRef`.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -88,11 +88,11 @@ class ComPtrRef : public ComPtrRefBase<T>;
 
 **Заголовок:** client.h
 
-**Пространство имен:** Microsoft:WRL::Details
+**Пространство имен:** Microsoft:: WRL::D состояния
 
-## <a name="comptrrefcomptrref"></a><a name="comptrref"></a>ComPtrRef:ComPtrRef
+## <a name="comptrrefcomptrref"></a><a name="comptrref"></a>ComPtrRef:: ComPtrRef
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из кода.
+Поддерживает инфраструктуру WRL и не предназначен для непосредственного использования в коде.
 
 ```cpp
 ComPtrRef(
@@ -102,16 +102,16 @@ ComPtrRef(
 
 ### <a name="parameters"></a>Параметры
 
-*Ptr*<br/>
+*ptr*<br/>
 Базовое значение другого `ComPtrRef` объекта.
 
 ### <a name="remarks"></a>Remarks
 
-Инициализирует новый экземпляр `ComPtrRef` класса от `ComPtrRef` указанного указателя к другому объекту.
+Инициализирует новый экземпляр `ComPtrRef` класса из указанного указателя на другой `ComPtrRef` объект.
 
-## <a name="comptrrefgetaddressof"></a><a name="getaddressof"></a>ComPtrRef:GetAddressOf
+## <a name="comptrrefgetaddressof"></a><a name="getaddressof"></a>ComPtrRef:: GetAddressOf
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из кода.
+Поддерживает инфраструктуру WRL и не предназначен для непосредственного использования в коде.
 
 ```cpp
 InterfaceType* const * GetAddressOf() const;
@@ -119,15 +119,15 @@ InterfaceType* const * GetAddressOf() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Адрес указателя на интерфейс, представленный `ComPtrRef` текущим объектом.
+Адрес указателя на интерфейс, представленный текущим `ComPtrRef` объектом.
 
 ### <a name="remarks"></a>Remarks
 
-Извлекает адрес указателя на интерфейс, представленный `ComPtrRef` текущим объектом.
+Извлекает адрес указателя на интерфейс, представленный текущим `ComPtrRef` объектом.
 
-## <a name="comptrrefoperator"></a><a name="operator-equality"></a>ComPtrRef::оператор
+## <a name="comptrrefoperator"></a><a name="operator-equality"></a>ComPtrRef:: operator = =
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из кода.
+Поддерживает инфраструктуру WRL и не предназначен для непосредственного использования в коде.
 
 ```cpp
 bool operator==(
@@ -158,27 +158,27 @@ bool operator==(
 
 ### <a name="parameters"></a>Параметры
 
-*a*<br/>
+*конкретного*<br/>
 Ссылка на объект `ComPtrRef`.
 
-*B*<br/>
-Ссылка на `ComPtrRef` другой объект, или указатель`void*`на анонимный тип ().
+*&*<br/>
+Ссылка на другой `ComPtrRef` объект или указатель на анонимный тип ( **`void*`** ).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Первый оператор дает **истинно,** если объект *a* равен объекту *b;* в противном случае, **ложные**.
+Первый оператор возвращает значение **`true`** , если объект *a* равен объекту *b*; в противном случае — значение **`false`** .
 
-Второй и третий операторы **дают истинное,** если объект *a* равен **nullptr;** в противном случае, **ложные**.
+Второй и третий операторы дают значение **`true`** , если объект *a* равен **`nullptr`** ; в противном случае — значение **`false`** .
 
-Четвертый и пятый операторы **дают истинное,** если объект *a* равен объекту *b;* в противном случае, **ложные**.
+Четвертый и пятый операторы выдают **`true`** , если объект *a* равен объекту *b*; в противном случае — значение **`false`** .
 
 ### <a name="remarks"></a>Remarks
 
 Определение равенства двух объектов `ComPtrRef`.
 
-## <a name="comptrrefoperator"></a><a name="operator-inequality"></a>ComPtrRef::оператор!
+## <a name="comptrrefoperator"></a><a name="operator-inequality"></a>ComPtrRef:: operator! =
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из кода.
+Поддерживает инфраструктуру WRL и не предназначен для непосредственного использования в коде.
 
 ```cpp
 bool operator!=(
@@ -209,27 +209,27 @@ bool operator!=(
 
 ### <a name="parameters"></a>Параметры
 
-*a*<br/>
+*конкретного*<br/>
 Ссылка на объект `ComPtrRef`.
 
-*B*<br/>
-Ссылка на `ComPtrRef` другой объект, или указатель`void*`на анонимный объект ( ).
+*&*<br/>
+Ссылка на другой `ComPtrRef` объект или указатель на анонимный объект ( **`void*`** ).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Первый оператор дает **истинно,** если объект *a* не равен объекту *b;* в противном случае, **ложные**.
+Первый оператор дает значение **`true`** , если объект *a* не равен объекту *b*; в противном случае — значение **`false`** .
 
-Второй и третий операторы **дают истинное,** если объект *a* не равен **nullptr;** в противном случае, **ложные**.
+Второй и третий операторы возвращают **`true`** , если объект *a* не равен **`nullptr`** ; в противном случае — **`false`** .
 
-Четвертый и пятый операторы **дают истинное,** если объект *a* не равен объекту *b;* в противном случае, **ложные**.
+Четвертый и пятый операторы выдают **`true`** , если объект *a* не равен объекту *b*; в противном случае — значение **`false`** .
 
 ### <a name="remarks"></a>Remarks
 
 Определяет неравенство двух объектов `ComPtrRef`.
 
-## <a name="comptrrefoperator-interfacetype"></a><a name="operator-interfacetype-star-star"></a>ComPtrRef::оператор ИнтерфейсТип
+## <a name="comptrrefoperator-interfacetype"></a><a name="operator-interfacetype-star-star"></a>ComPtrRef:: operator InterfaceType\*\*
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из кода.
+Поддерживает инфраструктуру WRL и не предназначен для непосредственного использования в коде.
 
 ```cpp
 operator InterfaceType**();
@@ -237,11 +237,11 @@ operator InterfaceType**();
 
 ### <a name="remarks"></a>Remarks
 
-Удаляет текущий `ComPtrRef` объект и возвращает указатель в указатель на интерфейс, представленный `ComPtrRef` объектом.
+Удаляет текущий `ComPtrRef` объект и возвращает указатель на указатель на интерфейс, представленный `ComPtrRef` объектом.
 
-## <a name="comptrrefoperator"></a><a name="operator-star"></a>ComPtrRef:оператор
+## <a name="comptrrefoperator"></a><a name="operator-star"></a>ComPtrRef:: operator *
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из кода.
+Поддерживает инфраструктуру WRL и не предназначен для непосредственного использования в коде.
 
 ```cpp
 InterfaceType* operator *();
@@ -249,15 +249,15 @@ InterfaceType* operator *();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на интерфейс, представленный `ComPtrRef` текущим объектом.
+Указатель на интерфейс, представленный текущим `ComPtrRef` объектом.
 
 ### <a name="remarks"></a>Remarks
 
-Извлекает указатель на интерфейс, представленный `ComPtrRef` текущим объектом.
+Получает указатель на интерфейс, представленный текущим `ComPtrRef` объектом.
 
-## <a name="comptrrefoperator-t"></a><a name="operator-t-star"></a>ComPtrRef::оператор ТЗ
+## <a name="comptrrefoperator-t"></a><a name="operator-t-star"></a>ComPtrRef:: operator T *
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из кода.
+Поддерживает инфраструктуру WRL и не предназначен для непосредственного использования в коде.
 
 ```cpp
 operator T*();
@@ -265,11 +265,11 @@ operator T*();
 
 ### <a name="remarks"></a>Remarks
 
-Возвращает значение [ptr_](comptrrefbase-class.md#ptr) члена данных `ComPtrRef` текущего объекта.
+Возвращает значение элемента данных [ptr_](comptrrefbase-class.md#ptr) текущего `ComPtrRef` объекта.
 
-## <a name="comptrrefoperator-void"></a><a name="operator-void-star-star"></a>ComPtrRef::оператор пустота\*\*
+## <a name="comptrrefoperator-void"></a><a name="operator-void-star-star"></a>ComPtrRef:: operator void\*\*
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из кода.
+Поддерживает инфраструктуру WRL и не предназначен для непосредственного использования в коде.
 
 ```cpp
 operator void**() const;
@@ -277,11 +277,11 @@ operator void**() const;
 
 ### <a name="remarks"></a>Remarks
 
-Удаляет текущий `ComPtrRef` объект, отбрасывает указатель на интерфейс, который `ComPtrRef` был представлен объектом в качестве `void`указателя на указатель к указателю, а затем возвращает указатель.
+Удаляет текущий `ComPtrRef` объект, приводит указатель к интерфейсу, представленному объектом, в `ComPtrRef` качестве указателя на указатель **`void`** , а затем возвращает указатель приведения.
 
-## <a name="comptrrefreleaseandgetaddressof"></a><a name="releaseandgetaddressof"></a>ComPtrRef::ReleaseandgetAddressof
+## <a name="comptrrefreleaseandgetaddressof"></a><a name="releaseandgetaddressof"></a>ComPtrRef:: ReleaseAndGetAddressOf
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из кода.
+Поддерживает инфраструктуру WRL и не предназначен для непосредственного использования в коде.
 
 ```cpp
 InterfaceType** ReleaseAndGetAddressOf();
@@ -293,4 +293,4 @@ InterfaceType** ReleaseAndGetAddressOf();
 
 ### <a name="remarks"></a>Remarks
 
-Удаляет текущий `ComPtrRef` объект и возвращает указатель в указатель на интерфейс, представленный `ComPtrRef` объектом.
+Удаляет текущий `ComPtrRef` объект и возвращает указатель на указатель на интерфейс, представленный `ComPtrRef` объектом.

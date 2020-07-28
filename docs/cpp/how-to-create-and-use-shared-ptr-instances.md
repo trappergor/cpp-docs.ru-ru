@@ -1,15 +1,15 @@
 ---
-title: Как создавать и использовать экземпляры shared_ptr
+title: Практическое руководство. Создание и использование экземпляров shared_ptr
 ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-ms.openlocfilehash: 9820e4cd2d1b981d82760fc1cea4e07c85792177
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 44d375f72cf409df1e67b72dd76e196051dacf93
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245829"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87187963"
 ---
 # <a name="how-to-create-and-use-shared_ptr-instances"></a>Как создавать и использовать экземпляры shared_ptr
 
@@ -72,7 +72,7 @@ int main()
 
 ## <a name="example-1"></a>Пример 1
 
-Когда ресурс в памяти создается впервые, по возможности используйте функцию [make_shared](../standard-library/memory-functions.md#make_shared) для создания указателя `shared_ptr`. Функция `make_shared` безопасна в отношении исключений. Для выделения памяти под блок управления и ресурс используется один вызов, что снижает накладные расходы. Если вы не используете функцию `make_shared`, то придется использовать явное выражение `new` для создания объекта, прежде чем передавать его в конструктор `shared_ptr`. В приведенном ниже примере представлены различные способы объявления и инициализации указателя `shared_ptr` вместе с новым объектом.
+Когда ресурс в памяти создается впервые, по возможности используйте функцию [make_shared](../standard-library/memory-functions.md#make_shared) для создания указателя `shared_ptr`. Функция `make_shared` безопасна в отношении исключений. Для выделения памяти под блок управления и ресурс используется один вызов, что снижает накладные расходы. Если вы не используете `make_shared` , то необходимо использовать явное **`new`** выражение для создания объекта перед его передачей в `shared_ptr` конструктор. В приведенном ниже примере представлены различные способы объявления и инициализации указателя `shared_ptr` вместе с новым объектом.
 
 [!code-cpp[stl_smart_pointers#1](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_1.cpp)]
 
@@ -90,7 +90,7 @@ int main()
 
 ## <a name="example-4"></a>Пример 4
 
-Для приведения указателя `dynamic_pointer_cast` можно использовать функции `static_pointer_cast`, `const_pointer_cast` и `shared_ptr`. Они похожи на операторы `dynamic_cast`, `static_cast` и `const_cast`. В приведенном ниже примере показано, как протестировать производный тип каждого элемента в векторе, содержащем указатель `shared_ptr` базовых классов, а затем скопировать элементы и отобразить сведения о них.
+Для приведения указателя `shared_ptr` можно использовать функции `dynamic_pointer_cast`, `static_pointer_cast` и `const_pointer_cast`. Эти функции похожи на **`dynamic_cast`** операторы, **`static_cast`** и **`const_cast`** . В приведенном ниже примере показано, как протестировать производный тип каждого элемента в векторе, содержащем указатель `shared_ptr` базовых классов, а затем скопировать элементы и отобразить сведения о них.
 
 [!code-cpp[stl_smart_pointers#5](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_4.cpp)]
 
@@ -110,12 +110,12 @@ int main()
 
 - Иногда, например в `std::vector<shared_ptr<T>>`, может быть необходимо передать каждый указатель `shared_ptr` в тело лямбда-выражения или в именованный объект функции. Если в лямбда-выражении или функции указатель не сохраняется, передайте `shared_ptr` по ссылке, чтобы не вызывать конструктор копий для каждого элемента.
 
-## <a name="example-6"></a>Пример 6
+## <a name="example-6"></a>Пример 6.
 
 В приведенном ниже примере показано, как `shared_ptr` перегружает различные операторы сравнения, чтобы обеспечить сравнение указателей в памяти, принадлежащей экземплярам `shared_ptr`.
 
 [!code-cpp[stl_smart_pointers#3](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_6.cpp)]
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-[Интеллектуальные указатели (современный C++)](smart-pointers-modern-cpp.md)
+[Смарт-указатели (современный C++)](smart-pointers-modern-cpp.md)

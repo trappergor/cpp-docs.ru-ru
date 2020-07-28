@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4145
 ms.assetid: 0440777a-cca2-4159-aff5-e67a254ad64a
-ms.openlocfilehash: 5028ae20c2413c98fa55bd81081552d22381cdbc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 19d2d1a018c7ee981f83aa6fa0914f1241c55538
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80163680"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220110"
 ---
 # <a name="compiler-warning-level-1-c4145"></a>Предупреждение компилятора (уровень 1) C4145
 
 "выражение1": использование выражения с оператором отношения в качестве выражения для выбора вариантов; возможное смешение с "выражение2"
 
-Оператор `switch` использует выражение отношения в качестве управляющего, результатом вычисления которого является логическое значение для операторов **case** . Вы имели в виду *выражение2*?
+**`switch`** Оператор использует реляционное выражение в качестве выражения элемента управления, что приводит к логическому значению для **`case`** инструкций. Вы имели в виду *выражение2*?
 
 ## <a name="example"></a>Пример
 

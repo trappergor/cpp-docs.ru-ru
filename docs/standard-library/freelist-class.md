@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::freelist [C++], pop
 - stdext::freelist [C++], push
 ms.assetid: 8ad7e35c-4c80-4479-8ede-1a2497b06d71
-ms.openlocfilehash: 712c1f1638b954d1580eb527dd9eab7401917517
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7425f99f7966548bdb1f94d3007382eeb99863df
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317204"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87193228"
 ---
 # <a name="freelist-class"></a>Класс freelist
 
@@ -32,12 +32,12 @@ class freelist : public Max
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*Sz*|Число выделяемых элементов в массиве.|
-|*Макс*|Класс max, представляющий максимальное количество элементов, которые необходимо сохранить в свободном списке. Классом max может быть [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md), [max_fixed_size](../standard-library/max-fixed-size-class.md) или [max_variable_size](../standard-library/max-variable-size-class.md).|
+|*SZ*|Число выделяемых элементов в массиве.|
+|*Максимальной*|Класс max, представляющий максимальное количество элементов, которые необходимо сохранить в свободном списке. Классом max может быть [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md), [max_fixed_size](../standard-library/max-fixed-size-class.md) или [max_variable_size](../standard-library/max-variable-size-class.md).|
 
 ## <a name="remarks"></a>Remarks
 
-Этот шаблон класса управляет списком блоков памяти размера *Sz* с максимальной длиной списка, определяемого классом max, пройденым в *Max.*
+Этот шаблон класса управляет списком блоков памяти размером *SZ* с максимальной длиной списка, определяемой классом Max, который передается *Max*.
 
 ### <a name="constructors"></a>Конструкторы
 
@@ -49,16 +49,16 @@ class freelist : public Max
 
 |Функция-член|Описание|
 |-|-|
-|[Поп](#pop)|Удаляет первый блок памяти из свободного списка.|
-|[Нажмите](#push)|Добавляет блок памяти в список.|
+|[Рор](#pop)|Удаляет первый блок памяти из свободного списка.|
+|[push](#push)|Добавляет блок памяти в список.|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<allocators>
+**Заголовок:**\<allocators>
 
 **Пространство имен:** stdext
 
-## <a name="freelistfreelist"></a><a name="freelist"></a>свободный лист::фрилист
+## <a name="freelistfreelist"></a><a name="freelist"></a>freelist:: freelist
 
 Создает объект типа `freelist`.
 
@@ -68,7 +68,7 @@ freelist();
 
 ### <a name="remarks"></a>Remarks
 
-## <a name="freelistpop"></a><a name="pop"></a>фрилист::pop
+## <a name="freelistpop"></a><a name="pop"></a>freelist::p Op
 
 Удаляет первый блок памяти из свободного списка.
 
@@ -82,9 +82,9 @@ void *pop();
 
 ### <a name="remarks"></a>Remarks
 
-Функция участника возвращает NULL, если список пуст. В противном случае удаляет первый блок памяти из списка.
+Функция-член возвращает значение NULL, если список пуст. В противном случае удаляет первый блок памяти из списка.
 
-## <a name="freelistpush"></a><a name="push"></a>фрилист::pуш
+## <a name="freelistpush"></a><a name="push"></a>freelist::p тельную
 
 Добавляет блок памяти в список.
 
@@ -96,16 +96,16 @@ bool push(void* ptr);
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*Ptr*|Указатель на блок памяти, которые необходимо добавить в свободный список.|
+|*ptr*|Указатель на блок памяти, которые необходимо добавить в свободный список.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**верно,** `full` если функция макс класса **возвращается ложно;** в противном случае функция возвращает `push` **ложную.**
+**`true`**`full`значение, если функция класса max Возвращает **`false`** . в противном случае `push` функция возвращает значение **`false`** .
 
 ### <a name="remarks"></a>Remarks
 
-Если `full` функция max class возвращается **ложно,** эта функция-член добавляет блок памяти, на который указывает *ptr* к главе списка.
+Если `full` функция класса max Возвращает **`false`** , эта функция-член добавляет блок памяти, на который указывает *ptr* , в заголовок списка.
 
 ## <a name="see-also"></a>См. также раздел
 
-[\<>-подлатыватели](../standard-library/allocators-header.md)
+[\<allocators>](../standard-library/allocators-header.md)

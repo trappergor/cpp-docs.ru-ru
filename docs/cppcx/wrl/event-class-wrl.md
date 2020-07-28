@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::Event::Event, constructor
 - Microsoft::WRL::Wrappers::Event::operator= operator
 ms.assetid: 55dfc9fc-62d4-4bb2-9d85-5b6dd88569e8
-ms.openlocfilehash: 85b4c2d1f1a27e90a65e47aa749e079f4aa08739
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 27a90bb801d1b6869b2391227464bb215dd42538
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371525"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220487"
 ---
 # <a name="event-class-wrl"></a>Класс событий (WRL)
 
@@ -32,15 +32,15 @@ class Event : public HandleT<HandleTraits::EventTraits>;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-Имя                   | Описание
+name                   | Описание
 ---------------------- | ------------------------------------------------
-[Событие::Событие](#event) | Инициализирует новый экземпляр класса `Event`.
+[Событие:: событие](#event) | Инициализирует новый экземпляр класса `Event`.
 
 ### <a name="public-operators"></a>Открытые операторы
 
 Имя                                 | Описание
 ------------------------------------ | ------------------------------------------------------------------------
-[Событие:оператор](#operator-assign) | Назначает указанную `Event` ссылку `Event` на текущий экземпляр.
+[Событие:: оператор =](#operator-assign) | Присваивает указанную `Event` ссылку текущему `Event` экземпляру.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -50,11 +50,11 @@ class Event : public HandleT<HandleTraits::EventTraits>;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** corewrappers.h
+**Заголовок:** кореврапперс. h
 
-**Пространство имен:** Microsoft:WRL::Wrappers
+**Пространство имен:** Программы Microsoft:: WRL:: оболочки
 
-## <a name="eventevent"></a><a name="event"></a>Событие::Событие
+## <a name="eventevent"></a><a name="event"></a>Событие:: событие
 
 Инициализирует новый экземпляр класса `Event`.
 
@@ -69,12 +69,12 @@ WRL_NOTHROW Event(
 
 ### <a name="parameters"></a>Параметры
 
-*H*<br/>
-Дескриптор события. По *умолчанию, h* `nullptr`инициализирован до .
+*h*<br/>
+Дескриптор события. По умолчанию *h* инициализируется значением **`nullptr`** .
 
-## <a name="eventoperator"></a><a name="operator-assign"></a>Событие:оператор
+## <a name="eventoperator"></a><a name="operator-assign"></a>Событие:: оператор =
 
-Назначает указанную `Event` ссылку `Event` на текущий экземпляр.
+Присваивает указанную `Event` ссылку текущему `Event` экземпляру.
 
 ```cpp
 WRL_NOTHROW Event& operator=(
@@ -84,8 +84,8 @@ WRL_NOTHROW Event& operator=(
 
 ### <a name="parameters"></a>Параметры
 
-*H*<br/>
-Rvalue-ссылка на `Event` экземпляр.
+*h*<br/>
+Ссылка rvalue на `Event` экземпляр.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

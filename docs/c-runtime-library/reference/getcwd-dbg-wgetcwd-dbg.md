@@ -34,12 +34,12 @@ helpviewer_keywords:
 - _wgetcwd_dbg function
 - directories [C++], current working
 ms.assetid: 8d5d151f-d844-4aa6-a28c-1c11a22dc00d
-ms.openlocfilehash: 3eb318b9b2faa8716abdd26eafa926c8072b5614
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 982a7c94ef3cbe5adf1e8e8a8a4c28443d8a5b8f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955281"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220669"
 ---
 # <a name="_getcwd_dbg-_wgetcwd_dbg"></a>_getcwd_dbg, _wgetcwd_dbg
 
@@ -66,11 +66,11 @@ wchar_t *_wgetcwd_dbg(
 
 ### <a name="parameters"></a>Параметры
 
-*buffer*<br/>
+*двойной*<br/>
 Место хранения пути.
 
 *maxlen*<br/>
-Максимальная длина пути в символах: **char** для **_getcwd_dbg** и **wchar_t** для **_wgetcwd_dbg**.
+Максимальная длина пути в символах: **`char`** для **_getcwd_dbg** и **`wchar_t`** для **_wgetcwd_dbg**.
 
 *blockType*<br/>
 Запрошенный тип блока памяти: **_CLIENT_BLOCK** или **_NORMAL_BLOCK**.
@@ -78,22 +78,22 @@ wchar_t *_wgetcwd_dbg(
 *filename*<br/>
 Указатель на имя исходного файла, который запросил операцию выделения, или **значение NULL**.
 
-*linenumber*<br/>
+*LineNumber*<br/>
 Номер строки в исходном файле, в которой была запрошена операция выделения, или **значение NULL**.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает указатель на *буфер*. Возвращаемое значение **null** указывает на ошибку **, а для** свойства «вывод» установлено значение **еномем**, указывающее, что недостаточно памяти для выделения *maxlen* байт (если аргумент **null** задан как *buffer*) или **ERANGE** , указывающее, что длина пути превышает *maxlen* символов.
+Возвращает указатель на *буфер*. Возвращаемое значение **null** указывает на ошибку, а параметру " **No** @" — на " **еномем** *",* что свидетельствует о нехватке памяти для выделения *maxlen* байт (если аргумент равен **null** ) или значение **ERANGE**, указывающее, что путь длиннее *maxlen* символов.
 
 Дополнительные сведения см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Функции **_getcwd_dbg** и **_wgetcwd_dbg** идентичны **_getcwd** и **_wgetcwd** , за исключением того, что при определении **_DEBUG** эти функции используют отладочную версию функций **malloc** и **_malloc_dbg** для выделить память, если **значение NULL** передается как первый параметр. Дополнительные сведения см. в разделе [_malloc_dbg](malloc-dbg.md).
+Функции **_getcwd_dbg** и **_wgetcwd_dbg** идентичны **_getcwd** и **_wgetcwd** за исключением того, что при определении **_DEBUG** эти функции используют отладочную версию **malloc** и **_malloc_dbg** для выделения памяти, если **значение NULL** передается как первый параметр. Дополнительные сведения см. в разделе [_malloc_dbg](malloc-dbg.md).
 
-Как правило, явно вызывать эти функции не требуется. Вместо этого можно определить флаг **_CRTDBG_MAP_ALLOC** . Если определен **_CRTDBG_MAP_ALLOC** , вызовы методов **_getcwd** и **_wgetcwd** пересопоставляются с **_getcwd_dbg** и **_wgetcwd_dbg**соответственно, а *блокктипе* устанавливается в **_NORMAL_BLOCK**. Таким образом, не нужно явно вызывать эти функции, если не нужно помечать блоки кучи как **_CLIENT_BLOCK**. Дополнительные сведения см. в разделе [Типы блоков в отладочной куче](/visualstudio/debugger/crt-debug-heap-details).
+Как правило, явно вызывать эти функции не требуется. Вместо этого можно определить флаг **_CRTDBG_MAP_ALLOC** . Если определено **_CRTDBG_MAP_ALLOC** , вызовы **_getcwd** и **_wgetcwd** пересопоставляются с **_getcwd_dbg** и **_wgetcwd_dbg**соответственно, с *блокктипе* , для которого задано значение **_NORMAL_BLOCK**. Таким образом, не нужно явно вызывать эти функции, если не нужно помечать блоки кучи как **_CLIENT_BLOCK**. Дополнительные сведения см. в разделе [Типы блоков в отладочной куче](/visualstudio/debugger/crt-debug-heap-details).
 
-## <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+## <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Процедура Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|
@@ -106,10 +106,10 @@ wchar_t *_wgetcwd_dbg(
 |**_getcwd_dbg**|\<crtdbg.h>|
 |**_wgetcwd_dbg**|\<crtdbg.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [_getcwd, _wgetcwd](getcwd-wgetcwd.md)<br/>
-[Управление каталогами](../../c-runtime-library/directory-control.md)<br/>
+[Управление каталогом](../../c-runtime-library/directory-control.md)<br/>
 [Версии отладки функций выделения кучи](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)<br/>

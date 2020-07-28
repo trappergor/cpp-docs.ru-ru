@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - location class
 ms.assetid: c3289f51-5bf1-4dff-a18d-d0dab8e5d9c7
-ms.openlocfilehash: 7f45ff6d3092bd7c27e81adddca72c9411f752d1
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 848be3131e23ff53f2dec16364b132ee7c218195
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77139828"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87182698"
 ---
 # <a name="location-class"></a>Класс location
 
@@ -27,29 +27,29 @@ ms.locfileid: "77139828"
 class location;
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
 |[расположение](#ctor)|Перегружен. Формирует объект `location`.|
-|[Деструктор ~ Location](#dtor)|Уничтожает объект `location`.|
+|[Деструктор ~ Location](#dtor)|Уничтожает объект `location` .|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Description|
+|name|Описание|
 |----------|-----------------|
 |[данном](#current)|Возвращает объект `location`, представляющий наиболее определенное расположение, выполняемое вызывающим потоком.|
 |[from_numa_node](#from_numa_node)|Возвращает объект `location`, представляющий заданный узел NUMA.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|[operator!=](#operator_neq)|Определяет, представляют ли два объекта `location` различные расположения.|
-|[оператор=](#operator_eq)|Назначает содержимое другого объекта `location` данному.|
-|[operator==](#operator_eq_eq)|Определяет, представляют ли два `location` объектов одно и то же расположение.|
+|[operator! =](#operator_neq)|Определяет, представляют ли два объекта `location` различные расположения.|
+|[Оператор =](#operator_eq)|Назначает содержимое другого объекта `location` данному.|
+|[Оператор = =](#operator_eq_eq)|Определяет `location` , представляют ли два объекта одно и то же расположение.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -59,17 +59,17 @@ class location;
 
 **Заголовок:** ConcRT. h
 
-**Пространство имен:** concurrency
+**Пространство имен:** параллелизм
 
-## <a name="dtor"></a>расположение ~
+## <a name="location"></a><a name="dtor"></a>расположение ~
 
-Уничтожает объект `location`.
+Уничтожает объект `location` .
 
 ```cpp
 ~location();
 ```
 
-## <a name="current"></a>данном
+## <a name="current"></a><a name="current"></a>данном
 
 Возвращает объект `location`, представляющий наиболее определенное расположение, выполняемое вызывающим потоком.
 
@@ -81,7 +81,7 @@ static location __cdecl current();
 
 Расположение, представляющее наиболее определенное место, выполняемое вызывающим потоком.
 
-## <a name="from_numa_node"></a>from_numa_node
+## <a name="from_numa_node"></a><a name="from_numa_node"></a>from_numa_node
 
 Возвращает объект `location`, представляющий заданный узел NUMA.
 
@@ -98,7 +98,7 @@ static location __cdecl from_numa_node(unsigned short _NumaNodeNumber);
 
 Расположение, представляющее узел NUMA, указывается с помощью параметра `_NumaNodeNumber`.
 
-## <a name="ctor"></a>места
+## <a name="location"></a><a name="ctor"></a>места
 
 Формирует объект `location`.
 
@@ -132,7 +132,7 @@ location(
 
 Созданное расположение по умолчанию представляет систему в целом.
 
-## <a name="operator_neq"></a>operator! =
+## <a name="operator"></a><a name="operator_neq"></a>operator! =
 
 Определяет, представляют ли два объекта `location` различные расположения.
 
@@ -143,13 +143,13 @@ bool operator!= (const location& _Rhs) const;
 ### <a name="parameters"></a>Параметры
 
 *_Rhs*<br/>
-`location`операнда.
+Операнд `location` .
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true** , если два расположения различаются; в противном случае — **значение false** .
+**`true`** значение, если два расположения различаются; **`false`** в противном случае —.
 
-## <a name="operator_eq"></a>Оператор =
+## <a name="operator"></a><a name="operator_eq"></a>Оператор =
 
 Назначает содержимое другого объекта `location` данному.
 
@@ -164,9 +164,9 @@ location& operator= (const location& _Rhs);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-## <a name="operator_eq_eq"></a>Оператор = =
+## <a name="operator"></a><a name="operator_eq_eq"></a>Оператор = =
 
-Определяет, представляют ли два `location` объектов одно и то же расположение.
+Определяет `location` , представляют ли два объекта одно и то же расположение.
 
 ```cpp
 bool operator== (const location& _Rhs) const;
@@ -175,12 +175,12 @@ bool operator== (const location& _Rhs) const;
 ### <a name="parameters"></a>Параметры
 
 *_Rhs*<br/>
-`location`операнда.
+Операнд `location` .
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true** , если два расположения идентичны, и **false** в противном случае.
+**`true`** значение, если два расположения идентичны и **`false`** в противном случае.
 
 ## <a name="see-also"></a>См. также раздел
 
-[Пространство имен concurrency](concurrency-namespace.md)
+[Пространство имен Concurrency](concurrency-namespace.md)
