@@ -43,12 +43,12 @@ helpviewer_keywords:
 - streams [C++], reading formatted data from
 - fscanf_s_l function
 ms.assetid: b6e88194-714b-4322-be82-1cc0b343fe01
-ms.openlocfilehash: ceeba78aa70d3569742415551d20296d726d896e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ff4fa01fe53794ed04f087f264021de9beea4ba9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956562"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220695"
 ---
 # <a name="fscanf_s-_fscanf_s_l-fwscanf_s-_fwscanf_s_l"></a>fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l
 
@@ -89,7 +89,7 @@ int _fwscanf_s_l(
 *format*<br/>
 Строка управления форматом.
 
-*параметр*<br/>
+*argument*<br/>
 Необязательные аргументы.
 
 *locale*<br/>
@@ -101,18 +101,18 @@ int _fwscanf_s_l(
 
 Эти функции проверяют свои параметры. Если *Stream* является недопустимым указателем на файл или *Format* является пустым указателем, эти функции вызывают обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают **EOF** и применяют **значение** **еинвал**.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Функция **fscanf_s** считывает данные из текущей позиции *потока* в расположения, заданные *аргументом* (при наличии). Каждый *аргумент* должен быть указателем на переменную типа, которая соответствует спецификатору типа в *формате*. *Format* управляет интерпретацией полей ввода и имеет ту же форму и функцию, что и аргумент *Format* для **scanf_s**; Описание *формата*см. в разделе [поля спецификации формата: функции scanf и wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md) .  **fwscanf_s** — это версия **fscanf_s**для расширенных символов; аргумент формата для **fwscanf_s** является строкой расширенных символов. Эти функции ведут себя одинаково, если поток открыт в режиме ANSI. **fscanf_s** в настоящее время не поддерживает входные данные из потока Юникода.
 
-Основное различие между более безопасными функциями (с суффиксом **_s** ) и другими версиями заключается в том, что более безопасные функции должны иметь размер в символах каждого из полей **c**, **c**, **s**, **s**и **[** Type передается в качестве аргумента сразу после переменной. Дополнительные сведения см. в разделах [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) и [Спецификация ширины scanf](../../c-runtime-library/scanf-width-specification.md).
+Основное различие между более безопасными функциями (с суффиксом **_s** ) и другими версиями заключается в том, что более безопасные функции требует, чтобы размер в символах каждого поля **c**, **c**, s **и** **s** **[** Type передавался в качестве аргумента, непосредственно следующего за переменной. Дополнительные сведения см. в разделах [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) и [Спецификация ширины scanf](../../c-runtime-library/scanf-width-specification.md).
 
 > [!NOTE]
-> Параметр size имеет тип без **знака**, а не **size_t**.
+> Параметр size имеет тип **`unsigned`** , а не **size_t**.
 
 Версии этих функций с суффиксом **_l** идентичны за исключением того, что они используют переданный параметр языкового стандарта вместо языкового стандарта текущего потока.
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|
@@ -121,12 +121,12 @@ int _fwscanf_s_l(
 
 ## <a name="requirements"></a>Требования
 
-|Функция|Обязательный заголовок|
+|Компонент|Обязательный заголовок|
 |--------------|---------------------|
 |**fscanf_s**, **_fscanf_s_l**|\<stdio.h>|
 |**fwscanf_s**, **_fwscanf_s_l**|\<stdio.h> или \<wchar.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -183,7 +183,7 @@ a-string
 x
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)<br/>
 [_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l](cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md)<br/>

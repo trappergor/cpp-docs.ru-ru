@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C++]
 ms.assetid: cbae3408-0378-4ac8-b70d-c016b381a6d5
-ms.openlocfilehash: d5060f1a0950b9b2ac2638b99ff157983944a3bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 1e729589f78c56111717a87a27f9c7370dca7b90
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516169"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214299"
 ---
 # <a name="abstract--ccli-and-ccx"></a>abstract (C++/CLI and C++/CX)
 
@@ -29,19 +29,19 @@ ms.locfileid: "65516169"
 
 *class-declaration* *class-identifier* **abstract {}**
 
-**virtual** *return-type* *member-function-identifier* **() abstract ;**
+**`virtual`** Абстрактный *возвращаемый тип* - *функция-идентификатор* **();**
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-В первом примере синтаксиса объявляется абстрактный класс. Компонент *class-declaration* может быть либо собственным объявлением C++ (**class** или **struct**), либо объявлением расширения C++ (**ref class** или **ref struct**), если указан параметр компилятора `/ZW` или `/clr`.
+В первом примере синтаксиса объявляется абстрактный класс. Компонент *объявления класса* может быть либо машинным объявлением c++ (** `class` * * * или **`struct`** ), либо объявлением расширения c++ (** ref class * * или **ref struct**), если `/ZW` `/clr` указан параметр компилятора или.
 
 Во втором примере синтаксиса объявляется абстрактная виртуальная функция-член. Объявление функции абстрактной — то же, что и объявление ее чистой виртуальной функцией. Объявление функции-члена абстрактной также приводит к тому, что включающий класс объявляется как абстрактный.
 
 Ключевое слово **abstract** поддерживается в машинном коде и в коде платформы, то есть он может компилироваться как с параметром компилятора `/ZW` или `/clr`, так и без него.
 
-Во время компиляции можно определить, является ли тип абстрактным, с помощью признака типа `__is_abstract(type)`. Подробные сведения см. в статье [Compiler Support for Type Traits (C++/CLI and C++/CX)](compiler-support-for-type-traits-cpp-component-extensions.md) (Поддержка характеристик типов компилятором (C++/CLI and C++/CX)).
+Во время компиляции можно определить, является ли тип абстрактным, с помощью признака типа `__is_abstract(type)`. Дополнительные сведения см. в статье [Compiler Support for Type Traits (C++/CLI and C++/CX)](compiler-support-for-type-traits-cpp-component-extensions.md) (Поддержка характеристик типов компилятором (C++/CLI and C++/CX)).
 
-Ключевое слово **abstract** является контекстно-зависимым описателем переопределения. Подробные сведения о контекстно-зависимых ключевых словах см. в статье [Context-Sensitive Keywords (C++/CLI and C++/CX)](context-sensitive-keywords-cpp-component-extensions.md) (Контекстно-зависимые ключевые слова (C++/CLI and C++/CX)). Подробные сведения об описателях переопределения см. в статье [How to: Declare Override Specifiers in Native Compilations](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md) (Практическое руководство. Объявление описателей переопределения в компиляциях в машинный код).
+Ключевое слово **abstract** является контекстно-зависимым описателем переопределения. Подробные сведения о контекстно-зависимых ключевых словах см. в статье [Context-Sensitive Keywords (C++/CLI and C++/CX)](context-sensitive-keywords-cpp-component-extensions.md) (Контекстно-зависимые ключевые слова (C++/CLI and C++/CX)). Дополнительные сведения о спецификаторах переопределения см. [в разделе инструкции. объявление описателей переопределения в компиляциях в собственном](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)режиме.
 
 ## <a name="windows-runtime"></a>Среда выполнения Windows
 
@@ -100,6 +100,6 @@ public:
 };
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Расширения компонентов для .NET и UWP](component-extensions-for-runtime-platforms.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - memory, managing
 - memory, allocation
 ms.assetid: b4470556-a128-4782-9943-2ccf7a7d9979
-ms.openlocfilehash: bcc9865b149c2289f99f6ee13f31179ae58a15e1
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 2adfd0de21a5dc7a1f3aa65041a6b8a9a9cf1d69
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742790"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87189510"
 ---
 # <a name="memory-allocation"></a>Выделение памяти
 
@@ -21,16 +21,16 @@ ms.locfileid: "57742790"
 
 ## <a name="memory-allocation-routines"></a>Подпрограммы выделения памяти
 
-|Подпрограмма|Использовать|
+|Подпрограмма|Используйте|
 |-------------|---------|
 |[_alloca](../c-runtime-library/reference/alloca.md), [_malloca](../c-runtime-library/reference/malloca.md)|Выделение памяти из стека|
 |[calloc](../c-runtime-library/reference/calloc.md)|Выделение хранилища для массива, инициализация всех байт в выделенном блоке нулями.|
 |[_calloc_dbg](../c-runtime-library/reference/calloc-dbg.md)|Отладочная версия **calloc**; доступна только в отладочных версиях библиотек среды выполнения|
-|[Оператор delete](../c-runtime-library/operator-delete-crt.md)|Освобождение выделенного блока|
+|[оператор DELETE](../c-runtime-library/operator-delete-crt.md)|Освобождение выделенного блока|
 |[оператор delete&#91;&#93;](../c-runtime-library/delete-operator-crt.md)|Освобождение выделенного блока|
 |[_expand](../c-runtime-library/reference/expand.md)|Расширение или сжатие блока памяти без перемещения|
 |[_expand_dbg](../c-runtime-library/reference/expand-dbg.md)|Отладочная версия **_expand**; доступна только в отладочных версиях библиотек среды выполнения|
-|[free](../c-runtime-library/reference/free.md)|Освобождение выделенного блока|
+|[свободный](../c-runtime-library/reference/free.md)|Освобождение выделенного блока|
 |[_free_dbg](../c-runtime-library/reference/free-dbg.md)|Отладочная версия **free**; доступна только в отладочных версиях библиотек среды выполнения|
 |[_freea](../c-runtime-library/reference/freea.md)|Освобождение выделенного блока из стека|
 |[_get_heap_handle](../c-runtime-library/reference/get-heap-handle.md)|Получение HANDLE Win32 кучи CRT.|
@@ -49,9 +49,9 @@ ms.locfileid: "57742790"
 |[_query_new_mode](../c-runtime-library/reference/query-new-mode.md)|Возвращение целого числа, указывающего новый режим обработчика, заданный **_set_new_mode** для **malloc**|
 |[realloc](../c-runtime-library/reference/realloc.md)|Перераспределение нового размера блока|
 |[_realloc_dbg](../c-runtime-library/reference/realloc-dbg.md)|Отладочная версия **realloc**; доступна только в отладочных версиях библиотек среды выполнения|
-|[_set_new_handler](../c-runtime-library/reference/set-new-handler.md)|Включение механизма обработки ошибок в случае сбоя оператора **new** (при выделении памяти) и включение компиляции стандартных библиотек C++|
+|[_set_new_handler](../c-runtime-library/reference/set-new-handler.md)|Включить механизм обработки ошибок при **`new`** сбое оператора (для выделения памяти) и включении компиляции стандартных библиотек C++|
 |[_set_new_mode](../c-runtime-library/reference/set-new-mode.md)|Установка нового режима обработчика для **malloc**|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Универсальные подпрограммы среды выполнения C по категориям](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Подпрограммы универсальной среды выполнения C по категориям](../c-runtime-library/run-time-routines-by-category.md)<br/>

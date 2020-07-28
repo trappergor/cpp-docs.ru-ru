@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_oversubscribe_operation class
 ms.assetid: 0a9c5f08-d5e6-4ad0-90a9-517472b3ac28
-ms.openlocfilehash: 7a879fc2da2f963cd4b5ea5fcd7e9506f86ce051
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 0c95d234fee412c1dacb014dd135ca56fc73bf5e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77140836"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87193969"
 ---
 # <a name="invalid_oversubscribe_operation-class"></a>Класс invalid_oversubscribe_operation
 
-Этот класс описывает исключение, возникающее при вызове метода `Context::Oversubscribe` с параметром `_BeginOversubscription`, для которого задано **значение false** без предварительного вызова метода `Context::Oversubscribe` с параметром `_BeginOversubscription`, для которого установлено значение **true**.
+Этот класс описывает исключение, возникающее при `Context::Oversubscribe` вызове метода с `_BeginOversubscription` параметром, для которого задано значение **`false`** без предварительного вызова метода, для `Context::Oversubscribe` которого `_BeginOversubscription` параметру задано значение **`true`** .
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -25,11 +25,11 @@ ms.locfileid: "77140836"
 class invalid_oversubscribe_operation : public std::exception;
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Description|
+|name|Описание|
 |----------|-----------------|
 |[invalid_oversubscribe_operation](#ctor)|Перегружен. Создает объект `invalid_oversubscribe_operation`.|
 
@@ -43,9 +43,9 @@ class invalid_oversubscribe_operation : public std::exception;
 
 **Заголовок:** ConcRT. h
 
-**Пространство имен:** concurrency
+**Пространство имен:** параллелизм
 
-## <a name="ctor"></a>invalid_oversubscribe_operation
+## <a name="invalid_oversubscribe_operation"></a><a name="ctor"></a>invalid_oversubscribe_operation
 
 Создает объект `invalid_oversubscribe_operation`.
 
@@ -62,4 +62,4 @@ invalid_oversubscribe_operation() throw();
 
 ## <a name="see-also"></a>См. также раздел
 
-[Пространство имен concurrency](concurrency-namespace.md)
+[Пространство имен Concurrency](concurrency-namespace.md)

@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - new keyword [C++]
 ms.assetid: 1a9a5704-f02f-46ae-ad65-f0f2b6dbabc3
-ms.openlocfilehash: 684c6149457f7b0306f3d444a3652ecda1636839
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 29e43fe4c462fa6ac6523f8627abf923f02247a8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "79544414"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214247"
 ---
 # <a name="new-new-slot-in-vtable--ccli-and-ccx"></a>new (новый слот в vtable) (C++/CLI и C++/CX)
 
-Ключевое слово **new** указывает, что виртуальный член получает новую ячейку в таблице vtable.
+**`new`** Ключевое слово указывает, что виртуальный член получит новый слот в таблице vtable.
 
 ## <a name="all-runtimes"></a>Все среды выполнения
 
@@ -26,11 +26,11 @@ ms.locfileid: "79544414"
 
 ## <a name="common-language-runtime"></a>Среда CLR
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-При компиляции с помощью `/clr`**new** означает, что виртуальный член получает новую ячейку в таблице vtable. Эта функция не переопределяет метод базового класса.
+При `/clr` компиляции **`new`** указывает, что виртуальный член получит новый слот в таблице vtable; эта функция не переопределяет метод базового класса.
 
-**new** вызывает модификатор newslot, добавляемый в IL-код для функции.  Дополнительные сведения о newslot см. в эти статьях:
+**`new`** вызывает Добавление модификатора NewSlot к IL для функции.  Дополнительные сведения о newslot см. в эти статьях:
 
 - <xref:System.Reflection.MethodInfo.GetBaseDefinition?displayProperty=nameWithType>
 
@@ -42,7 +42,7 @@ ms.locfileid: "79544414"
 
 ### <a name="examples"></a>Примеры
 
-В следующем примере показан результат использования **new**.
+В следующем примере показан результат **`new`** .
 
 ```cpp
 // newslot.cpp
@@ -103,7 +103,7 @@ D::g() called
 E::f() called
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Расширения компонентов для .NET и UWP](component-extensions-for-runtime-platforms.md)<br/>
 [Спецификаторы переопределения](override-specifiers-cpp-component-extensions.md)

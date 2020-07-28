@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3646
 ms.assetid: 4391ead2-9637-4ca3-aeda-5a991b18d66d
-ms.openlocfilehash: 13a3ebeb6e7783687abc73cd0dcc018abe827809
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5c11133fbf28cfb98de1367955c00c899e8b1042
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80200477"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214533"
 ---
 # <a name="compiler-error-c3646"></a>Ошибка компилятора C3646
 
@@ -21,7 +21,7 @@ ms.locfileid: "80200477"
 
 Компилятор обнаружил маркер в том месте, где ожидалось найти спецификатор переопределения, но маркер не был распознан компилятором.
 
-Например, если нераспознанный *спецификатор* является **_NOEXCEPT**, замените его ключевым словом, **Кроме**.
+Например, если нераспознанный *спецификатор* **_NOEXCEPT**, замените его ключевым словом **`noexcept`** .
 
 Дополнительные сведения см. в разделе [Описатели переопределения](../../extensions/override-specifiers-cpp-component-extensions.md).
 

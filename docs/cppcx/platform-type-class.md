@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Type Class
 ms.assetid: d6b03f1e-b240-49b9-a08e-53a460030475
-ms.openlocfilehash: 7463a2518e6ec5cc84f59db05cfaf60e43eb9fde
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2c73967d287ade86e2657af70592845d2cc2085e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81322094"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87185038"
 ---
 # <a name="platformtype-class"></a>Класс Platform::Type
 
-Содержит сведения среды выполнения о типе — в частности, имя строки и код типа. Получено путем вызывать [объект::GetType](../cppcx/platform-object-class.md#gettype) на любом предмете или используя оператора typeid на [типидов](../extensions/typeid-cpp-component-extensions.md) или названии struct.
+Содержит сведения среды выполнения о типе — в частности, имя строки и код типа. Получается путем вызова [Object:: GetType](../cppcx/platform-object-class.md#gettype) для любого объекта или с помощью оператора [typeid](../extensions/typeid-cpp-component-extensions.md) для имени класса или структуры.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -29,26 +29,26 @@ public ref class Platform::Type :
 
 ### <a name="remarks"></a>Remarks
 
-Класс `Type` удобен в приложениях, где должна выполняться непосредственная обработка с использованием оператора `if` или `switch` , образующего ветви на основе типа объекта времени выполнения. Код типа, описывающий категорию типа, извлекается с помощью функции участника [Type::GetTypeCode.](#gettypecode)
+`Type`Класс полезен в приложениях, которые должны напрямую обрабатываться с помощью **`if`** **`switch`** оператора или, который выполняет ветвление на основе типа объекта во время выполнения. Код типа, описывающий категорию типа, извлекается с помощью функции-члена [Type:: GetTypeCode](#gettypecode) .
 
 ## <a name="public-methods"></a>Открытые методы
 
 |||
 |-|-|
-|[Тип::GetTypeCode Метод](#gettypecode)|Возвращает значение [Перечисление Platform::TypeCode](../cppcx/platform-typecode-enumeration.md) для объекта.|
-|[Тип::Метод Торринга](#tostring)|Возвращает имя типа, указанное в его метаданных.|
+|[Метод Type:: GetTypeCode](#gettypecode)|Возвращает значение [Перечисление Platform::TypeCode](../cppcx/platform-typecode-enumeration.md) для объекта.|
+|[Метод Type:: ToString](#tostring)|Возвращает имя типа, как указано в его метаданных.|
 
 ## <a name="public-properties"></a>Открытые свойства
 
 |||
 |-|-|
-|[Тип:FullName](#fullname)|Возвращает [Класс Platform::String](../cppcx/platform-string-class.md)^, который представляет полное имя типа и использует . (точка) в качестве сепаратора, а не :: `MyNamespace.MyClass`(двойная толстая кишка)- например, .|
+|[Тип:: FullName](#fullname)|Возвращает [Класс Platform::String](../cppcx/platform-string-class.md)^, который представляет полное имя типа и использует . (точка) как разделитель, а не:: (двойное двоеточие), например `MyNamespace.MyClass` .|
 
 ## <a name="conversion-operators"></a>Операторы преобразования
 
 |||
 |-|-|
-|[Оператор Типз](../cppcx/operator-type-hat.md)|Обеспечивает преобразование `Windows::UI::Xaml::Interop::TypeName` в `Platform::Type`.|
+|[Тип оператора ^](../cppcx/operator-type-hat.md)|Обеспечивает преобразование `Windows::UI::Xaml::Interop::TypeName` в `Platform::Type`.|
 |[оператор Windows::UI::Xaml::Interop::TypeName](../cppcx/operator-windows-ui-xaml-interop-typename.md)|Обеспечивает преобразование `Platform::Type` в `Windows::UI::Xaml::Interop::TypeName`.|
 
 ### <a name="requirements"></a>Требования
@@ -59,11 +59,11 @@ public ref class Platform::Type :
 
 **Пространство имен:** Platform
 
-**Метаданные:** platform.winmd
+**Метаданные:** Platform. winmd
 
 ## <a name="typefullname-property"></a><a name="fullname"></a> Свойство Type::FullName
 
-Получает полностью квалифицированное название текущего `Namespace.Type`типа в форме.
+Возвращает полное имя текущего типа в форме `Namespace.Type` .
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -104,11 +104,11 @@ Platform::TypeCode GetTypeCode();
 
 ### <a name="remarks"></a>Remarks
 
-Эквивалентом метода-члена GetTypeCode() является свойство `typeid`.
+Эквивалентом метода члена GetTypeCode () является **`typeid`** свойство.
 
-## <a name="typetostring-method"></a><a name="tostring"></a>Тип::Метод Торринга
+## <a name="typetostring-method"></a><a name="tostring"></a>Метод Type:: ToString
 
-Извлекает имя типа.
+Возвращает имя типа.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -118,7 +118,7 @@ Platform::String^ ToString();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Имя типа, указанное в метаданных.
+Имя типа, как указано в метаданных.
 
 ## <a name="see-also"></a>См. также раздел
 

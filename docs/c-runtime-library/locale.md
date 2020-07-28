@@ -1,5 +1,5 @@
 ---
-title: Языковой стандарт
+title: Локаль
 ms.date: 04/11/2018
 f1_keywords:
 - c.international
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - setlocale function
 - locale routines
 ms.assetid: 442f8112-9288-44d7-be3c-15d22652093a
-ms.openlocfilehash: 89ff4b694137c7002ecb5f6a844c75ab403e6e2f
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: a747c60994afbf4293aca8e4a3290d20b4bc18a3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744378"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87189588"
 ---
-# <a name="locale"></a>Языковой стандарт
+# <a name="locale"></a>Локаль
 
 *Языковой стандарт* — это настройки страны/региона и языковые настройки, с помощью которых можно настраивать программы. К числу категорий, зависящих от языкового стандарта, относится отображение форматов дат и денежных значений. Дополнительные сведения см. в разделе [Категории языковых стандартов](../c-runtime-library/locale-categories.md).
 
@@ -25,11 +25,11 @@ ms.locfileid: "57744378"
 
 Используйте функцию [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) для управления тем, имеет ли каждый поток собственный языковой стандарт или все потоки в программе используют один и тот же языковой стандарт. Дополнительные сведения см. в разделе [Языковые стандарты и кодовые страницы](../text/locales-and-code-pages.md).
 
-Доступны более безопасные версии этих функций, в следующей таблице они отмечены суффиксом **_s** (secure, безопасная). Для получения дополнительной информации см. [Security Features in the CRT](../c-runtime-library/security-features-in-the-crt.md).
+Доступны более безопасные версии этих функций, в следующей таблице они отмечены суффиксом **_s** (secure, безопасная). Дополнительные сведения см. в разделе [Функции безопасности в CRT](../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="locale-dependent-routines"></a>Зависимые от языковых стандартов подпрограммы
 
-|Подпрограмма|Использовать|Зависимость настройки категории **setlocale**|
+|Подпрограмма|Используйте|Зависимость настройки категории **setlocale**|
 |-------------|---------|---------------------------------------------|
 |[atof, _atof_l, _wtof, _wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Преобразовать символ в значение с плавающей запятой|**LC_NUMERIC**|
 |[atoi, _atoi_l, _wtoi, _wtoi_l](../c-runtime-library/reference/atoi-atoi-l-wtoi-wtoi-l.md)|Преобразовать символ в целочисленное значение|**LC_NUMERIC**|
@@ -56,8 +56,8 @@ ms.locfileid: "57744378"
 |[_strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|Сравнить первые **n** символов двух строк (регистр не учитывается)|**LC_COLLATE**|
 |[strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)|Форматировать значение даты и времени в соответствии с предоставленным аргументом **format**|**LC_TIME**|
 |[_strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l](../c-runtime-library/reference/strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md),[_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l](../c-runtime-library/reference/strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md)|Преобразовать "на месте" каждую прописную букву в указанной строке в нижний регистр|**LC_CTYPE**|
-|[strtod, _strtod_l, wcstod, _wcstod_l](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)|Преобразовать строку символов в значение **double**|**LC_NUMERIC** (определяет распознавание символа системы счисления)|
-|[strtol, wcstol, _strtol_l, _wcstol_l](../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)|Преобразовать строку символов в значение **long**|**LC_NUMERIC** (определяет распознавание символа системы счисления)|
+|[strtod, _strtod_l, wcstod, _wcstod_l](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)|Преобразовать символьную строку в **`double`** значение|**LC_NUMERIC** (определяет распознавание символа системы счисления)|
+|[strtol, wcstol, _strtol_l, _wcstol_l](../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)|Преобразовать символьную строку в **`long`** значение|**LC_NUMERIC** (определяет распознавание символа системы счисления)|
 |[strtoul, _strtoul_l, wcstoul, _wcstoul_l](../c-runtime-library/reference/strtoul-strtoul-l-wcstoul-wcstoul-l.md)|Преобразовать строку символов в значение unsigned long|**LC_NUMERIC** (определяет распознавание символа системы счисления)|
 |[_strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr](../c-runtime-library/reference/strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md),[_strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l](../c-runtime-library/reference/strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md)|Преобразовать "на месте" каждую букву в нижнем регистре в строке в верхний регистр|**LC_CTYPE**|
 |[strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)|Преобразовать строку в упорядоченную форму в соответствии с языковым стандартом|**LC_COLLATE**|
@@ -69,7 +69,7 @@ ms.locfileid: "57744378"
 > [!NOTE]
 > Для многобайтовых подпрограмм многобайтовая кодовая страница должна быть эквивалента языковому стандарту, установленному с помощью функции [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md). Функция [_setmbcp](../c-runtime-library/reference/setmbcp.md) с аргументом **_MB_CP_LOCALE** устанавливает многобайтовую кодовую страницу, совпадающую с кодовой страницей **setlocale**.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Интернационализация](../c-runtime-library/internationalization.md)<br/>
-[Универсальные подпрограммы среды выполнения C по категориям](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Подпрограммы универсальной среды выполнения C по категориям](../c-runtime-library/run-time-routines-by-category.md)<br/>

@@ -6,45 +6,45 @@ helpviewer_keywords:
 - assembly language [C++]
 - __asm keyword [C++], assembly language in
 ms.assetid: ad699356-1d16-4984-871f-c5fd7797c1fb
-ms.openlocfilehash: e5c7c9274ab5b75efa007fd96fc00d80bd53426e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 164cd45be5149b0c31cdbe4484bb852892476fa2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169127"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87191440"
 ---
 # <a name="using-assembly-language-in-__asm-blocks"></a>Использование языка ассемблера в блоках __asm
 
 **Блок, относящийся только к системам Microsoft**
 
-Встроенный код на языке ассемблера имеет много общего с другими сборщиками. Например, он принимает любое выражение, допустимое в MASM. В этом разделе описывается использование функций языка ассемблера в блоках `__asm`.
+Встроенный код на языке ассемблера имеет много общего с другими сборщиками. Например, он принимает любое выражение, допустимое в MASM. В этом разделе описывается использование функций языка ассемблера в **`__asm`** блоках.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Дополнительные сведения
 
-- [Набор инструкций для встроенного кода на языке ассемблера](../../assembler/inline/instruction-set-for-inline-assembly.md)
+- [Набор инструкций для встроенной сборки](../../assembler/inline/instruction-set-for-inline-assembly.md)
 
 - [Выражения MASM во встроенном коде на языке ассемблера](../../assembler/inline/masm-expressions-in-inline-assembly.md)
 
 - [Директивы и операторы данных во встроенном коде на языке ассемблера](../../assembler/inline/data-directives-and-operators-in-inline-assembly.md)
 
-- [Директивы EVEN и ALIGN](../../assembler/inline/even-and-align-directives.md)
+- [Директивы "даже" и "выравнивание"](../../assembler/inline/even-and-align-directives.md)
 
 - [Директивы макросов MASM во встроенном коде на языке ассемблера](../../assembler/inline/masm-macro-directives-in-inline-assembly.md)
 
 - [Ссылки на сегменты во встроенном коде на языке ассемблера](../../assembler/inline/segment-references-in-inline-assembly.md)
 
-- [Размеры типа и переменной во встроенном коде на языке ассемблера](../../assembler/inline/type-and-variable-sizes-in-inline-assembly.md)
+- [Размеры типов и переменных во встроенном коде на языке ассемблера](../../assembler/inline/type-and-variable-sizes-in-inline-assembly.md)
 
-- [Комментарии языка ассемблера](../../assembler/inline/assembly-language-comments.md)
+- [Комментарии для языка ассемблера](../../assembler/inline/assembly-language-comments.md)
 
-- [_Emit Псеудоинструктион](../../assembler/inline/emit-pseudoinstruction.md)
+- [Псевдокоманда _emit](../../assembler/inline/emit-pseudoinstruction.md)
 
-- [Отладка и списки для встроенного кода на языке ассемблера](../../assembler/inline/debugging-and-listings-for-inline-assembly.md)
+- [Отладка и вхождения для встроенной сборки](../../assembler/inline/debugging-and-listings-for-inline-assembly.md)
 
-- [Набор инструкций MMX Intel](../../assembler/inline/intel-s-mmx-instruction-set.md)
+- [Набор инструкций Intel MMX](../../assembler/inline/intel-s-mmx-instruction-set.md)
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
-[Встроенный сборщик](../../assembler/inline/inline-assembler.md)<br/>
+[Встроенный ассемблер](../../assembler/inline/inline-assembler.md)<br/>

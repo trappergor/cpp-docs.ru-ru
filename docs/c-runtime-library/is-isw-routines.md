@@ -19,12 +19,12 @@ helpviewer_keywords:
 - is routines
 - isw routines
 ms.assetid: 1e171a57-2cde-41f6-a75f-a080fa3c12e5
-ms.openlocfilehash: 4dad7ff74112da7fc7d0d01714b0cf0dd4e4495c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 8292f04fb8771b8270b6f8e2be3ca2f044f6c9b7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940179"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87189783"
 ---
 # <a name="is-isw-routines"></a>Процедуры is, isw
 
@@ -35,20 +35,20 @@ ms.locfileid: "70940179"
 |[isascii, __isascii, iswascii](../c-runtime-library/reference/isascii-isascii-iswascii.md)|[islower, iswlower, _islower_l, _iswlower_l](../c-runtime-library/reference/islower-iswlower-islower-l-iswlower-l.md)|
 |[isblank, iswblank, _isblank_l, _iswblank_l](../c-runtime-library/reference/isblank-iswblank-isblank-l-iswblank-l.md)|[isprint, iswprint, _isprint_l, _iswprint_l](../c-runtime-library/reference/isprint-iswprint-isprint-l-iswprint-l.md)|
 |[iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l](../c-runtime-library/reference/iscntrl-iswcntrl-iscntrl-l-iswcntrl-l.md)|[ispunct, iswpunct, _ispunct_l, _iswpunct_l](../c-runtime-library/reference/ispunct-iswpunct-ispunct-l-iswpunct-l.md)|
-|[iscsym, iscsymf, __iscsym, \__iswcsym, \__iscsymf, \__iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l](../c-runtime-library/reference/iscsym-functions.md)|[isspace, iswspace, _isspace_l, _iswspace_l](../c-runtime-library/reference/isspace-iswspace-isspace-l-iswspace-l.md)|
+|[исксим, исксимф, __iscsym, \_ _iswcsym, \_ _iscsymf, \_ _iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l](../c-runtime-library/reference/iscsym-functions.md)|[isspace, iswspace, _isspace_l, _iswspace_l](../c-runtime-library/reference/isspace-iswspace-isspace-l-iswspace-l.md)|
 |[_isctype, iswctype, _isctype_l, _iswctype_l](../c-runtime-library/reference/isctype-iswctype-isctype-l-iswctype-l.md)|[isupper, _isupper_l, iswupper, _iswupper_l](../c-runtime-library/reference/isupper-isupper-l-iswupper-iswupper-l.md)|
 |[isdigit, iswdigit, _isdigit_l, _iswdigit_l](../c-runtime-library/reference/isdigit-iswdigit-isdigit-l-iswdigit-l.md)|[isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l](../c-runtime-library/reference/isxdigit-iswxdigit-isxdigit-l-iswxdigit-l.md)|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Эти подпрограммы проверяют символы на соответствие заданным условиям.
 
-Подпрограммы **is** выдают значащий результат для любого целочисленного аргумента от –1 (`EOF`) до **UCHAR_MAX** (0xFF) включительно. Ожидается тип аргумента `int`.
+Подпрограммы **is** выдают значащий результат для любого целочисленного аргумента от –1 (`EOF`) до **UCHAR_MAX** (0xFF) включительно. Ожидаемый тип аргумента — **`int`** .
 
 > [!CAUTION]
-> Для подпрограмм **is** передача аргумента типа `char` может привести к непредсказуемым результатам. Однобайтовый символ типа `char` со значением, превышающем 0x7F, в однобайтовой или многобайтовой кодировке является отрицательным. Если передается значение типа `char`, компилятор может преобразовать это значение в значение типа `int` со знаком или **long** со знаком. Компилятор может расширить знак данного значения, что приведет к непредвиденным результатам.
+> Для подпрограмм **—** передача аргумента типа может привести к **`char`** непредсказуемым результатам. Однобайтовый символ типа **`char`** со значением, превышающим 0x7F, имеет отрицательное значение. Если **`char`** передается, компилятор может преобразовать значение в **`signed int`** или **`signed long`** . Компилятор может расширить знак данного значения, что приведет к непредвиденным результатам.
 
-Подпрограммы **isw** выдают значащие результаты для любого целого числа от –1 (**WEOF**) до 0xFFFF включительно. Тип данных **wint_t** определяется в WCHAR.H как **unsigned short**; он может содержать любое значение расширенного символа или расширенный символ конца файла (**WEOF**).
+Подпрограммы **isw** выдают значащие результаты для любого целого числа от –1 (**WEOF**) до 0xFFFF включительно. Тип данных **wint_t** ОПРЕДЕЛЯЕТСЯ в WCHAR. H как a **`unsigned short`** ; он может содержать любой широкий символ или расширенное значение конца файла (**WEOF**).
 
 Выходное значение зависит от настройки категории `LC_CTYPE` языкового стандарта; дополнительные сведения см. в разделе [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md). Версии этих функций без суффикса **_l** используют текущий языковой стандарт для данного поведения, зависящего от языкового стандарта; версии с суффиксом **_l** идентичны, за исключением того, что они используют переданный параметр языкового стандарта.
 
@@ -129,19 +129,19 @@ ms.locfileid: "70940179"
 
 |Значение аргумента *desc*|эквивалент iswctype(*c, desc*)|
 |------------------------------|----------------------------------------|
-|**_ALPHA**|**iswalpha(** `c` **)**|
+|**_ALPHA**|**исвалфа (** `c` **)**|
 |**_ALPHA** &#124; **_DIGIT**|**iswalnum(** `c` **)**|
-|**_BLANK**|**iswblank(** `c` **)**|
+|**_BLANK**|**исвбланк (** `c` **)**|
 |**_CONTROL**|**iswcntrl(** `c` **)**|
 |**_DIGIT**|**iswdigit(** `c` **)**|
-|**_ALPHA** &#124; **_DIGIT** &#124; **_PUNCT**|**iswgraph(** `c` **)**|
+|**_ALPHA** &#124; **_DIGIT** &#124; **_PUNCT**|**исвграф (** `c` **)**|
 |**_LOWER**|**iswlower(** `c` **)**|
-|**_ALPHA** &#124; **_BLANK** &#124; **_DIGIT** &#124; **_PUNCT**|**iswprint(** `c` **)**|
-|**_PUNCT**|**iswpunct(** `c` **)**|
-|**_BLANK**|**iswblank(** `c` **)**|
+|**_ALPHA** &#124; **_BLANK** &#124; **_DIGIT** &#124; **_PUNCT**|**исвпринт (** `c` **)**|
+|**_PUNCT**|**исвпункт (** `c` **)**|
+|**_BLANK**|**исвбланк (** `c` **)**|
 |**_SPACE**|**iswspace(** `c` **)**|
 |**_UPPER**|**iswupper(** `c` **)**|
-|**_HEX**|**iswxdigit(** `c` **)**|
+|**_HEX**|**исвксдигит (** `c` **)**|
 
 `iswdigit`<br/>
 Расширенный символ, соответствующий символу десятичной цифры.
@@ -341,7 +341,7 @@ int main( void )
 ## <a name="see-also"></a>См. также
 
 [Классификация символов](../c-runtime-library/character-classification.md)<br/>
-[Языковой стандарт](../c-runtime-library/locale.md)<br/>
+[Локаль](../c-runtime-library/locale.md)<br/>
 [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>
 [Интерпретация последовательностей многобайтовых символов](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[Функции to](../c-runtime-library/to-functions.md)
+[в функции](../c-runtime-library/to-functions.md)

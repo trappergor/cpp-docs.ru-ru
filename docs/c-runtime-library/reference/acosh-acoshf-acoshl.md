@@ -37,12 +37,12 @@ helpviewer_keywords:
 - acosh function
 - acoshl function
 ms.assetid: 6985c4d7-9e2a-44ce-9a9b-5a43015f15f7
-ms.openlocfilehash: d0d691e394b0a508ca439934abdcdef1e1dfc95d
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: a6883c23d06115c8775dd919123671feac380b99
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913029"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220760"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh, acoshf, acoshl
 
@@ -68,7 +68,7 @@ long double acosh( long double x );  // C++ only
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Функции **ACOSH** возвращают обратный гиперболический-косинус (Дуга гиперболического косинуса) *x*. Эти функции действительны для домена *x* ≥ 1. Если значение *x* меньше 1, `errno` то устанавливается в `EDOM` , а результатом является скрытое значение NaN. Если *x* является недействительным неопределенным или бесконечностью, то возвращается одно и то же значение.
+Функции **ACOSH** возвращают обратный гиперболический-косинус (Дуга гиперболического косинуса) *x*. Эти функции действительны для домена *x* ≥ 1. Если значение *x* меньше 1, то устанавливается `errno` в, `EDOM` а результатом является скрытое значение NaN. Если *x* является недействительным неопределенным или бесконечностью, то возвращается одно и то же значение.
 
 |Входные данные|Исключение SEH|Исключение`_matherr`|
 |-----------|-------------------|--------------------------|
@@ -77,13 +77,13 @@ long double acosh( long double x );  // C++ only
 
 ## <a name="remarks"></a>Remarks
 
-При использовании C++ можно вызывать перегрузки **ACOSH** , которые принимают и возвращают значения **типа float** или **Long** **double** . В программе на языке C **ACOSH** всегда принимает и возвращает **Double**.
+При использовании C++ можно вызывать перегрузки **ACOSH** , которые принимают и возвращают **`float`** **`long double`** значения или. В программе на языке C **ACOSH** всегда принимает и возвращает **`double`** .
 
 По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
-|Функция|Заголовок C|Заголовок C++|
+|Компонент|Заголовок C|Заголовок C++|
 |--------------|--------------|------------------|
 |**ACOSH**, **acoshf**, **акошл**|\<math.h>|\<cmath>|
 
@@ -119,7 +119,7 @@ acosh( 1.324609 ) = 0.785398
 
 ## <a name="see-also"></a>См. также раздел
 
-[Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
+[Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [asinh, asinhf, asinhl](asinh-asinhf-asinhl.md)<br/>
 [atanh, atanhf, atanhl](atanh-atanhf-atanhl.md)<br/>
 [cosh, coshf, coshl](cosh-coshf-coshl.md)<br/>

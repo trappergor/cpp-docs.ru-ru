@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - exception header
 ms.assetid: 28900768-5dd7-4834-b907-5e37ab3407db
-ms.openlocfilehash: 681baee5ac5d19e8b3ffdf37c37599c9cb68f253
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 1627ba411fd201c84daee534ea134be2dba73376
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457906"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87193657"
 ---
 # <a name="ltexceptiongt"></a>&lt;exception&gt;
 
@@ -19,11 +19,11 @@ ms.locfileid: "68457906"
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<exception>
+**Заголовок:**\<exception>
 
 **Пространство имен:** std
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Элементы
 
 ### <a name="typedefs"></a>Определения типов
 
@@ -45,20 +45,20 @@ ms.locfileid: "68457906"
 |[rethrow_if_nested](../standard-library/exception-functions.md#rethrow_if_nested)|Приводит и создает исключение, если вложенный.|
 |[set_terminate](../standard-library/exception-functions.md#set_terminate)|Создает новый `terminate_handler`, подлежащий вызову при завершении программы.|
 |[set_unexpected](../standard-library/exception-functions.md#set_unexpected)|Создает новый `unexpected_handler`, подлежащий вызову при обнаружении неожиданного исключения.|
-|[terminate](../standard-library/exception-functions.md#terminate)|Вызывает обработчик завершения.|
+|[заканчива](../standard-library/exception-functions.md#terminate)|Вызывает обработчик завершения.|
 |[throw_with_nested](../standard-library/exception-functions.md#throw_with_nested)|Создает исключение, если вложенный.|
-|[uncaught_exception](../standard-library/exception-functions.md#uncaught_exception)|Возвращает **true**, только если созданное исключение в настоящий момент обрабатывается.|
-|[unexpected](../standard-library/exception-functions.md#unexpected)|Вызывает непредвиденный обработчик.|
+|[uncaught_exception](../standard-library/exception-functions.md#uncaught_exception)|Возвращает, **`true`** только если в настоящее время обрабатывается исключение.|
+|[известно](../standard-library/exception-functions.md#unexpected)|Вызывает непредвиденный обработчик.|
 
 ### <a name="classes"></a>Классы
 
 |||
 |-|-|
 |[Класс bad_exception](../standard-library/bad-exception-class.md)|Этот класс описывает исключение, которое можно вызывать из `unexpected_handler`.|
-|[Класс exception](../standard-library/exception-class.md)|Этот класс служит базовым классом для всех исключений, создаваемых определенными выражениями и стандартной библиотекой C++.|
+|[Класс Exception](../standard-library/exception-class.md)|Этот класс служит базовым классом для всех исключений, создаваемых определенными выражениями и стандартной библиотекой C++.|
 |[Класс nested_exception](../standard-library/nested-exception-class.md)|Класс описывает исключение, которое можно записать и сохранить для последующего использования.|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)\
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Безопасность потоков в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - EnableIf structure
 ms.assetid: 7825b283-e6b2-4f39-a4b9-c03bcd431b8e
-ms.openlocfilehash: 44c6293b56e9e03c23d0d8cebf2a112e6fcf3664
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f43166920f3582ab681b67d2c89563dcf78ff0f1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214036"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220500"
 ---
 # <a name="enableif-structure"></a>EnableIf - структура
 
@@ -33,20 +33,20 @@ struct EnableIf<true, T>;
 *T*<br/>
 Тип.
 
-*b*<br/>
+*&*<br/>
 Логическое выражение.
 
 ## <a name="remarks"></a>Remarks
 
-Определяет элемент данных типа, заданного вторым параметром шаблона, если первый параметр шаблона имеет **значение true**.
+Определяет элемент данных типа, указанного вторым параметром шаблона, если первый параметр шаблона имеет значение **`true`** .
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Элементы
 
-### <a name="public-typedefs"></a>Открытые определения типов
+### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|`type`|Если параметру шаблона *b* присвоено **значение true**, то частичная специализация определяет `type` элементов данных как тип `T`.|
+|`type`|Если параметру шаблона *b* присвоено значение **`true`** , то частичная специализация определяет, что член данных имеет `type` тип `T` .|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -60,4 +60,4 @@ struct EnableIf<true, T>;
 
 ## <a name="see-also"></a>См. также раздел
 
-[Пространство имен Microsoft::WRL::Details](microsoft-wrl-details-namespace.md)
+[Пространство имен Microsoft:: WRL::D состояния](microsoft-wrl-details-namespace.md)

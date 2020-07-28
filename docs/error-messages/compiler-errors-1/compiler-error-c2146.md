@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2146
 ms.assetid: 6bfb7de6-6723-4486-9350-c66ef88d7a64
-ms.openlocfilehash: 8dc7b521243c4eafdc22fab851812b6c12b004cf
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: c1a790902af92d72eb73be7fc2321762ab01fd8c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755919"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214767"
 ---
 # <a name="compiler-error-c2146"></a>Ошибка компилятора C2146
 
 Синтаксическая ошибка: отсутствует "token" перед идентификатором "идентификатор"
 
-Компилятор ожидал `token` и обнаружил `identifier`.  Возможные причины.
+`token`Вместо этого ожидается и обнаруживается компилятор `identifier` .  Возможные причины:
 
 1. Ошибка проверки орфографии или капитализации.
 
@@ -46,7 +46,7 @@ int main() {
 
 ## <a name="example"></a>Пример
 
-Эта ошибка также может быть вызвана работой по согласованности компилятора, выполненной для Visual Studio .NET 2003: отсутствует `typename` ключевое слово.
+Эта ошибка также может быть вызвана работой по согласованности компилятора, выполненной для Visual Studio .NET 2003: отсутствует **`typename`** ключевое слово.
 
 Следующий пример компилируется в Visual Studio .NET 2002, но в Visual Studio .NET 2003 он завершится ошибкой:
 

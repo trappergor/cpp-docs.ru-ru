@@ -21,12 +21,12 @@ helpviewer_keywords:
 - extractors, _com_ptr_t class
 - extractors [C++]
 ms.assetid: 194b9e0e-123c-49ff-a187-0a7fcd68145a
-ms.openlocfilehash: e7b06bb11ab34a1a1a7f6fab98d177821f60b20c
-ms.sourcegitcommit: e17cc8a478b51739d67304d7d82422967b35f716
+ms.openlocfilehash: fb5441d87dc35ec6fbb495bc38d9041c1f2d2f33
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86127855"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220578"
 ---
 # <a name="_com_ptr_t-extractors"></a>`_com_ptr_t`Средства извлечения
 
@@ -57,7 +57,7 @@ operator bool( ) const throw( );
 
 - **`operator&`** Освобождает любой инкапсулированный указатель интерфейса, заменяя его значением NULL, и возвращает адрес инкапсулированного указателя. Этот оператор позволяет передать смарт-указатель по адресу в функцию с параметром *out* , через который он возвращает указатель интерфейса.
 
-- **`operator bool`** Позволяет использовать объект интеллектуального указателя в условном выражении. Этот оператор возвращает значение TRUE, если указатель не имеет значение NULL.
+- **`operator bool`** Позволяет использовать объект интеллектуального указателя в условном выражении. Этот оператор возвращает **`true`** , если указатель не имеет значение null.
 
   > [!NOTE]
   > Поскольку не **`operator bool`** объявлен как **`explicit`** , неявно преобразуется `_com_ptr_t` в, которое преобразуется **`bool`** в любой скалярный тип. Это может привести к непредвиденным последствиям в коде. Включите [Предупреждение компилятора (уровень 4) C4800](../error-messages/compiler-warnings/compiler-warning-level-3-c4800.md) , чтобы предотвратить непреднамеренное использование этого преобразования.
