@@ -1,66 +1,66 @@
 ---
-title: Сырье указатели (КЗ)
-description: Как использовать необработанные указатели в СЗ
+title: Необработанные указатели (C++)
+description: Использование необработанных указателей в C++
 ms.date: 04/21/2020
 helpviewer_keywords:
 - pointers [C++]
 no-loc:
-- void
-- nullptr
-- const
-- char
-- new
-- delete
-ms.openlocfilehash: 8ba188154d7395ce7be3878fa9dbee2fde08a130
-ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+- ':::no-loc(void):::'
+- ':::no-loc(nullptr):::'
+- ':::no-loc(const):::'
+- ':::no-loc(char):::'
+- ':::no-loc(new):::'
+- ':::no-loc(delete):::'
+ms.openlocfilehash: 53679559888191fe7f2aad7cb5a70d607974ae96
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82032100"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233656"
 ---
-# <a name="raw-pointers-c"></a>Сырье указатели (КЗ)
+# <a name="raw-pointers-c"></a>Необработанные указатели (C++)
 
-*Указатель* — это тип переменной. Он хранит адрес объекта в памяти и используется для доступа к этому объекту. *Необработанный указатель* — это указатель, срок службы которого не контролируется инкапсулирующим объектом, [например, интеллектуальным указателем.](smart-pointers-modern-cpp.md) Сырой указатель может быть назначен адрес другой переменной, не указательной, [nullptr](nullptr.md)или он может быть назначен значением . Указатель, которому не было присвоено значение, содержит случайные данные.
+*Указатель* — это тип переменной. Он сохраняет адрес объекта в памяти и используется для доступа к этому объекту. *Необработанный указатель* — это указатель, время существования которого не управляется инкапсулированным объектом, например [интеллектуальным указателем](smart-pointers-modern-cpp.md). Необработанному указателю может быть присвоен адрес другой переменной, не являющейся указателем, или ему может быть присвоено значение [:::no-loc(nullptr):::](:::no-loc(nullptr):::.md) . Указатель, которому не присвоено значение, содержит случайные данные.
 
-Указатель также может быть *дессылкой* для получения значения объекта, на который он указывает. *Оператор доступа к членам* предоставляет доступ к членам объекта.
+Указатель может также быть *разыменован* для получения значения объекта, на который он указывает. *Оператор доступа к членам* предоставляет доступ к членам объекта.
 
 ```cpp
-    int* p = nullptr; // declare pointer and initialize it
+    int* p = :::no-loc(nullptr):::; // declare pointer and initialize it
                       // so that it doesn't store a random address
     int i = 5;
     p = &i; // assign pointer to address of object
     int j = *p; // dereference p to retrieve the value at its address
 ```
 
-Указатель может указывать на набранный объект или на **void**. Когда программа выделяет объект на [куче](https://wikipedia.org/wiki/Heap) памяти, она получает адрес этого объекта в виде указателя. Такие указатели называются *владеющими указателем.* Указатель владения (или его копия) должен использоваться для явного освобождения объекта, выделенного кучей, когда он больше не нужен. Неспособность освободить память приводит к *утечке памяти*и делает это местоположение памяти недоступным для любой другой программы на машине. Память, **new** выделенная с **delete** помощью, должна быть освобождена с помощью (или ** delete \[no).** Для получения дополнительной информации, [ new см. delete ](new-and-delete-operators.md)
+Указатель может указывать на типизированный объект или на **`:::no-loc(void):::`** . Когда программа выделяет объект в [куче](https://wikipedia.org/wiki/Heap) в памяти, он получает адрес этого объекта в виде указателя. Такие указатели называются *указателями-владельцами*. Для явного освобождения выделенного в куче объекта, когда он больше не нужен, необходимо использовать указатель-владелец (или его копию). Сбой освобождения памяти приводит к *утечке памяти*и отображению этого расположения памяти, недоступного для любой другой программы на компьютере. Память, выделенная с помощью **`:::no-loc(new):::`** , должна быть освобождена с помощью **`:::no-loc(delete):::`** ( ** :::no-loc(delete)::: \[ **или). Дополнительные сведения см. в разделе [ :::no-loc(new)::: :::no-loc(delete)::: операторы и](:::no-loc(new):::-and-:::no-loc(delete):::-operators.md).
 
 ```cpp
-    MyClass* mc = new MyClass(); // allocate object on the heap
+    MyClass* mc = :::no-loc(new)::: MyClass(); // allocate object on the heap
     mc->print(); // access class member
-    delete mc; // delete object (please don't forget!)
+    :::no-loc(delete)::: mc; // :::no-loc(delete)::: object (please don't forget!)
 ```
 
-Указатель (если он не объявлен **const** как) может быть приращен или decremented указать в другом месте в памяти. Эта операция называется *арифметической указателем.* Он используется в C-стиле программирования для итерации элементов в массивах или других структурах данных. Указатель **const** не может быть указать на другое местоположение памяти, и в этом смысле похож на [ссылку](references-cpp.md). Для получения дополнительной информации, [ const см.](const-and-volatile-pointers.md)
+Указатель (если он не объявлен как **`:::no-loc(const):::`** ) можно увеличить или уменьшить до точки в другом месте в памяти. Эта операция называется *арифметикой указателя*. Он используется в программировании в стиле C для итерации элементов в массивах или других структурах данных. **`:::no-loc(const):::`** Невозможно создать указатель для указания на другое место в памяти, и в этом смысле похоже на [ссылку](references-cpp.md). Дополнительные сведения см. в разделе [ :::no-loc(const)::: и временные указатели](:::no-loc(const):::-and-volatile-pointers.md).
 
 ```cpp
     // declare a C-style string. Compiler adds terminating '\0'.
-    const char* str = "Hello world";
+    :::no-loc(const)::: :::no-loc(char):::* str = "Hello world";
 
-    const int c = 1;
-    const int* pconst = &c; // declare a non-const pointer to const int
-    const int c2 = 2;
-    pconst = &c2;  // OK pconst itself isn't const
-    const int* const pconst2 = &c;
-    // pconst2 = &c2; // Error! pconst2 is const.
+    :::no-loc(const)::: int c = 1;
+    :::no-loc(const)::: int* p:::no-loc(const)::: = &c; // declare a non-:::no-loc(const)::: pointer to :::no-loc(const)::: int
+    :::no-loc(const)::: int c2 = 2;
+    p:::no-loc(const)::: = &c2;  // OK p:::no-loc(const)::: itself isn't :::no-loc(const):::
+    :::no-loc(const)::: int* :::no-loc(const)::: p:::no-loc(const):::2 = &c;
+    // p:::no-loc(const):::2 = &c2; // Error! p:::no-loc(const):::2 is :::no-loc(const):::.
 ```
 
-На 64-битных операционных системах указатель имеет размер 64 бита. Размер указателя системы определяет, сколько адресной памяти она может иметь. Все копии указателя указывают на одно и то же местоположение памяти. Указатели (наряду со ссылками) широко используются в СЗ для передачи более крупных объектов и из функций. Это потому, что часто более эффективно копировать адрес объекта, чем копировать весь объект. При определении функции укажите **const** параметры указателя, как если только вы не намереваетесь изменить объект. Как правило, **const** ссылки являются предпочтительным способом передачи объектов функциям, если только значение объекта **nullptr** возможно.
+В 64-разрядных операционных системах указатель имеет размер 64 бит. Размер указателя системы определяет, сколько памяти она может иметь. Все копии точки указателя на одно и то же место в памяти. Указатели (вместе со ссылками) широко используются в C++ для передачи больших объектов в функции и из них. Это связано с тем, что часто более эффективно копировать адрес объекта, чем копировать весь объект. При определении функции укажите параметры-указатели, как **`:::no-loc(const):::`** если бы вы не предполагали, что функция не изменит объект. Как правило, **`:::no-loc(const):::`** ссылки являются предпочтительным способом передачи объектов в функции, если только значение объекта не может быть **`:::no-loc(nullptr):::`** .
 
-[Указатели на функции](#pointers_to_functions) позволяют передавать функции другим функциям и использоваться для "обратных вызовов" в программировании в стиле C. Для этой цели современная СЗ использует [выражения лямбда.](lambda-expressions-in-cpp.md)
+[Указатели на функции](#pointers_to_functions) позволяют передавать функции другим функциям и использоваться для обратных вызовов в программировании в стиле C. В современных C++ для этой цели используются [лямбда-выражения](lambda-expressions-in-cpp.md) .
 
-## <a name="initialization-and-member-access"></a>Инициализация и доступ к членам
+## <a name="initialization-and-member-access"></a>Доступ к инициализации и членам
 
-Следующий пример показывает, как объявить, инициализировать и использовать необработанный указатель. Это инициализированное использование, **new** чтобы указать объект, **delete** выделенный на кучу, которую вы должны явно. В примере также показаны некоторые из опасностей, связанных с необработанными указателями. (Помните, что этот пример C-стиль программирования, а не современные СЗ!)
+В следующем примере показано, как объявить, инициализировать и использовать необработанный указатель. Он инициализируется с помощью **`:::no-loc(new):::`** , чтобы указать объект, выделенный в куче, который необходимо явным образом **`:::no-loc(delete):::`** . В примере также показано несколько опасностей, связанных с необработанными указателями. (Помните, что этот пример — программирование в стиле C, а не современные C++!)
 
 ```cpp
 #include <iostream>
@@ -71,11 +71,11 @@ class MyClass
 public:
     int num;
     std::string name;
-    void print() { std::cout << name << ":" << num << std::endl; }
+    :::no-loc(void)::: print() { std::cout << name << ":" << num << std::endl; }
 };
 
 // Accepts a MyClass pointer
-void func_A(MyClass* mc)
+:::no-loc(void)::: func_A(MyClass* mc)
 {
     // Modify the object that mc points to.
     // All copies of the pointer will point to
@@ -84,7 +84,7 @@ void func_A(MyClass* mc)
 }
 
 // Accepts a MyClass object
-void func_B(MyClass mc)
+:::no-loc(void)::: func_B(MyClass mc)
 {
     // mc here is a regular object, not a pointer.
     // Use the "." operator to access members.
@@ -98,8 +98,8 @@ void func_B(MyClass mc)
 int main()
 {
     // Use the * operator to declare a pointer type
-    // Use new to allocate and initialize memory
-    MyClass* pmc = new MyClass{ 108, "Nick" };
+    // Use :::no-loc(new)::: to allocate and initialize memory
+    MyClass* pmc = :::no-loc(new)::: MyClass{ 108, "Nick" };
 
     // Prints the memory address. Usually not what you want.
     std:: cout << pmc << std::endl;
@@ -133,24 +133,24 @@ int main()
     func_B(*pmc);
     pmc->print(); // "Erika, 3" (original not modified by function)
 
-    delete(pmc); // don't forget to give memory back to operating system!
-   // delete(pmc2); //crash! memory location was already deleted
+    :::no-loc(delete):::(pmc); // don't forget to give memory back to operating system!
+   // :::no-loc(delete):::(pmc2); //crash! memory location was already :::no-loc(delete):::d
 }
 ```
 
-## <a name="pointer-arithmetic-and-arrays"></a>Арифметика указателей и массивы
+## <a name="pointer-arithmetic-and-arrays"></a>Арифметические и массивные указатели
 
-Указатели и массивы тесно связаны между собой. Когда массив передается по обозначение функции, он передается как указатель на первый элемент. Следующий пример демонстрирует следующие важные свойства указателей и массивов:
+Указатели и массивы тесно связаны друг с друга. Когда массив передается в функцию по значению, он передается в качестве указателя на первый элемент. В следующем примере показаны следующие важные свойства указателей и массивов.
 
-- `sizeof` оператор возвращает общий размер байтов массива
-- для определения количества элементов, разделить общие байты на размер одного элемента
-- когда массив передается функции, он *распадается* на тип указателя
-- оператор `sizeof` при нанесении на указатель возвращает размер указателя, 4 байта на x86 или 8 байтов на x64
+- **`sizeof`** оператор возвращает общий размер массива в байтах
+- чтобы определить количество элементов, разделите общее число байтов на размер одного элемента.
+- когда массив передается в функцию, он *декайс* к типу указателя
+- **`sizeof`** оператор, применяемый к указателю, возвращает размер указателя, 4 байта на x86 или 8 байт в x64
 
 ```cpp
 #include <iostream>
 
-void func(int arr[], int length)
+:::no-loc(void)::: func(int arr[], int length)
 {
     // returns pointer size. not useful here.
     size_t test = sizeof(arr);
@@ -171,9 +171,9 @@ int main()
 }
 ```
 
-Некоторые арифметические операции могут бытьconst использованы на не-указатели, чтобы сделать их указывают на другое место памяти. Указатели приращены и decremented **++** **+=** с **-=** **--** помощью , и операторов. Этот метод может быть использован в массивах и особенно полезен в буферах нетипированных данных. A ** void ** приравня размером **char** (1 байт). Набранный указатель приравнизывается по размеру типа, на который он указывает.
+Некоторые арифметические операции можно использовать для :::no-loc(const)::: неуказателей, чтобы они указывали на другое место в памяти. Указатели увеличиваются и уменьшаются с помощью **++** **+=** операторов, **-=** и **--** . Этот метод можно использовать в массивах и особенно полезен в буферах нетипизированных данных. Значение увеличивается на величину **:::no-loc(void):::\*** **`:::no-loc(char):::`** (1 байт). Типизированный указатель увеличивается по размеру типа, на который он указывает.
 
-Следующий пример показывает, как арифметика указателя может быть использована для доступа к отдельным пикселям в битной карте windows. Обратите внимание **new** на **delete** использование и , и dereference оператора.
+В следующем примере показано, как можно использовать арифметические действия с указателями для доступа к отдельным пикселям точечного рисунка в Windows. Обратите внимание на **`:::no-loc(new):::`** использование **`:::no-loc(delete):::`** операторов и и разыменование оператора.
 
 ```cpp
 #include <Windows.h>
@@ -192,8 +192,8 @@ int main()
     header.biCompression = BI_RGB;
     header.biSize = sizeof(BITMAPINFOHEADER);
 
-    constexpr int bufferSize = 30000;
-    unsigned char* buffer = new unsigned char[bufferSize];
+    :::no-loc(const):::expr int bufferSize = 30000;
+    unsigned :::no-loc(char):::* buffer = :::no-loc(new)::: unsigned :::no-loc(char):::[bufferSize];
 
     BITMAPFILEHEADER bf;
     bf.bfType = 0x4D42;
@@ -203,11 +203,11 @@ int main()
     bf.bfOffBits = sizeof(BITMAPFILEHEADER) + sizeof(BITMAPINFOHEADER); //54
 
     // Create a gray square with a 2-pixel wide outline.
-    unsigned char* begin = &buffer[0];
-    unsigned char* end = &buffer[0] + bufferSize;
-    unsigned char* p = begin;
-    constexpr int pixelWidth = 3;
-    constexpr int borderWidth = 2;
+    unsigned :::no-loc(char):::* begin = &buffer[0];
+    unsigned :::no-loc(char):::* end = &buffer[0] + bufferSize;
+    unsigned :::no-loc(char):::* p = begin;
+    :::no-loc(const):::expr int pixelWidth = 3;
+    :::no-loc(const):::expr int borderWidth = 2;
 
     while (p < end)
     {
@@ -224,32 +224,32 @@ int main()
         {
             *p = 0xC3; // Gray
         }
-        p++; // Increment one byte sizeof(unsigned char).
+        p++; // Increment one byte sizeof(unsigned :::no-loc(char):::).
     }
 
     ofstream wf(R"(box.bmp)", ios::out | ios::binary);
 
-    wf.write(reinterpret_cast<char*>(&bf), sizeof(bf));
-    wf.write(reinterpret_cast<char*>(&header), sizeof(header));
-    wf.write(reinterpret_cast<char*>(begin), bufferSize);
+    wf.write(reinterpret_cast<:::no-loc(char):::*>(&bf), sizeof(bf));
+    wf.write(reinterpret_cast<:::no-loc(char):::*>(&header), sizeof(header));
+    wf.write(reinterpret_cast<:::no-loc(char):::*>(begin), bufferSize);
 
-    delete[] buffer; // Return memory to the OS.
+    :::no-loc(delete):::[] buffer; // Return memory to the OS.
     wf.close();
 }
 ```
 
-## <a name="opno-locvoid-pointers"></a>voidуказатели на указы
+## <a name="no-locvoid-pointers"></a>:::no-loc(void):::* указатели
 
-Указатель, **void** чтобы просто указывает на место необработанной памяти. Иногда необходимо использовать ** void ** указатели, например, при прохождении между кодом СЗ и C-функциями.
+Указатель на **`:::no-loc(void):::`** просто указывает на расположение необработанной памяти. Иногда необходимо использовать **:::no-loc(void):::\*** указатели, например при передаче между кодом C++ и функциями C.
 
-При отлитом указателя на void указатель содержимое местоположения памяти остается неизменным. Тем не менее, информация типа теряется, так что вы не можете делать приращения или decrement операций. Местоположение памяти можно отлить, `MyClass*` например, от туда `void*` и обратно. `MyClass*` Такие операции по своей сути подвержены ошибкам и требуют большой осторожности, чтобы избежать ошибок. Современный СЗ не рекомендует void использовать указатели практически при любых обстоятельствах.
+Если типизированный указатель приводится к :::no-loc(void)::: указателю, содержимое области памяти не изменяется. Однако сведения о типе теряются, поэтому нельзя выполнять операции увеличения или уменьшения. Место в памяти может быть приведено к типу, например, от `MyClass*` до **`:::no-loc(void):::*`** и обратно в `MyClass*` . Такие операции по сути подвержены ошибкам и нуждаются в отличных от них ошибках :::no-loc(void)::: . Современный C++ не рекомендует использовать :::no-loc(void)::: указатели практически во всех обстоятельствах.
 
 ```cpp
 
 //func.c
-void func(void* data, int length)
+:::no-loc(void)::: func(:::no-loc(void):::* data, int length)
 {
-    char* c = (char*)(data);
+    :::no-loc(char):::* c = (:::no-loc(char):::*)(data);
 
     // fill in the buffer with data
     for (int i = 0; i < length; ++i)
@@ -264,7 +264,7 @@ void func(void* data, int length)
 
 extern "C"
 {
-    void func(void* data, int length);
+    :::no-loc(void)::: func(:::no-loc(void):::* data, int length);
 }
 
 class MyClass
@@ -272,35 +272,35 @@ class MyClass
 public:
     int num;
     std::string name;
-    void print() { std::cout << name << ":" << num << std::endl; }
+    :::no-loc(void)::: print() { std::cout << name << ":" << num << std::endl; }
 };
 
 int main()
 {
-    MyClass* mc = new MyClass{10, "Marian"};
-    void* p = static_cast<void*>(mc);
+    MyClass* mc = :::no-loc(new)::: MyClass{10, "Marian"};
+    :::no-loc(void):::* p = static_cast<:::no-loc(void):::*>(mc);
     MyClass* mc2 = static_cast<MyClass*>(p);
     std::cout << mc2->name << std::endl; // "Marian"
 
-    // use operator new to allocate untyped memory block
-    void* pvoid = operator new(1000);
-    char* pchar = static_cast<char*>(pvoid);
-    for(char* c = pchar; c < pchar + 1000; ++c)
+    // use operator :::no-loc(new)::: to allocate untyped memory block
+    :::no-loc(void):::* p:::no-loc(void)::: = operator :::no-loc(new):::(1000);
+    :::no-loc(char):::* p:::no-loc(char)::: = static_cast<:::no-loc(char):::*>(p:::no-loc(void):::);
+    for(:::no-loc(char):::* c = p:::no-loc(char):::; c < p:::no-loc(char)::: + 1000; ++c)
     {
         *c = 0x00;
     }
-    func(pvoid, 1000);
-    char ch = static_cast<char*>(pvoid)[0];
+    func(p:::no-loc(void):::, 1000);
+    :::no-loc(char)::: ch = static_cast<:::no-loc(char):::*>(p:::no-loc(void):::)[0];
     std::cout << ch << std::endl; // 'A'
-    operator delete(p);
+    operator :::no-loc(delete):::(p);
 }
 ```
 
 ## <a name="pointers-to-functions"></a><a name="pointers_to_functions"></a>Указатели на функции
 
-В программировании в стиле C функции используются главным образом для передачи функций другим функциям. Этот метод позволяет вызывающему настроить поведение функции, не изменяя ее. В современных [выражениях Лямбда, лямбда](lambda-expressions-in-cpp.md) обеспечивают те же возможности с большей безопасностью типа и другими преимуществами.
+В программировании в стиле C указатели функций используются в основном для передачи функций другим функциям. Этот метод позволяет вызывающему объекту настраивать поведение функции, не изменяя ее. В современных C++ [лямбда-выражения](lambda-expressions-in-cpp.md) обеспечивают те же возможности, что и более строгая типизация, и другие преимущества.
 
-Декларация указателя функции определяет подпись, которую функция указателя должна иметь:
+Объявление указателя на функцию указывает сигнатуру, которую должна иметь функция, на которую должен быть указан объект.
 
 ```cpp
 // Declare pointer to any function that...
@@ -309,14 +309,14 @@ int main()
 string (*g)(string a);
 
 // has no return value and no parameters
-void (*x)();
+:::no-loc(void)::: (*x)();
 
 // ...returns an int and takes three parameters
 // of the specified types
 int (*i)(int i, string s, double d);
 ```
 
-В следующем примере `combine` показана функция, которая принимает `std::string` в качестве `std::string`параметра любую функцию, которая принимает и возвращает . В зависимости от функции, `combine`которая передается, он либо подготовит или придатит строку.
+В следующем примере показана функция `combine` , которая принимает в качестве параметра любую функцию, которая принимает `std::string` и возвращает `std::string` . В зависимости от функции, которая передается `combine` , она либо добавляет строку в начале, либо добавляет ее.
 
 ```cpp
 #include <iostream>
@@ -348,9 +348,9 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
-[Интеллектуальные указатели](smart-pointers-modern-cpp.md)
-[Оператор indirection:](indirection-operator-star.md)<br/>
+[Интеллектуальные указатели](smart-pointers-modern-cpp.md) 
+ [Оператор косвенного обращения: *](indirection-operator-star.md)<br/>
 [Оператор address-of: &](address-of-operator-amp.md)</br>
-[Добро пожаловать обратно в СЗ](welcome-back-to-cpp-modern-cpp.md)
+[Добро пожаловать в C++](welcome-back-to-cpp-modern-cpp.md)

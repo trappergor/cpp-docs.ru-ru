@@ -18,16 +18,16 @@ helpviewer_keywords:
 - derived classes [C++], declaring
 - inheritance, keywords
 ms.assetid: bb810f56-7720-4fea-b8b6-9499edd141df
-ms.openlocfilehash: f0aae655540b4d3f9130d9840d77e0abcf270cc2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bc9afdcb7971c478c1cad9185cece57ea6326a48
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374105"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233734"
 ---
 # <a name="inheritance-keywords"></a>Ключевые слова наследования
 
-**Microsoft Специфический**
+**Блок, относящийся только к системам Microsoft**
 
 ```
 class [__single_inheritance] class-name;
@@ -37,25 +37,25 @@ class [__virtual_inheritance] class-name;
 
 где:
 
-*название класса*<br/>
+*имя класса*<br/>
 Имя объявляемого класса.
 
-В C++ указатель на член класса можно объявить до определения класса. Пример:
+В C++ указатель на член класса можно объявить до определения класса. Например:
 
 ```cpp
 class S;
 int S::*p;
 ```
 
-В приведенном `p` выше коде объявляется указателем на ряды членов класса S. Однако, `class S` еще не определена в этом коде; он только был объявлен. Когда компилятор обнаруживает такой указатель, он должен создать обобщенное представление указателя. Размер представления зависит от указанной модели наследования. Указать модель наследования для компилятора можно четырьмя способами.
+В приведенном выше коде `p` объявляется как указатель на целочисленный член класса S. Однако `class S` еще не определен в этом коде; он был только объявлен. Когда компилятор обнаруживает такой указатель, он должен создать обобщенное представление указателя. Размер представления зависит от указанной модели наследования. Указать модель наследования для компилятора можно четырьмя способами.
 
-- В IDE под **представлением указателя на членов**
+- В интегрированной среде разработки в **представлении указателя на член**
 
-- На командной линии с помощью [/vmg](../build/reference/vmb-vmg-representation-method.md) переключатель
+- В командной строке с параметром [/vmg](../build/reference/vmb-vmg-representation-method.md)
 
-- Использование [pointers_to_members](../preprocessor/pointers-to-members.md) прагмы
+- Использование директивы pragma [pointers_to_members](../preprocessor/pointers-to-members.md)
 
-- Использование ключевых слов наследования **__single_inheritance,** **__multiple_inheritance**и **__virtual_inheritance.** При использовании этого метода управление моделью наследования осуществляется на уровне класса.
+- С помощью ключевых слов наследования **`__single_inheritance`** , **`__multiple_inheritance`** и **`__virtual_inheritance`** . При использовании этого метода управление моделью наследования осуществляется на уровне класса.
 
     > [!NOTE]
     >  Если указатель на член класса всегда объявляется после определения класса, нет необходимости использовать какой-либо из этих параметров.
@@ -74,10 +74,10 @@ int S::*p;
 > [!NOTE]
 > То же опережающее объявление представления указателя на член должно быть включено в каждую запись преобразования, которая объявляет указатели на члены этого класса, и объявление должно выполняться до объявления указателей на члены.
 
-Для совместимости с предыдущими версиями, **_single_inheritance,** **_multiple_inheritance**и **_virtual_inheritance** являются синонимами для **__single_inheritance,** **__multiple_inheritance,** и **__virtual_inheritance** если не указан вариант компилятора / [Q \(Disable language extensions).](../build/reference/za-ze-disable-language-extensions.md)
+Для совместимости с предыдущими версиями **_single_inheritance**, **_multiple_inheritance**и **_virtual_inheritance** являются синонимами для **`__single_inheritance`** , **`__multiple_inheritance`** и, если не **`__virtual_inheritance`** задан параметр компилятора [/Za \( Отключить расширения языка)](../build/reference/za-ze-disable-language-extensions.md) .
 
-**END Microsoft Специфический**
+**Завершение блока, относящегося только к системам Майкрософт**
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
-[Keywords](../cpp/keywords-cpp.md)
+[Ключевые слова](../cpp/keywords-cpp.md)
