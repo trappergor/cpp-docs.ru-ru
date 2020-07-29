@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: ae6fcbbcbb1a526dbba857fc9bfa2da5eb897c73
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 108bbbbb7fcb491ecc9ed278c5f7d5002ad02ef3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404310"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231862"
 ---
 # <a name="cbutton-class"></a>Класс Кбуттон
 
@@ -170,7 +170,7 @@ class CButton : public CWnd
 
 При создании `CButton` объекта из диалогового ресурса `CButton` объект автоматически уничтожается, когда пользователь закрывает диалоговое окно.
 
-При создании `CButton` объекта в окне может потребоваться его уничтожить. При создании `CButton` объекта в куче с помощью **новой** функции необходимо вызвать метод **Delete** для объекта, чтобы уничтожить его, когда пользователь закроет элемент управления Windows Button. При создании `CButton` объекта в стеке или внедрении его в родительский объект диалогового окна он уничтожается автоматически.
+При создании `CButton` объекта в окне может потребоваться его уничтожить. При создании `CButton` объекта в куче с помощью **`new`** функции необходимо вызвать метод для **`delete`** объекта, чтобы уничтожить его, когда пользователь закроет элемент управления Windows Button. При создании `CButton` объекта в стеке или внедрении его в родительский объект диалогового окна он уничтожается автоматически.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -1117,10 +1117,10 @@ BOOL SetTextMargin(RECT* pmargin);
 ## <a name="see-also"></a>См. также раздел
 
 [CWnd, класс](../../mfc/reference/cwnd-class.md)<br/>
-[Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
+[Иерархическая диаграмма](../../mfc/hierarchy-chart.md)<br/>
 [CWnd, класс](../../mfc/reference/cwnd-class.md)<br/>
 [Класс CComboBox](../../mfc/reference/ccombobox-class.md)<br/>
-[CEdit Class](../../mfc/reference/cedit-class.md)<br/>
+[Класс CEdit](../../mfc/reference/cedit-class.md)<br/>
 [Класс CListBox](../../mfc/reference/clistbox-class.md)<br/>
 [Класс Кскроллбар](../../mfc/reference/cscrollbar-class.md)<br/>
 [Класс Кстатик](../../mfc/reference/cstatic-class.md)<br/>

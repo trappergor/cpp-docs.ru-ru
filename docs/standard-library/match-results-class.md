@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - match_results class
 ms.assetid: b504fdca-e5dd-429d-9960-6e27c9167fa6
-ms.openlocfilehash: 31154a38f8bbcb879fd871f1eb1bf5a4b15af79b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8ce9ed987baf63f2cc9f095e2955a8165e977193
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371021"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212219"
 ---
 # <a name="match_results-class"></a>Класс match_results
 
@@ -26,15 +26,15 @@ class match_results
 
 ## <a name="parameters"></a>Параметры
 
-*BidIt*\
+*Двунаправленный*\
 Тип итератора для подстрок соответствия.
 
-*Alloc*\
+*Идентификатор*\
 Тип распределителя для управления хранилищем.
 
 ## <a name="remarks"></a>Remarks
 
-Шаблон класса описывает объект, который управляет неизменяемой `sub_match<BidIt>` последовательностью элементов типа, генерируемых регулярным поиском выражения. Каждый элемент указывает на часть последовательности, которая соответствует группе захвата, соответствующей этому элементу.
+Шаблон класса описывает объект, управляющий неизменяемой последовательностью элементов типа, `sub_match<BidIt>` сформированных поиском регулярных выражений. Каждый элемент указывает на часть последовательности, которая соответствует группе захвата, соответствующей этому элементу.
 
 ### <a name="constructors"></a>Конструкторы
 
@@ -51,40 +51,40 @@ class match_results
 |[const_iterator](#const_iterator)|Тип постоянного итератора для подстрок соответствия.|
 |[const_reference](#const_reference)|Тип постоянной ссылки на элемент.|
 |[difference_type](#difference_type)|Тип разницы итератора.|
-|[Итератор](#iterator)|Тип итератора для подстрок соответствия.|
-|[Ссылки](#reference)|Тип ссылки на элемент.|
+|[итераци](#iterator)|Тип итератора для подстрок соответствия.|
+|[reference](#reference)|Тип ссылки на элемент.|
 |[size_type](#size_type)|Тип числа подстрок соответствия.|
 |[string_type](#string_type)|Тип строки.|
-|[Value_type](#value_type)|Тип подстроки соответствия.|
+|[value_type](#value_type)|Тип подстроки соответствия.|
 
 ### <a name="member-functions"></a>Функции элементов
 
 |Функция-член|Описание|
 |-|-|
-|[Начать](#begin)|Обозначает начало последовательности подстроки соответствия.|
-|[Пустой](#empty)|Проверяет отсутствие подстрок соответствия.|
-|[end](#end)|Обозначает конец последовательности частичного соответствия.|
-|[Формат](#format)|Форматирует подстроки соответствия.|
+|[начале](#begin)|Обозначает начало последовательности подстроки соответствия.|
+|[empty](#empty)|Проверяет отсутствие подстрок соответствия.|
+|[конце](#end)|Обозначает конец последовательности частичного соответствия.|
+|[format](#format)|Форматирует подстроки соответствия.|
 |[get_allocator](#get_allocator)|Возвращает сохраненный распределитель.|
-|[длина](#length)|Возвращает длину подстроки соответствия.|
+|[length](#length)|Возвращает длину подстроки соответствия.|
 |[max_size](#max_size)|Получает максимальное число подстрок соответствия.|
-|[Позиции](#position)|Получает начальное смещение подгруппы.|
+|[разместить](#position)|Получает начальное смещение подгруппы.|
 |[prefix](#prefix)|Получает последовательность перед первой подстрокой соответствия.|
-|[Размер](#size)|Подсчитывает количество подстрок соответствия.|
-|[Ул](#str)|Возвращает подстроку совпадения.|
-|[suffix](#suffix)|Получает последовательность после последней подстроки соответствия.|
-|[Своп](#swap)|Меняет местами два объекта match_results.|
+|[size](#size)|Подсчитывает количество подстрок соответствия.|
+|[str](#str)|Возвращает подстроку совпадения.|
+|[суффикс](#suffix)|Получает последовательность после последней подстроки соответствия.|
+|[позиции](#swap)|Меняет местами два объекта match_results.|
 
 ### <a name="operators"></a>Операторы
 
 |Оператор|Описание|
 |-|-|
-|[оператора](#op_eq)|Копирование объекта match_results.|
-|[Оператор\[\]](#op_at)|Доступ к подчиненному объекту.|
+|[Оператор =](#op_eq)|Копирование объекта match_results.|
+|[оператор\[\]](#op_at)|Доступ к подчиненному объекту.|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<regex>
+**Заголовок:**\<regex>
 
 **Пространство имен:** std
 
@@ -188,7 +188,7 @@ next submatch: matched == false
 empty == false
 ```
 
-## <a name="match_resultsallocator_type"></a><a name="allocator_type"></a>match_results::allocator_type
+## <a name="match_resultsallocator_type"></a><a name="allocator_type"></a>match_results:: allocator_type
 
 Тип распределителя для управления хранилищем.
 
@@ -198,9 +198,9 @@ typedef Alloc allocator_type;
 
 ### <a name="remarks"></a>Remarks
 
-Typedef является синонимом шаблона аргумент *Alloc*.
+Typedef является синонимом для *выделения*аргумента шаблона.
 
-## <a name="match_resultsbegin"></a><a name="begin"></a>match_results::начало
+## <a name="match_resultsbegin"></a><a name="begin"></a>match_results:: Begin
 
 Обозначает начало последовательности подстроки соответствия.
 
@@ -212,7 +212,7 @@ const_iterator begin() const;
 
 Функция-член возвращает итератор произвольного доступа, указывающий на первый элемент последовательности (или на место сразу за концом пустой последовательности).
 
-## <a name="match_resultschar_type"></a><a name="char_type"></a>match_results::char_type
+## <a name="match_resultschar_type"></a><a name="char_type"></a>match_results:: char_type
 
 Тип элемента.
 
@@ -224,7 +224,7 @@ typedef typename iterator_traits<BidIt>::value_type char_type;
 
 Определение типа является синонимом типа `iterator_traits<BidIt>::value_type`, который является типом элемента искомой последовательности символов.
 
-## <a name="match_resultsconst_iterator"></a><a name="const_iterator"></a>match_results::const_iterator
+## <a name="match_resultsconst_iterator"></a><a name="const_iterator"></a>match_results:: const_iterator
 
 Тип постоянного итератора для подстрок соответствия.
 
@@ -236,7 +236,7 @@ typedef T0 const_iterator;
 
 Определение типа описывает объект, который можно использовать в качестве постоянного итератора с произвольным доступом для управляемой последовательности.
 
-## <a name="match_resultsconst_reference"></a><a name="const_reference"></a>match_results::const_reference
+## <a name="match_resultsconst_reference"></a><a name="const_reference"></a>match_results:: const_reference
 
 Тип постоянной ссылки на элемент.
 
@@ -248,7 +248,7 @@ typedef const typename Alloc::const_reference const_reference;
 
 Определение типа описывает объект, который можно использовать в качестве постоянной ссылки на элемент управляемой последовательности.
 
-## <a name="match_resultsdifference_type"></a><a name="difference_type"></a>match_results::difference
+## <a name="match_resultsdifference_type"></a><a name="difference_type"></a>match_results::d ifference_type
 
 Тип разницы итератора.
 
@@ -260,7 +260,7 @@ typedef typename iterator_traits<BidIt>::difference_type difference_type;
 
 Определение типа является синонимом типа `iterator_traits<BidIt>::difference_type`; оно описывает объект, который может представлять разницу между любыми двумя итераторами, указывающими на элементы управляемой последовательности.
 
-## <a name="match_resultsempty"></a><a name="empty"></a>match_results::пустой
+## <a name="match_resultsempty"></a><a name="empty"></a>match_results:: Empty
 
 Проверяет отсутствие подстрок соответствия.
 
@@ -272,7 +272,7 @@ bool empty() const;
 
 Функция-член возвращает значение true, только если не удалось найти регулярное выражение.
 
-## <a name="match_resultsend"></a><a name="end"></a>match_results::end
+## <a name="match_resultsend"></a><a name="end"></a>match_results:: end
 
 Обозначает конец последовательности частичного соответствия.
 
@@ -284,7 +284,7 @@ const_iterator end() const;
 
 Функция-член возвращает итератор, указывающий на место сразу за концом последовательности.
 
-## <a name="match_resultsformat"></a><a name="format"></a>match_results:формат
+## <a name="match_resultsformat"></a><a name="format"></a>match_results:: Format
 
 Форматирует подстроки соответствия.
 
@@ -301,22 +301,22 @@ string_type format(const string_type& fmt, match_flag_type flags = format_defaul
 *OutIt*\
 Тип итератора вывода.
 
-*из*\
+*заполняет*\
 Поток вывода для записи.
 
-*Fmt*\
+*FMT*\
 Строка форматирования.
 
-*Флаги*\
+*Метки*\
 Флаги формата.
 
 ### <a name="remarks"></a>Remarks
 
-Каждая функция участника генерирует отформатированный текст под контролем формата *fmt*. Функция первого члена записывает отформатированный текст *out* к последовательности, определенной его аргументом, и *возвращается.* Функция второго члена возвращает объект строки, держащий копию отформатируемого текста.
+Каждая функция – член создает форматированный текст под элементом управления формата *FMT*. Первая функция – член записывает форматированный текст в последовательность, определенную его аргументом *out* , *и возвращает.* Вторая функция-член возвращает строковый объект, содержащий копию форматированного текста.
 
 Чтобы создать форматированный текст, литеральный текст в строке формата, как правило, копируется в целевую последовательность. Каждая escape-последовательность в строке формата заменяется текстом, который она представляет. Сведениями о копировании и замене управляют флаги формата, передаваемые функции.
 
-## <a name="match_resultsget_allocator"></a><a name="get_allocator"></a>match_results::get_allocator
+## <a name="match_resultsget_allocator"></a><a name="get_allocator"></a>match_results:: get_allocator
 
 Возвращает сохраненный распределитель.
 
@@ -326,9 +326,9 @@ allocator_type get_allocator() const;
 
 ### <a name="remarks"></a>Remarks
 
-Функция-член возвращает копию объекта распределителя, используемого `*this` для распределения его объектов `sub_match`.
+Функция-член возвращает копию объекта распределителя, используемого **`*this`** для выделения `sub_match` объектов.
 
-## <a name="match_resultsiterator"></a><a name="iterator"></a>match_results::iterator
+## <a name="match_resultsiterator"></a><a name="iterator"></a>match_results:: итератор
 
 Тип итератора для подстрок соответствия.
 
@@ -340,7 +340,7 @@ typedef const_iterator iterator;
 
 Этот тип описывает объект, который можно использовать в качестве итератора с произвольным доступом для управляемой последовательности.
 
-## <a name="match_resultslength"></a><a name="length"></a>match_results::длина
+## <a name="match_resultslength"></a><a name="length"></a>match_results:: Length
 
 Возвращает длину подстроки соответствия.
 
@@ -350,14 +350,14 @@ difference_type length(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Параметры
 
-*Sub*\
+*Директор*\
 Индекс подстроки соответствия.
 
 ### <a name="remarks"></a>Remarks
 
 Функция-член возвращает значение `(*this)[sub].length()`.
 
-## <a name="match_resultsmatch_results"></a><a name="match_results"></a>match_results::match_results
+## <a name="match_resultsmatch_results"></a><a name="match_results"></a>match_results:: match_results
 
 Создает объект.
 
@@ -369,7 +369,7 @@ match_results(const match_results& right);
 
 ### <a name="parameters"></a>Параметры
 
-*Alloc*\
+*Идентификатор*\
 Объект распределителя для сохранения.
 
 *Правильно*\
@@ -377,9 +377,9 @@ match_results(const match_results& right);
 
 ### <a name="remarks"></a>Remarks
 
-Первый конструктор создает объект `match_results`, который не содержит подстрок совпадения. Второй конструктор строит `match_results` объект, который является копией *права.*
+Первый конструктор создает объект `match_results`, который не содержит подстрок совпадения. Второй конструктор конструирует `match_results` объект, который является копией *right*.
 
-## <a name="match_resultsmax_size"></a><a name="max_size"></a>match_results::max_size
+## <a name="match_resultsmax_size"></a><a name="max_size"></a>match_results:: max_size
 
 Получает максимальное число подстрок соответствия.
 
@@ -391,7 +391,7 @@ size_type max_size() const;
 
 Функция-член возвращает длину самой длинной последовательности, которой объект может управлять.
 
-## <a name="match_resultsoperator"></a><a name="op_eq"></a>match_results:оператор
+## <a name="match_resultsoperator"></a><a name="op_eq"></a>match_results:: operator =
 
 Копирование объекта match_results.
 
@@ -406,9 +406,9 @@ match_results& operator=(const match_results& right);
 
 ### <a name="remarks"></a>Remarks
 
-Оператор-член заменяет последовательность, управляемую `*this` копией последовательности, контролируемой *правом.*
+Оператор-член заменяет последовательность, управляемую, на **`*this`** копию последовательности, управляемой *вправо*.
 
-## <a name="match_resultsoperator"></a><a name="op_at"></a>match_results:оператор
+## <a name="match_resultsoperator"></a><a name="op_at"></a>match_results:: operator []
 
 Доступ к подчиненному объекту.
 
@@ -418,14 +418,14 @@ const_reference operator[](size_type n) const;
 
 ### <a name="parameters"></a>Параметры
 
-*N*\
+*\n*\
 Индекс подстроки совпадения.
 
 ### <a name="remarks"></a>Remarks
 
-Функция члена возвращает ссылку на элемент *n* контролируемой последовательности `sub_match` или `size() <= n` ссылку на пустой объект, если группа захвата *n* не была частью совпадения.
+Функция-член возвращает ссылку на элемент *n* управляемой последовательности или ссылку на пустой `sub_match` объект, если `size() <= n` или если группа захвата *n* не была частью совпадения.
 
-## <a name="match_resultsposition"></a><a name="position"></a>match_results::pоси
+## <a name="match_resultsposition"></a><a name="position"></a>match_results::p азмещать
 
 Получает начальное смещение подгруппы.
 
@@ -435,14 +435,14 @@ difference_type position(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Параметры
 
-*Sub*\
+*Директор*\
 Индекс подстроки совпадения.
 
 ### <a name="remarks"></a>Remarks
 
 Функция-член возвращает `std::distance(prefix().first, (*this)[sub].first)`, то есть расстояние от первого символа в целевой последовательности до первого символа в подстроке соответствия, указанной элементом `n` управляемой последовательности.
 
-## <a name="match_resultsprefix"></a><a name="prefix"></a>match_results::prefix
+## <a name="match_resultsprefix"></a><a name="prefix"></a>match_results::p рефикс
 
 Получает последовательность перед первой подстрокой соответствия.
 
@@ -454,7 +454,7 @@ const_reference prefix() const;
 
 Функция-член возвращает ссылку на объект типа `sub_match<BidIt>` , указывающий на последовательность символов, которая начинается с начала целевой последовательности и заканчивается в `(*this)[0].first`, то есть он указывает на текст, который предшествует сопоставленной части последовательности.
 
-## <a name="match_resultsreference"></a><a name="reference"></a>match_results::ссылка
+## <a name="match_resultsreference"></a><a name="reference"></a>match_results:: Reference
 
 Тип ссылки на элемент.
 
@@ -466,7 +466,7 @@ typedef const_reference reference;
 
 Тип является синонимом для типа `const_reference`.
 
-## <a name="match_resultssize"></a><a name="size"></a>match_results:размер
+## <a name="match_resultssize"></a><a name="size"></a>match_results:: size
 
 Подсчитывает количество подстрок соответствия.
 
@@ -478,7 +478,7 @@ size_type size() const;
 
 Функция-член возвращает число, которое на единицу больше, чем количество групп записи в регулярном выражении, использовавшемся для поиска, или значение 0, если поиск не выполнялся.
 
-## <a name="match_resultssize_type"></a><a name="size_type"></a>match_results::size_type
+## <a name="match_resultssize_type"></a><a name="size_type"></a>match_results:: size_type
 
 Тип числа подстрок соответствия.
 
@@ -490,7 +490,7 @@ typedef typename Alloc::size_type size_type;
 
 Тип является синонимом для типа `Alloc::size_type`.
 
-## <a name="match_resultsstr"></a><a name="str"></a>match_results::str
+## <a name="match_resultsstr"></a><a name="str"></a>match_results:: str
 
 Возвращает подстроку совпадения.
 
@@ -500,14 +500,14 @@ string_type str(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Параметры
 
-*Sub*\
+*Директор*\
 Индекс подстроки совпадения.
 
 ### <a name="remarks"></a>Remarks
 
 Функция-член возвращает значение `string_type((*this)[sub])`.
 
-## <a name="match_resultsstring_type"></a><a name="string_type"></a>match_results:::string_type
+## <a name="match_resultsstring_type"></a><a name="string_type"></a>match_results:: string_type
 
 Тип строки.
 
@@ -519,7 +519,7 @@ typedef basic_string<char_type> string_type;
 
 Тип является синонимом для типа `basic_string<char_type>`.
 
-## <a name="match_resultssuffix"></a><a name="suffix"></a>match_results::суффикс
+## <a name="match_resultssuffix"></a><a name="suffix"></a>match_results:: суффикс
 
 Получает последовательность после последней подстроки соответствия.
 
@@ -531,7 +531,7 @@ const_reference suffix() const;
 
 Функция-член возвращает ссылку на объект типа `sub_match<BidIt>` , указывающий на последовательность символов, которая начинается с `(*this)[size() - 1].second` и заканчивается в конце целевой последовательности, то есть он указывает на текст, который следует за сопоставленной частью последовательности.
 
-## <a name="match_resultsswap"></a><a name="swap"></a>match_results::swap
+## <a name="match_resultsswap"></a><a name="swap"></a>match_results:: swap
 
 Меняет местами два объекта match_results.
 
@@ -546,9 +546,9 @@ void swap(const match_results& right) throw();
 
 ### <a name="remarks"></a>Remarks
 
-Функция члена меняет содержимое `*this` и *справа* в постоянное время и не бросает исключений.
+Функция – член меняет местами содержимое **`*this`** и *право* на постоянное время и не создает исключения.
 
-## <a name="match_resultsvalue_type"></a><a name="value_type"></a>match_results::value_type
+## <a name="match_resultsvalue_type"></a><a name="value_type"></a>match_results:: value_type
 
 Тип подстроки соответствия.
 

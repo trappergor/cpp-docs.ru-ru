@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3033
 ms.assetid: 8628b6bb-a650-4ed2-af13-57acd2f7ddbb
-ms.openlocfilehash: 5d17f10e665a2c0ac86a10d90903e890b3c53386
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: df3e3f8472d1c274049e686de93488d556ff6f1f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74746400"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232018"
 ---
 # <a name="compiler-error-c3033"></a>Ошибка компилятора C3033
 
 "переменная": переменная в предложении "предложение" не может иметь тип, квалифицированный как const
 
-Значения, передаваемые в некоторые предложения, не могут быть переменными `const` .
+Значения, передаваемые в определенные предложения, не могут быть **`const`** переменными.
 
 Следующий пример приводит к возникновению ошибки C3033:
 

@@ -1,17 +1,17 @@
 ---
-title: Restricted (C++ атрибут com)
+title: Restricted (атрибут COM C++)
 ms.date: 10/03/2018
 f1_keywords:
 - vc-attr.restricted
 helpviewer_keywords:
 - restricted attribute
 ms.assetid: 504a96be-b904-4269-8be1-920feba201b4
-ms.openlocfilehash: a47c56673e19f891b24ff433b9c614804f0bd51c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0545c07936c59a59dd4712f4b0a2fd98a6701f2e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166371"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230030"
 ---
 # <a name="restricted"></a>restricted
 
@@ -27,12 +27,12 @@ ms.locfileid: "80166371"
 
 ### <a name="parameters"></a>Параметры
 
-*интерфейс*<br/>
+*interfaces*;<br/>
 Один или несколько интерфейсов, которые не могут вызываться произвольно для COM-объекта. Этот параметр допустим только при применении к классу.
 
 ## <a name="remarks"></a>Remarks
 
-Атрибут **restrict** C++ имеет те же функциональные возможности, что и атрибут [ограниченного](/windows/win32/Midl/restricted) MIDL.
+Атрибут **ограниченного** C++ имеет те же функциональные возможности, что и [ограниченный](/windows/win32/Midl/restricted) атрибут MIDL.
 
 ## <a name="example"></a>Пример
 
@@ -67,10 +67,10 @@ class c : public a, public b
 
 |||
 |-|-|
-|**Применение**|Метод интерфейса, **интерфейс**, **класс**, **Структура**|
-|**Повторяемый**|нет|
-|**Обязательные атрибуты**|**coclass** (при применении к **классу** или **структуре**)|
-|**Недопустимые атрибуты**|None|
+|**Относится к**|Метод интерфейса, **интерфейс**, **`class`** ,**`struct`**|
+|**REPEATABLE**|Нет|
+|**Требуемые атрибуты**|**coclass** (при применении к **`class`** или **`struct`** )|
+|**Недопустимые атрибуты**|Нет|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 

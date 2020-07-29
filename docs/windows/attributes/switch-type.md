@@ -1,17 +1,17 @@
 ---
-title: switch_type (C++ атрибут com)
+title: switch_type (атрибут COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.switch_type
 helpviewer_keywords:
 - switch_type attribute
 ms.assetid: e24544dc-b3bc-48ae-b249-f967db49271e
-ms.openlocfilehash: b4264681a55f45c8a4a2696e8cebbbd0eb12a4ed
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 13ea76e1153e1a42fd41fe0c087a7c7f15416760
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214530"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211935"
 ---
 # <a name="switch_type"></a>switch_type
 
@@ -34,7 +34,7 @@ type
 
 Атрибут **switch_type** C++ имеет те же функциональные возможности, что и атрибут [switch_type](/windows/win32/Midl/switch-type) MIDL.
 
-C++атрибуты не поддерживают [инкапсулированные объединения](/windows/win32/Midl/encapsulated-unions). [Неинкапсулированные объединения](/windows/win32/Midl/nonencapsulated-unions) поддерживаются только в следующей форме:
+Атрибуты C++ не поддерживают [инкапсулированные объединения](/windows/win32/Midl/encapsulated-unions). [Неинкапсулированные объединения](/windows/win32/Midl/nonencapsulated-unions) поддерживаются только в следующей форме:
 
 ```cpp
 // cpp_attr_ref_switch_type.cpp
@@ -63,15 +63,15 @@ struct SizedValue2 {
 
 |||
 |-|-|
-|**Применение**|**typedef**|
-|**Повторяемый**|нет|
-|**Обязательные атрибуты**|None|
-|**Недопустимые атрибуты**|None|
+|**Относится к**|**`typedef`**|
+|**REPEATABLE**|Нет|
+|**Требуемые атрибуты**|Нет|
+|**Недопустимые атрибуты**|Нет|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
-[Атрибуты Typedef, Enum, Union и Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[export](export.md)
+[Атрибуты typedef, enum, Union и struct](typedef-enum-union-and-struct-attributes.md)<br/>
+[программе](export.md)

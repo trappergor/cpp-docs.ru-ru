@@ -7,12 +7,12 @@ helpviewer_keywords:
 - movntss instruction
 - _mm_stream_ss intrinsic
 ms.assetid: c53dffe9-0dfe-4063-85d3-e8987b870fce
-ms.openlocfilehash: 005f4f697d64f6ea68b35dc32daf1217be463a2a
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: ef1a2045a20070b667d416175826e5377fe30ef6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217354"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215989"
 ---
 # <a name="_mm_stream_ss"></a>_mm_stream_ss
 
@@ -34,8 +34,8 @@ void _mm_stream_ss(
 *Местоназначение*\
 заполняет Указатель на расположение, в которое записываются исходные данные.
 
-*Source*\
-окне 128-разрядное число, содержащее `float` значение, которое должно быть записано в последние 32 бит.
+*Источника*\
+окне 128-разрядное число, содержащее значение, которое **`float`** должно быть записано в последние 32 бит.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -43,17 +43,17 @@ void _mm_stream_ss(
 
 ## <a name="requirements"></a>Требования
 
-|Встроенная функция|Архитектура|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`_mm_stream_ss`|SSE4a|
 
-**Заголовочный файл** \<> Intrin. h
+**Файл заголовка** \<intrin.h>
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Внутренняя функция создает `movntss` инструкцию. Чтобы определить поддержку оборудования для этой инструкции, вызовите `__cpuid` встроенную `InfoType=0x80000001` функцию с параметром и `CPUInfo[2] (ECX)`установите бит 6 из. Этот бит равен 1, если инструкция поддерживается, и 0 в противном случае.
+Внутренняя функция создает `movntss` инструкцию. Чтобы определить поддержку оборудования для этой инструкции, вызовите `__cpuid` встроенную функцию с параметром `InfoType=0x80000001` и установите бит 6 из `CPUInfo[2] (ECX)` . Этот бит равен 1, если инструкция поддерживается, и 0 в противном случае.
 
-Если запустить код, использующий `_mm_stream_ss` встроенное на оборудовании, которое `movntss` не поддерживает эту инструкцию, результаты будут непредсказуемыми.
+Если запустить код, использующий `_mm_stream_ss` встроенное на оборудовании, которое не поддерживает эту `movntss` инструкцию, результаты будут непредсказуемыми.
 
 ## <a name="example"></a>Пример
 
@@ -91,10 +91,10 @@ f[2] = -3, f[3] = 3
 
 Для частей авторские права на 2007 по расширенным микроустройствам, Inc. Все права защищены. Воспроизводить с разрешением от расширенных микроустройств, Inc.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [_mm_stream_sd](../intrinsics/mm-stream-sd.md)\
 [_mm_stream_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_stream_ps)\
 [_mm_store_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_ss)\
 [_mm_sfence](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sfence)\
-[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)
+[Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)

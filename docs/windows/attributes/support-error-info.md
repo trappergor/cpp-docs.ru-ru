@@ -1,17 +1,17 @@
 ---
-title: support_error_info (C++ атрибут com)
+title: support_error_info (атрибут COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.support_error_info
 helpviewer_keywords:
 - support_error_info attribute
 ms.assetid: 20a2b55c-4738-4b35-a71d-e5e9c3a7e3bc
-ms.openlocfilehash: e61ef2efbdc4039f496d7ffbcccc37cc8d111935
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f23241cf5478fa52d9d649acfb4c836b8b9d8f13
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166150"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211961"
 ---
 # <a name="support_error_info"></a>support_error_info
 
@@ -26,17 +26,17 @@ ms.locfileid: "80166150"
 ### <a name="parameters"></a>Параметры
 
 *error_interface*<br/>
-Идентификатор интерфейса, реализующего `IErrorInfo`.
+Идентификатор интерфейса, реализующего интерфейс `IErrorInfo` .
 
 ## <a name="remarks"></a>Remarks
 
-Атрибут **support_error_info** языка C++ реализует поддержку для возвращения на клиент подробных контекстных ошибок, обнаруженных для целевого объекта. Чтобы объект поддерживал ошибки, методы интерфейса `IErrorInfo` должны быть реализованы объектом. Дополнительные сведения см. в разделе [Supporting IDispatch and IErrorInfo](../../atl/supporting-idispatch-and-ierrorinfo.md)(Поддержка IDispatch и IErrorInfo).
+Атрибут **support_error_info** языка C++ реализует поддержку для возвращения на клиент подробных контекстных ошибок, обнаруженных для целевого объекта. Чтобы объект поддерживал ошибки, методы `IErrorInfo` интерфейса должны быть реализованы объектом. Дополнительные сведения см. в разделе [Supporting IDispatch and IErrorInfo](../../atl/supporting-idispatch-and-ierrorinfo.md)(Поддержка IDispatch и IErrorInfo).
 
-Этот атрибут добавляет [ISupportErrorInfoImpl](../../atl/reference/isupporterrorinfoimpl-class.md) в качестве базового класса для целевого объекта. Это приводит к реализации `ISupportErrorInfo` по умолчанию и может использоваться, когда один интерфейс создает ошибки для объекта.
+Этот атрибут добавляет [ISupportErrorInfoImpl](../../atl/reference/isupporterrorinfoimpl-class.md) в качестве базового класса для целевого объекта. Это приводит к реализации по умолчанию `ISupportErrorInfo` и может использоваться, когда один интерфейс создает ошибки для объекта.
 
 ## <a name="example"></a>Пример
 
-Следующий код добавляет поддержку по умолчанию для интерфейса `ISupportErrorInfo` в объект `CMyClass`.
+Следующий код добавляет в объект поддержку по умолчанию для `ISupportErrorInfo` интерфейса `CMyClass` .
 
 ```cpp
 // cpp_attr_ref_support_error_info.cpp
@@ -64,14 +64,14 @@ class CMyClass
 
 |||
 |-|-|
-|**Применение**|**class**|
-|**Повторяемый**|Да|
-|**Обязательные атрибуты**|None|
-|**Недопустимые атрибуты**|None|
+|**Относится к**|**`class`**|
+|**REPEATABLE**|Да|
+|**Требуемые атрибуты**|Нет|
+|**Недопустимые атрибуты**|Нет|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>См. также раздел
 
 [Атрибуты COM](com-attributes.md)<br/>
-[Атрибуты классов](class-attributes.md)
+[Атрибуты класса](class-attributes.md)

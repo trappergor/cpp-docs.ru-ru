@@ -48,16 +48,16 @@ helpviewer_keywords:
 - operator= member [STL/CLR]
 - range_adapter member [STL/CLR]
 ms.assetid: 71ce7e51-42b6-4f70-9595-303791a97677
-ms.openlocfilehash: bdaf5e0e8e4d9620e7a55dfff84f271f0059faf3
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 7730b5a8dbb8c92d85b4c8c5732657d28bf5b229
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545693"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216444"
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
 
-Заголовок STL/CLR `<cliext/adapter>` указывает два класса шаблонов (`collection_adapter` и `range_adapter`), а также функцию шаблона `make_collection`.
+В заголовке STL/CLR `<cliext/adapter>` указаны два класса шаблонов ( `collection_adapter` и `range_adapter` ) и функция шаблона `make_collection` .
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -67,13 +67,13 @@ ms.locfileid: "79545693"
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<cliext/адаптер >
+**Заголовок:**\<cliext/adapter>
 
 **Пространство имен:** cliext
 
 ## <a name="declarations"></a>Объявления
 
-|Class|Описание|
+|Class|Описание:|
 |-----------|-----------------|
 |[collection_adapter (STL/CLR)](#collection_adapter)|Создает оболочку для коллекции базовых классов (BCL) в виде диапазона.|
 |[range_adapter (STL/CLR)](#range_adapter)|Заключает диапазон в оболочку в качестве коллекции BCL.|
@@ -82,11 +82,11 @@ ms.locfileid: "79545693"
 |--------------|-----------------|
 |[make_collection (STL/CLR)](#make_collection)|Создает адаптер диапазона с помощью пары итератора.|
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Элементы
 
 ## <a name="collection_adapter-stlclr"></a><a name="collection_adapter"></a>collection_adapter (STL/CLR)
 
-Создает оболочку для коллекции .NET для использования в качестве контейнера STL/CLR. `collection_adapter` — это класс шаблона, описывающий простой объект контейнера STL/CLR. Он создает оболочку для интерфейса библиотеки базовых классов (BCL) и возвращает пару итераторов, которая используется для управления управляемой последовательностью.
+Создает оболочку для коллекции .NET для использования в качестве контейнера STL/CLR. `collection_adapter`— Это класс шаблона, описывающий простой объект контейнера STL/CLR. Он создает оболочку для интерфейса библиотеки базовых классов (BCL) и возвращает пару итераторов, которая используется для управления управляемой последовательностью.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -132,14 +132,14 @@ template<typename Key,
 |--------------------|-----------------|
 |IEnumerable|Последовательности через элементы.|
 |ICollection|Поддерживает группу элементов.|
-|Интерфейс|Поддерживает упорядоченную группу элементов.|
+|IList|Поддерживает упорядоченную группу элементов.|
 |IDictionary|Поддерживать набор пар {ключ, значение}.|
-|Значение IEnumerable\<>|Последовательности через типизированные элементы.|
-|Значение\<ICollection >|Поддерживает группу типизированных элементов.|
-|Значение IList\<>|Поддерживает упорядоченную группу типизированных элементов.|
-|Значение IDictionary\<>|Поддерживает набор типизированных пар {ключ — значение}.|
+|IEnumerable\<Value>|Последовательности через типизированные элементы.|
+|ICollection\<Value>|Поддерживает группу типизированных элементов.|
+|IList\<Value>|Поддерживает упорядоченную группу типизированных элементов.|
+|IDictionary\<Value> |Поддерживает набор типизированных пар {ключ — значение}.|
 
-### <a name="members"></a>Члены
+### <a name="members"></a>Элементы
 
 |Определение типа|Описание|
 |---------------------|-----------------|
@@ -164,9 +164,9 @@ template<typename Key,
 |--------------|-----------------|
 |[collection_adapter::operator= (STL/CLR)](#op_eq)|Заменяет сохраненный обработчик BCL.|
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот класс шаблона используется для управления контейнером BCL в качестве контейнера STL/CLR. `collection_adapter` сохраняет обработчик для интерфейса BCL, который, в свою очередь, управляет последовательностью элементов. Объект `collection_adapter` `X` возвращает пару итераторов ввода `X.begin()` и `X.end()`, которые используются для посещения элементов по порядку. Некоторые специализации также позволяют писать `X.size()` для определения длины управляемой последовательности.
+Этот класс шаблона используется для управления контейнером BCL в качестве контейнера STL/CLR. Объект `collection_adapter` хранит обработчик для интерфейса BCL, который, в свою очередь, управляет последовательностью элементов. `collection_adapter`Объект `X` возвращает пару итераторов ввода `X.begin()` и `X.end()` используется для посещения элементов по порядку. Некоторые специализации также позволяют писать, `X.size()` чтобы определить длину управляемой последовательности.
 
 ## <a name="collection_adapterbase-stlclr"></a><a name="base"></a>collection_adapter:: Base (STL/CLR)
 
@@ -178,7 +178,7 @@ template<typename Key,
 Coll^ base();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Функция – член возвращает сохраненный обработчик интерфейса BCL.
 
@@ -222,7 +222,7 @@ base() same = True
 iterator begin();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Функция – член возвращает итератор ввода, который обозначает первый элемент управляемой последовательности или сразу за концом пустой последовательности.
 
@@ -278,37 +278,37 @@ collection_adapter(Coll^ collection);
 
 #### <a name="parameters"></a>Параметры
 
-*коллекция*<br/>
+*набор*<br/>
 Описатель BCL для переноса.
 
-*right*<br/>
+*Правильно*<br/>
 Копируемый объект.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Конструктор:
 
 `collection_adapter();`
 
-Инициализирует хранимый маркер `nullptr`.
+Инициализирует хранимый маркер с **`nullptr`** .
 
 Конструктор:
 
 `collection_adapter(collection_adapter<Coll>% right);`
 
-Инициализирует хранимый маркер `right.`[collection_adapter:: Base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)`()`.
+Инициализирует хранимый маркер `right.` [collection_adapter:: Base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md) `()` .
 
 Конструктор:
 
 `collection_adapter(collection_adapter<Coll>^ right);`
 
-Инициализирует хранимый маркер `right->`[collection_adapter:: Base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)`()`.
+Инициализирует хранимый маркер `right->` [collection_adapter:: Base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md) `()` .
 
 Конструктор:
 
 `collection_adapter(Coll^ collection);`
 
-Инициализирует хранимый маркер `collection`.
+Инициализирует хранимый маркер с `collection` .
 
 ### <a name="example"></a>Пример
 
@@ -367,7 +367,7 @@ x x x x x x
 typedef int difference_type;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Тип описывает число подписанных элементов.
 
@@ -419,7 +419,7 @@ end()-begin() = 3
 iterator end();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Функция – член возвращает итератор ввода, указывающий сразу за пределы управляемой последовательности.
 
@@ -464,9 +464,9 @@ a b c
 typedef T1 iterator;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Тип описывает объект неопределенного типа `T1`, который может служить итератором ввода для управляемой последовательности.
+Тип описывает объект неопределенного типа `T1` , который может выступать в качестве итератора ввода для управляемой последовательности.
 
 ### <a name="example"></a>Пример
 
@@ -509,9 +509,9 @@ a b c
 typedef Key key_type;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Тип является синонимом для параметра-шаблона `Key`, в специализации для `IDictionary` или `IDictionary<Value>`; в противном случае он не определен.
+Тип является синонимом для параметра-шаблона `Key` в специализации для `IDictionary` или `IDictionary<Value>` ; в противном случае он не определен.
 
 ### <a name="example"></a>Пример
 
@@ -559,9 +559,9 @@ int main()
 typedef Value mapped_type;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Тип является синонимом для параметра-шаблона `Value`, в специализации для `IDictionary` или `IDictionary<Value>`; в противном случае он не определен.
+Тип является синонимом для параметра-шаблона `Value` в специализации для `IDictionary` или `IDictionary<Value>` ; в противном случае он не определен.
 
 ### <a name="example"></a>Пример
 
@@ -611,12 +611,12 @@ collection_adapter<Coll>% operator=(collection_adapter<Coll>% right);
 
 #### <a name="parameters"></a>Параметры
 
-*right*<br/>
+*Правильно*<br/>
 Адаптер для копирования.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Оператор члена копирует *право* на объект, а затем возвращает `*this`. Он используется для замены сохраненного обработчика BCL копией сохраненного обработчика BCL в *правой части*.
+Оператор члена копирует *прямо* в объект, а затем возвращает **`*this`** . Он используется для замены сохраненного обработчика BCL копией сохраненного обработчика BCL в *правой части*.
 
 ### <a name="example"></a>Пример
 
@@ -666,7 +666,7 @@ a b c
 typedef value_type% reference;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Тип описывает ссылку на элемент.
 
@@ -714,9 +714,9 @@ a b c
 size_type size();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Функция-член возвращает длину управляемой последовательности. Он не определен в специализации для `IEnumerable` или `IEnumerable<Value>`.
+Функция-член возвращает длину управляемой последовательности. Он не определен в специализации для `IEnumerable` или `IEnumerable<Value>` .
 
 ### <a name="example"></a>Пример
 
@@ -757,7 +757,7 @@ size() = 6
 typedef int size_type;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Тип описывает неотрицательное число элементов.
 
@@ -804,12 +804,12 @@ void swap(collection_adapter<Coll>% right);
 
 #### <a name="parameters"></a>Параметры
 
-*right*<br/>
+*Правильно*<br/>
 Контейнер для обмена содержимым.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Функция – член меняет местами сохраненные дескрипторы BCL между `*this` и *right*.
+Функция – член меняет местами сохраненные дескрипторы BCL между **`*this`** и *right*.
 
 ### <a name="example"></a>Пример
 
@@ -871,9 +871,9 @@ a b c
 typedef Value value_type;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Тип является синонимом для *значения*параметра шаблона, если он есть в специализации. в противном случае он является синонимом для `System::Object^`.
+Тип является синонимом для *значения*параметра шаблона, если он есть в специализации. в противном случае он является синонимом для `System::Object^` .
 
 ### <a name="example"></a>Пример
 
@@ -912,7 +912,7 @@ a b c
 
 ## <a name="make_collection-stlclr"></a><a name="make_collection"></a>make_collection (STL/CLR)
 
-Создание `range_adapter` из пары итераторов.
+Сделать `range_adapter` из пары итератора.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -932,9 +932,9 @@ template<typename Iter>
 *last*<br/>
 Второй итератор для переноса.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Функция-шаблон возвращает `gcnew range_adapter<Iter>(first, last)`. Он используется для создания объекта `range_adapter<Iter>` из пары итераторов.
+Функция шаблона возвращает `gcnew range_adapter<Iter>(first, last)`. Он используется для создания `range_adapter<Iter>` объекта из пары итераторов.
 
 ### <a name="example"></a>Пример
 
@@ -1010,7 +1010,7 @@ template<typename Iter>
 *Iter*<br/>
 Тип, связанный с заключенными в оболочку итераторами.
 
-### <a name="members"></a>Члены
+### <a name="members"></a>Элементы
 
 |Функция-член|Описание|
 |---------------------|-----------------|
@@ -1029,7 +1029,7 @@ template<typename Iter>
 |<xref:System.Collections.Generic.IEnumerable%601>|Выполняет перебор типизированных элементов в коллекции.|
 |<xref:System.Collections.Generic.ICollection%601>|Поддерживает группу типизированных элементов.|
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Range_adapter хранит пару итераторов, которые, в свою очередь, разделяют последовательность элементов. Объект реализует четыре интерфейса BCL, которые позволяют выполнять итерацию по элементам по порядку. Этот класс шаблона используется для управления диапазонами STL/CLR практически подобно контейнерам BCL.
 
@@ -1045,12 +1045,12 @@ range_adapter<Iter>% operator=(range_adapter<Iter>% right);
 
 #### <a name="parameters"></a>Параметры
 
-*right*<br/>
+*Правильно*<br/>
 Адаптер для копирования.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Оператор члена копирует *право* на объект, а затем возвращает `*this`. Его можно использовать для замены хранимой пары итератора копией сохраненной пары итератора в *правой части*.
+Оператор члена копирует *прямо* в объект, а затем возвращает **`*this`** . Его можно использовать для замены хранимой пары итератора копией сохраненной пары итератора в *правой части*.
 
 ### <a name="example"></a>Пример
 
@@ -1111,10 +1111,10 @@ range_adapter(Iter first, Iter last);
 *last*<br/>
 Второй итератор для переноса.
 
-*right*<br/>
+*Правильно*<br/>
 Копируемый объект.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Конструктор:
 
@@ -1132,7 +1132,7 @@ range_adapter(Iter first, Iter last);
 
 `range_adapter(range_adapter<Iter>^ right);`
 
-Инициализирует хранимую пару итераторов путем копирования пары, хранящейся в `*right`.
+Инициализирует хранимую пару итераторов путем копирования пары, хранящейся в `*right` .
 
 Конструктор:
 

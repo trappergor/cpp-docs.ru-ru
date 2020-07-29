@@ -9,16 +9,16 @@ f1_keywords:
 - iosfwd/std::wios
 - iosfwd/std::wstreampos
 ms.assetid: 0b962632-3439-44de-bf26-20c67a7f0ff3
-ms.openlocfilehash: 0f63f65fb4c10fbe2ad538852222e6468b9061d0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6167856c579acfca2bde600b2dd4d457199cafcc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375405"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212284"
 ---
 # <a name="ltiosgt-typedefs"></a>Определения типов &lt;ios&gt;
 
-## <a name="ios"></a><a name="ios"></a>Ios
+## <a name="ios"></a><a name="ios"></a>iOS
 
 Поддерживает класс ios из старой библиотеки iostream.
 
@@ -28,9 +28,9 @@ typedef basic_ios<char, char_traits<char>> ios;
 
 ### <a name="remarks"></a>Remarks
 
-Тип является синонимом шаблона класса [basic_ios,](../standard-library/basic-ios-class.md)специализируемого на элементах **символа** типа с чертами символов по умолчанию.
+Тип является синонимом [basic_ios](../standard-library/basic-ios-class.md)шаблона класса, специализированного для элементов типа **`char`** с признаками символа по умолчанию.
 
-## <a name="streamoff"></a><a name="streamoff"></a>стрим-офф
+## <a name="streamoff"></a><a name="streamoff"></a>streamoff
 
 Поддерживает внутренние операции.
 
@@ -56,7 +56,7 @@ typedef fpos<mbstate_t> streampos;
 
 ### <a name="remarks"></a>Remarks
 
-Тип является синонимом [fpos](../standard-library/fpos-class.md) <  `mbstate_t`>.
+Этот тип является синонимом> [fpos](../standard-library/fpos-class.md) <  `mbstate_t` .
 
 ### <a name="example"></a>Пример
 
@@ -81,7 +81,7 @@ int main( )
 7
 ```
 
-## <a name="streamsize"></a><a name="streamsize"></a>потокового
+## <a name="streamsize"></a><a name="streamsize"></a>данные streamsize
 
 Указывает размер потока.
 
@@ -117,7 +117,7 @@ int main( )
 }
 ```
 
-## <a name="wios"></a><a name="wios"></a>wios
+## <a name="wios"></a><a name="wios"></a>виос
 
 Поддерживает класс wios из старой библиотеки iostream.
 
@@ -127,9 +127,9 @@ typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
 
 ### <a name="remarks"></a>Remarks
 
-Тип является синонимом шаблона класса [basic_ios,](../standard-library/basic-ios-class.md)специализировавшегося на элементах типа **wchar_t** с чертами характера по умолчанию.
+Тип является синонимом [basic_ios](../standard-library/basic-ios-class.md)шаблона класса, специализированного для элементов типа **`wchar_t`** с признаками символа по умолчанию.
 
-## <a name="wstreampos"></a><a name="wstreampos"></a>wstreampos
+## <a name="wstreampos"></a><a name="wstreampos"></a>встреампос
 
 Содержит текущее положение указателя буфера или указателя файла.
 
@@ -139,7 +139,7 @@ typedef fpos<mbstate_t> wstreampos;
 
 ### <a name="remarks"></a>Remarks
 
-Тип является синонимом [fpos](../standard-library/fpos-class.md) <  `mbstate_t`>.
+Этот тип является синонимом> [fpos](../standard-library/fpos-class.md) <  `mbstate_t` .
 
 ### <a name="example"></a>Пример
 

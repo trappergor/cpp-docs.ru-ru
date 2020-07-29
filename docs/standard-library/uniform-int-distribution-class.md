@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::uniform_int_distribution [C++], param_type
 - std::uniform_int_distribution [C++], param_type
 ms.assetid: a1867dcd-3bd9-4787-afe3-4b62692c1d04
-ms.openlocfilehash: 44121b6791d06768e51f425fc322ef78045fc0e7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2e5d63268413912931c61037f6665d2ceea8f372
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367287"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212052"
 ---
 # <a name="uniform_int_distribution-class"></a>Класс uniform_int_distribution
 
@@ -71,12 +71,12 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*IntType*\
-Тип результата, по умолчанию **int**. Для возможных типов см [ \<>. ](../standard-library/random.md)
+*инттипе*\
+Целочисленный тип результата, по умолчанию — **`int`** . Возможные типы см. в разделе [\<random>](../standard-library/random.md) .
 
 ## <a name="remarks"></a>Remarks
 
-Шаблон класса описывает инклюзивный дистрибутив, который создает значения определенного пользовательского интегрального типа с распределением, так что каждое значение одинаково вероятно. В следующей таблице представлены ссылки на статьи об отдельных членах.
+Шаблон класса описывает инклюзивное инклюзивное распределение, которое создает значения указанного пользователем целочисленного типа с распределением, так что каждое значение одинаково возможно. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
 ||||
 |-|-|-|
@@ -93,7 +93,7 @@ public:
 
 Функции-члены `operator()` возвращают следующее значение, созданное механизмом РГСЧ, из текущего или указанного пакета параметров.
 
-Для получения дополнительной информации о классах распределения и их членах [ \<>](../standard-library/random.md)см.
+Дополнительные сведения о классах распределения и их членах см [\<random>](../standard-library/random.md) . в разделе.
 
 ## <a name="example"></a>Пример
 
@@ -175,11 +175,11 @@ Distribution for 200 samples:
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<random>
+**Заголовок:**\<random>
 
 **Пространство имен:** std
 
-## <a name="uniform_int_distributionuniform_int_distribution"></a><a name="uniform_int_distribution"></a>uniform_int_distribution::uniform_int_distribution
+## <a name="uniform_int_distributionuniform_int_distribution"></a><a name="uniform_int_distribution"></a>uniform_int_distribution:: uniform_int_distribution
 
 Формирует распределение.
 
@@ -191,24 +191,24 @@ explicit uniform_int_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Параметры
 
-*a*\
+*конкретного*\
 Нижняя граница случайных значений (инклюзивно).
 
-*B*\
+*&*\
 Верхняя граница случайных значений (инклюзивно).
 
-*парм*\
+*ParM*\
 Структура `param_type`, используемая для формирования распределения.
 
 ### <a name="remarks"></a>Remarks
 
 **Предварительное условие:**`a ≤ b`
 
-Первый конструктор строит объект, *сохраненное* значение которого содержит значение *и* чье значение *b* содержит значение *b.*
+Первый конструктор конструирует объект, хранимое значение которого *содержит значение* *a* , а хранимое значение *b* содержит значение *b*.
 
 Второй конструктор создает объект, хранимые параметры которого инициализируются из *parm*. Вы можете получить и задать текущие параметры существующего распределения, вызвав функцию-член `param()`.
 
-## <a name="uniform_int_distributionparam_type"></a><a name="param_type"></a>uniform_int_distribution::pараматип
+## <a name="uniform_int_distributionparam_type"></a><a name="param_type"></a>uniform_int_distribution::p aram_type
 
 Сохраняет параметры распределения.
 
@@ -227,10 +227,10 @@ struct param_type {
 
 ### <a name="parameters"></a>Параметры
 
-*a*\
+*конкретного*\
 Нижняя граница случайных значений (инклюзивно).
 
-*B*\
+*&*\
 Верхняя граница случайных значений (инклюзивно).
 
 *Правильно*\
@@ -244,4 +244,4 @@ struct param_type {
 
 ## <a name="see-also"></a>См. также раздел
 
-[\<случайные>](../standard-library/random.md)
+[\<random>](../standard-library/random.md)
