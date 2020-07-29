@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - const_mem_fun1_t class
 ms.assetid: 250fac30-9663-4133-9051-6303f76ea259
-ms.openlocfilehash: 1af44635400037c6359b13c4f2925c3ac7f2d9d5
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 93d0e7a116c7c7ba7a2ed1cb46fd88585a99120d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689748"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228327"
 ---
 # <a name="const_mem_fun1_t-class"></a>Класс const_mem_fun1_t
 
-Класс адаптера, который позволяет вызывать функцию-член **const**, принимающую один аргумент, как объект бинарной функции при инициализации с аргументом указателя. Не рекомендуется использовать в C++ 11, удалено в C++ 17.
+Класс адаптера, который позволяет **`const`** вызывать функцию-член, которая принимает один аргумент, как объект бинарной функции при инициализации с помощью аргумента указателя. Не рекомендуется использовать в C++ 11, удалено в C++ 17.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -30,23 +30,23 @@ class const_mem_fun1_t : public binary_function<const Type *, Arg, Result>
 
 ### <a name="parameters"></a>Параметры
 
-*member_ptr* \
+*member_ptr*\
 Указатель на функцию-член класса `Type` для преобразования в объект функции.
 
-*left* \
-Объект **const** , для которого вызывается функция-член *member_ptr* .
+*слева*\
+**`const`** Объект, для которого вызывается функция-член *member_ptr* .
 
-*справа* \
+*Правильно*\
 Аргумент, присваиваемый *member_ptr*.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Адаптируемая бинарная функция.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
-Шаблон класса хранит копию *member_ptr*, которая должна быть указателем на функцию-член класса `Type` в закрытом объекте-члене. Он определяет свою функцию члена `operator()` как возвращаемый `(left->member_ptr)(right) const`.
+Шаблон класса хранит копию *member_ptr*, которая должна быть указателем на функцию-член класса `Type` в закрытом объекте-члене. Он определяет свою функцию члена `operator()` как возвращающую `(left->member_ptr)(right) const` .
 
 ## <a name="example"></a>Пример
 
-Конструктор `const_mem_fun1_t` редко используется напрямую. `mem_fn` используется для адаптации функций-членов. Пример использования адаптеров функций элементов см. в разделе [mem_fn](../standard-library/functional-functions.md#mem_fn) .
+Конструктор `const_mem_fun1_t` редко используется напрямую. `mem_fn`используется для адаптации функций-членов. Пример использования адаптеров функций элементов см. в разделе [mem_fn](../standard-library/functional-functions.md#mem_fn) .

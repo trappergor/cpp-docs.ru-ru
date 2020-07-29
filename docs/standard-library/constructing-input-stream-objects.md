@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - input stream objects
 ms.assetid: ab94866e-6ffe-4f15-b4db-0bd23e636075
-ms.openlocfilehash: c000a9e927169ef710554372217ba15089ee11b8
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f281741979680fc03d3f96d2dbfbac6e1feefdea
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457297"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228314"
 ---
 # <a name="constructing-input-stream-objects"></a>Построение объектов потока ввода
 
@@ -19,11 +19,11 @@ ms.locfileid: "68457297"
 
 - [Конструкторы потока входной строки](#vclrfinputstringstreamconstructorsanchor9)
 
-## <a name="vclrfinputfilestreamconstructorsanchor8"></a> Конструкторы потока входного файла
+## <a name="input-file-stream-constructors"></a><a name="vclrfinputfilestreamconstructorsanchor8"></a> Конструкторы потока входного файла
 
 Существует два способа создания потока входного файла.
 
-- Используйте конструктор аргумента **void** , а затем вызовите `open` функцию члена:
+- Используйте **`void`** конструктор аргумента, а затем вызовите `open` функцию члена:
 
    ```cpp
    ifstream myFile; // On the stack
@@ -39,7 +39,7 @@ ms.locfileid: "68457297"
    ifstream myFile("filename");
    ```
 
-## <a name="vclrfinputstringstreamconstructorsanchor9"></a> Конструкторы потока входной строки
+## <a name="input-string-stream-constructors"></a><a name="vclrfinputstringstreamconstructorsanchor9"></a> Конструкторы потока входной строки
 
 В конструкторах потока входной строки требуется адрес предварительно выделенного и предварительно инициализированного хранилища:
 
@@ -53,6 +53,6 @@ istringstream myString(s);
 myString>> amt; // amt contains 123.45
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также статью
 
 [Входные потоки](../standard-library/input-streams.md)
