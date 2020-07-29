@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ODBC recordsets, closing
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
-ms.openlocfilehash: 41b1c11e2c820b6e5777e1af426c5e1253ed5468
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1ff6f3050ff8ca0be746b91216300632323dcd85
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367075"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216522"
 ---
 # <a name="recordset-creating-and-closing-recordsets-odbc"></a>Набор записей. Создание и закрытие наборов записей (ODBC)
 
@@ -74,10 +74,10 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 // Use the snapshot to operate on its records...
 ```
 
-После вызова `Open` используйте функции элементов и элементы данных объекта для работы с записями. В некоторых случаях может потребоваться повторный запрос или обновление набора записей, чтобы включить изменения, которые произошли в источнике данных. Для получения дополнительной информации [см. Recordset: Requerying a Recordset (ODBC).](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
+После вызова `Open` используйте функции элементов и элементы данных объекта для работы с записями. В некоторых случаях может потребоваться повторный запрос или обновление набора записей, чтобы включить изменения, которые произошли в источнике данных. Дополнительные сведения см. [в разделе набор записей: перезапрос набора записей (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md).
 
 > [!TIP]
-> Строка подключения, которую вы используете во время разработки, может не совпадать со строкой подключения, которая требуется вашим конечным пользователям. Идеи об обобщении приложения в этой связи можно найти на [примере источника данных: Управление соединениями (ODBC).](../../data/odbc/data-source-managing-connections-odbc.md)
+> Строка подключения, которую вы используете во время разработки, может не совпадать со строкой подключения, которая требуется вашим конечным пользователям. Советы по обобщению приложения в этом отношении см. в разделе [Data Source: Управление соединениями (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md).
 
 ## <a name="setting-recordset-options"></a><a name="_core_setting_recordset_options"></a> Настройка параметров набора записей
 
@@ -106,7 +106,7 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 
 1. Уничтожьте объект набора записей.
 
-   Если вы объявили его в кадре стека функции, объект будет удален автоматически, когда выйдет за пределы области действия. В противном случае используйте оператор **delete**.
+   Если вы объявили его в кадре стека функции, объект будет удален автоматически, когда выйдет за пределы области действия. В противном случае используйте **`delete`** оператор.
 
 `Close` освобождает обработку `HSTMT` набора записей. Он не удаляет объект C++.
 
@@ -114,4 +114,4 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 
 [Набор записей (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Набор записей. Прокрутка (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)<br/>
-[Набор записей. Добавление, обновление и удаление записей (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
+[Набор записей: Добавление, обновление и удаление записей (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)

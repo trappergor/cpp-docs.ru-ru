@@ -11,12 +11,12 @@ helpviewer_keywords:
 - environment control routines
 - process control routines
 ms.assetid: 7fde74c3-c2a6-4d15-84b8-092160d60c3e
-ms.openlocfilehash: c837739d4954c65d45a590bd5c7f904e2375102e
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: ed8d15181a171b4b6a436a3e410a99b48232bc6e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742106"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217029"
 ---
 # <a name="process-and-environment-control"></a>Управление процессами и средой
 
@@ -24,10 +24,10 @@ ms.locfileid: "57742106"
 
 ## <a name="process-and-environment-control-functions"></a>Функции управления процессами и средой
 
-|Подпрограмма|Использовать|
+|Подпрограмма|Используйте|
 |-------------|---------|
 |[abort](../c-runtime-library/reference/abort.md)|Прерывает процесс без очистки буферов или вызова функций, зарегистрированных с помощью **atexit** и **_onexit**.|
-|[assert](../c-runtime-library/reference/assert-macro-assert-wassert.md)|Проверяет на наличие логических ошибок.|
+|[утверждающе](../c-runtime-library/reference/assert-macro-assert-wassert.md)|Проверяет на наличие логических ошибок.|
 |Макросы [_ASSERT, _ASSERTE](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)|Подобны **assert**, но доступны только в отладочных версиях библиотек времени выполнения.|
 |[atexit](../c-runtime-library/reference/atexit.md)|Подпрограммы расписания для выполнения при завершении программы.|
 |[_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)|Создает новый поток в процессе операционной системы Windows.|
@@ -47,7 +47,7 @@ ms.locfileid: "57742106"
 |[_exit](../c-runtime-library/reference/exit-exit-exit.md)|Завершает процесс немедленно без вызова **atexit** или **_onexit** либо очистки буферов.|
 |[getenv, _wgetenv](../c-runtime-library/reference/getenv-wgetenv.md), [getenv_s, _wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md)|Получает значение переменной среды.|
 |[_getpid](../c-runtime-library/reference/getpid.md)|Получает идентификатор процесса.|
-|[longjmp](../c-runtime-library/reference/longjmp.md)|Восстанавливает сохраненную среду стека и использует ее для выполнения нелокальной команды **goto**.|
+|[longjmp](../c-runtime-library/reference/longjmp.md)|Восстановление сохраненной среды стека; Используйте его для выполнения нелокальной**`goto`**|
 |[_onexit](../c-runtime-library/reference/onexit-onexit-m.md)|Подпрограммы расписания, которые следует выполнять при завершении программы. Используются для обеспечения совместимости с Microsoft C/C++ версии 7.0 и более ранними версиями.|
 |[_pclose](../c-runtime-library/reference/pclose.md)|Ожидает новый обработчик команд и закрывает поток по связанному каналу.|
 |[perror, _wperror](../c-runtime-library/reference/perror-wperror.md)|Сообщение об ошибке печати.|
@@ -55,8 +55,8 @@ ms.locfileid: "57742106"
 |[_popen, _wpopen](../c-runtime-library/reference/popen-wpopen.md)|Создает канал и выполняет команду.|
 |[_putenv, _wputenv](../c-runtime-library/reference/putenv-wputenv.md), [_putenv_s, _wputenv_s](../c-runtime-library/reference/putenv-s-wputenv-s.md)|Получает или изменяет значения переменной среды.|
 |[raise](../c-runtime-library/reference/raise.md)|Отправляет сигнал для вызывающего процесса.|
-|[setjmp](../c-runtime-library/reference/setjmp.md)|Сохраняет среду стека. Используется для выполнения нелокальной команды **goto**.|
-|[signal](../c-runtime-library/reference/signal.md)|Обрабатывает сигнал прерывания.|
+|[setjmp](../c-runtime-library/reference/setjmp.md)|Сохранение среды стека; использовать для выполнения не локальной**`goto`**|
+|[signal](../c-runtime-library/reference/signal.md);|Обрабатывает сигнал прерывания.|
 |[_spawnl, _wspawnl](../c-runtime-library/reference/spawnl-wspawnl.md)|Создает процесс и выполняет его с указанным списком аргументов.|
 |[_spawnle, _wspawnle](../c-runtime-library/reference/spawnle-wspawnle.md)|Создает процесс и выполняет его с указанным списком аргументов и средой.|
 |[_spawnlp, _wspawnlp](../c-runtime-library/reference/spawnlp-wspawnlp.md)|Создает процесс и выполняет его, используя переменную **PATH** и указанный список аргументов.|
@@ -73,19 +73,19 @@ ms.locfileid: "57742106"
 
 Функции в семействе **_exec** и **_spawn** отличаются методом поиска файла, который выполняется как новый процесс, формой, в которой аргументы передаются в новый процесс, и способом настройки среды, как показано в следующей таблице. Используйте функцию, передающую список аргументов, когда число аргументов является постоянным или известно в момент компиляции. Используйте функцию, передающую указатель в массив, содержащий аргументы, когда число аргументов определяется во время выполнения. Сведения в следующей таблице также применимы к аналогам функции  **_spawn** и **_exec** с расширенными символами.
 
-### <a name="spawn-and-exec-function-families"></a>Функции семейств _spawn и _exec
+### <a name="_spawn-and-_exec-function-families"></a>Функции семейств _spawn и _exec
 
 |Функции|Использование переменной PATH для поиска файла|Соглашение о передаче аргументов|Параметры среды|
 |---------------|--------------------------------------|----------------------------------|--------------------------|
 |**_execl**, **_spawnl**|Нет|Список|Унаследовано от вызывающего процесса|
 |**_execle**, **_spawnle**|Нет|Список|Указатель на таблицу среды для нового процесса, переданного в качестве последнего аргумента|
 |**_execlp**, **_spawnlp**|Да|Список|Унаследовано от вызывающего процесса|
-|**_execvpe**, **_spawnvpe**|Да|Массив|Указатель на таблицу среды для нового процесса, переданного в качестве последнего аргумента|
+|**_execvpe**, **_spawnvpe**|Да|Array|Указатель на таблицу среды для нового процесса, переданного в качестве последнего аргумента|
 |**_execlpe**, **_spawnlpe**|Да|Список|Указатель на таблицу среды для нового процесса, переданного в качестве последнего аргумента|
 |**_execv**, **_spawnv**|Нет|Массив|Унаследовано от вызывающего процесса|
 |**_execve**, **_spawnve**|Нет|Массив|Указатель на таблицу среды для нового процесса, переданного в качестве последнего аргумента|
-|**_execvp**, **_spawnvp**|Да|Массив|Унаследовано от вызывающего процесса|
+|**_execvp**, **_spawnvp**|Да|Array|Унаследовано от вызывающего процесса|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Универсальные подпрограммы среды выполнения C по категориям](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Подпрограммы универсальной среды выполнения C по категориям](../c-runtime-library/run-time-routines-by-category.md)<br/>

@@ -33,12 +33,12 @@ helpviewer_keywords:
 - fminf function
 - fminl function
 ms.assetid: 1916dfb5-99c1-4b0d-aefb-513525c3f2ac
-ms.openlocfilehash: df01f2205291920b8c0519db622c93048278beb1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d6cd16c298c3f4bedb8064d66efd2d4bbe20c22b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957093"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216990"
 ---
 # <a name="fmin-fminf-fminl"></a>fmin, fminf, fminl
 
@@ -78,34 +78,34 @@ long double fminl(
 *x*<br/>
 Первое сравниваемое значение.
 
-*y*<br/>
+*&*<br/>
 Второе сравниваемое значение.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 В случае успеха возвращает меньшее значение *x* или *y*.
 
-|Ввод|Результат|
+|Входные данные|Результат|
 |-----------|------------|
-|*x* является NaN|*y*|
+|*x* является NaN|*&*|
 |*y* — NaN|*x*|
-|*x* и *y* — это NaN|NaN|
+|*x* и *y* — это NaN|Не число|
 
-Функция не вызывает вызов [_matherr](matherr.md) , приводит к возникновению исключений с плавающей запятой или изменению значения «ошибка **».**
+Функция не вызывает [_matherr](matherr.md) вызываться, приводит к исключениям с плавающей запятой или изменению **значения параметра «значение».**
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **фмин** , которые принимают и возвращают типы **float** и **Long** **Double** . В программе на языке C **фмин** всегда принимает и возвращает значение **типа Double**.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **фмин** , которые принимают и возвращают **`float`** **`long double`** типы и. В программе на языке C **фмин** всегда принимает и возвращает **`double`** .
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
-|**фмин**, **фминф**, **фминл**|C: \<math.h><br />C++: \<math.h> или \<cmath>|
+|**фмин**, **фминф**, **фминл**|Ц\<math.h><br />C++: \<math.h> или\<cmath>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Алфавитный указатель функций](crt-alphabetical-function-reference.md)<br/>
+[Алфавитный справочник по функциям](crt-alphabetical-function-reference.md)<br/>
 [fmax, fmaxf, fmaxl](fmax-fmaxf-fmaxl.md)<br/>

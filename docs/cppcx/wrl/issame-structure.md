@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::IsSame structure
 - Microsoft::WRL::Details::IsSame::value constant
 ms.assetid: 1eddbc3f-3cc5-434f-8495-e4477e1f868e
-ms.openlocfilehash: fcaf33309521b44163022e0ffa9b1e03e53e2551
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8c209d5a8d2a35f2643e90e5595d86f41519f30b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371348"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216561"
 ---
 # <a name="issame-structure"></a>IsSame - структура
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из кода.
+Поддерживает инфраструктуру WRL и не предназначен для непосредственного использования в коде.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -42,13 +42,13 @@ struct IsSame<T1, T1>;
 
 Определяет, совпадают ли указанные типы друг с другом.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Элементы
 
 ### <a name="public-constants"></a>Открытые константы
 
 Имя                    | Описание
 ----------------------- | --------------------------------------------------
-[IsSame::стоимость](#value) | Указывает, совпадают ли заданные типы друг с другом.
+[То же:: значение](#value) | Указывает, совпадают ли заданные типы друг с другом.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -56,13 +56,13 @@ struct IsSame<T1, T1>;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** internal.h
+**Заголовок:** internal. h
 
-**Пространство имен:** Microsoft:WRL::Details
+**Пространство имен:** Microsoft:: WRL::D состояния
 
-## <a name="issamevalue"></a><a name="value"></a>IsSame::стоимость
+## <a name="issamevalue"></a><a name="value"></a>То же:: значение
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из кода.
+Поддерживает инфраструктуру WRL и не предназначен для непосредственного использования в коде.
 
 ```cpp
 template <typename T1, typename T2>
@@ -82,4 +82,4 @@ struct IsSame<T1, T1>
 
 Указывает, совпадают ли заданные типы друг с другом.
 
-`value`**верно,** если параметры шаблона одинаковы, и **ложны,** если параметры шаблона отличаются.
+`value`имеет значение **`true`** , если параметры шаблона одинаковы, и **`false`** Если параметры шаблона отличаются.

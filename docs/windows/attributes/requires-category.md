@@ -1,17 +1,17 @@
 ---
-title: requires_category (C++ атрибут com)
+title: requires_category (атрибут COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.requires_category
 helpviewer_keywords:
 - requires_category attribute
 ms.assetid: a645fdc6-1ef5-414d-8c56-5fe2686d4687
-ms.openlocfilehash: 19a454a8bfc959d7d97959d765dbf68d0f766ca1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 044f868a6be8391a4b0dfafd58ff0f3178575047
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214556"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231563"
 ---
 # <a name="requires_category"></a>requires_category
 
@@ -59,10 +59,10 @@ class CMyClass {};
 
 |||
 |-|-|
-|**Применение**|**класс**, **Структура**|
-|**Повторяемый**|нет|
-|**Обязательные атрибуты**|Один или несколько из следующих элементов: `coclass`, `progid`или `vi_progid`.|
-|**Недопустимые атрибуты**|None|
+|**Относится к**|**`class`**, **`struct`**|
+|**REPEATABLE**|Нет|
+|**Требуемые атрибуты**|Один или несколько из следующих элементов: `coclass` , `progid` или `vi_progid` .|
+|**Недопустимые атрибуты**|Нет|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 

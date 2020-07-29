@@ -6,16 +6,16 @@ f1_keywords:
 - math/signbit
 helpviewer_keywords:
 - signbit function
-ms.openlocfilehash: ce2f632f11296bf71036011a57f242365951d7f2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f8399c16d2abc70a50740b0629bc5d9b3a1f067
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356333"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216743"
 ---
 # <a name="signbit"></a>signbit
 
-Определяет, является ли отрицательное значение с плавающей запятой.
+Определяет, является ли значение с плавающей запятой отрицательным.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -44,23 +44,23 @@ inline bool signbit(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**signbit** возвращает ненулевое значение (**true** в C++) Если аргумент *x* является отрицательным или отрицательная бесконечность. Она возвращает 0 (**false** в C++), если аргумент является отрицательным, положительным бесконечность или NAN.
+**сигнбит** возвращает ненулевое значение ( **`true`** в C++), если аргумент *x* является отрицательным или отрицательной бесконечностью. Он возвращает 0 ( **`false`** в C++), если аргумент имеет неотрицательное значение, положительную бесконечность или значение NaN.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-**signbit** представляет собой макрос, если он компилируется как C и перегруженные встраиваемой при компиляции как C++.
+**сигнбит** — это макрос, скомпилированный как C, и перегруженная встроенная функция, скомпилированная как C++.
 
 ## <a name="requirements"></a>Требования
 
-|Функция|Обязательный заголовок (C)|Обязательный заголовок (C++)|
+|Компонент|Обязательный заголовок (C)|Обязательный заголовок (C++)|
 |--------------|---------------------------|-------------------------------|
 |**signbit**|\<math.h>|\<math.h> или \<cmath>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
+[Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [isfinite, _finite, _finitef](finite-finitef.md)<br/>
 [isinf](isinf.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>

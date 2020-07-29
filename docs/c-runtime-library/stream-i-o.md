@@ -6,12 +6,12 @@ helpviewer_keywords:
 - I/O [CRT], stream
 - stream I/O
 ms.assetid: dc7874d3-a91b-456a-9015-4748bb358217
-ms.openlocfilehash: 0fc49d4cd26593cb02a2ff05c3205cc630ef848c
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8bff3cd74dfe4b1e3aa749ec28a361dd4a09c2f7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444618"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231251"
 ---
 # <a name="stream-io"></a>Потоковый ввод-вывод
 
@@ -19,12 +19,12 @@ ms.locfileid: "79444618"
 
 ## <a name="stream-io-routines"></a>Потоковые подпрограммы ввода-вывода
 
-|Подпрограмма|Использование|
+|Подпрограмма|Используйте|
 |-------------|---------|
 |[clearerr](../c-runtime-library/reference/clearerr.md), [clearerr_s](../c-runtime-library/reference/clearerr-s.md)|Очистка индикатора ошибки для потока|
 |[fclose](../c-runtime-library/reference/fclose-fcloseall.md)|Закрытие потока|
 |[_fcloseall](../c-runtime-library/reference/fclose-fcloseall.md)|Закрытие всех открытых потоков, кроме **stdin**, **stdout** и **stderr**|
-|[_fdopen, wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)|Связывание потока с дескриптором открытого файла|
+|[_fdopen, вфдопен](../c-runtime-library/reference/fdopen-wfdopen.md)|Связывание потока с дескриптором открытого файла|
 |[feof](../c-runtime-library/reference/feof.md)|Проверка файла или потока на предмет конца|
 |[ferror](../c-runtime-library/reference/ferror.md)|Проверка на наличие ошибки в потоке|
 |[fflush](../c-runtime-library/reference/fflush.md)|Сброс потока в буфер или на запоминающее устройство|
@@ -51,12 +51,12 @@ ms.locfileid: "79444618"
 |[getchar, getwchar](../c-runtime-library/reference/getc-getwc.md)|Считывание символа из **stdin** (версии-макросы **fgetchar** и **fgetwchar**)|
 |[_getmaxstdio](../c-runtime-library/reference/getmaxstdio.md)|Возвращает количество одновременно открытых файлов, допустимое на уровне потокового ввода-вывода.|
 |[gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|Считывание строки из **stdin**|
-|[_getw](../c-runtime-library/reference/getw.md)|Считывание двоичного числа **int** из потока|
+|[_getw](../c-runtime-library/reference/getw.md)|Чтение двоичного файла **`int`** из потока|
 |[printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md),[printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|Запись форматированных данных в **stdout**|
 |[putc, putwc](../c-runtime-library/reference/putc-putwc.md)|Запись символа в поток (версии-макросы **fputc** и **fputwc**)|
 |[putchar, putwchar](../c-runtime-library/reference/putc-putwc.md)|Запись символа в **stdout** (версии-макросы **fputchar** и **fputwchar**)|
 |[puts, _putws](../c-runtime-library/reference/puts-putws.md)|Запись строки в поток|
-|[_putw](../c-runtime-library/reference/putw.md)|Запись двоичного числа **int** в поток|
+|[_putw](../c-runtime-library/reference/putw.md)|Запись двоичного файла **`int`** в поток|
 |[rewind](../c-runtime-library/reference/rewind.md)|Перемещение позиции в файле в начало потока|
 |[_rmtmp](../c-runtime-library/reference/rmtmp.md)|Удаление временных файлов, созданных **tmpfile**|
 |[scanf, _scanf_l, wscanf, _wscanf_l](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md),[scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)|Считывание форматированных данных из **stdin**|
@@ -95,5 +95,5 @@ ms.locfileid: "79444618"
 
 ## <a name="see-also"></a>См. также раздел
 
-[Ввод и вывод](../c-runtime-library/input-and-output.md)<br/>
-[Универсальные подпрограммы среды выполнения C по категориям](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Входные и выходные данные](../c-runtime-library/input-and-output.md)<br/>
+[Подпрограммы универсальной среды выполнения C по категориям](../c-runtime-library/run-time-routines-by-category.md)<br/>

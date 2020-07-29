@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::back_insert_iterator [C++], container_type
 - std::back_insert_iterator [C++], reference
 ms.assetid: a1ee07f2-cf9f-46a1-8608-cfaf207f9713
-ms.openlocfilehash: c3bbb2ec8ce9a09dd17c4744a80913f95d85bd00
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0a518253c28d89de6eeed51e152e11bfcb8bb969
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376909"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87203887"
 ---
 # <a name="back_insert_iterator-class"></a>Класс back_insert_iterator
 
@@ -30,7 +30,7 @@ class back_insert_iterator;
 
 ### <a name="parameters"></a>Параметры
 
-*Контейнер*\
+*Контейнера*\
 Тип контейнера, в конец которого итератор `back_insert_iterator` вставит элементы.
 
 ## <a name="remarks"></a>Remarks
@@ -48,23 +48,23 @@ class back_insert_iterator;
 |Имя типа|Описание|
 |-|-|
 |[container_type](#container_type)|Тип, предоставляющий контейнер для итератора `back_insert_iterator`.|
-|[Ссылки](#reference)|Тип, предоставляющий ссылку для итератора `back_insert_iterator`.|
+|[reference](#reference)|Тип, предоставляющий ссылку для итератора `back_insert_iterator`.|
 
 ### <a name="operators"></a>Операторы
 
 |Оператор|Описание|
 |-|-|
-|[оператор](#op_star)|Оператор dereferencing используется для реализации выражения \* `i`  =  `x` вывода итератора для задней вставки.|
-|[оператор](#op_add_add)|Увеличивает `back_insert_iterator` до следующего местоположения, в котором можно сохранить значение.|
-|[оператора](#op_eq)|Оператор назначения используется для реализации выражения \* `i`  =  `x` вывода итератора для задней вставки.|
+|[станции](#op_star)|Оператор разыменования, используемый для реализации выражения итератора вывода \* `i`  =  `x` для вставки обратной передачи.|
+|[operator + +](#op_add_add)|Увеличивает `back_insert_iterator` до следующего местоположения, в котором можно сохранить значение.|
+|[Оператор =](#op_eq)|Оператор присваивания, используемый для реализации выражения итератора вывода \* `i`  =  `x` для вставки обратной передачи.|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок** \<: итератор>
+**Заголовок**:\<iterator>
 
 **Пространство имен:** std
 
-## <a name="back_insert_iteratorback_insert_iterator"></a><a name="back_insert_iterator"></a>back_insert_iterator::back_insert_iterator
+## <a name="back_insert_iteratorback_insert_iterator"></a><a name="back_insert_iterator"></a>back_insert_iterator:: back_insert_iterator
 
 Создает итератор `back_insert_iterator`, который добавляет элементы в местоположение за последним элементом в контейнере.
 
@@ -129,7 +129,7 @@ The initial vector vec is: ( 1 2 3 ).
 After the insertions, the vector vec is: ( 1 2 3 40 50 600 700 ).
 ```
 
-## <a name="back_insert_iteratorcontainer_type"></a><a name="container_type"></a>back_insert_iterator::container_type
+## <a name="back_insert_iteratorcontainer_type"></a><a name="container_type"></a>back_insert_iterator:: container_type
 
 Тип, предоставляющий контейнер для итератора `back_insert_iterator`.
 
@@ -183,9 +183,9 @@ The original vector vec is: ( 1 2 3 ).
 After the insertion, the vector is: ( 1 2 3 40 ).
 ```
 
-## <a name="back_insert_iteratoroperator"></a><a name="op_star"></a>back_insert_iterator::оператор\*
+## <a name="back_insert_iteratoroperator"></a><a name="op_star"></a>back_insert_iterator:: operator\*
 
-Оператор dereferencing используется для реализации выражения \* итератора вывода *i* = *x*.
+Оператор разыменования, используемый для реализации выражения итератора вывода \* *i*  =  *x*.
 
 ```cpp
 back_insert_iterator<Container>& operator*();
@@ -197,7 +197,7 @@ back_insert_iterator<Container>& operator*();
 
 ### <a name="remarks"></a>Remarks
 
-Используется для реализации значения**value** =  ** \*** итератора вывода Iter. Если **Iter** является итератором, который адресует элемент в последовательности, то **\*Iter** = **value** заменяет этот элемент значением и не изменяет общее число элементов в последовательности.
+Используется для реализации значения ** \* iter**выражения итератора вывода  =  **value**. Если **Iter** является итератором, который адресует элемент в последовательности, то **\*Iter** = **value** заменяет этот элемент значением и не изменяет общее число элементов в последовательности.
 
 ### <a name="example"></a>Пример
 
@@ -243,7 +243,7 @@ The vector vec is: ( 1 2 3 ).
 After the insertions, the vector vec becomes: ( 1 2 3 10 20 ).
 ```
 
-## <a name="back_insert_iteratoroperator"></a><a name="op_add_add"></a>back_insert_iterator:оператор
+## <a name="back_insert_iteratoroperator"></a><a name="op_add_add"></a>back_insert_iterator:: operator + +
 
 Увеличивает `back_insert_iterator` до следующего местоположения, в котором можно сохранить значение.
 
@@ -304,7 +304,7 @@ The vector vec is: ( 10 20 ).
 After the insertions, the vector vec becomes: ( 10 20 30 40 ).
 ```
 
-## <a name="back_insert_iteratoroperator"></a><a name="op_eq"></a>back_insert_iterator:оператор
+## <a name="back_insert_iteratoroperator"></a><a name="op_eq"></a>back_insert_iterator:: operator =
 
 Добавляет или вставляет значение в конец контейнера.
 
@@ -315,7 +315,7 @@ back_insert_iterator<Container>& operator=(typename Container::value_type&& val)
 
 ### <a name="parameters"></a>Параметры
 
-*Валь*\
+*Val*\
 Значение для вставки в контейнер.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -326,11 +326,11 @@ back_insert_iterator<Container>& operator=(typename Container::value_type&& val)
 
 Первый оператор-член вычисляет `Container.push_back( val)`,
 
-затем возвращает `*this`. Второй оператор-член вычисляет
+затем возвращает **`*this`** . Второй оператор-член вычисляет
 
 `container->push_back((typename Container::value_type&&)val)`,
 
-затем возвращает `*this`.
+затем возвращает **`*this`** .
 
 ### <a name="example"></a>Пример
 
@@ -371,7 +371,7 @@ int main( )
 }
 ```
 
-## <a name="back_insert_iteratorreference"></a><a name="reference"></a>back_insert_iterator::reference
+## <a name="back_insert_iteratorreference"></a><a name="reference"></a>back_insert_iterator:: Reference
 
 Тип, предоставляющий ссылку для итератора `back_insert_iterator`.
 
@@ -423,6 +423,6 @@ The last element in the vector vec is: 3.
 
 ## <a name="see-also"></a>См. также раздел
 
-[\<итератор>](../standard-library/iterator.md)\
-[Безопасность резьбы в стандартной библиотеке СЗ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Стандартная библиотечная справка по СЗ](../standard-library/cpp-standard-library-reference.md)
+[\<iterator>](../standard-library/iterator.md)\
+[Безопасность потоков в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)

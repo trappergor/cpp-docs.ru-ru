@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - calling conventions
 ms.assetid: 11b1e45c-8fd1-420b-bca0-a19e294c1d85
-ms.openlocfilehash: 432cb1b6910db5ea735288edfbf6aa9e10f0a486
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d351ae064b8c9bdd0599a1d6981166371a62af58
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190291"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216613"
 ---
 # <a name="calling-conventions"></a>Соглашения о вызовах
 
@@ -21,16 +21,16 @@ ms.locfileid: "80190291"
 
 ## <a name="topics-in-this-section"></a>Разделы этой статьи
 
-- [Правила передачи аргументов и именования](../cpp/argument-passing-and-naming-conventions.md) (`__cdecl`, `__stdcall`, `__fastcall`и др.)
+- [Передача аргументов и соглашения об именовании](../cpp/argument-passing-and-naming-conventions.md) ( **`__cdecl`** ,, **`__stdcall`** **`__fastcall`** и др.)
 
-- [Пример вызова. Прототип и вызов функции](../cpp/calling-example-function-prototype-and-call.md)
+- [Пример вызова: прототип функции и вызов](../cpp/calling-example-function-prototype-and-call.md)
 
-- [Использование вызовов функций с атрибутом naked для записи пользовательского кода пролога или эпилога](../cpp/naked-function-calls.md)
+- [Использование вызова функции с атрибутом naked для написания собственного кода пролога и эпилога](../cpp/naked-function-calls.md)
 
-- [Сопроцессор для вычислений с плавающей запятой и соглашения о вызовах](../cpp/floating-point-coprocessor-and-calling-conventions.md)
+- [Соглашения о сопроцессоре и вызовах с плавающей точкой](../cpp/floating-point-coprocessor-and-calling-conventions.md)
 
 - [Устаревшие соглашения о вызовах](../cpp/obsolete-calling-conventions.md)
 
 ## <a name="see-also"></a>См. также раздел
 
-[Модификаторы, используемые в системах Майкрософт](../cpp/microsoft-specific-modifiers.md)
+[Модификаторы, специфичные для Майкрософт](../cpp/microsoft-specific-modifiers.md)

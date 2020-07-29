@@ -37,12 +37,12 @@ helpviewer_keywords:
 - fmaf function
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
-ms.openlocfilehash: be3578aa9c66f329e191749b4506091bff69b1eb
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d82565ed53f311ef1b2cf5942d207bf96090bd13
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914951"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217003"
 ---
 # <a name="fma-fmaf-fmal"></a>fma, fmaf, fmal
 
@@ -101,10 +101,10 @@ long double fmal(
 
 |Проблема|Возвращает|
 |-----------|------------|
-|*x* = бесконечность, *y* = 0 или<br /><br /> *x* = 0, *y* = бесконечность|NaN|
-|*x* или *y* = точное ± бесконечности, *z* = бесконечность с противоположным знаком|NaN|
-|*x* или *y* = NaN|NaN|
-|not (*x* = 0, *y*= неопределенное) и *z* = NaN<br /><br /> not (*x*= неопределенный, *y*= 0) и *z* = NaN|NaN|
+|*x* = бесконечность, *y* = 0 или<br /><br /> *x* = 0, *y* = бесконечность|Не число|
+|*x* или *y* = точное ± бесконечности, *z* = бесконечность с противоположным знаком|Не число|
+|*x* или *y* = NaN|Не число|
+|not (*x* = 0, *y*= неопределенное) и *z* = NaN<br /><br /> not (*x*= неопределенный, *y*= 0) и *z* = NaN|Не число|
 |Ошибка переполнения диапазона|± HUGE_VAL, ± HUGE_VALF или ± HUGE_VALL|
 |Ошибка недостаточного заполнения диапазона|правильное значение (после округления).|
 
@@ -112,7 +112,7 @@ long double fmal(
 
 ## <a name="remarks"></a>Remarks
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **FMA** , которые принимают и возвращают типы **float** и **Long** **Double** . В программе на языке C **FMA** всегда принимает и возвращает значение **типа Double**.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **FMA** , которые принимают и возвращают **`float`** **`long double`** типы и. В программе на языке C **FMA** всегда принимает и возвращает **`double`** .
 
 Эта функция вычисляет значение с бесконечной точностью, после чего округляет результат.
 
@@ -120,7 +120,7 @@ long double fmal(
 
 ## <a name="requirements"></a>Требования
 
-|Функция|Заголовок C|Заголовок C++|
+|Компонент|Заголовок C|Заголовок C++|
 |--------------|--------------|------------------|
 |**FMA**, **фмаф**, **фмал**|\<math.h>|\<cmath>|
 
@@ -128,6 +128,6 @@ long double fmal(
 
 ## <a name="see-also"></a>См. также раздел
 
-[Алфавитный указатель функций](crt-alphabetical-function-reference.md)<br/>
+[Алфавитный справочник по функциям](crt-alphabetical-function-reference.md)<br/>
 [remainder, remainderf, remainderl](remainder-remainderf-remainderl.md)<br/>
 [remquo, remquof, remquol](remquo-remquof-remquol.md)<br/>

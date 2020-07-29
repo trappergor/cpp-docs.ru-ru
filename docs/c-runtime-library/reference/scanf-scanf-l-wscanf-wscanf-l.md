@@ -43,19 +43,19 @@ helpviewer_keywords:
 - wscanf_l function
 - _wscanf_l function
 ms.assetid: 73eac607-117f-4be4-9ff0-4afd9cf3c848
-ms.openlocfilehash: df63baa8ffa878a4a65c84e07f0e68aa383e79cf
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 62f97c901bc7e6dc34a2db6ad80193cc4aaa986a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079214"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231355"
 ---
 # <a name="scanf-_scanf_l-wscanf-_wscanf_l"></a>scanf, _scanf_l, wscanf, _wscanf_l
 
 Считывает отформатированные данные из стандартного входного потока. Существуют более безопасные версии этих функций; см. раздел [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md).
 
 > [!NOTE]
-> В Visual Studio 2015 семейство функций `printf` и `scanf` было объявлено как **встроенное** и перемещено в заголовки `<stdio.h>` и `<conio.h>`. При переносе старого кода вы можете увидеть ошибку *LNK2019* в подключении к этим функциям. Дополнительные сведения см. в [разделе C++ журнал изменений Visual 2003-2015](../../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio).
+> В Visual Studio 2015 `printf` функции и `scanf` семейство функций были объявлены как **`inline`** и перемещены в `<stdio.h>` `<conio.h>` заголовки и. При переносе старого кода вы можете увидеть ошибку *LNK2019* в подключении к этим функциям. Дополнительные сведения см. в статье [Visual C++ журнал изменений 2003-2015](../../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -99,25 +99,25 @@ int _wscanf_l(
 
 Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Функция **scanf** считывает данные из стандартного входного потока **stdin** и записывает данные в расположение, заданное *аргументом*. Каждый *аргумент* должен быть указателем на переменную типа, которая соответствует спецификатору типа в *формате*. Если копирование производится между перекрывающимися строками, поведение не определено.
 
 > [!IMPORTANT]
-> При чтении строки с помощью **scanf**всегда указывайте ширину для формата **% s** (например, **"%32"** вместо **"% s"** ); в противном случае входные данные неправильного формата могут легко вызвать переполнение буфера. Кроме того, рекомендуется использовать [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) или [fgets](fgets-fgetws.md).
+> При чтении строки с помощью **scanf**всегда указывайте ширину для формата **% s** (например, **"%32"** вместо **"% s"**); в противном случае входные данные неправильного формата могут легко вызвать переполнение буфера. Кроме того, рекомендуется использовать [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) или [fgets](fgets-fgetws.md).
 
 **wscanf** — это версия **scanf**для расширенных символов; Аргумент *формата* для **wscanf** является строкой расширенных символов. поведение **wscanf** и **scanf** идентично, если поток открыт в режиме ANSI. **scanf** в настоящее время не поддерживает входные данные из потока Юникода.
 
 Версии этих функций с суффиксом **_l** идентичны за исключением того, что они используют переданный параметр языкового стандарта вместо локали текущего потока.
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tscanf**|**scanf**|**scanf**|**wscanf**|
 |**_tscanf_l**|**_scanf_l**|**_scanf_l**|**_wscanf_l**|
 
-Дополнительные сведения см. в разделе [Поля спецификации формата — функции scanf и wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
+Дополнительные сведения см. в разделе [поля спецификации формата — функции scanf и функции wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -126,7 +126,7 @@ int _wscanf_l(
 |**scanf**, **_scanf_l**|\<stdio.h>|
 |**wscanf**, **_wscanf_l**|\<stdio.h> или \<wchar.h>|
 
-Консоль не поддерживается в приложениях универсальная платформа Windows (UWP). Стандартные дескрипторы потока, связанные с консолью, **stdin**, **stdout**и **stderr**, должны быть перенаправляться до того, как функции времени выполнения C смогут использовать их в приложениях UWP. Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).
+Консоль не поддерживается в приложениях универсальная платформа Windows (UWP). Стандартные дескрипторы потока, связанные с консолью, **stdin**, **stdout**и **stderr**, должны быть перенаправляться до того, как функции времени выполнения C смогут использовать их в приложениях UWP. Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -166,12 +166,12 @@ The number of fields input is 6
 The contents are: 36 92.300003 y n Wide characters
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-[Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
+[Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)<br/>
 [Локаль](../../c-runtime-library/locale.md)<br/>
 [fscanf, _fscanf_l, fwscanf, _fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [sscanf, _sscanf_l, swscanf, _swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md)<br/>

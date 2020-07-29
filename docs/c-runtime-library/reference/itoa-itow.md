@@ -113,12 +113,12 @@ helpviewer_keywords:
 - converting numbers, to strings
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
-ms.openlocfilehash: 424ee4fb732811bffc6a83c0de57cd35fe747c42
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 28e6e2300c96e6236ffc4fd927d8153a1f8bcd13
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914665"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216938"
 ---
 # <a name="itoa-_itoa-ltoa-_ltoa-ultoa-_ultoa-_i64toa-_ui64toa-_itow-_ltow-_ultow-_i64tow-_ui64tow"></a>itoa, _itoa, ltoa, _ltoa, ultoa, _ultoa, _i64toa, _ui64toa, _itow, _ltow, _ultow, _i64tow, _ui64tow
 
@@ -197,7 +197,7 @@ wchar_t * _ui64tow( unsigned long long value, wchar_t (&buffer)[size],
 
 ## <a name="remarks"></a>Remarks
 
-Функции **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**и **_ui64toa** преобразуют цифры заданного аргумента *значения* в строку символов, заканчивающуюся нулем, и сохраняют результат (до 33 символов для **_itoa**, **_ltoa**и **_ultoa**и 65 для **_i64toa** и **_ui64toa**) в *буфере*. Если *основание системы счисления* равно 10, а *значение* отрицательное, то первым символом хранимой строки будет знак**-**"минус" (). Функции **_itow**, **_ltow**, **_ultow**, **_i64tow**и **_ui64tow** — это версии **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**и **_ui64toa**для расширенных символов соответственно.
+Функции **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**и **_ui64toa** преобразуют цифры заданного аргумента *значения* в строку символов, заканчивающуюся нулем, и сохраняют результат (до 33 символов для **_itoa**, **_ltoa**и **_ultoa**и 65 для **_i64toa** и **_ui64toa**) в *буфере*. Если *основание системы счисления* равно 10, а *значение* отрицательное, то первым символом хранимой строки будет знак "минус" ( **-** ). Функции **_itow**, **_ltow**, **_ultow**, **_i64tow**и **_ui64tow** — это версии **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**и **_ui64toa**для расширенных символов соответственно.
 
 > [!IMPORTANT]
 > Эти функции могут записывать после конца буфера, который слишком мал. Чтобы предотвратить переполнение буфера, убедитесь, что *буфер* достаточно велик, чтобы вместить преобразованные цифры, а также завершающий символ NULL и знак подписывания. Неправильное использование этих функций может привести к серьезным проблемам безопасности в коде.
@@ -240,7 +240,7 @@ By default, this function's global state is scoped to the application. To change
 |**_i64toa**, **_i64tow**|16<br/>10<br/>8<br/>2|**_MAX_I64TOSTR_BASE16_COUNT**<br/>**_MAX_I64TOSTR_BASE10_COUNT**<br/>**_MAX_I64TOSTR_BASE8_COUNT**<br/>**_MAX_I64TOSTR_BASE2_COUNT**|
 |**_ui64toa**, **_ui64tow**|16<br/>10<br/>8<br/>2|**_MAX_U64TOSTR_BASE16_COUNT**<br/>**_MAX_U64TOSTR_BASE10_COUNT**<br/>**_MAX_U64TOSTR_BASE8_COUNT**<br/>**_MAX_U64TOSTR_BASE2_COUNT**|
 
-В этом примере используется макрос счетчика преобразования для определения буфера, достаточного для того, чтобы он содержал **неподписанную длинную** длину в базовом 2:
+В этом примере используется макрос счетчика преобразования для определения буфера, достаточного для размещения **`unsigned long long`** в базовом 2:
 
 ```cpp
 #include <wchar.h>

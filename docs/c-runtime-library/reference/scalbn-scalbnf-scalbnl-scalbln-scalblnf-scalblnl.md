@@ -46,12 +46,12 @@ helpviewer_keywords:
 - scalbnf function
 - scalblnf function
 ms.assetid: df2f1543-8e39-4af4-a5cf-29307e64807d
-ms.openlocfilehash: 3d450459b4f428e5d5f1f02eaa71a126e4f710df
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 351f56629435754f74565d9674874d5a73915773
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918191"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231381"
 ---
 # <a name="scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl"></a>scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl
 
@@ -107,7 +107,7 @@ long double scalblnl(
 *x*<br/>
 Значение с плавающей запятой.
 
-*расширением*<br/>
+*exp*<br/>
 Целый показатель степени.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -118,15 +118,15 @@ long double scalblnl(
 
 ## <a name="remarks"></a>Remarks
 
-**FLT_RADIX** определяется в \<> float. h как собственное основание системы счисления с плавающей запятой; в двоичных системах он имеет значение 2, а **scalbn** эквивалентен [ldexp](ldexp.md).
+**FLT_RADIX** определяется в \<float.h> качестве собственного системы счисления с плавающей запятой; в двоичных системах он имеет значение 2, а **scalbn** эквивалентно [ldexp](ldexp.md).
 
-Так как C++ допускает перегрузку, можно вызывать перегрузки **scalbn** и **scalbln** , которые принимают и возвращают типы **float** или **Long** типа **Double** . В программе на языке C **scalbn** всегда принимает **Double** и **int** и возвращает **Double**, а **scalbln** всегда принимает Double и **Long** и **возвращает** значение **типа Double**.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **scalbn** и **scalbln** , которые принимают и возвращают **`float`** **`long double`** типы или. В программе на языке C **scalbn** всегда принимает **`double`** и **`int`** возвращает **`double`** , а **scalbln** всегда принимает, а и **`double`** **`long`** возвращает **`double`** .
 
 По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
-|Функция|Заголовок C|Заголовок C++|
+|Компонент|Заголовок C|Заголовок C++|
 |--------------|--------------|------------------|
 |**scalbn**, **скалбнф**, **скалбнл**, **scalbln**, **скалблнф**, **скалблнл**|\<math.h>|\<cmath>|
 
@@ -158,7 +158,7 @@ int main( void )
 
 ## <a name="see-also"></a>См. также
 
-[Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
+[Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [frexp](frexp.md)<br/>
 [ldexp](ldexp.md)<br/>
 [modf, modff, modfl](modf-modff-modfl.md)<br/>

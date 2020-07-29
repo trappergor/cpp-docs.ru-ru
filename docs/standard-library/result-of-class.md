@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::result_of_t
 - std::result_of::type
 ms.assetid: 5374a096-4b4a-4712-aa97-6852c5cdd6be
-ms.openlocfilehash: ab575ac31936e7003f19fc2ceb3c5b1727d0728c
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 54806f965cc46058e3c82b4863bb45782abe079e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688998"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87202315"
 ---
 # <a name="result_of-class"></a>Класс result_of
 
@@ -37,23 +37,23 @@ template<class T>
 
 ### <a name="parameters"></a>Параметры
 
-*Fn* \
+*FN*\
 Вызываемый тип для запроса.
 
-*Аргтипес* \
+*аргтипес*\
 Типы списка аргументов к вызываемому типу для запроса.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
-Используйте этот шаблон для определения во время компиляции типа результата `Fn` (`ArgTypes`), где *fn* — это вызываемый тип, ссылка на функцию или ссылка на вызываемый тип, вызываемая с помощью списка аргументов типов в *аргтипес*. @No__t_0 член шаблона класса называет тип результата `decltype(std::invoke(declval<Fn>(), declval<ArgTypes>()...))`, если невычисленное выражение `std::invoke(declval<Fn>(), declval<ArgTypes>()...)` имеет правильный формат. В противном случае в шаблоне класса не будет `type` член. Тип *fn* и все типы в пакете параметров *аргтипес* должны быть полными типами, **void**или массивами неизвестной привязки. Не рекомендуется в пользу [invoke_result](invoke-result-class.md) в c++ 17.
+Используйте этот шаблон для определения во время компиляции типа результата `Fn` ( `ArgTypes` ), где *fn* — это вызываемый тип, ссылка на функцию или ссылка на вызываемый тип, вызываемая с помощью списка аргументов типов в *аргтипес*. `type`Член шаблона класса называет тип результата, `decltype(std::invoke(declval<Fn>(), declval<ArgTypes>()...))` Если неоцененное выражение `std::invoke(declval<Fn>(), declval<ArgTypes>()...)` имеет правильный формат. В противном случае шаблон класса не имеет члена `type` . Тип *fn* и все типы в пакете параметров *аргтипес* должны быть полными типами, **`void`** или массивами с неизвестной границей. Не рекомендуется в пользу [invoke_result](invoke-result-class.md) в c++ 17.
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<type_traits>
+**Заголовок:**\<type_traits>
 
 **Пространство имен:** std
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [<type_traits>](../standard-library/type-traits.md)\
-[класс invoke_result](invoke-result-class.md)
+[Класс invoke_result](invoke-result-class.md)

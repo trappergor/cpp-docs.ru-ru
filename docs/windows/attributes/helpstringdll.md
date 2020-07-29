@@ -1,17 +1,17 @@
 ---
-title: хелпстрингдлл (C++ атрибут com)
+title: хелпстрингдлл (атрибут COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpstringdll
 helpviewer_keywords:
 - helpstringdll attribute [C++]
 ms.assetid: 121271fa-f061-492b-b87f-bbfcf4b02e7b
-ms.openlocfilehash: 4ec0d959b2fc10fc34bfc7050a1970359dae5bbc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 46323a7ff4164111b48aed24b12bef5d400afacc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168126"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217250"
 ---
 # <a name="helpstringdll"></a>helpstringdll
 
@@ -53,10 +53,10 @@ __interface IMyI
 
 |||
 |-|-|
-|**Применение**|**класс**, **интерфейс**, метод интерфейса|
-|**Повторяемый**|нет|
-|**Обязательные атрибуты**|None|
-|**Недопустимые атрибуты**|None|
+|**Относится к**|**`class`**, **интерфейс**, метод интерфейса|
+|**REPEATABLE**|Нет|
+|**Требуемые атрибуты**|Нет|
+|**Недопустимые атрибуты**|Нет|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
@@ -64,5 +64,5 @@ __interface IMyI
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты интерфейса](interface-attributes.md)<br/>
-[Атрибуты классов](class-attributes.md)<br/>
+[Атрибуты класса](class-attributes.md)<br/>
 [Атрибуты метода](method-attributes.md)

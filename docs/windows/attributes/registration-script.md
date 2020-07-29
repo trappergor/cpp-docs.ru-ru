@@ -1,17 +1,17 @@
 ---
-title: registration_script (C++ атрибут com)
+title: registration_script (атрибут COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.registration_script
 helpviewer_keywords:
 - registration_script attribute
 ms.assetid: 786f8072-9187-4163-a979-7a604dd4c888
-ms.openlocfilehash: 780f3d41676d01458f47542d6f0862a278edff6a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 53b5cb0cb36d9d6627f16f99cbb0d142af8cee6d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214582"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217224"
 ---
 # <a name="registration_script"></a>registration_script
 
@@ -25,8 +25,8 @@ ms.locfileid: "80214582"
 
 ### <a name="parameters"></a>Параметры
 
-*индекса*<br/>
-Полный путь к файлу пользовательского скрипта регистрации (RGS). Значение **None**, например `script = "none"`, указывает на то, что компонент coclass не имеет требований регистрации.
+*script*<br/>
+Полный путь к файлу пользовательского скрипта регистрации (RGS). Значение **None**, например `script = "none"` , указывает, что компонент coclass не имеет требований регистрации.
 
 ## <a name="remarks"></a>Remarks
 
@@ -63,15 +63,15 @@ class CMyClass:public IFace {};
 
 |||
 |-|-|
-|**Применение**|**класс**, **Структура**|
-|**Повторяемый**|нет|
-|**Обязательные атрибуты**|Один или несколько из следующих элементов: `coclass`, `progid`или `vi_progid`.|
-|**Недопустимые атрибуты**|None|
+|**Относится к**|**`class`**, **`struct`**|
+|**REPEATABLE**|Нет|
+|**Требуемые атрибуты**|Один или несколько из следующих элементов: `coclass` , `progid` или `vi_progid` .|
+|**Недопустимые атрибуты**|Нет|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>См. также раздел
 
 [Атрибуты COM](com-attributes.md)<br/>
-[Атрибуты классов](class-attributes.md)<br/>
-[rdx](rdx.md)
+[Атрибуты класса](class-attributes.md)<br/>
+[RDX](rdx.md)

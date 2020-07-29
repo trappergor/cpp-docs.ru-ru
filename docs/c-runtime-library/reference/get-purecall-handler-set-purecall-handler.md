@@ -37,12 +37,12 @@ helpviewer_keywords:
 - _set_purecall_handler_m function
 - _get_purecall_handler function
 ms.assetid: 2759b878-8afa-4129-86e7-72afc2153d9c
-ms.openlocfilehash: 73fc2ffe5cd4ed65c8695432b53816090bbc5f8e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9f21258fa1f6ecd2d1717b00ef2cecaee9c865e2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955677"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216951"
 ---
 # <a name="_get_purecall_handler-_set_purecall_handler"></a>_get_purecall_handler, _set_purecall_handler
 
@@ -65,17 +65,17 @@ _purecall_handler __cdecl _set_purecall_handler(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Предыдущий **_purecall_handler**. Возвращает **nullptr** , если не существовало предыдущего обработчика.
+Предыдущая **_purecall_handler**. Возвращает **`nullptr`** , если предыдущий обработчик отсутствует.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Функции **_get_purecall_handler** и **_set_purecall_handler** являются специфичными для Microsoft и применяются только к C++ коду.
+Функции **_get_purecall_handler** и **_set_purecall_handler** являются специфичными для Microsoft и применяются только к коду C++.
 
 Вызов чистой виртуальной функции является ошибкой, так как она не имеет реализации. По умолчанию компилятор создает код для вызова функции обработчика ошибок при вызове чистой виртуальной функции, который завершает программу. Можно установить собственный обработчик ошибок для вызовов чистых виртуальных функций, который будет перехватывать их в целях отладки или ведения отчетности. Чтобы использовать собственный обработчик ошибок, создайте функцию с сигнатурой **_purecall_handler** , а затем используйте **_set_purecall_handler** , чтобы сделать ее текущим обработчиком.
 
 Поскольку существует только один **_purecall_handler** для каждого процесса, при вызове **_set_purecall_handler** он немедленно влияет на все потоки. Последний вызывающий элемент в любом потоке задает обработчик.
 
-Чтобы восстановить поведение по умолчанию, вызовите **_set_purecall_handler** с помощью аргумента **nullptr** .
+Чтобы восстановить поведение по умолчанию, вызовите **_set_purecall_handler** с помощью **`nullptr`** аргумента.
 
 ## <a name="requirements"></a>Требования
 
@@ -83,7 +83,7 @@ _purecall_handler __cdecl _set_purecall_handler(
 |-------------|---------------------|
 |**_get_purecall_handler**, **_set_purecall_handler**|\<cstdlib> или \<stdlib.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -134,7 +134,7 @@ int _tmain(int argc, _TCHAR* argv[])
 In _purecall_handler.
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Обработка ошибок](../../c-runtime-library/error-handling-crt.md)<br/>
 [_purecall](purecall.md)<br/>

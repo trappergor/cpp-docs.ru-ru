@@ -58,12 +58,12 @@ helpviewer_keywords:
 - _mbsnccnt function
 - _wcsncnt function
 ms.assetid: 2a022e9e-a307-4acb-a66b-e56e5357f848
-ms.openlocfilehash: 020b844d884182ae7553fec9e9db746987189910
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 77746af98e5d62b80d5a0d2d93eb1f717c74b33e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914214"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231342"
 ---
 # <a name="_strncnt-_wcsncnt-_mbsnbcnt-_mbsnbcnt_l-_mbsnccnt-_mbsnccnt_l"></a>_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l
 
@@ -116,7 +116,7 @@ size_t _mbsnccnt_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**_mbsnbcnt** и **_mbsnbcnt_l** возвращают число байтов, найденных в первом *количестве* многобайтовых символов *str*. **_mbsnccnt** и **_mbsnccnt_l** возвращают количество символов, найденных в первом *числе* байтов *str*. Если символ NULL обнаружен до завершения проверки *str* , он возвращает число байтов или символов, найденных перед нулевым символом. Если *str* состоит *из меньшего числа символов или* байтов, они возвращают количество символов или байтов в строке. Если *Count* меньше нуля, они возвращают 0. В предыдущих версиях эти функции имели возвращаемое значение типа **int** , а не **size_t**.
+**_mbsnbcnt** и **_mbsnbcnt_l** возвращают число байтов, найденных в первом *количестве* многобайтовых символов *str*. **_mbsnccnt** и **_mbsnccnt_l** возвращают количество символов, найденных в первом *числе* байтов *str*. Если символ NULL обнаружен до завершения проверки *str* , он возвращает число байтов или символов, найденных перед нулевым символом. Если *str* состоит *из меньшего числа символов или* байтов, они возвращают количество символов или байтов в строке. Если *Count* меньше нуля, они возвращают 0. В предыдущих версиях эти функции имели возвращаемое значение типа, **`int`** а не **size_t**.
 
 **_strncnt** возвращает число символов в первом *числе* байтов строкового *str*в однобайтовой строке. **_wcsncnt** возвращает число символов в первых расширенных символах *строки расширенных* *символов.*
 
@@ -138,9 +138,9 @@ size_t _mbsnccnt_l(
 |-------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsnbcnt**|**_strncnt**|**_mbsnbcnt**|**_wcsncnt**|
 |**_tcsnccnt**|**_strncnt**|**_mbsnbcnt**|н/д|
-|**_wcsncnt**|н/д|н/д|**_mbsnbcnt**|
-|**_wcsncnt**|н/д|н/д|**_mbsnccnt**|
-|н/д|н/д|**_mbsnbcnt_l**|**_mbsnccnt_l**|
+|**_wcsncnt**|Недоступно|Недоступно|**_mbsnbcnt**|
+|**_wcsncnt**|Недоступно|Недоступно|**_mbsnccnt**|
+|Недоступно|Недоступно|**_mbsnbcnt_l**|**_mbsnccnt_l**|
 
 ## <a name="requirements"></a>Требования
 
@@ -185,6 +185,6 @@ The first 10 characters are single-byte.
 ## <a name="see-also"></a>См. также
 
 [Управление строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Локаль](../../c-runtime-library/locale.md)<br/>
 [Интерпретация последовательностей многобайтовых символов](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
