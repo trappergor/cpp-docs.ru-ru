@@ -1,17 +1,17 @@
 ---
-title: RDX (C++ атрибут com)
+title: RDX (атрибут COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.rdx
 helpviewer_keywords:
 - rdx attribute
 ms.assetid: ff8e4312-c1ad-4934-bdaa-86f54409651e
-ms.openlocfilehash: f0140b759b1d78eb1284213a0dc47d9600b2a83b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b5f0981f249653b1068e2fbec3d02d3209d5f935
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214634"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232759"
 ---
 # <a name="rdx"></a>rdx
 
@@ -32,7 +32,7 @@ ms.locfileid: "80214634"
 Используемых Указывает поле значения, которое должно быть задано. Если поле значения с таким именем еще не существует в ключе, оно добавляется.
 
 *регтипе*<br/>
-Тип добавляемого раздела реестра. Может быть одним из следующих: `text`, `dword`, `binary`или `CString`.
+Тип добавляемого раздела реестра. Может быть одним из следующих: `text` , `dword` , `binary` или `CString` .
 
 ## <a name="remarks"></a>Remarks
 
@@ -46,10 +46,10 @@ ms.locfileid: "80214634"
 
 |||
 |-|-|
-|**Применение**|член **класса** или **структуры**|
-|**Повторяемый**|нет|
-|**Обязательные атрибуты**|None|
-|**Недопустимые атрибуты**|None|
+|**Относится к**|**`class`** или **`struct`** элемент|
+|**REPEATABLE**|Нет|
+|**Требуемые атрибуты**|Нет|
+|**Недопустимые атрибуты**|Нет|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
@@ -76,7 +76,7 @@ public:
 };
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [Атрибуты COM](com-attributes.md)<br/>
 [registration_script](registration-script.md)

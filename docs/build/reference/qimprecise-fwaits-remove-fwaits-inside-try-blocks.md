@@ -7,16 +7,16 @@ helpviewer_keywords:
 - -Qimprecise_fwaits compiler option (C++)
 - /Qimprecise_fwaits compiler option (C++)
 ms.assetid: b1501f21-7e08-4fea-95e8-176ec03a635b
-ms.openlocfilehash: 40683382686ea64a80563f3f29b7d3523f4144a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 424feda66f6925cb305256249101ea4013e3090f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319594"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232681"
 ---
-# <a name="qimprecisefwaits-remove-fwaits-inside-try-blocks"></a>/Qimprecise_fwaits (Удалить ожидания в блоке try)
+# <a name="qimprecise_fwaits-remove-fwaits-inside-try-blocks"></a>/Qimprecise_fwaits (Удалить ожидания в блоке try)
 
-Удаляет `fwait` внутренние для команды `try` блокировать при использовании [/fp: except](fp-specify-floating-point-behavior.md) параметр компилятора.
+Удаляет `fwait` команды, внутренние для **`try`** блоков, при использовании параметра компилятора [/FP: except](fp-specify-floating-point-behavior.md) .
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -24,13 +24,13 @@ ms.locfileid: "62319594"
 /Qimprecise_fwaits
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Этот параметр не действует при **/fp: except** не указан. При указании **/fp: except** параметр, компилятор вставит `fwait` команду рядом с каждой строкой кода в `try` блока. Таким образом компилятор может определить конкретной строки кода, которая вызвала исключение. **/ Qimprecise_fwaits** удаляет внутренней `fwait` инструкции, оставляя только ожиданий вокруг `try` блока. Это повышает производительность, но компилятор только будут иметь возможность выбрать, какой `try` блок вызывает исключение, а не строку.
+Этот параметр не действует, если **/FP: except** также не задан. Если указать параметр **/FP: except** , компилятор вставит `fwait` в блоке команды вокруг каждой строки кода **`try`** . Таким образом, компилятор может опознать конкретную строку кода, которая создает исключение. **/Qimprecise_fwaits** удаляют внутренние `fwait` инструкции, в результате чего выполняется только ожидание **`try`** блока. Это повышает производительность, но компилятор может только сказать, какой **`try`** блок вызывает исключение, а не какую строку.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Подробнее см. в статье [Настройка компилятора C++ и свойства сборки в Visual Studio](../working-with-project-properties.md).
 
 1. Откройте папку **C/C++** .
 
@@ -42,8 +42,8 @@ ms.locfileid: "62319594"
 
 - См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также статью
 
-[Параметры /Q (низкоуровневые операции)](q-options-low-level-operations.md)<br/>
+[Параметры/q (низкоуровневые операции)](q-options-low-level-operations.md)<br/>
 [Параметры компилятора MSVC](compiler-options.md)<br/>
-[Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)
+[Синтаксис командной строки компилятора КОМПИЛЯТОРОМ MSVC](compiler-command-line-syntax.md)

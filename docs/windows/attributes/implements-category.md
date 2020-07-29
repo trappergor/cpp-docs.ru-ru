@@ -1,17 +1,17 @@
 ---
-title: implements_category (C++ атрибут com)
+title: implements_category (атрибут COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.implements_category
 helpviewer_keywords:
 - implements_category attribute
 ms.assetid: fb162df3-1ebe-43dc-a084-668d7ef8c03f
-ms.openlocfilehash: dd55c7474a0a8a273ddfab212b3ebcaa6e3b4a65
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 067a3a183820b09112217647e20d12b592540613
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166866"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224426"
 ---
 # <a name="implements_category"></a>implements_category
 
@@ -32,11 +32,11 @@ ms.locfileid: "80166866"
 
 Атрибут **implements_category** C++ задает категории компонентов, реализуемых целевым классом. Это можно сделать, создав карту категорий и добавив отдельные записи, заданные атрибутом **implements_category** . Дополнительные сведения см. в разделах [категории компонентов и принципы их работы](/windows/win32/com/component-categories-and-how-they-work).
 
-Этот атрибут требует, чтобы атрибут [coclass](coclass.md), [progid](progid.md)или [vi_progid](vi-progid.md) (или другой атрибут, который подразумевает один из них) также применялся к этому элементу. Если используется любой отдельный атрибут, два других применяются автоматически. Например, если применяется `progid`, применяются также `vi_progid` и `coclass`.
+Этот атрибут требует, чтобы атрибут [coclass](coclass.md), [progid](progid.md)или [vi_progid](vi-progid.md) (или другой атрибут, который подразумевает один из них) также применялся к этому элементу. Если используется любой отдельный атрибут, два других применяются автоматически. Например, если `progid` применяется, то применяются `vi_progid` `coclass` также и.
 
 ## <a name="example"></a>Пример
 
-Следующий код указывает, что следующий объект реализует категорию `Control`.
+Следующий код указывает, что следующий объект реализует `Control` категорию.
 
 ```cpp
 // cpp_attr_ref_implements_category.cpp
@@ -57,15 +57,15 @@ class CMyClass {};
 
 |||
 |-|-|
-|**Применение**|**класс**, **Структура**|
-|**Повторяемый**|Да|
-|**Обязательные атрибуты**|Один из следующих: `coclass`, `progid`или `vi_progid`|
-|**Недопустимые атрибуты**|None|
+|**Относится к**|**`class`**, **`struct`**|
+|**REPEATABLE**|Да|
+|**Требуемые атрибуты**|Один из следующих элементов: `coclass` , `progid` или`vi_progid`|
+|**Недопустимые атрибуты**|Нет|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [Атрибуты COM](com-attributes.md)<br/>
-[Атрибуты классов](class-attributes.md)<br/>
+[Атрибуты класса](class-attributes.md)<br/>
 [IMPLEMENTED_CATEGORY](../../atl/reference/category-macros.md#implemented_category)

@@ -1,17 +1,17 @@
 ---
-title: last_is (C++ атрибут com)
+title: last_is (атрибут COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.last_is
 helpviewer_keywords:
 - last_is attribute
 ms.assetid: 9e045ac0-fa38-4249-af55-67bde5d0a58c
-ms.openlocfilehash: 62377415dc0809033fcdcb8bd4e7997f667c1691
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7aa8acb52d19bc7f70513e44770817ae7fc403b5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214816"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224413"
 ---
 # <a name="last_is"></a>last_is
 
@@ -42,17 +42,17 @@ ms.locfileid: "80214816"
 
 |||
 |-|-|
-|**Применение**|Поле в **структуре** или **объединении**, параметр интерфейса, метод интерфейса|
-|**Повторяемый**|нет|
-|**Обязательные атрибуты**|None|
-|**Недопустимые атрибуты**|None|
+|**Относится к**|Поле в **`struct`** или **`union`** , параметр интерфейса, метод интерфейса|
+|**REPEATABLE**|Нет|
+|**Требуемые атрибуты**|Нет|
+|**Недопустимые атрибуты**|Нет|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [Атрибуты IDL](idl-attributes.md)<br/>
-[Атрибуты Typedef, Enum, Union и Struct](typedef-enum-union-and-struct-attributes.md)<br/>
+[Атрибуты typedef, enum, Union и struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [Атрибуты параметра](parameter-attributes.md)<br/>
 [first_is](first-is.md)<br/>
 [max_is](max-is.md)<br/>
