@@ -7,18 +7,18 @@ helpviewer_keywords:
 - windows [MFC], creating
 - sequence [MFC]
 ms.assetid: 9cd8c7ea-5e24-429e-b6d9-d7b6041d8ba6
-ms.openlocfilehash: 0b09543d659448454bbc7c2cca6abee5de3013e5
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 63b5e0131642692d9372c148827a583f19114fb9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618754"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223165"
 ---
 # <a name="general-window-creation-sequence"></a>Общая последовательность создания окна
 
 При создании собственного окна, например дочернего окна, платформа использует практически тот же процесс, который описан в разделе [Создание документа или представления](document-view-creation.md).
 
-Все классы окон, предоставляемые MFC, используют [конструкцию с двумя этапами](one-stage-and-two-stage-construction-of-objects.md). То есть при вызове оператора **New** в C++ конструктор выделяет и инициализирует объект C++, но не создает соответствующее окно Windows. Это можно сделать, вызвав функцию [создания](reference/cwnd-class.md#create) члена объекта Window.
+Все классы окон, предоставляемые MFC, используют [конструкцию с двумя этапами](one-stage-and-two-stage-construction-of-objects.md). То есть при вызове **`new`** оператора C++ конструктор выделяет и инициализирует объект c++, но не создает соответствующее окно Windows. Это можно сделать, вызвав функцию [создания](reference/cwnd-class.md#create) члена объекта Window.
 
 `Create`Функция – член делает окно Windows и сохраняет его `HWND` в общедоступных элементах данных объекта C++ [m_hWnd](reference/cwnd-class.md#m_hwnd). `Create`обеспечивает полную гибкость по сравнению с параметрами создания. Перед вызовом `Create` может потребоваться зарегистрировать класс окна с глобальной функцией [афксрегистервндкласс](reference/application-information-and-management.md#afxregisterwndclass) , чтобы задать стили значков и классов для фрейма.
 
@@ -33,10 +33,10 @@ ms.locfileid: "84618754"
 
 - [Регистрация окна "классы"](registering-window-classes.md)
 
-- [Уничтожение объектов Window](destroying-window-objects.md)
+- [Уничтожение объектов окон](destroying-window-objects.md)
 
 - [Создание окон фрейма документа](creating-document-frame-windows.md)
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [Создание Windows](creating-windows.md)

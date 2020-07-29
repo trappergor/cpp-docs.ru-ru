@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::piecewise_linear_distribution [C++], param_type
 - std::piecewise_linear_distribution [C++], param_type
 ms.assetid: cd141152-7163-4754-8f98-c6d6500005e0
-ms.openlocfilehash: 7d9e1f1b9af3002faa9e2d9b20b7ee76dce35aea
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 085ab8eda0a07decf69d139382a272700bebac7b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372089"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232980"
 ---
 # <a name="piecewise_linear_distribution-class"></a>Класс piecewise_linear_distribution
 
@@ -80,8 +80,8 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*RealType*\
-Тип результата плавающей точки, по **умолчанию**удвоиться. Для возможных типов см [ \<>. ](../standard-library/random.md)
+*реалтипе*\
+Тип результата с плавающей запятой, по умолчанию — **`double`** . Возможные типы см. в разделе [\<random>](../standard-library/random.md) .
 
 ## <a name="remarks"></a>Remarks
 
@@ -106,7 +106,7 @@ public:
 
 Функции-члены `operator()` возвращают следующее значение, созданное механизмом РГСЧ, из текущего или указанного пакета параметров.
 
-Для получения дополнительной информации о классах распределения и их членах [ \<>](../standard-library/random.md)см.
+Дополнительные сведения о классах распределения и их членах см [\<random>](../standard-library/random.md) . в разделе.
 
 ## <a name="example"></a>Пример
 
@@ -215,11 +215,11 @@ Distribution for 100 samples:
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<random>
+**Заголовок:**\<random>
 
 **Пространство имен:** std
 
-## <a name="piecewise_linear_distributionpiecewise_linear_distribution"></a><a name="piecewise_linear_distribution"></a>piecewise_linear_distribution::piecewise-linear-дистрибутив
+## <a name="piecewise_linear_distributionpiecewise_linear_distribution"></a><a name="piecewise_linear_distribution"></a>piecewise_linear_distribution::p iecewise_linear_distribution
 
 Формирует распределение.
 
@@ -249,31 +249,31 @@ explicit piecewise_linear_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Параметры
 
-*firstI*\
+*фирсти*\
 Итератор ввода первого элемента в диапазоне распределения.
 
-*lastI*\
+*ласти*\
 Итератор ввода последнего элемента в диапазоне распределения.
 
 *firstW*\
 Итератор ввода первого элемента в диапазоне весов.
 
-*Интервалы*\
+*диапазона*\
 Объект [initializer_list](../cpp/initializers.md) с интервалами распределения.
 
-*Рассчитывать*\
+*расчета*\
 Количество элементов в диапазоне распределения.
 
 *xmin*\
 Минимальное значение в диапазоне распределения.
 
-*Xmax*\
+*xmax*\
 Максимальное значение в диапазоне распределения. Должно быть больше, чем *xmin*.
 
-*weightfunc*\
-Объект, представляющий функцию вероятности распределения. Параметр и значение возврата должны быть конвертируемыми в **два раза.**
+*веигхтфунк*\
+Объект, представляющий функцию вероятности распределения. Параметр и возвращаемое значение должны быть преобразованы в **`double`** .
 
-*парм*\
+*ParM*\
 Структура параметров, используемая для формирования распределения.
 
 ### <a name="remarks"></a>Remarks
@@ -290,7 +290,7 @@ piecewise_linear_distribution(
     InputIteratorW firstW);
 ```
 
-строит объект распределения с itnervals от итераторов `lastI`над последовательностью , `firstI`) и соответствующая последовательность веса, начиная с *firstW*.
+конструирует объект распределения с интервалами от итераторов по последовательности [ `firstI` , `lastI` ) и соответствующей последовательности весов, начиная с *firstW*.
 
 Конструктор списка инициализаторов
 
@@ -301,7 +301,7 @@ piecewise_linear_distribution(
     UnaryOperation weightfunc);
 ```
 
-строит объект распределения с интервалами от *интервалов* списка инициализаторов и весов, генерируемых из функции *weightfunc.*
+Создает объект распределения с интервалами между *интервалами* списка инициализаторов и весовыми коэффициентами, созданными из функции *веигхтфунк*.
 
 Конструктор, определенный как
 
@@ -314,7 +314,7 @@ piecewise_linear_distribution(
     UnaryOperation weightfunc);
 ```
 
-строит объект распределения с *интервалами* подсчета, `xmin,xmax`распределенными равномерно по пересчету `double`веса, назначая каждый интервал веса в соответствии с функцией *weightfunc,* и *weightfunc* должен принять один параметр и иметь возвратное значение, оба из которых являются кабриолетом. **Предварительное условие:**`xmin < xmax`.
+конструирует объект *распределения с равномерно* распределенными интервалами по [ `xmin,xmax` ], присваивая вес каждого интервала в соответствии с функцией *веигхтфунк*, а *веигхтфунк* должен принимать один параметр и иметь возвращаемое значение, которое можно преобразовать в **`double`** . **Предусловие:** `xmin < xmax` .
 
 Конструктор, определенный как
 
@@ -322,9 +322,9 @@ piecewise_linear_distribution(
 explicit piecewise_linear_distribution(const param_type& parm);
 ```
 
-строит объект распределения, используя *parm* в качестве сохраненной структуры параметров.
+конструирует объект распределения, используя *ParM* в качестве структуры хранимого параметра.
 
-## <a name="piecewise_linear_distributionparam_type"></a><a name="param_type"></a>piecewise_linear_distribution::pараматип
+## <a name="piecewise_linear_distributionparam_type"></a><a name="param_type"></a>piecewise_linear_distribution::p aram_type
 
 Сохраняет все параметры распределения.
 
@@ -358,4 +358,4 @@ struct param_type {
 
 ## <a name="see-also"></a>См. также раздел
 
-[\<случайные>](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

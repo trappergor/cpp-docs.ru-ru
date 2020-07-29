@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], MDIRestore
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
-ms.openlocfilehash: a547a21b96d035f507e749aeb19f891175498d5d
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 0acd42db19151001d9e292561ef20e469f9e14ea
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754575"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222970"
 ---
 # <a name="cmdichildwnd-class"></a>Класс CMDIChildWnd
 
@@ -43,55 +43,55 @@ class CMDIChildWnd : public CFrameWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
-|[CMDIChildWnd::CMDIChildWnd](#cmdichildwnd)|Формирует объект `CMDIChildWnd`.|
+|[CMDIChildWnd:: CMDIChildWnd](#cmdichildwnd)|Формирует объект `CMDIChildWnd`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание:|
 |----------|-----------------|
-|[CMDIChildWnd::Создание](#create)|Создает окно ребенка Windows MDI, связанное с объектом. `CMDIChildWnd`|
-|[CMDIChildWnd::GetMDIFrame](#getmdiframe)|Возвращает родительский mDI-рамку окна клиента MDI.|
-|[CMDIChildWnd::MDIActivate](#mdiactivate)|Активирует это окно ребенка MDI.|
-|[CMDIChildWnd::MDIDestroy](#mdidestroy)|Уничтожает это детское окно MDI.|
-|[CMDIChildWnd::MDIMaximize](#mdimaximize)|Максимизирует это окно ребенка MDI.|
-|[CMDIChildWnd::MDIRestore](#mdirestore)|Восстанавливает это окно ребенка MDI от максимального или минимизированного размера.|
-|[CMDIChildWnd::Set](#sethandles)|Устанавливает ручки для ресурсов меню и ускорителей.|
+|[CMDIChildWnd:: Create](#create)|Создает дочернее окно Windows MDI, связанное с `CMDIChildWnd` объектом.|
+|[CMDIChildWnd:: Жетмдифраме](#getmdiframe)|Возвращает родительский фрейм MDI окна клиента MDI.|
+|[CMDIChildWnd:: Мдиактивате](#mdiactivate)|Активирует это дочернее окно MDI.|
+|[CMDIChildWnd:: Мдидестрой](#mdidestroy)|Уничтожает это дочернее окно MDI.|
+|[CMDIChildWnd:: Мдимаксимизе](#mdimaximize)|Разворачивает это дочернее окно MDI.|
+|[CMDIChildWnd:: Мдиресторе](#mdirestore)|Восстанавливает дочернее окно MDI из развернутого или минимального размера.|
+|[CMDIChildWnd:: Сесандлес](#sethandles)|Задает дескрипторы для ресурсов меню и ускорителя.|
 
 ## <a name="remarks"></a>Remarks
 
-Детское окно MDI очень похоже на обычное окно кадра, за исключением того, что окно ребенка MDI отображается внутри окна кадра MDI, а не на рабочем столе. Окно ребенка MDI не имеет собственного бара меню, но вместо этого разделяет меню окна кадра MDI. Платформа автоматически изменяет меню кадра MDI, чтобы представить в настоящее время активное окно ребенка MDI.
+Дочернее окно MDI во многом похоже на обычное окно фрейма, за исключением того, что дочернее окно MDI отображается в окне фрейма MDI, а не на рабочем столе. Дочернее окно MDI не имеет собственной строки меню, а разделяет меню окна фрейма MDI. Платформа автоматически изменяет меню фрейма MDI для представления текущего активного дочернего окна MDI.
 
-Чтобы создать полезное окно для детей MDI `CMDIChildWnd`для вашего приложения, выберите класс из . Добавление переменных членов в полученный класс для хранения данных, специфичные для приложения. Реализуйте в производном классе функции-члены обработчика сообщений и схему сообщений, чтобы указать, что происходит, когда сообщения направляются в окно.
+Чтобы создать полезное дочернее окно MDI для приложения, создайте класс, производный от `CMDIChildWnd` . Добавьте переменные члена в производный класс для хранения данных, относящихся к вашему приложению. Реализуйте в производном классе функции-члены обработчика сообщений и схему сообщений, чтобы указать, что происходит, когда сообщения направляются в окно.
 
-Существует три способа построения окна для детей MDI:
+Существует три способа создания дочернего окна MDI:
 
-- Непосредственно построить `Create`его с помощью .
+- Напрямую создавать его с помощью `Create` .
 
-- Непосредственно построить `LoadFrame`его с помощью .
+- Напрямую создавать его с помощью `LoadFrame` .
 
-- Косвенно построить его через шаблон документа.
+- Косвенно создать его с помощью шаблона документа.
 
-Перед `Create` вызовом `LoadFrame`или с помощью **нового** оператора c-new operator необходимо построить объект окна кадра на куче. Перед `Create` вызовом вы также можете зарегистрировать класс окон с глобальной функцией [AfxRegisterWndClass,](application-information-and-management.md#afxregisterwndclass) чтобы установить значок и стили класса для кадра.
+Перед вызовом `Create` или `LoadFrame` необходимо создать объект окна фрейма в куче с помощью **`new`** оператора C++. Перед вызовом можно `Create` также зарегистрировать класс окна с глобальной функцией [афксрегистервндкласс](application-information-and-management.md#afxregisterwndclass) , чтобы задать стили значков и классов для фрейма.
 
-Используйте `Create` функцию члена, чтобы передать параметры создания кадра в качестве непосредственных аргументов.
+Используйте `Create` функцию члена для передачи параметров создания кадра в качестве непосредственных аргументов.
 
-`LoadFrame`требует меньше аргументов, чем, `Create`и вместо этого извлекает большую часть значений по умолчанию из ресурсов, включая подпись кадра, значок, таблицу акселератора и меню. Чтобы быть `LoadFrame`доступными, все эти ресурсы должны иметь один и тот же идентификатор ресурса (например, IDR_MAINFRAME).
+`LoadFrame`требует меньше аргументов `Create` , чем, и вместо этого извлекает большинство значений по умолчанию из ресурсов, включая заголовок фрейма, значок, таблицу сочетаний клавиш и меню. Чтобы иметь доступ к `LoadFrame` , все эти ресурсы должны иметь один и тот же идентификатор ресурса (например, IDR_MAINFRAME).
 
-Когда `CMDIChildWnd` объект содержит представления и документы, они создаются косвенно рамочным, а не непосредственно программистом. Объект `CDocTemplate` организует создание кадра, создание содержащих представлений и соединение представлений с соответствующим документом. Параметры конструктора `CDocTemplate` определяют `CRuntimeClass` три класса (документ, кадр и представление). Объект `CRuntimeClass` используется инфраструктурой для динамического создания новых кадров при указании пользователем (например, с помощью команды File New или новой команды MDI Window).
+Если `CMDIChildWnd` объект содержит представления и документы, они создаются косвенно платформой, а не непосредственно программистом. `CDocTemplate`Объект управляет созданием фрейма, созданием содержащихся представлений и подключением представлений к соответствующему документу. Параметры `CDocTemplate` конструктора указывают, какие `CRuntimeClass` из трех участвующих классов (документ, фрейм и представление). `CRuntimeClass`Объект используется платформой для динамического создания новых фреймов при их указании пользователем (например, с помощью команды файл создать или окна «создать»).
 
-Класс окна кадра, `CMDIChildWnd` полученный из, должен быть объявлен с DECLARE_DYNCREATE для того, чтобы вышеуказанный механизм RUNTIME_CLASS работал правильно.
+Класс фреймового окна, производный от, `CMDIChildWnd` должен быть объявлен с DECLARE_DYNCREATE, чтобы механизм RUNTIME_CLASS работал правильно.
 
-Класс `CMDIChildWnd` наследует большую часть `CFrameWnd`своей реализации по умолчанию от . Для получения подробного списка этих функций, пожалуйста, обратитесь к описанию класса [CFrameWnd.](../../mfc/reference/cframewnd-class.md) Класс `CMDIChildWnd` имеет следующие дополнительные функции:
+`CMDIChildWnd`Класс наследует большую часть своей реализации по умолчанию из `CFrameWnd` . Подробный список этих функций см. в описании класса [CFrameWnd](../../mfc/reference/cframewnd-class.md) . `CMDIChildWnd`Класс имеет следующие дополнительные возможности:
 
-- В сочетании `CMultiDocTemplate` с `CMDIChildWnd` классом несколько объектов из одного и того же шаблона документов разделяют одно и то же меню, экономя ресурсы системы Windows.
+- В сочетании с `CMultiDocTemplate` классом несколько `CMDIChildWnd` объектов из одного шаблона документа совместно используют одно и то же меню, сохраняя системные ресурсы Windows.
 
-- В настоящее время активное меню окна для детей MDI полностью заменяет меню окна окна кадра MDI, и подпись к действующему в настоящее время окну ребенка MDI добавляется к подписи окна кадра MDI. Дополнительные примеры функций окна детского окна MDI, которые реализуются в сочетании с окном кадра MDI, см. `CMDIFrameWnd`
+- Активное в настоящее время меню дочернего окна MDI полностью заменяет меню окна фрейма MDI, а заголовок текущего активного дочернего окна MDI добавляется в заголовок окна фрейма MDI. Дополнительные примеры функций дочерних окон MDI, реализованных в сочетании с окном фрейма MDI, см. в `CMDIFrameWnd` описании класса.
 
-Не используйте оператора **удаления** C's для уничтожения окна рамы. Используйте вместо этого `CWnd::DestroyWindow`. Реализация `CFrameWnd` `PostNcDestroy` будет удалять объект C's при уничтожении окна. Когда пользователь закрывает окно кадра, `OnClose` обработчик по умолчанию вызовет. `DestroyWindow`
+Не используйте **`delete`** оператор C++ для уничтожения окна фрейма. Используйте вместо этого `CWnd::DestroyWindow`. `CFrameWnd`Реализация служб `PostNcDestroy` удалит объект C++ при уничтожении окна. Когда пользователь закрывает окно фрейма, обработчик по умолчанию `OnClose` выполнит вызов `DestroyWindow` .
 
-Для получения `CMDIChildWnd`дополнительной информации о, см. [Frame Windows](../../mfc/frame-windows.md)
+Дополнительные сведения о см `CMDIChildWnd` . в разделе [окна с рамками](../../mfc/frame-windows.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -109,9 +109,9 @@ class CMDIChildWnd : public CFrameWnd
 
 **Заголовок:** afxwin.h
 
-## <a name="cmdichildwndcmdichildwnd"></a><a name="cmdichildwnd"></a>CMDIChildWnd::CMDIChildWnd
+## <a name="cmdichildwndcmdichildwnd"></a><a name="cmdichildwnd"></a>CMDIChildWnd:: CMDIChildWnd
 
-Вызов для `CMDIChildWnd` построения объекта.
+Вызовите метод, чтобы создать `CMDIChildWnd` объект.
 
 ```
 CMDIChildWnd();
@@ -119,15 +119,15 @@ CMDIChildWnd();
 
 ### <a name="remarks"></a>Remarks
 
-Вызов `Create` для создания видимого окна.
+Вызовите `Create` , чтобы создать видимое окно.
 
 ### <a name="example"></a>Пример
 
-  Смотрите пример [CMDIChildWnd::Создание](#create).
+  См. пример для [CMDIChildWnd:: Create](#create).
 
-## <a name="cmdichildwndcreate"></a><a name="create"></a>CMDIChildWnd::Создание
+## <a name="cmdichildwndcreate"></a><a name="create"></a>CMDIChildWnd:: Create
 
-Вызовите эту функцию участника, чтобы создать окно `CMDIChildWnd` ребенка Windows MDI и прикрепите его к объекту.
+Вызовите эту функцию-член, чтобы создать дочернее окно Windows MDI и присоединить его к `CMDIChildWnd` объекту.
 
 ```
 virtual BOOL Create(
@@ -141,23 +141,23 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszClassName*<br/>
-Указывает на строку символов с нулевым завершением, которая называет класс Windows (структура [WNDCLASS).](/windows/win32/api/winuser/ns-winuser-wndclassw) Имя класса может быть любым именем, зарегистрированным в глобальной функции [AfxRegisterWndClass.](application-information-and-management.md#afxregisterwndclass) Должно быть NULL `CMDIChildWnd`для стандарта .
+*лпсзкласснаме*<br/>
+Указывает на строку символов, завершающуюся нулем, которая именует класс Windows (структуру [вндкласс](/windows/win32/api/winuser/ns-winuser-wndclassw) ). Имя класса может быть любым именем, зарегистрированным в глобальной функции [афксрегистервндкласс](application-information-and-management.md#afxregisterwndclass) . Для стандарта должно быть задано значение NULL `CMDIChildWnd` .
 
-*lpszWindowName*<br/>
-Указывает на строку символов с нулевым завершением, представляющую имя окна. Используется в качестве текста для заголовка бара.
+*лпсзвиндовнаме*<br/>
+Указывает на строку символов, завершающуюся нулем, которая представляет имя окна. Используется в качестве текста для заголовка окна.
 
-*dwStyle*<br/>
-Определяет атрибуты [стиля](../../mfc/reference/styles-used-by-mfc.md#window-styles) окна. Требуется стиль WS_CHILD.
+*двстиле*<br/>
+Задает атрибуты [стиля](../../mfc/reference/styles-used-by-mfc.md#window-styles) окна. Требуется стиль WS_CHILD.
 
 *rect*<br/>
-Содержит размер и положение окна. Значение `rectDefault` позволяет Windows указать размер и `CMDIChildWnd`положение нового.
+Содержит размер и расположение окна. Это `rectDefault` значение позволяет Windows указать размер и расположение нового объекта `CMDIChildWnd` .
 
-*pParentWnd*<br/>
-Определяет родителей окна. Если NULL используется основное окно приложения.
+*ппарентвнд*<br/>
+Задает родительский элемент окна. Если значение равно NULL, используется главное окно приложения.
 
 *pContext*<br/>
-Определяет структуру [CCreateContext.](../../mfc/reference/ccreatecontext-structure.md) Этот параметр может быть NULL.
+Задает структуру [ккреатеконтекст](../../mfc/reference/ccreatecontext-structure.md) . Этот параметр может иметь значение NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -165,9 +165,9 @@ virtual BOOL Create(
 
 ### <a name="remarks"></a>Remarks
 
-В настоящее время активное окно детской рамы MDI может определить подпись окна родительской рамы. Эта функция отключена, выключив FWS_ADDTOTITLE немного стиля окна детской рамы.
+В текущем активном окне дочернего фрейма MDI можно определить заголовок родительского окна фрейма. Эта функция отключена путем отключения FWS_ADDTOTITLE бит стиля окна дочернего фрейма.
 
-Платформа вызывает эту функцию элемента в ответ на команду пользователя для создания окна ребенка, а фреймворк использует параметр *pContext* для правильного подключения окна ребенка к приложению. Когда вы `Create` *звоните, pContext* может быть NULL.
+Платформа вызывает эту функцию-член в ответ на команду пользователя для создания дочернего окна, а платформа использует параметр *пконтекст* для правильного подключения дочернего окна к приложению. При вызове `Create` метод *пконтекст* может иметь значение null.
 
 ### <a name="example"></a>Пример
 
@@ -183,9 +183,9 @@ virtual BOOL Create(
 
 [!code-cpp[NVC_MFCWindowing#9](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_3.cpp)]
 
-## <a name="cmdichildwndgetmdiframe"></a><a name="getmdiframe"></a>CMDIChildWnd::GetMDIFrame
+## <a name="cmdichildwndgetmdiframe"></a><a name="getmdiframe"></a>CMDIChildWnd:: Жетмдифраме
 
-Вызовите эту функцию, чтобы вернуть родительский кадр MDI.
+Вызовите эту функцию, чтобы вернуть родительский фрейм MDI.
 
 ```
 CMDIFrameWnd* GetMDIFrame();
@@ -193,19 +193,19 @@ CMDIFrameWnd* GetMDIFrame();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на окно родительской рамы MDI.
+Указатель на окно родительского фрейма MDI.
 
 ### <a name="remarks"></a>Remarks
 
-Возвращается кадр, два родителя удалены из `CMDIChildWnd` окна типа MDICLIENT, `CMDIChildWnd` управляющего объектом. Позвоните в функцию участника [GetParent,](../../mfc/reference/cwnd-class.md#getparent) чтобы вернуть непосредственного родителя MDICLIENT `CMDIChildWnd` объекта в качестве временного `CWnd` указателя.
+Возвращенный кадр состоит из двух родителей, удаленных из `CMDIChildWnd` и является родителем окна типа мдиклиент, которое управляет `CMDIChildWnd` объектом. Вызовите функцию-член- [родитель](../../mfc/reference/cwnd-class.md#getparent) , чтобы вернуть `CMDIChildWnd` непосредственный родительский мдиклиент объекта в качестве временного `CWnd` указателя.
 
 ### <a name="example"></a>Пример
 
-  Смотрите пример [CMDIFrameWnd::MDISetMenu](../../mfc/reference/cmdiframewnd-class.md#mdisetmenu).
+  См. пример для [CMDIFrameWnd:: мдисетмену](../../mfc/reference/cmdiframewnd-class.md#mdisetmenu).
 
-## <a name="cmdichildwndmdiactivate"></a><a name="mdiactivate"></a>CMDIChildWnd::MDIActivate
+## <a name="cmdichildwndmdiactivate"></a><a name="mdiactivate"></a>CMDIChildWnd:: Мдиактивате
 
-Вызовите эту функцию участника, чтобы активировать окно ребенка MDI независимо от окна кадра MDI.
+Вызовите эту функцию-член, чтобы активировать дочернее окно MDI независимо от окна фрейма MDI.
 
 ```cpp
 void MDIActivate();
@@ -213,15 +213,15 @@ void MDIActivate();
 
 ### <a name="remarks"></a>Remarks
 
-Когда кадр становится активным, будет активировано и окно ребенка, которое было активировано в последний раз.
+Когда кадр становится активным, также активируется дочернее окно, которое было активировано последним.
 
 ### <a name="example"></a>Пример
 
-  Смотрите пример [CMDIFrameWnd::GetWindowMenuPopup](../../mfc/reference/cmdiframewnd-class.md#getwindowmenupopup).
+  См. пример для [CMDIFrameWnd:: жетвиндовменупопуп](../../mfc/reference/cmdiframewnd-class.md#getwindowmenupopup).
 
-## <a name="cmdichildwndmdidestroy"></a><a name="mdidestroy"></a>CMDIChildWnd::MDIDestroy
+## <a name="cmdichildwndmdidestroy"></a><a name="mdidestroy"></a>CMDIChildWnd:: Мдидестрой
 
-Вызовите эту функцию участника, чтобы уничтожить окно ребенка MDI.
+Вызовите эту функцию-член для уничтожения дочернего окна MDI.
 
 ```cpp
 void MDIDestroy();
@@ -229,15 +229,15 @@ void MDIDestroy();
 
 ### <a name="remarks"></a>Remarks
 
-Функция участника удаляет название окна ребенка из окна кадра и отключает окно ребенка.
+Функция члена удаляет заголовок дочернего окна из окна фрейма и деактивирует дочернее окно.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#10](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_4.cpp)]
 
-## <a name="cmdichildwndmdimaximize"></a><a name="mdimaximize"></a>CMDIChildWnd::MDIMaximize
+## <a name="cmdichildwndmdimaximize"></a><a name="mdimaximize"></a>CMDIChildWnd:: Мдимаксимизе
 
-Вызов исчерпайте эту функцию участника, чтобы максимизировать окно ребенка MDI.
+Вызовите эту функцию-член, чтобы развернуть дочернее окно MDI.
 
 ```cpp
 void MDIMaximize();
@@ -245,15 +245,15 @@ void MDIMaximize();
 
 ### <a name="remarks"></a>Remarks
 
-При максимизации окна ребенка Windows изменяет его, чтобы заставить клиентскую область заполнить клиентскую область окна кадра. Окна размещают меню управления окна ребенка в панели меню кадра, чтобы пользователь мог восстановить или закрыть окно ребенка, и добавили название окна ребенка к названию окна кадра.
+Когда дочернее окно разворачивается, Windows изменяет его размер, чтобы заполнить клиентскую область окна фрейма. Windows помещает меню элемента управления дочернего окна в строке меню фрейма, чтобы пользователь мог восстановить или закрыть дочернее окно и добавить заголовок дочернего окна в заголовок фрейма окна.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#11](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_5.cpp)]
 
-## <a name="cmdichildwndmdirestore"></a><a name="mdirestore"></a>CMDIChildWnd::MDIRestore
+## <a name="cmdichildwndmdirestore"></a><a name="mdirestore"></a>CMDIChildWnd:: Мдиресторе
 
-Вызов ими функции участника для восстановления окна ребенка MDI с максимального или минимизированного размера.
+Вызывайте эту функцию-член для восстановления дочернего окна MDI из развернутого или минимального размера.
 
 ```cpp
 void MDIRestore();
@@ -263,9 +263,9 @@ void MDIRestore();
 
 [!code-cpp[NVC_MFCWindowing#12](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_6.cpp)]
 
-## <a name="cmdichildwndsethandles"></a><a name="sethandles"></a>CMDIChildWnd::Set
+## <a name="cmdichildwndsethandles"></a><a name="sethandles"></a>CMDIChildWnd:: Сесандлес
 
-Устанавливает ручки для ресурсов меню и ускорителей.
+Задает дескрипторы для ресурсов меню и ускорителя.
 
 ```cpp
 void SetHandles(
@@ -276,21 +276,21 @@ void SetHandles(
 ### <a name="parameters"></a>Параметры
 
 *hMenu*<br/>
-Ручка ресурса меню.
+Маркер ресурса меню.
 
-*hAccel*<br/>
-Ручка ресурса ускорителя.
+*хакцел*<br/>
+Маркер ресурса ускорителя.
 
 ### <a name="remarks"></a>Remarks
 
-Вызовите эту функцию, чтобы настроить меню и ресурсы ускорителя, используемые объектом окна ребенка MDI.
+Вызовите эту функцию, чтобы задать ресурсы меню и ускорителя, используемые объектом дочернего окна MDI.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
-[MFC Образец MDI](../../overview/visual-cpp-samples.md)<br/>
-[MFC Образец MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
-[MFC Образец SNAPVW](../../overview/visual-cpp-samples.md)<br/>
+[Образец MDI-формы MFC](../../overview/visual-cpp-samples.md)<br/>
+[Пример МДИДОКВВ для MFC](../../overview/visual-cpp-samples.md)<br/>
+[Пример СНАПВВ для MFC](../../overview/visual-cpp-samples.md)<br/>
 [Класс CFrameWnd](../../mfc/reference/cframewnd-class.md)<br/>
-[Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
-[Класс CWnd](../../mfc/reference/cwnd-class.md)<br/>
+[Иерархическая диаграмма](../../mfc/hierarchy-chart.md)<br/>
+[CWnd, класс](../../mfc/reference/cwnd-class.md)<br/>
 [Класс CMDIFrameWnd](../../mfc/reference/cmdiframewnd-class.md)

@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C3817
 ms.assetid: c6dbb57a-c65e-4040-8dd2-85bd9d4fd337
-ms.openlocfilehash: 33515d9d676ec383763802ab200dc37ea652fa27
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 14d440b4a4f0b77494aa7b622721cdac336079df
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384257"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233357"
 ---
 # <a name="compiler-error-c3817"></a>Ошибка компилятора C3817
 
-«объявление»: свойство может применяться только к функции
+"объявление": свойство может применяться только к функции
 
-`property` Ключевое слово может быть только примененные к определению функции.
+**`property`** Ключевое слово может быть применено только к определению функции.
 
-C3817 доступен только с помощью параметра компилятора устаревшие **/CLR: oldSyntax**.
+C3817 доступен только при использовании устаревшего параметра компилятора **/clr: oldSyntax**.

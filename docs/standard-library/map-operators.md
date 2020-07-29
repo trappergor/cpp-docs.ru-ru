@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (map)
 - std::operator&lt;= (map)
 - std::operator== (map)
-ms.openlocfilehash: 1b16028ea4be5303df5c6337260de5098e9c6ed6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2c632966c9ac1264747568facd459a33d1e13338
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371028"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233084"
 ---
 # <a name="ltmapgt-operators"></a>Операторы &lt;map&gt;
 
-## <a name="operator"></a><a name="op_neq"></a>оператора!
+## <a name="operator"></a><a name="op_neq"></a>operator! =
 
 Проверяет неравенство объекта map слева от оператора объекту map справа от оператора.
 
@@ -37,7 +37,7 @@ bool operator!=(
 
 ### <a name="parameters"></a>Параметры
 
-*Левой*\
+*слева*\
 Объект типа `map`.
 
 *Правильно*\
@@ -45,7 +45,7 @@ bool operator!=(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**true**, если объекты map равны; **false**, если объекты map не равны.
+**`true`** значение, если карты не равны; значение **`false`** , если Maps равны.
 
 ### <a name="remarks"></a>Remarks
 
@@ -90,7 +90,7 @@ The maps m1 and m2 are not equal.
 The maps m1 and m3 are equal.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt"></a>Оператор&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>станции&lt;
 
 Проверяет, меньше ли объект map слева от оператора, чем объект map справа от оператора.
 
@@ -102,7 +102,7 @@ bool operator<(
 
 ### <a name="parameters"></a>Параметры
 
-*Левой*\
+*слева*\
 Объект типа `map`.
 
 *Правильно*\
@@ -110,7 +110,7 @@ bool operator<(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**true** если объект map слева от оператора строго меньше объекта map справа от оператора; в противном случае **false**.
+**`true`** Если схема слева от оператора строго меньше, чем на карте справа от оператора; в противном случае — значение **`false`** .
 
 ### <a name="remarks"></a>Remarks
 
@@ -155,7 +155,7 @@ The map m1 is less than the map m2.
 The map m1 is not less than the map m3.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>Оператор&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>станции&lt;=
 
 Проверяет, что объект map слева от оператора меньше или равен объекту map справа от оператора.
 
@@ -167,7 +167,7 @@ bool operator<=(
 
 ### <a name="parameters"></a>Параметры
 
-*Левой*\
+*слева*\
 Объект типа `map`.
 
 *Правильно*\
@@ -175,7 +175,7 @@ bool operator<=(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**true**, если объект map слева от оператора меньше или равен объекту map справа от оператора; в противном случае **false**.
+**`true`** значение, если оператор в левой части оператора меньше или равен сопоставлению справа от оператора; в противном случае — значение **`false`** .
 
 ### <a name="example"></a>Пример
 
@@ -223,7 +223,7 @@ The map m1 is greater than the map m3.
 The map m1 is less than or equal to the map m4.
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>оператора
+## <a name="operator"></a><a name="op_eq_eq"></a>Оператор = =
 
 Проверяет равенство объекта map слева от оператора объекту map справа от оператора.
 
@@ -235,7 +235,7 @@ bool operator==(
 
 ### <a name="parameters"></a>Параметры
 
-*Левой*\
+*слева*\
 Объект типа `map`.
 
 *Правильно*\
@@ -243,7 +243,7 @@ bool operator==(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**true**, если объект map слева от оператора равен объекту map справа от оператора; в противном случае **false**.
+**`true`** значение, если на карте слева от оператора совпадает с картой в правой части оператора; в противном случае — значение **`false`** .
 
 ### <a name="remarks"></a>Remarks
 
@@ -288,7 +288,7 @@ The maps m1 and m2 are not equal.
 The maps m1 and m3 are equal.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt"></a>Оператор&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>станции&gt;
 
 Проверяет, что объект map слева от оператора больше объекта map справа от оператора.
 
@@ -300,7 +300,7 @@ bool operator>(
 
 ### <a name="parameters"></a>Параметры
 
-*Левой*\
+*слева*\
 Объект типа `map`.
 
 *Правильно*\
@@ -308,7 +308,7 @@ bool operator>(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**true**, если объект map слева от оператора больше объекта map справа от оператора; в противном случае **false**.
+**`true`** значение, если оператор в левой части оператора больше, чем на карте справа от оператора; в противном случае — значение **`false`** .
 
 ### <a name="remarks"></a>Remarks
 
@@ -352,7 +352,7 @@ The map m1 is greater than the map m3.
 */
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>Оператор&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>станции&gt;=
 
 Проверяет, что объект map слева от оператора больше или равен объекту map справа от оператора.
 
@@ -364,7 +364,7 @@ bool operator>=(
 
 ### <a name="parameters"></a>Параметры
 
-*Левой*\
+*слева*\
 Объект типа `map`.
 
 *Правильно*\
@@ -372,7 +372,7 @@ bool operator>=(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**true**, если объект map слева от оператора больше объекта map справа от оператора или равен ему; в противном случае **false**.
+**`true`** значение, если схема слева от оператора больше или равна сопоставлению в правой части списка; в противном случае — значение **`false`** .
 
 ### <a name="example"></a>Пример
 
@@ -420,7 +420,7 @@ Map m1 is greater than or equal to map m3.
 Map m1 is greater than or equal to map m4.
 ```
 
-## <a name="operator-multimap"></a><a name="op_neq_multimap"></a>оператор! (мультикарта)
+## <a name="operator-multimap"></a><a name="op_neq_multimap"></a>operator! = (multimap)
 
 Проверяет неравенство объекта multimap слева от оператора объекту multimap справа от оператора.
 
@@ -432,7 +432,7 @@ bool operator!=(
 
 ### <a name="parameters"></a>Параметры
 
-*Левой*\
+*слева*\
 Объект типа `multimap`.
 
 *Правильно*\
@@ -440,7 +440,7 @@ bool operator!=(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**true**, если объекты multimap равны; **false**, если они не равны.
+**`true`** значение, если несколько карт не равны; значение **`false`** , если несколько карт равны.
 
 ### <a name="remarks"></a>Remarks
 
@@ -485,7 +485,7 @@ The multimaps m1 and m2 are not equal.
 The multimaps m1 and m3 are equal.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_multimap"></a>Оператор&lt;
+## <a name="operatorlt"></a><a name="op_lt_multimap"></a>станции&lt;
 
 Проверяет, меньше ли объект multimap слева от оператора объекта multimap справа от оператора.
 
@@ -497,7 +497,7 @@ bool operator<(
 
 ### <a name="parameters"></a>Параметры
 
-*Левой*\
+*слева*\
 Объект типа `multimap`.
 
 *Правильно*\
@@ -505,7 +505,7 @@ bool operator<(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**true**, если объект multimap слева от оператора строго меньше объекта multimap справа от оператора; в противном случае **false**.
+**`true`** Если multimap слева от оператора строго меньше, чем multimap справа от оператора; в противном случае — значение **`false`** .
 
 ### <a name="remarks"></a>Remarks
 
@@ -550,7 +550,7 @@ The multimap m1 is less than the multimap m2.
 The multimap m1 is not less than the multimap m3.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq_multimap"></a>Оператор&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq_multimap"></a>станции&lt;=
 
 Проверяет, что объект multimap слева от оператора меньше объекта multimap справа от оператора или равен ему.
 
@@ -562,7 +562,7 @@ bool operator<=(
 
 ### <a name="parameters"></a>Параметры
 
-*Левой*\
+*слева*\
 Объект типа `multimap`.
 
 *Правильно*\
@@ -570,7 +570,7 @@ bool operator<=(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**true**, если объект multimap слева от оператора меньше объекта multimap справа от оператора или равен ему; в противном случае **false**.
+**`true`** Если multimap слева от оператора меньше или равен значению multimap в правой части оператора; в противном случае — значение **`false`** .
 
 ### <a name="example"></a>Пример
 
@@ -618,7 +618,7 @@ m1 is greater than m3
 m1 is less than or equal to m4
 ```
 
-## <a name="operator"></a><a name="op_eq_eq_multimap"></a>оператора
+## <a name="operator"></a><a name="op_eq_eq_multimap"></a>Оператор = =
 
 Проверяет равенство объекта multimap слева от оператора объекту multimap справа от оператора.
 
@@ -630,7 +630,7 @@ bool operator==(
 
 ### <a name="parameters"></a>Параметры
 
-*Левой*\
+*слева*\
 Объект типа `multimap`.
 
 *Правильно*\
@@ -638,7 +638,7 @@ bool operator==(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**true**, если объект multimap слева от оператора равен объекту multimap справа от оператора; в противном случае **false**.
+**`true`** значение, если multimap слева от оператора равно multimap справа от оператора; в противном случае — значение **`false`** .
 
 ### <a name="remarks"></a>Remarks
 
@@ -683,7 +683,7 @@ m1 and m2 are not equal
 m1 and m3 are equal
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_multimap"></a>Оператор&gt;
+## <a name="operatorgt"></a><a name="op_gt_multimap"></a>станции&gt;
 
 Проверяет, что объект multimap слева от оператора больше объекта multimap справа от оператора.
 
@@ -695,7 +695,7 @@ bool operator>(
 
 ### <a name="parameters"></a>Параметры
 
-*Левой*\
+*слева*\
 Объект типа `multimap`.
 
 *Правильно*\
@@ -703,7 +703,7 @@ bool operator>(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**true**, если объект multimap слева от оператора больше объекта multimap справа от оператора; в противном случае **false**.
+**`true`** Если multimap в левой части оператора больше, чем multimap справа от оператора; в противном случае — значение **`false`** .
 
 ### <a name="remarks"></a>Remarks
 
@@ -748,7 +748,7 @@ Multimap m1 is not greater than multimap m2.
 The multimap m1 is greater than the multimap m3.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq_multimap"></a>Оператор&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq_multimap"></a>станции&gt;=
 
 Проверяет, что объект multimap слева от оператора больше объекта multimap справа от оператора или равен ему.
 
@@ -760,7 +760,7 @@ bool operator>=(
 
 ### <a name="parameters"></a>Параметры
 
-*Левой*\
+*слева*\
 Объект типа `multimap`.
 
 *Правильно*\
@@ -768,7 +768,7 @@ bool operator>=(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**true**, если объект multimap слева от оператора больше объекта multimap справа от оператора или равен ему; в противном случае **false**.
+**`true`** Если multimap слева от оператора больше или равен значению multimap в правой части списка; в противном случае — значение **`false`** .
 
 ### <a name="example"></a>Пример
 

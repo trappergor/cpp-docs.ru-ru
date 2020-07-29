@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::piecewise_constant_distribution [C++], param_type
 - std::piecewise_constant_distribution [C++], param_type
 ms.assetid: 2c9a21fa-623e-4d63-b827-3f1556b6dedb
-ms.openlocfilehash: cd7dc8467d07f53b0c741f98743a471df6f6c944
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6764e37b994ed76d27f88e3bdc8ec137d5e2f600
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372102"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232993"
 ---
 # <a name="piecewise_constant_distribution-class"></a>Класс piecewise_constant_distribution
 
@@ -80,8 +80,8 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*RealType*\
-Тип результата плавающей точки, по **умолчанию**удвоиться. Для возможных типов см [ \<>. ](../standard-library/random.md)
+*реалтипе*\
+Тип результата с плавающей запятой, по умолчанию — **`double`** . Возможные типы см. в разделе [\<random>](../standard-library/random.md) .
 
 ## <a name="remarks"></a>Remarks
 
@@ -106,7 +106,7 @@ public:
 
 Функции-члены `operator()` возвращают следующее значение, созданное механизмом РГСЧ, из текущего или указанного пакета параметров.
 
-Для получения дополнительной информации о классах распределения и их членах [ \<>](../standard-library/random.md)см.
+Дополнительные сведения о классах распределения и их членах см [\<random>](../standard-library/random.md) . в разделе.
 
 ## <a name="example"></a>Пример
 
@@ -214,11 +214,11 @@ Distribution for 100 samples:
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<random>
+**Заголовок:**\<random>
 
 **Пространство имен:** std
 
-## <a name="piecewise_constant_distributionpiecewise_constant_distribution"></a><a name="piecewise_constant_distribution"></a>piecewise_constant_distribution::piecece-constant'distribution
+## <a name="piecewise_constant_distributionpiecewise_constant_distribution"></a><a name="piecewise_constant_distribution"></a>piecewise_constant_distribution::p iecewise_constant_distribution
 
 Формирует распределение.
 
@@ -248,31 +248,31 @@ explicit piecewise_constant_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Параметры
 
-*firstI*\
+*фирсти*\
 Итератор ввода первого элемента в диапазоне распределения.
 
-*lastI*\
+*ласти*\
 Итератор ввода последнего элемента в диапазоне распределения.
 
 *firstW*\
 Итератор ввода первого элемента в диапазоне весов.
 
-*Интервалы*\
+*диапазона*\
 Объект [initializer_list](../cpp/initializers.md) с интервалами распределения.
 
-*Рассчитывать*\
+*расчета*\
 Количество элементов в диапазоне распределения.
 
 *xmin*\
 Минимальное значение в диапазоне распределения.
 
-*Xmax*\
+*xmax*\
 Максимальное значение в диапазоне распределения. Должно быть больше, чем *xmin*.
 
-*weightfunc*\
-Объект, представляющий функцию вероятности распределения. Параметр и значение возврата должны быть конвертируемыми в **два раза.**
+*веигхтфунк*\
+Объект, представляющий функцию вероятности распределения. Параметр и возвращаемое значение должны быть преобразованы в **`double`** .
 
-*парм*\
+*ParM*\
 Структура параметров, используемая для формирования распределения.
 
 ### <a name="remarks"></a>Remarks
@@ -298,7 +298,7 @@ intervals,
     UnaryOperation weightfunc);
 ```
 
-строит объект распределения с интервалами от *интервалов* списка инициализаторов и весов, генерируемых из функции *weightfunc.*
+Создает объект распределения с интервалами между *интервалами* списка инициализаторов и весовыми коэффициентами, созданными из функции *веигхтфунк*.
 
 Конструктор, определенный как
 
@@ -308,7 +308,7 @@ piecewise_constant_distribution(size_t count, result_type xmin, result_type xmax
     UnaryOperation weightfunc);
 ```
 
-строит объект распределения с *интервалами* подсчета, `xmin,xmax`распределенными равномерно по пересчету `double`веса, назначая каждый интервал веса в соответствии с функцией *weightfunc,* и *weightfunc* должен принять один параметр и иметь возвратное значение, оба из которых являются кабриолетом. **Предварительное условие:**`xmin < xmax`
+конструирует объект *распределения с равномерно* распределенными интервалами по [ `xmin,xmax` ], присваивая вес каждого интервала в соответствии с функцией *веигхтфунк*, а *веигхтфунк* должен принимать один параметр и иметь возвращаемое значение, которое можно преобразовать в **`double`** . **Предварительное условие:**`xmin < xmax`
 
 Конструктор, определенный как
 
@@ -316,9 +316,9 @@ piecewise_constant_distribution(size_t count, result_type xmin, result_type xmax
 explicit piecewise_constant_distribution(const param_type& parm);
 ```
 
-строит объект распределения, используя *parm* в качестве сохраненной структуры параметров.
+конструирует объект распределения, используя *ParM* в качестве структуры хранимого параметра.
 
-## <a name="piecewise_constant_distributionparam_type"></a><a name="param_type"></a>piecewise_constant_distribution::pараматип
+## <a name="piecewise_constant_distributionparam_type"></a><a name="param_type"></a>piecewise_constant_distribution::p aram_type
 
 Сохраняет все параметры распределения.
 
@@ -348,7 +348,7 @@ struct param_type {
 
 Эту структуру можно передать конструктору класса распределения во время создания экземпляра, функции-члену `param()` для установки хранимых параметров существующего распределения и `operator()` для использования вместо хранимых параметров.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
-[\<случайные>](../standard-library/random.md)\
+[\<random>](../standard-library/random.md)\
 [piecewise_linear_distribution](../standard-library/piecewise-linear-distribution-class.md)

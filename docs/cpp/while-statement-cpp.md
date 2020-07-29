@@ -7,12 +7,12 @@ helpviewer_keywords:
 - while keyword [C++]
 - while keyword [C++], syntax
 ms.assetid: 358dbe76-5e5e-4af5-b575-c2293c636899
-ms.openlocfilehash: 0dfbbb2865c9cf0a23b04ce213a0e739e29c27da
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 168b1fc20d165c44c3230a8d1094c99b689ddbb9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187327"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233552"
 ---
 # <a name="while-statement-c"></a>Оператор while (C++)
 
@@ -27,11 +27,11 @@ while ( expression )
 
 ## <a name="remarks"></a>Remarks
 
-Перед каждым выполнением цикла выполняется проверка *выражения* . Таким образом, цикл **while** выполняется ноль или более раз. *выражение* должно иметь целочисленный тип, тип указателя или тип класса с однозначным преобразованием в целочисленный или тип указателя.
+Перед каждым выполнением цикла выполняется проверка *выражения* . Таким образом, **`while`** цикл выполняется ноль или более раз. *выражение* должно иметь целочисленный тип, тип указателя или тип класса с однозначным преобразованием в целочисленный или тип указателя.
 
-Цикл **while** может также завершаться, когда выполняется [break](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md)или [return](../cpp/return-statement-cpp.md) в теле оператора. Используйте [Continue](../cpp/continue-statement-cpp.md) , чтобы завершить текущую итерацию без выхода из цикла **while** . **Continue** передает управление следующей итерации цикла **while** .
+**`while`** Цикл также может завершиться, когда выполняется [break](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md)или [return](../cpp/return-statement-cpp.md) в теле оператора. Используйте [Continue](../cpp/continue-statement-cpp.md) , чтобы завершить текущую итерацию без выхода из **`while`** цикла. **`continue`** передает управление следующей итерации **`while`** цикла.
 
-В следующем коде цикл **while** используется для удаления конечных подчеркивания из строки:
+В следующем коде используется **`while`** цикл для удаления конечных подчеркивания из строки.
 
 ```cpp
 // while_statement.cpp
@@ -62,10 +62,10 @@ int main()
 
 Условие завершения вычисляется в начале цикла. Если символов подчеркивания в конце строки нет, цикл никогда не выполняется.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [Операторы итерации](../cpp/iteration-statements-cpp.md)<br/>
 [Ключевые слова](../cpp/keywords-cpp.md)<br/>
 [Оператор do-while (C)](../cpp/do-while-statement-cpp.md)<br/>
 [Оператор for (C++)](../cpp/for-statement-cpp.md)<br/>
-[Основанный на диапазоне оператор for (C++)](../cpp/range-based-for-statement-cpp.md)
+[Основанное на диапазоне выражение for (C++)](../cpp/range-based-for-statement-cpp.md)

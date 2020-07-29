@@ -7,14 +7,14 @@ helpviewer_keywords:
 - is_fundamental class
 - is_fundamental
 ms.assetid: b84eee84-2fb2-4611-beaf-b384074d8b6a
-ms.openlocfilehash: 5643aa6a2d4bbfaafc86cba4251df162b59b4692
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 99d712d11fd47f694477029bc5c2b23fe732eb04
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456250"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233123"
 ---
-# <a name="isfundamental-class"></a>Класс is_fundamental
+# <a name="is_fundamental-class"></a>Класс is_fundamental
 
 Проверяет, является ли тип типом void или арифметическим типом.
 
@@ -30,9 +30,9 @@ struct is_fundamental;
 *Ty*\
 Запрашиваемый тип.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Экземпляр предиката типа содержит значение true, если тип *Ty* является фундаментальным типом, то есть **void**, целочисленным типом, типом с плавающей запятой или `cv-qualified` формой одного из них, в противном случае — значение false.
+Экземпляр предиката типа содержит значение true, если тип *Ty* является фундаментальным типом, то есть, **`void`** целочисленным типом, типом с плавающей запятой или `cv-qualified` формой одного из них, в противном случае — значение false.
 
 ## <a name="example"></a>Пример
 
@@ -71,11 +71,11 @@ is_fundamental<void> == true
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<type_traits>
+**Заголовок:**\<type_traits>
 
 **Пространство имен:** std
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также статью
 
 [<type_traits>](../standard-library/type-traits.md)\
 [Класс is_compound](../standard-library/is-compound-class.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4091
 ms.assetid: 3a404967-ab42-49b0-b324-fd7ba1859d78
-ms.openlocfilehash: 8c373ad1eba07337dc970cb84202370c147560dd
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 333f76c2f570832c9d08a7ad666f2540cca37f05
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80163914"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233344"
 ---
 # <a name="compiler-warning-level-1-c4091"></a>Предупреждение компилятора (уровень 1) C4091
 
@@ -21,7 +21,7 @@ ms.locfileid: "80163914"
 
 ## <a name="example"></a>Пример
 
-Атрибут `__declspec` в начале объявления определяемого пользователем типа применяется к переменной этого типа. C4091 указывает, что переменная не объявлена. Следующий пример приводит к возникновению ошибки C4091.
+**`__declspec`** Атрибут в начале объявления определяемого пользователем типа применяется к переменной этого типа. C4091 указывает, что переменная не объявлена. Следующий пример приводит к возникновению ошибки C4091.
 
 ```cpp
 // C4091.cpp

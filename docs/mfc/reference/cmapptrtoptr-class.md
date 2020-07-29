@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMapPtrToPtr [MFC], RemoveKey
 - CMapPtrToPtr [MFC], SetAt
 ms.assetid: 23cbbaec-9d64-48f2-92ae-5e24fa64b926
-ms.openlocfilehash: b4ae511caab8278daf723bbcb8ffc5d57f5a1cd0
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: f8fc69007d35927daaa7128de1bc0ceb0b44c746
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442672"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223048"
 ---
 # <a name="cmapptrtoptr-class"></a>Класс Кмапптртоптр
 
@@ -51,9 +51,9 @@ ms.locfileid: "79442672"
 class CMapPtrToPtr : public CObject
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
-Функции элементов `CMapPtrToPtr` похожи на функции членов класса [кмапстрингтуб](../../mfc/reference/cmapstringtoob-class.md). Из-за этой схожести для изучения этой функции-члена можно использовать справочную документацию по классу `CMapStringToOb`. Когда вы видите `CObject` указатель в качестве параметра функции или возвращаемого значения, замените указатель на **void**. Когда вы видите `CString` или указатель **const** на **char** в качестве параметра функции или возвращаемого значения, замените указатель на **void**.
+Функции элементов `CMapPtrToPtr` похожи на функции членов класса [кмапстрингтуб](../../mfc/reference/cmapstringtoob-class.md). Из-за этой схожести для изучения этой функции-члена можно использовать справочную документацию по классу `CMapStringToOb`. Когда `CObject` указатель отображается как параметр функции или возвращаемое значение, замените указатель на **`void`** . Везде, где вы видите, `CString` или **`const`** указатель в **`char`** качестве параметра функции или возвращаемого значения, замените указатель на **`void`** .
 
 `BOOL CMapPtrToPtr::Lookup( void* <key>, void*& <rValue> ) const;`
 
@@ -63,13 +63,13 @@ class CMapPtrToPtr : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Description|
+|Имя|Описание:|
 |----------|-----------------|
 |[Кмапптртоптр:: Кмапптртоптр](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|Конструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Description|
+|name|Описание:|
 |----------|-----------------|
 |[Кмапптртоптр:: NOCOUNT](../../mfc/reference/cmapstringtoob-class.md#getcount)|Возвращает число элементов в этой карте.|
 |[Кмапптртоптр:: Жесаштаблесизе](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|Определяет текущее количество элементов в хэш-таблице.|
@@ -87,19 +87,19 @@ class CMapPtrToPtr : public CObject
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Description|
+|Имя|Описание:|
 |----------|-----------------|
-|[Кмапптртоптр:: operator \[ \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Вставляет элемент в Map — подстановку оператора для `SetAt`.|
+|[Кмапптртоптр:: operator \[\]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Вставляет элемент в Map — подстановку оператора для `SetAt` .|
 
 ## <a name="remarks"></a>Remarks
 
-`CMapPtrToPtr` включает макрос IMPLEMENT_DYNAMIC для поддержки доступа к типу во время выполнения и дампа в объект `CDumpContext`. Если требуется дамп отдельных элементов карт (значений указателей), необходимо задать для контекста дампа значение 1 или больше.
+`CMapPtrToPtr`включает в себя макрос IMPLEMENT_DYNAMIC для поддержки доступа к типу во время выполнения и дампа в `CDumpContext` объекте. Если требуется дамп отдельных элементов карт (значений указателей), необходимо задать для контекста дампа значение 1 или больше.
 
 Карты указателей на указатели не могут быть сериализованы.
 
-При удалении объекта `CMapPtrToPtr` или удалении его элементов удаляются только указатели, а не сущности, на которые они ссылаются.
+При `CMapPtrToPtr` удалении объекта или удалении его элементов удаляются только указатели, а не сущности, на которые они ссылаются.
 
-Дополнительные сведения о `CMapPtrToPtr`см. в статье [коллекции](../../mfc/collections.md)статей.
+Дополнительные сведения о см `CMapPtrToPtr` . в статье [коллекции](../../mfc/collections.md)статей.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -111,7 +111,7 @@ class CMapPtrToPtr : public CObject
 
 **Заголовок:** афксколл. h
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
-[Класс CObject](../../mfc/reference/cobject-class.md)<br/>
-[Диаграмма иерархии](../../mfc/hierarchy-chart.md)
+[CObject, класс](../../mfc/reference/cobject-class.md)<br/>
+[Иерархическая диаграмма](../../mfc/hierarchy-chart.md)

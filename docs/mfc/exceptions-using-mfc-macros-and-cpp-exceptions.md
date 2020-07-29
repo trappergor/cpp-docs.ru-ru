@@ -16,12 +16,12 @@ helpviewer_keywords:
 - heap corruption [MFC]
 - nested catch blocks [MFC]
 ms.assetid: d664a83d-879b-44d4-bdf0-029f0aca69e9
-ms.openlocfilehash: d669c58da04a1cd0ead424d93f6fad6adcd4c56c
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 9e97eb545dedd3ac38dd93471f82aecc382717ae
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622726"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223178"
 ---
 # <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>Исключения. Использование макросов MFC и исключений C++
 
@@ -49,12 +49,12 @@ ms.locfileid: "84622726"
 
 ## <a name="try-blocks-inside-catch-blocks"></a><a name="_core_try_blocks_inside_catch_blocks"></a>Блоки try внутри блоков catch
 
-Невозможно повторно создать текущее исключение из блока **try** внутри блока **catch** . Следующий пример является недопустимым:
+Невозможно повторно создать текущее исключение из **`try`** блока внутри блока **catch** . Следующий пример является недопустимым:
 
 [!code-cpp[NVC_MFCExceptions#12](codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_3.cpp)]
 
 Дополнительные сведения см. в разделе [исключения: Проверка содержимого исключений](exceptions-examining-exception-contents.md).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [Обработка исключений](exception-handling-in-mfc.md)

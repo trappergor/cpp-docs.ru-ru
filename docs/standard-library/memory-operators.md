@@ -10,16 +10,16 @@ f1_keywords:
 - memory/std::operator<<
 - memory/std::operator==
 ms.assetid: 257e3ba9-c4c2-4ae8-9b11-b156ba9c28de
-ms.openlocfilehash: 661f1bb4c0f5734d88dd23f73c69b362f59a76c2
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 15762e4853cfd018c7cff997a3ed9ba7d86b3c2e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425493"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233058"
 ---
 # <a name="ltmemorygt-operators"></a>операторы &lt;memory&gt;
 
-## <a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a>operator! =
 
 Проверяет неравенство между объектами.
 
@@ -42,10 +42,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*слева*\
 Один из объектов для проверки на неравенство.
 
-*справа*\
+*Правильно*\
 Один из объектов для проверки на неравенство.
 
 *Ty1*\
@@ -56,7 +56,7 @@ bool operator!=(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение **true**, если объекты не равны, значение **false**, если объекты равны.
+**`true`** значение, если объекты не равны; значение **`false`** , если объекты равны.
 
 ### <a name="remarks"></a>Remarks
 
@@ -120,7 +120,7 @@ sp0 != sp0 == false
 sp0 != sp1 == true
 ```
 
-## <a name="op_eq_eq"></a>Оператор = =
+## <a name="operator"></a><a name="op_eq_eq"></a>Оператор = =
 
 Проверяет равенство между объектами.
 
@@ -143,10 +143,10 @@ bool operator==(
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*слева*\
 Один из объектов для проверки на равенство.
 
-*справа*\
+*Правильно*\
 Один из объектов для проверки на равенство.
 
 *Ty1*\
@@ -157,7 +157,7 @@ bool operator==(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true** , если объекты равны, и **false** , если объекты не равны.
+**`true`** значение, если объекты равны, **`false`** Если объекты не равны.
 
 ### <a name="remarks"></a>Remarks
 
@@ -232,7 +232,7 @@ sp0 == sp0 == true
 sp0 == sp1 == false
 ```
 
-## <a name="op_gt_eq"></a>&gt;оператора =
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>станции&gt;=
 
 Проверяет, больше или равен один объект второму объекту.
 
@@ -250,10 +250,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*слева*\
 Один из сравниваемых объектов.
 
-*справа*\
+*Правильно*\
 Один из сравниваемых объектов.
 
 *Ty1*\
@@ -266,7 +266,7 @@ bool operator>=(
 
 Операторы шаблона возвращают `left.get() >= right.get()`.
 
-## <a name="op_lt">Оператор </a>&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>станции&lt;
 
 Проверяет, меньше ли один объект второго объекта.
 
@@ -284,10 +284,10 @@ bool operator<(
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*слева*\
 Один из сравниваемых объектов.
 
-*справа*\
+*Правильно*\
 Один из сравниваемых объектов.
 
 *Ty1*\
@@ -296,7 +296,7 @@ bool operator<(
 *Ty2*\
 Тип, управляемый правым указателем.
 
-## <a name="op_lt_eq"></a>&lt;оператора =
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>станции&lt;=
 
 Проверяет, меньше или равен один объект второму объекту.
 
@@ -314,10 +314,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*слева*\
 Один из сравниваемых объектов.
 
-*справа*\
+*Правильно*\
 Один из сравниваемых объектов.
 
 *Ty1*\
@@ -330,7 +330,7 @@ bool operator<=(
 
 Операторы шаблона возвращают `left.get() <= right.get()`
 
-## <a name="op_gt">Оператор </a>&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>станции&gt;
 
 Проверяет, больше ли один объект второго объекта.
 
@@ -348,10 +348,10 @@ bool operator>(
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*слева*\
 Один из сравниваемых объектов.
 
-*справа*\
+*Правильно*\
 Один из сравниваемых объектов.
 
 *Ty1*\
@@ -360,7 +360,7 @@ bool operator>(
 *Ty2*\
 Тип, управляемый правым общим указателем.
 
-## <a name="op_lt_lt"></a>&lt;оператора &lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a>станции&lt;&lt;
 
 Записывает в поток общий указатель.
 
@@ -375,21 +375,21 @@ std::basic_ostream<Elem, Tr>& operator<<(std::basic_ostream<Elem, Tr>& out,
 *Elem*\
 Тип элемента потока.
 
-*Tr*\
+*ТС*\
 Тип признаков элемента потока.
 
 *Ty*\
 Тип, управляемый общим указателем.
 
-*out*\
+*заполняет*\
 Выходной поток.
 
-\ *SP*
+*портов*\
 Общий указатель.
 
 ### <a name="remarks"></a>Remarks
 
-Функция-шаблон возвращает `out << sp.get()`.
+Функция шаблона возвращает `out << sp.get()`.
 
 ### <a name="example"></a>Пример
 

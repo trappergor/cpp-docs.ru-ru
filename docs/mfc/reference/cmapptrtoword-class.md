@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMapPtrToWord [MFC], RemoveKey
 - CMapPtrToWord [MFC], SetAt
 ms.assetid: 4631c6b6-d49f-49d9-adc0-1e0491e32d7b
-ms.openlocfilehash: 698e306896fd62888a84b6d6ce55fb4c9678187b
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 254659a9f00ff7c0c27174cfbea4c131993150f3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442655"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223035"
 ---
 # <a name="cmapptrtoword-class"></a>Класс Кмапптртоворд
 
@@ -51,9 +51,9 @@ ms.locfileid: "79442655"
 class CMapPtrToWord : public CObject
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
-Функции элементов `CMapPtrToWord` похожи на функции членов класса [кмапстрингтуб](../../mfc/reference/cmapstringtoob-class.md). Из-за этой схожести для изучения этой функции-члена можно использовать справочную документацию по классу `CMapStringToOb`. Когда вы видите `CObject` указатель в качестве параметра функции или возвращаемого значения, замените слово. Когда вы видите `CString` или указатель **const** на **char** в качестве параметра функции или возвращаемого значения, замените указатель на **void**.
+Функции элементов `CMapPtrToWord` похожи на функции членов класса [кмапстрингтуб](../../mfc/reference/cmapstringtoob-class.md). Из-за этой схожести для изучения этой функции-члена можно использовать справочную документацию по классу `CMapStringToOb`. Везде, где вы видите `CObject` указатель в качестве параметра функции или возвращаемого значения, подставьте слово. Везде, где вы видите, `CString` или **`const`** указатель в **`char`** качестве параметра функции или возвращаемого значения, замените указатель на **`void`** .
 
 `BOOL CMapPtrToWord::Lookup( const void* <key>, WORD& <rValue> ) const;`
 
@@ -63,13 +63,13 @@ class CMapPtrToWord : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Description|
+|Имя|Описание:|
 |----------|-----------------|
 |[Кмапптртоворд:: Кмапптртоворд](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|Конструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Description|
+|name|Описание:|
 |----------|-----------------|
 |[Кмапптртоворд:: NOCOUNT](../../mfc/reference/cmapstringtoob-class.md#getcount)|Возвращает число элементов в этой карте.|
 |[Кмапптртоворд:: Жесаштаблесизе](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|Определяет текущее количество элементов в хэш-таблице.|
@@ -87,19 +87,19 @@ class CMapPtrToWord : public CObject
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Description|
+|Имя|Описание:|
 |----------|-----------------|
-|[Кмапптртоворд:: operator \[ \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Вставляет элемент в Map — подстановку оператора для `SetAt`.|
+|[Кмапптртоворд:: operator \[\]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Вставляет элемент в Map — подстановку оператора для `SetAt` .|
 
 ## <a name="remarks"></a>Remarks
 
-`CMapWordToPtr` включает макрос IMPLEMENT_DYNAMIC для поддержки доступа к типу во время выполнения и дампа в объект `CDumpContext`. Если требуется дамп отдельных элементов Map, необходимо установить глубину контекста дампа в 1 или более.
+`CMapWordToPtr`включает в себя макрос IMPLEMENT_DYNAMIC для поддержки доступа к типу во время выполнения и дампа в `CDumpContext` объекте. Если требуется дамп отдельных элементов Map, необходимо установить глубину контекста дампа в 1 или более.
 
 Карты указателей на слово не могут быть сериализованы.
 
-При удалении объекта `CMapPtrToWord` или удалении его элементов указатели и слова удаляются. Сущности, на которые ссылаются указатели ключей, не удаляются.
+При `CMapPtrToWord` удалении объекта или удалении его элементов указатели и слова удаляются. Сущности, на которые ссылаются указатели ключей, не удаляются.
 
-Дополнительные сведения о `CMapPtrToWord`см. в статье [коллекции](../../mfc/collections.md)статей.
+Дополнительные сведения о см `CMapPtrToWord` . в статье [коллекции](../../mfc/collections.md)статей.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -111,7 +111,7 @@ class CMapPtrToWord : public CObject
 
 **Заголовок:** афксколл. h
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
-[Класс CObject](../../mfc/reference/cobject-class.md)<br/>
-[Диаграмма иерархии](../../mfc/hierarchy-chart.md)
+[CObject, класс](../../mfc/reference/cobject-class.md)<br/>
+[Иерархическая диаграмма](../../mfc/hierarchy-chart.md)
