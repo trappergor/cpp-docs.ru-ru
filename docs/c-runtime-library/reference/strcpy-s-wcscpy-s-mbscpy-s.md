@@ -45,12 +45,12 @@ helpviewer_keywords:
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-ms.openlocfilehash: d8cfbc97f6c2a6d865a1436a276641a4d8f93713
-ms.sourcegitcommit: 426e327c9f7c3a3b02300e3f924f9786d62958e9
+ms.openlocfilehash: b2957490dbf045b9a3258a72b6bda0aaf1a38c0f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206197"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229302"
 ---
 # <a name="strcpy_s-wcscpy_s-_mbscpy_s-_mbscpy_s_l"></a>strcpy_s, wcscpy_s, _mbscpy_s, _mbscpy_s_l
 
@@ -116,7 +116,7 @@ errno_t _mbscpy_s_l(
 Расположение строкового буфера назначения.
 
 *dest_size*<br/>
-Размер буфера строк назначения в единицах **char** для узких и многобайтовых функций, а также **wchar_t** единиц для расширенных функций. Это значение должно быть больше нуля и не больше **RSIZE_MAX**. Убедитесь, что этот размер учетных записей завершается `NULL` после строки.
+Размер буфера строк назначения в **`char`** единицах для узких и многобайтовых функций, а также **`wchar_t`** единиц для расширенных функций. Это значение должно быть больше нуля и не больше **RSIZE_MAX**. Убедитесь, что этот размер учетных записей завершается `NULL` после строки.
 
 *src*<br/>
 Исходная строка, завершающаяся нулем.
@@ -136,7 +136,7 @@ errno_t _mbscpy_s_l(
 |any|any|**NULL**|**еинвал**|*dest*[0] имеет значение 0|
 |any|0 или слишком мал|any|**ERANGE**|*dest*[0] имеет значение 0|
 
-## <a name="remarks"></a>Комментарии
+## <a name="remarks"></a>Remarks
 
 Функция **strcpy_s** копирует содержимое в адресе *src*, включая завершающий символ null, в расположение, указанное в параметре *dest*. Строка назначения должна быть достаточно велика для сохранения исходной строки и завершающего нуля. Поведение **strcpy_s** не определено, если строки источника и назначения перекрываются.
 

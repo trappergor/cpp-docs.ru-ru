@@ -7,70 +7,70 @@ f1_keywords:
 - _declspec
 helpviewer_keywords:
 - __declspec keyword [C++]
-ms.openlocfilehash: e0c99ea9379aa6e29096250e8bd36ce3d4f183e8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 945202beca6c5deb525bd19886b947331f6f3ac3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80180229"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228951"
 ---
-# <a name="__declspec"></a>__declspec
+# `__declspec`
 
 **Блок, относящийся только к системам Microsoft**
 
-В синтаксисе расширенных атрибутов для указания сведений о классе хранения используется ключевое слово **__declspec** , которое указывает, что экземпляр заданного типа должен храниться в указанном ниже атрибуте класса хранения, связанном с Майкрософт. Примеры других модификаторов класса хранения включают ключевые слова **static** и **extern** . Однако эти ключевые слова — часть спецификации ANSI языков C и C++, и как таковые они не описаны расширенным синтаксисом атрибутов. Расширенный синтаксис атрибутов упрощает и стандартизирует расширения для систем Microsoft в соответствии с правилами языков C и С++.
+В синтаксисе расширенных атрибутов для указания сведений о классе хранения используется **`__declspec`** ключевое слово, которое указывает, что экземпляр заданного типа должен храниться в указанном ниже атрибуте класса хранения, связанном с Майкрософт. Примеры других модификаторов класса хранения включают **`static`** **`extern`** Ключевые слова и. Однако эти ключевые слова — часть спецификации ANSI языков C и C++, и как таковые они не описаны расширенным синтаксисом атрибутов. Расширенный синтаксис атрибутов упрощает и стандартизирует расширения для систем Microsoft в соответствии с правилами языков C и С++.
 
 ## <a name="grammar"></a>Грамматика
 
 *описатель decl*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__declspec (** *Extended-decl-Modifiers-seq* **)**
+&nbsp;&nbsp;&nbsp;&nbsp;**`__declspec (`**  *Расширенный-decl-модификатор-Seq*  **`)`**
 
-*extended-decl-modifier-seq*:<br/>
+*Расширенный-decl-модификатор-seq*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Extended- *decl-* модификатор *Extended-decl-модификатор-seq*
+&nbsp;&nbsp;&nbsp;&nbsp;*Расширенный* -decl-модификатор *Extended-decl-модификатор-seq*
 
-*extended-decl-modifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**выровняйте (** *#* **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**выделение ("** *сегнаме* **")**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**распределителя**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**AppDomain**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**code_seg ("** *сегнаме* **")**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;не **рекомендуется**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**dllexport**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**житинтринсик**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**naked**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**псевдонима**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**noinline**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**return**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**throw**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**неvtable**<br/>
-&nbsp;&nbsp;&nbsp;**процесса** &nbsp;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**свойство (** { **Get =** _get_func_name_ &#124; **, WHERE =** _put_func_name_ } **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**ограничения**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**сафебуфферс**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**selectany**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**устранением рисков Spectre (устранение рисков)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**thread**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**UUID ("** *комобжектгуид* **")**
+*Модификатор Extended-decl*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`align(`** *#* **`)`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`allocate("`***сегнаме***`")`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`allocator`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`appdomain`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`code_seg("`***сегнаме***`")`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`deprecated`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`dllimport`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`dllexport`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`jitintrinsic`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`naked`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`noalias`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`noinline`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`noreturn`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`nothrow`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`novtable`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`process`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`property(`**{ **`get=`** _get_func_name_ &#124; **`,put=`** _put_func_name_ }**`)`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`restrict`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`safebuffers`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`selectany`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`spectre(nomitigation)`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`thread`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`uuid("`***Комобжектгуид***`")`**
 
 Пробел отделяет последовательность модификаторов объявления. Примеры приведены в дальнейших разделах.
 
-Грамматика расширенных атрибутов поддерживает следующие атрибуты класса хранения, предназначенные для Майкрософт: [выровняйте](../cpp/align-cpp.md), [выделение](../cpp/allocate.md), [распределитель](../cpp/allocator.md), [AppDomain](../cpp/appdomain.md), [code_seg](../cpp/code-seg-declspec.md), [устаревший](../cpp/deprecated-cpp.md), [dllexport](../cpp/dllexport-dllimport.md), [DllImport](../cpp/dllexport-dllimport.md), [житинтринсик](../cpp/jitintrinsic.md), [naked](../cpp/naked-cpp.md) [, InAttribute,](../cpp/noalias.md) [noinline](../cpp/noinline.md), [noreturn](../cpp/noreturn.md), [unthrow](../cpp/nothrow-cpp.md) [, InAttribute,](../cpp/novtable.md) [Process](../cpp/process.md), [restrict](../cpp/restrict.md), [сафебуфферс](../cpp/safebuffers.md), [selectany](../cpp/selectany.md), [ устранением рисков Spectre](../cpp/spectre.md)и [Thread](../cpp/thread.md). Он также поддерживает следующие атрибуты COM-объектов: [свойство](../cpp/property-cpp.md) и [UUID](../cpp/uuid-cpp.md).
+Грамматика расширенных атрибутов поддерживает следующие атрибуты классов хранения, предназначенные для Майкрософт:,,,,,,,,,,,,,,,,,,, [`align`](../cpp/align-cpp.md) [`allocate`](../cpp/allocate.md) [`allocator`](../cpp/allocator.md) [`appdomain`](../cpp/appdomain.md) [`code_seg`](../cpp/code-seg-declspec.md) [`deprecated`](../cpp/deprecated-cpp.md) [`dllexport`](../cpp/dllexport-dllimport.md) [`dllimport`](../cpp/dllexport-dllimport.md) [`jitintrinsic`](../cpp/jitintrinsic.md) [`naked`](../cpp/naked-cpp.md) [`noalias`](../cpp/noalias.md) [`noinline`](../cpp/noinline.md) [`noreturn`](../cpp/noreturn.md) [`nothrow`](../cpp/nothrow-cpp.md) [`novtable`](../cpp/novtable.md) [`process`](../cpp/process.md) [`restrict`](../cpp/restrict.md) [`safebuffers`](../cpp/safebuffers.md) [`selectany`](../cpp/selectany.md) [`spectre`](../cpp/spectre.md) и [`thread`](../cpp/thread.md) . Он также поддерживает следующие атрибуты COM-Object: [`property`](../cpp/property-cpp.md) и [`uuid`](../cpp/uuid-cpp.md) .
 
-Атрибуты класса хранения **code_seg**, **dllexport**, **DllImport**, **naked**, **Alias**, **unthrow**, **Property**, **restrict**, **selectany**, **Thread**и **UUID** являются свойствами только объявления объекта или функции, к которой они применяются. Атрибут **Thread** влияет только на данные и объекты. Атрибуты **naked** и **устранением рисков Spectre** влияют только на функции. Атрибуты **DllImport** и **dllexport** влияют на функции, данные и объекты. Атрибуты **Property**, **selectany**и **UUID** влияют на COM-объекты.
+**`code_seg`** **`dllexport`** **`dllimport`** Атрибуты класса хранения,,,,, **`naked`** **`noalias`** **`nothrow`** , **`property`** , **`restrict`** , **`selectany`** , **`thread`** и **`uuid`** являются свойствами только объявления объекта или функции, к которым они применяются. **`thread`** Атрибут влияет только на данные и объекты. **`naked`** Атрибуты и **`spectre`** влияют только на функции. **`dllimport`** Атрибуты и **`dllexport`** влияют на функции, данные и объекты. **`property`** Атрибуты, **`selectany`** и **уу'ид** влияют на COM-объекты.
 
-Для совместимости с предыдущими версиями **_declspec** является синонимом для **__declspec** , если только не указан параметр компилятора [/Za \(отключить расширения языка)](../build/reference/za-ze-disable-language-extensions.md) .
+Для совместимости с предыдущими версиями аргумент **`_declspec`** является синонимом, **`__declspec`** если только параметр компилятора [/Za не \( отключил расширения языка)](../build/reference/za-ze-disable-language-extensions.md) .
 
-Ключевые слова **__declspec** должны располагаться в начале простого объявления. Компилятор игнорирует, без предупреждения, все **__declspec** ключевые слова, помещенные после * или & и перед идентификатором переменной в объявлении.
+**`__declspec`** Ключевые слова должны располагаться в начале простого объявления. Компилятор игнорирует, без предупреждения, все **`__declspec`** Ключевые слова, помещенные после * или &, а также перед идентификатором переменной в объявлении.
 
-Атрибут **__declspec** , указанный в начале объявления определяемого пользователем типа, применяется к переменной этого типа. Пример:
+**`__declspec`** Атрибут, указанный в начале объявления определяемого пользователем типа, применяется к переменной этого типа. Например:
 
 ```cpp
 __declspec(dllimport) class X {} varX;
 ```
 
-В этом случае атрибут применяется к `varX`. Атрибут **__declspec** , помещаемый после ключевого слова **Class** или **struct** , применяется к определяемому пользователем типу. Пример:
+В этом случае атрибут применяется к `varX`. **`__declspec`** Атрибут, помещенный после **`class`** **`struct`** ключевого слова или, применяется к определяемому пользователем типу. Например:
 
 ```cpp
 class __declspec(dllimport) X {};
@@ -78,11 +78,11 @@ class __declspec(dllimport) X {};
 
 В этом случае атрибут применяется к `X`.
 
-Общая рекомендация по использованию атрибута **__declspec** для простых объявлений выглядит следующим образом:
+Ниже приведены общие рекомендации по использованию **`__declspec`** атрибута для простых объявлений.
 
 *описателе-описатель-seq* *init-декларатор-List*;
 
-*Описатель decl-seq* должен содержать, помимо прочего, базовый тип (например, **int**, **float**, **typedef**или имя класса), класс хранения (например, **static**, **extern**) или расширение **__declspec** . Элемент *init-декларатор-List* должен содержать, помимо прочего, указательную часть объявлений. Пример:
+*Описатель decl-seq* должен содержать, помимо прочего, базовый тип (например,, **`int`** **`float`** **`typedef`** или имя класса), класс хранения (например **`static`** , **`extern`** ) или **`__declspec`** расширение. Элемент *init-декларатор-List* должен содержать, помимо прочего, указательную часть объявлений. Например:
 
 ```cpp
 __declspec(selectany) int * pi1 = 0;   //Recommended, selectany & int both part of decl-specifier
@@ -99,7 +99,7 @@ __declspec( thread ) int tls_i = 1;
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Ключевые слова](../cpp/keywords-cpp.md)<br/>
 [Расширенные атрибуты классов хранения в C](../c-language/c-extended-storage-class-attributes.md)

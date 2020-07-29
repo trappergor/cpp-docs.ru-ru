@@ -44,12 +44,12 @@ helpviewer_keywords:
 - strings [C++], reading
 - _sscanf_s_l function
 ms.assetid: 956e65c8-00a5-43e8-a2f2-0f547ac9e56c
-ms.openlocfilehash: 14707b64a9c5c49837391be59d83ee39b79d5065
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e92fc2544b6b137c64c388bed9013a6fdd5d3252
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957971"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229354"
 ---
 # <a name="sscanf_s-_sscanf_s_l-swscanf_s-_swscanf_s_l"></a>sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l
 
@@ -84,13 +84,13 @@ int _swscanf_s_l(
 
 ### <a name="parameters"></a>Параметры
 
-*buffer*<br/>
+*двойной*<br/>
 Сохраненные данные
 
 *format*<br/>
 Строка управления форматом. Дополнительные сведения см. в разделе [Поля спецификации формата — функции scanf и wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
 
-*параметр*<br/>
+*argument*<br/>
 Необязательные аргументы
 
 *locale*<br/>
@@ -104,9 +104,9 @@ int _swscanf_s_l(
 
 Дополнительные сведения об этих и других кодах ошибок см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Функция **sscanf_s** считывает данные из *буфера* в расположение, заданное каждым *аргументом*. Аргументы после строки формата указывают указатели на переменные, имеющие тип, соответствующий спецификатору типа в *формате*. В отличие от менее безопасной версии [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md)параметр размера буфера обязателен при использовании символов поля типа **c**, **c**, **s**, **s**или наборы элементов управления строки, заключенные в **[]** . Размер буфера в символах должен указываться как дополнительный параметр сразу после каждого параметра буфера, которому он требуется. Например, при чтении в строку размер буфера для этой строки передается следующим образом:
+Функция **sscanf_s** считывает данные из *буфера* в расположение, заданное каждым *аргументом*. Аргументы после строки формата указывают указатели на переменные, имеющие тип, соответствующий спецификатору типа в *формате*. В отличие от менее безопасной версии [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md)параметр размера буфера обязателен при использовании символов поля типа **c**, **c**, **s**, **s**или наборы элементов управления строки, заключенные в **[]**. Размер буфера в символах должен указываться как дополнительный параметр сразу после каждого параметра буфера, которому он требуется. Например, при чтении в строку размер буфера для этой строки передается следующим образом:
 
 ```C
 wchar_t ws[10];
@@ -132,15 +132,15 @@ sscanf_s(input, "%4c", &c, (unsigned)_countof(c)); // not null terminated
 Дополнительные сведения см. в разделах [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) и [Символы поля типа scanf](../../c-runtime-library/scanf-type-field-characters.md).
 
 > [!NOTE]
-> Параметр size имеет тип без **знака**, а не **size_t**. При компиляции для 64-разрядных целевых объектов используйте статическое приведение для преобразования результатов **_countof** или **sizeof** в правильный размер.
+> Параметр size имеет тип **`unsigned`** , а не **size_t**. При компиляции для 64-разрядных целевых объектов используйте статическое приведение для преобразования **_countof** или **`sizeof`** результатов в правильный размер.
 
-Аргумент *Format* управляет интерпретацией полей ввода и имеет ту же форму и функцию, что и аргумент *Format* для функции **scanf_s** . Если производится копирование между перекрывающимися строками, поведение не определено.
+Аргумент *Format* управляет интерпретацией полей ввода и имеет ту же форму и функцию, что и аргумент *format* для функции **scanf_s** . Если копирование производится между перекрывающимися строками, поведение не определено.
 
-**swscanf_s** — это версия **sscanf_s**для расширенных символов; аргументы для **swscanf_s** являются строками расширенных символов. **sscanf_s** не обрабатывает многобайтовые шестнадцатеричные символы. **swscanf_s** не обрабатывает символы в формате полной ширины в Юникоде или "зоны совместимости". В противном случае поведение **swscanf_s** и **sscanf_s** работает одинаково.
+**swscanf_s** — это версия **sscanf_s**для расширенных символов; аргументы для **swscanf_s** являются строками расширенных символов. **sscanf_s** не обрабатывает многобайтовые шестнадцатеричные символы. **swscanf_s** не обрабатывает символы в формате полной ширины в Юникоде или "зоны совместимости". В противном случае **swscanf_s** и **sscanf_s** ведут себя одинаково.
 
 Версии этих функций с суффиксом **_l** идентичны за исключением того, что они используют переданный параметр языкового стандарта вместо языкового стандарта текущего потока.
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|
@@ -154,7 +154,7 @@ sscanf_s(input, "%4c", &c, (unsigned)_countof(c)); // not null terminated
 |**sscanf_s**, **_sscanf_s_l**|\<stdio.h>|
 |**swscanf_s**, **_swscanf_s_l**|\<stdio.h> или \<wchar.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -196,10 +196,10 @@ Integer:  = 15
 Real:     = 15.000000
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)<br/>
 [fscanf, _fscanf_l, fwscanf, _fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)<br/>

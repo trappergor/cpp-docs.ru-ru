@@ -24,12 +24,12 @@ f1_keywords:
 - vfwscanf_s
 - _vftscanf_s
 ms.assetid: 9b0133f0-9a18-4581-b24b-3b72683ad432
-ms.openlocfilehash: 2c6f3504c9c12ad5429a1b9649eda351c473671a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 834def5f1465f3ce0d903b0af31b67d0e7eb2543
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957380"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229289"
 ---
 # <a name="vfscanf_s-vfwscanf_s"></a>vfscanf_s, vfwscanf_s
 
@@ -67,16 +67,16 @@ int vfwscanf_s(
 
 Эти функции проверяют свои параметры. Если *Stream* является недопустимым указателем на файл или *Format* является пустым указателем, эти функции вызывают обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают **EOF** и применяют **значение** **еинвал**.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Функция **vfscanf_s** считывает данные из текущей позиции *потока* в расположения, предоставленные списком аргументов *arglist* (если они есть). Каждый аргумент в списке должен быть указателем на переменную типа, которая соответствует спецификатору типа в *формате*. *Format* управляет интерпретацией полей ввода и имеет ту же форму и функцию, что и аргумент *Format* для **scanf_s**; Описание *формата*см. в разделе [поля спецификации формата: функции scanf и wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md) . **vfwscanf_s** — это версия **vfscanf_s**для расширенных символов; аргумент формата для **vfwscanf_s** является строкой расширенных символов. Эти функции ведут себя одинаково, если поток открыт в режиме ANSI. **vfscanf_s** в настоящее время не поддерживает входные данные из потока Юникода.
 
-Основное различие между более безопасными функциями (с суффиксом **_s** ) и другими версиями заключается в том, что более безопасные функции должны иметь размер в символах каждого из полей **c**, **c**, **s**, **s**и **[** Type передается в качестве аргумента сразу после переменной. Дополнительные сведения см. в разделах [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) и [Спецификация ширины scanf](../../c-runtime-library/scanf-width-specification.md).
+Основное различие между более безопасными функциями (с суффиксом **_s** ) и другими версиями заключается в том, что более безопасные функции требует, чтобы размер в символах каждого поля **c**, **c**, s **и** **s** **[** Type передавался в качестве аргумента, непосредственно следующего за переменной. Дополнительные сведения см. в разделах [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) и [Спецификация ширины scanf](../../c-runtime-library/scanf-width-specification.md).
 
 > [!NOTE]
-> Параметр size имеет тип без **знака**, а не **size_t**.
+> Параметр size имеет тип **`unsigned`** , а не **size_t**.
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|
@@ -84,12 +84,12 @@ int vfwscanf_s(
 
 ## <a name="requirements"></a>Требования
 
-|Функция|Обязательный заголовок|
+|Компонент|Обязательный заголовок|
 |--------------|---------------------|
 |**vfscanf_s**|\<stdio.h>|
 |**vfwscanf_s**|\<stdio.h> или \<wchar.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -159,7 +159,7 @@ a-string
 x
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)<br/>
 [_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l](cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md)<br/>
