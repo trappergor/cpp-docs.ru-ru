@@ -20,39 +20,39 @@ helpviewer_keywords:
 - databases [MFC], dialog data exchange (DDX) support
 - DAO [MFC], dialog data exchange (DDX) support
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
-ms.openlocfilehash: 3128b1ba459cb017d1cdb2321bc55d865aa4f8b9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8eef2f3dc7880f9b2a937a26db1b74687fa00f1d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365777"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222840"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Функции обмена данными в диалоговых окнах для CRecordView и CDaoRecordView
 
-В этой теме перечислены функции DDX_Field, используемые для обмена данными между [CRecordset](../../mfc/reference/crecordset-class.md) и [CRecordView](../../mfc/reference/crecordview-class.md) или [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) и [cDaoRecordView](../../mfc/reference/cdaorecordview-class.md) форме. DAO используется с базами данных Access и поддерживается в Office 2013. DAO 3.6 является окончательной версией, и он считается устаревшим.
+В этом разделе перечислены функции DDX_Field, используемые для обмена данными между формами [CRecordset](../../mfc/reference/crecordset-class.md) и [CRecordView](../../mfc/reference/crecordview-class.md) , а также [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) и [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) . DAO используется с базами данных Access и поддерживается в Office 2013. Версия DAO 3,6 является окончательной и считается устаревшей.
 
 > [!NOTE]
-> DDX_Field функции похожи на функции DDX в том, что они обмениваются данными с элементами управления в форме. Но в отличие от DDX, они обмениваются данными с полями связанного с типом объекта записи представления, а не с полями самого представления записи. Для получения дополнительной `CRecordView` информации, см. `CDaoRecordView`
+> Функции DDX_Field подобны функциям DDX в том, что они обмениваются данными с элементами управления в форме. Но в отличие от DDX, они обмениваются данными с полями объекта набора записей, связанного с представлением, а не с полями самого представления записи. Дополнительные сведения см. в разделе Классы `CRecordView` и `CDaoRecordView` .
 
-### <a name="ddx_field-functions"></a>функции DDX_Field
+### <a name="ddx_field-functions"></a>Функции DDX_Field
 
 |||
 |-|-|
-|[DDX_FieldCBIndex](#ddx_fieldcbindex)|Передача неосподданных данных между участником данных полевых данных и индексом текущего выбора в комбо-поле в [CRecordView](../../mfc/reference/crecordview-class.md) или [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md).|
-|[DDX_FieldCBString](#ddx_fieldcbstring)|Передача `CString` данных между членом данных полевого набора и управлением комбо-коробкой в `CRecordView` или `CDaoRecordView`. При перемещении данных из набора записей в управление эта функция выбирает элемент в комбо-поле, который начинается с символов в указанной строке.|
-|[DDX_FieldCBStringExact](#ddx_fieldcbstringexact)|Передача `CString` данных между членом данных полевого набора и управлением комбо-коробкой в `CRecordView` или `CDaoRecordView`. При перемещении данных из набора записей в управление эта функция выбирает элемент в комбо-коробке, который точно соответствует указанной строке.|
-|[DDX_FieldCheck](#ddx_fieldcheck)|Передача данных Boolean между участником данных полевого `CDaoRecordView`набора и флажками в или `CRecordView` .|
-|[DDX_FieldLBIndex](#ddx_fieldlbindex)|Передача неослоеданных данных между участником данных поля записи `CRecordView` `CDaoRecordView`и индексом текущего выбора в поле списка в или .|
-|[DDX_FieldLBString](#ddx_fieldlbstring)|Управляет передачей данных [CString](../../atl-mfc-shared/reference/cstringt-class.md) между управлением список ящиков и полевыми данными, входящие в набор записей. При перемещении данных из набора записей в элемент управления эта функция выбирает элемент в поле списка, который начинается с символов в указанной строке.|
-|[DDX_FieldLBStringExact](#ddx_fieldlbstringexact)|Управляет передачей `CString` данных между управлением список ящиков и полевыми данными, входящие в состав регистрации. При перемещении данных из набора записей в элемент управления эта функция выбирает первый элемент, который точно соответствует указанной строке.|
-|[DDX_FieldRadio](#ddx_fieldradio)|Передача несколько данных между участником данных полевых данных `CRecordView` `CDaoRecordView`и группой радиокнопок в или .|
-|[DDX_FieldScroll](#ddx_fieldscroll)|Устанавливает или получает положение прокрутки `CRecordView` управления `CDaoRecordView`баром прокрутки в или . Звоните из функции [DoFieldExchange.](../../mfc/reference/cdaorecordset-class.md#dofieldexchange)|
-|[DDX_FieldSlider](#ddx_fieldslider)|Синхронизирует положение большого пальца управления ползунок в `int` представлении записи и элемента данных поля в наборе записей. |
-|[DDX_FieldText](#ddx_fieldtext)|Перегруженные версии доступны для `int`передачи, **UINT**, **длинные** `DWORD`, , [CString](../../atl-mfc-shared/reference/cstringt-class.md), **плавать**, **двойной**, **короткий**, [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md), и [COleCurrency](../../mfc/reference/colecurrency-class.md) данные между записью поля данных члена и редактировать окно в `CRecordView` или `CDaoRecordView`.|
+|[DDX_FieldCBIndex](#ddx_fieldcbindex)|Передает целочисленные данные между элементом данных поля набора записей и индексом текущего выделения в поле со списком в списке [CRecordView](../../mfc/reference/crecordview-class.md) или [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md).|
+|[DDX_FieldCBString](#ddx_fieldcbstring)|Передает `CString` данные между элементом данных поля набора записей и элементом управления "поле со списком" в `CRecordView` или `CDaoRecordView` . При перемещении данных из набора записей в элемент управления эта функция выбирает элемент в поле со списком, который начинается с символов в указанной строке.|
+|[DDX_FieldCBStringExact](#ddx_fieldcbstringexact)|Передает `CString` данные между элементом данных поля набора записей и элементом управления "поле со списком" в `CRecordView` или `CDaoRecordView` . При перемещении данных из набора записей в элемент управления эта функция выбирает элемент в поле со списком, точно соответствующий указанной строке.|
+|[DDX_FieldCheck](#ddx_fieldcheck)|Передает логические данные между элементом данных поля набора записей и флажком в `CRecordView` или `CDaoRecordView` .|
+|[DDX_FieldLBIndex](#ddx_fieldlbindex)|Передает целочисленные данные между элементом данных поля набора записей и индексом текущего выделения в поле со списком в `CRecordView` или `CDaoRecordView` .|
+|[DDX_FieldLBString](#ddx_fieldlbstring)|Управляет передачей данных [CString](../../atl-mfc-shared/reference/cstringt-class.md) между элементом управления "список" и элементами данных поля набора записей. При перемещении данных из набора записей в элемент управления эта функция выбирает элемент в списке, который начинается с символов в указанной строке.|
+|[DDX_FieldLBStringExact](#ddx_fieldlbstringexact)|Управляет передачей `CString` данных между элементом управления "список" и элементами данных поля в наборе записей. При перемещении данных из набора записей в элемент управления эта функция выбирает первый элемент, точно соответствующий указанной строке.|
+|[DDX_FieldRadio](#ddx_fieldradio)|Передает целочисленные данные между элементом данных поля набора записей и группой переключателей в `CRecordView` или `CDaoRecordView` .|
+|[DDX_FieldScroll](#ddx_fieldscroll)|Задает или получает расположение полосы прокрутки элемента управления "полоса прокрутки" в `CRecordView` или `CDaoRecordView` . Вызовите из функции [DoFieldExchange](../../mfc/reference/cdaorecordset-class.md#dofieldexchange) .|
+|[DDX_FieldSlider](#ddx_fieldslider)|Синхронизирует положение бегунка элемента управления Slider в представлении записей и **`int`** элемент данных поля в наборе записей. |
+|[DDX_FieldText](#ddx_fieldtext)|Перегруженные версии доступны для передачи **`int`** , **uint**, **`long`** , `DWORD` , [CString](../../atl-mfc-shared/reference/cstringt-class.md),,, **`float`** **`double`** **`short`** , [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)и [COleCurrency](../../mfc/reference/colecurrency-class.md) данных между элементом данных поля набора записей и полем редактирования в `CRecordView` или `CDaoRecordView` .|
 
 ## <a name="ddx_fieldcbindex"></a><a name="ddx_fieldcbindex"></a>DDX_FieldCBIndex
 
-Функция `DDX_FieldCBIndex` синхронизирует индекс выбранного элемента в управлении полем списка управления комбо-боксом `int` в представлении записи и члена данных поля, связанного с представлением записи.
+`DDX_FieldCBIndex`Функция синхронизирует индекс выбранного элемента в элементе управления "список" элемента управления "поле со списком" в представлении "запись" и **`int`** элемент данных поля набора записей, связанного с представлением записи.
 
 ```cpp
 void AFXAPI DDX_FieldCBIndex(
@@ -70,37 +70,37 @@ void AFXAPI DDX_FieldCBIndex(
 
 ### <a name="parameters"></a>Параметры
 
-*Pdx*<br/>
-Указатель на объект [CDataExchange.](../../mfc/reference/cdataexchange-class.md) Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.
+*pDX*<br/>
+Указатель на объект [кдатаексчанже](../../mfc/reference/cdataexchange-class.md) . Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.
 
-*nIDC*<br/>
-Идентификатор элемента управления в объекте [CRecordView](../../mfc/reference/crecordview-class.md) или [CDaoRecordView.](../../mfc/reference/cdaorecordview-class.md)
+*нидк*<br/>
+Идентификатор элемента управления в объекте [CRecordView](../../mfc/reference/crecordview-class.md) или [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*Индекс*<br/>
-Ссылка на члена данных `CRecordset` поля `CDaoRecordset` в связанном или объекте.
+*номер*<br/>
+Ссылка на элемент данных поля в связанном `CRecordset` `CDaoRecordset` объекте или.
 
-*pRecordset*<br/>
-Указатель на объект [CRecordset](../../mfc/reference/crecordset-class.md) или [CDaoRecordset,](../../mfc/reference/cdaorecordset-class.md) с которым обмениваются данными.
+*предшнур*<br/>
+Указатель на объект [CRecordset](../../mfc/reference/crecordset-class.md) или [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) , с которым осуществляется обмен данными.
 
 ### <a name="remarks"></a>Remarks
 
-При перемещении данных из уровня записи в элемент управления эта функция устанавливает выделение в элементе управления на основе значения, указанного в *индексе.* При переходе из рекорда в контроль, если поле записи Null, MFC устанавливает значение индекса до 0. При передаче от элемента к рекорду, если элемент пустой или если элемент не выбран, поле записи устанавливается до 0.
+При перемещении данных из набора записей в элемент управления эта функция задает выбор в элементе управления на основе значения, указанного в поле *индекс*. При переносе из набора записей в элемент управления, если поле набора записей имеет значение null, MFC устанавливает значение индекса равным 0. При переносе из элемента управления в набор записей, если элемент управления пуст или если элемент не выбран, поле набора записей устанавливается в значение 0.
 
-Используйте первую версию, если вы работаете с классами на основе ODBC. Используйте вторую версию, если вы работаете с классами dAO.
+Используйте первую версию при работе с классами на основе ODBC. Используйте вторую версию при работе с классами на основе DAO.
 
-Дополнительные сведения об DDX см [обмен данными окон и проверка](../../mfc/dialog-data-exchange-and-validation.md). Для примеров и дополнительной информации о DDX для [CRecordView](../../mfc/reference/crecordview-class.md) и [Record Views](../../data/record-views-mfc-data-access.md) [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) поля, см.
+Дополнительные сведения об DDX см [обмен данными окон и проверка](../../mfc/dialog-data-exchange-and-validation.md). Примеры и дополнительные сведения о полях DDX для [CRecordView](../../mfc/reference/crecordview-class.md) и [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) см. в разделе [представления записей](../../data/record-views-mfc-data-access.md)статьи.
 
 ### <a name="example"></a>Пример
 
-На [примере DDX_FieldText](#ddx_fieldtext) можно ознакомиться с общим примером DDX_Field. Пример будет похож `DDX_FieldCBIndex`на .
+Пример общего DDX_Field см. в разделе [DDX_FieldText](#ddx_fieldtext) . Пример будет похож на `DDX_FieldCBIndex` .
 
 ### <a name="requirements"></a>Требования
 
-**Заголовок:** afxdao.h
+**Заголовок:** афксдао. h
 
 ## <a name="ddx_fieldcbstring"></a><a name="ddx_fieldcbstring"></a>DDX_FieldCBString
 
-Функция `DDX_FieldCBString` управляет передачей данных [CString](../../atl-mfc-shared/reference/cstringt-class.md) между управлением элементаком управления комбо-коробкой в представлении записи и полевым элементом `CString` данных набора записей, связанных с представлением записи.
+`DDX_FieldCBString`Функция управляет передачей данных [CString](../../atl-mfc-shared/reference/cstringt-class.md) между элементом управления "поле ввода" поля со списком в представлении записей и `CString` элементом данных поля набора записей, связанным с представлением записей.
 
 ```cpp
 void AFXAPI DDX_FieldCBString(
@@ -118,37 +118,37 @@ void AFXAPI DDX_FieldCBString(
 
 ### <a name="parameters"></a>Параметры
 
-*Pdx*<br/>
-Указатель на объект [CDataExchange.](../../mfc/reference/cdataexchange-class.md) Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.
+*pDX*<br/>
+Указатель на объект [кдатаексчанже](../../mfc/reference/cdataexchange-class.md) . Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.
 
-*nIDC*<br/>
-Идентификатор элемента управления в объекте [CRecordView](../../mfc/reference/crecordview-class.md) или [CDaoRecordView.](../../mfc/reference/cdaorecordview-class.md)
+*нидк*<br/>
+Идентификатор элемента управления в объекте [CRecordView](../../mfc/reference/crecordview-class.md) или [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
 *value*<br/>
-Ссылка на члена данных `CRecordset` поля `CDaoRecordset` в связанном или объекте.
+Ссылка на элемент данных поля в связанном `CRecordset` `CDaoRecordset` объекте или.
 
-*pRecordset*<br/>
-Указатель на объект [CRecordset](../../mfc/reference/crecordset-class.md) или [CDaoRecordset,](../../mfc/reference/cdaorecordset-class.md) с которым обмениваются данными.
+*предшнур*<br/>
+Указатель на объект [CRecordset](../../mfc/reference/crecordset-class.md) или [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) , с которым осуществляется обмен данными.
 
 ### <a name="remarks"></a>Remarks
 
-При перемещении данных из набора записей в управление эта функция устанавливает текущий выбор в комбо-поле в первый ряд, который начинается с символов строки, указанной в *значении.* При передаче из рекорда в управление, если поле записи null, любой выбор удаляется из комбо-коробки и управление мольпового элемента устанавливается на пустоту. При передаче из управления в рекорд, если элемент элемент апогея пуст, поле записей устанавливается в Null, если поле позволяет.
+При перемещении данных из набора записей в элемент управления эта функция устанавливает текущий выбор в поле со списком в первую строку, которая начинается с символов в строке, указанной в *параметре value*. При переносе из набора записей в элемент управления, если поле набора записей имеет значение null, все выделенные элементы удаляются из поля со списком, а поле ввода поля со списком устанавливается в пустое значение. Если элемент управления является пустым, при переносе из элемента управления в набор записей поле набора записей устанавливается в значение null, если это поле разрешено.
 
-Используйте первую версию, если вы работаете с классами на основе ODBC. Используйте вторую версию, если вы работаете с классами dAO.
+Используйте первую версию при работе с классами на основе ODBC. Используйте вторую версию при работе с классами на основе DAO.
 
-Дополнительные сведения об DDX см [обмен данными окон и проверка](../../mfc/dialog-data-exchange-and-validation.md). Для примеров и дополнительной информации о DDX для [CRecordView](../../mfc/reference/crecordview-class.md) и [Record Views](../../data/record-views-mfc-data-access.md) [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) поля, см.
+Дополнительные сведения об DDX см [обмен данными окон и проверка](../../mfc/dialog-data-exchange-and-validation.md). Примеры и дополнительные сведения о полях DDX для [CRecordView](../../mfc/reference/crecordview-class.md) и [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) см. в разделе [представления записей](../../data/record-views-mfc-data-access.md)статьи.
 
 ### <a name="example"></a>Пример
 
-На [примере DDX_FieldText](#ddx_fieldtext) можно ознакомиться с общим примером DDX_Field. Пример включает вызов `DDX_FieldCBString`в .
+Пример общего DDX_Field см. в разделе [DDX_FieldText](#ddx_fieldtext) . Пример включает вызов `DDX_FieldCBString` .
 
 ### <a name="requirements"></a>Требования
 
-  **Заголовок** afxdao.h
+  **Заголовок** афксдао. h
 
 ## <a name="ddx_fieldcbstringexact"></a><a name="ddx_fieldcbstringexact"></a>DDX_FieldCBStringExact
 
-Функция `DDX_FieldCBStringExact` управляет передачей данных [CString](../../atl-mfc-shared/reference/cstringt-class.md) между управлением элементаком управления комбо-коробкой в представлении записи и полевым элементом `CString` данных набора записей, связанных с представлением записи.
+`DDX_FieldCBStringExact`Функция управляет передачей данных [CString](../../atl-mfc-shared/reference/cstringt-class.md) между элементом управления "поле ввода" поля со списком в представлении записей и `CString` элементом данных поля набора записей, связанным с представлением записей.
 
 ```cpp
 void AFXAPI DDX_FieldCBStringExact(
@@ -166,37 +166,37 @@ void AFXAPI DDX_FieldCBStringExact(
 
 ### <a name="parameters"></a>Параметры
 
-*Pdx*<br/>
-Указатель на объект [CDataExchange.](../../mfc/reference/cdataexchange-class.md) Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.
+*pDX*<br/>
+Указатель на объект [кдатаексчанже](../../mfc/reference/cdataexchange-class.md) . Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.
 
-*nIDC*<br/>
-Идентификатор элемента управления в объекте [CRecordView](../../mfc/reference/crecordview-class.md) или [CDaoRecordView.](../../mfc/reference/cdaorecordview-class.md)
+*нидк*<br/>
+Идентификатор элемента управления в объекте [CRecordView](../../mfc/reference/crecordview-class.md) или [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
 *value*<br/>
-Ссылка на члена данных `CRecordset` поля `CDaoRecordset` в связанном или объекте.
+Ссылка на элемент данных поля в связанном `CRecordset` `CDaoRecordset` объекте или.
 
-*pRecordset*<br/>
-Указатель на объект [CRecordset](../../mfc/reference/crecordset-class.md) или [CDaoRecordset,](../../mfc/reference/cdaorecordset-class.md) с которым обмениваются данными.
+*предшнур*<br/>
+Указатель на объект [CRecordset](../../mfc/reference/crecordset-class.md) или [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) , с которым осуществляется обмен данными.
 
 ### <a name="remarks"></a>Remarks
 
-При перемещении данных из набора записей в управление эта функция устанавливает текущий выбор в комбо-поле к первому ряду, которое точно соответствует строке, указанной в *значении.* При передаче из рекорда в управление, если поле рекорда null, любой выбор удаляется из комбо-коробки и коробка для отсылки комбо-бокса становится пустой. При передаче из элемента управления в запись, если элемент элемент пустой, поле записей устанавливается в NULL.
+При перемещении данных из набора записей в элемент управления эта функция задает для текущего выбора в поле со списком первую строку, которая точно совпадает со строкой, указанной в *параметре value*. При переносе из набора записей в элемент управления, если поле набора записей имеет значение NULL, все выбранные элементы удаляются из поля со списком, а поле ввода поля со списком устанавливается в пустое значение. При переносе из элемента управления в набор записей, если элемент управления пуст, поле набора записей устанавливается в значение NULL.
 
-Используйте первую версию, если вы работаете с классами на основе ODBC. Используйте вторую версию, если вы работаете с классами dAO.
+Используйте первую версию при работе с классами на основе ODBC. Используйте вторую версию при работе с классами на основе DAO.
 
-Дополнительные сведения об DDX см [обмен данными окон и проверка](../../mfc/dialog-data-exchange-and-validation.md). Для примеров и дополнительной информации о DDX для [CRecordView](../../mfc/reference/crecordview-class.md) и [Record Views](../../data/record-views-mfc-data-access.md) [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) поля, см.
+Дополнительные сведения об DDX см [обмен данными окон и проверка](../../mfc/dialog-data-exchange-and-validation.md). Примеры и дополнительные сведения о полях DDX для [CRecordView](../../mfc/reference/crecordview-class.md) и [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) см. в разделе [представления записей](../../data/record-views-mfc-data-access.md)статьи.
 
 ### <a name="example"></a>Пример
 
-На [примере DDX_FieldText](#ddx_fieldtext) можно ознакомиться с общим примером DDX_Field. Призывы `DDX_FieldCBStringExact` к были бы похожи.
+Пример общего DDX_Field см. в разделе [DDX_FieldText](#ddx_fieldtext) . Вызовы метода будут `DDX_FieldCBStringExact` похожи.
 
 ### <a name="requirements"></a>Требования
 
-  **Заголовок** afxdao.h
+  **Заголовок** афксдао. h
 
 ## <a name="ddx_fieldcheck"></a><a name="ddx_fieldcheck"></a>DDX_FieldCheck
 
-Функция `DDX_FieldCheck` управляет передачей данных **Int** между управлением флажками в диалоговом поле, объектом представления формы или элементом управления и членом **int** data в диалоговом поле, представлением формы или объектом управления.
+`DDX_FieldCheck`Функция управляет передачей **`int`** данных между элементом управления "флажок" в диалоговом окне, представлении формы или объектом представления элемента управления и **`int`** элементом данных диалогового окна, представления формы или объекта представления элемента управления.
 
 ```cpp
 void AFXAPI DDX_FieldCheck(
@@ -214,31 +214,31 @@ void AFXAPI DDX_FieldCheck(
 
 ### <a name="parameters"></a>Параметры
 
-*Pdx*<br/>
-Указатель на объект [CDataExchange.](../../mfc/reference/cdataexchange-class.md) Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.
+*pDX*<br/>
+Указатель на объект [кдатаексчанже](../../mfc/reference/cdataexchange-class.md) . Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.
 
-*nIDC*<br/>
-Идентификатор ресурса управления флажком, связанный с свойством управления.
+*нидк*<br/>
+Идентификатор ресурса элемента управления "флажок", связанного со свойством элемента управления.
 
 *value*<br/>
-Ссылка на переменную члена диалогового окна, представления формы или объекта управления, с которым обмениваются данными.
+Ссылка на переменную-член диалогового окна, представления формы или объекта представления элемента управления, с которыми осуществляется обмен данными.
 
-*pRecordset*<br/>
-Указатель на объект [CRecordset](../../mfc/reference/crecordset-class.md) или [CDaoRecordset,](../../mfc/reference/cdaorecordset-class.md) с которым обмениваются данными.
+*предшнур*<br/>
+Указатель на объект [CRecordset](../../mfc/reference/crecordset-class.md) или [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) , с которым осуществляется обмен данными.
 
 ### <a name="remarks"></a>Remarks
 
-При `DDX_FieldCheck` вызове *значение* устанавливается в текущее состояние управления флажком или значение состояния элемента управления *в*зависимости от направления передачи.
+При `DDX_FieldCheck` вызове метода *значение* устанавливается в текущее состояние элемента управления "флажок" или состояние элемента управления равно " *значение*" в зависимости от направления перемещения.
 
 Дополнительные сведения об DDX см [обмен данными окон и проверка](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Требования
 
-  **Заголовок** afxdao.h
+  **Заголовок** афксдао. h
 
 ## <a name="ddx_fieldlbindex"></a><a name="ddx_fieldlbindex"></a>DDX_FieldLBIndex
 
-Функция `DDX_FieldLBIndex` синхронизирует индекс выбранного элемента в элементе управления полем списка в представлении записи и членом данных **int** field, связанного с представлением записи.
+`DDX_FieldLBIndex`Функция синхронизирует индекс выбранного элемента в элементе управления "список" в представлении записей и **`int`** элемент данных поля в наборе записей, связанном с представлением записей.
 
 ```cpp
 void AFXAPI DDX_FieldLBIndex(
@@ -256,33 +256,33 @@ void AFXAPI DDX_FieldLBIndex(
 
 ### <a name="parameters"></a>Параметры
 
-*Pdx*<br/>
-Указатель на объект [CDataExchange.](../../mfc/reference/cdataexchange-class.md) Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.
+*pDX*<br/>
+Указатель на объект [кдатаексчанже](../../mfc/reference/cdataexchange-class.md) . Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.
 
-*nIDC*<br/>
-Идентификатор элемента управления в объекте [CRecordView](../../mfc/reference/crecordview-class.md) или [CDaoRecordView.](../../mfc/reference/cdaorecordview-class.md)
+*нидк*<br/>
+Идентификатор элемента управления в объекте [CRecordView](../../mfc/reference/crecordview-class.md) или [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*Индекс*<br/>
-Ссылка на члена данных `CRecordset` поля `CDaoRecordset` в связанном или объекте.
+*номер*<br/>
+Ссылка на элемент данных поля в связанном `CRecordset` `CDaoRecordset` объекте или.
 
-*pRecordset*<br/>
-Указатель на объект [CRecordset](../../mfc/reference/crecordset-class.md) или [CDaoRecordset,](../../mfc/reference/cdaorecordset-class.md) с которым обмениваются данными.
+*предшнур*<br/>
+Указатель на объект [CRecordset](../../mfc/reference/crecordset-class.md) или [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) , с которым осуществляется обмен данными.
 
 ### <a name="remarks"></a>Remarks
 
-При перемещении данных из уровня записи в элемент управления эта функция устанавливает выделение в элементе управления на основе значения, указанного в *индексе.* При переходе из рекорда в контроль, если поле записи Null, MFC устанавливает значение индекса до 0. При передаче из элемента управления в запись, если элемент пусто, поле записи устанавливается до 0.
+При перемещении данных из набора записей в элемент управления эта функция задает выбор в элементе управления на основе значения, указанного в поле *индекс*. При переносе из набора записей в элемент управления, если поле набора записей имеет значение null, MFC устанавливает значение индекса равным 0. При переносе из элемента управления в набор записей, если элемент управления пуст, поле набора записей устанавливается в значение 0.
 
-Используйте первую версию, если вы работаете с классами на основе ODBC. Используйте вторую версию, если вы работаете с классами dAO.
+Используйте первую версию при работе с классами на основе ODBC. Используйте вторую версию при работе с классами на основе DAO.
 
-Дополнительные сведения об DDX см [обмен данными окон и проверка](../../mfc/dialog-data-exchange-and-validation.md). Для примеров и дополнительной информации о DDX для [CRecordView](../../mfc/reference/crecordview-class.md) и [Record Views](../../data/record-views-mfc-data-access.md) [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) поля, см.
+Дополнительные сведения об DDX см [обмен данными окон и проверка](../../mfc/dialog-data-exchange-and-validation.md). Примеры и дополнительные сведения о полях DDX для [CRecordView](../../mfc/reference/crecordview-class.md) и [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) см. в разделе [представления записей](../../data/record-views-mfc-data-access.md)статьи.
 
 ### <a name="example"></a>Пример
 
-На [примере DDX_FieldText](#ddx_fieldtext) можно ознакомиться с общим примером DDX_Field.
+Пример общего DDX_Field см. в разделе [DDX_FieldText](#ddx_fieldtext) .
 
 ### <a name="requirements"></a>Требования
 
-  **Заголовок** afxdao.h
+  **Заголовок** афксдао. h
 
 ## <a name="ddx_fieldlbstring"></a><a name="ddx_fieldlbstring"></a>DDX_FieldLBString
 
@@ -304,33 +304,33 @@ void AFXAPI DDX_FieldLBString(
 
 ### <a name="parameters"></a>Параметры
 
-*Pdx*<br/>
-Указатель на объект [CDataExchange.](../../mfc/reference/cdataexchange-class.md) Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.
+*pDX*<br/>
+Указатель на объект [кдатаексчанже](../../mfc/reference/cdataexchange-class.md) . Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.
 
-*nIDC*<br/>
-Идентификатор элемента управления в объекте [CRecordView](../../mfc/reference/crecordview-class.md) или [CDaoRecordView.](../../mfc/reference/cdaorecordview-class.md)
+*нидк*<br/>
+Идентификатор элемента управления в объекте [CRecordView](../../mfc/reference/crecordview-class.md) или [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
 *value*<br/>
-Ссылка на члена данных `CRecordset` поля `CDaoRecordset` в связанном или объекте.
+Ссылка на элемент данных поля в связанном `CRecordset` `CDaoRecordset` объекте или.
 
-*pRecordset*<br/>
-Указатель на объект [CRecordset](../../mfc/reference/crecordset-class.md) или [CDaoRecordset,](../../mfc/reference/cdaorecordset-class.md) с которым обмениваются данными.
+*предшнур*<br/>
+Указатель на объект [CRecordset](../../mfc/reference/crecordset-class.md) или [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) , с которым осуществляется обмен данными.
 
 ### <a name="remarks"></a>Remarks
 
-В обратном направлении эта функция устанавливает текущий выбор в поле списка к первому ряду, который начинается с символов в строке, указанной *значением.* При передаче из рекорда в управление, если поле записи null, любой выбор удаляется из окна списка. При передаче из элемента управления в запись, если элемент элемент пустой, поле записей устанавливается на Null.
+В обратном направлении эта функция устанавливает текущий выбор в списке в первую строку, которая начинается с символов в строке, указанной *значением*. При переносе из набора записей в элемент управления, если поле набора записей имеет значение null, все выбранные элементы удаляются из списка. При переносе из элемента управления в набор записей, если элемент управления пуст, поле набора записей устанавливается в значение null.
 
-Используйте первую версию, если вы работаете с классами на основе ODBC. Используйте вторую версию, если вы работаете с классами dAO.
+Используйте первую версию при работе с классами на основе ODBC. Используйте вторую версию при работе с классами на основе DAO.
 
-Дополнительные сведения об DDX см [обмен данными окон и проверка](../../mfc/dialog-data-exchange-and-validation.md). Для примеров и дополнительной информации о DDX для [CRecordView](../../mfc/reference/crecordview-class.md) и [Record Views](../../data/record-views-mfc-data-access.md) [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) поля, см.
+Дополнительные сведения об DDX см [обмен данными окон и проверка](../../mfc/dialog-data-exchange-and-validation.md). Примеры и дополнительные сведения о полях DDX для [CRecordView](../../mfc/reference/crecordview-class.md) и [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) см. в разделе [представления записей](../../data/record-views-mfc-data-access.md)статьи.
 
 ### <a name="example"></a>Пример
 
-На [примере DDX_FieldText](#ddx_fieldtext) можно ознакомиться с общим примером DDX_Field. Призывы `DDX_FieldLBString` к были бы похожи.
+Пример общего DDX_Field см. в разделе [DDX_FieldText](#ddx_fieldtext) . Вызовы метода будут `DDX_FieldLBString` похожи.
 
 ### <a name="requirements"></a>Требования
 
-  **Заголовок** afxdao.h
+  **Заголовок** афксдао. h
 
 ## <a name="ddx_fieldlbstringexact"></a><a name="ddx_fieldlbstringexact"></a>DDX_FieldLBStringExact
 
@@ -352,37 +352,37 @@ void AFXAPI DDX_FieldLBStringExact(
 
 ### <a name="parameters"></a>Параметры
 
-*Pdx*<br/>
-Указатель на объект [CDataExchange.](../../mfc/reference/cdataexchange-class.md) Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.
+*pDX*<br/>
+Указатель на объект [кдатаексчанже](../../mfc/reference/cdataexchange-class.md) . Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.
 
-*nIDC*<br/>
-Идентификатор элемента управления в объекте [CRecordView](../../mfc/reference/crecordview-class.md) или [CDaoRecordView.](../../mfc/reference/cdaorecordview-class.md)
+*нидк*<br/>
+Идентификатор элемента управления в объекте [CRecordView](../../mfc/reference/crecordview-class.md) или [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
 *value*<br/>
-Ссылка на члена данных `CRecordset` поля `CDaoRecordset` в связанном или объекте.
+Ссылка на элемент данных поля в связанном `CRecordset` `CDaoRecordset` объекте или.
 
-*pRecordset*<br/>
-Указатель на объект [CRecordset](../../mfc/reference/crecordset-class.md) или [CDaoRecordset,](../../mfc/reference/cdaorecordset-class.md) с которым обмениваются данными.
+*предшнур*<br/>
+Указатель на объект [CRecordset](../../mfc/reference/crecordset-class.md) или [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) , с которым осуществляется обмен данными.
 
 ### <a name="remarks"></a>Remarks
 
-В обратном направлении эта функция устанавливает текущий выбор в поле списка к первому ряду, которое точно соответствует строке, указанной в *значении.* При передаче из рекорда в управление, если поле записи null, любой выбор удаляется из окна списка. При передаче из элемента управления в запись, если элемент элемент пустой, поле записей устанавливается на Null.
+В обратном направлении эта функция устанавливает текущий выбор в списке в первую строку, которая точно соответствует строке, указанной в поле *значение*. При переносе из набора записей в элемент управления, если поле набора записей имеет значение null, все выбранные элементы удаляются из списка. При переносе из элемента управления в набор записей, если элемент управления пуст, поле набора записей устанавливается в значение null.
 
-Используйте первую версию, если вы работаете с классами на основе ODBC. Используйте вторую версию, если вы работаете с классами dAO.
+Используйте первую версию при работе с классами на основе ODBC. Используйте вторую версию при работе с классами на основе DAO.
 
-Дополнительные сведения об DDX см [обмен данными окон и проверка](../../mfc/dialog-data-exchange-and-validation.md). Для примеров и дополнительной информации о DDX для [CRecordView](../../mfc/reference/crecordview-class.md) и [Record Views](../../data/record-views-mfc-data-access.md) [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) поля, см.
+Дополнительные сведения об DDX см [обмен данными окон и проверка](../../mfc/dialog-data-exchange-and-validation.md). Примеры и дополнительные сведения о полях DDX для [CRecordView](../../mfc/reference/crecordview-class.md) и [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) см. в разделе [представления записей](../../data/record-views-mfc-data-access.md)статьи.
 
 ### <a name="example"></a>Пример
 
-На [примере DDX_FieldText](#ddx_fieldtext) можно ознакомиться с общим примером DDX_Field. Призывы `DDX_FieldLBStringExact` к были бы похожи.
+Пример общего DDX_Field см. в разделе [DDX_FieldText](#ddx_fieldtext) . Вызовы метода будут `DDX_FieldLBStringExact` похожи.
 
 ### <a name="requirements"></a>Требования
 
-  **Заголовок** afxdao.h
+  **Заголовок** афксдао. h
 
 ## <a name="ddx_fieldradio"></a><a name="ddx_fieldradio"></a>DDX_FieldRadio
 
-Функция `DDX_FieldRadio` связывает переменную нулевого **члена** с записью представления записи с выбранной в настоящее время радиокнопкой в группе радиокнопок в представлении записи.
+`DDX_FieldRadio`Функция связывает переменную-член с нулевым значением **`int`** набора записей представления записей с выбранным в данный момент переключателем в группе переключателей в представлении записей.
 
 ```cpp
 void AFXAPI DDX_FieldRadio(
@@ -400,37 +400,37 @@ void AFXAPI DDX_FieldRadio(
 
 ### <a name="parameters"></a>Параметры
 
-*Pdx*<br/>
-Указатель на объект [CDataExchange.](../../mfc/reference/cdataexchange-class.md) Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.
+*pDX*<br/>
+Указатель на объект [кдатаексчанже](../../mfc/reference/cdataexchange-class.md) . Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.
 
-*nIDC*<br/>
-Идентификатор первого в группе (со стилем WS_GROUP) смежных элементов управления кнопкой радио в объекте [CRecordView](../../mfc/reference/crecordview-class.md) или [CDaoRecordView.](../../mfc/reference/cdaorecordview-class.md)
+*нидк*<br/>
+Идентификатор первого элемента в группе (с WS_GROUP стиля) соседних элементов управления "переключатель" в объекте [CRecordView](../../mfc/reference/crecordview-class.md) или [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
 *value*<br/>
-Ссылка на члена данных `CRecordset` поля `CDaoRecordset` в связанном или объекте.
+Ссылка на элемент данных поля в связанном `CRecordset` `CDaoRecordset` объекте или.
 
-*pRecordset*<br/>
-Указатель на объект [CRecordset](../../mfc/reference/crecordset-class.md) или [CDaoRecordset,](../../mfc/reference/cdaorecordset-class.md) с которым обмениваются данными.
+*предшнур*<br/>
+Указатель на объект [CRecordset](../../mfc/reference/crecordset-class.md) или [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) , с которым осуществляется обмен данными.
 
 ### <a name="remarks"></a>Remarks
 
-При переносе из поля записи в вид эта функция включает кнопку *nth* radio (нулевая) и выключает другие кнопки. В обратном направлении эта функция устанавливает поле рекорда на обычное число радиокнопки, которая в настоящее время находится на (проверено). При переходе из рекорда в управление, если поле записи Null, кнопка не выбирается. При переходе из управления в рекорд, если элемент управления не выбран, поле записей устанавливается в Null, если поле позволяет это.
+При передаче из поля набора записей в представление эта функция включает в себя переключатель *n* (от нуля) и отключает другие кнопки. В обратном направлении эта функция задает в поле набора записей порядковый номер переключателя, находящегося в данный момент (флажок установлен). При переносе из набора записей в элемент управления, если поле набора записей имеет значение null, кнопка не выбрана. Если при переносе из элемента управления в набор записей не выбран ни один элемент управления, то поле набора записей устанавливается в значение null, если это позволяет поле.
 
-Используйте первую версию, если вы работаете с классами на основе ODBC. Используйте вторую версию, если вы работаете с классами dAO.
+Используйте первую версию при работе с классами на основе ODBC. Используйте вторую версию при работе с классами на основе DAO.
 
-Дополнительные сведения об DDX см [обмен данными окон и проверка](../../mfc/dialog-data-exchange-and-validation.md). Для примеров и дополнительной информации о DDX для [CRecordView](../../mfc/reference/crecordview-class.md) и [Record Views](../../data/record-views-mfc-data-access.md) [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) поля, см.
+Дополнительные сведения об DDX см [обмен данными окон и проверка](../../mfc/dialog-data-exchange-and-validation.md). Примеры и дополнительные сведения о полях DDX для [CRecordView](../../mfc/reference/crecordview-class.md) и [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) см. в разделе [представления записей](../../data/record-views-mfc-data-access.md)статьи.
 
 ### <a name="example"></a>Пример
 
-На [примере DDX_FieldText](#ddx_fieldtext) можно ознакомиться с общим примером DDX_Field. Призывы `DDX_FieldRadio` к были бы похожи.
+Пример общего DDX_Field см. в разделе [DDX_FieldText](#ddx_fieldtext) . Вызовы метода будут `DDX_FieldRadio` похожи.
 
 ### <a name="requirements"></a>Требования
 
-  **Заголовок** afxdao.h
+  **Заголовок** афксдао. h
 
 ## <a name="ddx_fieldscroll"></a><a name="ddx_fieldscroll"></a>DDX_FieldScroll
 
-`DDX_FieldScroll` Функция синхронизирует положение прокрутки управления баром прокрутки в представлении записи и член данных **int** field, связанный с представлением записи (или с любой равной переменной, которую вы решите сопоставить с ней).
+`DDX_FieldScroll`Функция синхронизирует расположение прокрутки элемента управления "полоса прокрутки" в представлении записей и **`int`** элемент данных поля набора записей, связанного с представлением записи (или с любой целочисленной переменной, которую вы выбираете для сопоставления).
 
 ```cpp
 void AFXAPI DDX_FieldScroll(
@@ -448,37 +448,37 @@ void AFXAPI DDX_FieldScroll(
 
 ### <a name="parameters"></a>Параметры
 
-*Pdx*<br/>
-Указатель на объект [CDataExchange.](../../mfc/reference/cdataexchange-class.md) Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.
+*pDX*<br/>
+Указатель на объект [кдатаексчанже](../../mfc/reference/cdataexchange-class.md) . Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.
 
-*nIDC*<br/>
-Идентификатор первого в группе (со стилем WS_GROUP) смежных элементов управления кнопкой радио в объекте [CRecordView](../../mfc/reference/crecordview-class.md) или [CDaoRecordView.](../../mfc/reference/cdaorecordview-class.md)
+*нидк*<br/>
+Идентификатор первого элемента в группе (с WS_GROUP стиля) соседних элементов управления "переключатель" в объекте [CRecordView](../../mfc/reference/crecordview-class.md) или [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
 *value*<br/>
-Ссылка на члена данных `CRecordset` поля `CDaoRecordset` в связанном или объекте.
+Ссылка на элемент данных поля в связанном `CRecordset` `CDaoRecordset` объекте или.
 
-*pRecordset*<br/>
-Указатель на объект [CRecordset](../../mfc/reference/crecordset-class.md) или [CDaoRecordset,](../../mfc/reference/cdaorecordset-class.md) с которым обмениваются данными.
+*предшнур*<br/>
+Указатель на объект [CRecordset](../../mfc/reference/crecordset-class.md) или [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) , с которым осуществляется обмен данными.
 
 ### <a name="remarks"></a>Remarks
 
-При перемещении данных из уровня записи в элемент управления эта функция устанавливает положение прокрутки элемента управления прокруткой панели к значению, указанному в *значении.* При передаче из рекорда в управление, если поле записи Null, управление панелью прокрутки устанавливается до 0. При передаче из элемента управления в запись, если элемент элемент пуст, значение поля записи составляет 0.
+При перемещении данных из набора записей в элемент управления эта функция задает для элемента управления "полоса прокрутки" значение, указанное в поле " *значение*". При переносе из набора записей в элемент управления, если поле набора записей имеет значение null, то элемент управления "полоса прокрутки" имеет значение 0. При переносе из элемента управления в набор записей, если элемент управления пуст, значение поля набора записей равно 0.
 
-Используйте первую версию, если вы работаете с классами на основе ODBC. Используйте вторую версию, если вы работаете с классами dAO.
+Используйте первую версию при работе с классами на основе ODBC. Используйте вторую версию при работе с классами на основе DAO.
 
-Дополнительные сведения об DDX см [обмен данными окон и проверка](../../mfc/dialog-data-exchange-and-validation.md). Для примеров и дополнительной информации о DDX для [CRecordView](../../mfc/reference/crecordview-class.md) и [Record Views](../../data/record-views-mfc-data-access.md) [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) поля, см.
+Дополнительные сведения об DDX см [обмен данными окон и проверка](../../mfc/dialog-data-exchange-and-validation.md). Примеры и дополнительные сведения о полях DDX для [CRecordView](../../mfc/reference/crecordview-class.md) и [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) см. в разделе [представления записей](../../data/record-views-mfc-data-access.md)статьи.
 
 ### <a name="example"></a>Пример
 
-На [примере DDX_FieldText](#ddx_fieldtext) можно ознакомиться с общим примером DDX_Field. Призывы `DDX_FieldScroll` к были бы похожи.
+Пример общего DDX_Field см. в разделе [DDX_FieldText](#ddx_fieldtext) . Вызовы метода будут `DDX_FieldScroll` похожи.
 
 ### <a name="requirements"></a>Требования
 
-  **Заголовок** afxdao.h
+  **Заголовок** афксдао. h
 
 ## <a name="ddx_fieldslider"></a><a name="ddx_fieldslider"></a>DDX_FieldSlider
 
-`DDX_FieldSlider` Функция синхронизирует положение большого пальца управления ползунок в представлении записи и член данных **int** field of the recordset, связанный с представлением записи (или с любой равномерной переменной, которую вы решите сопоставить с ней).
+`DDX_FieldSlider`Функция синхронизирует положение бегунка элемента управления Slider в представлении записей и **`int`** элемент данных поля набора записей, связанного с представлением записи (или с любой целочисленной переменной, которую вы выбираете для сопоставления).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -498,39 +498,39 @@ void AFXAPI DDX_FieldSlider(
 
 ### <a name="parameters"></a>Параметры
 
-*Pdx*<br/>
-Указатель на объект [CDataExchange.](cdataexchange-class.md) Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.
+*pDX*<br/>
+Указатель на объект [кдатаексчанже](cdataexchange-class.md) . Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.
 
-*nIDC*<br/>
-Идентификатор ресурса управления ползунок.
+*нидк*<br/>
+Идентификатор ресурса элемента управления "ползунок".
 
 *value*<br/>
-Ссылка на значение, подаваемый на обмен. Этот параметр удерживает или будет использоваться для установки текущего положения большого пальца слайдера.
+Ссылка на значение для обмена. Этот параметр содержит или будет использоваться для задания текущего положения бегунка элемента управления ползунка.
 
-*pRecordset*<br/>
-Указатель на `CRecordset` связанный `CDaoRecordset` или объект, с которым обмениваются данными.
+*предшнур*<br/>
+Указатель на связанный `CRecordset` объект или, `CDaoRecordset` с которым осуществляется обмен данными.
 
 ### <a name="remarks"></a>Remarks
 
-При перемещении данных из набора данных в слайдер эта функция устанавливает положение слайдера к значению, указанному в *значении.* При передаче из рекорда в управление, если поле записи Null, положение управления ползунок устанавливается до 0. При передаче от элемента управления к рекорду, если элемент пусто, значение поля рекорда составляет 0.
+При перемещении данных из набора записей на ползунок эта функция задает положение ползунка в значении, указанном в поле *значение*. При переносе из набора записей в элемент управления, если поле набора записей имеет значение null, положение элемента управления Slider устанавливается равным 0. При переносе из элемента управления в набор записей, если элемент управления пуст, значение поля набора записей равно 0.
 
-`DDX_FieldSlider`не обмениваются информацией о диапазоне с элементами управления ползунок, способными устанавливать диапазон, а не просто положение.
+`DDX_FieldSlider`не обменивается сведениями о диапазоне с помощью элементов управления "ползунок", способных задавать диапазон, а не просто положение.
 
-Используйте первый переопределение функции, если вы работаете с классами на основе ODBC. Используйте второй переопределение с классами на основе DAO.
+При работе с основанными на ODBC классами используйте Первое переопределение функции. Используйте второе переопределение классов, основанных на DAO.
 
-Дополнительные сведения об DDX см [обмен данными окон и проверка](../dialog-data-exchange-and-validation.md). Для примеров и дополнительной информации о DDX для `CRecordView` и `CDaoRecordView` полях, см. [Record Views](../../data/record-views-mfc-data-access.md) Для получения информации о элементах управления слайдер, [см.](../using-csliderctrl.md)
+Дополнительные сведения об DDX см [обмен данными окон и проверка](../dialog-data-exchange-and-validation.md). Примеры и дополнительные сведения о полях DDX для `CRecordView` и `CDaoRecordView` см. в разделе [представления записей](../../data/record-views-mfc-data-access.md). Дополнительные сведения об элементах управления "ползунок" см. [в разделе using CSliderCtrl](../using-csliderctrl.md).
 
 ### <a name="example"></a>Пример
 
-На [примере DDX_FieldText](#ddx_fieldtext) можно ознакомиться с общим примером DDX_Field. Призывы `DDX_FieldSlider` к были бы похожи.
+Пример общего DDX_Field см. в разделе [DDX_FieldText](#ddx_fieldtext) . Вызовы метода будут `DDX_FieldSlider` похожи.
 
 ### <a name="requirements"></a>Требования
 
-**Заголовок:** afxdao.h
+**Заголовок:** афксдао. h
 
 ## <a name="ddx_fieldtext"></a><a name="ddx_fieldtext"></a>DDX_FieldText
 
-Функция `DDX_FieldText` управляет передачей данных типа **int**, **short**, **long**, DWORD, [CString](../../atl-mfc-shared/reference/cstringt-class.md), **float**, **double**, **BOOL**, или **BYTE** между элементом управления "поле ввода" и элементами данных поля элемента записей.
+`DDX_FieldText`Функция управляет передачей **`int`** **`short`** данных,, **`long`** , DWORD, [CString](../../atl-mfc-shared/reference/cstringt-class.md), **`float`** , **`double`** , **bool**или **Byte** между элементом управления "поле ввода" и элементами данных поля в наборе записей.
 
 ```cpp
 void AFXAPI DDX_FieldText(
@@ -644,35 +644,35 @@ void AFXAPI DDX_FieldText(
 
 ### <a name="parameters"></a>Параметры
 
-*Pdx*<br/>
-Указатель на объект [CDataExchange.](../../mfc/reference/cdataexchange-class.md) Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.
+*pDX*<br/>
+Указатель на объект [кдатаексчанже](../../mfc/reference/cdataexchange-class.md) . Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.
 
-*nIDC*<br/>
-Идентификатор элемента управления в объекте [CRecordView](../../mfc/reference/crecordview-class.md) или [CDaoRecordView.](../../mfc/reference/cdaorecordview-class.md)
+*нидк*<br/>
+Идентификатор элемента управления в объекте [CRecordView](../../mfc/reference/crecordview-class.md) или [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
 *value*<br/>
-Ссылка на члена данных `CRecordset` поля `CDaoRecordset` в связанном или объекте. Тип значения данных зависит от того, какую из перегруженных версий `DDX_FieldText` вы используете.
+Ссылка на элемент данных поля в связанном `CRecordset` `CDaoRecordset` объекте или. Тип данных значения зависит от того, какая из перегруженных версий `DDX_FieldText` используется.
 
-*pRecordset*<br/>
-Указатель на объект [CRecordset](../../mfc/reference/crecordset-class.md) или [CDaoRecordset,](../../mfc/reference/cdaorecordset-class.md) с которым обмениваются данными. Этот указатель `DDX_FieldText` позволяет обнаруживать и устанавливать значения Null.
+*предшнур*<br/>
+Указатель на объект [CRecordset](../../mfc/reference/crecordset-class.md) или [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) , с которым осуществляется обмен данными. Этот указатель позволяет `DDX_FieldText` обнаруживать и устанавливать значения NULL.
 
 ### <a name="remarks"></a>Remarks
 
-Для объектов [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)`DDX_FieldText` также управляет передачей значений [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)и [COleCurrency](../../mfc/reference/colecurrency-class.md). Элемент пустого элемента управления окном для отсечения указывает значение Null. При передаче из рекордного уровня в управление, если поле записи null, коробка отсечения устанавливается на пустоту. При передаче из элемента управления в запись, если элемент элемент пустой, поле записей устанавливается на Null.
+Для объектов [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)`DDX_FieldText` также управляет передачей значений [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)и [COleCurrency](../../mfc/reference/colecurrency-class.md). Пустой элемент управления "поле ввода" указывает значение null. При переносе из набора записей в элемент управления, если поле набора записей имеет значение null, поле редактирования устанавливается в пустое значение. При переносе из элемента управления в набор записей, если элемент управления пуст, поле набора записей устанавливается в значение null.
 
-Используйте версии с параметрами [CRecordset,](../../mfc/reference/crecordset-class.md) если вы работаете с классами на основе ODBC. Используйте версии с параметрами [CDaoRecordset,](../../mfc/reference/cdaorecordset-class.md) если вы работаете с классами dAO.
+Используйте версии с параметрами [CRecordset](../../mfc/reference/crecordset-class.md) , если работаете с классами на основе ODBC. При работе с классами, основанными на DAO, используйте параметры [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) .
 
-Дополнительные сведения об DDX см [обмен данными окон и проверка](../../mfc/dialog-data-exchange-and-validation.md). Для примеров и дополнительной информации о DDX для [CRecordView](../../mfc/reference/crecordview-class.md) и [Record Views](../../data/record-views-mfc-data-access.md) [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) поля, см.
+Дополнительные сведения об DDX см [обмен данными окон и проверка](../../mfc/dialog-data-exchange-and-validation.md). Примеры и дополнительные сведения о полях DDX для [CRecordView](../../mfc/reference/crecordview-class.md) и [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) см. в разделе [представления записей](../../data/record-views-mfc-data-access.md)статьи.
 
 ### <a name="example"></a>Пример
 
-Следующая `DoDataExchange` функция для [CRecordView](../../mfc/reference/crecordview-class.md) содержит `DDX_FieldText` функции `IDC_COURSELIST` вызовов для трех типов данных: это комбо-бокс; два других элемента управления являются коробками для отсеиваний. Для программирования DAO, *m_pSet* параметр является указателем на [CRecordset](../../mfc/reference/crecordset-class.md) или [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md).
+Следующая `DoDataExchange` функция для [CRecordView](../../mfc/reference/crecordview-class.md) содержит `DDX_FieldText` вызовы функций для трех типов данных: `IDC_COURSELIST` — это поле со списком; другие два элемента управления являются полями редактирования. Для программирования DAO параметр *m_pSet* является указателем на [CRecordset](../../mfc/reference/crecordset-class.md) или [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md).
 
 [!code-cpp[NVC_MFCDatabase#43](../../mfc/codesnippet/cpp/dialog-data-exchange-functions-for-crecordview-and-cdaorecordview_1.cpp)]
 
 ### <a name="requirements"></a>Требования
 
-  **Заголовок** afxdao.h
+  **Заголовок** афксдао. h
 
 ## <a name="see-also"></a>См. также раздел
 

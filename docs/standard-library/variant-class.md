@@ -1,5 +1,5 @@
 ---
-title: вариант класса
+title: Класс Variant
 ms.date: 04/04/2019
 f1_keywords:
 - variant/std::variant
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - variant/std::variant::emplace
 - variant/std::variant::index
 - variant/std::variant::valueless_by_exception
-ms.openlocfilehash: 9bfdf644374a0b825fd0ca02bf4164a766cb42a3
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: e34704b0ad8cf8fbaf8ee9514583f9597be40122
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68269306"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215404"
 ---
-# <a name="variant-class"></a>вариант класса
+# <a name="variant-class"></a>Класс Variant
 
-Любой экземпляр типа variant в любой момент времени либо содержит значение одного из его типов альтернативные или в ней нет значения.
+Любой экземпляр Variant в любой момент времени либо содержит значение одного из альтернативных типов, либо не содержит значения.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -35,26 +35,26 @@ template <class... Types>
 
 |||
 |-|-|
-|[Variant](#variant)|Создает объект типа `variant`.|
+|[variant](#variant)|Создает объект типа `variant`.|
 
 ### <a name="functions"></a>Функции
 
 |||
 |-|-|
-|[emplace](#emplace)|Создает новое значение автономной.|
-|[Индекс](#index)|Возвращает индекс содержащееся значение.|
-|[swap](#swap)||
-|[valueless_by_exception](#emplace)|Возвращает **false** Если вариант содержит значение.|
+|[emplace](#emplace)|Создает новое вложенное значение.|
+|[номер](#index)|Возвращает индекс содержащегося значения.|
+|[позиции](#swap)||
+|[valueless_by_exception](#emplace)|Возвращает **`false`** , если вариант содержит значение.|
 
 ### <a name="operators"></a>Операторы
 
 |||
 |-|-|
-|[оператор=](#op_eq)|Заменяет вариант копию еще один вариант.|
+|[Оператор =](#op_eq)|Заменяет вариант копией другого варианта.|
 
-## <a name="emplace"></a> emplace-
+## <a name="emplace"></a><a name="emplace"></a>emplace
 
-Создает новое значение автономной.
+Создает новое вложенное значение.
 
 ```cpp
 template <class T, class... Args>
@@ -67,17 +67,17 @@ template <size_t I, class U, class... Args>
     variant_alternative_t<I, variant<Types...>>& emplace(initializer_list<U>, Args&&...);
 ```
 
-## <a name="index"></a> Индекс
+## <a name="index"></a><a name="index"></a>номер
 
-Возвращает индекс содержащееся значение.
+Возвращает индекс содержащегося значения.
 
 ```cpp
 constexpr size_t index() const noexcept;
 ```
 
-## <a name="variant"></a> Variant
+## <a name="variant"></a><a name="variant"></a>значение
 
-Создает объект типа `variant`. Также содержит деструктор.
+Создает объект типа `variant`. Также включает деструктор.
 
 ```cpp
 constexpr variant() noexcept(see below);
@@ -119,9 +119,9 @@ template <class Alloc, size_t I, class U, class... Args>
 *Al*\
 Класс распределителя для использования с данным объектом.
 
-## <a name="op_eq"></a> оператор =
+## <a name="operator"></a><a name="op_eq"></a>Оператор =
 
-Заменяет вариант копию еще один вариант.
+Заменяет вариант копией другого варианта.
 
 ```cpp
 variant& operator=(const variant&);
@@ -130,15 +130,15 @@ template <class T>
     variant& operator=(T&&) noexcept(see below);
 ```
 
-## <a name="swap"></a> Swap
+## <a name="swap"></a><a name="swap"></a>позиции
 
 ```cpp
 void swap(variant&) noexcept(see below);
 ```
 
-## <a name="valueless"></a> valueless_by_exception
+## <a name="valueless_by_exception"></a><a name="valueless"></a>valueless_by_exception
 
-Возвращает **false** Если вариант содержит значение.
+Возвращает **`false`** , если вариант содержит значение.
 
 ```cpp
 constexpr bool valueless_by_exception() const noexcept;

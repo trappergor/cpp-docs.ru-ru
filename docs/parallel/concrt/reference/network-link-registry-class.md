@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - network_link_registry class
 ms.assetid: 3e7b4097-09f1-4252-964e-b15b8f7f7fc6
-ms.openlocfilehash: 430190c11ec06a4f26eb9d8c4237552848420ad7
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 18fabd0e741c144201f299271cdd01eb9ac55fac
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77138893"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222684"
 ---
 # <a name="network_link_registry-class"></a>Класс network_link_registry
 
@@ -33,32 +33,32 @@ class network_link_registry;
 ### <a name="parameters"></a>Параметры
 
 *_Block*<br/>
-Тип данных блока, хранящийся в `network_link_registry`.
+Тип данных блока, хранящийся в `network_link_registry` .
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Элементы
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|`const_pointer`|Тип, предоставляющий указатель на элемент `const` в объекте `network_link_registry`.|
-|`const_reference`|Тип, предоставляющий ссылку на элемент `const`, хранящийся в объекте `network_link_registry`, для чтения и выполнения операций const.|
-|`iterator`|Тип, предоставляющий итератор, который может считывать или изменять любой элемент объекта `network_link_registry`.|
-|`type`|Тип, представляющий тип блока, хранящегося в объекте `network_link_registry`.|
+|`const_pointer`|Тип, предоставляющий указатель на **`const`** элемент в `network_link_registry` объекте.|
+|`const_reference`|Тип, предоставляющий ссылку на **`const`** элемент, хранящийся в объекте, `network_link_registry` для чтения и выполнения операций const.|
+|`iterator`|Тип, предоставляющий итератор, который может считывать или изменять любой элемент в `network_link_registry` объекте.|
+|`type`|Тип, представляющий тип блока, хранящегося в `network_link_registry` объекте.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Description|
+|name|Описание|
 |----------|-----------------|
-|[добавление](#add)|При переопределении в производном классе добавляет ссылку на объект `network_link_registry`.|
-|[begin](#begin)|При переопределении в производном классе возвращает итератор на первый элемент в объекте `network_link_registry`.|
-|[contains](#contains)|При переопределении в производном классе выполняет поиск указанного блока в объекте `network_link_registry`.|
-|[count](#count)|При переопределении в производном классе возвращает количество элементов в объекте `network_link_registry`.|
-|[remove](#remove)|При переопределении в производном классе удаляет указанный блок из объекта `network_link_registry`.|
+|[add](#add)|При переопределении в производном классе добавляет ссылку на `network_link_registry` объект.|
+|[начале](#begin)|При переопределении в производном классе возвращает итератор на первый элемент в `network_link_registry` объекте.|
+|[contains](#contains)|При переопределении в производном классе ищет `network_link_registry` указанный блок в объекте.|
+|[count](#count)|При переопределении в производном классе возвращает число элементов в `network_link_registry` объекте.|
+|[remove](#remove)|При переопределении в производном классе удаляет указанный блок из `network_link_registry` объекта.|
 
 ## <a name="remarks"></a>Remarks
 
-`network link registry` не является надежным для параллельного доступа.
+`network link registry`Не является надежным для параллельного доступа.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -68,11 +68,11 @@ class network_link_registry;
 
 **Заголовок:** agents.h
 
-**Пространство имен:** concurrency
+**Пространство имен:** параллелизм
 
-## <a name="add"></a>включить
+## <a name="add"></a><a name="add"></a>включить
 
-При переопределении в производном классе добавляет ссылку на объект `network_link_registry`.
+При переопределении в производном классе добавляет ссылку на `network_link_registry` объект.
 
 ```cpp
 virtual void add(_EType _Link) = 0;
@@ -83,9 +83,9 @@ virtual void add(_EType _Link) = 0;
 *_Link*<br/>
 Указатель на добавляемый блок.
 
-## <a name="begin"></a>начале
+## <a name="begin"></a><a name="begin"></a>начале
 
-При переопределении в производном классе возвращает итератор на первый элемент в объекте `network_link_registry`.
+При переопределении в производном классе возвращает итератор на первый элемент в `network_link_registry` объекте.
 
 ```cpp
 virtual iterator begin() = 0;
@@ -93,15 +93,15 @@ virtual iterator begin() = 0;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Итератор, обращающийся к первому элементу в объекте `network_link_registry`.
+Итератор, обращающийся к первому элементу в `network_link_registry` объекте.
 
 ### <a name="remarks"></a>Remarks
 
-Конечное состояние итератора обозначается ссылкой на `NULL`.
+Конечное состояние итератора обозначается `NULL` ссылкой.
 
-## <a name="contains"></a>содержащих
+## <a name="contains"></a><a name="contains"></a>содержащих
 
-При переопределении в производном классе выполняет поиск указанного блока в объекте `network_link_registry`.
+При переопределении в производном классе ищет `network_link_registry` указанный блок в объекте.
 
 ```cpp
 virtual bool contains(_EType _Link) = 0;
@@ -110,15 +110,15 @@ virtual bool contains(_EType _Link) = 0;
 ### <a name="parameters"></a>Параметры
 
 *_Link*<br/>
-Указатель на блок, поиск которого выполняется в объекте `network_link_registry`.
+Указатель на блок, поиск которого выполняется в `network_link_registry` объекте.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true** , если блок найден; в противном случае — **значение false** .
+**`true`** значение, если блок найден; **`false`** в противном случае —.
 
-## <a name="count"></a>расчета
+## <a name="count"></a><a name="count"></a>расчета
 
-При переопределении в производном классе возвращает количество элементов в объекте `network_link_registry`.
+При переопределении в производном классе возвращает число элементов в `network_link_registry` объекте.
 
 ```cpp
 virtual size_t count() = 0;
@@ -128,9 +128,9 @@ virtual size_t count() = 0;
 
 Число элементов в объекте `network_link_registry`.
 
-## <a name="remove"></a>отменит
+## <a name="remove"></a><a name="remove"></a>отменит
 
-При переопределении в производном классе удаляет указанный блок из объекта `network_link_registry`.
+При переопределении в производном классе удаляет указанный блок из `network_link_registry` объекта.
 
 ```cpp
 virtual bool remove(_EType _Link) = 0;
@@ -143,10 +143,10 @@ virtual bool remove(_EType _Link) = 0;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true** , если ссылка была найдена и удалена; в противном случае — **значение false** .
+**`true`** значение, если ссылка была найдена и удалена, **`false`** в противном случае.
 
 ## <a name="see-also"></a>См. также раздел
 
-[Пространство имен concurrency](concurrency-namespace.md)<br/>
+[Пространство имен Concurrency](concurrency-namespace.md)<br/>
 [Класс single_link_registry](single-link-registry-class.md)<br/>
 [Класс multi_link_registry](multi-link-registry-class.md)

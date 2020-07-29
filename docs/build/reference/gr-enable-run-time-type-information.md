@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Gr compiler option [C++]
 - enable run-time type information compiler option [C++]
 ms.assetid: d1f9f850-dcec-49fd-96ef-e72d01148906
-ms.openlocfilehash: ee1398b2f9ee78c62fb84aa591e77708cd0d9d83
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 974a2b38c793b21abc9f17f5b7ca5c9f5e3305f5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79439597"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215235"
 ---
 # <a name="gr-enable-run-time-type-information"></a>/GR (Предоставление информации о типах во время выполнения)
 
@@ -32,9 +32,9 @@ ms.locfileid: "79439597"
 
 Если параметр **/GR** имеет значение ON, компилятор определяет `_CPPRTTI` макрос препроцессора. По умолчанию **/GR** имеет значение ON. **/GR-** отключает сведения о типах времени выполнения.
 
-Используйте **/GR** , если компилятор не может статически разрешить тип объекта в коде. Обычно требуется параметр **/GR** , если в коде используется [оператор dynamic_cast](../../cpp/dynamic-cast-operator.md) или [typeid](../../cpp/typeid-operator.md). Однако **/GR** увеличивает размер разделов RDATA изображения. Если в коде не используется **dynamic_cast** или **typeid**, **/GR-** может создать меньшее изображение.
+Используйте **/GR** , если компилятор не может статически разрешить тип объекта в коде. Обычно требуется параметр **/GR** , если в коде используется [оператор dynamic_cast](../../cpp/dynamic-cast-operator.md) или [typeid](../../cpp/typeid-operator.md). Однако **/GR** увеличивает размер разделов RDATA изображения. Если код не использует **`dynamic_cast`** или **`typeid`** , **/GR-** может создать меньшее изображение.
 
-Дополнительные сведения о проверке типов во время выполнения см. в разделе [сведения о типах во время выполнения](../../cpp/run-time-type-information.md) в  *C++ справочнике по языку*.
+Дополнительные сведения о проверке типов во время выполнения см. в *справочнике по языку C++* в разделе [сведения о типах времени выполнения](../../cpp/run-time-type-information.md) .
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
@@ -53,4 +53,4 @@ ms.locfileid: "79439597"
 ## <a name="see-also"></a>См. также раздел
 
 [Параметры компилятора MSVC](compiler-options.md)<br/>
-[Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)
+[Синтаксис командной строки компилятора КОМПИЛЯТОРОМ MSVC](compiler-command-line-syntax.md)

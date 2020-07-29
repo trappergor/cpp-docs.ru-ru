@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX control containers [MFC], non-dialog containers
 - ActiveX control containers [MFC], inserting controls
 ms.assetid: 46f195b0-b8ca-4409-8cca-fbfaf2c9ab9f
-ms.openlocfilehash: b010c35f32462810cbdb008e5688d4b41254fad1
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: f3f0bc7c89ff2bea1c344f2c876e1624ba82fb87
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620764"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214169"
 ---
 # <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>Контейнеры элементов управления ActiveX. Использование элементов управления в контейнере без диалоговых окон
 
@@ -55,7 +55,7 @@ ms.locfileid: "84620764"
 
 1. Добавьте `WM_CREATE` обработчик сообщений в класс `CMyView` .
 
-1. В функции обработчика выполните `CMyView::OnCreate` вызов функции элемента управления, `Create` используя **этот** указатель в качестве родительского окна:
+1. В функции обработчика выполните `CMyView::OnCreate` вызов функции элемента управления, `Create` используя **`this`** указатель в качестве родительского окна:
 
    [!code-cpp[NVC_MFC_AxCont#15](codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_4.cpp)]
 

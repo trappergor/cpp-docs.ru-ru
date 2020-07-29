@@ -1,5 +1,5 @@
 ---
-title: Портрет архитектуры "документ-представление"
+title: Книжная ориентация архитектуры представления документа
 ms.date: 11/04/2016
 helpviewer_keywords:
 - documents [MFC], views
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - document/view architecture [MFC], about document/view architecture
 - views [MFC], accessing document data from
 ms.assetid: 4e7f65dc-b166-45d8-bcd5-9bb0d399b946
-ms.openlocfilehash: f0e71c42004b5409eeb6f5e2ddabd33296cf5f49
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 8c7bb4add1ebce62147f0bd5403f693cbec87e91
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623451"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214195"
 ---
 # <a name="a-portrait-of-the-documentview-architecture"></a>Портрет архитектуры "документ-представление"
 
@@ -27,7 +27,7 @@ ms.locfileid: "84623451"
 
 ## <a name="gaining-access-to-document-data-from-the-view"></a>Получение доступа к данным документа из представления
 
-Представление обращается к данным документа с помощью функции- [документа](reference/cview-class.md#getdocument) , возвращающей указатель на документ, или путем создания класса представления в C++ `friend` класса документа. Затем представление использует доступ к данным для получения данных, когда он готов к рисованию или иным образом манипулировать им.
+Представление обращается к данным документа с помощью функции- [документа](reference/cview-class.md#getdocument) , возвращающей указатель на документ, или путем создания класса представления в C++ **`friend`** класса документа. Затем представление использует доступ к данным для получения данных, когда он готов к рисованию или иным образом манипулировать им.
 
 Например, в функции-члене [OnDraw](reference/cview-class.md#ondraw) представления используется `GetDocument` для получения указателя документа. Затем он использует этот указатель для доступа к `CString` элементу данных в документе. Представление передает строку в `TextOut` функцию. Код для этого примера см. в разделе [Рисование в представлении](drawing-in-a-view.md).
 

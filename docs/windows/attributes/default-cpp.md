@@ -1,5 +1,5 @@
 ---
-title: по умолчанию (C++ атрибут com)
+title: Default (атрибут COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.default
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - attributes [C#], default attribute
 - defaults, default attribute
 ms.assetid: 0cdca716-1ba8-46d7-9399-167e55492870
-ms.openlocfilehash: b789f82f4b5a09b86d72dfde5d783665cf2e918a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: dc0244897f73a5185451159aa0f4ec66dd9dae56
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167190"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215274"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -28,7 +28,7 @@ ms.locfileid: "80167190"
 ### <a name="parameters"></a>Параметры
 
 *interface1*<br/>
-Интерфейс по умолчанию, который будет доступен в средах разработки сценариев, где создаются объекты на основе класса, определенного с помощью атрибута **default** .
+Интерфейс по умолчанию, который будет предоставляться в средах сценариев, которые создают объект на основе класса, определенного с помощью **`default`** атрибута.
 
 Если исходный интерфейс по умолчанию не указан, в качестве интерфейса по умолчанию используется первое вхождение неисходного интерфейса.
 
@@ -39,11 +39,11 @@ ms.locfileid: "80167190"
 
 ## <a name="remarks"></a>Remarks
 
-Атрибут **default** языка C++ имеет ту же функциональность, что и атрибут [default](/windows/win32/Midl/default) языка MIDL. Атрибут **default** также используется вместе с атрибутом [case](case-cpp.md) .
+**`default`** Атрибут C++ имеет те же функциональные возможности, что и атрибут MIDL [по умолчанию](/windows/win32/Midl/default) . **`default`** Атрибут также используется с атрибутом [case](case-cpp.md) .
 
 ## <a name="example"></a>Пример
 
-В следующем коде показано, как **по умолчанию** используется определение кокласса для указания `ICustomDispatch` в качестве интерфейса программирования по умолчанию:
+В следующем коде показано, как **`default`** используется в определении кокласса для указания `ICustomDispatch` в качестве интерфейса программирования по умолчанию:
 
 ```cpp
 // cpp_attr_ref_default.cpp
@@ -91,7 +91,7 @@ int main() {
 }
 ```
 
-Атрибут [source](source-cpp.md) также содержит пример использования атрибута **default**.
+[Исходный](source-cpp.md) атрибут также содержит пример использования **`default`** .
 
 ## <a name="requirements"></a>Требования
 
@@ -99,15 +99,15 @@ int main() {
 
 |||
 |-|-|
-|**Применение**|**класс**, **Структура**, элемент данных|
-|**Повторяемый**|нет|
-|**Обязательные атрибуты**|**coclass** (при применении к **классу** или **структуре**)|
-|**Недопустимые атрибуты**|None|
+|**Относится к**|**`class`**, **`struct`** , элемент данных|
+|**REPEATABLE**|Нет|
+|**Требуемые атрибуты**|**coclass** (при применении к **`class`** или **`struct`** )|
+|**Недопустимые атрибуты**|Нет|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
-[Атрибуты классов](class-attributes.md)<br/>
+[Атрибуты класса](class-attributes.md)<br/>
 [кокласс](coclass.md)

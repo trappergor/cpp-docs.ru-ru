@@ -22,12 +22,12 @@ helpviewer_keywords:
 - GetMoniker method
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-ms.openlocfilehash: d0fa5f381dba4f67934007d59dbdaf4450bcfb60
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2a48acb8a961d76c34d2ba85ede5c827c880f400
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211800"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214923"
 ---
 # <a name="cenumerator-class"></a>Класс CEnumerator
 
@@ -44,19 +44,19 @@ class CEnumerator :
 
 **Заголовок:** atldbcli.h
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Элементы
 
 ### <a name="methods"></a>Методы
 
 |||
 |-|-|
 |[Поиск](#find)|Выполняет поиск по доступным поставщикам (источникам данных), ищут один из них с указанным именем.|
-|[Моникер](#getmoniker)|Извлекает интерфейс `IMoniker` для текущей записи.|
+|[Моникер](#getmoniker)|Извлекает `IMoniker` интерфейс для текущей записи.|
 |[Открыть](#open)|Открывает перечислитель.|
 
 ## <a name="remarks"></a>Remarks
 
-Данные `ISourcesRowset` можно извлекать косвенно из этого класса.
+Данные можно извлекать `ISourcesRowset` косвенно из этого класса.
 
 ## <a name="cenumeratorfind"></a><a name="find"></a>CEnumerator:: Find
 
@@ -75,7 +75,7 @@ bool Find(TCHAR* szSearchName) throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true** , если имя было найдено. В противном случае — **false**.
+**`true`** значение, если имя было найдено. В противном случае — **`false`** .
 
 ### <a name="remarks"></a>Remarks
 
@@ -126,9 +126,9 @@ HRESULT Open(const CEnumerator& enumerator) throw();
 окне Указатель на моникер для перечислителя.
 
 *пклсид*<br/>
-окне Указатель на `CLSID` перечислителя.
+окне Указатель на `CLSID` перечислитель.
 
-*enumerator*<br/>
+*Перечислитель*<br/>
 окне Ссылка на перечислитель.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -137,6 +137,6 @@ HRESULT Open(const CEnumerator& enumerator) throw();
 
 ## <a name="see-also"></a>См. также раздел
 
-[дбвиевер](../../overview/visual-cpp-samples.md)<br/>
+[DBViewer](../../overview/visual-cpp-samples.md)<br/>
 [Шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Справочник по шаблонам потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - complex numbers, math routines
 - math routines
 - complex numbers
-ms.openlocfilehash: 493886fcf1dbfd3dc16487dd8650206c428bb06d
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: dac032940ed9d96764b64809c5f8901ac273898b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "66186095"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215183"
 ---
 # <a name="c-complex-math-support"></a>Поддержка операций с комплексными числами в C
 
-Библиотека среды выполнения Microsoft C (CRT) предоставляет функции библиотеки для работы с комплексными числами, включая все функции, предусмотренные стандартом ISO C99. Компилятор не поддерживает ключевое слово **complex** или **_Complex** напрямую, поэтому в реализации Майкрософт для представления комплексных чисел используются типы-структуры.
+Библиотека среды выполнения Microsoft C (CRT) предоставляет функции библиотеки для работы с комплексными числами, включая все функции, предусмотренные стандартом ISO C99. Компилятор напрямую не поддерживает **`complex`** **`_Complex`** ключевое слово или, поэтому реализация Майкрософт использует типы структуры для представления комплексных чисел.
 
 Эти функции предназначены для балансировки производительности и правильности. Так как получение правильно округленного результата может оказаться неоправданно дорогим, эти функции позволяют получить значение, максимально приближенное к правильно округленному результату. В большинстве случаев результат будет соответствовать правильно округленному значению +/–1 ULP, хотя в некоторых случаях погрешность может быть выше.
 
@@ -28,19 +28,19 @@ ms.locfileid: "66186095"
 
 |Стандартный тип|Тип Майкрософт|
 |-|-|
-|**float complex** или **float _Complex**|**_Fcomplex**|
-|**double complex** или **double _Complex**|**_Dcomplex**|
-|**long double complex** или **long double _Complex**|**_Lcomplex**|
+|**`float complex`** или **`float _Complex`**|**_Fcomplex**|
+|**`double complex`** или **`double _Complex`**|**_Dcomplex**|
+|**`long double complex`** или **`long double _Complex`**|**_Lcomplex**|
 
 В файле заголовка math.h определен отдельный тип **struct _complex**, используемый для функции [_cabs](../c-runtime-library/reference/cabs.md). Тип **struct _complex** не используется в эквивалентных функциях для работы с комплексными числами [cabs, cabsf, cabsl](../c-runtime-library/reference/cabs-cabsf-cabsl.md).
 
 ## <a name="complex-constants-and-macros"></a>Комплексные константы и макросы
 
-**I** определяется в качестве комплексного типа **_Fcomplex** (для типа **float**), который инициализируется `{ 0.0f, 1.0f }`.
+**I** определен как сложный тип **_Fcomplex** , инициализированный `{ 0.0f, 1.0f }` .
 
 ## <a name="trigonometric-functions"></a>Тригонометрические функции
 
-|Функция|Описание|
+|Компонент|Описание|
 |-|-|
 |[cacos, cacosf, cacosl](../c-runtime-library/reference/cacos-cacosf-cacosl.md)|Вычисляет комплексный арккосинус комплексного числа|
 |[casin, casinf, casinl](../c-runtime-library/reference/casin-casinf-casinl.md)|Вычисляет комплексный арксинус комплексного числа|
@@ -51,7 +51,7 @@ ms.locfileid: "66186095"
 
 ## <a name="hyperbolic-functions"></a>Гиперболические функции
 
-|Функция|Описание|
+|Компонент|Описание|
 |-|-|
 |[cacosh, cacoshf, cacoshl](../c-runtime-library/reference/cacosh-cacoshf-cacoshl.md)|Вычисляет комплексный гиперболический арккосинус комплексного числа|
 |[casinh, casinhf, casinhl](../c-runtime-library/reference/casinh-casinhf-casinhl.md)|Вычисляет комплексный гиперболический арксинус комплексного числа|
@@ -62,7 +62,7 @@ ms.locfileid: "66186095"
 
 ## <a name="exponential-and-logarithmic-functions"></a>Экспоненциальные и логарифмические функции
 
-|Функция|Описание|
+|Компонент|Описание|
 |-|-|
 |[cexp, cexpf, cexpl](../c-runtime-library/reference/cexp-cexpf-cexpl.md)|Вычисляет комплексную экспоненту комплексного числа с основанием *e*|
 |[clog, clogf, clogl](../c-runtime-library/reference/clog-clogf-clogl.md)|Вычисляет комплексный натуральный (по основанию *e*) логарифм комплексного числа|
@@ -70,15 +70,15 @@ ms.locfileid: "66186095"
 
 ## <a name="power-and-absolute-value-functions"></a>Функции возведения в степень и вычисления абсолютного значения
 
-|Функция|Описание|
+|Компонент|Описание|
 |-|-|
 |[cabs, cabsf, cabsl](../c-runtime-library/reference/cabs-cabsf-cabsl.md)|Вычисляет комплексное абсолютное значение (также называемое нормой, модулем или порядком величины) комплексного числа|
 |[cpow, cpowf, cpowl](../c-runtime-library/reference/cpow-cpowf-cpowl.md)|Возводит комплексное число в степень x<sup>y</sup>|
 |[csqrt, csqrtf, csqrtl](../c-runtime-library/reference/csqrt-csqrtf-csqrtl.md)|Вычисляет комплексный квадратный корень комплексного числа|
 
-## <a name="manipulation-functions"></a>Функции для манипуляции с комплексными числами
+## <a name="manipulation-functions"></a>Функции обработки
 
-|Функция|Описание|
+|Компонент|Описание|
 |-|-|
 |[_Cbuild, _FCbuild, _LCbuild](../c-runtime-library/reference/cbuild-fcbuild-lcbuild.md)|Формирует комплексное число из вещественной и мнимой частей|
 |[carg, cargf, cargl](../c-runtime-library/reference/carg-cargf-cargl.md)|Вычисляет аргумент комплексного числа (также называемый фазовым углом)|
@@ -92,11 +92,11 @@ ms.locfileid: "66186095"
 
 Так как комплексные числа не относятся к собственным типам компилятора Майкрософт, для них не определены стандартные арифметические операторы. Для удобства представлены следующие библиотечные функции, которые позволяют выполнять некоторые операции с комплексными числами в пользовательском коде.
 
-|Функция|Описание|
+|Компонент|Описание|
 |-|-|
 |[_Cmulcc, _FCmulcc, _LCmulcc](../c-runtime-library/reference/cmulcc-fcmulcc-lcmulcc.md)|Произведение двух комплексных чисел|
 |[_Cmulcr, _FCmulcr, _LCmulcr](../c-runtime-library/reference/cmulcr-fcmulcr-lcmulcr.md)|Умножает комплексное число на число с плавающей запятой|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Универсальные подпрограммы среды выполнения C по категориям](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Подпрограммы универсальной среды выполнения C по категориям](../c-runtime-library/run-time-routines-by-category.md)<br/>

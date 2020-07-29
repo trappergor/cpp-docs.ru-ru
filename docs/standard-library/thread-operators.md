@@ -18,22 +18,22 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (thread)
 - std::operator&lt;= (thread)
 - std::operator== (thread)
-ms.openlocfilehash: 6312d14dc681736ee396d5c7af6c50ba8d72cd3a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e7321831b9356fdb9ae5ce147319726def69efc7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375822"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215573"
 ---
 # <a name="ltthreadgt-operators"></a>Операторы &lt;thread&gt;
 
 ||||
 |-|-|-|
-|[оператора!](#op_neq)|[Оператор&gt;](#op_gt)|[Оператор&gt;=](#op_gt_eq)|
-|[Оператор&lt;](#op_lt)|[Оператор&lt;&lt;](#op_lt_lt)|[Оператор&lt;=](#op_lt_eq)|
-|[оператора](#op_eq_eq)|
+|[operator! =](#op_neq)|[оператор&gt;](#op_gt)|[оператор&gt;=](#op_gt_eq)|
+|[оператор&lt;](#op_lt)|[оператор&lt;&lt;](#op_lt_lt)|[оператор&lt;=](#op_lt_eq)|
+|[Оператор = =](#op_eq_eq)|
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>Оператор&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>станции&gt;=
 
 Определяет, справедливо ли, что один из объектов `thread::id` больше другого или равен ему.
 
@@ -45,7 +45,7 @@ bool operator>= (
 
 ### <a name="parameters"></a>Параметры
 
-*Левой*\
+*Слева*\
 Левый объект `thread::id`.
 
 *Правильно*\
@@ -59,7 +59,7 @@ bool operator>= (
 
 Эта функция не вызывает исключений.
 
-## <a name="operatorgt"></a><a name="op_gt"></a>Оператор&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>станции&gt;
 
 Определяет, справедливо ли, что один из объектов `thread::id` больше другого или равен ему.
 
@@ -71,7 +71,7 @@ bool operator> (
 
 ### <a name="parameters"></a>Параметры
 
-*Левой*\
+*Слева*\
 Левый объект `thread::id`.
 
 *Правильно*\
@@ -85,7 +85,7 @@ bool operator> (
 
 Эта функция не вызывает исключений.
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>Оператор&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>станции&lt;=
 
 Определяет, справедливо ли, что один из объектов `thread::id` меньше другого или равен ему.
 
@@ -97,7 +97,7 @@ bool operator<= (
 
 ### <a name="parameters"></a>Параметры
 
-*Левой*\
+*Слева*\
 Левый объект `thread::id`.
 
 *Правильно*\
@@ -111,7 +111,7 @@ bool operator<= (
 
 Эта функция не вызывает исключений.
 
-## <a name="operatorlt"></a><a name="op_lt"></a>Оператор&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>станции&lt;
 
 Определяет, справедливо ли, что один объект `thread::id` меньше другого.
 
@@ -123,7 +123,7 @@ bool operator<(
 
 ### <a name="parameters"></a>Параметры
 
-*Левой*\
+*Слева*\
 Левый объект `thread::id`.
 
 *Правильно*\
@@ -131,7 +131,7 @@ bool operator<(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**верно,** если *левый* предшествует *право* в общем порядке; в противном случае, **ложные**.
+**`true`** значение, если *Left* стоит *справа* в общем порядке; в противном случае — **`false`** .
 
 ### <a name="remarks"></a>Remarks
 
@@ -139,7 +139,7 @@ bool operator<(
 
 Эта функция не вызывает исключений.
 
-## <a name="operator"></a><a name="op_neq"></a>оператора!
+## <a name="operator"></a><a name="op_neq"></a>operator! =
 
 Проверяет неравенство двух объектов `thread::id`.
 
@@ -151,7 +151,7 @@ bool operator!= (
 
 ### <a name="parameters"></a>Параметры
 
-*Левой*\
+*Слева*\
 Левый объект `thread::id`.
 
 *Правильно*\
@@ -165,7 +165,7 @@ bool operator!= (
 
 Эта функция не вызывает исключений.
 
-## <a name="operator"></a><a name="op_eq_eq"></a>оператора
+## <a name="operator"></a><a name="op_eq_eq"></a>Оператор = =
 
 Сравнивает два объекта `thread::id` на равенство.
 
@@ -177,7 +177,7 @@ bool operator== (
 
 ### <a name="parameters"></a>Параметры
 
-*Левой*\
+*Слева*\
 Левый объект `thread::id`.
 
 *Правильно*\
@@ -185,13 +185,13 @@ bool operator== (
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**верно,** если эти два объекта представляют один и тот же поток выполнения или если ни один объект не представляет нить выполнения; в противном случае, **ложные**.
+**`true`** значение, если два объекта представляют один и тот же поток выполнения или если ни один из объектов не представляет поток выполнения; в противном случае — **`false`** .
 
 ### <a name="remarks"></a>Remarks
 
 Эта функция не вызывает исключений.
 
-## <a name="operatorltlt"></a><a name="op_lt_lt"></a>Оператор&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a>станции&lt;&lt;
 
 Вставляет текстовое представление объекта `thread::id` в поток.
 
@@ -203,22 +203,22 @@ basic_ostream<Elem, Tr>& operator<<(
 
 ### <a name="parameters"></a>Параметры
 
-*Остр*\
+*OSTR*\
 Объект [basic_ostream](../standard-library/basic-ostream-class.md).
 
-*Id*\
-Объект `thread::id` .
+*Удостоверения*\
+Объект `thread::id`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-*Остр*.
+*OSTR*.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция вставляет *Id* в *Ostr*.
+Эта функция вставляет *идентификатор* в *OSTR*.
 
 Если два объекта `thread::id` равны, вставленные текстовые представления этих объектов совпадают.
 
 ## <a name="see-also"></a>См. также раздел
 
-[\<нить>](../standard-library/thread.md)
+[\<thread>](../standard-library/thread.md)
