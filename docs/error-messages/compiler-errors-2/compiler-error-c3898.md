@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3898
 ms.assetid: d9a90df6-87e4-4fe7-ab01-c226ee86bf10
-ms.openlocfilehash: 02c649fb906b0c5f09afe25952a8670c1a0e7f3d
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: e7d1ce25e13e1b601c4abc85e71db484f7b3f822
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74749208"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221033"
 ---
 # <a name="compiler-error-c3898"></a>Ошибка компилятора C3898
 
 "var": элементы данных типа могут быть только членами управляемых типов
 
-Элемент данных [initonly](../../dotnet/initonly-cpp-cli.md) был объявлен в собственном классе.  Элемент данных `initonly` может быть объявлен только в классе CLR.
+Элемент данных [initonly](../../dotnet/initonly-cpp-cli.md) был объявлен в собственном классе.  **`initonly`** Элемент данных может быть объявлен только в классе CLR.
 
 Следующий пример приводит к возникновению ошибки C3898:
 
@@ -30,7 +30,7 @@ struct Y1 {
 };
 ```
 
-Возможное решение
+Возможное решение:
 
 ```cpp
 // C3898b.cpp

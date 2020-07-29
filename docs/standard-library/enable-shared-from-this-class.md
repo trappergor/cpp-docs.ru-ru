@@ -7,14 +7,14 @@ helpviewer_keywords:
 - enable_shared_from_this class
 - enable_shared_from_this
 ms.assetid: 9237603d-22e2-421f-b070-838ac006baf5
-ms.openlocfilehash: 152a5e0433f2eab5160fbdedde8f18f42f2303e6
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 9b417eabdaf6002724a0fa947dd97dea6f0df0a5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245866"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217783"
 ---
-# <a name="enablesharedfromthis-class"></a>Класс enable_shared_from_this
+# <a name="enable_shared_from_this-class"></a>Класс enable_shared_from_this
 
 Помогает сформировать `shared_ptr`.
 
@@ -38,18 +38,18 @@ protected:
 
 ### <a name="parameters"></a>Параметры
 
-*За этот год*\
+*Ty*\
 Тип, управляемый общим указателем.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Объекты, производные от `enable_shared_from_this`, могут использовать методы `shared_from_this` в функциях-членах для создания владельцев [shared_ptr](../standard-library/shared-ptr-class.md) экземпляра, которые владеют им совместно с существующими владельцами `shared_ptr`. В противном случае, если вы создаете новый `shared_ptr` с помощью **это**, отличается от существующих `shared_ptr` владельцев, что может привести к недействительным ссылкам или вызовет объект будет удален несколько раз.
+Объекты, производные от `enable_shared_from_this`, могут использовать методы `shared_from_this` в функциях-членах для создания владельцев [shared_ptr](../standard-library/shared-ptr-class.md) экземпляра, которые владеют им совместно с существующими владельцами `shared_ptr`. В противном случае, если создать новое `shared_ptr` с помощью **`this`** , оно отличается от существующих `shared_ptr` владельцев, что может привести к недопустимым ссылкам или вызвать удаление объекта более одного раза.
 
 Во избежание случайного неправильного использования конструктор, деструктор и оператор присваивания защищены. Тип аргумента шаблона *Ty* должен быть типом производного класса.
 
 Пример использования см. в разделе [enable_shared_from_this::shared_from_this](#shared_from_this).
 
-## <a name="shared_from_this"></a> shared_from_this
+## <a name="shared_from_this"></a><a name="shared_from_this"></a>shared_from_this
 
 Создает `shared_ptr`, который владеет экземпляром совместно с существующими владельцами `shared_ptr`.
 
@@ -58,9 +58,9 @@ shared_ptr<T> shared_from_this();
 shared_ptr<const T> shared_from_this() const;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-При получении объектов из базового класса `enable_shared_from_this` функции члена шаблона `shared_from_this` возвращают объект [класса shared_ptr](../standard-library/shared-ptr-class.md), владеющий данным экземпляром совместно с существующими владельцами `shared_ptr`. В противном случае, если вы создаете новый `shared_ptr` из **это**, отличается от существующих `shared_ptr` владельцев, что может привести к недействительным ссылкам или вызовет объект будет удален несколько раз. Поведение будет неопределенным, если вызвать `shared_from_this` в экземпляре, которым еще не владеет объект `shared_ptr`.
+При получении объектов из базового класса `enable_shared_from_this` функции члена шаблона `shared_from_this` возвращают объект [класса shared_ptr](../standard-library/shared-ptr-class.md), владеющий данным экземпляром совместно с существующими владельцами `shared_ptr`. В противном случае, если создать `shared_ptr` новый **`this`** объект из, он будет отличаться от существующих `shared_ptr` владельцев, что может привести к недопустимым ссылкам или вызвать удаление объекта более одного раза. Поведение будет неопределенным, если вызвать `shared_from_this` в экземпляре, которым еще не владеет объект `shared_ptr`.
 
 ### <a name="example"></a>Пример
 
@@ -96,7 +96,7 @@ int main()
 sp2->val == 3
 ```
 
-## <a name="weak_from_this"></a> weak_from_this
+## <a name="weak_from_this"></a><a name="weak_from_this"></a>weak_from_this
 
 ```cpp
 weak_ptr<T> weak_from_this() noexcept;

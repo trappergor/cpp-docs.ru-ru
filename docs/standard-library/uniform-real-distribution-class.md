@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::uniform_real_distribution [C++], param_type
 - std::uniform_real_distribution [C++], param_type
 ms.assetid: 5cf906fd-0319-4984-b21b-98425cd7532d
-ms.openlocfilehash: 4f293f73eb1fa8a38bf06692ef5b7938faeab0d0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fc003ebe9301c3648b47c796910d20096e7ef23d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367279"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217367"
 ---
 # <a name="uniform_real_distribution-class"></a>Класс uniform_real_distribution
 
@@ -71,19 +71,19 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*RealType*\
-Тип результата плавающей точки, по **умолчанию**удвоиться. Для возможных типов см [ \<>. ](../standard-library/random.md)
+*реалтипе*\
+Тип результата операции с плавающей запятой, по умолчанию — **`double`** . Возможные типы см. в разделе [\<random>](../standard-library/random.md) .
 
 ## <a name="remarks"></a>Remarks
 
-Шаблон класса описывает инклюзивно-эксклюзивный дистрибутив, который производит значения определенного пользователя интегрального типа плавающей точки с распределением, так что каждое значение одинаково вероятно. В следующей таблице представлены ссылки на статьи об отдельных членах.
+Шаблон класса описывает инклюзивное эксклюзивное распределение, которое создает значения заданного пользователем целочисленного типа с плавающей запятой с распределением таким образом, что каждое значение одинаково возможно. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
 ||||
 |-|-|-|
 |[uniform_real_distribution](#uniform_real_distribution)|`uniform_real_distribution::a`|`uniform_real_distribution::param`|
 |`uniform_real_distribution::operator()`|`uniform_real_distribution::b`|[param_type](#param_type)|
 
-Член свойства `a()` возвращает текущее хранимое минимальное значение распределения, а `b()` возвращает текущее хранимое максимальное значение. Для этого класса распределения эти минимальные и максимальные значения такие `min()` же, как и значения, возвращенные функциями общего свойства и `max()` описанные в [ \<случайной теме>.](../standard-library/random.md)
+Член свойства `a()` возвращает текущее хранимое минимальное значение распределения, а `b()` возвращает текущее хранимое максимальное значение. Для этого класса распределения эти минимальные и максимальные значения совпадают со значениями, возвращаемыми общими функциями свойств `min()` и `max()` описанными в [\<random>](../standard-library/random.md) разделе.
 
 Член свойства `param()` устанавливает или возвращает хранимый пакет параметров распределения `param_type`.
 
@@ -93,7 +93,7 @@ public:
 
 Функции-члены `operator()` возвращают следующее значение, созданное механизмом РГСЧ, из текущего или указанного пакета параметров.
 
-Для получения дополнительной информации о классах распределения и их членах [ \<>](../standard-library/random.md)см.
+Дополнительные сведения о классах распределения и их членах см [\<random>](../standard-library/random.md) . в разделе.
 
 ## <a name="example"></a>Пример
 
@@ -174,11 +174,11 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<random>
+**Заголовок:**\<random>
 
 **Пространство имен:** std
 
-## <a name="uniform_real_distributionuniform_real_distribution"></a><a name="uniform_real_distribution"></a>uniform_real_distribution::uniform_real_distribution
+## <a name="uniform_real_distributionuniform_real_distribution"></a><a name="uniform_real_distribution"></a>uniform_real_distribution:: uniform_real_distribution
 
 Формирует распределение.
 
@@ -189,24 +189,24 @@ explicit uniform_real_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Параметры
 
-*a*\
+*конкретного*\
 Нижняя граница случайных значений (инклюзивно).
 
-*B*\
+*&*\
 Верхняя граница случайных значений (эксклюзивно).
 
-*парм*\
+*ParM*\
 Структура `param_type`, используемая для формирования распределения.
 
 ### <a name="remarks"></a>Remarks
 
 **Предварительное условие:**`a < b`
 
-Первый конструктор строит объект, *сохраненное* значение которого содержит значение *и* чье значение *b* содержит значение *b.*
+Первый конструктор конструирует объект, хранимое значение которого *содержит значение* *a* , а хранимое значение *b* содержит значение *b*.
 
 Второй конструктор создает объект, хранимые параметры которого инициализируются из *parm*. Вы можете получить и задать текущие параметры существующего распределения, вызвав функцию-член `param()`.
 
-## <a name="uniform_real_distributionparam_type"></a><a name="param_type"></a>uniform_real_distribution::pараматип
+## <a name="uniform_real_distributionparam_type"></a><a name="param_type"></a>uniform_real_distribution::p aram_type
 
 Сохраняет все параметры распределения.
 
@@ -224,10 +224,10 @@ struct param_type {
 
 ### <a name="parameters"></a>Параметры
 
-*a*\
+*конкретного*\
 Нижняя граница случайных значений (инклюзивно).
 
-*B*\
+*&*\
 Верхняя граница случайных значений (эксклюзивно).
 
 *Правильно*\
@@ -241,4 +241,4 @@ struct param_type {
 
 ## <a name="see-also"></a>См. также раздел
 
-[\<случайные>](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

@@ -18,16 +18,16 @@ helpviewer_keywords:
 - std::recursive_timed_mutex [C++], try_lock_for
 - std::recursive_timed_mutex [C++], try_lock_until
 - std::recursive_timed_mutex [C++], unlock
-ms.openlocfilehash: 93ce7b99728d1ce89c8124efd6c74aea7ff66d22
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 15517425f3d81bc3798df2e42f39ac0b0d32ba31
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320136"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217601"
 ---
 # <a name="recursive_timed_mutex-class"></a>Класс recursive_timed_mutex
 
-Представляет *тип mutex, приуроченный.* Используйте объекты этого типа для принудительного взаимного исключения с помощью ограниченной по времени блокировки в программе. В отличие от объектов типа [timed_mutex](../standard-library/timed-mutex-class.md), эффект вызова методов блокировки для объектов `recursive_timed_mutex` четко определен.
+Представляет *тип мьютекса с превышением времени*. Используйте объекты этого типа для принудительного взаимного исключения с помощью ограниченной по времени блокировки в программе. В отличие от объектов типа [timed_mutex](../standard-library/timed-mutex-class.md), эффект вызова методов блокировки для объектов `recursive_timed_mutex` четко определен.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -42,25 +42,25 @@ class recursive_timed_mutex;
 |Имя|Описание|
 |----------|-----------------|
 |[recursive_timed_mutex](#recursive_timed_mutex)|Создает объект `recursive_timed_mutex`, который не заблокирован.|
-|[«recursive_timed_mutex деструктор](#dtorrecursive_timed_mutex_destructor)|Освобождает все ресурсы, используемые объектом `recursive_timed_mutex`.|
+|[Деструктор ~ recursive_timed_mutex](#dtorrecursive_timed_mutex_destructor)|Освобождает все ресурсы, используемые объектом `recursive_timed_mutex`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[lock](#lock)|Блокирует вызывающий поток до тех пор, пока этот поток не получит права владельца объекта `mutex`.|
 |[try_lock](#try_lock)|Попытки получить права владельца объекта `mutex` без блокировки.|
 |[try_lock_for](#try_lock_for)|Пытается получить права владельца `mutex` на заданный интервал времени.|
 |[try_lock_until](#try_lock_until)|Пытается получить права владельца `mutex` до заданного времени.|
-|[Разблокировать](#unlock)|Освобождает права владения объектом `mutex`.|
+|[блокирован](#unlock)|Освобождает права владения объектом `mutex`.|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<mutex>
+**Заголовок:**\<mutex>
 
 **Пространство имен:** std
 
-## <a name="lock"></a><a name="lock"></a>Блокировки
+## <a name="lock"></a><a name="lock"></a>скрыть
 
 Блокирует вызывающий поток до тех пор, пока этот поток не получит права владельца объекта `mutex`.
 
@@ -72,7 +72,7 @@ void lock();
 
 Если вызывающий поток уже владеет `mutex`, метод немедленно возвращает значение и предыдущая блокировка остается в силе.
 
-## <a name="recursive_timed_mutex-constructor"></a><a name="recursive_timed_mutex"></a>recursive_timed_mutex конструктор
+## <a name="recursive_timed_mutex-constructor"></a><a name="recursive_timed_mutex"></a>Конструктор recursive_timed_mutex
 
 Создает объект `recursive_timed_mutex`, который не заблокирован.
 
@@ -92,7 +92,7 @@ recursive_timed_mutex();
 
 Если при выполнении деструктора объект заблокирован, поведение не определено.
 
-## <a name="try_lock"></a><a name="try_lock"></a>Try_lock
+## <a name="try_lock"></a><a name="try_lock"></a>try_lock
 
 Попытки получить права владельца объекта `mutex` без блокировки.
 
@@ -102,11 +102,11 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**верно,** если метод успешно получил `mutex` право собственности или `mutex`если вызов поток уже владеет ; в противном случае, **ложные**.
+**`true`** значение, если метод успешно получил владение объектом `mutex` или, если вызывающий поток уже владеет `mutex` ; в противном случае — **`false`** .
 
 ### <a name="remarks"></a>Remarks
 
-Если поток вызова уже `mutex`владеет функцией, функция немедленно возвращается **верно,** и предыдущий блокировка остается в силе.
+Если вызывающий поток уже владеет `mutex` , функция немедленно возвращает значение **`true`** , а предыдущая блокировка остается в силе.
 
 ## <a name="try_lock_for"></a><a name="try_lock_for"></a>try_lock_for
 
@@ -124,11 +124,11 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**верно,** если метод успешно получает `mutex` право собственности на `mutex`или если вызывающая нить уже владеет; в противном случае, **ложные**.
+**`true`** значение, если метод успешно получает владение или, `mutex` Если вызывающий поток уже владеет `mutex` ; в противном случае — **`false`** .
 
 ### <a name="remarks"></a>Remarks
 
-Если поток вызова уже `mutex`владеет, метод немедленно возвращается **верным,** и предыдущий блокировка остается в силе.
+Если вызывающий поток уже владеет `mutex` , метод немедленно возвращает значение **`true`** , и предыдущая блокировка остается в силе.
 
 ## <a name="try_lock_until"></a><a name="try_lock_until"></a>try_lock_until
 
@@ -148,13 +148,13 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**верно,** если метод успешно получает `mutex` право собственности на `mutex`или если вызывающая нить уже владеет; в противном случае, **ложные**.
+**`true`** значение, если метод успешно получает владение или, `mutex` Если вызывающий поток уже владеет `mutex` ; в противном случае — **`false`** .
 
 ### <a name="remarks"></a>Remarks
 
-Если поток вызова уже `mutex`владеет, метод немедленно возвращается **верным,** и предыдущий блокировка остается в силе.
+Если вызывающий поток уже владеет `mutex` , метод немедленно возвращает значение **`true`** , и предыдущая блокировка остается в силе.
 
-## <a name="unlock"></a><a name="unlock"></a>Разблокировать
+## <a name="unlock"></a><a name="unlock"></a>блокирован
 
 Освобождает права владения объектом `mutex`.
 
@@ -170,5 +170,5 @@ void unlock();
 
 ## <a name="see-also"></a>См. также раздел
 
-[Справка по файлам заголовка](../standard-library/cpp-standard-library-header-files.md)\
+[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)\
 [\<mutex>](../standard-library/mutex.md)

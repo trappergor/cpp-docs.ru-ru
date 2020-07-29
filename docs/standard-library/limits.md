@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - limits header
 ms.assetid: e07d6379-5b00-4a3d-a789-40d41538b59e
-ms.openlocfilehash: 3ad740975cfff4f65f9e1c800a709cfaca3367db
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 2d0f4f96d25c91ac20fe5a1883fc61fc47d15d5e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687810"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217692"
 ---
 # <a name="ltlimitsgt"></a>&lt;limits&gt;
 
@@ -20,15 +20,15 @@ ms.locfileid: "72687810"
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<limits>
+**Заголовок:**\<limits>
 
 **Пространство имен:** std
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
-Явные специализации класса `numeric_limits` описывают множество свойств фундаментальных типов, включая символы, целые числа и типы с плавающей запятой, и **логическое** значение, которое определяется реализацией, а не фиксированными правилами C++ языке. Свойства, описанные в \<limits>, включают точность, представления минимального и максимального размера, округление и сообщение об ошибках типа.
+Явные специализации `numeric_limits` класса описывают множество свойств фундаментальных типов, включая символы, целые числа и типы с плавающей запятой, а **`bool`** также определенные реализации, а не фиксированные правилами языка C++. Свойства, описанные в \<limits> , включают в себя точность, минимальное и максимальное размеры, округление и тип сигнала.
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Элементы
 
 ### <a name="enumerations"></a>Перечисления
 
@@ -43,7 +43,7 @@ ms.locfileid: "72687810"
 |-|-|
 |[Класс numeric_limits](../standard-library/numeric-limits-class.md)|Шаблон класса описывает арифметические свойства встроенных числовых типов.|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)\
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Безопасность потоков в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

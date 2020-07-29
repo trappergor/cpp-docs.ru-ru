@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::cauchy_distribution [C++], param_type
 - std::cauchy_distribution [C++], param_type
 ms.assetid: 21522351-f2f1-46d9-97f0-d358c932356c
-ms.openlocfilehash: ea75395c14c0babf5a047e7ae8f937e2a237b445
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 965ad6751938c07a0a62fedc8f65d53f9f6d2b04
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317124"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217835"
 ---
 # <a name="cauchy_distribution-class"></a>Класс cauchy_distribution
 
@@ -70,15 +70,15 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*RealType*\
-Тип результата плавающей точки, по **умолчанию**удвоиться. Для возможных типов см [ \<>. ](../standard-library/random.md)
+*реалтипе*\
+Тип результата операции с плавающей запятой, по умолчанию — **`double`** . Возможные типы см. в разделе [\<random>](../standard-library/random.md) .
 
-*Ргсч*\
-Единый генератор случайных чисел. Для возможных типов см [ \<>. ](../standard-library/random.md)
+*РГСЧ*\
+Единый механизм генератора случайных чисел. Возможные типы см. в разделе [\<random>](../standard-library/random.md) .
 
 ## <a name="remarks"></a>Remarks
 
-Шаблон класса описывает распределение, которое производит значения определенного пользователем типа плавающей точки, или **введите двойной,** если ни один не предоставляется, распределенный в соответствии с распределением Cauchy. В следующей таблице представлены ссылки на статьи об отдельных членах.
+Шаблон класса описывает распределение, которое создает значения указанного пользователем типа с плавающей запятой или тип **`double`** , если он не указан, распределен в соответствии с распределение Коши распределением. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
 ||||
 |-|-|-|
@@ -95,7 +95,7 @@ public:
 
 Функции-члены `operator()` возвращают следующее значение, созданное механизмом РГСЧ, из текущего или указанного пакета параметров.
 
-Для получения дополнительной информации о классах распределения и их членах [ \<>](../standard-library/random.md)см.
+Дополнительные сведения о классах распределения и их членах см [\<random>](../standard-library/random.md) . в разделе.
 
 Подробные сведения о нормальном F-распределении см. в статье в Wolfram MathWorld [Распределение Коши](https://go.microsoft.com/fwlink/p/?linkid=400523).
 
@@ -236,11 +236,11 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<random>
+**Заголовок:**\<random>
 
 **Пространство имен:** std
 
-## <a name="cauchy_distributioncauchy_distribution"></a><a name="cauchy_distribution"></a>cauchy_distribution::cauchy_distribution
+## <a name="cauchy_distributioncauchy_distribution"></a><a name="cauchy_distribution"></a>cauchy_distribution:: cauchy_distribution
 
 Формирует распределение.
 
@@ -251,13 +251,13 @@ explicit cauchy_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Параметры
 
-*a*\
+*конкретного*\
 Параметр распределения `a`.
 
-*B*\
+*&*\
 Параметр распределения `b`.
 
-*парм*\
+*ParM*\
 Структура `param_type`, используемая для формирования распределения.
 
 ### <a name="remarks"></a>Remarks
@@ -268,7 +268,7 @@ explicit cauchy_distribution(const param_type& parm);
 
 Второй конструктор создает объект, хранимые параметры которого инициализируются из *parm*. Вы можете получить и задать текущие параметры существующего распределения, вызвав функцию-член `param()`.
 
-## <a name="cauchy_distributionparam_type"></a><a name="param_type"></a>cauchy_distribution::pараматип
+## <a name="cauchy_distributionparam_type"></a><a name="param_type"></a>cauchy_distribution::p aram_type
 
 Сохраняет все параметры распределения.
 
@@ -286,10 +286,10 @@ struct param_type {
 
 ### <a name="parameters"></a>Параметры
 
-*a*\
+*конкретного*\
 Параметр распределения `a`.
 
-*B*\
+*&*\
 Параметр распределения `b`.
 
 *Правильно*\
@@ -303,4 +303,4 @@ struct param_type {
 
 ## <a name="see-also"></a>См. также раздел
 
-[\<случайные>](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - databases [MFC], exception handling
 - error codes [MFC], database exception handling
 ms.assetid: 28daf260-f824-4be6-aecc-1f859e6dec26
-ms.openlocfilehash: 96f9e5f836205df71e03638858cb00b788d03c0b
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: aaed2a9f88c46a405b754b78242478f93cffda31
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403729"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217965"
 ---
 # <a name="exceptions-database-exceptions"></a>Исключения. Исключения баз данных
 
@@ -54,11 +54,11 @@ ms.locfileid: "86403729"
 
 ## <a name="a-database-exception-handling-example"></a><a name="_core_a_database_exception.2d.handling_example"></a>Пример обработки исключений базы данных
 
-В следующем примере предпринимается попытка создать объект, производный от [CRecordset](reference/crecordset-class.md), в куче с помощью оператора **New** , а затем открыть набор записей (для источника данных ODBC). Аналогичный пример для классов DAO см. в разделе "пример исключения DAO" ниже.
+В следующем примере предпринимается попытка создать объект, производный от [CRecordset](reference/crecordset-class.md), в куче с помощью **`new`** оператора, а затем открыть набор записей (для источника данных ODBC). Аналогичный пример для классов DAO см. в разделе "пример исключения DAO" ниже.
 
 ### <a name="odbc-exception-example"></a>Пример исключения ODBC
 
-Функция [Open](reference/crecordset-class.md#open) Member может вызвать исключение (типа [КДБЕКСЦЕПТИОН](reference/cdbexception-class.md) для классов ODBC), поэтому этот код будет заключен в скобки `Open` с блоком **try** . Последующий блок **catch** будет перехватывать `CDBException` . Можно изучить сам объект Exception, вызываемый `e` , но в данном случае достаточно выяснить, что попытка создать набор записей не удалась. Блок **catch** отображает окно сообщения и очищается путем удаления объекта набора записей.
+Функция [Open](reference/crecordset-class.md#open) Member может вызвать исключение (типа [КДБЕКСЦЕПТИОН](reference/cdbexception-class.md) для классов ODBC), поэтому этот код будет заключен в скобки `Open` с **`try`** блоком. Последующий **`catch`** блок будет перехватывать `CDBException` . Можно изучить сам объект Exception, вызываемый `e` , но в данном случае достаточно выяснить, что попытка создать набор записей не удалась. **`catch`** Блок отображает окно сообщения и очищается путем удаления объекта набора записей.
 
 [!code-cpp[NVC_MFCDatabase#36](codesnippet/cpp/exceptions-database-exceptions_1.cpp)]
 

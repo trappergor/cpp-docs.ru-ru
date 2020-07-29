@@ -18,16 +18,16 @@ helpviewer_keywords:
 - std::istreambuf_iterator [C++], traits_type
 - std::istreambuf_iterator [C++], equal
 ms.assetid: 39002da2-61a6-48a5-9d0c-5df8271f6038
-ms.openlocfilehash: 80bca2160f2e60938e9d0c85557b11a273c23264
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b76e327c46a180c1e7ae7287ee9fe49573f3a7a6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363064"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217705"
 ---
 # <a name="istreambuf_iterator-class"></a>Класс istreambuf_iterator
 
-Шаблон класса istreambuf_iterator описывает объект итератора ввода, который извлекает элементы символов из буфера вхотого `basic_streambuf` \< потока, к которому он получает доступ через объект, который он хранит, указателя типа на **CharType,** **Traits**>.
+Шаблон класса istreambuf_iterator описывает объект итератора ввода, который извлекает элементы символов из буфера входного потока, доступ к которому осуществляется через хранимый в нем объект типа pointer `basic_streambuf` \< **CharType**, **Traits**> .
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -39,11 +39,11 @@ class istreambuf_iterator
 
 ### <a name="parameters"></a>Параметры
 
-*Chartype*\
+*CharType*\
 Тип, представляющий тип символа для istreambuf_iterator.
 
-*Черты*\
-Тип, представляющий тип символа для istreambuf_iterator. Этот аргумент является необязательным, значение по умолчанию — `char_traits`\< *CharType>.*
+*Признаки*\
+Тип, представляющий тип символа для istreambuf_iterator. Этот аргумент является необязательным, и значение по умолчанию — `char_traits` \< *CharType> . *
 
 ## <a name="remarks"></a>Remarks
 
@@ -71,23 +71,23 @@ class istreambuf_iterator
 
 |Функция-член|Описание|
 |-|-|
-|[Равно](#equal)|Тесты на равенство между двумя итераторами буфера входного потока.|
+|[равномерно](#equal)|Тесты на равенство между двумя итераторами буфера входного потока.|
 
 ### <a name="operators"></a>Операторы
 
 |Оператор|Описание|
 |-|-|
-|[оператор](#op_star)|Оператор удаления ссылки возвращает следующий символ в потоке.|
-|[оператор](#op_add_add)|Либо возвращает следующий символ из входного потока, либо копирует объект перед его увеличением и возвращает копию.|
-|[оператор->](#op_arrow)|Возвращает значение члена при наличии.|
+|[станции](#op_star)|Оператор удаления ссылки возвращает следующий символ в потоке.|
+|[operator + +](#op_add_add)|Либо возвращает следующий символ из входного потока, либо копирует объект перед его увеличением и возвращает копию.|
+|[Оператор->](#op_arrow)|Возвращает значение члена при наличии.|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<iterator>
+**Заголовок:**\<iterator>
 
 **Пространство имен:** std
 
-## <a name="istreambuf_iteratorchar_type"></a><a name="char_type"></a>istreambuf_iterator::char_type
+## <a name="istreambuf_iteratorchar_type"></a><a name="char_type"></a>istreambuf_iterator:: char_type
 
 Тип, обеспечивающий тип символа для `ostreambuf_iterator`.
 
@@ -132,7 +132,7 @@ int main( )
 }
 ```
 
-## <a name="istreambuf_iteratorequal"></a><a name="equal"></a>istreambuf_iterator::равно
+## <a name="istreambuf_iteratorequal"></a><a name="equal"></a>istreambuf_iterator:: Equal
 
 Тесты на равенство между двумя итераторами буфера входного потока.
 
@@ -147,11 +147,11 @@ bool equal(const istreambuf_iterator<CharType, Traits>& right) const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**true**, если оба `istreambuf_iterator` являются итераторами конца потока или если не один из них не является итератором конца потока; в противном случае **false**.
+**`true`**`istreambuf_iterator`значение, если оба параметра являются итераторами конца потока или если ни один из них не является итератором конца потока; в противном случае — **`false`** .
 
 ### <a name="remarks"></a>Remarks
 
-Диапазон определяется текущим положением и итератором конца потока, но так как все итераторы потока не являются конечными `istreambuf_iterator` итераторами потока, эквивалентные функции `equal` члена, невозможно определить какие-либо субранги с помощью `istreambuf_iterator`s. Операторы `==` и `!=` имеют одинаковую семантику.
+Диапазон определяется в `istreambuf_iterator` соответствии с текущей позицией и итератором конца потока, но так как все итераторы, не являющиеся элементами конца потока, эквивалентны в `equal` функции-члене, невозможно определить поддиапазоны с помощью `istreambuf_iterator` s. Операторы `==` и `!=` имеют одинаковую семантику.
 
 ### <a name="example"></a>Пример
 
@@ -181,7 +181,7 @@ int main( )
 }
 ```
 
-## <a name="istreambuf_iteratorint_type"></a><a name="int_type"></a>istreambuf_iterator::int_type
+## <a name="istreambuf_iteratorint_type"></a><a name="int_type"></a>istreambuf_iterator:: int_type
 
 Тип, предоставляющий целочисленный тип для `istreambuf_iterator`.
 
@@ -212,7 +212,7 @@ The inttype1 = 100.
 */
 ```
 
-## <a name="istreambuf_iteratoristream_type"></a><a name="istream_type"></a>istreambuf_iterator::istream_type
+## <a name="istreambuf_iteratoristream_type"></a><a name="istream_type"></a>istreambuf_iterator:: istream_type
 
 Тип, обеспечивающий тип потока для `istreambuf_iterator`.
 
@@ -222,13 +222,13 @@ typedef basic_istream<CharType, Traits> istream_type;
 
 ### <a name="remarks"></a>Remarks
 
-Тип является синонимом `basic_istream` \< **CharType,** **Traits**>.
+Тип является синонимом `basic_istream` \< **CharType**, **Traits**> .
 
 ### <a name="example"></a>Пример
 
 См. раздел [istreambuf_iterator](#istreambuf_iterator) с примером объявления и использования `istream_type`.
 
-## <a name="istreambuf_iteratoristreambuf_iterator"></a><a name="istreambuf_iterator"></a>istreambuf_iterator::istreambuf_iterator
+## <a name="istreambuf_iteratoristreambuf_iterator"></a><a name="istreambuf_iterator"></a>istreambuf_iterator:: istreambuf_iterator
 
 Создает istreambuf_iterator, инициализируемый для чтения символов из входного потока.
 
@@ -239,15 +239,15 @@ istreambuf_iterator(istream_type& _Istr) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*strbuf*\
+*strBuf*\
 Буфер входного потока, к которому присоединяется `istreambuf_iterator`.
 
-*_istr*\
+*_Istr*\
 Входной поток, к которому присоединяется `istreambuf_iterator`.
 
 ### <a name="remarks"></a>Remarks
 
-Первый конструктор инициализирует вхотливой указатель потока-буфера с *strbuf.* Второй конструктор инициализирует входную указатель потока-буфера с *_Istr.* `rdbuf`, а затем в конечном итоге пытается `CharType`извлечь и хранить объект типа .
+Первый конструктор инициализирует указатель буфера входного потока с помощью *strBuf*. Второй конструктор инициализирует указатель буфера входного потока с *_Istr*. `rdbuf`, а затем пытается извлечь и сохранить объект типа `CharType` .
 
 ### <a name="example"></a>Пример
 
@@ -281,7 +281,7 @@ int main( )
 }
 ```
 
-## <a name="istreambuf_iteratoroperator"></a><a name="op_star"></a>istreambuf_iterator::оператор
+## <a name="istreambuf_iteratoroperator"></a><a name="op_star"></a>istreambuf_iterator:: operator *
 
 Оператор удаления ссылки возвращает следующий символ в потоке.
 
@@ -321,7 +321,7 @@ int main( )
 }
 ```
 
-## <a name="istreambuf_iteratoroperator"></a><a name="op_add_add"></a>istreambuf_iterator:оператор
+## <a name="istreambuf_iteratoroperator"></a><a name="op_add_add"></a>istreambuf_iterator:: operator + +
 
 Либо возвращает следующий символ из входного потока, либо копирует объект перед его увеличением и возвращает копию.
 
@@ -336,7 +336,7 @@ istreambuf_iterator<CharType, Traits> operator++(int);
 
 ### <a name="remarks"></a>Remarks
 
-Первый оператор в конечном итоге пытается извлечь `CharType` и сохранить объект типа из связанного потока ввода. Второй оператор создает копию объекта, выполняет приращение объекта, а затем возвращает копию.
+Первый оператор в конечном итоге пытается извлечь и сохранить объект типа `CharType` из связанного входного потока. Второй оператор создает копию объекта, выполняет приращение объекта, а затем возвращает копию.
 
 ### <a name="example"></a>Пример
 
@@ -366,7 +366,7 @@ int main( )
 }
 ```
 
-## <a name="istreambuf_iteratoroperator-gt"></a><a name="op_arrow"></a>istreambuf_iterator::оператор-&gt;
+## <a name="istreambuf_iteratoroperator-gt"></a><a name="op_arrow"></a>istreambuf_iterator:: operator —&gt;
 
 Возвращает значение члена при наличии.
 
@@ -376,9 +376,9 @@ const Elem* operator->() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Оператор возвращает ** & \* \*это.**
+Оператор возвращает ** & \* \* this**.
 
-## <a name="istreambuf_iteratorstreambuf_type"></a><a name="streambuf_type"></a>istreambuf_iterator::streambuf_type
+## <a name="istreambuf_iteratorstreambuf_type"></a><a name="streambuf_type"></a>istreambuf_iterator:: streambuf_type
 
 Тип, обеспечивающий тип потока для istreambuf_iterator.
 
@@ -388,13 +388,13 @@ typedef basic_streambuf<CharType, Traits> streambuf_type;
 
 ### <a name="remarks"></a>Remarks
 
-Тип является синонимом `basic_streambuf` \< **CharType,** **Traits**>.
+Тип является синонимом `basic_streambuf` \< **CharType**, **Traits**> .
 
 ### <a name="example"></a>Пример
 
 См. раздел [istreambuf_iterator](#istreambuf_iterator) с примером объявления и использования `istreambuf_type`.
 
-## <a name="istreambuf_iteratortraits_type"></a><a name="traits_type"></a>istreambuf_iterator::traits_type
+## <a name="istreambuf_iteratortraits_type"></a><a name="traits_type"></a>istreambuf_iterator:: traits_type
 
 Тип, обеспечивающий тип признаков символа для `istream_iterator`.
 
@@ -441,7 +441,7 @@ int main( )
 
 ## <a name="see-also"></a>См. также раздел
 
-[итератор Struct](../standard-library/iterator-struct.md)\
-[\<итератор>](../standard-library/iterator.md)\
-[Безопасность резьбы в стандартной библиотеке СЗ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Стандартная библиотечная справка по СЗ](../standard-library/cpp-standard-library-reference.md)
+[Структура итератора](../standard-library/iterator-struct.md)\
+[\<iterator>](../standard-library/iterator.md)\
+[Безопасность потоков в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)

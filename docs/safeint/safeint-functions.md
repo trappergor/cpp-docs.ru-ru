@@ -31,12 +31,12 @@ helpviewer_keywords:
 - SafeNotEquals function
 - SafeSubtract function
 ms.assetid: fdc208e5-5d8a-41a9-8271-567fd438958d
-ms.openlocfilehash: 9af34e7dcb13f54b824088fa81b6d5a7145c6ae5
-ms.sourcegitcommit: 8645408c7929558b8162f781776d0908d790a41c
+ms.openlocfilehash: c968601d95403dd63540a7a8ec2190a199fa1c5a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334918"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219343"
 ---
 # <a name="safeint-functions"></a>Функции SafeInt
 
@@ -49,9 +49,9 @@ ms.locfileid: "85334918"
 > [!NOTE]
 > Последняя версия этой библиотеки находится по адресу [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt) .
 
-## <a name="in-this-section"></a>В этом разделе
+## <a name="in-this-section"></a>в этом разделе
 
-Функция                      | Описание:
+Компонент                      | Описание:
 ----------------------------- | --------------------------------------------------------------
 [сафеадд](#safeadd)           | Складывает два числа и обеспечивает защиту от переполнения.
 [сафекаст](#safecast)         | Преобразует один тип параметра в другой.
@@ -94,7 +94,7 @@ inline bool SafeAdd (
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение **true** при отсутствии ошибки; значение **false** при ее возникновении.
+**`true`** значение, если ошибка не возникает; **`false`** при возникновении ошибки.
 
 ## <a name="safecast"></a><a name="safecast"></a>сафекаст
 
@@ -118,7 +118,7 @@ inline bool SafeCast (
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение **true** при отсутствии ошибки; значение **false** при ее возникновении.
+**`true`** значение, если ошибка не возникает; **`false`** при возникновении ошибки.
 
 ## <a name="safedivide"></a><a name="safedivide"></a>сафедивиде
 
@@ -146,7 +146,7 @@ inline bool SafeDivide (
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение **true** при отсутствии ошибки; значение **false** при ее возникновении.
+**`true`** значение, если ошибка не возникает; **`false`** при возникновении ошибки.
 
 ## <a name="safeequals"></a><a name="safeequals"></a>сафикуалс
 
@@ -170,9 +170,9 @@ inline bool SafeEquals (
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение **true**, если *t* и *u* равны; в противном случае — **false**.
+**`true`** значение, если *t* и *u* равны; в противном случае — значение **`false`** .
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Этот метод расширяет возможности `==`, потому что `SafeEquals` позволяет сравнивать два различных типа чисел.
 
@@ -198,9 +198,9 @@ inline bool SafeGreaterThan (
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение **true**, если *t* больше *u*; в противном случае — **false**.
+**`true`** Если *t* больше *u*; в противном случае — значение **`false`** .
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 `SafeGreaterThan` расширяет возможности обычного оператора сравнения, позволяя сравнивать два различных типа чисел.
 
@@ -226,9 +226,9 @@ inline bool SafeGreaterThanEquals (
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение **true**, если *t* больше или равно *u*; в противном случае — **false**.
+**`true`** Если *t* больше или равно *u*; в противном случае — значение **`false`** .
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 `SafeGreaterThanEquals` расширяет возможности стандартного оператора сравнения, потому что позволяет сравнивать два различных типа чисел.
 
@@ -254,9 +254,9 @@ inline bool SafeLessThan (
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение **true**, если *t* меньше *u*; в противном случае — **false**.
+**`true`** Если *t* меньше *u*; в противном случае — значение **`false`** .
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Этот метод расширяет возможности стандартного оператора сравнения, потому что `SafeLessThan` позволяет сравнивать два различных типа чисел.
 
@@ -282,9 +282,9 @@ inline bool SafeLessThanEquals (
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение **true**, если *t* меньше *u*; в противном случае — **false**.
+**`true`** значение, если *t* меньше или равно *u*; в противном случае — значение **`false`** .
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 `SafeLessThanEquals` расширяет возможности обычного оператора сравнения, позволяя сравнивать два различных типа чисел.
 
@@ -314,7 +314,7 @@ inline bool SafeModulus (
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение **true** при отсутствии ошибки; значение **false** при ее возникновении.
+**`true`** значение, если ошибка не возникает; **`false`** при возникновении ошибки.
 
 ## <a name="safemultiply"></a><a name="safemultiply"></a>сафемултипли
 
@@ -342,7 +342,7 @@ inline bool SafeMultiply (
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение `true` при отсутствии ошибки; значение `false` при ее возникновении.
+**`true`** значение, если ошибка не возникает; **`false`** при возникновении ошибки.
 
 ## <a name="safenotequals"></a><a name="safenotequals"></a>сафенотекуалс
 
@@ -366,9 +366,9 @@ inline bool SafeNotEquals (
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**true** , если *t* и *u* не равны; в противном случае — **false**.
+**`true`** Если *t* и *u* не равны; в противном случае — значение **`false`** .
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Этот метод расширяет возможности `!=`, потому что `SafeNotEquals` позволяет сравнивать два различных типа чисел.
 
@@ -398,4 +398,4 @@ inline bool SafeSubtract (
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение **true** при отсутствии ошибки; значение **false** при ее возникновении.
+**`true`** значение, если ошибка не возникает; **`false`** при возникновении ошибки.

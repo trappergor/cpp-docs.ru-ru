@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - call class
 ms.assetid: 1521970a-1e9c-4b0c-a681-d18e40976f49
-ms.openlocfilehash: 445e368ced9d9c8faf30351ecaeecc4e1b8a59f2
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: d3dc730e19aaadfed171816e92837ba2766883cb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142838"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213883"
 ---
 # <a name="call-class"></a>Класс call
 
@@ -39,23 +39,23 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
 *_FunctorType*<br/>
 Сигнатура функций, которые может принимать этот блок.
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Элементы
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Description|
+|name|Описание|
 |----------|-----------------|
-|[обращение](#ctor)|Перегружен. Создает блок обмена сообщениями `call` .|
-|[Деструктор вызова ~](#dtor)|Уничтожает блок сообщений `call`.|
+|[call](#ctor)|Перегружен. Создает блок обмена сообщениями `call` .|
+|[Деструктор вызова ~](#dtor)|Уничтожает `call` блок обмена сообщениями.|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
 |[process_input_messages](#process_input_messages)|Выполняет функцию Call для входных сообщений.|
-|[process_message](#process_message)|Обрабатывает сообщение, которое было принято этим блоком сообщений `call`.|
-|[propagate_message](#propagate_message)|Асинхронно передает сообщение из блока `ISource` в этот `call` блок сообщений. Вызывается методом `propagate` при вызове из исходного блока.|
-|[send_message](#send_message)|Синхронно передает сообщение из блока `ISource` в этот `call` блок сообщений. Вызывается методом `send` при вызове из исходного блока.|
+|[process_message](#process_message)|Обрабатывает сообщение, которое было принято этим `call` блоком обмена сообщениями.|
+|[propagate_message](#propagate_message)|Асинхронно передает сообщение из `ISource` блока в этот `call` блок обмена сообщениями. Он вызывается `propagate` методом при вызове из исходного блока.|
+|[send_message](#send_message)|Синхронно передает сообщение из `ISource` блока в этот `call` блок обмена сообщениями. Он вызывается `send` методом при вызове из исходного блока.|
 |[supports_anonymous_source](#supports_anonymous_source)|Переопределяет метод `supports_anonymous_source`, чтобы указать, что данный блок может принимать сообщения, предоставляемые ему несвязанным источником. (Переопределяет метод [ITarget:: supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|
 
 ## <a name="remarks"></a>Remarks
@@ -74,9 +74,9 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
 
 **Заголовок:** agents.h
 
-**Пространство имен:** concurrency
+**Пространство имен:** параллелизм
 
-## <a name="ctor"></a>обращение
+## <a name="call"></a><a name="ctor"></a>обращение
 
 Создает блок обмена сообщениями `call` .
 
@@ -125,19 +125,19 @@ call(
 
 Среда выполнения использует планировщик по умолчанию, если вы не указали параметры `_PScheduler` или `_PScheduleGroup` .
 
-Тип `_Call_method` — это функтор с сигнатурой, `void (T const &)` которая вызывается этим блоком `call` сообщений для обработки сообщения.
+Тип `_Call_method` — это функтор с сигнатурой, `void (T const &)` которая вызывается этим `call` блоком обмена сообщениями для обработки сообщения.
 
-Тип `filter_method` — это функтор с сигнатурой `bool (T const &)` который вызывается этим блоком `call` обмена сообщениями, чтобы определить, должно ли оно принимать предложенное сообщение.
+Тип `filter_method` — это функтор с сигнатурой, `bool (T const &)` которая вызывается этим `call` блоком обмена сообщениями для определения того, следует ли принимать предложенное сообщение.
 
-## <a name="dtor"></a>~ Call
+## <a name="call"></a><a name="dtor"></a>~ Call
 
-Уничтожает блок сообщений `call`.
+Уничтожает `call` блок обмена сообщениями.
 
 ```cpp
 ~call();
 ```
 
-## <a name="process_input_messages"></a>process_input_messages
+## <a name="process_input_messages"></a><a name="process_input_messages"></a>process_input_messages
 
 Выполняет функцию Call для входных сообщений.
 
@@ -150,9 +150,9 @@ virtual void process_input_messages(_Inout_ message<T>* _PMessage);
 *_PMessage*<br/>
 Указатель на сообщение, которое должно быть обработано.
 
-## <a name="process_message"></a>process_message
+## <a name="process_message"></a><a name="process_message"></a>process_message
 
-Обрабатывает сообщение, которое было принято этим блоком сообщений `call`.
+Обрабатывает сообщение, которое было принято этим `call` блоком обмена сообщениями.
 
 ```cpp
 virtual void process_message(_Inout_ message<T>* _PMessage);
@@ -163,9 +163,9 @@ virtual void process_message(_Inout_ message<T>* _PMessage);
 *_PMessage*<br/>
 Указатель на сообщение, которое должно быть обработано.
 
-## <a name="propagate_message"></a>propagate_message
+## <a name="propagate_message"></a><a name="propagate_message"></a>propagate_message
 
-Асинхронно передает сообщение из блока `ISource` в этот `call` блок сообщений. Вызывается методом `propagate` при вызове из исходного блока.
+Асинхронно передает сообщение из `ISource` блока в этот `call` блок обмена сообщениями. Он вызывается `propagate` методом при вызове из исходного блока.
 
 ```cpp
 virtual message_status propagate_message(
@@ -185,9 +185,9 @@ virtual message_status propagate_message(
 
 [Message_status](concurrency-namespace-enums.md) указывает, что цель решила делать с сообщением.
 
-## <a name="send_message"></a>send_message
+## <a name="send_message"></a><a name="send_message"></a>send_message
 
-Синхронно передает сообщение из блока `ISource` в этот `call` блок сообщений. Вызывается методом `send` при вызове из исходного блока.
+Синхронно передает сообщение из `ISource` блока в этот `call` блок обмена сообщениями. Он вызывается `send` методом при вызове из исходного блока.
 
 ```cpp
 virtual message_status send_message(
@@ -207,7 +207,7 @@ virtual message_status send_message(
 
 [Message_status](concurrency-namespace-enums.md) указывает, что цель решила делать с сообщением.
 
-## <a name="supports_anonymous_source"></a>supports_anonymous_source
+## <a name="supports_anonymous_source"></a><a name="supports_anonymous_source"></a>supports_anonymous_source
 
 Переопределяет метод `supports_anonymous_source`, чтобы указать, что данный блок может принимать сообщения, предоставляемые ему несвязанным источником.
 
@@ -217,9 +217,9 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true** , поскольку блок не откладывает предлагаемые сообщения.
+**`true`** так как блок не откладывает предлагаемые сообщения.
 
 ## <a name="see-also"></a>См. также раздел
 
-[Пространство имен concurrency](concurrency-namespace.md)<br/>
+[Пространство имен Concurrency](concurrency-namespace.md)<br/>
 [Класс transformer](transformer-class.md)

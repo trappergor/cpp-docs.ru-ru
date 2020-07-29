@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (set)
 - std::operator&lt;= (set)
 - std::operator== (set)
-ms.openlocfilehash: 4618030cf81f79a085e16052c8b9c547201e3577
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: a3256b7d963feca75e4a975def0f6da77538d278
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425163"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217510"
 ---
 # <a name="ltsetgt-operators"></a>Операторы &lt;set&gt;
 
-## <a name="op_neq"></a>operator! = (набор)
+## <a name="operator-set"></a><a name="op_neq"></a>operator! = (набор)
 
 Проверяет неравенство объекта-множества слева от оператора объекту-множеству справа от оператора.
 
@@ -35,15 +35,15 @@ bool operator!=(const set <Key, Traits, Allocator>& left, const set <Key, Traits
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*слева*\
 Объект типа `set`.
 
-*справа*\
+*Правильно*\
 Объект типа `set`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение **true**, если множества не равны; значение **false**, если множества равны.
+**`true`** значение, если наборы не равны; **`false`** Если наборы равны.
 
 ### <a name="remarks"></a>Remarks
 
@@ -86,7 +86,7 @@ The sets s1 and s3 are equal.
 */
 ```
 
-## <a name="op_lt"></a>&lt; оператора (Set)
+## <a name="operatorlt-set"></a><a name="op_lt"></a>Оператор &lt; (Set)
 
 Проверяет, меньше ли объект-множество слева от оператора, чем объект-множество справа от оператора.
 
@@ -96,15 +96,15 @@ bool operator<(const set <Key, Traits, Allocator>& left, const set <Key, Traits,
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*слева*\
 Объект типа `set`.
 
-*справа*\
+*Правильно*\
 Объект типа `set`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение **true**, если множество слева от оператора строго меньше множества справа от оператора; в противном случае — значение **false**.
+**`true`** значение, если набор слева от оператора строго меньше набора в правой части оператора; в противном случае — значение **`false`** .
 
 ### <a name="remarks"></a>Remarks
 
@@ -147,7 +147,7 @@ The set s1 is not less than the set s3.
 */
 ```
 
-## <a name="op_lt_eq"></a>Оператор&lt;= (Set)
+## <a name="operatorlt-set"></a><a name="op_lt_eq"></a>operator &lt; = (набор)
 
 Проверяет, что объект-множество слева от оператора не больше объекта-множества справа от оператора.
 
@@ -157,15 +157,15 @@ bool operator!<=(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*слева*\
 Объект типа `set`.
 
-*справа*\
+*Правильно*\
 Объект типа `set`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение **true**, если множество слева от оператора не больше множества справа от оператора; в противном случае — значение **false**.
+**`true`** значение, если набор слева от оператора меньше или равен набору в правой части оператора; в противном случае — значение **`false`** .
 
 ### <a name="remarks"></a>Remarks
 
@@ -216,7 +216,7 @@ The set s1 is greater than the set s3.
 Set s1 is less than or equal to the set s4.
 ```
 
-## <a name="op_eq_eq"></a>оператор = = (набор)
+## <a name="operator-set"></a><a name="op_eq_eq"></a>оператор = = (набор)
 
 Проверяет равенство объекта-множества слева от оператора объекту-множеству справа от оператора.
 
@@ -226,15 +226,15 @@ bool operator!==(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*слева*\
 Объект типа `set`.
 
-*справа*\
+*Правильно*\
 Объект типа `set`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение **true**, если множество слева от оператора равно множеству справа от оператора; в противном случае — значение **false**.
+**`true`** значение, если набор слева от оператора равен набору в правой части оператора; в противном случае — значение **`false`** .
 
 ### <a name="remarks"></a>Remarks
 
@@ -278,7 +278,7 @@ The sets s1 and s2 are not equal.
 The sets s1 and s3 are equal.
 ```
 
-## <a name="op_gt"></a>&gt; оператора (Set)
+## <a name="operatorgt-set"></a><a name="op_gt"></a>Оператор &gt; (Set)
 
 Проверяет, больше ли объект-множество слева от оператора, чем объект-множество справа от оператора.
 
@@ -288,15 +288,15 @@ bool operator>(const set <Key, Traits, Allocator>& left, const set <Key, Traits,
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*слева*\
 Объект типа `set`.
 
-*справа*\
+*Правильно*\
 Объект типа `set`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение **true**, если множество слева от оператора больше множества справа от оператора; в противном случае — значение **false**.
+**`true`** значение, если набор в левой части оператора больше, чем набор, расположенный справа от оператора; в противном случае — значение **`false`** .
 
 ### <a name="remarks"></a>Remarks
 
@@ -339,7 +339,7 @@ The set s1 is greater than the set s3.
 */
 ```
 
-## <a name="op_gt_eq"></a>Оператор&gt;= (Set)
+## <a name="operatorgt-set"></a><a name="op_gt_eq"></a>operator &gt; = (набор)
 
 Проверяет, что объект-множество слева от оператора не меньше объекта-множества справа от оператора.
 
@@ -349,15 +349,15 @@ bool operator!>=(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*слева*\
 Объект типа `set`.
 
-*справа*\
+*Правильно*\
 Объект типа `set`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение **true**, если множество слева от оператора не меньше множества справа от оператора; в противном случае — значение **false**.
+**`true`** значение, если набор в левой части оператора больше или равен набору в правой части списка; в противном случае — значение **`false`** .
 
 ### <a name="remarks"></a>Remarks
 
@@ -408,7 +408,7 @@ Set s1 is greater than or equal to set s3.
 Set s1 is greater than or equal to set s4.
 ```
 
-## <a name="op_neq_multiset"></a>operator! = (мультинабор)
+## <a name="operator-multiset"></a><a name="op_neq_multiset"></a>operator! = (мультинабор)
 
 Проверяет неравенство объекта multiset слева от оператора и объекта multiset справа от оператора.
 
@@ -418,15 +418,15 @@ bool operator!=(const multiset <Key, Traits, Allocator>& left, const multiset <K
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*слева*\
 Объект типа `multiset`.
 
-*справа*\
+*Правильно*\
 Объект типа `multiset`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение **true**, если множества или мультимножества не равны; значение **false**, если множества или мультимножества равны.
+**`true`** значение, если наборы или множества не равны; значение **`false`** , если наборы или множества равны.
 
 ### <a name="remarks"></a>Remarks
 
@@ -470,7 +470,7 @@ The multisets s1 and s2 are not equal.
 The multisets s1 and s3 are equal.
 ```
 
-## <a name="op_lt_multiset"></a>Оператор&lt; (мультинабор)
+## <a name="operatorlt-multiset"></a><a name="op_lt_multiset"></a>Оператор &lt; (мультинабор)
 
 Проверяет, меньше ли объект multiset слева от оператора объекта multiset справа от оператора.
 
@@ -480,15 +480,15 @@ bool operator<(const multiset <Key, Traits, Allocator>& left, const multiset <Ke
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*слева*\
 Объект типа `multiset`.
 
-*справа*\
+*Правильно*\
 Объект типа `multiset`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение **true**, если мультимножество слева от оператора строго меньше мультимножества справа от оператора; в противном случае — значение **false**.
+**`true`** Если мультинабор в левой части оператора строго меньше мультинабора в правой части оператора; в противном случае — значение **`false`** .
 
 ### <a name="remarks"></a>Remarks
 
@@ -536,7 +536,7 @@ The multiset s1 is less than the multiset s2.
 The multiset s1 is not less than the multiset s3.
 ```
 
-## <a name="op_lt_eq_multiset"></a>Оператор&lt;= (мультинабор)
+## <a name="operatorlt-multiset"></a><a name="op_lt_eq_multiset"></a>operator &lt; = (мультинабор)
 
 Проверяет, не больше ли объект multiset слева от оператора объекта multiset справа от оператора.
 
@@ -546,15 +546,15 @@ bool operator!<=(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*слева*\
 Объект типа `multiset`.
 
-*справа*\
+*Правильно*\
 Объект типа `multiset`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение **true**, если мультимножество слева от оператора не больше мультимножества справа от оператора; в противном случае — значение **false**.
+**`true`** значение, если мультинабор слева от оператора меньше или равен мультинабору в правой части оператора; в противном случае — значение **`false`** .
 
 ### <a name="remarks"></a>Remarks
 
@@ -611,7 +611,7 @@ The multiset s1 is greater than the multiset s3.
 The multiset s1 is less than or equal to the multiset s4.
 ```
 
-## <a name="op_eq_eq_multiset"></a>operator = = (мультинабор)
+## <a name="operator-multiset"></a><a name="op_eq_eq_multiset"></a>operator = = (мультинабор)
 
 Проверяет, равен ли объект multiset слева от оператора объекту multiset справа от оператора.
 
@@ -621,15 +621,15 @@ bool operator!==(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*слева*\
 Объект типа `multiset`.
 
-*справа*\
+*Правильно*\
 Объект типа `multiset`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение **true**, если мультимножество слева от оператора равно мультимножеству справа от оператора; в противном случае — значение **false**.
+**`true`** значение, если мультинабор в левой части оператора равен мультинабору справа от оператора; в противном случае — значение **`false`** .
 
 ### <a name="remarks"></a>Remarks
 
@@ -673,7 +673,7 @@ The multisets s1 and s2 are not equal.
 The multisets s1 and s3 are equal.
 ```
 
-## <a name="op_gt_multiset"></a>Оператор&gt; (мультинабор)
+## <a name="operatorgt-multiset"></a><a name="op_gt_multiset"></a>Оператор &gt; (мультинабор)
 
 Проверяет, больше ли объект multiset слева от оператора объекта multiset справа от оператора.
 
@@ -683,15 +683,15 @@ bool operator>(const multiset <Key, Traits, Allocator>& left, const multiset <Ke
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*слева*\
 Объект типа `multiset`.
 
-*справа*\
+*Правильно*\
 Объект типа `multiset`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение **true**, если мультимножество слева от оператора больше мультимножества справа от оператора; в противном случае — значение **false**.
+**`true`** значение, если мультинабор в левой части оператора больше мультинабора справа от оператора; в противном случае — значение **`false`** .
 
 ### <a name="remarks"></a>Remarks
 
@@ -739,7 +739,7 @@ The multiset s1 is not greater than the multiset s2.
 The multiset s1 is greater than the multiset s3.
 ```
 
-## <a name="op_gt_eq_multiset"></a>Оператор&gt;= (мультинабор)
+## <a name="operatorgt-multiset"></a><a name="op_gt_eq_multiset"></a>operator &gt; = (мультинабор)
 
 Проверяет, не меньше ли объект multiset слева от оператора объекта multiset справа от оператора.
 
@@ -749,15 +749,15 @@ bool operator!>=(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*слева*\
 Объект типа `multiset`.
 
-*справа*\
+*Правильно*\
 Объект типа `multiset`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение **true**, если мультимножество слева от оператора не меньше мультимножества справа от оператора; в противном случае — значение **false**.
+**`true`** значение, если мультинабор в левой части оператора больше или равен мультинабору в правой части списка; в противном случае — значение **`false`** .
 
 ### <a name="remarks"></a>Remarks
 

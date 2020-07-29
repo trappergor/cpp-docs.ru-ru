@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, inline_depth
 - inline_depth pragma
 ms.assetid: 2bba60fe-43ea-4d09-90f7-aafaba3bad07
-ms.openlocfilehash: be57178280e278683b85db1413ff5724b5260aef
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 73540ec19c4ecc18a740dace0d23a37ad43182c0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70220981"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219421"
 ---
 # <a name="inline_depth-pragma"></a>Прагма inline_depth
 
@@ -21,11 +21,11 @@ ms.locfileid: "70220981"
 
 ## <a name="syntax"></a>Синтаксис
 
-> **#pragma inline_depth (** [ *n* ] **)**
+> **inline_depth #pragma (** [ *n* ] **)**
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Эта директива pragma управляет встраиванием функций, помеченных как [встроенные](../cpp/inline-functions-cpp.md) и [__inline](../cpp/inline-functions-cpp.md), или встроенных `/Ob` автоматически при выборе параметра.
+Эта директива pragma управляет встраиванием функций, помеченных как [встроенные](../cpp/inline-functions-cpp.md) и [__inline](../cpp/inline-functions-cpp.md), или встроенных автоматически при `/Ob` выборе параметра.
 
 значение *n* может быть в диапазоне от 0 до 255, где 255 означает неограниченную глубину в графе вызовов. Значение 0 препятствует встроенному расширению. Если *n* не указано, используется значение по умолчанию 254.
 
@@ -33,14 +33,14 @@ ms.locfileid: "70220981"
 
 Для использования этой директивы pragma необходимо задать `/Ob` для параметра компилятора значение 1 или выше. Глубина, установленная при помощи этой директивы #pragma, начинает действовать с первого вызова функции, расположенной после директивы.
 
-Встроенную глубину можно уменьшить во время расширения, но не увеличивать. Если встроенная глубина равна 6, а во время расширения препроцессор встречает **inline_depth** pragma со значением 8, глубина остается 6.
+Встроенную глубину можно уменьшить во время расширения, но не увеличивать. Если встроенная глубина равна 6, а во время расширения препроцессор встречает **inline_depth** директиву pragma со значением 8, глубина остается 6.
 
-Директива pragma **inline_depth** не влияет на функции, помеченные как `__forceinline`.
+Директива pragma **inline_depth** не влияет на функции, помеченные как **`__forceinline`** .
 
 > [!NOTE]
 > Подстановка для рекурсивных функций выполняется на глубину не более 16 вызовов.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Директивы pragma и ключевое слово __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)\
 [inline_recursion](../preprocessor/inline-recursion.md)

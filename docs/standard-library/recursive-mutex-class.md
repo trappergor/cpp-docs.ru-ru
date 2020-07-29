@@ -14,16 +14,16 @@ helpviewer_keywords:
 - std::recursive_mutex [C++], lock
 - std::recursive_mutex [C++], try_lock
 - std::recursive_mutex [C++], unlock
-ms.openlocfilehash: 9ab7a96a7c07582450ab41b140dcc5494a63661f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8455548997c4ccf1b950e26e01df67306554b945
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320204"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217614"
 ---
 # <a name="recursive_mutex-class"></a>Класс recursive_mutex
 
-Представляет *тип mutex*. В отличие от класса [mutex](../standard-library/mutex-class-stl.md), поведение вызовов методов блокировки для объектов, которые уже заблокированы, четко определено.
+Представляет *тип мьютекса*. В отличие от класса [mutex](../standard-library/mutex-class-stl.md), поведение вызовов методов блокировки для объектов, которые уже заблокированы, четко определено.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -42,19 +42,19 @@ class recursive_mutex;
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[lock](#lock)|Блокирует вызывающий поток до тех пор, пока этот поток не получит права владельца мьютекса.|
 |[try_lock](#try_lock)|Попытки получить права владельца мьютекса без блокировки.|
-|[Разблокировать](#unlock)|Освобождает права владения мьютексом.|
+|[блокирован](#unlock)|Освобождает права владения мьютексом.|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<mutex>
+**Заголовок:**\<mutex>
 
 **Пространство имен:** std
 
-## <a name="lock"></a><a name="lock"></a>Блокировки
+## <a name="lock"></a><a name="lock"></a>скрыть
 
 Блокирует вызывающий поток до тех пор, пока этот поток не получит права владельца объекта `mutex`.
 
@@ -86,7 +86,7 @@ recursive_mutex();
 
 Если при выполнении деструктора объект заблокирован, поведение не определено.
 
-## <a name="try_lock"></a><a name="try_lock"></a>Try_lock
+## <a name="try_lock"></a><a name="try_lock"></a>try_lock
 
 Попытки получить права владельца объекта `mutex` без блокировки.
 
@@ -96,13 +96,13 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**верно,** если метод успешно получает `mutex` право собственности на `mutex**; otherwise, **false`или если вызывающая нить уже владеет .
+**`true`** Если метод успешно получает владение `mutex` или, если вызывающий поток уже владеет `mutex**; otherwise, **false` .
 
 ### <a name="remarks"></a>Remarks
 
-Если поток вызова уже `mutex`владеет функцией, функция немедленно возвращается **верно,** и предыдущий блокировка остается в силе.
+Если вызывающий поток уже владеет `mutex` , функция немедленно возвращает значение **`true`** , а предыдущая блокировка остается в силе.
 
-## <a name="unlock"></a><a name="unlock"></a>Разблокировать
+## <a name="unlock"></a><a name="unlock"></a>блокирован
 
 Освобождает права владения мьютексом.
 
@@ -118,5 +118,5 @@ void unlock();
 
 ## <a name="see-also"></a>См. также раздел
 
-[Справка по файлам заголовка](../standard-library/cpp-standard-library-header-files.md)\
+[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)\
 [\<mutex>](../standard-library/mutex.md)

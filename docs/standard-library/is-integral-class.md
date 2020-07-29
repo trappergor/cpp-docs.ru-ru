@@ -7,14 +7,14 @@ helpviewer_keywords:
 - is_integral class
 - is_integral
 ms.assetid: fe9279d0-4495-4e88-bf23-153cc6602397
-ms.openlocfilehash: a367bb06f49dd2c9c64f0c257a3573add5645efe
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a3d618b77d69f5d80736ac20304c9184c5963b25
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456242"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217770"
 ---
-# <a name="isintegral-class"></a>Класс is_integral
+# <a name="is_integral-class"></a>Класс is_integral
 
 Проверяет, является ли тип целочисленным.
 
@@ -30,11 +30,11 @@ struct is_integral;
 *Ty*\
 Запрашиваемый тип.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Экземпляр предиката типа содержит значение true, если тип *Ty* является одним из целочисленных типов или `cv-qualified` формой одного из целочисленных типов, в противном случае — значение false.
 
-Целочисленный тип — это один из типов **bool**, **char**, char, **без знака**, **со знаком char**, **wchar_t**, **Short**, **без знака Short**, **int**, **без знака int**, **Long**и **без знака Long**. Кроме того, с компиляторами, предоставляющими их, целочисленный тип может быть одним из длинных длинных, беззнаковых длинных, **__int64**и неподписанных **__int64**.
+Целочисленный тип — один из типов **`bool`** , **`char`** ,,, **`unsigned char`** **`signed char`** **`wchar_t`** , **`short`** , **`unsigned short`** , **`int`** , **`unsigned int`** , **`long`** и **`unsigned long`** . Кроме того, с компиляторами, предоставляющими их, целочисленный тип может быть одним из **`long long`** __int64,, **`unsigned long long`** **`__int64`** и **без знака**.
 
 ## <a name="example"></a>Пример
 
@@ -70,11 +70,11 @@ is_integral<float> == false
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<type_traits>
+**Заголовок:**\<type_traits>
 
 **Пространство имен:** std
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [<type_traits>](../standard-library/type-traits.md)\
 [Класс is_enum](../standard-library/is-enum-class.md)\

@@ -7,12 +7,12 @@ f1_keywords:
 - istream/std::wiostream
 - istream/std::wistream
 ms.assetid: 55bc1f84-53a7-46ca-a36f-ac6ef75d0374
-ms.openlocfilehash: e9228bddcc3b99503b6b5f0e93b5ed6eeed773d1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1e162dc9fb784bda5b4b9834d083012cf76ed6e3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363085"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217718"
 ---
 # <a name="ltistreamgt-typedefs"></a>Определения типов &lt;istream&gt;
 
@@ -21,9 +21,9 @@ ms.locfileid: "81363085"
 |[iostream](#iostream)|[istream](#istream)|[wiostream](#wiostream)|
 |[wistream](#wistream)|
 
-## <a name="iostream"></a><a name="iostream"></a>Iostream
+## <a name="iostream"></a><a name="iostream"></a>iostream
 
-Тип, `basic_iostream` специализирующийся на **char**.
+Тип, `basic_iostream` специализированный для **`char`** .
 
 ```cpp
 typedef basic_iostream<char, char_traits<char>> iostream;
@@ -31,11 +31,11 @@ typedef basic_iostream<char, char_traits<char>> iostream;
 
 ### <a name="remarks"></a>Remarks
 
-Тип является синонимом шаблона класса [basic_iostream,](../standard-library/basic-iostream-class.md)специализируемого на элементах **символа** типа с чертами символов по умолчанию.
+Тип является синонимом [basic_iostream](../standard-library/basic-iostream-class.md)шаблона класса, специализированного для элементов типа **`char`** с признаками символа по умолчанию.
 
-## <a name="istream"></a><a name="istream"></a>Istream
+## <a name="istream"></a><a name="istream"></a>IStream
 
-Тип, `basic_istream` специализирующийся на **char**.
+Тип, `basic_istream` специализированный для **`char`** .
 
 ```cpp
 typedef basic_istream<char, char_traits<char>> istream;
@@ -43,11 +43,11 @@ typedef basic_istream<char, char_traits<char>> istream;
 
 ### <a name="remarks"></a>Remarks
 
-Тип является синонимом шаблона класса [basic_istream,](../standard-library/basic-istream-class.md)специализируемого на элементах **символа** типа с чертами символов по умолчанию.
+Тип является синонимом [basic_istream](../standard-library/basic-istream-class.md)шаблона класса, специализированного для элементов типа **`char`** с признаками символа по умолчанию.
 
-## <a name="wiostream"></a><a name="wiostream"></a>wiostream
+## <a name="wiostream"></a><a name="wiostream"></a>виостреам
 
-Тип, `basic_iostream` специализирующийся на **wchar_t**.
+Тип, `basic_iostream` специализированный для **`wchar_t`** .
 
 ```cpp
 typedef basic_iostream<wchar_t, char_traits<wchar_t>> wiostream;
@@ -55,11 +55,11 @@ typedef basic_iostream<wchar_t, char_traits<wchar_t>> wiostream;
 
 ### <a name="remarks"></a>Remarks
 
-Тип является синонимом шаблона класса [basic_iostream,](../standard-library/basic-iostream-class.md)специализировавшегося на элементах типа **wchar_t** с чертами характера по умолчанию.
+Тип является синонимом [basic_iostream](../standard-library/basic-iostream-class.md)шаблона класса, специализированного для элементов типа **`wchar_t`** с признаками символа по умолчанию.
 
-## <a name="wistream"></a><a name="wistream"></a>wistream
+## <a name="wistream"></a><a name="wistream"></a>вистреам
 
-Тип, `basic_istream` специализирующийся на **wchar_t**.
+Тип, `basic_istream` специализированный для **`wchar_t`** .
 
 ```cpp
 typedef basic_istream<wchar_t, char_traits<wchar_t>> wistream;
@@ -67,7 +67,7 @@ typedef basic_istream<wchar_t, char_traits<wchar_t>> wistream;
 
 ### <a name="remarks"></a>Remarks
 
-Тип является синонимом шаблона класса [basic_istream,](../standard-library/basic-istream-class.md)специализировавшегося на элементах типа **wchar_t** с чертами символов по умолчанию.
+Тип является синонимом [basic_istream](../standard-library/basic-istream-class.md)шаблона класса, специализированного для элементов типа **`wchar_t`** с признаками символа по умолчанию.
 
 ## <a name="see-also"></a>См. также раздел
 

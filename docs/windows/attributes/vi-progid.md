@@ -1,17 +1,17 @@
 ---
-title: vi_progid (C++ атрибут com)
+title: vi_progid (атрибут COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.vi_progid
 helpviewer_keywords:
 - vi_progid attribute
 ms.assetid: a52449be-b93e-4111-b883-44bb8da53261
-ms.openlocfilehash: fbf5ab2bc4263356a1cfcf789865a3f7e286ccd7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e7da3463b142fbca83387e52394ee33f42636124
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514867"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213792"
 ---
 # <a name="vi_progid"></a>vi_progid
 
@@ -30,15 +30,15 @@ ms.locfileid: "69514867"
 
 Идентификаторы ProgID представляют собой удобочитаемую для человека версию идентификатора класса (CLSID), используемую для идентификации объектов COM/ActiveX.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Атрибут **vi_progid** C++ позволяет указать независимый от версии идентификатор ProgID для COM-объекта. Идентификатор ProgID имеет форму *name1. имя2. Version*. Идентификатор ProgID, не зависящий от версии, не имеет *версии*. В можно указать `progid` и атрибуты `coclass`, и **vi_progid** . Если не указать **vi_progid**, идентификатор ProgID, не зависящий от версии, является значением, заданным атрибутом [ProgID](progid.md) .
+Атрибут **vi_progid** C++ позволяет указать независимый от версии идентификатор ProgID для COM-объекта. Идентификатор ProgID имеет форму *name1. имя2. Version*. Идентификатор ProgID, не зависящий от версии, не имеет *версии*. В можно указать `progid` и атрибут, и **vi_progid** `coclass` . Если не указать **vi_progid**, идентификатор ProgID, не зависящий от версии, является значением, заданным в атрибуте [ProgID](progid.md) .
 
-**vi_progid** подразумевает `coclass` атрибут, то есть если указать **vi_progid**, то это `coclass` то же самое, что и атрибуты и **vi_progid** .
+**vi_progid** подразумевает `coclass` атрибут, то есть если указать **vi_progid**, то это то же самое, что `coclass` и атрибуты и **vi_progid** .
 
 Атрибут **vi_progid** вызывает автоматическую регистрацию класса с указанным именем. Созданный IDL-файл не будет отображать значение ProgID.
 
-В проектах ATL, если атрибут [coclass](coclass.md) также имеется, указанный идентификатор ProgID используется `GetVersionIndependentProgID` функцией `coclass` (которая вставляется атрибутом).
+В проектах ATL, если атрибут [coclass](coclass.md) также имеется, указанный идентификатор ProgID используется `GetVersionIndependentProgID` функцией (которая вставляется `coclass` атрибутом).
 
 ## <a name="example"></a>Пример
 
@@ -50,16 +50,16 @@ ms.locfileid: "69514867"
 
 |||
 |-|-|
-|**Относится к**|**класс**, **Структура**|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Отсутствуют|
-|**Недопустимые атрибуты**|Отсутствуют|
+|**Относится к**|**`class`**, **`struct`**|
+|**REPEATABLE**|Нет|
+|**Требуемые атрибуты**|Нет|
+|**Недопустимые атрибуты**|Нет|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
-[Атрибуты Typedef, Enum, Union и Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[Атрибуты классов](class-attributes.md)<br/>
+[Атрибуты typedef, enum, Union и struct](typedef-enum-union-and-struct-attributes.md)<br/>
+[Атрибуты класса](class-attributes.md)<br/>
 [Ключ ProgID](/windows/win32/com/-progid--key)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic interfaces
 - interfaces, generic [C++}
 ms.assetid: f3da788a-ba83-4db7-9dcf-9b95a8fb9d1a
-ms.openlocfilehash: 35dba37f1441144a3f7276388be1f61bebc84139
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f5a74eaafa7ff348079ec367a7c2318f86081f15
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182023"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218030"
 ---
 # <a name="generic-interfaces-ccli"></a>Универсальные интерфейсы (C++/CLI)
 
@@ -36,16 +36,16 @@ ms.locfileid: "80182023"
 (Необязательно) Дополнительные описательные данные. Дополнительные сведения об атрибутах и классах атрибутов см. в разделе **Атрибуты**.
 
 *class-key*<br/>
-**class** или **typename**
+**`class`** или **`typename`**
 
-*Идентификаторы type-parameter*<br/>
+*type-parameter-identifier(s)*<br/>
 Разделенный запятыми список идентификаторов.
 
 *type-parameter-constraints-clauses*<br/>
 Принимает вид, определенный в статье [Constraints on Generic Type Parameters (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md) (Ограничения, применяемые к параметрам универсальных типов (C++/CLI)).
 
 *accessibility-modifiers*<br/>
-(Необязательно) Модификаторы доступа (например, **public, private**).
+Используемых Модификаторы доступа (например **, Public, Private**).
 
 *identifier*<br/>
 Имя интерфейса.
@@ -313,6 +313,6 @@ The integer field contains: 1234
 The String field contains: My string
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Универсальные шаблоны](generics-cpp-component-extensions.md)

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3541
 ms.assetid: 252cfd4c-5fd2-415e-a17d-6b0c254350db
-ms.openlocfilehash: 1308ff91bcebabc5495b015321494f3457cf2d1e
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 32926d0ef9343bad9ed73458e4d52d317b628109
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761508"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221046"
 ---
 # <a name="compiler-error-c3541"></a>Ошибка компилятора C3541
 
 "тип": typeid нельзя применять к типу, содержащему "Auto"
 
-Оператор [typeid](../../extensions/typeid-cpp-component-extensions.md) нельзя применить к указанному типу, так как он содержит описатель `auto`.
+Оператор [typeid](../../extensions/typeid-cpp-component-extensions.md) не может применяться к указанному типу, так как он содержит **`auto`** спецификатор.
 
 ## <a name="example"></a>Пример
 
@@ -35,8 +35,8 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Ключевое слово auto](../../cpp/auto-keyword.md)<br/>
-[/Zc:auto (выведение типа переменной)](../../build/reference/zc-auto-deduce-variable-type.md)<br/>
-[typeid](../../extensions/typeid-cpp-component-extensions.md)
+[/Zc: Auto (вывод типа переменной)](../../build/reference/zc-auto-deduce-variable-type.md)<br/>
+[типа](../../extensions/typeid-cpp-component-extensions.md)
