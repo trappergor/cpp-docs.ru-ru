@@ -1,5 +1,5 @@
 ---
-title: Оператор __alignof
+title: Оператор alignof
 ms.date: 12/17/2018
 f1_keywords:
 - __alignof_cpp
@@ -13,49 +13,44 @@ helpviewer_keywords:
 - alignof [C++]
 - types [C++], alignment requirements
 ms.assetid: acb1eed7-6398-40bd-b0c5-684ceb64afbc
-ms.openlocfilehash: 6bddce29dd97d965303a58cc72aa97dfe8cbd8d7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6a2046774674858211ae89abb9b4cfc7b09c0a6d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181542"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227638"
 ---
-# <a name="__alignof-operator"></a>Оператор __alignof
+# <a name="alignof-operator"></a>Оператор alignof
 
-В c++ 11 появился оператор **alignof** , возвращающий выравнивание указанного типа в байтах. Для обеспечения максимальной переносимости кода следует использовать оператор alignof вместо оператора __alignof, тесно связанного с системами Майкрософт.
-
-**Блок, относящийся только к системам Microsoft**
-
-Возвращает значение типа `size_t`, которое является требованием выравнивания для типа.
+**`alignof`** Оператор возвращает выравнивание в байтах указанного типа в виде значения типа **`size_t`** .
 
 ## <a name="syntax"></a>Синтаксис
 
 ```cpp
-  __alignof( type )
+alignof( type )
 ```
 
 ## <a name="remarks"></a>Remarks
 
 Пример:
 
-|Выражение|Значение|
-|----------------|-----------|
-|**__alignof (char)**|1|
-|**__alignof (короткий)**|2|
-|**__alignof (int)**|4|
-|**__alignof (\__int64)**|8|
-|**__alignof (float)**|4|
-|**__alignof (Double)**|8|
-|**__alignof (char\*)**|4|
+| Выражение | Значение |
+|--|--|
+| **`alignof( char )`** | 1 |
+| **`alignof( short )`** | 2 |
+| **`alignof( int )`** | 4 |
+| **`alignof( long long )`** | 8 |
+| **`alignof( float )`** | 4 |
+| **`alignof( double )`** | 8 |
 
-Значение **__alignof** равно значению для `sizeof` базовых типов. Однако рассмотрим следующий пример.
+Значение совпадает со **`alignof`** значением для **`sizeof`** базовых типов. Однако рассмотрим следующий пример.
 
 ```cpp
 typedef struct { int a; double b; } S;
-// __alignof(S) == 8
+// alignof(S) == 8
 ```
 
-В этом случае **__alignof** значение является требованием выравнивания для самого крупного элемента в структуре.
+В этом случае **`alignof`** значение является требованием выравнивания для самого крупного элемента в структуре.
 
 Аналогичным образов, в
 
@@ -63,17 +58,15 @@ typedef struct { int a; double b; } S;
 typedef __declspec(align(32)) struct { int a; } S;
 ```
 
-`__alignof(S)` равно `32`.
+`alignof(S)` равно `32`.
 
-Одним из способов использования **__alignof** является параметр одной из собственных подпрограмм выделения памяти. Например, в следующей определенной структуре `S` можно вызвать подпрограмму выделения памяти с именем `aligned_malloc` для выделения памяти на определенной границе выравнивания.
+Одним из них будет использование в **`alignof`** качестве параметра для одной из собственных подпрограмм выделения памяти. Например, в следующей определенной структуре `S` можно вызвать подпрограмму выделения памяти с именем `aligned_malloc` для выделения памяти на определенной границе выравнивания.
 
 ```cpp
 typedef __declspec(align(32)) struct { int a; double b; } S;
 int n = 50; // array size
-S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));
+S* p = (S*)aligned_malloc(n * sizeof(S), alignof(S));
 ```
-
-Для совместимости с предыдущими версиями **_alignof** является синонимом для **__alignof** , если только не указан параметр компилятора [/Za \(отключить расширения языка)](../build/reference/za-ze-disable-language-extensions.md) .
 
 Дополнительные сведения об изменении выравнивания см. в следующих разделах.
 
@@ -83,17 +76,21 @@ S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));
 
 - [__unaligned](../cpp/unaligned.md)
 
-- [/Zp (выравнивание члена структуры)](../build/reference/zp-struct-member-alignment.md)
+- [/Zp (выравнивание членов структуры)](../build/reference/zp-struct-member-alignment.md)
 
 - [Примеры выравнивания структуры](../build/x64-software-conventions.md#examples-of-structure-alignment) (только для x64)
 
 Дополнительные сведения о различиях в выравнивании в коде для 32- (x86) и 64-разрядных (x64) сред см. в статье
 
-- [Конфликты с 32-разрядным (x86) компилятором](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
+- [Конфликтует с компилятором x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
 
-**Завершение блока, относящегося только к системам Майкрософт**
+### <a name="microsoft-specific"></a>Специально для систем Майкрософт
 
-## <a name="see-also"></a>См. также раздел
+**`alignof`** и **`__alignof`** являются синонимами в компиляторе Майкрософт. До того, как она стала частью стандарта в C++ 11, оператор, предоставляемый корпорацией Майкрософт, **`__alignof`** предоставил эти функциональные возможности. Для максимальной переносимости следует использовать **`alignof`** оператор вместо оператора, относящегося к Microsoft **`__alignof`** .
+
+Для совместимости с предыдущими версиями аргумент **`_alignof`** является синонимом, **`__alignof`** если только параметр компилятора не [ `/Za` \( отключает расширения языка)](../build/reference/za-ze-disable-language-extensions.md) .
+
+## <a name="see-also"></a>См. также
 
 [Выражения с унарными операторами](../cpp/expressions-with-unary-operators.md)<br/>
 [Ключевые слова](../cpp/keywords-cpp.md)

@@ -23,12 +23,12 @@ helpviewer_keywords:
 - typedefs
 - ATL, typedefs
 ms.assetid: 7dd05baa-3efb-4e3b-af23-793c610f4560
-ms.openlocfilehash: 26e4e80ed3110351130731e6030427d25fc4a0ea
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: a6b1ce33fe201338a0cc9356f2ef86e598629fd6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168739"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228041"
 ---
 # <a name="atl-typedefs"></a>Определения типов ATL
 
@@ -44,10 +44,10 @@ ms.locfileid: "82168739"
 |[ккомдиспатчдривер](#ccomdispatchdriver)|Этот класс управляет указателями на интерфейс COM.|
 |[ккомглобалссреадмодел](#ccomglobalsthreadmodel)|Вызывает соответствующие методы модели потоков независимо от используемой потоковой модели.|
 |[ккомобжектсреадмодел](#ccomobjectthreadmodel)|Вызывает соответствующие методы модели потоков независимо от используемой потоковой модели.|
-|[кконтаинедвиндов](#ccontainedwindow)|Этот класс является специализацией `CContainedWindowT`.|
-|[кпас](#cpath)|Специализация [кпаст](../../atl/reference/cpatht-class.md) с помощью `CString`.|
-|[кпаса](#cpatha)|Специализация [кпаст](../../atl/reference/cpatht-class.md) с помощью `CStringA`.|
-|[кпасв](#cpathw)|Специализация [кпаст](../../atl/reference/cpatht-class.md) с помощью `CStringW`.|
+|[кконтаинедвиндов](#ccontainedwindow)|Этот класс является специализацией `CContainedWindowT` .|
+|[кпас](#cpath)|Специализация [кпаст](../../atl/reference/cpatht-class.md) с помощью `CString` .|
+|[кпаса](#cpatha)|Специализация [кпаст](../../atl/reference/cpatht-class.md) с помощью `CStringA` .|
+|[кпасв](#cpathw)|Специализация [кпаст](../../atl/reference/cpatht-class.md) с помощью `CStringW` .|
 |[ксимплеваларрай](#csimplevalarray)|Представляет массив для хранения простых типов.|
 |[дефаултсреадтраитс](#defaultthreadtraits)|Класс признаков потока по умолчанию.|
 |[лпкурл](#lpcurl)|Указатель [на постоянный объект](../../atl/reference/curl-class.md) , являющийся константой.|
@@ -161,21 +161,21 @@ typedef CComMultiThreadModel CComGlobalsThreadModel;
 
 ### <a name="remarks"></a>Remarks
 
-В зависимости от модели потоков, используемой приложением `CComGlobalsThreadModel` , имя **typedef** ссылается либо на [ккомсинглесреадмодел](../../atl/reference/ccomsinglethreadmodel-class.md) , либо на [ккоммултисреадмодел](../../atl/reference/ccommultithreadmodel-class.md). Эти классы предоставляют дополнительные `typedef` имена для ссылки на класс критической секции.
+В зависимости от модели потоков, используемой приложением, **`typedef`** имя `CComGlobalsThreadModel` ссылается либо на [ккомсинглесреадмодел](../../atl/reference/ccomsinglethreadmodel-class.md) , либо на [ккоммултисреадмодел](../../atl/reference/ccommultithreadmodel-class.md). Эти классы предоставляют дополнительные **`typedef`** имена для ссылки на класс критической секции.
 
 > [!NOTE]
 > `CComGlobalsThreadModel`не ссылается на класс [ккоммултисреадмоделнокс](../../atl/reference/ccommultithreadmodelnocs-class.md).
 
 Использование `CComGlobalsThreadModel` освобождает вас от указания конкретного класса потоковой модели. Независимо от используемой потоковой модели, будут вызываться соответствующие методы.
 
-Кроме того `CComGlobalsThreadModel`, ATL предоставляет имя **typedef** [ккомобжектсреадмодел](#ccomobjectthreadmodel). Класс, на который ссылается `typedef` каждый, зависит от используемой потоковой модели, как показано в следующей таблице.
+В дополнение к `CComGlobalsThreadModel` ATL предоставляет **`typedef`** имя [ккомобжектсреадмодел](#ccomobjectthreadmodel). Класс, на который ссылается каждый, **`typedef`** зависит от используемой потоковой модели, как показано в следующей таблице.
 
 |typedef|Единая Организация|Потоковое подразделение|Свободная организация потоков|
 |-------------|----------------------|-------------------------|--------------------|
 |`CComObjectThreadModel`|S|S|M|
 |`CComGlobalsThreadModel`|S|M|M|
 
-S = `CComSingleThreadModel`; M =`CComMultiThreadModel`
+S = `CComSingleThreadModel` ; M =`CComMultiThreadModel`
 
 Используйте `CComObjectThreadModel` в одном классе объекта. Используйте `CComGlobalsThreadModel` в глобально доступном для вашей программе объекте или при необходимости защитить ресурсы модуля в нескольких потоках.
 
@@ -201,21 +201,21 @@ typedef CComMultiThreadModel CComObjectThreadModel;
 
 ### <a name="remarks"></a>Remarks
 
-В зависимости от модели потоков, используемой приложением `typedef` , имя `CComObjectThreadModel` ссылается либо на [ккомсинглесреадмодел](../../atl/reference/ccomsinglethreadmodel-class.md) , либо на [ккоммултисреадмодел](../../atl/reference/ccommultithreadmodel-class.md). Эти классы предоставляют дополнительные `typedef` имена для ссылки на класс критической секции.
+В зависимости от модели потоков, используемой приложением, **`typedef`** имя `CComObjectThreadModel` ссылается либо на [ккомсинглесреадмодел](../../atl/reference/ccomsinglethreadmodel-class.md) , либо на [ккоммултисреадмодел](../../atl/reference/ccommultithreadmodel-class.md). Эти классы предоставляют дополнительные **`typedef`** имена для ссылки на класс критической секции.
 
 > [!NOTE]
 > `CComObjectThreadModel`не ссылается на класс [ккоммултисреадмоделнокс](../../atl/reference/ccommultithreadmodelnocs-class.md).
 
 Использование `CComObjectThreadModel` освобождает вас от указания конкретного класса потоковой модели. Независимо от используемой потоковой модели, будут вызываться соответствующие методы.
 
-Кроме того `CComObjectThreadModel`, ATL предоставляет имя **typedef** [ккомглобалссреадмодел](#ccomglobalsthreadmodel). Класс, на который ссылается каждое **Определение типа** , зависит от используемой потоковой модели, как показано в следующей таблице.
+В дополнение к `CComObjectThreadModel` ATL предоставляет **`typedef`** имя [ккомглобалссреадмодел](#ccomglobalsthreadmodel). Класс, на который ссылается каждый, **`typedef`** зависит от используемой потоковой модели, как показано в следующей таблице.
 
 |typedef|Единая Организация|Потоковое подразделение|Свободная организация потоков|
 |-------------|----------------------|-------------------------|--------------------|
 |`CComObjectThreadModel`|S|S|M|
 |`CComGlobalsThreadModel`|S|M|M|
 
-S = `CComSingleThreadModel`; M =`CComMultiThreadModel`
+S = `CComSingleThreadModel` ; M =`CComMultiThreadModel`
 
 Используйте `CComObjectThreadModel` в одном классе объекта. Используйте `CComGlobalsThreadModel` в объекте, который либо является глобально доступным для программы, либо для защиты ресурсов модуля в нескольких потоках.
 
@@ -225,7 +225,7 @@ S = `CComSingleThreadModel`; M =`CComMultiThreadModel`
 
 ## <a name="ccontainedwindow"></a><a name="ccontainedwindow"></a>кконтаинедвиндов
 
-Этот класс является специализацией `CContainedWindowT`.
+Этот класс является специализацией `CContainedWindowT` .
 
 ```cpp
 typedef CContainedWindowT<CWindow> CContainedWindow;
@@ -241,7 +241,7 @@ typedef CContainedWindowT<CWindow> CContainedWindow;
 
 ## <a name="cpath"></a><a name="cpath"></a>кпас
 
-Специализация [кпаст](../../atl/reference/cpatht-class.md) с помощью `CString`.
+Специализация [кпаст](../../atl/reference/cpatht-class.md) с помощью `CString` .
 
 ```cpp
 typedef CPathT<CString> CPath;
@@ -253,7 +253,7 @@ typedef CPathT<CString> CPath;
 
 ## <a name="cpatha"></a><a name="cpatha"></a>кпаса
 
-Специализация [кпаст](../../atl/reference/cpatht-class.md) с помощью `CStringA`.
+Специализация [кпаст](../../atl/reference/cpatht-class.md) с помощью `CStringA` .
 
 ```cpp
 typedef CPathT<CStringA> CPathA;
@@ -265,7 +265,7 @@ typedef CPathT<CStringA> CPathA;
 
 ## <a name="cpathw"></a><a name="cpathw"></a>кпасв
 
-Специализация [кпаст](../../atl/reference/cpatht-class.md) с помощью `CStringW`.
+Специализация [кпаст](../../atl/reference/cpatht-class.md) с помощью `CStringW` .
 
 ```cpp
 typedef ATL::CPathT<CStringW> CPathW;
@@ -337,7 +337,7 @@ typedef CUrl* LPURL;
 
 **Заголовок:** файлов atlutil. h
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также статью
 
 [Компоненты ATL COM Desktop](../../atl/atl-com-desktop-components.md)<br/>
 [Функции](../../atl/reference/atl-functions.md)<br/>

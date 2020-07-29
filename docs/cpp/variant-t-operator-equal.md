@@ -8,12 +8,12 @@ helpviewer_keywords:
 - operator = [C++], variant
 - = operator [C++], with specific Visual C++ objects
 ms.assetid: 77622723-6e49-4dec-9e0f-fa74028f1a3c
-ms.openlocfilehash: 402251592a87b723d75fd1b2cd0786be7b17dbfc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2db26a378526cd5f48992cb32ea46e9677125e66
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187626"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226962"
 ---
 # <a name="_variant_toperator-"></a>_variant_t::operator =
 
@@ -119,40 +119,40 @@ _variant_t& operator=(
 
 Оператор присваивает новое значение объекту `_variant_t`.
 
-- **operator = (**  *варсрк*  **)** Назначает существующий `VARIANT` объекту `_variant_t`.
+- **operator = (**  *варсрк*  **)** Присваивает существующий `VARIANT` `_variant_t` объект объекту.
 
-- **operator = (**  *пварсрк*  **)** Назначает существующий `VARIANT` объекту `_variant_t`.
+- **operator = (**  *пварсрк*  **)** Присваивает существующий `VARIANT` `_variant_t` объект объекту.
 
-- **operator = (**  *var_t_Src*  **)** Присваивает существующий объект `_variant_t` объекту `_variant_t`.
+- **operator = (**  *var_t_Src*  **)** Присваивает существующий `_variant_t` объект `_variant_t` объекту.
 
-- **operator = (**  *ССРК*  **)** Присваивает **короткое** целое значение объекту `_variant_t`.
+- **operator = (**  *ССРК*  **)** Присваивает **`short`** целочисленное значение `_variant_t` объекту.
 
-- **operator = (** `lSrc` **)** Присваивает **длинное** целое значение объекту `_variant_t`.
+- **operator = (** `lSrc` **)** присваивает **`long`** объекту целочисленное значение `_variant_t` .    
 
-- **operator = (**  *флтсрк*  **)** Присваивает числовое значение **float** объекту `_variant_t`.
+- **operator = (**  *флтсрк*  **)** Присваивает **`float`** числовое значение `_variant_t` объекту.
 
-- **operator = (**  *дблсрк*  **)** Присваивает значение **типа Double** числовому объекту `_variant_t`.
+- **operator = (**  *дблсрк*  **)** Присваивает **`double`** числовое значение `_variant_t` объекту.
 
-- **operator = (**  *цисрк*  **)** Назначает объект `CY` объекту `_variant_t`.
+- **operator = (**  *цисрк*  **)** Присваивает объект объекту `CY` `_variant_t` .
 
-- **operator = (**  *бстрсрк*  **)** Назначает объект `BSTR` объекту `_variant_t`.
+- **operator = (**  *бстрсрк*  **)** Присваивает объект объекту `BSTR` `_variant_t` .
 
-- **operator = (**  *встрсрк*  **)** Присваивает строку Юникода объекту `_variant_t`.
+- **operator = (**  *встрсрк*  **)** Присваивает строку Юникода `_variant_t` объекту.
 
-- **operator = (** `strSrc` **)** Присваивает многобайтовую строку объекту `_variant_t`.
+- **operator = (** `strSrc` **)** присваивает объекту многобайтовую строку `_variant_t` .    
 
-- **operator = (** `bSrc` **)** Присваивает **логическое** значение объекту `_variant_t`.
+- **operator = (** `bSrc` **)** присваивает **`bool`** значение `_variant_t` объекту.  
 
-- **operator = (**  *пдиспсрк*  **)** Назначает объект `VT_DISPATCH` объекту `_variant_t`.
+- **operator = (**  *пдиспсрк*  **)** Присваивает объект объекту `VT_DISPATCH` `_variant_t` .
 
-- **operator = (**  *пиункновнсрк*  **)** Назначает объект `VT_UNKNOWN` объекту `_variant_t`.
+- **operator = (**  *пиункновнсрк*  **)** Присваивает объект объекту `VT_UNKNOWN` `_variant_t` .
 
-- **operator = (**  *дексрк*  **)** Присваивает значение `DECIMAL` объекту `_variant_t`.
+- **operator = (**  *дексрк*  **)** Присваивает `DECIMAL` значение `_variant_t` объекту.
 
-- **operator = (** `bSrc` **)** Присваивает значение `BYTE` объекту `_variant_t`.
+- **operator = (** `bSrc` **)** присваивает `BYTE` значение `_variant_t` объекту.  
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Класс _variant_t](../cpp/variant-t-class.md)

@@ -1,19 +1,19 @@
 ---
-title: CReBar и CReBarCtrl
+title: CReBar или CReBarCtrl
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CReBar class [MFC], vs. CReBarCtrl
 - rebar controls [MFC], CReBarCtrl class [MFC]
 - GetReBarCtrl class [MFC]
 ms.assetid: 7f9c1d7e-5d5f-4956-843c-69ed3df688d0
-ms.openlocfilehash: 05decc095e43426044c4487b9aca05268642f915
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: d58efa3c0dfb888f0802a84b11ec597dd1267de6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620459"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228639"
 ---
-# <a name="crebar-vs-crebarctrl"></a>CReBar и CReBarCtrl
+# <a name="crebar-vs-crebarctrl"></a>CReBar или CReBarCtrl
 
 MFC предоставляет два класса для создания ребарс: [кребар](reference/crebar-class.md) и [CReBarCtrl](reference/crebarctrl-class.md) (который заключает в оболочку общий API элемента управления Windows). `CReBar`предоставляет все функциональные возможности общего элемента управления "Главная панель" и обрабатывает многие из необходимых общих параметров и структур элементов управления.
 
@@ -24,13 +24,13 @@ Visual C++ предоставляет два способа использова
 - Создайте главную панель с помощью `CReBar` , а затем вызовите [кребар:: жетребарктрл](reference/crebar-class.md#getrebarctrl) , чтобы получить доступ к `CReBarCtrl` функциям элементов.
 
     > [!NOTE]
-    >  `CReBar::GetReBarCtrl`— Это встроенная функция-член, которая приводит **этот** указатель к объекту главной панели. Это означает, что во время выполнения вызов функции не имеет издержек.
+    >  `CReBar::GetReBarCtrl`— Это встроенная функция-член, которая приводит **`this`** указатель объекта главной панели. Это означает, что во время выполнения вызов функции не имеет издержек.
 
 - Создание главной панели с помощью конструктора [CReBarCtrl](reference/crebarctrl-class.md).
 
 Любой из методов предоставит доступ к функциям элементов элемента управления "Главная панель". При вызове `CReBar::GetReBarCtrl` он возвращает ссылку на `CReBarCtrl` объект, чтобы можно было использовать любой набор функций-членов. Сведения о создании и создании главной панели с помощью см. в разделе [кребар](reference/crebar-class.md) `CReBar` .
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [Использование CReBarCtrl](using-crebarctrl.md)<br/>
 [Элементы управления](controls-mfc.md)
