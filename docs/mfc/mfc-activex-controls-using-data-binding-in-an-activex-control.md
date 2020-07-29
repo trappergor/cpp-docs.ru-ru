@@ -14,12 +14,12 @@ helpviewer_keywords:
 - controls [MFC], data binding
 - bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
-ms.openlocfilehash: 3f16ea3ad77c676695a9d5ca6e2deb10637de455
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: b32dbd8e1777f11998085a90e8851b25e4298e1a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621186"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224998"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>Элементы управления ActiveX в MFC. Использование привязки данных в элементе управления ActiveX
 
@@ -93,7 +93,7 @@ ms.locfileid: "84621186"
 
 1. Введите имя свойства в поле **имя свойства** . Используйте `MyProp` для этого примера.
 
-1. Выберите тип данных из раскрывающегося списка **тип свойства** . В этом примере используйте **Short** .
+1. Выберите тип данных из раскрывающегося списка **тип свойства** . Используйте **`short`** для этого примера.
 
 1. В поле **Тип реализации**выберите **Методы Get/Set**.
 
@@ -133,6 +133,6 @@ ms.locfileid: "84621186"
 
 Теперь можно выполнить сборку проекта, который будет регистрировать элемент управления. При вставке элемента управления в диалоговое окно были добавлены **поля данных** и свойства **источника данных** , и теперь можно выбрать источник данных и поле, которые будут отображаться в элементе управления.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
-[Элементы ActiveX библиотеки MFC](mfc-activex-controls.md)
+[Элементы управления ActiveX в MFC](mfc-activex-controls.md)

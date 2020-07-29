@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::integral_constant [C++]
 - std::bool_constant [C++]
 ms.assetid: 11c002c6-4d31-4042-9341-f2543f43e108
-ms.openlocfilehash: 9577ce51d4b0773f7b309fe3dc6dcb5820693dcb
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 30e00fdc166b4a6f2db64a3552a3bb87335c7e32
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689534"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233149"
 ---
 # <a name="integral_constant-class-bool_constant-class"></a>Класс integral_constant, класс bool_constant
 
@@ -36,17 +36,17 @@ struct integral_constant {
 
 ### <a name="parameters"></a>Параметры
 
-*T* \
+*T*\
 Тип константы.
 
-*v* \
+*3,3*\
 Значение константы.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
-Шаблон класса `integral_constant`, если он специализирован с целочисленным типом *t* и значением *v* этого типа, представляет объект, содержащий константу этого целочисленного типа с указанным значением. Член с именем `type` является псевдонимом для типа специализации созданного шаблона и член `value` хранит значение *v*, которое используется для создания специализации.
+`integral_constant`Шаблон класса, если он специализирован с целочисленным типом *T* и значением *v* этого типа, представляет объект, содержащий константу этого целочисленного типа с указанным значением. Член с именем `type` является псевдонимом для типа специализации созданного шаблона и член `value` хранит значение *v*, которое используется для создания специализации.
 
-Шаблон класса `bool_constant` является явной частичной специализацией `integral_constant`, в которой в качестве аргумента *t* используется **bool** .
+`bool_constant`Шаблон класса является явной частичной специализацией `integral_constant` , используемой **`bool`** в качестве аргумента *T* .
 
 ## <a name="example"></a>Пример
 
@@ -74,12 +74,12 @@ integral_constant<bool, false> == false
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<type_traits>
+**Заголовок:**\<type_traits>
 
 **Пространство имен:** std
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также статью
 
 [<type_traits>](../standard-library/type-traits.md)\
-[false_type](../standard-library/type-traits-typedefs.md#false_type) \
+[false_type](../standard-library/type-traits-typedefs.md#false_type)\
 [true_type](../standard-library/type-traits-typedefs.md#true_type)

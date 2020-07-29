@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Automation servers, object lifetime
 - servers, lifetime of Automation
 ms.assetid: 342baacf-4015-4a0e-be2f-321424f1cb43
-ms.openlocfilehash: 6e8c4189e8c895cf41323528c70d9277645d8f9d
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 8031902318a091b0ed5f340b454a14b9df195069
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619062"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225089"
 ---
 # <a name="automation-servers-object-lifetime-issues"></a>Серверы автоматизации. Вопросы времени жизни объектов
 
@@ -20,7 +20,7 @@ ms.locfileid: "84619062"
 
 Платформа поддерживает внутреннее количество ссылок на любой объект сервера, производный от [от CCmdTarget](reference/ccmdtarget-class.md). Этот счетчик обновляется, когда клиент автоматизации или другая сущность добавляет или освобождает ссылку на объект.
 
-Когда счетчик ссылок станет равным 0, платформа вызывает виртуальную функцию [от CCmdTarget:: онфиналрелеасе](reference/ccmdtarget-class.md#onfinalrelease). Реализация по умолчанию этой функции вызывает оператор **Delete** для удаления этого объекта.
+Когда счетчик ссылок станет равным 0, платформа вызывает виртуальную функцию [от CCmdTarget:: онфиналрелеасе](reference/ccmdtarget-class.md#onfinalrelease). Реализация по умолчанию этой функции вызывает **`delete`** оператор, чтобы удалить этот объект.
 
 Библиотека Microsoft Foundation Class предоставляет дополнительные средства для управления поведением приложения, когда внешние клиенты имеют ссылки на объекты приложения. Помимо поддержания числа ссылок на каждый объект, серверы поддерживают глобальное количество активных объектов. Глобальные функции [AfxOleLockApp](reference/application-control.md#afxolelockapp) и [AfxOleUnlockApp](reference/application-control.md#afxoleunlockapp) обновляют количество активных объектов в приложении. Если это значение счетчика не равно нулю, приложение не завершает работу, когда пользователь выбирает пункт меню «закрыть» или «выход» из меню «файл». Вместо этого главное окно приложения скрыто (но не уничтожается) до тех пор, пока не будут завершены все ожидающие запросы клиентов. Как правило, `AfxOleLockApp` и `AfxOleUnlockApp` вызываются в конструкторах и деструкторах соответственно классам, поддерживающим автоматизацию.
 
@@ -28,7 +28,7 @@ ms.locfileid: "84619062"
 
 В Windows SDK см. раздел `IUnknown::AddRef` и `IUnknown::Release` .
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [Серверы автоматизации](automation-servers.md)<br/>
 [AfxOleCanExitApp](reference/application-control.md#afxolecanexitapp)

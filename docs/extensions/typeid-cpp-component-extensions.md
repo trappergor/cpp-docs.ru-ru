@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - typeid keyword [C++]
 ms.assetid: e9706cae-e7c4-4d6d-b474-646d73df3e70
-ms.openlocfilehash: 8b22481fecb4b7de5106921fec1c3a43fab81a48
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 56319fb773b8398f85f5fd82c812f0efdb7dde15
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181750"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225115"
 ---
 # <a name="typeid--ccli-and-ccx"></a>typeid (C++/CLI и C++/CX)
 
@@ -68,15 +68,15 @@ type::typeid
 
 ### <a name="remarks"></a>Remarks
 
-`typeid` используется для получения <xref:System.Type> для типа во время компиляции.
+**`typeid`** используется для получения <xref:System.Type> для типа во время компиляции.
 
-`typeid` аналогично получению System::Type для типа во время выполнения с использованием <xref:System.Type.GetType%2A> или <xref:System.Object.GetType%2A>. Тем не менее typeid принимает только имя типа параметра.  Если вы хотите использовать экземпляр типа, чтобы получить его имя System::Type, используйте GetType.
+**`typeid`** аналогичен получению `System::Type` для типа во время выполнения с помощью <xref:System.Type.GetType%2A> или <xref:System.Object.GetType%2A> . Однако в **`typeid`** качестве параметра принимается только имя типа.  Если вы хотите использовать экземпляр типа для получения его `System::Type` имени, используйте `GetType` .
 
-Оператор `typeid` должен уметь оценивать тип имени во время компиляции, тогда как GetType оценивает возвращаемый тип во время выполнения.
+**`typeid`** должен иметь возможность оценивать имя типа (тип) во время компиляции, в то время как GetType вычисляет тип, возвращаемый во время выполнения.
 
-`typeid` может принимать имя собственного типа или псевдоним среды общего языка для имени собственного типа. Дополнительные сведения см. в разделе [Эквиваленты собственным типам C++ в .NET framework](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md).
+**`typeid`** может принимать собственное имя типа или псевдоним среды CLR для имени собственного типа; Дополнительные сведения см. [в разделе .NET Framework эквиваленты для собственных типов c++ (c++/CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md) .
 
-`typeid` также работает с собственными типами, хотя все равно будет возвращать System::Type.  Чтобы получить структуру type_info, используйте [оператор typeid](../cpp/typeid-operator.md).
+**`typeid`** также работает с собственными типами, хотя он по-прежнему будет возвращать `System::Type` .  Чтобы получить структуру type_info, используйте [ `typeid` оператор](../cpp/typeid-operator.md).
 
 ### <a name="requirements"></a>Требования
 
@@ -116,7 +116,7 @@ G
 System.Single*
 ```
 
-Следующий пример демонстрирует использование переменной типа System::Type для получения атрибутов типа.  В нем также показано, что для некоторых типов будет необходимо создать определение типа для использования `typeid`.
+Следующий пример демонстрирует использование переменной типа System::Type для получения атрибутов типа.  Он также показывает, что для некоторых типов потребуется создать определение типа для использования **`typeid`** .
 
 ```cpp
 // keyword__typeid_2.cpp
@@ -188,6 +188,6 @@ int::typeid != pointer_to_int::typeid, as expected
 int::typeid == handle_to_int::typeid, as expected
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [Расширения компонентов для .NET и UWP](component-extensions-for-runtime-platforms.md)
