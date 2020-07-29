@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic delegates
 - delegates, generic [C++]
 ms.assetid: 09d430b2-1aef-4fbc-87f9-9d7b8185d798
-ms.openlocfilehash: 4c579d0c0ab39a2ddcadfd116bdfed8ba9da2863
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 527f2837f0c29299727a22df8d4f3d807be0e25b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182036"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228717"
 ---
 # <a name="generic-delegates-ccli"></a>Универсальные методы-делегаты (C++/CLI)
 
@@ -32,16 +32,16 @@ generic < [class | typename] type-parameter-identifiers>
 *attributes*<br/>
 (Необязательно) Дополнительные описательные данные. Дополнительные сведения об атрибутах и классах атрибутов см. в разделе "Атрибуты".
 
-*Идентификаторы type-parameter*<br/>
+*type-parameter-identifier(s)*<br/>
 Разделенный запятыми список идентификаторов параметров типа.
 
 *type-parameter-constraints-clauses*<br/>
 Принимает вид, определенный в статье [Constraints on Generic Type Parameters (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md) (Ограничения, применяемые к параметрам универсальных типов (C++/CLI)).
 
 *accessibility-modifiers*<br/>
-(Необязательно) Модификаторы доступа (например, **public**, **private**).
+Используемых Модификаторы доступа (например **`public`** , **`private`** ).
 
-*result-type*<br/>
+*Тип результата*<br/>
 Возвращаемый тип делегата.
 
 *identifier*<br/>
@@ -162,6 +162,6 @@ Invoking the integer delegate: i = 123, j = 123
 Invoking the double delegate: m = 0.123, n = 0.123
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Универсальные шаблоны](generics-cpp-component-extensions.md)
