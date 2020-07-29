@@ -42,12 +42,12 @@ helpviewer_keywords:
 - _tcsftime function
 - time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
-ms.openlocfilehash: 57fdd61a966cbeab07c0aeafdad0f6e6fb97cca1
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: c59e8297013e02592e623859621bb1ff11474733
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404324"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215144"
 ---
 # <a name="strftime-wcsftime-_strftime_l-_wcsftime_l"></a>strftime, wcsftime, _strftime_l, _wcsftime_l
 
@@ -90,7 +90,7 @@ size_t _wcsftime_l(
 Выходная строка.
 
 *MAXSIZE*<br/>
-Размер буфера *стрдест* , измеряемый в символах (**char** или **wchar_t**).
+Размер буфера *стрдест* , измеряемый в символах ( **`char`** или **`wchar_t`** ).
 
 *format*<br/>
 Строка управления форматом.
@@ -187,9 +187,9 @@ size_t _wcsftime_l(
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
 |**strftime**|\<time.h>|
-|**wcsftime**|\<time.h> либо \<wchar.h>|
+|**wcsftime**|\<time.h> или \<wchar.h>|
 |**_strftime_l**|\<time.h>|
-|**_wcsftime_l**|\<time.h> либо \<wchar.h>|
+|**_wcsftime_l**|\<time.h> или \<wchar.h>|
 
 Функции **_strftime_l** и **_wcsftime_l** являются специфичными для Microsoft. Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
@@ -200,7 +200,7 @@ size_t _wcsftime_l(
 ## <a name="see-also"></a>См. также раздел
 
 [Локаль](../../c-runtime-library/locale.md) <br/>
-[Управление временем](../../c-runtime-library/time-management.md) <br/>
+[Операции управления временем](../../c-runtime-library/time-management.md) <br/>
 [Управление строками](../../c-runtime-library/string-manipulation-crt.md) <br/>
 [localeconv](localeconv.md) <br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md) <br/>

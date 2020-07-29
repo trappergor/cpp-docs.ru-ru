@@ -15,12 +15,12 @@ helpviewer_keywords:
 - CCmdTarget class [MFC], and connection points
 - sinks, connection points
 ms.assetid: bc9fd7c7-8df6-4752-ac8c-0b177442c88d
-ms.openlocfilehash: 1a8fc4742b8bf686edf75f3b98cc283b9bf9881b
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c14d8247be2abdf828b88e728bd930691ec6571f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620732"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214156"
 ---
 # <a name="connection-points"></a>Точки подключения
 
@@ -37,7 +37,7 @@ MFC реализует эту модель в классах [кконнекти
 
 Для каждой точки подключения, реализованной в классе, необходимо объявить часть соединения, которая реализует точку подключения. При реализации одной или нескольких точек подключения необходимо также объявить одну карту подключения в классе. Схема соединения — это таблица точек соединения, поддерживаемых элементом управления ActiveX.
 
-В следующих примерах демонстрируется простая схема соединения и одна точка подключения. В первом примере объявляется схема соединения и точка; во втором примере реализуется Map и Point. Обратите внимание, что `CMyClass` должен быть `CCmdTarget` производным классом. В первом примере код вставляется в объявление класса в разделе **protected** :
+В следующих примерах демонстрируется простая схема соединения и одна точка подключения. В первом примере объявляется схема соединения и точка; во втором примере реализуется Map и Point. Обратите внимание, что `CMyClass` должен быть `CCmdTarget` производным классом. В первом примере код вставляется в объявление класса в **`protected`** разделе:
 
 [!code-cpp[NVC_MFCConnectionPoints#1](codesnippet/cpp/connection-points_1.h)]
 
@@ -49,7 +49,7 @@ MFC реализует эту модель в классах [кконнекти
 
 Если в классе имеется несколько точек подключения, вставьте дополнительные **CONNECTION_PART** макросы между **BEGIN_CONNECTION_MAP** и **END_CONNECTION_MAP** макросами.
 
-Наконец, добавьте вызов `EnableConnections` в конструктор класса. Пример.
+Наконец, добавьте вызов `EnableConnections` в конструктор класса. Пример:
 
 [!code-cpp[NVC_MFCConnectionPoints#3](codesnippet/cpp/connection-points_3.cpp)]
 

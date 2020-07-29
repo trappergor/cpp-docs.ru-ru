@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - custom attributes, defining
 ms.assetid: 3abac928-4d55-4ea6-8cf6-8427a4ad79f1
-ms.openlocfilehash: f51b0210fff4db5be359fa94237f4d7c77b4fef2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 185517720af7e61f6a04068e8868d258a51f262f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214894"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215326"
 ---
 # <a name="custom-c"></a>custom (C++)
 
@@ -36,7 +36,7 @@ ms.locfileid: "80214894"
 
 ## <a name="remarks"></a>Remarks
 
-**Настраиваемый** C++ атрибут приведет к помещению данных в библиотеку типов. Вам потребуется средство, считывающее пользовательское значение из библиотеки типов.
+**Настраиваемый** атрибут C++ приведет к помещению данных в библиотеку типов. Вам потребуется средство, считывающее пользовательское значение из библиотеки типов.
 
 **Пользовательский** атрибут имеет те же функциональные возможности, что и [Пользовательский](/windows/win32/Midl/custom) атрибут MIDL.
 
@@ -46,10 +46,10 @@ ms.locfileid: "80214894"
 
 |||
 |-|-|
-|**Применение**|Неcom- **интерфейс**, **класс**, **перечисление**, `idl_module` методы, члены интерфейса, параметры интерфейса, **typedef**s, **Union**s, **Структура**s|
-|**Повторяемый**|Да|
-|**Обязательные атрибуты**|**coclass** (при использовании в классе)|
-|**Недопустимые атрибуты**|None|
+|**Относится к**|Не com- **интерфейс**, **`class`** , **`enum`** s, `idl_module` методы, члены интерфейса, параметры интерфейса, s, **`typedef`** **`union`** **`struct`** s|
+|**REPEATABLE**|Да|
+|**Требуемые атрибуты**|**coclass** (при использовании в классе)|
+|**Недопустимые атрибуты**|Нет|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
@@ -57,8 +57,8 @@ ms.locfileid: "80214894"
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Изолированные атрибуты](stand-alone-attributes.md)<br/>
-[Атрибуты Typedef, Enum, Union и Struct](typedef-enum-union-and-struct-attributes.md)<br/>
+[Атрибуты typedef, enum, Union и struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [Атрибуты параметра](parameter-attributes.md)<br/>
 [Атрибуты метода](method-attributes.md)<br/>
-[Атрибуты классов](class-attributes.md)<br/>
+[Атрибуты класса](class-attributes.md)<br/>
 [Атрибуты интерфейса](interface-attributes.md)

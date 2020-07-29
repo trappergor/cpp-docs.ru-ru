@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - cstddef header
 ms.assetid: be8d1e39-5974-41ee-b41d-eafa6c82ffce
-ms.openlocfilehash: 87d268977ee46112fedce517e66a9e68071863db
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f1582a4af1c26e1ef85cf0dce8406a4046a8fe8b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457564"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222528"
 ---
 # <a name="ltcstddefgt"></a>&lt;cstddef&gt;
 
-Включает заголовок \<стандартной библиотеки C STDDEF. h > и добавляет связанные имена `std` в пространство имен. Включение этого заголовка гарантирует, что имена, объявленные с помощью внешней компоновки в заголовке стандартной библиотеки C `std` , объявляются в пространстве имен.
+Включает заголовок стандартной библиотеки C \<stddef.h> и добавляет связанные имена в `std` пространство имен. Включение этого заголовка гарантирует, что имена, объявленные с помощью внешней компоновки в заголовке стандартной библиотеки C, объявляются в `std` пространстве имен.
 
 > [!NOTE]
-> \<кстддеф > включает тип **Byte** и не включает тип **wchar_t**.
+> \<cstddef>включает тип **Byte** и не включает тип **`wchar_t`** .
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -52,7 +52,7 @@ namespace std {
 Тип POD, требование выравнивания которого по крайней мере такой же, как и у каждого скалярного типа, а требования выравнивания поддерживаются в каждом контексте.
 
 *nullptr_t*\
-Синоним для типа выражения **nullptr** . Хотя адрес **nullptr** не может быть взят, можно получить адрес другого объекта *nullptr_t* , который является левосторонним значением.
+Синоним для типа **`nullptr`** выражения. Хотя **`nullptr`** адрес не может быть получен, можно получить адрес другого *nullptr_t* объекта, который является левосторонним значением.
 
 ## <a name="byte-class"></a>Класс Byte
 
@@ -77,8 +77,8 @@ template <class IntType>
     IntType to_integer(byte b) noexcept;
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)\
 [Общие сведения о стандартной библиотеке C++](../standard-library/cpp-standard-library-overview.md)\
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Безопасность потоков в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

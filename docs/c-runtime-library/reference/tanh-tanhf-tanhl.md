@@ -35,12 +35,12 @@ helpviewer_keywords:
 - tanhf function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: d368f9ca99753e0749fe3c77a512c0d0c8975161
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 9e280e489d5da5d66a48b72b38fe22a6943b7318
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912298"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215118"
 ---
 # <a name="tanh-tanhf-tanhl"></a>tanh, tanhf, tanhl
 
@@ -74,7 +74,7 @@ long double tanh( long double x );  // C++ only
 
 ## <a name="remarks"></a>Remarks
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **tanh** , которые принимают и возвращают значения **типа float** или **Long** **double** . В программе на языке C **tanh** всегда принимает и возвращает **Double**.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **tanh** , которые принимают и возвращают **`float`** **`long double`** значения или. В программе на языке C **tanh** всегда принимает и возвращает **`double`** .
 
 По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
@@ -116,7 +116,7 @@ tanh( 1.000000 ) = 0.761594
 
 ## <a name="see-also"></a>См. также раздел
 
-[Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
+[Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>
 [asinh, asinhf, asinhl](asinh-asinhf-asinhl.md)<br/>
 [atanh, atanhf, atanhl](atanh-atanhf-atanhl.md)<br/>

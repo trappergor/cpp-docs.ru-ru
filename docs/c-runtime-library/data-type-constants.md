@@ -139,12 +139,12 @@ helpviewer_keywords:
 - SIZE_MAX constant
 - RSIZE_MAX constant
 ms.assetid: c0f1c405-0465-41d5-b5ff-e81cdb6f1622
-ms.openlocfilehash: c4ffbf294083131f29ffe957fd0434182fbb8f99
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: d9d053611fb733d55424d01be2bab030fc49e6e0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636934"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215170"
 ---
 # <a name="data-type-constants"></a>Константы типа данных
 
@@ -159,29 +159,29 @@ ms.locfileid: "50636934"
 ```
 
 > [!NOTE]
-> Параметр компилятора [/J](../build/reference/j-default-char-type-is-unsigned.md) указывает, что вместо **char** по умолчанию будет использоваться тип **unsigned**.
+> [`/J`](../build/reference/j-default-char-type-is-unsigned.md)Параметр компилятора изменяет тип по умолчанию **`char`** с **`signed char`** на **`unsigned char`** .
 
-|Константа|Значение|Описание:|
+|Константа|Значение|Описание|
 |--------------|-----------|-------------|
-|**CHAR_BIT**|8|Число битов в **char**|
-|**SCHAR_MIN**|(–128)|Минимальное значение signed **char**|
-|**SCHAR_MAX**|127|Максимальное значение signed **char**|
-|**UCHAR_MAX**|255 (0xff)|Максимальное значение **unsigned** **char**|
-|**CHAR_MIN**|(–128) (или 0, если используется параметр **/J**)|Минимальное значение **char**|
-|**CHAR_MAX**|127 (или 255, если используется параметр **/J**)|Максимальное значение **char**|
-|**MB_LEN_MAX**|5|Максимальное число байт многобайтового **char**|
-|**SHRT_MIN**|-32768|Минимальное значение signed **short**|
-|**SHRT_MAX**|32767|Максимальное значение signed **short**|
-|**USHRT_MAX**|65 535 (0xffff)|Максимальное значение **unsigned** **short**|
-|**INT_MIN**|(–2 147 483 647 – 1)|Минимальное значение signed **int**|
-|**INT_MAX**|2147483647|Максимальное значение signed **int**|
-|**UINT_MAX**|4 294 967 295 (0xffffffff)|Максимальное значение **unsigned** **int**|
-|**LONG_MIN**|(–2 147 483 647L – 1)|Минимальное значение signed **long**|
-|**LONG_MAX**|2 147 483 647L|Максимальное значение signed **long**|
-|**ULONG_MAX**|4 294 967 295UL (0xfffffffful)|Максимальное значение **unsigned** **long**|
-|**LLONG_MIN**|(–9 223 372 036 854 775 807LL – 1)|Минимальное значение signed **long** **long** или **__int64**|
-|**LLONG_MAX**|9 223 372 036 854 775 807LL|Максимальное значение signed **long** **long** или **__int64**|
-|**ULLONG_MAX**|0xffffffffffffffffull|Максимальное значение **unsigned** **long** **long**|
+|**CHAR_BIT**|8|Число битов в**`char`**|
+|**SCHAR_MIN**|(–128)|Минимальное **`signed char`** значение|
+|**SCHAR_MAX**|127|Максимальное **`signed char`** значение|
+|**UCHAR_MAX**|255 (0xff)|Максимальное **`unsigned char`** значение|
+|**CHAR_MIN**|(-128) (при **`/J`** использовании параметра 0)|Минимальное **`char`** значение|
+|**CHAR_MAX**|127 (255, если **`/J`** используется параметр)|Максимальное **`char`** значение|
+|**MB_LEN_MAX**|5|Максимальное число байтов в многобайтовой кодировке**`char`**|
+|**SHRT_MIN**|-32768|Минимальное **`signed short`** значение|
+|**SHRT_MAX**|32767|Максимальное **`signed short`** значение|
+|**USHRT_MAX**|65 535 (0xffff)|Максимальное **`unsigned short`** значение|
+|**INT_MIN**|(–2 147 483 647 – 1)|Минимальное **`signed int`** значение|
+|**INT_MAX**|2147483647|Максимальное **`signed int`** значение|
+|**UINT_MAX**|4 294 967 295 (0xffffffff)|Максимальное **`unsigned int`** значение|
+|**LONG_MIN**|(–2 147 483 647L – 1)|Минимальное **`signed long`** значение|
+|**LONG_MAX**|2 147 483 647L|Максимальное **`signed long`** значение|
+|**ULONG_MAX**|4 294 967 295UL (0xfffffffful)|Максимальное **`unsigned long`** значение|
+|**LLONG_MIN**|(–9 223 372 036 854 775 807LL – 1)|Минимальное **`signed long long`** **`__int64`** значение или|
+|**LLONG_MAX**|9 223 372 036 854 775 807LL|Максимальное **`signed long long`** **`__int64`** значение или|
+|**ULLONG_MAX**|0xffffffffffffffffull|Максимальное **`unsigned long long`** значение|
 |**_I8_MIN**|(–127i8 – 1)|Минимальное 8-битное значение со знаком|
 |**_I8_MAX**|127i8|Максимальное 8-битное значение со знаком|
 |**_UI8_MAX**|0xffui8|Максимальное 8-битное значение без знака|
@@ -202,13 +202,13 @@ ms.locfileid: "50636934"
 
 ## <a name="floating-point-type-constants"></a>Типы констант с плавающей запятой
 
-Следующие константы указывают диапазон и другие характеристики для типов данных **long** **double**, **double** и **float**. Чтобы использовать их, включите заголовок float.h в исходный файл.
+Следующие константы предоставляют диапазон и другие характеристики **`long double`** **`double`** **`float`** типов данных и. Чтобы использовать их, включите заголовок float.h в исходный файл.
 
 ```C
 #include <float.h>
 ```
 
-|Константа|Значение|Описание:|
+|Константа|Значение|Описание|
 |--------------|-----------|-----------------|
 |**DBL_DECIMAL_DIG**|17|Число десятичных разрядов точности округления|
 |**DBL_DIG**|15|Количество десятичных разрядов точности|
@@ -250,6 +250,6 @@ ms.locfileid: "50636934"
 |**LDBL_TRUE_MIN**|4.9406564584124654e-324|Минимальное денормализованное положительное значение|
 |**DECIMAL_DIG**|совпадает с **DBL_DECIMAL_DIG**|Число десятичных разрядов точности округления по умолчанию (два)|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Глобальные константы](../c-runtime-library/global-constants.md)

@@ -25,24 +25,24 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_iterator::operator*
 - std::experimental::filesystem::directory_iterator::operator-&gt;
 - std::experimental::filesystem::directory_iterator::operator++
-ms.openlocfilehash: 8c6dcce3de32c7e25d2489cb508454dff500a1a6
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a7ccc2a941da079e14092af5b81dc537db4a48c0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454416"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215781"
 ---
-# <a name="directoryiterator-class"></a>Класс directory_iterator
+# <a name="directory_iterator-class"></a>Класс directory_iterator
 
-Описывает итератор ввода, выполняющий последовательный перебор имен файлов в каталоге. Для итератора `X`результатом выражения `*X` является объект класса `directory_entry` , который заключает в оболочку имя файла и все известные сведения о его состоянии.
+Описывает итератор ввода, выполняющий последовательный перебор имен файлов в каталоге. Для итератора `X` `*X` результатом выражения является объект класса `directory_entry` , который заключает в оболочку имя файла и все известные сведения о его состоянии.
 
-Класс `path`сохраняет объект типа, вызываемый `mydir` здесь в целях демонстрации, который представляет имя каталога для упорядочения, и объект типа `directory_entry` , который вызывается `myentry` здесь, который представляет текущий имя файла в последовательности каталогов. Созданный по умолчанию объект типа `directory_entry` имеет пустой `mydir` путь и представляет итератор конца последовательности.
+Класс сохраняет объект типа `path` , вызываемый `mydir` здесь в целях демонстрации, который представляет имя каталога для упорядочения, и объект типа `directory_entry` `myentry` , который вызывается здесь, который представляет текущее имя файла в последовательности каталогов. Созданный по умолчанию объект типа `directory_entry` имеет пустой `mydir` путь и представляет итератор конца последовательности.
 
-Например, при наличии каталога `abc` с записями `def` и `ghi`, код:
+Например, при наличии каталога `abc` с записями `def` и `ghi` , код:
 
 `for (directory_iterator next(path("abc")), end; next != end; ++next)     visit(next->path());`
 
-будет вызывать `visit` с аргументами `path("abc/def")` и `path("abc/ghi")`.
+будет вызывать `visit` с аргументами `path("abc/def")` и `path("abc/ghi")` .
 
 Дополнительные сведения и примеры кода см. в разделе [Навигация по файловой системе (C++)](../standard-library/file-system-navigation.md).
 
@@ -58,32 +58,32 @@ class directory_iterator;
 |-|-|
 |[directory_iterator](#directory_iterator)|Конструирует входной итератор, подающий последовательность по именам файлов в каталоге.|
 
-### <a name="member-functions"></a>Функции-члены
+### <a name="member-functions"></a>Функции элементов
 
-|Функция Member|Описание|
+|Функция-член|Описание|
 |-|-|
-|[производим](#increment)|Пытается перейти к следующему имени файла в каталоге.|
+|[increment](#increment)|Пытается перейти к следующему имени файла в каталоге.|
 
 ### <a name="operators"></a>Операторы
 
 |Оператор|Описание|
 |-|-|
-|[operator!=](#op_neq)|Возвращает `!(*this == right)`.|
-|[оператор=](#op_as)|Операторы-члены присваивания по умолчанию работают корректно.|
-|[operator==](#op_eq)|Возвращает **значение true** , только `*this` если оба и *правные* стороны являются итераторами конца последовательности или оба не являются итераторами конца последовательности.|
-|[оператор*](#op_star)|Возвращает `myentry`.|
-|[оператор>](#op_cast)|Возвращает `&**this`.|
-|[оператор++](#op_increment)|Вызывает `increment()`, затем возвращает `*this`или создает копию объекта, вызывает `increment()`, а затем возвращает копию.|
+|[operator! =](#op_neq)|Возвращает `!(*this == right)`.|
+|[Оператор =](#op_as)|Операторы-члены присваивания по умолчанию работают корректно.|
+|[Оператор = =](#op_eq)|Возвращает, **`true`** только если оба **`*this`** и *право* являются итераторами конца последовательности или оба являются итераторами конца последовательности.|
+|[станции](#op_star)|Возвращает `myentry`.|
+|[Оператор->](#op_cast)|Возвращает `&**this`.|
+|[operator + +](#op_increment)|Вызывает `increment()` , затем возвращает **`*this`** или создает копию объекта, вызывает `increment()` , а затем возвращает копию.|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<experimental/filesystem>
+**Заголовок:**\<experimental/filesystem>
 
 **Пространство имен:** std::experimental::filesystem
 
-## <a name="directory_iterator"></a>directory_iterator::d irectory_iterator
+## <a name="directory_iteratordirectory_iterator"></a><a name="directory_iterator"></a>directory_iterator::d irectory_iterator
 
-Первый конструктор создает итератор конца последовательности. Второй и третий конструкторы хранят *Pval* в `mydir`, а затем пытаются открыть и прочитать `mydir` в виде каталога. В случае успеха они сохраняют первое имя файла в каталоге в `myentry`; в противном случае они создают итератор конца последовательности.
+Первый конструктор создает итератор конца последовательности. Второй и третий конструкторы хранят *Pval* в `mydir` , а затем пытаются открыть и прочитать в `mydir` виде каталога. В случае успеха они сохраняют первое имя файла в каталоге в `myentry` ; в противном случае они создают итератор конца последовательности.
 
 Установленные по умолчанию конструкторы работают корректно.
 
@@ -107,15 +107,15 @@ directory_iterator(directory_iterator&&) noexcept = default;
 *directory_iterator*\
 Сохраненный объект.
 
-## <a name="increment"></a>directory_iterator:: Increment
+## <a name="directory_iteratorincrement"></a><a name="increment"></a>directory_iterator:: Increment
 
-Функция пытается перейти к следующему файлу в каталоге. В случае успеха файл сохраняется в `myentry`; в противном случае — итератор конца последовательности.
+Функция пытается перейти к следующему файлу в каталоге. В случае успеха файл сохраняется в; в `myentry` противном случае — итератор конца последовательности.
 
 ```cpp
 directory_iterator& increment(error_code& ec) noexcept;
 ```
 
-## <a name="op_neq"></a>directory_iterator:: operator! =
+## <a name="directory_iteratoroperator"></a><a name="op_neq"></a>directory_iterator:: operator! =
 
 Оператор-член возвращает `!(*this == right)`.
 
@@ -126,9 +126,9 @@ bool operator!=(const directory_iterator& right) const;
 ### <a name="parameters"></a>Параметры
 
 *Правильно*\
-[Directory_iterator](../standard-library/directory-iterator-class.md) сравнивается `directory_iterator`с.
+[Directory_iterator](../standard-library/directory-iterator-class.md) сравнивается с `directory_iterator` .
 
-## <a name="op_as"></a>directory_iterator:: operator =
+## <a name="directory_iteratoroperator"></a><a name="op_as"></a>directory_iterator:: operator =
 
 Операторы-члены присваивания по умолчанию работают корректно.
 
@@ -140,11 +140,11 @@ directory_iterator& operator=(directory_iterator&&) noexcept = default;
 ### <a name="parameters"></a>Параметры
 
 *Правильно*\
-[Directory_iterator](../standard-library/directory-iterator-class.md) копируется `directory_iterator`в.
+[Directory_iterator](../standard-library/directory-iterator-class.md) , копируемый в `directory_iterator` .
 
-## <a name="op_eq"></a>directory_iterator:: operator = =
+## <a name="directory_iteratoroperator"></a><a name="op_eq"></a>directory_iterator:: operator = =
 
-Оператор-член возвращает **значение true** , только `*this` если оба и *право* являются итераторами конца последовательности или оба являются итераторами конца последовательности.
+Оператор-член возвращает, **`true`** только если оба **`*this`** и *право* являются итераторами конца последовательности или оба являются итераторами конца последовательности.
 
 ```cpp
 bool operator==(const directory_iterator& right) const;
@@ -153,9 +153,9 @@ bool operator==(const directory_iterator& right) const;
 ### <a name="parameters"></a>Параметры
 
 *Правильно*\
-[Directory_iterator](../standard-library/directory-iterator-class.md) сравнивается `directory_iterator`с.
+[Directory_iterator](../standard-library/directory-iterator-class.md) сравнивается с `directory_iterator` .
 
-## <a name="op_star"></a>directory_iterator:: operator *
+## <a name="directory_iteratoroperator"></a><a name="op_star"></a>directory_iterator:: operator *
 
 Оператор-член возвращает `myentry`.
 
@@ -163,7 +163,7 @@ bool operator==(const directory_iterator& right) const;
 const directory_entry& operator*() const;
 ```
 
-## <a name="op_cast"></a> directory_iterator::operator->
+## <a name="directory_iteratoroperator-"></a><a name="op_cast"></a>directory_iterator:: operator — >
 
 Функция-член возвращает значение `&**this`.
 
@@ -171,9 +171,9 @@ const directory_entry& operator*() const;
 const directory_entry * operator->() const;
 ```
 
-## <a name="op_increment"></a>directory_iterator:: operator + +
+## <a name="directory_iteratoroperator"></a><a name="op_increment"></a>directory_iterator:: operator + +
 
-Первая функция – член вызывает `increment()`, а затем `*this`возвращает. Вторая функция-член создает копию объекта, вызывает `increment()`, а затем возвращает копию.
+Первая функция – член вызывает `increment()` , а затем возвращает **`*this`** . Вторая функция-член создает копию объекта, вызывает `increment()` , а затем возвращает копию.
 
 ```cpp
 directory_iterator& operator++();
@@ -185,7 +185,7 @@ directory_iterator& operator++(int);
 *int*\
 Число приращений.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)\
 [\<filesystem>](../standard-library/filesystem.md)\

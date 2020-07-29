@@ -5,16 +5,16 @@ f1_keywords:
 - unordered_set/std::operator!=
 - unordered_set/std::operator==
 ms.assetid: 8653eea6-12f2-4dd7-aa2f-db38a71599a0
-ms.openlocfilehash: 59a7154ed46ac788516bc9f42c3385ec8f07dcf1
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 2b77c7d8e1b159198be471fb2da0bfb1f98bab0d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79427689"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215495"
 ---
 # <a name="ltunordered_setgt-operators"></a>Операторы &lt;unordered_set&gt;
 
-## <a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a>operator! =
 
 Проверяет, не равен ли объект [unordered_set](../standard-library/unordered-set-class.md) в левой части объекту unordered_set в правой части.
 
@@ -24,15 +24,15 @@ bool operator!=(const unordered_set <Key, Hash, Pred, Allocator>& left, const un
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*слева*\
 Объект типа `unordered_set`.
 
-*справа*\
+*Правильно*\
 Объект типа `unordered_set`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true** , если unordered_sets не равны; **значение false** , если они равны.
+**`true`** Если unordered_sets не равны; значение **`false`** , если они равны.
 
 ### <a name="remarks"></a>Remarks
 
@@ -82,7 +82,7 @@ int main()
 
 `c2 != c3: true`
 
-## <a name="op_eq_eq"></a>Оператор = =
+## <a name="operator"></a><a name="op_eq_eq"></a>Оператор = =
 
 Проверяет, равен ли объект [unordered_set](../standard-library/unordered-set-class.md) в левой части объекту unordered_set в правой части.
 
@@ -92,15 +92,15 @@ bool operator==(const unordered_set <Key, Hash, Pred, Allocator>& left, const un
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*слева*\
 Объект типа `unordered_set`.
 
-*справа*\
+*Правильно*\
 Объект типа `unordered_set`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true** , если unordered_sets равны; **значение false** , если они не равны.
+**`true`** значение, если unordered_sets равны; **`false`** если они не равны.
 
 ### <a name="remarks"></a>Remarks
 
@@ -148,7 +148,7 @@ c1 == c3: true
 c2 == c3: false
 ```
 
-## <a name="op_neq_unordered_multiset"></a>operator! =
+## <a name="operator"></a><a name="op_neq_unordered_multiset"></a>operator! =
 
 Проверяет, не равен ли объект [unordered_multiset](../standard-library/unordered-multiset-class.md) в левой части объекту unordered_multiset в правой части.
 
@@ -158,15 +158,15 @@ bool operator!=(const unordered_multiset <Key, Hash, Pred, Allocator>& left, con
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*слева*\
 Объект типа `unordered_multiset`.
 
-*справа*\
+*Правильно*\
 Объект типа `unordered_multiset`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true** , если unordered_multisets не равны; **значение false** , если они равны.
+**`true`** Если unordered_multisets не равны; значение **`false`** , если они равны.
 
 ### <a name="remarks"></a>Remarks
 
@@ -217,7 +217,7 @@ c1 != c3: false
 c2 != c3: true
 ```
 
-## <a name="op_eq_eq_unordered_multiset"></a>Оператор = =
+## <a name="operator"></a><a name="op_eq_eq_unordered_multiset"></a>Оператор = =
 
 Проверяет, равен ли объект [unordered_multiset](../standard-library/unordered-multiset-class.md) в левой части объекту unordered_multiset в правой части.
 
@@ -227,15 +227,15 @@ bool operator==(const unordered_multiset <Key, Hash, Pred, Allocator>& left, con
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*слева*\
 Объект типа `unordered_multiset`.
 
-*справа*\
+*Правильно*\
 Объект типа `unordered_multiset`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true** , если unordered_multisets равны; **значение false** , если они не равны.
+**`true`** значение, если unordered_multisets равны; **`false`** если они не равны.
 
 ### <a name="remarks"></a>Remarks
 

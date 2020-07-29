@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - is_destructible
 ms.assetid: 3bb9b718-1ad5-49ae-93cc-92b93b546b4d
-ms.openlocfilehash: 80592a6fca274533a798b2f5a2459d336ee2c301
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: cd3c54684fe08a77d3a8774cd6a2554db9fb0c9c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452736"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215690"
 ---
-# <a name="isdestructible-class"></a>Класс is_destructible
+# <a name="is_destructible-class"></a>Класс is_destructible
 
 Проверяет, можно ли уничтожить тип.
 
@@ -29,16 +29,16 @@ struct is_destructible;
 *T*\
 Запрашиваемый тип.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Экземпляр предиката типа содержит значение true, если тип *T* является типом можно уничтожить, в противном случае — значение false. К типам, которые можно уничтожить, относятся ссылочные типы, типы объектов и типы, для которых при типе `U` , равном `remove_all_extents_t<T>` , невычисленный операнд `std::declval<U&>.~U()` имеет правильный формат. Другие типы, включая неполные типы, тип **void**и типы функций, не являются типами можно уничтожить.
+Экземпляр предиката типа содержит значение true, если тип *T* является типом можно уничтожить, в противном случае — значение false. К типам, которые можно уничтожить, относятся ссылочные типы, типы объектов и типы, для которых при типе `U` , равном `remove_all_extents_t<T>` , невычисленный операнд `std::declval<U&>.~U()` имеет правильный формат. Другие типы, включая неполные типы, **`void`** и типы функций, не являются типами можно уничтожить.
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<type_traits>
+**Заголовок:**\<type_traits>
 
 **Пространство имен:** std
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [<type_traits>](../standard-library/type-traits.md)

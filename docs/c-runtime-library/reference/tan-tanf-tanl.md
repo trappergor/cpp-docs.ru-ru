@@ -37,12 +37,12 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-ms.openlocfilehash: d35ed6ca8dd4c3ea7a149e0fb2085aa8a97b11b4
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ada853087cb0c6c127873e2929a73e4d3c92035c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912377"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215131"
 ---
 # <a name="tan-tanf-tanl"></a>tan, tanf, tanl
 
@@ -77,7 +77,7 @@ long double tan( long double x );  // C++ only
 
 ## <a name="remarks"></a>Remarks
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **Tan** , которые принимают и возвращают **значения типа** **float** или **Long** . В программе на языке **Tan** всегда принимает и возвращает **Double**.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **Tan** , которые принимают и возвращают **`float`** **`long double`** значения или. В программе на языке **Tan** всегда принимает и возвращает **`double`** .
 
 По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
@@ -115,7 +115,7 @@ tan( 0.785398 ) = 1.000000
 
 ## <a name="see-also"></a>См. также раздел
 
-[Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
+[Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>
 [asin, asinf, asinl](asin-asinf-asinl.md)<br/>
 [atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>
