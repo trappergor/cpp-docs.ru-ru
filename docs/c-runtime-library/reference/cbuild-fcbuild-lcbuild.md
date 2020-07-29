@@ -32,12 +32,12 @@ helpviewer_keywords:
 - _Cbuild function
 - _FCbuild function
 - _LCbuild function
-ms.openlocfilehash: b0ae50f40f0ca0a926e1eef586c6610a04b6ea7a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d521fdb0d79e1e4ff6e6c1b01ce40941ed5c8c0a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943217"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221969"
 ---
 # <a name="_cbuild-_fcbuild-_lcbuild"></a>_Cbuild, _FCbuild, _LCbuild
 
@@ -61,9 +61,9 @@ _Lcomplex _LCbuild( long double real, long double imaginary );
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Структура **_Dcomplex**, **_Fcomplex**или **_Lcomplex** , представляющая комплексное число \* (*вещественное*, *мнимое* i) для значений указанного типа с плавающей запятой.
+Структура **_Dcomplex**, **_Fcomplex**или **_Lcomplex** , представляющая комплексное число (*Real*, *мнимая* \* i) для значений указанного типа с плавающей запятой.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Функции **_Cbuild**, **_FCbuild**и **_LCbuild** упрощают создание сложных типов. Используйте функции [Креал, креалф, креалл](creal-crealf-creall.md) и [Цимаг, Цимагф, Цимагл,](cimag-cimagf-cimagl.md) чтобы получить действительные и мнимые части представленных комплексных чисел.
 
@@ -71,13 +71,13 @@ _Lcomplex _LCbuild( long double real, long double imaginary );
 
 |Подпрограмма|Заголовок C|Заголовок C++|
 |-------------|--------------|------------------|
-|**_Cbuild**, **_FCbuild**, **_LCbuild**|\<complex.h>|\<ccomplex>|
+|**_Cbuild**, **_FCbuild** **_LCbuild**|\<complex.h>|\<ccomplex>|
 
-Эти функции относятся только к Microsoft. Типы **_Dcomplex**, **_Fcomplex**и **_Lcomplex** являются эквивалентами, специфичными для Microsoft, для нереализованных C99 машинных типов **Double _Complex**, **float _Complex**и **long double _Complex**соответственно. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Эти функции относятся только к Microsoft. Типы **_Dcomplex**, **_Fcomplex**и **_Lcomplex** являются эквивалентами корпорации Майкрософт для нереализованных C99 машинных типов **`double _Complex`** , **`float _Complex`** и **`long double _Complex`** соответственно. Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Алфавитный указатель функций](crt-alphabetical-function-reference.md)<br/>
+[Алфавитный справочник по функциям](crt-alphabetical-function-reference.md)<br/>
 [_Cmulcc, _FCmulcc, _LCmulcc](cmulcc-fcmulcc-lcmulcc.md)<br/>
 [_Cmulcr, _FCmulcr, _LCmulcr](cmulcr-fcmulcr-lcmulcr.md)<br/>
 [norm, normf, norml](norm-normf-norml1.md)<br/>

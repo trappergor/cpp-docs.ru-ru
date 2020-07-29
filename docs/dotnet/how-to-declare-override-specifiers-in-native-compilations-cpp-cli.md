@@ -1,28 +1,28 @@
 ---
-title: 'Как: Объявить переопределить specifiers (КЗ / CLI)'
+title: Инструкции. объявление описателей переопределения (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - override specifiers in native compilation, overriding
 ms.assetid: d0551836-9ac7-41eb-a6e9-a4b3ef60767d
-ms.openlocfilehash: 9f3f6855f257d0af250b9bbdd2c0360b308ce775
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c5ed413f403fb12f116633c0e39f9e7b32b2e9f8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374448"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221332"
 ---
 # <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>Практическое руководство. Объявление спецификаторов переопределения в компиляциях машинного кода (C++/CLI)
 
-[запечатанные,](../extensions/sealed-cpp-component-extensions.md) [абстрактные,](../extensions/abstract-cpp-component-extensions.md)и [переопределение](../extensions/override-cpp-component-extensions.md) доступны в компиляциях, которые не используют **/ ЗВ** или [/clr](../build/reference/clr-common-language-runtime-compilation.md).
+[запечатанные](../extensions/sealed-cpp-component-extensions.md), [абстрактные](../extensions/abstract-cpp-component-extensions.md)и [переопределения](../extensions/override-cpp-component-extensions.md) доступны в компиляциях, которые не используют **/ZW** или [/CLR](../build/reference/clr-common-language-runtime-compilation.md).
 
 > [!NOTE]
-> Стандартный язык ISO C-11 имеет идентификатор [переопределения](../cpp/override-specifier.md) и [окончательный](../cpp/final-specifier.md) идентификатор, и оба поддерживаются в Visual Studio Use, `final` а не `sealed` в коде, который должен быть скомпилирован как родной только.
+> Стандартный язык ISO C++ 11 имеет идентификатор [переопределения](../cpp/override-specifier.md) и [конечный](../cpp/final-specifier.md) идентификатор, и обе эти версии поддерживаются в Visual Studio `final` вместо **`sealed`** в коде, который должен компилироваться только как машинный код.
 
 ## <a name="example"></a>Пример
 
 ### <a name="description"></a>Описание
 
-Ниже приводится `sealed` следующий пример, который действителен в родных компиляциях.
+В следующем примере показано, что **`sealed`** допустимо в компиляциях в собственном режиме.
 
 ### <a name="code"></a>Код
 
@@ -51,7 +51,7 @@ public:
 
 ### <a name="description"></a>Описание
 
-Следующий пример `override` показывает, что это действительно в родной компиляции.
+В следующем примере показано, что `override` допустимо в компиляциях в машинном код.
 
 ### <a name="code"></a>Код
 
@@ -73,7 +73,7 @@ public:
 
 ### <a name="description"></a>Описание
 
-Этот пример `abstract` показывает, что это действительно в родных компиляциях.
+В этом примере показано, что **`abstract`** допустимо в компиляциях в машинном код.
 
 ### <a name="code"></a>Код
 

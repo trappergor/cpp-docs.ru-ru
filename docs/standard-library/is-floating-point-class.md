@@ -7,14 +7,14 @@ helpviewer_keywords:
 - is_floating_point class
 - is_floating_point
 ms.assetid: 070679c1-115b-4ee4-8ab7-f52e5d9e157f
-ms.openlocfilehash: c46b74cc9c1d3c6f3a93925d6df46f46d0151e2d
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 8da613bca165f68ef2e15e2be6291485a89222de
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452592"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222398"
 ---
-# <a name="isfloatingpoint-class"></a>Класс is_floating_point
+# <a name="is_floating_point-class"></a>Класс is_floating_point
 
 Проверяет, является ли тип типом с плавающей запятой.
 
@@ -30,11 +30,11 @@ struct is_floating_point;
 *Ty*\
 Запрашиваемый тип.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Экземпляр предиката типа содержит значение true, если тип *Ty* является типом с плавающей запятой или `cv-qualified` формой типа с плавающей запятой, в противном случае — значение false.
 
-Тип с плавающей запятой — одно из двух значений: **float**, **Double**или **long double**.
+Тип с плавающей запятой — один из типов **`float`** , **`double`** или **`long double`** .
 
 ## <a name="example"></a>Пример
 
@@ -70,11 +70,11 @@ is_floating_point<float> == true
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<type_traits>
+**Заголовок:**\<type_traits>
 
 **Пространство имен:** std
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [<type_traits>](../standard-library/type-traits.md)\
 [Класс is_integral](../standard-library/is-integral-class.md)

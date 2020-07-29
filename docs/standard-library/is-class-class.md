@@ -7,14 +7,14 @@ helpviewer_keywords:
 - is_class class
 - is_class
 ms.assetid: 96fc34a3-a81b-4ec6-b7fb-baafde1a0f4e
-ms.openlocfilehash: 7dc71622a37164e996b067276ddf8a5d1dd88b62
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 4122ad2b4adbd0ed290f26428560c569b3754d7d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456639"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222450"
 ---
-# <a name="isclass-class"></a>Класс is_class
+# <a name="is_class-class"></a>Класс is_class
 
 Проверяет, является ли тип классом.
 
@@ -30,9 +30,9 @@ struct is_class;
 *Ty*\
 Запрашиваемый тип.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Экземпляр предиката типа содержит значение true, если тип *Ty* является типом, определенным как **класс** или `cv-qualified` **Структура**, или формой одного из них, в противном случае — значение false.
+Экземпляр предиката типа содержит значение true, если тип *Ty* является типом, определенным как **`class`** или **`struct`** , или `cv-qualified` формой одного из них, в противном случае — значение false.
 
 ## <a name="example"></a>Пример
 
@@ -65,12 +65,12 @@ is_class<int> == false
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<type_traits>
+**Заголовок:**\<type_traits>
 
 **Пространство имен:** std
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [<type_traits>](../standard-library/type-traits.md)\
-Класс [is_compound](../standard-library/is-compound-class.md)\
-Класс [is_union](../standard-library/is-union-class.md)
+[Класс is_compound](../standard-library/is-compound-class.md)\
+[Класс is_union](../standard-library/is-union-class.md)

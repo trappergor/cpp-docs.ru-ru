@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_move_constructible
 ms.assetid: becdf076-7419-488d-a335-78adf2478b9b
-ms.openlocfilehash: 9585a932a34a24769201aaa379525a9b4c181e41
-ms.sourcegitcommit: 33a898bf976c65f998b4e88a84765a0cef4193a8
+ms.openlocfilehash: 5495ac39a98f5c194f19d28ba85a1d59f47dfbb4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920092"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222385"
 ---
 # <a name="is_move_constructible-class"></a>Класс is_move_constructible
 
@@ -26,19 +26,19 @@ struct is_move_constructible;
 
 ### <a name="parameters"></a>Параметры
 
-*T* \
+*T*\
 Оцениваемый тип.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
-Предикат типа, который возвращает **значение true** , если тип *T* может быть создан с помощью операции перемещения. Этот предикат эквивалентен `is_constructible<T, T&&>`. Тип *T* , не имеющий конструктора перемещения, но имеющий конструктор копии, принимающий аргумент `const T&`, удовлетворяет `std::is_move_constructible`.
+Предикат типа, результатом которого является значение, **`true`** Если тип *T* может быть создан с помощью операции перемещения. Этот предикат эквивалентен `is_constructible<T, T&&>`. Тип *T* , не имеющий конструктора перемещения, но имеющий конструктор копии, принимающий `const T&` аргумент, соответствует `std::is_move_constructible` .
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<type_traits>
+**Заголовок:**\<type_traits>
 
 **Пространство имен:** std
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [<type_traits>](../standard-library/type-traits.md)

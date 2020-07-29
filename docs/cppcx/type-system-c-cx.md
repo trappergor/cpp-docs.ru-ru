@@ -2,12 +2,12 @@
 title: Система типов (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: b67bee8a-b526-4872-969e-ef22724e88fe
-ms.openlocfilehash: f4a6ea32681ad033b5db9451682c764f0a6d8959
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: b9d26f0fc79b2dc5000be6e6a06f51efd3f0b53f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404630"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221553"
 ---
 # <a name="type-system-ccx"></a>Система типов (C++/CX)
 
@@ -38,8 +38,8 @@ ms.locfileid: "86404630"
 |||
 |-|-|
 |**Опубликован в метаданных**|**Не опубликован в метаданных**|
-|public|private|
-|protected|internal|
+|таверна|private|
+|protected|Внутренние|
 |public protected|private protected|
 
 Для просмотра WINMD-файлов можно использовать **обозреватель объектов** . Среда выполнения Windows компоненты, входящие в состав Windows, находятся в файле Windows. winmd. Файл Default. winmd содержит фундаментальные типы, используемые в C++/CX, а Platform. winmd — дополнительные типы из пространства имен Platform. По умолчанию эти три файла WinMD включены в каждый проект C++ для универсальная платформа Windows приложений.
@@ -63,7 +63,7 @@ ms.locfileid: "86404630"
 
 Среда выполнения Windows определяет следующие фундаментальные типы: UInt8, Int16, UInt16, Int32, UInt32, Int64, UInt64, Single, Double, Char16, Boolean и String. C++/CX поддерживает фундаментальные числовые типы в пространстве имен по умолчанию как UInt16, UInt32, UInt64, Int16, Int32, Int64, float32, float64 и Char16. Типы Boolean и String также определены в пространстве имен Platform.
 
-C++/CX также определяет Uint8, эквивалент `unsigned char` , который не поддерживается в среда выполнения Windows и не может использоваться в общедоступных API.
+C++/CX также определяет Uint8, эквивалент **`unsigned char`** , который не поддерживается в среда выполнения Windows и не может использоваться в общедоступных API.
 
 Фундаментальный тип можно сделать поддерживающим значение NULL, если поместить его в интерфейс [Platform::IBox](../cppcx/platform-ibox-interface.md) . Дополнительные сведения см. в разделе [Классы и структуры значения](../cppcx/value-classes-and-structs-c-cx.md).
 
@@ -71,7 +71,7 @@ C++/CX также определяет Uint8, эквивалент `unsigned cha
 
 ### <a name="strings"></a>Строки
 
-Строка среда выполнения Windows представляет собой неизменяемую последовательность из 16-разрядных символов Юникода. Строка среда выполнения Windows проецируется как `Platform::String^` . Этот класс предоставляет методы для создания, обработки строк, а также для их преобразования в тип `wchar_t`и из этого типа.
+Строка среда выполнения Windows представляет собой неизменяемую последовательность из 16-разрядных символов Юникода. Строка среда выполнения Windows проецируется как `Platform::String^` . Этот класс предоставляет методы для создания строк, обработки и преобразования в и из **`wchar_t`** .
 
 Дополнительные сведения см. в разделе [Строки](../cppcx/strings-c-cx.md).
 

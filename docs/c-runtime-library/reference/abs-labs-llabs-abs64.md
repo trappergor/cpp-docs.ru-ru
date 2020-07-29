@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _abs64 function
 - calculating absolute values
 ms.assetid: 60f789d1-4a1e-49f5-9e4e-0bdb277ea26a
-ms.openlocfilehash: a21bdbcb54d7fecf00b3c782c562d60ccc866dcc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 96363f8d2139a5c75ee25a2c43b4c7ef55094f13
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171415"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221995"
 ---
 # <a name="abs-labs-llabs-_abs64"></a>abs, labs, llabs, _abs64
 
@@ -78,7 +78,7 @@ float abs( float n );   // C++ only
 
 ## <a name="remarks"></a>Remarks
 
-Так C++ как допускает перегрузку, можно вызывать перегрузки **ABS** , которые принимают и возвращают **длинные**, **длинные** **длинные**, **float**, **Double**и **Long** **Double** . Такие перегрузки определяются в заголовке \<cmath>. В программе на языке **ABS** всегда принимает и **возвращает целое число.**
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **ABS** , которые принимают и возвращают **`long`** значения,,, **`long long`** **`float`** **`double`** и **`long double`** . Эти перегрузки определены в \<cmath> заголовке. В программе на языке **ABS** всегда принимает и возвращает **`int`** .
 
 **Конкретно для Майкрософт**. Поскольку диапазон отрицательных целых чисел, которые могут быть представлены с помощью любого целочисленного типа, больше, чем диапазон положительных целых чисел, которые могут быть представлены с помощью этого типа, можно указать аргумент для этих функций, которые невозможно преобразовать. Если абсолютное значение аргумента не может быть представлено типом возвращаемого значения, функции **ABS** возвращают значение аргумента без изменений. В частности `abs(INT_MIN)` возвращает `INT_MIN`, `labs(LONG_MIN)` возвращает `LONG_MIN`, `llabs(LLONG_MIN)` возвращает `LLONG_MIN`, а `_abs64(_I64_MIN)` возвращает `_I64_MIN`. Это означает, что функции **ABS** нельзя использовать для гарантии положительного значения.
 
@@ -89,7 +89,7 @@ float abs( float n );   // C++ only
 |**ABS**, **Labs**, **ллабс**|\<math.h> или \<stdlib.h>|\<cmath>, \<cstdlib>, \<stdlib.h> или \<math.h>|
 |**_abs64**|\<stdlib.h>|\<cstdlib> или \<stdlib.h>|
 
-Чтобы использовать перегруженные версии **ABS** в C++, необходимо включить заголовок \<cmath >.
+Чтобы использовать перегруженные версии **ABS** в C++, необходимо включить \<cmath> заголовок.
 
 ## <a name="example"></a>Пример
 
@@ -151,7 +151,7 @@ _abs64(_I64_MIN) returns 0x8000000000000000
 ## <a name="see-also"></a>См. также раздел
 
 [Преобразование данных](../../c-runtime-library/data-conversion.md)<br/>
-[Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
+[Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [_cabs](cabs.md)<br/>
 [fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)<br/>
 [imaxabs](imaxabs.md)

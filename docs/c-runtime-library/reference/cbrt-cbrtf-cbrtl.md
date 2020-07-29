@@ -33,12 +33,12 @@ helpviewer_keywords:
 - cbrtf function
 - cbrt function
 ms.assetid: ab51d916-3db2-4beb-b46a-28b4062cd33f
-ms.openlocfilehash: d76c533c278e7f1808eb631e4c94e681b1ae0b6b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ace9421fa8f93f03b0b9ad7dd698474ec90fdf97
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912105"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221982"
 ---
 # <a name="cbrt-cbrtf-cbrtl"></a>cbrt, cbrtf, cbrtl
 
@@ -79,13 +79,13 @@ long double cbrtl(
 
 ## <a name="remarks"></a>Remarks
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **CBRT** , которые принимают типы **float** или **Long** типа **Double** . В программе на языке C **CBRT** всегда принимает и возвращает **Double**.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **CBRT** , которые принимают **`float`** **`long double`** типы или. В программе на языке C **CBRT** всегда принимает и возвращает **`double`** .
 
 По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
-|Функция|Заголовок C|Заголовок C++|
+|Компонент|Заголовок C|Заголовок C++|
 |--------------|--------------|------------------|
 |**CBRT**, **cbrtf**, **кбртл**|\<math.h>|\<cmath>|
 
@@ -117,7 +117,7 @@ The cube root of -64.64 is -4.013289
 
 ## <a name="see-also"></a>См. также раздел
 
-[Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
+[Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [exp, expf, expl](exp-expf.md)<br/>
 [log, logf, log10, log10f](log-logf-log10-log10f.md)<br/>
 [pow, powf, powl](pow-powf-powl.md)<br/>

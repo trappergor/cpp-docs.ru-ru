@@ -1,17 +1,17 @@
 ---
-title: HelpFile (C++ атрибут com)
+title: HelpFile (атрибут C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpfile
 helpviewer_keywords:
 - helpfile attribute
 ms.assetid: d75161c1-1363-4019-ae09-e7e3b8a3971e
-ms.openlocfilehash: 1f928fa281c99630ad52ce1fde184c44e9387263
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 641823779346bf5417ec0db26b83083fa949e960
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166982"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222125"
 ---
 # <a name="helpfile"></a>helpfile
 
@@ -42,10 +42,10 @@ ms.locfileid: "80166982"
 
 |||
 |-|-|
-|**Применение**|**Interface**, **typedef**, **класс**, метод, **свойство**|
-|**Повторяемый**|нет|
-|**Обязательные атрибуты**|None|
-|**Недопустимые атрибуты**|None|
+|**Относится к**|**интерфейс**, **`typedef`** , **`class`** , метод,**`property`**|
+|**REPEATABLE**|Нет|
+|**Требуемые атрибуты**|Нет|
+|**Недопустимые атрибуты**|Нет|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
@@ -53,8 +53,8 @@ ms.locfileid: "80166982"
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты интерфейса](interface-attributes.md)<br/>
-[Атрибуты классов](class-attributes.md)<br/>
+[Атрибуты класса](class-attributes.md)<br/>
 [Атрибуты метода](method-attributes.md)<br/>
-[Атрибуты Typedef, Enum, Union и Struct](typedef-enum-union-and-struct-attributes.md)<br/>
+[Атрибуты typedef, enum, Union и struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [helpcontext](helpcontext.md)<br/>
 [helpstring](helpstring.md)

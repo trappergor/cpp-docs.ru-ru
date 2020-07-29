@@ -6,18 +6,18 @@ helpviewer_keywords:
 - catching exceptions, thrown from MSIL
 - MSIL, catching exceptions in native code
 ms.assetid: c15afd2b-8505-43bf-8a4a-f1d41532a124
-ms.openlocfilehash: 23adb573a62e93933c487f611c05aed4c08494ef
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 6f2de640a2427bb1ea65d099742967454ca625f6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "79545087"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221358"
 ---
 # <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>Практическое руководство. Исключения в машинном коде, создаваемые MSIL
 
-В машинном коде можно перехватывать собственное C++ исключение из MSIL.  Исключения CLR можно перехватывать с помощью `__try` и `__except`.
+В машинном коде можно перехватывать собственное исключение C++ из MSIL.  Исключения CLR можно перехватывать с помощью `__try` и **`__except`** .
 
-Дополнительные сведения см. в разделе [структурированная обработка исключений (C++C/)](../cpp/structured-exception-handling-c-cpp.md) и [современные C++ рекомендации по исключениям и обработке ошибок](../cpp/errors-and-exception-handling-modern-cpp.md).
+Дополнительные сведения см. в разделе [структурированная обработка исключений (C/C++)](../cpp/structured-exception-handling-c-cpp.md) и [современные рекомендации по C++ для исключений и обработки ошибок](../cpp/errors-and-exception-handling-modern-cpp.md).
 
 ## <a name="example"></a>Пример
 
@@ -77,6 +77,6 @@ error
 caught an exception
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Обработка исключений](../extensions/exception-handling-cpp-component-extensions.md)
