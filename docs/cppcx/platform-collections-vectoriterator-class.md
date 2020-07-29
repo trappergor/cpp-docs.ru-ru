@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - VectorIterator Class
 ms.assetid: d531cb42-27e0-48a6-bf5e-c265891a18ff
-ms.openlocfilehash: e649027c2ba3f637c42765af691f4d321913fb28
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bade67a104774c3ab6187e250c6faf6969002c0c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354369"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218420"
 ---
 # <a name="platformcollectionsvectoriterator-class"></a>Класс Platform::Collections::VectorIterator
 
-Обеспечивает стандартный итератор библиотеки шаблонов для объектов, полученных из интерфейса Windows Runtime IVector.
+Предоставляет итератор стандартной библиотеки шаблонов для объектов, производных от интерфейса среда выполнения Windows IVector.
 
-VectorIterator — это прокси-итератор, который\<хранит элементы типа VectorProxy T>. Однако объект прокси-сервера практически никогда не отображается в пользовательском коде. Дополнительные сведения см. в разделе [Collections (C++/CX)](../cppcx/collections-c-cx.md).
+VectorIterator — это итератор прокси-сервера, в котором хранятся элементы типа VectorProxy \<T> . Однако объект прокси-сервера практически никогда не отображается в пользовательском коде. Дополнительные сведения см. в разделе [Collections (C++/CX)](../cppcx/collections-c-cx.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,7 +32,7 @@ class VectorIterator;
 *T*<br/>
 Имя типа класса шаблона VectorIterator.
 
-### <a name="members"></a>Участники
+### <a name="members"></a>Элементы
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
@@ -40,35 +40,35 @@ class VectorIterator;
 |----------|-----------------|
 |`difference_type`|Различие указателя (ptrdiff_t).|
 |`iterator_category`|Категория итератора произвольного доступа (::std::random_access_iterator_tag).|
-|`pointer`|Указатель на внутренний тип, Платформа::Коллекции:::D:Прокси\<T>, что требуется для реализации VectorIterator.|
-|`reference`|Ссылка на внутренний тип, Платформа::Коллекции::D:\<VectorProxy T>, что требуется для реализации VectorIterator.|
+|`pointer`|Указатель на внутренний тип, Platform:: Collections::D состояния:: VectorProxy \<T> , необходимый для реализации VectorIterator.|
+|`reference`|Ссылка на внутренний тип, Platform:: Collections::D состояния:: VectorProxy \<T> , которая требуется для реализации VectorIterator.|
 |`value_type`|Имя типа `T` .|
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
-|[ВекторИтератор:ВекторИтератор](#ctor)|Инициализирует новый экземпляр класса VectorIterator.|
+|[VectorIterator:: VectorIterator](#ctor)|Инициализирует новый экземпляр класса VectorIterator.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
 |Имя|Описание|
 |----------|-----------------|
-|[ВекторИтератор::Оператор-оператор](#operator-minus)|Вычитает указанное количество элементов из текущего итератора, возвращая новый итератор, или вычитает указанный итератор из текущего итератора, возвращая количество элементов между итераторами.|
+|[Оператор VectorIterator:: operator-](#operator-minus)|Вычитает указанное количество элементов из текущего итератора, возвращая новый итератор, или вычитает указанный итератор из текущего итератора, возвращая количество элементов между итераторами.|
 |[Оператор VectorIterator::operator--](#operator-decrement)|Выполняет уменьшение текущего итератора VectorIterator.|
-|[Оператор VectorIteror::Оператор!](#operator-inequality)|Указывает, отличен ли текущий объект VectorIterator от указанного объекта VectorIterator.|
-|[ВекторИтератор:Оператор](#operator-dereference)|Извлекает ссылку на элемент, указанный текущим итератором VectorIterator.|
-|[ВекторИтератор::оператор\[\]](#operator-at)|Извлекает ссылку на элемент, отстоящий от текущего итератора VectorIterator на указанную величину смещения.|
-|[ВекторИтератор::Оператор](#operator-plus)|Возвращает объект VectorIterator, указывающий на элемент с заданным смещением от указанного объекта VectorIterator.|
-|[Оператор VectorIterator::Оператор](#operator-increment)|Выполняет увеличение текущего итератора VectorIterator.|
-|[Оператор VectorIterator::Оператор](#operator-plus-assign)|Увеличивает текущий итератор VectorIterator на указанную величину смещения.|
-|[VectorIterator:Оператор< Оператор](#operator-less-than)|Указывает, является ли текущий объект VectorIterator меньшим, чем указанный объект VectorIterator.|
-|[VectorIterator::Оператор\<](#operator-less-than-or-equals)|Указывает, является ли текущий объект VectorIterator меньшим или равным указанному объекту VectorIterator.|
-|[Вектор-Итератор::Оператор-оператор](#operator-minus-equals)|Уменьшает текущий итератор VectorIterator на указанную величину смещения.|
-|[ВекторИтератор::Оператор оператор](#operator-equality)|Указывает, равен ли текущий объект VectorIterator указанному объекту VectorIterator.|
-|[VectorIterator:Оператор> Оператор](#operator-greater-than)|Указывает, действительно ли текущий объект VectorIterator больше, чем указанный объект VectorIterator.|
-|[Векторитератор:Оператор-> Оператор](#operator-arrow)|Извлекает адрес элемента, на который ссылается текущий итератор VectorIterator.|
-|[VectorIterator::Оператор>- Оператор](#operator-greater-than-or-equals)|Указывает, действительно ли текущий объект VectorIterator больше указанного объекта VectorIterator или равен ему.|
+|[Оператор VectorIterator:: operator! =](#operator-inequality)|Указывает, отличен ли текущий объект VectorIterator от указанного объекта VectorIterator.|
+|[Оператор VectorIterator:: operator *](#operator-dereference)|Извлекает ссылку на элемент, указанный текущим итератором VectorIterator.|
+|[VectorIterator:: operator\[\]](#operator-at)|Извлекает ссылку на элемент, отстоящий от текущего итератора VectorIterator на указанную величину смещения.|
+|[Оператор VectorIterator:: operator +](#operator-plus)|Возвращает объект VectorIterator, указывающий на элемент с заданным смещением от указанного объекта VectorIterator.|
+|[Оператор VectorIterator:: operator + +](#operator-increment)|Выполняет увеличение текущего итератора VectorIterator.|
+|[Оператор VectorIterator:: operator + =](#operator-plus-assign)|Увеличивает текущий итератор VectorIterator на указанную величину смещения.|
+|[Оператор VectorIterator:: operator<](#operator-less-than)|Указывает, является ли текущий объект VectorIterator меньшим, чем указанный объект VectorIterator.|
+|[Оператор VectorIterator:: operator \< =](#operator-less-than-or-equals)|Указывает, является ли текущий объект VectorIterator меньшим или равным указанному объекту VectorIterator.|
+|[Оператор VectorIterator:: operator-=](#operator-minus-equals)|Уменьшает текущий итератор VectorIterator на указанную величину смещения.|
+|[Оператор VectorIterator:: operator = =](#operator-equality)|Указывает, равен ли текущий объект VectorIterator указанному объекту VectorIterator.|
+|[Оператор VectorIterator:: operator>](#operator-greater-than)|Указывает, действительно ли текущий объект VectorIterator больше, чем указанный объект VectorIterator.|
+|[Оператор VectorIterator:: operator->](#operator-arrow)|Извлекает адрес элемента, на который ссылается текущий итератор VectorIterator.|
+|[Оператор VectorIterator:: operator>=](#operator-greater-than-or-equals)|Указывает, действительно ли текущий объект VectorIterator больше указанного объекта VectorIterator или равен ему.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -80,7 +80,7 @@ class VectorIterator;
 
 **Пространство имен:** Platform::Collections
 
-## <a name="vectoriteratoroperator-gt-operator"></a><a name="operator-arrow"></a>ВекторИтератор::Оператор-оператор&gt;
+## <a name="vectoriteratoroperator-gt-operator"></a><a name="operator-arrow"></a>Оператор VectorIterator:: operator- &gt;
 
 Извлекает адрес элемента, на который ссылается текущий итератор VectorIterator.
 
@@ -96,7 +96,7 @@ Detail::ArrowProxy<T> operator->() const;
 
 Тип возвращаемого значения является неуказанным внутренним типом, необходимым для реализации этого оператора.
 
-## <a name="vectoriteratoroperator---operator"></a><a name="operator-decrement"></a>ВекторИтератор::Оператор-- Оператор
+## <a name="vectoriteratoroperator---operator"></a><a name="operator-decrement"></a>Оператор VectorIterator:: operator--
 
 Выполняет уменьшение текущего итератора VectorIterator.
 
@@ -116,9 +116,9 @@ VectorIterator operator--(int);
 
 Первый синтаксис выполняет уменьшение текущего итератора VectorIterator перед его использованием.
 
-Второй синтаксис выполняет уменьшение текущего итератора VectorIterator после его использования. Тип `int` во втором примере синтаксиса указывает операцию уменьшения после использования, он не является операндом целочисленного типа.
+Второй синтаксис выполняет уменьшение текущего итератора VectorIterator после его использования. **`int`** Тип во втором синтаксисе указывает на операцию после декремента, а не на фактический целочисленный операнд.
 
-## <a name="vectoriteratoroperator-operator"></a><a name="operator-dereference"></a>ВекторИтератор:Оператор\*
+## <a name="vectoriteratoroperator-operator"></a><a name="operator-dereference"></a>Оператор VectorIterator:: operator \*
 
 Извлекает адрес элемента, указанного текущим итератором VectorIterator.
 
@@ -132,7 +132,7 @@ reference operator*() const;
 
 Элемент, указанный текущим итератором VectorIterator.
 
-## <a name="vectoriteratoroperator-operator"></a><a name="operator-equality"></a>ВекторИтератор::Оператор оператор
+## <a name="vectoriteratoroperator-operator"></a><a name="operator-equality"></a>Оператор VectorIterator:: operator = =
 
 Указывает, равен ли текущий объект VectorIterator указанному объекту VectorIterator.
 
@@ -144,14 +144,14 @@ bool operator==(const VectorIterator& other) const;
 
 ### <a name="parameters"></a>Параметры
 
-*Других*<br/>
+*иной*<br/>
 Другой объект VectorIterator.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**верно,** если текущий VectorIterator равен *другим;* в противном случае, **ложные**.
+**`true`** значение, если текущий VectorIterator равен *другому*; в противном случае — **`false`** .
 
-## <a name="vectoriteratoroperatorgt-operator"></a><a name="operator-greater-than"></a>ВекторИтератор:Оператор&gt;
+## <a name="vectoriteratoroperatorgt-operator"></a><a name="operator-greater-than"></a>Оператор VectorIterator:: operator &gt;
 
 Указывает, действительно ли текущий объект VectorIterator больше, чем указанный объект VectorIterator.
 
@@ -163,14 +163,14 @@ bool operator>(const VectorIterator& other) const
 
 ### <a name="parameters"></a>Параметры
 
-*Других*<br/>
+*иной*<br/>
 Другой объект VectorIterator.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**верно,** если текущий VectorIterator больше, чем *другие;* в противном случае, **ложные**.
+**`true`** значение, если текущий VectorIterator больше *другого*; в противном случае — **`false`** .
 
-## <a name="vectoriteratoroperatorgt-operator"></a><a name="operator-greater-than-or-equals"></a>VectorIterator::Оператор&gt;
+## <a name="vectoriteratoroperatorgt-operator"></a><a name="operator-greater-than-or-equals"></a>Оператор VectorIterator:: operator &gt; =
 
 Указывает, является ли текущий объект VectorIterator большим или равным указанному объекту VectorIterator.
 
@@ -182,14 +182,14 @@ bool operator>=(const VectorIterator& other) const
 
 ### <a name="parameters"></a>Параметры
 
-*Других*<br/>
+*иной*<br/>
 Другой объект VectorIterator.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**верно,** если текущий VectorIterator больше или равен *другим;* в противном случае, **ложные**.
+**`true`** значение, если текущий VectorIterator больше или равен *другому*; в противном случае — **`false`** .
 
-## <a name="vectoriteratoroperator-operator"></a><a name="operator-increment"></a>Оператор VectorIterator::Оператор
+## <a name="vectoriteratoroperator-operator"></a><a name="operator-increment"></a>Оператор VectorIterator:: operator + +
 
 Выполняет увеличение текущего итератора VectorIterator.
 
@@ -208,9 +208,9 @@ VectorIterator operator++(int);
 
 Первый синтаксис выполняет увеличение текущего итератора VectorIterator перед его использованием.
 
-Второй синтаксис выполняет увеличение текущего итератора VectorIterator после его использования. Тип `int` во втором примере синтаксиса задает операцию увеличения после использования, он не является операндом целочисленного типа.
+Второй синтаксис выполняет увеличение текущего итератора VectorIterator после его использования. **`int`** Тип во втором синтаксисе указывает на операцию после приращения, а не на фактический целочисленный операнд.
 
-## <a name="vectoriteratoroperator-operator"></a><a name="operator-inequality"></a>Оператор VectorIteror::Оператор!
+## <a name="vectoriteratoroperator-operator"></a><a name="operator-inequality"></a>Оператор VectorIterator:: operator! =
 
 Указывает, отличен ли текущий объект VectorIterator от указанного объекта VectorIterator.
 
@@ -222,14 +222,14 @@ bool operator!=(const VectorIterator& other) const;
 
 ### <a name="parameters"></a>Параметры
 
-*Других*<br/>
+*иной*<br/>
 Другой объект VectorIterator.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**верно,** если текущий VectorIterator не равен *другим;* в противном случае, **ложные**.
+**`true`** значение, если текущий VectorIterator не равен *другому*; в противном случае — **`false`** .
 
-## <a name="vectoriteratoroperatorlt-operator"></a><a name="operator-less-than"></a>ВекторИтератор:Оператор&lt;
+## <a name="vectoriteratoroperatorlt-operator"></a><a name="operator-less-than"></a>Оператор VectorIterator:: operator &lt;
 
 Указывает, является ли текущий объект VectorIterator меньшим, чем указанный объект VectorIterator.
 
@@ -241,14 +241,14 @@ bool operator<(const VectorIterator& other) const
 
 ### <a name="parameters"></a>Параметры
 
-*Других*<br/>
+*иной*<br/>
 Другой объект VectorIterator.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**верно,** если текущий VectorIterator меньше, чем *другие;* в противном случае, **ложные**.
+**`true`** значение, если текущий VectorIterator меньше *другого*; в противном случае — **`false`** .
 
-## <a name="vectoriteratoroperatorlt-operator"></a><a name="operator-less-than-or-equals"></a>VectorIterator::Оператор&lt;
+## <a name="vectoriteratoroperatorlt-operator"></a><a name="operator-less-than-or-equals"></a>Оператор VectorIterator:: operator &lt; =
 
 Указывает, является ли текущий объект VectorIterator меньшим или равным указанному объекту VectorIterator.
 
@@ -260,14 +260,14 @@ bool operator<=(const VectorIterator& other) const
 
 ### <a name="parameters"></a>Параметры
 
-*Других*<br/>
+*иной*<br/>
 Другой объект VectorIterator.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**верно,** если текущий VectorIterator меньше, чем или равна *другим;* в противном случае, **ложные**.
+**`true`** значение, если текущий VectorIterator меньше или равен *другому*; в противном случае — **`false`** .
 
-## <a name="vectoriteratoroperator--operator"></a><a name="operator-minus"></a>ВекторИтератор::Оператор-оператор
+## <a name="vectoriteratoroperator--operator"></a><a name="operator-minus"></a>Оператор VectorIterator:: operator-
 
 Вычитает указанное количество элементов из текущего итератора, возвращая новый итератор, или вычитает указанный итератор из текущего итератора, возвращая количество элементов между итераторами.
 
@@ -285,14 +285,14 @@ difference_type operator-(const VectorIterator& other) const;
 *n*<br/>
 Количество элементов.
 
-*Других*<br/>
+*иной*<br/>
 Другой объект VectorIterator.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Синтаксис первого оператора возвращает объект VectorIterator, количество элементов которого меньше, чем у текущего объекта VectorIterator, на `n`. Синтаксис второго оператора возвращает количество элементов между текущим объектом VectorIterator и другим объектом VectorIterator, заданным параметром `other`.
 
-## <a name="vectoriteratoroperator-operator"></a><a name="operator-plus-assign"></a>Оператор VectorIterator::Оператор
+## <a name="vectoriteratoroperator-operator"></a><a name="operator-plus-assign"></a>Оператор VectorIterator:: operator + =
 
 Увеличивает текущий итератор VectorIterator на указанную величину смещения.
 
@@ -311,7 +311,7 @@ VectorIterator& operator+=(difference_type n);
 
 Обновленный VectorIterator.
 
-## <a name="vectoriteratoroperator-operator"></a><a name="operator-plus"></a>ВекторИтератор::Оператор
+## <a name="vectoriteratoroperator-operator"></a><a name="operator-plus"></a>Оператор VectorIterator:: operator +
 
 Возвращает объект VectorIterator, указывающий на элемент с заданным смещением от указанного объекта VectorIterator.
 
@@ -335,7 +335,7 @@ inline VectorIterator<T> operator+(
 *n*<br/>
 Целочисленная величина смещения.
 
-*Я*<br/>
+*i*<br/>
 Во втором синтаксисе — объект VectorIterator.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -348,7 +348,7 @@ inline VectorIterator<T> operator+(
 
 Первый пример синтаксиса
 
-## <a name="vectoriteratoroperator--operator"></a><a name="operator-minus-equals"></a>Вектор-Итератор::Оператор-оператор
+## <a name="vectoriteratoroperator--operator"></a><a name="operator-minus-equals"></a>Оператор VectorIterator:: operator-=
 
 Уменьшает текущий итератор VectorIterator на указанную величину смещения.
 
@@ -367,7 +367,7 @@ VectorIterator& operator-=(difference_type n);
 
 Обновленный VectorIterator.
 
-## <a name="vectoriteratoroperator"></a><a name="operator-at"></a>ВекторИтератор::оператор\[\]
+## <a name="vectoriteratoroperator"></a><a name="operator-at"></a>VectorIterator:: operator\[\]
 
 Извлекает ссылку на элемент, отстоящий от текущего итератора VectorIterator на указанную величину смещения.
 
@@ -386,7 +386,7 @@ reference operator[](difference_type n) const;
 
 Элемент, отстоящий от текущего итератора VectorIterator на `n` элементов.
 
-## <a name="vectoriteratorvectoriterator-constructor"></a><a name="ctor"></a>Вектор:Вектор конструктор
+## <a name="vectoriteratorvectoriterator-constructor"></a><a name="ctor"></a>Конструктор VectorIterator:: VectorIterator
 
 Инициализирует новый экземпляр класса VectorIterator.
 
@@ -401,13 +401,13 @@ explicit VectorIterator(
 
 ### <a name="parameters"></a>Параметры
 
-*V*<br/>
-Объект IVector\<T>.
+*3,3*<br/>
+Объект IVector \<T> .
 
 ### <a name="remarks"></a>Remarks
 
-Первый пример синтаксиса является конструктором по умолчанию. Второй пример синтаксиса — это явный конструктор, который используется для\<построения VectorIterator с> объекта IVector T.
+Первый пример синтаксиса является конструктором по умолчанию. Вторым примером синтаксиса является явный конструктор, который используется для создания VectorIterator из \<T> объекта IVector.
 
 ## <a name="see-also"></a>См. также раздел
 
-[Название платформы](platform-namespace-c-cx.md)
+[Пространство имен платформы](platform-namespace-c-cx.md)

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - alignment_of class
 - alignment_of
 ms.assetid: 4141c59a-f94e-41c4-93fd-9ea578b27387
-ms.openlocfilehash: c2af00ac32b3013820a3109783c4bf7eb42ec445
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 5a90f481c33431d92f0f28405e6226863d2b3913
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623733"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87205019"
 ---
 # <a name="alignment_of-class"></a>Класс alignment_of
 
-Получает выравнивание указанного типа. Эта структура реализована на основе [alignof](../cpp/alignment-cpp-declarations.md). Используйте **alignof** напрямую, когда нужно просто запросить значение выравнивания. Используйте функцию alignment_of, когда нужна целочисленная константа, например, при отправке тегов.
+Получает выравнивание указанного типа. Эта структура реализуется с точки зрения [`alignof`](../cpp/alignment-cpp-declarations.md) . Используйте **`alignof`** напрямую, если нужно просто запросить значение выравнивания. Используется `alignment_of` , если требуется целая константа, например при отправке тегов.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -30,7 +30,7 @@ struct alignment_of;
 *Ty*\
 Запрашиваемый тип.
 
-## <a name="remarks"></a>Комментарии
+## <a name="remarks"></a>Remarks
 
 Запрос типа содержит значение выравнивания типа *Ty*.
 
@@ -42,5 +42,5 @@ struct alignment_of;
 
 ## <a name="see-also"></a>См. также раздел
 
-[<type_traits>](type-traits.md)\
-[Класс aligned_storage](aligned-storage-class.md)
+[`<type_traits>`](type-traits.md)\
+[`aligned_storage`См](aligned-storage-class.md)

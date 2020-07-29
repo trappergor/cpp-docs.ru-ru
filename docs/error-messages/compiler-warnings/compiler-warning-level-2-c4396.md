@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4396
 ms.assetid: 7cd6b283-db17-4574-b299-03e0b913ad70
-ms.openlocfilehash: f37fcc7ece09bb9028a522ec6baf85d0e0e585c2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: fec6875fdb2e8a60e71fe08da1ed4e8fa82e4641
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80161819"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87206046"
 ---
 # <a name="compiler-warning-level-2-c4396"></a>Предупреждение компилятора (уровень 2) C4396
 
@@ -21,11 +21,11 @@ ms.locfileid: "80161819"
 
 ### <a name="to-correct-this-error"></a>Исправление ошибки
 
-- Удалите спецификатор `inline`, `__inline`или `__forceinline` из объявления дружественной функции.
+- Удалите **`inline`** описатель, **`__inline`** или **`__forceinline`** из объявления дружественной функции.
 
 ## <a name="example"></a>Пример
 
-В приведенном ниже примере показано недопустимое объявление дружественной функции со спецификатором `inline` .
+В следующем примере кода показано недопустимое объявление дружественной функции с **`inline`** описателем.
 
 ```cpp
 // C4396.cpp

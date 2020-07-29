@@ -40,12 +40,12 @@ helpviewer_keywords:
 - current working directory
 - directories [C++], current working
 ms.assetid: 184152f5-c7b0-495b-918d-f9a6adc178bd
-ms.openlocfilehash: 69e9d0b0eaa3a62d95ea602b68b5d1ad0df99e4a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c9ae07c5880cb86b0aafb0dc66a7c1ce3edcc9d8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919215"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218667"
 ---
 # <a name="_getdcwd-_wgetdcwd"></a>_getdcwd, _wgetdcwd
 
@@ -79,7 +79,7 @@ wchar_t *_wgetdcwd(
 Если указано **значение NULL** , эта функция выделяет буфер по крайней мере *maxlen* размера с помощью функции **malloc**, а возвращаемое значение **_getdcwd** является указателем на выделенный буфер. Буфер можно освободить, вызвав **Free** и передав ему указатель.
 
 *maxlen*<br/>
-Ненулевое положительное число, указывающее максимальную длину пути в символах: **char** для **_getdcwd** и **wchar_t** для **_wgetdcwd**.
+Ненулевое положительное число, указывающее максимальную длину пути в символах: **`char`** для **_getdcwd** и **`wchar_t`** для **_wgetdcwd**.
 
 Если *maxlen* меньше или равно нулю, вызывается обработчик недопустимых параметров. Дополнительные сведения см. в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).
 
@@ -124,7 +124,7 @@ wchar_t *_wgetdcwd(
 
 ## <a name="see-also"></a>См. также раздел
 
-[Управление каталогами](../../c-runtime-library/directory-control.md)<br/>
+[Управление каталогом](../../c-runtime-library/directory-control.md)<br/>
 [_chdir, _wchdir](chdir-wchdir.md)<br/>
 [_getcwd, _wgetcwd](getcwd-wgetcwd.md)<br/>
 [_getdrive](getdrive.md)<br/>

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4156
 ms.assetid: 9adf3acb-c0fe-42a8-a4db-5822b1493f77
-ms.openlocfilehash: b9add4af0fddf8d68bbba0293530f2bb0ce3800d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 279ab5d9de738fb4e2aa6dece4bb16353eca031b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80162092"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87206488"
 ---
 # <a name="compiler-warning-level-2-c4156"></a>Предупреждение компилятора (уровень 2) C4156
 
 Удаление выражения массива без использования формы массива "Delete"; Форма массива заменена
 
-Не удается удалить массив, не являющийся массивом **удаления** . Компилятор транслирует **Удаление** в форму массива.
+Невозможно удалить массив, не являющийся массивом **`delete`** . Компилятор преобразуется **`delete`** в форму массива.
 
 Это предупреждение возникает только в расширениях Майкрософт (/Ze).
 

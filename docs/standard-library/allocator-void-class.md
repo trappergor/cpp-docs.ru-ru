@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - allocator<void> class
 ms.assetid: abfb40f5-c600-46a6-b130-f42c6535b2bd
-ms.openlocfilehash: af29c70dca56b1e68eef3614357269c587a77ec9
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: b6ca3f8b994756a21d85860fd8aff429ee38e58b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623681"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87204935"
 ---
 # <a name="allocatorltvoidgt-class"></a>Класс allocator&lt;void&gt;
 
-Специализация распределителя шаблонов класса для типа **void**, определяющая типы, имеющие смысл в этом контексте.
+Специализация распределителя шаблонов класса для типа **`void`** , определяющая типы, имеющие смысл в этом контексте.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -39,9 +39,9 @@ class allocator<void> {
 };
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Класс явно специализирует [механизм распределения](allocator-class.md) шаблонов классов для типа **void**. Его конструкторы и оператор присваивания ведут себя так же, как и для шаблона класса, но он определяет только следующие типы:
+Класс явно специализирует [распределителя](allocator-class.md) шаблонов классов для типа **`void`** . Его конструкторы и оператор присваивания ведут себя так же, как и для шаблона класса, но он определяет только следующие типы:
 
 - [const_pointer](allocator-class.md#const_pointer);
 

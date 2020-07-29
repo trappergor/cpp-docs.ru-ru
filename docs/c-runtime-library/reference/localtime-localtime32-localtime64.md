@@ -38,12 +38,12 @@ helpviewer_keywords:
 - localtime function
 - time, converting values
 ms.assetid: 4260ec3d-43ee-4538-b998-402a282bb9b8
-ms.openlocfilehash: 764a3768610d97df2eb3af4ed0425065aba4b4fa
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: cacc0317bf48b7f4d33027558c3dc6c739e474dc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916413"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218628"
 ---
 # <a name="localtime-_localtime32-_localtime64"></a>localtime, _localtime32, _localtime64
 
@@ -76,7 +76,7 @@ struct tm *_localtime64( const __time64_t *sourceTime );
 
 **localtime** — это встроенная функция, которая оценивается как **_localtime64**, а **time_t** эквивалентна **__time64_t**. Если необходимо заставить компилятор интерпретировать **time_t** как старый 32-разрядный **time_t**, можно определить **_USE_32BIT_TIME_T**. Это приведет к **_localtime32у**вычисления **localtime** . Это не рекомендуется, поскольку приложение может завершиться с ошибкой после 18-го января 2038 года, и не поддерживается на 64-разрядных платформах.
 
-Поля структуры типа [TM](../../c-runtime-library/standard-types.md) хранят следующие значения, каждое из которых является типом **int**:
+Поля структуры типа [TM](../../c-runtime-library/standard-types.md) хранят следующие значения, каждое из которых является **`int`** :
 
 |Поле|Описание|
 |-|-|
@@ -94,7 +94,7 @@ struct tm *_localtime64( const __time64_t *sourceTime );
 
 ## <a name="remarks"></a>Remarks
 
-Функция **localtime** преобразует время, хранящееся в виде значения [time_t](../../c-runtime-library/standard-types.md) , и сохраняет результат в виде структуры типа [TM](../../c-runtime-library/standard-types.md). Значение **Long** *саурцетиме* представляет секунды, прошедшие с полуночи (00:00:00), 1 января 1970, UTC. Это значение обычно получается из функции [time](time-time32-time64.md) .
+Функция **localtime** преобразует время, хранящееся в виде значения [time_t](../../c-runtime-library/standard-types.md) , и сохраняет результат в виде структуры типа [TM](../../c-runtime-library/standard-types.md). **`long`** Значение *саурцетиме* представляет секунды, прошедшие с полуночи (00:00:00), 1 января 1970, UTC. Это значение обычно получается из функции [time](time-time32-time64.md) .
 
 И 32-разрядные, и 64-разрядные версии [gmtime](gmtime-gmtime32-gmtime64.md), [функциях mktime](mktime-mktime32-mktime64.md), [мкгмтиме](mkgmtime-mkgmtime32-mkgmtime64.md)и **localtime** используют одну структуру **TM** для каждого потока для преобразования. Каждый вызов одной из этих подпрограмм уничтожает результат предыдущего вызова.
 
@@ -111,7 +111,7 @@ struct tm *_localtime64( const __time64_t *sourceTime );
 
 |Подпрограмма|Обязательный заголовок C|Обязательный заголовок C++|
 |-------------|---------------------|-|
-|**localtime**, **_localtime32** **_localtime64**|\<time.h>|\<CTime> или \<Time. h>|
+|**localtime**, **_localtime32** **_localtime64**|\<time.h>|\<ctime> или \<time.h>|
 
 Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 

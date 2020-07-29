@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4559
 ms.assetid: ed542f60-454d-45cb-85da-987ede61b1ab
-ms.openlocfilehash: 0788824dd4180476d81d9682f99fb95883b8c4f0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 66e782c2fbb9c39c6a189de496cd0dcb4f1f4991
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80198345"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218082"
 ---
 # <a name="compiler-warning-level-4-c4559"></a>Предупреждение компилятора (уровень 4) C4559
 
@@ -19,7 +19,7 @@ ms.locfileid: "80198345"
 
 ## <a name="remarks"></a>Remarks
 
-Функция была переопределена или объявлена повторно, а второе определение или объявление добавило модификатор **__declspec** (*Модификатор*). Это предупреждение носит информационный характер. Чтобы устранить это предупреждение, удалите одно из определений.
+Функция была переопределена или объявлена повторно, а второе определение или объявление добавило **`__declspec`** модификатор (*Модификатор*). Это предупреждение носит информационный характер. Чтобы устранить это предупреждение, удалите одно из определений.
 
 ## <a name="example"></a>Пример
 
