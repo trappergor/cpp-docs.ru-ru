@@ -1,5 +1,5 @@
 ---
-title: CComFakeCriticalSection класс
+title: Класс Ккомфакекритикалсектион
 ms.date: 11/04/2016
 f1_keywords:
 - CComFakeCriticalSection
@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComFakeCriticalSection class
 ms.assetid: a4811b97-96bb-493b-ab9f-62822aeddb10
-ms.openlocfilehash: 4a5b9ba3551397a9c3d59a343e9c6b55b1c1207e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5ada0fbed705af34391709653dbd3638fed32bf7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327852"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226585"
 ---
-# <a name="ccomfakecriticalsection-class"></a>CComFakeCriticalSection класс
+# <a name="ccomfakecriticalsection-class"></a>Класс Ккомфакекритикалсектион
 
-Этот класс предоставляет те же методы, что и [CComCriticalSection,](../../atl/reference/ccomcriticalsection-class.md) но не предоставляет критический раздел.
+Этот класс предоставляет те же методы, что и [ккомкритикалсектион](../../atl/reference/ccomcriticalsection-class.md) , но не предоставляет критическую секцию.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,26 +32,26 @@ class CComFakeCriticalSection
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание:|
 |----------|-----------------|
-|[CComFakeCriticalSection::Init](#init)|Ничего не делает, так как нет критического раздела.|
-|[CComFakeCriticalSection::Lock](#lock)|Ничего не делает, так как нет критического раздела.|
-|[CComFakeCriticalSection::Срок](#term)|Ничего не делает, так как нет критического раздела.|
-|[CComFakeCriticalSection::Разблокировка](#unlock)|Ничего не делает, так как нет критического раздела.|
+|[Ккомфакекритикалсектион:: init](#init)|Не выполняет никаких действий, так как нет критического раздела.|
+|[Ккомфакекритикалсектион:: Lock](#lock)|Не выполняет никаких действий, так как нет критического раздела.|
+|[Ккомфакекритикалсектион:: Term](#term)|Не выполняет никаких действий, так как нет критического раздела.|
+|[Ккомфакекритикалсектион:: Unlock](#unlock)|Не выполняет никаких действий, так как нет критического раздела.|
 
 ## <a name="remarks"></a>Remarks
 
-`CComFakeCriticalSection`зеркала методы, найденные в [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md). Тем `CComFakeCriticalSection` не менее, не предоставляет критический раздел; поэтому его методы ничего не делают.
+`CComFakeCriticalSection`отражает методы, найденные в [ккомкритикалсектион](../../atl/reference/ccomcriticalsection-class.md). Однако не `CComFakeCriticalSection` предоставляет критическую секцию, поэтому его методы не выполняют никаких действий.
 
-Как правило, `CComFakeCriticalSection` вы `typedef` используете `AutoCriticalSection` `CriticalSection`через имя, либо . При использовании [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) или [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md), оба этих `typedef` названия ссылки. `CComFakeCriticalSection` При использовании [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md), они ссылаются [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md) и `CComCriticalSection`, соответственно.
+Обычно используется `CComFakeCriticalSection` **`typedef`** имя, либо `AutoCriticalSection` `CriticalSection` . При использовании [ккомсинглесреадмодел](../../atl/reference/ccomsinglethreadmodel-class.md) или [ккоммултисреадмоделнокс](../../atl/reference/ccommultithreadmodelnocs-class.md)оба эти **`typedef`** имени ссылаются `CComFakeCriticalSection` . При использовании [ккоммултисреадмодел](../../atl/reference/ccommultithreadmodel-class.md)они ссылаются на [ккомаутокритикалсектион](../../atl/reference/ccomautocriticalsection-class.md) и `CComCriticalSection` соответственно.
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atlcore.h
+**Заголовок:** атлкоре. h
 
-## <a name="ccomfakecriticalsectioninit"></a><a name="init"></a>CComFakeCriticalSection::Init
+## <a name="ccomfakecriticalsectioninit"></a><a name="init"></a>Ккомфакекритикалсектион:: init
 
-Ничего не делает, так как нет критического раздела.
+Не выполняет никаких действий, так как нет критического раздела.
 
 ```
 HRESULT Init() throw();
@@ -61,9 +61,9 @@ HRESULT Init() throw();
 
 Возвращает S_OK.
 
-## <a name="ccomfakecriticalsectionlock"></a><a name="lock"></a>CComFakeCriticalSection::Lock
+## <a name="ccomfakecriticalsectionlock"></a><a name="lock"></a>Ккомфакекритикалсектион:: Lock
 
-Ничего не делает, так как нет критического раздела.
+Не выполняет никаких действий, так как нет критического раздела.
 
 ```
 HRESULT Lock() throw();
@@ -73,9 +73,9 @@ HRESULT Lock() throw();
 
 Возвращает S_OK.
 
-## <a name="ccomfakecriticalsectionterm"></a><a name="term"></a>CComFakeCriticalSection::Срок
+## <a name="ccomfakecriticalsectionterm"></a><a name="term"></a>Ккомфакекритикалсектион:: Term
 
-Ничего не делает, так как нет критического раздела.
+Не выполняет никаких действий, так как нет критического раздела.
 
 ```
 HRESULT Term() throw();
@@ -85,9 +85,9 @@ HRESULT Term() throw();
 
 Возвращает S_OK.
 
-## <a name="ccomfakecriticalsectionunlock"></a><a name="unlock"></a>CComFakeCriticalSection::Разблокировка
+## <a name="ccomfakecriticalsectionunlock"></a><a name="unlock"></a>Ккомфакекритикалсектион:: Unlock
 
-Ничего не делает, так как нет критического раздела.
+Не выполняет никаких действий, так как нет критического раздела.
 
 ```
 HRESULT Unlock() throw();
@@ -97,6 +97,6 @@ HRESULT Unlock() throw();
 
 Возвращает S_OK.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [Общие сведения о классах](../../atl/atl-class-overview.md)
