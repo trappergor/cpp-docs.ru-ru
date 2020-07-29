@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interface class keyword
 - interface struct keyword
 ms.assetid: 3ccea701-f50b-4da7-ad6b-f0ee1203e2b9
-ms.openlocfilehash: cb4566a0094db6d9e0cc97d81718a18a6df5cf18
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e7847f71502354189e874d505414b4a45b74ab45
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172169"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228704"
 ---
 # <a name="interface-class--ccli-and-ccx"></a>interface class (C++/CLI и C++/CX)
 
@@ -32,13 +32,13 @@ name :  inherit_accessbase_interface{};interface_accessinterface structname :  i
 ### <a name="parameters"></a>Параметры
 
 *interface_access*<br/>
-Доступность интерфейса за пределами данной сборки.  Возможные значения: **public** и **private**.  Значение по умолчанию — **private**. Вложенные интерфейсы не могут содержать спецификатор *interface_access*.
+Доступность интерфейса за пределами данной сборки.  Возможные значения: **`public`** и **`private`** .  **`private`** значение по умолчанию —. Вложенные интерфейсы не могут содержать спецификатор *interface_access*.
 
 *name*<br/>
 Имя интерфейса.
 
 *inherit_access*<br/>
-Доступность *base_interface*.  Единственной допустимой доступностью для базового интерфейса является значение **public** (по умолчанию).
+Доступность *base_interface*.  Единственным разрешенным доступом к базовому интерфейсу является **`public`** (по умолчанию).
 
 *base_interface*<br/>
 (Необязательно) Базовый интерфейс для *имени* интерфейса.
@@ -61,9 +61,9 @@ name :  inherit_accessbase_interface{};interface_accessinterface structname :  i
 
 Сведения о других типах среды CLR см. в статье о [классах и структурах](classes-and-structs-cpp-component-extensions.md).
 
-Во время компиляции можно определить, является ли тип интерфейсом, с помощью `__is_interface_class(type)`. Подробные сведения см. в статье [Compiler Support for Type Traits (C++/CLI and C++/CX)](compiler-support-for-type-traits-cpp-component-extensions.md) (Поддержка характеристик типов компилятором (C++/CLI and C++/CX)).
+Во время компиляции можно определить, является ли тип интерфейсом, с помощью `__is_interface_class(type)`. Дополнительные сведения см. в статье [Compiler Support for Type Traits (C++/CLI and C++/CX)](compiler-support-for-type-traits-cpp-component-extensions.md) (Поддержка характеристик типов компилятором (C++/CLI and C++/CX)).
 
-В среде разработки можно обратится в справку F1 для получения сведений об этих ключевых словах, выделив ключевое слово (к примеру, `interface class`) и нажав клавишу F1.
+В среде разработки можно получить справку F1 по этим ключевым словам, выделив ключевое слово ( **`interface class`** например,) и нажав клавишу F1.
 
 ## <a name="windows-runtime"></a>Среда выполнения Windows
 
@@ -218,6 +218,6 @@ ref struct R : I, J {
 };
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [Расширения компонентов для .NET и UWP](component-extensions-for-runtime-platforms.md)

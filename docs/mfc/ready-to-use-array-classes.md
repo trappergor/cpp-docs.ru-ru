@@ -8,38 +8,38 @@ helpviewer_keywords:
 - collection classes [MFC], arrays
 - classes [MFC], array
 ms.assetid: fdeabf95-2fe7-43a8-8f88-d954133caf52
-ms.openlocfilehash: 309567f897bf5ca941852b433cdee0e8e0d44b3c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd297752728f54de2b2ff50877954440cbe70ff9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392639"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228574"
 ---
 # <a name="ready-to-use-array-classes"></a>Готовые классы массивов
 
-Следующие классы являются классы массивов готовые к использованию.
+Следующие классы являются готовыми к использованию классами массивов.
 
 [CByteArray](../mfc/reference/cbytearray-class.md)<br/>
-Хранит элементы типа **БАЙТОВ** в массиве.
+Хранит элементы типа **Byte** в массиве.
 
 [CDWordArray](../mfc/reference/cdwordarray-class.md)<br/>
-Хранит элементы типа **DWORD** в массиве.
+Сохраняет элементы типа **DWORD** в массиве.
 
 [CObArray](../mfc/reference/cobarray-class.md)<br/>
-Содержит указатели на объекты класса `CObject` или на объекты классов, производных от `CObject` в массиве.
+Хранит указатели на объекты класса `CObject` или на объекты классов, производных от `CObject` , в массиве.
 
 [CPtrArray](../mfc/reference/cptrarray-class.md)<br/>
-Содержит указатели на **void** (универсальных указателей) в массиве.
+Хранит указатели на **`void`** (универсальные указатели) в массиве.
 
 [CUIntArray](../mfc/reference/cuintarray-class.md)<br/>
-Хранит элементы типа **UINT** в массиве.
+Сохраняет элементы типа **uint** в массиве.
 
 [CWordArray](../mfc/reference/cwordarray-class.md)<br/>
-Хранит элементы типа **WORD** в массиве.
+Сохраняет элементы типа **слово** в массиве.
 
 [CStringArray](../mfc/reference/cstringarray-class.md)<br/>
-Магазины `CString` объектов в массиве.
+Хранит `CString` объекты в массиве.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также статью
 
-[Общие сведения о классе](../mfc/class-library-overview.md)
+[Общие сведения о классах](../mfc/class-library-overview.md)

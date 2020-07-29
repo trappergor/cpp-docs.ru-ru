@@ -13,16 +13,16 @@ f1_keywords:
 - AMPRT/Concurrency::completion_future::wait_for
 - AMPRT/Concurrency::completion_future::wait_until
 ms.assetid: 1303c62e-546d-4b02-a578-251ed3fc0b6b
-ms.openlocfilehash: 69aacad02df5290f161e9d8d311be347668be9f9
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 1863f0908753fb05abb01cf1bd2e34dc6649e0a4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127024"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228496"
 ---
 # <a name="completion_future-class"></a>Класс completion_future
 
-Представляет будущее, соответствующее асинхронной C++ операции amp.
+Представляет будущее, соответствующее асинхронной операции C++ AMP.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -30,33 +30,33 @@ ms.locfileid: "77127024"
 class completion_future;
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Description|
+|Имя|Описание:|
 |----------|-----------------|
 |[Конструктор completion_future](#ctor)|Инициализирует новый экземпляр класса `completion_future`.|
-|[Деструктор ~ completion_future](#dtor)|Уничтожает объект `completion_future`.|
+|[Деструктор ~ completion_future](#dtor)|Уничтожает `completion_future` объект.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Description|
+|name|Описание:|
 |----------|-----------------|
 |[get](#get)|Ожидает завершения связанной асинхронной операции.|
-|[этого](#then)|Повязывает объект функции обратного вызова к `completion_future` объекту, который будет выполнен, когда связанная асинхронная операция завершает выполнение.|
-|[to_task](#to_task)|Возвращает объект `task`, соответствующий связанной асинхронной операции.|
+|[этого](#then)|Повязывает объект функции обратного вызова к `completion_future` объекту, который должен быть выполнен, когда связанная асинхронная операция завершает выполнение.|
+|[to_task](#to_task)|Возвращает `task` объект, соответствующий связанной асинхронной операции.|
 |[допустимым](#valid)|Возвращает логическое значение, указывающее, связан ли объект с асинхронной операцией.|
 |[ожидания](#wait)|Блокируется до завершения связанной асинхронной операции.|
-|[wait_for](#wait_for)|Блокируется до тех пор, пока связанная асинхронная операция не будет завершена или не истечет время, заданное `_Rel_time`.|
-|[wait_until](#wait_until)|Блокируется до завершения связанной асинхронной операции или до тех пор, пока текущее время не превысит значение, заданное `_Abs_time`.|
+|[wait_for](#wait_for)|Блокируется до тех пор, пока не завершится связанная асинхронная операция или не истечет время, указанное в параметре `_Rel_time` .|
+|[wait_until](#wait_until)|Блокируется до завершения связанной асинхронной операции или до тех пор, пока текущее время не превысит значение, заданное параметром `_Abs_time` .|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Description|
+|Имя|Описание:|
 |----------|-----------------|
-|[operator std:: shared_future\<void >](#operator_shared_future)|Неявно преобразует объект `completion_future` в объект `std::shared_future`.|
-|[оператор=](#operator_eq)|Копирует содержимое указанного объекта `completion_future` в этот объект.|
+|[Оператор std:: shared_future\<void>](#operator_shared_future)|Неявно преобразует `completion_future` объект в `std::shared_future` объект.|
+|[Оператор =](#operator_eq)|Копирует содержимое указанного `completion_future` объекта в этот объект.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -66,9 +66,9 @@ class completion_future;
 
 **Заголовок:** ампрт. h
 
-**Пространство имен:** concurrency
+**Пространство имен:** параллелизм
 
-## <a name="ctor"></a>completion_future
+## <a name="completion_future"></a><a name="ctor"></a>completion_future
 
 Инициализирует новый экземпляр класса `completion_future`.
 
@@ -87,17 +87,17 @@ completion_future(
 ### <a name="parameters"></a>Параметры
 
 *_Other*<br/>
-Объект `completion_future` для копирования или перемещения.
+`completion_future`Копируемый или перемещаемый объект.
 
 ### <a name="overloads-list"></a>Список перегрузок
 
-|Имя|Description|
+|Имя|Описание:|
 |----------|-----------------|
-|`completion_future();`|Инициализирует новый экземпляр класса `completion_future`|
-|`completion_future(const completion_future& _Other);`|Инициализирует новый экземпляр класса `completion_future` путем копирования конструктора.|
-|`completion_future(completion_future&& _Other);`|Инициализирует новый экземпляр класса `completion_future`, перемещая конструктор.|
+|`completion_future();`|Инициализирует новый экземпляр `completion_future` класса|
+|`completion_future(const completion_future& _Other);`|Инициализирует новый экземпляр `completion_future` класса путем копирования конструктора.|
+|`completion_future(completion_future&& _Other);`|Инициализирует новый экземпляр `completion_future` класса, перемещая конструктор.|
 
-## <a name="get"></a>Получить
+## <a name="get"></a><a name="get"></a>Получить
 
 Ожидает завершения связанной асинхронной операции. Создает хранимое исключение, если оно было обнаружено во время асинхронной операции.
 
@@ -107,9 +107,9 @@ completion_future(
 void get() const;
 ```
 
-## <a name="operator_shared_future"></a>operator std:: shared_future\<void >
+## <a name="operator-stdshared_futurevoid"></a><a name="operator_shared_future"></a>Оператор std:: shared_future\<void>
 
-Неявно преобразует объект `completion_future` в объект `std::shared_future`.
+Неявно преобразует `completion_future` объект в `std::shared_future` объект.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -121,9 +121,9 @@ operator std::shared_future<void>() const;
 
 Объект `std::shared_future`.
 
-## <a name="operator_eq"></a>Оператор =
+## <a name="operator"></a><a name="operator_eq"></a>Оператор =
 
-Копирует содержимое указанного объекта `completion_future` в этот объект.
+Копирует содержимое указанного `completion_future` объекта в этот объект.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -139,18 +139,18 @@ completion_future&  operator= (completion_future&& _Other );
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ссылка на этот объект `completion_future`.
+Ссылка на этот `completion_future` объект.
 
 ## <a name="overloads-list"></a>Список перегрузок
 
-|Имя|Description|
+|Имя|Описание:|
 |----------|-----------------|
-|`completion_future& operator=(const completion_future& _Other);`|Копирует содержимое указанного объекта `completion_future` в этот объект с помощью глубокого копирования.|
+|`completion_future& operator=(const completion_future& _Other);`|Копирует содержимое указанного `completion_future` объекта в этот объект с помощью глубокого копирования.|
 |`completion_future& operator=(completion_future&& _Other);`|Копирует содержимое указанного `completion_future` объекта в этот объект с помощью назначения перемещения.|
 
-## <a name="then"></a>этого
+## <a name="then"></a><a name="then"></a>этого
 
-Повязывает объект функции обратного вызова к `completion_future` объекту, который будет выполнен, когда связанная асинхронная операция завершает выполнение.
+Повязывает объект функции обратного вызова к `completion_future` объекту, который должен быть выполнен, когда связанная асинхронная операция завершает выполнение.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -167,9 +167,9 @@ void then(const _Functor & _Func ) const;
 *_Func*<br/>
 Объект функции обратного вызова.
 
-## <a name="to_task"></a>to_task
+## <a name="to_task"></a><a name="to_task"></a>to_task
 
-Возвращает объект `task`, соответствующий связанной асинхронной операции.
+Возвращает `task` объект, соответствующий связанной асинхронной операции.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -179,9 +179,9 @@ concurrency::task<void> to_task() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Объект `task`, соответствующий связанной асинхронной операции.
+`task`Объект, соответствующий связанной асинхронной операции.
 
-## <a name="valid"></a>допустимым
+## <a name="valid"></a><a name="valid"></a>допустимым
 
 Получает логическое значение, которое указывает, связан ли объект с асинхронной операцией.
 
@@ -193,9 +193,9 @@ bool valid() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true** , если объект связан с асинхронной операцией; в противном случае — **значение false**.
+**`true`** значение, если объект связан с асинхронной операцией. в противном случае — **`false`** .
 
-## <a name="wait"></a>ожидания
+## <a name="wait"></a><a name="wait"></a>ожидания
 
 Блокируется до завершения связанной асинхронной операции.
 
@@ -205,9 +205,9 @@ bool valid() const;
 void wait() const;
 ```
 
-## <a name="wait_for"></a>wait_for
+## <a name="wait_for"></a><a name="wait_for"></a>wait_for
 
-Блокируется до тех пор, пока не завершится связанная асинхронная операция или не истечет время, заданное `_Rel_time`.
+Блокируется до завершения связанной асинхронной операции или до истечения времени, заданного параметром `_Rel_time` .
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -235,15 +235,15 @@ std::future_status::future_status wait_for(
 
 Возвращает:
 
-- `std::future_status::deferred`, если связанная асинхронная операция не выполняется.
+- `std::future_status::deferred`значение, если связанная асинхронная операция не выполняется.
 
-- `std::future_status::ready`, если связанная асинхронная операция завершена.
+- `std::future_status::ready`значение, если связанная асинхронная операция завершена.
 
-- `std::future_status::timeout` по истечении указанного периода времени.
+- `std::future_status::timeout`по истечении указанного периода времени.
 
-## <a name="wait_until"></a>wait_until
+## <a name="wait_until"></a><a name="wait_until"></a>wait_until
 
-Блокируется до завершения связанной асинхронной операции или до тех пор, пока текущее время не превысит значение, заданное `_Abs_time`.
+Блокируется до завершения связанной асинхронной операции или до тех пор, пока текущее время не превысит значение, заданное параметром `_Abs_time` .
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -262,7 +262,7 @@ std::future_status::future_status wait_until(
 Часы, на которые измеряется этот момент времени.
 
 *_Duration*<br/>
-Интервал времени с начала эпохи `_Clock`, после которого функция истечет время ожидания.
+Интервал времени с начала `_Clock` эпохи, после которого функция истечет время ожидания.
 
 *_Abs_time*<br/>
 Момент времени, после которого функция истечет время ожидания.
@@ -271,15 +271,15 @@ std::future_status::future_status wait_until(
 
 Возвращает:
 
-1. `std::future_status::deferred`, если связанная асинхронная операция не выполняется.
+1. `std::future_status::deferred`значение, если связанная асинхронная операция не выполняется.
 
-1. `std::future_status::ready`, если связанная асинхронная операция завершена.
+1. `std::future_status::ready`значение, если связанная асинхронная операция завершена.
 
-1. `std::future_status::timeout`, если истек указанный период времени.
+1. `std::future_status::timeout`значение, если указанный период времени истек.
 
-## <a name="dtor"></a>~ completion_future
+## <a name="completion_future"></a><a name="dtor"></a>~ completion_future
 
-Уничтожает объект `completion_future`.
+Уничтожает `completion_future` объект.
 
 ### <a name="syntax"></a>Синтаксис
 
