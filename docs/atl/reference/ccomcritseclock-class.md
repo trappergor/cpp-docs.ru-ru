@@ -1,5 +1,5 @@
 ---
-title: Класс CComCritSecLock
+title: Класс Ккомкритсеклокк
 ms.date: 11/04/2016
 f1_keywords:
 - CComCritSecLock
@@ -10,16 +10,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComCritSecLock class
 ms.assetid: 223152a1-86c3-4ef9-89a7-f455fe791b0e
-ms.openlocfilehash: 4b2ef093c1142b592ad2a6605a08bd8c34a643ea
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: fd2904f67d84db42d6b35aa4e505b063d6ea9a9f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81748071"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224296"
 ---
-# <a name="ccomcritseclock-class"></a>Класс CComCritSecLock
+# <a name="ccomcritseclock-class"></a>Класс Ккомкритсеклокк
 
-Этот класс предоставляет методы блокировки и разблокировки объекта критических секций.
+Этот класс предоставляет методы для блокировки и разблокировки объекта критической секции.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -29,34 +29,34 @@ template<class TLock> class CComCritSecLock
 
 #### <a name="parameters"></a>Параметры
 
-*TLock*<br/>
-Объект, который будет заблокирован и разблокирован.
+*тлокк*<br/>
+Объект, который должен быть заблокирован и разблокирован.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Элементы
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
-|[CComCritSecLock::CComCritSecLock](#ctor)|Конструктор.|
-|[CComCritSecLock::: »CComCritSecLock](#dtor)|Деструктор|
+|[Ккомкритсеклокк:: Ккомкритсеклокк](#ctor)|Конструктор.|
+|[Ккомкритсеклокк:: ~ Ккомкритсеклокк](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание:|
 |----------|-----------------|
-|[CComCritSecLock::Блокировка](#lock)|Вызовите этот метод, чтобы заблокировать объект критического сечения.|
-|[CComCritSecLock::Разблокировка](#unlock)|Вызовите этот метод, чтобы разблокировать критический объект раздела.|
+|[Ккомкритсеклокк:: Lock](#lock)|Вызовите этот метод, чтобы заблокировать объект критической секции.|
+|[Ккомкритсеклокк:: Unlock](#unlock)|Вызовите этот метод, чтобы разблокировать объект критической секции.|
 
 ## <a name="remarks"></a>Remarks
 
-Используйте этот класс для блокировки и разблокировки объектов более безопасным способом, чем с [CComCriticalSection Class](../../atl/reference/ccomcriticalsection-class.md) или [CComAutoCriticalSection Class.](../../atl/reference/ccomautocriticalsection-class.md)
+Используйте этот класс для блокировки и разблокирования объектов в более безопасном виде, чем класс [ккомкритикалсектион](../../atl/reference/ccomcriticalsection-class.md) или [класс ккомаутокритикалсектион](../../atl/reference/ccomautocriticalsection-class.md).
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atlbase.h
+**Заголовок:** atlbase. h
 
-## <a name="ccomcritseclockccomcritseclock"></a><a name="ctor"></a>CComCritSecLock::CComCritSecLock
+## <a name="ccomcritseclockccomcritseclock"></a><a name="ctor"></a>Ккомкритсеклокк:: Ккомкритсеклокк
 
 Конструктор.
 
@@ -66,17 +66,17 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
 
 ### <a name="parameters"></a>Параметры
 
-*cs*<br/>
-Объект критического сечения.
+*сложных*<br/>
+Объект критического раздела.
 
-*bInitialLock*<br/>
-Начальное состояние блокировки: **истинные** средства заблокированы.
+*бинитиаллокк*<br/>
+Начальное состояние блокировки: **`true`** означает, что заблокировано.
 
 ### <a name="remarks"></a>Remarks
 
-Инициализирует объект критического сечения.
+Инициализирует объект критической секции.
 
-## <a name="ccomcritseclockccomcritseclock"></a><a name="dtor"></a>CComCritSecLock::: »CComCritSecLock
+## <a name="ccomcritseclockccomcritseclock"></a><a name="dtor"></a>Ккомкритсеклокк:: ~ Ккомкритсеклокк
 
 Деструктор
 
@@ -86,11 +86,11 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
 
 ### <a name="remarks"></a>Remarks
 
-Разблокирует объект критического сечения.
+Разблокирует объект критической секции.
 
-## <a name="ccomcritseclocklock"></a><a name="lock"></a>CComCritSecLock::Блокировка
+## <a name="ccomcritseclocklock"></a><a name="lock"></a>Ккомкритсеклокк:: Lock
 
-Вызовите этот метод, чтобы заблокировать объект критического сечения.
+Вызовите этот метод, чтобы заблокировать объект критической секции.
 
 ```
 HRESULT Lock() throw();
@@ -102,11 +102,11 @@ HRESULT Lock() throw();
 
 ### <a name="remarks"></a>Remarks
 
-Если объект уже заблокирован, в сборках отладок возникает ошибка ASSERT.
+Если объект уже заблокирован, в отладочных сборках произойдет ошибка ASSERT.
 
-## <a name="ccomcritseclockunlock"></a><a name="unlock"></a>CComCritSecLock::Разблокировка
+## <a name="ccomcritseclockunlock"></a><a name="unlock"></a>Ккомкритсеклокк:: Unlock
 
-Вызовите этот метод, чтобы разблокировать критический объект раздела.
+Вызовите этот метод, чтобы разблокировать объект критической секции.
 
 ```cpp
 void Unlock() throw();
@@ -114,9 +114,9 @@ void Unlock() throw();
 
 ### <a name="remarks"></a>Remarks
 
-Если объект уже разблокирован, в сборках отладок возникает ошибка ASSERT.
+Если объект уже разблокирован, в отладочных сборках произойдет ошибка ASSERT.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
-[Класс CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)<br/>
-[Класс CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md)
+[Класс Ккомкритикалсектион](../../atl/reference/ccomcriticalsection-class.md)<br/>
+[Класс Ккомаутокритикалсектион](../../atl/reference/ccomautocriticalsection-class.md)
