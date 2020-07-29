@@ -51,12 +51,12 @@ helpviewer_keywords:
 - wtol function
 - _wtol function
 ms.assetid: cedfc21c-2d64-4e9c-bd04-bdf60b12db46
-ms.openlocfilehash: 56f2efb4e7282cbcfb6a123f56797e2867d6bb4b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ffb318a53b34e1d69e533b05f80e942c945e1af7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913534"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218732"
 ---
 # <a name="atol-_atol_l-_wtol-_wtol_l"></a>atol, _atol_l, _wtol, _wtol_l
 
@@ -91,7 +91,7 @@ long _wtol_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая функция возвращает значение **типа Long** , полученное путем интерпретации входных символов в виде числа. Возвращаемое значение — 0L для **Атол** , если входные данные не могут быть преобразованы в значение этого типа.
+Каждая функция возвращает **`long`** значение, полученное путем интерпретации входных символов в виде числа. Возвращаемое значение — 0L для **Атол** , если входные данные не могут быть преобразованы в значение этого типа.
 
 В случае переполнения с большими положительными целочисленными значениями **Атол** возвращает **LONG_MAX**; в случае переполнения с большими отрицательными целочисленными значениями **LONG_MIN** возвращается. Во всех случаях **, когда выходит** из диапазона, для параметра « **ERANGE**» задано значение «нет». Если переданный параметр имеет **значение NULL**, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции **устанавливают** значение **еинвал** и возвращают 0.
 
@@ -179,8 +179,8 @@ Overflow condition occurred.
 ## <a name="see-also"></a>См. также раздел
 
 [Преобразование данных](../../c-runtime-library/data-conversion.md)<br/>
-[Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
+[Локаль](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Module::ReleaseNotifier::Release method
 - Microsoft::WRL::Module::ReleaseNotifier::ReleaseNotifier, constructor
 ms.assetid: 17249cd1-4d88-42e3-8146-da9e942d12bd
-ms.openlocfilehash: f314d09c443d0d284e3a821b5c879bfb74baf812
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 25fbb23ee7ecb7e55377aed74effe8bfa43a1597
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371279"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218368"
 ---
 # <a name="modulereleasenotifier-class"></a>Класс Module::ReleaseNotifier
 
@@ -38,15 +38,15 @@ class ReleaseNotifier;
 
 Имя                                                                                | Описание
 ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------
-[Модуль::ReleaseNotifier:: »ReleaseNotifier](#releasenotifier-tilde-releasenotifier) | Деприиратизирует текущий `Module::ReleaseNotifier` экземпляр класса.
-[Модуль::ReleaseNotifier:ReleaseNotifier](#releasenotifier-releasenotifier)        | Инициализирует новый экземпляр класса `Module::ReleaseNotifier`.
+[Модуль:: ReleaseNotifier:: ~ ReleaseNotifier](#releasenotifier-tilde-releasenotifier) | Выполняет деинициализацию текущего экземпляра `Module::ReleaseNotifier` класса.
+[Модуль:: ReleaseNotifier:: ReleaseNotifier](#releasenotifier-releasenotifier)        | Инициализирует новый экземпляр класса `Module::ReleaseNotifier`.
 
 ### <a name="public-methods"></a>Открытые методы
 
-Имя                                                         | Описание
+name                                                         | Описание
 ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------
-[Модуль:ReleaseNotifier::Invoke](#releasenotifier-invoke)   | При реализации вызовит обработчик событий при освобождении последнего объекта в модуле.
-[Module::ReleaseNotifier::Release](#releasenotifier-release) | Удаляет текущий `Module::ReleaseNotifier` объект, если объект был построен с параметром **истинного.**
+[Модуль:: ReleaseNotifier:: Invoke](#releasenotifier-invoke)   | При реализации вызывает обработчик событий при освобождении последнего объекта в модуле.
+[Module::ReleaseNotifier::Release](#releasenotifier-release) | Удаляет текущий `Module::ReleaseNotifier` объект, если объект был создан с помощью параметра **`true`** .
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -54,35 +54,35 @@ class ReleaseNotifier;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** module.h
+**Заголовок:** Module. h
 
 **Пространство имен:** Microsoft::WRL
 
-## <a name="modulereleasenotifierreleasenotifier"></a><a name="releasenotifier-tilde-releasenotifier"></a>Модуль::ReleaseNotifier:: »ReleaseNotifier
+## <a name="modulereleasenotifierreleasenotifier"></a><a name="releasenotifier-tilde-releasenotifier"></a>Модуль:: ReleaseNotifier:: ~ ReleaseNotifier
 
-Деприиратизирует текущий `Module::ReleaseNotifier` экземпляр класса.
+Выполняет деинициализацию текущего экземпляра `Module::ReleaseNotifier` класса.
 
 ```cpp
 WRL_NOTHROW virtual ~ReleaseNotifier();
 ```
 
-## <a name="modulereleasenotifierinvoke"></a><a name="releasenotifier-invoke"></a>Модуль:ReleaseNotifier::Invoke
+## <a name="modulereleasenotifierinvoke"></a><a name="releasenotifier-invoke"></a>Модуль:: ReleaseNotifier:: Invoke
 
-При реализации вызовит обработчик событий при освобождении последнего объекта в модуле.
+При реализации вызывает обработчик событий при освобождении последнего объекта в модуле.
 
 ```cpp
 virtual void Invoke() = 0;
 ```
 
-## <a name="modulereleasenotifierrelease"></a><a name="releasenotifier-release"></a>Модуль::ReleaseNotifier::Release
+## <a name="modulereleasenotifierrelease"></a><a name="releasenotifier-release"></a>Модуль:: ReleaseNotifier:: Release
 
-Удаляет текущий `Module::ReleaseNotifier` объект, если объект был построен с параметром **истинного.**
+Удаляет текущий `Module::ReleaseNotifier` объект, если объект был создан с помощью параметра **`true`** .
 
 ```cpp
 void Release() throw();
 ```
 
-## <a name="modulereleasenotifierreleasenotifier"></a><a name="releasenotifier-releasenotifier"></a>Модуль::ReleaseNotifier:ReleaseNotifier
+## <a name="modulereleasenotifierreleasenotifier"></a><a name="releasenotifier-releasenotifier"></a>Модуль:: ReleaseNotifier:: ReleaseNotifier
 
 Инициализирует новый экземпляр класса `Module::ReleaseNotifier`.
 
@@ -92,5 +92,5 @@ ReleaseNotifier(bool release) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*Выпуска*<br/>
-`true`удалить этот экземпляр `Release` при вызове метода; `false` не удалять этот экземпляр.
+*отпускании*<br/>
+**`true`** значение, чтобы удалить этот экземпляр при `Release` вызове метода; **`false`** значение, чтобы не удалять этот экземпляр.

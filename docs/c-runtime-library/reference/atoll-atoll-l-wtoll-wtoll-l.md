@@ -41,16 +41,16 @@ helpviewer_keywords:
 - _wtoll function
 - _atoll_l function
 ms.assetid: 5e85fcac-b351-4882-bff2-6e7c469b7fa8
-ms.openlocfilehash: 89a4d94a98e58f4ef5489554e02866a8471ade20
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: f18fb618909b2dfd4bcd1b4d759fe7a895724896
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913524"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218719"
 ---
 # <a name="atoll-_atoll_l-_wtoll-_wtoll_l"></a>atoll, _atoll_l, _wtoll, _wtoll_l
 
-Преобразует строку в **длинное** **целое число типа** Long.
+Преобразует строку в **`long long`** целое число.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -81,7 +81,7 @@ long long _wtoll_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая функция возвращает **длинное значение типа Long** **long** , полученное путем интерпретации входных символов в виде числа. Возвращаемое значение для **Атолл** равно 0, если входные данные не могут быть преобразованы в значение этого типа.
+Каждая функция возвращает **`long long`** значение, полученное путем интерпретации входных символов в виде числа. Возвращаемое значение для **Атолл** равно 0, если входные данные не могут быть преобразованы в значение этого типа.
 
 Для переполнения с большими положительными целочисленными значениями **Атолл** возвращает **LLONG_MAX**, а для Overflow с большими отрицательными целочисленными значениями возвращает **LLONG_MIN**.
 
@@ -89,7 +89,7 @@ long long _wtoll_l(
 
 ## <a name="remarks"></a>Remarks
 
-Эти функции преобразуют символьную строку в **длинное** **целое значение типа** Long.
+Эти функции преобразуют символьную строку в **`long long`** целочисленное значение.
 
 Входная строка представляет собой последовательность символов, которые могут обрабатываться как числовое значение указанного типа. Каждая функция прекращает чтение строки на первом знаке, который она не может распознать как часть числа. Этот символ может быть нуль-символом ("\0" или L"\0"), которым завершается строка.
 
@@ -173,8 +173,8 @@ Overflow condition occurred.
 ## <a name="see-also"></a>См. также раздел
 
 [Преобразование данных](../../c-runtime-library/data-conversion.md)<br/>
-[Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
+[Локаль](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

@@ -37,12 +37,12 @@ helpviewer_keywords:
 - lgammal function
 - lgammaf function
 ms.assetid: 6e326c58-7077-481a-a329-c82ae56ae9e6
-ms.openlocfilehash: a610b0412b7e10949a810f4e360686292cff9ee3
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d751a3487db1d7c0135d4a1ae87cb84d374825fa
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916447"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218654"
 ---
 # <a name="lgamma-lgammaf-lgammal"></a>lgamma, lgammaf, lgammal
 
@@ -72,7 +72,7 @@ long double lgamma( long double x ); //C++ only
 
 |Проблема|Возвращает|
 |-----------|------------|
-|*x* = NaN|NaN|
+|*x* = NaN|Не число|
 |*x* = ± 0|+INFINITY|
 |*x*= отрицательное целое число|+INFINITY|
 |± Бесконечности|+INFINITY|
@@ -83,7 +83,7 @@ long double lgamma( long double x ); //C++ only
 
 ## <a name="remarks"></a>Remarks
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **лгамма** , которые принимают и возвращают типы **float** и **Long** **Double** . В программе на языке C **лгамма** всегда принимает и возвращает значение **типа Double**.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **лгамма** , которые принимают и возвращают **`float`** **`long double`** типы и. В программе на языке C **лгамма** всегда принимает и возвращает **`double`** .
 
 Если x является рациональным числом, эта функция возвращает логарифм факториала (x-1).
 
@@ -91,7 +91,7 @@ long double lgamma( long double x ); //C++ only
 
 ## <a name="requirements"></a>Требования
 
-|Функция|Заголовок C|Заголовок C++|
+|Компонент|Заголовок C|Заголовок C++|
 |--------------|--------------|------------------|
 |**лгамма**, **лгаммаф**, **лгаммал**|\<math.h>|\<cmath>|
 
@@ -99,5 +99,5 @@ long double lgamma( long double x ); //C++ only
 
 ## <a name="see-also"></a>См. также раздел
 
-[Алфавитный указатель функций](crt-alphabetical-function-reference.md)<br/>
+[Алфавитный справочник по функциям](crt-alphabetical-function-reference.md)<br/>
 [tgamma, tgammaf, tgammal](tgamma-tgammaf-tgammal.md)<br/>

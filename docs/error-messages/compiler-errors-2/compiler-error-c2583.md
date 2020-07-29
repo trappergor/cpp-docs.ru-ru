@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2583
 ms.assetid: b1c952dc-872c-47e4-9fc8-4dd72bcee6f9
-ms.openlocfilehash: a0154d1d9a57d0faa795e639640eb6cb42e7c7cb
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 0cb021dcba4d050afb943c03ba6b4dca053bcbb8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74748649"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87206852"
 ---
 # <a name="compiler-error-c2583"></a>Ошибка компилятора C2583
 
 "идентификатор": недопустимый указатель "this" с модификатором const или volatile для конструкторов и деструкторов
 
-Конструктор или деструктор объявлен `const` или `volatile`. Такое использование недопустимо.
+Конструктор или деструктор объявлен **`const`** или **`volatile`** . Это не допускается.
 
 Следующий пример приводит к возникновению ошибки C2583:
 

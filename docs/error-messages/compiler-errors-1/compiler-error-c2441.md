@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2441
 ms.assetid: ffbd6573-777a-48dd-892f-5cf4a758dcab
-ms.openlocfilehash: 4e5d5335717ec77c61069ad08e209f9e1851dc2f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: aa55392e9f58caa4292cf5f96ef97f65a53bf913
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80205313"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87207957"
 ---
 # <a name="compiler-error-c2441"></a>Ошибка компилятора C2441
 
@@ -21,9 +21,9 @@ ms.locfileid: "80205313"
 
 Параметры компилятора **/clr: pure** и **/clr: Сейф** являются устаревшими в Visual Studio 2015 и не поддерживаются в Visual Studio 2017.
 
-По умолчанию переменные задаются для каждого домена приложения в **параметре/CLR: pure**. Переменная, помеченная `__declspec(process)` в **параметре/CLR: pure** , подвержена ошибкам, если изменена в одном домене приложения и прочитана в другом.
+По умолчанию переменные задаются для каждого домена приложения в **параметре/CLR: pure**. Переменная, помеченная как `__declspec(process)` **/clr: pure** , подвержена ошибкам, если она изменена в одном домене приложения и считывается в другом.
 
-Таким образом, компилятор принудительно применяет переменные для каждого процесса `const` в **параметре/CLR: pure**, делая их только для чтения во всех доменах приложений.
+Таким образом, компилятор принудительно применяет переменные для каждого процесса в режиме **`const`** **/clr: pure**, делая их только для чтения во всех доменах приложений.
 
 Дополнительные сведения см. в разделе [Process](../../cpp/process.md) и [/CLR (компиляция общеязыковой среды выполнения)](../../build/reference/clr-common-language-runtime-compilation.md).
 

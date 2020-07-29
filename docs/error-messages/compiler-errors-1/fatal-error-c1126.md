@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1126
 ms.assetid: f22b26a6-8ad7-47cf-a237-196c8ea60aca
-ms.openlocfilehash: a6c9d06cd087eb4462ae475cc1f6d64ba451887f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 110fbfe984ee7714e0c8ee2e2cb4deec4f43905a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80203656"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87207931"
 ---
 # <a name="fatal-error-c1126"></a>Неустранимая ошибка C1126
 
@@ -19,4 +19,4 @@ ms.locfileid: "80203656"
 
 Пространство, выделенное для локальных переменных функции (плюс ограниченный объем пространства, используемого компилятором, например дополнительные 20 байт для перезаписываемых функций), превышает предельное значение.
 
-Чтобы исправить эту ошибку, используйте `malloc` или `new`, чтобы выделить большие объемы данных.
+Чтобы исправить эту ошибку, используйте `malloc` или **`new`** для выделения больших объемов данных.

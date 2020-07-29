@@ -37,12 +37,12 @@ helpviewer_keywords:
 - tgammaf function
 - tgammal function
 ms.assetid: f1bd2681-8af2-48a9-919d-5358fd068acd
-ms.openlocfilehash: 6f3eb1bd791e645407b09a99a8c8e96025ca47e3
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: f38ae3f3ad38eeb9806803fd8dad1b8297393168
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912228"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218524"
 ---
 # <a name="tgamma-tgammaf-tgammal"></a>tgamma, tgammaf, tgammal
 
@@ -86,11 +86,11 @@ long double tgammal(
 |Проблема|Возвращает|
 |-----------|------------|
 |x = ± 0|± Бесконечности|
-|x = negative integer|NaN|
-|x =-бесконечность|NaN|
+|x = negative integer|Не число|
+|x =-бесконечность|Не число|
 |x = +INFINITY|+INFINITY|
-|x = NaN|NaN|
-|ошибка домена|NaN|
+|x = NaN|Не число|
+|ошибка домена|Не число|
 |Ошибка полюса|± HUGE_VAL, ± HUGE_VALF или ± HUGE_VALL|
 |Ошибка переполнения диапазона|± HUGE_VAL, ± HUGE_VALF или ± HUGE_VALL|
 |ошибка недостаточного заполнения диапазона|правильное значение (после округления).|
@@ -99,7 +99,7 @@ long double tgammal(
 
 ## <a name="remarks"></a>Remarks
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **тгамма** , которые принимают и возвращают типы **float** и **Long** **Double** . В программе на языке C **тгамма** всегда принимает и возвращает значение **типа Double**.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **тгамма** , которые принимают и возвращают **`float`** **`long double`** типы и. В программе на языке C **тгамма** всегда принимает и возвращает **`double`** .
 
 Если x является натуральным числом, эта функция возвращает факториал (x – 1).
 
@@ -107,7 +107,7 @@ long double tgammal(
 
 ## <a name="requirements"></a>Требования
 
-|Функция|Заголовок C|Заголовок C++|
+|Компонент|Заголовок C|Заголовок C++|
 |--------------|--------------|------------------|
 |**тгамма**, **tgammaf**, **тгаммал**|\<math.h>|\<cmath>|
 
@@ -115,5 +115,5 @@ long double tgammal(
 
 ## <a name="see-also"></a>См. также раздел
 
-[Алфавитный указатель функций](crt-alphabetical-function-reference.md)<br/>
+[Алфавитный справочник по функциям](crt-alphabetical-function-reference.md)<br/>
 [lgamma, lgammaf, lgammal](lgamma-lgammaf-lgammal.md)<br/>

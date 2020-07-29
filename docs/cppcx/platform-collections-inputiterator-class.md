@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - InputIterator Class
 ms.assetid: ef72eea4-32a9-42b9-8119-ce87dbdcd3be
-ms.openlocfilehash: 92f9b15f474a5aa3d063f0ccfb663f56baf8de31
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4aeef07a34c04bd1ab47acf808026024faada567
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354566"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218433"
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Класс Platform::Collections::InputIterator
 
-Обеспечивает стандартный входная библиотека шаблонов для коллекций, полученных из Windows Runtime.
+Предоставляет библиотеку стандартных шаблонов InputIterator для коллекций, производных от среда выполнения Windows.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -30,7 +30,7 @@ class InputIterator;
 *X*<br/>
 Имя типа класса шаблона InputIterator.
 
-### <a name="members"></a>Участники
+### <a name="members"></a>Элементы
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
@@ -44,19 +44,19 @@ class InputIterator;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
-|[Вхотливник:Ввим-итератор](#ctor)|Инициализирует новый экземпляр класса InputIterator.|
+|[InputIterator:: InputIterator](#ctor)|Инициализирует новый экземпляр класса InputIterator.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
 |Имя|Описание|
 |----------|-----------------|
-|[Вхотливник::Оператор!](#operator-inequality)|Указывает, отличен ли текущий объект InputIterator от указанного объекта InputIterator.|
+|[Оператор InputIterator:: operator! =](#operator-inequality)|Указывает, отличен ли текущий объект InputIterator от указанного объекта InputIterator.|
 |[Оператор InputIterator::operator*](#operator-dereference)|Извлекает ссылку на элемент, указанный текущим итератором InputIterator.|
-|[Вхотливник:Оператор](#operator-increment)|Выполняет приращение текущего итератора InputIterator.|
-|[Вхотливник:Оператор](#operator-equality)|Указывает, равен ли текущий объект InputIterator указанному объекту InputIterator.|
-|[Вхотливщик:Оператор-> Оператор](#operator-arrow)|Извлекает адрес элемента, на который ссылается текущий итератор InputIterator.|
+|[Оператор InputIterator:: operator + +](#operator-increment)|Выполняет приращение текущего итератора InputIterator.|
+|[Оператор InputIterator:: operator = =](#operator-equality)|Указывает, равен ли текущий объект InputIterator указанному объекту InputIterator.|
+|[Оператор InputIterator:: operator->](#operator-arrow)|Извлекает адрес элемента, на который ссылается текущий итератор InputIterator.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -68,7 +68,7 @@ class InputIterator;
 
 **Пространство имен:** Platform::Collections
 
-## <a name="inputiteratorinputiterator-constructor"></a><a name="ctor"></a>Вхотливник:Конструктор ввода-вклада
+## <a name="inputiteratorinputiterator-constructor"></a><a name="ctor"></a>Конструктор InputIterator:: InputIterator
 
 Инициализирует новый экземпляр класса InputIterator.
 
@@ -81,10 +81,10 @@ explicit InputIterator(Windows::Foundation::Collections<X>^ iterator);
 
 ### <a name="parameters"></a>Параметры
 
-*Итератор*<br/>
+*итераци*<br/>
 Объект итератора.
 
-## <a name="inputiteratoroperator-gt-operator"></a><a name="operator-arrow"></a>Вхотливник:Оператор-оператор&gt;
+## <a name="inputiteratoroperator-gt-operator"></a><a name="operator-arrow"></a>Оператор InputIterator:: operator- &gt;
 
 Извлекает адрес элемента, указанного текущим итератором InputIterator.
 
@@ -98,7 +98,7 @@ pointer operator->() const;
 
 Адрес элемента, указанного текущим итератором InputIterator.
 
-## <a name="inputiteratoroperator-operator"></a><a name="operator-dereference"></a>Вхомитель:Оператор\*
+## <a name="inputiteratoroperator-operator"></a><a name="operator-dereference"></a>Оператор InputIterator:: operator \*
 
 Извлекает ссылку на элемент, указанный текущим итератором InputIterator.
 
@@ -112,7 +112,7 @@ reference operator*() const;
 
 Элемент, указанный текущим итератором InputIterator.
 
-## <a name="inputiteratoroperator-operator"></a><a name="operator-equality"></a>Вхотливник:Оператор
+## <a name="inputiteratoroperator-operator"></a><a name="operator-equality"></a>Оператор InputIterator:: operator = =
 
 Указывает, равен ли текущий объект InputIterator указанному объекту InputIterator.
 
@@ -124,14 +124,14 @@ bool operator== (const InputIterator& other) const;
 
 ### <a name="parameters"></a>Параметры
 
-*Других*<br/>
+*иной*<br/>
 Другой объект InputIterator.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**верно,** если текущий входный оборотник равен *другим;* в противном случае, **ложные**.
+**`true`** значение, если текущий InputIterator равен *другому*; в противном случае — **`false`** .
 
-## <a name="inputiteratoroperator-operator"></a><a name="operator-increment"></a>Вхотливник:Оператор
+## <a name="inputiteratoroperator-operator"></a><a name="operator-increment"></a>Оператор InputIterator:: operator + +
 
 Выполняет приращение текущего итератора InputIterator.
 
@@ -150,9 +150,9 @@ InputIterator operator++(int);
 
 Первый синтаксис InputIterator выполняет приращение текущего итератора InputIterator перед его использованием.
 
-Второй синтаксис выполняет приращение текущего итератора InputIterator после его использования. Тип `int` во втором примере синтаксиса задает операцию увеличения после использования, он не является операндом целочисленного типа.
+Второй синтаксис выполняет приращение текущего итератора InputIterator после его использования. **`int`** Тип во втором синтаксисе указывает на операцию после приращения, а не на фактический целочисленный операнд.
 
-## <a name="inputiteratoroperator-operator"></a><a name="operator-inequality"></a>Вхотливник::Оператор!
+## <a name="inputiteratoroperator-operator"></a><a name="operator-inequality"></a>Оператор InputIterator:: operator! =
 
 Указывает, отличен ли текущий объект InputIterator от указанного объекта InputIterator.
 
@@ -164,13 +164,13 @@ bool operator!=(const InputIterator& other) const;
 
 ### <a name="parameters"></a>Параметры
 
-*Других*<br/>
+*иной*<br/>
 Другой объект InputIterator.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**верно,** если текущий вход не равен *другим;* в противном случае, **ложные**.
+**`true`** значение, если текущий InputIterator не равен *другому*; в противном случае — **`false`** .
 
 ## <a name="see-also"></a>См. также раздел
 
-[Название платформы](platform-namespace-c-cx.md)
+[Пространство имен платформы](platform-namespace-c-cx.md)
