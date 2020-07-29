@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::bernoulli_distribution [C++], param_type
 - std::bernoulli_distribution [C++], param_type
 ms.assetid: 586bcde1-95ca-411a-bf17-4aaf19482f34
-ms.openlocfilehash: 6a53707d823ced7316604f75691194dc6e05545e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8b8e433b5ea1283fb60273a2fd21106c65867c0b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364859"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230263"
 ---
 # <a name="bernoulli_distribution-class"></a>Класс bernoulli_distribution
 
@@ -66,12 +66,12 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*Ргсч*\
-Единый генератор случайных чисел. Для возможных типов см [ \<>. ](../standard-library/random.md)
+*РГСЧ*\
+Единый механизм генератора случайных чисел. Возможные типы см. в разделе [\<random>](../standard-library/random.md) .
 
 ## <a name="remarks"></a>Remarks
 
-Класс описывает распределение, которое производит значения типа **bool**, распределенные в соответствии с функцией дискретной вероятности распределения Bernoulli. В следующей таблице представлены ссылки на статьи об отдельных членах.
+Класс описывает распределение, которое создает значения типа **`bool`** , распределенные в соответствии с дискретной функцией вероятности распределения Бернулли. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
 ||||
 |-|-|-|
@@ -88,7 +88,7 @@ public:
 
 Функции-члены `operator()` возвращают следующее значение, созданное механизмом РГСЧ, из текущего или указанного пакета параметров.
 
-Для получения дополнительной информации о классах распределения и их членах [ \<>](../standard-library/random.md)см.
+Дополнительные сведения о классах распределения и их членах см [\<random>](../standard-library/random.md) . в разделе.
 
 Дополнительные сведения о дискретной функции вероятности распределения Бернулли см. в статье [Распределение Бернулли](https://go.microsoft.com/fwlink/p/?linkid=398467).
 
@@ -154,11 +154,11 @@ true :::::::::::::::::::::::::::::::::::::::::
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<random>
+**Заголовок:**\<random>
 
 **Пространство имен:** std
 
-## <a name="bernoulli_distributionbernoulli_distribution"></a><a name="bernoulli_distribution"></a>bernoulli_distribution::bernoulli_distribution
+## <a name="bernoulli_distributionbernoulli_distribution"></a><a name="bernoulli_distribution"></a>bernoulli_distribution:: bernoulli_distribution
 
 Формирует распределение.
 
@@ -169,10 +169,10 @@ explicit bernoulli_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Параметры
 
-*P*\
+*ш*\
 Хранимый параметр распределения `p`.
 
-*парм*\
+*ParM*\
 Структура `param_type`, используемая для формирования распределения.
 
 ### <a name="remarks"></a>Remarks
@@ -183,17 +183,17 @@ explicit bernoulli_distribution(const param_type& parm);
 
 Второй конструктор создает объект, хранимые параметры которого инициализируются из *parm*. Вы можете получить и задать текущие параметры существующего распределения, вызвав функцию-член `param()`.
 
-## <a name="bernoulli_distributionparam_type"></a><a name="param_type"></a>bernoulli_distribution::pараматип
+## <a name="bernoulli_distributionparam_type"></a><a name="param_type"></a>bernoulli_distribution::p aram_type
 
 Содержит параметры распределения.
 
-структурировать param_type - typedef bernoulli_distribution distribution_type; param_type (двойной р 0,5); двойной р() конст;
+struct param_type {typedef bernoulli_distribution distribution_type; param_type (двойное p = 0,5); Double p () const;
 
    bool operator==(const param_type& right) const; bool operator!=(const param_type& right) const; };
 
 ### <a name="parameters"></a>Параметры
 
-*P*\
+*ш*\
 Хранимый параметр распределения `p`.
 
 ### <a name="remarks"></a>Remarks
@@ -204,4 +204,4 @@ explicit bernoulli_distribution(const param_type& parm);
 
 ## <a name="see-also"></a>См. также раздел
 
-[\<случайные>](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

@@ -6,16 +6,16 @@ f1_keywords:
 - atomic/std::atomic_flag::clear
 - atomic/std::atomic_flag::test_and_set
 ms.assetid: 17f0c2f5-fd39-4a44-873a-b569720a670e
-ms.openlocfilehash: ad4b6dcaf6db1a8abe5b81b4d630e84b54fbaa63
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ff60e05c7d14104e164e8251a9146f8b0d0dcde3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376872"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87203927"
 ---
 # <a name="atomic_flag-structure"></a>Структура atomic_flag
 
-Описывает объект, который атомарно устанавливает и очищает флаг **bool.** Операции с атомарными флагами всегда неблокирующие.
+Описывает объект, который атомарно задает и очищает **`bool`** флаг. Операции с атомарными флагами всегда неблокирующие.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -27,10 +27,10 @@ struct atomic_flag;
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
-|[Ясно](#clear)|Устанавливает сохраненный флаг на **ложный**.|
-|[test_and_set](#test_and_set)|Устанавливает сохраненный флаг на **истину** и возвращает начальное значение флага.|
+|[открытым](#clear)|Устанавливает сохраненный флаг в значение **`false`** .|
+|[test_and_set](#test_and_set)|Задает сохраненный флаг **`true`** и возвращает начальное значение флага.|
 
 ## <a name="remarks"></a>Remarks
 
@@ -38,13 +38,13 @@ struct atomic_flag;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<атомный>
+**Заголовок:**\<atomic>
 
 **Пространство имен:** std
 
-## <a name="atomic_flagclear"></a><a name="clear"></a>atomic_flag::ясно
+## <a name="atomic_flagclear"></a><a name="clear"></a>atomic_flag:: Clear
 
-Устанавливает флаг **bool,** который `*this` хранится в **ложном,** в пределах указанного [memory_order](../standard-library/atomic-enums.md#memory_order_enum) ограничений.
+Задает **`bool`** флаг, хранящийся в **`*this`** , в **`false`** пределах указанных ограничений [memory_order](../standard-library/atomic-enums.md#memory_order_enum) .
 
 ```cpp
 void atomic_flag::clear(memory_order Order = memory_order_seq_cst) volatile noexcept;
@@ -53,12 +53,12 @@ void atomic_flag::clear(memory_order Order = memory_order_seq_cst) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-*Заказ*\
+*Порядок*\
 Перечисление [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
-## <a name="atomic_flagtest_and_set"></a><a name="test_and_set"></a>atomic_flag::test_and_set
+## <a name="atomic_flagtest_and_set"></a><a name="test_and_set"></a>atomic_flag:: test_and_set
 
-Устанавливает флаг **bool,** который `*this` хранится в **истинном,** в пределах указанного [memory_order](../standard-library/atomic-enums.md#memory_order_enum) ограничений.
+Задает **`bool`** флаг, хранящийся в **`*this`** , в **`true`** пределах указанных ограничений [memory_order](../standard-library/atomic-enums.md#memory_order_enum) .
 
 ```cpp
 bool atomic_flag::test_and_set(memory_order Order = memory_order_seq_cst) volatile noexcept;
@@ -67,13 +67,13 @@ bool atomic_flag::test_and_set(memory_order Order = memory_order_seq_cst) noexce
 
 ### <a name="parameters"></a>Параметры
 
-*Заказ*\
+*Порядок*\
 Перечисление [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Начальное значение флага, который хранится в `*this`.
+Начальное значение флага, хранящегося в **`*this`** .
 
 ## <a name="see-also"></a>См. также раздел
 
-[\<атомный>](../standard-library/atomic.md)
+[\<atomic>](../standard-library/atomic.md)

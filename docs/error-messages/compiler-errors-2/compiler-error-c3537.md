@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3537
 ms.assetid: f537ebd1-4fb0-4e09-a453-4f38db2c6881
-ms.openlocfilehash: ef3e954987b84ea128342b38307769903df4b346
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 663ef761d6c52aeb4c3cc9ce109079c647904e36
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74740485"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87197557"
 ---
 # <a name="compiler-error-c3537"></a>Ошибка компилятора C3537
 
 "тип": невозможно привести к типу, содержащему "Auto"
 
-Невозможно привести переменную к указанному типу, так как тип содержит ключевое слово `auto` и действует параметр компилятора [/Zc: Auto](../../build/reference/zc-auto-deduce-variable-type.md) по умолчанию.
+Невозможно привести переменную к указанному типу, так как тип содержит **`auto`** ключевое слово, и действует параметр компилятора [/Zc: Auto](../../build/reference/zc-auto-deduce-variable-type.md) по умолчанию.
 
 ## <a name="example"></a>Пример
 
-Следующий код выдает C3537, так как переменные приведены к типу, содержащему ключевое слово `auto`.
+Следующий код выдает C3537, так как переменные приведены к типу, содержащему **`auto`** ключевое слово.
 
 ```cpp
 // C3537.cpp
@@ -38,6 +38,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Ключевое слово auto](../../cpp/auto-keyword.md)

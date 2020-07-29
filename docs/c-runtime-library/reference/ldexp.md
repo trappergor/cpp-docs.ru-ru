@@ -39,12 +39,12 @@ helpviewer_keywords:
 - exponent, floating-point numbers
 - floating-point functions, mantissa and exponent
 ms.assetid: aa7f5310-3879-4f63-ae74-86a39fbdedfa
-ms.openlocfilehash: 95eb1eb3ca18e0e7d3450951c930a07f954bc299
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: bbd1742cdace30d5bc3bd5e9d592bb24a86f917f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916531"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216925"
 ---
 # <a name="ldexp-ldexpf-ldexpl"></a>ldexp, ldexpf, ldexpl
 
@@ -80,18 +80,18 @@ long double ldexpl(
 *x*<br/>
 Значение с плавающей запятой.
 
-*расширением*<br/>
+*exp*<br/>
 Целый показатель степени.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Функции **ldexp** возвращают значение<sup>*exp*</sup> *x* \* 2 в случае успеха. В случае переполнения и, в зависимости от знака *x*, **ldexp** возвращает +/- **HUGE_VAL**; значение **errno** перестройки передается в **ERANGE**.
+Функции **ldexp** возвращают значение EXP *x* \* 2 в<sup>*exp*</sup> случае успеха. В случае переполнения и, в зависимости от знака *x*, **ldexp** возвращает +/- **HUGE_VAL**; значение **errno** перестройки передается в **ERANGE**.
 
 Дополнительные сведения о параметрах **возврата и** возможностях, возвращающих ошибки, см. в разделе "переводится [, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)".
 
 ## <a name="remarks"></a>Remarks
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **ldexp** , которые принимают типы **float** или **Long** типа **Double** . В программе на языке C **ldexp** всегда принимает **Double** и **int** и возвращает **Double**.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **ldexp** , которые принимают **`float`** **`long double`** типы или. В программе на языке C **ldexp** всегда принимает **`double`** и, **`int`** и возвращает **`double`** .
 
 По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
@@ -129,6 +129,6 @@ int main( void )
 
 ## <a name="see-also"></a>См. также
 
-[Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
+[Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [frexp](frexp.md)<br/>
 [modf, modff, modfl](modf-modff-modfl.md)<br/>

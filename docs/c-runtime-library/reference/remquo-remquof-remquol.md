@@ -34,12 +34,12 @@ helpviewer_keywords:
 - remquof function
 - remquo function
 ms.assetid: a1d3cb8b-8027-4cd3-8deb-04eb17f299fc
-ms.openlocfilehash: 774a35f257b02c67b22618224a60ed501476a6f4
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d1b5c60e2e6bd8ba4d5f3b4297dff4bd57c650f2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917819"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216795"
 ---
 # <a name="remquo-remquof-remquol"></a>remquo, remquof, remquol
 
@@ -71,19 +71,19 @@ long double remquo( long double numer, long double denom, int* quo ); /* C++ onl
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**remquo** возвращает остаток от деления *x* / *y*на значение с плавающей запятой. Если значение *y* равно 0,0, **remquo** возвращает нетихом NaN. Сведения о представлении нескрытого числа NaN в семействе **printf** см. в разделе [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+**remquo** возвращает остаток от деления *x*y на значение с плавающей запятой  /  *y*. Если значение *y* равно 0,0, **remquo** возвращает нетихом NaN. Сведения о представлении нескрытого числа NaN в семействе **printf** см. в разделе [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Remarks
 
-Функция **remquo** вычисляет *f* *x* / *y* остатка с плавающей запятой таким образом, что *x* = *i* \* *y* + *f*, где *i* является целым числом, *f* имеет тот же знак, что и *x*, а абсолютное значение *f* меньше, чем абсолютное значение *y*.
+Функция **remquo** вычисляет *f* y остатка с плавающей запятой *x*  /  *y* таким образом, что *x*  =  *i* \* *y*  +  *f*, где *i* является целым числом, *f* имеет тот же знак, что и *x*, а абсолютное значение *f* меньше, чем абсолютное значение *y*.
 
-C++ допускает перегрузку, поэтому можно вызывать перегрузки **remquo** , которые принимают и возвращают значения **типа float** или **Long** **double** . В программе на языке C **remquo** всегда принимает два аргумента **Double** и возвращает значение **типа double**.
+C++ допускает перегрузку, поэтому можно вызывать перегрузки **remquo** , которые принимают и возвращают **`float`** **`long double`** значения или. В программе на языке C **remquo** всегда принимает два **`double`** аргумента и возвращает **`double`** .
 
 По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
-|Функция|Обязательный заголовок (C)|Обязательный заголовок (C++)|
+|Компонент|Обязательный заголовок (C)|Обязательный заголовок (C++)|
 |--------------|---------------------|-|
 |**remquo**, **ремкуоф**, **ремкуол**|\<math.h>|\<cmath> или \<math.h>|
 
@@ -116,7 +116,7 @@ Approximate signed quotient is -3
 
 ## <a name="see-also"></a>См. также раздел
 
-[Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
+[Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [ldiv, lldiv](ldiv-lldiv.md)<br/>
 [imaxdiv](imaxdiv.md)<br/>
 [fmod, fmodf](fmod-fmodf.md)<br/>

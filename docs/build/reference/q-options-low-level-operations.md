@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Q compiler option [C++]
 - -Q compiler option [C++]
 - /Q compiler option [C++]
-ms.openlocfilehash: 722a63a43e5e08fe80b26f908c7ae92df2fdb29c
-ms.sourcegitcommit: 0f4ee9056d65043fa5a715f0ad1031c0ed30e2b6
+ms.openlocfilehash: f5342071cef76bcc736f128c344279898a61c462
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "77034523"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231498"
 ---
 # <a name="q-options-low-level-operations"></a>Параметры /Q (низкоуровневые операции)
 
@@ -20,9 +20,9 @@ ms.locfileid: "77034523"
 
 - [/Qfast_transcendentals (принудительная Быстрая трансцендентные функции)](qfast-transcendentals-force-fast-transcendentals.md): создает быстрое трансцендентные функции.
 
-- [/QIfist (отключение _ftol)](qifist-suppress-ftol.md): подавляет `_ftol`, если требуется преобразование из типа с плавающей запятой в целочисленный тип (только архитектура x86).
+- [/QIfist (отключение _ftol)](qifist-suppress-ftol.md): подавляет `_ftol` , если требуется преобразование из типа с плавающей запятой в целочисленный тип (только архитектура x86).
 
-- [/Qimprecise_fwaits (удаление fwaits внутри блоков try)](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md): удаляет команды `fwait` внутри блоков `try`.
+- [/Qimprecise_fwaits (удаление fwaits внутри блоков try)](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md): удаляет `fwait` команды внутри **`try`** блоков.
 
 - [/Кинтел-ЖКК-ерратум](qintel-jcc-erratum.md). снижает влияние на производительность, вызванное обновлением микрокода в условном коде Intel (ЖКК).
 
@@ -43,4 +43,4 @@ ms.locfileid: "77034523"
 ## <a name="see-also"></a>См. также раздел
 
 [Параметры компилятора MSVC](compiler-options.md)<br/>
-[Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)
+[Синтаксис командной строки компилятора КОМПИЛЯТОРОМ MSVC](compiler-command-line-syntax.md)

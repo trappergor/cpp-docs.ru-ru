@@ -34,12 +34,12 @@ helpviewer_keywords:
 - fmod function
 - floating-point numbers, calculating remainders
 ms.assetid: 6962d369-d11f-40b1-a6d7-6f67239f8a23
-ms.openlocfilehash: a6fcb7feeae72ff15d7b1ed0d55c5abbb408135a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 4fa3df46358932b8a62a6b8529baed4a5c9e5c49
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914960"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216977"
 ---
 # <a name="fmod-fmodf-fmodl"></a>fmod, fmodf, fmodl
 
@@ -77,19 +77,19 @@ long double fmodl(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**FMOD** возвращает остаток от деления *x* / *y*на значение с плавающей запятой. Если значение *y* равно 0,0, **FMOD** возвращает нетихом NaN. Сведения о представлении нескрытого числа NaN в семействе **printf** см. в разделе [printf](printf-printf-l-wprintf-wprintf-l.md).
+**FMOD** возвращает остаток от деления *x*y на значение с плавающей запятой  /  *y*. Если значение *y* равно 0,0, **FMOD** возвращает нетихом NaN. Сведения о представлении нескрытого числа NaN в семействе **printf** см. в разделе [printf](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Remarks
 
-Функция **FMOD** вычисляет *f* *x* / *y* остатка с плавающей запятой таким образом, что *x* = *i* \* *y* + *f*, где *i* является целым числом, *f* имеет тот же знак, что и *x*, а абсолютное значение *f* меньше, чем абсолютное значение *y*.
+Функция **FMOD** вычисляет *f* y остатка с плавающей запятой *x*  /  *y* таким образом, что *x*  =  *i* \* *y*  +  *f*, где *i* является целым числом, *f* имеет тот же знак, что и *x*, а абсолютное значение *f* меньше, чем абсолютное значение *y*.
 
-C++ допускает перегрузку, поэтому можно вызывать перегрузки **FMOD** , которые принимают и возвращают значения **float** и **Long** **Double** . В программе на языке C **FMOD** всегда принимает два аргумента **Double** и возвращает значение **типа double**.
+C++ допускает перегрузку, поэтому можно вызывать перегрузки **FMOD** , которые принимают и возвращают **`float`** **`long double`** значения и. В программе на языке C **FMOD** всегда принимает два **`double`** аргумента и возвращает **`double`** .
 
 По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
-|Функция|Обязательный заголовок|
+|Компонент|Обязательный заголовок|
 |--------------|---------------------|
 |**FMOD**, **фмодф**, **фмодл**|\<math.h>|
 
@@ -119,7 +119,7 @@ The remainder of -10.00 / 3.00 is -1.000000
 
 ## <a name="see-also"></a>См. также раздел
 
-[Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
+[Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>
 [fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)<br/>
 [floor, floorf, floorl](floor-floorf-floorl.md)<br/>

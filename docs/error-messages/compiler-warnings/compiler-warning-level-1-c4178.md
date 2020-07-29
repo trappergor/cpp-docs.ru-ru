@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4178
 ms.assetid: 2c2c8f97-a5c4-47cd-8dd2-beea172613f3
-ms.openlocfilehash: 031f0f06c1ad7471aa7ca440b32de38de51a235a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e8d20da1ec8ca6ef4a06fdd1d8417d1cb9706947
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80176082"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87196647"
 ---
 # <a name="compiler-warning-level-1-c4178"></a>Предупреждение компилятора (уровень 1) C4178
 
 константа варианта "константа" слишком велика для типа, указанного в выражении выбора вариантов
 
-Константа варианта в выражении `switch` не помещается в тип, которому она назначена.
+Константа case в **`switch`** выражении не помещается в тип, которому он присвоен.
 
 ## <a name="example"></a>Пример
 

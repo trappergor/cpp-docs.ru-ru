@@ -7,12 +7,12 @@ helpviewer_keywords:
 - typetrait header
 - type_traits
 ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
-ms.openlocfilehash: a0d7f57d13b4387dd5ba39048adf65d9ec7ca3f5
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 94178d2efd1942a7475fa7987526b021b1c6fb68
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72684416"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87201964"
 ---
 # <a name="lttype_traitsgt"></a>&lt;type_traits&gt;
 
@@ -24,24 +24,24 @@ ms.locfileid: "72684416"
 #include <type_traits>
 ```
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
-Классы и шаблоны в \<type_traits > используются для поддержки определения типа, классификации и преобразования во время компиляции. Они также используются для обнаружения ошибок, связанных с типами, и для оптимизации универсального кода. Признаки унарного типа описывают свойство типа, признаки двоичного типа описывают связь между типами, а признаки преобразования изменяют свойство типа.
+Классы и шаблоны в используются \<type_traits> для поддержки определения типа, классификации и преобразования во время компиляции. Они также используются для обнаружения ошибок, связанных с типами, и для оптимизации универсального кода. Признаки унарного типа описывают свойство типа, признаки двоичного типа описывают связь между типами, а признаки преобразования изменяют свойство типа.
 
-Вспомогательный класс `integral_constant` и его специализации шаблонов `true_type` и `false_type` формируют базовые классы для предикатов типа. *Предикат типа* — это шаблон, принимающий один или несколько аргументов типа. Если предикат типа *имеет значение true*, он является публично производным, прямым или косвенным, из [true_type](../standard-library/type-traits-typedefs.md#true_type). Если предикат типа *имеет значение false*, он является публично производным, прямым или косвенным, из [false_type](../standard-library/type-traits-typedefs.md#false_type).
+Вспомогательный класс `integral_constant` и его специализации шаблонов `true_type` и `false_type` формируют базовые классы для предикатов типа. *Предикат типа* — это шаблон, принимающий один или несколько аргументов типа. Если предикат типа *имеет значение true*, он является публично производным, прямым или косвенным, от [true_type](../standard-library/type-traits-typedefs.md#true_type). Если предикат типа *имеет значение false*, он является публично производным, прямым или косвенным, от [false_type](../standard-library/type-traits-typedefs.md#false_type).
 
 *Модификатор типа* или *признак преобразования* — это шаблон, принимающий один или несколько аргументов шаблона и имеющий один член (`type`), который является синонимом для измененного типа.
 
 ### <a name="alias-templates"></a>Шаблоны псевдонимов
 
-Чтобы упростить выражения признаков типов, предоставляются [шаблоны псевдонимов](../cpp/aliases-and-typedefs-cpp.md) для `typename some_trait<T>::type`, где *some_trait* — это имя шаблона класса. Например, [add_const](../standard-library/add-const-class.md) имеет шаблон псевдонима для своего типа, `add_const_t`, определяемого следующим образом.
+Чтобы упростить выражения признаков типов, предоставляются [шаблоны псевдонимов](../cpp/aliases-and-typedefs-cpp.md) для `typename some_trait<T>::type` , где *some_trait* — имя шаблона класса. Например, [add_const](../standard-library/add-const-class.md) имеет шаблон псевдонима для своего типа, `add_const_t`, определяемого следующим образом.
 
 ```cpp
 template <class T>
 using add_const_t = typename add_const<T>::type;
 ```
 
-Это указанные псевдонимы для членов `type`:
+Это указанные псевдонимы для `type` членов:
 
 ||||
 |-|-|-|
@@ -68,7 +68,7 @@ using add_const_t = typename add_const<T>::type;
 
 |||
 |-|-|
-|[is_void](../standard-library/is-void-class.md)|Проверяет, является ли тип **void**.|
+|[is_void](../standard-library/is-void-class.md)|Проверяет, является ли тип **`void`** .|
 |[is_null_pointer](../standard-library/is-null-pointer-class.md)|Проверяет, является ли тип типом `std::nullptr_t`.|
 |[is_integral](../standard-library/is-integral-class.md)|Проверяет, является ли тип целочисленным.|
 |[is_floating_point](../standard-library/is-floating-point-class.md)|Проверяет, является ли тип вещественным (с плавающей запятой).|
@@ -89,23 +89,23 @@ using add_const_t = typename add_const<T>::type;
 |-|-|
 |[is_reference](../standard-library/is-reference-class.md)|Проверяет, является ли тип ссылкой.|
 |[is_arithmetic](../standard-library/is-arithmetic-class.md)|Проверяет, является ли тип арифметическим.|
-|[is_fundamental](../standard-library/is-fundamental-class.md)|Проверяет, является ли тип **void** или арифметическим.|
+|[is_fundamental](../standard-library/is-fundamental-class.md)|Проверяет, является ли тип **`void`** арифметическим.|
 |[is_object](../standard-library/is-object-class.md)|Проверяет, является ли тип типом объекта.|
 |[is_scalar](../standard-library/is-scalar-class.md)|Проверяет, является ли тип скалярным.|
 |[is_compound](../standard-library/is-compound-class.md)|Проверяет, является ли тип нескалярным.|
 |[is_member_pointer](../standard-library/is-member-pointer-class.md)|Проверяет, является ли тип указателем на член.|
 
-Свойства типов
+Свойства типа
 
 |||
 |-|-|
-|[is_const](../standard-library/is-const-class.md)|Проверяет, является ли тип **константой**.|
-|[is_volatile](../standard-library/is-volatile-class.md)|Проверяет, является ли тип **временным**.|
+|[is_const](../standard-library/is-const-class.md)|Проверяет, является ли тип **`const`** .|
+|[is_volatile](../standard-library/is-volatile-class.md)|Проверяет, является ли тип **`volatile`** .|
 |[is_trivial](../standard-library/is-trivial-class.md)|Проверяет, является ли тип простейшим.|
 |[is_trivially_copyable](../standard-library/is-trivially-copyable-class.md)|Проверяет, является ли тип тривиально копируемым.|
 |[is_standard_layout](../standard-library/is-standard-layout-class.md)|Проверяет, является ли тип стандартным макетом.|
 |[is_pod](../standard-library/is-pod-class.md)|Проверяет, является ли тип типом POD.|
-|[is_literal_type](../standard-library/is-literal-type-class.md)|Проверяет, может ли тип быть переменной `constexpr` или использоваться в функции `constexpr`.|
+|[is_literal_type](../standard-library/is-literal-type-class.md)|Проверяет, может ли тип быть **`constexpr`** переменной или использоваться в **`constexpr`** функции.|
 |[is_empty](../standard-library/is-empty-class.md)|Проверяет, является ли тип пустым классом.|
 |[is_polymorphic](../standard-library/is-polymorphic-class.md)|Проверяет, является ли тип полиморфным классом.|
 |[is_abstract](../standard-library/is-abstract-class.md)|Проверяет, является ли тип абстрактным классом.|
@@ -153,8 +153,8 @@ using add_const_t = typename add_const<T>::type;
 |||
 |-|-|
 |[alignment_of](../standard-library/alignment-of-class.md)|Получает выравнивание типа.|
-|[rank](../standard-library/rank-class.md)|Получает количество измерений массива.|
-|[extent](../standard-library/extent-class.md)|Получает количество элементов в заданном измерении массива.|
+|[Рейтинг](../standard-library/rank-class.md)|Получает количество измерений массива.|
+|[экстент](../standard-library/extent-class.md)|Получает количество элементов в заданном измерении массива.|
 
 Связи типов
 
@@ -168,9 +168,9 @@ using add_const_t = typename add_const<T>::type;
 
 |||
 |-|-|
-|[add_const](../standard-library/add-const-class.md)|Создает тип **константы** из типа.|
-|[add_volatile](../standard-library/add-volatile-class.md)|Создает **временный** тип из типа.|
-|[add_cv](../standard-library/add-cv-class.md)|Создает тип **const volatile** из типа.|
+|[add_const](../standard-library/add-const-class.md)|Создает **`const`** тип из типа.|
+|[add_volatile](../standard-library/add-volatile-class.md)|Создает **`volatile`** тип из типа.|
+|[add_cv](../standard-library/add-cv-class.md)|Создает **`const volatile`** тип из типа.|
 |[remove_const](../standard-library/remove-const-class.md)|Создает отличный от const тип из типа.|
 |[remove_volatile](../standard-library/remove-volatile-class.md)|Создает отличный от volatile тип из типа.|
 |[remove_cv](../standard-library/remove-cv-class.md)|Создает отличный от const и volatile тип из типа.|
@@ -211,8 +211,8 @@ using add_const_t = typename add_const<T>::type;
 |[aligned_storage](../standard-library/aligned-storage-class.md)|Выделяет неинициализированную память для выровненного типа.|
 |[aligned_union](../standard-library/aligned-union-class.md)|Выделяет неинициализированную память для выровненного объединения с нетривиальным конструктором или деструктором.|
 |[common_type](../standard-library/common-type-class.md)|Создает общий тип для всех типов параметров пакета.|
-|[conditional](../standard-library/conditional-class.md)|Если условие имеет значение true, создает первый заданный тип; в противном случае — второй заданный тип.|
-|[decay](../standard-library/decay-class.md)|Создает тип, как передано по значению. Создает нессылочный, неконстантный или долговременный тип либо указатель на тип.|
+|[условие](../standard-library/conditional-class.md)|Если условие имеет значение true, создает первый заданный тип; в противном случае — второй заданный тип.|
+|[decay](../standard-library/decay-class.md)|Создает тип в качестве передаваемого значения. Создает нессылочный, неконстантный или долговременный тип либо указатель на тип.|
 |[enable_if](../standard-library/enable-if-class.md)|Если условие имеет значение true, создает заданный тип; в противном случае — не создает тип.|
 |[invoke_result](invoke-result-class.md)|Определяет возвращаемый тип вызываемого типа, который принимает заданные типы аргументов. <br/>Добавлено в C++ 17. |
 |[result_of](../standard-library/result-of-class.md)|Определяет возвращаемый тип вызываемого типа, который принимает заданные типы аргументов. <br/>Добавлено в C++ 14, не рекомендуется в C++ 17. |
@@ -222,10 +222,10 @@ using add_const_t = typename add_const<T>::type;
 
 |||
 |-|-|
-|[сочетании](../standard-library/conjunction-class.md)||
-|[сложения](../standard-library/disjunction-class.md)||
+|[конъюнкция](../standard-library/conjunction-class.md)||
+|[дизъюнкция](../standard-library/disjunction-class.md)||
 |[отрицание](../standard-library/negation-class.md)||
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [\<functional>](../standard-library/functional.md)

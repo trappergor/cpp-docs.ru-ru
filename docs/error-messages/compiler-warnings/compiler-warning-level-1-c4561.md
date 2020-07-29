@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4561
 ms.assetid: 3a10c12c-601b-4b6c-9861-331fd022e021
-ms.openlocfilehash: 11a1bcdc8396b1eb74121c27154b8c6c24fa92a6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: fe8ae1f8ef8180f2d3c5ba9ae2401b9447b22527
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80162287"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230640"
 ---
 # <a name="compiler-warning-level-1-c4561"></a>Предупреждение компилятора (уровень 1) C4561
 
-"__fastcall" несовместим с параметром "/CLR": преобразование в "\__stdcall"
+"__fastcall" несовместим с параметром "/CLR": преобразование в " \_ _stdcall"
 
-Соглашение о вызовах функций [__fastcall](../../cpp/fastcall.md) не может использоваться с параметром компилятора [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) . Компилятор игнорирует вызовы `__fastcall`. Чтобы устранить это предупреждение, удалите вызовы **__fastcall** или скомпилируйте без **/CLR**.
+Соглашение о вызовах функций [__fastcall](../../cpp/fastcall.md) не может использоваться с параметром компилятора [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) . Компилятор игнорирует вызовы **`__fastcall`** . Чтобы устранить это предупреждение, удалите вызовы **`__fastcall`** или скомпилируйте без **/CLR**.
 
 Следующий пример приводит к возникновению ошибки C4561:
 

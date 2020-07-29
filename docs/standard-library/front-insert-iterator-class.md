@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::front_insert_iterator [C++], container_type
 - std::front_insert_iterator [C++], reference
 ms.assetid: a9a9c075-136a-4419-928b-c4871afa033c
-ms.openlocfilehash: 455db433aff1c1aa241beeb6e2435807959b7dd4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8f60b2e5e21b559edb630be2aee377341d4480f6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317150"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87203277"
 ---
 # <a name="front_insert_iterator-class"></a>Класс front_insert_iterator
 
@@ -30,7 +30,7 @@ class front_insert_iterator;
 
 ### <a name="parameters"></a>Параметры
 
-*Контейнер*\
+*Контейнера*\
 Тип контейнера, в переднюю часть которого итератор `front_insert_iterator` вставит элементы.
 
 ## <a name="remarks"></a>Remarks
@@ -48,23 +48,23 @@ class front_insert_iterator;
 |Имя типа|Описание|
 |-|-|
 |[container_type](#container_type)|Тип, представляющий контейнер, в переднюю часть которого будет осуществляться вставка.|
-|[Ссылки](#reference)|Тип, который предоставляет ссылку на элемент последовательности под управлением связанного контейнера.|
+|[reference](#reference)|Тип, который предоставляет ссылку на элемент последовательности под управлением связанного контейнера.|
 
 ### <a name="operators"></a>Операторы
 
 |Оператор|Описание|
 |-|-|
-|[оператор](#op_star)|Оператор dereferencing используется для реализации выражения \* `i`  =  `x` вывода итератора для передней вставки.|
-|[оператор](#op_add_add)|Увеличивает `front_insert_iterator` до следующего местоположения, в котором можно сохранить значение.|
-|[оператора](#op_eq)|Оператор назначения используется для реализации выражения \* `i`  =  `x` вывода итератора для передней вставки.|
+|[станции](#op_star)|Оператор разыменования, используемый для реализации выражения итератора вывода \* `i`  =  `x` для вставки на передний план.|
+|[operator + +](#op_add_add)|Увеличивает `front_insert_iterator` до следующего местоположения, в котором можно сохранить значение.|
+|[Оператор =](#op_eq)|Оператор присваивания, используемый для реализации выражения итератора вывода \* `i`  =  `x` для вставки на передний план.|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок** \<: итератор>
+**Заголовок**:\<iterator>
 
 **Пространство имен:** std
 
-## <a name="front_insert_iteratorcontainer_type"></a><a name="container_type"></a>front_insert_iterator::container_type
+## <a name="front_insert_iteratorcontainer_type"></a><a name="container_type"></a>front_insert_iterator:: container_type
 
 Тип, представляющий контейнер, в переднюю часть которого будет осуществляться вставка.
 
@@ -106,7 +106,7 @@ The list L2 is: ( 40 10 20 ).
 */
 ```
 
-## <a name="front_insert_iteratorfront_insert_iterator"></a><a name="front_insert_iterator"></a>front_insert_iterator::front_insert_iterator
+## <a name="front_insert_iteratorfront_insert_iterator"></a><a name="front_insert_iterator"></a>front_insert_iterator:: front_insert_iterator
 
 Создает итератор, может вставлять элементы с передней стороны указанного объекта контейнера.
 
@@ -169,7 +169,7 @@ After the front insertions, the list L is:
 */
 ```
 
-## <a name="front_insert_iteratoroperator"></a><a name="op_star"></a>front_insert_iterator::оператор\*
+## <a name="front_insert_iteratoroperator"></a><a name="op_star"></a>front_insert_iterator:: operator\*
 
 Разыменовывает итератор вставки и возвращает адресованный элемент.
 
@@ -183,7 +183,7 @@ front_insert_iterator<Container>& operator*();
 
 ### <a name="remarks"></a>Remarks
 
-Используется для реализации значения**value** =  ** \*** итератора вывода Iter. Если `Iter` итератор обращается к элементу в последовательности, то = **value** ** \*** значение Iter заменяет этот элемент значением и не изменяет общее количество элементов в последовательности.
+Используется для реализации значения ** \* iter**выражения итератора вывода  =  **value**. Если `Iter` является итератором, который обращается к элементу последовательности, то значение ** \* iter**  =  **value** заменяет этот элемент значением и не изменяет общее число элементов в последовательности.
 
 ### <a name="example"></a>Пример
 
@@ -230,7 +230,7 @@ After the front insertions, the list L is:
 */
 ```
 
-## <a name="front_insert_iteratoroperator"></a><a name="op_add_add"></a>front_insert_iterator::оператор
+## <a name="front_insert_iteratoroperator"></a><a name="op_add_add"></a>front_insert_iterator:: operator + +
 
 Увеличивает `back_insert_iterator` до следующего местоположения, в котором можно сохранить значение.
 
@@ -281,7 +281,7 @@ The list L1 is: ( 30 20 10 ).
 */
 ```
 
-## <a name="front_insert_iteratoroperator"></a><a name="op_eq"></a>front_insert_iterator::оператор
+## <a name="front_insert_iteratoroperator"></a><a name="op_eq"></a>front_insert_iterator:: operator =
 
 Добавляет (заносит) значение в переднюю часть контейнера.
 
@@ -293,7 +293,7 @@ front_insert_iterator<Container>& operator=(typename Container::value_type&& val
 
 ### <a name="parameters"></a>Параметры
 
-*Валь*\
+*Val*\
 Значение, которое должно быть присвоено контейнеру.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -302,13 +302,13 @@ front_insert_iterator<Container>& operator=(typename Container::value_type&& val
 
 ### <a name="remarks"></a>Remarks
 
-Первый оператор-член вычисляет `container.push_front( val)`, затем возвращает `*this`.
+Первый оператор члена вычисляет `container.push_front( val)` , а затем возвращает **`*this`** .
 
 Второй оператор-член вычисляет
 
 `container->push_front((typename Container::value_type&&) val)`,
 
-затем возвращает `*this`.
+затем возвращает **`*this`** .
 
 ### <a name="example"></a>Пример
 
@@ -343,7 +343,7 @@ The list L1 is: ( 30 20 10 ).
 */
 ```
 
-## <a name="front_insert_iteratorreference"></a><a name="reference"></a>front_insert_iterator::ссылка
+## <a name="front_insert_iteratorreference"></a><a name="reference"></a>front_insert_iterator:: Reference
 
 Тип, который предоставляет ссылку на элемент последовательности под управлением связанного контейнера.
 
@@ -389,6 +389,6 @@ The first element in the list L is: 30.
 
 ## <a name="see-also"></a>См. также раздел
 
-[\<итератор>](../standard-library/iterator.md)\
-[Безопасность резьбы в стандартной библиотеке СЗ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Стандартная библиотечная справка по СЗ](../standard-library/cpp-standard-library-reference.md)
+[\<iterator>](../standard-library/iterator.md)\
+[Безопасность потоков в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)

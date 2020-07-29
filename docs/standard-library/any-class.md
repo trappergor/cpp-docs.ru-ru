@@ -15,18 +15,18 @@ helpviewer_keywords:
 - any/std::any::reset
 - any/std::any::swap
 - any/std::any::type
-ms.openlocfilehash: 050276da665ab6ed3eb53d9e65bfea06b88bcbea
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 66e74a7fa7f35aae9ac9e1f3ba7520e8d3f9b3f2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268756"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87203966"
 ---
 # <a name="any-class"></a>любой класс
 
-Магазины, экземпляр любого типа, удовлетворяющий требованиям конструктор, или он не имеет значения, который является именем состояние класса любого объекта.
+Хранит экземпляр любого типа, удовлетворяющего требованиям конструктора, или не имеет значения, которое называется состоянием класса любой объект.
 
-Сохраненный экземпляр называется содержащееся значение. Два состояния считаются одинаковыми, если они не должны иметь значения, или оба имеют значение и для автономной значения совпадают.
+Хранимый экземпляр называется вложенным значением. Два состояния одинаковы, если оба имеют значение, либо оба имеют значение, а содержащиеся в них значения совпадают.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -40,27 +40,27 @@ class any
 
 |||
 |-|-|
-|[any](#any)|Создает объект типа `any`.|
+|[всеми](#any)|Создает объект типа `any`.|
 
 ### <a name="functions"></a>Функции
 
 |||
 |-|-|
 |[emplace](#emplace)|Задает любое значение.|
-|[has_value](#has_value)|Возвращает **true** Если какой-либо имеет значение.|
-|[reset](#reset)|Сбрасывает запроса any.|
-|[swap](#swap)|Меняет местами два любых объектов.|
-|[type](#type)|Возвращает тип any.|
+|[has_value](#has_value)|Возвращает **`true`** , если any имеет значение.|
+|[reset](#reset)|Сбрасывает объект.|
+|[позиции](#swap)|Меняет местами два объекта.|
+|[type](#type)|Возвращает любой тип.|
 
 ### <a name="operators"></a>Операторы
 
 |||
 |-|-|
-|[оператор=](#op_eq)|Приводит к замене всех с копией другого любое.|
+|[Оператор =](#op_eq)|Заменяет объект на копию другого объекта.|
 
-## <a name="any"></a> Любой
+## <a name="any"></a><a name="any"></a>всеми
 
-Создает объект типа `any`. Также содержит деструктор.
+Создает объект типа `any`. Также включает деструктор.
 
 ```cpp
 constexpr any() noexcept;
@@ -76,7 +76,7 @@ template <class T, class U, class... Args>
 ~any();
 ```
 
-## <a name="emplace"></a> emplace-
+## <a name="emplace"></a><a name="emplace"></a>emplace
 
 Задает любое значение.
 
@@ -87,17 +87,17 @@ template <class T, class U, class... Args>
     decay_t<T>& emplace(initializer_list<U>, Args&&...);
 ```
 
-## <a name="has_value"></a> has_value
+## <a name="has_value"></a><a name="has_value"></a>has_value
 
-Возвращает **true** Если какой-либо имеет значение.
+Возвращает **`true`** , если any имеет значение.
 
 ```cpp
 bool has_value() const noexcept;
 ```
 
-## <a name="op_eq"></a> оператор =
+## <a name="operator"></a><a name="op_eq"></a>Оператор =
 
-Приводит к замене всех с копией другого любое.
+Заменяет объект на копию другого объекта.
 
 ```cpp
 any& operator=(const any& right);
@@ -109,27 +109,27 @@ template <class T>
 ### <a name="parameters"></a>Параметры
 
 *Правильно*\
-Все, копируемый в каких-либо.
+Объект, который копируется в Any.
 
-## <a name="reset"></a> Сброс
+## <a name="reset"></a><a name="reset"></a>перезапуск
 
-Сбрасывает запроса any.
+Сбрасывает объект.
 
 ```cpp
 void reset() noexcept;
 ```
 
-## <a name="swap"></a> Swap
+## <a name="swap"></a><a name="swap"></a>позиции
 
-Меняет местами два любых объектов.
+Меняет местами два объекта.
 
 ```cpp
 void swap(any& rhs) noexcept;
 ```
 
-## <a name="type"></a> Тип
+## <a name="type"></a>Тип <a name="type"></a>
 
-Возвращает тип any.
+Возвращает любой тип.
 
 ```cpp
 const type_info& type() const noexcept;

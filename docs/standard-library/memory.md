@@ -7,12 +7,12 @@ f1_keywords:
 - std::<memory>
 helpviewer_keywords:
 - memory header
-ms.openlocfilehash: 4a6383ee94d021373b984122926a5bb73e18f953
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 57b7db798b4f44650513097137299d53b4e25266
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689368"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87202965"
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
 
@@ -20,17 +20,17 @@ ms.locfileid: "72689368"
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<memory>
+**Заголовок:**\<memory>
 
 **Пространство имен:** std
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Элементы
 
 ### <a name="functions"></a>Функции
 
 |||
 |-|-|
-|[addressof](../standard-library/memory-functions.md#addressof)|Получает истинный адрес объекта.|
+|[AddressOf](../standard-library/memory-functions.md#addressof)|Получает истинный адрес объекта.|
 |[align](../standard-library/memory-functions.md#align)|Возвращает указатель на диапазон заданного размера на основе указанного выравнивания и начального адреса.|
 |[allocate_shared](../standard-library/memory-functions.md#allocate_shared)|Создает `shared_ptr` для объектов, выделенных и созданных для заданного типа с указанным распределителем.|
 |[atomic_compare_exchange_strong](../standard-library/memory-functions.md#atomic_compare_exchange_strong)||
@@ -48,9 +48,9 @@ ms.locfileid: "72689368"
 |[declare_no_pointers](../standard-library/memory-functions.md#declare_no_pointers)|Сообщает сборщику мусора, что символы, начинающиеся с указанного адреса и попадающие в блок указанного размера, не содержат трассируемых указателей.|
 |[declare_reachable](../standard-library/memory-functions.md#declare_reachable)|Уведомляет сборщик мусора, что указанный адрес относится к выделенной памяти и является доступным.|
 |[default_delete](../standard-library/memory-functions.md#default_delete)|Удаляет объекты, выделенные с помощью `operator new`. Подходит для использования с `unique_ptr`.|
-|[destroy_at](../standard-library/memory-functions.md#destroy_at)|Сокращенный метод `destroy`.|
-|[destroy](../standard-library/memory-functions.md#destroy)|Сокращенный метод `destroy`.|
-|[destroy_n](../standard-library/memory-functions.md#destroy_n)|Сокращенный метод `destroy`.|
+|[destroy_at](../standard-library/memory-functions.md#destroy_at)|Сокращенный `destroy` метод.|
+|[завершить](../standard-library/memory-functions.md#destroy)|Сокращенный `destroy` метод.|
+|[destroy_n](../standard-library/memory-functions.md#destroy_n)|Сокращенный `destroy` метод.|
 |[dynamic_pointer_cast](../standard-library/memory-functions.md#dynamic_pointer_cast)|Динамическое приведение к `shared_ptr`.|
 |[get_deleter](../standard-library/memory-functions.md#get_deleter)|Получение метода удаления из `shared_ptr`.|
 |[get_pointer_safety](../standard-library/memory-functions.md#get_pointer_safety)|Возвращает тип безопасности указателя, подразумеваемый любым сборщиком мусора.|
@@ -60,32 +60,32 @@ ms.locfileid: "72689368"
 |[pointer_safety](../standard-library/memory-enums.md#pointer_safety)|Перечисление всех возможных возвращаемых значений для `get_pointer_safety`.|
 |[return_temporary_buffer](../standard-library/memory-functions.md#return_temporary_buffer)|Отменяет выделение временной памяти, выделенной с помощью функции шаблона `get_temporary_buffer`.|
 |[static_pointer_cast](../standard-library/memory-functions.md#static_pointer_cast)|Статическое приведение к `shared_ptr`.|
-|[swap](../standard-library/memory-functions.md#swap)|Обмен двух объектов `shared_ptr` или `weak_ptr`.|
+|[позиции](../standard-library/memory-functions.md#swap)|Обмен двух объектов `shared_ptr` или `weak_ptr`.|
 |[undeclare_no_pointers](../standard-library/memory-functions.md#undeclare_no_pointers)|Сообщает сборщику мусора, что символы в блоке памяти, определенном указателем на базовый адрес и размером блока, теперь могут содержать трассируемые указатели.|
 |[undeclare_reachable](../standard-library/memory-functions.md#undeclare_reachable)|Уведомляет `garbage_collector`, что указанная область памяти является недоступной.|
 |[uninitialized_copy](../standard-library/memory-functions.md#uninitialized_copy)|Копирует объекты из указанного входного диапазона в неинициализированный конечный диапазон.|
 |[uninitialized_copy_n](../standard-library/memory-functions.md#uninitialized_copy_n)|Создает копию заданного числа элементов из итератора ввода. Копии помещаются в прямой итератор.|
-|[uninitialized_default_construct](../standard-library/memory-functions.md#uninitialized_default_construct)|Сокращенный метод `uninitialized_default_construct`.|
-|[uninitialized_default_construct_n](../standard-library/memory-functions.md#uninitialized_default_construct_n)|Сокращенный метод `uninitialized_construct`.|
+|[uninitialized_default_construct](../standard-library/memory-functions.md#uninitialized_default_construct)|Сокращенный `uninitialized_default_construct` метод.|
+|[uninitialized_default_construct_n](../standard-library/memory-functions.md#uninitialized_default_construct_n)|Сокращенный `uninitialized_construct` метод.|
 |[uninitialized_fill](../standard-library/memory-functions.md#uninitialized_fill)|Копирует объекты с указанным значением в неинициализированный конечный диапазон.|
 |[uninitialized_fill_n](../standard-library/memory-functions.md#uninitialized_fill_n)|Копирует объекты с указанным значением в указанное число элементов в неинициализированном конечном диапазоне.|
-|[uninitialized_move](../standard-library/memory-functions.md#uninitialized_move)|Сокращенный метод `uninitialized_move`.|
-|[uninitialized_move_n](../standard-library/memory-functions.md#uninitialized_move_n)|Сокращенный метод `uninitialized_move`.|
-|[uninitialized_value_construct](../standard-library/memory-functions.md#uninitialized_value_construct)|Сокращенный метод `uninitialized_value_construct`.|
-|[uninitialized_value_construct_n](../standard-library/memory-functions.md#uninitialized_value_construct_n)|Сокращенный метод `uninitialized_value_construct`.|
+|[uninitialized_move](../standard-library/memory-functions.md#uninitialized_move)|Сокращенный `uninitialized_move` метод.|
+|[uninitialized_move_n](../standard-library/memory-functions.md#uninitialized_move_n)|Сокращенный `uninitialized_move` метод.|
+|[uninitialized_value_construct](../standard-library/memory-functions.md#uninitialized_value_construct)|Сокращенный `uninitialized_value_construct` метод.|
+|[uninitialized_value_construct_n](../standard-library/memory-functions.md#uninitialized_value_construct_n)|Сокращенный `uninitialized_value_construct` метод.|
 |[uses_allocator_v](../standard-library/memory-functions.md#uses_allocator_v)||
 
 ### <a name="operators"></a>Операторы
 
 |||
 |-|-|
-|[оператор!= ](../standard-library/memory-operators.md#op_neq)|Проверяет на неравенство между объектами распределителя указанного класса.|
-|[оператор==](../standard-library/memory-operators.md#op_eq_eq)|Проверяет на равенство объекты распределителя указанного класса.|
-|[оператор>=](../standard-library/memory-operators.md#op_gt_eq)|Проверяет, является ли один объект распределителя больше или равным второму объекту распределителя указанного класса.|
-|[оператор<](../standard-library/memory-operators.md#op_lt)|Проверяет, является ли один объект распределителя меньше или равным второму объекту распределителя указанного класса.|
-|[operator\<=](../standard-library/memory-operators.md#op_gt_eq)|Проверяет, является ли один объект меньше или равным второму объекту указанного класса.|
-|[оператор>](../standard-library/memory-operators.md#op_gt)|Проверяет, является ли один объект больше второго объекта указанного класса.|
-|[оператор<<](../standard-library/memory-operators.md#op_lt_lt)|Вставляет `shared_ptr`.|
+|[operator! =](../standard-library/memory-operators.md#op_neq)|Проверяет на неравенство между объектами распределителя указанного класса.|
+|[Оператор = =](../standard-library/memory-operators.md#op_eq_eq)|Проверяет на равенство объекты распределителя указанного класса.|
+|[Оператор>=](../standard-library/memory-operators.md#op_gt_eq)|Проверяет, является ли один объект распределителя больше или равным второму объекту распределителя указанного класса.|
+|[Оператор<](../standard-library/memory-operators.md#op_lt)|Проверяет, является ли один объект распределителя меньше или равным второму объекту распределителя указанного класса.|
+|[оператор\<=](../standard-library/memory-operators.md#op_gt_eq)|Проверяет, является ли один объект меньше или равным второму объекту указанного класса.|
+|[Оператор>](../standard-library/memory-operators.md#op_gt)|Проверяет, является ли один объект больше второго объекта указанного класса.|
+|[Оператор<<](../standard-library/memory-operators.md#op_lt_lt)|Вставляет `shared_ptr`.|
 
 ### <a name="classes"></a>Классы
 
@@ -93,10 +93,10 @@ ms.locfileid: "72689368"
 |-|-|
 |[allocator](../standard-library/allocator-class.md)|Шаблон класса описывает объект, который управляет выделением и освобождением памяти для массивов объектов типа **Type**.|
 |[allocator_traits](../standard-library/allocator-traits-class.md)|Описывает объект, определяющий все сведения, необходимые контейнеру с распределителем.|
-|[auto_ptr](../standard-library/auto-ptr-class.md)|Шаблон класса описывает объект, хранящий указатель на выделенный **объект типа type** <strong>\*</strong> , который гарантирует, что объект, на который он указывает, удаляется, когда его включающий auto_ptr уничтожается.|
+|[auto_ptr](../standard-library/auto-ptr-class.md)|Шаблон класса описывает объект, хранящий указатель на выделенный объект типа **Type** <strong>\*</strong> , который гарантирует, что объект, на который он указывает, удаляется, когда его включающий auto_ptr уничтожается.|
 |[bad_weak_ptr](../standard-library/bad-weak-ptr-class.md)|Сообщает о необрабатываемом исключении weak_ptr.|
 |[enabled_shared_from_this](../standard-library/enable-shared-from-this-class.md)|Помогает сформировать `shared_ptr`.|
-|[pointer_traits](../standard-library/pointer-traits-struct.md)|Предоставляет сведения, необходимые объекту типа `allocator_traits` для описания распределителя с типом указателя `Ptr`.|
+|[pointer_traits](../standard-library/pointer-traits-struct.md)|Предоставляет сведения, необходимые объекту типа `allocator_traits` для описания распределителя с типом указателя `Ptr` .|
 |[raw_storage_iterator](../standard-library/raw-storage-iterator-class.md)|Класс-адаптер, который предоставляется, чтобы алгоритмы могли сохранять свои результаты в неинициализированной памяти.|
 |[shared_ptr](../standard-library/shared-ptr-class.md)|Помещает объект с динамическим выделением памяти в оболочку интеллектуального указателя с подсчитанными ссылками.|
 |[unique_ptr](../standard-library/unique-ptr-class.md)|Хранит указатель на собственный объект. Указатель не принадлежит никаким другим `unique_ptr`. `unique_ptr` удаляется при удалении владельца.|
@@ -108,7 +108,7 @@ ms.locfileid: "72689368"
 |-|-|
 |[allocator_arg_t](../standard-library/allocator-class.md#allocator_arg_t)||
 |[default_delete](../standard-library/default-delete-struct.md)||
-|hash|Предоставляет перегрузки, специализированные для `unique_ptr` и `shared_ptr`.|
+|hash|Предоставляет перегрузки, специализированные для `unique_ptr` и `shared_ptr` .|
 |[owner_less](../standard-library/memory-functions.md#owner_less)|Разрешает смешанные сравнения общих и слабых указателей на основе собственности.|
 |[uses_allocator](../standard-library/allocator-class.md#uses_allocator)||
 
@@ -116,9 +116,9 @@ ms.locfileid: "72689368"
 
 |||
 |-|-|
-|[allocator\<void>](../standard-library/allocator-void-class.md)|Специализация распределителя шаблонов класса для типа **void**, определяющая только типы элементов, имеющие смысл в этом специализированном контексте.|
+|[allocator\<void>](../standard-library/allocator-void-class.md)|Специализация распределителя шаблонов класса для типа **`void`** , определяющая только типы элементов, имеющие смысл в этом специализированном контексте.|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)\
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Безопасность потоков в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

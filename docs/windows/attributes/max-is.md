@@ -1,17 +1,17 @@
 ---
-title: max_is (C++ атрибут com)
+title: max_is (атрибут COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.max_is
 helpviewer_keywords:
 - max_is attribute
 ms.assetid: 7c851f5c-6649-4d77-a792-247c37d8f560
-ms.openlocfilehash: b4931962febb1e68701aa3fe271e08f3aa8d9238
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2e30595a549eefc6a5eecc27be98ded5221dcc16
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166761"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87201314"
 ---
 # <a name="max_is"></a>max_is
 
@@ -38,9 +38,9 @@ ms.locfileid: "80166761"
 
 |||
 |-|-|
-|**Применение**|Поле в **структуре** или **объединении**, параметр интерфейса, метод интерфейса|
-|**Повторяемый**|нет|
-|**Обязательные атрибуты**|None|
+|**Относится к**|Поле в **`struct`** или **`union`** , параметр интерфейса, метод интерфейса|
+|**REPEATABLE**|Нет|
+|**Требуемые атрибуты**|Нет|
 |**Недопустимые атрибуты**|**size_is**|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
@@ -52,7 +52,7 @@ ms.locfileid: "80166761"
 ## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
-[Атрибуты Typedef, Enum, Union и Struct](typedef-enum-union-and-struct-attributes.md)<br/>
+[Атрибуты typedef, enum, Union и struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [Атрибуты параметра](parameter-attributes.md)<br/>
 [first_is](first-is.md)<br/>
 [last_is](last-is.md)<br/>

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - _ptr keyword
 - value types, declaring
 ms.assetid: 49eea66e-eeba-49bd-95b0-ba297be436e3
-ms.openlocfilehash: 22c0fe4424e4df81ebb0355dfac2168af725b971
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 46f8c39affe5a3c0ad8648162f0fde5371eb30ca
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172286"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87195581"
 ---
 # <a name="how-to-declare-value-types-with-the-interior_ptr-keyword-ccli"></a>Практическое руководство. Объявление типов значений с использованием ключевого слова interior_ptr (C++/CLI)
 
@@ -22,7 +22,7 @@ ms.locfileid: "80172286"
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Description
+### <a name="description"></a>Описание
 
 В следующем примере C++/CLI показано использование **interior_ptr** с типом значения.
 
@@ -67,11 +67,11 @@ int main() {
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Description
+### <a name="description"></a>Описание
 
-В типе значения указатель **this** равен interior_ptr.
+В типе значения **`this`** указатель принимает значение interior_ptr.
 
-В теле нестатической функции-члена типа значения `V` указатель **this** является выражением типа `interior_ptr<V>`. Значение этого выражения — адрес объекта, для которого вызывается эта функция.
+В теле нестатической функции-члена типа значения `V` **`this`** — это выражение типа, `interior_ptr<V>` значение которого является адресом объекта, для которого вызывается функция.
 
 ### <a name="code"></a>Код
 
@@ -89,7 +89,7 @@ value struct V {
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Description
+### <a name="description"></a>Описание
 
 В следующем примере показано использование оператора взятия адреса со статическими членами.
 

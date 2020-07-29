@@ -5,16 +5,16 @@ f1_keywords:
 - functional/std::default_searcher
 helpviewer_keywords:
 - std::default_searcher [C++]
-ms.openlocfilehash: 2c8b93b83b271f787c993f789e1a68f84a60f016
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3b5b05dfa2613f9eeaaa18fa8066bcd44f57d1be
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368924"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87203732"
 ---
-# <a name="default_searcher-class"></a>класс default_searcher
+# <a name="default_searcher-class"></a>Класс default_searcher
 
-A `default_searcher` — это тип объекта функции для операций, которые ищут последовательность, указанную в конструкторе объекта. Поиск выполняется в рамках другой последовательности, предоставляемой оператору вызова функции объекта. Вызывает `default_searcher` [std::поиск](algorithm-functions.md#search) для выполнения поиска.
+`default_searcher`— Это тип объекта функции для операций, которые выполняют поиск последовательности, указанной в конструкторе объекта. Поиск выполняется в другой последовательности, предоставленной оператору вызова функции объекта. `default_searcher`Вызывает метод [std:: Search](algorithm-functions.md#search) для выполнения поиска.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -41,11 +41,11 @@ class default_searcher
 | **Конструктор** | |
 | [default_searcher](#default-searcher-constructor) | |
 | **Операторы** | |
-| [оператор()](#operator-call) | |
+| [оператор ()](#operator-call) | |
 
-## <a name="default_searcher-constructor"></a><a name="default-searcher-constructor"></a>default_searcher конструктор
+## <a name="default_searcher-constructor"></a><a name="default-searcher-constructor"></a>Конструктор default_searcher
 
-Строит объект `default_searcher` функции, используя последовательность для поиска и предиката равенства.
+Конструирует `default_searcher` объект функции с помощью последовательности для поиска и предиката равенства.
 
 ```cpp
 default_searcher(                   // C++17
@@ -62,23 +62,23 @@ constexpr default_searcher(         // C++20
 ### <a name="parameters"></a>Параметры
 
 *pat_first*\
-Первоначальный элемент последовательности для поиска.
+Начальный элемент последовательности для поиска.
 
 *pat_last*\
 Конец последовательности для поиска.
 
-*Pred*\
-Факультативное сравнение равенства предикат для элементов последовательности. Если тип сравнения равенства не указан, `std::equal_to`по умолчанию .
+*Возможен*\
+Необязательный предикат сравнения равенства для элементов последовательности. Если тип сравнения на равенство не указан, по умолчанию используется значение `std::equal_to` .
 
 ### <a name="remarks"></a>Remarks
 
-Бросает любое исключение, брошенное конструктором копий типов *BinaryPredicate* или *ForwardIterator.*
+Создает исключение, созданное конструктором копий типов *бинарипредикате* или *ForwardIterator* .
 
-Этот класс является новым в C-17. Конструкция сделана `constexpr`СЗ-20.
+Этот класс впервые появились в C++ 17. В c++ 20 создан конструктор **`constexpr`** .
 
-## <a name="operator"></a><a name="operator-call"></a>оператор()
+## <a name="operator"></a><a name="operator-call"></a>оператор ()
 
-Оператор вызова оператора функции. Поиск в последовательности `[first, last)` аргументов для последовательности, указанной конструктору.
+Оператор Call оператора Function. Ищет в последовательности аргументов `[first, last)` последовательность, указанную в конструкторе.
 
 ```cpp
 template <class ForwardIterator2>   // C++17
@@ -94,26 +94,26 @@ constexpr pair<ForwardIterator2, ForwardIterator2> operator()(
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*\
-Первоначальный элемент последовательности для поиска внутри.
+*началь*\
+Начальный элемент последовательности, в которой необходимо выполнить поиск.
 
-*Последний*\
-Конец последовательности для поиска внутри.
+*Последняя*\
+Конец последовательности, в которой необходимо выполнить поиск.
 
 ### <a name="remarks"></a>Remarks
 
-Возвращает пару итераторов. Первоначальный итератор *i* является эффективным результатом:
+Возвращает пару итераторов. Начальный итератор, который *я принимаю* , — это эффективный результат:
 
 `std::search( first, last, pat_first, pat_last, pred )`.
 
-Второй итератор пары является *последним,* если *я*й является *последним*. В противном случае, это эффективный результат:
+Второй итератор пары *Last* , если *i** является *последним*. В противном случае это эффективный результат:
 
 `std::next( i, std::distance( pat_first, pat_last ))`.
 
-Этот класс является новым в C-17. С-20 сделал оператор `constexpr`омование .
+Этот класс впервые появились в C++ 17. В c++ 20 был создан оператор Call **`constexpr`** .
 
 ## <a name="see-also"></a>См. также раздел
 
-[\<функциональный>](functional.md)\
+[\<functional>](functional.md)\
 [функции алгоритма](algorithm-functions.md)\
-[std::поиск](algorithm-functions.md#search)
+[std:: Search](algorithm-functions.md#search)

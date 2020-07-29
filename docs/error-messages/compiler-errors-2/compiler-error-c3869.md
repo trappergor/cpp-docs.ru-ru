@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3869
 ms.assetid: 85b2ad72-95c1-4ed6-9761-6ef66c3802b7
-ms.openlocfilehash: ae8931d3b139e0e7e7aa947ffea16700e2f12302
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 3ca56ce3c02915c88f70907d024aea3930a1aa1e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74736715"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87197544"
 ---
 # <a name="compiler-error-c3869"></a>Ошибка компилятора C3869
 
 в ограничении gcnew отсутствует пустой список параметров "()"
 
-Специальное ограничение `gcnew` было указано без пустого списка параметров. Дополнительные сведения см. [в разделе ограниченияC++для параметров универсального типа (/CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md) .
+**`gcnew`** Специальное ограничение было указано без пустого списка параметров. Дополнительные сведения см. [в разделе ограничения для параметров универсального типа (C++/CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md) .
 
 ## <a name="example"></a>Пример
 

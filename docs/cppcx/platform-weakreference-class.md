@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - Platform::WeakReference
 ms.assetid: 8cfe1977-a8c7-4b7b-b539-25c77ed4c5f1
-ms.openlocfilehash: cadafcc227347bc2f55c8600ae63a5c0996aefae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: befefba7cc76f24f6dddd58d0c5f040bfd205508
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182968"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216600"
 ---
 # <a name="platformweakreference-class"></a>Класс Platform::WeakReference
 
@@ -24,32 +24,32 @@ class WeakReference
 
 #### <a name="parameters"></a>Параметры
 
-### <a name="members"></a>Участники
+### <a name="members"></a>Элементы
 
 ### <a name="constructors"></a>Конструкторы
 
 |Член|Описание|
 |------------|-----------------|
-|[WeakReference::WeakReference](#ctor)|Инициализирует новый экземпляр класса WeakReference.|
+|[WeakReference:: WeakReference](#ctor)|Инициализирует новый экземпляр класса WeakReference.|
 
 ### <a name="methods"></a>Методы
 
 |Член|Описание|
 |------------|-----------------|
-|[WeakReference::Resolve](#resolve)|Возвращает дескриптор базовому классу ссылок или значение nullptr, если объект больше не существует.|
+|[WeakReference:: Resolve](#resolve)|Возвращает дескриптор базовому классу ссылок или значение nullptr, если объект больше не существует.|
 
 ### <a name="operators"></a>Операторы
 
 |Член|Описание|
 |------------|-----------------|
 |[WeakReference::operator=](#operator-assign)|Присваивает новое значение объекту WeakReference.|
-|[WeakReference::operator BoolType](#booltype)|Реализует безопасный шаблон bool.|
+|[WeakReference::operator BoolType](#booltype)|Реализует шаблон безопасного логического типа.|
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Класс WeakReference сам не является классом ссылок и поэтому не наследуется от Platform::Object^ и не может использоваться в сигнатуре открытого метода.
 
-## <a name="operator-assign"></a> WeakReference::operator =
+## <a name="weakreferenceoperator"></a><a name="operator-assign"></a>WeakReference:: operator =
 
 Присваивает значение WeakReference.
 
@@ -62,11 +62,11 @@ WeakReference& operator=(WeakReference&& otherArg);
 WeakReference& operator=(const volatile ::Platform::Object^ const otherArg);
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Последняя перегрузка в списке выше позволяет назначить класс ссылок переменной WeakReference. В этом случае класс ссылки опускаться до [Platform::Object](../cppcx/platform-object-class.md)^. Восстановить исходный тип позже, указав его в качестве аргумента для параметра типа в [WeakReference::Resolve\<T >](#resolve) функция-член.
+Последняя перегрузка в списке выше позволяет назначить класс ссылок переменной WeakReference. В этом случае класс ссылки является производным от класса [Platform:: Object](../cppcx/platform-object-class.md)^. Исходный тип восстанавливается позднее путем указания его в качестве аргумента для параметра типа в функции члена [WeakReference:: Resolve \<T> ](#resolve) .
 
-## <a name="booltype"></a> WeakReference::operator BoolType
+## <a name="weakreferenceoperator-booltype"></a><a name="booltype"></a>WeakReference:: operator BoolType
 
 Реализует безопасный шаблон bool для класса WeakReference. Не предназначен для явного вызова в коде.
 
@@ -76,9 +76,9 @@ WeakReference& operator=(const volatile ::Platform::Object^ const otherArg);
 BoolType BoolType();
 ```
 
-## <a name="resolve"></a> Метод WeakReference::Resolve (пространство имен Platform)
+## <a name="weakreferenceresolve-method-platform-namespace"></a><a name="resolve"></a>Метод WeakReference:: Resolve (пространство имен платформы)
 
-Возвращает дескриптор для исходного класса ссылок или `nullptr`, если объект больше не существует.
+Возвращает маркер исходного класса ссылки или **`nullptr`** значение, если объект больше не существует.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -89,7 +89,7 @@ T^ Resolve() const;
 
 ### <a name="parameters"></a>Параметры
 
-### <a name="property-valuereturn-value"></a>Значение свойства, возвращаемое значение
+### <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение
 
 Дескриптор класс ссылок, с которым ранее был связан объект WeakReference, или значение nullptr.
 
@@ -108,7 +108,7 @@ if (bar != nullptr)
 
 Обратите внимание, что параметр типа — T, а не T^.
 
-## <a name="ctor"></a> Конструктор WeakReference::WeakReference
+## <a name="weakreferenceweakreference-constructor"></a><a name="ctor"></a>Конструктор WeakReference:: WeakReference
 
 Предоставляет различные способы построения WeakReference.
 
@@ -130,6 +130,6 @@ WeakReference wr(mc);
 MyClass^ copy2 = wr.Resolve<MyClass>();
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Platform](../cppcx/platform-namespace-c-cx.md)

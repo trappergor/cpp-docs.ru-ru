@@ -28,12 +28,12 @@ helpviewer_keywords:
 - error handling
 - _query_new_handler function
 ms.assetid: 9a84b5c3-fe33-4c01-83a0-be87dc3ec518
-ms.openlocfilehash: 0cbd434ee0b75f78a2492bd6239bd89f584215ff
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9c87a63a9ed94eb1473230aedb5e9c17fcc6410b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949696"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216847"
 ---
 # <a name="_query_new_handler"></a>_query_new_handler
 
@@ -49,11 +49,11 @@ _PNH _query_new_handler(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает адрес текущей новой подпрограммы обработчика, заданную параметром **_set_new_handler**.
+Возвращает адрес текущей новой подпрограммы обработчика, заданную **_set_new_handler**.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-C++ Функция **_query_new_handler** возвращает адрес текущей функции C++ обработки исключений, заданной функцией [_set_new_handler](set-new-handler.md) . **_set_new_handler** используется для указания функции обработки исключений, которая позволяет получить управление, если оператору **New** не удается выделить память. Дополнительные сведения см. в разделе о [новых и удаленных операторах](../../cpp/new-and-delete-operators.md) справочника по языку C++.
+Функция **_Query_new_handler** c++ возвращает адрес текущей функции обработки исключений, заданной функцией [_set_new_handler](set-new-handler.md) C++. **_set_new_handler** используется для указания функции обработки исключений, которая позволяет получить управление, если **`new`** оператору не удается выделить память. Дополнительные сведения см. в разделе о [новых и удаленных операторах](../../cpp/new-and-delete-operators.md) справочника по языку C++.
 
 ## <a name="requirements"></a>Требования
 
@@ -61,13 +61,13 @@ C++ Функция **_query_new_handler** возвращает адрес тек
 |-------------|---------------------|
 |**_query_new_handler**|\<new.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Библиотеки
 
 Все версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Выделение памяти](../../c-runtime-library/memory-allocation.md)<br/>
-[free](free.md)<br/>
+[свободный](free.md)<br/>

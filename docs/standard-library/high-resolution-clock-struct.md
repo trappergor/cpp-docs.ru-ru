@@ -12,16 +12,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b00b20e7cea4fa24b37ad33d5536eb9844e6953
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 850d5e3a5434aa44e23a7f74aeb9c306ab6c0a8e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68269126"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87203212"
 ---
-# <a name="steadyclock-struct"></a>Структура steady_clock
+# <a name="steady_clock-struct"></a>Структура steady_clock
 
-Представляет *high_resolution* часов.
+Представляет *high_resolution* часы.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -33,21 +33,21 @@ class high_resolution_clock
 
 ### <a name="typedefs"></a>Определения типов
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|`duration`|Синоним для `nanoseconds`, определенный в \<chrono >.|
-|`period`|Синоним для `nano`, определенный в \<соотношение >.|
-|`rep`|Синоним для **long** **long**, тип, который используется для представления числа тактов часов при автономном создании экземпляра `duration`.|
+|`duration`|Синоним `nanoseconds` , определенный в \<chrono> .|
+|`period`|Синоним `nano` , определенный в \<ratio> .|
+|`rep`|Синоним **`long long`** типа, который используется для представления количества тактов часов в автономном экземпляре `duration` .|
 |`time_point`|Синоним для `chrono::time_point<high_resolution_clock>`.|
 
 ## <a name="functions"></a>Функции
 
 |||
 |-|-|
-|`now`|Возвращает текущее время как `time_point` значение.|
+|`now`|Возвращает текущее время в виде `time_point` значения.|
 
 ## <a name="constants"></a>Константы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|`is_steady`|Содержит **true**. Объект `high_resolution_clock` — *постоянный*.|
+|`is_steady`|Содержит **`true`** . Объект `high_resolution_clock` — *постоянный*.|

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
-ms.openlocfilehash: 5014a32386a0a140f0fdc00b23a0ac24a54afcee
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 805fffcc6cafe92df91af6b01bb53240a0d70f51
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626147"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230497"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>Элементы управления ActiveX в MFC. Добавление пользовательских свойств
 
@@ -62,7 +62,7 @@ ms.locfileid: "84626147"
 
 1. В поле **Тип реализации**выберите **Методы Get/Set**.
 
-1. В поле **тип свойства выберите значение** **Short**.
+1. В поле **тип свойства** выберите **`short`** .
 
 1. Введите уникальные имена для функций get и Set или примите имена по умолчанию.
 
@@ -94,7 +94,7 @@ ms.locfileid: "84626147"
 
 ## <a name="see-also"></a>См. также раздел
 
-[Элементы ActiveX библиотеки MFC](mfc-activex-controls.md)<br/>
-[Элементы ActiveX в MFC. Свойства](mfc-activex-controls-properties.md)<br/>
-[Элементы ActiveX в MFC. Методы](mfc-activex-controls-methods.md)<br/>
+[Элементы управления ActiveX в MFC](mfc-activex-controls.md)<br/>
+[Элементы управления ActiveX в MFC: свойства](mfc-activex-controls-properties.md)<br/>
+[Элементы управления ActiveX в MFC: методы](mfc-activex-controls-methods.md)<br/>
 [Класс COleControl](reference/colecontrol-class.md)

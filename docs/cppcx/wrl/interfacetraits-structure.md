@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::InterfaceTraits::IidCount constant
 - Microsoft::WRL::Details::InterfaceTraits::Verify method
 ms.assetid: ede0c284-19a7-4892-9738-ff3da4923d0a
-ms.openlocfilehash: 17f743a38af3ddc600a55e38905d19868d076a22
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c08c6e8bbcc16120dd44da69a2933fc3ec42f387
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371373"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216574"
 ---
 # <a name="interfacetraits-structure"></a>InterfaceTraits - структура
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из кода.
+Поддерживает инфраструктуру WRL и не предназначен для непосредственного использования в коде.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -48,40 +48,40 @@ struct __declspec(novtable) InterfaceTraits<Nil>;
 ### <a name="parameters"></a>Параметры
 
 *I0*<br/>
-Название интерфейса.
+Имя интерфейса.
 
-*ЗамаскированныйТип*<br/>
-Для `RuntimeClass` `Implements` , `ChainInterfaces`и , интерфейс, который не будет в списке поддерживаемых идентипов интерфейса.
+*клоакедтипе*<br/>
+Для `RuntimeClass` `Implements` и `ChainInterfaces` интерфейс, который не будет входить в список поддерживаемых идентификаторов интерфейса.
 
 ## <a name="remarks"></a>Remarks
 
 Реализует общие характеристики интерфейса.
 
-Второй шаблон представляет собой специализацию для скрытых интерфейсов. Третий шаблон является специализацией для параметров Nil.
+Второй шаблон является специализацией для замаскированных интерфейсов. Третий шаблон — это специализация для пустых параметров.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Элементы
 
-### <a name="public-typedefs"></a><a name="public-typedefs"></a>Публичные Типдефы
+### <a name="public-typedefs"></a><a name="public-typedefs"></a>Открытые определения типов
 
 Имя   | Описание
 ------ | ------------------------------------------
-`Base` | Синоним параметра *шаблона I0.*
+`Base` | Синоним для параметра шаблона *I0* .
 
 ### <a name="public-methods"></a>Открытые методы
 
-Имя                                                   | Описание
+name                                                   | Описание
 ------------------------------------------------------ | ----------------------------------------------------------------------------------------
-[Интерфейсные приложения::CancastTo](#cancastto)               | Указывает, может ли указанный указатель быть `Base`отлит на указатель.
-[Интерфейсты::CastToBase](#casttobase)             | Приводит определенный указатель к указателю на `Base`.
-[Интерфейсы::CastToUnknown](#casttounknown)       | Приводит определенный указатель к указателю на `IUnknown`.
-[InterfaceTraits::FillArrayWithIid](#fillarraywithiid) | Присваивает `Base` идентификатор интерфейса элементу массива, указанному аргументом индекса.
-[ИнтерфейсТрэйты::Проверить](#verify)                     | Проверяет, что `Base` правильно производные.
+[Метод InterfaceTraits:: CanCastTo](#cancastto)               | Указывает, может ли указанный указатель быть приведен к указателю на `Base` .
+[Метод InterfaceTraits:: CastToBase](#casttobase)             | Приводит определенный указатель к указателю на `Base`.
+[Метод InterfaceTraits:: CastToUnknown](#casttounknown)       | Приводит определенный указатель к указателю на `IUnknown`.
+[Метод InterfaceTraits:: FillArrayWithIid](#fillarraywithiid) | Присваивает идентификатор интерфейса `Base` элементу массива, указанному в аргументе index.
+[Метод InterfaceTraits:: Verify](#verify)                     | Проверяет правильность `Base` наследования.
 
 ### <a name="public-constants"></a>Открытые константы
 
 Имя                                   | Описание
 -------------------------------------- | ---------------------------------------------------------------------------------------
-[ИнтерфейсТрэйты::IidCount](#iidcount) | Сохраняет сятное количество идотов интерфейса, связанных с текущим `InterfaceTraits` объектом.
+[Метод InterfaceTraits:: IidCount](#iidcount) | Содержит число идентификаторов интерфейса, связанных с текущим `InterfaceTraits` объектом.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -89,13 +89,13 @@ struct __declspec(novtable) InterfaceTraits<Nil>;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** implements.h
+**Заголовок:** Implements. h
 
-**Пространство имен:** Microsoft:WRL::Details
+**Пространство имен:** Microsoft:: WRL::D состояния
 
-## <a name="interfacetraitscancastto"></a><a name="cancastto"></a>Интерфейсные приложения::CancastTo
+## <a name="interfacetraitscancastto"></a><a name="cancastto"></a>Метод InterfaceTraits:: CanCastTo
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из кода.
+Поддерживает инфраструктуру WRL и не предназначен для непосредственного использования в коде.
 
 ```cpp
 template<typename T>
@@ -108,28 +108,28 @@ static __forceinline bool CanCastTo(
 
 ### <a name="parameters"></a>Параметры
 
-*Ptr*<br/>
+*ptr*<br/>
 Имя указателя на тип.
 
 *riid*<br/>
-Идентификатор интерфейса `Base`.
+Идентификатор интерфейса `Base` .
 
-*Ppv*<br/>
-Если эта операция прошла успешно, *ppv* `Base`указывает на указанный интерфейс . В противном случае, `nullptr` *ppv* установлен на .
+*ппв*<br/>
+Если эта операция выполнена успешно, *ППВ* указывает на интерфейс, указанный параметром `Base` . В противном случае *ППВ* имеет значение **`nullptr`** .
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**верно,** если эта операция является успешной и `Base` *ptr* отбрасывается на указатель на ; в противном случае, **ложные**.
+**`true`** значение, если эта операция выполнена успешно, и тип *ptr* преобразуется в указатель на `Base` ; в противном случае — **`false`** .
 
 ### <a name="remarks"></a>Remarks
 
-Указывает, может ли указанный указатель быть `Base`отлит на указатель.
+Указывает, может ли указанный указатель быть приведен к указателю на `Base` .
 
-Для получения `Base`дополнительной информации о разделе [Public Typedefs.](#public-typedefs)
+Дополнительные сведения о `Base` см. в разделе [общедоступные определения типов](#public-typedefs) .
 
-## <a name="interfacetraitscasttobase"></a><a name="casttobase"></a>Интерфейсты::CastToBase
+## <a name="interfacetraitscasttobase"></a><a name="casttobase"></a>Метод InterfaceTraits:: CastToBase
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из кода.
+Поддерживает инфраструктуру WRL и не предназначен для непосредственного использования в коде.
 
 ```cpp
 template<typename T>
@@ -143,7 +143,7 @@ static __forceinline Base* CastToBase(
 *T*<br/>
 Тип параметра *ptr*.
 
-*Ptr*<br/>
+*ptr*<br/>
 Указатель на тип *T*.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -154,11 +154,11 @@ static __forceinline Base* CastToBase(
 
 Приводит определенный указатель к указателю на `Base`.
 
-Для получения `Base`дополнительной информации о разделе [Public Typedefs.](#public-typedefs)
+Дополнительные сведения о `Base` см. в разделе [общедоступные определения типов](#public-typedefs) .
 
-## <a name="interfacetraitscasttounknown"></a><a name="casttounknown"></a>Интерфейсы::CastToUnknown
+## <a name="interfacetraitscasttounknown"></a><a name="casttounknown"></a>Метод InterfaceTraits:: CastToUnknown
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из кода.
+Поддерживает инфраструктуру WRL и не предназначен для непосредственного использования в коде.
 
 ```cpp
 template<typename T>
@@ -172,22 +172,22 @@ static __forceinline IUnknown* CastToUnknown(
 *T*<br/>
 Тип параметра *ptr*.
 
-*Ptr*<br/>
-Указатель на *визу*Т .
+*ptr*<br/>
+Указатель на тип *T*.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на IUnknown, `Base` из которого происходит.
+Указатель на IUnknown, `Base` производный от которого является.
 
 ### <a name="remarks"></a>Remarks
 
 Приводит определенный указатель к указателю на `IUnknown`.
 
-Для получения `Base`дополнительной информации о разделе [Public Typedefs.](#public-typedefs)
+Дополнительные сведения о `Base` см. в разделе [общедоступные определения типов](#public-typedefs) .
 
-## <a name="interfacetraitsfillarraywithiid"></a><a name="fillarraywithiid"></a>InterfaceTraits::FillArrayWithIid
+## <a name="interfacetraitsfillarraywithiid"></a><a name="fillarraywithiid"></a>Метод InterfaceTraits:: FillArrayWithIid
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из кода.
+Поддерживает инфраструктуру WRL и не предназначен для непосредственного использования в коде.
 
 ```cpp
 __forceinline static void FillArrayWithIid(
@@ -198,23 +198,23 @@ __forceinline static void FillArrayWithIid(
 
 ### <a name="parameters"></a>Параметры
 
-*Индекс*<br/>
-Указатель на поле, содержащее значение индекса с нулевым уровнем.
+*номер*<br/>
+Указатель на поле, содержащее значение индекса, начинающееся с нуля.
 
-*iids*<br/>
-Массив идов интерфейса.
+*идентификаторов IID*<br/>
+Массив идентификаторов интерфейсов.
 
 ### <a name="remarks"></a>Remarks
 
-Присваивает `Base` идентификатор интерфейса элементу массива, указанному аргументом индекса.
+Присваивает идентификатор интерфейса `Base` элементу массива, указанному в аргументе index.
 
-В отличие от названия этого API, изменяется только один элемент массива; не весь массив.
+В отличие от имени этого API, изменяется только один элемент массива. не весь массив.
 
-Для получения `Base`дополнительной информации о разделе [Public Typedefs.](#public-typedefs)
+Дополнительные сведения о `Base` см. в разделе [общедоступные определения типов](#public-typedefs) .
 
-## <a name="interfacetraitsiidcount"></a><a name="iidcount"></a>ИнтерфейсТрэйты::IidCount
+## <a name="interfacetraitsiidcount"></a><a name="iidcount"></a>Метод InterfaceTraits:: IidCount
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из кода.
+Поддерживает инфраструктуру WRL и не предназначен для непосредственного использования в коде.
 
 ```cpp
 static const unsigned long IidCount = 1;
@@ -222,11 +222,11 @@ static const unsigned long IidCount = 1;
 
 ### <a name="remarks"></a>Remarks
 
-Сохраняет сятное количество идотов интерфейса, связанных с текущим `InterfaceTraits` объектом.
+Содержит число идентификаторов интерфейса, связанных с текущим `InterfaceTraits` объектом.
 
-## <a name="interfacetraitsverify"></a><a name="verify"></a>ИнтерфейсТрэйты::Проверить
+## <a name="interfacetraitsverify"></a><a name="verify"></a>Метод InterfaceTraits:: Verify
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из кода.
+Поддерживает инфраструктуру WRL и не предназначен для непосредственного использования в коде.
 
 ```cpp
 __forceinline static void Verify();
@@ -234,6 +234,6 @@ __forceinline static void Verify();
 
 ### <a name="remarks"></a>Remarks
 
-Проверяет, что `Base` правильно производные.
+Проверяет правильность `Base` наследования.
 
-Для получения `Base`дополнительной информации о разделе [Public Typedefs.](#public-typedefs)
+Дополнительные сведения о `Base` см. в разделе [общедоступные определения типов](#public-typedefs) .

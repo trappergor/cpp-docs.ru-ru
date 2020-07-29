@@ -6,28 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - __declspec keyword [C++], allocator
 - allocator __declspec keyword
-ms.openlocfilehash: 39708e8cfff7f61c3a3f763f87e1a3da36f0d4b1
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: a26cf4d2b79d64ddc9f0b60982d778e33d0f200a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077255"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216652"
 ---
-# <a name="allocator"></a>allocator
+# `allocator`
 
 **Блок, относящийся только к системам Microsoft**
 
-Спецификатор объявления **распределителя** можно применять к пользовательским функциям выделения памяти, чтобы сделать выделение видимым с помощью трассировки событий для Windows (ETW).
+**`allocator`** Спецификатор объявления можно применить к пользовательским функциям выделения памяти, чтобы сделать выделение видимым с помощью трассировки событий для Windows (ETW).
 
 ## <a name="syntax"></a>Синтаксис
 
-```
-   __declspec(allocator)
-```
+> **`__declspec(allocator)`**
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Собственный профилировщик памяти в Visual Studio работает путем сбора данных событий ETW распределения, созданных во время выполнения. Распределители в CRT и пакете Windows SDK аннотированы на уровне исходного кода, что позволяет регистрировать их данные выделения. При написании собственных распределительов все функции, возвращающие указатель на только что выделенную память кучи, могут быть дополнены `__declspec(allocator)`, как показано в этом примере для myMalloc:
+Собственный профилировщик памяти в Visual Studio работает путем сбора данных событий ETW распределения, созданных во время выполнения. Распределители в CRT и пакете Windows SDK аннотированы на уровне исходного кода, что позволяет регистрировать их данные выделения. Если вы создаете собственные распределительы, то любые функции, возвращающие указатель на только что выделенную память кучи, могут быть дополнены с помощью `__declspec(allocator)` , как показано в следующем примере для myMalloc:
 
 ```cpp
 __declspec(allocator) void* myMalloc(size_t size)

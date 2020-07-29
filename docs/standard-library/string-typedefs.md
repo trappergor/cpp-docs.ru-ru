@@ -7,12 +7,12 @@ f1_keywords:
 - string/std::u32string
 - string/std::wstring
 ms.assetid: fdca01e9-f2f1-4b59-abda-0093d760b3cc
-ms.openlocfilehash: 1ee36d67d137c74e17fff845f9d412b2673f311e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8e662e4c13012f31014817489b61ee3ed6bc36e0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376630"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87202302"
 ---
 # <a name="ltstringgt-typedefs"></a>Определения типов &lt;string&gt;
 
@@ -23,7 +23,7 @@ ms.locfileid: "81376630"
 
 ## <a name="string"></a><a name="string"></a> строковое значение
 
-Тип, описывающий специализацию шаблона класса [basic_string](../standard-library/basic-string-class.md) с элементами **символа**типа.
+Тип, описывающий специализацию шаблона класса [basic_string](../standard-library/basic-string-class.md) с элементами типа **`char`** .
 
 Другие определения типов, описывающие специализацию `basic_string`, включают [wstring](../standard-library/string-typedefs.md#wstring), [u16string](../standard-library/string-typedefs.md#u16string) и [u32string](../standard-library/string-typedefs.md#u32string).
 
@@ -45,7 +45,7 @@ basic_string<char> str("");
 
 ## <a name="u16string"></a><a name="u16string"></a>u16string
 
-Тип, описывающий специализацию шаблона класса [basic_string](../standard-library/basic-string-class.md) с элементами типа. `char16_t`
+Тип, описывающий специализацию шаблона класса [basic_string](../standard-library/basic-string-class.md) с элементами типа **`char16_t`** .
 
 Другие определения типов, описывающие специализацию `basic_string`, включают [wstring](../standard-library/string-typedefs.md#wstring), [string](../standard-library/string-typedefs.md#string) и [u32string](../standard-library/string-typedefs.md#u32string).
 
@@ -59,7 +59,7 @@ typedef basic_string<char16_t, char_traits<char16_t>, allocator<char16_t>> u16st
 
 ## <a name="u32string"></a><a name="u32string"></a>u32string
 
-Тип, описывающий специализацию шаблона класса [basic_string](../standard-library/basic-string-class.md) с элементами типа. `char32_t`
+Тип, описывающий специализацию шаблона класса [basic_string](../standard-library/basic-string-class.md) с элементами типа **`char32_t`** .
 
 Другие определения типов, описывающие специализацию `basic_string`, включают [string](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string) и [wstring](../standard-library/string-typedefs.md#wstring).
 
@@ -73,7 +73,7 @@ typedef basic_string<char32_t, char_traits<char32_t>, allocator<char32_t>> u32st
 
 ## <a name="wstring"></a><a name="wstring"></a>wstring
 
-Тип, описывающий специализацию шаблона класса [basic_string](../standard-library/basic-string-class.md) с элементами **wchar_t**типа.
+Тип, описывающий специализацию шаблона класса [basic_string](../standard-library/basic-string-class.md) с элементами типа **`wchar_t`** .
 
 Другие определения типов, описывающие специализацию `basic_string`, включают [string](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string) и [u32string](../standard-library/string-typedefs.md#u32string).
 
@@ -94,8 +94,8 @@ basic_string<wchar_t> wstr(L"");
 Список конструкторов строк см. в разделе [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).
 
 > [!NOTE]
-> Определяется размер **wchar_t.** Если код зависит от **wchar_t** определенного размера, проверьте реализацию платформы `sizeof(wchar_t)`(например, с помощью). Если требуется тип строчного символа, ширина которого гарантированно останется одинаковой на всех платформах, используйте [string](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string) или [u32string](../standard-library/string-typedefs.md#u32string).
+> Размер определяется **`wchar_t`** реализацией. Если код зависит от **`wchar_t`** конкретного размера, проверьте реализацию своей платформы (например, с помощью `sizeof(wchar_t)` ). Если требуется тип строчного символа, ширина которого гарантированно останется одинаковой на всех платформах, используйте [string](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string) или [u32string](../standard-library/string-typedefs.md#u32string).
 
 ## <a name="see-also"></a>См. также раздел
 
-[\<струнная>](../standard-library/string.md)
+[\<string>](../standard-library/string.md)
