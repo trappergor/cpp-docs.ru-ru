@@ -32,16 +32,16 @@ helpviewer_keywords:
 - SetGUID method
 - AddProperty method
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
-ms.openlocfilehash: e2bb01e6acb9298b08fddc3117ec93dd7c0c2417
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 182db37a2a42ec91066b58903c873d3e9c8289f1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212040"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216496"
 ---
 # <a name="cdbpropset-class"></a>Класс CDBPropSet
 
-Наследует от структуры `DBPROPSET` и добавляет конструктор, который инициализирует ключевые поля, а также метод доступа `AddProperty`.
+Наследует от `DBPROPSET` структуры и добавляет конструктор, который инициализирует ключевые поля, а также `AddProperty` метод доступа.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -53,7 +53,7 @@ class CDBPropSet : public tagDBPROPSET
 
 **Заголовок:** atldbcli.h
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Элементы
 
 ### <a name="methods"></a>Методы
 
@@ -61,7 +61,7 @@ class CDBPropSet : public tagDBPROPSET
 |-|-|
 |[AddProperty](#addproperty)|Добавляет свойство в набор свойств.|
 |[кдбпропсет](#cdbpropset)|Конструктор.|
-|[сетгуид](#setguid)|Задает поле `guidPropertySet` структуры `DBPROPSET`.|
+|[сетгуид](#setguid)|Задает `guidPropertySet` поле `DBPROPSET` структуры.|
 
 ### <a name="operators"></a>Операторы
 
@@ -71,7 +71,7 @@ class CDBPropSet : public tagDBPROPSET
 
 ## <a name="remarks"></a>Remarks
 
-Поставщики OLE DB и потребители используют структуры `DBPROPSET` для передачи массивов структур `DBPROP`. Каждая структура `DBPROP` представляет одно свойство, которое можно задать.
+Поставщики OLE DB и потребители используют `DBPROPSET` структуры для передачи массивов `DBPROP` структур. Каждая `DBPROP` структура представляет одно свойство, которое можно задать.
 
 ## <a name="cdbpropsetaddproperty"></a><a name="addproperty"></a>Кдбпропсет:: AddProperty
 
@@ -97,36 +97,36 @@ bool AddProperty(DWORD dwPropertyID,
 #### <a name="parameters"></a>Параметры
 
 *двпропертид*<br/>
-окне Идентификатор добавляемого свойства. Используется для инициализации `dwPropertyID` структуры `DBPROP`, добавленной в набор свойств.
+окне Идентификатор добавляемого свойства. Используется для инициализации `dwPropertyID` `DBPROP` структуры, добавленной в набор свойств.
 
 *var*<br/>
-окне Вариант, используемый для инициализации значения свойства для структуры `DBPROP`, добавленной в набор свойств.
+окне Вариант, используемый для инициализации значения свойства для структуры, `DBPROP` добавленной в набор свойств.
 
 *сзвалуе*<br/>
-окне Строка, используемая для инициализации значения свойства для структуры `DBPROP`, добавленной в набор свойств.
+окне Строка, используемая для инициализации значения свойства для `DBPROP` структуры, добавленной в набор свойств.
 
 *bValue*<br/>
-окне `BYTE` или логическое значение, используемое для инициализации значения свойства для структуры `DBPROP`, добавленной в набор свойств.
+окне `BYTE`Логическое значение или, используемое для инициализации значения свойства для `DBPROP` структуры, добавленной в набор свойств.
 
 *Nзначение*<br/>
-окне Целочисленное значение, используемое для инициализации значения свойства для структуры `DBPROP`, добавленной в набор свойств.
+окне Целочисленное значение, используемое для инициализации значения свойства для `DBPROP` структуры, добавленной в набор свойств.
 
 *флтвалуе*<br/>
-окне Значение с плавающей запятой, используемое для инициализации значения свойства для структуры `DBPROP`, добавленной в набор свойств.
+окне Значение с плавающей запятой, используемое для инициализации значения свойства для `DBPROP` структуры, добавленной в набор свойств.
 
 *дблвалуе*<br/>
-окне Значение с плавающей запятой двойной точности, используемое для инициализации значения свойства для структуры `DBPROP`, добавленной в набор свойств.
+окне Значение двойной точности с плавающей запятой, используемое для инициализации значения свойства для `DBPROP` структуры, добавленной в набор свойств.
 
 *цивалуе*<br/>
-окне Значение валюты CY, используемое для инициализации значения свойства для структуры `DBPROP`, добавленной в набор свойств.
+окне Значение валюты CY, используемое для инициализации значения свойства для `DBPROP` структуры, добавленной в набор свойств.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true** , если свойство было успешно добавлено. В противном случае — **false**.
+**`true`** значение, если свойство было успешно добавлено. В противном случае — **`false`** .
 
 ## <a name="cdbpropsetcdbpropset"></a><a name="cdbpropset"></a>Кдбпропсет:: Кдбпропсет
 
-Конструктор. Инициализирует поля `rgProperties`, `cProperties`и `guidPropertySet` структуры [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) .
+Конструктор. Инициализирует `rgProperties` поля, `cProperties` и `guidPropertySet` структуры [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) .
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -141,14 +141,14 @@ CDBPropSet();
 #### <a name="parameters"></a>Параметры
 
 *guid*<br/>
-окне Идентификатор GUID, используемый для инициализации поля `guidPropertySet`.
+окне Идентификатор GUID, используемый для инициализации `guidPropertySet` поля.
 
 *Prop*<br/>
-окне Другой объект `CDBPropSet` для создания копии.
+окне Другой `CDBPropSet` объект для создания копии.
 
 ## <a name="cdbpropsetsetguid"></a><a name="setguid"></a>Кдбпропсет:: Сетгуид
 
-Задает поле `guidPropertySet` в структуре `DBPROPSET`.
+Задает `guidPropertySet` поле в `DBPROPSET` структуре.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -178,7 +178,7 @@ CDBPropSet& operator =(CDBPropSet& propset) throw();
 ## <a name="see-also"></a>См. также раздел
 
 [Шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
-[Класс CDBPropIDSet](../../data/oledb/cdbpropidset-class.md)<br/>
-Структура [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))
-[DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85))
+[Справочник по шаблонам потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Класс Кдбпропидсет](../../data/oledb/cdbpropidset-class.md)<br/>
+[Структура DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) 
+ [Структура DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85))

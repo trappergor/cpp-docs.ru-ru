@@ -7,14 +7,14 @@ helpviewer_keywords:
 - is_pointer class
 - is_pointer
 ms.assetid: 44e0a403-7241-4e0a-8922-32877bcb9a4c
-ms.openlocfilehash: d8b15f9eb5ef817f5576387b0d8119b86aa86af7
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3429875f53d65de0161c4d6f87fde7a335bb369e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455735"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222346"
 ---
-# <a name="ispointer-class"></a>Класс is_pointer
+# <a name="is_pointer-class"></a>Класс is_pointer
 
 Проверяет, является ли тип указателем.
 
@@ -30,9 +30,9 @@ struct is_pointer;
 *Ty*\
 Запрашиваемый тип.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Экземпляр предиката типа содержит значение true, если тип *Ty* является указателем на **void**, указателем на объект или указателем на функцию или `cv-qualified` формой одного из них, в противном случае — значение false. Обратите `is_pointer` внимание, что содержит значение false, если *Ty* — указатель на член или указатель на функцию-член.
+Экземпляр предиката типа содержит значение true, если тип *Ty* — указатель на **`void`** , указатель на объект или указатель на функцию или `cv-qualified` форму одного из них, в противном случае — значение false. Обратите внимание, что `is_pointer` содержит значение false, если *Ty* — указатель на член или указатель на функцию-член.
 
 ## <a name="example"></a>Пример
 
@@ -74,11 +74,11 @@ is_pointer<int *> == true
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<type_traits>
+**Заголовок:**\<type_traits>
 
 **Пространство имен:** std
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [<type_traits>](../standard-library/type-traits.md)\
 [Класс is_member_pointer](../standard-library/is-member-pointer-class.md)\

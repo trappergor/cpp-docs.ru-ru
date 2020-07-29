@@ -1,17 +1,17 @@
 ---
-title: wire_marshal (C++ атрибут com)
+title: wire_marshal (атрибут COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.wire_marshal
 helpviewer_keywords:
 - wire_marshal attribute
 ms.assetid: 244f9d72-776d-4ebd-b60a-cee600a126b5
-ms.openlocfilehash: 0bf6b2ab353b8ad8866de5b2c7c79959306ee954
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ff01d20117e2f04aca96b0fee7489d7195cc7488
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80215232"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213779"
 ---
 # <a name="wire_marshal"></a>wire_marshal
 
@@ -53,14 +53,14 @@ ms.locfileid: "80215232"
 
 |||
 |-|-|
-|**Применение**|**typedef**|
-|**Повторяемый**|нет|
-|**Обязательные атрибуты**|None|
-|**Недопустимые атрибуты**|None|
+|**Относится к**|**`typedef`**|
+|**REPEATABLE**|Нет|
+|**Требуемые атрибуты**|Нет|
+|**Недопустимые атрибуты**|Нет|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
-[Атрибуты Typedef, Enum, Union и Struct](typedef-enum-union-and-struct-attributes.md)
+[Атрибуты typedef, enum, Union и struct](typedef-enum-union-and-struct-attributes.md)

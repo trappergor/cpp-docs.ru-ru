@@ -5,20 +5,20 @@ helpviewer_keywords:
 - CString objects, exceptions
 - exception handling, cleanup code
 ms.assetid: 28b9ce70-be63-4a0d-92a8-44bbfbc95e83
-ms.openlocfilehash: d131ce8ebe5158d7f3a567580064068742b63707
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48c8f1c0040236a4f7bf27a2d5ad985ae343c03a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62236632"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222060"
 ---
 # <a name="cstring-exception-cleanup"></a>Очистка исключений CString
 
-В предыдущих версиях MFC, было важно Очистить [CString](../atl-mfc-shared/reference/cstringt-class.md) объекты после использования. С MFC версии 3.0 и более поздних явная очистка больше не требуется.
+В предыдущих версиях MFC было важно очищать объекты [CString](../atl-mfc-shared/reference/cstringt-class.md) после использования. В MFC версии 3,0 и более поздней явная очистка больше не требуется.
 
-В разделе, MFC теперь использует механизм обработки исключений языка C++ у вас нет беспокоиться об очистке после исключения. Описание того, как C++ «освобождает» стек после исключение перехватывается, см. в разделе [try, catch и throw инструкций](../cpp/try-throw-and-catch-statements-cpp.md). Даже если вы используете MFC **попробуйте**/**CATCH** макросов вместо ключевые слова C++ **попробуйте** и **catch**, MFC использует C++ механизм исключений под, поэтому вам по-прежнему не обязательно должны явно очистить.
+В механизме обработки исключений C++, который теперь используется библиотекой MFC, не нужно беспокоиться об очистке после возникновения исключения. Сведения о том, как перехватывается стек, порожденный с помощью C++ "Unwind" после исключения, см. [в инструкциях try, catch и Throw](../cpp/try-throw-and-catch-statements-cpp.md). Даже если вы используете макрос **try** / **catch** вместо ключевых слов C++ **`try`** и **`catch`** , MFC использует механизм исключений c++ под, поэтому вам по-прежнему не нужно явно очищать.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Строки (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
+[Строки (ATL и MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 [Обработка исключений](../mfc/exception-handling-in-mfc.md)

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - try-catch exception handling [MFC], exception contents
 - throwing exceptions [MFC], exception contents
 ms.assetid: dfda4782-b969-4f60-b867-cc204ea7f33a
-ms.openlocfilehash: 8554dda2f465aa058cea3d257c22ec38bc6e2c18
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 7500db2a29f9d4ccef37b9265f5f2968c2d07993
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625894"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217952"
 ---
 # <a name="exceptions-examining-exception-contents"></a>Исключения. Анализ содержимого исключений
 
-Хотя аргумент блока **catch** может быть практически любого типа данных, функции MFC создают исключения типов, производных от класса `CException` . Чтобы перехватить исключение, вызванное функцией MFC, необходимо написать блок **catch** , аргумент которого является указателем на `CException` объект (или объект, производный от `CException` , например `CMemoryException` ). В зависимости от конкретного типа исключения можно изучить элементы данных объекта исключения, чтобы собрать сведения о конкретной причине исключения.
+Хотя **`catch`** аргумент блока может быть практически любого типа данных, функции MFC создают исключения типов, производных от класса `CException` . Чтобы перехватить исключение, вызванное функцией MFC, необходимо написать блок, **`catch`** аргумент которого является указателем на `CException` объект (или объект, производный от `CException` , например `CMemoryException` ). В зависимости от конкретного типа исключения можно изучить элементы данных объекта исключения, чтобы собрать сведения о конкретной причине исключения.
 
 Например, `CFileException` тип имеет `m_cause` элемент Data, который содержит перечислимый тип, указывающий причину исключения файла. Примеры возможных возвращаемых значений: `CFileException::fileNotFound` и `CFileException::readOnly` .
 

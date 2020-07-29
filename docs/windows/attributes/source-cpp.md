@@ -1,17 +1,17 @@
 ---
-title: Источник (C++ атрибут com)
+title: Источник (атрибут COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.source
 helpviewer_keywords:
 - source attribute
 ms.assetid: 1878d05d-7709-4e97-b114-c62f38f5140e
-ms.openlocfilehash: 5f961513b948c3195aea864d97313ac09e97344e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 274e446aecc4d0d7096211bbae88e0f170ae44a2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166228"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213831"
 ---
 # <a name="source-c"></a>source (C++)
 
@@ -25,12 +25,12 @@ ms.locfileid: "80166228"
 
 ### <a name="parameters"></a>Параметры
 
-*интерфейс*<br/>
+*interfaces*;<br/>
 Один или несколько интерфейсов, которые указываются при применении атрибута Source к классу. Этот параметр не используется, если источник применяется к свойству или методу.
 
 ## <a name="remarks"></a>Remarks
 
-**Исходный** C++ атрибут имеет те же функциональные возможности, что и [Исходный](/windows/win32/Midl/source) атрибут MIDL.
+**Исходный** атрибут C++ имеет те же функциональные возможности, что и [Исходный](/windows/win32/Midl/source) атрибут MIDL.
 
 Можно использовать атрибут [по умолчанию](default-cpp.md) , чтобы указать исходный интерфейс по умолчанию для объекта.
 
@@ -74,16 +74,16 @@ class NN : public b
 
 |||
 |-|-|
-|**Применение**|**класс**, **Структура**, **интерфейс**|
-|**Повторяемый**|нет|
-|**Обязательные атрибуты**|`coclass` (при применении к классу или структуре)|
-|**Недопустимые атрибуты**|None|
+|**Относится к**|**`class`**, **`struct`** , **интерфейс**|
+|**REPEATABLE**|Нет|
+|**Требуемые атрибуты**|`coclass`(при применении к классу или структуре)|
+|**Недопустимые атрибуты**|Нет|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
-[Атрибуты классов](class-attributes.md)<br/>
+[Атрибуты класса](class-attributes.md)<br/>
 [Атрибуты метода](method-attributes.md)<br/>
 [кокласс](coclass.md)

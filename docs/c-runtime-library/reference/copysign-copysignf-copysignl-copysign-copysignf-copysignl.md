@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _copysign function
 - copysignf function
 ms.assetid: 009216d6-72a2-402d-aa6c-91d924b2c9e4
-ms.openlocfilehash: 1575f0863b56256513cf6a93cf7b63f3d921af57
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4dea95240dcbd3dbbf221ff7af80a9e3ee554e23
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942858"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221943"
 ---
 # <a name="copysign-copysignf-copysignl-_copysign-_copysignf-_copysignl"></a>copysign, copysignf, copysignl, _copysign, _copysignf, _copysignl
 
@@ -88,7 +88,7 @@ long double _copysignl(
 *x*<br/>
 Значение с плавающей запятой, которое возвращается как абсолютное значение результата.
 
-*y*<br/>
+*&*<br/>
 Значение с плавающей запятой, которое возвращается как знак результата.
 
 [Подпрограммы поддержки чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)
@@ -97,9 +97,9 @@ long double _copysignl(
 
 Функции **кописигн** возвращают значение с плавающей запятой, объединяющее величину *x* и знак *y*. Ошибка не возвращается.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **кописигн** , которые принимают и возвращают значения **типа float** или **Long** . В программе на языке C **кописигн** всегда принимает и возвращает значение **типа Double**.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **кописигн** , которые принимают и возвращают **`float`** **`long double`** значения или. В программе на языке C **кописигн** всегда принимает и возвращает **`double`** .
 
 ## <a name="requirements"></a>Требования
 
@@ -108,9 +108,9 @@ long double _copysignl(
 |**_copysign**|\<float.h>|
 |**кописигн**, **кописигнф**, **кописигнл**, **_copysignf**, **_copysignl**|\<math.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)<br/>
 [_chgsign, _chgsignf, _chgsignl](chgsign-chgsignf-chgsignl.md)<br/>

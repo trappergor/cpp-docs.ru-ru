@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::sub_match [C++], iterator
 - std::sub_match [C++], value_type
 ms.assetid: 804e2b9e-d16a-4c4c-ac60-024e0b2dd0e8
-ms.openlocfilehash: 460f79fe0f23643fafcebb64aecf2988bdb0debe
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 57aa4ec366588f71f41a747a2dc5127f87ea2e2e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376586"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222203"
 ---
 # <a name="sub_match-class"></a>Класс sub_match
 
@@ -41,12 +41,12 @@ class sub_match
 
 ## <a name="parameters"></a>Параметры
 
-*BidIt*\
+*Двунаправленный*\
 Тип итератора для подстрок соответствия.
 
 ## <a name="remarks"></a>Remarks
 
-Шаблон класса описывает объект, который обозначает последовательность символов, которые соответствовали группе захвата в [вызове regex_match](../standard-library/regex-functions.md#regex_match) или [regex_search.](../standard-library/regex-functions.md#regex_search) Объекты типа [Класс match_results](../standard-library/match-results-class.md) содержат массив таких объектов, по одному для каждой группы записи в регулярном выражении, которое использовалось при поиске.
+Шаблон класса описывает объект, обозначающий последовательность символов, соответствующих группе захвата в вызове [regex_match](../standard-library/regex-functions.md#regex_match) или для [regex_search](../standard-library/regex-functions.md#regex_search). Объекты типа [Класс match_results](../standard-library/match-results-class.md) содержат массив таких объектов, по одному для каждой группы записи в регулярном выражении, которое использовалось при поиске.
 
 Если группа записи не соответствует члену данных объекта, `matched` содержит значение false, а два итератора `first` и `second` (наследуются от базового класса `std::pair`) равны. Если обнаружено соответствие группе записи, `matched` содержит значение true, итератор `first` указывает на первый символ в целевой последовательности, которая соответствует группе записи, а итератор `second` указывает на одну позицию после последнего символа в целевой последовательности, которая соответствует группе записи. Обратите внимание, что для соответствия нулевой длины член `matched` должен содержать значение true, два итератора быть эквиваленты и оба указывать на одну позицию соответствия.
 
@@ -61,23 +61,23 @@ class sub_match
 |Имя типа|Описание|
 |-|-|
 |[difference_type](#difference_type)|Тип разницы итератора.|
-|[Итератор](#iterator)|Тип итератора.|
-|[Value_type](#value_type)|Тип элемента.|
+|[итераци](#iterator)|Тип итератора.|
+|[value_type](#value_type)|Тип элемента.|
 
 ### <a name="member-functions"></a>Функции элементов
 
 |Функция-член|Описание|
 |-|-|
-|[Сравнить](#compare)|Сравнение подстроки и последовательности.|
-|[длина](#length)|Возвращает длину частичного совпадения.|
-|[Соответствует](#matched)|Указывает, успешно ли выполнено сопоставление.|
-|[Ул](#str)|Преобразует подстроку в строку.|
+|[равенств](#compare)|Сравнение подстроки и последовательности.|
+|[length](#length)|Возвращает длину частичного совпадения.|
+|[соответствует](#matched)|Указывает, успешно ли выполнено сопоставление.|
+|[str](#str)|Преобразует подстроку в строку.|
 
 ### <a name="operators"></a>Операторы
 
 |Оператор|Описание|
 |-|-|
-|[оператор basic_string<value_type>](#op_basic_string_lt_value_type_gt)|Приводит подстроку соответствия к строке.|
+|[basic_string оператора<value_type>](#op_basic_string_lt_value_type_gt)|Приводит подстроку соответствия к строке.|
 
 ## <a name="example"></a>Пример
 
@@ -133,11 +133,11 @@ compare(sub) == 0
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<regex>
+**Заголовок:**\<regex>
 
 **Пространство имен:** std
 
-## <a name="sub_matchcompare"></a><a name="compare"></a>sub_match::compare
+## <a name="sub_matchcompare"></a><a name="compare"></a>sub_match:: Compare
 
 Сравнение подстроки и последовательности.
 
@@ -152,10 +152,10 @@ int compare(const value_type *ptr) const;
 *Правильно*\
 Подстрока для сравнения.
 
-*Ул*\
+*str*\
 Строка для сравнения.
 
-*Ptr*\
+*указатель*\
 Последовательность, оканчивающаяся нулевым символом, для сравнения.
 
 ### <a name="remarks"></a>Remarks
@@ -170,7 +170,7 @@ int compare(const value_type *ptr) const;
 
 в противном случае — положительное значение.
 
-## <a name="sub_matchdifference_type"></a><a name="difference_type"></a>sub_match::difference
+## <a name="sub_matchdifference_type"></a><a name="difference_type"></a>sub_match::d ifference_type
 
 Тип разницы итератора.
 
@@ -182,7 +182,7 @@ typedef typename iterator_traits<BidIt>::difference_type difference_type;
 
 Typedef является синонимом `iterator_traits<BidIt>::difference_type`.
 
-## <a name="sub_matchiterator"></a><a name="iterator"></a>sub_match::iterator
+## <a name="sub_matchiterator"></a><a name="iterator"></a>sub_match:: итератор
 
 Тип итератора.
 
@@ -194,7 +194,7 @@ typedef BidIt iterator;
 
 Typedef является синонимом параметра шаблона `Bidit`.
 
-## <a name="sub_matchlength"></a><a name="length"></a>sub_match::длина
+## <a name="sub_matchlength"></a><a name="length"></a>sub_match:: Length
 
 Возвращает длину частичного совпадения.
 
@@ -206,7 +206,7 @@ difference_type length() const;
 
 Функция-член возвращает длину совпадающей последовательности либо нуль, если последовательность не совпадает.
 
-## <a name="sub_matchmatched"></a><a name="matched"></a>sub_match::соответствует
+## <a name="sub_matchmatched"></a><a name="matched"></a>sub_match:: сопоставлено
 
 Указывает, успешно ли выполнено сопоставление.
 
@@ -216,9 +216,9 @@ bool matched;
 
 ### <a name="remarks"></a>Remarks
 
-Участник **справедливо** только в том случае, если группа захвата, связанная с, `*this` была частью регулярного совпадения выражения.
+Элемент хранится только в том **`true`** случае, если группа захвата, связанная с **`*this`** , является частью сопоставления регулярного выражения.
 
-## <a name="sub_matchoperator-basic_stringltvalue_typegt"></a><a name="op_basic_string_lt_value_type_gt"></a>sub_match::оператор&lt;basic_string value_type&gt;
+## <a name="sub_matchoperator-basic_stringltvalue_typegt"></a><a name="op_basic_string_lt_value_type_gt"></a>sub_match:: operator basic_string &lt; value_type&gt;
 
 Приводит подстроку соответствия к строке.
 
@@ -230,7 +230,7 @@ operator basic_string<value_type>() const;
 
 Оператор-член возвращает `str()`.
 
-## <a name="sub_matchstr"></a><a name="str"></a>sub_match::str
+## <a name="sub_matchstr"></a><a name="str"></a>sub_match:: str
 
 Преобразует подстроку в строку.
 
@@ -242,7 +242,7 @@ basic_string<value_type> str() const;
 
 Функция-член возвращает значение `basic_string<value_type>(first, second)`.
 
-## <a name="sub_matchvalue_type"></a><a name="value_type"></a>sub_match::value_type
+## <a name="sub_matchvalue_type"></a><a name="value_type"></a>sub_match:: value_type
 
 Тип элемента.
 

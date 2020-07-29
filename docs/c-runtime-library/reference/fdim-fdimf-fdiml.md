@@ -33,12 +33,12 @@ helpviewer_keywords:
 - fdimf function
 - fdiml function
 ms.assetid: 2d4ac639-51e9-462d-84ab-fb03b06971a0
-ms.openlocfilehash: 74935f724b678b08e39604d9916c7c5de5925aee
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1a7bbeaf77c94f620a82f77fb1aad3c71c34f2ef
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941296"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221917"
 ---
 # <a name="fdim-fdimf-fdiml"></a>fdim, fdimf, fdiml
 
@@ -78,7 +78,7 @@ long double fdiml(
 *x*<br/>
 Первое значение в вычитании.
 
-*y*<br/>
+*&*<br/>
 Второе значение в вычитании.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -92,30 +92,30 @@ long double fdiml(
 
 В случае неудачи может возвращать одну из следующих ошибок:
 
-|Проблемы|Назад|
+|Проблема|Возвращает|
 |-----------|------------|
 |Ошибка переполнения диапазона|+HUGE_VAL, +HUGE_VALF или +HUGE_VALL|
 |Ошибка недостаточного заполнения диапазона|правильное значение (после округления)|
-|*x* или *y* является NaN|NaN|
+|*x* или *y* является NaN|Не число|
 
-Ошибки сообщаются, как указано в [_matherr](matherr.md).
+Сообщает об ошибках, как указано в [_matherr](matherr.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **фдим** , которые принимают и возвращают типы **float** и **Long** **Double** . В программе на языке C **фдим** всегда принимает и возвращает значение **типа Double**.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **фдим** , которые принимают и возвращают **`float`** **`long double`** типы и. В программе на языке C **фдим** всегда принимает и возвращает **`double`** .
 
-За исключением обработки NaN, эта функция эквивалентна `fmax(x - y, 0)`.
+За исключением обработки NaN, эта функция эквивалентна `fmax(x - y, 0)` .
 
 ## <a name="requirements"></a>Требования
 
-|Функция|Заголовок C|Заголовок C++|
+|Компонент|Заголовок C|Заголовок C++|
 |--------------|--------------|------------------|
 |**фдим**, **fdimf**, **фдимл**|\<math.h>|\<cmath>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Алфавитный указатель функций](crt-alphabetical-function-reference.md)<br/>
+[Алфавитный справочник по функциям](crt-alphabetical-function-reference.md)<br/>
 [fmax, fmaxf, fmaxl](fmax-fmaxf-fmaxl.md)<br/>
 [abs, labs, llabs, _abs64](abs-labs-llabs-abs64.md)<br/>

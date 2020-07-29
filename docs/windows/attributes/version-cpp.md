@@ -1,5 +1,5 @@
 ---
-title: версия (C++ атрибут com)
+title: версия (атрибут COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.version
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - version attribute
 - version information, version attribute
 ms.assetid: db6ce5d8-82c2-4329-b1a8-8ca2f67342cb
-ms.openlocfilehash: e5fcf80ef753a869b8798d6ab9c8e9f8ecff16fd
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b537f56c39c33abc52897cf53ea2cc0fb24ee458
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80165994"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213805"
 ---
 # <a name="version-c"></a>version (C++)
 
@@ -43,14 +43,14 @@ ms.locfileid: "80165994"
 
 |||
 |-|-|
-|**Применение**|**класс**, **Структура**|
-|**Повторяемый**|нет|
-|**Обязательные атрибуты**|**кокласс**|
-|**Недопустимые атрибуты**|None|
+|**Относится к**|**`class`**, **`struct`**|
+|**REPEATABLE**|Нет|
+|**Требуемые атрибуты**|**кокласс**|
+|**Недопустимые атрибуты**|Нет|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>См. также раздел
 
 [Атрибуты компилятора](compiler-attributes.md)<br/>
-[Атрибуты классов](class-attributes.md)
+[Атрибуты класса](class-attributes.md)

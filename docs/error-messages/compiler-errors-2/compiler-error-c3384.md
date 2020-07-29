@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3384
 ms.assetid: c9f92c6a-62a9-4333-b2b1-bc55c7f288b6
-ms.openlocfilehash: 059518462bd7a0463fd03fec6434acbbda7ee60a
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: fdc129be94fce3f97eca988d8080e9d01fd48248
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756439"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221098"
 ---
 # <a name="compiler-error-c3384"></a>Ошибка компилятора C3384
 
 "параметр_типа": ограничение значения и ссылочное ограничение взаимно исключают друг друга
 
-Невозможно ограничить универсальный тип до `value class` и `ref class`.
+Универсальный тип нельзя ограничить как для, так **`value class`** и для **`ref class`** .
 
-Дополнительные сведения см. [в разделе ограниченияC++для параметров универсального типа (/CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md) .
+Дополнительные сведения см. [в разделе ограничения для параметров универсального типа (C++/CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md) .
 
 ## <a name="example"></a>Пример
 

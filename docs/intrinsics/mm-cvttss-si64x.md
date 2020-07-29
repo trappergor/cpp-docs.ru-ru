@@ -7,18 +7,18 @@ helpviewer_keywords:
 - _mm_cvttss_si64x intrinsic
 - cvttss2si instruction
 ms.assetid: f9a3fd07-5bd8-4758-8744-6315c082cf87
-ms.openlocfilehash: 69016a4e23b020b2c4c79c6b97a5a76f2b2dc028
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 6d920a5c59cacb23c7fb155c7ac8e813a9b0e8d0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217413"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217991"
 ---
 # <a name="_mm_cvttss_si64x"></a>_mm_cvttss_si64x
 
 **Блок, относящийся только к системам Microsoft**
 
-Выдает расширенную версию x64 инструкции CONVERT с плавающей запятой одиночной точности до 64-разрядного целого числа (`cvttss2si`).
+Выдает расширенную версию x64 инструкции CONVERT с плавающей запятой одиночной точности до 64-разрядного целого числа ( `cvttss2si` ).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -30,8 +30,8 @@ __int64 _mm_cvttss_si64x(
 
 ### <a name="parameters"></a>Параметры
 
-*value*\
-окне Структура `__m128` , содержащая значения с плавающей точкой одиночной точности.
+*значений*\
+окне **`__m128`** Структура, содержащая значения с плавающей точкой одиночной точности.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -39,15 +39,15 @@ __int64 _mm_cvttss_si64x(
 
 ## <a name="requirements"></a>Требования
 
-|Встроенная функция|Архитектура|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`_mm_cvttss_si64x`|X64|
 
-**Заголовочный файл** \<> Intrin. h
+**Файл заголовка** \<intrin.h>
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Внутренняя функция отличается от `_mm_cvtss_si64x` того, что неточные преобразования усекаются в сторону нуля. `__m128` Поскольку структура представляет регистр XMM, созданная инструкция перемещает данные из регистра XMM в системную память.
+Внутренняя функция отличается от того `_mm_cvtss_si64x` , что неточные преобразования усекаются в сторону нуля. Поскольку **`__m128`** структура представляет регистр XMM, созданная инструкция перемещает данные из регистра XMM в системную память.
 
 Эта процедура доступна только как встроенная функция.
 
@@ -90,4 +90,4 @@ int main()
 ## <a name="see-also"></a>См. также
 
 [__m128](../cpp/m128.md)\
-[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)
+[Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)

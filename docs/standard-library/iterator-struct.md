@@ -7,16 +7,16 @@ helpviewer_keywords:
 - iterator class
 - iterator struct
 ms.assetid: c74c8000-8b18-4829-9b71-6103c4229b74
-ms.openlocfilehash: 64c9be76cb92d818e40714dd141ded3a8cc17c8a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b45cdb5c3d4608296cca34ad6a0be6e25b588d28
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455623"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222307"
 ---
 # <a name="iterator-struct"></a>Структура iterator
 
-Пустая базовая структура, используемая, чтобы гарантировать, что определяемый пользователем класс итератора правильно работает с `iterator_trait`s.
+Пустая базовая структура, используемая, чтобы гарантировать, что определяемый пользователем класс итератора правильно работает с `iterator_trait` s.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -31,7 +31,7 @@ struct iterator {
    };
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Данная структура-шаблон используется как базовый тип для всех итераторов. Она определяет типы членов
 
@@ -47,7 +47,7 @@ struct iterator {
 
 - `reference` (синоним для параметра-шаблона `Reference`).
 
-Обратите `value_type` внимание, что не должен быть константным `pointer` типом, даже если точки в объекте **const** `Type` и Reference обозначают объект **const** `Type`.
+Обратите внимание, что `value_type` не должен быть константным типом, даже если `pointer` точки в объекте **`const`** `Type` и ссылка указывает на объект **`const`** `Type` .
 
 ## <a name="example"></a>Пример
 
@@ -55,12 +55,12 @@ struct iterator {
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<iterator>
+**Заголовок:**\<iterator>
 
 **Пространство имен:** std
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [\<iterator>](../standard-library/iterator.md)\
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Безопасность потоков в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)

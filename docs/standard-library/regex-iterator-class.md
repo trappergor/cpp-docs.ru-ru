@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::regex_iterator::operator->
 - std::regex_iterator::operator++
 ms.assetid: 0cfd8fd0-5a95-4f3c-bf8e-6ef028c423d3
-ms.openlocfilehash: 6bc57d6815fa6f30e26b22e9b7ab758a1ac20e16
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d9d2baf99b1e2334132f54aeace3d8197b1e73da
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374558"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217588"
 ---
 # <a name="regex_iterator-class"></a>Класс regex_iterator
 
@@ -38,18 +38,18 @@ class regex_iterator
 
 ## <a name="parameters"></a>Параметры
 
-*BidIt*\
+*Двунаправленный*\
 Тип итератора для подстрок соответствия.
 
 *Elem*\
 Тип элементов для обеспечения соответствия.
 
-*RXtraits*\
+*ркстраитс*\
 Класс характеристик для элементов.
 
 ## <a name="remarks"></a>Remarks
 
-Шаблон класса описывает постоянный объект итератора вперед. Он извлекает объекты типа `match_results<BidIt>` , несколько раз применяя объект регулярного выражения `*pregex` к последовательности символов, определенной диапазоном итератора `[begin, end)`.
+Шаблон класса описывает постоянный объект итератора прямой. Он извлекает объекты типа `match_results<BidIt>` , несколько раз применяя объект регулярного выражения `*pregex` к последовательности символов, определенной диапазоном итератора `[begin, end)`.
 
 ### <a name="constructors"></a>Конструкторы
 
@@ -63,24 +63,24 @@ class regex_iterator
 |-|-|
 |[difference_type](#difference_type)|Тип разницы итератора.|
 |[iterator_category](#iterator_category)|Тип категории итератора.|
-|[указатель](#pointer)|Тип указателя на совпадение.|
-|[Ссылки](#reference)|Тип ссылки на соответствие.|
+|[вид](#pointer)|Тип указателя на совпадение.|
+|[reference](#reference)|Тип ссылки на соответствие.|
 |[regex_type](#regex_type)|Тип регулярного выражения для сопоставления.|
-|[Value_type](#value_type)|Тип соответствия.|
+|[value_type](#value_type)|Тип соответствия.|
 
 ### <a name="operators"></a>Операторы
 
 |Оператор|Описание|
 |-|-|
-|[оператора!](#op_neq)|Сравнивает итераторы на неравенство.|
-|[оператор](#op_star)|Обращается к заданному соответствию.|
-|[оператор](#op_add_add)|Увеличивает значение итератора.|
-|[оператора](#op_eq)|Сравнивает итераторы на равенство.|
-|[оператор->](#op_arrow)|Обращается к заданному соответствию.|
+|[operator! =](#op_neq)|Сравнивает итераторы на неравенство.|
+|[станции](#op_star)|Обращается к заданному соответствию.|
+|[operator + +](#op_add_add)|Увеличивает значение итератора.|
+|[Оператор =](#op_eq)|Сравнивает итераторы на равенство.|
+|[Оператор->](#op_arrow)|Обращается к заданному соответствию.|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<regex>
+**Заголовок:**\<regex>
 
 **Пространство имен:** std
 
@@ -94,7 +94,7 @@ class regex_iterator
 
 - [regex_search](../standard-library/regex-functions.md#regex_search)
 
-- [Своп](../standard-library/regex-functions.md#swap)
+- [позиции](../standard-library/regex-functions.md#swap)
 
 ```cpp
 // std__regex__regex_iterator.cpp
@@ -137,7 +137,7 @@ match == a
 match == a
 ```
 
-## <a name="regex_iteratordifference_type"></a><a name="difference_type"></a>regex_iterator::difference
+## <a name="regex_iteratordifference_type"></a><a name="difference_type"></a>regex_iterator::d ifference_type
 
 Тип разницы итератора.
 
@@ -149,7 +149,7 @@ typedef std::ptrdiff_t difference_type;
 
 Тип является синонимом `std::ptrdiff_t`.
 
-## <a name="regex_iteratoriterator_category"></a><a name="iterator_category"></a>regex_iterator::iterator_category
+## <a name="regex_iteratoriterator_category"></a><a name="iterator_category"></a>regex_iterator:: iterator_category
 
 Тип категории итератора.
 
@@ -161,7 +161,7 @@ typedef std::forward_iterator_tag iterator_category;
 
 Тип является синонимом `std::forward_iterator_tag`.
 
-## <a name="regex_iteratoroperator"></a><a name="op_neq"></a>regex_iterator::оператор!
+## <a name="regex_iteratoroperator"></a><a name="op_neq"></a>regex_iterator:: operator! =
 
 Сравнивает итераторы на неравенство.
 
@@ -178,7 +178,7 @@ bool operator!=(const regex_iterator& right);
 
 Функция-член возвращает значение `!(*this == right)`.
 
-## <a name="regex_iteratoroperator"></a><a name="op_star"></a>regex_iterator::оператор
+## <a name="regex_iteratoroperator"></a><a name="op_star"></a>regex_iterator:: operator *
 
 Обращается к заданному соответствию.
 
@@ -190,7 +190,7 @@ const match_results<BidIt>& operator*();
 
 Эта функция-член возвращает хранимое значение `match`.
 
-## <a name="regex_iteratoroperator"></a><a name="op_add_add"></a>regex_iterator::оператор
+## <a name="regex_iteratoroperator"></a><a name="op_add_add"></a>regex_iterator:: operator + +
 
 Увеличивает значение итератора.
 
@@ -205,7 +205,7 @@ regex_iterator& operator++(int);
 
 Второй оператор создает копию объекта, увеличивает объект, а затем возвращает копию.
 
-## <a name="regex_iteratoroperator"></a><a name="op_eq"></a>regex_iterator:оператор
+## <a name="regex_iteratoroperator"></a><a name="op_eq"></a>regex_iterator:: operator =
 
 Сравнивает итераторы на равенство.
 
@@ -220,9 +220,9 @@ bool operator==(const regex_iterator& right);
 
 ### <a name="remarks"></a>Remarks
 
-Функция члена возвращается `*this` верно, если и *справа* оба конца последовательности итераторов или, если `begin == right.begin`ни `end == right.end` `pregex == right.pregex`один `flags == right.flags`из конечных итераторов и , , и , и . В противном случае возвращается значение false.
+Функция-член возвращает значение true, если **`*this`** и *right* являются итераторами конца последовательности, или если ни один из них не является итератором конца последовательности и `begin == right.begin` , `end == right.end` , `pregex == right.pregex` и `flags == right.flags` . В противном случае возвращается значение false.
 
-## <a name="regex_iteratoroperator-gt"></a><a name="op_arrow"></a>regex_iterator::оператор-&gt;
+## <a name="regex_iteratoroperator-gt"></a><a name="op_arrow"></a>regex_iterator:: operator —&gt;
 
 Обращается к заданному соответствию.
 
@@ -234,7 +234,7 @@ const match_results<BidIt> * operator->();
 
 Функция-член возвращает адрес сохраненного значения `match`.
 
-## <a name="regex_iteratorpointer"></a><a name="pointer"></a>regex_iterator::pоинтер
+## <a name="regex_iteratorpointer"></a><a name="pointer"></a>regex_iterator::p оинтер
 
 Тип указателя на совпадение.
 
@@ -246,7 +246,7 @@ typedef match_results<BidIt> *pointer;
 
 Этот тип является синонимом для `match_results<BidIt>*`, где `BidIt` — параметр шаблона.
 
-## <a name="regex_iteratorreference"></a><a name="reference"></a>regex_iterator::ссылка
+## <a name="regex_iteratorreference"></a><a name="reference"></a>regex_iterator:: Reference
 
 Тип ссылки на соответствие.
 
@@ -258,7 +258,7 @@ typedef match_results<BidIt>& reference;
 
 Этот тип является синонимом для `match_results<BidIt>&`, где `BidIt` — параметр шаблона.
 
-## <a name="regex_iteratorregex_iterator"></a><a name="regex_iterator"></a>regex_iterator::regex_iterator
+## <a name="regex_iteratorregex_iterator"></a><a name="regex_iterator"></a>regex_iterator:: regex_iterator
 
 Формирует итератор.
 
@@ -273,23 +273,23 @@ regex_iterator(BidIt first,
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*\
+*началь*\
 Начало последовательности для сопоставления.
 
-*Последний*\
+*Последняя*\
 Конец последовательности для сопоставления.
 
-*Повторно*\
+*восстановлен*\
 Регулярное выражение для соответствий.
 
-*F*\
+*ж*\
 Флаги для соответствий.
 
 ### <a name="remarks"></a>Remarks
 
-Первый конструктор создает итератор конца последовательности. Второй конструктор инициализирует `begin` сохраненное значение `end` с *первым,* сохраненное значение `flags` с *последним,* сохраненное значение `pregex` с, `&re`и сохраненное значение с *f*. Затем он вызывает `regex_search(begin, end, match, *pregex, flags)`. Если поиск заканчивается неудачно, конструктор задает для объекта итератор конца последовательности.
+Первый конструктор создает итератор конца последовательности. Второй конструктор инициализирует сохраненное значение `begin` *первым*, сохраненным значением с `end` *последним*, сохраненным значением с `pregex` `&re` и сохраненным значением `flags` с помощью *f*. Затем он вызывает `regex_search(begin, end, match, *pregex, flags)`. Если поиск заканчивается неудачно, конструктор задает для объекта итератор конца последовательности.
 
-## <a name="regex_iteratorregex_type"></a><a name="regex_type"></a>regex_iterator::regex_type
+## <a name="regex_iteratorregex_type"></a><a name="regex_type"></a>regex_iterator:: regex_type
 
 Тип регулярного выражения для сопоставления.
 
@@ -301,7 +301,7 @@ typedef basic_regex<Elem, RXtraits> regex_type;
 
 Typedef является синонимом `basic_regex<Elem, RXtraits>`.
 
-## <a name="regex_iteratorvalue_type"></a><a name="value_type"></a>regex_iterator::value_type
+## <a name="regex_iteratorvalue_type"></a><a name="value_type"></a>regex_iterator:: value_type
 
 Тип соответствия.
 
@@ -316,11 +316,11 @@ typedef match_results<BidIt> value_type;
 ## <a name="see-also"></a>См. также раздел
 
 [\<regex>](../standard-library/regex.md)\
-[класс regex_constants](../standard-library/regex-constants-class.md)\
-[regex_error класс](../standard-library/regex-error-class.md)\
-[\<функции regex>](../standard-library/regex-functions.md)\
-[класс regex_iterator](../standard-library/regex-iterator-class.md)\
-[\<операторы regex>](../standard-library/regex-operators.md)\
-[класс regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
-[класс regex_traits](../standard-library/regex-traits-class.md)\
-[\<regex> typedefs](../standard-library/regex-typedefs.md)
+[Класс regex_constants](../standard-library/regex-constants-class.md)\
+[Класс regex_error](../standard-library/regex-error-class.md)\
+[\<regex>функции](../standard-library/regex-functions.md)\
+[Класс regex_iterator](../standard-library/regex-iterator-class.md)\
+[\<regex>операторы](../standard-library/regex-operators.md)\
+[Класс regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
+[Класс regex_traits](../standard-library/regex-traits-class.md)\
+[\<regex>определения типов](../standard-library/regex-typedefs.md)
