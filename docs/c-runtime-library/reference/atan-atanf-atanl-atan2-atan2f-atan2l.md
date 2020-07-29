@@ -45,12 +45,12 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-ms.openlocfilehash: 41007e08884da6ccac09c7dc98cef12381e4b45a
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: ad6bed621a0f1b5dd686909e4bf579e915662079
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506784"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232616"
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan, atanf, atanl, atan2, atan2f, atan2l
 
@@ -91,13 +91,13 @@ long double atan2( long double y, long double x );  // C++ only
 |-----------|-------------------|-----------------------|
 |± **КНАН**, **с**|нет|**_DOMAIN**|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Функция **ATAN** Вычисляет арктангенс (обратную функцию тангенса) для *x*. **atan2** Вычисляет арктангенс *y* / *x* (если *x* равен 0, **atan2** возвращает π/2, если *y* является положительным,-π/2, если *y* является отрицательным, или 0, если *y* равен 0).
 
 **ATAN** имеет реализацию, использующую Streaming SIMD Extensions 2 (SSE2). Сведения о реализации SSE2 и ограничениях на ее использование см. в разделе [_set_SSE2_enable](set-sse2-enable.md).
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **ATAN** и **atan2** , которые **принимают аргументы типа** **float** или **Long** . В программе на языке C **ATAN** и **atan2** всегда принимают **два** аргумента и возвращают **Double**.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **ATAN** и **atan2** , которые принимают **`float`** **`long double`** аргументы или. В программе на языке C **ATAN** и **atan2** всегда принимают **`double`** аргументы и возвращают **`double`** .
 
 По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
@@ -138,7 +138,7 @@ Arctangent of 5.000000: 1.373401
 Arctangent of 0.500000 / 5.000000: 0.099669
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>

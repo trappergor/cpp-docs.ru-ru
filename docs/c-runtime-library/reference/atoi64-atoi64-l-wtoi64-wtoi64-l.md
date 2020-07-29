@@ -54,12 +54,12 @@ helpviewer_keywords:
 - _wtoi64 function
 - _atoi64 function
 ms.assetid: 2c3e30fd-545d-4222-8364-0c5905df9526
-ms.openlocfilehash: 555cd27e87324141f21bdd7ef12f9ff8ea1a4e09
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 44b1abf816020258240d653cfbf8cd806fcb7dd1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913572"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232564"
 ---
 # <a name="_atoi64-_atoi64_l-_wtoi64-_wtoi64_l"></a>_atoi64, _atoi64_l, _wtoi64, _wtoi64_l
 
@@ -94,7 +94,7 @@ __int64 _wtoi64_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая функция возвращает **__int64** значение, полученное путем интерпретации входных символов в виде числа. Возвращаемое значение равно 0 для **_atoi64** , если входные данные не могут быть преобразованы в значение этого типа.
+Каждая функция возвращает **`__int64`** значение, полученное путем интерпретации входных символов в виде числа. Возвращаемое значение равно 0 для **_atoi64** , если входные данные не могут быть преобразованы в значение этого типа.
 
 В случае переполнения с большими положительными целочисленными значениями **_atoi64** возвращает **I64_MAX** и **I64_MIN** в случае переполнения с большими отрицательными целочисленными значениями.
 
@@ -181,11 +181,11 @@ Function: _atoi64( "3336402735171707160320" ) = -1
 Overflow condition occurred.
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [Преобразование данных](../../c-runtime-library/data-conversion.md)<br/>
-[Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
+[Локаль](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>
