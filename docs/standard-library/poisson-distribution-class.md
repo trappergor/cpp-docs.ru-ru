@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::poisson_distribution [C++], param_type
 - std::poisson_distribution [C++], param_type
 ms.assetid: 09614281-349a-45f7-8e95-c0196be0a937
-ms.openlocfilehash: fd1464c099d6f666b53387326c1dd863048defdc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fe59c58659252f5d799339fdd83237e56f81a2ad
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372044"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232967"
 ---
 # <a name="poisson_distribution-class"></a>Класс poisson_distribution
 
@@ -67,12 +67,12 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*IntType*\
-Тип результата, по умолчанию **int**. Для возможных типов см [ \<>. ](../standard-library/random.md)
+*инттипе*\
+Целочисленный тип результата, по умолчанию — **`int`** . Возможные типы см. в разделе [\<random>](../standard-library/random.md) .
 
 ## <a name="remarks"></a>Remarks
 
-Шаблон класса описывает распределение, которое производит значения определенного пользовательского интегрального типа с распределением Poisson. В следующей таблице представлены ссылки на статьи об отдельных членах.
+Шаблон класса описывает распределение, которое создает значения указанного пользователем целочисленного типа с распределением Пуассона. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
 ||||
 |-|-|-|
@@ -89,7 +89,7 @@ public:
 
 Функции-члены `operator()` возвращают следующее значение, созданное механизмом РГСЧ, из текущего или указанного пакета параметров.
 
-Для получения дополнительной информации о классах распределения и их членах [ \<>](../standard-library/random.md)см.
+Дополнительные сведения о классах распределения и их членах см [\<random>](../standard-library/random.md) . в разделе.
 
 Подробные сведения о распределении Пуассона см. в статье Wolfram MathWorld [Распределение Пуассона](https://go.microsoft.com/fwlink/p/?linkid=401112).
 
@@ -192,11 +192,11 @@ Distribution for 100 samples:
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<random>
+**Заголовок:**\<random>
 
 **Пространство имен:** std
 
-## <a name="poisson_distributionpoisson_distribution"></a><a name="poisson_distribution"></a>poisson_distribution::poisson-распределение
+## <a name="poisson_distributionpoisson_distribution"></a><a name="poisson_distribution"></a>poisson_distribution::p oisson_distribution
 
 Формирует распределение.
 
@@ -207,10 +207,10 @@ explicit binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Параметры
 
-*Означает*\
+*приводит*\
 Параметр распределения `mean`.
 
-*парм*\
+*ParM*\
 Структура параметров, используемая для формирования распределения.
 
 ### <a name="remarks"></a>Remarks
@@ -221,7 +221,7 @@ explicit binomial_distribution(const param_type& parm);
 
 Второй конструктор создает объект, хранимые параметры которого инициализируются из *parm*. Вы можете получить и задать текущие параметры существующего распределения, вызвав функцию-член `param()`.
 
-## <a name="poisson_distributionparam_type"></a><a name="param_type"></a>poisson_distribution::pараматип
+## <a name="poisson_distributionparam_type"></a><a name="param_type"></a>poisson_distribution::p aram_type
 
 Сохраняет параметры распределения.
 
@@ -248,4 +248,4 @@ struct param_type {
 
 ## <a name="see-also"></a>См. также раздел
 
-[\<случайные>](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

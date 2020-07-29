@@ -5,12 +5,12 @@ f1_keywords:
 - system_error/std::operator!=
 - system_error/std::operator==
 ms.assetid: c14edefb-bd8a-4e90-88d3-c59c98e6f73c
-ms.openlocfilehash: 8631cae146a311f1890583900b564471d5a80958
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 5ddd9135749c2dcfd40cd06a9b69cff65b1a8c8d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076262"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232876"
 ---
 # <a name="ltsystem_errorgt-operators"></a>Операторы &lt;system_error&gt;
 
@@ -31,17 +31,17 @@ bool operator==(const error_condition& left,
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*слева*\
 Объект для проверки на равенство.
 
-*справа*\
+*Правильно*\
 Объект для проверки на равенство.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение **true**, если объекты равны, значение **false**, если объекты не равны.
+**`true`** значение, если объекты равны; значение **`false`** , если объекты не равны.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Функция возвращает `left.category() == right.category() && left.value() == right.value()`.
 
@@ -58,21 +58,21 @@ bool operator!=(const error_condition& left, const error_condition& right);
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*слева*\
 Объект для проверки на неравенство.
 
-*справа*\
+*Правильно*\
 Объект для проверки на неравенство.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true** , если переданный объект не равен объекту, переданному по *правому* *краю* ; в противном случае — **false**.
+**`true`** значение, если переданный объект не равен объекту, переданному по *правому* *краю* ; в противном случае — значение **`false`** .
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Функция возвращает `!(left == right)`.
 
-## <a name="operatorlt"></a><a name="op_lt">Оператор </a>&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>станции&lt;
 
 Проверяет, меньше ли какой-либо объект переданного для сравнения объекта.
 
@@ -102,21 +102,21 @@ inline bool operator<(
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*слева*\
 Сравниваемый объект.
 
-*справа*\
+*Правильно*\
 Сравниваемый объект.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true** , если объект, переданный в *левой части* , меньше объекта, переданного *правым*; В противном случае — **значение false**.
+**`true`** значение, если объект, переданный в *левой части* , меньше объекта, переданного по *правому*краю; В противном случае — **`false`** .
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта функция проверяет порядок ошибок.
 
-## <a name="operatorltlt"></a><a name="op_ostream"></a>&lt;оператора &lt;
+## <a name="operatorltlt"></a><a name="op_ostream"></a>станции&lt;&lt;
 
 ```cpp
 template <class charT, class traits>

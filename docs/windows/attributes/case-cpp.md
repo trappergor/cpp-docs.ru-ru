@@ -1,21 +1,21 @@
 ---
-title: Case (C++ атрибут com)
+title: Case (атрибут COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.case
 helpviewer_keywords:
 - case attribute
 ms.assetid: 6fb883c3-0526-4932-a901-b4564dcaeb7d
-ms.openlocfilehash: da72fff3bb600b5db2fba0ecdfe9c6a768836f3c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 23330b7b220873725dc566df947f3f3596160029
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167345"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232811"
 ---
 # <a name="case-c"></a>case (C++)
 
-Используется с атрибутом [switch_type](switch-type.md) в **объединении**.
+Используется с атрибутом [switch_type](switch-type.md) в **`union`** .
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -28,13 +28,13 @@ ms.locfileid: "80167345"
 *value*<br/>
 Возможное входное значение, для которого необходимо обеспечить обработку. Тип **значения** может быть одним из следующих типов:
 
-- `int`
+- **`int`**
 
-- `char`
+- **`char`**
 
 - `boolean`
 
-- `enum`
+- **`enum`**
 
 или идентификатор такого типа.
 
@@ -69,15 +69,15 @@ struct SizedValue2 {
 
 |||
 |-|-|
-|**Применение**|Член **класса** или **структуры**|
-|**Повторяемый**|нет|
-|**Обязательные атрибуты**|None|
-|**Недопустимые атрибуты**|None|
+|**Относится к**|Член **`class`** или**`struct`**|
+|**REPEATABLE**|Нет|
+|**Требуемые атрибуты**|Нет|
+|**Недопустимые атрибуты**|Нет|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [Атрибуты IDL](idl-attributes.md)<br/>
-[Атрибуты Typedef, Enum, Union и Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[Атрибуты классов](class-attributes.md)
+[Атрибуты typedef, enum, Union и struct](typedef-enum-union-and-struct-attributes.md)<br/>
+[Атрибуты класса](class-attributes.md)

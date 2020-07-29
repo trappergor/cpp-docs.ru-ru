@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (queue)
 - std::operator&lt;= (queue)
 - std::operator== (queue)
-ms.openlocfilehash: 420d717b34b6c17587f8790701906e06ab008d96
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 8c02e79e6a300f23ac31ea876c9d4576cfe5e9a8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425253"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232928"
 ---
 # <a name="ltqueuegt-operators"></a>Операторы &lt;queue&gt;
 
-## <a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a>operator! =
 
 Проверяет неравенство объекта queue слева от оператора объекту queue справа от оператора.
 
@@ -35,15 +35,15 @@ bool operator!=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*слева*\
 Объект типа `queue`.
 
-*справа*\
+*Правильно*\
 Объект типа `queue`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**true**, если очереди не равны; **false**, если очереди равны.
+**`true`** значение, если очереди не равны; значение **`false`** , если очереди равны.
 
 ### <a name="remarks"></a>Remarks
 
@@ -92,7 +92,7 @@ The queues q1 and q2 are not equal.
 The queues q1 and q3 are equal.
 ```
 
-## <a name="op_lt">Оператор </a>&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>станции&lt;
 
 Проверяет, меньше ли объект queue слева от оператора, чем объект queue справа от оператора.
 
@@ -102,15 +102,15 @@ bool operator<(const queue <Type, Container>& left, const queue <Type, Container
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*слева*\
 Объект типа `queue`.
 
-*справа*\
+*Правильно*\
 Объект типа `queue`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**true**, если очередь слева от оператора меньше очереди справа от оператора (и не равна ему); в противном случае **false**.
+**`true`** Если очередь в левой части оператора меньше и не равна очереди в правой части оператора; в противном случае — значение **`false`** .
 
 ### <a name="remarks"></a>Remarks
 
@@ -155,7 +155,7 @@ The queue q1 is less than the queue q2.
 The queue q1 is not less than the queue q3.
 ```
 
-## <a name="op_lt_eq"></a>&lt;оператора =
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>станции&lt;=
 
 Проверяет, меньше ли объект queue слева от оператора, чем объект queue справа от оператора, или равен ему.
 
@@ -165,15 +165,15 @@ bool operator<=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*слева*\
 Объект типа `queue`.
 
-*справа*\
+*Правильно*\
 Объект типа `queue`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**true**, если очередь слева от оператора строго меньше очереди справа от оператора; в противном случае **false**.
+**`true`** Если очередь в левой части оператора строго меньше очереди с правой стороны оператора; в противном случае — значение **`false`** .
 
 ### <a name="remarks"></a>Remarks
 
@@ -220,7 +220,7 @@ The queue q1 is greater than the queue q2.
 The queue q1 is less than or equal to the queue q3.
 ```
 
-## <a name="op_eq_eq"></a>Оператор = =
+## <a name="operator"></a><a name="op_eq_eq"></a>Оператор = =
 
 Проверяет равенство объекта-очереди слева от оператора объекту-очереди справа от оператора.
 
@@ -230,15 +230,15 @@ bool operator==(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*слева*\
 Объект типа `queue`.
 
-*справа*\
+*Правильно*\
 Объект типа `queue`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**true**, если очереди не равны; **false**, если очереди равны.
+**`true`** значение, если очереди не равны; значение **`false`** , если очереди равны.
 
 ### <a name="remarks"></a>Remarks
 
@@ -286,7 +286,7 @@ The queues q1 and q2 are not equal.
 The queues q1 and q3 are equal.
 ```
 
-## <a name="op_gt">Оператор </a>&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>станции&gt;
 
 Проверяет, больше ли объект queue слева от оператора, чем объект queue справа от оператора.
 
@@ -296,15 +296,15 @@ bool operator>(const queue <Type, Container>& left, const queue <Type, Container
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*слева*\
 Объект типа `queue`.
 
-*справа*\
+*Правильно*\
 Объект типа `queue`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**true**, если очередь слева от оператора строго меньше очереди справа от оператора; в противном случае **false**.
+**`true`** Если очередь в левой части оператора строго меньше очереди с правой стороны оператора; в противном случае — значение **`false`** .
 
 ### <a name="remarks"></a>Remarks
 
@@ -352,7 +352,7 @@ The queue q1 is not greater than the queue q2.
 The queue q1 is greater than the queue q3.
 ```
 
-## <a name="op_gt_eq"></a>&gt;оператора =
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>станции&gt;=
 
 Проверяет, больше ли объект queue слева от оператора, чем объект queue справа от оператора, или равен ему.
 
@@ -362,15 +362,15 @@ bool operator>=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*слева*\
 Объект типа `queue`.
 
-*справа*\
+*Правильно*\
 Объект типа `queue`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**true**, если очередь слева от оператора строго меньше очереди справа от оператора; в противном случае **false**.
+**`true`** Если очередь в левой части оператора строго меньше очереди с правой стороны оператора; в противном случае — значение **`false`** .
 
 ### <a name="remarks"></a>Remarks
 

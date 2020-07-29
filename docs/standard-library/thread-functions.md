@@ -14,19 +14,19 @@ helpviewer_keywords:
 - std::sleep_until [C++]
 - std::swap [C++]
 - std::yield [C++]
-ms.openlocfilehash: bb0a0a12ec2882701447804f9c88d1776a196cb7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 130328ca07de28e14eedd7fdc99fb8946f26c5cb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375841"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232863"
 ---
 # <a name="ltthreadgt-functions"></a>Функции &lt;thread&gt;
 
 ||||
 |-|-|-|
 |[get_id](#get_id)|[sleep_for](#sleep_for)|[sleep_until](#sleep_until)|
-|[Своп](#swap)|[yield](#yield)|
+|[позиции](#swap)|[yield](#yield)|
 
 ## <a name="get_id"></a><a name="get_id"></a>get_id
 
@@ -57,7 +57,7 @@ inline void sleep_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="remarks"></a>Remarks
 
-Функция блокирует поток вызова, по крайней мере, время, указанное *Rel_time.* Эта функция не вызывает исключений.
+Функция блокирует вызывающий поток в течение как минимум времени, заданного *Rel_time*. Эта функция не вызывает исключений.
 
 ## <a name="sleep_until"></a><a name="sleep_until"></a>sleep_until
 
@@ -79,9 +79,9 @@ void sleep_until(const xtime *Abs_time);
 
 Эта функция не вызывает исключений.
 
-## <a name="swap"></a><a name="swap"></a>Своп
+## <a name="swap"></a><a name="swap"></a>позиции
 
-Свопирует состояния двух объектов **потока.**
+Меняет местами состояния двух объектов `thread`.
 
 ```cpp
 void swap(thread& Left, thread& Right) noexcept;
@@ -89,17 +89,17 @@ void swap(thread& Left, thread& Right) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-*Левой*\
-Объект левой **нити.**
+*Слева*\
+Левый объект `thread`.
 
 *Правильно*\
-Объект правой **нити.**
+Правой объект `thread`.
 
 ### <a name="remarks"></a>Remarks
 
 Функция вызывает `Left.swap(Right)`.
 
-## <a name="yield"></a><a name="yield"></a>Урожайность
+## <a name="yield"></a><a name="yield"></a>Получает
 
 Сигнализирует операционной системе, что необходимо запустить другие потоки, даже если в обычной ситуации текущий поток продолжал бы выполняться.
 
@@ -109,4 +109,4 @@ inline void yield() noexcept;
 
 ## <a name="see-also"></a>См. также раздел
 
-[\<нить>](../standard-library/thread.md)
+[\<thread>](../standard-library/thread.md)
