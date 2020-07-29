@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - call_in_appdomain function
 ms.assetid: 9a1a5026-b76b-4cae-a3d4-29badeb9db9c
-ms.openlocfilehash: da0f2bc1a503226e41198871e6dc48ace7a86854
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 567b6d8fe9412e58f21de9a1031ec54c4bc01cdc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "79545375"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230900"
 ---
 # <a name="call_in_appdomain-function"></a>Функция call_in_appdomain
 
@@ -45,21 +45,21 @@ RetType call_in_appdomain(
 Домен приложения, в котором вызывается функция.
 
 *воидфунк*<br/>
-Указатель на функцию `void`, принимающую N параметров (0 < = N < = 15).
+Указатель на **`void`** функцию, принимающую N параметров (0 <= N <= 15).
 
 *нонвоидфунк*<br/>
-Указатель на функцию, не`void`, которая принимает N параметров (0 < = N < = 15).
+Указатель на не **`void`** функцию, принимающую N параметров (0 <= N <= 15).
 
 *arg1... argN*<br/>
-От нуля до 15 параметров, которые должны быть переданы `voidFunc` или `nonvoidFunc` в другом AppDomain.
+От нуля до 15 параметров, передаваемых `voidFunc` в `nonvoidFunc` другой домен приложения или в него.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Результат выполнения `voidFunc` или `nonvoidFunc` в указанном домене приложения.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Аргументы функции, переданной в `call_in_appdomain`, не должны быть типами CLR.
+Аргументы переданной функции `call_in_appdomain` не должны быть ТИПАМИ CLR.
 
 ## <a name="example"></a>Пример
 
@@ -107,7 +107,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Вывод
+## <a name="output"></a>Выходные данные
 
 ```
 default appdomain: msl_call_in_appdomain.exe
@@ -118,6 +118,6 @@ appDomain1 id = 2
 
 ## <a name="requirements"></a>Требования
 
-**Файл заголовка** \<мсклр\аппдомаин.х >
+**Файл заголовка** \<msclr\appdomain.h>
 
 Мсклр **пространства имен**
