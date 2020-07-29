@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HStringReference::operator!= operator
 - Microsoft::WRL::Wrappers::HStringReference::operator< operator
 ms.assetid: 9bf823b1-17eb-4ac4-8c5d-27d27c7a4150
-ms.openlocfilehash: fd064f97081fad1a9df9de0865bb7c46ad5b4484
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 871696f4a970b1ef9d1f5d36d2e17184b93c9e8b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371424"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212986"
 ---
 # <a name="hstringreference-class"></a>Класс HStringReference
 
@@ -41,32 +41,32 @@ class HStringReference;
 
 ## <a name="remarks"></a>Remarks
 
-Срок службы резервного буфера в новом HSTRING не управляется Windows Runtime. Вызывающее распределение строки исходного кода на кадре стека, чтобы избежать распределения кучи и устранить риск утечки памяти. Кроме того, вызываец должен убедиться, что строка исходного кода остается неизменной в течение всего срока службы прикрепленного HSTRING. Для получения дополнительной [WindowsCreateStringReference function](/windows/win32/api/winstring/nf-winstring-windowscreatestringreference)информации см.
+Время существования резервного буфера в новом HSTRING не управляется среда выполнения Windows. Вызывающий объект выделяет исходную строку в кадре стека, чтобы избежать выделения кучи и избежать риска утечки памяти. Кроме того, вызывающий объект должен гарантировать, что исходная строка остается неизменной в течение времени существования присоединенного HSTRING. Дополнительные сведения см. в разделе [функция виндовскреатестрингреференце](/windows/win32/api/winstring/nf-winstring-windowscreatestringreference).
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Элементы
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-Имя                                                    | Описание
+name                                                    | Описание:
 ------------------------------------------------------- | -----------------------------------------------------------
-[HStringСправка:HStringСправка](#hstringreference) | Инициализирует новый экземпляр класса `HStringReference`.
+[HStringReference:: HStringReference](#hstringreference) | Инициализирует новый экземпляр класса `HStringReference`.
 
 ### <a name="public-methods"></a>Открытые методы
 
-Участник                              | Описание
+Член                              | Описание
 ----------------------------------- | ------------------------------------------------------------------
-[HStringReference::CopyTo](#copyto) | Копирует текущий `HStringReference` объект с объектом HSTRING.
-[HStringСправка::Получить](#get)       | Получает значение основной ручки HSTRING.
-[HStringСправка::GetRawBuffer](#getrawbuffer) | Извлекает указатель на базовые строки данных.
+[HStringReference::CopyTo](#copyto) | Копирует текущий `HStringReference` объект в объект HString.
+[HStringReference:: Get](#get)       | Получает значение базового маркера HSTRING.
+[HStringReference:: Жетравбуффер](#getrawbuffer) | Извлекает указатель на базовые строковые данные.
 
 ### <a name="public-operators"></a>Открытые операторы
 
-Имя                                                  | Описание
+Имя                                                  | Описание:
 ----------------------------------------------------- | ----------------------------------------------------------------------------------------------
-[HStringСправка::оператор](#operator-assign)       | Перемещает значение другого `HStringReference` объекта `HStringReference` к текущему объекту.
-[HStringСправка::оператор](#operator-equality)    | Указывает, являются ли эти два параметра равными.
-[HStringСправка::оператор!](#operator-inequality)  | Указывает, не являются ли эти два параметра равными.
-[HStringСправка:Оператор&lt;](#operator-less-than) | Указывает, является ли первый параметр меньше второго параметра.
+[HStringReference:: operator =](#operator-assign)       | Перемещает значение другого `HStringReference` объекта в текущий `HStringReference` объект.
+[HStringReference:: operator = =](#operator-equality)    | Указывает, равны ли два параметра.
+[HStringReference:: operator! =](#operator-inequality)  | Указывает, являются ли два параметра неравными.
+[HStringReference:: operator&lt;](#operator-less-than) | Указывает, меньше ли первый параметр второго параметра.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -74,13 +74,13 @@ class HStringReference;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** corewrappers.h
+**Заголовок:** кореврапперс. h
 
-**Пространство имен:** Microsoft:WRL::Wrappers
+**Пространство имен:** Программы Microsoft:: WRL:: оболочки
 
-## <a name="hstringreferencecopyto"></a><a name="copyto"></a>HStringСправка::CopyTo
+## <a name="hstringreferencecopyto"></a><a name="copyto"></a>HStringReference:: CopyTo
 
-Копирует текущий `HStringReference` объект с объектом HSTRING.
+Копирует текущий `HStringReference` объект в объект HString.
 
 ```cpp
 HRESULT CopyTo(
@@ -90,16 +90,16 @@ HRESULT CopyTo(
 
 ### <a name="parameters"></a>Параметры
 
-*Ул*<br/>
+*str*<br/>
 HSTRING, который получает копию.
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод вызывает функцию [WindowsDuplicateString.](/windows/win32/api/winstring/nf-winstring-windowsduplicatestring)
+Этот метод вызывает функцию [виндовсдупликатестринг](/windows/win32/api/winstring/nf-winstring-windowsduplicatestring) .
 
-## <a name="hstringreferenceget"></a><a name="get"></a>HStringСправка::Получить
+## <a name="hstringreferenceget"></a><a name="get"></a>HStringReference:: Get
 
-Получает значение основной ручки HSTRING.
+Получает значение базового маркера HSTRING.
 
 ```cpp
 HSTRING Get() const throw()
@@ -109,9 +109,9 @@ HSTRING Get() const throw()
 
 Значение базового дескриптора HSTRING.
 
-## <a name="hstringreferencegetrawbuffer"></a><a name="getrawbuffer"></a>HStringСправка::GetRawBuffer
+## <a name="hstringreferencegetrawbuffer"></a><a name="getrawbuffer"></a>HStringReference:: Жетравбуффер
 
-Извлекает указатель на базовые строки данных.
+Извлекает указатель на базовые строковые данные.
 
 ```cpp
 const wchar_t* GetRawBuffer(unsigned int* length) const;
@@ -119,13 +119,13 @@ const wchar_t* GetRawBuffer(unsigned int* length) const;
 
 ### <a name="parameters"></a>Параметры
 
-*длина* Указатель на переменную **int,** которая получает длину данных.
+*Длина* Указатель на **`int`** переменную, которая получает длину данных.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**Конст** указатель на базовые строки данных.
+**`const`** Указатель на базовые строковые данные.
 
-## <a name="hstringreferencehstringreference"></a><a name="hstringreference"></a>HStringСправка:HStringСправка
+## <a name="hstringreferencehstringreference"></a><a name="hstringreference"></a>HStringReference:: HStringReference
 
 Инициализирует новый экземпляр класса `HStringReference`.
 
@@ -142,29 +142,29 @@ HStringReference(HStringReference&& other) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*размерDest*<br/>
-Параметр шаблона, опознавательный размер буфера назначения. `HStringReference`
+*самый заданный размер*<br/>
+Параметр шаблона, указывающий размер `HStringReference` буфера назначения.
 
-*Ул*<br/>
-Ссылка на строку широкого характера.
+*str*<br/>
+Ссылка на строку расширенных символов.
 
-*Лен*<br/>
-Максимальная длина буфера параметра *str* для использования в этой операции. Если параметр *len* не указан, используется весь параметр *str.* Если *лен* больше, чем *размерDest,* *len* установлен на *размерDest*-1.
+*len*<br/>
+Максимальная длина буфера параметров *str* для использования в этой операции. Если параметр *Len* не указан, используется весь параметр *str* . Если *Len* больше, чем *size*, то параметр *Len* имеет значение *size*-1.
 
-*Других*<br/>
+*иной*<br/>
 Другой `HStringReference` объект.
 
 ### <a name="remarks"></a>Remarks
 
-Первый конструктор инициализирует новый `HStringReference` объект того же размера, что и параметр *str.*
+Первый конструктор инициализирует новый объект того `HStringReference` же размера, что и *str*параметра.
 
-Второй конструктор инициализирует новый `HStringReference` объект, размер specifeid по параметру *len.*
+Второй конструктор инициализирует новый `HStringReference` объект, размер которого спеЦифеид параметром *Len*.
 
-Третий конструктор инициализирует новый `HStringReference` объект со значением *другого* параметра, а затем уничтожает *другой* параметр.
+Третий конструктор инициализирует новый `HStringReference` объект значением *другого* параметра, а затем уничтожает *другой* параметр.
 
-## <a name="hstringreferenceoperator"></a><a name="operator-assign"></a>HStringСправка::оператор
+## <a name="hstringreferenceoperator"></a><a name="operator-assign"></a>HStringReference:: operator =
 
-Перемещает значение другого `HStringReference` объекта `HStringReference` к текущему объекту.
+Перемещает значение другого `HStringReference` объекта в текущий `HStringReference` объект.
 
 ```cpp
 HStringReference& operator=(HStringReference&& other) throw()
@@ -172,16 +172,16 @@ HStringReference& operator=(HStringReference&& other) throw()
 
 ### <a name="parameters"></a>Параметры
 
-*Других*<br/>
+*иной*<br/>
 Существующий объект `HStringReference`.
 
 ### <a name="remarks"></a>Remarks
 
-Значение существующего *другого* объекта скопировано на текущий `HStringReference` объект, а затем *другой* объект разрушается.
+Значение *существующего объекта* копируется в текущий `HStringReference` объект, а затем удаляется *другой* объект.
 
-## <a name="hstringreferenceoperator"></a><a name="operator-equality"></a>HStringСправка::оператор
+## <a name="hstringreferenceoperator"></a><a name="operator-equality"></a>HStringReference:: operator = =
 
-Указывает, являются ли эти два параметра равными.
+Указывает, равны ли два параметра.
 
 ```cpp
 inline bool operator==(
@@ -199,19 +199,19 @@ inline bool operator==(
 
 ### <a name="parameters"></a>Параметры
 
-*Lhs*<br/>
-Первый параметр для сравнения. *lHS* может `HStringReference` быть объектом или ручкой HSTRING.
+*LHS*<br/>
+Первый сравниваемый параметр. *LHS* может быть `HStringReference` объектом или обработчиком HString.
 
 *rhs*<br/>
-Второй параметр для сравнения.  *rhs* может `HStringReference` быть объектом или ручкой HSTRING.
+Второй сравниваемый параметр.  *RHS* может быть `HStringReference` объектом или обработчиком HString.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**верно,** если параметры *lhs* и *rhs* равны; в противном случае, **ложные**.
+**`true`** значение, если параметры *LHS* и *RHS* равны; в противном случае — **`false`** .
 
-## <a name="hstringreferenceoperator"></a><a name="operator-inequality"></a>HStringСправка::оператор!
+## <a name="hstringreferenceoperator"></a><a name="operator-inequality"></a>HStringReference:: operator! =
 
-Указывает, не являются ли эти два параметра равными.
+Указывает, являются ли два параметра неравными.
 
 ```cpp
 inline bool operator!=(
@@ -229,19 +229,19 @@ inline bool operator!=(
 
 ### <a name="parameters"></a>Параметры
 
-*Lhs*<br/>
-Первый параметр для сравнения. *lHS* может `HStringReference` быть объектом или ручкой HSTRING.
+*LHS*<br/>
+Первый сравниваемый параметр. *LHS* может быть `HStringReference` объектом или обработчиком HString.
 
 *rhs*<br/>
-Второй параметр для сравнения.  *rhs* может `HStringReference` быть объектом или ручкой HSTRING.
+Второй сравниваемый параметр.  *RHS* может быть `HStringReference` объектом или обработчиком HString.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**верно,** если параметры *lhs* и *rhs* не равны; в противном случае, **ложные**.
+**`true`** значение, если параметры *LHS* и *RHS* не равны; в противном случае — **`false`** .
 
-## <a name="hstringreferenceoperatorlt"></a><a name="operator-less-than"></a>HStringСправка:Оператор&lt;
+## <a name="hstringreferenceoperatorlt"></a><a name="operator-less-than"></a>HStringReference:: operator&lt;
 
-Указывает, является ли первый параметр меньше второго параметра.
+Указывает, меньше ли первый параметр второго параметра.
 
 ```cpp
 inline bool operator<(
@@ -251,12 +251,12 @@ inline bool operator<(
 
 ### <a name="parameters"></a>Параметры
 
-*Lhs*<br/>
-Первый параметр для сравнения. *lhs* может быть ссылкой на `HStringReference`.
+*LHS*<br/>
+Первый сравниваемый параметр. *LHS* может быть ссылкой на `HStringReference` .
 
 *rhs*<br/>
-Второй параметр для сравнения.  *rhs* может быть ссылкой на `HStringReference`.
+Второй сравниваемый параметр.  *RHS* может быть ссылкой на `HStringReference` .
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**верно,** если параметр *lhs* меньше параметра *rhs;* в противном случае, **ложные**.
+**`true`** значение, если параметр *LHS* меньше, чем параметр *RHS* ; в противном случае — **`false`** .

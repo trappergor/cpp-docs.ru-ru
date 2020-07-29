@@ -6,16 +6,16 @@ f1_keywords:
 - math/isnormal
 helpviewer_keywords:
 - isnormal function
-ms.openlocfilehash: e426fbce71efff1e810a03b8347e7c48aa0d91d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e12cabb57f2e51c08b4d93af33dae85164d016b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286444"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213532"
 ---
 # <a name="isnormal"></a>isnormal
 
-Определяет, является ли значение с плавающей запятой значение normal.
+Определяет, является ли значение с плавающей запятой нормальным.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -37,23 +37,23 @@ inline bool isnormal(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**isnormal** возвращает ненулевое значение (**true** в C++ кода) Если аргумент *x* не является ни ноль, subnormal, бесконечно, ни значение NaN. В противном случае **isnormal** возвращает 0 (**false** в C++ кода).
+функция «с **нормальным** возвратом» возвращает ненулевое значение ( **`true`** в коде C++), если аргумент *x* не равен ни нулю, ни поднормализованному, бесконечному значению, ни NaN. В противном **случае возвращает 0** ( **`false`** в коде C++).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-**isnormal** представляет собой макрос, если он компилируется как C и функция встроенный шаблон при компиляции как C++.
+**функция oninline является** макросом, скомпилированным как C, и шаблоном встроенной функции при компиляции в виде C++.
 
 ## <a name="requirements"></a>Требования
 
-|Функция|Обязательный заголовок (C)|Обязательный заголовок (C++)|
+|Компонент|Обязательный заголовок (C)|Обязательный заголовок (C++)|
 |--------------|---------------------------|-------------------------------|
 |**isnormal**|\<math.h>|\<math.h> или \<cmath>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
+[Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [isfinite, _finite, _finitef](finite-finitef.md)<br/>
 [isinf](isinf.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>

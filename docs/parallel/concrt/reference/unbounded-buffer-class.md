@@ -19,12 +19,12 @@ f1_keywords:
 - AGENTS/concurrency::unbounded_buffer::send_message
 - AGENTS/concurrency::unbounded_buffer::supports_anonymous_source
 ms.assetid: 6b1a939a-1819-4385-b1d8-708f83d4ec47
-ms.openlocfilehash: d0f2f81957ee88d4263c6acd879bd286c95631eb
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: e02fa1ffbf4c3e2c7d17dfe2d6ae66758945d9de
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142336"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219524"
 ---
 # <a name="unbounded_buffer-class"></a>Класс unbounded_buffer
 
@@ -44,36 +44,36 @@ class unbounded_buffer : public propagator_block<multi_link_registry<ITarget<   
 *_Type*<br/>
 Тип полезных данных сообщений, хранимых и распространяемых буфером.
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Элементы
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|[unbounded_buffer](#ctor)|Перегружен. Конструирует блок сообщений `unbounded_buffer`.|
-|[Деструктор ~ unbounded_buffer](#dtor)|Уничтожает блок сообщений `unbounded_buffer`.|
+|[unbounded_buffer](#ctor)|Перегружен. Конструирует `unbounded_buffer` блок обмена сообщениями.|
+|[Деструктор ~ unbounded_buffer](#dtor)|Уничтожает `unbounded_buffer` блок обмена сообщениями.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Description|
+|name|Описание|
 |----------|-----------------|
-|[вывода из очереди](#dequeue)|Удаляет элемент из блока сообщений `unbounded_buffer`.|
-|[очередь](#enqueue)|Добавляет элемент в блок сообщений `unbounded_buffer`.|
+|[вывести из очереди](#dequeue)|Удаляет элемент из `unbounded_buffer` блока обмена сообщениями.|
+|[поставить в очередь](#enqueue)|Добавляет элемент в `unbounded_buffer` блок обмена сообщениями.|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|[accept_message](#accept_message)|Принимает сообщение, которое было предложено этим блоком `unbounded_buffer` сообщений, передавая владение вызывающему объекту.|
-|[consume_message](#consume_message)|Использует сообщение, которое было ранее предложено блоком `unbounded_buffer` Messaging и зарезервировано целевым объектом, передавая владение вызывающему объекту.|
-|[link_target_notification](#link_target_notification)|Обратный вызов, уведомляющий о том, что новый целевой объект связан с этим блоком сообщений `unbounded_buffer`.|
-|[process_input_messages](#process_input_messages)|Помещает `message` `_PMessage` в этом `unbounded_buffer` блоке обмена сообщениями и пытается предложить его всем связанным целевым объектам.|
-|[propagate_message](#propagate_message)|Асинхронно передает сообщение из блока `ISource` в этот `unbounded_buffer` блок сообщений. Вызывается методом `propagate` при вызове из исходного блока.|
-|[propagate_output_messages](#propagate_output_messages)|Помещает `message` `_PMessage` в этом `unbounded_buffer` блоке обмена сообщениями и пытается предложить его всем связанным целевым объектам. (Переопределяет [source_block::p ropagate_output_messages](source-block-class.md#propagate_output_messages).)|
+|[accept_message](#accept_message)|Принимает сообщение, которое было предложено этим `unbounded_buffer` блоком обмена сообщениями, передавая владение вызывающему объекту.|
+|[consume_message](#consume_message)|Использует сообщение, которое было ранее предложено `unbounded_buffer` блоком обмена сообщениями и зарезервировано целевым объектом, передавая владение вызывающему объекту.|
+|[link_target_notification](#link_target_notification)|Обратный вызов, уведомляющий о том, что новый целевой объект связан с этим `unbounded_buffer` блоком обмена сообщениями.|
+|[process_input_messages](#process_input_messages)|Помещает объект `message` `_PMessage` в этот `unbounded_buffer` блок обмена сообщениями и пытается предложить его всем связанным целевым объектам.|
+|[propagate_message](#propagate_message)|Асинхронно передает сообщение из `ISource` блока в этот `unbounded_buffer` блок обмена сообщениями. Он вызывается `propagate` методом при вызове из исходного блока.|
+|[propagate_output_messages](#propagate_output_messages)|Помещает объект `message` `_PMessage` в этот `unbounded_buffer` блок обмена сообщениями и пытается предложить его всем связанным целевым объектам. (Переопределяет [source_block::p ropagate_output_messages](source-block-class.md#propagate_output_messages).)|
 |[release_message](#release_message)|Освобождает предыдущее резервирование сообщения. (Переопределяет [source_block:: release_message](source-block-class.md#release_message).)|
-|[reserve_message](#reserve_message)|Резервирует сообщение, которое было предложено этим блоком `unbounded_buffer` Messaging. (Переопределяет [source_block:: reserve_message](source-block-class.md#reserve_message).)|
+|[reserve_message](#reserve_message)|Резервирует сообщение, которое было ранее предложено этим `unbounded_buffer` блоком обмена сообщениями. (Переопределяет [source_block:: reserve_message](source-block-class.md#reserve_message).)|
 |[resume_propagation](#resume_propagation)|Возобновляет распространение после освобождения резервирования. (Переопределяет [source_block:: resume_propagation](source-block-class.md#resume_propagation).)|
-|[send_message](#send_message)|Синхронно передает сообщение из блока `ISource` в этот `unbounded_buffer` блок сообщений. Вызывается методом `send` при вызове из исходного блока.|
+|[send_message](#send_message)|Синхронно передает сообщение из `ISource` блока в этот `unbounded_buffer` блок обмена сообщениями. Он вызывается `send` методом при вызове из исходного блока.|
 |[supports_anonymous_source](#supports_anonymous_source)|Переопределяет метод `supports_anonymous_source`, чтобы указать, что данный блок может принимать сообщения, предоставляемые ему несвязанным источником. (Переопределяет метод [ITarget:: supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|
 
 Дополнительные сведения см. в разделе [асинхронные блоки сообщений](../asynchronous-message-blocks.md).
@@ -94,11 +94,11 @@ class unbounded_buffer : public propagator_block<multi_link_registry<ITarget<   
 
 **Заголовок:** agents.h
 
-**Пространство имен:** concurrency
+**Пространство имен:** параллелизм
 
-## <a name="accept_message"></a>accept_message
+## <a name="accept_message"></a><a name="accept_message"></a>accept_message
 
-Принимает сообщение, которое было предложено этим блоком `unbounded_buffer` сообщений, передавая владение вызывающему объекту.
+Принимает сообщение, которое было предложено этим `unbounded_buffer` блоком обмена сообщениями, передавая владение вызывающему объекту.
 
 ```cpp
 virtual message<_Type> * accept_message(
@@ -109,15 +109,15 @@ virtual message<_Type> * accept_message(
 ### <a name="parameters"></a>Параметры
 
 *_MsgId*<br/>
-`runtime_object_identity` предлагаемого `message` объекта.
+`runtime_object_identity`Объект предлагаемого `message` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на объект `message`, владельцем которого стал вызывающий объект.
+Указатель на `message` объект, владельцем которого стал вызывающий объект.
 
-## <a name="consume_message"></a>consume_message
+## <a name="consume_message"></a><a name="consume_message"></a>consume_message
 
-Использует сообщение, которое было ранее предложено блоком `unbounded_buffer` Messaging и зарезервировано целевым объектом, передавая владение вызывающему объекту.
+Использует сообщение, которое было ранее предложено `unbounded_buffer` блоком обмена сообщениями и зарезервировано целевым объектом, передавая владение вызывающему объекту.
 
 ```cpp
 virtual message<_Type> * consume_message(
@@ -128,19 +128,19 @@ virtual message<_Type> * consume_message(
 ### <a name="parameters"></a>Параметры
 
 *_MsgId*<br/>
-`runtime_object_identity` используемого объекта `message`.
+`runtime_object_identity`Объект для используемого `message` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на объект `message`, владельцем которого стал вызывающий объект.
+Указатель на `message` объект, владельцем которого стал вызывающий объект.
 
 ### <a name="remarks"></a>Remarks
 
-Аналогично `accept`, но всегда предшествует вызов `reserve`.
+Аналогично `accept` , но всегда предшествует вызову `reserve` .
 
-## <a name="dequeue"></a>вывода из очереди
+## <a name="dequeue"></a><a name="dequeue"></a>вывода из очереди
 
-Удаляет элемент из блока сообщений `unbounded_buffer`.
+Удаляет элемент из `unbounded_buffer` блока обмена сообщениями.
 
 ```cpp
 _Type dequeue();
@@ -148,11 +148,11 @@ _Type dequeue();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Полезные данные сообщения, удаленные из `unbounded_buffer`.
+Полезные данные сообщения, удаленные из `unbounded_buffer` .
 
-## <a name="enqueue"></a>очередь
+## <a name="enqueue"></a><a name="enqueue"></a>очередь
 
-Добавляет элемент в блок сообщений `unbounded_buffer`.
+Добавляет элемент в `unbounded_buffer` блок обмена сообщениями.
 
 ```cpp
 bool enqueue(
@@ -167,11 +167,11 @@ bool enqueue(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true** , если элемент был принят, и **false** в противном случае.
+**`true`** значение, если элемент был принят, **`false`** в противном случае.
 
-## <a name="link_target_notification"></a>link_target_notification
+## <a name="link_target_notification"></a><a name="link_target_notification"></a>link_target_notification
 
-Обратный вызов, уведомляющий о том, что новый целевой объект связан с этим блоком сообщений `unbounded_buffer`.
+Обратный вызов, уведомляющий о том, что новый целевой объект связан с этим `unbounded_buffer` блоком обмена сообщениями.
 
 ```cpp
 virtual void link_target_notification(
@@ -184,9 +184,9 @@ virtual void link_target_notification(
 *_PTarget*<br/>
 Указатель на вновь связанный целевой объект.
 
-## <a name="propagate_message"></a>propagate_message
+## <a name="propagate_message"></a><a name="propagate_message"></a>propagate_message
 
-Асинхронно передает сообщение из блока `ISource` в этот `unbounded_buffer` блок сообщений. Вызывается методом `propagate` при вызове из исходного блока.
+Асинхронно передает сообщение из `ISource` блока в этот `unbounded_buffer` блок обмена сообщениями. Он вызывается `propagate` методом при вызове из исходного блока.
 
 ```cpp
 virtual message_status propagate_message(
@@ -207,9 +207,9 @@ virtual message_status propagate_message(
 
 [Message_status](concurrency-namespace-enums.md#message_status) указывает, что цель решила делать с сообщением.
 
-## <a name="propagate_output_messages"></a>propagate_output_messages
+## <a name="propagate_output_messages"></a><a name="propagate_output_messages"></a>propagate_output_messages
 
-Помещает `message` `_PMessage` в этом `unbounded_buffer` блоке обмена сообщениями и пытается предложить его всем связанным целевым объектам.
+Помещает объект `message` `_PMessage` в этот `unbounded_buffer` блок обмена сообщениями и пытается предложить его всем связанным целевым объектам.
 
 ```cpp
 virtual void propagate_output_messages();
@@ -217,11 +217,11 @@ virtual void propagate_output_messages();
 
 ### <a name="remarks"></a>Remarks
 
-Если другое сообщение уже используется в `unbounded_buffer`, распространение на связанные целевые объекты не будет происходить, пока не будут приняты или использованы все предыдущие сообщения. Первая связанная цель для успешного `accept` или `consume` сообщения становится владельцем, а другая цель не может получить сообщение.
+Если другое сообщение уже находится впереди этого в `unbounded_buffer` , распространение на связанные целевые объекты не будет выполняться, пока не будут приняты или использованы все предыдущие сообщения. Первая связанная цель для успешного завершения `accept` или `consume` сообщение становится владельцем, и никакая другая цель не может получить сообщение.
 
-## <a name="process_input_messages"></a>process_input_messages
+## <a name="process_input_messages"></a><a name="process_input_messages"></a>process_input_messages
 
-Помещает `message` `_PMessage` в этом `unbounded_buffer` блоке обмена сообщениями и пытается предложить его всем связанным целевым объектам.
+Помещает объект `message` `_PMessage` в этот `unbounded_buffer` блок обмена сообщениями и пытается предложить его всем связанным целевым объектам.
 
 ```cpp
 virtual void process_input_messages(
@@ -234,7 +234,7 @@ virtual void process_input_messages(
 *_PMessage*<br/>
 Указатель на сообщение, которое должно быть обработано.
 
-## <a name="release_message"></a>release_message
+## <a name="release_message"></a><a name="release_message"></a>release_message
 
 Освобождает предыдущее резервирование сообщения.
 
@@ -247,11 +247,11 @@ virtual void release_message(
 ### <a name="parameters"></a>Параметры
 
 *_MsgId*<br/>
-`runtime_object_identity` освобожденного объекта `message`.
+`runtime_object_identity` `message` Объект для освобожденного объекта.
 
-## <a name="reserve_message"></a>reserve_message
+## <a name="reserve_message"></a><a name="reserve_message"></a>reserve_message
 
-Резервирует сообщение, которое было предложено этим блоком `unbounded_buffer` Messaging.
+Резервирует сообщение, которое было ранее предложено этим `unbounded_buffer` блоком обмена сообщениями.
 
 ```cpp
 virtual bool reserve_message(
@@ -262,17 +262,17 @@ virtual bool reserve_message(
 ### <a name="parameters"></a>Параметры
 
 *_MsgId*<br/>
-`runtime_object_identity` резервируемого объекта `message`.
+`runtime_object_identity` `message` Объект для резервируемого объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true** , если сообщение было успешно зарезервировано; в противном случае — **значение false** .
+**`true`** значение, если сообщение было успешно зарезервировано, **`false`** в противном случае.
 
 ### <a name="remarks"></a>Remarks
 
-После вызова `reserve`, если он возвращает **значение true**, необходимо вызвать метод `consume` или `release`, чтобы получить или освободить владение сообщением.
+После `reserve` вызова метода, если он возвращает значение **`true`** , `consume` `release` метод или должен быть вызван, чтобы принять или освободить владение сообщением.
 
-## <a name="resume_propagation"></a>resume_propagation
+## <a name="resume_propagation"></a><a name="resume_propagation"></a>resume_propagation
 
 Возобновляет распространение после освобождения резервирования.
 
@@ -280,9 +280,9 @@ virtual bool reserve_message(
 virtual void resume_propagation();
 ```
 
-## <a name="send_message"></a>send_message
+## <a name="send_message"></a><a name="send_message"></a>send_message
 
-Синхронно передает сообщение из блока `ISource` в этот `unbounded_buffer` блок сообщений. Вызывается методом `send` при вызове из исходного блока.
+Синхронно передает сообщение из `ISource` блока в этот `unbounded_buffer` блок обмена сообщениями. Он вызывается `send` методом при вызове из исходного блока.
 
 ```cpp
 virtual message_status send_message(
@@ -303,7 +303,7 @@ virtual message_status send_message(
 
 [Message_status](concurrency-namespace-enums.md#message_status) указывает, что цель решила делать с сообщением.
 
-## <a name="supports_anonymous_source"></a>supports_anonymous_source
+## <a name="supports_anonymous_source"></a><a name="supports_anonymous_source"></a>supports_anonymous_source
 
 Переопределяет метод `supports_anonymous_source`, чтобы указать, что данный блок может принимать сообщения, предоставляемые ему несвязанным источником.
 
@@ -313,11 +313,11 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true** , поскольку блок не откладывает предлагаемые сообщения.
+**`true`** так как блок не откладывает предлагаемые сообщения.
 
-## <a name="ctor"></a>unbounded_buffer
+## <a name="unbounded_buffer"></a><a name="ctor"></a>unbounded_buffer
 
-Конструирует блок сообщений `unbounded_buffer`.
+Конструирует `unbounded_buffer` блок обмена сообщениями.
 
 ```cpp
 unbounded_buffer();
@@ -360,11 +360,11 @@ unbounded_buffer(
 
 Среда выполнения использует планировщик по умолчанию, если вы не указали параметры `_PScheduler` или `_PScheduleGroup` .
 
-Тип `filter_method` — это функтор с сигнатурой `bool (_Type const &)` который вызывается этим блоком `unbounded_buffer` обмена сообщениями, чтобы определить, должно ли оно принимать предложенное сообщение.
+Тип `filter_method` — это функтор с сигнатурой, `bool (_Type const &)` которая вызывается этим `unbounded_buffer` блоком обмена сообщениями для определения того, следует ли принимать предложенное сообщение.
 
-## <a name="dtor"></a>~ unbounded_buffer
+## <a name="unbounded_buffer"></a><a name="dtor"></a>~ unbounded_buffer
 
-Уничтожает блок сообщений `unbounded_buffer`.
+Уничтожает `unbounded_buffer` блок обмена сообщениями.
 
 ```cpp
 ~unbounded_buffer();
@@ -372,6 +372,6 @@ unbounded_buffer(
 
 ## <a name="see-also"></a>См. также раздел
 
-[Пространство имен concurrency](concurrency-namespace.md)<br/>
+[Пространство имен Concurrency](concurrency-namespace.md)<br/>
 [Класс overwrite_buffer](overwrite-buffer-class.md)<br/>
 [Класс single_assignment](single-assignment-class.md)

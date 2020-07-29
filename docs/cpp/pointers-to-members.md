@@ -8,12 +8,12 @@ helpviewer_keywords:
 - members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
-ms.openlocfilehash: 75bd29310d64b0309ac48be053aa43cc0084aa2d
-ms.sourcegitcommit: 1a8fac06478da8bee1f6d70e25afbad94144af1a
+ms.openlocfilehash: fe92f848c5d5240f1afc657f5fb176513c8f9d88
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84226095"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213298"
 ---
 # <a name="pointers-to-members"></a>Указатели на члены
 
@@ -25,7 +25,7 @@ ms.locfileid: "84226095"
 
    - Необязательный спецификатор класса хранения.
 
-   - Необязательные спецификаторы **const** и **volatile** .
+   - Необязательные **`const`** **`volatile`** спецификаторы и.
 
    - Спецификатор типа: имя типа. Это тип элемента, на который указывает, а не класс.
 
@@ -39,7 +39,7 @@ ms.locfileid: "84226095"
 
    - __`*`__ Оператор.
 
-   - Необязательные спецификаторы **const** и **volatile** .
+   - Необязательные **`const`** **`volatile`** спецификаторы и.
 
    - Идентификатор, задающий имя указателя на член.
 
@@ -79,7 +79,7 @@ int main()
 }
 ```
 
-В предыдущем примере `pwCaption` — это указатель на любой член класса `Window` , который имеет тип `char*` . `pwCaption` имеет тип `char * Window::*`. В следующем фрагменте кода объявляются указатели на функции-члены `SetCaption` и `GetCaption`.
+В предыдущем примере `pwCaption` — это указатель на любой член класса `Window` , который имеет тип **`char*`** . `pwCaption` имеет тип `char * Window::*`. В следующем фрагменте кода объявляются указатели на функции-члены `SetCaption` и `GetCaption`.
 
 ```cpp
 const char * (Window::* pfnwGC)() = &Window::GetCaption;

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - delegate keyword [C++]
 ms.assetid: 03caf23d-7873-4a23-9b34-becf42aaf429
-ms.openlocfilehash: 388ccb28c9311b4727199e6b7324771c24c2906d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 77cd17eb8c164a08af9ec783f8aba422785609b6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172442"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219733"
 ---
 # <a name="delegate--ccli-and-ccx"></a>delegate (C++/CLI и C++/CX)
 
@@ -27,7 +27,7 @@ ms.locfileid: "80172442"
 
 **delegate** — контекстно-зависимое ключевое слово. Дополнительные сведения см. в статье [Context-Sensitive Keywords (C++/CLI and C++/CX)](context-sensitive-keywords-cpp-component-extensions.md) (Контекстно-зависимые ключевые слова (C++/CLI и C++/CX)).
 
-Используйте признак типа `__is_delegate()` для определения во время компиляции является ли тип делегатом. Подробные сведения см. в статье [Compiler Support for Type Traits (C++/CLI and C++/CX)](compiler-support-for-type-traits-cpp-component-extensions.md) (Поддержка характеристик типов компилятором (C++/CLI and C++/CX)).
+Используйте признак типа `__is_delegate()` для определения во время компиляции является ли тип делегатом. Дополнительные сведения см. в статье [Compiler Support for Type Traits (C++/CLI and C++/CX)](compiler-support-for-type-traits-cpp-component-extensions.md) (Поддержка характеристик типов компилятором (C++/CLI and C++/CX)).
 
 ## <a name="windows-runtime"></a>Среда выполнения Windows
 
@@ -47,10 +47,10 @@ delegate-type-identifier
 
 ### <a name="parameters"></a>Параметры
 
-*access*<br/>
-(Необязательно.) Доступность делегата может быть **public** (по умолчанию) или **private**. Прототип функции также можно дополнить ключевыми словами **const** или **volatile**.
+*имеет*<br/>
+используемых Доступность делегата, который может быть **`public`** (по умолчанию) или **`private`** . Прототип функции также может быть дополнен **`const`** **`volatile`** ключевыми словами или.
 
-*return-type*<br/>
+*Тип возвращаемого значения*<br/>
 Тип возвращаемого значения прототипа функции.
 
 *delegate-type-identifier*<br/>
@@ -81,13 +81,13 @@ function_declaration
 
 ### <a name="parameters"></a>Параметры
 
-*access*<br/>
+*имеет*<br/>
 Доступность делегата за пределами сборки может быть public или private (необязательно).  По умолчанию — private.  Внутри класса делегат может иметь любой уровень доступа.
 
 *function_declaration*<br/>
 Сигнатура функции, которую можно привязать к делегату. Типом возвращаемого значения делегата может быть любой управляемый тип. По соображениям взаимодействия рекомендуется, чтобы тип возвращаемого значения делегата был типом CLS.
 
-Для определения непривязанного делегата первый параметр в области *function_declaration* должен быть типом указателя **this** для объекта.
+Чтобы определить непривязанный делегат, первым параметром в *function_declaration* должен быть тип **`this`** указателя для объекта.
 
 ### <a name="remarks"></a>Remarks
 
@@ -121,7 +121,7 @@ function_declaration
 
 - [Практическое руководство. Определение и использование делегатов (C++/CLI)](../dotnet/how-to-define-and-use-delegates-cpp-cli.md)
 
-- [Универсальные делегаты (C++/CLI)](generic-delegates-visual-cpp.md)
+- [Универсальные методы-делегаты (C++/CLI)](generic-delegates-visual-cpp.md)
 
 ### <a name="requirements"></a>Требования
 

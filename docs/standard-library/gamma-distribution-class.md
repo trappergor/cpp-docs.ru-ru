@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::gamma_distribution [C++], param_type
 - std::gamma_distribution [C++], param_type
 ms.assetid: 2a6798ac-6152-41d7-8ef6-d684d92f1572
-ms.openlocfilehash: 4bcc17ada430c1e3b14ef1ef67ea97e863dbdd5d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1ddef32c1ef2d3eb83c8a8a560914dc1f0ec3d1d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370675"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220916"
 ---
 # <a name="gamma_distribution-class"></a>Класс gamma_distribution
 
@@ -70,15 +70,15 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*RealType*\
-Тип результата плавающей точки, по **умолчанию**удвоиться. Для возможных типов см [ \<>. ](../standard-library/random.md)
+*реалтипе*\
+Тип результата операции с плавающей запятой, по умолчанию — **`double`** . Возможные типы см. в разделе [\<random>](../standard-library/random.md) .
 
-*Ргсч*\
-Единый генератор случайных чисел. Для возможных типов см [ \<>. ](../standard-library/random.md)
+*РГСЧ*\
+Единый механизм генератора случайных чисел. Возможные типы см. в разделе [\<random>](../standard-library/random.md) .
 
 ## <a name="remarks"></a>Remarks
 
-Шаблон класса описывает распределение, которое производит значения определенного пользователем типа плавающей точки, или **введите двойной,** если ни один не предоставляется, распределенный в соответствии с Гамма-распределением. В следующей таблице представлены ссылки на статьи об отдельных членах.
+Шаблон класса описывает распределение, которое создает значения заданного пользователем типа с плавающей запятой или тип **`double`** , если он не указан, распределяется в соответствии с гамма-распределением. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
 ||||
 |-|-|-|
@@ -95,7 +95,7 @@ public:
 
 Функции-члены `operator()` возвращают следующее значение, созданное механизмом РГСЧ, из текущего или указанного пакета параметров.
 
-Для получения дополнительной информации о классах распределения и их членах [ \<>](../standard-library/random.md)см.
+Дополнительные сведения о классах распределения и их членах см [\<random>](../standard-library/random.md) . в разделе.
 
 Подробные сведения о гамма-распределении см. в статье в Wolfram MathWorld [Гамма-распределение](https://go.microsoft.com/fwlink/p/?linkid=401111).
 
@@ -184,11 +184,11 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<random>
+**Заголовок:**\<random>
 
 **Пространство имен:** std
 
-## <a name="gamma_distributiongamma_distribution"></a><a name="gamma_distribution"></a>gamma_distribution::gamma_distribution
+## <a name="gamma_distributiongamma_distribution"></a><a name="gamma_distribution"></a>gamma_distribution:: gamma_distribution
 
 Формирует распределение.
 
@@ -199,13 +199,13 @@ explicit gamma_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Параметры
 
-*Альфа*\
+*буквы*\
 Параметр распределения `alpha`.
 
 *Бета-версия*\
 Параметр распределения `beta`.
 
-*парм*\
+*ParM*\
 Структура параметров, используемая для формирования распределения.
 
 ### <a name="remarks"></a>Remarks
@@ -216,7 +216,7 @@ explicit gamma_distribution(const param_type& parm);
 
 Второй конструктор создает объект, хранимые параметры которого инициализируются из *parm*. Вы можете получить и задать текущие параметры существующего распределения, вызвав функцию-член `param()`.
 
-## <a name="gamma_distributionparam_type"></a><a name="param_type"></a>gamma_distribution::pарам-тип
+## <a name="gamma_distributionparam_type"></a><a name="param_type"></a>gamma_distribution::p aram_type
 
 Сохраняет параметры распределения.
 
@@ -234,7 +234,7 @@ struct param_type {
 
 ### <a name="parameters"></a>Параметры
 
-*Альфа*\
+*буквы*\
 Параметр распределения `alpha`.
 
 *Бета-версия*\
@@ -251,4 +251,4 @@ struct param_type {
 
 ## <a name="see-also"></a>См. также раздел
 
-[\<случайные>](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

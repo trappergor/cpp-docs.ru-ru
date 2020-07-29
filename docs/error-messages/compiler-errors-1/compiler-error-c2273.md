@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2273
 ms.assetid: 3c682c66-97bf-4a23-a22c-d9a26a92bf95
-ms.openlocfilehash: 9cd46f7a8a0762fcae2bdec15b9b4be6384adb25
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: f5780c299eb4da03ece3611ee55062ee7ebcdaae
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758688"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212791"
 ---
 # <a name="compiler-error-c2273"></a>Ошибка компилятора C2273
 
 "тип": недопустимо в качестве правой стороны оператора "->"
 
-Тип отображается как правый операнд оператора `->`.
+Тип отображается как правый операнд `->` оператора.
 
-Эта ошибка может быть вызвана попыткой доступа к преобразованию определяемого пользователем типа. Используйте ключевое слово `operator` между-> и `type`.
+Эта ошибка может быть вызвана попыткой доступа к преобразованию определяемого пользователем типа. Используйте ключевое слово **`operator`** between-> и `type` .
 
 Следующий пример приводит к возникновению ошибки C2273:
 

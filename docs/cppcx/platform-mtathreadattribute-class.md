@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::MTAThreadAttribute Class
 ms.assetid: bfc546a7-4333-4407-85b4-4721565e1f44
-ms.openlocfilehash: 4564def412834ae0586292e8aa533d3b2bd0d679
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 700eeae226be48c1f6659d621f2f5c0ed397bb7f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152674"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213051"
 ---
 # <a name="platformmtathreadattribute-class"></a>Класс Platform::MTAThreadAttribute
 
@@ -32,15 +32,15 @@ public ref class MTAThreadAttribute sealed : Attribute
 
 |name|Описание|
 |----------|-----------------|
-|[1 конструктор MTAThreadAttribute](#ctor) конструктор|Инициализирует новый экземпляр класса.|
+|Конструктор [MTAThreadAttribute 1](#ctor)|Инициализирует новый экземпляр класса.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-Атрибут MTAThreadAttribute наследует от [Platform::Object Class](../cppcx/platform-object-class.md). Атрибут MTAThreadAttribute также перегружает или имеет следующие члены:
+Атрибут MTAThreadAttribute наследует от [класса Platform:: Object](../cppcx/platform-object-class.md). Атрибут MTAThreadAttribute также перегружает или имеет следующие члены:
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[MTAThreadAttribute::Equals](#equals)|Определяет, равен ли заданный объект текущему объекту.|
+|[MTAThreadAttribute::Equals](#equals)|Определяет, равен ли указанный объект текущему объекту.|
 |[MTAThreadAttribute::GetHashCode](#gethashcode)|Возвращает хэш-код данного экземпляра.|
 |[MTAThreadAttribute::ToString](#tostring)|Возвращает строку, представляющую текущий объект.|
 
@@ -50,11 +50,11 @@ public ref class MTAThreadAttribute sealed : Attribute
 
 ### <a name="requirements"></a>Требования
 
-**Метаданные:** platform.winmd
+**Метаданные:** Platform. winmd
 
 **Пространство имен:** Platform
 
-## <a name="ctor"></a> Конструктор MTAThreadAttribute
+## <a name="mtathreadattribute-constructor"></a><a name="ctor"></a>Конструктор MTAThreadAttribute
 
 Инициализирует новый экземпляр класса MTAThreadAttribute.
 
@@ -64,9 +64,9 @@ public ref class MTAThreadAttribute sealed : Attribute
 public:MTAThreadAttribute();
 ```
 
-## <a name="equals"></a> MTAThreadAttribute::Equals
+## <a name="mtathreadattributeequals"></a><a name="equals"></a>MTAThreadAttribute:: Equals
 
-Определяет, равен ли заданный объект текущему объекту.
+Определяет, равен ли указанный объект текущему объекту.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -81,9 +81,9 @@ public:virtual override bool Equals( Object^ obj );
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** Если объекты равны; в противном случае — значение **false**.
+**`true`** значение, если объекты равны; в противном случае — **`false`** .
 
-## <a name="gethashcode"></a> MTAThreadAttribute::GetHashCode
+## <a name="mtathreadattributegethashcode"></a><a name="gethashcode"></a>MTAThreadAttribute:: GetHashCode
 
 Возвращает хэш-код данного экземпляра.
 
@@ -97,7 +97,7 @@ public:int GetHashCode();
 
 Хэш-код данного экземпляра.
 
-## <a name="tostring"></a> MTAThreadAttribute::ToString
+## <a name="mtathreadattributetostring"></a><a name="tostring"></a>MTAThreadAttribute:: ToString
 
 Возвращает строку, представляющую текущий объект.
 
@@ -111,6 +111,6 @@ public:String^ ToString();
 
 Строка, представляющая текущий объект.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Пространство имен Platform](platform-namespace-c-cx.md)
+[Пространство имен платформы](platform-namespace-c-cx.md)

@@ -59,12 +59,12 @@ helpviewer_keywords:
 - nexttowardf function
 - nexttowardl function
 ms.assetid: 9785bfb9-de53-4bd0-9637-f05fa0c1f6ab
-ms.openlocfilehash: b137fd131536da6b8630b9cadf69238ce48964bf
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 6122fd8921bdb413c4b24128b2428a70ccda0892
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909358"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213519"
 ---
 # <a name="nextafter-nextafterf-nextafterl-_nextafter-_nextafterf-nexttoward-nexttowardf-nexttowardl"></a>nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl
 
@@ -109,7 +109,7 @@ long double nexttoward( long double x, long double y ); /* C++ only, requires <c
 
 Семейства функций **nextafter** и **нексттовард** эквивалентны, за исключением типа параметра *y*. Если *x* и *y* равны, возвращается значение *y* , преобразованное в тип возвращаемого значения.
 
-Поскольку C++ допускает \<перегрузку, при включении cmath> можно вызывать перегрузки **nextafter** и **нексттовард** , возвращающие типы **float** и **Long** **Double** . В программе на языке C **nextafter** и **нексттовард** всегда возвращают **double**.
+Так как C++ допускает перегрузку, при включении \<cmath> можно вызывать перегрузки **nextafter** и **нексттовард** , которые возвращают **`float`** **`long double`** типы и. В программе на языке C **nextafter** и **нексттовард** всегда возвращают **`double`** .
 
 Функции **_nextafter** и **_nextafterf** являются специфичными для Microsoft. Функция **_nextafterf** доступна только при компиляции для x64.
 
@@ -126,5 +126,5 @@ long double nexttoward( long double x, long double y ); /* C++ only, requires <c
 
 ## <a name="see-also"></a>См. также раздел
 
-[Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
+[Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>

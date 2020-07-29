@@ -9,19 +9,19 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-ms.openlocfilehash: 6b3add1c0de8aa1f8ec66e8d220443c4a0efd704
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: aa6e5d1ea7d1bc2d7ebfaf07c7c9f808b37e9804
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172469"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219772"
 ---
 # <a name="component-extensions-for-net-and-uwp"></a>Расширения компонентов для .NET и UWP
 
 Стандарт C++ позволяет поставщикам компиляторов предоставлять нестандартные расширения языка. Корпорация Майкрософт предоставляет расширения для подключения собственного кода C++ к коду, выполняемому на платформе .NET Framework или универсальной платформе Windows (UWP). Расширения .NET называются C++/CLI и создают код, который выполняется в управляемой среде выполнения .NET, известной как Common Language Runtime (CLR). Расширения UWP называются C++/CX. Они создают собственный машинный код.
 
 > [!NOTE]
-> Для новых приложений рекомендуется использовать C++/WinRT вместо C++/CX. C++/WinRT — это новая стандартная языковая проекция C++17 для API среды выполнения Windows. Мы продолжим предоставлять поддержку C++/CX и WRL, но в новых приложениях настоятельно рекомендуется использовать C++/WinRT. См. дополнительные сведения о [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/index).
+> Для новых приложений рекомендуется использовать C++/WinRT вместо C++/CX. C++/WinRT — это новая стандартная языковая проекция C++17 для API среды выполнения Windows. Мы продолжим предоставлять поддержку C++/CX и WRL, но в новых приложениях настоятельно рекомендуется использовать C++/WinRT. Дополнительные сведения см. в разделе [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/index).
 
 ### <a name="two-runtimes-one-set-of-extensions"></a>Две среды выполнения, один набор расширений
 
@@ -39,22 +39,22 @@ C++/CLI расширяет стандарт C++ ISO/ANSI и определяет
 
 |Ключевое слово|Контекстно-зависимое?|Назначение|Справочник|
 |-------------|-----------------------|-------------|---------------|
-|**ref class**<br /><br /> **ref struct**|нет|Объявляет класс.|[Классы и структуры](classes-and-structs-cpp-component-extensions.md)|
-|**value class**<br /><br /> **value struct**|нет|Объявляет класс значения.|[Классы и структуры](classes-and-structs-cpp-component-extensions.md)|
-|**Класс interface**<br /><br /> **interface struct**|нет|Объявляет интерфейс.|[Класс interface](interface-class-cpp-component-extensions.md)|
-|**Класс перечисления**<br /><br /> **enum struct**|нет|Объявляет перечисление.|[Класс перечисления](enum-class-cpp-component-extensions.md)|
-|**property**|Да|Объявляет свойство.|[property](property-cpp-component-extensions.md)|
-|**delegate**|Да|Объявляет делегат.|[Делегат (C++/CLI и C++/CX)](delegate-cpp-component-extensions.md)|
+|**ref class**<br /><br /> **ref struct**|Нет|Объявляет класс.|[Классы и структуры](classes-and-structs-cpp-component-extensions.md)|
+|**value class**<br /><br /> **value struct**|Нет|Объявляет класс значения.|[Классы и структуры](classes-and-structs-cpp-component-extensions.md)|
+|**Класс interface**<br /><br /> **interface struct**|Нет|Объявляет интерфейс.|[Класс interface](interface-class-cpp-component-extensions.md)|
+|**Класс перечисления**<br /><br /> **enum struct**|Нет|Объявляет перечисление.|[Класс перечисления](enum-class-cpp-component-extensions.md)|
+|**`property`**|Да|Объявляет свойство.|[property](property-cpp-component-extensions.md)|
+|**delegate**|Да|Объявляет делегат.|[delegate (C++/CLI и C++/CX)](delegate-cpp-component-extensions.md)|
 |**event**|Да|Объявление события.|[event](event-cpp-component-extensions.md)|
 
 ## <a name="override-specifiers"></a>Спецификаторы переопределения
 
-Для указания поведения переопределения при наследовании можно использовать указанные ниже ключевые слова. Хотя ключевое слово **new** (новый) не является расширением C++, оно приведено здесь, поскольку его можно использовать в дополнительном контексте. Некоторые спецификаторы также допустимы для машинного программирования. Дополнительные сведения см. [в разделе инструкции. объявление описателей переопределения в компиляциях в машинном код (C++/CLI)](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
+Для указания поведения переопределения при наследовании можно использовать указанные ниже ключевые слова. Хотя **`new`** ключевое слово не является расширением C++, оно указывается здесь, так как его можно использовать в дополнительном контексте. Некоторые спецификаторы также допустимы для машинного программирования. Дополнительные сведения см. [в разделе инструкции. объявление описателей переопределения в компиляциях в собственном коде (C++/CLI)](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
 
 |Ключевое слово|Контекстно-зависимое?|Назначение|Справочник|
 |-------------|-----------------------|-------------|---------------|
 |**abstract**|Да|Указывает, что функции или классы являются абстрактными.|[abstract](abstract-cpp-component-extensions.md)|
-|**новую**|нет|Указывает, что функция не является переопределением версии базового класса.|[new (новая ячейка в таблице vtable)](new-new-slot-in-vtable-cpp-component-extensions.md)|
+|**`new`**|Нет|Указывает, что функция не является переопределением версии базового класса.|[new (новая ячейка в таблице vtable)](new-new-slot-in-vtable-cpp-component-extensions.md)|
 |**override**|Да|Указывает, что метод должен быть переопределением версии базового класса.|[override](override-cpp-component-extensions.md)|
 |**sealed**|Да|Предотвращает использование классов в качестве базовых классов.|[sealed](sealed-cpp-component-extensions.md)|
 
@@ -64,7 +64,7 @@ C++/CLI расширяет стандарт C++ ISO/ANSI и определяет
 
 |Ключевое слово|Контекстно-зависимое?|Назначение|
 |-------------|-----------------------|-------------|
-|**generic**|нет|Объявляет универсальный тип.|
+|**шаблона**|Нет|Объявляет универсальный тип.|
 |**where**|Да|Определяет ограничения, применяемые к параметру универсального типа.|
 
 ## <a name="miscellaneous-keywords"></a>Прочие ключевые слова
@@ -74,12 +74,12 @@ C++/CLI расширяет стандарт C++ ISO/ANSI и определяет
 |Ключевое слово|Контекстно-зависимое?|Назначение|Справочник|
 |-------------|-----------------------|-------------|---------------|
 |**finally**|Да|Указывает поведение обработки исключений по умолчанию.|[Обработка исключений](exception-handling-cpp-component-extensions.md)|
-|**for each, in**|нет|Перечисляет элементы коллекции.|[for each, in](../dotnet/for-each-in.md)|
-|**gcnew**|нет|Выделяет типы в куче со сбором мусора. Используйте вместо **new** и **delete**.|[ref new, gcnew](ref-new-gcnew-cpp-component-extensions.md)|
-|**ref new**|Да|Выделяет тип среды выполнения Windows. Используйте вместо **new** и **delete**.|[ref new, gcnew](ref-new-gcnew-cpp-component-extensions.md)|
+|**for each, in**|Нет|Перечисляет элементы коллекции.|[for each, in](../dotnet/for-each-in.md)|
+|**gcnew**|Нет|Выделяет типы в куче со сбором мусора. Используйте вместо **`new`** и **`delete`** .|[ref new, gcnew](ref-new-gcnew-cpp-component-extensions.md)|
+|**ref new**|Да|Выделяет тип среды выполнения Windows. Используйте вместо **`new`** и **`delete`** .|[ref new, gcnew](ref-new-gcnew-cpp-component-extensions.md)|
 |**initonly**|Да|Указывает, что член можно инициализировать только в объявлении или в статическом конструкторе.|[initonly (C++/CLI)](../dotnet/initonly-cpp-cli.md)|
-|**literal**|Да|Создает переменную литерала.|[literal](literal-cpp-component-extensions.md)|
-|**nullptr**|нет|Означает, что обработчик или указатель не указывает на объект.|[nullptr](nullptr-cpp-component-extensions.md)|
+|**кавычк**|Да|Создает переменную литерала.|[литерал](literal-cpp-component-extensions.md)|
+|**`nullptr`**|Нет|Означает, что обработчик или указатель не указывает на объект.|[nullptr](nullptr-cpp-component-extensions.md)|
 
 ## <a name="template-constructs"></a>Конструкции шаблонов
 
@@ -91,7 +91,7 @@ C++/CLI расширяет стандарт C++ ISO/ANSI и определяет
 |**interior_ptr**|(Только для среды CLR). Указывает на данные в ссылочном типе.|[interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md)|
 |**pin_ptr**|(Только для среды CLR). Указывает на ссылочные типы среды CLR, чтобы временно отключить систему сборки мусора.|[pin_ptr (C++/CLI)](pin-ptr-cpp-cli.md)|
 |**safe_cast**|Определяет и выполняет оптимальный метод приведения для типа среды выполнения.|[safe_cast](safe-cast-cpp-component-extensions.md)|
-|**typeid**|(Только для среды CLR). Извлекает объект <xref:System.Type?displayProperty=fullName>, описывающий заданный тип или объект.|[typeid](typeid-cpp-component-extensions.md)|
+|**`typeid`**|(Только для среды CLR). Извлекает объект <xref:System.Type?displayProperty=fullName>, описывающий заданный тип или объект.|[типа](typeid-cpp-component-extensions.md)|
 
 ## <a name="declarators"></a>Деклараторы
 
@@ -99,19 +99,19 @@ C++/CLI расширяет стандарт C++ ISO/ANSI и определяет
 
 |Оператор|Назначение|Справочник|
 |--------------|-------------|---------------|
-|`^`|Объявляет дескриптор объекта, то есть указатель на объект среды выполнения Windows или объект CLR, который автоматически удаляется, если больше не используется.|[Оператор дескриптора объекта (^)](handle-to-object-operator-hat-cpp-component-extensions.md)|
-|`%`|Объявляет отслеживаемую ссылку, то есть ссылку на объект среды выполнения Windows или объект CLR, который автоматически удаляется, если больше не используется.|[Оператор отслеживания ссылок](tracking-reference-operator-cpp-component-extensions.md)|
+|`^`|Объявляет дескриптор объекта, то есть указатель на объект среды выполнения Windows или объект CLR, который автоматически удаляется, если больше не используется.|[Оператор Handle to Object (^)](handle-to-object-operator-hat-cpp-component-extensions.md)|
+|`%`|Объявляет отслеживаемую ссылку, то есть ссылку на объект среды выполнения Windows или объект CLR, который автоматически удаляется, если больше не используется.|[Отслеживаемый оператор ссылки](tracking-reference-operator-cpp-component-extensions.md)|
 
 ## <a name="additional-constructs-and-related-topics"></a>Дополнительные конструкции и связанные разделы
 
 В этом разделе перечислены дополнительные программные конструкции и разделы, относящиеся к среде CLR.
 
-|Раздел|Description|
+|Раздел|Описание|
 |-----------|-----------------|
 |[__identifier (C++/CLI)](identifier-cpp-cli.md)|(Среда выполнения Windows и среда CLR) Позволяет использовать ключевые слова как идентификаторы.|
-|[Списки аргументов переменной длины (...) (C++/CLI)](variable-argument-lists-dot-dot-dot-cpp-cli.md)|(Среда выполнения Windows и среда CLR) Позволяет функции принимать переменное число аргументов.|
+|[Списки аргументов переменных (...) (C++/CLI)](variable-argument-lists-dot-dot-dot-cpp-cli.md)|(Среда выполнения Windows и среда CLR) Позволяет функции принимать переменное число аргументов.|
 |[Эквиваленты собственным типам C++ в .NET Framework (C++/CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)|Перечисляет типы среды CLR, используемые вместо целочисленных типов C++.|
-|Модификатор **__declspec** [AppDomain](../cpp/appdomain.md)|Модификатор **__declspec**, требующий, чтобы статические и глобальные переменные существовали для каждого домена приложений.|
+|[AppDomain](../cpp/appdomain.md) **`__declspec`** Модификатор|**`__declspec`** модификатор, который требует, чтобы статические и глобальные переменные существовали для каждого домена AppDomain.|
 |[Приведение в стиле C с использованием параметра /clr (C++/CLI)](c-style-casts-with-clr-cpp-cli.md)|Описывается интерпретация приведений в стиле C.|
 |Соглашение о вызовах [__clrcall](../cpp/clrcall.md)|Указывается соглашение о вызовах, совместимое со средой CLR.|
 |`__cplusplus_cli`|[Предопределенные макросы](../preprocessor/predefined-macros.md)|
@@ -120,17 +120,17 @@ C++/CLI расширяет стандарт C++ ISO/ANSI и определяет
 |[Явные переопределения](explicit-overrides-cpp-component-extensions.md)|Демонстрируется переопределение произвольных членов функциями-членами.|
 |[Дружественные сборки (C++)](../dotnet/friend-assemblies-cpp.md)|Описывается доступ клиентской сборки ко всем типам в компоненте сборки.|
 |[Упаковка-преобразование](boxing-cpp-component-extensions.md)|Описываются условия, при которых упаковываются типы значений.|
-|[Поддержка характеристик типов компилятором](compiler-support-for-type-traits-cpp-component-extensions.md)|Описывается выявление характеристик типов во время компиляции.|
-|Директивы pragma [managed, unmanaged](../preprocessor/managed-unmanaged.md)|Демонстрируется сосуществование управляемых и неуправляемых функций в одном модуле.|
-|Модификатор [обработки](../cpp/process.md) **__declspec**|Модификатор **__declspec**, требующий, чтобы статические и глобальные переменные существовали для каждого процесса.|
+|[Поддержка характеристик типов в компиляторе](compiler-support-for-type-traits-cpp-component-extensions.md)|Описывается выявление характеристик типов во время компиляции.|
+|[управляемые, неуправляемые](../preprocessor/managed-unmanaged.md) директивы pragma|Демонстрируется сосуществование управляемых и неуправляемых функций в одном модуле.|
+|[Обработка](../cpp/process.md) **`__declspec`** Модификатор|**`__declspec`** модификатор, который требует, чтобы статические и глобальные переменные существовали для каждого процесса.|
 |[Отражение (C++/CLI)](../dotnet/reflection-cpp-cli.md)|Демонстрируется CLR-версия данных типа во время выполнения.|
 |[String](string-cpp-component-extensions.md)|Описывается преобразование компилятором строковых литералов в объект <xref:System.String>.|
-|[Перенаправление типов (C++/CLI)](type-forwarding-cpp-cli.md)|Разрешает перемещение типа из поставляемой сборки в другую сборку, чтобы исключить необходимость повторной компиляции клиентского кода.|
-|[Пользовательские атрибуты](user-defined-attributes-cpp-component-extensions.md)|Демонстрируются атрибуты, определяемые пользователем.|
+|[Пересылка типов (C++/CLI)](type-forwarding-cpp-cli.md)|Разрешает перемещение типа из поставляемой сборки в другую сборку, чтобы исключить необходимость повторной компиляции клиентского кода.|
+|[Определяемые пользователем атрибуты](user-defined-attributes-cpp-component-extensions.md)|Демонстрируются атрибуты, определяемые пользователем.|
 |[Директива #using](../preprocessor/hash-using-directive-cpp.md)|Импортирует внешние сборки.|
 |[Документация XML](../build/reference/xml-documentation-visual-cpp.md)|Пояснения к документации кода на основе XML с использованием [/doc (обработка комментариев к документации) (C/C++)](../build/reference/doc-process-documentation-comments-c-cpp.md)|
 
 ## <a name="see-also"></a>См. также раздел
 
 [Программирование .NET с использованием C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
-[Взаимодействие исходного кода и платформы.NET](../dotnet/native-and-dotnet-interoperability.md)
+[Взаимодействие машинного кода и .NET](../dotnet/native-and-dotnet-interoperability.md)

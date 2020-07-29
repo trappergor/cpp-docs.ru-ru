@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::STAThreadAttribute Class
 ms.assetid: f97960fc-e673-4d9e-910a-54c8415411c4
-ms.openlocfilehash: 05fb2879839c504f49f56e25ffe28329aa969c69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a8220d8cddca29e621b21fc56966efdb42cb32e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183386"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213025"
 ---
 # <a name="platformstathreadattribute-class"></a>Класс Platform::STAThreadAttribute
 
@@ -38,11 +38,11 @@ public ref class STAThreadAttribute sealed : Attribute
 
 ### <a name="public-methods"></a>Открытые методы
 
-Атрибут STAThreadAttribute наследует от [Platform::Object Class](../cppcx/platform-object-class.md). Атрибут STAThreadAttribute также перегружает или имеет следующие члены:
+Атрибут STAThreadAttribute наследует от [класса Platform:: Object](../cppcx/platform-object-class.md). Атрибут STAThreadAttribute также перегружает или имеет следующие члены:
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[STAThreadAttribute::Equals](#equals)|Определяет, равен ли заданный объект текущему объекту.|
+|[STAThreadAttribute::Equals](#equals)|Определяет, равен ли указанный объект текущему объекту.|
 |[STAThreadAttribute::GetHashCode](#gethashcode)|Возвращает хэш-код данного экземпляра.|
 |[STAThreadAttribute::ToString](#tostring)|Возвращает строку, представляющую текущий объект.|
 
@@ -56,7 +56,7 @@ public ref class STAThreadAttribute sealed : Attribute
 
 **Пространство имен:** Platform
 
-## <a name="ctor"></a> STAThreadAttribute constructor
+## <a name="stathreadattribute-constructor"></a><a name="ctor"></a> STAThreadAttribute constructor
 
 Инициализирует новый экземпляр класса STAThreadAttribute.
 
@@ -66,9 +66,9 @@ public ref class STAThreadAttribute sealed : Attribute
 public:STAThreadAttribute();
 ```
 
-## <a name="equals"></a> STAThreadAttribute::Equals
+## <a name="stathreadattributeequals"></a><a name="equals"></a>STAThreadAttribute:: Equals
 
-Определяет, равен ли заданный объект текущему объекту.
+Определяет, равен ли указанный объект текущему объекту.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -83,9 +83,9 @@ public:virtual override bool Equals( Object^ obj );
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** Если объекты равны; в противном случае — значение **false**.
+**`true`** значение, если объекты равны; в противном случае — **`false`** .
 
-## <a name="gethashcode"></a> STAThreadAttribute::GetHashCode
+## <a name="stathreadattributegethashcode"></a><a name="gethashcode"></a>STAThreadAttribute:: GetHashCode
 
 Возвращает хэш-код данного экземпляра.
 
@@ -99,7 +99,7 @@ public:int GetHashCode();
 
 Хэш-код данного экземпляра.
 
-## <a name="tostring"></a> STAThreadAttribute::ToString
+## <a name="stathreadattributetostring"></a><a name="tostring"></a>STAThreadAttribute:: ToString
 
 Возвращает строку, представляющую текущий объект.
 
@@ -113,6 +113,6 @@ public:String^ ToString();
 
 Строка, представляющая текущий объект.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Пространство имен Platform](platform-namespace-c-cx.md)
+[Пространство имен платформы](platform-namespace-c-cx.md)

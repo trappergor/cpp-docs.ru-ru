@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-ms.openlocfilehash: 80b46cb95f2fdb83922ca22e8aa06a89aca4bfde
-ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.openlocfilehash: 3c95f4a982e23d757b330ecadcae5cfbfd6fd531
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82031502"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213077"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Класс Platform::Collections::UnorderedMap
 
@@ -29,22 +29,22 @@ ref class Map sealed;
 
 #### <a name="parameters"></a>Параметры
 
-*K*<br/>
+*Занят*<br/>
 Тип ключа в паре "ключ-значение".
 
-*V*<br/>
+*3,3*<br/>
 Тип значения в паре "ключ-значение".
 
-*C*<br/>
-Тип, предоставляющий объект функции, который может сравнить два значения элементов как ключи сортировки для определения их относительного порядка в объекте Map. По умолчанию, [\<std::equal_to K>](../standard-library/equal-to-struct.md).
+*В*<br/>
+Тип, предоставляющий объект функции, который может сравнить два значения элементов как ключи сортировки для определения их относительного порядка в объекте Map. По умолчанию [std:: equal_to \<K> ](../standard-library/equal-to-struct.md).
 
 ### <a name="remarks"></a>Remarks
 
 Допустимые типы:
 
-- целые числа
+- integers
 
-- интерфейс класса
+- класс интерфейса ^
 
 - открытый ссылочный класс ^
 
@@ -52,37 +52,37 @@ ref class Map sealed;
 
 - открытый класс перечисления
 
-**UnorderedMap** в основном является оберткой для [std::unordered_map,](../standard-library/unordered-map-class.md) которая поддерживает хранение типов Runtime Windows. Это конкретная реализация [Windows::Foundation::Collections::IMap](/uwp/api/windows.foundation.collections.imap-2) и [IObservableMap,](/uwp/api/windows.foundation.collections.iobservablemap-2) которые передаются через общедоступные интерфейсы Windows Runtime. При попытке использования типа `Platform::Collections::UnorderedMap` в открытом возвращаемом значении или параметре возникает ошибка компилятора C3986. Вы можете исправить ошибку, изменив тип параметра или возвращаемого значения на [Windows::Foundation::Collections::IMap](/uwp/api/windows.foundation.collections.imap-2).
+**UnorderedMap** по сути является оболочкой для [std:: unordered_map](../standard-library/unordered-map-class.md) , которая поддерживает хранение типов Среда выполнения Windows. Это конкретная реализация типов [Windows:: Foundation:: Collections:: IMAP](/uwp/api/windows.foundation.collections.imap-2) и [IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap-2) , которые передаются через общедоступные интерфейсы Среда выполнения Windows. При попытке использования типа `Platform::Collections::UnorderedMap` в открытом возвращаемом значении или параметре возникает ошибка компилятора C3986. Вы можете исправить ошибку, изменив тип параметра или возвращаемого значения на [Windows::Foundation::Collections::IMap](/uwp/api/windows.foundation.collections.imap-2).
 
-Для получения дополнительной информации [см.](../cppcx/collections-c-cx.md)
+Дополнительные сведения см. в разделе [коллекции](../cppcx/collections-c-cx.md).
 
-### <a name="members"></a>Участники
+### <a name="members"></a>Элементы
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
 |Имя|Описание|
 |----------|-----------------|
-|[Неупорядоченнаякарта:UnorderedMap](#ctor)|Инициализирует новый экземпляр класса Map.|
+|[UnorderedMap:: UnorderedMap](#ctor)|Инициализирует новый экземпляр класса Map.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
-|[Неупорядоченнаякарта::Ясно](#clear)|Удаляет все пары "ключ-значение" из текущего объекта Map.|
-|[НеупорядоченнаяКарта::Первый](#first)|Возвращает итератор, указывающий первый элемент в сопоставлении.|
-|[Неупорядоченнаякарта::GetView](#getview)|Возвращает доступное только для чтения представление текущего сопоставления, то есть класс Platform::Collections::UnorderedMapView.|
-|[Неупорядоченнаякарта::HasKey](#haskey)|Определяет, содержит ли текущий объект Map указанный ключ.|
-|[Неупорядоченнаякарта::Вставка](#insert)|Добавляет в текущий объект Map указанную пару "ключ-значение".|
-|[Неупорядоченнаякарта::Поиск](#lookup)|Извлекает элемент по указанному ключу в текущем объекте Map.|
-|[Неупорядоченнаякарта::Удалить](#remove)|Удаляет указанную пару "ключ-значение" из текущего объекта Map.|
-|[Неупорядоченнаякарта::Размер](#size)|Возвращает количество элементов в текущем объекте Map.|
+|[UnorderedMap:: Clear](#clear)|Удаляет все пары "ключ-значение" из текущего объекта Map.|
+|[UnorderedMap:: First](#first)|Возвращает итератор, указывающий первый элемент в сопоставлении.|
+|[UnorderedMap:: View](#getview)|Возвращает доступное только для чтения представление текущего сопоставления, то есть класс Platform::Collections::UnorderedMapView.|
+|[UnorderedMap:: HasKey](#haskey)|Определяет, содержит ли текущий объект Map указанный ключ.|
+|[UnorderedMap:: INSERT](#insert)|Добавляет в текущий объект Map указанную пару "ключ-значение".|
+|[UnorderedMap:: Lookup](#lookup)|Извлекает элемент по указанному ключу в текущем объекте Map.|
+|[UnorderedMap:: Remove](#remove)|Удаляет указанную пару "ключ-значение" из текущего объекта Map.|
+|[UnorderedMap:: size](#size)|Возвращает количество элементов в текущем объекте Map.|
 
 ### <a name="events"></a>События
 
 |||
 |-|-|
 |Имя|Описание|
-|[Карта::MapChanged](#mapchanged) событие|Происходит при изменении объекта Map.|
+|Событие [Map:: мапчанжед](#mapchanged)|Происходит при изменении объекта Map.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -94,7 +94,7 @@ ref class Map sealed;
 
 **Пространство имен:** Platform::Collections
 
-## <a name="unorderedmapclear-method"></a><a name="clear"></a>Неупорядоченнаякарта::Ясный метод
+## <a name="unorderedmapclear-method"></a><a name="clear"></a>Метод UnorderedMap:: Clear
 
 Удаляет все пары "ключ-значение" из текущего объекта UnorderedMap.
 
@@ -104,9 +104,9 @@ ref class Map sealed;
 virtual void Clear();
 ```
 
-## <a name="unorderedmapfirst-method"></a><a name="first"></a>UnorderedMap::Первый метод
+## <a name="unorderedmapfirst-method"></a><a name="first"></a>Метод UnorderedMap:: First
 
-Возвращает итератор, который определяет первую [Windows::::: Коллекции::\<IKeyValuePair K,>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) элемент на неупорядоченной карте.
+Возвращает итератор, указывающий первый элемент [Windows:: Foundation:: Collections:: \<K,V> IKeyValuePair](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) в неупорядоченной карте.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -122,11 +122,11 @@ virtual Windows::Foundation::Collections::IIterator<
 
 ### <a name="remarks"></a>Remarks
 
-Удобный способ удержания итератора, возвращенного First() заключается в присвоении значения возврата переменной, которая задекларирована с ключевым словом **автоматического** типа вычета. Например, `auto x = myUnorderedMap->First();`.
+Удобным способом удержания итератора, возвращенного первым (), является присвоение возвращаемого значения переменной, объявленной с **`auto`** ключевым словом выведения типа. Например, `auto x = myUnorderedMap->First();`.
 
-## <a name="unorderedmapgetview-method"></a><a name="getview"></a>Неупорядоченная карта::GetView Метод
+## <a name="unorderedmapgetview-method"></a><a name="getview"></a>Метод UnorderedMap:: onview
 
-Возвращает только для чтения представление текущего UnorderedMap; то есть, [платформа::Коллекции::UnorderedMapView Класс,](../cppcx/platform-collections-unorderedmapview-class.md) который реализует [Windows::Foundation::Collections::IMapView::IMapView](/uwp/api/windows.foundation.collections.imapview-2) интерфейс.
+Возвращает доступное только для чтения представление текущего UnorderedMap; то есть [класс Platform:: Collections:: UnorderedMapView](../cppcx/platform-collections-unorderedmapview-class.md) , реализующий интерфейс [Windows:: Foundation:: Collections:: IMapView:: IMapView](/uwp/api/windows.foundation.collections.imapview-2) .
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -138,7 +138,7 @@ Windows::Foundation::Collections::IMapView<K, V>^ GetView();
 
 Объект `UnorderedMapView`.
 
-## <a name="unorderedmaphaskey-method"></a><a name="haskey"></a>UnorderedMap::HasKey Метод
+## <a name="unorderedmaphaskey-method"></a><a name="haskey"></a>Метод UnorderedMap:: HasKey
 
 Определяет, содержит ли текущий объект UnorderedMap указанный ключ.
 
@@ -153,13 +153,13 @@ bool HasKey(
 ### <a name="parameters"></a>Параметры
 
 *key*<br/>
-Ключ, используемый для поиска элемента UnorderedMap. Тип *ключа* typename *K*.
+Ключ, используемый для поиска элемента UnorderedMap. Тип *ключа* — TypeName *K*.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**верно,** если ключ найден; в противном случае, **ложные**.
+**`true`** значение, если ключ найден; в противном случае — **`false`** .
 
-## <a name="unorderedmapinsert-method"></a><a name="insert"></a>Неупорядоченнаякарта::Вставить метод
+## <a name="unorderedmapinsert-method"></a><a name="insert"></a>Метод UnorderedMap:: INSERT
 
 Добавляет в текущий объект UnorderedMap указанную пару "ключ-значение".
 
@@ -175,16 +175,16 @@ virtual bool Insert(
 ### <a name="parameters"></a>Параметры
 
 *key*<br/>
-Ключ из пары "ключ-значение". Тип *ключа* typename *K*.
+Ключ из пары "ключ-значение". Тип *ключа* — TypeName *K*.
 
 *value*<br/>
-Значение из пары "ключ-значение". Тип *значения* — typename *V.*
+Значение из пары "ключ-значение". Тип *значения* — TypeName *V*.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**верно,** если ключ существующего элемента в текущей Карте соответствует *ключу,* и значение части этого элемента устанавливается *значение.* **ложный,** если существующий элемент в текущей карте не соответствует *ключу,* а параметры *ключа* и *значения* превращаются в пару ключей, а затем добавляются к текущей Неупорядоченной Map.
+**`true`** значение, если ключ существующего элемента в текущей карте соответствует *ключу* , а значение этого элемента равно *значению*. **`false`** Если в текущем *ключе* сопоставления нет существующего элемента, а параметры *ключа* и *значения* вносятся в пару "ключ-значение", а затем добавляются в текущий UnorderedMap.
 
-## <a name="unorderedmaplookup-method"></a><a name="lookup"></a>Неупорядоченнаякарта::Метод поиска
+## <a name="unorderedmaplookup-method"></a><a name="lookup"></a>Метод UnorderedMap:: Lookup
 
 Возвращает значение типа V, связанное с указанным ключом типа K.
 
@@ -199,13 +199,13 @@ V Lookup(
 ### <a name="parameters"></a>Параметры
 
 *key*<br/>
-Ключ, используемый для поиска элемента в объекте UnorderedMap. Тип *ключа* typename *K*.
+Ключ, используемый для поиска элемента в объекте UnorderedMap. Тип *ключа* — TypeName *K*.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение, которое в паре с *ключом.* Тип значения возврата — typename *V.*
+Значение, связанное с *ключом*. Тип возвращаемого значения — TypeName *V*.
 
-## <a name="unorderedmapmapchanged"></a><a name="mapchanged"></a>Неупорядоченнаякарта::КартаИзменена
+## <a name="unorderedmapmapchanged"></a><a name="mapchanged"></a>UnorderedMap:: Мапчанжед
 
 Возникает, когда элемент вставляется в сопоставление или удаляется из него.
 
@@ -217,13 +217,13 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение
 
-[КартаChangedEventHandler\<K,V>,](/uwp/api/windows.foundation.collections.mapchangedeventhandler-2) которая содержит информацию об объекте, который поднял событие, и вид изменений, которые произошли. Смотрите также [IMapChangedEventArgs\<K>](/uwp/api/windows.foundation.collections.imapchangedeventargs-1) и [CollectionChange Enumeration](/uwp/api/windows.foundation.collections.collectionchange).
+Объект [мапчанжедевенсандлер \<K,V> ](/uwp/api/windows.foundation.collections.mapchangedeventhandler-2) , содержащий сведения об объекте, вызвавшем событие, и типе произошедшего изменения. См. также [перечисление](/uwp/api/windows.foundation.collections.collectionchange) [ \<K> имапчанжедевентаргс](/uwp/api/windows.foundation.collections.imapchangedeventargs-1) и коллектиончанже.
 
 ## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework
 
-Windows Runtime приложений, что нам Ск з или Visual Basic проекта IMap\<K,V> как IDictionary\<K,V>.
+Среда выполнения Windows приложения, которые C# или Visual Basic Project IMap \<K,V> как IDictionary \<K,V> .
 
-## <a name="unorderedmapremove-method"></a><a name="remove"></a>Неупорядоченная карта::Удалить метод
+## <a name="unorderedmapremove-method"></a><a name="remove"></a>Метод UnorderedMap:: Remove
 
 Удаляет указанную пару "ключ-значение" из текущего объекта UnorderedMap.
 
@@ -237,11 +237,11 @@ virtual void Remove(
 ### <a name="parameters"></a>Параметры
 
 *key*<br/>
-Ключ из пары "ключ-значение". Тип *ключа* typename *K*.
+Ключ из пары "ключ-значение". Тип *ключа* — TypeName *K*.
 
-## <a name="unorderedmapsize-method"></a><a name="size"></a>Неупорядоченнаякарта::Метод размера
+## <a name="unorderedmapsize-method"></a><a name="size"></a>Метод UnorderedMap:: size
 
-Возвращает номер [Windows:::Источник::: Культура::\<IKeyValuePair K,>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) элементов в unorderedMap.
+Возвращает число элементов [Windows:: Foundation:: Collections:: IKeyValuePair \<K,V> ](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) в UnorderedMap.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -253,7 +253,7 @@ virtual property unsigned int Size;
 
 Количество элементов в объекте UnorderedMap.
 
-## <a name="unorderedmapunorderedmap-constructor"></a><a name="ctor"></a>Неупорядоченнаякарта:Неупорядоченный конструктор Map
+## <a name="unorderedmapunorderedmap-constructor"></a><a name="ctor"></a>Конструктор UnorderedMap:: UnorderedMap
 
 Инициализирует новый экземпляр класса UnorderedMap.
 
@@ -340,32 +340,32 @@ UnorderedMap(
 
 ### <a name="parameters"></a>Параметры
 
-*Init*<br/>
+*Ini*<br/>
 Имя типа текущего объекта UnorderedMap.
 
 *P*<br/>
-Объект функции, который может сравнивать два ключа с целью определения их равенства. Этот параметр по умолчанию [\<std::equal_to K>](../standard-library/equal-to-struct.md).
+Объект функции, который может сравнивать два ключа с целью определения их равенства. По умолчанию этот параметр имеет значение [std: \<K> : equal_to](../standard-library/equal-to-struct.md).
 
 *H*<br/>
-Объект функции, создающий хэш-значения для ключей. Этот параметр по умолчанию влияет на [хэш-класс 1](../standard-library/hash-class.md) для ключевых типов, поддерживающих класс.
+Объект функции, создающий хэш-значения для ключей. Этот параметр по умолчанию имеет [хэш-класс 1](../standard-library/hash-class.md) для типов ключей, поддерживаемых классом.
 
-*М*<br/>
-Ссылка или [Lvalues и Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) к [std::unordered_map,](../standard-library/unordered-map-class.md) которая используется для инициализации текущего UnorderedMap.
+*m*<br/>
+Ссылка или [значения lvalue и rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md) для [std:: unordered_map](../standard-library/unordered-map-class.md) , которая используется для инициализации текущего UnorderedMap.
 
-*Il*<br/>
-[Std::initializer_list](../standard-library/initializer-list-class.md) [из объектов std::pair,](../standard-library/pair-structure.md) которые используются для инициализации карты.
+*компонента*<br/>
+Объект " [std:: initializer_list](../standard-library/initializer-list-class.md) " [стандартного::p объектов Air](../standard-library/pair-structure.md) , который используется для инициализации схемы.
 
-*Первый*<br/>
+*first*<br/>
 Итератор ввода первого элемента в диапазоне элементов, используемый для инициализации текущего объекта UnorderedMap.
 
-*Последний*<br/>
+*last*<br/>
 Итератор ввода первого элемента после диапазона элементов, используемый для инициализации текущего объекта UnorderedMap.
 
 ## <a name="see-also"></a>См. также раздел
 
-[Название платформы](platform-namespace-c-cx.md)<br/>
-[Платформа:Название коллекций](../cppcx/platform-collections-namespace.md)<br/>
-[Платформа:Коллекции::Карта класса](../cppcx/platform-collections-map-class.md)<br/>
-[Класс Platform::Collections::UnorderedMapView](../cppcx/platform-collections-unorderedmapview-class.md)<br/>
+[Пространство имен платформы](platform-namespace-c-cx.md)<br/>
+[Пространство имен Platform:: Collections](../cppcx/platform-collections-namespace.md)<br/>
+[Класс Platform:: Collections:: Map](../cppcx/platform-collections-map-class.md)<br/>
+[Класс Platform:: Collections:: UnorderedMapView](../cppcx/platform-collections-unorderedmapview-class.md)<br/>
 [Коллекции](../cppcx/collections-c-cx.md)<br/>
 [Создание компонентов среды выполнения Windows в C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - structure members, offset
 - offsetof macro
 ms.assetid: f3b4eb16-a882-4d38-afc9-eebd976a7352
-ms.openlocfilehash: 278fca89046fcfc98e8c3ff726918cb4319e4ab0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ee6d5e56bb9f41a842e53984f754c7c07d58a125
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951250"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213506"
 ---
 # <a name="offsetof-macro"></a>Макрос offsetof
 
@@ -54,9 +54,9 @@ size_t offsetof(
 
 **offsetof** возвращает смещение в байтах указанного элемента от начала родительской структуры данных. Для битовых полей оно будет неопределенным.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Макрос **offsetof** возвращает смещение в байтах от имени *MemberName* с начала структуры, заданной параметром *структнаме* , как значение типа **size_t**. Типы можно указать с помощью ключевого слова **struct** .
+Макрос **offsetof** возвращает смещение в байтах от имени *MemberName* с начала структуры, заданной параметром *структнаме* , в качестве значения типа **size_t**. Можно указать типы с помощью **`struct`** ключевого слова.
 
 > [!NOTE]
 > **offsetof** не является функцией и не может быть описан с помощью прототипа C.
@@ -67,12 +67,12 @@ size_t offsetof(
 |-------------|---------------------|
 |**offsetof**|\<stddef.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Библиотеки
 
 Все версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Выделение памяти](../../c-runtime-library/memory-allocation.md)<br/>

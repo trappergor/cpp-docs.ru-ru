@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3482
 ms.assetid: bf99558e-bef4-421c-bb16-dcd9c54c1011
-ms.openlocfilehash: 1d775551d0f4955dc4eda9b0d418ea31e065714f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 0463f6de51e324bd02c8b766fd39909ee2803ecd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74743137"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212583"
 ---
 # <a name="compiler-error-c3482"></a>Ошибка компилятора C3482
 
 "this" может быть использован в качестве передаваемого параметра в лямбда-выражении только с нестатической функцией-членом
 
-Нельзя передавать `this` в список передаваемых параметров лямбда-выражения, объявленного в статическом методе или в глобальной функции.
+Нельзя передать в **`this`** список записи лямбда-выражения, объявленного в статическом методе или глобальной функции.
 
 ### <a name="to-correct-this-error"></a>Исправление ошибки
 
 - Преобразуйте включающую функцию в нестатический метод или
 
-- удалите указатель `this` из списка передаваемых параметров лямбда-выражения.
+- Удалите **`this`** указатель из списка записи лямбда-выражения.
 
 ## <a name="example"></a>Пример
 
@@ -43,6 +43,6 @@ public:
 };
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Лямбда-выражения](../../cpp/lambda-expressions-in-cpp.md)

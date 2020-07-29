@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE DB providers, properties
 - properties [C++], OLE DB provider
 ms.assetid: 26a8b493-7ec4-4686-96d0-9ad5d2bca5ac
-ms.openlocfilehash: 905a9bb32544dbd7453d46362e100047516d22a8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f5d5ac364096ea1a4505b2ead81f25367a9c9458
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209577"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212960"
 ---
 # <a name="setting-properties-in-your-provider"></a>Установка свойств в поставщике
 
@@ -20,7 +20,7 @@ ms.locfileid: "80209577"
 
 В карте свойств добавьте [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md) макрос. PROPERTY_INFO_ENTRY_EX принимает четыре параметра:
 
-- Идентификатор свойства, соответствующий свойству. Удалите первые семь символов ("DBPROP_") с начала имени свойства. Например, если требуется добавить `DBPROP_MAXROWS`, передайте `MAXROWS` как первый элемент. Если это пользовательское свойство, передайте полное имя GUID (например, `DBMYPROP_MYPROPERTY`).
+- Идентификатор свойства, соответствующий свойству. Удалите первые семь символов ("DBPROP_") с начала имени свойства. Например, если необходимо добавить `DBPROP_MAXROWS` , передайте в `MAXROWS` качестве первого элемента. Если это пользовательское свойство, передайте полное имя GUID (например, `DBMYPROP_MYPROPERTY` ).
 
 - Тип варианта свойства (в [OLE DB свойствах](/previous-versions/windows/desktop/ms722734(v=vs.85)) в **справочнике по программисту OLE DB**). Введите тип VT_ (например, VT_BOOL или VT_I2), соответствующий типу данных.
 
@@ -30,7 +30,7 @@ ms.locfileid: "80209577"
     DBPROPFLAGS_ROWSET | DBPROPFLAGS_READ | DBPROPFLAGS_WRITE
     ```
 
-- Базовое значение свойства. Это может быть `VARIANT_FALSE` для логического типа или нуля для целочисленного типа, например. Свойство имеет это значение, если оно не изменилось.
+- Базовое значение свойства. Это может быть `VARIANT_FALSE` логический тип или ноль для целочисленного типа, например. Свойство имеет это значение, если оно не изменилось.
 
     > [!NOTE]
     > Некоторые свойства подключены или связаны с другими свойствами, такими как закладки или обновление. Когда потребитель устанавливает для одного свойства значение true, также может быть задано другое свойство. Шаблоны поставщика OLE DB поддерживают это с помощью метода [CUtlProps:: OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md).
@@ -39,13 +39,13 @@ ms.locfileid: "80209577"
 
 Поставщики OLE DB Майкрософт пропускают следующие свойства OLE DB:
 
-- `DBPROP_MAXROWS` работает только для поставщиков, доступных только для чтения (то есть, где `DBPROP_IRowsetChange` и `DBPROP_IRowsetUpdate` имеют **значение false**); в противном случае это свойство не поддерживается.
+- `DBPROP_MAXROWS`работает только для поставщиков, предназначенных только для чтения (то есть, где `DBPROP_IRowsetChange` и `DBPROP_IRowsetUpdate` **`false`** ); в противном случае это свойство не поддерживается.
 
-- `DBPROP_MAXPENDINGROWS` игнорируется; Поставщик задает собственное ограничение.
+- `DBPROP_MAXPENDINGROWS`игнорируется; Поставщик задает собственное ограничение.
 
-- `DBPROP_MAXOPENROWS` игнорируется; Поставщик задает собственное ограничение.
+- `DBPROP_MAXOPENROWS`игнорируется; Поставщик задает собственное ограничение.
 
-- `DBPROP_CANHOLDROWS` игнорируется; Поставщик задает собственное ограничение.
+- `DBPROP_CANHOLDROWS`игнорируется; Поставщик задает собственное ограничение.
 
 ## <a name="see-also"></a>См. также раздел
 

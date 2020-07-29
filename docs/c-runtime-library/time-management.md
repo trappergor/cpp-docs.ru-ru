@@ -7,12 +7,12 @@ helpviewer_keywords:
 - date functions
 - time functions
 ms.assetid: 93599220-c011-45d5-978f-12182abfdd2f
-ms.openlocfilehash: 24859a0b35274881b03b960807904ed38b19e354
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 096207465b1be2eba70e95cff2c226924fc91bd7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444587"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213454"
 ---
 # <a name="time-management"></a>Операции управления временем
 
@@ -22,10 +22,10 @@ ms.locfileid: "79444587"
 
 ### <a name="time-routines"></a>Подпрограммы времени
 
-|Компонент|Использование|
+|Компонент|Используйте|
 |--------------|---------|
 |[asctime, _wasctime](../c-runtime-library/reference/asctime-wasctime.md), [asctime_s, _wasctime_s](../c-runtime-library/reference/asctime-s-wasctime-s.md)|Преобразуют время из типа**struct tm** в символьную строку. Версии этих функций с суффиксом **_s** являются более безопасными.|
-|[часы](../c-runtime-library/reference/clock.md)|Возвращают реальное прошедшее время для процесса.|
+|[clock](../c-runtime-library/reference/clock.md)|Возвращают реальное прошедшее время для процесса.|
 |[ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md), [_ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)|Преобразуют время из типа **time_t**, **__time32_t** или **__time64_t** в символьную строку. Версии этих функций с суффиксом **_s** являются более безопасными.|
 |[difftime, _difftime32, _difftime64](../c-runtime-library/reference/difftime-difftime32-difftime64.md)|Вычисляют разницу между двумя значениями времени.|
 |[_ftime, _ftime32, _ftime64](../c-runtime-library/reference/ftime-ftime32-ftime64.md),[_ftime_s, _ftime32_s, _ftime64_s](../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md)|Хранение текущего системного времени в переменной типа **struct _timeb** или **struct __timeb64**. Версии этих функций с суффиксом **_s** являются более безопасными.|
@@ -45,8 +45,8 @@ ms.locfileid: "79444587"
 > Во всех версиях Microsoft C/C++, кроме версии Microsoft C/C++ 7.0, и во всех версиях Visual C++ эта функция времени возвращает текущее время как количество секунд, прошедших с полуночи 1-го января 1970 года. В версии Microsoft C/C++ 7.0 функция **time** возвращает текущее время как количество секунд, истекших с полуночи 31-го декабря 1899 года.
 
 > [!NOTE]
-> В версиях Visual C++ и Microsoft C/C++ до Visual Studio 2005 **time_t** было **длиннее** **целого** (32 бит) и поэтому не может использоваться для дат после 3:14:07 19 января, 2038, UTC. Теперь тип **time_t** по умолчанию эквивалентен типу **__time64_t**, но при задании директивы **_USE_32BIT_TIME_T** тип **time_t** изменяется на тип **__time32_t** и заставляет многие функции времени вызывать версии, принимающие 32-разрядный тип **time_t**. Дополнительные сведения см. в статье [Standard Types](../c-runtime-library/standard-types.md) (Стандартные типы) и в комментариях в документации для отдельных функций времени.
+> В версиях Visual C++ и Microsoft C/C++ до Visual Studio 2005 **time_t** was **`long int`** (32 бит) и поэтому не может использоваться для дат после 3:14:07 19 января, 2038, UTC. Теперь тип **time_t** по умолчанию эквивалентен типу **__time64_t**, но при задании директивы **_USE_32BIT_TIME_T** тип **time_t** изменяется на тип **__time32_t** и заставляет многие функции времени вызывать версии, принимающие 32-разрядный тип **time_t**. Дополнительные сведения см. в разделе [Стандартные типы](../c-runtime-library/standard-types.md) и в комментариях в документации для отдельных функций времени.
 
 ## <a name="see-also"></a>См. также раздел
 
-[Универсальные подпрограммы среды выполнения C по категориям](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Подпрограммы универсальной среды выполнения C по категориям](../c-runtime-library/run-time-routines-by-category.md)<br/>

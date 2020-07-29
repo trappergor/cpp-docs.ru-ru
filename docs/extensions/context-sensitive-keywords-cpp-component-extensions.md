@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - context-sensitive keywords
 ms.assetid: e33da089-f434-44e9-8cce-4668d05a8939
-ms.openlocfilehash: 53fcaf13eb56ae14841861bffd1a29376304b8d6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 82bf4c3f0deed788b7b1e50f1d8d82e63dc27f6f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182179"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219746"
 ---
 # <a name="context-sensitive-keywords--ccli-and-ccx"></a>Контекстно-зависимые ключевые слова (C++/CLI и C++/CX)
 
@@ -38,7 +38,7 @@ ms.locfileid: "80182179"
 
 - `internal`
 
-- [literal](literal-cpp-component-extensions.md)
+- [литерал](literal-cpp-component-extensions.md)
 
 - [override](override-cpp-component-extensions.md)
 
@@ -72,7 +72,7 @@ ms.locfileid: "80182179"
 
 ### <a name="examples"></a>Примеры
 
-В следующем примере кода показано, что в соответствующем контексте контекстно-зависимое ключевое слово **property** можно использовать для определения свойства и переменной.
+В следующем примере кода показано, что в соответствующем контексте **`property`** ключевое слово с учетом контекста может использоваться для определения свойства и переменной.
 
 ```cpp
 // context_sensitive_keywords.cpp
