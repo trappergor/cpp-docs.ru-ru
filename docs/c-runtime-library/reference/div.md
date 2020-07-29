@@ -1,5 +1,5 @@
 ---
-title: Div, ldiv, lldiv
+title: div, ldiv, lldiv
 ms.date: 04/05/2018
 api_name:
 - div
@@ -28,14 +28,14 @@ helpviewer_keywords:
 - dividing integers
 - remainder computing
 ms.assetid: 8ae80d97-54fd-499e-b14c-e30993b58119
-ms.openlocfilehash: 5b40fa0c4cc9cdf0c0de0f6af21da04b0c70369f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 24432ec1514f6cd2d569fd5752a8ed7118059d6a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70937696"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234228"
 ---
-# <a name="div-ldiv-lldiv"></a>Div, ldiv, lldiv
+# <a name="div-ldiv-lldiv"></a>div, ldiv, lldiv
 
 Вычисляет частное и остаток от деления двух целочисленных значений.
 
@@ -77,13 +77,13 @@ lldiv_t div(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-элемент **div** , вызываемый с помощью аргументов типа **int** , возвращает структуру типа **div_t**, которая состоит из частного и остатка. Возвращаемое значение с аргументами типа **Long** — это **ldiv_t**, а возвращаемое значение с аргументами типа **Long** **длинным** является **lldiv_t**. **div_t**, **ldiv_t**и **lldiv_t** определены в \<stdlib. h >.
+элемент **div** , вызываемый с помощью аргументов типа **`int`** , возвращает структуру типа **div_t**, которая состоит из частного и остатка. Возвращаемое значение с аргументами типа **`long`** **ldiv_t**, а возвращаемое значение с аргументами типа **`long long`** — **lldiv_t**. **div_t**, **ldiv_t**и **lldiv_t** определяются в \<stdlib.h> .
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Функция **div** делит *число ключей* на *Деном* , тем самым вычисляя частное и остаток. Структура [div_t](../../c-runtime-library/standard-types.md) содержит частную, **quot**и остаток, **REM**. Знак частного совпадает со знаком математического частного. Его абсолютное значение представляет собой наибольшее целое число, которое меньше абсолютного значения математического частного. Если знаменатель равен 0, выполнение программы прекратится и появится сообщение об ошибке.
+Функция **div** делит *число ключей* на *Деном* , тем самым вычисляя частное и остаток. Структура [div_t](../../c-runtime-library/standard-types.md) содержит частное, **quot**и остаток, **REM**. Знак частного является таким же, как и у математического частного. Его абсолютное значение представляет собой наибольшее целое число, которое меньше абсолютного значения математического частного. Если знаменатель равен 0, выполнение программы прекратится и появится сообщение об ошибке.
 
-Перегрузки **div** , которые принимают аргументы типа **Long** или **Long** **, доступны** только для C++ кода. Типы возвращаемых значений [ldiv_t](../../c-runtime-library/standard-types.md) и [lldiv_t](../../c-runtime-library/standard-types.md) содержат элементы **quot** и **REM**, которые имеют те же значения, что и элементы **div_t**.
+Перегрузки **div** , принимающие аргументы типа **`long`** или **`long long`** , доступны только для кода C++. Возвращаемые типы [ldiv_t](../../c-runtime-library/standard-types.md) и [lldiv_t](../../c-runtime-library/standard-types.md) содержат элементы **quot** и **REM**, которые имеют те же значения, что и элементы **div_t**.
 
 ## <a name="requirements"></a>Требования
 
@@ -91,7 +91,7 @@ lldiv_t div(
 |-------------|---------------------|
 |**div**, **ldiv**, **lldiv**|\<stdlib.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -131,8 +131,8 @@ x is 876, y is 13
 The quotient is 67, and the remainder is 5
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
+[Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [ldiv, lldiv](ldiv-lldiv.md)<br/>
 [imaxdiv](imaxdiv.md)<br/>

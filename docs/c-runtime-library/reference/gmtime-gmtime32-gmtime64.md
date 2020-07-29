@@ -37,12 +37,12 @@ helpviewer_keywords:
 - gmtime64 function
 - time structure conversion
 ms.assetid: 315501f3-477e-475d-a414-ef100ee0db27
-ms.openlocfilehash: 16f4315837873c8d78065ea97a11188bdddedbed
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 86919e2ba6f5e301f1dffd87dfb4ecd22ce416e2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916241"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234111"
 ---
 # <a name="gmtime-_gmtime32-_gmtime64"></a>gmtime, _gmtime32, _gmtime64
 
@@ -63,9 +63,9 @@ struct tm *_gmtime64( const __time64_t *sourceTime );
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Указатель на структуру типа [tm](../../c-runtime-library/standard-types.md). Поля возвращаемой структуры содержат вычисленное значение аргумента *саурцетиме* в формате UTC, а не в местном времени. Каждое из полей структуры имеет тип **int**, как показано ниже.
+Указатель на структуру типа [tm](../../c-runtime-library/standard-types.md). Поля возвращаемой структуры содержат вычисленное значение аргумента *саурцетиме* в формате UTC, а не в местном времени. Каждое из полей структуры имеет тип **`int`** , как показано ниже.
 
-|Поле|Описание|
+|Поле|Описание:|
 |-|-|
 |**tm_sec**|Секунд после минуты (0-59).|
 |**tm_min**|Минут после часа (0-59).|
@@ -98,7 +98,7 @@ struct tm *_gmtime64( const __time64_t *sourceTime );
 
 |Подпрограмма|Обязательный заголовок C|Обязательный заголовок C++|
 |-------------|---------------------|-|
-|**gmtime**, **_gmtime32** **_gmtime64**|\<time.h>|\<CTime> или \<Time. h>|
+|**gmtime**, **_gmtime32** **_gmtime64**|\<time.h>|\<ctime> или \<time.h>|
 
 Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 

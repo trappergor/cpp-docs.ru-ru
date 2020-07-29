@@ -33,12 +33,12 @@ helpviewer_keywords:
 - normf function
 - norml function
 ms.assetid: 9786ecfe-0019-4553-b378-0af6c691e15c
-ms.openlocfilehash: 8deaa07d984a3840c73e594535ffffc9078d4716
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 38e7283ca5acd5571589d3ef0b19c626806e4bca
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951316"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234059"
 ---
 # <a name="norm-normf-norml"></a>norm, normf, norml
 
@@ -59,16 +59,16 @@ long double norm( _Lcomplex z );  // C++ only
 
 ### <a name="parameters"></a>Параметры
 
-*z*<br/>
+*гармошкой*<br/>
 Комплексное число.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Величина квадрата *z*.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **нормы** , принимающие значения **_Fcomplex** или **_Lcomplex** , и возвращать значения **типа float** или **long-double** . В программе на языке C **норма** всегда принимает значение **_Dcomplex** и возвращает значение **типа double** .
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **нормы** , которые принимают **_Fcomplex** или **_Lcomplex** значения, а также возвращают **`float`** **`long double`** значения или. В программе на языке C **норма** всегда принимает значение **_Dcomplex** и возвращает **`double`** значение.
 
 ## <a name="requirements"></a>Требования
 
@@ -76,11 +76,11 @@ long double norm( _Lcomplex z );  // C++ only
 |-------------|--------------|------------------|
 |**норма**, **нормф**, **норма**|\<complex.h>|\<complex.h>|
 
-Типы **_Fcomplex**, **_Dcomplex**и **_Lcomplex** — это эквиваленты нереализованных типов данных C99 с **плавающей запятой**в корпорации Майкрософт, которые относятся _Complex, **Double _Complex**и **long double _Complex**соответственно.  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Типы **_Fcomplex**, **_Dcomplex**и **_Lcomplex** являются эквивалентами корпорации Майкрософт нереализованных собственных типов C99 с **плавающей запятой _Complex**, **Double _Complex**и **long double _Complex**соответственно.  Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также статью
 
-[Алфавитный указатель функций](crt-alphabetical-function-reference.md)<br/>
+[Алфавитный справочник по функциям](crt-alphabetical-function-reference.md)<br/>
 [creal, crealf, creall](creal-crealf-creall.md)<br/>
 [cproj, cprojf, cprojl](cproj-cprojf-cprojl.md)<br/>
 [conj, conjf, conjl](conj-conjf-conjl.md)<br/>

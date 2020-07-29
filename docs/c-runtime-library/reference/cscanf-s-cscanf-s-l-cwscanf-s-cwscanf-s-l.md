@@ -51,12 +51,12 @@ helpviewer_keywords:
 - _tcscanf_s function
 - tcscanf_s_l function
 ms.assetid: 9ccab74d-916f-42a6-93d8-920525efdf4b
-ms.openlocfilehash: be9d2b0af461b25f5c4db37bb084afcf822480ea
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a869ae4ab1b5f81c4198f620662604b79f19c2ab
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70938530"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234241"
 ---
 # <a name="_cscanf_s-_cscanf_s_l-_cwscanf_s-_cwscanf_s_l"></a>_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l
 
@@ -93,7 +93,7 @@ int _cwscanf_s_l(
 *format*<br/>
 Строка управления форматом.
 
-*параметр*<br/>
+*argument*<br/>
 Необязательные параметры.
 
 *locale*<br/>
@@ -105,18 +105,18 @@ int _cwscanf_s_l(
 
 Эти функции проверяют свои параметры. Если *Format* является пустым указателем, эти функции вызывают обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают **EOF** , а параметру "переполнять **" задано** значение **еинвал**.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Функция **_cscanf_s** считывает данные непосредственно из консоли в расположения, указанные *аргументом*. Функция [_Getche](getch-getwch.md) используется для чтения символов. Каждый необязательный параметр должен быть указателем на переменную с типом, который соответствует спецификатору типа в *формате*. Формат управляет интерпретацией полей ввода и имеет ту же форму и функцию, что и параметр *Format* для функции [scanf_s](scanf-scanf-l-wscanf-wscanf-l.md) . Хотя **_cscanf_s** обычно выводит символ ввода, он не делает этого, если последний вызов был бы **_ungetch**.
+Функция **_cscanf_s** считывает данные непосредственно из консоли в расположения, указанные *аргументом*. Функция [_Getche](getch-getwch.md) используется для чтения символов. Каждый необязательный параметр должен быть указателем на переменную с типом, который соответствует спецификатору типа в *формате*. Формат управляет интерпретацией полей ввода и имеет ту же форму и функцию, что и параметр *Format* для функции [scanf_s](scanf-scanf-l-wscanf-wscanf-l.md) . Хотя **_cscanf_s** обычно отображает входной символ, он не делает этого, если последний вызов был **_ungetch**.
 
-Как и другие безопасные версии функций в семействе **scanf** , **_cscanf_s** и **_cswscanf_s** требуются аргументы размера для символов поля типа **c**, **c**, **s**, **s**и **[** . Дополнительные сведения см. в разделе [Спецификация ширины scanf](../../c-runtime-library/scanf-width-specification.md).
+Как и другие безопасные версии функций в семействе **scanf** , **_cscanf_s** и **_cswscanf_s** требуются аргументы размера для символов поля типа **c**, **c**, **s**, **s**и **[**. Дополнительные сведения см. в разделе [Спецификация ширины scanf](../../c-runtime-library/scanf-width-specification.md).
 
 > [!NOTE]
-> Параметр size имеет тип без **знака**, а не **size_t**.
+> Параметр size имеет тип **`unsigned`** , а не **size_t**.
 
 Версии этих функций с суффиксом **_l** идентичны за исключением того, что они используют переданный параметр языкового стандарта вместо локали текущего потока.
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|
@@ -130,7 +130,7 @@ int _cwscanf_s_l(
 |**_cscanf_s**, **_cscanf_s_l**|\<conio.h>|
 |**_cwscanf_s**, **_cwscanf_s_l**|\<conio.h> или \<wchar.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Библиотеки
 
@@ -171,9 +171,9 @@ int main( void )
 You entered 1 2 3
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Ввод-вывод на консоль и порт](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[Ввод-вывод в консоль и порт](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
 [fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l](fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md)<br/>
 [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)<br/>

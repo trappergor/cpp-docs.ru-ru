@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
-ms.openlocfilehash: d0318ce2e23f92600d5a78d6472646ec91492152
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 641e83cb85b6282e8c4c82dfed8c4b44fc4a7e8f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837376"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223906"
 ---
 # <a name="clr-restrictions"></a>Ограничения /clr
 
@@ -17,7 +17,7 @@ ms.locfileid: "65837376"
 
 - В структурированном обработчике исключений существуют ограничения на использование `_alloca` при компиляции с параметром **/clr**. Дополнительные сведения см. в разделе [_alloca](../../c-runtime-library/reference/alloca.md).
 
-- Использование проверки ошибок во время выполнения не допускается с **/clr**. Дополнительные сведения см. в разделе [Практическое руководство. использовать проверки во время выполнения машинного кода](/visualstudio/debugger/how-to-use-native-run-time-checks).
+- Использование проверки ошибок во время выполнения не допускается с **/clr**. Дополнительная информация есть в статье [Практическое руководство. Настройка проверок во время выполнения машинного кода](/visualstudio/debugger/how-to-use-native-run-time-checks).
 
 - Когда **/clr** используется для компиляции программы, которая использует только стандартный синтаксис C++, к использованию встроенной сборки применяются следующие правила:
 
@@ -37,13 +37,13 @@ ms.locfileid: "65837376"
 
 - Следующие параметры компилятора не поддерживаются с **/clr**:
 
-  - **/EHsc** и **/EHs** ( **/clr** подразумевает **/EHa** (см. [Параметр /EH (модель обработки исключений)](eh-exception-handling-model.md))
+  - **/EHsc** и **/EHs** (**/clr** подразумевает **/EHa** (см. [Параметр /EH (модель обработки исключений)](eh-exception-handling-model.md))
 
   - **/fp:strict** и **/fp:except** (см. [/fp (Определение поведения с плавающей запятой)](fp-specify-floating-point-behavior.md))
 
   - [/Zd](z7-zi-zi-debug-information-format.md)
 
-  - [/Gm](gm-enable-minimal-rebuild.md)
+  - [/GM](gm-enable-minimal-rebuild.md)
 
   - [/MT](md-mt-ld-use-run-time-library.md)
 
@@ -55,14 +55,14 @@ ms.locfileid: "65837376"
 
 - Использование **/ZI** с **/clr** влияет на производительность. Дополнительные сведения см. в разделе [/Zi](z7-zi-zi-debug-information-format.md).
 
-- Процедура передачи расширенных символов в выходные данные.NET Framework без указания [/Zc:wchar_t](zc-wchar-t-wchar-t-is-native-type.md) или без приведения символа к `__wchar_t` приведет к тому, что выходные данные будут отображаться как `unsigned short int`. Например:
+- Передача расширенного символа в под.NET Framework вывода без указания параметра [/Zc: wchar_t](zc-wchar-t-wchar-t-is-native-type.md) или без приведения символа в **`__wchar_t`** вызов приводит к отображению выходных данных в виде `unsigned short int` . Например:
 
     ```cpp
     Console::WriteLine(L' ')              // Will output 32.
     Console::WriteLine((__wchar_t)L' ')   // Will output a space.
     ```
 
-- [/GS](gs-buffer-security-check.md) игнорируется при компиляции с параметром **/clr**, если только функция не имеет статус [неуправляемая](../../preprocessor/managed-unmanaged.md) `#pragma` или если функция должна компилироваться в машинный код, и в этом случае компилятор выдаст предупреждение C4793, которое отключено по умолчанию.
+- [/GS](gs-buffer-security-check.md) игнорируется при компиляции с параметром **/clr**, если только функция не имеет статус `#pragma` [неуправляемая](../../preprocessor/managed-unmanaged.md) или если функция должна компилироваться в машинный код, и в этом случае компилятор выдаст предупреждение C4793, которое отключено по умолчанию.
 
 - Требования к сигнатуре функции управляемого приложения см. в разделе [/ENTRY](entry-entry-point-symbol.md).
 
@@ -86,6 +86,6 @@ ms.locfileid: "65837376"
 
   - Функция, которая содержит ссылки на выровненные типы, то есть типы, объявленные с помощью `__declspec(align(...))`.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также статью
 
 - [/clr (компиляция среды выполнения)](clr-common-language-runtime-compilation.md)

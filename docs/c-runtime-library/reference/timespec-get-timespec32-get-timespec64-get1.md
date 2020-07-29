@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _timespec32_get function
 - _timespec64_get function
 ms.assetid: ed757258-b4f2-4c1d-a91b-22ea6ffce4ab
-ms.openlocfilehash: ca514c60945f25c3d335e0b02110e50ed14f9269
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 7e3c56805b3af9bb5e739bd74d03bce015c65895
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911819"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233929"
 ---
 # <a name="timespec_get-_timespec32_get-_timespec64_get"></a>timespec_get, _timespec32_get, _timespec64_get
 
@@ -85,7 +85,7 @@ int _timespec64_get(
 
 **Блок, относящийся только к системам Microsoft**
 
-Эти функции поддерживают только **TIME_UTC** в качестве *базового* значения. Этот параметр задает для *time_spec* значение, равное количеству секунд и наносекундах с момента начала эпохи, полночь 1 января 1970 г., время в формате UTC. В _timespec32 **структуры** **_timespec32** **tv_sec** является **__time32_t** значением. В _timespec64 **структуры** **_timespec64** **tv_sec** является **__time64_t** значением. В **структуре** **timespec** **tv_sec** является типом **time_t** , который имеет длину 32 бит или 64 бит в зависимости от того, определен ли макрос препроцессора _USE_32BIT_TIME_T. Функция **timespec_get** является встроенной функцией, которая вызывает **_timespec32_get** , если определен _USE_32BIT_TIME_T. в противном случае он вызывает **_timespec64_get**.
+Эти функции поддерживают только **TIME_UTC** в качестве *базового* значения. Этот параметр задает для *time_spec* значение, равное количеству секунд и наносекундах с момента начала эпохи, полночь 1 января 1970 г., время в формате UTC. В **`struct`** **_timespec32** **tv_sec** является значением **__time32_t** . В **`struct`** **_timespec64** **tv_sec** является значением **__time64_t** . В **`struct`** **timespec** **tv_sec** является типом **time_t** , длина которого 32 бит или 64 бит в зависимости от того, определен ли макрос препроцессора _USE_32BIT_TIME_T. Функция **timespec_get** является встроенной функцией, которая вызывает **_timespec32_get** , если определен _USE_32BIT_TIME_T. в противном случае он вызывает **_timespec64_get**.
 
 **Завершение Microsoft для конкретных**
 
@@ -95,11 +95,11 @@ int _timespec64_get(
 
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
-|**timespec_get**, **_timespec32_get** **_timespec64_get**|C: \<time.h>, C++: \<ctime> или \<time.h>|
+|**timespec_get**, **_timespec32_get** **_timespec64_get**|C: \<time.h> , C++: \<ctime> или\<time.h>|
 
 Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [Операции управления временем](../../c-runtime-library/time-management.md)<br/>
 [asctime, _wasctime](asctime-wasctime.md)<br/>

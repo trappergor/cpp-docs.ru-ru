@@ -50,12 +50,12 @@ helpviewer_keywords:
 - _strtod_l function
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
-ms.openlocfilehash: 03bd90d2848922ee4153b79432bb76245f749ed6
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 58cb9e72fc11f0120ed4d99fd5086a195244ac31
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813584"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233981"
 ---
 # <a name="strtod-_strtod_l-wcstod-_wcstod_l"></a>strtod, _strtod_l, wcstod, _wcstod_l
 
@@ -106,9 +106,9 @@ double wcstod_l(
 
 Дополнительные сведения об этих и других кодах возврата см. в разделе [_doserrno, Code/Code, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Каждая функция преобразует входную строку *стрсаурце* в значение **типа Double**. Функция **strtod** преобразует *стрсаурце* в значение двойной точности. **strtod** прекращает чтение строки *стрсаурце* на первом символе, который он не может распознать как часть числа. Этот символ может быть завершающим нулевым символом. **wcstod** — это версия **strtod**для расширенных символов; его аргумент *стрсаурце* является строкой расширенных символов. В остальном эти функции ведут себя одинаково.
+Каждая функция преобразует входную строку *стрсаурце* в **`double`** . Функция **strtod** преобразует *стрсаурце* в значение двойной точности. **strtod** прекращает чтение строки *стрсаурце* на первом символе, который он не может распознать как часть числа. Этот символ может быть завершающим нулевым символом. **wcstod** — это версия **strtod**для расширенных символов; его аргумент *стрсаурце* является строкой расширенных символов. В остальном эти функции ведут себя одинаково.
 
 По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
@@ -205,12 +205,12 @@ string = 10110134932
    Stopped scan at: 932
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Преобразование данных](../../c-runtime-library/data-conversion.md)<br/>
 [Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [Интерпретация последовательностей многобайтовых символов](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[Языкового стандарта](../../c-runtime-library/locale.md)<br/>
+[Локаль](../../c-runtime-library/locale.md)<br/>
 [Функции типа "строка — числовое значение"](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtol, wcstol, _strtol_l, _wcstol_l](strtol-wcstol-strtol-l-wcstol-l.md)<br/>
 [strtoul, _strtoul_l, wcstoul, _wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)<br/>
