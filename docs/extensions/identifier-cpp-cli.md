@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - __identifier keyword [C++]
 ms.assetid: 348428af-afa7-4ff3-b571-acf874301cf2
-ms.openlocfilehash: 0da32aae9a8c2c7f21ee9576e1e1147822314a36
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5f95e9fc55acd33705b855c7c4f0ef268d4776a0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172182"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219694"
 ---
 # <a name="__identifier-ccli"></a>__identifier (C++/CLI)
 
@@ -41,7 +41,7 @@ __identifier(C++_keyword)
 
 **Пример**
 
-В приведенном ниже примере класс с именем **template** создается на C# и распространяется как библиотека DLL. В программе на C++/CLI, использующей класс **template**, ключевое слово **__identifier** не указывает, что класс **template** является стандартным ключевым словом C++.
+В следующем примере класс с именем `template` создается в C# и распространяется в виде библиотеки DLL. В программе C++/CLI, использующей `template` класс, **`__identifier`** ключевое слово скрывает тот факт, что `template` является стандартным ключевым словом C++.
 
 ```csharp
 // identifier_template.cs
@@ -73,7 +73,7 @@ int main() {
 
 ### <a name="examples"></a>Примеры
 
-В приведенном ниже примере класс с именем **template** создается на C# и распространяется как библиотека DLL. В программе на C++/CLI, использующей класс **template**, ключевое слово **__identifier** не указывает, что класс **template** является стандартным ключевым словом C++.
+В следующем примере класс с именем `template` создается в C# и распространяется в виде библиотеки DLL. В программе C++/CLI, использующей `template` класс, **`__identifier`** ключевое слово скрывает тот факт, что `template` является стандартным ключевым словом C++.
 
 ```csharp
 // identifier_template.cs

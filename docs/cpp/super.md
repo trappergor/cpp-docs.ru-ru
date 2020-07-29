@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - __super keyword [C++]
 ms.assetid: f0957c31-9256-405b-b402-cad182404b5f
-ms.openlocfilehash: b6f6a7e108224ab4c97893104c5d6c38d325fa42
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3afc2e8049cfcca40db389bed84baa6f42dae126
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160831"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213155"
 ---
-# <a name="__super"></a>__super
+# `__super`
 
 **Блок, относящийся только к системам Microsoft**
 
@@ -29,9 +29,9 @@ __super::member_function();
 
 На этапе разрешения перегрузки учитываются все доступные методы базового класса, и вызывается функция, которая обеспечивает наилучшее совпадение.
 
-**__super** может использоваться только в теле функции-члена.
+**`__super`** может использоваться только в теле функции-члена.
 
-**__super** нельзя использовать с объявлением using. Дополнительные сведения см. [в разделе Использование объявления](../cpp/using-declaration.md) .
+**`__super`** не может использоваться с объявлением using. Дополнительные сведения см. [в разделе Использование объявления](../cpp/using-declaration.md) .
 
 С появлением [атрибутов](../windows/attributes/attributes-alphabetical-reference.md) , которые вставляют код, код может содержать один или несколько базовых классов, имена которых могут быть незнакомы, но содержат методы, которые вы хотите вызвать.
 
@@ -60,6 +60,6 @@ struct D : B1, B2 {
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Ключевые слова](../cpp/keywords-cpp.md)

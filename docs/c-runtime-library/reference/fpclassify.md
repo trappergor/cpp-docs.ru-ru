@@ -23,12 +23,12 @@ helpviewer_keywords:
 - fpclassify macro
 - fpclassify function
 ms.assetid: bf549499-7ff9-4a58-8692-f2d1cb6bab81
-ms.openlocfilehash: e9b5aa1f7dc20cc920a51c2c36371eb907469875
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 75cfdc33c21059e190fd04f4cd1b73716e74ac42
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957064"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213584"
 ---
 # <a name="fpclassify"></a>fpclassify
 
@@ -61,7 +61,7 @@ int fpclassify(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**fpclassify** возвращает целочисленное значение, указывающее класс с плавающей запятой аргумента *x*. В этой таблице показаны возможные значения, возвращаемые функцией **fpclassify**, \<определенной в Math. h >.
+**fpclassify** возвращает целочисленное значение, указывающее класс с плавающей запятой аргумента *x*. В этой таблице показаны возможные значения, возвращаемые функцией **fpclassify**, определенной в \<math.h> .
 
 |Значение|Описание|
 |-----------|-----------------|
@@ -71,9 +71,9 @@ int fpclassify(
 |**FP_SUBNORMAL**|Положительное или отрицательное денормализованное значение|
 |**FP_ZERO**|Положительное или отрицательное нулевое значение|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-В языке C **fpclassify** является макросом; в C++ **fpclassify** — это функция, перегруженная с помощью типов аргументов **float**, **Double**или **Long** **Double**. В обоих случаях возвращаемое значение зависит от действительного типа выражения аргумента, а не от промежуточного представления. Например, стандартное **Двойное** или **длинное** **Двойное** значение может стать бесконечным, нормальным или нулевым значением при преобразовании в тип **float**.
+В языке C **fpclassify** является макросом; в C++ **fpclassify** — это функция, перегруженная с помощью типов аргументов **`float`** , **`double`** или **`long double`** . В обоих случаях возвращаемое значение зависит от действительного типа выражения аргумента, а не от промежуточного представления. Например, обычная **`double`** или **`long double`** значение может стать бесконечным, нормальным или нулевым значением при преобразовании в **`float`** .
 
 ## <a name="requirements"></a>Требования
 
@@ -81,9 +81,9 @@ int fpclassify(
 |---------------------|---------------------------|-------------------------------|
 |**fpclassify**|\<math.h>|\<math.h> или \<cmath>|
 
-Макросы **fpclassify** и функции **fpclassify** соответствуют спецификациям ISO C99 и c++ 11. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Макросы **fpclassify** и функции **fpclassify** соответствуют спецификациям ISO C99 и c++ 11. Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
+[Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>

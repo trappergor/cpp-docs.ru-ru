@@ -1,5 +1,5 @@
 ---
-title: Класс CFileException
+title: Класс Кфиликсцептион
 ms.date: 06/09/2020
 f1_keywords:
 - CFileException
@@ -24,14 +24,14 @@ helpviewer_keywords:
 - CFileException [MFC], m_lOsError
 - CFileException [MFC], m_strFileName
 ms.assetid: f6491bb9-bfbc-42fd-a952-b33f9b62323f
-ms.openlocfilehash: 85ff8d77bda30bcf0b107f733098d07c4fd80283
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 6d3102cfd41d68458332025cbf3410e3f169523b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813526"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212453"
 ---
-# <a name="cfileexception-class"></a>Класс CFileException
+# <a name="cfileexception-class"></a>Класс Кфиликсцептион
 
 Представляет состояние, связанное с файлом исключения.
 
@@ -45,7 +45,7 @@ class CFileException : public CException
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[Кфиликсцептион:: Кфиликсцептион](#cfileexception)|Формирует объект `CFileException`.|
 
@@ -61,13 +61,13 @@ class CFileException : public CException
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[Кфиликсцептион:: m_cause](#m_cause)|Содержит переносимый код, соответствующий причине исключения.|
 |[Кфиликсцептион:: m_lOsError](#m_loserror)|Содержит номер связанной ошибки операционной системы.|
 |[Кфиликсцептион:: m_strFileName](#m_strfilename)|Содержит имя файла для этого исключения.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 `CFileException`Класс содержит открытые члены данных, которые содержат переносимый код причины и номер ошибки, зависящий от операционной системы. Класс также предоставляет статические функции-члены для генерации исключений файлов и для возврата кодов причин ошибок операционной системы и ошибок времени выполнения C.
 
@@ -107,7 +107,7 @@ CFileException(
 *лпсзарчивенаме*<br/>
 Указывает на строку, содержащую имя `CFile` объекта, вызвавшего исключение.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Не используйте этот конструктор напрямую, а вызовите глобальную функцию [афкссровфиликсцептион](exception-processing.md#afxthrowfileexception).
 
@@ -131,7 +131,7 @@ static int PASCAL ErrnoToException(int nErrno);
 
 Перечислимое значение, соответствующее указанному значению ошибки библиотеки времени выполнения.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Список возможных перечислимых значений см. в разделе [кфиликсцептион:: m_cause](#m_cause) .
 
@@ -165,7 +165,7 @@ virtual BOOL GetErrorMessage(
 
 Значение TRUE, если метод выполнен успешно; в противном случае — FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Если указанный буфер слишком мал, сообщение об ошибке усекается.
 
@@ -183,11 +183,11 @@ virtual BOOL GetErrorMessage(
 int m_cause;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот элемент данных является открытой переменной типа **int**. Ниже перечислены перечислители и их значения.
+Этот элемент данных является открытой переменной типа **`int`** . Перечислители и их значение представлено далее.
 
-| Ошибка | Значение и значение |
+| Error | Значение и значение |
 |--|--|
 | `CFileException::none` | 	0: ошибка отсутствует. |
 | `CFileException::genericException` | 	1: возникла неизвестная ошибка. |
@@ -209,7 +209,7 @@ int m_cause;
 > Перечислители причины `CFileException` отличаются от перечислителей причины `CArchiveException`.
 
 > [!NOTE]
-> `CArchiveException::generic` не рекомендуется к использованию. Взамен рекомендуется использовать `genericException`. Если **универсальное** приложение используется в приложении и строится с помощью параметра/CLR, то в результате синтаксических ошибок не будет легко расшифроваться.
+> `CArchiveException::generic` не рекомендуется к использованию. Используйте вместо этого `genericException`. Если **универсальное** приложение используется в приложении и строится с помощью параметра/CLR, то в результате синтаксических ошибок не будет легко расшифроваться.
 
 ### <a name="example"></a>Пример
 
@@ -223,7 +223,7 @@ int m_cause;
 LONG m_lOsError;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Список кодов ошибок см. в техническом руководстве по операционной системе. Этот элемент данных является открытой переменной типа LONG.
 
@@ -296,8 +296,8 @@ static void PASCAL ThrowOsError(LONG lOsError, LPCTSTR lpszFileName = NULL);
 
 [!code-cpp[NVC_MFCFiles#29](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_6.cpp)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс CException](../../mfc/reference/cexception-class.md)<br/>
-[Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
+[Иерархическая диаграмма](../../mfc/hierarchy-chart.md)<br/>
 [Обработка исключений](../../mfc/reference/exception-processing.md)

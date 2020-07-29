@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::Close method
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::GetInvalidValue method
 ms.assetid: 22963e88-d857-4624-9182-7c986daff722
-ms.openlocfilehash: 604098cd3289722767117910d6e44e272dcb8b77
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c04e53789fd737b12ca10ef2c279a05fb43f5925
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371449"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212999"
 ---
 # <a name="handletraits-structure"></a>HANDLETraits - структура
 
@@ -38,10 +38,10 @@ struct HANDLETraits;
 
 ### <a name="public-methods"></a>Открытые методы
 
-Имя                                              | Описание
+name                                              | Описание
 ------------------------------------------------- | -----------------------------
-[HANDLETraits::Закрыть](#close)                     | Закрывает указанную ручку.
-[HANDLETraits::GetInvalidValue](#getinvalidvalue) | Представляет недействительную ручку.
+[Метод HandleTraits:: Close](#close)                     | Закрывает указанный маркер.
+[Метод HandleTraits:: GetInvalidValue](#getinvalidvalue) | Представляет недопустимый Handle.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -49,13 +49,13 @@ struct HANDLETraits;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** corewrappers.h
+**Заголовок:** кореврапперс. h
 
-**Пространство имен:** Microsoft::WRL::Wrappers:: HandleTraits
+**Пространство имен:** Microsoft:: WRL:: оболочки:: метод HandleTraits
 
-## <a name="handletraitsclose"></a><a name="close"></a>HANDLETraits::Закрыть
+## <a name="handletraitsclose"></a><a name="close"></a>Метод HandleTraits:: Close
 
-Закрывает указанную ручку.
+Закрывает указанный маркер.
 
 ```cpp
 inline static bool Close(
@@ -65,16 +65,16 @@ inline static bool Close(
 
 ### <a name="parameters"></a>Параметры
 
-*H*<br/>
-Ручка, чтобы закрыть.
+*h*<br/>
+Закрывающий маркер.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**верно,** если ручка *h* закрыта успешно; в противном случае, **ложные**.
+**`true`** значение, если Handles *h* успешно закрыто. в противном случае — **`false`** .
 
-## <a name="handletraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>HANDLETraits::GetInvalidValue
+## <a name="handletraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>Метод HandleTraits:: GetInvalidValue
 
-Представляет недействительную ручку.
+Представляет недопустимый Handle.
 
 ```cpp
 inline static HANDLE GetInvalidValue();

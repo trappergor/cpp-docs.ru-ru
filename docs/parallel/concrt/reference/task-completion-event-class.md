@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - task_completion_event class
 ms.assetid: fb19ed98-f245-48dc-9ba5-487ba879b28a
-ms.openlocfilehash: b3e3093cb76df507f8c707e497c9aec75a065057
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: b63e8c6986508806cedc8c094a4e8844491dd2fa
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142594"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219514"
 ---
 # <a name="task_completion_event-class"></a>Класс task_completion_event
 
@@ -36,17 +36,17 @@ class task_completion_event<void>;
 *_ResultType*<br/>
 Тип результата данного класса `task_completion_event`.
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Элементы
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
 |[task_completion_event](#ctor)|Формирует объект `task_completion_event`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Description|
+|name|Описание|
 |----------|-----------------|
 |[set](#set)|Перегружен. Задает событие завершения задачи.|
 |[set_exception](#set_exception)|Перегружен. Распространяет исключение для всех задач, связанных с этим событием.|
@@ -67,9 +67,9 @@ class task_completion_event<void>;
 
 **Заголовок:** из ppltasks. h
 
-**Пространство имен:** concurrency
+**Пространство имен:** параллелизм
 
-## <a name="set"></a>параметр
+## <a name="set"></a><a name="set"></a>параметр
 
 Задает событие завершения задачи.
 
@@ -86,13 +86,13 @@ bool set() const ;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Метод возвращает **значение true** , если при установке события было успешно установлено событие. Он возвращает **значение false** , если событие уже задано.
+Метод возвращает значение, **`true`** если оно было успешным при установке события. Он возвращает **`false`** значение, если событие уже задано.
 
 ### <a name="remarks"></a>Remarks
 
-При наличии нескольких или одновременных вызовов `set`, только первый вызов будет успешно выполнен, и его результат (если таковой имеется) будет храниться в событии завершения задачи. Остальные наборы игнорируются, и метод возвратит значение false. При задании события завершения задачи все задачи, созданные из этого события, будут немедленно завершены и будут планироваться его продолжения (при наличии). Объекты завершения задач с `_ResultType`, отличными от **void** , передают значение их продолжениям.
+При наличии нескольких или одновременных вызовов метод `set` будет успешно выполнен только при первом вызове, а его результат (если таковой имеется) будет сохранен в событии завершения задачи. Остальные наборы игнорируются, и метод возвратит значение false. При задании события завершения задачи все задачи, созданные из этого события, будут немедленно завершены и будут планироваться его продолжения (при наличии). Объекты завершения задач, которые имеют `_ResultType` значение, отличное от, **`void`** передаст значения их продолжений.
 
-## <a name="set_exception"></a>set_exception
+## <a name="set_exception"></a><a name="set_exception"></a>set_exception
 
 Распространяет исключение для всех задач, связанных с этим событием.
 
@@ -116,7 +116,7 @@ __declspec(noinline) bool set_exception(std::exception_ptr _ExceptionPtr) const 
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-## <a name="ctor"></a>task_completion_event
+## <a name="task_completion_event"></a><a name="ctor"></a>task_completion_event
 
 Формирует объект `task_completion_event`.
 
@@ -126,4 +126,4 @@ task_completion_event();
 
 ## <a name="see-also"></a>См. также раздел
 
-[Пространство имен concurrency](concurrency-namespace.md)
+[Пространство имен Concurrency](concurrency-namespace.md)

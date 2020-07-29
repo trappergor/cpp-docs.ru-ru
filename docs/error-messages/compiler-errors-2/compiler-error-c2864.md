@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2864
 ms.assetid: d0ca2ad9-90a6-4aef-8511-98a3b414c102
-ms.openlocfilehash: 122e0455f84d8940eda04f3968e883dd1f0cd444
-ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
+ms.openlocfilehash: cfa928c84fbf6c841e3caaf51dda526a7ae184fa
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71998666"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212661"
 ---
 # <a name="compiler-error-c2864"></a>Ошибка компилятора C2864
 
 > "*member-Name*": статический элемент данных с инициализатором в классе должен иметь постоянный целочисленный тип const
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Чтобы инициализировать элемент данных `static`, который определен как `volatile`, non-`const` или не является целочисленным типом, используйте оператор определения члена. Они не могут быть инициализированы в объявлении.
+Для инициализации **`static`** элемента данных, который определен как **`volatile`** , не **`const`** или является целочисленным типом, используется оператор определения члена. Они не могут быть инициализированы в объявлении.
 
 ## <a name="example"></a>Пример
 

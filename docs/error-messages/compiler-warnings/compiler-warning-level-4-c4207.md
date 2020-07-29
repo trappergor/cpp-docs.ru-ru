@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4207
 ms.assetid: f4e09e3e-ac87-4489-8e3f-c8f76b82e721
-ms.openlocfilehash: 1ff669512f85dfed9bab307c2986e7858285461d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e694f96d7f6271686d1b2a19e5a12e5e08e1cfbe
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80161390"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219954"
 ---
 # <a name="compiler-warning-level-4-c4207"></a>Предупреждение компилятора (уровень 4) C4207
 
 использовано нестандартное расширение: Расширенная форма инициализатора
 
-С помощью расширений Майкрософт (/Ze) можно инициализировать массив `char` без размера, используя строку внутри фигурных скобок.
+С помощью расширений Майкрософт (/Ze) можно инициализировать неразмерный массив, **`char`** используя строку внутри фигурных скобок.
 
 ## <a name="example"></a>Пример
 

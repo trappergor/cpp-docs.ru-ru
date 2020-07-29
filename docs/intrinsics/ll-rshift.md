@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __ll_rshift intrinsic
 - ll_rshift intrinsic
 ms.assetid: ef13b732-d122-44a0-add9-f5544a2c4ab2
-ms.openlocfilehash: ad17991d84acb7e531baf9435610ebd566197a22
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 6ae750f1a8825096ee30adb01768d5603ab23a01
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217499"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219668"
 ---
 # <a name="__ll_rshift"></a>__ll_rshift
 
@@ -44,15 +44,15 @@ __int64 __ll_rshift(
 
 ## <a name="requirements"></a>Требования
 
-|Встроенная функция|Архитектура|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`__ll_rshift`|x86, x64|
 
-**Заголовочный файл** \<> Intrin. h
+**Файл заголовка** \<intrin.h>
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Если второй параметр больше 64 в x64 (32 на x86), то это число берется по модулю 64 (32 на x86), чтобы определить число битов для сдвига. Префикс указывает, что это операция над `long long`, еще одно имя для `__int64`, 64-разрядного целочисленного типа со знаком. `ll`
+Если второй параметр больше 64 в x64 (32 на x86), то это число берется по модулю 64 (32 на x86), чтобы определить число битов для сдвига. `ll`Префикс указывает, что это операция над **`long long`** , еще одно имя для **`__int64`** , 64-разрядного целочисленного типа со знаком.
 
 ## <a name="example"></a>Пример
 
@@ -78,7 +78,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Вывод
+## <a name="output"></a>Выходные данные
 
 ```Output
 ffffffffffffff00

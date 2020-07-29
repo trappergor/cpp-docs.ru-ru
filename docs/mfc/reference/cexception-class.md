@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CException [MFC], Delete
 - CException [MFC], ReportError
 ms.assetid: cfacf14d-bfe4-4666-a5c7-38b800512920
-ms.openlocfilehash: 93901f6f92ee79bd893b2ec0d1e341e77749d951
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: a24f324576c872e7fe509b742aa58d6c230ec24a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81753189"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212492"
 ---
 # <a name="cexception-class"></a>Класс CException
 
@@ -35,44 +35,44 @@ class AFX_NOVTABLE CException : public CObject
 
 |Имя|Описание|
 |----------|-----------------|
-|[CException::CException](#cexception)|Формирует объект `CException`.|
+|[CException:: CException](#cexception)|Формирует объект `CException`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
-|[CException::Delete](#delete)|Удаляет `CException` объект.|
-|[CException::ReportОшибка](#reporterror)|Сообщает пользователю сообщение об ошибке в поле сообщения.|
+|[CException::D удалить](#delete)|Удаляет `CException` объект.|
+|[CException:: ReportError](#reporterror)|Сообщает пользователю сообщение об ошибке в окне сообщения.|
 
 ## <a name="remarks"></a>Remarks
 
-Потому что `CException` это абстрактный базовый класс, вы не можете создавать `CException` объекты напрямую; необходимо создавать объекты производных классов. Если вам нужно создать `CException`свой собственный класс стиля, используйте один из полученных классов, перечисленных выше, в качестве модели. Убедитесь, что ваш производный класс также использует. `IMPLEMENT_DYNAMIC`
+Поскольку `CException` является абстрактным базовым классом, нельзя создавать `CException` объекты напрямую; необходимо создавать объекты производных классов. Если необходимо создать собственный `CException` класс, используйте один из производных классов, перечисленных выше, в качестве модели. Убедитесь, что производный класс также использует `IMPLEMENT_DYNAMIC` .
 
-Полученные классы и их описания перечислены ниже:
+Ниже перечислены производные классы и их описания.
 
 |||
 |-|-|
-|[CSimpleException](../../mfc/reference/csimpleexception-class.md)|Базовый класс для ресурсо-критических исключений MFC|
-|[CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md)|Недействительное условие исключения аргумента|
-|[CMemoryException](../../mfc/reference/cmemoryexception-class.md)|Исключение из памяти|
-|[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)|Запрос на неподдерживаемую операцию|
-|[CArchiveException](../../mfc/reference/carchiveexception-class.md)|Исключение для архива|
-|[CFileException](../../mfc/reference/cfileexception-class.md)|Исключение для конкретных файлов|
-|[CResourceException](../../mfc/reference/cresourceexception-class.md)|Ресурс Windows не найден или не способен к соотвене|
+|[CSimpleException](../../mfc/reference/csimpleexception-class.md)|Базовый класс для исключений MFC, критических для ресурсов|
+|[CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md)|Недопустимое условие исключения аргумента|
+|[CMemoryException](../../mfc/reference/cmemoryexception-class.md)|Исключение нехватки памяти|
+|[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)|Запрос неподдерживаемой операции|
+|[CArchiveException](../../mfc/reference/carchiveexception-class.md)|Исключение, относящееся к архиву|
+|[CFileException](../../mfc/reference/cfileexception-class.md)|Исключение для конкретного файла|
+|[CResourceException](../../mfc/reference/cresourceexception-class.md)|Ресурс Windows не найден или не является создаваемым|
 |[COleException](../../mfc/reference/coleexception-class.md)|Исключение OLE|
-|[CDBException](../../mfc/reference/cdbexception-class.md)|Исключение базы данных (т.е. условия исключения, возникающие для классов баз данных MFC на основе open Database Connectivity)|
-|[COleDispatchException](../../mfc/reference/coledispatchexception-class.md)|Исключение OL-диспетчерской (автоматизации)|
-|[CUserException](../../mfc/reference/cuserexception-class.md)|Исключение, указываво, что ресурс не может быть найден|
-|[CDaoException](../../mfc/reference/cdaoexception-class.md)|Исключение объектов доступа к данным (т.е. условия исключения, возникающие для классов DAO)|
-|[CInternetConnection](../../mfc/reference/cinternetexception-class.md)|Исключение интернета (т.е. условия исключения, возникающие для классов Интернета).|
+|[CDBException](../../mfc/reference/cdbexception-class.md)|Исключение базы данных (то есть условия исключения, возникающие для классов баз данных MFC на основе открытого подключения к базе данных)|
+|[COleDispatchException](../../mfc/reference/coledispatchexception-class.md)|Исключение OLE-диспетчеризации (автоматизация)|
+|[CUserException](../../mfc/reference/cuserexception-class.md)|Исключение, указывающее, что не удалось найти ресурс|
+|[CDaoException](../../mfc/reference/cdaoexception-class.md)|Исключение объектов доступа к данным (то есть условия исключений, возникающие для классов DAO)|
+|[CInternetConnection](../../mfc/reference/cinternetexception-class.md)|Интернет-исключение (то есть условия исключения, возникающие для Интернет-классов).|
 
-Эти исключения предназначены для использования с [THROW](exception-processing.md#throw), [THROW_LAST,](exception-processing.md#throw_last) [попробуйте,](exception-processing.md#try) [поймать,](exception-processing.md#catch) [and_catch,](exception-processing.md#and_catch)и [end_catch](exception-processing.md#end_catch) макросов. Для получения дополнительной информации об исключениях см. [Обработка исключений](exception-processing.md)или [см.](../exception-handling-in-mfc.md)
+Эти исключения предназначены для использования с макросами [throw](exception-processing.md#throw), [THROW_LAST](exception-processing.md#throw_last), [try](exception-processing.md#try), [catch](exception-processing.md#catch), [AND_CATCH](exception-processing.md#and_catch)и [END_CATCH](exception-processing.md#end_catch) . Дополнительные сведения об исключениях см. в разделе [обработка исключений](exception-processing.md)или в статье [обработка исключений (MFC)](../exception-handling-in-mfc.md).
 
-Чтобы поймать конкретное исключение, используйте соответствующий производный класс. Чтобы поймать все типы `CException`исключений, используйте [CObject::IsKindOf,](cobject-class.md#iskindof) чтобы дифференцировать между `CException`-производными классами. Обратите `CObject::IsKindOf` внимание, что работает только для классов, заявленных с [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic) макросом, чтобы воспользоваться динамической проверкой типа. Любой `CException`класс, который вы создаете, должен использовать `IMPLEMENT_DYNAMIC` и макрос.
+Чтобы перехватить конкретное исключение, используйте соответствующий производный класс. Чтобы перехватить все типы исключений, используйте `CException` , а затем используйте [CObject:: IsKindOf](cobject-class.md#iskindof) для различения между `CException` производными классами. Обратите внимание, что `CObject::IsKindOf` работает только для классов, объявленных с помощью макроса [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic) , чтобы воспользоваться преимуществами динамической проверки типов. `CException`При создании любого производного класса необходимо использовать `IMPLEMENT_DYNAMIC` макрос.
 
-Вы можете сообщить подробности об исключениях для пользователя, позвонив [getErrorMessage](cfileexception-class.md#geterrormessage) или [ReportError](#reporterror), две функции участника, которые работают с любым из `CException`классов, полученных.
+Вы можете сообщить сведения об исключениях пользователю, вызвав [жетеррормессаже](cfileexception-class.md#geterrormessage) или [ReportError](#reporterror), две функции члена, которые работают с любыми `CException` производными классами.
 
-Если исключение поймано одним из макросов, `CException` объект удаляется автоматически; не удаляйте его самостоятельно. Если исключение ловится с помощью ключевого слова **catch,** оно не удаляется автоматически. Дополнительную информацию о том, когда следует удалить объект exeption, смотрите в статье [Обобработки исключений (MFC).](../exception-handling-in-mfc.md)
+Если исключение перехвачено одним из макросов, `CException` объект удаляется автоматически; не удаляйте его самостоятельно. Если исключение перехвачено с помощью **`catch`** ключевого слова, оно не удаляется автоматически. Дополнительные сведения о том, когда следует удалять объект ексептион, см. в статье [обработка исключений (MFC)](../exception-handling-in-mfc.md) .
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -82,11 +82,11 @@ class AFX_NOVTABLE CException : public CObject
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** afx.h
+**Заголовок:** AFX. h
 
-## <a name="cexceptioncexception"></a><a name="cexception"></a>CException::CException
+## <a name="cexceptioncexception"></a><a name="cexception"></a>CException:: CException
 
-Эта функция члена `CException` строит объект.
+Эта функция-член конструирует `CException` объект.
 
 ```
 explicit CException(BOOL bAutoDelete);
@@ -95,15 +95,15 @@ explicit CException(BOOL bAutoDelete);
 ### <a name="parameters"></a>Параметры
 
 *b_AutoDelete*<br/>
-Укажите TRUE, если `CException` память для объекта была выделена на куче. Это приведет `CException` к удалению объекта `Delete` при вызове функции участника для удаления исключения. Укажите FALSE, находится ли `CException` объект в стеке или является глобальным объектом. В этом случае `CException` объект не будет удален `Delete` при вызове функции участника.
+Укажите значение TRUE, если память для `CException` объекта была выделена в куче. Это приведет к `CException` удалению объекта при `Delete` вызове функции-члена для удаления исключения. Укажите значение FALSE, если `CException` объект находится в стеке или является глобальным объектом. В этом случае `CException` объект не будет удален при `Delete` вызове функции-члена.
 
 ### <a name="remarks"></a>Remarks
 
-Обычно вам никогда не нужно звонить этому конструктору напрямую. Функция, которая бросает исключение, должна создать `CException`экземпляр класса, полученного из-производного, или вызвать его конструктор, или она должна использовать одну из функций метания MFC, такую как [AfxThrowFileException](exception-processing.md#afxthrowfileexception), чтобы бросить предопределенный тип. Эта документация предоставляется только для полноты.
+Обычно вызывать этот конструктор напрямую не требуется. Функция, вызывающая исключение, должна создать экземпляр `CException` производного класса и вызвать его конструктор или использовать одну из функций Throw MFC, например [афкссровфиликсцептион](exception-processing.md#afxthrowfileexception), для создания предопределенного типа. Эта документация предоставляется только для полноты.
 
-## <a name="cexceptiondelete"></a><a name="delete"></a>CException::Delete
+## <a name="cexceptiondelete"></a><a name="delete"></a>CException::D удалить
 
-Эта функция проверяет, `CException` был ли объект создан на куче, и если да, то она вызывает оператора **удаления** на объекте.
+Эта функция проверяет, `CException` был ли объект создан в куче, и если да, то он вызывает **`delete`** оператор для объекта.
 
 ```cpp
 void Delete();
@@ -111,11 +111,11 @@ void Delete();
 
 ### <a name="remarks"></a>Remarks
 
-При удалении `CException` объекта используйте функцию `Delete` члена для удаления исключения. Не используйте оператора **удаления** напрямую, поскольку `CException` объект может быть глобальным объектом или создан в стеке.
+При удалении `CException` объекта используйте `Delete` функцию-член для удаления исключения. Не используйте **`delete`** оператор напрямую, так как `CException` объект может быть глобальным объектом или создан в стеке.
 
-Можно указать, следует ли удалять объект при построении объекта. Для получения дополнительной информации [см. CException::CException](#cexception).
+Можно указать, следует ли удалять объект при создании объекта. Дополнительные сведения см. в разделе [CException:: CException](#cexception).
 
-Вам `Delete` нужно позвонить только в том случае, если вы используете механизм**ловли ловких ловли** СЗ. **try**-  Если вы используете макросы MFC **TRY** и **CATCH,** то эти макросы автоматически вызовут эту функцию.
+Вызов требуется только `Delete` при использовании **`try`** -  **`catch`** механизма C++. Если вы используете макросы MFC **try** и **catch**, эти макросы будут автоматически вызывать эту функцию.
 
 ### <a name="example"></a>Пример
 
@@ -168,9 +168,9 @@ if (pFile != NULL)
 }
 ```
 
-## <a name="cexceptionreporterror"></a><a name="reporterror"></a>CException::ReportОшибка
+## <a name="cexceptionreporterror"></a><a name="reporterror"></a>CException:: ReportError
 
-Вызовите эту функцию участника, чтобы сообщить пользователю текст ошибки в поле сообщения.
+Вызовите эту функцию-член, чтобы сообщить пользователю о тексте ошибки в окне сообщения.
 
 ```
 virtual int ReportError(
@@ -181,18 +181,18 @@ virtual int ReportError(
 ### <a name="parameters"></a>Параметры
 
 *nType*<br/>
-Определяет стиль коробки сообщений. Примените любую комбинацию [стилей почтового ящика](styles-used-by-mfc.md#message-box-styles) к коробке. Если вы не указали этот параметр, по умолчанию MB_OK.
+Задает стиль окна сообщения. Примените к полю любое сочетание [стилей окна сообщения](styles-used-by-mfc.md#message-box-styles) . Если этот параметр не указан, по умолчанию используется значение MB_OK.
 
-*nMessageID*<br/>
-Упоняет идентификатор ресурса (запись строки таблицы) сообщения для отображения, если объект исключения не имеет сообщения об ошибке. Если 0, отображается сообщение "Сообщение об ошибке не доступно".
+*нмессажеид*<br/>
+Указывает идентификатор ресурса (запись строковой таблицы) отображаемого сообщения, если объект исключения не имеет сообщения об ошибке. Если значение равно 0, отображается сообщение "сообщение об ошибке недоступно".
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение; `AfxMessageBox` в противном случае 0, если не хватает памяти для отображения окна сообщений. Овозможных значениях возврата можно ознакомиться на [AfxMessageBox.](cstring-formatting-and-message-box-display.md#afxmessagebox)
+`AfxMessageBox`Значение; в противном случае — 0, если недостаточно памяти для вывода окна сообщения. Возможные возвращаемые значения см. в разделе [AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox) .
 
 ### <a name="example"></a>Пример
 
-Вот пример использования `CException::ReportError`. Для другого примера [CATCH](exception-processing.md#catch)см.
+Ниже приведен пример использования `CException::ReportError` . Другой пример см. в примере для [catch](exception-processing.md#catch).
 
 ```cpp
 CFile fileInput;
@@ -228,7 +228,7 @@ else
 
 ## <a name="see-also"></a>См. также раздел
 
-[Класс CObject](cobject-class.md)<br/>
-[Диаграмма иерархии](../hierarchy-chart.md)<br/>
+[CObject, класс](cobject-class.md)<br/>
+[Иерархическая диаграмма](../hierarchy-chart.md)<br/>
 [Обработка исключений](exception-processing.md)<br/>
-[Как я: Создайте свои собственные индивидуальные классы исключений](https://go.microsoft.com/fwlink/p/?linkid=128045)
+[Инструкции. Создание собственных классов пользовательских исключений](https://go.microsoft.com/fwlink/p/?linkid=128045)

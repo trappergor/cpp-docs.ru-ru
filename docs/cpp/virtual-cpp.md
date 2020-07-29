@@ -10,16 +10,16 @@ helpviewer_keywords:
 - virtual functions [C++], declaring
 - virtual keyword [C++]
 ms.assetid: c2eb987d-6cf3-43b6-aa0c-29a6f561b1ae
-ms.openlocfilehash: a8948594bade940834e041adc73d56cc7847acc0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3477f77b811d8bec09b63664a05a4e251214aefa
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187509"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213129"
 ---
 # <a name="virtual-c"></a>virtual (C++)
 
-Ключевое слово **Virtual** объявляет виртуальную функцию или виртуальный базовый класс.
+**`virtual`** Ключевое слово объявляет виртуальную функцию или виртуальный базовый класс.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -37,7 +37,7 @@ virtual [access-specifier] base-class-name
 Объявляет функцию-член.
 
 *описатель доступа*<br/>
-Определяет уровень доступа к базовому классу, **открытому**, **защищенному** или **закрытому**. Может располагаться до или после ключевого слова **Virtual** .
+Определяет уровень доступа к базовому классу, **`public`** **`protected`** или **`private`** . Может использоваться до или после **`virtual`** ключевого слова.
 
 *имя базового класса*<br/>
 Определяет ранее объявленный тип класса.

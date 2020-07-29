@@ -10,12 +10,12 @@ helpviewer_keywords:
 - exception handling, types of
 - System::Exception class in managed applications
 ms.assetid: ccb11fe8-6938-41ac-b477-a183e85865b9
-ms.openlocfilehash: 9f5662bb9e744b5db3b0ab25ac4230b2f67016bd
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 23d65bb8056672d12e3d40f9fcab1e58bab65a3d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182127"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219707"
 ---
 # <a name="exception-handling--ccli-and-ccx"></a>Обработка исключений (C++/CLI и C++/CX)
 
@@ -23,25 +23,25 @@ ms.locfileid: "80182127"
 
 ## <a name="in-this-section"></a>в этом разделе
 
-[Основные принципы использования управляемых исключений](../dotnet/basic-concepts-in-using-managed-exceptions.md)<br/>
-Описывается создание исключений и использование блоков **try**/**catch**.
+[Основные понятия, связанные с использованием управляемых исключений](../dotnet/basic-concepts-in-using-managed-exceptions.md)<br/>
+Описывает создание исключений и использование **`try`** / **`catch`** блоков.
 
-[Различия в поведении при обработке исключений в /clr](../dotnet/differences-in-exception-handling-behavior-under-clr.md)<br/>
+[Различия в поведении обработки исключений в/CLR](../dotnet/differences-in-exception-handling-behavior-under-clr.md)<br/>
 Рассматриваются отличия от стандартного поведения обработки исключений C++.
 
 [finally](../dotnet/finally.md)<br/>
 Описывается использование ключевого слова finally.
 
-[Практическое руководство. Определение и установка глобального обработчика исключений](../dotnet/how-to-define-and-install-a-global-exception-handler.md)<br/>
+[Как определить и установить глобальный обработчик исключений](../dotnet/how-to-define-and-install-a-global-exception-handler.md)<br/>
 Демонстрируется захват необработанных исключений.
 
-[Практическое руководство. Исключения в машинном коде, создаваемые MSIL](../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md)<br/>
+[Инструкции. перехват исключений в машинном коде, созданном из MSIL](../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md)<br/>
 Описывается перехват исключений CLR и C++ в машинном коде.
 
-[Практическое руководство. Определение и установка глобального обработчика исключений](../dotnet/how-to-define-and-install-a-global-exception-handler.md)<br/>
+[Как определить и установить глобальный обработчик исключений](../dotnet/how-to-define-and-install-a-global-exception-handler.md)<br/>
 Демонстрируется перехват всех необработанных исключений.
 
-## <a name="related-sections"></a>См. также
+## <a name="related-sections"></a>Связанные разделы
 
 [Обработка исключений](../cpp/exception-handling-in-visual-cpp.md)<br/>
 Описывается обработка исключений на стандартном языке C++.

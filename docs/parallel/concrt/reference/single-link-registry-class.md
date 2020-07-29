@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - single_link_registry class
 ms.assetid: 09540a4e-c34e-4ff9-af49-21b8612b6ab3
-ms.openlocfilehash: c29caf6d31df316e80b15fe6827c81e34ece8a18
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 24f89a6b2fb998ba5e5a82dbb470accb45d0fd9f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142719"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219551"
 ---
 # <a name="single_link_registry-class"></a>Класс single_link_registry
 
@@ -34,26 +34,26 @@ class single_link_registry : public network_link_registry<_Block>;
 ### <a name="parameters"></a>Параметры
 
 *_Block*<br/>
-Тип данных Block, хранящийся в объекте `single_link_registry`.
+Тип данных блока, хранящийся в `single_link_registry` объекте.
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Элементы
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
 |[single_link_registry](#ctor)|Формирует объект `single_link_registry`.|
-|[Деструктор ~ single_link_registry](#dtor)|Уничтожает объект `single_link_registry`.|
+|[Деструктор ~ single_link_registry](#dtor)|Уничтожает `single_link_registry` объект.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Description|
+|name|Описание|
 |----------|-----------------|
-|[добавление](#add)|Добавляет ссылку на объект `single_link_registry`. (Переопределяет [network_link_registry:: Add](network-link-registry-class.md#add).)|
-|[begin](#begin)|Возвращает итератор, который является первым элементом в объекте `single_link_registry`. (Переопределяет [network_link_registry:: Begin](network-link-registry-class.md#begin).)|
-|[contains](#contains)|Выполняет поиск указанного блока в объекте `single_link_registry`. (Переопределяет [network_link_registry:: Contains](network-link-registry-class.md#contains).)|
-|[count](#count)|Подсчитывает количество элементов в объекте `single_link_registry`. (Переопределяет [network_link_registry:: count](network-link-registry-class.md#count).)|
-|[remove](#remove)|Удаляет ссылку из объекта `single_link_registry`. (Переопределяет [network_link_registry:: Remove](network-link-registry-class.md#remove).)|
+|[add](#add)|Добавляет ссылку на `single_link_registry` объект. (Переопределяет [network_link_registry:: Add](network-link-registry-class.md#add).)|
+|[начале](#begin)|Возвращает итератор на первый элемент в `single_link_registry` объекте. (Переопределяет [network_link_registry:: Begin](network-link-registry-class.md#begin).)|
+|[contains](#contains)|Выполняет поиск `single_link_registry` указанного блока в объекте. (Переопределяет [network_link_registry:: Contains](network-link-registry-class.md#contains).)|
+|[count](#count)|Подсчитывает количество элементов в `single_link_registry` объекте. (Переопределяет [network_link_registry:: count](network-link-registry-class.md#count).)|
+|[remove](#remove)|Удаляет ссылку из `single_link_registry` объекта. (Переопределяет [network_link_registry:: Remove](network-link-registry-class.md#remove).)|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -65,11 +65,11 @@ class single_link_registry : public network_link_registry<_Block>;
 
 **Заголовок:** agents.h
 
-**Пространство имен:** concurrency
+**Пространство имен:** параллелизм
 
-## <a name="add"></a>включить
+## <a name="add"></a><a name="add"></a>включить
 
-Добавляет ссылку на объект `single_link_registry`.
+Добавляет ссылку на `single_link_registry` объект.
 
 ```cpp
 virtual void add(_EType _Link);
@@ -84,9 +84,9 @@ virtual void add(_EType _Link);
 
 Метод вызывает исключение [invalid_link_target](invalid-link-target-class.md) , если в этом реестре уже есть ссылка.
 
-## <a name="begin"></a>начале
+## <a name="begin"></a><a name="begin"></a>начале
 
-Возвращает итератор, который является первым элементом в объекте `single_link_registry`.
+Возвращает итератор на первый элемент в `single_link_registry` объекте.
 
 ```cpp
 virtual iterator begin();
@@ -94,15 +94,15 @@ virtual iterator begin();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Итератор, обращающийся к первому элементу в объекте `single_link_registry`.
+Итератор, обращающийся к первому элементу в `single_link_registry` объекте.
 
 ### <a name="remarks"></a>Remarks
 
-Конечное состояние обозначается ссылкой на `NULL`.
+Конечное состояние обозначается `NULL` ссылкой.
 
-## <a name="contains"></a>содержащих
+## <a name="contains"></a><a name="contains"></a>содержащих
 
-Выполняет поиск указанного блока в объекте `single_link_registry`.
+Выполняет поиск `single_link_registry` указанного блока в объекте.
 
 ```cpp
 virtual bool contains(_EType _Link);
@@ -111,15 +111,15 @@ virtual bool contains(_EType _Link);
 ### <a name="parameters"></a>Параметры
 
 *_Link*<br/>
-Указатель на блок, который необходимо найти в объекте `single_link_registry`.
+Указатель на блок, который необходимо найти в `single_link_registry` объекте.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true** , если ссылка найдена; в противном случае — **значение false** .
+**`true`** значение, если ссылка найдена, **`false`** в противном случае.
 
-## <a name="count"></a>расчета
+## <a name="count"></a><a name="count"></a>расчета
 
-Подсчитывает количество элементов в объекте `single_link_registry`.
+Подсчитывает количество элементов в `single_link_registry` объекте.
 
 ```cpp
 virtual size_t count();
@@ -129,9 +129,9 @@ virtual size_t count();
 
 Число элементов в объекте `single_link_registry`.
 
-## <a name="remove"></a>отменит
+## <a name="remove"></a><a name="remove"></a>отменит
 
-Удаляет ссылку из объекта `single_link_registry`.
+Удаляет ссылку из `single_link_registry` объекта.
 
 ```cpp
 virtual bool remove(_EType _Link);
@@ -144,9 +144,9 @@ virtual bool remove(_EType _Link);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true** , если ссылка была найдена и удалена; в противном случае — **значение false** .
+**`true`** значение, если ссылка была найдена и удалена, **`false`** в противном случае.
 
-## <a name="ctor"></a>single_link_registry
+## <a name="single_link_registry"></a><a name="ctor"></a>single_link_registry
 
 Формирует объект `single_link_registry`.
 
@@ -154,9 +154,9 @@ virtual bool remove(_EType _Link);
 single_link_registry();
 ```
 
-## <a name="dtor"></a>~ single_link_registry
+## <a name="single_link_registry"></a><a name="dtor"></a>~ single_link_registry
 
-Уничтожает объект `single_link_registry`.
+Уничтожает `single_link_registry` объект.
 
 ```cpp
 virtual ~single_link_registry();
@@ -168,5 +168,5 @@ virtual ~single_link_registry();
 
 ## <a name="see-also"></a>См. также раздел
 
-[Пространство имен concurrency](concurrency-namespace.md)<br/>
+[Пространство имен Concurrency](concurrency-namespace.md)<br/>
 [Класс multi_link_registry](multi-link-registry-class.md)
