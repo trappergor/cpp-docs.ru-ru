@@ -27,12 +27,12 @@ helpviewer_keywords:
 - memchr function
 - wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
-ms.openlocfilehash: c951716d623d900f975e9d6f8a1c762a155b1a7a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b4640004526eda4ff26e9601e15298bcb8ba3c79
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951946"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232473"
 ---
 # <a name="memchr-wmemchr"></a>memchr, wmemchr
 
@@ -75,10 +75,10 @@ const wchar_t *wmemchr(
 
 ### <a name="parameters"></a>Параметры
 
-*buffer*<br/>
+*двойной*<br/>
 Указатель на буфер.
 
-*c*<br/>
+*ц*<br/>
 Символ для поиска.
 
 *count*<br/>
@@ -88,11 +88,11 @@ const wchar_t *wmemchr(
 
 В случае успеха возвращает указатель на первое расположение *c* в *буфере*. В противном случае возвращается значение NULL.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 `memchr`и `wmemchr` Найдите первое вхождение *c* в первом *количестве* символов в *буфере*. Она останавливается при обнаружении *c* или при проверке первых символов *счетчика* .
 
-В C эти функции принимают указатель **const** для первого аргумента. В языке C++ доступны две перегрузки. Перегрузка, принимающая указатель на **const** , возвращает указатель на **константу**; версия, принимающая указатель на non-**const** , возвращает указатель на**неконстантный**. \_Правильная \_\_ перегрузка макроса CRT определена, если доступны как константные, так и неконстантные версии этих функций.\_ Если требуется поведение, не являющееся**константой** , для C++ обеих перегрузок C++в, определите возврат \_символа\_const.
+В C эти функции принимают указатель на **`const`** первый аргумент. В языке C++ доступны две перегрузки. Перегрузка, принимающая указатель на, **`const`** возвращает указатель на **`const`** ; версия, которая принимает указатель на, не **`const`** возвращает указатель на значение, отличное от **`const`** . Правильная перегрузка макроса CRT задается, \_ \_ \_ \_ Если **`const`** доступны и не **`const`** версии этих функций. Если требуется **`const`** неповедение для обеих перегрузок c++ в c++, определите \_ Возврат символа const \_ .
 
 ## <a name="requirements"></a>Требования
 
@@ -152,7 +152,7 @@ Result:      r found at position 12
 
 ## <a name="see-also"></a>См. также
 
-[Манипуляция буфером](../../c-runtime-library/buffer-manipulation.md)<br/>
+[Обработка буфера](../../c-runtime-library/buffer-manipulation.md)<br/>
 [_memccpy](memccpy.md)<br/>
 [memcmp, wmemcmp](memcmp-wmemcmp.md)<br/>
 [memcpy, wmemcpy](memcpy-wmemcpy.md)<br/>

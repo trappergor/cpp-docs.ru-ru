@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2646
 ms.assetid: 92ff1f02-5eaf-40a5-8b7a-a682f149e967
-ms.openlocfilehash: a5c4dbc967c304fc6b13eb00e2c7093380ec8be9
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: a05c98564c4e45dc380690c1b8c9bace5fc14cf4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758220"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216158"
 ---
 # <a name="compiler-error-c2646"></a>Ошибка компилятора C2646
 
 анонимную структуру или объединение в глобальной области видимости или области видимости пространства имен необходимо объявлять как статическое
 
-У анонимной структуры или объединения глобальная область видимости или область видимости пространства имен, но они не объявлены как `static`.
+Анонимная структура или объединение имеет область Global или Namespace, но не объявлена **`static`** .
 
 В следующем примере показано возникновение ошибки C2646 и приводятся сведения по ее устранению.
 

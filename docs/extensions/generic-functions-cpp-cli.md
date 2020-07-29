@@ -9,12 +9,12 @@ helpviewer_keywords:
 - methods [C++], generic
 - generic functions
 ms.assetid: 8e409364-58f9-4360-b486-e7d555e0c218
-ms.openlocfilehash: a4a1702c8b9902f5265a8a5f92316d7c82751609
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 3d648a23176786985a7ca1e22165c7c5a695e601
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516379"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216015"
 ---
 # <a name="generic-functions-ccli"></a>Универсальные функции (C++/CLI)
 
@@ -22,13 +22,13 @@ ms.locfileid: "65516379"
 
 ## <a name="all-platforms"></a>Все платформы
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта возможность применяется не для всех платформ.
 
 ## <a name="windows-runtime"></a>Среда выполнения Windows
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 В среде выполнения Windows эта функция языка не поддерживается.
 
@@ -53,13 +53,13 @@ return-type identifier<type-parameter identifier(s)>
 
 ### <a name="parameters"></a>Параметры
 
-*Атрибуты*<br/>
+*attributes*<br/>
 (Необязательно) Дополнительные описательные данные. Дополнительные сведения об атрибутах и классах атрибутов см. в разделе "Атрибуты".
 
-*modifiers*<br/>
-(Необязательно) Модификатор для функции, например static.  **virtual** не разрешается использовать, так как виртуальные методы не могут быть универсальными.
+*модификаторы*<br/>
+(Необязательно) Модификатор для функции, например static.  **`virtual`** не допускается, так как виртуальные методы могут быть неуниверсальными.
 
-*return-type*<br/>
+*Тип возвращаемого значения*<br/>
 Тип, возвращаемый методом. Если тип возвращаемого значения — void, возвращаемое значение не требуется.
 
 *identifier*<br/>
@@ -74,10 +74,10 @@ return-type identifier<type-parameter identifier(s)>
 *type-parameter-constraints-clauses*<br/>
 Указывает ограничения для типов, которые могут использоваться в качестве аргументов типа, и имеет формат, определенный в статье [Constraints on Generic Type Parameters (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md) (Ограничения параметров универсального типа в C++/CLI).
 
-*function-body*<br/>
+*тело функции*<br/>
 Тело метода, который может ссылаться на идентификаторы параметров типа.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Универсальные функции — это функции, объявленные с параметром универсального типа. Они могут быть методами в классе или структуре или автономными функциями. В одном универсальном объявлении неявно объявляется семейство функций, отличающихся только подстановкой различных фактических типов вместо параметра универсального типа.
 
@@ -181,7 +181,7 @@ My function returned an int: 2003
 My function returned a string: Hello generic functions!
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Расширения компонентов для .NET и UWP](component-extensions-for-runtime-platforms.md)<br/>
 [Универсальные шаблоны](generics-cpp-component-extensions.md)

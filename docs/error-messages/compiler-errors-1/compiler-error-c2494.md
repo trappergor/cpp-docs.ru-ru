@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2494
 ms.assetid: 5dfd07ab-351d-49c9-b54e-f0a104776ab8
-ms.openlocfilehash: e46eff4ec2b1afdb309b3c4db89c9283e2fc8971
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: e337e5b54706c1ae9d566131c98fd178c523f87e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757037"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216184"
 ---
 # <a name="compiler-error-c2494"></a>Ошибка компилятора C2494
 
-"ключевое слово" нельзя вызывать из выражения фильтра или блока __finally/финалли
+> "*ключевое слово*" нельзя вызывать из выражения фильтра или блока __finally/финалли
 
-Нельзя использовать `keyword` в блоке `__finally` или finally.
+Нельзя использовать *ключевое слово* в **`__finally`** **`finally`** блоке или.
 
 Следующий пример приводит к возникновению ошибки C2494:
 

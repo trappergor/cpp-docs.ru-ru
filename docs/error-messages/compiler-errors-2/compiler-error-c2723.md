@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2723
 ms.assetid: 86925601-2297-4cfd-94e2-2caf27c474c4
-ms.openlocfilehash: f9b169f856dba7a76e5f67e1980c4ca47ba912de
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: f723fcc0a3d9626f01f2059a3d9363801221bca0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74737456"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216054"
 ---
 # <a name="compiler-error-c2723"></a>Ошибка компилятора C2723
 
 function: недопустимый описатель specifier в определении функции
 
-Описатель не может использоваться в определении функции вне объявления класса. Описатель `virtual` может быть указан только в объявлении функции-члена внутри объявления класса.
+Описатель не может использоваться в определении функции вне объявления класса. **`virtual`** Спецификатор может быть указан только в объявлении функции-члена в объявлении класса.
 
 В следующем примере показано возникновение ошибки C2723 и приводятся сведения по ее устранению.
 

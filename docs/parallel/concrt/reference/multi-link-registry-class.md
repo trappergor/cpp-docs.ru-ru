@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - multi_link_registry class
 ms.assetid: b2aa73a8-e8a6-4255-b117-d07530c328b2
-ms.openlocfilehash: e22df5ee65d0219a46065044385dca46aac297a3
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 777b3f5206b4a595b5dcac653d608255e92f4ef6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142373"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231706"
 ---
 # <a name="multi_link_registry-class"></a>Класс multi_link_registry
 
@@ -35,27 +35,27 @@ class multi_link_registry : public network_link_registry<_Block>;
 ### <a name="parameters"></a>Параметры
 
 *_Block*<br/>
-Тип данных Block, хранящийся в объекте `multi_link_registry`.
+Тип данных блока, хранящийся в `multi_link_registry` объекте.
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Элементы
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
 |[multi_link_registry](#ctor)|Формирует объект `multi_link_registry`.|
-|[Деструктор ~ multi_link_registry](#dtor)|Уничтожает объект `multi_link_registry`.|
+|[Деструктор ~ multi_link_registry](#dtor)|Уничтожает `multi_link_registry` объект.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Description|
+|name|Описание|
 |----------|-----------------|
-|[добавление](#add)|Добавляет ссылку на объект `multi_link_registry`. (Переопределяет [network_link_registry:: Add](network-link-registry-class.md#add).)|
-|[begin](#begin)|Возвращает итератор, который является первым элементом в объекте `multi_link_registry`. (Переопределяет [network_link_registry:: Begin](network-link-registry-class.md#begin).)|
-|[contains](#contains)|Выполняет поиск указанного блока в объекте `multi_link_registry`. (Переопределяет [network_link_registry:: Contains](network-link-registry-class.md#contains).)|
-|[count](#count)|Подсчитывает количество элементов в объекте `multi_link_registry`. (Переопределяет [network_link_registry:: count](network-link-registry-class.md#count).)|
-|[remove](#remove)|Удаляет ссылку из объекта `multi_link_registry`. (Переопределяет [network_link_registry:: Remove](network-link-registry-class.md#remove).)|
-|[set_bound](#set_bound)|Задает верхнюю границу числа ссылок, которые может содержать объект `multi_link_registry`.|
+|[add](#add)|Добавляет ссылку на `multi_link_registry` объект. (Переопределяет [network_link_registry:: Add](network-link-registry-class.md#add).)|
+|[начале](#begin)|Возвращает итератор на первый элемент в `multi_link_registry` объекте. (Переопределяет [network_link_registry:: Begin](network-link-registry-class.md#begin).)|
+|[contains](#contains)|Выполняет поиск `multi_link_registry` указанного блока в объекте. (Переопределяет [network_link_registry:: Contains](network-link-registry-class.md#contains).)|
+|[count](#count)|Подсчитывает количество элементов в `multi_link_registry` объекте. (Переопределяет [network_link_registry:: count](network-link-registry-class.md#count).)|
+|[remove](#remove)|Удаляет ссылку из `multi_link_registry` объекта. (Переопределяет [network_link_registry:: Remove](network-link-registry-class.md#remove).)|
+|[set_bound](#set_bound)|Задает верхнюю границу числа ссылок, которые `multi_link_registry` может содержать объект.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -67,11 +67,11 @@ class multi_link_registry : public network_link_registry<_Block>;
 
 **Заголовок:** agents.h
 
-**Пространство имен:** concurrency
+**Пространство имен:** параллелизм
 
-## <a name="add"></a>включить
+## <a name="add"></a><a name="add"></a>включить
 
-Добавляет ссылку на объект `multi_link_registry`.
+Добавляет ссылку на `multi_link_registry` объект.
 
 ```cpp
 virtual void add(_EType _Link);
@@ -84,11 +84,11 @@ virtual void add(_EType _Link);
 
 ### <a name="remarks"></a>Remarks
 
-Метод вызывает исключение [invalid_link_target](invalid-link-target-class.md) , если ссылка уже имеется в реестре, или если привязка уже была задана с помощью функции `set_bound` и ссылка была удалена с момента удаления.
+Метод вызывает исключение [invalid_link_target](invalid-link-target-class.md) , если ссылка уже имеется в реестре, или если привязка уже была задана с помощью `set_bound` функции и связь была удалена.
 
-## <a name="begin"></a>начале
+## <a name="begin"></a><a name="begin"></a>начале
 
-Возвращает итератор, который является первым элементом в объекте `multi_link_registry`.
+Возвращает итератор на первый элемент в `multi_link_registry` объекте.
 
 ```cpp
 virtual iterator begin();
@@ -96,15 +96,15 @@ virtual iterator begin();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Итератор, обращающийся к первому элементу в объекте `multi_link_registry`.
+Итератор, обращающийся к первому элементу в `multi_link_registry` объекте.
 
 ### <a name="remarks"></a>Remarks
 
-Конечное состояние обозначается ссылкой на `NULL`.
+Конечное состояние обозначается `NULL` ссылкой.
 
-## <a name="contains"></a>содержащих
+## <a name="contains"></a><a name="contains"></a>содержащих
 
-Выполняет поиск указанного блока в объекте `multi_link_registry`.
+Выполняет поиск `multi_link_registry` указанного блока в объекте.
 
 ```cpp
 virtual bool contains(_EType _Link);
@@ -113,15 +113,15 @@ virtual bool contains(_EType _Link);
 ### <a name="parameters"></a>Параметры
 
 *_Link*<br/>
-Указатель на блок, который необходимо найти в объекте `multi_link_registry`.
+Указатель на блок, который необходимо найти в `multi_link_registry` объекте.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true** , если указанный блок найден; в противном случае — **значение false** .
+**`true`** значение, если указанный блок найден; **`false`** в противном случае —.
 
-## <a name="count"></a>расчета
+## <a name="count"></a><a name="count"></a>расчета
 
-Подсчитывает количество элементов в объекте `multi_link_registry`.
+Подсчитывает количество элементов в `multi_link_registry` объекте.
 
 ```cpp
 virtual size_t count();
@@ -131,7 +131,7 @@ virtual size_t count();
 
 Число элементов в объекте `multi_link_registry`.
 
-## <a name="ctor"></a>multi_link_registry
+## <a name="multi_link_registry"></a><a name="ctor"></a>multi_link_registry
 
 Формирует объект `multi_link_registry`.
 
@@ -139,9 +139,9 @@ virtual size_t count();
 multi_link_registry();
 ```
 
-## <a name="dtor"></a>~ multi_link_registry
+## <a name="multi_link_registry"></a><a name="dtor"></a>~ multi_link_registry
 
-Уничтожает объект `multi_link_registry`.
+Уничтожает `multi_link_registry` объект.
 
 ```cpp
 virtual ~multi_link_registry();
@@ -151,9 +151,9 @@ virtual ~multi_link_registry();
 
 Метод вызывает исключение [invalid_operation](invalid-operation-class.md) , если вызывается до удаления всех ссылок.
 
-## <a name="remove"></a>отменит
+## <a name="remove"></a><a name="remove"></a>отменит
 
-Удаляет ссылку из объекта `multi_link_registry`.
+Удаляет ссылку из `multi_link_registry` объекта.
 
 ```cpp
 virtual bool remove(_EType _Link);
@@ -166,11 +166,11 @@ virtual bool remove(_EType _Link);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true** , если ссылка была найдена и удалена; в противном случае — **значение false** .
+**`true`** значение, если ссылка была найдена и удалена, **`false`** в противном случае.
 
-## <a name="set_bound"></a>set_bound
+## <a name="set_bound"></a><a name="set_bound"></a>set_bound
 
-Задает верхнюю границу числа ссылок, которые может содержать объект `multi_link_registry`.
+Задает верхнюю границу числа ссылок, которые `multi_link_registry` может содержать объект.
 
 ```cpp
 void set_bound(size_t _MaxLinks);
@@ -179,7 +179,7 @@ void set_bound(size_t _MaxLinks);
 ### <a name="parameters"></a>Параметры
 
 *_MaxLinks*<br/>
-Максимальное число ссылок, которые может содержать объект `multi_link_registry`.
+Максимальное число ссылок, которые `multi_link_registry` может содержать объект.
 
 ### <a name="remarks"></a>Remarks
 
@@ -187,5 +187,5 @@ void set_bound(size_t _MaxLinks);
 
 ## <a name="see-also"></a>См. также раздел
 
-[Пространство имен concurrency](concurrency-namespace.md)<br/>
+[Пространство имен Concurrency](concurrency-namespace.md)<br/>
 [Класс single_link_registry](single-link-registry-class.md)

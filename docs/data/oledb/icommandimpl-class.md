@@ -51,12 +51,12 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: f04885ef61841ac20f87ab07ce73d3c9342fe39c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b235a85ccab4fd3d3377e656b53276928b425d94
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212166"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232161"
 ---
 # <a name="icommandimpl-class"></a>Класс ICommandImpl
 
@@ -72,16 +72,16 @@ class ATL_NO_VTABLE ICommandImpl : public CommandBase
 ### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Класс, производный от `ICommandImpl`.
+Класс, производный от `ICommandImpl` .
 
 *коммандбасе*<br/>
-Интерфейс команды. Значение по умолчанию — `ICommand`.
+Интерфейс команды. Значение по умолчанию — `ICommand`.
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** atldb.h
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Элементы
 
 ### <a name="methods"></a>Методы
 
@@ -152,30 +152,30 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 Член класса шаблона, представляющий класс набора строк пользователя. Обычно создается мастером.
 
 *пункаутер*<br/>
-окне Указатель на управляющий интерфейс `IUnknown`, если набор строк создается как часть статистического выражения; в противном случае он имеет значение null.
+окне Указатель на управляющий `IUnknown` интерфейс, если набор строк создается как часть статистического выражения; в противном случае — значение null.
 
 *riid*<br/>
-окне Соответствует *riid* в `ICommand::Execute`.
+окне Соответствует *riid* в `ICommand::Execute` .
 
 *ппарамс*<br/>
-[вход/выход] Соответствует *ппарамс* в `ICommand::Execute`.
+[вход/выход] Соответствует *ппарамс* в `ICommand::Execute` .
 
 *пкровсаффектед*<br/>
-Соответствует *пкровсаффектед* в `ICommand::Execute`.
+Соответствует *пкровсаффектед* в `ICommand::Execute` .
 
 *ppRowset*<br/>
-[вход/выход] Соответствует *ппровсет* в `ICommand::Execute`.
+[вход/выход] Соответствует *ппровсет* в `ICommand::Execute` .
 
 *провсетобж*<br/>
 заполняет Указатель на объект набора строк. Обычно этот параметр не используется, но его можно использовать, если необходимо выполнить больше работы над набором строк перед передачей его в COM-объект. Время существования *провсетобж* привязывается *ппровсет*.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Стандартное значение HRESULT. Список типичных значений см. в разделе `ICommand::Execute`.
+Стандартное значение HRESULT. `ICommand::Execute`Список типичных значений см. в разделе.
 
 ### <a name="remarks"></a>Remarks
 
-Чтобы создать несколько наборов строк или предоставить собственные условия для создания различных наборов строк, разместите разные вызовы `CreateRowset` из `Execute`.
+Чтобы создать более одного набора строк или предоставить собственные условия для создания различных наборов строк, разместите разные вызовы `CreateRowset` из в `Execute` .
 
 См. раздел [ICommand:: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) в *справочнике по OLE DB программиста.*
 
@@ -201,7 +201,7 @@ HRESULT Execute(IUnknown* pUnkOuter,
 
 Запрошенный исходящий интерфейс будет интерфейсом, полученным из объекта набора строк, создаваемого этой функцией.
 
-`Execute` вызывает [CreateRowset](../../data/oledb/icommandimpl-createrowset.md). Переопределите реализацию по умолчанию, чтобы создать более одного набора строк или предоставить собственные условия для создания различных наборов строк.
+`Execute`вызывает [CreateRowset](../../data/oledb/icommandimpl-createrowset.md). Переопределите реализацию по умолчанию, чтобы создать более одного набора строк или предоставить собственные условия для создания различных наборов строк.
 
 ## <a name="icommandimplgetdbsession"></a><a name="getdbsession"></a>ICommandImpl:: Жетдбсессион
 
@@ -244,7 +244,7 @@ unsigned m_bCancel:1;
 
 ### <a name="remarks"></a>Remarks
 
-Эту переменную можно получить в методе `Execute` класса Command и при необходимости отменить.
+Эту переменную можно получить в `Execute` методе класса Command и при необходимости отменить.
 
 ## <a name="icommandimplm_bcancelwhenexecuting"></a><a name="bcancelwhenexecuting"></a>ICommandImpl:: m_bCancelWhenExecuting
 
@@ -258,7 +258,7 @@ unsigned m_bCancelWhenExecuting:1;
 
 ### <a name="remarks"></a>Remarks
 
-По умолчанию **имеет значение true** (может быть отменено).
+Значение по умолчанию — **`true`** (может быть отменено).
 
 ## <a name="icommandimplm_bisexecuting"></a><a name="bisexecuting"></a>ICommandImpl:: m_bIsExecuting
 
@@ -272,7 +272,7 @@ unsigned m_bIsExecuting:1;
 
 ### <a name="remarks"></a>Remarks
 
-Метод `Execute` класса Command может установить для этой переменной **значение true**.
+`Execute`Метод класса Command может присвоить этой переменной значение **`true`** .
 
 ## <a name="see-also"></a>См. также раздел
 

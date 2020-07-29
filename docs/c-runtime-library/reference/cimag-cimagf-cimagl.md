@@ -33,12 +33,12 @@ helpviewer_keywords:
 - cimagf function
 - cimagl function
 ms.assetid: 0d8836f5-d61d-44cd-8731-6f75cb776def
-ms.openlocfilehash: 38eef416afb078614ef26ab5d7c8810f46dd9a85
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: af7d15ee1b5dfd863025565bf8827199f7492841
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939166"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232551"
 ---
 # <a name="cimag-cimagf-cimagl"></a>cimag, cimagf, cimagl
 
@@ -59,16 +59,16 @@ long double cimag( _Lcomplex z );  // C++
 
 ### <a name="parameters"></a>Параметры
 
-*z*<br/>
+*гармошкой*<br/>
 Комплексное число.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Мнимая часть *z*.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **Цимаг** , принимающие значения **_Fcomplex** или **_Lcomplex** , а также возвращать значения **типа float** или **Long** с типом **Double** . В программе на языке C **Цимаг** всегда принимает значение **_Dcomplex** и возвращает значение **типа double** .
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **Цимаг** , которые принимают **_Fcomplex** или **_Lcomplex** значения, а также возвращают **`float`** **`long double`** значения или. В программе на языке C **Цимаг** всегда принимает значение **_Dcomplex** и возвращает **`double`** значение.
 
 ## <a name="requirements"></a>Требования
 
@@ -76,11 +76,11 @@ long double cimag( _Lcomplex z );  // C++
 |-------------|--------------|------------------|
 |**Цимаг**, **Цимагф**, **Цимагл**|\<complex.h>|\<ccomplex>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Алфавитный указатель функций](crt-alphabetical-function-reference.md)<br/>
+[Алфавитный справочник по функциям](crt-alphabetical-function-reference.md)<br/>
 [norm, normf, norml](norm-normf-norml1.md)<br/>
 [creal, crealf, creall](creal-crealf-creall.md)<br/>
 [cproj, cprojf, cprojl](cproj-cprojf-cprojl.md)<br/>

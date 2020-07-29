@@ -1,5 +1,5 @@
 ---
-title: Класс CTypedPtrArray
+title: Класс Ктипедптраррай
 ms.date: 11/04/2016
 f1_keywords:
 - CTypedPtrArray
@@ -22,14 +22,14 @@ helpviewer_keywords:
 - CTypedPtrArray [MFC], SetAt
 - CTypedPtrArray [MFC], SetAtGrow
 ms.assetid: e3ecdf1a-a889-4156-92dd-ddbd36ccd919
-ms.openlocfilehash: 20cf147e955b6b19919f35750b0f46a8b5a67ad0
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: db24e3992e5db70895ccc2908dba108de843bcdc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752064"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215950"
 ---
-# <a name="ctypedptrarray-class"></a>Класс CTypedPtrArray
+# <a name="ctypedptrarray-class"></a>Класс Ктипедптраррай
 
 Предоставляет типобезопасную "программу-оболочку" для объектов класса `CPtrArray` или `CObArray`.
 
@@ -43,41 +43,41 @@ class CTypedPtrArray : public BASE_CLASS
 #### <a name="parameters"></a>Параметры
 
 *BASE_CLASS*<br/>
-Базовый класс типа массива набранных указателей; должен быть класс `CObArray` массива (или). `CPtrArray`
+Базовый класс класса массива типизированных указателей; должен быть классом массива ( `CObArray` или `CPtrArray` ).
 
-*ТИП*<br/>
+*TYPE*<br/>
 Тип элементов, хранящихся в массиве базового класса.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Элементы
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
-|[CTypedPtrArray:Добавить](#add)|Добавляет новый элемент в конец массива. Растет массив при необходимости|
-|[CTypedPtrArray::Приложение](#append)|Добавляет содержимое одного массива в конец другого. Растет массив при необходимости|
-|[CTypedPtrArray::Copy](#copy)|Копирует другой массив в этот массив. При необходимости размер массива увеличивается.|
-|[CTypedPtrArray::ЭлементАт](#elementat)|Возвращает временную ссылку на указатель элемента в массиве.|
-|[CTypedPtrArray::GetAt](#getat)|Возвращает значение по указанному индексу.|
-|[CTypedPtrArray::InsertAt](#insertat)|Вставляет элемент (или все элементы в другом массиве) по указанному индексу.|
-|[CTypedPtrArray::SetAt](#setat)|Задает значение для указанного индекса. Размер массива не увеличивается.|
-|[CTypedPtrArray::SetAtGrow](#setatgrow)|Задает значение для указанного индекса. При необходимости размер массива увеличивается.|
+|[Ктипедптраррай:: Add](#add)|Добавляет новый элемент в конец массива. При необходимости расширяет массив|
+|[Ктипедптраррай:: Append](#append)|Добавляет содержимое одного массива в конец другого. При необходимости расширяет массив|
+|[Ктипедптраррай:: Copy](#copy)|Копирует другой массив в этот массив. При необходимости размер массива увеличивается.|
+|[Ктипедптраррай:: ElementAt](#elementat)|Возвращает временную ссылку на указатель элемента в массиве.|
+|[Ктипедптраррай:: GetAt](#getat)|Возвращает значение по указанному индексу.|
+|[Ктипедптраррай:: Инсертат](#insertat)|Вставляет элемент (или все элементы в другом массиве) по указанному индексу.|
+|[Ктипедптраррай:: SetAt](#setat)|Задает значение для указанного индекса. Размер массива не увеличивается.|
+|[Ктипедптраррай:: Сетатгров](#setatgrow)|Задает значение для указанного индекса. При необходимости размер массива увеличивается.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
 |Имя|Описание|
 |----------|-----------------|
-|[CTypedPtrArray::оператор \[\]](#operator_at)|Получает или задает элемент с указанным индексом.|
+|[Ктипедптраррай:: operator \[\]](#operator_at)|Получает или задает элемент с указанным индексом.|
 
 ## <a name="remarks"></a>Remarks
 
-При `CTypedPtrArray` использовании, `CPtrArray` `CObArray`а не в том, что объект проверки типа СЗ помогает устранить ошибки, вызванные несовместимыми типами указателей.
+При использовании `CTypedPtrArray` , а не `CPtrArray` или `CObArray` , средство проверки типов C++ помогает устранить ошибки, вызванные несовпадением типов указателей.
 
-Кроме того, `CTypedPtrArray` обертка выполняет большую часть литья, `CObArray` `CPtrArray`которые будут необходимы, если вы использовали или .
+Кроме того, `CTypedPtrArray` оболочка выполняет большую часть приведения, которая потребуется, если вы использовали `CObArray` или `CPtrArray` .
 
-Поскольку `CTypedPtrArray` все функции являются внеочередными, использование этого шаблона не оказывает существенного влияния на размер или скорость кода.
+Поскольку все `CTypedPtrArray` функции являются встроенными, использование этого шаблона не оказывает существенного влияния на размер и скорость кода.
 
-Для получения дополнительной `CTypedPtrArray`информации об [Template-Based Classes](../../mfc/template-based-classes.md)использовании , [см.](../../mfc/collections.md)
+Дополнительные сведения об использовании `CTypedPtrArray` см. в статье [коллекции](../../mfc/collections.md) статей и [классы на основе шаблонов](../../mfc/template-based-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -89,9 +89,9 @@ class CTypedPtrArray : public BASE_CLASS
 
 **Заголовок:** afxtempl.h
 
-## <a name="ctypedptrarrayadd"></a><a name="add"></a>CTypedPtrArray:Добавить
+## <a name="ctypedptrarrayadd"></a><a name="add"></a>Ктипедптраррай:: Add
 
-Эта функция `BASE_CLASS`участника **вызывает::Добавить**.
+Эта функция члена вызывает `BASE_CLASS` **:: Add**.
 
 ```
 INT_PTR Add(TYPE newElement);
@@ -99,11 +99,11 @@ INT_PTR Add(TYPE newElement);
 
 ### <a name="parameters"></a>Параметры
 
-*ТИП*<br/>
-Параметры шаблона, определяющие тип элемента, который будет добавлен в массив.
+*TYPE*<br/>
+Параметр шаблона, указывающий тип элемента, добавляемого в массив.
 
-*newElement*<br/>
-Элемент, который будет добавлен в этот массив.
+*невелемент*<br/>
+Элемент, добавляемый в этот массив.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -111,11 +111,11 @@ INT_PTR Add(TYPE newElement);
 
 ### <a name="remarks"></a>Remarks
 
-Для более подробных замечаний, [см. CobArray::Добавить](../../mfc/reference/cobarray-class.md#add).
+Более подробные примечания см. в разделе [кобаррай:: Add](../../mfc/reference/cobarray-class.md#add).
 
-## <a name="ctypedptrarrayappend"></a><a name="append"></a>CTypedPtrArray::Приложение
+## <a name="ctypedptrarrayappend"></a><a name="append"></a>Ктипедптраррай:: Append
 
-Эта функция `BASE_CLASS`участника вызывает::Приложение.
+Эта функция члена вызывает `BASE_CLASS` :: Append * *.
 
 ```
 INT_PTR Append(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
@@ -124,25 +124,25 @@ INT_PTR Append(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ### <a name="parameters"></a>Параметры
 
 *BASE_CLASS*<br/>
-Базовый класс типа массива набранных указателей; должен быть класс массива [(CObArray](../../mfc/reference/cobarray-class.md) или [CPtrArray](../../mfc/reference/cptrarray-class.md)).
+Базовый класс класса массива типизированных указателей; должен быть классом массива ( [кобаррай](../../mfc/reference/cobarray-class.md) или [кптраррай](../../mfc/reference/cptrarray-class.md)).
 
-*ТИП*<br/>
+*TYPE*<br/>
 Тип элементов, хранящихся в массиве базового класса.
 
 *src*<br/>
-Источник элементов, которые будут приписаны к массиву.
+Источник элементов, добавляемых в массив.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Индекс первого придативного элемента.
+Индекс первого добавленного элемента.
 
 ### <a name="remarks"></a>Remarks
 
-Для более подробных замечаний, [см. CobArray::Приложение](../../mfc/reference/cobarray-class.md#append).
+Более подробные примечания см. в разделе [кобаррай:: Append](../../mfc/reference/cobarray-class.md#append).
 
-## <a name="ctypedptrarraycopy"></a><a name="copy"></a>CTypedPtrArray::Copy
+## <a name="ctypedptrarraycopy"></a><a name="copy"></a>Ктипедптраррай:: Copy
 
-Эта функция `BASE_CLASS`участника **вызывает::Copy**.
+Эта функция члена вызывает `BASE_CLASS` **:: Copy**.
 
 ```cpp
 void Copy(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
@@ -151,21 +151,21 @@ void Copy(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ### <a name="parameters"></a>Параметры
 
 *BASE_CLASS*<br/>
-Базовый класс типа массива набранных указателей; должен быть класс массива [(CObArray](../../mfc/reference/cobarray-class.md) или [CPtrArray](../../mfc/reference/cptrarray-class.md)).
+Базовый класс класса массива типизированных указателей; должен быть классом массива ( [кобаррай](../../mfc/reference/cobarray-class.md) или [кптраррай](../../mfc/reference/cptrarray-class.md)).
 
-*ТИП*<br/>
+*TYPE*<br/>
 Тип элементов, хранящихся в массиве базового класса.
 
 *src*<br/>
-Источник элементов, которые должны быть скопированы в массив.
+Источник элементов, копируемых в массив.
 
 ### <a name="remarks"></a>Remarks
 
-Для более подробных замечаний, [см. CobArray::Copy](../../mfc/reference/cobarray-class.md#copy).
+Более подробные примечания см. в разделе [кобаррай:: Copy](../../mfc/reference/cobarray-class.md#copy).
 
-## <a name="ctypedptrarrayelementat"></a><a name="elementat"></a>CTypedPtrArray::ЭлементАт
+## <a name="ctypedptrarrayelementat"></a><a name="elementat"></a>Ктипедптраррай:: ElementAt
 
-Эта вливая функция вызывает `BASE_CLASS` **::ElementAt**.
+Эта встроенная функция вызывает `BASE_CLASS` **:: ElementAt**.
 
 ```
 TYPE& ElementAt(INT_PTR nIndex);
@@ -173,23 +173,23 @@ TYPE& ElementAt(INT_PTR nIndex);
 
 ### <a name="parameters"></a>Параметры
 
-*ТИП*<br/>
-Параметры шаблона, определяющие тип элементов, хранящихся в этом массиве.
+*TYPE*<br/>
+Параметр шаблона, указывающий тип элементов, хранящихся в этом массиве.
 
-*Nindex*<br/>
-Равный индекс, который больше или равен 0 и меньше, чем `BASE_CLASS`или равен значению, **возвращенному::GetUpperBound**.
+*ниндекс*<br/>
+Целочисленный индекс, который больше или равен 0 и меньше или равен значению, возвращенному `BASE_CLASS` **:: GetUpperBound**.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Временная ссылка на элемент в месте, указанном *nIndex.* Этот элемент является типом, указанным параметром шаблона *TYPE.*
+Временная ссылка на элемент в расположении, заданном параметром *ниндекс*. Этот элемент имеет тип, заданный *типом*параметра шаблона.
 
 ### <a name="remarks"></a>Remarks
 
-Для более подробных замечаний, [см. CobArray::Elementat](../../mfc/reference/cobarray-class.md#elementat).
+Более подробные примечания см. в разделе [кобаррай:: ElementAt](../../mfc/reference/cobarray-class.md#elementat).
 
-## <a name="ctypedptrarraygetat"></a><a name="getat"></a>CTypedPtrArray::GetAt
+## <a name="ctypedptrarraygetat"></a><a name="getat"></a>Ктипедптраррай:: GetAt
 
-Эта влиневая функция вызывает `BASE_CLASS` **::GetAt**.
+Эта встроенная функция вызывает `BASE_CLASS` **:: GetAt**.
 
 ```
 TYPE GetAt(INT_PTR nIndex) const;
@@ -197,23 +197,23 @@ TYPE GetAt(INT_PTR nIndex) const;
 
 ### <a name="parameters"></a>Параметры
 
-*ТИП*<br/>
-Параметры шаблона, определяющие тип элементов, хранящихся в массиве.
+*TYPE*<br/>
+Параметр шаблона, указывающий тип элементов, хранящихся в массиве.
 
-*Nindex*<br/>
-Равный индекс, который больше или равен 0 и меньше, чем `BASE_CLASS`или равен значению, **возвращенному::GetUpperBound**.
+*ниндекс*<br/>
+Целочисленный индекс, который больше или равен 0 и меньше или равен значению, возвращенному `BASE_CLASS` **:: GetUpperBound**.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Копия элемента в месте, указанном *nIndex*. Этот элемент является типом, указанным параметром шаблона *TYPE.*
+Копия элемента в расположении, заданном параметром *ниндекс*. Этот элемент имеет тип, заданный *типом*параметра шаблона.
 
 ### <a name="remarks"></a>Remarks
 
-Для более подробных замечаний, [см. CobArray::GetAt](../../mfc/reference/cobarray-class.md#getat)
+Более подробные примечания см. в разделе [кобаррай:: GetAt](../../mfc/reference/cobarray-class.md#getat)
 
-## <a name="ctypedptrarrayinsertat"></a><a name="insertat"></a>CTypedPtrArray::InsertAt
+## <a name="ctypedptrarrayinsertat"></a><a name="insertat"></a>Ктипедптраррай:: Инсертат
 
-Эта функция `BASE_CLASS`участника **вызывает ::InsertAt**.
+Эта функция члена вызывает `BASE_CLASS` **:: инсертат**.
 
 ```cpp
 void InsertAt(
@@ -228,34 +228,34 @@ void InsertAt(
 
 ### <a name="parameters"></a>Параметры
 
-*Nindex*<br/>
-Целый индекс, который может быть больше, чем значение, возвращенное [CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound).
+*ниндекс*<br/>
+Целочисленный индекс, который может быть больше значения, возвращенного [кобаррай:: GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound).
 
-*ТИП*<br/>
+*TYPE*<br/>
 Тип элементов, хранящихся в массиве базового класса.
 
-*newElement*<br/>
-Указатель объекта, который будет размещен в этом массиве. Допускается *новыйэлемент* стоимости **NULL.**
+*невелемент*<br/>
+Указатель объекта, помещаемый в этот массив. Допускается *невелемент* значения **null** .
 
-*Ncount*<br/>
-Количество раз, когда этот элемент должен быть вставлен (по умолчанию до 1).
+*нкаунт*<br/>
+Количество раз, когда этот элемент должен быть вставлен (значение по умолчанию — 1).
 
-*nСтарт-индекс*<br/>
-Индекс, который может быть больше, чем `CObArray::GetUpperBound`значение, возвращенное .
+*нстартиндекс*<br/>
+Целочисленный индекс, который может быть больше значения, возвращаемого методом `CObArray::GetUpperBound` .
 
 *BASE_CLASS*<br/>
-Базовый класс типа массива набранных указателей; должен быть класс массива [(CObArray](../../mfc/reference/cobarray-class.md) или [CPtrArray](../../mfc/reference/cptrarray-class.md)).
+Базовый класс класса массива типизированных указателей; должен быть классом массива ( [кобаррай](../../mfc/reference/cobarray-class.md) или [кптраррай](../../mfc/reference/cptrarray-class.md)).
 
-*pNewArray*<br/>
-Другой массив, содержащий элементы, которые будут добавлены в этот массив.
+*пневаррай*<br/>
+Другой массив, содержащий элементы для добавления в этот массив.
 
 ### <a name="remarks"></a>Remarks
 
-Для более подробных замечаний, [см. CobArray::Insertat](../../mfc/reference/cobarray-class.md#insertat).
+Более подробные примечания см. в разделе [кобаррай:: инсертат](../../mfc/reference/cobarray-class.md#insertat).
 
-## <a name="ctypedptrarrayoperator--"></a><a name="operator_at"></a>CTypedPtrArray::оператор
+## <a name="ctypedptrarrayoperator--"></a><a name="operator_at"></a>Ктипедптраррай:: operator []
 
-Эти вливые операторы называют `BASE_CLASS` **::оператор .**
+Эти встроенные операторы вызывают `BASE_CLASS` **:: operator []**.
 
 ```
 TYPE& operator[ ](int_ptr nindex);
@@ -264,21 +264,21 @@ TYPE operator[ ](int_ptr nindex) const;
 
 ### <a name="parameters"></a>Параметры
 
-*ТИП*<br/>
-Параметры шаблона, определяющие тип элементов, хранящихся в массиве.
+*TYPE*<br/>
+Параметр шаблона, указывающий тип элементов, хранящихся в массиве.
 
-*Nindex*<br/>
-Равный индекс, который больше или равен 0 и меньше, чем `BASE_CLASS`или равен значению, **возвращенному::GetUpperBound**.
+*ниндекс*<br/>
+Целочисленный индекс, который больше или равен 0 и меньше или равен значению, возвращенному `BASE_CLASS` **:: GetUpperBound**.
 
 ### <a name="remarks"></a>Remarks
 
-Первый оператор, называемый массивами, которые не являются **конст,** может быть использован либо справа (r-value) или слева (l-значение) оператора назначения. Второй, на который ссылается для **конст-массивов,** может быть использован только справа.
+Первый оператор, вызываемый для массивов, которые не являются **`const`** , можно использовать как справа (r-значение), так и слева (l-значение) оператора присваивания. Второй метод, вызываемый для **`const`** массивов, может использоваться только справа.
 
-Версия библиотеки Debug утверждает, что подтекст (или слева, либо справа от оператора назначения) выходит за рамки.
+Отладочная версия библиотеки утверждает, находится ли индекс (в левой или правой части инструкции присваивания) вне границ.
 
-## <a name="ctypedptrarraysetat"></a><a name="setat"></a>CTypedPtrArray::SetAt
+## <a name="ctypedptrarraysetat"></a><a name="setat"></a>Ктипедптраррай:: SetAt
 
-Эта функция `BASE_CLASS`участника **вызывает ::SetAt**.
+Эта функция члена вызывает `BASE_CLASS` **:: SetAt**.
 
 ```cpp
 void SetAt(
@@ -288,22 +288,22 @@ void SetAt(
 
 ### <a name="parameters"></a>Параметры
 
-*Nindex*<br/>
-Целый индекс, который больше, чем или равный 0 и меньше, чем или равные значения вернулся [CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound).
+*ниндекс*<br/>
+Целочисленный индекс, который больше или равен 0 и меньше или равен значению, возвращенному функцией [кобаррай:: GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound).
 
-*ТИП*<br/>
+*TYPE*<br/>
 Тип элементов, хранящихся в массиве базового класса.
 
-*Ptr*<br/>
-Указатель на элемент, который будет вставлен в массив в nIndex. Допускается значение NULL.
+*ptr*<br/>
+Указатель на элемент, который необходимо вставить в массив в Ниндекс. Разрешено значение NULL.
 
 ### <a name="remarks"></a>Remarks
 
-Для более подробных замечаний, [см. CobArray::SetAt](../../mfc/reference/cobarray-class.md#setat).
+Более подробные примечания см. в разделе [кобаррай:: SetAt](../../mfc/reference/cobarray-class.md#setat).
 
-## <a name="ctypedptrarraysetatgrow"></a><a name="setatgrow"></a>CTypedPtrArray::SetAtGrow
+## <a name="ctypedptrarraysetatgrow"></a><a name="setatgrow"></a>Ктипедптраррай:: Сетатгров
 
-Эта функция `BASE_CLASS`участника **вызывает ::SetatGrow**.
+Эта функция члена вызывает `BASE_CLASS` **:: сетатгров**.
 
 ```cpp
 void SetAtGrow(
@@ -313,22 +313,22 @@ void SetAtGrow(
 
 ### <a name="parameters"></a>Параметры
 
-*Nindex*<br/>
-Равный индекс, который больше или равен 0.
+*ниндекс*<br/>
+Целочисленный индекс, который больше или равен 0.
 
-*ТИП*<br/>
+*TYPE*<br/>
 Тип элементов, хранящихся в массиве базового класса.
 
-*newElement*<br/>
-Указатель объекта, который будет добавлен в этот массив. Допускается **значение NULL.**
+*невелемент*<br/>
+Указатель на объект, добавляемый в этот массив. Разрешено значение **null** .
 
 ### <a name="remarks"></a>Remarks
 
-Для более подробных замечаний, [см. Cobarray::SetatGrow](../../mfc/reference/cobarray-class.md#setatgrow).
+Более подробные примечания см. в разделе [кобаррай:: сетатгров](../../mfc/reference/cobarray-class.md#setatgrow).
 
 ## <a name="see-also"></a>См. также раздел
 
-[MFC Образец COLLECT](../../overview/visual-cpp-samples.md)<br/>
-[Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
-[Класс CPtrArray](../../mfc/reference/cptrarray-class.md)<br/>
-[Класс CObArray](../../mfc/reference/cobarray-class.md)
+[Пример СОБРАНий MFC](../../overview/visual-cpp-samples.md)<br/>
+[Иерархическая диаграмма](../../mfc/hierarchy-chart.md)<br/>
+[Класс Кптраррай](../../mfc/reference/cptrarray-class.md)<br/>
+[Класс Кобаррай](../../mfc/reference/cobarray-class.md)

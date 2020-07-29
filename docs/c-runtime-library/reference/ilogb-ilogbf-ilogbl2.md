@@ -33,12 +33,12 @@ helpviewer_keywords:
 - ilogbf function
 - ilogbl function
 ms.assetid: 9ef19d57-1caa-41d5-8233-2faad3562fcb
-ms.openlocfilehash: fdafba039537358c9b6a1de21dc176ceea38b4fa
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6feea7a242a066f669429944226f4ca6022505b6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954764"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232525"
 ---
 # <a name="ilogb-ilogbf-ilogbl"></a>ilogb, ilogbf, ilogbl
 
@@ -75,22 +75,22 @@ int ilogbl(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-В случае успеха возвращайте экспоненту *x* 2 в виде значения **целого** числа со знаком.
+В случае успеха возвратите значение *x* 2 в качестве **`signed int`** значения.
 
-В противном случае возвращает одно из следующих значений, определенных в \<math.h>:
+В противном случае возвращает одно из следующих значений, определенное в \<math.h> :
 
-|Ввод|Результат|
+|Входные данные|Результат|
 |-----------|------------|
-|±0|FP_ILOGB0|
+|± 0|FP_ILOGB0|
 |± INF, ± NaN, неопределенное|FP_ILOGBNAN|
 
 Сообщает об ошибках, как указано в [_matherr](matherr.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **илогб** , которые принимают и возвращают типы **float** и **Long** **Double** . В программе на языке C **илогб** всегда принимает и возвращает значение **типа Double**.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **илогб** , которые принимают и возвращают **`float`** **`long double`** типы и. В программе на языке C **илогб** всегда принимает и возвращает **`double`** .
 
-Вызов этой функции аналогичен вызову эквивалентной функции **logb** , а затем приведению возвращаемого значения к типу **int**.
+Вызов этой функции аналогичен вызову эквивалентной функции **logb** , а затем приведению возвращаемого значения к **`int`** .
 
 ## <a name="requirements"></a>Требования
 
@@ -98,10 +98,10 @@ int ilogbl(
 |-------------|--------------|------------------|
 |**илогб**, **илогбф**, **илогбл**|\<math.h>|\<cmath>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Алфавитный указатель функций](crt-alphabetical-function-reference.md)<br/>
+[Алфавитный справочник по функциям](crt-alphabetical-function-reference.md)<br/>
 [frexp](frexp.md)<br/>
 [logb, logbf, logbl, _logb, _logbf](logb-logbf-logbl-logb-logbf.md)<br/>

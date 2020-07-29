@@ -7,14 +7,14 @@ helpviewer_keywords:
 - is_pod class
 - is_pod
 ms.assetid: d73ebdee-746b-4082-9fa4-2db71432eb0e
-ms.openlocfilehash: 1249e9a3689d4b91334e545ba294c28984898035
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 1398da92890072d8aa8a6f07c61920fe3bee1776
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455765"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212245"
 ---
-# <a name="ispod-class"></a>Класс is_pod
+# <a name="is_pod-class"></a>Класс is_pod
 
 Проверяет, является ли тип типом POD.
 
@@ -30,9 +30,9 @@ struct is_pod;
 *T*\
 Запрашиваемый тип.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-`is_pod<T>::value`имеет **значение true** , если тип *T* является обычным старым данными (Pod). В противном случае — **false**.
+`is_pod<T>::value`имеет значение, **`true`** Если тип *T* является обычным СТАРЫМ данными (Pod). В противном случае — значение **`false`** .
 
 К типам POD относятся арифметические типы, типы перечисления, типы указателей и указатели на типы-члены.
 
@@ -96,10 +96,10 @@ is_pod<throws> == false
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<type_traits>
+**Заголовок:**\<type_traits>
 
 **Пространство имен:** std
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [<type_traits>](../standard-library/type-traits.md)

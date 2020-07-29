@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - nested_exception class
 ms.assetid: 5ae2c4ef-c7ad-4469-8a9e-a773e86bb000
-ms.openlocfilehash: ed58eb6cc074b54ae6801d2b11089af9a79f8c8f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 6ae95880f0bc18928ed9bd4f6b6da14722f6ec60
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441617"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212193"
 ---
 # <a name="nested_exception-class"></a>Класс nested_exception
 
@@ -28,13 +28,13 @@ class nested_exception {
 };
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="operators"></a>Операторы
 
 |||
 |-|-|
-|[оператор=](#op_as)||
+|[Оператор =](#op_as)||
 
 ### <a name="functions"></a>Функции
 
@@ -43,13 +43,13 @@ class nested_exception {
 |[rethrow_nested](#rethrow_nested)|Создает хранимое исключение.|
 |[nested_ptr](#nested_ptr)|Возвращает сохраненное исключение.|
 
-### <a name="op_as"></a>Оператор =
+### <a name="operator"></a><a name="op_as"></a>Оператор =
 
 ```cpp
 nested_exception& operator=(const nested_exception&) = default;
 ```
 
-### <a name="nested_ptr"></a>nested_ptr
+### <a name="nested_ptr"></a><a name="nested_ptr"></a>nested_ptr
 
 ```cpp
 exception_ptr nested_ptr() const;
@@ -57,9 +57,9 @@ exception_ptr nested_ptr() const;
 
 #### <a name="return-value"></a>Возвращаемое значение
 
-Хранимое исключение, захваченное данным объектом `nested_exception`.
+Хранимое исключение, записанное этим `nested_exception` объектом.
 
-### <a name="rethrow_nested"></a>rethrow_nested
+### <a name="rethrow_nested"></a><a name="rethrow_nested"></a>rethrow_nested
 
 ```cpp
 [[noreturn]] void rethrow_nested() const;
@@ -67,15 +67,15 @@ exception_ptr nested_ptr() const;
 
 #### <a name="remarks"></a>Remarks
 
-Если `nested_ptr()` возвращает пустой указатель, функция вызывает `std::terminate()`. В противном случае он создает хранимое исключение, захваченное `*this`.
+Если `nested_ptr()` возвращает пустой указатель, функция вызывает `std::terminate()` . В противном случае он создает хранимое исключение, захваченное **`*this`** .
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<> исключения
+**Заголовок:**\<exception>
 
 **Пространство имен:** std
 
 ## <a name="see-also"></a>См. также раздел
 
-[класс исключения](../standard-library/exception-class.md)\
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Класс Exception](../standard-library/exception-class.md)\
+[Безопасность потоков в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

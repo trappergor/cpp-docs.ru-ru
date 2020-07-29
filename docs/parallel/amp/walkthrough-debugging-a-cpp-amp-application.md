@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, debugging
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
-ms.openlocfilehash: 6eb93d617ac9909a67719b144a44ed461701225e
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 031fb3837dbefe500eb33f9509f3270204d19b89
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404721"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215885"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>Пошаговое руководство. Отладка приложения C++ AMP
 
@@ -66,7 +66,7 @@ ms.locfileid: "86404721"
 
 ### <a name="to-create-the-sample-project-in-visual-studio-2017-or-visual-studio-2015"></a>Создание примера проекта в Visual Studio 2017 или Visual Studio 2015
 
-1. Запустите среду Visual Studio.
+1. Запустите Visual Studio.
 
 1. В строке меню щелкните **Файл** > **Создать** > **Проект**.
 
@@ -215,7 +215,7 @@ ms.locfileid: "86404721"
 
 ## <a name="debugging-the-cpu-code"></a>Отладка кода ЦП
 
-В этой процедуре вы будете использовать локальный отладчик Windows, чтобы убедиться в правильности кода ЦП в этом приложении. Сегмент кода ЦП в этом приложении, который особенно интересно, является `for` циклом в `reduction_sum_gpu_kernel` функции. Он управляет параллельным снижением на основе дерева, которое выполняется на GPU.
+В этой процедуре вы будете использовать локальный отладчик Windows, чтобы убедиться в правильности кода ЦП в этом приложении. Сегмент кода ЦП в этом приложении, который особенно интересно, является **`for`** циклом в `reduction_sum_gpu_kernel` функции. Он управляет параллельным снижением на основе дерева, которое выполняется на GPU.
 
 ### <a name="to-debug-the-cpu-code"></a>Отладка кода ЦП
 
