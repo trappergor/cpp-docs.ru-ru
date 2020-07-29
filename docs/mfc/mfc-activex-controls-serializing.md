@@ -15,12 +15,12 @@ helpviewer_keywords:
 - versioning ActiveX controls
 - wVerMajor global constant
 ms.assetid: 9d57c290-dd8c-4853-b552-6f17f15ebedd
-ms.openlocfilehash: c06299f2fc7409476e4f5e5744ea11c962e3b173
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: f5e3b4bdf203f90b3550a2521ba51ba451cf3a46
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621202"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225024"
 ---
 # <a name="mfc-activex-controls-serializing"></a>Элементы управления ActiveX в MFC. Сериализация
 
@@ -58,13 +58,13 @@ ms.locfileid: "84621202"
 |**PX_Bool ()**|Сериализует логическое свойство типа.|
 |**PX_Color ()**|Сериализует свойство цвета типа.|
 |**PX_Currency ()**|Сериализует свойство типа **CY** (Currency).|
-|**PX_Double ()**|Сериализует свойство типа **Double** .|
+|**PX_Double ()**|Сериализует **`double`** свойство типа.|
 |**PX_Font ()**|Сериализует свойство типа шрифта.|
-|**PX_Float ()**|Сериализует свойство типа **float** .|
+|**PX_Float ()**|Сериализует **`float`** свойство типа.|
 |**PX_IUnknown ()**|Сериализует свойство типа `LPUNKNOWN` .|
-|**PX_Long ()**|Сериализует свойство типа **Long** .|
+|**PX_Long ()**|Сериализует **`long`** свойство типа.|
 |**PX_Picture ()**|Сериализует свойство рисунка типа.|
-|**PX_Short ()**|Сериализует **короткое** свойство типа.|
+|**PX_Short ()**|Сериализует **`short`** свойство типа.|
 |**Пксстринг ()**|Сериализует `CString` свойство типа.|
 |**PX_ULong ()**|Сериализует свойство **ulong** типа.|
 |**PX_UShort ()**|Сериализует свойство типа **UShort** .|
@@ -93,6 +93,6 @@ ms.locfileid: "84621202"
 
 По умолчанию элемент управления преобразует старые данные в последний формат. Например, если версия 2 элемента управления загружает данные, сохраненные с помощью версии 1, при повторном сохранении будет записан формат версии 2. Если необходимо, чтобы элемент управления сохранял данные в формате, который был считан последним, передайте **значение false** в качестве третьего параметра при вызове метода `ExchangeVersion` . Этот третий параметр является необязательным и по умолчанию имеет **значение true** .
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
-[Элементы ActiveX библиотеки MFC](mfc-activex-controls.md)
+[Элементы управления ActiveX в MFC](mfc-activex-controls.md)

@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - timer class
 ms.assetid: 4f4dea51-de9f-40f9-93f5-dd724c567b49
-ms.openlocfilehash: c39afc565a7ec775600b9c9fb6f15a89acdef57b
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 026aef03bb813585decb206c1691835330a4dd05
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142532"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224946"
 ---
 # <a name="timer-class"></a>Класс timer
 
@@ -41,33 +41,33 @@ class timer : public Concurrency::details::_Timer, public source_block<single_li
 *T*<br/>
 Тип полезных данных выходных сообщений этого блока.
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Элементы
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Description|
+|Имя|Описание:|
 |----------|-----------------|
-|[активности](#ctor)|Перегружен. Конструирует блок сообщений `timer`, который будет запускать заданное сообщение после указанного интервала.|
-|[Деструктор ~ Timer](#dtor)|Уничтожает блок сообщений `timer`.|
+|[активности](#ctor)|Перегружен. Конструирует `timer` блок обмена сообщениями, который будет запускать заданное сообщение после указанного интервала.|
+|[Деструктор ~ Timer](#dtor)|Уничтожает `timer` блок обмена сообщениями.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Description|
+|name|Описание:|
 |----------|-----------------|
-|[работу](#pause)|Останавливает блок сообщений `timer`. Если это повторяющийся `timer` блок сообщений, его можно перезапустить при последующем вызове `start()`. Для неповторяющихся таймеров это действие аналогично вызову `stop`.|
-|[start](#start)|Запускает блок обмена сообщениями `timer`. Указанное число миллисекунд после вызова, указанное значение будет распространено в качестве `message`.|
-|[stop](#stop)|Останавливает блок сообщений `timer`.|
+|[pause](#pause)|Останавливает `timer` блок обмена сообщениями. Если это `timer` блок повторяющегося обмена сообщениями, его можно перезапустить при последующем `start()` вызове. Для неповторяющихся таймеров это действие аналогично `stop` вызову.|
+|[start](#start)|Запускает `timer` блок обмена сообщениями. Указанное число миллисекунд после вызова этого параметра, указанное значение будет распространяться в нисходящем направлении как `message` .|
+|[stop](#stop)|Останавливает `timer` блок обмена сообщениями.|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Description|
+|Имя|Описание:|
 |----------|-----------------|
-|[accept_message](#accept_message)|Принимает сообщение, которое было предложено этим блоком `timer` сообщений, передавая владение вызывающему объекту.|
+|[accept_message](#accept_message)|Принимает сообщение, которое было предложено этим `timer` блоком обмена сообщениями, передавая владение вызывающему объекту.|
 |[consume_message](#consume_message)|Использует сообщение, которое было ранее предложено `timer` и зарезервировано целевым объектом, передавая владение вызывающему объекту.|
-|[link_target_notification](#link_target_notification)|Обратный вызов, уведомляющий о том, что новый целевой объект связан с этим блоком сообщений `timer`.|
-|[propagate_to_any_targets](#propagate_to_any_targets)|Пытается предложить сообщение, созданное блоком `timer`, во все связанные целевые объекты.|
+|[link_target_notification](#link_target_notification)|Обратный вызов, уведомляющий о том, что новый целевой объект связан с этим `timer` блоком обмена сообщениями.|
+|[propagate_to_any_targets](#propagate_to_any_targets)|Пытается предложить сообщение, созданное `timer` блоком, ко всем связанным целевым объектам.|
 |[release_message](#release_message)|Освобождает предыдущее резервирование сообщения. (Переопределяет [source_block:: release_message](source-block-class.md#release_message).)|
-|[reserve_message](#reserve_message)|Резервирует сообщение, которое было предложено этим блоком `timer` Messaging. (Переопределяет [source_block:: reserve_message](source-block-class.md#reserve_message).)|
+|[reserve_message](#reserve_message)|Резервирует сообщение, которое было ранее предложено этим `timer` блоком обмена сообщениями. (Переопределяет [source_block:: reserve_message](source-block-class.md#reserve_message).)|
 |[resume_propagation](#resume_propagation)|Возобновляет распространение после освобождения резервирования. (Переопределяет [source_block:: resume_propagation](source-block-class.md#resume_propagation).)|
 
 ## <a name="remarks"></a>Remarks
@@ -86,11 +86,11 @@ class timer : public Concurrency::details::_Timer, public source_block<single_li
 
 **Заголовок:** agents.h
 
-**Пространство имен:** concurrency
+**Пространство имен:** параллелизм
 
-## <a name="accept_message"></a>accept_message
+## <a name="accept_message"></a><a name="accept_message"></a>accept_message
 
-Принимает сообщение, которое было предложено этим блоком `timer` сообщений, передавая владение вызывающему объекту.
+Принимает сообщение, которое было предложено этим `timer` блоком обмена сообщениями, передавая владение вызывающему объекту.
 
 ```cpp
 virtual message<T>* accept_message(runtime_object_identity _MsgId);
@@ -99,13 +99,13 @@ virtual message<T>* accept_message(runtime_object_identity _MsgId);
 ### <a name="parameters"></a>Параметры
 
 *_MsgId*<br/>
-`runtime_object_identity` предлагаемого `message` объекта.
+`runtime_object_identity`Объект предлагаемого `message` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на объект `message`, владельцем которого стал вызывающий объект.
+Указатель на `message` объект, владельцем которого стал вызывающий объект.
 
-## <a name="consume_message"></a>consume_message
+## <a name="consume_message"></a><a name="consume_message"></a>consume_message
 
 Использует сообщение, которое было ранее предложено `timer` и зарезервировано целевым объектом, передавая владение вызывающему объекту.
 
@@ -116,19 +116,19 @@ virtual message<T>* consume_message(runtime_object_identity _MsgId);
 ### <a name="parameters"></a>Параметры
 
 *_MsgId*<br/>
-`runtime_object_identity` используемого объекта `message`.
+`runtime_object_identity`Объект для используемого `message` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на объект `message`, владельцем которого стал вызывающий объект.
+Указатель на `message` объект, владельцем которого стал вызывающий объект.
 
 ### <a name="remarks"></a>Remarks
 
-Аналогично `accept`, но всегда предшествует вызов `reserve`.
+Аналогично `accept` , но всегда предшествует вызову `reserve` .
 
-## <a name="link_target_notification"></a>link_target_notification
+## <a name="link_target_notification"></a><a name="link_target_notification"></a>link_target_notification
 
-Обратный вызов, уведомляющий о том, что новый целевой объект связан с этим блоком сообщений `timer`.
+Обратный вызов, уведомляющий о том, что новый целевой объект связан с этим `timer` блоком обмена сообщениями.
 
 ```cpp
 virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
@@ -139,23 +139,23 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
 *_PTarget*<br/>
 Указатель на вновь связанный целевой объект.
 
-## <a name="pause"></a>работу
+## <a name="pause"></a><a name="pause"></a>работу
 
-Останавливает блок сообщений `timer`. Если это повторяющийся `timer` блок сообщений, его можно перезапустить при последующем вызове `start()`. Для неповторяющихся таймеров это действие аналогично вызову `stop`.
+Останавливает `timer` блок обмена сообщениями. Если это `timer` блок повторяющегося обмена сообщениями, его можно перезапустить при последующем `start()` вызове. Для неповторяющихся таймеров это действие аналогично `stop` вызову.
 
 ```cpp
 void pause();
 ```
 
-## <a name="propagate_to_any_targets"></a>propagate_to_any_targets
+## <a name="propagate_to_any_targets"></a><a name="propagate_to_any_targets"></a>propagate_to_any_targets
 
-Пытается предложить сообщение, созданное блоком `timer`, во все связанные целевые объекты.
+Пытается предложить сообщение, созданное `timer` блоком, ко всем связанным целевым объектам.
 
 ```cpp
 virtual void propagate_to_any_targets(_Inout_opt_ message<T> *);
 ```
 
-## <a name="release_message"></a>release_message
+## <a name="release_message"></a><a name="release_message"></a>release_message
 
 Освобождает предыдущее резервирование сообщения.
 
@@ -166,11 +166,11 @@ virtual void release_message(runtime_object_identity _MsgId);
 ### <a name="parameters"></a>Параметры
 
 *_MsgId*<br/>
-`runtime_object_identity` освобожденного объекта `message`.
+`runtime_object_identity` `message` Объект для освобожденного объекта.
 
-## <a name="reserve_message"></a>reserve_message
+## <a name="reserve_message"></a><a name="reserve_message"></a>reserve_message
 
-Резервирует сообщение, которое было предложено этим блоком `timer` Messaging.
+Резервирует сообщение, которое было ранее предложено этим `timer` блоком обмена сообщениями.
 
 ```cpp
 virtual bool reserve_message(runtime_object_identity _MsgId);
@@ -179,17 +179,17 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 ### <a name="parameters"></a>Параметры
 
 *_MsgId*<br/>
-`runtime_object_identity` резервируемого объекта `message`.
+`runtime_object_identity` `message` Объект для резервируемого объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true** , если сообщение было успешно зарезервировано; в противном случае — **значение false** .
+**`true`** значение, если сообщение было успешно зарезервировано, **`false`** в противном случае.
 
 ### <a name="remarks"></a>Remarks
 
-После вызова `reserve`, если он возвращает **значение true**, необходимо вызвать метод `consume` или `release`, чтобы получить или освободить владение сообщением.
+После `reserve` вызова метода, если он возвращает значение **`true`** , `consume` `release` метод или должен быть вызван, чтобы принять или освободить владение сообщением.
 
-## <a name="resume_propagation"></a>resume_propagation
+## <a name="resume_propagation"></a><a name="resume_propagation"></a>resume_propagation
 
 Возобновляет распространение после освобождения резервирования.
 
@@ -197,25 +197,25 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 virtual void resume_propagation();
 ```
 
-## <a name="start"></a>запустить
+## <a name="start"></a><a name="start"></a>запустить
 
-Запускает блок обмена сообщениями `timer`. Указанное число миллисекунд после вызова, указанное значение будет распространено в качестве `message`.
+Запускает `timer` блок обмена сообщениями. Указанное число миллисекунд после вызова этого параметра, указанное значение будет распространяться в нисходящем направлении как `message` .
 
 ```cpp
 void start();
 ```
 
-## <a name="stop"></a>позиции
+## <a name="stop"></a><a name="stop"></a>позиции
 
-Останавливает блок сообщений `timer`.
+Останавливает `timer` блок обмена сообщениями.
 
 ```cpp
 void stop();
 ```
 
-## <a name="ctor"></a>активности
+## <a name="timer"></a><a name="ctor"></a>активности
 
-Конструирует блок сообщений `timer`, который будет запускать заданное сообщение после указанного интервала.
+Конструирует `timer` блок обмена сообщениями, который будет запускать заданное сообщение после указанного интервала.
 
 ```cpp
 timer(
@@ -251,10 +251,10 @@ timer(
 Целевой объект, в который таймер будет распространять свое сообщение.
 
 *_Repeating*<br/>
-Значение true показывает, что таймер будет срабатывать каждые `_Ms` миллисекунд.
+Значение true показывает, что таймер будет срабатывать каждые `_Ms` миллисекунды.
 
 *_Scheduler*<br/>
-Запланированный объект `Scheduler`, в рамках которого запланирована задача распространения для `timer` блока обмена сообщениями.
+`Scheduler`Объект, в котором запланирована задача распространения для `timer` блока обмена сообщениями.
 
 *_ScheduleGroup*<br/>
 Объект `ScheduleGroup` , в котором запланирована задача распространения для блока обмена сообщениями `timer` . Используемый объект `Scheduler` подразумевается группой расписаний.
@@ -263,14 +263,14 @@ timer(
 
 Среда выполнения использует планировщик по умолчанию, если вы не указали параметры `_Scheduler` или `_ScheduleGroup` .
 
-## <a name="dtor"></a>~ Timer
+## <a name="timer"></a><a name="dtor"></a>~ Timer
 
-Уничтожает блок сообщений `timer`.
+Уничтожает `timer` блок обмена сообщениями.
 
 ```cpp
 ~timer();
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
-[Пространство имен concurrency](concurrency-namespace.md)
+[Пространство имен Concurrency](concurrency-namespace.md)
