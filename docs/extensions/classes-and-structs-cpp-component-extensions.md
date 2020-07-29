@@ -13,12 +13,12 @@ helpviewer_keywords:
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-ms.openlocfilehash: 78cf7cf16c4ccf29f72038fd79c5d7a1689c05ac
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 42742d8fadad78702a665e5c53119f022bc00971
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172572"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228730"
 ---
 # <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>ref class и ref struct (C++/CLI и C++/CX)
 
@@ -41,16 +41,16 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 ### <a name="parameters"></a>Параметры
 
 *class_access*<br/>
-(Необязательно) Доступность класса или структуры вне сборки. Возможные значения: **public** и **private** (**private** — значение по умолчанию). Вложенные классы и структуры не могут иметь описатель *class_access*.
+(Необязательно) Доступность класса или структуры вне сборки. Возможные значения: **`public`** и **`private`** ( **`private`** используется по умолчанию). Вложенные классы и структуры не могут иметь описатель *class_access*.
 
 *name*<br/>
 Имя класса или структуры.
 
-*modifier*<br/>
+*Модификатор*<br/>
 (Необязательно) Допустимые модификаторы — [abstract](abstract-cpp-component-extensions.md) и [sealed](sealed-cpp-component-extensions.md).
 
 *inherit_access*<br/>
-(Необязательно) Доступность *base_type*. Единственная разрешенная доступность — **public** (**public** — значение по умолчанию).
+(Необязательно) Доступность *base_type*. Единственным разрешенным доступом является **`public`** ( **`public`** является значением по умолчанию).
 
 *base_type*<br/>
 (Необязательно) Базовый тип. Однако тип значения не может действовать как базовый тип.
@@ -59,11 +59,11 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 ### <a name="remarks"></a>Remarks
 
-Специальные возможности по умолчанию элемента объекта, объявленного с помощью **ref class** или **value class**, являются **private**. Специальные возможности по умолчанию элемента объекта, объявленного с помощью **ref struct** или **value struct**, являются **public**.
+Доступность по умолчанию для объекта, объявленного с **классом ref** или **классом значений** , — **`private`** . И доступность по умолчанию для объекта, объявленного с **структурой ref** или **структурой значений** , — **`public`** .
 
-Когда ссылочный тип наследует от другого ссылочного типа, виртуальные функции в базовом классе необходимо явно переопределить (с помощью [override](override-cpp-component-extensions.md)) или скрыть (с помощью[new (new slot in vtable)](new-new-slot-in-vtable-cpp-component-extensions.md)). Функции производного класса должны также быть явно помечены как **virtual**.
+Когда ссылочный тип наследует от другого ссылочного типа, виртуальные функции в базовом классе необходимо явно переопределить (с помощью [override](override-cpp-component-extensions.md)) или скрыть (с помощью[new (new slot in vtable)](new-new-slot-in-vtable-cpp-component-extensions.md)). Функции производного класса также должны быть явно помечены как **`virtual`** .
 
-Для обнаружения во время компиляции, является ли тип **ref class** или **ref struct**, а также **value class** или **value struct**, используйте `__is_ref_class (type)`, `__is_value_class (type)` или `__is_simple_value_class (type)`. Подробные сведения см. в статье [Compiler Support for Type Traits (C++/CLI and C++/CX)](compiler-support-for-type-traits-cpp-component-extensions.md) (Поддержка характеристик типов компилятором (C++/CLI and C++/CX)).
+Для обнаружения во время компиляции, является ли тип **ref class** или **ref struct**, а также **value class** или **value struct**, используйте `__is_ref_class (type)`, `__is_value_class (type)` или `__is_simple_value_class (type)`. Дополнительные сведения см. в статье [Compiler Support for Type Traits (C++/CLI and C++/CX)](compiler-support-for-type-traits-cpp-component-extensions.md) (Поддержка характеристик типов компилятором (C++/CLI and C++/CX)).
 
 Дополнительные сведения о классах и структурах см. в разделе
 
@@ -77,9 +77,9 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 - [Пользовательские операторы (C++/CLI)](../dotnet/user-defined-operators-cpp-cli.md)
 
-- [Заданные пользователем преобразования (C++/CLI)](../dotnet/user-defined-conversions-cpp-cli.md)
+- [заданные пользователем преобразования (C++/CLI)](../dotnet/user-defined-conversions-cpp-cli.md)
 
-- [Практическое руководство. Создание программы-оболочки собственного класса для использования в C#](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
+- [Пошаговое руководство. Перенос собственного класса для использования в C #](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
 
 - [Универсальные классы (C++/CLI)](generic-classes-cpp-cli.md)
 
@@ -121,6 +121,6 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 Параметр компилятора: `/clr`
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [Расширения компонентов для .NET и UWP](component-extensions-for-runtime-platforms.md)
