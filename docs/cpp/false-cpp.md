@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - false keyword [C++]
 ms.assetid: cc13aec5-1f02-4d38-8dbf-5473ea2b354f
-ms.openlocfilehash: f363e309b91e44472447d040aa36752750afec6f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d6162bdde3dea0d245a0c83c1d52b06003fee16c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188939"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227495"
 ---
 # <a name="false-c"></a>false (C++)
 
-Ключевое слово является одним из двух значений для переменной типа [bool](../cpp/bool-cpp.md) или условного выражения (условное выражение теперь является **истинным** логическим выражением). Например, если `i` является переменной типа **bool**, инструкция `i = false;` присваивает `i`у **значение false** .
+Ключевое слово является одним из двух значений для переменной типа [bool](../cpp/bool-cpp.md) или условного выражения (условное выражение теперь является **`true`** логическим выражением). Например, если `i` является переменной типа **`bool`** , `i = false;` оператор присваивает значение **`false`** `i` .
 
 ## <a name="example"></a>Пример
 

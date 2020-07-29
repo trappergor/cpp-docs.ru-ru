@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::Close method
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::GetInvalidValue method
 ms.assetid: 88a29a14-c516-40cb-a0ca-ee897a668623
-ms.openlocfilehash: 41e06cc50f36a077a34d992c416a543e5bf9b593
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a7ce730b8d723a839c5b509c825cff84111ca613
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371475"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226923"
 ---
 # <a name="handlenulltraits-structure"></a>HANDLENullTraits - структура
 
-Определяет общие характеристики непервоначальной ручки.
+Определяет общие характеристики неинициализированного маркера.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,16 +32,16 @@ struct HANDLENullTraits;
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-Имя   | Описание
+Имя   | Описание:
 ------ | ---------------------
 `Type` | Синоним для HANDLE.
 
 ### <a name="public-methods"></a>Открытые методы
 
-Имя                                                  | Описание
+name                                                  | Описание:
 ----------------------------------------------------- | -----------------------------
-[HANDLENullTraits::Закрыть](#close)                     | Закрывает указанную ручку.
-[HANDLENullTraits::GetInvalidValue](#getinvalidvalue) | Представляет недействительную ручку.
+[Метод handlenulltraits:: Close](#close)                     | Закрывает указанный маркер.
+[Метод handlenulltraits:: GetInvalidValue](#getinvalidvalue) | Представляет недопустимый Handle.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -49,13 +49,13 @@ struct HANDLENullTraits;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** corewrappers.h
+**Заголовок:** кореврапперс. h
 
-**Пространство имен:** Microsoft::WRL::Wrappers:: HandleTraits
+**Пространство имен:** Microsoft:: WRL:: оболочки:: метод HandleTraits
 
-## <a name="handlenulltraitsclose"></a><a name="close"></a>HANDLENullTraits::Закрыть
+## <a name="handlenulltraitsclose"></a><a name="close"></a>Метод handlenulltraits:: Close
 
-Закрывает указанную ручку.
+Закрывает указанный маркер.
 
 ```cpp
 inline static bool Close(
@@ -65,16 +65,16 @@ inline static bool Close(
 
 ### <a name="parameters"></a>Параметры
 
-*H*<br/>
-Ручка, чтобы закрыть.
+*h*<br/>
+Закрывающий маркер.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**верно,** если ручка *h* закрыта успешно; в противном случае, **ложные**.
+**`true`** значение, если Handles *h* успешно закрыто. в противном случае — **`false`** .
 
-## <a name="handlenulltraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>HANDLENullTraits::GetInvalidValue
+## <a name="handlenulltraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>Метод handlenulltraits:: GetInvalidValue
 
-Представляет недействительную ручку.
+Представляет недопустимый Handle.
 
 ```cpp
 inline static Type GetInvalidValue();
@@ -82,4 +82,4 @@ inline static Type GetInvalidValue();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Всегда возвращает значение `nullptr`.
+Всегда возвращает **`nullptr`** .
