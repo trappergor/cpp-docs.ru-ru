@@ -34,12 +34,12 @@ helpviewer_keywords:
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-ms.openlocfilehash: a200aa6e511ab83866fbf1df2beabb827c611c46
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 0443648d33929082042881c14562b34356cb6063
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919623"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232655"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh, asinhf, asinhl
 
@@ -73,15 +73,15 @@ long double asinh( long double x );  // C++ only
 
 ## <a name="remarks"></a>Remarks
 
-При использовании C++ можно вызывать перегрузки **ASINH** , которые принимают и возвращают значения **типа float** или **Long** **double** . В программе на языке C **ASINH** всегда принимает и возвращает **Double**.
+При использовании C++ можно вызывать перегрузки **ASINH** , которые принимают и возвращают **`float`** **`long double`** значения или. В программе на языке C **ASINH** всегда принимает и возвращает **`double`** .
 
 По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
-|Функция|Обязательный заголовок C|Обязательный заголовок C++|
+|Компонент|Обязательный заголовок C|Обязательный заголовок C++|
 |--------------|--------------|------------------|
-|**ASINH**, **асинхф**, **асинхл**|\<math.h>|\<cmath> или \<Math. h<|
+|**ASINH**, **асинхф**, **асинхл**|\<math.h>|\<cmath>или \< Math. h<|
 
 Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
@@ -115,7 +115,7 @@ asinh( 0.868671 ) = 0.785398
 
 ## <a name="see-also"></a>См. также раздел
 
-[Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
+[Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>
 [atanh, atanhf, atanhl](atanh-atanhf-atanhl.md)<br/>
 [cosh, coshf, coshl](cosh-coshf-coshl.md)<br/>

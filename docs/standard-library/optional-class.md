@@ -13,22 +13,22 @@ helpviewer_keywords:
 - optional/std::optional::reset
 - optional/std::optional::value
 - optional/std::optional::value_or
-ms.openlocfilehash: d9c4bf5356e6ff163ecdf7e1a80bc55453d59003
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 3b8baca48b7b7a32b88079a1668aecdd1c9aca88
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689147"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224699"
 ---
 # <a name="optional-class"></a>необязательный класс
 
-Шаблон класса `optional<T>` описывает объект, который может или не может содержать значение типа `T`, известное как *вложенное значение*.
+Шаблон класса `optional<T>` описывает объект, который может или не может содержать значение типа `T` , называемое *вложенным значением*.
 
-Если экземпляр `optional<T>` содержит значение, вложенное значение выделяется в хранилище объекта `optional` в области, подходящей для типа `T`. При преобразовании `optional<T>` в `bool`результат будет `true`, если объект содержит значение. в противном случае это `false`.
+Если экземпляр `optional<T>` содержит значение, вложенное значение выделяется в пределах хранилища `optional` объекта в области, подходящей по отношению к типу `T` . При `optional<T>` преобразовании в **`bool`** результат принимает **`true`** значение, если объект содержит значения; в противном **`false`** случае —.
 
-Тип вложенного объекта `T` не должен быть [in_place_t](in-place-t-struct.md) или [nullopt_t](nullopt-t-structure.md). `T` должны быть *можно уничтожить*, то есть его деструктор должен освободить все ресурсы и не может вызывать исключения.
+Тип вложенного объекта `T` не должен быть [in_place_t](in-place-t-struct.md) или [nullopt_t](nullopt-t-structure.md). `T`должен быть *можно уничтожить*, то есть его деструктор должен освободить все собственные ресурсы и не может вызывать исключения.
 
-Класс `optional` является новым в C++ 17.
+`optional`Класс является новым в c++ 17.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -42,37 +42,37 @@ class optional
 template<class T> optional(T) -> optional<T>;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Участники
 
 ### <a name="constructors"></a>Конструкторы
 
 |||
 |-|-|
 | **Конструкторы и деструктор** | |
-|[optional](#optional) | Создает объект типа `optional`. |
-|[~ Необязательный](#optional-destructor) | Уничтожает объект типа `optional`. |
+|[используемых](#optional) | Создает объект типа `optional`. |
+|[~ Необязательный](#optional-destructor) | Уничтожает объект типа `optional` . |
 | **Назначение** | |
-| [operator=](#op_eq) | Заменяет `optional` копией другого `optional`. |
+| [Оператор =](#op_eq) | Заменяет экземпляр на `optional` копию другого объекта `optional` . |
 | [emplace](#op_eq) | Инициализирует содержащееся значение с указанными аргументами. |
-| **Swap** | |
-| [swap](#swap) | Меняет местами содержащий значение или пустое состояние на другое `optional`. |
-| **Наблюдателей** | |
-| [has_value](#has_value) | Возвращает, содержит ли объект `optional` значение. |
-| [значение](#value) | Возвращает содержащееся значение. |
+| **Позиции** | |
+| [позиции](#swap) | Меняет местами вложенное значение или пустое состояние на другое `optional` . |
+| **Наблюдатели** | |
+| [has_value](#has_value) | Возвращает, `optional` содержит ли объект значение. |
+| [value](#value) | Возвращает содержащееся значение. |
 | [value_or](#value_or) | Возвращает содержащееся значение или альтернативу, если значение отсутствует. |
-| [оператор->](#op_as) | Ссылается на содержащееся значение объекта `optional`. |
-| [оператор*](#op_mem) | Ссылается на содержащееся значение объекта `optional`. |
-| [operator bool](#op_bool) | Возвращает, содержит ли объект `optional` значение. |
+| [Оператор->](#op_as) | Ссылается на значение, содержащееся в `optional` объекте. |
+| [станции](#op_mem) | Ссылается на значение, содержащееся в `optional` объекте. |
+| [bool, оператор](#op_bool) | Возвращает, `optional` содержит ли объект значение. |
 | **Модификаторы** | |
-| [reset](#reset) | Сбрасывает `optional` путем уничтожения любого содержащегося значения. |
+| [reset](#reset) | Сбрасывает объект `optional` , уничтожая любое из содержащихся в нем значений. |
 
-## <a name="has_value"></a>has_value
+## <a name="has_value"></a><a name="has_value"></a>has_value
 
 ```cpp
 constexpr bool has_value() const noexcept;
 ```
 
-## <a name="optional"></a>Необязательный конструктор
+## <a name="optional-constructor"></a><a name="optional"></a>Необязательный конструктор
 
 Создает объект типа `optional`.
 
@@ -100,8 +100,8 @@ explicit optional(optional<U>&& rhs);
 
 ### <a name="parameters"></a>Параметры
 
-\ *RHS*
-`optional` для копирования или перемещения Создайте значение из.
+*RHS*\
+Объект `optional` для копирования или перемещения, создающий содержимое, из которого строится значение.
 
 *i_list*\
 Список инициализаторов для создания содержащего значения из.
@@ -109,26 +109,26 @@ explicit optional(optional<U>&& rhs);
 *args*\
 Список аргументов для создания содержащего значения из.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 `constexpr optional() noexcept;`
-`constexpr optional(nullopt_t nullopt) noexcept;` эти конструкторы создают `optional`, не содержащий значения.
+`constexpr optional(nullopt_t nullopt) noexcept;`Эти конструкторы создают объект `optional` , который не содержит значения.
 
-`constexpr optional(const optional& rhs);` конструктор копий Инициализирует значение, содержащееся в значении аргумента. Он определяется как **Удаленный** , если только `is_copy_constructible_v<T>` не имеет значения true, и это тривиальный, если `is_trivially_copy_constructible_v<T>` имеет значение true.
+`constexpr optional(const optional& rhs);`Конструктор копий инициализирует содержащееся значение из содержащегося в аргументе значения. Она определяется как **Удаленная** `is_copy_constructible_v<T>` , если не имеет значения true и является тривиальной, если `is_trivially_copy_constructible_v<T>` имеет значение true.
 
-`constexpr optional(optional&& rhs) noexcept;` конструктор Move инициализирует вложенное значение, перемещая из содержащего его значения аргумента. Он не участвует в разрешении перегрузки, если только `is_move_constructible_v<T>` не имеет значения true, и это тривиальный вариант, если `is_trivially_move_constructible_v<T>` имеет значение true.
+`constexpr optional(optional&& rhs) noexcept;`Конструктор перемещения инициализирует вложенное значение, перемещая из содержащего его значения аргумента. Он не участвует в разрешении перегрузки `is_move_constructible_v<T>` , если не имеет значение true и является тривиальным, если `is_trivially_move_constructible_v<T>` имеет значение true.
 
-`template <class... Args> constexpr explicit optional(in_place_t, Args&&... args);` Direct инициализирует вложенное значение, как при использовании аргументов `std::forward<Args>(args)`. Этот конструктор `constexpr`, если используется конструктор `T` `constexpr`. Он не участвует в разрешении перегрузки, если только `is_constructible_v<T, Args...>` не имеет значение true.
+`template <class... Args> constexpr explicit optional(in_place_t, Args&&... args);`Direct инициализирует вложенное значение как при использовании аргументов `std::forward<Args>(args)` . Этот конструктор имеет значение, **`constexpr`** Если `T` используется конструктор **`constexpr`** . Он не участвует в разрешении перегрузки `is_constructible_v<T, Args...>` , если не имеет значение true.
 
-`template <class U, class... Args> constexpr explicit optional(in_place_t, initializer_list<U> i_list, Args&&... args);` Direct инициализирует вложенное значение, как при использовании аргументов `i_list, std::forward<Args>(args)`. Этот конструктор `constexpr`, если используется конструктор `T` `constexpr`. Он не участвует в разрешении перегрузки, если только `is_constructible_v<T, initializer_list<U>&, Args&&...>` не имеет значение true.
+`template <class U, class... Args> constexpr explicit optional(in_place_t, initializer_list<U> i_list, Args&&... args);`Direct инициализирует вложенное значение как при использовании аргументов `i_list, std::forward<Args>(args)` . Этот конструктор имеет значение, **`constexpr`** Если `T` используется конструктор **`constexpr`** . Он не участвует в разрешении перегрузки `is_constructible_v<T, initializer_list<U>&, Args&&...>` , если не имеет значение true.
 
-`template <class U = T> explicit constexpr optional(U&& rhs);` Direct инициализирует вложенное значение как при использовании `std::forward<U>(v)`. Этот конструктор `constexpr`, если используется конструктор `T` `constexpr`. Он не участвует в разрешении перегрузки, если только `is_constructible_v<T, U&&>` не имеет значение true, а `is_same_v<remove_cvref_t<U>, in_place_t>` и `is_same_v<remove_cvref_t<U>, optional>` имеют значение false.
+`template <class U = T> explicit constexpr optional(U&& rhs);`Direct инициализирует вложенное значение, как при использовании `std::forward<U>(v)` . Этот конструктор имеет значение, **`constexpr`** Если `T` используется конструктор **`constexpr`** . Он не участвует в разрешении перегрузки `is_constructible_v<T, U&&>` , если не имеет значение true, а `is_same_v<remove_cvref_t<U>, in_place_t>` и и имеет `is_same_v<remove_cvref_t<U>, optional>` значение false.
 
-`template <class U> explicit optional(const optional<U>& rhs);` если *RHS* содержит значение, то прямые инициализируют вложенное значение из содержащегося в аргументе значения. Он не участвует в разрешении перегрузки, если только `is_constructible_v<T, const U&>` не имеет значение true, а `is_constructible_v<T, optional<U>&>`, `is_constructible_v<T, optional<U>&&>`, `is_constructible_v<T, const optional<U>&>`, `is_constructible_v<T, const optional<U>&&>`, `is_convertible_v<optional<U>&, T>`, `is_convertible_v<optional<U>&&, T>`, `is_convertible_v<const optional<U>&, T>`и `is_convertible_v<const optional<U>&&, T>` имеют значение false.
+`template <class U> explicit optional(const optional<U>& rhs);`Если *RHS* содержит значение, то прямые инициализируют содержащееся значение из содержащегося в аргументе значения. Он не участвует в разрешении перегрузки, если только `is_constructible_v<T, const U&>` не имеет значение true, а,,,,, `is_constructible_v<T, optional<U>&>` `is_constructible_v<T, optional<U>&&>` `is_constructible_v<T, const optional<U>&>` `is_constructible_v<T, const optional<U>&&>` `is_convertible_v<optional<U>&, T>` `is_convertible_v<optional<U>&&, T>` , `is_convertible_v<const optional<U>&, T>` и `is_convertible_v<const optional<U>&&, T>` все равно false.
 
-`template <class U> explicit optional(optional<U>&& rhs);` если *RHS* содержит значение, то объект Direct инициализирует содержащееся значение, как при использовании `std::move(*rhs)`. Он не участвует в разрешении перегрузки, если только `is_constructible_v<T, U&&>` не имеет значение true, а `is_constructible_v<T, optional<U>&>`, `is_constructible_v<T, optional<U>&&>`, `is_constructible_v<T, const optional<U>&>`, `is_constructible_v<T, const optional<U>&&>`, `is_convertible_v<optional<U>&, T>`, `is_convertible_v<optional<U>&&, T>`, `is_convertible_v<const optional<U>&, T>`и `is_convertible_v<const optional<U>&&, T>` имеют значение false.
+`template <class U> explicit optional(optional<U>&& rhs);`Если *RHS* содержит значение, то при использовании функции Direct инициализирует содержащееся значение `std::move(*rhs)` . Он не участвует в разрешении перегрузки, если только `is_constructible_v<T, U&&>` не имеет значение true, а,,,,, `is_constructible_v<T, optional<U>&>` `is_constructible_v<T, optional<U>&&>` `is_constructible_v<T, const optional<U>&>` `is_constructible_v<T, const optional<U>&&>` `is_convertible_v<optional<U>&, T>` `is_convertible_v<optional<U>&&, T>` , `is_convertible_v<const optional<U>&, T>` и `is_convertible_v<const optional<U>&&, T>` все равно false.
 
-## <a name="optional-destructor"></a>~ Необязательный деструктор
+## <a name="optional-destructor"></a><a name="optional-destructor"></a>~ Необязательный деструктор
 
 Уничтожает любое нетривиальное можно уничтожитьное значение, если оно присутствует, путем вызова его деструктора.
 
@@ -136,13 +136,13 @@ explicit optional(optional<U>&& rhs);
 ~optional();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Если `T` тривиально можно уничтожить, `optional<T>` также тривиальным можно уничтожить.
+Если `T` является тривиальным можно уничтожить, то `optional<T>` он также тривиальным можно уничтожить.
 
-## <a name="op_eq"></a>Оператор =
+## <a name="operator"></a><a name="op_eq"></a>Оператор =
 
-Заменяет вложенное значение `optional` копией или перемещением из другого `optional` содержащего значения.
+Заменяет вложенное значение объекта на `optional` копию или перемещение из другого `optional` содержащего значения.
 
 ```cpp
 optional& operator=(nullopt_t) noexcept;
@@ -165,18 +165,18 @@ template <class U, class... Args>
 T& emplace(initializer_list<U>, Args&&...);
 ```
 
-## <a name="op_as"></a>Оператор->
+## <a name="operator-"></a><a name="op_as"></a>Оператор->
 
-Отменяет ссылку на вложенное значение объекта `optional`.
+Разыменование вложенного значения `optional` объекта.
 
 ```cpp
 constexpr const T* operator->() const;
 constexpr T* operator->();
 ```
 
-## <a name="op_mem"></a>станции
+## <a name="operator"></a><a name="op_mem"></a>станции
 
-Отменяет ссылку на вложенное значение объекта `optional`.
+Разыменование вложенного значения `optional` объекта.
 
 ```cpp
 constexpr const T& operator*() const&;
@@ -185,15 +185,15 @@ constexpr T&& operator*() &&;
 constexpr const T&& operator*() const&&;
 ```
 
-## <a name="op_bool"></a>bool, оператор
+## <a name="operator-bool"></a><a name="op_bool"></a>bool, оператор
 
-Сообщает, содержит ли объект `optional` содержащееся значение.
+Сообщает, `optional` содержит ли объект содержащееся значение.
 
 ```cpp
 constexpr explicit operator bool() const noexcept;
 ```
 
-## <a name="reset"></a>перезапуск
+## <a name="reset"></a><a name="reset"></a>перезапуск
 
 Фактически вызывает деструктор вложенного объекта, если он есть, и задает для него неинициализированное состояние.
 
@@ -201,14 +201,14 @@ constexpr explicit operator bool() const noexcept;
 void reset() noexcept;
 ```
 
-## <a name="swap"></a>позиции
+## <a name="swap"></a><a name="swap"></a>позиции
 
 ```cpp
 template<class T>
 void swap(optional<T>&, optional<T>&) noexcept;
 ```
 
-## <a name="value"></a>значений
+## <a name="value"></a>Значение<a name="value"></a>
 
 ```cpp
 constexpr const T& value() const&;
@@ -217,7 +217,7 @@ constexpr T&& value() &&;
 constexpr const T&& value() const&&;
 ```
 
-## <a name="value_or"></a>value_or
+## <a name="value_or"></a><a name="value_or"></a>value_or
 
 ```cpp
 template <class U>
@@ -226,6 +226,6 @@ template <class U>
     constexpr T value_or(U&&) &&;
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-[\<необязательных >](optional.md)
+[\<optional>](optional.md)

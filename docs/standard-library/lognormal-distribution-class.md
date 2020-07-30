@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::lognormal_distribution [C++], param_type
 - std::lognormal_distribution [C++], param_type
 ms.assetid: f2d6a431-6c3a-4370-b12e-4adb4ddf6cc4
-ms.openlocfilehash: ae13505da411b9a9cc445560907d053afa4bf81d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bf6cb4a620243f35886835e996eb34bc7b0e6960
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81351703"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224790"
 ---
 # <a name="lognormal_distribution-class"></a>Класс lognormal_distribution
 
@@ -68,12 +68,12 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*RealType*\
-Тип результата плавающей точки, по **умолчанию**удвоиться. Для возможных типов см [ \<>. ](../standard-library/random.md)
+*реалтипе*\
+Тип результата операции с плавающей запятой, по умолчанию — **`double`** . Возможные типы см. в разделе [\<random>](../standard-library/random.md) .
 
 ## <a name="remarks"></a>Remarks
 
-Шаблон класса описывает распределение, которое производит значения определенного пользовательского интегрального типа, или **вдвастю дважды,** если не предусмотрено, распределенное в соответствии с обычным распределением журнала. В следующей таблице представлены ссылки на статьи об отдельных членах.
+Шаблон класса описывает распределение, которое создает значения указанного пользователем целочисленного типа или тип **`double`** , если он не указан, распределен в соответствии с нормальным распределением журнала. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
 ||||
 |-|-|-|
@@ -90,7 +90,7 @@ public:
 
 Функции-члены `operator()` возвращают следующее значение, созданное механизмом РГСЧ, из текущего или указанного пакета параметров.
 
-Для получения дополнительной информации о классах распределения и их членах [ \<>](../standard-library/random.md)см.
+Дополнительные сведения о классах распределения и их членах см [\<random>](../standard-library/random.md) . в разделе.
 
 Подробные сведения о логарифмически нормальном распределении см. в статье Wolfram MathWorld [Логарифмически нормальное распределение](https://go.microsoft.com/fwlink/p/?linkid=400917).
 
@@ -180,11 +180,11 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<random>
+**Заголовок:**\<random>
 
 **Пространство имен:** std
 
-## <a name="lognormal_distributionlognormal_distribution"></a><a name="lognormal_distribution"></a>lognormal_distribution::lognormal_distribution
+## <a name="lognormal_distributionlognormal_distribution"></a><a name="lognormal_distribution"></a>lognormal_distribution:: lognormal_distribution
 
 Формирует распределение.
 
@@ -195,13 +195,13 @@ explicit lognormal_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Параметры
 
-*М*\
+*Пн*\
 Параметр распределения `m`.
 
-*s*\
+*#d0*\
 Параметр распределения `s`.
 
-*парм*\
+*ParM*\
 Структура `param_type`, используемая для формирования распределения.
 
 ### <a name="remarks"></a>Remarks
@@ -212,7 +212,7 @@ explicit lognormal_distribution(const param_type& parm);
 
 Второй конструктор создает объект, хранимые параметры которого инициализируются из *parm*. Вы можете получить и задать текущие параметры существующего распределения, вызвав функцию-член `param()`.
 
-## <a name="lognormal_distributionparam_type"></a><a name="param_type"></a>lognormal_distribution::pараматип
+## <a name="lognormal_distributionparam_type"></a><a name="param_type"></a>lognormal_distribution::p aram_type
 
 Сохраняет параметры распределения.
 
@@ -230,10 +230,10 @@ struct param_type {
 
 ### <a name="parameters"></a>Параметры
 
-*М*\
+*Пн*\
 Параметр распределения `m`.
 
-*s*\
+*#d0*\
 Параметр распределения `s`.
 
 *Правильно*\
@@ -247,4 +247,4 @@ struct param_type {
 
 ## <a name="see-also"></a>См. также раздел
 
-[\<случайные>](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

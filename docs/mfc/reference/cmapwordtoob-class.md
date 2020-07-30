@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMapWordToOb [MFC], RemoveKey
 - CMapWordToOb [MFC], SetAt
 ms.assetid: 9c9bcd76-456f-4cf9-b03c-dd28b49d5e4f
-ms.openlocfilehash: 80d53f195ba98f853c86a4d9c38fa9fcda52da3b
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: f360760bb5c04400ed77ef49c5968f8e9e7a6e59
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442582"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222996"
 ---
 # <a name="cmapwordtoob-class"></a>Класс Кмапвордтуб
 
@@ -51,9 +51,9 @@ ms.locfileid: "79442582"
 class CMapWordToOb : public CObject
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
-Функции элементов `CMapWordToOb` похожи на функции членов класса [кмапстрингтуб](../../mfc/reference/cmapstringtoob-class.md). Из-за этой схожести для изучения этой функции-члена можно использовать справочную документацию по классу `CMapStringToOb`. Когда вы видите `CString` или указатель **const** на **char** в качестве параметра функции или возвращаемого значения, замените слово.
+Функции элементов `CMapWordToOb` похожи на функции членов класса [кмапстрингтуб](../../mfc/reference/cmapstringtoob-class.md). Из-за этой схожести для изучения этой функции-члена можно использовать справочную документацию по классу `CMapStringToOb`. Везде, где вы видите, `CString` или **`const`** указатель в **`char`** качестве параметра функции или возвращаемого значения, замените слово.
 
 `BOOL CMapWordToOb::Lookup( WORD <key>, CObject*& <rValue> ) const;`
 
@@ -63,13 +63,13 @@ class CMapWordToOb : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Description|
+|Имя|Описание:|
 |----------|-----------------|
 |[Кмапвордтуб:: Кмапвордтуб](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|Конструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Description|
+|name|Описание:|
 |----------|-----------------|
 |[Кмапвордтуб:: NOCOUNT](../../mfc/reference/cmapstringtoob-class.md#getcount)|Возвращает число элементов в этой карте.|
 |[Кмапвордтуб:: Жесаштаблесизе](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|Определяет текущее количество элементов в хэш-таблице.|
@@ -87,19 +87,19 @@ class CMapWordToOb : public CObject
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Description|
+|Имя|Описание:|
 |----------|-----------------|
-|[Кмапвордтуб:: operator \[ \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Вставляет элемент в Map — подстановку оператора для `SetAt`.|
+|[Кмапвордтуб:: operator \[\]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Вставляет элемент в Map — подстановку оператора для `SetAt` .|
 
 ## <a name="remarks"></a>Remarks
 
-`CMapWordToOb` включает макрос IMPLEMENT_SERIAL для поддержки сериализации и дампа его элементов. Каждый элемент сериализуется в свою очередь, если схема хранится в архиве с помощью перегруженного оператора вставки ( **<<** ) или с помощью функции-члена `Serialize`.
+`CMapWordToOb`включает макрос IMPLEMENT_SERIAL для поддержки сериализации и дампа его элементов. Каждый элемент сериализуется в свою очередь, если схема хранится в архиве с перегруженным **<<** оператором вставки () или с `Serialize` функцией-членом.
 
-Если требуется дамп отдельных элементов `CObject` слов, необходимо установить глубину контекста дампа в 1 или более.
+Если требуется дамп отдельных `CObject` элементов Word, необходимо задать для контекста дампа значение 1 или больше.
 
-При удалении объекта `CMapWordToOb` или удалении его элементов удаляются `CObject` указатели. Объекты, на которые ссылаются указатели `CObject`, не уничтожаются.
+При `CMapWordToOb` удалении объекта или удалении его элементов `CObject` указатели удаляются. Объекты, на которые ссылаются `CObject` указатели, не уничтожаются.
 
-Дополнительные сведения о `CMapWordToOb`см. в статье [коллекции](../../mfc/collections.md)статей.
+Дополнительные сведения о см `CMapWordToOb` . в статье [коллекции](../../mfc/collections.md)статей.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -111,7 +111,7 @@ class CMapWordToOb : public CObject
 
 **Заголовок:** афксколл. h
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
-[Класс CObject](../../mfc/reference/cobject-class.md)<br/>
-[Диаграмма иерархии](../../mfc/hierarchy-chart.md)
+[CObject, класс](../../mfc/reference/cobject-class.md)<br/>
+[Иерархическая диаграмма](../../mfc/hierarchy-chart.md)

@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: c2ea240ba736c95026b2b6d2af45296245881bab
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: fc4efe8f2b9582a7253e69047a90a7f73ce0c0ff
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81751711"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222866"
 ---
 # <a name="cwnd-class"></a>Класс CWnd
 
@@ -839,13 +839,13 @@ class CWnd : public CCmdTarget
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CWnd::CWnd](#cwnd)|Формирует объект `CWnd`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[CWnd::accDoDefaultAction](#accdodefaultaction)|Вызывается платформой для выполнения объектом действия по умолчанию.|
 |[CWnd::accHitTest](#acchittest)|Вызывается платформой для извлечения дочернего элемента или дочернего объекта в заданной точке экрана.|
@@ -913,7 +913,7 @@ class CWnd : public CCmdTarget
 |[CWnd::get_accDefaultAction](#get_accdefaultaction)|Вызывается платформой для извлечения строки, описывающей действие объекта по умолчанию.|
 |[CWnd::get_accDescription](#get_accdescription)|Вызывается платформой для извлечения строки, описывающей внешний вид указанного объекта.|
 |[CWnd::get_accFocus](#get_accfocus)|Вызывается платформой для извлечения объекта, имеющего фокус клавиатурного ввода.|
-|[CWnd::get_accHelp](#get_acchelp)|Вызывается фректовой для извлечения строки **справки** объекта.|
+|[CWnd::get_accHelp](#get_acchelp)|Вызывается платформой для получения строки свойства **справки** объекта.|
 |[CWnd::get_accHelpTopic](#get_acchelptopic)|Вызывается платформой для извлечения полного пути файла `WinHelp`, связанного с указанным объектом и идентификатором нужного раздела в файле.|
 |[CWnd::get_accKeyboardShortcut](#get_acckeyboardshortcut)|Вызывается платформой для извлечения сочетания клавиш указанного объекта или клавиши доступа к нему.|
 |[CWnd::get_accName](#get_accname)|Вызывается платформой для извлечения имени указанного объекта.|
@@ -951,7 +951,7 @@ class CWnd : public CCmdTarget
 |[CWnd::GetLayeredWindowAttributes](#getlayeredwindowattributes)|Получает ключ цвета прозрачности многослойного окна.|
 |[CWnd::GetMenu](#getmenu)|Извлекает указатель на заданное меню.|
 |[CWnd::GetNextDlgGroupItem](#getnextdlggroupitem)|Ищет следующий (или предыдущий) элемент управления в группе элементов управления.|
-|[CWnd::GetNextDlgTabItem](#getnextdlgtabitem)|Извлекает первый элемент управления с [WS_TABSTOP](styles-used-by-mfc.md#window-styles) стиле, который следует (или предшествует) указанному элементу управления.|
+|[CWnd::GetNextDlgTabItem](#getnextdlgtabitem)|Извлекает первый элемент управления с [WS_TABSTOP](styles-used-by-mfc.md#window-styles) стилем, приведенным ниже (или предшествующим) к указанному элементу управления.|
 |[CWnd::GetNextWindow](#getnextwindow)|Возвращает следующее или предыдущее окно в списке диспетчера окон.|
 |[CWnd::GetOleControlSite](#getolecontrolsite)|Извлекает настраиваемый сайт для указанного элемента управления ActiveX.|
 |[CWnd::GetOpenClipboardWindow](#getopenclipboardwindow)|Извлекает указатель на окно с открытым буфером обмена.|
@@ -959,9 +959,9 @@ class CWnd : public CCmdTarget
 |[CWnd::GetParent](#getparent)|Извлекает родительское окно объекта `CWnd` (при наличии).|
 |[CWnd::GetParentFrame](#getparentframe)|Извлекает родительское окно фрейма объекта `CWnd`.|
 |[CWnd::GetParentOwner](#getparentowner)|Возвращает указатель на родительское окно дочернего окна.|
-|[CWnd::GetProperty](#getproperty)|Извлекает свойство элемента управления ActiveX.|
+|[CWnd:: Property](#getproperty)|Извлекает свойство элемента управления ActiveX.|
 |[CWnd::GetRenderTarget](#getrendertarget)|Возвращает целевой объект отрисовки, связанный с данным окном.|
-|[CWnd::GetSafeHwnd](#getsafehwnd)|Возвращает `m_hWnd`, или NULL, если **этот** указатель NULL.|
+|[CWnd::GetSafeHwnd](#getsafehwnd)|Возвращает `m_hWnd` значение или null, если **`this`** указатель имеет значение null.|
 |[CWnd::GetSafeOwner](#getsafeowner)|Извлекает безопасного владельца указанного окна.|
 |[CWnd::GetScrollBarCtrl](#getscrollbarctrl)|Возвращает элемент управления "Полоса прокрутки" того же уровня.|
 |[CWnd::GetScrollBarInfo](#getscrollbarinfo)|Извлекает сведения об указанной полосе прокрутки.|
@@ -983,7 +983,7 @@ class CWnd : public CCmdTarget
 |[CWnd::GetWindowDC](#getwindowdc)|Извлекает контекст отображения для всего окна, включая его строку заголовка, меню и полосы прокрутки.|
 |[CWnd::GetWindowedChildCount](#getwindowedchildcount)|Возвращает количество связанных дочерних окон.|
 |[CWnd::GetWindowInfo](#getwindowinfo)|Возвращает информацию об окне.|
-|[CWnd::GetWindowlessChildCount](#getwindowlesschildcount)|Возвращает количество связанных безоконных дочерних окон.|
+|[CWnd:: Жетвиндовлессчилдкаунт](#getwindowlesschildcount)|Возвращает количество связанных безоконных дочерних окон.|
 |[CWnd::GetWindowPlacement](#getwindowplacement)|Получает состояние отображения, а также обычное (восстановленное), свернутое и развернутое состояния окна.|
 |[CWnd::GetWindowRect](#getwindowrect)|Получает экранные координаты объекта `CWnd`.|
 |[CWnd::GetWindowRgn](#getwindowrgn)|Извлекает копию области окна.|
@@ -1017,15 +1017,15 @@ class CWnd : public CCmdTarget
 |[CWnd::OnAmbientProperty](#onambientproperty)|Реализует значения внешнего свойства.|
 |[CWnd::OnDrawIconicThumbnailOrLivePreview](#ondrawiconicthumbnailorlivepreview)|Вызывается платформой, когда необходимо отобразить растровое изображение на эскизе вкладки Windows 7 или клиенте для быстрого просмотра приложения.|
 |[CWnd::OnHelp](#onhelp)|Обрабатывает справку F1 в приложении (с использованием текущего контекста).|
-|[CWnd::OnHelpFinder](#onhelpfinder)|Обрабатывает ID_HELP_FINDER и ID_DEFAULT_HELP команды.|
-|[CWnd::OnHelpIndex](#onhelpindex)|Обрабатывает ID_HELP_INDEX команду и предоставляет тему справки по умолчанию.|
+|[CWnd::OnHelpFinder](#onhelpfinder)|Обрабатывает команды ID_HELP_FINDER и ID_DEFAULT_HELP.|
+|[CWnd::OnHelpIndex](#onhelpindex)|Обрабатывает команду ID_HELP_INDEX и предоставляет раздел справки по умолчанию.|
 |[CWnd::OnHelpUsing](#onhelpusing)|Обрабатывает команду ID_HELP_USING.|
 |[CWnd::OnToolHitTest](#ontoolhittest)|Определяет, находится ли указатель в прямоугольнике указанного инструмента и извлекает информацию об этом инструменте.|
-|[CWnd::OpenClipboard](#openclipboard)|Открывает буфер обмена. Другие приложения не смогут изменять Clipboard до тех пор, пока не будет вызвана функция Windows [CloseClipboard.](/windows/win32/api/winuser/nf-winuser-closeclipboard)|
+|[CWnd::OpenClipboard](#openclipboard)|Открывает буфер обмена. Другие приложения не смогут изменять буфер обмена, пока не будет вызвана функция Windows [клосеклипбоард](/windows/win32/api/winuser/nf-winuser-closeclipboard) .|
 |[CWnd::PaintWindowlessControls](#paintwindowlesscontrols)|Рисует неоконные элементы управления в контейнере элемента управления.|
 |[CWnd::PostMessage](#postmessage)|Размещает сообщение в очереди приложения, а затем возвращает управление, не ожидая окончания обработки сообщения окном.|
 |[CWnd::PreCreateWindow](#precreatewindow)|Вызывается до создания окна Windows, присоединенного к данному объекту класса `CWnd`.|
-|[CWnd::PreSubclassWindow](#presubclasswindow)|Позволяет другим необходимым подклассам произойти до [subclassWindow](#subclasswindow) называется.|
+|[CWnd::PreSubclassWindow](#presubclasswindow)|Разрешает выполнение других необходимых подклассов до вызова [субклассвиндов](#subclasswindow) .|
 |[CWnd::PreTranslateMessage](#pretranslatemessage)|Используется объектом `CWinApp` для фильтрации сообщений окон до их передачи функциям Windows `TranslateMessage` и `DispatchMessage`.|
 |[CWnd::Print](#print)|Рисует текущее окно в заданном контексте устройства.|
 |[CWnd::PrintClient](#printclient)|Рисует любое окно в заданном контексте устройства (обычно принтера).|
@@ -1063,7 +1063,7 @@ class CWnd : public CCmdTarget
 |[CWnd::SetScrollInfo](#setscrollinfo)|Задает сведения о полосе прокрутки.|
 |[CWnd::SetScrollPos](#setscrollpos)|Задает текущее положение ползунка и, если оно указано, перерисовывает полосу прокрутки в соответствии с новым положением.|
 |[CWnd::SetScrollRange](#setscrollrange)|Задает для указанной полосы прокрутки положения минимума и максимума.|
-|[CWnd::SetTimer](#settimer)|Устанавливает системный таймер, который отправляет [WM_TIMER](#ontimer) сообщение при срабатывании.|
+|[CWnd::SetTimer](#settimer)|Устанавливает системный таймер, который отправляет сообщение [WM_TIMER](#ontimer) при активации.|
 |[CWnd::SetWindowContextHelpId](#setwindowcontexthelpid)|Задает идентификатор контекста справки.|
 |[CWnd::SetWindowPlacement](#setwindowplacement)|Задает состояние отображения, а также обычное (восстановленное), свернутое и развернутое состояния окна.|
 |[CWnd::SetWindowPos](#setwindowpos)|Изменяет размер, положение и порядок дочерних и всплывающих окон, а также окон верхнего уровня.|
@@ -1088,12 +1088,12 @@ class CWnd : public CCmdTarget
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CWnd::Default](#default)|Вызывает процедуру окна по умолчанию, обеспечивающую стандартную обработку любых сообщений окна, не обработанных приложением.|
 |[CWnd::DefWindowProc](#defwindowproc)|Вызывает процедуру окна по умолчанию, обеспечивающую стандартную обработку любых сообщений окна, не обработанных приложением.|
 |[CWnd::DoDataExchange](#dodataexchange)|Обеспечивает обмен данными диалогового окна и их проверку. Вызывается методом `UpdateData`.|
-|[CWnd::GetCurrentMessage](#getcurrentmessage)|Возвращает указатель на сообщение, обрабатываемое этим окном в настоящий момент. Следует вызываться только `On`при работе в функции обработчика *сообщений.*|
+|[CWnd::GetCurrentMessage](#getcurrentmessage)|Возвращает указатель на сообщение, обрабатываемое этим окном в настоящий момент. Должен вызываться только при использовании `On` функции-члена обработчика сообщений *сообщения* .|
 |[CWnd::InitDynamicLayout](#initdynamiclayout)|Вызывается платформой для инициализации динамического макета окна.|
 |[CWnd::LoadDynamicLayoutResource](#loaddynamiclayoutresource)|Загружает из файла ресурсов сведения о динамическом макете.|
 |[CWnd::OnActivate](#onactivate)|Вызывается при активации или деактивации объекта `CWnd`.|
@@ -1105,7 +1105,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnChangeCbChain](#onchangecbchain)|Уведомляет об удалении указанного окна из цепочки.|
 |[CWnd::OnChangeUIState](#onchangeuistate)|Вызывается, когда необходимо изменить состояние пользовательского интерфейса.|
 |[CWnd::OnChar](#onchar)|Вызывается, когда нажатие клавиши преобразуются в несистемный символ.|
-|[CWnd::OnCharToItem](#onchartoitem)|Вызывается в поле списка детей со [стилем LBS_WANTKEYBOARDINPUT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) в ответ на [WM_CHAR](#onchar) сообщение.|
+|[CWnd::OnCharToItem](#onchartoitem)|Вызывается дочерним списком с [LBS_WANTKEYBOARDINPUT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) стилем в ответ на сообщение [WM_CHAR](#onchar) .|
 |[CWnd::OnChildActivate](#onchildactivate)|Вызывается для дочерних окон многодокументного интерфейса (MDI) при изменении размера или положения объекта `CWnd`, а также при активации объекта `CWnd`.|
 |[CWnd::OnChildNotify](#onchildnotify)|Вызывается родительским окном, чтобы позволить уведомляющему элементу управления ответить на уведомление элемента управления.|
 |[CWnd::OnClipboardUpdate](#onclipboardupdate)|Вызывается при изменении содержимого буфера обмена.|
@@ -1122,7 +1122,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnDeadChar](#ondeadchar)|Вызывается, когда нажатие клавиши преобразуется в несистемный диакритический знак.|
 |[CWnd::OnDeleteItem](#ondeleteitem)|Вызывается, когда дочерний элемент управления "Поле со списком", рисуемый владельцем, или элемент управления "Поле со списком" уничтожается, а также при удалении из элемента управления элементов списка.|
 |[CWnd::OnDestroy](#ondestroy)|Вызывается при уничтожении объекта `CWnd`.|
-|[CWnd::OnDestroyClipboard](#ondestroyclipboard)|Вызывается, когда Clipboard опустела через вызов к функции Windows [EmptyClipboard.](/windows/win32/api/winuser/nf-winuser-emptyclipboard)|
+|[CWnd::OnDestroyClipboard](#ondestroyclipboard)|Вызывается, когда буфер обмена очищается с помощью вызова функции [Емптиклипбоард](/windows/win32/api/winuser/nf-winuser-emptyclipboard) Windows.|
 |[CWnd::OnDeviceChange](#ondevicechange)|Сообщает приложению или драйверу устройства об изменении конфигурации оборудования устройства или компьютера. |
 |[CWnd::OnDevModeChange](#ondevmodechange)|Вызывается для всех окон верхнего уровня, когда пользователь меняет параметры режима устройства.|
 |[CWnd::OnDrawClipboard](#ondrawclipboard)|Вызывается при изменении содержимого буфера обмена.|
@@ -1166,16 +1166,16 @@ class CWnd : public CCmdTarget
 |[CWnd::OnMenuRButtonUp](#onmenurbuttonup)|Вызывается, если пользователь отпускает правую кнопку мыши, когда курсор находится на элементе меню.|
 |[CWnd::OnMenuSelect](#onmenuselect)|Вызывается, когда пользователь выбирает элемент меню.|
 |[CWnd::OnMouseActivate](#onmouseactivate)|Вызывается, если пользователь щелкает кнопкой мыши, когда курсор находится в неактивном окне.|
-|[CWnd::OnMouseHover](#onmousehover)|Вызывается, когда курсор парит над областью клиента окна в течение периода времени, указанного в предыдущем вызове [TrackMouseEvent.](/windows/win32/api/winuser/nf-winuser-trackmouseevent)|
+|[CWnd::OnMouseHover](#onmousehover)|Вызывается при наведении курсора на клиентскую область окна в течение периода времени, указанного в предыдущем вызове метода [TrackMouseEven](/windows/win32/api/winuser/nf-winuser-trackmouseevent).|
 |[CWnd::OnMouseHWheel](#onmousehwheel)|Вызывается, если текущее окно создано диспетчером окон рабочего стола (DWM) и развернуто.|
-|[CWnd::OnMouseLeave](#onmouseleave)|Вызывается, когда курсор покидает клиентскую область окна, указанную в предыдущем вызове [на TrackMouseEvent.](/windows/win32/api/winuser/nf-winuser-trackmouseevent)|
+|[CWnd::OnMouseLeave](#onmouseleave)|Вызывается, когда курсор покидает клиентскую область окна, указанное в предыдущем вызове метода [TrackMouseEven](/windows/win32/api/winuser/nf-winuser-trackmouseevent).|
 |[CWnd::OnMouseMove](#onmousemove)|Вызывается при перемещении указателя мыши.|
 |[CWnd::OnMouseWheel](#onmousewheel)|Вызывается, когда пользователь вращает колесико мыши. Использует обработчик сообщений Windows NT 4.0.|
 |[CWnd::OnMove](#onmove)|Вызывается после изменения положения объекта `CWnd`.|
 |[CWnd::OnMoving](#onmoving)|Указывает, что пользователь перемещает объект `CWnd`.|
 |[CWnd::OnNcActivate](#onncactivate)|Вызывается, когда требуется изменить неклиентскую область, чтобы указать на активное или неактивное состояние.|
 |[CWnd::OnNcCalcSize](#onnccalcsize)|Вызывается, когда требуется вычислить размер и положение клиентской области.|
-|[CWnd::OnNcCreate](#onnccreate)|Вызывается до [OnCreate,](#oncreate) когда создается неклиентская область.|
+|[CWnd::OnNcCreate](#onnccreate)|Вызывается перед [созданием](#oncreate) при создании области без клиента.|
 |[CWnd::OnNcDestroy](#onncdestroy)|Вызывается при уничтожении неклиентской области.|
 |[CWnd::OnNcHitTest](#onnchittest)|Вызывается средой Windows при каждом перемещении указателя мыши, если объект `CWnd` содержит курсор или захватил ввод с помощью мыши, используя метод `SetCapture`.|
 |[CWnd::OnNcLButtonDblClk](#onnclbuttondblclk)|Вызывается, если пользователь дважды щелкает левой кнопкой мыши, когда курсор находится в пределах неклиентской области `CWnd`.|
@@ -1184,8 +1184,8 @@ class CWnd : public CCmdTarget
 |[CWnd::OnNcMButtonDblClk](#onncmbuttondblclk)|Вызывается, если пользователь дважды щелкает средней кнопкой мыши, когда курсор находится в пределах неклиентской области `CWnd`.|
 |[CWnd::OnNcMButtonDown](#onncmbuttondown)|Вызывается, если пользователь щелкает средней кнопкой мыши, когда курсор находится в пределах неклиентской области `CWnd`.|
 |[CWnd::OnNcMButtonUp](#onncmbuttonup)|Вызывается, если пользователь отпускает среднюю кнопку мыши, когда курсор находится в пределах неклиентской области `CWnd`.|
-|[CWnd::OnNcMouseHover](#onncmousehover)|Вызывается, когда курсор парит над неклиентской областью окна в течение периода времени, указанного в предыдущем звонке [на TrackMouseEvent.](/windows/win32/api/winuser/nf-winuser-trackmouseevent)|
-|[CWnd::OnNcMouseLeave](#onncmouseleave)|Рамочная функция вызывает эту функцию, когда курсор покидает область неклиента окна, указанную в предыдущем вызове [TrackMouseEvent.](/windows/win32/api/winuser/nf-winuser-trackmouseevent)|
+|[CWnd::OnNcMouseHover](#onncmousehover)|Вызывается при наведении курсора на неклиентскую область окна в течение периода времени, указанного в предыдущем вызове метода [TrackMouseEven](/windows/win32/api/winuser/nf-winuser-trackmouseevent).|
+|[CWnd::OnNcMouseLeave](#onncmouseleave)|Платформа вызывает эту функцию-член, когда курсор покидает неклиентскую область окна, заданную в предыдущем вызове метода [TrackMouseEven](/windows/win32/api/winuser/nf-winuser-trackmouseevent).|
 |[CWnd::OnNcMouseMove](#onncmousemove)|Вызывается при перемещении курсора в пределах неклиентской области `CWnd`.|
 |[CWnd::OnNcPaint](#onncpaint)|Вызывается, когда требуется отрисовка неклиентской области.|
 |[CWnd::OnNcRButtonDblClk](#onncrbuttondblclk)|Вызывается, если пользователь дважды щелкает правой кнопкой мыши, когда курсор находится в пределах неклиентской области `CWnd`.|
@@ -1224,8 +1224,8 @@ class CWnd : public CCmdTarget
 |[CWnd::OnSizeClipboard](#onsizeclipboard)|Вызывается при изменении размера клиентской области окна буфера обмена.|
 |[CWnd::OnSizing](#onsizing)|Указывает, что пользователь изменят размер прямоугольника.|
 |[CWnd::OnSpoolerStatus](#onspoolerstatus)|Вызывается из диспетчера печати при каждом добавлении задачи в очередь диспетчера или удалении задания из нее.|
-|[CWnd::OnStyleChanged](#onstylechanged)|Означает, что функция [SetWindowLong](/windows/win32/api/winuser/nf-winuser-setwindowlongw) Windows изменила один или несколько стилей окна.|
-|[CWnd::OnStyleChanging](#onstylechanging)|Означает, что функция [SetWindowLong](/windows/win32/api/winuser/nf-winuser-setwindowlongw) Windows собирается изменить один или несколько стилей окна.|
+|[CWnd::OnStyleChanged](#onstylechanged)|Указывает, что функция Windows [SetWindowLong](/windows/win32/api/winuser/nf-winuser-setwindowlongw) изменила один или несколько стилей окна.|
+|[CWnd::OnStyleChanging](#onstylechanging)|Указывает, что функция Windows [SetWindowLong](/windows/win32/api/winuser/nf-winuser-setwindowlongw) собирается изменить один или несколько стилей окна.|
 |[CWnd::OnSysChar](#onsyschar)|Вызывается, когда нажатие клавиши преобразуется в системный символ.|
 |[CWnd::OnSysColorChange](#onsyscolorchange)|Вызывается для всех окон верхнего уровня при изменении параметра системного цвета.|
 |[CWnd::OnSysCommand](#onsyscommand)|Вызывается, когда пользователь выбирает команду в оконном меню или нажимает кнопку развертывания или свертывания.|
@@ -1234,24 +1234,24 @@ class CWnd : public CCmdTarget
 |[CWnd::OnSysKeyUp](#onsyskeyup)|Вызывается, когда пользователь отпускает клавишу, нажатую при удерживании клавиши ALT.|
 |[CWnd::OnTCard](#ontcard)|Вызывается, когда пользователь нажимает настраиваемую кнопку.|
 |[CWnd::OnTimeChange](#ontimechange)|Вызывается для всех окон верхнего уровня после изменения системного времени.|
-|[CWnd::OnTimer](#ontimer)|Вызывается после каждого интервала, указанного в [SetTimer](#settimer).|
+|[CWnd::OnTimer](#ontimer)|Вызывается после каждого интервала, указанного в [сеттимер](#settimer).|
 |[CWnd::OnTouchInput](#ontouchinput)|Обработка одного ввода Windows touch.|
 |[CWnd::OnTouchInputs](#ontouchinputs)|Обработка входных данных Windows touch.|
-|[CWnd::OnUniChar](#onunichar)|Вызывается при нажатии клавиши. То есть текущее окно имеет фокус клавиатуры, а [WM_KEYDOWN](/windows/win32/inputdev/wm-keydown) сообщение переводится функцией [TranslateMessage.](/windows/win32/api/winuser/nf-winuser-translatemessage)|
+|[CWnd::OnUniChar](#onunichar)|Вызывается при нажатии клавиши. Это значит, что текущее окно имеет фокус клавиатуры, а [WM_KEYDOWN](/windows/win32/inputdev/wm-keydown) сообщение преобразуется функцией [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) .|
 |[CWnd::OnUnInitMenuPopup](#onuninitmenupopup)|Вызывается при уничтожении раскрывающегося меню или подменю.|
 |[CWnd::OnUpdateUIState](#onupdateuistate)|Вызывается, чтобы изменить состояние пользовательского интерфейса указанного окна и всех его дочерних окон.|
 |[CWnd::OnUserChanged](#onuserchanged)|Вызывается при входе пользователя в систему или выходе из нее.|
-|[CWnd::OnVKeyToItem](#onvkeytoitem)|Вызывается в поле `CWnd` списка, принадлежащем в ответ на [сообщение WM_KEYDOWN.](#onkeydown)|
+|[CWnd::OnVKeyToItem](#onvkeytoitem)|Вызывается списком, принадлежащим `CWnd` в ответ на [WM_KEYDOWN](#onkeydown) сообщение.|
 |[CWnd::OnVScroll](#onvscroll)|Вызывается, когда пользователь щелкает вертикальную полосу прокрутки окна.|
 |[CWnd::OnVScrollClipboard](#onvscrollclipboard)|Вызывается, когда владелец должен прокрутить изображение из буфера, объявить необходимый раздел недействительным, а также обновить значения полосы прокрутки.|
-|[CWnd::OnWindowPosChanged](#onwindowposchanged)|Вызывается, когда размер, позиция или порядок изменяются в результате вызова [в SetWindowPos](#setwindowpos) или другой функции управления окнами.|
-|[CWnd::OnWindowPosChanging](#onwindowposchanging)|Вызывается, когда размер, позиция или порядок в порядке службы в результате вызова [в SetWindowPos](#setwindowpos) или другой функции управления окнами.|
+|[CWnd::OnWindowPosChanged](#onwindowposchanged)|Вызывается, когда размер, расположение или Z-порядок изменились в результате вызова [SetWindowPos](#setwindowpos) или другой функции управления окнами.|
+|[CWnd::OnWindowPosChanging](#onwindowposchanging)|Вызывается, когда размер, расположение или Z-порядок собирается измениться в результате вызова [SetWindowPos](#setwindowpos) или другой функции управления окнами.|
 |[CWnd::OnWinIniChange](#onwininichange)|Вызывается для всех окон верхнего уровня после изменения файла инициализации Windows (WIN.INI).|
 |[CWnd::OnWndMsg](#onwndmsg)|Указывает, что сообщение для окна обработано.|
 |[CWnd::OnXButtonDblClk](#onxbuttondblclk)|Вызывается, если пользователь дважды щелкает кнопкой XBUTTON1 или XBUTTON2, когда курсор находится в клиентской области окна.|
 |[CWnd::OnXButtonDown](#onxbuttondown)|Вызывается, если пользователь щелкает кнопкой XBUTTON1 или XBUTTON2, когда курсор находится в клиентской области окна.|
 |[CWnd::OnXButtonUp](#onxbuttonup)|Вызывается, если пользователь отпускает кнопку XBUTTON1 или XBUTTON2, когда курсор находится в клиентской области окна.|
-|[CWnd::PostNcDestroy](#postncdestroy)|Эта виртуальная функция вызывается функцией [OnNcDestroy](#onncdestroy) по умолчанию после того, как окно было уничтожено.|
+|[CWnd::PostNcDestroy](#postncdestroy)|Эта виртуальная функция вызывается функцией [OnNcDestroy](#onncdestroy) по умолчанию после уничтожения окна.|
 |[CWnd::ReflectChildNotify](#reflectchildnotify)|Вспомогательная функция, отражающая сообщение его источнику.|
 |[CWnd::ReflectLastMsg](#reflectlastmsg)|Отражает последнее сообщение дочернему окну.|
 |[CWnd::ResizeDynamicLayout](#resizedynamiclayout)|Вызывается платформой при изменении размера окна для настройки макета дочерних окон, если для этого окна используется динамический макет.|
@@ -1259,33 +1259,33 @@ class CWnd : public CCmdTarget
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CWnd::operator HWND](#operator_hwnd)|Вызывается для получения дескриптора окна.|
-|[CWnd::оператор !](#operator_neq)|Определяет, является ли окно не таким, как окно, ручка которого [m_hWnd.](#m_hwnd)|
-|[CWnd::operator ==](#operator_eq_eq)|Определяет, является ли окно таким же, как окно, рукоятки которого [m_hWnd.](#m_hwnd)|
+|[CWnd:: operator! =](#operator_neq)|Определяет, отличается ли окно от окна, маркер которого [m_hWnd](#m_hwnd).|
+|[CWnd::operator ==](#operator_eq_eq)|Определяет, совпадает ли окно с окном, маркером которого является [m_hWnd](#m_hwnd).|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
-|[CWnd::m_hWnd](#m_hwnd)|Указывает на HWND прилагается к этому `CWnd`.|
+|[CWnd::m_hWnd](#m_hwnd)|Указывает HWND, присоединенный к этому объекту `CWnd` .|
 
 ## <a name="remarks"></a>Remarks
 
-Объект `CWnd` используется отдельно от окна Windows, но они тесно связаны. Объект `CWnd` создается или уничтожается конструктором или деструктором `CWnd` соответственно. Окно Windows, с другой стороны, представляет собой структуру данных, внутреннюю к Windows, которая создается функцией `Create` члена и уничтожается `CWnd` виртуальным деструктором. Функция [DestroyWindow](#destroywindow) разрушает окно Windows, не разрушая объект.
+Объект `CWnd` используется отдельно от окна Windows, но они тесно связаны. Объект `CWnd` создается или уничтожается конструктором или деструктором `CWnd` соответственно. Окно Windows, с другой стороны, представляет собой структуру данных, внутреннюю для Windows, созданную `Create` функцией-членом и уничтоженную `CWnd` виртуальным деструктором. Функция [дестройвиндов](#destroywindow) уничтожает окно Windows без уничтожения объекта.
 
-Класс `CWnd` и механизм карты сообщений `WndProc` скрывают функцию. Входящие сообщения уведомлений Windows автоматически направляются через карту сообщений на соответствующие функции членов **On**<em>Message.</em> `CWnd` Вы переопределить функцию участника **On**<em>Message</em> для обработки конкретного сообщения участника в классах, полученных из полученных.
+`CWnd`Класс и механизм карт сообщений скрывают `WndProc` функцию. Входящие сообщения уведомлений Windows автоматически направляются через **схему сообщений в соответствующие**функции-члены<em>сообщений</em> `CWnd` . Вы переопределяете функцию-член **для**<em>сообщения</em> , чтобы обрабатывалось конкретное сообщение члена в производных классах.
 
 С помощью класса `CWnd` также возможно создание дочерних окон Windows для вашего приложения. Создайте производный класс от `CWnd`, а затем добавьте в него переменные-члены для хранения данных, относящихся к вашему приложению. Реализуйте в производном классе функции-члены обработчика сообщений и схему сообщений, чтобы указать, что происходит, когда сообщения направляются в окно.
 
-Дочерние окна создаются в два этапа. Сначала позвоните в `CWnd` конструктор, `CWnd` чтобы построить объект, затем позвоните в функцию `CWnd` члена [Create,](#create) чтобы создать окно ребенка и прикрепите его к объекту.
+Дочерние окна создаются в два этапа. Сначала вызовите конструктор `CWnd` для создания `CWnd` объекта, а затем вызовите функцию [создания](#create) члена, чтобы создать дочернее окно и присоединить его к `CWnd` объекту.
 
 Когда пользователь закроет ваше дочернее окно, уничтожьте объект `CWnd` или вызовите функцию-член `DestroyWindow` для удаления окна и уничтожения его структур данных.
 
-В библиотеке Microsoft Foundation Class дальнейшие классы получаются как производные от `CWnd`, что позволяет создавать окна особых типов. Многие из этих классов, в том числе [CFrameWnd](../../mfc/reference/cframewnd-class.md), [CMDIFrameWnd](../../mfc/reference/cmdiframewnd-class.md), [CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md), [CView](../../mfc/reference/cview-class.md)и [CDialog,](../../mfc/reference/cdialog-class.md)предназначены для дальнейшего произвлечения. Контрольные классы, `CWnd`полученные из, такие как [CButton](../../mfc/reference/cbutton-class.md), могут быть использованы непосредственно или могут быть использованы для дальнейшего произвлечения классов.
+В библиотеке Microsoft Foundation Class дальнейшие классы получаются как производные от `CWnd`, что позволяет создавать окна особых типов. Многие из этих классов, включая [CFrameWnd](../../mfc/reference/cframewnd-class.md), [CMDIFrameWnd](../../mfc/reference/cmdiframewnd-class.md), [CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md), [CView](../../mfc/reference/cview-class.md)и [CDialog](../../mfc/reference/cdialog-class.md), предназначены для последующего наследования. Классы элементов управления, производные от `CWnd` , например [кбуттон](../../mfc/reference/cbutton-class.md), можно использовать напрямую или использовать для дальнейшего наследования классов.
 
-Для получения дополнительной `CWnd`информации об [Window Objects](../../mfc/window-objects.md)использовании [см.](../../mfc/frame-windows.md)
+Дополнительные сведения об использовании `CWnd` см. в разделе [окна рамки](../../mfc/frame-windows.md) и [объекты окон](../../mfc/window-objects.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -1299,7 +1299,7 @@ class CWnd : public CCmdTarget
 
 **Заголовок:** afxwin.h
 
-## <a name="cwndaccdodefaultaction"></a><a name="accdodefaultaction"></a>CWnd::accDoDefaultAction
+## <a name="cwndaccdodefaultaction"></a><a name="accdodefaultaction"></a>CWnd:: Аккдодефаултактион
 
 Вызывается платформой для выполнения объектом действия по умолчанию.
 
@@ -1309,20 +1309,20 @@ virtual HRESULT accDoDefaultAction(VARIANT varChild);
 
 ### <a name="parameters"></a>Параметры
 
-*varChild*<br/>
-Определяет, является ли действие по умолчанию, которое необходимо высвобовать, объектом или одним из элементов ребенка объекта. Этот параметр может быть как CHILDID_SELF (для выполнения действия объекта по умолчанию), либо идентификатора ребенка (для выполнения действия по умолчанию одного из элементов ребенка объекта).
+*варчилд*<br/>
+Указывает, должно ли вызываться действие по умолчанию в отношении объекта или одного из дочерних элементов объекта. Этот параметр может быть либо CHILDID_SELF (для выполнения действия по умолчанию объекта), либо ИДЕНТИФИКАТОРом дочернего элемента (для выполнения действия по умолчанию одного из дочерних элементов объекта).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK на успех, код ошибки COM при сбое. Смотрите **значения возврата** в [IAccessible::accDoDefaultAction](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accdodefaultaction) в Windows SDK.
+Возвращает S_OK при успешном выполнении — код ошибки COM при сбое. См. раздел **возвращаемые значения** в [IAccessible:: аккдодефаултактион](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accdodefaultaction) в Windows SDK.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция является частью поддержки [активной доступности](/windows/win32/WinAuto/microsoft-active-accessibility) MFC.
+Эта функция является частью поддержки [Active ACCESSIBILITY](/windows/win32/WinAuto/microsoft-active-accessibility) MFC.
 
-Переизвейдиэту `CWnd`функцию в классе,производное для выполнения действий объекта по умолчанию. Для получения дополнительной информации см. [IAccessible::accDoDefaultAction](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accdodefaultaction) в Windows SDK.
+Переопределите эту функцию в `CWnd` классе, производном от, чтобы выполнить действие по умолчанию для объекта. Дополнительные сведения см. в разделе [IAccessible:: аккдодефаултактион](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accdodefaultaction) в Windows SDK.
 
-## <a name="cwndacchittest"></a><a name="acchittest"></a>CWnd::accHitTest
+## <a name="cwndacchittest"></a><a name="acchittest"></a>CWnd:: Акчиттест
 
 Вызывается платформой для извлечения дочернего элемента или дочернего объекта в заданной точке экрана.
 
@@ -1335,28 +1335,28 @@ virtual HRESULT accHitTest(
 
 ### <a name="parameters"></a>Параметры
 
-*x Слева*<br/>
-X-координация точки, которая будет проверена (в экранах единиц).
+*кслефт*<br/>
+Координата по оси X точки, которую необходимо проверить на попадание (в единицах экрана).
 
-*yTop*<br/>
-Y-координаты точки, которая будет поражена (в экранах единиц).
+*итоп*<br/>
+Координата Y точки, которая должна быть проверена на попадание (в единицах экрана).
 
-*pvarChild*<br/>
-Получает информацию, идентифицирующую объект в точке, указанной *xLeft* и *yTop.* Смотрите *pvarID* в [IAccessible::accHitTest](/windows/win32/api/oleacc/nf-oleacc-iaccessible-acchittest) в Windows SDK.
+*пварчилд*<br/>
+Получает сведения, идентифицирующие объект в точке, указанной в параметре *кслефт* и *итоп*. См. раздел *пварид* in [IAccessible:: акчиттест](/windows/win32/api/oleacc/nf-oleacc-iaccessible-acchittest) в Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK на успех, код ошибки COM при сбое. Смотрите **значения** возврата `IAccessible::accHitTest` в SDK Windows.
+Возвращает S_OK при успешном выполнении — код ошибки COM при сбое. См. раздел **возвращаемые значения** в `IAccessible::accHitTest` в Windows SDK.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция является частью поддержки [активной доступности](/windows/win32/WinAuto/microsoft-active-accessibility) MFC.
+Эта функция является частью поддержки [Active ACCESSIBILITY](/windows/win32/WinAuto/microsoft-active-accessibility) MFC.
 
-Переопределить эту функцию в вашем -производном `CWnd`классе, если у вас есть неоконированные элементы пользовательского интерфейса (кроме элементов без окон ActiveX, которые mFC обрабатывает).
+Переопределяйте эту функцию в `CWnd` классе, производном от, если имеются неоконные элементы пользовательского интерфейса (отличные от безоконных элементов управления ActiveX, которые обрабатываются MFC).
 
-Для получения дополнительной информации см. [IAccessible::accHitTest](/windows/win32/api/oleacc/nf-oleacc-iaccessible-acchittest) в Windows SDK.
+Дополнительные сведения см. в разделе [IAccessible:: акчиттест](/windows/win32/api/oleacc/nf-oleacc-iaccessible-acchittest) в Windows SDK.
 
-## <a name="cwndacclocation"></a><a name="acclocation"></a>CWnd::accLocation
+## <a name="cwndacclocation"></a><a name="acclocation"></a>CWnd:: Акклокатион
 
 Вызывается платформой для получения текущего положения указанного объекта на экране.
 
@@ -1371,32 +1371,32 @@ virtual HRESULT accLocation(
 
 ### <a name="parameters"></a>Параметры
 
-*pxСлева*<br/>
-Получает x-координат верхнего левого угла объекта (в блоках экрана).
+*пкслефт*<br/>
+Получает координату по оси x верхнего левого угла объекта (в единицах экрана).
 
-*pyTop*<br/>
-Получает y-координат верхнего левого угла объекта (в блоках экрана).
+*питоп*<br/>
+Получает координату по оси y верхнего левого угла объекта (в единицах экрана).
 
-*pcxWidth*<br/>
-Получает ширину объекта (в блоках экрана).
+*пкксвидс*<br/>
+Получает ширину объекта (в единицах экрана).
 
-*pcyHeight*<br/>
-Получает высоту объекта (в блоках экрана).
+*пцихеигхт*<br/>
+Получает высоту объекта (в единицах экрана).
 
-*varChild*<br/>
-Уточняется, является ли место, которое необходимо получить, местом, которое необходимо получить, объектили или один из элементов ребенка объекта. Этот параметр может быть либо CHILDID_SELF (для получения информации об объекте), либо идентификатором ребенка (для получения информации о элементе ребенка объекта).
+*варчилд*<br/>
+Указывает, является ли извлекаемое расположение объектом или одним из дочерних элементов объекта. Этот параметр может быть либо CHILDID_SELF (для получения сведений об объекте), либо ИДЕНТИФИКАТОРом дочернего элемента (для получения сведений о дочернем элементе объекта).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK на успех, код ошибки COM при сбое. Смотрите **значения** возврата `IAccessible::accLocation` в SDK Windows.
+Возвращает S_OK при успешном выполнении — код ошибки COM при сбое. См. раздел **возвращаемые значения** в `IAccessible::accLocation` в Windows SDK.
 
 ### <a name="remarks"></a>Remarks
 
-Переопределить эту функцию в вашем -производном `CWnd`классе, если у вас есть неоконированные элементы пользовательского интерфейса (кроме элементов без окон ActiveX, которые mFC обрабатывает).
+Переопределяйте эту функцию в `CWnd` классе, производном от, если имеются неоконные элементы пользовательского интерфейса (отличные от безоконных элементов управления ActiveX, которые обрабатываются MFC).
 
-Для получения дополнительной `IAccessible::accLocation` информации см.
+Дополнительные сведения см `IAccessible::accLocation` . в разделе Windows SDK.
 
-## <a name="cwndaccnavigate"></a><a name="accnavigate"></a>CWnd::accNavigate
+## <a name="cwndaccnavigate"></a><a name="accnavigate"></a>CWnd:: Аккнавигате
 
 Вызывается платформой для перехода к другому элементу пользовательского интерфейса внутри контейнера и, если возможно, для извлечения объекта.
 
@@ -1409,28 +1409,28 @@ virtual HRESULT accNavigate(
 
 ### <a name="parameters"></a>Параметры
 
-*navDir*<br/>
-Определяет направление навигации. Смотрите *navDir* в [IAccessible::accNavigate](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accnavigate) в Windows SDK.
+*навдир*<br/>
+Указывает направление перехода. См. раздел *навдир* in [IAccessible:: аккнавигате](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accnavigate) в Windows SDK.
 
-*varStart*<br/>
-Определяет исходный объект. Смотрите *varStart* в `IAccessible::accNavigate` Windows SDK.
+*варстарт*<br/>
+Задает начальный объект. См. раздел *варстарт* в `IAccessible::accNavigate` Windows SDK.
 
-*pvarendupAt*<br/>
-Получает информацию об объекте пользовательского интерфейса назначения. Смотрите *PvarEnd* в `IAccessible::accNavigate` Windows SDK.
+*пварендупат*<br/>
+Получает сведения о целевом объекте пользовательского интерфейса. См. раздел *пваренд* в `IAccessible::accNavigate` Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK на успех, код ошибки COM при сбое. Смотрите **значения** возврата `IAccessible::accNavigate` в SDK Windows.
+Возвращает S_OK при успешном выполнении — код ошибки COM при сбое. См. раздел **возвращаемые значения** в `IAccessible::accNavigate` в Windows SDK.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция является частью поддержки [активной доступности](/windows/win32/WinAuto/microsoft-active-accessibility) MFC.
+Эта функция является частью поддержки [Active ACCESSIBILITY](/windows/win32/WinAuto/microsoft-active-accessibility) MFC.
 
-Переопределить эту функцию в вашем -производном `CWnd`классе, если у вас есть неоконированные элементы пользовательского интерфейса (кроме элементов без окон ActiveX, которые mFC обрабатывает).
+Переопределяйте эту функцию в `CWnd` классе, производном от, если имеются неоконные элементы пользовательского интерфейса (отличные от безоконных элементов управления ActiveX, которые обрабатываются MFC).
 
-Для получения дополнительной информации см. [IAccessible::accNavigate](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accnavigate) в Windows SDK.
+Дополнительные сведения см. в разделе [IAccessible:: аккнавигате](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accnavigate) в Windows SDK.
 
-## <a name="cwndaccselect"></a><a name="accselect"></a>CWnd::accSelect
+## <a name="cwndaccselect"></a><a name="accselect"></a>CWnd:: Аккселект
 
 Вызывается платформой для изменения выбранной области или перемещения фокуса клавиатурного ввода указанного объекта.
 
@@ -1442,27 +1442,27 @@ virtual HRESULT accSelect(
 
 ### <a name="parameters"></a>Параметры
 
-*флагиВыберите*<br/>
-Определяет, как изменить текущий выбор или фокус. Смотрите *флагиВыберите* в [IAccessible::accSelect](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accselect) в Windows SDK.
+*флагсселект*<br/>
+Задает способ изменения текущего выделения или фокуса. См. раздел *флагсселект* in [IAccessible:: аккселект](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accselect) в Windows SDK.
 
-*varChild*<br/>
-Определяет выбранный объект. Этот параметр может быть как CHILDID_SELF (для выбора самого объекта), либо идентификатором ребенка (для выбора одного из детей объекта).
+*варчилд*<br/>
+Указывает объект для выбора. Этот параметр может быть либо CHILDID_SELF (для выбора самого объекта), либо ИДЕНТИФИКАТОРом дочернего элемента (для выбора одного из потомков объекта).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK на успех, код ошибки COM при сбое. Смотрите **значения** возврата `IAccessible::accSelect` в SDK Windows.
+Возвращает S_OK при успешном выполнении — код ошибки COM при сбое. См. раздел **возвращаемые значения** в `IAccessible::accSelect` в Windows SDK.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция является частью поддержки [активной доступности](/windows/win32/WinAuto/microsoft-active-accessibility) MFC.
+Эта функция является частью поддержки [Active ACCESSIBILITY](/windows/win32/WinAuto/microsoft-active-accessibility) MFC.
 
-Переопределить эту функцию в вашем -производном `CWnd`классе, если у вас есть неоконированные элементы пользовательского интерфейса (кроме элементов без окон ActiveX, которые mFC обрабатывает).
+Переопределяйте эту функцию в `CWnd` классе, производном от, если имеются неоконные элементы пользовательского интерфейса (отличные от безоконных элементов управления ActiveX, которые обрабатываются MFC).
 
-Для получения дополнительной информации см. [IAccessible::accSelect](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accselect) в Windows SDK.
+Дополнительные сведения см. в разделе [IAccessible:: аккселект](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accselect) в Windows SDK.
 
-## <a name="cwndanimatewindow"></a><a name="animatewindow"></a>CWnd::AnimateWindow
+## <a name="cwndanimatewindow"></a><a name="animatewindow"></a>CWnd:: Аниматевиндов
 
-Производит специальные эффекты при показе или сокрытии окон.
+Создает специальные эффекты при отображении или скрытии окон.
 
 ```
 BOOL AnimateWindow(
@@ -1472,21 +1472,21 @@ BOOL AnimateWindow(
 
 ### <a name="parameters"></a>Параметры
 
-*dwTime*<br/>
-Определяет, сколько времени требуется для воспроизведения анимации, в миллисекундах. Обычно для воспроизведения анимации требуется 200 миллисекунд.
+*двтиме*<br/>
+Указывает время, затрачиваемое на воспроизведение анимации в миллисекундах. Как правило, воспроизведение анимации занимает 200 миллисекунд.
 
 *dwFlags*<br/>
-Определяет тип анимации. Полный список возможных значений можно узнать на экране [AnimateWindow.](/windows/win32/api/winuser/nf-winuser-animatewindow)
+Задает тип анимации. Полный список возможных значений см. в разделе [аниматевиндов](/windows/win32/api/winuser/nf-winuser-animatewindow).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Nonzero, если функция успешно; в противном случае 0.
+Ненулевое значение, если функция выполнена. в противном случае — 0.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция члена эмулирует функциональность функции [AnimateWindow](/windows/win32/api/winuser/nf-winuser-animatewindow), как описано в Windows SDK.
+Эта функция члена эмулирует функциональность функции [аниматевиндов](/windows/win32/api/winuser/nf-winuser-animatewindow), как описано в Windows SDK.
 
-## <a name="cwndarrangeiconicwindows"></a><a name="arrangeiconicwindows"></a>CWnd::ArrangeIconicWindows
+## <a name="cwndarrangeiconicwindows"></a><a name="arrangeiconicwindows"></a>CWnd:: Арранжеикониквиндовс
 
 Упорядочивает все свернутые (преобразованные в значки) дочерние окна.
 
@@ -1496,21 +1496,21 @@ UINT ArrangeIconicWindows();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Высота одного ряда иконок, если функция успешна; в противном случае 0.
+Высота одной строки значков, если функция выполнена успешно; в противном случае — 0.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция участника также организует значки на окне рабочего стола, которое охватывает весь экран. Функция члена [GetDesktopWindow](#getdesktopwindow) получает указатель на объект окна рабочего стола.
+Эта функция элемента также упорядочивает значки в окне рабочего стола, которое охватывает весь экран. Функция-член [жетдесктопвиндов](#getdesktopwindow) извлекает указатель на объект окна рабочего стола.
 
-Чтобы организовать знаковые окна mDI ребенка в окне клиента MDI, позвоните [CMDIFrameWnd::MDIIconArrange](../../mfc/reference/cmdiframewnd-class.md#mdiiconarrange).
+Чтобы разместить значки дочерних MDI-окон в окне клиента MDI, вызовите метод [CMDIFrameWnd:: мдииконарранже](../../mfc/reference/cmdiframewnd-class.md#mdiiconarrange).
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#66](../../mfc/reference/codesnippet/cpp/cwnd-class_1.cpp)]
 
-## <a name="cwndattach"></a><a name="attach"></a>CWnd::Прикрепите
+## <a name="cwndattach"></a><a name="attach"></a>CWnd:: Attach
 
-Прикрепляет окно Windows `CWnd` к объекту.
+Присоединяет окно Windows к `CWnd` объекту.
 
 ```
 BOOL Attach(HWND hWndNew);
@@ -1518,8 +1518,8 @@ BOOL Attach(HWND hWndNew);
 
 ### <a name="parameters"></a>Параметры
 
-*hWndNew*<br/>
-Определяет ручку к окну Windows.
+*хвнднев*<br/>
+Задает маркер окна Windows.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1527,7 +1527,7 @@ BOOL Attach(HWND hWndNew);
 
 ### <a name="example"></a>Пример
 
-В этом примере показано, как использовать Прикрепить и Отек для отображения в окне клиента MDI.
+В этом примере показано, как использовать присоединение и отсоединение для отображения в окне клиента MDI.
 
 [!code-cpp[NVC_MFCWindowing#67](../../mfc/reference/codesnippet/cpp/cwnd-class_2.h)]
 
@@ -1535,7 +1535,7 @@ BOOL Attach(HWND hWndNew);
 
 [!code-cpp[NVC_MFCWindowing#69](../../mfc/reference/codesnippet/cpp/cwnd-class_4.cpp)]
 
-## <a name="cwndbeginmodalstate"></a><a name="beginmodalstate"></a>CWnd::BeginModalState
+## <a name="cwndbeginmodalstate"></a><a name="beginmodalstate"></a>CWnd:: Бегинмодалстате
 
 Данная функция-член вызывается для преобразования окна фрейма в модальное.
 
@@ -1543,9 +1543,9 @@ BOOL Attach(HWND hWndNew);
 virtual void BeginModalState();
 ```
 
-## <a name="cwndbeginpaint"></a><a name="beginpaint"></a>CWnd::BeginPaint
+## <a name="cwndbeginpaint"></a><a name="beginpaint"></a>CWnd:: Бегинпаинт
 
-`CWnd` Готовится к покраске и заполняет структуру `PAINTSTRUCT` данных информацией о картине.
+Готовится `CWnd` к рисованию и заполнению `PAINTSTRUCT` структуры данных информацией о выкраске.
 
 ```
 CDC* BeginPaint(LPPAINTSTRUCT lpPaint);
@@ -1553,28 +1553,28 @@ CDC* BeginPaint(LPPAINTSTRUCT lpPaint);
 
 ### <a name="parameters"></a>Параметры
 
-*lpPaint*<br/>
-Указывает на структуру [PAINTSTRUCT,](/windows/win32/api/winuser/ns-winuser-paintstruct) которая должна получать информацию о покраске.
+*лппаинт*<br/>
+Указывает на структуру [PAINTSTRUCT](/windows/win32/api/winuser/ns-winuser-paintstruct) , которая предназначена для получения сведений о выкраске.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Определяет контекст устройства `CWnd`для . Указатель может быть временным и не должен храниться за пределами [EndPaint.](#endpaint)
+Определяет контекст устройства для `CWnd` . Указатель может быть временным и не должен храниться за пределами области [ендпаинт](#endpaint).
 
 ### <a name="remarks"></a>Remarks
 
-Структура краски содержит структуру данных RECT, которая имеет наименьший прямоугольник, который полностью закрывает область обновления, и флаг, который определяет, был ли стерт фон.
+Структура заливки содержит структуру данных RECT с наименьшим прямоугольником, который полностью заключает в себя область обновления, и флаг, указывающий, был ли стерт фон.
 
-Область обновления устанавливается [недействительными,](#invalidate) [недействительными](#invalidaterect)функциями [участника](#invalidatergn) И системой после того, как она размерирует, перемещает, создает, прокручивает или выполняет любую другую операцию, которая влияет на область клиента. Если область обновления помечена для `BeginPaint` стыкания, отправляет сообщение [WM_ONERASEBKGND.](#onerasebkgnd)
+Область обновления задается функциями-членами [unvalidate](#invalidate), [инвалидатерект](#invalidaterect)или [инвалидатергн](#invalidatergn) и системой после ее размера, перемещения, создания, прокрутки или выполнения любой другой операции, влияющей на клиентскую область. Если регион обновления помечен для удаления, `BeginPaint` отправляет сообщение [WM_ONERASEBKGND](#onerasebkgnd) .
 
-Не звоните `BeginPaint` в функцию участника, кроме как в ответ на [WM_PAINT](#onpaint) сообщение. Каждый вызов `BeginPaint` функции участника должен иметь соответствующий вызов для функции участника [EndPaint.](#endpaint) Если карета находится в области, `BeginPaint` подавки картины, функция члена автоматически скрывает карету, чтобы предотвратить его стирание.
+Не вызывайте `BeginPaint` функцию-член, за исключением того, что в ответ на [WM_PAINT](#onpaint) сообщение. Каждый вызов функции- `BeginPaint` члена должен иметь соответствующий вызов функции-члена [ендпаинт](#endpaint) . Если курсор находится в закрашиваемой области, `BeginPaint` функция-член автоматически скрывает курсор, чтобы предотвратить его стирание.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#70](../../mfc/reference/codesnippet/cpp/cwnd-class_5.cpp)]
 
-## <a name="cwndbinddefaultproperty"></a><a name="binddefaultproperty"></a>CWnd::BindDefaultProperty
+## <a name="cwndbinddefaultproperty"></a><a name="binddefaultproperty"></a>CWnd:: Бинддефаултпроперти
 
-Связывает простое связанное свойство объекта вызова (например, элемент управления исправлением), отмеченное в библиотеке типа, с базовым курсором, определяемым dataSource, UserName, Password и S'L свойствами управления источником данных.
+Привязывает свойство простого связанного объекта по умолчанию (например, элемент управления "поле ввода"), как указано в библиотеке типов, к базовому курсору, определенному в свойствах DataSource, UserName, Password и SQL элемента управления источника данных.
 
 ```cpp
 void BindDefaultProperty(
@@ -1586,31 +1586,31 @@ void BindDefaultProperty(
 
 ### <a name="parameters"></a>Параметры
 
-*dwDispID*<br/>
-Определяет DISPID свойства на элементе управления, связанном с данными, которое должно быть связано с управлением источником данных.
+*двдиспид*<br/>
+Указывает DISPID свойства в элементе управления с привязкой к данным, который должен быть привязан к элементу управления источника данных.
 
-*vtProp*<br/>
-Упомяните тип собственности, который должен быть связан - например, VT_BSTR, VT_VARIANT и так далее.
+*втпроп*<br/>
+Указывает тип свойства для привязки, например VT_BSTR, VT_VARIANT и т. д.
 
-*szFieldName*<br/>
-Укравит название столбца в курсоре, предоставленном управлением источником данных, к которому будет привязано свойство.
+*сзфиелднаме*<br/>
+Задает имя столбца в курсоре, предоставленном элементом управления источника данных, к которому будет привязано свойство.
 
-*pDSCWnd*<br/>
-Указывает на окно, в котором размещается элемент управления исходным источником данных, к которому будет привязано свойство. Позвоните `GetDlgItem` с идентификатором ресурса окна узла DCS, чтобы получить этот указатель.
+*пдсквнд*<br/>
+Указывает на окно, в котором размещен элемент управления источника данных, к которому будет привязано свойство. Вызовите `GetDlgItem` с идентификатором ресурса главного окна DCS, чтобы получить этот указатель.
 
 ### <a name="remarks"></a>Remarks
 
-Объект, `CWnd` на котором вы называете эту функцию, должен быть элементом управления, связанным с данными.
+`CWnd`Объект, для которого вызывается эта функция, должен быть элементом управления с привязкой к данным.
 
 ### <a name="example"></a>Пример
 
-`BindDefaultProperty`могут быть использованы в следующем контексте:
+`BindDefaultProperty`может использоваться в следующем контексте:
 
 [!code-cpp[NVC_MFC_AxDataBinding#2](../../mfc/reference/codesnippet/cpp/cwnd-class_7.cpp)]
 
-## <a name="cwndbindproperty"></a><a name="bindproperty"></a>CWnd::BindProperty
+## <a name="cwndbindproperty"></a><a name="bindproperty"></a>CWnd:: Биндпроперти
 
-Связывает свойство, связанное с курсором, на элементе управления данными (например, контроль сетки) с контролем источника данных и регистрирует связь с связывающим менеджером MFC.
+Привязывает привязанное к курсору свойство к элементу управления с привязкой к данным (например, к элементу управления "Сетка") к элементу управления источником данных и регистрирует эту связь с помощью диспетчера привязок MFC.
 
 ```cpp
 void BindProperty(
@@ -1620,23 +1620,23 @@ void BindProperty(
 
 ### <a name="parameters"></a>Параметры
 
-*dwDispId*<br/>
-Определяет DISPID свойства на элементе управления, связанном с данными, которое должно быть связано с управлением источником данных.
+*двдиспид*<br/>
+Указывает DISPID свойства в элементе управления с привязкой к данным, который должен быть привязан к элементу управления источника данных.
 
-*pWndDSC*<br/>
-Указывает на окно, в котором размещается элемент управления исходным источником данных, к которому будет привязано свойство. Позвоните `GetDlgItem` с идентификатором ресурса окна узла DCS, чтобы получить этот указатель.
+*пвнддск*<br/>
+Указывает на окно, в котором размещен элемент управления источника данных, к которому будет привязано свойство. Вызовите `GetDlgItem` с идентификатором ресурса главного окна DCS, чтобы получить этот указатель.
 
 ### <a name="remarks"></a>Remarks
 
-Объект, `CWnd` на котором вы называете эту функцию, должен быть элементом управления, связанным с данными.
+`CWnd`Объект, для которого вызывается эта функция, должен быть элементом управления с привязкой к данным.
 
 ### <a name="example"></a>Пример
 
-`BindProperty`могут быть использованы в следующем контексте:
+`BindProperty`может использоваться в следующем контексте:
 
 [!code-cpp[NVC_MFC_AxDataBinding#4](../../mfc/reference/codesnippet/cpp/cwnd-class_9.cpp)]
 
-## <a name="cwndbringwindowtotop"></a><a name="bringwindowtotop"></a>CWnd::BringWindowToTop
+## <a name="cwndbringwindowtotop"></a><a name="bringwindowtotop"></a>CWnd:: Брингвиндовтотоп
 
 Перемещает `CWnd` на вершину стека перекрывающихся окон.
 
@@ -1648,15 +1648,15 @@ void BringWindowToTop();
 
 Кроме того `BringWindowToTop` активирует всплывающие окна, окна высшего уровня и дочерние окна MDI. Функцию-член `BringWindowToTop` следует использовать, чтобы показать любое окно, частично или полностью скрытое какими-либо перекрывающими окнами.
 
-Эта функция просто вызывает функцию Win32 [BringWindowToTop.](/windows/win32/api/winuser/nf-winuser-bringwindowtotop) Вызовите функцию [SetWindowPos,](#setwindowpos) чтобы изменить положение окна в заказе. Функция `BringWindowToTop` не изменяет стиль окна, чтобы сделать его окном верхнего уровня. Для получения дополнительной информации, смотрите [В чем разница между HWND_TOP и HWND_TOPMOST](https://devblogs.microsoft.com/oldnewthing/?p=33263)
+Эта функция просто вызывает функцию Win32 [брингвиндовтотоп](/windows/win32/api/winuser/nf-winuser-bringwindowtotop) . Вызовите функцию [SetWindowPos](#setwindowpos) , чтобы изменить расположение окна в Z-порядке. Функция `BringWindowToTop` не изменяет стиль окна, чтобы сделать его окном верхнего уровня. Дополнительные сведения см. [в разделе различие между HWND_TOP и HWND_TOPMOST](https://devblogs.microsoft.com/oldnewthing/?p=33263)
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#71](../../mfc/reference/codesnippet/cpp/cwnd-class_10.cpp)]
 
-## <a name="cwndcalcwindowrect"></a><a name="calcwindowrect"></a>CWnd::CalcWindowRect
+## <a name="cwndcalcwindowrect"></a><a name="calcwindowrect"></a>CWnd:: Калквиндоврект
 
-Вычисляет прямоугольник окна, который может содержать указанный прямоугольник клиента.
+Вычисляет прямоугольник окна, который может содержать указанный клиентский прямоугольник.
 
 ```
 virtual void CalcWindowRect(
@@ -1666,25 +1666,25 @@ virtual void CalcWindowRect(
 
 ### <a name="parameters"></a>Параметры
 
-*lpClientRect*<br/>
-(в, вне) Указатель на структуру прямоугольника. При входе эта структура содержит прямоугольник клиента. После завершения метода эта структура содержит прямоугольник окна, который может содержать указанный прямоугольник клиента.
+*лпклиентрект*<br/>
+[вход, выход] Указатель на структуру прямоугольника. На входе эта структура содержит клиентский прямоугольник. После завершения метода эта структура содержит прямоугольник окна, который может содержать указанный клиентский прямоугольник.
 
-*nAdjustType*<br/>
-(в) Используйте `CWnd::adjustBorder` для расчета координат окон без WS_EX_CLIENTEDGE стиля; в противном случае, использовать `CWnd::adjustOutside`.
+*наджусттипе*<br/>
+окне Используйте `CWnd::adjustBorder` для вычисления координат окна без стиля WS_EX_CLIENTEDGE. в противном случае используйте `CWnd::adjustOutside` .
 
 ### <a name="remarks"></a>Remarks
 
-Размер вычисленного прямоугольника окна не включает место для панели меню.
+Размер вычисляемого прямоугольника окна не включает пробел для строки меню.
 
-Дополнительные ограничения на использование можно узнать на примере [AdjustWindowRecTEx.](/windows/win32/api/winuser/nf-winuser-adjustwindowrectex)
+Дополнительные ограничения на использование см. в разделе [аджуствиндовректекс](/windows/win32/api/winuser/nf-winuser-adjustwindowrectex).
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#72](../../mfc/reference/codesnippet/cpp/cwnd-class_11.cpp)]
 
-## <a name="cwndcanceltooltips"></a><a name="canceltooltips"></a>CWnd::CancelToolTips
+## <a name="cwndcanceltooltips"></a><a name="canceltooltips"></a>CWnd:: Канцелтултипс
 
-Вызов эту функцию члена, чтобы удалить наконечник инструмента с экрана, если наконечник инструмента в настоящее время отображается.
+Вызовите эту функцию-член, чтобы удалить всплывающую подсказку с экрана, если в данный момент отображается подсказка.
 
 ```
 static void PASCAL CancelToolTips(BOOL bKeys = FALSE);
@@ -1692,19 +1692,19 @@ static void PASCAL CancelToolTips(BOOL bKeys = FALSE);
 
 ### <a name="parameters"></a>Параметры
 
-*bKeys*<br/>
-TRUE для отмены советов по инструменту при нажатии клавиши и установки текста панели статуса по умолчанию; в противном случае FALSE.
+*бкэйс*<br/>
+Значение TRUE, чтобы отменить подсказки при нажатии клавиши, а также задать для текста строки состояния значение по умолчанию; в противном случае — FALSE.
 
 ### <a name="remarks"></a>Remarks
 
 > [!NOTE]
-> Использование этой функции члена не влияет на советы инструмента, управляемые вашим кодом. Это влияет только на инструмент отзыв управления [CWnd::EnableToolTips](#enabletooltips).
+> Использование этой функции – члена не влияет на подсказки инструментов, которыми управляет ваш код. Он влияет только на элемент управления «подсказка», управляемый [CWnd:: енаблетултипс](#enabletooltips).
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#73](../../mfc/reference/codesnippet/cpp/cwnd-class_12.cpp)]
 
-## <a name="cwndcenterwindow"></a><a name="centerwindow"></a>CWnd:CenterWindow
+## <a name="cwndcenterwindow"></a><a name="centerwindow"></a>CWnd:: Центервиндов
 
 Выравнивает окно по центру относительно его родительских окон.
 
@@ -1714,20 +1714,20 @@ void CenterWindow(CWnd* pAlternateOwner = NULL);
 
 ### <a name="parameters"></a>Параметры
 
-*pAlternateВладелец*<br/>
-Указатель на альтернативное окно, относительно которого оно будет по центру (кроме родительского окна).
+*палтернатеовнер*<br/>
+Указатель на альтернативное окно, относительно которого оно будет центрировано (кроме родительского окна).
 
 ### <a name="remarks"></a>Remarks
 
-Обычно вызывается из [CDialog::OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog) в центр диалоговых коробок относительно основного окна приложения. По умолчанию функции центры детских окон по отношению к их родительскому окну, и всплывающие окна по отношению к их владельцу. Если всплывающее окно не принадлежит, оно центрируется по отношению к экрану. Для центрировать окно по отношению к определенному окну, которое не является владельцем или родителем, параметр *pAlternateOwner* может быть установлен на действительное окно. Чтобы заставить центрирование относительно экрана, передайте значение, возвращенное [CWnd::GetDesktopWindow](#getdesktopwindow) как *pAlternateOwner.*
+Обычно вызывается из класса [CDialog:: онинитдиалог](../../mfc/reference/cdialog-class.md#oninitdialog) в центр диалоговых окон по отношению к главному окну приложения. По умолчанию функция центрирует дочерние окна относительно родительского окна, а всплывающие окна — относительно их владельца. Если всплывающее окно не принадлежит, оно центрируется относительно экрана. Чтобы центрировать окно относительно определенного окна, которое не является владельцем или родителем, параметр *палтернатеовнер* может быть установлен в допустимое окно. Чтобы принудительно выровнять по центру относительно экрана, передайте значение, возвращенное методом [CWnd:: жетдесктопвиндов](#getdesktopwindow) как *палтернатеовнер*.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#74](../../mfc/reference/codesnippet/cpp/cwnd-class_13.cpp)]
 
-## <a name="cwndchangeclipboardchain"></a><a name="changeclipboardchain"></a>CWnd::ChangeClipboardChain
+## <a name="cwndchangeclipboardchain"></a><a name="changeclipboardchain"></a>CWnd:: Чанжеклипбоардчаин
 
-Удаляет `CWnd` из цепочки Clipboard зрителей и делает окно, указанное `CWnd` *hWndNext* потомком предка в цепочке.
+Удаляет `CWnd` из цепочки средств просмотра буфера обмена и делает окно заданным, *хвнднекст* потомки `CWnd` предка в цепочке.
 
 ```
 BOOL ChangeClipboardChain(HWND hWndNext);
@@ -1735,16 +1735,16 @@ BOOL ChangeClipboardChain(HWND hWndNext);
 
 ### <a name="parameters"></a>Параметры
 
-*hWndNext*<br/>
-Идентифицирует окно, `CWnd` которое следует в цепочке Clipboard-viewer.
+*хвнднекст*<br/>
+Определяет окно, следующее `CWnd` в цепочке средства просмотра буфера обмена.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Имеет ненулевое значение в случае успешного выполнения, иначе — 0.
 
-## <a name="cwndcheckdlgbutton"></a><a name="checkdlgbutton"></a>CWnd::CheckDlgButton
+## <a name="cwndcheckdlgbutton"></a><a name="checkdlgbutton"></a>CWnd:: Чеккдлгбуттон
 
-Выбрав (устанавливает галочку рядом) или очищает (удаляет контрольный знак) кнопку, или она изменяет состояние кнопки с тремя состояниями.
+Выбирает (устанавливает галочку рядом с кнопкой) или очищает (удаляет галочку из) кнопки или изменяет состояние кнопки с тремя состояниями.
 
 ```cpp
 void CheckDlgButton(
@@ -1754,23 +1754,23 @@ void CheckDlgButton(
 
 ### <a name="parameters"></a>Параметры
 
-*nIDButton*<br/>
-Определяет кнопку для изменения.
+*нидбуттон*<br/>
+Задает изменяемую кнопку.
 
-*Nпроверьте*<br/>
-Определяет действия, которые необходимо предпринять. Если *nCheck* является ненулевой, функция `CheckDlgButton` участника устанавливает галостопную отметку рядом с кнопкой; если 0, контрольный знак удаляется. Для кнопок с тремя состояниями, если *nCheck* 2, состояние кнопки является неопределенным.
+*nДополнительные*<br/>
+Указывает действие, которое необходимо выполнить. Если *nДополнительные* имеет ненулевое значение, `CheckDlgButton` функция-член помещает флажок рядом с кнопкой; если значение равно 0, галочка снимается. Для кнопок с тремя состояниями, если *nДополнительные* имеет значение 2, состояние кнопки является неопределенным.
 
 ### <a name="remarks"></a>Remarks
 
-Функция `CheckDlgButton` отправляет [BM_SETCHECK](/windows/win32/Controls/bm-setcheck) сообщение на указанную кнопку.
+`CheckDlgButton`Функция отправляет [BM_SETCHECK](/windows/win32/Controls/bm-setcheck) сообщение указанной кнопке.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#75](../../mfc/reference/codesnippet/cpp/cwnd-class_14.cpp)]
 
-## <a name="cwndcheckradiobutton"></a><a name="checkradiobutton"></a>CWnd::CheckRadioButton
+## <a name="cwndcheckradiobutton"></a><a name="checkradiobutton"></a>CWnd:: Чеккрадиобуттон
 
-Выбирает (добавляет контрольный знак) заданную радиокнопку в группе и очищает (удаляет галочку) все остальные радиокнопки в группе.
+Выбирает (добавляет флажок) для данного переключателя в группе и очищает (снимает флажок с) всех остальных переключателей в группе.
 
 ```cpp
 void CheckRadioButton(
@@ -1781,26 +1781,26 @@ void CheckRadioButton(
 
 ### <a name="parameters"></a>Параметры
 
-*nIDFirstButton*<br/>
-Определяет идентификатор первой радиокнопки в группе.
+*нидфирстбуттон*<br/>
+Задает целочисленный идентификатор для первого переключателя в группе.
 
-*nIDLastButton*<br/>
-Определяет идентификатор всей этой кнопки радио в группе.
+*нидластбуттон*<br/>
+Задает целочисленный идентификатор последнего переключателя в группе.
 
-*nIDCheckButton*<br/>
-Определяет идентификатор бесхопозна кнопки радио, которая должна быть проверена.
+*нидчеккбуттон*<br/>
+Задает целочисленный идентификатор переключателя для проверки.
 
 ### <a name="remarks"></a>Remarks
 
-Функция `CheckRadioButton` отправляет [BM_SETCHECK](/windows/win32/Controls/bm-setcheck) сообщение на указанную кнопку радио.
+`CheckRadioButton`Функция отправляет [BM_SETCHECK](/windows/win32/Controls/bm-setcheck) сообщение указанному переключателю.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#76](../../mfc/reference/codesnippet/cpp/cwnd-class_15.cpp)]
 
-## <a name="cwndchildwindowfrompoint"></a><a name="childwindowfrompoint"></a>CWnd::ChildWindowFromPoint
+## <a name="cwndchildwindowfrompoint"></a><a name="childwindowfrompoint"></a>CWnd:: Чилдвиндовфромпоинт
 
-Определяет, какие окна ребенка, принадлежащие `CWnd` ребенку, содержат указанную точку.
+Определяет, какие из дочерних окон, принадлежащих к, содержат указанную точку, если таковые имеются `CWnd` .
 
 ```
 CWnd* ChildWindowFromPoint(POINT point) const;
@@ -1812,34 +1812,34 @@ CWnd* ChildWindowFromPoint(
 
 ### <a name="parameters"></a>Параметры
 
-*Точки*<br/>
-Определяет координаты клиента точки, которые должны быть протестированы.
+*точки*<br/>
+Указывает клиентские координаты проверяемой точки.
 
-*nфлаги*<br/>
-Определяет, какие окна ребенка пропустить. Этот параметр может быть комбинацией следующих значений:
+*нфлагс*<br/>
+Указывает, какие дочерние окна следует пропустить. Этот параметр может быть сочетанием следующих значений:
 
 |Значение|Значение|
 |-----------|-------------|
-|CWP_ALL|Не пропускайте детские окна|
-|CWP_SKIPINVISIBLE|Пропустить невидимые детские окна|
-|CWP_SKIPDISABLED|Пропустить детские окна для инвалидов|
-|CWP_SKIPTRANSPARENT|Пропустить прозрачные детские окна|
+|CWP_ALL|Не пропускать дочерние окна|
+|CWP_SKIPINVISIBLE|Пропустить невидимые дочерние окна|
+|CWP_SKIPDISABLED|Пропустить отключенные дочерние окна|
+|CWP_SKIPTRANSPARENT|Пропустить прозрачные дочерние окна|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Идентифицирует окно ребенка, содержащее точку. Это NULL, если данный пункт находится за пределами клиентской области. Если точка находится в зоне клиента, но не `CWnd` содержится в окне ребенка, возвращается.
+Определяет дочернее окно, содержащее точку. Имеет значение NULL, если заданная точка находится за пределами клиентской области. Если точка находится в клиентской области, но не содержится в любом дочернем окне, `CWnd` возвращается значение.
 
-Эта функция участника возвращает скрытое или отключенное окно ребенка, содержащее указанную точку.
+Эта функция-член возвратит скрытое или отключенное дочернее окно, содержащее указанную точку.
 
-Более одного окна может содержать заданную точку. Однако эта функция `CWnd`возвращает только первое окно, содержащее точку.
+Заданная точка может содержаться в нескольких окнах. Однако эта функция возвращает только `CWnd` * первого обнаруженного окна, содержащего точку.
 
-Возвращенное `CWnd`может быть временным и не должно храниться для последующего использования.
+`CWnd`Возвращаемый * может быть временным и не должен храниться для последующего использования.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#77](../../mfc/reference/codesnippet/cpp/cwnd-class_16.cpp)]
 
-## <a name="cwndclienttoscreen"></a><a name="clienttoscreen"></a>CWnd::ClientToScreen
+## <a name="cwndclienttoscreen"></a><a name="clienttoscreen"></a>CWnd:: Клиенттоскрин
 
 Преобразует клиентские координаты указанной точки или прямоугольника на экране в экранные координаты.
 
@@ -1849,23 +1849,23 @@ void ClientToScreen(LPPOINT lpPoint) const;  void ClientToScreen(LPRECT lpRect) 
 
 ### <a name="parameters"></a>Параметры
 
-*lpPoint*<br/>
-Указывает на структуру `CPoint` или объект [POINT,](/windows/win32/api/windef/ns-windef-point) содержащий координаты клиента, которые должны быть преобразованы.
+*лппоинт*<br/>
+Указывает на [структуру точек](/windows/win32/api/windef/ns-windef-point) или `CPoint` объект, содержащий клиентские координаты для преобразования.
 
-*lpRect*<br/>
-Указывает на структуру `CRect` или объект [RECT,](/windows/win32/api/windef/ns-windef-rect) содержащий координаты клиента, которые должны быть преобразованы.
+*лпрект*<br/>
+Указывает на [структуру](/windows/win32/api/windef/ns-windef-rect) или объект Rect `CRect` , содержащий клиентские координаты для преобразования.
 
 ### <a name="remarks"></a>Remarks
 
-Функция `ClientToScreen` члена использует координаты `RECT` клиента `CPoint` в `CRect` структуре `POINT` или объекте, на который указывает *lpPoint* или *lpRect,* для вычисления новых координат экрана; затем он заменяет координаты в структуре новыми координатами. Новые координаты экрана относительно верхнего левого угла дисплея системы.
+`ClientToScreen`Функция с членом использует координаты клиента в `POINT` структуре или или `RECT` `CPoint` объект или, `CRect` на который указывает *лппоинт* или *лпрект* для вычислений новых экранных координат, а затем заменяет координаты в структуре новыми координатами. Новые экранные координаты задаются относительно левого верхнего угла отображения системы.
 
-Функция `ClientToScreen` участника предполагает, что данная точка или прямоугольник находится в координатах клиента.
+`ClientToScreen`Функция-член предполагает, что заданная точка или прямоугольник находится в клиентских координатах.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#78](../../mfc/reference/codesnippet/cpp/cwnd-class_17.cpp)]
 
-## <a name="cwndclosewindow"></a><a name="closewindow"></a>CWnd::CloseWindow
+## <a name="cwndclosewindow"></a><a name="closewindow"></a>CWnd:: Клосевиндов
 
 Сворачивает окно.
 
@@ -1875,11 +1875,11 @@ void CloseWindow();
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция члена эмулирует функциональность функции [CloseWindow](/windows/win32/api/winuser/nf-winuser-closewindow), как описано в Windows SDK.
+Эта функция члена эмулирует функциональность функции [клосевиндов](/windows/win32/api/winuser/nf-winuser-closewindow), как описано в Windows SDK.
 
-## <a name="cwndcontinuemodal"></a><a name="continuemodal"></a>CWnd::ПродолжитьМод
+## <a name="cwndcontinuemodal"></a><a name="continuemodal"></a>CWnd:: Континуемодал
 
-Эта функция члена вызывается [RunModalLoop,](#runmodalloop) чтобы определить, когда модоальное состояние должно быть выведено.
+Эта функция-член вызывается методом [RunModalLoop](#runmodalloop) , чтобы определить, когда следует выйти из модального состояния.
 
 ```
 virtual BOOL ContinueModal();
@@ -1887,15 +1887,15 @@ virtual BOOL ContinueModal();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Nonzero, если модальный цикл будет продолжен; 0, когда [называется EndModalLoop.](#endmodalloop)
+Ненулевое значение, если модальный цикл должен быть продолжен; 0 при вызове [ендмодаллуп](#endmodalloop) .
 
 ### <a name="remarks"></a>Remarks
 
-По умолчанию он возвращается `EndModalLoop` без нуля до тех пор, пока не будет вызван.
+По умолчанию он возвращает ненулевое значение до `EndModalLoop` вызова метода.
 
-## <a name="cwndcreate"></a><a name="create"></a>CWnd::Создание
+## <a name="cwndcreate"></a><a name="create"></a>CWnd:: Create
 
-Создает указанное окно дочернего ребенка и прикрепляет его к объекту [CWnd.](../../mfc/reference/cwnd-class.md)
+Создает указанное дочернее окно и прикрепляет его к объекту [CWnd](../../mfc/reference/cwnd-class.md) .
 
 ```
 virtual BOOL Create(
@@ -1910,47 +1910,47 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszClassName*<br/>
-(в) Указатель на строку с нулевым завершением, содержащую имя зарегистрированного класса оконного окна системы; или название заданного класса оконного окна системы.
+*лпсзкласснаме*<br/>
+окне Указатель на строку, завершающуюся нулем, которая содержит имя зарегистрированного системного класса окна; или имя стандартного класса системного окна.
 
-*lpszWindowName*<br/>
-(в) Указатель на строку с нулевым завершением, содержащую имя отображения окна; в противном случае NULL без имени отображения окна.
+*лпсзвиндовнаме*<br/>
+окне Указатель на строку, завершающуюся нулем, которая содержит отображаемое имя окна; в противном случае NULL не отображает отображаемое имя окна.
 
-*dwStyle*<br/>
-(в) Bitwise комбинация (OR) [стилей окна](styles-used-by-mfc.md#window-styles). Вариант WS_POPUP не является действительным стилем.
+*двстиле*<br/>
+окне Побитовое сочетание (или) [стилей окна](styles-used-by-mfc.md#window-styles). Параметр WS_POPUP не является допустимым стилем.
 
 *rect*<br/>
-(в) Размер и расположение окна относительно верхнего левого угла родительского окна.
+окне Размер и расположение окна относительно левого верхнего угла родительского окна.
 
-*pParentWnd*<br/>
-(в) Указатель на родительское окно.
+*ппарентвнд*<br/>
+окне Указатель на родительское окно.
 
 *nID*<br/>
-(в) Идентификатор окна.
+окне ИДЕНТИФИКАТОР окна.
 
 *pContext*<br/>
-(в) Указатель на структуру [CCreateContext,](../../mfc/reference/ccreatecontext-structure.md) которая используется для настройки архитектуры просмотра документов для приложения.
+окне Указатель на структуру [ккреатеконтекст](../../mfc/reference/ccreatecontext-structure.md) , которая используется для настройки архитектуры представления документа для приложения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-ПРАВДА, если метод был успешным; в противном случае FALSE.
+Значение TRUE, если метод выполнен успешно; в противном случае — FALSE.
 
 ### <a name="remarks"></a>Remarks
 
 > [!WARNING]
-> `CWnd::PreCreateWindow`теперь присваивает `CREATESTRUCT` члену hMenu своего параметра **этому** указателю, если меню NULL, а стиль содержит WS_CHILD. Для правильной функциональности убедитесь, что ваш элемент управления диалогом имеет идентификатор, который не является NULL.
+> `CWnd::PreCreateWindow`Теперь назначает элемент hMenu своего `CREATESTRUCT` параметра **`this`** указателю, если меню имеет значение null, а стиль содержит WS_CHILD. Для правильной работы убедитесь, что элемент управления диалогового окна имеет идентификатор, отличный от NULL.
 >
-> Это изменение фиксирует сбой в сценариях управляемого/родного интерпа. Заявление TRACE `CWnd::Create` в предупреждении разработчика проблемы.
+> Это изменение устраняет сбой в сценариях управляемого и машинного взаимодействия. Оператор TRACE в `CWnd::Create` предупреждает разработчика о проблеме.
 
-Используйте функцию [AfxRegisterWndClass](../../mfc/reference/application-information-and-management.md#afxregisterwndclass) для регистрации классов окон. Классы оконов с определенными пользователями доступны в модуле, где они зарегистрированы.
+Используйте функцию [афксрегистервндкласс](../../mfc/reference/application-information-and-management.md#afxregisterwndclass) для регистрации классов окон. Пользовательские классы окон доступны в модуле, в котором они зарегистрированы.
 
-[CWnd::OnCreate](#oncreate) называется до `Create` возвращения метода и до того, как окно становится видимым.
+Метод [CWnd:: OnCreate](#oncreate) вызывается перед `Create` возвратом метода и до того, как окно становится видимым.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#79](../../mfc/reference/codesnippet/cpp/cwnd-class_18.cpp)]
 
-## <a name="cwndcreateaccessibleproxy"></a><a name="createaccessibleproxy"></a>CWnd::СозданиеДоступнопрокси
+## <a name="cwndcreateaccessibleproxy"></a><a name="createaccessibleproxy"></a>CWnd:: Креатеакцессиблепрокси
 
 Создает прокси-сервер Active Accessibility для указанного объекта.
 
@@ -1964,25 +1964,25 @@ virtual HRESULT CreateAccessibleProxy(
 ### <a name="parameters"></a>Параметры
 
 *wParam*<br/>
-Идентифицирует объект, доступ к нему осуществляется прокси Active Accessibility. Может быть одним из следующих значений
+Определяет объект, к которому обращается Active Accessibility прокси-сервер. Может принимать одно из следующих значений:
 
 |Значение|Значение|
 |-----------|-------------|
-|OBJID_CLIENT|Относится к клиентской зоне окна.|
+|OBJID_CLIENT|Ссылается на клиентскую область окна.|
 
 *lParam*<br/>
-Предоставляет дополнительную информацию, зависящая от сообщений.
+Предоставляет дополнительные сведения, зависящие от сообщений.
 
-*pResult*<br/>
-Указатель на LRESULT, который хранит код результата.
+*пресулт*<br/>
+Указатель на LRESULT, в котором хранится код результата.
 
 ### <a name="remarks"></a>Remarks
 
 Создает прокси-сервер Active Accessibility для указанного объекта.
 
-## <a name="cwndcreatecaret"></a><a name="createcaret"></a>CWnd::CreateCaret
+## <a name="cwndcreatecaret"></a><a name="createcaret"></a>CWnd:: Креатекарет
 
-Создает новую форму для системы caret и утверждает, что право собственности на caret.
+Создает новую фигуру для системного курсора и владельца курсора.
 
 ```cpp
 void CreateCaret(CBitmap* pBitmap);
@@ -1990,24 +1990,24 @@ void CreateCaret(CBitmap* pBitmap);
 
 ### <a name="parameters"></a>Параметры
 
-*pBitmap*<br/>
-Определяет бит-карту, которая определяет форму caret.
+*пбитмап*<br/>
+Определяет точечный рисунок, определяющий фигуру курсора.
 
 ### <a name="remarks"></a>Remarks
 
-Бит-карта должна быть ранее создана [cBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap) функции члена, [функция CreateDIBitmap](/windows/win32/api/wingdi/nf-wingdi-createdibitmap) Windows, или [CBitmap::LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap) член функции.
+Точечный рисунок должен быть создан ранее функцией члена [CBitmap:: креатебитмап](../../mfc/reference/cbitmap-class.md#createbitmap) , функцией Windows [креатедибитмап](/windows/win32/api/wingdi/nf-wingdi-createdibitmap) или функцией члена [CBitmap:: лоадбитмап](../../mfc/reference/cbitmap-class.md#loadbitmap) .
 
-`CreateCaret`автоматически разрушает предыдущую форму caret, если таковые имеется, независимо от того, какое окно владеет каретой. После создания, карет изначально скрыты. Чтобы показать карету, должна быть вызвана функция участника [ShowCaret.](#showcaret)
+`CreateCaret`автоматически удаляет предыдущую фигуру курсора, если она есть, независимо от того, какое окно владеет курсором. После создания курсор изначально скрыт. Чтобы отобразить курсор, необходимо вызвать функцию члена [шовкарет](#showcaret) .
 
-Системный карет является общим ресурсом. `CWnd`должны создавать карету только тогда, когда он имеет входиную фокус ировку или активен. Он должен уничтожить карету, прежде чем он теряет входинфокус или становится неактивным.
+Системный курсор — это общий ресурс. `CWnd`должен создавать курсор, только если он имеет фокус ввода или активен. Он должен уничтожить курсор до того, как он потерял фокус ввода или стал неактивным.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#80](../../mfc/reference/codesnippet/cpp/cwnd-class_19.cpp)]
 
-## <a name="cwndcreatecontrol"></a><a name="createcontrol"></a>CWnd::CreateControl
+## <a name="cwndcreatecontrol"></a><a name="createcontrol"></a>CWnd:: CreateControl
 
-Используйте эту функцию участника для создания элемента управления ActiveX, `CWnd` который будет представлен в программе MFC объектом.
+Эта функция-член используется для создания элемента управления ActiveX, который будет представлен в программе MFC `CWnd` объектом.
 
 ```
 BOOL CreateControl(
@@ -2047,41 +2047,41 @@ BOOL CreateControl(
 
 ### <a name="parameters"></a>Параметры
 
-*pszClass*<br/>
-Эта строка может содержать OLE "короткое имя" (ProgID) для класса, например, "CIRC3. Circ3Ctrl.1". Имя должно соответствовать тому же имени, зарегистрированному элементом управления. Кроме того, строка может содержать строку формы CLSID, содержащейся в скобках, например, "9DBAFCCF-592F-101B-85CE-00608CEC297B". В любом `CreateControl` случае преобразует строку в соответствующий идентификатор класса.
+*псзкласс*<br/>
+Эта строка может содержать "короткое имя" (ProgID) для класса, например "CIRC3". Circ3Ctrl. 1 ". Имя должно совпадать с именем, зарегистрированным элементом управления. Кроме того, строка может содержать форму строки CLSID, содержащуюся в фигурных скобках, например "{9DBAFCCF-592F-101B-85CE-00608CEC297B}". В любом случае `CreateControl` преобразует строку в соответствующий идентификатор класса.
 
-*pszWindowName*<br/>
-Указатель на текст, который отображается в элементе управления. Устанавливает значение свойства подписи или текста элемента управления (если таковое имеется). Если NULL, свойство подписи или текста элемента управления не изменяется.
+*псзвиндовнаме*<br/>
+Указатель на текст, отображаемый в элементе управления. Задает значение свойства Caption или Text элемента управления (если оно имеется). Если значение равно NULL, свойство Caption или Text элемента управления не изменяется.
 
-*dwStyle*<br/>
-Стили Windows. Доступные стили перечислены в Примечаниях.
+*двстиле*<br/>
+Стили Windows. Доступные стили перечислены в разделе Примечания.
 
 *rect*<br/>
-Определяет размер и положение элемента управления. Это может быть либо объект [CRect,](../../atl-mfc-shared/reference/crect-class.md) либо [структура RECT.](/windows/win32/api/windef/ns-windef-rect)
+Задает размер и расположение элемента управления. Это может быть либо объект [крект](../../atl-mfc-shared/reference/crect-class.md) , либо [Структура Rect](/windows/win32/api/windef/ns-windef-rect).
 
-*Ppt*<br/>
-Указывает на структуру `CPoint` или объект [POINT,](/windows/win32/api/windef/ns-windef-point) содержащий верхний левый угол элемента управления.
+*PowerPoint*<br/>
+Указывает на [структуру точек](/windows/win32/api/windef/ns-windef-point) или `CPoint` объект, содержащий левый верхний угол элемента управления.
 
-*pSize*<br/>
-Указывает на структуру `CSize` или объект [СИЗЕ,](/windows/win32/api/windef/ns-windef-size) содержащий размер элемента управления
+*псизе*<br/>
+Указывает на структуру [SIZE](/windows/win32/api/windef/ns-windef-size) или объект размера `CSize` , который содержит размер элемента управления
 
-*pParentWnd*<br/>
-Определяет родительское окно элемента управления. Она не должна быть NULL.
+*ппарентвнд*<br/>
+Указывает родительское окно элемента управления. Оно не должно иметь значение NULL.
 
 *nID*<br/>
-Уведомляет идентификатор элемента управления.
+Указывает идентификатор элемента управления.
 
-*pPersist*<br/>
-Указатель на [CFile,](../../mfc/reference/cfile-class.md) содержащий постоянное состояние для управления. Значение по умолчанию является NULL, что указывает на то, что элемент управления инициализирует себя без восстановления его состояния от постоянного хранилища. Если не NULL, то он должен `CFile`быть указателем на объект, полученный в виде постоянных данных элемента управления, в виде потока или хранилища. Эти данные могли быть сохранены при предыдущей активации клиента. Может `CFile` содержать другие данные, но должен иметь свой указатель на чтение-запись, установленный `CreateControl`на первый байт стойких данных во время вызова.
+*пперсист*<br/>
+Указатель на [кфиле](../../mfc/reference/cfile-class.md) , содержащий постоянное состояние для элемента управления. Значение по умолчанию равно NULL, что означает, что элемент управления инициализируется без восстановления состояния из постоянного хранилища. Если значение не равно NULL, это должен быть указатель на `CFile` объект, производный от, который содержит постоянные данные элемента управления, в виде потока или хранилища. Эти данные могли быть сохранены в предыдущей активации клиента. Объект `CFile` может содержать другие данные, но его указатель для чтения и записи должен быть установлен на первый байт постоянных данных во время вызова `CreateControl` .
 
-*bХранение*<br/>
-Указывает, следует ли интерпретировать данные в *pPersist* как данные IStorage или IStream. Если данные в *pPersist* является хранилищем, *bStorage* должно быть правдой. Если данные в *pPersist* является потоком, *bStorage* должен быть FALSE. Значение по умолчанию — FALSE.
+*бстораже*<br/>
+Указывает, должны ли данные в *пперсист* интерпретироваться как данные IStorage или IStream. Если данные в *пперсист* являются хранилищем, *бстораже* должно иметь значение true. Если данные в *пперсист* являются потоком, *бстораже* должен иметь значение false. Значение по умолчанию — FALSE.
 
-*bstrLicKey*<br/>
-Дополнительные данные ключей лицензии. Эти данные необходимы только для создания элементов управления, требующих ключа лицензии времени выполнения. Если элемент управления поддерживает лицензирование, необходимо предоставить ключ лицензии для создания элемента управления для достижения успеха. Значение по умолчанию — NULL.
+*бстрликкэй*<br/>
+Необязательные данные лицензионного ключа. Эти данные необходимы только для создания элементов управления, требующих лицензионного ключа во время выполнения. Если элемент управления поддерживает лицензирование, необходимо предоставить лицензионный ключ, чтобы создать элемент управления для выполнения. Значение по умолчанию — NULL.
 
-*clsid*<br/>
-Уникальный идентификатор класса управления.
+*этому*<br/>
+Уникальный идентификатор класса элемента управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -2089,27 +2089,27 @@ BOOL CreateControl(
 
 ### <a name="remarks"></a>Remarks
 
-`CreateControl`является прямым аналогом [CWnd::Создание](#create) функции, которая `CWnd`создает окно для . `CreateControl`создает элемент управления ActiveX вместо обычного окна.
+`CreateControl`— Это прямая аналоговая функция [CWnd:: Create](#create) , которая создает окно для `CWnd` . `CreateControl`создает элемент управления ActiveX вместо обычного окна.
 
-Поддерживается только подмножество флагов Windows *dwStyle* для: `CreateControl`
+Только подмножество флагов Windows *двстиле* поддерживается для следующих компонентов `CreateControl` :
 
-- WS_VISIBLE создает окно, которое изначально видно. Требуется, если вы хотите, чтобы элемент управления был виден немедленно, как обычные окна.
+- WS_VISIBLE создает окно, которое изначально видимо. Требуется, если необходимо, чтобы элемент управления был видимым немедленно, например обычным окнам.
 
-- WS_DISABLED создает окно, которое изначально отключено. Отключенное окно не может получать ввод от пользователя. Может быть установлен, если элемент управления имеет свойство enabled.
+- WS_DISABLED создает окно, которое изначально отключено. Отключенное окно не может принимать входные данные от пользователя. Может быть задан, если элемент управления имеет свойство Enabled.
 
-- WS_BORDER создает окно с тонкой линией границы. Может быть установлен, если контроль имеет свойство BorderStyle.
+- WS_BORDER создает окно с тонкой линией. Может быть задан, если элемент управления имеет свойство BorderStyle.
 
-- WS_GROUP определяет первый элемент управления группой элементов управления. Пользователь может изменить фокус клавиатуры с одного элемента управления в группе на другой, используя клавиши направления. Все элементы управления, определяемые со стилем WS_GROUP после первого элемента управления принадлежат одной и той же группе. Следующий элемент управления со стилем WS_GROUP завершает группу и запускает следующую группу.
+- WS_GROUP задает первый элемент управления группы элементов управления. Пользователь может изменить фокус клавиатуры с одного элемента управления в группе на следующий с помощью клавиш направления. Все элементы управления, определенные с WS_GROUP стилем после первого элемента управления, принадлежат к одной группе. Следующий элемент управления с стилем WS_GROUP завершает группу и запускает следующую группу.
 
-- WS_TABSTOP определяет элемент управления, который может получать фокус клавиатуры, когда пользователь нажимает на ключ TAB. Нажатие клавиши TAB изменяет фокус клавиатуры на следующий элемент управления стилем WS_TABSTOP.
+- WS_TABSTOP указывает элемент управления, который может получать фокус клавиатуры, когда пользователь нажимает клавишу TAB. При нажатии клавиши TAB фокус клавиатуры меняется на следующий элемент управления стиля WS_TABSTOP.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#81](../../mfc/reference/codesnippet/cpp/cwnd-class_20.h)]
 
-## <a name="cwndcreateex"></a><a name="createex"></a>CWnd::CreateEx
+## <a name="cwndcreateex"></a><a name="createex"></a>CWnd:: Креатикс
 
-Создает указанное окно и прикрепляет его к объекту. `CWnd`
+Создает указанное окно и прикрепляет его к `CWnd` объекту.
 
 ```
 virtual BOOL CreateEx(
@@ -2138,74 +2138,74 @@ virtual BOOL CreateEx(
 
 ### <a name="parameters"></a>Параметры
 
-*dwExStyle*<br/>
-Bitwise комбинация (OR) [расширенных стилей окна;](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) в противном случае NULL для расширенного окна по умолчанию.
+*двексстиле*<br/>
+Побитовое сочетание (или) [расширенных стилей окон](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles); в противном случае — NULL для расширенного стиля окна по умолчанию.
 
-*lpszClassName*<br/>
-Указатель на строку с нулевым завершением, содержащую имя зарегистрированного класса оконного окна системы; или название заданного класса оконного окна системы.
+*лпсзкласснаме*<br/>
+Указатель на строку, завершающуюся нулем, которая содержит имя зарегистрированного системного класса окна; или имя стандартного класса системного окна.
 
-*lpszWindowName*<br/>
-Указатель на строку с нулевым завершением, содержащую имя отображения окна; в противном случае NULL без имени отображения окна.
+*лпсзвиндовнаме*<br/>
+Указатель на строку, завершающуюся нулем, которая содержит отображаемое имя окна; в противном случае NULL не отображает отображаемое имя окна.
 
-*dwStyle*<br/>
-Bitwise комбинация (OR) [стилей окна;](styles-used-by-mfc.md#window-styles) в противном случае NULL для стиля окна по умолчанию.
+*двстиле*<br/>
+Побитовое сочетание (или) [стилей окна](styles-used-by-mfc.md#window-styles); в противном случае значение NULL для стиля окна по умолчанию.
 
 *x*<br/>
-Начальное горизонтальное расстояние окна от левой стороны экрана или родительского окна.
+Начальное расстояние по горизонтали окна с левой стороны экрана или родительского окна.
 
-*Y*<br/>
-Начальное вертикальное расстояние окна от верхней части экрана или родительского окна.
+*&*<br/>
+Начальное расстояние по вертикали окна от верхнего края экрана или родительского окна.
 
-*nWidth*<br/>
-Ширина, в пикселях, окна.
+*нвидс*<br/>
+Ширина окна в пикселях.
 
-*nВысота*<br/>
-Высота, в пикселях, окна.
+*нхеигхт*<br/>
+Высота окна в пикселях.
 
-*hwndParent*<br/>
-Для окна ребенка ручка к родительскому окну; в противном случае, ручка окна владельца, если окно имеет владельца.
+*хвндпарент*<br/>
+Для дочернего окна — это маркер родительского окна; в противном случае — маркер окна владельца, если у окна есть владелец.
 
-*nIDorHMenu*<br/>
-Для окна ребенка идентификатор окна; в противном случае идентификатор меню для окна.
+*нидорхмену*<br/>
+Для дочернего окна — идентификатор окна; в противном случае — идентификатор меню для окна.
 
-*lpParam*<br/>
-Указатель на пользовательские данные, которые передаются [в CWnd::OnCreate](#oncreate) метод в поле *lpCreateParams.*
+*лппарам*<br/>
+Указатель на данные пользователя, которые передаются в метод [CWnd:: OnCreate](#oncreate) в поле *лпкреатепарамс* .
 
 *rect*<br/>
 Размер и расположение окна относительно экрана или родительского окна.
 
-*pParentWnd*<br/>
-Для окна ребенка указатель на родительское окно; в противном случае, указатель на окно владельца, если окно имеет владельца.
+*ппарентвнд*<br/>
+Для дочернего окна — Указатель на родительское окно; в противном случае — указатель на окно владельца, если у окна есть владелец.
 
 *nID*<br/>
-Для окна ребенка идентификатор окна; в противном случае идентификатор меню для окна.
+Для дочернего окна — идентификатор окна; в противном случае — идентификатор меню для окна.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-ПРАВДА, если метод был успешным; в противном случае FALSE.
+Значение TRUE, если метод выполнен успешно; в противном случае — FALSE.
 
 ### <a name="remarks"></a>Remarks
 
 > [!WARNING]
-> `CWnd::PreCreateWindow`теперь присваивает `CREATESTRUCT` члену hMenu своего параметра **этому** указателю, если меню NULL, а стиль содержит WS_CHILD. Для правильной функциональности убедитесь, что ваш элемент управления диалогом имеет идентификатор, который не является NULL.
+> `CWnd::PreCreateWindow`Теперь назначает элемент hMenu своего `CREATESTRUCT` параметра **`this`** указателю, если меню имеет значение null, а стиль содержит WS_CHILD. Для правильной работы убедитесь, что элемент управления диалогового окна имеет идентификатор, отличный от NULL.
 >
-> Это изменение фиксирует сбой в сценариях управляемого/родного интерпа. Заявление `TRACE` в `CWnd::Create` предупреждении разработчика о проблеме.
+> Это изменение устраняет сбой в сценариях управляемого и машинного взаимодействия. `TRACE`Оператор в `CWnd::Create` предупреждает разработчика о проблеме.
 
-Стиль расширенного окна по умолчанию является WS_EX_LEFT. Стиль окна по умолчанию WS_OVERLAPPED.
+Расширенный стиль окна по умолчанию — WS_EX_LEFT. Стиль окна по умолчанию — WS_OVERLAPPED.
 
-Используйте функцию [AfxRegisterWndClass](../../mfc/reference/application-information-and-management.md#afxregisterwndclass) для регистрации классов окон. Классы оконов с определенными пользователями доступны в модуле, где они зарегистрированы.
+Используйте функцию [афксрегистервндкласс](../../mfc/reference/application-information-and-management.md#afxregisterwndclass) для регистрации классов окон. Пользовательские классы окон доступны в модуле, в котором они зарегистрированы.
 
-Размеры для детских окон относительно верхнего левого угла клиентской области родительского окна. Размеры окон верхнего уровня относительно верхнего левого угла экрана.
+Размеры дочерних окон задаются относительно левого верхнего угла клиентской области родительского окна. Измерения для окон верхнего уровня задаются относительно левого верхнего угла экрана.
 
-[CWnd::OnCreate](#oncreate) называется до `CreateEx` возвращения метода и до того, как окно становится видимым.
+Метод [CWnd:: OnCreate](#oncreate) вызывается перед `CreateEx` возвратом метода и до того, как окно становится видимым.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#82](../../mfc/reference/codesnippet/cpp/cwnd-class_21.cpp)]
 
-## <a name="cwndcreategraycaret"></a><a name="creategraycaret"></a>CWnd::CreateGrayCaret
+## <a name="cwndcreategraycaret"></a><a name="creategraycaret"></a>CWnd:: Креатеграйкарет
 
-Создает серый прямоугольник для системы caret и утверждает, что право собственности на caret.
+Создает серый прямоугольник для системного курсора и владение утверждениями курсора.
 
 ```cpp
 void CreateGrayCaret(
@@ -2215,31 +2215,31 @@ void CreateGrayCaret(
 
 ### <a name="parameters"></a>Параметры
 
-*nWidth*<br/>
-Определяет ширину кареты (в логических единицах). Если этот параметр раподраён 0, ширина устанавливается на системно-определяемую ширину оконной границы.
+*нвидс*<br/>
+Задает ширину курсора (в логических единицах). Если этот параметр равен 0, то ширина задается системой, заданной в окне.
 
-*nВысота*<br/>
-Определяет высоту кареты (в логических единицах). Если этот параметр раподраён 0, высота устанавливается на системно-определяемую высоту оконно-пограничной.
+*нхеигхт*<br/>
+Задает высоту курсора (в логических единицах). Если этот параметр равен 0, то высота устанавливается в соответствии с заданной системой высотой границы окна.
 
 ### <a name="remarks"></a>Remarks
 
-Форма кареты может быть линией или блоком.
+Фигура курсора может быть строкой или блоком.
 
-Параметры *nWidth* и *nHeight* определяют ширину и высоту caret (в логических единицах); точная ширина и высота (в пикселях) зависят от режима отображения.
+Параметры *нвидс* и *нхеигхт* задают ширину и высоту курсора (в логических единицах); Точная ширина и высота (в пикселях) зависят от режима сопоставления.
 
-Ширина или высота оконной границы системы может быть получена функцией [GetSystemMetrics](/windows/win32/api/winuser/nf-winuser-getsystemmetrics) Windows с SM_CXBORDER и SM_CYBORDER индексами. Использование ширины или высоты границы окна гарантирует, что карет будет виден на дисплее с высоким разрешением.
+В функции Windows [жетсистемметрикс](/windows/win32/api/winuser/nf-winuser-getsystemmetrics) можно получить ширину или высоту окна системы с индексами SM_CXBORDER и SM_CYBORDER. Использование ширины окна и высоты гарантирует, что курсор будет отображаться на дисплее с высоким разрешением.
 
-Функция `CreateGrayCaret` члена автоматически разрушает предыдущую форму caret, если такая имеется, независимо от того, какое окно владеет каретой. После создания, карет изначально скрыты. Чтобы показать карету, должна быть вызвана функция участника [ShowCaret.](#showcaret)
+`CreateGrayCaret`Функция – член автоматически удаляет предыдущую фигуру курсора, если она есть, независимо от того, какое окно владеет курсором. После создания курсор изначально скрыт. Чтобы отобразить курсор, необходимо вызвать функцию члена [шовкарет](#showcaret) .
 
-Системный карет является общим ресурсом. `CWnd`должны создавать карету только тогда, когда он имеет входиную фокус ировку или активен. Он должен уничтожить карету, прежде чем он теряет входинфокус или становится неактивным.
+Системный курсор — это общий ресурс. `CWnd`должен создавать курсор, только если он имеет фокус ввода или активен. Он должен уничтожить курсор до того, как он потерял фокус ввода или стал неактивным.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#83](../../mfc/reference/codesnippet/cpp/cwnd-class_22.cpp)]
 
-## <a name="cwndcreatesolidcaret"></a><a name="createsolidcaret"></a>CWnd::CreateSolidCaret
+## <a name="cwndcreatesolidcaret"></a><a name="createsolidcaret"></a>CWnd:: Креатесолидкарет
 
-Создает сплошной прямоугольник для системы caret и утверждает, что право собственности на caret.
+Создает сплошной прямоугольник для системного курсора и владельца курсора.
 
 ```cpp
 void CreateSolidCaret(
@@ -2249,29 +2249,29 @@ void CreateSolidCaret(
 
 ### <a name="parameters"></a>Параметры
 
-*nWidth*<br/>
-Определяет ширину кареты (в логических единицах). Если этот параметр раподраён 0, ширина устанавливается на системно-определяемую ширину оконной границы.
+*нвидс*<br/>
+Задает ширину курсора (в логических единицах). Если этот параметр равен 0, то ширина задается системой, заданной в окне.
 
-*nВысота*<br/>
-Определяет высоту кареты (в логических единицах). Если этот параметр раподраён 0, высота устанавливается на системно-определяемую высоту оконно-пограничной.
+*нхеигхт*<br/>
+Задает высоту курсора (в логических единицах). Если этот параметр равен 0, то высота устанавливается в соответствии с заданной системой высотой границы окна.
 
 ### <a name="remarks"></a>Remarks
 
-Форма кареты может быть линией или блоком.
+Фигура курсора может быть строкой или блоком.
 
-Параметры *nWidth* и *nHeight* определяют ширину и высоту caret (в логических единицах); точная ширина и высота (в пикселях) зависят от режима отображения.
+Параметры *нвидс* и *нхеигхт* задают ширину и высоту курсора (в логических единицах); Точная ширина и высота (в пикселях) зависят от режима сопоставления.
 
-Ширина или высота оконной границы системы может быть получена функцией [GetSystemMetrics](/windows/win32/api/winuser/nf-winuser-getsystemmetrics) Windows с SM_CXBORDER и SM_CYBORDER индексами. Использование ширины или высоты границы окна гарантирует, что карет будет виден на дисплее с высоким разрешением.
+В функции Windows [жетсистемметрикс](/windows/win32/api/winuser/nf-winuser-getsystemmetrics) можно получить ширину или высоту окна системы с индексами SM_CXBORDER и SM_CYBORDER. Использование ширины окна и высоты гарантирует, что курсор будет отображаться на дисплее с высоким разрешением.
 
-Функция `CreateSolidCaret` члена автоматически разрушает предыдущую форму caret, если такая имеется, независимо от того, какое окно владеет каретой. После создания, карет изначально скрыты. Чтобы показать карету, должна быть вызвана функция участника [ShowCaret.](#showcaret)
+`CreateSolidCaret`Функция – член автоматически удаляет предыдущую фигуру курсора, если она есть, независимо от того, какое окно владеет курсором. После создания курсор изначально скрыт. Чтобы отобразить курсор, необходимо вызвать функцию члена [шовкарет](#showcaret) .
 
-Системный карет является общим ресурсом. `CWnd`должны создавать карету только тогда, когда он имеет входиную фокус ировку или активен. Он должен уничтожить карету, прежде чем он теряет входинфокус или становится неактивным.
+Системный курсор — это общий ресурс. `CWnd`должен создавать курсор, только если он имеет фокус ввода или активен. Он должен уничтожить курсор до того, как он потерял фокус ввода или стал неактивным.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#84](../../mfc/reference/codesnippet/cpp/cwnd-class_23.cpp)]
 
-## <a name="cwndcwnd"></a><a name="cwnd"></a>CWnd::CWnd
+## <a name="cwndcwnd"></a><a name="cwnd"></a>CWnd:: CWnd
 
 Формирует объект `CWnd`.
 
@@ -2281,9 +2281,9 @@ CWnd();
 
 ### <a name="remarks"></a>Remarks
 
-Окно Windows не создается и не прикрепляется до тех пор, пока не будет вызвана функция [CreateEx](#createex) или [Create.](#create)
+Окно Windows не создается и не прикрепляется, пока не будет вызвана функция-член [креатикс](#createex) или [CREATE](#create) .
 
-## <a name="cwnddefault"></a><a name="default"></a>CWnd::Default
+## <a name="cwnddefault"></a><a name="default"></a>CWnd::D молчанию
 
 Вызывает процедуру окна по умолчанию.
 
@@ -2297,15 +2297,15 @@ LRESULT Default();
 
 ### <a name="remarks"></a>Remarks
 
-Процедура окна по умолчанию обеспечивает обработку по умолчанию для любого сообщения окна, которое приложение не обрабатывает. Эта функция члена гарантирует обработку каждого сообщения.
+Процедура окна по умолчанию предоставляет обработку по умолчанию для любого сообщения окна, которое не обрабатывается приложением. Эта функция-член гарантирует обработку каждого сообщения.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#85](../../mfc/reference/codesnippet/cpp/cwnd-class_24.cpp)]
 
-## <a name="cwnddefwindowproc"></a><a name="defwindowproc"></a>CWnd::DefWindowProc
+## <a name="cwnddefwindowproc"></a><a name="defwindowproc"></a>CWnd::D Ефвиндовпрок
 
-Вызывает процедуру окна по умолчанию, которая обеспечивает обработку по умолчанию для любого сообщения окна, которое приложение не обрабатывает.
+Вызывает процедуру окна по умолчанию, которая обеспечивает обработку по умолчанию для любого сообщения окна, которое не обрабатывается приложением.
 
 ```
 virtual LRESULT DefWindowProc(
@@ -2317,13 +2317,13 @@ virtual LRESULT DefWindowProc(
 ### <a name="parameters"></a>Параметры
 
 *message*<br/>
-Определяет сообщение Windows, подаваемый для обработки.
+Указывает сообщение Windows для обработки.
 
 *wParam*<br/>
-Определяет дополнительную информацию, зависящая от сообщений.
+Указывает дополнительные сведения, зависящие от сообщений.
 
 *lParam*<br/>
-Определяет дополнительную информацию, зависящая от сообщений.
+Указывает дополнительные сведения, зависящие от сообщений.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -2331,11 +2331,11 @@ virtual LRESULT DefWindowProc(
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция члена гарантирует обработку каждого сообщения. Он должен быть вызван с теми же параметрами, что и полученные процедурой окна.
+Эта функция-член гарантирует обработку каждого сообщения. Он должен вызываться с теми же параметрами, которые были получены процедурой окна.
 
-## <a name="cwnddeletetempmap"></a><a name="deletetempmap"></a>CWnd::DeleteTempMap
+## <a name="cwnddeletetempmap"></a><a name="deletetempmap"></a>CWnd::D Елететемпмап
 
-Вызывается автоматически обработчиком `CWinApp` времени простоя объекта.
+Вызывается автоматически обработчиком времени простоя `CWinApp` объекта.
 
 ```
 static void PASCAL DeleteTempMap();
@@ -2343,15 +2343,15 @@ static void PASCAL DeleteTempMap();
 
 ### <a name="remarks"></a>Remarks
 
-Удаляет все `CWnd` временные объекты, созданные функцией `FromHandle` участника.
+Удаляет все временные `CWnd` объекты, созданные `FromHandle` функцией члена.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#86](../../mfc/reference/codesnippet/cpp/cwnd-class_25.cpp)]
 
-## <a name="cwnddestroywindow"></a><a name="destroywindow"></a>CWnd::DestroyWindow
+## <a name="cwnddestroywindow"></a><a name="destroywindow"></a>CWnd::D Естройвиндов
 
-Уничтожает окно Windows, `CWnd` прикрепленное к объекту.
+Уничтожает окно Windows, присоединенное к `CWnd` объекту.
 
 ```
 virtual BOOL DestroyWindow();
@@ -2359,27 +2359,27 @@ virtual BOOL DestroyWindow();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Nonzero, если окно разрушено; в противном случае 0.
+Ненулевое значение, если окно уничтожается; в противном случае — 0.
 
 ### <a name="remarks"></a>Remarks
 
-Функция `DestroyWindow` члена отправляет соответствующие сообщения в окно, чтобы отключить его и удалить фокус ввода. Он также разрушает меню окна, сбрасывает очередь приложения, разрушает выдающиеся таймеры, удаляет право собственности На `CWnd` Clipboard и ломает цепочку Clipboard-viewer, если находится в верхней части цепочки просмотра. Он отправляет [WM_DESTROY](#ondestroy) и [WM_NCDESTROY](#onncdestroy) сообщения в окно. Он не разрушает `CWnd` объект.
+`DestroyWindow`Функция – член отправляет в окно соответствующие сообщения, чтобы отключить его и удалить фокус ввода. Он также уничтожает меню окна, очищает очередь приложений, уничтожает необработанные таймеры, удаляет владение буфером обмена и прерывает цепочку просмотра буфера, если `CWnd` находится в верхней части цепочки средств просмотра. Он отправляет в окно [WM_DESTROY](#ondestroy) и [WM_NCDESTROY](#onncdestroy) сообщения. Он не уничтожает `CWnd` объект.
 
-`DestroyWindow`является держателем места для выполнения очистки. Поскольку `DestroyWindow` это виртуальная функция, `CWnd`она отображается в любом классе в классе View. Но даже если вы переопределяете эту функцию в вашем `CWnd`-производном классе, `DestroyWindow` не обязательно называется. Если `DestroyWindow` код MFC не называется, то вы должны прямо вызвать его в свой собственный код, если вы хотите, чтобы он был вызван.
+`DestroyWindow`заполнитель для выполнения очистки. Поскольку `DestroyWindow` является виртуальной функцией, она показана в представление классов в любом `CWnd` классе, производном от. Но даже при переопределении этой функции в `CWnd` классе, производном от, `DestroyWindow` метод не обязательно вызывается. Если метод `DestroyWindow` не вызывается в коде MFC, необходимо явно вызвать его в собственном коде, если его нужно вызвать.
 
-Предположим, например, что `DestroyWindow` вы `CView`переопределили в классе производных. Поскольку исходный код `DestroyWindow` MFC не `CFrameWnd`вызывается ни в `DestroyWindow` одном из своих классов, переопределяется, ваш переопределяется не будет вызываться, если вы не позвоните ему явно.
+Предположим, например, что вы переопределили `DestroyWindow` в `CView` классе, производном от. Поскольку исходный код MFC не вызывает `DestroyWindow` ни в одном из `CFrameWnd` производных от него классов, переопределенный метод `DestroyWindow` не будет вызываться, пока он не вызывается явным образом.
 
-Если окно является родительским, эти окна ребенка автоматически разрушаются при разрушении родительского окна. Функция `DestroyWindow` члена разрушает сначала детские окна, а затем само окно.
+Если окно является родительским для любого окна, эти дочерние окна автоматически уничтожаются при уничтожении родительского окна. `DestroyWindow`Функция члена уничтожает сначала дочерние окна, а затем само окно.
 
-Функция `DestroyWindow` члена также уничтожает безрежимные диалоговые ящики, созданные [CDialog::Create](../../mfc/reference/cdialog-class.md#create).
+`DestroyWindow`Функция Member также уничтожает немодальные диалоговые окна, созданные с помощью класса [CDialog:: Create](../../mfc/reference/cdialog-class.md#create).
 
-Если `CWnd` уничтоженное окно ребенка не имеет набора [WS_EX_NOPARENTNOTIFY](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) стилей, то [WM_PARENTNOTIFY](/windows/win32/inputmsg/wm-parentnotify) сообщение отправляется родителю.
+Если `CWnd` удаляемый объект является дочерним окном и не имеет набора стилей [WS_EX_NOPARENTNOTIFY](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) , то [WM_PARENTNOTIFY](/windows/win32/inputmsg/wm-parentnotify) сообщение отправляется родительскому элементу.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#87](../../mfc/reference/codesnippet/cpp/cwnd-class_26.cpp)]
 
-## <a name="cwnddetach"></a><a name="detach"></a>CWnd::Detach
+## <a name="cwnddetach"></a><a name="detach"></a>CWnd::D етач
 
 Отсоединяет дескриптор Windows от объекта `CWnd` и возвращает дескриптор.
 
@@ -2389,13 +2389,13 @@ HWND Detach();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-HWND к объекту Windows.
+HWND для объекта Windows.
 
 ### <a name="example"></a>Пример
 
-  Смотрите пример [Для CWnd::Прикрепите](#attach).
+  См. пример для [CWnd:: Attach](#attach).
 
-## <a name="cwnddlgdirlist"></a><a name="dlgdirlist"></a>CWnd::DlgDirList
+## <a name="cwnddlgdirlist"></a><a name="dlgdirlist"></a>CWnd::D Лгдирлист
 
 Заполняет список файлами или каталогами.
 
@@ -2409,21 +2409,21 @@ int DlgDirList(
 
 ### <a name="parameters"></a>Параметры
 
-*lpPathSpec*<br/>
-Указывает на нулевую строку, содержащую путь или имя файла. `DlgDirList`изменяет эту строку, которая должна быть достаточно длинной, чтобы содержать изменения. Для получения дополнительной информации смотрите следующий раздел "Замечания".
+*лппасспек*<br/>
+Указывает на строку, завершающуюся нулем, которая содержит путь или имя файла. `DlgDirList`изменяет эту строку, которая должна быть достаточно длинной для хранения изменений. Дополнительные сведения см. в следующем разделе "Примечания".
 
-*nIDListBox*<br/>
-Определяет идентификатор ящика списка. Если *nIDListBox* равен 0, предполагает, `DlgDirList` что нет поля списка существует и не пытается заполнить один.
+*нидлистбокс*<br/>
+Задает идентификатор поля списка. Если *нидлистбокс* имеет значение 0, `DlgDirList` предполагается, что список не существует и не пытается его заполнить.
 
-*nIDStaticPath*<br/>
-Определяет идентификатор элемента управления статического текста, используемого для отображения текущего диска и каталога. Если *nIDStaticPath* равен 0, предполагает, `DlgDirList` что такого управления текстом нет.
+*нидстатикпас*<br/>
+Задает идентификатор элемента управления "статический текст", используемый для вывода текущего диска и каталога. Если *нидстатикпас* имеет значение 0, `DlgDirList` предполагается, что такого элемента управления Text не существует.
 
-*nFileType*<br/>
-Определяет атрибуты отображаемых файлов. Это может быть любое сочетание следующих значений:
+*нфилетипе*<br/>
+Задает атрибуты отображаемых файлов. Это может быть любое сочетание следующих значений:
 
-- DDL_READWRITE файлы чтения записи данных без каких-либо дополнительных атрибутов.
+- DDL_READWRITE файлы данных для чтения и записи без дополнительных атрибутов.
 
-- DDL_READONLY только файлы для чтения.
+- DDL_READONLY файлы только для чтения.
 
 - DDL_HIDDEN скрытые файлы.
 
@@ -2433,11 +2433,11 @@ int DlgDirList(
 
 - DDL_ARCHIVE архивов.
 
-- DDL_POSTMSGS LB_DIR флаг. При установке LB_DIR флага Windows помещает `DlgDirList` сообщения, генерируемые в очереди приложения; в противном случае они направляются непосредственно в процедуру диалог-бокс.
+- Флаг LB_DIR DDL_POSTMSGS. Если установлен флаг LB_DIR, Windows помещает сообщения, созданные `DlgDirList` в очереди приложения; в противном случае они отправляются непосредственно в процедуру диалогового окна.
 
-- DDL_DRIVES диски. При установке DDL_DRIVES флага DDL_EXCLUSIVE флаг устанавливается автоматически. Поэтому для создания списка каталогов, включающий диски и файлы, необходимо звонить `DlgDirList` дважды: один раз с набором флага DDL_DRIVES и один раз с флагами для остальной части списка.
+- DDL_DRIVES диски. Если установлен флаг DDL_DRIVES, флаг DDL_EXCLUSIVE устанавливается автоматически. Таким образом, чтобы создать список каталогов, включающий диски и файлы, необходимо вызвать метод `DlgDirList` дважды: один раз с установленным флагом DDL_DRIVES и один раз с флагами для остальной части списка.
 
-- DDL_EXCLUSIVE Эксклюзивный бит. Если набор эксклюзивного бита, перечислены только файлы указанного типа; в противном случае перечислены обычные файлы и файлы указанного типа.
+- DDL_EXCLUSIVE эксклюзивный бит. Если задан эксклюзивный бит, отображаются только файлы указанного типа. в противном случае будут перечислены обычные файлы и файлы указанного типа.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -2445,25 +2445,25 @@ int DlgDirList(
 
 ### <a name="remarks"></a>Remarks
 
-`DlgDirList`отправляет [LB_RESETCONTENT](/windows/win32/Controls/lb-resetcontent) и [LB_DIR](/windows/win32/Controls/lb-dir) сообщения в поле списка. Он заполняет окно списка, указанное *nIDListBox* с именами всех файлов, которые соответствуют пути, указанному *lpPathSpec*.
+`DlgDirList`отправляет [LB_RESETCONTENT](/windows/win32/Controls/lb-resetcontent) и [LB_DIR](/windows/win32/Controls/lb-dir) сообщения в список. Он заполняет список, заданный параметром *нидлистбокс* , именами всех файлов, которые соответствуют пути, заданному параметром *лппасспек*.
 
-Параметр *lpPathSpec* имеет следующую форму:
+Параметр *лппасспек* имеет следующий вид:
 
 `[drive:] [ [\u]directory[\idirectory]...\u] [filename]`
 
-В этом примере *диск* — это дисковая буква, *каталог* — действительное имя каталога, а *имя файла* — действительное имя файла, которое должно содержать по крайней мере одну подстановку. Подстановочные знаки являются вопросительным знаком **(?**), что<strong>\*</strong>означает матч любого персонажа, и звездочка (), то есть соответствовать любому количеству символов.
+В этом примере *диск* — это буква диска, *Каталог* — это допустимое имя каталога, а *filename* — это допустимое имя файла, которое должно содержать по крайней мере один подстановочный знак. Подстановочные знаки — вопросительный знак (**?**), который означает совпадение любого символа, и звездочку ( <strong>\*</strong> ), то есть соответствует любому числу символов.
 
-Если вы указываете строку длиной 0 длины для *lpPathSpec,* или если вы указываете только имя\*каталога, но не включаетв спецификацию файла, строка будет изменена на " . \*".
+Если указать строку нулевой длины для *лппасспек*или указать только имя каталога, но не включать спецификацию файла, строка будет изменена на " \* . \* ".
 
-Если *lpPathSpec* включает в себя диск и/или имя каталога, текущий диск и каталог изменяются на назначенный диск и каталог до заполнения окна списка. Текстовый контроль, идентифицированный *nIDStaticPath,* также обновляется с новым именем диска и/или каталога.
+Если *лппасспек* включает имя диска и/или каталога, то текущий диск и каталог заменяются на указанный диск и каталог до заполнения списка. Элемент управления Text, идентифицируемый *нидстатикпас* , также обновляется с новым именем диска и/или каталога.
 
-После заполнения окна списка *lpPathSpec* обновляется путем удаления диска и/или каталога части пути.
+После заполнения списка *лппасспек* обновляется путем удаления части диска и (или) каталога в пути.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#88](../../mfc/reference/codesnippet/cpp/cwnd-class_27.cpp)]
 
-## <a name="cwnddlgdirlistcombobox"></a><a name="dlgdirlistcombobox"></a>CWnd::DlgDirListComboBox
+## <a name="cwnddlgdirlistcombobox"></a><a name="dlgdirlistcombobox"></a>CWnd::D Лгдирлисткомбобокс
 
 Заполняет список элемента управления "Поле со списком" перечнем файлов или каталогов.
 
@@ -2477,21 +2477,21 @@ int DlgDirListComboBox(
 
 ### <a name="parameters"></a>Параметры
 
-*lpPathSpec*<br/>
-Указывает на нулевую строку, содержащую путь или имя файла. `DlgDirListComboBox`изменяет эту строку, так что эти данные не должны быть в виде строки буквально. Смотрите следующий раздел "Замечания".
+*лппасспек*<br/>
+Указывает на строку, завершающуюся нулем, которая содержит путь или имя файла. `DlgDirListComboBox`изменяет эту строку, поэтому данные не должны быть в виде строкового литерала. См. следующий раздел "Примечания".
 
-*nIDComboBox*<br/>
-Определяет идентификатор комбо-коробки в диалоговом окне. Если *nIDComboBox* 0, предполагает, `DlgDirListComboBox` что не существует комбо-бокса и не пытается заполнить один.
+*нидкомбобокс*<br/>
+Задает идентификатор поля со списком в диалоговом окне. Если *нидкомбобокс* имеет значение 0, `DlgDirListComboBox` предполагается, что поле со списком не существует и не пытается заполнить его.
 
-*nIDStaticPath*<br/>
-Определяет идентификатор элемента управления статического текста, используемого для отображения текущего диска и каталога. Если *nIDStaticPath* равен 0, предполагает, `DlgDirListComboBox` что такого управления текстом нет.
+*нидстатикпас*<br/>
+Задает идентификатор элемента управления "статический текст", используемый для вывода текущего диска и каталога. Если *нидстатикпас* имеет значение 0, `DlgDirListComboBox` предполагается, что такого элемента управления Text не существует.
 
-*nFileType*<br/>
-Определяет атрибуты файлов DOS для отображения файлов. Это может быть любое сочетание следующих значений:
+*нфилетипе*<br/>
+Указывает атрибуты файла DOS для отображаемых файлов. Это может быть любое сочетание следующих значений:
 
-- DDL_READWRITE файлы чтения записи данных без каких-либо дополнительных атрибутов.
+- DDL_READWRITE файлы данных для чтения и записи без дополнительных атрибутов.
 
-- DDL_READONLY только файлы для чтения.
+- DDL_READONLY файлы только для чтения.
 
 - DDL_HIDDEN скрытые файлы.
 
@@ -2501,37 +2501,37 @@ int DlgDirListComboBox(
 
 - DDL_ARCHIVE архивов.
 
-- DDL_POSTMSGS CB_DIR флаг. При установке CB_DIR флага Windows помещает `DlgDirListComboBox` сообщения, генерируемые в очереди приложения; в противном случае они направляются непосредственно в процедуру диалог-бокс.
+- Флаг CB_DIR DDL_POSTMSGS. Если установлен флаг CB_DIR, Windows помещает сообщения, созданные `DlgDirListComboBox` в очереди приложения; в противном случае они отправляются непосредственно в процедуру диалогового окна.
 
-- DDL_DRIVES диски. При установке DDL_DRIVES флага DDL_EXCLUSIVE флаг устанавливается автоматически. Поэтому для создания списка каталогов, включающий диски и файлы, необходимо звонить `DlgDirListComboBox` дважды: один раз с набором флага DDL_DRIVES и один раз с флагами для остальной части списка.
+- DDL_DRIVES диски. Если установлен флаг DDL_DRIVES, флаг DDL_EXCLUSIVE устанавливается автоматически. Таким образом, чтобы создать список каталогов, включающий диски и файлы, необходимо вызвать метод `DlgDirListComboBox` дважды: один раз с установленным флагом DDL_DRIVES и один раз с флагами для остальной части списка.
 
-- DDL_EXCLUSIVE Эксклюзивный бит. Если набор эксклюзивного бита, перечислены только файлы указанного типа; в противном случае перечислены обычные файлы и файлы указанного типа.
+- DDL_EXCLUSIVE эксклюзивный бит. Если задан эксклюзивный бит, отображаются только файлы указанного типа. в противном случае будут перечислены обычные файлы и файлы указанного типа.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Определяет результат функции. Это ненулевой, если объявление было сделано, даже пустой листинг. Значение возврата 0 подразумевает, что строка ввода не содержала допустимого пути поиска.
+Указывает результат функции. Это значение не равно нулю, если список был создан, даже пустой список. Возвращаемое значение 0 означает, что входная строка не содержит допустимый путь поиска.
 
 ### <a name="remarks"></a>Remarks
 
-`DlgDirListComboBox`отправляет [CB_RESETCONTENT](/windows/win32/Controls/cb-resetcontent) и [CB_DIR](/windows/win32/Controls/cb-dir) сообщения в комбо-коробку. Он заполняет окно списка комбо-бокс, указанный *nIDComboBox* с именами всех файлов, которые соответствуют пути, данного *lpPathSpec*.
+`DlgDirListComboBox`отправляет [CB_RESETCONTENT](/windows/win32/Controls/cb-resetcontent) и [CB_DIR](/windows/win32/Controls/cb-dir) сообщения в поле со списком. Он заполняет список поля со списком, заданного параметром *нидкомбобокс* , именами всех файлов, которые соответствуют пути, заданному параметром *лппасспек*.
 
-Параметр *lpPathSpec* имеет следующую форму:
+Параметр *лппасспек* имеет следующий вид:
 
 `[drive:] [ [\u]directory[\idirectory]...\u] [filename]`
 
-В этом примере *диск* — это дисковая буква, *каталог* — действительное имя каталога, а *имя файла* — действительное имя файла, которое должно содержать по крайней мере одну подстановку. Подстановочные знаки являются вопросительным знаком **(?**), что<strong>\*</strong>означает матч любого персонажа, и звездочка ( ), что означает, соответствовать любому количеству символов.
+В этом примере *диск* — это буква диска, *Каталог* — это допустимое имя каталога, а *filename* — это допустимое имя файла, которое должно содержать по крайней мере один подстановочный знак. Подстановочные знаки — вопросительный знак (**?**), который означает совпадение с любым символом, и звездочку ( <strong>\*</strong> ), которая означает совпадение любого числа символов.
 
-Если вы укажете строку нулевой длины для *lpPathSpec,* текущий каталог будет использоваться и *lpPathSpec* не будет изменен. Если вы укажете только имя каталога, но не содержите\*спецификацию файла, строка будет изменена на ".
+Если указать строку нулевой длины для *лппасспек*, будет использоваться текущий каталог и *лппасспек* не будет изменен. Если указано только имя каталога, но не указана спецификация файла, строка будет изменена на " \* ".
 
-Если *lpPathSpec* включает в себя диск и/или имя каталога, текущий диск и каталог изменяются на назначенный диск и каталог до заполнения окна списка. Текстовый контроль, идентифицированный *nIDStaticPath,* также обновляется с новым именем диска и/или каталога.
+Если *лппасспек* включает имя диска и/или каталога, то текущий диск и каталог заменяются на указанный диск и каталог до заполнения списка. Элемент управления Text, идентифицируемый *нидстатикпас* , также обновляется с новым именем диска и/или каталога.
 
-После заполнения окна списка комбо-боксов *lpPathSpec* обновляется путем удаления диска и/или каталога.
+После заполнения списка с раскрывающимся списком *лппасспек* обновляется путем удаления диска и/или части каталога в пути.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#89](../../mfc/reference/codesnippet/cpp/cwnd-class_28.cpp)]
 
-## <a name="cwnddlgdirselect"></a><a name="dlgdirselect"></a>CWnd::DlgDirSelect
+## <a name="cwnddlgdirselect"></a><a name="dlgdirselect"></a>CWnd::D Лгдирселект
 
 Извлекает текущее выделение из списка.
 
@@ -2543,11 +2543,11 @@ BOOL DlgDirSelect(
 
 ### <a name="parameters"></a>Параметры
 
-*lpString*<br/>
-Указывает на буфер, который должен получить текущий выбор в поле списка.
+*лпстринг*<br/>
+Указывает на буфер, который будет принимать текущее выделение в списке.
 
-*nIDListBox*<br/>
-Упоняет идентификатор идентификатор списка в поле диалога.
+*нидлистбокс*<br/>
+Задает целочисленный идентификатор поля списка в диалоговом окне.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -2555,15 +2555,15 @@ BOOL DlgDirSelect(
 
 ### <a name="remarks"></a>Remarks
 
-Он предполагает, что поле списка было заполнено функцией участника [DlgDirList](#dlgdirlist) и что выбор представляет собой дисковое письмо, файл или имя каталога.
+Предполагается, что поле со списком заполнено функцией-членом [длгдирлист](#dlgdirlist) и выбрана буква диска, файл или имя каталога.
 
-Функция `DlgDirSelect` участника копирует выделение в буфер, данный *lpString.* Если нет выбора, *lpString* не изменяется.
+`DlgDirSelect`Функция – член копирует выделенный фрагмент в буфер, заданный параметром *лпстринг*. Если ничего не выбрано, *лпстринг* не изменяется.
 
-`DlgDirSelect`отправляет [LB_GETCURSEL](/windows/win32/Controls/lb-getcursel) и [LB_GETTEXT](/windows/win32/Controls/lb-gettext) сообщения в поле списка.
+`DlgDirSelect`отправляет [LB_GETCURSEL](/windows/win32/Controls/lb-getcursel) и [LB_GETTEXT](/windows/win32/Controls/lb-gettext) сообщения в список.
 
-Он не позволяет возвращать из окна списка более одного имени файла. Коробка списка не должна быть полем списка с несколькими вариантами.
+Он не допускает возврата нескольких файлов из списка. Список не должен быть списком с множественным выбором.
 
-## <a name="cwnddlgdirselectcombobox"></a><a name="dlgdirselectcombobox"></a>CWnd::DlgDirSelectComboBox
+## <a name="cwnddlgdirselectcombobox"></a><a name="dlgdirselectcombobox"></a>CWnd::D Лгдирселекткомбобокс
 
 Извлекает текущее выделение списка элемента управления "Поле со списком".
 
@@ -2575,11 +2575,11 @@ BOOL DlgDirSelectComboBox(
 
 ### <a name="parameters"></a>Параметры
 
-*lpString*<br/>
-Указывает на буфер, который должен получить выбранный путь.
+*лпстринг*<br/>
+Указывает на буфер, который получает выбранный путь.
 
-*nIDComboBox*<br/>
-Определяет идентификатор комбо-коробки в диалоговом ящике.
+*нидкомбобокс*<br/>
+Задает целочисленный идентификатор поля со списком в диалоговом окне.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -2587,17 +2587,17 @@ BOOL DlgDirSelectComboBox(
 
 ### <a name="remarks"></a>Remarks
 
-Он предполагает, что поле списка было заполнено функцией участника [DlgDirListComboBox](#dlgdirlistcombobox) и что выбор представляет собой дисковую букву, файл или имя каталога.
+Предполагается, что поле со списком заполнено функцией-членом [длгдирлисткомбобокс](#dlgdirlistcombobox) и выбрана буква диска, файл или имя каталога.
 
-Функция `DlgDirSelectComboBox` участника копирует выделение в указанный буфер. Если нет выбора, содержимое буфера не изменяется.
+`DlgDirSelectComboBox`Функция члена копирует выделенный фрагмент в указанный буфер. Если ничего не выбрано, содержимое буфера не изменяется.
 
-`DlgDirSelectComboBox`отправляет [CB_GETCURSEL](/windows/win32/Controls/cb-getcursel) и [CB_GETLBTEXT](/windows/win32/Controls/cb-getlbtext) сообщения в комбо-коробку.
+`DlgDirSelectComboBox`отправляет [CB_GETCURSEL](/windows/win32/Controls/cb-getcursel) и [CB_GETLBTEXT](/windows/win32/Controls/cb-getlbtext) сообщения в поле со списком.
 
-Он не позволяет более чем одному имени файла быть возвращены из комбо-бокса.
+Он не допускает возврата нескольких файлов из поля со списком.
 
-## <a name="cwnddodataexchange"></a><a name="dodataexchange"></a>CWnd::DoDataExchange
+## <a name="cwnddodataexchange"></a><a name="dodataexchange"></a>CWnd::D Одатаексчанже
 
-Вызывается в рамках для обмена и проверки данных диалогов.
+Вызывается платформой для обмена и проверки данных диалогового окна.
 
 ```
 virtual void DoDataExchange(CDataExchange* pDX);
@@ -2605,26 +2605,26 @@ virtual void DoDataExchange(CDataExchange* pDX);
 
 ### <a name="parameters"></a>Параметры
 
-*Pdx*<br/>
+*pDX*<br/>
 Указатель на объект `CDataExchange`.
 
 ### <a name="remarks"></a>Remarks
 
-Никогда не звоните в эту функцию напрямую. Он вызывается функцией участника [UpdateData.](#updatedata) Вызов `UpdateData` для инициализации элементов управления диалоговой будкой или получения данных из диалогового окна.
+Никогда не вызывайте эту функцию напрямую. Он вызывается функцией-членом [упдатедата](#updatedata) . Вызов `UpdateData` для инициализации элементов управления диалогового окна или получения данных из диалогового окна.
 
-При извлечении из [CDialog](../../mfc/reference/cdialog-class.md)класса диалога для конкретного приложения необходимо переопределить эту функцию участника, если вы хотите использовать автоматический обмен и проверку данных. Мастер Add Variable напишет переопределенную версию этой функции для вас, содержащую желаемую «карту данных» обмена данными диалогов (DDX) и проверки (DDV) глобальных вызовов функции.
+При наследовании класса диалогового окна для конкретного приложения от [CDialog](../../mfc/reference/cdialog-class.md)необходимо переопределить эту функцию-член, если вы хотите использовать автоматический обмен данными и проверку платформы. Мастер добавления переменной запишет переопределенную версию этой функции-члена, которая содержит нужные вызовы глобальной функции обмена данными диалоговых данных (DDX) и проверки (DDV).
 
-Чтобы автоматически генерировать переопределенную версию этой функции участника, сначала создайте диалоговый ресурс с редактором диалогов, а затем создайте класс диалога для конкретного приложения. Затем используйте мастер-разноску Добавить переменную для ассоциирования переменных, данных и диапазонов проверки с различными элементами управления в новом диалоговом поле. Затем мастер записывает `DoDataExchange`переопределенную карту данных. Ниже приводится пример блока кода DDX/DDV, генерируемого мастером Add Variable:
+Чтобы автоматически создать переопределенную версию этой функции-члена, сначала создайте ресурс диалогового окна с помощью редактора диалоговых окон, а затем произберете класс диалогового окна, зависящего от приложения. Затем с помощью мастера добавления переменной свяжите переменные, данные и диапазоны проверки с помощью различных элементов управления в диалоговом окне Создать. Затем мастер записывает переопределенный объект `DoDataExchange` , который содержит карту данных. Ниже приведен пример блока кода DDX/DDV, созданного мастером добавления переменной.
 
 [!code-cpp[NVC_MFCWindowing#90](../../mfc/reference/codesnippet/cpp/cwnd-class_29.cpp)]
 
-Переовереренная `DoDataExchange` функция члена должна предшествовать макро-заявлениям в исходном файле.
+`DoDataExchange`Переопределенная функция члена должна предшествовать операторам макроса в исходном файле.
 
-Для получения дополнительной информации об обмене и проверке данных диалогов [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md)см. [Displaying and Manipulating Data in a Form](../../data/odbc/displaying-and-manipulating-data-in-a-form.md) Для описания DDX_ и DDV_ макросов, генерируемых мастером Добавить переменную, [см.](../../mfc/tn026-ddx-and-ddv-routines.md)
+Дополнительные сведения об обмене и проверке данных в диалоговых окнах см. [в разделе Отображение и обработка данных в формах](../../data/odbc/displaying-and-manipulating-data-in-a-form.md) и [диалоговых окнах обмена данными и проверки](../../mfc/dialog-data-exchange-and-validation.md). Описание макросов DDX_ и DDV_, созданных мастером добавления переменных, см. в [техническом примечании 26](../../mfc/tn026-ddx-and-ddv-routines.md).
 
-## <a name="cwnddragacceptfiles"></a><a name="dragacceptfiles"></a>CWnd::DragAcceptFiles
+## <a name="cwnddragacceptfiles"></a><a name="dragacceptfiles"></a>CWnd::D Рагакцептфилес
 
-Вызов ими функции участника из `CWnd` окна, используя указатель, в cWinApp вашего [приложения::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) функции, чтобы указать, что окно принимает выпавные файлы из Windows File Manager или File Explorer.
+Вызовите эту функцию-член из окна, используя `CWnd` указатель, в функции [CWinApp:: InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) приложения, чтобы указать, что окно принимает удаленные файлы из диспетчера файлов Windows или проводника.
 
 ```cpp
 void DragAcceptFiles(BOOL bAccept = TRUE);
@@ -2632,16 +2632,16 @@ void DragAcceptFiles(BOOL bAccept = TRUE);
 
 ### <a name="parameters"></a>Параметры
 
-*BAccept*<br/>
-Пометить, принимается ли перетащенные файлы.
+*бакцепт*<br/>
+Флаг, указывающий, принимаются ли перетаскиваемые файлы.
 
 ### <a name="remarks"></a>Remarks
 
-Только окно, `DragAcceptFiles` которое вызывает с *bAccept* параметр, установленный для TRUE идентифицировал себя как способный обрабатывать сообщение Windows WM_DROPFILES. Например, в приложении MDI, если указатель `CMDIFrameWnd` `DragAcceptFiles` окна используется в `CMDIFrameWnd` вызове функции, только окно получает WM_DROPFILES сообщение. Это сообщение не отправляется `CMDIChildWnd` во все открытые окна. Для `CMDIChildWnd` получения этого сообщения окном `DragAcceptFiles` необходимо `CMDIChildWnd` позвонить с помощью указателя окна.
+Только окно, вызывающее `DragAcceptFiles` параметр *бакцепт* , которому присвоено значение true, идентифицировано как способ обработки сообщения Windows WM_DROPFILES. Например, в приложении MDI, если `CMDIFrameWnd` указатель окна используется в `DragAcceptFiles` вызове функции, только `CMDIFrameWnd` окно получает WM_DROPFILES сообщение. Это сообщение не отправляется во все открытые `CMDIChildWnd` окна. `CMDIChildWnd`Чтобы окно получало это сообщение, необходимо вызвать `DragAcceptFiles` с помощью `CMDIChildWnd` указателя окна.
 
-Чтобы прекратить прием перетащенных файлов, позвоните функции участника с *набором bAccept* в FALSE.
+Чтобы прекратить получение перетаскиваемых файлов, вызовите функцию члена с параметром *бакцепт* , ИМЕЮЩИМ значение false.
 
-## <a name="cwnddragdetect"></a><a name="dragdetect"></a>CWnd::DragDetect
+## <a name="cwnddragdetect"></a><a name="dragdetect"></a>CWnd::D Рагдетект
 
 Захватывает мышь и отслеживает ее движение, пока пользователь не отпустит левую кнопку мыши, не нажмет клавишу ESC или не переместит мышь за пределы прямоугольника перетаскивания, в котором находится указанная точка.
 
@@ -2651,20 +2651,20 @@ BOOL DragDetect(POINT pt) const;
 
 ### <a name="parameters"></a>Параметры
 
-*пт*<br/>
-Начальное положение мыши, в координатах экрана. Функция определяет координаты перетаскивания прямоугольника с помощью этой точки.
+*лутор*<br/>
+Начальное расположение мыши в экранных координатах. Функция определяет координаты прямоугольника перетаскивания с помощью этой точки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если пользователь переместил мышь за пределы прямоугольника, удерживая левую кнопку, значение возврата ненулевое.
+Если пользователь переместил указатель мыши за пределы прямоугольника перетаскивания, удерживая левую кнопку, возвращаемое значение будет ненулевым.
 
-Если пользователь не перемещал мышь за пределы прямоугольника, удерживая левую кнопку, значение возврата равно нулю.
+Если пользователь не переместит указатель мыши за пределы прямоугольника перетаскивания, удерживая левую кнопку, то возвращаемое значение будет равно нулю.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция члена эмулирует функциональность функции [DragDetect](/windows/win32/api/winuser/nf-winuser-dragdetect), как описано в Windows SDK.
+Эта функция члена эмулирует функциональность функции [драгдетект](/windows/win32/api/winuser/nf-winuser-dragdetect), как описано в Windows SDK.
 
-## <a name="cwnddrawanimatedrects"></a><a name="drawanimatedrects"></a>CWnd::DrawAnimatedRects
+## <a name="cwnddrawanimatedrects"></a><a name="drawanimatedrects"></a>CWnd::D Раваниматедректс
 
 Рисует каркасный прямоугольник и анимирует его для обозначения открытия значка, а также сворачивания или разворачивания окна.
 
@@ -2677,24 +2677,24 @@ BOOL DrawAnimatedRects(
 
 ### <a name="parameters"></a>Параметры
 
-*idAni*<br/>
-Определяет тип анимации. Если указать IDANI_CAPTION, подпись окна будет оживиться с позиции, указанной *lprc,* к позиции, указанной *lprcTo.* Эффект аналогичен минимизации или максимизации окна.
+*идани*<br/>
+Задает тип анимации. Если указать IDANI_CAPTION, заголовок окна будет анимироваться с расположения, указанного параметром *лпркфром* , в положении, заданном параметром *лпркто*. Этот результат аналогичен минимуму или разворачиванию окна.
 
-*lprcFrom*<br/>
-Указатель на структуру [RECT](/windows/win32/api/windef/ns-windef-rect) с указанием местоположения и размера значка или сведенного к минимуму окна.
+*лпркфром*<br/>
+Указатель на структуру [Rect](/windows/win32/api/windef/ns-windef-rect) , указывающую расположение и размер значка или сворачивания окна.
 
-*lprcTo*<br/>
-Указатель на структуру [RECT](/windows/win32/api/windef/ns-windef-rect) с указанием местоположения и размера восстановленного окна
+*лпркто*<br/>
+Указатель на структуру [Rect](/windows/win32/api/windef/ns-windef-rect) , указывающую расположение и размер восстановленного окна
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Nonzero, если функция успешно; в противном случае 0.
+Ненулевое значение, если функция выполнена. в противном случае — 0.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция члена эмулирует функциональность функции [DrawAnimatedRects,](/windows/win32/api/winuser/nf-winuser-drawanimatedrects)как описано в Windows SDK.
+Эта функция члена эмулирует функциональность функции [драваниматедректс](/windows/win32/api/winuser/nf-winuser-drawanimatedrects), как описано в Windows SDK.
 
-## <a name="cwnddrawcaption"></a><a name="drawcaption"></a>CWnd::DrawCaption
+## <a name="cwnddrawcaption"></a><a name="drawcaption"></a>CWnd::D Равкаптион
 
 Рисует заголовок окна.
 
@@ -2707,24 +2707,24 @@ BOOL DrawCaption(
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
-Указатель на контекст устройства. Функция втягивает заголовок окна в контекст этого устройства.
+*Хозяин*<br/>
+Указатель на контекст устройства. Функция рисует заголовок окна в этом контексте устройства.
 
-*lprc*<br/>
-Указатель на структуру RECT, которая определяет прямоугольник для заголовка окна.
+*лпрк*<br/>
+Указатель на структуру RECT, указывающую ограничивающий прямоугольник для заголовка окна.
 
-*uФлаги*<br/>
-Определяет параметры рисования. Полный список значений можно узнать на примере [DrawCaption.](/windows/win32/api/winuser/nf-winuser-drawcaption)
+*уфлагс*<br/>
+Задает параметры рисования. Полный список значений см. в разделе [дравкаптион](/windows/win32/api/winuser/nf-winuser-drawcaption).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Nonzero, если функция успешно; в противном случае 0.
+Ненулевое значение, если функция выполнена. в противном случае — 0.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция члена эмулирует функциональность функции [DrawCaption](/windows/win32/api/winuser/nf-winuser-drawcaption), как описано в Windows SDK.
+Эта функция члена эмулирует функциональность функции [дравкаптион](/windows/win32/api/winuser/nf-winuser-drawcaption), как описано в Windows SDK.
 
-## <a name="cwnddrawmenubar"></a><a name="drawmenubar"></a>CWnd::DrawMenuBar
+## <a name="cwnddrawmenubar"></a><a name="drawmenubar"></a>CWnd::D Равменубар
 
 Перерисовывает строку меню.
 
@@ -2734,15 +2734,15 @@ void DrawMenuBar();
 
 ### <a name="remarks"></a>Remarks
 
-Если бар меню изменен после создания окна Windows, позвоните в эту функцию, чтобы нарисовать измененную панель меню.
+Если строка меню изменяется после создания окна, вызовите эту функцию, чтобы нарисовать измененную строку меню.
 
 ### <a name="example"></a>Пример
 
-  Смотрите пример [для CWnd::GetMenu](#getmenu).
+  См. пример для [CWnd:: Menu](#getmenu).
 
-## <a name="cwndenableactiveaccessibility"></a><a name="enableactiveaccessibility"></a>CWnd::EnableActiveAccessibility
+## <a name="cwndenableactiveaccessibility"></a><a name="enableactiveaccessibility"></a>CWnd:: Енаблеактивеакцессибилити
 
-Обеспечивает функции активной доступности, определяемые пользователями.
+Включает определяемые пользователем функции Active Accessibility.
 
 ```cpp
 void EnableActiveAccessibility();
@@ -2750,9 +2750,9 @@ void EnableActiveAccessibility();
 
 ### <a name="remarks"></a>Remarks
 
-Поддержка активной доступности MFC по умолчанию достаточна для стандартных окон и элементов управления, включая элементы управления ActiveX; однако, `CWnd`если ваш класс, полученный из-под окон, содержит элементы пользовательского интерфейса, MFC не имеет возможности узнать о них. В этом случае необходимо переопределить соответствующие [функции участника Active Accessibility](/windows/win32/winauto/sdk-components) в вашем классе, и вы должны вызвать `EnableActiveAccessibility` в конструкторе класса.
+Поддержка Active Accessibility по умолчанию в MFC достаточно для стандартных окон и элементов управления, включая элементы управления ActiveX; Однако если класс, `CWnd` производный от класса, содержит неоконные элементы пользовательского интерфейса, MFC не имеет возможности знать о них. В этом случае необходимо переопределить соответствующие [функции члена Active Accessibility](/windows/win32/winauto/sdk-components) в классе, и необходимо вызвать `EnableActiveAccessibility` в конструкторе класса.
 
-## <a name="cwndenabledynamiclayout"></a><a name="enabledynamiclayout"></a>CWnd::EnableDynamicLayout
+## <a name="cwndenabledynamiclayout"></a><a name="enabledynamiclayout"></a>CWnd:: Енаблединамиклайаут
 
 Включает или отключает диспетчер динамического макета. Если динамический макет активен, положение и размеры дочерних окон можно динамически настраивать, изменяя размер родительского окна.
 
@@ -2767,9 +2767,9 @@ void EnableDynamicLayout(BOOL bEnable = TRUE);
 
 ### <a name="remarks"></a>Remarks
 
-Чтобы включить динамический макет, наряду с вызовом этого метода необходимо выполнить дополнительные действия. Необходимо также предоставить сведения о динамическом макете, информирующие о поведении элементов управления в окне в ответ на изменения размеров. Эту информацию можно указать для каждого элемента управления в редакторе ресурсов или программным образом. Смотрите [динамический макет](../../mfc/dynamic-layout.md).
+Чтобы включить динамический макет, наряду с вызовом этого метода необходимо выполнить дополнительные действия. Необходимо также предоставить сведения о динамическом макете, информирующие о поведении элементов управления в окне в ответ на изменения размеров. Эту информацию можно указать для каждого элемента управления в редакторе ресурсов или программным образом. См. [динамический макет](../../mfc/dynamic-layout.md).
 
-## <a name="cwndenabled2dsupport"></a><a name="enabled2dsupport"></a>CWnd::EnableD2DSupport
+## <a name="cwndenabled2dsupport"></a><a name="enabled2dsupport"></a>CWnd:: EnableD2DSupport
 
 Включает или отключает поддержку окнами D2D. Данный метод следует вызывать до инициализации основного окна.
 
@@ -2784,10 +2784,10 @@ void EnableD2DSupport(
 *bEnable*<br/>
 Указывает, следует включить или отключить поддержку D2D.
 
-*bUseDCRenderTarget*<br/>
+*буседкрендертаржет*<br/>
 Указывает, следует ли использовать целевой объект отрисовки из контекста устройства, т. е. класс CDCRenderTarget. Если значение — FALSE, используется класс CHwndRenderTarget.
 
-## <a name="cwndenablescrollbar"></a><a name="enablescrollbar"></a>CWnd::EnableScrollBar
+## <a name="cwndenablescrollbar"></a><a name="enablescrollbar"></a>CWnd:: Енаблескроллбар
 
 Включает или выключает одну или обе стрелки полосы прокрутки.
 
@@ -2799,33 +2799,33 @@ BOOL EnableScrollBar(
 
 ### <a name="parameters"></a>Параметры
 
-*nSBFlags*<br/>
-Определяет тип прокрутки-бара. Может иметь одно из следующих значений:
+*нсбфлагс*<br/>
+Указывает тип полосы прокрутки. Может иметь одно из следующих значений:
 
-- SB_BOTH Включает или отстраняет стрелки горизонтальных и вертикальных полос прокрутки, связанных с окном.
+- SB_BOTH включает или отключает стрелки горизонтальной и вертикальной полос прокрутки, связанные с окном.
 
-- SB_HORZ Включает или отсваивает стрелки горизонтальной панели прокрутки, связанные с окном.
+- SB_HORZ включает или отключает стрелки горизонтальной полосы прокрутки, связанной с окном.
 
-- SB_VERT включает или отсваивает стрелки вертикальной панели прокрутки, связанные с окном.
+- SB_VERT включает или отключает стрелки вертикальной полосы прокрутки, связанной с окном.
 
-*nArrowFlags*<br/>
-Определяет, включены или отключены стрелки прокрутки-бара и какие стрелки включены или отключены. Может иметь одно из следующих значений:
+*нарровфлагс*<br/>
+Указывает, включены или отключены стрелки полосы прокрутки и какие стрелки включены или отключены. Может иметь одно из следующих значений:
 
-- ESB_ENABLE_BOTH Включает обе стрелки панели прокрутки (по умолчанию).
+- ESB_ENABLE_BOTH включает обе стрелки полосы прокрутки (по умолчанию).
 
-- ESB_DISABLE_LTUP отсрабатывает левую стрелку горизонтальной панели прокрутки или стрелку вверх вертикальной панели прокрутки.
+- ESB_DISABLE_LTUP отключает левую стрелку горизонтальной полосы прокрутки или стрелку вверх вертикальной полосы прокрутки.
 
-- ESB_DISABLE_RTDN отсрабатывает правую стрелку горизонтальной панели прокрутки или вниз стрелку вертикального прокрутки.
+- ESB_DISABLE_RTDN отключает стрелку вправо на горизонтальной полосе прокрутки или стрелку вниз вертикальной полосы прокрутки.
 
-- ESB_DISABLE_BOTH отсрабатывает обе стрелки панели прокрутки.
+- ESB_DISABLE_BOTH отключает обе стрелки полосы прокрутки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Nonzero, если стрелки включены или отключены в указанном виде. В противном случае это 0, что указывает на то, что стрелки уже находятся в запрашиваемом состоянии или что произошла ошибка.
+Ненулевое значение, если стрелки включены или отключены, как указано. В противном случае он равен 0, что означает, что стрелки уже находятся в запрошенном состоянии или произошла ошибка.
 
-## <a name="cwndenablescrollbarctrl"></a><a name="enablescrollbarctrl"></a>CWnd::EnableScrollBarCtrl
+## <a name="cwndenablescrollbarctrl"></a><a name="enablescrollbarctrl"></a>CWnd:: Енаблескроллбарктрл
 
-Включает или отсвадает панель прокрутки для этого окна.
+Включает или отключает полосу прокрутки для этого окна.
 
 ```cpp
 void EnableScrollBarCtrl(
@@ -2835,19 +2835,19 @@ void EnableScrollBarCtrl(
 
 ### <a name="parameters"></a>Параметры
 
-*nБар*<br/>
-Идентификатор прокрутки-бара.
+*нбар*<br/>
+Идентификатор полосы прокрутки.
 
 *bEnable*<br/>
-Определяет, включена ли или отключена панель прокрутки.
+Указывает, должна ли быть включена или отключена полоса прокрутки.
 
 ### <a name="remarks"></a>Remarks
 
-Если в окне есть элемент управления прокруткой брата, используется панель прокрутки; в противном случае используется собственная панель прокрутки окна.
+Если в окне есть элемент управления полосы прокрутки, используется полоса прокрутки; в противном случае используется собственная полоса прокрутки окна.
 
-## <a name="cwndenabletooltips"></a><a name="enabletooltips"></a>CWnd::EnableToolTips
+## <a name="cwndenabletooltips"></a><a name="enabletooltips"></a>CWnd:: Енаблетултипс
 
-Позволяет дать советы по инструментам для данного окна.
+Включает всплывающие подсказки для заданного окна.
 
 ```
 BOOL EnableToolTips(BOOL bEnable = TRUE);
@@ -2856,24 +2856,24 @@ BOOL EnableToolTips(BOOL bEnable = TRUE);
 ### <a name="parameters"></a>Параметры
 
 *bEnable*<br/>
-Определяет, включен или отключен контроль наконечника инструмента. TRUE позволяет управлять; FALSE отскакивает от управления.
+Указывает, включен или отключен элемент управления "Подсказка". Значение TRUE включает элемент управления; Значение FALSE отключает элемент управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-TRUE, если инструмент советы включены; в противном случае FALSE.
+Значение TRUE, если всплывающие подсказки включены. в противном случае — FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Переопределение [OnToolHitTest](#ontoolhittest) для обеспечения структуртки [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) или структур для окна.
+Переопределите [онтулхиттест](#ontoolhittest) , чтобы предоставить структуру или структуры [тулинфо](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) для окна.
 
 > [!NOTE]
-> Некоторые окна, такие как [CToolBar](../../mfc/reference/ctoolbar-class.md), обеспечивают встроенную реализацию [OnToolHitTest.](#ontoolhittest)
+> Некоторые окна, например [CToolBar](../../mfc/reference/ctoolbar-class.md), предоставляют встроенную реализацию [онтулхиттест](#ontoolhittest).
 
-Более [подробную](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) информацию об этой структуре можно получить в SDK для Windows.
+Дополнительные сведения об этой структуре см. в разделе [тулинфо](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) в Windows SDK.
 
-Простого `EnableToolTips` вызова недостаточно для отображения советов по инструменту `CFrameWnd`для управления ребенком, если только родительское окно не получено из. Это связано с тем, что `CFrameWnd` обработчик по умолчанию предоставляет обработчик по умолчанию для уведомления TTN_NEEDTEXT. Если родительское окно не `CFrameWnd`получено от , то есть, если это диалоговая коробка или представление формы, советы по инструменту для управления ребенком не отображаются правильно, если вы не предоставите обработчик для уведомления о TTN_NEEDTEXT наконечнике инструмента. Смотрите [Советы по инструменту](../../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md).
+Просто вызвать `EnableToolTips` недостаточно, чтобы отобразить подсказки для дочерних элементов управления, если только родительское окно не является производным от `CFrameWnd` . Это связано с тем, что `CFrameWnd` предоставляет обработчик по умолчанию для уведомления TTN_NEEDTEXT. Если родительское окно не является производным от `CFrameWnd` , то есть если это диалоговое окно или представление формы, подсказки для дочерних элементов управления будут отображаться неправильно, если не предоставить обработчик для уведомления о подсказке средства TTN_NEEDTEXT. См. [всплывающие подсказки](../../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md).
 
-Советы по умолчанию инструмент, предусмотренные для окон `EnableToolTips` не имеют текст, связанный с ними. Для получения текста для отображения наконечника инструмента уведомление TTN_NEEDTEXT отправляется в родительское окно элемента управления отзывом непосредственно перед отображением окна наконечника инструмента. Если для этого сообщения нет обработчика, чтобы назначить `TOOLTIPTEXT` некоторое значение члену *структуры pszText,* не будет отображаться текст для наконечника инструмента.
+Подпрограммы по умолчанию, предоставляемые для окон, `EnableToolTips` не имеют связанного с ними текста. Чтобы получить текст для отображаемой подсказки, в родительское окно всплывающей подсказки перед отображением всплывающей подсказки будет отправлено уведомление TTN_NEEDTEXT. Если для этого сообщения нет обработчика, чтобы присвоить какое-либо значение элементу *псзтекст* `TOOLTIPTEXT` структуры, текст подсказки не будет отображаться.
 
 ### <a name="example"></a>Пример
 
@@ -2881,9 +2881,9 @@ TRUE, если инструмент советы включены; в проти
 
 [!code-cpp[NVC_MFCWindowing#92](../../mfc/reference/codesnippet/cpp/cwnd-class_31.cpp)]
 
-## <a name="cwndenabletrackingtooltips"></a><a name="enabletrackingtooltips"></a>CWnd::EnableTrackingToolTips
+## <a name="cwndenabletrackingtooltips"></a><a name="enabletrackingtooltips"></a>CWnd:: Енаблетраккингтултипс
 
-Включает или отражает наборы инструментов отслеживания.
+Включает или отключает отслеживание всплывающих подсказок.
 
 ```
 BOOL EnableTrackingToolTips(BOOL bEnable = TRUE);
@@ -2892,17 +2892,17 @@ BOOL EnableTrackingToolTips(BOOL bEnable = TRUE);
 ### <a name="parameters"></a>Параметры
 
 *bEnable*<br/>
-Уточняется, включены или отключены советы по отслеживанию инструментов. Если этот параметр является правдой, советы инструмент отслеживания будут включены. Если этот параметр FALSE, советы инструмент отслеживания будут отключены.
+Указывает, включены или отключены подсказки по средствам отслеживания. Если этот параметр имеет значение TRUE, подсказки средства отслеживания будут включены. Если этот параметр имеет значение FALSE, советы средства отслеживания будут отключены.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указывает состояние до `EnableWindow` вызова функции участника. Значение возврата неявляется, если окно ранее было отключено. Значение возврата 0, если окно было включено ранее или произошла ошибка.
+Указывает состояние до `EnableWindow` вызова функции члена. Если окно было ранее отключено, возвращаемое значение не равно нулю. Возвращаемое значение равно 0, если окно было включено ранее или произошла ошибка.
 
 ### <a name="remarks"></a>Remarks
 
-Советы инструмент отслеживания являются инструментом отзыв окна, которые можно динамически положение на экране. Быстро обновляя положение, окно наконечника инструмента, кажется, движется плавно, или "трек". Эта функциональность может быть полезна, если вам нужен текст наконечника инструмента, чтобы следить за положением указателя по мере его движения.
+Советы по инструментам отслеживания — это окна всплывающих подсказок, которые можно динамически разместить на экране. При быстром обновлении положения откроется окно подсказки, которое перемещается плавно, или «Track». Эта функция может оказаться полезной, если требуется текст подсказки для перехода к положению указателя при его перемещении.
 
-## <a name="cwndenablewindow"></a><a name="enablewindow"></a>CWnd::EnableWindow
+## <a name="cwndenablewindow"></a><a name="enablewindow"></a>CWnd:: Енаблевиндов
 
 Разрешает или запрещает ввод с помощью мыши и клавиатуры.
 
@@ -2913,33 +2913,33 @@ BOOL EnableWindow(BOOL bEnable = TRUE);
 ### <a name="parameters"></a>Параметры
 
 *bEnable*<br/>
-Определяет, включено или отключено данное окно. Если этот параметр является правдой, окно будет включено. Если этот параметр FALSE, окно будет отключено.
+Указывает, следует ли включать или отключать заданное окно. Если этот параметр имеет значение TRUE, окно будет включено. Если этот параметр имеет значение FALSE, окно будет отключено.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указывает состояние до `EnableWindow` вызова функции участника. Значение возврата неявляется, если окно ранее было отключено. Значение возврата 0, если окно было включено ранее или произошла ошибка.
+Указывает состояние до `EnableWindow` вызова функции члена. Если окно было ранее отключено, возвращаемое значение не равно нулю. Возвращаемое значение равно 0, если окно было включено ранее или произошла ошибка.
 
 ### <a name="remarks"></a>Remarks
 
-При отключении ввода ввод, например, клики мыши и нажатия клавиш, игнорируются. Когда вход включен, окно обрабатывает все входные.
+Если входные данные отключены, ввод, например щелчок мыши и нажатие клавиш, игнорируется. Если входные данные включены, окно обрабатывает все входные данные.
 
-При изменении включенного состояния [WM_ENABLE](#onenable) сообщение отправляется до возвращения этой функции.
+Если включенное состояние меняется, [WM_ENABLE](#onenable) сообщение отправляется перед возвратом этой функции.
 
-Если инвалиды, все детские окна неявно отключены, хотя они не отправляются WM_ENABLE сообщений.
+Если этот элемент отключен, все дочерние окна неявно отключаются, хотя они не отправляются WM_ENABLE сообщений.
 
-Перед его активацией необходимо включено окно. Например, если приложение отображает нештатную диалоговую коробку и отключило его основное окно, главное окно должно быть включено до того, как поле диалога будет уничтожено. В противном случае другое окно получит фокус ввода и будет активировано. Если окно ребенка отключено, оно игнорируется, когда Windows пытается определить, какое окно должно получать сообщения мыши.
+Перед активацией окно должно быть включено. Например, если приложение отображает немодальное диалоговое окно и отключило его главное окно, главное окно должно быть включено до уничтожения диалогового окна. В противном случае в другом окне будет получен фокус ввода и он будет активирован. Если дочернее окно отключено, оно игнорируется, когда Windows пытается определить, какое окно должно получать сообщения мыши.
 
-По умолчанию окно включено при его создании. Приложение может указать WS_DISABLED стиле в функции [члена Create](#create) или [CreateEx](#createex) для создания окна, которое изначально отключено. После создания окна приложение может также использовать `EnableWindow` функцию члена для включения или отсвагиваем окна.
+По умолчанию окно включается при его создании. Приложение может указать стиль WS_DISABLED в функции-члене [CREATE](#create) или [креатикс](#createex) , чтобы создать окно, которое изначально отключено. После создания окна приложение также может использовать `EnableWindow` функцию-член для включения или отключения окна.
 
-Приложение может использовать эту функцию для включения или отключать элемент управления в диалоговом поле. Отключенный элемент управления не может получить фокус ввода, равно как и пользователь не может получить к нему доступ.
+Приложение может использовать эту функцию для включения или отключения элемента управления в диалоговом окне. Отключенный элемент управления не может получать фокус ввода, и пользователь не может получить к нему доступ.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#93](../../mfc/reference/codesnippet/cpp/cwnd-class_32.cpp)]
 
-## <a name="cwndendmodalloop"></a><a name="endmodalloop"></a>CWnd::EndModalLoop
+## <a name="cwndendmodalloop"></a><a name="endmodalloop"></a>CWnd:: Ендмодаллуп
 
-Прекращает вызов `RunModalLoop`.
+Завершает вызов `RunModalLoop` .
 
 ```
 virtual void EndModalLoop(int nResult);
@@ -2947,14 +2947,14 @@ virtual void EndModalLoop(int nResult);
 
 ### <a name="parameters"></a>Параметры
 
-*nResult*<br/>
-Содержит значение, необходимое для возврата вызывающему абоненту [RunModalLoop.](#runmodalloop)
+*Nрезультат*<br/>
+Содержит значение, возвращаемое вызывающему объекту [RunModalLoop](#runmodalloop).
 
 ### <a name="remarks"></a>Remarks
 
-Параметр *nResult* распространяется на значение возврата `RunModalLoop`от .
+Параметр *nрезультат* распространяется на возвращаемое значение из `RunModalLoop` .
 
-## <a name="cwndendmodalstate"></a><a name="endmodalstate"></a>CWnd::EndModalState
+## <a name="cwndendmodalstate"></a><a name="endmodalstate"></a>CWnd:: Ендмодалстате
 
 Данная функция-член вызывается для изменения состояния окна с модального на немодальное.
 
@@ -2962,9 +2962,9 @@ virtual void EndModalLoop(int nResult);
 virtual void EndModalState();
 ```
 
-## <a name="cwndendpaint"></a><a name="endpaint"></a>CWnd::EndPaint
+## <a name="cwndendpaint"></a><a name="endpaint"></a>CWnd:: Ендпаинт
 
-Отмечает конец живописи в данном окне.
+Помечает конец рисования в данном окне.
 
 ```cpp
 void EndPaint(LPPAINTSTRUCT lpPaint);
@@ -2972,20 +2972,20 @@ void EndPaint(LPPAINTSTRUCT lpPaint);
 
 ### <a name="parameters"></a>Параметры
 
-*lpPaint*<br/>
-Указывает на структуру [PAINTSTRUCT,](/windows/win32/api/winuser/ns-winuser-paintstruct) содержащую информацию о покраске, полученную функцией участника [BeginPaint.](#beginpaint)
+*лппаинт*<br/>
+Указывает на структуру [PAINTSTRUCT](/windows/win32/api/winuser/ns-winuser-paintstruct) , содержащую сведения о выкраске, полученные функцией-членом [бегинпаинт](#beginpaint) .
 
 ### <a name="remarks"></a>Remarks
 
-Функция `EndPaint` участника требуется для каждого `BeginPaint` вызова к функции участника, но только после завершения картины.
+`EndPaint`Функция-член является обязательной для каждого вызова `BeginPaint` функции-члена, но только после завершения рисования.
 
-Если карета была `BeginPaint` скрыта `EndPaint` функцией члена, восстанавливает карету на экран.
+Если курсор был скрыт `BeginPaint` функцией члена, `EndPaint` восстанавливает курсор на экране.
 
 ### <a name="example"></a>Пример
 
-  Смотрите пример [Для CWnd::BeginPaint](#beginpaint).
+  См. пример для [CWnd:: бегинпаинт](#beginpaint).
 
-## <a name="cwndexecutedlginit"></a><a name="executedlginit"></a>CWnd::ExecuteDlgInit
+## <a name="cwndexecutedlginit"></a><a name="executedlginit"></a>CWnd:: Ексекутедлгинит
 
 Инициирует ресурс диалогового окна.
 
@@ -2996,23 +2996,23 @@ BOOL ExecuteDlgInit(LPVOID lpResource);
 
 ### <a name="parameters"></a>Параметры
 
-*lpszResourceName*<br/>
-Указатель на нулевую строку с указанием имени ресурса.
+*лпсзресаурценаме*<br/>
+Указатель на строку с завершающим нулем, указывающую имя ресурса.
 
-*lpResource*<br/>
+*лпресаурце*<br/>
 Указатель на ресурс.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-TRUE, если диалоговый ресурс выполнен; в противном случае FALSE.
+Значение TRUE, если выполняется ресурс диалогового окна; в противном случае — FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-`ExecuteDlgInit`будет использовать ресурсы, связанные с модулем выполнения, или ресурсы из других источников. Для достижения `ExecuteDlgInit` этой цели, находит `AfxFindResourceHandle`ручку ресурса, вызывая . Если ваше приложение MFC не использует общий DLL (MFCx0. DLL), `AfxFindResourceHandle` вызывает [AfxGetResourceHandle](application-information-and-management.md#afxgetresourcehandle), который возвращает текущую ручку ресурса для исполняемой. Если ваше приложение MFC, использующее MFCx0. DLL, `AfxFindResourceHandle` пересекает `CDynLinkLibrary` список объектов общих и MFC расширение DLLs ищет правильную ручку ресурса.
+`ExecuteDlgInit`будет использовать ресурсы, привязанные к выполняющемуся модулю, или ресурсы из других источников. Для этого `ExecuteDlgInit` находит обработчик ресурсов путем вызова `AfxFindResourceHandle` . Если приложение MFC не использует общую библиотеку DLL (MFCx0 [U] [D]). DLL) `AfxFindResourceHandle` вызывает [афксжетресаурцехандле](application-information-and-management.md#afxgetresourcehandle), который возвращает текущий обработчик ресурсов для исполняемого объекта. Если приложение MFC использует MFCx0 [U] [D]. DLL, `AfxFindResourceHandle` проходит по `CDynLinkLibrary` списку объектов общих библиотек DLL расширения MFC и ищет правильный маркер ресурсов.
 
-## <a name="cwndfiltertooltipmessage"></a><a name="filtertooltipmessage"></a>CWnd::FilterToolTipMessage
+## <a name="cwndfiltertooltipmessage"></a><a name="filtertooltipmessage"></a>CWnd:: Филтертултипмессаже
 
-Вызывается фреймворком для отображения сообщений наконечника инструмента.
+Вызывается платформой для вывода сообщений всплывающей подсказки.
 
 ```cpp
 void FilterToolTipMessage(MSG* pMsg);
@@ -3020,18 +3020,18 @@ void FilterToolTipMessage(MSG* pMsg);
 
 ### <a name="parameters"></a>Параметры
 
-*pMsg*<br/>
-Указатель на сообщение наконечника инструмента.
+*пмсг*<br/>
+Указатель на сообщение подсказки.
 
 ### <a name="remarks"></a>Remarks
 
-В большинстве приложений MFC этот метод называется фреймворком от [PreTranslateMessage](#pretranslatemessage) и [EnableToolTips,](#enabletooltips)и вам не нужно называть его самостоятельно.
+В большинстве приложений MFC этот метод вызывается платформой из [претранслатемессаже](#pretranslatemessage) и [енаблетултипс](#enabletooltips), и вам не нужно вызывать его самостоятельно.
 
-Однако в некоторых приложениях, например в некоторых элементах управления ActiveX, эти методы могут не вызываться инфраструктурой, и вам нужно будет вызвать FilterToolTipMessage самостоятельно. Для получения дополнительной [информации, см.](../../mfc/methods-of-creating-tool-tips.md)
+Однако в некоторых приложениях, например некоторых элементах управления ActiveX, эти методы могут не вызываться платформой, и вам нужно будет вызвать Филтертултипмессаже самостоятельно. Дополнительные сведения см. в разделе [методы создания всплывающих подсказок](../../mfc/methods-of-creating-tool-tips.md).
 
-## <a name="cwndfindwindow"></a><a name="findwindow"></a>CWnd::FindWindow
+## <a name="cwndfindwindow"></a><a name="findwindow"></a>CWnd:: FindWindow
 
-Возвращает верхний `CWnd` уровень, класс окон которого дается *lpszClassName* и чье имя окна, или название, дается *lpszWindowName*.
+Возвращает верхний уровень, `CWnd` класс окон которого предоставляется параметром *лпсзкласснаме* , а имя окна или заголовок — *лпсзвиндовнаме*.
 
 ```
 static CWnd* PASCAL FindWindow(
@@ -3041,29 +3041,29 @@ static CWnd* PASCAL FindWindow(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszClassName*<br/>
-Указывает на строку с нулевым завершением, которая определяет `WNDCLASS` название класса окна (структура). Если *lpClassName* является NULL, все имена классов совпадают.
+*лпсзкласснаме*<br/>
+Указывает на строку, завершающуюся нулем, которая указывает имя класса окна ( `WNDCLASS` структура). Если *лпкласснаме* имеет значение null, все имена классов совпадают.
 
-*lpszWindowName*<br/>
-Указывает на строку с нулевым завершением, которая определяет имя окна (название окна). Если *lpWindowName* является NULL, все имена окон совпадают.
+*лпсзвиндовнаме*<br/>
+Указывает на строку, завершающуюся нулем, которая указывает имя окна (заголовок окна). Если *лпвиндовнаме* имеет значение null, все имена окон совпадают.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Идентифицирует окно с указанным именем класса и именем окна. Это NULL, если такое окно не найдено.
+Определяет окно с указанными именем класса и именем окна. Если такого окна не найдено, оно имеет значение NULL.
 
-Кон `CWnd`может быть временным и не должен храниться для последующего использования.
+`CWnd`* Может быть временным и не должен храниться для последующего использования.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция не выполняет поиск в детских окнах.
+Эта функция не выполняет поиск в дочерних окнах.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#94](../../mfc/reference/codesnippet/cpp/cwnd-class_33.cpp)]
 
-## <a name="cwndfindwindowex"></a><a name="findwindowex"></a>CWnd::FindWindowEx
+## <a name="cwndfindwindowex"></a><a name="findwindowex"></a>CWnd:: FindWindowEx
 
-Извлекает объект окна, имя класса и имя окна которого совпадают с указанными строками.
+Извлекает объект Window, имя класса и имя окна которого совпадают с указанными строками.
 
 ```
 static CWnd* FindWindowEx(
@@ -3075,29 +3075,29 @@ static CWnd* FindWindowEx(
 
 ### <a name="parameters"></a>Параметры
 
-*hwndParent*<br/>
-Ручка к родительскому окну, чьи детские окна должны быть обысканы.
+*хвндпарент*<br/>
+Маркер родительского окна, для которого должны быть просмотрены дочерние окна.
 
-*hwndChildAfter*<br/>
-Ручка к окну ребенка. Поиск начинается со следующего окна ребенка в порядке «Я». Детское окно должно быть прямым детским окном *hwndParent,* а не просто окном потомка.
+*хвндчилдафтер*<br/>
+Обработчик для дочернего окна. Поиск начинается со следующего дочернего окна в порядке Z. Дочернее окно должно быть прямым дочерним окном *хвндпарент*, а не только вложенным окном.
 
-*lpszClass*<br/>
-Указатель на строку с нулевым завершением, которая определяет имя класса или атом класса, созданный предыдущим вызовом в [RegisterClass](/windows/win32/api/winuser/nf-winuser-registerclassw) или [RegisterClassEx.](/windows/win32/api/winuser/nf-winuser-registerclassexw)
+*лпсзкласс*<br/>
+Указатель на строку, завершающуюся нулем, которая указывает имя класса или класс Atom, созданный предыдущим вызовом [registerClass](/windows/win32/api/winuser/nf-winuser-registerclassw) или [RegisterClassEx](/windows/win32/api/winuser/nf-winuser-registerclassexw).
 
-*lpszWindow*<br/>
-Указатель на строку с нулевым завершением, которая определяет имя окна (название окна). Если этот параметр NULL, все имена окон совпадают.
+*лпсзвиндов*<br/>
+Указатель на строку, завершающуюся нулем, которая указывает имя окна (заголовок окна). Если этот параметр имеет значение NULL, все имена окон совпадают.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если функция успешно работает, значение возврата является указателем на объект окна, имеющий указанный класс и имена окон. Если функция выходит из строя, значение возврата является NULL.
+Если функция выполнена, возвращаемое значение является указателем на объект Window с указанными именами класса и окна. Если функция завершается ошибкой, возвращается значение NULL.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция-член имитирует функциональность функции [FindWindowEx,](/windows/win32/api/winuser/nf-winuser-findwindowexw)как описано в SDK Windows.
+Эта функция члена эмулирует функциональность функции [FindWindowEx](/windows/win32/api/winuser/nf-winuser-findwindowexw), как описано в Windows SDK.
 
-## <a name="cwndflashwindow"></a><a name="flashwindow"></a>CWnd::FlashWindow
+## <a name="cwndflashwindow"></a><a name="flashwindow"></a>CWnd:: FlashWindow интерфейса
 
-Мигает данный окне один раз.
+Заflash заданное окно один раз.
 
 ```
 BOOL FlashWindow(BOOL bInvert);
@@ -3105,30 +3105,30 @@ BOOL FlashWindow(BOOL bInvert);
 
 ### <a name="parameters"></a>Параметры
 
-*bInvert*<br/>
-Определяет, является ли `CWnd` это вспышкой или возвращенным в исходное состояние. Вспышки `CWnd` из одного состояния в другое, если *bInvert* является правдой. Если *bInvert* FALSE, окно возвращается в исходное состояние (активное или неактивное).
+*бинверт*<br/>
+Указывает, должен ли объект `CWnd` быть мигать или возвращен в исходное состояние. Объект `CWnd` будет мигать из одного состояния в другое, если *бинверт* имеет значение true. Если *бинверт* имеет значение false, окно возвращается в исходное состояние (активное или неактивное).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Nonzero, если окно было активен `FlashWindow` до вызова к функции члена; в противном случае 0.
+Ненулевое значение, если окно было активно до вызова `FlashWindow` функции члена; в противном случае 0.
 
 ### <a name="remarks"></a>Remarks
 
-Для последовательного мигания, создать системный таймер и неоднократно вызова `FlashWindow`. Мигает `CWnd` означает изменение внешнего вида его `CWnd` заголовок бар, как если бы менялись от неактивного к активному статусу, или наоборот. (Неактивная заголовок бар изменения в активную панель заголовка; активный заголовок бар изменения неактивных заголовок бар.)
+Для последующего мигания Создайте системный таймер и повторно вызовите `FlashWindow` . Мигание `CWnd` означает изменение внешнего вида строки заголовка так, как будто изменилось `CWnd` с неактивного на активное состояние, или наоборот. (Неактивная строка заголовка меняется на активную строку заголовка; активная строка заголовка меняется на неактивную строку заголовка.)
 
-Как правило, окно мигает, чтобы сообщить пользователю, что он требует внимания, но что он в настоящее время не имеют входного фокуса.
+Как правило, окно мигает для информирования пользователя о том, что он требует внимания, но в данный момент не имеет фокуса ввода.
 
-Параметр *bInvert* должен быть FALSE только тогда, когда окно получает входная фокусировка и больше не будет мигать; она должна быть правдой на последовательных вызовов в ожидании, чтобы получить входин фокус.
+Параметр *бинверт* должен иметь значение false, только если окно получает фокус ввода и больше не будет мигать; при последовательных вызовах он должен иметь значение TRUE, ожидая получения фокуса ввода.
 
-Эта функция всегда возвращаетнее для минимизированных окон. Если окно сведено `FlashWindow` к минимуму, просто мигает значок окна; *bInvert* игнорируется для минимизированных окон.
+Эта функция всегда возвращает ненулевое значение для минимальных окон. Если окно является сведенным, `FlashWindow` будет просто мигать значок окна. *бинверт* игнорируется для сворачивания окон.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#95](../../mfc/reference/codesnippet/cpp/cwnd-class_34.cpp)]
 
-## <a name="cwndflashwindowex"></a><a name="flashwindowex"></a>CWnd::FlashWindowEx
+## <a name="cwndflashwindowex"></a><a name="flashwindowex"></a>CWnd:: Флашвиндовекс
 
-Мигает данное окно.
+Завспышки в заданном окне.
 
 ```
 BOOL FlashWindowEx(
@@ -3140,23 +3140,23 @@ BOOL FlashWindowEx(
 ### <a name="parameters"></a>Параметры
 
 *dwFlags*<br/>
-Определяет состояние вспышки. Полный список значений можно узнать из структуры [FLASHWINFO.](/windows/win32/api/winuser/ns-winuser-flashwinfo)
+Указывает состояние флэш-памяти. Полный список значений см. в разделе Структура [флашвинфо](/windows/win32/api/winuser/ns-winuser-flashwinfo) .
 
-*uCount*<br/>
-Определяет количество раз, чтобы мигать окно.
+*укаунт*<br/>
+Указывает количество попыток мигания окна.
 
-*dwTimeout*<br/>
-Определяет скорость, в миллисекундах, при которых окно будет мигать. Если *dwTimeout* равен нулю, функция использует скорость мигания курсора по умолчанию.
+*двтимеаут*<br/>
+Указывает скорость в миллисекундах, с которой окно будет мигать. Если *двтимеаут* равен нулю, функция использует частоту мерцания курсора по умолчанию.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение возврата определяет состояние окна перед вызовом к `FlashWindowEx` функции. Если подпись окна была нарисована как активная до вызова, значение возврата является ненулевым. В противном случае значение возврата равно нулю.
+Возвращаемое значение задает состояние окна перед вызовом `FlashWindowEx` функции. Если заголовок окна был нарисован как активный перед вызовом, возвращаемое значение не равно нулю. В противном случае возвращаемое значение равно нулю.
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод эмулирует функциональность функции [FlashWindowEx](/windows/win32/api/winuser/nf-winuser-flashwindowex), как описано в Windows SDK.
+Этот метод эмулирует функциональность функции [флашвиндовекс](/windows/win32/api/winuser/nf-winuser-flashwindowex), как описано в Windows SDK.
 
-## <a name="cwndfromhandle"></a><a name="fromhandle"></a>CWnd::FromHandle
+## <a name="cwndfromhandle"></a><a name="fromhandle"></a>CWnd:: FromHandle
 
 Возвращает указатель на объект `CWnd`, когда дескриптор передается окну. Если объект `CWnd` не прикреплен к дескриптору, создается и прикрепляется временный объект `CWnd`.
 
@@ -3166,7 +3166,7 @@ static CWnd* PASCAL FromHandle(HWND hWnd);
 
 ### <a name="parameters"></a>Параметры
 
-*Hwnd*<br/>
+*hWnd*<br/>
 HWND окна Windows.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -3175,7 +3175,7 @@ HWND окна Windows.
 
 Указатель может быть временным. Его не требуется сохранять для дальнейшего использования.
 
-## <a name="cwndfromhandlepermanent"></a><a name="fromhandlepermanent"></a>CWnd::FromTheПостоянный
+## <a name="cwndfromhandlepermanent"></a><a name="fromhandlepermanent"></a>CWnd:: Фромхандлеперманент
 
 Возвращает указатель на объект `CWnd`, когда дескриптор передается окну.
 
@@ -3185,7 +3185,7 @@ static CWnd* PASCAL FromHandlePermanent(HWND hWnd);
 
 ### <a name="parameters"></a>Параметры
 
-*Hwnd*<br/>
+*hWnd*<br/>
 HWND окна Windows.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -3194,11 +3194,11 @@ HWND окна Windows.
 
 ### <a name="remarks"></a>Remarks
 
-Если `CWnd` объект не прикреплен к ручке, NULL возвращается.
+Если `CWnd` объект не присоединен к маркеру, возвращается значение null.
 
-Эта функция, в отличие от [FromHandle,](#fromhandle)не создает временных объектов.
+Эта функция, в отличие от [FromHandle](#fromhandle), не создает временные объекты.
 
-## <a name="cwndget_accchild"></a><a name="get_accchild"></a>CWnd::get_accChild
+## <a name="cwndget_accchild"></a><a name="get_accchild"></a>CWnd:: get_accChild
 
 Вызывается платформой для извлечения адреса интерфейса `IDispatch` для указанного дочернего элемента.
 
@@ -3210,25 +3210,25 @@ virtual HRESULT get_accChild(
 
 ### <a name="parameters"></a>Параметры
 
-*varChild*<br/>
-Идентифицирует ребенка, интерфейс которого `IDispatch` должен быть извлечен.
+*варчилд*<br/>
+Определяет дочерний элемент, интерфейс которого необходимо `IDispatch` извлечь.
 
-*ppdispChild*<br/>
-Получает адрес интерфейса `IDispatch` детского объекта.
+*ппдиспчилд*<br/>
+Получает адрес интерфейса дочернего объекта `IDispatch` .
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK на успех, код ошибки COM при сбое. Смотрите **значения возврата** в [IAccessible::get_accChild](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accchild) в Windows SDK.
+Возвращает S_OK при успешном выполнении — код ошибки COM при сбое. См. раздел **возвращаемые значения** в [IAccessible:: get_accChild](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accchild) в Windows SDK.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция является частью поддержки [активной доступности](/windows/win32/WinAuto/microsoft-active-accessibility) MFC.
+Эта функция является частью поддержки [Active ACCESSIBILITY](/windows/win32/WinAuto/microsoft-active-accessibility) MFC.
 
-Переопределить эту функцию в вашем -производном `CWnd`классе, если у вас есть неоконированные элементы пользовательского интерфейса (кроме элементов без окон ActiveX, которые mFC обрабатывает).
+Переопределяйте эту функцию в `CWnd` классе, производном от, если имеются неоконные элементы пользовательского интерфейса (отличные от безоконных элементов управления ActiveX, которые обрабатываются MFC).
 
-Для получения дополнительной информации см. [IAccessible::get_accChild](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accchild) в Windows SDK.
+Дополнительные сведения см. в разделе [IAccessible:: get_accChild](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accchild) в Windows SDK.
 
-## <a name="cwndget_accchildcount"></a><a name="get_accchildcount"></a>CWnd::get_accChildCount
+## <a name="cwndget_accchildcount"></a><a name="get_accchildcount"></a>CWnd:: get_accChildCount
 
 Вызывается платформой для извлечения количества дочерних элементов, принадлежащих этому объекту.
 
@@ -3238,22 +3238,22 @@ virtual HRESULT get_accChildCount(long* pcountChildren);
 
 ### <a name="parameters"></a>Параметры
 
-*pcountChildren*<br/>
-Получает количество детей.
+*пкаунтчилдрен*<br/>
+Получает число дочерних элементов.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK на успех, код ошибки COM при сбое. Смотрите **значения возврата** в [IAccessible::get_accChildCount](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accchildcount) в Windows SDK.
+Возвращает S_OK при успешном выполнении — код ошибки COM при сбое. См. раздел **возвращаемые значения** в [IAccessible:: get_accChildCount](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accchildcount) в Windows SDK.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция является частью поддержки [активной доступности](/windows/win32/WinAuto/microsoft-active-accessibility) MFC.
+Эта функция является частью поддержки [Active ACCESSIBILITY](/windows/win32/WinAuto/microsoft-active-accessibility) MFC.
 
-Переопределить эту функцию в вашем -производном `CWnd`классе, если у вас есть неоконированные элементы пользовательского интерфейса (кроме элементов без окон ActiveX, которые mFC обрабатывает). Вызовите версию базового класса, а затем добавьте элементы незаклееного ребенка.
+Переопределяйте эту функцию в `CWnd` классе, производном от, если имеются неоконные элементы пользовательского интерфейса (отличные от безоконных элементов управления ActiveX, которые обрабатываются MFC). Вызовите версию базового класса, а затем добавьте неоконные дочерние элементы.
 
-Для получения дополнительной информации см. [IAccessible::get_accChildCount](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accchildcount) в Windows SDK.
+Дополнительные сведения см. в разделе [IAccessible:: get_accChildCount](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accchildcount) в Windows SDK.
 
-## <a name="cwndget_accdefaultaction"></a><a name="get_accdefaultaction"></a>CWnd::get_accDefaultAction
+## <a name="cwndget_accdefaultaction"></a><a name="get_accdefaultaction"></a>CWnd:: get_accDefaultAction
 
 Вызывается платформой для извлечения строки, описывающей действие объекта по умолчанию.
 
@@ -3265,25 +3265,25 @@ virtual HRESULT get_accDefaultAction(
 
 ### <a name="parameters"></a>Параметры
 
-*varChild*<br/>
-Определяет, является ли извлеченное действие по умолчанию объектом или одним из элементов ребенка объекта. Этот параметр может быть либо CHILDID_SELF (для получения информации об объекте), либо идентификатором ребенка (для получения информации о элементе ребенка объекта).
+*варчилд*<br/>
+Указывает, является ли возвращаемое действие по умолчанию объектом или одним из дочерних элементов объекта. Этот параметр может быть либо CHILDID_SELF (для получения сведений об объекте), либо ИДЕНТИФИКАТОРом дочернего элемента (для получения сведений о дочернем элементе объекта).
 
-*pszDefaultAction*<br/>
-Адрес BSTR, который получает локализованную строку, описывающую действие по умолчанию для указанного объекта, или NULL, если этот объект не имеет действия по умолчанию.
+*псздефаултактион*<br/>
+Адрес строки BSTR, которая получает локализованную строку, описывающую действие по умолчанию для указанного объекта, или значение NULL, если этот объект не имеет действия по умолчанию.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK на успех, код ошибки COM при сбое. Смотрите **значения возврата** в [IAccessible::get_accDefaultAction](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accdefaultaction) в Windows SDK.
+Возвращает S_OK при успешном выполнении — код ошибки COM при сбое. См. раздел **возвращаемые значения** в [IAccessible:: get_accDefaultAction](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accdefaultaction) в Windows SDK.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция является частью поддержки [активной доступности](/windows/win32/WinAuto/microsoft-active-accessibility) MFC.
+Эта функция является частью поддержки [Active ACCESSIBILITY](/windows/win32/WinAuto/microsoft-active-accessibility) MFC.
 
-Переизвейдить `CWnd`эту функцию в классе,производное, чтобы описать действие объекта по умолчанию.
+Переопределите эту функцию в `CWnd` классе, производном от, чтобы описать действие по умолчанию для объекта.
 
-Для получения дополнительной информации см. [IAccessible::get_accDefaultAction](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accdefaultaction) в Windows SDK.
+Дополнительные сведения см. в разделе [IAccessible:: get_accDefaultAction](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accdefaultaction) в Windows SDK.
 
-## <a name="cwndget_accdescription"></a><a name="get_accdescription"></a>CWnd::get_accDescription
+## <a name="cwndget_accdescription"></a><a name="get_accdescription"></a>CWnd:: get_accDescription
 
 Вызывается платформой для извлечения строки, описывающей внешний вид указанного объекта.
 
@@ -3295,25 +3295,25 @@ virtual HRESULT get_accDescription(
 
 ### <a name="parameters"></a>Параметры
 
-*varChild*<br/>
-Уточняется, является ли извлеченное описание описанием объекта или одним из элементов ребенка объекта. Этот параметр может быть либо CHILDID_SELF (для получения информации об объекте), либо идентификатором ребенка (для получения информации о элементе ребенка объекта).
+*варчилд*<br/>
+Указывает, является ли извлекаемое описание объектом или одним из дочерних элементов объекта. Этот параметр может быть либо CHILDID_SELF (для получения сведений об объекте), либо ИДЕНТИФИКАТОРом дочернего элемента (для получения сведений о дочернем элементе объекта).
 
-*pszОписание*<br/>
-Адрес BSTR, который получает локализованную строку, описывающую указанный объект, или NULL, если описание не доступно для этого объекта.
+*псздескриптион*<br/>
+Адрес строки BSTR, которая получает локализованную строку, описывающую указанный объект, или значение NULL, если описание для этого объекта недоступно.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK на успех, код ошибки COM при сбое. Смотрите **значения возврата** в [IAccessible::get_accDescription](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accdescription) в Windows SDK.
+Возвращает S_OK при успешном выполнении — код ошибки COM при сбое. См. раздел **возвращаемые значения** в [IAccessible:: get_accDescription](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accdescription) в Windows SDK.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция является частью поддержки [активной доступности](/windows/win32/WinAuto/microsoft-active-accessibility) MFC.
+Эта функция является частью поддержки [Active ACCESSIBILITY](/windows/win32/WinAuto/microsoft-active-accessibility) MFC.
 
-Переизобить `CWnd`эту функцию в вашем классе, полученном, чтобы описать объект. Позвоните в версию базового класса и добавьте описание.
+Переопределите эту функцию в `CWnd` классе, производном от, чтобы описать объект. Вызовите версию базового класса и добавьте описание.
 
-Для получения дополнительной информации см. [IAccessible::get_accDescription](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accdescription) в Windows SDK.
+Дополнительные сведения см. в разделе [IAccessible:: get_accDescription](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accdescription) в Windows SDK.
 
-## <a name="cwndget_accfocus"></a><a name="get_accfocus"></a>CWnd::get_accFocus
+## <a name="cwndget_accfocus"></a><a name="get_accfocus"></a>CWnd:: get_accFocus
 
 Вызывается платформой для извлечения объекта, имеющего фокус клавиатурного ввода.
 
@@ -3323,24 +3323,24 @@ virtual HRESULT get_accFocus(VARIANT* pvarChild);
 
 ### <a name="parameters"></a>Параметры
 
-*pvarChild*<br/>
-Получает информацию об объекте, который имеет фокус. Смотрите *pvarID* в [IAccessible::get_accFocus](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accfocus) в Windows SDK.
+*пварчилд*<br/>
+Получает сведения об объекте, который находится в фокусе. См. раздел *пварид* in [IAccessible:: get_accFocus](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accfocus) в Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK на успех, код ошибки COM при сбое. Смотрите **значения** возврата `IAccessible::get_accFocus` в SDK Windows.
+Возвращает S_OK при успешном выполнении — код ошибки COM при сбое. См. раздел **возвращаемые значения** в `IAccessible::get_accFocus` в Windows SDK.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция является частью поддержки [активной доступности](/windows/win32/WinAuto/microsoft-active-accessibility) MFC.
+Эта функция является частью поддержки [Active ACCESSIBILITY](/windows/win32/WinAuto/microsoft-active-accessibility) MFC.
 
-Переопределить эту функцию в вашем -производном `CWnd`классе, если у вас есть неоконированные элементы пользовательского интерфейса (кроме элементов без окон ActiveX, которые mFC обрабатывает).
+Переопределяйте эту функцию в `CWnd` классе, производном от, если имеются неоконные элементы пользовательского интерфейса (отличные от безоконных элементов управления ActiveX, которые обрабатываются MFC).
 
-Для получения дополнительной информации см. [IAccessible::get_accFocus](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accfocus) в Windows SDK.
+Дополнительные сведения см. в разделе [IAccessible:: get_accFocus](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accfocus) в Windows SDK.
 
-## <a name="cwndget_acchelp"></a><a name="get_acchelp"></a>CWnd::get_accHelp
+## <a name="cwndget_acchelp"></a><a name="get_acchelp"></a>CWnd:: get_accHelp
 
-Вызывается фректовой для извлечения строки **справки** объекта.
+Вызывается платформой для получения строки свойства **справки** объекта.
 
 ```
 virtual HRESULT get_accHelp(
@@ -3350,27 +3350,27 @@ virtual HRESULT get_accHelp(
 
 ### <a name="parameters"></a>Параметры
 
-*varChild*<br/>
-Уточняется, является ли полученная информация о справке объектом или одним из элементов ребенка объекта. Этот параметр может быть либо CHILDID_SELF (для получения информации об объекте), либо идентификатором ребенка (для получения информации о элементе ребенка объекта).
+*варчилд*<br/>
+Указывает, должны ли извлекаться справочные сведения — объект или один из дочерних элементов объекта. Этот параметр может быть либо CHILDID_SELF (для получения сведений об объекте), либо ИДЕНТИФИКАТОРом дочернего элемента (для получения сведений о дочернем элементе объекта).
 
-*pszHelp*<br/>
-Адрес BSTR, который получает локализованную строку, содержащую справочную информацию для указанного объекта, или NULL, если информация о справке отсутствует.
+*псзелп*<br/>
+Адрес строки BSTR, которая получает локализованную строку, содержащую справочные сведения для указанного объекта, или значение NULL, если справочная информация недоступна.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK на успех, код ошибки COM при сбое. Смотрите **значения возврата** в [IAccessible::get_accHelp](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acchelp) в Windows SDK.
+Возвращает S_OK при успешном выполнении — код ошибки COM при сбое. См. раздел **возвращаемые значения** в [IAccessible:: get_accHelp](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acchelp) в Windows SDK.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция является частью поддержки [активной доступности](/windows/win32/WinAuto/microsoft-active-accessibility) MFC.
+Эта функция является частью поддержки [Active ACCESSIBILITY](/windows/win32/WinAuto/microsoft-active-accessibility) MFC.
 
-Переизобить `CWnd`эту функцию в классе, полученном из вашего, чтобы предоставить текст справки для объекта.
+Переопределите эту функцию в `CWnd` классе, производном от, чтобы предоставить текст справки для объекта.
 
-Для получения дополнительной информации см. [IAccessible::get_accHelp](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acchelp) в Windows SDK.
+Дополнительные сведения см. в разделе [IAccessible:: get_accHelp](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acchelp) в Windows SDK.
 
-## <a name="cwndget_acchelptopic"></a><a name="get_acchelptopic"></a>CWnd::get_accHelpTopic
+## <a name="cwndget_acchelptopic"></a><a name="get_acchelptopic"></a>CWnd:: get_accHelpTopic
 
-Вызывается фреймворком для получения полного пути файла **WinHelp,** связанного с указанным объектом, и идентификатором соответствующей темы в этом файле.
+Вызвано платформой для получения полного пути к файлу **WinHelp** , связанному с указанным объектом, и идентификатором соответствующего раздела в этом файле.
 
 ```
 virtual HRESULT get_accHelpTopic(
@@ -3381,28 +3381,28 @@ virtual HRESULT get_accHelpTopic(
 
 ### <a name="parameters"></a>Параметры
 
-*pszHelpFile*<br/>
-Адрес BSTR, который получает полный `WinHelp` путь файла, связанного с указанным объектом, если таковой имеется.
+*псзелпфиле*<br/>
+Адрес объекта BSTR, который получает полный путь к `WinHelp` файлу, связанному с указанным объектом, если он есть.
 
-*varChild*<br/>
-Уточняется, является ли извлекаемый предмет справки темой объекта или одним из элементов ребенка объекта. Этот параметр может быть либо CHILDID_SELF (для получения темы справки для объекта), либо идентификатора ребенка (для получения темы справки для одного из элементов ребенка объекта).
+*варчилд*<br/>
+Указывает, должен ли раздел справки извлекаться из объекта или одного из дочерних элементов объекта. Этот параметр может быть либо CHILDID_SELF (для получения раздела справки по объекту), либо ИДЕНТИФИКАТОРом дочернего элемента (для получения раздела справки для одного из дочерних элементов объекта).
 
-*pidTopic*<br/>
-Определяет тему файла справки, связанную с указанным объектом. Смотрите *pidTopic* в [IAccessible::get_accHelpTopic](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acchelptopic) в Windows SDK.
+*пидтопик*<br/>
+Определяет раздел файла справки, связанный с указанным объектом. См. раздел *пидтопик* in [IAccessible:: get_accHelpTopic](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acchelptopic) в Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK на успех, код ошибки COM при сбое. Смотрите **значения** возврата `IAccessible::get_accHelpTopic` в SDK Windows.
+Возвращает S_OK при успешном выполнении — код ошибки COM при сбое. См. раздел **возвращаемые значения** в `IAccessible::get_accHelpTopic` в Windows SDK.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция является частью поддержки [активной доступности](/windows/win32/WinAuto/microsoft-active-accessibility) MFC.
+Эта функция является частью поддержки [Active ACCESSIBILITY](/windows/win32/WinAuto/microsoft-active-accessibility) MFC.
 
-Переизобить `CWnd`эту функцию в классе, полученном из вашего, чтобы предоставить справочную информацию о объекте.
+Переопределите эту функцию в `CWnd` классе, производном от, чтобы предоставить справочную информацию об объекте.
 
-Для получения дополнительной информации см. [IAccessible::get_accHelpTopic](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acchelptopic) в Windows SDK.
+Дополнительные сведения см. в разделе [IAccessible:: get_accHelpTopic](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acchelptopic) в Windows SDK.
 
-## <a name="cwndget_acckeyboardshortcut"></a><a name="get_acckeyboardshortcut"></a>CWnd::get_accKeyboardShortcut
+## <a name="cwndget_acckeyboardshortcut"></a><a name="get_acckeyboardshortcut"></a>CWnd:: get_accKeyboardShortcut
 
 Вызывается платформой для извлечения сочетания клавиш указанного объекта или клавиши доступа к нему.
 
@@ -3414,25 +3414,25 @@ virtual HRESULT get_accKeyboardShortcut(
 
 ### <a name="parameters"></a>Параметры
 
-*varChild*<br/>
-Уточняется, является ли извлечена клавиатура кратчайшим ключом объекта или одним из элементов ребенка объекта. Этот параметр может быть либо CHILDID_SELF (для получения информации об объекте), либо идентификатором ребенка (для получения информации о элементе ребенка объекта).
+*варчилд*<br/>
+Указывает, следует ли получать сочетание клавиш для объекта или для одного из дочерних элементов объекта. Этот параметр может быть либо CHILDID_SELF (для получения сведений об объекте), либо ИДЕНТИФИКАТОРом дочернего элемента (для получения сведений о дочернем элементе объекта).
 
-*pszKeyboardShortcut*<br/>
-Адрес BSTR, который получает локализованную строку, идентифицирующую ярлык клавиатуры, или NULL, если ярлык клавиатуры не связан с указанным объектом.
+*псзкэйбоардшорткут*<br/>
+Адрес строки BSTR, которая получает локализованную строку, идентифицирующую сочетание клавиш, или значение NULL, если сочетание клавиш не связано с указанным объектом.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK на успех, код ошибки COM при сбое. Смотрите **значения возврата** в [IAccessible::get_accKeyboardShortcut](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acckeyboardshortcut) в Windows SDK.
+Возвращает S_OK при успешном выполнении — код ошибки COM при сбое. См. раздел **возвращаемые значения** в [IAccessible:: get_accKeyboardShortcut](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acckeyboardshortcut) в Windows SDK.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция является частью поддержки [активной доступности](/windows/win32/WinAuto/microsoft-active-accessibility) MFC.
+Эта функция является частью поддержки [Active ACCESSIBILITY](/windows/win32/WinAuto/microsoft-active-accessibility) MFC.
 
-Переизобить `CWnd`эту функцию в классе полученных клавиатуры, чтобы определить ярлык клавиатуры для объекта.
+Переопределите эту функцию в `CWnd` классе, производном от, чтобы обозначить сочетание клавиш для объекта.
 
-Для получения дополнительной информации см. [IAccessible::get_accKeyboardShortcut](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acckeyboardshortcut) в Windows SDK.
+Дополнительные сведения см. в разделе [IAccessible:: get_accKeyboardShortcut](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acckeyboardshortcut) в Windows SDK.
 
-## <a name="cwndget_accname"></a><a name="get_accname"></a>CWnd::get_accName
+## <a name="cwndget_accname"></a><a name="get_accname"></a>CWnd:: get_accName
 
 Вызывается платформой для извлечения имени указанного объекта.
 
@@ -3444,25 +3444,25 @@ virtual HRESULT get_accName(
 
 ### <a name="parameters"></a>Параметры
 
-*varChild*<br/>
-Уточняется, является ли имя, которое необходимо получить, объектом или одним из элементов ребенка объекта. Этот параметр может быть либо CHILDID_SELF (для получения информации об объекте), либо идентификатором ребенка (для получения информации о элементе ребенка объекта).
+*варчилд*<br/>
+Указывает, является ли извлекаемое имя объектом или одним из дочерних элементов объекта. Этот параметр может быть либо CHILDID_SELF (для получения сведений об объекте), либо ИДЕНТИФИКАТОРом дочернего элемента (для получения сведений о дочернем элементе объекта).
 
 *pszName*<br/>
-Адрес BSTR, который получает строку, содержащую имя указанного объекта.
+Адрес строки BSTR, которая получает строку, содержащую имя указанного объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK на успех, код ошибки COM при сбое. Смотрите **значения возврата** в [IAccessible::get_accName](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accname) в Windows SDK.
+Возвращает S_OK при успешном выполнении — код ошибки COM при сбое. См. раздел **возвращаемые значения** в [IAccessible:: get_accName](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accname) в Windows SDK.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция является частью поддержки [активной доступности](/windows/win32/WinAuto/microsoft-active-accessibility) MFC.
+Эта функция является частью поддержки [Active ACCESSIBILITY](/windows/win32/WinAuto/microsoft-active-accessibility) MFC.
 
-Переизобить `CWnd`эту функцию в классе,производные от вашего, чтобы вернуть имя объекта.
+Переопределите эту функцию в `CWnd` классе, производном от, чтобы вернуть имя объекта.
 
-Для получения дополнительной информации см. [IAccessible::get_accName](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accname) в Windows SDK.
+Дополнительные сведения см. в разделе [IAccessible:: get_accName](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accname) в Windows SDK.
 
-## <a name="cwndget_accparent"></a><a name="get_accparent"></a>CWnd::get_accParent
+## <a name="cwndget_accparent"></a><a name="get_accparent"></a>CWnd:: get_accParent
 
 Вызывается платформой для извлечения интерфейса `IDispatch` родительского элемента данного объекта.
 
@@ -3472,22 +3472,22 @@ virtual HRESULT get_accParent(IDispatch** ppdispParent);
 
 ### <a name="parameters"></a>Параметры
 
-*ppdispParent*<br/>
-Получает адрес интерфейса `IDispatch` родительского объекта. Переменная установлена NULL, если не существует родителя, или если ребенок не может получить доступ к своему родителю.
+*ппдисппарент*<br/>
+Получает адрес интерфейса родительского объекта `IDispatch` . Переменная получает значение NULL, если родительский объект не существует, или если дочерний элемент не может получить доступ к родительскому элементу.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK на успех, код ошибки COM при сбое. Смотрите **значения возврата** в [IAccessible::get_accParent](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accparent) в Windows SDK.
+Возвращает S_OK при успешном выполнении — код ошибки COM при сбое. См. раздел **возвращаемые значения** в [IAccessible:: get_accParent](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accparent) в Windows SDK.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция является частью поддержки [активной доступности](/windows/win32/WinAuto/microsoft-active-accessibility) MFC.
+Эта функция является частью поддержки [Active ACCESSIBILITY](/windows/win32/WinAuto/microsoft-active-accessibility) MFC.
 
-В большинстве случаев вам не придется переопределять эту функцию.
+В большинстве случаев переопределение этой функции не требуется.
 
-Для получения дополнительной информации см. [IAccessible::get_accParent](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accparent) в Windows SDK.
+Дополнительные сведения см. в разделе [IAccessible:: get_accParent](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accparent) в Windows SDK.
 
-## <a name="cwndget_accrole"></a><a name="get_accrole"></a>CWnd::get_accRole
+## <a name="cwndget_accrole"></a><a name="get_accrole"></a>CWnd:: get_accRole
 
 Вызывается платформой для извлечения информации, описывающей роль указанного объекта.
 
@@ -3499,25 +3499,25 @@ virtual HRESULT get_accRole(
 
 ### <a name="parameters"></a>Параметры
 
-*varChild*<br/>
-Уточняется, является ли полученная информация о роли объектом или одним из элементов ребенка объекта. Этот параметр может быть либо CHILDID_SELF (для получения информации об объекте), либо идентификатором ребенка (для получения информации о элементе ребенка объекта).
+*варчилд*<br/>
+Указывает, являются ли извлекаемые сведения о роли объектом или одним из дочерних элементов объекта. Этот параметр может быть либо CHILDID_SELF (для получения сведений об объекте), либо ИДЕНТИФИКАТОРом дочернего элемента (для получения сведений о дочернем элементе объекта).
 
-*pvarRole*<br/>
-Получает информацию о роли. Смотрите *pvarRole* в [IAccessible::get_accRole](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accrole) в Windows SDK.
+*пварроле*<br/>
+Получает сведения о роли. См. раздел *пварроле* in [IAccessible:: get_accRole](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accrole) в Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK на успех, код ошибки COM при сбое. Смотрите **значения** возврата `IAccessible::get_accRole` в SDK Windows.
+Возвращает S_OK при успешном выполнении — код ошибки COM при сбое. См. раздел **возвращаемые значения** в `IAccessible::get_accRole` в Windows SDK.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция является частью поддержки [активной доступности](/windows/win32/WinAuto/microsoft-active-accessibility) MFC.
+Эта функция является частью поддержки [Active ACCESSIBILITY](/windows/win32/WinAuto/microsoft-active-accessibility) MFC.
 
-Переопределить эту функцию в вашем -производном `CWnd`классе, если у вас есть неоконированные элементы пользовательского интерфейса (кроме элементов без окон ActiveX, которые mFC обрабатывает).
+Переопределяйте эту функцию в `CWnd` классе, производном от, если имеются неоконные элементы пользовательского интерфейса (отличные от безоконных элементов управления ActiveX, которые обрабатываются MFC).
 
-Для получения дополнительной информации см. [IAccessible::get_accRole](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accrole) в Windows SDK.
+Дополнительные сведения см. в разделе [IAccessible:: get_accRole](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accrole) в Windows SDK.
 
-## <a name="cwndget_accselection"></a><a name="get_accselection"></a>CWnd::get_accSelection
+## <a name="cwndget_accselection"></a><a name="get_accselection"></a>CWnd:: get_accSelection
 
 Вызывается платформой для извлечения выбранного дочернего элемента этого объекта.
 
@@ -3527,22 +3527,22 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 
 ### <a name="parameters"></a>Параметры
 
-*pvarДети*<br/>
-Получает информацию о том, какие дети выбраны. Смотрите *pvarChildren* в [IAccessible::get_accSelection](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accselection) в Windows SDK.
+*пварчилдрен*<br/>
+Получает сведения о том, какие дочерние элементы выбраны. См. раздел *пварчилдрен* in [IAccessible:: get_accSelection](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accselection) в Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK на успех, код ошибки COM при сбое. Смотрите **значения** возврата `IAccessible::get_accSelection` в SDK Windows.
+Возвращает S_OK при успешном выполнении — код ошибки COM при сбое. См. раздел **возвращаемые значения** в `IAccessible::get_accSelection` в Windows SDK.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция является частью поддержки [активной доступности](/windows/win32/WinAuto/microsoft-active-accessibility) MFC.
+Эта функция является частью поддержки [Active ACCESSIBILITY](/windows/win32/WinAuto/microsoft-active-accessibility) MFC.
 
-Переопределить эту функцию в вашем -производном `CWnd`классе, если у вас есть неоконированные элементы пользовательского интерфейса (кроме элементов без окон ActiveX, которые mFC обрабатывает).
+Переопределяйте эту функцию в `CWnd` классе, производном от, если имеются неоконные элементы пользовательского интерфейса (отличные от безоконных элементов управления ActiveX, которые обрабатываются MFC).
 
-Для получения дополнительной информации см. [IAccessible::get_accSelection](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accselection) в Windows SDK.
+Дополнительные сведения см. в разделе [IAccessible:: get_accSelection](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accselection) в Windows SDK.
 
-## <a name="cwndget_accstate"></a><a name="get_accstate"></a>CWnd::get_accState
+## <a name="cwndget_accstate"></a><a name="get_accstate"></a>CWnd:: get_accState
 
 Вызывается платформой для извлечения текущего состояния указанного объекта.
 
@@ -3554,25 +3554,25 @@ virtual HRESULT get_accState(
 
 ### <a name="parameters"></a>Параметры
 
-*varChild*<br/>
-Определяет, является ли полученная информация о состоянии объектом или одним из элементов ребенка объекта. Этот параметр может быть либо CHILDID_SELF (для получения информации об объекте), либо идентификатором ребенка (для получения информации о элементе ребенка объекта).
+*варчилд*<br/>
+Указывает, являются ли извлекаемые сведения о состоянии объектом или одним из дочерних элементов объекта. Этот параметр может быть либо CHILDID_SELF (для получения сведений об объекте), либо ИДЕНТИФИКАТОРом дочернего элемента (для получения сведений о дочернем элементе объекта).
 
-*pvarState*<br/>
-Получает информацию о состоянии объекта. Смотрите *pvarState* в [IAccessible::get_accState](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accstate) в Windows SDK.
+*пварстате*<br/>
+Получает сведения о состоянии объекта. См. раздел *пварстате* in [IAccessible:: get_accState](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accstate) в Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK на успех, код ошибки COM при сбое. Смотрите **значения** возврата `IAccessible::get_accState` в SDK Windows.
+Возвращает S_OK при успешном выполнении — код ошибки COM при сбое. См. раздел **возвращаемые значения** в `IAccessible::get_accState` в Windows SDK.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция является частью поддержки [активной доступности](/windows/win32/WinAuto/microsoft-active-accessibility) MFC.
+Эта функция является частью поддержки [Active ACCESSIBILITY](/windows/win32/WinAuto/microsoft-active-accessibility) MFC.
 
-Переопределить эту функцию в вашем -производном `CWnd`классе, если у вас есть неоконированные элементы пользовательского интерфейса (кроме элементов без окон ActiveX, которые mFC обрабатывает).
+Переопределяйте эту функцию в `CWnd` классе, производном от, если имеются неоконные элементы пользовательского интерфейса (отличные от безоконных элементов управления ActiveX, которые обрабатываются MFC).
 
-Для получения дополнительной информации см. [IAccessible::get_accState](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accstate) в Windows SDK.
+Дополнительные сведения см. в разделе [IAccessible:: get_accState](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accstate) в Windows SDK.
 
-## <a name="cwndget_accvalue"></a><a name="get_accvalue"></a>CWnd::get_accValue
+## <a name="cwndget_accvalue"></a><a name="get_accvalue"></a>CWnd:: get_accValue
 
 Вызывается платформой для извлечения значения указанного объекта.
 
@@ -3584,27 +3584,27 @@ virtual HRESULT get_accValue(
 
 ### <a name="parameters"></a>Параметры
 
-*varChild*<br/>
-Уточняется, является ли полученная информация о значении объектом или одним из элементов ребенка объекта. Этот параметр может быть либо CHILDID_SELF (для получения информации об объекте), либо идентификатором ребенка (для получения информации о элементе ребенка объекта).
+*варчилд*<br/>
+Указывает, являются ли получаемые сведения о значениях объектом или одним из дочерних элементов объекта. Этот параметр может быть либо CHILDID_SELF (для получения сведений об объекте), либо ИДЕНТИФИКАТОРом дочернего элемента (для получения сведений о дочернем элементе объекта).
 
-*pszValue*<br/>
-Адрес BSTR, который получает локализованную строку, содержащую текущее значение объекта.
+*псзвалуе*<br/>
+Адрес строки BSTR, которая получает локализованную строку, содержащую текущее значение объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK на успех, код ошибки COM при сбое. Смотрите **значения возврата** в [IAccessible::get_accValue](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accvalue) в Windows SDK.
+Возвращает S_OK при успешном выполнении — код ошибки COM при сбое. См. раздел **возвращаемые значения** в [IAccessible:: get_accValue](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accvalue) в Windows SDK.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция является частью поддержки [активной доступности](/windows/win32/WinAuto/microsoft-active-accessibility) MFC.
+Эта функция является частью поддержки [Active ACCESSIBILITY](/windows/win32/WinAuto/microsoft-active-accessibility) MFC.
 
-Переопределить эту функцию в вашем -производном `CWnd`классе, если у вас есть неоконированные элементы пользовательского интерфейса (кроме элементов без окон ActiveX, которые mFC обрабатывает).
+Переопределяйте эту функцию в `CWnd` классе, производном от, если имеются неоконные элементы пользовательского интерфейса (отличные от безоконных элементов управления ActiveX, которые обрабатываются MFC).
 
-Для получения дополнительной информации [см. IAccessible::get_accValue](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accvalue) в Windows SDK.
+Дополнительные сведения см. в разделе [IAccessible:: get_accValue](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accvalue) в Windows SDK.
 
-## <a name="cwndgetactivewindow"></a><a name="getactivewindow"></a>CWnd::GetActiveWindow
+## <a name="cwndgetactivewindow"></a><a name="getactivewindow"></a>CWnd:: Жетактивевиндов
 
-Извлекает указатель на активное окно.
+Получает указатель на активное окно.
 
 ```
 static CWnd* PASCAL GetActiveWindow();
@@ -3612,13 +3612,13 @@ static CWnd* PASCAL GetActiveWindow();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Активное окно или NULL, если на момент вызова окно не было активным. Указатель может быть временным. Его не требуется сохранять для дальнейшего использования.
+Активное окно или значение NULL, если во время вызова не было активно ни одного окна. Указатель может быть временным. Его не требуется сохранять для дальнейшего использования.
 
 ### <a name="remarks"></a>Remarks
 
-Активное окно — это либо окно с текущим входной фокусом, либо окно, явно активное функцией члена [SetActiveWindow.](#setactivewindow)
+Активное окно — это либо окно с текущим фокусом ввода, либо окно, явно активное функцией-членом [сетактивевиндов](#setactivewindow) .
 
-## <a name="cwndgetancestor"></a><a name="getancestor"></a>CWnd::GetПред
+## <a name="cwndgetancestor"></a><a name="getancestor"></a>CWnd:: ancestor
 
 Извлекает объект окна-предка для указанного окна.
 
@@ -3628,20 +3628,20 @@ CWnd* GetAncestor(UINT gaFlags) const;
 
 ### <a name="parameters"></a>Параметры
 
-*gaFlags*<br/>
-Определяет предка, который должен быть извлечен. Полный список возможных значений можно узнать на примере [GetAncestor.](/windows/win32/api/winuser/nf-winuser-getancestor)
+*гафлагс*<br/>
+Указывает извлекаемый предок. Полный список возможных значений см. в разделе- [предок](/windows/win32/api/winuser/nf-winuser-getancestor).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если функция успешно, значение возврата является указателем на объект окна предка. Если функция выходит из строя, значение возврата является NULL.
+Если функция выполнена, возвращаемое значение является указателем на объект окна-предка. Если функция завершается ошибкой, возвращается значение NULL.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция члена эмулирует функциональность функции [GetAncestor](/windows/win32/api/winuser/nf-winuser-getancestor), как описано в Windows SDK.
+Эта функция — имитирует функциональные возможности функции с именем [ancestor](/windows/win32/api/winuser/nf-winuser-getancestor), как описано в Windows SDK.
 
-## <a name="cwndgetcapture"></a><a name="getcapture"></a>CWnd::GetCapture
+## <a name="cwndgetcapture"></a><a name="getcapture"></a>CWnd:: Capture
 
-Извлекает окно, которое имеет захват мыши.
+Извлекает окно с захватом мыши.
 
 ```
 static CWnd* PASCAL GetCapture();
@@ -3649,17 +3649,17 @@ static CWnd* PASCAL GetCapture();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Идентифицирует окно, которое имеет захват мыши. Это NULL, если нет окна имеет захват мыши.
+Определяет окно, в котором находится захват мыши. Имеет значение NULL, если ни одно окно не получило захват мыши.
 
-Значение возврата может быть временным и не должно храниться для последующего использования.
+Возвращаемое значение может быть временным и не должно храниться для последующего использования.
 
 ### <a name="remarks"></a>Remarks
 
-Только одно окно имеет захват мыши в любой момент времени. Окно получает захват мыши при вызове функции участника [SetCapture.](#setcapture) Это окно получает ввод мыши независимо от того, находится ли курсор в пределах своих границ.
+Только одно окно захватывает мышь в любое заданное время. Окно получает захват мыши при вызове функции-члена [сеткаптуре](#setcapture) . Это окно получает ввод с помощью мыши независимо от того, находится ли курсор внутри его границ.
 
-## <a name="cwndgetcaretpos"></a><a name="getcaretpos"></a>CWnd::GetCaretPos
+## <a name="cwndgetcaretpos"></a><a name="getcaretpos"></a>CWnd:: Жеткаретпос
 
-Извлекает координаты текущего положения caret и `CPoint`возвращает их в качестве .
+Возвращает клиентские координаты текущей позиции курсора и возвращает их в виде `CPoint` .
 
 ```
 static CPoint PASCAL GetCaretPos();
@@ -3667,15 +3667,15 @@ static CPoint PASCAL GetCaretPos();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-[Объект CPoint,](../../atl-mfc-shared/reference/cpoint-class.md) содержащий координаты положения карета.
+Объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , содержащий координаты позиции курсора.
 
 ### <a name="remarks"></a>Remarks
 
-Положение внимательности приведено в координатах `CWnd` клиента окна.
+Позиции курсора задаются в клиентских координатах `CWnd` окна.
 
-## <a name="cwndgetcheckedradiobutton"></a><a name="getcheckedradiobutton"></a>CWnd::GetCheckedRadioButton
+## <a name="cwndgetcheckedradiobutton"></a><a name="getcheckedradiobutton"></a>CWnd:: Жетчеккедрадиобуттон
 
-Извлекает идентификатор проверенной в настоящее время кнопки радио в указанной группе.
+Возвращает идентификатор выбранного переключателя в указанной группе.
 
 ```
 int GetCheckedRadioButton(
@@ -3685,19 +3685,19 @@ int GetCheckedRadioButton(
 
 ### <a name="parameters"></a>Параметры
 
-*nIDFirstButton*<br/>
-Определяет идентификатор первой радиокнопки в группе.
+*нидфирстбуттон*<br/>
+Задает целочисленный идентификатор для первого переключателя в группе.
 
-*nIDLastButton*<br/>
-Определяет идентификатор всей этой кнопки радио в группе.
+*нидластбуттон*<br/>
+Задает целочисленный идентификатор последнего переключателя в группе.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Идентификатор проверенной кнопки радио, или 0, если ни один не выбран.
+Идентификатор проверяемого переключателя или значение 0, если ничего не выбрано.
 
-## <a name="cwndgetclientrect"></a><a name="getclientrect"></a>CWnd::GetClientRect
+## <a name="cwndgetclientrect"></a><a name="getclientrect"></a>CWnd:: Жетклиентрект
 
-Копирует координаты `CWnd` клиентской области в структуру, на которую указывает *lpRect.*
+Копирует клиентские координаты `CWnd` клиентской области в структуру, на которую указывает *лпрект*.
 
 ```cpp
 void GetClientRect(LPRECT lpRect) const;
@@ -3705,20 +3705,20 @@ void GetClientRect(LPRECT lpRect) const;
 
 ### <a name="parameters"></a>Параметры
 
-*lpRect*<br/>
-Указывает на [структуру RECT](/windows/win32/api/windef/ns-windef-rect) или `CRect` объект для получения координат клиента. И `left` `top` членов будет 0. И `right` `bottom` члены будут содержать ширину и высоту окна.
+*лпрект*<br/>
+Указывает на [структуру Rect](/windows/win32/api/windef/ns-windef-rect) или `CRect` объект для получения клиентских координат. `left`Члены и `top` будут иметь значение 0. `right`Элементы и `bottom` будут содержать ширину и высоту окна.
 
 ### <a name="remarks"></a>Remarks
 
-В координатах клиента указаны верхний левый и нижний правый углы клиентской зоны. Поскольку координаты клиента относительно верхнего `CWnd` левого угла клиентской области, координаты верхнего левого угла (0,0).
+Клиентские координаты указывают верхний левый и нижний правый угол клиентской области. Так как координаты клиента зависят от верхнего левого угла `CWnd` клиентской области, координаты левого верхнего угла равны (0, 0).
 
 ### <a name="example"></a>Пример
 
-  Смотрите пример [для CWnd::IsIconic](#isiconic).
+  См. пример для [CWnd:: «Icon](#isiconic)».
 
-## <a name="cwndgetclipboardowner"></a><a name="getclipboardowner"></a>CWnd::GetClipboardВладелец
+## <a name="cwndgetclipboardowner"></a><a name="getclipboardowner"></a>CWnd:: Жетклипбоардовнер
 
-Получает текущего владельца Clipboard.
+Извлекает текущего владельца буфера обмена.
 
 ```
 static CWnd* PASCAL GetClipboardOwner();
@@ -3726,17 +3726,17 @@ static CWnd* PASCAL GetClipboardOwner();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Определяет окно, которому принадлежит Clipboard, если функция успешна. В противном случае, это NULL.
+Определяет окно, которому принадлежит буфер обмена, если функция выполнена успешно. В противном случае он имеет значение NULL.
 
-Возвращенный указатель может быть временным и не должен храниться для последующего использования.
+Возвращаемый указатель может быть временным и не должен храниться для последующего использования.
 
 ### <a name="remarks"></a>Remarks
 
-Clipboard по-прежнему может содержать данные, даже если он в настоящее время не принадлежит.
+Буфер обмена по-прежнему может содержать данные, даже если в настоящее время они не принадлежат.
 
-## <a name="cwndgetclipboardviewer"></a><a name="getclipboardviewer"></a>CWnd::GetClipboardViewer
+## <a name="cwndgetclipboardviewer"></a><a name="getclipboardviewer"></a>CWnd:: Жетклипбоардвиевер
 
-Извлекает первое окно в цепочке Clipboard-viewer.
+Извлекает первое окно в цепочке средства просмотра буфера обмена.
 
 ```
 static CWnd* PASCAL GetClipboardViewer();
@@ -3744,13 +3744,13 @@ static CWnd* PASCAL GetClipboardViewer();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Определяет окно, в настоящее время ответственное за отображение Clipboard в случае успеха; в противном случае NULL (например, если нет зрителя).
+Определяет окно, которое в настоящее время отвечает за отображение буфера обмена в случае успеха; в противном случае — NULL (например, если отсутствует средство просмотра).
 
-Возвращенный указатель может быть временным и не должен храниться для последующего использования.
+Возвращаемый указатель может быть временным и не должен храниться для последующего использования.
 
-## <a name="cwndgetcontrolunknown"></a><a name="getcontrolunknown"></a>CWnd::GetControlUnknown
+## <a name="cwndgetcontrolunknown"></a><a name="getcontrolunknown"></a>CWnd:: Жетконтролункновн
 
-Вызов исвызывайте эту функцию участника, чтобы получить указатель неизвестному управлению OLE.
+Вызовите эту функцию-член, чтобы получить указатель на неизвестный элемент управления OLE.
 
 ```
 LPUNKNOWN GetControlUnknown();
@@ -3758,21 +3758,21 @@ LPUNKNOWN GetControlUnknown();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на интерфейс [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) управления OLE, представленный этим `CWnd` объектом. Если этот объект не представляет элемент управления OLE, значение возврата является NULL.
+Указатель на интерфейс [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) элемента управления OLE, представленный этим `CWnd` объектом. Если этот объект не представляет элемент управления OLE, возвращается значение NULL.
 
 ### <a name="remarks"></a>Remarks
 
-Вы не должны `IUnknown` выпускать этот указатель. Как правило, вы используете для получения определенного интерфейса управления.
+Не следует освобождать этот `IUnknown` указатель. Как правило, для получения определенного интерфейса элемента управления используется.
 
-Указатель интерфейса, `GetControlUnknown` возвращенный, не считается эталонным. Не звоните [IUnknown::Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) на указатель, если вы ранее не назвали [IUnknown::AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) на нем.
+Указатель интерфейса, возвращенный, `GetControlUnknown` не подсчитывается по ссылке. Не вызывайте [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) в указателе, если только вы ранее не вызывали [IUnknown:: AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) .
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#96](../../mfc/reference/codesnippet/cpp/cwnd-class_35.cpp)]
 
-## <a name="cwndgetcurrentmessage"></a><a name="getcurrentmessage"></a>CWnd::GetCurrentMessage
+## <a name="cwndgetcurrentmessage"></a><a name="getcurrentmessage"></a>CWnd:: Жеткуррентмессаже
 
-Возвращает указатель на сообщение, обрабатываемое этим окном в настоящий момент. Следует вызываться только при работе в функции обработчика сообщений **On**<em>Message.</em>
+Возвращает указатель на сообщение, обрабатываемое этим окном в настоящий момент. Должен вызываться только в функции-члене обработчика сообщения **On**<em>Message</em> .
 
 ```
 static const MSG* PASCAL GetCurrentMessage();
@@ -3780,15 +3780,15 @@ static const MSG* PASCAL GetCurrentMessage();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает указатель в структуру [MSG,](/windows/win32/api/winuser/ns-winuser-msg) содержащую сообщение, которое в настоящее время обрабатывает окно. Следует вызываться только при обработке **на**<em>сообщении.</em>
+Возвращает указатель на структуру [MSG](/windows/win32/api/winuser/ns-winuser-msg) , содержащую сообщение, которое окно обрабатывает в данный момент. Должен вызываться только в обработчике **On**<em>сообщений</em> on.
 
 ### <a name="example"></a>Пример
 
-  Смотрите пример [CMDIFrameWnd::MDICascade](../../mfc/reference/cmdiframewnd-class.md#mdicascade).
+  См. пример для [CMDIFrameWnd:: мдикаскаде](../../mfc/reference/cmdiframewnd-class.md#mdicascade).
 
-## <a name="cwndgetdc"></a><a name="getdc"></a>CWnd::GetDC
+## <a name="cwndgetdc"></a><a name="getdc"></a>CWnd:: GetDC
 
-Извлекает указатель на общий, классовый или закрытый контекст устройства для области `CWnd`клиента в зависимости от стиля класса, указанного для .
+Извлекает указатель на общий контекст устройства, класса или частного контекста для клиентской области в зависимости от стиля класса, указанного для `CWnd` .
 
 ```
 CDC* GetDC();
@@ -3796,19 +3796,19 @@ CDC* GetDC();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Определяет контекст устройства для `CWnd` области клиента в случае успеха; в противном случае значение возврата null. Указатель может быть временным. Его не требуется сохранять для дальнейшего использования.
+Определяет контекст устройства для `CWnd` клиентской области в случае успеха; в противном случае возвращается значение null. Указатель может быть временным. Его не требуется сохранять для дальнейшего использования.
 
 ### <a name="remarks"></a>Remarks
 
-Для общих контекстов устройства `GetDC` присваиваем атрибуты по умолчанию контексту при каждом извлечении. Для классовики `GetDC` и частных контекстов оставляют ранее назначенные атрибуты без изменений. Контекст устройства можно использовать в последующих функциях интерфейса графического устройства (GDI) для рисования в клиентской области.
+Для общих контекстов устройств `GetDC` назначает атрибуты по умолчанию для контекста при каждом извлечении. Для классов и частных контекстов `GetDC` оставляет ранее назначенные атрибуты без изменений. Контекст устройства можно использовать в последующих функциях интерфейса графических устройств (GDI) для рисования в клиентской области.
 
-Если контекст устройства не относится к классу окон, функция участника [ReleaseDC](#releasedc) должна быть вызвана для выпуска контекста после рисования.
+Если контекст устройства не принадлежит классу окна, необходимо вызвать функцию-член [релеаседк](#releasedc) , чтобы освободить контекст после рисования.
 
-Контекст устройства, относящийся к `CWnd` классу, возвращается функцией `GetDC` элемента, `WNDCLASS` если CS_CLASSDC, CS_OWNDC или CS_PARENTDC был указан как стиль в структуре при регистрации класса.
+Контекст устройства, принадлежащий `CWnd` классу, возвращается функцией- `GetDC` членом, если CS_CLASSDC, CS_OWNDC или CS_PARENTDC был указан в качестве стиля в `WNDCLASS` структуре при регистрации класса.
 
-## <a name="cwndgetdcex"></a><a name="getdcex"></a>CWnd::GetDCEx
+## <a name="cwndgetdcex"></a><a name="getdcex"></a>CWnd:: Жетдцекс
 
-Извлекает ручку контекста устройства `CWnd` для окна.
+Получает маркер контекста устройства для `CWnd` окна.
 
 ```
 CDC* GetDCEx(
@@ -3818,47 +3818,47 @@ CDC* GetDCEx(
 
 ### <a name="parameters"></a>Параметры
 
-*prgnClip*<br/>
-Определяет область отсечения, которая может быть объединена с видимой областью окна клиента.
+*пргнклип*<br/>
+Определяет область обрезки, которая может быть объединена с видимой областью окна клиента.
 
 *flags*<br/>
-Может иметь одно из следующих заранее установленных значений:
+Может иметь одно из следующих предустановленных значений:
 
-- DCX_CACHE возвращает контекст устройства из кэша, а не окно OWNDC или CLASSDC. Оверлет CS_OWNDC и CS_CLASSDC.
+- DCX_CACHE Возвращает контекст устройства из кэша, а не окна ОВНДК или КЛАССДК. Переопределяет CS_OWNDC и CS_CLASSDC.
 
-- DCX_CLIPCHILDREN исключает видимые области всех `CWnd` детских окон под окном.
+- DCX_CLIPCHILDREN исключает видимые области всех дочерних окон под `CWnd` окном.
 
-- DCX_CLIPSIBLINGS исключает видимые области всех `CWnd` окон братьев и сестер над окном.
+- DCX_CLIPSIBLINGS исключает видимые области всех одноуровневого окна над `CWnd` окном.
 
-- DCX_EXCLUDERGN исключает область отсечения, идентифицированную *prgnClip,* из видимой области контекста возвращенного устройства.
+- DCX_EXCLUDERGN исключает область обрезки, обозначенную *пргнклип* , из видимой области возвращаемого контекста устройства.
 
-- DCX_INTERSECTRGN пересекает область отсечения, идентифицированную *prgnClip* в видимом контексте возвращенного устройства.
+- DCX_INTERSECTRGN пересекает область обрезки, обозначенную *пргнклип* , в видимой области возвращаемого контекста устройства.
 
-- DCX_LOCKWINDOWUPDATE позволяет рисовать, `LockWindowUpdate` даже если есть вызов в силе, что в противном случае исключить это окно. Это значение используется для рисования во время отслеживания.
+- DCX_LOCKWINDOWUPDATE позволяет рисовать, даже если существует `LockWindowUpdate` вызов, который в противном случае исключит это окно. Это значение используется для рисования во время отслеживания.
 
-- DCX_PARENTCLIP использует видимую область родительского окна и игнорирует WS_CLIPCHILDREN и WS_PARENTDC элементов стиля. Это значение устанавливает происхождение контекста устройства в верхний `CWnd` левый угол окна.
+- DCX_PARENTCLIP использует видимую область родительского окна и игнорирует биты стиля родительского окна WS_CLIPCHILDREN и WS_PARENTDC. Это значение задает начало координат контекста устройства в левом верхнем углу `CWnd` окна.
 
-- DCX_WINDOW возвращает контекст устройства, который соответствует прямоугольнику окна, а не клиенту прямоугольнику.
+- DCX_WINDOW Возвращает контекст устройства, соответствующий прямоугольнику окна, а не прямоугольнику клиента.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Контекст устройства для указанного окна, если функция успешна; в противном случае NULL.
+Контекст устройства для указанного окна, если функция выполнена успешно; в противном случае — NULL.
 
 ### <a name="remarks"></a>Remarks
 
-Контекст устройства может быть использован в последующих функциях GDI для рисования в клиентской области.
+Контекст устройства можно использовать в последующих функциях GDI для отрисовки в клиентской области.
 
-Эта функция, которая является расширением функции [GetDC,](/windows/win32/api/winuser/nf-winuser-getdc) дает приложению больше контроля над тем, как и является ли контекст устройства для окна обрезан.
+Эта функция, которая является расширением функции [GetDC](/windows/win32/api/winuser/nf-winuser-getdc) , предоставляет приложению более полный контроль над тем, как и как обрезается контекст устройства для окна.
 
-Если контекст устройства не относится к классу окон, функция [ReleaseDC](/windows/win32/api/winuser/nf-winuser-releasedc) должна быть вызвана для выпуска контекста после рисования. Поскольку в любой момент времени доступны только пять общих контекстов устройства, отказ от выпуска контекста устройства может помешать другим приложениям получить доступ к контексту устройства.
+Если контекст устройства не принадлежит классу окна, необходимо вызвать функцию [релеаседк](/windows/win32/api/winuser/nf-winuser-releasedc) , чтобы освободить контекст после рисования. Так как в любой момент времени доступны только пять общих контекстов устройств, сбой освобождения контекста устройства может препятствовать доступу других приложений к контексту устройства.
 
-Для получения контекста кэшированного устройства приложение должно указать [DCX_CACHE](/windows/win32/api/winuser/nf-winuser-getdcex). Если DCX_CACHE не указаний и окно не CS_OWNDC и [CS_CLASSDC,](/windows/win32/api/winuser/ns-winuser-wndclassw)эта функция возвращает NULL.
+Чтобы получить контекст кэшированного устройства, приложение должно указать [DCX_CACHE](/windows/win32/api/winuser/nf-winuser-getdcex). Если параметр DCX_CACHE не указан и окно не имеет ни CS_OWNDC ни [CS_CLASSDC](/windows/win32/api/winuser/ns-winuser-wndclassw), эта функция возвращает значение null.
 
-Контекст устройства со специальными характеристиками возвращается функцией [GetDCEx,](/windows/win32/api/winuser/nf-winuser-getdcex) если CS_CLASSDC, [CS_OWNDC](/windows/win32/api/winuser/ns-winuser-wndclassw)или [CS_PARENTDC](/windows/win32/api/winuser/ns-winuser-wndclassw) стиль был указан в структуре [WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw) при регистрации класса.
+Контекст устройства с особыми характеристиками возвращается функцией [жетдцекс](/windows/win32/api/winuser/nf-winuser-getdcex) , если в структуре [вндкласс](/windows/win32/api/winuser/ns-winuser-wndclassw) был указан стиль CS_CLASSDC, [CS_OWNDC](/windows/win32/api/winuser/ns-winuser-wndclassw)или [CS_PARENTDC](/windows/win32/api/winuser/ns-winuser-wndclassw) при регистрации класса.
 
-Для получения дополнительной информации об этих `WNDCLASS` характеристиках, см.
+Дополнительные сведения об этих характеристиках см. в описании `WNDCLASS` структуры в Windows SDK.
 
-## <a name="cwndgetdcrendertarget"></a><a name="getdcrendertarget"></a>CWnd::GetDCRenderTarget
+## <a name="cwndgetdcrendertarget"></a><a name="getdcrendertarget"></a>CWnd:: Жетдкрендертаржет
 
 Извлекает целевой объект отрисовки из контекста устройства для окна `CWnd`.
 
@@ -3872,9 +3872,9 @@ CDCRenderTarget* GetDCRenderTarget();
 
 ### <a name="remarks"></a>Remarks
 
-## <a name="cwndgetdescendantwindow"></a><a name="getdescendantwindow"></a>CWnd::GetDescendantWindow
+## <a name="cwndgetdescendantwindow"></a><a name="getdescendantwindow"></a>CWnd:: Жетдесцендантвиндов
 
-Вызовите эту функцию участника, чтобы найти окно потомка, указанное данным идентификатором.
+Вызовите эту функцию-член для поиска дочернего окна, указанного с помощью заданного идентификатора.
 
 ```
 CWnd* GetDescendantWindow(
@@ -3885,20 +3885,20 @@ CWnd* GetDescendantWindow(
 ### <a name="parameters"></a>Параметры
 
 *nID*<br/>
-Определяет идентификатор элемента управления или детского окна для извлечения.
+Указывает идентификатор элемента управления или дочернего окна для извлечения.
 
-*bOnlyPerm*<br/>
-Уточняется, может ли возвращенное окно быть временным. Если true, только постоянное окно может быть возвращено; если FALSE, функция может вернуть временное окно. Для получения дополнительной информации о временных окнах [см.](../../mfc/tn003-mapping-of-windows-handles-to-objects.md)
+*бонлиперм*<br/>
+Указывает, может ли возвращаемое окно быть временным. Если значение — TRUE, может возвращаться только постоянное окно. Если значение равно FALSE, функция может возвращать временное окно. Дополнительные сведения о временных окнах см. в [техническом примечании 3](../../mfc/tn003-mapping-of-windows-handles-to-objects.md).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на `CWnd` объект или NULL, если не найдено окно ребенка.
+Указатель на `CWnd` объект или значение null, если дочернее окно не найдено.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция участника выполняет поиск всего дерева детских окон, а не только окон, которые являются непосредственными детьми.
+Эта функция члена выполняет поиск по всему дереву дочерних окон, а не только к окнам, которые являются непосредственными дочерними элементами.
 
-## <a name="cwndgetdesktopwindow"></a><a name="getdesktopwindow"></a>CWnd::GetDesktopWindow
+## <a name="cwndgetdesktopwindow"></a><a name="getdesktopwindow"></a>CWnd:: Жетдесктопвиндов
 
 Возвращает окно рабочего стола Windows.
 
@@ -3908,15 +3908,15 @@ static CWnd* PASCAL GetDesktopWindow();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Идентифицирует окно рабочего стола Windows. Этот указатель может быть временным и не должен храниться для последующего использования.
+Определяет окно рабочего стола Windows. Этот указатель может быть временным и не должен храниться для последующего использования.
 
 ### <a name="remarks"></a>Remarks
 
-Окно рабочего стола охватывает весь экран и представляет собой область, поверх которой окрашены все значки и другие окна.
+Окно рабочего стола охватывает весь экран и является областью, на которой рисуются все значки и другие окна.
 
-## <a name="cwndgetdlgctrlid"></a><a name="getdlgctrlid"></a>CWnd::GetDlgCtrlID
+## <a name="cwndgetdlgctrlid"></a><a name="getdlgctrlid"></a>CWnd:: Жетдлгктрлид
 
-Возвращает значение идентификатора окна или элемента управления для любого окна ребенка, а не только элемент управления в диалоговом окне.
+Возвращает значение идентификатора окна или элемента управления для любого дочернего окна, а не только для элемента управления в диалоговом окне.
 
 ```
 int GetDlgCtrlID() const;
@@ -3924,19 +3924,19 @@ int GetDlgCtrlID() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Числовый идентификатор `CWnd` окна ребенка, если функция успешна; в противном случае 0.
+Числовой идентификатор `CWnd` дочернего окна, если функция выполнена успешно; в противном случае — значение 0.
 
 ### <a name="remarks"></a>Remarks
 
-Поскольку окна верхнего уровня не имеют значения идентификатора, `CWnd` значение возврата этой функции является недействительным, если окно верхнего уровня является недействительным.
+Так как окна верхнего уровня не имеют значения идентификатора, возвращаемое значение этой функции является недопустимым, если `CWnd` является окном верхнего уровня.
 
 ### <a name="example"></a>Пример
 
-  Смотрите пример [CWnd::OnCtlColor](#onctlcolor).
+  См. пример для [CWnd:: онктлколор](#onctlcolor).
 
-## <a name="cwndgetdlgitem"></a><a name="getdlgitem"></a>CWnd::GetDlgItem
+## <a name="cwndgetdlgitem"></a><a name="getdlgitem"></a>CWnd:: Жетдлгитем
 
-Извлекает указатель на указанное окно управления или дочернее окно в диалоговом окне или другом окне.
+Извлекает указатель на указанный элемент управления или дочернее окно в диалоговом окне или другом окне.
 
 ```
 CWnd* GetDlgItem(int nID) const;
@@ -3949,28 +3949,28 @@ void GetDlgItem(
 ### <a name="parameters"></a>Параметры
 
 *nID*<br/>
-Определяет идентификатор элемента управления или детского окна для извлечения.
+Указывает идентификатор элемента управления или дочернего окна для извлечения.
 
-*phWnd*<br/>
-Указатель на детское окно.
+*фвнд*<br/>
+Указатель на дочернее окно.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на данное окно управления или детское окно. Если нет контроля с идентификатором, предоставленным параметром *nID,* значение является NULL.
+Указатель на заданный элемент управления или дочернее окно. Если отсутствует элемент управления с целочисленным ИДЕНТИФИКАТОРом, заданным параметром *NID* , значение равно null.
 
-Возвращенный указатель может быть временным и не должен храниться для последующего использования.
+Возвращаемый указатель может быть временным и не должен храниться для последующего использования.
 
 ### <a name="remarks"></a>Remarks
 
-Возвращается указатель, как правило, отбрасывается к типу управления, идентифицированному *nID.*
+Возвращаемый указатель обычно приводится к типу элемента управления, идентифицируемого *NID*.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#97](../../mfc/reference/codesnippet/cpp/cwnd-class_36.cpp)]
 
-## <a name="cwndgetdlgitemint"></a><a name="getdlgitemint"></a>CWnd::GetDlgItemInt
+## <a name="cwndgetdlgitemint"></a><a name="getdlgitemint"></a>CWnd:: Жетдлгитеминт
 
-Извлекает текст элемента управления, идентифицированного *nID.*
+Извлекает текст элемента управления, идентифицируемого *NID*.
 
 ```
 UINT GetDlgItemInt(
@@ -3982,33 +3982,33 @@ UINT GetDlgItemInt(
 ### <a name="parameters"></a>Параметры
 
 *nID*<br/>
-Определяет идентификатор нестого числа управления диалоговой коробкой, который будет переведен.
+Задает целочисленный идентификатор элемента управления "диалоговое окно" для перевода.
 
-*lpTrans*<br/>
-Указывает на переменную Boolean, которая должна получить переведенный флаг.
+*лптранс*<br/>
+Указывает на логическую переменную, которая будет принимать переведенный флаг.
 
-*bПодписанный*<br/>
-Определяется, подписано ли значение, подносивео к извлечению.
+*бсигнед*<br/>
+Указывает, подписывается ли возвращаемое значение.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Определяет переведенное значение текста элемента диалог-бокс. Поскольку 0 является допустимое значение возврата, *lpTrans* должен использоваться для обнаружения ошибок. Если подписанное значение возврата желательно, отбросьте его в тип **Int.**
+Задает переведенное значение текста элемента диалогового окна. Поскольку 0 является допустимым возвращаемым значением, для обнаружения ошибок необходимо использовать *лптранс* . Если требуется возвращаемое значение со знаком, приведите его как **`int`** тип.
 
-Функция возвращает 0, если переведенное число превышает INT_MAX (для подписанных номеров) или UINT_MAX (для неподписанных).
+Функция возвращает 0, если переведенное число больше INT_MAX (для чисел со знаком) или UINT_MAX (для неподписанных).
 
-При возникновении ошибок, таких как столкновение с ненизмотенными символами и превышение вышеуказанного максимума, `GetDlgItemInt` копии 0 к месту, указанному *lpTrans*. Если ошибок нет, *lpTrans* получает ненулевое значение. Если *lpTrans* является `GetDlgItemInt` NULL, не предупреждает об ошибках.
+При возникновении ошибок, например при обнаружении нецифровых символов и превышении указанного выше максимального значения, `GetDlgItemInt` копирует 0 в расположение, на которое указывает *лптранс*. Если ошибок нет, *лптранс* получает ненулевое значение. Если *лптранс* имеет значение null, не `GetDlgItemInt` предупреждает об ошибках.
 
 ### <a name="remarks"></a>Remarks
 
-Он преобразует текст указанного элемента управления в данном диалоговом поле в значение, зачистив любые дополнительные пробелы в начале текста и преобразовав десятичные цифры. Он останавливает перевод, когда он достигает конца текста или сталкивается с любым ненчислоным персонажем.
+Он преобразует текст указанного элемента управления в заданном диалоговом окне в целочисленное значение, удаляя лишние пробелы в начале текста и преобразуя десятичные разряды. Он останавливает перевод при достижении конца текста или при обнаружении любого нечислового символа.
 
-Если *bSigned* является `GetDlgItemInt` правдой, проверяется на знак минус (-) в начале текста и переводит текст в подписанный номер. В противном случае он создает неподписанное значение.
+Если *бсигнед* имеет значение true, `GetDlgItemInt` проверяет наличие знака минуса (-) в начале текста и преобразует текст в число со знаком. В противном случае создается значение без знака.
 
-Он отправляет [WM_GETTEXT](/windows/win32/winmsg/wm-gettext) сообщение на контроль.
+Он отправляет элементу управления [WM_GETTEXT](/windows/win32/winmsg/wm-gettext) сообщение.
 
-## <a name="cwndgetdlgitemtext"></a><a name="getdlgitemtext"></a>CWnd::GetDlgItemText
+## <a name="cwndgetdlgitemtext"></a><a name="getdlgitemtext"></a>CWnd:: Жетдлгитемтекст
 
-Вызов эту функцию участника для получения заголовка или текста, связанных с элементом управления в диалоговом поле.
+Вызовите эту функцию-член для получения заголовка или текста, связанного с элементом управления в диалоговом окне.
 
 ```
 int GetDlgItemText(
@@ -4024,28 +4024,28 @@ int GetDlgItemText(
 ### <a name="parameters"></a>Параметры
 
 *nID*<br/>
-Определяет идентификатор самого разложенный элемент управления, название которого должно быть извлечено.
+Задает целочисленный идентификатор элемента управления, заголовок которого необходимо получить.
 
 *lpStr*<br/>
 Указывает на буфер для получения заголовка или текста элемента управления.
 
-*nMaxCount*<br/>
-Упоняет максимальную длину (в символах) строки, которая будет скопирована на *lpStr*. Если строка длиннее *nMaxCount,* она усечена.
+*нмакскаунт*<br/>
+Задает максимальную длину (в символах) строки, копируемой в *LPSTR*. Если строка длиннее, чем *нмакскаунт*, она усекается.
 
-*rString*<br/>
+*rStr*<br/>
 Ссылка на [CString](../../atl-mfc-shared/reference/cstringt-class.md).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Определяет фактическое количество символов, скопированных в буфер, не включая термин null. Значение 0, если текст не скопирован.
+Задает фактическое число символов, копируемых в буфер, не включая завершающий символ null. Если текст не копируется, значение равно 0.
 
 ### <a name="remarks"></a>Remarks
 
-Функция `GetDlgItemText` участника копирует текст к местоположению, на который указывает *lpStr,* и возвращает количество байтов, которые он копирует.
+`GetDlgItemText`Функция-член копирует текст в расположение, на которое указывает *LPSTR* , и возвращает количество копируемых байтов.
 
-## <a name="cwndgetdsccursor"></a><a name="getdsccursor"></a>CWnd::GetDSCCursor
+## <a name="cwndgetdsccursor"></a><a name="getdsccursor"></a>CWnd:: Жетдсккурсор
 
-Вызовите эту функцию участника, чтобы получить указатель на базовый курсор, определяемый свойствами DataSource, UserName, Password и S'L управления источником данных.
+Вызовите эту функцию-член для получения указателя на базовый курсор, который определяется свойствами DataSource, UserName, Password и SQL элемента управления источника данных.
 
 ```
 IUnknown* GetDSCCursor();
@@ -4053,17 +4053,17 @@ IUnknown* GetDSCCursor();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на курсор, определяемый управлением источником данных. MFC заботится `AddRef` о вызове для указателя.
+Указатель на курсор, определенный элементом управления источника данных. MFC выполняет вызов `AddRef` для указателя.
 
 ### <a name="remarks"></a>Remarks
 
-Используйте ответный указатель для установки свойства ICursor сложного управления, связанного с данными, например управления сеткой, привязанной к данным. Элемент управления источником данных не станет активным до тех пор, пока первый связанный элемент управления не запрашивает свой курсор. Это может произойти либо явно `GetDSCCursor` по звонку, либо косвенно связывающимся менеджером MFC. В любом случае, вы можете заставить управление источником `GetDSCCursor` данных `Release` стать активным, `IUnknown`позвонив, а затем вызывая возвращенный указатель на . Активация приведет к попытке подключения к базовому источнику данных. Ответный указатель может быть использован в следующем контексте:
+Используйте возвращаемый указатель, чтобы задать свойство Икурсор сложного элемента управления с привязкой к данным, например элемент управления сетки с привязкой к данным. Элемент управления источника данных не станет активным до тех пор, пока первый привязанный элемент управления не запросит его курсор. Это может произойти либо явно, либо путем вызова `GetDSCCursor` или неявно диспетчером привязок MFC. В любом случае можно принудительно активировать элемент управления источником данных, вызвав метод `GetDSCCursor` , а затем вызвав `Release` возвращаемый указатель на `IUnknown` . Активация приведет к тому, что система управления источниками данных попытается подключиться к базовому источнику данных. Возвращаемый указатель может использоваться в следующем контексте:
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFC_AxDataBinding#5](../../mfc/reference/codesnippet/cpp/cwnd-class_37.cpp)]
 
-## <a name="cwndgetdynamiclayout"></a><a name="getdynamiclayout"></a>CWnd:GetDynamicLayout
+## <a name="cwndgetdynamiclayout"></a><a name="getdynamiclayout"></a>CWnd:: Жетдинамиклайаут
 
 Извлекает указатель на объект диспетчера динамического макета.
 
@@ -4079,7 +4079,7 @@ CMFCDynamicLayout* GetDynamicLayout();
 
 Объект окна владеет и управляет временем жизни возвращаемого указателя, поэтому его следует использовать только для доступа к этому объекту. Не удаляйте указатель или сохраняйте его перманентно.
 
-## <a name="cwndgetexstyle"></a><a name="getexstyle"></a>CWnd::GetExStyle
+## <a name="cwndgetexstyle"></a><a name="getexstyle"></a>CWnd:: Жетексстиле
 
 Возвращает расширенный стиль окна.
 
@@ -4089,11 +4089,11 @@ DWORD GetExStyle() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Удлинение стиля окна. Для получения дополнительной информации о расширенных стилях окон, используемых в MFC, [см.](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)
+Расширенный стиль окна. Дополнительные сведения о расширенных стилях окон, используемых в MFC, см. в разделе [Расширенные стили окон](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles).
 
-## <a name="cwndgetfocus"></a><a name="getfocus"></a>CWnd::GetFocus
+## <a name="cwndgetfocus"></a><a name="getfocus"></a>CWnd:: Focus
 
-Извлекает указатель на `CWnd` то, что в настоящее время имеет фокус ввода.
+Получает указатель на объект `CWnd` , на который в данный момент находится фокус ввода.
 
 ```
 static CWnd* PASCAL GetFocus();
@@ -4101,13 +4101,13 @@ static CWnd* PASCAL GetFocus();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на окно с текущим фокусом или NULL, если нет окна фокусировки.
+Указатель на окно, имеющее текущий фокус, или значение NULL, если окно фокуса отсутствует.
 
 Указатель может быть временным. Его не требуется сохранять для дальнейшего использования.
 
-## <a name="cwndgetfont"></a><a name="getfont"></a>CWnd::GetFont
+## <a name="cwndgetfont"></a><a name="getfont"></a>CWnd:: font
 
-Отправляет WM_GETFONT сообщение в окно для получения текущего шрифта.
+Отправляет в окно сообщение WM_GETFONT, чтобы получить текущий шрифт.
 
 ```
 CFont* GetFont() const;
@@ -4115,15 +4115,15 @@ CFont* GetFont() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на объект [CFont,](../../mfc/reference/cfont-class.md) который прикрепляется к текущему шрифту для окна.
+Указатель на объект [кфонт](../../mfc/reference/cfont-class.md) , присоединенный к текущему шрифту окна.
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод не имеет никакого эффекта, если окно не обрабатывает WM_GETFONT сообщение. Многие классы MFC, которые вытекают из `CWnd` обработки этого сообщения, потому что они прикреплены к заданному классу окон, который включает обработчик сообщений для WM_GETFONT сообщения. Для использования этого метода классы, полученные из `CWnd` этого метода, должны определить обработчик метода для сообщения WM_GETFONT.
+Этот метод не действует, если только окно не обрабатывает сообщение WM_GETFONT. Многие классы MFC, производные от `CWnd` обработки данного сообщения, так как они присоединены к предопределенному классу окна, который содержит обработчик сообщений для WM_GETFONT сообщения. Для использования этого метода классы, производные от, `CWnd` должны определять обработчик метода для WM_GETFONT сообщения.
 
-## <a name="cwndgetforegroundwindow"></a><a name="getforegroundwindow"></a>CWnd::GetForegroundWindow
+## <a name="cwndgetforegroundwindow"></a><a name="getforegroundwindow"></a>CWnd:: Жетфореграундвиндов
 
-Возвращает указатель на окно переднего плана (окно, с которым пользователь в настоящее время работает).
+Возвращает указатель на окно переднего плана (окно, с которым пользователь работает в данный момент).
 
 ```
 static CWnd* PASCAL GetForegroundWindow();
@@ -4131,15 +4131,15 @@ static CWnd* PASCAL GetForegroundWindow();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на окно переднего плана. Это может быть `CWnd` временный объект.
+Указатель на окно переднего плана. Это может быть временный `CWnd` объект.
 
 ### <a name="remarks"></a>Remarks
 
-Окно переднего плана применяется только к окнам верхнего уровня (окна кадра или диалоговые окна).
+Окно переднего плана применяется только к окнам верхнего уровня (окнам фрейма или диалоговым окнам).
 
-## <a name="cwndgeticon"></a><a name="geticon"></a>CWnd::GetIcon
+## <a name="cwndgeticon"></a><a name="geticon"></a>CWnd:: "Icon"
 
-Вызовите эту функцию члена для того чтобы получить ручку к или большому (32x32) или ручке к малому (16x16) значку, как показано *bBigIcon.*
+Вызовите эту функцию-член, чтобы получить маркер для большого (32x32) или маркера на маленький значок (16x16), как указано в *ббигикон*.
 
 ```
 HICON GetIcon(BOOL bBigIcon) const;
@@ -4147,14 +4147,14 @@ HICON GetIcon(BOOL bBigIcon) const;
 
 ### <a name="parameters"></a>Параметры
 
-*bBigIcon*<br/>
-Определяет значок 32 пикселя на 32 пикселя, если это правда; определяет значок 16 пикселей на 16 пикселей, если FALSE.
+*ббигикон*<br/>
+Задает значок 32 пикселей на 32 пикселей, если значение TRUE; Задает значок 16 пикселей на 16 пикселей при значении FALSE.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Дескриптор для значка. В случае неудачи возвращает NULL.
+Дескриптор для значка. В случае неудачи возвращает значение NULL.
 
-## <a name="cwndgetlastactivepopup"></a><a name="getlastactivepopup"></a>CWnd::GetLastActivePopup
+## <a name="cwndgetlastactivepopup"></a><a name="getlastactivepopup"></a>CWnd:: Жетластактивепопуп
 
 Определяет последнее проявлявшее активность всплывающее окно, принадлежащее классу `CWnd`.
 
@@ -4164,9 +4164,9 @@ CWnd* GetLastActivePopup() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Идентифицирует последнее активное всплывающее окно. Значение возврата будет само окно, если любое из следующих условий выполнено:
+Определяет последнее активное всплывающее окно. Возвращаемое значение будет являться окном при выполнении любого из следующих условий.
 
-- Само окно было в последнее время активно.
+- Последнее окно было активно.
 
 - Окно не владеет всплывающими окнами.
 
@@ -4176,9 +4176,9 @@ CWnd* GetLastActivePopup() const;
 
 ### <a name="example"></a>Пример
 
-  Смотрите пример [CWnd::FindWindow](#findwindow).
+  См. пример для [CWnd:: FindWindow](#findwindow).
 
-## <a name="cwndgetlayeredwindowattributes"></a><a name="getlayeredwindowattributes"></a>CWnd::GetLayeredWindowAttributes
+## <a name="cwndgetlayeredwindowattributes"></a><a name="getlayeredwindowattributes"></a>CWnd:: Жетлайередвиндоваттрибутес
 
 Получает ключ цвета прозрачности многослойного окна.
 
@@ -4191,26 +4191,26 @@ BOOL GetLayeredWindowAttributes(
 
 ### <a name="parameters"></a>Параметры
 
-*pcrKey*<br/>
-Указатель на значение COLORREF, которое получает цветной ключ прозрачности, который будет использоваться при составлении многослойного окна. Все пиксели, окрашенные окном в этом цвете, будут прозрачными. Это может быть NULL, если аргумент не нужен.
+*пкркэй*<br/>
+Указатель на значение COLORREF, которое получает ключ цвета прозрачности, используемый при создании многоуровневого окна. Все пиксели, закрашенные окном этого цвета, будут прозрачными. Может иметь значение NULL, если аргумент не требуется.
 
-*pbAlpha*<br/>
-Указатель на BYTE, который получает значение Альфа, используемое для описания непрозрачности многослойного окна. Когда переменная, на которую ссылается *pbAlpha,* составляет 0, окно полностью прозрачно. Когда переменная, на которую ссылается *pbAlpha,* составляет 255, окно непрозрачно. Это может быть NULL, если аргумент не нужен.
+*пбалфа*<br/>
+Указатель на байт, который получает альфа-значение, используемое для описания прозрачности многоуровневого окна. Если переменная, на которую ссылается *пбалфа* , имеет значение 0, окно полностью прозрачно. Если переменная, на которую ссылается *пбалфа* , имеет значение 255, окно является непрозрачным. Может иметь значение NULL, если аргумент не требуется.
 
-*pdwFlags*<br/>
-Указатель на DWORD, который получает наслоение флага. Это может быть NULL, если аргумент не нужен. Полный список возможных значений можно узнать на примере [GetLayeredWindowAttributes.](/windows/win32/api/winuser/nf-winuser-getlayeredwindowattributes)
+*пдвфлагс*<br/>
+Указатель на DWORD, принимающий флаг слоев. Может иметь значение NULL, если аргумент не требуется. Полный список возможных значений см. в разделе [жетлайередвиндоваттрибутес](/windows/win32/api/winuser/nf-winuser-getlayeredwindowattributes).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Nonzero, если функция успешно; в противном случае 0.
+Ненулевое значение, если функция выполнена. в противном случае — 0.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция-член эмулирует функциональность функции [GetLayeredWindowAttributes,](/windows/win32/api/winuser/nf-winuser-getlayeredwindowattributes)как описано в SDK Windows.
+Эта функция члена эмулирует функциональность функции [жетлайередвиндоваттрибутес](/windows/win32/api/winuser/nf-winuser-getlayeredwindowattributes), как описано в Windows SDK.
 
-## <a name="cwndgetmenu"></a><a name="getmenu"></a>CWnd::GetMenu
+## <a name="cwndgetmenu"></a><a name="getmenu"></a>CWnd:: Menu
 
-Извлекает указатель в меню для этого окна.
+Получает указатель на меню для этого окна.
 
 ```
 CMenu* GetMenu() const;
@@ -4218,21 +4218,21 @@ CMenu* GetMenu() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Определяет меню. Значение NULL, `CWnd` если не имеет меню. Значение возврата не определено, если `CWnd` это окно ребенка.
+Определяет меню. Значение равно NULL, если `CWnd` не имеет меню. Возвращаемое значение не определено, если `CWnd` является дочерним окном.
 
-Возвращенный указатель может быть временным и не должен храниться для последующего использования.
+Возвращаемый указатель может быть временным и не должен храниться для последующего использования.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция не должна использоваться для детских окон, поскольку у них нет меню.
+Эта функция не должна использоваться для дочерних окон, так как у них нет меню.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#98](../../mfc/reference/codesnippet/cpp/cwnd-class_38.cpp)]
 
-## <a name="cwndgetmenubarinfo"></a><a name="getmenubarinfo"></a>CWnd::GetMenuBarInfo
+## <a name="cwndgetmenubarinfo"></a><a name="getmenubarinfo"></a>CWnd:: GetMenuBarInfo
 
-Извлекает информацию об указанном баре меню.
+Извлекает сведения о указанной строке меню.
 
 ```
 BOOL GetMenuBarInfo(
@@ -4243,26 +4243,26 @@ BOOL GetMenuBarInfo(
 
 ### <a name="parameters"></a>Параметры
 
-*idObject*<br/>
-Определяет объект меню. Список возможных значений можно узнать на примере [GetMenuBarInfo.](/windows/win32/api/winuser/nf-winuser-getmenubarinfo)
+*идобжект*<br/>
+Указывает объект меню. Список возможных значений см. в разделе [GetMenuBarInfo](/windows/win32/api/winuser/nf-winuser-getmenubarinfo).
 
-*idItem*<br/>
-Оповестите элемент, для которого можно получить информацию. Если этот параметр равен нулю, функция получает информацию о самом меню. Если этот параметр 1, функция получает информацию о первом элементе в меню и так далее.
+*идитем*<br/>
+Указывает элемент, для которого требуется получить сведения. Если этот параметр равен нулю, функция получает сведения о самом меню. Если этот параметр равен 1, функция получает сведения о первом элементе в меню и т. д.
 
-*pmbi*<br/>
-Указатель на структуру [MENUBARINFO,](/windows/win32/api/winuser/ns-winuser-menubarinfo) которая получает информацию.
+*пмби*<br/>
+Указатель на структуру [менубаринфо](/windows/win32/api/winuser/ns-winuser-menubarinfo) , которая получает сведения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Nonzero, если функция успешно; в противном случае 0.
+Ненулевое значение, если функция выполнена. в противном случае — 0.
 
 ### <a name="remarks"></a>Remarks
 
 Эта функция члена эмулирует функциональность функции [GetMenuBarInfo](/windows/win32/api/winuser/nf-winuser-getmenubarinfo), как описано в Windows SDK.
 
-## <a name="cwndgetnextdlggroupitem"></a><a name="getnextdlggroupitem"></a>CWnd::GetNextDlgGroupItem
+## <a name="cwndgetnextdlggroupitem"></a><a name="getnextdlggroupitem"></a>CWnd:: Жетнекстдлгграупитем
 
-Поиск предыдущего или следующего элемента управления в группе элементов управления в диалоговом поле.
+Выполняет поиск предыдущего или следующего элемента управления в группе элементов управления в диалоговом окне.
 
 ```
 CWnd* GetNextDlgGroupItem(
@@ -4275,39 +4275,39 @@ COleControlSiteOrWnd* GetNextDlgGroupItem(
 
 ### <a name="parameters"></a>Параметры
 
-*pWndCtl*<br/>
+*пвндктл*<br/>
 Определяет элемент управления, который будет использоваться в качестве отправной точки для поиска.
 
-*bПредыдущий*<br/>
-Определяет, как функция заключается в поиске группы элементов управления в диалоговом поле. Если true, функция выполняет поиск предыдущего элемента управления в группе; если FALSE, он ищет следующий контроль в группе.
+*бпревиаус*<br/>
+Указывает, как функция должна выполнять поиск в группе элементов управления в диалоговом окне. Если значение — TRUE, функция ищет предыдущий элемент управления в группе; Если значение равно FALSE, выполняется поиск следующего элемента управления в группе.
 
-*pCurSiteOrWnd*<br/>
-Идентифицирует `COleControlSiteOrWnd` элемент управления. Для получения `COleControlSiteOrWnd`дополнительной информации о , см. **Remarks**
+*пкурситеорвнд*<br/>
+Определяет `COleControlSiteOrWnd` элемент управления. Дополнительные сведения о `COleControlSiteOrWnd` см. в разделе **Примечания**.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указать на предыдущий или следующий элемент управления в группе, если функция участника успешна.
+Указатель на предыдущий или следующий элемент управления в группе, если функция-член успешно выполнена.
 
-Возвращенный указатель может быть временным и не должен храниться для последующего использования.
+Возвращаемый указатель может быть временным и не должен храниться для последующего использования.
 
 ### <a name="remarks"></a>Remarks
 
-Группа элементов управления начинается с элемента управления, созданного с [WS_GROUP](styles-used-by-mfc.md#window-styles) стилем, и заканчивается последним элементом управления, который не был создан с WS_GROUP стилем.
+Группа элементов управления начинается с элемента управления, созданного с использованием стиля [WS_GROUP](styles-used-by-mfc.md#window-styles) и заканчивающегося последним элементом управления, который не был создан с помощью стиля WS_GROUP.
 
-По умолчанию `GetNextDlgGroupItem` функция участника возвращает указатель следующему элементу управления в группе. Если *pWndCtl* идентифицирует первый элемент управления в `GetNextDlgGroupItem` группе и *bPrevious* является правдой, возвращает указатель к последнему элементу управления в группе.
+По умолчанию `GetNextDlgGroupItem` функция-член возвращает указатель на следующий элемент управления в группе. Если *пвндктл* определяет первый элемент управления в группе, а *бпревиаус* имеет значение true, `GetNextDlgGroupItem` возвращает указатель на последний элемент управления в группе.
 
 > [!NOTE]
-> Поскольку MFC поддерживает элементы управления ActiveX без окон, стандартные элементы управления ActiveX и окна, ссылаясь на элемент управления только HWND больше не хватает. Объект `COleControlSiteOrWnd` включает в себя информацию, которая идентифицирует объект как оконное управление ActiveX, управление ActiveX без окон или окно, следующим образом:
+> Поскольку MFC поддерживает безоконные элементы управления ActiveX, стандартные элементы управления ActiveX и окна, ссылающиеся на элемент управления только с помощью HWND, больше не достаточно. `COleControlSiteOrWnd`Объект содержит сведения, определяющие объект как оконный элемент ActiveX, безоконный элемент управления ActiveX или окно, как показано ниже:
 
-|Тип управления или окна|Идентификационная информация|
+|Тип элемента управления или окна|Идентифицирующие сведения|
 |----------------------------|-----------------------------|
-|Управление ActiveX с окнами|Содержит HWND и связывает с ним объект [COleControlSite.](../../mfc/reference/colecontrolsite-class.md) Член `m_hWnd` `COleControlSiteOrWnd` устанавливается на HWND управления, и `m_pSite` член указывает на элемент `COleControlSite`управления .|
-|Управление ActiveX без окон|Не содержит HWND. Член `m_pSite` `COleControlSiteOrWnd` указывает на элемент `COleControlSite`управления, а `m_hWnd` член NULL.|
-|Стандартное окно|Содержит только HWND. Участник `m_hWnd` `COleControlSiteOrWnd` устанавливается в HWND окна, а `m_pSite` участник NULL.|
+|Оконный элемент управления ActiveX|Содержит HWND и связывает с ним объект [колеконтролсите](../../mfc/reference/colecontrolsite-class.md) . `m_hWnd`Элемент `COleControlSiteOrWnd` имеет значение HWND элемента управления, а `m_pSite` элемент указывает на элемент управления `COleControlSite` .|
+|Элемент управления ActiveX без окон|Не содержит HWND. Элемент `m_pSite` `COleControlSiteOrWnd` указывает на элемент управления `COleControlSite` , и `m_hWnd` элемент имеет значение null.|
+|Стандартное окно|Содержит только HWND. `m_hWnd`Элемент `COleControlSiteOrWnd` имеет значение HWND окна, а `m_pSite` член имеет значение null.|
 
-## <a name="cwndgetnextdlgtabitem"></a><a name="getnextdlgtabitem"></a>CWnd::GetNextDlgTabItem
+## <a name="cwndgetnextdlgtabitem"></a><a name="getnextdlgtabitem"></a>CWnd:: Жетнекстдлгтабитем
 
-Извлекает указатель на первый элемент управления, который был создан с [WS_TABSTOP](styles-used-by-mfc.md#window-styles) стилем и который предшествует или следует указанному элементу управления.
+Извлекает указатель на первый элемент управления, созданный с помощью стиля [WS_TABSTOP](styles-used-by-mfc.md#window-styles) , который предшествует указанному элементу управления или следует за ним.
 
 ```
 CWnd* GetNextDlgTabItem(
@@ -4321,26 +4321,26 @@ COleControlSiteOrWnd* GetNextDlgTabItem(
 
 ### <a name="parameters"></a>Параметры
 
-*pWndCtl*<br/>
+*пвндктл*<br/>
 Определяет элемент управления, который будет использоваться в качестве отправной точки для поиска.
 
-*pCurSiteOrWnd*<br/>
-Идентифицирует `COleControlSiteOrWnd` элемент управления. Для получения `COleControlSiteOrWnd`дополнительной информации о , см. [CWnd::GetNextDlgGroupItem](#getnextdlggroupitem).
+*пкурситеорвнд*<br/>
+Определяет `COleControlSiteOrWnd` элемент управления. Дополнительные сведения о `COleControlSiteOrWnd` см. в разделе [CWnd:: жетнекстдлгграупитем](#getnextdlggroupitem).
 
-*bПредыдущий*<br/>
-Определяет, как функция заключается в поиске диалогового окна. Если true, функция выполняет поиск предыдущего элемента управления в диалоговом поле; если FALSE, он ищет следующий контроль.
+*бпревиаус*<br/>
+Указывает, как функция должна выполнять поиск в диалоговом окне. Если значение — TRUE, функция ищет предыдущий элемент управления в диалоговом окне; Если значение равно FALSE, выполняется поиск следующего элемента управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указать на предыдущий или следующий элемент управления, который имеет WS_TABSTOP стиль, если функция члена является успешной.
+Указатель на предыдущий или следующий элемент управления, имеющий стиль WS_TABSTOP, если функция-член выполнена успешно.
 
-Возвращенный указатель может быть временным и не должен храниться для последующего использования.
+Возвращаемый указатель может быть временным и не должен храниться для последующего использования.
 
-Для получения `COleControlSiteOrWnd`дополнительной информации о , см. [CWnd::GetNextDlgGroupItem](#getnextdlggroupitem).
+Дополнительные сведения о `COleControlSiteOrWnd` см. в разделе [CWnd:: жетнекстдлгграупитем](#getnextdlggroupitem).
 
-## <a name="cwndgetnextwindow"></a><a name="getnextwindow"></a>CWnd::GetNextWindow
+## <a name="cwndgetnextwindow"></a><a name="getnextwindow"></a>CWnd:: Жетнекствиндов
 
-Поиск следующего (или предыдущего) окна в списке менеджера окон.
+Выполняет поиск следующего (или предыдущего) окна в списке диспетчера окон.
 
 ```
 CWnd* GetNextWindow(UINT nFlag = GW_HWNDNEXT) const;
@@ -4348,22 +4348,22 @@ CWnd* GetNextWindow(UINT nFlag = GW_HWNDNEXT) const;
 
 ### <a name="parameters"></a>Параметры
 
-*nФлаг*<br/>
-Определяет, возвращает ли функция указатель в следующее окно или предыдущее окно. Это может быть либо GW_HWNDNEXT, который `CWnd` возвращает окно, которое следует за объектом в списке менеджера окна, либо GW_HWNDPREV, которое возвращает предыдущее окно в списке менеджера окон.
+*нфлаг*<br/>
+Указывает, возвращает ли функция указатель на следующее окно или предыдущее окно. Это может быть либо GW_HWNDNEXT, который возвращает окно, следующее за `CWnd` объектом в списке диспетчера окон, либо GW_HWNDPREV, который возвращает предыдущее окно в списке диспетчера окон.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Определяет следующее (или предыдущее) окно в списке менеджера окон, если функция участника успешна.
+Определяет следующее (или предыдущее) окно в списке диспетчера окон, если функция-член успешно выполнена.
 
-Возвращенный указатель может быть временным и не должен храниться для последующего использования.
+Возвращаемый указатель может быть временным и не должен храниться для последующего использования.
 
 ### <a name="remarks"></a>Remarks
 
-Список менеджера окон содержит записи для всех окон верхнего уровня, связанных с ними детских окон и детских окон любых детских окон.
+Список диспетчера окон содержит записи для всех окон верхнего уровня, связанных с ними дочерних окон и дочерних окон дочерних окон.
 
-Если `CWnd` это окно верхнего уровня, функция выполняет поиск следующего (или предыдущего) окна верхнего уровня; если `CWnd` это окно ребенка, функция выполняет поиск следующего (или предыдущего) окна ребенка.
+Если `CWnd` является окном верхнего уровня, функция ищет следующее (или предыдущее) окно верхнего уровня; если `CWnd` является дочерним окном, функция выполняет поиск следующего (или предыдущего) дочернего окна.
 
-## <a name="cwndgetolecontrolsite"></a><a name="getolecontrolsite"></a>CWnd::GetOleControlSite
+## <a name="cwndgetolecontrolsite"></a><a name="getolecontrolsite"></a>CWnd:: Жетолеконтролсите
 
 Извлекает настраиваемый сайт для указанного элемента управления ActiveX.
 
@@ -4373,12 +4373,12 @@ COleControlSite* GetOleControlSite(UINT idControl) const;
 
 ### <a name="parameters"></a>Параметры
 
-*idControl*<br/>
+*идконтрол*<br/>
 Идентификатор элемента управления ActiveX.
 
-## <a name="cwndgetopenclipboardwindow"></a><a name="getopenclipboardwindow"></a>CWnd::GetOpenClipboardWindow
+## <a name="cwndgetopenclipboardwindow"></a><a name="getopenclipboardwindow"></a>CWnd:: Жетопенклипбоардвиндов
 
-Извлекает ручку окна, которая в настоящее время имеет Clipboard открытым.
+Получает маркер окна, в котором в данный момент открыт буфер обмена.
 
 ```
 static CWnd* PASCAL GetOpenClipboardWindow();
@@ -4386,11 +4386,11 @@ static CWnd* PASCAL GetOpenClipboardWindow();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ручка окна, которая в настоящее время имеет Clipboard открыт, если функция является успешной; в противном случае NULL.
+Маркер окна, в котором в данный момент открыт буфер обмена, если функция выполнена успешно; в противном случае — NULL.
 
-## <a name="cwndgetowner"></a><a name="getowner"></a>CWnd::GetOwner
+## <a name="cwndgetowner"></a><a name="getowner"></a>CWnd::, владелец
 
-Получает указатель владельцу окна.
+Получает указатель на владельца окна.
 
 ```
 CWnd* GetOwner() const;
@@ -4402,13 +4402,13 @@ CWnd* GetOwner() const;
 
 ### <a name="remarks"></a>Remarks
 
-Если в окне нет владельца, по умолчанию возвращается указатель на объект родительского окна. Обратите внимание, что отношения между владельцем и владельцем отличается от родительского ребенка аспект в нескольких важных аспектах. Например, окно с родителем ограничено областью клиента родительского окна. Принадлежащие окна могут быть нарисованы в любом месте на рабочем столе.
+Если окно не имеет владельца, то по умолчанию возвращается указатель на объект родительского окна. Обратите внимание, что связь между владельцем и владельцем отличается от аспекта "родители-потомки" в нескольких важных аспектах. Например, окно с родителем ограничено клиентской областью родительского окна. Собственные окна могут отображаться в любом месте рабочего стола.
 
-Концепция собственности этой функции отличается от концепции собственности [GetWindow.](/windows/win32/api/winuser/nf-winuser-getwindow)
+Понятие владения этой функцией отличается от концепции «владение [»](/windows/win32/api/winuser/nf-winuser-getwindow).
 
-## <a name="cwndgetparent"></a><a name="getparent"></a>CWnd::GetParent
+## <a name="cwndgetparent"></a><a name="getparent"></a>CWnd:: Parent
 
-Вызов исправьте эту функцию, чтобы получить указатель на родительское окно детского окна (если таковой имеется).
+Вызовите эту функцию, чтобы получить указатель на родительское окно дочернего окна (если оно есть).
 
 ```
 CWnd* GetParent() const;
@@ -4416,15 +4416,15 @@ CWnd* GetParent() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Смотрите раздел Значения возврата в [GetParent](/windows/win32/api/winuser/nf-winuser-getparent) в SDK Windows.
+См. раздел "возвращаемые значения" в разделе " [родители](/windows/win32/api/winuser/nf-winuser-getparent) " в Windows SDK.
 
 ### <a name="remarks"></a>Remarks
 
-Функция `GetParent` возвращает указатель непосредственному родителю (если он существует). В отличие от этого функция [GetParentOwner](#getparentowner) возвращает указатель в самое непосредственное окно родителя или владельца, которое не является окном ребенка (не имеет WS_CHILD стиля). Если у вас есть детское `GetParent` `GetParentOwner` окно в окне ребенка и вернуть различные результаты.
+`GetParent`Функция возвращает указатель на ближайший родительский элемент (если он существует). В отличие от этого функция [жетпарентовнер](#getparentowner) возвращает указатель на наиболее непосредственный родительский или подчиненный окно, которое не является дочерним окном (не имеет стиля WS_CHILD). Если у вас есть дочернее окно в дочернем окне `GetParent` и `GetParentOwner` возвращены другие результаты.
 
-## <a name="cwndgetparentframe"></a><a name="getparentframe"></a>CWnd::GetParentFrame
+## <a name="cwndgetparentframe"></a><a name="getparentframe"></a>CWnd:: Жетпарентфраме
 
-Вызов эту функцию участника для получения окна родительской рамы.
+Вызовите эту функцию члена, чтобы получить окно родительского фрейма.
 
 ```
 CFrameWnd* GetParentFrame() const;
@@ -4432,15 +4432,15 @@ CFrameWnd* GetParentFrame() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на окно рамы в случае успеха; в противном случае NULL.
+Указатель на окно фрейма в случае успеха; в противном случае — NULL.
 
 ### <a name="remarks"></a>Remarks
 
-Функция участника выполняет поиск родительской цепи до тех пор, пока не будет найден объект [CFrameWnd](../../mfc/reference/cframewnd-class.md) (или производный класс).
+Функция-член выполняет поиск по родительской цепочке до тех пор, пока не будет найден объект [CFrameWnd](../../mfc/reference/cframewnd-class.md) (или производный класс).
 
-## <a name="cwndgetparentowner"></a><a name="getparentowner"></a>CWnd:GetParentВладелец
+## <a name="cwndgetparentowner"></a><a name="getparentowner"></a>CWnd:: Жетпарентовнер
 
-Позвоните в эту функцию участника, чтобы получить указатель на родительское окно или окно владельца детского окна.
+Вызовите эту функцию-член, чтобы получить указатель на родительское окно или окно-владелец дочернего окна.
 
 ```
 CWnd* GetParentOwner() const;
@@ -4452,13 +4452,13 @@ CWnd* GetParentOwner() const;
 
 ### <a name="remarks"></a>Remarks
 
-`GetParentOwner`возвращает указатель на самое непосредственное окно родителя или владельца, которое не является окном ребенка (не имеет WS_CHILD стиля). Текущее окно владельца можно установить с [помощью SetOwner.](#setowner) По умолчанию родительским окном является его владелец.
+`GetParentOwner`Возвращает указатель на наиболее непосредственный родительский или подчиненный окно, которое не является дочерним окном (не имеет стиля WS_CHILD). Окно текущего владельца можно задать с помощью [сетовнер](#setowner). По умолчанию родительским элементом окна является его владелец.
 
-В отличие от этого функция [GetParent](#getparent) возвращает указатель непосредственному родителю, независимо от того, является ли это окном ребенка или нет. Если у вас есть детское `GetParent` `GetParentOwner` окно в окне ребенка и вернуть различные результаты.
+В отличие от этого функция- [родитель](#getparent) возвращает указатель на ближайший родительский элемент, будь это дочернее окно. Если у вас есть дочернее окно в дочернем окне `GetParent` и `GetParentOwner` возвращены другие результаты.
 
-## <a name="cwndgetproperty"></a><a name="getproperty"></a>CWnd::GetProperty
+## <a name="cwndgetproperty"></a><a name="getproperty"></a>CWnd:: Property
 
-Позвоните в эту функцию участника, чтобы получить свойство управления ActiveX, указанное *dwDispID.*
+Вызовите эту функцию члена, чтобы получить свойство элемента управления ActiveX, заданное параметром *двдиспид*.
 
 ```cpp
 void GetProperty(
@@ -4469,25 +4469,25 @@ void GetProperty(
 
 ### <a name="parameters"></a>Параметры
 
-*dwDispID*<br/>
-Идентифицирует свойство, подносяе извлечению.
+*двдиспид*<br/>
+Определяет извлекаемое свойство.
 
-*vtProp*<br/>
-Упогоняет тип извлечения свойства. Возможные значения см. в подразделе "Примечания" раздела [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
+*втпроп*<br/>
+Указывает тип извлекаемого свойства. Возможные значения см. в подразделе "Примечания" раздела [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
 
-*pvProp*<br/>
-Адрес переменной, которая получит стоимость свойства. Он должен соответствовать типу, указанному *vtProp.*
+*пвпроп*<br/>
+Адрес переменной, которая будет принимать значение свойства. Он должен соответствовать типу, заданному параметром *втпроп*.
 
 ### <a name="remarks"></a>Remarks
 
-`GetProperty`возвращает значение через *pvProp*.
+`GetProperty`Возвращает значение через *пвпроп*.
 
 > [!NOTE]
-> Эта функция должна вызываться `CWnd` только на объекте, который представляет элемент управления ActiveX.
+> Эта функция должна вызываться только для `CWnd` объекта, представляющего элемент управления ActiveX.
 
-Для получения дополнительной информации об использовании этой функции [ActiveX Control Containers: Programming ActiveX Controls in an ActiveX Control Container](../../mfc/programming-activex-controls-in-a-activex-control-container.md)участника с помощью контейнеров ActiveX Control, см.
+Дополнительные сведения об использовании этой функции – члена с контейнерами элементов управления ActiveX см. в статье [контейнеры элементов управления ActiveX: Программирование элементов управления ActiveX в контейнере элементов управления ActiveX](../../mfc/programming-activex-controls-in-a-activex-control-container.md).
 
-## <a name="cwndgetrendertarget"></a><a name="getrendertarget"></a>CWnd::GetRenderTarget
+## <a name="cwndgetrendertarget"></a><a name="getrendertarget"></a>CWnd:: Жетрендертаржет
 
 Возвращает целевой объект отрисовки, связанный с данным окном.
 
@@ -4497,11 +4497,11 @@ CHwndRenderTarget* GetRenderTarget();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на цель рендера или NULL.
+Указатель на целевой объект прорисовки или значение NULL.
 
-## <a name="cwndgetsafehwnd"></a><a name="getsafehwnd"></a>CWnd::GetSafeHwnd
+## <a name="cwndgetsafehwnd"></a><a name="getsafehwnd"></a>CWnd:: Жетсафехвнд
 
-Возвращает `m_hWnd`, или NULL, если **этот** указатель NULL.
+Возвращает `m_hWnd` значение или null, если **`this`** указатель имеет значение null.
 
 ```
 HWND GetSafeHwnd() const;
@@ -4509,15 +4509,15 @@ HWND GetSafeHwnd() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает ручку окна для окна. Возвращает NULL, `CWnd` если он не прикреплен к окну или `CWnd` если он используется с указателем NULL.
+Возвращает маркер окна. Возвращает значение NULL, если `CWnd` не присоединен к окну или используется с пустым `CWnd` указателем.
 
 ### <a name="example"></a>Пример
 
-  Смотрите пример [CWnd::SubclassWindow](#subclasswindow).
+  См. пример для [CWnd:: субклассвиндов](#subclasswindow).
 
-## <a name="cwndgetsafeowner"></a><a name="getsafeowner"></a>CWnd:GetSafeOwner
+## <a name="cwndgetsafeowner"></a><a name="getsafeowner"></a>CWnd:: Жетсафеовнер
 
-Вызов эту функцию участника, чтобы получить окно владельца, которое должно быть использовано для диалоговые окна или другие модальные окна.
+Вызовите эту функцию члена, чтобы получить окно владельца, которое должно использоваться для диалоговых окон или других модальных окон.
 
 ```
 static CWnd* GetSafeOwner(
@@ -4527,11 +4527,11 @@ static CWnd* GetSafeOwner(
 
 ### <a name="parameters"></a>Параметры
 
-*pРодитель*<br/>
+*ппарент*<br/>
 Указатель на родительское `CWnd` окно. Может иметь значение "NULL".
 
-*pWndTop*<br/>
-Указатель на окно, которое в настоящее время находится на вершине. Может иметь значение "NULL".
+*пвндтоп*<br/>
+Указатель на окно, находящегося в данный момент в верхней части. Может иметь значение "NULL".
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -4539,14 +4539,14 @@ static CWnd* GetSafeOwner(
 
 ### <a name="remarks"></a>Remarks
 
-Безопасный владелец является первым не-ребенок родителей окно *pParent*. Если *pParent* является NULL, основное окно потока (извлеченное через [AfxGetMainWnd)](../../mfc/reference/application-information-and-management.md#afxgetmainwnd)используется для поиска владельца.
+Владелец безопасности — это первое, не дочернее родительское окно *ппарент*. Если *ппарент* имеет значение null, то основное окно потока (полученное через [афксжетмаинвнд](../../mfc/reference/application-information-and-management.md#afxgetmainwnd)) используется для поиска владельца.
 
 > [!NOTE]
-> Сама система использует эту функцию для определения правильного окна владельца для диалоговых коробок и листов свойств, где владелец не указан.
+> Сама платформа использует эту функцию для определения правильного окна владельца для диалоговых окон и страниц свойств, в которых не указан владелец.
 
-## <a name="cwndgetscrollbarctrl"></a><a name="getscrollbarctrl"></a>CWnd:GetScrollBarCtrl
+## <a name="cwndgetscrollbarctrl"></a><a name="getscrollbarctrl"></a>CWnd:: Жетскроллбарктрл
 
-Позвоните в эту функцию участника, чтобы получить указатель на указанный бар прокрутки брата или окно сплиттера.
+Вызовите эту функцию-член, чтобы получить указатель на указанную родственную полосу прокрутки или окно-разделитель.
 
 ```
 virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
@@ -4554,22 +4554,22 @@ virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
 
 ### <a name="parameters"></a>Параметры
 
-*nБар*<br/>
-Определяет тип панели прокрутки. Параметр может принимать одно из следующих значений:
+*нбар*<br/>
+Указывает тип полосы прокрутки. Параметр может принимать одно из следующих значений:
 
-- SB_HORZ извлекает положение горизонтальной панели прокрутки.
+- SB_HORZ извлекает расположение горизонтальной полосы прокрутки.
 
-- SB_VERT извлекает положение вертикальной полосы прокрутки.
+- SB_VERT Извлекает расположение вертикальной полосы прокрутки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Брат управления прокруткой, или NULL, если нет.
+Элемент управления "полоса прокрутки" или значение NULL, если нет.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция участника не работает на барах прокрутки, созданных при установке WS_HSCROLL или WS_VSCROLL битов при создании окна. Реализация `CWnd` этой функции просто возвращает NULL. Выведенные классы, `CView`такие как, реализуют описанную функциональность.
+Эта функция-член не работает с полосами прокрутки, созданными при установке WS_HSCROLL или WS_VSCROLL бит во время создания окна. `CWnd`Реализация этой функции просто возвращает значение null. Производные классы, такие как `CView` , реализуют описанную функциональность.
 
-## <a name="cwndgetscrollbarinfo"></a><a name="getscrollbarinfo"></a>CWnd::GetScrollBarInfo
+## <a name="cwndgetscrollbarinfo"></a><a name="getscrollbarinfo"></a>CWnd:: Жетскроллбаринфо
 
 Извлекает сведения об указанной полосе прокрутки.
 
@@ -4581,23 +4581,23 @@ BOOL GetScrollBarInfo(
 
 ### <a name="parameters"></a>Параметры
 
-*idObject*<br/>
-Определяет объект меню. Список возможных значений можно узнать на примере [GetScrollBarInfo.](/windows/win32/api/winuser/nf-winuser-getscrollbarinfo)
+*идобжект*<br/>
+Указывает объект меню. Список возможных значений см. в разделе [жетскроллбаринфо](/windows/win32/api/winuser/nf-winuser-getscrollbarinfo).
 
-*psbi*<br/>
-Указатель на структуру [SCROLLBARINFO,](/windows/win32/api/winuser/ns-winuser-scrollbarinfo) которая получает информацию.
+*псби*<br/>
+Указатель на структуру [скроллбаринфо](/windows/win32/api/winuser/ns-winuser-scrollbarinfo) , которая получает сведения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Nonzero, если функция успешно; в противном случае 0.
+Ненулевое значение, если функция выполнена. в противном случае — 0.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция члена эмулирует функциональность функции [GetScrollBarInfo](/windows/win32/api/winuser/nf-winuser-getscrollbarinfo), как описано в Windows SDK.
+Эта функция члена эмулирует функциональность функции [жетскроллбаринфо](/windows/win32/api/winuser/nf-winuser-getscrollbarinfo), как описано в Windows SDK.
 
-## <a name="cwndgetscrollinfo"></a><a name="getscrollinfo"></a>CWnd::GetScrollInfo
+## <a name="cwndgetscrollinfo"></a><a name="getscrollinfo"></a>CWnd:: Жетскроллинфо
 
-Вызовите эту функцию участника, `SCROLLINFO` чтобы получить информацию, которую структура поддерживает о панели прокрутки.
+Вызовите эту функцию-член, чтобы получить сведения, которые `SCROLLINFO` хранятся в структуре, о полосе прокрутки.
 
 ```
 BOOL GetScrollInfo(
@@ -4608,36 +4608,36 @@ BOOL GetScrollInfo(
 
 ### <a name="parameters"></a>Параметры
 
-*nБар*<br/>
-Определяет, является ли панель прокрутки элементом управления или частью области неклиента окна. Если он является частью области неклиента, *nBar* также указывает, находится ли панель прокрутки горизонтально, вертикально или и то, и другое. Она должна быть одной из следующих:
+*нбар*<br/>
+Указывает, является ли полоса прокрутки элементом управления или частью неклиентской области окна. Если он является частью неклиентской области, *НБАР* также указывает, располагается ли полоса прокрутки горизонтально, вертикально или и то, и другое. Он должен быть одним из следующих:
 
-- SB_CTL извлекает параметры для управления полосой прокрутки. Член `m_hWnd` данных должен быть ручкой управления панелью прокрутки.
+- SB_CTL Получает параметры для элемента управления "полоса прокрутки". `m_hWnd`Элемент данных должен быть маркером элемента управления "полоса прокрутки".
 
-- SB_HORZ извлекает параметры для стандартной горизонтальной панели прокрутки окна.
+- SB_HORZ получает параметры для стандартной горизонтальной полосы прокрутки окна.
 
-- SB_VERT извлекает параметры для стандартной вертикальной панели прокрутки окна.
+- SB_VERT Получает параметры для стандартной вертикальной полосы прокрутки окна.
 
-*lpScrollInfo*<br/>
-Указатель на структуру [SCROLLINFO.](/windows/win32/api/winuser/ns-winuser-scrollinfo) Дополнительную информацию об этой структуре можно узнать в SDK Windows.
+*лпскроллинфо*<br/>
+Указатель на структуру [скроллинфо](/windows/win32/api/winuser/ns-winuser-scrollinfo) . Дополнительные сведения об этой структуре см. в Windows SDK.
 
-*nМаск*<br/>
-Определяет параметры панели прокрутки для извлечения. По умолчанию определяется комбинация SIF_PAGE, SIF_POS, SIF_TRACKPOS и SIF_RANGE. Дополнительную информацию о значениях `SCROLLINFO` *nMask* смотрите.
+*нмаск*<br/>
+Задает параметры полосы прокрутки для извлечения. Значение по умолчанию задает сочетание SIF_PAGE, SIF_POS, SIF_TRACKPOS и SIF_RANGE. `SCROLLINFO`Дополнительные сведения о значениях *нмаск* см. в разделе.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если сообщение извлекает какие-либо значения, возврат является правдой. В противном случае, это FALSE.
+Если сообщение получает какие-либо значения, возвращается значение TRUE. В противном случае — FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-`GetScrollInfo`позволяет приложениям использовать 32-битные позиции прокрутки.
+`GetScrollInfo`позволяет приложениям использовать 32-разрядные позиции прокрутки.
 
-Структура [SCROLLINFO](/windows/win32/api/winuser/ns-winuser-scrollinfo) содержит информацию о панели прокрутки, включая минимальное и максимальное положение прокрутки, размер страницы и положение окна прокрутки (большой палец). Подробнее `SCROLLINFO` об изменении структуры по умолчанию можно просмотреть тему структуры в SDK Windows SDK.
+Структура [скроллинфо](/windows/win32/api/winuser/ns-winuser-scrollinfo) содержит сведения о полосе прокрутки, включая минимальные и максимальные положения прокрутки, размер страницы и положение ползунка (бегунка). `SCROLLINFO`Дополнительные сведения об изменении структуры по умолчанию см. в разделе "структура" в Windows SDK.
 
-Обработчики сообщений MFC Windows, указывающие положение прокрутки-бар, [CWnd::OnHScroll](#onhscroll) и [CWnd::OnVScroll,](#onvscroll)предоставляют только 16 бит данных о положении. `GetScrollInfo`и `SetScrollInfo` предоставить 32 бита данных о положении прокрутки-бара. Таким образом, приложение `GetScrollInfo` может `CWnd::OnHScroll` звонить `CWnd::OnVScroll` при обработке либо или для получения 32-битных данных положения прокрутки.бара.
+Обработчики сообщений Windows MFC, указывающие расположение полосы прокрутки, [CWnd:: онхскролл](#onhscroll) и [CWnd:: онвскролл](#onvscroll), предоставляют только 16 бит данных о положении. `GetScrollInfo`и `SetScrollInfo` предоставляют 32 бит данных о положении полосы прокрутки. Таким же, приложение может вызвать `GetScrollInfo` во время обработки либо, `CWnd::OnHScroll` `CWnd::OnVScroll` чтобы получить 32-разрядные данные о положении полосы прокрутки.
 
-## <a name="cwndgetscrolllimit"></a><a name="getscrolllimit"></a>CWnd::GetScrollLimit
+## <a name="cwndgetscrolllimit"></a><a name="getscrolllimit"></a>CWnd:: Жетскролллимит
 
-Вызов исчерпе эту функцию участника, чтобы получить максимальное положение прокрутки панели прокрутки.
+Вызовите эту функцию члена, чтобы получить максимальную точку прокрутки полосы прокрутки.
 
 ```
 int GetScrollLimit(int nBar);
@@ -4645,20 +4645,20 @@ int GetScrollLimit(int nBar);
 
 ### <a name="parameters"></a>Параметры
 
-*nБар*<br/>
-Определяет тип панели прокрутки. Параметр может принимать одно из следующих значений:
+*нбар*<br/>
+Указывает тип полосы прокрутки. Параметр может принимать одно из следующих значений:
 
-- SB_HORZ извлекает предел прокрутки горизонтальной панели прокрутки.
+- SB_HORZ получает ограничение прокрутки горизонтальной полосы прокрутки.
 
-- SB_VERT извлекает предел прокрутки вертикальной панели прокрутки.
+- SB_VERT Получает ограничение прокрутки вертикальной полосы прокрутки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Определяет максимальное положение панели прокрутки в случае успеха; в противном случае 0.
+Задает максимальную точку полосы прокрутки при успешном выполнении; в противном случае — 0.
 
-## <a name="cwndgetscrollpos"></a><a name="getscrollpos"></a>CWnd::GetScrollPos
+## <a name="cwndgetscrollpos"></a><a name="getscrollpos"></a>CWnd:: Жетскроллпос
 
-Извлекает текущее положение окна прокрутки панели прокрутки.
+Извлекает текущее расположение бегунка полосы прокрутки.
 
 ```
 int GetScrollPos(int nBar) const;
@@ -4666,24 +4666,24 @@ int GetScrollPos(int nBar) const;
 
 ### <a name="parameters"></a>Параметры
 
-*nБар*<br/>
-Определяет бар прокрутки для изучения. Параметр может принимать одно из следующих значений:
+*нбар*<br/>
+Указывает полосу прокрутки для проверки. Параметр может принимать одно из следующих значений:
 
-- SB_HORZ извлекает положение горизонтальной панели прокрутки.
+- SB_HORZ извлекает расположение горизонтальной полосы прокрутки.
 
-- SB_VERT извлекает положение вертикальной полосы прокрутки.
+- SB_VERT Извлекает расположение вертикальной полосы прокрутки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Определяет текущее положение окна прокрутки в панели прокрутки в случае успеха; в противном случае 0.
+Задает текущую точку прокрутки на полосе прокрутки в случае успешного выполнения; в противном случае — 0.
 
 ### <a name="remarks"></a>Remarks
 
-Текущее значение — это относительное значение, которое зависит от текущего диапазона прокрутки. Например, если диапазон прокрутки составляет от 50 до 100, а поле прокрутки находится в середине бара, текущее положение — 75.
+Текущая величина — это относительное значение, которое зависит от текущего диапазона прокрутки. Например, если диапазон прокрутки находится в диапазоне от 50 до 100, а поле прокрутки находится в середине линейки, текущее расположение равно 75.
 
-## <a name="cwndgetscrollrange"></a><a name="getscrollrange"></a>CWnd::GetScrollRange
+## <a name="cwndgetscrollrange"></a><a name="getscrollrange"></a>CWnd:: Жетскроллранже
 
-Копирует текущие минимальные и максимальные позиции панели прокрутки для данной панели прокрутки в места, указанные *lpMinPos* и *lpMaxPos.*
+Копирует текущие минимальное и максимальное позиции полосы прокрутки для заданной полосы прокрутки в расположения, заданные *лпминпос* и *лпмакспос*.
 
 ```cpp
 void GetScrollRange(
@@ -4694,26 +4694,26 @@ void GetScrollRange(
 
 ### <a name="parameters"></a>Параметры
 
-*nБар*<br/>
-Определяет бар прокрутки для изучения. Параметр может принимать одно из следующих значений:
+*нбар*<br/>
+Указывает полосу прокрутки для проверки. Параметр может принимать одно из следующих значений:
 
-- SB_HORZ извлекает положение горизонтальной панели прокрутки.
+- SB_HORZ извлекает расположение горизонтальной полосы прокрутки.
 
-- SB_VERT извлекает положение вертикальной полосы прокрутки.
+- SB_VERT Извлекает расположение вертикальной полосы прокрутки.
 
-*lpMinPos*<br/>
-Указывает на рядпеременную переменную, которая должна получить минимальную позицию.
+*лпминпос*<br/>
+Указывает на целочисленную переменную, которая должна принимать минимальную позиции.
 
-*lpMaxPos*<br/>
-Указывает на рядпеременную переменную, которая должна получить максимальную позицию.
+*лпмакспос*<br/>
+Указывает на целочисленную переменную, которая должна принимать максимальную позиции.
 
 ### <a name="remarks"></a>Remarks
 
-Если `CWnd` нет панели прокрутки, то функция `GetScrollRange` участника копирует 0 к *lpMinPos* и *lpMaxPos*.
+Если отсутствует `CWnd` полоса прокрутки, функция- `GetScrollRange` член копирует 0 в *лпминпос* и *лпмакспос*.
 
-Диапазон по умолчанию для стандартной панели прокрутки составляет от 0 до 100. Диапазон по умолчанию для управления прокруткой является пустым (оба значения 0).
+По умолчанию для стандартной полосы прокрутки используется диапазон от 0 до 100. Диапазон по умолчанию для элемента управления "полоса прокрутки" пуст (оба значения равны 0).
 
-## <a name="cwndgetstyle"></a><a name="getstyle"></a>CWnd::GetStyle
+## <a name="cwndgetstyle"></a><a name="getstyle"></a>CWnd:: штриховка
 
 Возвращает стиль текущего окна.
 
@@ -4723,9 +4723,9 @@ DWORD GetStyle() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Стиль окна. Для получения дополнительной информации о стилях окон, используемых в MFC, [см.](styles-used-by-mfc.md#window-styles)
+Стиль окна. Дополнительные сведения о стилях окон, используемых в MFC, см. в разделе [стили окон](styles-used-by-mfc.md#window-styles).
 
-## <a name="cwndgetsystemmenu"></a><a name="getsystemmenu"></a>CWnd::GetSystemMenu
+## <a name="cwndgetsystemmenu"></a><a name="getsystemmenu"></a>CWnd:: Жетсистеммену
 
 Позволяет приложению получить доступ к оконному меню для копирования и изменения.
 
@@ -4735,30 +4735,30 @@ CMenu* GetSystemMenu(BOOL bRevert) const;
 
 ### <a name="parameters"></a>Параметры
 
-*bRevert*<br/>
-Определяется, что необходимо принять меры. Если *bRevert* является `GetSystemMenu` FALSE, возвращает ручку в копию меню Управления, которая используется в настоящее время. Эта копия изначально идентична меню Управления, но может быть изменена. Если *bRevert* является `GetSystemMenu` правдой, сброс меню управления обратно в состояние по умолчанию. Предыдущее, возможно измененное меню управления, если такого имеется, уничтожено. Значение возврата в этом случае не определено.
+*бреверт*<br/>
+Указывает выполняемое действие. Если *бреверт* имеет значение false, `GetSystemMenu` возвращает маркер копии меню элемента управления, используемой в данный момент. Эта копия изначально идентична меню Control, но может быть изменена. Если *бреверт* имеет значение true, `GetSystemMenu` сбрасывает меню управления к состоянию по умолчанию. Предыдущее, возможно, измененное меню управления (при наличии) уничтожается. В этом случае возвращаемое значение не определено.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Определяет копию меню Управления, если *bRevert* является FALSE. Если *bRevert* является правдой, значение возврата не определено.
+Определяет копию меню управления, если *бреверт* имеет значение false. Если *бреверт* имеет значение true, возвращаемое значение не определено.
 
-Возвращенный указатель может быть временным и не должен храниться для последующего использования.
+Возвращаемый указатель может быть временным и не должен храниться для последующего использования.
 
 ### <a name="remarks"></a>Remarks
 
-Любое окно, `GetSystemMenu` которое не используется для изготовления собственной копии меню Control, получает стандартное меню Control.
+Любое окно, которое не использует `GetSystemMenu` для создания собственной копии меню элемента управления, получает стандартное меню управления.
 
-Указатель, возвращенный `GetSystemMenu` функцией участника, можно использовать с [помощью CMenu::AppendMenu,](../../mfc/reference/cmenu-class.md#appendmenu) [CMenu::InsertMenu](../../mfc/reference/cmenu-class.md#insertmenu), или [CMenu::ModifyMenu](../../mfc/reference/cmenu-class.md#modifymenu) функции для изменения меню управления.
+Указатель, возвращаемый `GetSystemMenu` функцией члена, можно использовать с функциями [кмену:: аппендмену](../../mfc/reference/cmenu-class.md#appendmenu), [кмену:: инсертмену](../../mfc/reference/cmenu-class.md#insertmenu)или [кмену:: модифимену](../../mfc/reference/cmenu-class.md#modifymenu) для изменения меню Control.
 
-Меню управления изначально содержит элементы, отождествляемые с различными значениями идентификатора, такие как SC_CLOSE, SC_MOVE и SC_SIZE. Элементы меню Управления генерируют [WM_SYSCOMMAND](#onsyscommand) сообщений. Все предопределенные элементы Control-menu имеют идентификационные номера, превышающее 0xF000. Если приложение добавляет элементы в меню Управления, оно должно использовать идентификационные номера меньше F000.
+Меню элемент управления изначально содержит элементы, определенные с использованием различных значений идентификатора, таких как SC_CLOSE, SC_MOVE и SC_SIZE. Элементы в меню управления создают [WM_SYSCOMMAND](#onsyscommand) сообщения. Все предопределенные элементы меню элементов управления имеют номера ИДЕНТИФИКАТОРов больше число 0xF000 не. Если приложение добавляет элементы в меню управления, оно должно использовать номера ИДЕНТИФИКАТОРов меньше, чем F000.
 
-Windows может автоматически сделать элементы недоступными в стандартном меню управления. `CWnd`может осуществлять свой собственный выбор или недоступность, отвечая на [WM_INITMENU](#oninitmenu) сообщения, которые отправляются до отображения любого меню.
+Windows может автоматически сделать элементы недоступными в стандартном меню управления. `CWnd`может выполнять собственный выбор или недоступность, отвечая на [WM_INITMENU](#oninitmenu) сообщения, которые отправляются перед отображением меню.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#99](../../mfc/reference/codesnippet/cpp/cwnd-class_39.cpp)]
 
-## <a name="cwndgettitlebarinfo"></a><a name="gettitlebarinfo"></a>CWnd::GetTitleBarInfo
+## <a name="cwndgettitlebarinfo"></a><a name="gettitlebarinfo"></a>CWnd:: Жеттитлебаринфо
 
 Извлекает сведения об указанной строке заголовка.
 
@@ -4768,16 +4768,16 @@ BOOL GetTitleBarInfo(PTITLEBARINFO pti) const;
 
 ### <a name="parameters"></a>Параметры
 
-*Pti*<br/>
-Указатель на структуру [TITLEBARINFO,](/windows/win32/api/winuser/ns-winuser-titlebarinfo) которая получает информацию.
+*пти*<br/>
+Указатель на структуру [титлебаринфо](/windows/win32/api/winuser/ns-winuser-titlebarinfo) , которая получает сведения.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция члена эмулирует функциональность функции [GetTitleBarInfo](/windows/win32/api/winuser/nf-winuser-gettitlebarinfo), как описано в Windows SDK.
+Эта функция члена эмулирует функциональность функции [жеттитлебаринфо](/windows/win32/api/winuser/nf-winuser-gettitlebarinfo), как описано в Windows SDK.
 
-## <a name="cwndgettoplevelframe"></a><a name="gettoplevelframe"></a>CWnd::GetTopLevelFrame
+## <a name="cwndgettoplevelframe"></a><a name="gettoplevelframe"></a>CWnd:: Жеттоплевелфраме
 
-Вызов эту функцию участника, чтобы получить окно верхнего уровня окна окна, если таковые имеется.
+Вызовите эту функцию члена, чтобы получить окно фрейма верхнего уровня окна, если оно имеется.
 
 ```
 CFrameWnd* GetTopLevelFrame() const;
@@ -4785,17 +4785,17 @@ CFrameWnd* GetTopLevelFrame() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Идентифицирует окно верхнего уровня кадра окна.
+Определяет окно фрейма верхнего уровня окна.
 
-Возвращенный указатель может быть временным и не должен храниться для последующего использования.
+Возвращаемый указатель может быть временным и не должен храниться для последующего использования.
 
 ### <a name="remarks"></a>Remarks
 
-Если `CWnd` нет прикрепленного окна, или его родитель верхнего уровня не является объектом [CFrameWnd,](../../mfc/reference/cframewnd-class.md)эта функция возвращает NULL.
+Если не `CWnd` имеет присоединенного окна или его родителя верхнего уровня не является объектом, производным от [CFrameWnd](../../mfc/reference/cframewnd-class.md), эта функция возвращает значение null.
 
-## <a name="cwndgettoplevelowner"></a><a name="gettoplevelowner"></a>CWnd::GetTopLevelOwner
+## <a name="cwndgettoplevelowner"></a><a name="gettoplevelowner"></a>CWnd:: Жеттоплевеловнер
 
-Вызов этой функции участника для получения окна верхнего уровня.
+Вызовите эту функцию-член для получения окна верхнего уровня.
 
 ```
 CWnd* GetTopLevelOwner() const;
@@ -4803,15 +4803,15 @@ CWnd* GetTopLevelOwner() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Идентифицирует окно верхнего уровня. Возвращенный указатель может быть временным и не должен храниться для последующего использования.
+Определяет окно верхнего уровня. Возвращаемый указатель может быть временным и не должен храниться для последующего использования.
 
 ### <a name="remarks"></a>Remarks
 
-Окно верхнего уровня — это окно, которое является ребенком рабочего стола. Если `CWnd` нет прикрепленного окна, эта функция возвращает NULL.
+Окно верхнего уровня — это окно, которое является дочерним по отношению к рабочему столу. Если `CWnd` не имеет присоединенного окна, эта функция возвращает значение null.
 
-## <a name="cwndgettoplevelparent"></a><a name="gettoplevelparent"></a>CWnd::GetTopLevelParent
+## <a name="cwndgettoplevelparent"></a><a name="gettoplevelparent"></a>CWnd:: Жеттоплевелпарент
 
-Вызов исвызывайте эту функцию участника, чтобы получить родительский штаб окна верхнего уровня.
+Вызовите эту функцию-член, чтобы получить родительский элемент верхнего уровня окна.
 
 ```
 CWnd* GetTopLevelParent() const;
@@ -4819,17 +4819,17 @@ CWnd* GetTopLevelParent() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Идентифицирует родительское окно верхнего уровня.
+Определяет родительское окно верхнего уровня окна.
 
-Возвращенный указатель может быть временным и не должен храниться для последующего использования.
+Возвращаемый указатель может быть временным и не должен храниться для последующего использования.
 
 ### <a name="remarks"></a>Remarks
 
-`GetTopLevelParent`похож на [GetTopLevelFrame](#gettoplevelframe) и [GetTopLevelOwner;](#gettoplevelowner) однако он игнорирует значение, установленное в качестве текущего окна владельца.
+`GetTopLevelParent`аналогичен [жеттоплевелфраме](#gettoplevelframe) и [жеттоплевеловнер](#gettoplevelowner); Однако он игнорирует значение, установленное в качестве текущего окна владельца.
 
-## <a name="cwndgettopwindow"></a><a name="gettopwindow"></a>CWnd::GetTopWindow
+## <a name="cwndgettopwindow"></a><a name="gettopwindow"></a>CWnd:: Жеттопвиндов
 
-Поиск исправок для окна ребенка верхнего уровня, которое принадлежит `CWnd`.
+Выполняет поиск дочернего окна верхнего уровня, принадлежащего `CWnd` .
 
 ```
 CWnd* GetTopWindow() const;
@@ -4837,17 +4837,17 @@ CWnd* GetTopWindow() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Идентифицирует окно ребенка верхнего `CWnd` уровня в связанном списке детских окон. Если не существует детских окон, значение NULL.
+Определяет дочернее окно верхнего уровня в `CWnd` связанном списке дочерних окон. Если дочерние окна не существуют, значение равно NULL.
 
-Возвращенный указатель может быть временным и не должен храниться для последующего использования.
+Возвращаемый указатель может быть временным и не должен храниться для последующего использования.
 
 ### <a name="remarks"></a>Remarks
 
-Если `CWnd` нет детей, эта функция возвращает NULL.
+Если не `CWnd` имеет дочерних элементов, эта функция возвращает значение null.
 
-## <a name="cwndgetupdaterect"></a><a name="getupdaterect"></a>CWnd::GetUpdateRect
+## <a name="cwndgetupdaterect"></a><a name="getupdaterect"></a>CWnd:: Жетупдатерект
 
-Извлекает координаты наименьшего прямоугольника, который полностью закрывает область обновления.
+Получает координаты наименьшего прямоугольника, полностью охватывающего область обновления.
 
 ```
 BOOL GetUpdateRect(
@@ -4857,33 +4857,33 @@ BOOL GetUpdateRect(
 
 ### <a name="parameters"></a>Параметры
 
-*lpRect*<br/>
-Указывает на `CRect` объект или [структуру RECT,](/windows/win32/api/windef/ns-windef-rect) которая должна получать координаты клиента обновления, которое заключает область обновления.
+*лпрект*<br/>
+Указывает на `CRect` структуру объекта или [Rect](/windows/win32/api/windef/ns-windef-rect) , которая будет принимать клиентские координаты обновления, охватывающего регион обновления.
 
-Установите этот параметр в NULL, чтобы `CWnd`определить, существует ли область обновления в пределах . Если *lpRect* является `GetUpdateRect` NULL, функция участника возвращается ненулевой, если область обновления существует, и 0, если она не существует. Это позволяет определить, является ли сообщение WM_PAINT получено из недействительной области. Не устанавливайте этот параметр в NULL в версии Windows 3.0 и ранее.
+Присвойте этому параметру значение NULL, чтобы определить, существует ли область обновления в `CWnd` . Если *лпрект* имеет значение null, `GetUpdateRect` функция-член возвращает ненулевой, если существует регион обновления, и 0, если таковая отсутствует. Это позволяет определить, получено ли сообщение WM_PAINT из недопустимой области. Не устанавливайте этот параметр в значение NULL в Windows версии 3,0 и более ранних версиях.
 
-*bErase*<br/>
-Определяется, следует ли стирать фон в области обновления.
+*берасе*<br/>
+Указывает, следует ли стирать фон в области обновления.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Определяет состояние региона обновления. Значение ненулевое, если область обновления не пуста; в противном случае 0.
+Указывает состояние области обновления. Если область обновления не пуста, значение не равно нулю; в противном случае — 0.
 
-Если параметр *lpRect* установлен на NULL, значение возврата является ненулевым, если существует область обновления; в противном случае 0.
+Если для параметра *лпрект* задано значение null, то возвращаемое значение будет ненулевым, если существует регион обновления. в противном случае — 0.
 
 ### <a name="remarks"></a>Remarks
 
-Если `CWnd` он был создан с CS_OWNDC стилем и `GetUpdateRect` режим отображения не MM_TEXT, функция члена дает прямоугольник в логических координатах. В `GetUpdateRect` противном случае, дает прямоугольник в координатах клиента. Если нет области обновления, `GetUpdateRect` устанавливает прямоугольник, чтобы быть пустым (устанавливает все координаты до 0).
+Если `CWnd` был создан с использованием стиля CS_OWNDC, а режим сопоставления не MM_TEXT, функция- `GetUpdateRect` член предоставляет прямоугольник в логических координатах. В противном случае `GetUpdateRect` предоставляет прямоугольник в клиентских координатах. Если регион обновления отсутствует, `GetUpdateRect` устанавливает прямоугольник как пустой (устанавливает все координаты в 0).
 
-Параметр *bErase* определяет, `GetUpdateRect` следует ли стирать фон области обновления. Если *bErase* является правдой и область обновления не пуста, фон стирается. Чтобы удалить фон, `GetUpdateRect` отправляет сообщение [WM_ERASEBKGND.](#onerasebkgnd)
+Параметр *берасе* указывает `GetUpdateRect` , следует ли удалять фон области обновления. Если *берасе* имеет значение true и область обновления не пуста, фон удаляется. Чтобы стереть фон, `GetUpdateRect` отправляет [WM_ERASEBKGND](#onerasebkgnd) сообщение.
 
-Прямоугольник обновления, извлеченный функцией участника [BeginPaint,](#beginpaint) идентичен тому, который был получен функцией `GetUpdateRect` участника.
+Прямоугольник обновления, полученный функцией-членом [бегинпаинт](#beginpaint) , идентичен тому, который извлекается `GetUpdateRect` функцией-членом.
 
-Функция `BeginPaint` участника автоматически проверяет область обновления, поэтому `GetUpdateRect` любой вызов, `BeginPaint` сделанный сразу после вызова, получает пустой регион обновления.
+`BeginPaint`Функция-член автоматически проверяет область обновления, поэтому любой вызов, `GetUpdateRect` сделанный сразу после вызова, `BeginPaint` получает пустую область обновления.
 
-## <a name="cwndgetupdatergn"></a><a name="getupdatergn"></a>CWnd::GetUpdateRgn
+## <a name="cwndgetupdatergn"></a><a name="getupdatergn"></a>CWnd:: Жетупдатергн
 
-Извлекает область обновления в область, идентифицированную *pRgn*.
+Извлекает регион обновления в регион, определенный параметром *пргн*.
 
 ```
 int GetUpdateRgn(
@@ -4893,33 +4893,33 @@ int GetUpdateRgn(
 
 ### <a name="parameters"></a>Параметры
 
-*pRgn*<br/>
-Идентифицирует область обновления.
+*пргн*<br/>
+Определяет регион обновления.
 
-*bErase*<br/>
-Уточняется, будет ли стерт фон и будут нарисованы неклиентские области детских окон. Если значение FALSE, рисунок не выполняется.
+*берасе*<br/>
+Указывает, будет ли отображаться фон и неклиентские области дочерних окон. Если значение равно FALSE, прорисовка не выполняется.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Опознавательный флаг с коротким рядом, указывающий тип полученной области. Значение может принять любое из следующих:
+Задает флаг короткого целого числа, указывающий тип результирующей области. Значение может принимать одно из следующих значений:
 
-- SIMPLEREGION Регион не имеет перекрывающихся границ.
+- СИМПЛЕРЕГИОН. в области нет перекрывающихся границ.
 
-- COMPLEXREGION Регион имеет перекрывающиеся границы.
+- КОМПЛЕКСРЕГИОН. область содержит перекрывающиеся границы.
 
-- НУЛРЕГИОН Регион пуст.
+- НУЛЛРЕГИОН. регион пуст.
 
-- ERROR Не создан регион.
+- Ошибка: регион не создан.
 
 ### <a name="remarks"></a>Remarks
 
-Координаты этого региона относительно верхнего левого угла (координаты клиента).
+Координаты этой области задаются относительно левого верхнего угла (клиентские координаты).
 
-Функция участника [BeginPaint](#beginpaint) автоматически проверяет область обновления, `GetUpdateRgn` поэтому любой вызов, сделанный сразу после вызова, `BeginPaint` получает пустую область обновления.
+Функция-член [бегинпаинт](#beginpaint) автоматически проверяет область обновления, поэтому любой вызов, `GetUpdateRgn` сделанный сразу после вызова, `BeginPaint` получает пустую область обновления.
 
-## <a name="cwndgetwindow"></a><a name="getwindow"></a>CWnd::GetWindow
+## <a name="cwndgetwindow"></a><a name="getwindow"></a>CWnd:: в окне
 
-Возвращает указатель в запрашиваемый окно или NULL, если его нет.
+Возвращает указатель на запрошенное окно или значение NULL, если нет.
 
 ```
 CWnd* GetWindow(UINT nCmd) const;
@@ -4927,28 +4927,28 @@ CWnd* GetWindow(UINT nCmd) const;
 
 ### <a name="parameters"></a>Параметры
 
-*nCmd*<br/>
-Определяет связь между `CWnd` и возвращенное окно. Это может занять одно из следующих значений:
+*нкмд*<br/>
+Задает связь между `CWnd` и возвращаемым окном. Может принимать одно из следующих значений:
 
-- GW_CHILD идентифицирует `CWnd` окно первого ребенка.
+- GW_CHILD идентифицирует `CWnd` первое дочернее окно.
 
-- GW_HWNDFIRST `CWnd` Если это окно ребенка, возвращает первое окно брата. В противном случае он возвращает первое окно верхнего уровня в списке.
+- GW_HWNDFIRST Если `CWnd` является дочерним окном, возвращает первое родственное окно. В противном случае возвращается первое окно верхнего уровня в списке.
 
-- GW_HWNDLAST `CWnd` Если это окно ребенка, возвращает последнее окно брата. В противном случае он возвращает последнее окно верхнего уровня в списке.
+- GW_HWNDLAST Если `CWnd` является дочерним окном, возвращает последнее одноуровневый окно. В противном случае возвращается Последнее окно верхнего уровня в списке.
 
-- GW_HWNDNEXT возвращает следующее окно в списке менеджера окон.
+- GW_HWNDNEXT Возвращает следующее окно в списке диспетчера окон.
 
-- GW_HWNDPREV возвращает предыдущее окно в списке менеджера окон.
+- GW_HWNDPREV возвращает предыдущее окно в списке диспетчера окон.
 
 - GW_OWNER идентифицирует `CWnd` владельца.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращенный указатель может быть временным и не должен храниться для последующего использования.
+Возвращаемый указатель может быть временным и не должен храниться для последующего использования.
 
-## <a name="cwndgetwindowcontexthelpid"></a><a name="getwindowcontexthelpid"></a>CWnd::GetWindowContextHelpId
+## <a name="cwndgetwindowcontexthelpid"></a><a name="getwindowcontexthelpid"></a>CWnd:: Жетвиндовконтексселпид
 
-Вызовите эту функцию участника, чтобы получить идентификатор контекста справки, если таков, связанный с окном.
+Вызовите эту функцию члена, чтобы получить идентификатор контекста справки (при наличии), связанный с окном.
 
 ```
 DWORD GetWindowContextHelpId() const;
@@ -4956,11 +4956,11 @@ DWORD GetWindowContextHelpId() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Идентификатор контекста справки. Возвращает 0, если окно не имеет.
+Идентификатор контекста справки. Возвращает 0, если окно отсутствует.
 
-## <a name="cwndgetwindowedchildcount"></a><a name="getwindowedchildcount"></a>CWnd::GetWindowedChildCount
+## <a name="cwndgetwindowedchildcount"></a><a name="getwindowedchildcount"></a>CWnd:: Жетвиндоведчилдкаунт
 
-Вызов исчисляйте эту функцию участника, чтобы получить число связанных с ней окон ребенка.
+Вызовите эту функцию члена, чтобы получить количество связанных дочерних окон.
 
 ```
 long GetWindowedChildCount();
@@ -4968,11 +4968,11 @@ long GetWindowedChildCount();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Количество детских окон, `CWnd` связанных с объектом.
+Количество дочерних окон, связанных с `CWnd` объектом.
 
-## <a name="cwndgetwindowdc"></a><a name="getwindowdc"></a>CWnd::GetWindowDC
+## <a name="cwndgetwindowdc"></a><a name="getwindowdc"></a>CWnd:: Жетвиндовдк
 
-Извлекает контекст отображения для всего окна, включая панель подписей, меню и прокрутки баров.
+Извлекает контекст отображения для всего окна, включая строку заголовка, меню и полосы прокрутки.
 
 ```
 CDC* GetWindowDC();
@@ -4980,25 +4980,25 @@ CDC* GetWindowDC();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Определяет контекст отображения для данного окна, если функция успешна; в противном случае NULL.
+Определяет контекст вывода для данного окна, если функция выполнена успешно; в противном случае — NULL.
 
-Возвращенный указатель может быть временным и не должен храниться для последующего использования. [ReleaseDC](#releasedc) следует вызывать один раз `GetWindowDC`для каждого успешного вызова.
+Возвращаемый указатель может быть временным и не должен храниться для последующего использования. [Релеаседк](#releasedc) должен вызываться один раз для каждого успешного вызова `GetWindowDC` .
 
 ### <a name="remarks"></a>Remarks
 
-Контекст отображения `CWnd`окна позволяет рисовать в любом месте, `CWnd` так как происхождение контекста является верхним левым углом вместо области клиента.
+Контекст отображения окна позволяет рисовать в любом месте `CWnd` , так как источником контекста является верхний левый угол `CWnd` вместо клиентской области.
 
-Атрибуты по умолчанию присваиваются контексту отображения каждый раз, когда он извлекает контекст. Предыдущие атрибуты теряются.
+Атрибуты по умолчанию присваиваются контексту вывода каждый раз, когда он получает контекст. Предыдущие атрибуты теряются.
 
-`GetWindowDC`предназначен для использования для специальных `CWnd` эффектов живописи в области неклиента. Картина в неклиентских зонах любого окна не рекомендуется.
+`GetWindowDC`предназначен для использования в `CWnd` неклиентской области для специальных эффектов рисования. Рисование в неклиентских областях любого окна не рекомендуется.
 
-Функция [GetSystemMetrics](/windows/win32/api/winuser/nf-winuser-getsystemmetrics) Windows может использоваться для получения размеров различных частей области неклиента, таких как панель заголовков, меню и прокрутки баров.
+Функцию Windows [жетсистемметрикс](/windows/win32/api/winuser/nf-winuser-getsystemmetrics) можно использовать для получения измерений различных частей неклиентской области, таких как строка заголовка, меню и полосы прокрутки.
 
-После завершения картины функция участника [ReleaseDC](#releasedc) должна быть вызвана для выпуска контекста отображения. Непредоставление контекста дисплея серьезно скажется на картине, запрошенной приложениями, из-за ограничений на количество контекстов устройств, которые могут быть открыты одновременно.
+После завершения рисования необходимо вызвать функцию-член [релеаседк](#releasedc) , чтобы освободить контекст отображения. Невозможность освободить контекст отображения сильно повлияет на оформление, запрошенное приложениями из-за ограничений на количество контекстов устройств, которые могут быть открыты одновременно.
 
-## <a name="cwndgetwindowinfo"></a><a name="getwindowinfo"></a>CWnd::GetWindowInfo
+## <a name="cwndgetwindowinfo"></a><a name="getwindowinfo"></a>CWnd:: Жетвиндовинфо
 
-Извлекает информацию о окне.
+Извлекает сведения о окне.
 
 ```
 BOOL GetWindowInfo(PWINDOWINFO pwi) const;
@@ -5006,16 +5006,16 @@ BOOL GetWindowInfo(PWINDOWINFO pwi) const;
 
 ### <a name="parameters"></a>Параметры
 
-*Pwi*<br/>
-Указатель на структуру [WINDOWINFO.](/windows/win32/api/winuser/ns-winuser-windowinfo)
+*пви*<br/>
+Указатель на структуру [виндовинфо](/windows/win32/api/winuser/ns-winuser-windowinfo) .
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция члена эмулирует функциональность функции [GetWindowInfo](/windows/win32/api/winuser/nf-winuser-getwindowinfo), как описано в Windows SDK.
+Эта функция члена эмулирует функциональность функции [жетвиндовинфо](/windows/win32/api/winuser/nf-winuser-getwindowinfo), как описано в Windows SDK.
 
-## <a name="cwndgetwindowlesschildcount"></a><a name="getwindowlesschildcount"></a>CWnd::GetWindowlessChildCount
+## <a name="cwndgetwindowlesschildcount"></a><a name="getwindowlesschildcount"></a>CWnd:: Жетвиндовлессчилдкаунт
 
-Извлекает количество связанных окон без окон.
+Возвращает количество связанных безоконных дочерних окон.
 
 ```
 long GetWindowlessChildCount();
@@ -5023,9 +5023,9 @@ long GetWindowlessChildCount();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Количество оконных детских окон, `CWnd` связанных с объектом.
+Количество безоконных дочерних окон, связанных с `CWnd` объектом.
 
-## <a name="cwndgetwindowplacement"></a><a name="getwindowplacement"></a>CWnd::GetWindowPlacement
+## <a name="cwndgetwindowplacement"></a><a name="getwindowplacement"></a>CWnd:: Жетвиндовплацемент
 
 Получает состояние отображения, а также обычное (восстановленное), свернутое и развернутое состояния окна.
 
@@ -5035,8 +5035,8 @@ BOOL GetWindowPlacement(WINDOWPLACEMENT* lpwndpl) const;
 
 ### <a name="parameters"></a>Параметры
 
-*lpwndpl*<br/>
-Указывает на `WINDOWPLACEMENT` структуру, которая получает информацию о состоянии и положении шоу.
+*лпвндпл*<br/>
+Указывает на `WINDOWPLACEMENT` структуру, которая получает сведения о состоянии и позиции.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -5044,11 +5044,11 @@ BOOL GetWindowPlacement(WINDOWPLACEMENT* lpwndpl) const;
 
 ### <a name="remarks"></a>Remarks
 
-Член `flags` структуры [WINDOWPLACEMENT,](/windows/win32/api/winuser/ns-winuser-windowplacement) извлеченный этой функцией, всегда 0. Если `CWnd` максимизируется, `showCmd` `WINDOWPLACEMENT` член является SW_SHOWMAXIMIZED. Если окно сведено к минимуму, это SW_SHOWMINIMIZED. Это SW_SHOWNORMAL иначе.
+`flags`Элемент структуры [виндовплацемент](/windows/win32/api/winuser/ns-winuser-windowplacement) , полученной этой функцией, всегда имеет значение 0. Если `CWnd` развернут, `showCmd` член `WINDOWPLACEMENT` SW_SHOWMAXIMIZED. Если окно является сведенным, это SW_SHOWMINIMIZED. В противном случае это SW_SHOWNORMAL.
 
-## <a name="cwndgetwindowrect"></a><a name="getwindowrect"></a>CWnd::GetWindowRect
+## <a name="cwndgetwindowrect"></a><a name="getwindowrect"></a>CWnd:: Жетвиндоврект
 
-Копирует размеры ограничивающего прямоугольника `CWnd` объекта к структуре, на которую указывает *lpRect.*
+Копирует размеры ограничивающего прямоугольника `CWnd` объекта в структуру, на которую указывает *лпрект*.
 
 ```cpp
 void GetWindowRect(LPRECT lpRect) const;
@@ -5056,16 +5056,16 @@ void GetWindowRect(LPRECT lpRect) const;
 
 ### <a name="parameters"></a>Параметры
 
-*lpRect*<br/>
-Указывает на `CRect` объект или [структуру RECT,](/windows/win32/api/windef/ns-windef-rect) которая получит координаты экрана в верхнем левом и нижнем правом углах.
+*лпрект*<br/>
+Указывает на `CRect` объект или [структуру Rect](/windows/win32/api/windef/ns-windef-rect) , которая будет принимать экранные координаты верхнего левого и правого нижнего угла.
 
 ### <a name="remarks"></a>Remarks
 
-Размеры приведены в координатах экрана относительно верхнего левого угла экрана. Включены размеры баров заголовка, границы и прокрутки, если они присутствуют.
+Размеры задаются в экранных координатах относительно левого верхнего угла экрана отображения. Включаются размеры заголовка, границы и полос прокрутки, если они есть.
 
-## <a name="cwndgetwindowrgn"></a><a name="getwindowrgn"></a>CWnd::GetWindowRgn
+## <a name="cwndgetwindowrgn"></a><a name="getwindowrgn"></a>CWnd:: Жетвиндовргн
 
-Вызовите эту функцию участника, чтобы получить область окна окна.
+Вызовите эту функцию-член, чтобы получить область окна.
 
 ```
 int GetWindowRgn(HRGN hRgn)const;
@@ -5073,32 +5073,32 @@ int GetWindowRgn(HRGN hRgn)const;
 
 ### <a name="parameters"></a>Параметры
 
-*hRgn*<br/>
-Ручка к оконной области.
+*хргн*<br/>
+Маркер области окна.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение возврата определяет тип региона, получаемого функцией. Может иметь одно из следующих значений.
+Возвращаемое значение указывает тип области, которую получает функция. Может иметь одно из следующих значений.
 
-- НУЛРЕГИОН Регион пуст.
+- НУЛЛРЕГИОН. регион пуст.
 
-- SIMPLEREGION Регион представляет собой единый прямоугольник.
+- СИМПЛЕРЕГИОН. регион является одним прямоугольником.
 
-- COMPLEXREGION Регион является более чем одним прямоугольником.
+- КОМПЛЕКСРЕГИОН. регион является более чем одним прямоугольником.
 
-- ERROR Произошла ошибка; регион не пострадал.
+- Произошла ошибка; область не затрагивается.
 
 ### <a name="remarks"></a>Remarks
 
-Область окна определяет область в окне, где операционная система разрешает рисование. Операционная система не отображает какую-либо часть окна, которая находится за пределами области окна.
+Область окна определяет область внутри окна, в которой операционная система разрешает рисование. Операционная система не отображает ни одной части окна, которая находится за пределами области окна.
 
-Координаты области окна относительно верхнего левого угла окна, а не клиентской области окна.
+Координаты области окна окна задаются относительно левого верхнего угла окна, а не клиентской области окна.
 
-Чтобы установить область окна, позвоните [CWnd::SetWindowRgn](#setwindowrgn).
+Чтобы задать область окна окна, вызовите [CWnd:: сетвиндовргн](#setwindowrgn).
 
-## <a name="cwndgetwindowtext"></a><a name="getwindowtext"></a>CWnd::GetWindowText
+## <a name="cwndgetwindowtext"></a><a name="getwindowtext"></a>CWnd:: Жетвиндовтекст
 
-Копирует `CWnd` название заголовка (если оно имеет одно) в буфер, на который указывает *lpszStringBuf* или в строку назначения *rString.*
+Копирует `CWnd` заголовок заголовка (если он имеется) в буфер, на который указывает *лпсзстрингбуф* , или в строку назначения, которая является *RSTR*.
 
 ```
 int GetWindowText(
@@ -5111,30 +5111,30 @@ void GetWindowText(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszStringBuf*<br/>
-Указывает на буфер, который должен получить скопированную строку заголовка окна.
+*лпсзстрингбуф*<br/>
+Указывает на буфер, который получает скопированную строку заголовка окна.
 
-*nMaxCount*<br/>
-Определяет максимальное количество символов, которые будут скопированы в буфер, включая прекращение нулевого символа. Если строка длиннее числа символов, указанных в *nMaxCount,* она усечена.
+*нмакскаунт*<br/>
+Указывает максимальное число символов, копируемых в буфер, включая завершающий нуль. Если строка длиннее числа символов, указанных в *нмакскаунт*, она усекается.
 
-*rString*<br/>
-Объект [CString,](../../atl-mfc-shared/reference/cstringt-class.md) который должен получить скопированную строку заголовка окна.
+*rStr*<br/>
+Объект [CString](../../atl-mfc-shared/reference/cstringt-class.md) , который получает скопированную строку заголовка окна.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Определяет длину, в символах, скопированных строк, не включая прекращение нулевой характер. Это 0, `CWnd` если нет подписи или если подпись пуста.
+Задает длину копируемой строки в символах, не включая завершающий символ null. Он равен 0, если не `CWnd` имеет заголовка или если заголовок пуст.
 
 ### <a name="remarks"></a>Remarks
 
-Если `CWnd` объект является элементом `GetWindowText` управления, функция элемента копирует текст в элементе управления вместо копирования подписи.
+Если `CWnd` объект является элементом управления, то `GetWindowText` функция-член копирует текст внутри элемента управления вместо копирования заголовка.
 
-Эта функция члена [WM_GETTEXT](/windows/win32/winmsg/wm-gettext) приводит к отправке `CWnd` WM_GETTEXT сообщения объекту.
+Эта функция члена вызывает отправку сообщения [WM_GETTEXT](/windows/win32/winmsg/wm-gettext) в `CWnd` объект.
 
 ### <a name="example"></a>Пример
 
-  Смотрите пример [CWnd::SetWindowText](#setwindowtext).
+  См. пример для [CWnd:: SetWindowText](#setwindowtext).
 
-## <a name="cwndgetwindowtextlength"></a><a name="getwindowtextlength"></a>CWnd::GetWindowTextДлин
+## <a name="cwndgetwindowtextlength"></a><a name="getwindowtextlength"></a>CWnd:: Жетвиндовтекстленгс
 
 Возвращает длину `CWnd` заголовка заголовка объекта.
 
@@ -5144,19 +5144,19 @@ int GetWindowTextLength() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Определяет длину текста в символах, не включая какой-либо символ с нулевым прекращением. Значение 0, если такого текста не существует.
+Задает длину текста в символах, не включая завершающий символ null. Если такого текста не существует, значение равно 0.
 
 ### <a name="remarks"></a>Remarks
 
-Если `CWnd` это элемент `GetWindowTextLength` управления, функция элемента возвращает длину текста в элемент управления, а не на подпись.
+Если `CWnd` является элементом управления, `GetWindowTextLength` функция-член возвращает длину текста внутри элемента управления, а не заголовка.
 
-Эта функция члена [WM_GETTEXTLENGTH](/windows/win32/winmsg/wm-gettextlength) приводит к отправке `CWnd` WM_GETTEXTLENGTH сообщения объекту.
+Эта функция члена вызывает отправку сообщения [WM_GETTEXTLENGTH](/windows/win32/winmsg/wm-gettextlength) в `CWnd` объект.
 
 ### <a name="example"></a>Пример
 
-  Смотрите пример [CWnd::SetWindowText](#setwindowtext).
+  См. пример для [CWnd:: SetWindowText](#setwindowtext).
 
-## <a name="cwndhidecaret"></a><a name="hidecaret"></a>CWnd::HideCaret
+## <a name="cwndhidecaret"></a><a name="hidecaret"></a>CWnd:: Хидекарет
 
 Скрывает курсор, удалив его из отображаемой области.
 
@@ -5166,13 +5166,13 @@ void HideCaret();
 
 ### <a name="remarks"></a>Remarks
 
-Несмотря на то, что карет больше не виден, он может быть отображен снова с помощью функции участника [ShowCaret.](#showcaret) Скрытие карета не разрушает его текущую форму.
+Хотя курсор больше не отображается, его можно снова отобразить с помощью функции-члена [шовкарет](#showcaret) . При скрытии курсора текущая фигура не уничтожается.
 
-Скрытие является кумулятивным. Если `HideCaret` он был вызван пять раз `ShowCaret` подряд, функция участника должна быть вызвана пять раз, прежде чем будет показана помощь.
+Скрытие является накопительным. Если `HideCaret` в строке вызывалось пять раз, `ShowCaret` функция-член должна вызываться пять раз, прежде чем будет отображаться курсор.
 
-## <a name="cwndhilitemenuitem"></a><a name="hilitemenuitem"></a>CWnd::HiliteMenuItem
+## <a name="cwndhilitemenuitem"></a><a name="hilitemenuitem"></a>CWnd:: Хилитеменуитем
 
-Изюминка или удаление изюминки из верхнего уровня (меню-бар) пункт меню.
+Выделение или удаление выделения из пункта меню верхнего уровня (панели меню).
 
 ```
 BOOL HiliteMenuItem(
@@ -5183,34 +5183,34 @@ BOOL HiliteMenuItem(
 
 ### <a name="parameters"></a>Параметры
 
-*pMenu*<br/>
-Определяет меню верхнего уровня, содержащее элемент, который должен быть выделен.
+*пмену*<br/>
+Определяет меню верхнего уровня, содержащее элемент для выделения.
 
-*nIDHiliteItem*<br/>
-Определяет элемент меню, который будет выделен, в зависимости от значения параметра *nHilite.*
+*нидхилитеитем*<br/>
+Указывает пункт меню, который должен быть выделен в зависимости от значения параметра *нхилите* .
 
-*nHilite*<br/>
-Определяется, выделяется ли элемент меню или изюминка удаляется. Это может быть сочетание MF_HILITE или MF_UNHILITE с MF_BYCOMMAND или MF_BYPOSITION. Значения могут быть объединены с помощью bitwise или оператора. Данные величины имеют следующие значения:
+*нхилите*<br/>
+Указывает, выделен ли пункт меню или удаляется выделение. Это может быть сочетание MF_HILITE или MF_UNHILITE с MF_BYCOMMAND или MF_BYPOSITION. Значения можно комбинировать с помощью побитового оператора или. Данные величины имеют следующие значения:
 
-- MF_BYCOMMAND интерпретирует *nIDHiliteItem* как идентификатор меню-элемента (интерпретация по умолчанию).
+- MF_BYCOMMAND интерпретирует *нидхилитеитем* как идентификатор элемента меню (интерпретация по умолчанию).
 
-- MF_BYPOSITION интерпретирует *nIDHiliteItem* как нулевую компенсацию элемента меню.
+- MF_BYPOSITION интерпретирует *нидхилитеитем* как смещение элемента меню, начинающееся с нуля.
 
-- MF_HILITE Подчеркивает элемент. Если это значение не приведено, изюминка удаляется из элемента.
+- MF_HILITE выделяет элемент. Если это значение не задано, выделение удаляется из элемента.
 
-- MF_UNHILITE удаляет изюминку из элемента.
+- MF_UNHILITE удаляет выделение из элемента.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Уточняется, был ли выделен элемент меню. Nonzero, если элемент был выделен; в противном случае 0.
+Указывает, выделен ли пункт меню. Ненулевое значение, если элемент был выделен; в противном случае — 0.
 
 ### <a name="remarks"></a>Remarks
 
-Флаги MF_HILITE и MF_UNHILITE могут использоваться только с этой функцией участника; они не могут быть использованы с функцией [CMenu::ModifyMenu.](../../mfc/reference/cmenu-class.md#modifymenu)
+Флаги MF_HILITE и MF_UNHILITE можно использовать только с этой функцией члена. они не могут использоваться с функцией члена [кмену:: модифимену](../../mfc/reference/cmenu-class.md#modifymenu) .
 
-## <a name="cwndhtmlhelp"></a><a name="htmlhelp"></a>CWnd::HtmlHelp
+## <a name="cwndhtmlhelp"></a><a name="htmlhelp"></a>CWnd:: HtmlHelp
 
-Вызовите эту функцию участника, чтобы вызвать приложение HTMLHelp.
+Вызовите эту функцию члена, чтобы вызвать приложение HTMLHelp.
 
 ```
 virtual void HtmlHelp(
@@ -5220,17 +5220,17 @@ virtual void HtmlHelp(
 
 ### <a name="parameters"></a>Параметры
 
-*dwData*<br/>
-Определяет дополнительные данные. Используемое значение зависит от значения параметра *nCmd.*
+*двдата*<br/>
+Указывает дополнительные данные. Используемое значение зависит от значения параметра *нкмд* .
 
-*nCmd*<br/>
-Задает тип запрошенной справки. Список возможных значений и то, как они влияют на параметр *dwData,* см. *uCommand*
+*нкмд*<br/>
+Задает тип запрошенной справки. Список возможных значений и их влияние на параметр *двдата* см. в описании параметра *укомманд* , как описано в справочнике по API справки HTML в Windows SDK.
 
 ### <a name="remarks"></a>Remarks
 
-Смотрите [CWinApp::HtmlHelp](../../mfc/reference/cwinapp-class.md#htmlhelp) для получения дополнительной информации.
+Дополнительные сведения см. в разделе [CWinApp:: HtmlHelp](../../mfc/reference/cwinapp-class.md#htmlhelp) .
 
-## <a name="cwndinitdynamiclayout"></a><a name="initdynamiclayout"></a>CWnd::InitDynamicLayout
+## <a name="cwndinitdynamiclayout"></a><a name="initdynamiclayout"></a>CWnd:: Инитдинамиклайаут
 
 Вызывается платформой для инициализации динамического макета окна.
 
@@ -5242,9 +5242,9 @@ void InitDynamicLayout();
 
 Не вызывайте этот метод напрямую.
 
-## <a name="cwndinvalidate"></a><a name="invalidate"></a>CWnd::Недействительно
+## <a name="cwndinvalidate"></a><a name="invalidate"></a>CWnd:: недействительность
 
-Недействительная вся `CWnd`область клиента .
+Делает недействительным всю клиентскую область `CWnd` .
 
 ```cpp
 void Invalidate(BOOL bErase = TRUE);
@@ -5252,24 +5252,24 @@ void Invalidate(BOOL bErase = TRUE);
 
 ### <a name="parameters"></a>Параметры
 
-*bErase*<br/>
-Определяется, следует ли стирать фон в области обновления.
+*берасе*<br/>
+Указывает, следует ли стирать фон в области обновления.
 
 ### <a name="remarks"></a>Remarks
 
-Область клиента помечается для покраски, когда происходит следующее [WM_PAINT](#onpaint) сообщение. Область также может быть проверена до WM_PAINT сообщения, полученного функцией [члена ValidateRect](#validaterect) или [ValidateRgn.](#validatergn)
+Клиентская область помечается для рисования при появлении следующего [WM_PAINT](#onpaint) сообщения. Кроме того, область можно проверить до сообщения WM_PAINT, поступает от функции-члена [валидатерект](#validaterect) или [валидатергн](#validatergn) .
 
-Параметр *bErase* определяет, следует ли стирать фон в области обновления при обработке области обновления. Если *bErase* является правдой, фон стирается при вызове функции участника [BeginPaint;](#beginpaint) если *bErase* является FALSE, фон остается неизменным. Если *bErase* является правдой для любой части региона обновления, фон во всем регионе, а не только в данной части, стирается.
+Параметр *берасе* указывает, следует ли удалять фон в области обновления при обработке области обновления. Если *берасе* имеет значение true, фон удаляется при вызове функции-члена [бегинпаинт](#beginpaint) ; Если *берасе* имеет значение false, фон остается неизменным. Если *берасе* имеет значение true для любой части области обновления, то фон во всем регионе, а не только в заданной части, удаляется.
 
-Windows отправляет [WM_PAINT](#onpaint) сообщение всякий раз, когда область `CWnd` обновления не пуста и нет других сообщений в очереди приложения для этого окна.
+Windows отправляет сообщение [WM_PAINT](#onpaint) `CWnd` , когда регион обновления не пуст и в очереди приложения для этого окна нет других сообщений.
 
 ### <a name="example"></a>Пример
 
-  Смотрите пример [Для CWnd::UpdateWindow](#updatewindow).
+  См. пример для [CWnd:: упдатевиндов](#updatewindow).
 
-## <a name="cwndinvalidaterect"></a><a name="invalidaterect"></a>CWnd::НедействительноеRect
+## <a name="cwndinvalidaterect"></a><a name="invalidaterect"></a>CWnd:: Инвалидатерект
 
-Недействительным область клиента в данном прямоугольнике, добавив, что `CWnd` прямоугольник в области обновления.
+Делает недействительным клиентскую область в пределах данного прямоугольника, добавляя этот прямоугольник в `CWnd` область обновления.
 
 ```cpp
 void InvalidateRect(
@@ -5279,23 +5279,23 @@ void InvalidateRect(
 
 ### <a name="parameters"></a>Параметры
 
-*lpRect*<br/>
-Указывает на `CRect` объект или [структуру RECT,](/windows/win32/api/windef/ns-windef-rect) содержащую прямоугольник (в координатах клиента), который должен быть добавлен в область обновления. Если *lpRect* является NULL, вся клиентская область добавляется в регион.
+*лпрект*<br/>
+Указывает на `CRect` объект или [структуру Rect](/windows/win32/api/windef/ns-windef-rect) , содержащую прямоугольник (в клиентских координатах), добавляемый в область обновления. Если *лпрект* имеет значение null, в регион добавляется вся клиентская область.
 
-*bErase*<br/>
-Определяется, следует ли стирать фон в области обновления.
+*берасе*<br/>
+Указывает, следует ли стирать фон в области обновления.
 
 ### <a name="remarks"></a>Remarks
 
-Недействительный прямоугольник, наряду со всеми другими областями в области обновления, помечается для покраски при отправке следующего [WM_PAINT](#onpaint) сообщения. Недействительные области накапливаются в области обновления до тех пор, пока область не будет обработана при следующем WM_PAINT вызова или до тех пор, пока область не будет проверена функцией [участника ValidateRect](#validaterect) или [ValidateRgn.](#validatergn)
+Недействительный прямоугольник, а также все остальные области в области обновления помечаются для рисования при отправке следующего [WM_PAINT](#onpaint) сообщения. Недействительные области накапливаются в области обновления до тех пор, пока регион не будет обработан, когда происходит следующий вызов WM_PAINT или пока регион не будет проверен функцией-членом [валидатерект](#validaterect) или [валидатергн](#validatergn) .
 
-Параметр *bErase* определяет, следует ли стирать фон в области обновления при обработке области обновления. Если *bErase* является правдой, фон стирается при вызове функции участника [BeginPaint;](#beginpaint) если *bErase* является FALSE, фон остается неизменным. Если *bErase* является правдой для любой части региона обновления, фон во всем регионе стирается, а не только в данной части.
+Параметр *берасе* указывает, следует ли удалять фон в области обновления при обработке области обновления. Если *берасе* имеет значение true, фон удаляется при вызове функции-члена [бегинпаинт](#beginpaint) ; Если *берасе* имеет значение false, фон остается неизменным. Если *берасе* имеет значение true для любой части области обновления, фон во всем регионе удаляется, а не только в данной части.
 
-Windows отправляет [WM_PAINT](#onpaint) сообщение всякий раз, когда область `CWnd` обновления не пуста и нет других сообщений в очереди приложения для этого окна.
+Windows отправляет сообщение [WM_PAINT](#onpaint) `CWnd` , когда регион обновления не пуст и в очереди приложения для этого окна нет других сообщений.
 
-## <a name="cwndinvalidatergn"></a><a name="invalidatergn"></a>CWnd::Недействительно
+## <a name="cwndinvalidatergn"></a><a name="invalidatergn"></a>CWnd:: Инвалидатергн
 
-Недействительная область клиента в данном регионе, добавляя `CWnd`ее в текущий регион обновления.
+Делает недействительным клиентскую область в заданном регионе, добавляя ее в текущую область обновления `CWnd` .
 
 ```cpp
 void InvalidateRgn(
@@ -5305,25 +5305,25 @@ void InvalidateRgn(
 
 ### <a name="parameters"></a>Параметры
 
-*pRgn*<br/>
-Указатель на объект [CRgn,](../../mfc/reference/crgn-class.md) который идентифицирует область для добавления в область обновления. Предполагается, что в регионе есть координаты клиентов. Если этот параметр NULL, вся область клиента добавляется в область обновления.
+*пргн*<br/>
+Указатель на объект [кргн](../../mfc/reference/crgn-class.md) , определяющий область, добавляемую в область обновления. Предполагается, что для региона заданы клиентские координаты. Если этот параметр имеет значение NULL, в регион обновления добавляется вся клиентская область.
 
-*bErase*<br/>
-Определяется, следует ли стирать фон в области обновления.
+*берасе*<br/>
+Указывает, следует ли стирать фон в области обновления.
 
 ### <a name="remarks"></a>Remarks
 
-Недействительная область, наряду со всеми другими областями в области обновления, помечена для покраски при следующем отправке [сообщения WM_PAINT.](#onpaint) Недействительные области накапливаются в области обновления до тех пор, пока область не будет обработана при следующем отправке сообщения WM_PAINT или до тех пор, пока область не будет проверена функцией [участника ValidateRect](#validaterect) или [ValidateRgn.](#validatergn)
+Недействительная область, а также все остальные области в области обновления помечаются для рисования при следующем отправке сообщения [WM_PAINT](#onpaint) . Недействительные области накапливаются в области обновления до тех пор, пока регион не будет обработан при следующей отправке WM_PAINT сообщения или до тех пор, пока регион не будет проверен функцией-членом [валидатерект](#validaterect) или [валидатергн](#validatergn) .
 
-Параметр *bErase* определяет, следует ли стирать фон в области обновления при обработке области обновления. Если *bErase* является правдой, фон стирается при вызове функции участника [BeginPaint;](#beginpaint) если *bErase* является FALSE, фон остается неизменным. Если *bErase* является правдой для любой части региона обновления, фон во всем регионе, а не только в данной части, стирается.
+Параметр *берасе* указывает, следует ли удалять фон в области обновления при обработке области обновления. Если *берасе* имеет значение true, фон удаляется при вызове функции-члена [бегинпаинт](#beginpaint) ; Если *берасе* имеет значение false, фон остается неизменным. Если *берасе* имеет значение true для любой части области обновления, то фон во всем регионе, а не только в заданной части, удаляется.
 
-Windows отправляет [WM_PAINT](#onpaint) сообщение всякий раз, когда область `CWnd` обновления не пуста и нет других сообщений в очереди приложения для этого окна.
+Windows отправляет сообщение [WM_PAINT](#onpaint) `CWnd` , когда регион обновления не пуст и в очереди приложения для этого окна нет других сообщений.
 
-Данный регион должен быть ранее создан одной из функций региона.
+Заданный регион должен быть ранее создан одной из функций Region.
 
-## <a name="cwndinvokehelper"></a><a name="invokehelper"></a>CWnd::InvokeHelper
+## <a name="cwndinvokehelper"></a><a name="invokehelper"></a>CWnd:: InvokeHelper
 
-Вызов ими функции участника, чтобы вызвать метод управления ActiveX или свойство, указанное *dwDispID,* в контексте, указанном *wFlags.*
+Вызовите эту функцию члена, чтобы вызвать метод или свойство элемента управления ActiveX, заданное параметром *двдиспид*, в контексте, заданном параметром *вфлагс*.
 
 ```cpp
 void AFX_CDECL InvokeHelper(
@@ -5337,38 +5337,38 @@ void AFX_CDECL InvokeHelper(
 
 ### <a name="parameters"></a>Параметры
 
-*dwDispID*<br/>
+*двдиспид*<br/>
 Задает вызываемый метод или свойство.
 
-*wFlags*<br/>
-Флаги, описывающие контекст `IDispatch::Invoke`вызова.
+*вфлагс*<br/>
+Флаги, описывающие контекст вызова `IDispatch::Invoke` .
 
-*vtRet*<br/>
+*втрет*<br/>
 Указывает тип возвращаемого значения. Возможные значения см. в подразделе "Примечания" раздела [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
 
-*pvRet*<br/>
-Адрес переменной, которая получит стоимость имущества или значение возврата. Он должен соответствовать типу, указанному *vtRet.*
+*пврет*<br/>
+Адрес переменной, которая будет принимать значение свойства или возвращаемое значение. Он должен соответствовать типу, заданному параметром *втрет*.
 
-*pbParamInfo*<br/>
-Указатель на нулевую строку байтов с указанием типов параметров, следующих *pbParamInfo.* Для возможных значений, см. `COleDispatchDriver::InvokeHelper`
+*пбпараминфо*<br/>
+Указатель на строку байтов с завершающим нулем, указывающую типы параметров, следующие *пбпараминфо*. Возможные значения см. в разделе "Примечания" для `COleDispatchDriver::InvokeHelper` .
 
 *...*<br/>
-Переменный список параметров, типов, указанных в *pbParamInfo*.
+Список переменных параметров типов, указанных в *пбпараминфо*.
 
 ### <a name="remarks"></a>Remarks
 
-Параметр *pbParamInfo* определяет типы параметров, передаваемых методу или свойству. Переменный список аргументов представлен в объявлении синтаксиса как *...* .
+Параметр *пбпараминфо* задает типы параметров, передаваемых методу или свойству. Переменный список аргументов представлен в объявлении синтаксиса как *...* .
 
-Эта функция преобразует параметры в значения VARIANTARG, а `IDispatch::Invoke` затем вызывает метод на элементе управления ActiveX. Если вызов `IDispatch::Invoke` завершается сбоем, эта функция создает исключение. Если sCODE (код статуса), `IDispatch::Invoke` возвращенный DISP_E_EXCEPTION, эта функция бросает объект [COleException,](../../mfc/reference/coleexception-class.md) в противном случае он бросает [COleDispatchException.](../../mfc/reference/coledispatchexception-class.md)
+Эта функция преобразует параметры в значения VARIANTARG, а затем вызывает `IDispatch::Invoke` метод для элемента управления ActiveX. Если вызов `IDispatch::Invoke` завершается сбоем, эта функция создает исключение. Если SCODE (код состояния), возвращенный функцией, `IDispatch::Invoke` имеет значение DISP_E_EXCEPTION, эта функция создает объект [COleException](../../mfc/reference/coleexception-class.md) , в противном случае вызывает исключение [COleDispatchException](../../mfc/reference/coledispatchexception-class.md).
 
 > [!NOTE]
-> Эта функция должна вызываться `CWnd` только на объекте, который представляет элемент управления ActiveX.
+> Эта функция должна вызываться только для `CWnd` объекта, представляющего элемент управления ActiveX.
 
-Для получения дополнительной информации об использовании этой функции [ActiveX Control Containers: Programming ActiveX Controls in an ActiveX Control Container](../../mfc/programming-activex-controls-in-a-activex-control-container.md)участника с помощью контейнеров ActiveX Control, см.
+Дополнительные сведения об использовании этой функции – члена с контейнерами элементов управления ActiveX см. в статье [контейнеры элементов управления ActiveX: Программирование элементов управления ActiveX в контейнере элементов управления ActiveX](../../mfc/programming-activex-controls-in-a-activex-control-container.md).
 
-## <a name="cwndischild"></a><a name="ischild"></a>CWnd::IsChild
+## <a name="cwndischild"></a><a name="ischild"></a>CWnd:: дочерний
 
-Указывает, является ли окно, указанное *pWnd,* `CWnd`окном ребенка или другим прямым потомком.
+Указывает, является ли окно, заданное параметром *приводится* , дочерним окном или другим прямым потомком `CWnd` .
 
 ```
 BOOL IsChild(const CWnd* pWnd) const;
@@ -5376,18 +5376,18 @@ BOOL IsChild(const CWnd* pWnd) const;
 
 ### <a name="parameters"></a>Параметры
 
-*pWnd*<br/>
-Идентифицирует окно для тестирования.
+*Приводится*<br/>
+Определяет тестируемое окно.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Определяет результат функции. Значение ненулевое, если окно, идентифицированное *pWnd,* является окном ребенка; `CWnd` в противном случае 0.
+Указывает результат функции. Значение не равно нулю, если окно, идентифицируемое *приводится* , является дочерним окном `CWnd` ; в противном случае — 0.
 
 ### <a name="remarks"></a>Remarks
 
-Окно ребенка является прямым `CWnd` потомком, если `CWnd` объект находится в цепочке родительских окон, которая ведет из исходного всплывающее окно в окно ребенка.
+Дочернее окно является прямым потомком, `CWnd` Если `CWnd` объект находится в цепочке родительских окон, ведущих от исходного всплывающего окна к дочернему окну.
 
-## <a name="cwndisd2dsupportenabled"></a><a name="isd2dsupportenabled"></a>CWnd::IsD2DSupportEnabled
+## <a name="cwndisd2dsupportenabled"></a><a name="isd2dsupportenabled"></a>CWnd:: IsD2DSupportEnabled
 
 Определяет, включена ли поддержка D2D.
 
@@ -5397,11 +5397,11 @@ BOOL IsD2DSupportEnabled();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-TRUE, если функция включена; в противном случае FALSE.
+Значение TRUE, если функция включена; в противном случае — FALSE.
 
-## <a name="cwndisdialogmessage"></a><a name="isdialogmessage"></a>CWnd::IsDialogMessage
+## <a name="cwndisdialogmessage"></a><a name="isdialogmessage"></a>CWnd:: Исдиалогмессаже
 
-Вызовите эту функцию участника, чтобы определить, предназначено ли данное сообщение для бесрежимного диалогового окна; если это так, эта функция обрабатывает сообщение.
+Вызовите эту функцию-член, чтобы определить, предназначено ли данное сообщение для немодального диалогового окна. Если это так, эта функция обрабатывает сообщение.
 
 ```
 BOOL IsDialogMessage(LPMSG lpMsg);
@@ -5409,24 +5409,24 @@ BOOL IsDialogMessage(LPMSG lpMsg);
 
 ### <a name="parameters"></a>Параметры
 
-*lpMsg*<br/>
-Указывает на структуру [MSG,](/windows/win32/api/winuser/ns-winuser-msg) содержащую проверенное сообщение.
+*лпмсг*<br/>
+Указывает [на структуру сообщения](/windows/win32/api/winuser/ns-winuser-msg) , содержащую проверяемое сообщение.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указывается, обработала ли функция участника данное сообщение. Это ненулевой, если сообщение было обработано; в противном случае 0. Если возврат расшатывлен 0, позвоните в функцию члена [CWnd::PReTranslateMessage](#pretranslatemessage) базового класса для обработки сообщения. В переопределение функции `CWnd::PreTranslateMessage` члена код выглядит следующим образом:
+Указывает, обрабатывало ли данное сообщение функция члена. Если сообщение было обработано, оно не равно нулю. в противном случае — 0. Если возвращается значение 0, вызовите функцию-член [CWnd::P ретранслатемессаже](#pretranslatemessage) базового класса, чтобы обработать сообщение. В переопределении `CWnd::PreTranslateMessage` функции члена код выглядит следующим образом:
 
 [!code-cpp[NVC_MFCWindowing#100](../../mfc/reference/codesnippet/cpp/cwnd-class_40.cpp)]
 
 ### <a name="remarks"></a>Remarks
 
-Когда `IsDialogMessage` функция обрабатывает сообщение, она проверяет сообщения клавиатуры и преобразует их в команды выбора для соответствующего диалогового окна. Например, ключ TAB выбирает следующий элемент управления или группу элементов управления, а ключ DOWN ARROW выбирает следующий элемент управления в группе.
+Когда `IsDialogMessage` функция обрабатывает сообщение, она проверяет наличие сообщений клавиатуры и преобразует их в команды выбора для соответствующего диалогового окна. Например, клавиша TAB выбирает следующий элемент управления или группу элементов управления, а клавиша со стрелкой вниз выбирает следующий элемент управления в группе.
 
-Вы не должны передавать `IsDialogMessage` сообщение, обрабатываемые функциями [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) или [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) Windows, поскольку оно уже обработано.
+Не следует передавать сообщение, обработанное `IsDialogMessage` функциями Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) или [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) , так как оно уже обработано.
 
-## <a name="cwndisdlgbuttonchecked"></a><a name="isdlgbuttonchecked"></a>CWnd:IsDlgButtonChecked
+## <a name="cwndisdlgbuttonchecked"></a><a name="isdlgbuttonchecked"></a>CWnd:: Исдлгбуттончеккед
 
-Определяет, имеет ли контрольное управление кнопку рядом с ним контрольный знак.
+Определяет, установлен ли рядом с элементом управления "Кнопка" галочку.
 
 ```
 UINT IsDlgButtonChecked(int nIDButton) const;
@@ -5434,18 +5434,18 @@ UINT IsDlgButtonChecked(int nIDButton) const;
 
 ### <a name="parameters"></a>Параметры
 
-*nIDButton*<br/>
-Определяет идентификатор самого разного соответствия управления кнопками.
+*нидбуттон*<br/>
+Задает целочисленный идентификатор элемента управления "Кнопка".
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Nonzero, если данный элемент управления проверен, и 0, если он не проверен. Проверить можно только радиокнопки и флажки. Для трехсостоянияки значения возврата может быть 2, если кнопка неопределенны. Эта функция участника возвращает 0 для кнопки.
+Ненулевое значение, если данный элемент управления установлен, и 0, если он не установлен. Можно проверять только переключатели и флажки. Для кнопок с тремя состояниями возвращаемое значение может быть равно 2, если кнопка является неопределенной. Эта функция-член возвращает 0 для кнопки.
 
 ### <a name="remarks"></a>Remarks
 
-Если кнопка является элементом управления тремя состояниями, функция элемента определяет, затемнена она, проверена или нет.
+Если кнопка является элементом управления с тремя состояниями, функция-член определяет, является ли она недоступной, установленной или ни одной.
 
-## <a name="cwndisdynamiclayoutenabled"></a><a name="isdynamiclayoutenabled"></a>CWnd::IsDynamicLayout
+## <a name="cwndisdynamiclayoutenabled"></a><a name="isdynamiclayoutenabled"></a>CWnd:: Исдинамиклайаутенаблед
 
 Определяет, активен ли для данного окна динамический макет. Если динамический макет активен, положение и размеры дочерних окон могут меняться при изменении пользователем размера родительского окна.
 
@@ -5459,9 +5459,9 @@ TRUE — динамический макет активен; в противно
 
 ### <a name="remarks"></a>Remarks
 
-## <a name="cwndisiconic"></a><a name="isiconic"></a>CWnd::IsIconic
+## <a name="cwndisiconic"></a><a name="isiconic"></a>CWnd:: a Icon
 
-Уточняется, является `CWnd` ли сведена к минимуму (иконическая).
+Указывает `CWnd` , является ли элемент сведенным (значком).
 
 ```
 BOOL IsIconic() const;
@@ -5469,13 +5469,13 @@ BOOL IsIconic() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Nonzero, `CWnd` если сведен о минимум; в противном случае 0.
+Ненулевое `CWnd` значение, если является минимальным; в противном случае 0.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#101](../../mfc/reference/codesnippet/cpp/cwnd-class_41.cpp)]
 
-## <a name="cwndistouchwindow"></a><a name="istouchwindow"></a>CWnd::IsTouchWindow
+## <a name="cwndistouchwindow"></a><a name="istouchwindow"></a>CWnd:: Истаучвиндов
 
 Указывает, поддерживает ли объект `CWnd` сенсорный ввод.
 
@@ -5485,13 +5485,13 @@ BOOL IsTouchWindow() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-TRUE, `CWnd` если имеет поддержку касания; в противном случае FALSE.
+Значение TRUE `CWnd` , если имеет поддержку касания; в противном случае — значение false.
 
 ### <a name="remarks"></a>Remarks
 
-## <a name="cwndiswindowenabled"></a><a name="iswindowenabled"></a>CWnd::IsWindowEnabled
+## <a name="cwndiswindowenabled"></a><a name="iswindowenabled"></a>CWnd:: Исвиндовенаблед
 
-Уточняется, включен `CWnd` ли ввод мыши и клавиатуры.
+Указывает `CWnd` , разрешено ли ввод с клавиатуры и мыши.
 
 ```
 BOOL IsWindowEnabled() const;
@@ -5499,13 +5499,13 @@ BOOL IsWindowEnabled() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Nonzero, `CWnd` если включен; в противном случае 0.
+Ненулевое `CWnd` значение, если включено; в противном случае — 0.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#102](../../mfc/reference/codesnippet/cpp/cwnd-class_42.cpp)]
 
-## <a name="cwndiswindowvisible"></a><a name="iswindowvisible"></a>CWnd::IsWindowVisible
+## <a name="cwndiswindowvisible"></a><a name="iswindowvisible"></a>CWnd:: Исвиндоввисибле
 
 Определяет состояние видимости данного окна.
 
@@ -5515,21 +5515,21 @@ BOOL IsWindowVisible() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Nonzero, `CWnd` если он виден (имеет набор бита [WS_VISIBLE](styles-used-by-mfc.md#window-styles) стилю, и родительское окно видно). Поскольку значение возврата отражает состояние бита стиля WS_VISIBLE, значение возврата `CWnd` может быть ненулевым, даже если полностью скрыто другими окнами.
+Ненулевое `CWnd` значение, если является видимым (имеет установленный бит стиля [WS_VISIBLE](styles-used-by-mfc.md#window-styles) , а родительское окно является видимым). Поскольку возвращаемое значение отражает состояние бита стиля WS_VISIBLE, возвращаемое значение может быть ненулевым, даже если `CWnd` оно полностью скрыто другими окнами.
 
 ### <a name="remarks"></a>Remarks
 
-Окно обладает состоянием видимости, указанным WS_VISIBLE стилю бита. Когда этот бит стиля устанавливается с вызовом к функции участника [ShowWindow,](#showwindow) окно отображается и последующий рисунок к окну отображается до тех пор, пока окно имеет набор бита стиля.
+Окно имеет состояние видимости, обозначенное битом стиля WS_VISIBLE. Если этот бит стиля задан с помощью вызова функции-члена [ShowWindow](#showwindow) , окно отображается, а последующее рисование в окне отображается, пока для окна задан бит стиля.
 
-Любой рисунок к окну, в который есть WS_VISIBLE стиль, не будет отображаться, если окно покрыто другими окнами или обрезано родительским окном.
+Любой рисунок в окне, имеющий стиль WS_VISIBLE, не будет отображаться, если окно охватывается другими окнами или обрезается родительским окном.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#103](../../mfc/reference/codesnippet/cpp/cwnd-class_43.cpp)]
 
-## <a name="cwndiszoomed"></a><a name="iszoomed"></a>CWnd:: Исоомед
+## <a name="cwndiszoomed"></a><a name="iszoomed"></a>CWnd:: с масштабом
 
-Определяет, `CWnd` был ли максимизирован.
+Определяет `CWnd` , было ли развернуто.
 
 ```
 BOOL IsZoomed() const;
@@ -5537,11 +5537,11 @@ BOOL IsZoomed() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Nonzero, `CWnd` если максимизируется; в противном случае 0.
+Ненулевое `CWnd` значение, если разворачивается; в противном случае — 0.
 
-## <a name="cwndkilltimer"></a><a name="killtimer"></a>CWnd:KillTimer
+## <a name="cwndkilltimer"></a><a name="killtimer"></a>CWnd:: Киллтимер
 
-Убивает событие таймер, идентифицированное *nIDEvent* `SetTimer`от предыдущего вызова.
+Ликвидирует событие таймера, идентифицируемое *нидевент* , из предыдущего вызова `SetTimer` .
 
 ```
 BOOL KillTimer(UINT_PTR nIDEvent);
@@ -5549,22 +5549,22 @@ BOOL KillTimer(UINT_PTR nIDEvent);
 
 ### <a name="parameters"></a>Параметры
 
-*nIDEvent*<br/>
-Значение события таймер передается [SetTimer](#settimer).
+*нидевент*<br/>
+Значение события таймера, переданного в [сеттимер](#settimer).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Определяет результат функции. Значение ненулево, если событие было убито. Это 0, `KillTimer` если функция участника не смогла найти указанное событие таймер.
+Указывает результат функции. Если событие было уничтожено, значение не равно нулю. Значение 0, если `KillTimer` функции-члену не удается найти указанное событие таймера.
 
 ### <a name="remarks"></a>Remarks
 
-До [WM_TIMER сообщения,](#ontimer) связанные с таймером, не удаляются из очереди сообщений.
+Ожидающие [WM_TIMER](#ontimer) сообщения, связанные с таймером, не удаляются из очереди сообщений.
 
 ### <a name="example"></a>Пример
 
-  Смотрите пример [для CWnd::SetTimer](#settimer).
+  См. пример для [CWnd:: сеттимер](#settimer).
 
-## <a name="cwndloaddynamiclayoutresource"></a><a name="loaddynamiclayoutresource"></a>CWnd::LoadDynamicLayoutResource
+## <a name="cwndloaddynamiclayoutresource"></a><a name="loaddynamiclayoutresource"></a>CWnd:: Лоаддинамиклайаутресаурце
 
 Вызывается платформой для загрузки из файла ресурсов сведений о динамическом макете.
 
@@ -5574,7 +5574,7 @@ BOOL LoadDynamicLayoutResource(LPCTSTR lpszResourceName);
 
 ### <a name="parameters"></a>Параметры
 
-*lpszResourceName*<br/>
+*лпсзресаурценаме*<br/>
 Имя ресурса, содержащего необходимые сведения о динамическом макете для этого окна.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -5585,9 +5585,9 @@ BOOL LoadDynamicLayoutResource(LPCTSTR lpszResourceName);
 
 Не вызывайте этот метод напрямую.
 
-## <a name="cwndlockwindowupdate"></a><a name="lockwindowupdate"></a>CWnd::LockWindowUpdate
+## <a name="cwndlockwindowupdate"></a><a name="lockwindowupdate"></a>CWnd:: Локквиндовупдате
 
-Отводит рисунок в данном окне.
+Отключает рисование в данном окне.
 
 ```
 BOOL LockWindowUpdate();
@@ -5595,21 +5595,21 @@ BOOL LockWindowUpdate();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ненулевое значение, если функция выполнена успешно. Это 0, если происходит сбой или если `LockWindowUpdate` функция была использована для блокировки другого окна.
+Ненулевое значение, если функция выполнена успешно. Он равен 0, если происходит сбой или если `LockWindowUpdate` функция использовалась для блокировки другого окна.
 
 ### <a name="remarks"></a>Remarks
 
-Заблокированное окно не может быть перемещено. Заодине можно запереть только одно окно. Чтобы разблокировать `LockWindowUpdate`окно, заблокированное с помощью, позвоните [UnlockWindowUpdate.](#unlockwindowupdate)
+Невозможно переместить заблокированное окно. Одновременно может быть заблокировано только одно окно. Чтобы разблокировать окно, заблокированное `LockWindowUpdate` , вызовите [унлокквиндовупдате](#unlockwindowupdate).
 
-Если приложение с заблокированным окном (или любыми заблокированными окнами ребенка) вызывает [функцию GetDC,](/windows/win32/api/winuser/nf-winuser-getdc) [GetDCEx](/windows/win32/api/winuser/nf-winuser-getdcex) или [BeginPaint](/windows/win32/api/winuser/nf-winuser-beginpaint) Windows, вызванная функция возвращает контекст устройства, видимая область которого пуста. Это произойдет до тех пор, пока `UnlockWindowUpdate` приложение не разблокирует окно, позвонив функции участника.
+Если приложение с заблокированным окном (или любыми закрытыми дочерними окнами) вызывает функцию Windows [GetDC,](/windows/win32/api/winuser/nf-winuser-getdc) [жетдцекс](/windows/win32/api/winuser/nf-winuser-getdcex) или [бегинпаинт](/windows/win32/api/winuser/nf-winuser-beginpaint) , вызываемая функция возвращает контекст устройства, видимая область которого пуста. Это произойдет до тех пор, пока приложение не разблокирует окно, вызвав `UnlockWindowUpdate` функцию члена.
 
-В то время как обновления окон заблокированы, система отслеживает прямоугольник границ любых операций рисования в контекстах устройства, связанных с заблокированным окном. При повторном включении чертежа этот прямоугольник ограниченного является недействительным в заблокированном окне и его детских окнах, чтобы заставить возможное [сообщение WM_PAINT](/windows/win32/gdi/wm-paint) обновить экран. Если рисунок не произошел, пока обновление окна было заблокировано, ни одна область не аннулируется.
+Несмотря на то, что обновления окон заблокированы, система отслеживает ограничивающий прямоугольник любых операций рисования в контекстах устройств, связанных с заблокированным окном. При повторном включении рисования этот ограничивающий прямоугольник становится недействительным в заблокированном окне, а его дочерние окна — принудительно вынуждает в конечном [WM_PAINT](/windows/win32/gdi/wm-paint) сообщение для обновления экрана. Если во время блокировки обновлений окна не происходило никакой прорисовки, то область не становится недействительной.
 
-Функция `LockWindowUpdate` члена не делает данное окно невидимым и не очищает [WS_VISIBLE](styles-used-by-mfc.md#window-styles) бит стиля.
+`LockWindowUpdate`Функция члена не делает данное окно невидимым и не очищает бит стиля [WS_VISIBLE](styles-used-by-mfc.md#window-styles) .
 
-## <a name="cwndm_hwnd"></a><a name="m_hwnd"></a>CWnd::m_hWnd
+## <a name="cwndm_hwnd"></a><a name="m_hwnd"></a>CWnd:: m_hWnd
 
-Ручка окна Windows прилагается `CWnd`к этому.
+Маркер окна Windows, присоединенного к этому объекту `CWnd` .
 
 ```
 HWND m_hWnd;
@@ -5617,9 +5617,9 @@ HWND m_hWnd;
 
 ### <a name="remarks"></a>Remarks
 
-Член `m_hWnd` данных является общедоступной переменной типа HWND.
+`m_hWnd`Элемент данных является открытой переменной типа HWND.
 
-## <a name="cwndmapwindowpoints"></a><a name="mapwindowpoints"></a>CWnd:MapWindowPoints
+## <a name="cwndmapwindowpoints"></a><a name="mapwindowpoints"></a>CWnd:: Мапвиндовпоинтс
 
 Преобразует набор точек из координатного пространства объекта `CWnd` в координатное пространство другого окна.
 
@@ -5636,21 +5636,21 @@ void MapWindowPoints(
 
 ### <a name="parameters"></a>Параметры
 
-*pwndTo*<br/>
-Определяет окно, в какие точки преобразуется. Если этот параметр NULL, точки преобразуются в координаты экрана.
+*пвндто*<br/>
+Определяет окно, в котором преобразуются точки. Если этот параметр имеет значение NULL, точки преобразуются в экранные координаты.
 
-*lpRect*<br/>
-Определяет прямоугольник, точки которого должны быть преобразованы. Первая версия этой функции доступна только для Windows 3.1 и позже.
+*лпрект*<br/>
+Задает прямоугольник, точки которого должны быть преобразованы. Первая версия этой функции доступна только для Windows 3,1 и более поздних версий.
 
-*lpPoint*<br/>
-Указатель на массив [структуры POINT,](/windows/win32/api/windef/ns-windef-point) содержащий набор точек, которые должны быть преобразованы.
+*лппоинт*<br/>
+Указатель на массив [структуры Point](/windows/win32/api/windef/ns-windef-point) , содержащий набор точек для преобразования.
 
-*Ncount*<br/>
-Определяет количество `POINT` структур в массиве, на которые указывает *lpPoint.*
+*нкаунт*<br/>
+Указывает количество `POINT` структур в массиве, на которое указывает *лппоинт*.
 
-## <a name="cwndmessagebox"></a><a name="messagebox"></a>CWnd::MessageBox
+## <a name="cwndmessagebox"></a><a name="messagebox"></a>CWnd:: MessageBox
 
-Создает и отображает окно, содержащее сообщение и подпись, поставляемое приложением, а также сочетание предопределенных иконок и кнопок, описанных в списке [стилей сообщения-Box.](../../mfc/reference/styles-used-by-mfc.md#message-box-styles)
+Создает и отображает окно, содержащее предоставляемое приложением сообщение и заголовок, а также сочетание стандартных значков и кнопок, описанных в списке [стили окна сообщений](../../mfc/reference/styles-used-by-mfc.md#message-box-styles) .
 
 ```
 int MessageBox(
@@ -5662,38 +5662,38 @@ int MessageBox(
 ### <a name="parameters"></a>Параметры
 
 *lpszText*<br/>
-Очки объекту `CString` или строке с нулевым завершением, содержащей отображаемые сообщения.
+Указывает на `CString` объект или строку, завершающуюся нулем, содержащую сообщение, которое должно быть отображено.
 
-*lpszCaption*<br/>
-Очки объекту `CString` или строке с нулевым завершением, которые будут использоваться для подписи к яслях. Если *lpszCaption* является NULL, используется подпись по умолчанию "Ошибка".
+*лпсзкаптион*<br/>
+Указывает на `CString` объект или строку, завершающуюся нулем, используемую для подписи в окне сообщения. Если *лпсзкаптион* имеет значение null, используется заголовок по умолчанию "Error".
 
 *nType*<br/>
-Определяет содержимое и поведение ящика сообщений.
+Задает содержимое и поведение окна сообщения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Этот метод использует функцию [MessageBox,](/windows/win32/api/winuser/nf-winuser-messagebox) как это определено в SDK Windows. Этот метод возвращает результат вызова этой функции.
+Этот метод использует функцию [MessageBox](/windows/win32/api/winuser/nf-winuser-messagebox) , определенную в Windows SDK. Этот метод возвращает результат вызова этой функции.
 
 ### <a name="remarks"></a>Remarks
 
-Используйте глобальную функцию [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox) вместо этой функции члена для реализации ящика сообщений в приложении.
+Для реализации окна сообщения в приложении используйте глобальную функцию [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox) вместо этой функции-члена.
 
-Ниже приведены различные значки системы, которые могут быть использованы в поле сообщения:
+Ниже показаны различные системные значки, которые можно использовать в окне сообщения.
 
 |||
 |-|-|
-|![Стоп &#40;и значок&#41;](../../mfc/reference/media/vc364f1.gif "Стоп &#40;и значок&#41;")|MB_ICONHAND, MB_ICONSTOP и MB_ICONERROR|
-|![Справка &#40;&#41; значок](../../mfc/reference/media/vc364f2.gif "Справка &#40;&#41; значок")|MB_ICONQUESTION|
-|![Важный значок &#40;&#33;&#41; ](../../mfc/reference/media/vc364f3.gif "Важный значок &#40;&#33;&#41; ")|MB_ICONEXCLAMATION и MB_ICONWARNING|
-|![Значок информации &#40;я&#41;](../../mfc/reference/media/vc364f4.gif "Значок информации &#40;я&#41;")|MB_ICONASTERISK и MB_ICONINFORMATION|
+|![Значок завершения &#40;x&#41;](../../mfc/reference/media/vc364f1.gif "Значок завершения &#40;x&#41;")|MB_ICONHAND, MB_ICONSTOP и MB_ICONERROR|
+|![&#40; справки? значок &#41;](../../mfc/reference/media/vc364f2.gif "&#40; справки? значок &#41;")|MB_ICONQUESTION|
+|![Значок важного &#40;&#33;&#41; ](../../mfc/reference/media/vc364f3.gif "Значок важного &#40;&#33;&#41; ")|MB_ICONEXCLAMATION и MB_ICONWARNING|
+|![&#40;&#41; значок сведений](../../mfc/reference/media/vc364f4.gif "&#40;&#41; значок сведений")|MB_ICONASTERISK и MB_ICONINFORMATION|
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#104](../../mfc/reference/codesnippet/cpp/cwnd-class_44.cpp)]
 
-## <a name="cwndmodifystyle"></a><a name="modifystyle"></a>CWnd::ModifyStyle
+## <a name="cwndmodifystyle"></a><a name="modifystyle"></a>CWnd:: Модифистиле
 
-Вызовите эту функцию участника, чтобы изменить стиль окна.
+Вызовите эту функцию-член, чтобы изменить стиль окна.
 
 ```
 BOOL ModifyStyle(
@@ -5704,45 +5704,45 @@ BOOL ModifyStyle(
 
 ### <a name="parameters"></a>Параметры
 
-*dwRemove*<br/>
-Определяет стили окон, которые должны быть удалены во время модификации стиля.
+*двремове*<br/>
+Задает стили окна, которые будут удалены во время изменения стиля.
 
-*dwAdd*<br/>
-Определяет стили окон, которые будут добавлены во время модификации стиля.
+*двадд*<br/>
+Задает стили окна, добавляемые во время изменения стиля.
 
-*nФлаги*<br/>
-Флаги, которые должны быть переданы `SetWindowPos` [SetWindowPos](#setwindowpos), или ноль, если не следует вызываться. По умолчанию используется значение 0. Список предустановленных флагов можно осмотреть в разделе «Замечания».
+*нфлагс*<br/>
+Флаги, передаваемые в [SetWindowPos](#setwindowpos), или нуль, если `SetWindowPos` не следует вызывать. По умолчанию используется значение 0. Список предустановленных флагов см. в разделе "Примечания".
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Nonzero, если стиль был успешно изменен; в противном случае, 0.
+Ненулевое значение, если стиль изменен успешно. в противном случае — значение 0.
 
 ### <a name="remarks"></a>Remarks
 
-Стили, которые должны быть добавлены или удалены, могут быть объединены с помощью bitwise ИЛИ (&#124;) оператора. Ознакомьтесь с темами [«Стиль оконов»](/windows/win32/winmsg/window-styles) и [«CreateWindow»](/windows/win32/api/winuser/nf-winuser-createwindoww) в SDK Windows, чтобы получить информацию о доступных стилях окон.
+Добавляемые или удаляемые стили можно объединять с помощью побитового оператора OR (&#124;). Сведения о доступных стилях окна см. в разделе [стили окна](/windows/win32/winmsg/window-styles) "темы" и [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) в Windows SDK.
 
-Если *nFlags* незеро, `ModifyStyle` вызов функции Windows API [SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos) и перерисовывает окно, объединяя *nFlags* со следующими четырьмя предустановленными флагами:
+Если *нфлагс* имеет ненулевое значение, `ModifyStyle` вызывает функцию Windows API [SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos) и перерисовывает окно, объединяя *нфлагс* со следующими четырьмя предустановленными флагами:
 
-- SWP_NOSIZE сохраняет текущий размер.
+- SWP_NOSIZE оставляет текущий размер.
 
-- SWP_NOMOVE сохраняет текущее положение.
+- SWP_NOMOVE оставляет текущее расположение.
 
-- SWP_NOZORDER сохраняет текущий заказ.
+- SWP_NOZORDER оставляет текущий Z порядок.
 
 - SWP_NOACTIVATE не активирует окно.
 
-Чтобы изменить расширенные стили окна, [см.](#modifystyleex)
+Сведения об изменении расширенных стилей окна см. в разделе [модифистиликс](#modifystyleex).
 
 > [!NOTE]
-> Для некоторых стилей в некоторых элементах управления (например, ES_READONLY стиле управления элементами дейтинга) `ModifyStyle` может не быть должным образом изменяемым стилем, поскольку элемент управления может потребоваться для выполнения специальной внутренней обработки. В этих случаях будет доступно соответствующее сообщение об изменении стиля (EM_SETREADONLY в упомянутом примере).
+> Для некоторых стилей в некоторых элементах управления (например, стиль ES_READONLY в элементе управления "поле ввода") `ModifyStyle` может неправильно изменить стиль, так как элементу управления может потребоваться выполнить специальную внутреннюю обработку. В таких случаях будет доступен соответствующее сообщение для изменения стиля (EM_SETREADONLY в приведенном выше примере).
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#105](../../mfc/reference/codesnippet/cpp/cwnd-class_45.cpp)]
 
-## <a name="cwndmodifystyleex"></a><a name="modifystyleex"></a>CWnd::ModifyStyleEx
+## <a name="cwndmodifystyleex"></a><a name="modifystyleex"></a>CWnd:: Модифистиликс
 
-Вызовите эту функцию участника, чтобы изменить расширенный стиль окна.
+Вызовите эту функцию-член для изменения расширенного стиля окна.
 
 ```
 BOOL ModifyStyleEx(
@@ -5753,42 +5753,42 @@ BOOL ModifyStyleEx(
 
 ### <a name="parameters"></a>Параметры
 
-*dwRemove*<br/>
-Определяет расширенные стили, которые должны быть удалены во время модификации стиля.
+*двремове*<br/>
+Задает расширенные стили, которые будут удалены во время изменения стиля.
 
-*dwAdd*<br/>
-Определяет расширенные стили, которые будут добавлены во время модификации стиля.
+*двадд*<br/>
+Задает расширенные стили, добавляемые во время изменения стиля.
 
-*nФлаги*<br/>
-Флаги, которые должны быть переданы `SetWindowPos` [SetWindowPos](#setwindowpos), или ноль, если не следует вызываться. По умолчанию используется значение 0. Список предустановленных флагов можно осмотреть в разделе «Замечания».
+*нфлагс*<br/>
+Флаги, передаваемые в [SetWindowPos](#setwindowpos), или нуль, если `SetWindowPos` не следует вызывать. По умолчанию используется значение 0. Список предустановленных флагов см. в разделе "Примечания".
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Nonzero, если стиль был успешно изменен; в противном случае, 0.
+Ненулевое значение, если стиль изменен успешно. в противном случае — значение 0.
 
 ### <a name="remarks"></a>Remarks
 
-Стили, которые должны быть добавлены или удалены, могут быть объединены с помощью bitwise ИЛИ (&#124;) оператора. Смотрите темы [Расширенные стили окна](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) в этой книге и [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) в Windows SDK для получения информации о доступных расширенных стилей
+Добавляемые или удаляемые стили можно объединять с помощью побитового оператора OR (&#124;). Дополнительные сведения о доступных расширенных стилях см. в разделах, посвященных [расширенным стилям окон](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) этой книги и [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) в Windows SDK.
 
-Если *nFlags* незеро, `ModifyStyleEx` вызов функции Windows API [SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos) и перерисовывает окно, объединяя *nFlags* со следующими четырьмя предустановленными флагами:
+Если *нфлагс* имеет ненулевое значение, `ModifyStyleEx` вызывает функцию Windows API [SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos) и перерисовывает окно, объединяя *нфлагс* со следующими четырьмя предустановленными флагами:
 
-- SWP_NOSIZE сохраняет текущий размер.
+- SWP_NOSIZE оставляет текущий размер.
 
-- SWP_NOMOVE сохраняет текущее положение.
+- SWP_NOMOVE оставляет текущее расположение.
 
-- SWP_NOZORDER сохраняет текущий заказ.
+- SWP_NOZORDER оставляет текущий Z порядок.
 
 - SWP_NOACTIVATE не активирует окно.
 
-Чтобы изменить окна с помощью обычных стилей окон, [см.](#modifystyle)
+Сведения об изменении окон с помощью обычных стилей окна см. в разделе [модифистиле](#modifystyle).
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#106](../../mfc/reference/codesnippet/cpp/cwnd-class_46.cpp)]
 
-## <a name="cwndmovewindow"></a><a name="movewindow"></a>CWnd::MoveWindow
+## <a name="cwndmovewindow"></a><a name="movewindow"></a>CWnd:: Мовевиндов
 
-Изменяет положение и размеры.
+Изменяет расположение и размеры.
 
 ```cpp
 void MoveWindow(
@@ -5806,36 +5806,36 @@ void MoveWindow(
 ### <a name="parameters"></a>Параметры
 
 *x*<br/>
-Определяет новое положение левой стороны `CWnd`.
+Задает новое расположение левой стороны `CWnd` .
 
-*Y*<br/>
-Определяет новое положение верхней части `CWnd`.
+*&*<br/>
+Задает новое расположение верхнего края `CWnd` .
 
-*nWidth*<br/>
-Определяет новую ширину `CWnd`.
+*нвидс*<br/>
+Задает новую ширину `CWnd` .
 
-*nВысота*<br/>
-Определяет новую высоту `CWnd`.
+*нхеигхт*<br/>
+Задает новую высоту `CWnd` .
 
 *bRepaint*<br/>
-Определяет, следует `CWnd` ли перекрасить. Если true, `CWnd` получает [WM_PAINT](/windows/win32/gdi/wm-paint) сообщение в своем обработчике сообщений [OnPaint,](#onpaint) как обычно. Если этот параметр FALSE, не перекрашивается какой-либо вид происходит. Это относится к клиентской области, к области неклиента (включая заголовок и прокрутки баров), а также к любой части родительского окна, обнаруженного `CWnd`в результате перемещения.'. Когда этот параметр FALSE, приложение должно явно аннулировать `CWnd` или перерисовать любые части и родительское окно, которые должны быть перерисованы.
+Указывает, следует ли `CWnd` перерисовать. Если значение — TRUE, `CWnd` в обработчике сообщений [onpain](#onpaint) получается [WM_PAINT](/windows/win32/gdi/wm-paint) сообщение, как обычно. Если этот параметр имеет значение FALSE, перерисовка какого-либо вида не происходит. Это относится к клиентской области, неклиентской области (включая заголовок и полосы прокрутки), а также к любой части родительского окна, обнаруженной в результате `CWnd` перемещения. Если этот параметр имеет значение FALSE, приложение должно явно сделать недействительным или перерисовывать любые части `CWnd` и родительское окно, которые необходимо перерисовать.
 
-*lpRect*<br/>
-Объект [CRect](../../atl-mfc-shared/reference/crect-class.md) или [структура RECT,](/windows/win32/api/windef/ns-windef-rect) которая определяет новый размер и положение.
+*лпрект*<br/>
+Объект [крект](../../atl-mfc-shared/reference/crect-class.md) или [Структура Rect](/windows/win32/api/windef/ns-windef-rect) , указывающая новый размер и расположение.
 
 ### <a name="remarks"></a>Remarks
 
-Для объекта верхнего уровня `CWnd` параметры *x* и *y* относительно верхнего левого угла экрана. Для детского `CWnd` объекта они относятся к верхнему левому углу клиентской зоны родительского окна.
+Для объекта верхнего уровня `CWnd` Параметры *x* и *y* задаются относительно левого верхнего угла экрана. Для дочернего `CWnd` объекта они задаются относительно левого верхнего угла клиентской области родительского окна.
 
-Функция `MoveWindow` отправляет [сообщение WM_GETMINMAXINFO.](#ongetminmaxinfo) Обработка этого `CWnd` сообщения дает возможность изменить значения по умолчанию для самых больших и маленьких возможных окон. Если параметры функции `MoveWindow` члена превышают эти значения, значения могут быть заменены минимальными или максимальными значениями в WM_GETMINMAXINFO обработчике.
+`MoveWindow`Функция отправляет [WM_GETMINMAXINFO](#ongetminmaxinfo) сообщение. Обработка этого сообщения дает `CWnd` возможность изменить значения по умолчанию для самых крупных и наименьших возможных окон. Если параметры `MoveWindow` функции члена превышают эти значения, их значения могут быть заменены минимальными или максимальными значениями в обработчике WM_GETMINMAXINFO.
 
 ### <a name="example"></a>Пример
 
-  Смотрите пример [Для CWnd::ClientToScreen](#clienttoscreen).
+  См. пример для [CWnd:: клиенттоскрин](#clienttoscreen).
 
-## <a name="cwndnotifywinevent"></a><a name="notifywinevent"></a>CWnd::NotifyWinEvent
+## <a name="cwndnotifywinevent"></a><a name="notifywinevent"></a>CWnd:: Нотифивиневент
 
-Сообщает системе, что произошло предопределенное событие. Если какие-либо клиентские приложения зарегистрировали функцию крючка для события, система вызывает функцию крючка клиента.
+Сообщает системе, что произошло предопределенное событие. Если все клиентские приложения зарегистрировали функцию-обработчик для события, система вызывает функцию-ловушку клиента.
 
 ```cpp
 void NotifyWinEvent(
@@ -5847,21 +5847,21 @@ void NotifyWinEvent(
 ### <a name="parameters"></a>Параметры
 
 *event*<br/>
-Определяет событие, которое произошло. Это значение должно быть одним из [констант события.](/windows/win32/WinAuto/event-constants)
+Указывает произошедшее событие. Это значение должно быть одной из [констант событий](/windows/win32/WinAuto/event-constants).
 
-*idObjectType*<br/>
-Определяет вид объекта, генерируемого событием. Это значение является одним из предопределенных [идентификаторов объектов](/windows/win32/WinAuto/object-identifiers) или пользовательским значением идентификатора объекта.
+*идобжекттипе*<br/>
+Определяет тип объекта, создавшего событие. Это значение представляет собой один из стандартных [идентификаторов объекта](/windows/win32/WinAuto/object-identifiers) или значение идентификатора пользовательского объекта.
 
-*idObject*<br/>
-Определяет, было ли событие создано объектом или элементом ребенка объекта. Если это значение является CHILDID_SELF, событие было создано самим объектом. Если нет, то это значение является идентификатором элемента, генерируемого событием.
+*идобжект*<br/>
+Определяет, было ли событие создано объектом или дочерним элементом объекта. Если это значение равно CHILDID_SELF, событие было создано самим объектом. Если нет, это значение является дочерним ИДЕНТИФИКАТОРом элемента, создавшего событие.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция члена эмулирует функциональность функции [NotifyWinEvent](/windows/win32/api/winuser/nf-winuser-notifywinevent), как описано в SDK Windows.
+Эта функция члена эмулирует функциональность функции [нотифивиневент](/windows/win32/api/winuser/nf-winuser-notifywinevent), как описано в Windows SDK.
 
-## <a name="cwndonactivate"></a><a name="onactivate"></a>CWnd::Onactivate
+## <a name="cwndonactivate"></a><a name="onactivate"></a>CWnd:: OnActivate
 
-Платформа вызывает эту функцию `CWnd` члена при активации или деактивации объекта.
+Платформа вызывает эту функцию-член, когда `CWnd` объект активируется или деактивируется.
 
 ```
 afx_msg void OnActivate(
@@ -5872,33 +5872,33 @@ afx_msg void OnActivate(
 
 ### <a name="parameters"></a>Параметры
 
-*nState*<br/>
-Определяет, `CWnd` активируется или деактивируется ли оно. Может иметь одно из следующих значений.
+*Nсведения*<br/>
+Указывает, `CWnd` активируется ли или деактивируется. Может иметь одно из следующих значений.
 
 - WA_INACTIVE окно деактивируется.
 
-- WA_ACTIVE Окно активируется с помощью какого-то метода, кроме щелчка мыши (например, с помощью интерфейса клавиатуры для выбора окна).
+- WA_ACTIVE окно активируется с помощью какого-либо метода, отличного от щелчка мышью (например, с помощью интерфейса клавиатуры для выбора окна).
 
-- WA_CLICKACTIVE Окно активируется щелчком мыши.
+- WA_CLICKACTIVE, что окно активируется щелчком мыши.
 
-*pWndДругие*<br/>
-Указатель на `CWnd` активированный или деактивированный. Указатель может быть NULL, и это может быть временным.
+*пвндосер*<br/>
+Указатель на `CWnd` активируемый или Деактивируемый. Указатель может иметь значение NULL и может быть временным.
 
-*bСнейдированный*<br/>
-Определяет минимизированное `CWnd` состояние активированного или деактивированного. Значение TRUE указывает на то, что окно сведено к минимуму.
+*бминимизед*<br/>
+Задает минимальное состояние `CWnd` активируемого или отключенного. Значение TRUE указывает, что окно является сведенным.
 
-Если true, `CWnd` активируется активация; в противном случае деактивирован.
+Если значение равно TRUE, `CWnd` активируется; в противном случае — деактивируется.
 
 ### <a name="remarks"></a>Remarks
 
-Если `CWnd` объект активирован щелчком мыши, он также получит вызов функции участника [OnMouseActivate.](#onmouseactivate)
+Если `CWnd` объект активируется нажатием кнопки мыши, он также получает вызов функции-члена [онмаусеактивате](#onmouseactivate) .
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonactivateapp"></a><a name="onactivateapp"></a>CWnd::OnActivateApp
+## <a name="cwndonactivateapp"></a><a name="onactivateapp"></a>CWnd:: OnActivateApp
 
-Платформа вызывает эту функцию участника ко всем окнам верхнего уровня активированной задачи и для всех окон верхнего уровня деактивации задачи.
+Платформа вызывает эту функцию-член для всех окон верхнего уровня активируемой задачи и для всех окон верхнего уровня, для которых выполняется деактивация задачи.
 
 ```
 afx_msg void OnActivateApp(
@@ -5908,20 +5908,20 @@ afx_msg void OnActivateApp(
 
 ### <a name="parameters"></a>Параметры
 
-*bАктивный*<br/>
-Определяет, `CWnd` активируется или деактивируется ли оно. TRUE означает, `CWnd` что активируется. FALSE означает, что `CWnd` деактивирован.
+*бактиве*<br/>
+Указывает, `CWnd` активируется ли или деактивируется. Значение TRUE означает, что `CWnd` активируется. Значение FALSE означает, что `CWnd` деактивируется.
 
-*dwThreadID*<br/>
-Определяет значение идентификатора потока. Если *bActive* является правдой, *dwThreadID* определяет `CWnd` поток, который владеет деактивированным. Если *bActive* false, *dwThreadID* определяет поток, `CWnd` который владеет активируемым.
+*двсреадид*<br/>
+Указывает значение идентификатора потока. Если *бактиве* имеет значение true, *двсреадид* идентифицирует поток, которому принадлежит `CWnd` Деактивируемый. Если *бактиве* имеет значение false, *двсреадид* идентифицирует поток, которому принадлежит `CWnd` активируемый объект.
 
 ### <a name="remarks"></a>Remarks
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonambientproperty"></a><a name="onambientproperty"></a>CWnd::OnAmbientProperty
+## <a name="cwndonambientproperty"></a><a name="onambientproperty"></a>CWnd:: Онамбиентпроперти
 
-Платформа вызывает эту функцию участника для получения значений свойств окружающего из окна, содержащего элементы управления OLE.
+Платформа вызывает эту функцию-член для получения значений свойств окружения из окна, содержащего элементы управления OLE.
 
 ```
 virtual BOOL OnAmbientProperty(
@@ -5932,26 +5932,26 @@ virtual BOOL OnAmbientProperty(
 
 ### <a name="parameters"></a>Параметры
 
-*pSite*<br/>
-Указатель на место управления, запрашиваемое окружающим свойством.
+*псите*<br/>
+Указатель на сайт элемента управления, который запросил внешнее свойство.
 
-*Dispid*<br/>
-Идентификатор отправки запрашиваемого свойства окружающей среды.
+*DISPID*<br/>
+Идентификатор диспетчеризации запрошенного внешнего свойства.
 
-*pvar*<br/>
-Указатель на выделенную `VARIANT` вызываемую структуру, через которую будет возвращена стоимость свойства окружающего.
+*пвар*<br/>
+Указатель на структуру, выделенную вызывающим объектом `VARIANT` , через которую будет возвращено значение свойства окружения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-TRUE, если эмбиент собственности поддерживается; FALSE, если нет.
+Значение TRUE, если свойство окружения поддерживается; Значение FALSE, если нет.
 
 ### <a name="remarks"></a>Remarks
 
-Переизместите эту функцию, чтобы изменить значения свойств окружающего по умолчанию, возвращенные контейнером управления OLE на элементы управления. Любые запросы на свойства окружающего, не обрабатываемые главной функцией, должны быть направлены в реализацию базового класса.
+Переопределите эту функцию, чтобы изменить значения свойств окружения по умолчанию, возвращаемые контейнером элементов управления OLE, в его элементы управления. Любые запросы внешних свойств, не обрабатываемые переопределяющей функцией, должны перенаправляться в реализацию базового класса.
 
-## <a name="cwndonappcommand"></a><a name="onappcommand"></a>CWnd::OnAppCommand
+## <a name="cwndonappcommand"></a><a name="onappcommand"></a>CWnd:: Онаппкомманд
 
-Платформа вызывает эту функцию элемента, когда пользователь генерирует событие команды приложения. Такое событие происходит, когда пользователь нажимает кнопку команды приложения или вводит ключ команды приложения.
+Платформа вызывает эту функцию члена, когда пользователь создает событие команды приложения. Такое событие возникает, когда пользователь нажимает на кнопку команды приложения или вводит ключ команды приложения.
 
 ```
 afx_msg void OnAppCommand(
@@ -5963,23 +5963,23 @@ afx_msg void OnAppCommand(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|*pWnd*|(в) Указатель на `CWnd` объект, представляющий окно, где пользователь нажал кнопку команды или нажал на ключ команды. Это окно может быть окном ребенка, получая сообщение.|
-|*nCmd*|(в) Указывает команду приложения. Список возможных значений [WM_APPCOMMAND](/windows/win32/inputdev/wm-appcommand)см. *cmd* *lParam*|
-|*nDevice*|(в) Устройство ввода, генерируемое событиева ввода. Список возможных значений [WM_APPCOMMAND](/windows/win32/inputdev/wm-appcommand)см. *uDevice* *lParam*|
-|*nKey*|(в) Отослежено на любые виртуальные клавиши, которые не имеют доступа, например, ключ CTRL или кнопка левой мыши. Список возможных значений смотрите клавиши под разделом *dwKeys* параметра *lParam* [WM_APPCOMMAND.](/windows/win32/inputdev/wm-appcommand) Для получения дополнительной информации см. [About Mouse Input](/windows/win32/inputdev/about-mouse-input)|
+|*Приводится*|окне Указатель на `CWnd` объект, представляющий окно, в котором пользователь щелкнул кнопку или нажал на клавишу команды. Это окно может быть дочерним окном окна, получающего сообщение.|
+|*нкмд*|окне Указывает команду приложения. Список возможных значений см. в командах в разделе *cmd* параметра *lParam* [WM_APPCOMMAND](/windows/win32/inputdev/wm-appcommand).|
+|*ндевице*|окне Устройство ввода, создавшее событие ввода. Список возможных значений см. на устройствах в разделе *удевице* параметра *lParam* [WM_APPCOMMAND](/windows/win32/inputdev/wm-appcommand).|
+|*нкэй*|окне Указывает все виртуальные клавиши, которые не работают, например клавишу CTRL или левую кнопку мыши. Список возможных значений см. в разделе "ключи" раздела *двкэйс* параметра *lParam* в [WM_APPCOMMAND](/windows/win32/inputdev/wm-appcommand). Дополнительные сведения см. в подразделе "Параметры сообщения" статьи [о вводе](/windows/win32/inputdev/about-mouse-input)с помощью мыши.|
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод получает [уведомление WM_APPCOMMAND,](/windows/win32/inputdev/wm-appcommand) которое описано в SDK Windows.
+Этот метод получает уведомление [WM_APPCOMMAND](/windows/win32/inputdev/wm-appcommand) , которое описано в Windows SDK.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonaskcbformatname"></a><a name="onaskcbformatname"></a>CWnd::OnAskCbFormatName
+## <a name="cwndonaskcbformatname"></a><a name="onaskcbformatname"></a>CWnd:: Онасккбформатнаме
 
-Рамочная функция вызывает эту функцию, когда Clipboard содержит ручку данных для формата CF_OWNERDISPLAY (т.е. когда владелец Clipboard будет отображать содержимое Clipboard).
+Платформа вызывает эту функцию-член, когда буфер обмена содержит маркер данных для формата CF_OWNERDISPLAY (т. е. когда владелец буфера обмена будет отображать содержимое буфера обмена).
 
 ```
 afx_msg void OnAskCbFormatName(
@@ -5989,24 +5989,24 @@ afx_msg void OnAskCbFormatName(
 
 ### <a name="parameters"></a>Параметры
 
-*nMaxCount*<br/>
-Определяет максимальное количество байтов для копирования.
+*нмакскаунт*<br/>
+Указывает максимальное число копируемых байтов.
 
-*lpszString*<br/>
-Указывает на буфер, где хранится копия имени формата.
+*лпсзстринг*<br/>
+Указывает на буфер, где будет храниться копия имени формата.
 
 ### <a name="remarks"></a>Remarks
 
-Владелец Clipboard должен узнать название своего формата.
+Владелец буфера обмена должен предоставить имя для своего формата.
 
-Переопределить эту функцию участника и скопировать имя формата CF_OWNERDISPLAY в указанный буфер, не превышая максимальное количество указанных байтов.
+Переопределите эту функцию члена и скопируйте имя формата CF_OWNERDISPLAY в указанный буфер, не превышающий указанное максимальное число байтов.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndoncancelmode"></a><a name="oncancelmode"></a>CWnd::OnCancelMode
+## <a name="cwndoncancelmode"></a><a name="oncancelmode"></a>CWnd:: Онканцелмоде
 
-Платформа вызывает эту функцию `CWnd` участника, чтобы сообщить об отмене любого внутреннего режима.
+Платформа вызывает эту функцию члена, чтобы сообщить о `CWnd` необходимости отмены любого внутреннего режима.
 
 ```
 afx_msg void OnCancelMode();
@@ -6014,13 +6014,13 @@ afx_msg void OnCancelMode();
 
 ### <a name="remarks"></a>Remarks
 
-Если `CWnd` объект имеет фокус, `OnCancelMode` его функция члена вызывается при отображении диалогового окна или окна сообщений. Это дает `CWnd` возможность отменить режимы, такие как захват мыши.
+Если `CWnd` объект имеет фокус, его `OnCancelMode` функция-член вызывается при отображении диалогового окна или поля сообщения. Это дает `CWnd` возможность отменять такие режимы, как захват мыши.
 
-Реализация по умолчанию отвечает, вызывая функцию [ReleaseCapture](/windows/win32/api/winuser/nf-winuser-releasecapture) Windows. Переопределить эту функцию члена в вашем произвданном классе для обработки других режимов.
+Реализация по умолчанию отвечает вызовом функции Windows [релеасекаптуре](/windows/win32/api/winuser/nf-winuser-releasecapture) . Переопределите эту функцию члена в производном классе для работы с другими режимами.
 
-## <a name="cwndoncapturechanged"></a><a name="oncapturechanged"></a>CWnd::OnCaptureИзменен
+## <a name="cwndoncapturechanged"></a><a name="oncapturechanged"></a>CWnd:: Онкаптуречанжед
 
-Платформа вызывает эту функцию участника, чтобы уведомить окно, потерявщее захват мыши.
+Платформа вызывает эту функцию-член, чтобы уведомить окно, которое теряет захват мыши.
 
 ```
 afx_msg void OnCaptureChanged(CWnd* pWnd);
@@ -6028,21 +6028,21 @@ afx_msg void OnCaptureChanged(CWnd* pWnd);
 
 ### <a name="parameters"></a>Параметры
 
-*pWnd*<br/>
-Указатель на окно, чтобы получить захват мыши
+*Приводится*<br/>
+Указатель на окно для получения захвата мыши
 
 ### <a name="remarks"></a>Remarks
 
-Окно получает это сообщение, даже если оно вызывает [сам ReleaseCapture.](/windows/win32/api/winuser/nf-winuser-releasecapture) Приложение не должно пытаться настроить захват мыши в ответ на это сообщение. Когда оно получает это сообщение, окно должно перерисовать себя, если это необходимо, чтобы отразить новое состояние захвата мыши.
+Окно получает это сообщение, даже если оно вызывает [релеасекаптуре](/windows/win32/api/winuser/nf-winuser-releasecapture) . Приложение не должно пытаться установить захват мыши в ответ на это сообщение. При получении этого сообщения окно должно перерисовывать себя при необходимости, чтобы отразить новое состояние захвата мыши.
 
-Ознакомьтесь с Windows SDK для получения информации о функции `ReleaseCapture` Windows.
+Сведения о `ReleaseCapture` функции Windows см. в Windows SDK.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonchangecbchain"></a><a name="onchangecbchain"></a>CWnd::OnChangeCbChain
+## <a name="cwndonchangecbchain"></a><a name="onchangecbchain"></a>CWnd:: Ончанжекбчаин
 
-Платформа вызывает эту функцию участника для каждого окна в цепочке Clipboard-viewer, чтобы уведомить его об удалении окна из цепочки.
+Платформа вызывает эту функцию-член для каждого окна в цепочке средства просмотра буфера обмена, чтобы уведомить о том, что окно удаляется из цепочки.
 
 ```
 afx_msg void OnChangeCbChain(
@@ -6052,20 +6052,20 @@ afx_msg void OnChangeCbChain(
 
 ### <a name="parameters"></a>Параметры
 
-*hWndRemoveRemove*<br/>
-Определяет ручку окна, которая удаляется из цепочки Clipboard-viewer.
+*хвндремове*<br/>
+Задает маркер окна, удаляемый из цепочки средства просмотра буфера обмена.
 
-*hWndAfter*<br/>
-Обращайтесь к ручке окна, которая следует за удаляемым окном из цепочки Clipboard-viewer.
+*хвндафтер*<br/>
+Задает маркер окна, который следует за окном, удаляемым из цепочки средства просмотра буфера обмена.
 
 ### <a name="remarks"></a>Remarks
 
-`CWnd` Каждый объект, `OnChangeCbChain` получивший вызов, должен использовать функцию [SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) Windows для отправки [WM_CHANGECBCHAIN](/windows/win32/dataxchg/wm-changecbchain) сообщения в `SetClipboardViewer`следующее окно в цепочке Clipboard-viewer (ручка, возвращенная). Если *hWndRemove* является следующим окном в цепочке, окно, указанное *hWndAfter* становится следующим окном, и сообщения Clipboard передаются ему.
+Каждый `CWnd` объект, который получает `OnChangeCbChain` вызов, должен использовать функцию Windows [SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) для отправки сообщения [WM_CHANGECBCHAIN](/windows/win32/dataxchg/wm-changecbchain) в следующее окно в цепочке окна просмотра буфера обмена (маркер, возвращаемый `SetClipboardViewer` ). Если *хвндремове* является следующим окном в цепочке, окно, заданное параметром *хвндафтер* , становится следующим окном, и к нему передаются сообщения буфера обмена.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonchangeuistate"></a><a name="onchangeuistate"></a>CWnd::ChangeUIState
+## <a name="cwndonchangeuistate"></a><a name="onchangeuistate"></a>CWnd:: Ончанжеуистате
 
 Вызывается, когда необходимо изменить состояние пользовательского интерфейса.
 
@@ -6077,31 +6077,31 @@ afx_msg void OnChangeUIState(
 
 ### <a name="parameters"></a>Параметры
 
-*nДействия*<br/>
-Определяется, что необходимо принять меры. Может использоваться одно из следующих значений:
+*Nвыходные*<br/>
+Указывает выполняемое действие. Может использоваться одно из следующих значений:
 
-- UIS_CLEAR элемент состояния uI (указанный *nUIElement)* должен быть скрыт.
+- UIS_CLEAR должен быть скрыт элемент состояния пользовательского интерфейса (заданный параметром *нуиелемент*).
 
-- UIS_INITIALIZE элемент состояния uI (указанный *nUIElement)* должен быть изменен в зависимости от последнего события ввода. Для получения дополнительной информации смотрите раздел **Замечания** [WM_CHANGEUISTATE](/windows/win32/menurc/wm-changeuistate).
+- UIS_INITIALIZE Элемент состояния пользовательского интерфейса (заданный параметром *нуиелемент*) должен быть изменен на основе последнего события ввода. Дополнительные сведения см. в подразделе **"Примечания"** раздела [WM_CHANGEUISTATE](/windows/win32/menurc/wm-changeuistate).
 
-- UIS_SET элемент состояния uI (указанный *nUIElement)* должен быть видимым.
+- UIS_SET должен быть виден элемент состояния пользовательского интерфейса (заданный параметром *нуиелемент*).
 
-*nUIElement*<br/>
-Определяет, какие элементы состояния UI затронуты или стиль управления. Может использоваться одно из следующих значений:
+*нуиелемент*<br/>
+Указывает, какие элементы состояния пользовательского интерфейса затрагиваются, или стиль элемента управления. Может использоваться одно из следующих значений:
 
-- UISF_HIDEACCEL ускорители клавиатуры.
+- UISF_HIDEACCEL сочетаний клавиш.
 
-- UISF_HIDEFOCUS индикаторы Фокуса.
+- UISF_HIDEFOCUS индикаторы фокуса.
 
-- UISF_ACTIVE Windows XP: элемент управления должен быть нарисован в стиле, используемом для активного управления.
+- UISF_ACTIVE Windows XP: элемент управления должен быть нарисован в стиле, используемом для активных элементов управления.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция члена имитирует функциональность [сообщения WM_CHANGEUISTATE,](/windows/win32/menurc/wm-changeuistate) как описано в SDK Windows.
+Эта функция члена эмулирует функциональность [WM_CHANGEUISTATE](/windows/win32/menurc/wm-changeuistate) сообщения, как описано в Windows SDK.
 
-## <a name="cwndonchar"></a><a name="onchar"></a>CWnd::OnChar
+## <a name="cwndonchar"></a><a name="onchar"></a>CWnd:: OnChar
 
-Платформа вызывает эту функцию участника, когда нажатие клавиши переводится как несистемный символ.
+Платформа вызывает эту функцию-член, когда нажатие клавиши преобразуется в несистемный символ.
 
 ```
 afx_msg void OnChar(
@@ -6112,39 +6112,39 @@ afx_msg void OnChar(
 
 ### <a name="parameters"></a>Параметры
 
-*Nchar*<br/>
-Содержит значение кода символа ключа.
+*nChar*<br/>
+Содержит значение кода символа для ключа.
 
-*nRepCnt*<br/>
-Содержит количество повторов, количество раз нажатие клавиши повторяется, когда пользователь удерживает ключ.
+*нрепкнт*<br/>
+Содержит число повторов, количество повторов нажатия клавиши, когда пользователь удерживает нажатой клавишу.
 
-*nФлаги*<br/>
-Содержит код сканирования, код перехода ключей, предыдущее состояние ключа и код контекста, как показано в следующем списке:
+*нфлагс*<br/>
+Содержит код сканирования, код перехода на ключ, предыдущее состояние ключа и код контекста, как показано в следующем списке:
 
 |Значение|Значение|
 |-----------|-------------|
-|0-15|Определяет количество повторных повторов. Значение — это количество повторений нажатия клавиши в результате удержания пользователя ключом.|
-|16—23|Определяет код сканирования. Значение зависит от производителя оригинального оборудования (OEM)|
-|24|Уточняется, является ли ключ расширенным ключом, таким как клавиши ALT и CTRL, которые отображаются на улучшенной клавиатуре 101 или 102-ключей. Значение 1, если это расширенный ключ; в противном случае, это 0.|
-|25-28|Используется внутренне Windows.|
-|29|Определяет код контекста. Значение 1, если ключ ALT удерживается при нажатии клавиши; в противном случае значение составляет 0.|
-|30|Определяет предыдущее ключевое состояние. Значение 1, если ключ не работает до отправки сообщения, или 0, если ключ вверх.|
-|31|Определяет состояние перехода. Значение 1, если ключ освобождается, или 0, если ключ нажат.|
+|0—15|Указывает число повторов. Значение — это количество повторений нажатия клавиши в результате нажатия пользователем клавиши.|
+|16—23|Указывает код сканирования. Это значение зависит от изготовителя оборудования (OEM)|
+|24|Указывает, является ли ключ расширенным ключом, таким как правая клавиша ALT и CTRL, отображаемые на расширенной клавиатуре 101 или 102. Значение равно 1, если это расширенный ключ; в противном случае — 0.|
+|25-28|Используется внутри Windows.|
+|29|Указывает код контекста. Значение равно 1, если клавиша ALT удерживается при нажатии клавиши; в противном случае значение равно 0.|
+|30|Указывает предыдущее состояние ключа. Значение равно 1, если ключ не работает до отправки сообщения, или 0, если ключ работает.|
+|31|Задает состояние перехода. Значение равно 1, если ключ освобождается, или 0, если клавиша нажата.|
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция вызывается до функции участника [OnKeyUp](#onkeyup) и после вызова функции участника [OnKeyDown.](#onkeydown) `OnChar`содержит значение клавиши клавиатуры, нажатой или выпущенной.
+Эта функция вызывается перед функцией-членом [онкэйуп](#onkeyup) и после вызова функции-члена [KeyDown](#onkeydown) . `OnChar`содержит значение нажатой или освобожденной клавиши клавиатуры.
 
-Поскольку между нажатием ключей и `OnChar` генерируемыми вызовами не обязательно существует один к одному, информация в *nFlags,* как правило, не полезна для приложений. Информация в *nFlags* применяется только к `OnKeyUp` последнему вызову в функцию участника или функции `OnKeyDown` участника, которая предшествует вызову. `OnChar`
+Поскольку между нажатиями и вызовами ключей не обязательно соответствие "один к одному `OnChar` ", информация в *нфлагс* обычно не полезна для приложений. Сведения в *нфлагс* применяются только к последнему вызову `OnKeyUp` функции члена или к `OnKeyDown` функции члена, предшествующей вызову `OnChar` .
 
-Для клавиатур IBM Enhanced 101- и 102-ключ, расширенные клавиши являются правильными клавишами ALT и правыми клавишами CTRL на основной части клавиатуры; INS, DEL, HOME, END, PAGE UP, PAGE DOWN и клавиши со стрелками в кластерах слева от цифровой клавиатуры; и клавиши слэйс (/) и ENTER в числовой клавиатуре. Некоторые другие клавиатуры могут поддерживать бит расширенного ключа в *nFlags*.
+Для клавиатуры IBM с улучшенными 101-и 102-клавишами расширенными ключами являются правая клавиша ALT и правые клавиши CTRL в основном разделе клавиатуры. клавиши INS, DEL, ДОМАШНяя, КОНЕЧная страница вверх, PAGE DOWN и стрелка в кластерах слева от цифровой клавиатуры; и косая черта (/) и введите клавиши на цифровой клавиатуре. Некоторые другие клавиатуры могут поддерживать бит расширенного ключа в *нфлагс*.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonchartoitem"></a><a name="onchartoitem"></a>CWnd::OnCharToItem
+## <a name="cwndonchartoitem"></a><a name="onchartoitem"></a>CWnd:: Ончартоитем
 
-Вызывается, когда поле списка со [стилем LBS_WANTKEYBOARDINPUT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) отправляет своему владельцу [WM_CHARTOITEM](/windows/win32/Controls/wm-chartoitem) сообщение в ответ на [WM_CHAR](#onchar) сообщение.
+Вызывается, когда поле со списком со стилем [LBS_WANTKEYBOARDINPUT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) отправляет своего владельца [WM_CHARTOITEM](/windows/win32/Controls/wm-chartoitem) сообщение в ответ на сообщение [WM_CHAR](#onchar) .
 
 ```
 afx_msg int OnCharToItem(
@@ -6155,35 +6155,35 @@ afx_msg int OnCharToItem(
 
 ### <a name="parameters"></a>Параметры
 
-*Nchar*<br/>
-Определяет значение ключа, нажатого пользователем.
+*nChar*<br/>
+Задает значение клавиши, нажатой пользователем.
 
-*pListBox*<br/>
-Укажите указатель на поле списка. Это может быть временным.
+*плистбокс*<br/>
+Указывает указатель на поле со списком. Это может быть временным.
 
-*Nindex*<br/>
-Определяет текущее положение caret.
+*ниндекс*<br/>
+Задает текущую точку курсора.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Платформа называет эту функцию участника, чтобы указать действие, выполняемые приложением в ответ на вызов. Значение возврата -2 указывает на то, что приложение обработало все аспекты выбора элемента и не хочет никаких дальнейших действий по окне списка. Значение возврата -1 указывает на то, что поле списка должно выполнять действие по умолчанию в ответ на нажатие клавиши. Значение возврата 0 или больше указывает на нулевой индекс элемента в поле списка и указывает, что поле списка должно выполнять действие по умолчанию для нажатия клавиши на данном элементе.
+Платформа вызывает эту функцию члена, чтобы указать действие, выполняемое приложением в ответ на вызов. Возвращаемое значение, равное-2, указывает, что приложение обработало все аспекты выбора элемента и не требует дальнейших действий по списку. Возвращаемое значение, равное-1, указывает, что окно списка должно выполнять действие по умолчанию в ответ на нажатие клавиши. Возвращаемое значение 0 или больше Указывает отсчитываемый от нуля индекс элемента в списке и указывает, что поле списка должно выполнять действие по умолчанию для данного элемента.
 
 ### <a name="remarks"></a>Remarks
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonchildactivate"></a><a name="onchildactivate"></a>CWnd::OnChildActivate
+## <a name="cwndonchildactivate"></a><a name="onchildactivate"></a>CWnd:: Ончилдактивате
 
-Если `CWnd` объект представляет собой несколько интерфейсов документа `OnChildActivate` (MDI) детское окно, вызывается инфраструктурой, когда пользователь нажимает на заголовок панели окна или когда окно активировано, перемещено или размер.
+Если `CWnd` объект является дочерним окном многодокументного интерфейса (MDI), `OnChildActivate` вызывается платформой, когда пользователь щелкает заголовок окна или когда окно активируется, перемещается или изменяется размер.
 
 ```
 afx_msg void OnChildActivate();
 ```
 
-## <a name="cwndonchildnotify"></a><a name="onchildnotify"></a>CWnd::OnChildNotify
+## <a name="cwndonchildnotify"></a><a name="onchildnotify"></a>CWnd:: Ончилднотифи
 
-Эта функция участника вызывается родительским окном этого окна, когда оно получает сообщение об уведомлении, применивщее к этому окну.
+Эта функция-член вызывается родительским окном этого окна при получении сообщения уведомления, которое применяется к этому окну.
 
 ```
 virtual BOOL OnChildNotify(
@@ -6199,37 +6199,37 @@ virtual BOOL OnChildNotify(
 Номер сообщения Windows, отправленный в родительское окно.
 
 *wParam*<br/>
-*Wparam,* связанный с сообщением.
+Параметр *wParam* , связанный с сообщением.
 
 *lParam*<br/>
-*Lparam,* связанный с сообщением.
+*LParam* , связанный с сообщением.
 
-*pLResult*<br/>
-Указатель на значение, которое должно быть возвращено из процедуры окна родителя. Этот указатель будет NULL, если не ожидается значение возврата.
+*плресулт*<br/>
+Указатель на значение, возвращаемое из процедуры родительского окна. Если возвращаемое значение не ожидается, этот указатель будет иметь значение NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Nonzero, если это окно отвечает за обработку сообщения, отправленного его родителю; в противном случае 0.
+Ненулевое значение, если это окно отвечает за обработку сообщения, отправленного его родителю; в противном случае — 0.
 
 ### <a name="remarks"></a>Remarks
 
-Никогда не вызывайте эту функцию участника напрямую.
+Никогда не вызывайте эту функцию члена напрямую.
 
-Реализация этой функции участника по умолчанию возвращает 0, что означает, что родитель должен обрабатывать сообщение.
+Реализация по умолчанию этой функции члена возвращает 0, что означает, что родительское сообщение должно быть обработано.
 
-Переопределить эту функцию участника, чтобы расширить способ, которым элемент управления реагирует на сообщения уведомлений.
+Переопределите эту функцию-член, чтобы расширить способ реагирования элемента управления на сообщения уведомления.
 
-## <a name="cwndonclipboardupdate"></a><a name="onclipboardupdate"></a>CWnd::OnClipboardUpdate
+## <a name="cwndonclipboardupdate"></a><a name="onclipboardupdate"></a>CWnd:: Онклипбоардупдате
 
-Платформа вызывает эту функцию участника при изменении содержимого буфера обмена.
+Платформа вызывает эту функцию члена, когда содержимое буфера обмена изменилось.
 
 ```
 afx_msg void OnClipboardUpdate();
 ```
 
-## <a name="cwndonclose"></a><a name="onclose"></a>CWnd::Onclose
+## <a name="cwndonclose"></a><a name="onclose"></a>CWnd:: OnClose
 
-Платформа называет эту функцию участника `CWnd` сигналом завершения или завершения приложения.
+Платформа вызывает эту функцию-член как сигнал о том, что `CWnd` приложение или завершает работу.
 
 ```
 afx_msg void OnClose();
@@ -6237,11 +6237,11 @@ afx_msg void OnClose();
 
 ### <a name="remarks"></a>Remarks
 
-Вызовы реализации по `DestroyWindow`умолчанию.
+Реализация по умолчанию вызывает `DestroyWindow` .
 
-## <a name="cwndoncolorizationcolorchanged"></a><a name="oncolorizationcolorchanged"></a>CWnd::OnColorizationColorChanged
+## <a name="cwndoncolorizationcolorchanged"></a><a name="oncolorizationcolorchanged"></a>CWnd:: Онколоризатионколорчанжед
 
-Рамки называют этого участника, когда политика рендеринга для области неклиента изменилась.
+Платформа вызывает этот элемент при изменении политики отрисовки неклиентской области.
 
 ```
 afx_msg void OnColorizationColorChanged(
@@ -6251,21 +6251,21 @@ afx_msg void OnColorizationColorChanged(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|*dwColorizationЦвет*|(в) Определяет новый цвет окрашивания.<br /><br /> Цветовой формат представляет собой гексадецмальный номер формы 0xAARRGGBB, где каждый из четырех компонентов колеблется от 0x00 до 0xFF. Компонент AA является альфа-значение, RR является красный цвет, GG зеленый, и BB синий.|
-|*bOpacity*|(в) ПРАВДА, если новый цвет смешивается с непрозрачностью; FALSE, если это не так.|
+|*двколоризатионколор*|окне Указывает новый цвет раскраски.<br /><br /> Цветовой формат представляет собой шестнадцатеричное число в формате 0xAARRGGBB, где каждый из четырех компонентов находится в диапазоне от 0x00 до 0xFF. Компонент AA — это значение альфа, RR — красный цвет, GG — зеленый, а BB — синий.|
+|*бопаЦити*|окне Значение TRUE, если новый цвет смешивается с непрозрачностью; FALSE, если это не так.|
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод получает [WM_DWMNCRENDERINGCHANGED](/windows/win32/dwm/wm-dwmcolorizationcolorchanged) сообщение муведомления, которое описано в SDK Windows.
+Этот метод получает сообщение уведомления [WM_DWMNCRENDERINGCHANGED](/windows/win32/dwm/wm-dwmcolorizationcolorchanged) , которое описано в Windows SDK.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndoncommand"></a><a name="oncommand"></a>CWnd::OnCommand
+## <a name="cwndoncommand"></a><a name="oncommand"></a>CWnd:: OnCommand
 
-Платформа вызывает эту функцию участника, когда пользователь выбирает элемент из меню, когда элемент управления детьми отправляет сообщение уведомления, или когда нажатие клавиши ускорителя переведено.
+Платформа вызывает эту функцию-член, когда пользователь выбирает элемент из меню, когда дочерний элемент управления отправляет сообщение уведомления или при преобразовании нажатия клавиши быстрого вызова.
 
 ```
 virtual BOOL OnCommand(
@@ -6276,27 +6276,27 @@ virtual BOOL OnCommand(
 ### <a name="parameters"></a>Параметры
 
 *wParam*<br/>
-Слово *wParam* низкого порядка определяет идентификатор команды элемента меню, элемент управления или ускорителя. Слово *wParam* высокого порядка определяет сообщение уведомления, если сообщение получено из элемента управления. Если сообщение от ускорителя, слово высокого порядка 1. Если сообщение из меню, слово высокого заказа расшатано 0.
+Слово *wParam* с низким приоритетом определяет идентификатор команды элемента меню, элемента управления или ускорителя. Слово « *wParam* » высокого порядка задает сообщение уведомления, если оно получено из элемента управления. Если сообщение получено от ускорителя, то его значение в высоком порядке равно 1. Если сообщение находится в меню, то в верхнем порядке слово имеет значение 0.
 
 *lParam*<br/>
-Определяет элемент управления, который отправляет сообщение, если сообщение от элемента управления. В противном случае, *lParam* 0.
+Определяет элемент управления, который отправляет сообщение, если сообщение получено из элемента управления. В противном случае *lParam* имеет значение 0.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Приложение возвращает ненулевой, если оно обрабатывает это сообщение; в противном случае 0.
+Приложение возвращает ненулевое значение, если обрабатывает это сообщение; в противном случае — 0.
 
 ### <a name="remarks"></a>Remarks
 
-`OnCommand`обрабатывает карту сообщений для уведомления управления и ON_COMMAND записей и вызывает соответствующую функцию члена.
+`OnCommand`обрабатывает схему сообщений для управляющих уведомлений и записей ON_COMMAND и вызывает соответствующую функцию члена.
 
-Переопределить эту функцию члена в вашем производном классе для обработки [WM_COMMAND](/windows/win32/menurc/wm-command) сообщения. Переопределение не обрабатывает карту сообщений, `OnCommand` если не будет вызван базовый класс.
+Переопределите эту функцию члена в производном классе, чтобы она обрабатывала сообщение [WM_COMMAND](/windows/win32/menurc/wm-command) . Переопределение не будет обрабатывать схему сообщений, если `OnCommand` не вызывается базовый класс.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndoncompacting"></a><a name="oncompacting"></a>CWnd::OnCompacting
+## <a name="cwndoncompacting"></a><a name="oncompacting"></a>CWnd:: oncompact
 
-Платформа вызывает эту функцию члена для всех окон верхнего уровня, когда Windows обнаруживает, что более 12,5 процента системного времени в течение 30-60-секундного интервала тратится на уплотнение памяти.
+Платформа вызывает эту функцию-член для всех окон верхнего уровня, когда Windows обнаруживает, что в течение 30 – 60-секундного времени в течение интервала, в течение которого более 12,5 процентов системное время тратится на сжатие памяти.
 
 ```
 afx_msg void OnCompacting(UINT nCpuTime);
@@ -6304,21 +6304,21 @@ afx_msg void OnCompacting(UINT nCpuTime);
 
 ### <a name="parameters"></a>Параметры
 
-*nCpuTime*<br/>
-Определяет соотношение времени процессора, затрачиваемого в настоящее время на уплотнение памяти Windows, к времени, затрачиваемому на выполнение других операций. Например, 8000h представляет 50 процентов времени, затрачиваемого на компактирование памяти процессора.
+*нкпутиме*<br/>
+Указывает отношение времени ЦП, которое в настоящее время потратило памятью сжатия Windows, к времени ЦП, затраченному на выполнение других операций. Например, 8000h представляет 50 процента времени ЦП, затраченного на сжатие памяти.
 
 ### <a name="remarks"></a>Remarks
 
-Это означает, что память системы низкая.
+Это означает, что недостаточно памяти системы.
 
-Когда `CWnd` объект получает этот вызов, он должен освободить как можно больше памяти, учитывая текущий уровень активности приложения и общее количество приложений, работающих в Windows. Приложение может вызвать функцию Windows, чтобы определить, сколько приложений работает.
+Когда `CWnd` объект получает этот вызов, он должен освободить максимально возможный объем памяти, принимая во внимание текущий уровень активности приложения и общее число приложений, выполняющихся в Windows. Приложение может вызвать функцию Windows, чтобы определить, сколько приложений выполняется.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndoncompareitem"></a><a name="oncompareitem"></a>CWnd::OnCompareItem
+## <a name="cwndoncompareitem"></a><a name="oncompareitem"></a>CWnd:: Онкомпареитем
 
-Рамочная система называет эту функцию участника, чтобы указать относительное положение нового элемента в комбо-нарисованный владельцем или поле списка.
+Платформа вызывает эту функцию-член, чтобы указать относительное расположение нового элемента в поле со списком или в дочернем элементе, упорядоченном для рисования владельцем.
 
 ```
 afx_msg int OnCompareItem(
@@ -6328,36 +6328,36 @@ afx_msg int OnCompareItem(
 
 ### <a name="parameters"></a>Параметры
 
-*nIDCtl*<br/>
-Идентификатор элемента управления, отправивавого сообщение WM_COMPAREITEM.
+*нидктл*<br/>
+Идентификатор элемента управления, отправившего сообщение WM_COMPAREITEM.
 
-*lpCompareItemStruct*<br/>
-Содержит длинный указатель на структуру данных [COMPAREITEMSTRUCT,](/windows/win32/api/winuser/ns-winuser-compareitemstruct) которая содержит идентификаторы и данные, предоставленные приложением для двух элементов в комбо или поле списка.
+*лпкомпареитемструкт*<br/>
+Содержит длинный указатель на структуру данных [COMPAREITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-compareitemstruct) , содержащую идентификаторы и данные, предоставляемые приложением, для двух элементов в поле со списком или в списке.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указывает относительное положение двух элементов. Это может быть любое из следующих значений:
+Указывает относительное расположение двух элементов. Может принимать любое из следующих значений:
 
 |Значение|Значение|
 |-----------|-------------|
-|-1|Пункт 1 имеет до пункта 2.|
-|0|Пункт 1 и пункт 2 сортируют то же самое.|
-|1|Пункт 1 разнослив после пункта 2.|
+|-1|Элемент 1 сортируется до элемента 2.|
+|0|Элемент 1 и элемент 2 сортируются одинаково.|
+|1|Элемент 1 сортируется после элемента 2.|
 
 ### <a name="remarks"></a>Remarks
 
-Если комбо или список окно создается с [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) или [LBS_SORT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) стиле, Windows отправляет комбо-бокс или список-коробка владельца WM_COMPAREITEM сообщение всякий раз, когда приложение добавляет новый элемент.
+Если поле со списком или со списком создано с помощью [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) или [LBS_SORT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , Windows отправляет в поле со списком или владельцу списка сообщение WM_COMPAREITEM, когда приложение добавляет новый элемент.
 
-Два элемента в комбо или список `COMPAREITEMSTRUCT` поле реформированы в структуре указал на *lpCompareItemStruct*. `OnCompareItem`должны вернуть значение, которое указывает, какие из элементов должны отображаться перед другим. Как правило, Windows делает этот вызов несколько раз, пока не определит точное положение нового элемента.
+Два элемента в поле со списком или списка изменяются в `COMPAREITEMSTRUCT` структуре, на которую указывает *лпкомпареитемструкт*. `OnCompareItem`должен возвращать значение, указывающее, какие элементы должны располагаться перед другим. Как правило, Windows делает этот вызов несколько раз, пока он не определит точную позицию для нового элемента.
 
-Если `hwndItem` член `COMPAREITEMSTRUCT` структуры принадлежит к объекту [CListBox](../../mfc/reference/clistbox-class.md) или [CComboBox,](../../mfc/reference/ccombobox-class.md) то называется виртуальная `CompareItem` функция соответствующего класса. Переопределить `CComboBox::CompareItem` `CListBox::CompareItem` или в `CListBox` вашем `CComboBox` производном или классе, чтобы сделать сравнение элемента.
+Если `hwndItem` член `COMPAREITEMSTRUCT` структуры принадлежит объекту [CListBox](../../mfc/reference/clistbox-class.md) или [CComboBox](../../mfc/reference/ccombobox-class.md) , то `CompareItem` вызывается виртуальная функция соответствующего класса. Переопределите `CComboBox::CompareItem` или `CListBox::CompareItem` в производном `CListBox` классе или, `CComboBox` чтобы выполнить сравнение элементов.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndoncompositionchanged"></a><a name="oncompositionchanged"></a>CWnd::OnCompositionChanged
+## <a name="cwndoncompositionchanged"></a><a name="oncompositionchanged"></a>CWnd:: Онкомпоситиончанжед
 
-Платформа вызывает эту функцию участника для всех окон верхнего уровня, когда композиция Desktop Window Manager (DWM) включена или отключена.
+Платформа вызывает эту функцию-член для всех окон верхнего уровня, если композиция диспетчер окон рабочего стола (DWM) включена или отключена.
 
 ```
 afx_msg void OnCompositionChanged();
@@ -6365,14 +6365,14 @@ afx_msg void OnCompositionChanged();
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод получает [уведомление WM_DWMCOMPOSITIONCHANGED,](/windows/win32/dwm/wm-dwmcompositionchanged) которое описано в SDK Windows.
+Этот метод получает уведомление [WM_DWMCOMPOSITIONCHANGED](/windows/win32/dwm/wm-dwmcompositionchanged) , которое описано в Windows SDK.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndoncontextmenu"></a><a name="oncontextmenu"></a>CWnd::OnContextMenu
+## <a name="cwndoncontextmenu"></a><a name="oncontextmenu"></a>CWnd:: oncontextmenu
 
-Вызывается по системе, когда пользователь нажал правую кнопку мыши (справа нажат) в окне.
+Вызывается структурой, когда пользователь щелкнул правой кнопкой мыши в окне.
 
 ```
 afx_msg void OnContextMenu(
@@ -6382,21 +6382,21 @@ afx_msg void OnContextMenu(
 
 ### <a name="parameters"></a>Параметры
 
-*pWnd*<br/>
-Ручка к окну, в которой пользователь справа нажал мышь. Это может быть детское окно окна, получающее сообщение. Для получения дополнительной информации об обработке этого сообщения, смотрите раздел Замечания.
+*Приводится*<br/>
+Указатель на окно, в котором пользователь щелкнул мышью. Это может быть дочернее окно окна, получающего сообщение. Дополнительные сведения об обработке этого сообщения см. в разделе "Примечания".
 
 *pos*<br/>
-Положение курсора, в координатах экрана, во время щелчка мыши.
+Расположение курсора в экранных координатах во время щелчка мышью.
 
 ### <a name="remarks"></a>Remarks
 
-Обработка этого сообщения можно, отобразив меню контекста, с помощью [TrackPopupMenu.](../../mfc/reference/cmenu-class.md#trackpopupmenu)
+Это сообщение можно обработать, выполнив контекстное меню с помощью [метод TrackPopupMenu](../../mfc/reference/cmenu-class.md#trackpopupmenu).
 
-Если вы не отображаете контекстное меню, вы должны передать это сообщение функции [DefWindowProc.](#defwindowproc) Если окно — это `DefWindowProc` окно ребенка, отправляет сообщение родителю. В `DefWindowProc` противном случае отображается меню контекста по умолчанию, если указанное положение находится в заголовке окна.
+Если контекстное меню не отображается, это сообщение следует передать в функцию [дефвиндовпрок](#defwindowproc) . Если окно является дочерним, `DefWindowProc` отправляет сообщение родительскому окну. В противном случае `DefWindowProc` отображает контекстное меню по умолчанию, если указанное расположение находится в заголовке окна.
 
-## <a name="cwndoncopydata"></a><a name="oncopydata"></a>CWnd::OnCopyData
+## <a name="cwndoncopydata"></a><a name="oncopydata"></a>CWnd:: Онкопидата
 
-Эта функция члена вызывается инфраструктурой для копирования данных из одного приложения в другое.
+Эта функция-член вызывается платформой для копирования данных из одного приложения в другое.
 
 ```
 afx_msg BOOL OnCopyData(
@@ -6406,32 +6406,32 @@ afx_msg BOOL OnCopyData(
 
 ### <a name="parameters"></a>Параметры
 
-*pWnd*<br/>
-Указатель на `CWnd` объект, отправляющий данные.
+*Приводится*<br/>
+Указатель на `CWnd` объект, который отправляет данные.
 
-*pCopyDataStruct*<br/>
-Указатель на структуру [COPYDATASTRUCT,](/windows/win32/api/winuser/ns-winuser-copydatastruct) содержащую отправляемые данные.
+*пкопидатаструкт*<br/>
+Указатель на структуру [копидатаструкт](/windows/win32/api/winuser/ns-winuser-copydatastruct) , содержащую отправляемые данные.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает TRUE, если принимающее приложение успешно принимает данные. В противном случае, возвращает FALSE.
+Возвращает значение TRUE, если принимающее приложение успешно принимает данные. В противном случае возвращает значение FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Передаваемые данные не должны содержать указателей или других ссылок на объекты, недоступные для приложения, принимающего данные.
+Передаваемые данные не должны содержать указатели или другие ссылки на объекты, недоступные для приложения, получающего данные.
 
-Во время копирования данных они не должны быть изменены другим потоком процесса отправки.
+Во время копирования данные не должны изменяться другим потоком отправляющего процесса.
 
-Приемное приложение должно учитывать только считываемые данные. Структура, на которую указывает параметр *pCopyDataStruct,* действительна только при передаче данных; однако, принимающее приложение не должно освобождать память, связанную со структурой.
+Принимающее приложение должно учитывать данные, которые доступны только для чтения. Структура, на которую указывает параметр *пкопидатаструкт* , допустима только во время перемещения данных. Однако принимающее приложение не должно освобождать память, связанную со структурой.
 
-Если принимающему приложению необходим доступ к данным после возвращения этой функции, оно должно скопировать данные, полученные в локальный буфер.
+Если принимающему приложению требуется доступ к данным после возврата этой функции, он должен скопировать данные, полученные в локальный буфер.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndoncreate"></a><a name="oncreate"></a>CWnd::OnCreate
+## <a name="cwndoncreate"></a><a name="oncreate"></a>CWnd:: OnCreate
 
-Платформа вызывает эту функцию участника, когда приложение требует создать окно Windows, вызывая функцию [члена Create](#create) или [CreateEx.](#createex)
+Платформа вызывает эту функцию члена, когда приложение запрашивает создание окна Windows с помощью вызова функции члена [CREATE](#create) или [креатикс](#createex) .
 
 ```
 afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
@@ -6439,27 +6439,27 @@ afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 
 ### <a name="parameters"></a>Параметры
 
-*lpСоздатьСтрукт*<br/>
-Указывает на структуру [CREATESTRUCT,](/windows/win32/api/winuser/ns-winuser-createstructw) `CWnd` содержащую информацию о создаваемом объекте.
+*лпкреатеструкт*<br/>
+Указывает на структуру [CREATESTRUCT](/windows/win32/api/winuser/ns-winuser-createstructw) , содержащую сведения о `CWnd` создаваемом объекте.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`OnCreate`должны вернуть 0, чтобы `CWnd` продолжить создание объекта. Если приложение возвращается -1, окно будет уничтожено.
+`OnCreate`должен возвращать значение 0, чтобы продолжить создание `CWnd` объекта. Если приложение возвращает значение-1, окно будет уничтожено.
 
 ### <a name="remarks"></a>Remarks
 
-Объект `CWnd` получает этот вызов после создания окна, но до того, как он становится видимым. `OnCreate`вызывается до `Create` `CreateEx` возвращения функции или функции участника.
+`CWnd`Объект получает этот вызов после создания окна, но до того, как он станет видимым. `OnCreate`вызывается перед `Create` `CreateEx` возвратом функции-члена или.
 
-Переопределить эту функцию члена для выполнения любой необходимой инициализации производного класса.
+Переопределите эту функцию-член, чтобы выполнить необходимую инициализацию производного класса.
 
-Структура `CREATESTRUCT` содержит копии параметров, используемых для создания окна.
+`CREATESTRUCT`Структура содержит копии параметров, используемых для создания окна.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonctlcolor"></a><a name="onctlcolor"></a>CWnd::OnCtlColor
+## <a name="cwndonctlcolor"></a><a name="onctlcolor"></a>CWnd:: Онктлколор
 
-Платформа вызывает эту функцию элемента, когда управление детьми вот-вот будет нарисовано.
+Платформа вызывает эту функцию-член при прорисовке дочернего элемента управления.
 
 ```
 afx_msg HBRUSH OnCtlColor(
@@ -6470,53 +6470,53 @@ afx_msg HBRUSH OnCtlColor(
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
-Содержит указатель на контекст отображения для окна ребенка. Может быть временным.
+*Хозяин*<br/>
+Содержит указатель на контекст вывода для дочернего окна. Может быть временным.
 
-*pWnd*<br/>
-Содержит указатель на элемент управления с просьбой о цвете. Может быть временным.
+*Приводится*<br/>
+Содержит указатель на элемент управления, запрашивающий цвет. Может быть временным.
 
-*nCtlColor*<br/>
-Содержит одно из следующих значений, определяющих тип управления:
+*нктлколор*<br/>
+Содержит одно из следующих значений, определяющее тип элемента управления:
 
-- управление CTLCOLOR_BTN кнопками
+- Элемент управления CTLCOLOR_BTN Button
 
-- CTLCOLOR_DLG коробка Dialog
+- Диалоговое окно «CTLCOLOR_DLG»
 
-- контроль CTLCOLOR_EDIT отсвасываем
+- Элемент управления CTLCOLOR_EDIT Edit
 
-- управление CTLCOLOR_LISTBOX список-коробка
+- CTLCOLOR_LISTBOX элемента управления "список"
 
-- CTLCOLOR_MSGBOX поле сообщения
+- Окно сообщения CTLCOLOR_MSGBOX
 
-- CTLCOLOR_SCROLLBAR управление прокруткой
+- CTLCOLOR_SCROLLBAR элемента управления "полоса прокрутки"
 
-- CTLCOLOR_STATIC статический контроль
+- CTLCOLOR_STATIC статический элемент управления
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`OnCtlColor`должны вернуть ручку к кисти, которая должна быть использована для покраски контрольного фона.
+`OnCtlColor`должен возвращать дескриптор кисти, которая будет использоваться для рисования фона элемента управления.
 
 ### <a name="remarks"></a>Remarks
 
-Большинство элементов управления отправляют это сообщение своему родителю (обычно диалоговому ящику) для подготовки *pDC* к рисованию элемента управления с использованием правильных цветов.
+Большинство элементов управления отправляют это сообщение своим родительским (обычно диалоговому окну) для подготовки *основного контроллера домена* для рисования элемента управления с использованием правильных цветов.
 
-Чтобы изменить цвет текста, `SetTextColor` позвоните функции участника с желаемыми красными, зелеными и синими значениями (RGB).
+Чтобы изменить цвет текста, вызовите `SetTextColor` функцию-член с нужными значениями красного, зеленого и синего (RGB).
 
-Чтобы изменить фоновый цвет элемента управления элементами изменения одной строки, установите ручку кисти как в CTLCOLOR_EDIT, так и в CTLCOLOR_MSGBOX коды сообщений, и позвоните в функцию [CDC::SetBkColor](../../mfc/reference/cdc-class.md#setbkcolor) в ответ на CTLCOLOR_EDIT код.
+Чтобы изменить цвет фона однострочного элемента управления "поле ввода", задайте маркер кисти в кодах сообщений CTLCOLOR_EDIT и CTLCOLOR_MSGBOX и вызовите функцию [CDC:: сетбкколор](../../mfc/reference/cdc-class.md#setbkcolor) в ответ на код CTLCOLOR_EDIT.
 
-`OnCtlColor`не будет вызван для окна списка выпадающих вниз комбо поле, потому что выпадение вниз список поле на самом деле ребенок комбо-бокс, а не ребенок окна. Чтобы изменить цвет окна списка выпадающих, `CComboBox` создайте переопределение `OnCtlColor` этой проверки `nCtlColor` для CTLCOLOR_LISTBOX в параметре. В этом обработчике `SetBkColor` функция члена должна использоваться для установки цвета фона для текста.
+`OnCtlColor`не будет вызываться для поля со списком раскрывающегося списка, так как раскрывающийся список на самом деле является дочерним элементом поля со списком, а не дочерним элементом окна. Чтобы изменить цвет раскрывающегося списка, создайте `CComboBox` с переопределением `OnCtlColor` , которое проверяет CTLCOLOR_LISTBOX в `nCtlColor` параметре. В этом обработчике `SetBkColor` для задания цвета фона для текста необходимо использовать функцию члена.
 
 > [!NOTE]
-> Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции. Чтобы добавить следующий метод в класс диалогов, используйте панель свойств Visual Studio, чтобы добавить обработчик сообщений для WM_CTLCOLOR. Кроме того, можно вручную добавить запись ON_WM_CTLCOLOR () на карту сообщений.
+> Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции. Чтобы добавить следующий метод в класс диалогового окна, используйте панель свойств Visual Studio, чтобы добавить обработчик сообщений для WM_CTLCOLOR. Кроме того, можно вручную добавить запись ON_WM_CTLCOLOR () в схему сообщений.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#107](../../mfc/reference/codesnippet/cpp/cwnd-class_47.cpp)]
 
-## <a name="cwndondeadchar"></a><a name="ondeadchar"></a>CWnd::OnDeadChar
+## <a name="cwndondeadchar"></a><a name="ondeadchar"></a>CWnd:: Ондеадчар
 
-Платформа вызывает эту функцию члена при вызове функции участника [OnKeyUp](#onkeyup) и функции участника [OnKeyDown.](#onkeydown)
+Платформа вызывает эту функцию члена при вызове функции [онкэйуп](#onkeyup) и элемента [KeyDown](#onkeydown) .
 
 ```
 afx_msg void OnDeadChar(
@@ -6527,41 +6527,41 @@ afx_msg void OnDeadChar(
 
 ### <a name="parameters"></a>Параметры
 
-*Nchar*<br/>
-Определяет значение символа «мертвый ключ».
+*nChar*<br/>
+Задает значение символа неработающего ключа.
 
-*nRepCnt*<br/>
-Определяет количество повторных повторов.
+*нрепкнт*<br/>
+Указывает число повторов.
 
-*nФлаги*<br/>
-Осваивай код сканирования, код перехода ключей, предыдущее состояние ключа и код контекста, как показано в следующем списке:
+*нфлагс*<br/>
+Указывает код сканирования, код перехода на ключ, предыдущее состояние ключа и код контекста, как показано в следующем списке:
 
-|Значение|Описание|
+|Значение|Описание:|
 |-----------|-----------------|
-|0-7|Код сканирования (OEM-зависимое значение). Низкий байт слова высокого порядка.|
-|8|Расширенный ключ, например, функциональный ключ или ключ на цифровой клавиатуре (1, если это расширенный ключ; в противном случае 0).|
+|0-7|Код сканирования (значение, зависящее от изготовителя оборудования). Младший байт для слова высокого порядка.|
+|8|Расширенный ключ, например ключ функции или клавиша на цифровой клавиатуре (1, если это расширенный ключ; в противном случае 0).|
 |9-10|Не используется.|
-|11-12|Используется внутренне Windows.|
-|13|Контекстный код (1, если ключ ALT удерживается при нажатии клавиши; в противном случае 0).|
-|14|Предыдущее состояние ключа (1, если ключ не работает до вызова, 0, если ключ вверх).|
-|15|Состояние перехода (1, если ключ освобождается, 0, если ключ нажат).|
+|11-12|Используется внутри Windows.|
+|13|Контекстный код (1, если клавиша ALT удерживается при нажатии клавиши; в противном случае — 0).|
+|14|Предыдущее состояние ключа (1, если ключ не работает до вызова, 0, если ключ работает).|
+|15|Состояние перехода (1, если ключ освобождается, 0 при нажатии клавиши).|
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция члена может использоваться для определения значения символов мертвого ключа. Мертвый ключ является ключом, таким как символ умлаута (двойной точки), который сочетается с другими символами для формирования композитного символа. Например, символ умлаут-О состоит из мертвого ключа, умлаута и ключа O.
+Эта функция-член может использоваться для указания значения символа неработающего ключа. Мертвый ключ — это ключ, такой как умляут (двойная точка), который объединяется с другими символами для формирования составного символа. Например, символ умляут-O состоит из неработающего ключа, умляут и ключа O.
 
-Приложение обычно `OnDeadChar` использует, чтобы дать пользователю обратную связь о каждом нажатии ключа. Например, приложение может отображать акцент в текущем положении персонажа, не перемещая карету.
+Приложение обычно использует `OnDeadChar` , чтобы дать пользователю отзыв о каждом нажатии клавиши. Например, приложение может отображать диакритические знаки в текущей позиции символа без перемещения курсора.
 
-Поскольку между нажатием клавишами и `OnDeadChar` вызовами не обязательно существует один к одному, информация в *nFlags,* как правило, не полезна для приложений. Информация в *nFlags* применяется только к последнему вызову в функцию участника [OnKeyUp](#onkeyup) `OnDeadChar` или функции участника [OnKeyDown,](#onkeydown) которая предшествует вызову.
+Так как между нажатиями и вызовами ключей не обязательно соответствие "один к одному `OnDeadChar` ", информация в *нфлагс* обычно не полезна для приложений. Сведения в *нфлагс* применяются только к последнему вызову функции члена [онкэйуп](#onkeyup) или к [функции элемента,](#onkeydown) которая предшествует `OnDeadChar` вызову.
 
-Для клавиатур IBM Enhanced 101- и 102-ключ, расширенные клавиши являются правильными клавишами ALT и правыми клавишами CTRL на основной части клавиатуры; INS, DEL, HOME, END, PAGE UP, PAGE DOWN и клавиши со стрелками в кластерах слева от цифровой клавиатуры; и клавиши слэйс (/) и ENTER в числовой клавиатуре. Некоторые другие клавиатуры могут поддерживать бит расширенного ключа в *nFlags*.
+Для клавиатуры IBM с улучшенными 101-и 102-клавишами расширенными ключами являются правая клавиша ALT и правые клавиши CTRL в основном разделе клавиатуры. клавиши INS, DEL, ДОМАШНяя, КОНЕЧная страница вверх, PAGE DOWN и стрелка в кластерах слева от цифровой клавиатуры; и косая черта (/) и введите клавиши на цифровой клавиатуре. Некоторые другие клавиатуры могут поддерживать бит расширенного ключа в *нфлагс*.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndondeleteitem"></a><a name="ondeleteitem"></a>CWnd::OnDeleteItem
+## <a name="cwndondeleteitem"></a><a name="ondeleteitem"></a>CWnd:: Онделетеитем
 
-Рамочная система называет эту функцию члена, чтобы сообщить владельцу владельца-нарисовать список окно или комбо-поле, что список поле или комбо поле уничтожено или что элементы были удалены [CComboBox: :DeleteString](../../mfc/reference/ccombobox-class.md#deletestring), [CListBox: :DeleteString](../../mfc/reference/clistbox-class.md#deletestring), [CComboBox: ResetContent](../../mfc/reference/ccombobox-class.md#resetcontent), или [CListBox:::ResetContent](../../mfc/reference/clistbox-class.md#resetcontent).
+Платформа вызывает эту функцию-член для информирования владельца списка или поля со списком, рисуемого владельцем, о том, что список или поле со списком уничтожаются или что элементы были удалены с помощью [CComboBox::D елетестринг](../../mfc/reference/ccombobox-class.md#deletestring), [CListBox::D елетестринг](../../mfc/reference/clistbox-class.md#deletestring), [CComboBox:: Ресетконтент](../../mfc/reference/ccombobox-class.md#resetcontent)или [CListBox:: ресетконтент](../../mfc/reference/clistbox-class.md#resetcontent).
 
 ```
 afx_msg void OnDeleteItem(
@@ -6571,22 +6571,22 @@ afx_msg void OnDeleteItem(
 
 ### <a name="parameters"></a>Параметры
 
-*nIDCtl*<br/>
-Идентификатор элемента управления, отправивавого WM_DELETEITEM сообщение.
+*нидктл*<br/>
+Идентификатор элемента управления, отправившего сообщение WM_DELETEITEM.
 
-*lpDeleteItemStruct*<br/>
-Определяет длинный указатель на структуру данных [DELETEITEMSTRUCT,](/windows/win32/api/winuser/ns-winuser-deleteitemstruct) содержащую информацию об удаленном элементе коробки списка.
+*лпделетеитемструкт*<br/>
+Задает длинный указатель на структуру данных [делетеитемструкт](/windows/win32/api/winuser/ns-winuser-deleteitemstruct) , содержащую сведения об удаленном элементе списка.
 
 ### <a name="remarks"></a>Remarks
 
-Если `hwndItem` член `DELETEITEMSTRUCT` структуры принадлежит к комбо-коробке или ящику списка, то называется виртуальная `DeleteItem` функция соответствующего класса. Переопределить `DeleteItem` функцию участника класса соответствующего элемента для удаления данных, относясь к конкретным элементам.
+Если `hwndItem` элемент `DELETEITEMSTRUCT` структуры принадлежит полю со списком или списку, то `DeleteItem` вызывается виртуальная функция соответствующего класса. Переопределите `DeleteItem` функцию-член соответствующего класса элемента управления, чтобы удалить данные, относящиеся к элементу.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndondestroy"></a><a name="ondestroy"></a>CWnd::Уничтожить
+## <a name="cwndondestroy"></a><a name="ondestroy"></a>CWnd:: OnDestroy
 
-Платформа называет эту функцию `CWnd` члена, чтобы сообщить объекту, что он уничтожается.
+Платформа вызывает эту функцию-член для информирования `CWnd` объекта о том, что он уничтожается.
 
 ```
 afx_msg void OnDestroy();
@@ -6596,21 +6596,21 @@ afx_msg void OnDestroy();
 
 `OnDestroy`вызывается после `CWnd` удаления объекта с экрана.
 
-`OnDestroy`вызвано сперва для `CWnd` быть разрушенным, `CWnd` после этого для окон ребенка по мере того как они разрушены. Можно предположить, что все детские окна все еще существуют во время `OnDestroy` бега.
+`OnDestroy`вызывается первым для `CWnd` уничтожения, а затем для дочерних окон `CWnd` при их уничтожении. Можно предположить, что во время выполнения все еще существуют все дочерние окна `OnDestroy` .
 
-Если `CWnd` разрушаемый объект является частью цепочки Clipboard-viewer (установленной по `CWnd` вызову функции члена [SetClipboardViewer),](#setclipboardviewer) необходимо удалить себя из `OnDestroy` цепочки Clipboard-viewer, позвонив в функцию участника [ChangeClipboardChain,](#changeclipboardchain) прежде чем вернуться из функции.
+Если `CWnd` удаляемый объект является частью цепочки окна просмотра буфера обмена (задается вызовом функции-члена [сетклипбоардвиевер](#setclipboardviewer) ), компонент `CWnd` должен удалить саму себя из цепочки буфера просмотра, вызвав функцию-член [чанжеклипбоардчаин](#changeclipboardchain) перед возвратом из `OnDestroy` функции.
 
-## <a name="cwndondestroyclipboard"></a><a name="ondestroyclipboard"></a>CWnd::OnDestroyClipboard
+## <a name="cwndondestroyclipboard"></a><a name="ondestroyclipboard"></a>CWnd:: Ондестройклипбоард
 
-Платформа вызывает эту функцию участника для владельца Clipboard, когда Clipboard опустеет через вызов функции [EmptyClipboard](/windows/win32/api/winuser/nf-winuser-emptyclipboard) Windows.
+Платформа вызывает эту функцию-член для владельца буфера обмена, когда буфер обмена очищается посредством вызова функции Windows [емптиклипбоард](/windows/win32/api/winuser/nf-winuser-emptyclipboard) .
 
 ```
 afx_msg void OnDestroyClipboard();
 ```
 
-## <a name="cwndondevicechange"></a><a name="ondevicechange"></a>CWnd::OnDeviceChange
+## <a name="cwndondevicechange"></a><a name="ondevicechange"></a>CWnd:: Ондевицечанже
 
-Платформа вызывает эту функцию участника, чтобы уведомить драйвер приложения или устройства об изменении аппаратной конфигурации устройства или компьютера.
+Платформа вызывает эту функцию-член для уведомления приложения или драйвера устройства об изменении конфигурации оборудования устройства или компьютера.
 
 ```
 afx_msg BOOL OnDeviceChange(
@@ -6620,42 +6620,42 @@ afx_msg BOOL OnDeviceChange(
 
 ### <a name="parameters"></a>Параметры
 
-*nEventType*<br/>
-Тип события. Ознакомьтесь с разделом «Замечания» для описания имеющихся значений
+*невенттипе*<br/>
+Тип события. Описание доступных значений см. в разделе "Примечания".
 
-*dwData*<br/>
-Адрес структуры, содержащей данные, связанные с конкретными событиями. Его значение зависит от данного события.
+*двдата*<br/>
+Адрес структуры, содержащей данные, относящиеся к конкретному событию. Его значение зависит от заданного события.
 
 ### <a name="remarks"></a>Remarks
 
-Для устройств, которые предлагают программно-управляемые функции, такие как выброс и блокировка, операционная система обычно отправляет DBT_DEVICEREMOVEPENDING сообщение, чтобы приложения и драйверы устройств прелесть их использование устройства изящно.
+Для устройств, которые предлагают функции, управляемые программным обеспечением, такие как извлечение и блокировка, операционная система обычно отправляет DBT_DEVICEREMOVEPENDING сообщение, чтобы разрешить приложениям и драйверам устройств корректно использовать устройство.
 
-Если операционная система решительно удаляет устройство, она не может отправить DBT_DEVICEQUERYREMOVE сообщение, прежде чем сделать это.
+Если операционная система принудительно удаляет устройство, она может не отправить DBT_DEVICEQUERYREMOVE сообщение перед этим.
 
-Параметр *nEvent* может быть одним из следующих значений:
+Параметр *невент* может принимать одно из следующих значений:
 
 - [DBT_DEVICEARRIVAL](/windows/win32/DevIO/dbt-devicearrival) Устройство было вставлено и теперь доступно.
 
-- [DBT_DEVICEQUERYREMOVE](/windows/win32/DevIO/dbt-devicequeryremove) Требуется разрешение на удаление устройства. Любое приложение может отклонить этот запрос и отменить удаление.
+- [DBT_DEVICEQUERYREMOVE](/windows/win32/DevIO/dbt-devicequeryremove) Запрошено разрешение на удаление устройства. Любое приложение может отклонить этот запрос и отменить удаление.
 
 - [DBT_DEVICEQUERYREMOVEFAILED](/windows/win32/DevIO/dbt-devicequeryremovefailed) Запрос на удаление устройства отменен.
 
-- [DBT_DEVICEREMOVEPENDING](/windows/win32/DevIO/dbt-deviceremovepending) Устройство вот-вот будет удалено. Не может быть отказано.
+- [DBT_DEVICEREMOVEPENDING](/windows/win32/DevIO/dbt-deviceremovepending) Устройство будет удалено. Нельзя запретить.
 
 - [DBT_DEVICEREMOVECOMPLETE](/windows/win32/DevIO/dbt-deviceremovecomplete) Устройство удалено.
 
-- [DBT_DEVICETYPESPECIFIC](/windows/win32/DevIO/dbt-devicetypespecific) Событие, конкретное для устройств.
+- [DBT_DEVICETYPESPECIFIC](/windows/win32/DevIO/dbt-devicetypespecific) Событие для конкретного устройства.
 
-- [DBT_CONFIGCHANGED](/windows/win32/DevIO/dbt-configchanged) Текущая конфигурация изменилась.
+- [DBT_CONFIGCHANGED](/windows/win32/DevIO/dbt-configchanged) Текущая конфигурация изменена.
 
-- DBT_DEVNODES_CHANGED узла устройства изменилось.
+- Узел устройства DBT_DEVNODES_CHANGED изменился.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndondevmodechange"></a><a name="ondevmodechange"></a>CWnd::OnDevModeChange
+## <a name="cwndondevmodechange"></a><a name="ondevmodechange"></a>CWnd:: Ондевмодечанже
 
-Платформа вызывает эту функцию члена `CWnd` для всех объектов верхнего уровня, когда пользователь изменяет настройки режима устройства.
+Платформа вызывает эту функцию-член для всех объектов верхнего уровня `CWnd` , когда пользователь изменяет параметры режима устройства.
 
 ```
 afx_msg void OnDevModeChange(LPTSTR lpDeviceName);
@@ -6663,21 +6663,21 @@ afx_msg void OnDevModeChange(LPTSTR lpDeviceName);
 
 ### <a name="parameters"></a>Параметры
 
-*lpDeviceName*<br/>
-Указывает на имя устройства, указанное в файле инициализации Windows, WIN. Ini.
+*лпдевиценаме*<br/>
+Указывает имя устройства, указанное в файле инициализации Windows, WIN.INI.
 
 ### <a name="remarks"></a>Remarks
 
-Приложения, обрабатывающие WM_DEVMODECHANGE сообщение, могут репарализовать настройки режима устройства. Приложения, которые `ExtDeviceMode` используют функцию Windows для сохранения и восстановления настроек устройства, как правило, не обрабатывают эту функцию.
+Приложения, обрабатывающие WM_DEVMODECHANGE сообщение, могут повторно инициализировать параметры режима устройства. Приложения, использующие функцию Windows `ExtDeviceMode` для сохранения и восстановления параметров устройств, обычно не обрабатывают эту функцию.
 
-Эта функция не вызывается при изменении принтера по умолчанию из панели управления. В этом случае `OnWinIniChange` вызывается функция.
+Эта функция не вызывается, когда пользователь изменяет принтер по умолчанию из панели управления. В этом случае `OnWinIniChange` вызывается функция.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndondrawclipboard"></a><a name="ondrawclipboard"></a>CWnd::OnDrawClipboard
+## <a name="cwndondrawclipboard"></a><a name="ondrawclipboard"></a>CWnd:: Ондравклипбоард
 
-Платформа вызывает эту функцию участника для каждого окна в цепочке Clipboard-viewer при изменении содержимого Clipboard.
+Платформа вызывает эту функцию-член для каждого окна в цепочке окна просмотра буфера обмена при изменении содержимого буфера обмена.
 
 ```
 afx_msg void OnDrawClipboard();
@@ -6685,11 +6685,11 @@ afx_msg void OnDrawClipboard();
 
 ### <a name="remarks"></a>Remarks
 
-Только приложения, которые присоединились к цепочке Clipboard-viewer, позвонив в функцию участника [SetClipboardViewer,](#setclipboardviewer) должны ответить на этот вызов.
+Только приложения, Объединенные в цепочку просмотра буфера обмена путем вызова функции-члена [сетклипбоардвиевер](#setclipboardviewer) , должны отвечать на этот вызов.
 
-Каждое окно, `OnDrawClipboard` которое получает вызов, должно вызвать функцию [SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) Windows, чтобы передать [WM_DRAWCLIPBOARD](/windows/win32/dataxchg/wm-drawclipboard) сообщение на следующее окно в цепочке Clipboard-viewer. Ручка следующего окна возвращается функцией участника [SetClipboardViewer;](#setclipboardviewer) он может быть изменен в ответ на вызов функции участника [OnChangeCbChain.](#onchangecbchain)
+Каждое окно, которое получает `OnDrawClipboard` вызов, должно вызывать функцию Windows [SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) для передачи [WM_DRAWCLIPBOARD](/windows/win32/dataxchg/wm-drawclipboard) сообщения в следующее окно в цепочке окна просмотра буфера обмена. Маркер следующего окна возвращается функцией-членом [сетклипбоардвиевер](#setclipboardviewer) . Он может быть изменен в ответ на вызов функции члена [ончанжекбчаин](#onchangecbchain) .
 
-## <a name="cwndondrawiconicthumbnailorlivepreview"></a><a name="ondrawiconicthumbnailorlivepreview"></a>CWnd::OndrawIconicThumbnailOrLivePreview
+## <a name="cwndondrawiconicthumbnailorlivepreview"></a><a name="ondrawiconicthumbnailorlivepreview"></a>CWnd:: Ондравикониксумбнаилорливепревиев
 
 Вызывается платформой, когда необходимо отобразить растровое изображение на эскизе вкладки Windows 7 или клиенте для быстрого просмотра приложения.
 
@@ -6704,28 +6704,28 @@ virtual void OnDrawIconicThumbnailOrLivePreview(
 
 ### <a name="parameters"></a>Параметры
 
-*Dc*<br/>
-Определяет контекст устройства.
+*Постоянный*<br/>
+Указывает контекст устройства.
 
 *rect*<br/>
-Определяет ограничивающий прямоугольник области для визуализации.
+Задает ограничивающий прямоугольник области для отображения.
 
-*szRequiredThumbnailSize*<br/>
-Определяет размер целевого эскиза. Следует игнорировать, если *bIsThumbnail* является FALSE.
+*сзрекуиредсумбнаилсизе*<br/>
+Задает размер целевого эскиза. Следует игнорировать, если *биссумбнаил* имеет значение false.
 
-*bIsThumbnail*<br/>
-Уточняется, является ли этот метод вызван для знаковых эскизов или живой предварительный просмотр (пик).
+*биссумбнаил*<br/>
+Указывает, вызывается ли этот метод для значка эскиза или динамической предварительной версии (считывание).
 
-*bAlphaChannelSet*<br/>
-(ваут) Установите его в правду, если ваша реализация инициализирует альфа-канал bitmap выбран в *dc*.
+*балфачаннелсет*<br/>
+заполняет Задайте значение TRUE, если ваша реализация инициализирует альфа-канал точечного рисунка, выбранного в *контроллере домена*.
 
 ### <a name="remarks"></a>Remarks
 
-Переопределить этот метод в производном классе и опираться на указанный контекст устройства для того, чтобы настроить эскиз и заглянуть. Если *bThumbnail* является правдой, *szRequiredThumbnailSize* может быть проигнорировано. В этом случае вы должны знать, что вы рисуете полноразмерную бит-карту (то есть бит-карту, которая охватывает всю область клиента). Контекст устройства *(dc*) поставляется с выбранным 32 битовой битовой картой. Реализация по умолчанию отправляет WM_PRINT в это окно с PRF_CLIENT, PRF_CHILDREN и PRF_NONCLIENT флагами.
+Переопределите этот метод в производном классе и нарисуйте в указанном контексте устройства для настройки эскиза и просмотра. Если *бсумбнаил* имеет значение true, *сзрекуиредсумбнаилсизе* можно игнорировать. В этом случае следует иметь в виду, что рисуется полный точечный рисунок (то есть битовая карта, охватывающая всю клиентскую область). Контекст устройства ( *DC*) поставляется с выбранным битовым рисунком 32 битов. Реализация по умолчанию отправляет WM_PRINT в это окно с флагами PRF_CLIENT, PRF_CHILDREN и PRF_NONCLIENT.
 
-## <a name="cwndondrawitem"></a><a name="ondrawitem"></a>CWnd::OnDrawItem
+## <a name="cwndondrawitem"></a><a name="ondrawitem"></a>CWnd:: Ондравитем
 
-Рамочная система вызывает эту функцию участника для владельца управления кнопкой владельца, управления комбо-коробкой, управления списком или меню при изменении визуального аспекта управления или меню.
+Платформа вызывает эту функцию-член для владельца элемента управления "кнопка-прорисовка", элемента управления "поле со списком", элемента управления "список" или меню при изменении визуального аспекта элемента управления или меню.
 
 ```
 afx_msg void OnDrawItem(
@@ -6735,26 +6735,26 @@ afx_msg void OnDrawItem(
 
 ### <a name="parameters"></a>Параметры
 
-*nIDCtl*<br/>
-Содержит идентификатор элемента управления, отправивого WM_DRAWITEM сообщение. Если меню отправило сообщение, *nIDCtl* содержит 0.
+*нидктл*<br/>
+Содержит идентификатор элемента управления, отправившего сообщение WM_DRAWITEM. Если сообщение отправило меню, *нидктл* содержит 0.
 
-*lpDrawItemStruct*<br/>
-Определяет длинный указатель на структуру `DRAWITEMSTRUCT` данных, содержащую информацию о нарисованном элементе и типе требуемого чертежа.
+*лпдравитемструкт*<br/>
+Задает длинный указатель на `DRAWITEMSTRUCT` структуру данных, содержащую сведения о рисуемом элементе, и требуемый тип рисования.
 
 ### <a name="remarks"></a>Remarks
 
-Член `itemAction` структуры [DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct) определяет операцию рисования, которая должна быть выполнена. Данные в этом элементе позволяют владельцу элемента управления определить, какие действия рисования необходимы.
+`itemAction`Элемент структуры [дравитемструкт](/windows/win32/api/winuser/ns-winuser-drawitemstruct) определяет операцию рисования, которую необходимо выполнить. Данные в этом элементе позволяют владельцу элемента определить, какое действие по отрисовке требуется.
 
-Перед возвращением из обработки этого сообщения приложение должно убедиться, что `DRAWITEMSTRUCT` контекст устройства, идентифицированный членом *hDC* структуры, будет восстановлен в состоянии по умолчанию.
+Перед возвратом из обработки этого сообщения приложение должно обеспечить восстановление контекста устройства, определенного членом *HDC* структуры, в `DRAWITEMSTRUCT` состояние по умолчанию.
 
-Если `hwndItem` участник принадлежит к [CButton](../../mfc/reference/cbutton-class.md), [CMenu](../../mfc/reference/cmenu-class.md), [CListBox](../../mfc/reference/clistbox-class.md), или `DrawItem` [CComboBox](../../mfc/reference/ccombobox-class.md) объекта, то виртуальная функция соответствующего класса называется. Переопределить `DrawItem` функцию элемента соответствующего элемента для рисования элемента.
+Если `hwndItem` элемент принадлежит к объекту [кбуттон](../../mfc/reference/cbutton-class.md), [Кмену](../../mfc/reference/cmenu-class.md), [CListBox](../../mfc/reference/clistbox-class.md)или [CComboBox](../../mfc/reference/ccombobox-class.md) , то `DrawItem` вызывается виртуальная функция соответствующего класса. Переопределите `DrawItem` функцию члена соответствующего класса элемента управления для рисования элемента.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndondropfiles"></a><a name="ondropfiles"></a>CWnd::OnDropFiles
+## <a name="cwndondropfiles"></a><a name="ondropfiles"></a>CWnd:: Ондропфилес
 
-Платформа вызывает эту функцию участника, когда пользователь выпускает левую кнопку мыши через окно, которое зарегистрировалось как получатель упавшихся файлов.
+Платформа вызывает эту функцию-член, когда пользователь отпускает левую кнопку мыши над окном, которое зарегистрировалось как получатель удаленных файлов.
 
 ```
 afx_msg void OnDropFiles(HDROP hDropInfo);
@@ -6762,19 +6762,19 @@ afx_msg void OnDropFiles(HDROP hDropInfo);
 
 ### <a name="parameters"></a>Параметры
 
-*hDropInfo*<br/>
-Указатель на внутреннюю структуру данных, описывающий упавные файлы. Эта ручка используется `DragFinish` `DragQueryFile`функциями `DragQueryPoint` , и Windows для получения информации об упавных файлах.
+*хдропинфо*<br/>
+Указатель на внутреннюю структуру данных, описывающую удаленные файлы. Этот маркер используется `DragFinish` `DragQueryFile` функциями, и `DragQueryPoint` Windows для получения сведений об удаленных файлах.
 
 ### <a name="remarks"></a>Remarks
 
-Как правило, полученный класс будет предназначен для поддержки отброшенных файлов и будет регистрироваться во время строительства окон.
+Как правило, производный класс предназначен для поддержки удаленных файлов, и он регистрируется во время создания окна.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonenable"></a><a name="onenable"></a>CWnd::OnEnable
+## <a name="cwndonenable"></a><a name="onenable"></a>CWnd:: OnEnable
 
-Платформа вызывает эту функцию элемента при изменении включенного состояния `CWnd` объекта.
+Платформа вызывает эту функцию члена, когда приложение изменяет включенное состояние `CWnd` объекта.
 
 ```
 afx_msg void OnEnable(BOOL bEnable);
@@ -6783,18 +6783,18 @@ afx_msg void OnEnable(BOOL bEnable);
 ### <a name="parameters"></a>Параметры
 
 *bEnable*<br/>
-Определяет, был ли `CWnd` объект включен или отключен. Этот параметр является `CWnd` правдой, если был включен; это FALSE, `CWnd` если был отключен.
+Указывает, `CWnd` был ли объект включен или отключен. Этот параметр имеет значение TRUE, если `CWnd` включен. значение false, если параметр `CWnd` отключен.
 
 ### <a name="remarks"></a>Remarks
 
-`OnEnable`вызывается до возвращения функции функции [Функции EnableWindow,](#enablewindow) но после изменения состояния включенного окна [(WS_DISABLED](styles-used-by-mfc.md#window-styles) бита стиля).
+`OnEnable`вызывается перед возвратом функции-члена [енаблевиндов](#enablewindow) , но после изменения состояния окна ( [WS_DISABLED](styles-used-by-mfc.md#window-styles) бит стиля).
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonendsession"></a><a name="onendsession"></a>CWnd::OnEndSession
+## <a name="cwndonendsession"></a><a name="onendsession"></a>CWnd:: Онендсессион
 
-Платформа вызывает эту функцию `CWnd` участника после того, как объект вернул ненулевое значение из вызова функции [функции on'queryEndSession.](#onqueryendsession)
+Платформа вызывает эту функцию-член после того, как `CWnd` объект вернул ненулевое значение из вызова функции-члена [онкуерендсессион](#onqueryendsession) .
 
 ```
 afx_msg void OnEndSession(BOOL bEnding);
@@ -6802,23 +6802,23 @@ afx_msg void OnEndSession(BOOL bEnding);
 
 ### <a name="parameters"></a>Параметры
 
-*Изгиба*<br/>
-Уточняется, завершена ли сессия. Это правда, если сессия в настоящее время завершена; в противном случае FALSE.
+*Изгиб*<br/>
+Указывает, завершается ли сеанс. Значение TRUE, если сеанс завершается; в противном случае — FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Вызов `OnEndSession` сообщает `CWnd` объекту, действительно ли сеанс заканчивается.
+Вызов информирует объект о том, что `OnEndSession` `CWnd` сеанс фактически завершается.
 
-Если *bEnding* является правдой, Windows может прекратить работу в любое время после того, как все приложения вернулись из обработки этого вызова. Следовательно, иметь приложение выполнить все `OnEndSession`задачи, необходимые для прекращения в пределах .
+Если *изгиб* имеет значение true, Windows может завершиться в любое время после того, как все приложения возвращали обработку этого вызова. Следовательно, приложение должно выполнять все задачи, необходимые для завершения в `OnEndSession` .
 
-Вам не нужно звонить в функцию участника [DestroyWindow](#destroywindow) или функцию [Post'youmessage](/windows/win32/api/winuser/nf-winuser-postquitmessage) Windows по окончании сеанса.
+При завершении сеанса не нужно вызывать функцию-член [дестройвиндов](#destroywindow) или функцию Windows [посткуитмессаже](/windows/win32/api/winuser/nf-winuser-postquitmessage) .
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonenteridle"></a><a name="onenteridle"></a>CWnd::OnEnterIdle
+## <a name="cwndonenteridle"></a><a name="onenteridle"></a>CWnd:: Онентеридле
 
-Платформа называет эту функцию участника, чтобы сообщить основной процедуре окна приложения о том, что модульное диалоговое окно или меню входят в состояние простоя.
+Платформа вызывает эту функцию-член, чтобы сообщить главному окну приложения о том, что модальное диалоговое окно или меню переходит в состояние простоя.
 
 ```
 afx_msg void OnEnterIdle(
@@ -6828,26 +6828,26 @@ afx_msg void OnEnterIdle(
 
 ### <a name="parameters"></a>Параметры
 
-*nПочему*<br/>
-Уточняется, является ли сообщение результатом отображаемого окна диалога или меню. Этот параметр может быть одним из следующих значений:
+*нвхи*<br/>
+Указывает, является ли сообщение результатом отображения диалогового окна или меню. Этот параметр может принимать одно из следующих значений:
 
-- MSGF_DIALOGBOX система простаивает из-за отображения диалогового окна.
+- MSGF_DIALOGBOX, что система бездействует, так как отображается диалоговое окно.
 
-- MSGF_MENU система простаивает из-за отображения меню.
+- MSGF_MENU, что система бездействует, поскольку отображается меню.
 
-*pКто*<br/>
-Укажите указатель на поле диалога (если *nWhy* MSGF_DIALOGBOX) или окно, содержащее отображеное меню (если *nПочему* MSGF_MENU). Этот указатель может быть временным и не должен храниться для последующего использования.
+*пвхо*<br/>
+Указывает указатель на диалоговое окно (если *нвхи* — MSGF_DIALOGBOX) или окно, содержащее отображаемое меню (если *нвхи* — MSGF_MENU). Этот указатель может быть временным и не должен храниться для последующего использования.
 
 ### <a name="remarks"></a>Remarks
 
-Модальный диалоговый ящик или меню входит в состояние простоя, когда сообщения не ждут в очереди после обработки одного или нескольких предыдущих сообщений.
+Модальное диалоговое окно или меню переходит в состояние простоя, если в очереди нет сообщений, ожидающих обработки одного или нескольких предыдущих сообщений.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonentermenuloop"></a><a name="onentermenuloop"></a>CWnd::OnEnterMenuLoop
+## <a name="cwndonentermenuloop"></a><a name="onentermenuloop"></a>CWnd:: Онентерменулуп
 
-Платформа вызывает эту функцию элемента при входе в модальный цикл меню.
+Платформа вызывает эту функцию-член, когда был введен модальный цикл меню.
 
 ```
 afx_msg void OnEnterMenuLoop(BOOL bIsTrackPopupMenu);
@@ -6855,17 +6855,17 @@ afx_msg void OnEnterMenuLoop(BOOL bIsTrackPopupMenu);
 
 ### <a name="parameters"></a>Параметры
 
-*bIsTrackPopupMenu*<br/>
-Определяет, является ли меню всплывающее меню всплывающее. Имеет ненулевое значение, если функция успешна; в противном случае 0.
+*бистраккпопупмену*<br/>
+Указывает, является ли используемое меню всплывающим меню. Имеет ненулевое значение, если функция выполнена успешно; в противном случае — 0.
 
 ### <a name="remarks"></a>Remarks
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonentersizemove"></a><a name="onentersizemove"></a>CWnd::OnEnterSizeMove
+## <a name="cwndonentersizemove"></a><a name="onentersizemove"></a>CWnd:: Онентерсиземове
 
-Платформа вызывает эту функцию одного раза после того, как пострадававшное окно входит в движущийся или размерный модульный цикл.
+Платформа вызывает эту функцию-член один раз после того, как затронутый окно пойдет в модальный цикл перемещения или изменения размера.
 
 ```
 afx_msg void OnEnterSizeMove();
@@ -6873,16 +6873,16 @@ afx_msg void OnEnterSizeMove();
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод получает [WM_ENTERSIZEMOVE](/windows/win32/winmsg/wm-entersizemove) уведомление, которое описано в SDK Windows.
+Этот метод получает уведомление [WM_ENTERSIZEMOVE](/windows/win32/winmsg/wm-entersizemove) , которое описано в Windows SDK.
 
-Окно входит в движущийся или размерный модульный цикл, когда пользователь нажимает на заголовок панели окна или границу размеров, или когда окно передает [WM_SYSCOMMAND](/windows/win32/menurc/wm-syscommand) сообщение функции [CWnd::DefWindowProc,](#defwindowproc) и параметр *wParam* этого сообщения определяет SC_MOVE или SC_SIZE.
+Окно перемещается в модальный цикл перемещения или изменения размера, когда пользователь щелкает заголовок окна или границу изменения размера, или когда окно передает [WM_SYSCOMMAND](/windows/win32/menurc/wm-syscommand) сообщение в функцию [CWnd::D ефвиндовпрок](#defwindowproc) , а параметр *wParam* этого сообщения указывает SC_MOVE или SC_SIZE.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonerasebkgnd"></a><a name="onerasebkgnd"></a>CWnd::OnEraseBkgnd
+## <a name="cwndonerasebkgnd"></a><a name="onerasebkgnd"></a>CWnd:: Онерасебкгнд
 
-Фрейм вызывает эту `CWnd` функцию члена, когда фон объекта нуждается в стине (например, при повторном размере).
+Платформа вызывает эту функцию-член, если `CWnd` для фона объекта требуется стирание (например, при изменении размера).
 
 ```
 afx_msg BOOL OnEraseBkgnd(CDC* pDC);
@@ -6890,31 +6890,31 @@ afx_msg BOOL OnEraseBkgnd(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
-Определяет объект устройства-контекста.
+*Хозяин*<br/>
+Указывает объект контекста устройства.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Nonzero, если он стирает фон; в противном случае 0.
+Ненулевое значение, если удаляет фон. в противном случае — 0.
 
 ### <a name="remarks"></a>Remarks
 
-Он призван подготовить недействительную область для покраски.
+Он вызывается для подготовки недействительного региона для рисования.
 
-Реализация по умолчанию стирает фон с помощью фоновой кисти фонового класса окна, указанной `hbrBackground` членом структуры класса окна.
+Реализация по умолчанию удаляет фон с помощью кисти фона класса окна, заданной `hbrBackground` элементом структуры класса Window.
 
-Если `hbrBackground` участник NULL, ваша переопределенная версия `OnEraseBkgnd` должна удалить цвет фона. Ваша версия должна также согласовать происхождение `CWnd` предполагаемой кисти с координатами, сначала позвонив [unrealiseObject](/windows/win32/api/wingdi/nf-wingdi-unrealizeobject) для кисти, а затем выбрав кисть.
+Если `hbrBackground` элемент имеет значение null, переопределенная версия `OnEraseBkgnd` должна стереть цвет фона. Ваша версия должна также согласовать происхождение предполагаемой кисти с `CWnd` координатами, сначала вызвав [унреализеобжект](/windows/win32/api/wingdi/nf-wingdi-unrealizeobject) для кисти, а затем выбрав кисть.
 
-Перевернутый `OnEraseBkgnd` должен вернуться ненулевой в ответ на WM_ERASEBKGND, если он обрабатывает сообщение и стирает фон; это означает, что дальнейшее сравливание не требуется. Если оно возвращает 0, окно останется помеченным как необходимое для удаления. (Как правило, это `fErase` означает, `PAINTSTRUCT` что член структуры будет правдой.)
+Переопределенный объект `OnEraseBkgnd` должен возвращать ненулевое значение в ответ на WM_ERASEBKGND, если он обрабатывает сообщение и удаляет фон; это означает, что дальнейшая очистка не требуется. Если он возвращает 0, окно остается помеченным, как требуется стереть. (Как правило, это означает, что `fErase` член `PAINTSTRUCT` структуры будет иметь значение true.)
 
-Windows предполагает, что фон вычисляется с помощью режима MM_TEXT отображения. Если контекст устройства использует любой другой режим отображения, стертая область не может находиться в видимой части области клиента.
+Windows предполагает, что фон вычисляется с использованием режима сопоставления MM_TEXT. Если контекст устройства использует любой другой режим сопоставления, то область стирания может не находиться в видимой части клиентской области.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonexitmenuloop"></a><a name="onexitmenuloop"></a>CWnd::OnExitMenuLoop
+## <a name="cwndonexitmenuloop"></a><a name="onexitmenuloop"></a>CWnd:: Онекситменулуп
 
-Платформа вызывает эту функцию элемента при выходе цикла модального меню.
+Платформа вызывает эту функцию-член при завершении модального цикла меню.
 
 ```
 afx_msg void OnExitMenuLoop(BOOL bIsTrackPopupMenu);
@@ -6922,17 +6922,17 @@ afx_msg void OnExitMenuLoop(BOOL bIsTrackPopupMenu);
 
 ### <a name="parameters"></a>Параметры
 
-*bIsTrackPopupMenu*<br/>
-Уточняется, является ли задействованное меню всплывающее меню. Имеет ненулевое значение, если функция успешна; в противном случае 0.
+*бистраккпопупмену*<br/>
+Указывает, является ли используемое меню всплывающим меню. Имеет ненулевое значение, если функция выполнена успешно; в противном случае — 0.
 
 ### <a name="remarks"></a>Remarks
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonexitsizemove"></a><a name="onexitsizemove"></a>CWnd::OnExitSizeMove
+## <a name="cwndonexitsizemove"></a><a name="onexitsizemove"></a>CWnd:: Онекситсиземове
 
-Платформа вызывает эту функцию один раз после выхода пострадавшего окна в движущийся или размерный модульный цикл.
+Платформа вызывает эту функцию-член один раз после того, как затронутое окно выходит из модального цикла перемещения или изменения размера.
 
 ```
 afx_msg void OnExitSizeMove();
@@ -6940,16 +6940,16 @@ afx_msg void OnExitSizeMove();
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод получает [уведомление WM_EXITSIZEMOVE,](/windows/win32/winmsg/wm-exitsizemove) которое описано в SDK Windows.
+Этот метод получает уведомление [WM_EXITSIZEMOVE](/windows/win32/winmsg/wm-exitsizemove) , которое описано в Windows SDK.
 
-Окно входит в движущийся или размерный модульный цикл, когда пользователь нажимает на заголовок панели окна или границу размеров, или когда окно передает [WM_SYSCOMMAND](/windows/win32/menurc/wm-syscommand) сообщение функции [CWnd::DefWindowProc,](#defwindowproc) и параметр *wParam* этого сообщения определяет SC_MOVE или SC_SIZE.
+Окно перемещается в модальный цикл перемещения или изменения размера, когда пользователь щелкает заголовок окна или границу изменения размера, или когда окно передает [WM_SYSCOMMAND](/windows/win32/menurc/wm-syscommand) сообщение в функцию [CWnd::D ефвиндовпрок](#defwindowproc) , а параметр *wParam* этого сообщения указывает SC_MOVE или SC_SIZE.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonfontchange"></a><a name="onfontchange"></a>CWnd::OnFontChange
+## <a name="cwndonfontchange"></a><a name="onfontchange"></a>CWnd:: Онфонтчанже
 
-Все окна верхнего уровня в `OnFontChange` системе получают вызов из инфраструктуры после того, как приложение изменит пул ресурсов шрифта.
+Все окна верхнего уровня в системе получают `OnFontChange` вызов от платформы после того, как приложение изменяет пул ресурсов шрифтов.
 
 ```
 afx_msg void OnFontChange();
@@ -6957,11 +6957,11 @@ afx_msg void OnFontChange();
 
 ### <a name="remarks"></a>Remarks
 
-Приложение, которое добавляет или удаляет шрифты из системы (например, через функцию [AddFontResource](/windows/win32/api/wingdi/nf-wingdi-addfontresourcew) или [RemoveFontResource](/windows/win32/api/wingdi/nf-wingdi-removefontresourcew) Windows) должно отправлять [WM_FONTCHANGE](/windows/win32/gdi/wm-fontchange) сообщение во все окна верхнего уровня.
+Приложение, добавляющее или удаляющее шрифты из системы (например, с помощью функции Windows [аддфонтресаурце](/windows/win32/api/wingdi/nf-wingdi-addfontresourcew) или [ремовефонтресаурце](/windows/win32/api/wingdi/nf-wingdi-removefontresourcew) ), должно передавать [WM_FONTCHANGE](/windows/win32/gdi/wm-fontchange) сообщение всем окнам верхнего уровня.
 
-Чтобы отправить это сообщение, используйте функцию [SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) Windows с *параметраh hWnd,* установленным для HWND_BROADCAST.
+Чтобы отправить это сообщение, используйте функцию [SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) Windows с параметром *HWND* , для которого установлено значение HWND_BROADCAST.
 
-## <a name="cwndongetdlgcode"></a><a name="ongetdlgcode"></a>CWnd::OnGetDlgCode
+## <a name="cwndongetdlgcode"></a><a name="ongetdlgcode"></a>CWnd:: Онжетдлгкоде
 
 Вызывается, чтобы элемент управления мог самостоятельно обрабатывать нажатия на клавиши со стрелками и клавишу TAB.
 
@@ -6971,39 +6971,39 @@ afx_msg UINT OnGetDlgCode();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Одно или несколько из следующих значений, указывающих, какой тип ввода процесса приложения обрабатывает:
+Одно или несколько из следующих значений, указывающих тип входных данных, обрабатываемых приложением:
 
-- DLGC_BUTTON кнопка (общий).
+- Кнопка DLGC_BUTTON (универсальная).
 
 - DLGC_DEFPUSHBUTTON кнопка по умолчанию.
 
 - DLGC_HASSETSEL EM_SETSEL сообщения.
 
-- DLGC_UNDEFPUSHBUTTON Нет обработки кнопки по умолчанию. (Приложение может использовать этот флаг с DLGC_BUTTON, чтобы указать, что он обрабатывает ввод кнопки, но полагается на систему для обработки кнопки по умолчанию.)
+- DLGC_UNDEFPUSHBUTTON не обрабатывается кнопка по умолчанию. (Приложение может использовать этот флаг с DLGC_BUTTON, чтобы указать, что он обрабатывает входные данные кнопки, но использует систему для обработки кнопок по умолчанию.)
 
-- DLGC_RADIOBUTTON кнопку радио.
+- Переключатель DLGC_RADIOBUTTON.
 
-- DLGC_STATIC статический контроль.
+- DLGC_STATIC статический элемент управления.
 
-- DLGC_WANTALLKEYS Все ввода клавиатуры.
+- DLGC_WANTALLKEYS все входные данные с клавиатуры.
 
-- DLGC_WANTARROWS клавиши Стрелки.
+- DLGC_WANTARROWS клавиши со стрелками.
 
-- DLGC_WANTCHARS сообщения WM_CHAR.
+- DLGC_WANTCHARS WM_CHAR сообщения.
 
-- DLGC_WANTMESSAGE Все ввода клавиатуры. Приложение передает это сообщение на элемент управления.
+- DLGC_WANTMESSAGE все входные данные с клавиатуры. Приложение передает это сообщение элементу управления.
 
-- DLGC_WANTTAB ключ TAB.
+- Клавиша TAB DLGC_WANTTAB.
 
 ### <a name="remarks"></a>Remarks
 
-Как правило, Windows обрабатывает все стрелка ключ и TAB-ключ ввода `CWnd` управления. Переупределив, `OnGetDlgCode` `CWnd` элемент управления может выбрать определенный тип ввода для самой обработки.
+Как правило, Windows обрабатывает все вводные клавиши со стрелками и клавишей TAB для `CWnd` элемента управления. При переопределении `OnGetDlgCode` `CWnd` элемент управления может выбрать конкретный тип входных данных для обработки самого себя.
 
-Функции `OnGetDlgCode` по умолчанию для предопределенных классов управления возвращают код, подходящий для каждого класса.
+Функции по умолчанию `OnGetDlgCode` для стандартных классов элементов управления возвращают код, соответствующий каждому классу.
 
-## <a name="cwndongetminmaxinfo"></a><a name="ongetminmaxinfo"></a>CWnd::OnGetMinMaxInfo
+## <a name="cwndongetminmaxinfo"></a><a name="ongetminmaxinfo"></a>CWnd:: Онжетминмаксинфо
 
-Платформа вызывает эту функцию члена всякий раз, когда Windows должна знать максимальное положение или размеры, или минимальный или максимальный размер отслеживания.
+Платформа вызывает эту функцию члена всякий раз, когда Windows должна расположить развернутое расположение или размеры либо минимальный или максимальный размер отслеживания.
 
 ```
 afx_msg void OnGetMinMaxInfo(MINMAXINFO* lpMMI);
@@ -7011,19 +7011,19 @@ afx_msg void OnGetMinMaxInfo(MINMAXINFO* lpMMI);
 
 ### <a name="parameters"></a>Параметры
 
-*lpMMI*<br/>
-Указывает на `MINMAXINFO` структуру, содержащую информацию о максимальном размере и положении окна, а также о его минимальном и максимальном размере отслеживания. Подробнее об этой структуре читайте в структуре [MINMAXINFO.](/windows/win32/api/winuser/ns-winuser-minmaxinfo)
+*лпмми*<br/>
+Указывает на `MINMAXINFO` структуру, содержащую сведения о максимальном размере окна и его положении, минимальном и максимальном размере отслеживания. Дополнительные сведения об этой структуре см. в разделе Структура [минмаксинфо](/windows/win32/api/winuser/ns-winuser-minmaxinfo) .
 
 ### <a name="remarks"></a>Remarks
 
-Максимальный размер — это размер окна, когда его границы полностью расширены. Максимальный размер слежения окна является самым большим размером окна, который может быть достигнут с помощью границ для размера окна. Минимальный размер отслеживания окна — это самый маленький размер окна, который может быть достигнут с помощью границ для размера окна.
+Развернутый размер — это размер окна, когда его границы полностью расширены. Максимальный размер для отслеживания окна — наибольший размер окна, который можно достигнуть с помощью границ для изменения размера окна. Минимальный размер для отслеживания окна — это наименьший размер окна, который можно достигнуть с помощью границ для изменения размера окна.
 
-Windows заполняет массив точек, указывающих значения по умолчанию для различных позиций и измерений. Приложение может изменить эти `OnGetMinMaxInfo`значения в .
+Windows заполняет массив точек, указывая значения по умолчанию для различных позиций и измерений. Приложение может изменить эти значения в `OnGetMinMaxInfo` .
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonhelp"></a><a name="onhelp"></a>CWnd::OnHelp
+## <a name="cwndonhelp"></a><a name="onhelp"></a>CWnd:: OnHelp
 
 Обрабатывает справку F1 в приложении (с использованием текущего контекста).
 
@@ -7033,11 +7033,11 @@ afx_msg void OnHelp();
 
 ### <a name="remarks"></a>Remarks
 
-Смотрите [CWinApp::OnHelp](../../mfc/reference/cwinapp-class.md#onhelp) для получения дополнительной информации.
+Дополнительные сведения см. в разделе о функции [CWinApp:: OnHelp](../../mfc/reference/cwinapp-class.md#onhelp) .
 
-## <a name="cwndonhelpfinder"></a><a name="onhelpfinder"></a>CWnd::OnHelpFinder
+## <a name="cwndonhelpfinder"></a><a name="onhelpfinder"></a>CWnd:: Онхелпфиндер
 
-Обрабатывает ID_HELP_FINDER и ID_DEFAULT_HELP команды.
+Обрабатывает команды ID_HELP_FINDER и ID_DEFAULT_HELP.
 
 ```
 afx_msg void OnHelpFinder();
@@ -7045,11 +7045,11 @@ afx_msg void OnHelpFinder();
 
 ### <a name="remarks"></a>Remarks
 
-Смотрите [CWinApp::OnHelpFinder](../../mfc/reference/cwinapp-class.md#onhelpfinder) для получения дополнительной информации.
+Дополнительные сведения см. в разделе [CWinApp:: онхелпфиндер](../../mfc/reference/cwinapp-class.md#onhelpfinder) .
 
-## <a name="cwndonhelpindex"></a><a name="onhelpindex"></a>CWnd::OnHelpIndex
+## <a name="cwndonhelpindex"></a><a name="onhelpindex"></a>CWnd:: Онхелпиндекс
 
-Обрабатывает ID_HELP_INDEX команду и предоставляет тему справки по умолчанию.
+Обрабатывает команду ID_HELP_INDEX и предоставляет раздел справки по умолчанию.
 
 ```
 afx_msg void OnHelpIndex();
@@ -7057,9 +7057,9 @@ afx_msg void OnHelpIndex();
 
 ### <a name="remarks"></a>Remarks
 
-Смотрите [CWinApp::OnHelpIndex](../../mfc/reference/cwinapp-class.md#onhelpindex) для получения дополнительной информации.
+Дополнительные сведения см. в разделе [CWinApp:: онхелпиндекс](../../mfc/reference/cwinapp-class.md#onhelpindex) .
 
-## <a name="cwndonhelpinfo"></a><a name="onhelpinfo"></a>CWnd::OnHelpInfo
+## <a name="cwndonhelpinfo"></a><a name="onhelpinfo"></a>CWnd:: Онхелпинфо
 
 Вызывается платформой, когда пользователь нажимает клавишу F1.
 
@@ -7069,18 +7069,18 @@ afx_msg BOOL OnHelpInfo(HELPINFO* lpHelpInfo);
 
 ### <a name="parameters"></a>Параметры
 
-*lpHelpInfo*<br/>
-Указатель на структуру [HELPINFO,](/windows/win32/api/winuser/ns-winuser-helpinfo) содержащую информацию о пункте меню, элементе управления, диалоговом поле или окне, для которого запрашивается помощь.
+*лфелпинфо*<br/>
+Указатель на структуру [HELPINFO](/windows/win32/api/winuser/ns-winuser-helpinfo) , содержащую сведения о пункте меню, элементе управления, диалоговом окне или окне, для которого запрашивается справка.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает TRUE, если окно имеет фокус клавиатуры или если меню активна в окне. Если нет окна клавиатуры фокус, возвращает FALSE.
+Возвращает значение TRUE, если окно имеет фокус клавиатуры или если меню активно в окне. Если ни одно окно не имеет фокуса клавиатуры, возвращает значение FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Если меню активиируется при нажатии F1, WM_HELP отправляется в окно, связанное с меню; в противном случае WM_HELP отправляется в окно с фокусом клавиатуры. Если в окне нет фокусировки клавиатуры, WM_HELP отправляется в действующее в настоящее время окно.
+Если меню активна при нажатии клавиши F1, WM_HELP отправляется в окно, связанное с меню; в противном случае WM_HELP отправляется в окно, имеющее фокус клавиатуры. Если ни один из окон не имеет фокуса клавиатуры, WM_HELP отправляется в текущее активное окно.
 
-## <a name="cwndonhelpusing"></a><a name="onhelpusing"></a>CWnd::OnHelpUsing
+## <a name="cwndonhelpusing"></a><a name="onhelpusing"></a>CWnd:: Онхелпусинг
 
 Обрабатывает команду ID_HELP_USING.
 
@@ -7090,11 +7090,11 @@ afx_msg void OnHelpUsing();
 
 ### <a name="remarks"></a>Remarks
 
-Смотрите [CWinApp::OnHelpUsing](../../mfc/reference/cwinapp-class.md#onhelpusing) для получения дополнительной информации.
+Дополнительные сведения см. в разделе [CWinApp:: онхелпусинг](../../mfc/reference/cwinapp-class.md#onhelpusing) .
 
-## <a name="cwndonhotkey"></a><a name="onhotkey"></a>CWnd::OnHotKey
+## <a name="cwndonhotkey"></a><a name="onhotkey"></a>CWnd:: onhotkey клавиша
 
-Платформа вызывает эту функцию элемента, когда пользователь нажимает общесистемный горячий ключ.
+Платформа вызывает эту функцию-член, когда пользователь нажимает на уровне системы сочетание клавиш.
 
 ```
 afx_msg void OnHotKey(
@@ -7105,22 +7105,22 @@ afx_msg void OnHotKey(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|*nHotKeyId*|(в) Идентификатор горячего ключа, генерируемого сообщением. Если сообщение было создано системным горячим ключом, этот параметр будет одним из следующих значений:<br /><br /> - IDHOT_SNAPDESKTOP - оснастки рабочего стола горячий ключ был нажат.<br />- IDHOT_SNAPWINDOW - оснастки окно горячий ключ был нажат.|
-|*nKey1*|(в) Битовая комбинация (ИЛИ) флагов, указывающих клавиши, которые были нажаты в сочетании с ключом, указанным параметром *nKey2.* Вы можете выбрать<br /><br /> - MOD_ALT - либо ключ ALT был сдержан.<br />- MOD_CONTROL - Либо CTRL ключ был задержан.<br />- MOD_SHIFT - либо ключ SHIFT был сдержан.<br />- MOD_WIN - Либо ключ WINDOWS был задержан. Эти ключи помечены логотипом Microsoft Windows.|
-|*nKey2*|(в) Виртуальный код ключа горячего ключа.|
+|*нхоткэйид*|окне Идентификатор для сочетания клавиш, создавшего сообщение. Если сообщение было создано системой с помощью сочетания клавиш, этот параметр будет иметь одно из следующих значений:<br /><br /> -IDHOT_SNAPDESKTOP — была нажата клавиша "привязать".<br />-IDHOT_SNAPWINDOW — была нажата горячая клавиша окна привязки.|
+|*nKey1*|окне Побитовое сочетание (или) флагов, указывающих клавиши, которые были нажаты в сочетании с ключом, заданным параметром *nKey2* . Допустимые значения:<br /><br /> -MOD_ALT — клавиша ALT была удержана.<br />-MOD_CONTROL — клавиша CTRL была удержана.<br />-MOD_SHIFT — клавиша SHIFT была удержана.<br />-MOD_WIN — любой из ключей WINDOWS был удержан. Эти ключи помечены эмблемой Microsoft Windows.|
+|*nKey2*|окне Код виртуального ключа для сочетания клавиш.|
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод получает [уведомление WM_HOTKEY,](/windows/win32/inputdev/wm-hotkey) которое описано в SDK Windows. Это сообщение размещается в верхней части очереди сообщений, связанной с потоком, который зарегистрировал горячий ключ. Используйте функцию [RegisterHotKey](/windows/win32/api/winuser/nf-winuser-registerhotkey) для регистрации общесистемного горячего ключа.
+Этот метод получает уведомление [WM_HOTKEY](/windows/win32/inputdev/wm-hotkey) , которое описано в Windows SDK. Это сообщение помещается в верхней части очереди сообщений, связанной с потоком, который зарегистрировал горячую клавишу. Используйте функцию [RegisterHotKey](/windows/win32/api/winuser/nf-winuser-registerhotkey) для регистрации сочетания клавиш для всей системы.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonhscroll"></a><a name="onhscroll"></a>CWnd::OnHScroll
+## <a name="cwndonhscroll"></a><a name="onhscroll"></a>CWnd:: Онхскролл
 
-Платформа вызывает эту функцию участника, когда пользователь щелкает горизонтальной панелью прокрутки окна.
+Платформа вызывает эту функцию-член, когда пользователь щелкает горизонтальную полосу прокрутки окна.
 
 ```
 afx_msg void OnHScroll(
@@ -7131,38 +7131,38 @@ afx_msg void OnHScroll(
 
 ### <a name="parameters"></a>Параметры
 
-*nSBCode*<br/>
-Указано код прокрутки-бар, который указывает запрос на прокрутку пользователя. Возможные значения этого параметра:
+*нсбкоде*<br/>
+Указывает код полосы прокрутки, который указывает на запрос прокрутки пользователя. Возможные значения этого параметра:
 
-- SB_LEFT Прокрутите влево.
+- SB_LEFT прокрутить до левого края.
 
-- SB_ENDSCROLL Свиток Конца.
+- SB_ENDSCROLL завершения прокрутки.
 
-- SB_LINELEFT Прокрутка влево.
+- SB_LINELEFT прокрутка влево.
 
-- SB_LINERIGHT Прокрутите вправо.
+- SB_LINERIGHT прокрутка вправо.
 
-- SB_PAGELEFT Прокрутите одну страницу в левое время.
+- SB_PAGELEFT прокрутить на одну страницу влево.
 
-- SB_PAGERIGHT Прокрутите одну страницу вправо.
+- SB_PAGERIGHT перейти на одну страницу вправо.
 
-- SB_RIGHT Прокрутите вкрайней.
+- SB_RIGHT прокрутить до правого края.
 
-- SB_THUMBPOSITION Прокрутите в абсолютное положение. Текущее положение определяется параметром *nPos.*
+- SB_THUMBPOSITION прокрутить к абсолютному положению. Текущая позицией задается параметром *npos* .
 
-- SB_THUMBTRACK Перетащите окно прокрутки в указанное положение. Текущее положение определяется параметром *nPos.*
+- SB_THUMBTRACK перетащите ползунок в указанное расположение. Текущая позицией задается параметром *npos* .
 
-*Npos*<br/>
-Уфиксирьте положение окна прокрутки, если код прокрутки-бар SB_THUMBPOSITION или SB_THUMBTRACK; в противном случае, не используется. В зависимости от исходного диапазона прокрутки, *nPos* может быть отрицательным и должны быть отлиты в **Int,** если это необходимо.
+*nPos*<br/>
+Задает точку прокрутки, если код полосы прокрутки SB_THUMBPOSITION или SB_THUMBTRACK; в противном случае не используется. В зависимости от первоначального диапазона прокрутки *npos* могут быть отрицательными и при необходимости быть приведены к типу **`int`** .
 
-*pScrollBar*<br/>
-Если сообщение прокрутки пришло из управления прокрутки-панели, содержит указатель на элемент управления. Если пользователь нажал на панель прокрутки окна, этот параметр является NULL. Указатель может быть временным. Его не требуется сохранять для дальнейшего использования.
+*пскроллбар*<br/>
+Если сообщение с прокруткой поступило из элемента управления полосы прокрутки, содержит указатель на элемент управления. Если пользователь щелкнул полосу прокрутки окна, этот параметр имеет значение NULL. Указатель может быть временным. Его не требуется сохранять для дальнейшего использования.
 
 ### <a name="remarks"></a>Remarks
 
-Код SB_THUMBTRACK прокрутки-бар обычно используется приложениями, которые дают некоторую обратную связь во время перетаскивания окна прокрутки.
+SB_THUMBTRACK полосы прокрутки обычно используются приложениями, которые предоставляют некоторую обратную связь во время перетаскивания бегунка.
 
-Если приложение прокручивает содержимое, контролируемое баром прокрутки, оно также должно сбросить положение окна прокрутки с функцией члена [SetScrollPos.](#setscrollpos)
+Если приложение прокручивает содержимое, управляемое полосой прокрутки, оно должно также сбрасывать точку прокрутки с помощью функции члена [сетскроллпос](#setscrollpos) .
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
@@ -7171,9 +7171,9 @@ afx_msg void OnHScroll(
 
 [!code-cpp[NVC_MFCWindowing#108](../../mfc/reference/codesnippet/cpp/cwnd-class_48.cpp)]
 
-## <a name="cwndonhscrollclipboard"></a><a name="onhscrollclipboard"></a>CWnd::OnHScrollClipboard
+## <a name="cwndonhscrollclipboard"></a><a name="onhscrollclipboard"></a>CWnd:: Онхскроллклипбоард
 
-Функция `OnHScrollClipboard` члена владельца Clipboard вызывается зрителем Clipboard, когда данные Clipboard имеют `CF_OWNERDISPLAY` формат и есть событие в горизонтальной панели прокрутки просмотра Clipboard.
+`OnHScrollClipboard`Функция-член владельца буфера обмена вызывается средством просмотра буфера обмена, если данные в буфере обмена имеют `CF_OWNERDISPLAY` Формат, и в горизонтальной полосе прокрутки средства просмотра буфера присутствует событие.
 
 ```
 afx_msg void OnHScrollClipboard(
@@ -7184,41 +7184,41 @@ afx_msg void OnHScrollClipboard(
 
 ### <a name="parameters"></a>Параметры
 
-*pClipAppWnd*<br/>
-Определяет указатель на окно Clipboard-viewer. Указатель может быть временным. Его не требуется сохранять для дальнейшего использования.
+*пклипаппвнд*<br/>
+Указывает указатель на окно средства просмотра буфера обмена. Указатель может быть временным. Его не требуется сохранять для дальнейшего использования.
 
-*nSBCode*<br/>
-Укажите один из следующих кодов прокрутки-бар в низком порядке слова:
+*нсбкоде*<br/>
+Задает один из следующих кодов полос прокрутки в слове низкого порядка:
 
-- SB_BOTTOM Прокрутите вправом.
+- SB_BOTTOM прокрутить вниз вправо.
 
-- SB_ENDSCROLL Свиток Конца.
+- SB_ENDSCROLL завершения прокрутки.
 
-- SB_LINEDOWN Прокрутите одну строку вниз.
+- SB_LINEDOWN прокрутить на одну строку вниз.
 
-- SB_LINEUP Прокрутите одну линию вверх.
+- SB_LINEUP прокрутить на одну строку вверх.
 
-- SB_PAGEDOWN Прокрутите одну страницу вниз.
+- SB_PAGEDOWN прокрутить на одну страницу вниз.
 
-- SB_PAGEUP Прокрутите одну страницу вверх.
+- SB_PAGEUP перейти на одну страницу вверх.
 
-- SB_THUMBPOSITION Прокрутите абсолютное положение. Текущая позиция предоставляется в *nPos*.
+- SB_THUMBPOSITION прокрутите до абсолютной позицией. Текущая заданная позицией предоставляется в *npos*.
 
-- SB_TOP Прокрутите в левый верхний.
+- SB_TOP прокрутить к верхнему левому краю.
 
-*Npos*<br/>
-Содержит положение окна прокрутки, если код прокрутки-бар SB_THUMBPOSITION; в противном случае не используется.
+*nPos*<br/>
+Содержит расположение бокса прокрутки, если код полосы прокрутки SB_THUMBPOSITION; в противном случае не используется.
 
 ### <a name="remarks"></a>Remarks
 
-Владелец должен прокрутить изображение Clipboard, вывернуть соответствующий раздел и обновить значения прокрутки-панели.
+Владелец должен прокручивать изображение в буфере обмена, сделать недействительным соответствующий раздел и обновить значения полосы прокрутки.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndoniconerasebkgnd"></a><a name="oniconerasebkgnd"></a>CWnd::OnIconEraseBkgnd
+## <a name="cwndoniconerasebkgnd"></a><a name="oniconerasebkgnd"></a>CWnd:: Ониконерасебкгнд
 
-Рамки называет эту функцию члена для `CWnd` минимизированного (иконописного) объекта, когда фон значка должен быть заполнен перед покраской значка.
+Платформа вызывает эту функцию-член для сворачивания (значка) объекта, `CWnd` когда фон значка необходимо заполнить перед рисованием значка.
 
 ```
 afx_msg void OnIconEraseBkgnd(CDC* pDC);
@@ -7226,21 +7226,21 @@ afx_msg void OnIconEraseBkgnd(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
-Определяет объект устройства-контекстзнача иконы. Может быть временным и не должны храниться для последующего использования.
+*Хозяин*<br/>
+Указывает объект контекста устройства для значка. Может быть временным и не должен храниться для последующего использования.
 
 ### <a name="remarks"></a>Remarks
 
-`CWnd`получает этот вызов только в том случае, если значок класса определен для реализации по умолчанию окна; в противном случае [OnEraseBkgnd](#onerasebkgnd) называется.
+`CWnd`Получает этот вызов, только если значок класса определен для реализации окна по умолчанию; в противном случае вызывается [онерасебкгнд](#onerasebkgnd) .
 
-Функция члена [DefWindowProc](#defwindowproc) заполняет фон значка фоновой щеткой родительского окна.
+Функция члена [дефвиндовпрок](#defwindowproc) заполняет фон значка фоновой кистью родительского окна.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndoninitmenu"></a><a name="oninitmenu"></a>CWnd::OnInitMenu
+## <a name="cwndoninitmenu"></a><a name="oninitmenu"></a>CWnd:: Онинитмену
 
-Платформа вызывает эту функцию элемента, когда меню вот-вот станет активным.
+Платформа вызывает эту функцию-член, когда меню собирается стать активным.
 
 ```
 afx_msg void OnInitMenu(CMenu* pMenu);
@@ -7248,21 +7248,21 @@ afx_msg void OnInitMenu(CMenu* pMenu);
 
 ### <a name="parameters"></a>Параметры
 
-*pMenu*<br/>
-Определяет меню для инициализации. Может быть временным и не должны храниться для последующего использования.
+*пмену*<br/>
+Указывает меню для инициализации. Может быть временным и не должен храниться для последующего использования.
 
 ### <a name="remarks"></a>Remarks
 
-`OnInitMenu`вызывается, когда пользователь нажимает на элемент в баре меню или нажимает клавишу меню. Переопределить эту функцию участника, чтобы изменить меню перед его отображением.
+`OnInitMenu`вызывается, когда пользователь щелкает элемент в строке меню или нажимает клавишу меню. Переопределите эту функцию-член, чтобы изменить меню перед отображением.
 
-`OnInitMenu`вызывается только один раз, когда меню впервые доступно (например, когда пользователь нажимает на элемент в баре меню). Этот метод не предоставляет информацию о пунктах меню. Когда пользователь переходит к элементам в меню (например, перемещая мышь через несколько элементов меню), функция не вызывается снова. Как только пользователь выходит из меню (например, нажав на область клиента приложения) и затем нажимает элемент в панели меню, функция будет вызвана снова.
+`OnInitMenu`вызывается только один раз при первом обращении к меню (например, когда пользователь щелкает элемент в строке меню). Этот метод не предоставляет сведения о пунктах меню. При переходе пользователя к элементам в меню (например, при перемещении мыши по нескольким пунктам меню) функция не вызывается снова. После выхода пользователя из меню (например, при щелчке в клиентской области приложения) и последующем щелчке элемента в строке меню функция будет вызываться снова.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndoninitmenupopup"></a><a name="oninitmenupopup"></a>CWnd::OnInitMenuPopup
+## <a name="cwndoninitmenupopup"></a><a name="oninitmenupopup"></a>CWnd:: Онинитменупопуп
 
-Платформа вызывает эту функцию участника, когда всплывающее меню вот-вот станет активным.
+Платформа вызывает эту функцию-член, когда всплывающее меню станет активным.
 
 ```
 afx_msg void OnInitMenuPopup(
@@ -7273,25 +7273,25 @@ afx_msg void OnInitMenuPopup(
 
 ### <a name="parameters"></a>Параметры
 
-*pPopupMenu*<br/>
-Определяет объект меню из всплывающих меню. Может быть временным и не должны храниться для последующего использования.
+*ппопупмену*<br/>
+Указывает объект меню всплывающего меню. Может быть временным и не должен храниться для последующего использования.
 
-*Nindex*<br/>
-В основном меню указан индекс всплывающее меню.
+*ниндекс*<br/>
+Задает индекс всплывающего меню в главном меню.
 
-*bSysМеню*<br/>
-ПРАВДА, если всплывающее меню меню управления; в противном случае FALSE.
+*бсисмену*<br/>
+Значение TRUE, если всплывающее меню является меню управления; в противном случае — FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Это позволяет приложению изменять всплывающее меню до его отображения без изменения всего меню.
+Это позволяет приложению изменить всплывающее меню до его отображения без изменения всего меню.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndoninputdevicechange"></a><a name="oninputdevicechange"></a>CWnd::OnInputDeviceChange
+## <a name="cwndoninputdevicechange"></a><a name="oninputdevicechange"></a>CWnd:: Онинпутдевицечанже
 
-Платформа вызывает эту функцию элемента при добавлении или удалении устройства ввоза или удаления из системы.
+Платформа вызывает эту функцию-член при добавлении или удалении устройства ввода/вывода из системы.
 
 ```
 afx_msg void OnInputDeviceChange(unsigned short uFlag);
@@ -7299,20 +7299,20 @@ afx_msg void OnInputDeviceChange(unsigned short uFlag);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|*uФлаг*|(в) Этот флаг может содержать следующие значения:<br /><br /> - GIDC_ARRIVAL - В систему добавлено новое устройство.<br />- GIDC_REMOVAL - Устройство было удалено из системы.|
+|*уфлаг*|окне Этот флаг может содержать следующие значения:<br /><br /> -GIDC_ARRIVAL — новое устройство добавлено в систему.<br />-GIDC_REMOVAL — устройство удалено из системы.|
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод получает [уведомление WM_INPUT_DEVICE_CHANGE,](/windows/win32/inputdev/wm-input-device-change) которое описано в SDK Windows. Это общее сообщение устройства ввода.
+Этот метод получает уведомление [WM_INPUT_DEVICE_CHANGE](/windows/win32/inputdev/wm-input-device-change) , которое описано в Windows SDK. Является универсальным сообщением устройства ввода.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndoninputlangchange"></a><a name="oninputlangchange"></a>CWnd::InputLangChange
+## <a name="cwndoninputlangchange"></a><a name="oninputlangchange"></a>CWnd:: Онинпутлангчанже
 
-Платформа вызывает этот элемент для верхнего пострадавшего окна после изменения языка ввода приложения.
+Платформа вызывает этот элемент для самого верхнего затронутого окна после изменения языка ввода приложения.
 
 ```
 afx_msg void OnInputLangChange(
@@ -7322,21 +7322,21 @@ afx_msg void OnInputLangChange(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|*nCharSet*|(в) Набор символов нового локализации. Для получения дополнительной *информации* см. [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw)|
-|*nLocaleId*|(в) Идентификатор локального ввода. Для получения дополнительной информации смотрите [Language Identifier Constants and Strings](/windows/win32/Intl/language-identifier-constants-and-strings).|
+|*Тип nChar*|окне Кодировка нового языкового стандарта. Дополнительные сведения см. в описании параметра *лфчарсет* структуры [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) .|
+|*нлокалеид*|окне Идентификатор локали ввода. Дополнительные сведения см. в разделе [константы и строки идентификатора языка](/windows/win32/Intl/language-identifier-constants-and-strings).|
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод получает [WM_INPUTLANGCHANGE](/windows/win32/winmsg/wm-inputlangchange) сообщение муведомления, которое описано в SDK Windows.
+Этот метод получает сообщение уведомления [WM_INPUTLANGCHANGE](/windows/win32/winmsg/wm-inputlangchange) , которое описано в Windows SDK.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndoninputlangchangerequest"></a><a name="oninputlangchangerequest"></a>CWnd::InputLangChangeЗапрос
+## <a name="cwndoninputlangchangerequest"></a><a name="oninputlangchangerequest"></a>CWnd:: Онинпутлангчанжерекуест
 
-Платформа вызывает этот участник для окна с фокусом, когда пользователь выбирает новый язык ввода.
+Платформа вызывает этот элемент для окна с фокусом, когда пользователь выбирает новый язык ввода.
 
 ```
 afx_msg void OnInputLangChangeRequest(
@@ -7346,21 +7346,21 @@ afx_msg void OnInputLangChangeRequest(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|*nФлаги*|(в) Битовая комбинация флагов, указывающих на то, что новый локали был выбран из предыдущего или следующего локаль в установленном списке локали, или что макет клавиатуры нового ввода может быть использован с набором символов системы.<br /><br /> Возможные значения INPUTLANGCHANGE_BACKWARD, INPUTLANGCHANGE_FORWARD и INPUTLANGCHANGE_SYSCHARSET.|
-|*nLocaleId*|(в) Идентификатор локального ввода. Для получения дополнительной информации смотрите [Language Identifier Constants and Strings](/windows/win32/Intl/language-identifier-constants-and-strings).|
+|*нфлагс*|окне Побитовое сочетание (или) флагов, указывающих на то, что новый языковой стандарт был выбран из предыдущего или следующего языкового стандарта в списке установленных языков, или что новая раскладка клавиатуры ввода может использоваться с системным набором символов.<br /><br /> Возможные значения: INPUTLANGCHANGE_BACKWARD, INPUTLANGCHANGE_FORWARD и INPUTLANGCHANGE_SYSCHARSET.|
+|*нлокалеид*|окне Идентификатор локали ввода. Дополнительные сведения см. в разделе [константы и строки идентификатора языка](/windows/win32/Intl/language-identifier-constants-and-strings).|
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод получает [WM_INPUTLANGCHANGEREQUEST](/windows/win32/winmsg/wm-inputlangchangerequest) сообщение об уведомлении, которое описано в SDK Windows. Это сообщение публикуется, когда пользователь выбирает новый язык ввода либо с hotkey, который указан в приложении панели управления клавиатурой, или из индикатора на панели задач системы.
+Этот метод получает сообщение уведомления [WM_INPUTLANGCHANGEREQUEST](/windows/win32/winmsg/wm-inputlangchangerequest) , которое описано в Windows SDK. Это сообщение отправляется, когда пользователь выбирает новый язык ввода с помощью сочетания клавиш, указанного в приложении панели управления "клавиатура", или из индикатора на системной панели задач.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonkeydown"></a><a name="onkeydown"></a>CWnd::OnKeydown
+## <a name="cwndonkeydown"></a><a name="onkeydown"></a>CWnd:: OnKeyDown
 
-Платформа вызывает эту функцию члена при нажатии несистемного ключа.
+Платформа вызывает эту функцию-член при нажатии несистемного ключа.
 
 ```
 afx_msg void OnKeyDown(
@@ -7371,41 +7371,41 @@ afx_msg void OnKeyDown(
 
 ### <a name="parameters"></a>Параметры
 
-*Nchar*<br/>
-Определяет виртуальный код ключа данного ключа. Список стандартных виртуальных кодов ключей можно узнать на примере Winuser.h
+*nChar*<br/>
+Указывает виртуальный код ключа данного ключа. Список стандартных виртуальных клавиш см. в разделе Winuser. h
 
-*nRepCnt*<br/>
-Повторите подсчет (количество раз нажатие клавиши повторяется в результате того, что пользователь удерживает ключ).
+*нрепкнт*<br/>
+Число повторов (количество повторов нажатия клавиши в результате, когда пользователь удерживает клавишу).
 
-*nФлаги*<br/>
-Осваивай код сканирования, код перехода ключей, предыдущее состояние ключа и код контекста, как показано в следующем списке:
+*нфлагс*<br/>
+Указывает код сканирования, код перехода на ключ, предыдущее состояние ключа и код контекста, как показано в следующем списке:
 
-|Значение|Описание|
+|Значение|Описание:|
 |-----------|-----------------|
-|0-7|Код сканирования (OEM-зависимое значение).|
-|8|Расширенный ключ, например, функциональный ключ или ключ на цифровой клавиатуре (1, если это расширенный ключ).|
+|0-7|Код сканирования (значение, зависящее от изготовителя оборудования).|
+|8|Расширенный ключ, например ключ функции или клавиша на цифровой клавиатуре (1, если это расширенный ключ).|
 |9-10|Не используется.|
-|11-12|Используется внутренне Windows.|
-|13|Контекстный код (1, если ключ ALT удерживается при нажатии клавиши; в противном случае 0).|
-|14|Предыдущее состояние ключа (1, если ключ не работает до вызова, 0, если ключ вверх).|
-|15|Состояние перехода (1, если ключ освобождается, 0, если ключ нажат).|
+|11-12|Используется внутри Windows.|
+|13|Контекстный код (1, если клавиша ALT удерживается при нажатии клавиши; в противном случае — 0).|
+|14|Предыдущее состояние ключа (1, если ключ не работает до вызова, 0, если ключ работает).|
+|15|Состояние перехода (1, если ключ освобождается, 0 при нажатии клавиши).|
 
-Для WM_KEYDOWN сообщения бит ключа-перехода (бит 15) радо 0, а бит контекст-кода (бит 13) — 0.
+Для WM_KEYDOWN сообщения бит перехода на ключ (бит 15) равен 0, а бит контекстного кода (бит 13) равен 0.
 
 ### <a name="remarks"></a>Remarks
 
-Несистемный ключ — это клавиша клавиатуры, которая нажата при нажатии клавиши ALT или клавиша клавиатуры, которая нажата при `CWnd` входе.
+Несистемный ключ — клавиша клавиатуры, которая нажата, когда клавиша ALT не нажата или клавиша клавиатуры, нажатая при `CWnd` наличии фокуса ввода.
 
-Из-за автоматического повторения `OnKeyDown` может произойти несколько вызовов до вызова функции функции [участника OnKeyUp.](#onkeyup) Бит, указывающий на предыдущее состояние ключа, `OnKeyDown` может быть использован для определения того, является ли вызов первым переходом вниз или повторным переходом вниз.
+Из-за автоматической повторной повторной `OnKeyDown` попытки может произойти несколько вызовов до вызова функции-члена [онкэйуп](#onkeyup) . Бит, указывающий на предыдущее состояние ключа, можно использовать для определения того, `OnKeyDown` является ли вызов первым переходом или повторным переходом.
 
-Для клавиатур IBM Enhanced 101- и 102-ключ, расширенные клавиши являются правильными клавишами ALT и правыми клавишами CTRL на основной части клавиатуры; INS, DEL, HOME, END, PAGE UP, PAGE DOWN и клавиши со стрелками в кластерах слева от цифровой клавиатуры; и клавиши слэйс (/) и ENTER в числовой клавиатуре. Некоторые другие клавиатуры могут поддерживать бит расширенного ключа в *nFlags*.
+Для клавиатуры IBM с улучшенными 101-и 102-клавишами расширенными ключами являются правая клавиша ALT и правые клавиши CTRL в основном разделе клавиатуры. клавиши INS, DEL, ДОМАШНяя, КОНЕЧная страница вверх, PAGE DOWN и стрелка в кластерах слева от цифровой клавиатуры; и косая черта (/) и введите клавиши на цифровой клавиатуре. Некоторые другие клавиатуры могут поддерживать бит расширенного ключа в *нфлагс*.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonkeyup"></a><a name="onkeyup"></a>CWnd::OnKeyUp
+## <a name="cwndonkeyup"></a><a name="onkeyup"></a>CWnd:: Онкэйуп
 
-Платформа вызывает эту функцию элемента при освобождении несистемного ключа.
+Платформа вызывает эту функцию-член при освобождении несистемного ключа.
 
 ```
 afx_msg void OnKeyUp(
@@ -7416,39 +7416,39 @@ afx_msg void OnKeyUp(
 
 ### <a name="parameters"></a>Параметры
 
-*Nchar*<br/>
-Определяет виртуальный код ключа данного ключа. Список стандартных виртуальных кодов ключей можно узнать на примере Winuser.h
+*nChar*<br/>
+Указывает виртуальный код ключа данного ключа. Список стандартных виртуальных клавиш см. в разделе Winuser. h
 
-*nRepCnt*<br/>
-Повторите подсчет (количество раз нажатие клавиши повторяется в результате того, что пользователь удерживает ключ).
+*нрепкнт*<br/>
+Число повторов (количество повторов нажатия клавиши в результате, когда пользователь удерживает клавишу).
 
-*nФлаги*<br/>
-Осваивай код сканирования, код перехода ключей, предыдущее состояние ключа и код контекста, как показано в следующем списке:
+*нфлагс*<br/>
+Указывает код сканирования, код перехода на ключ, предыдущее состояние ключа и код контекста, как показано в следующем списке:
 
-|Значение|Описание|
+|Значение|Описание:|
 |-----------|-----------------|
-|0-7|Код сканирования (OEM-зависимое значение). Низкий байт слова высокого порядка.|
-|8|Расширенный ключ, например, функциональный ключ или ключ на цифровой клавиатуре (1, если это расширенный ключ; в противном случае 0).|
+|0-7|Код сканирования (значение, зависящее от изготовителя оборудования). Младший байт для слова высокого порядка.|
+|8|Расширенный ключ, например ключ функции или клавиша на цифровой клавиатуре (1, если это расширенный ключ; в противном случае 0).|
 |9-10|Не используется.|
-|11-12|Используется внутренне Windows.|
-|13|Контекстный код (1, если ключ ALT удерживается при нажатии клавиши; в противном случае 0).|
-|14|Предыдущее состояние ключа (1, если ключ не работает до вызова, 0, если ключ вверх).|
-|15|Состояние перехода (1, если ключ освобождается, 0, если ключ нажат).|
+|11-12|Используется внутри Windows.|
+|13|Контекстный код (1, если клавиша ALT удерживается при нажатии клавиши; в противном случае — 0).|
+|14|Предыдущее состояние ключа (1, если ключ не работает до вызова, 0, если ключ работает).|
+|15|Состояние перехода (1, если ключ освобождается, 0 при нажатии клавиши).|
 
-Для сообщения WM_KEYUP бит ключа-перехода (бит 15) расписан 1, а бит контекст-кода (бит 13) — 0.
+Для WM_KEYUP сообщения бит перехода на ключ (бит 15) равен 1, а бит контекстного кода (бит 13) равен 0.
 
 ### <a name="remarks"></a>Remarks
 
-Несистемный ключ — это клавиша клавиатуры, которая нажата при нажатии `CWnd` клавиши ALT или клавиша клавиатуры, которая нажата при входе.
+Несистемный ключ — это клавиша клавиатуры, которая нажата, когда клавиша ALT не нажата или клавиша клавиатуры, которая нажата, когда `CWnd` имеет фокус ввода.
 
-Для клавиатур IBM Enhanced 101- и 102-ключ, расширенные клавиши являются правильными клавишами ALT и правыми клавишами CTRL на основной части клавиатуры; INS, DEL, HOME, END, PAGE UP, PAGE DOWN и клавиши со стрелками в кластерах слева от цифровой клавиатуры; и клавиши слэйс (/) и ENTER в числовой клавиатуре. Некоторые другие клавиатуры могут поддерживать бит расширенного ключа в *nFlags*.
+Для клавиатуры IBM с улучшенными 101-и 102-клавишами расширенными ключами являются правая клавиша ALT и правые клавиши CTRL в основном разделе клавиатуры. клавиши INS, DEL, ДОМАШНяя, КОНЕЧная страница вверх, PAGE DOWN и стрелка в кластерах слева от цифровой клавиатуры; и косая черта (/) и введите клавиши на цифровой клавиатуре. Некоторые другие клавиатуры могут поддерживать бит расширенного ключа в *нфлагс*.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonkillfocus"></a><a name="onkillfocus"></a>CWnd::OnKillFocus
+## <a name="cwndonkillfocus"></a><a name="onkillfocus"></a>CWnd:: Онкиллфокус
 
-Платформа вызывает эту функцию участника непосредственно перед потерей входного фокуса.
+Платформа вызывает эту функцию члена непосредственно перед тем, как потерять фокус ввода.
 
 ```
 afx_msg void OnKillFocus(CWnd* pNewWnd);
@@ -7457,18 +7457,18 @@ afx_msg void OnKillFocus(CWnd* pNewWnd);
 ### <a name="parameters"></a>Параметры
 
 *pNewWnd*<br/>
-Освеление указателя на окно, которое получает входиный фокус (может быть NULL или может быть временным).
+Указывает указатель на окно, которое получает фокус ввода (может быть равно NULL или может быть временным).
 
 ### <a name="remarks"></a>Remarks
 
-Если `CWnd` объект отображает карету, карет должен быть уничтожен в этой точке.
+Если `CWnd` объект отображает курсор, в этот момент курсор должен быть разрушен.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonlbuttondblclk"></a><a name="onlbuttondblclk"></a>CWnd::OnLButtonDblClk
+## <a name="cwndonlbuttondblclk"></a><a name="onlbuttondblclk"></a>CWnd:: Онлбуттондблклк
 
-Рамочная система вызывает эту функцию участника, когда пользователь дважды щелкает левой кнопкой мыши.
+Платформа вызывает эту функцию-член, когда пользователь дважды щелкает левую кнопку мыши.
 
 ```
 afx_msg void OnLButtonDblClk(
@@ -7478,32 +7478,32 @@ afx_msg void OnLButtonDblClk(
 
 ### <a name="parameters"></a>Параметры
 
-*nФлаги*<br/>
-Указывает, не имеют ли различные виртуальные клавиши. Этот параметр может быть любой комбинацией следующих значений:
+*нфлагс*<br/>
+Указывает, работают ли различные виртуальные ключи. Этот параметр может иметь любое сочетание следующих значений:
 
-- MK_CONTROL Установить, если ключ CTRL не работает.
+- MK_CONTROL установить, если клавиша CTRL не нажата.
 
-- MK_LBUTTON Установить, если левая кнопка мыши не работает.
+- MK_LBUTTON задается, если левая кнопка мыши не работает.
 
 - MK_MBUTTON установить, если средняя кнопка мыши не работает.
 
-- MK_RBUTTON Установить, если правая кнопка мыши не работает.
+- MK_RBUTTON установить, если правая кнопка мыши не нажата.
 
-- MK_SHIFT Установить, если ключ SHIFT не работает.
+- MK_SHIFT установить, если клавиша SHIFT не нажата.
 
-*Точки*<br/>
-Определяет x- и y-координаты курсора. Эти координаты всегда относительно верхнего левого угла окна.
+*точки*<br/>
+Задает координату x и y курсора. Эти координаты всегда отсчитываются относительно левого верхнего угла окна.
 
 ### <a name="remarks"></a>Remarks
 
-Только окна, которые имеют CS_DBLCLKS стиле `OnLButtonDblClk` [WNDCLASS,](/windows/win32/api/winuser/ns-winuser-wndclassw) будут принимать звонки. Это значение по умолчанию для окон класса Microsoft Foundation. Windows `OnLButtonDblClk` звонит, когда пользователь нажимает, выпускает, а затем снова нажимает кнопку левой мыши в пределах срока двойного щелчка системы. Двойное нажатие кнопки левой мыши на самом деле генерирует четыре события: [WM_LBUTTONDOWN,](#onlbuttondown) [WM_LBUTTONUP](#onlbuttonup) сообщения, WM_LBUTTONDBLCLK вызова, и еще один WM_LBUTTONUP сообщение, когда кнопка выпущена.
+Вызовы будут возникать только в тех окнах, которые имеют стиль CS_DBLCLKS [вндкласс](/windows/win32/api/winuser/ns-winuser-wndclassw) `OnLButtonDblClk` . Это значение по умолчанию для окон Microsoft Foundation Class. Windows вызывает, `OnLButtonDblClk` когда пользователь нажимает, отпускает, а затем снова нажимает левую кнопку мыши в пределах предельного времени двойного щелчка системы. Двойной щелчок левой кнопки мыши на самом деле приводит к четырем событиям: [WM_LBUTTONDOWN](#onlbuttondown), [WM_LBUTTONUP](#onlbuttonup) сообщения, вызов WM_LBUTTONDBLCLK и еще одно сообщение WM_LBUTTONUP при отпускании кнопки.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonlbuttondown"></a><a name="onlbuttondown"></a>CWnd::OnLButtonDown
+## <a name="cwndonlbuttondown"></a><a name="onlbuttondown"></a>CWnd:: Онлбуттондовн
 
-Рамочная система вызывает эту функцию участника, когда пользователь нажимает на левую кнопку мыши.
+Платформа вызывает эту функцию члена, когда пользователь нажимает левую кнопку мыши.
 
 ```
 afx_msg void OnLButtonDown(
@@ -7513,30 +7513,30 @@ afx_msg void OnLButtonDown(
 
 ### <a name="parameters"></a>Параметры
 
-*nФлаги*<br/>
-Указывает, не имеют ли различные виртуальные клавиши. Этот параметр может быть любой комбинацией следующих значений:
+*нфлагс*<br/>
+Указывает, работают ли различные виртуальные ключи. Этот параметр может иметь любое сочетание следующих значений:
 
-- MK_CONTROL Установить, если ключ CTRL не работает.
+- MK_CONTROL установить, если клавиша CTRL не нажата.
 
-- MK_LBUTTON Установить, если левая кнопка мыши не работает.
+- MK_LBUTTON задается, если левая кнопка мыши не работает.
 
 - MK_MBUTTON установить, если средняя кнопка мыши не работает.
 
-- MK_RBUTTON Установить, если правая кнопка мыши не работает.
+- MK_RBUTTON установить, если правая кнопка мыши не нажата.
 
-- MK_SHIFT Установить, если ключ SHIFT не работает.
+- MK_SHIFT установить, если клавиша SHIFT не нажата.
 
-*Точки*<br/>
-Определяет x- и y-координаты курсора. Эти координаты всегда относительно верхнего левого угла окна.
+*точки*<br/>
+Задает координату x и y курсора. Эти координаты всегда отсчитываются относительно левого верхнего угла окна.
 
 ### <a name="remarks"></a>Remarks
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonlbuttonup"></a><a name="onlbuttonup"></a>CWnd::OnLButtonUp
+## <a name="cwndonlbuttonup"></a><a name="onlbuttonup"></a>CWnd:: Онлбуттонуп
 
-Платформа вызывает эту функцию участника, когда пользователь выпускает левую кнопку мыши.
+Платформа вызывает эту функцию члена, когда пользователь отпускает левую кнопку мыши.
 
 ```
 afx_msg void OnLButtonUp(
@@ -7546,28 +7546,28 @@ afx_msg void OnLButtonUp(
 
 ### <a name="parameters"></a>Параметры
 
-*nФлаги*<br/>
-Указывает, не имеют ли различные виртуальные клавиши. Этот параметр может быть любой комбинацией следующих значений:
+*нфлагс*<br/>
+Указывает, работают ли различные виртуальные ключи. Этот параметр может иметь любое сочетание следующих значений:
 
-- MK_CONTROL Установить, если ключ CTRL не работает.
+- MK_CONTROL установить, если клавиша CTRL не нажата.
 
 - MK_MBUTTON установить, если средняя кнопка мыши не работает.
 
-- MK_RBUTTON Установить, если правая кнопка мыши не работает.
+- MK_RBUTTON установить, если правая кнопка мыши не нажата.
 
-- MK_SHIFT Установить, если ключ SHIFT не работает.
+- MK_SHIFT установить, если клавиша SHIFT не нажата.
 
-*Точки*<br/>
-Определяет x- и y-координаты курсора. Эти координаты всегда относительно верхнего левого угла окна.
+*точки*<br/>
+Задает координату x и y курсора. Эти координаты всегда отсчитываются относительно левого верхнего угла окна.
 
 ### <a name="remarks"></a>Remarks
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonmbuttondblclk"></a><a name="onmbuttondblclk"></a>CWnd::OnMButtonDblClk
+## <a name="cwndonmbuttondblclk"></a><a name="onmbuttondblclk"></a>CWnd:: Онмбуттондблклк
 
-Рамочная система вызывает эту функцию участника, когда пользователь дважды нажимает на кнопку средней мыши.
+Платформа вызывает эту функцию-член, когда пользователь дважды щелкает среднюю кнопку мыши.
 
 ```
 afx_msg void OnMButtonDblClk(
@@ -7577,32 +7577,32 @@ afx_msg void OnMButtonDblClk(
 
 ### <a name="parameters"></a>Параметры
 
-*nФлаги*<br/>
-Указывает, не имеют ли различные виртуальные клавиши. Этот параметр может быть любой комбинацией следующих значений:
+*нфлагс*<br/>
+Указывает, работают ли различные виртуальные ключи. Этот параметр может иметь любое сочетание следующих значений:
 
-- MK_CONTROL Установить, если ключ CTRL не работает.
+- MK_CONTROL установить, если клавиша CTRL не нажата.
 
-- MK_LBUTTON Установить, если левая кнопка мыши не работает.
+- MK_LBUTTON задается, если левая кнопка мыши не работает.
 
 - MK_MBUTTON установить, если средняя кнопка мыши не работает.
 
-- MK_RBUTTON Установить, если правая кнопка мыши не работает.
+- MK_RBUTTON установить, если правая кнопка мыши не нажата.
 
-- MK_SHIFT Установить, если ключ SHIFT не работает.
+- MK_SHIFT установить, если клавиша SHIFT не нажата.
 
-*Точки*<br/>
-Определяет x- и y-координаты курсора. Эти координаты всегда относительно верхнего левого угла окна.
+*точки*<br/>
+Задает координату x и y курсора. Эти координаты всегда отсчитываются относительно левого верхнего угла окна.
 
 ### <a name="remarks"></a>Remarks
 
-Только окна, которые имеют CS_DBLCLKS стиле `OnMButtonDblClk` [WNDCLASS,](/windows/win32/api/winuser/ns-winuser-wndclassw) будут принимать звонки. Это значение по умолчанию для всех окон класса Microsoft Foundation. Windows генерирует `OnMButtonDblClk` вызов, когда пользователь нажимает, выпускает, а затем снова нажимает кнопку средней мыши в пределах срока двойного щелчка системы. Двойное нажатие кнопки средней мыши на самом деле генерирует четыре события: [WM_MBUTTONDOWN](#onmbuttondown) и [WM_MBUTTONUP](#onmbuttonup) сообщения, WM_MBUTTONDBLCLK вызова и другое WM_MBUTTONUP сообщение.
+Вызовы будут возникать только в тех окнах, которые имеют стиль CS_DBLCLKS [вндкласс](/windows/win32/api/winuser/ns-winuser-wndclassw) `OnMButtonDblClk` . Это значение по умолчанию для всех окон Microsoft Foundation Class. Windows создает `OnMButtonDblClk` вызов, когда пользователь нажимает, отпускает, а затем снова нажимает среднюю кнопку мыши в пределах предельного времени двойного щелчка системы. Двойной щелчок средней кнопки мыши на самом деле приводит к четырем событиям: [WM_MBUTTONDOWN](#onmbuttondown) и [WM_MBUTTONUP](#onmbuttonup) сообщения, вызов WM_MBUTTONDBLCLK и еще одно сообщение WM_MBUTTONUP.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonmbuttondown"></a><a name="onmbuttondown"></a>CWnd::OnMButtonDown
+## <a name="cwndonmbuttondown"></a><a name="onmbuttondown"></a>CWnd:: Онмбуттондовн
 
-Рамочная система вызывает эту функцию участника, когда пользователь нажимает кнопку средней мыши.
+Платформа вызывает эту функцию члена, когда пользователь нажимает среднюю кнопку мыши.
 
 ```
 afx_msg void OnMButtonDown(
@@ -7612,30 +7612,30 @@ afx_msg void OnMButtonDown(
 
 ### <a name="parameters"></a>Параметры
 
-*nФлаги*<br/>
-Указывает, не имеют ли различные виртуальные клавиши. Этот параметр может быть любой комбинацией следующих значений:
+*нфлагс*<br/>
+Указывает, работают ли различные виртуальные ключи. Этот параметр может иметь любое сочетание следующих значений:
 
-- MK_CONTROL Установить, если ключ CTRL не работает.
+- MK_CONTROL установить, если клавиша CTRL не нажата.
 
-- MK_LBUTTON Установить, если левая кнопка мыши не работает.
+- MK_LBUTTON задается, если левая кнопка мыши не работает.
 
 - MK_MBUTTON установить, если средняя кнопка мыши не работает.
 
-- MK_RBUTTON Установить, если правая кнопка мыши не работает.
+- MK_RBUTTON установить, если правая кнопка мыши не нажата.
 
-- MK_SHIFT Установить, если ключ SHIFT не работает.
+- MK_SHIFT установить, если клавиша SHIFT не нажата.
 
-*Точки*<br/>
-Определяет x- и y-координаты курсора. Эти координаты всегда относительно верхнего левого угла окна.
+*точки*<br/>
+Задает координату x и y курсора. Эти координаты всегда отсчитываются относительно левого верхнего угла окна.
 
 ### <a name="remarks"></a>Remarks
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonmbuttonup"></a><a name="onmbuttonup"></a>CWnd::OnMButtonUp
+## <a name="cwndonmbuttonup"></a><a name="onmbuttonup"></a>CWnd:: Онмбуттонуп
 
-Платформа вызывает эту функцию участника, когда пользователь выпускает кнопку средней мыши.
+Платформа вызывает эту функцию члена, когда пользователь отпускает среднюю кнопку мыши.
 
 ```
 afx_msg void OnMButtonUp(
@@ -7645,28 +7645,28 @@ afx_msg void OnMButtonUp(
 
 ### <a name="parameters"></a>Параметры
 
-*nФлаги*<br/>
-Указывает, не имеют ли различные виртуальные клавиши. Этот параметр может быть любой комбинацией следующих значений:
+*нфлагс*<br/>
+Указывает, работают ли различные виртуальные ключи. Этот параметр может иметь любое сочетание следующих значений:
 
-- MK_CONTROL Установить, если ключ CTRL не работает.
+- MK_CONTROL установить, если клавиша CTRL не нажата.
 
-- MK_LBUTTON Установить, если левая кнопка мыши не работает.
+- MK_LBUTTON задается, если левая кнопка мыши не работает.
 
-- MK_RBUTTON Установить, если правая кнопка мыши не работает.
+- MK_RBUTTON установить, если правая кнопка мыши не нажата.
 
-- MK_SHIFT Установить, если ключ SHIFT не работает.
+- MK_SHIFT установить, если клавиша SHIFT не нажата.
 
-*Точки*<br/>
-Определяет x- и y-координаты курсора. Эти координаты всегда относительно верхнего левого угла окна.
+*точки*<br/>
+Задает координату x и y курсора. Эти координаты всегда отсчитываются относительно левого верхнего угла окна.
 
 ### <a name="remarks"></a>Remarks
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonmdiactivate"></a><a name="onmdiactivate"></a>CWnd::OnMDIActivate
+## <a name="cwndonmdiactivate"></a><a name="onmdiactivate"></a>CWnd:: Онмдиактивате
 
-Платформа называет эту функцию члена для деактивации окна ребенка и активации окна ребенка.
+Платформа вызывает эту функцию члена для деактивируемого дочернего окна и активируемого дочернего окна.
 
 ```
 afx_msg void OnMDIActivate(
@@ -7678,24 +7678,24 @@ afx_msg void OnMDIActivate(
 ### <a name="parameters"></a>Параметры
 
 *bActivate*<br/>
-ПРАВДА, если ребенок активируется и FALSE, если он деактивирован.
+Значение TRUE, если дочерний элемент активируется, и значение FALSE, если он деактивируется.
 
-*pАктивированный*<br/>
-Содержит указатель на окно ребенка MDI для активации. При получении в окне ребенка MDI *pActivateWnd* содержит указатель на активированное окно ребенка. Этот указатель может быть временным и не должен храниться для последующего использования.
+*пактиватевнд*<br/>
+Содержит указатель на дочернее окно MDI, которое необходимо активировать. При получении с помощью дочернего окна MDI *пактиватевнд* содержит указатель на активируемое дочернее окно. Этот указатель может быть временным и не должен храниться для последующего использования.
 
-*pDeactivateWnd*<br/>
-Содержит указатель на деактивацию окна ребенка MDI. Этот указатель может быть временным и не должен храниться для последующего использования.
+*пдеактиватевнд*<br/>
+Содержит указатель на дочернее окно MDI, деактивируемое. Этот указатель может быть временным и не должен храниться для последующего использования.
 
 ### <a name="remarks"></a>Remarks
 
-Окно ребенка MDI активируется независимо от окна рамы MDI. Когда кадр становится активным, окно ребенка, которое в последний раз активировалось с вызовом, `OnMDIActivate` получает `OnMDIActivate` [WM_NCACTIVATE](#onncactivate) сообщение, чтобы нарисовать активную оконную рамку и панель подписи, но не получает другого вызова.
+Дочернее окно MDI активируется независимо от окна фрейма MDI. Когда кадр станет активным, дочернее окно, которое было активировано с помощью `OnMDIActivate` вызова, получает сообщение [WM_NCACTIVATE](#onncactivate) , чтобы нарисовать кадр активного окна и строку заголовка, но не получить другой `OnMDIActivate` вызов.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonmeasureitem"></a><a name="onmeasureitem"></a>CWnd::OnMeasureItem
+## <a name="cwndonmeasureitem"></a><a name="onmeasureitem"></a>CWnd:: Онмеасуреитем
 
-Рамочная система вызывает эту функцию элемента по фрейму для владельца кнопки «Нарисовать владельца», комбо-бокса, окна списка или элемента меню при создании элемента управления.
+Платформа вызывает эту функцию-член платформой для владельца кнопки рисования владельца, поля со списком, списка или пункта меню при создании элемента управления.
 
 ```
 afx_msg void OnMeasureItem(
@@ -7704,30 +7704,30 @@ afx_msg void OnMeasureItem(
 
 ### <a name="parameters"></a>Параметры
 
-*nIDCtl*<br/>
+*нидктл*<br/>
 Идентификатор элемента управления.
 
-*lpИзмеренныйПункт*<br/>
-Указывает на структуру данных [MEASUREITEMSTRUCT,](/windows/win32/api/winuser/ns-winuser-measureitemstruct) содержащую размеры элемента управления владельца-рисования.
+*лпмеасуреитемструкт*<br/>
+Указывает на структуру данных [меасуреитемструкт](/windows/win32/api/winuser/ns-winuser-measureitemstruct) , которая содержит размеры элемента управления, рисуемого владельцем.
 
 ### <a name="remarks"></a>Remarks
 
-Переопределить эту функцию члена `MEASUREITEMSTRUCT` и заполнить структуру данных, на которую указывает *lpMeasureItemStruct* и возврат; это информирует Windows о размерах элемента управления и позволяет Windows правильно обрабатывать взаимодействие с управлением.
+Переопределите эту функцию члена и заполните `MEASUREITEMSTRUCT` структуру данных, на которую указывает *лпмеасуреитемструкт* , и возвратите значение; это информирует окна измерений элемента управления и позволяет Windows обрабатывать взаимодействие пользователя с элементом управления правильно.
 
-Если поле списка или комбо-поле создается с [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) или [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) стилем, фреймворк вызывает эту функцию для владельца для каждого элемента в элементе управления; в противном случае эта функция называется один раз.
+Если список или поле со списком создается с [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) или [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) стилем, то платформа вызывает эту функцию для владельца каждого элемента в элементе управления. в противном случае эта функция вызывается один раз.
 
-Windows инициирует `OnMeasureItem` вызов для владельца комбо-коробок и список ящиков, созданных со стилем OWNERDRAWFIXED перед отправкой [сообщения WM_INITDIALOG.](/windows/win32/dlgbox/wm-initdialog) В результате, когда владелец получает этот вызов, Windows еще не определила высоту и ширину шрифта, используемого в элементе управления; функциональные вызовы и расчеты, требующие этих значений, должны происходить в основной функции приложения или библиотеки.
+Windows инициирует вызов для `OnMeasureItem` владельца полей со списком и списков, созданных с помощью стиля овнердравфиксед, перед отправкой сообщения [WM_INITDIALOG](/windows/win32/dlgbox/wm-initdialog) . В результате, когда владелец получает этот вызов, Windows еще не определил высоту и ширину шрифта, используемого в элементе управления; вызовы функций и вычисления, требующие этих значений, должны выполняться в основной функции приложения или библиотеки.
 
-Если измеряемый `CListBox` `CComboBox` элемент является `MeasureItem` объектом, `CMenu`то называется виртуальная функция соответствующего класса. Переопределить `MeasureItem` функцию элемента класса соответствующего элемента для расчета и определения размера каждого элемента.
+Если измеряемый элемент является `CMenu` `CListBox` `CComboBox` объектом или, то `MeasureItem` вызывается виртуальная функция соответствующего класса. Переопределите `MeasureItem` функцию члена соответствующего класса элемента управления, чтобы вычислить и задать размер каждого элемента.
 
-`OnMeasureItem`будет называться только в том случае, если класс элемента управления создан во время выполнения или создается с LBS_OWNERDRAWVARIABLE или CBS_OWNERDRAWVARIABLE стилем. Если элемент управления создан редактором `OnMeasureItem` диалогов, не будет вызываться. Это происходит потому, что [WM_MEASUREITEM](/windows/win32/Controls/wm-measureitem) сообщение отправляется в начале процесса создания элемента управления. Если вы подкласс, используя, `DDX_Control` `SubclassDlgItem`или `SubclassWindow`, подклассификация обычно происходит после процесса создания. Таким образом, нет никакого способа обработки [WM_MEASUREITEM](/windows/win32/Controls/wm-measureitem) `OnChildNotify` сообщения в функции управления, которая является механизмом MFC использует для реализации ON_WM_MEASUREITEM_REFLECT.
+`OnMeasureItem`будет вызываться только в том случае, если класс элемента управления создается во время выполнения или создается с помощью LBS_OWNERDRAWVARIABLE или CBS_OWNERDRAWVARIABLE стиля. Если элемент управления создается редактором диалоговых окон, `OnMeasureItem` он не будет вызываться. Это обусловлено тем, что [WM_MEASUREITEM](/windows/win32/Controls/wm-measureitem) сообщение отправляется на ранних этапах процесса создания элемента управления. Если создать подкласс с помощью `DDX_Control` , `SubclassDlgItem` или `SubclassWindow` , то подклассы обычно возникают после создания. Таким образом, невозможно выполнить обработку сообщения [WM_MEASUREITEM](/windows/win32/Controls/wm-measureitem) в функции элемента управления `OnChildNotify` , которая является механизмом, используемым MFC для реализации ON_WM_MEASUREITEM_REFLECT.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonmenuchar"></a><a name="onmenuchar"></a>CWnd::OnMenuChar
+## <a name="cwndonmenuchar"></a><a name="onmenuchar"></a>CWnd:: Онменучар
 
-Фрейм называет эту функцию участника, когда пользователь нажимает на мнемонический символ меню, который не соответствует ни одной из предопределенных мнемоники в текущем меню.
+Платформа вызывает эту функцию-член, когда пользователь нажимает на клавишу, назначенную меню, которая не соответствует ни одной из стандартных назначенных клавиш в текущем меню.
 
 ```
 afx_msg LRESULT OnMenuChar(
@@ -7738,37 +7738,37 @@ afx_msg LRESULT OnMenuChar(
 
 ### <a name="parameters"></a>Параметры
 
-*Nchar*<br/>
-В зависимости от настроек сборки, определяется символ ANSI или Unicode, который пользователь нажал.
+*nChar*<br/>
+В зависимости от параметров сборки указывает символ ANSI или Unicode, который пользователь нажал.
 
-*nФлаги*<br/>
-Содержит MF_POPUP флаг, если меню является всплывающее меню. Он содержит MF_SYSMENU флаг, если меню является меню управления.
+*нфлагс*<br/>
+Содержит флаг MF_POPUP, если меню является всплывающим меню. Он содержит флаг MF_SYSMENU, если меню является меню управления.
 
-*pMenu*<br/>
-Содержит указатель на выбранный `CMenu`. Указатель может быть временным и не должен храниться.
+*пмену*<br/>
+Содержит указатель на выбранный объект `CMenu` . Указатель может быть временным и не должен храниться.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Слово высокого порядка значения возврата должно содержать один из следующих командных кодов:
+Слово с высоким порядком возвращаемого значения должно содержать один из следующих кодов команд:
 
-|Значение|Описание|
+|Значение|Описание:|
 |-----------|-----------------|
-|0|Говорит Windows, чтобы отбросить символ, что пользователь нажал и создает короткий звуковой сигнал на системном динамике.|
-|1|Сообщает Windows о закрытии текущего меню.|
-|2|Информирует Windows о том, что слово низкого порядка значения возврата содержит номер элемента для конкретного элемента. Этот элемент выбран Windows.|
+|0|Указывает, что Windows будет отклонять символ, который пользователь нажал, и создает короткий звуковой сигнал на системном докладчике.|
+|1|Указывает Windows закрыть текущее меню.|
+|2|Информирует окна о том, что младшее слово возвращаемого значения содержит номер элемента для определенного элемента. Этот элемент выбран Windows.|
 
-Слово с низким порядком игнорируется, если слово высокого порядка содержит 0 или 1. Приложения должны обрабатывать это сообщение, когда клавиши акселератора (короткий отрезок) используются для выбора бит-карт, размещенных в меню.
+Слово низкого порядка пропускается, если слово в высоком порядке содержит 0 или 1. Приложения должны обрабатывать это сообщение, если для выбора точечных рисунков, помещенных в меню, используются сочетания клавиш.
 
 ### <a name="remarks"></a>Remarks
 
-Он отправляется `CWnd` в то, что владеет меню. `OnMenuChar`также вызывается, когда пользователь нажимает ALT и любой другой ключ, даже если ключ не соответствует мнемонскому характеру. В этом *случае, pMenu* указывает на `CWnd`меню, принадлежащее , и *nFlags* составляет 0.
+Он отправляется в `CWnd` , которому принадлежит меню. `OnMenuChar`метод также вызывается, когда пользователь нажимает клавишу ALT и любой другой ключ, даже если этот ключ не соответствует назначенному символу. В этом случае *пмену* указывает меню, принадлежащее `CWnd` , а *нфлагс* — 0.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonmenudrag"></a><a name="onmenudrag"></a>CWnd::OnMenudrag
+## <a name="cwndonmenudrag"></a><a name="onmenudrag"></a>CWnd:: Онменудраг
 
-Платформа вызывает функцию этого элемента текущего меню перетаскивания, когда пользователь начинает перетаскивать элемент меню.
+Платформа вызывает эту функцию-член текущего меню перетаскивания, когда пользователь начинает перетаскивать пункт меню.
 
 ```
 afx_msg UINT OnMenuDrag(
@@ -7780,26 +7780,26 @@ afx_msg UINT OnMenuDrag(
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*Npos*|(в) Положение индекса элемента меню при начале операции перетаскивания.|
-|*pMenu*|(в) Указатель на объект [CMenu,](../../mfc/reference/cmenu-class.md) содержащий элемент меню.|
+|*nPos*|окне Позиция индекса элемента меню при начале операции перетаскивания.|
+|*пмену*|окне Указатель на объект [кмену](../../mfc/reference/cmenu-class.md) , который содержит пункт меню.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 |Возвращаемое значение|Значение|
 |------------------|-------------|
-|MND_CONTINUE|Меню должно оставаться активным. Если мышь выпущена, она должна быть проигнорирована.|
-|MND_ENDMENU|Меню должно быть закончено.|
+|MND_CONTINUE|Меню должно оставаться активным. Если мышь освобождена, ее следует игнорировать.|
+|MND_ENDMENU|Меню должно быть завершено.|
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод получает [уведомление WM_MENUDRAG,](/windows/win32/menurc/wm-menudrag) которое описано в SDK Windows.
+Этот метод получает уведомление [WM_MENUDRAG](/windows/win32/menurc/wm-menudrag) , которое описано в Windows SDK.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonmenugetobject"></a><a name="onmenugetobject"></a>CWnd::OnMenuGetObject
+## <a name="cwndonmenugetobject"></a><a name="onmenugetobject"></a>CWnd:: Онменужетобжект
 
-Фрейм называет эту функцию элемента текущего меню перетаскивания, когда курсор мыши входит в элемент меню или перемещается из центра элемента в верхнюю или нижнюю часть элемента.
+Платформа вызывает эту функцию-член текущего меню перетаскивания, когда курсор мыши попадает в пункт меню или перемещается от центра элемента к верхней или нижней части элемента.
 
 ```
 afx_msg UINT OnMenuGetObject(MENUGETOBJECTINFO* pMenuGetObjectInfo);
@@ -7809,25 +7809,25 @@ afx_msg UINT OnMenuGetObject(MENUGETOBJECTINFO* pMenuGetObjectInfo);
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*pMenu*|(в) Указатель на структуру [MENUGETOBJECTINFO,](/windows/win32/api/winuser/ns-winuser-menugetobjectinfo) содержащую информацию о меню перетаскивания, в котором находится курсор мыши.|
+|*пмену*|окне Указатель на структуру [менужетобжектинфо](/windows/win32/api/winuser/ns-winuser-menugetobjectinfo) , содержащую сведения о меню перетаскивания, на котором находится курсор мыши.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 |Возвращаемое значение|Значение|
 |------------------|-------------|
-|MNGO_NOERROR|Указатель интерфейса, поддерживающий операции «падение `pvObj` и перетаскивание», возвращается в составе структуры [MENUGETOBJECTINFO.](/windows/win32/api/winuser/ns-winuser-menugetobjectinfo) В настоящее время поддерживается только интерфейс [IDropTarget.](/windows/win32/api/oleidl/nn-oleidl-idroptarget)|
-|MNGO_NOINTERFACE|Интерфейс drop-and-drag не поддерживается.|
+|MNGO_NOERROR|Указатель интерфейса, поддерживающий операции перетаскивания, в элементе `pvObj` структуры [менужетобжектинфо](/windows/win32/api/winuser/ns-winuser-menugetobjectinfo) возвращается. В настоящее время поддерживается только интерфейс [интерфейс IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget) .|
+|MNGO_NOINTERFACE|Интерфейс с поддержкой перетаскивания и перетаскивания не поддерживается.|
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод получает [уведомление WM_MENUGETOBJECT,](/windows/win32/menurc/wm-menugetobject) которое описано в SDK Windows.
+Этот метод получает уведомление [WM_MENUGETOBJECT](/windows/win32/menurc/wm-menugetobject) , которое описано в Windows SDK.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonmenurbuttonup"></a><a name="onmenurbuttonup"></a>CWnd::OnMenuRButtonUp
+## <a name="cwndonmenurbuttonup"></a><a name="onmenurbuttonup"></a>CWnd:: Онменурбуттонуп
 
-Платформа вызывает эту функцию участника, когда пользователь выпускает правую кнопку мыши, в то время как курсор находится в пункте меню.
+Платформа вызывает эту функцию-член, когда пользователь отпускает правую кнопку мыши, когда курсор находится над пунктом меню.
 
 ```
 afx_msg void OnMenuRButtonUp(
@@ -7837,21 +7837,21 @@ afx_msg void OnMenuRButtonUp(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|*Npos*|(в) Положение индекса элемента меню при выпуске кнопки «правая мышь».|
-|*pMenu*|(в) Указатель на объект [CMenu,](../../mfc/reference/cmenu-class.md) содержащий элемент меню.|
+|*nPos*|окне Позиция индекса элемента меню при отпускании правой кнопки мыши.|
+|*пмену*|окне Указатель на объект [кмену](../../mfc/reference/cmenu-class.md) , который содержит пункт меню.|
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод получает [уведомление WM_MENURBUTTONUP,](/windows/win32/menurc/wm-menurbuttonup) которое описано в SDK Windows. [Сообщение WM_MENURBUTTONUP](/windows/win32/menurc/wm-menurbuttonup) позволяет приложению предоставить чувствительное к контексту меню для элемента меню, указанного в сообщении.
+Этот метод получает уведомление [WM_MENURBUTTONUP](/windows/win32/menurc/wm-menurbuttonup) , которое описано в Windows SDK. Сообщение [WM_MENURBUTTONUP](/windows/win32/menurc/wm-menurbuttonup) позволяет приложению предоставить контекстно-зависимое меню для пункта меню, указанного в сообщении.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonmenuselect"></a><a name="onmenuselect"></a>CWnd::OnMenuSelect
+## <a name="cwndonmenuselect"></a><a name="onmenuselect"></a>CWnd:: Онменуселект
 
-Если `CWnd` объект связан с меню, `OnMenuSelect` вызывается фреймворцом, когда пользователь выбирает элемент меню.
+Если `CWnd` объект связан с меню, `OnMenuSelect` платформа вызывается платформой, когда пользователь выбирает пункт меню.
 
 ```
 afx_msg void OnMenuSelect(
@@ -7862,43 +7862,43 @@ afx_msg void OnMenuSelect(
 
 ### <a name="parameters"></a>Параметры
 
-*nItemID*<br/>
-Идентифицирует выбранный элемент. Если выбранный элемент является пунктом меню, *nItemID* содержит идентификатор элемента меню. Если выбранный элемент содержит всплывающее меню, *nItemID* содержит всплывающее меню индекса, а *hSysMenu* содержит ручку основного (нажмите на) меню.
+*нитемид*<br/>
+Определяет выбранный элемент. Если выбранный элемент является пунктом меню, *нитемид* содержит идентификатор пункта меню. Если выбранный элемент содержит всплывающее меню, *нитемид* содержит указатель всплывающего меню, а *хсисмену* содержит маркер главного меню (щелчок по щелчку мышью).
 
-*nФлаги*<br/>
-Содержит комбинацию из следующих флагов меню:
+*нфлагс*<br/>
+Содержит сочетание следующих флагов меню:
 
-- MF_BITMAP Пункт бит-карта.
+- MF_BITMAP элемент является точечным рисунком.
 
-- MF_CHECKED элемент проверяется.
+- MF_CHECKED элемент установлен.
 
-- MF_DISABLED элемент отключен.
+- Элемент MF_DISABLED отключен.
 
-- MF_GRAYED Элемент затемнен.
+- MF_GRAYED элемент недоступен.
 
-- MF_MOUSESELECT Элемент был выбран с помощью мыши.
+- Элемент MF_MOUSESELECT был выбран с помощью мыши.
 
-- MF_OWNERDRAW Элемент — это элемент, нарисовавный владельцем.
+- MF_OWNERDRAW элемент является элементом, рисуемым владельцем.
 
-- MF_POPUP Пункт содержит всплывающее меню.
+- MF_POPUP элемент содержит всплывающее меню.
 
-- MF_SEPARATOR Пункт — это сепаратор меню.?
+- MF_SEPARATOR элемент является разделителем элементов меню.
 
-- MF_SYSMENU элемент содержится в меню Управления.
+- MF_SYSMENU элемент содержится в меню управления.
 
-*hSysMenu*<br/>
-Если *nFlags* содержит MF_SYSMENU, идентифицирует меню, связанное с сообщением. Если *nFlags* содержит MF_POPUP, идентифицирует ручку основного меню. Если *nFlags* не содержит ни MF_SYSMENU ни MF_POPUP, он не используется.
+*хсисмену*<br/>
+Если *нфлагс* содержит MF_SYSMENU, определяет меню, связанное с сообщением. Если *нфлагс* содержит MF_POPUP, определяет маркер главного меню. Если *нфлагс* не содержит ни MF_SYSMENU, ни MF_POPUP, он не используется.
 
 ### <a name="remarks"></a>Remarks
 
-Если *nFlags* содержит 0xFFFF и *hSysMenu* содержит 0, Windows закрыла меню, потому что пользователь нажал на ключ ESC или нажал вне меню.
+Если *нфлагс* содержит 0xFFFF, а *хсисмену* содержит 0, Windows закрыл меню, так как пользователь нажал клавишу ESC или щелкнул его за пределами меню.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonmouseactivate"></a><a name="onmouseactivate"></a>CWnd::OnMouseActivate
+## <a name="cwndonmouseactivate"></a><a name="onmouseactivate"></a>CWnd:: Онмаусеактивате
 
-Фрейм вызывает эту функцию элемента, когда курсор находится в неактивном окне, и пользователь нажимает кнопку мыши.
+Платформа вызывает эту функцию-член, когда курсор находится в неактивном окне, и пользователь нажимает кнопку мыши.
 
 ```
 afx_msg int OnMouseActivate(
@@ -7909,32 +7909,32 @@ afx_msg int OnMouseActivate(
 
 ### <a name="parameters"></a>Параметры
 
-*pDesktopWnd*<br/>
-Опознавательный указатель на верхнее родительское окно окна, активированного. Указатель может быть временным и не должен храниться.
+*пдесктопвнд*<br/>
+Указывает указатель на родительское окно верхнего уровня активируемого окна. Указатель может быть временным и не должен храниться.
 
-*nHitTest*<br/>
-Определяет код области [хит-теста.](#onnchittest) Тест попадания — это тест, определяющий местоположение курсора.
+*нхиттест*<br/>
+Указывает код области [проверки попадания](#onnchittest) . Проверка нажатия — это проверка, определяющая положение курсора.
 
 *message*<br/>
-Упоняет номер сообщения мыши.
+Указывает номер сообщения мыши.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Определяет, следует ли активировать событие мыши `CWnd` и отбрасывать его. Это должно быть одно из следующих значений:
+Указывает, следует ли активировать `CWnd` и следует ли отклонять событие мыши. Оно должно иметь одно из следующих значений:
 
-- MA_ACTIVATE `CWnd` объект активировать.
+- MA_ACTIVATE активировать `CWnd` объект.
 
-- MA_NOACTIVATE Не `CWnd` активируйте объект.
+- MA_NOACTIVATE не активировать `CWnd` объект.
 
-- MA_ACTIVATEANDEAT `CWnd` активировать объект и отбросить событие мыши.
+- MA_ACTIVATEANDEAT активировать `CWnd` объект и отменить событие мыши.
 
-- MA_NOACTIVATEANDEAT Не `CWnd` активируйте объект и не отбрасываете событие мыши.
+- MA_NOACTIVATEANDEAT не активировать `CWnd` объект и отменить событие мыши.
 
 ### <a name="remarks"></a>Remarks
 
-Реализация по умолчанию передает это сообщение в родительское окно до начала обработки. Если родительское окно возвращает TRUE, обработка останавливается.
+Реализация по умолчанию передает это сообщение родительскому окну перед любой обработкой. Если родительское окно возвращает значение TRUE, обработка прерывается.
 
-Для описания отдельных кодов области наезда [OnNcHitTest](#onnchittest) на несколько иссоподных кодов см.
+Описание отдельных кодов области проверки попадания см. в описании функции-члена [оннчиттест](#onnchittest) .
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
@@ -7943,9 +7943,9 @@ afx_msg int OnMouseActivate(
 
 [!code-cpp[NVC_MFCAxCtl#9](../../mfc/reference/codesnippet/cpp/cwnd-class_49.cpp)]
 
-## <a name="cwndonmousehover"></a><a name="onmousehover"></a>CWnd::OnMouseHover
+## <a name="cwndonmousehover"></a><a name="onmousehover"></a>CWnd:: Онмаусеховер
 
-Рамочная функция вызывает эту функцию участника, когда курсор парит над областью клиента окна в течение периода времени, указанного в предыдущем вызове [TrackMouseEvent.](/windows/win32/api/winuser/nf-winuser-trackmouseevent)
+Платформа вызывает эту функцию-член при наведении курсора на клиентскую область окна в течение периода времени, указанного в предыдущем вызове метода [TrackMouseEven](/windows/win32/api/winuser/nf-winuser-trackmouseevent).
 
 ```
 afx_msg void OnMouseHover(
@@ -7955,33 +7955,33 @@ afx_msg void OnMouseHover(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|*nФлаги*|(в) Битовая комбинация (ИЛИ) флагов, указывающих, какие клавиши модификатора нажаты. Например, MK_CONTROL флаг указывает на нажатие ключа CTRL.|
-|*Точки*|(в) Объект [CPoint,](../../atl-mfc-shared/reference/cpoint-class.md) который определяет *x* и *y* координаты курсора относительно верхнего левого угла области клиента.|
+|*нфлагс*|окне Побитовое сочетание (или) флагов, указывающих, какие клавиши-модификаторы нажаты. Например, флаг MK_CONTROL указывает, что нажата клавиша CTRL.|
+|*точки*|окне Объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , указывающий координаты *x* и *y* курсора относительно верхнего левого угла клиентской области.|
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод получает [уведомление WM_MOUSEHOVER,](/windows/win32/inputdev/wm-mousehover) которое описано в SDK Windows.
+Этот метод получает уведомление [WM_MOUSEHOVER](/windows/win32/inputdev/wm-mousehover) , которое описано в Windows SDK.
 
-Параметр *nFlags* может быть комбинацией клавиш модификатора, перечисленных в следующей таблице. Для получения дополнительной информации [см.](/windows/win32/inputdev/about-mouse-input)
+Параметр *нфлагс* может представлять собой сочетание клавиш-модификаторов, перечисленных в следующей таблице. Дополнительные сведения см. в статье [о вводе](/windows/win32/inputdev/about-mouse-input)с помощью мыши.
 
-|Ключ модификатора|Описание|
+|Клавиша модификатора|Описание:|
 |------------------|-----------------|
-|MK_CONTROL|Ключ CTRL нажат.|
+|MK_CONTROL|Нажата клавиша CTRL.|
 |MK_LBUTTON|Нажата левая кнопка мыши.|
 |MK_MBUTTON|Нажата средняя кнопка мыши.|
 |MK_RBUTTON|Нажата правая кнопка мыши.|
-|MK_SHIFT|Клавиша SHIFT нажата.|
-|MK_XBUTTON1|Кнопка мыши XBUTTON1 Microsoft IntelliMouse нажата.|
-|MK_XBUTTON2|Кнопка мыши XBUTTON2 Microsoft IntelliMouse нажата.|
+|MK_SHIFT|Нажата клавиша SHIFT.|
+|MK_XBUTTON1|Нажата кнопка мыши XBUTTON1 в Microsoft IntelliMouse.|
+|MK_XBUTTON2|Нажата кнопка мыши XBUTTON2 в Microsoft IntelliMouse.|
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonmousehwheel"></a><a name="onmousehwheel"></a>CWnd::OnMouseHWheel
+## <a name="cwndonmousehwheel"></a><a name="onmousehwheel"></a>CWnd:: Онмаусехвхил
 
-Платформа вызывает этот участник, когда текущее окно составлено менеджером окна рабочего стола (DWM), и это окно максимизируется.
+Платформа вызывает этот элемент, когда текущее окно состоит из диспетчер окон рабочего стола (DWM), и это окно развернуто.
 
 ```
 afx_msg void OnMouseHWheel(
@@ -7992,22 +7992,22 @@ afx_msg void OnMouseHWheel(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|*nФлаги*|(в) Битовая комбинация (ИЛИ) флагов, указывающих, какие клавиши модификатора нажаты. Например, MK_CONTROL флаг указывает на нажатие ключа CTRL.<br /><br /> Список флагов можно узнать в подзаголовке "Параметры сообщений" в [входе мыши.](/windows/win32/inputdev/about-mouse-input)|
-|*zDelta*|(в) Указывает расстояние, которое вращается колесо, выраженное в кратных или делениях WHEEL_DELTA, что составляет 120. Положительное значение указывает на то, что колесо было повернуто вправо; отрицательное значение указывает на то, что колесо было повернуто влево.|
-|*пт*|(в) Объект [CPoint,](../../atl-mfc-shared/reference/cpoint-class.md) который определяет *x* и *y* координаты курсора относительно верхнего левого угла области клиента.|
+|*нфлагс*|окне Побитовое сочетание (или) флагов, указывающих, какие клавиши-модификаторы нажаты. Например, флаг MK_CONTROL указывает, что нажата клавиша CTRL.<br /><br /> Список флагов см. в подразделе "Параметры сообщения" статьи [о вводе](/windows/win32/inputdev/about-mouse-input)с помощью мыши.|
+|*зделта*|окне Указывает расстояние, на которое вращается колесико, выраженное в множителях или подразделениях WHEEL_DELTA, 120. Положительное значение указывает, что колесо поворачивается вправо; отрицательное значение указывает, что колесико мыши было повернуто влево.|
+|*лутор*|окне Объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , указывающий координаты *x* и *y* курсора относительно верхнего левого угла клиентской области.|
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод получает [WM_MOUSEHWHEEL](/windows/win32/inputdev/wm-mousehwheel) сообщение муведомления, которое описано в SDK Windows. Это сообщение отправляется в окно, которое имеет фокус, когда колесо горизонтального прокрутки мыши наклонено или вращается.
+Этот метод получает сообщение уведомления [WM_MOUSEHWHEEL](/windows/win32/inputdev/wm-mousehwheel) , которое описано в Windows SDK. Это сообщение отправляется в окно, которое находится в фокусе, когда колесо горизонтальной прокрутки мыши вращается или поворачивается.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonmouseleave"></a><a name="onmouseleave"></a>CWnd::OnMouseLeave
+## <a name="cwndonmouseleave"></a><a name="onmouseleave"></a>CWnd:: Онмауселеаве
 
-Рамочная функция вызывает эту функцию, когда курсор покидает область клиента окна, указанную в предыдущем вызове [TrackMouseEvent.](/windows/win32/api/winuser/nf-winuser-trackmouseevent)
+Платформа вызывает эту функцию-член, когда курсор покидает клиентскую область окна, указанное в предыдущем вызове метода [TrackMouseEven](/windows/win32/api/winuser/nf-winuser-trackmouseevent).
 
 ```
 afx_msg void OnMouseLeave();
@@ -8015,14 +8015,14 @@ afx_msg void OnMouseLeave();
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод получает [уведомление WM_MOUSELEAVE,](/windows/win32/inputdev/wm-mouseleave) которое описано в SDK Windows.
+Этот метод получает уведомление [WM_MOUSELEAVE](/windows/win32/inputdev/wm-mouseleave) , которое описано в Windows SDK.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonmousemove"></a><a name="onmousemove"></a>CWnd::OnMouseMove
+## <a name="cwndonmousemove"></a><a name="onmousemove"></a>CWnd:: OnMouseMove
 
-Фрейм вызывает эту функцию члена при движении курсора мыши.
+Платформа вызывает эту функцию члена при перемещении курсора мыши.
 
 ```
 afx_msg void OnMouseMove(
@@ -8032,32 +8032,32 @@ afx_msg void OnMouseMove(
 
 ### <a name="parameters"></a>Параметры
 
-*nФлаги*<br/>
-Указывает, не имеют ли различные виртуальные клавиши. Этот параметр может быть любой комбинацией следующих значений:
+*нфлагс*<br/>
+Указывает, работают ли различные виртуальные ключи. Этот параметр может иметь любое сочетание следующих значений:
 
-- MK_CONTROL Установить, если ключ CTRL не работает.
+- MK_CONTROL установить, если клавиша CTRL не нажата.
 
-- MK_LBUTTON Установить, если левая кнопка мыши не работает.
+- MK_LBUTTON задается, если левая кнопка мыши не работает.
 
 - MK_MBUTTON установить, если средняя кнопка мыши не работает.
 
-- MK_RBUTTON Установить, если правая кнопка мыши не работает.
+- MK_RBUTTON установить, если правая кнопка мыши не нажата.
 
-- MK_SHIFT Установить, если ключ SHIFT не работает.
+- MK_SHIFT установить, если клавиша SHIFT не нажата.
 
-*Точки*<br/>
-Определяет x- и y-координаты курсора. Эти координаты всегда относительно верхнего левого угла окна.
+*точки*<br/>
+Задает координату x и y курсора. Эти координаты всегда отсчитываются относительно левого верхнего угла окна.
 
 ### <a name="remarks"></a>Remarks
 
-Если мышь не захвачена, WM_MOUSEMOVE сообщение `CWnd` получено объектом под курсором мыши; в противном случае сообщение переходит к окну, захватившей мышь.
+Если мышь не захвачена, то сообщение WM_MOUSEMOVE получается `CWnd` объектом под курсором мыши; в противном случае сообщение переходит в окно, которое захватило мышь.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonmousewheel"></a><a name="onmousewheel"></a>CWnd::OnMouseWheel
+## <a name="cwndonmousewheel"></a><a name="onmousewheel"></a>CWnd:: Онмаусевхил
 
-Рамочная система вызывает эту функцию участника, поскольку пользователь вращает колесо мыши и сталкивается с следующей выемкой колеса.
+Платформа вызывает эту функцию-член, так как пользователь поворачивает колесико мыши и встречает следующее деление колесика.
 
 ```
 afx_msg BOOL OnMouseWheel(
@@ -8068,45 +8068,45 @@ afx_msg BOOL OnMouseWheel(
 
 ### <a name="parameters"></a>Параметры
 
-*nФлаги*<br/>
-Указывает, не имеют ли различные виртуальные клавиши. Этот параметр может быть любой комбинацией следующих значений:
+*нфлагс*<br/>
+Указывает, работают ли различные виртуальные ключи. Этот параметр может иметь любое сочетание следующих значений:
 
-- MK_CONTROL Установить, если ключ CTRL не работает.
+- MK_CONTROL установить, если клавиша CTRL не нажата.
 
-- MK_LBUTTON Установить, если левая кнопка мыши не работает.
+- MK_LBUTTON задается, если левая кнопка мыши не работает.
 
 - MK_MBUTTON установить, если средняя кнопка мыши не работает.
 
-- MK_RBUTTON Установить, если правая кнопка мыши не работает.
+- MK_RBUTTON установить, если правая кнопка мыши не нажата.
 
-- MK_SHIFT Установить, если ключ SHIFT не работает.
+- MK_SHIFT установить, если клавиша SHIFT не нажата.
 
-*zDelta*<br/>
-Указывает на повернутое расстояние. Значение *zDelta* выражается в кратных или делениех WHEEL_DELTA, что составляет 120. Значение менее нуля указывает на вращающуюся спину (к пользователю), в то время как значение больше нуля указывает на вращающийся вперед (вдали от пользователя). Пользователь может обратить этот ответ вспять, изменив настройки колеса в программном обеспечении мыши. Более подробную информацию об этом параметре можно увидеть в комментариях.
+*зделта*<br/>
+Указывает расстояние повернутого. Значение *зделта* выражается в нескольких единицах или в подразделениях WHEEL_DELTA, что 120. Значение меньше нуля означает поворот назад (к пользователю), а значение больше нуля означает вращение вперед (от пользователя). Пользователь может отменить этот ответ, изменив параметр Wheel в программном обеспечении мыши. Дополнительные сведения об этом параметре см. в разделе "Примечания".
 
-*пт*<br/>
-Определяет x- и y-координаты курсора. Эти координаты всегда относительно верхнего левого угла экрана.
+*лутор*<br/>
+Задает координату x и y курсора. Эти координаты всегда отсчитываются относительно левого верхнего угла экрана.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Nonzero, если прокрутка колеса мыши включена; в противном случае 0.
+Ненулевое значение, если прокрутка колесика мыши включена; в противном случае — 0.
 
 ### <a name="remarks"></a>Remarks
 
-Если не `OnMouseWheel` переопределить, вызывает дефолт [WM_MOUSEWHEEL](/windows/win32/inputdev/wm-mousewheel). Windows автоматически направляет сообщение в окно управления или ребенка, в центре внимания которое. Функция Win32 [DefWindowProc](/windows/win32/api/winuser/nf-winuser-defwindowprocw) распространяет сообщение вверх по родительской цепочке к окну, которая его обрабатывает.
+Если не переопределен, `OnMouseWheel` вызывается значение по умолчанию [WM_MOUSEWHEEL](/windows/win32/inputdev/wm-mousewheel). Windows автоматически направляет сообщение в элемент управления или дочернее окно, которое имеет фокус. Функция Win32 [дефвиндовпрок](/windows/win32/api/winuser/nf-winuser-defwindowprocw) распространяет сообщение вверх по родительской цепочке в окно, которое его обрабатывает.
 
-Параметр *zDelta* кратно WHEEL_DELTA, который установлен на уровне 120. Это значение является порогом для действия, и одно такое действие (например, прокрутка вперед на одну ступень) должно произойти для каждой дельты.
+Параметр *зделта* является кратным WHEEL_DELTA, который задается в 120. Это значение является пороговым значением действия, которое необходимо выполнить, и одним из таких действий (например, прокруткой на одно деление вперед) должно быть для каждой разницы.
 
-WHEEL_DELTA был установлен на 120, чтобы обеспечить более тонкое разрешение колес, таких как свободно вращающееся колесо без выемок. Колесо с более тонким разрешением отправляет больше сообщений за вращение, но каждое сообщение имеет меньшее значение дельты. Чтобы использовать такое колесо, либо добавляйте входящие значения *zDelta* до достижения WHEEL_DELTA (чтобы вы получили тот же ответ для данной дельты-вращения), либо прокрутите частичные строки в ответ на более частые сообщения. Вы также можете выбрать детализацию прокрутки и накапливать дельты до тех пор, пока не будет достигнута WHEEL_DELTA.
+Для WHEEL_DELTA было задано значение 120, разрешающее колеса с более высоким разрешением, такие как свободное колесо поворота без раскрутки. Колесико более точного разрешения отправляет больше сообщений на поворот, но каждое сообщение имеет меньшее разностное значение. Чтобы использовать такое колесо, добавьте входящие значения *зделта* до тех пор, пока не будет достигнуто WHEEL_DELTA (чтобы получить тот же ответ для заданного сдвига), или прокрутите часть строк в ответ на более частые сообщения. Можно также выбрать гранулярность прокрутки и накапливать разности до тех пор, пока не будет достигнут WHEEL_DELTA.
 
-Переопределить эту функцию участника, чтобы обеспечить собственное поведение прокрутки руля мыши.
+Переопределите эту функцию-член, чтобы обеспечить собственное поведение прокрутки колесика мыши.
 
 > [!NOTE]
-> `OnMouseWheel`обрабатывает сообщения для Windows NT 4.0 и более поздних версий. Для обработки сообщений для Windows 95/98 или Windows NT 3.51 используйте [OnRegisteredMouseWheel.](#onregisteredmousewheel)
+> `OnMouseWheel`обрабатывает сообщения для Windows NT 4,0 и более поздних версий. Для обработки сообщений Windows 95/98 или Windows NT 3,51 Используйте [онрегистередмаусевхил](#onregisteredmousewheel).
 
-## <a name="cwndonmove"></a><a name="onmove"></a>CWnd::OnMove
+## <a name="cwndonmove"></a><a name="onmove"></a>CWnd:: OnMove
 
-Платформа вызывает эту функцию `CWnd` участника после перемещения объекта.
+Платформа вызывает эту функцию члена после `CWnd` перемещения объекта.
 
 ```
 afx_msg void OnMove(
@@ -8117,19 +8117,19 @@ afx_msg void OnMove(
 ### <a name="parameters"></a>Параметры
 
 *x*<br/>
-Определяет новое местоположение x-координки в верхнем левом углу клиентской зоны. Это новое местоположение приведено в координатах экрана для перекрытых и всплывающих окон, а также координат родителей и клиентов для детских окон.
+Указывает новое положение координаты x в левом верхнем углу клиентской области. Это новое расположение задается в экранных координатах для перекрывающихся и всплывающих окон и координат родительского клиента для дочерних окон.
 
-*Y*<br/>
-Определяет новое местоположение y-координации верхнего левого угла клиентской зоны. Это новое местоположение приведено в координатах экрана для перекрытых и всплывающих окон, а также координат родителей и клиентов для детских окон.
+*&*<br/>
+Указывает новое положение координаты y верхнего левого угла клиентской области. Это новое расположение задается в экранных координатах для перекрывающихся и всплывающих окон и координат родительского клиента для дочерних окон.
 
 ### <a name="remarks"></a>Remarks
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonmoving"></a><a name="onmoving"></a>CWnd::OnMoving
+## <a name="cwndonmoving"></a><a name="onmoving"></a>CWnd:: onmoving
 
-Платформа вызывает эту функцию пользователя во `CWnd` время перемещения объекта.
+Платформа вызывает эту функцию-член, пока пользователь перемещает `CWnd` объект.
 
 ```
 afx_msg void OnMoving(
@@ -8139,20 +8139,20 @@ afx_msg void OnMoving(
 
 ### <a name="parameters"></a>Параметры
 
-*nSide*<br/>
-Край окна, который будет перемещен.
+*нсиде*<br/>
+Граница перемещаемого окна.
 
-*lpRect*<br/>
-Адрес структуры [CRect](../../atl-mfc-shared/reference/crect-class.md) или [RECT,](/windows/win32/api/windef/ns-windef-rect) которая будет содержать координаты товара.
+*лпрект*<br/>
+Адрес структуры [крект](../../atl-mfc-shared/reference/crect-class.md) или [Rect](/windows/win32/api/windef/ns-windef-rect) , которая будет содержать координаты элемента.
 
 ### <a name="remarks"></a>Remarks
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonncactivate"></a><a name="onncactivate"></a>CWnd::OnNcactivate
+## <a name="cwndonncactivate"></a><a name="onncactivate"></a>CWnd:: Оннкактивате
 
-Рамочная система вызывает эту функцию элемента, когда область неклиента должна быть изменена для обозначения активного или неактивного состояния.
+Платформа вызывает эту функцию члена, когда неклиентскую область необходимо изменить, чтобы указать активное или неактивное состояние.
 
 ```
 afx_msg BOOL OnNcActivate(BOOL bActive);
@@ -8160,23 +8160,23 @@ afx_msg BOOL OnNcActivate(BOOL bActive);
 
 ### <a name="parameters"></a>Параметры
 
-*bАктивный*<br/>
-Определяет, когда бар подписи или значок необходимо изменить, чтобы указать активное или неактивное состояние. Параметр *bActive* является правдой, если будет нарисована активная подпись или значок. Это FALSE для неактивной подписи или значка.
+*бактиве*<br/>
+Указывает, когда нужно изменить строку заголовка или значок, чтобы они указывали на активное или неактивное состояние. Параметр *бактиве* имеет значение true, если должен быть нарисован активный заголовок или значок. Значение FALSE для неактивного заголовка или значка.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Nonzero, если Windows должна приступить к обработке по умолчанию; 0 для предотвращения деактивации панели подписей или значка.
+Ненулевое значение, если Windows будет продолжать обработку по умолчанию; 0, чтобы запретить деактивацию строки заголовка или значка.
 
 ### <a name="remarks"></a>Remarks
 
-Реализация по умолчанию рисует заголовок бар и название-бар текст в их активных цветов, если *bActive* является правдой и в их неактивных цветов, если *bActive* является FALSE.
+Реализация по умолчанию выводит строку заголовка и текст строки заголовка в своих активных цветах, если *бактиве* имеет значение true и неактивные цвета, если *бактиве* имеет значение false.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonnccalcsize"></a><a name="onnccalcsize"></a>CWnd::OnNcCalcSize
+## <a name="cwndonnccalcsize"></a><a name="onnccalcsize"></a>CWnd:: Оннккалксизе
 
-Рамочная система вызывает эту функцию участника, когда необходимо рассчитать размер и положение клиентской области.
+Платформа вызывает эту функцию члена, когда необходимо вычислить размер и расположение клиентской области.
 
 ```
 afx_msg void OnNcCalcSize(
@@ -8186,28 +8186,28 @@ afx_msg void OnNcCalcSize(
 
 ### <a name="parameters"></a>Параметры
 
-*bCalcValidRects*<br/>
-Уточняется, следует ли указывать, какая часть клиентской области содержит достоверные сведения. Windows будет копировать достоверные сведения в указанной области в новой клиентской области. Если этот параметр является правдой, приложение должно указать, какая часть клиентской области действительна.
+*бкалквалидректс*<br/>
+Указывает, должно ли приложение указывать, какая часть клиентской области содержит действительные сведения. Windows скопирует действительные данные в указанную область в новой клиентской области. Если этот параметр имеет значение TRUE, приложение должно указать, какая часть клиентской области является допустимой.
 
-*lpncsp*<br/>
-Указывает на [NCCALCSIZE_PARAMS](/windows/win32/api/winuser/ns-winuser-nccalcsize_params) структуру данных, содержащую информацию, которую приложение может использовать для расчета нового размера и положения `CWnd` прямоугольника (включая область клиента, границы, подписи, прокрутки и так далее).
+*лпнксп*<br/>
+Указывает на [NCCALCSIZE_PARAMS](/windows/win32/api/winuser/ns-winuser-nccalcsize_params) структуру данных, содержащую сведения, которые приложение может использовать для вычисления нового размера и позиции `CWnd` прямоугольника (включая клиентскую область, границы, заголовок, полосы прокрутки и т. д.).
 
 ### <a name="remarks"></a>Remarks
 
-Обработка этого сообщения может управлять содержимым клиентской области окна при изменении размера или положения окна.
+Обрабатывая это сообщение, приложение может управлять содержимым клиентской области окна при изменении размера или расположения окна.
 
-Независимо от значения *bCalcValidRects,* первый прямоугольник в `rgrc` массиве, `NCCALCSIZE_PARAMS` указанном членом структуры структуры, содержит координаты окна. Для окна ребенка координаты относительно клиентской области родительского окна. Для окон верхнего уровня координаты являются координатами экрана. Приложение должно изменить `rgrc[0]` прямоугольник, чтобы отразить размер и положение клиентской области.
+Независимо от значения *бкалквалидректс*, первый прямоугольник в массиве, заданный `rgrc` элементом структуры `NCCALCSIZE_PARAMS` структуры, содержит координаты окна. Для дочернего окна координаты задаются относительно клиентской области родительского окна. Для окон верхнего уровня координаты являются экранными координатами. Приложение должно изменить `rgrc[0]` прямоугольник в соответствии с размером и положением клиентской области.
 
-И `rgrc[1]` `rgrc[2]` прямоугольники действительны только в том случае, если *bCalcValidRects* является правдой. В этом случае `rgrc[1]` прямоугольник содержит координаты окна до его перемещения или переобраски. Прямоугольник `rgrc[2]` содержит координаты клиентской области окна перед тем, как окно было перемещено. Все координаты относительно родительского окна или экрана.
+`rgrc[1]` `rgrc[2]` Прямоугольники и являются допустимыми только в том случае, если *бкалквалидректс* имеет значение true. В этом случае `rgrc[1]` прямоугольник содержит координаты окна до его перемещения или изменения размера. `rgrc[2]`Прямоугольник содержит координаты клиентской области окна перед перемещением окна. Все координаты задаются относительно родительского окна или экрана.
 
-Реализация по умолчанию вычисляет размер области клиента на основе характеристик окна (наличие баров прокрутки, меню и т.д.) и помещает результат в *lpncsp.*
+Реализация по умолчанию вычисляет размер клиентской области на основе характеристик окна (наличие полос прокрутки, меню и т. д.) и помещает результат в *лпнксп*.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonnccreate"></a><a name="onnccreate"></a>CWnd::OnNcCreate
+## <a name="cwndonnccreate"></a><a name="onnccreate"></a>CWnd:: Оннккреате
 
-Платформа вызывает эту функцию [WM_CREATE](#oncreate) участника до `CWnd` WM_CREATE сообщение, когда объект впервые создан.
+Платформа вызывает эту функцию-член до появления сообщения [WM_CREATE](#oncreate) при `CWnd` создании объекта.
 
 ```
 afx_msg BOOL OnNcCreate(LPCREATESTRUCT lpCreateStruct);
@@ -8215,21 +8215,21 @@ afx_msg BOOL OnNcCreate(LPCREATESTRUCT lpCreateStruct);
 
 ### <a name="parameters"></a>Параметры
 
-*lpСоздатьСтрукт*<br/>
-Указывает на структуру данных `CWnd` [CREATESTRUCT](/windows/win32/api/winuser/ns-winuser-createstructw) для .
+*лпкреатеструкт*<br/>
+Указывает на структуру данных [CREATESTRUCT](/windows/win32/api/winuser/ns-winuser-createstructw) для `CWnd` .
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Nonzero, если неклиент области создана. Это 0, если происходит ошибка; `Create` функция вернет **сбой** в этом случае.
+Ненулевое значение, если создана неклиентская область. Это значение равно 0, если возникает ошибка. `Create`в этом случае функция возвратит **ошибку** .
 
 ### <a name="remarks"></a>Remarks
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonncdestroy"></a><a name="onncdestroy"></a>CWnd::OnNcDestroy
+## <a name="cwndonncdestroy"></a><a name="onncdestroy"></a>CWnd:: OnNcDestroy
 
-Вызывается инфраструктурой при уничтожении области неклиента и является последней функцией участника, называемой при уничтожении окна Windows.
+Вызывается платформой при уничтожении неклиентской области и является последней функцией-членом, вызываемой при уничтожении окна Windows.
 
 ```
 afx_msg void OnNcDestroy();
@@ -8237,13 +8237,13 @@ afx_msg void OnNcDestroy();
 
 ### <a name="remarks"></a>Remarks
 
-Реализация по умолчанию выполняет некоторую очистку, а затем вызывает функцию виртуального члена [PostNcDestroy.](#postncdestroy)
+Реализация по умолчанию выполняет некоторую очистку, а затем вызывает виртуальную функцию члена [постнкдестрой](#postncdestroy).
 
-Переувистрить, `PostNcDestroy` если вы хотите выполнить свою собственную очистку, например, **удалить эту** операцию. При переопределением `OnNcDestroy`необходимо `OnNcDestroy` вызвать базовый класс, чтобы убедиться, что любая память, внутренне выделенная для окна, будет освобождена.
+Переопределите `PostNcDestroy` , если хотите выполнить собственную очистку, например **удалить эту** операцию. При переопределении `OnNcDestroy` необходимо вызвать `OnNcDestroy` в базовом классе, чтобы освободить память, внутренне выделенную для окна.
 
-## <a name="cwndonnchittest"></a><a name="onnchittest"></a>CWnd::OnNcHitTest
+## <a name="cwndonnchittest"></a><a name="onnchittest"></a>CWnd:: Оннчиттест
 
-Фрейм вызывает эту `CWnd` функцию члена для объекта, `CWnd` содержащего курсор (или объект, который использовал функцию члена [SetCapture](#setcapture) для захвата ввода мыши) каждый раз, когда мышь перемещается.
+Платформа вызывает эту функцию-член для `CWnd` объекта, содержащего курсор (или `CWnd` объект, который использовал функцию-член [сеткаптуре](#setcapture) для захвата ввода мыши) при каждом перемещении мыши.
 
 ```
 afx_msg LRESULT OnNcHitTest(CPoint point);
@@ -8251,21 +8251,21 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
 
 ### <a name="parameters"></a>Параметры
 
-*Точки*<br/>
-Содержит x- и y-координаты курсора. Эти координаты всегда являются координатами экрана.
+*точки*<br/>
+Содержит координаты x и y курсора. Эти координаты всегда являются экранными координатами.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Один из мыши хит-тест перечисленных значений. Список значений смотрите [WM_NCHITTEST.](/windows/win32/inputdev/wm-nchittest)
+Одно из перечислимых значений, проверяемых нажатием кнопки мыши. Список значений см. в разделе [WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) .
 
 ### <a name="remarks"></a>Remarks
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonnclbuttondblclk"></a><a name="onnclbuttondblclk"></a>CWnd::OnNcLButtonDblClk
+## <a name="cwndonnclbuttondblclk"></a><a name="onnclbuttondblclk"></a>CWnd:: Оннклбуттондблклк
 
-Рамочная система вызывает эту функцию участника, когда пользователь дважды щелкает левую `CWnd`кнопку мыши, в то время как курсор находится в зоне неклиента.
+Платформа вызывает эту функцию-член, когда пользователь дважды щелкает левую кнопку мыши, когда курсор находится внутри неклиентской области `CWnd` .
 
 ```
 afx_msg void OnNcLButtonDblClk(
@@ -8275,11 +8275,11 @@ afx_msg void OnNcLButtonDblClk(
 
 ### <a name="parameters"></a>Параметры
 
-*nHitTest*<br/>
-Упоняет [код хит-теста.](#onnchittest) Тест попадания — это тест, определяющий местоположение курсора. Список значений смотрите [WM_NCHITTEST.](/windows/win32/inputdev/wm-nchittest)
+*нхиттест*<br/>
+Указывает [код проверки попадания](#onnchittest). Проверка нажатия — это проверка, определяющая положение курсора. Список значений см. в разделе [WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) .
 
-*Точки*<br/>
-Определяет `CPoint` объект, содержащий координаты экрана x и y в положении курсора. Эти координаты всегда относительно верхнего левого угла экрана.
+*точки*<br/>
+Задает `CPoint` объект, содержащий экранные координаты x и y позиции курсора. Эти координаты всегда отсчитываются относительно левого верхнего угла экрана.
 
 ### <a name="remarks"></a>Remarks
 
@@ -8288,9 +8288,9 @@ afx_msg void OnNcLButtonDblClk(
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonnclbuttondown"></a><a name="onnclbuttondown"></a>CWnd::OnNcLButtonDown
+## <a name="cwndonnclbuttondown"></a><a name="onnclbuttondown"></a>CWnd:: Оннклбуттондовн
 
-Фрейм вызывает эту функцию участника, когда пользователь нажимает на левую `CWnd` кнопку мыши, пока курсор находится в зоне неклиента объекта.
+Платформа вызывает эту функцию-член, когда пользователь нажимает левую кнопку мыши, когда курсор находится внутри неклиентской области `CWnd` объекта.
 
 ```
 afx_msg void OnNcLButtonDown(
@@ -8300,22 +8300,22 @@ afx_msg void OnNcLButtonDown(
 
 ### <a name="parameters"></a>Параметры
 
-*nHitTest*<br/>
-Упоняет [код хит-теста.](#onnchittest) Тест попадания — это тест, определяющий местоположение курсора. Список значений смотрите [WM_NCHITTEST.](/windows/win32/inputdev/wm-nchittest)
+*нхиттест*<br/>
+Указывает [код проверки попадания](#onnchittest). Проверка нажатия — это проверка, определяющая положение курсора. Список значений см. в разделе [WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) .
 
-*Точки*<br/>
-Определяет `CPoint` объект, содержащий координаты экрана x и y в положении курсора. Эти координаты всегда относительно верхнего левого угла экрана.
+*точки*<br/>
+Задает `CPoint` объект, содержащий экранные координаты x и y позиции курсора. Эти координаты всегда отсчитываются относительно левого верхнего угла экрана.
 
 ### <a name="remarks"></a>Remarks
 
-При необходимости [WM_SYSCOMMAND](#onsyscommand) отправляется.
+При необходимости отправляется [WM_SYSCOMMAND](#onsyscommand) .
 
 > [!NOTE]
-> Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные рамкой при получении сообщения. Если вы называете реализацию этой функции базового класса, то в реализации будут использоваться параметры, первоначально пройденое с сообщением, а не параметры, которые вы поставляете функции.
+> Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражая параметры, полученные платформой при получении сообщения. При вызове реализации этой функции базового класса эта реализация будет использовать параметры, изначально переданные вместе с сообщением, а не параметры, предоставленные функции.
 
-## <a name="cwndonnclbuttonup"></a><a name="onnclbuttonup"></a>CWnd::OnNcLButtonUp
+## <a name="cwndonnclbuttonup"></a><a name="onnclbuttonup"></a>CWnd:: Оннклбуттонуп
 
-Рамочная функция вызывает эту функцию, когда пользователь выпускает левую кнопку мыши, в то время как курсор находится в зоне неклиента.
+Платформа вызывает эту функцию-член, когда пользователь отпускает левую кнопку мыши, пока курсор находится внутри неклиентской области.
 
 ```
 afx_msg void OnNcLButtonUp(
@@ -8325,22 +8325,22 @@ afx_msg void OnNcLButtonUp(
 
 ### <a name="parameters"></a>Параметры
 
-*nHitTest*<br/>
-Упоняет [код хит-теста.](#onnchittest) Тест попадания — это тест, определяющий местоположение курсора. Список значений смотрите [WM_NCHITTEST.](/windows/win32/inputdev/wm-nchittest)
+*нхиттест*<br/>
+Указывает [код проверки попадания](#onnchittest). Проверка нажатия — это проверка, определяющая положение курсора. Список значений см. в разделе [WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) .
 
-*Точки*<br/>
-Определяет `CPoint` объект, содержащий координаты экрана x и y в положении курсора. Эти координаты всегда относительно верхнего левого угла экрана.
+*точки*<br/>
+Задает `CPoint` объект, содержащий экранные координаты x и y позиции курсора. Эти координаты всегда отсчитываются относительно левого верхнего угла экрана.
 
 ### <a name="remarks"></a>Remarks
 
-При необходимости [WM_SYSCOMMAND](#onsyscommand) отправляется.
+При необходимости отправляется [WM_SYSCOMMAND](#onsyscommand) .
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonncmbuttondblclk"></a><a name="onncmbuttondblclk"></a>CWnd::OnNcMButtonDblClk
+## <a name="cwndonncmbuttondblclk"></a><a name="onncmbuttondblclk"></a>CWnd:: Оннкмбуттондблклк
 
-Рамочная система вызывает эту функцию участника, когда пользователь дважды щелкает кнопку средней мыши, в то время как курсор находится в зоне неклиента.
+Платформа вызывает эту функцию-член, когда пользователь дважды щелкает среднюю кнопку мыши, когда курсор находится внутри неклиентской области.
 
 ```
 afx_msg void OnNcMButtonDblClk(
@@ -8350,20 +8350,20 @@ afx_msg void OnNcMButtonDblClk(
 
 ### <a name="parameters"></a>Параметры
 
-*nHitTest*<br/>
-Упоняет [код хит-теста.](#onnchittest) Тест попадания — это тест, определяющий местоположение курсора.
+*нхиттест*<br/>
+Указывает [код проверки попадания](#onnchittest). Проверка нажатия — это проверка, определяющая положение курсора.
 
-*Точки*<br/>
-Определяет `CPoint` объект, содержащий координаты экрана x и y в положении курсора. Эти координаты всегда относительно верхнего левого угла экрана.
+*точки*<br/>
+Задает `CPoint` объект, содержащий экранные координаты x и y позиции курсора. Эти координаты всегда отсчитываются относительно левого верхнего угла экрана.
 
 ### <a name="remarks"></a>Remarks
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonncmbuttondown"></a><a name="onncmbuttondown"></a>CWnd::OnNcMButtonDown
+## <a name="cwndonncmbuttondown"></a><a name="onncmbuttondown"></a>CWnd:: Оннкмбуттондовн
 
-Рамочная функция вызывает эту функцию, когда пользователь нажимает кнопку средней мыши, в то время как курсор находится в зоне неклиента.
+Платформа вызывает эту функцию-член, когда пользователь нажимает среднюю кнопку мыши, когда курсор находится внутри неклиентской области.
 
 ```
 afx_msg void OnNcMButtonDown(
@@ -8373,20 +8373,20 @@ afx_msg void OnNcMButtonDown(
 
 ### <a name="parameters"></a>Параметры
 
-*nHitTest*<br/>
-Упоняет [код хит-теста.](#onnchittest) Тест попадания — это тест, определяющий местоположение курсора.
+*нхиттест*<br/>
+Указывает [код проверки попадания](#onnchittest). Проверка нажатия — это проверка, определяющая положение курсора.
 
-*Точки*<br/>
-Определяет `CPoint` объект, содержащий координаты экрана x и y в положении курсора. Эти координаты всегда относительно верхнего левого угла экрана.
+*точки*<br/>
+Задает `CPoint` объект, содержащий экранные координаты x и y позиции курсора. Эти координаты всегда отсчитываются относительно левого верхнего угла экрана.
 
 ### <a name="remarks"></a>Remarks
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonncmbuttonup"></a><a name="onncmbuttonup"></a>CWnd::OnNcMButtonUp
+## <a name="cwndonncmbuttonup"></a><a name="onncmbuttonup"></a>CWnd:: Оннкмбуттонуп
 
-Рамочная функция вызывает эту функцию, когда пользователь выпускает кнопку средней мыши, в то время как курсор находится в зоне неклиента.
+Платформа вызывает эту функцию-член, когда пользователь отпускает среднюю кнопку мыши, когда курсор находится внутри неклиентской области.
 
 ```
 afx_msg void OnNcMButtonUp(
@@ -8396,20 +8396,20 @@ afx_msg void OnNcMButtonUp(
 
 ### <a name="parameters"></a>Параметры
 
-*nHitTest*<br/>
-Упоняет [код хит-теста.](#onnchittest) Тест попадания — это тест, определяющий местоположение курсора.
+*нхиттест*<br/>
+Указывает [код проверки попадания](#onnchittest). Проверка нажатия — это проверка, определяющая положение курсора.
 
-*Точки*<br/>
-Определяет `CPoint` объект, содержащий координаты экрана x и y в положении курсора. Эти координаты всегда относительно верхнего левого угла экрана.
+*точки*<br/>
+Задает `CPoint` объект, содержащий экранные координаты x и y позиции курсора. Эти координаты всегда отсчитываются относительно левого верхнего угла экрана.
 
 ### <a name="remarks"></a>Remarks
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonncmousehover"></a><a name="onncmousehover"></a>CWnd::OnNcMouseHover
+## <a name="cwndonncmousehover"></a><a name="onncmousehover"></a>CWnd:: Оннкмаусеховер
 
-Рамочная функция вызывает эту функцию участника, когда курсор парит над областью окна неклиента в течение периода времени, указанного в предыдущем вызове [на TrackMouseEvent.](/windows/win32/api/winuser/nf-winuser-trackmouseevent)
+Платформа вызывает эту функцию-член при наведении курсора на неклиентскую область окна в течение периода времени, указанного в предыдущем вызове метода [TrackMouseEven](/windows/win32/api/winuser/nf-winuser-trackmouseevent).
 
 ```
 afx_msg void OnNcMouseHover(
@@ -8419,21 +8419,21 @@ afx_msg void OnNcMouseHover(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|*nHitTest*|(в) Значение хит-теста, возвращенное функцией [CWnd::DefWindowProc](#defwindowproc) в результате обработки [WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) сообщения.|
-|*Точки*|(в) Объект [CPoint,](../../atl-mfc-shared/reference/cpoint-class.md) который определяет *x* и *y* координаты курсора относительно верхнего левого угла экрана.|
+|*нхиттест*|окне Значение проверки попадания, возвращаемое функцией [CWnd::D ефвиндовпрок](#defwindowproc) в результате обработки сообщения [WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) .|
+|*точки*|окне Объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , указывающий координаты *x* и *y* курсора относительно верхнего левого угла экрана.|
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод получает [WM_NCMOUSEHOVER](/windows/win32/inputdev/wm-ncmousehover) уведомление, которое описано в SDK Windows.
+Этот метод получает уведомление [WM_NCMOUSEHOVER](/windows/win32/inputdev/wm-ncmousehover) , которое описано в Windows SDK.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonncmouseleave"></a><a name="onncmouseleave"></a>CWnd::OnNcMouseLeave
+## <a name="cwndonncmouseleave"></a><a name="onncmouseleave"></a>CWnd:: Оннкмауселеаве
 
-Рамочная функция вызывает эту функцию участника, когда курсор покидает область неклиента окна, указанную в предыдущем вызове [TrackMouseEvent.](/windows/win32/api/winuser/nf-winuser-trackmouseevent)
+Платформа вызывает эту функцию-член, когда курсор оставляет неклиентскую область окна, указанную в предыдущем вызове метода [TrackMouseEven](/windows/win32/api/winuser/nf-winuser-trackmouseevent).
 
 ```
 afx_msg void OnNcMouseLeave();
@@ -8441,14 +8441,14 @@ afx_msg void OnNcMouseLeave();
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод получает [уведомление WM_NCMOUSELEAVE,](/windows/win32/inputdev/wm-ncmouseleave) которое описано в SDK Windows.
+Этот метод получает уведомление [WM_NCMOUSELEAVE](/windows/win32/inputdev/wm-ncmouseleave) , которое описано в Windows SDK.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonncmousemove"></a><a name="onncmousemove"></a>CWnd::OnNcMouseMove
+## <a name="cwndonncmousemove"></a><a name="onncmousemove"></a>CWnd:: Оннкмаусемове
 
-Платформа вызывает эту функцию члена при перемещении курсора в области неклиента.
+Платформа вызывает эту функцию-член, когда курсор перемещается внутри неклиентской области.
 
 ```
 afx_msg void OnNcMouseMove(
@@ -8458,11 +8458,11 @@ afx_msg void OnNcMouseMove(
 
 ### <a name="parameters"></a>Параметры
 
-*nHitTest*<br/>
-Упоняет [код хит-теста.](#onnchittest) Тест попадания — это тест, определяющий местоположение курсора.
+*нхиттест*<br/>
+Указывает [код проверки попадания](#onnchittest). Проверка нажатия — это проверка, определяющая положение курсора.
 
-*Точки*<br/>
-Определяет `CPoint` объект, содержащий координаты экрана x и y в положении курсора. Эти координаты всегда относительно верхнего левого угла экрана.
+*точки*<br/>
+Задает `CPoint` объект, содержащий экранные координаты x и y позиции курсора. Эти координаты всегда отсчитываются относительно левого верхнего угла экрана.
 
 ### <a name="remarks"></a>Remarks
 
@@ -8471,9 +8471,9 @@ afx_msg void OnNcMouseMove(
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonncpaint"></a><a name="onncpaint"></a>CWnd::OnNcPaint
+## <a name="cwndonncpaint"></a><a name="onncpaint"></a>CWnd:: Оннкпаинт
 
-Платформа называет эту функцию члена, когда область неклиента должна быть окрашена.
+Платформа вызывает эту функцию члена, когда неклиентская область должна быть окрашена.
 
 ```
 afx_msg void OnNcPaint();
@@ -8481,13 +8481,13 @@ afx_msg void OnNcPaint();
 
 ### <a name="remarks"></a>Remarks
 
-Реализация по умолчанию рисует оконную раму.
+Реализация по умолчанию закрашивает рамку окна.
 
-Приложение может переопределить этот вызов и покрасить свою собственную пользовательскую оконную раму. Область отсечения всегда прямоугольна, даже если форма рамы изменена.
+Приложение может переопределить этот вызов и закрасить собственный пользовательский фрейм окна. Область обрезки всегда прямоугольная, даже если форма рамки изменена.
 
-## <a name="cwndonncrbuttondblclk"></a><a name="onncrbuttondblclk"></a>CWnd::OnNcRButtonDblClk
+## <a name="cwndonncrbuttondblclk"></a><a name="onncrbuttondblclk"></a>CWnd:: Оннкрбуттондблклк
 
-Рамочная система вызывает эту функцию участника, когда пользователь дважды щелкает правой `CWnd`кнопкой мыши, в то время как курсор находится в зоне неклиента.
+Платформа вызывает эту функцию-член, когда пользователь дважды щелкает правую кнопку мыши, когда курсор находится внутри неклиентской области `CWnd` .
 
 ```
 afx_msg void OnNcRButtonDblClk(
@@ -8497,20 +8497,20 @@ afx_msg void OnNcRButtonDblClk(
 
 ### <a name="parameters"></a>Параметры
 
-*nHitTest*<br/>
-Упоняет [код хит-теста.](#onnchittest) Тест попадания — это тест, определяющий местоположение курсора.
+*нхиттест*<br/>
+Указывает [код проверки попадания](#onnchittest). Проверка нажатия — это проверка, определяющая положение курсора.
 
-*Точки*<br/>
-Определяет `CPoint` объект, содержащий координаты экрана x и y в положении курсора. Эти координаты всегда относительно верхнего левого угла экрана.
+*точки*<br/>
+Задает `CPoint` объект, содержащий экранные координаты x и y позиции курсора. Эти координаты всегда отсчитываются относительно левого верхнего угла экрана.
 
 ### <a name="remarks"></a>Remarks
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonncrbuttondown"></a><a name="onncrbuttondown"></a>CWnd::OnNcRButtonDown
+## <a name="cwndonncrbuttondown"></a><a name="onncrbuttondown"></a>CWnd:: Оннкрбуттондовн
 
-Рамочная система вызывает эту функцию участника, когда пользователь нажимает правую кнопку мыши, в то время как курсор находится в зоне неклиента.
+Платформа вызывает эту функцию-член, когда пользователь нажимает правую кнопку мыши, когда курсор находится внутри неклиентской области.
 
 ```
 afx_msg void OnNcRButtonDown(
@@ -8520,20 +8520,20 @@ afx_msg void OnNcRButtonDown(
 
 ### <a name="parameters"></a>Параметры
 
-*nHitTest*<br/>
-Упоняет [код хит-теста.](#onnchittest) Тест попадания — это тест, определяющий местоположение курсора.
+*нхиттест*<br/>
+Указывает [код проверки попадания](#onnchittest). Проверка нажатия — это проверка, определяющая положение курсора.
 
-*Точки*<br/>
-Определяет `CPoint` объект, содержащий координаты экрана x и y в положении курсора. Эти координаты всегда относительно верхнего левого угла экрана.
+*точки*<br/>
+Задает `CPoint` объект, содержащий экранные координаты x и y позиции курсора. Эти координаты всегда отсчитываются относительно левого верхнего угла экрана.
 
 ### <a name="remarks"></a>Remarks
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonncrbuttonup"></a><a name="onncrbuttonup"></a>CWnd::OnNcRButtonUp
+## <a name="cwndonncrbuttonup"></a><a name="onncrbuttonup"></a>CWnd:: Оннкрбуттонуп
 
-Рамочная система вызывает эту функцию участника, когда пользователь выпускает правую кнопку мыши, в то время как курсор находится в зоне неклиента.
+Платформа вызывает эту функцию-член, когда пользователь отпускает правую кнопку мыши, когда курсор находится внутри неклиентской области.
 
 ```
 afx_msg void OnNcRButtonUp(
@@ -8543,20 +8543,20 @@ afx_msg void OnNcRButtonUp(
 
 ### <a name="parameters"></a>Параметры
 
-*nHitTest*<br/>
-Упоняет [код хит-теста.](#onnchittest) Тест попадания — это тест, определяющий местоположение курсора.
+*нхиттест*<br/>
+Указывает [код проверки попадания](#onnchittest). Проверка нажатия — это проверка, определяющая положение курсора.
 
-*Точки*<br/>
-Определяет `CPoint` объект, содержащий координаты экрана x и y в положении курсора. Эти координаты всегда относительно верхнего левого угла экрана.
+*точки*<br/>
+Задает `CPoint` объект, содержащий экранные координаты x и y позиции курсора. Эти координаты всегда отсчитываются относительно левого верхнего угла экрана.
 
 ### <a name="remarks"></a>Remarks
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonncrenderingchanged"></a><a name="onncrenderingchanged"></a>CWnd::OnNcRenderingChanged
+## <a name="cwndonncrenderingchanged"></a><a name="onncrenderingchanged"></a>CWnd:: Оннкрендерингчанжед
 
-Рамки называют этого участника, когда политика рендеринга для области неклиента изменилась.
+Платформа вызывает этот элемент при изменении политики отрисовки неклиентской области.
 
 ```
 afx_msg void OnNcRenderingChanged(BOOL bIsRendering);
@@ -8564,20 +8564,20 @@ afx_msg void OnNcRenderingChanged(BOOL bIsRendering);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|*bIsRendering*|(в) TRUE, если рендеринг настольного окна (DWM) включен для области окна, не клиентской; FALSE, если рендеринг отключен.|
+|*бисрендеринг*|окне TRUE, если отрисовка диспетчер окон рабочего стола (DWM) включена для неклиентской области окна; Значение FALSE, если отрисовка отключена.|
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод получает [WM_DWMNCRENDERINGCHANGED](/windows/win32/dwm/wm-dwmncrenderingchanged) уведомление, которое описано в SDK Windows.
+Этот метод получает уведомление [WM_DWMNCRENDERINGCHANGED](/windows/win32/dwm/wm-dwmncrenderingchanged) , которое описано в Windows SDK.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonncxbuttondblclk"></a><a name="onncxbuttondblclk"></a>CWnd::OnNcXButtonDblClk
+## <a name="cwndonncxbuttondblclk"></a><a name="onncxbuttondblclk"></a>CWnd:: Оннкксбуттондблклк
 
-Рамочная система вызывает эту функцию участника, когда пользователь дважды щелкает XBUTTON1 или XBUTTON2, пока курсор находится в области неклиента окна.
+Платформа вызывает эту функцию-член, когда пользователь дважды щелкает XBUTTON1 или XBUTTON2, когда курсор находится в неклиентской области окна.
 
 ```cpp
 void OnNcXButtonDblClk(
@@ -8588,22 +8588,22 @@ void OnNcXButtonDblClk(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|*nHitTest*|(в) Значение хит-теста, возвращенное функцией [CWnd::DefWindowProc](#defwindowproc) в результате обработки [WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) сообщения.|
-|*nКнопка*|(в) Значение XBUTTON1, если первая кнопка Microsoft Intellimouse X имеет двойное нажатие, или XBUTTON2, если вторая кнопка X имеет двойное нажатие.|
-|*Точки*|(в) Объект [CPoint,](../../atl-mfc-shared/reference/cpoint-class.md) который определяет *x* и *y* координаты курсора относительно верхнего левого угла области клиента.|
+|*нхиттест*|окне Значение проверки попадания, возвращаемое функцией [CWnd::D ефвиндовпрок](#defwindowproc) в результате обработки сообщения [WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) .|
+|*нбуттон*|окне Значение XBUTTON1, если первая кнопка Microsoft IntelliMouse X нажата двойным щелчком, или XBUTTON2, если дважды щелкнуть вторую кнопку X.|
+|*точки*|окне Объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , указывающий координаты *x* и *y* курсора относительно верхнего левого угла клиентской области.|
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод получает [уведомление WM_XBUTTONDBLCLK,](/windows/win32/inputdev/wm-xbuttondblclk) которое описано в SDK Windows. Это сообщение размещается в окне, содержащем курсор. Если окно захватило мышь, это сообщение не размещено.
+Этот метод получает уведомление [WM_XBUTTONDBLCLK](/windows/win32/inputdev/wm-xbuttondblclk) , которое описано в Windows SDK. Это сообщение отправляется в окно, содержащее курсор. Если окно захвачено мышью, это сообщение не отправляется.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonncxbuttondown"></a><a name="onncxbuttondown"></a>CWnd::OnNcXButtonDown
+## <a name="cwndonncxbuttondown"></a><a name="onncxbuttondown"></a>CWnd:: Оннкксбуттондовн
 
-Рамочная функция вызывает эту функцию, когда пользователь нажимает на XBUTTON1 или XBUTTON2 мыши, пока курсор находится в области неклиента окна.
+Платформа вызывает эту функцию-член, когда пользователь нажимает XBUTTON1 или XBUTTON2 мыши, когда курсор находится в неклиентской области окна.
 
 ```
 afx_msg void OnNcXButtonDown(
@@ -8614,22 +8614,22 @@ afx_msg void OnNcXButtonDown(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|*nHitTest*|(в) Значение хит-теста, возвращенное функцией [CWnd::DefWindowProc](#defwindowproc) в результате обработки [WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) сообщения.|
-|*nКнопка*|(в) Значение XBUTTON1 при нажатии первой кнопки мыши X или XBUTTON2 при нажатии второй кнопки X.|
-|*Точки*|(в) Объект [CPoint,](../../atl-mfc-shared/reference/cpoint-class.md) который определяет *x* и *y* координаты курсора относительно верхнего левого угла экрана.|
+|*нхиттест*|окне Значение проверки попадания, возвращаемое функцией [CWnd::D ефвиндовпрок](#defwindowproc) в результате обработки сообщения [WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) .|
+|*нбуттон*|окне Значение XBUTTON1, если была нажата первая кнопка мыши или XBUTTON2 при нажатии второй кнопки X.|
+|*точки*|окне Объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , указывающий координаты *x* и *y* курсора относительно верхнего левого угла экрана.|
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод получает [уведомление WM_NCXBUTTONDOWN,](/windows/win32/inputdev/wm-ncxbuttondown) которое описано в SDK Windows. Это сообщение размещается в окне, содержащем курсор. Если окно захватило мышь, это сообщение не размещено.
+Этот метод получает уведомление [WM_NCXBUTTONDOWN](/windows/win32/inputdev/wm-ncxbuttondown) , которое описано в Windows SDK. Это сообщение отправляется в окно, содержащее курсор. Если окно захвачено мышью, это сообщение не отправляется.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonncxbuttonup"></a><a name="onncxbuttonup"></a>CWnd::OnNcXButtonUp
+## <a name="cwndonncxbuttonup"></a><a name="onncxbuttonup"></a>CWnd:: Оннкксбуттонуп
 
-Рамочная функция вызывает эту функцию, когда пользователь выпускает XBUTTON1 или XBUTTON2 мыши, в то время как курсор находится в области неклиента окна.
+Платформа вызывает эту функцию-член, когда пользователь отпускает XBUTTON1 или XBUTTON2 мыши, когда курсор находится в неклиентской области окна.
 
 ```
 afx_msg void OnNcXButtonUp(
@@ -8640,22 +8640,22 @@ afx_msg void OnNcXButtonUp(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|*nHitTest*|(в) Значение хит-теста, возвращенное функцией [CWnd::DefWindowProc](#defwindowproc) в результате обработки [WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) сообщения.|
-|*nКнопка*|(в) Значение XBUTTON1, если первая кнопка мыши X выпущена, или XBUTTON2, если вторая кнопка X выпущена.|
-|*Точки*|(в) Объект [CPoint,](../../atl-mfc-shared/reference/cpoint-class.md) который определяет *x* и *y* координаты курсора относительно верхнего левого угла экрана.|
+|*нхиттест*|окне Значение проверки попадания, возвращаемое функцией [CWnd::D ефвиндовпрок](#defwindowproc) в результате обработки сообщения [WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) .|
+|*нбуттон*|окне Значение XBUTTON1, если первая кнопка мыши была отжата, или XBUTTON2 при отпускании второй кнопки X.|
+|*точки*|окне Объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , указывающий координаты *x* и *y* курсора относительно верхнего левого угла экрана.|
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод получает [уведомление WM_NCXBUTTONUP,](/windows/win32/inputdev/wm-ncxbuttonup) которое описано в SDK Windows. Это сообщение размещается в окне, содержащем курсор. Если окно захватило мышь, это сообщение не размещено.
+Этот метод получает уведомление [WM_NCXBUTTONUP](/windows/win32/inputdev/wm-ncxbuttonup) , которое описано в Windows SDK. Это сообщение отправляется в окно, содержащее курсор. Если окно захвачено мышью, это сообщение не отправляется.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonnextmenu"></a><a name="onnextmenu"></a>CWnd::OnNextMenu
+## <a name="cwndonnextmenu"></a><a name="onnextmenu"></a>CWnd:: Оннекстмену
 
-Рамочная функция вызывает эту функцию, когда правый или левый ключ стрелки используется для переключения между баром меню и меню системы.
+Платформа вызывает эту функцию-член, когда клавиша со стрелкой вправо или влево используется для переключения между строкой меню и системным меню.
 
 ```
 afx_msg void OnNextMenu(
@@ -8665,21 +8665,21 @@ afx_msg void OnNextMenu(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|*nKey*|(в) Битовая комбинация (ИЛИ) флагов, указывающих, какие клавиши модификатора нажаты. Например, MK_CONTROL флаг указывает на нажатие ключа CTRL.<br /><br /> Список флагов можно узнать в подзаголовке "Параметры сообщений" в [входе мыши.](/windows/win32/inputdev/about-mouse-input)|
-|*lpMdiNextMenu*|(в) Указатель на структуру [MDINEXTMENU,](/windows/win32/api/winuser/ns-winuser-mdinextmenu) содержащую информацию о меню, которое будет активировано.|
+|*нкэй*|окне Побитовое сочетание (или) флагов, указывающих, какие клавиши-модификаторы нажаты. Например, флаг MK_CONTROL указывает, что нажата клавиша CTRL.<br /><br /> Список флагов см. в подразделе "Параметры сообщения" статьи [о вводе](/windows/win32/inputdev/about-mouse-input)с помощью мыши.|
+|*лпмдинекстмену*|окне Указатель на структуру [мдинекстмену](/windows/win32/api/winuser/ns-winuser-mdinextmenu) , содержащую сведения о меню, которое должно быть активировано.|
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод получает [уведомление WM_UNINITMENUPOPUP,](/windows/win32/menurc/wm-uninitmenupopup) которое описано в SDK Windows. В ответ на это сообщение приложение `hmenuNext` может настроить члену структуры [MDINEXTMENU](/windows/win32/api/winuser/ns-winuser-mdinextmenu) для уточнения меню для переключения, а `hwndNext` участнику — указать окно для получения сообщений уведомлений меню.
+Этот метод получает уведомление [WM_UNINITMENUPOPUP](/windows/win32/menurc/wm-uninitmenupopup) , которое описано в Windows SDK. В ответ на это сообщение приложение может задать `hmenuNext` элемент структуры [мдинекстмену](/windows/win32/api/winuser/ns-winuser-mdinextmenu) , чтобы указать меню, к которому будет переключаться, и член, `hwndNext` чтобы указать окно для получения сообщений уведомления меню.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonnotify"></a><a name="onnotify"></a>CWnd::OnNotify
+## <a name="cwndonnotify"></a><a name="onnotify"></a>CWnd:: OnNotify
 
-Платформа вызывает эту функцию элемента, чтобы сообщить родительскому окну элемента управления о том, что событие произошло в элементе управления или что элемент управления требует определенной информации.
+Платформа вызывает эту функцию-член для информирования родительского окна элемента управления о том, что событие произошло в элементе управления или что элементу управления требуются какие-либо сведения.
 
 ```
 virtual BOOL OnNotify(
@@ -8691,29 +8691,29 @@ virtual BOOL OnNotify(
 ### <a name="parameters"></a>Параметры
 
 *wParam*<br/>
-Определяет элемент управления, который отправляет сообщение, если сообщение от элемента управления. В противном случае, *wParam* 0.
+Определяет элемент управления, который отправляет сообщение, если сообщение получено из элемента управления. В противном случае *wParam* имеет значение 0.
 
 *lParam*<br/>
-Указатель на сообщение`NMHDR`об уведомлении () структура, которая содержит код уведомления и дополнительную информацию. Для некоторых сообщений уведомлений этот параметр указывает на большую структуру, которая имеет структуру в `NMHDR` качестве первого члена.
+Указатель на структуру сообщения уведомления ( `NMHDR` ), которая содержит код уведомления и дополнительные сведения. Для некоторых сообщений с уведомлениями этот параметр указывает на большую структуру, в которой `NMHDR` структура является первым элементом.
 
-*pResult*<br/>
-Указатель на переменную LRESULT, в которой можно хранить код результата при обработке сообщения.
+*пресулт*<br/>
+Указатель на переменную LRESULT, в которой будет храниться код результата, если сообщение обрабатывается.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Приложение возвращает ненулевой, если оно обрабатывает это сообщение; в противном случае 0.
+Приложение возвращает ненулевое значение, если обрабатывает это сообщение; в противном случае — 0.
 
 ### <a name="remarks"></a>Remarks
 
-`OnNotify`обрабатывает карту сообщений для уведомления управления.
+`OnNotify`обрабатывает схему сообщений для управляющих уведомлений.
 
-Переизобить эту функцию участника в своем классе производных для обработки WM_NOTIFY сообщения. Переопределение не обрабатывает карту сообщений, `OnNotify` если не будет вызван базовый класс.
+Переопределите эту функцию члена в производном классе, чтобы она обрабатывала сообщение WM_NOTIFY. Переопределение не будет обрабатывать схему сообщений, если `OnNotify` не вызывается базовый класс.
 
-Для получения дополнительной информации о сообщении WM_NOTIFY [WM_NOTIFY ON_NOTIFY](../../mfc/tn061-on-notify-and-wm-notify-messages.md)см. Вы также можете быть заинтересованы в смежных темах, описанных в [темах управления](../../mfc/controls-mfc.md), и TN062, [Отражение сообщений для управления Windows](../../mfc/tn062-message-reflection-for-windows-controls.md).
+Дополнительные сведения о WM_NOTIFY сообщении см. в статьях технические примечания 61 (TN061), [ON_NOTIFY и WM_NOTIFY сообщения](../../mfc/tn061-on-notify-and-wm-notify-messages.md). Вы также можете заинтересовать соответствующие разделы, описанные в [разделах Управление разделами](../../mfc/controls-mfc.md)и TN062, [отражение сообщений для элементов управления Windows](../../mfc/tn062-message-reflection-for-windows-controls.md).
 
-## <a name="cwndonnotifyformat"></a><a name="onnotifyformat"></a>CWnd::OnNotifyFormat
+## <a name="cwndonnotifyformat"></a><a name="onnotifyformat"></a>CWnd:: Оннотифиформат
 
-Платформа вызывает эту функцию элемента, чтобы определить, принимает ли текущее окно структуры ANSI или Unicode в WM_NOTIFY сообщение муведомления.
+Платформа вызывает эту функцию члена, чтобы определить, принимает ли текущее окно структуры ANSI или Unicode в сообщении уведомления WM_NOTIFY.
 
 ```
 afx_msg UINT OnNotifyFormat(
@@ -8723,29 +8723,29 @@ afx_msg UINT OnNotifyFormat(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|*pWnd*|(в) Указатель на `CWnd` объект, представляющий окно, отправляя [WM_NOTIFY](/windows/win32/controls/wm-notify) сообщение.<br /><br /> Этот параметр является указателем на элемент управления, если параметр *nCommand* находится NF_QUERY, или указателем на родительское окно элемента управления, если *nCommand* NF_REQUERY.|
-|*nКоманда*|(в) Значение команды, специализирующееся на WM_NOTIFY сообщении. Вы можете выбрать<br /><br /> - NF_QUERY -<br />     Сообщение представляет собой запрос для определения того, следует ли использовать структуры ANSI или Unicode в WM_NOTIFY сообщений. Это сообщение отправляется из элемента управления в родительское окно во время создания элемента управления и в ответ на NF_REQUERY форму этого сообщения.<br />- NF_REQUERY -<br />     Сообщение — это запрос элемента управления на отправку NF_QUERY формы этого сообщения в родительское окно. Этот запрос отправляется из родительского окна и просит элемент управления выдать родительскому элементу тип структуры для использования в WM_NOTIFY сообщений. Если параметр *nCommand* NF_REQUERY, значение возврата является результатом операции затворства.|
+|*Приводится*|окне Указатель на `CWnd` объект, представляющий окно, отправляющее сообщение [WM_NOTIFY](/windows/win32/controls/wm-notify) .<br /><br /> Этот параметр является указателем на элемент управления, если параметр *nвыполненная команда* имеет значение NF_QUERY, или указатель на родительское окно элемента управления, если *nвыполненная команда* имеет NF_REQUERY.|
+|*Nвыполненная команда*|окне Значение команды, специализирующее WM_NOTIFY сообщение. Допустимые значения:<br /><br /> -NF_QUERY —<br />     Сообщение — это запрос, позволяющий определить, следует ли использовать в сообщениях WM_NOTIFY структуры ANSI или Юникод. Это сообщение отправляется из элемента управления в его родительское окно во время создания элемента управления и в ответ на NF_REQUERY форму этого сообщения.<br />-NF_REQUERY —<br />     Сообщение является запросом элемента управления на отправку NF_QUERY формы этого сообщения родительскому окну. Этот запрос отправляется из родительского окна и запрашивает у элемента управления возможность повторного запроса родителя о типе структуры, используемой в сообщениях WM_NOTIFY. Если параметр *nвыполненная команда* имеет значение NF_REQUERY, то возвращаемым значением является результат операции Requery.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 |Возвращаемое значение|Значение|
 |------------------|-------------|
-|NFR_ANSI|Структуры ANSI должны использоваться в WM_NOTIFY сообщений, отправляемых элементом управления.|
-|NFR_UNICODE|Структуры Unicode должны использоваться в WM_NOTIFY сообщений, отправляемых элементом управления.|
+|NFR_ANSI|Структуры ANSI следует использовать в сообщениях WM_NOTIFY, отправляемых элементом управления.|
+|NFR_UNICODE|Структуры Юникода следует использовать в сообщениях WM_NOTIFY, отправляемых элементом управления.|
 |0|Произошла ошибка.|
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод получает [WM_NOTIFYFORMAT](/windows/win32/Controls/wm-notifyformat) уведомление, которое описано в SDK Windows. WM_NOTIFY сообщения отправляются из общего элемента управления в родительское окно и из родительского окна в общий элемент управления.
+Этот метод получает уведомление [WM_NOTIFYFORMAT](/windows/win32/Controls/wm-notifyformat) , которое описано в Windows SDK. WM_NOTIFY сообщения отправляются из общего элемента управления в родительское окно, а от родительского окна к общему элементу управления.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonpaint"></a><a name="onpaint"></a>CWnd::OnPaint
+## <a name="cwndonpaint"></a><a name="onpaint"></a>CWnd:: onpain
 
-Платформа вызывает эту функцию участника, когда Windows или приложение запрашивает перекраску части окна приложения.
+Платформа вызывает эту функцию-член, когда Windows или приложение выполняет запрос на перерисовку части окна приложения.
 
 ```
 afx_msg void OnPaint();
@@ -8753,25 +8753,25 @@ afx_msg void OnPaint();
 
 ### <a name="remarks"></a>Remarks
 
-Сообщение [WM_PAINT](/windows/win32/gdi/the-wm-paint-message) отправляется при вызове функции участника [UpdateWindow](#updatewindow) или [RedrawWindow.](#redrawwindow)
+[WM_PAINT](/windows/win32/gdi/the-wm-paint-message) сообщение отправляется при вызове функции-члена [упдатевиндов](#updatewindow) или [редраввиндов](#redrawwindow) .
 
-Окно может получать внутренние сообщения краски `RedrawWindow` в результате вызова функции участника с набором RDW_INTERNALPAINT флага. В этом случае в окне может не быть области обновления. Приложение должно вызвать функцию участника [GetUpdateRect,](#getupdaterect) чтобы определить, есть ли в окне область обновления. При `GetUpdateRect` возврате 0 приложение не должно вызывать функции участников [BeginPaint](#beginpaint) и [EndPaint.](#endpaint)
+Окно может получить внутренние сообщения рисования в результате вызова `RedrawWindow` функции-члена с установленным флагом RDW_INTERNALPAINT. В этом случае в окне может отсутствовать регион обновления. Приложение должно вызывать функцию члена [жетупдатерект](#getupdaterect) , чтобы определить, имеет ли окно область обновления. Если `GetUpdateRect` возвращает 0, приложение не должно вызывать функции члена [Бегинпаинт](#beginpaint) и [ендпаинт](#endpaint) .
 
-Приложение несет ответственность за проверку на наличие необходимой внутренней перекраски или обновления, просматривая свои внутренние структуры данных для каждого сообщения `RedrawWindow` WM_PAINT, поскольку WM_PAINT сообщение может быть вызвано как недействительной областью, так и вызовом функции участника с набором RDW_INTERNALPAINT флага.
+Ответственность за проверку всех необходимых внутренних функций перерисовки или обновления осуществляется с помощью внутренних структур данных для каждого WM_PAINT сообщения, так как сообщение WM_PAINT может быть вызвано как недопустимой областью, так и вызовом `RedrawWindow` функции-члена с установленным флагом RDW_INTERNALPAINT.
 
-Внутреннее WM_PAINT сообщение отправляется только один раз Windows. После того, как внутреннее WM_PAINT `UpdateWindow` сообщение отправляется в окно функцией участника, никакие дополнительные сообщения `RedrawWindow` WM_PAINT будут отправлены или размещены до тех пор, пока окно не будет признано недействительным или пока функция участника не будет снова вызвана с набором RDW_INTERNALPAINT флага.
+Внутреннее WM_PAINT сообщение отправляется в Windows только один раз. После того как внутреннее сообщение WM_PAINT отправляется в окно функцией- `UpdateWindow` членом, дальнейшие WM_PAINT сообщения не будут отправляться или отправлены до тех пор, пока окно не станет недействительным или пока не будет `RedrawWindow` вызвана функция-член с установленным флагом RDW_INTERNALPAINT.
 
-Информацию о рендеринге изображения в приложениях документа/просмотра можно узнать в [CView::OnDraw](../../mfc/reference/cview-class.md#ondraw).
+Сведения о подготовке изображения в приложениях для обработки документов и представлений см. в разделе [CView:: OnDraw](../../mfc/reference/cview-class.md#ondraw).
 
-Для получения дополнительной `WM_Paint`информации об использовании, см.
+Дополнительные сведения об использовании см `WM_Paint` . в следующих разделах Windows SDK.
 
 - [Сообщение WM_PAINT](/windows/win32/gdi/the-wm-paint-message)
 
-- [Использование WM_PAINT сообщения](/windows/win32/gdi/using-the-wm-paint-message)
+- [Использование сообщения WM_PAINT](/windows/win32/gdi/using-the-wm-paint-message)
 
-## <a name="cwndonpaintclipboard"></a><a name="onpaintclipboard"></a>CWnd::OnPaintClipboard
+## <a name="cwndonpaintclipboard"></a><a name="onpaintclipboard"></a>CWnd:: Онпаинтклипбоард
 
-Функция `OnPaintClipboard` члена владельца Clipboard называется зрителем Clipboard, когда владелец Clipboard разместил данные на Clipboard в формате CF_OWNERDISPLAY и клиентская зона просмотра Clipboard нуждается в перекрашивании.
+Функция-член владельца буфера обмена `OnPaintClipboard` вызывается средством просмотра буфера обмена, когда владелец буфера обмена помещает данные в буфер обмена в формате CF_OWNERDISPLAY и клиентской области средства просмотра буфера обмена требуется перерисовка.
 
 ```
 afx_msg void OnPaintClipboard(
@@ -8781,7 +8781,7 @@ afx_msg void OnPaintClipboard(
 
 ### <a name="parameters"></a>Параметры
 
-*pClipAppWnd*<br/>
+*пклипаппвнд*<br/>
 Определяет указатель на окно приложения буфера обмена. Указатель может быть временным. Его не требуется сохранять для дальнейшего использования.
 
 *hPaintStruct*<br/>
@@ -8789,16 +8789,16 @@ afx_msg void OnPaintClipboard(
 
 ### <a name="remarks"></a>Remarks
 
-Чтобы определить, нуждается ли в перекраске всей клиентской области или просто части ее, `rcpaint` владелец `PAINTSTRUCT` Clipboard должен сравнить размеры области чертежа, приведенной в составе структуры, с размерами, приведенными в последнем вызове функции участника [OnSizeClipboard.](#onsizeclipboard)
+Чтобы определить, требуется ли перерисовка всей клиентской области или только ее части, владелец буфера обмена должен сравнить размеры области рисования, заданной в элементе `rcpaint` `PAINTSTRUCT` структуры, с измерениями, заданными в последнем вызове функции-члена [последнем OnSizeClipboard](#onsizeclipboard) .
 
-`OnPaintClipboard`следует использовать функцию [GlobalLock](/windows/win32/api/winbase/nf-winbase-globallock) Windows для `PAINTSTRUCT` блокировки памяти, содержащей структуру данных, и разблокировки этой памяти с помощью функции [GlobalUnlock](/windows/win32/api/winbase/nf-winbase-globalunlock) Windows перед ее выходом.
+`OnPaintClipboard`следует использовать функцию Windows [глобаллокк](/windows/win32/api/winbase/nf-winbase-globallock) , чтобы заблокировать память, содержащую `PAINTSTRUCT` структуру данных, и разблокировать эту память с помощью функции [глобалунлокк](/windows/win32/api/winbase/nf-winbase-globalunlock) Windows перед ее выходом.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonpalettechanged"></a><a name="onpalettechanged"></a>CWnd::OnPaletteИзменен
+## <a name="cwndonpalettechanged"></a><a name="onpalettechanged"></a>CWnd:: Онпалеттечанжед
 
-Платформа называет эту функцию члена для всех окон верхнего уровня после того, как окно с входного фокуса осознало свою логическую палитру, тем самым изменив системную палитру.
+Платформа вызывает эту функцию-член для всех окон верхнего уровня после того, как окно с фокусом ввода реализовало логическую палитру, тем самым изменяя системную палитру.
 
 ```
 afx_msg void OnPaletteChanged(CWnd* pFocusWnd);
@@ -8806,23 +8806,23 @@ afx_msg void OnPaletteChanged(CWnd* pFocusWnd);
 
 ### <a name="parameters"></a>Параметры
 
-*pFocusWnd*<br/>
-Определяет указатель на окно, что привело к изменению всей палитры системы. Указатель может быть временным и не должен храниться.
+*пфокусвнд*<br/>
+Указывает указатель на окно, вызвавшее изменение системной палитры. Указатель может быть временным и не должен храниться.
 
 ### <a name="remarks"></a>Remarks
 
-Этот вызов позволяет окно без входного фокуса, который использует цветовую палитру, чтобы реализовать свои логические палитры и обновить свою клиентскую область.
+Этот вызов позволяет окну без фокуса ввода, которое использует цветовую палитру для реализации своих логических палитр и обновления его клиентской области.
 
-Функция `OnPaletteChanged` участника требуется для всех окон верхнего уровня и перекрытых, включая те, которые изменили палитру системы и вызвали отправку WM_PALETTECHANGED сообщения. Если в окне ребенка используется цветовая палитра, это сообщение должно быть передано ему.
+`OnPaletteChanged`Функция-член вызывается для всех окон верхнего уровня и перекрывающихся, включая те, которые изменили системную палитру и вызвали отправку сообщения WM_PALETTECHANGED. Если в любом дочернем окне используется цветовая палитра, это сообщение должно быть передано в него.
 
-Чтобы избежать бесконечного цикла, окно не должно осознавать свою палитру, если оно не определяет, что *pFocusWnd* не содержит указателя на себя.
+Чтобы избежать бесконечного цикла, окно не должно понимать его палитру, если не определит, что *пфокусвнд* не содержит указатель на себя.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonpaletteischanging"></a><a name="onpaletteischanging"></a>CWnd::OnPaletteIsChanging
+## <a name="cwndonpaletteischanging"></a><a name="onpaletteischanging"></a>CWnd:: Онпалеттеисчангинг
 
-Платформа называет эту функцию участника для информирования приложений о том, что приложение будет осознавать свою логическую палитру.
+Платформа вызывает эту функцию-член для информирования приложений о том, что приложение будет выполнять свою логическую палитру.
 
 ```
 afx_msg void OnPaletteIsChanging(CWnd* pRealizeWnd);
@@ -8830,16 +8830,16 @@ afx_msg void OnPaletteIsChanging(CWnd* pRealizeWnd);
 
 ### <a name="parameters"></a>Параметры
 
-*pRealizeWnd*<br/>
-Определяет окно, которое вот-вот осуществит свою логическую палитру.
+*преализевнд*<br/>
+Указывает окно, которое собирается реализовать логическую палитру.
 
 ### <a name="remarks"></a>Remarks
 
 Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonparentnotify"></a><a name="onparentnotify"></a>CWnd::OnParentNotify
+## <a name="cwndonparentnotify"></a><a name="onparentnotify"></a>CWnd:: Онпарентнотифи
 
-Функция члена `OnParentNotify` родительского пользователя вызывается инфраструктурой при создании или уничтожении окна ребенка или когда пользователь нажимает кнопку мыши, пока курсор находится над окном ребенка.
+`OnParentNotify`Функция-член родителя вызывается платформой при создании или удалении дочернего окна или при нажатии пользователем кнопки мыши в тот момент, когда курсор находится над дочерним окном.
 
 ```
 afx_msg void OnParentNotify(
@@ -8850,35 +8850,35 @@ afx_msg void OnParentNotify(
 ### <a name="parameters"></a>Параметры
 
 *message*<br/>
-Опознавательный случай, для которого уведомляется родитель, и идентификатор окна ребенка. Событие является словом с низким порядком *сообщения.* Если событие WM_CREATE или WM_DESTROY, слово *сообщения* высокого порядка является идентификатором окна ребенка; в противном случае слово высокого порядка не определено. Событие (слово *сообщения*низкого порядка) может быть любым из этих значений:
+Указывает событие, для которого уведомляется родительский элемент, и идентификатор дочернего окна. Событие является неупорядоченным словом *сообщения*. Если событие имеет значение WM_CREATE или WM_DESTROY, то в качестве *сообщения* о дочернем окне используется идентификатор его старшего слова. в противном случае слово с высоким порядком не определено. Событие (слово *Message*в низком порядке) может быть любым из следующих значений:
 
-- WM_CREATE создается окно ребенка.
+- WM_CREATE создается дочернее окно.
 
-- WM_DESTROY Детское окно разрушается.
+- WM_DESTROY, что дочернее окно уничтожается.
 
-- WM_LBUTTONDOWN Пользователь поместил курсор мыши над окном ребенка и нажал на левую кнопку мыши.
+- WM_LBUTTONDOWN пользователь поместил указатель мыши на дочернее окно и щелкнул левую кнопку мыши.
 
-- WM_MBUTTONDOWN Пользователь поместил курсор мыши над окном ребенка и нажал кнопку средней мыши.
+- WM_MBUTTONDOWN пользователь поместил указатель мыши на дочернее окно и щелкнул среднюю кнопку мыши.
 
-- WM_RBUTTONDOWN Пользователь поместил курсор мыши над окном ребенка и нажал правую кнопку мыши.
+- WM_RBUTTONDOWN пользователь поместил указатель мыши на дочернее окно и щелкнул правой кнопкой мыши.
 
 *lParam*<br/>
-Если событие (слово низкого порядка) *сообщения* WM_CREATE или WM_DESTROY, *lParam* определяет ручку окна окна ребенка; в противном случае *lParam* содержит x и y координаты курсора. Координата x находится в слове низкого порядка, а координат y — в слове высокого порядка.
+Если событие (неупорядоченное слово) *сообщения* имеет WM_CREATE или WM_DESTROY, *lParam* задает маркер окна дочернего окна; в противном случае *lParam* содержит координаты x и y курсора. Координата x находится в младшем слове, а координата y — в слове высокого порядка.
 
 ### <a name="remarks"></a>Remarks
 
-При создании окна —нёму `OnParentNotify` система вызывает вызов ы непосредственно перед функцией члена [«Создать»,](#create) которая создает возврат окна. Когда окно ребенка разрушается, `OnParentNotify` система вызывает перед любой обработкой, чтобы уничтожить окно.
+При создании дочернего окна система вызывает `OnParentNotify` непосредственно перед функцией [создания](#create) члена, которая создает окно. При уничтожении дочернего окна система вызывается `OnParentNotify` до того, как будет выполнена обработка для уничтожения окна.
 
-`OnParentNotify`требуется для всех окон предка окна ребенка, включая окно верхнего уровня.
+`OnParentNotify`вызывается для всех окон-предков дочернего окна, включая окно верхнего уровня.
 
-Все окна ребенка, за исключением тех, которые имеют [WS_EX_NOPARENTNOTIFY](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) стиль отправить это сообщение на свои родительские окна. По умолчанию детские окна в диалоговом поле имеют WS_EX_NOPARENTNOTIFY стиль, если только окно ребенка не было создано без этого стиля, позвонив в функцию члена [CreateEx.](#createex)
+Все дочерние окна, кроме тех, которые имеют стиль [WS_EX_NOPARENTNOTIFY](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) , отправляют это сообщение в родительские окна. По умолчанию дочерние окна в диалоговом окне имеют стиль WS_EX_NOPARENTNOTIFY, если только дочернее окно не было создано без этого стиля путем вызова функции-члена [креатикс](#createex) .
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonpowerbroadcast"></a><a name="onpowerbroadcast"></a>CWnd::OnPowerBroadcast
+## <a name="cwndonpowerbroadcast"></a><a name="onpowerbroadcast"></a>CWnd:: Онповерброадкаст
 
-Платформа вызывает эту функцию участника при возникновении события управления питанием.
+Платформа вызывает эту функцию-член при возникновении события управления питанием.
 
 ```
 afx_msg UINT OnPowerBroadcast(
@@ -8888,27 +8888,27 @@ afx_msg UINT OnPowerBroadcast(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|*nPowerEvent*|(в) Событие управления питанием.|
-|*nEventData*|(в) Данные, связанные с событиями.|
+|*нповеревент*|окне Событие управления питанием.|
+|*невентдата*|окне Данные, относящиеся к конкретному событию.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если событие является запросом, верните TRUE, чтобы удовлетворить запрос, или BROADCAST_QUERY_DENY отклонить запрос.
+Если событие является запросом, возвратите значение TRUE, чтобы предоставить запрос, или BROADCAST_QUERY_DENY, чтобы отклонить запрос.
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод получает [WM_POWERBROADCAST](/windows/win32/Power/wm-powerbroadcast) сообщение, которое описано в SDK Windows.
+Этот метод получает [WM_POWERBROADCAST](/windows/win32/Power/wm-powerbroadcast) сообщение, описанное в Windows SDK.
 
-Параметр *nPowerEvent* определяет такие события, как мощность батареи низкая, статус питания изменен, разрешение на приостановку работы запрашивается или отказано, операция возобновляется автоматически после события, система приостанавливает работу, или операция возобновляется после приостановки. Параметр *nEventData* обычно не используется. Для получения дополнительной *wParam* информации см [WM_POWERBROADCAST.](/windows/win32/Power/wm-powerbroadcast) *lParam*
+Параметр *нповеревент* указывает такие события, как "батарея разряжена", состояние питания изменилось, разрешение на операцию приостановки запрошено или запрещено, операция возобновляется автоматически после события, система приостанавливает операцию или возобновляет работу после приостановки. Параметр *невентдата* обычно не используется. Дополнительные сведения см. в описании параметров *wParam* и *lParam* сообщения [WM_POWERBROADCAST](/windows/win32/Power/wm-powerbroadcast) .
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonquerydragicon"></a><a name="onquerydragicon"></a>CWnd::On-MeryDragIcon
+## <a name="cwndonquerydragicon"></a><a name="onquerydragicon"></a>CWnd:: Онкуеридрагикон
 
-Платформа вызывает эту функцию элемента в минимизированное (иконическое) окно, в которое не имеется значок, определенный для своего класса.
+Платформа вызывает эту функцию-член с помощью сворачивания (значка) окна без значка, определенного для его класса.
 
 ```
 afx_msg HCURSOR OnQueryDragIcon();
@@ -8916,15 +8916,15 @@ afx_msg HCURSOR OnQueryDragIcon();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение двойного слова, содержащее курсор или ручку значка в слове с низким заказом. Курсор или значок должны быть совместимы с разрешением драйвера дисплея. Если приложение возвращает NULL, система отображает курсор по умолчанию. Значение возврата по умолчанию является NULL.
+Значение даублеворд, содержащее маркер курсора или значка в младшем слове. Курсор или значок должен быть совместим с разрешением видеодрайвера. Если приложение возвращает значение NULL, система отображает курсор по умолчанию. Возвращаемое значение по умолчанию — NULL.
 
 ### <a name="remarks"></a>Remarks
 
-Система делает этот вызов для получения курсора для отображения, в то время как пользователь перетаскивает сведенное к минимуму окно. Если приложение возвращает ручку значка или курсора, система преобразует ее в черно-белую. Если приложение возвращает ручку, ручка должна определить монохромный курсор или значок, совместимый с разрешением драйвера дисплея. Приложение может вызвать [CWinApp::LoadCursor](../../mfc/reference/cwinapp-class.md#loadcursor) или [CWinApp::LoadIcon](../../mfc/reference/cwinapp-class.md#loadicon) функции члена загрузить курсор или значок из ресурсов в его исполняемый файл и получить эту ручку.
+Система выполняет этот вызов, чтобы получить курсор, который будет отображаться, когда пользователь перетаскивает окно в режиме сворачивания. Если приложение возвращает маркер значка или курсора, система преобразует его в черный и белый цвет. Если приложение возвращает маркер, этот маркер должен обозначать монохромный курсор или значок, совместимый с разрешением видеодрайвера. Приложение может вызывать функции-члены [CWinApp:: лоадкурсор](../../mfc/reference/cwinapp-class.md#loadcursor) или [CWinApp:: лоадикон](../../mfc/reference/cwinapp-class.md#loadicon) для загрузки курсора или значка из ресурсов в своем исполняемом файле и для получения этого маркера.
 
-## <a name="cwndonqueryendsession"></a><a name="onqueryendsession"></a>CWnd::On-'SinEndSession
+## <a name="cwndonqueryendsession"></a><a name="onqueryendsession"></a>CWnd:: Онкуерендсессион
 
-Платформа вызывает эту функцию участника, когда пользователь выбирает окончание сеанса Windows или когда приложение вызывает функцию [ExitWindows](/windows/win32/api/winuser/nf-winuser-exitwindows) Windows.
+Платформа вызывает эту функцию члена, когда пользователь выбирает завершение сеанса Windows или когда приложение вызывает функцию Windows [екситвиндовс](/windows/win32/api/winuser/nf-winuser-exitwindows) .
 
 ```
 afx_msg BOOL OnQueryEndSession();
@@ -8932,15 +8932,15 @@ afx_msg BOOL OnQueryEndSession();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Nonzero, если приложение может быть удобно выключено; в противном случае 0.
+Ненулевое значение, если приложение может быть легко выключено; в противном случае — 0.
 
 ### <a name="remarks"></a>Remarks
 
-Если какое-либо приложение возвращает 0, сеанс Windows не будет завершен. Windows прекращает вызов, `OnQueryEndSession` как только одно приложение возвращает 0 и отправляет [WM_ENDSESSION](#onendsession) сообщение с параметром значения FALSE для любого приложения, которое уже вернулось nonzero.
+Если какое-либо приложение возвращает 0, сеанс Windows не завершается. Windows прекращает вызов `OnQueryEndSession` , как только одно приложение возвращает 0, и отправляет [WM_ENDSESSION](#onendsession) сообщение с параметром false для любого приложения, которое уже вернуло ненулевое значение.
 
-## <a name="cwndonquerynewpalette"></a><a name="onquerynewpalette"></a>CWnd::On'queryNewPalette
+## <a name="cwndonquerynewpalette"></a><a name="onquerynewpalette"></a>CWnd:: Онкуериневпалетте
 
-Платформа называет эту функцию `CWnd` члена, когда объект собирается получить `CWnd` входного фокуса, давая возможность реализовать свою логическую палитру, когда он получает фокус.
+Платформа вызывает эту функцию-член, когда `CWnd` объект собирается получить фокус ввода, давая `CWnd` возможность реализовать логическую палитру при получении фокуса.
 
 ```
 afx_msg BOOL OnQueryNewPalette();
@@ -8948,11 +8948,11 @@ afx_msg BOOL OnQueryNewPalette();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Nonzero, `CWnd` если реализует свою логическую палитру; в противном случае 0.
+Ненулевое значение, если объект `CWnd` реализует логическую палитру; в противном случае — 0.
 
-## <a name="cwndonqueryopen"></a><a name="onqueryopen"></a>CWnd::On'meryOpen
+## <a name="cwndonqueryopen"></a><a name="onqueryopen"></a>CWnd:: Онкуерйопен
 
-Фрейм вызывает эту `CWnd` функцию члена, когда объект `CWnd` сведен к минимуму и пользователь просит восстановить его до премизавного размера и положения.
+Платформа вызывает эту функцию-член, когда `CWnd` объект является сведенным, и пользователь запрашивает `CWnd` Восстановление до минимального размера и расположения.
 
 ```
 afx_msg BOOL OnQueryOpen();
@@ -8960,13 +8960,13 @@ afx_msg BOOL OnQueryOpen();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Nonzero, если значок может быть открыт, или 0, чтобы предотвратить открытие значка.
+Ненулевое значение, если значок можно открыть, или значение 0, чтобы запретить открытие значка.
 
 ### <a name="remarks"></a>Remarks
 
-В `OnQueryOpen`то `CWnd` время как в , не должны выполнять какие-либо действия, которые могут привести к активации или изменения фокуса (например, создание диалогового окна).
+В `OnQueryOpen` `CWnd` не должно выполнять никаких действий, которые приведут к изменению активации или фокуса (например, создание диалогового окна).
 
-## <a name="cwndonqueryuistate"></a><a name="onqueryuistate"></a>CWnd::OnuryUIState
+## <a name="cwndonqueryuistate"></a><a name="onqueryuistate"></a>CWnd:: Онкуерюистате
 
 Вызывается, чтобы извлечь состояние пользовательского интерфейса окна.
 
@@ -8976,21 +8976,21 @@ afx_msg UINT OnQueryUIState();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение возврата является NULL, если видны индикаторы фокусировки и ускорители клавиатуры. В противном случае значение возврата может быть одним или более из следующих значений:
+Возвращаемое значение равно NULL, если индикаторы фокуса и сочетания клавиш видимы. В противном случае возвращаемое значение может быть одним или несколькими следующими значениями:
 
-- UISF_HIDEFOCUS индикаторы Фокуса скрыты.
+- UISF_HIDEFOCUS индикаторы фокуса скрыты.
 
-- UISF_HIDEACCEL ускорители клавиатуры скрыты.
+- UISF_HIDEACCEL сочетаний клавиш скрыты.
 
-- UISF_ACTIVE Windows XP: элемент управления должен быть нарисован в стиле, используемом для активного управления.
+- UISF_ACTIVE Windows XP: элемент управления должен быть нарисован в стиле, используемом для активных элементов управления.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция члена имитирует функциональность [сообщения WM_QUERYUISTATE,](/windows/win32/menurc/wm-queryuistate) как описано в SDK Windows.
+Эта функция члена эмулирует функциональность [WM_QUERYUISTATE](/windows/win32/menurc/wm-queryuistate) сообщения, как описано в Windows SDK.
 
-## <a name="cwndonrawinput"></a><a name="onrawinput"></a>CWnd::OnrawInput
+## <a name="cwndonrawinput"></a><a name="onrawinput"></a>CWnd:: Онравинпут
 
-Платформа вызывает эту функцию члена, когда текущее окно получает необработанный вход.
+Платформа вызывает эту функцию члена, когда текущее окно получает необработанные входные данные.
 
 ```
 afx_msg void OnRawInput(
@@ -9000,21 +9000,21 @@ afx_msg void OnRawInput(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|*nInputCode*|(в) Код ввода, указывающий, произошел ли вход ный вход во время нахудяого приложения на переднем плане или нет. В любом случае приложение должно вызвать [CWnd::DefWindowProc,](#defwindowproc) чтобы система смогли выполнить очистку.<br /><br /> Этот параметр может быть одним из следующих значений:<br /><br /> - RIM_INPUT - Вход произошел в то время как приложение было на переднем плане.<br />- RIM_INPUTSINK - Вход произошел, пока приложение не было на переднем плане.|
-|*hrawInput*|(в) Обработка к структуре [RAWINPUT,](/windows/win32/api/winuser/ns-winuser-rawinput) которая содержит необработанный вход от устройства.|
+|*нинпуткоде*|окне Входной код, указывающий, произошел ли вход, когда приложение находилось на переднем плане. В любом случае приложение должно вызвать [CWnd::D ефвиндовпрок](#defwindowproc) , чтобы система могла выполнять очистку.<br /><br /> Этот параметр может принимать одно из следующих значений:<br /><br /> -RIM_INPUT — входные данные, пока приложение находилось на переднем плане.<br />-RIM_INPUTSINK — входные данные, пока приложение не находилось на переднем плане.|
+|*хравинпут*|окне Обработчик для структуры [равинпут](/windows/win32/api/winuser/ns-winuser-rawinput) , которая содержит необработанные входные данные с устройства.|
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод получает [уведомление WM_INPUT,](/windows/win32/inputdev/wm-appcommand) которое описано в SDK Windows.
+Этот метод получает уведомление [WM_INPUT](/windows/win32/inputdev/wm-appcommand) , которое описано в Windows SDK.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonrbuttondblclk"></a><a name="onrbuttondblclk"></a>CWnd::OnRButtonDblClk
+## <a name="cwndonrbuttondblclk"></a><a name="onrbuttondblclk"></a>CWnd:: Онрбуттондблклк
 
-Рамочная система вызывает эту функцию участника, когда пользователь дважды нажимает на правую кнопку мыши.
+Платформа вызывает эту функцию-член, когда пользователь дважды щелкает правую кнопку мыши.
 
 ```
 afx_msg void OnRButtonDblClk(
@@ -9024,32 +9024,32 @@ afx_msg void OnRButtonDblClk(
 
 ### <a name="parameters"></a>Параметры
 
-*nФлаги*<br/>
-Указывает, не имеют ли различные виртуальные клавиши. Этот параметр может быть любой комбинацией следующих значений:
+*нфлагс*<br/>
+Указывает, работают ли различные виртуальные ключи. Этот параметр может иметь любое сочетание следующих значений:
 
-- MK_CONTROL Установить, если ключ CTRL не работает.
+- MK_CONTROL установить, если клавиша CTRL не нажата.
 
-- MK_LBUTTON Установить, если левая кнопка мыши не работает.
+- MK_LBUTTON установить, если левая кнопка мыши не работает.
 
-- MK_MBUTTON Установить, если средняя кнопка мыши не работает.
+- MK_MBUTTON установить, если средняя кнопка мыши не работает.
 
-- MK_RBUTTON Установить, если правая кнопка мыши не работает.
+- MK_RBUTTON установить, если правая кнопка мыши не работает.
 
-- MK_SHIFT Установить, если SHIFT ключ не работает.
+- MK_SHIFT установить, если клавиша SHIFT не нажата.
 
-*Точки*<br/>
-Определяет координаты курсора x и y. Эти координаты всегда относительно верхнего левого угла окна.
+*точки*<br/>
+Задает координаты x и y курсора. Эти координаты всегда отсчитываются относительно левого верхнего угла окна.
 
 ### <a name="remarks"></a>Remarks
 
-Только окна, которые имеют CS_DBLCLKS стиль `OnRButtonDblClk` [WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw) может принимать звонки. Это значение по умолчанию для окон в библиотеке класса Microsoft Foundation. Windows `OnRButtonDblClk` звонит, когда пользователь нажимает, выпускает, а затем снова нажимает правую кнопку мыши в пределах срока двойного щелчка системы. Двойное нажатие кнопки правой мыши на самом деле `OnRButtonDblClk` генерирует четыре события: [WM_RBUTTONDOWN](#onrbuttondown) и [WM_RBUTTONUP](#onrbuttonup) сообщения, вызов и еще одно сообщение WM_RBUTTONUP, когда кнопка выпущена.
+Только окна, имеющие стиль CS_DBLCLKS [вндкласс](/windows/win32/api/winuser/ns-winuser-wndclassw) , могут принимать `OnRButtonDblClk` вызовы. Это значение по умолчанию для Windows в библиотека Microsoft Foundation Class. Windows вызывает, `OnRButtonDblClk` когда пользователь нажимает, отпускает, а затем снова нажимает правую кнопку мыши в пределах предельного времени двойного щелчка системы. Двойной щелчок правой кнопкой мыши фактически создает четыре события: [WM_RBUTTONDOWN](#onrbuttondown) и [WM_RBUTTONUP](#onrbuttonup) сообщения, `OnRButtonDblClk` вызов и другое сообщение WM_RBUTTONUP при отпускании кнопки.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonrbuttondown"></a><a name="onrbuttondown"></a>CWnd::OnRButtonDown
+## <a name="cwndonrbuttondown"></a><a name="onrbuttondown"></a>CWnd:: Онрбуттондовн
 
-Рамочная система вызывает эту функцию участника, когда пользователь нажимает правую кнопку мыши.
+Платформа вызывает эту функцию члена, когда пользователь нажимает правую кнопку мыши.
 
 ```
 afx_msg void OnRButtonDown(
@@ -9059,29 +9059,29 @@ afx_msg void OnRButtonDown(
 
 ### <a name="parameters"></a>Параметры
 
-*nФлаги*<br/>
-Указывает, не имеют ли различные виртуальные клавиши. Этот параметр может быть любой комбинацией следующих значений:
+*нфлагс*<br/>
+Указывает, работают ли различные виртуальные ключи. Этот параметр может иметь любое сочетание следующих значений:
 
-- MK_CONTROL Установить, если ключ CTRL не работает.
+- MK_CONTROL установить, если клавиша CTRL не нажата.
 
-- MK_LBUTTON Установить, если левая кнопка мыши не работает.
+- MK_LBUTTON установить, если левая кнопка мыши не работает.
 
-- MK_MBUTTON Установить, если средняя кнопка мыши не работает.
+- MK_MBUTTON установить, если средняя кнопка мыши не работает.
 
-- MK_RBUTTON Установить, если правая кнопка мыши не работает.
+- MK_RBUTTON установить, если правая кнопка мыши не работает.
 
-- MK_SHIFT Установить, если SHIFT ключ не работает.
+- MK_SHIFT установить, если клавиша SHIFT не нажата.
 
-*Точки*<br/>
-Определяет координаты курсора x и y. Эти координаты всегда относительно верхнего левого угла окна.
+*точки*<br/>
+Задает координаты x и y курсора. Эти координаты всегда отсчитываются относительно левого верхнего угла окна.
 
 ### <a name="remarks"></a>Remarks
 
 Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonrbuttonup"></a><a name="onrbuttonup"></a>CWnd::OnRButtonUp
+## <a name="cwndonrbuttonup"></a><a name="onrbuttonup"></a>CWnd:: Онрбуттонуп
 
-Платформа вызывает эту функцию участника, когда пользователь выпускает правую кнопку мыши.
+Платформа вызывает эту функцию члена, когда пользователь отпускает правую кнопку мыши.
 
 ```
 afx_msg void OnRButtonUp(
@@ -9091,27 +9091,27 @@ afx_msg void OnRButtonUp(
 
 ### <a name="parameters"></a>Параметры
 
-*nФлаги*<br/>
-Указывает, не имеют ли различные виртуальные клавиши. Этот параметр может быть любой комбинацией следующих значений:
+*нфлагс*<br/>
+Указывает, работают ли различные виртуальные ключи. Этот параметр может иметь любое сочетание следующих значений:
 
-- MK_CONTROL Установить, если ключ CTRL не работает.
+- MK_CONTROL установить, если клавиша CTRL не нажата.
 
-- MK_LBUTTON Установить, если левая кнопка мыши не работает.
+- MK_LBUTTON установить, если левая кнопка мыши не работает.
 
-- MK_MBUTTON Установить, если средняя кнопка мыши не работает.
+- MK_MBUTTON установить, если средняя кнопка мыши не работает.
 
-- MK_SHIFT Установить, если SHIFT ключ не работает.
+- MK_SHIFT установить, если клавиша SHIFT не нажата.
 
-*Точки*<br/>
-Определяет координаты курсора x и y. Эти координаты всегда относительно верхнего левого угла окна.
+*точки*<br/>
+Задает координаты x и y курсора. Эти координаты всегда отсчитываются относительно левого верхнего угла окна.
 
 ### <a name="remarks"></a>Remarks
 
 Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonregisteredmousewheel"></a><a name="onregisteredmousewheel"></a>CWnd::OnRegisteredMouseWheel
+## <a name="cwndonregisteredmousewheel"></a><a name="onregisteredmousewheel"></a>CWnd:: Онрегистередмаусевхил
 
-Рамочная система вызывает эту функцию участника, поскольку пользователь вращает колесо мыши и сталкивается с следующей выемкой колеса.
+Платформа вызывает эту функцию-член, так как пользователь поворачивает колесико мыши и встречает следующее деление колесика.
 
 ```
 afx_msg LRESULT OnRegisteredMouseWheel(
@@ -9122,27 +9122,27 @@ afx_msg LRESULT OnRegisteredMouseWheel(
 ### <a name="parameters"></a>Параметры
 
 *wParam*<br/>
-Горизонтальное положение указателя.
+Горизонтальное расположение указателя.
 
 *lParam*<br/>
-Вертикальное положение указателя.
+Вертикальное расположение указателя.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Незначительно в это время. Всегда нуль.
+Незначащий в настоящее время. Всегда нуль.
 
 ### <a name="remarks"></a>Remarks
 
-Если не `OnRegisteredMouseWheel` переопределить, маршруты сообщения в соответствующее окно (родительское окно с фокусом), и вызывает [обработчик WM_MOUSEWHEEL](/windows/win32/inputdev/wm-mousewheel) для этого окна.
+Если не переопределен, `OnRegisteredMouseWheel` направляет сообщение в соответствующее окно (родительское окно с фокусом) и вызывает обработчик [WM_MOUSEWHEEL](/windows/win32/inputdev/wm-mousewheel) для этого окна.
 
-Переопределить эту функцию участника, чтобы обеспечить собственную передачу сообщений или изменить поведение прокрутки руля мыши.
+Переопределите эту функцию-член, чтобы обеспечить собственную маршрутизацию сообщений или изменить поведение прокрутки колесика мыши.
 
 > [!NOTE]
-> `OnRegisteredMouseWheel`обрабатывает сообщения для Windows 95/98 и Windows NT 3.51. Для обработки сообщений Windows NT 4.0 используйте [OnMouseWheel.](#onmousewheel)
+> `OnRegisteredMouseWheel`обрабатывает сообщения для Windows 95/98 и Windows NT 3,51. Для обработки сообщений Windows NT 4,0 используйте [онмаусевхил](#onmousewheel).
 
-## <a name="cwndonrenderallformats"></a><a name="onrenderallformats"></a>CWnd::OnRenderAllFormats
+## <a name="cwndonrenderallformats"></a><a name="onrenderallformats"></a>CWnd:: Онрендераллформатс
 
-Функция `OnRenderAllFormats` члена функции владельца Clipboard вызывается инфраструктурой при уничтожении приложения владельца.
+`OnRenderAllFormats`Функция-член владельца буфера обмена вызывается платформой при уничтожении приложения-владельца.
 
 ```
 afx_msg void OnRenderAllFormats();
@@ -9150,11 +9150,11 @@ afx_msg void OnRenderAllFormats();
 
 ### <a name="remarks"></a>Remarks
 
-Владелец Clipboard должен передать данные во всех форматах, которые он способен генерировать, и передать ручку данных для каждого формата в Clipboard, позвонив в функцию [SetClipboardData](/windows/win32/api/winuser/nf-winuser-setclipboarddata) Windows. Это гарантирует, что Clipboard содержит достоверные данные, даже если приложение, которое внедренное данные, уничтожено. Приложение должно вызвать функцию члена [OpenClipboard,](#openclipboard) прежде чем вызвать функцию [SetClipboardData](/windows/win32/api/winuser/nf-winuser-setclipboarddata) Windows и позвонить функции [CloseClipboard](/windows/win32/api/winuser/nf-winuser-closeclipboard) Windows.
+Владелец буфера обмена должен отображать данные во всех форматах, способных создать и передать в буфер обмена обработчик данных для каждого формата, вызвав функцию Windows [сетклипбоарддата](/windows/win32/api/winuser/nf-winuser-setclipboarddata) . Это гарантирует, что буфер обмена будет содержать допустимые данные, даже если приложение, которое его отрисовывает, уничтожается. Приложение должно вызвать функцию члена [опенклипбоард](#openclipboard) перед вызовом функции Windows [сетклипбоарддата](/windows/win32/api/winuser/nf-winuser-setclipboarddata) и вызвать функцию [клосеклипбоард](/windows/win32/api/winuser/nf-winuser-closeclipboard) Windows позже.
 
-## <a name="cwndonrenderformat"></a><a name="onrenderformat"></a>CWnd::OnRenderFormat
+## <a name="cwndonrenderformat"></a><a name="onrenderformat"></a>CWnd:: Онрендерформат
 
-Функция `OnRenderFormat` члена функции владельца Clipboard вызывается инфраструктурой, когда необходимо визуализировать определенный формат с задержкой рендеринга.
+`OnRenderFormat`Функция-член владельца буфера обмена вызывается платформой, когда необходимо визуализировать определенный формат с отложенной отрисовкой.
 
 ```
 afx_msg void OnRenderFormat(UINT nFormat);
@@ -9162,21 +9162,21 @@ afx_msg void OnRenderFormat(UINT nFormat);
 
 ### <a name="parameters"></a>Параметры
 
-*nФормат*<br/>
-Определяет формат Clipboard.
+*нформат*<br/>
+Указывает формат буфера обмена.
 
 ### <a name="remarks"></a>Remarks
 
-Получатель должен визуализировать данные в этом формате и передать их в Clipboard, позвонив в функцию [SetClipboardData](/windows/win32/api/winuser/nf-winuser-setclipboarddata) Windows.
+Получатель должен визуализировать данные в этом формате и передать их в буфер обмена, вызвав функцию Windows [сетклипбоарддата](/windows/win32/api/winuser/nf-winuser-setclipboarddata) .
 
-Не звоните `OpenClipboard` функции `CloseClipboard` участника или `OnRenderFormat`функции Windows изнутри.
+Не вызывайте `OpenClipboard` функцию члена или `CloseClipboard` функцию Windows из в `OnRenderFormat` .
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonsessionchange"></a><a name="onsessionchange"></a>CWnd::OnSessionChange
+## <a name="cwndonsessionchange"></a><a name="onsessionchange"></a>CWnd:: Онсессиончанже
 
-Платформа называет эту функцию участника уведомлением о применении состояния сеанса.
+Платформа вызывает эту функцию-член для уведомления приложения об изменении состояния сеанса.
 
 ```
 afx_msg void OnSessionChange(
@@ -9186,23 +9186,23 @@ afx_msg void OnSessionChange(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|*nСеансState*|(в) Код состояния описывает изменение состояния сеанса.|
-|*Nid*|(в) Идентификатор сеанса.|
+|*нсессионстате*|окне Код состояния описывает изменение состояния сеанса.|
+|*nId*|окне Идентификатор сеанса.|
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод получает [уведомление WM_WTSSESSION_CHANGE,](/windows/win32/TermServ/wm-wtssession-change) которое описано в SDK Windows.
+Этот метод получает уведомление [WM_WTSSESSION_CHANGE](/windows/win32/TermServ/wm-wtssession-change) , которое описано в Windows SDK.
 
-Параметр *nSessionState* указывает, что сеанс подключен или отключен от консоли или удаленного терминала, пользователь вошел или выключается, сеанс заблокирован или разблокирован, или сеанс был изменен на статус удаленного управления. Для получения дополнительной *wParam* информации см [WM_WTSSESSION_CHANGE.](/windows/win32/TermServ/wm-wtssession-change)
+Параметр *нсессионстате* указывает, что сеанс подключен или отключен от консоли или удаленного терминала, пользователь вошел в систему или выключен, сеанс заблокирован или разблокирован, либо сеанс был изменен на удаленно управляемый состояние. Дополнительные сведения см. в описании параметра *wParam* сообщения [WM_WTSSESSION_CHANGE](/windows/win32/TermServ/wm-wtssession-change) .
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonsetcursor"></a><a name="onsetcursor"></a>CWnd::OnSetCursor
+## <a name="cwndonsetcursor"></a><a name="onsetcursor"></a>CWnd:: Онсеткурсор
 
-Фрейм вызывает эту функцию члена, если ввод мыши не `CWnd` захвачен и мышь вызывает движение курсора внутри объекта.
+Платформа вызывает эту функцию-член, если ввод с клавиатуры не захвачен и указатель мыши вызывает перемещение курсора внутри `CWnd` объекта.
 
 ```
 afx_msg BOOL OnSetCursor(
@@ -9213,35 +9213,35 @@ afx_msg BOOL OnSetCursor(
 
 ### <a name="parameters"></a>Параметры
 
-*pWnd*<br/>
-Укажите указатель на окно, содержащее курсор. Указатель может быть временным. Его не требуется сохранять для дальнейшего использования.
+*Приводится*<br/>
+Задает указатель на окно, содержащее курсор. Указатель может быть временным. Его не требуется сохранять для дальнейшего использования.
 
-*nHitTest*<br/>
-Определяет код области [хит-теста.](#onnchittest) Тест попадания определяет местоположение курсора.
+*нхиттест*<br/>
+Указывает код области [проверки попадания](#onnchittest) . Проверка нажатия определяет положение курсора.
 
 *message*<br/>
-Упоняет номер сообщения мыши.
+Указывает номер сообщения мыши.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Nonzero, чтобы остановить дальнейшую обработку, или 0, чтобы продолжить.
+Ненулевое значение, чтобы остановить дальнейшую обработку, или 0 для продолжения.
 
 ### <a name="remarks"></a>Remarks
 
-Реализация по умолчанию вызывает `OnSetCursor` родительское окно перед обработкой. Если родительское окно возвращает TRUE, дальнейшая обработка останавливается. Вызов родительского окна дает родительскому окну контроль над настройками курсора в окне ребенка.
+Реализация по умолчанию вызывает родительское окно `OnSetCursor` перед обработкой. Если родительское окно возвращает значение TRUE, то дальнейшая обработка прерывается. Вызов родительского окна позволяет родительскому окну управлять параметром курсора в дочернем окне.
 
-Реализация по умолчанию устанавливает курсор к стрелке, если он не находится в области клиента или в курсоре зарегистрированного класса, если он есть.
+Реализация по умолчанию устанавливает курсор на стрелку, если она не находится в клиентской области, или на курсор зарегистрированного класса, если это.
 
-Если *nHitTest* является HTERROR и *сообщение* мыши кнопки вниз сообщение, функция `MessageBeep` члена называется.
+Если *нхиттест* имеет значение хтеррор и *сообщение* является кнопкой мыши, `MessageBeep` вызывается функция-член.
 
-Параметр *сообщения* 0 `CWnd` при вводе в режим меню.
+При переходе в режим меню параметр *Message* имеет значение 0 `CWnd` .
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonsetfocus"></a><a name="onsetfocus"></a>CWnd::OnSetFocus
+## <a name="cwndonsetfocus"></a><a name="onsetfocus"></a>CWnd:: OnSetFocus
 
-Платформа вызывает эту функцию участника после получения входного фокуса.
+Платформа вызывает эту функцию члена после получения фокуса ввода.
 
 ```
 afx_msg void OnSetFocus(CWnd* pOldWnd);
@@ -9249,19 +9249,19 @@ afx_msg void OnSetFocus(CWnd* pOldWnd);
 
 ### <a name="parameters"></a>Параметры
 
-*pOldWnd*<br/>
-Содержит `CWnd` объект, который теряет вхожей фокус (может быть NULL). Указатель может быть временным. Его не требуется сохранять для дальнейшего использования.
+*полдвнд*<br/>
+Содержит `CWnd` объект, который теряет фокус ввода (может иметь значение null). Указатель может быть временным. Его не требуется сохранять для дальнейшего использования.
 
 ### <a name="remarks"></a>Remarks
 
-Чтобы отобразить `CWnd` карету, следует вызвать соответствующие функции caret в этой точке.
+Чтобы отобразить курсор, `CWnd` следует вызвать соответствующие функции курсора на этом этапе.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonsettingchange"></a><a name="onsettingchange"></a>CWnd::OnSetting
+## <a name="cwndonsettingchange"></a><a name="onsettingchange"></a>CWnd:: Онсеттингчанже
 
-Платформа требует `OnSettingChange` для всех окон верхнего уровня, когда функция Win32 SystemParametersInfo изменяет общесистемную настройку.
+Платформа вызывает `OnSettingChange` для всех окон верхнего уровня, когда функция Win32 системпараметерсинфо изменяет параметр на уровне системы.
 
 ```
 afx_msg void OnSettingChange(
@@ -9271,27 +9271,27 @@ afx_msg void OnSettingChange(
 
 ### <a name="parameters"></a>Параметры
 
-*uФлаги*<br/>
-Когда система отправляет сообщение в результате `SystemParametersInfo` вызова, этот параметр является флагом, указывающим на измененный параметр системы. Список значений можно узнать в [SDK Windows.](/windows/win32/api/winuser/nf-winuser-systemparametersinfow) Когда приложение отправляет сообщение, этот параметр должен быть 0.
+*уфлагс*<br/>
+Когда система отправляет сообщение в результате `SystemParametersInfo` вызова, этот параметр является флагом, указывающим на измененный системный параметр. Список значений см. в разделе [системпараметерсинфо](/windows/win32/api/winuser/nf-winuser-systemparametersinfow) в Windows SDK. Когда приложение отправляет сообщение, этот параметр должен иметь значение 0.
 
-*lpszSection*<br/>
-Указывает на строку, которая определяет название измененного раздела. (Строка не включает квадратные скобки, которые приконяют название раздела.)
+*лпсзсектион*<br/>
+Указывает на строку, указывающую имя раздела, который был изменен. (Строка не включает квадратные скобки, в которых заключено имя раздела.)
 
 ### <a name="remarks"></a>Remarks
 
-Приложение должно отправить сообщение во все окна верхнего уровня, когда оно вносит изменения в параметры системы, и Windows отправит сообщение, если пользователь изменяет настройки через панель управления.
+Приложение должно отправить сообщение всем окнам верхнего уровня, когда оно вносит изменения в параметры системы, и Windows отправит сообщение, если пользователь изменит параметры через панель управления.
 
 Сообщение ON_WM_SETTINGCHANGE похоже на сообщение ON_WM_WININICHANGE, со следующим отличием:
 
-- Используйте ON_WM_SETTINGCHANGE при запуске Windows NT 4.0 или новее или под Windows 95/98.
+- Используйте ON_WM_SETTINGCHANGE при запуске Windows NT 4,0 или более поздней версии или в Windows 95/98.
 
-- Используйте ON_WININICHANGE при запуске Windows NT 3.51 или старше. Это сообщение устарело.
+- Используйте ON_WININICHANGE при запуске Windows NT 3,51 или более ранней версии. Теперь это сообщение устарело.
 
-На карте сообщений должен быть только один из этих макросов. Чтобы написать программу, которая работает как для Windows 95/98, так и для Windows NT 4.0, напишите обработчик для ON_WM_SETTINGCHANGE. В соответствии с Windows NT 3.51, ваш обработчик будет вызываться `OnSettingChange` и *uFlags* и всегда будет равен нулю.
+В схеме сообщений должен быть только один из этих макросов. Чтобы написать программу, которая работает как в Windows 95/98, так и в Windows NT 4,0, напишите обработчик для ON_WM_SETTINGCHANGE. В Windows NT 3,51 обработчик будет вызываться `OnSettingChange` и *уфлагс* и всегда будет равен нулю.
 
-## <a name="cwndonshowwindow"></a><a name="onshowwindow"></a>CWnd::OnShowWindow
+## <a name="cwndonshowwindow"></a><a name="onshowwindow"></a>CWnd:: Оншоввиндов
 
-Фрейм вызывает эту `CWnd` функцию члена, когда объект вот-вот будет скрыт или показан.
+Платформа вызывает эту функцию-член, когда `CWnd` объект будет скрыт или показан.
 
 ```
 afx_msg void OnShowWindow(
@@ -9302,25 +9302,25 @@ afx_msg void OnShowWindow(
 ### <a name="parameters"></a>Параметры
 
 *bShow*<br/>
-Определяет, отображается ли окно. Это правда, если окно отображается; это FALSE, если окно скрыто.
+Указывает, отображается ли окно. Значение TRUE, если окно отображается; значение FALSE, если окно скрыто.
 
-*nСтатус*<br/>
-Определяет состояние отображаемого окна. Это 0, если сообщение отправлено `ShowWindow` из-за вызова функции участника; в противном случае *nStatus* является одним из следующих:
+*нстатус*<br/>
+Указывает состояние отображаемого окна. Это значение равно 0, если сообщение отправляется в результате `ShowWindow` вызова функции-члена; в противном случае *нстатус* является одним из следующих:
 
-- SW_PARENTCLOSING родительское окно закрывается (делается знаковым) или всплывающее окно скрыто.
+- SW_PARENTCLOSING родительское окно закрывается (становится значком), или всплывающее окно скрывается.
 
 - SW_PARENTOPENING родительское окно открывается (отображается) или отображается всплывающее окно.
 
 ### <a name="remarks"></a>Remarks
 
-Окно скрыто или отображается `ShowWindow` при вызове функции элемента, при максимизации или восстановлении перекрытого окна или при закрытии (сделанном иконообразном) или открытом (отображаемом на экране). Когда перекрытое окно закрывается, все всплывающие окна, связанные с этим окном, скрыты.
+Окно скрывается или отображается при `ShowWindow` вызове функции-члена, когда перекрытие окна разворачивается или восстанавливается, или когда перекрытие или всплывающее окно закрывается (становится значком) или открывается (отображается на экране). При закрытии перекрытого окна все всплывающие окна, связанные с этим окном, будут скрыты.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonsize"></a><a name="onsize"></a>CWnd::OnSize
+## <a name="cwndonsize"></a><a name="onsize"></a>CWnd:: OnSize
 
-Платформа вызывает эту функцию участника после изменения размера окна.
+Платформа вызывает эту функцию члена после изменения размера окна.
 
 ```
 afx_msg void OnSize(
@@ -9332,27 +9332,27 @@ afx_msg void OnSize(
 ### <a name="parameters"></a>Параметры
 
 *nType*<br/>
-Определяет тип запрошенного размера. Этот параметр может быть одним из следующих значений:
+Указывает тип запрошенного изменения размера. Этот параметр может принимать одно из следующих значений:
 
-- SIZE_MAXIMIZED окно было максимально.
+- Окно SIZE_MAXIMIZED развернуто.
 
-- SIZE_MINIMIZED окно было сведено к минимуму.
+- Окно SIZE_MINIMIZED было уменьшено.
 
-- SIZE_RESTORED окно было переопределено, но ни SIZE_MINIMIZED, ни SIZE_MAXIMIZED не применяется.
+- Размер окна SIZE_RESTORED изменился, но ни SIZE_MINIMIZED, ни SIZE_MAXIMIZED не применяются.
 
-- SIZE_MAXHIDE сообщение отправляется во все всплывающие окна, когда некоторые другие окна максимизации.
+- SIZE_MAXHIDE сообщение отправляется во все всплывающие окна, когда какое-либо другое окно развернуто.
 
-- SIZE_MAXSHOW сообщение отправляется во все всплывающие окна, когда другое окно было восстановлено до прежнего размера.
+- SIZE_MAXSHOW сообщение отправляется во все всплывающие окна при восстановлении какого-либо другого окна до своего прежнего размера.
 
-*Cx*<br/>
-Определяет новую ширину клиентской области.
+*/CX*<br/>
+Задает новую ширину клиентской области.
 
-*Cy*<br/>
-Определяет новую высоту клиентской зоны.
+*CY*<br/>
+Задает новую высоту клиентской области.
 
 ### <a name="remarks"></a>Remarks
 
-Если функция [члена SetScrollPos](#setscrollpos) или [MoveWindow](#movewindow) вызывается `OnSize`для `bRedraw` окна `SetScrollPos` `MoveWindow` ребенка из, параметр или должен быть незеролевым, чтобы вызвать `CWnd` перекраску.
+Если для дочернего окна вызывается функция-член [сетскроллпос](#setscrollpos) или [мовевиндов](#movewindow) `OnSize` , `bRedraw` параметр `SetScrollPos` или `MoveWindow` должен быть ненулевым для `CWnd` перерисовки.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
@@ -9361,9 +9361,9 @@ afx_msg void OnSize(
 
 [!code-cpp[NVC_MFCWindowing#109](../../mfc/reference/codesnippet/cpp/cwnd-class_50.cpp)]
 
-## <a name="cwndonsizeclipboard"></a><a name="onsizeclipboard"></a>CWnd::OnSizeClipboard
+## <a name="cwndonsizeclipboard"></a><a name="onsizeclipboard"></a>CWnd:: последнем OnSizeClipboard
 
-Функция `OnSizeClipboard` члена владельца Clipboard вызывается зрителем Clipboard, когда Clipboard `CF_OWNERDISPLAY` содержит данные с атрибутом и размером клиентской области окна Clipboard-viewer.
+`OnSizeClipboard`Функция-член владельца буфера обмена вызывается средством просмотра буфера обмена, когда буфер обмена содержит данные с `CF_OWNERDISPLAY` атрибутом и размер клиентской области окна средства просмотра буфера обмена изменился.
 
 ```
 afx_msg void OnSizeClipboard(
@@ -9373,24 +9373,24 @@ afx_msg void OnSizeClipboard(
 
 ### <a name="parameters"></a>Параметры
 
-*pClipAppWnd*<br/>
-Идентифицирует окно приложения Clipboard. Указатель может быть временным и не должен храниться.
+*пклипаппвнд*<br/>
+Определяет окно буфера обмена приложения. Указатель может быть временным и не должен храниться.
 
-*hRect*<br/>
-Идентифицирует глобальный объект памяти. Объект памяти содержит структуру данных RECT, которая определяет область для рисования владельца Clipboard.
+*хрект*<br/>
+Определяет глобальный объект памяти. Объект Memory содержит структуру данных RECT, указывающую область для рисования владельцем буфера обмена.
 
 ### <a name="remarks"></a>Remarks
 
-Функция `OnSizeClipboard` члена вызывается с нулевой прямоугольником (0,0,0,0, 0) в качестве нового размера, когда приложение Clipboard вот-вот будет уничтожено или сведено к минимуму. Это позволяет владельцу Clipboard освободить ресурсы отображения.
+`OnSizeClipboard`Функция-член вызывается с пустым прямоугольником (0, 0, 0, 0) в качестве нового размера при уничтожении или сворачивании приложения буфера обмена. Это позволяет владельцу буфера обмена освобождать ресурсы, отображаемые на экране.
 
-Внутри `OnSizeClipboard`приложения необходимо использовать функцию [GlobalLock](/windows/win32/api/winbase/nf-winbase-globallock) Windows для блокировки памяти, содержащей структуру данных RECT. Разблокируйте эту память с помощью функции [GlobalUnlock](/windows/win32/api/winbase/nf-winbase-globalunlock) Windows до того, как она даст или вернет управление.
+В `OnSizeClipboard` приложении для блокировки памяти, содержащей структуру данных RECT, приложение должно использовать функцию Windows [глобаллокк](/windows/win32/api/winbase/nf-winbase-globallock) . Разблокируйте эту память с помощью функции Windows [глобалунлокк](/windows/win32/api/winbase/nf-winbase-globalunlock) , прежде чем она выдаст или возвратит управление.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonsizing"></a><a name="onsizing"></a>CWnd::OnSizing
+## <a name="cwndonsizing"></a><a name="onsizing"></a>CWnd:: onsizing
 
-Платформа вызывает эту функцию участника, чтобы указать, что пользователь изменяет размер прямоугольника.
+Платформа вызывает эту функцию-член, чтобы указать, что пользователь изменяет размер прямоугольника.
 
 ```
 afx_msg void OnSizing(
@@ -9400,15 +9400,15 @@ afx_msg void OnSizing(
 
 ### <a name="parameters"></a>Параметры
 
-*nSide*<br/>
-Край окна, который будет перемещен.
+*нсиде*<br/>
+Граница перемещаемого окна.
 
-*lpRect*<br/>
-Адрес структуры [CRect](../../atl-mfc-shared/reference/crect-class.md) или [RECT,](/windows/win32/api/windef/ns-windef-rect) которая будет содержать координаты товара.
+*лпрект*<br/>
+Адрес структуры [крект](../../atl-mfc-shared/reference/crect-class.md) или [Rect](/windows/win32/api/windef/ns-windef-rect) , которая будет содержать координаты элемента.
 
 ### <a name="remarks"></a>Remarks
 
-Обработав это сообщение, приложение может контролировать размер и положение драг-прямоугольника и, при необходимости, изменять его размер или положение.
+Обрабатывая это сообщение, приложение может отслеживать размер и расположение прямоугольника перетаскивания и, при необходимости, изменять его размер или расположение.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
@@ -9417,9 +9417,9 @@ afx_msg void OnSizing(
 
 [!code-cpp[NVC_MFCWindowing#110](../../mfc/reference/codesnippet/cpp/cwnd-class_51.cpp)]
 
-## <a name="cwndonspoolerstatus"></a><a name="onspoolerstatus"></a>CWnd::OnSpoolerStatus
+## <a name="cwndonspoolerstatus"></a><a name="onspoolerstatus"></a>CWnd:: Онспулерстатус
 
-Платформа вызывает эту функцию участника от менеджера печати всякий раз, когда задание добавляется или удаляется из очереди менеджера печати.
+Платформа вызывает эту функцию-член из диспетчера печати всякий раз, когда задание добавляется в очередь диспетчера печати или удаляется из нее.
 
 ```
 afx_msg void OnSpoolerStatus(
@@ -9429,11 +9429,11 @@ afx_msg void OnSpoolerStatus(
 
 ### <a name="parameters"></a>Параметры
 
-*nСтатус*<br/>
-Определяет SP_JOBSTATUS флаг.
+*нстатус*<br/>
+Задает флаг SP_JOBSTATUS.
 
-*nДжобс*<br/>
-Определяет количество заданий, остающихся в очереди менеджера печати.
+*нжобс*<br/>
+Указывает количество заданий, остающихся в очереди диспетчера печати.
 
 ### <a name="remarks"></a>Remarks
 
@@ -9442,9 +9442,9 @@ afx_msg void OnSpoolerStatus(
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonstylechanged"></a><a name="onstylechanged"></a>CWnd::OnStyleChanged
+## <a name="cwndonstylechanged"></a><a name="onstylechanged"></a>CWnd:: Онстилечанжед
 
-Платформа вызывает эту функцию участника после того, как функция [SetWindowLong](/windows/win32/api/winuser/nf-winuser-setwindowlongw) изменила один или несколько стилей окна.
+Платформа вызывает эту функцию члена после того, как функция [SetWindowLong](/windows/win32/api/winuser/nf-winuser-setwindowlongw) изменила один или несколько стилей окна.
 
 ```
 afx_msg void OnStyleChanged(
@@ -9454,24 +9454,24 @@ afx_msg void OnStyleChanged(
 
 ### <a name="parameters"></a>Параметры
 
-*nStyleType*<br/>
-Уточняется, изменились ли расширенные или нерасширенные стили окна. Этот параметр может быть комбинацией следующих значений:
+*нстилетипе*<br/>
+Указывает, изменились ли расширенные или нерасширенные стили окна. Этот параметр может быть сочетанием следующих значений:
 
-- GWL_EXSTYLE расширенные стили окна изменились.
+- GWL_EXSTYLE были изменены расширенные стили окна.
 
-- GWL_STYLE нерасширенные стили окна изменились.
+- GWL_STYLE изменились нерасширенные стили окна.
 
-*lpStyleStruct*<br/>
-Указывает на структуру [STYLESTRUCT,](/windows/win32/api/winuser/ns-winuser-stylestruct) содержащую новые стили для окна. Приложение может изучить стили, но оно не может изменить их.
+*лпстилеструкт*<br/>
+Указывает на структуру [стилеструкт](/windows/win32/api/winuser/ns-winuser-stylestruct) , содержащую новые стили для окна. Приложение может проверять стили, но не может их изменять.
 
 ### <a name="remarks"></a>Remarks
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonstylechanging"></a><a name="onstylechanging"></a>CWnd::OnStyleChanging
+## <a name="cwndonstylechanging"></a><a name="onstylechanging"></a>CWnd:: Онстилечангинг
 
-Платформа вызывает эту функцию участника, когда функция [SetWindowLong](/windows/win32/api/winuser/nf-winuser-setwindowlongw) собирается изменить один или несколько стилей окна.
+Платформа вызывает эту функцию-член, когда функция [SetWindowLong](/windows/win32/api/winuser/nf-winuser-setwindowlongw) собирается изменить один или несколько стилей окна.
 
 ```
 afx_msg void OnStyleChanging(
@@ -9481,24 +9481,24 @@ afx_msg void OnStyleChanging(
 
 ### <a name="parameters"></a>Параметры
 
-*nStyleType*<br/>
-Уточняется, изменились ли расширенные или нерасширенные стили окна. Этот параметр может быть комбинацией следующих значений:
+*нстилетипе*<br/>
+Указывает, изменились ли расширенные или нерасширенные стили окна. Этот параметр может быть сочетанием следующих значений:
 
-- GWL_EXSTYLE расширенные стили окна изменились.
+- GWL_EXSTYLE были изменены расширенные стили окна.
 
-- GWL_STYLE нерасширенные стили окна изменились.
+- GWL_STYLE изменились нерасширенные стили окна.
 
-*lpStyleStruct*<br/>
-Указывает на структуру [STYLESTRUCT,](/windows/win32/api/winuser/ns-winuser-stylestruct) содержащую новые стили для окна. Приложение может изучить стили и изменить их.
+*лпстилеструкт*<br/>
+Указывает на структуру [стилеструкт](/windows/win32/api/winuser/ns-winuser-stylestruct) , содержащую новые стили для окна. Приложение может проверять стили и изменять их.
 
 ### <a name="remarks"></a>Remarks
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonsyschar"></a><a name="onsyschar"></a>CWnd::OnSysChar
+## <a name="cwndonsyschar"></a><a name="onsyschar"></a>CWnd:: Онсисчар
 
-Платформа вызывает эту функцию члена, если `CWnd` у него есть входного фокуса и [WM_SYSKEYUP](#onsyskeyup) и [WM_SYSKEYDOWN](#onsyskeydown) сообщения переведены.
+Платформа вызывает эту функцию члена, если `CWnd` имеет фокус ввода и сообщения [WM_SYSKEYUP](#onsyskeyup) и [WM_SYSKEYDOWN](#onsyskeydown) переводятся.
 
 ```
 afx_msg void OnSysChar(
@@ -9509,39 +9509,39 @@ afx_msg void OnSysChar(
 
 ### <a name="parameters"></a>Параметры
 
-*Nchar*<br/>
-Упоняет ключевой код ASCII-символа ключа Control-menu.
+*nChar*<br/>
+Задает код ключа ASCII-символа клавиши управления.
 
-*nRepCnt*<br/>
-Уфиксирует количество повторов (количество раз, когда нажатие клавиши повторяется в результате удержания пользователя ключом).
+*нрепкнт*<br/>
+Указывает число повторов (количество повторов нажатия клавиши в результате, когда пользователь удерживает клавишу).
 
-*nФлаги*<br/>
-Параметр *nFlags* может иметь следующие значения:
+*нфлагс*<br/>
+Параметр *нфлагс* может иметь следующие значения:
 
 |Значение|Значение|
 |-----------|-------------|
-|0-15|Определяет количество повторных повторов. Значение — это количество повторений нажатия клавиши в результате удержания пользователя ключом.|
-|16—23|Определяет код сканирования. Значение зависит от производителя оригинального оборудования (OEM)|
-|24|Уточняется, является ли ключ расширенным ключом, таким как клавиши ALT и CTRL, которые отображаются на улучшенной клавиатуре 101 или 102-ключей. Значение 1, если это расширенный ключ; в противном случае, это 0.|
-|25-28|Используется внутренне Windows.|
-|29|Определяет код контекста. Значение 1, если ключ ALT удерживается при нажатии клавиши; в противном случае значение составляет 0.|
-|30|Определяет предыдущее ключевое состояние. Значение 1, если ключ не работает до отправки сообщения, или 0, если ключ вверх.|
-|31|Определяет состояние перехода. Значение 1, если ключ освобождается, или 0, если ключ нажат.|
+|0—15|Указывает число повторов. Значение — это количество повторений нажатия клавиши в результате нажатия пользователем клавиши.|
+|16—23|Указывает код сканирования. Это значение зависит от изготовителя оборудования (OEM)|
+|24|Указывает, является ли ключ расширенным ключом, таким как правая клавиша ALT и CTRL, отображаемые на расширенной клавиатуре 101 или 102. Значение равно 1, если это расширенный ключ; в противном случае — 0.|
+|25-28|Используется внутри Windows.|
+|29|Указывает код контекста. Значение равно 1, если клавиша ALT удерживается при нажатии клавиши; в противном случае значение равно 0.|
+|30|Указывает предыдущее состояние ключа. Значение равно 1, если ключ не работает до отправки сообщения, или 0, если ключ работает.|
+|31|Задает состояние перехода. Значение равно 1, если ключ освобождается, или 0, если клавиша нажата.|
 
 ### <a name="remarks"></a>Remarks
 
-Он определяет виртуальный код ключа ключа Control-menu. (Список стандартных виртуальных кодов ключей см. Winuser.h)
+Здесь указывается код виртуального ключа для ключа меню Control. (Список стандартных виртуальных клавиш см. в разделе Winuser. h)
 
-Когда код контекста равен 0, WM_SYSCHAR можете передать [WM_SYSCHAR](/windows/win32/menurc/wm-syschar) сообщение функции [TranslateAccelerator](/windows/win32/api/winuser/nf-winuser-translateacceleratorw) Windows, которая будет обрабатывать его, как если бы это было нормальное ключевое сообщение вместо системного ключа символов. Это позволяет использовать клавиши ускорителя с активным окном, даже если активное окно не имеет вхонного фокуса.
+Если код контекста равен 0, WM_SYSCHAR может передать [WM_SYSCHAR](/windows/win32/menurc/wm-syschar) сообщение в функцию Windows [TranslateAccelerator](/windows/win32/api/winuser/nf-winuser-translateacceleratorw) , которое будет обрабатывать его так, как будто оно было обычным ключевым сообщением, а не системным символ-ключом. Это позволяет использовать сочетания клавиш с активным окном, даже если активное окно не имеет фокуса ввода.
 
-Для клавиатур IBM Enhanced 101- и 102-ключ, расширенные клавиши являются правильными клавишами ALT и правыми клавишами CTRL на основной части клавиатуры; INS, DEL, HOME, END, PAGE UP, PAGE DOWN и клавиши со стрелками в кластерах слева от цифровой клавиатуры; и клавиши слэйс (/) и ENTER в числовой клавиатуре. Некоторые другие клавиатуры могут поддерживать бит расширенного ключа в *nFlags*.
+Для клавиатуры IBM с улучшенными 101-и 102-клавишами расширенными ключами являются правая клавиша ALT и правые клавиши CTRL в основном разделе клавиатуры. клавиши INS, DEL, ДОМАШНяя, КОНЕЧная страница вверх, PAGE DOWN и стрелка в кластерах слева от цифровой клавиатуры; и косая черта (/) и введите клавиши на цифровой клавиатуре. Некоторые другие клавиатуры могут поддерживать бит расширенного ключа в *нфлагс*.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonsyscolorchange"></a><a name="onsyscolorchange"></a>CWnd::OnSysColorChange
+## <a name="cwndonsyscolorchange"></a><a name="onsyscolorchange"></a>CWnd:: Онсисколорчанже
 
-Платформа вызывает эту функцию участника для всех окон верхнего уровня при изменении настройки цвета системы.
+Платформа вызывает эту функцию-член для всех окон верхнего уровня, когда в параметре системного цвета вносится изменение.
 
 ```
 afx_msg void OnSysColorChange();
@@ -9549,13 +9549,13 @@ afx_msg void OnSysColorChange();
 
 ### <a name="remarks"></a>Remarks
 
-Windows `OnSysColorChange` требует любого окна, которое зависит от изменения цвета системы.
+Вызовы Windows `OnSysColorChange` для любого окна, на которое влияет изменение цвета системы.
 
-Приложения с кистами, которые используют существующие цвета системы, должны удалять эти кисти и воссоздать их новыми цветами системы.
+Приложения с кистью, использующей существующие системные цвета, должны удалить эти кисти и создать их заново с новыми системными цветами.
 
-## <a name="cwndonsyscommand"></a><a name="onsyscommand"></a>CWnd::OnSysCommand
+## <a name="cwndonsyscommand"></a><a name="onsyscommand"></a>CWnd:: Онсискомманд
 
-Платформа вызывает эту функцию участника, когда пользователь выбирает команду из меню Управления, или когда пользователь выбирает кнопку «Максимизировать» или «Минимизацию».
+Платформа вызывает эту функцию-член, когда пользователь выбирает команду из меню управления или когда пользователь нажимает кнопку развернуть или сворачивания.
 
 ```
 afx_msg void OnSysCommand(
@@ -9566,63 +9566,63 @@ afx_msg void OnSysCommand(
 ### <a name="parameters"></a>Параметры
 
 *nID*<br/>
-Определяет тип запрашиваемых команд систем. Этот параметр может быть любым из следующих значений:
+Указывает тип запрашиваемой системной команды. Этот параметр может принимать одно из следующих значений:
 
-- SC_CLOSE Закройте `CWnd` объект.
+- SC_CLOSE закрыть `CWnd` объект.
 
-- SC_HOTKEY активировать объект, `CWnd` связанный с указанным приложением горячим ключом. Низкое слово *lParam* определяет HWND окна для активации.
+- SC_HOTKEY активировать `CWnd` объект, связанный с заданной приложением горячей клавишей. Слово *lParam* с низким приоритетом определяет HWND окна для активации.
 
-- SC_HSCROLL Прокрутки горизонтально.
+- SC_HSCROLL прокрутка по горизонтали.
 
-- SC_KEYMENU извлекаем меню через нажатие клавиши.
+- SC_KEYMENU получить меню нажатием клавиши.
 
-- SC_MAXIMIZE (или SC_ZOOM) `CWnd` Увеличьте объект.
+- SC_MAXIMIZE (или SC_ZOOM) разверните `CWnd` объект.
 
-- SC_MINIMIZE (или SC_ICON) `CWnd` минимизировать объект.
+- SC_MINIMIZE (или SC_ICON) сократите `CWnd` объект.
 
-- SC_MOUSEMENU получить меню с помощью щелчка мыши.
+- SC_MOUSEMENU получить меню с помощью щелчка мышью.
 
-- SC_MOVE Переместить `CWnd` объект.
+- SC_MOVE переместить `CWnd` объект.
 
-- SC_NEXTWINDOW Перейдите к следующему окну.
+- SC_NEXTWINDOW перейти к следующему окну.
 
-- SC_PREVWINDOW Перемещение в предыдущее окно.
+- SC_PREVWINDOW перейти к предыдущему окну.
 
-- SC_RESTORE Восстановить окно в нормальное положение и размер.
+- SC_RESTORE восстановить нормальное расположение и размер окна.
 
-- SC_SCREENSAVE выполняет приложение для сохранения экрана, указанное в разделе SYSTEM. Файл INI.
+- SC_SCREENSAVE выполняет приложение хранителя экрана, указанное в разделе [boot] файла SYSTEM.INI.
 
-- SC_SIZE Размер `CWnd` объекта.
+- SC_SIZE размер `CWnd` объекта.
 
-- SC_TASKLIST выполнить или активировать приложение «Менеджер задач Windows».
+- SC_TASKLIST запустить или активировать приложение диспетчера задач Windows.
 
-- SC_VSCROLL Прокрутите вертикально.
+- SC_VSCROLL прокрутка по вертикали.
 
 *lParam*<br/>
-Если команда Control-menu выбрана с помощью мыши, *lParam* содержит координаты курсора. Слово низкого порядка содержит координат x, а слово высокого порядка содержит координаты y. В противном случае этот параметр не используется.
+Если команда меню управления выбрана с мышью, то параметр *lParam* содержит координаты курсора. Слово нижнего порядка содержит координату x, а большое слово содержит координату y. В противном случае этот параметр не используется.
 
-- SC_HOTKEY Активировать окно, связанное с указанным приложением горячим ключом. Низкое слово *lParam* идентифицирует окно для активации.
+- SC_HOTKEY активировать окно, связанное с заданной приложением горячей клавишей. Слово *lParam* с низким приоритетом определяет окно для активации.
 
-- SC_SCREENSAVE Выполнить приложение для сохранения экрана, указанное в разделе Рабочего стола панели управления.
+- SC_SCREENSAVE выполнить приложение для сохранения экрана, указанное в разделе "Рабочий стол" панели управления.
 
 ### <a name="remarks"></a>Remarks
 
-По умолчанию выполняет запрос «Контрольно-меню» для предопределенных действий, `OnSysCommand` указанных в предыдущей таблице.
+По умолчанию `OnSysCommand` выполняет запрос управляющего меню для предопределенных действий, указанных в предыдущей таблице.
 
-В WM_SYSCOMMAND сообщений четыре бита *nID* низкого порядка используются Windows внутри Windows. Когда приложение проверяет значение *nID,* оно должно объединить значение 0xFFF0 с значением *nID,* используя bitwise-And оператора для получения правильного результата.
+В сообщениях WM_SYSCOMMAND четыре младшие биты параметра *NID* используются внутри Windows. Когда приложение проверяет значение *NID*, оно должно сочетать значение 0xFFF0 со значением *NID* , используя оператор побитового и для получения правильного результата.
 
-Элементы меню в меню Управления могут `GetSystemMenu`быть `AppendMenu` `InsertMenu`изменены `ModifyMenu` с функциями, и член. Приложения, изменяющие меню управления, должны обрабатывать WM_SYSCOMMAND сообщений, а любые `OnSysCommand`WM_SYSCOMMAND сообщения, не обрабатываемые приложением, должны передаваться. Любые значения команд, добавленные приложением, должны быть `OnSysCommand`обработаны приложением и не могут быть переданы.
+Пункты меню в меню управления могут быть изменены с помощью функций- `GetSystemMenu` членов,, `AppendMenu` `InsertMenu` и `ModifyMenu` . Приложения, изменяющие меню элемента управления, должны обрабатывать WM_SYSCOMMAND сообщения, а все WM_SYSCOMMAND сообщения, не обрабатываемые приложением, должны передаваться в `OnSysCommand` . Все значения команд, добавленные приложением, должны обрабатываться приложением и не могут быть переданы в `OnSysCommand` .
 
-Приложение может выполнять любую системную команду в любое `OnSysCommand`время, передавая WM_SYSCOMMAND сообщение.
+Приложение может выполнить любую системную команду в любое время, передав WM_SYSCOMMAND сообщение в `OnSysCommand` .
 
-Нажатия клавиш accelerator (shortcut), которые определяются для выбора `OnSysCommand` элементов из меню Control, переводятся в вызовы; все другие нажатия клавиш акселератора переведены на [WM_COMMAND](#oncommand) сообщения.
+Нажатия клавиш быстрого вызова, определенные для выбора элементов из меню управления, преобразуются в `OnSysCommand` вызовы; все остальные сочетания клавиш переводятся в [WM_COMMAND](#oncommand) сообщения.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonsysdeadchar"></a><a name="onsysdeadchar"></a>CWnd::OnSysDeadChar
+## <a name="cwndonsysdeadchar"></a><a name="onsysdeadchar"></a>CWnd:: Онсисдеадчар
 
-Платформа вызывает эту функцию `CWnd` элемента, если объект имеет фокус ввода при вызове функции участника [OnSysKeyUp](#onsyskeyup) или [OnSysKeyDown.](#onsyskeydown)
+Платформа вызывает эту функцию-член, если `CWnd` объект имеет фокус ввода при вызове функции-члена [Онсискэйуп](#onsyskeyup) или [онсискэйдовн](#onsyskeydown) .
 
 ```
 afx_msg void OnSysDeadChar(
@@ -9633,35 +9633,35 @@ afx_msg void OnSysDeadChar(
 
 ### <a name="parameters"></a>Параметры
 
-*Nchar*<br/>
-Определяет значение символа «мертвый ключ».
+*nChar*<br/>
+Задает значение символа неработающего ключа.
 
-*nRepCnt*<br/>
-Определяет количество повторных повторов.
+*нрепкнт*<br/>
+Указывает число повторов.
 
-*nФлаги*<br/>
-Осваивай код сканирования, код перехода ключей, предыдущее состояние ключа и код контекста, как показано в следующем списке:
+*нфлагс*<br/>
+Указывает код сканирования, код перехода на ключ, предыдущее состояние ключа и код контекста, как показано в следующем списке:
 
 |Значение|Значение|
 |-----------|-------------|
-|0-7|Код сканирования (OEM-зависимое значение). Низкий байт слова высокого порядка.|
-|8|Расширенный ключ, например, функциональный ключ или ключ на цифровой клавиатуре (1, если это расширенный ключ; в противном случае 0).|
+|0-7|Код сканирования (значение, зависящее от изготовителя оборудования). Младший байт для слова высокого порядка.|
+|8|Расширенный ключ, например ключ функции или клавиша на цифровой клавиатуре (1, если это расширенный ключ; в противном случае 0).|
 |9-10|Не используется.|
-|11-12|Используется внутренне Windows.|
-|13|Контекстный код (1, если ключ ALT удерживается при нажатии клавиши; в противном случае 0).|
-|14|Предыдущее состояние ключа (1, если ключ не работает до вызова, 0, если ключ вверх).|
-|15|Состояние перехода (1, если ключ освобождается, 0, если ключ нажат).|
+|11-12|Используется внутри Windows.|
+|13|Контекстный код (1, если клавиша ALT удерживается при нажатии клавиши; в противном случае — 0).|
+|14|Предыдущее состояние ключа (1, если ключ не работает до вызова, 0, если ключ работает).|
+|15|Состояние перехода (1, если ключ освобождается, 0 при нажатии клавиши).|
 
 ### <a name="remarks"></a>Remarks
 
-Он определяет значение характера мертвого ключа.
+Указывает значение символа для неработающего ключа.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonsyskeydown"></a><a name="onsyskeydown"></a>CWnd::OnSysKeyDown
+## <a name="cwndonsyskeydown"></a><a name="onsyskeydown"></a>CWnd:: Онсискэйдовн
 
-Если `CWnd` объект имеет фокус ввода, функция `OnSysKeyDown` элемента вызывается фреймворком, когда пользователь удерживает ключ ALT, а затем нажимает другой ключ.
+Если `CWnd` объект имеет фокус ввода, `OnSysKeyDown` функция-член вызывается платформой, когда пользователь удерживает нажатой КЛАВИШу Alt, а затем нажимает другой ключ.
 
 ```
 afx_msg void OnSysKeyDown(
@@ -9672,43 +9672,43 @@ afx_msg void OnSysKeyDown(
 
 ### <a name="parameters"></a>Параметры
 
-*Nchar*<br/>
-Определяет виртуальный код ключа нажатия ключа. Список стандартных виртуальных кодов ключей можно узнать на примере Winuser.h
+*nChar*<br/>
+Указывает виртуальный код клавиши для нажатия. Список стандартных виртуальных клавиш см. в разделе Winuser. h
 
-*nRepCnt*<br/>
-Определяет количество повторных повторов.
+*нрепкнт*<br/>
+Указывает число повторов.
 
-*nФлаги*<br/>
-Осваивай код сканирования, код перехода ключей, предыдущее состояние ключа и код контекста, как показано в следующем списке:
+*нфлагс*<br/>
+Указывает код сканирования, код перехода на ключ, предыдущее состояние ключа и код контекста, как показано в следующем списке:
 
 |Значение|Значение|
 |-----------|-------------|
-|0-7|Код сканирования (OEM-зависимое значение). Низкий байт слова высокого порядка.|
-|8|Расширенный ключ, например, функциональный ключ или ключ на цифровой клавиатуре (1, если это расширенный ключ; в противном случае 0).|
+|0-7|Код сканирования (значение, зависящее от изготовителя оборудования). Младший байт для слова высокого порядка.|
+|8|Расширенный ключ, например ключ функции или клавиша на цифровой клавиатуре (1, если это расширенный ключ; в противном случае 0).|
 |9-10|Не используется.|
-|11-12|Используется внутренне Windows.|
-|13|Контекстный код (1, если ключ ALT удерживается при нажатии ключа, 0 в противном случае).|
-|14|Предыдущее состояние ключа (1, если ключ не работает до отправки сообщения, 0, если ключ вверх).|
-|15|Состояние перехода (1, если ключ освобождается, 0, если ключ нажат).|
+|11-12|Используется внутри Windows.|
+|13|Код контекста (1, если клавиша ALT удерживается при нажатии клавиши, в противном случае — 0).|
+|14|Предыдущее состояние ключа (1, если ключ не работает до отправки сообщения, 0, если ключ работает).|
+|15|Состояние перехода (1, если ключ освобождается, 0 при нажатии клавиши).|
 
-Для `OnSysKeyDown` вызовов бит ключа-перехода (бит 15) расписан 0. Бит контекст-кода (бит 13) составляет 1, если ключ ALT не работает во время нажатия ключа; 0, если сообщение отправлено в активное окно, потому что ни одно окно не имеет фокуса ввода.
+Для `OnSysKeyDown` вызовов бит перехода на ключ (бит 15) равен 0. Бит контекстного кода (бит 13) имеет значение 1, если клавиша ALT не нажата, пока не клавиша SHIFT. значение 0, если сообщение отправляется в активное окно, так как ни одно окно не имеет фокус ввода.
 
 ### <a name="remarks"></a>Remarks
 
-Если в настоящее время нет окна вфокусатива, вызывается функция `OnSysKeyDown` участника активного окна. Объект, `CWnd` получивший сообщение, может различать эти два `nFlags`контекста, проверяя код контекста в .
+Если ни одно окно в данный момент не имеет фокуса ввода, `OnSysKeyDown` вызывается функция-член активного окна. `CWnd`Объект, получающий сообщение, может различать эти контексты путем проверки кода контекста в `nFlags` .
 
-Когда код контекста равен 0, `OnSysKeyDown` полученное WM_SYSKEYDOWN сообщение может быть передано функции [TranslateAccelerator](/windows/win32/api/winuser/nf-winuser-translateacceleratorw) Windows, которая будет обрабатывать его, как если бы это было нормальное ключевое сообщение вместо сообщения системы ключ. Это позволяет использовать клавиши ускорителя с активным окном, даже если активное окно не имеет вхонного фокуса.
+Когда код контекста равен 0, WM_SYSKEYDOWN сообщение, полученное, `OnSysKeyDown` можно передать в функцию Windows [TranslateAccelerator](/windows/win32/api/winuser/nf-winuser-translateacceleratorw) , которая будет обрабатывать ее так, как будто это стандартное сообщение ключа, а не сообщение с системным ключом. Это позволяет использовать сочетания клавиш с активным окном, даже если активное окно не имеет фокуса ввода.
 
-Из-за автоматического повторения `OnSysKeyDown` до получения [сообщения WM_SYSKEYUP](#onsyskeyup) может произойти несколько вызовов. Предыдущее состояние ключа (бит 14) может `OnSysKeyDown` быть использовано для определения того, указывает ли вызов на первый переход вниз или повторный переход вниз.
+Из-за автоматического повтора `OnSysKeyDown` может возникнуть несколько вызовов до получения сообщения [WM_SYSKEYUP](#onsyskeyup) . Предыдущее состояние ключа (бит 14) можно использовать для определения того, `OnSysKeyDown` указывает ли вызов первый переход или повторный переход.
 
-Для клавиатур IBM Enhanced 101- и 102-ключ, расширенные клавиши являются правильными клавишами ALT и правыми клавишами CTRL на основной части клавиатуры; INS, DEL, HOME, END, PAGE UP, PAGE DOWN и клавиши со стрелками в кластерах слева от цифровой клавиатуры; и клавиши слэйс (/) и ENTER в числовой клавиатуре. Некоторые другие клавиатуры могут поддерживать бит расширенного ключа в *nFlags*.
+Для клавиатуры IBM с улучшенными 101-и 102-клавишами расширенными ключами являются правая клавиша ALT и правые клавиши CTRL в основном разделе клавиатуры. клавиши INS, DEL, ДОМАШНяя, КОНЕЧная страница вверх, PAGE DOWN и стрелка в кластерах слева от цифровой клавиатуры; и косая черта (/) и введите клавиши на цифровой клавиатуре. Некоторые другие клавиатуры могут поддерживать бит расширенного ключа в *нфлагс*.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonsyskeyup"></a><a name="onsyskeyup"></a>CWnd::OnSysKeyUp
+## <a name="cwndonsyskeyup"></a><a name="onsyskeyup"></a>CWnd:: Онсискэйуп
 
-Если `CWnd` объект имеет фокус, `OnSysKeyUp` функция элемента вызывается инфраструктурой, когда пользователь выпускает ключ, который был нажат во время удерживаемого ключа ALT.
+Если `CWnd` объект имеет фокус, `OnSysKeyUp` функция-член вызывается платформой, когда пользователь отпускает клавишу, которая была нажата во время удержания клавиши ALT.
 
 ```
 afx_msg void OnSysKeyUp(
@@ -9719,38 +9719,38 @@ afx_msg void OnSysKeyUp(
 
 ### <a name="parameters"></a>Параметры
 
-*Nchar*<br/>
-Определяет виртуальный код ключа нажатия ключа. Список стандартных виртуальных кодов ключей можно узнать на примере Winuser.h
+*nChar*<br/>
+Указывает виртуальный код клавиши для нажатия. Список стандартных виртуальных клавиш см. в разделе Winuser. h
 
-*nRepCnt*<br/>
-Определяет количество повторных повторов.
+*нрепкнт*<br/>
+Указывает число повторов.
 
-*nФлаги*<br/>
-Осваивай код сканирования, код перехода ключей, предыдущее состояние ключа и код контекста, как показано в следующем списке:
+*нфлагс*<br/>
+Указывает код сканирования, код перехода на ключ, предыдущее состояние ключа и код контекста, как показано в следующем списке:
 
 |Значение|Значение|
 |-----------|-------------|
-|0-7|Код сканирования (OEM-зависимое значение). Низкий байт слова высокого порядка.|
-|8|Расширенный ключ, например, функциональный ключ или ключ на цифровой клавиатуре (1, если это расширенный ключ; в противном случае 0).|
+|0-7|Код сканирования (значение, зависящее от изготовителя оборудования). Младший байт для слова высокого порядка.|
+|8|Расширенный ключ, например ключ функции или клавиша на цифровой клавиатуре (1, если это расширенный ключ; в противном случае 0).|
 |9-10|Не используется.|
-|11-12|Используется внутренне Windows.|
-|13|Контекстный код (1, если ключ ALT удерживается при нажатии ключа, 0 в противном случае).|
-|14|Предыдущее состояние ключа (1, если ключ не работает до отправки сообщения, 0, если ключ вверх).|
-|15|Состояние перехода (1, если ключ освобождается, 0, если ключ нажат).|
+|11-12|Используется внутри Windows.|
+|13|Код контекста (1, если клавиша ALT удерживается при нажатии клавиши, в противном случае — 0).|
+|14|Предыдущее состояние ключа (1, если ключ не работает до отправки сообщения, 0, если ключ работает).|
+|15|Состояние перехода (1, если ключ освобождается, 0 при нажатии клавиши).|
 
-Для `OnSysKeyUp` вызовов бит ключа-перехода (бит 15) расписан 1. Бит контекст-кода (бит 13) составляет 1, если ключ ALT не работает во время нажатия ключа; 0, если сообщение отправлено в активное окно, потому что ни одно окно не имеет фокуса ввода.
+Для `OnSysKeyUp` вызовов бит перехода на ключ (бит 15) равен 1. Бит контекстного кода (бит 13) имеет значение 1, если клавиша ALT не нажата, пока не клавиша SHIFT. значение 0, если сообщение отправляется в активное окно, так как ни одно окно не имеет фокус ввода.
 
 ### <a name="remarks"></a>Remarks
 
-Если в настоящее время нет окна вфокусатива, вызывается функция `OnSysKeyUp` участника активного окна. Объект, `CWnd` получивший вызов, может различать эти два контекста, проверяя код контекста в *nFlags*.
+Если ни одно окно в данный момент не имеет фокуса ввода, `OnSysKeyUp` вызывается функция-член активного окна. `CWnd`Объект, который получает вызов, может различать эти контексты путем проверки кода контекста в *нфлагс*.
 
-Когда код контекста равен 0, `OnSysKeyUp` полученное WM_SYSKEYUP сообщение может быть передано функции [TranslateAccelerator](/windows/win32/api/winuser/nf-winuser-translateacceleratorw) Windows, которая будет обрабатывать его, как если бы это было нормальное ключевое сообщение вместо сообщения системы ключа. Это позволяет использовать клавиши ускорителя (короткий отрезок) с активным окном, даже если активное окно не имеет входним фокуса.
+Когда код контекста равен 0, WM_SYSKEYUP сообщение, полученное, `OnSysKeyUp` можно передать в функцию Windows [TranslateAccelerator](/windows/win32/api/winuser/nf-winuser-translateacceleratorw) , которая будет обрабатывать ее так, как будто это стандартное сообщение ключа, а не сообщение с системным ключом. Это позволяет использовать клавиши быстрого доступа с активным окном, даже если активное окно не имеет фокуса ввода.
 
-Для клавиатур IBM Enhanced 101- и 102-ключ, расширенные клавиши являются правильными клавишами ALT и правыми клавишами CTRL на основной части клавиатуры; INS, DEL, HOME, END, PAGE UP, PAGE DOWN и клавиши со стрелками в кластерах слева от цифровой клавиатуры; и клавиши слэйс (/) и ENTER в числовой клавиатуре. Некоторые другие клавиатуры могут поддерживать бит расширенного ключа в *nFlags*.
+Для клавиатуры IBM с улучшенными 101-и 102-клавишами расширенными ключами являются правая клавиша ALT и правые клавиши CTRL в основном разделе клавиатуры. клавиши INS, DEL, ДОМАШНяя, КОНЕЧная страница вверх, PAGE DOWN и стрелка в кластерах слева от цифровой клавиатуры; и косая черта (/) и введите клавиши на цифровой клавиатуре. Некоторые другие клавиатуры могут поддерживать бит расширенного ключа в *нфлагс*.
 
-Для клавиатур, не относясь к 102 ключам, правый ключ ALT обрабатывается как комбинация клавиш CTRL-ALT. Ниже показана последовательность сообщений и вызовов, которые приводят к тому, что пользователь нажимает и выпускает этот ключ:
+Для не-U. S. Улучшенные 102-клавиши, правая клавиша ALT обрабатываются как сочетание клавиш CTRL + ALT. Ниже показана последовательность сообщений и вызовов, которые вызываются, когда пользователь нажимает и отпускает этот ключ:
 
-|Последовательность|Доступ к функциям|Передаваемые сообщения|
+|Последовательность|Доступ к функции|Сообщение передано|
 |--------------|-----------------------|--------------------|
 |1.|[WM_KEYDOWN](#onkeydown)|VK_CONTROL|
 |2.|[WM_KEYDOWN](#onkeydown)|VK_MENU|
@@ -9760,9 +9760,9 @@ afx_msg void OnSysKeyUp(
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndontcard"></a><a name="ontcard"></a>CWnd::OnTCard
+## <a name="cwndontcard"></a><a name="ontcard"></a>CWnd:: Онткард
 
-Платформа вызывает эту функцию участника, когда пользователь нажимает на авторскую кнопку.
+Платформа вызывает эту функцию члена, когда пользователь нажимает на настраиваемую кнопку.
 
 ```
 afx_msg void OnTCard(
@@ -9772,43 +9772,43 @@ afx_msg void OnTCard(
 
 ### <a name="parameters"></a>Параметры
 
-*idAction*<br/>
-Указывает действие, предпринятое пользователем. Этот параметр может быть одним из этих значений:
+*идактион*<br/>
+Указывает действие, выполненное пользователем. Этот параметр может принимать одно из следующих значений:
 
-- IDABORT Пользователь нажал авторскую кнопку Прерывания.
+- ИДАБОРТ, что пользователь щелкнул настраиваемую кнопку прерывания.
 
-- IDCANCEL Пользователь нажал авторируемую кнопку Отмена.
+- ИДКАНЦЕЛ, что пользователь щелкнул настраиваемую кнопку отмены.
 
-- IDCLOSE Пользователь закрыл учебную карту.
+- ИДКЛОСЕ, что пользователь закрыл карточку обучения.
 
-- IDHELP Пользователь нажал на авторскую кнопку помощи Windows.
+- ИДХЕЛП, что пользователь щелкнул настраиваемую кнопку справки Windows.
 
-- IDIGNORE Пользователь нажал авторируемую кнопку Игнорировать.
+- ИДИГНОРЕ, что пользователь щелкнул кнопку "пропустить", которая является автором.
 
-- IDOK Пользователь нажал авторскую кнопку OK.
+- ИДОК, что пользователь щелкнул настраиваемую кнопку ОК.
 
-- IDNO Пользователь нажал авторируемую кнопку No.
+- ИДНО, что пользователь щелкнул кнопку «автор без».
 
-- IDRETRY Пользователь нажал авторскую кнопку Retry.
+- ИДРЕТРИ, что пользователь щелкнул настраиваемую кнопку повтора.
 
-- HELP_TCARD_DATA Пользователь нажал авторскую кнопку. Параметр *dwActionData* содержит длинный целый ряд, указанный автором справки.
+- HELP_TCARD_DATA пользователя, который щелкнул настраиваемую кнопку. Параметр *двактиондата* содержит длинное целое число, заданное автором справки.
 
-- HELP_TCARD_NEXT Пользователь нажал авторируемую кнопку Next.
+- HELP_TCARD_NEXT пользователь щелкнул настраиваемую кнопку Далее.
 
-- HELP_TCARD_OTHER_CALLER Другая заявка запросила обучающие карты.
+- HELP_TCARD_OTHER_CALLER другое приложение запросило карточки обучения.
 
-- IDYES Пользователь нажал авторскую кнопку Да.
+- ИДЕС, что пользователь щелкнул настраиваемую кнопку Да.
 
-*dwActionData*<br/>
-Если *idAction* указывает HELP_TCARD_DATA, этот параметр представляет собой длинный целый ряд, указанный автором справки. В противном случае этот параметр равен нулю.
+*двактиондата*<br/>
+Если *идактион* указывает HELP_TCARD_DATA, этот параметр представляет собой длинное целое число, заданное автором справки. В противном случае этот параметр равен нулю.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция вызывается только тогда, когда приложение инициировало обучаемую карту с помощью Windows. Приложение инициирует учебную карту, указывая HELP_TCARD команду в вызове к функции [WinHelp.](../../mfc/reference/cwinapp-class.md#winhelp)
+Эта функция вызывается, только если приложение инициировало учебную карточку с помощью справки Windows. Приложение инициирует учебную карточку, указывая команду HELP_TCARD в вызове функции [WinHelp](../../mfc/reference/cwinapp-class.md#winhelp) .
 
-## <a name="cwndontimechange"></a><a name="ontimechange"></a>CWnd::OnTimeChange
+## <a name="cwndontimechange"></a><a name="ontimechange"></a>CWnd:: Онтимечанже
 
-Платформа вызывает эту функцию участника после изменения времени системы.
+Платформа вызывает эту функцию-член после изменения системного времени.
 
 ```
 afx_msg void OnTimeChange();
@@ -9816,11 +9816,11 @@ afx_msg void OnTimeChange();
 
 ### <a name="remarks"></a>Remarks
 
-Есть любое приложение, которое изменяет время системы отправить это сообщение на все окна верхнего уровня. Для отправки WM_TIMECHANGE сообщения во все окна верхнего уровня приложение может использовать функцию [SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) Windows с *набором параметра hwnd* для HWND_BROADCAST.
+Любое приложение, которое изменяет системное время, отправляет это сообщение всем окнам верхнего уровня. Чтобы отправить WM_TIMECHANGE сообщение всем окнам верхнего уровня, приложение может использовать функцию [SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) Windows с параметром *HWND* , для которого задано значение HWND_BROADCAST.
 
-## <a name="cwndontimer"></a><a name="ontimer"></a>CWnd::OnTimer
+## <a name="cwndontimer"></a><a name="ontimer"></a>CWnd:: OnTime
 
-Платформа вызывает эту функцию участника после каждого интервала, указанного в функции члена [SetTimer,](#settimer) используемой для установки таймера.
+Платформа вызывает эту функцию-член после каждого интервала, указанного в функции-члене [сеттимер](#settimer) , используемой для установки таймера.
 
 ```
 afx_msg void OnTimer(UINT_PTR nIDEvent);
@@ -9828,23 +9828,23 @@ afx_msg void OnTimer(UINT_PTR nIDEvent);
 
 ### <a name="parameters"></a>Параметры
 
-*nIDEvent*<br/>
-Определяет идентификатор таймер.
+*нидевент*<br/>
+Указывает идентификатор таймера.
 
 ### <a name="remarks"></a>Remarks
 
-Функция [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) Windows отправляет [WM_TIMER](/windows/win32/winmsg/wm-timer) сообщение, когда в очереди сообщений приложения нет других сообщений.
+Функция Windows [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) отправляет сообщение [WM_TIMER](/windows/win32/winmsg/wm-timer) , если в очереди сообщений приложения нет других сообщений.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
 ### <a name="example"></a>Пример
 
-  Смотрите пример в [CWnd::SetTimer](#settimer).
+  См. пример в разделе [CWnd:: сеттимер](#settimer).
 
-## <a name="cwndontoolhittest"></a><a name="ontoolhittest"></a>CWnd::OnToolHitTest
+## <a name="cwndontoolhittest"></a><a name="ontoolhittest"></a>CWnd:: Онтулхиттест
 
-Платформа вызывает эту функцию члена, чтобы определить, находится ли точка в связующего прямоугольнике указанного инструмента.
+Платформа вызывает эту функцию-член, чтобы определить, находится ли точка в ограничивающем прямоугольнике указанного инструмента.
 
 ```
 virtual INT_PTR OnToolHitTest(
@@ -9854,35 +9854,35 @@ virtual INT_PTR OnToolHitTest(
 
 ### <a name="parameters"></a>Параметры
 
-*Точки*<br/>
-Определяет x- и y-координаты курсора. Эти координаты всегда относительно верхнего левого угла окна
+*точки*<br/>
+Задает координату x и y курсора. Эти координаты всегда отсчитываются относительно левого верхнего угла окна.
 
-*Pti*<br/>
-Указатель на структуру [TOOLINFO.](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) Следующие значения структуры устанавливаются по умолчанию:
+*пти*<br/>
+Указатель на структуру [тулинфо](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) . По умолчанию устанавливаются следующие значения структуры:
 
-- *hwnd*  =  `m_hWnd` Ручка к окну
+- *hwnd*  =  HWND `m_hWnd` Обработчик для окна
 
-- *uId*  =  `(UINT)hWndChild` Ручка к окну ребенка
+- *uId*  =  uId `(UINT)hWndChild` Обработчик для дочернего окна
 
-- *uFlags* &#124;- TTF_IDISHWND ручка инструмента
+- *уфлагс* &#124;= TTF_IDISHWNDный маркер средства
 
-- *lpszText* - LPSTR_TEXTCALLBACK указатель на строку, которая должна отображаться в указанном окне
+- *лпсзтекст* = LPSTR_TEXTCALLBACK указатель на строку, которая должна отображаться в указанном окне
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если элемент управления инструментарием найден, идентификатор управления окном. Если инструментарий не найден, -1.
+Если элемент управления ToolTip найден, идентификатор элемента управления Window. Если элемент управления ToolTip не найден,-1.
 
 ### <a name="remarks"></a>Remarks
 
-Если точка находится в прямоугольнике, она получает информацию об инструменте.
+Если точка находится в прямоугольнике, она извлекает сведения о средстве.
 
-Если область, с которой связан инструмент, не `OnToolHitTest` является кнопкой, устанавливает флаги структуры на TTF_NOTBUTTON и TTF_CENTERTIP.
+Если область, с которой связана подсказка, не является кнопкой, `OnToolHitTest` устанавливает флаги структуры в TTF_NOTBUTTON и TTF_CENTERTIP.
 
-Переопределение `OnToolHitTest` для предоставления другой информации, чем предоставляет по умолчанию.
+Переопределите `OnToolHitTest` , чтобы предоставить сведения, отличные от предоставляемых по умолчанию.
 
-Подробнее о структуре читайте в [см.](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa)
+Дополнительные сведения о структуре см. в разделе [тулинфо](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa)в Windows SDK.
 
-## <a name="cwndontouchinput"></a><a name="ontouchinput"></a>CWnd::OnTouchInput
+## <a name="cwndontouchinput"></a><a name="ontouchinput"></a>CWnd:: Онтаучинпут
 
 Обработка одного ввода Windows touch.
 
@@ -9896,27 +9896,27 @@ virtual BOOL OnTouchInput(
 
 ### <a name="parameters"></a>Параметры
 
-*пт*<br/>
-Точка, где экран был тронут (в координатах клиента).
+*лутор*<br/>
+Точка, в которой затронут экран (в клиентских координатах).
 
-*nInputNumber*<br/>
-Количество сенсорного ввода.
+*нинпутнумбер*<br/>
+Число сенсорных входных данных.
 
-*nInputsCount*<br/>
-Общее количество сенсорных входов.
+*нинпутскаунт*<br/>
+Общее число сенсорных входов.
 
-*pInput*<br/>
-Указатель на структуру TOUCHINPUT.
+*пинпут*<br/>
+Указатель на структуру ТАУЧИНПУТ.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-TRUE, если приложение обрабатывает сенсорный вход Windows; в противном случае FALSE.
+Значение TRUE, если приложение обрабатывает ввод касания Windows; в противном случае — FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-## <a name="cwndontouchinputs"></a><a name="ontouchinputs"></a>CWnd::OnTouchInputs
+## <a name="cwndontouchinputs"></a><a name="ontouchinputs"></a>CWnd:: Онтаучинпутс
 
-Обрабатывает входные данные с сенсорного Windows.
+Обрабатывает входные данные из Windows Touch.
 
 ```
 virtual BOOL OnTouchInputs(
@@ -9926,21 +9926,21 @@ virtual BOOL OnTouchInputs(
 
 ### <a name="parameters"></a>Параметры
 
-*nInputsCount*<br/>
-Общее количество сенсорных входов Windows.
+*нинпутскаунт*<br/>
+Общее число входов касания Windows.
 
-*pInputs*<br/>
-Массив TOUCHINPUT.
+*пинпутс*<br/>
+Массив ТАУЧИНПУТ.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-TRUE, если приложение обрабатывает сенсорные входы Windows; в противном случае FALSE.
+Значение TRUE, если приложение обрабатывает входные данные касания Windows; в противном случае — FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-## <a name="cwndonunichar"></a><a name="onunichar"></a>CWnd::OnUniChar
+## <a name="cwndonunichar"></a><a name="onunichar"></a>CWnd:: Онуничар
 
-Платформа вызывает эту функцию члена при нажатии ключа. То есть текущее окно имеет фокус клавиатуры, а [WM_KEYDOWN](/windows/win32/inputdev/wm-keydown) сообщение переводится функцией [TranslateMessage.](/windows/win32/api/winuser/nf-winuser-translatemessage)
+Платформа вызывает эту функцию-член при нажатии клавиши. Это значит, что текущее окно имеет фокус клавиатуры, а [WM_KEYDOWN](/windows/win32/inputdev/wm-keydown) сообщение преобразуется функцией [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) .
 
 ```
 afx_msg void OnUniChar(
@@ -9951,22 +9951,22 @@ afx_msg void OnUniChar(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|*Nchar*|(в) Определяет код символа отжатого ключа.|
-|*nRepCnt*|(в) Упогоняет количество повторных повторов для текущего сообщения. Значение — это количество раз, когда нажатие клавиши автоматически повторяется в результате удержания пользователя ключом. Если нажатие клавиши держится достаточно долго, отправляется несколько сообщений. Тем не менее, количество повторных повторов не является кумулятивным.|
-|*nФлаги*|(в) Флаги, определяющие код сканирования, расширенный ключ, контекстный код, предыдущее состояние ключа и состояние перехода, как показано в следующей таблице:<br /><br /> **0-7:** Определяет код сканирования. Значение зависит от производителя оригинального оборудования (OEM).<br /><br /> **8:** Определяет расширенный ключ, такой как правые клавиши ALT и CTRL, которые отображаются на улучшенной клавиатуре 101 или 102 клавиш. Флаг 1, если ключ является расширенным ключом; в противном случае, это 0.<br /><br /> **9-12:**  Используется внутренне Windows.<br /><br /> **13:**  Определяет код контекста. Флаг 1, если ключ ALT удерживается при нажатии клавиши; в противном случае значение составляет 0.<br /><br /> **14:**  Определяет предыдущее ключевое состояние. Флаг 1, если ключ не работает до отправки сообщения, или 0, если ключ поднят.<br /><br /> **15:**  Определяет состояние перехода. Флаг 1, если ключ освобождается, или 0, если ключ нажат.|
+|*nChar*|окне Задает код символа нажатой клавиши.|
+|*нрепкнт*|окне Указывает число повторов для текущего сообщения. Значение — это число повторных попыток нажатия клавиши в результате, когда пользователь удерживает клавишу. Если нажатие клавиши удерживается достаточно долго, отправляется несколько сообщений. Однако число повторов не является накопительным.|
+|*нфлагс*|окне Флаги, указывающие код сканирования, расширенный ключ, код контекста, состояние предыдущего ключа и состояние перехода, как показано в следующей таблице.<br /><br /> **0-7:** Указывает код сканирования. Это значение зависит от изготовителя оборудования (OEM).<br /><br /> **8:** Задает расширенный ключ, такой как правая клавиша ALT и CTRL, которые отображаются на клавиатуре повышенной 101 или 102. Флаг имеет значение 1, если ключ является расширенным ключом; в противном случае — 0.<br /><br /> **9-12:**  Используется внутри Windows.<br /><br /> **13:**  Указывает код контекста. Флаг имеет значение 1, если клавиша ALT удерживается при нажатии клавиши; в противном случае значение равно 0.<br /><br /> **14:**  Указывает предыдущее состояние ключа. Флаг имеет значение 1, если ключ не работает до отправки сообщения, или значение 0, если ключ работает.<br /><br /> **15:**  Задает состояние перехода. Флаг имеет значение 1, если ключ освобождается, или значение 0, если клавиша нажата.|
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод получает [уведомление WM_UNICHAR,](/windows/win32/inputdev/wm-unichar) которое описано в SDK Windows. [Сообщение WM_UNICHAR](/windows/win32/inputdev/wm-unichar) предназначено для отправки или отправки символов Unicode в окна ANSI. Это эквивалентно [WM_CHAR](/windows/win32/inputdev/wm-char) сообщению, но использует кодирование Unicode Transformation Format (UTF-32), в то время как [WM_CHAR](/windows/win32/inputdev/wm-char) сообщение использует UTF-16.
+Этот метод получает уведомление [WM_UNICHAR](/windows/win32/inputdev/wm-unichar) , которое описано в Windows SDK. Сообщение [WM_UNICHAR](/windows/win32/inputdev/wm-unichar) предназначено для отправки или публикации символов Юникода в окнах ANSI. Он эквивалентен [WM_CHARому](/windows/win32/inputdev/wm-char) сообщению, но использует формат преобразования юникода — 32 Encoding (UTF-32), в то время как [WM_CHAR](/windows/win32/inputdev/wm-char) сообщение использует UTF-16.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonuninitmenupopup"></a><a name="onuninitmenupopup"></a>CWnd::OnUnInitMenuPopup
+## <a name="cwndonuninitmenupopup"></a><a name="onuninitmenupopup"></a>CWnd:: Онунинитменупопуп
 
-Платформа вызывает эту функцию элемента, когда выпадающее меню или подменю было уничтожено.
+Платформа вызывает эту функцию-член при удалении раскрывающегося меню или подменю.
 
 ```
 afx_msg void OnUnInitMenuPopup(
@@ -9976,19 +9976,19 @@ afx_msg void OnUnInitMenuPopup(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|*pMenu*|(в) Указатель на объект [CMenu,](../../mfc/reference/cmenu-class.md) представляющий меню или подменю.|
-|*nФлаги*|(в) Меню, которое было уничтожено. В настоящее время это может быть только окно меню, MF_SYSMENU.|
+|*пмену*|окне Указатель на объект [кмену](../../mfc/reference/cmenu-class.md) , представляющий меню или подменю.|
+|*нфлагс*|окне Меню, которое было удалено. В настоящее время это может быть только меню окно, MF_SYSMENU.|
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод получает [уведомление WM_UNINITMENUPOPUP,](/windows/win32/menurc/wm-uninitmenupopup) которое описано в SDK Windows.
+Этот метод получает уведомление [WM_UNINITMENUPOPUP](/windows/win32/menurc/wm-uninitmenupopup) , которое описано в Windows SDK.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonupdateuistate"></a><a name="onupdateuistate"></a>CWnd::OnUpdateUIState
+## <a name="cwndonupdateuistate"></a><a name="onupdateuistate"></a>CWnd:: Онупдатеуистате
 
 Вызывается, чтобы изменить состояние пользовательского интерфейса указанного окна и всех его дочерних окон.
 
@@ -10000,31 +10000,31 @@ afx_msg void OnUpdateUIState(
 
 ### <a name="parameters"></a>Параметры
 
-*nДействия*<br/>
+*Nвыходные*<br/>
 Указывает действие, подлежащее выполнению. Может использоваться одно из следующих значений:
 
-- UIS_CLEAR элемент состояния uI (указанный *nUIElement)* должен быть скрыт.
+- UIS_CLEAR должен быть скрыт элемент состояния пользовательского интерфейса (заданный параметром *нуиелемент*).
 
-- UIS_INITIALIZE элемент состояния uI (указанный *nUIElement)* должен быть изменен в зависимости от последнего события ввода. Для получения дополнительной информации смотрите раздел **Замечания** [WM_UPDATEISTATE](/windows/win32/menurc/wm-updateuistate).
+- UIS_INITIALIZE Элемент состояния пользовательского интерфейса (заданный параметром *нуиелемент*) должен быть изменен на основе последнего события ввода. Дополнительные сведения см. в подразделе **"Примечания"** раздела [WM_UPDATEISTATE](/windows/win32/menurc/wm-updateuistate).
 
-- UIS_SET элемент состояния uI (указанный *nUIElement)* должен быть видимым.
+- UIS_SET должен быть виден элемент состояния пользовательского интерфейса (заданный параметром *нуиелемент*).
 
-*nUIElement*<br/>
-Определяет, какие элементы состояния UI затронуты или стиль управления. Может использоваться одно из следующих значений:
+*нуиелемент*<br/>
+Указывает, какие элементы состояния пользовательского интерфейса затрагиваются, или стиль элемента управления. Может использоваться одно из следующих значений:
 
-- UISF_HIDEACCEL ускорители клавиатуры.
+- UISF_HIDEACCEL сочетаний клавиш.
 
-- UISF_HIDEFOCUS индикаторы Фокуса.
+- UISF_HIDEFOCUS индикаторы фокуса.
 
-- UISF_ACTIVE Windows XP: элемент управления должен быть нарисован в стиле, используемом для активного управления.
+- UISF_ACTIVE Windows XP: элемент управления должен быть нарисован в стиле, используемом для активных элементов управления.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция члена имитирует функциональность [WM_UPDATEUISTATE](/windows/win32/menurc/wm-updateuistate) сообщения, как описано в SDK Windows.
+Эта функция члена эмулирует функциональность [WM_UPDATEUISTATE](/windows/win32/menurc/wm-updateuistate) сообщения, как описано в Windows SDK.
 
-## <a name="cwndonuserchanged"></a><a name="onuserchanged"></a>CWnd::OnUserChanged
+## <a name="cwndonuserchanged"></a><a name="onuserchanged"></a>CWnd:: Онусерчанжед
 
-Платформа вызывает этот участник для всех окон после входа или выключения пользователя.
+Платформа вызывает этот элемент для всех окон после того, как пользователь выполнил вход или выключен.
 
 ```
 afx_msg void OnUserChanged();
@@ -10032,14 +10032,14 @@ afx_msg void OnUserChanged();
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод получает [WM_USERCHANGED](/windows/win32/winmsg/wm-userchanged) сообщение муведомления, которое описано в SDK Windows. Когда пользователь входит в систему или выключается, операционная система обновляет настройки для пользователей. Система отправляет это сообщение сразу после обновления настроек.
+Этот метод получает сообщение уведомления [WM_USERCHANGED](/windows/win32/winmsg/wm-userchanged) , которое описано в Windows SDK. Когда пользователь входит в систему или выключается, операционная система обновляет параметры, относящиеся к пользователю. Система отправляет это сообщение сразу после обновления параметров.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonvkeytoitem"></a><a name="onvkeytoitem"></a>CWnd::OnVKeyToItem
+## <a name="cwndonvkeytoitem"></a><a name="onvkeytoitem"></a>CWnd:: Онвкэйтоитем
 
-Если `CWnd` объект владеет полем списка со [стилем LBS_WANTKEYBOARDINPUT,](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) поле списка отправит WM_VKEYTOITEM сообщение в ответ на WM_KEYDOWN сообщение.
+Если `CWnd` объект владеет списком с [LBS_WANTKEYBOARDINPUT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) стилем, в поле со списком будет отправлено WM_VKEYTOITEM сообщение в ответ на сообщение WM_KEYDOWN.
 
 ```
 afx_msg int OnVKeyToItem(
@@ -10050,29 +10050,29 @@ afx_msg int OnVKeyToItem(
 
 ### <a name="parameters"></a>Параметры
 
-*nKey*<br/>
-Определяет виртуальный код ключа ключа, который пользователь нажал. Список стандартных виртуальных кодов ключей можно узнать на примере Winuser.h
+*нкэй*<br/>
+Указывает виртуальный код клавиши, нажатой пользователем. Список стандартных виртуальных клавиш см. в разделе Winuser. h
 
-*pListBox*<br/>
-Укажите указатель на поле списка. Указатель может быть временным. Его не требуется сохранять для дальнейшего использования.
+*плистбокс*<br/>
+Указывает указатель на поле со списком. Указатель может быть временным. Его не требуется сохранять для дальнейшего использования.
 
-*Nindex*<br/>
-Определяет текущее положение caret.
+*ниндекс*<br/>
+Задает текущую точку курсора.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Упоняет действие, выполненное приложением в ответ на сообщение. Значение возврата -2 указывает на то, что приложение обработало все аспекты выбора элемента и не требует дальнейших действий в поле списка. Значение возврата -1 указывает на то, что поле списка должно выполнять действие по умолчанию в ответ на нажатие клавиши. Значение возврата 0 или больше указывает на нулевой индекс элемента в поле списка и указывает, что поле списка должно выполнять действие по умолчанию для нажатия клавиши на данном элементе.
+Указывает действие, выполняемое приложением в ответ на сообщение. Возвращаемое значение, равное-2, указывает, что приложение обработало все аспекты выбора элемента и не требует дальнейших действий, выполняемых списком. Возвращаемое значение, равное-1, указывает, что окно списка должно выполнять действие по умолчанию в ответ на нажатие клавиши. Возвращаемое значение 0 или больше Указывает отсчитываемый от нуля индекс элемента в списке и указывает, что поле списка должно выполнять действие по умолчанию для данного элемента.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция участника вызывается фреймворкой только для коробок списка, которые имеют [LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) стиль.
+Эта функция-член вызывается платформой только для списков, имеющих стиль [LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) .
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonvscroll"></a><a name="onvscroll"></a>CWnd::OnVScroll
+## <a name="cwndonvscroll"></a><a name="onvscroll"></a>CWnd:: Онвскролл
 
-Платформа вызывает эту функцию участника, когда пользователь щелкает панель вертикального прокрутки окна.
+Платформа вызывает эту функцию члена, когда пользователь щелкает вертикальную полосу прокрутки окна.
 
 ```
 afx_msg void OnVScroll(
@@ -10083,45 +10083,45 @@ afx_msg void OnVScroll(
 
 ### <a name="parameters"></a>Параметры
 
-*nSBCode*<br/>
-Указано код прокрутки-бар, который указывает запрос на прокрутку пользователя. Возможные значения этого параметра:
+*нсбкоде*<br/>
+Указывает код полосы прокрутки, который указывает на запрос прокрутки пользователя. Возможные значения этого параметра:
 
-- SB_BOTTOM Прокрутите вниз.
+- SB_BOTTOM прокрутить вниз.
 
-- SB_ENDSCROLL Свиток Конца.
+- SB_ENDSCROLL завершения прокрутки.
 
-- SB_LINEDOWN Прокрутите одну строку вниз.
+- SB_LINEDOWN прокрутить на одну строку вниз.
 
-- SB_LINEUP Прокрутите одну линию вверх.
+- SB_LINEUP прокрутить на одну строку вверх.
 
-- SB_PAGEDOWN Прокрутите одну страницу вниз.
+- SB_PAGEDOWN прокрутить на одну страницу вниз.
 
-- SB_PAGEUP Прокрутите одну страницу вверх.
+- SB_PAGEUP перейти на одну страницу вверх.
 
-- SB_THUMBPOSITION Прокрутите абсолютное положение. Текущая позиция предоставляется в *nPos*.
+- SB_THUMBPOSITION прокрутите до абсолютной позицией. Текущая заданная позицией предоставляется в *npos*.
 
-- SB_THUMBTRACK Перетащите окно прокрутки в указанное положение. Текущая позиция предоставляется в *nPos*.
+- SB_THUMBTRACK перетащите ползунок в указанное расположение. Текущая заданная позицией предоставляется в *npos*.
 
-- SB_TOP Прокрутите сверху.
+- SB_TOP прокрутить к началу.
 
-*Npos*<br/>
-Содержит текущее положение окна прокрутки, если код прокрутки-бар SB_THUMBPOSITION или SB_THUMBTRACK; в противном случае не используется. В зависимости от исходного диапазона прокрутки, *nPos* может быть отрицательным и должны быть отлиты в **Int,** если это необходимо.
+*nPos*<br/>
+Содержит текущую точку прокрутки, если код полосы прокрутки SB_THUMBPOSITION или SB_THUMBTRACK; в противном случае не используется. В зависимости от первоначального диапазона прокрутки *npos* могут быть отрицательными и при необходимости быть приведены к типу **`int`** .
 
-*pScrollBar*<br/>
-Если сообщение прокрутки пришло из управления прокрутки-панели, содержит указатель на элемент управления. Если пользователь нажал на панель прокрутки окна, этот параметр является NULL. Указатель может быть временным. Его не требуется сохранять для дальнейшего использования.
+*пскроллбар*<br/>
+Если сообщение с прокруткой поступило из элемента управления полосы прокрутки, содержит указатель на элемент управления. Если пользователь щелкнул полосу прокрутки окна, этот параметр имеет значение NULL. Указатель может быть временным. Его не требуется сохранять для дальнейшего использования.
 
 ### <a name="remarks"></a>Remarks
 
-`OnVScroll`обычно используется приложениями, которые дают некоторую обратную связь во время перетаскивания окна прокрутки.
+`OnVScroll`обычно используется приложениями, которые предоставляют некоторую обратную связь во время перетаскивания бегунка.
 
-Если `OnVScroll` прокручивается содержимое `CWnd` объекта, он должен также сбросить положение окна прокрутки с функцией члена [SetScrollPos.](#setscrollpos)
+Если `OnVScroll` прокручивает содержимое `CWnd` объекта, оно также должно сбрасывать точку прокрутки с помощью функции члена [сетскроллпос](#setscrollpos) .
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonvscrollclipboard"></a><a name="onvscrollclipboard"></a>CWnd::OnVScrollClipboard
+## <a name="cwndonvscrollclipboard"></a><a name="onvscrollclipboard"></a>CWnd:: Онвскроллклипбоард
 
-Функция `OnVScrollClipboard` члена владельца Clipboard вызывается зрителем Clipboard, когда данные Clipboard имеют формат CF_OWNERDISPLAY и есть событие в вертикальной панели прокрутки просмотра Clipboard.
+`OnVScrollClipboard`Функция-член владельца буфера обмена вызывается средством просмотра буфера обмена, если данные в буфере обмена имеют формат CF_OWNERDISPLAY и в вертикальной полосе прокрутки средства просмотра буфера имеется событие.
 
 ```
 afx_msg void OnVScrollClipboard(
@@ -10132,41 +10132,41 @@ afx_msg void OnVScrollClipboard(
 
 ### <a name="parameters"></a>Параметры
 
-*pClipAppWnd*<br/>
-Определяет указатель на окно Clipboard-viewer. Указатель может быть временным. Его не требуется сохранять для дальнейшего использования.
+*пклипаппвнд*<br/>
+Указывает указатель на окно средства просмотра буфера обмена. Указатель может быть временным. Его не требуется сохранять для дальнейшего использования.
 
-*nSBCode*<br/>
-Определяет одно из следующих значений прокрутки-бара:
+*нсбкоде*<br/>
+Задает одно из следующих значений полосы прокрутки:
 
-- SB_BOTTOM Прокрутите вниз.
+- SB_BOTTOM прокрутить вниз.
 
-- SB_ENDSCROLL Свиток Конца.
+- SB_ENDSCROLL завершения прокрутки.
 
-- SB_LINEDOWN Прокрутите одну строку вниз.
+- SB_LINEDOWN прокрутить на одну строку вниз.
 
-- SB_LINEUP Прокрутите одну линию вверх.
+- SB_LINEUP прокрутить на одну строку вверх.
 
-- SB_PAGEDOWN Прокрутите одну страницу вниз.
+- SB_PAGEDOWN прокрутить на одну страницу вниз.
 
-- SB_PAGEUP Прокрутите одну страницу вверх.
+- SB_PAGEUP перейти на одну страницу вверх.
 
-- SB_THUMBPOSITION Прокрутите абсолютное положение. Текущая позиция предоставляется в *nPos*.
+- SB_THUMBPOSITION прокрутите до абсолютной позицией. Текущая заданная позицией предоставляется в *npos*.
 
-- SB_TOP Прокрутите сверху.
+- SB_TOP прокрутить к началу.
 
-*Npos*<br/>
-Содержит положение окна прокрутки, если код прокрутки-бар SB_THUMBPOSITION; в противном случае *nPos* не используется.
+*nPos*<br/>
+Содержит расположение бокса прокрутки, если код полосы прокрутки SB_THUMBPOSITION; в противном случае *npos* не используется.
 
 ### <a name="remarks"></a>Remarks
 
-Владелец должен прокрутить изображение Clipboard, вывернуть соответствующий раздел и обновить значения прокрутки-панели.
+Владелец должен прокручивать изображение в буфере обмена, сделать недействительным соответствующий раздел и обновить значения полосы прокрутки.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonwindowmaximizedchanged"></a><a name="onwindowmaximizedchanged"></a>CWnd::OnWindowMaximizedChanged
+## <a name="cwndonwindowmaximizedchanged"></a><a name="onwindowmaximizedchanged"></a>CWnd:: Онвиндовмаксимизедчанжед
 
-Платформа вызывает этот участник, когда текущее окно максимизируется, а окно состоит из менеджера окна рабочего стола (DWM).
+Платформа вызывает этот элемент, когда текущее окно развернуто, а окно состоит из диспетчер окон рабочего стола (DWM).
 
 ```
 afx_msg void OnWindowMaximizedChanged(BOOL bIsMaximized);
@@ -10174,20 +10174,20 @@ afx_msg void OnWindowMaximizedChanged(BOOL bIsMaximized);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|*bIsMaximized*|(в) ПРАВДА, если текущее окно максимизируется, и FALSE, если это не так.|
+|*бисмаксимизед*|окне Значение TRUE, если текущее окно развернуто, и FALSE в противном случае.|
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод получает [WM_DWMWINDOWMAXIMIZEDCHANGE](/windows/win32/dwm/wm-dwmwindowmaximizedchange) сообщение муведомления, которое описано в SDK Windows.
+Этот метод получает сообщение уведомления [WM_DWMWINDOWMAXIMIZEDCHANGE](/windows/win32/dwm/wm-dwmwindowmaximizedchange) , которое описано в Windows SDK.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonwindowposchanged"></a><a name="onwindowposchanged"></a>CWnd::OnWindowPosChanged
+## <a name="cwndonwindowposchanged"></a><a name="onwindowposchanged"></a>CWnd:: Онвиндовпосчанжед
 
-Платформа вызывает эту функцию участника, когда размер, положение или порядок изменяются в результате вызова к функции члена [SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos) или другой функции управления окнами.
+Платформа вызывает эту функцию-член, когда размер, расположение или Z-порядок изменились в результате вызова функции-члена [SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos) или другой функции управления окнами.
 
 ```
 afx_msg void OnWindowPosChanged(WINDOWPOS* lpwndpos);
@@ -10195,19 +10195,19 @@ afx_msg void OnWindowPosChanged(WINDOWPOS* lpwndpos);
 
 ### <a name="parameters"></a>Параметры
 
-*lpwndpos*<br/>
-Указывает на структуру данных [WINDOWPOS,](/windows/win32/api/winuser/ns-winuser-windowpos) содержащую информацию о новом размере и положении окна.
+*лпвндпос*<br/>
+Указывает на структуру данных [WINDOWPOS](/windows/win32/api/winuser/ns-winuser-windowpos) , содержащую сведения о новом размере и положении окна.
 
 ### <a name="remarks"></a>Remarks
 
-Реализация по умолчанию отправляет [WM_SIZE](/windows/win32/winmsg/wm-size) и [WM_MOVE](/windows/win32/winmsg/wm-move) сообщения в окно. Эти сообщения не отправляются, если `OnWindowPosChanged` приложение обрабатывает вызов без вызова своего базового класса. Более эффективно выполнять любое изменение перемещения или изменения `OnWindowPosChanged` размера во время вызова, не вызывая базовый класс.
+Реализация по умолчанию отправляет [WM_SIZE](/windows/win32/winmsg/wm-size) и [WM_MOVE](/windows/win32/winmsg/wm-move) сообщения в окно. Эти сообщения не отправляются, если приложение обрабатывает `OnWindowPosChanged` вызов, не вызывая его базовый класс. Более эффективно выполнять любые операции перемещения или изменения размера во время вызова метода, `OnWindowPosChanged` не вызывая его базовый класс.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonwindowposchanging"></a><a name="onwindowposchanging"></a>CWnd::OnWindowPosChanging
+## <a name="cwndonwindowposchanging"></a><a name="onwindowposchanging"></a>CWnd:: Онвиндовпосчангинг
 
-Платформа вызывает эту функцию участника, когда размер, позиция или порядок вот-вот изменятся в результате вызова к функции члена [SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos) или другой функции управления окнами.
+Платформа вызывает эту функцию-член, когда размер, расположение или Z-порядок собирается измениться в результате вызова функции-члена [SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos) или другой функции управления окнами.
 
 ```
 afx_msg void OnWindowPosChanging(WINDOWPOS* lpwndpos);
@@ -10215,21 +10215,21 @@ afx_msg void OnWindowPosChanging(WINDOWPOS* lpwndpos);
 
 ### <a name="parameters"></a>Параметры
 
-*lpwndpos*<br/>
-Указывает на `WINDOWPOS` структуру данных, содержащую информацию о новом размере и положении окна.
+*лпвндпос*<br/>
+Указывает на `WINDOWPOS` структуру данных, содержащую сведения о новом размере и положении окна.
 
 ### <a name="remarks"></a>Remarks
 
-Приложение может предотвратить изменения в окне, установив или очистив соответствующие биты в **флагах,** входящего в структуру [WINDOWPOS.](/windows/win32/api/winuser/ns-winuser-windowpos)
+Приложение может препятствовать изменениям в окне, установив или сняв соответствующие биты в элементе **flags** структуры [WINDOWPOS](/windows/win32/api/winuser/ns-winuser-windowpos) .
 
-Для окна со [стилем WS_OVERLAPPED](styles-used-by-mfc.md#window-styles) или [WS_THICKFRAME](styles-used-by-mfc.md#window-styles) реализация по умолчанию отправляет [WM_GETMINMAXINFO](/windows/win32/winmsg/wm-getminmaxinfo) сообщение в окно. Это делается для проверки нового размера и положения окна и обеспечения соблюдения CS_BYTEALIGNCLIENT и CS_BYTEALIGN стилей клиентов. Приложение может переопределить эту функциональность, не называя свой базовый класс.
+Для окна с [WS_OVERLAPPED](styles-used-by-mfc.md#window-styles) или [WS_THICKFRAME](styles-used-by-mfc.md#window-styles) стиле реализация по умолчанию отправляет в окно [WM_GETMINMAXINFO](/windows/win32/winmsg/wm-getminmaxinfo) сообщение. Это делается для проверки нового размера и расположения окна, а также для применения стилей CS_BYTEALIGNCLIENT и CS_BYTEALIGN клиента. Приложение может переопределить эту функцию, не вызывая ее базовый класс.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonwininichange"></a><a name="onwininichange"></a>CWnd::OnWinIniChange
+## <a name="cwndonwininichange"></a><a name="onwininichange"></a>CWnd:: Онвининичанже
 
-Платформа вызывает эту функцию участника после того, как было внесено изменение файла инициализации Windows WIN. Ini.
+Платформа вызывает эту функцию-член после внесения изменений в файл инициализации Windows WIN.INI.
 
 ```
 afx_msg void OnWinIniChange(LPCTSTR lpszSection);
@@ -10237,25 +10237,25 @@ afx_msg void OnWinIniChange(LPCTSTR lpszSection);
 
 ### <a name="parameters"></a>Параметры
 
-*lpszSection*<br/>
-Указывает на строку, которая определяет название измененного раздела. (Строка не включает квадратные скобки, которые приконяют название раздела.)
+*лпсзсектион*<br/>
+Указывает на строку, указывающую имя раздела, который был изменен. (Строка не включает квадратные скобки, в которых заключено имя раздела.)
 
 ### <a name="remarks"></a>Remarks
 
-Функция [SystemParametersInfo](/windows/win32/api/winuser/nf-winuser-systemparametersinfow) Windows `OnWinIniChange` вызывает после того, как приложение использует функцию для изменения настройки в WIN. Файл INI.
+Функция [системпараметерсинфо](/windows/win32/api/winuser/nf-winuser-systemparametersinfow) Windows вызывается `OnWinIniChange` после того, как приложение использует функцию для изменения параметра в файле WIN.INI.
 
-Для отправки WM_WININICHANGE сообщения во все окна верхнего уровня приложение может использовать функцию [SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) Windows с набором параметра *hwnd* для HWND_BROADCAST.
+Чтобы отправить WM_WININICHANGE сообщение всем окнам верхнего уровня, приложение может использовать функцию [SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) Windows с параметром *HWND* , для которого задано значение HWND_BROADCAST.
 
-Если приложение изменяет множество различных разделов в WIN. INI в то же время, приложение должно отправить одно WM_WININICHANGE сообщение с *lpszSection* набор NULL. В противном случае, приложение должно отправлять WM_WININICHANGE каждый раз, когда он вносит изменения в WIN. Ini.
+Если приложение изменяет множество разных разделов в WIN.INI одновременно, приложение должно отправить одно сообщение WM_WININICHANGE с параметром *лпсзсектион* , ИМЕЮЩИМ значение null. В противном случае приложение должно отправить WM_WININICHANGE каждый раз при внесении изменений в WIN.INI.
 
-Если приложение получает `OnWinIniChange` вызов с *lpszSection,* установленным на NULL, приложение должно проверить все разделы в WIN. INI, которые влияют на приложение.
+Если приложение получает `OnWinIniChange` вызов с параметром *лпсзсектион* , имеющим значение null, приложение должно проверить все разделы в WIN.INI, влияющие на приложение.
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonwndmsg"></a><a name="onwndmsg"></a>CWnd::OnWndMsg
+## <a name="cwndonwndmsg"></a><a name="onwndmsg"></a>CWnd:: Онвндмсг
 
-Эта функция члена `WindowProc`вызывается или вызывается во время отражения сообщения.
+Эта функция-член вызывается методом `WindowProc` или вызывается во время отражения сообщения.
 
 ```
 virtual BOOL OnWndMsg(
@@ -10268,30 +10268,30 @@ virtual BOOL OnWndMsg(
 ### <a name="parameters"></a>Параметры
 
 *message*<br/>
-Упоняет сообщение, необходимое для отправки.
+Указывает отправляемое сообщение.
 
 *wParam*<br/>
-Определяет дополнительную информацию, зависящая от сообщений.
+Указывает дополнительные сведения, зависящие от сообщений.
 
 *lParam*<br/>
-Определяет дополнительную информацию, зависящая от сообщений.
+Указывает дополнительные сведения, зависящие от сообщений.
 
-*pResult*<br/>
-Значение возврата [WindowProc](#windowproc). Зависит от сообщения; может быть NULL.
+*пресулт*<br/>
+Возвращаемое значение [WindowProc](#windowproc). Зависит от сообщения; может иметь значение NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-TRUE, если сообщение было обработано; в противном случае FALSE.
+Значение TRUE, если сообщение было обработано; в противном случае — FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-`OnWndMsg`определяет тип сообщения и либо вызывает соответствующую функцию фреймворка (например, [OnCommand](#oncommand) для WM_COMMAND), либо находит соответствующее сообщение на карте сообщений.
+`OnWndMsg`Определяет тип сообщения и либо вызывает соответствующую функцию платформы (например, [OnCommand](#oncommand) для WM_COMMAND), либо находит соответствующее сообщение в схеме сообщений.
 
-Для получения дополнительной информации об отражении сообщений [см.](../../mfc/handling-reflected-messages.md)
+Дополнительные сведения о отражении сообщений см. в разделе [обработка отраженных сообщений](../../mfc/handling-reflected-messages.md).
 
-## <a name="cwndonxbuttondblclk"></a><a name="onxbuttondblclk"></a>CWnd::OnXButtonDblClk
+## <a name="cwndonxbuttondblclk"></a><a name="onxbuttondblclk"></a>CWnd:: Онксбуттондблклк
 
-Рамочная система вызывает эту функцию участника, когда пользователь дважды щелкает XBUTTON1 или XBUTTON2, пока курсор находится в клиентской области окна.
+Платформа вызывает эту функцию-член, когда пользователь дважды щелкает XBUTTON1 или XBUTTON2, пока курсор находится в клиентской области окна.
 
 ```
 afx_msg void OnXButtonDblClk(
@@ -10302,34 +10302,34 @@ afx_msg void OnXButtonDblClk(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|*nФлаги*|(в) Битовая комбинация (ИЛИ) флагов, указывающих, какие клавиши модификатора нажаты. Например, MK_CONTROL флаг указывает на нажатие ключа CTRL.|
-|*nКнопка*|(в) Значение XBUTTON1, если первая кнопка Microsoft Intellimouse X имеет двойное нажатие, или XBUTTON2, если вторая кнопка X имеет двойное нажатие.|
-|*Точки*|(в) Объект [CPoint,](../../atl-mfc-shared/reference/cpoint-class.md) который определяет *x* и *y* координаты курсора относительно верхнего левого угла области клиента.|
+|*нфлагс*|окне Побитовое сочетание (или) флагов, указывающих, какие клавиши-модификаторы нажаты. Например, флаг MK_CONTROL указывает, что нажата клавиша CTRL.|
+|*нбуттон*|окне Значение XBUTTON1, если первая кнопка Microsoft IntelliMouse X нажата двойным щелчком, или XBUTTON2, если дважды щелкнуть вторую кнопку X.|
+|*точки*|окне Объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , указывающий координаты *x* и *y* курсора относительно верхнего левого угла клиентской области.|
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод получает [уведомление WM_XBUTTONDBLCLK,](/windows/win32/inputdev/wm-xbuttondblclk) которое описано в SDK Windows. Если мышь не захвачена, сообщение размещается в окне под курсором. В противном случае сообщение размещается в окне, запечатлевавщее мышь.
+Этот метод получает уведомление [WM_XBUTTONDBLCLK](/windows/win32/inputdev/wm-xbuttondblclk) , которое описано в Windows SDK. Если мышь не захвачена, сообщение отправляется в окно под курсором. В противном случае сообщение отправляется в окно, которое захватывает мышь.
 
-Параметр *nFlags* может быть комбинацией клавиш модификатора, перечисленных в следующей таблице. Для получения дополнительной информации [см.](/windows/win32/inputdev/about-mouse-input)
+Параметр *нфлагс* может представлять собой сочетание клавиш-модификаторов, перечисленных в следующей таблице. Дополнительные сведения см. в статье [о вводе](/windows/win32/inputdev/about-mouse-input)с помощью мыши.
 
-|Ключ модификатора|Описание|
+|Клавиша модификатора|Описание:|
 |------------------|-----------------|
-|MK_CONTROL|Ключ CTRL нажат.|
+|MK_CONTROL|Нажата клавиша CTRL.|
 |MK_LBUTTON|Нажата левая кнопка мыши.|
 |MK_MBUTTON|Нажата средняя кнопка мыши.|
 |MK_RBUTTON|Нажата правая кнопка мыши.|
-|MK_SHIFT|Клавиша SHIFT нажата.|
-|MK_XBUTTON1|Кнопка мыши XBUTTON1 Microsoft IntelliMouse нажата.|
-|MK_XBUTTON2|Кнопка мыши XBUTTON2 Microsoft IntelliMouse нажата.|
+|MK_SHIFT|Нажата клавиша SHIFT.|
+|MK_XBUTTON1|Нажата кнопка мыши XBUTTON1 в Microsoft IntelliMouse.|
+|MK_XBUTTON2|Нажата кнопка мыши XBUTTON2 в Microsoft IntelliMouse.|
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonxbuttondown"></a><a name="onxbuttondown"></a>CWnd::OnXButtonDown
+## <a name="cwndonxbuttondown"></a><a name="onxbuttondown"></a>CWnd:: Онксбуттондовн
 
-Рамочная функция вызывает эту функцию, когда пользователь нажимает XBUTTON1 или XBUTTON2, пока курсор находится в клиентской области окна.
+Платформа вызывает эту функцию-член, когда пользователь нажимает XBUTTON1 или XBUTTON2, когда курсор находится в клиентской области окна.
 
 ```
 afx_msg void OnXButtonDown(
@@ -10340,34 +10340,34 @@ afx_msg void OnXButtonDown(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|*nФлаги*|(в) Битовая комбинация (ИЛИ) флагов, указывающих, какие клавиши модификатора нажаты. Например, MK_CONTROL флаг указывает на нажатие ключа CTRL.|
-|*nКнопка*|(в) Значение XBUTTON1, если первая кнопка Microsoft Intellimouse X была нажата, или XBUTTON2, если была нажата вторая кнопка X.|
-|*Точки*|(в) Объект [CPoint,](../../atl-mfc-shared/reference/cpoint-class.md) который определяет *x* и *y* координаты курсора относительно верхнего левого угла области клиента.|
+|*нфлагс*|окне Побитовое сочетание (или) флагов, указывающих, какие клавиши-модификаторы нажаты. Например, флаг MK_CONTROL указывает, что нажата клавиша CTRL.|
+|*нбуттон*|окне Значение XBUTTON1, если была нажата первая кнопка Microsoft IntelliMouse X, или XBUTTON2, если была нажата вторая кнопка X.|
+|*точки*|окне Объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , указывающий координаты *x* и *y* курсора относительно верхнего левого угла клиентской области.|
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод получает [уведомление WM_XBUTTONDOWN,](/windows/win32/inputdev/wm-xbuttondown) которое описано в SDK Windows. Если мышь не захвачена, сообщение размещается в окне под курсором. В противном случае сообщение размещается в окне, запечатлевавщее мышь.
+Этот метод получает уведомление [WM_XBUTTONDOWN](/windows/win32/inputdev/wm-xbuttondown) , которое описано в Windows SDK. Если мышь не захвачена, сообщение отправляется в окно под курсором. В противном случае сообщение отправляется в окно, которое захватывает мышь.
 
-Параметр *nFlags* может быть комбинацией клавиш модификатора, перечисленных в следующей таблице. Для получения дополнительной информации [см.](/windows/win32/inputdev/about-mouse-input)
+Параметр *нфлагс* может представлять собой сочетание клавиш-модификаторов, перечисленных в следующей таблице. Дополнительные сведения см. в статье [о вводе](/windows/win32/inputdev/about-mouse-input)с помощью мыши.
 
-|Ключ модификатора|Описание|
+|Клавиша модификатора|Описание:|
 |------------------|-----------------|
-|MK_CONTROL|Ключ CTRL нажат.|
+|MK_CONTROL|Нажата клавиша CTRL.|
 |MK_LBUTTON|Нажата левая кнопка мыши.|
 |MK_MBUTTON|Нажата средняя кнопка мыши.|
 |MK_RBUTTON|Нажата правая кнопка мыши.|
-|MK_SHIFT|Клавиша SHIFT нажата.|
-|MK_XBUTTON1|Кнопка мыши XBUTTON1 Microsoft IntelliMouse нажата.|
-|MK_XBUTTON2|Кнопка мыши XBUTTON2 Microsoft IntelliMouse нажата.|
+|MK_SHIFT|Нажата клавиша SHIFT.|
+|MK_XBUTTON1|Нажата кнопка мыши XBUTTON1 в Microsoft IntelliMouse.|
+|MK_XBUTTON2|Нажата кнопка мыши XBUTTON2 в Microsoft IntelliMouse.|
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndonxbuttonup"></a><a name="onxbuttonup"></a>CWnd::OnXButtonUp
+## <a name="cwndonxbuttonup"></a><a name="onxbuttonup"></a>CWnd:: Онксбуттонуп
 
-Платформа вызывает эту функцию участника, когда пользователь выпускает XBUTTON1 или XBUTTON2, пока курсор находится в клиентской области окна.
+Платформа вызывает эту функцию-член, когда пользователь отпускает XBUTTON1 или XBUTTON2, пока курсор находится в клиентской области окна.
 
 ```
 afx_msg void OnXButtonUp(
@@ -10378,32 +10378,32 @@ afx_msg void OnXButtonUp(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|*nФлаги*|(в) Битовая комбинация (ИЛИ) флагов, указывающих, какие клавиши модификатора нажаты. Например, MK_CONTROL флаг указывает на нажатие ключа CTRL.|
-|*nКнопка*|(в) Значение XBUTTON1, если первая кнопка Microsoft Intellimouse X была нажата дважды, или XBUTTON2, если вторая кнопка X была нажата дважды.|
-|*Точки*|(в) Объект [CPoint,](../../atl-mfc-shared/reference/cpoint-class.md) который определяет *x* и *y* координаты курсора относительно верхнего левого угла области клиента.|
+|*нфлагс*|окне Побитовое сочетание (или) флагов, указывающих, какие клавиши-модификаторы нажаты. Например, флаг MK_CONTROL указывает, что нажата клавиша CTRL.|
+|*нбуттон*|окне Значение XBUTTON1, если была нажата первая кнопка Microsoft IntelliMouse X, или XBUTTON2, если дважды щелкнули вторую кнопку X.|
+|*точки*|окне Объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , указывающий координаты *x* и *y* курсора относительно верхнего левого угла клиентской области.|
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод получает [уведомление WM_XBUTTONUP,](/windows/win32/inputdev/wm-xbuttonup) которое описано в SDK Windows. Если мышь не захвачена, сообщение размещается в окне под курсором. В противном случае сообщение размещается в окне, запечатлевавщее мышь.
+Этот метод получает уведомление [WM_XBUTTONUP](/windows/win32/inputdev/wm-xbuttonup) , которое описано в Windows SDK. Если мышь не захвачена, сообщение отправляется в окно под курсором. В противном случае сообщение отправляется в окно, которое захватывает мышь.
 
-Параметр *nFlags* может быть комбинацией клавиш модификатора, перечисленных в следующей таблице. Для получения дополнительной информации [см.](/windows/win32/inputdev/about-mouse-input)
+Параметр *нфлагс* может представлять собой сочетание клавиш-модификаторов, перечисленных в следующей таблице. Дополнительные сведения см. в статье [о вводе](/windows/win32/inputdev/about-mouse-input)с помощью мыши.
 
-|Ключ модификатора|Описание|
+|Клавиша модификатора|Описание:|
 |------------------|-----------------|
-|MK_CONTROL|Ключ CTRL нажат.|
+|MK_CONTROL|Нажата клавиша CTRL.|
 |MK_LBUTTON|Нажата левая кнопка мыши.|
 |MK_MBUTTON|Нажата средняя кнопка мыши.|
 |MK_RBUTTON|Нажата правая кнопка мыши.|
-|MK_SHIFT|Клавиша SHIFT нажата.|
-|MK_XBUTTON1|Кнопка мыши XBUTTON1 Microsoft IntelliMouse нажата.|
-|MK_XBUTTON2|Кнопка мыши XBUTTON2 Microsoft IntelliMouse нажата.|
+|MK_SHIFT|Нажата клавиша SHIFT.|
+|MK_XBUTTON1|Нажата кнопка мыши XBUTTON1 в Microsoft IntelliMouse.|
+|MK_XBUTTON2|Нажата кнопка мыши XBUTTON2 в Microsoft IntelliMouse.|
 
 > [!NOTE]
 > Это функция-член вызывается платформой, чтобы разрешить приложению обработать сообщение Windows. Параметры, передаваемые в функцию, отражают параметры, полученные платформой при поступлении сообщения. При вызове реализации базового класса этой функции эта реализация будет использовать параметры, изначально переданные с сообщением, а не параметры, передаваемые в функции.
 
-## <a name="cwndopenclipboard"></a><a name="openclipboard"></a>CWnd::OpenClipboard
+## <a name="cwndopenclipboard"></a><a name="openclipboard"></a>CWnd:: Опенклипбоард
 
 Открывает буфер обмена.
 
@@ -10413,29 +10413,29 @@ BOOL OpenClipboard();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Nonzero, если Clipboard `CWnd`открыт через, или 0, если другое приложение или окно имеет Clipboard открытым.
+Ненулевое значение, если буфер обмена открыт через `CWnd` , или 0, если буфер обмена открыт другим приложением или окном.
 
 ### <a name="remarks"></a>Remarks
 
-Другие приложения не смогут изменять Clipboard до тех пор, пока не будет вызвана функция [CloseClipboard](/windows/win32/api/winuser/nf-winuser-closeclipboard) Windows.
+Другие приложения не смогут изменять буфер обмена, пока не будет вызвана функция [клосеклипбоард](/windows/win32/api/winuser/nf-winuser-closeclipboard) Windows.
 
-Текущий `CWnd` объект не станет владельцем Clipboard до тех пор, пока не будет вызвана функция [EmptyClipboard](/windows/win32/api/winuser/nf-winuser-emptyclipboard) Windows.
+Текущий `CWnd` объект не станет владельцем буфера обмена, пока не будет вызвана функция [емптиклипбоард](/windows/win32/api/winuser/nf-winuser-emptyclipboard) Windows.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#111](../../mfc/reference/codesnippet/cpp/cwnd-class_52.cpp)]
 
-## <a name="cwndoperator-hwnd"></a><a name="operator_hwnd"></a>CWnd:оператор HWND
+## <a name="cwndoperator-hwnd"></a><a name="operator_hwnd"></a>CWnd:: operator HWND
 
-Используйте этот оператор, чтобы `CWnd` получить ручку к объекту.
+Этот оператор используется для получения маркера `CWnd` объекта.
 
 ```
 operator HWND() const;
 ```
 
-## <a name="cwndoperator-"></a><a name="operator_neq"></a>CWnd::оператор !
+## <a name="cwndoperator-"></a><a name="operator_neq"></a>CWnd:: operator! =
 
-Сравнивает `CWnd` два объекта, чтобы определить, если они не имеют одинаковые [m_hWnd](#m_hwnd).
+Сравнивает два `CWnd` объекта, чтобы определить, имеют ли они разные [m_hWnd](#m_hwnd).
 
 ```
 BOOL operator!=(const CWnd& wnd) const;
@@ -10443,16 +10443,16 @@ BOOL operator!=(const CWnd& wnd) const;
 
 ### <a name="parameters"></a>Параметры
 
-*Wnd*<br/>
+*внд*<br/>
 Ссылка на объект `CWnd`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Nonzero, если равны; в противном случае 0.
+Ненулевое значение, если равно; в противном случае — 0.
 
-## <a name="cwndoperator-"></a><a name="operator_eq_eq"></a>CWnd::оператор
+## <a name="cwndoperator-"></a><a name="operator_eq_eq"></a>CWnd:: operator = =
 
-Сравнивает `CWnd` два объекта, чтобы определить, имеют ли они одинаковую [m_hWnd.](#m_hwnd)
+Сравнивает два `CWnd` объекта, чтобы определить, имеют ли они одинаковые [m_hWnd](#m_hwnd).
 
 ```
 BOOL operator==(const CWnd& wnd) const;
@@ -10460,14 +10460,14 @@ BOOL operator==(const CWnd& wnd) const;
 
 ### <a name="parameters"></a>Параметры
 
-*Wnd*<br/>
+*внд*<br/>
 Ссылка на объект `CWnd`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Nonzero, если равны; в противном случае 0.
+Ненулевое значение, если равно; в противном случае — 0.
 
-## <a name="cwndpaintwindowlesscontrols"></a><a name="paintwindowlesscontrols"></a>CWnd::PaintWindowlessControls
+## <a name="cwndpaintwindowlesscontrols"></a><a name="paintwindowlesscontrols"></a>CWnd::P Аинтвиндовлессконтролс
 
 Рисует неоконные элементы управления в контейнере элемента управления.
 
@@ -10477,16 +10477,16 @@ BOOL PaintWindowlessControls(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
-Контекст устройства, на котором можно нарисовать элементы управления без окон.
+*Хозяин*<br/>
+Контекст устройства, в котором нарисованы элементы управления без окон.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает TRUE, если есть контейнер управления и без окон элементы управления нарисованы успешно, в противном случае FALSE.
+Возвращает значение TRUE, если имеется контейнер элемента управления, и элементы управления без окон отображаются успешно, в противном случае — значение FALSE.
 
-## <a name="cwndpostmessage"></a><a name="postmessage"></a>CWnd::PostMessage
+## <a name="cwndpostmessage"></a><a name="postmessage"></a>CWnd::P Остмессаже
 
-Размещает сообщение в очереди сообщений окна, а затем возвращается, не дожидаясь соответствующего окна для обработки сообщения.
+Помещает сообщение в очередь сообщений окна, а затем возвращается, не дожидаясь обработки сообщения соответствующим окном.
 
 ```
 BOOL PostMessage(
@@ -10498,31 +10498,31 @@ BOOL PostMessage(
 ### <a name="parameters"></a>Параметры
 
 *message*<br/>
-Упомяните сообщение, подавение.
+Указывает сообщение, которое необходимо опубликовать.
 
 *wParam*<br/>
-Определяет дополнительную информацию о сообщениях. Содержание этого параметра зависит от размещения сообщения.
+Указывает дополнительные сведения о сообщении. Содержимое этого параметра зависит от отправляемого сообщения.
 
 *lParam*<br/>
-Определяет дополнительную информацию о сообщениях. Содержание этого параметра зависит от размещения сообщения.
+Указывает дополнительные сведения о сообщении. Содержимое этого параметра зависит от отправляемого сообщения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Nonzero, если сообщение размещено; в противном случае 0.
+Ненулевое значение, если сообщение отправлено; в противном случае — 0.
 
 ### <a name="remarks"></a>Remarks
 
-Сообщения в очереди сообщений извлекаются с помощью вызовов в функцию [GetMessage](/windows/win32/api/winuser/nf-winuser-getmessage) или [PeekMessage](/windows/win32/api/winuser/nf-winuser-peekmessagew) Windows.
+Сообщения в очереди сообщений извлекаются вызовами функций PeekMessage [или Windows](/windows/win32/api/winuser/nf-winuser-getmessage) . [PeekMessage](/windows/win32/api/winuser/nf-winuser-peekmessagew)
 
-Функция Windows [PostMessage](/windows/win32/api/winuser/nf-winuser-postmessagew) может быть использована для доступа к другому приложению.
+Функцию Windows i [Message](/windows/win32/api/winuser/nf-winuser-postmessagew) можно использовать для доступа к другому приложению.
 
 ### <a name="example"></a>Пример
 
-  Смотрите пример [Для AfxGetMainWnd](../../mfc/reference/application-information-and-management.md#afxgetmainwnd).
+  См. пример для [афксжетмаинвнд](../../mfc/reference/application-information-and-management.md#afxgetmainwnd).
 
-## <a name="cwndpostncdestroy"></a><a name="postncdestroy"></a>CWnd::PostNcDestroy
+## <a name="cwndpostncdestroy"></a><a name="postncdestroy"></a>CWnd::P Остнкдестрой
 
-Вызывается по умолчанию функция участника [OnNcDestroy](#onncdestroy) после того, как окно было уничтожено.
+Вызывается функцией члена [OnNcDestroy](#onncdestroy) по умолчанию после уничтожения окна.
 
 ```
 virtual void PostNcDestroy();
@@ -10530,11 +10530,11 @@ virtual void PostNcDestroy();
 
 ### <a name="remarks"></a>Remarks
 
-Полученные классы могут использовать эту функцию для пользовательской очистки, например, удаления **этого** указателя.
+Производные классы могут использовать эту функцию для пользовательской очистки, например удаления **`this`** указателя.
 
-## <a name="cwndprecreatewindow"></a><a name="precreatewindow"></a>CWnd::PreCreateWindow
+## <a name="cwndprecreatewindow"></a><a name="precreatewindow"></a>CWnd::P Рекреатевиндов
 
-Вызывается фреймворком перед созданием окна `CWnd` Windows, прикрепленного к этому объекту.
+Вызывается платформой перед созданием окна Windows, присоединенного к этому `CWnd` объекту.
 
 ```
 virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
@@ -10542,35 +10542,35 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 
 ### <a name="parameters"></a>Параметры
 
-*cs*<br/>
-Структура [CREATESTRUCT.](/windows/win32/api/winuser/ns-winuser-createstructw)
+*сложных*<br/>
+Структура [CREATESTRUCT](/windows/win32/api/winuser/ns-winuser-createstructw) .
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Nonzero, если создание окна должно продолжаться; 0, чтобы указать сбой создания.
+Ненулевое значение, если создание окна должно быть продолжено; значение 0 указывает на сбой при создании.
 
 ### <a name="remarks"></a>Remarks
 
 > [!WARNING]
-> `CWnd::PreCreateWindow`теперь назначает член hMenu *cs* **к этому** указателю, если меню NULL и стиль содержит WS_CHILD. Для правильной функциональности убедитесь, что ваш элемент управления диалогом имеет идентификатор, который не является NULL.
+> `CWnd::PreCreateWindow`Теперь назначает элемент hMenu объекта *CS* **`this`** указателю, если меню имеет значение null, а стиль содержит WS_CHILD. Для правильной работы убедитесь, что элемент управления диалогового окна имеет идентификатор, отличный от NULL.
 >
-> Это изменение фиксирует сбой в сценариях управляемого/родного интерпа. Заявление TRACE `CWnd::Create` в предупреждении разработчика проблемы.
+> Это изменение устраняет сбой в сценариях управляемого и машинного взаимодействия. Оператор TRACE в `CWnd::Create` предупреждает разработчика о проблеме.
 
-Никогда не звоните в эту функцию напрямую.
+Никогда не вызывайте эту функцию напрямую.
 
-Реализация этой функции по умолчанию проверяет имя класса окна NULL и заменяет соответствующий по умолчанию. Переизместите эту `CREATESTRUCT` функцию члена, чтобы изменить структуру до создания окна.
+Реализация по умолчанию этой функции проверяет наличие имени класса окна NULL и подставляет подходящее значение по умолчанию. Переопределите эту функцию-член, чтобы изменить `CREATESTRUCT` структуру перед созданием окна.
 
-Каждый класс, `CWnd` полученный из добавляет свою `PreCreateWindow`собственную функциональность к его переопределение . По замыслу, эти `PreCreateWindow` производные не документированы. Чтобы определить стили, подходящие для каждого класса и взаимозависимости между стилями, можно изучить исходный код MFC для базового класса приложения. Если вы решите `PreCreateWindow,` переопределить, вы можете определить, обеспечивают ли стили, используемые в базовом классе приложения, необходимую функциональность, используя информацию, собранную из исходного кода MFC.
+Каждый класс, производный от, `CWnd` добавляет свои собственные функции к переопределению `PreCreateWindow` . Эти производные от `PreCreateWindow` не задокументированы. Чтобы определить стили, подходящие для каждого класса и взаимозависимости между этими стилями, можно изучить исходный код MFC для базового класса приложения. При выборе переопределения `PreCreateWindow,` можно определить, предоставляют ли стили, используемые в базовом классе приложения, необходимые функции, используя сведения, собранные из исходного кода MFC.
 
-Для получения дополнительной информации об изменении стилей окна [см.](../../mfc/changing-the-styles-of-a-window-created-by-mfc.md)
+Дополнительные сведения об изменении стилей окна см. в разделе [изменение стилей окна, созданного с помощью MFC](../../mfc/changing-the-styles-of-a-window-created-by-mfc.md).
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#112](../../mfc/reference/codesnippet/cpp/cwnd-class_53.cpp)]
 
-## <a name="cwndpresubclasswindow"></a><a name="presubclasswindow"></a>CWnd::PreSubclassWindow
+## <a name="cwndpresubclasswindow"></a><a name="presubclasswindow"></a>CWnd::P Ресубклассвиндов
 
-Эта функция члена вызывается инфраструктурой, чтобы другие необходимые подклассы происходили до подкласса окна.
+Эта функция-член вызывается платформой, чтобы обеспечить выполнение других необходимых подклассов до того, как окно будет подклассом.
 
 ```
 virtual void PreSubclassWindow();
@@ -10578,9 +10578,9 @@ virtual void PreSubclassWindow();
 
 ### <a name="remarks"></a>Remarks
 
-Переопределение этой функции члена позволяет динамическое подклассэлементов элементов управления. Это передовой overridable.
+Переопределение этой функции члена позволяет создавать динамические подклассы элементов управления. Это расширенный переопределяемый объект.
 
-## <a name="cwndpretranslatemessage"></a><a name="pretranslatemessage"></a>CWnd::PreTranslateMessage
+## <a name="cwndpretranslatemessage"></a><a name="pretranslatemessage"></a>CWnd::P Ретранслатемессаже
 
 Используется классом [CWinApp](../../mfc/reference/cwinapp-class.md) для преобразования сообщений окна перед их передачей функциям Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) .
 
@@ -10590,16 +10590,16 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="parameters"></a>Параметры
 
-*pMsg*<br/>
-Указывает на структуру [MSG,](/windows/win32/api/winuser/ns-winuser-msg) содержащую сообщение для обработки.
+*пмсг*<br/>
+Указывает на структуру [MSG](/windows/win32/api/winuser/ns-winuser-msg) , содержащую сообщение для обработки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Nonzero, если сообщение было переведено и не должно быть отправлено; 0, если сообщение не было переведено и должно быть отправлено.
+Ненулевое значение, если сообщение было переведено и не должно быть отправлено. 0, если сообщение не было переведено и должно быть отправлено.
 
-## <a name="cwndprint"></a><a name="print"></a>CWnd::Print
+## <a name="cwndprint"></a><a name="print"></a>CWnd::P печать
 
-Вызовите эту функцию участника, чтобы нарисовать текущее окно в указанном контексте устройства, которое чаще всего находится в контексте устройства принтера.
+Вызовите эту функцию-член для отрисовки текущего окна в указанном контексте устройства, который чаще всего находится в контексте устройства печати.
 
 ```cpp
 void Print(
@@ -10609,43 +10609,43 @@ void Print(
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
+*Хозяин*<br/>
 Указатель на контекст устройства.
 
 *dwFlags*<br/>
-Определяет параметры рисования. Этот параметр может быть одним или более из этих флагов:
+Задает параметры рисования. Этот параметр может быть одним или несколькими из следующих флагов:
 
-- PRF_CHECKVISIBLE Нарисуйте окно только в том случае, если оно видно.
+- PRF_CHECKVISIBLE Нарисуйте окно только в том случае, если оно видимо.
 
-- PRF_CHILDREN Нарисуйте все видимые окна детей.
+- PRF_CHILDREN Нарисуйте все видимые дочерние окна.
 
 - PRF_CLIENT Нарисуйте клиентскую область окна.
 
-- PRF_ERASEBKGND Стереть фон перед рисованием окна.
+- PRF_ERASEBKGND стереть фон перед рисованием окна.
 
-- PRF_NONCLIENT Нарисуйте неклиентобласти окна.
+- PRF_NONCLIENT Нарисуйте неклиентскую область окна.
 
-- PRF_OWNED Нарисуйте все принадлежащие окна.
+- PRF_OWNED нарисовать все собственные окна.
 
 ### <a name="remarks"></a>Remarks
 
-[Функция CWnd::DefWindowProc](#defwindowproc) обрабатывает это сообщение, на основе которого указан вариант рисования:
+[CWnd::D функция ефвиндовпрок](#defwindowproc) обрабатывает это сообщение, основанное на указанном параметре рисования:
 
-- Если PRF_CHECKVISIBLE указана и окно не видно, ничего не делайте.
+- Если параметр PRF_CHECKVISIBLE указан и окно не отображается, ничего делать не нужно.
 
-- Если указана PRF_NONCLIENT, нарисуйте область неклиента в данном контексте устройства.
+- Если указан PRF_NONCLIENT, нарисуйте неклиентскую область в заданном контексте устройства.
 
-- Если PRF_ERASEBKGND указан, отправьте в окно [WM_ERASEBKGND](/windows/win32/winmsg/wm-erasebkgnd) сообщение.
+- Если указан PRF_ERASEBKGND, отправьте окну сообщение [WM_ERASEBKGND](/windows/win32/winmsg/wm-erasebkgnd) .
 
-- Если PRF_CLIENT указан, отправьте в окно [сообщение WM_PRINTCLIENT.](/windows/win32/gdi/wm-printclient)
+- Если указан PRF_CLIENT, отправьте окну сообщение [WM_PRINTCLIENT](/windows/win32/gdi/wm-printclient) .
 
-- Если PRF_CHILDREN установлен, отправьте каждому видимому окну ребенка [WM_PRINT](/windows/win32/gdi/wm-print) сообщение.
+- Если параметр PRF_CHILDREN установлен, то при отправке каждого видимого дочернего окна [WM_PRINT](/windows/win32/gdi/wm-print) сообщение.
 
-- Если PRF_OWNED установлен, отправьте каждому видимому окну WM_PRINT сообщение.
+- Если задано значение PRF_OWNED, отправьте каждое видимое собственное окно a WM_PRINT сообщение.
 
-## <a name="cwndprintclient"></a><a name="printclient"></a>CWnd::PrintClient
+## <a name="cwndprintclient"></a><a name="printclient"></a>CWnd::P Ринтклиент
 
-Вызовите эту функцию участника, чтобы нарисовать любое окно в указанном контексте устройства (обычно контексте устройства принтера).
+Вызовите эту функцию-член, чтобы нарисовать любое окно в указанном контексте устройства (обычно это контекст устройства печати).
 
 ```cpp
 void PrintClient(
@@ -10655,25 +10655,25 @@ void PrintClient(
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
+*Хозяин*<br/>
 Указатель на контекст устройства.
 
 *dwFlags*<br/>
-Определяет параметры рисования. Этот параметр может быть одним или более из этих флагов:
+Задает параметры рисования. Этот параметр может быть одним или несколькими из следующих флагов:
 
-- PRF_CHECKVISIBLE Нарисуйте окно только в том случае, если оно видно.
+- PRF_CHECKVISIBLE Нарисуйте окно только в том случае, если оно видимо.
 
-- PRF_CHILDREN Нарисуйте все видимые окна детей.
+- PRF_CHILDREN Нарисуйте все видимые дочерние окна.
 
 - PRF_CLIENT Нарисуйте клиентскую область окна.
 
-- PRF_ERASEBKGND Стереть фон перед рисованием окна.
+- PRF_ERASEBKGND стереть фон перед рисованием окна.
 
-- PRF_NONCLIENT Нарисуйте неклиентобласти окна.
+- PRF_NONCLIENT Нарисуйте неклиентскую область окна.
 
-- PRF_OWNED Нарисуйте все принадлежащие окна.
+- PRF_OWNED нарисовать все собственные окна.
 
-## <a name="cwndprintwindow"></a><a name="printwindow"></a>CWnd::PrintWindow
+## <a name="cwndprintwindow"></a><a name="printwindow"></a>CWnd::P Ринтвиндов
 
 Копирует визуальное окно в указанный контекст устройства (обычно принтера).
 
@@ -10685,23 +10685,23 @@ BOOL PrintWindow(
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
-Указатель на контекст устройства, на который следует отпечатывать.
+*Хозяин*<br/>
+Указатель на контекст устройства, в который будет выполняться печать.
 
-*nФлаги*<br/>
-Определяет параметры рисования. Список возможных значений можно узнать на примере [PrintWindow.](/windows/win32/api/winuser/nf-winuser-printwindow)
+*нфлагс*<br/>
+Задает параметры рисования. Список возможных значений см. в разделе [принтвиндов](/windows/win32/api/winuser/nf-winuser-printwindow).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Nonzero, если функция успешно; в противном случае 0.
+Ненулевое значение, если функция выполнена. в противном случае — 0.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция члена эмулирует функциональность функции [PrintWindow](/windows/win32/api/winuser/nf-winuser-printwindow), как описано в Windows SDK.
+Эта функция члена эмулирует функциональность функции [принтвиндов](/windows/win32/api/winuser/nf-winuser-printwindow), как описано в Windows SDK.
 
-## <a name="cwndredrawwindow"></a><a name="redrawwindow"></a>CWnd::RedrawWindow
+## <a name="cwndredrawwindow"></a><a name="redrawwindow"></a>CWnd:: Редраввиндов
 
-Обновляет указанный прямоугольник или область в клиентской зоне данного окна.
+Обновляет указанный прямоугольник или регион в клиентской области данного окна.
 
 ```
 BOOL RedrawWindow(
@@ -10712,56 +10712,56 @@ BOOL RedrawWindow(
 
 ### <a name="parameters"></a>Параметры
 
-*lpRectUpdate*<br/>
-Указывает на [структуру RECT,](/windows/win32/api/windef/ns-windef-rect) содержащую координаты прямоугольника обновления. Этот параметр игнорируется, если *prgnUpdate* содержит действительную ручку области.
+*лпректупдате*<br/>
+Указывает на [структуру Rect](/windows/win32/api/windef/ns-windef-rect) , содержащую координаты прямоугольника обновления. Этот параметр игнорируется, если *пргнупдате* содержит допустимый маркер области.
 
-*prgnUpdate*<br/>
-Идентифицирует область обновления. Если *prgnUpdate* и *lpRectUpdate* являются NULL, вся область клиента добавляется в область обновления.
+*пргнупдате*<br/>
+Определяет регион обновления. Если оба *пргнупдате* и *лпректупдате* имеют значение null, вся клиентская область добавляется в регион обновления.
 
 *flags*<br/>
-Для признания окна недействительными используются следующие флаги:
+Для аннулирования окна используются следующие флаги:
 
-- RDW_ERASE вызывает WM_ERASEBKGND [сообщение](/windows/win32/winmsg/wm-erasebkgnd) окна при перекрашении окна. Флаг RDW_INVALIDATE также должен быть указан; в противном случае RDW_ERASE не имеет никакого эффекта.
+- RDW_ERASE заставляет окно принимать [WM_ERASEBKGND](/windows/win32/winmsg/wm-erasebkgnd) сообщение при перерисовки окна. Также должен быть указан флаг RDW_INVALIDATE. в противном случае RDW_ERASE не оказывает никакого влияния.
 
-- RDW_FRAME вызывает любую часть области неклиента окна, которая пересекает область обновления для получения [сообщения WM_NCPAINT.](/windows/win32/gdi/wm-ncpaint) Флаг RDW_INVALIDATE также должен быть указан; в противном случае RDW_FRAME не имеет никакого эффекта.
+- RDW_FRAME вызывает любую часть неклиентской области окна, которая пересекает область обновления, чтобы получить сообщение [WM_NCPAINT](/windows/win32/gdi/wm-ncpaint) . Также должен быть указан флаг RDW_INVALIDATE. в противном случае RDW_FRAME не оказывает никакого влияния.
 
-- RDW_INTERNALPAINT вызывает [WM_PAINT](/windows/win32/gdi/wm-paint) сообщение, которое должно быть размещено в окне независимо от того, содержит ли окно недействительную область.
+- RDW_INTERNALPAINT приводит к тому, что [WM_PAINT](/windows/win32/gdi/wm-paint) сообщение отправляется в окно, независимо от того, содержит ли окно недопустимый регион.
 
-- RDW_INVALIDATE *недействительной lpRectUpdate* или *prgnUpdate* (только один может быть не действительно). Если оба они являются NULL, все окно является недействительным.
+- RDW_INVALIDATE сделать недействительным *лпректупдате* или *пргнупдате* (только одно может быть не NULL). Если оба значения равны NULL, все окно становится недействительным.
 
 Для проверки окна используются следующие флаги:
 
-- RDW_NOERASE подавляет любые ожидающие сообщения WM_ERASEBKGND.
+- RDW_NOERASE подавляет все ожидающие сообщения WM_ERASEBKGND.
 
-- RDW_NOFRAME подавляет любые ожидающие сообщения WM_NCPAINT. Этот флаг должен использоваться с RDW_VALIDATE и обычно используется с RDW_NOCHILDREN. Этот параметр следует использовать с осторожностью, так как это может предотвратить части окна от покраски должным образом.
+- RDW_NOFRAME подавляет все ожидающие сообщения WM_NCPAINT. Этот флаг следует использовать с RDW_VALIDATE и обычно используется с RDW_NOCHILDREN. Этот параметр следует использовать с осторожностью, так как он может препятствовать правильной прорисовке частей окна.
 
-- RDW_NOINTERNALPAINT подавляет любые ожидающие внутренние сообщения WM_PAINT. Этот флаг не влияет на WM_PAINT сообщений, полученных из недействительных областей.
+- RDW_NOINTERNALPAINT подавляет все ожидающие внутренние сообщения WM_PAINT. Этот флаг не влияет на WM_PAINT сообщений, полученных из недопустимых областей.
 
-- RDW_VALIDATE проверяет *lpRectUpdate* или *prgnUpdate* (только один может быть не null). Если оба они являются NULL, все окно проверяется. Этот флаг не влияет на внутренние сообщения WM_PAINT.
+- RDW_VALIDATE проверяет *лпректупдате* или *пргнупдате* (только один может не иметь значение null). Если оба значения равны NULL, проверяется все окно. Этот флаг не влияет на внутренние WM_PAINT сообщения.
 
-Следующие флаги управления при перекрашивании происходит. Картина не выполняется `RedrawWindow` функцией, если не указан один из этих битов.
+Следующие флаги контролируют, когда происходит перерисовка. Рисование не выполняется `RedrawWindow` функцией, если не указан один из этих битов.
 
-- RDW_ERASENOW Вызывает, что пораженные окна (как указано RDW_ALLCHILDREN и RDW_NOCHILDREN флаги) получают WM_NCPAINT и WM_ERASEBKGND сообщения, если это необходимо, до возвращения функции. WM_PAINT сообщения откладываются.
+- RDW_ERASENOW приводит к тому, что затронутые окна (как указано флагами RDW_ALLCHILDREN и RDW_NOCHILDREN) получают WM_NCPAINT и WM_ERASEBKGND сообщения, если это необходимо, перед возвратом функции. WM_PAINT сообщения откладываются.
 
-- RDW_UPDATENOW вызывает, что пострадавшие окна (как указано в RDW_ALLCHILDREN и RDW_NOCHILDREN флаги) получают WM_NCPAINT, WM_ERASEBKGND и WM_PAINT сообщения, если это необходимо, до возвращения функции.
+- RDW_UPDATENOW приводит к тому, что затронутые окна (как указано флагами RDW_ALLCHILDREN и RDW_NOCHILDREN) получают WM_NCPAINT, WM_ERASEBKGND и WM_PAINT сообщения, если это необходимо, перед возвратом функции.
 
-По умолчанию окна, `RedrawWindow` затронутые функцией, зависят от того, имеет ли указанное окно WS_CLIPCHILDREN стиль. Детские окна WS_CLIPCHILDREN окон не пострадали. Однако те окна, которые не WS_CLIPCHILDREN окна, рекурсивно проверяются или не выдаются на изыскиваются до тех пор, пока не возникнет WS_CLIPCHILDREN окно. Следующие флаги контролируют, какие `RedrawWindow` окна зависят от функции:
+По умолчанию окна, затронутые `RedrawWindow` функцией, зависят от того, имеет ли заданное окно стиль WS_CLIPCHILDREN. Дочерние окна WS_CLIPCHILDREN Windows не затрагиваются. Однако эти окна, которые не WS_CLIPCHILDREN Windows, рекурсивно проверяются или становятся недействительными, пока не будет обнаружено окно WS_CLIPCHILDREN. Следующие флаги определяют, какие окна зависят от `RedrawWindow` функции:
 
-- RDW_ALLCHILDREN включает в себя детские окна, если таковые имеется, в операции перекрашивания.
+- RDW_ALLCHILDREN включает дочерние окна, если таковые имеются, в операции перерисовки.
 
-- RDW_NOCHILDREN исключает детские окна, если таковые имеется, из операции перекрашивания.
+- RDW_NOCHILDREN Исключает дочерние окна, если таковые имеются, из операции перерисовки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Nonzero, если окно было успешно перерисовано; в противном случае 0.
+Ненулевое значение, если окно было успешно перерисовано; в противном случае — 0.
 
 ### <a name="remarks"></a>Remarks
 
-Когда `RedrawWindow` функция участника используется для аннулирования части окна рабочего стола, это окно не получает [WM_PAINT](/windows/win32/gdi/wm-paint) сообщения. Для перекраски рабочего стола приложение должно использовать [CWnd::ValidateRgn](#validatergn), [CWnd::InvalidateRgn](#invalidatergn), [CWnd::UpdateWindow](#updatewindow), или [RedrawWindow](/windows/win32/api/winuser/nf-winuser-redrawwindow)
+Если `RedrawWindow` функция-член используется для аннулирования части окна рабочего стола, это окно не получает сообщение [WM_PAINT](/windows/win32/gdi/wm-paint) . Для перерисовки рабочего стола приложение должно использовать [CWnd:: валидатергн](#validatergn), [CWnd:: инвалидатергн](#invalidatergn), [CWnd:: упдатевиндов](#updatewindow)или [редраввиндов](/windows/win32/api/winuser/nf-winuser-redrawwindow)
 
-## <a name="cwndreflectchildnotify"></a><a name="reflectchildnotify"></a>CWnd::ReflectChildNotify
+## <a name="cwndreflectchildnotify"></a><a name="reflectchildnotify"></a>CWnd:: Рефлектчилднотифи
 
-Эта функция сообщения вызывается инфраструктурой из [OnChildNotify.](#onchildnotify)
+Эта функция сообщения вызывается платформой из [ончилднотифи](#onchildnotify).
 
 ```
 BOOL ReflectChildNotify(
@@ -10774,32 +10774,32 @@ BOOL ReflectChildNotify(
 ### <a name="parameters"></a>Параметры
 
 *message*<br/>
-Определяет сообщение, необходимое для отражения.
+Указывает сообщение, которое должно быть отражено.
 
 *wParam*<br/>
-Определяет дополнительную информацию, зависящая от сообщений.
+Указывает дополнительные сведения, зависящие от сообщений.
 
 *lParam*<br/>
-Определяет дополнительную информацию, зависящая от сообщений.
+Указывает дополнительные сведения, зависящие от сообщений.
 
-*pResult*<br/>
-Результат, генерируемый окном ребенка, который возвращается через родительское окно. Может иметь значение NULL.
+*пресулт*<br/>
+Результат, созданный дочерним окном для возврата родительским окном. Может иметь значение NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-ПРАВДА, если сообщение было отражено; в противном случае FALSE.
+Значение TRUE, если сообщение было отражено; в противном случае — FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Это функция помощника, которая отражает *сообщение* к его источнику.
+Это вспомогательная функция, которая отражает *сообщение* в его источнике.
 
-Отраженные сообщения отправляются непосредственно в [CWnd::OnWndMsg](#onwndmsg) или [CCmdTarget::OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg).
+Отраженные сообщения отправляются непосредственно в [CWnd:: онвндмсг](#onwndmsg) или [от CCmdTarget:: OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg).
 
-Для получения дополнительной информации об отражении сообщений [см.](../../mfc/handling-reflected-messages.md)
+Дополнительные сведения о отражении сообщений см. в разделе [обработка отраженных сообщений](../../mfc/handling-reflected-messages.md).
 
-## <a name="cwndreflectlastmsg"></a><a name="reflectlastmsg"></a>CWnd::ReflectLastMsg
+## <a name="cwndreflectlastmsg"></a><a name="reflectlastmsg"></a>CWnd:: Рефлектластмсг
 
-Эта функция члена вызывается инфраструктурой для отражения последнего сообщения в окне ребенка.
+Эта функция-член вызывается платформой для отражения последнего сообщения в дочернее окно.
 
 ```
 static BOOL PASCAL ReflectLastMsg(
@@ -10809,25 +10809,25 @@ static BOOL PASCAL ReflectLastMsg(
 
 ### <a name="parameters"></a>Параметры
 
-*hWndChild*<br/>
-Ручка к окну ребенка.
+*хвндчилд*<br/>
+Маркер дочернего окна.
 
-*pResult*<br/>
-Результат, генерируемый окном ребенка, который возвращается через родительское окно. Может иметь значение NULL.
+*пресулт*<br/>
+Результат, созданный дочерним окном для возврата родительским окном. Может иметь значение NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Nonzero, если сообщение было обработано; в противном случае 0.
+Ненулевое значение, если сообщение было обработано; в противном случае — 0.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция участника вызывает [SendChildNotifyLastMsG,](#sendchildnotifylastmsg) если окно, идентифицированное *hWndChild,* является элементом управления OLE или окном на постоянной карте.
+Эта функция-член вызывает [сендчилднотифиластмсг](#sendchildnotifylastmsg) , если окно, идентифицируемое *хвндчилд* , является элементом управления OLE или окном в постоянной карте.
 
-Для получения дополнительной информации об отражении сообщений [см.](../../mfc/handling-reflected-messages.md)
+Дополнительные сведения о отражении сообщений см. в разделе [обработка отраженных сообщений](../../mfc/handling-reflected-messages.md).
 
-## <a name="cwndreleasedc"></a><a name="releasedc"></a>CWnd::ReleaseDC
+## <a name="cwndreleasedc"></a><a name="releasedc"></a>CWnd:: Релеаседк
 
-Выпускает контекст устройства, освобождая его для использования другими приложениями.
+Освобождает контекст устройства, освобождая его для использования другими приложениями.
 
 ```
 int ReleaseDC(CDC* pDC);
@@ -10835,8 +10835,8 @@ int ReleaseDC(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
-Определяет контекст устройства, который будет выпущен.
+*Хозяин*<br/>
+Определяет контекст устройства для освобождения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -10844,13 +10844,13 @@ int ReleaseDC(CDC* pDC);
 
 ### <a name="remarks"></a>Remarks
 
-Эффект функции `ReleaseDC` члена зависит от типа устройства-контекста.
+Результат `ReleaseDC` функции-члена зависит от типа контекста устройства.
 
-Приложение должно вызывать `ReleaseDC` функцию участника для каждого вызова в функцию участника [GetWindowDC](#getwindowdc) и для каждого вызова в функцию члена [GetDC.](#getdc)
+Приложение должно вызывать `ReleaseDC` функцию члена для каждого вызова функции члена [жетвиндовдк](#getwindowdc) и для каждого вызова функции члена [GetDC](#getdc) .
 
-## <a name="cwndrepositionbars"></a><a name="repositionbars"></a>CWnd::RepositionBars
+## <a name="cwndrepositionbars"></a><a name="repositionbars"></a>CWnd:: Репоситионбарс
 
-Вызывается для перепозиционирования и замены баров управления в клиентской области окна.
+Вызывается для перемещения и изменения размера панелей элементов управления в клиентской области окна.
 
 ```cpp
 void RepositionBars(UINT nIDFirst,
@@ -10864,40 +10864,40 @@ void RepositionBars(UINT nIDFirst,
 
 ### <a name="parameters"></a>Параметры
 
-*nIDПервый*<br/>
-Идентификатор первого в диапазоне контрольных баров для перепозиционирования и изобреза.
+*нидфирст*<br/>
+Идентификатор первого элемента в диапазоне панелей элементов управления для изменения расположения и размера.
 
-*nIDLast*<br/>
-Идентификатор последнего в диапазоне контрольных баров для перепозиционирования и переразмерности.
+*нидласт*<br/>
+Идентификатор последнего в диапазоне панелей элементов управления для изменения расположения и размера.
 
-*nIDLeftOver*<br/>
-Упоняет идентификатор панели, заполняя остальную часть клиентской области.
+*нидлефтовер*<br/>
+Указывает идентификатор области, которая заполняет оставшуюся часть клиентской области.
 
-*nФлаг*<br/>
+*нфлаг*<br/>
 Может иметь одно из следующих значений:
 
-- `CWnd::reposDefault`Выполняет расположение контрольных решеток. *lpRectParam* не используется и может быть NULL.
+- `CWnd::reposDefault`Выполняет компоновку панелей элементов управления. *лпректпарам* не используется и может иметь значение null.
 
-- `CWnd::reposQuery`Макет контрольных решеток не выполнен; вместо этого *lpRectParam* инициализирован с размером клиентской зоны, как если бы макет был фактически сделан.
+- `CWnd::reposQuery`Макет панелей элементов управления не выполняется. Вместо этого *лпректпарам* инициализируется размером клиентской области, как если бы макет был фактически выполнен.
 
-- `CWnd::reposExtra`Добавляет значения *lpRectParam* в клиентскую область *nIDLast,* а также выполняет макет.
+- `CWnd::reposExtra`Добавляет значения *лпректпарам* в клиентскую область *нидласт* , а также выполняет макет.
 
-*lpRectParam*<br/>
-Указывает на [структуру RECT;](/windows/win32/api/windef/ns-windef-rect) использование которых зависит от значения *nFlag.*
+*лпректпарам*<br/>
+Указывает на [структуру Rect](/windows/win32/api/windef/ns-windef-rect); использование, которое зависит от значения *нфлаг*.
 
-*lpRectClient*<br/>
-Указывает на [структуру RECT,](/windows/win32/api/windef/ns-windef-rect) содержащую доступную клиентскую область. Если NULL, клиентская зона окна будет использоваться.
+*лпректклиент*<br/>
+Указывает на [структуру Rect](/windows/win32/api/windef/ns-windef-rect) , содержащую доступную клиентскую область. Если значение равно NULL, то будет использоваться клиентская область окна.
 
-*bStretch*<br/>
-Указывает, следует ли растягивать планку до размера кадра.
+*бстретч*<br/>
+Указывает, следует ли растянуть линию до размера рамки.
 
 ### <a name="remarks"></a>Remarks
 
-Параметры *nIDFirst* и *nIDLast* определяют диапазон идентификаторов панели управления, которые будут перемещены в клиентской области. Параметр *nIDLeftOver* определяет идентификатор окна ребенка (обычно вид), который перемещается и переопределяется для заполнения остальной части клиентской области, не заполненной контрольными батончиками.
+Параметры *нидфирст* и *Нидласт* определяют диапазон идентификаторов элементов управления для перемещения в клиентской области. Параметр *нидлефтовер* указывает идентификатор дочернего окна (обычно это представление), которое перемещается и изменяется в размерах для заполнения остальной части клиентской области, не заполняемой панелями управления.
 
-## <a name="cwndrunmodalloop"></a><a name="runmodalloop"></a>CWnd::RunModalLoop
+## <a name="cwndrunmodalloop"></a><a name="runmodalloop"></a>CWnd:: RunModalLoop
 
-Вызов эту функцию участника для получения, перевода или отправки сообщений до тех пор, пока [ContinueModal](#continuemodal) не вернет FALSE.
+Вызывайте эту функцию члена для получения, преобразования или диспетчеризации сообщений до тех пор, пока [континуемодал](#continuemodal) не вернет значение false.
 
 ```
 int RunModalLoop(DWORD dwFlags = 0);
@@ -10906,23 +10906,23 @@ int RunModalLoop(DWORD dwFlags = 0);
 ### <a name="parameters"></a>Параметры
 
 *dwFlags*<br/>
-Определяет сообщение Windows, подхваено. Может использоваться одно из следующих значений:
+Указывает сообщение Windows для отправки. Может использоваться одно из следующих значений:
 
-- MLF_NOIDLEMSG не отправляйте [WM_ENTERIDLE](/windows/win32/dlgbox/wm-enteridle) сообщения родителю.
+- MLF_NOIDLEMSG не отправляйте [WM_ENTERIDLE](/windows/win32/dlgbox/wm-enteridle) сообщения родительскому элементу.
 
 - MLF_NOKICKIDLE не отправляйте WM_KICKIDLE сообщения в окно.
 
-- MLF_SHOWONIDLE Показать окно, когда очередь сообщений простаивает.
+- MLF_SHOWONIDLE отображать окно, когда очередь сообщений переходит в состояние бездействия.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Определяет значение параметра *nResult,* передаваемого функции члена [EndModalLoop,](#endmodalloop) которая затем используется для прекращения модального цикла.
+Задает значение параметра *nрезультат* , передаваемого функции-члену [ендмодаллуп](#endmodalloop) , которая затем используется для завершения модального цикла.
 
 ### <a name="remarks"></a>Remarks
 
-По умолчанию, `ContinueModal` `EndModalLoop` возвращает false после вызывается. Возвращает значение, предоставленное `EndModalLoop`как *nResult.*
+По умолчанию `ContinueModal` возвращает значение false после `EndModalLoop` вызова метода. Возвращает значение, указанное в качестве *nрезультат* в `EndModalLoop` .
 
-## <a name="cwndscreentoclient"></a><a name="screentoclient"></a>CWnd::ScreenToClient
+## <a name="cwndscreentoclient"></a><a name="screentoclient"></a>CWnd:: Скринтоклиент
 
 Преобразует экранные координаты указанной точки или прямоугольника в клиентские координаты.
 
@@ -10932,23 +10932,23 @@ void ScreenToClient(LPPOINT lpPoint) const;  void ScreenToClient(LPRECT lpRect) 
 
 ### <a name="parameters"></a>Параметры
 
-*lpPoint*<br/>
-Указывает на объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) или [структуру POINT,](/windows/win32/api/windef/ns-windef-point) содержащую координаты экрана, которые должны быть преобразованы.
+*лппоинт*<br/>
+Указывает на объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) или [структуру точек](/windows/win32/api/windef/ns-windef-point) , содержащую экранные координаты для преобразования.
 
-*lpRect*<br/>
-Указывает на объект [CRect](../../atl-mfc-shared/reference/crect-class.md) или [структуру RECT,](/windows/win32/api/windef/ns-windef-rect) содержащую координаты экрана, которые должны быть преобразованы.
+*лпрект*<br/>
+Указывает на объект [крект](../../atl-mfc-shared/reference/crect-class.md) или [структуру Rect](/windows/win32/api/windef/ns-windef-rect) , содержащую экранные координаты для преобразования.
 
 ### <a name="remarks"></a>Remarks
 
-Функция `ScreenToClient` члена заменяет координаты экрана, приведенные в *lpPoint* или *lpRect,* с координатами клиента. Новые координаты относительно верхнего `CWnd` левого угла клиентской области.
+`ScreenToClient`Функция члена заменяет экранные координаты, заданные в *Лппоинт* или *лпрект* , на клиентские координаты. Новые координаты задаются относительно левого верхнего угла `CWnd` клиентской области.
 
 ### <a name="example"></a>Пример
 
-  Смотрите пример [для CListCtrl::GetItemRect](../../mfc/reference/clistctrl-class.md#getitemrect).
+  См. пример для [CListCtrl:: жетитемрект](../../mfc/reference/clistctrl-class.md#getitemrect).
 
-## <a name="cwndscrollwindow"></a><a name="scrollwindow"></a>CWnd::ScrollWindow
+## <a name="cwndscrollwindow"></a><a name="scrollwindow"></a>CWnd:: Скроллвиндов
 
-Прокрутки содержимого области клиента `CWnd` текущего объекта.
+Прокручивает содержимое клиентской области текущего `CWnd` объекта.
 
 ```cpp
 void ScrollWindow(
@@ -10960,31 +10960,31 @@ void ScrollWindow(
 
 ### <a name="parameters"></a>Параметры
 
-*xAmount*<br/>
-Определяет количество, в единицах устройства, горизонтальной прокрутки. Этот параметр должен быть отрицательным значением для прокрутки влево.
+*ксамаунт*<br/>
+Задает величину (в единицах устройства) горизонтальной прокрутки. Этот параметр должен быть отрицательным значением для прокрутки влево.
 
-*yAmount*<br/>
-Определяет количество вертикальной прокрутки в единицах устройства. Этот параметр должен быть отрицательным значением для прокрутки вверх.
+*ямаунт*<br/>
+Задает величину (в единицах устройства) вертикальной прокрутки. Этот параметр должен иметь отрицательное значение для прокрутки вверх.
 
-*lpRect*<br/>
-Указывает на объект [CRect](../../atl-mfc-shared/reference/crect-class.md) или [структуру RECT,](/windows/win32/api/windef/ns-windef-rect) которая определяет часть области клиента, подлежащую прокрутке. Если *lpRect* является NULL, вся область клиента прокручивается. Карет перемещается, если прямоугольник курсора пересекает прямоугольник прокрутки.
+*лпрект*<br/>
+Указывает на объект [крект](../../atl-mfc-shared/reference/crect-class.md) или [структуру Rect](/windows/win32/api/windef/ns-windef-rect) , указывающую часть клиентской области для прокрутки. Если *лпрект* имеет значение null, прокручивается вся клиентская область. Курсор перемещается, если прямоугольник курсора пересекается с прямоугольником прокрутки.
 
-*lpClipRect*<br/>
-Указывает на `CRect` объект `RECT` или структуру, которая определяет прямоугольник отсечения для прокрутки. Прокручиваются только биты внутри этого прямоугольника. Биты за пределами этого прямоугольника не затрагиваются, даже если они находятся в прямоугольнике *lpRect.* Если *lpClipRect* является NULL, отсечение не выполняется на прямоугольнике прокрутки.
+*лпклипрект*<br/>
+Указывает на `CRect` объект или `RECT` структуру, указывающую прямоугольник обрезки для прокрутки. Прокручиваться только биты внутри этого прямоугольника. Биты за пределами этого прямоугольника не затрагиваются, даже если они находятся в прямоугольнике *лпрект* . Если *лпклипрект* имеет значение null, то для прямоугольника прокрутки не выполняется обрезка.
 
 ### <a name="remarks"></a>Remarks
 
-Если карета находится `CWnd` в прокрутке, автоматически скрывает карету, `ScrollWindow` чтобы предотвратить его стирание, а затем восстанавливает карету после завершения свитка. Положение caret регулировка соответственно.
+Если курсор находится в `CWnd` прокрутке, `ScrollWindow` автоматически скрывает курсор, чтобы предотвратить его стирание, а затем восстанавливает курсор после завершения прокрутки. Расположение курсора корректируется соответствующим образом.
 
-Область, обнаруженная `ScrollWindow` функцией члена, не перекрашивается, а объединена в область обновления текущего `CWnd` объекта. Приложение в конечном итоге получит [WM_PAINT](/windows/win32/gdi/wm-paint) сообщение, уведомляющее о том, что регион нуждается в перекрашивании. Чтобы перекрасить обнаруженную область одновременно с прокруткой, позвоните в `ScrollWindow`функцию участника [UpdateWindow](#updatewindow) сразу после вызова.
+Область, обнаруженная `ScrollWindow` функцией-членом, не перерисовывается, но объединяется с `CWnd` областью обновления текущего объекта. В конечном итоге приложение будет получать [WM_PAINT](/windows/win32/gdi/wm-paint) сообщение о том, что регион нуждается в перерисовки. Чтобы обновить необнаруженную область одновременно с прокруткой, вызовите функцию-член [упдатевиндов](#updatewindow) сразу после вызова метода `ScrollWindow` .
 
-Если *lpRect* является NULL, положение любых детских окон в окне компенсируется суммой, указанной *xAmount* и `CWnd` *yAmount,* а любые недействительные (неокрашенные) области в окне также компенсируются. `ScrollWindow`быстрее, когда *lpRect* является NULL.
+Если *лпрект* имеет значение null, позиции всех дочерних окон в окне смещаются на величину, указанную в *ксамаунт* и *ямаунт*, а все недопустимые (нерисованные) области в `CWnd` также имеют смещение. `ScrollWindow`выполняется быстрее, если *лпрект* имеет значение null.
 
-Если *lpRect* не является NULL, положение детских окон не `CWnd` изменяется, а недействительные области не компенсируются. Чтобы предотвратить проблемы с *обновлением,* когда `UpdateWindow` lpRect не `CWnd` является `ScrollWindow`NULL, позвоните функции участника для перекраски перед вызовом.
+Если *лпрект* не равно null, позиции дочерних окон не изменяются, а недопустимые области в `CWnd` не являются смещениями. Чтобы избежать проблем с обновлением, если *лпрект* не равен null, вызовите `UpdateWindow` функцию-член для перерисовки `CWnd` перед вызовом метода `ScrollWindow` .
 
-## <a name="cwndscrollwindowex"></a><a name="scrollwindowex"></a>CWnd::ScrollWindowEx
+## <a name="cwndscrollwindowex"></a><a name="scrollwindowex"></a>CWnd:: Скроллвиндовекс
 
-Прокрутки содержимого клиентской области окна.
+Прокручивает содержимое клиентской области окна.
 
 ```
 int ScrollWindowEx(
@@ -10999,52 +10999,52 @@ int ScrollWindowEx(
 
 ### <a name="parameters"></a>Параметры
 
-*dx*<br/>
-Определяет количество, в единицах устройства, горизонтальной прокрутки. Этот параметр должен иметь отрицательное значение для прокрутки влево.
+*DX*<br/>
+Задает величину (в единицах устройства) горизонтальной прокрутки. Этот параметр должен иметь отрицательное значение для прокрутки влево.
 
-*Dy*<br/>
-Определяет количество вертикальной прокрутки в единицах устройства. Этот параметр должен иметь отрицательное значение для прокрутки вверх.
+*DY*<br/>
+Задает величину (в единицах устройства) вертикальной прокрутки. Этот параметр должен иметь отрицательное значение для прокрутки вверх.
 
-*lpRectScroll*<br/>
-Указывает на [структуру RECT,](/windows/win32/api/windef/ns-windef-rect) которая определяет часть области клиента, подлежащую прокрутке. Если этот параметр NULL, вся область клиента прокручивается.
+*лпректскролл*<br/>
+Указывает на [структуру Rect](/windows/win32/api/windef/ns-windef-rect) , указывающую часть клиентской области для прокрутки. Если этот параметр имеет значение NULL, прокручивается вся клиентская область.
 
-*lpRectClip*<br/>
-Указывает на `RECT` структуру, которая определяет прямоугольник отсечения для прокрутки. Эта структура имеет приоритет над прямоугольником, на который указывает *lpRectScroll.* Прокручиваются только биты внутри этого прямоугольника. Биты за пределами этого прямоугольника не затрагиваются, даже если они находятся в прямоугольнике *lpRectScroll.* Если этот параметр NULL, отсечение не выполняется на прямоугольнике прокрутки.
+*лпректклип*<br/>
+Указывает на `RECT` структуру, указывающую прямоугольник обрезки для прокрутки. Эта структура имеет приоритет над прямоугольником, на который указывает *лпректскролл*. Прокручиваться только биты внутри этого прямоугольника. Биты за пределами этого прямоугольника не затрагиваются, даже если они находятся в прямоугольнике *лпректскролл* . Если этот параметр имеет значение NULL, то для прямоугольника прокрутки не выполняется обрезка.
 
-*prgnUpdate*<br/>
-Определяет область, измененную для удержания области, недействительной по средством прокрутки. Этот параметр может быть NULL.
+*пргнупдате*<br/>
+Определяет область, которая изменяется для хранения области, недействительной при прокрутке. Этот параметр может иметь значение NULL.
 
-*lpRectUpdate*<br/>
-Указывает на `RECT` структуру, которая получит границы прямоугольника, недействительную путем прокрутки. Этот параметр может быть NULL.
+*лпректупдате*<br/>
+Указывает на `RECT` структуру, которая получит границы прямоугольника, недействительные при прокрутке. Этот параметр может иметь значение NULL.
 
 *flags*<br/>
 Может иметь одно из следующих значений:
 
-- SW_ERASE При указании с SW_INVALIDATE, стирает вновь недействительную область, отправив [WM_ERASEBKGND](/windows/win32/winmsg/wm-erasebkgnd) сообщение в окно.
+- SW_ERASE при указании в SW_INVALIDATE, удаляет новый недействительный регион, отправляя в окно [WM_ERASEBKGND](/windows/win32/winmsg/wm-erasebkgnd) сообщение.
 
-- SW_INVALIDATE недействительным регион, определенный *prgnUpdate* после прокрутки.
+- SW_INVALIDATE делает недействительным область, обозначенную параметром *пргнупдате* после прокрутки.
 
-- SW_SCROLLCHILDREN прокручивает все детские окна, которые пересекают прямоугольник, на который указывает *lpRectScroll* по количеству пикселей, указанных в *dx* и *dy.* Windows отправляет [WM_MOVE](/windows/win32/winmsg/wm-move) сообщение всем окнам ребенка, которые пересекаются *lpRectScroll,* даже если они не двигаются. Карет перекладывается, когда окно ребенка прокручивается, а прямоугольник курсора пересекает прямоугольник прокрутки.
+- SW_SCROLLCHILDREN прокручивает все дочерние окна, пересекающие прямоугольник, на который указывает *лпректскролл* , на число пикселей, заданное в *DX* и *dy*. Windows отправляет [WM_MOVE](/windows/win32/winmsg/wm-move) сообщение всем дочерним окнам, которые пересекают *лпректскролл*, даже если они не перемещаются. Курсор перемещается при прокрутке дочернего окна, и прямоугольник курсора пересекается с прямоугольником прокрутки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение возврата: SIMPLEREGION (прямоугольный недействительный регион), COMPLEXREGION (неравноугольная область недействительного; перекрывающиеся прямоугольники) или NULLREGION (без недействительной области), если функция успешна; в противном случае значение возврата является ERROR.
+Возвращаемое значение — СИМПЛЕРЕГИОН (прямоугольный недействительный регион), КОМПЛЕКСРЕГИОН (непрямоугольный недопустимый регион, перекрывающиеся прямоугольники) или НУЛЛРЕГИОН (без недействительной области), если функция выполнена успешно. в противном случае возвращаемое значение — ERROR.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция похожа на функцию [ScrollWindow,](/windows/win32/api/winuser/nf-winuser-scrollwindow) с некоторыми дополнительными функциями.
+Эта функция аналогична функции [скроллвиндов](/windows/win32/api/winuser/nf-winuser-scrollwindow) с некоторыми дополнительными функциями.
 
-Если [SW_INVALIDATE](/windows/win32/api/winuser/nf-winuser-scrollwindowex) и [SW_ERASE](/windows/win32/api/winuser/nf-winuser-scrollwindowex) не `ScrollWindowEx` указаны, функция участника не аннулирует область, которая прокручивается. Если один из этих `ScrollWindowEx` флагов установлен, аннулирует эту область. Область не обновляется до тех пор, пока приложение не вызывает функцию участника [UpdateWindow,](/windows/win32/api/winuser/nf-winuser-updatewindow) не вызывает функцию участника [RedrawWindow](/windows/win32/api/winuser/nf-winuser-redrawwindow) (указывая [RDW_UPDATENOW](/windows/win32/api/winuser/nf-winuser-redrawwindow) или [RDW_ERASENOW)](/windows/win32/api/winuser/nf-winuser-redrawwindow)или не извлекает [WM_PAINT](/windows/win32/gdi/wm-paint) сообщение из очереди приложения.
+Если [SW_INVALIDATE](/windows/win32/api/winuser/nf-winuser-scrollwindowex) и [SW_ERASE](/windows/win32/api/winuser/nf-winuser-scrollwindowex) не указаны, функция- `ScrollWindowEx` член не делает недействительной область, которая прокручивается от. Если установлен любой из этих флагов, `ScrollWindowEx` Эта область становится недействительной. Область не обновляется до тех пор, пока приложение не вызовет функцию-член [упдатевиндов](/windows/win32/api/winuser/nf-winuser-updatewindow) , вызывает функцию-член [редраввиндов](/windows/win32/api/winuser/nf-winuser-redrawwindow) (указав [RDW_UPDATENOW](/windows/win32/api/winuser/nf-winuser-redrawwindow) или [RDW_ERASENOW](/windows/win32/api/winuser/nf-winuser-redrawwindow)) или извлекает сообщение [WM_PAINT](/windows/win32/gdi/wm-paint) из очереди приложения.
 
-Если окно имеет [WS_CLIPCHILDREN](/windows/win32/api/winuser/nf-winuser-createwindoww) стиль, возвращенные области, указанные *prgnUpdate* и *lpRectUpdate,* представляют собой общую площадь прокрутки окна, которая должна быть обновлена, включая любые области в детских окнах, которые нуждаются в обновлении.
+Если окно имеет стиль [WS_CLIPCHILDREN](/windows/win32/api/winuser/nf-winuser-createwindoww) , то возвращаемые области, заданные *пргнупдате* и *лпректупдате* , представляют общую область прокручиваемого окна, которую необходимо обновить, включая все области дочерних окон, требующие обновления.
 
-Если [SW_SCROLLCHILDREN](/windows/win32/api/winuser/nf-winuser-scrollwindowex) флаг указан, Windows не будет должным образом обновлять экран, если прокрутка части окна ребенка. Часть прокрутки окна ребенка, которая находится за пределами прямоугольника источника, не будет стерта и не будет перерисована должным образом в новом пункте назначения. Используйте функцию [DeferWindowPos](/windows/win32/api/winuser/nf-winuser-deferwindowpos) Windows для перемещения детских окон, которые не лежат полностью в прямоугольнике *lpRectScroll.* Курсор перемещается, если установлен SW_SCROLLCHILDREN флаг, а прямоугольник карет пересекает прямоугольник прокрутки.
+Если указан флаг [SW_SCROLLCHILDREN](/windows/win32/api/winuser/nf-winuser-scrollwindowex) , Windows не будет правильно обновлять экран, если часть дочернего окна прокручивается. Часть прокручиваемого дочернего окна, которая находится за пределами исходного прямоугольника, не будет стерта и не будет перерисована должным образом в новом месте назначения. Используйте функцию Windows [дефервиндовпос](/windows/win32/api/winuser/nf-winuser-deferwindowpos) для перемещения дочерних окон, которые полностью находятся внутри прямоугольника *лпректскролл* . Курсор перемещается, если установлен флаг SW_SCROLLCHILDREN и прямоугольник курсора пересекается с прямоугольником прокрутки.
 
-Все входные и выходные координаты (для *lpRectScroll,* *lpRectClip,* *lpRectUpdate*и *prgnUpdate)* должны быть в координатах клиента, независимо от того, есть ли в окне CS_OWNDC или CS_CLASSDC стиль класса. Используйте функции [LPtoDP](/windows/win32/api/wingdi/nf-wingdi-lptodp) и [DPtoLP](/windows/win32/api/wingdi/nf-wingdi-dptolp) Windows для преобразования в логические координаты и из них, если это необходимо.
+Все координаты ввода и вывода (для *лпректскролл*, *лпректклип*, *лпректупдате*и *пргнупдате*) считаются в клиентских координатах независимо от того, имеет ли окно стиль класса CS_OWNDC или CS_CLASSDC. При необходимости используйте функции Windows [лптодп](/windows/win32/api/wingdi/nf-wingdi-lptodp) и [дптолп](/windows/win32/api/wingdi/nf-wingdi-dptolp) для преобразования в логические координаты и обратно.
 
-## <a name="cwndsendchildnotifylastmsg"></a><a name="sendchildnotifylastmsg"></a>CWnd::SendChildNotifyLastMsg
+## <a name="cwndsendchildnotifylastmsg"></a><a name="sendchildnotifylastmsg"></a>CWnd:: Сендчилднотифиластмсг
 
-Эта функция члена вызывается инфраструктурой для предоставления сообщения уведомления окну ребенка из родительского окна, чтобы окно ребенка работало с задачей.
+Эта функция-член вызывается платформой для предоставления сообщения уведомления дочернему окну из родительского окна, чтобы дочернее окно могла справиться с задачей.
 
 ```
 BOOL SendChildNotifyLastMsg(LRESULT* pResult = NULL);
@@ -11052,22 +11052,22 @@ BOOL SendChildNotifyLastMsg(LRESULT* pResult = NULL);
 
 ### <a name="parameters"></a>Параметры
 
-*pResult*<br/>
-Результат, генерируемый окном ребенка, который возвращается через родительское окно.
+*пресулт*<br/>
+Результат, созданный дочерним окном для возврата родительским окном.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Nonzero, если окно ребенка обрабатывает сообщение, отправленное его родителю; в противном случае 0.
+Ненулевое значение, если дочернее окно обработало сообщение, отправленное его родительскому окну; в противном случае — 0.
 
 ### <a name="remarks"></a>Remarks
 
-`SendChildNotifyLastMsg`отправить текущее сообщение источнику, если это отражаемый текст сообщения.
+`SendChildNotifyLastMsg`Отправка текущего сообщения в источник, если это сообщение, которое отражается.
 
-Для получения дополнительной информации об отражении сообщений [см.](../../mfc/handling-reflected-messages.md)
+Дополнительные сведения о отражении сообщений см. в разделе [обработка отраженных сообщений](../../mfc/handling-reflected-messages.md).
 
-## <a name="cwndsenddlgitemmessage"></a><a name="senddlgitemmessage"></a>CWnd::SendDlgItemMessage
+## <a name="cwndsenddlgitemmessage"></a><a name="senddlgitemmessage"></a>CWnd:: Сенддлгитеммессаже
 
-Отправляет сообщение на контроль.
+Отправляет сообщение элементу управления.
 
 ```
 LRESULT SendDlgItemMessage(
@@ -11080,32 +11080,32 @@ LRESULT SendDlgItemMessage(
 ### <a name="parameters"></a>Параметры
 
 *nID*<br/>
-Определяет идентификатор управления диалогом, который будет получать сообщение.
+Задает идентификатор элемента управления диалогового окна, который получит сообщение.
 
 *message*<br/>
-Упоняет сообщение, необходимое для отправки.
+Указывает отправляемое сообщение.
 
 *wParam*<br/>
-Определяет дополнительную информацию, зависящая от сообщений.
+Указывает дополнительные сведения, зависящие от сообщений.
 
 *lParam*<br/>
-Определяет дополнительную информацию, зависящая от сообщений.
+Указывает дополнительные сведения, зависящие от сообщений.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Упоняет значение, возвращенное процедурой окна элемента управления, или 0, если элемент управления не найден.
+Указывает значение, возвращаемое процедурой окна элемента управления, или 0, если элемент управления не найден.
 
 ### <a name="remarks"></a>Remarks
 
-Функция `SendDlgItemMessage` участника не возвращается до тех пор, пока сообщение не будет обработано.
+`SendDlgItemMessage`Функция – член не возвращает значение, пока сообщение не будет обработано.
 
-Использование `SendDlgItemMessage` идентично `CWnd`получению q данного элемента управления и вызову функции участника [SendMessage.](#sendmessage)
+Использование `SendDlgItemMessage` идентично `CWnd` получению * для заданного элемента управления и вызову функции-члена [SendMessage](#sendmessage) .
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#113](../../mfc/reference/codesnippet/cpp/cwnd-class_54.cpp)]
 
-## <a name="cwndsendmessage"></a><a name="sendmessage"></a>CWnd::SendMessage
+## <a name="cwndsendmessage"></a><a name="sendmessage"></a>CWnd:: SendMessage
 
 Отправляет указанное сообщение в это окно.
 
@@ -11119,29 +11119,29 @@ LRESULT SendMessage(
 ### <a name="parameters"></a>Параметры
 
 *message*<br/>
-Упоняет сообщение, необходимое для отправки.
+Указывает отправляемое сообщение.
 
 *wParam*<br/>
-Определяет дополнительную информацию, зависящая от сообщений.
+Указывает дополнительные сведения, зависящие от сообщений.
 
 *lParam*<br/>
-Определяет дополнительную информацию, зависящая от сообщений.
+Указывает дополнительные сведения, зависящие от сообщений.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Результат обработки сообщений; его значение зависит от отправленного сообщения.
+Результат обработки сообщения; его значение зависит от отправленного сообщения.
 
 ### <a name="remarks"></a>Remarks
 
-Функция `SendMessage` участника вызывает процедуру окна напрямую и не возвращается до тех пор, пока эта процедура окна не обработала сообщение. Это в отличие от функции участника [PostMessage,](#postmessage) которая помещает сообщение в очередь сообщения окна и немедленно возвращается.
+`SendMessage`Функция члена вызывает процедуру окна напрямую и не возвращает значение до тех пор, пока эта процедура окна не обработала сообщение. Это отличается от функции-члена [сообщения](#postmessage) , которая помещает сообщение в очередь сообщений окна и немедленно возвращает результат.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#101](../../mfc/reference/codesnippet/cpp/cwnd-class_41.cpp)]
 
-## <a name="cwndsendmessagetodescendants"></a><a name="sendmessagetodescendants"></a>CWnd::SendMessageToDescendants
+## <a name="cwndsendmessagetodescendants"></a><a name="sendmessagetodescendants"></a>CWnd:: Сендмессажетодесцендантс
 
-Вызовите эту функцию участника, чтобы отправить указанное сообщение Windows во все окна потомка.
+Вызовите эту функцию-член, чтобы отправить указанное сообщение Windows всем окнам-потомкам.
 
 ```cpp
 void SendMessageToDescendants(
@@ -11155,31 +11155,31 @@ void SendMessageToDescendants(
 ### <a name="parameters"></a>Параметры
 
 *message*<br/>
-Упоняет сообщение, необходимое для отправки.
+Указывает отправляемое сообщение.
 
 *wParam*<br/>
-Определяет дополнительную информацию, зависящая от сообщений.
+Указывает дополнительные сведения, зависящие от сообщений.
 
 *lParam*<br/>
-Определяет дополнительную информацию, зависящая от сообщений.
+Указывает дополнительные сведения, зависящие от сообщений.
 
-*bDeep*<br/>
-Определяет уровень, на котором можно искать. Если правда, рекурсивно искать всех детей; если FALSE, поиск только непосредственных детей.
+*бдип*<br/>
+Задает уровень поиска. При значении TRUE рекурсивный поиск всех дочерних элементов; Если значение равно FALSE, ищите только непосредственные дочерние элементы.
 
-*bOnlyPerm*<br/>
-Уточняется, будет ли сообщение получено временными окнами. Если true, временные окна могут получить сообщение; если FALSE, только постоянные окна получают сообщение. Для получения дополнительной информации о временных окнах [см.](../../mfc/tn003-mapping-of-windows-handles-to-objects.md)
+*бонлиперм*<br/>
+Указывает, будет ли сообщение получено временными окнами. Если значение — TRUE, временные окна могут получить сообщение; Если задано значение FALSE, сообщение получит только постоянные окна. Дополнительные сведения о временных окнах см. в [техническом примечании 3](../../mfc/tn003-mapping-of-windows-handles-to-objects.md).
 
 ### <a name="remarks"></a>Remarks
 
-Если *bDeep* является FALSE, сообщение отправляется только ближайшим детям окна; в противном случае сообщение отправляется во все окна потомка.
+Если *БДИП* имеет значение false, сообщение отправляется только в непосредственные дочерние элементы окна; в противном случае сообщение отправляется всем окнам-потомкам.
 
-Если *bDeep* и *bOnlyPerm* являются правдой, поиск продолжается ниже временных окон. В этом случае только постоянные окна, возникающие во время поиска, получают сообщение. Если *bDeep* false, сообщение отправляется только непосредственным детям окна.
+Если *БДИП* и *бонлиперм* имеют значение true, поиск продолжится под временными окнами. В этом случае сообщение появляется только в постоянных окнах Windows. Если *БДИП* имеет значение false, сообщение отправляется только в непосредственные дочерние элементы окна.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#114](../../mfc/reference/codesnippet/cpp/cwnd-class_55.cpp)]
 
-## <a name="cwndsendnotifymessage"></a><a name="sendnotifymessage"></a>CWnd::SendNotifyMessage
+## <a name="cwndsendnotifymessage"></a><a name="sendnotifymessage"></a>CWnd:: Сенднотифимессаже
 
 Отправляет указанное сообщение в окно.
 
@@ -11193,13 +11193,13 @@ BOOL SendNotifyMessage(
 ### <a name="parameters"></a>Параметры
 
 *message*<br/>
-Упоняет сообщение, необходимое для отправки.
+Указывает отправляемое сообщение.
 
 *wParam*<br/>
-Определяет дополнительную информацию, зависящая от сообщений.
+Указывает дополнительные сведения, зависящие от сообщений.
 
 *lParam*<br/>
-Определяет дополнительную информацию, зависящая от сообщений.
+Указывает дополнительные сведения, зависящие от сообщений.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -11207,11 +11207,11 @@ BOOL SendNotifyMessage(
 
 ### <a name="remarks"></a>Remarks
 
-Если окно было создано потоком вызова, `SendNotifyMessage` вызовите процедуру окна для окна и не возвращается до тех пор, пока процедура окна не обработала сообщение. Если окно было создано другим `SendNotifyMessage` потоком, передает сообщение в процедуру окна и немедленно возвращается; он не ждет завершения процедуры окна обработки сообщения.
+Если окно было создано вызывающим потоком, `SendNotifyMessage` вызывает процедуру окна для окна и не возвращает значение до тех пор, пока процедура окна не обработала сообщение. Если окно было создано другим потоком, `SendNotifyMessage` передает сообщение в процедуру окна и возвращает его немедленно; это не ждет завершения обработки сообщения процедурой Window.
 
-## <a name="cwndsetactivewindow"></a><a name="setactivewindow"></a>CWnd::SetActiveWindow
+## <a name="cwndsetactivewindow"></a><a name="setactivewindow"></a>CWnd:: Сетактивевиндов
 
-Делает `CWnd` активное окно.
+Делает `CWnd` активным окно.
 
 ```
 CWnd* SetActiveWindow();
@@ -11219,17 +11219,17 @@ CWnd* SetActiveWindow();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Окно, которое ранее было активным.
+Окно, которое было ранее активным.
 
-Возвращенный указатель может быть временным и не должен храниться для последующего использования.
+Возвращаемый указатель может быть временным и не должен храниться для последующего использования.
 
 ### <a name="remarks"></a>Remarks
 
-Функция `SetActiveWindow` члена должна использоваться с осторожностью, так как она позволяет приложению произвольно взять на себя активное окно и входного фокуса. Как правило, Windows заботится о всех активациях.
+`SetActiveWindow`Функцию члена следует использовать с осторожностью, так как она позволяет приложению произвольно перехватить активное окно и фокус ввода. Как правило, Windows следит за всеми активациями.
 
-## <a name="cwndsetcapture"></a><a name="setcapture"></a>CWnd::SetCapture
+## <a name="cwndsetcapture"></a><a name="setcapture"></a>CWnd:: Сеткаптуре
 
-Вызывает отправку всех последующих ввода `CWnd` мыши на текущий объект независимо от положения курсора.
+Приводит к тому, что все последующие вводы мыши отправляются в текущий `CWnd` объект независимо от положения курсора.
 
 ```
 CWnd* SetCapture();
@@ -11237,17 +11237,17 @@ CWnd* SetCapture();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на объект окна, который ранее получил все ввод мыши. Это NULL, если нет такого окна. Возвращенный указатель может быть временным и не должен храниться для последующего использования.
+Указатель на объект окна, который ранее получил все входные данные мыши. Если такого окна нет, оно имеет значение NULL. Возвращаемый указатель может быть временным и не должен храниться для последующего использования.
 
 ### <a name="remarks"></a>Remarks
 
-Когда `CWnd` больше не требуется ввод всех мышей, приложение должно вызвать функцию [ReleaseCapture,](/windows/win32/api/winuser/nf-winuser-releasecapture) чтобы другие окна могли получать ввод мыши.
+Если `CWnd` больше не требуется все входные данные мыши, приложение должно вызвать функцию [релеасекаптуре](/windows/win32/api/winuser/nf-winuser-releasecapture) , чтобы другие окна могли получить входные данные мыши.
 
-Во время захвата ввода мыши в активное окно не отправляются WM_NCHITTEST или WM_SETCURSOR сообщения.
+При захвате ввода мыши в активное окно не отправляются сообщения WM_NCHITTEST или WM_SETCURSOR.
 
-## <a name="cwndsetcaretpos"></a><a name="setcaretpos"></a>CWnd::SetCaretPos
+## <a name="cwndsetcaretpos"></a><a name="setcaretpos"></a>CWnd:: Сеткаретпос
 
-Устанавливает положение кареты.
+Задает расположение курсора.
 
 ```
 static void PASCAL SetCaretPos(POINT point);
@@ -11255,22 +11255,22 @@ static void PASCAL SetCaretPos(POINT point);
 
 ### <a name="parameters"></a>Параметры
 
-*Точки*<br/>
-Определяет новые координаты x и y (в координатах клиента) карета.
+*точки*<br/>
+Задает новые координаты x и y (в клиентских координатах) курсора.
 
 ### <a name="remarks"></a>Remarks
 
-Функция `SetCaretPos` члена перемещает карету только в том случае, если она принадлежит окну в текущей задаче. `SetCaretPos`перемещает уход ли или нет, что ухаживает за ней.
+`SetCaretPos`Функция-член перемещает курсор, только если он принадлежит окну в текущей задаче. `SetCaretPos`Перемещает курсор независимо от того, скрыта ли курсор.
 
-Caret является общим ресурсом. Окно не должно перемещать карету, если она не владеет каретом.
+Курсор является общим ресурсом. Окно не должно перемещать курсор, если он не владеет курсором.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#115](../../mfc/reference/codesnippet/cpp/cwnd-class_56.cpp)]
 
-## <a name="cwndsetclipboardviewer"></a><a name="setclipboardviewer"></a>CWnd::SetClipboardViewer
+## <a name="cwndsetclipboardviewer"></a><a name="setclipboardviewer"></a>CWnd:: Сетклипбоардвиевер
 
-Добавляет это окно в цепочку окон, которые уведомляются (с помощью сообщения WM_DRAWCLIPBOARD) при изменении содержимого Clipboard.
+Добавляет это окно в цепочку окон, которые получают уведомления (с помощью WM_DRAWCLIPBOARD сообщения) при каждом изменении содержимого буфера обмена.
 
 ```
 HWND SetClipboardViewer();
@@ -11278,19 +11278,19 @@ HWND SetClipboardViewer();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ручка к следующему окну в цепочке Clipboard-viewer в случае успеха. Приложения должны сохранять эту ручку (она может храниться в качестве переменной члена) и использовать ее при ответе на сообщения цепи Clipboard-viewer.
+Маркер для следующего окна в цепочке средства просмотра буфера обмена в случае успеха. Приложения должны сохранить этот обработчик (он может храниться как переменная-член) и использовать его при ответе на сообщения цепочки средства просмотра буфера обмена.
 
 ### <a name="remarks"></a>Remarks
 
-Окно, которое является частью цепочки Clipboard-viewer, должно отвечать на [WM_DRAWCLIPBOARD,](#ondrawclipboard) [WM_CHANGECBCHAIN](#onchangecbchain)и [WM_DESTROY](#ondestroy) сообщения и передавать сообщение следующему окну в цепочке.
+Окно, которое является частью цепочки средств просмотра буфера обмена, должно отвечать на [WM_DRAWCLIPBOARD](#ondrawclipboard), [WM_CHANGECBCHAIN](#onchangecbchain)и [WM_DESTROY](#ondestroy) сообщения, а также передавать сообщение в следующее окно в цепочке.
 
-Эта функция члена отправляет WM_DRAWCLIPBOARD сообщение в окно. Поскольку ручка к следующему окну в цепочке Clipboard-viewer еще не возвращена, приложение не `SetClipboardViewer`должно передавать WM_DRAWCLIPBOARD сообщение, которое оно получает во время вызова.
+Эта функция-член отправляет в окно сообщение WM_DRAWCLIPBOARD. Поскольку обработчик следующего окна в цепочке средств просмотра буфера обмена еще не возвращен, приложение не должно передавать WM_DRAWCLIPBOARD сообщение, полученное во время вызова `SetClipboardViewer` .
 
-Чтобы удалить себя из цепочки Clipboard-viewer, приложение должно вызвать функцию участника [ChangeClipboardChain.](#changeclipboardchain)
+Чтобы удалить себя из цепочки просмотра буфера обмена, приложение должно вызвать функцию-член [чанжеклипбоардчаин](#changeclipboardchain) .
 
-## <a name="cwndsetdlgctrlid"></a><a name="setdlgctrlid"></a>CWnd::SetDlgCtrlID
+## <a name="cwndsetdlgctrlid"></a><a name="setdlgctrlid"></a>CWnd:: Сетдлгктрлид
 
-Устанавливает идентификатор окна или идентификатор управления для окна на новое значение.
+Задает новое значение идентификатора окна или идентификатора элемента управления для окна.
 
 ```
 int SetDlgCtrlID(int nID);
@@ -11299,19 +11299,19 @@ int SetDlgCtrlID(int nID);
 ### <a name="parameters"></a>Параметры
 
 *nID*<br/>
-Новое значение для установки для идентификатора элемента управления.
+Новое значение, заданное для идентификатора элемента управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Предыдущий идентификатор окна, в случае успеха; в противном случае 0.
+Предыдущий идентификатор окна, если выполнено успешно; в противном случае — 0.
 
 ### <a name="remarks"></a>Remarks
 
-Окно может быть любым детским окном, а не только элементом управления в диалоговом окне. Окно не может быть окном верхнего уровня.
+Окно может быть любым дочерним окном, а не только элементом управления в диалоговом окне. Окно не может быть окном верхнего уровня.
 
-## <a name="cwndsetdlgitemint"></a><a name="setdlgitemint"></a>CWnd::SetDlgItemInt
+## <a name="cwndsetdlgitemint"></a><a name="setdlgitemint"></a>CWnd:: Сетдлгитеминт
 
-Устанавливает текст заданного элемента управления в диалоговом поле на строковое представление указанного значения рядов.
+Устанавливает текст данного элемента управления в диалоговом окне в строковое представление указанного целочисленного значения.
 
 ```cpp
 void SetDlgItemInt(
@@ -11323,25 +11323,25 @@ void SetDlgItemInt(
 ### <a name="parameters"></a>Параметры
 
 *nID*<br/>
-Упогоняет идентификатор самого элемента управления, который будет изменен.
+Указывает целочисленный идентификатор изменяемого элемента управления.
 
-*nValue*<br/>
-Определяет значение несколько, используемое для создания текста элемента.
+*Nзначение*<br/>
+Задает целочисленное значение, используемое для создания текста элемента.
 
-*bПодписанный*<br/>
-Определяет, подписано ли значение рядового значения или не подписано. Если этот параметр является правдой, *nValue* подписан. Если этот параметр является правдой, а *nValue* меньше 0, знак минус помещается перед первой цифрой в строке. Если этот параметр FALSE, *nValue* не подписан.
+*бсигнед*<br/>
+Указывает, является ли целочисленное значение знакомым или неподписанным. Если этот параметр имеет значение TRUE, *nзначение* подписывается. Если этот параметр имеет значение TRUE, а *nзначение* меньше 0, то перед первой цифрой в строке ставится знак минус. Если этот параметр имеет значение FALSE, *nзначение* не имеет знака.
 
 ### <a name="remarks"></a>Remarks
 
-`SetDlgItemInt`отправляет [WM_SETTEXT](/windows/win32/winmsg/wm-settext) сообщение данному элементу управления.
+`SetDlgItemInt`отправляет [WM_SETTEXT](/windows/win32/winmsg/wm-settext) сообщение в заданный элемент управления.
 
 ### <a name="example"></a>Пример
 
-  Смотрите пример [для CWnd::SetDlgItemText](#setdlgitemtext).
+  См. пример для [CWnd:: сетдлгитемтекст](#setdlgitemtext).
 
-## <a name="cwndsetdlgitemtext"></a><a name="setdlgitemtext"></a>CWnd::SetDlgItemText
+## <a name="cwndsetdlgitemtext"></a><a name="setdlgitemtext"></a>CWnd:: Сетдлгитемтекст
 
-Устанавливает подпись или текст элемента управления, принадлежащего окну или диалоговому окну.
+Задает заголовок или текст элемента управления, принадлежащего окну или диалоговому окну.
 
 ```cpp
 void SetDlgItemText(
@@ -11352,20 +11352,20 @@ void SetDlgItemText(
 ### <a name="parameters"></a>Параметры
 
 *nID*<br/>
-Определяет элемент управления, текст которого должен быть установлен.
+Определяет элемент управления, текст которого необходимо задать.
 
-*lpszString*<br/>
-Указывает на объект [CString](../../atl-mfc-shared/reference/cstringt-class.md) или строку с нулевым завершением, содержащую текст, который должен быть скопирован в элемент управления.
+*лпсзстринг*<br/>
+Указывает на объект [CString](../../atl-mfc-shared/reference/cstringt-class.md) или строку, завершающуюся нулем, которая содержит текст, копируемый в элемент управления.
 
 ### <a name="remarks"></a>Remarks
 
-`SetDlgItemText`отправляет [WM_SETTEXT](/windows/win32/winmsg/wm-settext) сообщение данному элементу управления.
+`SetDlgItemText`отправляет [WM_SETTEXT](/windows/win32/winmsg/wm-settext) сообщение в заданный элемент управления.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#116](../../mfc/reference/codesnippet/cpp/cwnd-class_57.cpp)]
 
-## <a name="cwndsetforegroundwindow"></a><a name="setforegroundwindow"></a>CWnd::SetForegroundWindow
+## <a name="cwndsetforegroundwindow"></a><a name="setforegroundwindow"></a>CWnd:: Сетфореграундвиндов
 
 Помещает создавший окно поток на передний план и активирует окно.
 
@@ -11379,13 +11379,13 @@ BOOL SetForegroundWindow();
 
 ### <a name="remarks"></a>Remarks
 
-Ввод клавиатуры направлен на окно, и различные визуальные сигналы изменяются для пользователя. Окно переднего плана — это окно, с которым пользователь в настоящее время работает. Окно переднего плана применяется только к окнам верхнего уровня (окна кадра или диалоговые окна).
+Ввод с клавиатуры направляется в окно, и для пользователя изменяются различные визуальные подсказки. Окно переднего плана — это окно, с помощью которого пользователь в данный момент работает. Окно переднего плана применяется только к окнам верхнего уровня (окнам фрейма или диалоговым окнам).
 
 ### <a name="example"></a>Пример
 
-  Смотрите пример [CWnd::FindWindow](#findwindow).
+  См. пример для [CWnd:: FindWindow](#findwindow).
 
-## <a name="cwndsetfocus"></a><a name="setfocus"></a>CWnd::SetFocus
+## <a name="cwndsetfocus"></a><a name="setfocus"></a>CWnd:: SetFocus
 
 Утверждает фокус ввода.
 
@@ -11395,19 +11395,19 @@ CWnd* SetFocus();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на объект окна, который ранее имел фокус ввода. Это NULL, если нет такого окна. Возвращенный указатель может быть временным и не должен храниться.
+Указатель на объект окна, который ранее имел фокус ввода. Если такого окна нет, оно имеет значение NULL. Возвращаемый указатель может быть временным и не должен храниться.
 
 ### <a name="remarks"></a>Remarks
 
-Вхотогий фокус направляет все последующие входные данные клавиатуры к этому окну. Любое окно, которое ранее имело входной фокус, теряет его.
+Фокус ввода направляет все последующие вводы с клавиатуры в это окно. Любое окно, которое ранее получило фокус ввода.
 
-Функция `SetFocus` члена отправляет [WM_KILLFOCUS](/windows/win32/inputdev/wm-killfocus) сообщение в окно, которое теряет фокус ввода и [WM_SETFOCUS](/windows/win32/inputdev/wm-setfocus) сообщение в окно, которое получает входно-входное фокус. Он также активирует окно или его родителей.
+`SetFocus`Функция-член отправляет [WM_KILLFOCUS](/windows/win32/inputdev/wm-killfocus) сообщение в окно, которое теряет фокус ввода и [WM_SETFOCUS](/windows/win32/inputdev/wm-setfocus) сообщение в окно, которое получает фокус ввода. Он также активирует либо окно, либо его родительский элемент.
 
-Если текущее окно активен, но не имеет фокуса (т.е. ни одно окно не имеет фокуса), любой нажатие клавиши будет производить сообщения [WM_SYSCHAR,](#onsyschar) [WM_SYSKEYDOWN](#onsyskeydown)или [WM_SYSKEYUP.](#onsyskeyup)
+Если текущее окно активно, но не имеет фокуса (т. е. окно не имеет фокуса), любая нажатая клавиша будет создавать сообщения [WM_SYSCHAR](#onsyschar), [WM_SYSKEYDOWN](#onsyskeydown)или [WM_SYSKEYUP](#onsyskeyup).
 
-## <a name="cwndsetfont"></a><a name="setfont"></a>CWnd::SetFont
+## <a name="cwndsetfont"></a><a name="setfont"></a>CWnd:: Сетфонт
 
-Отправляет WM_SETFONT сообщение в окно для использования указанного шрифта.
+Отправляет в окно сообщение WM_SETFONT, чтобы использовать указанный шрифт.
 
 ```cpp
 void SetFont(
@@ -11417,19 +11417,19 @@ void SetFont(
 
 ### <a name="parameters"></a>Параметры
 
-*pFont*<br/>
+*пфонт*<br/>
 Указатель на `CFont` объект.
 
 *bRedraw*<br/>
-TRUE для окна, чтобы перерисовать сразу же после обработки WM_SETFONT сообщение; в противном случае FALSE.
+Значение TRUE, чтобы окно перерисовывается сразу же после обработки сообщения WM_SETFONT; в противном случае — FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод не имеет никакого эффекта, если окно не обрабатывает WM_SETFONT сообщение. Многие классы MFC, которые вытекают из `CWnd` обработки этого сообщения, потому что они прикреплены к заданному классу окон, который включает обработчик сообщений для WM_SETFONT сообщения. Для использования этого метода классы, полученные из `CWnd` этого метода, должны определить обработчик метода для сообщения WM_SETFONT.
+Этот метод не действует, если только окно не обрабатывает сообщение WM_SETFONT. Многие классы MFC, производные от `CWnd` обработки данного сообщения, так как они присоединены к предопределенному классу окна, который содержит обработчик сообщений для WM_SETFONT сообщения. Для использования этого метода классы, производные от, `CWnd` должны определять обработчик метода для WM_SETFONT сообщения.
 
-## <a name="cwndseticon"></a><a name="seticon"></a>CWnd::SetIcon
+## <a name="cwndseticon"></a><a name="seticon"></a>CWnd:: Сетикон
 
-Вызов эту функцию участника, чтобы установить ручку для определенного значка, как это определено *hIcon.*
+Вызовите эту функцию-член, чтобы задать для маркера определенный значок, идентифицируемый *Хикон*.
 
 ```
 HICON SetIcon(
@@ -11440,10 +11440,10 @@ HICON SetIcon(
 ### <a name="parameters"></a>Параметры
 
 *hIcon*<br/>
-Ручка к предыдущему значку.
+Маркер для предыдущего значка.
 
-*bBigIcon*<br/>
-Определяет значок 32 пикселя на 32 пикселя, если это правда; определяет значок 16 пикселей на 16 пикселей, если FALSE.
+*ббигикон*<br/>
+Задает значок 32 пикселей на 32 пикселей, если значение TRUE; Задает значок 16 пикселей на 16 пикселей при значении FALSE.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -11451,13 +11451,13 @@ HICON SetIcon(
 
 ### <a name="remarks"></a>Remarks
 
-Когда класс окна зарегистрирован, он выбирает значок.
+При регистрации класса окна он выбирает значок.
 
 ### <a name="example"></a>Пример
 
-  Смотрите пример [CWnd::GetSystemMenu](#getsystemmenu).
+  См. пример для [CWnd:: жетсистеммену](#getsystemmenu).
 
-## <a name="cwndsetlayeredwindowattributes"></a><a name="setlayeredwindowattributes"></a>CWnd::SetlayeredWindowAttributes
+## <a name="cwndsetlayeredwindowattributes"></a><a name="setlayeredwindowattributes"></a>CWnd:: SetLayeredWindowAttributes
 
 Задает ключ цвета прозрачности многослойного окна.
 
@@ -11470,24 +11470,24 @@ BOOL SetLayeredWindowAttributes(
 
 ### <a name="parameters"></a>Параметры
 
-*crKey*<br/>
-Указатель на значение COLORREF, которое определяет цветной ключ прозрачности, который будет использоваться при составлении многослойного окна. Все пиксели, окрашенные окном в этом цвете, будут прозрачными. Для создания COLORREF используйте макрос RGB.
+*кркэй*<br/>
+Указатель на значение COLORREF, указывающее цветовой ключ прозрачности, используемый при создании многоуровневого окна. Все пиксели, закрашенные окном этого цвета, будут прозрачными. Чтобы создать COLORREF, используйте макрос RGB.
 
-*bAlpha*<br/>
-Альфа-значение, используемое для описания непрозрачности многослойного окна. Для получения дополнительной `SourceConstantAlpha` информации [BLENDFUNCTION](/windows/win32/api/wingdi/ns-wingdi-blendfunction) см. Когда *bAlpha* 0, окно полностью прозрачно. Когда *bAlpha* 255, окно непрозрачно.
+*балфа*<br/>
+Значение альфа, используемое для описания прозрачности многоуровневого окна. Дополнительные сведения см. в описании `SourceConstantAlpha` члена структуры [блендфунктион](/windows/win32/api/wingdi/ns-wingdi-blendfunction) . Если *балфа* имеет значение 0, окно полностью прозрачно. Если *балфа* имеет значение 255, окно является непрозрачным.
 
 *dwFlags*<br/>
-Определяет действие, необходимое для принятия. Этот параметр может быть одним или более из следующих значений. Список возможных значений можно узнать в [SetLayeredWindowAttributes.](/windows/win32/api/winuser/nf-winuser-setlayeredwindowattributes)
+Указывает действие, которое необходимо выполнить. Этот параметр может принимать одно или несколько следующих значений. Список возможных значений см. в разделе [SetLayeredWindowAttributes](/windows/win32/api/winuser/nf-winuser-setlayeredwindowattributes).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Nonzero, если функция успешно; в противном случае 0.
+Ненулевое значение, если функция выполнена. в противном случае — 0.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция-член эмулирует функциональность функции [SetLayeredWindowAttributes,](/windows/win32/api/winuser/nf-winuser-setlayeredwindowattributes)как описано в SDK Windows.
+Эта функция члена эмулирует функциональность функции [SetLayeredWindowAttributes](/windows/win32/api/winuser/nf-winuser-setlayeredwindowattributes), как описано в Windows SDK.
 
-## <a name="cwndsetmenu"></a><a name="setmenu"></a>CWnd::SetMenu
+## <a name="cwndsetmenu"></a><a name="setmenu"></a>CWnd:: Сетмену
 
 Устанавливает текущее меню в указанное меню.
 
@@ -11497,26 +11497,26 @@ BOOL SetMenu(CMenu* pMenu);
 
 ### <a name="parameters"></a>Параметры
 
-*pMenu*<br/>
-Определяет новое меню. Если этот параметр NULL, текущее меню удаляется.
+*пмену*<br/>
+Определяет новое меню. Если этот параметр имеет значение NULL, то удаляется текущее меню.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Nonzero, если меню изменено; в противном случае 0.
+Ненулевое значение, если меню изменено; в противном случае — 0.
 
 ### <a name="remarks"></a>Remarks
 
-Вызывает перерисовку окна, чтобы отразить изменение меню.
+Вызывает перерисовку окна для отражения изменения меню.
 
-`SetMenu`не уничтожит предыдущее меню. Для выполнения этой задачи приложение должно позвонить в функцию участника [CMenu::DestroyMenu.](../../mfc/reference/cmenu-class.md#destroymenu)
+`SetMenu`не будет уничтожить предыдущее меню. Для выполнения этой задачи приложение должно вызвать функцию члена [кмену::D естроймену](../../mfc/reference/cmenu-class.md#destroymenu) .
 
 ### <a name="example"></a>Пример
 
-  Смотрите пример [для CMenu:LoadMenu](../../mfc/reference/cmenu-class.md#loadmenu).
+  См. пример для [кмену:: лоадмену](../../mfc/reference/cmenu-class.md#loadmenu).
 
-## <a name="cwndsetowner"></a><a name="setowner"></a>CWnd::SetOwner
+## <a name="cwndsetowner"></a><a name="setowner"></a>CWnd:: Сетовнер
 
-Устанавливает владелец текущего окна на указанный объект окна.
+Устанавливает владельца текущего окна в указанный объект окна.
 
 ```cpp
 void SetOwner(CWnd* pOwnerWnd);
@@ -11524,20 +11524,20 @@ void SetOwner(CWnd* pOwnerWnd);
 
 ### <a name="parameters"></a>Параметры
 
-*pOwnerWnd*<br/>
-Идентифицирует нового владельца объекта окна. Если этот параметр NULL, объект окна не имеет владельца.
+*повнервнд*<br/>
+Определяет нового владельца объекта Window. Если этот параметр имеет значение NULL, то у объекта Window нет владельца.
 
 ### <a name="remarks"></a>Remarks
 
-Затем этот владелец может получать командные сообщения от текущего объекта окна. По умолчанию родительским текущим окном является его владелец.
+Этот владелец может затем получить сообщения команды от текущего объекта Window. По умолчанию родительским элементом текущего окна является его владелец.
 
-Часто полезно установить связи между объектами окна, не связанными с иерархией окон. Например, [CToolBar](../../mfc/reference/ctoolbar-class.md) отправляет уведомления своему владельцу, а не его родителю. Это позволяет панели инструментов стать ребенком одного окна (например, окна приложения контейнера OLE) при отправке уведомлений в другое окно (например, окно кадра на месте). Кроме того, когда окно сервера отключается или активируется во время редактирования на месте, любое окно, принадлежащее окну кадра, скрыто или отображается. Эта собственность явно устанавливается `SetOwner`с вызовом.
+Часто бывает полезно устанавливать соединения между объектами окна, не связанными с иерархией окон. Например, [CToolBar](../../mfc/reference/ctoolbar-class.md) отправляет уведомления владельцу, а не его родителю. Это позволяет панели инструментов стать дочерним элементом одного окна (например, окном приложения-контейнера OLE) при отправке уведомлений в другое окно (например, в окно фрейма на месте). Более того, когда окно сервера деактивируется или активируется во время редактирования на месте, все окна, принадлежащие окну фрейма, скрываются или отображаются. Этот владелец явно задается вызовом метода `SetOwner` .
 
-Концепция собственности этой функции отличается от концепции собственности [GetWindow.](/windows/win32/api/winuser/nf-winuser-getwindow)
+Понятие владения этой функцией отличается от концепции «владение [»](/windows/win32/api/winuser/nf-winuser-getwindow).
 
-## <a name="cwndsetparent"></a><a name="setparent"></a>CWnd::SetParent
+## <a name="cwndsetparent"></a><a name="setparent"></a>CWnd:: Сетпарент
 
-Изменяет родительское окно окна ребенка.
+Изменяет родительское окно дочернего окна.
 
 ```
 CWnd* SetParent(CWnd* pWndNewParent);
@@ -11545,20 +11545,20 @@ CWnd* SetParent(CWnd* pWndNewParent);
 
 ### <a name="parameters"></a>Параметры
 
-*pWndNewParent*<br/>
-Идентифицирует новое родительское окно.
+*пвндневпарент*<br/>
+Определяет новое родительское окно.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на предыдущий объект родительского окна в случае успеха. Возвращенный указатель может быть временным и не должен храниться для последующего использования.
+Указатель на предыдущий объект родительского окна в случае успеха. Возвращаемый указатель может быть временным и не должен храниться для последующего использования.
 
 ### <a name="remarks"></a>Remarks
 
-Если окно ребенка видно, Windows выполняет соответствующую перерисовку и перекраску.
+Если дочернее окно отображается, Windows выполняет соответствующую перерисовку и перерисование.
 
-## <a name="cwndsetproperty"></a><a name="setproperty"></a>CWnd::SetProperty
+## <a name="cwndsetproperty"></a><a name="setproperty"></a>CWnd:: SetProperty
 
-Позвоните в эту функцию участника, чтобы установить свойство управления OLE, указанное *dwDispID.*
+Вызовите эту функцию члена, чтобы задать свойство элемента управления OLE, заданное параметром *двдиспид*.
 
 ```cpp
 void AFX_CDECL SetProperty(
@@ -11568,25 +11568,25 @@ void AFX_CDECL SetProperty(
 
 ### <a name="parameters"></a>Параметры
 
-*dwDispID*<br/>
+*двдиспид*<br/>
 Определяет свойство, которое необходимо задать.
 
-*vtProp*<br/>
+*втпроп*<br/>
 Определяет тип свойства, которое необходимо задать. Возможные значения см. в подразделе "Примечания" раздела [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
 
 *...*<br/>
-Единый параметр типа, указанный *vtProp*.
+Единственный параметр типа, указанного параметром *втпроп*.
 
 ### <a name="remarks"></a>Remarks
 
 > [!NOTE]
-> Эта функция должна вызываться `CWnd` только на объекте, который представляет элемент управления OLE.
+> Эта функция должна вызываться только для `CWnd` объекта, представляющего элемент управления OLE.
 
-Для получения дополнительной информации об использовании этой функции члена с контейнерами управления OLE, см. [ActiveX Control Containers: Programming ActiveX Controls in an ActiveX Control Container](../../mfc/programming-activex-controls-in-a-activex-control-container.md)
+Дополнительные сведения об использовании этой функции члена с контейнерами элементов управления OLE см. в статье [контейнеры элементов управления ActiveX: Программирование элементов управления ActiveX в контейнере элементов управления ActiveX](../../mfc/programming-activex-controls-in-a-activex-control-container.md).
 
-## <a name="cwndsetredraw"></a><a name="setredraw"></a>CWnd::SetRedraw
+## <a name="cwndsetredraw"></a><a name="setredraw"></a>CWnd:: Сетредрав
 
-Приложение требует `SetRedraw` перерисовать изменения или предотвратить перерисовку изменений.
+Приложение вызывает `SetRedraw` , чтобы разрешить перерисовку изменений или предотвратить перерисовку изменений.
 
 ```cpp
 void SetRedraw(BOOL bRedraw = TRUE);
@@ -11595,19 +11595,19 @@ void SetRedraw(BOOL bRedraw = TRUE);
 ### <a name="parameters"></a>Параметры
 
 *bRedraw*<br/>
-Определяет состояние перерисовки флага. Если этот параметр является правдой, устанавливается флаг перерисовки; если FALSE, флаг очищается.
+Задает состояние флага перерисовки. Если этот параметр имеет значение TRUE, устанавливается флаг перерисовки; Если значение равно FALSE, флажок снимается.
 
 ### <a name="remarks"></a>Remarks
 
-Функция этого члена устанавливает или очищает флаг перерисовки. В то время как флаг перерисовки очищается, содержимое не будет обновляться после каждого изменения и не будет перекраиваться до тех пор, пока флаг перерисовки не будет установлен. Например, приложение, которое должно добавить несколько элементов в поле списка, может очистить флаг перерисовки, добавить элементы, а затем установить флаг перерисовки. Наконец, приложение может вызвать функцию [недействительного](#invalidate) или [недействительного rect,](#invalidaterect) чтобы привести к перекрашению окна списка.
+Эта функция члена задает или очищает флаг перерисовки. Если флажок перерисовки не установлен, содержимое не будет обновляться после каждого изменения и не будет перерисовываться до тех пор, пока не установится флаг перерисовки. Например, приложение, которое должно добавить несколько элементов в список, может снять флаг перерисовки, добавить элементы, а затем установить флаг перерисовки. Наконец, приложение может вызвать функцию члена " [unvalidate](#invalidate) " или [инвалидатерект](#invalidaterect) , чтобы перерисовать список.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#117](../../mfc/reference/codesnippet/cpp/cwnd-class_58.cpp)]
 
-## <a name="cwndsetscrollinfo"></a><a name="setscrollinfo"></a>CWnd::SetScrollInfo
+## <a name="cwndsetscrollinfo"></a><a name="setscrollinfo"></a>CWnd:: Сетскроллинфо
 
-Вызовите эту функцию участника, чтобы установить информацию, которую `SCROLLINFO` структура поддерживает о панели прокрутки.
+Вызовите эту функцию-член, чтобы задать сведения, которые `SCROLLINFO` хранятся в структуре, о полосе прокрутки.
 
 ```
 BOOL SetScrollInfo(
@@ -11618,37 +11618,37 @@ BOOL SetScrollInfo(
 
 ### <a name="parameters"></a>Параметры
 
-*nБар*<br/>
-Определяет, является ли панель прокрутки элементом управления или частью области неклиента окна. Если он является частью области неклиента, nBar также указывает, находится ли панель прокрутки горизонтально, вертикально или и то, и другое. Она должна быть одной из следующих:
+*нбар*<br/>
+Указывает, является ли полоса прокрутки элементом управления или частью неклиентской области окна. Если он является частью неклиентской области, НБАР также указывает, располагается ли полоса прокрутки горизонтально, вертикально или и то, и другое. Он должен быть одним из следующих:
 
-- SB_CTL содержит параметры для управления панелью прокрутки. Член `m_hWnd` данных должен быть ручкой управления панелью прокрутки.
+- SB_CTL содержит параметры для элемента управления "полоса прокрутки". `m_hWnd`Элемент данных должен быть маркером элемента управления "полоса прокрутки".
 
-- SB_HORZ указывает, что окно представляет собой горизонтальную панель прокрутки.
+- SB_HORZ Указывает, что окно является горизонтальной полосой прокрутки.
 
-- SB_VERT указывает, что окно представляет собой вертикальный бар прокрутки.
+- SB_VERT указывает, что окно является вертикальной полосой прокрутки.
 
-*lpScrollInfo*<br/>
-Указатель на структуру [SCROLLINFO.](/windows/win32/api/winuser/ns-winuser-scrollinfo) Дополнительную информацию об этой структуре можно узнать в SDK Windows.
+*лпскроллинфо*<br/>
+Указатель на структуру [скроллинфо](/windows/win32/api/winuser/ns-winuser-scrollinfo) . Дополнительные сведения об этой структуре см. в Windows SDK.
 
 *bRedraw*<br/>
-Определяет, следует ли перерисовывать панель прокрутки, чтобы отразить новое положение. Если *bRedraw* является правдой, панель прокрутки перерисовывается. Если это FALSE, он не перерисовывается. Панель прокрутки перерисовывается по умолчанию.
+Указывает, следует ли перерисовать полосу прокрутки для отражения новой позицией. Если *бредрав* имеет значение true, полоса прокрутки перерисовывается. Если значение равно FALSE, оно не перерисовывается. По умолчанию полоса прокрутки перерисовывается.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-В случае успеха, возвращение является правдой. В противном случае, это FALSE.
+В случае успеха возвращается значение TRUE. В противном случае — FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Структура [SCROLLINFO](/windows/win32/api/winuser/ns-winuser-scrollinfo) содержит информацию о панели прокрутки, включая минимальное и максимальное положение прокрутки, размер страницы и положение окна прокрутки (большой палец). Подробнее `SCROLLINFO` об изменении структуры по умолчанию можно просмотреть тему структуры в SDK Windows SDK.
+Структура [скроллинфо](/windows/win32/api/winuser/ns-winuser-scrollinfo) содержит сведения о полосе прокрутки, включая минимальные и максимальные положения прокрутки, размер страницы и положение ползунка (бегунка). `SCROLLINFO`Дополнительные сведения об изменении структуры по умолчанию см. в разделе "структура" в Windows SDK.
 
-Обработчики сообщений MFC Windows, указывающие положение прокрутки-бар, [CWnd::OnHScroll](#onhscroll) и [CWnd::OnVScroll,](#onvscroll)предоставляют только 16 бит данных о положении. [GetScrollInfo](#getscrollinfo) `SetScrollInfo` и предоставить 32 бита данных о положении прокрутки-бар. Таким образом, приложение `GetScrollInfo` может `CWnd::OnHScroll` звонить `CWnd::OnVScroll` при обработке либо или для получения 32-битных данных положения прокрутки.бара.
+Обработчики сообщений Windows MFC, указывающие расположение полосы прокрутки, [CWnd:: онхскролл](#onhscroll) и [CWnd:: онвскролл](#onvscroll), предоставляют только 16 бит данных о положении. [Жетскроллинфо](#getscrollinfo) и `SetScrollInfo` Предоставьте 32 разрядов данных о положении полосы прокрутки. Таким же, приложение может вызвать `GetScrollInfo` во время обработки либо, `CWnd::OnHScroll` `CWnd::OnVScroll` чтобы получить 32-разрядные данные о положении полосы прокрутки.
 
 > [!NOTE]
-> [CWnd::GetScrollInfo](#getscrollinfo) позволяет приложениям использовать 32-битные позиции прокрутки-бар.
+> [CWnd:: жетскроллинфо](#getscrollinfo) позволяет приложениям использовать позиции полосы прокрутки 32-бит.
 
-## <a name="cwndsetscrollpos"></a><a name="setscrollpos"></a>CWnd::SetScrollPos
+## <a name="cwndsetscrollpos"></a><a name="setscrollpos"></a>CWnd:: Сетскроллпос
 
-Устанавливает текущее положение окна прокрутки и, при необходимости, перерисовывает панель прокрутки, чтобы отразить новое положение окна прокрутки.
+Задает текущую точку прокрутки и (при запросе) перерисовывает полосу прокрутки, чтобы отразить новую точку полосы прокрутки.
 
 ```
 int SetScrollPos(
@@ -11659,28 +11659,28 @@ int SetScrollPos(
 
 ### <a name="parameters"></a>Параметры
 
-*nБар*<br/>
-Определяет набор панели прокрутки. Этот параметр может быть одним из следующих:
+*нбар*<br/>
+Задает полосу прокрутки, которую необходимо задать. Этот параметр может быть одним из следующих:
 
-- SB_HORZ устанавливает положение окна прокрутки в горизонтальной панели прокрутки окна.
+- SB_HORZ задает расположение ползунка в горизонтальной полосе прокрутки окна.
 
-- SB_VERT устанавливает положение окна прокрутки в вертикальной панели прокрутки окна.
+- SB_VERT Задает расположение ползунка в вертикальной полосе прокрутки окна.
 
-*Npos*<br/>
-Определяет новое положение окна прокрутки. Она должна находиться в пределах диапазона прокрутки.
+*nPos*<br/>
+Задает новое расположение ползунка. Он должен находиться в пределах диапазона прокрутки.
 
 *bRedraw*<br/>
-Определяет, следует ли перекрасить панель прокрутки, чтобы отразить новое положение окна прокрутки. Если этот параметр является правдой, панель прокрутки перекрашивается; если FALSE, бар прокрутки не перекрашивается.
+Указывает, следует ли перерисовать полосу прокрутки, чтобы отразить новую точку прокрутки. Если этот параметр имеет значение TRUE, полоса прокрутки перерисовывается; Если значение равно FALSE, полоса прокрутки не перерисовывается.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Предыдущее положение окна прокрутки.
+Предыдущее расположение ползунка.
 
 ### <a name="remarks"></a>Remarks
 
-Установка *bRedraw* на FALSE полезна всякий раз, когда панель прокрутки будет перерисована последующим вызовом на другую функцию.
+Установка параметра *бредрав* в значение false полезно, когда полоса прокрутки будет перерисована при последующем вызове другой функции.
 
-## <a name="cwndsetscrollrange"></a><a name="setscrollrange"></a>CWnd::SetScrollRange
+## <a name="cwndsetscrollrange"></a><a name="setscrollrange"></a>CWnd:: Сетскроллранже
 
 Задает для указанной полосы прокрутки положения минимума и максимума.
 
@@ -11694,33 +11694,33 @@ void SetScrollRange(
 
 ### <a name="parameters"></a>Параметры
 
-*nБар*<br/>
-Определяет набор панели прокрутки. Этот параметр может быть одним из следующих значений:
+*нбар*<br/>
+Задает полосу прокрутки, которую необходимо задать. Этот параметр может принимать одно из следующих значений:
 
-- SB_HORZ устанавливает диапазон горизонтальной панели прокрутки окна.
+- SB_HORZ задает диапазон горизонтальной полосы прокрутки окна.
 
-- SB_VERT устанавливает диапазон вертикальной панели прокрутки окна.
+- SB_VERT Задает диапазон вертикальной полосы прокрутки окна.
 
-*nMinPos*<br/>
-Определяет минимальное положение прокрутки.
+*нминпос*<br/>
+Задает минимальную прокрутку.
 
-*nMaxPos*<br/>
-Определяет максимальное положение прокрутки.
+*нмакспос*<br/>
+Задает максимальную точку прокрутки.
 
 *bRedraw*<br/>
-Определяет, следует ли перерисовывать панель прокрутки, чтобы отразить изменение. Если *bRedraw* является правдой, панель прокрутки перерисована; если FALSE, бар прокрутки не перерисовывается.
+Указывает, следует ли перерисовать полосу прокрутки для отражения изменения. Если *бредрав* имеет значение true, полоса прокрутки перерисовывается; Если значение равно FALSE, полоса прокрутки не перерисовывается.
 
 ### <a name="remarks"></a>Remarks
 
-Он также может быть использован, чтобы скрыть или показать стандартные бары прокрутки.
+Его также можно использовать для скрытия или отображения стандартных полос прокрутки.
 
-Приложение не должно вызывать эту функцию, чтобы скрыть бар прокрутки при обработке сообщения уведомления прокрутки-бара.
+Приложение не должно вызывать эту функцию для скрытия полосы прокрутки при обработке сообщения уведомления полосы прокрутки.
 
-Если вызов `SetScrollRange` немедленно следует за вызовом к функции члена [SetScrollPos,](#setscrollpos) параметр *bRedraw* в функции `SetScrollPos` члена должен быть 0, чтобы предотвратить дважды нарисовать бар прокрутки.
+Если вызов метода `SetScrollRange` непосредственно следует за вызовом функции-члена [сетскроллпос](#setscrollpos) , параметр *бредрав* в `SetScrollPos` функции-члене должен иметь значение 0, чтобы не допустить прорисовки полосы прокрутки дважды.
 
-Диапазон по умолчанию для стандартной панели прокрутки составляет от 0 до 100. Диапазон по умолчанию для управления панелью прокрутки пуст (как значения *nMinPos,* так и *nMaxPos* 0). Разница между значениями, указанными *nMinPos* и *nMaxPos,* не должна быть больше, чем INT_MAX.
+По умолчанию для стандартной полосы прокрутки используется диапазон от 0 до 100. Диапазон по умолчанию для элемента управления "полоса прокрутки" пуст (значения *нминпос* и *нмакспос* равны 0). Разница между значениями, заданными в *нминпос* и *нмакспос* , не должна превышать INT_MAX.
 
-## <a name="cwndsettimer"></a><a name="settimer"></a>CWnd::SetTimer
+## <a name="cwndsettimer"></a><a name="settimer"></a>CWnd:: Сеттимер
 
 Устанавливает системный таймер.
 
@@ -11736,24 +11736,24 @@ UINT_PTR SetTimer(
 
 ### <a name="parameters"></a>Параметры
 
-*nIDEvent*<br/>
-Определяет идентификатор ненулевого таймера. Если идентификатор таймер уникален, `SetTimer`это же значение возвращается . В `SetTimer` противном случае, определяет новое уникальное значение и возвращает его. Для таймер окна (который имеет функцию обратного вызова NULL), значение должно быть уникальным только для других таймер окон, которые связаны с текущим окном. Для таймер обратного вызова значение должно быть уникальным для всех таймер во всех процессах. Поэтому при создании таймер обратного вызова, более вероятно, что возвращенное значение может отличаться от значения, указанного.
+*нидевент*<br/>
+Указывает ненулевой идентификатор таймера. Если идентификатор таймера уникален, то это же значение возвращается методом `SetTimer` . В противном случае `SetTimer` определяет новое уникальное значение и возвращает его. Для таймера окна (имеющего функцию обратного вызова NULL) значение должно быть уникальным только для других таймеров Windows, связанных с текущим окном. Для таймера обратного вызова значение должно быть уникальным для всех таймеров во всех процессах. Поэтому при создании таймера обратного вызова более вероятно, что возвращаемое значение может отличаться от указанного значения.
 
-*nElapse*<br/>
-Определяет значение тайм-аута или интервал в миллисекундах.
+*нелапсе*<br/>
+Задает значение времени ожидания или интервал в миллисекундах.
 
-*lpfnTimer*<br/>
-Определяет адрес функции обратного вызова, поставляемой `TimerProc` приложением, которая обрабатывает [WM_TIMER](/windows/win32/winmsg/wm-timer) сообщений. Если этот параметр NULL, WM_TIMER сообщения помещаются в очередь сообщений приложения и обрабатываются объектом. `CWnd`
+*лпфнтимер*<br/>
+Указывает адрес `TimerProc` функции обратного вызова, предоставляемой приложением, которая обрабатывает сообщения [WM_TIMER](/windows/win32/winmsg/wm-timer) . Если этот параметр имеет значение NULL, WM_TIMER сообщения помещаются в очередь сообщений приложения и обрабатываются `CWnd` объектом.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Идентификатор таймер нового таймера, если функция успешна. Это значение может или не может быть равен значению, передаваемому через параметр *nIDEvent.* Приложение всегда должно передавать значение возврата в функцию участника [KillTimer,](#killtimer) чтобы убить таймер. Nonzero, если успешно; в противном случае, 0.
+Идентификатор таймера нового таймера, если функция выполнена успешно. Это значение может быть или не равно значению, переданному с помощью параметра *нидевент* . Приложение всегда должно передавать возвращаемое значение функции члена [киллтимер](#killtimer) для уничтожения таймера. Ненулевое значение в случае успешного выполнения; в противном случае — значение 0.
 
 ### <a name="remarks"></a>Remarks
 
-Указывается интервательное значение, и каждый раз, когда интервал проходит, система размещает WM_TIMER сообщение в очередь `TimerProc` установки сообщения в приложении или передает сообщение функции обратного вызова, определяемой приложением.
+Указывается значение интервала, и каждый раз, когда истекает интервал, система отправляет сообщение WM_TIMER в очередь установки приложения или передает сообщение в `TimerProc` функцию обратного вызова, определенную приложением.
 
-Функция обратного вызова *lpfnTimer* `TimerProc`не должна называться, но она должна быть объявлена статичной и определена следующим образом.
+Функции обратного вызова *лпфнтимер* не нужно присвоить имя `TimerProc` , но она должна быть объявлена как статическая и определена следующим образом.
 
 ```cpp
 void CALLBACK TimerProc(
@@ -11765,13 +11765,13 @@ void CALLBACK TimerProc(
 
 ### <a name="example"></a>Пример
 
-Этот пример `CWnd::SetTimer` `CWnd::OnTimer`использует, `CWnd::KillTimer` и для обработки WM_TIMER сообщений. Первый таймер настроен для отправки WM_TIMER сообщения в окно `OnStartTimer`основной кадра каждые 2 секунды. Обработчик `OnTimer` событий обрабатывает WM_TIMER сообщений для окна основного кадра. Этот метод заставляет динамик ПК сигналить каждые 2 секунды. Второй таймер отправляет сообщение функции обратного вызова каждые 3,75 секунды. `OnStopTimer`остановит оба таймеры, `CWnd::KillTimer` позвонив для каждого таймер ID.
+В этом примере `CWnd::SetTimer` `CWnd::OnTimer` `CWnd::KillTimer` для работы с сообщениями WM_TIMER используются, и. Первый таймер настроен на отправку WM_TIMER сообщения в главное окно фрейма каждые 2 секунды в `OnStartTimer` . `OnTimer`Обработчик событий обрабатывает WM_TIMER сообщения для главного окна фрейма. Этот метод заставляет динамик ПК выдавать звуковой сигнал каждые 2 секунды. Второй таймер отправляет сообщение функции обратного вызова каждые 3,75 секунд. `OnStopTimer`останавливает оба таймера, вызывая `CWnd::KillTimer` для каждого идентификатора таймера.
 
 [!code-cpp[NVC_MFCWindowing#118](../../mfc/reference/codesnippet/cpp/cwnd-class_59.cpp)]
 
-## <a name="cwndsetwindowcontexthelpid"></a><a name="setwindowcontexthelpid"></a>CWnd::SetWindowContextHelpId
+## <a name="cwndsetwindowcontexthelpid"></a><a name="setwindowcontexthelpid"></a>CWnd:: Сетвиндовконтексселпид
 
-Вызовите эту функцию участника, чтобы связать идентификатор контекста справки с указанным окном.
+Вызовите эту функцию-член, чтобы связать идентификатор контекста справки с указанным окном.
 
 ```
 BOOL SetWindowContextHelpId(DWORD dwContextHelpId);
@@ -11779,7 +11779,7 @@ BOOL SetWindowContextHelpId(DWORD dwContextHelpId);
 
 ### <a name="parameters"></a>Параметры
 
-*dwContextHelpId*<br/>
+*двконтексселпид*<br/>
 Идентификатор контекста справки.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -11788,13 +11788,13 @@ BOOL SetWindowContextHelpId(DWORD dwContextHelpId);
 
 ### <a name="remarks"></a>Remarks
 
-Если в окне ребенка нет идентификатора контекста справки, он наследует идентификатор родительского окна. Аналогичным образом, если принадлежащее окно не имеет идентификатора контекста справки, оно наследует идентификатор окна владельца. Это наследование идентификаторов контекста справки позволяет приложению установить только один идентификатор для диалогового окна и всех его элементов управления.
+Если у дочернего окна нет идентификатора контекста справки, он наследует идентификатор родительского окна. Аналогично, если собственное окно не имеет идентификатора контекста справки, оно наследует идентификатор своего окна-владельца. Такое наследование идентификаторов контекста справки позволяет приложению задать только один идентификатор для диалогового окна и всех его элементов управления.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#119](../../mfc/reference/codesnippet/cpp/cwnd-class_60.cpp)]
 
-## <a name="cwndsetwindowplacement"></a><a name="setwindowplacement"></a>CWnd::SetWindowPlacement
+## <a name="cwndsetwindowplacement"></a><a name="setwindowplacement"></a>CWnd:: Сетвиндовплацемент
 
 Задает состояние отображения, а также обычное (восстановленное), свернутое и развернутое состояния окна.
 
@@ -11804,16 +11804,16 @@ BOOL SetWindowPlacement(const WINDOWPLACEMENT* lpwndpl);
 
 ### <a name="parameters"></a>Параметры
 
-*lpwndpl*<br/>
-Указывает на структуру [WINDOWPLACEMENT,](/windows/win32/api/winuser/ns-winuser-windowplacement) которая определяет новое состояние шоу и позиции.
+*лпвндпл*<br/>
+Указывает на структуру [виндовплацемент](/windows/win32/api/winuser/ns-winuser-windowplacement) , указывающую новое состояние отображения и позиции.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Ненулевое значение, если функция выполнена успешно; в противном случае — 0.
 
-## <a name="cwndsetwindowpos"></a><a name="setwindowpos"></a>CWnd::SetWindowPos
+## <a name="cwndsetwindowpos"></a><a name="setwindowpos"></a>CWnd:: SetWindowPos
 
-Изменяет размер, положение и порядок детского, всплывающих окон и окон верхнего уровня.
+Изменяет размер, расположение и Z-порядок дочернего элемента, окна всплывающего окна и верхнего уровня.
 
 ```
 BOOL SetWindowPos(
@@ -11827,99 +11827,99 @@ BOOL SetWindowPos(
 
 ### <a name="parameters"></a>Параметры
 
-*pWndInsertAfter*<br/>
-Идентифицирует `CWnd` объект, который будет предшествовать (быть выше, чем) этот `CWnd` объект в порядке. Этот параметр может быть `CWnd` указателем на указатель или указателем на одно из следующих значений:
+*пвндинсертафтер*<br/>
+Определяет `CWnd` объект, который будет предшествовать (больше) этому `CWnd` объекту в Z-порядке. Этот параметр может быть указателем на `CWnd` или указатель на одно из следующих значений:
 
-- `wndBottom`Разместите окно в нижней части заказа. Если `CWnd` это верхнее окно, окно теряет свой верхний статус; система помещает окно в нижней части всех других окон.
+- `wndBottom`Помещает окно в нижнюю часть Z-порядка. Если это самое `CWnd` верхнее окно, окно теряет свое самое верхнее состояние, система помещает окно в нижнюю часть всех окон.
 
-- `wndTop`Разместите окно в верхней части заказа.
+- `wndTop`Размещает окно в верхней части Z-порядка.
 
-- `wndTopMost`Поместите окно над всеми не-верхними окнами. Окно сохраняет верхнее положение даже при деактивации.
+- `wndTopMost`Помещает окно над всеми окнами, не являющимися верхними. Окно сохраняет свое самое верхнее расположение, даже если оно деактивировано.
 
-- `wndNoTopMost`Перемещает окно в верхней части всех не-верхних окон (т.е. за всеми верхними окнами). Этот флаг не имеет эффекта, если окно уже не является самым верхним окном.
+- `wndNoTopMost`Перемещает окно в верхнюю часть всех окон, не являющихся верхними (то есть позади всех окон переднего плана). Этот флаг не действует, если окно уже является окном, не являющимся самым верхним.
 
-О правилах использования этого параметра можно ознакомиться в разделе "Замечания" этой темы.
+Правила использования этого параметра см. в подразделе «Примечания» этого раздела.
 
 *x*<br/>
-Определяет новое положение левой стороны окна.
+Задает новое расположение левой стороны окна.
 
-*Y*<br/>
-Определяет новое положение верхней части окна.
+*&*<br/>
+Указывает новое расположение верхней части окна.
 
-*Cx*<br/>
-Определяет новую ширину окна.
+*/CX*<br/>
+Задает новую ширину окна.
 
-*Cy*<br/>
-Определяет новую высоту окна.
+*CY*<br/>
+Задает новую высоту окна.
 
-*nФлаги*<br/>
-Определяет параметры размеров и позиционирования. Этот параметр может быть комбинацией следующих флагов:
+*нфлагс*<br/>
+Задает параметры изменения размера и позиционирования. Этот параметр может быть сочетанием следующих флагов:
 
-- SWP_DRAWFRAME рисует рамку (определяемую при создании окна) вокруг окна.
+- SWP_DRAWFRAME Рисует рамку (определенную при создании окна) вокруг окна.
 
-- SWP_FRAMECHANGED отправляет WM_NCCALCSIZE сообщение в окно, даже если размер окна не изменяется. Если этот флаг не указан, WM_NCCALCSIZE отправляется только при изменении размера окна.
+- SWP_FRAMECHANGED отправляет в окно сообщение WM_NCCALCSIZE, даже если размер окна не изменяется. Если этот флаг не указан, WM_NCCALCSIZE отправляется только при изменении размера окна.
 
-- SWP_HIDEWINDOW прячет окно.
+- SWP_HIDEWINDOW скрывает окно.
 
-- SWP_NOACTIVATE не активирует окно. Если этот флаг не установлен, окно активируется и перемещается в верхнюю часть верхней или не самой верхней группы (в зависимости от настройки параметра *pWndInsertAfter).*
+- SWP_NOACTIVATE не активирует окно. Если этот флаг не установлен, окно активируется и перемещается в верхнюю часть самой верхней или неверхней группы (в зависимости от значения параметра *пвндинсертафтер* ).
 
-- SWP_NOCOPYBITS отбрасывает все содержимое клиентской области. Если этот флаг не указан, допустимое содержимое клиентской области сохраняется и скопировано обратно в область клиента после размера или перерасположения окна.
+- SWP_NOCOPYBITS отменяет все содержимое клиентской области. Если этот флаг не указан, допустимое содержимое клиентской области сохраняется и копируется обратно в клиентскую область после изменения размера окна или его расположения.
 
-- SWP_NOMOVE сохраняет текущее положение (игнорирует параметры *x* и *y).*
+- SWP_NOMOVE оставляет текущее расположение (игнорирует параметры *x* и *y* ).
 
-- SWP_NOOWNERZORDER не меняет положение окна владельца в заказе.
+- SWP_NOOWNERZORDER не изменяет расположение окна владельца в Z-порядке.
 
-- SWP_NOREDRAW не перерисовываю изменения. Если этот флаг установлен, перекрашивание любого рода не происходит. Это относится к области клиента, области неклиента (включая заголовок и прокрутки баров), и любой части родительского окна обнаружили в результате перемещенного окна. Когда этот флаг установлен, приложение должно явно аннулировать или перерисовать любые части окна и родительского окна, которые должны быть перерисованы.
+- SWP_NOREDRAW не перерисовывает изменения. Если этот флаг установлен, перерисовка какого-либо вида не происходит. Это относится к клиентской области, неклиентской области (включая заголовок и полосы прокрутки) и любой части родительского окна, обнаруженной в результате перемещения окна. Если этот флаг установлен, приложение должно явно сделать недействительным или перерисовывать любые части окна и родительского окна, которые необходимо перерисовать.
 
-- SWP_NOREPOSITION же, что и SWP_NOOWNERZORDER.
+- SWP_NOREPOSITION то же, что и SWP_NOOWNERZORDER.
 
-- SWP_NOSENDCHANGING предотвращает получение WM_WINDOWPOSCHANGING сообщения.
+- SWP_NOSENDCHANGING предотвращает получение WM_WINDOWPOSCHANGING сообщения окном.
 
-- SWP_NOSIZE сохраняет текущий размер (игнорирует параметры *cx* и *cy).*
+- SWP_NOSIZE оставляет текущий размер (игнорирует параметры *CX* и *CY* ).
 
-- SWP_NOZORDER сохраняет текущий заказ (игнорирует *pWndInsertAfter).*
+- SWP_NOZORDER оставляет текущее упорядочение (игнорирует *пвндинсертафтер*).
 
 - SWP_SHOWWINDOW отображает окно.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Nonzero, если функция успешна; в противном случае, 0.
+Ненулевое значение, если функция выполнена успешно; в противном случае — значение 0.
 
 ### <a name="remarks"></a>Remarks
 
-Окна заказываются на экране в соответствии с их заказом; окно в верхней части заказа появляется поверх всех других окон в порядке.
+Окна упорядочиваются на экране в соответствии с их Z-порядком; окно в верхней части Z-порядка отображается поверх всех остальных окон в порядке.
 
-Все координаты для детских окон являются координатами клиента (относительно верхнего левого угла клиентской области родительского окна).
+Все координаты дочерних окон — это клиентские координаты (относительно левого верхнего угла клиентской области родительского окна).
 
-Окно может быть перемещено в верхнюю часть заказа либо путем установки параметра *pWndInsertAfter*&**wndTopMost** и обеспечения того, чтобы SWP_NOZORDER флаг не установлен, либо установив порядок окна, чтобы он был выше любых существующих верхних окон. Когда не топмост окна сделан топмост, его принадлежащих окна также сделаны сверху. Его владельцы не меняются.
+Окно можно переместить в начало Z-порядка, установив для параметра *пвндинсертафтер* значение **&вндтопмост** и убедившись, что флаг SWP_NOZORDER не установлен, или задать Z-порядок окна, чтобы он настроился над всеми существующими верхними окнами. Если не присвоено самое верхнее окно, его собственные окна также становятся верхними. Его владельцы не изменяются.
 
-Верхнее окно больше не верхнее, если оно перемещается на дно **(&wndBottom)** от заказа или после любого окна, не являватого верхним. Когда верхнее окно сделано без верхнего, все его владельцы и принадлежащие ему окна также сделаны не верхние окна.
+Верхнее окно больше не является верхним, если оно перемещено в нижнюю ( **&вндботтом**) Z-порядка или после любого другого окна. Когда самое верхнее окно становится не самым верхним, все его владельцы и его собственные окна также становятся окнами, не являющимися самым верхними.
 
-Если ни SWP_NOACTIVATE ни SWP_NOZORDER не указаны (т.е. когда приложение просит одновременно активировать окно и поместить его в указанный порядок), значение, указанное в *pWndInsertAfter,* используется только при следующих обстоятельствах:
+Если не указано ни SWP_NOACTIVATE, ни SWP_NOZORDER (т. е. когда приложение запрашивает одновременное активацию окна и помещение в указанный Z-порядок), значение, указанное в *пвндинсертафтер* , используется только в следующих случаях.
 
-- Ни **&wndTopMost,** ни **&wndNoTopMost** не указаны в параметре *pWndInsertAfter.*
+- Ни **&вндтопмост** , ни **&внднотопмост** не указаны в параметре *пвндинсертафтер* .
 
-- Это окно не является активным окном.
+- Это окно не является активным.
 
-Приложение не может активировать неактивное окно, не доведя его до верхней части заказа. Приложения могут изменять порядок активации окна без ограничений.
+Приложение не может активировать неактивное окно, не открывая его в верхней части Z-порядка. Приложения могут изменять Z-порядок активированного окна без ограничений.
 
-Окно, не являвщееся топом, может иметь верхнее окно, но не наоборот. Любое окно (например, диалоговая будка), принадлежащее самому верхнему окну, само по себе является верхним окном, чтобы гарантировать, что все принадлежащие окна остаются выше своего владельца.
+Окно, которое не является самым верхним, может владеть самым верхним окном, но не наоборот. Любое окно (например, диалоговое окно), принадлежащее самому верхнему окну, само по себе представляет собой самое верхнее окно, гарантирующее, что все собственные окна остаются над их владельцем.
 
-С версиями Windows 3.1 и более поздними, окна могут быть перемещены в верхнюю часть заказа и заблокированы там, установив свои WS_EX_TOPMOST стили. Такое верхнее окно сохраняет свое верхнее положение даже при деактивации. Например, выбор команды WinHelp Always On Top делает окно справки самым верхним, а затем остается видимым при возвращении в приложение.
+В Windows версии 3,1 и более поздних Windows можно переместить в начало Z-порядка и заблокировать их в соответствии с настройками стилей WS_EX_TOPMOST. Такое самое верхнее окно сохраняет свое самое верхнее расположение даже при отключении. Например, при выборе команды WinHelp Always On Top окно справки становится самым верхним, а после возврата в приложение остается видимым.
 
-Чтобы создать верхнее окно, позвоните `SetWindowPos` с параметром *pWndInsertAfter,* равным&**wndTopMost,** или установите WS_EX_TOPMOST стиль при создании окна.
+Чтобы создать самое верхнее окно, вызовите метод `SetWindowPos` с параметром *пвндинсертафтер* , равным **&вндтопмост**, или задайте стиль WS_EX_TOPMOST при создании окна.
 
-Если в заказе есть окна со стилем WS_EX_TOPMOST, то окно, перемещенное с **&wndTopMost** значение, помещается в верхней части всех окон, не являющихся самыми верхними окнами, но ниже любых верхних окон. Когда приложение активирует неактивное окно без WS_EX_TOPMOST бита, окно перемещается выше всех не верхних окон, но ниже любых верхних окон.
+Если Z-порядок содержит все окна с WS_EX_TOPMOST стилем, то окно, перемещенное со значением **&вндтопмост** , помещается в верхней части всех окон, не являющихся верхними, но под любыми верхними окнами. Когда приложение активирует неактивное окно без WS_EX_TOPMOST бита, окно перемещается над всеми не являющимися верхними окнами, а под любыми верхними окнами.
 
-Если `SetWindowPos` *параметр pWndInsertAfter* **&wndBottom** `CWnd` и является верхним окном, окно теряет свой верхний статус (WS_EX_TOPMOST очищается), и система помещает окно в нижней части заказа.
+Если `SetWindowPos` метод вызывается, когда параметр *пвндинсертафтер* имеет значение **&вндботтом** и `CWnd` является самым верхним окном, окно теряет свое самое верхнее состояние (WS_EX_TOPMOST снимается), и система помещает окно в нижнюю часть Z-порядка.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#120](../../mfc/reference/codesnippet/cpp/cwnd-class_61.cpp)]
 
-## <a name="cwndsetwindowrgn"></a><a name="setwindowrgn"></a>CWnd::SetWindowRgn
+## <a name="cwndsetwindowrgn"></a><a name="setwindowrgn"></a>CWnd:: Сетвиндовргн
 
-Вызовите эту функцию участника, чтобы установить область окна.
+Вызовите эту функцию-член, чтобы задать регион окна.
 
 ```
 int SetWindowRgn(
@@ -11929,25 +11929,25 @@ int SetWindowRgn(
 
 ### <a name="parameters"></a>Параметры
 
-*hRgn*<br/>
-Ручка в регион.
+*хргн*<br/>
+Маркер для региона.
 
 *bRedraw*<br/>
-Если true, операционная система перерисовывает окно после установки региона; в противном случае, это не так. Как правило, установите *bRedraw* к TRUE, если окно видно. Если установить на TRUE, система отправляет WM_WINDOWPOSCHANGING и WM_WINDOWPOSCHANGED сообщения в окно.
+Если задано значение TRUE, операционная система перерисовывает окно после задания региона. в противном случае — нет. Как правило, установите для *бредрав* значение true, если окно является видимым. Если задано значение TRUE, система отправляет в окно WM_WINDOWPOSCHANGING и WM_WINDOWPOSCHANGED сообщения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если функция успешно, значение возврата неявляется. Если функция выполняется неудачно, возвращается нулевое значение.
+Если функция выполнена, возвращаемое значение не равно нулю. Если функция выполняется неудачно, возвращается нулевое значение.
 
 ### <a name="remarks"></a>Remarks
 
-Координаты области окна относительно верхнего левого угла окна, а не клиентской области окна.
+Координаты области окна окна задаются относительно левого верхнего угла окна, а не клиентской области окна.
 
-После успешного `SetWindowRgn`вызова в, операционная система владеет регионом, указанным в регионе ручкой *hRgn*. Операционная система не делает копию региона, поэтому не делайте никаких дальнейших вызовов функции с этой обработкой региона, и не закрывайте эту ручку региона.
+После успешного вызова операционной системе будет присвоена `SetWindowRgn` область, указанная в маркере региона *хргн*. Операционная система не копирует этот регион, поэтому не делайте дальнейших вызовов функций с этим маркером области и не закрывайте этот маркер области.
 
-## <a name="cwndsetwindowtext"></a><a name="setwindowtext"></a>CWnd::SetWindowText
+## <a name="cwndsetwindowtext"></a><a name="setwindowtext"></a>CWnd:: SetWindowText
 
-Устанавливает название окна в указанном тексте.
+Задает заголовок окна для указанного текста.
 
 ```cpp
 void SetWindowText(LPCTSTR lpszString);
@@ -11955,22 +11955,22 @@ void SetWindowText(LPCTSTR lpszString);
 
 ### <a name="parameters"></a>Параметры
 
-*lpszString*<br/>
-Очки на объект [CString](../../atl-mfc-shared/reference/cstringt-class.md) или строку с нулевым завершением, которая будет использоваться в качестве нового заголовка или текста управления.
+*лпсзстринг*<br/>
+Указывает на объект [CString](../../atl-mfc-shared/reference/cstringt-class.md) или строку, завершающуюся нулем, для использования в качестве нового заголовка или текста элемента управления.
 
 ### <a name="remarks"></a>Remarks
 
-Если окно является элементом управления, текст внутри элемента управления устанавливается.
+Если окно является элементом управления, задается текст в элементе управления.
 
-Эта функция приводит к отправке [WM_SETTEXT](/windows/win32/winmsg/wm-settext) сообщения в это окно.
+Эта функция вызывает отправку сообщения [WM_SETTEXT](/windows/win32/winmsg/wm-settext) в это окно.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#121](../../mfc/reference/codesnippet/cpp/cwnd-class_62.cpp)]
 
-## <a name="cwndshowcaret"></a><a name="showcaret"></a>CWnd::ShowCaret
+## <a name="cwndshowcaret"></a><a name="showcaret"></a>CWnd:: Шовкарет
 
-Показывает карету на экране в текущем положении caret.
+Показывает курсор на экране в текущей позиции курсора.
 
 ```cpp
 void ShowCaret();
@@ -11980,19 +11980,19 @@ void ShowCaret();
 
 После отображения курсор начинает автоматически мигать.
 
-Функция `ShowCaret` члена показывает карету только в том случае, если она имеет текущую форму и не была скрыта два или более раз подряд. Если каретне не принадлежит этому окну, каретне не отображается.
+`ShowCaret`Функция-член показывает курсор, только если у него есть текущая фигура и он не был скрыт два или более раз подряд. Если курсор не принадлежит этому окну, курсор не отображается.
 
-Скрытие карет является кумулятивным. Если функция члена [HideCaret](#hidecaret) была вызвана `ShowCaret` пять раз подряд, необходимо вызвать пять раз, чтобы показать уход.
+Скрытие курсора является кумулятивным. Если функция члена [хидекарет](#hidecaret) вызывалась пять раз подряд, `ShowCaret` для отображения курсора должна вызываться пять раз.
 
-Caret является общим ресурсом. Окно должно отображать caret только тогда, когда он имеет входиный фокус или активен.
+Курсор является общим ресурсом. Окно должно показывать курсор только в том случае, если он имеет фокус ввода или активен.
 
 ### <a name="example"></a>Пример
 
-  Смотрите пример [для CWnd::CreateCaret](#createcaret).
+  См. пример для [CWnd:: креатекарет](#createcaret).
 
-## <a name="cwndshowownedpopups"></a><a name="showownedpopups"></a>CWnd::ShowOwnedPopups
+## <a name="cwndshowownedpopups"></a><a name="showownedpopups"></a>CWnd:: Шововнедпопупс
 
-Показывает или скрывает все всплывающие окна, принадлежащие этому окну.
+Показывает или скрывает все всплывающие окна, принадлежащие данному окну.
 
 ```cpp
 void ShowOwnedPopups(BOOL bShow = TRUE);
@@ -12001,15 +12001,15 @@ void ShowOwnedPopups(BOOL bShow = TRUE);
 ### <a name="parameters"></a>Параметры
 
 *bShow*<br/>
-Определяет, должны ли быть показаны или скрыты всплывающие окна. Если этот параметр является правдой, все скрытые всплывающие окна отображаются. Если этот параметр FALSE, все видимые всплывающие окна скрыты.
+Указывает, должны ли отображаться или скрываться всплывающие окна. Если этот параметр имеет значение TRUE, отображаются все скрытые всплывающие окна. Если этот параметр имеет значение FALSE, все видимые всплывающие окна скрыты.
 
 ### <a name="example"></a>Пример
 
-  Смотрите пример [CWnd::SetWindowPos](#setwindowpos).
+  См. пример для [CWnd:: SetWindowPos](#setwindowpos).
 
-## <a name="cwndshowscrollbar"></a><a name="showscrollbar"></a>CWnd::ShowScrollBar
+## <a name="cwndshowscrollbar"></a><a name="showscrollbar"></a>CWnd:: Шовскроллбар
 
-Показывает или скрывает бар прокрутки.
+Показывает или скрывает полосу прокрутки.
 
 ```cpp
 void ShowScrollBar(
@@ -12019,25 +12019,25 @@ void ShowScrollBar(
 
 ### <a name="parameters"></a>Параметры
 
-*nБар*<br/>
-Определяет, является ли панель прокрутки элементом управления или частью области неклиента окна. Если он является частью области неклиента, *nBar* также указывает, находится ли панель прокрутки горизонтально, вертикально или и то, и другое. Она должна быть одной из следующих:
+*нбар*<br/>
+Указывает, является ли полоса прокрутки элементом управления или частью неклиентской области окна. Если он является частью неклиентской области, *НБАР* также указывает, располагается ли полоса прокрутки горизонтально, вертикально или и то, и другое. Он должен быть одним из следующих:
 
-- SB_BOTH определяет горизонтальные и вертикальные прокрутки баров окна.
+- SB_BOTH задает горизонтальные и вертикальные полосы прокрутки окна.
 
-- SB_HORZ указывает, что окно представляет собой горизонтальную панель прокрутки.
+- SB_HORZ Указывает, что окно является горизонтальной полосой прокрутки.
 
-- SB_VERT указывает, что окно представляет собой вертикальный бар прокрутки.
+- SB_VERT указывает, что окно является вертикальной полосой прокрутки.
 
 *bShow*<br/>
-Определяет, показывает ли Windows или скрывает бар прокрутки. Если этот параметр является правдой, отображается панель прокрутки; в противном случае бар прокрутки скрыт.
+Указывает, будет ли Windows показывать или скрывать полосу прокрутки. Если этот параметр имеет значение TRUE, отображается полоса прокрутки. в противном случае полоса прокрутки будет скрыта.
 
 ### <a name="remarks"></a>Remarks
 
-Приложение не должно `ShowScrollBar` вызываться, чтобы скрыть бар прокрутки при обработке сообщения уведомления прокрутки-бара.
+Приложение не должно вызывать `ShowScrollBar` для скрытия полосы прокрутки при обработке сообщения уведомления полосы прокрутки.
 
-## <a name="cwndshowwindow"></a><a name="showwindow"></a>CWnd::ShowWindow
+## <a name="cwndshowwindow"></a><a name="showwindow"></a>CWnd:: ShowWindow
 
-Устанавливает состояние видимости окна.
+Задает состояние видимости окна.
 
 ```
 BOOL ShowWindow(int nCmdShow);
@@ -12045,44 +12045,44 @@ BOOL ShowWindow(int nCmdShow);
 
 ### <a name="parameters"></a>Параметры
 
-*nCmdShow*<br/>
-Определяет, как `CWnd` должно быть показано. Это должно быть одно из следующих значений:
+*нкмдшов*<br/>
+Указывает способ `CWnd` отображения. Оно должно иметь одно из следующих значений:
 
-- SW_HIDE скрывает это окно и передает активацию в другое окно.
+- SW_HIDE Скрывает это окно и передает активацию другому окну.
 
-- SW_MINIMIZE минимизирует окно и активирует окно верхнего уровня в списке системы.
+- SW_MINIMIZE свертывает окно и активирует окно верхнего уровня в списке системы.
 
-- SW_RESTORE активирует и отображает окно. Если окно сведено к минимуму или максимизировано, Windows восстанавливает его до исходного размера и положения.
+- SW_RESTORE активирует и отображает окно. Если окно является сведенным или развернутым, Windows восстанавливает его исходный размер и расположение.
 
 - SW_SHOW активирует окно и отображает его в текущем размере и положении.
 
-- SW_SHOWMAXIMIZED активирует окно и отображает его как максимальное окно.
+- SW_SHOWMAXIMIZED активирует окно и отображает его как развернутое окно.
 
-- SW_SHOWMINIMIZED активирует окно и отображает его как значок.
+- SW_SHOWMINIMIZED активирует окно и отображает его в виде значка.
 
-- SW_SHOWMINNOACTIVE отображает окно в виде значка. Окно, которое в настоящее время активно, остается активным.
+- SW_SHOWMINNOACTIVE отображает окно в виде значка. Активное окно остается активным.
 
-- SW_SHOWNA отображает окно в текущем состоянии. Окно, которое в настоящее время активно, остается активным.
+- SW_SHOWNA отображает окно в текущем состоянии. Активное окно остается активным.
 
-- SW_SHOWNOACTIVATE отображает окно в своем последнем размере и положении. Окно, которое в настоящее время активно, остается активным.
+- SW_SHOWNOACTIVATE отображает окно в самом последнем размере и положении. Активное окно остается активным.
 
-- SW_SHOWNORMAL активирует и отображает окно. Если окно сведено к минимуму или максимизировано, Windows восстанавливает его до исходного размера и положения.
+- SW_SHOWNORMAL активирует и отображает окно. Если окно является сведенным или развернутым, Windows восстанавливает его исходный размер и расположение.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Nonzero, если окно было ранее видно; 0, `CWnd` если ранее был скрыт.
+Ненулевое значение, если окно было ранее видимо; 0, если `CWnd` ранее был скрыт.
 
 ### <a name="remarks"></a>Remarks
 
-`ShowWindow`должны быть вызваны только один раз в приложение для основного окна с [CWinApp::m_nCmdShow](../../mfc/reference/cwinapp-class.md#m_ncmdshow). Последующие `ShowWindow` вызовы должны использовать одно из значений, `CWinApp::m_nCmdShow`перечисленных выше, вместо указанного .
+`ShowWindow`метод должен вызываться только один раз для каждого приложения в главном окне с помощью [CWinApp:: m_nCmdShow](../../mfc/reference/cwinapp-class.md#m_ncmdshow). Последующие вызовы `ShowWindow` должны использовать одно из приведенных выше значений вместо того, которое указано в `CWinApp::m_nCmdShow` .
 
 ### <a name="example"></a>Пример
 
-  Смотрите пример [для CWnd::CalcWindowRect](#calcwindowrect).
+  См. пример для [CWnd:: калквиндоврект](#calcwindowrect).
 
-## <a name="cwndsubclassdlgitem"></a><a name="subclassdlgitem"></a>CWnd::SubclassDlgItem
+## <a name="cwndsubclassdlgitem"></a><a name="subclassdlgitem"></a>CWnd:: Субклассдлгитем
 
-Вызовите эту функцию участника в "динамически подкласс" элементом, `CWnd` созданным из шаблона диалогов, и прикрепите его к этому объекту.
+Вызовите эту функцию-член, чтобы динамически подклассировать элемент управления, созданный из шаблона диалогового окна, и присоединить его к этому `CWnd` объекту.
 
 ```
 BOOL SubclassDlgItem(
@@ -12095,8 +12095,8 @@ BOOL SubclassDlgItem(
 *nID*<br/>
 Идентификатор элемента управления.
 
-*pРодитель*<br/>
-Родитель элемента управления (обычно диалоговая коробка).
+*ппарент*<br/>
+Родительский элемент управления (обычно это диалоговое окно).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -12104,17 +12104,17 @@ BOOL SubclassDlgItem(
 
 ### <a name="remarks"></a>Remarks
 
-Когда элемент управления динамически подклассифицирован, `CWnd`сообщения окон будут направляться через `CWnd`карту сообщений 's и обработчики сообщений в классе 'в первую очередь. Сообщения, передаваемые базовому классу, будут передаваться обработчику сообщений по умолчанию в элементе управления.
+Если элемент управления является динамически подклассом, сообщения Windows будут маршрутизироваться через `CWnd` схему сообщений и сначала вызываются обработчики сообщений в `CWnd` классе. Сообщения, передаваемые в базовый класс, передаются в обработчик сообщений по умолчанию в элементе управления.
 
-Эта функция члена прикрепляет `CWnd` элемент управления Windows к `WndProc` объекту и заменяет элемент управления и `AfxWndProc` функции. Функция хранит старое `WndProc` в месте, `GetSuperWndProcAddr` возвращенном функцией члена.
+Эта функция-член присоединяет элемент управления Windows к `CWnd` объекту и заменяет функции элемента управления `WndProc` и `AfxWndProc` . Функция сохраняет старый объект `WndProc` в расположении, возвращенном `GetSuperWndProcAddr` функцией члена.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#122](../../mfc/reference/codesnippet/cpp/cwnd-class_63.cpp)]
 
-## <a name="cwndsubclasswindow"></a><a name="subclasswindow"></a>CWnd::SubclassWindow
+## <a name="cwndsubclasswindow"></a><a name="subclasswindow"></a>CWnd:: Субклассвиндов
 
-Вызовите эту функцию участника, чтобы "динамически `CWnd` подкласс" окно и прикрепить его к этому объекту.
+Вызовите эту функцию-член, чтобы "динамически подклассировать" окно и присоединить его к этому `CWnd` объекту.
 
 ```
 BOOL SubclassWindow(HWND hWnd);
@@ -12122,8 +12122,8 @@ BOOL SubclassWindow(HWND hWnd);
 
 ### <a name="parameters"></a>Параметры
 
-*Hwnd*<br/>
-Ручка к окну.
+*hWnd*<br/>
+Маркер окна.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -12131,20 +12131,20 @@ BOOL SubclassWindow(HWND hWnd);
 
 ### <a name="remarks"></a>Remarks
 
-Когда окно динамически подклассно, сообщения окон `CWnd`будут направляться через карту сообщений `CWnd`'s и обработчики сообщений в классе 'в первую очередь. Сообщения, передаваемые базовому классу, будут передаваться обработчику сообщений по умолчанию в окне.
+Когда окно динамически подклассировать, сообщения Windows будут направляться через `CWnd` схему сообщений и вызывать обработчики сообщений в классе в `CWnd` первую очередь. Сообщения, передаваемые в базовый класс, передаются в обработчик сообщений по умолчанию в окне.
 
-Эта функция члена прикрепляет `CWnd` элемент управления Windows к `WndProc` объекту и заменяет окно и `AfxWndProc` функции. Функция хранит указатель на `WndProc` старый `CWnd` объект.
+Эта функция-член присоединяет элемент управления Windows к `CWnd` объекту и заменяет окна `WndProc` и `AfxWndProc` функции. Функция сохраняет указатель на старый `WndProc` `CWnd` объект в объекте.
 
 > [!NOTE]
-> Окно не должно быть уже прикреплено к объекту MFC при вызове этой функции.
+> Окно не должно быть уже присоединено к объекту MFC при вызове этой функции.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#123](../../mfc/reference/codesnippet/cpp/cwnd-class_64.cpp)]
 
-## <a name="cwndunlockwindowupdate"></a><a name="unlockwindowupdate"></a>CWnd::UnlockWindowUpdate
+## <a name="cwndunlockwindowupdate"></a><a name="unlockwindowupdate"></a>CWnd:: Унлокквиндовупдате
 
-Вызов эту функцию участника, чтобы `CWnd::LockWindowUpdate`разблокировать окно, которое было заблокировано с .
+Вызовите эту функцию-член, чтобы разблокировать окно, которое было заблокировано `CWnd::LockWindowUpdate` .
 
 ```cpp
 void UnlockWindowUpdate();
@@ -12152,11 +12152,11 @@ void UnlockWindowUpdate();
 
 ### <a name="remarks"></a>Remarks
 
-Только одно окно за один `LockWindowUpdate`раз может быть заблокировано с помощью. Смотрите [CWnd::LockWindowUpdate](#lockwindowupdate) или функцию Win32 [LockWindowUpdate](/windows/win32/api/winuser/nf-winuser-lockwindowupdate) для получения дополнительной информации о блокировке окон.
+С помощью можно заблокировать только одно окно за раз `LockWindowUpdate` . Дополнительные сведения о блокировке окон см. в разделе [CWnd:: локквиндовупдате](#lockwindowupdate) или в функции Win32 [локквиндовупдате](/windows/win32/api/winuser/nf-winuser-lockwindowupdate) .
 
-## <a name="cwndunsubclasswindow"></a><a name="unsubclasswindow"></a>CWnd::UnsubclassWindow
+## <a name="cwndunsubclasswindow"></a><a name="unsubclasswindow"></a>CWnd:: Унсубклассвиндов
 
-Вызовите эту `WndProc` функцию участника, чтобы вернуться к исходному значению `CWnd` и отсоединить окно, идентифицированное HWND, от объекта.
+Вызовите эту функцию члена, чтобы `WndProc` вернуться к исходному значению и отсоединить окно, идентифицируемое HWND, от `CWnd` объекта.
 
 ```
 HWND UnsubclassWindow();
@@ -12164,15 +12164,15 @@ HWND UnsubclassWindow();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ручка к неподклассивомок окна.
+Маркер неподклассового окна.
 
 ### <a name="example"></a>Пример
 
-  Смотрите пример [CWnd::SubclassWindow](#subclasswindow).
+  См. пример для [CWnd:: субклассвиндов](#subclasswindow).
 
-## <a name="cwndupdatedata"></a><a name="updatedata"></a>CWnd:UpdateData
+## <a name="cwndupdatedata"></a><a name="updatedata"></a>CWnd:: Упдатедата
 
-Вызов инициализации данных в диалоговом поле или для извлечения и проверки данных диалогов.
+Эта функция-член вызывается для инициализации данных в диалоговом окне, а также для получения и проверки данных диалогового окна.
 
 ```
 BOOL UpdateData(BOOL bSaveAndValidate = TRUE);
@@ -12180,20 +12180,20 @@ BOOL UpdateData(BOOL bSaveAndValidate = TRUE);
 
 ### <a name="parameters"></a>Параметры
 
-*bSaveAndValidate*<br/>
-Пометить, указывает ли диалоговое поле в настоящее время инициализированы (FALSE) или данные извлекаются (TRUE).
+*бсавеандвалидате*<br/>
+Флаг, указывающий, выполняется ли инициализация диалогового окна (FALSE) или данные извлекаются (TRUE).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Nonzero, если операция прошла успешно; в противном случае 0. Если *bSaveAndValidat*e является правдой, то значение возврата ненулевого означает, что данные успешно проверены.
+Ненулевое значение, если операция выполнена успешно; в противном случае — 0. Если *бсавеандвалидат*e имеет значение true, то возвращаемое значение ненулевой означает, что данные успешно проверены.
 
 ### <a name="remarks"></a>Remarks
 
-Платформа автоматически `UpdateData` вызывает с *bSaveAndValidate* установить false, когда модальный диалоговый ящик создается в реализации по умолчанию [CDialog::OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog). Вызов происходит до того, как будет виден диалоговый ящик. Реализация [CDialog по умолчанию::OnOK](../../mfc/reference/cdialog-class.md#onok) вызывает эту функцию участника с *bSaveAndValidate* набор для получения данных, и в случае успеха, закроет диалоговое окно. (Если кнопка «Отмена» нажата в диалоговом поле, диалоговая будка закрывается без получения данных.)
+Платформа автоматически вызывает `UpdateData` параметр *бсавеандвалидате* со значением false, когда модальное диалоговое окно создается в реализации класса [CDialog:: онинитдиалог](../../mfc/reference/cdialog-class.md#oninitdialog)по умолчанию. Вызов происходит перед отображением диалогового окна. Реализация класса [CDialog:: ОНОК](../../mfc/reference/cdialog-class.md#onok) , используемая по умолчанию, вызывает эту функцию члена с параметром *бсавеандвалидате* , для которого задано значение true, чтобы получить данные, и при успешном завершении закроет диалоговое окно. (Если в диалоговом окне нажата кнопка "Отмена", диалоговое окно закрывается без извлечения данных.)
 
-## <a name="cwndupdatedialogcontrols"></a><a name="updatedialogcontrols"></a>CWnd::UpdateDialogControls
+## <a name="cwndupdatedialogcontrols"></a><a name="updatedialogcontrols"></a>CWnd:: Упдатедиалогконтролс
 
-Вызов ими функции участника для обновления состояния кнопок диалога и других элементов управления в диалоговом окне или окне, использующем [механизм ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) обратного вызова.
+Вызовите эту функцию-член, чтобы обновить состояние кнопок диалогового окна и других элементов управления в диалоговом окне или окне, использующем механизм обратного вызова [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) .
 
 ```cpp
 void UpdateDialogControls(
@@ -12203,19 +12203,19 @@ void UpdateDialogControls(
 
 ### <a name="parameters"></a>Параметры
 
-*pTarget*<br/>
-Указывает на основное окно кадра приложения и используется для направления сообщений обновления.
+*птаржет*<br/>
+Указывает на главное окно приложения и используется для маршрутизации сообщений об обновлениях.
 
-*bDisableIfNoHndler*<br/>
-Пометить, следует ли автоматически отображать элемент управления, не обличенного обработчиком обновлений, как отключенный.
+*бдисаблеифнохндлер*<br/>
+Флаг, указывающий, должен ли автоматически отображаться элемент управления, не имеющий обработчика обновлений, как отключенный.
 
 ### <a name="remarks"></a>Remarks
 
-Если у детского контроля нет обработчика и *bDisableIfNoHndler* является правдой, то контроль над детьми будет отключен.
+Если дочерний элемент управления не имеет обработчика, а *бдисаблеифнохндлер* имеет значение true, то дочерний элемент управления будет отключен.
 
-Платформа вызывает эту функцию элемента для элементов управления в диалоговых барах или панели инструментов как часть простоя обработки приложения.
+Платформа вызывает эту функцию члена для элементов управления в диалоговых окнах или панелях инструментов в рамках обработки бездействия приложения.
 
-## <a name="cwndupdatelayeredwindow"></a><a name="updatelayeredwindow"></a>CWnd::UpdateLayeredWindow
+## <a name="cwndupdatelayeredwindow"></a><a name="updatelayeredwindow"></a>CWnd:: Упдателайередвиндов
 
 Обновляет положение, размер, форму, содержимое и прозрачность многослойного окна.
 
@@ -12233,47 +12233,47 @@ BOOL UpdateLayeredWindow(
 
 ### <a name="parameters"></a>Параметры
 
-*pDCDst*<br/>
-Указатель на контекст устройства для экрана. Он используется для соответствия цвета палитры при обновлении содержимого окна. Если *pDCDst* является NULL, будет использоваться палитра по умолчанию.
+*пдкдст*<br/>
+Указатель на контекст устройства для экрана. Он используется для сопоставления цветов палитры при обновлении содержимого окна. Если *пдкдст* имеет значение null, будет использоваться палитра по умолчанию.
 
-Если *pDCSrc* является NULL, *pDCDst* должен быть NULL.
+Если *пдксрк* имеет значение null, *пдкдст* должен иметь значение null.
 
-*pptDst*<br/>
-Указатель на `POINT` структуру, определяющую новое положение экрана многослойного окна. Если текущая позиция не меняется, *pptDst* может быть NULL.
+*пптдст*<br/>
+Указатель на структуру, `POINT` указывающую новую точку экрана для многоуровневого окна. Если текущее расположение не изменяется, *пптдст* может иметь значение null.
 
-*psize*<br/>
-Указатель на `SIZE` структуру, которая определяет новый размер многослойного окна. Если размер окна не меняется, *psize* может быть NULL.
+*псизе*<br/>
+Указатель на `SIZE` структуру, указывающую новый размер многоуровневого окна. Если размер окна не изменяется, *псизе* может иметь значение null.
 
-Если *pDCSrc* является NULL, *psize* должен быть NULL.
+Если *пдксрк* имеет значение null, *псизе* должен иметь значение null.
 
-*pDCSrc*<br/>
-Указатель на DC для поверхности, определяющей многослойное окно. Если форма и визуальный контекст окна не изменяются, *pDCSrc* может быть NULL.
+*пдксрк*<br/>
+Указатель на контроллер домена для поверхности, определяющей многоуровневый интервал. Если форма и визуальный контекст окна не меняются, *пдксрк* может иметь значение null.
 
-*pptSrc*<br/>
-Указатель на `POINT` структуру, опознавательную расположение слоя в контексте устройства.
+*пптсрк*<br/>
+Указатель на `POINT` структуру, указывающую расположение слоя в контексте устройства.
 
-Если *pDCSrc* является NULL, *pptSrc* должен быть NULL.
+Если *пдксрк* имеет значение null, *пптсрк* должен иметь значение null.
 
-*crKey*<br/>
-Указатель на значение COLORREF, которое определяет цветной ключ прозрачности, который будет использоваться при составлении многослойного окна. Все пиксели, окрашенные окном в этом цвете, будут прозрачными. Для создания COLORREF используйте макрос RGB.
+*кркэй*<br/>
+Указатель на значение COLORREF, указывающее цветовой ключ прозрачности, используемый при создании многоуровневого окна. Все пиксели, закрашенные окном этого цвета, будут прозрачными. Чтобы создать COLORREF, используйте макрос RGB.
 
-*pblend*<br/>
-Указатель на структуру [BLENDFUNCTION,](/windows/win32/api/wingdi/ns-wingdi-blendfunction) которая определяет значение прозрачности, которое будет использоваться при составлении многослойного окна.
+*пбленд*<br/>
+Указатель на структуру [блендфунктион](/windows/win32/api/wingdi/ns-wingdi-blendfunction) , указывающую значение прозрачности, используемое при создании многоуровневого окна.
 
 *dwFlags*<br/>
-Определяет действие, необходимое для принятия. Этот параметр может быть одним или более из следующих значений. Список возможных значений можно узнать в [списке обновленного окна.](/windows/win32/api/winuser/nf-winuser-updatelayeredwindow)
+Указывает действие, которое необходимо выполнить. Этот параметр может принимать одно или несколько следующих значений. Список возможных значений см. в разделе [упдателайередвиндов](/windows/win32/api/winuser/nf-winuser-updatelayeredwindow).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Nonzero, если функция успешно; в противном случае 0.
+Ненулевое значение, если функция выполнена. в противном случае — 0.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция члена эмулирует функциональность функции [UpdateLayeredWindow](/windows/win32/api/winuser/nf-winuser-updatelayeredwindow), как описано в Windows SDK.
+Эта функция члена эмулирует функциональность функции [упдателайередвиндов](/windows/win32/api/winuser/nf-winuser-updatelayeredwindow), как описано в Windows SDK.
 
-## <a name="cwndupdatewindow"></a><a name="updatewindow"></a>CWnd:UpdateWindow
+## <a name="cwndupdatewindow"></a><a name="updatewindow"></a>CWnd:: Упдатевиндов
 
-Обновление области клиента, отправив [сообщение WM_PAINT,](/windows/win32/gdi/wm-paint) если область обновления не пуста.
+Обновляет клиентскую область, отправляя сообщение [WM_PAINT](/windows/win32/gdi/wm-paint) , если регион обновления не пуст.
 
 ```cpp
 void UpdateWindow();
@@ -12281,15 +12281,15 @@ void UpdateWindow();
 
 ### <a name="remarks"></a>Remarks
 
-Функция `UpdateWindow` участника отправляет WM_PAINT сообщение напрямую, минуя очередь приложения. Если область обновления пуста, WM_PAINT не отправляется.
+`UpdateWindow`Функция-член отправляет сообщение WM_PAINT напрямую, минуя очередь приложения. Если область обновления пуста, WM_PAINT не отправляется.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCWindowing#124](../../mfc/reference/codesnippet/cpp/cwnd-class_65.cpp)]
 
-## <a name="cwndvalidaterect"></a><a name="validaterect"></a>CWnd::ValidateRec
+## <a name="cwndvalidaterect"></a><a name="validaterect"></a>CWnd:: Валидатерект
 
-Проверяет область клиента в данном прямоугольнике, удалив прямоугольник из области обновления окна.
+Проверяет клиентскую область в пределах данного прямоугольника, удаляя прямоугольник из области обновления окна.
 
 ```cpp
 void ValidateRect(LPCRECT lpRect);
@@ -12297,18 +12297,18 @@ void ValidateRect(LPCRECT lpRect);
 
 ### <a name="parameters"></a>Параметры
 
-*lpRect*<br/>
-Указывает на объект [CRect](../../atl-mfc-shared/reference/crect-class.md) или [структуру RECT,](/windows/win32/api/windef/ns-windef-rect) содержащую клиентские координаты прямоугольника, которые должны быть удалены из области обновления. Если *lpRect* является NULL, все окно проверяется.
+*лпрект*<br/>
+Указывает на объект [крект](../../atl-mfc-shared/reference/crect-class.md) или [структуру Rect](/windows/win32/api/windef/ns-windef-rect) , которая содержит клиентские координаты прямоугольника, удаляемого из области обновления. Если *лпрект* имеет значение null, проверяется все окно.
 
 ### <a name="remarks"></a>Remarks
 
-Функция участника [BeginPaint](#beginpaint) автоматически проверяет всю область клиента. `ValidateRect` Ни функция [члена ValidateRgn](#validatergn) не должна вызываться, если часть региона обновления должна быть проверена до того, как [WM_PAINT](/windows/win32/gdi/wm-paint) будет создана в следующем виде.
+Функция члена [бегинпаинт](#beginpaint) автоматически проверяет всю клиентскую область. Ни `ValidateRect` функция-член, ни [валидатергн](#validatergn) не должны вызываться, если часть области обновления должна быть проверена до последующего создания [WM_PAINT](/windows/win32/gdi/wm-paint) .
 
-Windows продолжает генерировать WM_PAINT сообщений до тех пор, пока не будет проверена текущая область обновления.
+Windows продолжит создавать сообщения WM_PAINT, пока не будет проверен текущий регион обновления.
 
-## <a name="cwndvalidatergn"></a><a name="validatergn"></a>CWnd::ValidateRgn
+## <a name="cwndvalidatergn"></a><a name="validatergn"></a>CWnd:: Валидатергн
 
-Проверяет область клиента в данном регионе, удаляя область из текущего обновления области окна.
+Проверяет клиентскую область в заданном регионе, удаляя регион из текущей области обновления окна.
 
 ```cpp
 void ValidateRgn(CRgn* pRgn);
@@ -12316,18 +12316,18 @@ void ValidateRgn(CRgn* pRgn);
 
 ### <a name="parameters"></a>Параметры
 
-*pRgn*<br/>
-Указатель на объект [CRgn,](../../mfc/reference/crgn-class.md) который определяет область, определяющую область, которая будет удалена из области обновления. Если этот параметр NULL, вся область клиента удаляется.
+*пргн*<br/>
+Указатель на объект [кргн](../../mfc/reference/crgn-class.md) , определяющий область, которая определяет область, удаляемую из области обновления. Если этот параметр имеет значение NULL, удаляется вся клиентская область.
 
 ### <a name="remarks"></a>Remarks
 
-Данный регион должен быть создан ранее функцией региона. Предполагается, что координаты региона являются координатами клиента.
+Данная область должна быть создана ранее функцией Region. Предполагается, что координаты области являются клиентскими координатами.
 
-Функция участника [BeginPaint](#beginpaint) автоматически проверяет всю область клиента. Ни [ValidateRect,](#validaterect) `ValidateRgn` ни функция члена не должны вызываться, если часть региона обновления должна быть проверена до того, как будет создано сообщение [следующего WM_PAINT.](/windows/win32/gdi/wm-paint)
+Функция члена [бегинпаинт](#beginpaint) автоматически проверяет всю клиентскую область. Ни [валидатерект](#validaterect) , ни `ValidateRgn` функция-член не должны вызываться, если часть области обновления должна быть проверена до создания следующего [WM_PAINT](/windows/win32/gdi/wm-paint) сообщения.
 
-## <a name="cwndwindowfrompoint"></a><a name="windowfrompoint"></a>CWnd::WindowFromPoint
+## <a name="cwndwindowfrompoint"></a><a name="windowfrompoint"></a>CWnd:: Виндовфромпоинт
 
-Извлекает окно, содержащее указанную точку; *точка* должна указать координаты экрана точки на экране.
+Извлекает окно, содержащее указанную точку; *точка* должна задавать экранные координаты точки на экране.
 
 ```
 static CWnd* PASCAL WindowFromPoint(POINT point);
@@ -12335,20 +12335,20 @@ static CWnd* PASCAL WindowFromPoint(POINT point);
 
 ### <a name="parameters"></a>Параметры
 
-*Точки*<br/>
-Определяет объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) или структуру данных [POINT,](/windows/win32/api/windef/ns-windef-point) которая определяет точку, подкоторую проверяемую.
+*точки*<br/>
+Указывает [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объект или структуру данных [Point](/windows/win32/api/windef/ns-windef-point) , определяющую проверяемую точку.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на объект окна, в котором находится точка. Это NULL, если в данной точке не существует окна. Возвращенный указатель может быть временным и не должен храниться для последующего использования.
+Указатель на объект окна, в котором находится точка. Имеет значение NULL, если в данной точке не существует ни одного окна. Возвращаемый указатель может быть временным и не должен храниться для последующего использования.
 
 ### <a name="remarks"></a>Remarks
 
-`WindowFromPoint`не получает скрытое или отключенное окно, даже если точка находится в окне. Приложение должно использовать функцию члена [ChildWindowFromPoint](#childwindowfrompoint) для неограниченного поиска.
+`WindowFromPoint`не извлекает скрытое или отключенное окно, даже если точка находится в пределах окна. Приложение должно использовать функцию-член [чилдвиндовфромпоинт](#childwindowfrompoint) для неограниченного поиска.
 
-## <a name="cwndwindowproc"></a><a name="windowproc"></a>CWnd::WindowProc
+## <a name="cwndwindowproc"></a><a name="windowproc"></a>CWnd:: WindowProc
 
-Обеспечивает процедуру `WindowProc`Windows () для `CWnd` объекта.
+Предоставляет процедуру Windows ( `WindowProc` ) для `CWnd` объекта.
 
 ```
 virtual LRESULT WindowProc(
@@ -12360,23 +12360,23 @@ virtual LRESULT WindowProc(
 ### <a name="parameters"></a>Параметры
 
 *message*<br/>
-Определяет сообщение Windows, подаваемый для обработки.
+Указывает сообщение Windows для обработки.
 
 *wParam*<br/>
-Предоставляет дополнительную информацию, используемую при обработке сообщения. Значение параметра зависит от сообщения.
+Предоставляет дополнительные сведения, используемые при обработке сообщения. Значение параметра зависит от сообщения.
 
 *lParam*<br/>
-Предоставляет дополнительную информацию, используемую при обработке сообщения. Значение параметра зависит от сообщения.
+Предоставляет дополнительные сведения, используемые при обработке сообщения. Значение параметра зависит от сообщения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение возврата зависит от сообщения.
+Возвращаемое значение зависит от сообщения.
 
 ### <a name="remarks"></a>Remarks
 
-Он отправляет сообщения через карту сообщения окна.
+Он отправляет сообщения через схему сообщений окна.
 
-## <a name="cwndwinhelp"></a><a name="winhelp"></a>CWnd::WinHelp
+## <a name="cwndwinhelp"></a><a name="winhelp"></a>CWnd:: WinHelp
 
 Вызывается для запуска приложения WinHelp.
 
@@ -12388,19 +12388,19 @@ virtual void WinHelp(
 
 ### <a name="parameters"></a>Параметры
 
-*dwData*<br/>
-Определяет дополнительные данные. Используемое значение зависит от значения параметра *nCmd.*
+*двдата*<br/>
+Указывает дополнительные данные. Используемое значение зависит от значения параметра *нкмд* .
 
-*nCmd*<br/>
-Задает тип запрошенной справки. Список возможных значений и их влияния на параметр [WinHelp](/windows/win32/api/winuser/nf-winuser-winhelpw) *dwData* можно узнать в SDK Windows.
+*нкмд*<br/>
+Задает тип запрошенной справки. Список возможных значений и их влияние на параметр *двдата* см. в описании функции Windows [WinHelp](/windows/win32/api/winuser/nf-winuser-winhelpw) в Windows SDK.
 
 ### <a name="remarks"></a>Remarks
 
-Смотрите [CWinApp::WinHelp](../../mfc/reference/cwinapp-class.md#winhelp) для получения дополнительной информации.
+Дополнительные сведения см. в разделе [CWinApp:: WinHelp](../../mfc/reference/cwinapp-class.md#winhelp) .
 
-## <a name="cwndregistertouchwindow"></a><a name="registertouchwindow"></a>CWnd::RegisterTouchWindow
+## <a name="cwndregistertouchwindow"></a><a name="registertouchwindow"></a>CWnd:: Регистертаучвиндов
 
-Регистры или нерегистрируют поддержку сенсорной windows.
+Регистрирует или отменяет регистрацию поддержки сенсорного ввода Windows.
 
 ```
 BOOL RegisterTouchWindow(
@@ -12410,11 +12410,11 @@ BOOL RegisterTouchWindow(
 
 ### <a name="parameters"></a>Параметры
 
-*bРегистрация*<br/>
-TRUE указывает на поддержку касания Windows; FALSE в противном случае.
+*брегистер*<br/>
+Значение TRUE означает регистрацию поддержки сенсорного ввода Windows; В противном случае — значение FALSE.
 
-*ulFlags*<br/>
-Набор битовых флагов, которые указывают дополнительные изменения. Это поле может содержать 0 или одно из следующих значений: TWF_FINETOUCH, TWF_WANTPALM.
+*улфлагс*<br/>
+Набор битовых флагов, задающих необязательные изменения. Это поле может содержать 0 или одно из следующих значений: TWF_FINETOUCH, TWF_WANTPALM.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -12422,7 +12422,7 @@ TRUE указывает на поддержку касания Windows; FALSE в
 
 ### <a name="remarks"></a>Remarks
 
-## <a name="cwndresizedynamiclayout"></a><a name="resizedynamiclayout"></a>CWnd::ResizeDynamicLayout
+## <a name="cwndresizedynamiclayout"></a><a name="resizedynamiclayout"></a>CWnd:: Ресизединамиклайаут
 
 Вызывается платформой при изменении размера окна для настройки макета дочерних окон, если для этого окна используется динамический макет.
 
@@ -12432,9 +12432,9 @@ virtual void ResizeDynamicLayout();
 
 ### <a name="remarks"></a>Remarks
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
-[Класс CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>
-[Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
+[Класс от CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>
+[Иерархическая диаграмма](../../mfc/hierarchy-chart.md)<br/>
 [Класс CFrameWnd](../../mfc/reference/cframewnd-class.md)<br/>
 [Класс CView](../../mfc/reference/cview-class.md)

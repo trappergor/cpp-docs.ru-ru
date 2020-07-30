@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2707
 ms.assetid: 3deaf45c-74da-4c9d-acc6-b82412720b74
-ms.openlocfilehash: e29812563ef1d4d7f6612ea2516f2f6327e90e1b
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: eaac568387138450577ead23f1470c37ad300335
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760443"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225427"
 ---
 # <a name="compiler-error-c2707"></a>Ошибка компилятора C2707
 
@@ -19,11 +19,11 @@ ms.locfileid: "74760443"
 
 Структурированные встроенные функции обработки исключений недопустимы в определенных контекстах:
 
-- `_exception_code()` вне фильтра исключений или блока `__except`
+- `_exception_code()`вне фильтра или блока исключений **`__except`**
 
-- `_exception_info()` за пределами фильтра исключений
+- `_exception_info()`за пределами фильтра исключений
 
-- `_abnormal_termination()` за пределами блока `__finally`
+- `_abnormal_termination()`за пределами **`__finally`** блока
 
 Чтобы устранить эту ошибку, убедитесь, что встроенные функции обработки исключений помещаются в соответствующий контекст.
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: 3031f02d-3b14-4ad0-869e-22b0110c3aed
-ms.openlocfilehash: 7f98667d3a771994d1b4e54b429f42cb566c102c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b1173ad609a1b2c95d6cf118f4e2d5defeec5b9c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316032"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234345"
 ---
 # <a name="zcforscope-force-conformance-in-for-loop-scope"></a>/Zc:forScope (принудительное обеспечение соответствия в области видимости оператора for)
 
@@ -24,13 +24,13 @@ ms.locfileid: "62316032"
 
 ## <a name="syntax"></a>Синтаксис
 
-> **/ Zc: forScope**[**-**]
+> **/Zc: forScope**[ **-** ]
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-При стандартном поведении инициализатору цикла **for** позволяется выходить за пределы области после цикла **for** . При использовании **/Zc:forScope-** и [/Ze](za-ze-disable-language-extensions.md)инициализатор цикла **for** остается в пределах области до завершения локальной области.
+Стандартное поведение заключается в том, чтобы **`for`** инициализатор цикла выйдет за пределы области действия после **`for`** цикла. В разделе **/Zc: forScope-** and [/Ze](za-ze-disable-language-extensions.md) **`for`** инициализатор цикла остается в области видимости, пока не завершится локальная область.
 
-**/Zc: forScope** включен параметр по умолчанию. **/ Zc: forScope** не затрагивается при [/ permissive-](permissive-standards-conformance.md) параметра.
+Параметр **/Zc: forScope** включен по умолчанию. **/Zc: forScope** не затрагивается, если указан параметр [/permissive-](permissive-standards-conformance.md) .
 
 Параметр **/Zc:forScope-** не рекомендуется к использованию и будет удален в одном из следующих выпусков. Использование **/Zc:forScope-** приводит к созданию предупреждения D9035 о нерекомендуемом элементе.
 
@@ -55,15 +55,15 @@ int main() {
 
 Поведение параметра **/Zc:forScope** во время выполнения можно изменить с помощью директивы pragma [conform](../../preprocessor/conform.md) .
 
-При использовании параметра **/Zc:forScope-** в проекте с существующим файлом PCH выдается предупреждение, параметр **/Zc:forScope-** пропускается, а компиляция продолжается c использованием существующих файлов PCH. Если требуется новый PCH-файл создан, используйте [/Yc (создать предкомпилированный заголовочный файл)](yc-create-precompiled-header-file.md).
+При использовании параметра **/Zc:forScope-** в проекте с существующим файлом PCH выдается предупреждение, параметр **/Zc:forScope-** пропускается, а компиляция продолжается c использованием существующих файлов PCH. Если необходимо создать новый PCH-файл, используйте параметр [/Yc (создать предварительно скомпилированный заголовочный файл)](yc-create-precompiled-header-file.md).
 
 Дополнительные сведения о вопросах соответствия в Visual C++ см. в статье [Nonstandard Behavior](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Подробнее см. в статье [Настройка компилятора C++ и свойства сборки в Visual Studio](../working-with-project-properties.md).
 
-1. Выберите **свойства конфигурации** > **C/C++** > **языка** страницу свойств.
+1. Перейдите на **Configuration Properties**  >  страницу свойств языка**C/C++**  >  **Language** .
 
 1. Измените свойство **Обеспечение согласования видимости переменных, объявленных в заголовке оператора for** .
 
@@ -71,7 +71,7 @@ int main() {
 
 - См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ForceConformanceInForLoopScope%2A>.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также статью
 
 [/Zc (соответствие)](zc-conformance.md)<br/>
-[/Za, /Ze (отключение расширений языка)](za-ze-disable-language-extensions.md)<br/>
+[/ZA,/Ze (Отключение расширений языка)](za-ze-disable-language-extensions.md)<br/>

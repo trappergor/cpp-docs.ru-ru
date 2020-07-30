@@ -1,5 +1,5 @@
 ---
-title: 'Декларатор ссылки lvalue: &amp;'
+title: Декларатор ссылки lvalue:&amp;
 ms.date: 11/04/2016
 f1_keywords:
 - '&'
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - reference operator
 - '& operator [C++], reference operator'
 ms.assetid: edf0513d-3dcc-4663-b276-1269795dda51
-ms.openlocfilehash: 595f2b683d2abb4cdc8a328dc6e86338ab90f214
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 30dd6ba9cb91395f72124cad71908a4e6bcdf7dd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178071"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225986"
 ---
-# <a name="lvalue-reference-declarator-amp"></a>Декларатор ссылки lvalue: &amp;
+# <a name="lvalue-reference-declarator-amp"></a>Декларатор ссылки lvalue:&amp;
 
 Содержит адрес объекта, но синтаксически ведет себя подобно объекту.
 
@@ -30,7 +30,7 @@ type-id & cast-expression
 
 Любой объект, адрес которого можно преобразовать в некоторый тип указателя, можно также преобразовать в аналогичный ссылочный тип. Например, любой объект, адрес которого можно преобразовать в тип `char *`, можно также преобразовать в тип `char &`.
 
-Не путайте объявления ссылок с использованием [оператора взятия адреса](../cpp/address-of-operator-amp.md). Когда *идентификатору* `&`предшествует тип, например **int** или **char**, *идентификатор* объявляется как ссылка на тип. Если перед *идентификатором* `&`не указан тип, используется оператор взятия адреса.
+Не путайте объявления ссылок с использованием [оператора взятия адреса](../cpp/address-of-operator-amp.md). Если `&` *идентификатору* предшествует тип, например **`int`** или **`char`** , *идентификатор* объявляется как ссылка на тип. Когда `&` *идентификатору* не предшествует тип, использование является оператором взятия адреса.
 
 ## <a name="example"></a>Пример
 
@@ -71,9 +71,9 @@ int main()
 Bill is 40
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [Справочные материалы](../cpp/references-cpp.md)<br/>
 [Аргументы функции ссылочного типа](../cpp/reference-type-function-arguments.md)<br/>
-[Возвращаемые значения функции ссылочного типа](../cpp/reference-type-function-returns.md)<br/>
+[Функции ссылочного типа возвращают](../cpp/reference-type-function-returns.md)<br/>
 [Ссылки на указатели](../cpp/references-to-pointers.md)

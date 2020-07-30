@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComObjectRoot class
 ms.assetid: f8797c38-6e73-4f67-85c2-71654cffa8eb
-ms.openlocfilehash: 9a9ffa1813fb15297d209894050b6bcce6802df2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 98868e67fd14899a75f86837034ba540d22039e3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259369"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224244"
 ---
 # <a name="ccomobjectroot-class"></a>Класс CComObjectRoot
 
-Это определение типа из [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) шаблонизируется потоковая модель сервера по умолчанию.
+Это определение типа [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) преобразованный в потоковой модели сервера по умолчанию.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -24,20 +24,20 @@ ms.locfileid: "62259369"
 typedef CComObjectRootEx<CComObjectThreadModel> CComObjectRoot;
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-`CComObjectRoot` — `typedef` из [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) создания шаблона по умолчанию потоковая модель сервера. Таким образом [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) будет сослаться на любую [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) или [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md).
+`CComObjectRoot`— Это **`typedef`** [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) преобразованный в потоковой модели сервера по умолчанию. Таким же [ккомобжектсреадмодел](atl-typedefs.md#ccomobjectthreadmodel) будет ссылаться либо на [ккомсинглесреадмодел](../../atl/reference/ccomsinglethreadmodel-class.md) , либо на [ккоммултисреадмодел](../../atl/reference/ccommultithreadmodel-class.md).
 
-`CComObjectRootEx` обрабатывает объект управления счетчиками ссылок для объектов неагрегированные и объединены. Он содержит счетчик ссылок объекта, если объект не выполняется статистическая обработка и содержит указатель на внешняя Неизвестная строка, если объект выполняется статистическая обработка. Для агрегированных объектов `CComObjectRootEx` методы могут использоваться для обработки ошибки внутреннего объекта для создания, а также для защиты от удаления при выходе внутренние интерфейсы внешний объект или внутренний объект удаляется.
+`CComObjectRootEx`обрабатывает управление счетчиком ссылок на объекты для неагрегированных и агрегированных объектов. Он содержит счетчик ссылок на объекты, если объект не выполняет статистическую обработку, и содержит указатель на внешнюю неизвестную функцию, если выполняется статистическая обработка объекта. Для агрегированных объектов `CComObjectRootEx` методы можно использовать для обработки сбоя внутреннего объекта, а также для защиты внешнего объекта от удаления при освобождении внутренних интерфейсов или при удалении внутреннего объекта.
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atlcom.h
+**Заголовок:** атлком. h
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также статью
 
 [Класс CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)<br/>
 [Класс CComAggObject](../../atl/reference/ccomaggobject-class.md)<br/>
 [Класс CComObject](../../atl/reference/ccomobject-class.md)<br/>
 [Класс CComPolyObject](../../atl/reference/ccompolyobject-class.md)<br/>
-[Общие сведения о классе](../../atl/atl-class-overview.md)
+[Общие сведения о классах](../../atl/atl-class-overview.md)

@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMapStringToPtr [MFC], RemoveKey
 - CMapStringToPtr [MFC], SetAt
 ms.assetid: 1ac11143-eb0a-4511-a662-2df0d1d9005b
-ms.openlocfilehash: 0e722b305dad6595eb67b1a235c375d21f674353
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 26a606d5813a68b55d8fc555025ccef270a25766
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442606"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223022"
 ---
 # <a name="cmapstringtoptr-class"></a>Класс Кмапстрингтоптр
 
@@ -51,9 +51,9 @@ ms.locfileid: "79442606"
 class CMapStringToPtr : public CObject
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
-Функции элементов `CMapStringToPtr` похожи на функции членов класса [кмапстрингтуб](../../mfc/reference/cmapstringtoob-class.md). Из-за этой схожести для изучения этой функции-члена можно использовать справочную документацию по классу `CMapStringToOb`. Когда вы видите `CObject` указатель в качестве параметра функции или возвращаемого значения, замените указатель на **void**.
+Функции элементов `CMapStringToPtr` похожи на функции членов класса [кмапстрингтуб](../../mfc/reference/cmapstringtoob-class.md). Из-за этой схожести для изучения этой функции-члена можно использовать справочную документацию по классу `CMapStringToOb`. Когда `CObject` указатель отображается как параметр функции или возвращаемое значение, замените указатель на **`void`** .
 
 `BOOL CMapStringToPtr::Lookup( LPCTSTR <key>, void*& <rValue> ) const;`
 
@@ -63,13 +63,13 @@ class CMapStringToPtr : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Description|
+|Имя|Описание:|
 |----------|-----------------|
 |[Кмапстрингтоптр:: Кмапстрингтоптр](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|Конструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Description|
+|name|Описание:|
 |----------|-----------------|
 |[Кмапстрингтоптр:: NOCOUNT](../../mfc/reference/cmapstringtoob-class.md#getcount)|Возвращает число элементов в этой карте.|
 |[Кмапстрингтоптр:: Жесаштаблесизе](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|Определяет текущее количество элементов в хэш-таблице.|
@@ -87,17 +87,17 @@ class CMapStringToPtr : public CObject
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Description|
+|Имя|Описание:|
 |----------|-----------------|
-|[Кмапстрингтоптр:: operator \[ \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Вставляет элемент в Map — подстановку оператора для `SetAt`.|
+|[Кмапстрингтоптр:: operator \[\]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Вставляет элемент в Map — подстановку оператора для `SetAt` .|
 
 ## <a name="remarks"></a>Remarks
 
-`CMapStringToPtr` включает макрос IMPLEMENT_DYNAMIC для поддержки доступа к типу во время выполнения и дампа в объект `CDumpContext`. Если требуется дамп отдельных элементов Map, необходимо установить глубину контекста дампа в 1 или более.
+`CMapStringToPtr`включает в себя макрос IMPLEMENT_DYNAMIC для поддержки доступа к типу во время выполнения и дампа в `CDumpContext` объекте. Если требуется дамп отдельных элементов Map, необходимо установить глубину контекста дампа в 1 или более.
 
 Карты типа "строка-указатель" не могут быть сериализованы.
 
-При удалении объекта `CMapStringToPtr` или удалении его элементов удаляются `CString`ые объекты ключа и слова.
+При `CMapStringToPtr` удалении объекта или удалении его элементов `CString` удаляются ключевые объекты и слова.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -109,7 +109,7 @@ class CMapStringToPtr : public CObject
 
 **Заголовок:** афксколл. h
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
-[Класс CObject](../../mfc/reference/cobject-class.md)<br/>
-[Диаграмма иерархии](../../mfc/hierarchy-chart.md)
+[CObject, класс](../../mfc/reference/cobject-class.md)<br/>
+[Иерархическая диаграмма](../../mfc/hierarchy-chart.md)

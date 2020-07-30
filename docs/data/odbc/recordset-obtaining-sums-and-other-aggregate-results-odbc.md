@@ -10,12 +10,12 @@ helpviewer_keywords:
 - SQL Server projects, retrieving aggregate values from recordsets
 - SQL aggregate values, retrieving from recordsets
 ms.assetid: 94500662-22a4-443e-82d7-acbe6eca447b
-ms.openlocfilehash: 9ebbe78191d0c4140baf3557637ba2103886577d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b9e70716ad90a14bbed552d47f48d5a3317e5a62
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368656"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225713"
 ---
 # <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>Набор записей. Определение сумм и других статистических результатов (ODBC)
 
@@ -36,10 +36,10 @@ ms.locfileid: "81368656"
 
 - **COUNT** — подсчитывает число записей в столбце с числовым типом данных.
 
-С помощью функций SQL можно получать статистическую информацию о записях в источнике данных, не извлекая эти записи из источника. Создаваемый набор записей обычно состоит из одной записи (если все столбцы являются статистическими), которая содержит значение. (Может быть несколько записей, если вы использовали положение **GROUP BY.)** Это значение является результатом расчета или извлечения, выполняемого функцией S'L.
+С помощью функций SQL можно получать статистическую информацию о записях в источнике данных, не извлекая эти записи из источника. Создаваемый набор записей обычно состоит из одной записи (если все столбцы являются статистическими), которая содержит значение. (При использовании предложения **Group By** может существовать несколько записей.) Это значение является результатом вычисления или извлечения, выполненного функцией SQL.
 
 > [!TIP]
-> Чтобы добавить предложение SQL **GROUP BY** и, возможно, предложение **HAVING** в инструкцию SQL, добавьте их в конце `m_strFilter`. Пример:
+> Чтобы добавить предложение SQL **GROUP BY** и, возможно, предложение **HAVING** в инструкцию SQL, добавьте их в конце `m_strFilter`. Например:
 
 ```
 m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
@@ -50,13 +50,13 @@ m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
 > [!CAUTION]
 > Некоторые статистические операторы возвращают данные не того типа, который имеют обрабатываемые столбцы.
 
-- **SUM** и **AVG** могут возвращать следующий по величине тип данных (например, при вызове применительно к типу `int` возвращается **LONG** или **double**).
+- **Функция Sum** и **AVG** может возвращать следующий больший тип данных (например, вызов метода with **`int`** возвращает **Long** или **`double`** ).
 
 - **COUNT** обычно возвращает **LONG** независимо от типа целевого столбца.
 
 - **MAX** и **MIN** возвращают тот же тип данных, который имеют обрабатываемые столбцы.
 
-     Например, если мастер **добавления класса** создает элемент данных `long` `m_lSales` для столбца "Продажи", для статистического результата его нужно заменить на элемент данных `double m_dblSumSales`. См. указанный ниже пример.
+     Например, мастер **добавления классов** создает **`long`** `m_lSales` для размещения столбца Sales, но необходимо заменить его `double m_dblSumSales` элементом данных, чтобы он соответствовал статистическому результату. См. следующий пример.
 
 #### <a name="to-obtain-an-aggregate-result-for-a-recordset"></a>Получение статистического результата для набора записей
 
@@ -68,7 +68,7 @@ m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
     RFX_Long(pFX, "Sales", m_lSales);
     ```
 
-     вставьте
+     на:
 
     ```
     RFX_Double(pFX, "Sum(Sales)", m_dblSumSales)
@@ -85,13 +85,13 @@ m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
 DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_lSales, m_pSet);
 ```
 
-на:
+В:
 
 ```
 DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_dblSumSales, m_pSet);
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [Набор записей (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Набор записей. Порядок выборки записей в наборе (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
+[Набор записей. Выбор записей в наборе записей (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)

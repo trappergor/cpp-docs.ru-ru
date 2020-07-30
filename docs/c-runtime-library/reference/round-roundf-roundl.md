@@ -34,12 +34,12 @@ helpviewer_keywords:
 - round function
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
-ms.openlocfilehash: 1c35972b38f8e440788404b5891a78d16197d739
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ed7f8457373466e442d7998cee0a14389de4321e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916721"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226181"
 ---
 # <a name="round-roundf-roundl"></a>round, roundf, roundl
 
@@ -80,7 +80,7 @@ long double roundl(
 
 ## <a name="remarks"></a>Remarks
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **Round** , принимающие и возвращающие значения **float** и **Long** **Double** . В программе на языке C функция **Round** всегда принимает и возвращает значение **типа Double**.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **Round** , которые принимают и возвращают **`float`** **`long double`** значения и. В программе на языке C функция **Round** всегда принимает и возвращает **`double`** .
 
 По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
@@ -130,7 +130,7 @@ roundl(-2.500000) is -3
 
 ## <a name="see-also"></a>См. также раздел
 
-[Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
+[Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>
 [floor, floorf, floorl](floor-floorf-floorl.md)<br/>
 [fmod, fmodf](fmod-fmodf.md)<br/>

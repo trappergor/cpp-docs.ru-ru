@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4346
 ms.assetid: 68ee562d-cca9-4a2a-9a1b-14ad1a1e7396
-ms.openlocfilehash: 3ab519f612d5272b0562728917cc777f1de86b79
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f1f731eed2dae2721b13bb2e526992849e217f7f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187249"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223204"
 ---
 # <a name="compiler-warning-level-1-c4346"></a>Предупреждение компилятора (уровень 1) C4346
 
 "имя": зависимое имя не является типом
 
-Ключевое слово [TypeName](../../cpp/typename.md) требуется, если зависимое имя должно обрабатываться как тип. Для кода, который работает одинаково во всех версиях Visual C++, добавьте `typename` в объявление.
+Ключевое слово [TypeName](../../cpp/typename.md) требуется, если зависимое имя должно обрабатываться как тип. Для кода, который работает одинаково во всех версиях Visual C++, добавьте **`typename`** к объявлению.
 
 Следующий пример приводит к возникновению ошибки C4346:
 
@@ -32,7 +32,7 @@ struct C {
 };
 ```
 
-В следующих примерах показаны другие примеры, где требуется ключевое слово **TypeName** :
+В следующих примерах показаны другие примеры, в которых **`typename`** ключевое слово является обязательным:
 
 ```cpp
 // C4346b.cpp

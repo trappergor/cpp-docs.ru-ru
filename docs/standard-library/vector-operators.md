@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (vector)
 - std::operator&lt;= (vector)
 - std::operator== (vector)
-ms.openlocfilehash: f6717add93c489f536bd0c0b0f82b74bbd915985
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 6e3b78a7b7176be917da5a3e44e9bf54efc0b08c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79427575"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224543"
 ---
 # <a name="ltvectorgt-operators"></a>Операторы &lt;vector&gt;
 
-## <a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a>operator! =
 
 Проверяет неравенство объекта слева от оператора объекту справа от оператора.
 
@@ -35,15 +35,15 @@ bool operator!=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*слева*\
 Объект типа `vector`.
 
-*справа*\
+*Правильно*\
 Объект типа `vector`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**true**, если объекты vector не равны; в противном случае **false**.
+**`true`** значение, если векторы не равны; **`false`** значение, если векторы равны.
 
 ### <a name="remarks"></a>Remarks
 
@@ -76,7 +76,7 @@ int main( )
 Vectors not equal.
 ```
 
-## <a name="op_lt">Оператор </a>&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>станции&lt;
 
 Проверяет, что объект слева от оператора меньше, чем объект справа от оператора.
 
@@ -86,15 +86,15 @@ bool operator<(const vector<Type, Allocator>& left, const vector<Type, Allocator
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*слева*\
 Объект типа `vector`.
 
-*справа*\
+*Правильно*\
 Объект типа `vector`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**true**, если объект vector слева от оператора строго меньше объекта vector справа от оператора; в противном случае **false**.
+**`true`** значение, если вектор слева от оператора меньше вектора в правой части оператора; в противном случае — значение **`false`** .
 
 ### <a name="example"></a>Пример
 
@@ -127,7 +127,7 @@ int main( )
 Vector v1 is less than vector v2.
 ```
 
-## <a name="op_lt_eq"></a>&lt;оператора =
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>станции&lt;=
 
 Проверяет, что объект слева от оператора меньше или равен объекту справа от оператора.
 
@@ -137,15 +137,15 @@ bool operator<=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*слева*\
 Объект типа `vector`.
 
-*справа*\
+*Правильно*\
 Объект типа `vector`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**true**, если объект vector слева от оператора меньше или равен объекту vector справа от оператора; в противном случае **false**.
+**`true`** Если вектор слева от оператора меньше или равен вектору в правой части оператора; в противном случае — значение **`false`** .
 
 ### <a name="example"></a>Пример
 
@@ -178,7 +178,7 @@ int main( )
 Vector v1 is less than or equal to vector v2.
 ```
 
-## <a name="op_eq_eq"></a>Оператор = =
+## <a name="operator"></a><a name="op_eq_eq"></a>Оператор = =
 
 Проверяет равенство объекта слева от оператора объекту справа от оператора.
 
@@ -188,15 +188,15 @@ bool operator==(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*слева*\
 Объект типа `vector`.
 
-*справа*\
+*Правильно*\
 Объект типа `vector`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**true**, если объект vector слева от оператора равен объекту vector справа от оператора; в противном случае **false**.
+**`true`** Если вектор слева от оператора равен вектору в правой части оператора; в противном случае — значение **`false`** .
 
 ### <a name="remarks"></a>Remarks
 
@@ -229,7 +229,7 @@ int main( )
 Vectors equal.
 ```
 
-## <a name="op_gt">Оператор </a>&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>станции&gt;
 
 Проверяет, что объект слева от оператора больше, чем объект справа от оператора.
 
@@ -239,15 +239,15 @@ bool operator>(const vector<Type, Allocator>& left, const vector<Type, Allocator
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*слева*\
 Объект типа `vector`.
 
-*справа*\
+*Правильно*\
 Объект типа `vector`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**true**, если объект vector слева от оператора больше объекта vector справа от оператора; в противном случае **false**.
+**`true`** значение, если вектор в левой части оператора больше вектора справа от оператора; в противном случае — значение **`false`** .
 
 ### <a name="example"></a>Пример
 
@@ -281,7 +281,7 @@ int main( )
 Vector v1 is greater than vector v2.
 ```
 
-## <a name="op_gt_eq"></a>&gt;оператора =
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>станции&gt;=
 
 Проверяет, что объект слева от оператора больше или равен объекту справа от оператора.
 
@@ -291,15 +291,15 @@ bool operator>=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*слева*\
 Объект типа `vector`.
 
-*справа*\
+*Правильно*\
 Объект типа `vector`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**true**, если объект vector слева от оператора больше или равен объекту vector справа от оператора; в противном случае **false**.
+**`true`** значение, если вектор слева от оператора больше или равен вектору в правой части вектора; в противном случае — значение **`false`** .
 
 ### <a name="example"></a>Пример
 

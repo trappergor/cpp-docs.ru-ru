@@ -1,17 +1,17 @@
 ---
-title: несоздаваемый (C++ атрибут com)
+title: несоздаваемый (атрибут COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.noncreatable
 helpviewer_keywords:
 - noncreatable attribute
 ms.assetid: 4d17937b-0bff-41af-ba57-53e18b7ab5a9
-ms.openlocfilehash: e855497cb6f619ecdaa6aedf16a04f045a60faa7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c5d51d7c5628a875f036b4e48b03b317490b37ff
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514562"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224400"
 ---
 # <a name="noncreatable"></a>noncreatable
 
@@ -23,11 +23,11 @@ ms.locfileid: "69514562"
 [noncreatable]
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-**Несоздаваемый** C++ атрибут имеет те же функциональные возможности, что и [несоздаваемый](/windows/win32/Midl/noncreatable) атрибут MIDL, и автоматически передается в созданный объект. IDL-файл компилятором.
+**Несоздаваемый** атрибут C++ имеет те же функциональные возможности, что и [несоздаваемый](/windows/win32/Midl/noncreatable) атрибут MIDL, и автоматически передается в созданный объект. IDL-файл компилятором.
 
-Если этот атрибут используется в проекте, использующем ATL, поведение атрибута изменяется. В дополнение к описанному выше поведению, атрибут также внедряет макрос [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) . Этот макрос указывает ATL, что объект не может быть создан извне.
+Если этот атрибут используется в проекте, использующем ATL, поведение атрибута изменяется. В дополнение к описанному выше поведению, атрибут также внедряет [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) макрос. Этот макрос указывает ATL, что объект не может быть создан извне.
 
 ## <a name="example"></a>Пример
 
@@ -55,14 +55,14 @@ class CMyClass : public A
 
 |||
 |-|-|
-|**Относится к**|**класс**, **Структура**|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|**кокласс**|
-|**Недопустимые атрибуты**|Отсутствуют|
+|**Относится к**|**`class`**, **`struct`**|
+|**REPEATABLE**|Нет|
+|**Требуемые атрибуты**|**кокласс**|
+|**Недопустимые атрибуты**|Нет|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также статью
 
 [Атрибуты IDL](idl-attributes.md)<br/>
-[Атрибуты классов](class-attributes.md)
+[Атрибуты класса](class-attributes.md)

@@ -20,16 +20,16 @@ helpviewer_keywords:
 - std::packaged_task [C++], reset
 - std::packaged_task [C++], swap
 - std::packaged_task [C++], valid
-ms.openlocfilehash: eb171e09451e16e89716dfdc44ed6c611e2d2280
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d03fb128240c4e3e6bd48c3237d240afba946ad8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372126"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233032"
 ---
 # <a name="packaged_task-class"></a>Класс packaged_task
 
-Описывает *асинхронный поставщик*, который является оберткой вызова с сигнатурой вызова `Ty(ArgTypes...)`. Связанное с *ним асинхронное состояние* содержит копию вызываемого объекта в дополнение к потенциальному результату.
+Описывает *асинхронный поставщик*, который является оберткой вызова с сигнатурой вызова `Ty(ArgTypes...)`. Его *связанное асинхронное состояние* содержит копию его вызываемого объекта в дополнение к потенциальному результату.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -42,36 +42,36 @@ class packaged_task;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[packaged_task](#packaged_task)|Формирует объект `packaged_task`.|
-|[packaged_task::Packaged_task деструктор](#dtorpackaged_task_destructor)|Уничтожает объект `packaged_task` .|
+|[Деструктор packaged_task:: ~ packaged_task](#dtorpackaged_task_destructor)|Уничтожает объект `packaged_task` .|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[get_future](#get_future)|Возвращает объект [future](../standard-library/future-class.md), который имеет то же связанное асинхронное состояние.|
 |[make_ready_at_thread_exit](#make_ready_at_thread_exit)|Вызывает вызываемый объект, который хранится в связанном асинхронном состоянии и атомарно сохраняет возвращаемое значение.|
-|[Сброс](#reset)|Заменяет связанное асинхронное состояние.|
-|[Своп](#swap)|Меняет местами связанное асинхронное состояние с состоянием указанного объекта.|
-|[Действительны](#valid)|Указывает, имеет ли объект связанное асинхронное состояние.|
+|[reset](#reset)|Заменяет связанное асинхронное состояние.|
+|[позиции](#swap)|Меняет местами связанное асинхронное состояние с состоянием указанного объекта.|
+|[допустимым](#valid)|Указывает, имеет ли объект связанное асинхронное состояние.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
-|[packaged_task::оператор](#op_eq)|Передает связанное асинхронное состояние из указанного объекта.|
-|[packaged_task:оператор()](#op_call)|Вызывает вызываемый объект, который хранится в связанном асинхронном состоянии, атомарно сохраняет возвращаемое значение и устанавливает состояние в значение *ready*.|
+|[packaged_task:: operator =](#op_eq)|Передает связанное асинхронное состояние из указанного объекта.|
+|[packaged_task:: operator ()](#op_call)|Вызывает вызываемый объект, который хранится в связанном асинхронном состоянии, атомарно сохраняет возвращаемое значение и устанавливает состояние в значение *ready*.|
 |[packaged_task::operator bool](#op_bool)|Указывает, имеет ли объект связанное асинхронное состояние.|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<будущие>
+**Заголовок:**\<future>
 
 **Пространство имен:** std
 
-## <a name="packaged_taskget_future"></a><a name="get_future"></a>packaged_task::get_future
+## <a name="packaged_taskget_future"></a><a name="get_future"></a>packaged_task:: get_future
 
 Возвращает объект типа `future<Ty>`, который имеет то же самое *связанное асинхронное состояние*.
 
@@ -85,7 +85,7 @@ future<Ty> get_future();
 
 Если этот метод уже был вызван для объекта `packaged_task`, который имеет то же самое асинхронное состояние, этот метод выдает `future_error` с кодом ошибки `future_already_retrieved`.
 
-## <a name="packaged_taskmake_ready_at_thread_exit"></a><a name="make_ready_at_thread_exit"></a>packaged_task::make_ready_at_thread_exit
+## <a name="packaged_taskmake_ready_at_thread_exit"></a><a name="make_ready_at_thread_exit"></a>packaged_task:: make_ready_at_thread_exit
 
 Вызывает вызываемый объект, который хранится в *связанном асинхронном состоянии* и атомарно сохраняет возвращаемое значение.
 
@@ -103,9 +103,9 @@ void make_ready_at_thread_exit(ArgTypes... args);
 
 В отличие от [packaged_task:: operator()](#op_call) связанное асинхронное состояние не устанавливается в `ready`, пока не будут уничтожены все локальные объекты потока в вызывающем потоке. Обычно потоки, которые заблокированы в связанном асинхронном состоянии, не разблокируются до выхода из вызывающего потока.
 
-## <a name="packaged_taskoperator"></a><a name="op_eq"></a>packaged_task::оператор
+## <a name="packaged_taskoperator"></a><a name="op_eq"></a>packaged_task:: operator =
 
-Перенос *связанного асинхронного состояния* из указанного объекта.
+Передает *связанное асинхронное состояние* из указанного объекта.
 
 ```cpp
 packaged_task& operator=(packaged_task&& Right);
@@ -114,7 +114,7 @@ packaged_task& operator=(packaged_task&& Right);
 ### <a name="parameters"></a>Параметры
 
 *Правильно*\
-Объект `packaged_task` .
+Объект `packaged_task`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -122,11 +122,11 @@ packaged_task& operator=(packaged_task&& Right);
 
 ### <a name="remarks"></a>Remarks
 
-После операции *право* больше не имеет асинхронного состояния.
+После операции *право* больше не имеет связанного асинхронного состояния.
 
-## <a name="packaged_taskoperator"></a><a name="op_call"></a>packaged_task:оператор()
+## <a name="packaged_taskoperator"></a><a name="op_call"></a>packaged_task:: operator ()
 
-Вызывает вызываемый объект, который хранится в *связанном асинхронном состоянии,* атомарно сохраняет возвращенное значение и устанавливает состояние к *готовности.*
+Вызывает вызываемый объект, хранящийся в *связанном асинхронном состоянии*, атомарно сохраняет возвращаемое значение и устанавливает для состояния значение *Ready*.
 
 ```cpp
 void operator()(ArgTypes... args);
@@ -140,7 +140,7 @@ void operator()(ArgTypes... args);
 
 В противном случае этот оператор вызывает `INVOKE(fn, args..., Ty)`, где *fn* — вызываемый объект, который хранится в связанном асинхронном состоянии. Любое возвращаемое значение атомарно сохраняется как возвращенный результат связанного асинхронного состояния, и состояние устанавливается в значение ready. В результате все потоки, которые заблокированы на связанном асинхронном состоянии, разблокируются.
 
-## <a name="packaged_taskoperator-bool"></a><a name="op_bool"></a>packaged_task::оператор бул
+## <a name="packaged_taskoperator-bool"></a><a name="op_bool"></a>packaged_task:: operator bool
 
 Указывает, имеет ли объект `associated asynchronous state`.
 
@@ -150,9 +150,9 @@ operator bool() const noexcept;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**верно,** если объект имеет связанное асинхронное состояние; в противном случае, **ложные**.
+**`true`** значение, если объект имеет связанное асинхронное состояние. в противном случае — **`false`** .
 
-## <a name="packaged_taskpackaged_task-constructor"></a><a name="packaged_task"></a>packaged_task::packaged-task Constructor
+## <a name="packaged_taskpackaged_task-constructor"></a><a name="packaged_task"></a>packaged_task: конструктор:p ackaged_task
 
 Формирует объект `packaged_task`.
 
@@ -170,25 +170,25 @@ template <class Fn, class Alloc>
 ### <a name="parameters"></a>Параметры
 
 *Правильно*\
-Объект `packaged_task` .
+Объект `packaged_task`.
 
-*Alloc*\
-Распределитель памяти. Для получения дополнительной информации, см [ \<>. ](../standard-library/allocators-header.md)
+*Идентификатор*\
+Распределитель памяти. Дополнительные сведения см. на веб-сайте [\<allocators>](../standard-library/allocators-header.md).
 
-*Fn*\
+*FN*\
 Объект функции.
 
 ### <a name="remarks"></a>Remarks
 
-Первый конструктор строит `packaged_task` объект, который не имеет *связанного асинхронного состояния.*
+Первый конструктор конструирует `packaged_task` объект, который не имеет *связанного асинхронного состояния*.
 
-Второй конструктор строит `packaged_task` объект и передает связанное асинхронное состояние с *правого.* После операции *право* больше не имеет асинхронного состояния.
+Второй конструктор конструирует `packaged_task` объект и передает связанное асинхронное состояние из *right*. После операции *право* больше не имеет связанного асинхронного состояния.
 
-Третий конструктор строит `packaged_task` объект, который имеет копию *fn,* хранящуюся в связанном асинхронном состоянии.
+Третий конструктор конструирует `packaged_task` объект, имеющий копию *fn* , хранящуюся в связанном асинхронном состоянии.
 
-Четвертый конструктор строит `packaged_task` объект, который имеет копию *fn,* хранящийся в `alloc` связанном асинхронном состоянии, и использует для распределения памяти.
+Четвертый конструктор конструирует `packaged_task` объект с копией *fn* , хранящейся в связанном асинхронном состоянии, и использует `alloc` для выделения памяти.
 
-## <a name="packaged_taskpackaged_task-destructor"></a><a name="dtorpackaged_task_destructor"></a>packaged_task::Packaged_task деструктор
+## <a name="packaged_taskpackaged_task-destructor"></a><a name="dtorpackaged_task_destructor"></a>Деструктор packaged_task:: ~ packaged_task
 
 Уничтожает объект `packaged_task` .
 
@@ -200,7 +200,7 @@ template <class Fn, class Alloc>
 
 Если *связанное асинхронное состояние* отлично от значения *ready*, деструктор сохраняет исключение [future_error](../standard-library/future-error-class.md) с кодом ошибки `broken_promise` в качестве результата в связанное асинхронное состояние. Все потоки, которые заблокированы на связанное асинхронное состояние, разблокируются.
 
-## <a name="packaged_taskreset"></a><a name="reset"></a>packaged_task::перезагрузка
+## <a name="packaged_taskreset"></a><a name="reset"></a>packaged_task:: Reset
 
 Использует новое *связанное асинхронное состояние* для замены существующего связанного асинхронного состояния.
 
@@ -212,7 +212,7 @@ void reset();
 
 По сути, этот метод выполняет `*this = packaged_task(move(fn))`, где *fn* является объектом функции, который хранится в связанном асинхронном состоянии для данного объекта. Таким образом, состояние объекта очищается и [get_future](#get_future), [operator()](#op_call) и [make_ready_at_thread_exit](#make_ready_at_thread_exit) можно вызывать как на вновь созданный объект.
 
-## <a name="packaged_taskswap"></a><a name="swap"></a>packaged_task::swap
+## <a name="packaged_taskswap"></a><a name="swap"></a>packaged_task:: swap
 
 Меняет местами связанное асинхронное состояние с состоянием указанного объекта.
 
@@ -223,9 +223,9 @@ void swap(packaged_task& Right) noexcept;
 ### <a name="parameters"></a>Параметры
 
 *Правильно*\
-Объект `packaged_task` .
+Объект `packaged_task`.
 
-## <a name="packaged_taskvalid"></a><a name="valid"></a>packaged_task::valid
+## <a name="packaged_taskvalid"></a><a name="valid"></a>packaged_task:: допустимое
 
 Указывает, имеет ли объект `associated asynchronous state`.
 
@@ -235,9 +235,9 @@ bool valid() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**верно,** если объект имеет связанное асинхронное состояние; в противном случае, **ложные**.
+**`true`** значение, если объект имеет связанное асинхронное состояние. в противном случае — **`false`** .
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
-[Справка по файлам заголовка](../standard-library/cpp-standard-library-header-files.md)\
-[\<будущие>](../standard-library/future.md)
+[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)\
+[\<future>](../standard-library/future.md)

@@ -34,12 +34,12 @@ helpviewer_keywords:
 - istleadbyte function
 - isleadbyte function
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
-ms.openlocfilehash: 078efc2fa5499e23ce7f2fb6f8fc0ffc5123de1e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 1d2202bd1ca59ee42287c398da429df132e24fcb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909545"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234085"
 ---
 # <a name="isleadbyte-_isleadbyte_l"></a>isleadbyte, _isleadbyte_l
 
@@ -68,7 +68,7 @@ int _isleadbyte_l( int c );
 
 Макрос **ислеадбите** возвращает ненулевое значение, если его аргумент является первым байтом многобайтового символа. **ислеадбите** дает значимый результат для любого целочисленного аргумента от-1 (**EOF**) до **UCHAR_MAX** (0xFF) включительно.
 
-Ожидаемый тип аргумента для **ислеадбите** — **int**; Если передается знак подписывания, компилятор может преобразовать его в целое число по расширению знака, что приведет к непредсказуемым результатам.
+Ожидаемый тип аргумента **ислеадбите** — **`int`** ; Если передается знак подписывания, компилятор может преобразовать его в целое число по расширению знака, что приведет к непредсказуемым результатам.
 
 Версия этой функции с суффиксом **_l** идентична за исключением того, что использует переданный языковой стандарт вместо текущего языкового стандарта для поведения, зависящего от языкового стандарта.
 
@@ -89,8 +89,8 @@ int _isleadbyte_l( int c );
 
 Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [Классификация байтов](../../c-runtime-library/byte-classification.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Локаль](../../c-runtime-library/locale.md)<br/>
 [подпрограммы _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

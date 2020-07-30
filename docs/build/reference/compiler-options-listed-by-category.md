@@ -5,12 +5,12 @@ ms.date: 07/08/2020
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 571513c33a40bc13ba4d0bb0d682bfb8cc8d6071
-ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
+ms.openlocfilehash: e362119ed3c642e2fa07bddd570c2365252d3325
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86180868"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223880"
 ---
 # <a name="compiler-options-listed-by-category"></a>Параметры компилятора, упорядоченные по категориям
 
@@ -41,7 +41,7 @@ ms.locfileid: "86180868"
 | [`/EH`](eh-exception-handling-model.md) | Задает модель обработки исключений. |
 | [`/fp`](fp-specify-floating-point-behavior.md) | Указывает поведение чисел с плавающей запятой. |
 | [`/GA`](ga-optimize-for-windows-application.md) | Выполняет оптимизацию для приложений Windows. |
-| [`/Gd`](gd-gr-gv-gz-calling-convention.md) | Использует соглашение о вызовах `__cdecl` . (только x86) |
+| [`/Gd`](gd-gr-gv-gz-calling-convention.md) | Использует **`__cdecl`** соглашение о вызовах. (только x86) |
 | [`/Ge`](ge-enable-stack-probes.md) | Не рекомендуется. Включает стековые зонды. |
 | [`/GF`](gf-eliminate-duplicate-strings.md) | Включает объединение строк. |
 | [`/Gh`](gh-enable-penter-hook-function.md) | Вызывает функцию-обработчик `_penter`. |
@@ -49,23 +49,23 @@ ms.locfileid: "86180868"
 | [`/GL`](gl-whole-program-optimization.md) | Включает оптимизацию всей программы. |
 | [`/Gm`](gm-enable-minimal-rebuild.md) | Не рекомендуется. Включает минимальное перепостроение. |
 | [`/GR`](gr-enable-run-time-type-information.md) | Включает информацию о типах во время выполнения (RTTI). |
-| [`/Gr`](gd-gr-gv-gz-calling-convention.md) | Использует соглашение о вызовах `__fastcall` . (только x86) |
+| [`/Gr`](gd-gr-gv-gz-calling-convention.md) | Использует **`__fastcall`** соглашение о вызовах. (только x86) |
 | [`/GS`](gs-buffer-security-check.md) | Проверяет безопасность буфера. |
 | [`/Gs`](gs-control-stack-checking-calls.md) | Управляет стековыми зондами. |
 | [`/GT`](gt-support-fiber-safe-thread-local-storage.md) | Поддерживает безопасность волокон для данных, размещаемых с помощью статической локальной памяти потока. |
 | [`/guard:cf`](guard-enable-control-flow-guard.md) | Добавление проверок безопасности для защиты потока управления. |
 | [`/guard:ehcont`](guard-enable-eh-continuation-metadata.md) | Включает метаданные продолжения EH. |
-| [`/Gv`](gd-gr-gv-gz-calling-convention.md) | Использует соглашение о вызовах `__vectorcall` . (только x86 и x64) |
+| [`/Gv`](gd-gr-gv-gz-calling-convention.md) | Использует **`__vectorcall`** соглашение о вызовах. (только x86 и x64) |
 | [`/Gw`](gw-optimize-global-data.md) | Включает глобальную оптимизацию данных всей программы. |
 | [`/GX`](gx-enable-exception-handling.md) | Не рекомендуется. Включает синхронную обработку исключений. [`/EH`](eh-exception-handling-model.md)Вместо этого используйте. |
 | [`/Gy`](gy-enable-function-level-linking.md) | Включает компоновку на уровне функций. |
 | [`/GZ`](gz-enable-stack-frame-run-time-error-checking.md) | Не рекомендуется. Включает быстрые проверки. (То же, что [`/RTC1`](rtc-run-time-error-checks.md) ) |
-| [`/Gz`](gd-gr-gv-gz-calling-convention.md) | Использует соглашение о вызовах `__stdcall` . (только x86) |
+| [`/Gz`](gd-gr-gv-gz-calling-convention.md) | Использует **`__stdcall`** соглашение о вызовах. (только x86) |
 | [`/homeparams`](homeparams-copy-register-parameters-to-stack.md) | Принудительная запись параметров, переданных в регистрах, в соответствующие места в стеке при вхождении в функцию. Этот параметр компилятора предназначен только для компиляторов x64 (собственная и перекрестная компиляция). |
 | [`/hotpatch`](hotpatch-create-hotpatchable-image.md) | Создает образ, допускающий горячее обновление. |
 | [`/Qfast_transcendentals`](qfast-transcendentals-force-fast-transcendentals.md) | Создает быстрые трансцендентные функции. |
 | [`/QIfist`](qifist-suppress-ftol.md) | Не рекомендуется. Подавляет вызов вспомогательной функции `_ftol` при необходимости преобразования из типа с плавающей запятой в целочисленный тип. (только x86) |
-| [`/Qimprecise_fwaits`](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md) | Удаляет команды `fwait` внутри блоков `try` . |
+| [`/Qimprecise_fwaits`](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md) | Удаляет `fwait` команды внутри **`try`** блоков. |
 | [`/QIntel-jcc-erratum`](qintel-jcc-erratum.md) | Устраняет влияние обновления микрокода на производительность Intel ЖКК. |
 | [`/Qpar`](qpar-auto-parallelizer.md) | Включает автоматическую параллелизацию циклов. |
 | [`/Qpar-report`](qpar-report-auto-parallelizer-reporting-level.md) | Включает уровни отчетов для автоматической параллелизации. |
@@ -114,7 +114,7 @@ ms.locfileid: "86180868"
 
 | Параметр | Цель |
 |--|--|
-| [`/constexpr`](constexpr-control-constexpr-evaluation.md) | Управление вычислением **constexpr** во время компиляции. |
+| [`/constexpr`](constexpr-control-constexpr-evaluation.md) | Оценка элемента управления **`constexpr`** во время компиляции. |
 | [`/openmp`](openmp-enable-openmp-2-0-support.md) | Включает [`#pragma omp`](../../preprocessor/omp.md) в исходном коде. |
 | [`/vd`](vd-disable-construction-displacements.md) | Подавляет или включает скрытые члены класса `vtordisp` . |
 | [`/vmb`](vmb-vmg-representation-method.md) | Использует оптимальное основание для указателей на члены. |
@@ -164,7 +164,7 @@ ms.locfileid: "86180868"
 | [`/FS`](fs-force-synchronous-pdb-writes.md) | Принудительно выполняет запись в PDB-файл для сериализации с помощью *MSPDBSRV.EXE*. |
 | [`/H`](h-restrict-length-of-external-names.md) | Не рекомендуется. Ограничивает длину внешних (открытых) имен. |
 | [`/HELP`](help-compiler-command-line-help.md) | Отображает список параметров компилятора. |
-| [`/J`](j-default-char-type-is-unsigned.md) | Изменяет тип `char` по умолчанию. |
+| [`/J`](j-default-char-type-is-unsigned.md) | Изменяет тип по умолчанию **`char`** . |
 | [`/JMC`](jmc.md) | Поддерживает отладку в машинном коде C++ Только мой код. |
 | [`/kernel`](kernel-create-kernel-mode-binary.md) | Компилятор и компоновщик создадут двоичный файл для выполнения в ядре Windows. |
 | [`/MP`](mp-build-with-multiple-processes.md) | Параллельное построение нескольких исходных файлов. |
@@ -225,13 +225,13 @@ ms.locfileid: "86180868"
 | [`/Og`](og-global-optimizations.md) | Не рекомендуется. Использует глобальную оптимизацию. |
 | [`/QIfist`](qifist-suppress-ftol.md) | Не рекомендуется. Используется один раз для указания способа преобразования типа с плавающей запятой в целочисленный тип. |
 | [`/V`](v-version-number.md) | Не рекомендуется. Задает *`.obj`* строку версии файла. |
-| [`/Wp64`](wp64-detect-64-bit-portability-issues.md) | Устаревшее. Выявляет проблемы 64-битной переносимости. |
+| [`/Wp64`](wp64-detect-64-bit-portability-issues.md) | Является устаревшей. Выявляет проблемы 64-битной переносимости. |
 | [`/Yd`](yd-place-debug-information-in-object-file.md) | Не рекомендуется. Размещает полную отладочную информацию во всех объектных файлах. [`/Zi`](z7-zi-zi-debug-information-format.md)Вместо этого используйте. |
 | [`/Zc:forScope-`](zc-forscope-force-conformance-in-for-loop-scope.md) | Не рекомендуется. Отключает согласование видимости переменных, объявленных в заголовке оператора for. |
 | [`/Ze`](za-ze-disable-language-extensions.md) | Не рекомендуется. Включает расширения языка. |
 | [`/Zg`](zg-generate-function-prototypes.md) | Удалено в Visual Studio 2015. Создает прототипы функций. |
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [Справочник по построению C/C++](c-cpp-building-reference.md)\
 [Параметры компилятора КОМПИЛЯТОРОМ MSVC](compiler-options.md)\

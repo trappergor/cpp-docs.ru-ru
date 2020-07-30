@@ -25,16 +25,16 @@ helpviewer_keywords:
 - IsAutoAccessor method
 - ReleaseAccessors method
 ms.assetid: 389b65be-11ca-4ae0-9290-60c621c4982b
-ms.openlocfilehash: 8aef8a04d7adff903e21491a91014d55aab769da
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e29883b2a42010daee19f915c49c31686b232cf6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212296"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233461"
 ---
 # <a name="caccessorbase-class"></a>Класс CAccessorBase
 
-Все методы доступа в шаблонах OLE DB являются производными от этого класса. `CAccessorBase` позволяет использовать один набор строк для управления множеством методов доступа. Он также предоставляет привязку для параметров и выходных столбцов.
+Все методы доступа в шаблонах OLE DB являются производными от этого класса. `CAccessorBase`позволяет одному набору строк управлять множеством методов доступа. Он также предоставляет привязку для параметров и выходных столбцов.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -42,7 +42,7 @@ ms.locfileid: "80212296"
 // Replace with syntax
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="methods"></a>Методы
 
@@ -122,7 +122,7 @@ bool IsAutoAccessor(ULONG nAccessor) const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает **значение true** , если метод доступа является автоматическим. В противном случае возвращается значение **false**.
+Возвращает значение, **`true`** Если метод доступа является автоматическим. В противном случае возвращается значение **`false`** .
 
 ## <a name="caccessorbasereleaseaccessors"></a><a name="release"></a>CAccessorBase:: Релеасеакцессорс
 
@@ -137,7 +137,7 @@ HRESULT ReleaseAccessors(IUnknown* pUnk);
 #### <a name="parameters"></a>Параметры
 
 *pUnk*<br/>
-окне Указатель на интерфейс `IUnknown` для COM-объекта, для которого были созданы методы доступа.
+окне Указатель на `IUnknown` интерфейс для COM-объекта, для которого были созданы методы доступа.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -147,8 +147,8 @@ HRESULT ReleaseAccessors(IUnknown* pUnk);
 
 Вызывается из [CAccessorRowset:: Close](../../data/oledb/caccessorrowset-close.md).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [Шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Справочник по шаблонам потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [Класс CAccessorBase](../../data/oledb/caccessorbase-class.md)

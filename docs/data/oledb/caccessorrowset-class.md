@@ -27,12 +27,12 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: efb5618c03b1f70a809bb2bafe9611474799e00b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 42b7d385877d68db22ccaf6665e8043dbfe2ee44
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212255"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233487"
 ---
 # <a name="caccessorrowset-class"></a>Класс CAccessorRowset
 
@@ -58,13 +58,13 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 
 **Заголовок:** atldbcli.h
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Элементы
 
 ### <a name="methods"></a>Методы
 
 |||
 |-|-|
-|[Bind](#bind)|Создает привязки (используется, если `bBind` указан как **false** в [CCommand:: Open](../../data/oledb/ccommand-open.md)).|
+|[Выполняется](#bind)|Создает привязки (используется, если `bBind` указан как **`false`** в [CCommand:: Open](../../data/oledb/ccommand-open.md)).|
 |[CAccessorRowset](#caccessorrowset)|Конструктор.|
 |[Закрыть](#close)|Закрывает набор строк и любые методы доступа.|
 |[фрирекордмемори](#freerecordmemory)|Освобождает все столбцы в текущей записи, которые необходимо освободить.|
@@ -76,7 +76,7 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 
 ## <a name="caccessorrowsetbind"></a><a name="bind"></a>CAccessorRowset:: BIND
 
-Создает привязки, если в элементе [CCommand:: Open](../../data/oledb/ccommand-open.md)задано `bBind` как **false** .
+Создает привязки, если вы указали `bBind` как **`false`** в элементе [CCommand:: Open](../../data/oledb/ccommand-open.md).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -151,7 +151,7 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 
 Дополнительные сведения см. в разделе [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) в *справочнике программиста OLE DB*.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [Шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Справочник по шаблонам потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

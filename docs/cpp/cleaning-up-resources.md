@@ -9,12 +9,12 @@ helpviewer_keywords:
 - exception handling [C++], cleanup code
 - try-catch keyword [C++], termination handlers
 ms.assetid: 65753efe-6a27-4750-b90c-50635775c1b6
-ms.openlocfilehash: ba7841f4fa8f0b6654e78e529e82f86237707787
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b172695044057f58771af0f4cfcb5ca869b36678
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80180867"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229055"
 ---
 # <a name="cleaning-up-resources"></a>Освобождение ресурсов
 
@@ -26,7 +26,7 @@ ms.locfileid: "80180867"
 
 1. В блоке инструкций **__try** выделите ресурсы. Для дескрипторов устанавливается положительные значения по мере распределения ресурсов.
 
-1. В блоке оператора **__finally** выпустите каждый ресурс, соответствующий маркер или переменная флага которого не равны нулю или не имеют значение null.
+1. В **`__finally`** блоке инструкций выпустите каждый ресурс, соответствующий маркер или переменная флага которого не равны нулю или не имеют значение null.
 
 ## <a name="example"></a>Пример
 
@@ -70,7 +70,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [Написание обработчика завершения](../cpp/writing-a-termination-handler.md)<br/>
-[Структурированная обработка исключений (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

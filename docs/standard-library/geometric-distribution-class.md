@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::geometric_distribution [C++], param_type
 - std::geometric_distribution [C++], param_type
 ms.assetid: 38f933af-3b49-492e-9d26-b6b272a60013
-ms.openlocfilehash: 44b624995ed274212a2699cb457c91dfa4530f03
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6a9e2c55da7278c50d43a63a4cce79d2a21f573c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370642"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233188"
 ---
 # <a name="geometric_distribution-class"></a>Класс geometric_distribution
 
@@ -66,15 +66,15 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*IntType*\
-Тип результата, по умолчанию **int**. Для возможных типов см [ \<>. ](../standard-library/random.md)
+*инттипе*\
+Целочисленный тип результата, по умолчанию — **`int`** . Возможные типы см. в разделе [\<random>](../standard-library/random.md) .
 
-*Ргсч*\
-Единый генератор случайных чисел. Для возможных типов см [ \<>. ](../standard-library/random.md)
+*РГСЧ*\
+Единый механизм генератора случайных чисел. Возможные типы см. в разделе [\<random>](../standard-library/random.md) .
 
 ## <a name="remarks"></a>Remarks
 
-Шаблон класса описывает распределение, которое производит значения определенного пользовательского интегрального типа с геометрическим распределением. В следующей таблице представлены ссылки на статьи об отдельных членах.
+Шаблон класса описывает распределение, которое создает значения указанного пользователем целочисленного типа с геометрическим распределением. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
 ||||
 |-|-|-|
@@ -91,7 +91,7 @@ public:
 
 Функции-члены `operator()` возвращают следующее значение, созданное механизмом РГСЧ, из текущего или указанного пакета параметров.
 
-Для получения дополнительной информации о классах распределения и их членах [ \<>](../standard-library/random.md)см.
+Дополнительные сведения о классах распределения и их членах см [\<random>](../standard-library/random.md) . в разделе.
 
 Подробные сведения о распределении "хи-квадрат" см. в статье Wolfram MathWorld [Геометрическое распределение](https://go.microsoft.com/fwlink/p/?linkid=400529).
 
@@ -205,11 +205,11 @@ Distribution for 100 samples:
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<random>
+**Заголовок:**\<random>
 
 **Пространство имен:** std
 
-## <a name="geometric_distributiongeometric_distribution"></a><a name="geometric_distribution"></a>geometric_distribution::geometric_distribution
+## <a name="geometric_distributiongeometric_distribution"></a><a name="geometric_distribution"></a>geometric_distribution:: geometric_distribution
 
 Формирует распределение.
 
@@ -220,10 +220,10 @@ explicit geometric_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Параметры
 
-*P*\
+*ш*\
 Параметр распределения `p`.
 
-*парм*\
+*ParM*\
 Структура параметров, используемая для формирования распределения.
 
 ### <a name="remarks"></a>Remarks
@@ -234,7 +234,7 @@ explicit geometric_distribution(const param_type& parm);
 
 Второй конструктор создает объект, хранимые параметры которого инициализируются из *parm*. Вы можете получить и задать текущие параметры существующего распределения, вызвав функцию-член `param()`.
 
-## <a name="geometric_distributionparam_type"></a><a name="param_type"></a>geometric_distribution::pараматип
+## <a name="geometric_distributionparam_type"></a><a name="param_type"></a>geometric_distribution::p aram_type
 
 Сохраняет параметры распределения.
 
@@ -251,7 +251,7 @@ struct param_type {
 
 ### <a name="parameters"></a>Параметры
 
-*P*\
+*ш*\
 Параметр распределения `p`.
 
 *Правильно*\
@@ -265,4 +265,4 @@ struct param_type {
 
 ## <a name="see-also"></a>См. также раздел
 
-[\<случайные>](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

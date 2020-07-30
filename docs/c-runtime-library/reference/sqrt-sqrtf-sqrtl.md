@@ -37,12 +37,12 @@ helpviewer_keywords:
 - calculating square roots
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
-ms.openlocfilehash: 8983d0854b82d532aad57fa80b03bbe3313970f0
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: 6b769be6bcb0fba8c322e3df7a9ac96e4e83a85d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506888"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229367"
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt, sqrtf, sqrtl
 
@@ -73,9 +73,9 @@ long double sqrtl(
 *x*<br/>
 Неотрицательные значения с плавающей запятой
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Так как C++ допускает перегрузку, можно вызывать перегрузки **sqrt** , которые принимают типы **float** или **Long** типа **Double** . В программе C функция **sqrt** всегда принимает и возвращает **Double**.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки функции **sqrt** , принимающей **`float`** **`long double`** типы или. В программе C функция **sqrt** всегда принимает и возвращает значение **`double`** .
 
 По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
@@ -122,7 +122,7 @@ int main( void )
 The square root of 45.35 is 6.73
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [exp, expf, expl](exp-expf.md)<br/>

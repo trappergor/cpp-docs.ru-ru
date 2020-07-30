@@ -30,16 +30,16 @@ helpviewer_keywords:
 - numbers, converting
 - converting double numbers
 ms.assetid: d52fb0a6-cb91-423f-80b3-952a8955d914
-ms.openlocfilehash: 9ac623c6cb80c774184dcb005e6d1d631c498040
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: e76ebd065d323a9ae501ce6a7a5790389c7d5dad
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915140"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234215"
 ---
 # <a name="_ecvt_s"></a>_ecvt_s
 
-Преобразует **Двойное** число в строку. Это — версия функции [_ecvt](ecvt.md) с усовершенствованиями системы безопасности, описанными в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Преобразует **`double`** число в строку. Это — версия функции [_ecvt](ecvt.md) с усовершенствованиями системы безопасности, описанными в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -92,10 +92,10 @@ errno_t _ecvt_s(
 
 |*_Buffer*|*_SizeInBytes*|_Value|_Count|_Dec|_Sign|Возвращаемое значение|Значение в *буфере*|
 |---------------|--------------------|-------------|-------------|-----------|------------|------------------|-----------------------|
-|**ЗАКАНЧИВАЮЩ**|any|any|any|any|any|**еинвал**|Не изменено.|
+|**NULL**|any|any|any|any|any|**еинвал**|Не изменено.|
 |Not **null** (указывает на допустимый объем памяти)|<=0|any|any|any|any|**еинвал**|Не изменено.|
-|any|any|any|any|**ЗАКАНЧИВАЮЩ**|any|**еинвал**|Не изменено.|
-|any|any|any|any|any|**ЗАКАНЧИВАЮЩ**|**еинвал**|Не изменено.|
+|any|any|any|any|**NULL**|any|**еинвал**|Не изменено.|
+|any|any|any|any|any|**NULL**|**еинвал**|Не изменено.|
 
 ## <a name="security-issues"></a>Проблемы с безопасностью
 
@@ -119,7 +119,7 @@ errno_t _ecvt_s(
 
 ## <a name="requirements"></a>Требования
 
-|Функция|Обязательный заголовок|Необязательный заголовок|
+|Компонент|Обязательный заголовок|Необязательный заголовок|
 |--------------|---------------------|---------------------|
 |**_ecvt_s**|\<stdlib.h>|\<errno.h>|
 
@@ -160,7 +160,7 @@ Converted value: 12000
 ## <a name="see-also"></a>См. также раздел
 
 [Преобразование данных](../../c-runtime-library/data-conversion.md)<br/>
-[Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
+[Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt_s](fcvt-s.md)<br/>

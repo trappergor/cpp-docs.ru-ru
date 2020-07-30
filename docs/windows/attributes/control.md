@@ -1,19 +1,19 @@
 ---
-title: элемент управленияC++ (атрибут com)
+title: Control (атрибут COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.control
 helpviewer_keywords:
 - Control attribute
 ms.assetid: 3d046bb2-4afe-4cb8-a762-233b296e1975
-ms.openlocfilehash: 9cdcca6fac2a92bf28f0f655489e61dcb08213e4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 59f1a6d1ad940f79693f9c5e37c1fe6527da3805
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214946"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224465"
 ---
-# <a name="control"></a>управляющие
+# <a name="control"></a>элемент управления
 
 Указывает, что определяемый пользователем тип является элементом управления.
 
@@ -25,7 +25,7 @@ ms.locfileid: "80214946"
 
 ## <a name="remarks"></a>Remarks
 
-Атрибут **Control** подразумевает атрибут [coclass](coclass.md) . Атрибут **Control** C++ имеет те же функциональные возможности, что и атрибут MIDL [элемента управления](/windows/win32/Midl/control) .
+Атрибут **Control** подразумевает атрибут [coclass](coclass.md) . Атрибут **элемента управления** C++ имеет те же функциональные возможности, что и атрибут MIDL [элемента управления](/windows/win32/Midl/control) .
 
 ## <a name="example"></a>Пример
 
@@ -50,15 +50,15 @@ class CTest : public ICustom {};
 
 |||
 |-|-|
-|**Применение**|**класс**, **Структура**|
-|**Повторяемый**|нет|
-|**Обязательные атрибуты**|None|
-|**Недопустимые атрибуты**|None|
+|**Относится к**|**`class`**, **`struct`**|
+|**REPEATABLE**|Нет|
+|**Требуемые атрибуты**|Нет|
+|**Недопустимые атрибуты**|Нет|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [Атрибуты IDL](idl-attributes.md)<br/>
-[Атрибуты классов](class-attributes.md)<br/>
-[Атрибуты Typedef, Enum, Union и Struct](typedef-enum-union-and-struct-attributes.md)
+[Атрибуты класса](class-attributes.md)<br/>
+[Атрибуты typedef, enum, Union и struct](typedef-enum-union-and-struct-attributes.md)

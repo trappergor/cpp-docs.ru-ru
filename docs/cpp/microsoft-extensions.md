@@ -4,37 +4,37 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Microsoft extensions to C/C++
 ms.assetid: 68654516-24ef-4f33-aae2-175f86cc1979
-ms.openlocfilehash: a2d0846e55122f177b4868c2e80c4f1d27267f5e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 4b2ed06b31ffefb0d64d09864004256251a9b6cf
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179410"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223672"
 ---
 # <a name="microsoft-extensions"></a>Расширения Майкрософт
 
-*ASM-оператор*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__asm***инструкции сборки* **;** <sub>неявное согласие</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__asm {** *Assembly-инструкции-List* **};** <sub>неявное согласие</sub>
+*`asm-statement`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`__asm`***`assembly-instruction`* **`;`** <sub>неявное согласие</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`__asm {`***`assembly-instruction-list`* **`} ;`** <sub>неявное согласие</sub>  
 
-*список инструкций сборки*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*инструкции сборки* **;** <sub>неявное согласие</sub> <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*инструкции сборки* **;** *список инструкций сборки* **;** <sub>неявное согласие</sub>
+*`assembly-instruction-list`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`assembly-instruction`***`;`** <sub>неявное согласие</sub> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`assembly-instruction`***`;`** *`assembly-instruction-list`* **`;`** <sub>неявное согласие</sub>
 
-*MS-модификатор-List*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*MS-модификатор* *MS-Modifiers-List*<sub>OPT</sub>
+*`ms-modifier-list`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`ms-modifier`**`ms-modifier-list`* <sub>неявное согласие</sub>
 
-*Модификатор MS*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__cdecl**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__fastcall**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__stdcall**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__syscall** (зарезервировано для будущих реализаций)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__oldcall** (зарезервировано для будущих реализаций)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__unaligned** (зарезервировано для будущих реализаций)<br/>
-Модификатор &nbsp;&nbsp;&nbsp;*на основе* &nbsp;
+*`ms-modifier`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`__cdecl`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`__fastcall`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`__stdcall`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`__syscall`**(зарезервировано для будущих реализаций)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`__oldcall`**(зарезервировано для будущих реализаций)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`__unaligned`**(зарезервировано для будущих реализаций)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`based-modifier`*
 
-*Модификатор на основе*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__based (** *на основе типа* **)**
+*`based-modifier`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`__based (`** *`based-type`* **`)`**
 
-*тип на основе*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*имя*
+*`based-type`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`name`*

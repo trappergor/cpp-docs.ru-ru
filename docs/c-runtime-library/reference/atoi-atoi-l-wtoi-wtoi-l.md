@@ -49,12 +49,12 @@ helpviewer_keywords:
 - atoi function
 - wtoi function
 ms.assetid: ad7fda30-28ab-421f-aaad-ef0b8868663a
-ms.openlocfilehash: b8be8af9fc56eea0011e5b07c1573dfe848b6c7d
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 49e8569ceec005680f97faa9bc64783a097db36a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919862"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232577"
 ---
 # <a name="atoi-_atoi_l-_wtoi-_wtoi_l"></a>atoi, _atoi_l, _wtoi, _wtoi_l
 
@@ -89,7 +89,7 @@ int _wtoi_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая функция возвращает значение **int** , полученное путем интерпретации входных символов в виде числа. Возвращаемое значение равно 0 для **atoi** и **_wtoi**, если входные данные не могут быть преобразованы в значение этого типа.
+Каждая функция возвращает **`int`** значение, полученное путем интерпретации входных символов в виде числа. Возвращаемое значение равно 0 для **atoi** и **_wtoi**, если входные данные не могут быть преобразованы в значение этого типа.
 
 В случае переполнения с большими отрицательными целочисленными значениями **LONG_MIN** возвращается. **atoi** и **_wtoi** возвращают **INT_MAX** и **INT_MIN** в этих условиях. Во всех случаях **, когда выходит** из диапазона, для параметра « **ERANGE**» задано значение «нет». Если переданный параметр имеет **значение NULL**, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции **устанавливают** значение **еинвал** и возвращают 0.
 
@@ -169,11 +169,11 @@ Function: atoi( "3336402735171707160320" ) = 2147483647
 Overflow condition occurred.
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [Преобразование данных](../../c-runtime-library/data-conversion.md)<br/>
-[Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
+[Локаль](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

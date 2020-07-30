@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: 0b2448e66e3b86e3295cd4b318a268a113f6058b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 688cd337d0754fc49ede0f39fd774c9990f7c79f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319578"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224361"
 ---
 # <a name="example-implementing-a-property-page"></a>Пример. Реализация страницы свойств
 
@@ -49,11 +49,11 @@ ms.locfileid: "81319578"
 
 Сначала создайте проект ATL для сервера DLL с именем `ATLPages7`. Теперь с помощью мастера [страницы свойств ATL](../atl/reference/atl-property-page-wizard.md) создайте страницу свойств. Дайте странице свойств **короткое имя** из **DocProperties**, затем перейдите на страницу **строк**, чтобы задать элементы, относящиеся к странице свойства, как показано в таблице ниже.
 
-|Item|Значение|
+|Элемент|Значение|
 |----------|-----------|
-|Заголовок|TextDocument|
+|Title|TextDocument|
 |Строка документа|Свойства TextDocument VCUE|
-|Helpfile|*\<пустой>*|
+|Helpfile|*\<blank>*|
 
 Значения, заданные на этой странице мастера, будут возвращены в контейнер страницы свойств при вызове `IPropertyPage::GetPageInfo`. После этого происходящее со строками зависит от контейнера, но обычно они будут использоваться для идентификации вашей страницы для пользователя. Заголовок обычно отображается на вкладке над вашей страницей, а строка документа может отображаться в строке состояния или всплывающей подсказке (хотя стандартный фрейм свойств вообще не использует эту строку).
 
@@ -90,7 +90,7 @@ ms.locfileid: "81319578"
 
 [!code-cpp[NVC_ATL_Windowing#74](../atl/codesnippet/cpp/example-implementing-a-property-page_2.h)]
 
-Вам также необходимо обратиться к базовому классу `IPropertyPageImpl` и добавить следующий **typedef** в класс `CDocProperties`:
+Также необходимо будет ссылаться на `IPropertyPageImpl` базовый класс, добавить в **`typedef`** класс следующее `CDocProperties` :
 
 [!code-cpp[NVC_ATL_Windowing#75](../atl/codesnippet/cpp/example-implementing-a-property-page_3.h)]
 
@@ -135,7 +135,7 @@ ms.locfileid: "81319578"
 
 Используйте [диалоговое окно "Добавление класса"](../ide/add-class-dialog-box.md) и [мастер простых объектов ATL](../atl/reference/atl-simple-object-wizard.md), чтобы создать класс, используя `Helper` в качестве его короткого имени. После создания добавьте метод, как показано в таблице ниже.
 
-|Item|Значение|
+|Элемент|Значение|
 |----------|-----------|
 |Имя метода|`ShowPage`|
 |Параметры|`[in] BSTR bstrCaption, [in] BSTR bstrID, [in] IUnknown* pUnk`|
@@ -171,7 +171,7 @@ End Module
 
 ::: moniker-end
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [Страницы свойств](../atl/atl-com-property-pages.md)<br/>
 [Примеры кода на Visual C++](../overview/visual-cpp-samples.md)

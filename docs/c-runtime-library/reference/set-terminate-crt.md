@@ -28,12 +28,12 @@ helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 3ff1456a-7898-44bc-9266-a328a80b6006
-ms.openlocfilehash: 29b760d8831411142aad052fdef510efb0486747
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 70ed4adb7ceada53205fd69f111c8976fe95c711
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914523"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234020"
 ---
 # <a name="set_terminate-crt"></a>set_terminate (CRT)
 
@@ -60,7 +60,7 @@ terminate_function set_terminate( terminate_function termFunction );
 
 В многопоточной среде функции завершения поддерживаются отдельно для каждого потока. Каждый новый поток требует установки собственной функции завершения. Таким образом, каждый поток отвечает за собственную обработку завершения.
 
-Тип **terminate_function** ОПРЕДЕЛЕН в EH. H как указатель на определяемую пользователем функцию завершения, *термфунктион* , возвращающую **void**. Пользовательская функция *термфунктион* может не принимать аргументы и не должна возвращать ее вызывающему объекту. Если это так, вызывается [Abort](abort.md) . Исключение не может быть вызвано в *термфунктион*.
+Тип **terminate_function** ОПРЕДЕЛЕН в EH. H в качестве указателя на определяемую пользователем функцию завершения, *термфунктион* , которая возвращает **`void`** . Пользовательская функция *термфунктион* может не принимать аргументы и не должна возвращать ее вызывающему объекту. Если это так, вызывается [Abort](abort.md) . Исключение не может быть вызвано в *термфунктион*.
 
 ```cpp
 typedef void ( *terminate_function )( );
@@ -85,10 +85,10 @@ typedef void ( *terminate_function )( );
 
 См. пример для функции [terminate](terminate-crt.md).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
-[Процедуры обработки исключений](../../c-runtime-library/exception-handling-routines.md)<br/>
-[рвал](abort.md)<br/>
+[Подпрограммы обработки исключений](../../c-runtime-library/exception-handling-routines.md)<br/>
+[abort](abort.md)<br/>
 [_get_terminate](get-terminate.md)<br/>
 [set_unexpected](set-unexpected-crt.md)<br/>
 [заканчива](terminate-crt.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: bad_typeid - исключение
+title: Исключение bad_typeid
 ms.date: 10/04/2019
 f1_keywords:
 - bad_typeid
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - bad_typeid exception
 - exceptions [C++], bad_typeid
 ms.assetid: 5963ed58-4ede-4597-957d-f7bbd06299c2
-ms.openlocfilehash: bb56de77ba001b5a511ef3a2695d18109b1ed3ca
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 3e01f97c67803408c9ce5bf056e3e9ed4746d259
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245919"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229172"
 ---
-# <a name="bad_typeid-exception"></a>bad_typeid - исключение
+# <a name="bad_typeid-exception"></a>Исключение bad_typeid
 
-**Bad_typeid** исключение вызывается [оператором typeid](../cpp/typeid-operator.md) , если операндом для **typeid** является пустой указатель.
+**Bad_typeid** исключение вызывается [оператором typeid](../cpp/typeid-operator.md) , если операнд для **`typeid`** является пустым указателем.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -26,7 +26,7 @@ catch (bad_typeid)
    statement
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Интерфейс для **bad_typeid** :
 
@@ -44,7 +44,7 @@ public:
 };
 ```
 
-В следующем примере показано, как оператор **typeid** создает исключение **bad_typeid** .
+В следующем примере показано, **`typeid`** как оператор создает исключение **bad_typeid** .
 
 ```cpp
 // expre_bad_typeid.cpp
@@ -78,7 +78,7 @@ catch (bad_typeid){
 Object is NULL
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Сведения о типах среды выполнения](../cpp/run-time-type-information.md)\
+[Сведения о типах времени выполнения](../cpp/run-time-type-information.md)\
 [Ключевые слова](../cpp/keywords-cpp.md)

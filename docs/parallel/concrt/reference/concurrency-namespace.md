@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-ms.openlocfilehash: 66c2e6e323ed9f12f30e9392ec7afe431fc2138b
-ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
+ms.openlocfilehash: f710ead679484c41b006566a711a03ba153201ec
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86446744"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230380"
 ---
 # <a name="concurrency-namespace"></a>Пространство имен concurrency
 
@@ -41,7 +41,7 @@ namespace concurrency;
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |`runtime_object_identity`|Каждый экземпляр сообщения имеет идентификатор, который сопутствует ему при клонировании и передаче между компонентами обмена сообщениями. Он не может быть адресом объекта сообщения.|
 |`task_status`|Тип, который представляет конечное состояние задачи. Допустимые значения: `completed` и `canceled`.|
@@ -50,7 +50,7 @@ namespace concurrency;
 
 ### <a name="classes"></a>Классы
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[Класс affinity_partitioner](affinity-partitioner-class.md)|Класс `affinity_partitioner` аналогичен классу `static_partitioner`, но он повышает сходство кэша путем подбора поддиапазонов сопоставления для потоков рабочего процесса. Он может значительно повысить производительность, если цикл повторно выполняется в одном и том же наборе данных и данные помещаются в кэш. Обратите внимание, что один и тот же объект `affinity_partitioner` должен использоваться с последующими итерациями параллельного цикла, выполняемого в указанном наборе данных, чтобы воспользоваться преимуществом локальности данных.|
 |[Класс агента](agent-class.md)|Класс, предназначенный для использования в качестве базового класса для всех независимых агентов. Он используется для скрытия состояния от других агентов и взаимодействия посредством передачи сообщений.|
@@ -83,7 +83,7 @@ namespace concurrency;
 |[Класс invalid_link_target](invalid-link-target-class.md)|Данный класс описывает исключение, создаваемое, когда вызывается метод `link_target` блока обмена сообщениями и блок сообщений не может создать связь с целевым объектом. Это может быть результатом превышения числа ссылок, допустимых для блока сообщений, или попытки связать указанную цель с одним и тем же источником дважды.|
 |[Класс invalid_multiple_scheduling](invalid-multiple-scheduling-class.md)|Этот класс описывает исключение, создаваемое, если объект `task_handle` запланирован несколько раз с помощью метода `run` объекта `task_group` или `structured_task_group` без промежуточных вызовов любого из методов `wait` или `run_and_wait`.|
 |[Класс invalid_operation](invalid-operation-class.md)|Данный класс описывает исключение, возникающее при выполнении недопустимой операции, которая не описывается более точно другим типом исключения, создаваемым средой выполнения с параллелизмом.|
-|[Класс invalid_oversubscribe_operation](invalid-oversubscribe-operation-class.md)|Этот класс описывает исключение, создаваемое при вызове метода `Context::Oversubscribe` с параметром `_BeginOversubscription`, имеющим значение `false`, без предварительного вызова метода `Context::Oversubscribe` с параметром `_BeginOversubscription`, имеющим значение `true`.|
+|[Класс invalid_oversubscribe_operation](invalid-oversubscribe-operation-class.md)|Этот класс описывает исключение, возникающее при `Context::Oversubscribe` вызове метода с `_BeginOversubscription` параметром, для которого задано значение **`false`** без предварительного вызова метода, для `Context::Oversubscribe` которого `_BeginOversubscription` параметру задано значение **`true`** .|
 |[Класс invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md)|Этот класс описывает исключение, создаваемое, когда конструктору объекта `SchedulerPolicy` передается неверный или неизвестный ключ или методу `SetPolicyValue` объекта `SchedulerPolicy` передается ключ, который должен быть изменен другими средствами, такими как метод `SetConcurrencyLimits`.|
 |[Класс invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-thread-specification-class.md)|Данный класс описывает исключение, создаваемое при попытке установить ограничения параллельности объекта `SchedulerPolicy` таким образом, чтобы значение ключа `MinConcurrency` было меньше, чем значение ключа `MaxConcurrency`.|
 |[Класс invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md)|Этот класс описывает исключение, создаваемое, когда ключу политики объекта `SchedulerPolicy` присваивается недопустимое для этого ключа значение.|
@@ -133,7 +133,7 @@ namespace concurrency;
 
 ### <a name="structures"></a>Структуры
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Структура DispatchState](dispatchstate-structure.md)|Структура `DispatchState` используется для передачи состояния в метод `IExecutionContext::Dispatch`. Она описывает обстоятельства, при которых метод `Dispatch` вызывается для интерфейса `IExecutionContext`.|
 |[Структура IExecutionContext](iexecutioncontext-structure.md)|Интерфейс для контекста выполнения, который может выполняться на данном виртуальном процессоре и к которому может применяться совместное переключение контекста.|
@@ -154,7 +154,7 @@ namespace concurrency;
 
 ### <a name="enumerations"></a>Перечисления
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[agent_status](concurrency-namespace-enums.md#agent_status)|Допустимые состояния для объекта `agent`.|
 |[Agents_EventType](concurrency-namespace-enums.md#agents_eventtype)|Типы событий, которые можно отслеживать с помощью функции трассировки, предоставляемой библиотекой агентов.|
@@ -173,13 +173,13 @@ namespace concurrency;
 
 ### <a name="functions"></a>Функции
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Функция Alloc](concurrency-namespace-functions.md#alloc)|Выделяет блок памяти указанного размера из подраспределителя кэширования среды параллелизма.|
 |[Функция asend](concurrency-namespace-functions.md#asend)|Перегружен. Асинхронная операция отправки, которая планирует задачу для распространения данных в целевой блок.|
 |[Функция cancel_current_task](concurrency-namespace-functions.md#cancel_current_task)|Отменяет выполняющуюся в данный момент задачу. Эту функцию можно вызывать из тела задачи, чтобы прервать выполнение задачи и перевести ее в состояние `canceled`.<br /><br /> Вызов этой функции является неподдерживаемым сценарием, если вы не находитесь в теле `task`. Это приведет к неопределенному поведению, такому как сбой или нереагирование в приложении.|
 |[Функция create_async](concurrency-namespace-functions.md#create_async)|Создает асинхронную конструкцию среды выполнения Windows на основе предоставленного пользователем лямбда-выражения или объекта функции. Тип возвращаемого значения `create_async` — один из следующих: `IAsyncAction^`, `IAsyncActionWithProgress<TProgress>^`, `IAsyncOperation<TResult>^` или `IAsyncOperationWithProgress<TResult, TProgress>^`, в зависимости от сигнатуры лямбда-выражения, переданного методу.|
-|[Функция create_task](concurrency-namespace-functions.md#create_task)|Перегружен. Создает объект [задачи](task-class.md) PPL. Функция `create_task` может использоваться в любой ситуации, где бы вы использовали конструктор задач. Она предоставлена главным образом для удобства, поскольку позволяет использовать ключевое слово `auto` при создании задач.|
+|[Функция create_task](concurrency-namespace-functions.md#create_task)|Перегружен. Создает объект [задачи](task-class.md) PPL. Функция `create_task` может использоваться в любой ситуации, где бы вы использовали конструктор задач. Он предоставляется преимущественно для удобства, так как он позволяет использовать **`auto`** ключевое слово при создании задач.|
 |[Функция CreateResourceManager](concurrency-namespace-functions.md#createresourcemanager)|Возвращает интерфейс, который представляет одноэлементный экземпляр диспетчера ресурсов среды выполнения с параллелизмом. Диспетчер ресурсов отвечает за назначение ресурсов планировщикам, которым требуется взаимодействовать друг с другом.|
 |[Функция DisableTracing](concurrency-namespace-functions.md#disabletracing)|Отключает трассировку в среде выполнения с параллелизмом. Эту функция не рекомендуется использовать, поскольку трассировка событий Windows по умолчанию не регистрируется.|
 |[Функция EnableTracing](concurrency-namespace-functions.md#enabletracing)|Включает трассировку в среде выполнения с параллелизмом. Эта функция не рекомендована к использованию, поскольку трассировка событий Windows теперь по умолчанию включена.|
@@ -191,7 +191,7 @@ namespace concurrency;
 |[Функция GetProcessorNodeCount](concurrency-namespace-functions.md#getprocessornodecount)|Возвращает число узлов NUMA или пакетов процессора в базовой системе.|
 |[Функция Жетсчедулерид](concurrency-namespace-functions.md#getschedulerid)|Возвращает уникальный идентификатор, который можно назначить планировщику, реализующему интерфейс `IScheduler`.|
 |[Функция interruption_point](concurrency-namespace-functions.md#interruption_point)|Создает точку прерывания для отмены. Если отмена выполняется в контексте, где вызывается эта функция, это создает внутреннее исключение, которое прерывает текущую выполняемую параллельную работу. Если отмена не выполняется, функция ничего не делает.|
-|[Функция is_current_task_group_canceling](concurrency-namespace-functions.md#is_current_task_group_canceling)|Возвращает значение, указывающее, находится ли группа задач, которая в данный момент выполняется в текущем контексте во встроенном режиме, в процессе активной отмены (или вскоре перейдет в это состояние). Обратите внимание, что в отсутствие групп задач, выполняющихся в текущем контексте во встроенном режиме, будет возвращено значение `false`.|
+|[Функция is_current_task_group_canceling](concurrency-namespace-functions.md#is_current_task_group_canceling)|Возвращает значение, указывающее, находится ли группа задач, которая в данный момент выполняется в текущем контексте во встроенном режиме, в процессе активной отмены (или вскоре перейдет в это состояние). Обратите внимание, что если в текущем контексте нет группы задач, выполняющейся в настоящий момент, **`false`** будет возвращено.|
 |[Функция make_choice](concurrency-namespace-functions.md#make_choice)|Перегружен. Конструирует блок сообщений `choice` из необязательного объекта `Scheduler` или `ScheduleGroup` и двух или более источников входных данных.|
 |[Функция make_greedy_join](concurrency-namespace-functions.md#make_greedy_join)|Перегружен. Конструирует блок сообщений `greedy multitype_join` из необязательного объекта `Scheduler` или `ScheduleGroup` и двух или более источников входных данных.|
 |[Функция make_join](concurrency-namespace-functions.md#make_join)|Перегружен. Конструирует блок сообщений `non_greedy multitype_join` из необязательного объекта `Scheduler` или `ScheduleGroup` и двух или более источников входных данных.|
@@ -220,7 +220,7 @@ namespace concurrency;
 
 ### <a name="operators"></a>Операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[operator! =](concurrency-namespace-operators.md#operator_neq)|Проверяет неравенство объекта `concurrent_vector` слева от оператора объекту `concurrent_vector` справа от оператора.|
 |[Оператор&&](concurrency-namespace-operators.md#operator_amp_amp)|Перегружен. Создает задачу, которая будет успешно выполнена при успешном завершении обеих задач в качестве аргументов.|
@@ -233,7 +233,7 @@ namespace concurrency;
 
 ### <a name="constants"></a>Константы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[ажентевентгуид](concurrency-namespace-constants1.md#agenteventguid)|GUID категории ({B9B5B78C-0713-4898-A21A-C67949DCED07}), описывающий события трассировки Windows, запускаемые библиотекой агентов исполняющей среды с параллелизмом.|
 |[чоривентгуид](concurrency-namespace-constants1.md#choreeventguid)|GUID категории, описывающий события трассировки событий Windows, инициированные средой выполнения с параллелизмом, которые непосредственно связаны с делами или задачами.|
@@ -258,6 +258,6 @@ namespace concurrency;
 
 **Header:** Agents. h, ConcRT. h, concrtrm. h, concurrent_priority_queue. h, concurrent_queue. h, concurrent_unordered_map. h, concurrent_unordered_set. h, concurrent_vector. h, internal_concurrent_hash. h, internal_split_ordered_list. h, PPL. h, pplcancellation_token. h, пплконкрт. h, пплинтерфаце. h, из ppltasks. h
 
-## <a name="see-also"></a>Дополнительно
+## <a name="see-also"></a>См. также статью
 
-[Ссылки](reference-concurrency-runtime.md)
+[Ссылка](reference-concurrency-runtime.md)

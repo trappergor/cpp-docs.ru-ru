@@ -2,12 +2,12 @@
 title: Метод default::(type_name)::Equals
 ms.date: 12/30/2016
 ms.assetid: 4450f835-06fc-4758-8d0a-72cf00007873
-ms.openlocfilehash: 57143da18e98ed2d034343726ac96a92b4d1b23c
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 2e50cd10217dbf5c639a131e758264c7cd8f68a9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444327"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225791"
 ---
 # <a name="defaulttype_nameequals-method"></a>Метод default::(type_name)::Equals
 
@@ -28,7 +28,7 @@ bool Equals(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true** , если объекты равны; в противном случае — **значение false**.
+**`true`** значение, если объекты равны; в противном случае — **`false`** .
 
 ### <a name="requirements"></a>Требования
 
@@ -40,6 +40,6 @@ bool Equals(
 
 **Заголовок:** vccorlib.h
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
-[Пространство имен по умолчанию](../cppcx/default-namespace.md)
+[Пространство имен default](../cppcx/default-namespace.md)

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMemoryException [MFC], CMemoryException
 ms.assetid: 9af0ed57-d12a-45ca-82b5-c910a60f7edf
-ms.openlocfilehash: 375b4227a25ae4c18cfd263eff4c3ec13f1304e1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 71b17e777db9d6351192da7cffd075b3a64553bd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370006"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222931"
 ---
 # <a name="cmemoryexception-class"></a>Класс CMemoryException
 
@@ -29,15 +29,15 @@ class CMemoryException : public CSimpleException
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание:|
 |----------|-----------------|
-|[CMemoryИсключение::Память Исключение](#cmemoryexception)|Формирует объект `CMemoryException`.|
+|[CMemoryException:: CMemoryException](#cmemoryexception)|Формирует объект `CMemoryException`.|
 
 ## <a name="remarks"></a>Remarks
 
-Никакая дальнейшая квалификация не требуется или невозможна. Исключения памяти автоматически выбрасываются **новым**. Если вы пишете свои `malloc`собственные функции памяти, используя, например, то вы несете ответственность за бросание исключений памяти.
+Дальнейшая квалификация не требуется или невозможна. Исключения памяти автоматически создаются **`new`** . При написании собственных функций для работы с памятью с помощью, например, `malloc` вы несете ответственность за создание исключений памяти.
 
-Для получения `CMemoryException`дополнительной информации о , см. [Exception Handling (MFC)](../../mfc/exception-handling-in-mfc.md)
+Дополнительные сведения о см `CMemoryException` . в статье [обработка исключений (MFC)](../../mfc/exception-handling-in-mfc.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -51,9 +51,9 @@ class CMemoryException : public CSimpleException
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** afx.h
+**Заголовок:** AFX. h
 
-## <a name="cmemoryexceptioncmemoryexception"></a><a name="cmemoryexception"></a>CMemoryИсключение::Память Исключение
+## <a name="cmemoryexceptioncmemoryexception"></a><a name="cmemoryexception"></a>CMemoryException:: CMemoryException
 
 Формирует объект `CMemoryException`.
 
@@ -63,9 +63,9 @@ CMemoryException();
 
 ### <a name="remarks"></a>Remarks
 
-Не используйте этот конструктор напрямую, а скорее позвоните в глобальную функцию [AfxThrowMemory.](exception-processing.md#afxthrowmemoryexception) эта глобальная функция может преуспеть в ситуации вне памяти, поскольку она строит объект исключения в ранее выделенной памяти. для получения дополнительной [информации](../exception-handling-in-mfc.md)об обработке исключений см.
+Не используйте этот конструктор напрямую, а вызовите глобальную функцию [афкссровмеморексцептион](exception-processing.md#afxthrowmemoryexception). Эта глобальная функция может быть выполнена в случае нехватки памяти, так как она конструирует объект исключения в ранее выделенной памяти. Дополнительные сведения об обработке исключений см. в статье [исключения](../exception-handling-in-mfc.md).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [Класс CException](cexception-class.md)<br/>
-[Диаграмма иерархии](../hierarchy-chart.md)
+[Иерархическая диаграмма](../hierarchy-chart.md)

@@ -37,12 +37,12 @@ helpviewer_keywords:
 - exp2f function
 - exp2l function
 ms.assetid: 526e3e10-201a-4610-a886-533f44ece344
-ms.openlocfilehash: 3a80efab34b45348ca00f09b2fd6e2ea5077fd86
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d2eb3f6d27e943110c5e82968d4fee949644601f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909632"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234163"
 ---
 # <a name="exp2-exp2f-exp2l"></a>exp2, exp2f, exp2l
 
@@ -86,7 +86,7 @@ long double exp2l(
 |*x* = ± 0|1|
 |*x* =-бесконечность|+0|
 |*x* = + бесконечность|+INFINITY|
-|*x* = NaN|NaN|
+|*x* = NaN|Не число|
 |Ошибка переполнения диапазона|+HUGE_VAL, +HUGE_VALF или +HUGE_VALL|
 |Ошибка недостаточного заполнения диапазона|Правильный результат, после округления|
 
@@ -94,7 +94,7 @@ long double exp2l(
 
 ## <a name="remarks"></a>Remarks
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **EXP2** , которые принимают и возвращают типы **float** и **long double** . В программе на языке C **EXP2** всегда принимает и возвращает значение **типа Double**.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **EXP2** , которые принимают и возвращают **`float`** **`long double`** типы и. В программе на языке C **EXP2** всегда принимает и возвращает **`double`** .
 
 По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
@@ -106,8 +106,8 @@ long double exp2l(
 
 Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
-[Алфавитный указатель функций](crt-alphabetical-function-reference.md)<br/>
+[Алфавитный справочник по функциям](crt-alphabetical-function-reference.md)<br/>
 [exp, expf, expl](exp-expf.md)<br/>
 [log2, log2f, log2l](log2-log2f-log2l.md)<br/>

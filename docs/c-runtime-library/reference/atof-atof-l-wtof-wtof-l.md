@@ -54,12 +54,12 @@ helpviewer_keywords:
 - _wtof function
 - string conversion, to floating point values
 ms.assetid: eb513241-c9a9-4f5c-b7e7-a49b14abfb75
-ms.openlocfilehash: 5200b93a5745dfb8e9b31cd5663452b84cb3058a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8eee8db691b3b652768980237fc90bd675bac89b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909109"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232590"
 ---
 # <a name="atof-_atof_l-_wtof-_wtof_l"></a>atof, _atof_l, _wtof, _wtof_l
 
@@ -94,7 +94,7 @@ double _wtof_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая функция возвращает значение **типа Double** , полученное путем интерпретации входных символов в виде числа. Возвращаемое значение равно 0,0, если аргумент невозможно преобразовать в значение этого типа.
+Каждая функция возвращает **`double`** значение, полученное путем интерпретации входных символов в виде числа. Возвращаемое значение равно 0,0, если аргумент невозможно преобразовать в значение этого типа.
 
 Во всех случаях **, когда выходит** из диапазона, для параметра « **ERANGE**» задано значение «нет». Если переданный параметр имеет **значение NULL**, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции **устанавливают** значение **еинвал** и возвращают 0.
 
@@ -127,8 +127,8 @@ UCRT версии этих функций не поддерживают прео
 
 |Routine(s)|Обязательный заголовок|
 |------------------|---------------------|
-|**атоф**, **_atof_l**|C: \<math.h> или \<stdlib.h> C++: \<cstdlib>, \<stdlib.h>, \<cmath> или \<math.h>|
-|**_wtof**, **_wtof_l**|C: \<stdlib.h> или \<wchar.h> C++: \<cstdlib>, \<stdlib.h> или \<wchar.h>|
+|**атоф**, **_atof_l**|C: \<math.h> или \<stdlib.h> C++: \<cstdlib> , \<stdlib.h> \<cmath> или\<math.h>|
+|**_wtof**, **_wtof_l**|C: \<stdlib.h> или \<wchar.h> C++: \<cstdlib> , \<stdlib.h> или\<wchar.h>|
 
 ## <a name="example"></a>Пример
 
@@ -181,11 +181,11 @@ Function: atof("  -2,309e-25") = -2.000000e+00
 Function: _atof_l("  -2,309e-25", fr)) = -2.309000e-25
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [Преобразование данных](../../c-runtime-library/data-conversion.md)<br/>
-[Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
+[Локаль](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

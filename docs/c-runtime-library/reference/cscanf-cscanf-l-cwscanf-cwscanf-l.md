@@ -48,19 +48,19 @@ helpviewer_keywords:
 - reading data [C++], from the console
 - _cwscanf_l function
 ms.assetid: dbfe7547-b577-4567-a1cb-893fa640e669
-ms.openlocfilehash: 973642aa113c8db4174b399f22e980daba95ce41
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 45dcbd93ab689c8c86ab35e53552a65f561dfd18
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079995"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234254"
 ---
 # <a name="_cscanf-_cscanf_l-_cwscanf-_cwscanf_l"></a>_cscanf, _cscanf_l, _cwscanf, _cwscanf_l
 
 Считывает форматированные данные из консоли. Существуют более безопасные версии этих функций; см. раздел [_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l](cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md).
 
 > [!NOTE]
-> В Visual Studio 2015 семейство функций `printf` и `scanf` было объявлено как **встроенное** и перемещено в заголовки `<stdio.h>` и `<conio.h>`. При переносе старого кода вы можете увидеть ошибку *LNK2019* в подключении к этим функциям. Дополнительные сведения см. в [разделе C++ журнал изменений Visual 2003-2015](../../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio).
+> В Visual Studio 2015 `printf` функции и `scanf` семейство функций были объявлены как **`inline`** и перемещены в `<stdio.h>` `<conio.h>` заголовки и. При переносе старого кода вы можете увидеть ошибку *LNK2019* в подключении к этим функциям. Дополнительные сведения см. в статье [Visual C++ журнал изменений 2003-2015](../../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio).
 
 > [!IMPORTANT]
 > Этот API нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -103,7 +103,7 @@ int _cwscanf_l(
 
 Число успешно преобразованных и назначенных полей. Возвращаемое значение не включает поля, которые были считаны, но не назначены. Возвращаемое значение — **EOF** для попытки чтения в конце файла. Это может произойти при перенаправлении ввода данных с клавиатуры на уровне командной строки операционной системы. Возвращаемое значение 0 означает, что поля не были назначены.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Функция **_cscanf** считывает данные непосредственно из консоли в расположения, указанные *аргументом*. Функция [_Getche](getch-getwch.md) используется для чтения символов. Каждый необязательный параметр должен быть указателем на переменную с типом, который соответствует спецификатору типа в *формате*. Формат управляет интерпретацией полей ввода и имеет ту же форму и функцию, что и параметр *Format* для функции [scanf](scanf-scanf-l-wscanf-wscanf-l.md) . Хотя **_cscanf** обычно отображает входной символ, он не делает этого, если последний вызов был **_ungetch**.
 
@@ -111,7 +111,7 @@ int _cwscanf_l(
 
 Версии этих функций с суффиксом **_l** идентичны за исключением того, что они используют переданный параметр языкового стандарта вместо локали текущего потока.
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|
@@ -125,7 +125,7 @@ int _cwscanf_l(
 |**_cscanf**, **_cscanf_l**|\<conio.h>|
 |**_cwscanf**, **_cwscanf_l**|\<conio.h> или \<wchar.h>|
 
-Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -164,9 +164,9 @@ Enter three integers: 1 2 3
 You entered 3 2 1
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-[Ввод-вывод на консоль и порт](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[Ввод-вывод в консоль и порт](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
 [fscanf, _fscanf_l, fwscanf, _fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
 [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)<br/>

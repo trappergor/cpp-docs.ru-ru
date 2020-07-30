@@ -12,16 +12,16 @@ helpviewer_keywords:
 - stdext::sync_per_thread [C++], deallocate
 - stdext::sync_per_thread [C++], equals
 ms.assetid: 47bf75f8-5b02-4760-b1d3-3099d08fe14c
-ms.openlocfilehash: 2976cdc6671750f0da439e9eb42053518e4af8d9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e7f5fb403ef020135e3dd3b85a1ad67cd435b6e8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376547"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224595"
 ---
 # <a name="sync_per_thread-class"></a>Класс sync_per_thread
 
-Описывает [фильтр синхронизации,](../standard-library/allocators-header.md) который предоставляет отдельный объект кэша для каждого потока.
+Описывает [фильтр синхронизации](../standard-library/allocators-header.md) , который предоставляет отдельный объект кэша для каждого потока.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,7 +32,7 @@ class sync_per_thread
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*Кэш*|Тип кэша, связанный с фильтром синхронизации. Возможные типы: [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) или [cache_suballoc](../standard-library/cache-suballoc-class.md).|
 
@@ -44,17 +44,17 @@ class sync_per_thread
 
 |Функция-член|Описание|
 |-|-|
-|[Выделить](#allocate)|Выделяет блок памяти.|
-|[Освобождения](#deallocate)|Освобождает указанное число объектов из памяти, начиная с заданной позиции.|
+|[allocate](#allocate)|Выделяет блок памяти.|
+|[deallocate](#deallocate)|Освобождает указанное число объектов из памяти, начиная с заданной позиции.|
 |[equals](#equals)|Сравнивает два кэша на равенство.|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<allocators>
+**Заголовок:**\<allocators>
 
 **Пространство имен:** stdext
 
-## <a name="sync_per_threadallocate"></a><a name="allocate"></a>sync_per_thread::
+## <a name="sync_per_threadallocate"></a><a name="allocate"></a>sync_per_thread:: allocate
 
 Выделяет блок памяти.
 
@@ -64,7 +64,7 @@ void *allocate(std::size_t count);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*count*|Число выделяемых элементов в массиве.|
 
@@ -72,7 +72,7 @@ void *allocate(std::size_t count);
 
 Функция-член возвращает результат вызова `cache::allocate(count)` в объекте кэша, который относится к текущему потоку. Если объект кэша для текущего потока не выделен, сначала такой объект будет выделен.
 
-## <a name="sync_per_threaddeallocate"></a><a name="deallocate"></a>sync_per_thread::d
+## <a name="sync_per_threaddeallocate"></a><a name="deallocate"></a>sync_per_thread::d еаллокате
 
 Освобождает указанное число объектов из памяти, начиная с заданной позиции.
 
@@ -82,16 +82,16 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|*Ptr*|Указатель на первый объект, который должен быть освобожден из хранилища.|
+|*ptr*|Указатель на первый объект, который должен быть освобожден из хранилища.|
 |*count*|Количество объектов для освобождения из хранилища.|
 
 ### <a name="remarks"></a>Remarks
 
 Функция-член вызывает метод `deallocate` в объекте кэша, который относится к текущему потоку. Если объект кэша для текущего потока не выделен, сначала такой объект будет выделен.
 
-## <a name="sync_per_threadequals"></a><a name="equals"></a>sync_per_thread::равные
+## <a name="sync_per_threadequals"></a><a name="equals"></a>sync_per_thread:: Equals
 
 Сравнивает два кэша на равенство.
 
@@ -101,17 +101,17 @@ bool equals(const sync<Cache>& Other) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*Кэш*|Объект кэша фильтра синхронизации.|
-|*Прочее*|Объект кэша для сравнения на равенство.|
+|*Другое*|Объект кэша для сравнения на равенство.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**ложный,** если объект кэша не был выделен для этого объекта или для *другого* в текущем потоке. В противном случае возвращается результат применения `operator==` к двум объектам кэша.
+**`false`** значение, если объект кэша не был выделен для данного объекта или для *другого* в текущем потоке. В противном случае возвращается результат применения `operator==` к двум объектам кэша.
 
 ### <a name="remarks"></a>Remarks
 
 ## <a name="see-also"></a>См. также раздел
 
-[\<>-подлатыватели](../standard-library/allocators-header.md)
+[\<allocators>](../standard-library/allocators-header.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - _com_ptr_t method [C++]
 ms.assetid: 0c00620a-28d2-4f60-ae4a-1696be36137e
-ms.openlocfilehash: 96589d8be56b81e78ea7c474aea24803cc56ab21
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e8d3d09bf385cb9fdaa02d460952fadbf83bc193
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80180489"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233799"
 ---
 # <a name="_com_ptr_t_com_ptr_t"></a>_com_ptr_t::_com_ptr_t
 
@@ -139,31 +139,31 @@ explicit _com_ptr_t(
 Необработанный указатель на интерфейс.
 
 *фаддреф*<br/>
-Если значение — TRUE, вызывается `AddRef`, чтобы увеличить число ссылок для указателя инкапсулированного интерфейса.
+Если **`true`** `AddRef` задано значение, вызывается метод для увеличения числа ссылок в указателе инкапсулированного интерфейса.
 
-*cp*<br/>
+*CP*<br/>
 Объект **_com_ptr_t** .
 
-*p*<br/>
+*ш*<br/>
 Необработанный указатель интерфейса, его тип отличается от типа интеллектуального указателя данного объекта **_com_ptr_t** .
 
-*варсрк*<br/>
-Объект `_variant_t` .
+*varSrc*<br/>
+Объект `_variant_t`.
 
 *этому*<br/>
-`CLSID` компонентного класса.
+Объект `CLSID` coclass.
 
 *двклсконтекст*<br/>
 Контекст для выполняющегося исполняемого кода.
 
 *lpcStr*<br/>
-Многобайтовая строка, содержащая либо `CLSID` (начиная с " **{** "), либо `ProgID`.
+Многобайтовая строка, содержащая либо `CLSID` (начиная с "**{**"), либо `ProgID` .
 
 *паутер*<br/>
 Внешняя неизвестная для [агрегирования](/windows/win32/com/aggregation).
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Класс _com_ptr_t](../cpp/com-ptr-t-class.md)

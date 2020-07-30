@@ -26,16 +26,16 @@ helpviewer_keywords:
 - _RTC_NumErrors function
 - RTC_NumErrors function
 ms.assetid: 7e82adae-38e2-4f8b-bc0b-37bda8109fd1
-ms.openlocfilehash: 72056208ca6d714f788ae325b90786f5be4ab443
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0e0af8596dbc7f48bc3f6b996219ec7c7a57749d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949036"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234033"
 ---
 # <a name="_rtc_numerrors"></a>_RTC_NumErrors
 
-Возвращает общее количество ошибок, которое может быть обнаружено путем проверки на ошибки во время выполнения (RTC). Вы можете использовать это число в качестве элемента управления в цикле **for**, где каждое значение в цикле передается в [_RTC_GetErrDesc](rtc-geterrdesc.md).
+Возвращает общее количество ошибок, которое может быть обнаружено путем проверки на ошибки во время выполнения (RTC). Это число можно использовать в качестве элемента управления в **`for`** цикле, где каждое значение в цикле передается в [_RTC_GetErrDesc](rtc-geterrdesc.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -60,7 +60,7 @@ int _RTC_NumErrors( void );
 
 Все версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также статью
 
 [_RTC_GetErrDesc](rtc-geterrdesc.md)<br/>
 [Проверка ошибок во время выполнения](../../c-runtime-library/run-time-error-checking.md)<br/>
