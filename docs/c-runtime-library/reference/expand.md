@@ -128,7 +128,7 @@ Allocated 512 bytes at 002C12BC
 Expanded block to 1024 bytes at 002C12BC
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Выделение памяти](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
