@@ -87,7 +87,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Управление доступом к членам классов](member-access-control-cpp.md)<br/>
 [Ключевые слова](../cpp/keywords-cpp.md)

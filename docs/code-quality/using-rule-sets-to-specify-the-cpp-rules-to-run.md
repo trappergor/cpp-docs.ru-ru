@@ -1,21 +1,21 @@
 ---
 title: Использование наборов правил для задания выполняемых правил C++
-ms.date: 07/13/2020
+ms.date: 07/27/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.rulesets.native
-ms.openlocfilehash: 8b6d3fe8c8e441d4b233f2f4008d8aae9225726f
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: b132400485c041b96e81736bcda04922b2cda88c
+ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373857"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87389822"
 ---
 # <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>Использование наборов правил для задания выполняемых правил C++
 
-В Visual Studio можно создать и изменить набор настраиваемых *правил* для удовлетворения конкретных потребностей проекта, связанных с анализом кода. Наборы правил по умолчанию хранятся в `%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets` .
+В Visual Studio можно создать и изменить набор настраиваемых *правил* для удовлетворения конкретных потребностей проекта, связанных с анализом кода. Наборы правил по умолчанию хранятся в *`%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets`* .
 
-**Visual Studio 2017 версии 15,7 и более поздних версий:** Пользовательские наборы правил можно создавать с помощью любого текстового редактора и применять их в сборках из командной строки независимо от используемой системы сборки. Дополнительные сведения см. в разделе [/Analyze: RuleSet](/cpp/build/reference/analyze-code-analysis).
+**Visual Studio 2017 версии 15,7 и более поздних версий:** Пользовательские наборы правил можно создавать с помощью любого текстового редактора и применять их в сборках из командной строки независимо от используемой системы сборки. Дополнительные сведения см. на веб-сайте [`/analyze:ruleset`](/cpp/build/reference/analyze-code-analysis).
 
 Чтобы создать настраиваемый набор правил C++ в Visual Studio, в интегрированной среде разработки Visual Studio должен быть открыт проект C/C++. Затем вы открываете стандартный набор правил в редакторе набора правил, а затем добавляете или удаляете определенные правила и при необходимости изменяете действие, которое происходит, когда анализ кода определяет нарушение правила.
 
@@ -23,9 +23,11 @@ ms.locfileid: "86373857"
 
 ## <a name="to-create-a-custom-rule-from-a-single-existing-rule-set"></a>Создание настраиваемого правила на основе одного существующего набора правил
 
+::: moniker range="<=vs-2017"
+
 1. В обозреватель решений откройте контекстное меню проекта и выберите пункт **Свойства**.
 
-1. На вкладке **Свойства** выберите **анализ кода**.
+1. В диалоговом окне **страницы свойств** перейдите на страницу свойств **Свойства конфигурации** > **Code Analysis** > **Общие** свойства анализ кода.
 
 1. В раскрывающемся списке **набор правил** выполните одно из следующих действий.
 
@@ -36,6 +38,25 @@ ms.locfileid: "86373857"
    - Выберите **\<Browse...>** , чтобы указать существующий набор правил, которого нет в списке.
 
 1. Нажмите кнопку **Открыть** , чтобы отобразить правила в редакторе набора правил.
+
+::: moniker-end
+::: moniker range=">=vs-2019"
+
+1. В обозреватель решений откройте контекстное меню проекта и выберите пункт **Свойства**.
+
+1. В диалоговом окне **страницы свойств** откройте страницу свойств **Конфигурация** > **анализ кода** свойства > **Майкрософт** .
+
+1. В раскрывающемся списке **активные правила** выполните одно из следующих действий.
+
+   - Выберите набор правил, который требуется настроить.
+
+     \- или -
+
+   - Выберите **\<Browse...>** , чтобы указать существующий набор правил, которого нет в списке.
+
+1. Нажмите кнопку **Открыть** , чтобы отобразить правила в редакторе набора правил.
+
+::: moniker-end
 
 ## <a name="to-modify-a-rule-set-in-the-rule-set-editor"></a>Изменение набора правил в редакторе набора правил
 
@@ -77,41 +98,23 @@ ms.locfileid: "86373857"
 
 ## <a name="to-create-a-rule-set-in-a-text-editor"></a>Создание набора правил в текстовом редакторе
 
-Вы можете создать настраиваемый набор правил в текстовом редакторе, сохранить его в любом расположении с `.ruleset` расширением и применить в с параметром компилятора [/Analyze: RuleSet](/cpp/build/reference/analyze-code-analysis) .
+Вы можете создать настраиваемый набор правил в текстовом редакторе, сохранить его в любом расположении с *`.ruleset`* расширением и применить в с [`/analyze:ruleset`](/cpp/build/reference/analyze-code-analysis) параметром компилятора.
 
 В следующем примере показан базовый файл набора правил, который можно использовать в качестве отправной точки:
 
-::: moniker range="<=vs-2017"
-
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<RuleSet Name="New Rule Set" Description=" " ToolsVersion="15.0">
+<RuleSet Name="New Rule Set" Description="New rules to apply." ToolsVersion="10.0">
   <Rules AnalyzerId="Microsoft.Analyzers.NativeCodeAnalysis" RuleNamespace="Microsoft.Rules.Native">
     <Rule Id="C6001" Action="Warning" />
     <Rule Id="C26494" Action="Warning" />
   </Rules>
 </RuleSet>
 ```
-
-::: moniker-end
-
-::: moniker range=">=vs-2019"
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<RuleSet Name="New Rule Set" Description=" " ToolsVersion="16.0">
-  <Rules AnalyzerId="Microsoft.Analyzers.NativeCodeAnalysis" RuleNamespace="Microsoft.Rules.Native">
-    <Rule Id="C6001" Action="Warning" />
-    <Rule Id="C26494" Action="Warning" />
-  </Rules>
-</RuleSet>
-```
-
-::: moniker-end
 
 ## <a name="ruleset-schema"></a>Схема набора правил
 
-Следующая схема набора правил описывает схему XML-файла набора правил. Схема набора правил хранится в `%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Schemas\RuleSet.xsd` . Его можно использовать для создания собственных наборов правил программным способом или для проверки соответствия пользовательских наборов правил правильному формату. Дополнительные сведения см. [в разделе инструкции. Создание XML-документа на основе схемы XSD](https://docs.microsoft.com/visualstudio/xml-tools/how-to-create-an-xml-document-based-on-an-xsd-schema?view=vs-2019).
+Следующая схема набора правил описывает схему XML-файла набора правил. Схема набора правил хранится в *`%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Schemas\RuleSet.xsd`* . Его можно использовать для создания собственных наборов правил программным способом или для проверки соответствия пользовательских наборов правил правильному формату. Дополнительные сведения см. [в разделе инструкции. Создание XML-документа на основе схемы XSD](https://docs.microsoft.com/visualstudio/xml-tools/how-to-create-an-xml-document-based-on-an-xsd-schema?view=vs-2019).
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

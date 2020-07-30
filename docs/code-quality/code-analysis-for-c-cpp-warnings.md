@@ -1,5 +1,5 @@
 ---
-title: Анализ кода для C/C++ предупреждения
+title: Анализ кода для предупреждений C/C++
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -13,18 +13,18 @@ helpviewer_keywords:
 - native code analysis
 - warnings, C/C++ analysis
 ms.assetid: 28f3fda6-35e8-485b-9755-1991aaccec3f
-ms.openlocfilehash: 781a904bed40a07a0448203b8887663f39caeed0
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 5562df8b6f0cfba6799e208acb9c1c223fb53e5e
+ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "79467307"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87389978"
 ---
-# <a name="code-analysis-for-cc-warnings"></a>Анализ кода для C/C++ предупреждения
+# <a name="code-analysis-for-cc-warnings"></a>Анализ кода для предупреждений C/C++
 
-В этом разделе перечислены предупрежденияC++ анализа C/Code, за исключением тех, которые вызываются [ C++ основными проверочными](code-analysis-for-cpp-corecheck.md)анализаторами. Дополнительные сведения об анализе кода см. в разделе [/Analyze (анализ кода)](/cpp/build/reference/analyze-code-analysis) и [быстрое начало: анализ кода дляC++C/](../code-quality/quick-start-code-analysis-for-c-cpp.md).
+В этом разделе перечислены предупреждения анализа кода C/C++, за исключением тех, которые вызываются [проверками C++ Core Guidelines](code-analysis-for-cpp-corecheck.md). Дополнительные сведения об анализе кода см. в разделе [ `/analyze` (анализ кода)](/cpp/build/reference/analyze-code-analysis) и [быстрое начало: анализ кода для C/C++](../code-quality/quick-start-code-analysis-for-c-cpp.md).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
-- [Анализ качества кода C/C++ с помощью метода анализа кода](../code-quality/code-analysis-for-c-cpp-overview.md)
-- [Использование аннотаций SAL для уменьшения количества дефектов в коде C/C++](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)
+- [Анализ качества кода C/C++ с помощью функции анализа кода](../code-quality/code-analysis-for-c-cpp-overview.md)
+- [Использование аннотаций SAL для сокращения количества дефектов в коде C/C++](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)
