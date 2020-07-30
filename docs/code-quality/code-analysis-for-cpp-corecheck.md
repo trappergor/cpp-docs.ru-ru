@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - code analysis, C++ core check
 ms.assetid: f1429463-136e-41ed-8a75-a8dbf0b4fd89
-ms.openlocfilehash: 7519706c0a8e23c56f8951647fb16c24d3f1e189
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e85ce8baed9a1ef39e0ab759ab86a5b570a42fa6
+ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216691"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87389952"
 ---
 # <a name="c-core-guidelines-checker-reference"></a>Справочник по средствам проверки C++ Core Guidelines
 
-В этом разделе перечислены предупреждения средства проверки C++ Core Guidelines. Дополнительные сведения об анализе кода см. в разделе [/Analyze (анализ кода)](/cpp/build/reference/analyze-code-analysis) и [быстрое начало: анализ кода для C/C++](../code-quality/quick-start-code-analysis-for-c-cpp.md).
+В этом разделе перечислены предупреждения средства проверки C++ Core Guidelines. Дополнительные сведения об анализе кода см. в разделе [ `/analyze` (анализ кода)](/cpp/build/reference/analyze-code-analysis) и [быстрое начало: анализ кода для C/C++](../code-quality/quick-start-code-analysis-for-c-cpp.md).
 
 > [!NOTE]
 > Некоторые предупреждения относятся к более чем одной группе, а не ко всем предупреждениям — полный справочный раздел.
@@ -280,6 +280,6 @@ ms.locfileid: "87216691"
 - 26425 ASSIGNING_TO_STATIC
 - 26499 NO_LIFETIME_TRACKING
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Использование средств проверки C++ Core Guidelines](using-the-cpp-core-guidelines-checkers.md)

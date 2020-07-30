@@ -2,12 +2,12 @@
 title: Новые возможности Visual C++ 2003–2015
 ms.date: 07/02/2019
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: e0fc576e8478a8d86d54daee22d797744eb870b9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8c73cf5fbd35c747f648ad2475a9ad49162a58d9
+ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219460"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87389939"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Новые возможности Visual C++ 2003–2015
 
@@ -1850,7 +1850,7 @@ C++ AMP ускоряет выполнение кода C++ благодаря и
 
 #### <a name="analyze-warnings"></a>Предупреждения /analyze
 
-Из библиотек среды выполнения C (CRT), MFC и ATL было удалено большинство предупреждений `/analyze` (корпоративный анализ кода).
+Большинство **`/analyze`** предупреждений (анализ кода предприятия) были удалены из библиотек времени выполнения C (CRT), MFC и ATL.
 
 #### <a name="animation-and-d2d-support"></a>Анимация и поддержка D2D
 
@@ -2233,6 +2233,6 @@ __sptr, __uptr
 
 Добавлены директива .SAFESEH и параметр `/safeseh` ml.exe.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Руководство по переносу и обновлению Visual C++](visual-cpp-porting-and-upgrading-guide.md)
