@@ -1,4 +1,4 @@
----
+﻿---
 title: C++ в Visual Studio
 description: Под Visual C++ подразумевается компилятор Microsoft C++, редактор кода и связанные инструменты в Интегрированной среде разработки Visual Studio. Используйте Visual C++ для разработки программ для Windows, Linux, Android и iOS.
 ms.date: 07/02/2019

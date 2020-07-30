@@ -1,4 +1,4 @@
----
+﻿---
 title: Разработка игр на языке C++
 ms.date: 02/26/2019
 ms.openlocfilehash: d4cc16e864d9ade1726733504a58551f9110171b
