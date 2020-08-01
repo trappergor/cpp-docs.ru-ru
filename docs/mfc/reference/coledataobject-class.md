@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COleDataObject [MFC], IsDataAvailable
 - COleDataObject [MFC], Release
 ms.assetid: d1cc84be-2e1c-4bb3-a8a0-565eb08aaa34
-ms.openlocfilehash: e9cb8c452cc3eea32b6eed9bf23fb454344c105d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4a24fcab0eb34bbba597ba0b5c1fac22a929c0c0
+ms.sourcegitcommit: 13f42c339fb7af935e3a93ac80e350d5e784c9f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214091"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87470944"
 ---
 # <a name="coledataobject-class"></a>Класс Коледатаобжект
 
@@ -68,7 +68,7 @@ class COleDataObject
 |[Коледатаобжект:: Исдатааваилабле](#isdataavailable)|Проверяет, доступны ли данные в указанном формате.|
 |[Коледатаобжект:: Release](#release)|Отсоединяет и освобождает связанный `IDataObject` объект.|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
 
 `COleDataObject`не имеет базового класса.
 
@@ -76,7 +76,7 @@ class COleDataObject
 
 Этот класс позволяет определить, существуют ли данные в указанном формате. Можно также перечислить доступные форматы данных или проверить, доступен ли данный формат, а затем извлечь данные в предпочтительном формате. Извлечение объектов может осуществляться различными способами, включая использование [кфиле](../../mfc/reference/cfile-class.md), хглобал или `STGMEDIUM` структуры.
 
-Дополнительные сведения см. в описании структуры [стгмедиум](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) в Windows SDK.
+Дополнительные сведения см. в описании структуры [стгмедиум](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1) в Windows SDK.
 
 Дополнительные сведения об использовании объектов данных в приложении см. в статье [объекты данных и источники данных (OLE)](../../mfc/data-objects-and-data-sources-ole.md).
 
@@ -106,7 +106,7 @@ void Attach(
 *бауторелеасе*<br/>
 Значение TRUE, если объект OLE Data следует освободить при `COleDataObject` уничтожении объекта; в противном случае — значение false.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Дополнительные сведения см. в разделе [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) в Windows SDK.
 
@@ -122,7 +122,7 @@ BOOL AttachClipboard();
 
 Имеет ненулевое значение в случае успешного выполнения, иначе — 0.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 > [!NOTE]
 > Вызов этой функции блокирует буфер обмена до освобождения этого объекта данных. Объект данных освобождается в деструкторе для `COleDataObject` . Дополнительные сведения см. в разделе [опенклипбоард](/windows/win32/api/winuser/nf-winuser-openclipboard) и [Клосеклипбоард](/windows/win32/api/winuser/nf-winuser-closeclipboard) в документе Win32.
@@ -135,7 +135,7 @@ BOOL AttachClipboard();
 void BeginEnumFormats();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 После вызова `BeginEnumFormats` , сохраняется расположение первого формата, поддерживаемого этим объектом данных. Последовательные вызовы на `GetNextFormat` будут перечислять список доступных форматов в объекте данных.
 
@@ -151,7 +151,7 @@ void BeginEnumFormats();
 COleDataObject();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Перед вызовом других функций необходимо выполнить вызов [коледатаобжект:: Attach](#attach) или [Коледатаобжект:: аттачклипбоард](#attachclipboard) `COleDataObject` .
 
@@ -170,7 +170,7 @@ LPDATAOBJECT Detach();
 
 Указатель на Отсоединенный объект данных OLE.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 ## <a name="coledataobjectgetdata"></a><a name="getdata"></a>Коледатаобжект:: GetData
 
@@ -189,7 +189,7 @@ BOOL GetData(
 Формат, в котором должны возвращаться данные. Этот параметр может быть одним из стандартных форматов буфера обмена или значением, возвращаемым собственной функцией [Регистерклипбоардформат](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) Windows.
 
 *лпстгмедиум*<br/>
-Указывает на структуру [стгмедиум](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) , которая будет принимать данные.
+Указывает на структуру [стгмедиум](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1) , которая будет принимать данные.
 
 *лпформатетк*<br/>
 Указывает на структуру [форматетк](/windows/win32/api/objidl/ns-objidl-formatetc) , описывающую формат, в котором должны возвращаться данные. Укажите значение для этого параметра, если требуется указать дополнительные сведения о форматировании после формата буфера обмена, заданного параметром *кфформат*. Если он имеет значение NULL, для других полей в структуре используются значения по умолчанию `FORMATETC` .
@@ -198,9 +198,9 @@ BOOL GetData(
 
 Имеет ненулевое значение в случае успешного выполнения, иначе — 0.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
-Дополнительные сведения см. в разделе [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata), [стгмедиум](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1)и [форматетк](/windows/win32/api/objidl/ns-objidl-formatetc) в Windows SDK.
+Дополнительные сведения см. в разделе [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata), [стгмедиум](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1)и [форматетк](/windows/win32/api/objidl/ns-objidl-formatetc) в Windows SDK.
 
 Дополнительные сведения см. в разделе [регистерклипбоардформат](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) в Windows SDK.
 
@@ -226,7 +226,7 @@ CFile* GetFileData(
 
 Указатель на новый `CFile` или `CFile` производный объект, содержащий данные, если они успешно выполнены; в противном случае — null.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 В зависимости от среднего значения, в котором хранятся данные, фактическим типом, на который указывает возвращаемое значение, может быть `CFile` , `CSharedFile` или `COleStreamFile` .
 
@@ -259,7 +259,7 @@ HGLOBAL GetGlobalData(
 
 Маркер глобального блока памяти, содержащего данные в случае успешного выполнения; в противном случае — NULL.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Дополнительные сведения см. в разделе [форматетк](/windows/win32/api/objidl/ns-objidl-formatetc) в Windows SDK.
 
@@ -282,7 +282,7 @@ BOOL GetNextFormat(LPFORMATETC lpFormatEtc);
 
 Ненулевое значение, если доступен другой формат; в противном случае — 0.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 После вызова [коледатаобжект:: бегиненумформатс](#beginenumformats)сохраняется расположение первого формата, поддерживаемого этим объектом данных. Последовательные вызовы на `GetNextFormat` будут перечислять список доступных форматов в объекте данных. Используйте эти функции, чтобы получить список доступных форматов.
 
@@ -312,7 +312,7 @@ BOOL IsDataAvailable(
 
 Ненулевое значение, если данные доступны в указанном формате. в противном случае — 0.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Эта функция полезна перед вызовом `GetData` , `GetFileData` или `GetGlobalData` .
 
@@ -332,11 +332,11 @@ BOOL IsDataAvailable(
 void Release();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Объект `IDataObject` был связан с `COleDataObject` объектом путем вызова `Attach` или `AttachClipboard` явно или платформой. Если параметр *бауторелеасе* `Attach` имеет значение false, `IDataObject` объект не будет освобожден. В этом случае вызывающий объект отвечает за освобождение `IDataObject` с помощью вызова [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [Пример MFC для примера HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [Пример OCLIENT MFC](../../overview/visual-cpp-samples.md)<br/>
