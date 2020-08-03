@@ -6,12 +6,12 @@ helpviewer_keywords:
 - typedef declarations
 - types [C], declarations
 ms.assetid: e92a3b82-9269-4bc6-834a-6f431ccac83e
-ms.openlocfilehash: b4bf7bc82cdf792e5a23f6d5533cc4d800fe4252
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d477e33def7168d01f9c5f8a64579fed0b497eb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346110"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87190069"
 ---
 # <a name="typedef-declarations"></a>Объявления Typedef
 
@@ -30,18 +30,18 @@ ms.locfileid: "62346110"
 &nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier declaration-specifiers*<sub>opt</sub>
 
 *storage-class-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**typedef**
+&nbsp;&nbsp;&nbsp;&nbsp; **`typedef`**
 
 *type-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**void**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**char**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**short**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**int**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**long**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**float**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**double**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**signed**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**unsigned**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`void`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`char`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`short`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`int`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`long`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`float`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`double`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`signed`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **`unsigned`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union-specifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*enum-specifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*typedef-name*
@@ -49,7 +49,7 @@ ms.locfileid: "62346110"
 *typedef-name*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier*
 
-Обратите внимание, что объявление typedef не создает типы. Оно создает синонимы для существующих типов или имена для типов, которые могут определяться другими способами. Если имя typedef используется как спецификатор типа, его можно использовать в сочетании с определенными спецификаторами типа (но нельзя использовать с другими спецификаторами). К допустимым модификаторам относятся **const** и `volatile`.
+Обратите внимание, что объявление typedef не создает типы. Оно создает синонимы для существующих типов или имена для типов, которые могут определяться другими способами. Если имя typedef используется как спецификатор типа, его можно использовать в сочетании с определенными спецификаторами типа (но нельзя использовать с другими спецификаторами). К допустимым модификаторам относятся **`const`** и **`volatile`** .
 
 Имена Typedef используют то же пространство имен, что и обычные идентификаторы (дополнительные сведения см. в статье [Пространства имен](../c-language/name-spaces.md)). Поэтому в программе может присутствовать имя typedef и идентификатор с тем же именем в локальной области. Пример:
 

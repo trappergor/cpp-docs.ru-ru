@@ -2,12 +2,12 @@
 title: Обзор соглашений ABI ARM
 ms.date: 07/11/2018
 ms.assetid: 23f4ae8c-3148-4657-8c47-e933a9f387de
-ms.openlocfilehash: 8737f7b1cbe0651b43eb3b9990a4035b60bd01b9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fc211b887b2b82f533c1e36bf95e6fd6b8e24728
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320729"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229770"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>Общие сведения о соглашениях ABI ARM32
 
@@ -201,7 +201,7 @@ Windows поддерживает только варианты ARM, имеющи
 
 Перечисления являются 32-разрядными целочисленными типами, если только хотя бы одно из значений в перечислении не требует хранения в 64-разрядном формате удвоенного слова. В этом случае перечисление повышается до 64-разрядного целочисленного типа.
 
-`wchar_t` определяется как эквивалент `unsigned short`, чтобы сохранить совместимость с другими платформами.
+**`wchar_t`** определяется как эквивалент **`unsigned short`** для сохранения совместимости с другими платформами.
 
 ## <a name="stack-walking"></a>Проверка стека
 

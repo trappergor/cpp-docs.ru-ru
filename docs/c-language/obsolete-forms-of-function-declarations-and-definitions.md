@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - old style function declarations
 ms.assetid: 67c5038f-0529-4f29-9d0f-c27580977b50
-ms.openlocfilehash: f26e79a586ea451cc51b339b5be593c2359e1f1a
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 3311fc846ad0f4f80c2e3b61508edd626a13fbb2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81745875"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218797"
 ---
 # <a name="obsolete-forms-of-function-declarations-and-definitions"></a>Устаревшие формы объявлений и определений функций
 
@@ -26,7 +26,7 @@ double alt_style( a , real )  /* Obsolete function definition */
 }
 ```
 
-Функции, возвращающие целое число или указатель того же размера, что и `int`, не обязательно должны иметь объявление, хотя это рекомендуется.
+Функции, возвращающие целое число или указатель того же размера, что и **`int`** , не обязательно должны иметь объявление, хотя это рекомендуется.
 
 В целях соответствия стандарту ANSI C объявления функций по старому стилю, выполненные с использованием многоточия, теперь выдают ошибку при выполнении компиляции с параметром /Za и предупреждение четвертого уровня при выполнении компиляции с параметром /Ze. Пример:
 

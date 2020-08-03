@@ -15,12 +15,12 @@ helpviewer_keywords:
 - '* operator, address-of operator'
 - operators [C++], indirection
 ms.assetid: 10d62b00-12ba-4ea9-a2d5-09ac29ca2232
-ms.openlocfilehash: 146f84c90aa56b5abf6ae5212c1729022cb7e4dc
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: e631959e69fbdf026886b7a67a3d4e4cd7266989
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64343899"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229640"
 ---
 # <a name="indirection-and-address-of-operators"></a>Операторы косвенного обращения и адреса операнда
 
@@ -58,7 +58,7 @@ double d;
 pa = &a[5];
 ```
 
-Оператор косвенного обращения ( __&#42;__ ) в этом примере обращается к значению `int` по адресу, сохраненному в переменной `pa`. Значение присваивается целочисленной переменной `x`:
+Оператор косвенного обращения ( __&#42;__ ) в этом примере обращается к значению **`int`** по адресу, сохраненному в переменной `pa`. Значение присваивается целочисленной переменной `x`:
 
 ```C
 x = *pa;

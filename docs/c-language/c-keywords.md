@@ -6,27 +6,59 @@ helpviewer_keywords:
 - redefining keywords
 - Microsoft-specific keywords
 ms.assetid: 2d932335-97bf-45cd-b367-4ae00db0ff42
-ms.openlocfilehash: e1364e0edacd94efa4ade6c6892a57d619635a39
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 081235f987d3f6f8dbfd3abb4af9d70688b7fd98
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326798"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87200716"
 ---
 # <a name="c-keywords"></a>Ключевые слова в C
 
 Ключевыми словами называются слова, которые имеют особое значение для компилятора C. На 7 и 8 этапах трансляции идентификатор не может иметь такое же написание и регистр записи, что и ключевое слово C. (См. описание [этапов трансляции](../preprocessor/phases-of-translation.md) в *Справочнике по препроцессору*. Дополнительные сведения об идентификаторах см. в разделе [Идентификаторы](../c-language/c-identifiers.md).) В языке C используются следующие ключевые слова:
 
-|||||
-|-|-|-|-|
-|**auto**|**double**|**int**|**struct**|
-|**break**|**else**|**long**|**switch**|
-|**case**|**enum**|**register**|**typedef**|
-|**char**|**extern**|**return**|**union**|
-|**const**|**float**|**short**|**unsigned**|
-|**continue**|**for**|**signed**|**void**|
-|**default**|**goto**|**sizeof**|**volatile**|
-|**do**|**if**|**static**|**while**|
+:::row:::
+    :::column:::
+        **`auto`**<br/>
+        **`double`**<br/>
+        **`int`**<br/>
+        **`struct`**<br/>
+        **`break`**<br/>
+        **`else`**<br/>
+        **`long`**<br/>
+        **`switch`**<br/>
+    :::column-end:::
+    :::column:::
+        **`case`**<br/>
+        **`enum`**<br/>
+        **`register`**<br/>
+        **`typedef`**<br/>
+        **`char`**<br/>
+        **`extern`**<br/>
+        **`return`**<br/>
+        **`union`**<br/>
+    :::column-end:::
+    :::column:::
+        **`const`**<br/>
+        **`float`**<br/>
+        **`short`**<br/>
+        **`unsigned`**<br/>
+        **`continue`**<br/>
+        **`for`**<br/>
+        **`signed`**<br/>
+        **`void`**<br/>
+    :::column-end:::
+    :::column:::
+        **`default`**<br/>
+        **`goto`**<br/>
+        **`sizeof`**<br/>
+        **`volatile`**<br/>
+        **`do`**<br/>
+        **`if`**<br/>
+        **`static`**<br/>
+        **`while`**<br/>
+    :::column-end:::
+:::row-end:::
 
 Переопределить ключевые слова невозможно. Но с помощью [директив препроцессора](../preprocessor/preprocessor-directives.md) C можно определить текст, который будет использоваться вместо ключевых слов.
 
@@ -36,23 +68,45 @@ ms.locfileid: "62326798"
 
 Компилятор Microsoft C распознает следующие ключевые слова и особые идентификаторы.
 
-|||||
-|-|-|-|-|
-|**__asm**<sup>3</sup>|**dllimport**<sup>2</sup>|**__int8**<sup>3</sup>|**naked**<sup>2</sup>|
-|**__based**<sup>1, 3</sup>|**__except**<sup>3</sup>|**__int16**<sup>3</sup>|**__stdcall**<sup>3</sup>|
-|**__cdecl**<sup>3</sup>|**__fastcall**|**__int32**<sup>3</sup>|**thread**<sup>2</sup>|
-|**__declspec**<sup>3</sup>|**__finally**<sup>3</sup>|**__int64**<sup>3</sup>|**__try**<sup>3</sup>|
-|**dllexport**<sup>2</sup>|**__inline**<sup>3</sup>|**__leave**<sup>3</sup>||
+:::row:::
+    :::column:::
+        **`__asm`** <sup>3</sup><br/>
+        **`dllimport`** <sup>2</sup><br/>
+        **`__int8`** <sup>3</sup><br/>
+        **`naked`** <sup>2</sup><br/>
+        **`__based`** <sup>1, 3</sup><br/>
+    :::column-end:::
+    :::column:::
+        **`__except`** <sup>3</sup><br/>
+        **`__int16`** <sup>3</sup><br/>
+        **`__stdcall`** <sup>3</sup><br/>
+        **`__cdecl`** <sup>3</sup><br/>
+        **`__fastcall`**<br/>
+    :::column-end:::
+    :::column:::
+        **`__int32`** <sup>3</sup><br/>
+        **`thread`** <sup>2</sup><br/>
+        **`__declspec`** <sup>3</sup><br/>
+        **`__finally`** <sup>3</sup><br/>
+        **`__int64`** <sup>3</sup><br/>
+    :::column-end:::
+    :::column:::
+        **`__try`** <sup>3</sup><br/>
+        **`dllexport`** <sup>2</sup><br/>
+        **`__inline`** <sup>3</sup><br/>
+        **`__leave`** <sup>3</sup><br/>
+    :::column-end:::
+:::row-end:::
 
-<sup>1</sup> Ключевое слово **__based** имеет ограниченное применение: в компиляциях для 32- и 64-разрядных платформ.
+<sup>1</sup> Ключевое слово **`__based`** имеет ограниченное применение: в компиляциях для 32- и 64-разрядных платформ.
 
-<sup>2</sup> Если эти ключевые слова используются с ключевым словом **__declspec**, они являются особыми идентификаторами. В других контекстах они могут использоваться без ограничений.
+<sup>2</sup> Если эти ключевые слова используются с ключевым словом **`__declspec`** , они являются особыми идентификаторами. В других контекстах они могут использоваться без ограничений.
 
 <sup>3</sup> Для совместимости с предыдущими версиями эти ключевые слова доступны как с двумя символами подчеркивания в начале, так и с одним при включении расширений Microsoft.
 
 Расширения Microsoft по умолчанию включены. Чтобы ваши программы были полностью переносимы, расширения Microsoft можно отключить, указав во время компиляции параметр [/Za \(Отключить расширения языка) ](../build/reference/za-ze-disable-language-extensions.md). При этом некоторые ключевые слова для систем Microsoft будут отключены.
 
-Когда расширения Microsoft включены, в программах можно использовать перечисленные выше ключевые слова. Для совместимости со стандартом ANSI большинство этих ключевых слов начинаются с двух символов подчеркивания. Четыре исключения, **dllexport**, **dllimport**, **naked** и **thread**, используются только с ключевым словом **__declspec** и поэтому не требуют двойного знака подчеркивания. Для всех остальных ключевых слов поддерживаются версии с одним символом подчеркивания. Это сделано для обеспечения обратной совместимости.
+Когда расширения Microsoft включены, в программах можно использовать перечисленные выше ключевые слова. Для совместимости со стандартом ANSI большинство этих ключевых слов начинаются с двух символов подчеркивания. Четыре исключения, **`dllexport`** , **`dllimport`** , **`naked`** и **`thread`** , используются только с ключевым словом **`__declspec`** и поэтому не требуют двойного знака подчеркивания. Для всех остальных ключевых слов поддерживаются версии с одним символом подчеркивания. Это сделано для обеспечения обратной совместимости.
 
 **Завершение блока, относящегося только к системам Майкрософт**
 

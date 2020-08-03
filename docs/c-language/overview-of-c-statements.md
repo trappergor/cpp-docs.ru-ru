@@ -8,12 +8,12 @@ helpviewer_keywords:
 - statements, about statements
 - Visual C, statements
 ms.assetid: 0d49837a-5399-4881-b60c-af5f4e9720de
-ms.openlocfilehash: bfa6840553055202f26f55e1dc5971bfd047b2de
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 6b6cf9ee7aab3f14b3cb4b48c10e59125391c14c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857077"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211779"
 ---
 # <a name="overview-of-c-statements"></a>Общие сведения об операторах в C
 
@@ -41,7 +41,7 @@ ms.locfileid: "74857077"
 
 Оператор выражения содержит выражение на языке C, которое может содержать арифметические или логические операторы, представленные в статье [Выражения и присваивания](../c-language/expressions-and-assignments.md). Неопределенный оператор представляет собой пустой оператор.
 
-Любой оператор C может начинаться с метки-идентификатора, которая состоит из имени и двоеточия. Поскольку метки операторов распознает только оператор `goto`, они рассматриваются в разделе, посвященном оператору `goto`. Дополнительные сведения см. в статье [goto и помеченные операторы (C)](../c-language/goto-and-labeled-statements-c.md).
+Любой оператор C может начинаться с метки-идентификатора, которая состоит из имени и двоеточия. Так как метки операторов распознает только оператор **`goto`** , они рассматриваются в разделе, посвященном оператору **`goto`** . Дополнительные сведения см. в статье [goto и помеченные операторы (C)](../c-language/goto-and-labeled-statements-c.md).
 
 ## <a name="see-also"></a>См. также
 

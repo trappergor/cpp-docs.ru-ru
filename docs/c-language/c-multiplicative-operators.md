@@ -11,12 +11,12 @@ helpviewer_keywords:
 - slash (/) operator
 - multiplication operator [C++], multiplicative operators
 ms.assetid: 495471c9-319b-4eb4-bd97-039a025fd3a9
-ms.openlocfilehash: f9f5f62e2326826e3087a8668cd9107da4b85388
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 32ff74be0fd1afb1d8a21d74abb194eaa5e273df
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335000"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227989"
 ---
 # <a name="c-multiplicative-operators"></a>Операторы умножения в C
 
@@ -62,7 +62,7 @@ double x = 2.0, y;
 y = x * i;
 ```
 
-В этом примере `x` умножается на `i` и получается значение 20.0. Результат имеет тип **double**.
+В этом примере `x` умножается на `i` и получается значение 20.0. Результат имеет тип **`double`** .
 
 ```
 n = i / j;

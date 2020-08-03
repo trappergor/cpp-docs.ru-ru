@@ -6,12 +6,12 @@ helpviewer_keywords:
 - project debugging [C++]
 - debugging projects
 ms.assetid: a5cade77-ba51-4b03-a7a0-6897e3cd6a59
-ms.openlocfilehash: ce792345b045a1e647de6363ca094fb3f3826b73
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 61433213619c16caf67de905a6da93c7360db298
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400979"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219681"
 ---
 # <a name="walkthrough-debugging-a-project-c"></a>Пошаговое руководство. Отладка проекта (C++)
 
@@ -41,20 +41,20 @@ ms.locfileid: "67400979"
 
    [!code-cpp[NVC_Walkthrough_Debugging_A_Project#111](../ide/codesnippet/CPP/walkthrough-debugging-a-project-cpp_2.cpp)]
 
-1. В строке меню последовательно выберите **Сборка**  >  **Собрать решение**.
+1. В строке меню последовательно выберите **Сборка** > **Собрать решение**.
 
 1. После завершения сборки запустите ее в режиме отладки, выбрав **Отладка** > **Начать отладку** в строке меню или нажав клавишу **F5**. Программа останавливается в первой точке останова.
 
 1. Для пошагового выполнения программы в строке меню выберите **Отладка** > **Шаг с обходом** или нажмите клавишу **F10**.
 
-   Обратите внимание, что после каждого выполнения конструктора `Cardgame` значение `totalParticipants` увеличивается. Когда функция `PlayGames` возвращает значение, так как каждый экземпляр `Cardgame` выходит за пределы области и удаляется (и вызывается деструктор), значение `totalParticipants` уменьшается. Непосредственно перед выполнением оператора `return` значение `totalParticipants` равно нулю.
+   Обратите внимание, что после каждого выполнения конструктора `Cardgame` значение `totalParticipants` увеличивается. Когда функция `PlayGames` возвращает значение, так как каждый экземпляр `Cardgame` выходит за пределы области и удаляется (и вызывается деструктор), значение `totalParticipants` уменьшается. Непосредственно перед выполнением оператора **`return`** значение `totalParticipants` равно нулю.
 
 1. Продолжайте пошаговое выполнение программы до ее завершения или позвольте ей выполняться, выбрав **Отладка** > **Выполнить** в строке меню или нажав клавишу **F5**.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Next Steps
 
-**Предыдущая статья:** [Пошаговое руководство: Тестирование проекта (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
-**Далее:** [Пошаговое руководство: Развертывание программы (C++)](../ide/walkthrough-deploying-your-program-cpp.md)
+**Предыдущая статья:** [Пошаговое руководство. Тестирование проекта (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
+**Далее:** [Пошаговое руководство. Развертывание программы (C++)](../ide/walkthrough-deploying-your-program-cpp.md)
 
 ## <a name="see-also"></a>См. также
 

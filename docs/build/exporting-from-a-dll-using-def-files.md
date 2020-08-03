@@ -6,16 +6,16 @@ helpviewer_keywords:
 - .def files [C++], exporting from DLLs
 - exporting DLLs [C++], DEF files
 ms.assetid: 9d31eda2-184e-47de-a2ee-a93ebd603f8e
-ms.openlocfilehash: 6f7d58bcb42edd89527fff41b08a15321722a6cf
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 8fdbb060502f339eb748306eef582d2f296b1f60
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078526"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229835"
 ---
 # <a name="exporting-from-a-dll-using-def-files"></a>Экспорт из библиотеки DLL с использованием DEF-файлов
 
-DEF-файл определения модуля (*.def) — это текстовый файл, содержащий один или несколько операторов модуля, описывающих различные атрибуты библиотеки DLL. Если вы не используете ключевое слово **__declspec(dllexport)** для экспорта функций библиотеки DLL, то для библиотеки DLL требуется DEF-файл.
+DEF-файл определения модуля (*.def) — это текстовый файл, содержащий один или несколько операторов модуля, описывающих различные атрибуты библиотеки DLL. Если вы не используете ключевое слово **`__declspec(dllexport)`** для экспорта функций библиотеки DLL, то для библиотеки DLL требуется DEF-файл.
 
 Как минимум, DEF-файл должен содержать следующие операторы определения модуля:
 

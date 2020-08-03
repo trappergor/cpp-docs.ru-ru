@@ -11,12 +11,12 @@ helpviewer_keywords:
 - executable files [C++], linking to DLLs
 - loading DLLs [C++]
 ms.assetid: 7592e276-dd6e-4a74-90c8-e1ee35598ea3
-ms.openlocfilehash: 2f907fedcaaf9897749ee0eb6a7ea5a33e1af679
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 0cd9cfa32e6f87479dfcd9926b1735671ff6690f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422838"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223945"
 ---
 # <a name="link-an-executable-to-a-dll"></a>Связывание исполняемого файла с библиотекой DLL
 
@@ -94,7 +94,7 @@ ms.locfileid: "79422838"
 
 - Вызвать [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw) или аналогичную функцию для загрузки библиотеки DLL и получения дескриптора модуля.
 
-- Вызвать [GetProcAddress](getprocaddress.md), чтобы получить указатель для каждой экспортированной функции, которую вызывает приложение. Поскольку приложения вызывают функции DLL с помощью указателя, компилятор не создает внешние ссылки и нет необходимости связываться с библиотекой импорта. Тем не менее необходимо использовать инструкцию `typedef` или `using`, определяющую сигнатуру вызова для вызываемых экспортированных функций.
+- Вызвать [GetProcAddress](getprocaddress.md), чтобы получить указатель для каждой экспортированной функции, которую вызывает приложение. Поскольку приложения вызывают функции DLL с помощью указателя, компилятор не создает внешние ссылки и нет необходимости связываться с библиотекой импорта. Тем не менее, необходимо использовать оператор **`typedef`** или **`using`** , определяющий сигнатуру вызова для вызываемых экспортированных функций.
 
 - По завершении работы с библиотекой DLL вызовите [FreeLibrary](freelibrary-and-afxfreelibrary.md).
 

@@ -4,12 +4,12 @@ description: Сводные описания примеров, доступны�
 ms.date: 03/23/2020
 ms.technology: cpp-language
 ms.assetid: 76798022-5886-48e7-a7f2-f99352b15cbf
-ms.openlocfilehash: 0862f6b512f7278f878ade53b320ad5298bccf68
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cb8d2aa8322cb3e9bfc30dc9ad041e7c70662049
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "80215102"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226767"
 ---
 # <a name="visual-studio-c-samples"></a>Примеры кода Visual Studio C++
 
@@ -246,7 +246,7 @@ ms.locfileid: "80215102"
 | [ListHdr](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | Демонстрирует использование общих классов управления MFC `CListCtrl` и `CHeaderCtrl`. |
 | [MDI](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | Приложение с интерфейсом MDI, которое не использует документы и представления. |
 | [MDIDocVw](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | Обновленная версия примера MDI, в которой используется архитектура документов и представлений. |
-| [MMXSwarm](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | Демонстрируется использование класса `CImage`, типа данных `__m64` и файлов DIB. |
+| [MMXSwarm](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | Демонстрирует использование `CImage`, типа данных **`__m64`** и файлов DIB. |
 | [Modeless](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | Демонстрирует использование объекта MFC `CDialog` в качестве немодального диалогового окна. |
 | [Multipad](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | Простой текстовый редактор, который позволяет пользователю открывать и редактировать несколько текстовых файлов одновременно. |
 | [Npp](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | Демонстрирует реализацию приложения интерфейса (SDI), аналогичного Блокноту. Позволяет изменять текстовые сообщения и передавать их другим пользователям или в другие системы через API обмена сообщениями Windows или MAPI. |

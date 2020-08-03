@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operators [C], member selection
 - structure member selection
 ms.assetid: bb1fe304-af49-4f98-808d-afdc99b3e319
-ms.openlocfilehash: b22f5a29a4dc088ea4f3db863d635badee048d2c
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: 70c89344e6afcdf52981f779c441c5ec47791a77
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825695"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211649"
 ---
 # <a name="structure-and-union-members"></a>Члены структур и объединений
 
@@ -27,7 +27,7 @@ ms.locfileid: "82825695"
 
 В следующем списке приводится описание двух форм выражений выбора члена.
 
-1. В первой форме *postfix-expression* представляет значение типа **struct** или **union**, а *identifier* именует член указанной структуры или объединения. Значение операции совпадает с *identifier* и является l-значением, если *postfix-expression* является l-значением. Дополнительные сведения см. в разделе [Выражения l-значений и r-значений](../c-language/l-value-and-r-value-expressions.md).
+1. В первой форме *postfix-expression* представляет значение типа **`struct`** или **`union`** , а *identifier* именует элемент указанной структуры или объединения. Значение операции совпадает с *identifier* и является l-значением, если *postfix-expression* является l-значением. Дополнительные сведения см. в разделе [Выражения l-значений и r-значений](../c-language/l-value-and-r-value-expressions.md).
 
 1. Во второй форме *postfix-expression* представляет указатель на структуру или объединение, а *identifier* именует член указанной структуры или объединения. Это значение совпадает с *identifier* и является l-значением.
 

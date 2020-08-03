@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - memory, overwrites
 ms.assetid: 1345eb4d-24ba-4595-b1cc-2da66986311e
-ms.openlocfilehash: 42e3a7f1f1c34ba5a263adfca7496c24e162ab5d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 152f72749d2ebdacd46dd3e4db671bc5705d4b6a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314290"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213753"
 ---
 # <a name="using-the-debug-build-to-check-for-memory-overwrite"></a>Использование отладочного построения для проверки затирания памяти
 
@@ -21,7 +21,7 @@ afxMemDF |= checkAlwaysMemDF;
 
 Механизм распределения отладочной памяти разместит защитные байты вокруг всех выделений памяти. Однако эти защитные байты будут бесполезны, если не проверить, были ли они изменены (что указывало бы на перезапись памяти). В противном случае у вас просто будет буфер, который, на самом деле, может позволить избежать перезаписи памяти.
 
-Если включить `checkAlwaysMemDF`, MFC будет принудительно вызывать функцию `AfxCheckMemory` при каждом вызове операции **создания** или **удаления**. При обнаружении перезаписи памяти будет сформировано сообщение TRACE, которое выглядит следующим образом:
+Если включить `checkAlwaysMemDF`, MFC будет принудительно вызывать функцию `AfxCheckMemory` при каждом вызове операции **`new`** или **`delete`** . При обнаружении перезаписи памяти будет сформировано сообщение TRACE, которое выглядит следующим образом:
 
 ```
 Damage Occurred! Block=0x5533

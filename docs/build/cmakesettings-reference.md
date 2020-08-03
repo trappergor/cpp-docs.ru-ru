@@ -4,12 +4,12 @@ ms.date: 11/22/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: c80bb27761b8de91f7caee5932f28f1ec2ac0e29
-ms.sourcegitcommit: 166039ceea3256c26fb23920b96de4257b8cf149
+ms.openlocfilehash: 55327d53f3f9e8439ba6e008f1b5a6b384722d54
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84946652"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229874"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>Справочник по схеме CMakeSettings.json
 
@@ -31,7 +31,7 @@ ms.locfileid: "84946652"
 
 `configuration` имеет следующие свойства:
 
-- `addressSanitizerEnabled`: если указано значение `true`, программа компилируется с использованием санитайзера адресов (экспериментальная функция в Windows). Для получения наилучших результатов в Linux выполните компиляцию с параметром -fno-omit-frame-pointer и уровнем оптимизации компилятора -Os или -Oo.
+- `addressSanitizerEnabled`: если указано значение **`true`** , программа компилируется с использованием санитайзера адресов (экспериментальная функция в Windows). Для получения наилучших результатов в Linux выполните компиляцию с параметром -fno-omit-frame-pointer и уровнем оптимизации компилятора -Os или -Oo.
 - `addressSanitizerRuntimeFlags`: флаги среды выполнения, передаваемые в AddressSanitizer через переменную среды ASAN_OPTIONS. Формат: флаг1=значение:флаг2=значение2.
 - `buildCommandArgs`: задает собственные параметры сборки, передаваемые CMake после --build --. Например, передача -v при использовании генератора Ninja приводит к тому, что Ninja выдает командные строки. Дополнительные сведения о командах Ninja см. в статье [Аргументы командной строки Ninja](#ninja).
 - `buildRoot`: определяет каталог, в котором CMake создает скрипты сборки для выбранного генератора.  Сопоставляется с параметром **-DCMAKE_BINARY_DIR** и указывает, где будет создан файл *CMakeCache.txt*. Если папка не существует, она будет создана. Поддерживаемые макросы: `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`, `${env.VARIABLE}`.

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ exception handling, x64
 - exception handling, x64
 ms.assetid: 41fecd2d-3717-4643-b21c-65dcd2f18c93
-ms.openlocfilehash: eff4f1a22512b597b5479dbcaabcc9d5fc93c940
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 75658e2c86ffb1a75d5f66e873e0648a8ebae29e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303201"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224049"
 ---
 # <a name="x64-exception-handling"></a>Обработка исключений в 64-разрядных системах
 
@@ -305,7 +305,7 @@ typedef struct _DISPATCHER_CONTEXT {
 } DISPATCHER_CONTEXT, *PDISPATCHER_CONTEXT;
 ```
 
-**ControlPc** — это значение RIP в этой функции. Это значение является либо адресом исключения, либо адресом, по которому элемент управления покинул функцию установки. RIP используется для определения того, находится ли элемент управления в какой-либо защищенной конструкции внутри этой функции (например, блок `__try` для `__try`/`__except` или `__try`/`__finally`).
+**ControlPc** — это значение RIP в этой функции. Это значение является либо адресом исключения, либо адресом, по которому элемент управления покинул функцию установки. RIP используется для определения того, находится ли элемент управления в какой-либо защищенной конструкции внутри этой функции (например, блок `__try` для `__try`/ **`__except`** или `__try`/ **`__finally`** ).
 
 **ImageBase** — это базовый образ (адрес загрузки) модуля, содержащего эту функцию, для добавления к 32-разрядным смещениям, используемым в записи функции и сведениях о заполнении для записи относительных адресов.
 

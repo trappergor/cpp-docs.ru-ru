@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [C++], exporting
 - exports table [C++]
 ms.assetid: a08f86c4-5996-460b-ae54-da2b764045f0
-ms.openlocfilehash: 6bdf5b86724ae07aa073a9feb1cc4d5723bc6e6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e6a8555561fcf935b3968bd6cb6d19ec42a78563
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62196746"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224023"
 ---
 # <a name="exporting-from-a-dll"></a>Экспорт из библиотеки DLL
 
@@ -25,7 +25,7 @@ ms.locfileid: "62196746"
 
 - Создайте файл определения модуля (DEF) и используйте DEF-файл при сборке библиотеки DLL. Используйте этот подход, если требуется [экспортировать функции из библиотеки DLL по порядковому номеру, а не по имени](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).
 
-- Используйте ключевое слово **__declspec (dllexport)** в определении функции.
+- Используйте ключевое слово **`__declspec(dllexport)`** в определении функции.
 
 При экспорте функций любым способом убедитесь, что используется соглашение о вызовах [__stdcall](../cpp/stdcall.md).
 

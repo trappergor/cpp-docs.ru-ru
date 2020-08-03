@@ -11,12 +11,12 @@ helpviewer_keywords:
 - '&& operator'
 - logical OR operator
 ms.assetid: c0a4e766-ad56-4300-bf76-b28dc0e19b43
-ms.openlocfilehash: 5df0c0f16bdf298c47a6a0699ec10c7392ab84ca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f59ad927dd8ee62dbfc80fd238677bf1b646f9c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326590"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228002"
 ---
 # <a name="c-logical-operators"></a>Логические операторы в C
 
@@ -34,7 +34,7 @@ ms.locfileid: "62326590"
 
 ## <a name="remarks"></a>Примечания
 
-Логические операторы не выполняют обычных арифметических преобразований. Вместо этого они оценивают каждый операнд с точки зрения его эквивалентности нулю. Результатом логической операции является либо 0, либо 1. Тип результата — **int**.
+Логические операторы не выполняют обычных арифметических преобразований. Вместо этого они оценивают каждый операнд с точки зрения его эквивалентности нулю. Результатом логической операции является либо 0, либо 1. Результат имеет тип **`int`** .
 
 Логические операторы C описываются ниже.
 

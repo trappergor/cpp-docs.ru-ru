@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - do-while keyword [C]
 ms.assetid: f2ac20a6-10c7-4a08-b5e3-c3b3639dbeaf
-ms.openlocfilehash: 3658fe7635ad77db6d6e08ff9d7c30e29d665721
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 4a10b9df9f7276eb8e241d76726bca26f2c0cb75
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438589"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218875"
 ---
 # <a name="do-while-statement-c"></a>Оператор do-while (C)
 
@@ -19,7 +19,7 @@ ms.locfileid: "79438589"
 
 ## <a name="syntax"></a>Синтаксис
 
-*iteration-statement*: &nbsp;&nbsp;&nbsp;&nbsp;**do**  *statement*  **while (**  *expression*  **) ;**
+*iteration-statement*: &nbsp;&nbsp;&nbsp;&nbsp; **`do`**  *statement*  **while (**  *expression*  **) ;**
 
 Выражение *expression* в операторе *do-while* вычисляется после выполнения тела цикла. Поэтому тело цикла всегда выполняется по крайней мере один раз.
 
@@ -29,7 +29,7 @@ ms.locfileid: "79438589"
 
 1. Затем вычисляется значение *expression*. Если выражение *expression* имеет значение false, выполнение оператора *do-while* завершается и управление передается следующему оператору программы. Если *expression* имеет значение true (то есть не равно нулю), процесс повторяется с шага 1.
 
-Выполнение оператора *do-while* также может прерваться, если в теле оператора выполняется оператор **break**, **goto** или **return**.
+Выполнение оператора *do-while* также прерывается, когда в теле оператора выполняется оператор **`break`** , **`goto`** или **`return`** .
 
 Это пример оператора *do-while*:
 
