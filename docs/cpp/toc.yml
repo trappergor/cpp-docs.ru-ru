@@ -125,7 +125,7 @@
       items:
         - name: 'Встроенные операторы, приоритет и ассоциативность'
           href: ../cpp/cpp-built-in-operators-precedence-and-associativity.md
-        - name: Оператор __alignof
+        - name: Оператор alignof
           href: ../cpp/alignof-operator.md
         - name: Оператор __uuidof
           href: ../cpp/uuidof-operator.md
@@ -259,7 +259,7 @@
           items:
             - name: Операторы выбора
               href: ../cpp/selection-statements-cpp.md
-            - name: 'if-else (Справочник по C#)'
+            - name: if-else (Справочник по C#)
               href: ../cpp/if-else-statement-cpp.md
             - name: Оператор __if_exists
               href: ../cpp/if-exists-statement.md
