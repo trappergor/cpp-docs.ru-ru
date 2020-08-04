@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - logic_error class
 ms.assetid: b290d73d-94e1-4288-af86-2bb5d71f677a
-ms.openlocfilehash: 9b7c432a649b566b455109f6de1f7bcc0734ff9b
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b94f7f4c2482f0317e37c6f4bf3618b91a175147
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453804"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521191"
 ---
-# <a name="logicerror-class"></a>Класс logic_error
+# <a name="logic_error-class"></a>Класс logic_error
 
 Этот класс служит базовым для всех исключений, создаваемых для сообщения об ошибках, которые можно обнаружить до выполнения программы, таких как нарушение логических предварительных условий.
 
@@ -31,7 +31,7 @@ public:
 
 ## <a name="remarks"></a>Примечания
 
-Значение, возвращаемое [what](../standard-library/exception-class.md), — это копия **данных**`.`[сообщения](../standard-library/basic-string-class.md#data).
+Значение, возвращаемое, `what()` является копией `message.data()` . Дополнительные сведения см. в разделах [`what`](../standard-library/exception-class.md) и [`data`](../standard-library/basic-string-class.md#data).
 
 ## <a name="example"></a>Пример
 
@@ -62,11 +62,11 @@ Type: class std::logic_error
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<stdexcept>
+**Заголовок:**\<stdexcept>
 
 **Пространство имен:** std
 
 ## <a name="see-also"></a>См. также
 
 [Класс Exception](../standard-library/exception-class.md)\
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Безопасность потоков в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

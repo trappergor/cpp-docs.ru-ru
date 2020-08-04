@@ -26,12 +26,12 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_bAutoRelease
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
-ms.openlocfilehash: 265fca7288ca2aa760fb1faffa94f9d74896a975
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 27520f09506698833b1449552ce669223cc0c4c6
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214104"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520646"
 ---
 # <a name="coledispatchdriver-class"></a>Класс COleDispatchDriver
 
@@ -47,7 +47,7 @@ class COleDispatchDriver
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[COleDispatchDriver:: COleDispatchDriver](#coledispatchdriver)|Формирует объект `COleDispatchDriver`.|
 
@@ -65,19 +65,19 @@ class COleDispatchDriver
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[COleDispatchDriver:: operator =](#operator_eq)|Копирует исходное значение в `COleDispatchDriver` объект.|
 |[COleDispatchDriver:: operator ЛПДИСПАТЧ](#operator_lpdispatch)|Обращается к базовому `IDispatch` указателю.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[COleDispatchDriver:: m_bAutoRelease](#m_bautorelease)|Указывает, следует ли освободить `IDispatch` во время `ReleaseDispatch` или уничтожения объекта.|
 |[COleDispatchDriver:: m_lpDispatch](#m_lpdispatch)|Указывает указатель на интерфейс, `IDispatch` присоединенный к объекту `COleDispatchDriver` .|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
 `COleDispatchDriver`не имеет базового класса.
 
@@ -117,7 +117,7 @@ void AttachDispatch(
 *бауторелеасе*<br/>
 Определяет, следует ли освободить диспетчер, когда этот объект выходит из области действия.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Примечания
 
 Эта функция освобождает все указатели `IDispatch` , которые уже присоединены к объекту `COleDispatchDriver` .
 
@@ -146,13 +146,13 @@ COleDispatchDriver(const COleDispatchDriver& dispatchSrc);
 *диспатчсрк*<br/>
 Ссылка на существующий `COleDispatchDriver` объект.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Примечания
 
-Форма `COleDispatchDriver` ( `LPDISPATCH lpDispatch` **логическое** `bAutoRelease`  =  **значение true**) соединяет интерфейс [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) .
+Форма `COleDispatchDriver( LPDISPATCH lpDispatch, BOOL bAutoRelease = TRUE )` соединяет интерфейс [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) .
 
-Форма `COleDispatchDriver` ( **`const`** `COleDispatchDriver` &  `dispatchSrc` ) копирует существующий `COleDispatchDriver` объект и увеличивает счетчик ссылок.
+Форма `COleDispatchDriver( const COleDispatchDriver& dispatchSrc )` копирует существующий `COleDispatchDriver` объект и увеличивает счетчик ссылок.
 
-Форма `COleDispatchDriver` () создает объект, `COleDispatchDriver` но не подключается к `IDispatch` интерфейсу. Перед использованием `COleDispatchDriver` () без аргументов необходимо подключить `IDispatch` к нему с помощью [COleDispatchDriver:: креатедиспатч](#createdispatch) или [COleDispatchDriver:: аттачдиспатч](#attachdispatch). Дополнительные сведения см. в разделе [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
+Форма `COleDispatchDriver( )` создает объект, `COleDispatchDriver` но не подключается к `IDispatch` интерфейсу. Прежде чем использовать `COleDispatchDriver( )` аргументы без аргументов, необходимо подключить `IDispatch` к нему с помощью [COleDispatchDriver:: креатедиспатч](#createdispatch) или [COleDispatchDriver:: аттачдиспатч](#attachdispatch). Дополнительные сведения см. в разделе [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
 
 ### <a name="example"></a>Пример
 
@@ -203,7 +203,7 @@ LPDISPATCH DetachDispatch();
 
 Указатель на ранее присоединенный объект OLE `IDispatch` .
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Примечания
 
 `IDispatch`Не освобождается.
 
@@ -272,13 +272,13 @@ void AFX_CDECL InvokeHelper(
 *...*<br/>
 Список переменных параметров типов, указанных в *пбпараминфо*.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Примечания
 
 Параметр *пбпараминфо* задает типы параметров, передаваемых методу или свойству. Переменный список аргументов представлен в объявлении синтаксиса как **...** .
 
 Возможные значения для аргумента *втрет* взяты из перечисления VARENUM. Возможные значения:
 
-|Символ|Тип возвращаемых данных|
+|Символ|Возвращаемый тип|
 |------------|-----------------|
 |VT_EMPTY|**`void`**|
 |VT_I2|**`short`**|
@@ -312,7 +312,7 @@ void AFX_CDECL InvokeHelper(
 BOOL m_bAutoRelease;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Примечания
 
 По умолчанию `m_bAutoRelease` в конструкторе задано значение true.
 
@@ -330,7 +330,7 @@ BOOL m_bAutoRelease;
 LPDISPATCH m_lpDispatch;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Примечания
 
 `m_lpDispatch`Элемент данных является открытой переменной типа лпдиспатч.
 
@@ -373,7 +373,7 @@ operator LPDISPATCH();
 void ReleaseDispatch();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Примечания
 
 Если для этого соединения задано автоматическое освобождение, эта функция вызывает `IDispatch::Release` перед освобождением интерфейса.
 
@@ -406,7 +406,7 @@ void AFX_CDECL SetProperty(
 
 [!code-cpp[NVC_MFCOleContainer#7](../../mfc/codesnippet/cpp/coledispatchdriver-class_7.cpp)]
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Пример CALCDRIV в MFC](../../overview/visual-cpp-samples.md)<br/>
 [Пример ACDUAL библиотеки MFC](../../overview/visual-cpp-samples.md)<br/>

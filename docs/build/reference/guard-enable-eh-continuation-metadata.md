@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - /guard:ehcont
 - /guard:ehcont compiler option
-ms.openlocfilehash: c1b960bf13a6a7b7ff67996c9fa5119075216dae
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0c5a49d578e626d052aa9d132afbaee5686cb7a7
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87190524"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520529"
 ---
 # <a name="guardehcont-enable-eh-continuation-metadata"></a>/guard:ehcont (включение метаданных продолжений для обработки исключений)
 
@@ -23,7 +23,7 @@ ms.locfileid: "87190524"
 
 > **`/guard:ehcont`**[**`-`**]
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
 **`/guard:ehcont`** Параметр предписывает компилятору создавать отсортированный список относительных виртуальных адресов (RVA) всех допустимых целевых объектов продолжения обработки исключений для двоичного файла. Он используется во время выполнения для `NtContinue` `SetThreadContext` проверки указателя инструкций. По умолчанию параметр отключен **`/guard:ehcont`** и должен быть явно включен. Чтобы явно отключить этот параметр, используйте **`/guard:ehcont-`** .
 
@@ -51,9 +51,9 @@ ms.locfileid: "87190524"
 
 Если компоновщику не удается создать метаданные, выдается одна из следующих ошибок:
 
-- **`LNK2046`**`: module contains _local_unwind but was not compiled with /guard:ehcont`
+- `LNK2046: module contains _local_unwind but was not compiled with /guard:ehcont`
 
-- **`LNK2047`**`: module contains C++ EH or complex EH metadata but was not compiled with /guard:ehcont.`
+- `LNK2047: module contains C++ EH or complex EH metadata but was not compiled with /guard:ehcont.`
 
 Чтобы проверить, содержит ли двоичный файл данные ЕХКОНТ, при дампе конфигурации загрузки двоичного файла найдите следующие элементы:
 
@@ -87,7 +87,7 @@ e:\>link /dump /loadconfig CETTest.exe
 
 1. В элементе управления "раскрывающийся список **" выберите Да (/Guard: ехконт)** , чтобы включить метаданные продолжения EH, или **нет (/Guard: ехконт-)** , чтобы отключить его.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [/Guard (Включение защиты потока управления)](guard-enable-control-flow-guard.md)\
 [Параметры компилятора КОМПИЛЯТОРОМ MSVC](compiler-options.md)\

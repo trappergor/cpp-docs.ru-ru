@@ -1,16 +1,16 @@
 ---
 title: Параметры компилятора, упорядоченные по категориям
 description: Список ссылок по категориям параметров командной строки компилятора Microsoft C/C++.
-ms.date: 07/08/2020
+ms.date: 07/29/2020
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: e362119ed3c642e2fa07bddd570c2365252d3325
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: beb10404075d9541872ff4780a725e177356a3b8
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223880"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520957"
 ---
 # <a name="compiler-options-listed-by-category"></a>Параметры компилятора, упорядоченные по категориям
 
@@ -135,7 +135,7 @@ ms.locfileid: "87223880"
 | [`/Zs`](zs-syntax-check-only.md) | Проверяет только синтаксис. |
 | [`/ZW`](zw-windows-runtime-compilation.md) | Создает выходной файл для запуска на среда выполнения Windows. |
 
-## <a name="linking"></a>Компоновка
+## <a name="linking"></a>Связывание
 
 | Параметр | Цель |
 |--|--|
@@ -171,6 +171,7 @@ ms.locfileid: "87223880"
 | [`/nologo`](nologo-suppress-startup-banner-c-cpp.md) | Подавление отображения приветствия. |
 | [`/sdl`](sdl-enable-additional-security-checks.md) | Включает дополнительные функции безопасности и предупреждения. |
 | [`/showIncludes`](showincludes-list-include-files.md) | Отображает список всех включаемых файлов во время компиляции. |
+| [`/sourceDependencies`](sourcedependencies.md) | Список заголовков, модулей и других исходных зависимостей. |
 | [`/Tc`](tc-tp-tc-tp-specify-source-file-type.md) | Указывает исходный файл на языке C. |
 | [`/TC`](tc-tp-tc-tp-specify-source-file-type.md) | Указывает все исходные файлы — C. |
 | [`/Tp`](tc-tp-tc-tp-specify-source-file-type.md) | Указывает исходный файл на языке C++. |
@@ -231,7 +232,7 @@ ms.locfileid: "87223880"
 | [`/Ze`](za-ze-disable-language-extensions.md) | Не рекомендуется. Включает расширения языка. |
 | [`/Zg`](zg-generate-function-prototypes.md) | Удалено в Visual Studio 2015. Создает прототипы функций. |
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также
 
 [Справочник по построению C/C++](c-cpp-building-reference.md)\
 [Параметры компилятора КОМПИЛЯТОРОМ MSVC](compiler-options.md)\

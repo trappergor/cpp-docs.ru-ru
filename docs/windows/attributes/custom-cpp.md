@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - custom attributes, defining
 ms.assetid: 3abac928-4d55-4ea6-8cf6-8427a4ad79f1
-ms.openlocfilehash: 185517720af7e61f6a04068e8868d258a51f262f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7a1d9bd64a28fa7c08477c6011dc0e8236b7bcf6
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215326"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521256"
 ---
 # <a name="custom-c"></a>custom (C++)
 
@@ -34,7 +34,7 @@ ms.locfileid: "87215326"
 *value*<br/>
 Значение, которое может быть помещается в вариант.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
 **Настраиваемый** атрибут C++ приведет к помещению данных в библиотеку типов. Вам потребуется средство, считывающее пользовательское значение из библиотеки типов.
 
@@ -44,16 +44,14 @@ ms.locfileid: "87215326"
 
 ### <a name="attribute-context"></a>Контекст атрибута
 
-|||
-|-|-|
-|**Относится к**|Не com- **интерфейс**, **`class`** , **`enum`** s, `idl_module` методы, члены интерфейса, параметры интерфейса, s, **`typedef`** **`union`** **`struct`** s|
-|**REPEATABLE**|Да|
-|**Требуемые атрибуты**|**coclass** (при использовании в классе)|
-|**Недопустимые атрибуты**|Нет|
+- **Применимо к**: не com `interface` , `idl_module` методы, члены интерфейса, параметры интерфейса,,,, **`typedef`** **`class`** **`enum`** **`union`** и **`struct`** типы.
+- **REPEATABLE**: Да.
+- **Обязательные атрибуты**: **coclass** (при использовании в классе).
+- **Недопустимые атрибуты**: нет.
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Изолированные атрибуты](stand-alone-attributes.md)<br/>

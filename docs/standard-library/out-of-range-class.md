@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - out_of_range class
 ms.assetid: d0e14dc0-065e-4666-9ac9-51e52223c503
-ms.openlocfilehash: 5f965e45e765f0c0cef6bc9cd8a175e2fdc50af7
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3bbbc48aa2020782594606c6a53a34f7b937fc58
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453084"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521282"
 ---
-# <a name="outofrange-class"></a>Класс out_of_range
+# <a name="out_of_range-class"></a>Класс out_of_range
 
 Этот класс служит базовым для всех исключений, создаваемых для сообщения о том, что аргумент выходит за допустимый диапазон.
 
@@ -31,7 +31,7 @@ public:
 
 ## <a name="remarks"></a>Примечания
 
-Значение, возвращаемое [what](../standard-library/exception-class.md), — это копия **данных**`.`[сообщения](../standard-library/basic-string-class.md#data).
+Значение, возвращаемое, `what()` является копией `message.data()` . Дополнительные сведения см. в разделах [`what`](../standard-library/exception-class.md) и [`data`](../standard-library/basic-string-class.md#data).
 
 ## <a name="example"></a>Пример
 
@@ -65,11 +65,11 @@ Caught: invalid string position
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<stdexcept>
+**Заголовок:**\<stdexcept>
 
 **Пространство имен:** std
 
 ## <a name="see-also"></a>См. также
 
 [Класс logic_error](../standard-library/logic-error-class.md)\
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Безопасность потоков в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

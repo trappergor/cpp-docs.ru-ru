@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Standards conformance compiler options
 - permissive compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: 69a6b413ec6d9d6897e5f11a11aac8c75db2cf5f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 36861705acf0328af5c1207c3bf33a098fc3b348
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217211"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520555"
 ---
 # <a name="permissive--standards-conformance"></a>/permissive- (соответствие стандартам)
 
@@ -26,7 +26,7 @@ ms.locfileid: "87217211"
 
 > **`/permissive-`**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
 Этот параметр поддерживается в Visual Studio 2017 и более поздних версиях.
 
@@ -240,13 +240,13 @@ class ATL_NO_VTABLE CFooImpl : public ICustom,
 
 Ниже перечислены распространенные ошибки, которые могут быть результатом этого изменения.
 
-- **`error C2593`**`: 'operator ?' is ambiguous`
+- `error C2593: 'operator ?' is ambiguous`
 
-- **`error C2679`**`: binary '?': no operator found which takes a right-hand operand of type 'B' (or there is no acceptable conversion)`
+- `error C2679: binary '?': no operator found which takes a right-hand operand of type 'B' (or there is no acceptable conversion)`
 
-- **`error C2678`**`: binary '?': no operator found which takes a left-hand operand of type 'A' (or there is no acceptable conversion)`
+- `error C2678: binary '?': no operator found which takes a left-hand operand of type 'A' (or there is no acceptable conversion)`
 
-- **`error C2446`**`: ':': no conversion from 'B' to 'A'`
+- `error C2446: ':': no conversion from 'B' to 'A'`
 
 Типичный шаблон кода, который может вызвать эту неполадку, заключается в том, что некоторый класс C предоставляет как неявный конструктор из другого типа T, так и оператор неявного преобразования для типа T. В этом случае преобразование второго аргумента в тип третьего аргумента и преобразование третьего аргумента в тип второго аргумента являются допустимыми преобразованиями. Так как оба значения являются допустимыми, они являются неоднозначными в соответствии со стандартом.
 
@@ -463,7 +463,7 @@ int main()
 
 - См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Параметры компилятора КОМПИЛЯТОРОМ MSVC](compiler-options.md)\
 [Синтаксис командной строки компилятора КОМПИЛЯТОРОМ MSVC](compiler-command-line-syntax.md)

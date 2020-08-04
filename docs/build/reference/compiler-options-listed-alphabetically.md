@@ -1,15 +1,15 @@
 ---
 title: Параметры компилятора в алфавитном порядке
 description: Справочный список в алфавитном порядке параметров командной строки компилятора Microsoft C/C++.
-ms.date: 07/08/2020
+ms.date: 07/29/2020
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 46c6f7009c840c83db2f945de2e504f08172fca2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 81f2fbfe385e8655193c5862455e6ffca3719c96
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223893"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520866"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Параметры компилятора в алфавитном порядке
 
@@ -124,6 +124,7 @@ ms.locfileid: "87223893"
 | [`/sdl`](sdl-enable-additional-security-checks.md) | Включает дополнительные функции безопасности и предупреждения. |
 | [`/showIncludes`](showincludes-list-include-files.md) | Отображает список включаемых файлов во время компиляции. |
 | [`/source-charset`](source-charset-set-source-character-set.md) | Задать исходную кодировку. |
+| [`/sourceDependencies`](sourcedependencies.md) | Список заголовков, модулей и других исходных зависимостей. |
 | [`/std`](std-specify-language-standard-version.md) | Селектор совместимости версии C++ Standard. |
 | [`/Tc`](tc-tp-tc-tp-specify-source-file-type.md) | Указывает исходный файл на языке C. |
 | [`/TC`](tc-tp-tc-tp-specify-source-file-type.md) | Указывает все исходные файлы — C. |
@@ -174,7 +175,7 @@ ms.locfileid: "87223893"
 | [`/Zs`](zs-syntax-check-only.md) | Проверяет только синтаксис. |
 | [`/ZW`](zw-windows-runtime-compilation.md) | Создает выходной файл для запуска на среда выполнения Windows. |
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также
 
 [Параметры компилятора КОМПИЛЯТОРОМ MSVC](compiler-options.md)\
 [Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)

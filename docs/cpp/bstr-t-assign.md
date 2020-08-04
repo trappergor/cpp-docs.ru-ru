@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - Assign method [C++]
 ms.assetid: 2e209bbe-77ca-4598-86d5-6c2ea213f43c
-ms.openlocfilehash: 80f687da75d0160a6955caa7469ac9cc55c2c257
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: e11c7e6abd2d5832c57d0379473c6783128f63e3
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81749709"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521152"
 ---
 # <a name="_bstr_tassign"></a>_bstr_t::Assign
 
-**Microsoft Специфический**
+**Блок, относящийся только к системам Microsoft**
 
-Копии `BSTR` в `BSTR` обернутые **на q**`bstr_t`.
+Копирует строку `BSTR` в строку `BSTR`, инкапсулированную объектом `_bstr_t`.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -29,12 +29,12 @@ void Assign(
 
 #### <a name="parameters"></a>Параметры
 
-*s*<br/>
+*#d0*<br/>
 Объект `BSTR`, копируемый в объект `BSTR`, инкапсулированный объектом `_bstr_t`.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
-**Назначать** делает двоичную копию, что `BSTR` означает, что вся длина копируется, независимо от содержания.
+**Assign** выполняет двоичную копию, что означает копирование всей длины, `BSTR` независимо от содержимого.
 
 ## <a name="example"></a>Пример
 
@@ -109,8 +109,8 @@ bstrWrapper = changing BSTR
 bstrWrapper2 = some text
 ```
 
-**END Microsoft Специфический**
+**Завершение блока, относящегося только к системам Майкрософт**
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
-[_bstr_t класс](../cpp/bstr-t-class.md)
+[Класс _bstr_t](../cpp/bstr-t-class.md)

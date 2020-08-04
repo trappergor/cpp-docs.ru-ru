@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - underflow_error class
 ms.assetid: d632f1f9-9c6c-4954-b96b-03041bfab22d
-ms.openlocfilehash: 41e3c8606cb8c6c90a84927f01eb953be138534a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3f521e8ec083cd158212b3ae9cb9fcf26edc7e76
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454988"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520516"
 ---
-# <a name="underflowerror-class"></a>Класс underflow_error
+# <a name="underflow_error-class"></a>Класс underflow_error
 
 Этот класс служит базовым для всех исключений, создаваемых для сообщения об арифметической неточности.
 
@@ -31,7 +31,7 @@ public:
 
 ## <a name="remarks"></a>Примечания
 
-Значение, возвращаемое [what](../standard-library/exception-class.md), — это копия **данных**`.`[сообщения](../standard-library/basic-string-class.md#data).
+Значение, возвращаемое, `what()` является копией `message.data()` . Дополнительные сведения см. в разделах [`what`](../standard-library/exception-class.md) и [`data`](../standard-library/basic-string-class.md#data).
 
 ## <a name="example"></a>Пример
 
@@ -61,11 +61,11 @@ Type: class std::underflow_error
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<stdexcept>
+**Заголовок:**\<stdexcept>
 
 **Пространство имен:** std
 
 ## <a name="see-also"></a>См. также
 
 [Класс runtime_error](../standard-library/runtime-error-class.md)\
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Безопасность потоков в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
