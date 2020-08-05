@@ -669,6 +669,8 @@
                   href: ../build/reference/showincludes-list-include-files.md
                 - name: /source-charset (задание исходной кодировки)
                   href: ../build/reference/source-charset-set-source-character-set.md
+                - name: /sourceDependencies (отчет о зависимостях на уровне источника)
+                  href: ../build/reference/sourcedependencies.md
                 - name: /std (определение стандартной версии языка)
                   href: ../build/reference/std-specify-language-standard-version.md
                 - name: '/Tc, /Tp, /TC, /TP (определение типа исходного файла)'
