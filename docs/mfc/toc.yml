@@ -2706,6 +2706,8 @@
           href: reference/afx-messages.md
         - name: Стили элемента управления "Панель инструментов"
           href: reference/toolbar-control-styles.md
+        - name: Перечисление BufferCommand
+          href: reference/buffercommand-enumeration.md
         - name: 'Перечисление CMFCImagePaintArea::IMAGE_EDIT_MODE'
           href: reference/cmfcimagepaintarea-image-edit-mode-enumeration.md
         - name: Перечисление UICheckState
