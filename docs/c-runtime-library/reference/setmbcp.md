@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _setmbcp function
 - multibyte code pages
 ms.assetid: cfde53b5-0b73-4684-81b1-a8d3aafc85de
-ms.openlocfilehash: 18712661b2bda1eaaf0c583b922ad73a781b4abc
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 9a981c40b9e525ba1ffc1f2198f2b6a859fd9ac7
+ms.sourcegitcommit: b51703a96ee35ee2376d5f0775b70f03ccbe6d9a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918829"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88086972"
 ---
 # <a name="_setmbcp"></a>_setmbcp
 
@@ -61,16 +61,6 @@ int _setmbcp(
 
 Функция **_setmbcp** указывает новую многобайтовую кодовую страницу. По умолчанию система времени выполнения автоматически устанавливает в качестве многобайтовой кодовой страницы кодовую страницу ANSI, используемую в системе по умолчанию. Заданная многобайтовая кодовая страница влияет на все не зависящие от языкового стандарта подпрограммы. Однако можно указать **_setmbcp** использовать кодовую страницу, определенную для текущего языкового стандарта (см. следующий список констант манифеста и связанные результаты поведения). Список подпрограмм, которые зависят от кодовой страницей языкового стандарта, а не от многобайтовой кодовой страницы, см. в разделе [Интерпретация последовательностей многобайтовых символов](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md).
 
-Многобайтовая кодовая страница также влияет на обработку многобайтовых символов следующими подпрограммами библиотеки времени выполнения:
-
-||||
-|-|-|-|
-|[Функции _exec](../../c-runtime-library/exec-wexec-functions.md)|[_mktemp](mktemp-wmktemp.md)|[_stat](stat-functions.md)|
-|[_fullpath](fullpath-wfullpath.md)|[Функции _spawn](../../c-runtime-library/spawn-wspawn-functions.md)|[_tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
-|[_makepath](makepath-wmakepath.md)|[_splitpath](splitpath-wsplitpath.md)|[tmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
-
-Кроме того, все подпрограммы библиотеки времени выполнения, которые получают аргументы многобайтовых *argv* или *envp* в качестве параметров (например, семейства **_exec** и **_spawn** ), обрабатывают эти строки в соответствии с многобайтовой кодовой страницей. Поэтому на эти подпрограммы также влияет вызов **_setmbcp** , который изменяет многобайтовую кодовую страницу.
-
 Аргумент *codepage* может принимать любое из следующих значений:
 
 - **_MB_CP_ANSI** Используйте кодовую страницу ANSI, полученную из операционной системы при запуске программы.
@@ -95,7 +85,7 @@ int _setmbcp(
 
 Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>Дополнительно
 
 [_getmbcp](getmbcp.md)<br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
