@@ -12,11 +12,11 @@
       href: ../linux/connectionmanager-reference.md
 - name: Сборка проектов Linux с помощью MSBuild в Visual Studio
   items:
-    - name: Создание проекта Linux
+    - name: Создание проекта MSBuild Linux
       href: ../linux/create-a-new-linux-project.md
-    - name: Настройка проекта Linux
+    - name: Настройка проекта MSBuild Linux
       href: ../linux/configure-a-linux-project.md
-    - name: 'Развертывание, запуск и отладка проекта Linux'
+    - name: 'Развертывание, запуск и отладка проекта MSBuild Linux'
       href: ../linux/deploy-run-and-debug-your-linux-project.md
     - name: Справочник по страницам свойств проекта Linux
       items:
@@ -44,8 +44,10 @@
           href: ../linux/prop-pages/remote-ar-linux.md
 - name: Сборка проектов Linux с помощью CMake в Visual Studio
   items:
-    - name: Создание и настройка проекта Linux CMake
+    - name: Создание проекта CMake Linux
       href: ../linux/cmake-linux-project.md
+    - name: Настройка проекта Linux CMake
+      href: ../linux/cmake-linux-configure.md
     - name: Учебник. Создание кроссплатформенных проектов C++ в Visual Studio
       href: ../build/get-started-linux-cmake.md
 - name: Настройка проектов Linux для использования санитайзера адресов
