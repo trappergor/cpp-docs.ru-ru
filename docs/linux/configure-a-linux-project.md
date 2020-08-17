@@ -1,15 +1,16 @@
 ---
-title: Настройка проекта C++ для Linux в Visual Studio
-ms.date: 06/22/2020
+title: Настройка проекта Linux на основе MSBuild C++ в Visual Studio
+ms.date: 08/06/2020
+description: Настройте в Visual Studio проект Linux на основе MSBuild, чтобы выполнить его сборку.
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 6bc38e925e366804c8fe37604066b7cc20e04f15
-ms.sourcegitcommit: f9344b09a734e8b05a7494415991a22b7aec5ae8
+ms.openlocfilehash: 7f4664dfc364cbd9a3b499e02de4cf0e7f44fe78
+ms.sourcegitcommit: 2034f8e744a8b36cff8b15e9a5cfe684afebadfb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85269745"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88043867"
 ---
-# <a name="configure-a-linux-project"></a>Настройка проекта Linux
+# <a name="configure-a-linux-msbuild-c-project-in-visual-studio"></a>Настройка проекта Linux на основе MSBuild C++ в Visual Studio
 
 ::: moniker range="vs-2015"
 
@@ -17,7 +18,7 @@ ms.locfileid: "85269745"
 
 ::: moniker-end
 
-В этой статье описано, как [создать и настроить проект C++ для Linux в Visual Studio](create-a-new-linux-project.md). См. подробнее о [настройке проектов CMake Linux](cmake-linux-project.md).
+В этой статье показано, как настроить проект Linux на основе MSBuild, который описан в статье [Создание проекта Linux на основе MSBuild C++ в Visual Studio](create-a-new-linux-project.md). Сведения о проектах Linux CMake см. в разделе [Создание и настройка проекта Linux CMake](cmake-linux-project.md).
 
 Вы можете настроить проект Linux для физического компьютера или виртуальной машины Linux, а также для [подсистемы Windows для Linux](/windows/wsl/about) (WSL).
 
