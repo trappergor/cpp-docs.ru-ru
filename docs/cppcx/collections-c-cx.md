@@ -2,12 +2,12 @@
 title: Коллекции (C++/CX)
 ms.date: 11/19/2018
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
-ms.openlocfilehash: c8b844cd2500df7ab9069ac1586a352c639e17bd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 84c6ecad5ffb4920972faf5aa564103ec1f5b5df
+ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233513"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88610950"
 ---
 # <a name="collections-ccx"></a>Коллекции (C++/CX)
 
@@ -39,7 +39,7 @@ ms.locfileid: "87233513"
 > [!IMPORTANT]
 > В случае передачи последовательности внутри разрабатываемой программы используйте `Vector` или `std::vector` , поскольку они более эффективны по сравнению с `IVector`. Используйте `IVector` только при передаче контейнера с помощью ABI.
 >
-> Система типов среда выполнения Windows не поддерживает концепцию массива массивов и, следовательно, нельзя передать IVector<Platform:: array \<T>> в качестве возвращаемого значения или параметра метода. Для передачи массива массивов или последовательности массивов в ABI используйте `IVector<IVector<T>^>`.
+> Система типов среда выполнения Windows не поддерживает концепцию массива массивов и, следовательно, нельзя передавать в `IVector<Platform::Array<T>>` качестве возвращаемого значения или параметра метода. Для передачи массива массивов или последовательности массивов в ABI используйте `IVector<IVector<T>^>`.
 
 Класс`Vector<T>` предоставляет методы, необходимые для добавления и удаления элементов коллекции и доступа к ним. Его можно неявно преобразовать в класс `IVector<T>`. Алгоритмы STL также можно применять к экземплярам `Vector<T>`. В следующем примере демонстрируются некоторые простейшие варианты использования. [Функция начала](../cppcx/begin-function.md) и [функция окончания](../cppcx/end-function.md) , используемые здесь, — из пространства имен `Platform::Collections` , а не `std` .
 
@@ -121,7 +121,7 @@ void FindButton(UIElementCollection^ col)
 Итератор STL, отвечающий требованиям изменяемого итератора произвольного доступа STL.
 
 [Класс Platform:: Collections:: VectorViewIterator](../cppcx/platform-collections-vectorviewiterator-class.md)<br/>
-Итератор STL, удовлетворяющий требованиям **`const`** итератора случайного доступа STL.
+Итератор STL, удовлетворяющий требованиям  **`const`** итератора случайного доступа STL.
 
 ### <a name="begin-and-end-functions"></a>Функции begin() и end()
 
@@ -143,7 +143,7 @@ void FindButton(UIElementCollection^ col)
 
 Делегаты [Windows::Foundation::Collections::VectorChangedEventHandler](/uwp/api/windows.foundation.collections.vectorchangedeventhandler-1) и [Windows::Foundation::Collections::MapChangedEventHandler](/uwp/api/windows.foundation.collections.mapchangedeventhandler-2) определяют сигнатуры для обработчиков событий для событий изменения коллекции. Открытый класс перечисления [Windows::Foundation::Collections::CollectionChange](/uwp/api/windows.foundation.collections.collectionchange) и ссылочные классы `Platform::Collection::Details::MapChangedEventArgs` и `Platform::Collections::Details::VectorChangedEventArgs` хранят аргументы события, по которым можно определить его причину. `*EventArgs`Типы определяются в `Details` пространстве имен, так как их не нужно создавать и использовать явным образом при использовании `Map` или `Vector` .
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также
 
 [Система типов](../cppcx/type-system-c-cx.md)<br/>
 [Справочник по языку C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>

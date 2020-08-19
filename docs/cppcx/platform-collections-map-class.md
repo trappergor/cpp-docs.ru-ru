@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: 30dbc71a03c398c77124738b2477a3563191d50d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0ddb15507c97c0dfff48575e476b57fe91359239
+ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214988"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88610911"
 ---
 # <a name="platformcollectionsmap-class"></a>Класс Platform::Collections::Map
 
@@ -44,12 +44,12 @@ ref class Map sealed;
 *3,3*<br/>
 Тип значения в паре "ключ-значение".
 
-*В*<br/>
+*C*<br/>
 Тип, предоставляющий объект функции, который может сравнить два значения элементов как ключи сортировки для определения их относительного порядка в объекте Map. По умолчанию [std:: less \<K> ](../standard-library/less-struct.md).
 
 *__is_valid_winrt_type ()* Созданная компилятором функция, которая проверяет тип *K* и *V* и предоставляет понятное сообщение об ошибке, если тип не может быть сохранен на карте.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Допустимые типы:
 
@@ -63,15 +63,15 @@ ref class Map sealed;
 
 - открытый класс перечисления
 
-Карта — это, по сути, программа-оболочка для [std::map](../standard-library/map-class.md). Это конкретная реализация C++ для типов [Windows:: Foundation:: Collections:: IMAP<Windows:: Foundation:: Collections:: \<K,V> > IKeyValuePair](/uwp/api/windows.foundation.collections.imap-2) и [IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap-2) , которые передаются через общедоступные интерфейсы Среда выполнения Windows. При попытке использования типа `Platform::Collections::Map` в открытом возвращаемом значении или параметре возникает ошибка компилятора C3986. Эту ошибку можно исправить, изменив тип параметра или возвращаемого значения на [Windows:: Foundation:: Collections:: IMAP \<K,V> ](/uwp/api/windows.foundation.collections.imap-2).
+Карта — это, по сути, программа-оболочка для [std::map](../standard-library/map-class.md). Это конкретная реализация C++ типов [Windows:: Foundation:: Collections:: IMAP \<Windows::Foundation::Collections::IKeyValuePair\<K,V> > ](/uwp/api/windows.foundation.collections.imap-2) и [IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap-2) , которая передается через общедоступные интерфейсы Среда выполнения Windows. При попытке использования типа `Platform::Collections::Map` в открытом возвращаемом значении или параметре возникает ошибка компилятора C3986. Эту ошибку можно исправить, изменив тип параметра или возвращаемого значения на [Windows:: Foundation:: Collections:: IMAP \<K,V> ](/uwp/api/windows.foundation.collections.imap-2).
 
 Дополнительные сведения см. в разделе [коллекции](../cppcx/collections-c-cx.md).
 
-### <a name="members"></a>Элементы
+### <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[Map:: Map](#ctor)|Инициализирует новый экземпляр класса Map.|
 
@@ -105,7 +105,7 @@ ref class Map sealed;
 
 **Пространство имен:** Platform::Collections
 
-## <a name="mapclear-method"></a><a name="clear"></a>Метод Map:: Clear
+## <a name="mapclear-method"></a><a name="clear"></a> Метод Map:: Clear
 
 Удаляет все пары "ключ-значение" из текущего объекта Map.
 
@@ -115,7 +115,7 @@ ref class Map sealed;
 virtual void Clear();
 ```
 
-## <a name="mapfirst-method"></a><a name="first"></a>Метод Map:: First
+## <a name="mapfirst-method"></a><a name="first"></a> Метод Map:: First
 
 Возвращает итератор, указывающий первый элемент в сопоставлении или **`nullptr`** значение, если схема пуста.
 
@@ -130,11 +130,11 @@ Windows::Foundation::Collections::IKeyValuePair<K, V>^>^ First();
 
 Итератор, указывающий первый элемент на карте.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Удобным способом удержания итератора, возвращенного первым (), является присвоение возвращаемого значения переменной, объявленной с **`auto`** ключевым словом выведения типа. Например, `auto x = myMap->First();`.
 
-## <a name="mapgetview-method"></a><a name="getview"></a>Метод Map:: onview
+## <a name="mapgetview-method"></a><a name="getview"></a> Метод Map:: onview
 
 Возвращает доступное только для чтения представление текущей схемы. то есть [класс Platform:: Collections:: MapView](../cppcx/platform-collections-mapview-class.md), реализующий интерфейс [Windows:: Foundation:: Collections:: IMapView \<K,V> ](/uwp/api/windows.foundation.collections.imapview-2) .
 
@@ -148,7 +148,7 @@ Windows::Foundation::Collections::IMapView<K, V>^ GetView();
 
 Объект `MapView`.
 
-## <a name="maphaskey-method"></a><a name="haskey"></a>Метод Map:: HasKey
+## <a name="maphaskey-method"></a><a name="haskey"></a> Метод Map:: HasKey
 
 Определяет, содержит ли текущий объект Map указанный ключ.
 
@@ -167,7 +167,7 @@ bool HasKey(K key);
 
 **`true`** значение, если ключ найден; в противном случае — **`false`** .
 
-## <a name="mapinsert-method"></a><a name="insert"></a>Метод Map:: INSERT
+## <a name="mapinsert-method"></a><a name="insert"></a> Метод Map:: INSERT
 
 Добавляет в текущий объект Map указанную пару "ключ-значение".
 
@@ -189,7 +189,7 @@ virtual bool Insert(K key, V value);
 
 **`true`** значение, если ключ существующего элемента в текущей карте соответствует *ключу* , а значение этого элемента равно *значению*. **`false`** значение, если существующий элемент в текущем *ключе* сопоставления не совпадает с параметрами *ключа* и *значения* , а затем добавляется в текущую карту.
 
-## <a name="maplookup-method"></a><a name="lookup"></a>Метод Map:: Lookup
+## <a name="maplookup-method"></a><a name="lookup"></a> Метод Map:: Lookup
 
 Возвращает значение типа V, связанное с указанным ключом типа K, если ключ существует.
 
@@ -208,11 +208,11 @@ V Lookup(K key);
 
 Значение, связанное с *ключом*. Тип возвращаемого значения — TypeName *V*.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Если ключ не существует, создается исключение [Platform:: OutOfBoundsException](../cppcx/platform-outofboundsexception-class.md) .
 
-## <a name="mapmap-constructor"></a><a name="ctor"></a>Конструктор Map:: Map
+## <a name="mapmap-constructor"></a><a name="ctor"></a> Конструктор Map:: Map
 
 Инициализирует новый экземпляр класса Map.
 
@@ -246,7 +246,7 @@ Map(
 *last*<br/>
 Итератор ввода первого элемента после диапазона элементов, используемый для инициализации текущего объекта Map.
 
-## <a name="mapmapchanged-event"></a><a name="mapchanged"></a>Событие Map:: Мапчанжед
+## <a name="mapmapchanged-event"></a><a name="mapchanged"></a> Событие Map:: Мапчанжед
 
 Возникает, когда элемент вставляется в сопоставление или удаляется из него.
 
@@ -264,7 +264,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 Среда выполнения Windows приложений, использующих C# или Visual Basic Project IMap \<K,V> как IDictionary \<K,V> .
 
-## <a name="mapremove-method"></a><a name="remove"></a>Метод Map:: Remove
+## <a name="mapremove-method"></a><a name="remove"></a> Метод Map:: Remove
 
 Удаляет указанную пару "ключ-значение" из текущего объекта Map.
 
@@ -279,7 +279,7 @@ virtual void Remove(K key);
 *key*<br/>
 Ключ из пары "ключ-значение". Тип *ключа* — TypeName *K*.
 
-## <a name="mapsize-method"></a><a name="size"></a>Метод Map:: size
+## <a name="mapsize-method"></a><a name="size"></a> Метод Map:: size
 
 Возвращает число элементов [Windows:: Foundation:: Collections:: IKeyValuePair \<K,V> ](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) в сопоставлении.
 
@@ -293,7 +293,7 @@ virtual property unsigned int Size;
 
 Количество элементов в объекте Map.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Коллекции (C++/CX)](collections-c-cx.md)<br/>
 [Пространство имен платформы](platform-namespace-c-cx.md)<br/>

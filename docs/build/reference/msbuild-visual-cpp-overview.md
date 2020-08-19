@@ -4,12 +4,12 @@ ms.date: 02/26/2020
 helpviewer_keywords:
 - MSBuild overview
 ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
-ms.openlocfilehash: e100913cf4f0d84eac0e5891edb053918aec67f4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c52434fa4b652d52baea70df705920db4ee68a5f
+ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87190498"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88610856"
 ---
 # <a name="msbuild-internals-for-c-projects"></a>Внутренние компоненты MSBuild для проектов C++
 
@@ -21,17 +21,17 @@ ms.locfileid: "87190498"
 
 По умолчанию основные файлы поддержки Visual Studio расположены в указанных ниже каталогах. Эти сведения относятся к конкретной версии.
 
-### <a name="visual-studio-2019"></a>Visual Studio 2019
+### <a name="visual-studio-2019"></a>Visual Studio 2019
 
-- % VSINSTALLDIR% MSBuild \\ Microsoft \\ VC \\ *версии* \\ вктаржетс\\
+- % VSINSTALLDIR% MSBuild \\ ( \\ \\ *версия* Microsoft VC)\\
 
   Содержит основные файлы целевых (с расширением TARGETS) и файлы свойств (с расширением PROPS), используемые целевыми объектами. По умолчанию макрос $(VCTargetsPath) ссылается на этот каталог. Заполнитель *версии* относится к версии Visual Studio: V160 для visual Studio 2019, V150 для visual Studio 2017.
 
-- % VSINSTALLDIR% MSBuild \\ Microsoft \\ VC \\ *версия* \\ вктаржетс \\ \\ *platform* Платформа платформы\\
+- % VSINSTALLDIR% \\ Платформа платформы Microsoft \\ VC \\ *версии* \\ \\ *platform*\\
 
   Содержит файлы цель и свойство платформы, которые переопределяют целевые объекты и свойства в родительском каталоге. Этот каталог также содержит DLL-файл, который определяет задачи, используемые целевыми объектами в данном каталоге. Заполнитель *платформа* представляет подкаталог ARM, Win32 или x64.
 
-- % VSINSTALLDIR% MSBuild \\ Microsoft \\ VC \\ *версии* \\ вктаржетс платформа \\ платформ \\ *platform* \\ платформтулсетс \\ *набор инструментов*\\
+- \\ \\ \\ *version* \\ \\ *platform* \\ \\ *Набор инструментов* платформтулсетс для платформы Microsoft VC версии VSINSTALLDIR% MSBuild\\
 
   Содержит каталоги, которые обеспечивают сборку приложений C++ с помощью указанного *набора средств*. Заполнитель *платформа* представляет подкаталог ARM, Win32 или x64. Заполнитель *набора инструментов* представляет подкаталог набора инструментов.
 
@@ -103,7 +103,7 @@ ms.locfileid: "87190498"
 
 `msbuild myProject.vcxproj /p:UseEnv=true`
 
-### <a name="targets"></a>Targets
+### <a name="targets"></a>Цели
 
 Существуют сотни целевых объектов в файлах поддержки Visual Studio. Однако большинство являются целевых объектов, ориентированных на системы, пользователь может их игнорировать. Большинство системных целей начинаются с символа подчеркивания ( `_` ) или имеют имя, начинающееся с "препарефор", "COMPUTE", "Before", "After", "Pre" или "Post".
 
@@ -112,7 +112,7 @@ ms.locfileid: "87190498"
 | целевого объекта | Описание |
 | ------ | ----------- |
 | BscMake | Выполняет программу Microsoft Обзор программы управления информацией bscmake.exe. |
-| Построение | Выполняет построение проекта.<br /><br /> Этот целевой объект является значением по умолчанию для проекта. |
+| Сборка | Выполняет построение проекта.<br /><br /> Этот целевой объект является значением по умолчанию для проекта. |
 | ClCompile | Выполняет средство компилятора MSVC (cl.exe). |
 | Clean | Удаляет временные и промежуточные файлы сборки. |
 | LIB | Выполняет программу Microsoft 32-разрядной библиотеки диспетчера lib.exe. |
@@ -127,7 +127,7 @@ ms.locfileid: "87190498"
 > [!NOTE]
 > В Visual Studio 2017 и более поздних версий поддержка проектов C++ для файлов **XSD** отмечена как нерекомендуемая. Вы можете продолжать использовать **Microsoft.VisualC.CppCodeProvider**, вручную добавив **CppCodeProvider.dll** в глобальный кэш сборок.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Справочник по задачам MSBuild](/visualstudio/msbuild/msbuild-task-reference)\
 [Задача BscMake](/visualstudio/msbuild/bscmake-task)\
