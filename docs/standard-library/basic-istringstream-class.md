@@ -200,7 +200,7 @@ void swap(basic_istringstream& right);
 
 Функция элемента меняет местами значения этого объекта и значения *right*.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Безопасность потоков в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Программирование iostream](../standard-library/iostream-programming.md)\

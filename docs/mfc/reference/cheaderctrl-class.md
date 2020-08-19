@@ -955,7 +955,7 @@ BOOL SetOrderArray(
 
   См. пример для [CHeaderCtrl:: жетордераррай](#getorderarray).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [CWnd, класс](../../mfc/reference/cwnd-class.md)<br/>
 [Иерархическая диаграмма](../../mfc/hierarchy-chart.md)<br/>

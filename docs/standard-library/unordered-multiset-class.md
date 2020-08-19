@@ -134,12 +134,12 @@ helpviewer_keywords:
 - std::unordered_multiset::size
 - std::unordered_multiset::swap
 ms.assetid: 70c8dfc5-492a-4af2-84f5-1aa9cb04b71c
-ms.openlocfilehash: a2f9f22b2dc215aed1fabf11344a59081e4269cd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 83b2b1a97972fa63f7cf7d2b9a6a48b49dbeda8d
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217354"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562523"
 ---
 # <a name="unordered_multiset-class"></a>Класс unordered_multiset
 
@@ -157,12 +157,17 @@ class unordered_multiset;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|-|-|
-|*Key*|Тип ключа.|
-|*Хэш*|Тип объекта хэш-функции.|
-|*Возможен*|Тип объекта функции сравнения на предмет равенства.|
-|*Идентификатор*|Класс распределителя.|
+*Раздел*\
+Тип ключа.
+
+*Функции*\
+Тип объекта хэш-функции.
+
+*Возможен*\
+Тип объекта функции сравнения на предмет равенства.
+
+*Идентификатор*\
+Класс распределителя.
 
 ## <a name="members"></a>Элементы
 
@@ -187,7 +192,7 @@ class unordered_multiset;
 |Функция-член|Описание|
 |-|-|
 |[начале](#begin)|Задает начало управляемой последовательности.|
-|[bucket](#bucket)|Получает номер блока для значения ключа.|
+|[период](#bucket)|Получает номер блока для значения ключа.|
 |[bucket_count](#bucket_count)|Получает количество блоков.|
 |[bucket_size](#bucket_size)|Получает размер блока.|
 |[cbegin](#cbegin)|Задает начало управляемой последовательности.|
@@ -234,7 +239,7 @@ class unordered_multiset;
 
 **Пространство имен:** std
 
-## <a name="unordered_multisetallocator_type"></a><a name="allocator_type"></a>unordered_multiset:: allocator_type
+## <a name="unordered_multisetallocator_type"></a><a name="allocator_type"></a> unordered_multiset:: allocator_type
 
 Тип распределителя для управления хранилищем.
 
@@ -272,7 +277,7 @@ int main()
 al == std::allocator() is true
 ```
 
-## <a name="unordered_multisetbegin"></a><a name="begin"></a>unordered_multiset:: Begin
+## <a name="unordered_multisetbegin"></a><a name="begin"></a> unordered_multiset:: Begin
 
 Задает начало управляемой последовательности или сегмента.
 
@@ -288,9 +293,8 @@ const_local_iterator begin(size_type nbucket) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Description|
-|-|-|
-|*нбуккет*|Номер сегмента.|
+*нбуккет*\
+Номер сегмента.
 
 ### <a name="remarks"></a>Remarks
 
@@ -340,7 +344,7 @@ int main()
 [a]
 ```
 
-## <a name="unordered_multisetbucket"></a><a name="bucket"></a>unordered_multiset:: контейнер
+## <a name="unordered_multisetbucket"></a><a name="bucket"></a> unordered_multiset:: контейнер
 
 Получает номер блока для значения ключа.
 
@@ -396,7 +400,7 @@ bucket('a') == 7
 bucket_size(7) == 1
 ```
 
-## <a name="unordered_multisetbucket_count"></a><a name="bucket_count"></a>unordered_multiset:: bucket_count
+## <a name="unordered_multisetbucket_count"></a><a name="bucket_count"></a> unordered_multiset:: bucket_count
 
 Получает количество блоков.
 
@@ -481,7 +485,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="unordered_multisetbucket_size"></a><a name="bucket_size"></a>unordered_multiset:: bucket_size
+## <a name="unordered_multisetbucket_size"></a><a name="bucket_size"></a> unordered_multiset:: bucket_size
 
 Получает размер сегмента.
 
@@ -537,7 +541,7 @@ bucket('a') == 7
 bucket_size(7) == 1
 ```
 
-## <a name="unordered_multisetcbegin"></a><a name="cbegin"></a>unordered_multiset:: cbegin
+## <a name="unordered_multisetcbegin"></a><a name="cbegin"></a> unordered_multiset:: cbegin
 
 Возвращает **`const`** итератор, который обращается к первому элементу в диапазоне.
 
@@ -563,7 +567,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="unordered_multisetcend"></a><a name="cend"></a>unordered_multiset:: cend
+## <a name="unordered_multisetcend"></a><a name="cend"></a> unordered_multiset:: cend
 
 Возвращает **`const`** итератор, который обращается к расположению сразу за последним элементом в диапазоне.
 
@@ -591,7 +595,7 @@ auto i2 = Container.cend();
 
 Значение, возвращаемое `cend`, не должно быть подвергнуто удалению ссылки.
 
-## <a name="unordered_multisetclear"></a><a name="clear"></a>unordered_multiset:: Clear
+## <a name="unordered_multisetclear"></a><a name="clear"></a> unordered_multiset:: Clear
 
 Удаляет все элементы.
 
@@ -658,7 +662,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="unordered_multisetconst_iterator"></a><a name="const_iterator"></a>unordered_multiset:: const_iterator
+## <a name="unordered_multisetconst_iterator"></a><a name="const_iterator"></a> unordered_multiset:: const_iterator
 
 Тип постоянного итератора для управляемой последовательности.
 
@@ -701,7 +705,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="unordered_multisetconst_local_iterator"></a><a name="const_local_iterator"></a>unordered_multiset:: const_local_iterator
+## <a name="unordered_multisetconst_local_iterator"></a><a name="const_local_iterator"></a> unordered_multiset:: const_local_iterator
 
 Тип постоянного итератора блока для управляемой последовательности.
 
@@ -749,7 +753,7 @@ int main()
 [a]
 ```
 
-## <a name="unordered_multisetconst_pointer"></a><a name="const_pointer"></a>unordered_multiset:: const_pointer
+## <a name="unordered_multisetconst_pointer"></a><a name="const_pointer"></a> unordered_multiset:: const_pointer
 
 Тип постоянного указателя на элемент.
 
@@ -795,7 +799,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="unordered_multisetconst_reference"></a><a name="const_reference"></a>unordered_multiset:: const_reference
+## <a name="unordered_multisetconst_reference"></a><a name="const_reference"></a> unordered_multiset:: const_reference
 
 Тип постоянной ссылки на элемент.
 
@@ -841,7 +845,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="unordered_multisetcount"></a><a name="count"></a>unordered_multiset:: count
+## <a name="unordered_multisetcount"></a><a name="count"></a> unordered_multiset:: count
 
 Определяет количество элементов, соответствующих заданному ключу.
 
@@ -896,7 +900,7 @@ count('b') == 1
 count('C') == 0
 ```
 
-## <a name="unordered_multisetdifference_type"></a><a name="difference_type"></a>unordered_multiset::d ifference_type
+## <a name="unordered_multisetdifference_type"></a><a name="difference_type"></a> unordered_multiset::d ifference_type
 
 Тип расстояния со знаком между двумя элементами.
 
@@ -955,7 +959,7 @@ end()-begin() == 3
 begin()-end() == -3
 ```
 
-## <a name="unordered_multisetemplace"></a><a name="emplace"></a>unordered_multiset:: emplace
+## <a name="unordered_multisetemplace"></a><a name="emplace"></a> unordered_multiset:: emplace
 
 Вставляет элемент, созданный на месте (операции копирования или перемещения не выполняются).
 
@@ -966,9 +970,8 @@ iterator emplace(Args&&... args);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|-|-|
-|*args*|Аргументы, передаваемые для создания элемента, который будет вставлен в объект unordered_multiset.|
+*args*\
+Аргументы, передаваемые для создания элемента, который будет вставлен в объект unordered_multiset.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -982,7 +985,7 @@ iterator emplace(Args&&... args);
 
 Пример кода см. в разделе [multiset::emplace](../standard-library/multiset-class.md#emplace).
 
-## <a name="unordered_multisetemplace_hint"></a><a name="emplace_hint"></a>unordered_multiset:: emplace_hint
+## <a name="unordered_multisetemplace_hint"></a><a name="emplace_hint"></a> unordered_multiset:: emplace_hint
 
 Вставляет созданный элемент на место (операции копирования или перемещения не выполняются) с указанием о размещении.
 
@@ -995,10 +998,11 @@ iterator emplace_hint(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|-|-|
-|*args*|Аргументы, передаваемые для создания элемента, который будет вставлен в объект unordered_multiset.|
-|*where*|Подсказка о месте начала поиска правильной точки вставки.|
+*args*\
+Аргументы, передаваемые для создания элемента, который будет вставлен в объект unordered_multiset.
+
+*которому*\
+Подсказка о месте начала поиска правильной точки вставки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1012,7 +1016,7 @@ iterator emplace_hint(
 
 Пример кода см. в разделе [set::emplace_hint](../standard-library/set-class.md#emplace_hint).
 
-## <a name="unordered_multisetempty"></a><a name="empty"></a>unordered_multiset:: Empty
+## <a name="unordered_multisetempty"></a><a name="empty"></a> unordered_multiset:: Empty
 
 Проверяет отсутствие элементов.
 
@@ -1079,7 +1083,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="unordered_multisetend"></a><a name="end"></a>unordered_multiset:: end
+## <a name="unordered_multisetend"></a><a name="end"></a> unordered_multiset:: end
 
 Задает конец управляемой последовательности.
 
@@ -1145,7 +1149,7 @@ int main()
 [a]
 ```
 
-## <a name="unordered_multisetequal_range"></a><a name="equal_range"></a>unordered_multiset:: equal_range
+## <a name="unordered_multisetequal_range"></a><a name="equal_range"></a> unordered_multiset:: equal_range
 
 Находит диапазон, соответствующий указанному ключу.
 
@@ -1214,7 +1218,7 @@ equal_range('x'):
 equal_range('b'): [b]
 ```
 
-## <a name="unordered_multiseterase"></a><a name="erase"></a>unordered_multiset:: Erase
+## <a name="unordered_multiseterase"></a><a name="erase"></a> unordered_multiset:: Erase
 
 Удаляет элемент или диапазон элементов в объекте unordered_multiset с заданных позиций или удаляет элементы, соответствующие заданному ключу.
 
@@ -1254,7 +1258,7 @@ size_type erase(
 
 Пример кода см. в разделе [set::erase](../standard-library/set-class.md#erase).
 
-## <a name="unordered_multisetfind"></a><a name="find"></a>unordered_multiset:: Find
+## <a name="unordered_multisetfind"></a><a name="find"></a> unordered_multiset:: Find
 
 Определяет элемент, соответствующий указанному ключу.
 
@@ -1314,7 +1318,7 @@ find('A') == false
 find('b') == true: [b]
 ```
 
-## <a name="unordered_multisetget_allocator"></a><a name="get_allocator"></a>unordered_multiset:: get_allocator
+## <a name="unordered_multisetget_allocator"></a><a name="get_allocator"></a> unordered_multiset:: get_allocator
 
 Возвращает сохраненный объект распределителя.
 
@@ -1352,7 +1356,7 @@ int main()
 al == std::allocator() is true
 ```
 
-## <a name="unordered_multisethash_function"></a><a name="hash"></a>unordered_multiset:: hash_function
+## <a name="unordered_multisethash_function"></a><a name="hash"></a> unordered_multiset:: hash_function
 
 Получает сохраненный объект хэш-функции.
 
@@ -1390,7 +1394,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086
 ```
 
-## <a name="unordered_multisethasher"></a><a name="hasher"></a>unordered_multiset:: hash
+## <a name="unordered_multisethasher"></a><a name="hasher"></a> unordered_multiset:: hash
 
 Тип хэш-функции.
 
@@ -1428,7 +1432,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086
 ```
 
-## <a name="unordered_multisetinsert"></a><a name="insert"></a>unordered_multiset:: INSERT
+## <a name="unordered_multisetinsert"></a><a name="insert"></a> unordered_multiset:: INSERT
 
 Вставляет элемент или диапазон элементов в unordered_multiset.
 
@@ -1468,15 +1472,26 @@ IList);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|-|-|
-|*Val*|Значение элемента, вставляемого в unordered_multiset.|
-|*Where*|Место начала поиска правильной точки вставки.|
-|*валти*|Параметр шаблона, указывающий тип аргумента, который unordered_multiset может использовать для создания элемента [value_type](../standard-library/map-class.md#value_type), и идеальное перенаправление *Val* в качестве аргумента.|
-|*First*|Позиция первого элемента, который следует скопировать.|
-|*Последняя*|Позиция непосредственно перед последним элементом, который следует скопировать.|
-|*InputIterator*|Аргумент функции-шаблона, который соответствует требованиям [итератора ввода](../standard-library/input-iterator-tag-struct.md), указывающего на элементы типа, которые можно использовать для создания объектов [value_type](../standard-library/map-class.md#value_type).|
-|*IList*|[Initializer_list](../standard-library/initializer-list.md) , из которого копируются элементы.|
+*Val*\
+Значение элемента, вставляемого в unordered_multiset.
+
+*Которому*\
+Место начала поиска правильной точки вставки.
+
+*валти*\
+Параметр шаблона, указывающий тип аргумента, который unordered_multiset может использовать для создания элемента [value_type](../standard-library/map-class.md#value_type), и идеальное перенаправление *Val* в качестве аргумента.
+
+*Началь*\
+Позиция первого элемента, который следует скопировать.
+
+*Последняя*\
+Позиция непосредственно перед последним элементом, который следует скопировать.
+
+*InputIterator*\
+Аргумент функции-шаблона, который соответствует требованиям [итератора ввода](../standard-library/input-iterator-tag-struct.md), указывающего на элементы типа, которые можно использовать для создания объектов [value_type](../standard-library/map-class.md#value_type).
+
+*Интерфейс*\
+[Initializer_list](../standard-library/initializer-list.md) , из которого копируются элементы.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1500,7 +1515,7 @@ IList);
 
 Пример кода см. в разделе [multiset::insert](../standard-library/multiset-class.md#insert).
 
-## <a name="unordered_multisetiterator"></a><a name="iterator"></a>unordered_multiset:: итератор
+## <a name="unordered_multisetiterator"></a><a name="iterator"></a> unordered_multiset:: итератор
 
 Тип, предоставляющий [прямой итератор](../standard-library/forward-iterator-tag-struct.md) константы, может считывать элементы в объекте unordered_multiset.
 
@@ -1512,7 +1527,7 @@ typedef implementation-defined iterator;
 
 Пример объявления и использования **итератора** см. в разделе [begin](../standard-library/multiset-class.md#begin).
 
-## <a name="unordered_multisetkey_eq"></a><a name="key_eq"></a>unordered_multiset:: key_eq
+## <a name="unordered_multisetkey_eq"></a><a name="key_eq"></a> unordered_multiset:: key_eq
 
 Получает сохраненный объект функции сравнения.
 
@@ -1552,7 +1567,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false
 ```
 
-## <a name="unordered_multisetkey_equal"></a><a name="key_equal"></a>unordered_multiset:: key_equal
+## <a name="unordered_multisetkey_equal"></a><a name="key_equal"></a> unordered_multiset:: key_equal
 
 Тип функции сравнения.
 
@@ -1592,7 +1607,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false
 ```
 
-## <a name="unordered_multisetkey_type"></a><a name="key_type"></a>unordered_multiset:: key_type
+## <a name="unordered_multisetkey_type"></a><a name="key_type"></a> unordered_multiset:: key_type
 
 Тип ключа упорядочения.
 
@@ -1646,7 +1661,7 @@ int main()
 [d] [c] [b] [a]
 ```
 
-## <a name="unordered_multisetload_factor"></a><a name="load_factor"></a>unordered_multiset:: load_factor
+## <a name="unordered_multisetload_factor"></a><a name="load_factor"></a> unordered_multiset:: load_factor
 
 Подсчитывает среднее число элементов в блоке.
 
@@ -1714,7 +1729,7 @@ int main()
 }
 ```
 
-## <a name="unordered_multisetlocal_iterator"></a><a name="local_iterator"></a>unordered_multiset:: local_iterator
+## <a name="unordered_multisetlocal_iterator"></a><a name="local_iterator"></a> unordered_multiset:: local_iterator
 
 Тип итератора контейнера.
 
@@ -1762,7 +1777,7 @@ int main()
 [a]
 ```
 
-## <a name="unordered_multisetmax_bucket_count"></a><a name="max_bucket_count"></a>unordered_multiset:: max_bucket_count
+## <a name="unordered_multisetmax_bucket_count"></a><a name="max_bucket_count"></a> unordered_multiset:: max_bucket_count
 
 Получает максимальное количество блоков.
 
@@ -1848,7 +1863,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="unordered_multisetmax_load_factor"></a><a name="max_load_factor"></a>unordered_multiset:: max_load_factor
+## <a name="unordered_multisetmax_load_factor"></a><a name="max_load_factor"></a> unordered_multiset:: max_load_factor
 
 Возвращает или задает максимальное количество элементов в блоке.
 
@@ -1941,7 +1956,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="unordered_multisetmax_size"></a><a name="max_size"></a>unordered_multiset:: max_size
+## <a name="unordered_multisetmax_size"></a><a name="max_size"></a> unordered_multiset:: max_size
 
 Возвращает максимальный размер управляемой последовательности.
 
@@ -1976,7 +1991,7 @@ int main()
 max_size() == 4294967295
 ```
 
-## <a name="unordered_multisetoperator"></a><a name="op_eq"></a>unordered_multiset:: operator =
+## <a name="unordered_multisetoperator"></a><a name="op_eq"></a> unordered_multiset:: operator =
 
 Копирует хэш-таблицу.
 
@@ -1988,9 +2003,8 @@ unordered_multiset& operator=(unordered_multiset&& right);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|-|-|
-|*Правильно*|[unordered_multiset](../standard-library/unordered-multiset-class.md) копируется в `unordered_multiset`.|
+*Правильно*\
+[unordered_multiset](../standard-library/unordered-multiset-class.md) копируется в `unordered_multiset`.
 
 ### <a name="remarks"></a>Remarks
 
@@ -2033,7 +2047,7 @@ int main( )
 }
 ```
 
-## <a name="unordered_multisetpointer"></a><a name="pointer"></a>unordered_multiset::p оинтер
+## <a name="unordered_multisetpointer"></a><a name="pointer"></a> unordered_multiset::p оинтер
 
 Тип указателя на элемент.
 
@@ -2080,7 +2094,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="unordered_multisetreference"></a><a name="reference"></a>unordered_multiset:: Reference
+## <a name="unordered_multisetreference"></a><a name="reference"></a> unordered_multiset:: Reference
 
 Тип ссылки на элемент.
 
@@ -2127,7 +2141,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="unordered_multisetrehash"></a><a name="rehash"></a>unordered_multiset:: rehash
+## <a name="unordered_multisetrehash"></a><a name="rehash"></a> unordered_multiset:: rehash
 
 Повторно создает хэш-таблицу.
 
@@ -2205,7 +2219,7 @@ load_factor() == 0.0234375
 max_load_factor() == 0.1
 ```
 
-## <a name="unordered_multisetsize"></a><a name="size"></a>unordered_multiset:: size
+## <a name="unordered_multisetsize"></a><a name="size"></a> unordered_multiset:: size
 
 Подсчитывает количество элементов.
 
@@ -2272,7 +2286,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="unordered_multisetsize_type"></a><a name="size_type"></a>unordered_multiset:: size_type
+## <a name="unordered_multisetsize_type"></a><a name="size_type"></a> unordered_multiset:: size_type
 
 Тип беззнакового расстояния между двумя элементами.
 
@@ -2308,7 +2322,7 @@ int main()
 size == 0
 ```
 
-## <a name="unordered_multisetswap"></a><a name="swap"></a>unordered_multiset:: swap
+## <a name="unordered_multisetswap"></a><a name="swap"></a> unordered_multiset:: swap
 
 Меняет местами содержимое двух контейнеров.
 
@@ -2380,7 +2394,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="unordered_multisetunordered_multiset"></a><a name="unordered_multiset"></a>unordered_multiset:: unordered_multiset
+## <a name="unordered_multisetunordered_multiset"></a><a name="unordered_multiset"></a> unordered_multiset:: unordered_multiset
 
 Создает объект контейнера.
 
@@ -2434,15 +2448,26 @@ unordered_multiset(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|-|-|
-|*InputIterator*|Тип итератора.|
-|*Al*|Объект распределителя для сохранения.|
-|*Соответствовал*|Объект функции сравнения для сохранения.|
-|*Хэш*|Объект хэш-функции для сохранения.|
-|*Bucket_count*|Минимальное количество блоков.|
-|*Правильно*|Контейнер для копирования.|
-|*IList*|Объект initializer_list, из которого следует выполнить копирование.|
+*InputIterator*\
+Тип итератора.
+
+*Al*\
+Объект распределителя для сохранения.
+
+*Соответствовал*\
+Объект функции сравнения для сохранения.
+
+*Функции*\
+Объект хэш-функции для сохранения.
+
+*Bucket_count*\
+Минимальное количество блоков.
+
+*Правильно*\
+Контейнер для копирования.
+
+*Интерфейс*\
+Объект initializer_list, из которого следует выполнить копирование.
 
 ### <a name="remarks"></a>Remarks
 
@@ -2458,7 +2483,7 @@ unordered_multiset(
 
 Объект распределителя — это аргумент *Al*, если он есть; в противном случае — значение `Alloc()` .
 
-## <a name="unordered_multisetvalue_type"></a><a name="value_type"></a>unordered_multiset:: value_type
+## <a name="unordered_multisetvalue_type"></a><a name="value_type"></a> unordered_multiset:: value_type
 
 Тип элемента.
 
@@ -2512,7 +2537,7 @@ int main()
 [d] [c] [b] [a]
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [<unordered_set>](../standard-library/unordered-set.md)\
 [Контейнера](../cpp/containers-modern-cpp.md)\

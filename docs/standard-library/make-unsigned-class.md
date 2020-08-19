@@ -7,14 +7,14 @@ helpviewer_keywords:
 - make_unsigned class
 - make_unsigned
 ms.assetid: 7a6a3c4f-1a4c-47e8-9ee2-ac1f7b669353
-ms.openlocfilehash: 4c0224bd5fd7dc8c6589ae474bb9acb9a8f09cf6
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 46b785b20d2ca8ff2de0dfa678b543fa7493aa92
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456323"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561756"
 ---
-# <a name="makeunsigned-class"></a>Класс make_unsigned
+# <a name="make_unsigned-class"></a>Класс make_unsigned
 
 Создает тип или наименьший беззнаковый тип, размер которого больше или равен размеру типа.
 
@@ -30,17 +30,16 @@ using make_unsigned_t = typename make_unsigned<T>::type;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*T*|Тип для изменения.|
+*T*\
+Тип для изменения.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Экземпляр модификатора типа содержит модифицированный тип, который равен *T* , если `is_unsigned<T>` имеет значение true. В противном случае это наименьший тип со знаком `ST`, для которого `sizeof (T) <= sizeof (ST)`.
+Экземпляр модификатора типа содержит модифицированный тип, который равен *T* , если имеет `is_unsigned<T>` значение true. В противном случае это наименьший тип со знаком `ST`, для которого `sizeof (T) <= sizeof (ST)`.
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<type_traits>
+**Заголовок:**\<type_traits>
 
 **Пространство имен:** std
 

@@ -2317,7 +2317,7 @@ int main( )
 The multiset has elements: 10 20.
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Контейнера](../cpp/containers-modern-cpp.md)\
 [Безопасность потоков в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

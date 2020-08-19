@@ -102,6 +102,6 @@ This application has requested the Runtime to terminate it in an unusual way.
 Please contact the application's support team for more information.
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Макрос assert, _assert, _wassert](assert-macro-assert-wassert.md)<br/>

@@ -38,12 +38,12 @@ helpviewer_keywords:
 - stdext::allocator_base [C++], destroy
 - stdext::allocator_base [C++], max_size
 ms.assetid: f920b45f-2a88-4bb0-8ead-b6126b426ed4
-ms.openlocfilehash: 452a6bdc0382af4c9d01921c51dbaa0e00ccdcb2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f642c21f2b1060dd5adc5c3d98144592c3413777
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87205006"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562640"
 ---
 # <a name="allocator_base-class"></a>Класс allocator_base
 
@@ -58,10 +58,11 @@ class allocator_base
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*Type*|Тип элементов, распределяемых распределителем.|
-|*Синхронизация*|Политика синхронизации распределителя: [класс sync_none](sync-none-class.md), [класс sync_per_container](sync-per-container-class.md), [класс sync_per_thread](sync-per-thread-class.md) или [класс sync_shared](sync-shared-class.md).|
+*Тип*\
+Тип элементов, распределяемых распределителем.
+
+*Nosync*\
+Политика синхронизации распределителя: [класс sync_none](sync-none-class.md), [класс sync_per_container](sync-per-container-class.md), [класс sync_per_thread](sync-per-thread-class.md) или [класс sync_shared](sync-shared-class.md).
 
 ### <a name="constructors"></a>Конструкторы
 
@@ -88,7 +89,7 @@ class allocator_base
 |[_Charalloc](#charalloc)|Выделяет хранилище для массива типа **`char`** .|
 |[_Chardealloc](#chardealloc)|Освобождает хранилище для массива, содержащего элементы типа **`char`** .|
 |[address](#address)|Находит адрес объекта, значение которого задано.|
-|[allocate](#allocate)|Выделяет блок памяти, достаточный для хранения по крайней мере некоторого указанного числа элементов.|
+|[памяти](#allocate)|Выделяет блок памяти, достаточный для хранения по крайней мере некоторого указанного числа элементов.|
 |[создания](#construct)|Создает определенный тип объекта по указанному адресу, инициализированный с использованием заданного значения.|
 |[deallocate](#deallocate)|Освобождает указанное число объектов из памяти, начиная с заданной позиции.|
 |[завершить](#destroy)|Вызывает деструктор объектов без освобождения памяти, в которой хранился объект.|
@@ -100,7 +101,7 @@ class allocator_base
 
 **Пространство имен:** stdext
 
-## <a name="allocator_base_charalloc"></a><a name="charalloc"></a>allocator_base:: _Charalloc
+## <a name="allocator_base_charalloc"></a><a name="charalloc"></a> allocator_base:: _Charalloc
 
 Выделяет хранилище для массива типа **`char`** .
 
@@ -110,9 +111,8 @@ char *_Charalloc(size_type count);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*count*|Число выделяемых элементов в массиве.|
+*расчета*\
+Число выделяемых элементов в массиве.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -122,7 +122,7 @@ char *_Charalloc(size_type count);
 
 Эта функция-член используется контейнерами при компиляции с компилятором, которому не удается скомпилировать повторную привязку. Она реализует `_Charalloc` для пользовательского распределителя, возвращая результат вызова функции `allocate` фильтра синхронизации.
 
-## <a name="allocator_base_chardealloc"></a><a name="chardealloc"></a>allocator_base:: _Chardealloc
+## <a name="allocator_base_chardealloc"></a><a name="chardealloc"></a> allocator_base:: _Chardealloc
 
 Освобождает хранилище для массива, содержащего элементы типа **`char`** .
 
@@ -132,16 +132,17 @@ void _Chardealloc(void* ptr, size_type count);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*ptr*|Указатель на первый объект, который должен быть освобожден из хранилища.|
-|*count*|Количество объектов для освобождения из хранилища.|
+*указатель*\
+Указатель на первый объект, который должен быть освобожден из хранилища.
+
+*расчета*\
+Количество объектов для освобождения из хранилища.
 
 ### <a name="remarks"></a>Remarks
 
 Эта функция-член используется контейнерами при компиляции с компилятором, которому не удается скомпилировать повторную привязку. Она реализует `_Chardealloc` для пользовательского распределителя путем вызова функции `deallocate` фильтра синхронизации. Указатель указателя мыши должен быть ранее возвращен путем вызова метода `_Charalloc` для объекта распределителя, который сравнивает равно **`*this`** , с выделением объекта массива того же размера и типа. `_Chardealloc` никогда не создает исключений.
 
-## <a name="allocator_baseaddress"></a><a name="address"></a>allocator_base:: Address
+## <a name="allocator_baseaddress"></a><a name="address"></a> allocator_base:: Address
 
 Находит адрес объекта, значение которого задано.
 
@@ -164,7 +165,7 @@ const_pointer address(const_reference val);
 
 Эта функция-член реализуется для пользовательского распределителя путем возврата `&val`.
 
-## <a name="allocator_baseallocate"></a><a name="allocate"></a>allocator_base:: allocate
+## <a name="allocator_baseallocate"></a><a name="allocate"></a> allocator_base:: allocate
 
 Выделяет блок памяти, достаточный для хранения по крайней мере некоторого указанного числа элементов.
 
@@ -177,10 +178,11 @@ pointer allocate(size_type _Nx);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*_Nx*|Число выделяемых элементов в массиве.|
-|*_Hint*|Этот параметр не учитывается.|
+*_Nx*\
+Число выделяемых элементов в массиве.
+
+*_Hint*\
+Этот параметр не учитывается.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -190,7 +192,7 @@ pointer allocate(size_type _Nx);
 
 Эта функция-член реализует выделение памяти для пользовательского распределителя путем возврата результата вызова функции `allocate` фильтра синхронизации типа Type `*`, если `_Nx == 1`, в противном случае — путем возврата результата вызова приведения `operator new(_Nx * sizeof(Type))` к типу Type `*`.
 
-## <a name="allocator_baseallocator_base"></a><a name="allocator_base"></a>allocator_base:: allocator_base
+## <a name="allocator_baseallocator_base"></a><a name="allocator_base"></a> allocator_base:: allocator_base
 
 Создает объект типа `allocator_base`.
 
@@ -203,15 +205,14 @@ allocator_base(const allocator_base<Other, Sync>& right);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*Правильно*|Объект allocator для копирования.|
+*Правильно*\
+Объект allocator для копирования.
 
 ### <a name="remarks"></a>Remarks
 
 Первый конструктор создает экземпляр [allocator_base](allocator-base-class.md). Второй конструктор создает экземпляр `allocator_base` так, что для любого экземпляра `allocator_base<Type, _Sync>``a`, `allocator_base<Type, Sync>(allocator_base<Other, Sync>(a)) == a`.
 
-## <a name="allocator_baseconst_pointer"></a><a name="const_pointer"></a>allocator_base:: const_pointer
+## <a name="allocator_baseconst_pointer"></a><a name="const_pointer"></a> allocator_base:: const_pointer
 
 Тип, предоставляющий постоянный указатель на тип объекта, управляемого распределителем.
 
@@ -219,7 +220,7 @@ allocator_base(const allocator_base<Other, Sync>& right);
 typedef const Type *const_pointer;
 ```
 
-## <a name="allocator_baseconst_reference"></a><a name="const_reference"></a>allocator_base:: const_reference
+## <a name="allocator_baseconst_reference"></a><a name="const_reference"></a> allocator_base:: const_reference
 
 Тип, предоставляющий постоянную ссылку на тип объекта, управляемого распределителем.
 
@@ -227,7 +228,7 @@ typedef const Type *const_pointer;
 typedef const Type& const_reference;
 ```
 
-## <a name="allocator_baseconstruct"></a><a name="construct"></a>allocator_base:: конструкция
+## <a name="allocator_baseconstruct"></a><a name="construct"></a> allocator_base:: конструкция
 
 Создает определенный тип объекта по указанному адресу, инициализированный с использованием заданного значения.
 
@@ -237,16 +238,17 @@ void construct(pointer ptr, const Type& val);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*ptr*|Указатель места, в котором должен создаваться объект.|
-|*Val*|Значение, с которым создаваемый объект будет инициализирован.|
+*указатель*\
+Указатель места, в котором должен создаваться объект.
+
+*Val*\
+Значение, с которым создаваемый объект будет инициализирован.
 
 ### <a name="remarks"></a>Remarks
 
 Эта функция-член реализуется для пользовательского распределителя путем вызова `new((void*)ptr Type(val)`.
 
-## <a name="allocator_basedeallocate"></a><a name="deallocate"></a>allocator_base::d еаллокате
+## <a name="allocator_basedeallocate"></a><a name="deallocate"></a> allocator_base::d еаллокате
 
 Освобождает указанное число объектов из памяти, начиная с заданной позиции.
 
@@ -256,16 +258,17 @@ void deallocate(pointer ptr, size_type _Nx);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*ptr*|Указатель на первый объект, который должен быть освобожден из хранилища.|
-|*_Nx*|Количество объектов для освобождения из хранилища.|
+*указатель*\
+Указатель на первый объект, который должен быть освобожден из хранилища.
+
+*_Nx*\
+Количество объектов для освобождения из хранилища.
 
 ### <a name="remarks"></a>Remarks
 
 Эта функция-член реализуется для пользовательского распределителя путем вызова `deallocate(ptr)` в фильтре синхронизации `Sync`, если `_Nx == 1`, в противном случае — путем вызова `operator delete(_Nx * ptr)`.
 
-## <a name="allocator_basedestroy"></a><a name="destroy"></a>allocator_base::d естрой
+## <a name="allocator_basedestroy"></a><a name="destroy"></a> allocator_base::d естрой
 
 Вызывает деструктор объектов без освобождения памяти, в которой хранился объект.
 
@@ -275,15 +278,14 @@ void destroy(pointer ptr);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*ptr*|Указатель, обозначающий адрес уничтожаемого объекта.|
+*указатель*\
+Указатель, обозначающий адрес уничтожаемого объекта.
 
 ### <a name="remarks"></a>Remarks
 
 Эта функция-член реализуется для пользовательского распределителя путем вызова `ptr->~Type()`.
 
-## <a name="allocator_basedifference_type"></a><a name="difference_type"></a>allocator_base::d ifference_type
+## <a name="allocator_basedifference_type"></a><a name="difference_type"></a> allocator_base::d ifference_type
 
 Тип целого числа со знаком, который может представлять разницу между значениями указателей на тип объекта, управляемого распределителем.
 
@@ -291,7 +293,7 @@ void destroy(pointer ptr);
 typedef std::ptrdiff_t difference_type;
 ```
 
-## <a name="allocator_basemax_size"></a><a name="max_size"></a>allocator_base:: max_size
+## <a name="allocator_basemax_size"></a><a name="max_size"></a> allocator_base:: max_size
 
 Возвращает количество элементов типа `Type`, которые могут быть выделены объектом класса в пределах имеющейся свободной памяти.
 
@@ -307,7 +309,7 @@ size_type max_size() const;
 
 Эта функция-член реализуется для пользовательского распределителя путем возврата `(size_t)-1 / sizeof(Type)`, если `0 < (size_t)-1 / sizeof(Type)`в противном случае — `1`.
 
-## <a name="allocator_basepointer"></a><a name="pointer"></a>allocator_base::p оинтер
+## <a name="allocator_basepointer"></a><a name="pointer"></a> allocator_base::p оинтер
 
 Тип, предоставляющий указатель на тип объекта, управляемого распределителем.
 
@@ -315,7 +317,7 @@ size_type max_size() const;
 typedef Type *pointer;
 ```
 
-## <a name="allocator_basereference"></a><a name="reference"></a>allocator_base:: Reference
+## <a name="allocator_basereference"></a><a name="reference"></a> allocator_base:: Reference
 
 Тип, предоставляющий ссылку на тип объекта, управляемого распределителем.
 
@@ -323,7 +325,7 @@ typedef Type *pointer;
 typedef Type& reference;
 ```
 
-## <a name="allocator_basesize_type"></a><a name="size_type"></a>allocator_base:: size_type
+## <a name="allocator_basesize_type"></a><a name="size_type"></a> allocator_base:: size_type
 
 Целочисленный тип без знака, который может представлять длину любой последовательности, которую `allocator_base` может выделить объект типа.
 
@@ -331,7 +333,7 @@ typedef Type& reference;
 typedef std::size_t size_type;
 ```
 
-## <a name="allocator_basevalue_type"></a><a name="value_type"></a>allocator_base:: value_type
+## <a name="allocator_basevalue_type"></a><a name="value_type"></a> allocator_base:: value_type
 
 Тип, управляемый распределителем.
 
@@ -339,6 +341,6 @@ typedef std::size_t size_type;
 typedef Type value_type;
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [\<allocators>](allocators-header.md)

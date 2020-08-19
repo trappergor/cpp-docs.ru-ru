@@ -40,6 +40,6 @@ class allocator_suballoc;
 
 **Пространство имен:** stdext
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [\<allocators>](allocators-header.md)

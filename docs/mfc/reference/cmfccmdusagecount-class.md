@@ -228,7 +228,7 @@ static BOOL __stdcall SetOptions(
 
 В отладочных сборках этот метод создает ошибку утверждения, если параметр *нминусажеперцентаже* больше или равен 100.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Иерархическая диаграмма](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)<br/>

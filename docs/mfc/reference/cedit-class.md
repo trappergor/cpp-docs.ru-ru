@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: 1cf195401f74261d3e67d5e8e945d1278ff2f90b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0e15472ddaad214d575a7479680454ae6b4d3178
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212505"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561626"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -115,7 +115,7 @@ class CEdit : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CEdit:: CEdit](#cedit)|Конструирует `CEdit` объект элемента управления.|
 
@@ -175,7 +175,7 @@ class CEdit : public CWnd
 
 Построение может быть одношаговым процессом в классе, производном от `CEdit` . Напишите конструктор для производного класса и вызовите `Create` его в конструкторе.
 
-`CEdit`наследует значительные функции от `CWnd` . Чтобы задать и извлечь текст из `CEdit` объекта, используйте функции- `CWnd` члены [SetWindowText](cwnd-class.md#setwindowtext) и [жетвиндовтекст](cwnd-class.md#getwindowtext), которые задают или получают все содержимое элемента управления "поле ввода", даже если это многострочный элемент управления. Текстовые строки в многострочном элементе управления разделяются последовательностями символов "\r\n". Кроме того, если элемент управления "поле ввода" является многострочным, можно получить и задать часть текста элемента управления, вызвав `CEdit` функции-члены GetText, [сетсел](#setsel), [жетсел](#getsel)и [реплацесел](#replacesel). [GetLine](#getline)
+`CEdit` наследует значительные функции от `CWnd` . Чтобы задать и извлечь текст из `CEdit` объекта, используйте функции- `CWnd` члены [SetWindowText](cwnd-class.md#setwindowtext) и [жетвиндовтекст](cwnd-class.md#getwindowtext), которые задают или получают все содержимое элемента управления "поле ввода", даже если это многострочный элемент управления. Текстовые строки в многострочном элементе управления разделяются последовательностями символов "\r\n". Кроме того, если элемент управления "поле ввода" является многострочным, можно получить и задать часть текста элемента управления, вызвав `CEdit` функции-члены GetText, [сетсел](#setsel), [жетсел](#getsel)и [реплацесел](#replacesel). [GetLine](#getline)
 
 Если требуется работать с сообщениями уведомлений Windows, отправленными элементом управления "поле ввода" в родительский элемент (обычно это класс, производный от `CDialog` ), добавьте запись схемы сообщения и функцию-член обработчика сообщений в родительский класс для каждого сообщения.
 
@@ -231,7 +231,7 @@ class CEdit : public CWnd
 
 **Заголовок:** afxwin.h
 
-## <a name="ceditcanundo"></a><a name="canundo"></a>CEdit:: Канундо
+## <a name="ceditcanundo"></a><a name="canundo"></a> CEdit:: Канундо
 
 Вызовите эту функцию, чтобы определить, можно ли отменить последнюю операцию изменения.
 
@@ -251,7 +251,7 @@ BOOL CanUndo() const;
 
   См. пример для [CEdit:: Undo](#undo).
 
-## <a name="ceditcedit"></a><a name="cedit"></a>CEdit:: CEdit
+## <a name="ceditcedit"></a><a name="cedit"></a> CEdit:: CEdit
 
 Формирует объект `CEdit`.
 
@@ -267,7 +267,7 @@ CEdit();
 
 [!code-cpp[NVC_MFC_CEdit#1](../../mfc/reference/codesnippet/cpp/cedit-class_1.cpp)]
 
-## <a name="ceditcharfrompos"></a><a name="charfrompos"></a>CEdit:: Чарфромпос
+## <a name="ceditcharfrompos"></a><a name="charfrompos"></a> CEdit:: Чарфромпос
 
 Вызовите эту функцию, чтобы получить начинающуюся с нуля строку и индексы символов для символа, ближайшего к заданной точке этого `CEdit` элемента управления
 
@@ -277,7 +277,7 @@ int CharFromPos(CPoint pt) const;
 
 ### <a name="parameters"></a>Параметры
 
-*лутор*<br/>
+*пт*<br/>
 Координаты точки в клиентской области этого `CEdit` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -295,7 +295,7 @@ int CharFromPos(CPoint pt) const;
 
 [!code-cpp[NVC_MFC_CEdit#3](../../mfc/reference/codesnippet/cpp/cedit-class_2.cpp)]
 
-## <a name="ceditclear"></a><a name="clear"></a>CEdit:: Clear
+## <a name="ceditclear"></a><a name="clear"></a> CEdit:: Clear
 
 Вызовите эту функцию, чтобы удалить (Очистить) текущее выделение (если таковое имеется) в элементе управления "поле ввода".
 
@@ -315,7 +315,7 @@ void Clear();
 
 [!code-cpp[NVC_MFC_CEdit#4](../../mfc/reference/codesnippet/cpp/cedit-class_3.cpp)]
 
-## <a name="ceditcopy"></a><a name="copy"></a>CEdit:: Copy
+## <a name="ceditcopy"></a><a name="copy"></a> CEdit:: Copy
 
 Вызовите эту функцию, чтобы копирование текущий выбор (если таковой имеется) в элементе управления "поле ввода" к буферу обмена в формате CF_TEXT.
 
@@ -331,7 +331,7 @@ void Copy();
 
 [!code-cpp[NVC_MFC_CEdit#5](../../mfc/reference/codesnippet/cpp/cedit-class_4.cpp)]
 
-## <a name="ceditcreate"></a><a name="create"></a>CEdit:: Create
+## <a name="ceditcreate"></a><a name="create"></a> CEdit:: Create
 
 Создает элемент управления Windows Edit и прикрепляет его к `CEdit` объекту.
 
@@ -385,7 +385,7 @@ virtual BOOL Create(
 
 [!code-cpp[NVC_MFC_CEdit#2](../../mfc/reference/codesnippet/cpp/cedit-class_5.cpp)]
 
-## <a name="ceditcut"></a><a name="cut"></a>CEdit:: Cut
+## <a name="ceditcut"></a><a name="cut"></a> CEdit:: Cut
 
 Вызывайте эту функцию для удаления (вырезания) текущего выделения (если таковые имеются) в элементе управления "поле ввода" и копирования удаленного текста в буфер обмена в CF_TEXT формате.
 
@@ -405,7 +405,7 @@ void Cut();
 
 [!code-cpp[NVC_MFC_CEdit#6](../../mfc/reference/codesnippet/cpp/cedit-class_6.cpp)]
 
-## <a name="ceditemptyundobuffer"></a><a name="emptyundobuffer"></a>CEdit:: Емптюндобуффер
+## <a name="ceditemptyundobuffer"></a><a name="emptyundobuffer"></a> CEdit:: Емптюндобуффер
 
 Вызывайте эту функцию для сброса (очистки) флага отмены элемента управления "поле ввода".
 
@@ -425,7 +425,7 @@ void EmptyUndoBuffer();
 
 [!code-cpp[NVC_MFC_CEdit#7](../../mfc/reference/codesnippet/cpp/cedit-class_7.cpp)]
 
-## <a name="ceditfmtlines"></a><a name="fmtlines"></a>CEdit:: Фмтлинес
+## <a name="ceditfmtlines"></a><a name="fmtlines"></a> CEdit:: Фмтлинес
 
 Вызывайте эту функцию, чтобы задать включение или отключение символов разрыва строки в многострочном элементе управления Edit.
 
@@ -448,7 +448,7 @@ BOOL FmtLines(BOOL bAddEOL);
 
 Windows будет отвечать, только если `CEdit` объект является элементом управления редактирования с несколькими строками.
 
-`FmtLines`влияет только на буфер, возвращаемый методом [getHandler](#gethandle) , и на текст, возвращаемый [WM_GETTEXT](/windows/win32/winmsg/wm-gettext). Он не влияет на отображение текста в элементе управления "поле ввода".
+`FmtLines` влияет только на буфер, возвращаемый методом [getHandler](#gethandle) , и на текст, возвращаемый [WM_GETTEXT](/windows/win32/winmsg/wm-gettext). Он не влияет на отображение текста в элементе управления "поле ввода".
 
 Дополнительные сведения см. в разделе [EM_FMTLINES](/windows/win32/Controls/em-fmtlines) в Windows SDK.
 
@@ -456,7 +456,7 @@ Windows будет отвечать, только если `CEdit` объект 
 
 [!code-cpp[NVC_MFC_CEdit#8](../../mfc/reference/codesnippet/cpp/cedit-class_8.cpp)]
 
-## <a name="ceditgetcuebanner"></a><a name="getcuebanner"></a>CEdit:: Жеткуебаннер
+## <a name="ceditgetcuebanner"></a><a name="getcuebanner"></a> CEdit:: Жеткуебаннер
 
 Извлекает текст, отображаемый в виде подсказки или подсказки, в элементе управления "поле ввода", если элемент управления пуст.
 
@@ -486,7 +486,7 @@ CString GetCueBanner() const;
 
 Этот метод отправляет [EM_GETCUEBANNER](/windows/win32/Controls/em-getcuebanner) сообщение, описанное в Windows SDK. Дополнительные сведения см. в описании макроса [Edit_GetCueBannerText](/windows/win32/api/commctrl/nf-commctrl-edit_getcuebannertext) .
 
-## <a name="ceditgetfirstvisibleline"></a><a name="getfirstvisibleline"></a>CEdit:: Жетфирствисиблелине
+## <a name="ceditgetfirstvisibleline"></a><a name="getfirstvisibleline"></a> CEdit:: Жетфирствисиблелине
 
 Вызывайте эту функцию для определения самой верхней видимой строки в элементе управления "поле ввода".
 
@@ -506,7 +506,7 @@ int GetFirstVisibleLine() const;
 
 [!code-cpp[NVC_MFC_CEdit#9](../../mfc/reference/codesnippet/cpp/cedit-class_9.cpp)]
 
-## <a name="ceditgethandle"></a><a name="gethandle"></a>CEdit:: getHandler
+## <a name="ceditgethandle"></a><a name="gethandle"></a> CEdit:: getHandler
 
 Вызывайте эту функцию для получения маркера памяти, выделенной в данный момент для многострочного элемента управления "поле ввода".
 
@@ -522,12 +522,12 @@ HLOCAL GetHandle() const;
 
 Этот обработчик является локальным обработчиком памяти и может использоваться любой **локальной** функцией памяти Windows, которая принимает в качестве параметра обработчик локальной памяти.
 
-`GetHandle`обрабатывается только многострочными элементами управления редактирования.
+`GetHandle` обрабатывается только многострочными элементами управления редактирования.
 
 Вызов `GetHandle` для многострочного элемента управления "поле ввода" в диалоговом окне только в том случае, если диалоговое окно было создано с установленным флагом стиля DS_LOCALEDIT. Если стиль DS_LOCALEDIT не задан, вы по-прежнему получаете Ненулевое возвращаемое значение, но вы не сможете использовать возвращаемое значение.
 
 > [!NOTE]
-> `GetHandle`не будет работать с Windows 95/98. При вызове `GetHandle` в Windows 95/98 будет возвращено значение null. `GetHandle`будет работать, как описано в Windows NT, версии 3,51 и более поздних версиях.
+> `GetHandle` не будет работать с Windows 95/98. При вызове `GetHandle` в Windows 95/98 будет возвращено значение null. `GetHandle` будет работать, как описано в Windows NT, версии 3,51 и более поздних версиях.
 
 Дополнительные сведения см. в разделе [EM_GETHANDLE](/windows/win32/Controls/em-gethandle) в Windows SDK.
 
@@ -535,7 +535,7 @@ HLOCAL GetHandle() const;
 
 [!code-cpp[NVC_MFC_CEdit#10](../../mfc/reference/codesnippet/cpp/cedit-class_10.cpp)]
 
-## <a name="ceditgethighlight"></a><a name="gethighlight"></a>CEdit:: выделять
+## <a name="ceditgethighlight"></a><a name="gethighlight"></a> CEdit:: выделять
 
 Возвращает индексы первого и последнего символов в диапазоне текста, выделенном в текущем элементе управления "поле ввода".
 
@@ -547,10 +547,11 @@ BOOL GetHighlight(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*пичстарт*|заполняет Отсчитываемый от нуля индекс первого символа в выделенном фрагменте текста.|
-|*пиченд*|заполняет Отсчитываемый от нуля индекс последнего символа в выделенном фрагменте текста.|
+*пичстарт*\
+заполняет Отсчитываемый от нуля индекс первого символа в выделенном фрагменте текста.
+
+*пиченд*\
+заполняет Отсчитываемый от нуля индекс последнего символа в выделенном фрагменте текста.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -560,7 +561,7 @@ BOOL GetHighlight(
 
 Этот метод отправляет [EM_GETHILITE](/windows/win32/Controls/em-gethilite) сообщение, описанное в Windows SDK. `SetHighlight`И `GetHighlight` в настоящее время включены только для сборок Юникода.
 
-## <a name="ceditgetlimittext"></a><a name="getlimittext"></a>CEdit:: Жетлимиттекст
+## <a name="ceditgetlimittext"></a><a name="getlimittext"></a> CEdit:: Жетлимиттекст
 
 Вызовите эту функцию члена, чтобы получить ограничение текста для этого `CEdit` объекта.
 
@@ -585,7 +586,7 @@ UINT GetLimitText() const;
 
 [!code-cpp[NVC_MFC_CEdit#11](../../mfc/reference/codesnippet/cpp/cedit-class_11.cpp)]
 
-## <a name="ceditgetline"></a><a name="getline"></a>CEdit:: Inline
+## <a name="ceditgetline"></a><a name="getline"></a> CEdit:: Inline
 
 Вызывайте эту функцию для получения строки текста из элемента управления "поле ввода" и помещает ее в *лпсзбуффер*.
 
@@ -609,7 +610,7 @@ int GetLine(
 Указывает на буфер, который получает копию строки. В первом слове буфера должно быть указано максимальное число Тчарс, которые могут быть скопированы в буфер.
 
 *нмаксленгс*<br/>
-Указывает максимальное число символов TCHAR, которые могут быть скопированы в буфер. `GetLine`помещает это значение в первое слово *лпсзбуффер* перед выполнением вызова в Windows.
+Указывает максимальное число символов TCHAR, которые могут быть скопированы в буфер. `GetLine` помещает это значение в первое слово *лпсзбуффер* перед выполнением вызова в Windows.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -625,7 +626,7 @@ int GetLine(
 
   См. пример для [CEdit:: жетлинекаунт](#getlinecount).
 
-## <a name="ceditgetlinecount"></a><a name="getlinecount"></a>CEdit:: Жетлинекаунт
+## <a name="ceditgetlinecount"></a><a name="getlinecount"></a> CEdit:: Жетлинекаунт
 
 Вызовите эту функцию, чтобы получить количество строк в элементе управления "поле ввода" с несколькими строками.
 
@@ -639,7 +640,7 @@ int GetLineCount() const;
 
 ### <a name="remarks"></a>Remarks
 
-`GetLineCount`обрабатывается только многострочными элементами управления редактирования.
+`GetLineCount` обрабатывается только многострочными элементами управления редактирования.
 
 Дополнительные сведения см. в разделе [EM_GETLINECOUNT](/windows/win32/Controls/em-getlinecount) в Windows SDK.
 
@@ -647,7 +648,7 @@ int GetLineCount() const;
 
 [!code-cpp[NVC_MFC_CEdit#12](../../mfc/reference/codesnippet/cpp/cedit-class_12.cpp)]
 
-## <a name="ceditgetmargins"></a><a name="getmargins"></a>Поля CEdit:: Margin
+## <a name="ceditgetmargins"></a><a name="getmargins"></a> Поля CEdit:: Margin
 
 Вызовите эту функцию члена, чтобы получить левое и правое поля элемента управления "поле ввода".
 
@@ -672,7 +673,7 @@ DWORD GetMargins() const;
 
   См. пример для [CEditView:: жетедитктрл](ceditview-class.md#geteditctrl).
 
-## <a name="ceditgetmodify"></a><a name="getmodify"></a>CEdit:: Modify
+## <a name="ceditgetmodify"></a><a name="getmodify"></a> CEdit:: Modify
 
 Вызовите эту функцию, чтобы определить, было ли изменено содержимое элемента управления "поле ввода".
 
@@ -694,7 +695,7 @@ Windows поддерживает внутренний флаг, указываю
 
 [!code-cpp[NVC_MFC_CEdit#13](../../mfc/reference/codesnippet/cpp/cedit-class_13.cpp)]
 
-## <a name="ceditgetpasswordchar"></a><a name="getpasswordchar"></a>CEdit:: Жетпассвордчар
+## <a name="ceditgetpasswordchar"></a><a name="getpasswordchar"></a> CEdit:: Жетпассвордчар
 
 Вызовите эту функцию, чтобы получить символ пароля, отображаемый в элементе управления "поле ввода", когда пользователь вводит текст.
 
@@ -716,7 +717,7 @@ TCHAR GetPasswordChar() const;
 
 [!code-cpp[NVC_MFC_CEdit#14](../../mfc/reference/codesnippet/cpp/cedit-class_14.cpp)]
 
-## <a name="ceditgetrect"></a><a name="getrect"></a>CEdit:: коrect
+## <a name="ceditgetrect"></a><a name="getrect"></a> CEdit:: коrect
 
 Вызовите эту функцию, чтобы получить прямоугольник форматирования элемента управления "поле ввода".
 
@@ -741,7 +742,7 @@ void GetRect(LPRECT lpRect) const;
 
   См. пример для [CEdit:: лимиттекст](#limittext).
 
-## <a name="ceditgetsel"></a><a name="getsel"></a>CEdit:: Жетсел
+## <a name="ceditgetsel"></a><a name="getsel"></a> CEdit:: Жетсел
 
 Вызывайте эту функцию, чтобы получить начальные и конечные позиции символов текущего выделения (если таковые имеются) в элементе управления "поле ввода", используя либо возвращаемое значение, либо параметры.
 
@@ -773,7 +774,7 @@ void GetSel(
 
 [!code-cpp[NVC_MFC_CEdit#15](../../mfc/reference/codesnippet/cpp/cedit-class_15.cpp)]
 
-## <a name="cedithideballoontip"></a><a name="hideballoontip"></a>CEdit:: Хидебаллунтип
+## <a name="cedithideballoontip"></a><a name="hideballoontip"></a> CEdit:: Хидебаллунтип
 
 Скрывает все всплывающие подсказки, связанные с текущим элементом управления "поле ввода".
 
@@ -789,7 +790,7 @@ BOOL HideBalloonTip();
 
 Эта функция отправляет [EM_HIDEBALLOONTIP](/windows/win32/Controls/em-hideballoontip) сообщение, описанное в Windows SDK.
 
-## <a name="ceditlimittext"></a><a name="limittext"></a>CEdit:: Лимиттекст
+## <a name="ceditlimittext"></a><a name="limittext"></a> CEdit:: Лимиттекст
 
 Вызывайте эту функцию, чтобы ограничить длину текста, который пользователь может ввести в элемент управления "поле ввода".
 
@@ -815,7 +816,7 @@ void LimitText(int nChars = 0);
 
 [!code-cpp[NVC_MFC_CEdit#17](../../mfc/reference/codesnippet/cpp/cedit-class_16.cpp)]
 
-## <a name="ceditlinefromchar"></a><a name="linefromchar"></a>CEdit:: Линефромчар
+## <a name="ceditlinefromchar"></a><a name="linefromchar"></a> CEdit:: Линефромчар
 
 Вызовите эту функцию, чтобы получить номер строки, содержащей указанный индекс символа.
 
@@ -844,7 +845,7 @@ int LineFromChar(int nIndex = -1) const;
 
 [!code-cpp[NVC_MFC_CEdit#18](../../mfc/reference/codesnippet/cpp/cedit-class_17.cpp)]
 
-## <a name="ceditlineindex"></a><a name="lineindex"></a>CEdit:: Линеиндекс
+## <a name="ceditlineindex"></a><a name="lineindex"></a> CEdit:: Линеиндекс
 
 Вызовите эту функцию, чтобы получить индекс символа строки в элементе управления "поле ввода" с несколькими строками.
 
@@ -873,7 +874,7 @@ int LineIndex(int nLine = -1) const;
 
 [!code-cpp[NVC_MFC_CEdit#19](../../mfc/reference/codesnippet/cpp/cedit-class_18.cpp)]
 
-## <a name="ceditlinelength"></a><a name="linelength"></a>CEdit:: Линеленгс
+## <a name="ceditlinelength"></a><a name="linelength"></a> CEdit:: Линеленгс
 
 Получает длину строки в элементе управления "поле ввода".
 
@@ -906,7 +907,7 @@ int LineLength(int nLine = -1) const;
 
   См. пример для [CEdit:: линеиндекс](#lineindex).
 
-## <a name="ceditlinescroll"></a><a name="linescroll"></a>CEdit:: Линескролл
+## <a name="ceditlinescroll"></a><a name="linescroll"></a> CEdit:: Линескролл
 
 Вызывайте эту функцию для прокрутки текста элемента управления "поле ввода" с несколькими строками.
 
@@ -930,7 +931,7 @@ void LineScroll(
 
 Элемент управления "поле ввода" не прокручивается вертикально за последней строкой текста в элементе управления "поле ввода". Если текущая строка плюс число строк, заданное параметром *нлинес* , превышает общее число строк в элементе управления "поле ввода", значение корректируется таким образом, что последняя строка элемента управления "поле ввода" прокручивается до верхней границы окна "Правка-элемент управления".
 
-`LineScroll`можно использовать для прокрутки по горизонтали за последним символом любой строки.
+`LineScroll` можно использовать для прокрутки по горизонтали за последним символом любой строки.
 
 Дополнительные сведения см. в разделе [EM_LINESCROLL](/windows/win32/Controls/em-linescroll) в Windows SDK.
 
@@ -938,7 +939,7 @@ void LineScroll(
 
   См. пример для [CEdit:: жетфирствисиблелине](#getfirstvisibleline).
 
-## <a name="ceditpaste"></a><a name="paste"></a>CEdit::P вставить
+## <a name="ceditpaste"></a><a name="paste"></a> CEdit::P вставить
 
 Вызовите эту функцию, чтобы вставить данные из буфера обмена в `CEdit` точку вставки.
 
@@ -956,7 +957,7 @@ void Paste();
 
 [!code-cpp[NVC_MFC_CEdit#20](../../mfc/reference/codesnippet/cpp/cedit-class_19.cpp)]
 
-## <a name="ceditposfromchar"></a><a name="posfromchar"></a>CEdit::P Осфромчар
+## <a name="ceditposfromchar"></a><a name="posfromchar"></a> CEdit::P Осфромчар
 
 Вызывайте эту функцию для получения позиции (верхнего левого угла) заданного символа в этом `CEdit` объекте.
 
@@ -986,7 +987,7 @@ CPoint PosFromChar(UINT nChar) const;
 
   См. пример для [CEdit:: линефромчар](#linefromchar).
 
-## <a name="ceditreplacesel"></a><a name="replacesel"></a>CEdit:: Реплацесел
+## <a name="ceditreplacesel"></a><a name="replacesel"></a> CEdit:: Реплацесел
 
 Вызовите эту функцию, чтобы заменить текущий выбор в элементе управления "поле ввода" текстом, заданным параметром *лпсзневтекст*.
 
@@ -1014,7 +1015,7 @@ void ReplaceSel(LPCTSTR lpszNewText, BOOL bCanUndo = FALSE);
 
   См. пример для [CEdit:: линеиндекс](#lineindex).
 
-## <a name="ceditsetcuebanner"></a><a name="setcuebanner"></a>CEdit:: Сеткуебаннер
+## <a name="ceditsetcuebanner"></a><a name="setcuebanner"></a> CEdit:: Сеткуебаннер
 
 Задает текст, отображаемый в качестве подсказки или подсказки, в элементе управления "поле ввода", если элемент управления пуст.
 
@@ -1052,7 +1053,7 @@ BOOL SetCueBanner(
 
 [!code-cpp[NVC_MFC_CEdit_s1#2](../../mfc/reference/codesnippet/cpp/cedit-class_20.cpp)]
 
-## <a name="ceditsethandle"></a><a name="sethandle"></a>CEdit:: Сесандле
+## <a name="ceditsethandle"></a><a name="sethandle"></a> CEdit:: Сесандле
 
 Вызовите эту функцию, чтобы задать в качестве маркера локальную память, которая будет использоваться многострочным элементом управления Edit.
 
@@ -1073,12 +1074,12 @@ void SetHandle(HLOCAL hBuffer);
 
 Прежде чем приложение установит новый обработчик памяти, оно должно использовать функцию-член [getHandler](#gethandle) для получения маркера в текущий буфер памяти и освободить эту память с помощью `LocalFree` функции Windows.
 
-`SetHandle`Очищает буфер отмены (функция-член [канундо](#canundo) возвращает 0), а внутренний флаг изменения (функция- [член, а](#getmodify) затем возвращает 0). Перерисовывается окно Правка — управление.
+`SetHandle` Очищает буфер отмены (функция-член [канундо](#canundo) возвращает 0), а внутренний флаг изменения (функция- [член, а](#getmodify) затем возвращает 0). Перерисовывается окно Правка — управление.
 
 Эту функцию-член можно использовать в многострочном элементе управления "поле ввода" в диалоговом окне, только если вы создали диалоговое окно с установленным флагом стиля DS_LOCALEDIT.
 
 > [!NOTE]
-> `GetHandle`не будет работать с Windows 95/98. При вызове `GetHandle` в Windows 95/98 будет возвращено значение null. `GetHandle`будет работать, как описано в Windows NT, версии 3,51 и более поздних версиях.
+> `GetHandle` не будет работать с Windows 95/98. При вызове `GetHandle` в Windows 95/98 будет возвращено значение null. `GetHandle` будет работать, как описано в Windows NT, версии 3,51 и более поздних версиях.
 
 Дополнительные сведения см. в разделе [EM_SETHANDLE](/windows/win32/Controls/em-sethandle), [локалаллок](/windows/win32/api/winbase/nf-winbase-localalloc)и [функции LocalFree](/windows/win32/api/winbase/nf-winbase-localfree) в Windows SDK.
 
@@ -1086,7 +1087,7 @@ void SetHandle(HLOCAL hBuffer);
 
 [!code-cpp[NVC_MFC_CEdit#22](../../mfc/reference/codesnippet/cpp/cedit-class_21.cpp)]
 
-## <a name="ceditsethighlight"></a><a name="sethighlight"></a>CEdit:: Сесигхлигхт
+## <a name="ceditsethighlight"></a><a name="sethighlight"></a> CEdit:: Сесигхлигхт
 
 Выделяет диапазон текста, отображаемый в текущем элементе управления "поле ввода".
 
@@ -1098,16 +1099,17 @@ void SetHighlight(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*ичстарт*|окне Отсчитываемый от нуля индекс первого символа в выделенном фрагменте текста.|
-|*иченд*|окне Отсчитываемый от нуля индекс последнего символа в выделенном фрагменте текста.|
+*ичстарт*\
+окне Отсчитываемый от нуля индекс первого символа в выделенном фрагменте текста.
+
+*иченд*\
+окне Отсчитываемый от нуля индекс последнего символа в выделенном фрагменте текста.
 
 ### <a name="remarks"></a>Remarks
 
 Этот метод отправляет [EM_SETHILITE](/windows/win32/Controls/em-sethilite) сообщение, описанное в Windows SDK.  Этот метод отправляет [EM_SETHILITE](/windows/win32/Controls/em-sethilite) сообщение, описанное в Windows SDK. `SetHighlight`И, и `GetHighlight` включены только для сборок Юникода.
 
-## <a name="ceditsetlimittext"></a><a name="setlimittext"></a>CEdit:: Сетлимиттекст
+## <a name="ceditsetlimittext"></a><a name="setlimittext"></a> CEdit:: Сетлимиттекст
 
 Вызовите эту функцию члена, чтобы задать предельный размер текста для этого `CEdit` объекта.
 
@@ -1134,7 +1136,7 @@ void SetLimitText(UINT nMax);
 
   См. пример для [CEditView:: жетедитктрл](ceditview-class.md#geteditctrl).
 
-## <a name="ceditsetmargins"></a><a name="setmargins"></a>CEdit:: Сетмаргинс
+## <a name="ceditsetmargins"></a><a name="setmargins"></a> CEdit:: Сетмаргинс
 
 Вызовите этот метод, чтобы задать левое и правое поля элемента управления "поле ввода".
 
@@ -1163,7 +1165,7 @@ void SetMargins(
 
   См. пример для [CEditView:: жетедитктрл](ceditview-class.md#geteditctrl).
 
-## <a name="ceditsetmodify"></a><a name="setmodify"></a>CEdit:: Сетмодифи
+## <a name="ceditsetmodify"></a><a name="setmodify"></a> CEdit:: Сетмодифи
 
 Вызовите эту функцию, чтобы установить или очистить измененный флаг для элемента управления "поле ввода".
 
@@ -1186,7 +1188,7 @@ void SetModify(BOOL bModified = TRUE);
 
   См. пример для [CEdit:: Modify](#getmodify).
 
-## <a name="ceditsetpasswordchar"></a><a name="setpasswordchar"></a>CEdit:: Сетпассвордчар
+## <a name="ceditsetpasswordchar"></a><a name="setpasswordchar"></a> CEdit:: Сетпассвордчар
 
 Вызывайте эту функцию, чтобы задать или удалить символ пароля, отображаемый в элементе управления "поле ввода", когда пользователь вводит текст.
 
@@ -1215,7 +1217,7 @@ void SetPasswordChar(TCHAR ch);
 
 [!code-cpp[NVC_MFC_CEdit#16](../../mfc/reference/codesnippet/cpp/cedit-class_22.cpp)]
 
-## <a name="ceditsetreadonly"></a><a name="setreadonly"></a>CEdit:: SetReadOnly
+## <a name="ceditsetreadonly"></a><a name="setreadonly"></a> CEdit:: SetReadOnly
 
 Вызывает эту функцию, чтобы установить состояние "только для чтения" элемента управления "поле ввода".
 
@@ -1242,7 +1244,7 @@ BOOL SetReadOnly(BOOL bReadOnly = TRUE);
 
 [!code-cpp[NVC_MFC_CEdit#23](../../mfc/reference/codesnippet/cpp/cedit-class_23.cpp)]
 
-## <a name="ceditsetrect"></a><a name="setrect"></a>CEdit:: SetRect
+## <a name="ceditsetrect"></a><a name="setrect"></a> CEdit:: SetRect
 
 Вызовите эту функцию, чтобы задать размеры прямоугольника, используя указанные координаты.
 
@@ -1271,7 +1273,7 @@ void SetRect(LPCRECT lpRect);
 
 [!code-cpp[NVC_MFC_CEdit#24](../../mfc/reference/codesnippet/cpp/cedit-class_24.cpp)]
 
-## <a name="ceditsetrectnp"></a><a name="setrectnp"></a>CEdit:: Сетректнп
+## <a name="ceditsetrectnp"></a><a name="setrectnp"></a> CEdit:: Сетректнп
 
 Вызовите эту функцию, чтобы задать прямоугольник форматирования для многострочного элемента управления Edit.
 
@@ -1288,7 +1290,7 @@ void SetRectNP(LPCRECT lpRect);
 
 Прямоугольник форматирования — это ограничивающий прямоугольник текста, который не зависит от размера окна редактирования элемента управления.
 
-`SetRectNP`функция идентична `SetRect` функции-члену, за исключением того, что окно Edit-Control не перерисовывается.
+`SetRectNP` функция идентична `SetRect` функции-члену, за исключением того, что окно Edit-Control не перерисовывается.
 
 При первом создании элемента управления "поле ввода" прямоугольник форматирования совпадает с клиентской областью окна редактирования. Вызывая `SetRectNP` функцию-член, приложение может сделать прямоугольник форматирования больше или меньше, чем окно Edit-Control.
 
@@ -1302,7 +1304,7 @@ void SetRectNP(LPCRECT lpRect);
 
   См. пример для [CEdit:: SetRect](#setrect).
 
-## <a name="ceditsetsel"></a><a name="setsel"></a>CEdit:: Сетсел
+## <a name="ceditsetsel"></a><a name="setsel"></a> CEdit:: Сетсел
 
 Вызовите эту функцию, чтобы выбрать диапазон символов в элементе управления "изменение".
 
@@ -1339,7 +1341,7 @@ void SetSel(
 
   См. пример для [CEdit:: жетсел](#getsel).
 
-## <a name="ceditsettabstops"></a><a name="settabstops"></a>CEdit:: Сеттабстопс
+## <a name="ceditsettabstops"></a><a name="settabstops"></a> CEdit:: Сеттабстопс
 
 Вызовите эту функцию, чтобы задать позиции табуляции в элементе управления "поле ввода" с несколькими строками.
 
@@ -1375,7 +1377,7 @@ BOOL SetTabStops(
 
 Эта функция-член обрабатывается только многострочными элементами управления Edit.
 
-`SetTabStops`не перерисовывает окно редактирования автоматически. Если изменить позиции табуляции для текста, уже нарисованного в элементе управления "поле ввода", вызовите [CWnd:: инвалидатерект](cwnd-class.md#invalidaterect) , чтобы перерисовать окно редактирования.
+`SetTabStops` не перерисовывает окно редактирования автоматически. Если изменить позиции табуляции для текста, уже нарисованного в элементе управления "поле ввода", вызовите [CWnd:: инвалидатерект](cwnd-class.md#invalidaterect) , чтобы перерисовать окно редактирования.
 
 Дополнительные сведения см. в разделе [EM_SETTABSTOPS](/windows/win32/Controls/em-settabstops) и [жетдиалогбасеунитс](/windows/win32/api/winuser/nf-winuser-getdialogbaseunits) в Windows SDK.
 
@@ -1383,7 +1385,7 @@ BOOL SetTabStops(
 
   См. пример для [CEditView:: сеттабстопс](ceditview-class.md#settabstops).
 
-## <a name="ceditshowballoontip"></a><a name="showballoontip"></a>CEdit:: Шовбаллунтип
+## <a name="ceditshowballoontip"></a><a name="showballoontip"></a> CEdit:: Шовбаллунтип
 
 Отображает всплывающую подсказку, связанную с текущим элементом управления "поле ввода".
 
@@ -1398,12 +1400,17 @@ BOOL ShowBalloonTip(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*педитбаллунтип*|окне Указатель на структуру [едитбаллунтип](/windows/win32/api/commctrl/ns-commctrl-editballoontip) , описывающую всплывающую подсказку.|
-|*лпсзтитле*|окне Указатель на строку в Юникоде, содержащую заголовок всплывающей подсказки.|
-|*lpszText*|окне Указатель на строку в Юникоде, содержащую текст всплывающей подсказки.|
-|*ттиикон*|окне Значение типа **int** , указывающее тип значка, связываемого с подсказкой. Значение по умолчанию — TTI_NONE. Дополнительные сведения см. в описании `ttiIcon` члена структуры [едитбаллунтип](/windows/win32/api/commctrl/ns-commctrl-editballoontip) .|
+*педитбаллунтип*\
+окне Указатель на структуру [едитбаллунтип](/windows/win32/api/commctrl/ns-commctrl-editballoontip) , описывающую всплывающую подсказку.
+
+*лпсзтитле*\
+окне Указатель на строку в Юникоде, содержащую заголовок всплывающей подсказки.
+
+*лпсзтекст*\
+окне Указатель на строку в Юникоде, содержащую текст всплывающей подсказки.
+
+*ттиикон*\
+окне Значение типа **int** , указывающее тип значка, связываемого с подсказкой. Значение по умолчанию — TTI_NONE. Дополнительные сведения см. в описании `ttiIcon` члена структуры [едитбаллунтип](/windows/win32/api/commctrl/ns-commctrl-editballoontip) .
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1425,7 +1432,7 @@ BOOL ShowBalloonTip(
 
 [!code-cpp[NVC_MFC_CEdit_s1#3](../../mfc/reference/codesnippet/cpp/cedit-class_26.cpp)]
 
-## <a name="ceditundo"></a><a name="undo"></a>CEdit:: Undo
+## <a name="ceditundo"></a><a name="undo"></a> CEdit:: Undo
 
 Вызовите эту функцию, чтобы отменить последнюю операцию элемента управления Edit-Control.
 
@@ -1447,7 +1454,7 @@ BOOL Undo();
 
 [!code-cpp[NVC_MFC_CEdit#25](../../mfc/reference/codesnippet/cpp/cedit-class_27.cpp)]
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Пример CALCDRIV в MFC](../../overview/visual-cpp-samples.md)<br/>
 [Пример CMNCTRL2 для MFC](../../overview/visual-cpp-samples.md)<br/>

@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: 4e7eba94084a96c833136e4c92de481fdc435c7e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 79bcb973046c418f0bea148084da239075414790
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87183114"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561678"
 ---
 # <a name="ccombobox-class"></a>Класс CComboBox
 
@@ -129,7 +129,7 @@ class CComboBox : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CComboBox:: CComboBox](#ccombobox)|Формирует объект `CComboBox`.|
 
@@ -238,7 +238,7 @@ class CComboBox : public CWnd
 
 - ON_CBN_KILLFOCUS поле со списком теряет фокус ввода.
 
-- ON_CBN_SELCHANGE выбор в списке поля со списком будет изменен в результате щелчка в списке или изменения выделенного фрагмента с помощью клавиш со стрелками. При обработке этого сообщения текст в элементе управления "поле со списком" может быть получен только с помощью `GetLBText` или другой аналогичной функции. `GetWindowText`нельзя использовать.
+- ON_CBN_SELCHANGE выбор в списке поля со списком будет изменен в результате щелчка в списке или изменения выделенного фрагмента с помощью клавиш со стрелками. При обработке этого сообщения текст в элементе управления "поле со списком" может быть получен только с помощью `GetLBText` или другой аналогичной функции. `GetWindowText` нельзя использовать.
 
 - ON_CBN_SETFOCUS поле со списком получает фокус ввода.
 
@@ -262,7 +262,7 @@ class CComboBox : public CWnd
 
 **Заголовок:** afxwin.h
 
-## <a name="ccomboboxaddstring"></a><a name="addstring"></a>CComboBox:: AddString
+## <a name="ccomboboxaddstring"></a><a name="addstring"></a> CComboBox:: AddString
 
 Добавляет строку в список поля со списком.
 
@@ -292,7 +292,7 @@ int AddString(LPCTSTR lpszString);
 
 [!code-cpp[NVC_MFC_CComboBox#3](../../mfc/reference/codesnippet/cpp/ccombobox-class_1.cpp)]
 
-## <a name="ccomboboxccombobox"></a><a name="ccombobox"></a>CComboBox:: CComboBox
+## <a name="ccomboboxccombobox"></a><a name="ccombobox"></a> CComboBox:: CComboBox
 
 Формирует объект `CComboBox`.
 
@@ -304,7 +304,7 @@ CComboBox();
 
 [!code-cpp[NVC_MFC_CComboBox#1](../../mfc/reference/codesnippet/cpp/ccombobox-class_2.cpp)]
 
-## <a name="ccomboboxclear"></a><a name="clear"></a>CComboBox:: Clear
+## <a name="ccomboboxclear"></a><a name="clear"></a> CComboBox:: Clear
 
 Удаляет (очищает) текущий выделенный фрагмент (если таковой имеется) в элементе управления Edit поля со списком.
 
@@ -320,7 +320,7 @@ void Clear();
 
 [!code-cpp[NVC_MFC_CComboBox#4](../../mfc/reference/codesnippet/cpp/ccombobox-class_3.cpp)]
 
-## <a name="ccomboboxcompareitem"></a><a name="compareitem"></a>CComboBox:: Компареитем
+## <a name="ccomboboxcompareitem"></a><a name="compareitem"></a> CComboBox:: Компареитем
 
 Вызывается платформой для определения относительного положения нового элемента в списке в поле со списком отсортированного владельца.
 
@@ -353,7 +353,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 
 [!code-cpp[NVC_MFC_CComboBox#5](../../mfc/reference/codesnippet/cpp/ccombobox-class_4.cpp)]
 
-## <a name="ccomboboxcopy"></a><a name="copy"></a>CComboBox:: Copy
+## <a name="ccomboboxcopy"></a><a name="copy"></a> CComboBox:: Copy
 
 Копирует текущее выделение (при наличии) в поле ввода поля со списком в буфер обмена в формате CF_TEXT.
 
@@ -365,7 +365,7 @@ void Copy();
 
 [!code-cpp[NVC_MFC_CComboBox#6](../../mfc/reference/codesnippet/cpp/ccombobox-class_5.cpp)]
 
-## <a name="ccomboboxcreate"></a><a name="create"></a>CComboBox:: Create
+## <a name="ccomboboxcreate"></a><a name="create"></a> CComboBox:: Create
 
 Создает поле со списком и прикрепляет его к `CComboBox` объекту.
 
@@ -423,7 +423,7 @@ virtual BOOL Create(
 
 [!code-cpp[NVC_MFC_CComboBox#2](../../mfc/reference/codesnippet/cpp/ccombobox-class_6.cpp)]
 
-## <a name="ccomboboxcut"></a><a name="cut"></a>CComboBox:: Cut
+## <a name="ccomboboxcut"></a><a name="cut"></a> CComboBox:: Cut
 
 Удаляет (вырезает) текущее выделение (если оно есть) в элементе управления "поле со списком" и копирует удаленный текст в буфер обмена в CF_TEXT формате.
 
@@ -439,7 +439,7 @@ void Cut();
 
 [!code-cpp[NVC_MFC_CComboBox#7](../../mfc/reference/codesnippet/cpp/ccombobox-class_7.cpp)]
 
-## <a name="ccomboboxdeleteitem"></a><a name="deleteitem"></a>CComboBox::D Елетеитем
+## <a name="ccomboboxdeleteitem"></a><a name="deleteitem"></a> CComboBox::D Елетеитем
 
 Вызывается платформой, когда пользователь удаляет элемент из объекта рисования владельцем `CComboBox` или удаляет поле со списком.
 
@@ -460,7 +460,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 
 [!code-cpp[NVC_MFC_CComboBox#8](../../mfc/reference/codesnippet/cpp/ccombobox-class_8.cpp)]
 
-## <a name="ccomboboxdeletestring"></a><a name="deletestring"></a>CComboBox::D Елетестринг
+## <a name="ccomboboxdeletestring"></a><a name="deletestring"></a> CComboBox::D Елетестринг
 
 Удаляет элемент в позиции *ниндекс* из поля со списком.
 
@@ -485,7 +485,7 @@ int DeleteString(UINT nIndex);
 
 [!code-cpp[NVC_MFC_CComboBox#9](../../mfc/reference/codesnippet/cpp/ccombobox-class_9.cpp)]
 
-## <a name="ccomboboxdir"></a><a name="dir"></a>CComboBox::D IR
+## <a name="ccomboboxdir"></a><a name="dir"></a> CComboBox::D IR
 
 Добавляет список имен файлов или дисков в список поля со списком.
 
@@ -531,7 +531,7 @@ int Dir(
 
 [!code-cpp[NVC_MFC_CComboBox#10](../../mfc/reference/codesnippet/cpp/ccombobox-class_10.cpp)]
 
-## <a name="ccomboboxdrawitem"></a><a name="drawitem"></a>CComboBox::D Равитем
+## <a name="ccomboboxdrawitem"></a><a name="drawitem"></a> CComboBox::D Равитем
 
 Вызывается структурой при изменении визуального аспекта поля со списком, рисуемого владельцем.
 
@@ -554,7 +554,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 
 [!code-cpp[NVC_MFC_CComboBox#11](../../mfc/reference/codesnippet/cpp/ccombobox-class_11.cpp)]
 
-## <a name="ccomboboxfindstring"></a><a name="findstring"></a>CComboBox:: FindString
+## <a name="ccomboboxfindstring"></a><a name="findstring"></a> CComboBox:: FindString
 
 Находит, но не выбирает первую строку, содержащую указанный префикс, в списке поля со списком.
 
@@ -584,7 +584,7 @@ int FindString(
 
 [!code-cpp[NVC_MFC_CComboBox#12](../../mfc/reference/codesnippet/cpp/ccombobox-class_12.cpp)]
 
-## <a name="ccomboboxfindstringexact"></a><a name="findstringexact"></a>CComboBox:: Финдстринжексакт
+## <a name="ccomboboxfindstringexact"></a><a name="findstringexact"></a> CComboBox:: Финдстринжексакт
 
 Вызовите `FindStringExact` функцию-член, чтобы найти первую строку списка (в поле со списком), совпадающую со строкой, указанной в *лпсзфинд*.
 
@@ -614,7 +614,7 @@ int FindStringExact(
 
 [!code-cpp[NVC_MFC_CComboBox#13](../../mfc/reference/codesnippet/cpp/ccombobox-class_13.cpp)]
 
-## <a name="ccomboboxgetcomboboxinfo"></a><a name="getcomboboxinfo"></a>CComboBox:: Жеткомбобоксинфо
+## <a name="ccomboboxgetcomboboxinfo"></a><a name="getcomboboxinfo"></a> CComboBox:: Жеткомбобоксинфо
 
 Получает сведения для `CComboBox` объекта.
 
@@ -635,7 +635,7 @@ BOOL GetComboBoxInfo(PCOMBOBOXINFO pcbi) const;
 
 Эта функция члена эмулирует функциональность [CB_GETCOMBOBOXINFO](/windows/win32/Controls/cb-getcomboboxinfo) сообщения, как описано в Windows SDK.
 
-## <a name="ccomboboxgetcount"></a><a name="getcount"></a>CComboBox:: NOCOUNT
+## <a name="ccomboboxgetcount"></a><a name="getcount"></a> CComboBox:: NOCOUNT
 
 Вызовите эту функцию-член, чтобы получить количество элементов в поле со списком в списке.
 
@@ -651,7 +651,7 @@ int GetCount() const;
 
 [!code-cpp[NVC_MFC_CComboBox#14](../../mfc/reference/codesnippet/cpp/ccombobox-class_14.cpp)]
 
-## <a name="ccomboboxgetcuebanner"></a><a name="getcuebanner"></a>CComboBox:: Жеткуебаннер
+## <a name="ccomboboxgetcuebanner"></a><a name="getcuebanner"></a> CComboBox:: Жеткуебаннер
 
 Возвращает текст подсказки, отображаемый для элемента управления "поле со списком".
 
@@ -665,10 +665,11 @@ BOOL GetCueBanner(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*lpszText*|заполняет Указатель на буфер, который получает текст объявления подсказки.|
-|*cchText*|окне Размер буфера, на который указывает параметр *лпсзтекст* .|
+*лпсзтекст*\
+заполняет Указатель на буфер, который получает текст объявления подсказки.
+
+*кчтекст*\
+окне Размер буфера, на который указывает параметр *лпсзтекст* .
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -684,7 +685,7 @@ BOOL GetCueBanner(
 
 Этот метод отправляет [CB_GETCUEBANNER](/windows/win32/Controls/cb-getcuebanner) сообщение, описанное в Windows SDK.
 
-## <a name="ccomboboxgetcursel"></a><a name="getcursel"></a>CComboBox:: рекурсивно
+## <a name="ccomboboxgetcursel"></a><a name="getcursel"></a> CComboBox:: рекурсивно
 
 Вызовите эту функцию-член, чтобы определить, какой элемент в поле со списком выбран.
 
@@ -698,13 +699,13 @@ int GetCurSel() const;
 
 ### <a name="remarks"></a>Remarks
 
-`GetCurSel`Возвращает индекс в списке.
+`GetCurSel` Возвращает индекс в списке.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFC_CComboBox#15](../../mfc/reference/codesnippet/cpp/ccombobox-class_15.cpp)]
 
-## <a name="ccomboboxgetdroppedcontrolrect"></a><a name="getdroppedcontrolrect"></a>CComboBox:: Жетдроппедконтролрект
+## <a name="ccomboboxgetdroppedcontrolrect"></a><a name="getdroppedcontrolrect"></a> CComboBox:: Жетдроппедконтролрект
 
 Вызовите `GetDroppedControlRect` функцию-член, чтобы получить экранные координаты видимого (раскрывающегося списка) поля со списком в раскрывающемся списке.
 
@@ -721,7 +722,7 @@ void GetDroppedControlRect(LPRECT lprect) const;
 
 [!code-cpp[NVC_MFC_CComboBox#16](../../mfc/reference/codesnippet/cpp/ccombobox-class_16.cpp)]
 
-## <a name="ccomboboxgetdroppedstate"></a><a name="getdroppedstate"></a>CComboBox:: Жетдроппедстате
+## <a name="ccomboboxgetdroppedstate"></a><a name="getdroppedstate"></a> CComboBox:: Жетдроппедстате
 
 Вызовите `GetDroppedState` функцию-член, чтобы определить, является ли список раскрывающегося списка поля со списком видимым (выводится вниз).
 
@@ -737,7 +738,7 @@ BOOL GetDroppedState() const;
 
 [!code-cpp[NVC_MFC_CComboBox#17](../../mfc/reference/codesnippet/cpp/ccombobox-class_17.cpp)]
 
-## <a name="ccomboboxgetdroppedwidth"></a><a name="getdroppedwidth"></a>CComboBox:: Жетдроппедвидс
+## <a name="ccomboboxgetdroppedwidth"></a><a name="getdroppedwidth"></a> CComboBox:: Жетдроппедвидс
 
 Вызовите эту функцию, чтобы получить минимальную допустимую ширину (в пикселях) списка поля со списком.
 
@@ -759,7 +760,7 @@ int GetDroppedWidth() const;
 
   См. пример для [сетдроппедвидс](#setdroppedwidth).
 
-## <a name="ccomboboxgeteditsel"></a><a name="geteditsel"></a>CComboBox:: Жетедитсел
+## <a name="ccomboboxgeteditsel"></a><a name="geteditsel"></a> CComboBox:: Жетедитсел
 
 Возвращает начальные и конечные позиции символов текущего выделения в элементе управления "поле ввода" поля со списком.
 
@@ -775,7 +776,7 @@ DWORD GetEditSel() const;
 
 [!code-cpp[NVC_MFC_CComboBox#18](../../mfc/reference/codesnippet/cpp/ccombobox-class_18.cpp)]
 
-## <a name="ccomboboxgetextendedui"></a><a name="getextendedui"></a>CComboBox:: Жетекстендедуи
+## <a name="ccomboboxgetextendedui"></a><a name="getextendedui"></a> CComboBox:: Жетекстендедуи
 
 Вызовите `GetExtendedUI` функцию-член, чтобы определить, имеет ли поле со списком пользовательский интерфейс по умолчанию или расширенный пользовательский интерфейс.
 
@@ -801,7 +802,7 @@ BOOL GetExtendedUI() const;
 
 [!code-cpp[NVC_MFC_CComboBox#19](../../mfc/reference/codesnippet/cpp/ccombobox-class_19.cpp)]
 
-## <a name="ccomboboxgethorizontalextent"></a><a name="gethorizontalextent"></a>CComboBox:: Жесоризонталекстент
+## <a name="ccomboboxgethorizontalextent"></a><a name="gethorizontalextent"></a> CComboBox:: Жесоризонталекстент
 
 Извлекает из поля со списком ширину в пикселях, на которую можно прокручивать часть списка поля со списком по горизонтали.
 
@@ -821,7 +822,7 @@ UINT GetHorizontalExtent() const;
 
 [!code-cpp[NVC_MFC_CComboBox#20](../../mfc/reference/codesnippet/cpp/ccombobox-class_20.cpp)]
 
-## <a name="ccomboboxgetitemdata"></a><a name="getitemdata"></a>CComboBox:: Жетитемдата
+## <a name="ccomboboxgetitemdata"></a><a name="getitemdata"></a> CComboBox:: Жетитемдата
 
 Извлекает указанное приложением 32-разрядное значение, связанное с указанным элементом поля со списком.
 
@@ -846,7 +847,7 @@ DWORD_PTR GetItemData(int nIndex) const;
 
 [!code-cpp[NVC_MFC_CComboBox#21](../../mfc/reference/codesnippet/cpp/ccombobox-class_21.cpp)]
 
-## <a name="ccomboboxgetitemdataptr"></a><a name="getitemdataptr"></a>CComboBox:: Жетитемдатаптр
+## <a name="ccomboboxgetitemdataptr"></a><a name="getitemdataptr"></a> CComboBox:: Жетитемдатаптр
 
 Извлекает указанное приложением 32-разрядное значение, связанное с указанным элементом поля со списком, в качестве указателя ( **`void`** <strong>\*</strong> ).
 
@@ -867,7 +868,7 @@ void* GetItemDataPtr(int nIndex) const;
 
 [!code-cpp[NVC_MFC_CComboBox#22](../../mfc/reference/codesnippet/cpp/ccombobox-class_22.cpp)]
 
-## <a name="ccomboboxgetitemheight"></a><a name="getitemheight"></a>CComboBox:: GetItemHeight
+## <a name="ccomboboxgetitemheight"></a><a name="getitemheight"></a> CComboBox:: GetItemHeight
 
 Вызовите `GetItemHeight` функцию-член, чтобы получить высоту элементов списка в поле со списком.
 
@@ -888,7 +889,7 @@ int GetItemHeight(int nIndex) const;
 
 [!code-cpp[NVC_MFC_CComboBox#23](../../mfc/reference/codesnippet/cpp/ccombobox-class_23.cpp)]
 
-## <a name="ccomboboxgetlbtext"></a><a name="getlbtext"></a>CComboBox:: Жетлбтекст
+## <a name="ccomboboxgetlbtext"></a><a name="getlbtext"></a> CComboBox:: Жетлбтекст
 
 Возвращает строку из списка в поле со списком.
 
@@ -925,7 +926,7 @@ void GetLBText(
 
 [!code-cpp[NVC_MFC_CComboBox#24](../../mfc/reference/codesnippet/cpp/ccombobox-class_24.cpp)]
 
-## <a name="ccomboboxgetlbtextlen"></a><a name="getlbtextlen"></a>CComboBox:: Жетлбтекстлен
+## <a name="ccomboboxgetlbtextlen"></a><a name="getlbtextlen"></a> CComboBox:: Жетлбтекстлен
 
 Возвращает длину строки в поле со списком.
 
@@ -946,7 +947,7 @@ int GetLBTextLen(int nIndex) const;
 
   См. пример для [CComboBox:: жетлбтекст](#getlbtext).
 
-## <a name="ccomboboxgetlocale"></a><a name="getlocale"></a>CComboBox:: onlocal
+## <a name="ccomboboxgetlocale"></a><a name="getlocale"></a> CComboBox:: onlocal
 
 Извлекает языковой стандарт, используемый полем со списком.
 
@@ -966,7 +967,7 @@ LCID GetLocale() const;
 
   См. пример для [CComboBox:: setlocale](#setlocale).
 
-## <a name="ccomboboxgetminvisible"></a><a name="getminvisible"></a>CComboBox:: Жетминвисибле
+## <a name="ccomboboxgetminvisible"></a><a name="getminvisible"></a> CComboBox:: Жетминвисибле
 
 Возвращает минимальное число видимых элементов в раскрывающемся списке текущего элемента управления "поле со списком".
 
@@ -982,7 +983,7 @@ int GetMinVisible() const;
 
 Этот метод отправляет [CB_GETMINVISIBLE](/windows/win32/Controls/cb-setminvisible) сообщение, описанное в Windows SDK.
 
-## <a name="ccomboboxgettopindex"></a><a name="gettopindex"></a>CComboBox:: Жеттопиндекс
+## <a name="ccomboboxgettopindex"></a><a name="gettopindex"></a> CComboBox:: Жеттопиндекс
 
 Возвращает отсчитываемый от нуля индекс первого видимого элемента в списке поля со списком.
 
@@ -1002,7 +1003,7 @@ int GetTopIndex() const;
 
 [!code-cpp[NVC_MFC_CComboBox#25](../../mfc/reference/codesnippet/cpp/ccombobox-class_25.cpp)]
 
-## <a name="ccomboboxinitstorage"></a><a name="initstorage"></a>CComboBox:: Инитстораже
+## <a name="ccomboboxinitstorage"></a><a name="initstorage"></a> CComboBox:: Инитстораже
 
 Выделяет память для хранения элементов списка в части поля со списком.
 
@@ -1036,7 +1037,7 @@ int InitStorage(
 
 [!code-cpp[NVC_MFC_CComboBox#26](../../mfc/reference/codesnippet/cpp/ccombobox-class_26.cpp)]
 
-## <a name="ccomboboxinsertstring"></a><a name="insertstring"></a>CComboBox:: Инсертстринг
+## <a name="ccomboboxinsertstring"></a><a name="insertstring"></a> CComboBox:: Инсертстринг
 
 Вставляет строку в список поля со списком.
 
@@ -1069,7 +1070,7 @@ int InsertString(
 
 [!code-cpp[NVC_MFC_CComboBox#27](../../mfc/reference/codesnippet/cpp/ccombobox-class_27.cpp)]
 
-## <a name="ccomboboxlimittext"></a><a name="limittext"></a>CComboBox:: Лимиттекст
+## <a name="ccomboboxlimittext"></a><a name="limittext"></a> CComboBox:: Лимиттекст
 
 Ограничивает длину текста в байтах, который пользователь может ввести в поле ввода поля со списком.
 
@@ -1090,13 +1091,13 @@ BOOL LimitText(int nMaxChars);
 
 Если поле со списком не имеет [CBS_AUTOHSCROLL](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)стиля, Установка предельного размера текста, превышающего размер элемента управления поля ввода, не будет действовать.
 
-`LimitText`ограничивает только текст, который может вводить пользователь. Он не влияет на любой текст, уже находящиеся в элементе управления "поле ввода" при отправке сообщения, и на длину текста, скопированного в элемент управления "поле ввода", при выборе строки в списке.
+`LimitText` ограничивает только текст, который может вводить пользователь. Он не влияет на любой текст, уже находящиеся в элементе управления "поле ввода" при отправке сообщения, и на длину текста, скопированного в элемент управления "поле ввода", при выборе строки в списке.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFC_CComboBox#28](../../mfc/reference/codesnippet/cpp/ccombobox-class_28.cpp)]
 
-## <a name="ccomboboxmeasureitem"></a><a name="measureitem"></a>CComboBox:: Меасуреитем
+## <a name="ccomboboxmeasureitem"></a><a name="measureitem"></a> CComboBox:: Меасуреитем
 
 Вызывается структурой при создании поля со списком с стилем рисования, рисуемым владельцем.
 
@@ -1121,7 +1122,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 
 [!code-cpp[NVC_MFC_CComboBox#29](../../mfc/reference/codesnippet/cpp/ccombobox-class_29.cpp)]
 
-## <a name="ccomboboxpaste"></a><a name="paste"></a>CComboBox::P вставить
+## <a name="ccomboboxpaste"></a><a name="paste"></a> CComboBox::P вставить
 
 Вставляет данные из буфера обмена в поле ввода поля со списком в текущей позиции курсора.
 
@@ -1137,7 +1138,7 @@ void Paste();
 
 [!code-cpp[NVC_MFC_CComboBox#30](../../mfc/reference/codesnippet/cpp/ccombobox-class_30.cpp)]
 
-## <a name="ccomboboxresetcontent"></a><a name="resetcontent"></a>CComboBox:: Ресетконтент
+## <a name="ccomboboxresetcontent"></a><a name="resetcontent"></a> CComboBox:: Ресетконтент
 
 Удаляет все элементы из списка и элементы управления поля со списком.
 
@@ -1149,7 +1150,7 @@ void ResetContent();
 
 [!code-cpp[NVC_MFC_CComboBox#31](../../mfc/reference/codesnippet/cpp/ccombobox-class_31.cpp)]
 
-## <a name="ccomboboxselectstring"></a><a name="selectstring"></a>CComboBox:: Селектстринг
+## <a name="ccomboboxselectstring"></a><a name="selectstring"></a> CComboBox:: Селектстринг
 
 Выполняет поиск строки в списке поля со списком и, если строка найдена, выбирает строку в списке и копирует ее в элемент управления "поле ввода".
 
@@ -1181,7 +1182,7 @@ int SelectString(
 
 [!code-cpp[NVC_MFC_CComboBox#32](../../mfc/reference/codesnippet/cpp/ccombobox-class_32.cpp)]
 
-## <a name="ccomboboxsetcuebanner"></a><a name="setcuebanner"></a>CComboBox:: Сеткуебаннер
+## <a name="ccomboboxsetcuebanner"></a><a name="setcuebanner"></a> CComboBox:: Сеткуебаннер
 
 Задает текст подсказки, отображаемый для элемента управления "поле со списком".
 
@@ -1191,9 +1192,8 @@ BOOL SetCueBanner(LPCTSTR lpszText);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*lpszText*|окне Указатель на буфер, заканчивающийся нулем, который содержит текст подсказки.|
+*лпсзтекст*\
+окне Указатель на буфер, заканчивающийся нулем, который содержит текст подсказки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1217,7 +1217,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
 
 [!code-cpp[NVC_MFC_CComboBox_s1#2](../../mfc/reference/codesnippet/cpp/ccombobox-class_34.cpp)]
 
-## <a name="ccomboboxsetcursel"></a><a name="setcursel"></a>CComboBox:: Сеткурсел
+## <a name="ccomboboxsetcursel"></a><a name="setcursel"></a> CComboBox:: Сеткурсел
 
 Выбирает строку из списка в поле со списком.
 
@@ -1242,7 +1242,7 @@ int SetCurSel(int nSelect);
 
 [!code-cpp[NVC_MFC_CComboBox#33](../../mfc/reference/codesnippet/cpp/ccombobox-class_35.cpp)]
 
-## <a name="ccomboboxsetdroppedwidth"></a><a name="setdroppedwidth"></a>CComboBox:: Сетдроппедвидс
+## <a name="ccomboboxsetdroppedwidth"></a><a name="setdroppedwidth"></a> CComboBox:: Сетдроппедвидс
 
 Вызовите эту функцию, чтобы задать минимальную допустимую ширину (в пикселях) списка в поле со списком.
 
@@ -1269,7 +1269,7 @@ int SetDroppedWidth(UINT nWidth);
 
 [!code-cpp[NVC_MFC_CComboBox#34](../../mfc/reference/codesnippet/cpp/ccombobox-class_36.cpp)]
 
-## <a name="ccomboboxseteditsel"></a><a name="seteditsel"></a>CComboBox:: Сетедитсел
+## <a name="ccomboboxseteditsel"></a><a name="seteditsel"></a> CComboBox:: Сетедитсел
 
 Выбирает символы в элементе управления "поле ввода" поля со списком.
 
@@ -1302,7 +1302,7 @@ BOOL SetEditSel(
 
   См. пример для [CComboBox:: жетедитсел](#geteditsel).
 
-## <a name="ccomboboxsetextendedui"></a><a name="setextendedui"></a>CComboBox:: Сетекстендедуи
+## <a name="ccomboboxsetextendedui"></a><a name="setextendedui"></a> CComboBox:: Сетекстендедуи
 
 Вызовите `SetExtendedUI` функцию-член, чтобы выбрать пользовательский интерфейс по умолчанию или расширенный пользовательский интерфейс для поля со списком, имеющего [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) или [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) стиле.
 
@@ -1333,7 +1333,7 @@ CB_OKAY, если операция выполнена успешно, или CB_
 
   См. пример для [CComboBox:: жетекстендедуи](#getextendedui).
 
-## <a name="ccomboboxsethorizontalextent"></a><a name="sethorizontalextent"></a>CComboBox:: Сесоризонталекстент
+## <a name="ccomboboxsethorizontalextent"></a><a name="sethorizontalextent"></a> CComboBox:: Сесоризонталекстент
 
 Задает ширину (в пикселях), на которую можно прокручивать часть списка поля со списком по горизонтали.
 
@@ -1354,7 +1354,7 @@ void SetHorizontalExtent(UINT nExtent);
 
 [!code-cpp[NVC_MFC_CComboBox#35](../../mfc/reference/codesnippet/cpp/ccombobox-class_37.cpp)]
 
-## <a name="ccomboboxsetitemdata"></a><a name="setitemdata"></a>CComboBox:: Сетитемдата
+## <a name="ccomboboxsetitemdata"></a><a name="setitemdata"></a> CComboBox:: Сетитемдата
 
 Задает 32-разрядное значение, связанное с указанным элементом в поле со списком.
 
@@ -1384,7 +1384,7 @@ CB_ERR при возникновении ошибки.
 
 [!code-cpp[NVC_MFC_CComboBox#36](../../mfc/reference/codesnippet/cpp/ccombobox-class_38.cpp)]
 
-## <a name="ccomboboxsetitemdataptr"></a><a name="setitemdataptr"></a>CComboBox:: Сетитемдатаптр
+## <a name="ccomboboxsetitemdataptr"></a><a name="setitemdataptr"></a> CComboBox:: Сетитемдатаптр
 
 Задает 32-разрядное значение, связанное с указанным элементом в поле со списком, как заданный указатель ( **`void`** <strong>\*</strong> ).
 
@@ -1414,7 +1414,7 @@ CB_ERR при возникновении ошибки.
 
 [!code-cpp[NVC_MFC_CComboBox#37](../../mfc/reference/codesnippet/cpp/ccombobox-class_39.cpp)]
 
-## <a name="ccomboboxsetitemheight"></a><a name="setitemheight"></a>CComboBox:: Сетитемхеигхт
+## <a name="ccomboboxsetitemheight"></a><a name="setitemheight"></a> CComboBox:: Сетитемхеигхт
 
 Вызовите `SetItemHeight` функцию-член, чтобы задать высоту элементов списка в поле со списком или высоту части поля ввода (или статического элемента управления) в поле со списком.
 
@@ -1448,7 +1448,7 @@ CB_ERR, если индекс или высота являются недопу�
 
 [!code-cpp[NVC_MFC_CComboBox#38](../../mfc/reference/codesnippet/cpp/ccombobox-class_40.cpp)]
 
-## <a name="ccomboboxsetlocale"></a><a name="setlocale"></a>CComboBox:: SetLocale
+## <a name="ccomboboxsetlocale"></a><a name="setlocale"></a> CComboBox:: SetLocale
 
 Задает код локали для этого поля со списком.
 
@@ -1473,7 +1473,7 @@ LCID SetLocale(LCID nNewLocale);
 
 [!code-cpp[NVC_MFC_CComboBox#39](../../mfc/reference/codesnippet/cpp/ccombobox-class_41.cpp)]
 
-## <a name="ccomboboxsetminvisibleitems"></a><a name="setminvisibleitems"></a>CComboBox:: Сетминвисиблеитемс
+## <a name="ccomboboxsetminvisibleitems"></a><a name="setminvisibleitems"></a> CComboBox:: Сетминвисиблеитемс
 
 Задает минимальное число видимых элементов в раскрывающемся списке текущего элемента управления "поле со списком".
 
@@ -1483,9 +1483,8 @@ BOOL SetMinVisibleItems(int iMinVisible);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*Невидимый*|окне Указывает минимальное число видимых элементов.|
+*Невидимый*\
+окне Указывает минимальное число видимых элементов.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1507,7 +1506,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
 
 [!code-cpp[NVC_MFC_CComboBox_s1#2](../../mfc/reference/codesnippet/cpp/ccombobox-class_34.cpp)]
 
-## <a name="ccomboboxsettopindex"></a><a name="settopindex"></a>CComboBox:: Сеттопиндекс
+## <a name="ccomboboxsettopindex"></a><a name="settopindex"></a> CComboBox:: Сеттопиндекс
 
 Гарантирует, что конкретный элемент будет виден в части списка в поле со списком.
 
@@ -1532,7 +1531,7 @@ int SetTopIndex(int nIndex);
 
 [!code-cpp[NVC_MFC_CComboBox#40](../../mfc/reference/codesnippet/cpp/ccombobox-class_42.cpp)]
 
-## <a name="ccomboboxshowdropdown"></a><a name="showdropdown"></a>CComboBox:: Шовдропдовн
+## <a name="ccomboboxshowdropdown"></a><a name="showdropdown"></a> CComboBox:: Шовдропдовн
 
 Показывает или скрывает список полей со списком, имеющих стиль [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) или [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) .
 
@@ -1555,7 +1554,7 @@ void ShowDropDown(BOOL bShowIt = TRUE);
 
   См. пример для [CComboBox:: жетдроппедстате](#getdroppedstate).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Пример CTRLBARS в MFC](../../overview/visual-cpp-samples.md)<br/>
 [CWnd, класс](../../mfc/reference/cwnd-class.md)<br/>

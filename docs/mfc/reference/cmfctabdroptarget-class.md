@@ -259,7 +259,7 @@ BOOL Register(CMFCBaseTabCtrl *pOwner);
 
 Этот метод вызывает [коледроптаржет:: Register](../../mfc/reference/coledroptarget-class.md#register) для регистрации элемента управления для операций перетаскивания.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Иерархическая диаграмма](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)<br/>

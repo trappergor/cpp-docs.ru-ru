@@ -22,16 +22,16 @@ helpviewer_keywords:
 - std::wstring_convert [C++], converted
 - std::wstring_convert [C++], state
 ms.assetid: e34f5b65-d572-4bdc-ac69-20778712e376
-ms.openlocfilehash: f09f12d9100e9faad849de608a9124f457da23df
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 01754ca4239d89a64fdb67a85e82b90c5a24872d
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366369"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560756"
 ---
 # <a name="wstring_convert-class"></a>Класс wstring_convert
 
-Шаблон `wstring_convert` класса выполняет преобразования между широкой строкой и строкой байт.
+Шаблон класса `wstring_convert` выполняет преобразования между широкой строкой и строкой байтов.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -42,7 +42,7 @@ class wstring_convert
 
 ### <a name="parameters"></a>Параметры
 
-*Кодексвт*\
+*Codecvt*\
 Аспект [языкового стандарта](../standard-library/locale-class.md), представляющий объект преобразования.
 
 *Elem*\
@@ -50,9 +50,9 @@ class wstring_convert
 
 ## <a name="remarks"></a>Remarks
 
-Шаблон класса описывает объект, который управляет преобразованиями `std::basic_string<Elem>` между широкими струнами `std::basic_string<char>` объектов `std::string`класса и объектами строки типа (также известный как). Шаблон класса определяет `wide_string` типы `byte_string` и как синонимы для этих двух типов. Преобразование между последовательностями значений `Elem` (хранятся в объекте `wide_string`) и многобайтовыми последовательностями (хранятся в объекте `byte_string`) выполняется объектом класса `Codecvt<Elem, char, std::mbstate_t>`, который соответствует требованиям аспекта стандартного преобразования кода `std::codecvt<Elem, char, std::mbstate_t>`.
+Шаблон класса описывает объект, который управляет преобразованием между строковыми объектами класса `std::basic_string<Elem>` и строкового объекта класса `std::basic_string<char>` (также известного как `std::string` ). Шаблон класса определяет типы `wide_string` и `byte_string` синонимы для этих двух типов. Преобразование между последовательностями значений `Elem` (хранятся в объекте `wide_string`) и многобайтовыми последовательностями (хранятся в объекте `byte_string`) выполняется объектом класса `Codecvt<Elem, char, std::mbstate_t>`, который соответствует требованиям аспекта стандартного преобразования кода `std::codecvt<Elem, char, std::mbstate_t>`.
 
-Объект этого класса шаблон амра:
+Объект этого шаблона класса хранит:
 
 - Однобайтовую строку для отображения при ошибках
 
@@ -86,15 +86,15 @@ class wstring_convert
 |[from_bytes](#from_bytes)|Преобразует строку однобайтовых символов в строку двухбайтовых символов.|
 |[to_bytes](#to_bytes)|Преобразует двухбайтовую строку в однобайтовую.|
 |[converted](#converted)|Возвращает количество успешных преобразований.|
-|[Государства](#state)|Возвращает объект, представляющий состояние преобразования.|
+|[state](#state)|Возвращает объект, представляющий состояние преобразования.|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<locale>
+**Заголовок:**\<locale>
 
 **Пространство имен:** std
 
-## <a name="wstring_convertbyte_string"></a><a name="byte_string"></a>wstring_convert::byte_string
+## <a name="wstring_convertbyte_string"></a><a name="byte_string"></a> wstring_convert:: byte_string
 
 Тип, представляющий однобайтную строку.
 
@@ -106,7 +106,7 @@ typedef std::basic_string<char> byte_string;
 
 Тип является синонимом `std::basic_string<char>`.
 
-## <a name="wstring_convertconverted"></a><a name="converted"></a>wstring_convert::преобразовано
+## <a name="wstring_convertconverted"></a><a name="converted"></a> wstring_convert:: convertd
 
 Возвращает количество успешных преобразований.
 
@@ -122,7 +122,7 @@ size_t converted() const;
 
 Число успешных преобразований хранится в объекте счетчика преобразований.
 
-## <a name="wstring_convertfrom_bytes"></a><a name="from_bytes"></a>wstring_convert::from_bytes
+## <a name="wstring_convertfrom_bytes"></a><a name="from_bytes"></a> wstring_convert:: from_bytes
 
 Преобразует строку однобайтовых символов в строку двухбайтовых символов.
 
@@ -135,13 +135,20 @@ wide_string from_bytes(const char* first, const char* last);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*Byte*|Последовательность одноэлементных байт для преобразования.|
-|*Ptr*|Последовательность символов в стиле С, оканчивающаяся нулем, для преобразования.|
-|*Bstr*|Строка [byte_string](#byte_string) для преобразования.|
-|*Первый*|Первый символ в диапазоне символов для преобразования.|
-|*Последний*|Последний символ в диапазоне символов для преобразования.|
+*Двухбайтовых*\
+Последовательность одноэлементных байт для преобразования.
+
+*указатель*\
+Последовательность символов в стиле С, оканчивающаяся нулем, для преобразования.
+
+*Освобождаемой*\
+Строка [byte_string](#byte_string) для преобразования.
+
+*началь*\
+Первый символ в диапазоне символов для преобразования.
+
+*Последняя*\
+Последний символ в диапазоне символов для преобразования.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -149,11 +156,11 @@ wide_string from_bytes(const char* first, const char* last);
 
 ### <a name="remarks"></a>Remarks
 
-Если объект [состояния преобразования](../standard-library/wstring-convert-class.md) *не* был построен с явным значением, он устанавливается в его значение по умолчанию (начальное состояние преобразования) до начала преобразования. В противном случае он остается неизменным.
+Если объект [состояния преобразования](../standard-library/wstring-convert-class.md) *не* был создан с явно заданным значением, то перед началом преобразования ему присваивается значение по умолчанию (исходное состояние преобразования). В противном случае он остается неизменным.
 
 Число успешно преобразованных входных элементов сохраняется в объекте счетчика преобразований. При отсутствии ошибок преобразования функция-член возвращает преобразованную двухбайтовую строку. В противном случае, если объект был создан с помощью инициализатора сообщения об ошибке в двухбайтовой строке, функция-член возвращает объект сообщения об ошибке в двухбайтовой строке. В противном случае функция-член создает объект класса [range_error](../standard-library/range-error-class.md).
 
-## <a name="wstring_convertint_type"></a><a name="int_type"></a>wstring_convert::int_type
+## <a name="wstring_convertint_type"></a><a name="int_type"></a> wstring_convert:: int_type
 
 Тип, представляющий целое число.
 
@@ -165,7 +172,7 @@ typedef typename wide_string::traits_type::int_type int_type;
 
 Тип является синонимом `wide_string::traits_type::int_type`.
 
-## <a name="wstring_convertstate"></a><a name="state"></a>wstring_convert::государство
+## <a name="wstring_convertstate"></a><a name="state"></a> wstring_convert:: State
 
 Возвращает объект, представляющий состояние преобразования.
 
@@ -179,7 +186,7 @@ state_type state() const;
 
 ### <a name="remarks"></a>Remarks
 
-## <a name="wstring_convertstate_type"></a><a name="state_type"></a>wstring_convert::state_type
+## <a name="wstring_convertstate_type"></a><a name="state_type"></a> wstring_convert:: state_type
 
 Тип, представляющий состояние преобразования.
 
@@ -191,7 +198,7 @@ typedef typename Codecvt::state_type state_type;
 
 Тип описывает объект, который может представлять состояние преобразования. Тип является синонимом `Codecvt::state_type`.
 
-## <a name="wstring_convertto_bytes"></a><a name="to_bytes"></a>wstring_convert::to_bytes
+## <a name="wstring_convertto_bytes"></a><a name="to_bytes"></a> wstring_convert:: to_bytes
 
 Преобразует двухбайтовую строку в однобайтовую.
 
@@ -204,21 +211,28 @@ byte_string to_bytes(const Elem* first, const Elem* last);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*Char*|Расширенный символ для преобразования.|
-|*Wptr*|Последовательность в стиле C, оканчивающаяся нулем, начинающаяся с `wptr`, для преобразования.|
-|*Встр*|Строка [wide_string](#wide_string) для преобразования.|
-|*Первый*|Первый элемент в диапазоне преобразуемых элементов.|
-|*Последний*|Последний элемент в диапазоне преобразуемых элементов.|
+*Типа*\
+Расширенный символ для преобразования.
+
+*вптр*\
+Последовательность в стиле C, оканчивающаяся нулем, начинающаяся с `wptr`, для преобразования.
+
+*встр*\
+Строка [wide_string](#wide_string) для преобразования.
+
+*началь*\
+Первый элемент в диапазоне преобразуемых элементов.
+
+*Последняя*\
+Последний элемент в диапазоне преобразуемых элементов.
 
 ### <a name="remarks"></a>Remarks
 
-Если объект [состояния преобразования](../standard-library/wstring-convert-class.md) *не* был построен с явным значением, он устанавливается в его значение по умолчанию (начальное состояние преобразования) до начала преобразования. В противном случае он остается неизменным.
+Если объект [состояния преобразования](../standard-library/wstring-convert-class.md) *не* был создан с явно заданным значением, то перед началом преобразования ему присваивается значение по умолчанию (исходное состояние преобразования). В противном случае он остается неизменным.
 
 Число успешно преобразованных входных элементов сохраняется в объекте счетчика преобразований. При отсутствии ошибок преобразования, функция-член возвращает преобразованную однобайтовую строку. В противном случае, если объект был создан с помощью инициализатора сообщения об ошибке в однобайтовой строке, функция-член возвращает объект сообщения об ошибке в однобайтовой строке. В противном случае функция-член создает объект класса [range_error](../standard-library/range-error-class.md).
 
-## <a name="wstring_convertwide_string"></a><a name="wide_string"></a>wstring_convert::wide_string
+## <a name="wstring_convertwide_string"></a><a name="wide_string"></a> wstring_convert:: wide_string
 
 Тип, представляющий двухбайтную строку.
 
@@ -230,7 +244,7 @@ typedef std::basic_string<Elem> wide_string;
 
 Тип является синонимом `std::basic_string<Elem>`.
 
-## <a name="wstring_convertwstring_convert"></a><a name="wstring_convert"></a>wstring_convert::wstring_convert
+## <a name="wstring_convertwstring_convert"></a><a name="wstring_convert"></a> wstring_convert:: wstring_convert
 
 Создает объект типа `wstring_convert`.
 
@@ -242,12 +256,17 @@ wstring_convert(const byte_string& _Berr, const wide_string& Werr = wide_string(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*\*Пквт*|Объект типа `Codecvt` для выполнения преобразования.|
-|*_state*|Объект типа [state_type](#state_type), представляющий состояние преобразования.|
-|*_Berr*|Объект [byte_string](#byte_string) для отображения ошибок.|
-|*Верр*|Объект [wide_string](#wide_string) для отображения ошибок.|
+*\*пквт*\
+Объект типа `Codecvt` для выполнения преобразования.
+
+*_State*\
+Объект типа [state_type](#state_type), представляющий состояние преобразования.
+
+*_Berr*\
+Объект [byte_string](#byte_string) для отображения ошибок.
+
+*верр*\
+Объект [wide_string](#wide_string) для отображения ошибок.
 
 ### <a name="remarks"></a>Remarks
 

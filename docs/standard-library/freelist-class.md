@@ -106,6 +106,6 @@ bool push(void* ptr);
 
 Если `full` функция класса max Возвращает **`false`** , эта функция-член добавляет блок памяти, на который указывает *ptr* , в заголовок списка.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [\<allocators>](../standard-library/allocators-header.md)

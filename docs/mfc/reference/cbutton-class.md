@@ -1105,7 +1105,7 @@ BOOL SetTextMargin(RECT* pmargin);
 
 Эта функция члена эмулирует функциональность BCM_SETTEXTMARGIN сообщения, как описано в разделе [кнопки](/windows/win32/controls/buttons) Windows SDK.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [CWnd, класс](../../mfc/reference/cwnd-class.md)<br/>
 [Иерархическая диаграмма](../../mfc/hierarchy-chart.md)<br/>

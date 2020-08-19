@@ -94,12 +94,12 @@ helpviewer_keywords:
 - std::basic_streambuf [C++], xsgetn
 - std::basic_streambuf [C++], xsputn
 ms.assetid: 136af6c3-13bf-4501-9288-b93da26efac7
-ms.openlocfilehash: 594cec7d4898960cb78284dcbb5ad677027cd947
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6c9a44f56e89baf32ba49241822bc4ba018f0701
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219213"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561834"
 ---
 # <a name="basic_streambuf-class"></a>Класс basic_streambuf
 
@@ -212,7 +212,7 @@ class basic_streambuf;
 |[stossc](#stossc)|Переходит за текущий элемент в потоке.|
 |[sungetc](#sungetc)|Получает символ из потока.|
 |[позиции](#swap)|Меняет местами значения в этом объекте и значения предоставленного параметра объекта `basic_streambuf`.|
-|[nosync](#sync)|Защищенная виртуальная функция, которая пытается синхронизировать управляемые потоки с любыми связанными внешними потоками.|
+|[sync](#sync)|Защищенная виртуальная функция, которая пытается синхронизировать управляемые потоки с любыми связанными внешними потоками.|
 |[uflow](#uflow)|Защищенная виртуальная функция, которая извлекает текущий элемент из входного потока.|
 |[потери значимости](#underflow)|Защищенная виртуальная функция, которая извлекает текущий элемент из входного потока.|
 |[xsgetn](#xsgetn)|Защищенная виртуальная функция, которая извлекает элементы из входного потока.|
@@ -230,7 +230,7 @@ class basic_streambuf;
 
 **Пространство имен:** std
 
-## <a name="basic_streambufbasic_streambuf"></a><a name="basic_streambuf"></a>basic_streambuf:: basic_streambuf
+## <a name="basic_streambufbasic_streambuf"></a><a name="basic_streambuf"></a> basic_streambuf:: basic_streambuf
 
 Создает объект типа `basic_streambuf`.
 
@@ -251,7 +251,7 @@ basic_streambuf(const basic_streambuf& right);
 
 Второй защищенный конструктор копирует указатели и языковой стандарт *справа*.
 
-## <a name="basic_streambufchar_type"></a><a name="char_type"></a>basic_streambuf:: char_type
+## <a name="basic_streambufchar_type"></a><a name="char_type"></a> basic_streambuf:: char_type
 
 Связывает имя типа с параметром шаблона **Elem**.
 
@@ -259,7 +259,7 @@ basic_streambuf(const basic_streambuf& right);
 typedef Elem char_type;
 ```
 
-## <a name="basic_streambufeback"></a><a name="eback"></a>basic_streambuf:: ебакк
+## <a name="basic_streambufeback"></a><a name="eback"></a> basic_streambuf:: ебакк
 
 Защищенная функция, возвращающая указатель на начало входного буфера.
 
@@ -271,7 +271,7 @@ char_type *eback() const;
 
 Указатель на начало входного буфера.
 
-## <a name="basic_streambufegptr"></a><a name="egptr"></a>basic_streambuf:: egptr
+## <a name="basic_streambufegptr"></a><a name="egptr"></a> basic_streambuf:: egptr
 
 Защищенная функция, возвращающая указатель на позицию сразу после конца входного буфера.
 
@@ -283,7 +283,7 @@ char_type *egptr() const;
 
 Указатель на позицию сразу после конца входного буфера.
 
-## <a name="basic_streambufepptr"></a><a name="epptr"></a>basic_streambuf:: епптр
+## <a name="basic_streambufepptr"></a><a name="epptr"></a> basic_streambuf:: епптр
 
 Защищенная функция, возвращающая указатель на позицию сразу после конца выходного буфера.
 
@@ -295,7 +295,7 @@ char_type *epptr() const;
 
 Указатель на позицию сразу после конца выходного буфера.
 
-## <a name="basic_streambufgbump"></a><a name="gbump"></a>basic_streambuf:: гбумп
+## <a name="basic_streambufgbump"></a><a name="gbump"></a> basic_streambuf:: гбумп
 
 Защищенная функция, которая добавляет *Счетчик* к следующему указателю для входного буфера.
 
@@ -308,7 +308,7 @@ void gbump(int count);
 *расчета*\
 Величина, на которую должен переместиться указатель.
 
-## <a name="basic_streambufgetloc"></a><a name="getloc"></a>basic_streambuf:: getloc
+## <a name="basic_streambufgetloc"></a><a name="getloc"></a> basic_streambuf:: getloc
 
 Возвращает языковой стандарт объекта basic_streambuf.
 
@@ -342,7 +342,7 @@ int main( )
 C
 ```
 
-## <a name="basic_streambufgptr"></a><a name="gptr"></a>basic_streambuf:: gptr
+## <a name="basic_streambufgptr"></a><a name="gptr"></a> basic_streambuf:: gptr
 
 Защищенная функция, возвращающая указатель на следующий элемент входного буфера.
 
@@ -354,7 +354,7 @@ char_type *gptr() const;
 
 Указатель на следующий элемент входного буфера.
 
-## <a name="basic_streambufimbue"></a><a name="imbue"></a>basic_streambuf:: imbue
+## <a name="basic_streambufimbue"></a><a name="imbue"></a> basic_streambuf:: imbue
 
 Защищенная виртуальная функция, вызываемая [pubimbue](#pubimbue).
 
@@ -371,7 +371,7 @@ virtual void imbue(const locale& _Loc);
 
 По умолчанию не нужно ничего делать.
 
-## <a name="basic_streambufin_avail"></a><a name="in_avail"></a>basic_streambuf:: in_avail
+## <a name="basic_streambufin_avail"></a><a name="in_avail"></a> basic_streambuf:: in_avail
 
 Возвращает количество элементов, готовых к считыванию из буфера.
 
@@ -405,7 +405,7 @@ int main( )
 }
 ```
 
-## <a name="basic_streambufint_type"></a><a name="int_type"></a>basic_streambuf:: int_type
+## <a name="basic_streambufint_type"></a><a name="int_type"></a> basic_streambuf:: int_type
 
 Связывает имя типа в пределах области basic_streambuf с одним из типов в параметре шаблона.
 
@@ -413,7 +413,7 @@ int main( )
 typedef typename traits_type::int_type int_type;
 ```
 
-## <a name="basic_streambufoff_type"></a><a name="off_type"></a>basic_streambuf:: off_type
+## <a name="basic_streambufoff_type"></a><a name="off_type"></a> basic_streambuf:: off_type
 
 Связывает имя типа в пределах области basic_streambuf с одним из типов в параметре шаблона.
 
@@ -421,7 +421,7 @@ typedef typename traits_type::int_type int_type;
 typedef typename traits_type::off_type off_type;
 ```
 
-## <a name="basic_streambufoperator"></a><a name="op_eq"></a>basic_streambuf:: operator =
+## <a name="basic_streambufoperator"></a><a name="op_eq"></a> basic_streambuf:: operator =
 
 Присваивает значения этому объекту из другого объекта `basic_streambuf`.
 
@@ -438,7 +438,7 @@ basic_streambuf& operator=(const basic_streambuf& right);
 
 Защищенный оператор Member копирует из *правой части* указателей, которые управляют входным буфером и выходным буфером. Он также сохраняет `right.`[getloc()](#getloc) в `locale object`. Он возвращает **`*this`** .
 
-## <a name="basic_streambufoverflow"></a><a name="overflow"></a>basic_streambuf:: overflow
+## <a name="basic_streambufoverflow"></a><a name="overflow"></a> basic_streambuf:: overflow
 
 Защищенная виртуальная функция, которая может вызываться при вставке нового символа в полный буфер.
 
@@ -473,7 +473,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 
 Определение использования разное в разных производных классах. Например, класс `filebuf` записывает свои символы в файл, а класс `strstreambuf` сохраняет их в своем буфере и (если буфер обозначен как динамический) разворачивает этот буфер в ответ на вызов переполнения. Это расширение достигается освобождением старого буфера и его замены на новый буфер большего размера. Указатели настраиваются по необходимости.
 
-## <a name="basic_streambufpbackfail"></a><a name="pbackfail"></a>basic_streambuf: неудачная:p
+## <a name="basic_streambufpbackfail"></a><a name="pbackfail"></a> basic_streambuf: неудачная:p
 
 Защищенная виртуальная функция-член, которая пытается поместить элемент обратно во входной поток, а затем делает его текущим (на него указывает следующий указатель).
 
@@ -500,7 +500,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 - Для буфера потока с общими входным и выходным потоками можно сделать позицию возврата доступной, выписав в какое-либо внешнее место назначения некоторые или все элементы между началом и следующими указателями для выходного буфера.
 
-## <a name="basic_streambufpbase"></a><a name="pbase"></a>basic_streambuf::p Base
+## <a name="basic_streambufpbase"></a><a name="pbase"></a> basic_streambuf::p Base
 
 Защищенная функция, возвращающая указатель на начало выходного буфера.
 
@@ -512,7 +512,7 @@ char_type *pbase() const;
 
 Указатель на начало выходного буфера.
 
-## <a name="basic_streambufpbump"></a><a name="pbump"></a>basic_streambuf::pное выпуклость
+## <a name="basic_streambufpbump"></a><a name="pbump"></a> basic_streambuf::pное выпуклость
 
 Защищенная функция, которая добавляет *Счетчик* к следующему указателю для выходного буфера.
 
@@ -525,7 +525,7 @@ void pbump(int count);
 *расчета*\
 Число символов, на которое следует перенести вперед позицию записи.
 
-## <a name="basic_streambufpos_type"></a><a name="pos_type"></a>basic_streambuf::p os_type
+## <a name="basic_streambufpos_type"></a><a name="pos_type"></a> basic_streambuf::p os_type
 
 Связывает имя типа в пределах области basic_streambuf с одним из типов в параметре шаблона.
 
@@ -533,7 +533,7 @@ void pbump(int count);
 typedef typename traits_type::pos_type pos_type;
 ```
 
-## <a name="basic_streambufpptr"></a><a name="pptr"></a>basic_streambuf::p PTR
+## <a name="basic_streambufpptr"></a><a name="pptr"></a> basic_streambuf::p PTR
 
 Защищенная функция, возвращающая указатель на следующий элемент выходного буфера.
 
@@ -545,7 +545,7 @@ char_type *pptr() const;
 
 Указатель на следующий элемент выходного буфера.
 
-## <a name="basic_streambufpubimbue"></a><a name="pubimbue"></a>basic_streambuf::p убимбуе
+## <a name="basic_streambufpubimbue"></a><a name="pubimbue"></a> basic_streambuf::p убимбуе
 
 Устанавливает языковой стандарт объекта basic_streambuf.
 
@@ -570,7 +570,7 @@ locale pubimbue(const locale& _Loc);
 
 Пример, в котором используется `pubimbue`, см. в разделе [basic_ios::imbue](../standard-library/basic-ios-class.md#imbue).
 
-## <a name="basic_streambufpubseekoff"></a><a name="pubseekoff"></a>basic_streambuf::p убсикофф
+## <a name="basic_streambufpubseekoff"></a><a name="pubseekoff"></a> basic_streambuf::p убсикофф
 
 Вызывает [seekoff](#seekoff) — защищенную виртуальную функцию, которая переопределяется в производном классе.
 
@@ -599,7 +599,7 @@ pos_type pubseekoff(off_type _Off,
 
 Перемещает указатель относительно *_Way*.
 
-## <a name="basic_streambufpubseekpos"></a><a name="pubseekpos"></a>basic_streambuf::p убсикпос
+## <a name="basic_streambufpubseekpos"></a><a name="pubseekpos"></a> basic_streambuf::p убсикпос
 
 Вызывает [seekpos](#seekpos), защищенную виртуальную функцию, переопределенную в производном классе, и сбрасывает текущую позиции указателя.
 
@@ -623,7 +623,7 @@ pos_type pubseekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in | ios
 
 Функция-член возвращает [seekpos](#seekpos)(_ *Sp*, `_Which`).
 
-## <a name="basic_streambufpubsetbuf"></a><a name="pubsetbuf"></a>basic_streambuf::p убсетбуф
+## <a name="basic_streambufpubsetbuf"></a><a name="pubsetbuf"></a> basic_streambuf::p убсетбуф
 
 Вызывает [setbuf](#setbuf) — защищенную виртуальную функцию, которая переопределяется в производном классе.
 
@@ -645,7 +645,7 @@ basic_streambuf<Elem, Tr> *pubsetbuf(
 
 Возвращает [setbuf](#setbuf)( `_Buffer` , `count` ).
 
-## <a name="basic_streambufpubsync"></a><a name="pubsync"></a>basic_streambuf::p убсинк
+## <a name="basic_streambufpubsync"></a><a name="pubsync"></a> basic_streambuf::p убсинк
 
 Вызывает [Sync](#sync), защищенную виртуальную функцию, переопределенную в производном классе, и обновляет внешний поток, связанный с этим буфером.
 
@@ -657,7 +657,7 @@ int pubsync();
 
 Возвращает [синхронизацию](#sync) или-1 в случае сбоя.
 
-## <a name="basic_streambufsbumpc"></a><a name="sbumpc"></a>basic_streambuf:: sbumpc
+## <a name="basic_streambufsbumpc"></a><a name="sbumpc"></a> basic_streambuf:: sbumpc
 
 Считывает и возвращает текущий элемент, перемещая указатель потока.
 
@@ -698,7 +698,7 @@ int main( )
 51
 ```
 
-## <a name="basic_streambufseekoff"></a><a name="seekoff"></a>basic_streambuf:: seekoff
+## <a name="basic_streambufseekoff"></a><a name="seekoff"></a> basic_streambuf:: seekoff
 
 Защищенная виртуальная функция-член, которая пытается изменить текущие положения управляемых потоков.
 
@@ -738,7 +738,7 @@ virtual pos_type seekoff(
 
 Если функция успешно выполняет изменение позиции или позиций в потоке, она возвращает итоговую позицию в потоке или одну из итоговых позиций в потоке. В противном случае она возвращает недопустимую позицию потока. По умолчанию возвращается недопустимая позиция в потоке.
 
-## <a name="basic_streambufseekpos"></a><a name="seekpos"></a>basic_streambuf:: seekpos
+## <a name="basic_streambufseekpos"></a><a name="seekpos"></a> basic_streambuf:: seekpos
 
 Защищенная виртуальная функция-член, которая пытается изменить текущие положения управляемых потоков.
 
@@ -766,7 +766,7 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in 
 
 Если функция успешно выполняет изменение позиции или позиций в потоке, она возвращает итоговую позицию в потоке или одну из итоговых позиций в потоке. В противном случае она возвращает недопустимую позицию в потоке (–1). По умолчанию возвращается недопустимая позиция в потоке.
 
-## <a name="basic_streambufsetbuf"></a><a name="setbuf"></a>basic_streambuf:: setbuf
+## <a name="basic_streambufsetbuf"></a><a name="setbuf"></a> basic_streambuf:: setbuf
 
 Защищенная виртуальная функция-член выполняет операцию, относящуюся непосредственно к каждому производному буферу потока.
 
@@ -792,7 +792,7 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
 
 См. [basic_filebuf](../standard-library/basic-filebuf-class.md). `setbuf` предоставляет область памяти для использования объектом `streambuf`. Способ использования буфера задается в производных классах.
 
-## <a name="basic_streambufsetg"></a><a name="setg"></a>basic_streambuf:: сетг
+## <a name="basic_streambufsetg"></a><a name="setg"></a> basic_streambuf:: сетг
 
 Защищенная функция, которая сохраняет _ *Gbeg* в начальном указателе, `_Gnext` в следующем указателе и `_Gend` в конечном указателе для входного буфера.
 
@@ -813,7 +813,7 @@ void setg(char_type* _Gbeg,
 *_Gend*\
 Указатель на конец буфера.
 
-## <a name="basic_streambufsetp"></a><a name="setp"></a>basic_streambuf:: сетп
+## <a name="basic_streambufsetp"></a><a name="setp"></a> basic_streambuf:: сетп
 
 Защищенная функция, которая хранит *_Pbeg* в начальном указателе и *_Pend* в конечном указателе для выходного буфера.
 
@@ -829,7 +829,7 @@ void setp(char_type* _Pbeg, char_type* _Pend);
 *_Pend*\
 Указатель на конец буфера.
 
-## <a name="basic_streambufsgetc"></a><a name="sgetc"></a>basic_streambuf:: sgetc
+## <a name="basic_streambufsgetc"></a><a name="sgetc"></a> basic_streambuf:: sgetc
 
 Возвращает текущий элемент без изменения положения в потоке.
 
@@ -865,7 +865,7 @@ int main( )
 }
 ```
 
-## <a name="basic_streambufsgetn"></a><a name="sgetn"></a>basic_streambuf:: сжетн
+## <a name="basic_streambufsgetn"></a><a name="sgetn"></a> basic_streambuf:: сжетн
 
 Извлекает значение, чтобы *подсчитать количество* символов из входного буфера и сохранить их в указанном буфере *ptr*.
 
@@ -920,7 +920,7 @@ int main()
 }
 ```
 
-## <a name="basic_streambufshowmanyc"></a><a name="showmanyc"></a>basic_streambuf:: шовманик
+## <a name="basic_streambufshowmanyc"></a><a name="showmanyc"></a> basic_streambuf:: шовманик
 
 Защищенная виртуальная функция-член, возвращающая число символов, которые могут быть извлечены из входного потока, и обеспечивающая отсутствие бесконечного времени ожидания в программе.
 
@@ -932,7 +932,7 @@ virtual streamsize showmanyc();
 
 По умолчанию возвращается ноль.
 
-## <a name="basic_streambufsnextc"></a><a name="snextc"></a>basic_streambuf:: снекстк
+## <a name="basic_streambufsnextc"></a><a name="snextc"></a> basic_streambuf:: снекстк
 
 Считывает текущий элемент и возвращает следующий элемент.
 
@@ -972,7 +972,7 @@ aa
 aa97
 ```
 
-## <a name="basic_streambufsputbackc"></a><a name="sputbackc"></a>basic_streambuf:: sputbackc
+## <a name="basic_streambufsputbackc"></a><a name="sputbackc"></a> basic_streambuf:: sputbackc
 
 Помещает char_type в поток.
 
@@ -1020,7 +1020,7 @@ int main( )
 }
 ```
 
-## <a name="basic_streambufsputc"></a><a name="sputc"></a>basic_streambuf:: sbumpc
+## <a name="basic_streambufsputc"></a><a name="sputc"></a> basic_streambuf:: sbumpc
 
 Помещает символ в поток.
 
@@ -1063,7 +1063,7 @@ a
 a
 ```
 
-## <a name="basic_streambufsputn"></a><a name="sputn"></a>basic_streambuf:: спутн
+## <a name="basic_streambufsputn"></a><a name="sputn"></a> basic_streambuf:: спутн
 
 Помещает строку символов в поток.
 
@@ -1109,7 +1109,7 @@ test
 4
 ```
 
-## <a name="basic_streambufstossc"></a><a name="stossc"></a>basic_streambuf:: стосск
+## <a name="basic_streambufstossc"></a><a name="stossc"></a> basic_streambuf:: стосск
 
 Переходит за текущий элемент в потоке.
 
@@ -1140,7 +1140,7 @@ int main( )
 }
 ```
 
-## <a name="basic_streambufsungetc"></a><a name="sungetc"></a>basic_streambuf:: sungetc
+## <a name="basic_streambufsungetc"></a><a name="sungetc"></a> basic_streambuf:: sungetc
 
 Получает символ из потока.
 
@@ -1190,7 +1190,7 @@ int main( )
 }
 ```
 
-## <a name="basic_streambufswap"></a><a name="swap"></a>basic_streambuf:: swap
+## <a name="basic_streambufswap"></a><a name="swap"></a> basic_streambuf:: swap
 
 Меняет местами значения в этом объекте и значения предоставленного объекта `basic_streambuf`.
 
@@ -1200,15 +1200,14 @@ void swap(basic_streambuf& right);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*Правильно*|Ссылка lvalue на объект `basic_streambuf`, используемый для обмена значений.|
+*Правильно*\
+Ссылка lvalue на объект `basic_streambuf`, используемый для обмена значений.
 
 ### <a name="remarks"></a>Remarks
 
 Защищенная функция элемента обменивается данными *со всеми* указателями, управляющими `input buffer` и `output buffer` . Она также выполняет обмен `right.`[getloc()](#getloc) с объектом `locale`.
 
-## <a name="basic_streambufsync"></a><a name="sync"></a>basic_streambuf:: Sync
+## <a name="basic_streambufsync"></a><a name="sync"></a> basic_streambuf:: Sync
 
 Защищенная виртуальная функция, которая пытается синхронизировать управляемые потоки с любыми связанными внешними потоками.
 
@@ -1224,7 +1223,7 @@ virtual int sync();
 
 `sync` включает запись всех элементов между началом и следующими указателями для выходного буфера. Она не включает возврат каких-либо элементов между следующим и конечным указателями для входного буфера.
 
-## <a name="basic_streambuftraits_type"></a><a name="traits_type"></a>basic_streambuf:: traits_type
+## <a name="basic_streambuftraits_type"></a><a name="traits_type"></a> basic_streambuf:: traits_type
 
 Связывает имя типа с параметром шаблона **Tr**.
 
@@ -1232,7 +1231,7 @@ virtual int sync();
 typedef Tr traits_type;
 ```
 
-## <a name="basic_streambufuflow"></a><a name="uflow"></a>basic_streambuf:: uflow
+## <a name="basic_streambufuflow"></a><a name="uflow"></a> basic_streambuf:: uflow
 
 Защищенная виртуальная функция, которая извлекает текущий элемент из входного потока.
 
@@ -1256,7 +1255,7 @@ virtual int_type uflow();
 
 Если функция не может выполниться успешно, она возвращает **traits_type::**[eof](../standard-library/char-traits-struct.md#eof) или создает исключение. В противном случае она возвращает текущий элемент `ch` во входном потоке, преобразованный, как описано выше, и перемещает следующий указатель для входного буфера. Поведение по умолчанию — вызов [underflow](#underflow), и, если эта функция возвращает **traits_type::eof**, возврат **traits_type::eof**. В противном случае функция возвращает текущий элемент **ch** во входном потоке, преобразованный, как описано выше, и перемещает следующий указатель для входного буфера.
 
-## <a name="basic_streambufunderflow"></a><a name="underflow"></a>basic_streambuf:: потеря значимости
+## <a name="basic_streambufunderflow"></a><a name="underflow"></a> basic_streambuf:: потеря значимости
 
 Защищенная виртуальная функция для извлечения текущего элемента из входного потока.
 
@@ -1286,7 +1285,7 @@ virtual int_type underflow();
 
 В классе `strstreambuf` функция `underflow` настраивает указатель [egptr](#egptr) для доступа к хранилищу, которое было выделено динамически путем вызова `overflow`.
 
-## <a name="basic_streambufxsgetn"></a><a name="xsgetn"></a>basic_streambuf:: кссжетн
+## <a name="basic_streambufxsgetn"></a><a name="xsgetn"></a> basic_streambuf:: кссжетн
 
 Защищенная виртуальная функция, которая извлекает элементы из входного потока.
 
@@ -1314,7 +1313,7 @@ virtual streamsize xsgetn(
 
 Защищенная виртуальная функция-член извлекает, чтобы *подсчитать* элементы из входного потока, как если бы повторные вызовы [sbumpc](#sbumpc)и сохраняли их в массиве, начиная с позиции *ptr*. Она возвращает число фактически извлеченных элементов.
 
-## <a name="basic_streambufxsputn"></a><a name="xsputn"></a>basic_streambuf:: ксспутн
+## <a name="basic_streambufxsputn"></a><a name="xsputn"></a> basic_streambuf:: ксспутн
 
 Защищенная виртуальная функция, которая вставляет элементы в выходной поток.
 
@@ -1338,7 +1337,7 @@ virtual streamsize xsputn(const char_type* ptr, streamsize count);
 
 Защищенная виртуальная функция-член вставляет, чтобы *подсчитать* элементы в выходной поток, как если бы повторные вызовы [sbumpc](#sputc)из массива, начиная с позиции *ptr*. Вставка символов в выходной поток прекращается после того, как были записаны все символы *числа* или если вызов `sputc( count)` возвращает `traits::eof()` . Возвращается число фактически вставленных элементов.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Безопасность потоков в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Программирование iostream](../standard-library/iostream-programming.md)\

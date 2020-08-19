@@ -138,12 +138,12 @@ helpviewer_keywords:
 - std::unordered_map::size
 - std::unordered_map::swap
 ms.assetid: 7cf7cfa1-16e7-461c-a9b2-3b8d8ec24e0d
-ms.openlocfilehash: 1e1e2609c5c4d7a5f93f4c63a26ae2fecbc98b0f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bde29e2d6148dd5aa5c39ac6a923048694e3a32d
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222177"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562453"
 ---
 # <a name="unordered_map-class"></a>Класс unordered_map
 
@@ -162,13 +162,20 @@ class unordered_map;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|-|-|
-|*Key*|Тип ключа.|
-|*Ty*|Сопоставленный тип.|
-|*Хэш*|Тип объекта хэш-функции.|
-|*Возможен*|Тип объекта функции сравнения на предмет равенства.|
-|*Идентификатор*|Класс распределителя.|
+*Раздел*\
+Тип ключа.
+
+*Ty*\
+Сопоставленный тип.
+
+*Функции*\
+Тип объекта хэш-функции.
+
+*Возможен*\
+Тип объекта функции сравнения на предмет равенства.
+
+*Идентификатор*\
+Класс распределителя.
 
 ## <a name="members"></a>Элементы
 
@@ -195,7 +202,7 @@ class unordered_map;
 |-|-|
 |[at](#at)|Поиск элемента с заданным ключом.|
 |[начале](#begin)|Задает начало управляемой последовательности.|
-|[bucket](#bucket)|Получает номер блока для значения ключа.|
+|[период](#bucket)|Получает номер блока для значения ключа.|
 |[bucket_count](#bucket_count)|Получает количество блоков.|
 |[bucket_size](#bucket_size)|Получает размер блока.|
 |[cbegin](#cbegin)|Задает начало управляемой последовательности.|
@@ -243,7 +250,7 @@ class unordered_map;
 
 **Пространство имен:** std
 
-## <a name="unordered_mapallocator_type"></a><a name="allocator_type"></a>unordered_map:: allocator_type
+## <a name="unordered_mapallocator_type"></a><a name="allocator_type"></a> unordered_map:: allocator_type
 
 Тип распределителя для управления хранилищем.
 
@@ -281,7 +288,7 @@ int main()
 al == std::allocator() is true
 ```
 
-## <a name="unordered_mapat"></a><a name="at"></a>unordered_map:: at
+## <a name="unordered_mapat"></a><a name="at"></a> unordered_map:: at
 
 Находит элемент в unordered_map с указанным значением ключа.
 
@@ -292,9 +299,8 @@ const Ty& at(const Key& key) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|-|-|
-|*key*|Значение ключа, которое необходимо найти.|
+*раздел*\
+Значение ключа, которое необходимо найти.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -331,7 +337,7 @@ int main()
 }
 ```
 
-## <a name="unordered_mapbegin"></a><a name="begin"></a>unordered_map:: Begin
+## <a name="unordered_mapbegin"></a><a name="begin"></a> unordered_map:: Begin
 
 Задает начало управляемой последовательности или сегмента.
 
@@ -344,9 +350,8 @@ const_local_iterator begin(size_type nbucket) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Description|
-|-|-|
-|*нбуккет*|Номер сегмента.|
+*нбуккет*\
+Номер сегмента.
 
 ### <a name="remarks"></a>Remarks
 
@@ -396,7 +401,7 @@ int main()
 [a, 1]
 ```
 
-## <a name="unordered_mapbucket"></a><a name="bucket"></a>unordered_map:: контейнер
+## <a name="unordered_mapbucket"></a><a name="bucket"></a> unordered_map:: контейнер
 
 Получает номер блока для значения ключа.
 
@@ -452,7 +457,7 @@ bucket('a') == 7
 bucket_size(7) == 1
 ```
 
-## <a name="unordered_mapbucket_count"></a><a name="bucket_count"></a>unordered_map:: bucket_count
+## <a name="unordered_mapbucket_count"></a><a name="bucket_count"></a> unordered_map:: bucket_count
 
 Получает количество блоков.
 
@@ -538,7 +543,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="unordered_mapbucket_size"></a><a name="bucket_size"></a>unordered_map:: bucket_size
+## <a name="unordered_mapbucket_size"></a><a name="bucket_size"></a> unordered_map:: bucket_size
 
 Получает размер сегмента.
 
@@ -594,7 +599,7 @@ bucket('a') == 7
 bucket_size(7) == 1
 ```
 
-## <a name="unordered_mapcbegin"></a><a name="cbegin"></a>unordered_map:: cbegin
+## <a name="unordered_mapcbegin"></a><a name="cbegin"></a> unordered_map:: cbegin
 
 Возвращает **`const`** итератор, который обращается к первому элементу в диапазоне.
 
@@ -620,7 +625,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="unordered_mapcend"></a><a name="cend"></a>unordered_map:: cend
+## <a name="unordered_mapcend"></a><a name="cend"></a> unordered_map:: cend
 
 Возвращает **`const`** итератор, который обращается к расположению сразу за последним элементом в диапазоне.
 
@@ -647,7 +652,7 @@ auto i2 = Container.cend();
 
 Значение, возвращаемое `cend`, не должно быть подвергнуто удалению ссылки.
 
-## <a name="unordered_mapclear"></a><a name="clear"></a>unordered_map:: Clear
+## <a name="unordered_mapclear"></a><a name="clear"></a> unordered_map:: Clear
 
 Удаляет все элементы.
 
@@ -714,7 +719,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="unordered_mapconst_iterator"></a><a name="const_iterator"></a>unordered_map:: const_iterator
+## <a name="unordered_mapconst_iterator"></a><a name="const_iterator"></a> unordered_map:: const_iterator
 
 Тип постоянного итератора для управляемой последовательности.
 
@@ -757,7 +762,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="unordered_mapconst_local_iterator"></a><a name="const_local_iterator"></a>unordered_map:: const_local_iterator
+## <a name="unordered_mapconst_local_iterator"></a><a name="const_local_iterator"></a> unordered_map:: const_local_iterator
 
 Тип постоянного итератора блока для управляемой последовательности.
 
@@ -805,7 +810,7 @@ int main()
 [a, 1]
 ```
 
-## <a name="unordered_mapconst_pointer"></a><a name="const_pointer"></a>unordered_map:: const_pointer
+## <a name="unordered_mapconst_pointer"></a><a name="const_pointer"></a> unordered_map:: const_pointer
 
 Тип постоянного указателя на элемент.
 
@@ -851,7 +856,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="unordered_mapconst_reference"></a><a name="const_reference"></a>unordered_map:: const_reference
+## <a name="unordered_mapconst_reference"></a><a name="const_reference"></a> unordered_map:: const_reference
 
 Тип постоянной ссылки на элемент.
 
@@ -897,7 +902,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="unordered_mapcount"></a><a name="count"></a>unordered_map:: count
+## <a name="unordered_mapcount"></a><a name="count"></a> unordered_map:: count
 
 Определяет количество элементов, соответствующих заданному ключу.
 
@@ -952,7 +957,7 @@ count('b') == 1
 count('C') == 0
 ```
 
-## <a name="unordered_mapdifference_type"></a><a name="difference_type"></a>unordered_map::d ifference_type
+## <a name="unordered_mapdifference_type"></a><a name="difference_type"></a> unordered_map::d ifference_type
 
 Тип расстояния со знаком между двумя элементами.
 
@@ -1011,7 +1016,7 @@ end()-begin() == 3
 begin()-end() == -3
 ```
 
-## <a name="unordered_mapemplace"></a><a name="emplace"></a>unordered_map:: emplace
+## <a name="unordered_mapemplace"></a><a name="emplace"></a> unordered_map:: emplace
 
 Вставляет созданный элемент на место (операции копирования или перемещения не выполняются) в объекте unordered_map.
 
@@ -1022,9 +1027,8 @@ pair<iterator, bool>  emplace( Args&&... args);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|-|-|
-|*args*|Аргументы, передаваемые для создания элемента, который будет вставлен в объект unordered_map, если этот объект еще не содержит элемента, ключ которого упорядочен аналогичным образом.|
+*args*\
+Аргументы, перенаправляемые для создания элемента, который будет вставлен в объект, `unordered_map` если он уже не содержит элемент, значение которого эквивалентно упорядочено.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1040,7 +1044,7 @@ pair<iterator, bool>  emplace( Args&&... args);
 
 Пример кода см. в разделе [map::emplace](../standard-library/map-class.md#emplace).
 
-## <a name="unordered_mapemplace_hint"></a><a name="emplace_hint"></a>unordered_map:: emplace_hint
+## <a name="unordered_mapemplace_hint"></a><a name="emplace_hint"></a> unordered_map:: emplace_hint
 
 Вставляет созданный элемент на место (операции копирования или перемещения не выполняются) с указанием о размещении.
 
@@ -1051,10 +1055,11 @@ iterator emplace_hint(const_iterator where, Args&&... args);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|-|-|
-|*args*|Аргументы, передаваемые для создания элемента, который будет вставлен в объект unordered_map, если объект unordered_map не содержит этого элемента или, в более общем случае, если этот объект еще не содержит элемента, ключ которого упорядочен аналогичным образом.|
-|*where*|Подсказка о месте начала поиска правильной точки вставки.|
+*args*\
+Аргументы, передаваемые для создания элемента, который будет вставлен в объект unordered_map, если объект unordered_map не содержит этого элемента или, в более общем случае, если этот объект еще не содержит элемента, ключ которого упорядочен аналогичным образом.
+
+*которому*\
+Подсказка о месте начала поиска правильной точки вставки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1072,7 +1077,7 @@ iterator emplace_hint(const_iterator where, Args&&... args);
 
 Пример кода см. в разделе [map::emplace_hint](../standard-library/map-class.md#emplace_hint).
 
-## <a name="unordered_mapempty"></a><a name="empty"></a>unordered_map:: Empty
+## <a name="unordered_mapempty"></a><a name="empty"></a> unordered_map:: Empty
 
 Проверяет отсутствие элементов.
 
@@ -1139,7 +1144,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="unordered_mapend"></a><a name="end"></a>unordered_map:: end
+## <a name="unordered_mapend"></a><a name="end"></a> unordered_map:: end
 
 Задает конец управляемой последовательности.
 
@@ -1152,15 +1157,14 @@ const_local_iterator end(size_type nbucket) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|-|-|
-|*нбуккет*|Номер сегмента.|
+*нбуккет*\
+Номер сегмента.
 
 ### <a name="remarks"></a>Remarks
 
 Первые две функции-члены возвращают прямой итератор, указывающий на место сразу за концом последовательности. Последние две функции-члена возвращают прямой итератор, указывающий сразу за концом сегмента *нбуккет*.
 
-## <a name="unordered_mapequal_range"></a><a name="equal_range"></a>unordered_map:: equal_range
+## <a name="unordered_mapequal_range"></a><a name="equal_range"></a> unordered_map:: equal_range
 
 Находит диапазон, соответствующий указанному ключу.
 
@@ -1228,7 +1232,7 @@ equal_range('x'):
 equal_range('b'): [b, 2]
 ```
 
-## <a name="unordered_maperase"></a><a name="erase"></a>unordered_map:: Erase
+## <a name="unordered_maperase"></a><a name="erase"></a> unordered_map:: Erase
 
 Удаляет элемент или диапазон элементов в объекте unordered_map с заданных позиций или удаляет элементы, соответствующие заданному ключу.
 
@@ -1262,7 +1266,7 @@ size_type erase(const key_type& Key);
 
 Пример кода см. в разделе [map::erase](../standard-library/map-class.md#erase).
 
-## <a name="unordered_mapfind"></a><a name="find"></a>unordered_map:: Find
+## <a name="unordered_mapfind"></a><a name="find"></a> unordered_map:: Find
 
 Определяет элемент, соответствующий указанному ключу.
 
@@ -1322,7 +1326,7 @@ find('A') == false
 find('b') == true: [b, 2]
 ```
 
-## <a name="unordered_mapget_allocator"></a><a name="get_allocator"></a>unordered_map:: get_allocator
+## <a name="unordered_mapget_allocator"></a><a name="get_allocator"></a> unordered_map:: get_allocator
 
 Возвращает сохраненный объект распределителя.
 
@@ -1360,7 +1364,7 @@ int main()
 al == std::allocator() is true
 ```
 
-## <a name="unordered_maphash_function"></a><a name="hash"></a>unordered_map:: hash_function
+## <a name="unordered_maphash_function"></a><a name="hash"></a> unordered_map:: hash_function
 
 Получает сохраненный объект хэш-функции.
 
@@ -1398,7 +1402,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086
 ```
 
-## <a name="unordered_maphasher"></a><a name="hasher"></a>unordered_map:: hash
+## <a name="unordered_maphasher"></a><a name="hasher"></a> unordered_map:: hash
 
 Тип хэш-функции.
 
@@ -1436,7 +1440,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086
 ```
 
-## <a name="unordered_mapinsert"></a><a name="insert"></a>unordered_map:: INSERT
+## <a name="unordered_mapinsert"></a><a name="insert"></a> unordered_map:: INSERT
 
 Вставляет элемент или диапазон элементов в unordered_map.
 
@@ -1470,15 +1474,26 @@ IList);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|-|-|
-|*Val*|Значение элемента, вставляемого в unordered_map, если оно уже не содержит элемент, ключ которого эквивалентно упорядочен.|
-|*Where*|Место начала поиска правильной точки вставки.|
-|*валти*|Параметр шаблона, указывающий тип аргумента, который unordered_map может использовать для создания элемента [value_type](../standard-library/map-class.md#value_type), и идеальное перенаправление *Val* в качестве аргумента.|
-|*First*|Позиция первого элемента, который следует скопировать.|
-|*Последняя*|Позиция непосредственно перед последним элементом, который следует скопировать.|
-|*InputIterator*|Аргумент функции-шаблона, который соответствует требованиям [итератора ввода](../standard-library/input-iterator-tag-struct.md), указывающего на элементы типа, которые можно использовать для создания объектов [value_type](../standard-library/map-class.md#value_type).|
-|*IList*|[Initializer_list](../standard-library/initializer-list.md) , из которого копируются элементы.|
+*Val*\
+Значение элемента, вставляемого в unordered_map, если оно уже не содержит элемент, ключ которого эквивалентно упорядочен.
+
+*Которому*\
+Место начала поиска правильной точки вставки.
+
+*валти*\
+Параметр шаблона, указывающий тип аргумента, который unordered_map может использовать для создания элемента [value_type](../standard-library/map-class.md#value_type), и идеальное перенаправление *Val* в качестве аргумента.
+
+*Началь*\
+Позиция первого элемента, который следует скопировать.
+
+*Последняя*\
+Позиция непосредственно перед последним элементом, который следует скопировать.
+
+*InputIterator*\
+Аргумент функции-шаблона, который соответствует требованиям [итератора ввода](../standard-library/input-iterator-tag-struct.md), указывающего на элементы типа, которые можно использовать для создания объектов [value_type](../standard-library/map-class.md#value_type).
+
+*Интерфейс*\
+[Initializer_list](../standard-library/initializer-list.md) , из которого копируются элементы.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1504,7 +1519,7 @@ IList);
 
 Пример кода см. в разделе [map::insert](../standard-library/map-class.md#insert).
 
-## <a name="unordered_mapiterator"></a><a name="iterator"></a>unordered_map:: итератор
+## <a name="unordered_mapiterator"></a><a name="iterator"></a> unordered_map:: итератор
 
 Тип итератора для управляемой последовательности.
 
@@ -1547,7 +1562,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="unordered_mapkey_eq"></a><a name="key_eq"></a>unordered_map:: key_eq
+## <a name="unordered_mapkey_eq"></a><a name="key_eq"></a> unordered_map:: key_eq
 
 Получает сохраненный объект функции сравнения.
 
@@ -1587,7 +1602,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false
 ```
 
-## <a name="unordered_mapkey_equal"></a><a name="key_equal"></a>unordered_map:: key_equal
+## <a name="unordered_mapkey_equal"></a><a name="key_equal"></a> unordered_map:: key_equal
 
 Тип функции сравнения.
 
@@ -1627,7 +1642,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false
 ```
 
-## <a name="unordered_mapkey_type"></a><a name="key_type"></a>unordered_map:: key_type
+## <a name="unordered_mapkey_type"></a><a name="key_type"></a> unordered_map:: key_type
 
 Тип ключа упорядочения.
 
@@ -1682,7 +1697,7 @@ int main()
 [d, 4] [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="unordered_mapload_factor"></a><a name="load_factor"></a>unordered_map:: load_factor
+## <a name="unordered_mapload_factor"></a><a name="load_factor"></a> unordered_map:: load_factor
 
 Подсчитывает среднее число элементов в блоке.
 
@@ -1768,7 +1783,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="unordered_maplocal_iterator"></a><a name="local_iterator"></a>unordered_map:: local_iterator
+## <a name="unordered_maplocal_iterator"></a><a name="local_iterator"></a> unordered_map:: local_iterator
 
 Тип итератора контейнера.
 
@@ -1816,7 +1831,7 @@ int main()
 [a, 1]
 ```
 
-## <a name="unordered_mapmapped_type"></a><a name="mapped_type"></a>unordered_map:: mapped_type
+## <a name="unordered_mapmapped_type"></a><a name="mapped_type"></a> unordered_map:: mapped_type
 
 Тип сопоставленного значения, связанного с каждым ключом.
 
@@ -1871,7 +1886,7 @@ int main()
 [d, 4] [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="unordered_mapmax_bucket_count"></a><a name="max_bucket_count"></a>unordered_map:: max_bucket_count
+## <a name="unordered_mapmax_bucket_count"></a><a name="max_bucket_count"></a> unordered_map:: max_bucket_count
 
 Получает максимальное количество блоков.
 
@@ -1957,7 +1972,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="unordered_mapmax_load_factor"></a><a name="max_load_factor"></a>unordered_map:: max_load_factor
+## <a name="unordered_mapmax_load_factor"></a><a name="max_load_factor"></a> unordered_map:: max_load_factor
 
 Возвращает или задает максимальное количество элементов в блоке.
 
@@ -2050,7 +2065,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="unordered_mapmax_size"></a><a name="max_size"></a>unordered_map:: max_size
+## <a name="unordered_mapmax_size"></a><a name="max_size"></a> unordered_map:: max_size
 
 Возвращает максимальный размер управляемой последовательности.
 
@@ -2085,7 +2100,7 @@ int main()
 max_size() == 536870911
 ```
 
-## <a name="unordered_mapoperator"></a><a name="op_at"></a>unordered_map:: operator []
+## <a name="unordered_mapoperator"></a><a name="op_at"></a> unordered_map:: operator []
 
 Находит или вставляет элемент с указанным ключом.
 
@@ -2097,9 +2112,8 @@ Ty& operator[](Key&& keyval);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|-|-|
-|*кэйвал*|Значение ключа, которое необходимо найти или вставить.|
+*кэйвал*\
+Значение ключа, которое необходимо найти или вставить.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -2109,7 +2123,7 @@ Ty& operator[](Key&& keyval);
 
 Если значение ключа аргумента не найдено, он вставляется вместе со значением по умолчанию для такого типа данных.
 
-`operator[]`может использоваться для вставки элементов в карту *m* с помощью *m*[*Key*] = `DataValue` ;, где `DataValue` — это значение `mapped_type` элемента с ключевым значением *Key*.
+`operator[]` может использоваться для вставки элементов в карту *m* с помощью *m*[*Key*] = `DataValue` ;, где `DataValue` — это значение `mapped_type` элемента с ключевым значением *Key*.
 
 При использовании `operator[]` для вставки элементов возвращаемая ссылка не отображает, меняет ли вставка уже существующий элемент или создает новый. Функции-члены [find](../standard-library/map-class.md#find) и [insert](../standard-library/map-class.md#insert) можно использовать для определения наличия элемента с указанным ключом перед вставкой.
 
@@ -2172,7 +2186,7 @@ c2["abc"] == 1
 
 Функция-член определяет итератор `where` в качестве возвращаемого значения [unordered_map::insert](#insert)`(` [unordered_map::value_type](#value_type)`(keyval, Ty())`. (Он вставляет элемент с указанным ключом, если такого элемента не существует.) Затем он возвращает ссылку на `(*where).second` .
 
-## <a name="unordered_mapoperator"></a><a name="op_eq"></a>unordered_map:: operator =
+## <a name="unordered_mapoperator"></a><a name="op_eq"></a> unordered_map:: operator =
 
 Заменяет элементы этого контейнера unordered_map, используя элементы из другого контейнера unordered_map.
 
@@ -2232,7 +2246,7 @@ int main( )
    }
 ```
 
-## <a name="unordered_mappointer"></a><a name="pointer"></a>unordered_map::p оинтер
+## <a name="unordered_mappointer"></a><a name="pointer"></a> unordered_map::p оинтер
 
 Тип указателя на элемент.
 
@@ -2278,7 +2292,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="unordered_mapreference"></a><a name="reference"></a>unordered_map:: Reference
+## <a name="unordered_mapreference"></a><a name="reference"></a> unordered_map:: Reference
 
 Тип ссылки на элемент.
 
@@ -2324,7 +2338,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="unordered_maprehash"></a><a name="rehash"></a>unordered_map:: rehash
+## <a name="unordered_maprehash"></a><a name="rehash"></a> unordered_map:: rehash
 
 Повторно создает хэш-таблицу.
 
@@ -2402,7 +2416,7 @@ load_factor() == 0.0234375
 max_load_factor() == 0.1
 ```
 
-## <a name="unordered_mapsize"></a><a name="size"></a>unordered_map:: size
+## <a name="unordered_mapsize"></a><a name="size"></a> unordered_map:: size
 
 Подсчитывает количество элементов.
 
@@ -2469,7 +2483,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="unordered_mapsize_type"></a><a name="size_type"></a>unordered_map:: size_type
+## <a name="unordered_mapsize_type"></a><a name="size_type"></a> unordered_map:: size_type
 
 Тип беззнакового расстояния между двумя элементами.
 
@@ -2505,7 +2519,7 @@ int main()
 size == 0
 ```
 
-## <a name="unordered_mapswap"></a><a name="swap"></a>unordered_map:: swap
+## <a name="unordered_mapswap"></a><a name="swap"></a> unordered_map:: swap
 
 Меняет местами содержимое двух контейнеров.
 
@@ -2577,7 +2591,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="unordered_mapunordered_map"></a><a name="unordered_map"></a>unordered_map:: unordered_map
+## <a name="unordered_mapunordered_map"></a><a name="unordered_map"></a> unordered_map:: unordered_map
 
 Создает объект контейнера.
 
@@ -2624,16 +2638,29 @@ unordered_map(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|-|-|
-|*Al*|Объект распределителя для сохранения.|
-|*Соответствовал*|Объект функции сравнения для сохранения.|
-|*Хэш*|Объект хэш-функции для сохранения.|
-|*Bucket_count*|Минимальное количество блоков.|
-|*Правильно*|Контейнер для копирования.|
-|*First*||
-|*Последняя*||
-|*IList*|Список initializer_list с элементами, которые необходимо скопировать.|
+*Al*\
+Объект распределителя для сохранения.
+
+*Соответствовал*\
+Объект функции сравнения для сохранения.
+
+*Функции*\
+Объект хэш-функции для сохранения.
+
+*Bucket_count*\
+Минимальное количество блоков.
+
+*Правильно*\
+Контейнер для копирования.
+
+*Началь*\
+Позиция первого элемента, который следует скопировать.
+
+*Последняя*\
+Позиция непосредственно перед последним элементом, который следует скопировать.
+
+*Интерфейс*\
+Список initializer_list с элементами, которые необходимо скопировать.
 
 ### <a name="remarks"></a>Remarks
 
@@ -2783,7 +2810,7 @@ int main()
 [a, 1] [b, 2] [c, 3]
 ```
 
-## <a name="unordered_mapvalue_type"></a><a name="value_type"></a>unordered_map:: value_type
+## <a name="unordered_mapvalue_type"></a><a name="value_type"></a> unordered_map:: value_type
 
 Тип элемента.
 
@@ -2838,7 +2865,7 @@ int main()
 [d, 4] [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [<unordered_map>](../standard-library/unordered-map.md)\
 [Контейнера](../cpp/containers-modern-cpp.md)\

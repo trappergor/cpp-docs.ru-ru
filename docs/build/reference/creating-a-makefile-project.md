@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Makefile projects [C++]
 ms.assetid: dd077af3-97a8-48fb-baaa-cf7e07ddef61
-ms.openlocfilehash: b96b7a1663e5d5886615dd976900f8eda9daeccc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a712b6da89433b9db6de9f2a676bf6e89d2e0e6e
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169894"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560830"
 ---
 # <a name="create-a-c-makefile-project"></a>Создание проекта makefile на C++
 
@@ -38,7 +38,7 @@ ms.locfileid: "80169894"
 
 ### <a name="to-create-a-makefile-project-in-visual-studio-2019"></a>Создание проекта makefile в Visual Studio 2019
 
-1. В главном меню Visual Studio выберите **Файл** > **Создать** > **Проект** и в поле поиска введите "makefile". Или же откройте диалоговое окно **Новый проект**, разверните узел **Visual C++**  > **Общие** (Visual Studio 2015) или **Прочие** (Visual Studio 2017) и выберите один из двух вариантов в зависимости от того, предназначен ли проект для Windows или Linux.
+1. В главном меню Visual Studio выберите **файл**  >  **создать**  >  **проект** и введите Makefile в поле поиска. Или же откройте диалоговое окно **Новый проект**, разверните узел **Visual C++** > **Общие** (Visual Studio 2015) или **Прочие** (Visual Studio 2017) и выберите один из двух вариантов в зависимости от того, предназначен ли проект для Windows или Linux.
 
 1. **Только для Windows**: на странице **Параметры конфигурации отладки** укажите сведения о команде, выходе, очистке и перестроении для сборок отладки и розничной торговли. Чтобы указать другие параметры для конфигурации выпуска, нажмите кнопку **Далее**.
 
@@ -50,7 +50,7 @@ ms.locfileid: "80169894"
 
 ### <a name="to-create-a-makefile-project-in-visual-studio-2015-or-visual-studio-2017"></a>Создание проекта makefile в Visual Studio 2015 или Visual Studio 2017
 
-1. На начальной странице Visual Studio введите строку "makefile" в поле поиска **Новый проект**. Или же откройте диалоговое окно **Новый проект**, разверните узел **Visual C++**  > **Общие** (Visual Studio 2015) или **Прочие** (Visual Studio 2017) и в области шаблонов выберите **Проект Makefile**, чтобы открыть мастер проектов.
+1. На начальной странице Visual Studio введите строку "makefile" в поле поиска **Новый проект**. Или же откройте диалоговое окно **Новый проект**, разверните узел **Visual C++** > **Общие** (Visual Studio 2015) или **Прочие** (Visual Studio 2017) и в области шаблонов выберите **Проект Makefile**, чтобы открыть мастер проектов.
 
 1. На странице **Параметры приложения** предоставьте сведения о команде, выводе, удалении и перестроении для отладочной и окончательной сборок.
 
@@ -102,10 +102,10 @@ IntelliSense не работает в проектах makefile, если опр
 
 При следующем открытии проекта makefile в среде разработки Visual Studio запустите команду **Очистить решение**, а затем — команду **Собрать решение** для проекта makefile. Технология IntelliSense должна работать в интегрированной среде разработки правильно.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Использование технологии IntelliSense](/visualstudio/ide/using-intellisense)<br>
-[Справочник по программе NMAKE](nmake-reference.md)<br>
-[Как C++ создать проект на основе существующего кода](../how-to-create-a-cpp-project-from-existing-code.md)
-[специальных символов в файле Makefile](special-characters-in-a-makefile.md)<br/>
-[Содержимое файла Makefile](contents-of-a-makefile.md)<br/>
+[Справочник по NMAKE](nmake-reference.md)<br>
+[Практическое руководство. Создание проекта C++ из существующего кода](../how-to-create-a-cpp-project-from-existing-code.md)<br>
+[Специальные символы в файле Makefile](special-characters-in-a-makefile.md)<br/>
+[Содержимое файла makefile](contents-of-a-makefile.md)<br/>

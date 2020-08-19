@@ -522,6 +522,6 @@ inline BOOL SetFileAttributes(LPCTSTR lpFileName, DWORD dwAttributes);
 
 Эта оболочка вызывает `SetFileAttributesTransacted` функцию.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Компоненты ATL COM Desktop](../../atl/atl-com-desktop-components.md)

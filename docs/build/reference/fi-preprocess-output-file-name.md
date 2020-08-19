@@ -65,7 +65,7 @@ CL /P /Fi".\\preprocessed\\" main.cpp helper.cpp
 
 - См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Параметры компилятора MSVC](compiler-options.md)<br/>
 [`/P` (Предварительная обработка в файле)](p-preprocess-to-a-file.md)<br/>
