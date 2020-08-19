@@ -96,12 +96,12 @@ helpviewer_keywords:
 - std::array [C++], size
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
-ms.openlocfilehash: 9cde21624e3a8d4cce6db9cdc054bad427340f31
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f826bb679d3391855d0a0dbc7c4355a735b9c529
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87203913"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562575"
 ---
 # <a name="array-class-c-standard-library"></a>Класс array (стандартная библиотека C++)
 
@@ -116,10 +116,11 @@ class array;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Description|
-|-|-|
-|`Ty`|Тип элемента.|
-|`N`|Число элементов.|
+`Ty`\
+Тип элемента.
+
+`N`\
+Число элементов.
 
 ## <a name="members"></a>Элементы
 
@@ -139,7 +140,7 @@ class array;
 
 |Функция-член|Описание|
 |-|-|
-|[array](#array).|Создает объект массива.|
+|[array](#array)|Создает объект массива.|
 |[assign](#assign)|Устаревшие. Используйте `fill` .) Заменяет все элементы.|
 |[at](#at)|Обращается к элементу в указанной позиции.|
 |[Назад](#back)|Обращается к последнему элементу.|
@@ -166,7 +167,7 @@ class array;
 
 ## <a name="remarks"></a>Remarks
 
-У этого типа есть конструктор по умолчанию `array()` и оператор присваивания по умолчанию `operator=`. Тип удовлетворяет требованиям для `aggregate`. Поэтому объекты типа `array<Ty, N>` можно инициализировать с помощью агрегатного инициализатора. например следующие.
+У этого типа есть конструктор по умолчанию `array()` и оператор присваивания по умолчанию `operator=`. Тип удовлетворяет требованиям для `aggregate`. Поэтому объекты типа `array<Ty, N>` можно инициализировать с помощью агрегатного инициализатора. Например, примененная к объекту директива
 
 ```cpp
 array<int, 4> ai = { 1, 2, 3 };
@@ -180,7 +181,7 @@ array<int, 4> ai = { 1, 2, 3 };
 
 **Пространство имен:** std
 
-## <a name="arrayarray"></a><a name="array"></a>массив:: Array
+## <a name="arrayarray"></a><a name="array"></a> массив:: Array
 
 Создает объект массива.
 
@@ -239,11 +240,11 @@ int main()
 0 1 2 3
 ```
 
-## <a name="arrayassign"></a><a name="assign"></a>массив:: Assign
+## <a name="arrayassign"></a><a name="assign"></a> массив:: Assign
 
 Устаревший в C ++ 11, заменен на [fill](#fill). Заменяет все элементы.
 
-## <a name="arrayat"></a><a name="at"></a>массив:: at
+## <a name="arrayat"></a><a name="at"></a> массив:: at
 
 Обращается к элементу в указанной позиции.
 
@@ -289,7 +290,7 @@ int main()
 }
 ```
 
-## <a name="arrayback"></a><a name="back"></a>массив:: назад
+## <a name="arrayback"></a><a name="back"></a> массив:: назад
 
 Обращается к последнему элементу.
 
@@ -334,7 +335,7 @@ int main()
 3
 ```
 
-## <a name="arraybegin"></a><a name="begin"></a>массив:: Begin
+## <a name="arraybegin"></a><a name="begin"></a> массив:: Begin
 
 Задает начало управляемой последовательности.
 
@@ -379,7 +380,7 @@ int main()
 0
 ```
 
-## <a name="arraycbegin"></a><a name="cbegin"></a>массив:: cbegin
+## <a name="arraycbegin"></a><a name="cbegin"></a> массив:: cbegin
 
 Возвращает **`const`** итератор, который обращается к первому элементу в диапазоне.
 
@@ -405,7 +406,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="arraycend"></a><a name="cend"></a>массив:: cend
+## <a name="arraycend"></a><a name="cend"></a> массив:: cend
 
 Возвращает **`const`** итератор, который обращается к расположению сразу за последним элементом в диапазоне.
 
@@ -433,7 +434,7 @@ auto i2 = Container.cend();
 
 Значение, возвращаемое `cend`, не должно быть подвергнуто удалению ссылки.
 
-## <a name="arrayconst_iterator"></a><a name="const_iterator"></a>массив:: const_iterator
+## <a name="arrayconst_iterator"></a><a name="const_iterator"></a> массив:: const_iterator
 
 Тип постоянного итератора для управляемой последовательности.
 
@@ -481,7 +482,7 @@ it1: 0 1 2 3
 it2: 0
 ```
 
-## <a name="arrayconst_pointer"></a><a name="const_pointer"></a>массив:: const_pointer
+## <a name="arrayconst_pointer"></a><a name="const_pointer"></a> массив:: const_pointer
 
 Тип постоянного указателя на элемент.
 
@@ -525,7 +526,7 @@ int main()
 0
 ```
 
-## <a name="arrayconst_reference"></a><a name="const_reference"></a>массив:: const_reference
+## <a name="arrayconst_reference"></a><a name="const_reference"></a> массив:: const_reference
 
 Тип постоянной ссылки на элемент.
 
@@ -569,7 +570,7 @@ int main()
 0
 ```
 
-## <a name="arrayconst_reverse_iterator"></a><a name="const_reverse_iterator"></a>массив:: const_reverse_iterator
+## <a name="arrayconst_reverse_iterator"></a><a name="const_reverse_iterator"></a> массив:: const_reverse_iterator
 
 Тип постоянного обратного итератора для управляемой последовательности.
 
@@ -613,7 +614,7 @@ int main()
 3
 ```
 
-## <a name="arraycrbegin"></a><a name="crbegin"></a>массив:: crbegin
+## <a name="arraycrbegin"></a><a name="crbegin"></a> массив:: crbegin
 
 Возвращает константный итератор, который указывает на первый элемент в обращенном массиве.
 
@@ -657,7 +658,7 @@ The first element of array is 1.
 The first element of the reversed array is 2.
 ```
 
-## <a name="arraycrend"></a><a name="crend"></a>массив:: crend
+## <a name="arraycrend"></a><a name="crend"></a> массив:: crend
 
 Возвращает константный итератор, который обращается к месту, следующему за последним элементом в обращенном массиве.
 
@@ -701,7 +702,7 @@ int main( )
 1
 ```
 
-## <a name="arraydata"></a><a name="data"></a>массив::d ATA
+## <a name="arraydata"></a><a name="data"></a> массив::d ATA
 
 Получает адрес первого элемента.
 
@@ -747,7 +748,7 @@ int main()
 0
 ```
 
-## <a name="arraydifference_type"></a><a name="difference_type"></a>массив::d ifference_type
+## <a name="arraydifference_type"></a><a name="difference_type"></a> массив::d ifference_type
 
 Тип расстояния со знаком между двумя элементами.
 
@@ -791,7 +792,7 @@ int main()
 -4
 ```
 
-## <a name="arrayempty"></a><a name="empty"></a>массив:: Empty
+## <a name="arrayempty"></a><a name="empty"></a> массив:: Empty
 
 Проверяет отсутствие элементов.
 
@@ -841,7 +842,7 @@ false
 true
 ```
 
-## <a name="arrayend"></a><a name="end"></a>массив:: end
+## <a name="arrayend"></a><a name="end"></a> массив:: end
 
 Задает конец управляемой последовательности.
 
@@ -887,7 +888,7 @@ int main()
 3
 ```
 
-## <a name="arrayfill"></a><a name="fill"></a>массив:: Fill
+## <a name="arrayfill"></a><a name="fill"></a> массив:: Fill
 
 Удаляет массив и копирует указанные элементы в пустой массив.
 
@@ -897,9 +898,8 @@ void fill(const Type& val);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|-|-|
-|*Val*|Значение элемента, вставляемого в массив.|
+*Val*\
+Значение элемента, вставляемого в массив.
 
 ### <a name="remarks"></a>Remarks
 
@@ -933,7 +933,7 @@ int main()
 }
 ```
 
-## <a name="arrayfront"></a><a name="front"></a>массив:: Передняя
+## <a name="arrayfront"></a><a name="front"></a> массив:: Передняя
 
 Обращается к первому элементу.
 
@@ -978,7 +978,7 @@ int main()
 0
 ```
 
-## <a name="arrayiterator"></a><a name="iterator"></a>массив:: итератор
+## <a name="arrayiterator"></a><a name="iterator"></a> массив:: итератор
 
 Тип итератора для управляемой последовательности.
 
@@ -1027,7 +1027,7 @@ it1: 0 1 2 3
 it2: 0
 ```
 
-## <a name="arraymax_size"></a><a name="max_size"></a>массив:: max_size
+## <a name="arraymax_size"></a><a name="max_size"></a> массив:: max_size
 
 Подсчитывает количество элементов.
 
@@ -1070,7 +1070,7 @@ int main()
 4
 ```
 
-## <a name="arrayoperator"></a><a name="op_at"></a>массив:: operator []
+## <a name="arrayoperator"></a><a name="op_at"></a> массив:: operator []
 
 Обращается к элементу в указанной позиции.
 
@@ -1123,7 +1123,7 @@ int main()
 1 3
 ```
 
-## <a name="arrayoperator"></a><a name="op_eq"></a>массив:: operator =
+## <a name="arrayoperator"></a><a name="op_eq"></a> массив:: operator =
 
 Заменяет управляемую последовательность.
 
@@ -1178,7 +1178,7 @@ int main()
 0 1 2 3
 ```
 
-## <a name="arraypointer"></a><a name="pointer"></a>массив::p оинтер
+## <a name="arraypointer"></a><a name="pointer"></a> массив::p оинтер
 
 Тип указателя на элемент.
 
@@ -1222,7 +1222,7 @@ int main()
 0
 ```
 
-## <a name="arrayrbegin"></a><a name="rbegin"></a>массив:: rbegin
+## <a name="arrayrbegin"></a><a name="rbegin"></a> массив:: rbegin
 
 Задает начало обратной управляемой последовательности.
 
@@ -1267,7 +1267,7 @@ int main()
 3
 ```
 
-## <a name="arrayreference"></a><a name="reference"></a>массив:: Reference
+## <a name="arrayreference"></a><a name="reference"></a> массив:: Reference
 
 Тип ссылки на элемент.
 
@@ -1311,7 +1311,7 @@ int main()
 0
 ```
 
-## <a name="arrayrend"></a><a name="rend"></a>массив:: rend
+## <a name="arrayrend"></a><a name="rend"></a> массив:: rend
 
 Задает конец обратной управляемой последовательности.
 
@@ -1356,7 +1356,7 @@ int main()
 0
 ```
 
-## <a name="arrayreverse_iterator"></a><a name="reverse_iterator"></a>массив:: reverse_iterator
+## <a name="arrayreverse_iterator"></a><a name="reverse_iterator"></a> массив:: reverse_iterator
 
 Тип обратного итератора для управляемой последовательности.
 
@@ -1400,7 +1400,7 @@ int main()
 3
 ```
 
-## <a name="arraysize"></a><a name="size"></a>массив:: size
+## <a name="arraysize"></a><a name="size"></a> массив:: size
 
 Подсчитывает количество элементов.
 
@@ -1443,7 +1443,7 @@ int main()
 4
 ```
 
-## <a name="arraysize_type"></a><a name="size_type"></a>массив:: size_type
+## <a name="arraysize_type"></a><a name="size_type"></a> массив:: size_type
 
 Тип беззнакового расстояния между двумя элементами.
 
@@ -1487,7 +1487,7 @@ int main()
 4
 ```
 
-## <a name="arrayswap"></a><a name="swap"></a>массив:: swap
+## <a name="arrayswap"></a><a name="swap"></a> массив:: swap
 
 Выполняет обмен содержимым между этим и другим массивом.
 
@@ -1553,7 +1553,7 @@ int main()
 0 1 2 3
 ```
 
-## <a name="arrayvalue_type"></a><a name="value_type"></a>массив:: value_type
+## <a name="arrayvalue_type"></a><a name="value_type"></a> массив:: value_type
 
 Тип элемента.
 

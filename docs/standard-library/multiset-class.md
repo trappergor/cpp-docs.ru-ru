@@ -86,12 +86,12 @@ helpviewer_keywords:
 - std::multiset [C++], upper_bound
 - std::multiset [C++], value_comp
 ms.assetid: 630e8c10-0ce9-4ad9-8d79-9e91a600713f
-ms.openlocfilehash: f481848228e1d93e457ce79948bacd5f3e6d4760
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 69a884a2b60e7838154586dd0dcc8c1d54681b53
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224725"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561171"
 ---
 # <a name="multiset-class"></a>Класс multiset
 
@@ -145,7 +145,7 @@ class multiset
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[multiset](#multiset)|Создает `multiset`, который является пустым или копией части или целого заданного `multiset`.|
 
@@ -201,7 +201,7 @@ class multiset
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |[Оператор =](#op_eq)|Заменяет элементы `multiset` копией другого `multiset`.|
 
@@ -211,7 +211,7 @@ class multiset
 
 **Пространство имен:** std
 
-## <a name="multisetallocator_type"></a><a name="allocator_type"></a>мультинабор:: allocator_type
+## <a name="multisetallocator_type"></a><a name="allocator_type"></a> мультинабор:: allocator_type
 
 Тип, который представляет класс распределителя для объекта-мультинабора.
 
@@ -229,7 +229,7 @@ typedef Allocator allocator_type;
 
 См. пример для [get_allocator](#get_allocator) в качестве примера использования `allocator_type`
 
-## <a name="multisetbegin"></a><a name="begin"></a>мультинабор:: Begin
+## <a name="multisetbegin"></a><a name="begin"></a> мультинабор:: Begin
 
 Возвращает итератор, адресующий первый элемент в мультинаборе.
 
@@ -282,7 +282,7 @@ The first element of ms1 is 1
 The first element of ms1 is now 2
 ```
 
-## <a name="multisetcbegin"></a><a name="cbegin"></a>мультинабор:: cbegin
+## <a name="multisetcbegin"></a><a name="cbegin"></a> мультинабор:: cbegin
 
 Возвращает **`const`** итератор, который обращается к первому элементу в диапазоне.
 
@@ -308,7 +308,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="multisetcend"></a><a name="cend"></a>мультинабор:: cend
+## <a name="multisetcend"></a><a name="cend"></a> мультинабор:: cend
 
 Возвращает **`const`** итератор, который обращается к расположению сразу за последним элементом в диапазоне.
 
@@ -336,7 +336,7 @@ auto i2 = Container.cend();
 
 Значение, возвращаемое `cend`, не должно быть подвергнуто удалению ссылки.
 
-## <a name="multisetclear"></a><a name="clear"></a>мультинабор:: Clear
+## <a name="multisetclear"></a><a name="clear"></a> мультинабор:: Clear
 
 Удаляет все элементы мультинабора.
 
@@ -374,7 +374,7 @@ The size of the multiset is initially 2.
 The size of the multiset after clearing is 0.
 ```
 
-## <a name="multisetconst_iterator"></a><a name="const_iterator"></a>мультинабор:: const_iterator
+## <a name="multisetconst_iterator"></a><a name="const_iterator"></a> мультинабор:: const_iterator
 
 Тип, предоставляющий двунаправленный итератор, который может читать **`const`** элемент в Мультинаборе.
 
@@ -390,7 +390,7 @@ typedef implementation-defined const_iterator;
 
 См. пример для [begin](#begin) в качестве примера использования `const_iterator`.
 
-## <a name="multisetconst_pointer"></a><a name="const_pointer"></a>мультинабор:: const_pointer
+## <a name="multisetconst_pointer"></a><a name="const_pointer"></a> мультинабор:: const_pointer
 
 Тип, предоставляющий указатель на **`const`** элемент в Мультинаборе.
 
@@ -404,7 +404,7 @@ typedef typename allocator_type::const_pointer const_pointer;
 
 В большинстве случаев для доступа к элементам в объекте-мультинаборе следует использовать [iterator](#iterator).
 
-## <a name="multisetconst_reference"></a><a name="const_reference"></a>мультинабор:: const_reference
+## <a name="multisetconst_reference"></a><a name="const_reference"></a> мультинабор:: const_reference
 
 Тип, предоставляющий ссылку на **`const`** элемент, хранящийся в Мультинаборе для чтения и выполнения **`const`** операций.
 
@@ -445,7 +445,7 @@ int main( )
 The first element in the multiset is 10.
 ```
 
-## <a name="multisetconst_reverse_iterator"></a><a name="const_reverse_iterator"></a>мультинабор:: const_reverse_iterator
+## <a name="multisetconst_reverse_iterator"></a><a name="const_reverse_iterator"></a> мультинабор:: const_reverse_iterator
 
 Тип, предоставляющий двунаправленный итератор, который может читать любой **`const`** элемент в Мультинаборе.
 
@@ -461,7 +461,7 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 См. пример для [rend](#rend) в качестве примера объявления и использования `const_reverse_iterator`.
 
-## <a name="multisetcount"></a><a name="count"></a>мультинабор:: count
+## <a name="multisetcount"></a><a name="count"></a> мультинабор:: count
 
 Возвращает число элементов в объекте multiset, ключ которых совпадает с ключом, заданным параметром.
 
@@ -482,7 +482,7 @@ size_type count(const Key& key) const;
 
 Функция-член возвращает количество элементов *x* в диапазоне
 
-\[lower_bound (*ключ*), upper_bound (*ключ*))
+\[ lower_bound (*ключ*), upper_bound (*ключ*))
 
 ### <a name="example"></a>Пример
 
@@ -526,7 +526,7 @@ The number of elements in ms1 with a sort key of 2 is: 1.
 The number of elements in ms1 with a sort key of 3 is: 0.
 ```
 
-## <a name="multisetcrbegin"></a><a name="crbegin"></a>мультинабор:: crbegin
+## <a name="multisetcrbegin"></a><a name="crbegin"></a> мультинабор:: crbegin
 
 Возвращает константный итератор, указывающий на первый элемент в обратном мультинаборе.
 
@@ -574,7 +574,7 @@ int main( )
 The first element in the reversed multiset is 30.
 ```
 
-## <a name="multisetcrend"></a><a name="crend"></a>мультинабор:: crend
+## <a name="multisetcrend"></a><a name="crend"></a> мультинабор:: crend
 
 Возвращает константный итератор, который адресует положение после последнего элемента в обратном мультинаборе.
 
@@ -620,7 +620,7 @@ int main() {
 }
 ```
 
-## <a name="multisetdifference_type"></a><a name="difference_type"></a>мультинабор::d ifference_type
+## <a name="multisetdifference_type"></a><a name="difference_type"></a> мультинабор::d ifference_type
 
 Целочисленный тип со знаком, который можно использовать для представления количества элементов в мультинаборе в диапазоне между элементами, на которые указывают итераторы.
 
@@ -692,7 +692,7 @@ The number '20' occurs 2 times in multiset ms1.
 The number of elements in the multiset ms1 is: 3.
 ```
 
-## <a name="multisetemplace"></a><a name="emplace"></a>мультинабор:: emplace
+## <a name="multisetemplace"></a><a name="emplace"></a> мультинабор:: emplace
 
 Вставляет созданный элемент на место (операции копирования или перемещения не выполняются) с указанием о размещении.
 
@@ -703,9 +703,8 @@ iterator emplace(Args&&... args);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
-|-|-|
-|*args*|Аргументы, которые передаются для создания элемента, который вставляется в мультинабор.|
+*args*\
+Аргументы, которые передаются для создания элемента, который вставляется в мультинабор.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -758,7 +757,7 @@ int main()
 }
 ```
 
-## <a name="multisetemplace_hint"></a><a name="emplace_hint"></a>мультинабор:: emplace_hint
+## <a name="multisetemplace_hint"></a><a name="emplace_hint"></a> мультинабор:: emplace_hint
 
 Вставляет созданный элемент на место (операции копирования или перемещения не выполняются) с указанием о размещении.
 
@@ -771,10 +770,11 @@ iterator emplace_hint(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
-|-|-|
-|*args*|Аргументы, которые передаются для создания элемента, который вставляется в мультинабор.|
-|*where*|Место начала поиска правильной точки вставки. (Если точка непосредственно перед *точкой, то*Вставка может выполняться в периодической константе вместо логарифмического времени.)|
+*args*\
+Аргументы, которые передаются для создания элемента, который вставляется в мультинабор.
+
+*которому*\
+Место начала поиска правильной точки вставки. (Если точка непосредственно перед *точкой, то*Вставка может выполняться в периодической константе вместо логарифмического времени.)
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -788,7 +788,7 @@ iterator emplace_hint(
 
 Пример кода см. в разделе [set::emplace_hint](../standard-library/set-class.md#emplace_hint).
 
-## <a name="multisetempty"></a><a name="empty"></a>мультинабор:: Empty
+## <a name="multisetempty"></a><a name="empty"></a> мультинабор:: Empty
 
 Проверяет, что мультинабор пустой.
 
@@ -831,7 +831,7 @@ The multiset ms1 is not empty.
 The multiset ms2 is empty.
 ```
 
-## <a name="multisetend"></a><a name="end"></a>мультинабор:: end
+## <a name="multisetend"></a><a name="end"></a> мультинабор:: end
 
 Возврат итератора после конца.
 
@@ -853,7 +853,7 @@ iterator end();
 
 Пример кода см. в разделе [multiset::find](#find).
 
-## <a name="multisetequal_range"></a><a name="equal_range"></a>мультинабор:: equal_range
+## <a name="multisetequal_range"></a><a name="equal_range"></a> мультинабор:: equal_range
 
 Возвращает пару итераторов, на первый элемент мультинабора с ключом, который больше указанного ключа, и на первый элемент мультинабора с ключом, который равен ключу или больше него.
 
@@ -932,7 +932,7 @@ matching the 2nd element of the pair returned by equal_range( 20 ).
 The multiset ms1 doesn't have an element with a key less than 40.
 ```
 
-## <a name="multiseterase"></a><a name="erase"></a>мультинабор:: Erase
+## <a name="multiseterase"></a><a name="erase"></a> мультинабор:: Erase
 
 Удаляет элемент или диапазон элементов в мультинаборе с указанных позиций или удаляет элементы, которые соответствуют указанному ключу.
 
@@ -972,7 +972,7 @@ size_type erase(
 
 Пример кода см. в разделе [set::erase](../standard-library/set-class.md#erase).
 
-## <a name="multisetfind"></a><a name="find"></a>мультинабор:: Find
+## <a name="multisetfind"></a><a name="find"></a> мультинабор:: Find
 
 Возвращает итератор, ссылающийся на элемент в мультинаборе, ключ которого эквивалентен заданному ключу.
 
@@ -1058,7 +1058,7 @@ int main()
 }
 ```
 
-## <a name="multisetget_allocator"></a><a name="get_allocator"></a>мультинабор:: get_allocator
+## <a name="multisetget_allocator"></a><a name="get_allocator"></a> мультинабор:: get_allocator
 
 Возвращает копию распределителя, который использовался для создания мультинабора.
 
@@ -1126,7 +1126,7 @@ int main( )
 }
 ```
 
-## <a name="multisetinsert"></a><a name="insert"></a>мультинабор:: INSERT
+## <a name="multisetinsert"></a><a name="insert"></a> мультинабор:: INSERT
 
 Вставляет элемент или диапазон элементов в мультинабор.
 
@@ -1166,15 +1166,26 @@ IList);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
-|-|-|
-|*Val*|Значение элемента, вставляемого в мультинабор.|
-|*Where*|Место начала поиска правильной точки вставки. (Если точка непосредственно перед *точкой, то*Вставка может выполняться в периодической константе вместо логарифмического времени.)|
-|*валти*|Параметр шаблона, указывающий тип аргумента, который мультинабор может использовать для создания элемента [value_type](../standard-library/map-class.md#value_type)и идеального перенаправления *Val* в качестве аргумента.|
-|*First*|Позиция первого элемента, который следует скопировать.|
-|*Последняя*|Позиция непосредственно перед последним элементом, который следует скопировать.|
-|*InputIterator*|Аргумент функции-шаблона, который соответствует требованиям [итератора ввода](../standard-library/input-iterator-tag-struct.md), указывающего на элементы типа, которые можно использовать для создания объектов [value_type](../standard-library/map-class.md#value_type).|
-|*IList*|[Initializer_list](../standard-library/initializer-list.md) , из которого копируются элементы.|
+*Val*\
+Значение элемента, вставляемого в мультинабор.
+
+*Которому*\
+Место начала поиска правильной точки вставки. (Если точка непосредственно перед *точкой, то*Вставка может выполняться в периодической константе вместо логарифмического времени.)
+
+*валти*\
+Параметр шаблона, указывающий тип аргумента, который мультинабор может использовать для создания элемента [value_type](../standard-library/map-class.md#value_type)и идеального перенаправления *Val* в качестве аргумента.
+
+*Началь*\
+Позиция первого элемента, который следует скопировать.
+
+*Последняя*\
+Позиция непосредственно перед последним элементом, который следует скопировать.
+
+*InputIterator*\
+Аргумент функции-шаблона, который соответствует требованиям [итератора ввода](../standard-library/input-iterator-tag-struct.md), указывающего на элементы типа, которые можно использовать для создания объектов [value_type](../standard-library/map-class.md#value_type).
+
+*Интерфейс*\
+[Initializer_list](../standard-library/initializer-list.md) , из которого копируются элементы.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1286,7 +1297,7 @@ int main()
 }
 ```
 
-## <a name="multisetiterator"></a><a name="iterator"></a>мультинабор:: итератор
+## <a name="multisetiterator"></a><a name="iterator"></a> мультинабор:: итератор
 
 Тип, предоставляющий константный [двунаправленный итератор](../standard-library/bidirectional-iterator-tag-struct.md), который может читать любой элемент в мультинаборе.
 
@@ -1298,7 +1309,7 @@ typedef implementation-defined iterator;
 
 См. пример для [Begin](#begin) в качестве примера объявления и использования `iterator` .
 
-## <a name="multisetkey_comp"></a><a name="key_comp"></a>мультинабор:: key_comp
+## <a name="multisetkey_comp"></a><a name="key_comp"></a> мультинабор:: key_comp
 
 Извлекает копию объекта сравнения, использованного для упорядочивания ключей в мультинаборе.
 
@@ -1373,7 +1384,7 @@ kc1( 2,3 ) returns value of true, where kc1 is the function object of s1.
 kc2( 2,3 ) returns value of false, where kc2 is the function object of ms2.
 ```
 
-## <a name="multisetkey_compare"></a><a name="key_compare"></a>мультинабор:: key_compare
+## <a name="multisetkey_compare"></a><a name="key_compare"></a> мультинабор:: key_compare
 
 Тип, который предоставляет объект-функцию, которая может сравнить два ключа сортировки для определения относительного порядка двух элементов в мультинаборе.
 
@@ -1391,7 +1402,7 @@ typedef Compare key_compare;
 
 См. пример для [key_comp](#key_comp) в качестве примера объявления и использования `key_compare`.
 
-## <a name="multisetkey_type"></a><a name="key_type"></a>мультинабор:: key_type
+## <a name="multisetkey_type"></a><a name="key_type"></a> мультинабор:: key_type
 
 Тип, который предоставляет объект-функцию, которая может сравнивать ключи сортировки для определения относительного порядка двух элементов в мультинаборе.
 
@@ -1409,7 +1420,7 @@ typedef Key key_type;
 
 См. пример для [value_type](#value_type) в качестве примера объявления и использования `key_type`.
 
-## <a name="multisetlower_bound"></a><a name="lower_bound"></a>мультинабор:: lower_bound
+## <a name="multisetlower_bound"></a><a name="lower_bound"></a> мультинабор:: lower_bound
 
 Возвращает итератор, указывающий на первый элемент в мультинаборе с ключом, который равен указанному ключу или больше него.
 
@@ -1477,7 +1488,7 @@ The multiset ms1 doesn't have an element with a key of 40.
 The element of ms1 with a key matching that of the last element is: 30.
 ```
 
-## <a name="multisetmax_size"></a><a name="max_size"></a>мультинабор:: max_size
+## <a name="multisetmax_size"></a><a name="max_size"></a> мультинабор:: max_size
 
 Возвращает максимальную длину мультинабора.
 
@@ -1509,7 +1520,7 @@ int main( )
 }
 ```
 
-## <a name="multisetmultiset"></a><a name="multiset"></a>мультинабор:: мультинабор
+## <a name="multisetmultiset"></a><a name="multiset"></a> мультинабор:: мультинабор
 
 Создает мультинабор, который пуст или является копией всего или части другого мультинабора.
 
@@ -1562,14 +1573,23 @@ multiset (
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
-|-|-|
-|*Al*|Класс распределителя памяти, который будет использоваться для этого объекта-мультинабора. Значение по умолчанию — `Allocator`.|
-|*Соответствовал*|Функция сравнения типа `const Compare`, которая используется для упорядочивания элементов в мультинаборе. Значение по умолчанию — `Compare`.|
-|*Правильно*|Мультинабор, копией которого будет создаваемый мультинабор.|
-|*First*|Положение первого элемента в диапазоне копируемых элементов.|
-|*Последняя*|Положение первого элемента после диапазона копируемых элементов.|
-|*IList*|Объект initializer_list, из которого копируются элементы.|
+*Al*\
+Класс распределителя памяти, который будет использоваться для этого объекта-мультинабора. Значение по умолчанию — `Allocator`.
+
+*Соответствовал*\
+Функция сравнения типа `const Compare`, которая используется для упорядочивания элементов в мультинаборе. Значение по умолчанию — `Compare`.
+
+*Правильно*\
+Мультинабор, копией которого будет создаваемый мультинабор.
+
+*Началь*\
+Положение первого элемента в диапазоне копируемых элементов.
+
+*Последняя*\
+Положение первого элемента после диапазона копируемых элементов.
+
+*Интерфейс*\
+Объект initializer_list, из которого копируются элементы.
 
 ### <a name="remarks"></a>Remarks
 
@@ -1690,7 +1710,7 @@ int main()
 }
 ```
 
-## <a name="multisetoperator"></a><a name="op_eq"></a>мультинабор:: operator =
+## <a name="multisetoperator"></a><a name="op_eq"></a> мультинабор:: operator =
 
 Заменяет элементы этого `multiset` элементами из другого `multiset`.
 
@@ -1702,13 +1722,12 @@ multiset& operator=(multiset&& right);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
-|-|-|
-|*Правильно*|`multiset`, из которого копируются или перемещаются элементы.|
+*Правильно*\
+`multiset`, из которого копируются или перемещаются элементы.
 
 ### <a name="remarks"></a>Remarks
 
-`operator=`копирует или перемещает элементы *непосредственно* в это `multiset` , в зависимости от используемого ссылочного типа (lvalue или rvalue). Элементы, которые находились в этом `multiset` перед выполнением `operator=`, игнорируются.
+`operator=` копирует или перемещает элементы *непосредственно* в это `multiset` , в зависимости от используемого ссылочного типа (lvalue или rvalue). Элементы, которые находились в этом `multiset` перед выполнением `operator=`, игнорируются.
 
 ### <a name="example"></a>Пример
 
@@ -1747,7 +1766,7 @@ int main( )
    }
 ```
 
-## <a name="multisetpointer"></a><a name="pointer"></a>мультинабор::p оинтер
+## <a name="multisetpointer"></a><a name="pointer"></a> мультинабор::p оинтер
 
 Тип, который предоставляет указатель на элемент в мультинаборе.
 
@@ -1761,7 +1780,7 @@ typedef typename allocator_type::pointer pointer;
 
 В большинстве случаев для доступа к элементам в объекте-мультинаборе следует использовать [iterator](#iterator).
 
-## <a name="multisetrbegin"></a><a name="rbegin"></a>мультинабор:: rbegin
+## <a name="multisetrbegin"></a><a name="rbegin"></a> мультинабор:: rbegin
 
 Возвращает итератор, который указывает на первый элемент в обратном мультинаборе.
 
@@ -1838,7 +1857,7 @@ The reversed multiset is: 30 20 10
 After the erasure, the first element in the reversed multiset is 20.
 ```
 
-## <a name="multisetreference"></a><a name="reference"></a>мультинабор:: Reference
+## <a name="multisetreference"></a><a name="reference"></a> мультинабор:: Reference
 
 Тип, который предоставляет ссылку на элемент, хранящийся в мультинаборе.
 
@@ -1874,7 +1893,7 @@ int main( )
 The first element in the multiset is 10.
 ```
 
-## <a name="multisetrend"></a><a name="rend"></a>мультинабор:: rend
+## <a name="multisetrend"></a><a name="rend"></a> мультинабор:: rend
 
 Возвращает итератор, который адресует положение после последнего элемента в обратном мультинаборе.
 
@@ -1947,7 +1966,7 @@ int main() {
 }
 ```
 
-## <a name="multisetreverse_iterator"></a><a name="reverse_iterator"></a>мультинабор:: reverse_iterator
+## <a name="multisetreverse_iterator"></a><a name="reverse_iterator"></a> мультинабор:: reverse_iterator
 
 Тип, предоставляющий двунаправленный итератор, который может читать или изменять элементы в обратном мультинаборе.
 
@@ -1963,7 +1982,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 См. пример для [rbegin](#rbegin) в качестве примера объявления и использования `reverse_iterator`.
 
-## <a name="multisetsize"></a><a name="size"></a>мультинабор:: размер
+## <a name="multisetsize"></a><a name="size"></a> мультинабор:: размер
 
 Возвращает количество элементов в мультинаборе.
 
@@ -2004,7 +2023,7 @@ The multiset length is 1.
 The multiset length is now 2.
 ```
 
-## <a name="multisetsize_type"></a><a name="size_type"></a>мультинабор:: size_type
+## <a name="multisetsize_type"></a><a name="size_type"></a> мультинабор:: size_type
 
 Целочисленный беззнаковый тип, который может представлять количество элементов в мультинаборе.
 
@@ -2016,7 +2035,7 @@ typedef typename allocator_type::size_type size_type;
 
 См. пример для [size](#size) в качестве примера объявления и использования `size_type`
 
-## <a name="multisetswap"></a><a name="swap"></a>мультинабор:: swap
+## <a name="multisetswap"></a><a name="swap"></a> мультинабор:: swap
 
 Меняет местами элементы двух мультинаборов.
 
@@ -2084,7 +2103,7 @@ After swapping with ms2, list ms1 is: 100 200.
 After swapping with ms3, list ms1 is: 300.
 ```
 
-## <a name="multisetupper_bound"></a><a name="upper_bound"></a>мультинабор:: upper_bound
+## <a name="multisetupper_bound"></a><a name="upper_bound"></a> мультинабор:: upper_bound
 
 Возвращает итератор к первому элементу в мультинаборе, который больше, чем указанный ключ.
 
@@ -2152,7 +2171,7 @@ The first element of ms1 with a key greater than
 that of the initial element of ms1 is: 20.
 ```
 
-## <a name="multisetvalue_comp"></a><a name="value_comp"></a>мультинабор:: value_comp
+## <a name="multisetvalue_comp"></a><a name="value_comp"></a> мультинабор:: value_comp
 
 Получает копию объекта сравнения, используемого для упорядочивания значений элементов в мультинаборе.
 
@@ -2227,7 +2246,7 @@ vc1( 2,3 ) returns value of true, where vc1 is the function object of ms1.
 vc2( 2,3 ) returns value of false, where vc2 is the function object of ms2.
 ```
 
-## <a name="multisetvalue_compare"></a><a name="value_compare"></a>мультинабор:: value_compare
+## <a name="multisetvalue_compare"></a><a name="value_compare"></a> мультинабор:: value_compare
 
 Тип, предоставляющий объект-функцию, которая может сравнить два ключа сортировки для определения их относительного порядка в мультинаборе.
 
@@ -2247,7 +2266,7 @@ typedef key_compare value_compare;
 
 См. пример для [value_comp](#value_comp) в качестве примера объявления и использования `value_compare`.
 
-## <a name="multisetvalue_type"></a><a name="value_type"></a>мультинабор:: value_type
+## <a name="multisetvalue_type"></a><a name="value_type"></a> мультинабор:: value_type
 
 Тип, описывающий объект, который хранится как элемент в мультинаборе в смысле его возможностей, присущих значению.
 

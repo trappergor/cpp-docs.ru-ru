@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::cache_freelist [C++], allocate
 - stdext::cache_freelist [C++], deallocate
 ms.assetid: 840694de-36ba-470f-8dae-2b723d5a8cd9
-ms.openlocfilehash: d757909d3e54fed35bf42b943b9f9740dffee115
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bbe0ff0f2297afcec99bd162ebe6a6d3e10f9bce
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366738"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560730"
 ---
 # <a name="cache_freelist-class"></a>Класс cache_freelist
 
@@ -30,16 +30,17 @@ class cache_freelist
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*Sz*|Число выделяемых элементов в массиве.|
-|*Макс*|Класс max, представляющий максимальный размер списка свободных блоков. Это может быть класс [max_fixed_size](../standard-library/max-fixed-size-class.md), [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md) или [max_variable_size](../standard-library/max-variable-size-class.md).|
+*SZ*\
+Число выделяемых элементов в массиве.
+
+*Максимальной*\
+Класс max, представляющий максимальный размер списка свободных блоков. Это может быть класс [max_fixed_size](../standard-library/max-fixed-size-class.md), [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md) или [max_variable_size](../standard-library/max-variable-size-class.md).
 
 ## <a name="remarks"></a>Remarks
 
-Шаблон cache_freelist класса поддерживает свободный список блоков памяти размера *Sz.* Когда свободный список полон он использует **оператор удалить** для дераспределения блоков памяти. Когда свободный список пуст, он использует **новый оператор** для выделения новых блоков памяти. Максимальный размер свободного списка определяется классом max class, пройдено в параметре *Max.*
+Шаблон класса cache_freelist поддерживает свободный список блоков памяти размером *SZ*. Когда список свободных ресурсов заполнен, для освобождения блоков памяти используется **оператор DELETE** . Если список свободных пуст, для выделения новых блоков памяти используется **оператор New** . Максимальный размер списка свободных элементов определяется классом max класса, переданным в параметре *Max* .
 
-Каждый блок памяти содержит *Sz* байты годной памяти и данные, которые **оператор новый** и **оператор удалить** требуют.
+Каждый блок памяти содержит *SZ* байт доступной памяти и данные, необходимые **операторам New** и **Delete** .
 
 ### <a name="constructors"></a>Конструкторы
 
@@ -51,16 +52,16 @@ class cache_freelist
 
 |Функция-член|Описание|
 |-|-|
-|[Выделить](#allocate)|Выделяет блок памяти.|
-|[Освобождения](#deallocate)|Освобождает указанное число объектов из памяти, начиная с заданной позиции.|
+|[памяти](#allocate)|Выделяет блок памяти.|
+|[deallocate](#deallocate)|Освобождает указанное число объектов из памяти, начиная с заданной позиции.|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<allocators>
+**Заголовок:**\<allocators>
 
 **Пространство имен:** stdext
 
-## <a name="cache_freelistallocate"></a><a name="allocate"></a>cache_freelist::распределение
+## <a name="cache_freelistallocate"></a><a name="allocate"></a> cache_freelist:: allocate
 
 Выделяет блок памяти.
 
@@ -70,9 +71,8 @@ void *allocate(std::size_t count);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*count*|Число выделяемых элементов в массиве.|
+*расчета*\
+Число выделяемых элементов в массиве.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -80,7 +80,7 @@ void *allocate(std::size_t count);
 
 ### <a name="remarks"></a>Remarks
 
-## <a name="cache_freelistcache_freelist"></a><a name="cache_freelist"></a>cache_freelist::cache_freelist
+## <a name="cache_freelistcache_freelist"></a><a name="cache_freelist"></a> cache_freelist:: cache_freelist
 
 Создает объект типа `cache_freelist`.
 
@@ -90,7 +90,7 @@ cache_freelist();
 
 ### <a name="remarks"></a>Remarks
 
-## <a name="cache_freelistdeallocate"></a><a name="deallocate"></a>cache_freelist::dразлах
+## <a name="cache_freelistdeallocate"></a><a name="deallocate"></a> cache_freelist::d еаллокате
 
 Освобождает указанное число объектов из памяти, начиная с заданной позиции.
 
@@ -100,13 +100,14 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*Ptr*|Указатель на первый объект, который должен быть освобожден из хранилища.|
-|*count*|Количество объектов для освобождения из хранилища.|
+*указатель*\
+Указатель на первый объект, который должен быть освобожден из хранилища.
+
+*расчета*\
+Количество объектов для освобождения из хранилища.
 
 ### <a name="remarks"></a>Remarks
 
 ## <a name="see-also"></a>См. также раздел
 
-[\<>-подлатыватели](../standard-library/allocators-header.md)
+[\<allocators>](../standard-library/allocators-header.md)

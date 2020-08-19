@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stdext::rts_alloc [C++], deallocate
 - stdext::rts_alloc [C++], equals
 ms.assetid: ab41bffa-83d1-4a1c-87b9-5707d516931f
-ms.openlocfilehash: f422b171c14695a1207a30419a10d50cdfb5adf0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 04a6578c7abd07ff84f4c0a5cee68cfd7ec8ef04
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228132"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560560"
 ---
 # <a name="rts_alloc-class"></a>Класс rts_alloc
 
@@ -32,9 +32,8 @@ class rts_alloc
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
-|---------------|-----------------|
-|*Кэш*|Тип экземпляров кэша, содержащихся в массиве. Возможные типы: [Класс cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) или [cache_suballoc](../standard-library/cache-suballoc-class.md).|
+*Мбайта*\
+Тип экземпляров кэша, содержащихся в массиве. Это может быть [`cache_chunklist`](../standard-library/cache-chunklist-class.md) , [`cache_freelist`](../standard-library/cache-freelist-class.md) или [`cache_suballoc`](../standard-library/cache-suballoc-class.md) .
 
 ## <a name="remarks"></a>Remarks
 
@@ -44,7 +43,7 @@ class rts_alloc
 
 |Функция-член|Описание|
 |-|-|
-|[allocate](#allocate)|Выделяет блок памяти.|
+|[памяти](#allocate)|Выделяет блок памяти.|
 |[deallocate](#deallocate)|Освобождает указанное число объектов из памяти, начиная с заданной позиции.|
 |[equals](#equals)|Сравнивает два кэша на равенство.|
 
@@ -54,7 +53,7 @@ class rts_alloc
 
 **Пространство имен:** stdext
 
-## <a name="rts_allocallocate"></a><a name="allocate"></a>rts_alloc:: allocate
+## <a name="rts_allocallocate"></a><a name="allocate"></a> rts_alloc:: allocate
 
 Выделяет блок памяти.
 
@@ -64,9 +63,8 @@ void *allocate(std::size_t count);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
-|---------------|-----------------|
-|*count*|Число выделяемых элементов в массиве.|
+*расчета*\
+Число выделяемых элементов в массиве.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -76,7 +74,7 @@ void *allocate(std::size_t count);
 
 Функция-член возвращает `caches[_IDX].allocate(count)` , где индекс `_IDX` определяется запрошенным *количеством*размеров блоков, или, если *Count* слишком велик, возвращается значение `operator new(count)` . `cache`, представляющий объект кэша.
 
-## <a name="rts_allocdeallocate"></a><a name="deallocate"></a>rts_alloc::d еаллокате
+## <a name="rts_allocdeallocate"></a><a name="deallocate"></a> rts_alloc::d еаллокате
 
 Освобождает указанное число объектов из памяти, начиная с заданной позиции.
 
@@ -86,16 +84,17 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
-|---------------|-----------------|
-|*ptr*|Указатель на первый объект, который должен быть освобожден из хранилища.|
-|*count*|Количество объектов для освобождения из хранилища.|
+*указатель*\
+Указатель на первый объект, который должен быть освобожден из хранилища.
+
+*расчета*\
+Количество объектов для освобождения из хранилища.
 
 ### <a name="remarks"></a>Remarks
 
 Функция-член вызывает `caches[_IDX].deallocate(ptr, count)` , где индекс `_IDX` определяется запрошенным *количеством*размеров блока, или, если *Count* слишком велик, возвращается значение `operator delete(ptr)` .
 
-## <a name="rts_allocequals"></a><a name="equals"></a>rts_alloc:: Equals
+## <a name="rts_allocequals"></a><a name="equals"></a> rts_alloc:: Equals
 
 Сравнивает два кэша на равенство.
 
@@ -105,16 +104,17 @@ bool equals(const sync<_Cache>& _Other) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
-|---------------|-----------------|
-|*_Cache*|Объект кэша, связанный с фильтром.|
-|*_Other*|Объект кэша для сравнения на равенство.|
+*_Cache*\
+Объект кэша, связанный с фильтром.
+
+*_Other*\
+Объект кэша для сравнения на равенство.
 
 ### <a name="remarks"></a>Remarks
 
 **`true`** значение, если результат `caches[0].equals(other.caches[0])` ; в противном случае — **`false`** . `caches` представляет массив объектов кэша.
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также раздел
 
 [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)\
 [\<allocators>](../standard-library/allocators-header.md)

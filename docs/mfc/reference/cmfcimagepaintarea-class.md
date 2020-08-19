@@ -1,5 +1,5 @@
 ---
-title: CmFCImagePaintArea Класс
+title: Класс перечисление CMFCImagePaintArea
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCImagePaintArea
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - CMFCImagePaintArea [MFC], SetColor
 - CMFCImagePaintArea [MFC], SetMode
 ms.assetid: c59eec22-f15a-4e58-8c4d-4a18a41f4452
-ms.openlocfilehash: cd74d2418bb874553fbbafa637f527a7b84b73bf
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 3d8bfc40c3c9e937ad5acd7228e49877af65204a
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754277"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562159"
 ---
-# <a name="cmfcimagepaintarea-class"></a>CmFCImagePaintArea Класс
+# <a name="cmfcimagepaintarea-class"></a>Класс перечисление CMFCImagePaintArea
 
-Предоставляет область изображения, используемую для изменения изображения в диалоговом окне редактора изображений.
+Предоставляет область изображения, используемую для изменения изображения в диалоговом окне Редактор изображений.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -39,29 +39,29 @@ class CMFCImagePaintArea : public CButton
 
 |||
 |-|-|
-|Имя|Описание|
-|[CMFCImagePaintArea::CMFCImagePaintArea](#cmfcimagepaintarea)|Формирует объект `CMFCImagePaintArea`.|
+|name|Описание|
+|[Перечисление CMFCImagePaintArea:: перечисление CMFCImagePaintArea](#cmfcimagepaintarea)|Формирует объект `CMFCImagePaintArea`.|
 |`CMFCImagePaintArea::~CMFCImagePaintArea`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
 |||
 |-|-|
-|Имя|Описание|
-|[CMFCImagePaintArea::GetMode](#getmode)|Извлекает текущий режим чертежа.|
-|[CMFCImagePaintArea::SetBitmap](#setbitmap)|Устанавливает изображение биткарты для области изображения.|
-|[CMFCImagePaintArea::SetColor](#setcolor)|Устанавливает текущий цвет рисунка.|
-|[CMFCImagePaintArea::SetMode](#setmode)|Устанавливает текущий режим рисования.|
+|name|Описание|
+|[Перечисление CMFCImagePaintArea:: Мода](#getmode)|Извлекает текущий режим рисования.|
+|[Перечисление CMFCImagePaintArea:: Сетбитмап](#setbitmap)|Задает точечный рисунок для области изображения.|
+|[Перечисление CMFCImagePaintArea:: Сетколор](#setcolor)|Задает текущий цвет рисования.|
+|[Перечисление CMFCImagePaintArea:: SetMode](#setmode)|Задает текущий режим рисования.|
 
 ### <a name="remarks"></a>Remarks
 
 Данный класс не предназначен для непосредственного использования в коде.
 
-Платформа использует этот класс для отображения области изображения в диалоговом окне редактора изображений. Для получения дополнительной информации о диалоговом окне редактора изображений [см.](../../mfc/reference/cmfcimageeditordialog-class.md)
+Платформа использует этот класс для вывода области изображения в диалоговом окне редактора изображений. Дополнительные сведения о диалоговом окне Редактор изображений см. в разделе [класс кмфЦимажеедитордиалог](../../mfc/reference/cmfcimageeditordialog-class.md).
 
 ## <a name="example"></a>Пример
 
-В следующем примере показано, как `CMFCImagePaintArea` построить объект класса, установить текущий цвет рисунка, установить текущий режим рисования и установить изображение битовой карты для области изображения.
+В следующем примере показано, как создать объект `CMFCImagePaintArea` класса, задать текущий цвет рисования, установить текущий режим рисования и задать точечный рисунок для области изображения.
 
 [!code-cpp[NVC_MFC_RibbonApp#37](../../mfc/reference/codesnippet/cpp/cmfcimagepaintarea-class_1.cpp)]
 
@@ -75,13 +75,13 @@ class CMFCImagePaintArea : public CButton
 
 [CButton](../../mfc/reference/cbutton-class.md)
 
-[CMFCImagePaintArea](../../mfc/reference/cmfcimagepaintarea-class.md)
+[Перечисление CMFCImagePaintArea](../../mfc/reference/cmfcimagepaintarea-class.md)
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** afximagepaintarea.h
+**Заголовок:** афксимажепаинтареа. h
 
-## <a name="cmfcimagepaintareacmfcimagepaintarea"></a><a name="cmfcimagepaintarea"></a>CMFCImagePaintArea::CMFCImagePaintArea
+## <a name="cmfcimagepaintareacmfcimagepaintarea"></a><a name="cmfcimagepaintarea"></a> Перечисление CMFCImagePaintArea:: перечисление CMFCImagePaintArea
 
 Формирует объект `CMFCImagePaintArea`.
 
@@ -91,14 +91,12 @@ CMFCImagePaintArea(CMFCImageEditorDialog* pParentDlg);
 
 ### <a name="parameters"></a>Параметры
 
-|||
-|-|-|
-|Параметр|Описание|
-|*pParentDlg*|(в) Указатель на диалоговое окно, которое является родителем редактора изображений.|
+*ппарентдлг*\
+окне Указатель на диалоговое окно, которое является родительским для редактора изображений.
 
-## <a name="cmfcimagepaintareagetmode"></a><a name="getmode"></a>CMFCImagePaintArea::GetMode
+## <a name="cmfcimagepaintareagetmode"></a><a name="getmode"></a> Перечисление CMFCImagePaintArea:: Мода
 
-Извлекает текущий режим чертежа.
+Извлекает текущий режим рисования.
 
 ```
 IMAGE_EDIT_MODE GetMode() const;
@@ -106,11 +104,11 @@ IMAGE_EDIT_MODE GetMode() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение [IMAGE_EDIT_MODE,](cmfcimagepaintarea-image-edit-mode-enumeration.md) опознававав режим текущего чертежа.
+Значение [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) , указывающее текущий режим рисования.
 
-## <a name="cmfcimagepaintareasetbitmap"></a><a name="setbitmap"></a>CMFCImagePaintArea::SetBitmap
+## <a name="cmfcimagepaintareasetbitmap"></a><a name="setbitmap"></a> Перечисление CMFCImagePaintArea:: Сетбитмап
 
-Устанавливает изображение биткарты для области изображения.
+Задает точечный рисунок для области изображения.
 
 ```cpp
 void SetBitmap(CBitmap* pBitmap);
@@ -118,18 +116,16 @@ void SetBitmap(CBitmap* pBitmap);
 
 ### <a name="parameters"></a>Параметры
 
-|||
-|-|-|
-|Параметр|Описание|
-|*pBitmap*|(в) Новое изображение биткарты для отображения.|
+*пбитмап*\
+окне Новое растровое изображение для вывода.
 
 ### <a name="remarks"></a>Remarks
 
-Если *pBitmap* является NULL, этот метод устанавливает размер изменяемой области краски до нуля. В противном случае он устанавливает размер изменяемой области краски в размере предоставленного изображения биткарты.
+Если *пбитмап* имеет значение null, этот метод устанавливает размер изменяемой области рисования равным нулю. В противном случае размер изменяемой области заливки устанавливается равным размеру указанного растрового изображения.
 
-## <a name="cmfcimagepaintareasetcolor"></a><a name="setcolor"></a>CMFCImagePaintArea::SetColor
+## <a name="cmfcimagepaintareasetcolor"></a><a name="setcolor"></a> Перечисление CMFCImagePaintArea:: Сетколор
 
-Устанавливает текущий цвет рисунка.
+Задает текущий цвет рисования.
 
 ```cpp
 void SetColor(COLORREF color);
@@ -137,20 +133,18 @@ void SetColor(COLORREF color);
 
 ### <a name="parameters"></a>Параметры
 
-|||
-|-|-|
-|Параметр|Описание|
-|*Цвет*|(в) Новый цвет рисунка.|
+*Цвет*\
+окне Новый цвет рисования.
 
 ### <a name="remarks"></a>Remarks
 
-При выборе цвета из панели палитры редактора изображений или цветосборщика, фреймворк называет этот метод обновлением текущего цвета рисунка. Первоначальный цвет рисунка черный (значение COLORREF 0).
+При выборе цвета на панели палитры редактора изображений или палитре цветов платформа вызывает этот метод для обновления текущего цвета рисования. Исходный цвет рисования — черный (значение COLORREF 0).
 
-Цвет чертежа используется диалоговым ящиком редактора изображений для всех режимов рисования, за исключением IMAGE_EDIT_MODE_COLOR. Для получения дополнительной информации о режимах рисования, см [CMFCImagePaintArea::IMAGE_EDIT_MODE Enumeration](cmfcimagepaintarea-image-edit-mode-enumeration.md).
+Цвет рисования используется диалоговым окном Редактор изображений для всех режимов рисования, кроме IMAGE_EDIT_MODE_COLOR. Дополнительные сведения о режимах рисования см. в разделе [перечисление CMFCImagePaintArea:: IMAGE_EDIT_MODE enumeration](cmfcimagepaintarea-image-edit-mode-enumeration.md).
 
-## <a name="cmfcimagepaintareasetmode"></a><a name="setmode"></a>CMFCImagePaintArea::SetMode
+## <a name="cmfcimagepaintareasetmode"></a><a name="setmode"></a> Перечисление CMFCImagePaintArea:: SetMode
 
-Устанавливает текущий режим рисования.
+Задает текущий режим рисования.
 
 ```cpp
 void SetMode(IMAGE_EDIT_MODE mode);
@@ -158,13 +152,11 @@ void SetMode(IMAGE_EDIT_MODE mode);
 
 ### <a name="parameters"></a>Параметры
 
-|||
-|-|-|
-|Параметр|Описание|
-|*Режим*|(в) Значение [IMAGE_EDIT_MODE,](cmfcimagepaintarea-image-edit-mode-enumeration.md) опознававав режим текущего чертежа.|
+*режима*\
+окне Значение [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) , указывающее текущий режим рисования.
 
 ## <a name="see-also"></a>См. также раздел
 
-[Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
+[Иерархическая диаграмма](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCImageEditorEditorДиоредакторКласс](../../mfc/reference/cmfcimageeditordialog-class.md)
+[Класс КмфЦимажеедитордиалог](../../mfc/reference/cmfcimageeditordialog-class.md)

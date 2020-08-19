@@ -5,12 +5,12 @@ f1_keywords:
 - allocators/std::operator!=
 - allocators/std::operator==
 ms.assetid: b55d67cb-3c69-46bf-ad40-e845fb096c4e
-ms.openlocfilehash: 7d22e550c7054c2197163f2edf829ec17a85a145
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2d2f928ab3773ed8e0b0afdc0113db2ef5b2a3dd
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87204564"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561222"
 ---
 # <a name="ltallocatorsgt-operators"></a>Операторы &lt;allocator&gt;
 
@@ -20,7 +20,7 @@ ms.locfileid: "87204564"
 |-|-|
 |[operator! =](#op_neq)|[Оператор = =](#op_eq_eq)|
 
-## <a name="operator"></a><a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a> operator! =
 
 Проверяет на неравенство между объектами распределителя указанного класса.
 
@@ -33,10 +33,11 @@ bool operator!=(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*слева*|Один из объектов allocator для проверки на неравенство.|
-|*Правильно*|Один из объектов allocator для проверки на неравенство.|
+*слева*\
+Один из объектов allocator для проверки на неравенство.
+
+*Правильно*\
+Один из объектов allocator для проверки на неравенство.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -46,7 +47,7 @@ bool operator!=(
 
 Оператор-шаблон возвращает `!(left == right)`.
 
-## <a name="operator"></a><a name="op_eq_eq"></a>Оператор = =
+## <a name="operator"></a><a name="op_eq_eq"></a> Оператор = =
 
 Проверяет на равенство объекты распределителя указанного класса.
 
@@ -59,10 +60,11 @@ bool operator==(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*слева*|Один из объектов allocator для проверки на равенство.|
-|*Правильно*|Один из объектов allocator для проверки на равенство.|
+*слева*\
+Один из объектов allocator для проверки на равенство.
+
+*Правильно*\
+Один из объектов allocator для проверки на равенство.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

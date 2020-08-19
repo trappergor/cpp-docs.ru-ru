@@ -1,5 +1,5 @@
 ---
-title: CMFCCmdUsageCount Класс
+title: Класс CMFCCmdUsageCount
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCCmdUsageCount
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - CMFCCmdUsageCount [MFC], Serialize
 - CMFCCmdUsageCount [MFC], SetOptions
 ms.assetid: 9c33b783-37c0-43ea-9f31-3c75e246c841
-ms.openlocfilehash: 02b302ec38922128190a6f20ce2f156b52383b55
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 15026746f2af55b9cc153cce19cf00475e5c5d77
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752580"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561106"
 ---
-# <a name="cmfccmdusagecount-class"></a>CMFCCmdUsageCount Класс
+# <a name="cmfccmdusagecount-class"></a>Класс CMFCCmdUsageCount
 
-Отслеживает количество сообщений Windows, например, когда пользователь выбирает элемент из меню.
+Отслеживает количество использований сообщений Windows, например, когда пользователь выбирает элемент из меню.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -43,7 +43,7 @@ class CMFCCmdUsageCount : public CObject
 
 |||
 |-|-|
-|Имя|Описание|
+|name|Описание|
 |`CMFCCmdUsageCount::CMFCCmdUsageCount`|Конструктор по умолчанию.|
 |`CMFCCmdUsageCount::~CMFCCmdUsageCount`|Деструктор.|
 
@@ -51,30 +51,30 @@ class CMFCCmdUsageCount : public CObject
 
 |||
 |-|-|
-|Имя|Описание|
-|[CMFCCmdUsageCount::AddCmd](#addcmd)|Приращения по одному счетчику, который связан с данной командой.|
-|[CMFCCmdUsageCount::GetCount](#getcount)|Извлекает количество использования, связанное с данным идентификатором команды.|
-|[CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation)|Определяет, собрал ли этот объект минимальное количество данных отслеживания.|
-|[CMFCCmdUsageCount::IsFreqeuntlyUsedCmd](#isfreqeuntlyusedcmd)|Определяет, часто ли используется данная команда.|
-|[CMFCCmdUsageCount::Перезагрузка](#reset)|Очищает количество использования всех команд.|
-|[CMFCCmdUsageCount::: Сериал](#serialize)|Читает этот объект из архива или запишет его в архив. (Переопределяет [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize).)|
-|[CMFCCmdUsageCount::SetOptions](#setoptions)|Устанавливает значения общих `CMFCCmdUsageCount` членов данных класса.|
+|name|Описание|
+|[CMFCCmdUsageCount:: Аддкмд](#addcmd)|Увеличивает на один счетчик, связанный с заданной командой.|
+|[CMFCCmdUsageCount:: NOCOUNT](#getcount)|Возвращает счетчик использования, связанный с заданным ИДЕНТИФИКАТОРом команды.|
+|[CMFCCmdUsageCount:: Хасенаугхинформатион](#hasenoughinformation)|Определяет, собрал ли этот объект минимальный объем данных отслеживания.|
+|[CMFCCmdUsageCount:: Исфрекеунтлюседкмд](#isfreqeuntlyusedcmd)|Определяет, используется ли данная команда часто.|
+|[CMFCCmdUsageCount:: Reset](#reset)|Очищает счетчик использования всех команд.|
+|[CMFCCmdUsageCount:: Serialize](#serialize)|Считывает этот объект из архива или записывает его в архив. (Переопределяет [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize).)|
+|[CMFCCmdUsageCount:: Сетоптионс](#setoptions)|Задает значения `CMFCCmdUsageCount` членов данных общего класса.|
 
 ### <a name="data-members"></a>Элементы данных
 
 |||
 |-|-|
 |Имя|Описание|
-|`m_CmdUsage`|Объект, `CMap` который отображает команды к их использованию, имеет значение.|
-|`m_nMinUsagePercentage`|Минимальный процент использования для часто используемой команды.|
-|`m_nStartCount`|Счетчик запуска, используемый для определения того, собрал ли этот объект минимальное количество данных отслеживания.|
-|`m_nTotalUsage`|Количество всех отслеживаемых команд.|
+|`m_CmdUsage`|`CMap`Объект, который сопоставляет команды с их счетчиками использования.|
+|`m_nMinUsagePercentage`|Минимальный процент использования для часто используемых команд.|
+|`m_nStartCount`|Счетчик запуска, используемый для определения того, был ли этот объект собрал минимальный объем данных отслеживания.|
+|`m_nTotalUsage`|Число всех отслеживаний команд.|
 
 ### <a name="remarks"></a>Remarks
 
-Класс `CMFCCmdUsageCount` отображает каждый числовый идентификатор сообщения Windows с 32-битным неподписанным счетчиком. `CMFCToolBar`использует этот класс для отображения часто используемых элементов панели инструментов. Для получения `CMFCToolBar`дополнительной информации о, см. [CMFCToolBar Class](../../mfc/reference/cmfctoolbar-class.md)
+`CMFCCmdUsageCount`Класс сопоставляет каждый числовой идентификатор сообщения Windows с счетчиком 32-разрядных целых чисел без знака. `CMFCToolBar` использует этот класс для вывода часто используемых элементов панели инструментов. Дополнительные сведения о см `CMFCToolBar` . в разделе [Класс CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md).
 
-Можно сохранять `CMFCCmdUsageCount` данные классов между запусками программы. Используйте [CMFCCmdUsageCount::Serialize](#serialize) метод сериализации данных членов класса и [CMFCCmdUsageCount::SetOptions](#setoptions) метод для установки общих данных члена.
+`CMFCCmdUsageCount`Данные класса можно сохранять между запусками программы. Используйте метод [CMFCCmdUsageCount:: Serialize](#serialize) для сериализации данных элементов класса и метод [CMFCCmdUsageCount:: сетоптионс](#setoptions) , чтобы задать общие данные элемента.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -84,11 +84,11 @@ class CMFCCmdUsageCount : public CObject
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** afxcmdusagecount.h
+**Заголовок:** афкскмдусажекаунт. h
 
-## <a name="cmfccmdusagecountaddcmd"></a><a name="addcmd"></a>CMFCCmdUsageCount::AddCmd
+## <a name="cmfccmdusagecountaddcmd"></a><a name="addcmd"></a> CMFCCmdUsageCount:: Аддкмд
 
-Приращения по одному счетчику, который связан с данной командой.
+Увеличивает на один счетчик, связанный с заданной командой.
 
 ```cpp
 void AddCmd(UINT uiCmd);
@@ -96,26 +96,24 @@ void AddCmd(UINT uiCmd);
 
 ### <a name="parameters"></a>Параметры
 
-|||
-|-|-|
-|Параметр|Описание|
-|*uiCmd*|(в) Определяет счетчик команды на приращение.|
+*уикмд*\
+окне Указывает счетчик команд для увеличения.
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод добавляет новую запись в структуру карты командных отсчетов, `m_CmdUsage`если запись еще не существует.
+Этот метод добавляет новую запись в структуру Map счетчика команд, `m_CmdUsage` Если запись еще не существует.
 
-Этот метод ничего не делает в следующих случаях:
+Этот метод не выполняет никаких действий в следующих случаях:
 
-- Платформа панели инструментов находится в режиме настройки (метод [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode) возвращает ненулевое значение).
+- Платформа панели инструментов находится в режиме настройки (метод [CMFCToolBar:: искустомиземоде](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode) возвращает ненулевое значение).
 
-- Команда относится к сепаратору подменю или меню *(uiCmd* равен 0 или -1).
+- Команда ссылается на подменю или разделитель меню ( *уикмд* равно 0 или-1).
 
-- *uiCmd* относится к стандартной `IsStandardCommand` команде (глобальная функция возвращает ненулевое значение).
+- *уикмд* ссылается на стандартную команду (Глобальная `IsStandardCommand` функция возвращает ненулевое значение).
 
-## <a name="cmfccmdusagecountgetcount"></a><a name="getcount"></a>CMFCCmdUsageCount::GetCount
+## <a name="cmfccmdusagecountgetcount"></a><a name="getcount"></a> CMFCCmdUsageCount:: NOCOUNT
 
-Извлекает количество использования, связанное с данным идентификатором команды.
+Возвращает счетчик использования, связанный с заданным ИДЕНТИФИКАТОРом команды.
 
 ```
 UINT GetCount(UINT uiCmd) const;
@@ -123,18 +121,16 @@ UINT GetCount(UINT uiCmd) const;
 
 ### <a name="parameters"></a>Параметры
 
-|||
-|-|-|
-|Параметр|Описание|
-|*uiCmd*|(в) Идентификатор счетчика команды для извлечения.|
+*уикмд*\
+окне ИДЕНТИФИКАТОР получаемого счетчика команды.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Количество использования, связанное с данным идентификатором команды.
+Счетчик использования, связанный с заданным ИДЕНТИФИКАТОРом команды.
 
-## <a name="cmfccmdusagecounthasenoughinformation"></a><a name="hasenoughinformation"></a>CMFCCmdUsageCount::HasEnoughInformation
+## <a name="cmfccmdusagecounthasenoughinformation"></a><a name="hasenoughinformation"></a> CMFCCmdUsageCount:: Хасенаугхинформатион
 
-Определяет, получил ли этот объект минимальное количество данных отслеживания.
+Определяет, получил ли этот объект минимальный объем данных отслеживания.
 
 ```
 BOOL HasEnoughInformation() const;
@@ -142,17 +138,17 @@ BOOL HasEnoughInformation() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Nonzero, если этот объект получил минимальное количество данных отслеживания; в противном случае 0.
+Ненулевое значение, если этот объект получил минимальный объем данных отслеживания; в противном случае — 0.
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод возвращает ненулевое значение, `m_nTotalUsage`если общее количество всех отслеживаемых команд равно `m_nStartCount`или больше первоначального количества. По умолчанию фреймворк устанавливает исходное количество 0. Вы можете переопределить это значение с помощью метода [CMFCCmdUsageCount::SetOptions.](#setoptions)
+Этот метод возвращает ненулевое значение, если общее число `m_nTotalUsage` всех записанных команд равно значению начального счетчика или превышает его `m_nStartCount` . По умолчанию платформа устанавливает начальное значение счетчика 0. Это значение можно переопределить с помощью метода [CMFCCmdUsageCount:: сетоптионс](#setoptions) .
 
-Этот метод используется [CMFCMenuBar::IsShowAllCommands,](../../mfc/reference/cmfcmenubar-class.md#isshowallcommands) чтобы определить, следует ли показывать все доступные команды меню.
+Этот метод используется функцией [CMFCMenuBar:: исшоваллкоммандс](../../mfc/reference/cmfcmenubar-class.md#isshowallcommands) , чтобы определить, следует ли отображать все доступные команды меню.
 
-## <a name="cmfccmdusagecountisfreqeuntlyusedcmd"></a><a name="isfreqeuntlyusedcmd"></a>CMFCCmdUsageCount::IsFreqeuntlyUsedCmd
+## <a name="cmfccmdusagecountisfreqeuntlyusedcmd"></a><a name="isfreqeuntlyusedcmd"></a> CMFCCmdUsageCount:: Исфрекеунтлюседкмд
 
-Определяет, часто ли используется данная команда.
+Определяет, используется ли данная команда часто.
 
 ```
 BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;
@@ -160,24 +156,22 @@ BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;
 
 ### <a name="parameters"></a>Параметры
 
-|||
-|-|-|
-|Параметр|Описание|
-|*uiCmd*|(в) Определяет команду для проверки.|
+*уикмд*\
+окне Указывает команду для проверки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Nonzero, если команда часто используется; в противном случае 0.
+Ненулевое значение, если команда часто используется; в противном случае — 0.
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод возвращает 0, если `m_nTotalUsage`общее использование команды, 0. В противном случае этот метод возвращается ненулевой, если процент, `m_nMinUsagePercentage`из которого используется указанная команда, больше минимального процента. По умолчанию фреймворк устанавливает минимальный процент до 5. Вы можете переопределить это значение с помощью метода [CMFCCmdUsageCount::SetOptions.](#setoptions) Если минимальный процент составляет 0, этот метод возвращается ненулевой, если указанный подсчет команд превышает 0.
+Этот метод возвращает 0, если общее использование команды `m_nTotalUsage` равно 0. В противном случае этот метод возвращает ненулевое значение, если процент, в котором используется указанная команда, больше, чем минимальный процент, `m_nMinUsagePercentage` . По умолчанию платформа устанавливает для минимального значения в процентах значение 5. Это значение можно переопределить с помощью метода [CMFCCmdUsageCount:: сетоптионс](#setoptions) . Если минимальный процент равен 0, этот метод возвращает ненулевое значение, если указанное число команд больше 0.
 
-[CMFCToolBar::IsCommandRarelyUsed](../../mfc/reference/cmfctoolbar-class.md#iscommandrarelyused) использует этот метод, чтобы определить, редко ли используется команда.
+[CMFCToolBar:: искоммандрарелюсед](../../mfc/reference/cmfctoolbar-class.md#iscommandrarelyused) использует этот метод, чтобы определить, используется ли команда редко.
 
-## <a name="cmfccmdusagecountreset"></a><a name="reset"></a>CMFCCmdUsageCount::Перезагрузка
+## <a name="cmfccmdusagecountreset"></a><a name="reset"></a> CMFCCmdUsageCount:: Reset
 
-Очищает количество использования всех команд.
+Очищает счетчик использования всех команд.
 
 ```cpp
 void Reset();
@@ -185,11 +179,11 @@ void Reset();
 
 ### <a name="remarks"></a>Remarks
 
-Вызов иметод, чтобы очистить все записи из `m_CmdUsage`структуры карты командных отсчетов, и сбросить общее использование команды, `m_nTotalUsage`, счетчик 0.
+Вызовите этот метод, чтобы очистить все записи из структуры карт для счетчика команд, `m_CmdUsage` и, чтобы сбросить общее использование команды, `m_nTotalUsage` , счетчик — 0.
 
-## <a name="cmfccmdusagecountserialize"></a><a name="serialize"></a>CMFCCmdUsageCount::: Сериал
+## <a name="cmfccmdusagecountserialize"></a><a name="serialize"></a> CMFCCmdUsageCount:: Serialize
 
-Читает этот объект из архива или записывает его в архив.
+Считывает этот объект из архива или записывает его в архив.
 
 ```
 virtual void Serialize(CArchive& ar);
@@ -197,20 +191,18 @@ virtual void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>Параметры
 
-|||
-|-|-|
-|Параметр|Описание|
-|*ar*|(в) Объект `CArchive` для сериализации из или в.|
+*AR*\
+окне `CArchive` Объект для сериализации из или в.
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод сериализирует структуру карты `m_CmdUsage`командных подсчетов, `m_nTotalUsage`а также общее использование команды, счетчик от или к указанному архиву.
+Этот метод сериализует структуру отображения счетчиков команд, `m_CmdUsage` и общее использование команды, `m_nTotalUsage` , счетчик из или в указанный архив.
 
-Для примеров сериализации [см. Сериализация: Сериализация объекта](../../mfc/serialization-serializing-an-object.md).
+Примеры сериализации см. [в разделе Сериализация: сериализация объекта](../../mfc/serialization-serializing-an-object.md).
 
-## <a name="cmfccmdusagecountsetoptions"></a><a name="setoptions"></a>CMFCCmdUsageCount::SetOptions
+## <a name="cmfccmdusagecountsetoptions"></a><a name="setoptions"></a> CMFCCmdUsageCount:: Сетоптионс
 
-Устанавливает значения общих `CMFCCmdUsageCount` членов данных класса.
+Задает значения `CMFCCmdUsageCount` членов данных общего класса.
 
 ```
 static BOOL __stdcall SetOptions(
@@ -220,24 +212,24 @@ static BOOL __stdcall SetOptions(
 
 ### <a name="parameters"></a>Параметры
 
-|||
-|-|-|
-|Параметр|Описание|
-|*nStartCount*|(в) Новый первоначальный подсчет всех отслеживаемых команд.|
-|*nMinUsageПроцент*|(в) Новый минимальный процент использования.|
+*нстарткаунт*\
+окне Новое начальное число всех отслеживаний команд.
+
+*нминусажеперцентаже*\
+окне Новый минимальный процент использования.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-ПРАВДА, если метод удается, FALSE, если *nMinUsageПроцент* параметр больше или равна 100.
+Значение TRUE, если метод выполняется, значение FALSE, если значение параметра *нминусажеперцентаже* больше или равно 100.
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод устанавливает `CMFCCmdUsageCount` общих `m_nStartCount` `m_nMinUsagePercentage` членов данных класса и *nStartCount* и *nMinUsagePercentage*, соответственно. `m_nStartCount`используется [методом CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation) метод, чтобы определить, является ли этот объект собрал минимальное количество данных отслеживания. `m_nMinUsagePercentage`используется [методом CMFCCmdUsageCount::IsFreqeuntlyUsedCmd](#isfreqeuntlyusedcmd) метод, чтобы определить, часто ли используется данная команда.
+Этот метод задает `CMFCCmdUsageCount` члены данных общего класса `m_nStartCount` , а `m_nMinUsagePercentage` также *нстарткаунт* и *нминусажеперцентаже*соответственно. `m_nStartCount` используется методом [CMFCCmdUsageCount:: хасенаугхинформатион](#hasenoughinformation) , чтобы определить, собрал ли этот объект минимальный объем данных отслеживания. `m_nMinUsagePercentage` используется методом [CMFCCmdUsageCount:: исфрекеунтлюседкмд](#isfreqeuntlyusedcmd) , чтобы определить, используется ли данная команда часто.
 
-В сборке Debug этот метод генерирует сбой утверждения, если параметр *nMinUsagePercentage* больше или равен 100.
+В отладочных сборках этот метод создает ошибку утверждения, если параметр *нминусажеперцентаже* больше или равен 100.
 
 ## <a name="see-also"></a>См. также раздел
 
-[Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
+[Иерархическая диаграмма](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)<br/>
 [Класс CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)

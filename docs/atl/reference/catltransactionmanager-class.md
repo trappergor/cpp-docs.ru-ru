@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlTransactionManager class
 ms.assetid: b01732dc-1d16-4b42-bfac-b137fca2b740
-ms.openlocfilehash: 968582feccd8ba9252ca009699eef6eae2c5c3d6
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 74afc1a82c12d6138198f5696d300825e06aba1e
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82167829"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562220"
 ---
 # <a name="catltransactionmanager-class"></a>Класс Катлтрансактионманажер
 
@@ -49,18 +49,18 @@ class CAtlTransactionManager;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[~ Катлтрансактионманажер](#dtor)|Деструктор Катлтрансактионманажер.|
 |[катлтрансактионманажер](#catltransactionmanager)|Конструктор Катлтрансактионманажер.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[Закрыть](#close)|Закрывает один маркер транзакции.|
 |[Фиксация](#commit)|Запрашивает фиксацию транзакции.|
-|[Создать](#create)|Создает обработчик транзакции.|
+|[Создание](#create)|Создает обработчик транзакции.|
 |[CreateFile](#createfile)|Создает или открывает файл, файловый поток или каталог в качестве транзакционной операции.|
 |[DeleteFile](#deletefile)|Удаляет существующий файл как транзакционную операцию.|
 |[FindFirstFile](#findfirstfile)|Выполняет поиск файла или подкаталога в каталоге в качестве транзакционной операции.|
@@ -92,7 +92,7 @@ class CAtlTransactionManager;
 
 **Заголовок:** атлтрансактионманажер. h
 
-## <a name="catltransactionmanager"></a><a name="dtor"></a>~ Катлтрансактионманажер
+## <a name="catltransactionmanager"></a><a name="dtor"></a>  ~ Катлтрансактионманажер
 
 Деструктор Катлтрансактионманажер.
 
@@ -104,7 +104,7 @@ virtual ~CAtlTransactionManager();
 
 При нормальной обработке транзакция автоматически фиксируется и закрывается. Если деструктор вызывается во время очистки исключения, происходит откат и закрытие транзакции.
 
-## <a name="catltransactionmanager"></a><a name="catltransactionmanager"></a>катлтрансактионманажер
+## <a name="catltransactionmanager"></a><a name="catltransactionmanager"></a> катлтрансактионманажер
 
 Конструктор Катлтрансактионманажер.
 
@@ -122,7 +122,7 @@ CAtlTransactionManager(BOOL bFallback = TRUE, BOOL bAutoCreateTransaction = TRUE
 
 ### <a name="remarks"></a>Remarks
 
-## <a name="close"></a><a name="close"></a>Выхода
+## <a name="close"></a><a name="close"></a> Выхода
 
 Закрывает маркер транзакции.
 
@@ -138,7 +138,7 @@ inline BOOL Close();
 
 Эта оболочка вызывает `CloseHandle` функцию. Метод автоматически вызывается в деструкторе.
 
-## <a name="commit"></a><a name="commit"></a>Сохраните
+## <a name="commit"></a><a name="commit"></a> Сохраните
 
 Запрашивает фиксацию транзакции.
 
@@ -154,7 +154,7 @@ inline BOOL Commit();
 
 Эта оболочка вызывает `CommitTransaction` функцию. Метод автоматически вызывается в деструкторе.
 
-## <a name="create"></a><a name="create"></a>Создания
+## <a name="create"></a><a name="create"></a> Создание
 
 Создает обработчик транзакции.
 
@@ -170,7 +170,7 @@ inline BOOL Create();
 
 Эта оболочка вызывает `CreateTransaction` функцию. Проверьте его на наличие
 
-## <a name="createfile"></a><a name="createfile"></a>CreateFile
+## <a name="createfile"></a><a name="createfile"></a> CreateFile
 
 Создает или открывает файл, файловый поток или каталог в качестве транзакционной операции.
 
@@ -203,7 +203,7 @@ inline HANDLE CreateFile(
 Действие, выполняемое с файлами, которые существуют и не существуют. Этот параметр должен иметь одно из следующих значений, которые не могут быть объединены: CREATE_ALWAYS, CREATE_NEW, OPEN_ALWAYS, OPEN_EXISTING или TRUNCATE_EXISTING.
 
 *двфлагсандаттрибутес*<br/>
-Атрибуты и флаги файла. Этот параметр может включать любое сочетание доступных атрибутов файлов (FILE_ATTRIBUTE_ *). Все остальные атрибуты файла переопределяют FILE_ATTRIBUTE_NORMAL. Этот параметр также может содержать сочетания флагов (FILE_FLAG_\*) для управления поведением буферизации, режимами доступа и другими флагами специального назначения. Они объединяются с любыми FILE_ATTRIBUTE_ными\* значениями.
+Атрибуты и флаги файла. Этот параметр может включать любое сочетание доступных атрибутов файлов (FILE_ATTRIBUTE_ *). Все остальные атрибуты файла переопределяют FILE_ATTRIBUTE_NORMAL. Этот параметр также может содержать сочетания флагов (FILE_FLAG_ \* ) для управления поведением буферизации, режимами доступа и другими флагами специального назначения. Они объединяются с любыми FILE_ATTRIBUTE_ными \* значениями.
 
 *хтемплатефиле*<br/>
 Допустимый маркер файла шаблона с правом доступа GENERIC_READ. Файл шаблона предоставляет атрибуты файлов и дополнительные атрибуты для создаваемого файла. Этот параметр может иметь значение NULL.
@@ -216,7 +216,7 @@ inline HANDLE CreateFile(
 
 Эта оболочка вызывает `CreateFileTransacted` функцию.
 
-## <a name="deletefile"></a><a name="deletefile"></a>DeleteFile
+## <a name="deletefile"></a><a name="deletefile"></a> DeleteFile
 
 Удаляет существующий файл как транзакционную операцию.
 
@@ -233,7 +233,7 @@ inline BOOL DeleteFile(LPCTSTR lpFileName);
 
 Эта оболочка вызывает `DeleteFileTransacted` функцию.
 
-## <a name="findfirstfile"></a><a name="findfirstfile"></a>FindFirstFile
+## <a name="findfirstfile"></a><a name="findfirstfile"></a> FindFirstFile
 
 Выполняет поиск файла или подкаталога в каталоге в качестве транзакционной операции.
 
@@ -253,13 +253,13 @@ inline HANDLE FindFirstFile(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если функция выполнена, возвращаемое значение является маркером поиска, используемым при последующем вызове `FindNextFile` метода `FindClose`или. Если функция завершается ошибкой или не находит файлы из строки поиска в параметре *лпфиленаме* , возвращается значение INVALID_HANDLE_VALUE.
+Если функция выполнена, возвращаемое значение является маркером поиска, используемым при последующем вызове метода `FindNextFile` или `FindClose` . Если функция завершается ошибкой или не находит файлы из строки поиска в параметре *лпфиленаме* , возвращается значение INVALID_HANDLE_VALUE.
 
 ### <a name="remarks"></a>Remarks
 
 Эта оболочка вызывает `FindFirstFileTransacted` функцию.
 
-## <a name="getfileattributes"></a><a name="getfileattributes"></a>GetFileAttributes
+## <a name="getfileattributes"></a><a name="getfileattributes"></a> GetFileAttributes
 
 Получает атрибуты файловой системы для указанного файла или каталога в качестве транзакционной операции.
 
@@ -276,7 +276,7 @@ inline DWORD GetFileAttributes(LPCTSTR lpFileName);
 
 Эта оболочка вызывает `GetFileAttributesTransacted` функцию.
 
-## <a name="getfileattributesex"></a><a name="getfileattributesex"></a>Сбой getfileattributesex
+## <a name="getfileattributesex"></a><a name="getfileattributesex"></a> Сбой getfileattributesex
 
 Получает атрибуты файловой системы для указанного файла или каталога в качестве транзакционной операции.
 
@@ -302,7 +302,7 @@ inline BOOL GetFileAttributesEx(
 
 Эта оболочка вызывает `GetFileAttributesTransacted` функцию.
 
-## <a name="gethandle"></a><a name="gethandle"></a>GetHandle
+## <a name="gethandle"></a><a name="gethandle"></a> GetHandle
 
 Возвращает маркер транзакции.
 
@@ -312,11 +312,11 @@ HANDLE GetHandle() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает маркер транзакции для класса. Возвращает значение NULL, `CAtlTransactionManager` если не присоединен к маркеру.
+Возвращает маркер транзакции для класса. Возвращает значение NULL, если `CAtlTransactionManager` не присоединен к маркеру.
 
 ### <a name="remarks"></a>Remarks
 
-## <a name="isfallback"></a><a name="isfallback"></a>Возврат
+## <a name="isfallback"></a><a name="isfallback"></a> Возврат
 
 Определяет, включены ли резервные вызовы.
 
@@ -330,7 +330,7 @@ BOOL IsFallback() const;
 
 ### <a name="remarks"></a>Remarks
 
-## <a name="m_bfallback"></a><a name="m_bfallback"></a>m_bFallback
+## <a name="m_bfallback"></a><a name="m_bfallback"></a> m_bFallback
 
 Значение TRUE, если резервная поддержка поддерживается; В противном случае — значение FALSE.
 
@@ -340,7 +340,7 @@ BOOL m_bFallback;
 
 ### <a name="remarks"></a>Remarks
 
-## <a name="m_htransaction"></a><a name="m_htransaction"></a>m_hTransaction
+## <a name="m_htransaction"></a><a name="m_htransaction"></a> m_hTransaction
 
 Маркер транзакции.
 
@@ -350,7 +350,7 @@ HANDLE m_hTransaction;
 
 ### <a name="remarks"></a>Remarks
 
-## <a name="movefile"></a><a name="movefile"></a>MoveFile
+## <a name="movefile"></a><a name="movefile"></a> MoveFile
 
 Перемещает существующий файл или каталог, включая его дочерние элементы, в качестве транзакционной операции.
 
@@ -370,7 +370,7 @@ inline BOOL MoveFile(LPCTSTR lpOldFileName, LPCTSTR lpNewFileName);
 
 Эта оболочка вызывает `MoveFileTransacted` функцию.
 
-## <a name="regcreatekeyex"></a><a name="regcreatekeyex"></a>регкреатекэйекс
+## <a name="regcreatekeyex"></a><a name="regcreatekeyex"></a> регкреатекэйекс
 
 Создает указанный раздел реестра и связывает его с транзакцией. Если ключ уже существует, функция открывает его.
 
@@ -424,7 +424,7 @@ inline LSTATUS RegCreateKeyEx(
 
 Эта оболочка вызывает `RegCreateKeyTransacted` функцию.
 
-## <a name="regdeletekey"></a><a name="regdeletekey"></a>регделетекэй
+## <a name="regdeletekey"></a><a name="regdeletekey"></a> регделетекэй
 
 Удаляет подраздел и его значения из указанного представления реестра для конкретной платформы в качестве транзакционной операции.
 
@@ -434,10 +434,11 @@ inline LSTATUS RegDeleteKeyEx(HKEY hKey, LPCTSTR lpSubKey);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*hKey*|Маркер открытого раздела реестра.|
-|*лпсубкэй*|Имя удаляемого ключа.|
+*hKey*\
+Маркер открытого раздела реестра.
+
+*лпсубкэй*\
+Имя удаляемого ключа.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -447,7 +448,7 @@ inline LSTATUS RegDeleteKeyEx(HKEY hKey, LPCTSTR lpSubKey);
 
 Эта оболочка вызывает `RegDeleteKeyTransacted` функцию.
 
-## <a name="regopenkeyex"></a><a name="regopenkeyex"></a>RegOpenKeyEx
+## <a name="regopenkeyex"></a><a name="regopenkeyex"></a> RegOpenKeyEx
 
 Открывает указанный раздел реестра и связывает его с транзакцией.
 
@@ -485,7 +486,7 @@ inline LSTATUS RegOpenKeyEx(
 
 Эта оболочка вызывает `RegOpenKeyTransacted` функцию.
 
-## <a name="rollback"></a><a name="rollback"></a>Отката
+## <a name="rollback"></a><a name="rollback"></a> Отката
 
 Запрашивает откат транзакции.
 
@@ -501,7 +502,7 @@ inline BOOL Rollback();
 
 Эта оболочка вызывает `RollbackTransaction` функцию.
 
-## <a name="setfileattributes"></a><a name="setfileattributes"></a>сетфилеаттрибутес
+## <a name="setfileattributes"></a><a name="setfileattributes"></a> сетфилеаттрибутес
 
 Задает атрибуты для файла или каталога в качестве транзакционной операции.
 
@@ -521,6 +522,6 @@ inline BOOL SetFileAttributes(LPCTSTR lpFileName, DWORD dwAttributes);
 
 Эта оболочка вызывает `SetFileAttributesTransacted` функцию.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Компоненты ATL COM Desktop](../../atl/atl-com-desktop-components.md)

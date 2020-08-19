@@ -16,12 +16,12 @@ helpviewer_keywords:
 - stdext::max_fixed_size [C++], released
 - stdext::max_fixed_size [C++], saved
 ms.assetid: 8c8f4588-37e9-4579-8168-ba3553800914
-ms.openlocfilehash: 23aa10a3398c3f20de73eb2ac6fa1372efdc32e5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e62884c83d71b4e9f1902fa4bc7f52f5e0a4e0ee
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228210"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561691"
 ---
 # <a name="max_fixed_size-class"></a>Класс max_fixed_size
 
@@ -36,13 +36,12 @@ class max_fixed_size
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
-|---------------|-----------------|
-|*Максимальной*|Класс max, который определяет максимальное количество элементов для хранения в `freelist`.|
+*Максимальной*\
+Класс max, который определяет максимальное количество элементов для хранения в `freelist`.
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[max_fixed_size](#max_fixed_size)|Создает объект типа `max_fixed_size`.|
 
@@ -62,7 +61,7 @@ class max_fixed_size
 
 **Пространство имен:** stdext
 
-## <a name="max_fixed_sizeallocated"></a><a name="allocated"></a>max_fixed_size:: выделено
+## <a name="max_fixed_sizeallocated"></a><a name="allocated"></a> max_fixed_size:: выделено
 
 Увеличивает счетчик выделенных блоков памяти.
 
@@ -72,15 +71,14 @@ void allocated(std::size_t _Nx = 1);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
-|---------------|-----------------|
-|*_Nx*|Значение приращения.|
+*_Nx*\
+Значение приращения.
 
 ### <a name="remarks"></a>Remarks
 
 Эта функция-член ничего не делает. Эта функция-член вызывается после каждого успешного вызова `cache_freelist::allocate` оператором **`new`** . Аргумент *_Nx* — число блоков памяти в блоке, выделенном оператором **`new`** .
 
-## <a name="max_fixed_sizedeallocated"></a><a name="deallocated"></a>max_fixed_size::d еаллокатед
+## <a name="max_fixed_sizedeallocated"></a><a name="deallocated"></a> max_fixed_size::d еаллокатед
 
 Уменьшает счетчик выделенных блоков памяти.
 
@@ -90,15 +88,14 @@ void deallocated(std::size_t _Nx = 1);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
-|---------------|-----------------|
-|*_Nx*|Значение приращения.|
+*_Nx*\
+Значение приращения.
 
 ### <a name="remarks"></a>Remarks
 
 Эта функция-член ничего не делает. Эта функция-член вызывается после каждого вызова `cache_freelist::deallocate` оператором **`delete`** . Аргумент *_Nx* — число блоков памяти в блоке, освобожденных оператором **`delete`** .
 
-## <a name="max_fixed_sizefull"></a><a name="full"></a>max_fixed_size:: Full
+## <a name="max_fixed_sizefull"></a><a name="full"></a> max_fixed_size:: Full
 
 Возвращает значение, указывающее, следует ли добавить дополнительные блоки памяти для свободного списка.
 
@@ -114,7 +111,7 @@ bool full();
 
 Эта функция-член вызывается `cache_freelist::deallocate`. Если вызов возвращает **`true`** , `deallocate` помещает блок памяти в свободный список; если возвращается значение false, `deallocate` вызывает оператор **`delete`** для освобождения блока.
 
-## <a name="max_fixed_sizemax_fixed_size"></a><a name="max_fixed_size"></a>max_fixed_size:: max_fixed_size
+## <a name="max_fixed_sizemax_fixed_size"></a><a name="max_fixed_size"></a> max_fixed_size:: max_fixed_size
 
 Создает объект типа `max_fixed_size`.
 
@@ -126,7 +123,7 @@ max_fixed_size();
 
 Конструктор инициализирует сохраненное значение `_Nblocks` нулем.
 
-## <a name="max_fixed_sizereleased"></a><a name="released"></a>max_fixed_size:: Released
+## <a name="max_fixed_sizereleased"></a><a name="released"></a> max_fixed_size:: Released
 
 Уменьшает количество блоков памяти в свободном списке.
 
@@ -138,7 +135,7 @@ void released();
 
 Уменьшает хранимое значение `_Nblocks`. `released`Функция-член текущего [класса Max](../standard-library/allocators-header.md) вызывается при `cache_freelist::allocate` каждом удалении блока памяти из свободного списка.
 
-## <a name="max_fixed_sizesaved"></a><a name="saved"></a>max_fixed_size:: сохранен
+## <a name="max_fixed_sizesaved"></a><a name="saved"></a> max_fixed_size:: сохранен
 
 Увеличивает количество блоков памяти в свободном списке.
 

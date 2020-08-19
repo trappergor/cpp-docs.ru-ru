@@ -1,5 +1,5 @@
 ---
-title: CmFCBaseВизуальныйменеджер Класс
+title: Класс Кмфкбасевисуалманажер
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCBaseVisualManager
@@ -28,18 +28,18 @@ helpviewer_keywords:
 - CMFCBaseVisualManager [MFC], CleanUpThemes
 - CMFCBaseVisualManager [MFC], UpdateSystemColors
 ms.assetid: d56f3afc-cdea-4de1-825a-a08999c571e0
-ms.openlocfilehash: ac64a3feac5d124c2bfa67fc857dad5045c2dd28
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 28efe75c3c825c04c88f9f2263a3db2d83d4f3af
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754891"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561327"
 ---
-# <a name="cmfcbasevisualmanager-class"></a>CmFCBaseВизуальныйменеджер Класс
+# <a name="cmfcbasevisualmanager-class"></a>Класс Кмфкбасевисуалманажер
 
-Слой между визуальными менеджерами и API темы Windows.
+Слой между производными визуальными руководителями и API темы Windows.
 
-`CMFCBaseVisualManager`загружает UxTheme.dll, если он доступен, и управляет доступом к методам API Windows Theme.
+`CMFCBaseVisualManager` загружает UxTheme.dll, если он доступен, и управляет доступом к методам API темы Windows.
 
 Этот класс предназначен только для внутреннего использования.
 
@@ -55,51 +55,51 @@ class CMFCBaseVisualManager: public CObject
 
 |||
 |-|-|
-|Имя|Описание|
-|[CMFCBaseВизуальныйМенеджер::CMFCBaseВизуальныйМенеджер](#cmfcbasevisualmanager)|Создает и инициализирует объект `CMFCBaseVisualManager`.|
+|name|Описание|
+|[Кмфкбасевисуалманажер:: Кмфкбасевисуалманажер](#cmfcbasevisualmanager)|Создает и инициализирует объект `CMFCBaseVisualManager`.|
 |`CMFCBaseVisualManager::~CMFCBaseVisualManager`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
 |||
 |-|-|
-|Имя|Описание|
-|[CMFCBaseВизуальныйМенеджер::DrawCheckBox](#drawcheckbox)|Рисует управление флажком, используя текущую тему Windows.|
-|[CMFCBaseVisualManager::DrawComboBorder](#drawcomboborder)|Рисует границу комбо-коробки с помощью текущей темы Windows.|
-|[CMFCBaseVisualManager::DrawComboDropButton](#drawcombodropbutton)|Рисует кнопку выпадения комбо-окна с использованием текущей темы Windows.|
-|[CMFCBaseВизуальныйМенеджер::DrawPushButton](#drawpushbutton)|Рисует кнопку с использованием текущей темы Windows.|
-|[CMFCBaseВизуальныйМенеджер::DrawRadioButton](#drawradiobutton)|Рисует управление кнопкой радио, используя текущую тему Windows.|
-|[CMFCBaseВизуальныйменеджер::DрауостамастБарПрогресс](#drawstatusbarprogress)|Рисует панель прогресса на элементе управления статусом [(класс CMFCStatusBar)](../../mfc/reference/cmfcstatusbar-class.md)с использованием текущей темы Windows.|
-|[CMFCBaseВизуальныйМенеджер::FillReBarPane](#fillrebarpane)|Заполняет фон управления арматом с помощью текущей темы Windows.|
-|[CMFCBaseVisualManager::GetStandardWindowsTheme](#getstandardwindowstheme)|Получает текущую тему Windows.|
+|name|Описание|
+|[Кмфкбасевисуалманажер::D Равчеккбокс](#drawcheckbox)|Рисует элемент управления "флажок" с помощью текущей темы Windows.|
+|[Кмфкбасевисуалманажер::D Равкомбобордер](#drawcomboborder)|Рисует границу поля со списком с помощью текущей темы Windows.|
+|[Кмфкбасевисуалманажер::D Равкомбодропбуттон](#drawcombodropbutton)|Рисует кнопку раскрывающегося списка с помощью текущей темы Windows.|
+|[Кмфкбасевисуалманажер::D Равпушбуттон](#drawpushbutton)|Рисует кнопку отправки с помощью текущей темы Windows.|
+|[Кмфкбасевисуалманажер::D Раврадиобуттон](#drawradiobutton)|Рисует элемент управления "переключатель" с помощью текущей темы Windows.|
+|[Кмфкбасевисуалманажер::D Равстатусбарпрогресс](#drawstatusbarprogress)|Рисует индикатор выполнения в элементе управления "строка состояния" ( [Класс CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md)), используя текущую тему Windows.|
+|[Кмфкбасевисуалманажер:: Филлребарпане](#fillrebarpane)|Заполняет фон элемента управления главной панели с помощью текущей темы Windows.|
+|[Кмфкбасевисуалманажер:: Жетстандардвиндовссеме](#getstandardwindowstheme)|Возвращает текущую тему Windows.|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
 |||
 |-|-|
 |Имя|Описание|
-|[CMFCBaseВизуальныйМенеджер::ОчисткаТемы](#cleanupthemes)|Звонки `CloseThemeData` для всех ручек, полученных в `UpdateSystemColors`.|
-|[CMFCBaseВизуальныйМенеджер::ОбновлениеСистемныеЦвета](#updatesystemcolors)|Призывы `OpenThemeData` к получению ручек для рисования различных элементов управления: окна, панели инструментов, кнопки и так далее.|
+|[Кмфкбасевисуалманажер:: Клеанупсемес](#cleanupthemes)|Вызовы `CloseThemeData` для всех дескрипторов, полученных в `UpdateSystemColors` .|
+|[Кмфкбасевисуалманажер:: Упдатесистемколорс](#updatesystemcolors)|Вызовы `OpenThemeData` для получения дескрипторов для рисования различных элементов управления: окон, панелей инструментов, кнопок и т. д.|
 
 ## <a name="remarks"></a>Remarks
 
-Вам не нужно мгновенно объекты этого класса напрямую.
+Нет необходимости напрямую создавать экземпляры объектов этого класса.
 
-Поскольку это базовый класс для всех визуальных менеджеров, вы можете просто позвонить [CMFCVisualManager::GetInstance](../../mfc/reference/cmfcvisualmanager-class.md#getinstance), `CMFCBaseVisualManager` получить указатель на текущий визуальный менеджер, и получить доступ к методам использования этого указателя. Однако, если вам нужно отобразить элемент управления с помощью `CMFCVisualManagerWindows` текущей темы Windows, лучше использовать интерфейс.
+Поскольку это базовый класс для всех визуальных диспетчеров, можно просто вызвать [CMFCVisualManager::-instance](../../mfc/reference/cmfcvisualmanager-class.md#getinstance), получить указатель на текущий диспетчер визуальных элементов и получить доступ к методам `CMFCBaseVisualManager` , использующим этот указатель. Однако если необходимо отобразить элемент управления с использованием текущей темы Windows, лучше использовать `CMFCVisualManagerWindows` интерфейс.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CMFCBaseВизуальныйМенеджер](../../mfc/reference/cmfcbasevisualmanager-class.md)
+[кмфкбасевисуалманажер](../../mfc/reference/cmfcbasevisualmanager-class.md)
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** afxvisualmanager.h
+**Заголовок:** афксвисуалманажер. h
 
-## <a name="cmfcbasevisualmanagercleanupthemes"></a><a name="cleanupthemes"></a>CMFCBaseВизуальныйМенеджер::ОчисткаТемы
+## <a name="cmfcbasevisualmanagercleanupthemes"></a><a name="cleanupthemes"></a> Кмфкбасевисуалманажер:: Клеанупсемес
 
-Звонки `CloseThemeData` для всех ручек, полученных в `UpdateSystemColors`.
+Вызовы `CloseThemeData` для всех дескрипторов, полученных в `UpdateSystemColors` .
 
 ```cpp
 void CleanUpThemes();
@@ -109,7 +109,7 @@ void CleanUpThemes();
 
 Только для внутреннего использования.
 
-## <a name="cmfcbasevisualmanagercmfcbasevisualmanager"></a><a name="cmfcbasevisualmanager"></a>CMFCBaseВизуальныйМенеджер::CMFCBaseВизуальныйМенеджер
+## <a name="cmfcbasevisualmanagercmfcbasevisualmanager"></a><a name="cmfcbasevisualmanager"></a> Кмфкбасевисуалманажер:: Кмфкбасевисуалманажер
 
 Создает и инициализирует объект `CMFCBaseVisualManager`.
 
@@ -117,9 +117,9 @@ void CleanUpThemes();
 CMFCBaseVisualManager();
 ```
 
-## <a name="cmfcbasevisualmanagerdrawcheckbox"></a><a name="drawcheckbox"></a>CMFCBaseВизуальныйМенеджер::DrawCheckBox
+## <a name="cmfcbasevisualmanagerdrawcheckbox"></a><a name="drawcheckbox"></a> Кмфкбасевисуалманажер::D Равчеккбокс
 
-Рисует управление флажком, используя текущую тему Windows.
+Рисует элемент управления "флажок" с помощью текущей темы Windows.
 
 ```
 virtual BOOL DrawCheckBox(
@@ -135,43 +135,43 @@ virtual BOOL DrawCheckBox(
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
-(в) Указатель на контекст устройства
+*Хозяин*<br/>
+окне Указатель на контекст устройства
 
 *rect*<br/>
-(в) Ограничивающий прямоугольник флажка.
+окне Ограничивающий прямоугольник флажка.
 
-*bНазалион*<br/>
-(в) Определяет, выделен ли флажок.
+*бхигхлигхтед*<br/>
+окне Указывает, выделен ли флажок.
 
-*nState*<br/>
-0 для бесконтрольного, 1 для проверенного нормального,
+*Nсведения*<br/>
+[in] 0 флажок снят, 1 — проверено нормальное
 
-2 для смешанного нормального.
+2 для смешанной нормальной.
 
-*bВСтои*<br/>
-(в) Определяет, включен ли флажок.
+*бенаблед*<br/>
+окне Указывает, включен ли флажок.
 
-*bPressed*<br/>
-(в) Определяет, нажата ли флажок.
+*бпрессед*<br/>
+окне Указывает, нажата ли галочка.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-TRUE, если Тема API включен; в противном случае FALSE.
+Значение TRUE, если API темы включен; в противном случае — FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Значения *nState* соответствуют следующим стилям флажок.
+Значения *nсведения* соответствуют следующим стилям флажков.
 
-|nState|Проверить стиль коробки|
+|Nсведения|Стиль флажка|
 |------------|---------------------|
 |0|CBS_UNCHECKEDNORMAL|
 |1|CBS_CHECKEDNORMAL|
 |2|CBS_MIXEDNORMAL|
 
-## <a name="cmfcbasevisualmanagerdrawcomboborder"></a><a name="drawcomboborder"></a>CMFCBaseVisualManager::DrawComboBorder
+## <a name="cmfcbasevisualmanagerdrawcomboborder"></a><a name="drawcomboborder"></a> Кмфкбасевисуалманажер::D Равкомбобордер
 
-Рисует границу комбо-коробки, используя текущую тему Windows.
+Рисует границу поля со списком с помощью текущей темы Windows.
 
 ```
 virtual BOOL DrawComboBorder(
@@ -184,28 +184,28 @@ virtual BOOL DrawComboBorder(
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
-(в) Указатель на контекст устройства.
+*Хозяин*<br/>
+окне Указатель на контекст устройства.
 
 *rect*<br/>
-(в) Связанный прямоугольник границы комбо-коробки.
+окне Ограничивающий прямоугольник границы поля со списком.
 
-*bDisabled*<br/>
-(в) Определяет, отключена ли граница комбо-бокса.
+*бдисаблед*<br/>
+окне Указывает, отключена ли граница поля со списком.
 
-*bIsDropped*<br/>
-(в) Определяет, сбрасываетли ли граница комбо-бокса.
+*бисдроппед*<br/>
+окне Указывает, отбрасывается ли граница поля со списком.
 
-*bIsHighlighted*<br/>
-(в) Определяет, выделяется ли граница комбо-бокса.
+*бишигхлигхтед*<br/>
+окне Указывает, выделяется ли граница поля со списком.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-TRUE, если Тема API включен; в противном случае FALSE.
+Значение TRUE, если API темы включен; в противном случае — FALSE.
 
-## <a name="cmfcbasevisualmanagerdrawcombodropbutton"></a><a name="drawcombodropbutton"></a>CMFCBaseVisualManager::DrawComboDropButton
+## <a name="cmfcbasevisualmanagerdrawcombodropbutton"></a><a name="drawcombodropbutton"></a> Кмфкбасевисуалманажер::D Равкомбодропбуттон
 
-Рисует кнопку выпадения комбо-окна с использованием текущей темы Windows.
+Рисует кнопку раскрывающегося списка с помощью текущей темы Windows.
 
 ```
 virtual BOOL DrawComboDropButton(
@@ -218,21 +218,28 @@ virtual BOOL DrawComboDropButton(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*pDC*|(в) Указатель на контекст устройства.|
-|*rect*|(в) Ограничивающий прямоугольник кнопки выпадения комбо-коробки.|
-|*bDisabled*|(в) Определяет, отключена ли кнопка выпадения комбо-окна.|
-|*bIsDropped*|(в) Определяет, является ли комбо окно выпадения кнопку упал.|
-|*bIsHighlighted*|(в) Определяет, выделяется ли кнопка выпадения комбо-окна.|
+*Хозяин*\
+окне Указатель на контекст устройства.
+
+*перетаскиваемые*\
+окне Ограничивающий прямоугольник кнопки раскрывающегося списка в поле со списком.
+
+*бдисаблед*\
+окне Указывает, отключена ли кнопка раскрывающегося списка в поле со списком.
+
+*бисдроппед*\
+окне Указывает, раскрывается ли кнопка раскрывающегося списка в поле со списком.
+
+*бишигхлигхтед*\
+окне Указывает, выделяется ли кнопка раскрывающегося списка в поле со списком.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-TRUE, если Тема API включен; в противном случае FALSE.
+Значение TRUE, если API темы включен; в противном случае — FALSE.
 
-## <a name="cmfcbasevisualmanagerdrawpushbutton"></a><a name="drawpushbutton"></a>CMFCBaseВизуальныйМенеджер::DrawPushButton
+## <a name="cmfcbasevisualmanagerdrawpushbutton"></a><a name="drawpushbutton"></a> Кмфкбасевисуалманажер::D Равпушбуттон
 
-Рисует кнопку с использованием текущей темы Windows.
+Рисует кнопку отправки с помощью текущей темы Windows.
 
 ```
 virtual BOOL DrawPushButton(
@@ -244,25 +251,25 @@ virtual BOOL DrawPushButton(
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
-(в) Указатель на контекст устройства.
+*Хозяин*<br/>
+окне Указатель на контекст устройства.
 
 *rect*<br/>
-(в) Ограничивающий прямоугольник кнопки.
+окне Ограничивающий прямоугольник кнопки "Отправить".
 
-*pButton*<br/>
-(в) Указатель на объект [класса CMFCButton](../../mfc/reference/cmfcbutton-class.md) для рисования.
+*пбуттон*<br/>
+окне Указатель на объект [класса кмфкбуттон](../../mfc/reference/cmfcbutton-class.md) для рисования.
 
-*uiState*<br/>
-(в) Игнорировать. Состояние взято из *pButton*.
+*уистате*<br/>
+окне Игнорируют. Состояние берется из *пбуттон*.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-TRUE, если Тема API включен; в противном случае FALSE.
+Значение TRUE, если API темы включен; в противном случае — FALSE.
 
-## <a name="cmfcbasevisualmanagerdrawradiobutton"></a><a name="drawradiobutton"></a>CMFCBaseВизуальныйМенеджер::DrawRadioButton
+## <a name="cmfcbasevisualmanagerdrawradiobutton"></a><a name="drawradiobutton"></a> Кмфкбасевисуалманажер::D Раврадиобуттон
 
-Рисует управление кнопкой радио, используя текущую тему Windows.
+Рисует элемент управления "переключатель" с помощью текущей темы Windows.
 
 ```
 virtual BOOL DrawRadioButton(
@@ -276,31 +283,31 @@ virtual BOOL DrawRadioButton(
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
-(в) Указатель на контекст устройства.
+*Хозяин*<br/>
+окне Указатель на контекст устройства.
 
 *rect*<br/>
-(в) Ограничивающий прямоугольник радиокнопки.
+окне Ограничивающий прямоугольник переключателя.
 
-*bНазалион*<br/>
-(в) Определяет, выделена ли кнопка радио.
+*бхигхлигхтед*<br/>
+окне Указывает, выделен ли переключатель.
 
-*bChecked*<br/>
-(в) Определяет, проверяется ли радиокнопка.
+*бчеккед*<br/>
+окне Указывает, установлен ли переключатель.
 
-*bВСтои*<br/>
-(в) Определяет, включена ли радиокнопка.
+*бенаблед*<br/>
+окне Указывает, включен ли переключатель.
 
-*bPressed*<br/>
-(в) Определяет, нажата ли радиокнопка.
+*бпрессед*<br/>
+окне Указывает, нажата ли переключатель.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-TRUE, если Тема API включен; в противном случае FALSE.
+Значение TRUE, если API темы включен; в противном случае — FALSE.
 
-## <a name="cmfcbasevisualmanagerdrawstatusbarprogress"></a><a name="drawstatusbarprogress"></a>CMFCBaseВизуальныйменеджер::DрауостамастБарПрогресс
+## <a name="cmfcbasevisualmanagerdrawstatusbarprogress"></a><a name="drawstatusbarprogress"></a> Кмфкбасевисуалманажер::D Равстатусбарпрогресс
 
-Рисует панель прогресса на элементе управления статусом [(класс CMFCStatusBar)](../../mfc/reference/cmfcstatusbar-class.md)с использованием текущей темы Windows.
+Рисует индикатор выполнения в элементе управления "строка состояния" ( [Класс CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md)), используя текущую тему Windows.
 
 ```
 virtual BOOL DrawStatusBarProgress(
@@ -317,40 +324,40 @@ virtual BOOL DrawStatusBarProgress(
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
-(в) Указатель на контекст устройства.
+*Хозяин*<br/>
+окне Указатель на контекст устройства.
 
-*pStatusBar*<br/>
-(в) Указатель на бар статуса. Это значение игнорируется.
+*пстатусбар*<br/>
+окне Указатель на строку состояния. Это значение игнорируется.
 
-*rectProgress*<br/>
-(в) Ограничивающий прямоугольник панели прогресса в координатах *pDC.*
+*ректпрогресс*<br/>
+окне Ограничивающий прямоугольник индикатора выполнения в координатах *основного контроллера домена* .
 
 *nProgressTotal*<br/>
-(в) Общее значение прогресса.
+окне Общее значение хода выполнения.
 
 *nProgressCurr*<br/>
-(в) Текущее значение прогресса.
+окне Текущее значение хода выполнения.
 
-*clrBar*<br/>
-(в) Стартовый цвет. `CMFCBaseVisualManager`игнорирует это. Выведенные классы могут использовать его для градиентов цвета.
+*клрбар*<br/>
+окне Начальный цвет. `CMFCBaseVisualManager` игнорирует это. Производные классы могут использовать его для цветных градиентов.
 
 *clrProgressBarDest*<br/>
-(в) Конечный цвет. `CMFCBaseVisualManager`игнорирует это. Выведенные классы могут использовать его для градиентов цвета.
+окне Конечный цвет. `CMFCBaseVisualManager` игнорирует это. Производные классы могут использовать его для цветных градиентов.
 
 *clrProgressText*<br/>
-(в) Цвет текста прогресса. `CMFCBaseVisualManager`игнорирует это. Цвет текста определяется `afxGlobalData.clrBtnText`.
+окне Цвет текста хода выполнения. `CMFCBaseVisualManager` игнорирует это. Цвет текста определяется в `afxGlobalData.clrBtnText` .
 
 *bProgressText*<br/>
-(в) Определяет, следует ли отображать текст прогресса.
+окне Указывает, следует ли отображать текст хода выполнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-TRUE, если Тема API включен; в противном случае FALSE.
+Значение TRUE, если API темы включен; в противном случае — FALSE.
 
-## <a name="cmfcbasevisualmanagerfillrebarpane"></a><a name="fillrebarpane"></a>CMFCBaseВизуальныйМенеджер::FillReBarPane
+## <a name="cmfcbasevisualmanagerfillrebarpane"></a><a name="fillrebarpane"></a> Кмфкбасевисуалманажер:: Филлребарпане
 
-Заполняет фон управления арматом с помощью текущей темы Windows.
+Заполняет фон элемента управления главной панели с помощью текущей темы Windows.
 
 ```
 virtual void FillReBarPane(
@@ -361,22 +368,22 @@ virtual void FillReBarPane(
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
-(в) Указатель на контекст устройства.
+*Хозяин*<br/>
+окне Указатель на контекст устройства.
 
-*pBar*<br/>
-(в) Указатель на панель, фон которой должен быть нарисован.
+*пбар*<br/>
+окне Указатель на панель, фон которой должен быть нарисован.
 
-*rectClient*<br/>
-(в) Ограничивающий прямоугольник области, которая должна быть заполнена.
+*ректклиент*<br/>
+окне Ограничивающий прямоугольник области для заполнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-TRUE, если Тема API включен; в противном случае FALSE.
+Значение TRUE, если API темы включен; в противном случае — FALSE.
 
-## <a name="cmfcbasevisualmanagergetstandardwindowstheme"></a><a name="getstandardwindowstheme"></a>CMFCBaseVisualManager::GetStandardWindowsTheme
+## <a name="cmfcbasevisualmanagergetstandardwindowstheme"></a><a name="getstandardwindowstheme"></a> Кмфкбасевисуалманажер:: Жетстандардвиндовссеме
 
-Получает текущую тему Windows.
+Возвращает текущую тему Windows.
 
 ```
 virtual WinXpTheme GetStandardWindowsTheme();
@@ -384,21 +391,21 @@ virtual WinXpTheme GetStandardWindowsTheme();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-В настоящее время выбран цвет темы Windows. Может быть одним из следующих перечисленных значений:
+Выбранный цвет темы Windows. Может быть одним из следующих перечисляемых значений:
 
-- `WinXpTheme_None`- нет включенной темы.
+- `WinXpTheme_None` -Тема не включена.
 
-- `WinXpTheme_NonStandard`- выбрана нестандартная тема (имеется в виду тема выбрана, но ни одна из списка ниже).
+- `WinXpTheme_NonStandard` — выбрана нестандартная тема (это означает, что тема выбрана, но отсутствует в списке ниже).
 
-- `WinXpTheme_Blue`- синяя тема (Луна).
+- `WinXpTheme_Blue` -синяя тема (Luna).
 
-- `WinXpTheme_Olive`- оливковая тема.
+- `WinXpTheme_Olive` — Тема-оливковый.
 
-- `WinXpTheme_Silver`- серебряная тема.
+- `WinXpTheme_Silver` -серебристая тема.
 
-## <a name="cmfcbasevisualmanagerupdatesystemcolors"></a><a name="updatesystemcolors"></a>CMFCBaseВизуальныйМенеджер::ОбновлениеСистемныеЦвета
+## <a name="cmfcbasevisualmanagerupdatesystemcolors"></a><a name="updatesystemcolors"></a> Кмфкбасевисуалманажер:: Упдатесистемколорс
 
-Призывы `OpenThemeData` к получению ручек для рисования различных элементов управления: окна, панели инструментов, кнопки и так далее.
+Вызовы `OpenThemeData` для получения дескрипторов для рисования различных элементов управления: окон, панелей инструментов, кнопок и т. д.
 
 ```cpp
 void UpdateSystemColors();
@@ -410,5 +417,5 @@ void UpdateSystemColors();
 
 ## <a name="see-also"></a>См. также раздел
 
-[Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
+[Иерархическая диаграмма](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)

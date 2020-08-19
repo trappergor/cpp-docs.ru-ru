@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - __if_not_exists keyword [C++]
 ms.assetid: a2f322d4-e96f-4a32-954e-4323d20c6e32
-ms.openlocfilehash: 3e0eb550830a1689d440e3b471759a98f1eef0ca
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e99fcee440bd69eabafec693df99d347f3aee828
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87187261"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560287"
 ---
 # <a name="__if_not_exists-statement"></a>Оператор __if_not_exists
 
@@ -27,10 +27,11 @@ statements
 
 #### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*identifier*|Идентификатор, наличие которого требуется проверить.|
-|*инструкции*|Одна или несколько инструкций для выполнения, если *идентификатор* не существует.|
+*identifier*\
+Идентификатор, наличие которого требуется проверить.
+
+*инструкции*\
+Одна или несколько инструкций для выполнения, если *идентификатор* не существует.
 
 ## <a name="remarks"></a>Remarks
 

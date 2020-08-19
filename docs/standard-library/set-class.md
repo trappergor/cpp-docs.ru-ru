@@ -86,12 +86,12 @@ helpviewer_keywords:
 - std::set [C++], upper_bound
 - std::set [C++], value_comp
 ms.assetid: 8991f9aa-5509-4440-adc1-371512d32018
-ms.openlocfilehash: 5f1b464b6ebb56432293c831952126b6a9e7ac12
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 80e7c2258fc1fbeabeb8174df18d5cb46aa682bb
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217523"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560533"
 ---
 # <a name="set-class"></a>Класс set
 
@@ -205,7 +205,7 @@ class set
 |-|-|
 |[Оператор =](#op_eq)|Заменяет элементы набора копией другого набора.|
 
-## <a name="allocator_type"></a><a name="allocator_type"></a>allocator_type
+## <a name="allocator_type"></a><a name="allocator_type"></a> allocator_type
 
 Тип, представляющий класс распределителя для объекта-набора.
 
@@ -215,7 +215,7 @@ typedef Allocator allocator_type;
 
 ### <a name="remarks"></a>Remarks
 
-`allocator_type`является синонимом для [распределителя](../standard-library/set-class.md)параметров шаблона.
+`allocator_type` является синонимом для [распределителя](../standard-library/set-class.md)параметров шаблона.
 
 Возвращает объект-функцию, которую мультинабор использует для упорядочивания своих элементов, который является параметром-шаблоном `Allocator`.
 
@@ -225,7 +225,7 @@ typedef Allocator allocator_type;
 
 Пример использования `allocator_type` см. в разделе [get_allocator](#get_allocator).
 
-## <a name="begin"></a><a name="begin"></a>начале
+## <a name="begin"></a><a name="begin"></a> начале
 
 Возвращает итератор, обращающийся к первому элементу в наборе.
 
@@ -282,7 +282,7 @@ The first element of s1 is 1
 The first element of s1 is now 2
 ```
 
-## <a name="cbegin"></a><a name="cbegin"></a>cbegin
+## <a name="cbegin"></a><a name="cbegin"></a> cbegin
 
 Возвращает **`const`** итератор, который обращается к первому элементу в диапазоне.
 
@@ -308,7 +308,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a><a name="cend"></a>cend
+## <a name="cend"></a><a name="cend"></a> cend
 
 Возвращает **`const`** итератор, который обращается к расположению сразу за последним элементом в диапазоне.
 
@@ -336,7 +336,7 @@ auto i2 = Container.cend();
 
 Значение, возвращаемое `cend`, не должно быть подвергнуто удалению ссылки.
 
-## <a name="clear"></a><a name="clear"></a>открытым
+## <a name="clear"></a><a name="clear"></a> открытым
 
 Стирает все элементы в наборе.
 
@@ -374,7 +374,7 @@ The size of the set is initially 2.
 The size of the set after clearing is 0.
 ```
 
-## <a name="const_iterator"></a><a name="const_iterator"></a>const_iterator
+## <a name="const_iterator"></a><a name="const_iterator"></a> const_iterator
 
 Тип, предоставляющий двунаправленный итератор, который может читать **`const`** элемент в наборе.
 
@@ -390,7 +390,7 @@ typedef implementation-defined const_iterator;
 
 См. пример для [begin](#begin) в качестве примера использования `const_iterator`.
 
-## <a name="const_pointer"></a><a name="const_pointer"></a>const_pointer
+## <a name="const_pointer"></a><a name="const_pointer"></a> const_pointer
 
 Тип, предоставляющий указатель на **`const`** элемент в наборе.
 
@@ -404,7 +404,7 @@ typedef typename allocator_type::const_pointer const_pointer;
 
 В большинстве случаев [const_iterator](#const_iterator) должен использоваться для доступа к элементам в объекте const set.
 
-## <a name="const_reference"></a><a name="const_reference"></a>const_reference
+## <a name="const_reference"></a><a name="const_reference"></a> const_reference
 
 Тип, предоставляющий ссылку на **`const`** элемент, хранящийся в наборе для чтения и выполнения **`const`** операций.
 
@@ -445,7 +445,7 @@ int main( )
 The first element in the set is 10.
 ```
 
-## <a name="const_reverse_iterator"></a><a name="const_reverse_iterator"></a>const_reverse_iterator
+## <a name="const_reverse_iterator"></a><a name="const_reverse_iterator"></a> const_reverse_iterator
 
 Тип, предоставляющий двунаправленный итератор, который может читать любой **`const`** элемент в наборе.
 
@@ -461,7 +461,7 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 См. пример для [rend](#rend) в качестве примера объявления и использования `const_reverse_iterator`.
 
-## <a name="count"></a><a name="count"></a>расчета
+## <a name="count"></a><a name="count"></a> расчета
 
 Возвращает число элементов в наборе, ключи которых соответствуют ключу, заданному параметром.
 
@@ -482,7 +482,7 @@ size_type count(const Key& key) const;
 
 Функция-член возвращает число элементов в следующем диапазоне:
 
-\[lower_bound (*ключ*), upper_bound (*ключ*)).
+\[ lower_bound (*ключ*), upper_bound (*ключ*)).
 
 ### <a name="example"></a>Пример
 
@@ -519,7 +519,7 @@ The number of elements in s1 with a sort key of 1 is: 1.
 The number of elements in s1 with a sort key of 2 is: 0.
 ```
 
-## <a name="crbegin"></a><a name="crbegin"></a>crbegin
+## <a name="crbegin"></a><a name="crbegin"></a> crbegin
 
 Возвращает итератор const, который обращается к первому элементу в обращенном наборе.
 
@@ -565,7 +565,7 @@ int main( )
 The first element in the reversed set is 30.
 ```
 
-## <a name="crend"></a><a name="crend"></a>crend
+## <a name="crend"></a><a name="crend"></a> crend
 
 Возвращает итератор const, который обращается к месту, следующему за последним элементом в обращенном наборе.
 
@@ -609,7 +609,7 @@ int main() {
 }
 ```
 
-## <a name="difference_type"></a><a name="difference_type"></a>difference_type
+## <a name="difference_type"></a><a name="difference_type"></a> difference_type
 
 Тип целого числа со знаком, пригодный для использования в качестве представления количества элементов в наборе в диапазоне между элементами, на которые указывают итераторы.
 
@@ -682,7 +682,7 @@ The number '20' occurs 1 times in set s1.
 The number of elements in the set s1 is: 2.
 ```
 
-## <a name="emplace"></a><a name="emplace"></a>emplace
+## <a name="emplace"></a><a name="emplace"></a> emplace
 
 Вставляет элемент, созданный на месте (операции копирования или перемещения не выполняются).
 
@@ -695,9 +695,8 @@ emplace(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|-|-|
-|*args*|Аргументы, передаваемые для создания элемента для вставки в набор, кроме случаев, когда сопоставление уже содержит элемент, значение которого правильным образом упорядочено.|
+*args*\
+Аргументы, передаваемые для создания элемента для вставки в набор, кроме случаев, когда сопоставление уже содержит элемент, значение которого правильным образом упорядочено.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -763,7 +762,7 @@ int main()
 }
 ```
 
-## <a name="emplace_hint"></a><a name="emplace_hint"></a>emplace_hint
+## <a name="emplace_hint"></a><a name="emplace_hint"></a> emplace_hint
 
 Вставляет созданный элемент на место (операции копирования или перемещения не выполняются) с указанием о размещении.
 
@@ -838,7 +837,7 @@ int main()
 }
 ```
 
-## <a name="empty"></a><a name="empty"></a>указано
+## <a name="empty"></a><a name="empty"></a> указано
 
 Проверяет, пуст ли набор.
 
@@ -881,7 +880,7 @@ The set s1 is not empty.
 The set s2 is empty.
 ```
 
-## <a name="end"></a><a name="end"></a>конце
+## <a name="end"></a><a name="end"></a> конце
 
 Возврат итератора после конца.
 
@@ -903,7 +902,7 @@ iterator end();
 
 Пример кода см. в разделе [set::find](#find).
 
-## <a name="equal_range"></a><a name="equal_range"></a>equal_range
+## <a name="equal_range"></a><a name="equal_range"></a> equal_range
 
 Возвращает пару итераторов соответственно на первый элемент в наборе с ключом, который не меньше, чем указанный ключ, и на первый элемент в наборе с ключом, который больше данного ключа.
 
@@ -982,7 +981,7 @@ matching the 2nd element of the pair returned by equal_range( 20 ).
 The set s1 doesn't have an element with a key less than 40.
 ```
 
-## <a name="erase"></a><a name="erase"></a>резин
+## <a name="erase"></a><a name="erase"></a> резин
 
 Удаляет элемент или диапазон элементов в наборе с заданных позиций или удаляет элементы, соответствующие заданному ключу.
 
@@ -1096,7 +1095,7 @@ int main()
 }
 ```
 
-## <a name="find"></a><a name="find"></a>Найдено
+## <a name="find"></a><a name="find"></a> Найдено
 
 Возвращает итератор, ссылающийся на элемент в наборе, ключ которого эквивалентен заданному ключу.
 
@@ -1182,7 +1181,7 @@ int main()
 }
 ```
 
-## <a name="get_allocator"></a><a name="get_allocator"></a>get_allocator
+## <a name="get_allocator"></a><a name="get_allocator"></a> get_allocator
 
 Возвращает копию объекта-распределителя, использованного для создания набора.
 
@@ -1256,7 +1255,7 @@ int main( )
 }
 ```
 
-## <a name="insert"></a><a name="insert"></a>Вставляет
+## <a name="insert"></a><a name="insert"></a> Вставляет
 
 Вставляет элемент или диапазон элементов в набор.
 
@@ -1437,7 +1436,7 @@ int main()
 }
 ```
 
-## <a name="iterator"></a><a name="iterator"></a>итераци
+## <a name="iterator"></a><a name="iterator"></a> итераци
 
 Тип, предоставляющий константный [двунаправленный итератор](../standard-library/bidirectional-iterator-tag-struct.md), который может читать любой элемент в наборе.
 
@@ -1449,7 +1448,7 @@ typedef implementation-defined iterator;
 
 См. пример для [Begin](#begin) в качестве примера объявления и использования `iterator` .
 
-## <a name="key_comp"></a><a name="key_comp"></a>key_comp
+## <a name="key_comp"></a><a name="key_comp"></a> key_comp
 
 Извлекает копию объекта сравнения, который используется для упорядочивания ключей в наборе.
 
@@ -1524,7 +1523,7 @@ kc1( 2,3 ) returns value of true, where kc1 is the function object of s1.
 kc2( 2,3 ) returns value of false, where kc2 is the function object of s2.
 ```
 
-## <a name="key_compare"></a><a name="key_compare"></a>key_compare
+## <a name="key_compare"></a><a name="key_compare"></a> key_compare
 
 Тип, предоставляющий объект функции, который может сравнить два ключа сортировки для определения относительного порядка двух элементов в наборе.
 
@@ -1544,7 +1543,7 @@ typedef Traits key_compare;
 
 См. пример для [key_comp](#key_comp) в качестве примера объявления и использования `key_compare`.
 
-## <a name="key_type"></a><a name="key_type"></a>key_type
+## <a name="key_type"></a><a name="key_type"></a> key_type
 
 Тип, описывающий объект, сохраненный как элемент набора в смысле его возможностей, присущих ключу сортировки.
 
@@ -1564,7 +1563,7 @@ typedef Key key_type;
 
 См. пример для [value_type](#value_type) в качестве примера объявления и использования `key_type`.
 
-## <a name="lower_bound"></a><a name="lower_bound"></a>lower_bound
+## <a name="lower_bound"></a><a name="lower_bound"></a> lower_bound
 
 Возвращает итератор, указывающий на первый элемент в наборе с ключом, который больше или равен указанному ключу.
 
@@ -1632,7 +1631,7 @@ The set s1 doesn't have an element with a key of 40.
 The element of s1 with a key matching that of the last element is: 30.
 ```
 
-## <a name="max_size"></a><a name="max_size"></a>max_size
+## <a name="max_size"></a><a name="max_size"></a> max_size
 
 Возвращает максимальную длину набора.
 
@@ -1664,7 +1663,7 @@ int main( )
 }
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>Оператор =
+## <a name="operator"></a><a name="op_eq"></a> Оператор =
 
 Заменяет элементы этого `set` элементами из другого `set`.
 
@@ -1738,7 +1737,7 @@ typedef typename allocator_type::pointer pointer;
 
 В большинстве случаев для доступа к элементам в объекте-наборе следует использовать [итератор](#iterator).
 
-## <a name="rbegin"></a><a name="rbegin"></a>rbegin
+## <a name="rbegin"></a><a name="rbegin"></a> rbegin
 
 Возвращает итератор, который обращается к первому элементу в обращенном наборе.
 
@@ -1814,7 +1813,7 @@ The reversed set is: 30 20 10
 After the erasure, the first element in the reversed set is 20.
 ```
 
-## <a name="reference"></a><a name="reference"></a>IsReference
+## <a name="reference"></a><a name="reference"></a> IsReference
 
 Тип, предоставляющий ссылку на элемент, хранящийся в наборе.
 
@@ -1850,7 +1849,7 @@ int main( )
 The first element in the set is 10.
 ```
 
-## <a name="rend"></a><a name="rend"></a>rend
+## <a name="rend"></a><a name="rend"></a> rend
 
 Возвращает итератор, который обращается к месту, следующему за последним элементом в обращенном наборе.
 
@@ -1921,7 +1920,7 @@ int main() {
 }
 ```
 
-## <a name="reverse_iterator"></a><a name="reverse_iterator"></a>reverse_iterator
+## <a name="reverse_iterator"></a><a name="reverse_iterator"></a> reverse_iterator
 
 Тип, предоставляющий двунаправленный итератор, который может считывать или изменять элемент в обращенном наборе.
 
@@ -1937,7 +1936,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 См. пример для [rbegin](#rbegin) в качестве примера объявления и использования `reverse_iterator`.
 
-## <a name="set"></a><a name="set"></a>параметр
+## <a name="set"></a><a name="set"></a> параметр
 
 Создает набор, который является пустым или копией части или целого другого набора.
 
@@ -2138,7 +2137,7 @@ int main()
 s1 = 10 20 30 40s2 = 10 20s3 = 30s4 = 10 20 30 40s5 = 10 20s6 = 10s7 = 10 20s8 = 1 2 3 4s9 = 5 6 7 8s10 = 10 20 30 40
 ```
 
-## <a name="size"></a><a name="size"></a>изменять
+## <a name="size"></a><a name="size"></a> изменять
 
 Возвращает количество элементов в наборе.
 
@@ -2179,7 +2178,7 @@ The set length is 1.
 The set length is now 2.
 ```
 
-## <a name="size_type"></a><a name="size_type"></a>size_type
+## <a name="size_type"></a><a name="size_type"></a> size_type
 
 Тип целого числа без знака, который может представлять число элементов в наборе.
 
@@ -2191,7 +2190,7 @@ typedef typename allocator_type::size_type size_type;
 
 См. пример для [size](#size) в качестве примера объявления и использования `size_type`
 
-## <a name="swap"></a><a name="swap"></a>позиции
+## <a name="swap"></a><a name="swap"></a> позиции
 
 Обмен элементами между двумя наборами.
 
@@ -2259,7 +2258,7 @@ After swapping with s2, list s1 is: 100 200.
 After swapping with s3, list s1 is: 300.
 ```
 
-## <a name="upper_bound"></a><a name="upper_bound"></a>upper_bound
+## <a name="upper_bound"></a><a name="upper_bound"></a> upper_bound
 
 Возвращает итератор, указывающий на первый элемент в наборе с ключом, который больше указанного ключа.
 
@@ -2327,7 +2326,7 @@ The first element of s1 with a key greater than
 that of the initial element of s1 is: 20.
 ```
 
-## <a name="value_comp"></a><a name="value_comp"></a>value_comp
+## <a name="value_comp"></a><a name="value_comp"></a> value_comp
 
 Извлекает копию объекта сравнения, который используется для упорядочивания значений элементов в наборе.
 
@@ -2402,7 +2401,7 @@ vc1( 2,3 ) returns value of true, where vc1 is the function object of s1.
 vc2( 2,3 ) returns value of false, where vc2 is the function object of s2.
 ```
 
-## <a name="value_compare"></a><a name="value_compare"></a>value_compare
+## <a name="value_compare"></a><a name="value_compare"></a> value_compare
 
 Тип, предоставляющий объект функции, который может сравнить значениях двух элементов, чтобы определить их относительный порядок в наборе.
 
@@ -2422,7 +2421,7 @@ typedef key_compare value_compare;
 
 См. пример для [value_comp](#value_comp) в качестве примера объявления и использования `value_compare`.
 
-## <a name="value_type"></a><a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a> value_type
 
 Тип, описывающий объект, который сохранен как элемент набора в смысле его возможностей, присущих значению.
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - rethrow_exception
 - move exceptions between threads
 ms.assetid: 5c95d57b-acf5-491f-8122-57c5df0edd98
-ms.openlocfilehash: 1b3e6ffa0e98d54b047e18e4c023a8f5173470b1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c3ba61062421462dea8f4280575be9f00ac3931a
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87186104"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561366"
 ---
 # <a name="transporting-exceptions-between-threads"></a>Перенос исключений между потоками
 
@@ -40,12 +40,17 @@ namespace std
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*Unspecified*|Неуказанный внутренний класс, используемый для реализации типа `exception_ptr`.|
-|*ш*|Объект `exception_ptr`, который ссылается на исключение.|
-|*&*|Класс, представляющий исключение.|
-|*e*|Экземпляр класса `E` параметров.|
+*Unspecified*\
+Неуказанный внутренний класс, используемый для реализации типа `exception_ptr`.
+
+*ш*\
+Объект `exception_ptr`, который ссылается на исключение.
+
+*&*\
+Класс, представляющий исключение.
+
+*&*\
+Экземпляр класса `E` параметров.
 
 ## <a name="return-value"></a>Возвращаемое значение
 

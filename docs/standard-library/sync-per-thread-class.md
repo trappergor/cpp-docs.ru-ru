@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stdext::sync_per_thread [C++], deallocate
 - stdext::sync_per_thread [C++], equals
 ms.assetid: 47bf75f8-5b02-4760-b1d3-3099d08fe14c
-ms.openlocfilehash: e7f5fb403ef020135e3dd3b85a1ad67cd435b6e8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 24c5463dc9fb80703361e374efb99fae9e103e7c
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224595"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562094"
 ---
 # <a name="sync_per_thread-class"></a>Класс sync_per_thread
 
@@ -32,9 +32,8 @@ class sync_per_thread
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
-|---------------|-----------------|
-|*Кэш*|Тип кэша, связанный с фильтром синхронизации. Возможные типы: [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) или [cache_suballoc](../standard-library/cache-suballoc-class.md).|
+*Мбайта*\
+Тип кэша, связанный с фильтром синхронизации. Это может быть [`cache_chunklist`](../standard-library/cache-chunklist-class.md) , [`cache_freelist`](../standard-library/cache-freelist-class.md) или [`cache_suballoc`](../standard-library/cache-suballoc-class.md) .
 
 ## <a name="remarks"></a>Remarks
 
@@ -44,7 +43,7 @@ class sync_per_thread
 
 |Функция-член|Описание|
 |-|-|
-|[allocate](#allocate)|Выделяет блок памяти.|
+|[памяти](#allocate)|Выделяет блок памяти.|
 |[deallocate](#deallocate)|Освобождает указанное число объектов из памяти, начиная с заданной позиции.|
 |[equals](#equals)|Сравнивает два кэша на равенство.|
 
@@ -54,7 +53,7 @@ class sync_per_thread
 
 **Пространство имен:** stdext
 
-## <a name="sync_per_threadallocate"></a><a name="allocate"></a>sync_per_thread:: allocate
+## <a name="sync_per_threadallocate"></a><a name="allocate"></a> sync_per_thread:: allocate
 
 Выделяет блок памяти.
 
@@ -64,15 +63,14 @@ void *allocate(std::size_t count);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
-|---------------|-----------------|
-|*count*|Число выделяемых элементов в массиве.|
+*расчета*\
+Число выделяемых элементов в массиве.
 
 ### <a name="remarks"></a>Remarks
 
 Функция-член возвращает результат вызова `cache::allocate(count)` в объекте кэша, который относится к текущему потоку. Если объект кэша для текущего потока не выделен, сначала такой объект будет выделен.
 
-## <a name="sync_per_threaddeallocate"></a><a name="deallocate"></a>sync_per_thread::d еаллокате
+## <a name="sync_per_threaddeallocate"></a><a name="deallocate"></a> sync_per_thread::d еаллокате
 
 Освобождает указанное число объектов из памяти, начиная с заданной позиции.
 
@@ -82,16 +80,17 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
-|---------------|-----------------|
-|*ptr*|Указатель на первый объект, который должен быть освобожден из хранилища.|
-|*count*|Количество объектов для освобождения из хранилища.|
+*указатель*\
+Указатель на первый объект, который должен быть освобожден из хранилища.
+
+*расчета*\
+Количество объектов для освобождения из хранилища.
 
 ### <a name="remarks"></a>Remarks
 
 Функция-член вызывает метод `deallocate` в объекте кэша, который относится к текущему потоку. Если объект кэша для текущего потока не выделен, сначала такой объект будет выделен.
 
-## <a name="sync_per_threadequals"></a><a name="equals"></a>sync_per_thread:: Equals
+## <a name="sync_per_threadequals"></a><a name="equals"></a> sync_per_thread:: Equals
 
 Сравнивает два кэша на равенство.
 
@@ -101,10 +100,11 @@ bool equals(const sync<Cache>& Other) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
-|---------------|-----------------|
-|*Кэш*|Объект кэша фильтра синхронизации.|
-|*Другое*|Объект кэша для сравнения на равенство.|
+*Мбайта*\
+Объект кэша фильтра синхронизации.
+
+*Иной*\
+Объект кэша для сравнения на равенство.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

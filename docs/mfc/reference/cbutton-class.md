@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: 108bbbbb7fcb491ecc9ed278c5f7d5002ad02ef3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7e2156c7fba6d5c621ab9e73b4739be45941fcc5
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231862"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561990"
 ---
 # <a name="cbutton-class"></a>Класс Кбуттон
 
@@ -95,7 +95,7 @@ class CButton : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[Кбуттон:: Кбуттон](#cbutton)|Формирует объект `CButton`.|
 
@@ -186,7 +186,7 @@ class CButton : public CWnd
 
 **Заголовок:** afxwin.h
 
-## <a name="cbuttoncbutton"></a><a name="cbutton"></a>Кбуттон:: Кбуттон
+## <a name="cbuttoncbutton"></a><a name="cbutton"></a> Кбуттон:: Кбуттон
 
 Формирует объект `CButton`.
 
@@ -198,7 +198,7 @@ CButton();
 
 [!code-cpp[NVC_MFC_CButton#1](../../mfc/reference/codesnippet/cpp/cbutton-class_1.cpp)]
 
-## <a name="cbuttoncreate"></a><a name="create"></a>Кбуттон:: Create
+## <a name="cbuttoncreate"></a><a name="create"></a> Кбуттон:: Create
 
 Создает элемент управления "кнопка Windows" и прикрепляет его к `CButton` объекту.
 
@@ -254,7 +254,7 @@ virtual BOOL Create(
 
 [!code-cpp[NVC_MFC_CButton#2](../../mfc/reference/codesnippet/cpp/cbutton-class_2.cpp)]
 
-## <a name="cbuttondrawitem"></a><a name="drawitem"></a>Кбуттон::D Равитем
+## <a name="cbuttondrawitem"></a><a name="drawitem"></a> Кбуттон::D Равитем
 
 Вызывается структурой при изменении визуального аспекта рисуемой владельцем кнопки.
 
@@ -277,7 +277,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 
 [!code-cpp[NVC_MFC_CButton#3](../../mfc/reference/codesnippet/cpp/cbutton-class_3.cpp)]
 
-## <a name="cbuttongetbitmap"></a><a name="getbitmap"></a>Кбуттон::/Bitmap
+## <a name="cbuttongetbitmap"></a><a name="getbitmap"></a> Кбуттон::/Bitmap
 
 Вызовите эту функцию-член для получения маркера точечного рисунка, установленного ранее с помощью [сетбитмап](#setbitmap), связанного с кнопкой.
 
@@ -293,7 +293,7 @@ HBITMAP GetBitmap() const;
 
 [!code-cpp[NVC_MFC_CButton#4](../../mfc/reference/codesnippet/cpp/cbutton-class_4.cpp)]
 
-## <a name="cbuttongetbuttonstyle"></a><a name="getbuttonstyle"></a>Кбуттон:: Жетбуттонстиле
+## <a name="cbuttongetbuttonstyle"></a><a name="getbuttonstyle"></a> Кбуттон:: Жетбуттонстиле
 
 Извлекает сведения о стиле элемента управления "Кнопка".
 
@@ -309,7 +309,7 @@ UINT GetButtonStyle() const;
 
 [!code-cpp[NVC_MFC_CButton#5](../../mfc/reference/codesnippet/cpp/cbutton-class_5.cpp)]
 
-## <a name="cbuttongetcheck"></a><a name="getcheck"></a>Кбуттон:: Check
+## <a name="cbuttongetcheck"></a><a name="getcheck"></a> Кбуттон:: Check
 
 Получает состояние флажка для переключателя или флажка.
 
@@ -333,7 +333,7 @@ int GetCheck() const;
 
 [!code-cpp[NVC_MFC_CButton#6](../../mfc/reference/codesnippet/cpp/cbutton-class_6.cpp)]
 
-## <a name="cbuttongetcursor"></a><a name="getcursor"></a>Кбуттон:: oncursor
+## <a name="cbuttongetcursor"></a><a name="getcursor"></a> Кбуттон:: oncursor
 
 Вызовите эту функцию-член для получения маркера курсора, установленного ранее с помощью [сеткурсор](#setcursor), связанного с кнопкой.
 
@@ -349,7 +349,7 @@ HCURSOR GetCursor();
 
 [!code-cpp[NVC_MFC_CButton#7](../../mfc/reference/codesnippet/cpp/cbutton-class_7.cpp)]
 
-## <a name="cbuttongeticon"></a><a name="geticon"></a>Кбуттон:: "Icon"
+## <a name="cbuttongeticon"></a><a name="geticon"></a> Кбуттон:: "Icon"
 
 Вызовите эту функцию-член для получения маркера значка, ранее установленного с помощью [сетикон](#seticon), связанного с кнопкой.
 
@@ -365,7 +365,7 @@ HICON GetIcon() const;
 
 [!code-cpp[NVC_MFC_CButton#8](../../mfc/reference/codesnippet/cpp/cbutton-class_8.cpp)]
 
-## <a name="cbuttongetidealsize"></a><a name="getidealsize"></a>Кбуттон:: Жетидеалсизе
+## <a name="cbuttongetidealsize"></a><a name="getidealsize"></a> Кбуттон:: Жетидеалсизе
 
 Получает идеальный размер для элемента управления "Кнопка".
 
@@ -386,7 +386,7 @@ BOOL GetIdealSize(SIZE* psize);
 
 Эта функция члена эмулирует функциональность BCM_GETIDEALSIZE сообщения, как описано в разделе [кнопки](/windows/win32/controls/buttons) Windows SDK.
 
-## <a name="cbuttongetimagelist"></a><a name="getimagelist"></a>Кбуттон::/ImageList
+## <a name="cbuttongetimagelist"></a><a name="getimagelist"></a> Кбуттон::/ImageList
 
 Вызовите этот метод, чтобы получить список изображений из элемента управления "Кнопка".
 
@@ -407,7 +407,7 @@ BOOL GetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 
 Эта функция члена эмулирует функциональность BCM_GETIMAGELIST сообщения, как описано в разделе [кнопки](/windows/win32/controls/buttons) Windows SDK.
 
-## <a name="cbuttongetnote"></a><a name="getnote"></a>Кбуттон:: Note
+## <a name="cbuttongetnote"></a><a name="getnote"></a> Кбуттон:: Note
 
 Извлекает текст примечания, связанный с текущим элементом управления ссылки на команду.
 
@@ -421,10 +421,11 @@ BOOL GetNote(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*лпсзноте*|заполняет Указатель на буфер, который вызывающий объект отвечает за выделение и отмену выделения. Если возвращаемое значение равно TRUE, буфер содержит текст примечания, связанного с текущим элементом управления ссылки на команду; в противном случае буфер не изменяется.|
-|*кчноте*|[вход, выход] Указатель на целочисленную переменную без знака.<br /><br /> При вызове этого метода переменная содержит размер буфера, указанного параметром *лпсзноте* .<br /><br /> Если возвращаемое значение равно TRUE, то при возврате из этого метода переменная содержит размер заметки, связанной с текущим элементом управления ссылки на команду. Если возвращаемое значение равно FALSE, переменная содержит размер буфера, необходимый для хранения примечания.|
+*лпсзноте*\
+заполняет Указатель на буфер, который вызывающий объект отвечает за выделение и отмену выделения. Если возвращаемое значение равно TRUE, буфер содержит текст примечания, связанного с текущим элементом управления ссылки на команду; в противном случае буфер не изменяется.
+
+*кчноте*\
+[вход, выход] Указатель на целочисленную переменную без знака. При вызове этого метода переменная содержит размер буфера, указанного параметром *лпсзноте* . Если возвращаемое значение равно TRUE, то при возврате из этого метода переменная содержит размер заметки, связанной с текущим элементом управления ссылки на команду. Если возвращаемое значение равно FALSE, переменная содержит размер буфера, необходимый для хранения примечания.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -440,7 +441,7 @@ BOOL GetNote(
 
 Этот метод отправляет [BCM_GETNOTE](/windows/win32/Controls/bcm-getnote) сообщение, описанное в Windows SDK.
 
-## <a name="cbuttongetnotelength"></a><a name="getnotelength"></a>Кбуттон:: Жетнотеленгс
+## <a name="cbuttongetnotelength"></a><a name="getnotelength"></a> Кбуттон:: Жетнотеленгс
 
 Извлекает длину текста примечания для текущего элемента управления ссылки на команду.
 
@@ -458,7 +459,7 @@ UINT GetNoteLength() const;
 
 Этот метод отправляет [BCM_GETNOTELENGTH](/windows/win32/Controls/bcm-getnotelength) сообщение, описанное в Windows SDK.
 
-## <a name="cbuttongetsplitglyph"></a><a name="getsplitglyph"></a>Кбуттон:: Жетсплитглиф
+## <a name="cbuttongetsplitglyph"></a><a name="getsplitglyph"></a> Кбуттон:: Жетсплитглиф
 
 Извлекает глиф, связанный с текущим элементом управления "кнопка разделения".
 
@@ -478,7 +479,7 @@ TCHAR GetSplitGlyph() const;
 
 Этот метод инициализирует `mask` член структуры [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) с флагом BCSIF_GLYPH, а затем отправляет эту структуру в [BCM_GETSPLITINFO](/windows/win32/Controls/bcm-getsplitinfo) сообщение, описанное в Windows SDK. Когда функция Message возвращает, этот метод извлекает глиф из `himlGlyph` элемента структуры.
 
-## <a name="cbuttongetsplitimagelist"></a><a name="getsplitimagelist"></a>Кбуттон:: Жетсплитимажелист
+## <a name="cbuttongetsplitimagelist"></a><a name="getsplitimagelist"></a> Кбуттон:: Жетсплитимажелист
 
 Извлекает [список изображений](../../mfc/reference/cimagelist-class.md) для текущего элемента управления "кнопка разделения".
 
@@ -496,7 +497,7 @@ CImageList* GetSplitImageList() const;
 
 Этот метод инициализирует `mask` член структуры [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) с флагом BCSIF_IMAGE, а затем отправляет эту структуру в [BCM_GETSPLITINFO](/windows/win32/Controls/bcm-getsplitinfo) сообщение, описанное в Windows SDK. Когда функция Message возвращает, этот метод извлекает список изображений из `himlGlyph` элемента структуры.
 
-## <a name="cbuttongetsplitinfo"></a><a name="getsplitinfo"></a>Кбуттон:: Жетсплитинфо
+## <a name="cbuttongetsplitinfo"></a><a name="getsplitinfo"></a> Кбуттон:: Жетсплитинфо
 
 Извлекает параметры, определяющие, как Windows рисует текущий элемент управления "кнопка разделения".
 
@@ -506,9 +507,8 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*пинфо*|заполняет Указатель на структуру [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) , которая получает сведения о текущем элементе управления "кнопка разделения". Вызывающий объект отвечает за выделение структуры.|
+*пинфо*\
+заполняет Указатель на структуру [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) , которая получает сведения о текущем элементе управления "кнопка разделения". Вызывающий объект отвечает за выделение структуры.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -520,7 +520,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
 
 Этот метод отправляет [BCM_GETSPLITINFO](/windows/win32/Controls/bcm-getsplitinfo) сообщение, описанное в Windows SDK.
 
-## <a name="cbuttongetsplitsize"></a><a name="getsplitsize"></a>Кбуттон:: Жетсплитсизе
+## <a name="cbuttongetsplitsize"></a><a name="getsplitsize"></a> Кбуттон:: Жетсплитсизе
 
 Извлекает ограничивающий прямоугольник из раскрывающегося компонента элемента управления текущей кнопки разделения.
 
@@ -530,9 +530,8 @@ BOOL GetSplitSize(LPSIZE pSize) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*псизе*|заполняет Указатель на структуру [размера](/windows/win32/api/windef/ns-windef-size) , которая получает описание прямоугольника.|
+*псизе*\
+заполняет Указатель на структуру [размера](/windows/win32/api/windef/ns-windef-size) , которая получает описание прямоугольника.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -546,7 +545,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
 
 Этот метод инициализирует `mask` член структуры [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) с флагом BCSIF_SIZE, а затем отправляет эту структуру в [BCM_GETSPLITINFO](/windows/win32/Controls/bcm-getsplitinfo) сообщение, описанное в Windows SDK. Когда функция Message возвращает, этот метод извлекает ограничивающий прямоугольник из `size` элемента структуры.
 
-## <a name="cbuttongetsplitstyle"></a><a name="getsplitstyle"></a>Кбуттон:: Жетсплитстиле
+## <a name="cbuttongetsplitstyle"></a><a name="getsplitstyle"></a> Кбуттон:: Жетсплитстиле
 
 Извлекает стили разворачивающейся кнопки, которые определяют текущий элемент управления "кнопка разделения".
 
@@ -566,7 +565,7 @@ UINT GetSplitStyle() const;
 
 Этот метод инициализирует `mask` член структуры [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) с флагом BCSIF_STYLE, а затем отправляет эту структуру в [BCM_GETSPLITINFO](/windows/win32/Controls/bcm-getsplitinfo) сообщение, описанное в Windows SDK. Когда функция Message возвращает, этот метод извлекает стили разворачивающейся кнопки из `uSplitStyle` элемента структуры.
 
-## <a name="cbuttongetstate"></a><a name="getstate"></a>Кбуттон:: State
+## <a name="cbuttongetstate"></a><a name="getstate"></a> Кбуттон:: State
 
 Получает состояние элемента управления "Кнопка".
 
@@ -578,7 +577,7 @@ UINT GetState() const;
 
 Битовое поле, содержащее сочетание значений, которое указывает текущее состояние элемента управления "Кнопка". В следующей таблице перечислены возможные значения.
 
-|Состояние кнопки|Применение|Описание|
+|Состояние кнопки|Значение|Описание|
 |------------------|-----------|-----------------|
 |BST_UNCHECKED|0x0000|Начальное состояние.|
 |BST_CHECKED|0x0001|Элемент управления "Кнопка" установлен.|
@@ -594,7 +593,7 @@ UINT GetState() const;
 
 [!code-cpp[NVC_MFC_CButton#9](../../mfc/reference/codesnippet/cpp/cbutton-class_9.cpp)]
 
-## <a name="cbuttongettextmargin"></a><a name="gettextmargin"></a>Кбуттон:: Жеттекстмаргин
+## <a name="cbuttongettextmargin"></a><a name="gettextmargin"></a> Кбуттон:: Жеттекстмаргин
 
 Вызовите этот метод, чтобы получить текстовое поле `CButton` объекта.
 
@@ -619,7 +618,7 @@ BOOL GetTextMargin(RECT* pmargin);
 
 Эта функция члена эмулирует функциональность BCM_GETTEXTMARGIN сообщения, как описано в разделе [кнопки](/windows/win32/controls/buttons) Windows SDK.
 
-## <a name="cbuttonsetbitmap"></a><a name="setbitmap"></a>Кбуттон:: Сетбитмап
+## <a name="cbuttonsetbitmap"></a><a name="setbitmap"></a> Кбуттон:: Сетбитмап
 
 Вызовите эту функцию-член, чтобы связать новое растровое изображение с кнопкой.
 
@@ -660,7 +659,7 @@ HBITMAP SetBitmap(HBITMAP hBitmap);
 
 [!code-cpp[NVC_MFC_CButton#4](../../mfc/reference/codesnippet/cpp/cbutton-class_4.cpp)]
 
-## <a name="cbuttonsetbuttonstyle"></a><a name="setbuttonstyle"></a>Кбуттон:: Сетбуттонстиле
+## <a name="cbuttonsetbuttonstyle"></a><a name="setbuttonstyle"></a> Кбуттон:: Сетбуттонстиле
 
 Изменяет стиль кнопки.
 
@@ -686,7 +685,7 @@ void SetButtonStyle(
 
 [!code-cpp[NVC_MFC_CButton#5](../../mfc/reference/codesnippet/cpp/cbutton-class_5.cpp)]
 
-## <a name="cbuttonsetcheck"></a><a name="setcheck"></a>Кбуттон:: Сетчекк
+## <a name="cbuttonsetcheck"></a><a name="setcheck"></a> Кбуттон:: Сетчекк
 
 Задает или сбрасывает состояние флажка для переключателя или флажка.
 
@@ -713,7 +712,7 @@ void SetCheck(int nCheck);
 
 [!code-cpp[NVC_MFC_CButton#6](../../mfc/reference/codesnippet/cpp/cbutton-class_6.cpp)]
 
-## <a name="cbuttonsetcursor"></a><a name="setcursor"></a>Кбуттон:: Сеткурсор
+## <a name="cbuttonsetcursor"></a><a name="setcursor"></a> Кбуттон:: Сеткурсор
 
 Вызовите эту функцию-член, чтобы связать новый курсор с кнопкой.
 
@@ -752,7 +751,7 @@ HCURSOR SetCursor(HCURSOR hCursor);
 
 [!code-cpp[NVC_MFC_CButton#7](../../mfc/reference/codesnippet/cpp/cbutton-class_7.cpp)]
 
-## <a name="cbuttonsetdropdownstate"></a><a name="setdropdownstate"></a>Кбуттон:: Сетдропдовнстате
+## <a name="cbuttonsetdropdownstate"></a><a name="setdropdownstate"></a> Кбуттон:: Сетдропдовнстате
 
 Задает состояние раскрывающегося списка текущего элемента управления "кнопка разворачивающейся кнопки".
 
@@ -762,9 +761,8 @@ BOOL SetDropDownState(BOOL fDropDown);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*фдропдовн*|окне Значение TRUE, чтобы задать BST_DROPDOWNPUSHED состояние; в противном случае — значение FALSE.|
+*фдропдовн*\
+окне Значение TRUE, чтобы задать BST_DROPDOWNPUSHED состояние; в противном случае — значение FALSE.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -788,7 +786,7 @@ BOOL SetDropDownState(BOOL fDropDown);
 
 [!code-cpp[NVC_MFC_CButton_s1#6](../../mfc/reference/codesnippet/cpp/cbutton-class_11.cpp)]
 
-## <a name="cbuttonsetelevationrequired"></a><a name="setelevationrequired"></a>Кбуттон:: Сетелеватионрекуиред
+## <a name="cbuttonsetelevationrequired"></a><a name="setelevationrequired"></a> Кбуттон:: Сетелеватионрекуиред
 
 Устанавливает состояние текущего элемента управления "Кнопка" в значение `elevation required` , которое необходимо для отображения значка безопасности с повышенными привилегиями.
 
@@ -798,9 +796,8 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*фелеватионрекуиред*|окне Значение TRUE, чтобы задать `elevation required` состояние; в противном случае — значение false.|
+*фелеватионрекуиред*\
+окне Значение TRUE, чтобы задать `elevation required` состояние; в противном случае — значение false.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -812,7 +809,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
 
 Этот метод отправляет [BCM_SETSHIELD](/windows/win32/Controls/bcm-setshield) сообщение, описанное в Windows SDK.
 
-## <a name="cbuttonseticon"></a><a name="seticon"></a>Кбуттон:: Сетикон
+## <a name="cbuttonseticon"></a><a name="seticon"></a> Кбуттон:: Сетикон
 
 Вызовите эту функцию-член, чтобы связать новый значок с кнопкой.
 
@@ -851,7 +848,7 @@ HICON SetIcon(HICON hIcon);
 
 [!code-cpp[NVC_MFC_CButton#8](../../mfc/reference/codesnippet/cpp/cbutton-class_8.cpp)]
 
-## <a name="cbuttonsetimagelist"></a><a name="setimagelist"></a>Кбуттон:: Сетимажелист
+## <a name="cbuttonsetimagelist"></a><a name="setimagelist"></a> Кбуттон:: Сетимажелист
 
 Вызовите этот метод, чтобы задать список изображений `CButton` объекта.
 
@@ -872,7 +869,7 @@ BOOL SetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 
 Эта функция члена эмулирует функциональность BCM_SETIMAGELIST сообщения, как описано в разделе [кнопки](/windows/win32/controls/buttons) Windows SDK.
 
-## <a name="cbuttonsetnote"></a><a name="setnote"></a>Кбуттон:: Сетноте
+## <a name="cbuttonsetnote"></a><a name="setnote"></a> Кбуттон:: Сетноте
 
 Задает текст примечания для текущего элемента управления ссылки на команду.
 
@@ -882,9 +879,8 @@ BOOL SetNote(LPCTSTR lpszNote);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*лпсзноте*|окне Указатель на строку в Юникоде, заданную как текст примечания для элемента управления ссылки на команду.|
+*лпсзноте*\
+окне Указатель на строку в Юникоде, заданную как текст примечания для элемента управления ссылки на команду.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -908,7 +904,7 @@ BOOL SetNote(LPCTSTR lpszNote);
 
 [!code-cpp[NVC_MFC_CButton_s1#7](../../mfc/reference/codesnippet/cpp/cbutton-class_12.cpp)]
 
-## <a name="cbuttonsetsplitglyph"></a><a name="setsplitglyph"></a>Кбуттон:: Сетсплитглиф
+## <a name="cbuttonsetsplitglyph"></a><a name="setsplitglyph"></a> Кбуттон:: Сетсплитглиф
 
 Связывает указанный глиф с текущим элементом управления "кнопка разделения".
 
@@ -918,9 +914,8 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*чглиф*|окне Символ, указывающий глиф, используемый в качестве раскрывающегося списка для кнопки разделения.|
+*чглиф*\
+окне Символ, указывающий глиф, используемый в качестве раскрывающегося списка для кнопки разделения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -934,7 +929,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
 
 Этот метод инициализирует `mask` член структуры [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) с флагом BCSIF_GLYPH и `himlGlyph` элементом с параметром *чглиф* , а затем отправляет эту структуру в [BCM_GETSPLITINFO](/windows/win32/Controls/bcm-getsplitinfo) сообщение, описанное в Windows SDK.
 
-## <a name="cbuttonsetsplitimagelist"></a><a name="setsplitimagelist"></a>Кбуттон:: Сетсплитимажелист
+## <a name="cbuttonsetsplitimagelist"></a><a name="setsplitimagelist"></a> Кбуттон:: Сетсплитимажелист
 
 Связывает [список изображений](../../mfc/reference/cimagelist-class.md) с текущим элементом управления "кнопка разделения".
 
@@ -944,9 +939,8 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*псплитимажелист*|окне Указатель на объект [CImageList](../../mfc/reference/cimagelist-class.md) , присваиваемый текущему элементу управления кнопки разделения.|
+*псплитимажелист*\
+окне Указатель на объект [CImageList](../../mfc/reference/cimagelist-class.md) , присваиваемый текущему элементу управления кнопки разделения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -958,7 +952,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
 
 Этот метод инициализирует `mask` член структуры [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) с флагом BCSIF_IMAGE и `himlGlyph` элементом с параметром *псплитимажелист* , а затем отправляет эту структуру в [BCM_GETSPLITINFO](/windows/win32/Controls/bcm-getsplitinfo) сообщение, описанное в Windows SDK.
 
-## <a name="cbuttonsetsplitinfo"></a><a name="setsplitinfo"></a>Кбуттон:: Сетсплитинфо
+## <a name="cbuttonsetsplitinfo"></a><a name="setsplitinfo"></a> Кбуттон:: Сетсплитинфо
 
 Задает параметры, определяющие, как Windows рисует текущий элемент управления "кнопка разделения".
 
@@ -968,9 +962,8 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*пинфо*|окне Указатель на структуру [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) , которая определяет текущий элемент управления "кнопка разделения".|
+*пинфо*\
+окне Указатель на структуру [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) , которая определяет текущий элемент управления "кнопка разделения".
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -994,7 +987,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
 
 [!code-cpp[NVC_MFC_CButton_s1#4](../../mfc/reference/codesnippet/cpp/cbutton-class_13.cpp)]
 
-## <a name="cbuttonsetsplitsize"></a><a name="setsplitsize"></a>Кбуттон:: Сетсплитсизе
+## <a name="cbuttonsetsplitsize"></a><a name="setsplitsize"></a> Кбуттон:: Сетсплитсизе
 
 Задает ограничивающий прямоугольник для компонента раскрывающегося списка текущего элемента управления "кнопка разворачивающейся кнопки".
 
@@ -1004,9 +997,8 @@ BOOL SetSplitSize(LPSIZE pSize);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*псизе*|окне Указатель на структуру [размера](/windows/win32/api/windef/ns-windef-size) , описывающую ограничивающий прямоугольник.|
+*псизе*\
+окне Указатель на структуру [размера](/windows/win32/api/windef/ns-windef-size) , описывающую ограничивающий прямоугольник.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1032,7 +1024,7 @@ BOOL SetSplitSize(LPSIZE pSize);
 
 [!code-cpp[NVC_MFC_CButton_s1#5](../../mfc/reference/codesnippet/cpp/cbutton-class_14.cpp)]
 
-## <a name="cbuttonsetsplitstyle"></a><a name="setsplitstyle"></a>Кбуттон:: Сетсплитстиле
+## <a name="cbuttonsetsplitstyle"></a><a name="setsplitstyle"></a> Кбуттон:: Сетсплитстиле
 
 Задает стиль текущего элемента управления "кнопка разворачивающейся кнопки".
 
@@ -1042,9 +1034,8 @@ BOOL SetSplitStyle(UINT uSplitStyle);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*усплитстиле*|окне Побитовое сочетание стилей разворачивающейся кнопки. Дополнительные сведения см. в описании `uSplitStyle` члена структуры [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) .|
+*усплитстиле*\
+окне Побитовое сочетание стилей разворачивающейся кнопки. Дополнительные сведения см. в описании `uSplitStyle` члена структуры [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) .
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1070,7 +1061,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
 
 [!code-cpp[NVC_MFC_CButton_s1#3](../../mfc/reference/codesnippet/cpp/cbutton-class_15.cpp)]
 
-## <a name="cbuttonsetstate"></a><a name="setstate"></a>Кбуттон:: SetState
+## <a name="cbuttonsetstate"></a><a name="setstate"></a> Кбуттон:: SetState
 
 Определяет, выделен ли элемент управления "Кнопка".
 
@@ -1093,7 +1084,7 @@ void SetState(BOOL bHighlight);
 
 [!code-cpp[NVC_MFC_CButton#9](../../mfc/reference/codesnippet/cpp/cbutton-class_9.cpp)]
 
-## <a name="cbuttonsettextmargin"></a><a name="settextmargin"></a>Кбуттон:: Сеттекстмаргин
+## <a name="cbuttonsettextmargin"></a><a name="settextmargin"></a> Кбуттон:: Сеттекстмаргин
 
 Вызовите этот метод, чтобы задать текстовое поле `CButton` объекта.
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::cache_suballoc [C++], allocate
 - stdext::cache_suballoc [C++], deallocate
 ms.assetid: 9ea9c5e9-1dcc-45d0-b3a7-a56a93d88898
-ms.openlocfilehash: 55860a65fc77f834ed699f3a5114768b7efdde6f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 410cdc7bd45c54c252ce33c7d8e3e2f883ac0eb4
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366729"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560625"
 ---
 # <a name="cache_suballoc-class"></a>Класс cache_suballoc
 
@@ -30,15 +30,14 @@ class cache_suballoc
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*Sz*|Число выделяемых элементов в массиве.|
+*SZ*\
+Число выделяемых элементов в массиве.
 
 ## <a name="remarks"></a>Remarks
 
-Магазины шаблонов cache_suballoc класса рассеяны блоки памяти в свободном списке с неограниченной длиной, используя `freelist<sizeof(Type), max_unbounded>`и субсидируя блоки памяти из большего фрагмента, выделенного с новым **оператором,** когда свободный список пуст.
+Шаблон класса cache_suballoc сохраняет свободные блоки памяти в свободном списке с неограниченной длиной, используя `freelist<sizeof(Type), max_unbounded>` и подраспределяет блоки памяти из большего блока, выделенного с помощью **оператора New** , если свободный список пуст.
 
-Каждый `Sz * Nelts` кусок содержит байты пригодной для использования памяти и данные, которые **требуется новым оператором** и **оператором.** Выделенные участки памяти никогда не будут освобождены.
+Каждый блок содержит `Sz * Nelts` байты доступной памяти и данные, необходимые **операторам New** и **Delete** . Выделенные участки памяти никогда не будут освобождены.
 
 ### <a name="constructors"></a>Конструкторы
 
@@ -50,16 +49,16 @@ class cache_suballoc
 
 |Функция-член|Описание|
 |-|-|
-|[Выделить](#allocate)|Выделяет блок памяти.|
-|[Освобождения](#deallocate)|Освобождает указанное число объектов из памяти, начиная с заданной позиции.|
+|[памяти](#allocate)|Выделяет блок памяти.|
+|[deallocate](#deallocate)|Освобождает указанное число объектов из памяти, начиная с заданной позиции.|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<allocators>
+**Заголовок:**\<allocators>
 
 **Пространство имен:** stdext
 
-## <a name="cache_suballocallocate"></a><a name="allocate"></a>cache_suballoc::
+## <a name="cache_suballocallocate"></a><a name="allocate"></a> cache_suballoc:: allocate
 
 Выделяет блок памяти.
 
@@ -69,9 +68,8 @@ void *allocate(std::size_t count);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*count*|Число выделяемых элементов в массиве.|
+*расчета*\
+Число выделяемых элементов в массиве.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -79,7 +77,7 @@ void *allocate(std::size_t count);
 
 ### <a name="remarks"></a>Remarks
 
-## <a name="cache_suballoccache_suballoc"></a><a name="cache_suballoc"></a>cache_suballoc::cache_suballoc
+## <a name="cache_suballoccache_suballoc"></a><a name="cache_suballoc"></a> cache_suballoc:: cache_suballoc
 
 Создает объект типа `cache_suballoc`.
 
@@ -89,7 +87,7 @@ cache_suballoc();
 
 ### <a name="remarks"></a>Remarks
 
-## <a name="cache_suballocdeallocate"></a><a name="deallocate"></a>cache_suballoc::dраспределение
+## <a name="cache_suballocdeallocate"></a><a name="deallocate"></a> cache_suballoc::d еаллокате
 
 Освобождает указанное число объектов из памяти, начиная с заданной позиции.
 
@@ -99,13 +97,14 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*Ptr*|Указатель на первый объект, который должен быть освобожден из хранилища.|
-|*count*|Количество объектов для освобождения из хранилища.|
+*указатель*\
+Указатель на первый объект, который должен быть освобожден из хранилища.
+
+*расчета*\
+Количество объектов для освобождения из хранилища.
 
 ### <a name="remarks"></a>Remarks
 
 ## <a name="see-also"></a>См. также раздел
 
-[\<>-подлатыватели](../standard-library/allocators-header.md)
+[\<allocators>](../standard-library/allocators-header.md)

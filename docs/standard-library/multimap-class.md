@@ -86,12 +86,12 @@ helpviewer_keywords:
 - std::multimap [C++], upper_bound
 - std::multimap [C++], value_comp
 ms.assetid: 8796ae05-37c4-475a-9e61-75fde9d4a463
-ms.openlocfilehash: 95d72c00247396a860fae67cda55ec0f6647ed59
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 90da4e575d70fc3f551d75681d2563896a6647d7
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224738"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560521"
 ---
 # <a name="multimap-class"></a>Класс multimap
 
@@ -153,7 +153,7 @@ class multimap;
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[multimap](#multimap)|Создает контейнер `multimap`, который является пустым или копией части или целого другого контейнера `multimap`.|
 
@@ -209,7 +209,7 @@ class multimap;
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |[Оператор =](#op_eq)|Заменяет элементы `multimap` копией другого `multimap`.|
 
@@ -221,7 +221,7 @@ class multimap;
 
 Пары ( **ключ**, **значение**) хранятся в мультиотображении в виде объектов типа `pair`. Для класса пары требуется заголовок \<utility> , который автоматически включается в \<map> .
 
-## <a name="multimapallocator_type"></a><a name="allocator_type"></a>multimap:: allocator_type
+## <a name="multimapallocator_type"></a><a name="allocator_type"></a> multimap:: allocator_type
 
 Тип, который представляет класс распределителя для объекта-мультиотображения.
 
@@ -233,7 +233,7 @@ typedef Allocator allocator_type;
 
 См. пример использования [get_allocator](#get_allocator) в качестве примера использования `allocator_type`.
 
-## <a name="multimapbegin"></a><a name="begin"></a>multimap:: Begin
+## <a name="multimapbegin"></a><a name="begin"></a> multimap:: Begin
 
 Возвращает итератор, адресующий первый элемент в мультиотображении.
 
@@ -288,7 +288,7 @@ The first element of m1 is 0
 First element of m1 is now 1
 ```
 
-## <a name="multimapcbegin"></a><a name="cbegin"></a>multimap:: cbegin
+## <a name="multimapcbegin"></a><a name="cbegin"></a> multimap:: cbegin
 
 Возвращает **`const`** итератор, который обращается к первому элементу в диапазоне.
 
@@ -314,7 +314,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="multimapcend"></a><a name="cend"></a>multimap:: cend
+## <a name="multimapcend"></a><a name="cend"></a> multimap:: cend
 
 Возвращает **`const`** итератор, который обращается к расположению сразу за последним элементом в диапазоне.
 
@@ -342,7 +342,7 @@ auto i2 = Container.cend();
 
 Значение, возвращаемое `cend`, не должно быть подвергнуто удалению ссылки.
 
-## <a name="multimapclear"></a><a name="clear"></a>multimap:: Clear
+## <a name="multimapclear"></a><a name="clear"></a> multimap:: Clear
 
 Стирает все элементы мультиотображения.
 
@@ -386,7 +386,7 @@ The size of the multimap is initially 2.
 The size of the multimap after clearing is 0.
 ```
 
-## <a name="multimapconst_iterator"></a><a name="const_iterator"></a>multimap:: const_iterator
+## <a name="multimapconst_iterator"></a><a name="const_iterator"></a> multimap:: const_iterator
 
 Тип, предоставляющий двунаправленный итератор, который может читать **`const`** элемент в multimap.
 
@@ -408,7 +408,7 @@ typedef implementation-defined const_iterator;
 
 См. пример для [begin](#begin) в качестве примера использования `const_iterator`.
 
-## <a name="multimapconst_pointer"></a><a name="const_pointer"></a>multimap:: const_pointer
+## <a name="multimapconst_pointer"></a><a name="const_pointer"></a> multimap:: const_pointer
 
 Тип, предоставляющий указатель на **`const`** элемент в multimap.
 
@@ -422,7 +422,7 @@ typedef typename allocator_type::const_pointer const_pointer;
 
 В большинстве случаев для доступа к элементам в объекте-мультиотображении следует использовать [iterator](#iterator).
 
-## <a name="multimapconst_reference"></a><a name="const_reference"></a>multimap:: const_reference
+## <a name="multimapconst_reference"></a><a name="const_reference"></a> multimap:: const_reference
 
 Тип, предоставляющий ссылку на **`const`** элемент, хранящийся в multimap для чтения и выполнения **`const`** операций.
 
@@ -472,7 +472,7 @@ The key of the first element in the multimap is 1.
 The data value of the first element in the multimap is 10.
 ```
 
-## <a name="multimapconst_reverse_iterator"></a><a name="const_reverse_iterator"></a>multimap:: const_reverse_iterator
+## <a name="multimapconst_reverse_iterator"></a><a name="const_reverse_iterator"></a> multimap:: const_reverse_iterator
 
 Тип, предоставляющий двунаправленный итератор, который может читать любой **`const`** элемент в multimap.
 
@@ -494,7 +494,7 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 См. пример для [rend](#rend) в качестве примера объявления и использования `const_reverse_iterator`.
 
-## <a name="multimapcount"></a><a name="count"></a>multimap:: count
+## <a name="multimapcount"></a><a name="count"></a> multimap:: count
 
 Возвращает число элементов в мультиотображении, ключи которых совпадают с ключом, заданным параметром.
 
@@ -515,7 +515,7 @@ size_type count(const Key& key) const;
 
 Функция-член возвращает число элементов в диапазоне
 
-\[lower_bound (*ключ*), upper_bound (*ключ*))
+\[ lower_bound (*ключ*), upper_bound (*ключ*))
 
 , имеющие *ключ*значения ключа.
 
@@ -563,7 +563,7 @@ The number of elements in m1 with a sort key of 2 is: 2.
 The number of elements in m1 with a sort key of 3 is: 0.
 ```
 
-## <a name="multimapcrbegin"></a><a name="crbegin"></a>multimap:: crbegin
+## <a name="multimapcrbegin"></a><a name="crbegin"></a> multimap:: crbegin
 
 Возвращает константный итератор, адресующий первый элемент в обратном мультиотображении.
 
@@ -613,7 +613,7 @@ int main( )
 The first element of the reversed multimap m1 is 3.
 ```
 
-## <a name="multimapcrend"></a><a name="crend"></a>multimap:: crend
+## <a name="multimapcrend"></a><a name="crend"></a> multimap:: crend
 
 Возвращает константный итератор, адресующий положение после последнего элемента в обратном мультиотображении.
 
@@ -666,7 +666,7 @@ int main( )
 The last element of the reversed multimap m1 is 1.
 ```
 
-## <a name="multimapdifference_type"></a><a name="difference_type"></a>multimap::d ifference_type
+## <a name="multimapdifference_type"></a><a name="difference_type"></a> multimap::d ifference_type
 
 Целочисленный тип со знаком, который можно использовать для представления числа элементов в мультиотображении в диапазоне между элементами, на которые указывают итераторы.
 
@@ -724,7 +724,7 @@ int main( )
 The number of elements in the multimap m1 is: 4.
 ```
 
-## <a name="multimapemplace"></a><a name="emplace"></a>multimap:: emplace
+## <a name="multimapemplace"></a><a name="emplace"></a> multimap:: emplace
 
 Вставляет элемент, созданный на месте (операции копирования или перемещения не выполняются).
 
@@ -735,9 +735,8 @@ iterator emplace(Args&&... args);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
-|-|-|
-|*args*|Аргументы, передаваемые для создания элемента, вставляемого в мультиотображение.|
+*args*\
+Аргументы, передаваемые для создания элемента, вставляемого в мультиотображение.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -792,7 +791,7 @@ int main()
 }
 ```
 
-## <a name="multimapemplace_hint"></a><a name="emplace_hint"></a>multimap:: emplace_hint
+## <a name="multimapemplace_hint"></a><a name="emplace_hint"></a> multimap:: emplace_hint
 
 Вставляет созданный элемент на место (операции копирования или перемещения не выполняются) с указанием о размещении.
 
@@ -805,10 +804,11 @@ iterator emplace_hint(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
-|-|-|
-|*args*|Аргументы, передаваемые для создания элемента, вставляемого в мультиотображение.|
-|*where*|Место начала поиска правильной точки вставки. (Если точка непосредственно перед *точкой, то*Вставка может выполняться в периодической константе вместо логарифмического времени.)|
+*args*\
+Аргументы, передаваемые для создания элемента, вставляемого в мультиотображение.
+
+*которому*\
+Место начала поиска правильной точки вставки. (Если точка непосредственно перед *точкой, то*Вставка может выполняться в периодической константе вместо логарифмического времени.)
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -824,7 +824,7 @@ iterator emplace_hint(
 
 Пример кода см. в разделе [map::emplace_hint](../standard-library/map-class.md#emplace_hint).
 
-## <a name="multimapempty"></a><a name="empty"></a>multimap:: Empty
+## <a name="multimapempty"></a><a name="empty"></a> multimap:: Empty
 
 Проверяет, что мультиотображение пусто.
 
@@ -869,7 +869,7 @@ The multimap m1 is not empty.
 The multimap m2 is empty.
 ```
 
-## <a name="multimapend"></a><a name="end"></a>multimap:: end
+## <a name="multimapend"></a><a name="end"></a> multimap:: end
 
 Возврат итератора после конца.
 
@@ -891,7 +891,7 @@ iterator end();
 
 Пример кода см. в разделе [multimap::find](#find).
 
-## <a name="multimapequal_range"></a><a name="equal_range"></a>multimap:: equal_range
+## <a name="multimapequal_range"></a><a name="equal_range"></a> multimap:: equal_range
 
 Находит диапазон элементов, где ключ элемента соответствует заданному значению.
 
@@ -972,7 +972,7 @@ matching the 2nd element of the pair returned by equal_range( 2 ).
 The multimap m1 doesn't have an element with a key less than 4.
 ```
 
-## <a name="multimaperase"></a><a name="erase"></a>multimap:: Erase
+## <a name="multimaperase"></a><a name="erase"></a> multimap:: Erase
 
 Удаляет элемент или диапазон элементов в мультиотображении из указанных позиций или удаляет элементы, соответствующие заданному ключу.
 
@@ -1012,7 +1012,7 @@ size_type erase(
 
 Пример кода см. в разделе [map::erase](../standard-library/map-class.md#erase).
 
-## <a name="multimapfind"></a><a name="find"></a>multimap:: Find
+## <a name="multimapfind"></a><a name="find"></a> multimap:: Find
 
 Возвращает итератор, ссылающийся на элемент в мультикарте, ключ которого эквивалентен заданному ключу.
 
@@ -1099,7 +1099,7 @@ int main()
 }
 ```
 
-## <a name="multimapget_allocator"></a><a name="get_allocator"></a>multimap:: get_allocator
+## <a name="multimapget_allocator"></a><a name="get_allocator"></a> multimap:: get_allocator
 
 Возвращает копию объекта-распределителя, использованного для создания мультиотображения.
 
@@ -1171,7 +1171,7 @@ int main( )
 }
 ```
 
-## <a name="multimapinsert"></a><a name="insert"></a>multimap:: INSERT
+## <a name="multimapinsert"></a><a name="insert"></a> multimap:: INSERT
 
 Вставляет элемент или диапазон элементов в множественное сопоставление.
 
@@ -1211,15 +1211,26 @@ IList);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
-|-|-|
-|*Val*|Значение элемента, вставляемого в множественное сопоставление.|
-|*Where*|Место начала поиска правильной точки вставки. (Если точка непосредственно перед *точкой, то*Вставка может выполняться в периодической константе вместо логарифмического времени.)|
-|*валти*|Параметр шаблона, указывающий тип аргумента, который может использоваться картой для создания элемента [value_type](../standard-library/map-class.md#value_type)и идеального перенаправления *Val* в качестве аргумента.|
-|*First*|Позиция первого элемента, который следует скопировать.|
-|*Последняя*|Позиция непосредственно перед последним элементом, который следует скопировать.|
-|*InputIterator*|Аргумент функции-шаблона, который соответствует требованиям [итератора ввода](../standard-library/input-iterator-tag-struct.md), указывающего на элементы типа, которые можно использовать для создания объектов [value_type](../standard-library/map-class.md#value_type).|
-|*IList*|[Initializer_list](../standard-library/initializer-list.md) , из которого копируются элементы.|
+*Val*\
+Значение элемента, вставляемого в множественное сопоставление.
+
+*Которому*\
+Место начала поиска правильной точки вставки. (Если точка непосредственно перед *точкой, то*Вставка может выполняться в периодической константе вместо логарифмического времени.)
+
+*валти*\
+Параметр шаблона, указывающий тип аргумента, который может использоваться картой для создания элемента [value_type](../standard-library/map-class.md#value_type)и идеального перенаправления *Val* в качестве аргумента.
+
+*Началь*\
+Позиция первого элемента, который следует скопировать.
+
+*Последняя*\
+Позиция непосредственно перед последним элементом, который следует скопировать.
+
+*InputIterator*\
+Аргумент функции-шаблона, который соответствует требованиям [итератора ввода](../standard-library/input-iterator-tag-struct.md), указывающего на элементы типа, которые можно использовать для создания объектов [value_type](../standard-library/map-class.md#value_type).
+
+*Интерфейс*\
+[Initializer_list](../standard-library/initializer-list.md) , из которого копируются элементы.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1331,7 +1342,7 @@ int main()
 }
 ```
 
-## <a name="multimapiterator"></a><a name="iterator"></a>multimap:: iterator
+## <a name="multimapiterator"></a><a name="iterator"></a> multimap:: iterator
 
 Тип, предоставляющий двунаправленный итератор, который может читать или изменять любой элемент в мультиотображении.
 
@@ -1353,7 +1364,7 @@ typedef implementation-defined iterator;
 
 См. пример объявления и использования `iterator` см. в разделе [begin](#begin).
 
-## <a name="multimapkey_comp"></a><a name="key_comp"></a>multimap:: key_comp
+## <a name="multimapkey_comp"></a><a name="key_comp"></a> multimap:: key_comp
 
 Извлекает копию объекта сравнения, использованного для упорядочивания ключей в мультиотображении.
 
@@ -1424,7 +1435,7 @@ kc1( 2,3 ) returns value of true, where kc1 is the function object of m1.
 kc2( 2,3 ) returns value of false, where kc2 is the function object of m2.
 ```
 
-## <a name="multimapkey_compare"></a><a name="key_compare"></a>multimap:: key_compare
+## <a name="multimapkey_compare"></a><a name="key_compare"></a> multimap:: key_compare
 
 Тип, который предоставляет объект-функцию, которая может сравнить два ключа сортировки для определения относительного порядка двух элементов в мультиотображении.
 
@@ -1442,7 +1453,7 @@ typedef Traits key_compare;
 
 См. пример для [key_comp](#key_comp) в качестве примера объявления и использования `key_compare`.
 
-## <a name="multimapkey_type"></a><a name="key_type"></a>multimap:: key_type
+## <a name="multimapkey_type"></a><a name="key_type"></a> multimap:: key_type
 
 Тип, описывающий объект-ключ сортировки, который входит в каждый элемент мультиотображения.
 
@@ -1460,7 +1471,7 @@ typedef Key key_type;
 
 См. пример для [value_type](#value_type) в качестве примера объявления и использования `key_type`.
 
-## <a name="multimaplower_bound"></a><a name="lower_bound"></a>multimap:: lower_bound
+## <a name="multimaplower_bound"></a><a name="lower_bound"></a> multimap:: lower_bound
 
 Возвращает итератор, указывающий на первый элемент в мультиотображении с ключом, который равен указанному ключу или больше его.
 
@@ -1548,7 +1559,7 @@ that of the last element is: 20.
 This is not the last element of multimap m1.
 ```
 
-## <a name="multimapmapped_type"></a><a name="mapped_type"></a>multimap:: mapped_type
+## <a name="multimapmapped_type"></a><a name="mapped_type"></a> multimap:: mapped_type
 
 Тип, представляющий тип данных, хранящихся в мультиотображении.
 
@@ -1566,7 +1577,7 @@ typedef Type mapped_type;
 
 См. пример для [value_type](#value_type) в качестве примера объявления и использования `key_type`.
 
-## <a name="multimapmax_size"></a><a name="max_size"></a>multimap:: max_size
+## <a name="multimapmax_size"></a><a name="max_size"></a> multimap:: max_size
 
 Возвращает максимальную длину мультиотображения.
 
@@ -1598,7 +1609,7 @@ int main( )
 }
 ```
 
-## <a name="multimapmultimap"></a><a name="multimap"></a>multimap:: multimap
+## <a name="multimapmultimap"></a><a name="multimap"></a> multimap:: multimap
 
 Создает мультиотображение, которое является пустым или копией всего или части другого мультиотображения.
 
@@ -1651,14 +1662,23 @@ multimap(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
-|-|-|
-|*Al*|Класс распределителя памяти для использования для этого объекта-мультиотображения. Значение по умолчанию — Allocator.|
-|*Соответствовал*|Функция сравнения типа `constTraits` для использования при упорядочивании элементов в сопоставлении. Значение по умолчанию — `Traits`.|
-|*Правильно*|Сопоставление, копией которого будет создаваемое сопоставление.|
-|*First*|Положение первого элемента в диапазоне копируемых элементов.|
-|*Последняя*|Положение первого элемента после диапазона копируемых элементов.|
-|*IList*|Объект initializer_list, из которого копируются элементы.|
+*Al*\
+Класс распределителя памяти для использования для этого объекта-мультиотображения. Значение по умолчанию — Allocator.
+
+*Соответствовал*\
+Функция сравнения типа `constTraits` для использования при упорядочивании элементов в сопоставлении. Значение по умолчанию — `Traits`.
+
+*Правильно*\
+Сопоставление, копией которого будет создаваемое сопоставление.
+
+*Началь*\
+Положение первого элемента в диапазоне копируемых элементов.
+
+*Последняя*\
+Положение первого элемента после диапазона копируемых элементов.
+
+*Интерфейс*\
+Объект initializer_list, из которого копируются элементы.
 
 ### <a name="remarks"></a>Remarks
 
@@ -1786,7 +1806,7 @@ int main()
 }
 ```
 
-## <a name="multimapoperator"></a><a name="op_eq"></a>multimap:: operator =
+## <a name="multimapoperator"></a><a name="op_eq"></a> multimap:: operator =
 
 Заменяет элементы мультиотображения копией другого мультиотображения.
 
@@ -1798,9 +1818,8 @@ multimap& operator=(multimap&& right);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
-|-|-|
-|*Правильно*|[Мультиотображение](../standard-library/multimap-class.md), которое будет копироваться в `multimap`.|
+*Правильно*\
+[Мультиотображение](../standard-library/multimap-class.md), которое будет копироваться в `multimap`.
 
 ### <a name="remarks"></a>Remarks
 
@@ -1843,7 +1862,7 @@ int main( )
    }
 ```
 
-## <a name="multimappointer"></a><a name="pointer"></a>multimap::p оинтер
+## <a name="multimappointer"></a><a name="pointer"></a> multimap::p оинтер
 
 Тип, предоставляющий указатель на элемент мультиотображения.
 
@@ -1857,7 +1876,7 @@ typedef typename allocator_type::pointer pointer;
 
 В большинстве случаев для доступа к элементам в объекте-мультиотображении следует использовать [iterator](#iterator).
 
-## <a name="multimaprbegin"></a><a name="rbegin"></a>multimap:: rbegin
+## <a name="multimaprbegin"></a><a name="rbegin"></a> multimap:: rbegin
 
 Возвращает итератор, адресующий первый элемент в обратном мультиотображении.
 
@@ -1937,7 +1956,7 @@ The reversed multimap is: 3 2 1 .
 After the erasure, the first element in the reversed multimap is 2.
 ```
 
-## <a name="multimapreference"></a><a name="reference"></a>multimap:: Reference
+## <a name="multimapreference"></a><a name="reference"></a> multimap:: Reference
 
 Тип, который предоставляет ссылку на элемент, хранящийся в мультиотображении.
 
@@ -1994,7 +2013,7 @@ The data value of first element in the multimap is 10.
 The modified data value of first element is 15.
 ```
 
-## <a name="multimaprend"></a><a name="rend"></a>multimap:: rend
+## <a name="multimaprend"></a><a name="rend"></a> multimap:: rend
 
 Возвращает итератор, адресующий положение после последнего элемента в обратном мультиотображении.
 
@@ -2078,7 +2097,7 @@ The reversed multimap is: 3 2 1 .
 After the erasure, the last element in the reversed multimap is 2.
 ```
 
-## <a name="multimapreverse_iterator"></a><a name="reverse_iterator"></a>multimap:: reverse_iterator
+## <a name="multimapreverse_iterator"></a><a name="reverse_iterator"></a> multimap:: reverse_iterator
 
 Тип, предоставляющий двунаправленный итератор, который может читать и изменять элемент в обратном мультиотображении.
 
@@ -2100,7 +2119,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 См. пример для [rbegin](#rbegin) в качестве примера объявления и использования `reverse_iterator`.
 
-## <a name="multimapsize"></a><a name="size"></a>multimap:: size
+## <a name="multimapsize"></a><a name="size"></a> multimap:: size
 
 Возвращает число элементов в мультиотображении.
 
@@ -2144,7 +2163,7 @@ The multimap length is 1.
 The multimap length is now 2.
 ```
 
-## <a name="multimapsize_type"></a><a name="size_type"></a>multimap:: size_type
+## <a name="multimapsize_type"></a><a name="size_type"></a> multimap:: size_type
 
 Тип целого числа без знака, который подсчитывает число элементов в мультиотображении.
 
@@ -2156,7 +2175,7 @@ typedef typename allocator_type::size_type size_type;
 
 См. пример для [size](#size) в качестве примера объявления и использования `size_type`
 
-## <a name="multimapswap"></a><a name="swap"></a>multimap:: swap
+## <a name="multimapswap"></a><a name="swap"></a> multimap:: swap
 
 Обмен элементами между двумя мультиотображениями.
 
@@ -2225,7 +2244,7 @@ After swapping with m2, multimap m1 is: 100 200.
 After swapping with m3, multimap m1 is: 300.
 ```
 
-## <a name="multimapupper_bound"></a><a name="upper_bound"></a>multimap:: upper_bound
+## <a name="multimapupper_bound"></a><a name="upper_bound"></a> multimap:: upper_bound
 
 Возвращает итератор, указывающий на первый элемент в мультиотображении с ключом, который больше указанного ключа.
 
@@ -2304,7 +2323,7 @@ The first element of m1 with a key greater than
 that of the initial element of m1 is: 20.
 ```
 
-## <a name="multimapvalue_comp"></a><a name="value_comp"></a>multimap:: value_comp
+## <a name="multimapvalue_comp"></a><a name="value_comp"></a> multimap:: value_comp
 
 Функция-член возвращает объект-функцию, которая определяет порядок элементов в мультиотображении путем сравнения их значений ключа.
 
@@ -2370,7 +2389,7 @@ The element ( 1,10 ) precedes the element ( 2,5 ).
 The element ( 2,5 ) does not precede the element ( 1,10 ).
 ```
 
-## <a name="multimapvalue_type"></a><a name="value_type"></a>multimap:: value_type
+## <a name="multimapvalue_type"></a><a name="value_type"></a> multimap:: value_type
 
 Тип, представляющий тип объекта, который хранится в виде элемента в мультиотображении.
 
