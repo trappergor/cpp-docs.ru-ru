@@ -1,6 +1,8 @@
 ---
 title: Поля спецификации формата. Функции scanf и wscanf
 ms.date: 11/04/2016
+ms.topic: reference
+ms.custom: contperfq1
 helpviewer_keywords:
 - width, specifications in scanf function
 - scanf format specifications
@@ -10,12 +12,12 @@ helpviewer_keywords:
 - format specification fields for scanf function
 - type fields
 ms.assetid: 7e95de1b-0b71-4de3-9f81-c9560c78e039
-ms.openlocfilehash: 025d4c164d3afe1ca6b05c1c8e76441109cbc4ae
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 4be7aa5e0790f0124890ee981ffd58e3027ea59b
+ms.sourcegitcommit: 111ee74772d7f308d3414b5d42cbc1e90287f081
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438360"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88659335"
 ---
 # <a name="format-specification-fields-scanf-and-wscanf-functions"></a>Поля спецификации формата. Функции scanf и wscanf
 
@@ -47,9 +49,9 @@ ms.locfileid: "79438360"
 
 Безопасные версии (с суффиксом `_s`) семейства функций `scanf` требуют, чтобы сразу после каждого параметра типа `c`, `C`, `s`, `S` или `[` передавался параметр размера буфера. Дополнительные сведения о безопасных версиях семейства функций `scanf` см. в разделе [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [Спецификация ширины scanf](../c-runtime-library/scanf-width-specification.md)<br/>
-[Символы поля типа для функции scanf](../c-runtime-library/scanf-type-field-characters.md)<br/>
+[Символы поля типа scanf](../c-runtime-library/scanf-type-field-characters.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)<br/>
 [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)
