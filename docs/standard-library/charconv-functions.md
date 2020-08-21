@@ -1,18 +1,19 @@
 ---
 title: '&lt;&gt;функции чарконв'
-ms.date: 07/22/2020
+description: Описывает <charconv> библиотечные функции, которые преобразуют целые или числовые значения с плавающей запятой в символы или из них.
+ms.date: 08/20/2020
 f1_keywords:
 - charconv/std::to_chars
 - charconv/std::from_chars
 helpviewer_keywords:
 - std::charconv [C++], to_chars
 - std::charconv [C++], from_chars
-ms.openlocfilehash: 92f838ededad3e2b8493e934ae2b614247f18458
-ms.sourcegitcommit: 4eda68a0b3c23d8cefa56b7ba11583412459b32f
+ms.openlocfilehash: b8117f2a272f33be2bb5fef6ba8fa53ec794b63b
+ms.sourcegitcommit: f1752bf90b4f869633a859ace85439ca19e208b2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565954"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88722158"
 ---
 # <a name="ltcharconvgt-functions"></a>&lt;&gt;функции чарконв
 
@@ -104,10 +105,6 @@ to_chars_result to_chars(char* first, char* last, long double value, chars_forma
 |  Нет | Какая-либо фиксированная или экспоненциальная нотация короче, предваряется как тиебреакер.</br>Это поведение нельзя имитировать с помощью перегрузок, принимающих `fmt` параметр. |
 | `fmt` | Самое короткое поведение в указанном формате, например в кратчайшем экспоненциальном формате. |
 | `fmt` и `precision` | Использует заданную точность, следующий `printf()` стиль, без кратчайшего поведения приема-передачи. |
-
-### <a name="return-value"></a>Возвращаемое значение
-
-[To_chars_result](to-chars-result-structure.md) , содержащий результат преобразования.
 
 ### <a name="example"></a>Пример
 
@@ -245,7 +242,7 @@ int main()
 
 /std: требуется c++ 17 или более поздней версии.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [\<charconv>](charconv.md)  
 Наиболее [короткая десятичная строка, с которой циклическими обходовми](https://www.exploringbinary.com/the-shortest-decimal-string-that-round-trips-examples/) 
