@@ -10,22 +10,22 @@ helpviewer_keywords:
 - iterators, checked
 - checked iterators
 ms.assetid: cfc87df8-e3d9-403b-ab78-e9483247d940
-ms.openlocfilehash: f5a31843386d2246f5d74eae1f40b93f0ae35c90
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 4918cd9df34e5c728c4aa2d90d4eb7f55784e4c2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452138"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845696"
 ---
 # <a name="checked-iterators"></a>Checked Iterators
 
 Проверенные итераторы гарантируют отсутствие перезаписи границ контейнера. Проверенные итераторы применяются и к сборкам выпуска, и к сборкам отладки. Дополнительные сведения об использовании итераторов отладки при компиляции в режиме отладки см. в статье [Поддержка итераторов отладки](../standard-library/debug-iterator-support.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Дополнительные сведения об отключении предупреждений, создаваемых проверенными итераторами, см. в разделе [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md).
 
-Вы можете использовать макрос препроцессора [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md), чтобы включать или отключать функцию проверенных итераторов. Если _ITERATOR_DEBUG_LEVEL определен как 1 или 2, ненадежное использование итераторов вызывает ошибку времени выполнения и программа завершается. Если задано значение 0, проверенные итераторы блокируются. По умолчанию значение _ITERATOR_DEBUG_LEVEL равно 0 для сборок выпуска и 2 для отладочных сборок.
+Для включения или отключения функции проверенных итераторов можно использовать макрос препроцессора на [ \_ \_ \_ уровне отладки итератора](../standard-library/iterator-debug-level.md) . Если _ITERATOR_DEBUG_LEVEL определяется как 1 или 2, ненадежное использование итераторов вызывает ошибку времени выполнения и программа завершается. Если задано значение 0, проверенные итераторы блокируются. По умолчанию значение для _ITERATOR_DEBUG_LEVEL равно 0 для сборок выпуска и 2 для отладочных сборок.
 
 > [!IMPORTANT]
 > В более старой документации и исходном коде могут быть ссылки на макрос [_SECURE_SCL](../standard-library/secure-scl.md). Используйте _ITERATOR_DEBUG_LEVEL для управления _SECURE_SCL. Дополнительные сведения см. в разделе [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md).
@@ -40,13 +40,28 @@ ms.locfileid: "68452138"
 
 - Следующие функции вызовут ошибку во время выполнения при попытке получения доступа к элементу, расположенному за границами контейнера:
 
-|||||
-|-|-|-|-|
-|[basic_string::operator\[\]](../standard-library/basic-string-class.md#op_at)|[bitset::operator\[\]](../standard-library/bitset-class.md#op_at)|[back](../standard-library/deque-class.md#back)|[front](../standard-library/deque-class.md#front)|
-|[deque::operator\[\]](../standard-library/deque-class.md#op_at)|[back](../standard-library/list-class.md#back)|[front](../standard-library/list-class.md#front)|[back](../standard-library/queue-class.md#back)|
-|[front](../standard-library/queue-class.md#front)|[vector::operator\[\]](../standard-library/vector-class.md#op_at)|[back](../standard-library/vector-class.md#back)|[front](../standard-library/vector-class.md#front)|
+:::row:::
+   :::column span="":::
+      &emsp;&emsp;[`basic_string::operator[]`](../standard-library/basic-string-class.md#op_at)\
+      &emsp;&emsp;[`bitset::operator[]`](../standard-library/bitset-class.md#op_at)\
+      &emsp;&emsp;[`deque::back`](../standard-library/deque-class.md#back)\
+      &emsp;&emsp;[`deque::front`](../standard-library/deque-class.md#front)
+   :::column-end:::
+   :::column span="":::
+      [`deque::operator[]`](../standard-library/deque-class.md#op_at)\
+      [`list::back`](../standard-library/list-class.md#back)\
+      [`list::front`](../standard-library/list-class.md#front)\
+      [`queue::back`](../standard-library/queue-class.md#back)
+   :::column-end:::
+   :::column span="":::
+      [`queue::front`](../standard-library/queue-class.md#front)\
+      [`vector::back`](../standard-library/vector-class.md#back)\
+      [`vector::front`](../standard-library/vector-class.md#front)\
+      [`vector::operator[]`](../standard-library/vector-class.md#op_at)
+   :::column-end:::
+:::row-end:::
 
-Если _ITERATOR_DEBUG_LEVEL определен как 0:
+Если _ITERATOR_DEBUG_LEVEL определено как 0:
 
 - Все стандартные итераторы являются непроверенными. Итераторы могут перемещаться за пределы контейнера, что вызывает неопределенное поведение.
 
@@ -60,7 +75,7 @@ ms.locfileid: "68452138"
 
 ## <a name="example"></a>Пример
 
-При компиляции с параметром _ITERATOR_DEBUG_LEVEL, для которого задано значение 1 или 2, возникает ошибка времени выполнения при попытке доступа к элементу, который находится за пределами контейнера, с помощью оператора индексирования определенных классов.
+При компиляции с помощью _ITERATOR_DEBUG_LEVEL, для которого задано значение 1 или 2, при попытке получить доступ к элементу, который находится за пределами контейнера с помощью оператора индексирования определенных классов, возникнет ошибка времени выполнения.
 
 ```cpp
 // checked_iterators_1.cpp
@@ -89,7 +104,7 @@ int main()
 
 ## <a name="example"></a>Пример
 
-Аналогично при компиляции с помощью _ITERATOR_DEBUG_LEVEL, для которого задано значение 1 или 2, возникает ошибка времени выполнения при попытке получить доступ к элементу `back` с помощью `front` или в классах контейнеров, если контейнер пуст.
+Аналогично при компиляции с помощью _ITERATOR_DEBUG_LEVEL, для которого задано значение 1 или 2, возникает ошибка времени выполнения при попытке получить доступ к элементу с помощью `front` или `back` в классах контейнеров, если контейнер пуст.
 
 ```cpp
 // checked_iterators_2.cpp
@@ -113,7 +128,7 @@ int main()
 
 ## <a name="example"></a>Пример
 
-Следующий код демонстрирует различные сценарии использования итератора с комментариями о каждом. По умолчанию для _ITERATOR_DEBUG_LEVEL задано значение 2 в отладочных сборках, а в розничных сборках — 0.
+Следующий код демонстрирует различные сценарии использования итератора с комментариями о каждом. По умолчанию для параметра _ITERATOR_DEBUG_LEVEL задано значение 2 в отладочных сборках, а в розничных сборках — 0.
 
 ```cpp
 // checked_iterators_3.cpp
@@ -217,7 +232,7 @@ a7: 0 7 14 21 28 35 42 49 56 63 70 77 84 91 98 105
 a8: 0 8 16 24 32 40 48 56 64 72 80 88 96 104 112 120
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Общие сведения о стандартной библиотеке C++](../standard-library/cpp-standard-library-overview.md)\
-[Поддержка итераторов отладки](../standard-library/debug-iterator-support.md)
+[Поддержка итератора отладки](../standard-library/debug-iterator-support.md)

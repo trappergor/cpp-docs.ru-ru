@@ -26,23 +26,28 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: f4ef061e49bda027b0a8a65449c7c71cd765dcf1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f540b311cafd59935a9cf1e521d3dbd558f59673
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228249"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845761"
 ---
 # <a name="ltiomanipgt-functions"></a>Функции &lt;iomanip&gt;
 
-||||
-|-|-|-|
-|[get_money](#iomanip_get_money)|[get_time](#iomanip_get_time)|[put_money](#iomanip_put_money)|
-|[put_time](#iomanip_put_time)|[в кавычках](#quoted)|[resetiosflags](#resetiosflags)|
-|[сетбасе](#setbase)|[сетфилл](#setfill)|[setiosflags](#setiosflags)|
-|[setprecision](#setprecision)|[setw](#setw)|
+[get_money](#iomanip_get_money)\
+[get_time](#iomanip_get_time)\
+[put_money](#iomanip_put_money)\
+[put_time](#iomanip_put_time)\
+[в кавычках](#quoted)\
+[ресетиосфлагс](#resetiosflags)\
+[сетбасе](#setbase)\
+[сетфилл](#setfill)\
+[сетиосфлагс](#setiosflags)\
+[setprecision](#setprecision)\
+[setw](#setw)
 
-## <a name="get_money"></a><a name="iomanip_get_money"></a>get_money
+## <a name="get_money"></a><a name="iomanip_get_money"></a> get_money
 
 Извлекает из потока денежное значение, используя нужный формат, и возвращает значение в параметре.
 
@@ -63,9 +68,9 @@ T7 get_money(Money& amount, bool use_intl);
 
 Манипулятор возвращает объект, который при извлечении из потока `str` ведет себя как объект `formatted input function` , который вызывает функцию-член `get` для аспекта языкового стандарта `money_get` , связанного с `str` , используя *use_intl* для указания международного формата. В случае успеха вызов сохраняет в *сумме* извлеченное денежное значение. Затем манипулятор возвращает `str`.
 
-`Money`аргумент должен иметь тип **`long double`** или экземпляр `basic_string` с теми же параметрами элемента и признаков, что и `str` .
+`Money` аргумент должен иметь тип **`long double`** или экземпляр `basic_string` с теми же параметрами элемента и признаков, что и `str` .
 
-## <a name="get_time"></a><a name="iomanip_get_time"></a>get_time
+## <a name="get_time"></a><a name="iomanip_get_time"></a> get_time
 
 Извлекает значение времени из потока, используя нужный формат. Возвращает значение в параметре в виде структуры времени.
 
@@ -86,7 +91,7 @@ T10 put_time(struct tm *time_ptr, const Elem *time_format);
 
 Манипулятор возвращает объект, который при извлечении из потока `str` ведет себя как `formatted input function`, вызывающий функцию-член `get` для ограничения языкового стандарта `time_get`, связанного с `str`, с использованием `tptr` для указания структуры времени и `fmt` для указания начала строки формата, завершающейся нулем. В случае успешного выполнения вызов хранит в структуре времени значения, связанные с полями извлеченного времени. Затем манипулятор возвращает `str`.
 
-## <a name="put_money"></a><a name="iomanip_put_money"></a>put_money
+## <a name="put_money"></a><a name="iomanip_put_money"></a> put_money
 
 Вставляет денежную сумму в поток, используя нужный формат.
 
@@ -111,9 +116,9 @@ T8 put_money(const Money& amount, bool use_intl);
 
 Манипулятор возвращает объект, который при вставке в поток `str` ведет себя как форматированная выходная функция, вызывающая функцию-член `put` для ограничения языкового стандарта `money_put`, связанного с `str`. В случае успеха вызов вставляется `amount` соответствующим образом, используя *use_intl* для обозначения международного формата и в `str.fill()` качестве элемента Fill. Затем манипулятор возвращает `str`.
 
-`Money`аргумент должен иметь тип **`long double`** или экземпляр `basic_string` с теми же параметрами элемента и признаков, что и `str` .
+`Money` аргумент должен иметь тип **`long double`** или экземпляр `basic_string` с теми же параметрами элемента и признаков, что и `str` .
 
-## <a name="put_time"></a><a name="iomanip_put_time"></a>put_time
+## <a name="put_time"></a><a name="iomanip_put_time"></a> put_time
 
 Записывает значение времени из структуры времени в поток с использованием указанного формата.
 
@@ -134,7 +139,7 @@ T10 put_time(struct tm* time_ptr, const Elem* time_format);
 
 Манипулятор возвращает объект, который при вставке в поток `str` ведет себя как `formatted output function`. Функция вывода вызывает функцию-член `put` для ограничения языкового стандарта `time_put`, связанного с `str`. Функция Output использует *time_ptr* , чтобы указать структуру времени и *time_format* , чтобы указать начало строки формата, завершающейся нулем. В случае успешного выполнения вызов вставляет текст из строки формата и преобразованные значения из структуры времени. Затем манипулятор возвращает `str`.
 
-## <a name="quoted"></a><a name="quoted"></a>в кавычках
+## <a name="quoted"></a><a name="quoted"></a> в кавычках
 
 **(Новое в C++14)** Манипулятор iostream, который обеспечивает удобное обращение строк в потоки и из них с помощью операторов >> и <<.
 
@@ -301,7 +306,7 @@ Press Enter to exit
 */
 ```
 
-## <a name="resetiosflags"></a><a name="resetiosflags"></a>ресетиосфлагс
+## <a name="resetiosflags"></a><a name="resetiosflags"></a> ресетиосфлагс
 
 Удаляет указанные флаги.
 
@@ -322,7 +327,7 @@ T1 resetiosflags(ios_base::fmtflags mask);
 
 См. [setw](../standard-library/iomanip-functions.md#setw) для примера использования `resetiosflags`.
 
-## <a name="setbase"></a><a name="setbase"></a>сетбасе
+## <a name="setbase"></a><a name="setbase"></a> сетбасе
 
 Задает основание целых чисел.
 
@@ -351,7 +356,7 @@ T3 setbase(int base);
 
 См. [setw](../standard-library/iomanip-functions.md#setw) для примера использования `setbase`.
 
-## <a name="setfill"></a><a name="setfill"></a>сетфилл
+## <a name="setfill"></a><a name="setfill"></a> сетфилл
 
 Задает символ, который будет использоваться для заполнения пробелов на экране с выравниванием по правому краю.
 
@@ -373,7 +378,7 @@ T4 setfill(Elem Ch);
 
 См. [setw](../standard-library/iomanip-functions.md#setw) для примера использования `setfill`.
 
-## <a name="setiosflags"></a><a name="setiosflags"></a>сетиосфлагс
+## <a name="setiosflags"></a><a name="setiosflags"></a> сетиосфлагс
 
 Задает указанные флаги.
 
@@ -394,7 +399,7 @@ T2 setiosflags(ios_base::fmtflags mask);
 
 См. [setw](../standard-library/iomanip-functions.md#setw) для примера использования `setiosflags`.
 
-## <a name="setprecision"></a><a name="setprecision"></a>setprecision
+## <a name="setprecision"></a><a name="setprecision"></a> setprecision
 
 Задает точность для значений с плавающей запятой.
 
@@ -415,7 +420,7 @@ T5 setprecision(streamsize Prec);
 
 См. [setw](../standard-library/iomanip-functions.md#setw) для примера использования `setprecision`.
 
-## <a name="setw"></a><a name="setw"></a>setw
+## <a name="setw"></a><a name="setw"></a> setw
 
 Ширина поля отображения для следующего элемента в потоке.
 

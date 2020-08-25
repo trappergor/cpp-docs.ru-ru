@@ -56,12 +56,12 @@ helpviewer_keywords:
 - OpenWithPromptFileName method
 - OpenWithServiceComponents method
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-ms.openlocfilehash: f6b5182fdc451217e2f61642f96e77f679c45d37
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2ce5090d7e1c74607a82ddbb79afebe185a1dca7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216509"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838351"
 ---
 # <a name="cdatasource-class"></a>Класс CDataSource
 
@@ -81,7 +81,7 @@ class CDataSource
 
 ### <a name="methods"></a>Методы
 
-|||
+| Имя | Описание |
 |-|-|
 |[Закрыть](#close)|Закрывает подключение.|
 |[жетинитиализатионстринг](#getinitializationstring)|Извлекает строку инициализации открытого в данный момент источника данных.|
@@ -99,7 +99,7 @@ class CDataSource
 
 Пример использования см `CDataSource` . в примере [catdb](../../overview/visual-cpp-samples.md) .
 
-## <a name="cdatasourceclose"></a><a name="close"></a>CDataSource:: Close
+## <a name="cdatasourceclose"></a><a name="close"></a> CDataSource:: Close
 
 Закрывает соединение, освобождая `m_spInit` указатель.
 
@@ -109,7 +109,7 @@ class CDataSource
 void Close() throw();
 ```
 
-## <a name="cdatasourcegetinitializationstring"></a><a name="getinitializationstring"></a>CDataSource:: Жетинитиализатионстринг
+## <a name="cdatasourcegetinitializationstring"></a><a name="getinitializationstring"></a> CDataSource:: Жетинитиализатионстринг
 
 Извлекает строку инициализации открытого в данный момент источника данных.
 
@@ -136,7 +136,7 @@ HRESULT GetInitializationString(BSTR* pInitializationString,
 
 Полученная строка инициализации может использоваться для повторного открытия этого соединения с источником данных.
 
-## <a name="cdatasourcegetproperties"></a><a name="getproperties"></a>Свойства CDataSource:: Properties
+## <a name="cdatasourcegetproperties"></a><a name="getproperties"></a> Свойства CDataSource:: Properties
 
 Возвращает сведения о свойствах, запрошенных для объекта подключенного источника данных.
 
@@ -161,7 +161,7 @@ HRESULT GetProperties(ULONG ulPropIDSets,
 
 Чтобы получить одно свойство, используйте [параметр-Property](../../data/oledb/cdatasource-getproperty.md).
 
-## <a name="cdatasourcegetproperty"></a><a name="getproperty"></a>CDataSource:: Property
+## <a name="cdatasourcegetproperty"></a><a name="getproperty"></a> CDataSource:: Property
 
 Возвращает значение указанного свойства для объекта подключенного источника данных.
 
@@ -192,7 +192,7 @@ HRESULT GetProperty(const GUID& guid,
 
 Чтобы получить несколько свойств, используйте [Свойства](../../data/oledb/cdatasource-getproperties.md).
 
-## <a name="cdatasourceopen"></a><a name="open"></a>CDataSource:: Open
+## <a name="cdatasourceopen"></a><a name="open"></a> CDataSource:: Open
 
 Открывает соединение с источником данных с помощью `CLSID` `ProgID` `CEnumerator` моникера, или предложит пользователю диалоговое окно с указателем.
 
@@ -240,7 +240,7 @@ HRESULT Open(LPCSTR szProgID,
 #### <a name="parameters"></a>Параметры
 
 *этому*<br/>
-окне `CLSID`Поставщик данных.
+окне `CLSID` Поставщик данных.
 
 *pPropSet*<br/>
 окне Указатель на массив структур [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) , содержащий свойства и значения, которые необходимо задать. См. раздел [наборы свойств и группы свойств](/previous-versions/windows/desktop/ms713696(v=vs.85)) в *справочнике по OLE DB программисту* в Windows SDK.
@@ -288,7 +288,7 @@ HRESULT Open(LPCSTR szProgID,
 
 [!code-cpp[NVC_OLEDB_Consumer#7](../../data/oledb/codesnippet/cpp/cdatasource-open_1.cpp)]
 
-## <a name="cdatasourceopenfromfilename"></a><a name="openfromfilename"></a>CDataSource:: Опенфромфиленаме
+## <a name="cdatasourceopenfromfilename"></a><a name="openfromfilename"></a> CDataSource:: Опенфромфиленаме
 
 Открывает источник данных из файла, указанного пользователем по имени.
 
@@ -313,7 +313,7 @@ HRESULT OpenFromFileName(LPCOLESTR szFileName) throw();
 
 Этот метод открывает объект источника данных с помощью компонентов службы в oledb32.dll. Эта DLL-библиотека содержит реализацию возможностей компонентов службы, таких как создание пулов ресурсов, автоматическое прикрепление транзакций и т. д. Дополнительные сведения см. в справочнике по OLE DB в [руководстве программиста OLE DB](/previous-versions/windows/desktop/ms713643(v=vs.85)).
 
-## <a name="cdatasourceopenfrominitializationstring"></a><a name="openfrominitializationstring"></a>CDataSource:: Опенфроминитиализатионстринг
+## <a name="cdatasourceopenfrominitializationstring"></a><a name="openfrominitializationstring"></a> CDataSource:: Опенфроминитиализатионстринг
 
 Открывает источник данных, заданный определяемой пользователем строкой инициализации.
 
@@ -342,7 +342,7 @@ HRESULT OpenFromInitializationString(LPCOLESTR szInitializationString,
 
 Этот метод открывает объект источника данных с помощью компонентов службы в oledb32.dll. Эта DLL-библиотека содержит реализацию возможностей компонентов службы, таких как создание пулов ресурсов, автоматическое прикрепление транзакций и т. д.
 
-## <a name="cdatasourceopenwithpromptfilename"></a><a name="openwithpromptfilename"></a>CDataSource:: Опенвиспромптфиленаме
+## <a name="cdatasourceopenwithpromptfilename"></a><a name="openwithpromptfilename"></a> CDataSource:: Опенвиспромптфиленаме
 
 Этот метод отображает диалоговое окно, а затем открывает источник данных, используя указанный пользователем файл.
 
@@ -373,7 +373,7 @@ HRESULT OpenWithPromptFileName(HWND hWnd = GetActiveWindow(   ),
 
 Этот метод открывает объект источника данных с помощью компонентов службы в oledb32.dll. Эта DLL-библиотека содержит реализацию возможностей компонентов службы, таких как создание пулов ресурсов, автоматическое прикрепление транзакций и т. д. Дополнительные сведения см. в справочнике по OLE DB в [руководстве программиста OLE DB](/previous-versions/windows/desktop/ms713643(v=vs.85)).
 
-## <a name="cdatasourceopenwithservicecomponents"></a><a name="openwithservicecomponents"></a>CDataSource:: Опенвиссервицекомпонентс
+## <a name="cdatasourceopenwithservicecomponents"></a><a name="openwithservicecomponents"></a> CDataSource:: Опенвиссервицекомпонентс
 
 Открывает объект источника данных с помощью компонентов службы в oledb32.dll.
 
@@ -392,7 +392,7 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
 #### <a name="parameters"></a>Параметры
 
 *этому*<br/>
-окне `CLSID`Поставщик данных.
+окне `CLSID` Поставщик данных.
 
 *сзпрогид*<br/>
 [входные данные] Идентификатор программы поставщика данных.

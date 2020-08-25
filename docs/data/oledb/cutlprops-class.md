@@ -29,16 +29,16 @@ helpviewer_keywords:
 - OnPropertyChanged method
 - SetPropValue method
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-ms.openlocfilehash: 3498ec1250d9443007acb3b12ec25983a71587d0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 46fa266c5a8328bbcf7cfd1257ce1ff3e38ed2bb
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211111"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845670"
 ---
 # <a name="cutlprops-class"></a>Класс CUtlProps
 
-Реализует свойства для различных интерфейсов свойств OLE DB (например, `IDBProperties`, `IDBProperties`и `IRowsetInfo`).
+Реализует свойства для различных интерфейсов свойств OLE DB (например,, `IDBProperties` `IDBProperties` и `IRowsetInfo` ).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -50,17 +50,17 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 ### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Класс, содержащий `BEGIN_PROPSET_MAP`.
+Класс, содержащий `BEGIN_PROPSET_MAP` .
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** atldb.h
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Элементы
 
 ### <a name="methods"></a>Методы
 
-|||
+| Имя | Описание |
 |-|-|
 |[жетпропвалуе](#getpropvalue)|Возвращает свойство из набора свойств.|
 |[исвалидвалуе](#isvalidvalue)|Используется для проверки значения перед установкой свойства.|
@@ -76,7 +76,7 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 
 Дополнительные сведения о макросах, используемых в схеме набора свойств, см. в разделе [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) и [END_PROPSET_MAP](../../data/oledb/end-propset-map.md).
 
-## <a name="cutlpropsgetpropvalue"></a><a name="getpropvalue"></a>CUtlProps:: Жетпропвалуе
+## <a name="cutlpropsgetpropvalue"></a><a name="getpropvalue"></a> CUtlProps:: Жетпропвалуе
 
 Возвращает свойство из набора свойств.
 
@@ -103,7 +103,7 @@ OUT_OF_LINE HRESULT GetPropValue(const GUID* pguidPropSet,
 
 `Failure` в случае сбоя и S_OK в случае успеха.
 
-## <a name="cutlpropsisvalidvalue"></a><a name="isvalidvalue"></a>CUtlProps:: Исвалидвалуе
+## <a name="cutlpropsisvalidvalue"></a><a name="isvalidvalue"></a> CUtlProps:: Исвалидвалуе
 
 Используется для проверки значения перед установкой свойства.
 
@@ -130,7 +130,7 @@ virtual HRESULT CUtlPropsBase::IsValidValue(ULONG /* iCurSet */,
 
 Если у вас есть подпрограммы проверки, которые необходимо использовать для задания значения свойства, следует переопределить эту функцию. Например, можно проверить DBPROP_AUTH_PASSWORD для таблицы паролей, чтобы определить допустимое значение.
 
-## <a name="cutlpropsoninterfacerequested"></a><a name="oninterfacerequested"></a>CUtlProps:: Онинтерфацерекуестед
+## <a name="cutlpropsoninterfacerequested"></a><a name="oninterfacerequested"></a> CUtlProps:: Онинтерфацерекуестед
 
 Обрабатывает запросы для необязательного интерфейса, когда потребитель вызывает метод для одного из интерфейсов создания объекта.
 
@@ -143,15 +143,15 @@ virtual HRESULT CUtlPropsBase::OnInterfaceRequested(REFIID riid);
 #### <a name="parameters"></a>Параметры
 
 *riid*<br/>
-окне IID запрошенного интерфейса. Дополнительные сведения см. в описании параметра *riid* `ICommand::Execute` в *справочнике по программированию OLE DB* (в *пакете SDK для MDAC*).
+окне IID запрошенного интерфейса. Дополнительные сведения см. в описании параметра *riid* `ICommand::Execute` в *справочнике программиста OLE DB* (в *пакете SDK для MDAC*).
 
 ### <a name="remarks"></a>Remarks
 
-`OnInterfaceRequested` обрабатывает запросы потребителей для необязательного интерфейса, когда потребитель вызывает метод для одного из интерфейсов создания объекта (например, `IDBCreateSession`, `IDBCreateCommand`, `IOpenRowset`или `ICommand`). Он устанавливает соответствующее свойство OLE DB для запрошенного интерфейса. Например, если потребитель запрашивает `IID_IRowsetLocate`, `OnInterfaceRequested` задает интерфейс `DBPROP_IRowsetLocate`. Это позволит поддерживать правильное состояние во время создания набора строк.
+`OnInterfaceRequested` обрабатывает запросы потребителей для необязательного интерфейса, когда потребитель вызывает метод для одного из интерфейсов создания объекта (например `IDBCreateSession` ,, `IDBCreateCommand` `IOpenRowset` или `ICommand` ). Он устанавливает соответствующее свойство OLE DB для запрошенного интерфейса. Например, если потребитель запрашивает `IID_IRowsetLocate` , `OnInterfaceRequested` задает `DBPROP_IRowsetLocate` интерфейс. Это позволит поддерживать правильное состояние во время создания набора строк.
 
-Этот метод вызывается, когда потребитель вызывает `IOpenRowset::OpenRowset` или `ICommand::Execute`.
+Этот метод вызывается, когда потребитель вызывает `IOpenRowset::OpenRowset` или `ICommand::Execute` .
 
-Если потребитель открывает объект и запрашивает дополнительный интерфейс, поставщик должен установить свойство, связанное с этим интерфейсом, для VARIANT_TRUE. Чтобы разрешить обработку для конкретного свойства, `OnInterfaceRequested` вызывается до вызова метода `Execute` поставщика. По умолчанию `OnInterfaceRequested` обрабатывает следующие интерфейсы:
+Если потребитель открывает объект и запрашивает дополнительный интерфейс, поставщик должен установить свойство, связанное с этим интерфейсом, для VARIANT_TRUE. Чтобы разрешить обработку для конкретного свойства, `OnInterfaceRequested` вызывается до `Execute` вызова метода поставщика. По умолчанию `OnInterfaceRequested` обрабатывает следующие интерфейсы:
 
 - `IRowsetLocate`
 
@@ -165,7 +165,7 @@ virtual HRESULT CUtlPropsBase::OnInterfaceRequested(REFIID riid);
 
 Если вы хотите обрабатывать другие интерфейсы, переопределите эту функцию в источнике данных, сеансе, команде или классе набора строк для обработки функций. Переопределение должно пройти через обычные интерфейсы set/get Properties, чтобы убедиться, что свойства настройки также устанавливают все связанные свойства (см. [OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)).
 
-## <a name="cutlpropsonpropertychanged"></a><a name="onpropertychanged"></a>CUtlProps:: OnPropertyChanged
+## <a name="cutlpropsonpropertychanged"></a><a name="onpropertychanged"></a> CUtlProps:: OnPropertyChanged
 
 Вызывается после задания свойства для управления связанными свойствами.
 
@@ -194,11 +194,11 @@ virtual HRESULT OnPropertyChanged(ULONG /* iCurSet */,
 
 ### <a name="example"></a>Пример
 
-В этой функции пользователь получает идентификатор свойства из параметра `DBPROP*`. Теперь можно сравнить идентификатор со свойством с цепочкой. При обнаружении свойства `SetProperties` вызывается со свойством, которое теперь будет задано вместе с другим свойством. В этом случае, если один из них получает свойство `DBPROP_IRowsetLocate`, `DBPROP_LITERALBOOKMARKS`или `DBPROP_ORDEREDBOOKMARKS`, одно из них может установить свойство `DBPROP_BOOKMARKS`.
+В этой функции пользователь получает идентификатор свойства из `DBPROP*` параметра. Теперь можно сравнить идентификатор со свойством с цепочкой. При обнаружении свойства `SetProperties` вызывается со свойством, которое теперь будет задано вместе с другим свойством. В этом случае, если один из них `DBPROP_IRowsetLocate` получает `DBPROP_LITERALBOOKMARKS` свойство, или `DBPROP_ORDEREDBOOKMARKS` , одно из них может `DBPROP_BOOKMARKS` установить свойство.
 
 [!code-cpp[NVC_OLEDB_Provider#2](../../data/oledb/codesnippet/cpp/cutlprops-onpropertychanged_1.h)]
 
-## <a name="cutlpropssetpropvalue"></a><a name="setpropvalue"></a>CUtlProps:: Сетпропвалуе
+## <a name="cutlpropssetpropvalue"></a><a name="setpropvalue"></a> CUtlProps:: Сетпропвалуе
 
 Задает свойство в наборе свойств.
 

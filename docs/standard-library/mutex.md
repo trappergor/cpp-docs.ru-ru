@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - <mutex>
 ms.assetid: efb60c89-687a-4e38-8fe4-694e11c4e8a3
-ms.openlocfilehash: e17488023d8de6eb5d341c719be8f1b36c14ffcd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d5ff6f2a81a5caa564792e2c0cb43b7722c3e1dd
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228184"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838558"
 ---
 # <a name="ltmutexgt"></a>&lt;mutex&gt;
 
@@ -51,7 +51,7 @@ ms.locfileid: "87228184"
 
 ### <a name="classes"></a>Классы
 
-|||
+|name|Описание|
 |-|-|
 |[Класс lock_guard](../standard-library/lock-guard-class.md)|Представляет шаблон, для которого можно создать экземпляры и объект, деструктор которого разблокирует `mutex`.|
 |[Класс Mutex (стандартная библиотека C++)](../standard-library/mutex-class-stl.md)|Представляет тип мьютекса. Используйте объекты этого типа для принудительного взаимного исключения в программе.|
@@ -63,7 +63,7 @@ ms.locfileid: "87228184"
 
 ### <a name="functions"></a>Функции
 
-|||
+|Имя|Описание|
 |-|-|
 |[call_once](../standard-library/mutex-functions.md#call_once)|Предоставляет механизм для однократного вызова указанного объекта во время выполнения.|
 |[lock](../standard-library/mutex-functions.md#lock)|Пытается заблокировать все аргументы без взаимоблокировки.|
@@ -72,7 +72,7 @@ ms.locfileid: "87228184"
 
 ### <a name="structs"></a>Структуры
 
-|||
+|Имя|Описание|
 |-|-|
 |[Структура adopt_lock_t](../standard-library/adopt-lock-t-structure.md)|Представляет тип, который используется для определения `adopt_lock`.|
 |[Структура defer_lock_t](../standard-library/defer-lock-t-structure.md)|Представляет тип, который определяет объект `defer_lock`, используемый для выбора одного из перегруженных конструкторов `unique_lock`.|
@@ -81,12 +81,12 @@ ms.locfileid: "87228184"
 
 ### <a name="variables"></a>Переменные
 
-|||
+|Имя|Описание|
 |-|-|
 |[adopt_lock](../standard-library/mutex-functions.md#adopt_lock)|Представляет объект, который можно передать в конструкторы для `lock_guard` и `unique_lock`, чтобы указать на блокировку объекта мьютекса, также передаваемого в конструктор.|
 |[defer_lock](../standard-library/mutex-functions.md#defer_lock)|Представляет объект, который можно передать в конструктор для `unique_lock`, чтобы указать, что конструктор не должен блокировать объект мьютекса, который также передается в него.|
 |[try_to_lock](../standard-library/mutex-functions.md#try_to_lock)|Представляет объект, который можно передать в конструктор для `unique_lock`, чтобы указать, что конструктор должен попытаться разблокировать объект `mutex`, который также передается в него без блокировки.|
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также раздел
 
 [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)

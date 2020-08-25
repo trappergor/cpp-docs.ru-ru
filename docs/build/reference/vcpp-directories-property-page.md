@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - VC++ Directories Property Page
 ms.assetid: 428eeef6-f127-4271-b3ea-0ae6f2c3d624
-ms.openlocfilehash: 06e9508ae09f9c7581648b45098f497fda785013
-ms.sourcegitcommit: 13f42c339fb7af935e3a93ac80e350d5e784c9f1
+ms.openlocfilehash: 39362deaa770b39eea964f1e4e58186dd5923b7f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87470801"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846034"
 ---
 # <a name="vc-directories-property-page-windows"></a>Страница свойств каталогов VC++ (Windows)
 
@@ -74,7 +74,7 @@ ms.locfileid: "87470801"
 
 - Определите пользовательские макросы в файле PROPS. Дополнительные сведения см. в разделе [Макросы страницы свойств](../working-with-project-properties.md).
 
-Дополнительные сведения см. в следующих записях блога: [Каталоги VC++](https://docs.microsoft.com/archive/blogs/vsproject/vc-directories), [Наследуемые свойства и страницы свойств](https://docs.microsoft.com/cpp/build/project-property-inheritance) и [Руководство по обновлению проекта C++ Visual Studio 2010](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/).
+Дополнительные сведения см. в статьях [наследование свойств в проектах Visual Studio](../project-property-inheritance.md)и эти записи блога: [каталоги VC + +](/archive/blogs/vsproject/vc-directories), [руководство по обновлению проектов C++ для Visual Studio 2010](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/).
 
 ## <a name="directory-types"></a>Типы каталогов
 

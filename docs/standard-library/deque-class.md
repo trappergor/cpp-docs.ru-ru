@@ -88,12 +88,12 @@ helpviewer_keywords:
 - std::deque [C++], size
 - std::deque [C++], swap
 ms.assetid: 64842ee5-057a-4063-8c16-4267a0332584
-ms.openlocfilehash: ae2ea172b331472e6ea28c175ad2c7a10ae621a0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1edcabf526d0f3aa2ba52ba3fd0fc656c5ae6b9c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220955"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838554"
 ---
 # <a name="deque-class"></a>Класс deque
 
@@ -136,16 +136,16 @@ class deque
 
 ### <a name="constructors"></a>Конструкторы
 
-|||
+|Имя|Описание|
 |-|-|
 |[deque](#deque)|Создает документ `deque`. Предусмотрено несколько конструкторов для настройки содержимого новых служб `deque` различными способами: пусто; загружено с указанным числом пустых элементов; содержимое перемещено или скопировано из другого объекта `deque` ; содержимое скопировано или перемещено с помощью итератора, а один элемент копируется в `deque` `count` время. Некоторые конструкторы позволяют использовать настраиваемый `allocator` для создания элементов.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|||
+|Имя|Описание|
 |-|-|
 |[allocator_type](#allocator_type)|Тип, представляющий класс `allocator` для объекта `deque`.|
-|[const_iterator](#const_iterator)|Тип, предоставляющий итератор произвольного доступа, который может получать доступ к элементам и считывать их в `deque` виде**`const`**|
+|[const_iterator](#const_iterator)|Тип, предоставляющий итератор произвольного доступа, который может получать доступ к элементам и считывать их в `deque` виде **`const`**|
 |[const_pointer](#const_pointer)|Тип, предоставляющий указатель на элемент в `deque` как `const.`.|
 |[const_reference](#const_reference)|Тип, предоставляющий ссылку на элемент в `deque` для считывания и выполнения других операций в качестве `const.`.|
 |[const_reverse_iterator](#const_reverse_iterator)|Тип, предоставляющий итератор произвольного доступа, который может получать доступ к элементам и считывать их в `deque` виде **`const`** . Объект deque просматривается в обратном порядке. Дополнительные сведения см. в статье [Класс reverse_iterator](../standard-library/reverse-iterator-class.md).|
@@ -159,7 +159,7 @@ class deque
 
 ### <a name="functions"></a>Функции
 
-|||
+|Имя|Описание|
 |-|-|
 |[assign](#assign)|Удаляет элементы из `deque` и копирует новую последовательность элементов в целевой объект `deque`.|
 |[at](#at)|Возвращает ссылку на элемент в заданном положении в `deque`.|
@@ -193,12 +193,12 @@ class deque
 
 ### <a name="operators"></a>Операторы
 
-|||
+|Имя|Описание|
 |-|-|
 |[оператор&#91;&#93;](#op_at)|Возвращает ссылку на элемент `deque` в указанной позиции.|
 |[Оператор =](#op_eq)|Заменяет элементы `deque` копией другого `deque`.|
 
-## <a name="allocator_type"></a><a name="allocator_type"></a>allocator_type
+## <a name="allocator_type"></a><a name="allocator_type"></a> allocator_type
 
 Тип, представляющий класс allocator для объекта deque.
 
@@ -214,7 +214,7 @@ typedef Allocator allocator_type;
 
 См. пример для [get_allocator](#get_allocator).
 
-## <a name="assign"></a><a name="assign"></a>назначать
+## <a name="assign"></a><a name="assign"></a> назначать
 
 Удаляет элементы из очереди и копирует новый набор элементов в целевую очередь.
 
@@ -306,7 +306,7 @@ int main()
 d1 = 5678c1 =102030c1 =5060c1 =4444444
 ```
 
-## <a name="at"></a><a name="at"></a>в
+## <a name="at"></a><a name="at"></a> в
 
 Возвращает ссылку на элемент в заданном положении в очереди.
 
@@ -357,7 +357,7 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="back"></a><a name="back"></a>Назад
+## <a name="back"></a><a name="back"></a> Назад
 
 Возвращает ссылку на последний элемент очереди.
 
@@ -406,7 +406,7 @@ The last integer of c1 is 11
 The next-to-last integer of c1 is 10
 ```
 
-## <a name="begin"></a><a name="begin"></a>начале
+## <a name="begin"></a><a name="begin"></a> начале
 
 Возвращает итератор, адресующий первый элемент в очереди.
 
@@ -458,7 +458,7 @@ The first element of c1 is 1
 The first element of c1 is now 20
 ```
 
-## <a name="cbegin"></a><a name="cbegin"></a>cbegin
+## <a name="cbegin"></a><a name="cbegin"></a> cbegin
 
 Возвращает **`const`** итератор, который обращается к первому элементу в диапазоне.
 
@@ -484,7 +484,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a><a name="cend"></a>cend
+## <a name="cend"></a><a name="cend"></a> cend
 
 Возвращает **`const`** итератор, который обращается к расположению сразу за последним элементом в диапазоне.
 
@@ -512,7 +512,7 @@ auto i2 = Container.cend();
 
 Значение, возвращаемое `cend`, не должно быть подвергнуто удалению ссылки.
 
-## <a name="clear"></a><a name="clear"></a>открытым
+## <a name="clear"></a><a name="clear"></a> открытым
 
 Стирает все элементы в очереди.
 
@@ -548,7 +548,7 @@ The size of the deque is initially 3
 The size of the deque after clearing is 0
 ```
 
-## <a name="const_iterator"></a><a name="const_iterator"></a>const_iterator
+## <a name="const_iterator"></a><a name="const_iterator"></a> const_iterator
 
 Тип, предоставляющий итератор произвольного доступа, который может получать доступ к **`const`** элементу в deque и считывать его.
 
@@ -564,7 +564,7 @@ typedef implementation-defined const_iterator;
 
 См. пример для [back](#back).
 
-## <a name="const_pointer"></a><a name="const_pointer"></a>const_pointer
+## <a name="const_pointer"></a><a name="const_pointer"></a> const_pointer
 
 Предоставляет указатель на **`const`** элемент в deque.
 
@@ -576,7 +576,7 @@ typedef typename Allocator::const_pointer const_pointer;
 
 Тип `const_pointer`нельзя использовать для изменения значения элемента. Для доступа к элементу очереди чаще используется [iterator](#iterator).
 
-## <a name="const_reference"></a><a name="const_reference"></a>const_reference
+## <a name="const_reference"></a><a name="const_reference"></a> const_reference
 
 Тип, предоставляющий ссылку на **`const`** элемент, хранящийся в deque для чтения и выполнения **`const`** операций.
 
@@ -620,7 +620,7 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="const_reverse_iterator"></a><a name="const_reverse_iterator"></a>const_reverse_iterator
+## <a name="const_reverse_iterator"></a><a name="const_reverse_iterator"></a> const_reverse_iterator
 
 Тип, предоставляющий итератор произвольного доступа, который может читать любой **`const`** элемент в deque.
 
@@ -636,7 +636,7 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 См. пример объявления и использования итератора в разделе [rbegin](#rbegin).
 
-## <a name="crbegin"></a><a name="crbegin"></a>crbegin
+## <a name="crbegin"></a><a name="crbegin"></a> crbegin
 
 Возвращает константный итератор первому элементу в очереди в обратную сторону.
 
@@ -685,7 +685,7 @@ The first element of deque is 1.
 The first element of the reversed deque is 2.
 ```
 
-## <a name="crend"></a><a name="crend"></a>crend
+## <a name="crend"></a><a name="crend"></a> crend
 
 Возвращает константный итератор, который указывает на расположение после последнего элемента в очереди в обратную сторону.
 
@@ -734,7 +734,7 @@ int main( )
 1
 ```
 
-## <a name="deque"></a><a name="deque"></a>deque
+## <a name="deque"></a><a name="deque"></a> deque
 
 Создает очередь определенного размера или с элементами определенного значения, или с определенным распределителем, или в качестве копии какой-либо другой очереди или ее части.
 
@@ -1011,7 +1011,7 @@ int main( )
 }
 ```
 
-## <a name="difference_type"></a><a name="difference_type"></a>difference_type
+## <a name="difference_type"></a><a name="difference_type"></a> difference_type
 
 Тип, предоставляющий разницу между двумя итераторами, ссылающимися на элементы в одной и той же очереди.
 
@@ -1066,7 +1066,7 @@ The number '20' is in c1 collection 2 times.
 The number '30' is in c1 collection 3 times.
 ```
 
-## <a name="emplace"></a><a name="emplace"></a>emplace
+## <a name="emplace"></a><a name="emplace"></a> emplace
 
 Вставляет элемент, созданный на месте, в указанное положение в очереди.
 
@@ -1134,7 +1134,7 @@ v1 = 10 20 30
 vv1[0] = 10 20 30
 ```
 
-## <a name="emplace_back"></a><a name="emplace_back"></a>emplace_back
+## <a name="emplace_back"></a><a name="emplace_back"></a> emplace_back
 
 Добавляет элемент, созданный на месте, в конец очереди.
 
@@ -1183,7 +1183,7 @@ New last element: 2
 Moved last element: 2
 ```
 
-## <a name="emplace_front"></a><a name="emplace_front"></a>emplace_front
+## <a name="emplace_front"></a><a name="emplace_front"></a> emplace_front
 
 Добавляет элемент, созданный на месте, в конец очереди.
 
@@ -1232,7 +1232,7 @@ New last element: 2
 Moved last element: 2
 ```
 
-## <a name="empty"></a><a name="empty"></a>указано
+## <a name="empty"></a><a name="empty"></a> указано
 
 Проверяет, пуста ли очередь.
 
@@ -1269,7 +1269,7 @@ int main( )
 The deque is not empty.
 ```
 
-## <a name="end"></a><a name="end"></a>конце
+## <a name="end"></a><a name="end"></a> конце
 
 Возвращает итератор, адресующий расположение за последним элементом в очереди.
 
@@ -1285,7 +1285,7 @@ iterator end();
 
 ### <a name="remarks"></a>Remarks
 
-`end`используется для проверки того, достиг ли итератор конца его deque.
+`end` используется для проверки того, достиг ли итератор конца его deque.
 
 ### <a name="example"></a>Пример
 
@@ -1329,7 +1329,7 @@ The new next-to-last integer of c1 is 400
 The deque is now: 10 400 30
 ```
 
-## <a name="erase"></a><a name="erase"></a>резин
+## <a name="erase"></a><a name="erase"></a> резин
 
 Удаляет элемент или диапазон элементов с указанных позиций в очереди.
 
@@ -1402,7 +1402,7 @@ After erasing the first element, the deque becomes:  20 30 40 50
 After erasing all elements but the first, deque becomes: 20
 ```
 
-## <a name="front"></a><a name="front"></a>крышку
+## <a name="front"></a><a name="front"></a> крышку
 
 Возвращает ссылку на первый элемент в очереди.
 
@@ -1452,7 +1452,7 @@ The first integer of c1 is 10
 The second integer of c1 is 11
 ```
 
-## <a name="get_allocator"></a><a name="get_allocator"></a>get_allocator
+## <a name="get_allocator"></a><a name="get_allocator"></a> get_allocator
 
 Возвращает копию объекта распределителя, использованного для создания очереди.
 
@@ -1491,7 +1491,7 @@ int main( )
 }
 ```
 
-## <a name="insert"></a><a name="insert"></a>Вставляет
+## <a name="insert"></a><a name="insert"></a> Вставляет
 
 Вставляет один элемент, несколько элементов или диапазон элементов в указанное положение в очереди.
 
@@ -1548,7 +1548,7 @@ IList);
 
 Любая операция вставки может быть ресурсоемкой.
 
-## <a name="iterator"></a><a name="iterator"></a>итераци
+## <a name="iterator"></a><a name="iterator"></a> итераци
 
 Тип, предоставляющий итератор произвольного доступа, который может читать или изменять любой элемент в очереди.
 
@@ -1564,7 +1564,7 @@ typedef implementation-defined iterator;
 
 См. пример для [begin](#begin).
 
-## <a name="max_size"></a><a name="max_size"></a>max_size
+## <a name="max_size"></a><a name="max_size"></a> max_size
 
 Возвращает максимальную длину очереди.
 
@@ -1595,7 +1595,7 @@ int main( )
 }
 ```
 
-## <a name="operator"></a><a name="op_at"></a>operator []
+## <a name="operator"></a><a name="op_at"></a> operator []
 
 Возвращает ссылку на элемент очереди в указанной позиции.
 
@@ -1646,7 +1646,7 @@ The first integer of c1 is 10
 The second integer of c1 is 20
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>Оператор =
+## <a name="operator"></a><a name="op_eq"></a> Оператор =
 
 Заменяет элементы этой очереди с помощью элементов из другой очереди.
 
@@ -1732,7 +1732,7 @@ typedef typename Allocator::pointer pointer;
 
 Тип `pointer` можно использовать для изменения значения элемента. Для доступа к элементу очереди чаще используется [iterator](#iterator).
 
-## <a name="pop_back"></a><a name="pop_back"></a>pop_back
+## <a name="pop_back"></a><a name="pop_back"></a> pop_back
 
 Удаляет элемент в конце очереди.
 
@@ -1774,7 +1774,7 @@ The last element is: 2
 After deleting the element at the end of the deque, the last element is: 1
 ```
 
-## <a name="pop_front"></a><a name="pop_front"></a>pop_front
+## <a name="pop_front"></a><a name="pop_front"></a> pop_front
 
 Удаляет элемент в начале очереди.
 
@@ -1816,7 +1816,7 @@ The second element is: 2
 After deleting the element at the beginning of the deque, the first element is: 2
 ```
 
-## <a name="push_back"></a><a name="push_back"></a>push_back
+## <a name="push_back"></a><a name="push_back"></a> push_back
 
 Добавляет элемент в конец очереди.
 
@@ -1835,7 +1835,7 @@ void push_back(Type&& val);
 
 При создании исключения очередь не изменяется, а исключение создается снова.
 
-## <a name="push_front"></a><a name="push_front"></a>push_front
+## <a name="push_front"></a><a name="push_front"></a> push_front
 
 Добавляет элемент в начало очереди.
 
@@ -1890,7 +1890,7 @@ New first element: 2
 Moved first element: a
 ```
 
-## <a name="rbegin"></a><a name="rbegin"></a>rbegin
+## <a name="rbegin"></a><a name="rbegin"></a> rbegin
 
 Возвращает итератор, указывающий на первый элемент в обращенной очереди.
 
@@ -1966,7 +1966,7 @@ The reversed deque is: 30 20 10
 Last element in deque is now 40.
 ```
 
-## <a name="reference"></a><a name="reference"></a>IsReference
+## <a name="reference"></a><a name="reference"></a> IsReference
 
 Тип, предоставляющий ссылку на элемент, хранящийся в очереди.
 
@@ -2002,7 +2002,7 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="rend"></a><a name="rend"></a>rend
+## <a name="rend"></a><a name="rend"></a> rend
 
 Возвращает итератор, адресующий расположение после последнего элемента в обращенной очереди.
 
@@ -2087,7 +2087,7 @@ The reversed deque is: 30 20 10
 The modified reversed deque is: 30 20 40
 ```
 
-## <a name="resize"></a><a name="resize"></a>изменить размер
+## <a name="resize"></a><a name="resize"></a> изменить размер
 
 Указывает новый размер очереди.
 
@@ -2155,7 +2155,7 @@ The reduced size of c1 is: 2
 The value of the last element is now 20
 ```
 
-## <a name="reverse_iterator"></a><a name="reverse_iterator"></a>reverse_iterator
+## <a name="reverse_iterator"></a><a name="reverse_iterator"></a> reverse_iterator
 
 Тип, предоставляющий итератор произвольного доступа, который может читать или изменять любой элемент в обращенной очереди.
 
@@ -2171,7 +2171,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 См. пример для rbegin.
 
-## <a name="shrink_to_fit"></a><a name="shrink_to_fit"></a>shrink_to_fit
+## <a name="shrink_to_fit"></a><a name="shrink_to_fit"></a> shrink_to_fit
 
 Удаляет лишнюю емкость.
 
@@ -2212,7 +2212,7 @@ Current size of v1 = 1
 Current size of v1 = 1
 ```
 
-## <a name="size"></a><a name="size"></a>изменять
+## <a name="size"></a><a name="size"></a> изменять
 
 Возвращает число элементов в очереди.
 
@@ -2253,7 +2253,7 @@ The deque length is 1.
 The deque length is now 2.
 ```
 
-## <a name="size_type"></a><a name="size_type"></a>size_type
+## <a name="size_type"></a><a name="size_type"></a> size_type
 
 Тип, который подсчитывает количество элементов в очереди.
 
@@ -2265,7 +2265,7 @@ typedef typename Allocator::size_type size_type;
 
 См. пример для [size](#size).
 
-## <a name="swap"></a><a name="swap"></a>позиции
+## <a name="swap"></a><a name="swap"></a> позиции
 
 Меняет местами элементы двух объектов deque.
 
@@ -2339,7 +2339,7 @@ After swapping with c3, deque c1 is: 100
 After swapping with c2, deque c1 is: 1 2 3
 ```
 
-## <a name="value_type"></a><a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a> value_type
 
 Тип, представляющий тип данных, хранящихся в очереди.
 

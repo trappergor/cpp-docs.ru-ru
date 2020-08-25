@@ -95,12 +95,12 @@ helpviewer_keywords:
 - ReleaseRows method
 - SetRows method
 ms.assetid: c6bde426-c543-4022-a98a-9519d9e2ae59
-ms.openlocfilehash: e66a183c7bbafa16b3aefea8da1472255b507468
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5c1c7bc381d30f701bad123807689b08ea47f65d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212127"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838468"
 ---
 # <a name="cbulkrowset-class"></a>Класс CBulkRowset
 
@@ -122,30 +122,30 @@ class CBulkRowset : public CRowset<TAccessor>
 
 **Заголовок:** atldbcli.h
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Элементы
 
 ### <a name="methods"></a>Методы
 
-|||
+| Имя | Описание |
 |-|-|
 |[аддрефровс](#addrefrows)|Увеличивает значение счетчика ссылок.|
 |[CBulkRowset](#cbulkrowset)|Конструктор.|
 |[MoveFirst](#movefirst)|Извлекает первую строку данных, выполняя при необходимости новую небольшую выборку.|
 |[MoveLast](#movelast)|Переходит к последней строке.|
-|[Метод](#movenext)|Извлекает следующую строку данных.|
+|[MoveNext](#movenext)|Извлекает следующую строку данных.|
 |[мовепрев](#moveprev)|Переходит к предыдущей строке.|
 |[моветобукмарк](#movetobookmark)|Извлекает строку, помеченную закладкой или строкой с указанным смещением, из этой закладки.|
 |[моветоратио](#movetoratio)|Извлекает строки, начиная с части, расположенной в наборе строк.|
-|[ReleaseRows](#releaserows)|Устанавливает текущую строку (`m_nCurrentRow`) в ноль и освобождает все строки.|
+|[ReleaseRows](#releaserows)|Устанавливает текущую строку ( `m_nCurrentRow` ) в ноль и освобождает все строки.|
 |[сетровс](#setrows)|Задает число дескрипторов строк, получаемых одним вызовом.|
 
 ## <a name="example"></a>Пример
 
-В следующем примере демонстрируется использование класса `CBulkRowset`.
+В следующем примере демонстрируется использование `CBulkRowset` класса.
 
 [!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]
 
-## <a name="cbulkrowsetaddrefrows"></a><a name="addrefrows"></a>CBulkRowset:: Аддрефровс
+## <a name="cbulkrowsetaddrefrows"></a><a name="addrefrows"></a> CBulkRowset:: Аддрефровс
 
 Вызывает метод [IRowset:: аддрефровс](/previous-versions/windows/desktop/ms719619(v=vs.85)) , чтобы увеличить число ссылок для всех строк, которые в настоящее время извлечены из набора строк.
 
@@ -159,9 +159,9 @@ HRESULT AddRefRows() throw();
 
 Стандартное значение HRESULT.
 
-## <a name="cbulkrowsetcbulkrowset"></a><a name="cbulkrowset"></a>CBulkRowset:: CBulkRowset
+## <a name="cbulkrowsetcbulkrowset"></a><a name="cbulkrowset"></a> CBulkRowset:: CBulkRowset
 
-Создает новый объект `CBulkRowset` и устанавливает число строк по умолчанию равным 10.
+Создает новый `CBulkRowset` объект и устанавливает число строк по умолчанию равным 10.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -169,7 +169,7 @@ HRESULT AddRefRows() throw();
 CBulkRowset();
 ```
 
-## <a name="cbulkrowsetmovefirst"></a><a name="movefirst"></a>CBulkRowset:: MoveFirst
+## <a name="cbulkrowsetmovefirst"></a><a name="movefirst"></a> CBulkRowset:: MoveFirst
 
 Извлекает первую строку данных.
 
@@ -183,7 +183,7 @@ HRESULT MoveFirst() throw();
 
 Стандартное значение HRESULT.
 
-## <a name="cbulkrowsetmovelast"></a><a name="movelast"></a>CBulkRowset:: MoveLast
+## <a name="cbulkrowsetmovelast"></a><a name="movelast"></a> CBulkRowset:: MoveLast
 
 Переходит к последней строке.
 
@@ -197,7 +197,7 @@ HRESULT MoveLast() throw();
 
 Стандартное значение HRESULT.
 
-## <a name="cbulkrowsetmovenext"></a><a name="movenext"></a>CBulkRowset:: MoveNext
+## <a name="cbulkrowsetmovenext"></a><a name="movenext"></a> CBulkRowset:: MoveNext
 
 Извлекает следующую строку данных.
 
@@ -211,7 +211,7 @@ HRESULT MoveNext() throw();
 
 Стандартное значение HRESULT. По достижении конца набора строк возвращает DB_S_ENDOFROWSET.
 
-## <a name="cbulkrowsetmoveprev"></a><a name="moveprev"></a>CBulkRowset:: Мовепрев
+## <a name="cbulkrowsetmoveprev"></a><a name="moveprev"></a> CBulkRowset:: Мовепрев
 
 Переходит к предыдущей строке.
 
@@ -225,7 +225,7 @@ HRESULT MovePrev() throw();
 
 Стандартное значение HRESULT.
 
-## <a name="cbulkrowsetmovetobookmark"></a><a name="movetobookmark"></a>CBulkRowset:: Моветобукмарк
+## <a name="cbulkrowsetmovetobookmark"></a><a name="movetobookmark"></a> CBulkRowset:: Моветобукмарк
 
 Извлекает строку, помеченную закладкой, или строку с указанным смещением (*лскип*) из этой закладки.
 
@@ -238,7 +238,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 #### <a name="parameters"></a>Параметры
 
-*Закладка*<br/>
+*bookmark*<br/>
 окне Закладка, помечающая расположение, из которого необходимо извлечь данные.
 
 *лскип*<br/>
@@ -248,7 +248,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 См. раздел [IRowset:: GetData](/previous-versions/windows/desktop/ms716988(v=vs.85)) в *справочнике по OLE DB программиста*.
 
-## <a name="cbulkrowsetmovetoratio"></a><a name="movetoratio"></a>CBulkRowset:: Моветоратио
+## <a name="cbulkrowsetmovetoratio"></a><a name="movetoratio"></a> CBulkRowset:: Моветоратио
 
 Извлекает строки, начиная с части, расположенной в наборе строк.
 
@@ -277,9 +277,9 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
 
 `(nNumerator *  RowsetSize ) / nDenominator`
 
-где `RowsetSize` — это размер набора строк, измеряемый в строках. Точность этой формулы зависит от конкретного поставщика. Дополнительные сведения см. в разделе [IRowsetScroll:: жетровсатратио](/previous-versions/windows/desktop/ms709602(v=vs.85)) в *справочнике программиста OLE DB*.
+Где `RowsetSize` — Размер набора строк, измеряемый в строках. Точность этой формулы зависит от конкретного поставщика. Дополнительные сведения см. в разделе [IRowsetScroll:: жетровсатратио](/previous-versions/windows/desktop/ms709602(v=vs.85)) в *справочнике программиста OLE DB*.
 
-## <a name="cbulkrowsetreleaserows"></a><a name="releaserows"></a>CBulkRowset:: ReleaseRows
+## <a name="cbulkrowsetreleaserows"></a><a name="releaserows"></a> CBulkRowset:: ReleaseRows
 
 Вызывает метод [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) , чтобы уменьшить число ссылок для всех строк, которые в настоящее время извлечены из набора строк.
 
@@ -293,7 +293,7 @@ HRESULT ReleaseRows() throw();
 
 Стандартное значение HRESULT.
 
-## <a name="cbulkrowsetsetrows"></a><a name="setrows"></a>CBulkRowset:: Сетровс
+## <a name="cbulkrowsetsetrows"></a><a name="setrows"></a> CBulkRowset:: Сетровс
 
 Задает число дескрипторов строк, извлекаемых каждым вызовом.
 
@@ -315,4 +315,4 @@ void SetRows(DBROWCOUNT nRows) throw();
 ## <a name="see-also"></a>См. также раздел
 
 [Шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Справочник по шаблонам потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

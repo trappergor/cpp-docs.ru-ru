@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - language strings
 ms.assetid: bbee63b1-af0b-4e44-9eaf-dd3e265c05fd
-ms.openlocfilehash: 7713fe3f7cff4b80ce72927fa970e03914f94346
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: dd0c55091d3dff641993fa593e656e2825da7c73
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373608"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839258"
 ---
 # <a name="language-strings"></a>Language Strings
 
-Функции [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) и [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) могут использовать поддерживаемые языки API многоязыковой поддержки Windows для операционных систем, в которых не применяется кодовая страница Юникода. Список поддерживаемых языков по версии операционной системы см. [в приложении a: поведение продукта](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c) в \[ MS-LCID]: Справочник по идентификатору языка (LCID) Windows. Строка языка может принимать любое из значений, перечисленных в столбцах **Язык** и **Тег языка** списка поддерживаемых языков. Пример кода для перечисления имен доступных языковых стандартов и связанных значений см. в руководстве по [многоязыковой поддержке с примером API на основе имени](/windows/win32/intl/nls--name-based-apis-sample).
+Функции [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) и [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) могут использовать поддерживаемые языки API многоязыковой поддержки Windows для операционных систем, в которых не применяется кодовая страница Юникода. Список поддерживаемых языков по версии операционной системы см. [в приложении a: поведение продукта](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c) в \[ MS-LCID]: Справочник по идентификатору языка (LCID) Windows. Строка языка может принимать любое из значений, перечисленных в столбцах **Язык** и **Тег языка** списка поддерживаемых языков. Пример кода для перечисления имен доступных языковых стандартов и связанных значений см. в руководстве по [многоязыковой поддержке с примером API на основе имени](/windows/win32/intl/nls--name-based-apis-sample).
 
 ## <a name="additional-supported-language-strings"></a>Дополнительные поддерживаемые строки языка
 
@@ -58,7 +58,7 @@ ms.locfileid: "86373608"
 |немецкий — швейцарский|de-CH|
 |ирландский — английский|en-IE|
 |итальянский — швейцарский|it-CH|
-|норвежский|нет|
+|норвежский|Нет|
 |норвежский — букмол|nb-NO|
 |норвежский — нюнорск|nn-NO|
 |португальский — бразильский|pt-BR|
@@ -85,7 +85,7 @@ ms.locfileid: "86373608"
 |швейцарский|de-CH|
 |uk|en-GB|
 |us|ru-RU|
-|США|ru-RU|
+|usa|ru-RU|
 
 ## <a name="see-also"></a>См. также раздел
 

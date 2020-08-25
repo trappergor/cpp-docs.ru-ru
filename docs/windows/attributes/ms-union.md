@@ -1,17 +1,17 @@
 ---
-title: ms_union (C++ атрибут com)
+title: ms_union (атрибут COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.ms_union
 helpviewer_keywords:
 - ms_union attribute
 ms.assetid: bb548689-6962-457e-af56-8ffdf68987eb
-ms.openlocfilehash: 3e89facf48bd4f0f9d6200657b0e0a66fe95455a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ae99a996cd7969da27f38ad3532f0472f389ee3d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166644"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838845"
 ---
 # <a name="ms_union"></a>ms_union
 
@@ -56,13 +56,11 @@ __interface IFireTabCtrl {
 
 ## <a name="requirements"></a>Требования
 
-### <a name="attribute-context"></a>Контекст атрибута
-
-|||
+| Контекст атрибута | Значение |
 |-|-|
-|**Применение**|Неинкапсулированные объединения|
-|**Повторяемый**|нет|
-|**Обязательные атрибуты**|None|
+|**Относится к**|Неинкапсулированные объединения|
+|**REPEATABLE**|Нет|
+|**Требуемые атрибуты**|Нет|
 |**Недопустимые атрибуты**|`dispinterface`|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
@@ -70,4 +68,4 @@ __interface IFireTabCtrl {
 ## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
-[Атрибуты Typedef, Enum, Union и Struct](typedef-enum-union-and-struct-attributes.md)
+[Атрибуты typedef, enum, Union и struct](typedef-enum-union-and-struct-attributes.md)

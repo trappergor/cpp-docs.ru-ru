@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CBaseTabbedPane [MFC], SetAutoHideMode
 - CBaseTabbedPane [MFC], ShowTab
 ms.assetid: f22c0080-5b29-4a0a-8f74-8f0a4cd2dbcf
-ms.openlocfilehash: b3ae0d69c385ba89cf75d682ce12c6f1f4e5112f
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 21f2821392d2b9e71837997f5a9a10ab80ba073f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752980"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838676"
 ---
 # <a name="cbasetabbedpane-class"></a>Класс CBaseTabbedPane
 
@@ -83,57 +83,56 @@ class CBaseTabbedPane : public CDockablePane
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |`CBaseTabbedPane::CBaseTabbedPane`|Конструктор по умолчанию.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
-|[CBaseTabbedPane::AddTab](#addtab)|Добавляет новую вкладку в панель ный вкладок.|
-|[CBaseTabbedPane::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)|Определяет, можно ли уничтожить пустое табло.|
-|[CBaseTabbedPane::ApplyRestoredTabInfo](#applyrestoredtabinfo)|Применяет настройки вкладок, которые загружаются из реестра, к панели вкладок.|
-|[CBaseTabbedPane::CanFloat](#canfloat)|Определяет, может ли панель плавать. (Переопределяет [CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat).)|
-|[CBaseTabbedPane::CanSetCaptionTextToTabName](#cansetcaptiontexttotabname)|Определяет, должна ли подпись для панели вкладок отображать тот же текст, что и активная вкладка.|
-|[CBaseTabbedPane::ConvertToTabbedDocument](#converttotabbeddocument)|(Перекрывает [CDockablePane::ConvertToTabbedDocument](../../mfc/reference/cdockablepane-class.md#converttotabbeddocument).)|
-|[CBaseTabbedPane::DetachPane](#detachpane)|Преобразует одну или несколько доковых стекол в документы MDI.|
-|[CBaseTabbedPane::EnableSetCaptionTextToTabName](#enablesetcaptiontexttotabname)|Позволяет или отсутствует способность панели вкладок синхронизировать текст подписи с текстом этикетки на активной вкладке.|
-|[CBaseTabbedPane::FillDefaultTabsOrderArray](#filldefaulttabsorderarray)|Восстанавливает внутренний порядок вкладки в состояние по умолчанию.|
-|[CBaseTabbedPane::FindBarByTabNumber](#findbarbytabnumber)|Возвращает панель, которая находится во вкладке, когда вкладка идентифицирована индексом вкладок с нулевым уровнем.|
-|||
-|[CBaseTabbedPane:FindPaneByID](#findpanebyid)|Возвращает панель, идентифицированную идентификатором панели.|
-|[CBaseTabbedPane::FloatTab](#floattab)|Преобразует панель в плавающую, но только если она расположена на отделяемой вкладке.|
-|[CBaseTabbedPane::GetDefaultTabsOrder](#getdefaulttabsorder)|Возвращает порядок вкладок по умолчанию в панели.|
-|[CBaseTabbedPane::GetFirstVisibleTab](#getfirstvisibletab)|Извлекает указатель на первую отображаемую вкладку.|
-|[CBaseTabbedPane::GetMinSize](#getminsize)|Получает минимальный допустимый размер для панели. (Переопределяет [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).)|
-|[CBaseTabbedPane::GetPaneIcon](#getpaneicon)|Возвращает ручку значку панели. (Оверлет [CBasePane::GetPaneIcon](../../mfc/reference/cbasepane-class.md#getpaneicon).)|
-|[CBaseTabbedPane::GetPaneList](#getpanelist)|Возвращает список стекол, которые содержатся в панели вкладок.|
-|[CBaseTabbedPane::GetTabArea](#gettabarea)|Возвращает прямоугольники для верхних и нижних областей вкладки.|
-|[CBaseTabbedPane::GetTabsNum](#gettabsnum)|Возвращает количество вкладок в окне вкладок.|
-|[CBaseTabbedPane::GetUnderlyingWindow](#getunderlyingwindow)|Получает базовое (обертое) окно вкладок.|
-|[CBaseTabbedPane::GetVisibleTabsNum](#getvisibletabsnum)|Возвращает количество отображаемых вкладок.|
-|[CBaseTabbedPane::HasAutoHideMode](#hasautohidemode)|Определяет, можно ли переключить панель вкладок в режим автоматической скрытности.|
-|[CBaseTabbedPane::IsHideSingleTab](#ishidesingletab)|Определяет, скрыто ли табло, если отображается только одна вкладка.|
-|`CBaseTabbedPane::LoadSiblingPaneIDs`|Используется внутренне во время сериализации.|
-|[CBaseTabbedPane::RecalcLayout](#recalclayout)|Пересчитывает информацию о макете для панели. (Перекрывает [CPane::RecalcLayout](../../mfc/reference/cpane-class.md#recalclayout).)|
-|[CBaseTabbedPane::RemovePane](#removepane)|Удаляет панель из панели вкладок.|
-|`CBaseTabbedPane::SaveSiblingBarIDs`|Используется внутренне во время сериализации.|
-|`CBaseTabbedPane::Serialize`|(Перекрывает [CDockablePane::Serialize](cdockablepane-class.md).)|
-|`CBaseTabbedPane::SerializeTabWindow`|Используется внутренне во время сериализации.|
-|[CBaseTabbedPane::SetAutoDestroy](#setautodestroy)|Определяет, будет ли панель управления вкладками уничтожена автоматически.|
-|[CBaseTabbedPane::SetAutoHideMode](#setautohidemode)|Переключает стыковочные панели между отображаемым и автоматически скрыть режим. (Перекрывает [CDockablePane::SetAutoHideMode](../../mfc/reference/cdockablepane-class.md#setautohidemode).)|
-|[CBaseTabbedPane::ShowTab](#showtab)|Показывает или скрывает вкладку.|
+|[CBaseTabbedPane:: Аддтаб](#addtab)|Добавляет новую вкладку к панели с вкладками.|
+|[CBaseTabbedPane:: Алловдестройемптитаббедпане](#allowdestroyemptytabbedpane)|Указывает, можно ли уничтожить пустую панель с вкладками.|
+|[CBaseTabbedPane:: Апплиресторедтабинфо](#applyrestoredtabinfo)|Применяет параметры вкладки, загружаемые из реестра, к области с вкладками.|
+|[CBaseTabbedPane:: Канфлоат](#canfloat)|Определяет, может ли панель быть плавающей. (Переопределяет [CBasePane:: канфлоат](../../mfc/reference/cbasepane-class.md#canfloat).)|
+|[CBaseTabbedPane:: Кансеткаптионтексттотабнаме](#cansetcaptiontexttotabname)|Определяет, должен ли заголовок панели с вкладками отображать тот же текст, что и активная вкладка.|
+|[CBaseTabbedPane:: Конверттотаббеддокумент](#converttotabbeddocument)|(Переопределяет [CDockablePane:: конверттотаббеддокумент](../../mfc/reference/cdockablepane-class.md#converttotabbeddocument).)|
+|[CBaseTabbedPane::D Етачпане](#detachpane)|Преобразует одну или несколько закрепляемых областей в документы с вкладками MDI.|
+|[CBaseTabbedPane:: Енаблесеткаптионтексттотабнаме](#enablesetcaptiontexttotabname)|Включает или отключает возможность панели с вкладками для синхронизации текста заголовка с текстом метки на активной вкладке.|
+|[CBaseTabbedPane:: Филлдефаулттабсордераррай](#filldefaulttabsorderarray)|Восстанавливает внутренний порядок табуляции до состояния по умолчанию.|
+|[CBaseTabbedPane:: Финдбарбитабнумбер](#findbarbytabnumber)|Возвращает область, находящейся на вкладке, если вкладка определяется с помощью индекса табуляции, начинающегося с нуля.|
+|[CBaseTabbedPane:: Финдпанебид](#findpanebyid)|Возвращает панель, определяемую ИДЕНТИФИКАТОРом панели.|
+|[CBaseTabbedPane:: Флоаттаб](#floattab)|Преобразует панель в плавающую, но только если она расположена на отделяемой вкладке.|
+|[CBaseTabbedPane:: Жетдефаулттабсордер](#getdefaulttabsorder)|Возвращает порядок вкладок на панели по умолчанию.|
+|[CBaseTabbedPane:: Жетфирствисиблетаб](#getfirstvisibletab)|Извлекает указатель на первую отображаемую вкладку.|
+|[CBaseTabbedPane:: Жетминсизе](#getminsize)|Возвращает минимально допустимый размер панели. (Переопределяет [CPane:: жетминсизе](../../mfc/reference/cpane-class.md#getminsize).)|
+|[CBaseTabbedPane:: Жетпанеикон](#getpaneicon)|Возвращает маркер значка панели. (Переопределяет [CBasePane:: жетпанеикон](../../mfc/reference/cbasepane-class.md#getpaneicon).)|
+|[CBaseTabbedPane:: копанель](#getpanelist)|Возвращает список панелей, содержащихся в области с вкладками.|
+|[CBaseTabbedPane:: Жеттабареа](#gettabarea)|Возвращает ограничивающие прямоугольники для верхних и нижних областей вкладок.|
+|[CBaseTabbedPane:: Жеттабснум](#gettabsnum)|Возвращает число вкладок в окне вкладки.|
+|[CBaseTabbedPane:: Жетундерлингвиндов](#getunderlyingwindow)|Возвращает базовое окно вкладки (с оболочкой).|
+|[CBaseTabbedPane:: Жетвисиблетабснум](#getvisibletabsnum)|Возвращает число отображаемых вкладок.|
+|[CBaseTabbedPane:: Хасаутохидемоде](#hasautohidemode)|Определяет, можно ли переключать панель с вкладками на режим автоматического скрытия.|
+|[CBaseTabbedPane:: Ишидесинглетаб](#ishidesingletab)|Определяет, скрывается ли панель с вкладками, если отображается только одна вкладка.|
+|`CBaseTabbedPane::LoadSiblingPaneIDs`|Используется внутри во время сериализации.|
+|[CBaseTabbedPane:: RecalcLayout](#recalclayout)|Повторно вычисляет сведения о макете для панели. (Переопределяет [CPane:: RecalcLayout](../../mfc/reference/cpane-class.md#recalclayout).)|
+|[CBaseTabbedPane:: Ремовепане](#removepane)|Удаляет панель из панели с вкладками.|
+|`CBaseTabbedPane::SaveSiblingBarIDs`|Используется внутри во время сериализации.|
+|`CBaseTabbedPane::Serialize`|(Переопределяет [CDockablePane:: Serialize](cdockablepane-class.md).)|
+|`CBaseTabbedPane::SerializeTabWindow`|Используется внутри во время сериализации.|
+|[CBaseTabbedPane:: Сетаутодестрой](#setautodestroy)|Определяет, будет ли автоматически уничтожена панель элементов управления с вкладками.|
+|[CBaseTabbedPane:: Сетаутохидемоде](#setautohidemode)|Переключает закрепляемую область между отображением и режимом автоматического скрытия. (Переопределяет [CDockablePane:: сетаутохидемоде](../../mfc/reference/cdockablepane-class.md#setautohidemode).)|
+|[CBaseTabbedPane:: Шовтаб](#showtab)|Показывает или скрывает вкладку.|
 
 ## <a name="remarks"></a>Remarks
 
-Этот класс является абстрактным классом и не может быть мгновенно. Он реализует службы, которые являются общими для всех видов табло стекол.
+Этот класс является абстрактным и не может быть создан. Он реализует службы, общие для всех видов панелей с вкладками.
 
-В настоящее время библиотека включает в себя два производных классы табло- панель: [класс CTabbedPane](../../mfc/reference/ctabbedpane-class.md) и [CMFCOutlookBar.](../../mfc/reference/cmfcoutlookbar-class.md)
+В настоящее время библиотека содержит два производных класса панели с вкладками: [Ктаббедпане Class](../../mfc/reference/ctabbedpane-class.md) и [CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md).
 
-Объект `CBaseTabbedPane` обертывает указатель на объект [класса CMFCBaseTabCtrl.](../../mfc/reference/cmfcbasetabctrl-class.md) [CmFCBaseTabCtrl Класс](../../mfc/reference/cmfcbasetabctrl-class.md) затем становится окном ребенка панели вкладок.
+`CBaseTabbedPane`Объект заключает указатель на объект [класса CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) . После этого [Класс CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) станет дочерним окном области с вкладками.
 
-Для получения дополнительной информации о том, как создать панели вкладок, [см. CDockablePane класса](../../mfc/reference/cdockablepane-class.md), [CTabbedPane класса](../../mfc/reference/ctabbedpane-class.md), и [CMFCOutlookBar класса](../../mfc/reference/cmfcoutlookbar-class.md).
+Дополнительные сведения о создании панелей с вкладками см. в разделе [класс CDockablePane](../../mfc/reference/cdockablepane-class.md), [класс Ктаббедпане](../../mfc/reference/ctabbedpane-class.md)и [Класс CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -153,11 +152,11 @@ class CBaseTabbedPane : public CDockablePane
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** afxBaseTabbedPane.h
+**Заголовок:** афксбасетаббедпане. h
 
-## <a name="cbasetabbedpaneaddtab"></a><a name="addtab"></a>CBaseTabbedPane::AddTab
+## <a name="cbasetabbedpaneaddtab"></a><a name="addtab"></a> CBaseTabbedPane:: Аддтаб
 
-Добавляет новую вкладку в панель ный вкладок.
+Добавляет новую вкладку к панели с вкладками.
 
 ```
 virtual BOOL AddTab(
@@ -169,29 +168,29 @@ virtual BOOL AddTab(
 
 ### <a name="parameters"></a>Параметры
 
-*pNewBar*<br/>
-(в, вне) Указатель на панель, чтобы добавить. Этот указатель может стать недействительным после вызова этого метода. Дополнительные сведения см. в разделе «Примечания».
+*пневбар*<br/>
+[вход, выход] Указатель на область, которую необходимо добавить. Этот указатель может стать недействительным после вызова этого метода. Дополнительные сведения см. в разделе "Замечания".
 
-*bVisible*<br/>
-(в) TRUE, чтобы сделать вкладку видимой; в противном случае, FALSE.
+*бвисибле*<br/>
+окне Значение TRUE, чтобы сделать вкладку видимой; в противном случае — значение FALSE.
 
-*bSetActive*<br/>
-(в) TRUE, чтобы сделать вкладку активной вкладкой; в противном случае, FALSE.
+*бсетактиве*<br/>
+окне Значение TRUE, чтобы сделать вкладку активной вкладкой; в противном случае — значение FALSE.
 
 *bDetachable*<br/>
-(в) TRUE, чтобы сделать вкладку съемной; в противном случае, FALSE.
+окне Значение TRUE, чтобы можно было отсоединять вкладку. в противном случае — значение FALSE.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-ПРАВДА, если панель была успешно добавлена в качестве вкладки и не был уничтожен в процессе. FALSE, если добавленное стежок является объектом типа. `CBaseTabbedPane` Дополнительные сведения см. в разделе «Примечания».
+Значение TRUE, если панель была успешно добавлена в виде вкладки и не была уничтожена в процессе. Значение FALSE, если добавляемая панель является объектом типа `CBaseTabbedPane` . Дополнительные сведения см. в разделе "Замечания".
 
 ### <a name="remarks"></a>Remarks
 
-Вызовите этот метод, чтобы добавить панель в качестве новой вкладки на панели вкладок. Если *pNewBar* указывает на `CBaseTabbedPane`объект типа, все его вкладки копируются на панель вкладок, а затем *pNewBar* разрушается. Таким образом, *pNewBar* становится недействительным указателем и не должен использоваться.
+Вызовите этот метод, чтобы добавить область в качестве новой вкладки на панели с вкладками. Если *пневбар* указывает на объект типа `CBaseTabbedPane` , все его вкладки копируются на панель с вкладками, а затем *пневбар* уничтожается. Таким словами, *пневбар* превращается в недопустимый указатель и не должен использоваться.
 
-## <a name="cbasetabbedpaneallowdestroyemptytabbedpane"></a><a name="allowdestroyemptytabbedpane"></a>CBaseTabbedPane::AllowDestroyEmptyTabbedPane
+## <a name="cbasetabbedpaneallowdestroyemptytabbedpane"></a><a name="allowdestroyemptytabbedpane"></a> CBaseTabbedPane:: Алловдестройемптитаббедпане
 
-Определяет, можно ли уничтожить пустое табло.
+Указывает, можно ли уничтожить пустую панель с вкладками.
 
 ```
 virtual BOOL AllowDestroyEmptyTabbedPane() const;
@@ -199,15 +198,15 @@ virtual BOOL AllowDestroyEmptyTabbedPane() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-TRUE, если пустое табло панели могут быть уничтожены; в противном случае, FALSE. Реализация по умолчанию всегда возвращает TRUE.
+Значение TRUE, если пустая область с вкладками может быть удалена; в противном случае — значение FALSE. Реализация по умолчанию всегда возвращает значение TRUE.
 
 ### <a name="remarks"></a>Remarks
 
-Если пустое табло не может быть уничтожено, фреймворк вместо этого скрывает панель.
+Если пустая область с вкладками не может быть уничтожена, платформа скрывает панель.
 
-## <a name="cbasetabbedpaneapplyrestoredtabinfo"></a><a name="applyrestoredtabinfo"></a>CBaseTabbedPane::ApplyRestoredTabInfo
+## <a name="cbasetabbedpaneapplyrestoredtabinfo"></a><a name="applyrestoredtabinfo"></a> CBaseTabbedPane:: Апплиресторедтабинфо
 
-Загружает настройки вкладок из реестра и применяет их к панели вкладок.
+Загружает параметры вкладки из реестра и применяет их к панели с вкладками.
 
 ```
 virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
@@ -215,16 +214,16 @@ virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 
 ### <a name="parameters"></a>Параметры
 
-*bUseTabИндексы*<br/>
-(в) Этот параметр используется внутри фреймворка.
+*бусетабиндексес*<br/>
+окне Этот параметр используется платформой для внутренних целей.
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод вызывается инфраструктурой при перезагрузке стыковки государственной информации из реестра. Метод получает информацию о порядке вкладок и именах вкладок для панели вкладок.
+Этот метод вызывается платформой при перезагрузке сведений о состоянии закрепления из реестра. Метод получает сведения о порядке табуляции и именах вкладок для панели с вкладками.
 
-## <a name="cbasetabbedpanecanfloat"></a><a name="canfloat"></a>CBaseTabbedPane::CanFloat
+## <a name="cbasetabbedpanecanfloat"></a><a name="canfloat"></a> CBaseTabbedPane:: Канфлоат
 
-Определяет, может ли табло плавать.
+Указывает, может ли панель с вкладками перемещаться.
 
 ```
 virtual BOOL CanFloat() const;
@@ -232,11 +231,11 @@ virtual BOOL CanFloat() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-ПРАВДА, если панель может плавать; в противном случае, FALSE.
+Значение TRUE, если панель может быть плавающей; в противном случае — значение FALSE.
 
-## <a name="cbasetabbedpanecansetcaptiontexttotabname"></a><a name="cansetcaptiontexttotabname"></a>CBaseTabbedPane::CanSetCaptionTextToTabName
+## <a name="cbasetabbedpanecansetcaptiontexttotabname"></a><a name="cansetcaptiontexttotabname"></a> CBaseTabbedPane:: Кансеткаптионтексттотабнаме
 
-Определяет, должна ли подпись для панели вкладок отображать тот же текст, что и активная вкладка.
+Определяет, должен ли заголовок панели с вкладками отображать тот же текст, что и активная вкладка.
 
 ```
 virtual BOOL CanSetCaptionTextToTabName() const;
@@ -244,15 +243,15 @@ virtual BOOL CanSetCaptionTextToTabName() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-TRUE, если текст заголовка табло установлен на текст активной вкладки; в противном случае, FALSE.
+Значение TRUE, если текст заголовка панели с вкладками установлен на текст активной вкладки; в противном случае — значение FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Метод используется для определения того, дублирует ли текст подпись вкладке подпись к метке активной вкладки. Вы можете включить или отключить эту функциональность, позвонив [по телефону CBaseTabbedPane::EnableSetCaptionTextToTabName](#enablesetcaptiontexttotabname).
+Метод используется для определения того, что текст, отображаемый в заголовке панели с вкладками, дублирует метку активной вкладки. Вы можете включить или отключить эту функцию, вызвав [CBaseTabbedPane:: енаблесеткаптионтексттотабнаме](#enablesetcaptiontexttotabname).
 
-## <a name="cbasetabbedpaneconverttotabbeddocument"></a><a name="converttotabbeddocument"></a>CBaseTabbedPane::ConvertToTabbedDocument
+## <a name="cbasetabbedpaneconverttotabbeddocument"></a><a name="converttotabbeddocument"></a> CBaseTabbedPane:: Конверттотаббеддокумент
 
-Преобразует одну или несколько доковых стекол в документы MDI.
+Преобразует одну или несколько закрепляемых областей в документы с вкладками MDI.
 
 ```
 virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
@@ -260,10 +259,10 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 
 ### <a name="parameters"></a>Параметры
 
-*bActiveTabТолько*<br/>
-(в) При преобразовании панели вкладок укажите TRUE, чтобы преобразовать только активную вкладку.
+*бактиветабонли*<br/>
+окне При преобразовании панели с вкладками укажите значение TRUE, чтобы преобразовать только активную вкладку. Укажите значение FALSE, чтобы преобразовать все вкладки на панели.
 
-## <a name="cbasetabbedpanedetachpane"></a><a name="detachpane"></a>CBaseTabbedPane::DetachPane
+## <a name="cbasetabbedpanedetachpane"></a><a name="detachpane"></a> CBaseTabbedPane::D Етачпане
 
 Отсоединяет панель от панели с вкладками.
 
@@ -275,23 +274,23 @@ virtual BOOL DetachPane(
 
 ### <a name="parameters"></a>Параметры
 
-*pBar*<br/>
-(в) Указатель на панель, чтобы отсоединить.
+*пбар*<br/>
+окне Указатель на область для отсоединения.
 
 *bHide*<br/>
-(в) Параметр Boolean, который определяет, скрывает ли фреймворк стекло после того, как оно отсоединяется.
+окне Логический параметр, указывающий, скрывает ли структура панель после отсоединения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-TRUE, если фреймворк успешно отсоединяет панель; FALSE, если *pBar* является NULL или относится к панели, которая не находится в панели вкладок.
+Значение TRUE, если платформа успешно отсоединяет панель. Значение FALSE, если *пбар* имеет значение null или ссылается на область, которая не находится в области с вкладками.
 
 ### <a name="remarks"></a>Remarks
 
-Рамки плавает отдельной панели, если это возможно. Для получения дополнительной информации [см. CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat).
+По возможности платформа будет переключаться на отсоединенную область. Дополнительные сведения см. в разделе [CBasePane:: канфлоат](../../mfc/reference/cbasepane-class.md#canfloat).
 
-## <a name="cbasetabbedpaneenablesetcaptiontexttotabname"></a><a name="enablesetcaptiontexttotabname"></a>CBaseTabbedPane::EnableSetCaptionTextToTabName
+## <a name="cbasetabbedpaneenablesetcaptiontexttotabname"></a><a name="enablesetcaptiontexttotabname"></a> CBaseTabbedPane:: Енаблесеткаптионтексттотабнаме
 
-Позволяет или отсутствует способность панели вкладок синхронизировать текст подписи с текстом этикетки на активной вкладке.
+Включает или отключает возможность панели с вкладками для синхронизации текста заголовка с текстом метки на активной вкладке.
 
 ```
 virtual void EnableSetCaptionTextToTabName(BOOL bEnable);
@@ -300,11 +299,11 @@ virtual void EnableSetCaptionTextToTabName(BOOL bEnable);
 ### <a name="parameters"></a>Параметры
 
 *bEnable*<br/>
-(в) TRUE для синхронизации подписи к панели вкладок с подписью активной вкладки; в противном случае, FALSE.
+окне Значение TRUE, чтобы синхронизировать заголовок области с вкладками с заголовком активной вкладки; в противном случае — значение FALSE.
 
-## <a name="cbasetabbedpanefilldefaulttabsorderarray"></a><a name="filldefaulttabsorderarray"></a>CBaseTabbedPane::FillDefaultTabsOrderArray
+## <a name="cbasetabbedpanefilldefaulttabsorderarray"></a><a name="filldefaulttabsorderarray"></a> CBaseTabbedPane:: Филлдефаулттабсордераррай
 
-Восстанавливает внутренний порядок вкладки в состояние по умолчанию.
+Восстанавливает внутренний порядок табуляции до состояния по умолчанию.
 
 ```cpp
 void FillDefaultTabsOrderArray();
@@ -312,11 +311,11 @@ void FillDefaultTabsOrderArray();
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод вызывается, когда фреймворк восстанавливает панель Outlook в исходное состояние.
+Этот метод вызывается, когда платформа восстанавливает исходное состояние панели Outlook.
 
-## <a name="cbasetabbedpanefindpanebyid"></a><a name="findpanebyid"></a>CBaseTabbedPane:FindPaneByID
+## <a name="cbasetabbedpanefindpanebyid"></a><a name="findpanebyid"></a> CBaseTabbedPane:: Финдпанебид
 
-Возвращает панель, идентифицированную идентификатором панели.
+Возвращает панель, определяемую ИДЕНТИФИКАТОРом панели.
 
 ```
 virtual CWnd* FindPaneByID(UINT uBarID);
@@ -324,20 +323,20 @@ virtual CWnd* FindPaneByID(UINT uBarID);
 
 ### <a name="parameters"></a>Параметры
 
-*uBarID*<br/>
-(в) Упоняет идентификатор панели для поиска.
+*убарид*<br/>
+окне Указывает идентификатор области для поиска.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на панель, если она была найдена; в противном случае, NULL.
+Указатель на область, если она найдена; в противном случае значение NULL.
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод сравнивает все вкладки в панели и возвращает один с идентификатором, указанным параметром *uBarID.*
+Этот метод сравнивает все вкладки на панели и возвращает объект с ИДЕНТИФИКАТОРом, указанным в параметре *убарид* .
 
-## <a name="cbasetabbedpanefindbarbytabnumber"></a><a name="findbarbytabnumber"></a>CBaseTabbedPane::FindBarByTabNumber
+## <a name="cbasetabbedpanefindbarbytabnumber"></a><a name="findbarbytabnumber"></a> CBaseTabbedPane:: Финдбарбитабнумбер
 
-Возвращает панель, которая находится во вкладке.
+Возвращает панель, расположенную на вкладке.
 
 ```
 virtual CWnd* FindBarByTabNumber(
@@ -348,20 +347,20 @@ virtual CWnd* FindBarByTabNumber(
 ### <a name="parameters"></a>Параметры
 
 *nTabNum*<br/>
-(в) Упогоняет нулевой индекс вкладки для извлечения.
+окне Указывает отсчитываемый от нуля индекс извлекаемой вкладки.
 
-*bGetWrappedBar*<br/>
-(в) TRUE, чтобы вернуть основное (обернутое) окно стекла вместо самого стекла; в противном случае FALSE. Это относится только к стеклам, полученным из [CDockablePaneAdapter.](../../mfc/reference/cdockablepaneadapter-class.md)
+*бжетвраппедбар*<br/>
+окне Значение TRUE, чтобы возвратить базовое (упакованное) окно панели, а не саму панель; в противном случае — FALSE. Это относится только к панелям, производным от [кдоккаблепанеадаптер](../../mfc/reference/cdockablepaneadapter-class.md).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если панель найдена, возвращается действительный указатель на исцеляемый стекол; в противном случае, NULL.
+Если панель найдена, возвращается допустимый указатель на панель, в которой выполняется поиск. в противном случае значение NULL.
 
 ### <a name="remarks"></a>Remarks
 
-Вызовите этот метод для извлечения панели, проживающей в вкладке, указанной параметром *nTabNum.*
+Вызовите этот метод, чтобы получить панель, размещенную на вкладке, указанной параметром *нтабнум* .
 
-## <a name="cbasetabbedpanefloattab"></a><a name="floattab"></a>CBaseTabbedPane::FloatTab
+## <a name="cbasetabbedpanefloattab"></a><a name="floattab"></a> CBaseTabbedPane:: Флоаттаб
 
 Преобразует панель в плавающую, но только если она расположена на отделяемой вкладке.
 
@@ -375,31 +374,31 @@ virtual BOOL FloatTab(
 
 ### <a name="parameters"></a>Параметры
 
-*pBar*<br/>
-(в, вне) Указатель на панель, чтобы плавать.
+*пбар*<br/>
+[вход, выход] Указатель на область с плавающей запятой.
 
-*nTabID*<br/>
-(в) Упогоняет нулевой индекс вкладки для плавания.
+*нтабид*<br/>
+окне Указывает отсчитываемый от нуля индекс вкладки для перемещения.
 
 *dockMethod*<br/>
-(в) Определяет метод использования для сделать панель поплавок. Дополнительные сведения см. в разделе «Примечания».
+окне Указывает метод, используемый, чтобы сделать панель плавающей. Дополнительные сведения см. в разделе "Замечания".
 
 *bHide*<br/>
-(в) ПРАВДА, чтобы скрыть стекло перед плавающей; в противном случае, FALSE.
+окне Значение TRUE, чтобы скрыть панель перед плавающей; в противном случае — значение FALSE.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-ПРАВДА, если панель плавали; в противном случае, FALSE.
+TRUE, если панель перемещена; в противном случае — значение FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Вызовите этот метод, чтобы плавать панели, которая в настоящее время находится в съемной вкладке.
+Вызовите этот метод, чтобы перечислить область, которая в данный момент находится в отсоединенной вкладке.
 
-Если вы хотите, чтобы отделить панель программно, укажите DM_SHOW для *dockMethod* параметра. Если вы хотите, чтобы плавать панели в том же положении, где он плавал ранее, укажите DM_DBL_CLICK в качестве параметра *dockMethod.*
+Если необходимо отключить панель программным путем, укажите DM_SHOW для параметра *доккмесод* . Если вы хотите переместить область в ту же позицию, где она была перемещена ранее, укажите DM_DBL_CLICK в качестве параметра *доккмесод* .
 
-## <a name="cbasetabbedpanegetdefaulttabsorder"></a><a name="getdefaulttabsorder"></a>CBaseTabbedPane::GetDefaultTabsOrder
+## <a name="cbasetabbedpanegetdefaulttabsorder"></a><a name="getdefaulttabsorder"></a> CBaseTabbedPane:: Жетдефаулттабсордер
 
-Возвращает порядок вкладок по умолчанию в панели.
+Возвращает порядок вкладок на панели по умолчанию.
 
 ```
 const CArray<int,int>& GetDefaultTabsOrder();
@@ -407,13 +406,13 @@ const CArray<int,int>& GetDefaultTabsOrder();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Объект, `CArray` описывающий порядок вкладок по умолчанию в панели.
+`CArray`Объект, указывающий порядок вкладок в панели по умолчанию.
 
 ### <a name="remarks"></a>Remarks
 
-Платформа вызывает этот метод при сбросить панель Outlook в исходное состояние.
+Платформа вызывает этот метод при сбросе панели Outlook в исходное состояние.
 
-## <a name="cbasetabbedpanegetfirstvisibletab"></a><a name="getfirstvisibletab"></a>CBaseTabbedPane::GetFirstVisibleTab
+## <a name="cbasetabbedpanegetfirstvisibletab"></a><a name="getfirstvisibletab"></a> CBaseTabbedPane:: Жетфирствисиблетаб
 
 Извлекает указатель на первую отображаемую вкладку.
 
@@ -424,32 +423,15 @@ virtual CWnd* GetFirstVisibleTab(int& iTabNum);
 ### <a name="parameters"></a>Параметры
 
 *iTabNum*<br/>
-(в) Ссылка на ряд. Этот метод записывает нулевой индекс первой отображаемых вкладок к этому параметру, или -1, если отображаемые вкладки не найдены.
+окне Ссылка на целое число. Этот метод записывает Отсчитываемый от нуля индекс первой отображаемой вкладки к этому параметру или значение-1, если отображаемая вкладка не найдена.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-В случае успеха указатель на первую отображаемую вкладку; в противном случае, NULL.
+В случае успеха указатель на первую отображаемую вкладку; в противном случае значение NULL.
 
-## <a name="cbasetabbedpanegetminsize"></a><a name="getminsize"></a>CBaseTabbedPane::GetMinSize
+## <a name="cbasetabbedpanegetminsize"></a><a name="getminsize"></a> CBaseTabbedPane:: Жетминсизе
 
-Получает минимальный допустимый размер для панели.
-
-```
-virtual void GetMinSize(CSize& size) const;
-```
-
-### <a name="parameters"></a>Параметры
-
-*size*<br/>
-(ваут) Объект, `CSize` наполненный минимально допустимым размером.
-
-### <a name="remarks"></a>Remarks
-
-Если последовательная обработка минимальных размеров панели активна [(CPane::m_bHandleMinSize),](../../mfc/reference/cpane-class.md#m_bhandleminsize) *размер* заполняется минимальным допустимым размером для активной вкладки. В противном случае *размер* заполняется возвратным значением [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).
-
-## <a name="cbasetabbedpanegetpaneicon"></a><a name="getpaneicon"></a>CBaseTabbedPane::GetPaneIcon
-
-Получает минимальный допустимый размер для панели.
+Возвращает минимально допустимый размер панели.
 
 ```
 virtual void GetMinSize(CSize& size) const;
@@ -458,15 +440,32 @@ virtual void GetMinSize(CSize& size) const;
 ### <a name="parameters"></a>Параметры
 
 *size*<br/>
-(ваут) Объект, `CSize` наполненный минимально допустимым размером.
+заполняет `CSize` Объект, который заполняется минимальным допустимым размером.
 
 ### <a name="remarks"></a>Remarks
 
-Если последовательная обработка минимальных размеров панели активна [(CPane::m_bHandleMinSize),](../../mfc/reference/cpane-class.md#m_bhandleminsize) *размер* заполняется минимальным допустимым размером для активной вкладки. В противном случае *размер* заполняется возвратным значением [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).
+Если активна постоянная обработка минимальных размеров панели ( [CPane:: m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), *Размер* заполняется минимальным допустимым размером активной вкладки. в противном случае *Размер* заполняется возвращаемым значением [CPane:: жетминсизе](../../mfc/reference/cpane-class.md#getminsize).
 
-## <a name="cbasetabbedpanegetpanelist"></a><a name="getpanelist"></a>CBaseTabbedPane::GetPaneList
+## <a name="cbasetabbedpanegetpaneicon"></a><a name="getpaneicon"></a> CBaseTabbedPane:: Жетпанеикон
 
-Возвращает список стекол, которые содержатся в панели вкладок.
+Возвращает минимально допустимый размер панели.
+
+```
+virtual void GetMinSize(CSize& size) const;
+```
+
+### <a name="parameters"></a>Параметры
+
+*size*<br/>
+заполняет `CSize` Объект, который заполняется минимальным допустимым размером.
+
+### <a name="remarks"></a>Remarks
+
+Если активна постоянная обработка минимальных размеров панели ( [CPane:: m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), *Размер* заполняется минимальным допустимым размером активной вкладки. в противном случае *Размер* заполняется возвращаемым значением [CPane:: жетминсизе](../../mfc/reference/cpane-class.md#getminsize).
+
+## <a name="cbasetabbedpanegetpanelist"></a><a name="getpanelist"></a> CBaseTabbedPane:: копанель
+
+Возвращает список панелей, содержащихся в области с вкладками.
 
 ```
 virtual void GetPaneList(
@@ -476,15 +475,15 @@ virtual void GetPaneList(
 
 ### <a name="parameters"></a>Параметры
 
-*Lst*<br/>
-(ваут) А, `CObList` который заполнен стекла, которые содержатся в вкладке панели.
+*LST*<br/>
+заполняет Объект `CObList` , который заполняется панелями, содержащимися в области с вкладками.
 
-*pRTCFilter*<br/>
-(в) Если он не NULL, то в списке возвращается только стекла, относящиеся к указанному классу времени выполнения.
+*прткфилтер*<br/>
+окне Если значение не равно NULL, возвращаемый список содержит только те панели, которые относятся к указанному классу среды выполнения.
 
-## <a name="cbasetabbedpanegettabarea"></a><a name="gettabarea"></a>CBaseTabbedPane::GetTabArea
+## <a name="cbasetabbedpanegettabarea"></a><a name="gettabarea"></a> CBaseTabbedPane:: Жеттабареа
 
-Возвращает прямоугольники для верхних и нижних областей вкладки.
+Возвращает ограничивающие прямоугольники для верхних и нижних областей вкладок.
 
 ```
 virtual void GetTabArea(
@@ -495,18 +494,18 @@ virtual void GetTabArea(
 ### <a name="parameters"></a>Параметры
 
 *rectTabAreaTop*<br/>
-(ваут) Получает координаты экрана верхней области вкладки.
+заполняет Получает экранные координаты верхней области вкладки.
 
 *rectTabAreaBottom*<br/>
-(ваут) Получает координаты экрана нижней области вкладки.
+заполняет Получает координаты экрана нижней области вкладки.
 
 ### <a name="remarks"></a>Remarks
 
-Вызовите этот метод, чтобы определить прямоугольники, в координатах экрана, для верхних и нижних областей вкладки.
+Вызовите этот метод, чтобы определить ограничивающие прямоугольники (в экранных координатах) для верхних и нижних областей вкладок.
 
-## <a name="cbasetabbedpanegettabsnum"></a><a name="gettabsnum"></a>CBaseTabbedPane::GetTabsNum
+## <a name="cbasetabbedpanegettabsnum"></a><a name="gettabsnum"></a> CBaseTabbedPane:: Жеттабснум
 
-Возвращает количество вкладок в окне вкладок.
+Возвращает число вкладок в окне вкладки.
 
 ```
 virtual int GetTabsNum() const;
@@ -514,11 +513,11 @@ virtual int GetTabsNum() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Количество вкладок в панели вкладок.
+Число вкладок на панели с вкладками.
 
-## <a name="cbasetabbedpanegetunderlyingwindow"></a><a name="getunderlyingwindow"></a>CBaseTabbedPane::GetUnderlyingWindow
+## <a name="cbasetabbedpanegetunderlyingwindow"></a><a name="getunderlyingwindow"></a> CBaseTabbedPane:: Жетундерлингвиндов
 
-Получает базовое (обертое) окно вкладок.
+Возвращает базовое окно вкладки (с оболочкой).
 
 ```
 virtual CMFCBaseTabCtrl* GetUnderlyingWindow();
@@ -528,9 +527,9 @@ virtual CMFCBaseTabCtrl* GetUnderlyingWindow();
 
 Указатель на базовое окно вкладки.
 
-## <a name="cbasetabbedpanegetvisibletabsnum"></a><a name="getvisibletabsnum"></a>CBaseTabbedPane::GetVisibleTabsNum
+## <a name="cbasetabbedpanegetvisibletabsnum"></a><a name="getvisibletabsnum"></a> CBaseTabbedPane:: Жетвисиблетабснум
 
-Возвращает количество видимых вкладок.
+Возвращает число видимых вкладок.
 
 ```
 virtual int GetVisibleTabsNum() const;
@@ -538,13 +537,13 @@ virtual int GetVisibleTabsNum() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Количество видимых вкладок, которые будут больше или равны нулю.
+Число видимых вкладок, которые будут больше или равны нулю.
 
 ### <a name="remarks"></a>Remarks
 
-Вызовите этот метод, чтобы определить количество видимых вкладок в панели вкладок.
+Вызовите этот метод, чтобы определить количество видимых вкладок на панели с вкладками.
 
-## <a name="cbasetabbedpanehasautohidemode"></a><a name="hasautohidemode"></a>CBaseTabbedPane::HasAutoHideMode
+## <a name="cbasetabbedpanehasautohidemode"></a><a name="hasautohidemode"></a> CBaseTabbedPane:: Хасаутохидемоде
 
 Определяет возможность переключения панели с вкладками в режим автоматического скрытия.
 
@@ -554,15 +553,15 @@ virtual BOOL HasAutoHideMode() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-ПРАВДА, если панель можно переключить в режим автохидирования; в противном случае, FALSE.
+Значение TRUE, если панель можно переключить в режим автоскрытия; в противном случае — значение FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Если режим автоматической hide отключен, ни одна кнопка контакта не отображается на заголовок панели вкладок.
+Если режим автоскрытия отключен, в заголовке панели с вкладками не отображается кнопка закрепить.
 
-## <a name="cbasetabbedpaneishidesingletab"></a><a name="ishidesingletab"></a>CBaseTabbedPane::IsHideSingleTab
+## <a name="cbasetabbedpaneishidesingletab"></a><a name="ishidesingletab"></a> CBaseTabbedPane:: Ишидесинглетаб
 
-Определяет, скрыто ли табло, если отображается только одна вкладка.
+Определяет, скрывается ли панель с вкладками, если отображается только одна вкладка.
 
 ```
 virtual BOOL IsHideSingleTab() const;
@@ -570,15 +569,15 @@ virtual BOOL IsHideSingleTab() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-TRUE, если окно вкладки не отображается, когда есть только одна видимая вкладка; в противном случае, FALSE.
+Значение TRUE, если окно вкладки не отображается, если имеется только одна видимая вкладка; в противном случае — значение FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Если панель не отображается из-за открытия только одной вкладки, можно вызвать этот метод, чтобы определить, правильно ли работает панель вкладок.
+Если панель не отображается, поскольку открыта только одна вкладка, можно вызвать этот метод, чтобы определить, правильно ли работает панель с вкладками.
 
-## <a name="cbasetabbedpaneremovepane"></a><a name="removepane"></a>CBaseTabbedPane::RemovePane
+## <a name="cbasetabbedpaneremovepane"></a><a name="removepane"></a> CBaseTabbedPane:: Ремовепане
 
-Удаляет панель из панели вкладок.
+Удаляет панель из панели с вкладками.
 
 ```
 virtual BOOL RemovePane(CWnd* pBar);
@@ -586,20 +585,20 @@ virtual BOOL RemovePane(CWnd* pBar);
 
 ### <a name="parameters"></a>Параметры
 
-*pBar*<br/>
-(в, вне) Указатель на панель, чтобы удалить из вкладки панели.
+*пбар*<br/>
+[вход, выход] Указатель на область, которую необходимо удалить из панели с вкладками.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-ПРАВДА, если панель была успешно удалена из панели вкладок, и если вкладки панели по-прежнему действительна. FALSE, если последнее стекло было удалено из панели вкладок и табло панель вот-вот будет уничтожена. Если значение возврата FALSE, не используйте панель вкладок больше.
+Значение TRUE, если панель была успешно удалена из панели с вкладками, и если панель с вкладками все еще является допустимой. Значение FALSE, если последняя панель была удалена из панели с вкладками, а область с вкладками будет уничтожена. Если возвращаемое значение равно FALSE, больше не используйте панель с вкладками.
 
 ### <a name="remarks"></a>Remarks
 
-Вызовите этот метод, чтобы удалить панель, указанную параметром *pBar,* из панели вкладок.
+Вызовите этот метод, чтобы удалить область, указанную параметром *пбар* , из панели с вкладками.
 
-## <a name="cbasetabbedpanesetautodestroy"></a><a name="setautodestroy"></a>CBaseTabbedPane::SetAutoDestroy
+## <a name="cbasetabbedpanesetautodestroy"></a><a name="setautodestroy"></a> CBaseTabbedPane:: Сетаутодестрой
 
-Определяет, будет ли панель управления вкладками уничтожена автоматически.
+Определяет, будет ли автоматически уничтожена панель элементов управления с вкладками.
 
 ```cpp
 void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
@@ -607,14 +606,14 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 
 ### <a name="parameters"></a>Параметры
 
-*bAutoDestroy*<br/>
-(в) ПРАВДА, если вкладки панели был создан динамически, и вы не контролируете его жизни; в противном случае, FALSE.
+*баутодестрой*<br/>
+окне Значение TRUE, если панель с вкладками создана динамически и вы не управляете ее временем существования. в противном случае — значение FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Установите режим автоматического уничтожения, чтобы true, если вы создаете вкладку панели динамически, и если вы не контролируете его срок службы. Если режим автоматического уничтожения является правдой, табло будет автоматически уничтожено рамкой.
+Установите для режима автоматического удаления значение TRUE, если панель с вкладками динамически создается и не контролируется ее время существования. Если режим автоматического удаления имеет значение TRUE, то панель с вкладками автоматически уничтожается платформой.
 
-## <a name="cbasetabbedpaneshowtab"></a><a name="showtab"></a>CBaseTabbedPane::ShowTab
+## <a name="cbasetabbedpaneshowtab"></a><a name="showtab"></a> CBaseTabbedPane:: Шовтаб
 
 Показывает или скрывает вкладку.
 
@@ -628,29 +627,29 @@ virtual BOOL ShowTab(
 
 ### <a name="parameters"></a>Параметры
 
-*pBar*<br/>
-(в) Указатель на панель, чтобы показать или скрыть.
+*пбар*<br/>
+окне Указатель на панель, которую нужно показать или скрыть.
 
 *bShow*<br/>
-(в) TRUE, чтобы показать панель; FALSE, чтобы скрыть панель.
+окне Значение TRUE, чтобы отобразить панель; Значение FALSE, чтобы скрыть панель.
 
-*bDelay*<br/>
-(в) TRUE для задержки регулировки макета вкладки; в противном случае, FALSE.
+*бделай*<br/>
+окне Значение TRUE, чтобы задержать настройку макета вкладки; в противном случае — значение FALSE.
 
 *bActivate*<br/>
-(в) TRUE, чтобы сделать вкладку активной вкладкой; в противном случае, FALSE.
+окне Значение TRUE, чтобы сделать вкладку активной вкладкой; в противном случае — значение FALSE.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-TRUE, если вкладка была либо показана или скрыта успешно; в противном случае, FALSE.
+Значение TRUE, если вкладка была успешно отображена или скрыта; в противном случае — значение FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-При вызове этого метода панель отображается или скрыта, в зависимости от значения параметра *bShow.* Если вы скрываете вкладку, и это последняя видимая вкладка в базовом окне вкладки, панель вкладок скрыта. Если вы показываете вкладку, когда ранее не было видимых вкладок, отображается панель вкладок.
+При вызове этого метода Панель либо отображается, либо скрывается в зависимости от значения параметра *бшов* . Если скрыть вкладку и она является последней видимой вкладкой в соответствующем окне вкладки, то панель с вкладками будет скрыта. Если при отображении вкладки ранее не отображались вкладки, отображается панель с вкладками.
 
-## <a name="cbasetabbedpanerecalclayout"></a><a name="recalclayout"></a>CBaseTabbedPane::RecalcLayout
+## <a name="cbasetabbedpanerecalclayout"></a><a name="recalclayout"></a> CBaseTabbedPane:: RecalcLayout
 
-Пересчитывает информацию о макете для панели.
+Повторно вычисляет сведения о макете для панели.
 
 ```
 virtual void RecalcLayout();
@@ -658,13 +657,13 @@ virtual void RecalcLayout();
 
 ### <a name="remarks"></a>Remarks
 
-Если панель плавает, этот метод уведомляет фреймворк для перебазирования панели до текущего размера мини-кадра.
+Если панель является плавающей, этот метод уведомляет платформу, чтобы изменить размер панели до текущего размера мини-кадра.
 
-Если панель пристыкована, этот метод ничего не делает.
+Если панель закреплена, этот метод не выполняет никаких действий.
 
-## <a name="cbasetabbedpanesetautohidemode"></a><a name="setautohidemode"></a>CBaseTabbedPane::SetAutoHideMode
+## <a name="cbasetabbedpanesetautohidemode"></a><a name="setautohidemode"></a> CBaseTabbedPane:: Сетаутохидемоде
 
-Устанавливает режим автоматической скрытности для съемных стекол в панели вкладок.
+Задает режим автоматического скрытия для отсоединяемых панелей на панели с вкладками.
 
 ```
 virtual CMFCAutoHideToolBar* SetAutoHideMode(
@@ -676,32 +675,32 @@ virtual CMFCAutoHideToolBar* SetAutoHideMode(
 
 ### <a name="parameters"></a>Параметры
 
-*bMode*<br/>
-(в) TRUE для включения режима автоматической скрытности; FALSE для включения регулярного режима стыковки.
+*бмоде*<br/>
+окне Значение TRUE, чтобы включить режим автоматического скрытия; Значение FALSE, чтобы включить обычный режим закрепления.
 
-*dwAlignment*<br/>
-(в) Определяет выравнивание автоматического стекла, которое должно быть создано. Список возможных значений можно узнать на примере [CPane::MoveByAlignment](../../mfc/reference/cpane-class.md#movebyalignment).
+*двалигнмент*<br/>
+окне Задает выравнивание создаваемой области автоматических скрытий. Список возможных значений см. в разделе [CPane:: мовебялигнмент](../../mfc/reference/cpane-class.md#movebyalignment).
 
-*pCurrAutoHideBar*<br/>
-(в, вне) Указатель на текущую панель инструментов автоматического сокрытия. Может иметь значение NULL.
+*пкурраутохидебар*<br/>
+[вход, выход] Указатель на текущую панель инструментов автоматического скрытия. Может иметь значение NULL.
 
-*bUseTimer*<br/>
-(в) Уточняется, следует ли использовать эффект автоматической скрытности при переключении панели в режим автоматической скрытности или немедленно скрыть панель.
+*бусетимер*<br/>
+окне Указывает, следует ли использовать автоматическое скрытие, когда пользователь переключает панель в режим автоматического скрытия или сразу же скрывать эту область.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на панель инструментов автоматического сокрытия, которая создается при переходе в режим автоматической скрытности, или NULL, если панель инструментов не создана.
+Указатель на панель инструментов автоматического скрытия, созданный при переключении в режим автоматического скрытия, или значение NULL, если панель инструментов не создана.
 
 ### <a name="remarks"></a>Remarks
 
-Рамка вызывает этот метод, когда пользователь выбирает кнопку контакта для переключения табло в режим автоматической скрытности или в обычный режим стыковки.
+Платформа вызывает этот метод, когда пользователь нажимает кнопку закрепить, чтобы переключить панель с вкладками на режим автоматического скрытия или обычный режим закрепления.
 
-Режим автоматической скрытности установлен для каждого съемного стекла в панели вкладок. Панели, которые не являются съежеными, игнорируются. Для получения дополнительной информации [см. CMFCBaseTabCtrl::EnableTabDetach](../../mfc/reference/cmfcbasetabctrl-class.md#enabletabdetach).
+Режим автоматического скрытия задается для каждой соединяемой области на панели с вкладками. Панели, которые не могут быть отсоединены, игнорируются. Дополнительные сведения см. в разделе [CMFCBaseTabCtrl:: енаблетабдетач](../../mfc/reference/cmfcbasetabctrl-class.md#enabletabdetach).
 
-Вызовите этот метод, чтобы переключить панель вкладок в режим автоматического сокрытия программно. Панель должна быть пристыкована к окну основной рамы [(CDockablePane::GetDefaultPaneDivider](../../mfc/reference/cdockablepane-class.md#getdefaultpanedivider) должен вернуть действительный указатель на [CPaneDivider).](../../mfc/reference/cpanedivider-class.md)
+Вызовите этот метод, чтобы переключить панель с вкладками на режим автоматического скрытия программным способом. Панель должна быть закреплена в главном окне фрейма ( [CDockablePane:: жетдефаултпанедивидер](../../mfc/reference/cdockablepane-class.md#getdefaultpanedivider) должен возвращать допустимый указатель на [кпанедивидер](../../mfc/reference/cpanedivider-class.md)).
 
 ## <a name="see-also"></a>См. также раздел
 
-[Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
+[Иерархическая диаграмма](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)<br/>
-[CDockablePane Class](../../mfc/reference/cdockablepane-class.md)
+[Класс CDockablePane](../../mfc/reference/cdockablepane-class.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CMFCRibbonCustomizePropertyPage [MFC], AddCustomCategory
 - CMFCRibbonCustomizePropertyPage [MFC], OnOK
 ms.assetid: ea32a99a-dfbe-401e-8975-aa191552532f
-ms.openlocfilehash: d36e3a301aa5b861c296b0bb4859e9442dbdb75e
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 92408e91b41b474da3a2da6ad0646feb3a6b8fc2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560885"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831844"
 ---
 # <a name="cmfcribboncustomizepropertypage-class"></a>Класс Кмфкриббонкустомизепропертипаже
 
@@ -33,17 +33,15 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|||
-|-|-|
 |name|Описание|
+|-|-|
 |[Кмфкриббонкустомизепропертипаже:: Кмфкриббонкустомизепропертипаже](#cmfcribboncustomizepropertypage)|Формирует объект `CMFCRibbonCustomizePropertyPage`.|
 |`CMFCRibbonCustomizePropertyPage::~CMFCRibbonCustomizePropertyPage`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|||
-|-|-|
 |name|Описание|
+|-|-|
 |[Кмфкриббонкустомизепропертипаже:: Аддкустомкатегори](#addcustomcategory)|Добавляет пользовательскую категорию в поле со списком **команд** .|
 |`CMFCRibbonCustomizePropertyPage::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|
 |`CMFCRibbonCustomizePropertyPage::GetThisClass`|Используется платформой для получения указателя на объект [крунтимекласс](../../mfc/reference/cruntimeclass-structure.md) , связанный с этим типом класса.|
@@ -126,7 +124,7 @@ virtual void OnOK();
 
 Реализация по умолчанию применяет параметры, выбранные в диалоговом окне **Настройка** , к панели быстрого доступа.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Иерархическая диаграмма](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)

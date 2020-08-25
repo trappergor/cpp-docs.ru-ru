@@ -14,12 +14,12 @@ helpviewer_keywords:
 - memory, managing
 - IAtlStringMgr class
 ms.assetid: 722f0346-a770-4aa7-8f94-177be8dba823
-ms.openlocfilehash: bee9c3d27ea05a40d6835d69079fc3e0a56efb86
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a617ba829999e9e5778bd7f0091cfb0d624dce71
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219057"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832013"
 ---
 # <a name="iatlstringmgr-class"></a>Класс Иатлстрингмгр
 
@@ -35,7 +35,7 @@ __interface IAtlStringMgr
 
 ### <a name="methods"></a>Методы
 
-|||
+|Имя|Описание|
 |-|-|
 |[Памяти](#allocate)|Вызовите этот метод, чтобы выделить новую структуру строковых данных.|
 |[Клонировать](#clone)|Вызовите этот метод, чтобы вернуть указатель на новый диспетчер строк для использования с другим экземпляром `CSimpleStringT` .|
@@ -53,7 +53,7 @@ __interface IAtlStringMgr
 
 **Заголовок:** атлсимпстр. h
 
-## <a name="iatlstringmgrallocate"></a><a name="allocate"></a>Иатлстрингмгр:: allocate
+## <a name="iatlstringmgrallocate"></a><a name="allocate"></a> Иатлстрингмгр:: allocate
 
 Выделяет новую структуру строковых данных.
 
@@ -83,7 +83,7 @@ CStringData* Allocate(int nAllocLength,int nCharSize) throw();
 > [!NOTE]
 > Примеры использования см. в разделе [Управление памятью и CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-## <a name="iatlstringmgrclone"></a><a name="clone"></a>Иатлстрингмгр:: Clone
+## <a name="iatlstringmgrclone"></a><a name="clone"></a> Иатлстрингмгр:: Clone
 
 Возвращает указатель на новый диспетчер строк для использования с другим экземпляром `CSimpleStringT` .
 
@@ -104,7 +104,7 @@ IAtlStringMgr* Clone() throw();
 > [!NOTE]
 > Примеры использования см. в разделе [Управление памятью и CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-## <a name="iatlstringmgrfree"></a><a name="free"></a>Иатлстрингмгр:: Free
+## <a name="iatlstringmgrfree"></a><a name="free"></a> Иатлстрингмгр:: Free
 
 Освобождает строковую структуру данных.
 
@@ -124,7 +124,7 @@ void Free(CStringData* pData) throw();
 > [!NOTE]
 > Примеры использования см. в разделе [Управление памятью и CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-## <a name="iatlstringmgrgetnilstring"></a><a name="getnilstring"></a>Иатлстрингмгр:: Жетнилстринг
+## <a name="iatlstringmgrgetnilstring"></a><a name="getnilstring"></a> Иатлстрингмгр:: Жетнилстринг
 
 Возвращает указатель на структуру строковых данных для пустой строки.
 
@@ -146,7 +146,7 @@ CStringData* GetNilString() throw();
 > [!NOTE]
 > Примеры использования см. в разделе [Управление памятью и CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-## <a name="iatlstringmgrreallocate"></a><a name="reallocate"></a>Иатлстрингмгр:: перераспределение
+## <a name="iatlstringmgrreallocate"></a><a name="reallocate"></a> Иатлстрингмгр:: перераспределение
 
 Перераспределяет структуру строковых данных.
 

@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-ms.openlocfilehash: 3c95f4a982e23d757b330ecadcae5cfbfd6fd531
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ec458f5d4a47b6eced939c4fe346d5d0414ea7c2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213077"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839131"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Класс Platform::Collections::UnorderedMap
 
@@ -60,7 +60,7 @@ ref class Map sealed;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[UnorderedMap:: UnorderedMap](#ctor)|Инициализирует новый экземпляр класса Map.|
 
@@ -79,10 +79,9 @@ ref class Map sealed;
 
 ### <a name="events"></a>События
 
-|||
-|-|-|
-|Имя|Описание|
-|Событие [Map:: мапчанжед](#mapchanged)|Происходит при изменении объекта Map.|
+| Имя | Описание |
+|--|--|
+| Событие [Map:: мапчанжед](#mapchanged) | Происходит при изменении объекта Map. |
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -94,7 +93,7 @@ ref class Map sealed;
 
 **Пространство имен:** Platform::Collections
 
-## <a name="unorderedmapclear-method"></a><a name="clear"></a>Метод UnorderedMap:: Clear
+## <a name="unorderedmapclear-method"></a><a name="clear"></a> Метод UnorderedMap:: Clear
 
 Удаляет все пары "ключ-значение" из текущего объекта UnorderedMap.
 
@@ -104,7 +103,7 @@ ref class Map sealed;
 virtual void Clear();
 ```
 
-## <a name="unorderedmapfirst-method"></a><a name="first"></a>Метод UnorderedMap:: First
+## <a name="unorderedmapfirst-method"></a><a name="first"></a> Метод UnorderedMap:: First
 
 Возвращает итератор, указывающий первый элемент [Windows:: Foundation:: Collections:: \<K,V> IKeyValuePair](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) в неупорядоченной карте.
 
@@ -124,7 +123,7 @@ virtual Windows::Foundation::Collections::IIterator<
 
 Удобным способом удержания итератора, возвращенного первым (), является присвоение возвращаемого значения переменной, объявленной с **`auto`** ключевым словом выведения типа. Например, `auto x = myUnorderedMap->First();`.
 
-## <a name="unorderedmapgetview-method"></a><a name="getview"></a>Метод UnorderedMap:: onview
+## <a name="unorderedmapgetview-method"></a><a name="getview"></a> Метод UnorderedMap:: onview
 
 Возвращает доступное только для чтения представление текущего UnorderedMap; то есть [класс Platform:: Collections:: UnorderedMapView](../cppcx/platform-collections-unorderedmapview-class.md) , реализующий интерфейс [Windows:: Foundation:: Collections:: IMapView:: IMapView](/uwp/api/windows.foundation.collections.imapview-2) .
 
@@ -138,7 +137,7 @@ Windows::Foundation::Collections::IMapView<K, V>^ GetView();
 
 Объект `UnorderedMapView`.
 
-## <a name="unorderedmaphaskey-method"></a><a name="haskey"></a>Метод UnorderedMap:: HasKey
+## <a name="unorderedmaphaskey-method"></a><a name="haskey"></a> Метод UnorderedMap:: HasKey
 
 Определяет, содержит ли текущий объект UnorderedMap указанный ключ.
 
@@ -159,7 +158,7 @@ bool HasKey(
 
 **`true`** значение, если ключ найден; в противном случае — **`false`** .
 
-## <a name="unorderedmapinsert-method"></a><a name="insert"></a>Метод UnorderedMap:: INSERT
+## <a name="unorderedmapinsert-method"></a><a name="insert"></a> Метод UnorderedMap:: INSERT
 
 Добавляет в текущий объект UnorderedMap указанную пару "ключ-значение".
 
@@ -184,7 +183,7 @@ virtual bool Insert(
 
 **`true`** значение, если ключ существующего элемента в текущей карте соответствует *ключу* , а значение этого элемента равно *значению*. **`false`** Если в текущем *ключе* сопоставления нет существующего элемента, а параметры *ключа* и *значения* вносятся в пару "ключ-значение", а затем добавляются в текущий UnorderedMap.
 
-## <a name="unorderedmaplookup-method"></a><a name="lookup"></a>Метод UnorderedMap:: Lookup
+## <a name="unorderedmaplookup-method"></a><a name="lookup"></a> Метод UnorderedMap:: Lookup
 
 Возвращает значение типа V, связанное с указанным ключом типа K.
 
@@ -205,7 +204,7 @@ V Lookup(
 
 Значение, связанное с *ключом*. Тип возвращаемого значения — TypeName *V*.
 
-## <a name="unorderedmapmapchanged"></a><a name="mapchanged"></a>UnorderedMap:: Мапчанжед
+## <a name="unorderedmapmapchanged"></a><a name="mapchanged"></a> UnorderedMap:: Мапчанжед
 
 Возникает, когда элемент вставляется в сопоставление или удаляется из него.
 
@@ -223,7 +222,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 Среда выполнения Windows приложения, которые C# или Visual Basic Project IMap \<K,V> как IDictionary \<K,V> .
 
-## <a name="unorderedmapremove-method"></a><a name="remove"></a>Метод UnorderedMap:: Remove
+## <a name="unorderedmapremove-method"></a><a name="remove"></a> Метод UnorderedMap:: Remove
 
 Удаляет указанную пару "ключ-значение" из текущего объекта UnorderedMap.
 
@@ -239,7 +238,7 @@ virtual void Remove(
 *key*<br/>
 Ключ из пары "ключ-значение". Тип *ключа* — TypeName *K*.
 
-## <a name="unorderedmapsize-method"></a><a name="size"></a>Метод UnorderedMap:: size
+## <a name="unorderedmapsize-method"></a><a name="size"></a> Метод UnorderedMap:: size
 
 Возвращает число элементов [Windows:: Foundation:: Collections:: IKeyValuePair \<K,V> ](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) в UnorderedMap.
 
@@ -253,7 +252,7 @@ virtual property unsigned int Size;
 
 Количество элементов в объекте UnorderedMap.
 
-## <a name="unorderedmapunorderedmap-constructor"></a><a name="ctor"></a>Конструктор UnorderedMap:: UnorderedMap
+## <a name="unorderedmapunorderedmap-constructor"></a><a name="ctor"></a> Конструктор UnorderedMap:: UnorderedMap
 
 Инициализирует новый экземпляр класса UnorderedMap.
 

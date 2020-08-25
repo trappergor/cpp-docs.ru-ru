@@ -1,20 +1,20 @@
 ---
-title: Класс CMFCPrintPreviewToolBar
+title: Класс Кмфкпринтпревиевтулбар
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CMFCPrintPreviewToolBar class [MFC]
 - CMFCPrintPreviewToolBar class [MFC], destructor
 ms.assetid: 7b9f641b-d402-4339-8815-e5247237e7e5
-ms.openlocfilehash: ac1fba453a539c6c311e672c1b26e34a3bf81ffd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee66c5faf12a8fd651c481f058c24b649a6c2fb4
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403624"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838650"
 ---
-# <a name="cmfcprintpreviewtoolbar-class"></a>Класс CMFCPrintPreviewToolBar
+# <a name="cmfcprintpreviewtoolbar-class"></a>Класс Кмфкпринтпревиевтулбар
 
-Панели инструментов в режиме предварительного просмотра.
+Панель инструментов в предварительном просмотре.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -26,17 +26,15 @@ class CMFCPrintPreviewToolBar : public CMFCToolBar
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|||
-|-|-|
 |name|Описание|
+|-|-|
 |`CMFCPrintPreviewToolBar::~CMFCPrintPreviewToolBar`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|||
-|-|-|
 |name|Описание|
-|`CMFCPrintPreviewToolBar::GetThisClass`|Используется инфраструктурой, чтобы получить указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|
+|-|-|
+|`CMFCPrintPreviewToolBar::GetThisClass`|Используется платформой для получения указателя на объект [крунтимекласс](../../mfc/reference/cruntimeclass-structure.md) , связанный с этим типом класса.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -50,17 +48,17 @@ class CMFCPrintPreviewToolBar : public CMFCToolBar
 
 [CPane](../../mfc/reference/cpane-class.md)
 
-[CMFCBaseToolBar](../../mfc/reference/cmfcbasetoolbar-class.md)
+[кмфкбасетулбар](../../mfc/reference/cmfcbasetoolbar-class.md)
 
 [CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)
 
-[CMFCPrintPreviewToolBar](../../mfc/reference/cmfcprintpreviewtoolbar-class.md)
+[кмфкпринтпревиевтулбар](../../mfc/reference/cmfcprintpreviewtoolbar-class.md)
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** afxpreviewviewex.h
+**Заголовок:** афкспревиеввиевекс. h
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
+[Иерархическая диаграмма](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)

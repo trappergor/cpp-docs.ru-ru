@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: 0ddb15507c97c0dfff48575e476b57fe91359239
-ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
+ms.openlocfilehash: 40b7d653b21cdc2b0fab4c852c9809ab1db46a12
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88610911"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839144"
 ---
 # <a name="platformcollectionsmap-class"></a>Класс Platform::Collections::Map
 
@@ -44,12 +44,12 @@ ref class Map sealed;
 *3,3*<br/>
 Тип значения в паре "ключ-значение".
 
-*C*<br/>
+*В*<br/>
 Тип, предоставляющий объект функции, который может сравнить два значения элементов как ключи сортировки для определения их относительного порядка в объекте Map. По умолчанию [std:: less \<K> ](../standard-library/less-struct.md).
 
 *__is_valid_winrt_type ()* Созданная компилятором функция, которая проверяет тип *K* и *V* и предоставляет понятное сообщение об ошибке, если тип не может быть сохранен на карте.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Допустимые типы:
 
@@ -67,7 +67,7 @@ ref class Map sealed;
 
 Дополнительные сведения см. в разделе [коллекции](../cppcx/collections-c-cx.md).
 
-### <a name="members"></a>Члены
+### <a name="members"></a>Элементы
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
@@ -90,10 +90,9 @@ ref class Map sealed;
 
 ### <a name="events"></a>События
 
-|||
-|-|-|
-|Имя|Описание|
-|Событие [Map:: мапчанжед](#mapchanged)|Происходит при изменении объекта Map.|
+| Имя | Описание |
+|--|--|
+| Событие [Map:: мапчанжед](#mapchanged) | Происходит при изменении объекта Map. |
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -130,7 +129,7 @@ Windows::Foundation::Collections::IKeyValuePair<K, V>^>^ First();
 
 Итератор, указывающий первый элемент на карте.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Удобным способом удержания итератора, возвращенного первым (), является присвоение возвращаемого значения переменной, объявленной с **`auto`** ключевым словом выведения типа. Например, `auto x = myMap->First();`.
 
@@ -208,7 +207,7 @@ V Lookup(K key);
 
 Значение, связанное с *ключом*. Тип возвращаемого значения — TypeName *V*.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Если ключ не существует, создается исключение [Platform:: OutOfBoundsException](../cppcx/platform-outofboundsexception-class.md) .
 
@@ -293,7 +292,7 @@ virtual property unsigned int Size;
 
 Количество элементов в объекте Map.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Коллекции (C++/CX)](collections-c-cx.md)<br/>
 [Пространство имен платформы](platform-namespace-c-cx.md)<br/>

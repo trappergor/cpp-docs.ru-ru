@@ -49,12 +49,12 @@ helpviewer_keywords:
 - SetParameterInfo method
 - Unprepare method
 ms.assetid: 0760bfc5-b9ee-4aee-8e54-31bd78714d3a
-ms.openlocfilehash: 73b02f0ffb9d9b98a17933cc3b17c8627121e3ac
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: beabe73ff4ce0e6be8aaccfcdc636adc1ba04d5c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228925"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838442"
 ---
 # <a name="ccommand-class"></a>Класс CCommand
 
@@ -91,7 +91,7 @@ class CCommand :
 
 ### <a name="methods"></a>Методы
 
-|||
+| Имя | Описание |
 |-|-|
 |[Закрыть](#close)|Закрывает текущую команду.|
 |[жетнекстресулт](#getnextresult)|Извлекает следующий результат при использовании нескольких результирующих наборов.|
@@ -99,12 +99,12 @@ class CCommand :
 
 ### <a name="inherited-methods"></a>Наследуемые методы
 
-|||
+| Имя | Описание |
 |-|-|
 |[Создание](#create)|Создает новую команду для указанного сеанса, а затем задает текст команды.|
 |[CreateCommand](#createcommand)|Создает новую команду.|
 |[GetParameterInfo](#getparameterinfo)|Возвращает список параметров команды, их имена и типы.|
-|[Подготовка.](#prepare)|Проверяет и оптимизирует текущую команду.|
+|[Обеспечьте](#prepare)|Проверяет и оптимизирует текущую команду.|
 |[релеасекомманд](#releasecommand)|При необходимости освобождает метод доступа к параметру, а затем освобождает команду.|
 |[SetParameterInfo](#setparameterinfo)|Задает собственный тип для каждого параметра команды.|
 |[Unprepare](#unprepare)|Отменяет текущий план выполнения команды.|
@@ -117,7 +117,7 @@ class CCommand :
 
 Обратите внимание, что нельзя использовать хранимые процедуры с поставщиком OLE DB для Jet, так как этот поставщик не поддерживает хранимые процедуры (в строках запросов разрешены только константы).
 
-## <a name="ccommandclose"></a><a name="close"></a>CCommand:: Close
+## <a name="ccommandclose"></a><a name="close"></a> CCommand:: Close
 
 Освобождает набор строк метода доступа, связанный с командой.
 
@@ -141,7 +141,7 @@ void Close();
 
 [!code-cpp[NVC_OLEDB_Consumer#2](../../data/oledb/codesnippet/cpp/ccommand-close_1.cpp)]
 
-## <a name="ccommandgetnextresult"></a><a name="getnextresult"></a>CCommand:: Жетнекстресулт
+## <a name="ccommandgetnextresult"></a><a name="getnextresult"></a> CCommand:: Жетнекстресулт
 
 Выбирает следующий результирующий набор, если он доступен.
 
@@ -170,7 +170,7 @@ HRESULT GetNextResult(DBROWCOUNT* pulRowsAffected,
 
 Эту функцию следует вызывать только в том случае, если вы указали несколько результатов, задав `CCommand` параметр шаблона *тмултипле* = `CMultipleResults` .
 
-## <a name="ccommandopen"></a><a name="open"></a>CCommand:: Open
+## <a name="ccommandopen"></a><a name="open"></a> CCommand:: Open
 
 Выполняет и при необходимости привязывает команду.
 
@@ -256,9 +256,9 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
 Используйте четвертую форму, `Open` Если вы уже создали команду и хотите выполнить одну [подготовку](../../data/oledb/ccommand-prepare.md) и несколько выполнений.
 
 > [!NOTE]
-> `Open`вызовы `Execute` , которые, в свою очередь, вызывают `GetNextResult` .
+> `Open` вызовы `Execute` , которые, в свою очередь, вызывают `GetNextResult` .
 
-## <a name="ccommandcreate"></a><a name="create"></a>CCommand:: Create
+## <a name="ccommandcreate"></a><a name="create"></a> CCommand:: Create
 
 Вызывает метод [CCommand:: CreateCommand](../../data/oledb/ccommand-createcommand.md) , чтобы создать команду для указанного сеанса, а затем вызывает [ICommandText:: SetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85)) , чтобы указать текст команды.
 
@@ -296,7 +296,7 @@ HRESULT CCommandBase::Create(const CSession& session,
 
 Первая форма `Create` принимает строку команды в Юникоде. Вторая форма `Create` принимает строку команды ANSI (предоставляется для обеспечения обратной совместимости с существующими приложениями ANSI).
 
-## <a name="ccommandcreatecommand"></a><a name="createcommand"></a>CCommand:: CreateCommand
+## <a name="ccommandcreatecommand"></a><a name="createcommand"></a> CCommand:: CreateCommand
 
 Создает новую команду.
 
@@ -309,7 +309,7 @@ HRESULT CCommandBase::CreateCommand(const CSession& session) throw ();
 #### <a name="parameters"></a>Параметры
 
 *сессии*<br/>
-окне `CSession`Объект, связываемый с новой командой.
+окне `CSession` Объект, связываемый с новой командой.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -319,7 +319,7 @@ HRESULT CCommandBase::CreateCommand(const CSession& session) throw ();
 
 Этот метод создает команду, используя указанный объект сеанса.
 
-## <a name="ccommandgetparameterinfo"></a><a name="getparameterinfo"></a>CCommand:: GetParameterInfo
+## <a name="ccommandgetparameterinfo"></a><a name="getparameterinfo"></a> CCommand:: GetParameterInfo
 
 Возвращает список параметров команды, их имена и типы.
 
@@ -339,7 +339,7 @@ HRESULT CCommandBase::GetParameterInfo(DB_UPARAMS* pParams,
 
 Стандартное значение HRESULT.
 
-## <a name="ccommandprepare"></a><a name="prepare"></a>CCommand::P готовка
+## <a name="ccommandprepare"></a><a name="prepare"></a> CCommand::P готовка
 
 Проверяет и оптимизирует текущую команду.
 
@@ -362,7 +362,7 @@ HRESULT CCommandBase::Prepare(ULONG cExpectedRuns = 0) throw();
 
 Этот метод создает оболочку для метода OLE DB [ICommandPrepare::P готовка](/previous-versions/windows/desktop/ms718370(v=vs.85)).
 
-## <a name="ccommandreleasecommand"></a><a name="releasecommand"></a>CCommand:: Релеасекомманд
+## <a name="ccommandreleasecommand"></a><a name="releasecommand"></a> CCommand:: Релеасекомманд
 
 Освобождает метод доступа к параметру, а затем освобождает саму команду.
 
@@ -374,9 +374,9 @@ void CCommandBase::ReleaseCommand() throw();
 
 ### <a name="remarks"></a>Remarks
 
-`ReleaseCommand`используется в сочетании с `Close` . Сведения об использовании см. в разделе " [Закрыть](../../data/oledb/ccommand-close.md) ".
+`ReleaseCommand` используется в сочетании с `Close` . Сведения об использовании см. в разделе " [Закрыть](../../data/oledb/ccommand-close.md) ".
 
-## <a name="ccommandsetparameterinfo"></a><a name="setparameterinfo"></a>CCommand:: SetParameterInfo
+## <a name="ccommandsetparameterinfo"></a><a name="setparameterinfo"></a> CCommand:: SetParameterInfo
 
 Задает собственный тип для каждого параметра команды.
 
@@ -396,7 +396,7 @@ HRESULT CCommandBase::SetParameterInfo(DB_UPARAMS ulParams,
 
 Стандартное значение HRESULT.
 
-## <a name="ccommandunprepare"></a><a name="unprepare"></a>CCommand:: unprepare
+## <a name="ccommandunprepare"></a><a name="unprepare"></a> CCommand:: unprepare
 
 Отменяет текущий план выполнения команды.
 
@@ -414,7 +414,7 @@ HRESULT CCommandBase::Unprepare() throw();
 
 Этот метод создает оболочку для метода OLE DB [ICommandPrepare:: unprepare](/previous-versions/windows/desktop/ms719635(v=vs.85)).
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также раздел
 
 [Шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Справочник по шаблонам потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

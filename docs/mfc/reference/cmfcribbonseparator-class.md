@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCRibbonSeparator [MFC], OnDraw
 - CMFCRibbonSeparator [MFC], OnDrawOnList
 ms.assetid: bedb1a53-cb07-4c3c-be12-698c5409e7cf
-ms.openlocfilehash: de2c6c45e4a91aa4efa0ebacba4019be74e03c72
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: f435dc5ae8821a6d5626af2f93710a1672fd374c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560872"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831805"
 ---
 # <a name="cmfcribbonseparator-class"></a>Класс Кмфкриббонсепаратор
 
@@ -43,25 +43,22 @@ class CMFCRibbonSeparator : public CMFCRibbonBaseElement
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|||
-|-|-|
 |name|Описание|
+|-|-|
 |[Кмфкриббонсепаратор:: Кмфкриббонсепаратор](#cmfcribbonseparator)|Формирует объект `CMFCRibbonSeparator`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|||
-|-|-|
 |name|Описание|
+|-|-|
 |[Кмфкриббонсепаратор:: Аддтолистбокс](#addtolistbox)|Добавляет разделитель в список **команд** диалогового окна **Настройка** . (Переопределяет [метод CMFCRibbonBaseElement:: аддтолистбокс](../../mfc/reference/cmfcribbonbaseelement-class.md#addtolistbox).)|
 |`CMFCRibbonSeparator::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|
 |`CMFCRibbonSeparator::GetThisClass`|Используется платформой для получения указателя на объект [крунтимекласс](../../mfc/reference/cruntimeclass-structure.md) , связанный с этим типом класса.|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|||
-|-|-|
 |Имя|Описание|
+|-|-|
 |[Кмфкриббонсепаратор:: CopyFrom](#copyfrom)|Метод Copy, устанавливающий переменные-члены разделителя из другого объекта.|
 |[Кмфкриббонсепаратор:: Жетрегуларсизе](#getregularsize)|Возвращает размер разделителя.|
 |[Кмфкриббонсепаратор::](#isseparator)|Указывает, является ли это разделителем.|
@@ -248,7 +245,7 @@ virtual void OnDrawOnList(
 *бхигхлигхтед*\
 окне Игнорируют.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Иерархическая диаграмма](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)

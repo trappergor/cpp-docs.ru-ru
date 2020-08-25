@@ -7,16 +7,16 @@ helpviewer_keywords:
 - /CLRSUPPORTLASTERROR linker option
 - -CLRSUPPORTLASTERROR linker option
 ms.assetid: b7057990-4154-4b1d-9fc9-6236f7be7575
-ms.openlocfilehash: 19930591c2d0406c68b1a408622a49c9e8b1d551
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 071846e18dfef6cad0b7c5fb983dac3f6c85a689
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81322277"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839170"
 ---
 # <a name="clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls"></a>/CLRSUPPORTLASTERROR (Сохранение кода последней ошибки для вызовов PInvoke)
 
-**/CLRSUPPORTLASTERROR**, который находится на по умолчанию, сохраняет последний код ошибки функций, вызванных через p/ Invoke механизм, который позволяет вызывать родные функции в DLLS, из кода, компилированного с **/clr**.
+**Параметр/CLRSUPPORTLASTERROR**, который включен по умолчанию, сохраняет последний код ошибки функций, вызываемых через механизм P/Invoke, который позволяет вызывать собственные функции в библиотеках DLL из кода, скомпилированного с **параметром/CLR**.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -26,45 +26,14 @@ ms.locfileid: "81322277"
 
 ## <a name="remarks"></a>Remarks
 
-Сохранение последнего кода ошибки означает снижение производительности.  Если вы не хотите, чтобы нести влияние на производительность сохранения последнего кода ошибки, ссылка с **/CLRSUPPORTLASTERROR:NO**.
+Сохранение последнего кода ошибки подразумевает снижение производительности.  Если вы не хотите повлиять на производительность с сохранением последнего кода ошибки, выполните компоновку с помощью  **параметр/CLRSUPPORTLASTERROR: No**.
 
-Вы можете свести к минимуму влияние на производительность, связавшись с **/CLRSUPPORTLASTERROR:SYSTEMDLL**, который сохраняет только последний код ошибки для функций в системе DLLs.  Система DLL определяется как одна из следующих:
-
-|||||
-|-|-|-|-|
-|ACLUI. Dll|АКТИВДС. Dll|АДПТИФ. Dll|ADVAPI32. Dll|
-|АСИКФИЛТ. Dll|АУТХЗ. Dll|AVICAP32. Dll|AVIFIL32. Dll|
-|Кабинет. Dll|CLUSAPI. Dll|COMCTL32. Dll|COMDLG32. Dll|
-|КОМСВЦ. Dll|КРЕДУИ. Dll|CRYPT32. Dll|КРИПТНЕТ. Dll|
-|КРИПТУИ. Dll|D3D8THK. Dll|DBGENG. Dll|DBGHELP. Dll|
-|DCIMAN32. Dll|DNSAPI. Dll|DSPROP. Dll|ДГУИЕКСТ. Dll|
-|GDI32. Dll|GLU32. Dll|HLINK. Dll|ICM32. Dll|
-|IMAGEHLP. Dll|IMM32. Dll|IPHLPAPI. Dll|ИПРОП. Dll|
-|ЯДРО32. Dll|КСУЗЕР. Dll|LOADPERF. Dll|L-32. Dll|
-|MAPI32. Dll|MGMTAPI. Dll|МОБСИН. Dll|Mpr. Dll|
-|МРАППИ. Dll|МЗРТ. Dll|MSACM32. Dll|MSCMS. Dll|
-|Msi. Dll|MSIMG32. Dll|MSRATING. Dll|МСТАЧ. Dll|
-|MSVFW32. Dll|МСВОСОК. Dll|MTXEX. Dll|НДДЕАПИ. Dll|
-|NETAPI32. Dll|АЭСБУРМС. Dll|NTDSAPI. Dll|NTDSBCLI. Dll|
-|NTMSAPI. Dll|ODBC32. Dll|ODBCBCP. Dll|OLE32. Dll|
-|ОЛЕАКС. Dll|OLEAUT32. Dll|ОЛЕДЛГ. Dll|OPENGL32. Dll|
-|Pdh. Dll|ПОВПРОФ. Dll|ЗОСНАМЕ. Dll|Запроса. Dll|
-|RASAPI32. Dll|РАСДЛГ. Dll|РАССАПИ. Dll|РЕСУТИЛС. Dll|
-|RICHED20. Dll|RPCNS4. Dll|RPCRT4. Dll|Rtm. Dll|
-|ЛЕТТИЛС. Dll|СКАРДЛГ. Dll|SECUR32. Dll|SENSAPI. Dll|
-|SETUPAPI. Dll|Sfc. Dll|Shell32. Dll|SHFOLDER. Dll|
-|SHLWAPI. Dll|SISBKUP. Dll|SNMPAPI. Dll|СРЛИНЕС. Dll|
-|Иппп. Dll|TAPI32. Dll|Трафика. Dll|Url. Dll|
-|УРЛМОН. Dll|USER32. Dll|Userenv. Dll|USP10. Dll|
-|UXTHEME. Dll|VDMDBG. Dll|Версия. Dll|Winfax. Dll|
-|ВАЙНХHTTP. Dll|Wininet. Dll|ВИНММ. Dll|WINSCARD. Dll|
-|WINTRUST. Dll|WLDAP32. Dll|WOW32. Dll|WS2_32.DLL|
-|WSNMP32. Dll|WSOCK32.DLL|ВЦКАПИ32. Dll|XOLEHLP. Dll|
+Можно уменьшить влияние на производительность, связавсь с **параметр/CLRSUPPORTLASTERROR: системдлл**, который сохраняет только последний код ошибки для функций в системных библиотеках DLL.
 
 > [!NOTE]
-> Сохранение последней ошибки не поддерживается для неуправляемых функций, которые потребляются кодом CLR, в том же модуле.
+> Сохранение последней ошибки не поддерживается для неуправляемых функций, используемых кодом CLR в одном модуле.
 
-- Для получения дополнительной информации [см.](clr-common-language-runtime-compilation.md)
+- Дополнительные сведения см. в разделе [/CLR (компиляция среды CLR)](clr-common-language-runtime-compilation.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
 
@@ -74,7 +43,7 @@ ms.locfileid: "81322277"
 
 1. Выберите страницу свойств **Командная строка** .
 
-1. Введите опцию в поле **дополнительных опций.**
+1. Введите параметр в поле **Дополнительные параметры** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом
 
@@ -82,7 +51,7 @@ ms.locfileid: "81322277"
 
 ## <a name="example"></a>Пример
 
-Следующий пример определяет родной DLL с одной экспортируемой функцией, которая изменяет последнюю ошибку.
+В следующем примере определяется собственная библиотека DLL с одной экспортированной функцией, которая изменяет последнюю ошибку.
 
 ```cpp
 // CLRSUPPORTLASTERROR_dll.cpp
@@ -99,7 +68,7 @@ __declspec(dllexport) double MySqrt(__int64 n) {
 
 ## <a name="example"></a>Пример
 
-Следующий образец потребляет DLL, демонстрируя, как использовать **/CLRSUPPORTLASTERROR**.
+В следующем примере используется библиотека DLL, в которой демонстрируется использование **параметр/CLRSUPPORTLASTERROR**.
 
 ```cpp
 // CLRSUPPORTLASTERROR_client.cpp
@@ -153,4 +122,4 @@ GetLastError for system call succeeded (183).
 ## <a name="see-also"></a>См. также раздел
 
 [Справочник по компоновщику MSVC](linking.md)<br/>
-[Варианты MSVC Linker](linker-options.md)
+[Параметры компоновщика MSVC](linker-options.md)

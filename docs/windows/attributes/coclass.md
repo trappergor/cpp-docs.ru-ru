@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - coclass attribute
 ms.assetid: 42da6a10-3af9-4b43-9a1d-689d00b61eb3
-ms.openlocfilehash: 0a47f4f503541f9dee67dd8c6cf10297de724a19
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 12f7af195f2282955cb16c1f38d4e512ca0f86cb
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232798"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838884"
 ---
 # <a name="coclass"></a>кокласс
 
@@ -53,15 +53,15 @@ ms.locfileid: "87232798"
 
 Атрибут **coclass** также делает доступными следующие функции посредством внедренного кода или в случае `GetObjectCLSID` , как статический метод в базовом классе `CComCoClass` :
 
-- `UpdateRegistry`Регистрирует фабрики класса целевого класса.
+- `UpdateRegistry` Регистрирует фабрики класса целевого класса.
 
 - `GetObjectCLSID`, который связан с регистрацией, может также использоваться для получения идентификатора CLSID целевого класса.
 
-- `GetObjectFriendlyName`по умолчанию возвращает строку формата " \<*target class name*> `Object` ". Если эта функция уже существует, она не добавляется. Добавьте эту функцию в целевой класс, чтобы вернуть более дружественное имя, отличное от автоматически создаваемого.
+- `GetObjectFriendlyName` по умолчанию возвращает строку формата " \<*target class name*> `Object` ". Если эта функция уже существует, она не добавляется. Добавьте эту функцию в целевой класс, чтобы вернуть более дружественное имя, отличное от автоматически создаваемого.
 
 - `GetProgID`, который связан с регистрацией, возвращает строку, указанную с помощью атрибута [ProgID](progid.md) .
 
-- `GetVersionIndependentProgID`функция имеет те же функциональные возможности `GetProgID` , что и, но возвращает строку, указанную в [vi_progid](vi-progid.md).
+- `GetVersionIndependentProgID` функция имеет те же функциональные возможности `GetProgID` , что и, но возвращает строку, указанную в [vi_progid](vi-progid.md).
 
 Следующие изменения, связанные с картой COM, выполняются в целевом классе:
 
@@ -127,9 +127,7 @@ public:
 
 ## <a name="requirements"></a>Требования
 
-### <a name="attribute-context"></a>Контекст атрибута
-
-|||
+| Контекст атрибута | Значение |
 |-|-|
 |**Относится к**|**`class`**, **`struct`**|
 |**REPEATABLE**|Нет|
@@ -138,7 +136,7 @@ public:
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты COM](com-attributes.md)<br/>
