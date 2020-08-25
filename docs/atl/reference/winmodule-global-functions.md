@@ -5,12 +5,12 @@ f1_keywords:
 - atlbase/ATL::AtlWinModuleAddCreateWndData
 - atlbase/ATL::AtlWinModuleExtractCreateWndData
 ms.assetid: 8ce45a5b-26a7-491f-9096-c09ceca5f2c2
-ms.openlocfilehash: 1a929fd0f583150e84ce5b1efa7e896bc16e4247
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1f1dcb325f8844a74b3dd831a51050083e7ea552
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229939"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834405"
 ---
 # <a name="winmodule-global-functions"></a>Глобальные функции Винмодуле
 
@@ -19,7 +19,7 @@ ms.locfileid: "87229939"
 > [!IMPORTANT]
 > Функции, перечисленные в следующей таблице, нельзя использовать в приложениях, выполняемых в среда выполнения Windows.
 
-|||
+|Имя|Описание|
 |-|-|
 |[AtlWinModuleAddCreateWndData](#atlwinmoduleaddcreatewnddata)|Эта функция используется для инициализации и добавления структуры `_AtlCreateWndData`.|
 |[AtlWinModuleExtractCreateWndData](#atlwinmoduleextractcreatewnddata)|Вызывайте эту функцию для извлечения существующей структуры `_AtlCreateWndData`.|
@@ -28,7 +28,7 @@ ms.locfileid: "87229939"
 
 **Заголовок:** atlbase. h
 
-## <a name="atlwinmoduleaddcreatewnddata"></a><a name="atlwinmoduleaddcreatewnddata"></a>атлвинмодулеаддкреатевнддата
+## <a name="atlwinmoduleaddcreatewnddata"></a><a name="atlwinmoduleaddcreatewnddata"></a> атлвинмодулеаддкреатевнддата
 
 Эта функция используется для инициализации и добавления структуры `_AtlCreateWndData`.
 
@@ -54,7 +54,7 @@ ATLINLINE ATLAPI_(void) AtlWinModuleAddCreateWndData(
 
 Инициализирует `_AtlCreateWndData` структуру, которая используется для хранения **`this`** указателя, используемого для ссылки на экземпляры класса, и добавляет его в список, на который ссылается структура модуля `_ATL_WIN_MODULE70` . Вызывается методом [катлвинмодуле:: аддкреатевнддата](catlwinmodule-class.md#addcreatewnddata).
 
-## <a name="atlwinmoduleextractcreatewnddata"></a><a name="atlwinmoduleextractcreatewnddata"></a>атлвинмодуликстракткреатевнддата
+## <a name="atlwinmoduleextractcreatewnddata"></a><a name="atlwinmoduleextractcreatewnddata"></a> атлвинмодуликстракткреатевнддата
 
 Вызывайте эту функцию для извлечения существующей структуры `_AtlCreateWndData`.
 

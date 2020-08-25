@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - mutex/std::unique_lock
 ms.assetid: f4ed8ba9-c8af-446f-8ef0-0b356bad14bd
-ms.openlocfilehash: 189fd70ce10b6067646553f2b92a8fc09239d054
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: be53f66296612f1b44790393907028bfc4d062ff
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212039"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834223"
 ---
 # <a name="unique_lock-class"></a>Класс unique_lock
 
@@ -38,7 +38,7 @@ class unique_lock;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[unique_lock](#unique_lock)|Формирует объект `unique_lock`.|
 |[Деструктор ~ unique_lock](#dtorunique_lock_destructor)|Освобождает все ресурсы, связанные с объектом `unique_lock`.|
@@ -74,7 +74,7 @@ class unique_lock;
 
 **Пространство имен:** std
 
-## <a name="lock"></a><a name="lock"></a>скрыть
+## <a name="lock"></a><a name="lock"></a> скрыть
 
 Блокирует вызывающий поток до тех пор, пока этот поток не получит права владельца соответствующего объекта `mutex`.
 
@@ -90,7 +90,7 @@ void lock();
 
 В противном случае этот метод вызывает `lock` для связанного `mutex` и задает для флага владения внутреннего потока значение **`true`** .
 
-## <a name="mutex"></a><a name="mutex"></a>принадлежащ
+## <a name="mutex"></a><a name="mutex"></a> принадлежащ
 
 Извлекает сохраненный указатель на соответствующий объект `mutex`.
 
@@ -98,7 +98,7 @@ void lock();
 mutex_type *mutex() const noexcept;
 ```
 
-## <a name="operator-bool"></a><a name="op_bool"></a>bool, оператор
+## <a name="operator-bool"></a><a name="op_bool"></a> bool, оператор
 
 Указывает, является ли вызывающий поток владельцем соответствующего мьютекса.
 
@@ -110,7 +110,7 @@ explicit operator bool() noexcept
 
 **`true`** значение, если поток владеет мьютексом; в противном случае — значение **`false`** .
 
-## <a name="operator"></a><a name="op_eq"></a>Оператор =
+## <a name="operator"></a><a name="op_eq"></a> Оператор =
 
 Копирует сохраненный указатель `mutex` и соответствующее состояние владения из указанного объекта.
 
@@ -133,7 +133,7 @@ unique_lock& operator=(unique_lock&& Other) noexcept;
 
 После копирования этот метод устанавливает для *другого* по умолчанию состояние.
 
-## <a name="owns_lock"></a><a name="owns_lock"></a>owns_lock
+## <a name="owns_lock"></a><a name="owns_lock"></a> owns_lock
 
 Указывает, является ли вызывающий поток владельцем соответствующего объекта `mutex`.
 
@@ -145,7 +145,7 @@ bool owns_lock() const noexcept;
 
 **`true`** значение, если поток владеет `mutex` ; в противном случае — **`false`** .
 
-## <a name="release"></a><a name="release"></a>отпускании
+## <a name="release"></a><a name="release"></a> отпускании
 
 Отменяет связь объекта `unique_lock` с объектом `mutex`.
 
@@ -161,7 +161,7 @@ mutex_type *release() noexcept;
 
 Этот метод задает значение сохраненного `mutex` указателя равным 0 и устанавливает `mutex` для внутреннего флага владения **`false`** .
 
-## <a name="swap"></a><a name="swap"></a>позиции
+## <a name="swap"></a><a name="swap"></a> позиции
 
 Меняет местами соответствующий `mutex` и статус владения с аналогичными свойствами указанного объекта.
 
@@ -174,7 +174,7 @@ void swap(unique_lock& Other) noexcept;
 *Иной*\
 Объект `unique_lock`.
 
-## <a name="try_lock"></a><a name="try_lock"></a>try_lock
+## <a name="try_lock"></a><a name="try_lock"></a> try_lock
 
 Попытки получить права владельца связанного объекта `mutex` без блокировки.
 
@@ -192,7 +192,7 @@ bool try_lock() noexcept;
 
 Если вызывающий поток уже является владельцем объекта `mutex`, этот метод создает исключение `system_error`, содержащее код ошибки `resource_deadlock_would_occur`.
 
-## <a name="try_lock_for"></a><a name="try_lock_for"></a>try_lock_for
+## <a name="try_lock_for"></a><a name="try_lock_for"></a> try_lock_for
 
 Попытки получить права владельца связанного объекта `mutex` без блокировки.
 
@@ -217,7 +217,7 @@ bool try_lock_for(
 
 Если вызывающий поток уже является владельцем объекта `mutex`, этот метод создает исключение `system_error`, содержащее код ошибки `resource_deadlock_would_occur`.
 
-## <a name="try_lock_until"></a><a name="try_lock_until"></a>try_lock_until
+## <a name="try_lock_until"></a><a name="try_lock_until"></a> try_lock_until
 
 Попытки получить права владельца связанного объекта `mutex` без блокировки.
 
@@ -243,7 +243,7 @@ bool try_lock_until(const xtime* Abs_time);
 
 Если вызывающий поток уже является владельцем объекта `mutex`, этот метод создает исключение `system_error`, содержащее код ошибки `resource_deadlock_would_occur`.
 
-## <a name="unique_lock-constructor"></a><a name="unique_lock"></a>Конструктор unique_lock
+## <a name="unique_lock-constructor"></a><a name="unique_lock"></a> Конструктор unique_lock
 
 Формирует объект `unique_lock`.
 
@@ -293,7 +293,7 @@ unique_lock(mutex_type& Mtx,
 
 Остальные конструкторы хранят & *MTX* в качестве сохраненного `mutex` указателя. Состояние владения `mutex` определяется с помощью второго аргумента, если он существует.
 
-|||
+|Имя|Описание|
 |-|-|
 |`No argument`|Для получения состояния владения вызывается метод `lock` соответствующего объекта `mutex`.|
 |`Adopt`|Предполагается, что состояние владения есть. `Mtx` должен быть заблокирован при вызове конструктора.|
@@ -314,7 +314,7 @@ unique_lock(mutex_type& Mtx,
 
 Если вызывающий поток является владельцем соответствующего объекта `mutex`, деструктор освобождает права владения, вызывая метод unlock для объекта `mutex`.
 
-## <a name="unlock"></a><a name="unlock"></a>блокирован
+## <a name="unlock"></a><a name="unlock"></a> блокирован
 
 Освобождает права владения для соответствующего объекта `mutex`.
 

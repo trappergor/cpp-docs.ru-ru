@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - nested_exception class
 ms.assetid: 5ae2c4ef-c7ad-4469-8a9e-a773e86bb000
-ms.openlocfilehash: 6ae95880f0bc18928ed9bd4f6b6da14722f6ec60
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4ab48f714e8b4de1a47674f1af8fe25467279f94
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212193"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836443"
 ---
 # <a name="nested_exception-class"></a>Класс nested_exception
 
@@ -32,24 +32,24 @@ class nested_exception {
 
 ### <a name="operators"></a>Операторы
 
-|||
+|Имя|Описание|
 |-|-|
-|[Оператор =](#op_as)||
+|[Оператор =](#op_as)|Оператор присвоения.|
 
 ### <a name="functions"></a>Функции
 
-|||
+|Имя|Описание|
 |-|-|
 |[rethrow_nested](#rethrow_nested)|Создает хранимое исключение.|
 |[nested_ptr](#nested_ptr)|Возвращает сохраненное исключение.|
 
-### <a name="operator"></a><a name="op_as"></a>Оператор =
+### <a name="operator"></a><a name="op_as"></a> Оператор =
 
 ```cpp
 nested_exception& operator=(const nested_exception&) = default;
 ```
 
-### <a name="nested_ptr"></a><a name="nested_ptr"></a>nested_ptr
+### <a name="nested_ptr"></a><a name="nested_ptr"></a> nested_ptr
 
 ```cpp
 exception_ptr nested_ptr() const;
@@ -59,7 +59,7 @@ exception_ptr nested_ptr() const;
 
 Хранимое исключение, записанное этим `nested_exception` объектом.
 
-### <a name="rethrow_nested"></a><a name="rethrow_nested"></a>rethrow_nested
+### <a name="rethrow_nested"></a><a name="rethrow_nested"></a> rethrow_nested
 
 ```cpp
 [[noreturn]] void rethrow_nested() const;

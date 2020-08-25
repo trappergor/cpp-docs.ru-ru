@@ -1,17 +1,17 @@
 ---
-title: iid_is (C++ атрибут com)
+title: iid_is (атрибут COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.iid_is
 helpviewer_keywords:
 - iid_is attribute
 ms.assetid: 2f9b42a9-7130-4b08-9b1e-0d5d360e10ff
-ms.openlocfilehash: 627ecff4835386dc70a9f3dfac0500404a84eefe
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6a8fe8c7481cd251baff65293607733573f46ea6
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167996"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832221"
 ---
 # <a name="iid_is"></a>iid_is
 
@@ -53,14 +53,12 @@ __interface IFireTabCtrl : IDispatch
 
 ## <a name="requirements"></a>Требования
 
-### <a name="attribute-context"></a>Контекст атрибута
-
-|||
+| Контекст атрибута | Значение |
 |-|-|
-|**Применение**|Параметр интерфейса, член данных|
-|**Повторяемый**|нет|
-|**Обязательные атрибуты**|None|
-|**Недопустимые атрибуты**|None|
+|**Относится к**|Параметр интерфейса, член данных|
+|**REPEATABLE**|Нет|
+|**Требуемые атрибуты**|Нет|
+|**Недопустимые атрибуты**|Нет|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 

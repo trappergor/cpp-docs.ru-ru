@@ -63,16 +63,16 @@ helpviewer_keywords:
 - GetRecordCount method
 - m_rgErrors
 ms.assetid: dea8e938-c5d8-45ab-86de-eb8fbf534ffb
-ms.openlocfilehash: 40ac0b248e1e90dae29a787d59f6ded9581aca70
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 189f97e72f1cb87de7e4c4a388128c2a76c42961
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210604"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832442"
 ---
 # <a name="ierrorrecordsimpl-class"></a>Класс IErrorRecordsImpl
 
-Реализует интерфейс OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112(v=vs.85)) , добавляя записи и получая записи из элемента данных ([M_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) типа **CAtlArray <** `RecordClass` **>** .
+Реализует интерфейс OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112(v=vs.85)) , добавляя записи и получая записи из элемента данных ([M_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) типа **CAtlArray<** `RecordClass` **>** .
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -84,7 +84,7 @@ class IErrorRecordsImpl : public IErrorRecords
 ### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Класс, производный от `IErrorRecordsImpl`.
+Класс, производный от `IErrorRecordsImpl` .
 
 *рекордкласс*<br/>
 Класс, представляющий объект OLE DB ошибки.
@@ -93,11 +93,11 @@ class IErrorRecordsImpl : public IErrorRecords
 
 **Заголовок:** atldb.h
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Элементы
 
 ### <a name="methods"></a>Методы
 
-|||
+| Имя | Описание |
 |-|-|
 |[жетеррордескриптионстринг](#geterrordescriptionstring)|Возвращает строку описания ошибки из записи об ошибке.|
 |[жетерроргуид](#geterrorguid)|Возвращает идентификатор GUID ошибки из записи об ошибке.|
@@ -107,7 +107,7 @@ class IErrorRecordsImpl : public IErrorRecords
 
 ### <a name="interface-methods"></a>Методы интерфейса
 
-|||
+| Имя | Описание |
 |-|-|
 |[аддерроррекорд](#adderrorrecord)|Добавляет запись в объект OLE DB Error.|
 |[GetBasicErrorInfo](#getbasicerrorinfo)|Возвращает основные сведения об ошибке, например код возврата и номер ошибки, зависящий от поставщика.|
@@ -118,11 +118,11 @@ class IErrorRecordsImpl : public IErrorRecords
 
 ### <a name="data-members"></a>Элементы данных
 
-|||
+| Имя | Описание |
 |-|-|
 |[m_rgErrors](#rgerrors)|Массив записей об ошибках.|
 
-## <a name="ierrorrecordsimplgeterrordescriptionstring"></a><a name="geterrordescriptionstring"></a>IErrorRecordsImpl:: Жетеррордескриптионстринг
+## <a name="ierrorrecordsimplgeterrordescriptionstring"></a><a name="geterrordescriptionstring"></a> IErrorRecordsImpl:: Жетеррордескриптионстринг
 
 Возвращает строку описания ошибки из записи об ошибке.
 
@@ -135,13 +135,13 @@ LPOLESTR GetErrorDescriptionString(ERRORINFO& rCurError);
 #### <a name="parameters"></a>Параметры
 
 *ркуреррор*<br/>
-Запись `ERRORINFO` в интерфейсе `IErrorInfo`.
+`ERRORINFO`Запись в `IErrorInfo` интерфейсе.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Указатель на строку, описывающую ошибку.
 
-## <a name="ierrorrecordsimplgeterrorguid"></a><a name="geterrorguid"></a>IErrorRecordsImpl:: Жетерроргуид
+## <a name="ierrorrecordsimplgeterrorguid"></a><a name="geterrorguid"></a> IErrorRecordsImpl:: Жетерроргуид
 
 Возвращает идентификатор GUID ошибки из записи об ошибке.
 
@@ -154,13 +154,13 @@ REFGUID GetErrorGUID(ERRORINFO& rCurError);
 #### <a name="parameters"></a>Параметры
 
 *ркуреррор*<br/>
-Запись `ERRORINFO` в интерфейсе `IErrorInfo`.
+`ERRORINFO`Запись в `IErrorInfo` интерфейсе.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Ссылка на идентификатор GUID для ошибки.
 
-## <a name="ierrorrecordsimplgeterrorhelpcontext"></a><a name="geterrorhelpcontext"></a>IErrorRecordsImpl:: Жетеррорхелпконтекст
+## <a name="ierrorrecordsimplgeterrorhelpcontext"></a><a name="geterrorhelpcontext"></a> IErrorRecordsImpl:: Жетеррорхелпконтекст
 
 Возвращает идентификатор контекста справки из записи об ошибке.
 
@@ -173,13 +173,13 @@ DWORD GetErrorHelpContext(ERRORINFO& rCurError);
 #### <a name="parameters"></a>Параметры
 
 *ркуреррор*<br/>
-Запись `ERRORINFO` в интерфейсе `IErrorInfo`.
+`ERRORINFO`Запись в `IErrorInfo` интерфейсе.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Идентификатор контекста справки для ошибки.
 
-## <a name="ierrorrecordsimplgeterrorhelpfile"></a><a name="geterrorhelpfile"></a>IErrorRecordsImpl:: Жетеррорхелпфиле
+## <a name="ierrorrecordsimplgeterrorhelpfile"></a><a name="geterrorhelpfile"></a> IErrorRecordsImpl:: Жетеррорхелпфиле
 
 Возвращает путь к файлу справки из записи об ошибке.
 
@@ -192,13 +192,13 @@ LPOLESTR GetErrorHelpFile(ERRORINFO& rCurError);
 #### <a name="parameters"></a>Параметры
 
 *ркуреррор*<br/>
-Запись `ERRORINFO` в интерфейсе `IErrorInfo`.
+`ERRORINFO`Запись в `IErrorInfo` интерфейсе.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Указатель на строку, содержащую путь к файлу справки для ошибки.
 
-## <a name="ierrorrecordsimplgeterrorsource"></a><a name="geterrorsource"></a>IErrorRecordsImpl:: Жетеррорсаурце
+## <a name="ierrorrecordsimplgeterrorsource"></a><a name="geterrorsource"></a> IErrorRecordsImpl:: Жетеррорсаурце
 
 Возвращает исходный код, который привел к ошибке из записи об ошибке.
 
@@ -211,13 +211,13 @@ LPOLESTR GetErrorSource(ERRORINFO& rCurError);
 #### <a name="parameters"></a>Параметры
 
 *ркуреррор*<br/>
-Запись `ERRORINFO` в интерфейсе `IErrorInfo`.
+`ERRORINFO`Запись в `IErrorInfo` интерфейсе.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Указатель на строку, содержащую исходный код ошибки.
 
-## <a name="ierrorrecordsimpladderrorrecord"></a><a name="adderrorrecord"></a>IErrorRecordsImpl:: Аддерроррекорд
+## <a name="ierrorrecordsimpladderrorrecord"></a><a name="adderrorrecord"></a> IErrorRecordsImpl:: Аддерроррекорд
 
 Добавляет запись в объект OLE DB Error.
 
@@ -235,7 +235,7 @@ STDMETHOD(AddErrorRecord )(ERRORINFO *pErrorInfo,
 
 См. раздел [IErrorRecords:: аддерроррекорд](/previous-versions/windows/desktop/ms725362(v=vs.85)) в *справочнике программиста OLE DB*.
 
-## <a name="ierrorrecordsimplgetbasicerrorinfo"></a><a name="getbasicerrorinfo"></a>IErrorRecordsImpl:: Жетбасицерроринфо
+## <a name="ierrorrecordsimplgetbasicerrorinfo"></a><a name="getbasicerrorinfo"></a> IErrorRecordsImpl:: Жетбасицерроринфо
 
 Возвращает основные сведения об ошибке, например код возврата и номер ошибки, зависящий от поставщика.
 
@@ -250,7 +250,7 @@ STDMETHOD(GetBasicErrorInfo )(ULONG ulRecordNum,
 
 См. раздел [IErrorRecords:: жетбасицерроринфо](/previous-versions/windows/desktop/ms723907(v=vs.85)) в *справочнике программиста OLE DB*.
 
-## <a name="ierrorrecordsimplgetcustomerrorobject"></a><a name="getcustomerrorobject"></a>IErrorRecordsImpl:: Жеткустомерроробжект
+## <a name="ierrorrecordsimplgetcustomerrorobject"></a><a name="getcustomerrorobject"></a> IErrorRecordsImpl:: Жеткустомерроробжект
 
 Возвращает указатель на интерфейс для пользовательского объекта ошибки.
 
@@ -266,7 +266,7 @@ STDMETHOD(GetCustomErrorObject )(ULONG ulRecordNum,
 
 См. раздел [IErrorRecords:: жеткустомерроробжект](/previous-versions/windows/desktop/ms725417(v=vs.85)) в *справочнике программиста OLE DB*.
 
-## <a name="ierrorrecordsimplgeterrorinfo"></a><a name="geterrorinfo"></a>IErrorRecordsImpl:: Жетерроринфо
+## <a name="ierrorrecordsimplgeterrorinfo"></a><a name="geterrorinfo"></a> IErrorRecordsImpl:: Жетерроринфо
 
 Возвращает указатель интерфейса [IErrorInfo](/previous-versions/windows/desktop/ms718112(v=vs.85)) для указанной записи.
 
@@ -282,7 +282,7 @@ STDMETHOD(GetErrorInfo )(ULONG ulRecordNum,
 
 См. раздел [IErrorRecords:: жетерроринфо](/previous-versions/windows/desktop/ms711230(v=vs.85)) в *справочнике программиста OLE DB*.
 
-## <a name="ierrorrecordsimplgeterrorparameters"></a><a name="geterrorparameters"></a>IErrorRecordsImpl:: Жетеррорпараметерс
+## <a name="ierrorrecordsimplgeterrorparameters"></a><a name="geterrorparameters"></a> IErrorRecordsImpl:: Жетеррорпараметерс
 
 Возвращает параметры ошибки.
 
@@ -297,7 +297,7 @@ STDMETHOD(GetErrorParameters )(ULONG ulRecordNum,
 
 См. раздел [IErrorRecords:: жетеррорпараметерс](/previous-versions/windows/desktop/ms715793(v=vs.85)) в *справочнике программиста OLE DB*.
 
-## <a name="ierrorrecordsimplgetrecordcount"></a><a name="getrecordcount"></a>IErrorRecordsImpl:: Жетрекордкаунт
+## <a name="ierrorrecordsimplgetrecordcount"></a><a name="getrecordcount"></a> IErrorRecordsImpl:: Жетрекордкаунт
 
 Возвращает количество записей в объекте записи OLE DB.
 
@@ -311,7 +311,7 @@ STDMETHOD(GetRecordCount )(ULONG *pcRecords);
 
 См. раздел [IErrorRecords:: жетрекордкаунт](/previous-versions/windows/desktop/ms722724(v=vs.85)) в *справочнике программиста OLE DB*.
 
-## <a name="ierrorrecordsimplm_rgerrors"></a><a name="rgerrors"></a>IErrorRecordsImpl:: m_rgErrors
+## <a name="ierrorrecordsimplm_rgerrors"></a><a name="rgerrors"></a> IErrorRecordsImpl:: m_rgErrors
 
 Массив записей об ошибках.
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_table attribute
 ms.assetid: ff9eb957-4e6d-4175-afcc-fd8ea916cec0
-ms.openlocfilehash: 9e05a980764b8b97f6c774165fdddd5428a0c989
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: dfdf012550359d0658d53b3f67c0619a124b6309
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215287"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834197"
 ---
 # <a name="db_table"></a>db_table
 
@@ -64,9 +64,7 @@ class CProducts {
 
 ## <a name="requirements"></a>Требования
 
-### <a name="attribute-context"></a>Контекст атрибута
-
-|||
+| Контекст атрибута | Значение |
 |-|-|
 |**Относится к**|**`class`**, **`struct`**|
 |**REPEATABLE**|Нет|

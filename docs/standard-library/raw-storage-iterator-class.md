@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::raw_storage_iterator [C++], element_type
 - std::raw_storage_iterator [C++], iter_type
 ms.assetid: 6f033f15-f48e-452a-a326-647ea2cf346f
-ms.openlocfilehash: 062a3db5c28bc463d6346a26cf1385adecd41183
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e5423d3b0801570167e1e0424aad18b9e8f74e7c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217640"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831428"
 ---
 # <a name="raw_storage_iterator-class"></a>Класс raw_storage_iterator
 
@@ -46,26 +46,26 @@ template <class OutputIterator, class Type>
 
 ### <a name="constructors"></a>Конструкторы
 
-|||
+|Имя|Описание|
 |-|-|
 |[raw_storage_iterator](#raw_storage_iterator)|Создает итератор необработанного хранилища с указанным базовым выходным итератором.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|||
+|Имя|Описание|
 |-|-|
 |[element_type](#element_type)|Предоставляет тип, описывающий элемент, в котором будет сохранен итератор необработанного хранилища.|
 |[iter_type](#iter_type)|Предоставляет тип, который описывает итератор, базовый для итератора необработанного хранилища.|
 
 ### <a name="operators"></a>Операторы
 
-|||
+|Имя|Описание|
 |-|-|
 |[станции](#op_star)|Оператор разыменования, используемый для реализации выражения итератора вывода \* `ii`  =  `x` .|
 |[Оператор =](#op_eq)|Оператор присваивания, используемый для реализации выражения итератора необработанного хранилища \* `i`  =  `x` для хранения в памяти.|
 |[operator + +](#op_add_add)|Преинкрементный и постинкрементный операторы для итераторов необработанного хранилища.|
 
-### <a name="element_type"></a><a name="element_type"></a>element_type
+### <a name="element_type"></a><a name="element_type"></a> element_type
 
 Предоставляет тип, описывающий элемент, в котором будет сохранен итератор необработанного хранилища.
 
@@ -77,7 +77,7 @@ typedef Type element_type;
 
 Тип является синонимом для параметра шаблона класса raw_storage_iterator `Type` .
 
-### <a name="iter_type"></a><a name="iter_type"></a>iter_type
+### <a name="iter_type"></a><a name="iter_type"></a> iter_type
 
 Предоставляет тип, который описывает итератор, базовый для итератора необработанного хранилища.
 
@@ -89,7 +89,7 @@ typedef ForwardIterator iter_type;
 
 Этот тип является синонимом для параметра шаблона `ForwardIterator`.
 
-### <a name="operator"></a><a name="op_star"></a>станции\*
+### <a name="operator"></a><a name="op_star"></a> станции\*
 
 Оператор разыменования, используемый для реализации выражения итератора необработанного хранилища \* *II*  =  *x*.
 
@@ -157,7 +157,7 @@ Copying 5
 Constructing 5
 ```
 
-### <a name="operator"></a><a name="op_eq"></a>Оператор =
+### <a name="operator"></a><a name="op_eq"></a> Оператор =
 
 Оператор присваивания, используемый для реализации выражения итератора необработанного хранилища \* *i*  =  *x* для хранения в памяти.
 
@@ -231,7 +231,7 @@ Copying 5
 Constructing 5
 ```
 
-### <a name="operator"></a><a name="op_add_add"></a>operator + +
+### <a name="operator"></a><a name="op_add_add"></a> operator + +
 
 Преинкрементный и постинкрементный операторы для итераторов необработанного хранилища.
 
@@ -288,7 +288,7 @@ array 3 = 6
 array 4 = 8
 ```
 
-### <a name="raw_storage_iterator"></a><a name="raw_storage_iterator"></a>raw_storage_iterator
+### <a name="raw_storage_iterator"></a><a name="raw_storage_iterator"></a> raw_storage_iterator
 
 Создает итератор необработанного хранилища с указанным базовым выходным итератором.
 

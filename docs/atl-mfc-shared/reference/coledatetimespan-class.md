@@ -26,12 +26,12 @@ helpviewer_keywords:
 - Date data type, MFC encapsulation of
 - COleDateTimeSpan class
 ms.assetid: 7441526d-a30a-4019-8fb3-3fee6f897cbe
-ms.openlocfilehash: a3a59971ec57378aee2ec4f65f221b96c46300b5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 746cfdce3265dff7e5b20a5135aa026aca9facdf
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219109"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832104"
 ---
 # <a name="coledatetimespan-class"></a>Класс Коледатетимеспан
 
@@ -47,7 +47,7 @@ class COleDateTimeSpan
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[Коледатетимеспан:: Коледатетимеспан](#coledatetimespan)|Формирует объект `COleDateTimeSpan`.|
 
@@ -70,7 +70,7 @@ class COleDateTimeSpan
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|||
+|Имя|Описание|
 |-|-|
 |[operator +,-](#operator_add_-)|Добавление, вычитание и изменение знака для `COleDateTimeSpan` значений.|
 |[operator + =,-=](#operator_add_eq_-_eq)|Добавьте и вычтите `COleDateTimeSpan` значение из этого `COleDateTimeSpan` значения.|
@@ -87,11 +87,11 @@ class COleDateTimeSpan
 
 ## <a name="remarks"></a>Remarks
 
-`COleDateTimeSpan`не имеет базового класса.
+`COleDateTimeSpan` не имеет базового класса.
 
 `COleDateTimeSpan`Время сохраняется в днях.
 
-`COleDateTimeSpan`используется со своим сопутствующим классом [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md). `COleDateTime`Инкапсулирует `DATE` тип данных OLE Automation. `COleDateTime`Представляет абсолютные значения времени. Все `COleDateTime` вычисления подразумевают `COleDateTimeSpan` значения. Отношение между этими классами аналогично отношению к одному между [CTime](../../atl-mfc-shared/reference/ctime-class.md) и [ктимеспан](../../atl-mfc-shared/reference/ctimespan-class.md).
+`COleDateTimeSpan` используется со своим сопутствующим классом [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md). `COleDateTime` Инкапсулирует `DATE` тип данных OLE Automation. `COleDateTime` Представляет абсолютные значения времени. Все `COleDateTime` вычисления подразумевают `COleDateTimeSpan` значения. Отношение между этими классами аналогично отношению к одному между [CTime](../../atl-mfc-shared/reference/ctime-class.md) и [ктимеспан](../../atl-mfc-shared/reference/ctimespan-class.md).
 
 Дополнительные сведения о `COleDateTime` `COleDateTimeSpan` классах и см. в статье [Дата и время: Поддержка автоматизации](../../atl-mfc-shared/date-and-time-automation-support.md).
 
@@ -99,7 +99,7 @@ class COleDateTimeSpan
 
 **Заголовок:** ATLComTime. h
 
-## <a name="coledatetimespan-relational-operators"></a><a name="coledatetimespan_relational_operators"></a>Операторы отношения Коледатетимеспан
+## <a name="coledatetimespan-relational-operators"></a><a name="coledatetimespan_relational_operators"></a> Операторы отношения Коледатетимеспан
 
 Операторы сравнения.
 
@@ -115,7 +115,7 @@ bool operator>=(const COleDateTimeSpan& dateSpan) const throw();
 ### <a name="parameters"></a>Параметры
 
 *датеспан*<br/>
-Объект `COleDateTimeSpan` для сравнения.
+Сравниваемый шаблон `COleDateTimeSpan`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -132,7 +132,7 @@ bool operator>=(const COleDateTimeSpan& dateSpan) const throw();
 
 [!code-cpp[NVC_ATLMFC_Utilities#26](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_2.cpp)]
 
-## <a name="coledatetimespancoledatetimespan"></a><a name="coledatetimespan"></a>Коледатетимеспан:: Коледатетимеспан
+## <a name="coledatetimespancoledatetimespan"></a><a name="coledatetimespan"></a> Коледатетимеспан:: Коледатетимеспан
 
 Формирует объект `COleDateTimeSpan`.
 
@@ -168,7 +168,7 @@ COleDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 
 [!code-cpp[NVC_ATLMFC_Utilities#14](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_3.cpp)]
 
-## <a name="coledatetimespanformat"></a><a name="format"></a>Коледатетимеспан:: Format
+## <a name="coledatetimespanformat"></a><a name="format"></a> Коледатетимеспан:: Format
 
 Формирует форматированное строковое представление `COleDateTimeSpan` объекта.
 
@@ -217,7 +217,7 @@ CString Format(UINT nID) const;
 
 [!code-cpp[NVC_ATLMFC_Utilities#15](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_4.cpp)]
 
-## <a name="coledatetimespangetdays"></a><a name="getdays"></a>Коледатетимеспан:: @ Days
+## <a name="coledatetimespangetdays"></a><a name="getdays"></a> Коледатетимеспан:: @ Days
 
 Извлекает день этого значения даты и времени.
 
@@ -253,7 +253,7 @@ LONG GetDays() const throw();
 
 [!code-cpp[NVC_ATLMFC_Utilities#16](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_5.cpp)]
 
-## <a name="coledatetimespangethours"></a><a name="gethours"></a>Коледатетимеспан:: ч
+## <a name="coledatetimespangethours"></a><a name="gethours"></a> Коледатетимеспан:: ч
 
 Получает часть часа этого значения даты и времени.
 
@@ -289,7 +289,7 @@ LONG GetHours() const throw();
 
 [!code-cpp[NVC_ATLMFC_Utilities#17](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_6.cpp)]
 
-## <a name="coledatetimespangetminutes"></a><a name="getminutes"></a>Коледатетимеспан:: полчаса
+## <a name="coledatetimespangetminutes"></a><a name="getminutes"></a> Коледатетимеспан:: полчаса
 
 Получает часть минуты этого значения даты и времени.
 
@@ -325,7 +325,7 @@ LONG GetMinutes() const throw();
 
 [!code-cpp[NVC_ATLMFC_Utilities#18](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_7.cpp)]
 
-## <a name="coledatetimespangetseconds"></a><a name="getseconds"></a>Коледатетимеспан:: в секунду
+## <a name="coledatetimespangetseconds"></a><a name="getseconds"></a> Коледатетимеспан:: в секунду
 
 Извлекает вторую часть этого значения даты и времени.
 
@@ -361,7 +361,7 @@ LONG GetSeconds() const throw();
 
 [!code-cpp[NVC_ATLMFC_Utilities#19](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_8.cpp)]
 
-## <a name="coledatetimespangetstatus"></a><a name="getstatus"></a>Коледатетимеспан::/Status
+## <a name="coledatetimespangetstatus"></a><a name="getstatus"></a> Коледатетимеспан::/Status
 
 Возвращает состояние (допустимость) данного `COleDateTimeSpan` объекта.
 
@@ -387,11 +387,11 @@ enum DateTimeSpanStatus{
 
 Краткое описание этих значений состояния см. в следующем списке:
 
-- `COleDateTimeSpan::valid`Указывает, что этот `COleDateTimeSpan` объект является допустимым.
+- `COleDateTimeSpan::valid` Указывает, что этот `COleDateTimeSpan` объект является допустимым.
 
-- `COleDateTimeSpan::invalid`Указывает, что этот `COleDateTimeSpan` объект является недопустимым; его значение может быть неправильным.
+- `COleDateTimeSpan::invalid` Указывает, что этот `COleDateTimeSpan` объект является недопустимым; его значение может быть неправильным.
 
-- `COleDateTimeSpan::null`Указывает, что этот `COleDateTimeSpan` объект имеет значение null, то есть что для этого объекта не было предоставлено значение. (Это "null" в смысле базы данных "без значения", а не на C++ NULL.)
+- `COleDateTimeSpan::null` Указывает, что этот `COleDateTimeSpan` объект имеет значение null, то есть что для этого объекта не было предоставлено значение. (Это "null" в смысле базы данных "без значения", а не на C++ NULL.)
 
 Состояние `COleDateTimeSpan` объекта недопустимо в следующих случаях:
 
@@ -405,7 +405,7 @@ enum DateTimeSpanStatus{
 
 Дополнительные сведения о границах для `COleDateTimeSpan` значений см. в статье [Дата и время: Поддержка автоматизации](../../atl-mfc-shared/date-and-time-automation-support.md).
 
-## <a name="coledatetimespangettotaldays"></a><a name="gettotaldays"></a>Коледатетимеспан:: Жеттоталдайс
+## <a name="coledatetimespangettotaldays"></a><a name="gettotaldays"></a> Коледатетимеспан:: Жеттоталдайс
 
 Извлекает это значение даты и времени, выраженное в днях.
 
@@ -441,7 +441,7 @@ double GetTotalDays() const throw();
 
 [!code-cpp[NVC_ATLMFC_Utilities#20](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_9.cpp)]
 
-## <a name="coledatetimespangettotalhours"></a><a name="gettotalhours"></a>Коледатетимеспан:: Жеттоталхаурс
+## <a name="coledatetimespangettotalhours"></a><a name="gettotalhours"></a> Коледатетимеспан:: Жеттоталхаурс
 
 Получает значение даты и времени, выраженное в часах.
 
@@ -477,7 +477,7 @@ double GetTotalHours() const throw();
 
 См. пример для [жеттоталдайс](#gettotaldays).
 
-## <a name="coledatetimespangettotalminutes"></a><a name="gettotalminutes"></a>Коледатетимеспан:: Жеттоталминутес
+## <a name="coledatetimespangettotalminutes"></a><a name="gettotalminutes"></a> Коледатетимеспан:: Жеттоталминутес
 
 Получает значение даты и времени, выраженное в минутах.
 
@@ -513,7 +513,7 @@ double GetTotalMinutes() const throw();
 
 См. пример для [жеттоталдайс](#gettotaldays).
 
-## <a name="coledatetimespangettotalseconds"></a><a name="gettotalseconds"></a>Коледатетимеспан:: Жеттоталсекондс
+## <a name="coledatetimespangettotalseconds"></a><a name="gettotalseconds"></a> Коледатетимеспан:: Жеттоталсекондс
 
 Получает значение даты и времени, выраженное в секундах.
 
@@ -549,7 +549,7 @@ double GetTotalSeconds() const throw();
 
 См. пример для [жеттоталдайс](#gettotaldays).
 
-## <a name="coledatetimespanm_span"></a><a name="m_span"></a>Коледатетимеспан:: m_span
+## <a name="coledatetimespanm_span"></a><a name="m_span"></a> Коледатетимеспан:: m_span
 
 Базовое **`double`** значение для этого `COleDateTime` объекта.
 
@@ -564,7 +564,7 @@ double m_span;
 > [!CAUTION]
 > Изменение значения в **`double`** элементе данных приведет к изменению значения этого `COleDateTimeSpan` объекта. Он не изменяет состояние этого `COleDateTimeSpan` объекта.
 
-## <a name="coledatetimespanm_status"></a><a name="m_status"></a>Коледатетимеспан:: m_status
+## <a name="coledatetimespanm_status"></a><a name="m_status"></a> Коледатетимеспан:: m_status
 
 Тип для этого элемента данных — перечислимый тип `DateTimeSpanStatus` , который определен в `COleDateTimeSpan` классе.
 
@@ -584,11 +584,11 @@ enum DateTimeSpanStatus{
 
 Краткое описание этих значений состояния см. в следующем списке:
 
-- `COleDateTimeSpan::valid`Указывает, что этот `COleDateTimeSpan` объект является допустимым.
+- `COleDateTimeSpan::valid` Указывает, что этот `COleDateTimeSpan` объект является допустимым.
 
-- `COleDateTimeSpan::invalid`Указывает, что этот `COleDateTimeSpan` объект является недопустимым; его значение может быть неправильным.
+- `COleDateTimeSpan::invalid` Указывает, что этот `COleDateTimeSpan` объект является недопустимым; его значение может быть неправильным.
 
-- `COleDateTimeSpan::null`Указывает, что этот `COleDateTimeSpan` объект имеет значение null, то есть что для этого объекта не было предоставлено значение. (Это "null" в смысле базы данных "без значения", а не на C++ NULL.)
+- `COleDateTimeSpan::null` Указывает, что этот `COleDateTimeSpan` объект имеет значение null, то есть что для этого объекта не было предоставлено значение. (Это "null" в смысле базы данных "без значения", а не на C++ NULL.)
 
 Состояние `COleDateTimeSpan` объекта недопустимо в следующих случаях:
 
@@ -605,7 +605,7 @@ enum DateTimeSpanStatus{
 
 Дополнительные сведения о границах для `COleDateTimeSpan` значений см. в статье [Дата и время: Поддержка автоматизации](../../atl-mfc-shared/date-and-time-automation-support.md).
 
-## <a name="coledatetimespanoperator-"></a><a name="operator_eq"></a>Коледатетимеспан:: operator =
+## <a name="coledatetimespanoperator-"></a><a name="operator_eq"></a> Коледатетимеспан:: operator =
 
 Копирует `COleDateTimeSpan` значение.
 
@@ -617,7 +617,7 @@ COleDateTimeSpan& operator=(double dblSpanSrc) throw();
 
 Этот перегруженный оператор присваивания копирует значение даты и времени исходного диапазона в этот `COleDateTimeSpan` объект.
 
-## <a name="coledatetimespanoperator---"></a><a name="operator_add_-"></a>Коледатетимеспан:: operator +,-
+## <a name="coledatetimespanoperator---"></a><a name="operator_add_-"></a> Коледатетимеспан:: operator +,-
 
 Добавление, вычитание и изменение знака для `COleDateTimeSpan` значений.
 
@@ -641,7 +641,7 @@ COleDateTimeSpan operator-() const throw();
 
 [!code-cpp[NVC_ATLMFC_Utilities#23](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_10.cpp)]
 
-## <a name="coledatetimespanoperator---"></a><a name="operator_add_eq_-_eq"></a>Коледатетимеспан:: operator + =,-=
+## <a name="coledatetimespanoperator---"></a><a name="operator_add_eq_-_eq"></a> Коледатетимеспан:: operator + =,-=
 
 Добавьте и вычтите `COleDateTimeSpan` значение из этого `COleDateTimeSpan` значения.
 
@@ -662,7 +662,7 @@ COleDateTimeSpan& operator-=(const COleDateTimeSpan dateSpan) throw();
 
 [!code-cpp[NVC_ATLMFC_Utilities#24](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_11.cpp)]
 
-## <a name="coledatetimespanoperator-double"></a><a name="operator_double"></a>Коледатетимеспан:: operator, двойной
+## <a name="coledatetimespanoperator-double"></a><a name="operator_double"></a> Коледатетимеспан:: operator, двойной
 
 Преобразует это `COleDateTimeSpan` значение в **`double`** .
 
@@ -674,7 +674,7 @@ operator double() const throw();
 
 Этот оператор возвращает значение этого `COleDateTimeSpan` значения в виде числа дней с плавающей запятой.
 
-## <a name="coledatetimespansetdatetimespan"></a><a name="setdatetimespan"></a>Коледатетимеспан:: Сетдатетимеспан
+## <a name="coledatetimespansetdatetimespan"></a><a name="setdatetimespan"></a> Коледатетимеспан:: Сетдатетимеспан
 
 Задает значение этого значения даты и времени.
 
@@ -711,7 +711,7 @@ void SetDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 
 [!code-cpp[NVC_ATLMFC_Utilities#21](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_12.cpp)]
 
-## <a name="coledatetimespansetstatus"></a><a name="setstatus"></a>Коледатетимеспан:: SetStatus
+## <a name="coledatetimespansetstatus"></a><a name="setstatus"></a> Коледатетимеспан:: SetStatus
 
 Задает состояние (допустимость) этого `COleDateTimeSpan` объекта.
 
@@ -738,11 +738,11 @@ enum DateTimeSpanStatus{
 
 Краткое описание этих значений состояния см. в следующем списке:
 
-- `COleDateTimeSpan::valid`Указывает, что этот `COleDateTimeSpan` объект является допустимым.
+- `COleDateTimeSpan::valid` Указывает, что этот `COleDateTimeSpan` объект является допустимым.
 
-- `COleDateTimeSpan::invalid`Указывает, что этот `COleDateTimeSpan` объект является недопустимым; его значение может быть неправильным.
+- `COleDateTimeSpan::invalid` Указывает, что этот `COleDateTimeSpan` объект является недопустимым; его значение может быть неправильным.
 
-- `COleDateTimeSpan::null`Указывает, что этот `COleDateTimeSpan` объект имеет значение null, то есть что для этого объекта не было предоставлено значение. (Это "null" в смысле базы данных "без значения", а не на C++ NULL.)
+- `COleDateTimeSpan::null` Указывает, что этот `COleDateTimeSpan` объект имеет значение null, то есть что для этого объекта не было предоставлено значение. (Это "null" в смысле базы данных "без значения", а не на C++ NULL.)
 
    > [!CAUTION]
    > Эта функция предназначена для расширенных ситуаций программирования. Эта функция не изменяет данные в этом объекте. Чаще всего он используется для установки состояния в **значение NULL** или **недопустимо**. Обратите внимание, что оператор присваивания ([operator =](#operator_eq)) и [сетдатетимеспан](#setdatetimespan) устанавливают состояние объекта на основе исходных значений.

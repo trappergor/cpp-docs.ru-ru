@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::function [C++], target
 - std::function [C++], target_type
 ms.assetid: 7b5ca76b-9ca3-4d89-8fcf-cad70a4aeae6
-ms.openlocfilehash: ed00d8e3a94b03a5d44194b880218ded7a6dc0e8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 052cbba69aa99d33de963a3e360e6951a6006bec
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87182503"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831467"
 ---
 # <a name="function-class"></a>Класс function
 
@@ -107,19 +107,19 @@ public:
 
 ### <a name="constructors"></a>Конструкторы
 
-|||
+|Имя|Описание|
 |-|-|
 |[function](#function)|Создает оболочку, которая является пустой или содержит вызываемый объект произвольного типа с фиксированной сигнатурой.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|||
+|Имя|Описание|
 |-|-|
 |[result_type](#result_type)|Возвращаемый тип хранимого вызываемого объекта.|
 
 ### <a name="functions"></a>Функции
 
-|||
+|Имя|Описание|
 |-|-|
 |[assign](#assign)|Присваивает вызываемый объект данному объекту функции.|
 |[позиции](#swap)|Меняет местами два вызываемых объекта.|
@@ -128,13 +128,13 @@ public:
 
 ### <a name="operators"></a>Операторы
 
-|||
+|Имя|Описание|
 |-|-|
 |[оператор не указан](#op_unspecified)|Проверяет, существует ли вызываемый объект.|
 |[оператор ()](#op_call)|Вызывает вызываемый объект.|
 |[Оператор =](#op_eq)|Заменяет хранимый вызываемый объект.|
 
-## <a name="assign"></a><a name="assign"></a>назначать
+## <a name="assign"></a><a name="assign"></a> назначать
 
 Присваивает вызываемый объект данному объекту функции.
 
@@ -282,7 +282,7 @@ f is non-empty (correct).
 g is empty (correct).
 ```
 
-## <a name="operator-unspecified"></a><a name="op_unspecified"></a>оператор не указан
+## <a name="operator-unspecified"></a><a name="op_unspecified"></a> оператор не указан
 
 Проверяет, существует ли вызываемый объект.
 
@@ -324,7 +324,7 @@ not empty == false
 not empty == true
 ```
 
-## <a name="operator"></a><a name="op_call"></a>оператор ()
+## <a name="operator"></a><a name="op_call"></a> оператор ()
 
 Вызывает вызываемый объект.
 
@@ -375,7 +375,7 @@ empty == false
 val == -3
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>Оператор =
+## <a name="operator"></a><a name="op_eq"></a> Оператор =
 
 Заменяет хранимый вызываемый объект.
 
@@ -457,7 +457,7 @@ empty == false
 val == -3
 ```
 
-## <a name="result_type"></a><a name="result_type"></a>result_type
+## <a name="result_type"></a><a name="result_type"></a> result_type
 
 Возвращаемый тип хранимого вызываемого объекта.
 
@@ -499,7 +499,7 @@ empty == false
 val == -3
 ```
 
-## <a name="swap"></a><a name="swap"></a>позиции
+## <a name="swap"></a><a name="swap"></a> позиции
 
 Меняет местами два вызываемых объекта.
 
@@ -558,7 +558,7 @@ empty == false
 val == -3
 ```
 
-## <a name="target"></a><a name="target"></a>мишень
+## <a name="target"></a><a name="target"></a> мишень
 
 Проверяет, является ли вызываемый объект вызываемым, как указано.
 
@@ -619,7 +619,7 @@ empty == true
 no target == true
 ```
 
-## <a name="target_type"></a><a name="target_type"></a>target_type
+## <a name="target_type"></a><a name="target_type"></a> target_type
 
 Возвращает сведения о типе в вызываемый объект.
 

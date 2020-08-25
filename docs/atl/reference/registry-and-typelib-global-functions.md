@@ -17,48 +17,48 @@ f1_keywords:
 helpviewer_keywords:
 - RegistryDataExchange function, global functions
 ms.assetid: d58b8a4e-975c-4417-8b34-d3c847f679b3
-ms.openlocfilehash: 69df927ddd04c19d10703854aa8c8948894309d1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0f29f8cac62a7452781e8fde697cdf992db00b8c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81326076"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834622"
 ---
 # <a name="registry-and-typelib-global-functions"></a>Глобальные функции реестра и библиотеки типов
 
-Эти функции обеспечивают поддержку для загрузки и регистрации библиотеки типов.
+Эти функции обеспечивают поддержку загрузки и регистрации библиотеки типов.
 
 > [!IMPORTANT]
-> Функции, перечисленные в следующих таблицах, не могут использоваться в приложениях, выполняемых в Windows Runtime.
+> Функции, перечисленные в следующих таблицах, нельзя использовать в приложениях, выполняемых в среда выполнения Windows.
 
-|||
+|Имя|Описание|
 |-|-|
-|[AfxRegCreateKey](#afxregcreatekey)|Создает указанный ключ реестра.|
-|[AfxRegDeleteKey](#afxregdeletekey)|Удаляет указанный ключ реестра.|
-|[AfxRegisterPreviewHandler](#afxregisterpreviewhandler)|Помощник для регистрации обработчика предварительного просмотра.|
-|[AfxUnregisterPreviewHandler](#afxunregisterpreviewhandler)| Помощник, чтобы отменить регистрацию обработчика предварительного просмотра. |
+|[AfxRegCreateKey](#afxregcreatekey)|Создает указанный раздел реестра.|
+|[AfxRegDeleteKey](#afxregdeletekey)|Удаляет указанный раздел реестра.|
+|[AfxRegisterPreviewHandler](#afxregisterpreviewhandler)|Вспомогательный метод для регистрации обработчика просмотра.|
+|[афксунрегистерпревиевхандлер](#afxunregisterpreviewhandler)| Вспомогательный метод для отмены регистрации обработчика просмотра. |
 |[AtlRegisterTypeLib](#atlregistertypelib)|Эта функция вызывается для регистрации библиотеки типов.|
-|[AtlUnRegisterTypeLib](#atlunregistertypelib)|Эта функция называется отменить регистрацию библиотеки типа|
-|[AfxRegOpenKey](#afxregopenkey)|Открывает указанный ключ реестра.|
-|[AfxRegOpenKeyEx](#afxregopenkeyex)|Открывает указанный ключ реестра.|
+|[AtlUnRegisterTypeLib](#atlunregistertypelib)|Эта функция вызывается для отмены регистрации библиотеки типов|
+|[AfxRegOpenKey](#afxregopenkey)|Открывает указанный раздел реестра.|
+|[AfxRegOpenKeyEx](#afxregopenkeyex)|Открывает указанный раздел реестра.|
 |[AtlLoadTypeLib](#atlloadtypelib)|Эта функция вызывается для загрузки библиотеки типов.|
 |[AtlUpdateRegistryFromResourceD](#atlupdateregistryfromresourced)|Эта функция вызывается для обновления реестра из предоставленного ресурса.|
-|[RegistryDataExchange](#registrydataexchange)|Эта функция вызывается для чтения из системного реестра или записи в него. Вызывается [реестра обмена данными Макрос](../../atl/reference/registry-data-exchange-macros.md).|
+|[RegistryDataExchange](#registrydataexchange)|Эта функция вызывается для чтения из системного реестра или записи в него. Вызывается [макросами обмена данными реестра](../../atl/reference/registry-data-exchange-macros.md).|
 
-Эти функции контролируют, какой узла в реестре программа использует для хранения информации.
+Эти функции определяют, какой узел в реестре использует программа для хранения информации.
 
-|||
+|Имя|Описание|
 |-|-|
-|[AtlGetPerUserRegistration](#atlgetperuserregistration)|Получает ли приложение перенаправляет доступ к реестру **HKEY_CURRENT_USER** **(HKCU**) узла.|
-|[AtlSetPerUserRegistration](#atlsetperuserregistration)|Устанавливает, перенаправляет ли приложение доступ **HKEY_CURRENT_USER** к HKEY_CURRENT_USER **(HKCU**) узла.|
+|[AtlGetPerUserRegistration](#atlgetperuserregistration)|Получает значение, указывающее, перенаправляет ли приложение доступ к реестру к узлу **HKEY_CURRENT_USER** ( **HKCU**).|
+|[AtlSetPerUserRegistration](#atlsetperuserregistration)|Определяет, будет ли приложение перенаправлять доступ к реестру на узел **HKEY_CURRENT_USER** ( **HKCU**).|
 
 ### <a name="requirements"></a>Требования
 
-**Заголовок:** atlbase.h
+**Заголовок:** atlbase. h
 
-## <a name="atlgetperuserregistration"></a><a name="atlgetperuserregistration"></a>AtlGetPerUserРегистрация
+## <a name="atlgetperuserregistration"></a><a name="atlgetperuserregistration"></a> атлжетперусеррегистратион
 
-Используйте эту функцию, чтобы определить, перенаправляет ли приложение доступ к узле **HKEY_CURRENT_USER** **(HKCU)**.
+Используйте эту функцию, чтобы определить, будет ли приложение перенаправлять доступ к реестру на узел **HKEY_CURRENT_USER** (**HKCU**).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -68,26 +68,26 @@ ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
 
 ### <a name="parameters"></a>Параметры
 
-*pEnabled*<br/>
-(ваут) TRUE указывает на то, что информация о реестре направляется в узлы **HKCU;** FALSE указывает, что приложение записывает информацию о реестре в узлы по умолчанию. Узла по умолчанию **HKEY_CLASSES_ROOT** **(HKCR).**
+*пенаблед*<br/>
+заполняет Значение TRUE указывает, что данные реестра направляются на узел **HKCU** ; Значение FALSE указывает, что приложение записывает сведения о реестре в узел по умолчанию. Узел по умолчанию — **HKEY_CLASSES_ROOT** (**HKCR**).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-S_OK, если метод успешен, в противном случае код ошибки HRESULT, если происходит ошибка.
+S_OK, если метод выполнен успешно, в противном случае — код ошибки HRESULT при возникновении ошибки.
 
 ### <a name="remarks"></a>Remarks
 
-Перенаправление реестра не включено по умолчанию. Если вы включите эту опцию, доступ к реестру перенаправляется **HKEY_CURRENT_USER классы программного обеспечения.**
+По умолчанию перенаправление реестра отключено. Если этот параметр включен, доступ к реестру перенаправляется в **HKEY_CURRENT_USER \софтваре\классес**.
 
-Перенаправление не является глобальным. Только mFC и ATL рамках, пострадавших от этого реестра перенаправления.
+Перенаправление не является глобальным. Это перенаправление реестра влияет только на платформы MFC и ATL.
 
 ### <a name="requirements"></a>Требования
 
-**Заголовок:** atlbase.h
+**Заголовок:** atlbase. h
 
-## <a name="afxregcreatekey"></a><a name="afxregcreatekey"></a>AfxRegCreateKey
+## <a name="afxregcreatekey"></a><a name="afxregcreatekey"></a> афксрегкреатекэй
 
-Создает указанный ключ реестра.
+Создает указанный раздел реестра.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -98,28 +98,28 @@ LONG AFXAPI AfxRegCreateKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTr
 ### <a name="parameters"></a>Параметры
 
 *hKey*<br/>
-Ручка к ключу открытого реестра.
+Маркер открытого раздела реестра.
 
-*lpSubKey*<br/>
-Имя ключа, который эта функция открывает или создает.
+*лпсубкэй*<br/>
+Имя ключа, которое открывается или создается этой функцией.
 
-*phkResult*<br/>
-Указатель на переменную, которая получает ручку к открытому или созданного ключу.
+*фкресулт*<br/>
+Указатель на переменную, которая получает маркер для открытого или созданного ключа.
 
-*Ptm*<br/>
+*pTM*<br/>
 Указатель на `CAtlTransactionManager` объект.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если функция успешно, значение возврата ERROR_SUCCESS. Если функция выходит из строя, значение возврата является кодом ошибки ненулевого, определенным в Winerror.h.
+Если функция выполнена, возвращаемое значение будет ERROR_SUCCESS. Если функция завершается ошибкой, возвращаемое значение является ненулевым кодом ошибки, определенным в файле Winerror. h.
 
 ### <a name="requirements"></a>Требования
 
 **Заголовок:** afxpriv.h
 
-## <a name="afxregdeletekey"></a><a name="afxregdeletekey"></a>AfxRegDeleteKey
+## <a name="afxregdeletekey"></a><a name="afxregdeletekey"></a> афксрегделетекэй
 
-Удаляет указанный ключ реестра.
+Удаляет указанный раздел реестра.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -130,17 +130,17 @@ LONG AFXAPI AfxRegDeleteKey(HKEY hKey, LPCTSTR lpSubKey, CAtlTransactionManager*
 ### <a name="parameters"></a>Параметры
 
 *hKey*<br/>
-Ручка к ключу открытого реестра.
+Маркер открытого раздела реестра.
 
-*lpSubKey*<br/>
-Имя ключа, которое будет удалено.
+*лпсубкэй*<br/>
+Имя удаляемого ключа.
 
-*Ptm*<br/>
+*pTM*<br/>
 Указатель на `CAtlTransactionManager` объект.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если функция успешно, значение возврата ERROR_SUCCESS. Если функция выходит из строя, значение возврата является кодом ошибки ненулевого, определенным в Winerror.h.
+Если функция выполнена, возвращаемое значение будет ERROR_SUCCESS. Если функция завершается ошибкой, возвращаемое значение является ненулевым кодом ошибки, определенным в файле Winerror. h.
 
 ### <a name="requirements"></a>Требования
 
@@ -148,7 +148,7 @@ LONG AFXAPI AfxRegDeleteKey(HKEY hKey, LPCTSTR lpSubKey, CAtlTransactionManager*
 
 ## <a name="afxregisterpreviewhandler"></a>
 
-Помощник для регистрации обработчика предварительного просмотра.
+Вспомогательный метод для регистрации обработчика просмотра.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -158,20 +158,20 @@ BOOL AFXAPI AfxRegisterPreviewHandler(LPCTSTR lpszCLSID, LPCTSTR lpszShortTypeNa
 
 ### <a name="parameters"></a>Параметры
 
-*lpszCLSID*<br/>
-Определяет CLSID обработчика.
+*лпсзклсид*<br/>
+Указывает CLSID обработчика.
 
-*lpszShortTypeName*<br/>
-Определяет ProgID обработчика.
+*лпсзшорттипенаме*<br/>
+Указывает идентификатор ProgID обработчика.
 
-*lpszFilterExt*<br/>
-Упогоняет расширение файла, зарегистрированное этим обработчиком.
+*лпсзфилтерекст*<br/>
+Указывает расширение файла, зарегистрированное в этом обработчике.
 
 ### <a name="requirements"></a>Требования
 
 **Заголовок:** afxdisp.h
 
-## <a name="atlregistertypelib"></a><a name="atlregistertypelib"></a>AtlRegisterTypeLibLib
+## <a name="atlregistertypelib"></a><a name="atlregistertypelib"></a> атлрегистертипелиб
 
 Эта функция вызывается для регистрации библиотеки типов.
 
@@ -181,27 +181,27 @@ ATLAPI AtlRegisterTypeLib(HINSTANCE hInstTypeLib, LPCOLESTR lpszIndex);
 
 ### <a name="parameters"></a>Параметры
 
-*hInstTypeLib*<br/>
-Ручка к экземпляру модуля.
+*хинсттипелиб*<br/>
+Маркер для экземпляра модуля.
 
-*lpszИндекс*<br/>
-Строка в\\формате "N", где N является инкемгерным индексом ресурса библиотеки типа. Может быть NULL, если индекс не требуется.
+*лпсзиндекс*<br/>
+Строка в формате " \\ \n", где N — это целочисленный индекс ресурса библиотеки типов. Может иметь значение NULL, если индекс не требуется.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK на успех, или ошибка HRESULT на отказ.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция помощника используется [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver) и [CAtlComModule::RegisterTypeLib](../../atl/reference/catlcommodule-class.md#registertypelib).
+Эта вспомогательная функция используется [атлкоммодулеунрегистерсервер](server-registration-global-functions.md#atlcommoduleunregisterserver) и [Катлкоммодуле:: регистертипелиб](../../atl/reference/catlcommodule-class.md#registertypelib).
 
 ### <a name="requirements"></a>Требования
 
-**Заголовок:** atlbase.h
+**Заголовок:** atlbase. h
 
-## <a name="afxregopenkey"></a><a name="afxregopenkey"></a>AfxRegOpenKey
+## <a name="afxregopenkey"></a><a name="afxregopenkey"></a> афксрегопенкэй
 
-Открывает указанный ключ реестра.
+Открывает указанный раздел реестра.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -212,28 +212,28 @@ LONG AFXAPI AfxRegOpenKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTran
 ### <a name="parameters"></a>Параметры
 
 *hKey*<br/>
-Ручка к ключу открытого реестра.
+Маркер открытого раздела реестра.
 
-*lpSubKey*<br/>
-Имя ключа, который эта функция открывает или создает.
+*лпсубкэй*<br/>
+Имя ключа, которое открывается или создается этой функцией.
 
-*phkResult*<br/>
-Указатель на переменную, которая получает ручку к созданного ключу.
+*фкресулт*<br/>
+Указатель на переменную, которая получает маркер для созданного ключа.
 
-*Ptm*<br/>
+*pTM*<br/>
 Указатель на `CAtlTransactionManager` объект.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если функция успешно, значение возврата ERROR_SUCCESS. Если функция выходит из строя, значение возврата является кодом ошибки ненулевого, определенным в Winerror.h.
+Если функция выполнена, возвращаемое значение будет ERROR_SUCCESS. Если функция завершается ошибкой, возвращаемое значение является ненулевым кодом ошибки, определенным в файле Winerror. h.
 
 ### <a name="requirements"></a>Требования
 
 **Заголовок:** afxpriv.h
 
-## <a name="afxregopenkeyex"></a><a name="afxregopenkeyex"></a>AfxRegOpenKeyEx
+## <a name="afxregopenkeyex"></a><a name="afxregopenkeyex"></a> афксрегопенкэйекс
 
-Открывает указанный ключ реестра.
+Открывает указанный раздел реестра.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -244,34 +244,34 @@ LONG AFXAPI AfxRegOpenKeyEx(HKEY hKey, LPCTSTR lpSubKey, DWORD ulOptions, REGSAM
 ### <a name="parameters"></a>Параметры
 
 *hKey*<br/>
-Ручка к ключу открытого реестра.
+Маркер открытого раздела реестра.
 
-*lpSubKey*<br/>
-Имя ключа, который эта функция открывает или создает.
+*лпсубкэй*<br/>
+Имя ключа, которое открывается или создается этой функцией.
 
-*ulOptions*<br/>
-Этот параметр зарезервирован и должен быть нулевым.
+*улоптионс*<br/>
+Этот параметр зарезервирован и должен быть равен нулю.
 
-*samDesired*<br/>
-Маска, которая определяет желаемые права доступа к ключу.
+*самдесиред*<br/>
+Маска, указывающая необходимые права доступа к ключу.
 
-*phkResult*<br/>
-Указатель на переменную, которая получает ручку к открытому ключу.
+*фкресулт*<br/>
+Указатель на переменную, которая получает маркер открытого ключа.
 
-*Ptm*<br/>
+*pTM*<br/>
 Указатель на `CAtlTransactionManager` объект.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если функция успешно, значение возврата ERROR_SUCCESS. Если функция выходит из строя, значение возврата является кодом ошибки ненулевого, определенным в Winerror.h.
+Если функция выполнена, возвращаемое значение будет ERROR_SUCCESS. Если функция завершается ошибкой, возвращаемое значение является ненулевым кодом ошибки, определенным в файле Winerror. h.
 
 ### <a name="requirements"></a>Требования
 
 **Заголовок:** afxpriv.h
 
-## <a name="afxunregisterpreviewhandler"></a><a name="afxunregisterpreviewhandler"></a>AfxUnregisterPreviewHandler
+## <a name="afxunregisterpreviewhandler"></a><a name="afxunregisterpreviewhandler"></a> афксунрегистерпревиевхандлер
 
-Помощник, чтобы отменить регистрацию обработчика предварительного просмотра.
+Вспомогательный метод для отмены регистрации обработчика просмотра.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -281,16 +281,16 @@ BOOL AFXAPI AfxUnRegisterPreviewHandler(LPCTSTR lpszCLSID);
 
 ### <a name="parameters"></a>Параметры
 
-*lpszCLSID*<br/>
-Упоняет CLSID обработчика для незарегистрированного.
+*лпсзклсид*<br/>
+Указывает CLSID регистрируемого обработчика.
 
 ### <a name="requirements"></a>Требования
 
 **Заголовок:** afxdisp.h
 
-## <a name="atlsetperuserregistration"></a><a name="atlsetperuserregistration"></a>AtlSetPerUserРегистрация
+## <a name="atlsetperuserregistration"></a><a name="atlsetperuserregistration"></a> атлсетперусеррегистратион
 
-Устанавливает, перенаправляет ли приложение доступ **HKEY_CURRENT_USER** к HKEY_CURRENT_USER **(HKCU**) узла.
+Определяет, будет ли приложение перенаправлять доступ к реестру на узел **HKEY_CURRENT_USER** (**HKCU**).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -301,23 +301,23 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 ### <a name="parameters"></a>Параметры
 
 *bEnable*<br/>
-(в) TRUE указывает на то, что информация о реестре направляется в узлы **HKCU;** FALSE указывает, что приложение записывает информацию о реестре в узлы по умолчанию. Узла по умолчанию **HKEY_CLASSES_ROOT** **(HKCR).**
+окне Значение TRUE указывает, что данные реестра направляются на узел **HKCU** ; Значение FALSE указывает, что приложение записывает сведения о реестре в узел по умолчанию. Узел по умолчанию — **HKEY_CLASSES_ROOT** (**HKCR**).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-S_OK, если метод успешен, в противном случае код ошибки HRESULT, если происходит ошибка.
+S_OK, если метод выполнен успешно, в противном случае — код ошибки HRESULT при возникновении ошибки.
 
 ### <a name="remarks"></a>Remarks
 
-Перенаправление реестра не включено по умолчанию. Если вы включите эту опцию, доступ к реестру перенаправляется **HKEY_CURRENT_USER классы программного обеспечения.**
+По умолчанию перенаправление реестра отключено. Если этот параметр включен, доступ к реестру перенаправляется в **HKEY_CURRENT_USER \софтваре\классес**.
 
-Перенаправление не является глобальным. Только mFC и ATL рамках, пострадавших от этого реестра перенаправления.
+Перенаправление не является глобальным. Это перенаправление реестра влияет только на платформы MFC и ATL.
 
 ### <a name="requirements"></a>Требования
 
-**Заголовок:** atlbase.h
+**Заголовок:** atlbase. h
 
-## <a name="atlunregistertypelib"></a><a name="atlunregistertypelib"></a>AtlUnRegisterTypeLibLib
+## <a name="atlunregistertypelib"></a><a name="atlunregistertypelib"></a> атлунрегистертипелиб
 
 Эта функция вызывается для отмены регистрации библиотеки типов.
 
@@ -331,25 +331,25 @@ ATLAPI AtlUnRegisterTypeLib(
 
 ### <a name="parameters"></a>Параметры
 
-*hInstTypeLib*<br/>
-Ручка к экземпляру модуля.
+*хинсттипелиб*<br/>
+Маркер для экземпляра модуля.
 
-*lpszИндекс*<br/>
-Строка в\\формате "N", где N является инкемгерным индексом ресурса библиотеки типа. Может быть NULL, если индекс не требуется.
+*лпсзиндекс*<br/>
+Строка в формате " \\ \n", где N — это целочисленный индекс ресурса библиотеки типов. Может иметь значение NULL, если индекс не требуется.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK на успех, или ошибка HRESULT на отказ.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция помощника используется [CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib) и [AtlComModuleUnRegisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver).
+Эта вспомогательная функция используется [катлкоммодуле:: унрегистертипелиб](../../atl/reference/catlcommodule-class.md#unregistertypelib) и [атлкоммодулеунрегистерсервер](server-registration-global-functions.md#atlcommoduleunregisterserver).
 
 ### <a name="requirements"></a>Требования
 
-**Заголовок:** atlbase.h
+**Заголовок:** atlbase. h
 
-## <a name="atlloadtypelib"></a><a name="atlloadtypelib"></a>AtlLoadTypeLib
+## <a name="atlloadtypelib"></a><a name="atlloadtypelib"></a> атллоадтипелиб
 
 Эта функция вызывается для загрузки библиотеки типов.
 
@@ -365,27 +365,27 @@ ATLINLINE ATLAPI AtlLoadTypeLib(
 
 ### <a name="parameters"></a>Параметры
 
-*hInstTypeLib*<br/>
-Обработка модуля, связанного с библиотекой типов.
+*хинсттипелиб*<br/>
+Обработчик для модуля, связанного с библиотекой типов.
 
-*lpszИндекс*<br/>
-Строка в\\формате "N", где N является инкемгерным индексом ресурса библиотеки типа. Может быть NULL, если индекс не требуется.
+*лпсзиндекс*<br/>
+Строка в формате " \\ \n", где N — это целочисленный индекс ресурса библиотеки типов. Может иметь значение NULL, если индекс не требуется.
 
-*pbstrPath*<br/>
-При успешном возвращении содержится полный путь модуля, связанный с библиотекой типов.
+*пбстрпас*<br/>
+При успешном возвращении содержит полный путь к модулю, связанному с библиотекой типов.
 
-*ppTypeLib*<br/>
-При успешном возвращении содержит указатель на указатель на загруженную библиотеку типа.
+*пптипелиб*<br/>
+При успешном возвращении содержит указатель на указатель на загруженную библиотеку типов.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK на успех, или ошибка HRESULT на отказ.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция помощника используется [AtlRegisterTypeLib](#atlregistertypelib) и [AtlUnRegisterTypeLib](#atlunregistertypelib).
+Эта вспомогательная функция используется [атлрегистертипелиб](#atlregistertypelib) и [атлунрегистертипелиб](#atlunregistertypelib).
 
-## <a name="atlupdateregistryfromresourced"></a><a name="atlupdateregistryfromresourced"></a>AtlUpdateRegistryFromResourceD
+## <a name="atlupdateregistryfromresourced"></a><a name="atlupdateregistryfromresourced"></a> атлупдатерегистрифромресаурцед
 
 Эта функция объявлена устаревшей Visual Studio 2013 и удалена в Visual Studio 2015.
 
@@ -393,7 +393,7 @@ ATLINLINE ATLAPI AtlLoadTypeLib(
 <removed>
 ```
 
-## <a name="registrydataexchange"></a><a name="registrydataexchange"></a>RegistryDataExchange
+## <a name="registrydataexchange"></a><a name="registrydataexchange"></a> регистридатаексчанже
 
 Эта функция вызывается для чтения из системного реестра или записи в него.
 
@@ -408,36 +408,36 @@ HRESULT RegistryDataExchange(
 
 ### <a name="parameters"></a>Параметры
 
-*Pt*<br/>
+*Лутор*<br/>
 Указатель на текущий объект.
 
-*rdxOp*<br/>
-Значение перечисления, которое указывает, какую операцию должна выполнять функция. Смотрите таблицу в разделе Замечания для допустимых значений.
+*рдксоп*<br/>
+Значение перечисления, указывающее, какую операцию должна выполнить функция. Допустимые значения см. в таблице в разделе "Примечания".
 
-*pItem*<br/>
-Указатель на данные, которые должны быть прочитаны из реестра или написаны. Данные также могут представлять ключ, который будет удален из реестра. Значение по умолчанию — NULL.
+*питем*<br/>
+Указатель на данные, которые должны быть считаны или записаны в реестр. Данные также могут представлять ключ, который необходимо удалить из реестра. Значение по умолчанию — NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK на успех, или ошибка HRESULT на отказ.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
 ### <a name="remarks"></a>Remarks
 
-МакросBEGIN_RDX_MAP [BEGIN_RDX_MAP](registry-data-exchange-macros.md#begin_rdx_map) и [END_RDX_MAP](registry-data-exchange-macros.md#end_rdx_map) расширить функцию, которая вызывает `RegistryDataExchange`.
+Макросы [BEGIN_RDX_MAP](registry-data-exchange-macros.md#begin_rdx_map) и [END_RDX_MAP](registry-data-exchange-macros.md#end_rdx_map) расширяются до функции, которая вызывает `RegistryDataExchange` .
 
-Возможные значения, указывающие на операцию, которую должна выполнить функция, отображаются в следующей таблице:
+Возможные значения перечисления, указывающие операцию, которую должна выполнить функция, показаны в следующей таблице.
 
-|Значение Enum|Операция|
+|Значение перечисления|Операция|
 |----------------|---------------|
-|eReadFromReg|Читайте данные из реестра.|
-|eWriteToReg|Запишите данные в реестр.|
-|eDeleteFromReg|Удалите ключ из реестра.|
+|ереадфромрег|Чтение данных из реестра.|
+|евритеторег|Запись данных в реестр.|
+|еделетефромрег|Удалите ключ из реестра.|
 
 ### <a name="requirements"></a>Требования
 
-**Заголовок:** atlbase.h
+**Заголовок:** atlbase. h
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Функции](atl-functions.md)<br/>
-[Макрос обмена данными реестра](registry-data-exchange-macros.md)
+[Макросы обмена данными в реестре](registry-data-exchange-macros.md)

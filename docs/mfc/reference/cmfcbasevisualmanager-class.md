@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCBaseVisualManager [MFC], CleanUpThemes
 - CMFCBaseVisualManager [MFC], UpdateSystemColors
 ms.assetid: d56f3afc-cdea-4de1-825a-a08999c571e0
-ms.openlocfilehash: 28efe75c3c825c04c88f9f2263a3db2d83d4f3af
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 79a3c0945fdd0df04e9ee52d7bad97dc0847fa91
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561327"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834301"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>Класс Кмфкбасевисуалманажер
 
@@ -53,17 +53,15 @@ class CMFCBaseVisualManager: public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|||
-|-|-|
 |name|Описание|
+|-|-|
 |[Кмфкбасевисуалманажер:: Кмфкбасевисуалманажер](#cmfcbasevisualmanager)|Создает и инициализирует объект `CMFCBaseVisualManager`.|
 |`CMFCBaseVisualManager::~CMFCBaseVisualManager`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|||
-|-|-|
 |name|Описание|
+|-|-|
 |[Кмфкбасевисуалманажер::D Равчеккбокс](#drawcheckbox)|Рисует элемент управления "флажок" с помощью текущей темы Windows.|
 |[Кмфкбасевисуалманажер::D Равкомбобордер](#drawcomboborder)|Рисует границу поля со списком с помощью текущей темы Windows.|
 |[Кмфкбасевисуалманажер::D Равкомбодропбуттон](#drawcombodropbutton)|Рисует кнопку раскрывающегося списка с помощью текущей темы Windows.|
@@ -75,9 +73,8 @@ class CMFCBaseVisualManager: public CObject
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|||
-|-|-|
 |Имя|Описание|
+|-|-|
 |[Кмфкбасевисуалманажер:: Клеанупсемес](#cleanupthemes)|Вызовы `CloseThemeData` для всех дескрипторов, полученных в `UpdateSystemColors` .|
 |[Кмфкбасевисуалманажер:: Упдатесистемколорс](#updatesystemcolors)|Вызовы `OpenThemeData` для получения дескрипторов для рисования различных элементов управления: окон, панелей инструментов, кнопок и т. д.|
 
@@ -415,7 +412,7 @@ void UpdateSystemColors();
 
 Только для внутреннего использования.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Иерархическая диаграмма](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)

@@ -34,24 +34,32 @@ helpviewer_keywords:
 - std::tolower [C++]
 - std::toupper [C++]
 - std::use_facet [C++]
-ms.openlocfilehash: a1e81fe28976e914f90a441ff97027f411b05738
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 91d0b40de557eb2414d6ee685795796c3290177c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224816"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833248"
 ---
 # <a name="ltlocalegt-functions"></a>Функции &lt;locale&gt;
 
-||||
-|-|-|-|
-|[has_facet](#has_facet)|[isalnum](#isalnum)|[isalpha](#isalpha)|
-|[iscntrl](#iscntrl)|[isdigit](#isdigit)|[isgraph](#isgraph)|
-|[islower](#islower)|[isprint](#isprint)|[ispunct](#ispunct)|
-|[isspace](#isspace)|[isupper](#isupper)|[isxdigit](#isxdigit)|
-|[ToLower](#tolower)|[ToUpper](#toupper)|[use_facet](#use_facet)|
+[has_facet](#has_facet)\
+[isAlnum](#isalnum)\
+[isalpha](#isalpha)\
+[iscntrl](#iscntrl)\
+[IsDigit](#isdigit)\
+[isgraph](#isgraph)\
+[islower](#islower)\
+[isprint](#isprint)\
+[ispunct](#ispunct)\
+[isspace](#isspace)\
+[isupper](#isupper)\
+[isxdigit](#isxdigit)\
+[ToLower](#tolower)\
+[ToUpper](#toupper)\
+[use_facet](#use_facet)
 
-## <a name="has_facet"></a><a name="has_facet"></a>has_facet
+## <a name="has_facet"></a><a name="has_facet"></a> has_facet
 
 Тестирует наличие того или иного аспекта в указанном языковом стандарте.
 
@@ -94,7 +102,7 @@ int main( )
 1
 ```
 
-## <a name="isalnum"></a><a name="isalnum"></a>isAlnum
+## <a name="isalnum"></a><a name="isalnum"></a> isAlnum
 
 Проверяет, является ли элемент языкового стандарта буквенным или цифровым символом.
 
@@ -161,7 +169,7 @@ The character '@' in the locale is  not alphanumeric.
 The character '3' in the locale is alphanumeric.
 ```
 
-## <a name="isalpha"></a><a name="isalpha"></a>isalpha
+## <a name="isalpha"></a><a name="isalpha"></a> isalpha
 
 Проверяет, является ли элемент языкового стандарта буквенным символом.
 
@@ -226,7 +234,7 @@ int main( )
 }
 ```
 
-## <a name="iscntrl"></a><a name="iscntrl"></a>iscntrl
+## <a name="iscntrl"></a><a name="iscntrl"></a> iscntrl
 
 Определяет, является ли элемент языкового стандарта управляющим символом.
 
@@ -291,7 +299,7 @@ int main( )
 }
 ```
 
-## <a name="isdigit"></a><a name="isdigit"></a>IsDigit
+## <a name="isdigit"></a><a name="isdigit"></a> IsDigit
 
 Определяет, является ли элемент языкового стандарта цифровым символом.
 
@@ -356,7 +364,7 @@ int main( )
 }
 ```
 
-## <a name="isgraph"></a><a name="isgraph"></a>isgraph
+## <a name="isgraph"></a><a name="isgraph"></a> isgraph
 
 Проверяет, является ли элемент языкового стандарта буквенно-цифровым символом или символом пунктуации.
 
@@ -421,7 +429,7 @@ int main( )
 }
 ```
 
-## <a name="islower"></a><a name="islower"></a>islower
+## <a name="islower"></a><a name="islower"></a> islower
 
 Определяет, является ли элемент языкового стандарта символом в нижнем регистре.
 
@@ -486,7 +494,7 @@ int main( )
 }
 ```
 
-## <a name="isprint"></a><a name="isprint"></a>isprint
+## <a name="isprint"></a><a name="isprint"></a> isprint
 
 Определяет, является ли элемент языкового стандарта символом, пригодным для печати.
 
@@ -550,7 +558,7 @@ int main( )
 }
 ```
 
-## <a name="ispunct"></a><a name="ispunct"></a>ispunct
+## <a name="ispunct"></a><a name="ispunct"></a> ispunct
 
 Определяет, является ли элемент языкового стандарта символом пунктуации.
 
@@ -615,7 +623,7 @@ int main( )
 }
 ```
 
-## <a name="isspace"></a><a name="isspace"></a>isspace
+## <a name="isspace"></a><a name="isspace"></a> isspace
 
 Определяет, является ли элемент языкового стандарта символом пустого пространства.
 
@@ -680,7 +688,7 @@ int main( )
 }
 ```
 
-## <a name="isupper"></a><a name="isupper"></a>isupper
+## <a name="isupper"></a><a name="isupper"></a> isupper
 
 Определяет, является ли элемент языкового стандарта символом в верхнем регистре.
 
@@ -745,7 +753,7 @@ int main( )
 }
 ```
 
-## <a name="isxdigit"></a><a name="isxdigit"></a>isxdigit
+## <a name="isxdigit"></a><a name="isxdigit"></a> isxdigit
 
 Определяет, является ли элемент языкового стандарта символом, используемым для представления шестнадцатеричных чисел.
 
@@ -812,7 +820,7 @@ int main( )
 }
 ```
 
-## <a name="tolower"></a><a name="tolower"></a>ToLower
+## <a name="tolower"></a><a name="tolower"></a> ToLower
 
 Преобразует символ в нижний регистр.
 
@@ -861,7 +869,7 @@ int main( )
 }
 ```
 
-## <a name="toupper"></a><a name="toupper"></a>ToUpper
+## <a name="toupper"></a><a name="toupper"></a> ToUpper
 
 Преобразует символ в верхний регистр.
 
@@ -910,7 +918,7 @@ int main( )
 }
 ```
 
-## <a name="use_facet"></a><a name="use_facet"></a>use_facet
+## <a name="use_facet"></a><a name="use_facet"></a> use_facet
 
 Возвращает ссылку на аспект указанного типа, сохраненный в языковом стандарте.
 

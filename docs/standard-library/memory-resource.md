@@ -1,18 +1,18 @@
 ---
-title: '&lt;memory_resource &gt;'
+title: '&lt;memory_resource&gt;'
 ms.date: 04/04/2019
 f1_keywords:
 - <memory_resource>
 helpviewer_keywords:
 - memory_resource header
-ms.openlocfilehash: 752396bb06b292ce29b7c6cd292287955b6066a7
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: de88feb691d0ec1bc9bf9b9dc2bc40cbc31a1cfe
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687710"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831051"
 ---
-# <a name="ltmemory_resourcegt"></a>&lt;memory_resource &gt;
+# <a name="ltmemory_resourcegt"></a>&lt;memory_resource&gt;
 
 Определяет шаблон класса контейнера memory_resource и его вспомогательные шаблоны.
 
@@ -22,24 +22,24 @@ ms.locfileid: "72687710"
 #include <memory_resource>
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="operators"></a>Операторы
 
-|||
+|Имя|Описание|
 |-|-|
-|[оператор!= ](../standard-library/memory-resource-operators.md#op_neq)|Проверяет, не равен ли объект memory_resource слева от оператора объекту memory_resource в правой части.|
-|[оператор==](../standard-library/memory-resource-operators.md#op_eq_eq)|Проверяет, равен ли объект memory_resource слева от оператора объекту memory_resource в правой части.|
+|[operator! =](../standard-library/memory-resource-operators.md#op_neq)|Проверяет, не равен ли объект memory_resource в левой части оператора memory_resource объекту справа.|
+|[Оператор = =](../standard-library/memory-resource-operators.md#op_eq_eq)|Проверяет, равен ли объект memory_resource слева от оператора объекту memory_resource в правой части.|
 
 ### <a name="specialized-template-functions"></a>Специализированные функции шаблонов
 
-|||
+|Имя|Описание|
 |-|-|
 |[polymorphic_allocator](../standard-library/memory-resource-functions.md#poly_alloc)||
 
 ### <a name="functions"></a>Функции
 
-|||
+|Имя|Описание|
 |-|-|
 |[get_default_resource](../standard-library/memory-resource-functions.md#get_default)||
 |[new_delete_resource](../standard-library/memory-resource-functions.md#new_delete)||
@@ -48,7 +48,7 @@ ms.locfileid: "72687710"
 
 ### <a name="classes-and-structs"></a>Классы и структуры
 
-|||
+|Имя|Описание|
 |-|-|
 |[Класс memory_resource](../standard-library/memory-resource-class.md)||
 |[Класс monotonic_buffer_resource](../standard-library/monotonic-buffer-resource-class.md)||
@@ -56,8 +56,8 @@ ms.locfileid: "72687710"
 |[Класс synchronized_pool_resource](../standard-library/synchronized-pool-resource-class.md)||
 |[Класс unsynchronized_pool_resource](../standard-library/unsynchronized-pool-resource-class.md)||
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)\
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Безопасность потоков в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)

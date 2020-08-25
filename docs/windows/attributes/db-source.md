@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_source attribute
 ms.assetid: 0ec8bbf7-ade2-4899-bf4c-8608b92779bc
-ms.openlocfilehash: d328cd7bcfed257b423a440041b6806149736ed0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f17a4ea183a24f7bf4e88137f4536ca082efdf85
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215300"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831389"
 ---
 # <a name="db_source"></a>db_source
 
@@ -50,7 +50,7 @@ ms.locfileid: "87215300"
 
 ## <a name="example"></a>Пример
 
-Этот пример вызывает **db_source** класса для создания соединения с источником данных `ds` с помощью базы данных Northwind. `ds`— Это обработчик для источника данных, который можно использовать внутри `CMyCommand` класса.
+Этот пример вызывает **db_source** класса для создания соединения с источником данных `ds` с помощью базы данных Northwind. `ds` — Это обработчик для источника данных, который можно использовать внутри `CMyCommand` класса.
 
 ```cpp
 // db_source_1.cpp
@@ -68,9 +68,7 @@ class CMyCommand {};
 
 ## <a name="requirements"></a>Требования
 
-### <a name="attribute-context"></a>Контекст атрибута
-
-|||
+| Контекст атрибута | Значение |
 |-|-|
 |**Относится к**|**`class`**, **`struct`** , член, метод, локальный|
 |**REPEATABLE**|Нет|

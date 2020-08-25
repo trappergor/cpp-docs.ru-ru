@@ -1,17 +1,17 @@
 ---
-title: ID (C++ атрибут com)
+title: ID (атрибут COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.id
 helpviewer_keywords:
 - id attribute
 ms.assetid: a48d2c99-c5d2-4f46-bf96-5ac88dcb5d0c
-ms.openlocfilehash: 79e49b2c074cd82323c74489e33812c10c442c61
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f67bf21fbe0040884cba4a54ed8d2a230cb20cd6
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168061"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88830557"
 ---
 # <a name="id"></a>идентификатор
 
@@ -38,14 +38,12 @@ ms.locfileid: "80168061"
 
 ## <a name="requirements"></a>Требования
 
-### <a name="attribute-context"></a>Контекст атрибута
-
-|||
+| Контекст атрибута | Значение |
 |-|-|
-|**Применение**|Метод интерфейса|
-|**Повторяемый**|нет|
-|**Обязательные атрибуты**|None|
-|**Недопустимые атрибуты**|None|
+|**Относится к**|Метод интерфейса|
+|**REPEATABLE**|Нет|
+|**Требуемые атрибуты**|Нет|
+|**Недопустимые атрибуты**|Нет|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
@@ -54,6 +52,6 @@ ms.locfileid: "80168061"
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты метода](method-attributes.md)<br/>
 [Атрибуты элементов данных](data-member-attributes.md)<br/>
-[defaultvalue](defaultvalue.md)<br/>
-[В поле](in-cpp.md)<br/>
+[максимально](defaultvalue.md)<br/>
+[in](in-cpp.md)<br/>
 [out](out-cpp.md)

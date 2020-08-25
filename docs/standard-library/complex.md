@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
-ms.openlocfilehash: 2c6487370bfa4d3af6c9c7c40b7f83a252c2e01d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f63fe99238450b8dffbf459ab078a8ecf6623b77
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222580"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831506"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
@@ -20,7 +20,7 @@ ms.locfileid: "87222580"
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок**:\<complex>
+**Заголовок**: \<complex>
 
 **Пространство имен:** std
 
@@ -72,7 +72,7 @@ ms.locfileid: "87222580"
 
 ### <a name="functions"></a>Функции
 
-|||
+|Имя|Описание|
 |-|-|
 |[просто](../standard-library/complex-functions.md#abs)|Вычисляет модуль комплексного числа.|
 |[ACOS](../standard-library/complex-functions.md#acos)||
@@ -102,7 +102,7 @@ ms.locfileid: "87222580"
 
 ### <a name="operators"></a>Операторы
 
-|||
+|Имя|Описание|
 |-|-|
 |[operator! =](../standard-library/complex-operators.md#op_neq)|Проверяет на неравенство два комплексных числа, по крайней мере одно из которых может принадлежать к подмножеству типа для вещественной и мнимой частей.|
 |[станции](../standard-library/complex-operators.md#op_star)|Умножает два комплексных числа, по крайней мере одно из которых может принадлежать к подмножеству типа для вещественной и мнимой частей.|
@@ -115,7 +115,7 @@ ms.locfileid: "87222580"
 
 ### <a name="classes"></a>Классы
 
-|||
+|name|Описание|
 |-|-|
 |[сложной\<double>](../standard-library/complex-double.md)|В явном специализированном шаблоне класса описывается объект, хранящий упорядоченную пару объектов типа **`double`** , где первый представляет реальную часть комплексного числа, а вторая — мнимую часть.|
 |[сложной\<float>](../standard-library/complex-float.md)|В явном специализированном шаблоне класса описывается объект, хранящий упорядоченную пару объектов типа **`float`** , где первый представляет реальную часть комплексного числа, а вторая — мнимую часть.|
@@ -126,7 +126,7 @@ ms.locfileid: "87222580"
 
 \<complex>Заголовок определяет следующие [пользовательские литералы](../cpp/user-defined-literals-cpp.md) , которые создают комплексное число с действительной частью, равное нулю, а мнимая часть — значение входного параметра.
 
-|||
+|Объявление|Описание|
 |-|-|
 |`constexpr complex<long double> operator""il(long double d)`<br />`constexpr complex<long double> operator""il(unsigned long long d)`|Возвращаемый результат: `complex<long double>{0.0L, static_cast<long double>(d)}`|
 |`constexpr complex<double> operator""i(long double d)`<br />`constexpr complex<double> operator""i(unsigned long long d)`|Возвращает `complex<double>{0.0, static_cast<double>(d)}`.|

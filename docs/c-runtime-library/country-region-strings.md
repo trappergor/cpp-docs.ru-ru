@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - country/region strings
 ms.assetid: 5baf0ccf-0d9b-40dc-83bd-323705287930
-ms.openlocfilehash: ea0ac6ab89179683d04f6b6233c6fa1996e51a1f
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: d5d8c10e30886c1b34bb5dc95296bc594acda1a4
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373571"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831857"
 ---
 # <a name="countryregion-strings"></a>строки страны и региона
 
-Строки страны и региона можно объединять со строкой с названием языка для создания спецификации языкового стандарта для функций `setlocale`, `_wsetlocale`, `_create_locale`и `_wcreate_locale` . Список названий стран и регионов, поддерживаемых различными версиями операционных систем Windows, см. в разделе столбцы **языка**, **расположения**и **языка** таблицы в [приложении а. поведение продукта](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c) в \[ MS-LCID]: Справочник по идентификатору языка (LCID) Windows. Пример кода для перечисления имен доступных языковых стандартов и связанных значений см. в руководстве по [многоязыковой поддержке с примером API на основе имени](/windows/win32/intl/nls--name-based-apis-sample).
+Строки страны и региона можно объединять со строкой с названием языка для создания спецификации языкового стандарта для функций `setlocale`, `_wsetlocale`, `_create_locale`и `_wcreate_locale` . Список названий стран и регионов, поддерживаемых различными версиями операционных систем Windows, см. в разделе столбцы **языка**, **расположения**и **языка** таблицы в [приложении а. поведение продукта](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c) в \[ MS-LCID]: Справочник по идентификатору языка (LCID) Windows. Пример кода для перечисления имен доступных языковых стандартов и связанных значений см. в руководстве по [многоязыковой поддержке с примером API на основе имени](/windows/win32/intl/nls--name-based-apis-sample).
 
 ## <a name="additional-supported-country-and-region-strings"></a>Дополнительные поддерживаемые строки страны и региона
 

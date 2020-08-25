@@ -9,12 +9,12 @@ helpviewer_keywords:
 - SIG_IGN constant
 - SIG_DFL constant
 ms.assetid: c3cb4f15-d39e-4d9d-84f9-0d33e3eb5993
-ms.openlocfilehash: 4ff79626d576a05744336d36f99caf95d9b9902d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: a7448730501d6f3b50008966134f708ae99ddb5b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743871"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88830765"
 ---
 # <a name="signal-action-constants"></a>Константы действий signal
 
@@ -26,11 +26,11 @@ ms.locfileid: "57743871"
 #include <signal.h>
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Аргумент `func` должен содержать адрес функции или одну из констант манифеста, определенных в SIGNAL.H (перечислены ниже).
 
-|||
+|Константа|Описание|
 |-|-|
 | `SIG_DFL`  | Использует ответ системы по умолчанию. Если вызывающая программа использует потоковый ввод-вывод, созданные библиотекой времени выполнения буферы не очищаются.  |
 | `SIG_IGN`  | Игнорирует сигнал прерывания. Это значение нельзя использовать для `SIGFPE`, так как в этом случае состояние процесса с плавающей запятой остается неопределенным.  |
@@ -38,7 +38,7 @@ ms.locfileid: "57743871"
 | `SIG_ACK`  | Указывает, что было получено подтверждение.  |
 | `SIG_ERR`  | Тип значения, возвращаемого из signal с информацией о произошедшей ошибке.  |
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[signal](../c-runtime-library/reference/signal.md)<br/>
+[signal](../c-runtime-library/reference/signal.md);<br/>
 [Глобальные константы](../c-runtime-library/global-constants.md)

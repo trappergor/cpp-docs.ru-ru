@@ -17,24 +17,27 @@ helpviewer_keywords:
 - std::basic_string_view::operator&lt;
 - std::basic_string_view::operator&lt;&lt;
 - std::basic_string_view::operator&lt;=, std::basic_string_view::operator==
-ms.openlocfilehash: 39727177ff0fe88e2fcc105a6cee49711b36de6e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b0761c1af7b2ed9f34917d2e4165561b357f0a30
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222241"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833222"
 ---
 # <a name="ltstring_viewgt-operators"></a>&lt;&gt;операторы string_view
 
 Используйте эти операторы для сравнения двух string_view объектов, string_view и другого строкового объекта (например, [std:: String](basic-string-class.md)или **char \* **), для которых предоставляется неявное преобразование.
 
-||||
-|-|-|-|
-|[operator! =](#op_neq)|[оператор&gt;](#op_gt)|[оператор&gt;=](#op_gt_eq)|
-|[оператор&lt;](#op_lt)|[оператор&lt;&lt;](#op_lt_lt)|[оператор&lt;=](#op_lt_eq)|
-|[Оператор = =](#op_eq_eq)|[оператор "" ОКП](#op_sv)|
+[operator! =](#op_neq)\
+[станции&gt;](#op_gt)\
+[станции&gt;=](#op_gt_eq)\
+[станции&lt;](#op_lt)\
+[станции&lt;&lt;](#op_lt_lt)\
+[станции&lt;=](#op_lt_eq)\
+[Оператор = =](#op_eq_eq)\
+[оператор "" ОКП](#op_sv)
 
-## <a name="operator"></a><a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a> operator! =
 
 Проверяет неравенство объекта слева от оператора объекту справа от оператора.
 
@@ -73,7 +76,7 @@ bool operator!=(
 
 Сравнение основано на парном лексикографическом сравнении последовательностей символов. Если число элементов равно количеству и все элементы равны, то два объекта равны. В противном случае они не равны.
 
-## <a name="operator"></a><a name="op_eq_eq"></a>Оператор = =
+## <a name="operator"></a><a name="op_eq_eq"></a> Оператор = =
 
 Проверяет равенство объекта слева от оператора объекту справа от оператора.
 
@@ -112,7 +115,7 @@ bool operator==(
 
 Сравнение основано на парном лексикографическом сравнении последовательностей символов. Если число элементов равно количеству и все элементы равны, то два объекта равны.
 
-## <a name="operatorlt"></a><a name="op_lt"></a>станции&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> станции&lt;
 
 Проверяет, меньше ли объект в левой части оператора, чем объект справа sidestring_view
 
@@ -173,7 +176,7 @@ int main()
 }
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>станции&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> станции&lt;=
 
 Проверяет, что объект слева от оператора меньше или равен объекту справа от оператора.
 
@@ -210,7 +213,7 @@ bool operator<=(
 
 См [. &lt; оператор](#op_lt).
 
-## <a name="operatorltlt"></a><a name="op_lt_lt"></a>станции&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a> станции&lt;&lt;
 
 Записывает string_view в поток вывода.
 
@@ -236,7 +239,7 @@ String_view, который необходимо указать в потоке 
 
 Этот оператор используется для вставки содержимого string_view в поток вывода, например с помощью [std:: cout](iostream.md#cout).
 
-## <a name="operatorgt"></a><a name="op_gt"></a>станции&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> станции&gt;
 
 Проверяет, что объект слева от оператора больше, чем объект справа от оператора.
 
@@ -273,7 +276,7 @@ bool operator>(
 
 См [. &lt; оператор](#op_lt).
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>станции&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> станции&gt;=
 
 Проверяет, что объект слева от оператора больше или равен объекту справа от оператора.
 
@@ -310,7 +313,7 @@ bool operator>=(
 
 См [. &lt; оператор](#op_lt).
 
-## <a name="operator-sv-string_view-literal"></a><a name="op_sv"></a>оператор "ОКП (string_view литерал)
+## <a name="operator-sv-string_view-literal"></a><a name="op_sv"></a> оператор "ОКП (string_view литерал)
 
 Конструирует string_view из строкового литерала. Требуется пространство имен `std::literals::string_view_literals` .
 

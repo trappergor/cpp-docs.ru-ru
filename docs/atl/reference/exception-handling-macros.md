@@ -1,5 +1,5 @@
 ---
-title: Исключение Обработка Макрос
+title: Макросы обработки исключений
 ms.date: 11/04/2016
 f1_keywords:
 - atldef/ATL::_ATLCATCH
@@ -9,30 +9,30 @@ helpviewer_keywords:
 - exception handling, macros
 - C++ exception handling, macros
 ms.assetid: a8385d34-3fb0-4006-a42a-de045cacf0f4
-ms.openlocfilehash: 2beffbbed0efee799005190bd7fd071a2087e4d9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7fcd8221ba5f121749cf366a93cc8a6d8d00ed7c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330085"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833443"
 ---
-# <a name="exception-handling-macros"></a>Исключение Обработка Макрос
+# <a name="exception-handling-macros"></a>Макросы обработки исключений
 
 Эти макросы обеспечивают поддержку обработки исключений.
 
-|||
+|Имя|Описание|
 |-|-|
-|[_ATLCATCH](#_atlcatch)|Заявление (ы) для обработки ошибок, возникающих в связанных. `_ATLTRY`|
-|[_ATLCATCHALL](#_atlcatchall)|Заявление (ы) для обработки ошибок, возникающих в связанных. `_ATLTRY`|
-|[_ATLTRY](#_atltry)|Отметки защищенного раздела кода, где может произойти ошибка.|
+|[_ATLCATCH](#_atlcatch)|Инструкции для управления ошибками, происходящими в связанном `_ATLTRY` .|
+|[_ATLCATCHALL](#_atlcatchall)|Инструкции для управления ошибками, происходящими в связанном `_ATLTRY` .|
+|[_ATLTRY](#_atltry)|Помечает раздел защищенного кода, в котором может возникнуть ошибка.|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atldef.h
+**Заголовок:** атлдеф. h
 
-## <a name="_atlcatch"></a><a name="_atlcatch"></a>_ATLCATCH
+## <a name="_atlcatch"></a><a name="_atlcatch"></a> _ATLCATCH
 
-Заявление (ы) для обработки ошибок, возникающих в связанных. `_ATLTRY`
+Инструкции для управления ошибками, происходящими в связанном `_ATLTRY` .
 
 ```
 _ATLCATCH(e)
@@ -40,16 +40,16 @@ _ATLCATCH(e)
 
 ### <a name="parameters"></a>Параметры
 
-*E*<br/>
-Исключение, чтобы поймать.
+*e*<br/>
+Исключение для перехвата.
 
 ### <a name="remarks"></a>Remarks
 
-Используется в сочетании со свойством `_ATLTRY`. Разрешает улов к C q [(CAtlException e)](../../cpp/try-throw-and-catch-statements-cpp.md) для обработки данного типа исключений C.
+Используется в сочетании со свойством `_ATLTRY`. Разрешается в C++ [catch (катлексцептион e)](../../cpp/try-throw-and-catch-statements-cpp.md) для обработки определенного типа исключений c++.
 
-## <a name="_atlcatchall"></a><a name="_atlcatchall"></a>_ATLCATCHALL
+## <a name="_atlcatchall"></a><a name="_atlcatchall"></a> _ATLCATCHALL
 
-Заявление (ы) для обработки ошибок, возникающих в связанных. `_ATLTRY`
+Инструкции для управления ошибками, происходящими в связанном `_ATLTRY` .
 
 ```
 _ATLCATCHALL
@@ -57,11 +57,11 @@ _ATLCATCHALL
 
 ### <a name="remarks"></a>Remarks
 
-Используется в сочетании со свойством `_ATLTRY`. Разрешает улов СЗ [(...)](../../cpp/try-throw-and-catch-statements-cpp.md) для обработки всех типов исключений C.
+Используется в сочетании со свойством `_ATLTRY`. Разрешается в C++ [catch (...)](../../cpp/try-throw-and-catch-statements-cpp.md) для обработки всех типов исключений c++.
 
-## <a name="_atltry"></a><a name="_atltry"></a>_ATLTRY
+## <a name="_atltry"></a><a name="_atltry"></a> _ATLTRY
 
-Отметки защищенного раздела кода, где может произойти ошибка.
+Помечает раздел защищенного кода, в котором может возникнуть ошибка.
 
 ```
 _ATLTRY
@@ -69,7 +69,7 @@ _ATLTRY
 
 ### <a name="remarks"></a>Remarks
 
-Используется в сочетании с [_ATLCATCH](#_atlcatch) или [_ATLCATCHALL.](#_atlcatchall) Разрешается [символу](../../cpp/try-throw-and-catch-statements-cpp.md)СЗ.
+Используется в сочетании с [_ATLCATCH](#_atlcatch) или [_ATLCATCHALL](#_atlcatchall). Разрешается в символ C++ [try](../../cpp/try-throw-and-catch-statements-cpp.md).
 
 ## <a name="see-also"></a>См. также раздел
 

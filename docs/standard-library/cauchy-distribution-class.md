@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::cauchy_distribution [C++], param_type
 - std::cauchy_distribution [C++], param_type
 ms.assetid: 21522351-f2f1-46d9-97f0-d358c932356c
-ms.openlocfilehash: 965ad6751938c07a0a62fedc8f65d53f9f6d2b04
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f8e35815a702878fde702e772edb21899608e7f7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217835"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88830804"
 ---
 # <a name="cauchy_distribution-class"></a>Класс cauchy_distribution
 
@@ -80,10 +80,8 @@ public:
 
 Шаблон класса описывает распределение, которое создает значения указанного пользователем типа с плавающей запятой или тип **`double`** , если он не указан, распределен в соответствии с распределение Коши распределением. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
-||||
-|-|-|-|
-|[cauchy_distribution](#cauchy_distribution)|`cauchy_distribution::a`|`cauchy_distribution::param`|
-|`cauchy_distribution::operator()`|`cauchy_distribution::b`|[param_type](#param_type)|
+[cauchy_distribution](#cauchy_distribution)\
+[param_type](#param_type)
 
 Функции свойств `a()` и `b()` возвращают соответствующие значения для хранимых параметров распределения `a` и `b`.
 
@@ -240,7 +238,7 @@ Distribution for 10 samples:
 
 **Пространство имен:** std
 
-## <a name="cauchy_distributioncauchy_distribution"></a><a name="cauchy_distribution"></a>cauchy_distribution:: cauchy_distribution
+## <a name="cauchy_distributioncauchy_distribution"></a><a name="cauchy_distribution"></a> cauchy_distribution:: cauchy_distribution
 
 Формирует распределение.
 
@@ -268,7 +266,7 @@ explicit cauchy_distribution(const param_type& parm);
 
 Второй конструктор создает объект, хранимые параметры которого инициализируются из *parm*. Вы можете получить и задать текущие параметры существующего распределения, вызвав функцию-член `param()`.
 
-## <a name="cauchy_distributionparam_type"></a><a name="param_type"></a>cauchy_distribution::p aram_type
+## <a name="cauchy_distributionparam_type"></a><a name="param_type"></a> cauchy_distribution::p aram_type
 
 Сохраняет все параметры распределения.
 

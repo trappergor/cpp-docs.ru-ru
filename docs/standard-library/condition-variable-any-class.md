@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::condition_variable_any::wait
 - std::condition_variable_any::wait_for
 - std::condition_variable_any::wait_until
-ms.openlocfilehash: 9187bddef456f131982d39fd64dacea5953b959b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9dc73de515aa8e321dbb28ca4a859b256613fbfe
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222567"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831481"
 ---
 # <a name="condition_variable_any-class"></a>Класс condition_variable_any
 
@@ -39,13 +39,13 @@ class condition_variable_any;
 
 ### <a name="constructors"></a>Конструкторы
 
-|||
+|Имя|Описание|
 |-|-|
 |[condition_variable_any](#condition_variable_any)|Формирует объект `condition_variable_any`.|
 
 ### <a name="functions"></a>Функции
 
-|||
+|Имя|Описание|
 |-|-|
 |[notify_all](#notify_all)|Разблокирует все потоки, которые ожидают объект `condition_variable_any`.|
 |[notify_one](#notify_one)|Разблокирует один из потоков, которые ожидают объект `condition_variable_any`.|
@@ -53,7 +53,7 @@ class condition_variable_any;
 |[wait_for](#wait_for)|Блокирует поток и задает интервал времени, после которого поток разблокируется.|
 |[wait_until](#wait_until)|Блокирует поток и задает максимальный момент времени, в который поток разблокируется.|
 
-## <a name="condition_variable_any"></a><a name="condition_variable_any"></a>condition_variable_any
+## <a name="condition_variable_any"></a><a name="condition_variable_any"></a> condition_variable_any
 
 Формирует объект `condition_variable_any`.
 
@@ -65,7 +65,7 @@ condition_variable_any();
 
 При недостатке памяти этот конструктор вызывает объект [system_error](../standard-library/system-error-class.md), имеющий код ошибки `not_enough_memory`. Если объект не может быть создан из-за недоступности некоторых других ресурсов, конструктор создает объект `system_error`, имеющий код ошибки `resource_unavailable_try_again`.
 
-## <a name="notify_all"></a><a name="notify_all"></a>notify_all
+## <a name="notify_all"></a><a name="notify_all"></a> notify_all
 
 Разблокирует все потоки, которые ожидают объект `condition_variable_any`.
 
@@ -73,7 +73,7 @@ condition_variable_any();
 void notify_all() noexcept;
 ```
 
-## <a name="notify_one"></a><a name="notify_one"></a>notify_one
+## <a name="notify_one"></a><a name="notify_one"></a> notify_one
 
 Разблокирует один из потоков, которые ожидают объект `condition_variable_any`.
 
@@ -81,7 +81,7 @@ void notify_all() noexcept;
 void notify_one() noexcept;
 ```
 
-## <a name="wait"></a><a name="wait"></a>ожидания
+## <a name="wait"></a><a name="wait"></a> ожидания
 
 Блокирует поток.
 
@@ -112,7 +112,7 @@ while (!Pred())
     wait(Lck);
 ```
 
-## <a name="wait_for"></a><a name="wait_for"></a>wait_for
+## <a name="wait_for"></a><a name="wait_for"></a> wait_for
 
 Блокирует поток и задает интервал времени, после которого поток разблокируется.
 
@@ -155,7 +155,7 @@ while(!Pred())
 return true;
 ```
 
-## <a name="wait_until"></a><a name="wait_until"></a>wait_until
+## <a name="wait_until"></a><a name="wait_until"></a> wait_until
 
 Блокирует поток и задает максимальный момент времени, в который поток разблокируется.
 

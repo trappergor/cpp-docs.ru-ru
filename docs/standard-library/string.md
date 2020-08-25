@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: 68b1865fd9c45c3782917edba273083dac086548
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cb7d869d36bea6854e3eacbacb6dfad0c32a816f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212128"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833184"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
@@ -59,9 +59,9 @@ ms.locfileid: "87212128"
 
 ### <a name="specialized-template-functions"></a>Специализированные функции шаблонов
 
-|||
+|Имя|Описание|
 |-|-|
-|hash|Создает хэш строки.|
+|`hash`|Создает хэш строки.|
 |[позиции](../standard-library/string-functions.md#swap)|Меняет местами массивы символов двух строк.|
 |[стод](../standard-library/string-functions.md#stod)|Преобразует последовательность символов в **`double`** .|
 |[стоф](../standard-library/string-functions.md#stof)|Преобразует последовательность символов в **`float`** .|
@@ -81,14 +81,14 @@ ms.locfileid: "87212128"
 
 ### <a name="classes"></a>Классы
 
-|Class|Описание:|
+|Класс|Описание|
 |-|-|
 |[Класс basic_string](../standard-library/basic-string-class.md)|Шаблон класса, описывающий объекты, которые могут хранить последовательность произвольных символьно-подобных объектов.|
 |[Структура char_traits](../standard-library/char-traits-struct.md)|Шаблон класса, описывающий атрибуты, связанные с символом типа CharType|
 
 ### <a name="specializations"></a>Специализации
 
-|||
+|Имя|Описание|
 |-|-|
 |[\<char>структура char_traits](../standard-library/char-traits-char-struct.md)|Структура, которая является специализацией структуры шаблона `char_traits` \<CharType> для элемента типа **`char`** .|
 |[char_traits<wchar_t структуры>](../standard-library/char-traits-wchar-t-struct.md)|Структура, которая является специализацией структуры шаблона `char_traits` \<CharType> для элемента типа **`wchar_t`** .|

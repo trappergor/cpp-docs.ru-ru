@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - IMAGE_EDIT_MODE Enumeration method [MFC]
 ms.assetid: e51db66a-fa1c-4766-9dac-a25b595f871a
-ms.openlocfilehash: 372a1df6500f4d7219c89d8f82425246c2236514
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37c877cc8562a9479535d9c6132e49e7c9b7e82f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410178"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831142"
 ---
-# <a name="cmfcimagepaintareaimageeditmode-enumeration"></a>Перечисление CMFCImagePaintArea::IMAGE_EDIT_MODE
+# <a name="cmfcimagepaintareaimage_edit_mode-enumeration"></a>Перечисление CMFCImagePaintArea::IMAGE_EDIT_MODE
 
-Задает режим рисования, который позволяет изменять образ в диалоговом окне редактора изображений.
+Задает режим рисования, используемый для изменения изображения в диалоговом окне редактора изображений.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -33,30 +33,29 @@ enum IMAGE_EDIT_MODE
 
 ## <a name="members"></a>Участники
 
-|||
+|Имя|Описание|
 |-|-|
-|name|Описание|
-|IMAGE_EDIT_MODE_PEN|Используется для рисования отдельных пикселей.|
-|IMAGE_EDIT_MODE_FILL|Используется для заполнения всех смежных областях, которые содержат цвет в текущем положении курсора.|
-|IMAGE_EDIT_MODE_LINE|Используется для рисования строки.|
+|IMAGE_EDIT_MODE_PEN|Используется для рисования отдельных пикселов.|
+|IMAGE_EDIT_MODE_FILL|Используется для заполнения всех смежных областей, содержащих цвет в текущем положении курсора.|
+|IMAGE_EDIT_MODE_LINE|Используется для рисования линии.|
 |IMAGE_EDIT_MODE_RECT|Используется для рисования прямоугольника.|
 |IMAGE_EDIT_MODE_ELLIPSE|Используется для рисования эллипса.|
-|IMAGE_EDIT_MODE_COLOR|Используется для задания текущего цвета на цвет в текущем положении курсора.|
+|IMAGE_EDIT_MODE_COLOR|Используется для установки текущего цвета на цвет в текущем положении курсора.|
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-`CMFCImagePaintArea` И `CMFCImageEditorDialog` это перечисление используется классами для текущего режима рисования. Режим рисования и текущего цвета используются для изменения области рисунка в диалоговом окне редактора изображений. Дополнительные сведения о `CMFCImagePaintArea` и `CMFCImageEditorDialog`, см. в разделе [класс CMFCImagePaintArea](../../mfc/reference/cmfcimagepaintarea-class.md) и [класс CMFCImageEditorDialog](../../mfc/reference/cmfcimageeditordialog-class.md).
+`CMFCImagePaintArea`Классы и `CMFCImageEditorDialog` используют это перечисление для установки текущего режима рисования. Режим рисования и текущий цвет используются для изменения области изображения в диалоговом окне редактора изображений. Дополнительные сведения о `CMFCImagePaintArea` и `CMFCImageEditorDialog` см. в разделе [класс перечисление CMFCImagePaintArea](../../mfc/reference/cmfcimagepaintarea-class.md) и [класс кмфЦимажеедитордиалог](../../mfc/reference/cmfcimageeditordialog-class.md).
 
-При выборе цвета из изображения, используя режим рисования IMAGE_EDIT_MODE_COLOR платформа присваивает текущий режим рисования для IMAGE_EDIT_MODE_PEN.
+При выборе цвета из изображения с помощью IMAGE_EDIT_MODE_COLOR режима рисования платформа устанавливает для текущего режима рисования значение IMAGE_EDIT_MODE_PEN.
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** afximagepaintarea.h
+**Заголовок:** афксимажепаинтареа. h
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Макросы и глобальные объекты](../../mfc/reference/mfc-macros-and-globals.md)<br/>
-[Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
+[Иерархическая диаграмма](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)<br/>
-[Класс CMFCImagePaintArea](../../mfc/reference/cmfcimagepaintarea-class.md)<br/>
-[Класс CMFCImageEditorDialog](../../mfc/reference/cmfcimageeditordialog-class.md)
+[Класс перечисление CMFCImagePaintArea](../../mfc/reference/cmfcimagepaintarea-class.md)<br/>
+[Класс КмфЦимажеедитордиалог](../../mfc/reference/cmfcimageeditordialog-class.md)

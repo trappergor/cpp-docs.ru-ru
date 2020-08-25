@@ -70,12 +70,12 @@ helpviewer_keywords:
 - std::numeric_limits [C++], tinyness_before
 - std::numeric_limits [C++], traps
 ms.assetid: 9e817177-0e91-48e6-b680-0531c4b26625
-ms.openlocfilehash: f0b33404f16df59e2cb73023f3539e87080734a1
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: eb2ee9bc6bc887ff6739c3da1bf2566dbdcbc016
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520607"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88830687"
 ---
 # <a name="numeric_limits-class"></a>Класс numeric_limits
 
@@ -93,7 +93,7 @@ template <class Type>
 *Тип*\
 Базовый тип данных элемента, свойства которого проверяются, запрашиваются или устанавливаются. *Тип* можно также объявить **`const`** , **`volatile`** или **`const volatile`** .
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Заголовок определяет явные специализации для типов,,,,,, **`wchar_t`** **`bool`** **`char`** **`signed char`** **`unsigned char`** **`short`** **`unsigned short`** , **`int`** , **`unsigned int`** ,,, **`long`** **`unsigned long`** **`float`** , **`double`** , **`long double`** ,,, **`long long`** **`unsigned long long`** **`char16_t`** и **`char32_t`** . Для этих явных специализаций член [numeric_limits:: is_specialized](#is_specialized) имеет значение **`true`** , а все соответствующие члены имеют осмысленные значения. Программа может предоставлять дополнительные явные специализации. Большинство функций-членов класса описывают или проверяют возможные реализации **`float`** .
 
@@ -101,7 +101,7 @@ template <class Type>
 
 ## <a name="static-functions-and-constants"></a>Статические функции и константы
 
-|||
+|Имя|Описание|
 |-|-|
 |[denorm_min](#denorm_min)|Возвращает наименьшее ненулевое денормализованное значение.|
 |[digits](#digits)|Возвращает количество цифр основания системы счисления, которое тип может представлять без потери точности.|
@@ -136,7 +136,7 @@ template <class Type>
 |[tinyness_before](#tinyness_before)|Проверяет, может ли тип определить, что значение слишком мало для представления в качестве нормализованного значения, до его округления.|
 |[traps](#traps)|Проверяет, реализованы ли для типа исключения при выполнении арифметических операций.|
 
-### <a name="denorm_min"></a><a name="denorm_min"></a>denorm_min
+### <a name="denorm_min"></a><a name="denorm_min"></a> denorm_min
 
 Возвращает наименьшее ненулевое денормализованное значение.
 
@@ -148,7 +148,7 @@ static constexpr Type denorm_min() throw();
 
 Наименьшее ненулевое денормализованное значение.
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Remarks
 
 **`long double`** то же самое, что и **`double`** для компилятора C++.
 
@@ -195,7 +195,7 @@ for long double objects is: 4.94066e-324
 0
 ```
 
-### <a name="digits"></a><a name="digits"></a>четырехзначным
+### <a name="digits"></a><a name="digits"></a> четырехзначным
 
 Возвращает количество цифр основания системы счисления, которое тип может представлять без потери точности.
 
@@ -207,7 +207,7 @@ static constexpr int digits = 0;
 
 Количество цифр основания системы счисления, которое тип может представлять без потери точности.
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Remarks
 
 Член сохраняет количество цифр основания системы счисления, которое тип может представлять без изменения, то есть количество бит (кроме бита знака) для предопределенного целочисленного типа, либо количество цифр мантиссы для предопределенного типа числа с плавающей запятой.
 
@@ -239,7 +239,7 @@ int main( )
 63
 ```
 
-### <a name="digits10"></a><a name="digits10"></a>digits10
+### <a name="digits10"></a><a name="digits10"></a> digits10
 
 Возвращает количество дробных десятичных цифр, которое тип может представлять без потери точности.
 
@@ -283,7 +283,7 @@ int main( )
 The float is; 100000000
 ```
 
-### <a name="epsilon"></a><a name="epsilon"></a>Эпсилон
+### <a name="epsilon"></a><a name="epsilon"></a> Эпсилон
 
 Функция возвращает разницу между 1 и наименьшим значением больше 1, которое может быть представлено для типа данных.
 
@@ -295,7 +295,7 @@ static constexpr Type epsilon() throw();
 
 Разница между 1 и наименьшим значением больше 1, которое может быть представлено для типа данных.
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Remarks
 
 Значение FLT_EPSILON для типа **`float`** . `epsilon`для типа — это наименьшее положительное число с плавающей запятой *n* , например, *n*  +  `epsilon`  +  *n* может быть представлено.
 
@@ -335,7 +335,7 @@ The difference between 1 and the smallest value greater than 1
 for long double objects is: 2.22045e-016
 ```
 
-### <a name="has_denorm"></a><a name="has_denorm"></a>has_denorm
+### <a name="has_denorm"></a><a name="has_denorm"></a> has_denorm
 
 Проверяет, допускает ли тип денормализованные значения.
 
@@ -347,7 +347,7 @@ static constexpr float_denorm_style has_denorm = denorm_absent;
 
 Значение перечисления типа `const float_denorm_style` , указывающее, допускает ли тип денормализованные значения.
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Remarks
 
 Член сохраняет `denorm_present` тип с плавающей запятой, который содержит денормализованные значения, фактически переменное число битов экспоненты.
 
@@ -381,7 +381,7 @@ Whether double objects allow denormalized values: 1
 Whether long int objects allow denormalized values: 0
 ```
 
-### <a name="has_denorm_loss"></a><a name="has_denorm_loss"></a>has_denorm_loss
+### <a name="has_denorm_loss"></a><a name="has_denorm_loss"></a> has_denorm_loss
 
 Проверяет, обнаружена ли потеря точности как потеря денормализации, а не неточный результат.
 
@@ -393,7 +393,7 @@ static constexpr bool has_denorm_loss = false;
 
 **`true`** значение, если потери точности обнаруживаются как потери денормализации; **`false`** Если нет.
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Remarks
 
 Член сохраняет значение true для типа, который определяет была ли потеря точности связана с представлением в виде денормализованного результата (слишком маленькое для представления в виде нормализованного значения) или поскольку оно неточное (отличается от результата, не подверженного ограничениям диапазона экспоненты и точности), опция с представлениями IEC 559 с плавающей точкой, которые могут повлиять не некоторые результаты.
 
@@ -427,7 +427,7 @@ Whether double objects can detect denormalized loss: 1
 Whether long int objects can detect denormalized loss: 0
 ```
 
-### <a name="has_infinity"></a><a name="has_infinity"></a>has_infinity
+### <a name="has_infinity"></a><a name="has_infinity"></a> has_infinity
 
 Проверяет, может ли тип представлять положительную бесконечность.
 
@@ -439,7 +439,7 @@ static constexpr bool has_infinity = false;
 
 **`true`** значение, если тип имеет представление для положительной бесконечности; **`false`** Если нет.
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Remarks
 
 Элемент возвращает значение, **`true`** если [is_iec559](#is_iec559) имеет значение **`true`** .
 
@@ -473,7 +473,7 @@ Whether double objects have infinity: 1
 Whether long int objects have infinity: 0
 ```
 
-### <a name="has_quiet_nan"></a><a name="has_quiet_nan"></a>has_quiet_NaN
+### <a name="has_quiet_nan"></a><a name="has_quiet_nan"></a> has_quiet_NaN
 
 Проверяет, может ли тип представлять "тихое" нечисло (NAN), которое является несигнализирующим.
 
@@ -485,7 +485,7 @@ static constexpr bool has_quiet_NaN = false;
 
 **`true`** значение, если **тип** имеет представление для нетихом NaN; **`false`** Если нет.
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Remarks
 
 "Тихое" NAN — это кодирование для нечисла, которое не обозначает свое присутствие в выражении. Возвращаемое значение —, **`true`** если [is_iec559](#is_iec559) имеет значение true.
 
@@ -519,7 +519,7 @@ Whether double objects have quiet_NaN: 1
 Whether long int objects have quiet_NaN: 0
 ```
 
-### <a name="has_signaling_nan"></a><a name="has_signaling_nan"></a>has_signaling_NaN
+### <a name="has_signaling_nan"></a><a name="has_signaling_nan"></a> has_signaling_NaN
 
 Проверяет, может ли тип представлять сообщения об обнаружении нечисла (NAN).
 
@@ -531,7 +531,7 @@ static constexpr bool has_signaling_NaN = false;
 
 **`true`** значение, если тип имеет представление для сигнала NAN; **`false`** Если нет.
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Remarks
 
 Сообщение о нечисле — это кодирование для нечисла, которое сообщает о его присутствии в выражении. Возвращаемое значение —, **`true`** если [is_iec559](#is_iec559) имеет значение true.
 
@@ -565,7 +565,7 @@ Whether double objects have a signaling_NaN: 1
 Whether long int objects have a signaling_NaN: 0
 ```
 
-### <a name="infinity"></a><a name="infinity"></a>бесконечность
+### <a name="infinity"></a><a name="infinity"></a> бесконечность
 
 Представление положительной бесконечности для типа, если имеется.
 
@@ -577,7 +577,7 @@ static constexpr Type infinity() throw();
 
 Представление положительной бесконечности для типа, если имеется.
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Remarks
 
 Возвращаемое значение имеет смысл только в том случае, если [has_infinity](#has_infinity) — **`true`** .
 
@@ -619,7 +619,7 @@ The representation of infinity for type double is: inf
 The representation of infinity for type long double is: inf
 ```
 
-### <a name="is_bounded"></a><a name="is_bounded"></a>is_bounded
+### <a name="is_bounded"></a><a name="is_bounded"></a> is_bounded
 
 Проверяет, конечен ли набор значений, представляемый типом.
 
@@ -631,7 +631,7 @@ static constexpr bool is_bounded = false;
 
 **`true`** значение, если тип имеет ограниченный набор представимых значений; **`false`** Если нет.
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Remarks
 
 Все предопределенные типы имеют ограниченный набор представимых значений и возвращают **`true`** .
 
@@ -673,7 +673,7 @@ Whether long int objects have bounded set of representable values: 1
 Whether unsigned char objects have bounded set of representable values: 1
 ```
 
-### <a name="is_exact"></a><a name="is_exact"></a>is_exact
+### <a name="is_exact"></a><a name="is_exact"></a> is_exact
 
 Проверяет, не содержат ли вычисления с типом ошибок округления.
 
@@ -685,7 +685,7 @@ static constexpr bool is_exact = false;
 
 **`true`** значение, если вычисления свободны от ошибок округления; **`false`** Если нет.
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Remarks
 
 Все предопределенные целочисленные типы имеют точные представления для их значений и возвращают **`false`** . Вещественное представление или представление с фиксированной запятой также считается точным, но представление с плавающей точкой — нет.
 
@@ -727,7 +727,7 @@ Whether long int objects have calculations free of rounding errors: 1
 Whether unsigned char objects have calculations free of rounding errors: 1
 ```
 
-### <a name="is_iec559"></a><a name="is_iec559"></a>is_iec559
+### <a name="is_iec559"></a><a name="is_iec559"></a> is_iec559
 
 Проверяет, соответствует ли тип стандартам IEC 559.
 
@@ -739,7 +739,7 @@ static constexpr bool is_iec559 = false;
 
 **`true`** значение, если тип соответствует стандартам IEC 559; **`false`** Если нет.
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Remarks
 
 IEC 559 — это международный стандарт для представления значений с плавающей точкой, который также известен в США как IEEE 754.
 
@@ -777,7 +777,7 @@ Whether int objects conform to iec559 standards: 0
 Whether unsigned char objects conform to iec559 standards: 0
 ```
 
-### <a name="is_integer"></a><a name="is_integer"></a>is_integer
+### <a name="is_integer"></a><a name="is_integer"></a> is_integer
 
 Проверяет, может ли тип представлять целые числа.
 
@@ -789,7 +789,7 @@ static constexpr bool is_integer = false;
 
 **`true`** значение, если тип имеет целочисленное представление; **`false`** Если нет.
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Remarks
 
 Все предопределенные целочисленные типы могут представлять целые числа.
 
@@ -827,7 +827,7 @@ Whether int objects have an integral representation: 1
 Whether unsigned char objects have an integral representation: 1
 ```
 
-### <a name="is_modulo"></a><a name="is_modulo"></a>is_modulo
+### <a name="is_modulo"></a><a name="is_modulo"></a> is_modulo
 
 Проверяет, имеет ли **тип** представление по модулю.
 
@@ -839,7 +839,7 @@ static constexpr bool is_modulo = false;
 
 **`true`** значение, если тип имеет представление по модулю; **`false`** Если нет.
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Remarks
 
 Представление по модулю — это представление, в котором все результаты уменьшены по модулю на некоторое значение. Все предопределенные целочисленные беззнаковые типы имеют представление по модулю.
 
@@ -877,7 +877,7 @@ Whether signed char objects have a modulo representation: 1
 Whether unsigned char objects have a modulo representation: 1
 ```
 
-### <a name="is_signed"></a><a name="is_signed"></a>is_signed
+### <a name="is_signed"></a><a name="is_signed"></a> is_signed
 
 Проверяет, может ли тип представлять числа со знаком.
 
@@ -889,7 +889,7 @@ static constexpr bool is_signed = false;
 
 **`true`** значение, если тип имеет подписанное представление; **`false`** Если нет.
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Remarks
 
 Член хранит значение true для типа, который может представлять числа со знаком, что верно для всех предопределенных типов с плавающей точкой и целочисленных типов со знаком.
 
@@ -927,7 +927,7 @@ Whether signed char objects have a signed representation: 1
 Whether unsigned char objects have a signed representation: 0
 ```
 
-### <a name="is_specialized"></a><a name="is_specialized"></a>is_specialized
+### <a name="is_specialized"></a><a name="is_specialized"></a> is_specialized
 
 Проверяет, имеет ли тип явную специализацию, определенную в шаблоне класса `numeric_limits` .
 
@@ -939,7 +939,7 @@ static constexpr bool is_specialized = false;
 
 **`true`** значение, если тип имеет явную специализацию, определенную в шаблоне класса; **`false`** Если нет.
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Remarks
 
 Все скалярные типы, отличные от указателей, имеют явную специализацию, определенную для шаблона класса `numeric_limits` .
 
@@ -981,7 +981,7 @@ Whether int objects have an explicit specialization in the class: 1
 Whether int* objects have an explicit specialization in the class: 0
 ```
 
-### <a name="lowest"></a><a name="lowest"></a>Нижняя
+### <a name="lowest"></a><a name="lowest"></a> Нижняя
 
 Возвращает наибольшее отрицательное конечное значение.
 
@@ -993,11 +993,11 @@ static constexpr Type lowest() throw();
 
 Возвращает наибольшее отрицательное конечное значение.
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Remarks
 
 Возвращает наиболее отрицательное конечное значение для типа (для целочисленных типов это обычно `min()`, а для типов с плавающей точкой — `-max()`). Возвращаемое значение имеет смысл, если `is_bounded` равно **`true`** .
 
-### <a name="max"></a><a name="max"></a>максимальной
+### <a name="max"></a><a name="max"></a> максимальной
 
 Возвращает максимальное конечное значение типа.
 
@@ -1009,7 +1009,7 @@ static constexpr Type max() throw();
 
 Максимальное конечное значение для типа.
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Remarks
 
 Максимальное конечное значение — INT_MAX для типа **`int`** и FLT_MAX для типа **`float`** . Возвращаемое значение имеет смысл, если [is_bounded](#is_bounded) равно **`true`** .
 
@@ -1039,7 +1039,7 @@ int main() {
 }
 ```
 
-### <a name="max_digits10"></a><a name="max_digits10"></a>max_digits10
+### <a name="max_digits10"></a><a name="max_digits10"></a> max_digits10
 
 Возвращает количество цифр дробной части, необходимых, чтобы у двух различных значений типа были уникальные десятичные представления.
 
@@ -1051,11 +1051,11 @@ static constexpr int max_digits10 = 0;
 
 Возвращает количество цифр дробной части, необходимых, чтобы у двух различных значений типа были уникальные десятичные представления.
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Remarks
 
 Этот член хранит количество цифр дробной части, необходимых, чтобы у двух различных значений типа были уникальные десятичные представления.
 
-### <a name="max_exponent"></a><a name="max_exponent"></a>max_exponent
+### <a name="max_exponent"></a><a name="max_exponent"></a> max_exponent
 
 Возвращает максимальную положительную целую степень, которую тип с плавающей запятой может представить как конечное значение при возведении основания системы счисления в эту степень.
 
@@ -1067,7 +1067,7 @@ static constexpr int max_exponent = 0;
 
 Максимальная целочисленная степень для основания системы счисления, представляемая типом.
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Remarks
 
 Возвращаемое значение функции-члена имеет смысл только для типов с плавающей запятой. `max_exponent`— Это значение, FLT_MAX_EXP для типа **`float`** .
 
@@ -1101,7 +1101,7 @@ The maximum radix-based exponent for type double is:  1024
 The maximum radix-based exponent for type long double is:  1024
 ```
 
-### <a name="max_exponent10"></a><a name="max_exponent10"></a>max_exponent10
+### <a name="max_exponent10"></a><a name="max_exponent10"></a> max_exponent10
 
 Возвращает максимальную положительную целую степень, которую тип с плавающей запятой может представить как конечное значение при возведении десяти в эту степень.
 
@@ -1113,7 +1113,7 @@ static constexpr int max_exponent10 = 0;
 
 Максимальная целочисленная степень основания 10, которую может представить этот тип.
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Remarks
 
 Возвращаемое значение функции-члена имеет смысл только для типов с плавающей запятой. `max_exponent`— Это значение, FLT_MAX_10 для типа **`float`** .
 
@@ -1159,7 +1159,7 @@ static constexpr Type min() throw();
 
 Минимальное нормализованное значение для типа.
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Remarks
 
 Минимальное нормализованное значение INT_MIN для типа **`int`** и FLT_MIN для типа **`float`** . Возвращаемое значение имеет смысл, если [is_bounded](#is_bounded) равно **`true`** или если [is_signed](#is_signed) равно **`false`** .
 
@@ -1197,7 +1197,7 @@ The minimum value for type int is:  -2147483648
 The minimum value for type short int is:  -32768
 ```
 
-### <a name="min_exponent"></a><a name="min_exponent"></a>min_exponent
+### <a name="min_exponent"></a><a name="min_exponent"></a> min_exponent
 
 Возвращает максимальную отрицательную целую степень, которую тип с плавающей запятой может представить как конечное значение при возведении основания системы счисления в эту степень.
 
@@ -1209,7 +1209,7 @@ static constexpr int min_exponent = 0;
 
 Минимальная целочисленная степень основания системы счисления, которую может представить тип.
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Remarks
 
 Функция-член имеет смысл только для типов с плавающей запятой. `min_exponent`— Это значение, FLT_MIN_EXP для типа **`float`** .
 
@@ -1243,7 +1243,7 @@ The minimum radix-based exponent for type double is:  -1021
 The minimum radix-based exponent for type long double is:  -1021
 ```
 
-### <a name="min_exponent10"></a><a name="min_exponent10"></a>min_exponent10
+### <a name="min_exponent10"></a><a name="min_exponent10"></a> min_exponent10
 
 Возвращает максимальную отрицательную целую степень, которую тип с плавающей запятой может представить как конечное значение при возведении десяти в эту степень.
 
@@ -1255,7 +1255,7 @@ static constexpr int min_exponent10 = 0;
 
 Минимальная целая степень числа 10, которую может представить тип.
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Remarks
 
 Функция-член имеет смысл только для типов с плавающей запятой. `min_exponent10`— Это значение, FLT_MIN_10_EXP для типа **`float`** .
 
@@ -1289,7 +1289,7 @@ The minimum base 10 exponent for type double is:  -307
 The minimum base 10 exponent for type long double is:  -307
 ```
 
-### <a name="quiet_nan"></a><a name="quiet_nan"></a>quiet_NaN
+### <a name="quiet_nan"></a><a name="quiet_nan"></a> quiet_NaN
 
 Возвращает представление "тихого" нечисла (NAN) для типа.
 
@@ -1301,7 +1301,7 @@ static constexpr Type quiet_NaN() throw();
 
 Представление "тихого" нечисла (NAN) для типа.
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Remarks
 
 Возвращаемое значение имеет смысл только в том случае, если [has_quiet_NaN](#has_quiet_nan) — **`true`** .
 
@@ -1335,7 +1335,7 @@ The quiet NaN for type int is:  0
 The quiet NaN for type long double is:  1.#QNAN
 ```
 
-### <a name="radix"></a><a name="radix"></a>основание системы счисления
+### <a name="radix"></a><a name="radix"></a> основание системы счисления
 
 Возвращает целочисленное основание системы счисления, используемое для представления типа.
 
@@ -1347,7 +1347,7 @@ static constexpr int radix = 0;
 
 Целочисленная база для представления типа.
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Remarks
 
 Для предопределенных целочисленных типов база — 2, а для предопределенных типов с плавающей запятой — база, в которую можно возвести степень, или FLT_RADIX.
 
@@ -1381,7 +1381,7 @@ The base for type int is:  2
 The base for type long double is:  2
 ```
 
-### <a name="round_error"></a><a name="round_error"></a>round_error
+### <a name="round_error"></a><a name="round_error"></a> round_error
 
 Возвращает максимальную ошибку округления для типа.
 
@@ -1423,7 +1423,7 @@ The maximum rounding error for type int is:  0
 The maximum rounding error for type long double is:  0.5
 ```
 
-### <a name="round_style"></a><a name="round_style"></a>round_style
+### <a name="round_style"></a><a name="round_style"></a> round_style
 
 Возвращает значение, описывающее различные методы, которые могут быть выбраны реализацией для округления значения с плавающей запятой до целочисленного.
 
@@ -1435,7 +1435,7 @@ static constexpr float_round_style round_style = round_toward_zero;
 
 Значение из перечисления `float_round_style`, которое описывает тип округления.
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Remarks
 
 Член хранит значение, которое описывает различные методы, из которых реализация может выбирать для округления значения с плавающей точкой до целого значения.
 
@@ -1470,7 +1470,7 @@ The rounding style for a double type is now: 1
 The rounding style for an int type is: 0
 ```
 
-### <a name="signaling_nan"></a><a name="signaling_nan"></a>signaling_NaN
+### <a name="signaling_nan"></a><a name="signaling_nan"></a> signaling_NaN
 
 Возвращает представление обозначения нечисла (NAN) для типа.
 
@@ -1482,7 +1482,7 @@ static constexpr Type signaling_NaN() throw();
 
 Представление сообщения о нечисле (NAN) для типа.
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Remarks
 
 Возвращаемое значение имеет смысл только в том случае, если [has_signaling_NaN](#has_signaling_nan) — **`true`** .
 
@@ -1510,7 +1510,7 @@ int main( )
 }
 ```
 
-### <a name="tinyness_before"></a><a name="tinyness_before"></a>tinyness_before
+### <a name="tinyness_before"></a><a name="tinyness_before"></a> tinyness_before
 
 Проверяет, может ли тип определить, что значение слишком мало для представления в качестве нормализованного значения, до его округления.
 
@@ -1522,7 +1522,7 @@ static constexpr bool tinyness_before = false;
 
 **`true`** значение, если тип может обнаружить немелкие значения перед округлением; **`false`** если это невозможно.
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Remarks
 
 Типы, которые могут распознавать слишком малые значения, были включены в представления IEC 559 с плавающей запятой в качестве опции и их реализация может влиять на некоторые результаты.
 
@@ -1560,7 +1560,7 @@ Whether long int types can detect tinyness before rounding: 0
 Whether unsigned char types can detect tinyness before rounding: 0
 ```
 
-### <a name="traps"></a><a name="traps"></a>треппинг
+### <a name="traps"></a><a name="traps"></a> треппинг
 
 Проверяет, реализованы ли для типа исключения при выполнении арифметических операций.
 

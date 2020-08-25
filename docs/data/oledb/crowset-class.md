@@ -228,12 +228,12 @@ helpviewer_keywords:
 - Update method
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-ms.openlocfilehash: 2be4cb1936536b68aed1f8ea937f6f72904c766d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8cacbd6d188b3453c0111cca6565b7def9e3aa1e
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221527"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831571"
 ---
 # <a name="crowset-class"></a>Класс CRowset
 
@@ -259,7 +259,7 @@ class CRowset
 
 ### <a name="methods"></a>Методы
 
-|||
+| Имя | Описание |
 |-|-|
 |[аддрефровс](#addrefrows)|Увеличивает значение счетчика ссылок, связанного с текущей строкой.|
 |[Закрыть](#close)|Освобождает строки и текущий `IRowset` интерфейс.|
@@ -283,7 +283,7 @@ class CRowset
 |[ReleaseRows](#releaserows)|Вызывает метод [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) , чтобы освободить текущий маркер строки.|
 |[SetData](#setdata)|Задает значения данных в одном или нескольких столбцах строки с помощью [IRowsetChange: SetData](/previous-versions/windows/desktop/ms721232(v=vs.85)).|
 |[Отменить](#undo)|Отменяет любые изменения, внесенные в строку с момента последней выборки или [обновления](../../data/oledb/crowset-update.md).|
-|[Update](#update)|Передает все ожидающие изменения, внесенные в текущую строку с момента последней выборки или обновления.|
+|[Обновление](#update)|Передает все ожидающие изменения, внесенные в текущую строку с момента последней выборки или обновления.|
 |[UpdateAll](#updateall)|Передает все ожидающие изменения, внесенные во все строки с момента последней выборки или обновления.|
 
 ## <a name="remarks"></a>Remarks
@@ -292,7 +292,7 @@ class CRowset
 
 Этот класс не предназначен для создания экземпляра, а передается как параметр шаблона в `CTable` или `CCommand` ( `CRowset` является значением по умолчанию).
 
-## <a name="crowsetaddrefrows"></a><a name="addrefrows"></a>CRowset:: Аддрефровс
+## <a name="crowsetaddrefrows"></a><a name="addrefrows"></a> CRowset:: Аддрефровс
 
 Вызывает метод [IRowset:: аддрефровс](/previous-versions/windows/desktop/ms719619(v=vs.85)) для увеличения (на единицу) счетчика ссылок, связанного с текущим маркером строки.
 
@@ -310,7 +310,7 @@ HRESULT AddRefRows() throw();
 
 Этот метод увеличивает значение счетчика ссылок для текущего маркера строки. Вызовите [ReleaseRows](../../data/oledb/crowset-releaserows.md) , чтобы уменьшить число. Строки, возвращаемые методами Move, имеют счетчик ссылок, равный единице.
 
-## <a name="crowsetclose"></a><a name="close"></a>CRowset:: Close
+## <a name="crowsetclose"></a><a name="close"></a> CRowset:: Close
 
 Освобождает строки и текущий интерфейс [IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85)) .
 
@@ -324,7 +324,7 @@ void Close() throw();
 
 Этот метод освобождает все строки, находящиеся в данный момент в наборе строк.
 
-## <a name="crowsetcompare"></a><a name="compare"></a>CRowset:: Compare
+## <a name="crowsetcompare"></a><a name="compare"></a> CRowset:: Compare
 
 Сравнивает две закладки с помощью [IRowsetLocate:: Compare](/previous-versions/windows/desktop/ms709539(v=vs.85)).
 
@@ -357,7 +357,7 @@ HRESULT Compare(const CBookmarkBase& bookmark1,
 
 Сведения об использовании закладок в потребителях см. в разделе [Использование закладок](../../data/oledb/using-bookmarks.md).
 
-## <a name="crowsetcrowset"></a><a name="crowset"></a>CRowset:: CRowset
+## <a name="crowsetcrowset"></a><a name="crowset"></a> CRowset:: CRowset
 
 Создает новый `CRowset` объект и (необязательно) связывает его с интерфейсом [IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85)) , предоставляемым в качестве параметра.
 
@@ -374,7 +374,7 @@ CRowset(IRowset* pRowset);
 *провсет*<br/>
 окне Указатель на `IRowset` интерфейс, который должен быть связан с этим классом.
 
-## <a name="crowsetdelete"></a><a name="delete"></a>CRowset::D удалить
+## <a name="crowsetdelete"></a><a name="delete"></a> CRowset::D удалить
 
 Вызывает [IRowsetChange::D елетеровс](/previous-versions/windows/desktop/ms724362(v=vs.85)) , чтобы удалить текущую строку из набора строк.
 
@@ -388,7 +388,7 @@ HRESULT Delete() const throw();
 
 Стандартное значение HRESULT.
 
-## <a name="crowsetfindnextrow"></a><a name="findnextrow"></a>CRowset:: FindNextRow
+## <a name="crowsetfindnextrow"></a><a name="findnextrow"></a> CRowset:: FindNextRow
 
 Находит следующую совпадающую строку после указанной закладки.
 
@@ -441,7 +441,7 @@ HRESULT FindNextRow(DBCOMPAREOP op,
 
 Сведения об использовании закладок в потребителях см. в разделе [Использование закладок](../../data/oledb/using-bookmarks.md).
 
-## <a name="crowsetgetapproximateposition"></a><a name="getapproximateposition"></a>CRowset:: Жетаппроксиматепоситион
+## <a name="crowsetgetapproximateposition"></a><a name="getapproximateposition"></a> CRowset:: Жетаппроксиматепоситион
 
 Возвращает приблизительное расположение строки, соответствующей закладке.
 
@@ -474,7 +474,7 @@ HRESULT GetApproximatePosition(const CBookmarkBase* pBookmark,
 
 Сведения об использовании закладок в потребителях см. в разделе [Использование закладок](../../data/oledb/using-bookmarks.md).
 
-## <a name="crowsetgetdata"></a><a name="getdata"></a>CRowset:: GetData
+## <a name="crowsetgetdata"></a><a name="getdata"></a> CRowset:: GetData
 
 Извлекает данные из копии набора строк для строки.
 
@@ -499,7 +499,7 @@ HRESULT GetData(int nAccessor) throw();
 
 Если указать метод доступа, который не является средством автодоступа в [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md), используйте этот метод для явного получения данных путем передачи номера метода доступа.
 
-## <a name="crowsetgetdatahere"></a><a name="getdatahere"></a>CRowset:: Жетдатахере
+## <a name="crowsetgetdatahere"></a><a name="getdatahere"></a> CRowset:: Жетдатахере
 
 Извлекает данные из текущей строки и помещает их в указанный буфер.
 
@@ -526,7 +526,7 @@ HRESULT GetDataHere(int nAccessor,
 
 Пример использования этой функции см. в разделе [пример для чтения](../../overview/visual-cpp-samples.md).
 
-## <a name="crowsetgetoriginaldata"></a><a name="getoriginaldata"></a>CRowset:: Жеторигиналдата
+## <a name="crowsetgetoriginaldata"></a><a name="getoriginaldata"></a> CRowset:: Жеторигиналдата
 
 Вызовы `IRowsetUpdate::GetOriginalData` для получения данных, которые недавно были получены или переданы в источник данных.
 
@@ -546,7 +546,7 @@ HRESULT GetOriginalData() throw();
 
 Для этого метода требуется дополнительный интерфейс `IRowsetUpdate` , который может не поддерживаться для всех поставщиков. Если это так, метод возвращает E_NOINTERFACE. Необходимо также задать значение `DBPROP_IRowsetUpdate` VARIANT_TRUE перед вызовом `Open` для таблицы или команды, содержащей набор строк.
 
-## <a name="crowsetgetrowstatus"></a><a name="getrowstatus"></a>CRowset:: Жетровстатус
+## <a name="crowsetgetrowstatus"></a><a name="getrowstatus"></a> CRowset:: Жетровстатус
 
 Возвращает состояние всех строк.
 
@@ -569,7 +569,7 @@ HRESULT GetRowStatus(DBPENDINGSTATUS* pStatus) const throw();
 
 Для этого метода требуется дополнительный интерфейс `IRowsetUpdate` , который может не поддерживаться для всех поставщиков. Если это так, метод возвращает E_NOINTERFACE. Необходимо также задать значение `DBPROP_IRowsetUpdate` VARIANT_TRUE перед вызовом `Open` для таблицы или команды, содержащей набор строк.
 
-## <a name="crowsetinsert"></a><a name="insert"></a>CRowset:: INSERT
+## <a name="crowsetinsert"></a><a name="insert"></a> CRowset:: INSERT
 
 Создает и инициализирует новую строку, используя данные из метода доступа.
 
@@ -606,7 +606,7 @@ HRESULT Insert(int nAccessor = 0,
 
 [!code-cpp[NVC_OLEDB_Consumer#10](../../data/oledb/codesnippet/cpp/crowset-insert_1.cpp)]
 
-## <a name="crowsetissamerow"></a><a name="issamerow"></a>CRowset:: IsSameRow
+## <a name="crowsetissamerow"></a><a name="issamerow"></a> CRowset:: IsSameRow
 
 Сравнивает указанную строку с текущей строкой.
 
@@ -625,7 +625,7 @@ HRESULT IsSameRow(HROW hRow) const throw();
 
 Стандартное значение HRESULT. S_OK указывает, что строки одинаковы. Другие значения см. в разделе [ировсетиндентити:: IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) в *справочнике программиста OLE DB* в Windows SDK.
 
-## <a name="crowsetmovefirst"></a><a name="movefirst"></a>CRowset:: MoveFirst
+## <a name="crowsetmovefirst"></a><a name="movefirst"></a> CRowset:: MoveFirst
 
 Перемещает курсор в начальную позицию и получает начальную строку.
 
@@ -643,7 +643,7 @@ HRESULT MoveFirst() throw();
 
 Вызывает метод [IRowset:: свойство RestartPosition](/previous-versions/windows/desktop/ms712877(v=vs.85)) , чтобы переместить расположение следующей выборки в начальную позицию (положение следующей выборки при создании набора строк) и получает начальную строку.
 
-## <a name="crowsetmovelast"></a><a name="movelast"></a>CRowset:: MoveLast
+## <a name="crowsetmovelast"></a><a name="movelast"></a> CRowset:: MoveLast
 
 Перемещает курсор в последнюю строку.
 
@@ -663,7 +663,7 @@ HRESULT MoveLast() throw();
 
 Для этого метода необходимо задать значение `DBPROP_CANSCROLLBACKWARDS` VARIANT_TRUE перед вызовом `Open` для таблицы или команды, содержащей набор строк. (Для повышения производительности можно также задать значение `DBPROP_QUICKRESTART` VARIANT_TRUE.)
 
-## <a name="crowsetmovenext"></a><a name="movenext"></a>CRowset:: MoveNext
+## <a name="crowsetmovenext"></a><a name="movenext"></a> CRowset:: MoveNext
 
 Перемещает курсор к следующей записи.
 
@@ -694,13 +694,13 @@ HRESULT MoveNext(LONG lSkip,
 
 Для этого метода необходимо задать следующие свойства перед вызовом `Open` для таблицы или команды, содержащей набор строк:
 
-- `DBPROP_CANSCROLLBACKWARDS`должен быть VARIANT_TRUE, если *лскип* < 0
+- `DBPROP_CANSCROLLBACKWARDS` должен быть VARIANT_TRUE, если *лскип* < 0
 
-- `DBPROP_CANFETCHBACKWARDS`должен быть VARIANT_TRUE, если *бфорвард* = false
+- `DBPROP_CANFETCHBACKWARDS` должен быть VARIANT_TRUE, если *бфорвард* = false
 
 В противном случае (если *лскип* >= 0 и *бфорвард* = true), не нужно задавать какие-либо дополнительные свойства.
 
-## <a name="crowsetmoveprev"></a><a name="moveprev"></a>CRowset:: Мовепрев
+## <a name="crowsetmoveprev"></a><a name="moveprev"></a> CRowset:: Мовепрев
 
 Перемещает курсор к предыдущей записи.
 
@@ -718,7 +718,7 @@ HRESULT MovePrev() throw();
 
 Для этого метода необходимо задать значение `DBPROP_CANFETCHBACKWARDS` или, `DBPROP_CANSCROLLBACKWARDS` чтобы VARIANT_TRUE перед вызовом `Open` для таблицы или команды, содержащей набор строк.
 
-## <a name="crowsetmovetobookmark"></a><a name="movetobookmark"></a>CRowset:: Моветобукмарк
+## <a name="crowsetmovetobookmark"></a><a name="movetobookmark"></a> CRowset:: Моветобукмарк
 
 Извлекает строку, помеченную закладкой, или строку с указанным смещением (*лскип*) из этой закладки.
 
@@ -747,7 +747,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 Сведения об использовании закладок в потребителях см. в разделе [Использование закладок](../../data/oledb/using-bookmarks.md).
 
-## <a name="crowsetmovetoratio"></a><a name="movetoratio"></a>CRowset:: Моветоратио
+## <a name="crowsetmovetoratio"></a><a name="movetoratio"></a> CRowset:: Моветоратио
 
 Извлекает строки, начиная с части, расположенной в наборе строк.
 
@@ -775,7 +775,7 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
 
 ### <a name="remarks"></a>Remarks
 
-`MoveToRatio`выберет строки приблизительно по следующей формуле:
+`MoveToRatio` выберет строки приблизительно по следующей формуле:
 
 `(nNumerator *  RowsetSize ) / nDenominator`
 
@@ -783,7 +783,7 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
 
 Для этого метода требуется дополнительный интерфейс `IRowsetScroll` , который может не поддерживаться для всех поставщиков. Если это так, метод возвращает E_NOINTERFACE. Необходимо также задать значение `DBPROP_IRowsetScroll` VARIANT_TRUE перед вызовом `Open` для таблицы или команды, содержащей набор строк.
 
-## <a name="crowsetreleaserows"></a><a name="releaserows"></a>CRowset:: ReleaseRows
+## <a name="crowsetreleaserows"></a><a name="releaserows"></a> CRowset:: ReleaseRows
 
 Вызывает метод [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) , чтобы освободить текущий маркер строки.
 
@@ -797,7 +797,7 @@ HRESULT ReleaseRows() throw();
 
 Стандартное значение HRESULT.
 
-## <a name="crowsetsetdata"></a><a name="setdata"></a>CRowset:: SetData
+## <a name="crowsetsetdata"></a><a name="setdata"></a> CRowset:: SetData
 
 Задает значения данных в одном или нескольких столбцах строки.
 
@@ -826,7 +826,7 @@ HRESULT SetData(int nAccessor) const throw();
 
 Операция установки может завершиться ошибкой, если один или несколько столбцов недоступны для записи. Измените схему курсоров, чтобы исправить это.
 
-## <a name="crowsetundo"></a><a name="undo"></a>CRowset:: Undo
+## <a name="crowsetundo"></a><a name="undo"></a> CRowset:: Undo
 
 Отменяет любые изменения, внесенные в строку с момента последней выборки или [обновления](../../data/oledb/crowset-update.md).
 
@@ -857,7 +857,7 @@ HRESULT Undo(DBCOUNTITEM* pcRows = NULL,
 
 Для этого метода требуется дополнительный интерфейс `IRowsetUpdate` , который может не поддерживаться для всех поставщиков. Если это так, метод возвращает E_NOINTERFACE. Необходимо также задать значение `DBPROP_IRowsetUpdate` VARIANT_TRUE перед вызовом `Open` для таблицы или команды, содержащей набор строк.
 
-## <a name="crowsetupdate"></a><a name="update"></a>CRowset:: Update
+## <a name="crowsetupdate"></a><a name="update"></a> CRowset:: Update
 
 Передает все ожидающие изменения, внесенные в текущую строку с момента последней выборки или `Update` вызова метода.
 
@@ -890,7 +890,7 @@ HRESULT Update(DBCOUNTITEM* pcRows = NULL,
 
 Для этого метода требуется дополнительный интерфейс `IRowsetUpdate` , который может не поддерживаться для всех поставщиков. Если это так, метод возвращает E_NOINTERFACE. Необходимо также задать значение `DBPROP_IRowsetUpdate` VARIANT_TRUE перед вызовом `Open` для таблицы или команды, содержащей набор строк.
 
-## <a name="crowsetupdateall"></a><a name="updateall"></a>CRowset:: UpdateAll
+## <a name="crowsetupdateall"></a><a name="updateall"></a> CRowset:: UpdateAll
 
 Передает все ожидающие изменения, внесенные во все строки с момента последней выборки или `Update` вызова.
 
@@ -915,7 +915,7 @@ HRESULT UpdateAll(DBCOUNTITEM* pcRows = NULL,
 
 ### <a name="remarks"></a>Remarks
 
-Передает все ожидающие изменения, внесенные во все строки, так как эти строки были в последний раз выбраны или обновлены с помощью [Update](../../data/oledb/crowset-update.md) или `UpdateAll` . `UpdateAll`обновляет каждую измененную строку независимо от того, есть ли у вас их обработчик (см. раздел *пфров*).
+Передает все ожидающие изменения, внесенные во все строки, так как эти строки были в последний раз выбраны или обновлены с помощью [Update](../../data/oledb/crowset-update.md) или `UpdateAll` . `UpdateAll` обновляет каждую измененную строку независимо от того, есть ли у вас их обработчик (см. раздел *пфров*).
 
 Например, если вы использовали `Insert` для вставки пяти строк в набор строк, можно либо вызвать `Update` пять раз, либо вызвать `UpdateAll` один раз, чтобы обновить все.
 

@@ -36,12 +36,12 @@ helpviewer_keywords:
 - process creation
 - _spawnvp function
 ms.assetid: 8d8774ec-6ad4-4680-a5aa-440cde1e0249
-ms.openlocfilehash: 3ed6b780fb06db9e5951a943f52a556ad0f0748e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 2cd1c0e464fe7efb1cce5ba969b34d040b099efa
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916124"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831337"
 ---
 # <a name="_spawnvp-_wspawnvp"></a>_spawnvp, _wspawnvp
 
@@ -80,7 +80,7 @@ intptr_t _wspawnvp(
 
 Возвращаемое значение из синхронного **_spawnvp** или **_wspawnvp** (**_P_WAIT** , заданное для *режима*) — это состояние выхода нового процесса. Возвращаемое значение из асинхронного **_spawnvp** или **_wspawnvp** (**_P_NOWAIT** или **_P_NOWAITO** , заданное для *режима*) — это обработчик процесса. Состояние выхода имеет значение 0, если процесс завершился обычным образом. Можно задать для состояния выхода ненулевое значение, если порожденный процесс специально использует ненулевый аргумент для вызова подпрограммы **выхода** . Если новый процесс не задал положительное состояние выхода в явном виде, положительное состояние выхода указывает на аварийный выход по отмене или прерыванию. Возвращаемое значение, равное-1, указывает на ошибку (новый процесс не запущен). В этом случае для **параметра «значение возврата»** задается одно из следующих значений:
 
-|||
+| Значение | Описание |
 |-|-|
 | **E2BIG** | Длина списка аргументов превышает 1024 байта. |
 | **еинвал** | Недопустимый аргумент *mode* . |
@@ -114,7 +114,7 @@ intptr_t _wspawnvp(
 ## <a name="see-also"></a>См. также раздел
 
 [Управление процессами и средой](../../c-runtime-library/process-and-environment-control.md)<br/>
-[Функции _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, функции _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [рвал](abort.md)<br/>
 [atexit](atexit.md)<br/>
 [_exec, функции _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
