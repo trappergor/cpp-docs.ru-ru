@@ -11,18 +11,18 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: 14c9298758e9d55445affaf5a65c81910a9ab151
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2bcdfb474ee852e55bd54f1b125716e7785f28be
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224231"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833482"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Макросы отладки и отчетов об ошибках
 
 Эти макросы предоставляют полезные средства отладки и трассировки.
 
-|||
+|Имя|Описание|
 |-|-|
 |[_ATL_DEBUG_INTERFACES](#_atl_debug_interfaces)|Операции записи в окно вывода — все утечки интерфейса, обнаруженные при `_Module.Term` вызове метода.|
 |[_ATL_DEBUG_QI](#_atl_debug_qi)|Записывает все вызовы в `QueryInterface` окно вывода.|
@@ -32,7 +32,7 @@ ms.locfileid: "87224231"
 |[ATLTRACE](#atltrace)|Сообщает о предупреждениях на выходное устройство, например в окно отладчика, в соответствии с указанными флагами и уровнями. Включается для обеспечения обратной совместимости.|
 |[ATLTRACE2](#atltrace2)|Сообщает о предупреждениях на выходное устройство, например в окно отладчика, в соответствии с указанными флагами и уровнями.|
 
-## <a name="_atl_debug_interfaces"></a><a name="_atl_debug_interfaces"></a>_ATL_DEBUG_INTERFACES
+## <a name="_atl_debug_interfaces"></a><a name="_atl_debug_interfaces"></a> _ATL_DEBUG_INTERFACES
 
 Определите этот макрос перед включением любых файлов заголовков ATL для трассировки всех `AddRef` и `Release` вызовов интерфейсов компонентов в окне вывода.
 
@@ -63,7 +63,7 @@ ms.locfileid: "87224231"
 > [!NOTE]
 > _ATL_DEBUG_INTERFACES можно использовать в розничных сборках.
 
-## <a name="_atl_debug_qi"></a><a name="_atl_debug_qi"></a>_ATL_DEBUG_QI
+## <a name="_atl_debug_qi"></a><a name="_atl_debug_qi"></a> _ATL_DEBUG_QI
 
 Записывает все вызовы в `QueryInterface` окно вывода.
 
@@ -77,7 +77,7 @@ ms.locfileid: "87224231"
 
 *имя интерфейса* - `failed`
 
-## <a name="atlassert"></a><a name="atlassert"></a>атлассерт
+## <a name="atlassert"></a><a name="atlassert"></a> атлассерт
 
 Макрос АТЛАССЕРТ выполняет те же функции, что и макрос [_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) , найденный в библиотеке времени выполнения C.
 
@@ -98,7 +98,7 @@ ATLASSERT(booleanExpression);
 
 **Заголовок:** атлдеф. h
 
-## <a name="atlensure"></a><a name="atlensure"></a>атленсуре
+## <a name="atlensure"></a><a name="atlensure"></a> атленсуре
 
 Этот макрос используется для проверки параметров, передаваемых в функцию.
 
@@ -135,7 +135,7 @@ ATLENSURE_THROW(booleanExpression, hr);
 
 **Заголовок:** AFX. h
 
-## <a name="atltracenotimpl"></a><a name="atltracenotimpl"></a>атлтраценотимпл
+## <a name="atltracenotimpl"></a><a name="atltracenotimpl"></a> атлтраценотимпл
 
 В отладочных сборках ATL отправляет строку " *funcname* не реализована" на устройство дампа и возвращает E_NOTIMPL.
 
@@ -160,7 +160,7 @@ ATLTRACENOTIMPL(funcname);
 
 **Заголовок:** ATLTRACE. h
 
-## <a name="atltrace"></a><a name="atltrace"></a>ATLTRACE
+## <a name="atltrace"></a><a name="atltrace"></a> ATLTRACE
 
 Сообщает о предупреждениях на выходное устройство, например в окно отладчика, в соответствии с указанными флагами и уровнями. Включается для обеспечения обратной совместимости.
 
@@ -181,7 +181,7 @@ ATLTRACE(
 *category*<br/>
 окне Тип события или метода для отчета. Список категорий см. в разделе "Примечания".
 
-*уровню*<br/>
+*уровень*<br/>
 окне Уровень трассировки для отчета. Дополнительные сведения см. в примечаниях.
 
 *лпсзформат*<br/>
@@ -191,7 +191,7 @@ ATLTRACE(
 
 Описание ATLTRACE см. в разделе [ATLTRACE2](#atltrace2) . ATLTRACE и ATLTRACE2 имеют одинаковое поведение, ATLTRACE входит в целях обратной совместимости.
 
-## <a name="atltrace2"></a><a name="atltrace2"></a>ATLTRACE2
+## <a name="atltrace2"></a><a name="atltrace2"></a> ATLTRACE2
 
 Сообщает о предупреждениях на выходное устройство, например в окно отладчика, в соответствии с указанными флагами и уровнями.
 
@@ -212,7 +212,7 @@ ATLTRACE2(
 *category*<br/>
 окне Тип события или метода для отчета. Список категорий см. в разделе "Примечания".
 
-*уровню*<br/>
+*уровень*<br/>
 окне Уровень трассировки для отчета. Дополнительные сведения см. в примечаниях.
 
 *лпсзформат*<br/>
@@ -226,9 +226,9 @@ ATLTRACE2(
 
 ### <a name="atl-trace-flags"></a>Флаги трассировки ATL
 
-|Категория ATL|Описание:|
+|Категория ATL|Описание|
 |------------------|-----------------|
-|`atlTraceGeneral`|Отчеты по всем приложениям ATL. По умолчанию.|
+|`atlTraceGeneral`|Отчеты по всем приложениям ATL. Это значение используется по умолчанию.|
 |`atlTraceCOM`|Сообщает о методах COM.|
 |`atlTraceQI`|Отчеты о вызовах QueryInterface.|
 |`atlTraceRegistrar`|Сообщает о регистрации объектов.|
@@ -244,7 +244,7 @@ ATLTRACE2(
 
 ### <a name="mfc-trace-flags"></a>Флаги трассировки MFC
 
-|Категория MFC|Описание:|
+|Категория MFC|Описание|
 |------------------|-----------------|
 |`traceAppMsg`|Общее назначение, сообщения MFC. Рекомендуется всегда.|
 |`traceDumpContext`|Сообщения от [CDumpContext](../../mfc/reference/cdumpcontext-class.md).|

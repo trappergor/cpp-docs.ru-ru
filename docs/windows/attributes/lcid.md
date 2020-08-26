@@ -1,17 +1,17 @@
 ---
-title: LCID (C++ атрибут com)
+title: LCID (атрибут COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.lcid
 helpviewer_keywords:
 - LCID attribute
 ms.assetid: 7f248c69-ee1c-42c3-9411-39cf27c9f43d
-ms.openlocfilehash: bb9e44d34c675e4f5d955c5f422a6dd35259ec8d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7533cd9b269a879c5c2f061dcdfc632b1b27c871
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214803"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834184"
 ---
 # <a name="lcid"></a>lcid
 
@@ -25,7 +25,7 @@ ms.locfileid: "80214803"
 
 ## <a name="remarks"></a>Remarks
 
-Атрибут **LCID** C++ реализует функциональные возможности атрибута [LCID](/windows/win32/Midl/lcid) MIDL. Если требуется реализовать языковой стандарт для библиотечного блока, используйте параметр **LCID =** `lcid` для атрибута [module](module-cpp.md) .
+Атрибут **LCID** C++ реализует функциональные возможности атрибута [LCID](/windows/win32/Midl/lcid) MIDL. Если требуется реализовать языковой стандарт для библиотечного блока, используйте параметр **LCID =** в `lcid` атрибуте [module](module-cpp.md) .
 
 ## <a name="example"></a>Пример
 
@@ -44,14 +44,12 @@ __interface IStatic {
 
 ## <a name="requirements"></a>Требования
 
-### <a name="attribute-context"></a>Контекст атрибута
-
-|||
+| Контекст атрибута | Значение |
 |-|-|
-|**Применение**|Параметр интерфейса|
-|**Повторяемый**|нет|
-|**Обязательные атрибуты**|None|
-|**Недопустимые атрибуты**|None|
+|**Относится к**|Параметр интерфейса|
+|**REPEATABLE**|Нет|
+|**Требуемые атрибуты**|Нет|
+|**Недопустимые атрибуты**|Нет|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 

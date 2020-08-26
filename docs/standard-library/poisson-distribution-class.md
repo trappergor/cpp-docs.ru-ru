@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::poisson_distribution [C++], param_type
 - std::poisson_distribution [C++], param_type
 ms.assetid: 09614281-349a-45f7-8e95-c0196be0a937
-ms.openlocfilehash: fe59c58659252f5d799339fdd83237e56f81a2ad
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bf5cd289ab0ee02d6c9e09e95d01008191899cd6
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232967"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832650"
 ---
 # <a name="poisson_distribution-class"></a>Класс poisson_distribution
 
@@ -74,10 +74,8 @@ public:
 
 Шаблон класса описывает распределение, которое создает значения указанного пользователем целочисленного типа с распределением Пуассона. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
-||||
-|-|-|-|
-|[poisson_distribution](#poisson_distribution)|`poisson_distribution::mean`|`poisson_distribution::param`|
-|`poisson_distribution::operator()`||[param_type](#param_type)|
+[poisson_distribution](#poisson_distribution)\
+[param_type](#param_type)
 
 Функция свойства `mean()` возвращает значение для хранимого параметра распределения *mean*.
 
@@ -196,7 +194,7 @@ Distribution for 100 samples:
 
 **Пространство имен:** std
 
-## <a name="poisson_distributionpoisson_distribution"></a><a name="poisson_distribution"></a>poisson_distribution::p oisson_distribution
+## <a name="poisson_distributionpoisson_distribution"></a><a name="poisson_distribution"></a> poisson_distribution::p oisson_distribution
 
 Формирует распределение.
 
@@ -221,7 +219,7 @@ explicit binomial_distribution(const param_type& parm);
 
 Второй конструктор создает объект, хранимые параметры которого инициализируются из *parm*. Вы можете получить и задать текущие параметры существующего распределения, вызвав функцию-член `param()`.
 
-## <a name="poisson_distributionparam_type"></a><a name="param_type"></a>poisson_distribution::p aram_type
+## <a name="poisson_distributionparam_type"></a><a name="param_type"></a> poisson_distribution::p aram_type
 
 Сохраняет параметры распределения.
 

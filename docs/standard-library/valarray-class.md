@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::valarray [C++], sum
 - std::valarray [C++], swap
 ms.assetid: 19b862f9-5d09-4003-8844-6ddd02c1a3a7
-ms.openlocfilehash: da7a1a8ca4aca88cda4eb3153c169629b76843da
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 177840ffea711395b7cace6e47426d979f8fe329
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212026"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840132"
 ---
 # <a name="valarray-class"></a>Класс valarray
 
@@ -59,19 +59,19 @@ ms.locfileid: "87212026"
 
 ### <a name="constructors"></a>Конструкторы
 
-|||
+|Имя|Описание|
 |-|-|
 |[valarray](#valarray)|Создает `valarray` определенного размера или с элементами, имеющими указанное значение, либо в качестве копии другого `valarray` или подмножества другого `valarray`.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|||
+|Имя|Описание|
 |-|-|
 |[value_type](#value_type)|Тип, представляющий тип элемента, хранящегося в `valarray`.|
 
 ### <a name="functions"></a>Функции
 
-|||
+|Имя|Описание|
 |-|-|
 |[касаться](#apply)|Применяет заданную функцию для каждого элемента объекта `valarray`.|
 |[cshift](#cshift)|Циклически смещает все элементы в `valarray` на заданное число позиций.|
@@ -86,7 +86,7 @@ ms.locfileid: "87212026"
 
 ### <a name="operators"></a>Операторы
 
-|||
+|Имя|Описание|
 |-|-|
 |[станции!](#op_not)|Унарный оператор, который получает логические значения `NOT` каждого элемента в `valarray`.|
 |[Оператор% =](#op_mod_eq)|Получает остаток от поэлементного деления элементов массива на указанный `valarray` или на значение типа элемента.|
@@ -105,7 +105,7 @@ ms.locfileid: "87212026"
 |[оператор&#124;=](#op_or_eq)|Получает битовый `OR` элементов в массиве при помощи соответствующих элементов в указанном `valarray` или при помощи значения типа элемента.|
 |[Оператор ~](#op_dtor)|Унарный оператор, который получает битовые значения `NOT` каждого элемента в `valarray`.|
 
-## <a name="apply"></a><a name="apply"></a>касаться
+## <a name="apply"></a><a name="apply"></a> касаться
 
 Применяет заданную функцию для каждого элемента объекта valarray.
 
@@ -181,7 +181,7 @@ The element-by-element result of applying MyApplyFunc to vaR is the
 valarray: (  0 0 -4 6 0 -10 12 0 -16 18 )
 ```
 
-## <a name="cshift"></a><a name="cshift"></a>кшифт
+## <a name="cshift"></a><a name="cshift"></a> кшифт
 
 Циклически смещает все элементы в valarray на заданное число позиций.
 
@@ -259,7 +259,7 @@ The cyclically shifted valarray va2 is:
 va2.shift (-4) = ( 4 3 2 1 10 9 8 7 6 5)
 ```
 
-## <a name="free"></a><a name="free"></a>свободный
+## <a name="free"></a><a name="free"></a> свободный
 
 Освобождает память, используемую объектом valarray.
 
@@ -278,7 +278,7 @@ v = valarray<T>();
 // equivalent to v.free()
 ```
 
-## <a name="max"></a><a name="max"></a>максимальной
+## <a name="max"></a><a name="max"></a> максимальной
 
 Находит наибольший элемент объекта valarray.
 
@@ -383,7 +383,7 @@ The smallest element in the valarray is: -9.
 */
 ```
 
-## <a name="operator"></a><a name="op_not"></a>станции!
+## <a name="operator"></a><a name="op_not"></a> станции!
 
 Унарный оператор, который получает логическое **НЕ** для каждого элемента valarray.
 
@@ -442,7 +442,7 @@ The element-by-element result of the logical NOT operator! is the
 valarray: ( 1 1 1 0 1 0 1 0 1 0 ).
 ```
 
-## <a name="operator"></a><a name="op_mod_eq"></a>Оператор% =
+## <a name="operator"></a><a name="op_mod_eq"></a> Оператор% =
 
 Получает остаток от поэлементного деления элементов массива на указанный объект valarray или на значение типа элемента.
 
@@ -509,7 +509,7 @@ The remainders from the element-by-element division is the
 valarray: ( 0 -3 4 -7 1 -3 ).
 ```
 
-## <a name="operatoramp"></a><a name="op_and_eq"></a>станции&amp;=
+## <a name="operatoramp"></a><a name="op_and_eq"></a> станции&amp;=
 
 Получает побитовое **И** для элементов в массиве и соответствующих элементов в указанном объекте valarray или значений типа элемента.
 
@@ -582,7 +582,7 @@ The element-by-element result of the logical AND operator&= is the
 valarray: ( 0 0 0 2 0 4 0 6 0 8 ).
 ```
 
-## <a name="operatorgtgt"></a><a name="op_gt_gt_eq"></a>станции&gt;&gt;=
+## <a name="operatorgtgt"></a><a name="op_gt_gt_eq"></a> станции&gt;&gt;=
 
 Сдвигает вправо биты для каждого элемента valarray на указанное число позиций или на поэлементное количество позиций, определяемое вторым объектом valarray.
 
@@ -653,7 +653,7 @@ The element-by-element result of the right shift is the
 valarray: ( 64 -32 16 -8 4 -2 1 -1 ).
 ```
 
-## <a name="operatorltlt"></a><a name="op_lt_lt_eq"></a>станции&lt;&lt;=
+## <a name="operatorltlt"></a><a name="op_lt_lt_eq"></a> станции&lt;&lt;=
 
 Сдвигает влево биты для каждого элемента valarray на указанное число позиций или на поэлементное количество позиций, определяемое вторым объектом valarray.
 
@@ -726,7 +726,7 @@ on the operand array is the valarray:
 ( 1 -2 4 -8 16 -32 64 -128 ).
 ```
 
-## <a name="operator"></a><a name="op_star_eq"></a>operator * =
+## <a name="operator"></a><a name="op_star_eq"></a> operator * =
 
 Поэлементно умножает элементы указанного объекта valarray или значение типа элемента на операнд valarray.
 
@@ -792,7 +792,7 @@ valarray: ( 0 -1 4 -3 8 -5 12 -7 ).
 */
 ```
 
-## <a name="operator"></a><a name="op_add"></a>operator +
+## <a name="operator"></a><a name="op_add"></a> operator +
 
 Унарный оператор, который прибавляет единицу к каждому элементу объекта valarray.
 
@@ -845,7 +845,7 @@ The element-by-element result of the operator+ is the
 valarray: ( 0 0 -2 2 -4 4 -6 6 -8 8 ).
 ```
 
-## <a name="operator"></a><a name="op_add_eq"></a>operator + =
+## <a name="operator"></a><a name="op_add_eq"></a> operator + =
 
 Поэлементно складывает элементы указанного объекта valarray или значение типа элемента с операндом valarray.
 
@@ -912,7 +912,7 @@ The element-by-element result of the sum is the
 valarray: ( 2 0 4 2 6 4 8 6 ).
 ```
 
-## <a name="operator-"></a><a name="operator-"></a>станции
+## <a name="operator-"></a><a name="operator-"></a> станции
 
 Унарный оператор, который отнимает единицу от каждого элемента в valarray.
 
@@ -965,7 +965,7 @@ The element-by-element result of the operator+ is the
 valarray: ( 0 0 2 -2 4 -4 6 -6 8 -8 ).
 ```
 
-## <a name="operator-"></a><a name="operator-_eq"></a>Оператор-=
+## <a name="operator-"></a><a name="operator-_eq"></a> Оператор-=
 
 Поэлементно вычитает элементы указанного объекта valarray или значение типа элемента из операнда valarray.
 
@@ -1032,7 +1032,7 @@ The element-by-element result of the difference is the
 valarray: ( 10 -1 8 -3 6 -5 4 -7 ).
 ```
 
-## <a name="operator"></a><a name="op_div_eq"></a>Оператор/=
+## <a name="operator"></a><a name="op_div_eq"></a> Оператор/=
 
 Поэлементно делит операнд valarray на элементы указанного объекта valarray или на значение типа элемента.
 
@@ -1099,7 +1099,7 @@ The element-by-element result of the quotient is the
 valarray: ( inf -50 25 -16.6667 12.5 -10 ).
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>Оператор =
+## <a name="operator"></a><a name="op_eq"></a> Оператор =
 
 Присваивает элементы объекту valarray, значения которого указываются непосредственно, с помощью другого объекта valarray или с помощью функций slice_array, gslice_array, mask_array или indirect_array.
 
@@ -1209,7 +1209,7 @@ The reassigned valarray va is: 10 10 10 10 10 10 10 10 10 10
 
 ```
 
-## <a name="operator"></a><a name="op_at"></a>operator []
+## <a name="operator"></a><a name="op_at"></a> operator []
 
 Возвращает ссылку на элемент или его значение по указанному индексу или для определенного подмножества.
 
@@ -1266,7 +1266,7 @@ valarray<Type> operator[](const valarray<size_t>& _Indarray) const;
 
 См. примеры объявления и использования оператора в разделах [slice::slice](../standard-library/slice-class.md#slice) и [gslice::gslice](../standard-library/gslice-class.md#gslice).
 
-## <a name="operator"></a><a name="op_xor_eq"></a>Оператор ^ =
+## <a name="operator"></a><a name="op_xor_eq"></a> Оператор ^ =
 
 Вычисляет поэлементное исключающее **ИЛИ** для массива с указанным valarray или для значения типа элемента.
 
@@ -1341,7 +1341,7 @@ The element-by-element result of the bitwise XOR operator^= is the
 valarray: ( 1 0 0 3 2 4 7 6 6 9 ).
 ```
 
-## <a name="operator124"></a><a name="op_or_eq"></a>Оператор&#124;=
+## <a name="operator124"></a><a name="op_or_eq"></a> Оператор&#124;=
 
 Вычисляет побитовое `OR` между элементами массива и соответствующими элементами указанного объекта valarray или значением типа элемента.
 
@@ -1424,7 +1424,7 @@ operator|= is the valarray:
 ( 1 0 1 3 3 4 7 6 7 9 ).
 ```
 
-## <a name="operator"></a><a name="op_dtor"></a>Оператор ~
+## <a name="operator"></a><a name="op_dtor"></a> Оператор ~
 
 Унарный оператор, который получает побитовые `NOT` значения каждого элемента в valarray.
 
@@ -1523,7 +1523,7 @@ is the negative of the original elements the
 valarray: ( 0 2 -2 6 -4 10 -6 14 -8 18 ).
 ```
 
-## <a name="resize"></a><a name="resize"></a>изменить размер
+## <a name="resize"></a><a name="resize"></a> изменить размер
 
 Изменяет число элементов в объекте valarray на заданное.
 
@@ -1599,7 +1599,7 @@ The valarray contains ( 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 ).
 The number of elements in the resized valarray is: 15.
 ```
 
-## <a name="shift"></a><a name="shift"></a>мести
+## <a name="shift"></a><a name="shift"></a> мести
 
 Смещает все элементы в valarray на заданное число позиций.
 
@@ -1674,7 +1674,7 @@ The operand valarray va2(10) is: ( 10 9 8 7 6 5 4 3 2 1 ).
 The shifted valarray va2 is: va2.shift (-4) = ( 0 0 0 0 10 9 8 7 6 5 ).
 ```
 
-## <a name="size"></a><a name="size"></a>изменять
+## <a name="size"></a><a name="size"></a> изменять
 
 Определяет число элементов в объекте valarray.
 
@@ -1751,7 +1751,7 @@ the operand valarray va2(12) is now: ( 0 1 2 3 4 5 6 7 8 9 10 11 ).
 The number of elements in the valarray va2 is still: 12.
 ```
 
-## <a name="sum"></a><a name="sum"></a>функции
+## <a name="sum"></a><a name="sum"></a> функции
 
 Определяет сумму всех элементов в объекте valarray с ненулевой длиной.
 
@@ -1801,7 +1801,7 @@ The operand valarray va (10) is: ( 0 1 2 3 4 5 6 7 8 9 ).
 The sum of elements in the valarray is: 45.
 ```
 
-## <a name="swap"></a><a name="swap"></a>позиции
+## <a name="swap"></a><a name="swap"></a> позиции
 
 Выполняет обмен элементами между двумя объектами `valarray`.
 
@@ -1818,7 +1818,7 @@ void swap(valarray& right);
 
 Функция – член меняет местами управляемые последовательности между **`*this`** и *вправо*. Она делает это в константном времени, не создает исключения и не делает недействительными ссылки, указатели или итераторы, которые указывают элементы в двух управляемых последовательностях.
 
-## <a name="valarray"></a><a name="valarray"></a>valarray
+## <a name="valarray"></a><a name="valarray"></a> valarray
 
 Создает объект valarray указанного размера или с элементами, имеющими указанное значение, либо в качестве копии другого объекта valarray или подмножества другого объекта valarray.
 
@@ -1954,7 +1954,7 @@ va[slice( 2, 4, 3)] = ( 0 0 0 )
 1 2 3 4
 ```
 
-## <a name="value_type"></a><a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a> value_type
 
 Тип, который представляет тип элемента, хранящегося в объекте valarray.
 

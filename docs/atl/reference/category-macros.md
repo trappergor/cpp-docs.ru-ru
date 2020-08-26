@@ -7,18 +7,18 @@ f1_keywords:
 - atlcom/ATL::IMPLEMENTED_CATEGORY
 - atlcom/ATL::REQUIRED_CATEGORY
 ms.assetid: 223578cb-6180-4787-a8d8-ba3787a5d3ee
-ms.openlocfilehash: 2b677ac6e7dac4eed5fc920ece064d94119ceb97
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 0db32c9550cd76fbc8e1f6776b8ecf4cceffebd7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168440"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833898"
 ---
 # <a name="category-macros"></a>Макросы категорий
 
 Эти макросы определяют карты категорий.
 
-|||
+|Макрос|Описание|
 |-|-|
 |[BEGIN_CATEGORY_MAP](#begin_category_map)|Помечает начало таблицы категорий.|
 |[END_CATEGORY_MAP](#end_category_map)|Отмечает конец таблицы категорий.|
@@ -29,7 +29,7 @@ ms.locfileid: "82168440"
 
 **Заголовок:** атлком. h
 
-## <a name="begin_category_map"></a><a name="begin_category_map"></a>BEGIN_CATEGORY_MAP
+## <a name="begin_category_map"></a><a name="begin_category_map"></a> BEGIN_CATEGORY_MAP
 
 Помечает начало таблицы категорий.
 
@@ -59,7 +59,7 @@ BEGIN_CATEGORY_MAP(theClass)
 
 [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]
 
-## <a name="end_category_map"></a><a name="end_category_map"></a>END_CATEGORY_MAP
+## <a name="end_category_map"></a><a name="end_category_map"></a> END_CATEGORY_MAP
 
 Отмечает конец таблицы категорий.
 
@@ -71,7 +71,7 @@ END_CATEGORY_MAP()
 
 См. пример для [BEGIN_CATEGORY_MAP](#begin_category_map).
 
-## <a name="implemented_category"></a><a name="implemented_category"></a>IMPLEMENTED_CATEGORY
+## <a name="implemented_category"></a><a name="implemented_category"></a> IMPLEMENTED_CATEGORY
 
 Добавьте IMPLEMENTED_CATEGORYный макрос к [карте категории](#begin_category_map) компонента, чтобы указать, что он должен быть зарегистрирован в качестве реализации категории, определяемой параметром *CATID* .
 
@@ -108,7 +108,7 @@ IMPLEMENTED_CATEGORY(catID)
 
 [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]
 
-## <a name="required_category"></a><a name="required_category"></a>REQUIRED_CATEGORY
+## <a name="required_category"></a><a name="required_category"></a> REQUIRED_CATEGORY
 
 Добавьте REQUIRED_CATEGORYный макрос к [карте категории](#begin_category_map) компонента, чтобы указать, что она должна быть зарегистрирована как обязательная Категория, определяемая параметром *CATID* .
 
@@ -145,6 +145,6 @@ REQUIRED_CATEGORY( catID )
 
 [!code-cpp[NVC_ATL_Windowing#135](../../atl/codesnippet/cpp/category-macros_2.h)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Макросы](../../atl/reference/atl-macros.md)

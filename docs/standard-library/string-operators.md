@@ -20,22 +20,26 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: 0e63054365f4b29cf474a46dbf7c730f54759792
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e031eb4421906e35a96a862855a140218f233778
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217393"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832546"
 ---
 # <a name="ltstringgt-operators"></a>Операторы &lt;string&gt;
 
-||||
-|-|-|-|
-|[operator! =](#op_neq)|[оператор&gt;](#op_gt)|[оператор&gt;&gt;](#op_gt_gt)|
-|[оператор&gt;=](#op_gt_eq)|[оператор&lt;](#op_lt)|[оператор&lt;&lt;](#op_lt_lt)|
-|[оператор&lt;=](#op_lt_eq)|[operator +](#op_add)|[Оператор = =](#op_eq_eq)|
+[operator! =](#op_neq)\
+[станции&gt;](#op_gt)\
+[станции&gt;&gt;](#op_gt_gt)\
+[станции&gt;=](#op_gt_eq)\
+[станции&lt;](#op_lt)\
+[станции&lt;&lt;](#op_lt_lt)\
+[станции&lt;=](#op_lt_eq)\
+[operator +](#op_add)\
+[Оператор = =](#op_eq_eq)
 
-## <a name="operator"></a><a name="op_add"></a>operator +
+## <a name="operator"></a><a name="op_add"></a> operator +
 
 Сцепляет два строковых объекта.
 
@@ -169,7 +173,7 @@ The string concatenating s1 & s3 is: antiheroine
 The string concatenating s1 & s3 is: antiheroine!
 ```
 
-## <a name="operator"></a><a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a> operator! =
 
 Проверяет, что строковый объект слева от оператора не равен строковому объекту справа от оператора. 
 
@@ -260,7 +264,7 @@ The strings s1 & s3 are equal.
 The strings s3 & s2 are not equal.
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>Оператор = =
+## <a name="operator"></a><a name="op_eq_eq"></a> Оператор = =
 
 Проверяет, равен ли строковый объект слева от оператора строковому объекту справа от оператора.
 
@@ -351,7 +355,7 @@ The strings s1 & s3 are equal.
 The strings s3 & s2 are not equal.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt"></a>станции&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> станции&lt;
 
 Проверяет, что строковый объект слева от оператора меньше строкового объекта справа от оператора.
 
@@ -447,7 +451,7 @@ The string s1 is not less than the string s3.
 The string s3 is less than the string s2.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>станции&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> станции&lt;=
 
 Проверяет, что строковый объект слева от оператора меньше или равен строковому объекту справа от оператора.
 
@@ -550,7 +554,7 @@ The string s1 is less than or equal to the string s3.
 The string s2 is greater than the string s3.
 ```
 
-## <a name="operatorltlt"></a><a name="op_lt_lt"></a>станции&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a> станции&lt;&lt;
 
 Функция шаблона, записывающая строку в выходной поток.
 
@@ -577,7 +581,7 @@ basic_ostream<CharType, Traits>& operator<<(
 
 Функция шаблона перегружает **оператор<<** , чтобы вставить *str* объекта из шаблона класса [basic_string](../standard-library/basic-string-class.md) в поток * \_ OSTR*. Функция фактически возвращает значение `_Ostr.write( str.c_str, str.size )` .
 
-## <a name="operatorgt"></a><a name="op_gt"></a>станции&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> станции&gt;
 
 Проверяет, что строковый объект слева от оператора больше строкового объекта справа от оператора.
 
@@ -680,7 +684,7 @@ The string s3 is greater than the string s1.
 The string s2 is greater than the string s3.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>станции&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> станции&gt;=
 
 Проверяет, что строковый объект слева от оператора больше или равен строковому объекту справа от оператора.
 
@@ -783,7 +787,7 @@ The string s3 is greater than or equal to the string s1.
 The string s2 is greater than or equal to the string s3.
 ```
 
-## <a name="operatorgtgt"></a><a name="op_gt_gt"></a>станции&gt;&gt;
+## <a name="operatorgtgt"></a><a name="op_gt_gt"></a> станции&gt;&gt;
 
 Функция-шаблон, считывающая строку из входного потока.
 

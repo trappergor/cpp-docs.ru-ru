@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::auto_ptr [C++], release
 - std::auto_ptr [C++], reset
 ms.assetid: 7f9108b6-9eb3-4634-b615-cf7aa814f23b
-ms.openlocfilehash: 1f2c8cce234910fbf69a35c8f8ef2fb0fe2a41c0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7e652b18b723e2a58c1f4673baf180a14db93477
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87203881"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834782"
 ---
 # <a name="auto_ptr-class"></a>Класс auto_ptr
 
@@ -71,19 +71,19 @@ class auto_ptr {
 
 ### <a name="constructors"></a>Конструкторы
 
-|||
+|Имя|Описание|
 |-|-|
 |[auto_ptr](#auto_ptr)|Конструктор для объектов типа `auto_ptr`.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|||
+|Имя|Описание|
 |-|-|
 |[element_type](#element_type)|Этот тип является синонимом для параметра шаблона `Type`.|
 
 ### <a name="functions"></a>Функции
 
-|||
+|Имя|Описание|
 |-|-|
 |[get](#get)|Эта функция-член возвращает сохраненный указатель `myptr`.|
 |[отпускании](#release)|Этот член заменяет сохраненный указатель `myptr` на пустой указатель и возвращает сохраненный ранее указатель.|
@@ -91,7 +91,7 @@ class auto_ptr {
 
 ### <a name="operators"></a>Операторы
 
-|||
+|Имя|Описание|
 |-|-|
 |[Оператор =](#op_eq)|Оператор присваивания, который передает право владения от одного объекта `auto_ptr` другому.|
 |[станции](#op_star)|Оператор удаления ссылки для объектов типа `auto_ptr`.|
@@ -99,7 +99,7 @@ class auto_ptr {
 |[operator auto_ptr\<Other>](#op_auto_ptr_lt_other_gt)|Приводит из одного вида `auto_ptr` в другой вид `auto_ptr`.|
 |[operator auto_ptr_ref\<Other>](#op_auto_ptr_ref_lt_other_gt)|Приводит из `auto_ptr` в `auto_ptr_ref`.|
 
-### <a name="auto_ptr"></a><a name="auto_ptr"></a>auto_ptr
+### <a name="auto_ptr"></a><a name="auto_ptr"></a> auto_ptr
 
 Конструктор для объектов типа `auto_ptr`.
 
@@ -126,7 +126,7 @@ auto _ptr(auto _ptr<Other>& right) throw();
 
 Первый *конструктор сохраняет* входные `myptr` и сохраняемые указатели на выделенный объект. Второй конструктор передает права собственности на указатель, хранящийся *справа*, сохраняя *право*. [выпуск](#release) в `myptr` .
 
-Третий конструктор ведет себя так же, как и второй, за исключением того, что он хранит `right` . `ref`. `release`в `myptr` , где `ref` — это ссылка, хранящаяся в `right` .
+Третий конструктор ведет себя так же, как и второй, за исключением того, что он хранит `right` . `ref`. `release` в `myptr` , где `ref` — это ссылка, хранящаяся в `right` .
 
 Конструктор шаблона ведет себя так же, как второй конструктор, при условии, что указатель на `Other` может быть неявно преобразован в указатель на `Type` .
 
@@ -189,7 +189,7 @@ Constructing 00311AF8
 Destructing 00311AF8
 ```
 
-### <a name="element_type"></a><a name="element_type"></a>element_type
+### <a name="element_type"></a><a name="element_type"></a> element_type
 
 Этот тип является синонимом для параметра шаблона `Type`.
 
@@ -197,7 +197,7 @@ Destructing 00311AF8
 typedef Type element  _type;
 ```
 
-### <a name="get"></a><a name="get"></a>Получить
+### <a name="get"></a><a name="get"></a> Получить
 
 Эта функция-член возвращает сохраненный указатель `myptr`.
 
@@ -256,7 +256,7 @@ pi2 == pi3
 Destructing 00311B88 Value: 6
 ```
 
-### <a name="operator"></a><a name="op_eq"></a>Оператор =
+### <a name="operator"></a><a name="op_eq"></a> Оператор =
 
 Оператор присваивания, который передает право владения от одного объекта `auto_ptr` другому.
 
@@ -284,7 +284,7 @@ auto_ptr<Type>& operator=(auto_ptr_ref<Type> right) throw();
 
 Пример использования оператора Member см. в разделе [auto_ptr](#auto_ptr).
 
-### <a name="operator"></a><a name="op_star"></a>станции
+### <a name="operator"></a><a name="op_star"></a> станции
 
 Оператор удаления ссылки для объектов типа `auto_ptr`.
 
@@ -304,7 +304,7 @@ Type& operator*() const throw();
 
 Пример использования функции члена см. в разделе [auto_ptr](#auto_ptr).
 
-### <a name="operator-gt"></a><a name="op_arrow"></a>станции&gt;
+### <a name="operator-gt"></a><a name="op_arrow"></a> станции&gt;
 
 Оператор для разрешения доступа к членам.
 
@@ -324,7 +324,7 @@ Type * operator->() const throw();
 
 Пример использования функции члена см. в разделе [auto_ptr](#auto_ptr).
 
-### <a name="operator-auto_ptrltothergt"></a><a name="op_auto_ptr_lt_other_gt"></a>Оператор auto_ptr &lt; другой&gt;
+### <a name="operator-auto_ptrltothergt"></a><a name="op_auto_ptr_lt_other_gt"></a> Оператор auto_ptr &lt; другой&gt;
 
 Приводит из одного вида `auto_ptr` в другой вид `auto_ptr`.
 
@@ -354,7 +354,7 @@ int main()
 }
 ```
 
-### <a name="operator-auto_ptr_refltothergt"></a><a name="op_auto_ptr_ref_lt_other_gt"></a>Оператор auto_ptr_ref &lt; другой&gt;
+### <a name="operator-auto_ptr_refltothergt"></a><a name="op_auto_ptr_ref_lt_other_gt"></a> Оператор auto_ptr_ref &lt; другой&gt;
 
 Приводит из `auto_ptr` в `auto_ptr_ref`.
 
@@ -415,7 +415,7 @@ main exiting
 ~C:  1
 ```
 
-### <a name="release"></a><a name="release"></a>отпускании
+### <a name="release"></a><a name="release"></a> отпускании
 
 Этот член заменяет сохраненный указатель `myptr` на пустой указатель и возвращает сохраненный ранее указатель.
 
@@ -477,7 +477,7 @@ pi2 == pi3
 Destructing 00311B88 Value: 6
 ```
 
-### <a name="reset"></a><a name="reset"></a>перезапуск
+### <a name="reset"></a><a name="reset"></a> перезапуск
 
 Функция-член вычисляет выражение `delete myptr` , но только в том случае, если значение сохраненного указателя `myptr` изменяется в результате вызова функции. Затем она заменяет сохраненный указатель на `ptr`.
 

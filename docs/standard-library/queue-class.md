@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::queue [C++], push
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
-ms.openlocfilehash: 331ca298507e0ebecac0376f660feefdafd9d99d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e0bfa4ab037b52b237bd674d5f705de4e9699383
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232941"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832611"
 ---
 # <a name="queue-class"></a>Класс queue
 
@@ -68,13 +68,13 @@ class queue
 
 ### <a name="constructors"></a>Конструкторы
 
-|||
+|Имя|Описание|
 |-|-|
 |[очереди](#queue)|Создает `queue`, который является пустым или копией объекта базового контейнера.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|||
+|Имя|Описание|
 |-|-|
 |[container_type](#container_type)|Тип, предоставляющий базовый контейнер для изменения в `queue`.|
 |[size_type](#size_type)|Целочисленный Typedef без знака, который может представлять число элементов в `queue`.|
@@ -82,7 +82,7 @@ class queue
 
 ### <a name="functions"></a>Функции
 
-|||
+|Имя|Описание|
 |-|-|
 |[Назад](#back)|Возвращает ссылку на последний и наиболее недавно добавленный элемент в конец `queue`.|
 |[empty](#empty)|Проверяет, является ли `queue` пустым.|
@@ -91,7 +91,7 @@ class queue
 |[push](#push)|Добавляет элемент в конец `queue`.|
 |[size](#size)|Возвращает количество элементов в контейнере `queue`.|
 
-## <a name="back"></a><a name="back"></a>Назад
+## <a name="back"></a><a name="back"></a> Назад
 
 Возвращает ссылку на последний и наиболее недавно добавленный элемент в конце очереди.
 
@@ -137,7 +137,7 @@ int main( )
 }
 ```
 
-## <a name="container_type"></a><a name="container_type"></a>container_type
+## <a name="container_type"></a><a name="container_type"></a> container_type
 
 Тип, предоставляющий базовый контейнер для изменения.
 
@@ -155,7 +155,7 @@ typedef Container container_type;
 
 См. пример для [queue](#queue) с примером объявления и использования `container_type`.
 
-## <a name="empty"></a><a name="empty"></a>указано
+## <a name="empty"></a><a name="empty"></a> указано
 
 Проверяет, пуста ли очередь.
 
@@ -201,7 +201,7 @@ The queue q1 is not empty.
 The queue q2 is empty.
 ```
 
-## <a name="front"></a><a name="front"></a>крышку
+## <a name="front"></a><a name="front"></a> крышку
 
 Возвращает ссылку на первый элемент в начале очереди.
 
@@ -253,7 +253,7 @@ int main() {
 }
 ```
 
-## <a name="pop"></a><a name="pop"></a>Рор
+## <a name="pop"></a><a name="pop"></a> Рор
 
 Удаляет элемент из начала очереди.
 
@@ -309,7 +309,7 @@ After a pop the queue length is 2.
 After a pop, the element at the front of the queue is 20.
 ```
 
-## <a name="push"></a><a name="push"></a>распространение
+## <a name="push"></a><a name="push"></a> распространение
 
 Добавляет элемент в конец queue.
 
@@ -425,7 +425,7 @@ The element at the front of queue q5 is 1.
 The element at the back of queue q5 is 2.
 ```
 
-## <a name="size"></a><a name="size"></a>изменять
+## <a name="size"></a><a name="size"></a> изменять
 
 Возвращает число элементов в очереди.
 
@@ -466,7 +466,7 @@ The queue length is 1.
 The queue length is now 2.
 ```
 
-## <a name="size_type"></a><a name="size_type"></a>size_type
+## <a name="size_type"></a><a name="size_type"></a> size_type
 
 Тип целого числа без знака, который может представлять количество элементов в очереди.
 
@@ -482,7 +482,7 @@ typedef typename Container::size_type size_type;
 
 См. пример для [queue::front](#front) с примером объявления и использования `size_type`.
 
-## <a name="value_type"></a><a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a> value_type
 
 Тип, представляющий тип объекта, который хранится в виде элемента в очереди.
 

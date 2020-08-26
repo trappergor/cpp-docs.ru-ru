@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
-ms.openlocfilehash: 5928a9bf8af12b2ce15a386871b845ef86cc7a2d
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: c4a4cd509a5d3078c6587ba7b29179a68912a258
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168776"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833846"
 ---
 # <a name="catlarray-class"></a>Класс CAtlArray
 
@@ -51,18 +51,18 @@ class CAtlArray
 *етраитс*<br/>
 Код, используемый для копирования или перемещения элементов.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Элементы
 
 ### <a name="methods"></a>Методы
 
-|||
+|Функция|Описание|
 |-|-|
 |[Добавление](#add)|Вызовите этот метод, чтобы добавить элемент в объект массива.|
-|[Добавление](#append)|Вызовите этот метод, чтобы добавить содержимое одного массива в конец другого.|
+|[Добавить](#append)|Вызовите этот метод, чтобы добавить содержимое одного массива в конец другого.|
 |[AssertValid](#assertvalid)|Вызовите этот метод, чтобы убедиться, что объект массива является допустимым.|
 |[CAtlArray](#catlarray)|Конструктор.|
 |[~ CAtlArray](#dtor)|Деструктор|
-|[Копирование](#copy)|Вызовите этот метод, чтобы скопировать элементы одного массива в другой.|
+|[Копировать](#copy)|Вызовите этот метод, чтобы скопировать элементы одного массива в другой.|
 |[фриекстра](#freeextra)|Вызовите этот метод, чтобы удалить все пустые элементы из массива.|
 |[GetAt](#getat)|Вызовите этот метод, чтобы получить один элемент из объекта массива.|
 |[GetCount](#getcount)|Вызовите этот метод, чтобы получить количество элементов, хранящихся в массиве.|
@@ -78,24 +78,24 @@ class CAtlArray
 
 ### <a name="operators"></a>Операторы
 
-|||
+|Оператор|Описание|
 |-|-|
 |[Оператор &#91;&#93;](#operator_at)|Вызовите этот оператор, чтобы вернуть ссылку на элемент в массиве.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|||
+|Typedef|Описание|
 |-|-|
 |[инаргтипе](#inargtype)|Тип данных, используемый для добавления элементов в массив.|
 |[аутаргтипе](#outargtype)|Тип данных, используемый для получения элементов из массива.|
 
 ## <a name="remarks"></a>Remarks
 
-`CAtlArray`предоставляет методы для создания массива элементов определяемого пользователем типа и управления им. Несмотря на то `CAtlArray` , что аналогично стандартным массивам C, объект может динамически сжиматься и увеличиваться по мере необходимости. Индекс массива всегда начинается в позиции 0, а верхняя граница может быть фиксированной или разрешена для расширения по мере добавления новых элементов.
+`CAtlArray` предоставляет методы для создания массива элементов определяемого пользователем типа и управления им. Несмотря на то, что аналогично стандартным массивам C, `CAtlArray` объект может динамически сжиматься и увеличиваться по мере необходимости. Индекс массива всегда начинается в позиции 0, а верхняя граница может быть фиксированной или разрешена для расширения по мере добавления новых элементов.
 
 Для массивов с небольшим числом элементов можно использовать класс ATL [ксимплеаррай](../../atl/reference/csimplearray-class.md) .
 
-`CAtlArray`тесно связан с `CArray` классом MFC и будет работать в проекте MFC, хотя и без поддержки сериализации.
+`CAtlArray` тесно связан с `CArray` классом MFC и будет работать в проекте MFC, хотя и без поддержки сериализации.
 
 Дополнительные сведения см. в разделе [классы коллекций ATL](../../atl/atl-collection-classes.md).
 
@@ -103,7 +103,7 @@ class CAtlArray
 
 **Заголовок:** атлколл. h
 
-## <a name="catlarrayadd"></a><a name="add"></a>CAtlArray:: Add
+## <a name="catlarrayadd"></a><a name="add"></a> CAtlArray:: Add
 
 Вызовите этот метод, чтобы добавить элемент в объект массива.
 
@@ -129,7 +129,7 @@ size_t Add();
 
 [!code-cpp[NVC_ATL_Utilities#1](../../atl/codesnippet/cpp/catlarray-class_1.cpp)]
 
-## <a name="catlarrayappend"></a><a name="append"></a>CAtlArray:: Append
+## <a name="catlarrayappend"></a><a name="append"></a> CAtlArray:: Append
 
 Вызовите этот метод, чтобы добавить содержимое одного массива в конец другого.
 
@@ -152,13 +152,13 @@ size_t Append(const CAtlArray<E, ETraits>& aSrc);
 
 Массивы должны иметь один и тот же тип, и невозможно добавить массив к самому себе.
 
-В отладочных сборках создается исключение АТЛАССЕРТ, если `CAtlArray` аргумент не является допустимым массивом или если *АСРК* ссылается на один и тот же объект. В сборках выпуска недопустимые аргументы могут привести к непредсказуемому поведению.
+В отладочных сборках создается исключение АТЛАССЕРТ, если аргумент не является `CAtlArray` допустимым массивом или если *АСРК* ссылается на один и тот же объект. В сборках выпуска недопустимые аргументы могут привести к непредсказуемому поведению.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Utilities#2](../../atl/codesnippet/cpp/catlarray-class_2.cpp)]
 
-## <a name="catlarrayassertvalid"></a><a name="assertvalid"></a>CAtlArray:: AssertValid
+## <a name="catlarrayassertvalid"></a><a name="assertvalid"></a> CAtlArray:: AssertValid
 
 Вызовите этот метод, чтобы убедиться, что объект массива является допустимым.
 
@@ -174,7 +174,7 @@ void AssertValid() const;
 
 [!code-cpp[NVC_ATL_Utilities#3](../../atl/codesnippet/cpp/catlarray-class_3.cpp)]
 
-## <a name="catlarraycatlarray"></a><a name="catlarray"></a>CAtlArray:: CAtlArray
+## <a name="catlarraycatlarray"></a><a name="catlarray"></a> CAtlArray:: CAtlArray
 
 Конструктор.
 
@@ -190,7 +190,7 @@ CAtlArray() throw();
 
 [!code-cpp[NVC_ATL_Utilities#4](../../atl/codesnippet/cpp/catlarray-class_4.cpp)]
 
-## <a name="catlarraycatlarray"></a><a name="dtor"></a>CAtlArray:: ~ CAtlArray
+## <a name="catlarraycatlarray"></a><a name="dtor"></a> CAtlArray:: ~ CAtlArray
 
 Деструктор
 
@@ -202,7 +202,7 @@ CAtlArray() throw();
 
 Освобождает все ресурсы, используемые объектом Array.
 
-## <a name="catlarraycopy"></a><a name="copy"></a>CAtlArray:: Copy
+## <a name="catlarraycopy"></a><a name="copy"></a> CAtlArray:: Copy
 
 Вызовите этот метод, чтобы скопировать элементы одного массива в другой.
 
@@ -224,13 +224,13 @@ void Copy(const CAtlArray<E, ETraits>& aSrc);
 В отладочных сборках создается исключение АТЛАССЕРТ, если существующий `CAtlArray` объект является недопустимым, или если *АСРК* ссылается на тот же объект. В сборках выпуска недопустимые аргументы могут привести к непредсказуемому поведению.
 
 > [!NOTE]
-> `CAtlArray::Copy`не поддерживает массивы, состоящие из элементов, созданных с помощью класса [каутоптр](../../atl/reference/cautoptr-class.md) .
+> `CAtlArray::Copy` не поддерживает массивы, состоящие из элементов, созданных с помощью класса [каутоптр](../../atl/reference/cautoptr-class.md) .
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Utilities#5](../../atl/codesnippet/cpp/catlarray-class_5.cpp)]
 
-## <a name="catlarrayfreeextra"></a><a name="freeextra"></a>CAtlArray:: Фриекстра
+## <a name="catlarrayfreeextra"></a><a name="freeextra"></a> CAtlArray:: Фриекстра
 
 Вызовите этот метод, чтобы удалить все пустые элементы из массива.
 
@@ -244,7 +244,7 @@ void FreeExtra() throw();
 
 В отладочных сборках создается исключение АТЛАССЕРТ, если объект CAtlArray является недопустимым, или если размер массива превысит максимальный.
 
-## <a name="catlarraygetat"></a><a name="getat"></a>CAtlArray:: GetAt
+## <a name="catlarraygetat"></a><a name="getat"></a> CAtlArray:: GetAt
 
 Вызовите этот метод, чтобы извлечь один элемент из объекта массива.
 
@@ -270,7 +270,7 @@ E& GetAt(size_t iElement) throw();
 
 [!code-cpp[NVC_ATL_Utilities#6](../../atl/codesnippet/cpp/catlarray-class_6.cpp)]
 
-## <a name="catlarraygetcount"></a><a name="getcount"></a>CAtlArray:: NOCOUNT
+## <a name="catlarraygetcount"></a><a name="getcount"></a> CAtlArray:: NOCOUNT
 
 Вызовите этот метод, чтобы получить количество элементов, хранящихся в массиве.
 
@@ -290,7 +290,7 @@ size_t GetCount() const throw();
 
 См. пример для [CAtlArray:: GetAt](#getat).
 
-## <a name="catlarraygetdata"></a><a name="getdata"></a>CAtlArray:: GetData
+## <a name="catlarraygetdata"></a><a name="getdata"></a> CAtlArray:: GetData
 
 Вызовите этот метод, чтобы вернуть указатель на первый элемент в массиве.
 
@@ -307,7 +307,7 @@ const E* GetData() const throw();
 
 [!code-cpp[NVC_ATL_Utilities#7](../../atl/codesnippet/cpp/catlarray-class_7.cpp)]
 
-## <a name="catlarrayinargtype"></a><a name="inargtype"></a>CAtlArray:: ИНАРГТИПЕ
+## <a name="catlarrayinargtype"></a><a name="inargtype"></a> CAtlArray:: ИНАРГТИПЕ
 
 Тип данных, используемый для добавления элементов в массив.
 
@@ -315,7 +315,7 @@ const E* GetData() const throw();
 typedef ETraits::INARGTYPE INARGTYPE;
 ```
 
-## <a name="catlarrayinsertarrayat"></a><a name="insertarrayat"></a>CAtlArray:: Инсертаррайат
+## <a name="catlarrayinsertarrayat"></a><a name="insertarrayat"></a> CAtlArray:: Инсертаррайат
 
 Вызовите этот метод, чтобы вставить один массив в другой.
 
@@ -335,16 +335,16 @@ void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
 
 Элементы из массива *ПАНЕВ* копируются в объект Array, начиная с element *истарт*. Существующие элементы массива перемещаются, чтобы избежать переписывания.
 
-В отладочных сборках создается исключение АТЛАССЕРТ, если `CAtlArray` объект является недопустимым, или если указатель *ПАНЕВ* имеет значение null или является недопустимым.
+В отладочных сборках создается исключение АТЛАССЕРТ `CAtlArray` , если объект является недопустимым, или если указатель *ПАНЕВ* имеет значение null или является недопустимым.
 
 > [!NOTE]
-> `CAtlArray::InsertArrayAt`не поддерживает массивы, состоящие из элементов, созданных с помощью класса [каутоптр](../../atl/reference/cautoptr-class.md) .
+> `CAtlArray::InsertArrayAt` не поддерживает массивы, состоящие из элементов, созданных с помощью класса [каутоптр](../../atl/reference/cautoptr-class.md) .
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Utilities#8](../../atl/codesnippet/cpp/catlarray-class_8.cpp)]
 
-## <a name="catlarrayinsertat"></a><a name="insertat"></a>CAtlArray:: Инсертат
+## <a name="catlarrayinsertat"></a><a name="insertat"></a> CAtlArray:: Инсертат
 
 Вызовите этот метод, чтобы вставить новый элемент (или несколько копий элемента) в объект массива.
 
@@ -373,7 +373,7 @@ void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
 
 [!code-cpp[NVC_ATL_Utilities#9](../../atl/codesnippet/cpp/catlarray-class_9.cpp)]
 
-## <a name="catlarrayisempty"></a><a name="isempty"></a>CAtlArray:: IsEmpty
+## <a name="catlarrayisempty"></a><a name="isempty"></a> CAtlArray:: IsEmpty
 
 Вызовите этот метод, чтобы проверить, пуст ли массив.
 
@@ -393,7 +393,7 @@ bool IsEmpty() const throw();
 
 [!code-cpp[NVC_ATL_Utilities#10](../../atl/codesnippet/cpp/catlarray-class_10.cpp)]
 
-## <a name="catlarrayoperator-"></a><a name="operator_at"></a>CAtlArray:: operator []
+## <a name="catlarrayoperator-"></a><a name="operator_at"></a> CAtlArray:: operator []
 
 Вызовите этот оператор, чтобы вернуть ссылку на элемент в массиве.
 
@@ -417,7 +417,7 @@ const E& operator[](size_t ielement) const throw();
 
 В отладочных сборках создается исключение АТЛАССЕРТ, если *IElement* превышает общее число элементов в массиве. В розничных сборках недопустимый параметр может привести к непредсказуемым результатам.
 
-## <a name="catlarrayoutargtype"></a><a name="outargtype"></a>CAtlArray:: АУТАРГТИПЕ
+## <a name="catlarrayoutargtype"></a><a name="outargtype"></a> CAtlArray:: АУТАРГТИПЕ
 
 Тип данных, используемый для получения элементов из массива.
 
@@ -425,7 +425,7 @@ const E& operator[](size_t ielement) const throw();
 typedef ETraits::OUTARGTYPE OUTARGTYPE;
 ```
 
-## <a name="catlarrayremoveall"></a><a name="removeall"></a>CAtlArray:: RemoveAll
+## <a name="catlarrayremoveall"></a><a name="removeall"></a> CAtlArray:: RemoveAll
 
 Вызовите этот метод, чтобы удалить все элементы из объекта Array.
 
@@ -443,7 +443,7 @@ void RemoveAll() throw();
 
 См. пример для [CAtlArray:: IsEmpty](#isempty).
 
-## <a name="catlarrayremoveat"></a><a name="removeat"></a>CAtlArray:: RemoveAt
+## <a name="catlarrayremoveat"></a><a name="removeat"></a> CAtlArray:: RemoveAt
 
 Вызовите этот метод, чтобы удалить один или несколько элементов из массива.
 
@@ -469,7 +469,7 @@ void RemoveAt(size_t iElement, size_t nCount = 1);
 
 [!code-cpp[NVC_ATL_Utilities#11](../../atl/codesnippet/cpp/catlarray-class_11.cpp)]
 
-## <a name="catlarraysetat"></a><a name="setat"></a>CAtlArray:: SetAt
+## <a name="catlarraysetat"></a><a name="setat"></a> CAtlArray:: SetAt
 
 Вызовите этот метод, чтобы задать значение элемента в объекте массива.
 
@@ -493,7 +493,7 @@ void SetAt(size_t iElement, INARGTYPE element);
 
 См. пример для [CAtlArray:: GetAt](#getat).
 
-## <a name="catlarraysetcount"></a><a name="setcount"></a>CAtlArray:: Сеткаунт
+## <a name="catlarraysetcount"></a><a name="setcount"></a> CAtlArray:: Сеткаунт
 
 Вызовите этот метод, чтобы задать размер объекта массива.
 
@@ -523,7 +523,7 @@ bool SetCount(size_t nNewSize, int nGrowBy = - 1);
 
 См. пример для [CAtlArray:: GetData](#getdata).
 
-## <a name="catlarraysetatgrow"></a><a name="setatgrow"></a>CAtlArray:: Сетатгров
+## <a name="catlarraysetatgrow"></a><a name="setatgrow"></a> CAtlArray:: Сетатгров
 
 Вызовите этот метод, чтобы задать значение элемента в объекте массива, расширяя массив по мере необходимости.
 
@@ -541,13 +541,13 @@ void SetAtGrow(size_t iElement, INARGTYPE element);
 
 ### <a name="remarks"></a>Remarks
 
-Заменяет значение элемента, на которое указывает индекс. Если *IElement* больше текущего размера массива, массив автоматически увеличивается с помощью вызова [CAtlArray:: сеткаунт](#setcount). В отладочных сборках будет вызвано исключение АТЛАССЕРТ, `CAtlArray` если объект является недопустимым. В розничных сборках недопустимые параметры могут привести к непредсказуемым результатам.
+Заменяет значение элемента, на которое указывает индекс. Если *IElement* больше текущего размера массива, массив автоматически увеличивается с помощью вызова [CAtlArray:: сеткаунт](#setcount). В отладочных сборках будет вызвано исключение АТЛАССЕРТ, если `CAtlArray` объект является недопустимым. В розничных сборках недопустимые параметры могут привести к непредсказуемым результатам.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Utilities#12](../../atl/codesnippet/cpp/catlarray-class_12.cpp)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пример Ммкссварм](../../overview/visual-cpp-samples.md)<br/>
 [Пример Динамикконсумер](../../overview/visual-cpp-samples.md)<br/>

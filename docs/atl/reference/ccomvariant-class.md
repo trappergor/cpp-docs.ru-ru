@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CComVariant class
 - VARIANT macro, ATL
 ms.assetid: 4d31149c-d005-44b5-a509-10f84afa2b61
-ms.openlocfilehash: a435cf8e5501e4f21af53091dc0e28f1c1037379
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 40315077ceba3d87e12c8ab426560deef4928793
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226572"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833612"
 ---
 # <a name="ccomvariant-class"></a>Класс CComVariant
 
@@ -41,14 +41,14 @@ class CComVariant : public tagVARIANT
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComVariant:: CComVariant](#ccomvariant)|Конструктор.|
 |[CComVariant:: ~ CComVariant](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComVariant:: Attach](#attach)|Присоединяет вариант к `CComVariant` объекту.|
 |[CComVariant:: ChangeType](#changetype)|Преобразует `CComVariant` объект в новый тип.|
@@ -63,7 +63,7 @@ class CComVariant : public tagVARIANT
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|||
+|Оператор|Описание|
 |-|-|
 |[CComVariant:: operator <](#operator_lt)|Указывает, `CComVariant` меньше ли объект, чем указанный вариант.|
 |[CComVariant:: operator >](#operator_gt)|Указывает, `CComVariant` больше ли объект, чем указанный вариант.|
@@ -73,9 +73,9 @@ class CComVariant : public tagVARIANT
 
 ## <a name="remarks"></a>Remarks
 
-`CComVariant`заключает в оболочку тип VARIANT и VARIANTARG, состоящий из объединения и члена, указывающего тип данных, хранящихся в объединении. Варианты обычно используются в автоматизации.
+`CComVariant` заключает в оболочку тип VARIANT и VARIANTARG, состоящий из объединения и члена, указывающего тип данных, хранящихся в объединении. Варианты обычно используются в автоматизации.
 
-`CComVariant`является производным от типа VARIANT, поэтому его можно использовать везде, где можно использовать вариант. Например, можно использовать макрос V_VT для извлечения типа `CComVariant` или получить доступ к `vt` члену напрямую, как это можно сделать с вариантом.
+`CComVariant` является производным от типа VARIANT, поэтому его можно использовать везде, где можно использовать вариант. Например, можно использовать макрос V_VT для извлечения типа `CComVariant` или получить доступ к `vt` члену напрямую, как это можно сделать с вариантом.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -87,7 +87,7 @@ class CComVariant : public tagVARIANT
 
 **Заголовок:** atlcomcli. h
 
-## <a name="ccomvariantattach"></a><a name="attach"></a>CComVariant:: Attach
+## <a name="ccomvariantattach"></a><a name="attach"></a> CComVariant:: Attach
 
 Безопасно очищает текущее содержимое `CComVariant` объекта, копирует содержимое *pSrc* в этот объект, а затем задает для типа variant *pSrc* значение VT_EMPTY.
 
@@ -108,7 +108,7 @@ HRESULT Attach(VARIANT* pSrc);
 
 Владение данными, удерживаемыми *pSrc* , передается в `CComVariant` объект.
 
-## <a name="ccomvariantccomvariant"></a><a name="ccomvariant"></a>CComVariant:: CComVariant
+## <a name="ccomvariantccomvariant"></a><a name="ccomvariant"></a> CComVariant:: CComVariant
 
 Каждый конструктор обрабатывает надежную инициализацию `CComVariant` объекта путем вызова `VariantInit` функции Win32 или установки значения и типа объекта в соответствии с передаваемыми параметрами.
 
@@ -141,7 +141,7 @@ CComVariant(const CComBSTR& bstrSrc);
 ### <a name="parameters"></a>Параметры
 
 *varSrc*<br/>
-окне `CComVariant`Вариант или, используемый для инициализации `CComVariant` объекта. Содержимое исходного варианта копируется в место назначения без преобразования.
+окне `CComVariant` Вариант или, используемый для инициализации `CComVariant` объекта. Содержимое исходного варианта копируется в место назначения без преобразования.
 
 *лпсзсрк*<br/>
 окне Символьная строка, используемая для инициализации `CComVariant` объекта. В ЛПКОЛЕСТР версии конструктора или строки ANSI в версию LPCSTR можно передать строку двухбайтовых символов (Юникод), заканчивающуюся нулем. В любом случае строка преобразуется в Юникод BSTR, выделенный с помощью `SysAllocString` . Тип `CComVariant` объекта будет VT_BSTR.
@@ -162,10 +162,10 @@ CComVariant(const CComBSTR& bstrSrc);
 окне **`double`** Объект, используемый для инициализации `CComVariant` объекта. Тип `CComVariant` объекта будет VT_R8.
 
 *цисрк*<br/>
-окне `CY`Объект, используемый для инициализации `CComVariant` объекта. Тип `CComVariant` объекта будет VT_CY.
+окне `CY` Объект, используемый для инициализации `CComVariant` объекта. Тип `CComVariant` объекта будет VT_CY.
 
 *pSrc*<br/>
-окне `IDispatch`Указатель или, `IUnknown` используемый для инициализации `CComVariant` объекта. `AddRef`будет вызываться для указателя интерфейса. Тип `CComVariant` объекта будет VT_DISPATCH или VT_UNKNOWN соответственно.
+окне `IDispatch` Указатель или, `IUnknown` используемый для инициализации `CComVariant` объекта. `AddRef` будет вызываться для указателя интерфейса. Тип `CComVariant` объекта будет VT_DISPATCH или VT_UNKNOWN соответственно.
 
 Или указатель САФЕРРАЙ, используемый для инициализации `CComVariant` объекта. Копия массива SAFEARRAY хранится в `CComVariant` объекте. Тип `CComVariant` объекта будет сочетанием исходного типа массива SafeArray и VT_ARRAY.
 
@@ -179,7 +179,7 @@ CComVariant(const CComBSTR& bstrSrc);
 
 Деструктор управляет очисткой, вызывая [CComVariant:: Clear](#clear).
 
-## <a name="ccomvariantccomvariant"></a><a name="dtor"></a>CComVariant:: ~ CComVariant
+## <a name="ccomvariantccomvariant"></a><a name="dtor"></a> CComVariant:: ~ CComVariant
 
 Деструктор
 
@@ -191,7 +191,7 @@ CComVariant(const CComBSTR& bstrSrc);
 
 Этот метод управляет очисткой путем вызова [CComVariant:: Clear](#clear).
 
-## <a name="ccomvariantchangetype"></a><a name="changetype"></a>CComVariant:: ChangeType
+## <a name="ccomvariantchangetype"></a><a name="changetype"></a> CComVariant:: ChangeType
 
 Преобразует `CComVariant` объект в новый тип.
 
@@ -215,7 +215,7 @@ HRESULT ChangeType(VARTYPE vtNew, const VARIANT* pSrc = NULL);
 
 Если передать значение для *pSrc*, `ChangeType` будет использовать этот вариант в качестве источника для преобразования. В противном случае `CComVariant` объект будет источником.
 
-## <a name="ccomvariantclear"></a><a name="clear"></a>CComVariant:: Clear
+## <a name="ccomvariantclear"></a><a name="clear"></a> CComVariant:: Clear
 
 Очищает `CComVariant` объект, вызывая `VariantClear` функцию Win32.
 
@@ -231,7 +231,7 @@ HRESULT Clear();
 
 Деструктор автоматически вызывает `Clear` .
 
-## <a name="ccomvariantcopy"></a><a name="copy"></a>CComVariant:: Copy
+## <a name="ccomvariantcopy"></a><a name="copy"></a> CComVariant:: Copy
 
 Освобождает `CComVariant` объект и присваивает ему копию УКАЗАННОГО варианта.
 
@@ -248,7 +248,7 @@ HRESULT Copy(const VARIANT* pSrc);
 
 Стандартное значение HRESULT.
 
-## <a name="ccomvariantcopyto"></a><a name="copyto"></a>CComVariant:: CopyTo
+## <a name="ccomvariantcopyto"></a><a name="copyto"></a> CComVariant:: CopyTo
 
 Копирует содержимое `CComVariant` объекта.
 
@@ -269,7 +269,7 @@ HRESULT CopyTo(BSTR* pstrDest);
 
 `CComVariant`Объект должен иметь тип VT_BSTR.
 
-## <a name="ccomvariantdetach"></a><a name="detach"></a>CComVariant::D етач
+## <a name="ccomvariantdetach"></a><a name="detach"></a> CComVariant::D етач
 
 Отсоединяет базовый вариант от `CComVariant` объекта и задает для типа объекта значение VT_EMPTY.
 
@@ -290,7 +290,7 @@ HRESULT Detach(VARIANT* pDest);
 
 Обратите внимание, что содержимое варианта, на которое ссылается *пдест* , будет автоматически очищаться перед присвоением значения и типа вызывающего `CComVariant` объекта.
 
-## <a name="ccomvariantgetsize"></a><a name="getsize"></a>CComVariant:: DataSize
+## <a name="ccomvariantgetsize"></a><a name="getsize"></a> CComVariant:: DataSize
 
 Для типов Variant с простым фиксированным размером этот метод возвращает **`sizeof`** значение для базового типа данных и **sizeof (VarType)**.
 
@@ -310,7 +310,7 @@ ULONG GetSize() const;
 
 Размер, возвращенный этим методом, соответствует числу байтов, используемых [CComVariant:: вритетостреам](#writetostream) в условиях успешного выполнения.
 
-## <a name="ccomvariantoperator-"></a><a name="operator_eq"></a>CComVariant:: operator =
+## <a name="ccomvariantoperator-"></a><a name="operator_eq"></a> CComVariant:: operator =
 
 Присваивает объекту значение и соответствующий тип `CComVariant` .
 
@@ -363,17 +363,17 @@ CComVariant& operator=(char cSrc) throw();
 окне **`double`** Объект, назначаемый `CComVariant` объекту. Тип `CComVariant` объекта будет VT_R8.
 
 *цисрк*<br/>
-окне `CY`Объект, назначаемый `CComVariant` объекту. Тип `CComVariant` объекта будет VT_CY.
+окне `CY` Объект, назначаемый `CComVariant` объекту. Тип `CComVariant` объекта будет VT_CY.
 
 *pSrc*<br/>
-окне `IDispatch`Указатель или, `IUnknown` который должен быть назначен `CComVariant` объекту. `AddRef`будет вызываться для указателя интерфейса. Тип `CComVariant` объекта будет VT_DISPATCH или VT_UNKNOWN соответственно.
+окне `IDispatch` Указатель или, `IUnknown` который должен быть назначен `CComVariant` объекту. `AddRef` будет вызываться для указателя интерфейса. Тип `CComVariant` объекта будет VT_DISPATCH или VT_UNKNOWN соответственно.
 
 Или — указатель SAFEARRAY, назначаемый `CComVariant` объекту. Копия массива SAFEARRAY хранится в `CComVariant` объекте. Тип `CComVariant` объекта будет сочетанием исходного типа массива SafeArray и VT_ARRAY.
 
 *ксрк*<br/>
 окне Символ, присваиваемый `CComVariant` объекту. Тип `CComVariant` объекта будет VT_I1.
 
-## <a name="ccomvariantoperator-"></a><a name="operator_eq_eq"></a>CComVariant:: operator = =
+## <a name="ccomvariantoperator-"></a><a name="operator_eq_eq"></a> CComVariant:: operator = =
 
 Указывает, `CComVariant` равен ли объект заданному варианту.
 
@@ -387,7 +387,7 @@ bool operator==(const VARIANT& varSrc) const throw();
 
 Оператор сравнивает только значения типов Variant. Он сравнивает строки, целые числа и плавающие точки, но не массивы или записи.
 
-## <a name="ccomvariantoperator-"></a><a name="operator_neq"></a>CComVariant:: operator! =
+## <a name="ccomvariantoperator-"></a><a name="operator_neq"></a> CComVariant:: operator! =
 
 Указывает, `CComVariant` не равен ли объект указанному варианту.
 
@@ -401,7 +401,7 @@ bool operator!=(const VARIANT& varSrc) const throw();
 
 Оператор сравнивает только значения типов Variant. Он сравнивает строки, целые числа и плавающие точки, но не массивы или записи.
 
-## <a name="ccomvariantoperator-lt"></a><a name="operator_lt"></a>CComVariant:: operator&lt;
+## <a name="ccomvariantoperator-lt"></a><a name="operator_lt"></a> CComVariant:: operator &lt;
 
 Указывает, `CComVariant` меньше ли объект, чем указанный вариант.
 
@@ -413,7 +413,7 @@ bool operator<(const VARIANT& varSrc) const throw();
 
 Возвращает значение TRUE, если значение `CComVariant` объекта меньше значения параметра *варсрк*. В противном случае — значение FALSE. Оператор использует локаль пользователя по умолчанию для выполнения сравнения.
 
-## <a name="ccomvariantoperator-gt"></a><a name="operator_gt"></a>CComVariant:: operator&gt;
+## <a name="ccomvariantoperator-gt"></a><a name="operator_gt"></a> CComVariant:: operator &gt;
 
 Указывает, `CComVariant` больше ли объект, чем указанный вариант.
 
@@ -425,7 +425,7 @@ bool operator>(const VARIANT& varSrc) const throw();
 
 Возвращает значение TRUE, если значение `CComVariant` объекта больше значения параметра *варсрк*. В противном случае — значение FALSE. Оператор использует локаль пользователя по умолчанию для выполнения сравнения.
 
-## <a name="ccomvariantreadfromstream"></a><a name="readfromstream"></a>CComVariant:: Реадфромстреам
+## <a name="ccomvariantreadfromstream"></a><a name="readfromstream"></a> CComVariant:: Реадфромстреам
 
 Задает базовый вариант для варианта, содержащегося в указанном потоке.
 
@@ -444,9 +444,9 @@ HRESULT ReadFromStream(IStream* pStream);
 
 ### <a name="remarks"></a>Remarks
 
-`ReadToStream`требуется предыдущий вызов [вритетостреам](#writetostream).
+`ReadToStream` требуется предыдущий вызов [вритетостреам](#writetostream).
 
-## <a name="ccomvariantsetbyref"></a><a name="setbyref"></a>CComVariant:: Сетбиреф
+## <a name="ccomvariantsetbyref"></a><a name="setbyref"></a> CComVariant:: Сетбиреф
 
 Инициализирует `CComVariant` объект и задает `vt` для элемента значение VT_BYREF.
 
@@ -465,11 +465,11 @@ void SetByRef(T* pT) throw();
 
 ### <a name="remarks"></a>Remarks
 
-`SetByRef`— Это шаблон функции, который инициализирует `CComVariant` объект по указателю *PT* и задает `vt` для элемента значение VT_BYREF. Например:
+`SetByRef` — Это шаблон функции, который инициализирует `CComVariant` объект по указателю *PT* и задает `vt` для элемента значение VT_BYREF. Пример:
 
 [!code-cpp[NVC_ATL_Utilities#76](../../atl/codesnippet/cpp/ccomvariant-class_1.cpp)]
 
-## <a name="ccomvariantwritetostream"></a><a name="writetostream"></a>CComVariant:: Вритетостреам
+## <a name="ccomvariantwritetostream"></a><a name="writetostream"></a> CComVariant:: Вритетостреам
 
 Сохраняет базовый вариант в потоке.
 
@@ -486,6 +486,6 @@ HRESULT WriteToStream(IStream* pStream);
 
 Стандартное значение HRESULT.
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также раздел
 
 [Общие сведения о классах](../../atl/atl-class-overview.md)

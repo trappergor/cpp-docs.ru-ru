@@ -1,21 +1,21 @@
 ---
-title: db_accessor (C++ атрибут com)
+title: db_accessor (атрибут COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.db_accessor
 helpviewer_keywords:
 - db_accessor attribute
 ms.assetid: ec407a9f-24d7-4822-96d4-7cc6a0301815
-ms.openlocfilehash: 1e9725dad39974b828d87bd8b4cdeac623f4e12f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 559838201e3d1c425b6b1bf7f3650d9635c44c97
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214868"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833144"
 ---
 # <a name="db_accessor"></a>db_accessor
 
-Группирует `db_column` атрибуты, участвующие в привязке на основе `IAccessor`.
+Группирует `db_column` атрибуты, участвующие в `IAccessor` привязке на основе.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -33,7 +33,7 @@ ms.locfileid: "80214868"
 
 ## <a name="remarks"></a>Remarks
 
-**db_accessor** определяет базовый метод доступа OLE DB для последующих `db_column` и `db_param` атрибутов в пределах одного класса или функции. **db_accessor** можно использовать на уровне членов и используется для группирования `db_column` атрибутов, участвующих в привязке на основе `IAccessor`OLE DB. Он используется в сочетании с атрибутами `db_table` или `db_command`. Вызов этого атрибута аналогичен вызову макросов [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) и [END_ACCESSOR](../../data/oledb/end-accessor.md) .
+**db_accessor** определяет базовый метод доступа OLE DB для последующих `db_column` `db_param` атрибутов и в одном классе или функции. **db_accessor** можно использовать на уровне членов и используется для группирования `db_column` атрибутов, участвующих в `IAccessor` привязке на основе OLE DB. Он используется в сочетании с `db_table` `db_command` атрибутами или. Вызов этого атрибута аналогичен вызову макросов [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) и [END_ACCESSOR](../../data/oledb/end-accessor.md) .
 
 **db_accessor** создает набор строк и привязывает его к соответствующим картам метода доступа. Если не вызвать **db_accessor**, метод доступа 0 будет автоматически создан, и все привязки к столбцам будут сопоставляться с этим блоком доступа.
 
@@ -67,17 +67,15 @@ public:
 
 ## <a name="requirements"></a>Требования
 
-### <a name="attribute-context"></a>Контекст атрибута
-
-|||
+| Контекст атрибута | Значение |
 |-|-|
-|**Применение**|Блоки атрибутов|
-|**Повторяемый**|нет|
-|**Обязательные атрибуты**|None|
-|**Недопустимые атрибуты**|None|
+|**Относится к**|Блоки атрибутов|
+|**REPEATABLE**|Нет|
+|**Требуемые атрибуты**|Нет|
+|**Недопустимые атрибуты**|Нет|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>См. также раздел
 
-[Атрибуты объекта-получателя OLE DB](ole-db-consumer-attributes.md)
+[OLE DB атрибуты потребителя](ole-db-consumer-attributes.md)

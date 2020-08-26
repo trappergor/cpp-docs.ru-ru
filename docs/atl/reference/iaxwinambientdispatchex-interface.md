@@ -1,5 +1,5 @@
 ---
-title: Интерфейс IAxWinAmbientDispatchEx
+title: Интерфейс Иаксвинамбиентдиспатчекс
 ms.date: 11/04/2016
 f1_keywords:
 - IAxWinAmbientDispatchEx
@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinAmbientDispatchEx interface
 ms.assetid: 2c25e079-6128-4278-bc72-b2c6195ba7ef
-ms.openlocfilehash: f4816846801e388619db62998ec979a1100916ee
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f052c39424fc2ee6f43f249e3034be7c464d016c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329981"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833391"
 ---
-# <a name="iaxwinambientdispatchex-interface"></a>Интерфейс IAxWinAmbientDispatchEx
+# <a name="iaxwinambientdispatchex-interface"></a>Интерфейс Иаксвинамбиентдиспатчекс
 
-Этот интерфейс реализует дополнительные окружающие свойства для развлегенного управления.
+Этот интерфейс реализует дополнительные свойства окружения для размещенного элемента управления.
 
 > [!IMPORTANT]
-> Этот класс и его члены не могут быть использованы в приложениях, выполняемых в Windows Runtime.
+> Этот класс и его члены не могут использоваться в приложениях, выполняемых в среда выполнения Windows.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,35 +32,35 @@ MIDL_INTERFACE("B2D0778B - AC99 - 4c58 - A5C8 - E7724E5316B5") IAxWinAmbientDisp
 
 ### <a name="methods"></a>Методы
 
-|||
+|Имя|Описание|
 |-|-|
-|[SetAmbientDispatch](#setambientdispatch)|Этот метод называется в дополнение к интерфейсу эмбиента по умолчанию с пользовательским интерфейсом.|
+|[сетамбиентдиспатч](#setambientdispatch)|Этот метод вызывается для дополнения интерфейса внешнего свойства по умолчанию с определяемым пользователем интерфейсом.|
 
 ## <a name="remarks"></a>Remarks
 
-Включите этот интерфейс в приложения ATL, которые статически связаны с ATL и принимающей ActiveX Controls, особенно ActiveX Controls, которые имеют свойства Ambient. Не включая этот интерфейс будет генерировать это утверждение: "Вы забыли передать LIBID CComModule::Init"
+Включите этот интерфейс в приложения ATL, статически связываемые с ATL и ведущими элементами управления ActiveX, особенно элементы управления ActiveX, имеющие внешние свойства. Не включая этот интерфейс, создаст это утверждение: "возможно, вы забыли передать LIBID в CComModule:: init"
 
-Этот интерфейс подвергается ATL в ActiveX управления хостингобъектов. Произведено из [IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md), `IAxWinAmbientDispatchEx` добавляет метод, который позволяет дополнить интерфейс окружающего свойства, предоставляемый ATL с одним из ваших собственных.
+Этот интерфейс предоставляется объектами управления ActiveX ATL. Производный [IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md)от иаксвинамбиентдиспатч `IAxWinAmbientDispatchEx` добавляет метод, который позволяет дополнять интерфейс внешних свойств, предоставляемый библиотекой ATL, одним из собственных.
 
-<xref:System.Windows.Forms.AxHost>будет пытаться загрузить `IAxWinAmbientDispatch` информацию о типе и `IAxWinAmbientDispatchEx` из библиотеки типов, которая содержит код.
+<xref:System.Windows.Forms.AxHost> попытается загрузить сведения о типе `IAxWinAmbientDispatch` `IAxWinAmbientDispatchEx` из библиотеки типов, содержащей код, и из нее.
 
-Если вы ссылаетесь на ATL90.dll, **AXHost** загрузит информацию типа из библиотеки типов в DLL.
+Если вы связываетесь с ATL90.dll, **AxHost** будет загружать сведения о типе из библиотеки типов в библиотеке DLL.
 
-Более подробную информацию можно узнать [о хостинге ActiveX Controls с помощью ATL AXHost.](../../atl/hosting-activex-controls-using-atl-axhost.md)
+Дополнительные сведения см. [в разделе Размещение элементов управления ActiveX с помощью ATL AxHost](../../atl/hosting-activex-controls-using-atl-axhost.md) .
 
 ## <a name="requirements"></a>Требования
 
-Определение этого интерфейса доступно в ряде форм, как показано в следующей таблице.
+Определение этого интерфейса доступно в нескольких формах, как показано в следующей таблице.
 
 |Тип определения|Файл|
 |---------------------|----------|
-|Idl|atliface.idl|
-|Тип библиотеки|Atl.dll|
-|C++|atliface.h (также включен в ATLBase.h)|
+|IDL|описана. idl|
+|Библиотека типов|ATL.dll|
+|C++|описана. h (также входит в ATLBase. h)|
 
-## <a name="iaxwinambientdispatchexsetambientdispatch"></a><a name="setambientdispatch"></a>IAxWinAmbientDispatchEx::SetAmbientDispatch
+## <a name="iaxwinambientdispatchexsetambientdispatch"></a><a name="setambientdispatch"></a> Иаксвинамбиентдиспатчекс:: Сетамбиентдиспатч
 
-Этот метод называется в дополнение к интерфейсу эмбиента по умолчанию с пользовательским интерфейсом.
+Этот метод вызывается для дополнения интерфейса внешнего свойства по умолчанию с определяемым пользователем интерфейсом.
 
 ```
 virtual HRESULT STDMETHODCALLTYPE SetAmbientDispatch(IDispatch* pDispatch) = 0;
@@ -68,17 +68,17 @@ virtual HRESULT STDMETHODCALLTYPE SetAmbientDispatch(IDispatch* pDispatch) = 0;
 
 ### <a name="parameters"></a>Параметры
 
-*pDispatch*<br/>
+*пдиспатч*<br/>
 Указатель на новый интерфейс.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK на успех, или ошибка HRESULT на отказ.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
 ### <a name="remarks"></a>Remarks
 
-При `SetAmbientDispatch` вызове с указателем на новый интерфейс, этот новый интерфейс будет использоваться для вызова любых свойств или методов, запрошенных хостоутом управления, если эти свойства еще не предоставлены [IAxWinAmbientDispatch.](../../atl/reference/iaxwinambientdispatch-interface.md)
+Если `SetAmbientDispatch` метод вызывается с указателем на новый интерфейс, этот новый интерфейс будет использоваться для вызова любых свойств или методов, запрашиваемых размещенным элементом управления, если эти свойства еще не предоставлены [иаксвинамбиентдиспатч](../../atl/reference/iaxwinambientdispatch-interface.md).
 
 ## <a name="see-also"></a>См. также раздел
 
-[Интерфейс IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md)
+[Интерфейс Иаксвинамбиентдиспатч](../../atl/reference/iaxwinambientdispatch-interface.md)

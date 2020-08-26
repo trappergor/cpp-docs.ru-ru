@@ -6,48 +6,48 @@ f1_keywords:
 helpviewer_keywords:
 - queue header
 ms.assetid: 24fcf350-eb0e-48cf-9fef-978be1aeda1f
-ms.openlocfilehash: ee35f880ddf40561cacb5c4d519f2e6291ad77a8
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: a41d34b45264472a5c8c88ca0619e78444dd8aec
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689118"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832598"
 ---
 # <a name="ltqueuegt"></a>&lt;queue&gt;
 
-Определяет шаблоны классов priority_queue и Queue и несколько вспомогательных шаблонов.
+Определяет шаблоны классов priority_queue и очереди, а также несколько вспомогательных шаблонов.
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<queue>
+**Заголовок:**\<queue>
 
 **Пространство имен:** std
 
 > [!NOTE]
-> Библиотека \<queue > также использует инструкцию `#include <initializer_list>`.
+> \<queue>Библиотека также использует `#include <initializer_list>` инструкцию.
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Элементы
 
 ### <a name="operators"></a>Операторы
 
-|||
+|Имя|Описание|
 |-|-|
-|[оператор!= ](../standard-library/queue-operators.md#op_neq)|Проверяет неравенство объекта queue слева от оператора объекту queue справа от оператора.|
-|[оператор<](../standard-library/queue-operators.md#op_lt)|Проверяет, меньше ли объект queue слева от оператора, чем объект queue справа от оператора.|
-|[operator\<=](../standard-library/queue-operators.md#op_gt_eq)|Проверяет, меньше ли объект queue слева от оператора, чем объект queue справа от оператора, или равен ему.|
-|[оператор==](../standard-library/queue-operators.md#op_eq_eq)|Проверяет равенство объекта queue слева от оператора объекту queue справа от оператора.|
-|[оператор>](../standard-library/queue-operators.md#op_gt)|Проверяет, больше ли объект queue слева от оператора, чем объект queue справа от оператора.|
-|[оператор>=](../standard-library/queue-operators.md#op_gt_eq)|Проверяет, больше ли объект queue слева от оператора, чем объект queue справа от оператора, или равен ему.|
+|[operator! =](../standard-library/queue-operators.md#op_neq)|Проверяет неравенство объекта queue слева от оператора объекту queue справа от оператора.|
+|[Оператор<](../standard-library/queue-operators.md#op_lt)|Проверяет, меньше ли объект queue слева от оператора, чем объект queue справа от оператора.|
+|[станции\<=](../standard-library/queue-operators.md#op_gt_eq)|Проверяет, меньше ли объект queue слева от оператора, чем объект queue справа от оператора, или равен ему.|
+|[Оператор = =](../standard-library/queue-operators.md#op_eq_eq)|Проверяет равенство объекта queue слева от оператора объекту queue справа от оператора.|
+|[Оператор>](../standard-library/queue-operators.md#op_gt)|Проверяет, больше ли объект queue слева от оператора, чем объект queue справа от оператора.|
+|[Оператор>=](../standard-library/queue-operators.md#op_gt_eq)|Проверяет, больше ли объект queue слева от оператора, чем объект queue справа от оператора, или равен ему.|
 
 ### <a name="classes"></a>Классы
 
-|||
+|name|Описание|
 |-|-|
-|[Класс queue](../standard-library/queue-class.md)|Класс адаптера контейнера шаблона, который предоставляет ограничение функциональности, ограничивая доступ к переднему и заднему элементам некоторого базового типа контейнера.|
+|[Класс Queue](../standard-library/queue-class.md)|Класс адаптера контейнера шаблона, который предоставляет ограничение функциональности, ограничивая доступ к переднему и заднему элементам некоторого базового типа контейнера.|
 |[Класс priority_queue](../standard-library/priority-queue-class.md)|Класс адаптера контейнера шаблона, который предоставляет ограничение функциональности, ограничивая доступ к верхнему элементу некоторого базового типа контейнера, который всегда является самым большим.|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)\
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Безопасность потоков в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)

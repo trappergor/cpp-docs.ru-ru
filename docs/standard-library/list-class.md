@@ -98,12 +98,12 @@ helpviewer_keywords:
 - std::list [C++], swap
 - std::list [C++], unique
 ms.assetid: d3707f4a-10fd-444f-b856-f9ca2077c1cd
-ms.openlocfilehash: bf59438ca30462866cd90e281903356b863e36aa
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ec53e2a907cd38b262ec305d10ae63ad746f29b5
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224855"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833339"
 ---
 # <a name="list-class"></a>Класс list
 
@@ -138,13 +138,13 @@ class list
 
 ### <a name="constructors"></a>Конструкторы
 
-|||
+|Имя|Описание|
 |-|-|
 |[list](#list)|Создает список определенного размера, или с элементами определенного значения, или с определенным `allocator`, или в качестве копии какого-либо другого списка.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|||
+|Имя|Описание|
 |-|-|
 |[allocator_type](#allocator_type)|Тип, представляющий класс `allocator` для объекта списка.|
 |[const_iterator](#const_iterator)|Тип, предоставляющий двунаправленный итератор, который может читать **`const`** элемент в списке.|
@@ -161,7 +161,7 @@ class list
 
 ### <a name="functions"></a>Функции
 
-|||
+|Имя|Описание|
 |-|-|
 |[assign](#assign)|Удаляет элементы из списка и копирует новый набор элементов в список назначения.|
 |[Назад](#back)|Возвращает ссылку на последний элемент в списке.|
@@ -200,15 +200,15 @@ class list
 
 ### <a name="operators"></a>Операторы
 
-|||
+|Имя|Описание|
 |-|-|
 |[Оператор =](#op_eq)|Заменяет элементы списка копией другого списка.|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок**:\<list>
+**Заголовок**: \<list>
 
-## <a name="allocator_type"></a><a name="allocator_type"></a>allocator_type
+## <a name="allocator_type"></a><a name="allocator_type"></a> allocator_type
 
 Тип, представляющий класс распределителя для объекта списка.
 
@@ -218,13 +218,13 @@ typedef Allocator allocator_type;
 
 ### <a name="remarks"></a>Remarks
 
-`allocator_type`является синонимом для *распределителя*параметров шаблона.
+`allocator_type` является синонимом для *распределителя*параметров шаблона.
 
 ### <a name="example"></a>Пример
 
 См. пример для [get_allocator](#get_allocator).
 
-## <a name="assign"></a><a name="assign"></a>назначать
+## <a name="assign"></a><a name="assign"></a> назначать
 
 Удаляет элементы из списка и копирует новый набор элементов в список назначения.
 
@@ -313,7 +313,7 @@ int main()
 c1 = 10 20 30c1 = 50 60c1 = 4 4 4 4 4 4 4c1 = 10 20 30 40
 ```
 
-## <a name="back"></a><a name="back"></a>Назад
+## <a name="back"></a><a name="back"></a> Назад
 
 Возвращает ссылку на последний элемент в списке.
 
@@ -363,7 +363,7 @@ The last integer of c1 is 11
 The next-to-last integer of c1 is 10
 ```
 
-## <a name="begin"></a><a name="begin"></a>начале
+## <a name="begin"></a><a name="begin"></a> начале
 
 Возвращает итератор, адресующий первый элемент в списке.
 
@@ -416,7 +416,7 @@ The first element of c1 is 1
 The first element of c1 is now 20
 ```
 
-## <a name="cbegin"></a><a name="cbegin"></a>cbegin
+## <a name="cbegin"></a><a name="cbegin"></a> cbegin
 
 Возвращает **`const`** итератор, который обращается к первому элементу в диапазоне.
 
@@ -442,7 +442,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a><a name="cend"></a>cend
+## <a name="cend"></a><a name="cend"></a> cend
 
 Возвращает **`const`** итератор, который обращается к расположению сразу за последним элементом в диапазоне.
 
@@ -470,7 +470,7 @@ auto i2 = Container.cend();
 
 Значение, возвращаемое `cend`, не должно быть подвергнуто удалению ссылки.
 
-## <a name="clear"></a><a name="clear"></a>открытым
+## <a name="clear"></a><a name="clear"></a> открытым
 
 Удаляет все элементы списка.
 
@@ -505,7 +505,7 @@ The size of the list is initially 3
 The size of list after clearing is 0
 ```
 
-## <a name="const_iterator"></a><a name="const_iterator"></a>const_iterator
+## <a name="const_iterator"></a><a name="const_iterator"></a> const_iterator
 
 Тип, предоставляющий двунаправленный итератор, который может читать **`const`** элемент в списке.
 
@@ -521,7 +521,7 @@ typedef implementation-defined const_iterator;
 
 См. пример для [back](#back).
 
-## <a name="const_pointer"></a><a name="const_pointer"></a>const_pointer
+## <a name="const_pointer"></a><a name="const_pointer"></a> const_pointer
 
 Предоставляет указатель на **`const`** элемент в списке.
 
@@ -535,7 +535,7 @@ typedef typename Allocator::const_pointer const_pointer;
 
 В большинстве случаев [итератор](#iterator) должен использоваться для доступа к элементам в объекте-списке.
 
-## <a name="const_reference"></a><a name="const_reference"></a>const_reference
+## <a name="const_reference"></a><a name="const_reference"></a> const_reference
 
 Тип, предоставляющий ссылку на **`const`** элемент, хранящийся в списке, для чтения и выполнения **`const`** операций.
 
@@ -579,7 +579,7 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="const_reverse_iterator"></a><a name="const_reverse_iterator"></a>const_reverse_iterator
+## <a name="const_reverse_iterator"></a><a name="const_reverse_iterator"></a> const_reverse_iterator
 
 Тип, предоставляющий двунаправленный итератор, который может читать любой **`const`** элемент в списке.
 
@@ -595,7 +595,7 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 См. пример для [rbegin](#rbegin).
 
-## <a name="crbegin"></a><a name="crbegin"></a>crbegin
+## <a name="crbegin"></a><a name="crbegin"></a> crbegin
 
 Возвращает константный итератор, адресующий первый элемент в обратном списке.
 
@@ -639,7 +639,7 @@ int main( )
 The last element in the list is 30.
 ```
 
-## <a name="crend"></a><a name="crend"></a>crend
+## <a name="crend"></a><a name="crend"></a> crend
 
 Возвращает константный итератор, адресующий расположение после последнего элемента в обратном списке.
 
@@ -690,7 +690,7 @@ int main( )
 The first element in the list is: 10
 ```
 
-## <a name="difference_type"></a><a name="difference_type"></a>difference_type
+## <a name="difference_type"></a><a name="difference_type"></a> difference_type
 
 Тип целого числа со знаком, который можно использовать для представления количества элементов в списке в диапазоне между элементами, на которые указывают итераторы.
 
@@ -747,7 +747,7 @@ The number '20' is in c1 collection 2 times.
 The number '30' is in c1 collection 3 times.
 ```
 
-## <a name="emplace"></a><a name="emplace"></a>emplace
+## <a name="emplace"></a><a name="emplace"></a> emplace
 
 Вставляет элемент, созданный на месте, в указанное положение в списке.
 
@@ -791,7 +791,7 @@ int main( )
 Moved first element: a
 ```
 
-## <a name="emplace_back"></a><a name="emplace_back"></a>emplace_back
+## <a name="emplace_back"></a><a name="emplace_back"></a> emplace_back
 
 Добавляет элемент, созданный на месте, в конец списка.
 
@@ -832,7 +832,7 @@ int main( )
 Moved first element: a
 ```
 
-## <a name="emplace_front"></a><a name="emplace_front"></a>emplace_front
+## <a name="emplace_front"></a><a name="emplace_front"></a> emplace_front
 
 Добавляет элемент, созданный на месте, в начало списка.
 
@@ -873,7 +873,7 @@ int main( )
 Moved first element: a
 ```
 
-## <a name="empty"></a><a name="empty"></a>указано
+## <a name="empty"></a><a name="empty"></a> указано
 
 Проверяет, пуст ли список.
 
@@ -910,7 +910,7 @@ int main( )
 The list is not empty.
 ```
 
-## <a name="end"></a><a name="end"></a>конце
+## <a name="end"></a><a name="end"></a> конце
 
 Возвращает итератор, адресующий расположение после последнего элемента в списке.
 
@@ -925,7 +925,7 @@ iterator end();
 
 ### <a name="remarks"></a>Remarks
 
-`end`используется для проверки того, достиг ли итератор конца своего списка.
+`end` используется для проверки того, достиг ли итератор конца своего списка.
 
 ### <a name="example"></a>Пример
 
@@ -970,7 +970,7 @@ The new next-to-last integer of c1 is 400
 The list is now: 10 400 30
 ```
 
-## <a name="erase"></a><a name="erase"></a>резин
+## <a name="erase"></a><a name="erase"></a> резин
 
 Удаляет элемент или диапазон элементов с указанных положений в списке.
 
@@ -1045,7 +1045,7 @@ After erasing the first element, the list becomes: 20 30 40 50
 After erasing all elements but the first, the list becomes:  20
 ```
 
-## <a name="front"></a><a name="front"></a>крышку
+## <a name="front"></a><a name="front"></a> крышку
 
 Возвращает ссылку на первый элемент в списке.
 
@@ -1092,7 +1092,7 @@ The first integer of c1 is 10
 The first integer of c1 is 11
 ```
 
-## <a name="get_allocator"></a><a name="get_allocator"></a>get_allocator
+## <a name="get_allocator"></a><a name="get_allocator"></a> get_allocator
 
 Возвращает копию объекта объекта распределителя, использованного для создания списка.
 
@@ -1132,7 +1132,7 @@ int main( )
 }
 ```
 
-## <a name="insert"></a><a name="insert"></a>Вставляет
+## <a name="insert"></a><a name="insert"></a> Вставляет
 
 Вставляет элемент или количество элементов или диапазон элементов в указанное положение в списке.
 
@@ -1238,7 +1238,7 @@ int main()
 }
 ```
 
-## <a name="iterator"></a><a name="iterator"></a>итераци
+## <a name="iterator"></a><a name="iterator"></a> итераци
 
 Тип, предоставляющий двунаправленный итератор, который может читать или изменять любой элемент в списке.
 
@@ -1254,7 +1254,7 @@ typedef implementation-defined iterator;
 
 См. пример для [begin](#begin).
 
-## <a name="list"></a><a name="list"></a>числ
+## <a name="list"></a><a name="list"></a> числ
 
 Создает список определенного размера, или с элементами определенного значения, или с определенным распределителем, или в качестве копии какого-либо другого списка или его части.
 
@@ -1412,7 +1412,7 @@ int main()
 c1 = 0 0 0c2 = 2 2 2 2 2c3 = 1 1 1c4 = 2 2 2 2 2c5 = 2 2c6 = 2 2 2c7 = 2 2 2c8 = 1 2 3 4
 ```
 
-## <a name="max_size"></a><a name="max_size"></a>max_size
+## <a name="max_size"></a><a name="max_size"></a> max_size
 
 Возвращает максимальную длину списка.
 
@@ -1443,7 +1443,7 @@ int main( )
 }
 ```
 
-## <a name="merge"></a><a name="merge"></a>AutoMerge
+## <a name="merge"></a><a name="merge"></a> AutoMerge
 
 Удаляет элементы из списка аргументов, вставляет их в список назначения и сортирует новый объединенный набор элементов по возрастанию или в ином указанном порядке.
 
@@ -1527,7 +1527,7 @@ c3 = 5 1
 After merging c3 with c2 according to the '>' comparison relation: c2 = 6 5 4 3 2 1
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>Оператор =
+## <a name="operator"></a><a name="op_eq"></a> Оператор =
 
 Заменяет элементы списка копией другого списка.
 
@@ -1600,7 +1600,7 @@ typedef typename Allocator::pointer pointer;
 
 В большинстве случаев [итератор](#iterator) должен использоваться для доступа к элементам в объекте-списке.
 
-## <a name="pop_back"></a><a name="pop_back"></a>pop_back
+## <a name="pop_back"></a><a name="pop_back"></a> pop_back
 
 Удаляет элемент в конце списка.
 
@@ -1642,7 +1642,7 @@ The last element is: 2
 After deleting the element at the end of the list, the last element is: 1
 ```
 
-## <a name="pop_front"></a><a name="pop_front"></a>pop_front
+## <a name="pop_front"></a><a name="pop_front"></a> pop_front
 
 Удаляет элемент в начале списка.
 
@@ -1684,7 +1684,7 @@ The second element is: 2
 After deleting the element at the beginning of the list, the first element is: 2
 ```
 
-## <a name="push_back"></a><a name="push_back"></a>push_back
+## <a name="push_back"></a><a name="push_back"></a> push_back
 
 Добавляет элемент в конец списка.
 
@@ -1739,7 +1739,7 @@ New last element: 2
 Moved first element: a
 ```
 
-## <a name="push_front"></a><a name="push_front"></a>push_front
+## <a name="push_front"></a><a name="push_front"></a> push_front
 
 Добавляет элемент в начало списка.
 
@@ -1794,7 +1794,7 @@ New first element: 2
 Moved first element: a
 ```
 
-## <a name="rbegin"></a><a name="rbegin"></a>rbegin
+## <a name="rbegin"></a><a name="rbegin"></a> rbegin
 
 Возвращает итератор, который адресует первый элемент в обратном списке.
 
@@ -1865,7 +1865,7 @@ The reversed list is: 30 20 10
 The last element in the list is now 40.
 ```
 
-## <a name="reference"></a><a name="reference"></a>IsReference
+## <a name="reference"></a><a name="reference"></a> IsReference
 
 Тип, предоставляющий ссылку на элемент в списке.
 
@@ -1901,7 +1901,7 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="remove"></a><a name="remove"></a>отменит
+## <a name="remove"></a><a name="remove"></a> отменит
 
 Удаляет из списка элементы, совпадающие с заданным значением.
 
@@ -1958,7 +1958,7 @@ The initial list is c1 = 5 100 5 200 5 300
 After removing elements with value 5, the list becomes c2 = 100 200 300
 ```
 
-## <a name="remove_if"></a><a name="remove_if"></a>remove_if
+## <a name="remove_if"></a><a name="remove_if"></a> remove_if
 
 Удаляет из списка элементы, для которых выполняется заданный предикат.
 
@@ -2023,7 +2023,7 @@ The initial list is c1 = 3 4 5 6 7 8
 After removing the odd elements, the list becomes c2 = 4 6 8
 ```
 
-## <a name="rend"></a><a name="rend"></a>rend
+## <a name="rend"></a><a name="rend"></a> rend
 
 Возвращает итератор, адресующий расположение после последнего элемента в обратном списке.
 
@@ -2109,7 +2109,7 @@ The reversed list is: 30 20 10
 The modified reversed list is: 30 20 40
 ```
 
-## <a name="resize"></a><a name="resize"></a>изменить размер
+## <a name="resize"></a><a name="resize"></a> изменить размер
 
 Указывает новый размер списка.
 
@@ -2176,7 +2176,7 @@ The reduced size of c1 is: 2
 The value of the last element is now 20
 ```
 
-## <a name="reverse"></a><a name="reverse"></a>Отмена
+## <a name="reverse"></a><a name="reverse"></a> Отмена
 
 Изменяет порядок следования элементов в списке на обратный.
 
@@ -2220,7 +2220,7 @@ c1 = 10 20 30
 Reversed c1 = 30 20 10
 ```
 
-## <a name="reverse_iterator"></a><a name="reverse_iterator"></a>reverse_iterator
+## <a name="reverse_iterator"></a><a name="reverse_iterator"></a> reverse_iterator
 
 Тип, предоставляющий двунаправленный итератор, который может читать или изменять любой элемент в обратном списке.
 
@@ -2236,7 +2236,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 См. пример для [rbegin](#rbegin).
 
-## <a name="size"></a><a name="size"></a>изменять
+## <a name="size"></a><a name="size"></a> изменять
 
 Возвращает количество элементов в списке.
 
@@ -2277,7 +2277,7 @@ List length is 1.
 List length is now 2.
 ```
 
-## <a name="size_type"></a><a name="size_type"></a>size_type
+## <a name="size_type"></a><a name="size_type"></a> size_type
 
 Тип, считающий количество элементов в списке.
 
@@ -2289,7 +2289,7 @@ typedef typename Allocator::size_type size_type;
 
 См. пример для [size](#size).
 
-## <a name="sort"></a><a name="sort"></a>сортировки
+## <a name="sort"></a><a name="sort"></a> сортировки
 
 Упорядочивает элементы списка по возрастанию или в другом указанном пользователем порядке.
 
@@ -2354,7 +2354,7 @@ After sorting c1 = 10 20 30
 After sorting with 'greater than' operation, c1 = 30 20 10
 ```
 
-## <a name="splice"></a><a name="splice"></a>соединения
+## <a name="splice"></a><a name="splice"></a> соединения
 
 Удаляет элементы из исходного списка и вставляет их в целевой список.
 
@@ -2477,7 +2477,7 @@ int main()
 Beginning state of lists:c1 = 2 elements: (10) (11)c2 = 3 elements: (20) (21) (22)c3 = 2 elements: (30) (31)c4 = 4 elements: (40) (41) (42) (43)After splicing c1 into c2:c1 = 0 elements:c2 = 5 elements: (20) (10) (11) (21) (22)After splicing the first element of c3 into c2:c3 = 1 elements: (31)c2 = 6 elements: (20) (10) (11) (30) (21) (22)After splicing a range of c4 into c2:c4 = 2 elements: (40) (43)c2 = 8 elements: (20) (10) (11) (30) (41) (42) (21) (22)
 ```
 
-## <a name="swap"></a><a name="swap"></a>позиции
+## <a name="swap"></a><a name="swap"></a> позиции
 
 Меняет местами элементы двух списков.
 
@@ -2542,7 +2542,7 @@ After swapping with c2, list c1 is: 10 20
 After swapping with c3, list c1 is: 100
 ```
 
-## <a name="unique"></a><a name="unique"></a>однозначно
+## <a name="unique"></a><a name="unique"></a> однозначно
 
 Удаляет из списка повторяющиеся соседние элементы или соседние элементы, удовлетворяющие условию какого-либо другого двоичного предиката.
 
@@ -2615,7 +2615,7 @@ After removing successive duplicate elements, c2 = -10 10 20 -10
 After removing successive unequal elements, c3 = -10 -10
 ```
 
-## <a name="value_type"></a><a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a> value_type
 
 Тип, представляющий тип данных, хранящихся в списке.
 

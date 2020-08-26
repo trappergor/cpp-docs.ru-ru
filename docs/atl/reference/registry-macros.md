@@ -1,5 +1,5 @@
 ---
-title: Реестр Макрос
+title: Макросы реестра
 ms.date: 08/19/2019
 f1_keywords:
 - atlcom/ATL::_ATL_STATIC_REGISTRY
@@ -12,34 +12,34 @@ f1_keywords:
 helpviewer_keywords:
 - registry, ATL macros
 ms.assetid: 3ee041da-c63b-42a4-89cf-2a4b2a6f81ae
-ms.openlocfilehash: fd012b4300f4cd72cdc9ab363b770ac1dbefa06e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dac1c187bae0eb55b954fc02cd4fb4c981f272f4
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81326043"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834522"
 ---
-# <a name="registry-macros"></a>Реестр Макрос
+# <a name="registry-macros"></a>Макросы реестра
 
-Эти макросы определяют полезные типы библиотек и реестробъектов.
+Эти макросы определяют полезные средства библиотеки типов и реестра.
 
-|||
+|Имя|Описание|
 |-|-|
-|[_ATL_STATIC_REGISTRY](#_atl_static_registry)|Означает, что необходимо, чтобы код регистрации объекта находился в объекте, чтобы избежать зависимости от ATL. Dll.|
-|[DECLARE_LIBID](#declare_libid)|Предоставляет возможность для ATL получить *libid* библиотеки типа.|
-|[DECLARE_NO_REGISTRY](#declare_no_registry)|Избегает регистрации ATL по умолчанию.|
+|[_ATL_STATIC_REGISTRY](#_atl_static_registry)|Указывает, что код регистрации для объекта должен находиться в объекте, чтобы избежать зависимости от ATL.DLL.|
+|[DECLARE_LIBID](#declare_libid)|Предоставляет библиотеке ATL способ получения *идентификатора LIBID* библиотеки типов.|
+|[DECLARE_NO_REGISTRY](#declare_no_registry)|Позволяет избежать регистрации ATL по умолчанию.|
 |[DECLARE_REGISTRY](#declare_registry)|Вводит или удаляет запись основного объекта в системном реестре.|
-|[DECLARE_REGISTRY_APPID_RESOURCEID](#declare_registry_appid_resourceid)|Определяет информацию, необходимую для автоматической регистрации *приложения.*|
-|[DECLARE_REGISTRY_RESOURCE](#declare_registry_resource)|Находит названный ресурс и запускает в нем скрипт реестра.|
-|[DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid)|Находит ресурс, идентифицированный идентификационным номером, и запускает в нем скрипт реестра.|
+|[DECLARE_REGISTRY_APPID_RESOURCEID](#declare_registry_appid_resourceid)|Задает сведения, необходимые для автоматической регистрации *AppID*.|
+|[DECLARE_REGISTRY_RESOURCE](#declare_registry_resource)|Находит именованный ресурс и запускает в нем сценарий реестра.|
+|[DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid)|Находит ресурс, идентифицируемый по ИДЕНТИФИКАЦИОНному номеру, и запускает в нем сценарий реестра.|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atlcom.h
+**Заголовок:** атлком. h
 
-## <a name="_atl_static_registry"></a><a name="_atl_static_registry"></a>_ATL_STATIC_REGISTRY
+## <a name="_atl_static_registry"></a><a name="_atl_static_registry"></a> _ATL_STATIC_REGISTRY
 
-Символ, указывающий на то, что код регистрации объекта должен находиться в объекте, чтобы избежать зависимости от ATL. Dll.
+Символ, указывающий, что код регистрации для объекта должен находиться в объекте, чтобы избежать зависимости от ATL.DLL.
 
 ```
 #define _ATL_STATIC_REGISTRY
@@ -51,9 +51,9 @@ ms.locfileid: "81326043"
 
 [!code-cpp[NVC_ATL_EventHandlingSample#5](../../atl/codesnippet/cpp/registry-macros_1.cpp)]
 
-## <a name="declare_libid"></a><a name="declare_libid"></a>DECLARE_LIBID
+## <a name="declare_libid"></a><a name="declare_libid"></a> DECLARE_LIBID
 
-Предоставляет возможность для ATL получить *libid* библиотеки типа.
+Предоставляет библиотеке ATL способ получения *идентификатора LIBID* библиотеки типов.
 
 ```
 DECLARE_LIBID( libid )
@@ -61,28 +61,28 @@ DECLARE_LIBID( libid )
 
 ### <a name="parameters"></a>Параметры
 
-*Libid*<br/>
+*ID*<br/>
 Идентификатор GUID библиотеки типов.
 
 ### <a name="remarks"></a>Remarks
 
-Используйте DECLARE_LIBID `CAtlModuleT`в классе, полученном.
+Используйте DECLARE_LIBID в `CAtlModuleT` производном классе.
 
 ### <a name="example"></a>Пример
 
-Неприписываемые мастер-генерируемые проекты ATL будут иметь образец использования этого макроса.
+Для созданных мастером проектов ATL, не являющихся атрибутами, будет использоваться пример использования этого макроса.
 
-## <a name="declare_no_registry"></a><a name="declare_no_registry"></a>DECLARE_NO_REGISTRY
+## <a name="declare_no_registry"></a><a name="declare_no_registry"></a> DECLARE_NO_REGISTRY
 
-Используйте DECLARE_NO_REGISTRY, если вы хотите избежать регистрации ATL по умолчанию для класса, в котором отображается этот макрос.
+Используйте DECLARE_NO_REGISTRY, если необходимо избежать регистрации в библиотеке ATL по умолчанию для класса, в котором этот макрос отображается.
 
 ```
 DECLARE_NO_REGISTRY()
 ```
 
-## <a name="declare_registry"></a><a name="declare_registry"></a>DECLARE_REGISTRY
+## <a name="declare_registry"></a><a name="declare_registry"></a> DECLARE_REGISTRY
 
-Вводит регистрацию стандартного класса в системный реестр или удаляет его из системного реестра.
+Вводит стандартную регистрацию класса в системный реестр или удаляет ее из системного реестра.
 
 ```
 DECLARE_REGISTRY(
@@ -96,29 +96,29 @@ DECLARE_REGISTRY(
 ### <a name="parameters"></a>Параметры
 
 *class*<br/>
-(в) Включено для обратной совместимости.
+окне Включается для обеспечения обратной совместимости.
 
-*Pid*<br/>
-(в) LPCTSTR, который является идентификатором программы для конкретной версии.
+*pid*<br/>
+окне LPCTSTR, который является идентификатором программы, зависящей от версии.
 
-*vpid*<br/>
-(в) LPCTSTR, который является идентификатором программы, не зависимым от версий.
+*впид*<br/>
+окне LPCTSTR, который является идентификатором программы, не зависящей от версии.
 
-*Nid*<br/>
-(в) UINT, который является индексом строки ресурса в реестре для использования в качестве описания программы.
+*NID*<br/>
+окне Значение UINT, которое является индексом строки ресурса в реестре для использования в качестве описания программы.
 
-*Флаги*<br/>
-(в) DWORD, содержащий модель потоков программы в реестре. Должно быть одно из следующих значений: THREADFLAGS_APARTMENT, THREADFLAGS_BOTH или AUTPRXFLAG.
+*flags*<br/>
+окне Значение типа DWORD, содержащее потоковую модель программы в реестре. Должно иметь одно из следующих значений: THREADFLAGS_APARTMENT, THREADFLAGS_BOTH или АУТПРКСФЛАГ.
 
 ### <a name="remarks"></a>Remarks
 
-Стандартная регистрация состоит из CLSID, идентификатора программы, идентификатора независимой версии программы, строки описания и модели потока.
+Стандартная регистрация состоит из идентификатора CLSID, идентификатора программы, идентификатора программы, не зависящего от версии, строки описания и модели потока.
 
-При создании объекта или элементе управления с помощью atL Add Class Wizard мастер автоматически реализует поддержку реестра на основе сценариев и добавляет [DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid) макрос в файлы. Если вы не хотите поддержки реестра на основе сценариев, вам необходимо заменить этот макрос DECLARE_REGISTRY. DECLARE_REGISTRY вставляет в реестр только пять основных ключей, описанных выше. Вы должны вручную написать код, чтобы вставить другие ключи в реестр.
+При создании объекта или элемента управления с помощью мастера добавления классов ATL мастер автоматически реализует поддержку реестра на основе сценариев и добавляет в файлы макрос [DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid) . Если не требуется поддержка реестра на основе сценариев, необходимо заменить этот макрос на DECLARE_REGISTRY. DECLARE_REGISTRY только вставляет пять основных ключей, описанных выше, в реестр. Необходимо вручную написать код для вставки других ключей в реестр.
 
-## <a name="declare_registry_appid_resourceid"></a><a name="declare_registry_appid_resourceid"></a>DECLARE_REGISTRY_APPID_RESOURCEID
+## <a name="declare_registry_appid_resourceid"></a><a name="declare_registry_appid_resourceid"></a> DECLARE_REGISTRY_APPID_RESOURCEID
 
-Определяет информацию, необходимую для автоматической регистрации *приложения.*
+Задает сведения, необходимые для автоматической регистрации *AppID*.
 
 ```
 DECLARE_REGISTRY_APPID_RESOURCEID(
@@ -129,22 +129,22 @@ DECLARE_REGISTRY_APPID_RESOURCEID(
 ### <a name="parameters"></a>Параметры
 
 *Resid*<br/>
-Идентификатор ресурса файла .rgs, содержащего информацию об *аппидо.*
+Идентификатор ресурса RGS файла, содержащего сведения о *AppID*.
 
-*Appid*<br/>
+*appid*<br/>
 Идентификатор GUID.
 
 ### <a name="remarks"></a>Remarks
 
-Используйте DECLARE_REGISTRY_APPID_RESOURCEID `CAtlModuleT`в классе - производные.
+Используйте DECLARE_REGISTRY_APPID_RESOURCEID в `CAtlModuleT` производном классе.
 
 ### <a name="example"></a>Пример
 
-Классы, добавленные в проекты ATL с мастером кода Add Class, будут иметь образец использования этого макроса.
+Классы, добавленные в проекты ATL с помощью мастера добавления кода класса, будут иметь пример использования этого макроса.
 
-## <a name="declare_registry_resource"></a><a name="declare_registry_resource"></a>DECLARE_REGISTRY_RESOURCE
+## <a name="declare_registry_resource"></a><a name="declare_registry_resource"></a> DECLARE_REGISTRY_RESOURCE
 
-Получает названный ресурс, содержащий файл реестра, и запускает скрипт, чтобы либо ввести объекты в системный реестр, либо удалить их из системного реестра.
+Получает именованный ресурс, содержащий файл реестра, и запускает сценарий для ввода объектов в системный реестр или удаления их из системного реестра.
 
 ```
 DECLARE_REGISTRY_RESOURCE( x )
@@ -153,23 +153,23 @@ DECLARE_REGISTRY_RESOURCE( x )
 ### <a name="parameters"></a>Параметры
 
 *x*<br/>
-(в) Строка идентификатор вашего ресурса.
+окне Идентификатор строки ресурса.
 
 ### <a name="remarks"></a>Remarks
 
-При создании объекта или управления с помощью ATL Project Wizard мастер автоматически реализует поддержку реестра на основе скрипта и добавляет в файлы [DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid) макрос, похожий на DECLARE_REGISTRY_RESOURCE.
+При создании объекта или элемента управления с помощью мастера проектов ATL мастер автоматически реализует поддержку реестра на основе сценариев и добавляет в файлы макрос [DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid) , аналогичный DECLARE_REGISTRY_RESOURCE.
 
-Вы можете статически связать с компонентом реестра ATL (регистратор) для оптимизированного доступа к реестру. Чтобы статически связаться с кодом Регистратора, добавьте следующую строку в файл *pch.h* *(stdafx.h* в Visual Studio 2017 и более раньше):
+Для оптимизированного доступа к реестру можно статически связать с компонентом реестра ATL (регистратором). Чтобы статически связать с кодом регистратора, добавьте следующую строку в файл *PCH. h* (*stdafx. h* в Visual Studio 2017 и более ранних версиях):
 
 [!code-cpp[NVC_ATL_COM#56](../../atl/codesnippet/cpp/registry-macros_2.h)]
 
-Если вы хотите, чтобы ATL заменил значения замены во время выполнения, не укажите DECLARE_REGISTRY_RESOURCE или DECLARE_REGISTRY_RESOURCEID макрос. Вместо этого создайте `_ATL_REGMAP_ENTRIES` массив структур, где каждая запись содержит переменный заполнитель в паре со значением для замены заполнителя во время выполнения. Затем позвоните [cAtlModule::UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced) или [CAtlModule::UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources), проходя массив. Это добавляет все значения замены `_ATL_REGMAP_ENTRIES` в структурах на карту замены Регистратора.
+Если необходимо, чтобы в библиотеке ATL заменялись замещающие значения во время выполнения, не указывайте DECLARE_REGISTRY_RESOURCE или DECLARE_REGISTRY_RESOURCEID макрос. Вместо этого создайте массив `_ATL_REGMAP_ENTRIES` структур, где каждая запись содержит заполнитель переменной со значением для замены заполнителя во время выполнения. Затем вызовите [катлмодуле:: упдатерегистрифромресаурцед](catlmodule-class.md#updateregistryfromresourced) или [Катлмодуле:: упдатерегистрифромресаурцес](catlmodule-class.md#updateregistryfromresources), передав массив. При этом все замещающие значения в структурах добавляются в `_ATL_REGMAP_ENTRIES` карту замены регистратора.
 
-Для получения дополнительной информации о сменных параметров и сценариев, [см.](../../atl/atl-registry-component-registrar.md)
+Дополнительные сведения о заменяемых параметрах и сценариях см. в статье [компонент реестра ATL (регистратор)](../../atl/atl-registry-component-registrar.md).
 
-## <a name="declare_registry_resourceid"></a><a name="declare_registry_resourceid"></a>DECLARE_REGISTRY_RESOURCEID
+## <a name="declare_registry_resourceid"></a><a name="declare_registry_resourceid"></a> DECLARE_REGISTRY_RESOURCEID
 
-Так же, как [DECLARE_REGISTRY_RESOURCE,](#declare_registry_resource) за исключением того, что он использует мастер-генерируемых UINT для идентификации ресурса, а не строки имя.
+То же, что и [DECLARE_REGISTRY_RESOURCE](#declare_registry_resource) за исключением того, что в нем используется формируемый мастером uint для поиска ресурса, а не имя строки.
 
 ```
 DECLARE_REGISTRY_RESOURCEID( x )
@@ -178,19 +178,19 @@ DECLARE_REGISTRY_RESOURCEID( x )
 ### <a name="parameters"></a>Параметры
 
 *x*<br/>
-(в) Идентификатор вашего ресурса, генерируемый мастером.
+окне Идентификатор ресурса, созданный мастером.
 
 ### <a name="remarks"></a>Remarks
 
-При создании объекта или управления с помощью ATL Project Wizard мастер автоматически реализует поддержку реестра на основе скрипта и добавляет DECLARE_REGISTRY_RESOURCEID макрос в файлы.
+При создании объекта или элемента управления с помощью мастера проектов ATL мастер автоматически реализует поддержку реестра на основе сценариев и добавляет макрос DECLARE_REGISTRY_RESOURCEID в файлы.
 
-Вы можете статически связать с компонентом реестра ATL (регистратор) для оптимизированного доступа к реестру. Чтобы статически связаться с кодом Регистратора, добавьте следующую строку в файл *stdafx.h* *(pch.h* в Visual Studio 2019 и позже):
+Для оптимизированного доступа к реестру можно статически связать с компонентом реестра ATL (регистратором). Чтобы статически связать с кодом регистратора, добавьте следующую строку в файл *stdafx. h* (*PCH. h* в Visual Studio 2019 и более поздних версиях):
 
 [!code-cpp[NVC_ATL_COM#56](../../atl/codesnippet/cpp/registry-macros_2.h)]
 
-Если вы хотите, чтобы ATL заменил значения замены во время выполнения, не укажите DECLARE_REGISTRY_RESOURCE или DECLARE_REGISTRY_RESOURCEID макрос. Вместо этого создайте `_ATL_REGMAP_ENTRIES` массив структур, где каждая запись содержит переменный заполнитель в паре со значением для замены заполнителя во время выполнения. Затем позвоните [cAtlModule::UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced) или [CAtlModule::UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources), проходя массив. Это добавляет все значения замены `_ATL_REGMAP_ENTRIES` в структурах на карту замены Регистратора.
+Если необходимо, чтобы в библиотеке ATL заменялись замещающие значения во время выполнения, не указывайте DECLARE_REGISTRY_RESOURCE или DECLARE_REGISTRY_RESOURCEID макрос. Вместо этого создайте массив `_ATL_REGMAP_ENTRIES` структур, где каждая запись содержит заполнитель переменной со значением для замены заполнителя во время выполнения. Затем вызовите [катлмодуле:: упдатерегистрифромресаурцед](catlmodule-class.md#updateregistryfromresourced) или [Катлмодуле:: упдатерегистрифромресаурцес](catlmodule-class.md#updateregistryfromresources), передав массив. При этом все замещающие значения в структурах добавляются в `_ATL_REGMAP_ENTRIES` карту замены регистратора.
 
-Для получения дополнительной информации о сменных параметров и сценариев, [см.](../../atl/atl-registry-component-registrar.md)
+Дополнительные сведения о заменяемых параметрах и сценариях см. в статье [компонент реестра ATL (регистратор)](../../atl/atl-registry-component-registrar.md).
 
 ## <a name="see-also"></a>См. также раздел
 

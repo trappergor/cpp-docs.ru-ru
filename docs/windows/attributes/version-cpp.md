@@ -7,12 +7,12 @@ helpviewer_keywords:
 - version attribute
 - version information, version attribute
 ms.assetid: db6ce5d8-82c2-4329-b1a8-8ca2f67342cb
-ms.openlocfilehash: b537f56c39c33abc52897cf53ea2cc0fb24ee458
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7d21761a556455cec27087896984bdc721841d9d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213805"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832949"
 ---
 # <a name="version-c"></a>version (C++)
 
@@ -39,9 +39,7 @@ ms.locfileid: "87213805"
 
 ## <a name="requirements"></a>Требования
 
-### <a name="attribute-context"></a>Контекст атрибута
-
-|||
+| Контекст атрибута | Значение |
 |-|-|
 |**Относится к**|**`class`**, **`struct`**|
 |**REPEATABLE**|Нет|
