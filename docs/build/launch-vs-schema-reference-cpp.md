@@ -3,12 +3,12 @@ title: Справочник по схеме launch.vs.json (C++)
 ms.date: 08/20/2019
 helpviewer_keywords:
 - launch.vs.json file [C++]
-ms.openlocfilehash: 0410f22a680d5bfc12270ff686938a54e2e8a8fd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1161e8fa8ac3751ca8cc2b96ec063cd6063bb245
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223958"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841991"
 ---
 # <a name="launchvsjson-schema-reference-c"></a>Справочник по схеме launch.vs.json (C++)
 
@@ -16,9 +16,8 @@ ms.locfileid: "87223958"
 
 ## <a name="default-properties"></a>Свойства по умолчанию
 
-||||
+|Свойство|Тип|Описание|
 |-|-|-|
-|**Property**|**Type**|**Описание**|
 |`name`|string|Задает имя записи в раскрывающемся списке целевых объектов отладки.|
 |`type`|string|Указывает, является ли проект DLL или EXE (по умолчанию — EXE)|
 |`project`|string|Задает относительный путь к файлу проекта.|
@@ -36,9 +35,8 @@ ms.locfileid: "87223958"
 
 ## <a name="c-linux-properties"></a>Свойства C++ Linux
 
-||||
+|Свойство|Тип|Описание|
 |-|-|-|
-|**Property**|**Type**|**Описание**|
 |`program`|string|Полный путь к исполняемому файлу программы на удаленном компьютере. При использовании CMake в качестве значения этого поля можно использовать макрос `${debugInfo.fullTargetPath}`.|
 |`processId`|целочисленный|Необязательный идентификатор процесса для подключения отладчика.|
 |`sourceFileMap`|object|Необязательные сопоставления исходных файлов, переданных модулю отладки. Формат: `{ "\<Compiler source location>": "\<Editor source location>" }` или `{ "\<Compiler source location>": { "editorPath": "\<Editor source location>", "useForBreakpoints": true } }`. Пример: `{ "/home/user/foo": "C:\\foo" }` или `{ "/home/user/foo": { "editorPath": "c:\\foo", "useForBreakpoints": true } }`. См. раздел [Параметры сопоставления исходного файла](#source_file_map_options).|
@@ -67,9 +65,9 @@ externalConsole|boolean|Если значение — true, для отлажи
 
 Используется со свойством `setupCommands`:
 
-||||
+|Свойство|Тип|Описание|
 |-|-|-|
-|`text`|string|Команда отладчика для выполнения.|
+|`text`|строка|Команда отладчика для выполнения.|
 |`description`|string|Необязательное описание команды.|
 |`ignoreFailures`|boolean|Если значение — true, ошибки, передаваемые командой, следует игнорировать. По умолчанию — **`false`** .|
 
@@ -77,7 +75,7 @@ externalConsole|boolean|Если значение — true, для отлажи
 
 Используется со свойством `pipeTransport`:
 
-||||
+|Свойство|Тип|Описание|
 |-|-|-|
 |`pipeCwd`|string|Полный путь к рабочему каталогу для программы канала.|
 |`pipeProgram`|string|Полная команда канала для выполнения.|
@@ -90,7 +88,7 @@ externalConsole|boolean|Если значение — true, для отлажи
 
 Используется со свойством `sourceFileMap`:
 
-||||
+|Свойство|Тип|Описание|
 |-|-|-|
-|`editorPath`|string|Расположение исходного кода для поиска редактором.|
+|`editorPath`|строка|Расположение исходного кода для поиска редактором.|
 |`useForBreakpoints`|boolean|При задании точек останова следует использовать это сопоставление источника. Если задано значение **`false`** , для установки точек останова используется только имя файла и номер строки. Если задано значение **`true`** , точки останова будут заданы полным путем к файлу и номеру строки только при использовании этого сопоставления источника. В противном случае при задании точек останова будет использоваться только имя файла и номер строки. Значение по умолчанию — **`true`** .|
