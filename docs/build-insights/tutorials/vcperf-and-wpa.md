@@ -7,12 +7,12 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 724df913400abb6d33c333f0a16c20fb982769bc
-ms.sourcegitcommit: 98139766b548c55181ff5ec5ad3bfd9db2bf5c89
+ms.openlocfilehash: f3a0b4a9c57fd55c6788481adbf91c48e362444e
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83865056"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833404"
 ---
 # <a name="tutorial-vcperf-and-windows-performance-analyzer"></a>Руководство. Средство vcperf и Windows Performance Analyzer
 
@@ -35,7 +35,7 @@ Windows Performance Analyzer (WPA) — это средство просмотр
 
 Примечание. Для установки Windows Performance Analyzer требуется Windows 8 или более поздней версии.
 
-1. Перейдите на [страницу для скачивания](https://docs.microsoft.com/windows-hardware/get-started/adk-install) Windows ADK.
+1. Перейдите на [страницу для скачивания](/windows-hardware/get-started/adk-install) Windows ADK.
 
 1. Скачайте и установите последнюю версию Windows ADK.
 

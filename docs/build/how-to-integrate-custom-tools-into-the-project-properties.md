@@ -4,12 +4,12 @@ ms.date: 05/16/2019
 helpviewer_keywords:
 - 'msbuild (c++), howto: integrate custom tools'
 ms.assetid: f32d91a4-44e9-4de3-aa9a-1c7f709ad2ee
-ms.openlocfilehash: 5a96ffd15bb28022b3000252307c75b3383ac59c
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: 821fb1637306c70d850f12fc1b954860557f47f7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373753"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840444"
 ---
 # <a name="how-to-integrate-custom-tools-into-the-project-properties"></a>Практическое руководство. Интеграция пользовательских средств в свойства проекта
 
@@ -17,7 +17,7 @@ ms.locfileid: "86373753"
 
 В разделе **Свойства конфигурации** в окне **страницы свойств** отображаются группы параметров, известные как *правила*. Каждое правило содержит параметры для средства или группы функций. Например, правило **компоновщика** содержит параметры для средства компоновщика. Параметры в правиле можно разделить на *категории*.
 
-В этом документе объясняется, как создать файл в заданном каталоге, который содержит свойства для пользовательского инструмента, чтобы эти свойства загружались при запуске Visual Studio. Сведения о том, как изменить файл, см. в разделе [Расширяемость платформы. Часть 2](https://docs.microsoft.com/archive/blogs/vsproject/platform-extensibility-part-2) в блоге группы проекта Visual Studio.
+В этом документе объясняется, как создать файл в заданном каталоге, который содержит свойства для пользовательского инструмента, чтобы эти свойства загружались при запуске Visual Studio. Сведения о том, как изменить файл, см. в разделе [Расширяемость платформы. Часть 2](/archive/blogs/vsproject/platform-extensibility-part-2) в блоге группы проекта Visual Studio.
 
 ### <a name="to-add-or-change-project-properties"></a>Добавление или изменение свойств проекта
 

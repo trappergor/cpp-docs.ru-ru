@@ -4,12 +4,12 @@ ms.date: 05/21/2019
 helpviewer_keywords:
 - tools and platforms [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-ms.openlocfilehash: 88eb66440df023254cb806c03a00aa2d71980305
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 00c096203ae056c96c87d67a491d3c84b3d1fb3a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366797"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845358"
 ---
 # <a name="c-tools-and-features-in-visual-studio-editions"></a>Инструменты и функции C++ в выпусках Visual Studio
 
@@ -315,9 +315,8 @@ Linux:
 
 ## <a name="platforms"></a>Платформы
 
-||||||
-|-|-|-|-|-|
 |Платформа|Visual Studio Express для Windows 10|Visual Studio Express для Windows Desktop|Visual Studio Community и Professional|Visual Studio Enterprise|
+|-|-|-|-|-|
 |Windows Desktop||X|X|X|
 |Универсальная платформа Windows (телефоны, планшеты, ПК, Xbox, IoT и HoloLens)|X||X|X|
 |Linux|X|X|
@@ -457,9 +456,8 @@ Linux:
 
 ## <a name="application-lifecycle-management-tools"></a>Средства управления жизненным циклом приложения
 
-||||||
-|-|-|-|-|-|
 |Средство|Visual Studio Express для Windows|Visual Studio Express для Windows Desktop|Visual Studio Professional и Community|Visual Studio Enterprise|
+|-|-|-|-|-|
 |Модульное тестирование (собственная платформа)|X|X|X|X|
 |Модульное тестирование (управляемая платформа)||X|X|X|
 |Покрытие кода||||X|

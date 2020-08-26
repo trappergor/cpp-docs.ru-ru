@@ -4,12 +4,12 @@ ms.date: 08/20/2019
 helpviewer_keywords:
 - tasks.vs.json file [C++]
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: cc6b2983d3cc3d40449357a554df5feee38c21d9
-ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
+ms.openlocfilehash: a2aea1b64d5a6c62604c680bf1a4a26478b7b52a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556660"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844994"
 ---
 # <a name="tasksvsjson-schema-reference-c"></a>Справочник по схеме tasks.vs.json (C++)
 
@@ -21,9 +21,8 @@ ms.locfileid: "75556660"
 
 Свойства по умолчанию доступны для всех типов задач:
 
-||||
+|Свойство|Тип|Описание|
 |-|-|-|
-|**Property**|**Type**|**Описание**|
 |`taskLabel`|string| (Обязательно). Задает метку задачи, используемую в пользовательском интерфейсе.|
 |`appliesTo`|string| (Обязательно). Указывает, для каких файлов можно выполнить эту команду. Поддерживается использование подстановочных знаков, например: " *", "* .cpp", "/*.txt"|
 |`contextType`|string| Допустимые значения: "custom", "build", "clean", "rebuild". Определяет, где в контекстном меню будет отображаться задача. По умолчанию имеет значение "custom".|
@@ -35,9 +34,8 @@ ms.locfileid: "75556660"
 
 Если тип задачи — `launch`, доступны следующие свойства:
 
-||||
+|Свойство|Тип|Описание|
 |-|-|-|
-|**Property**|**Type**|**Описание**|
 |`command`|string| Указывает полный путь к запускаемому процессу или скрипту.|
 |`args`|array| Задает разделенный запятыми список аргументов, передаваемых команде.|
 |`launchOption`|string| Допустимые значения: "None", "ContinueOnError","IgnoreError". Указывает, как продолжить выполнение команды при возникновении ошибок.|
@@ -88,9 +86,8 @@ ms.locfileid: "75556660"
 
 Если тип задачи — `remote`, доступны следующие свойства:
 
-||||
+|Свойство|Тип|Описание|
 |-|-|-|
-|**Property**|**Type**|**Описание**|
 |`remoteMachineName`|string|Имя удаленного компьютера. Должно соответствовать имени компьютера в **диспетчере подключений**.|
 |`command`|string|Команда для отправки на удаленный компьютер. По умолчанию команды выполняются в каталоге $HOME в удаленной системе.|
 |`remoteWorkingDirectory`|string|Текущий рабочий каталог на удаленном компьютере.|
@@ -129,9 +126,8 @@ ms.locfileid: "75556660"
 
 Если тип задачи — `msbuild`, доступны следующие свойства:
 
-||||
+|Свойство|Тип|Описание|
 |-|-|-|
-|**Property**|**Type**|**Описание**|
 |`verbosity`|string| Указывает выходные значения verbosityAllowed сборки проекта MSBuild: "Quiet", "Minimal", "Normal", "Detailed", "Diagnostic".|
 |`toolsVersion`|string| Указывает версию набора инструментов для сборки проекта, например "2.0", "3.5", "4.0", "Current". Значение по умолчанию: "Current".|
 |`globalProperties`|object|Указывает список ключевых значений глобальных свойств для передачи в проект, например "Configuration":"Release"|

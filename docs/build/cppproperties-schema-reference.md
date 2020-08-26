@@ -3,12 +3,12 @@ title: Справочник по CppProperties.json
 ms.date: 08/09/2019
 helpviewer_keywords:
 - CppProperties.json file [C++]
-ms.openlocfilehash: 2409c1d93d4e9d814407dbd4334daa73ae630775
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 31b4e7901bf35986e553a9e280da0243d61982a2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224062"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837909"
 ---
 # <a name="cpppropertiesjson-reference"></a>Справочник по CppProperties.json
 
@@ -18,7 +18,7 @@ ms.locfileid: "87224062"
 
 Конфигурация может иметь любое из следующих свойств:
 
-|||
+|Имя|Описание|
 |-|-|
 |`inheritEnvironments`| Указывает, какие среды применяются к этой конфигурации.|
 |`name`|Имя конфигурации, которое будет отображаться в раскрывающемся списке конфигурации C++|
@@ -125,7 +125,7 @@ Visual Studio предоставляет следующие стандартны
 
 В *CppProperties.json* доступны следующие встроенные макросы:
 
-|||
+|Макрос|Описание|
 |-|-|
 |`${workspaceRoot}`| полный путь к папке рабочей области;|
 |`${projectRoot}`| полный путь к папке, где находится *CppProperties.json*;|

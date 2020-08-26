@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++, optimization
 - optimization, best practices
 ms.assetid: f3433148-7255-4ca6-8a4f-7c31aac88508
-ms.openlocfilehash: 7b1cea29a782f291f1e85f7a143730825958d91b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 425fa0bb6b7aab502ce493ced8b587fad8ce59a8
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229783"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833352"
 ---
 # <a name="optimization-best-practices"></a>Рекомендации по оптимизации
 
@@ -40,7 +40,7 @@ ms.locfileid: "87229783"
 
 Параметр компилятора **`/Op`** был удален. Добавлены следующие четыре параметра компилятора для оптимизаций с плавающей запятой:
 
-|||
+|Параметр|Описание|
 |-|-|
 |**`/fp:precise`**|Это рекомендация по умолчанию, которую следует использовать в большинстве случаев.|
 |**`/fp:fast`**|Рекомендуется, если производительность имеет первостепенное значение, например в играх. При использовании этого параметра достигается максимальная производительность.|

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - dialog box controls, variable types
 - variables, dialog box control member variables
 ms.assetid: 437783bd-8eb4-4508-8b73-7380116e9d71
-ms.openlocfilehash: a8f693345fcb265cf8e97af342c6e0cd539c9001
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e7fd5bd93198c494f18fe18755d13d40fe7fbf96
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216002"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845137"
 ---
 # <a name="add-a-member-variable"></a>Добавление переменной-члена
 
@@ -80,13 +80,15 @@ ms.locfileid: "87216002"
 
     Сведения о типах см. в разделе [Фундаментальные типы](../cpp/fundamental-types-cpp.md).
 
-    |||
-    |-|-|
-    |**`char`**|**`short`**|
-    |**`double`**|**`unsigned char`**|
-    |**`float`**|**`unsigned int`**|
-    |**`int`**|**`unsigned long`**|
-    |**`long`**||
+    - **`char`**
+    - **`double`**
+    - **`float`**
+    - **`int`**
+    - **`long`**
+    - **`short`**
+    - **`unsigned char`**
+    - **`unsigned int`**
+    - **`unsigned long`**
 
   - При добавлении переменной-члена для элемента управления диалогового окна это поле заполняется типом объекта, возвращаемого для элемента управления или значения. Если выбрать **Элемент управления**, то поле **Тип переменной**  будет указывать базовый класс элемента управления, выбранного в поле **Идентификатор элемента управления**. Если элемент управления диалогового окна может содержать значение и вы выбрали **Значение**, то **Тип переменной** будет указывать соответствующий тип для значения, которое может содержать элемент управления. Дополнительные сведения см. в разделе [Элементы управления "Диалоговое окно" и типы переменных](#dialog-box-controls-and-variable-types).
 

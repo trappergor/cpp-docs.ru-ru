@@ -10,12 +10,12 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-ms.openlocfilehash: f729947e4d798e5817ff8d4e5abe09eaca090e01
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1fe8e59c85e0c6b00bff4de639267a44c6ae369e
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229900"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838806"
 ---
 # <a name="use-the-microsoft-c-toolset-from-the-command-line"></a>Использование набора инструментов Microsoft C++ из командной строки
 
@@ -237,7 +237,7 @@ ms.locfileid: "87229900"
 [NMAKE](reference/nmake-reference.md)<br/>
 Используйте NMAKE (nmake.exe) в Windows для создания проектов C++ на основе традиционного файла makefile.
 
-При сборке в командной строке команда F1 для получения мгновенной справки недоступна. Вместо этого используйте поисковую систему для получения сведений о предупреждениях, ошибках и сообщениях. Также можно скачать и применить автономные файлы справки. Чтобы использовать функцию поиска в [docs.microsoft.com](https://docs.microsoft.com/cpp/), введите строку поиска в поле поиска в верхней части любой статьи.
+При сборке в командной строке команда F1 для получения мгновенной справки недоступна. Вместо этого используйте поисковую систему для получения сведений о предупреждениях, ошибках и сообщениях. Также можно скачать и применить автономные файлы справки. Чтобы использовать функцию поиска в docs.microsoft.com, введите строку поиска в поле поиска в верхней части любой статьи.
 
 ## <a name="command-line-project-management-tools"></a>Средства управления проектами из командной строки
 

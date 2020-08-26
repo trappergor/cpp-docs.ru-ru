@@ -3,12 +3,12 @@ title: Справка и сообщество Visual C++
 ms.date: 08/03/2020
 ms.technology: cpp-ide
 ms.assetid: 6bc23c18-fcd9-47bc-bff2-17537700be4a
-ms.openlocfilehash: e3dd475112f217e9d7891a18f7dc91972b221dd9
-ms.sourcegitcommit: 4eda68a0b3c23d8cefa56b7ba11583412459b32f
+ms.openlocfilehash: 36bc8cc37d3e0018088f284ad00bbefe2eafd22a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565928"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839768"
 ---
 # <a name="visual-c-help-and-community"></a>Справка и сообщество Visual C++
 
@@ -18,7 +18,7 @@ ms.locfileid: "87565928"
 
 |Заголовок|Описание|
 |-----------|-----------------|
-|[Примеры кода от разработчиков](https://docs.microsoft.com/samples)|Содержит загружаемые примеры кода от Microsoft и участников сообщества.|
+|[Примеры кода от разработчиков](/samples)|Содержит загружаемые примеры кода от Microsoft и участников сообщества.|
 
 ## <a name="product-documentation"></a>Документация по продукту
 
@@ -42,4 +42,4 @@ ms.locfileid: "87565928"
 |[Блог группы разработчиков C++](https://devblogs.microsoft.com/cppblog/)|Содержит записи, создаваемые экспертами из группы разработчиков C++ корпорации Майкрософт, по различным темам.|
 |[Channel 9](https://channel9.msdn.com/)|Содержит видеоинтервью и лекции. Используйте поле поиска на домашней странице канала 9 для поиска содержимого по C++.|
 |[Visual Studio](https://visualstudio.microsoft.com/)|Содержит статьи и новости о Visual Studio и связанных средствах разработки.|
-|[Вопросы и ответы о Документации Майкрософт](https://docs.microsoft.com/answers/topics/c%2B%2B.html) и [Сообщество разработчиков](https://developercommunity.visualstudio.com/spaces/62/index.html) Visual Studio (С++)|Официальные форумы Майкрософт, где можно размещать вопросы по C++ и получать ответы от представителей Майкрософт и специалистов сообщества.|
+|[Вопросы и ответы о Документации Майкрософт](/answers/topics/c%2B%2B.html) и [Сообщество разработчиков](https://developercommunity.visualstudio.com/spaces/62/index.html) Visual Studio (С++)|Официальные форумы Майкрософт, где можно размещать вопросы по C++ и получать ответы от представителей Майкрософт и специалистов сообщества.|

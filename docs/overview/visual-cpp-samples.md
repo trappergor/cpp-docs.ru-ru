@@ -4,18 +4,18 @@ description: Сводные описания примеров, доступны�
 ms.date: 03/23/2020
 ms.technology: cpp-language
 ms.assetid: 76798022-5886-48e7-a7f2-f99352b15cbf
-ms.openlocfilehash: cb8d2aa8322cb3e9bfc30dc9ad041e7c70662049
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 56e9cfe72e58a12fb381c88616496820908006c8
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226767"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846372"
 ---
 # <a name="visual-studio-c-samples"></a>Примеры кода Visual Studio C++
 
 В Интернете доступно множество примеров кода для Visual Studio C++. Корпорация Майкрософт предлагает примеры кода Visual C++, демонстрирующие различные функции, применяемые к разным технологиям. Ниже приведены некоторые из мест, где можно найти дополнительные примеры.
 
-- [Примеры в Документации Майкрософт — C++](https://docs.microsoft.com/samples/browse/?term=c%2B%2B)
+- [Примеры в Документации Майкрософт — C++](/samples/browse/?term=c%2B%2B)
 
 - [Примеры Windows на GitHub](https://microsoft.github.io/windows/)
 
@@ -25,7 +25,7 @@ ms.locfileid: "87226767"
 
 - [Примеры кода ADO](/office/client-developer/access/desktop-database-reference/ado-code-examples-in-microsoft-visual-c)
 
-- [Примеры для Центра разработки оборудования Windows](https://docs.microsoft.com/samples/browse/?products=windows-wdk)
+- [Примеры для Центра разработки оборудования Windows](/samples/browse/?products=windows-wdk)
 
 ## <a name="archived-c-samples-on-github"></a>Архив примеров кода Archived C++ на сайте GitHub
 
