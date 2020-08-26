@@ -36,12 +36,12 @@ helpviewer_keywords:
 - GetBindings method
 - ReleaseAccessor method
 ms.assetid: 768606da-8b71-417c-a62c-88069ce7730d
-ms.openlocfilehash: 6b9830ac2b6f1eacedd1b59184292f2148087093
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 356278b316912bdb81f1c43bbf2034f00ec3d785
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210870"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845618"
 ---
 # <a name="iaccessorimpl-class"></a>Класс IAccessorImpl
 
@@ -62,26 +62,26 @@ class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>
 Класс набора строк или командного объекта.
 
 *биндтипе*<br/>
-Единица хранения сведений о привязке. Значение по умолчанию — структура `ATLBINDINGS` (см. ATLDB. h).
+Единица хранения сведений о привязке. По умолчанию используется `ATLBINDINGS` Структура (см. ATLDB. h).
 
 *биндингвектор*<br/>
-Единица хранения сведений о столбце. Значение по умолчанию — [CAtlMap](../../atl/reference/catlmap-class.md) , где элемент key является значением HACCESSOR, а элемент value — указателем на структуру `BindType`.
+Единица хранения сведений о столбце. Значение по умолчанию — [CAtlMap](../../atl/reference/catlmap-class.md) , где элемент key является значением HACCESSOR, а элемент value — указателем на `BindType` структуру.
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** atldb.h
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Элементы
 
 ### <a name="methods"></a>Методы
 
-|||
+| Имя | Описание |
 |-|-|
 |[IAccessorImpl](#iaccessorimpl)|Конструктор.|
 
 ### <a name="interface-methods"></a>Методы интерфейса
 
-|||
+| Имя | Описание |
 |-|-|
 |[аддрефакцессор](#addrefaccessor)|Добавляет счетчик ссылок в существующий метод доступа.|
 |[CreateAccessor](#createaccessor)|Создает метод доступа из набора привязок.|
@@ -90,9 +90,9 @@ class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>
 
 ## <a name="remarks"></a>Remarks
 
-Это обязательно для наборов строк и команд. OLE DB требует, чтобы поставщики реализовали HACCESSOR, который является тегом массива структур [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) . Хакцессорс, предоставляемый `IAccessorImpl`, являются адресами структур `BindType`. По умолчанию `BindType` определяется как `ATLBINDINGS` в определении шаблона `IAccessorImpl`. `BindType` предоставляет механизм, используемый `IAccessorImpl` для контроля количества элементов в его `DBBINDING` массиве, а также для счетчика ссылок и флагов доступа.
+Это обязательно для наборов строк и команд. OLE DB требует, чтобы поставщики реализовали HACCESSOR, который является тегом массива структур [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) . Хакцессорс, предоставляемые, `IAccessorImpl` являются адресами `BindType` структур. По умолчанию определяется `BindType` как `ATLBINDINGS` `IAccessorImpl` Определение шаблона в. `BindType` предоставляет механизм, используемый `IAccessorImpl` для трассировки количества элементов в его `DBBINDING` массиве, а также для счетчика ссылок и флагов доступа.
 
-## <a name="iaccessorimpliaccessorimpl"></a><a name="iaccessorimpl"></a>IAccessorImpl:: IAccessorImpl
+## <a name="iaccessorimpliaccessorimpl"></a><a name="iaccessorimpl"></a> IAccessorImpl:: IAccessorImpl
 
 Конструктор.
 
@@ -102,7 +102,7 @@ class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>
 IAccessorImpl();
 ```
 
-## <a name="iaccessorimpladdrefaccessor"></a><a name="addrefaccessor"></a>IAccessorImpl:: Аддрефакцессор
+## <a name="iaccessorimpladdrefaccessor"></a><a name="addrefaccessor"></a> IAccessorImpl:: Аддрефакцессор
 
 Добавляет счетчик ссылок в существующий метод доступа.
 
@@ -117,7 +117,7 @@ STDMETHOD(AddRefAccessor)(HACCESSOR hAccessor,
 
 См. раздел [IAccessor:: аддрефакцессор](/previous-versions/windows/desktop/ms714978(v=vs.85)) в *справочнике программиста OLE DB*.
 
-## <a name="iaccessorimplcreateaccessor"></a><a name="createaccessor"></a>IAccessorImpl:: CreateAccessor
+## <a name="iaccessorimplcreateaccessor"></a><a name="createaccessor"></a> IAccessorImpl:: CreateAccessor
 
 Создает метод доступа из набора привязок.
 
@@ -136,7 +136,7 @@ STDMETHOD(CreateAccessor)(DBACCESSORFLAGS dwAccessorFlags,
 
 См. раздел [IAccessor:: CreateAccessor](/previous-versions/windows/desktop/ms720969(v=vs.85)) в *справочнике программиста OLE DB*.
 
-## <a name="iaccessorimplgetbindings"></a><a name="getbindings"></a>IAccessorImpl:: DataBindings
+## <a name="iaccessorimplgetbindings"></a><a name="getbindings"></a> IAccessorImpl:: DataBindings
 
 Возвращает привязки базовых столбцов от потребителя в методе доступа.
 
@@ -153,7 +153,7 @@ STDMETHOD(GetBindings)(HACCESSOR hAccessor,
 
 См. раздел [IAccessor:: DataBindings](/previous-versions/windows/desktop/ms721253(v=vs.85)) в *справочнике программиста OLE DB*.
 
-## <a name="iaccessorimplreleaseaccessor"></a><a name="releaseaccessor"></a>IAccessorImpl:: Релеасеакцессор
+## <a name="iaccessorimplreleaseaccessor"></a><a name="releaseaccessor"></a> IAccessorImpl:: Релеасеакцессор
 
 Освобождает метод доступа.
 

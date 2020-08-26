@@ -86,12 +86,12 @@ helpviewer_keywords:
 - std::set [C++], upper_bound
 - std::set [C++], value_comp
 ms.assetid: 8991f9aa-5509-4440-adc1-371512d32018
-ms.openlocfilehash: 80e7c2258fc1fbeabeb8174df18d5cb46aa682bb
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: e879e7ffd9f674769e32548195f5017e27e64576
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560533"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846242"
 ---
 # <a name="set-class"></a>Класс set
 
@@ -145,13 +145,13 @@ class set
 
 ### <a name="constructors"></a>Конструкторы
 
-|||
+|Имя|Описание|
 |-|-|
 |[set](#set)|Создает набор, который является пустым или копией части или целого другого набора.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|||
+|Имя|Описание|
 |-|-|
 |[allocator_type](#allocator_type)|Тип, представляющий класс `allocator` для объекта набора.|
 |[const_iterator](#const_iterator)|Тип, предоставляющий двунаправленный итератор, который может читать **`const`** элемент в наборе.|
@@ -171,7 +171,7 @@ class set
 
 ### <a name="functions"></a>Функции
 
-|||
+|Имя|Описание|
 |-|-|
 |[начале](#begin)|Возвращает итератор, обращающийся к первому элементу в наборе.|
 |[cbegin](#cbegin)|Возвращает итератор const, обращающийся к первому элементу в наборе.|
@@ -201,7 +201,7 @@ class set
 
 ### <a name="operators"></a>Операторы
 
-|||
+|Имя|Описание|
 |-|-|
 |[Оператор =](#op_eq)|Заменяет элементы набора копией другого набора.|
 

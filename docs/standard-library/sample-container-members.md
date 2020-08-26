@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - container classes
 ms.assetid: dc5a1998-a31b-4adf-b888-8abe5b87a4e0
-ms.openlocfilehash: 21d3660661e3987d1b9477bb6298373033946c06
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ea30810177d936248f836e7e4462739d8b5f393a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228119"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846268"
 ---
 # <a name="sample-container-members"></a>Члены образца контейнера
 
@@ -20,7 +20,7 @@ ms.locfileid: "87228119"
 
 ## <a name="typedefs"></a>Определения типов
 
-|||
+|Имя|Описание|
 |-|-|
 |[const_iterator](../standard-library/container-class-const-iterator.md)|Описывает объект, который можно использовать в качестве постоянного итератора для управляемой последовательности.|
 |[const_reference](../standard-library/container-class-const-reference.md)|Описывает объект, который можно использовать в качестве постоянной ссылки на элемент управляемой последовательности.|
@@ -34,7 +34,7 @@ ms.locfileid: "87228119"
 
 ## <a name="member-functions"></a>Функции элементов
 
-|||
+|Имя|Описание|
 |-|-|
 |[начале](../standard-library/container-class-begin.md)|Возвращает итератор, указывающий на первый элемент последовательности (или на место сразу за концом пустой последовательности).|
 |[открытым](../standard-library/container-class-clear.md)|Вызывает метод [erase](../standard-library/container-class-erase.md)( [begin](../standard-library/container-class-begin.md), [end](../standard-library/container-class-end.md)).|

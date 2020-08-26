@@ -90,12 +90,12 @@ helpviewer_keywords:
 - SetParamStatus method
 - SetParamString method
 ms.assetid: 5f22626e-e80d-491f-8b3b-cedc50331960
-ms.openlocfilehash: b7125390013e417123f09a5cc7f58be9ea87db56
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: de9aafe5b04b949112c44be09ac36bede7e7f660
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216470"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838182"
 ---
 # <a name="cdynamicparameteraccessor-class"></a>Класс CDynamicParameterAccessor
 
@@ -115,7 +115,7 @@ class CDynamicParameterAccessor : public CDynamicAccessor
 
 ### <a name="methods"></a>Методы
 
-|||
+| Имя | Описание |
 |-|-|
 |[CDynamicParameterAccessor](#cdynamicparameteraccessor)|Конструктор.|
 |[GetParam](#getparam)|Получает данные параметров из буфера.|
@@ -139,7 +139,7 @@ class CDynamicParameterAccessor : public CDynamicAccessor
 
 Пример использования этого класса для выполнения хранимой процедуры SQL Server и получения значений выходных параметров см. в примере кода [динамикконсумер](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer) в репозитории [Microsoft Вксамплес](https://github.com/Microsoft/VCSamples) на сайте GitHub.
 
-## <a name="cdynamicparameteraccessorcdynamicparameteraccessor"></a><a name="cdynamicparameteraccessor"></a>CDynamicParameterAccessor:: CDynamicParameterAccessor
+## <a name="cdynamicparameteraccessorcdynamicparameteraccessor"></a><a name="cdynamicparameteraccessor"></a> CDynamicParameterAccessor:: CDynamicParameterAccessor
 
 Конструктор.
 
@@ -165,7 +165,7 @@ CDynamicParameterAccessor(
 
 Дополнительные сведения об обработке больших двоичных объектов см. в описании конструктора [CDynamicAccessor:: CDynamicAccessor](../../data/oledb/cdynamicaccessor-cdynamicaccessor.md) .
 
-## <a name="cdynamicparameteraccessorgetparam"></a><a name="getparam"></a>CDynamicParameterAccessor:: param
+## <a name="cdynamicparameteraccessorgetparam"></a><a name="getparam"></a> CDynamicParameterAccessor:: param
 
 Извлекает нестроковые данные для указанного параметра из буфера параметров.
 
@@ -203,7 +203,7 @@ void* GetParam(TCHAR* pParamName) const throw();
 
 Используйте `GetParam` для получения нестроковых данных параметров из буфера. Используйте [жетпарамстринг](../../data/oledb/cdynamicparameteraccessor-getparamstring.md) для получения данных строковых параметров из буфера.
 
-## <a name="cdynamicparameteraccessorgetparamcount"></a><a name="getparamcount"></a>CDynamicParameterAccessor:: Жетпарамкаунт
+## <a name="cdynamicparameteraccessorgetparamcount"></a><a name="getparamcount"></a> CDynamicParameterAccessor:: Жетпарамкаунт
 
 Возвращает количество параметров, хранимых в буфере.
 
@@ -217,7 +217,7 @@ DB_UPARAMS GetParamCount() const throw();
 
 Число параметров.
 
-## <a name="cdynamicparameteraccessorgetparamio"></a><a name="getparamio"></a>CDynamicParameterAccessor:: Жетпарамио
+## <a name="cdynamicparameteraccessorgetparamio"></a><a name="getparamio"></a> CDynamicParameterAccessor:: Жетпарамио
 
 Определяет, является ли указанный параметр входным или выходным.
 
@@ -250,7 +250,7 @@ enum DBPARAMIOENUM {
 
 Возвращает значение **`true`** On Success или **`false`** On failure.
 
-## <a name="cdynamicparameteraccessorgetparamlength"></a><a name="getparamlength"></a>CDynamicParameterAccessor:: Жетпарамленгс
+## <a name="cdynamicparameteraccessorgetparamlength"></a><a name="getparamlength"></a> CDynamicParameterAccessor:: Жетпарамленгс
 
 Получает длину указанного параметра, сохраненного в буфере.
 
@@ -275,7 +275,7 @@ DBLENGTH* GetParamLength(DBORDINAL nParam) const throw();
 
 Первое переопределение возвращает значение **`true`** On Success или **`false`** On failure. Второе переопределение указывает на память, содержащую длину параметра.
 
-## <a name="cdynamicparameteraccessorgetparamname"></a><a name="getparamname"></a>CDynamicParameterAccessor:: Жетпарамнаме
+## <a name="cdynamicparameteraccessorgetparamname"></a><a name="getparamname"></a> CDynamicParameterAccessor:: Жетпарамнаме
 
 Извлекает имя указанного параметра.
 
@@ -294,7 +294,7 @@ LPOLESTR GetParamName(DBORDINAL nParam) const throw();
 
 Имя указанного параметра.
 
-## <a name="cdynamicparameteraccessorgetparamstatus"></a><a name="getparamstatus"></a>CDynamicParameterAccessor:: Жетпарамстатус
+## <a name="cdynamicparameteraccessorgetparamstatus"></a><a name="getparamstatus"></a> CDynamicParameterAccessor:: Жетпарамстатус
 
 Получает состояние указанного параметра, сохраненного в буфере.
 
@@ -319,7 +319,7 @@ DBSTATUS* GetParamStatus(DBORDINAL nParam) const throw();
 
 Первое переопределение возвращает значение **`true`** On Success или **`false`** On failure. Второе переопределение указывает на память, содержащую состояние указанного параметра.
 
-## <a name="cdynamicparameteraccessorgetparamstring"></a><a name="getparamstring"></a>CDynamicParameterAccessor:: Жетпарамстринг
+## <a name="cdynamicparameteraccessorgetparamstring"></a><a name="getparamstring"></a> CDynamicParameterAccessor:: Жетпарамстринг
 
 Получает строковые данные указанного параметра, сохраненного в буфере.
 
@@ -367,7 +367,7 @@ bool GetParamString(DBORDINAL nParam,
 
 Используйте `GetParamString` для получения данных строковых параметров из буфера. Используйте [параметр param](../../data/oledb/cdynamicparameteraccessor-getparam.md) для получения нестроковых данных параметров из буфера.
 
-## <a name="cdynamicparameteraccessorgetparamtype"></a><a name="getparamtype"></a>CDynamicParameterAccessor:: Жетпарамтипе
+## <a name="cdynamicparameteraccessorgetparamtype"></a><a name="getparamtype"></a> CDynamicParameterAccessor:: Жетпарамтипе
 
 Получает тип данных указанного параметра.
 
@@ -390,7 +390,7 @@ bool GetParamType(DBORDINAL nParam,
 
 Возвращает значение **`true`** On Success или **`false`** On failure.
 
-## <a name="cdynamicparameteraccessorsetparam"></a><a name="setparam"></a>CDynamicParameterAccessor:: Сетпарам
+## <a name="cdynamicparameteraccessorsetparam"></a><a name="setparam"></a> CDynamicParameterAccessor:: Сетпарам
 
 Задает буфер параметров с использованием указанных (не строковых) данных.
 
@@ -433,7 +433,7 @@ bool SetParam(TCHAR* pParamName,
 
 Используется `SetParam` для задания нестроковых данных параметров в буфере. Используйте [сетпарамстринг](../../data/oledb/cdynamicparameteraccessor-setparamstring.md) для задания данных строковых параметров в буфере.
 
-## <a name="cdynamicparameteraccessorsetparamlength"></a><a name="setparamlength"></a>CDynamicParameterAccessor:: Сетпарамленгс
+## <a name="cdynamicparameteraccessorsetparamlength"></a><a name="setparamlength"></a> CDynamicParameterAccessor:: Сетпарамленгс
 
 Задает длину указанного параметра, сохраненного в буфере.
 
@@ -456,7 +456,7 @@ bool SetParamLength(DBORDINAL nParam,
 
 Возвращает значение **`true`** On Success или **`false`** On failure.
 
-## <a name="cdynamicparameteraccessorsetparamstatus"></a><a name="setparamstatus"></a>CDynamicParameterAccessor:: Сетпарамстатус
+## <a name="cdynamicparameteraccessorsetparamstatus"></a><a name="setparamstatus"></a> CDynamicParameterAccessor:: Сетпарамстатус
 
 Задает состояние указанного параметра, сохраненного в буфере.
 
@@ -479,7 +479,7 @@ bool SetParamStatus(DBORDINAL nParam,
 
 Возвращает значение **`true`** On Success или **`false`** On failure.
 
-## <a name="cdynamicparameteraccessorsetparamstring"></a><a name="setparamstring"></a>CDynamicParameterAccessor:: Сетпарамстринг
+## <a name="cdynamicparameteraccessorsetparamstring"></a><a name="setparamstring"></a> CDynamicParameterAccessor:: Сетпарамстринг
 
 Задает строковые данные указанного параметра, сохраненного в буфере.
 
@@ -508,7 +508,7 @@ bool SetParamString(DBORDINAL nParam,
 
 Возвращает значение **`true`** On Success или **`false`** On failure.
 
-`SetParamString`завершится ошибкой, если вы попытаетесь задать строку, превышающую максимальный размер, указанный для *пстринг*.
+`SetParamString` завершится ошибкой, если вы попытаетесь задать строку, превышающую максимальный размер, указанный для *пстринг*.
 
 Используется `SetParamString` для задания данных строковых параметров в буфере. Используйте [сетпарам](../../data/oledb/cdynamicparameteraccessor-setparam.md) для задания нестроковых данных параметров в буфере.
 

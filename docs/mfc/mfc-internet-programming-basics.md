@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Internet content [MFC]
 - WinInet classes [MFC]
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
-ms.openlocfilehash: c9825cdcb5cb0963a4e0d3acdeb36dfee54b70fc
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: b41ce97a9b5efe6ad84c543f5c49dd091557b3a8
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86405030"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846320"
 ---
 # <a name="mfc-internet-programming-basics"></a>Основы программирования для интернет-решений MFC
 
@@ -40,7 +40,7 @@ MFC предоставляет классы, поддерживающие Инт
 
 - [Сведения о Интернете по разделам](internet-information-by-topic.md)
 
-- [Сведения о работе с Интернетом по задачам](internet-information-by-task.md)
+- [Сведения о Интернете по задачам](internet-information-by-task.md)
 
 - [Активная технология в Интернете](active-technology-on-the-internet.md)
 
@@ -56,24 +56,24 @@ MFC предоставляет классы, поддерживающие Инт
 
 - [Расширения Интернета Win32 (WinInet)](win32-internet-extensions-wininet.md)
 
-- [Задачи программирования для интернет-решений MFC](mfc-internet-programming-tasks.md)
+- [Задачи программирования в Интернете MFC](mfc-internet-programming-tasks.md)
 
-- [Решения, которые необходимо принять при разработке приложения](application-design-choices.md)
+- [Варианты разработки приложений](application-design-choices.md)
 
-- [Создание приложений MFC](writing-mfc-applications.md)
+- [Написание приложений MFC](writing-mfc-applications.md)
 
-- [Тестирование интернет-приложений](testing-internet-applications.md)
+- [Тестирование Интернет приложений](testing-internet-applications.md)
 
 - [Интернет — безопасность](internet-security-cpp.md)
 
 - [Поддержка ATL для элементов управления DHTML](../atl/atl-support-for-dhtml-controls.md)
 
-## <a name="websites-for-more-information"></a><a name="_core_web_sites_for_more_information"></a>Веб-сайты для получения дополнительных сведений
+## <a name="websites-for-more-information"></a><a name="_core_web_sites_for_more_information"></a> Веб-сайты для получения дополнительных сведений
 
-Дополнительные сведения о технологии Интернета Майкрософт см. в разделе [документация Майкрософт](https://docs.microsoft.com/).
+Дополнительные сведения о Microsoft Internet Technology см. в разделе [Networking and Internet](/windows/win32/networking).
 
 [Консорциум W3C (W3C)](https://go.microsoft.com/fwlink/p/?linkid=37125) публикует спецификации для HTML, HTTP, CGI и других Интернет-технологий.
 
-## <a name="more-internet-help"></a><a name="_core_more_internet_help"></a>Дополнительная справка в Интернете
+## <a name="more-internet-help"></a><a name="_core_more_internet_help"></a> Дополнительная справка в Интернете
 
 В разделе OLE Windows SDK содержатся дополнительные сведения о программировании OLE. Эта информация содержит сведения об использовании функций Win32 WinInet напрямую, а не через классы MFC. В нем также содержатся общие сведения о технологиях Интернета.

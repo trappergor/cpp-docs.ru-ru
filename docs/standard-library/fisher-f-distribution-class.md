@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::fisher_f_distribution [C++], param_type
 - std::fisher_f_distribution [C++], param_type
 ms.assetid: 9513b6ce-3309-4be1-829b-f504bca35bbf
-ms.openlocfilehash: 0401d2e9b5849bdd9f00628107a142606f5f6933
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6f8c60b5f4523caf19e432ff853d49ad57fd277a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219135"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835809"
 ---
 # <a name="fisher_f_distribution-class"></a>Класс fisher_f_distribution
 
@@ -79,10 +79,8 @@ public:
 
 Шаблон класса описывает распределение, которое создает значения заданного пользователем типа с плавающей запятой или тип **`double`** , если он не указан, распределяется в соответствии с F-распределением Фишера. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
-||||
-|-|-|-|
-|[fisher_f_distribution](#fisher_f_distribution)|`fisher_f_distribution::m`|`fisher_f_distribution::param`|
-|`fisher_f_distribution::operator()`|`fisher_f_distribution::n`|[param_type](#param_type)|
+[fisher_f_distribution](#fisher_f_distribution)\
+[param_type](#param_type)
 
 Функции свойств `m()` и `n()` возвращают значения для хранимых параметров распределения `m` и `n` соответственно.
 
@@ -237,7 +235,7 @@ Distribution for 10 samples:
 
 **Пространство имен:** std
 
-## <a name="fisher_f_distributionfisher_f_distribution"></a><a name="fisher_f_distribution"></a>fisher_f_distribution:: fisher_f_distribution
+## <a name="fisher_f_distributionfisher_f_distribution"></a><a name="fisher_f_distribution"></a> fisher_f_distribution:: fisher_f_distribution
 
 Формирует распределение.
 
@@ -265,7 +263,7 @@ explicit fisher_f_distribution(const param_type& parm);
 
 Второй конструктор создает объект, хранимые параметры которого инициализируются из *parm*. Вы можете получить и задать текущие параметры существующего распределения, вызвав функцию-член `param()`.
 
-## <a name="fisher_f_distributionparam_type"></a><a name="param_type"></a>fisher_f_distribution::p aram_type
+## <a name="fisher_f_distributionparam_type"></a><a name="param_type"></a> fisher_f_distribution::p aram_type
 
 Сохраняет параметры распределения.
 

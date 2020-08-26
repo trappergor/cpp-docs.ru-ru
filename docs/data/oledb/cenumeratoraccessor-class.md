@@ -35,12 +35,12 @@ helpviewer_keywords:
 - m_szName
 - m_szParseName
 ms.assetid: 21e8e7ea-3511-4afe-b33f-d520f4ff82bb
-ms.openlocfilehash: f238c0b5b2a3988f08d910f605415bbe6403ea3d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0b4baa4671a013699e51a9ab28c002a680dfcd61
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211838"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838143"
 ---
 # <a name="cenumeratoraccessor-class"></a>Класс CEnumeratorAccessor
 
@@ -56,11 +56,11 @@ class CEnumeratorAccessor
 
 **Заголовок:** atldbcli.h
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Элементы
 
 ### <a name="data-members"></a>Элементы данных
 
-|||
+| Имя | Описание |
 |-|-|
 |[m_bIsParent](#bisparent)|Переменная, указывающая, является ли перечислитель родительским перечислителем, если строка является перечислителем.|
 |[m_nType](#ntype)|Переменная, указывающая, описывает ли строка источник данных или перечислитель.|
@@ -72,7 +72,7 @@ class CEnumeratorAccessor
 
 Этот набор строк состоит из источников данных и перечислителей, видимых из текущего перечислителя.
 
-## <a name="cenumeratoraccessorm_bisparent"></a><a name="bisparent"></a>CEnumeratorAccessor:: m_bIsParent
+## <a name="cenumeratoraccessorm_bisparent"></a><a name="bisparent"></a> CEnumeratorAccessor:: m_bIsParent
 
 Переменная, указывающая, является ли перечислитель родительским перечислителем, если строка является перечислителем.
 
@@ -86,7 +86,7 @@ VARIANT_BOOL m_bIsParent;
 
 Дополнительные сведения см. в разделе [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) в *справочнике программиста OLE DB* .
 
-## <a name="cenumeratoraccessorm_ntype"></a><a name="ntype"></a>CEnumeratorAccessor:: m_nType
+## <a name="cenumeratoraccessorm_ntype"></a><a name="ntype"></a> CEnumeratorAccessor:: m_nType
 
 Переменная, указывающая, описывает ли строка источник данных или перечислитель.
 
@@ -100,7 +100,7 @@ USHORT m_nType;
 
 Дополнительные сведения см. в разделе [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) в *справочнике программиста OLE DB* .
 
-## <a name="cenumeratoraccessorm_szdescription"></a><a name="szdescription"></a>CEnumeratorAccessor:: m_szDescription
+## <a name="cenumeratoraccessorm_szdescription"></a><a name="szdescription"></a> CEnumeratorAccessor:: m_szDescription
 
 Описание источника данных или перечислителя.
 
@@ -114,7 +114,7 @@ WCHAR m_szDescription[129];
 
 Дополнительные сведения см. в разделе [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) в *справочнике программиста OLE DB* .
 
-## <a name="cenumeratoraccessorm_szname"></a><a name="szname"></a>CEnumeratorAccessor:: m_szName
+## <a name="cenumeratoraccessorm_szname"></a><a name="szname"></a> CEnumeratorAccessor:: m_szName
 
 Имя источника данных или перечислителя.
 
@@ -128,7 +128,7 @@ WCHAR m_szName[129];
 
 Дополнительные сведения см. в разделе [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) в *справочнике программиста OLE DB* .
 
-## <a name="cenumeratoraccessorm_szparsename"></a><a name="szparsename"></a>CEnumeratorAccessor:: m_szParseName
+## <a name="cenumeratoraccessorm_szparsename"></a><a name="szparsename"></a> CEnumeratorAccessor:: m_szParseName
 
 Строка для передачи в [ипарседисплайнаме](/windows/win32/api/oleidl/nn-oleidl-iparsedisplayname) для получения моникера для источника данных или перечислителя.
 
@@ -145,4 +145,4 @@ WCHAR m_szParseName[129];
 ## <a name="see-also"></a>См. также раздел
 
 [Шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Справочник по шаблонам потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

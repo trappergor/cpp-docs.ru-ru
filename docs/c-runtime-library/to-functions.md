@@ -23,23 +23,22 @@ helpviewer_keywords:
 - case, converting
 - characters, converting
 ms.assetid: f636a4c6-8c9f-4be2-baac-064f9dbae300
-ms.openlocfilehash: df8f59088cd402503fe31f768557e3ed936b31ec
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: a54f20d6ae4dead5ba7c606fd28d456e96ff31d6
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301695"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836082"
 ---
 # <a name="to-functions"></a>Функции to
 
 Каждая из функций **to** и связанный с ней макрос, если таковой имеется, преобразуют один символ в другой.
 
-|||
-|-|-|
-|[__toascii](../c-runtime-library/reference/toascii-toascii.md)|[toupper, _toupper, towupper](../c-runtime-library/reference/toupper-toupper-towupper-toupper-l-towupper-l.md)|
-|[tolower, _tolower, towlower](../c-runtime-library/reference/tolower-tolower-towlower-tolower-l-towlower-l.md)||
+[__toascii](../c-runtime-library/reference/toascii-toascii.md)\
+[ToLower, _tolower, товловер](../c-runtime-library/reference/tolower-tolower-towlower-tolower-l-towlower-l.md)\
+[toupper, _toupper, towupper](../c-runtime-library/reference/toupper-toupper-towupper-toupper-l-towupper-l.md)
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
 Функции **to** и макросы преобразования выглядят следующим образом.
 
@@ -67,7 +66,7 @@ ms.locfileid: "75301695"
 
 - представляют собой не зависящие от языкового стандарта, намного более быстрые версии `tolower` и **toupper**.
 
-- Могут использоваться только когда **isascii(** `c` **)** и either **isupper(** `c` **)** или **islower(** `c` **)** , соответственно, отличны от нуля.
+- Может использоваться только в том случае, если **символы-ASCII (** `c` **)** и **Upper** `c` **()** или **LOWER (** `c` **)** соответственно не равны нулю.
 
 - имеют неопределенные результаты, если `c` не является буквой ASCII соответствующего регистра для преобразования;
 
@@ -115,8 +114,8 @@ Some of THESE letters are Capitals.
 sOME OF these LETTERS ARE cAPITALS.
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Преобразование данных](../c-runtime-library/data-conversion.md)<br/>
-[Языковой стандарт](../c-runtime-library/locale.md)<br/>
-[Подпрограммы is, isw](../c-runtime-library/is-isw-routines.md)
+[Локаль](../c-runtime-library/locale.md)<br/>
+[является, подпрограммы isw](../c-runtime-library/is-isw-routines.md)

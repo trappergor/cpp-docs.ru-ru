@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::gamma_distribution [C++], param_type
 - std::gamma_distribution [C++], param_type
 ms.assetid: 2a6798ac-6152-41d7-8ef6-d684d92f1572
-ms.openlocfilehash: 1ddef32c1ef2d3eb83c8a8a560914dc1f0ec3d1d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 37b4661cf14fe4302d50557472ce03c120eb2741
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220916"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837928"
 ---
 # <a name="gamma_distribution-class"></a>Класс gamma_distribution
 
@@ -80,10 +80,8 @@ public:
 
 Шаблон класса описывает распределение, которое создает значения заданного пользователем типа с плавающей запятой или тип **`double`** , если он не указан, распределяется в соответствии с гамма-распределением. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
-||||
-|-|-|-|
-|[gamma_distribution](#gamma_distribution)|`gamma_distribution::alpha`|`gamma_distribution::param`|
-|`gamma_distribution::operator()`|`gamma_distribution::beta`|[param_type](#param_type)|
+[gamma_distribution](#gamma_distribution)\
+[param_type](#param_type)
 
 Функции свойств `alpha()` и `beta()` возвращают соответствующие значения для хранимых параметров распределения *alpha* и *beta*.
 
@@ -188,7 +186,7 @@ Distribution for 10 samples:
 
 **Пространство имен:** std
 
-## <a name="gamma_distributiongamma_distribution"></a><a name="gamma_distribution"></a>gamma_distribution:: gamma_distribution
+## <a name="gamma_distributiongamma_distribution"></a><a name="gamma_distribution"></a> gamma_distribution:: gamma_distribution
 
 Формирует распределение.
 
@@ -216,7 +214,7 @@ explicit gamma_distribution(const param_type& parm);
 
 Второй конструктор создает объект, хранимые параметры которого инициализируются из *parm*. Вы можете получить и задать текущие параметры существующего распределения, вызвав функцию-член `param()`.
 
-## <a name="gamma_distributionparam_type"></a><a name="param_type"></a>gamma_distribution::p aram_type
+## <a name="gamma_distributionparam_type"></a><a name="param_type"></a> gamma_distribution::p aram_type
 
 Сохраняет параметры распределения.
 

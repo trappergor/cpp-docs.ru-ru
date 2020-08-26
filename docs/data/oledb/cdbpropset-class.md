@@ -32,12 +32,12 @@ helpviewer_keywords:
 - SetGUID method
 - AddProperty method
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
-ms.openlocfilehash: 182db37a2a42ec91066b58903c873d3e9c8289f1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 48aa2e3e26bed7c9306ca3005231e464d7b7555b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216496"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838261"
 ---
 # <a name="cdbpropset-class"></a>Класс CDBPropSet
 
@@ -57,7 +57,7 @@ class CDBPropSet : public tagDBPROPSET
 
 ### <a name="methods"></a>Методы
 
-|||
+| Имя | Описание |
 |-|-|
 |[AddProperty](#addproperty)|Добавляет свойство в набор свойств.|
 |[кдбпропсет](#cdbpropset)|Конструктор.|
@@ -65,7 +65,7 @@ class CDBPropSet : public tagDBPROPSET
 
 ### <a name="operators"></a>Операторы
 
-|||
+| Имя | Описание |
 |-|-|
 |[Оператор =](#op_equal)|Присваивает содержимому одного свойства значение другого.|
 
@@ -73,7 +73,7 @@ class CDBPropSet : public tagDBPROPSET
 
 Поставщики OLE DB и потребители используют `DBPROPSET` структуры для передачи массивов `DBPROP` структур. Каждая `DBPROP` структура представляет одно свойство, которое можно задать.
 
-## <a name="cdbpropsetaddproperty"></a><a name="addproperty"></a>Кдбпропсет:: AddProperty
+## <a name="cdbpropsetaddproperty"></a><a name="addproperty"></a> Кдбпропсет:: AddProperty
 
 Добавляет свойство в набор свойств.
 
@@ -106,7 +106,7 @@ bool AddProperty(DWORD dwPropertyID,
 окне Строка, используемая для инициализации значения свойства для `DBPROP` структуры, добавленной в набор свойств.
 
 *bValue*<br/>
-окне `BYTE`Логическое значение или, используемое для инициализации значения свойства для `DBPROP` структуры, добавленной в набор свойств.
+окне `BYTE` Логическое значение или, используемое для инициализации значения свойства для `DBPROP` структуры, добавленной в набор свойств.
 
 *Nзначение*<br/>
 окне Целочисленное значение, используемое для инициализации значения свойства для `DBPROP` структуры, добавленной в набор свойств.
@@ -124,7 +124,7 @@ bool AddProperty(DWORD dwPropertyID,
 
 **`true`** значение, если свойство было успешно добавлено. В противном случае — **`false`** .
 
-## <a name="cdbpropsetcdbpropset"></a><a name="cdbpropset"></a>Кдбпропсет:: Кдбпропсет
+## <a name="cdbpropsetcdbpropset"></a><a name="cdbpropset"></a> Кдбпропсет:: Кдбпропсет
 
 Конструктор. Инициализирует `rgProperties` поля, `cProperties` и `guidPropertySet` структуры [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) .
 
@@ -146,7 +146,7 @@ CDBPropSet();
 *Prop*<br/>
 окне Другой `CDBPropSet` объект для создания копии.
 
-## <a name="cdbpropsetsetguid"></a><a name="setguid"></a>Кдбпропсет:: Сетгуид
+## <a name="cdbpropsetsetguid"></a><a name="setguid"></a> Кдбпропсет:: Сетгуид
 
 Задает `guidPropertySet` поле в `DBPROPSET` структуре.
 
@@ -165,7 +165,7 @@ void SetGUID(const GUID& guid) throw();
 
 Это поле также может быть задано [конструктором](../../data/oledb/cdbpropset-cdbpropset.md) .
 
-## <a name="cdbpropsetoperator-"></a><a name="op_equal"></a>Кдбпропсет:: operator =
+## <a name="cdbpropsetoperator-"></a><a name="op_equal"></a> Кдбпропсет:: operator =
 
 Присваивает содержимое одного свойства набору другому набору свойств.
 

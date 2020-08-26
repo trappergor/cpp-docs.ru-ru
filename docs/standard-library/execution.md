@@ -1,19 +1,19 @@
 ---
-title: '&lt;выполнения&gt;'
+title: '&lt;InstancePersistenceCommand&gt;'
 ms.date: 04/18/2019
 f1_keywords:
 - <execution>
 - std::<execution>
 helpviewer_keywords:
 - execution header
-ms.openlocfilehash: 81e9aa63265c367412fda709aacd5ca3953e9fdf
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: f37458fdc0b58968e095a7c59de797eac295bde7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445030"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835940"
 ---
-# <a name="ltexecutiongt"></a>&lt;выполнения&gt;
+# <a name="ltexecutiongt"></a>&lt;InstancePersistenceCommand&gt;
 
 Описывает политики выполнения для параллельных алгоритмов.
 
@@ -32,7 +32,7 @@ namespace std::execution {
 
 ### <a name="classes-and-structs"></a>Классы и структуры
 
-|||
+|Имя|Описание|
 |-|-|
 |[Структура is_execution_policy](is-execution-policy-struct.md)|Обнаруживает политики выполнения в целях исключения сигнатур функций из неоднозначного участия в разрешении перегрузки.|
 |[Класс parallel_policy](parallel-policy-class.md)|Используется в качестве уникального типа для устранения неоднозначности при перегрузке параллельного алгоритма и указывает, что выполнение параллельного алгоритма может быть параллельным.|
@@ -41,12 +41,12 @@ namespace std::execution {
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<выполнения >
+**Заголовок:**\<execution>
 
 **Пространство имен:** stdext
 
 ## <a name="see-also"></a>См. также раздел
 
 [Справочник по файлам заголовков](cpp-standard-library-header-files.md)\
-[Потокобезопасность в стандартной библиотеке C++](thread-safety-in-the-cpp-standard-library.md)\
+[Безопасность потоков в стандартной библиотеке C++](thread-safety-in-the-cpp-standard-library.md)\
 [Справочник по стандартной библиотеке C++](cpp-standard-library-reference.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - emitidl attribute
 ms.assetid: 85b80c56-578e-4392-ac03-8443c74ebb7d
-ms.openlocfilehash: 4ddf71c385414a28c2b616b359a93a637abc24aa
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 32362f287320e69d1680cbe07ca050143b507514
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222138"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846333"
 ---
 # <a name="emitidl"></a>emitidl
 
@@ -36,7 +36,7 @@ ms.locfileid: "87222138"
 
 - Если `forced` задано значение, переопределяет последующий `restricted` атрибут, который требует наличия у файла `module` атрибута, если в файле есть атрибуты IDL.
 
-- `push`позволяет сохранить текущие параметры **emitidl** во внутреннем стеке **emitidl** , а `pop` также позволяет задать **emitidl** в любом значении, расположенном в верхней части внутреннего стека **emitidl** .
+- `push` позволяет сохранить текущие параметры **emitidl** во внутреннем стеке **emitidl** , а `pop` также позволяет задать **emitidl** в любом значении, расположенном в верхней части внутреннего стека **emitidl** .
 
 `defaultimports=`*логическое значение* \( используемых
 
@@ -54,9 +54,7 @@ ms.locfileid: "87222138"
 
 ## <a name="requirements"></a>Требования
 
-### <a name="attribute-context"></a>Контекст атрибута
-
-|||
+| Контекст атрибута | Значение |
 |-|-|
 |**Относится к**|В любом месте|
 |**REPEATABLE**|Нет|

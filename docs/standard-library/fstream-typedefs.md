@@ -11,22 +11,25 @@ f1_keywords:
 - fstream/std::wifstream
 - fstream/std::wofstream
 ms.assetid: 8dddef2d-7f17-42a6-ba08-6f6f20597d23
-ms.openlocfilehash: a0f62f951fb6de4b32a27511ae38e1346cbc22e3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3b950192e098815739c30b732f1caee755c69f26
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215755"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835718"
 ---
 # <a name="ltfstreamgt-typedefs"></a>Определения типов &lt;fstream&gt;
 
-||||
-|-|-|-|
-|[filebuf](#filebuf)|[FStream](#fstream)|[ifstream](#ifstream)|
-|[ofstream](#ofstream)|[вфилебуф](#wfilebuf)|[wfstream](#wfstream)|
-|[wifstream](#wifstream)|[wofstream](#wofstream)|
+[филебуф](#filebuf)\
+[FStream](#fstream)\
+[ifstream](#ifstream)\
+[ofstream](#ofstream)\
+[вфилебуф](#wfilebuf)\
+[вфстреам](#wfstream)\
+[вифстреам](#wifstream)\
+[wofstream](#wofstream)
 
-## <a name="filebuf"></a><a name="filebuf"></a>филебуф
+## <a name="filebuf"></a><a name="filebuf"></a> филебуф
 
 Тип, `basic_filebuf` специализированный для **`char`** параметров шаблона.
 
@@ -38,7 +41,7 @@ typedef basic_filebuf<char, char_traits<char>> filebuf;
 
 Тип является синонимом [basic_filebuf](../standard-library/basic-filebuf-class.md)шаблона класса, специализированного для элементов типа **`char`** с признаками символа по умолчанию.
 
-## <a name="fstream"></a><a name="fstream"></a>FStream
+## <a name="fstream"></a><a name="fstream"></a> FStream
 
 Тип, `basic_fstream` специализированный для **`char`** параметров шаблона.
 
@@ -50,9 +53,9 @@ typedef basic_fstream<char, char_traits<char>> fstream;
 
 Тип является синонимом [basic_fstream](../standard-library/basic-fstream-class.md)шаблона класса, специализированного для элементов типа **`char`** с признаками символа по умолчанию.
 
-## <a name="ifstream"></a><a name="ifstream"></a>ifstream
+## <a name="ifstream"></a><a name="ifstream"></a> ifstream
 
-Определяет поток, который используется для последовательного чтения однобайтовых символов из файла. `ifstream`— Это typedef, который специализирует шаблон класса `basic_ifstream` для **`char`** .
+Определяет поток, который используется для последовательного чтения однобайтовых символов из файла. `ifstream` — Это typedef, который специализирует шаблон класса `basic_ifstream` для **`char`** .
 
 Также существует `wifstream` Определение типа, которое специализируется `basic_ifstream` на чтении **`wchar_t`** двухбайтовых символов. Дополнительные сведения см. в описании [wifstream](../standard-library/fstream-typedefs.md#wifstream).
 
@@ -76,7 +79,7 @@ if (!infile.bad())
 }
 ```
 
-## <a name="ofstream"></a><a name="ofstream"></a>ofstream
+## <a name="ofstream"></a><a name="ofstream"></a> ofstream
 
 Тип, `basic_ofstream` специализированный для **`char`** параметров шаблона.
 
@@ -88,7 +91,7 @@ typedef basic_ofstream<char, char_traits<char>> ofstream;
 
 Тип является синонимом [basic_ofstream](../standard-library/basic-ofstream-class.md)шаблона класса, специализированного для элементов типа **`char`** с признаками символа по умолчанию.
 
-## <a name="wfstream"></a><a name="wfstream"></a>вфстреам
+## <a name="wfstream"></a><a name="wfstream"></a> вфстреам
 
 Тип, `basic_fstream` специализированный для **`wchar_t`** параметров шаблона.
 
@@ -100,7 +103,7 @@ typedef basic_fstream<wchar_t, char_traits<wchar_t>> wfstream;
 
 Тип является синонимом [basic_fstream](../standard-library/basic-fstream-class.md)шаблона класса, специализированного для элементов типа **`wchar_t`** с признаками символа по умолчанию.
 
-## <a name="wifstream"></a><a name="wifstream"></a>вифстреам
+## <a name="wifstream"></a><a name="wifstream"></a> вифстреам
 
 Тип, `basic_ifstream` специализированный для **`wchar_t`** параметров шаблона.
 
@@ -112,7 +115,7 @@ typedef basic_ifstream<wchar_t, char_traits<wchar_t>> wifstream;
 
 Тип является синонимом [basic_ifstream](../standard-library/basic-ifstream-class.md)шаблона класса, специализированного для элементов типа **`wchar_t`** с признаками символа по умолчанию.
 
-## <a name="wofstream"></a><a name="wofstream"></a>wofstream
+## <a name="wofstream"></a><a name="wofstream"></a> wofstream
 
 Тип, `basic_ofstream` специализированный для **`wchar_t`** параметров шаблона.
 
@@ -124,7 +127,7 @@ typedef basic_ofstream<wchar_t, char_traits<wchar_t>> wofstream;
 
 Тип является синонимом [basic_ofstream](../standard-library/basic-ofstream-class.md)шаблона класса, специализированного для элементов типа **`wchar_t`** с признаками символа по умолчанию.
 
-## <a name="wfilebuf"></a><a name="wfilebuf"></a>вфилебуф
+## <a name="wfilebuf"></a><a name="wfilebuf"></a> вфилебуф
 
 Тип, `basic_filebuf` специализированный для **`wchar_t`** параметров шаблона.
 

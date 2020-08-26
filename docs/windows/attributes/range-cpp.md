@@ -1,17 +1,17 @@
 ---
-title: Range (C++ атрибут com)
+title: Range (атрибут COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.range
 helpviewer_keywords:
 - range attribute
 ms.assetid: f352f79e-ecb3-4cdd-9cdd-8406ef473594
-ms.openlocfilehash: 380f7c9e15a3682b486217c842f00c944251e631
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8ed0ba2c53992dd19d1c4491f8085e955146224c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214621"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839482"
 ---
 # <a name="range-c"></a>range (C++)
 
@@ -25,15 +25,15 @@ ms.locfileid: "80214621"
 
 ### <a name="parameters"></a>Параметры
 
-*low*<br/>
+*низшую*<br/>
 Значение нижнего диапазона.
 
-*high*<br/>
+*высоком*<br/>
 Большое значение диапазона.
 
 ## <a name="remarks"></a>Remarks
 
-Атрибут **Range** C++ имеет те же функциональные возможности, что и атрибут [Range](/windows/win32/Midl/range) MIDL.
+Атрибут **Range** в C++ имеет те же функциональные возможности, что и атрибут [Range](/windows/win32/Midl/range) MIDL.
 
 ## <a name="example"></a>Пример
 
@@ -53,14 +53,12 @@ __interface ICustom {
 
 ## <a name="requirements"></a>Требования
 
-### <a name="attribute-context"></a>Контекст атрибута
-
-|||
+| Контекст атрибута | Значение |
 |-|-|
-|**Применение**|Метод интерфейса, параметр интерфейса|
-|**Повторяемый**|нет|
-|**Обязательные атрибуты**|None|
-|**Недопустимые атрибуты**|None|
+|**Относится к**|Метод интерфейса, параметр интерфейса|
+|**REPEATABLE**|Нет|
+|**Требуемые атрибуты**|Нет|
+|**Недопустимые атрибуты**|Нет|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 

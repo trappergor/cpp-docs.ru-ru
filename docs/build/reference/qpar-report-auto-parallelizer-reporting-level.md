@@ -2,12 +2,12 @@
 title: /Qpar-report (уровень отчетности автоматического параллелизатора)
 ms.date: 11/04/2016
 ms.assetid: 562673b9-02da-4bf8-bb64-70bc25ef4651
-ms.openlocfilehash: ea3e430dec61d35b8540792773b5519e64cedaef
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: 3a154bdf50e951ee932173cdb65f9e1514011245
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373792"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839417"
 ---
 # <a name="qpar-report-auto-parallelizer-reporting-level"></a>/Qpar-report (уровень отчетности автоматического параллелизатора)
 
@@ -46,4 +46,4 @@ ms.locfileid: "86373792"
 [Параметры/q (низкоуровневые операции)](q-options-low-level-operations.md)<br/>
 [Параметры компилятора MSVC](compiler-options.md)<br/>
 [Синтаксис командной строки компилятора КОМПИЛЯТОРОМ MSVC](compiler-command-line-syntax.md)<br/>
-[Вектор машинного кода в Visual Studio](https://docs.microsoft.com/archive/blogs/nativeconcurrency/auto-vectorizer-in-visual-studio-2012-overview)
+[Вектор машинного кода в Visual Studio](/archive/blogs/nativeconcurrency/auto-vectorizer-in-visual-studio-2012-overview)

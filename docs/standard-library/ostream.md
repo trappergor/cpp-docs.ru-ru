@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ostream header
 ms.assetid: 90c3b6fb-57cd-4ae7-99b8-8512f24a67d2
-ms.openlocfilehash: 37642cbcbe57fba54f071a8fc94af53c97684a36
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ffcb6c7b2f95b0b62659f6080c9ed0d1f111237c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228145"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846398"
 ---
 # <a name="ltostreamgt"></a>&lt;ostream&gt;
 
@@ -34,7 +34,7 @@ ms.locfileid: "87228145"
 
 ### <a name="manipulators"></a>Манипуляторы
 
-|||
+|Имя|Описание|
 |-|-|
 |[endl](../standard-library/ostream-functions.md#endl)|Завершает строку и очищает буфер.|
 |[начинает](../standard-library/ostream-functions.md#ends)|Завершает строку.|
@@ -43,17 +43,17 @@ ms.locfileid: "87228145"
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |[Оператор<<](../standard-library/ostream-operators.md#op_lt_lt)|Записывает в поток различные типы.|
 
 ### <a name="classes"></a>Классы
 
-|Class|Описание:|
+|Класс|Описание|
 |-|-|
 |[basic_ostream](../standard-library/basic-ostream-class.md)|Шаблон класса описывает объект, управляющий вставкой элементов и закодированных объектов в буфер потока.|
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также раздел
 
 [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)\
 [Безопасность потоков в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

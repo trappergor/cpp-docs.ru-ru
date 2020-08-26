@@ -5,20 +5,19 @@ f1_keywords:
 - scoped_allocator/std::operator!=
 - scoped_allocator/std::operator==
 ms.assetid: 4dfe0805-cc6e-479f-887f-a1c164f73837
-ms.openlocfilehash: 45da89793c3f4ea131404fc3392413e7aea9ef3e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 907772069c192b3ef75c7366e079b1da1dd36f8d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373384"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846255"
 ---
 # <a name="ltscoped_allocatorgt-operators"></a>Операторы &lt;scoped_allocator&gt;
 
-|||
-|-|-|
-|[оператора!](#op_neq)|[оператора](#op_eq_eq)|
+[operator! =](#op_neq)\
+[Оператор = =](#op_eq_eq)
 
-## <a name="operator"></a><a name="op_neq"></a>оператора!
+## <a name="operator"></a><a name="op_neq"></a> operator! =
 
 Сравнивает два объекта `scoped_allocator_adaptor`, чтобы определить их неравенство.
 
@@ -31,7 +30,7 @@ bool operator!=(
 
 ### <a name="parameters"></a>Параметры
 
-*Левой*\
+*слева*\
 Левый объект `scoped_allocator_adaptor`.
 
 *Правильно*\
@@ -41,7 +40,7 @@ bool operator!=(
 
 `!(left == right)`
 
-## <a name="operator"></a><a name="op_eq_eq"></a>оператора
+## <a name="operator"></a><a name="op_eq_eq"></a> Оператор = =
 
 Сравнивает два объекта `scoped_allocator_adaptor`, чтобы определить, равны ли они.
 
@@ -54,7 +53,7 @@ bool operator==(
 
 ### <a name="parameters"></a>Параметры
 
-*Левой*\
+*слева*\
 Левый объект `scoped_allocator_adaptor`.
 
 *Правильно*\

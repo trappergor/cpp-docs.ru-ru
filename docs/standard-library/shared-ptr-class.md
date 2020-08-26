@@ -31,12 +31,12 @@ helpviewer_keywords:
 - std::shared_ptr [C++], unique
 - std::shared_ptr [C++], use_count
 ms.assetid: 1469fc51-c658-43f1-886c-f4530dd84860
-ms.openlocfilehash: 5488b7d63565bfcca22be3de522615db5aa822e3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e41c76e7bd3e77b34ad38d3998ee1d38cdc2fee4
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217471"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846216"
 ---
 # <a name="shared_ptr-class"></a>Класс shared_ptr
 
@@ -127,7 +127,7 @@ shared_ptr<int> sp6(sp2);   // error, template parameter int and argument shared
 
 ## <a name="members"></a>Элементы
 
-|||
+|Имя|Описание|
 |-|-|
 | **Конструкторы** | |
 |[shared_ptr](#shared_ptr)|Создает документ `shared_ptr`.|
@@ -148,7 +148,7 @@ shared_ptr<int> sp6(sp2);   // error, template parameter int and argument shared
 |[Оператор =](#op_eq)|Заменяет принадлежащий ресурс.|
 |[станции&gt;](#op_arrow)|Получает указатель на указанное значение.|
 
-## <a name="element_type"></a><a name="element_type"></a>element_type
+## <a name="element_type"></a><a name="element_type"></a> element_type
 
 Тип элемента.
 
@@ -184,7 +184,7 @@ int main()
 *sp0 == 5
 ```
 
-## <a name="get"></a><a name="get"></a>Получить
+## <a name="get"></a><a name="get"></a> Получить
 
 Возвращает адрес принадлежащего ресурса.
 
@@ -222,7 +222,7 @@ sp0.get() == 0 == true
 *sp1.get() == 5
 ```
 
-## <a name="operator-bool"></a><a name="op_bool"></a>bool, оператор
+## <a name="operator-bool"></a><a name="op_bool"></a> bool, оператор
 
 Проверяет существование принадлежащего ресурса.
 
@@ -261,7 +261,7 @@ int main()
 (bool)sp1 == true
 ```
 
-## <a name="operator"></a><a name="op_star"></a>станции
+## <a name="operator"></a><a name="op_star"></a> станции
 
 Возвращает указанное значение.
 
@@ -295,7 +295,7 @@ int main()
 *sp0 == 5
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>Оператор =
+## <a name="operator"></a><a name="op_eq"></a> Оператор =
 
 Заменяет принадлежащий ресурс.
 
@@ -367,7 +367,7 @@ int main()
 *sp0 == 10
 ```
 
-## <a name="operator-"></a><a name="op_arrow"></a>Оператор->
+## <a name="operator-"></a><a name="op_arrow"></a> Оператор->
 
 Получает указатель на указанное значение.
 
@@ -404,7 +404,7 @@ sp0->first == 1
 sp0->second == 2
 ```
 
-## <a name="owner_before"></a><a name="owner_before"></a>owner_before
+## <a name="owner_before"></a><a name="owner_before"></a> owner_before
 
 Возвращает значение true, если `shared_ptr` упорядочен до (меньше) предоставленного указателя.
 
@@ -425,7 +425,7 @@ bool owner_before(const weak_ptr<Other>& ptr) const noexcept;
 
 Функция-член шаблона возвращает значение true **`*this`** , если упорядочено до `ptr` .
 
-## <a name="reset"></a><a name="reset"></a>перезапуск
+## <a name="reset"></a><a name="reset"></a> перезапуск
 
 Заменяет принадлежащий ресурс.
 
@@ -517,7 +517,7 @@ int main()
 *sp == 15
 ```
 
-## <a name="shared_ptr"></a><a name="shared_ptr"></a>shared_ptr
+## <a name="shared_ptr"></a><a name="shared_ptr"></a> shared_ptr
 
 Создает документ `shared_ptr`.
 
@@ -675,7 +675,7 @@ int main()
 *sp5 == 15
 ```
 
-## <a name="shared_ptr"></a><a name="dtorshared_ptr"></a>~ shared_ptr
+## <a name="shared_ptr"></a><a name="dtorshared_ptr"></a> ~ shared_ptr
 
 Удаляет `shared_ptr`.
 
@@ -722,7 +722,7 @@ use count == 2
 use count == 1
 ```
 
-## <a name="swap"></a><a name="swap"></a>позиции
+## <a name="swap"></a><a name="swap"></a> позиции
 
 Меняет местами два объекта `shared_ptr`.
 
@@ -783,7 +783,7 @@ int main()
 *wp1 == 5
 ```
 
-## <a name="unique"></a><a name="unique"></a>однозначно
+## <a name="unique"></a><a name="unique"></a> однозначно
 
 Проверяет, является ли принадлежащий ресурс уникальным. Эта функция была признана устаревшей в C++ 17 и удалена в C++ 20.
 
@@ -822,7 +822,7 @@ sp1.unique() == true
 sp1.unique() == false
 ```
 
-## <a name="use_count"></a><a name="use_count"></a>use_count
+## <a name="use_count"></a><a name="use_count"></a> use_count
 
 Подсчитывает количество владельцев ресурса.
 
@@ -861,7 +861,7 @@ sp1.use_count() == 1
 sp1.use_count() == 2
 ```
 
-## <a name="weak_type"></a><a name="weak_type"></a>weak_type
+## <a name="weak_type"></a><a name="weak_type"></a> weak_type
 
 Тип слабого указателя на элемент.
 

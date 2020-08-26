@@ -124,12 +124,12 @@ helpviewer_keywords:
 - SetStatus method
 - SetValue method
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
-ms.openlocfilehash: 6182d66b49647758bf17ab160d536e39b97b8c0f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ecbc332fcdb7fee8f748a02b2f111d4d1abf3c0b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216483"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838208"
 ---
 # <a name="cdynamicaccessor-class"></a>Класс CDynamicAccessor
 
@@ -149,7 +149,7 @@ class CDynamicAccessor : public CAccessorBase
 
 ### <a name="methods"></a>Методы
 
-|||
+| Имя | Описание |
 |-|-|
 |[AddBindEntry](#addbindentry)|Добавляет запись привязки к выходным столбцам при переопределении метода доступа по умолчанию.|
 |[CDynamicAccessor](#cdynamicaccessor)|Создает и инициализирует `CDynamicAccessor` объект.|
@@ -180,7 +180,7 @@ class CDynamicAccessor : public CAccessorBase
 
 Обсуждение и примеры использования динамических классов методов доступа см. в разделе [Использование динамических методов доступа](../../data/oledb/using-dynamic-accessors.md).
 
-## <a name="cdynamicaccessoraddbindentry"></a><a name="addbindentry"></a>CDynamicAccessor:: AddBindEntry
+## <a name="cdynamicaccessoraddbindentry"></a><a name="addbindentry"></a> CDynamicAccessor:: AddBindEntry
 
 Добавляет запись привязки к выходным столбцам.
 
@@ -193,7 +193,7 @@ HRESULT AddBindEntry(const DBCOLUMNINFO& info) throw();
 #### <a name="parameters"></a>Параметры
 
 *контактные*<br/>
-окне `DBCOLUMNINFO`Структура, содержащая сведения о столбцах. См. раздел "структуры DBCOLUMNINFO" в [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) в *справочнике программиста OLE DB*.
+окне `DBCOLUMNINFO` Структура, содержащая сведения о столбцах. См. раздел "структуры DBCOLUMNINFO" в [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) в *справочнике программиста OLE DB*.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -203,7 +203,7 @@ HRESULT AddBindEntry(const DBCOLUMNINFO& info) throw();
 
 Используйте этот метод при переопределении метода доступа по умолчанию, созданного с помощью `CDynamicAccessor` (см. раздел [как извлечь данные?](../../data/oledb/fetching-data.md)).
 
-## <a name="cdynamicaccessorcdynamicaccessor"></a><a name="cdynamicaccessor"></a>CDynamicAccessor:: CDynamicAccessor
+## <a name="cdynamicaccessorcdynamicaccessor"></a><a name="cdynamicaccessor"></a> CDynamicAccessor:: CDynamicAccessor
 
 Создает и инициализирует `CDynamicAccessor` объект.
 
@@ -228,7 +228,7 @@ CDynamicAccessor(DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,
 
 Кроме того, можно указать, как `CDynamicAccessor` обрабатывает данные столбцов, которые обрабатываются как данные большого двоичного объекта. он может обрабатывать данные больших двоичных объектов по умолчанию; он может пропустить (не привязывает) данные большого двоичного объекта или привязать данные большого двоичного объекта в памяти, выделенной поставщиком.
 
-## <a name="cdynamicaccessorclose"></a><a name="close"></a>CDynamicAccessor:: Close
+## <a name="cdynamicaccessorclose"></a><a name="close"></a> CDynamicAccessor:: Close
 
 Отменяет привязку всех столбцов, освобождает выделенную память и освобождает указатель интерфейса [IAccessor](/previous-versions/windows/desktop/ms719672(v=vs.85)) в классе.
 
@@ -238,7 +238,7 @@ CDynamicAccessor(DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,
 void Close() throw();
 ```
 
-## <a name="cdynamicaccessorgetblobhandling"></a><a name="getblobhandling"></a>CDynamicAccessor:: Жетблобхандлинг
+## <a name="cdynamicaccessorgetblobhandling"></a><a name="getblobhandling"></a> CDynamicAccessor:: Жетблобхандлинг
 
 Возвращает значение обработки большого двоичного объекта для текущей строки.
 
@@ -252,7 +252,7 @@ const DBBLOBHANDLINGENUM GetBlobHandling() const;
 
 Возвращает значение обработки BLOB-объекта *еблобхандлинг* , заданное параметром [сетблобхандлинг](../../data/oledb/cdynamicaccessor-setblobhandling.md).
 
-## <a name="cdynamicaccessorgetblobsizelimit"></a><a name="getblobsizelimit"></a>CDynamicAccessor:: Жетблобсизелимит
+## <a name="cdynamicaccessorgetblobsizelimit"></a><a name="getblobsizelimit"></a> CDynamicAccessor:: Жетблобсизелимит
 
 Возвращает максимальный размер большого двоичного объекта в байтах.
 
@@ -266,7 +266,7 @@ const DBLENGTH GetBlobSizeLimit() const;
 
 Возвращает значение обработки BLOB-объекта *нблобсизе* , заданное параметром [сетблобсизелимит](../../data/oledb/cdynamicaccessor-setblobsizelimit.md).
 
-## <a name="cdynamicaccessorgetbookmark"></a><a name="getbookmark"></a>CDynamicAccessor:: onbookmark
+## <a name="cdynamicaccessorgetbookmark"></a><a name="getbookmark"></a> CDynamicAccessor:: onbookmark
 
 Извлекает закладку для текущей строки.
 
@@ -289,7 +289,7 @@ HRESULT GetBookmark(CBookmark< >* pBookmark) const throw();
 
 Чтобы `DBPROP_IRowsetLocate` получить закладку, необходимо задать значение VARIANT_TRUE.
 
-## <a name="cdynamicaccessorgetcolumncount"></a><a name="getcolumncount"></a>CDynamicAccessor:: GetColumnCount
+## <a name="cdynamicaccessorgetcolumncount"></a><a name="getcolumncount"></a> CDynamicAccessor:: GetColumnCount
 
 Возвращает число столбцов.
 
@@ -303,7 +303,7 @@ DBORDINAL GetColumnCount() const throw();
 
 Число извлеченных столбцов.
 
-## <a name="cdynamicaccessorgetcolumnflags"></a><a name="getcolumnflags"></a>CDynamicAccessor:: Жетколумнфлагс
+## <a name="cdynamicaccessorgetcolumnflags"></a><a name="getcolumnflags"></a> CDynamicAccessor:: Жетколумнфлагс
 
 Получает характеристики столбца.
 
@@ -330,7 +330,7 @@ bool GetColumnFlags(DBORDINAL nColumn,
 
 Номер столбца смещается с единицы. Нулевой столбец является особым случаем. Это закладка, если она доступна.
 
-## <a name="cdynamicaccessorgetcolumninfo"></a><a name="getcolumninfo"></a>CDynamicAccessor:: GetColumnInfo
+## <a name="cdynamicaccessorgetcolumninfo"></a><a name="getcolumninfo"></a> CDynamicAccessor:: GetColumnInfo
 
 Возвращает метаданные столбца, требуемые большинством объектов-получателей.
 
@@ -365,7 +365,7 @@ HRESULT GetColumnInfo(IRowset* pRowset,
 
 Сведения о типах данных, и, см. в разделе [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) в *справочнике программиста OLE DB* `DBORDINAL` `DBCOLUMNINFO` `OLECHAR` .
 
-## <a name="cdynamicaccessorgetcolumnname"></a><a name="getcolumnname"></a>CDynamicAccessor:: GetColumnName
+## <a name="cdynamicaccessorgetcolumnname"></a><a name="getcolumnname"></a> CDynamicAccessor:: GetColumnName
 
 Извлекает имя указанного столбца.
 
@@ -384,7 +384,7 @@ LPOLESTR GetColumnName(DBORDINAL nColumn) const throw();
 
 Имя заданного столбца.
 
-## <a name="cdynamicaccessorgetcolumntype"></a><a name="getcolumntype"></a>CDynamicAccessor:: Жетколумнтипе
+## <a name="cdynamicaccessorgetcolumntype"></a><a name="getcolumntype"></a> CDynamicAccessor:: Жетколумнтипе
 
 Возвращает тип данных указанного столбца.
 
@@ -407,7 +407,7 @@ bool GetColumnType(DBORDINAL nColumn,
 
 Возвращает значение **`true`** On Success или **`false`** On failure.
 
-## <a name="cdynamicaccessorgetlength"></a><a name="getlength"></a>CDynamicAccessor:: DATALENGTH
+## <a name="cdynamicaccessorgetlength"></a><a name="getlength"></a> CDynamicAccessor:: DATALENGTH
 
 Извлекает длину указанного столбца.
 
@@ -443,7 +443,7 @@ bool GetLength(const WCHAR* pColumnName,
 
 Первое переопределение принимает номер столбца, а второе и третье переопределения принимают имя столбца в формате ANSI или Unicode соответственно.
 
-## <a name="cdynamicaccessorgetordinal"></a><a name="getordinal"></a>CDynamicAccessor:: Ordinal
+## <a name="cdynamicaccessorgetordinal"></a><a name="getordinal"></a> CDynamicAccessor:: Ordinal
 
 Возвращает номер столбца по заданному имени столбца.
 
@@ -469,7 +469,7 @@ bool GetOrdinal(const WCHAR* pColumnName,
 
 Возвращает значение, **`true`** если найден столбец с указанным именем. В противном случае эта функция возвращает значение **`false`** .
 
-## <a name="cdynamicaccessorgetstatus"></a><a name="getstatus"></a>CDynamicAccessor::/Status
+## <a name="cdynamicaccessorgetstatus"></a><a name="getstatus"></a> CDynamicAccessor::/Status
 
 Получает состояние указанного столбца.
 
@@ -501,7 +501,7 @@ bool GetStatus(const WCHAR* pColumnName,
 
 Возвращает значение **`true`** , если указанный столбец найден. В противном случае эта функция возвращает значение **`false`** .
 
-## <a name="cdynamicaccessorgetvalue"></a><a name="getvalue"></a>CDynamicAccessor:: GetValue
+## <a name="cdynamicaccessorgetvalue"></a><a name="getvalue"></a> CDynamicAccessor:: GetValue
 
 Извлекает данные для указанного столбца.
 
@@ -527,7 +527,7 @@ bool GetValue(const WCHAR* pColumnName, ctype* pData) const throw();
 #### <a name="parameters"></a>Параметры
 
 *CType*<br/>
-окне Шаблонный параметр, обрабатывающий любой тип данных, за исключением строкового типа ( `CHAR*` , `WCHAR*` ), требующего специальной обработки. `GetValue`использует соответствующий тип данных в зависимости от того, что указано здесь.
+окне Шаблонный параметр, обрабатывающий любой тип данных, за исключением строкового типа ( `CHAR*` , `WCHAR*` ), требующего специальной обработки. `GetValue` использует соответствующий тип данных в зависимости от того, что указано здесь.
 
 *нколумн*<br/>
 окне Номер столбца. Номера столбцов начинаются с 1. Значение 0 указывает на столбец Bookmark, если он есть.
@@ -550,7 +550,7 @@ bool GetValue(const WCHAR* pColumnName, ctype* pData) const throw();
 
 В режиме отладки будет получено утверждение, если размер *pData* не равен размеру столбца, на который он указывает.
 
-## <a name="cdynamicaccessorsetblobhandling"></a><a name="setblobhandling"></a>CDynamicAccessor:: Сетблобхандлинг
+## <a name="cdynamicaccessorsetblobhandling"></a><a name="setblobhandling"></a> CDynamicAccessor:: Сетблобхандлинг
 
 Задает значение обработки большого двоичного объекта для текущей строки.
 
@@ -577,7 +577,7 @@ bool SetBlobHandling(DBBLOBHANDLINGENUM eBlobHandling);
 
 Метод-конструктор [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) устанавливает значение обработки BLOB-объекта DBBLOBHANDLING_DEFAULT.
 
-## <a name="cdynamicaccessorsetblobsizelimit"></a><a name="setblobsizelimit"></a>CDynamicAccessor:: Сетблобсизелимит
+## <a name="cdynamicaccessorsetblobsizelimit"></a><a name="setblobsizelimit"></a> CDynamicAccessor:: Сетблобсизелимит
 
 Задает максимальный размер большого двоичного объекта в байтах.
 
@@ -598,7 +598,7 @@ void SetBlobSizeLimit(DBLENGTH nBlobSize);
 
 Метод-конструктор [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) устанавливает максимальный размер большого двоичного объекта равным значению по умолчанию 8 000 байт.
 
-## <a name="cdynamicaccessorsetlength"></a><a name="setlength"></a>CDynamicAccessor:: SetLength
+## <a name="cdynamicaccessorsetlength"></a><a name="setlength"></a> CDynamicAccessor:: SetLength
 
 Задает длину указанного столбца.
 
@@ -630,7 +630,7 @@ bool SetLength(const WCHAR* pColumnName,
 
 Возвращает **`true`** значение, если указанная длина столбца установлена успешно. В противном случае эта функция возвращает значение **`false`** .
 
-## <a name="cdynamicaccessorsetstatus"></a><a name="setstatus"></a>CDynamicAccessor:: SetStatus
+## <a name="cdynamicaccessorsetstatus"></a><a name="setstatus"></a> CDynamicAccessor:: SetStatus
 
 Задает состояние указанного столбца.
 
@@ -662,7 +662,7 @@ bool SetStatus(const WCHAR* pColumnName,
 
 Возвращает, **`true`** если указанный столбец имеет состояние "успешно задано". В противном случае эта функция возвращает значение **`false`** .
 
-## <a name="cdynamicaccessorsetvalue"></a><a name="setvalue"></a>CDynamicAccessor:: SetValue
+## <a name="cdynamicaccessorsetvalue"></a><a name="setvalue"></a> CDynamicAccessor:: SetValue
 
 Хранит данные в указанном столбце.
 
@@ -688,7 +688,7 @@ bool SetValue(
 #### <a name="parameters"></a>Параметры
 
 *CType*<br/>
-окне Шаблонный параметр, обрабатывающий любой тип данных, за исключением строкового типа ( `CHAR*` , `WCHAR*` ), требующего специальной обработки. `GetValue`использует соответствующий тип данных в зависимости от того, что указано здесь.
+окне Шаблонный параметр, обрабатывающий любой тип данных, за исключением строкового типа ( `CHAR*` , `WCHAR*` ), требующего специальной обработки. `GetValue` использует соответствующий тип данных в зависимости от того, что указано здесь.
 
 *пколумннаме*<br/>
 окне Указатель на строку символов, содержащую имя столбца.

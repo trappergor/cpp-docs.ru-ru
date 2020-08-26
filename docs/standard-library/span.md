@@ -5,12 +5,12 @@ f1_keywords:
 - <span>
 helpviewer_keywords:
 - span header
-ms.openlocfilehash: 27f27acfa84a3ccc42586593747e4657146cbe39
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 7d21023c90472e5c2e1b28d9fa85e517da4a21ae
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813539"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846190"
 ---
 # <a name="ltspangt"></a>&lt;размещать&gt;
 
@@ -56,30 +56,30 @@ int main()
 
 ### <a name="classes"></a>Классы
 
-|||
+|name|Описание|
 |-|:-|
 |[размещать](span-class.md)| Предоставляет представление для непрерывной последовательности объектов. |
 
 ### <a name="operators"></a>Операторы
 
-|||
+|Имя|Описание|
 |-|:-|
 |[Оператор =](span-class.md#op_eq)| Назначение диапазона |
 |[станции\[\]](span-class.md#op_at)| Доступ к элементам |
 
 ### <a name="functions"></a>Функции
 
-|||
+|Имя|Описание|
 |-|:-|
 | [as_bytes](span-functions.md#as_bytes)| Возвращает базовые байты, которые доступны только для чтения. |
 | [as_writable_bytes](span-functions.md#as_writable_bytes) | Получение базовых байтов диапазона. |
 
 ### <a name="constants"></a>Константы
 
-|||
+|Имя|Описание|
 |-|:-|
 | **dynamic_extent** | Указывает, что размер диапазона определяется во время выполнения, а не во времени компиляции. Когда число элементов в диапазоне известно во время компиляции, оно указывается в качестве `Extent` параметра шаблона. Если число неизвестно до времени выполнения, укажите `dynamic_extent` вместо него. |
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)

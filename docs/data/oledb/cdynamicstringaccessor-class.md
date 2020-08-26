@@ -12,12 +12,12 @@ helpviewer_keywords:
 - GetString method
 - SetString method
 ms.assetid: 138dc4de-c7c3-478c-863e-431e48249027
-ms.openlocfilehash: a0590bc015c5487315b8cbd38f0baf91eb3082cc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 927ea5ceef9ac74ae3cc1e06a47969b537209002
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211874"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838169"
 ---
 # <a name="cdynamicstringaccessor-class"></a>Класс CDynamicStringAccessor
 
@@ -32,30 +32,30 @@ class CDynamicStringAccessorT : public CDynamicAccessor
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atldbcli.h
+**Заголовок**: Atldbcli. h
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Элементы
 
 ### <a name="methods"></a>Методы
 
-|||
+| Имя | Описание |
 |-|-|
 |[GetString](#getstring)|Извлекает указанные данные столбца в виде строки.|
 |[SetString](#setstring)|Задает указанные данные столбца в виде строки.|
 
 ## <a name="remarks"></a>Remarks
 
-Хотя [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) запрашивает данные в собственном формате, сообщаемом поставщиком, `CDynamicStringAccessor` запрашивает получение поставщиком всех данных, доступ к которым осуществляется из хранилища данных в виде строковых данных. Это особенно полезно для простых задач, которые не нуждаются в вычислении значений в хранилище данных, например при отображении или печати содержимого хранилища данных.
+Хотя [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) запрашивает данные в собственном формате, сообщаемом поставщиком, `CDynamicStringAccessor` запрашивает получение поставщиком всех данных, доступ к которым осуществляется из хранилища данных, в виде строковых данных. Это особенно полезно для простых задач, которые не нуждаются в вычислении значений в хранилище данных, например при отображении или печати содержимого хранилища данных.
 
-Собственный тип данных столбца в хранилище данных не имеет значения; пока поставщик может поддерживать преобразование данных, он предоставит данные в строковом формате. Если поставщик не поддерживает преобразование из собственного типа данных в строку (которая не является распространенной), запрашивающий вызов возвратит значение успеха DB_S_ERRORSOCCURED, а состояние соответствующего столбца будет указывать на проблему преобразования. DBSTATUS_E_CANTCONVERTVALUE.
+Собственный тип данных столбца в хранилище данных не имеет значения; пока поставщик может поддерживать преобразование данных, он предоставит данные в строковом формате. Если поставщик не поддерживает преобразование из собственного типа данных в строку (которая не является распространенной), запрашивающий вызов возвратит значение успеха DB_S_ERRORSOCCURED, а состояние соответствующего столбца будет указывать на проблему преобразования в DBSTATUS_E_CANTCONVERTVALUE.
 
-Для получения сведений о столбцах используйте методы `CDynamicStringAccessor`. Эти сведения о столбцах используются для динамического создания метода доступа во время выполнения.
+Используйте `CDynamicStringAccessor` методы для получения сведений о столбцах. Эти сведения о столбцах используются для динамического создания метода доступа во время выполнения.
 
 Сведения о столбцах хранятся в буфере, созданном и управляемом этим классом. Получение данных из буфера с помощью [GetString](../../data/oledb/cdynamicstringaccessor-getstring.md)или сохранение их в буфер с помощью [SetString](../../data/oledb/cdynamicstringaccessor-setstring.md).
 
 Обсуждение и примеры использования динамических классов методов доступа см. в разделе [Использование динамических методов доступа](../../data/oledb/using-dynamic-accessors.md).
 
-## <a name="cdynamicstringaccessorgetstring"></a><a name="getstring"></a>CDynamicStringAccessor:: GetString
+## <a name="cdynamicstringaccessorgetstring"></a><a name="getstring"></a> CDynamicStringAccessor:: GetString
 
 Извлекает указанные данные столбца в виде строки.
 
@@ -79,13 +79,13 @@ BaseType* GetString(const WCHAR* pColumnName) const throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на строковое значение, полученное из указанного столбца. Значение типа `BaseType`, которое будет иметь тип **char** или **WCHAR** в зависимости от того, определено ли _UNICODE. Возвращает значение NULL, если указанный столбец не найден.
+Указатель на строковое значение, полученное из указанного столбца. Значение имеет тип `BaseType` , который будет **char** или **WCHAR** в зависимости от того, определено _UNICODE или нет. Возвращает значение NULL, если указанный столбец не найден.
 
 ### <a name="remarks"></a>Remarks
 
 Вторая форма переопределения принимает имя столбца в виде строки ANSI. Третья форма переопределения принимает имя столбца в виде строки в Юникоде.
 
-## <a name="cdynamicstringaccessorsetstring"></a><a name="setstring"></a>CDynamicStringAccessor:: SetString
+## <a name="cdynamicstringaccessorsetstring"></a><a name="setstring"></a> CDynamicStringAccessor:: SetString
 
 Задает указанные данные столбца в виде строки.
 
@@ -115,7 +115,7 @@ HRESULT SetString(const WCHAR* pColumnName,
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на строковое значение, в которое задается указанный столбец. Значение типа `BaseType`, которое будет иметь тип **char** или **WCHAR** в зависимости от того, определено ли _UNICODE.
+Указатель на строковое значение, в которое задается указанный столбец. Значение имеет тип `BaseType` , который будет **char** или **WCHAR** в зависимости от того, определено _UNICODE или нет.
 
 ### <a name="remarks"></a>Remarks
 
@@ -126,8 +126,8 @@ HRESULT SetString(const WCHAR* pColumnName,
 ## <a name="see-also"></a>См. также раздел
 
 [Шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
-[Класс CAccessor](../../data/oledb/caccessor-class.md)<br/>
+[Справочник по шаблонам потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Класс Какцессор](../../data/oledb/caccessor-class.md)<br/>
 [Класс CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
 [Класс CManualAccessor](../../data/oledb/cmanualaccessor-class.md)<br/>
 [Класс CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)<br/>

@@ -134,12 +134,12 @@ helpviewer_keywords:
 - std::unordered_set::size
 - std::unordered_set::swap
 ms.assetid: ac08084e-05a7-48c0-9ae4-d40c529922dd
-ms.openlocfilehash: 9a19567b5878853d1fdfa86948ff1eeb37794089
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5eb8a6902324ee069ff275e77b97703ba6ba3356
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215508"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839521"
 ---
 # <a name="unordered_set-class"></a>Класс unordered_set
 
@@ -174,7 +174,7 @@ class unordered_set;
 
 ### <a name="typedefs"></a>Определения типов
 
-|||
+|Имя|Описание|
 |-|-|
 |[allocator_type](#allocator_type)|Тип распределителя для управления хранилищем.|
 |[const_iterator](#const_iterator)|Тип постоянного итератора для управляемой последовательности.|
@@ -194,10 +194,10 @@ class unordered_set;
 
 ### <a name="functions"></a>Функции
 
-|||
+|Имя|Описание|
 |-|-|
 |[начале](#begin)|Задает начало управляемой последовательности.|
-|[bucket](#bucket)|Получает номер блока для значения ключа.|
+|[период](#bucket)|Получает номер блока для значения ключа.|
 |[bucket_count](#bucket_count)|Получает количество блоков.|
 |[bucket_size](#bucket_size)|Получает размер блока.|
 |[cbegin](#cbegin)|Задает начало управляемой последовательности.|
@@ -226,7 +226,7 @@ class unordered_set;
 
 ### <a name="operators"></a>Операторы
 
-|||
+|Имя|Описание|
 |-|-|
 |[unordered_set:: operator =](#op_eq)|Копирует хэш-таблицу.|
 
@@ -240,7 +240,7 @@ class unordered_set;
 
 Объект выделяет и освобождает хранилище для последовательности, управление которой осуществляется с помощью сохраненного объекта распределителя типа [unordered_set:: allocator_type](#allocator_type). Такой объект распределителя должен иметь тот же внешний интерфейс, что и объект типа `allocator` . Обратите внимание, что сохраненный объект распределителя не копируется, когда назначается объект контейнера.
 
-## <a name="unordered_setallocator_type"></a><a name="allocator_type"></a>unordered_set:: allocator_type
+## <a name="unordered_setallocator_type"></a><a name="allocator_type"></a> unordered_set:: allocator_type
 
 Тип распределителя для управления хранилищем.
 
@@ -278,7 +278,7 @@ int main()
 al == std::allocator() is true
 ```
 
-## <a name="begin"></a><a name="begin"></a>начале
+## <a name="begin"></a><a name="begin"></a> начале
 
 Задает начало управляемой последовательности или сегмента.
 
@@ -357,7 +357,7 @@ int main()
 [a]
 ```
 
-## <a name="bucket"></a><a name="bucket"></a>период
+## <a name="bucket"></a><a name="bucket"></a> период
 
 Получает номер блока для значения ключа.
 
@@ -412,7 +412,7 @@ bucket('a') == 7
 bucket_size(7) == 1
 ```
 
-## <a name="bucket_count"></a><a name="bucket_count"></a>bucket_count
+## <a name="bucket_count"></a><a name="bucket_count"></a> bucket_count
 
 Получает количество блоков.
 
@@ -497,7 +497,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="bucket_size"></a><a name="bucket_size"></a>bucket_size
+## <a name="bucket_size"></a><a name="bucket_size"></a> bucket_size
 
 Получает размер сегмента.
 
@@ -552,7 +552,7 @@ bucket('a') == 7
 bucket_size(7) == 1
 ```
 
-## <a name="cbegin"></a><a name="cbegin"></a>cbegin
+## <a name="cbegin"></a><a name="cbegin"></a> cbegin
 
 Возвращает **`const`** итератор, который обращается к первому элементу в диапазоне.
 
@@ -578,7 +578,7 @@ auto i2 = Container.cbegin();
 // i2 isContainer<T>::const_iterator
 ```
 
-## <a name="cend"></a><a name="cend"></a>cend
+## <a name="cend"></a><a name="cend"></a> cend
 
 Возвращает **`const`** итератор, который обращается к расположению сразу за последним элементом в диапазоне.
 
@@ -606,7 +606,7 @@ auto i2 = Container.cend();
 
 Значение, возвращаемое `cend`, не должно быть подвергнуто удалению ссылки.
 
-## <a name="clear"></a><a name="clear"></a>открытым
+## <a name="clear"></a><a name="clear"></a> открытым
 
 Удаляет все элементы.
 
@@ -670,7 +670,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="const_iterator"></a><a name="const_iterator"></a>const_iterator
+## <a name="const_iterator"></a><a name="const_iterator"></a> const_iterator
 
 Тип постоянного итератора для управляемой последовательности.
 
@@ -712,7 +712,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="const_local_iterator"></a><a name="const_local_iterator"></a>const_local_iterator
+## <a name="const_local_iterator"></a><a name="const_local_iterator"></a> const_local_iterator
 
 Тип постоянного итератора блока для управляемой последовательности.
 
@@ -759,7 +759,7 @@ int main()
 [a]
 ```
 
-## <a name="const_pointer"></a><a name="const_pointer"></a>const_pointer
+## <a name="const_pointer"></a><a name="const_pointer"></a> const_pointer
 
 Тип постоянного указателя на элемент.
 
@@ -804,7 +804,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="const_reference"></a><a name="const_reference"></a>const_reference
+## <a name="const_reference"></a><a name="const_reference"></a> const_reference
 
 Тип постоянной ссылки на элемент.
 
@@ -849,7 +849,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="count"></a><a name="count"></a>расчета
+## <a name="count"></a><a name="count"></a> расчета
 
 Определяет количество элементов, соответствующих заданному ключу.
 
@@ -903,7 +903,7 @@ count('b') == 1
 count('C') == 0
 ```
 
-## <a name="difference_type"></a><a name="difference_type"></a>difference_type
+## <a name="difference_type"></a><a name="difference_type"></a> difference_type
 
 Тип расстояния со знаком между двумя элементами.
 
@@ -959,7 +959,7 @@ end()-begin() == 3
 begin()-end() == -3
 ```
 
-## <a name="emplace"></a><a name="emplace"></a>emplace
+## <a name="emplace"></a><a name="emplace"></a> emplace
 
 Вставляет элемент, созданный на месте (операции копирования или перемещения не выполняются).
 
@@ -989,7 +989,7 @@ Args&&... args);
 
 Пример кода см. в разделе [Set:: emplace](../standard-library/set-class.md#emplace).
 
-## <a name="emplace_hint"></a><a name="emplace_hint"></a>emplace_hint
+## <a name="emplace_hint"></a><a name="emplace_hint"></a> emplace_hint
 
 Вставляет созданный элемент на место (операции копирования или перемещения не выполняются) с указанием о размещении.
 
@@ -1022,7 +1022,7 @@ Args&&... args);
 
 Пример кода см. в разделе [set::emplace_hint](../standard-library/set-class.md#emplace_hint).
 
-## <a name="empty"></a><a name="empty"></a>указано
+## <a name="empty"></a><a name="empty"></a> указано
 
 Проверяет отсутствие элементов.
 
@@ -1086,7 +1086,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="end"></a><a name="end"></a>конце
+## <a name="end"></a><a name="end"></a> конце
 
 Задает конец управляемой последовательности.
 
@@ -1154,7 +1154,7 @@ int main()
 [a]
 ```
 
-## <a name="equal_range"></a><a name="equal_range"></a>equal_range
+## <a name="equal_range"></a><a name="equal_range"></a> equal_range
 
 Находит диапазон, соответствующий указанному ключу.
 
@@ -1222,7 +1222,7 @@ equal_range('x'):
 equal_range('b'): [b]
 ```
 
-## <a name="erase"></a><a name="erase"></a>резин
+## <a name="erase"></a><a name="erase"></a> резин
 
 Удаляет элемент или диапазон элементов в объекте unordered_set с заданных позиций или удаляет элементы, соответствующие заданному ключу.
 
@@ -1258,7 +1258,7 @@ size_type erase(const key_type& Key);
 
 Пример кода см. в разделе [set::erase](../standard-library/set-class.md#erase).
 
-## <a name="find"></a><a name="find"></a>Найдено
+## <a name="find"></a><a name="find"></a> Найдено
 
 Определяет элемент, соответствующий указанному ключу.
 
@@ -1317,7 +1317,7 @@ find('A') == false
 find('b') == true: [b]
 ```
 
-## <a name="get_allocator"></a><a name="get_allocator"></a>get_allocator
+## <a name="get_allocator"></a><a name="get_allocator"></a> get_allocator
 
 Возвращает сохраненный объект распределителя.
 
@@ -1355,7 +1355,7 @@ int main()
 al == std::allocator() is true
 ```
 
-## <a name="hash_function"></a><a name="hash"></a>hash_function
+## <a name="hash_function"></a><a name="hash"></a> hash_function
 
 Получает сохраненный объект хэш-функции.
 
@@ -1393,7 +1393,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086
 ```
 
-## <a name="hasher"></a><a name="hasher"></a>Hasher
+## <a name="hasher"></a><a name="hasher"></a> Hasher
 
 Тип хэш-функции.
 
@@ -1431,7 +1431,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086
 ```
 
-## <a name="insert"></a><a name="insert"></a>Вставляет
+## <a name="insert"></a><a name="insert"></a> Вставляет
 
 Вставляет элемент или диапазон элементов в unordered_set.
 
@@ -1505,7 +1505,7 @@ void insert(initializer_list<value_type> IList);
 
 Пример кода см. в разделе [Set:: INSERT](../standard-library/set-class.md#insert).
 
-## <a name="iterator"></a><a name="iterator"></a>итераци
+## <a name="iterator"></a><a name="iterator"></a> итераци
 
 Тип, предоставляющий постоянный [прямой итератор](../standard-library/forward-iterator-tag-struct.md) , который может считывать элементы в unordered_set.
 
@@ -1517,7 +1517,7 @@ typedef implementation-defined iterator;
 
 См. пример для [Begin](../standard-library/set-class.md#begin) в качестве примера объявления и использования**итератора**.
 
-## <a name="key_eq"></a><a name="key_eq"></a>key_eq
+## <a name="key_eq"></a><a name="key_eq"></a> key_eq
 
 Получает сохраненный объект функции сравнения.
 
@@ -1557,7 +1557,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false
 ```
 
-## <a name="key_equal"></a><a name="key_equal"></a>key_equal
+## <a name="key_equal"></a><a name="key_equal"></a> key_equal
 
 Тип функции сравнения.
 
@@ -1597,7 +1597,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false
 ```
 
-## <a name="key_type"></a><a name="key_type"></a>key_type
+## <a name="key_type"></a><a name="key_type"></a> key_type
 
 Тип ключа упорядочения.
 
@@ -1649,7 +1649,7 @@ int main()
 [d] [c] [b] [a]
 ```
 
-## <a name="load_factor"></a><a name="load_factor"></a>load_factor
+## <a name="load_factor"></a><a name="load_factor"></a> load_factor
 
 Подсчитывает среднее число элементов в блоке.
 
@@ -1734,7 +1734,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="local_iterator"></a><a name="local_iterator"></a>local_iterator
+## <a name="local_iterator"></a><a name="local_iterator"></a> local_iterator
 
 Тип итератора контейнера.
 
@@ -1781,7 +1781,7 @@ int main()
 [a]
 ```
 
-## <a name="max_bucket_count"></a><a name="max_bucket_count"></a>max_bucket_count
+## <a name="max_bucket_count"></a><a name="max_bucket_count"></a> max_bucket_count
 
 Получает максимальное количество блоков.
 
@@ -1866,7 +1866,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="max_load_factor"></a><a name="max_load_factor"></a>max_load_factor
+## <a name="max_load_factor"></a><a name="max_load_factor"></a> max_load_factor
 
 Возвращает или задает максимальное количество элементов в блоке.
 
@@ -1958,7 +1958,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="max_size"></a><a name="max_size"></a>max_size
+## <a name="max_size"></a><a name="max_size"></a> max_size
 
 Возвращает максимальный размер управляемой последовательности.
 
@@ -1993,7 +1993,7 @@ int main()
 max_size() == 4294967295
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>Оператор =
+## <a name="operator"></a><a name="op_eq"></a> Оператор =
 
 Копирует хэш-таблицу.
 
@@ -2095,7 +2095,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="reference"></a><a name="reference"></a>IsReference
+## <a name="reference"></a><a name="reference"></a> IsReference
 
 Тип ссылки на элемент.
 
@@ -2141,7 +2141,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="rehash"></a><a name="rehash"></a>rehash
+## <a name="rehash"></a><a name="rehash"></a> rehash
 
 Повторно создает хэш-таблицу.
 
@@ -2218,7 +2218,7 @@ load_factor() == 0.0234375
 max_load_factor() == 0.1
 ```
 
-## <a name="size"></a><a name="size"></a>изменять
+## <a name="size"></a><a name="size"></a> изменять
 
 Подсчитывает количество элементов.
 
@@ -2283,7 +2283,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="size_type"></a><a name="size_type"></a>size_type
+## <a name="size_type"></a><a name="size_type"></a> size_type
 
 Тип беззнакового расстояния между двумя элементами.
 
@@ -2319,7 +2319,7 @@ int main()
 size == 0
 ```
 
-## <a name="swap"></a><a name="swap"></a>позиции
+## <a name="swap"></a><a name="swap"></a> позиции
 
 Меняет местами содержимое двух контейнеров.
 
@@ -2388,7 +2388,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="unordered_set"></a><a name="unordered_set"></a>unordered_set
+## <a name="unordered_set"></a><a name="unordered_set"></a> unordered_set
 
 Создает объект контейнера.
 
@@ -2472,7 +2472,7 @@ unordered_set(
 
 Объект распределителя — это аргумент *Al*, если он есть; в противном случае — значение `Alloc()` .
 
-## <a name="value_type"></a><a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a> value_type
 
 Тип элемента.
 

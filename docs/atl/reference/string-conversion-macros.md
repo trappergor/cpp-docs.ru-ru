@@ -1,5 +1,5 @@
 ---
-title: Струнная конверсия Макрос
+title: Макросы преобразования строк
 ms.date: 11/04/2016
 f1_keywords:
 - atlconv/ATL::DEVMODEA2W
@@ -11,24 +11,24 @@ f1_keywords:
 - atlconv/ATL::DEVMODEW2A
 - atlconv/ATL::TEXTMETRICW2A
 ms.assetid: 2ff7c0b6-2bde-45fe-897f-6128e18e0c27
-ms.openlocfilehash: 8df496b78334d26e7d3664642b2e9d93d6149843
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 60cccebf4e1db8369ea5a88f04a37b96838ff49f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325843"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835159"
 ---
-# <a name="string-conversion-macros"></a>Струнная конверсия Макрос
+# <a name="string-conversion-macros"></a>Макросы преобразования строк
 
-Эти макросы обеспечивают функции преобразования строк.
+Эти макросы предоставляют функции преобразования строк.
 
-## <a name="atl-and-mfc-string-conversion-macros"></a><a name="atl_and_mfc_string_conversion_macros"></a>ATL и MFC String Преобразование Макрос
+## <a name="atl-and-mfc-string-conversion-macros"></a><a name="atl_and_mfc_string_conversion_macros"></a> Макросы преобразования строк ATL и MFC
 
-Рассматриваемые здесь макросы преобразования строк можно использовать как для ATL, так и для MFC. Для получения дополнительной информации о преобразовании строк MFC см. [TN059: Использование MFC MBCS/Unicode Conversion Macros](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md) и [MFC Macros и Globals.](../../mfc/reference/mfc-macros-and-globals.md)
+Рассматриваемые здесь макросы преобразования строк можно использовать как для ATL, так и для MFC. Дополнительные сведения о преобразовании строк MFC см. в разделе [TN059. Использование макросов преобразования с помощью MFC MBCS/Unicode](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md) и [макросов и глобальных библиотек MFC](../../mfc/reference/mfc-macros-and-globals.md).
 
-## <a name="devmode-and-textmetric-string-conversion-macros"></a><a name="devmode_and_textmetric_string_conversion_macros"></a>DEVMODE и TEXTMETRIC Струнные Преобразования Макрос
+## <a name="devmode-and-textmetric-string-conversion-macros"></a><a name="devmode_and_textmetric_string_conversion_macros"></a> Макросы преобразования строк DEVMODE и ТЕКСТМЕТРИК
 
-Эти макросы создают копию структуры [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) или [TEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-textmetricw) и преобразуют строки в новой структуре в новый тип строки. Макросы распределять память на стеке для новой структуры и возвращать указатель в новую структуру.
+Эти макросы создают копию структуры [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) или [текстметрик](/windows/win32/api/wingdi/ns-wingdi-textmetricw) и преобразуют строки в новой структуре в новый строковый тип. Макросы выделяют память в стеке для новой структуры и возвращают указатель на новую структуру.
 
 ```cpp
 MACRONAME( address_of_structure )
@@ -44,31 +44,31 @@ and:
 
 [!code-cpp[NVC_ATL_Utilities#129](../../atl/codesnippet/cpp/string-conversion-macros_2.cpp)]
 
-В макро-названиях тип строки в структуре источника находится слева (например, **A),** а тип строки в структуре назначения находится справа (например, **W).** **Стенды** для LPSTR, **OLE** означает LPOLESTR, **T** означает LPTSTR, а **W** - LPWSTR.
+В именах макросов строковый тип в исходной структуре находится слева (например **,),** а тип строки в целевой структуре — справа (например, **W**). **А** означает LPSTR, **OLE** означает ЛПОЛЕСТР, **T** означает LPTSTR, а **W** — для LPWSTR.
 
-Таким образом, DEVMODEA2W `DEVMODE` копирует структуру со `DEVMODE` строками LPSTR в структуру со строками `TEXTMETRIC` LPWSTR, TEXTMETRICOLE2T копирует структуру со строками LPOLESTR в `TEXTMETRIC` структуру со строками LPTSTR и так далее.
+Таким образом, DEVMODEA2W копирует `DEVMODE` структуру с строками LPSTR в `DEVMODE` структуру со строками LPWSTR, TEXTMETRICOLE2T копирует `TEXTMETRIC` структуру с лполестр строками в `TEXTMETRIC` структуру с строками LPTSTR и т. д.
 
-Две строки, преобразованные в структуру, `DEVMODE` являются названием устройства ()`dmDeviceName`и названием формы ().`dmFormName` Макроспреобразования `DEVMODE` строки также обновляют`dmSize`размер структуры ().
+Две строки, преобразованные в `DEVMODE` структуру, — это имя устройства ( `dmDeviceName` ) и имя формы ( `dmFormName` ). `DEVMODE`Макросы преобразования строк также обновляют размер структуры ( `dmSize` ).
 
-Четыре строки, преобразованные в `TEXTMETRIC` структуре, являются первым персонажем (),`tmFirstChar`последним персонажем ( ),`tmLastChar`персонажем по умолчанию (),`tmDefaultChar`и персонажем-брейком ().`tmBreakChar`
+Четыре строки, преобразованные в `TEXTMETRIC` структуру, являются первым символом ( `tmFirstChar` ), последним символом ( `tmLastChar` ), символом по умолчанию ( `tmDefaultChar` ) и символом разрыва ( `tmBreakChar` ).
 
-Поведение макросов преобразования `DEVMODE` строки `TEXTMETRIC` зависит от директивы компилятора, если таковые имеется. Если исходный и конечный типы совпадают, преобразование не выполняется. Директивы компилятора меняют **T** и **OLE** следующим образом:
+Поведение `DEVMODE` `TEXTMETRIC` макросов преобразования строк и зависит от применяемой директивы компилятора (при наличии). Если исходный и конечный типы совпадают, преобразование не выполняется. Директивы компилятора меняются **T** и **OLE** следующим образом:
 
 |Действующая директива компилятора|T становится|OLE становится|
 |----------------------------------|---------------|-----------------|
-|Нет|**A**|**Ж**|
-|**\_Юникода**|**Ж**|**Ж**|
-|**OLE2ANSI**|**A**|**A**|
-|UNICODE и **OLE2ANSI** ** \_**|**Ж**|**A**|
+|нет|**А**|**W**|
+|**\_UNICODE**|**W**|**W**|
+|**OLE2ANSI**|**А**|**А**|
+|** \_ Юникод** и **OLE2ANSI**|**W**|**А**|
 
-В следующей `DEVMODE` таблице `TEXTMETRIC` перечислены макросы преобразования строки.
+В следующей таблице перечислены `DEVMODE` `TEXTMETRIC` макросы и преобразования строк.
 
-|||
+|`DEVMODE` макровирусах|`TEXTMETRIC` макровирусах|
 |-|-|
-|ДЕВМОДЕА2В|TEXTMETRICA2W|
-|ДЕВМОЕНЕОЛЕ2Т|TEXTMETRICOLE2T|
-|ДЕВМОТЕТ2OLE|ТЕКСТМЕТРИЯ2OLE|
-|ДЕВМОДЕВ2А|TEXTMETRICW2A|
+|DEVMODEA2W|TEXTMETRICA2W|
+|DEVMODEOLE2T|TEXTMETRICOLE2T|
+|DEVMODET2OLE|TEXTMETRICT2OLE|
+|DEVMODEW2A|TEXTMETRICW2A|
 
 ## <a name="see-also"></a>См. также раздел
 

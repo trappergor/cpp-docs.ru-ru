@@ -22,12 +22,12 @@ helpviewer_keywords:
 - GetMoniker method
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-ms.openlocfilehash: 2a48acb8a961d76c34d2ba85ede5c827c880f400
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f3e3a61028768144cbef17912952622f19ad0242
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214923"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838156"
 ---
 # <a name="cenumerator-class"></a>Класс CEnumerator
 
@@ -48,7 +48,7 @@ class CEnumerator :
 
 ### <a name="methods"></a>Методы
 
-|||
+| Имя | Описание |
 |-|-|
 |[Поиск](#find)|Выполняет поиск по доступным поставщикам (источникам данных), ищут один из них с указанным именем.|
 |[Моникер](#getmoniker)|Извлекает `IMoniker` интерфейс для текущей записи.|
@@ -58,7 +58,7 @@ class CEnumerator :
 
 Данные можно извлекать `ISourcesRowset` косвенно из этого класса.
 
-## <a name="cenumeratorfind"></a><a name="find"></a>CEnumerator:: Find
+## <a name="cenumeratorfind"></a><a name="find"></a> CEnumerator:: Find
 
 Ищет указанное имя между доступными поставщиками.
 
@@ -81,7 +81,7 @@ bool Find(TCHAR* szSearchName) throw();
 
 Это имя сопоставляется с `SOURCES_NAME` членом интерфейса [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85)) .
 
-## <a name="cenumeratorgetmoniker"></a><a name="getmoniker"></a>CEnumerator:: моникер
+## <a name="cenumeratorgetmoniker"></a><a name="getmoniker"></a> CEnumerator:: моникер
 
 Анализирует отображаемое имя, чтобы извлечь компонент строки, который можно преобразовать в моникер.
 
@@ -106,7 +106,7 @@ HRESULT GetMoniker(LPMONIKER* ppMoniker,
 
 Стандартное значение HRESULT.
 
-## <a name="cenumeratoropen"></a><a name="open"></a>CEnumerator:: Open
+## <a name="cenumeratoropen"></a><a name="open"></a> CEnumerator:: Open
 
 Привязывает моникер для перечислителя, если он указан, а затем получает набор строк для перечислителя путем вызова [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)).
 

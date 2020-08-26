@@ -6,18 +6,18 @@ helpviewer_keywords:
 - symbols [C++], Win32 predefined
 - Windows API [C++], predefined symbols
 ms.assetid: 45c8e193-ee2a-4024-bfc2-34d1ec9c9239
-ms.openlocfilehash: ae79b4c1a4021b32f631c694b376d2202b345415
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f69dddcb8b6a9a390f80ab4d0112e19c4e8d32e1
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80165929"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835653"
 ---
 # <a name="win32-predefined-symbols"></a>Предопределенные символы Win32
 
 Эти символы определены в файлах заголовков Win32 и поддерживают стандартные функции и действия приложения Windows. Эти символы в основном используются с общими элементами пользовательского интерфейса. При работе с элементами управления в редакторах ресурсов эти символы будут отображаться в [окно свойств](/visualstudio/ide/reference/properties-window) , связанных с общими элементами управления. Например, если на панели инструментов должен отображаться значок приложения, значок будет связан с символом IDI_SMALL в окне **свойств** .
 
-|||
+|Имя|Описание|
 |-|-|
 |IDABORT|элемента Диалоговое окно, кнопка "прервать"|
 |IDC_STATIC|элемента Статический текст в диалоговом окне|

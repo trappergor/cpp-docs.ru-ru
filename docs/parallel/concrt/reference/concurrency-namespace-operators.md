@@ -5,22 +5,35 @@ f1_keywords:
 - concrt/concurrency::operator!=
 - concrt/concurrency:[operator&amp;&amp
 ms.assetid: 8e373f23-fc8e-49f7-82e6-ba0c57b822f8
-ms.openlocfilehash: 6cef9304be17dd39e0f0b020133abd08f07fba7c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 97553276a7c4ff687dd8bea4627f943d5666b2e9
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87194385"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836015"
 ---
 # <a name="concurrency-namespace-operators"></a>Операторы пространства имен concurrency
 
-||||
-|-|-|-|
-|[operator! =](#operator_neq)|[оператор&amp;&amp;](#operator_amp_amp)|[оператор&gt;](#operator_gt)|
-|[оператор&gt;=](#operator_gt_eq)|[оператор&lt;](#operator_lt)|[оператор&lt;=](#operator_lt_eq)|
-|[Оператор = =](#operator_eq_eq)|[оператор||](#operator_lor)| |
+:::row:::
+   :::column span="":::
+      [`operator||`](#operator_lor)\
+      [`operator&&`](#operator_amp_amp)
+   :::column-end:::
+   :::column span="":::
+      [`operator==`](#operator_eq_eq)\
+      [`operator!=`](#operator_neq)
+   :::column-end:::
+   :::column span="":::
+      [`operator<`](#operator_lt)\
+      [`operator<=`](#operator_lt_eq)
+   :::column-end:::
+   :::column span="":::
+      [`operator>`](#operator_gt)\
+      [`operator>=`](#operator_gt_eq)
+   :::column-end:::
+:::row-end:::
 
-## <a name="operator124124-operator"></a><a name="operator_lor"></a>Оператор&#124;&#124; оператора
+## <a name="operator124124-operator"></a><a name="operator_lor"></a> Оператор&#124;&#124; оператора
 
 Создает задачу, которая завершается успешно, если любая из задач, предоставленных в качестве аргументов, завершается успешно.
 
@@ -113,7 +126,7 @@ inline task<void>  operator&&(
 
 Если одна из задач отменена или вызывает исключение, возвращаемая задача будет завершена на раннем этапе, в состоянии Canceled, а исключение, если оно произошло, будет вызываться при вызове метода `get()` или `wait()` для этой задачи.
 
-## <a name="operator-operator"></a><a name="operator_eq_eq"></a>оператор operator = =
+## <a name="operator-operator"></a><a name="operator_eq_eq"></a> оператор operator = =
 
 Проверяет равенство объекта `concurrent_vector` слева от оператора объекту `concurrent_vector` справа от оператора.
 
@@ -151,7 +164,7 @@ inline bool operator== (
 
 Этот метод не является типобезопасным по отношению к другим методам, которые могут изменять любой из параллельных векторов `_A` или `_B` .
 
-## <a name="operator-operator"></a><a name="operator_neq"></a>оператор operator! =
+## <a name="operator-operator"></a><a name="operator_neq"></a> оператор operator! =
 
 Проверяет неравенство объекта `concurrent_vector` слева от оператора объекту `concurrent_vector` справа от оператора.
 
@@ -189,7 +202,7 @@ inline bool operator!= (
 
 Этот метод не является типобезопасным по отношению к другим методам, которые могут изменять любой из параллельных векторов `_A` или `_B` .
 
-## <a name="operatorlt-operator"></a><a name="operator_lt"></a>Оператор &lt; operator
+## <a name="operatorlt-operator"></a><a name="operator_lt"></a> Оператор &lt; operator
 
 Проверяет, меньше ли объект `concurrent_vector` слева от оператора, чем объект `concurrent_vector` справа от оператора.
 
@@ -227,7 +240,7 @@ inline bool operator<(
 
 Этот метод не является типобезопасным по отношению к другим методам, которые могут изменять любой из параллельных векторов `_A` или `_B` .
 
-## <a name="operatorlt-operator"></a><a name="operator_lt_eq"></a>operator &lt; =, оператор
+## <a name="operatorlt-operator"></a><a name="operator_lt_eq"></a> operator &lt; =, оператор
 
 Проверяет, меньше ли объект `concurrent_vector` слева от оператора, чем объект `concurrent_vector` справа от оператора, или равен ему.
 
@@ -265,7 +278,7 @@ inline bool operator<= (
 
 Этот метод не является типобезопасным по отношению к другим методам, которые могут изменять любой из параллельных векторов `_A` или `_B` .
 
-## <a name="operatorgt-operator"></a><a name="operator_gt"></a>Оператор &gt; operator
+## <a name="operatorgt-operator"></a><a name="operator_gt"></a> Оператор &gt; operator
 
 Проверяет больше ли объект `concurrent_vector` слева от оператора, чем объект `concurrent_vector` справа от оператора.
 
@@ -303,7 +316,7 @@ inline bool operator>(
 
 Этот метод не является типобезопасным по отношению к другим методам, которые могут изменять любой из параллельных векторов `_A` или `_B` .
 
-## <a name="operatorgt-operator"></a><a name="operator_gt_eq"></a>operator &gt; =, оператор
+## <a name="operatorgt-operator"></a><a name="operator_gt_eq"></a> operator &gt; =, оператор
 
 Проверяет больше ли объект `concurrent_vector` слева от оператора, чем объект `concurrent_vector` справа от оператора, или равен ему.
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ref attribute
 ms.assetid: 67e82d3e-07d9-4ef8-bf2b-0a4491d12557
-ms.openlocfilehash: 6cf78930b19891832369e9b96c0a761d2752e4a8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 92b3c7b2cddf17a70a949914ef82540457696f20
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232746"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846112"
 ---
 # <a name="ref-c"></a>ref (C++)
 
@@ -45,9 +45,7 @@ __interface IFireTabCtrl
 
 ## <a name="requirements"></a>Требования
 
-### <a name="attribute-context"></a>Контекст атрибута
-
-|||
+| Контекст атрибута | Значение |
 |-|-|
 |**Относится к**|**`typedef`**, параметр интерфейса, метод интерфейса|
 |**REPEATABLE**|Нет|
@@ -56,7 +54,7 @@ __interface IFireTabCtrl
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты typedef, enum, Union и struct](typedef-enum-union-and-struct-attributes.md)<br/>

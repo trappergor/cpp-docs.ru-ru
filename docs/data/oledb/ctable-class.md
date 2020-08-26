@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CTable class
 - Open method
 ms.assetid: f13fdaa3-e198-4557-977d-54b0bbc3454d
-ms.openlocfilehash: 47c9899889bbbf9b09300779691085786db0e088
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a967ef8fa2832afd56442ae4f988ba080d0b2872
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211150"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845644"
 ---
 # <a name="ctable-class"></a>Класс CTable
 
@@ -45,11 +45,11 @@ class CTable :
 
 **Заголовок:** atldbcli.h
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Элементы
 
 ### <a name="methods"></a>Методы
 
-|||
+| Имя | Описание |
 |-|-|
 |[Открыть](#open)|Открывает таблицу.|
 
@@ -57,7 +57,7 @@ class CTable :
 
 Сведения о том, как выполнить команду для доступа к набору строк, см. в разделе [CCommand](../../data/oledb/ccommand-class.md) .
 
-## <a name="ctableopen"></a><a name="open"></a>CTable:: Open
+## <a name="ctableopen"></a><a name="open"></a> CTable:: Open
 
 Открывает таблицу.
 
@@ -91,10 +91,10 @@ HRESULT Open(const CSession& session,
 *сзтабленаме*<br/>
 окне Имя открываемой таблицы, передаваемое как строка ANSI.
 
-*dbid*<br/>
-окне `DBID` таблицы, которую необходимо открыть.
+*DBID*<br/>
+окне `DBID` Открываемой таблицы.
 
-*ппропсет*<br/>
+*pPropSet*<br/>
 окне Указатель на массив структур [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) , содержащий свойства и значения, которые необходимо задать. См. раздел [наборы свойств и группы свойств](/previous-versions/windows/desktop/ms713696(v=vs.85)) в *справочнике по OLE DB программисту* в Windows SDK. Значение по умолчанию NULL указывает на отсутствие свойств.
 
 *улпропсетс*<br/>
@@ -111,4 +111,4 @@ HRESULT Open(const CSession& session,
 ## <a name="see-also"></a>См. также раздел
 
 [Шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Справочник по шаблонам потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

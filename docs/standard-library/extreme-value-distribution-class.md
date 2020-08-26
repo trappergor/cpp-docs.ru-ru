@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::extreme_value_distribution [C++], param_type
 - std::extreme_value_distribution [C++], param_type
 ms.assetid: a0cd8370-0a54-4e26-9388-8b9678fb57da
-ms.openlocfilehash: 865fac1f1452e30b64a0ada9b115186916ff491c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b086638d02afb929d18daad76716a12704585108
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212349"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835900"
 ---
 # <a name="extreme_value_distribution-class"></a>Класс extreme_value_distribution
 
@@ -81,10 +81,8 @@ public:
 
 Шаблон класса описывает распределение, которое создает значения указанного пользователем типа с плавающей запятой или тип **`double`** , если он не указан, распределен в соответствии с экстремальным распределением значений. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
-||||
-|-|-|-|
-|[extreme_value_distribution](#extreme_value_distribution)|`extreme_value_distribution::a`|`extreme_value_distribution::param`|
-|`extreme_value_distribution::operator()`|`extreme_value_distribution::b`|[param_type](#param_type)|
+[extreme_value_distribution](#extreme_value_distribution)\
+[param_type](#param_type)
 
 Функции свойств `a()` и `b()` возвращают соответствующие значения для хранимых параметров распределения `a` и `b`.
 
@@ -181,7 +179,7 @@ Distribution for 10 samples:
 
 **Пространство имен:** std
 
-## <a name="extreme_value_distributionextreme_value_distribution"></a><a name="extreme_value_distribution"></a>extreme_value_distribution:: extreme_value_distribution
+## <a name="extreme_value_distributionextreme_value_distribution"></a><a name="extreme_value_distribution"></a> extreme_value_distribution:: extreme_value_distribution
 
 Формирует распределение.
 
@@ -209,7 +207,7 @@ explicit extreme_value_distribution(const param_type& parm);
 
 Второй конструктор создает объект, хранимые параметры которого инициализируются из *parm*. Вы можете получить и задать текущие параметры существующего распределения, вызвав функцию-член `param()`.
 
-## <a name="extreme_value_distributionparam_type"></a><a name="param_type"></a>extreme_value_distribution::p aram_type
+## <a name="extreme_value_distributionparam_type"></a><a name="param_type"></a> extreme_value_distribution::p aram_type
 
 Сохраняет параметры распределения.
 
