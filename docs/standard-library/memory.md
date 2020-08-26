@@ -7,12 +7,12 @@ f1_keywords:
 - std::<memory>
 helpviewer_keywords:
 - memory header
-ms.openlocfilehash: 57b7db798b4f44650513097137299d53b4e25266
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0e3ce4a4411bd6d4c352802a96c97e93c66491df
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87202965"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836469"
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
 
@@ -28,7 +28,7 @@ ms.locfileid: "87202965"
 
 ### <a name="functions"></a>Функции
 
-|||
+|Имя|Описание|
 |-|-|
 |[AddressOf](../standard-library/memory-functions.md#addressof)|Получает истинный адрес объекта.|
 |[align](../standard-library/memory-functions.md#align)|Возвращает указатель на диапазон заданного размера на основе указанного выравнивания и начального адреса.|
@@ -77,19 +77,19 @@ ms.locfileid: "87202965"
 
 ### <a name="operators"></a>Операторы
 
-|||
+|Имя|Описание|
 |-|-|
 |[operator! =](../standard-library/memory-operators.md#op_neq)|Проверяет на неравенство между объектами распределителя указанного класса.|
 |[Оператор = =](../standard-library/memory-operators.md#op_eq_eq)|Проверяет на равенство объекты распределителя указанного класса.|
 |[Оператор>=](../standard-library/memory-operators.md#op_gt_eq)|Проверяет, является ли один объект распределителя больше или равным второму объекту распределителя указанного класса.|
 |[Оператор<](../standard-library/memory-operators.md#op_lt)|Проверяет, является ли один объект распределителя меньше или равным второму объекту распределителя указанного класса.|
-|[оператор\<=](../standard-library/memory-operators.md#op_gt_eq)|Проверяет, является ли один объект меньше или равным второму объекту указанного класса.|
+|[станции\<=](../standard-library/memory-operators.md#op_gt_eq)|Проверяет, является ли один объект меньше или равным второму объекту указанного класса.|
 |[Оператор>](../standard-library/memory-operators.md#op_gt)|Проверяет, является ли один объект больше второго объекта указанного класса.|
 |[Оператор<<](../standard-library/memory-operators.md#op_lt_lt)|Вставляет `shared_ptr`.|
 
 ### <a name="classes"></a>Классы
 
-|||
+|name|Описание|
 |-|-|
 |[allocator](../standard-library/allocator-class.md)|Шаблон класса описывает объект, который управляет выделением и освобождением памяти для массивов объектов типа **Type**.|
 |[allocator_traits](../standard-library/allocator-traits-class.md)|Описывает объект, определяющий все сведения, необходимые контейнеру с распределителем.|
@@ -104,7 +104,7 @@ ms.locfileid: "87202965"
 
 ### <a name="structures"></a>Структуры
 
-|||
+|Имя|Описание|
 |-|-|
 |[allocator_arg_t](../standard-library/allocator-class.md#allocator_arg_t)||
 |[default_delete](../standard-library/default-delete-struct.md)||
@@ -114,7 +114,7 @@ ms.locfileid: "87202965"
 
 ### <a name="specializations"></a>Специализации
 
-|||
+|Имя|Описание|
 |-|-|
 |[allocator\<void>](../standard-library/allocator-void-class.md)|Специализация распределителя шаблонов класса для типа **`void`** , определяющая только типы элементов, имеющие смысл в этом специализированном контексте.|
 

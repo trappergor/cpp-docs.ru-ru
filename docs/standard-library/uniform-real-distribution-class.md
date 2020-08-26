@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::uniform_real_distribution [C++], param_type
 - std::uniform_real_distribution [C++], param_type
 ms.assetid: 5cf906fd-0319-4984-b21b-98425cd7532d
-ms.openlocfilehash: fc003ebe9301c3648b47c796910d20096e7ef23d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ba2ec419e524ca571120fe82c7cbf63c1a97eaaa
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217367"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839599"
 ---
 # <a name="uniform_real_distribution-class"></a>Класс uniform_real_distribution
 
@@ -78,10 +78,8 @@ public:
 
 Шаблон класса описывает инклюзивное эксклюзивное распределение, которое создает значения заданного пользователем целочисленного типа с плавающей запятой с распределением таким образом, что каждое значение одинаково возможно. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
-||||
-|-|-|-|
-|[uniform_real_distribution](#uniform_real_distribution)|`uniform_real_distribution::a`|`uniform_real_distribution::param`|
-|`uniform_real_distribution::operator()`|`uniform_real_distribution::b`|[param_type](#param_type)|
+[uniform_real_distribution](#uniform_real_distribution)\
+[param_type](#param_type)|
 
 Член свойства `a()` возвращает текущее хранимое минимальное значение распределения, а `b()` возвращает текущее хранимое максимальное значение. Для этого класса распределения эти минимальные и максимальные значения совпадают со значениями, возвращаемыми общими функциями свойств `min()` и `max()` описанными в [\<random>](../standard-library/random.md) разделе.
 
@@ -178,7 +176,7 @@ Distribution for 10 samples:
 
 **Пространство имен:** std
 
-## <a name="uniform_real_distributionuniform_real_distribution"></a><a name="uniform_real_distribution"></a>uniform_real_distribution:: uniform_real_distribution
+## <a name="uniform_real_distributionuniform_real_distribution"></a><a name="uniform_real_distribution"></a> uniform_real_distribution:: uniform_real_distribution
 
 Формирует распределение.
 
@@ -206,7 +204,7 @@ explicit uniform_real_distribution(const param_type& parm);
 
 Второй конструктор создает объект, хранимые параметры которого инициализируются из *parm*. Вы можете получить и задать текущие параметры существующего распределения, вызвав функцию-член `param()`.
 
-## <a name="uniform_real_distributionparam_type"></a><a name="param_type"></a>uniform_real_distribution::p aram_type
+## <a name="uniform_real_distributionparam_type"></a><a name="param_type"></a> uniform_real_distribution::p aram_type
 
 Сохраняет все параметры распределения.
 

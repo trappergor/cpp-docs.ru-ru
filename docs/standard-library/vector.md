@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - vector header
 ms.assetid: c1431ad8-c0b6-4dbb-89c4-5f651e432d7f
-ms.openlocfilehash: 4e9f3e4a35cd772897e326fafedf359062e6128b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7cecff1e5e0014c4f1a4294a5c6ba25c5d38da67
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224530"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840015"
 ---
 # <a name="ltvectorgt"></a>&lt;vector&gt;
 
@@ -93,24 +93,24 @@ void swap (
 
 ### <a name="operators"></a>Операторы
 
-|||
+|Имя|Описание|
 |-|-|
 |[станции! =](../standard-library/vector-operators.md#op_neq)|Проверяет следующее условие: объект вектора слева от оператора не равен объекту вектора справа от оператора.|
 |[Оператор<](../standard-library/vector-operators.md#op_lt)|Проверяет следующее условие: объект вектора слева от оператора меньше, чем объект вектора справа от оператора.|
-|[оператор\<=](../standard-library/vector-operators.md#op_gt_eq)|Проверяет следующее условие: объект вектора слева от оператора меньше или равен объекту вектора справа от оператора.|
+|[станции\<=](../standard-library/vector-operators.md#op_gt_eq)|Проверяет следующее условие: объект вектора слева от оператора меньше или равен объекту вектора справа от оператора.|
 |[Оператор = =](../standard-library/vector-operators.md#op_eq_eq)|Проверяет следующее условие: объект вектора слева от оператора равен объекту вектора справа от оператора.|
 |[Оператор>](../standard-library/vector-operators.md#op_gt)|Проверяет следующее условие: объект вектора слева от оператора больше, чем объект вектора справа от оператора.|
 |[Оператор>=](../standard-library/vector-operators.md#op_gt_eq)|Проверяет следующее условие: объект вектора слева от оператора больше или равен объекту вектора справа от оператора.|
 
 ### <a name="classes"></a>Классы
 
-|||
+|name|Описание|
 |-|-|
 |[Класс Vector](../standard-library/vector-class.md)|Шаблон класса контейнеров последовательностей для хранения элементов заданного типа в линейном порядке и быстрого произвольного доступа к любому элементу.|
 
 ### <a name="specializations"></a>Специализации
 
-|||
+|Имя|Описание|
 |-|-|
 |hash|Возвращает хэш вектора.|
 |[\<bool>класс Vector](../standard-library/vector-bool-class.md)|Полная специализация вектора шаблона класса для элементов типа **`bool`** с распределителем для базового типа, используемого специализацией.|
@@ -121,7 +121,7 @@ void swap (
 
 **Пространство имен:** std
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также раздел
 
 [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)\
 [Безопасность потоков в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

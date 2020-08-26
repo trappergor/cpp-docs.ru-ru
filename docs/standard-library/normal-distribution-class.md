@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::normal_distribution [C++], param_type
 - std::normal_distribution [C++], param_type
 ms.assetid: bf92cdbd-bc72-4d4a-b588-173d748f0d7d
-ms.openlocfilehash: 138011ec4ccf6c010f002d61cdb8ae8b0bac1796
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0fed268b6c3f318b3e308f90e94862fdf969e3fa
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212154"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836404"
 ---
 # <a name="normal_distribution-class"></a>Класс normal_distribution
 
@@ -78,10 +78,8 @@ public:
 
 Шаблон класса описывает распределение, которое создает значения указанного пользователем целочисленного типа или тип **`double`** , если он не указан, распределен в соответствии с нормальным распределением. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
-||||
-|-|-|-|
-|[normal_distribution](#normal_distribution)|`normal_distribution::mean`|`normal_distribution::param`|
-|`normal_distribution::operator()`|`normal_distribution::stddev`|[param_type](#param_type)|
+[normal_distribution](#normal_distribution)\
+[param_type](#param_type)
 
 Функции свойств `mean()` и `stddev()` возвращают значения для хранимых параметров распределения, *означающие* и *StdDev* соответственно.
 
@@ -187,7 +185,7 @@ Distribution for 10 samples:
 
 **Пространство имен:** std
 
-## <a name="normal_distributionnormal_distribution"></a><a name="normal_distribution"></a>normal_distribution:: normal_distribution
+## <a name="normal_distributionnormal_distribution"></a><a name="normal_distribution"></a> normal_distribution:: normal_distribution
 
 Формирует распределение.
 
@@ -215,7 +213,7 @@ explicit normal_distribution(const param_type& parm);
 
 Второй конструктор создает объект, хранимые параметры которого инициализируются из *parm*. Вы можете получить и задать текущие параметры существующего распределения, вызвав функцию-член `param()`.
 
-## <a name="normal_distributionparam_type"></a><a name="param_type"></a>normal_distribution::p aram_type
+## <a name="normal_distributionparam_type"></a><a name="param_type"></a> normal_distribution::p aram_type
 
 Сохраняет параметры распределения.
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCDropDownFrame [MFC], RecalcLayout
 - CMFCDropDownFrame [MFC], SetAutoDestroy
 ms.assetid: 09ff81a9-de00-43ec-9df9-b626f7728c4b
-ms.openlocfilehash: d99dae9d8e7eca96c736a33621f0b544f1962f0f
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 62bab0fbde364406f35edb959abb6e55a9125504
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560898"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840743"
 ---
 # <a name="cmfcdropdownframe-class"></a>Класс Кмфкдропдовнфраме
 
@@ -37,17 +37,15 @@ class CMFCDropDownFrame : public CMiniFrameWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|||
-|-|-|
 |name|Описание|
+|-|-|
 |`CMFCDropDownFrame::CMFCDropDownFrame`|Конструктор по умолчанию.|
 |`CMFCDropDownFrame::~CMFCDropDownFrame`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|||
-|-|-|
 |name|Описание|
+|-|-|
 |[Кмфкдропдовнфраме:: Create](#create)|Создает объект `CMFCDropDownFrame`.|
 |`CMFCDropDownFrame::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|
 |[Кмфкдропдовнфраме:: Жетпарентменубар](#getparentmenubar)|Получает родительскую строку меню раскрывающегося окна.|
@@ -188,7 +186,7 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 
 Если *баутодестрой* имеет значение true, `CMFCDropDownFrame` деструктор уничтожает связанное раскрывающееся окно панели инструментов. Значение по умолчанию — TRUE.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Иерархическая диаграмма](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)<br/>

@@ -87,12 +87,12 @@ helpviewer_keywords:
 - std::vector [C++], size
 - std::vector [C++], swap
 ms.assetid: a3e0a8f8-7565-4fe0-93e4-e4d74ae1b70d
-ms.openlocfilehash: 71b55b4af44a641846ca7b8706bee420887950c5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6cc8378fee72304bb909c3baacc305d446474bfa
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224569"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840041"
 ---
 # <a name="vector-class"></a>vector - класс
 
@@ -127,13 +127,13 @@ class vector
 
 ### <a name="constructors"></a>Конструкторы
 
-|||
+|Имя|Описание|
 |-|-|
 |[уязвимо](#vector)|Создает вектор определенного размера, вектор с элементами определенного значения, вектор с определенным `allocator`, или вектор как копию какого-либо другого вектора.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|||
+|Имя|Описание|
 |-|-|
 |[allocator_type](#allocator_type)|Тип, представляющий класс `allocator` для объекта вектора.|
 |[const_iterator](#const_iterator)|Тип, предоставляющий итератор произвольного доступа, который может считывать **`const`** элемент в векторе.|
@@ -150,7 +150,7 @@ class vector
 
 ### <a name="functions"></a>Функции
 
-|||
+|Имя|Описание|
 |-|-|
 |[assign](#assign)|Удаляет вектор и копирует указанные элементы в пустой вектор.|
 |[at](#at)|Возвращает ссылку на элемент в заданном положении в векторе.|
@@ -184,12 +184,12 @@ class vector
 
 ### <a name="operators"></a>Операторы
 
-|||
+|Имя|Описание|
 |-|-|
 |[оператор&#91;&#93;](#op_at)|Возвращает ссылку на элемент вектора в указанной позиции.|
 |[Оператор =](#op_eq)|Заменяет элементы вектора копией другого вектора.|
 
-## <a name="allocator_type"></a><a name="allocator_type"></a>allocator_type
+## <a name="allocator_type"></a><a name="allocator_type"></a> allocator_type
 
 Тип, представляющий класс распределителя для объекта вектора.
 
@@ -205,7 +205,7 @@ typedef Allocator allocator_type;
 
 Пример использования `allocator_type` см. в разделе [get_allocator](#get_allocator).
 
-## <a name="assign"></a><a name="assign"></a>назначать
+## <a name="assign"></a><a name="assign"></a> назначать
 
 Удаляет вектор и копирует указанные элементы в пустой вектор.
 
@@ -285,7 +285,7 @@ int main()
 }
 ```
 
-## <a name="at"></a><a name="at"></a>в
+## <a name="at"></a><a name="at"></a> в
 
 Возвращает ссылку на элемент в заданном положении в векторе.
 
@@ -336,7 +336,7 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="back"></a><a name="back"></a>Назад
+## <a name="back"></a><a name="back"></a> Назад
 
 Возвращает ссылку на последний элемент вектора.
 
@@ -380,7 +380,7 @@ int main() {
 }
 ```
 
-## <a name="begin"></a><a name="begin"></a>начале
+## <a name="begin"></a><a name="begin"></a> начале
 
 Возвращает итератор произвольного доступа, указывающий на первый элемент в векторе.
 
@@ -443,7 +443,7 @@ The vector c1 contains elements: 1 2
 The vector c1 now contains elements: 20 2
 ```
 
-## <a name="capacity"></a><a name="capacity"></a>ресурсов
+## <a name="capacity"></a><a name="capacity"></a> ресурсов
 
 Возвращает число элементов, которое вектор может содержать без выделения дополнительного пространства.
 
@@ -487,7 +487,7 @@ The length of storage allocated is 1.
 The length of storage allocated is now 2.
 ```
 
-## <a name="cbegin"></a><a name="cbegin"></a>cbegin
+## <a name="cbegin"></a><a name="cbegin"></a> cbegin
 
 Возвращает **`const`** итератор, который обращается к первому элементу в диапазоне.
 
@@ -513,7 +513,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a><a name="cend"></a>cend
+## <a name="cend"></a><a name="cend"></a> cend
 
 Возвращает **`const`** итератор, который обращается к расположению сразу за последним элементом в диапазоне.
 
@@ -541,7 +541,7 @@ auto i2 = Container.cend();
 
 Значение, возвращаемое, `cend` не должно быть разыменовано. Используйте его только для сравнения.
 
-## <a name="clear"></a><a name="clear"></a>открытым
+## <a name="clear"></a><a name="clear"></a> открытым
 
 Очищает элементы вектора.
 
@@ -577,7 +577,7 @@ The size of v1 is 3
 The size of v1 after clearing is 0
 ```
 
-## <a name="const_iterator"></a><a name="const_iterator"></a>const_iterator
+## <a name="const_iterator"></a><a name="const_iterator"></a> const_iterator
 
 Тип, предоставляющий итератор произвольного доступа, который может считывать **`const`** элемент в векторе.
 
@@ -593,7 +593,7 @@ typedef implementation-defined const_iterator;
 
 Пример использования [back](#back) см. в разделе `const_iterator`.
 
-## <a name="const_pointer"></a><a name="const_pointer"></a>const_pointer
+## <a name="const_pointer"></a><a name="const_pointer"></a> const_pointer
 
 Тип, предоставляющий указатель на **`const`** элемент в векторе.
 
@@ -607,7 +607,7 @@ typedef typename Allocator::const_pointer const_pointer;
 
 Для доступа к элементу вектора обычно используется [iterator](#iterator).
 
-## <a name="const_reference"></a><a name="const_reference"></a>const_reference
+## <a name="const_reference"></a><a name="const_reference"></a> const_reference
 
 Тип, предоставляющий ссылку на **`const`** элемент, хранящийся в векторе. Он используется для чтения и выполнения **`const`** операций.
 
@@ -651,7 +651,7 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="const_reverse_iterator"></a><a name="const_reverse_iterator"></a>const_reverse_iterator
+## <a name="const_reverse_iterator"></a><a name="const_reverse_iterator"></a> const_reverse_iterator
 
 Тип, предоставляющий итератор произвольного доступа, который может читать любой **`const`** элемент в векторе.
 
@@ -667,7 +667,7 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 См. пример объявления и использования итератора в разделе [rbegin](#rbegin).
 
-## <a name="crbegin"></a><a name="crbegin"></a>crbegin
+## <a name="crbegin"></a><a name="crbegin"></a> crbegin
 
 Возвращает константный итератор, который указывает на первый элемент в обратном векторе.
 
@@ -716,7 +716,7 @@ The first element of vector is 1.
 The first element of the reversed vector is 2.
 ```
 
-## <a name="crend"></a><a name="crend"></a>crend
+## <a name="crend"></a><a name="crend"></a> crend
 
 Возвращает итератор const, который обращается к месту, следующему за последним элементом в обратном векторе.
 
@@ -821,7 +821,7 @@ The vector c1 contains elements: 1 2
 The vector c1 now contains elements: 20 2
 ```
 
-## <a name="difference_type"></a><a name="difference_type"></a>difference_type
+## <a name="difference_type"></a><a name="difference_type"></a> difference_type
 
 Тип, предоставляющий разницу между двумя итераторами, ссылающимися на элементы в одном и том же векторе.
 
@@ -878,7 +878,7 @@ The number '20' is in c1 collection 2 times.
 The number '30' is in c1 collection 3 times.
 ```
 
-## <a name="emplace"></a><a name="emplace"></a>emplace
+## <a name="emplace"></a><a name="emplace"></a> emplace
 
 Вставляет элемент, созданный на месте, в указанное положение в векторе.
 
@@ -947,7 +947,7 @@ v1 = 10 20 30
 vv1[0] = 10 20 30
 ```
 
-## <a name="emplace_back"></a><a name="emplace_back"></a>emplace_back
+## <a name="emplace_back"></a><a name="emplace_back"></a> emplace_back
 
 Добавляет элемент, созданный на месте, в конец вектора.
 
@@ -977,7 +977,7 @@ int main()
 }
 ```
 
-## <a name="empty"></a><a name="empty"></a>указано
+## <a name="empty"></a><a name="empty"></a> указано
 
 Проверяет, пуст ли вектор.
 
@@ -1015,7 +1015,7 @@ int main( )
 The vector is not empty.
 ```
 
-## <a name="end"></a><a name="end"></a>конце
+## <a name="end"></a><a name="end"></a> конце
 
 Возврат итератора после конца.
 
@@ -1059,7 +1059,7 @@ int main( )
 2
 ```
 
-## <a name="erase"></a><a name="erase"></a>резин
+## <a name="erase"></a><a name="erase"></a> резин
 
 Удаляет элемент или диапазон элементов в векторе из заданных позиций.
 
@@ -1132,7 +1132,7 @@ v1 = 20 30 40 50
 v1 = 20 50
 ```
 
-## <a name="front"></a><a name="front"></a>крышку
+## <a name="front"></a><a name="front"></a> крышку
 
 Возвращает ссылку на первый элемент в векторе.
 
@@ -1178,7 +1178,7 @@ int main( )
 }
 ```
 
-## <a name="get_allocator"></a><a name="get_allocator"></a>get_allocator
+## <a name="get_allocator"></a><a name="get_allocator"></a> get_allocator
 
 Возвращает копию объекта allocator, используемого для создания вектора.
 
@@ -1217,7 +1217,7 @@ int main( )
 }
 ```
 
-## <a name="insert"></a><a name="insert"></a>Вставляет
+## <a name="insert"></a><a name="insert"></a> Вставляет
 
 Вставляет элемент, число элементов или диапазон элементов в заданную позиции в векторе.
 
@@ -1331,7 +1331,7 @@ v1 = 10 50 50 40 50 50 50 50 20 30
 vv1[0] = 10 50 50 40 50 50 50 50 20 30
 ```
 
-## <a name="iterator"></a><a name="iterator"></a>итераци
+## <a name="iterator"></a><a name="iterator"></a> итераци
 
 Тип, предоставляющий итератор произвольного доступа, который может читать или изменять любой элемент в векторе.
 
@@ -1347,7 +1347,7 @@ typedef implementation-defined iterator;
 
 См. пример для [begin](#begin).
 
-## <a name="max_size"></a><a name="max_size"></a>max_size
+## <a name="max_size"></a><a name="max_size"></a> max_size
 
 Возвращает максимальную длину вектора.
 
@@ -1378,7 +1378,7 @@ int main( )
 }
 ```
 
-## <a name="operator"></a><a name="op_at"></a>operator []
+## <a name="operator"></a><a name="op_at"></a> operator []
 
 Возвращает ссылку на элемент вектора в указанной позиции.
 
@@ -1424,7 +1424,7 @@ int main( )
 }
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>Оператор =
+## <a name="operator"></a><a name="op_eq"></a> Оператор =
 
 Заменяет элементы вектора копией другого вектора.
 
@@ -1526,7 +1526,7 @@ int main( )
 44
 ```
 
-## <a name="pop_back"></a><a name="pop_back"></a>pop_back
+## <a name="pop_back"></a><a name="pop_back"></a> pop_back
 
 Удаляет элемент в конце вектора.
 
@@ -1538,7 +1538,7 @@ void pop_back();
 
 Пример кода см. в разделе [vector::push_back()](#push_back).
 
-## <a name="push_back"></a><a name="push_back"></a>push_back
+## <a name="push_back"></a><a name="push_back"></a> push_back
 
 Добавляет элемент в конец вектора.
 
@@ -1593,7 +1593,7 @@ int main()
 }
 ```
 
-## <a name="rbegin"></a><a name="rbegin"></a>rbegin
+## <a name="rbegin"></a><a name="rbegin"></a> rbegin
 
 Возвращает итератор, указывающий на первый элемент в обратном векторе.
 
@@ -1643,7 +1643,7 @@ The first element of vector is 1.
 The first element of the reversed vector is 2.
 ```
 
-## <a name="reference"></a><a name="reference"></a>IsReference
+## <a name="reference"></a><a name="reference"></a> IsReference
 
 Тип, предоставляющий ссылку на элемент, хранящийся в векторе.
 
@@ -1655,7 +1655,7 @@ typedef typename Allocator::reference reference;
 
 Пример использования **ссылки** в классе vector см. в разделе [at](#at).
 
-## <a name="rend"></a><a name="rend"></a>rend
+## <a name="rend"></a><a name="rend"></a> rend
 
 Возвращает итератор, который обращается к месту, следующему за последним элементом в обратном векторе.
 
@@ -1705,7 +1705,7 @@ int main( )
 1
 ```
 
-## <a name="reserve"></a><a name="reserve"></a>предназначен
+## <a name="reserve"></a><a name="reserve"></a> предназначен
 
 Резервирует минимальную длину хранилища для объекта вектора, при необходимости выделяя пространство.
 
@@ -1746,7 +1746,7 @@ Current capacity of v1 = 1
 Current capacity of v1 = 20
 ```
 
-## <a name="resize"></a><a name="resize"></a>изменить размер
+## <a name="resize"></a><a name="resize"></a> изменить размер
 
 Определяет новый размер вектора.
 
@@ -1875,7 +1875,7 @@ int main()
 }
 ```
 
-## <a name="reverse_iterator"></a><a name="reverse_iterator"></a>reverse_iterator
+## <a name="reverse_iterator"></a><a name="reverse_iterator"></a> reverse_iterator
 
 Тип, предоставляющий итератор произвольного доступа, который может читать или изменять любой элемент в обратном векторе.
 
@@ -1891,7 +1891,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 См. пример для [rbegin](#rbegin).
 
-## <a name="shrink_to_fit"></a><a name="shrink_to_fit"></a>shrink_to_fit
+## <a name="shrink_to_fit"></a><a name="shrink_to_fit"></a> shrink_to_fit
 
 Удаляет лишнюю емкость.
 
@@ -1931,7 +1931,7 @@ Current capacity of v1 = 20
 Current capacity of v1 = 1
 ```
 
-## <a name="size"></a><a name="size"></a>изменять
+## <a name="size"></a><a name="size"></a> изменять
 
 Возвращает количество элементов в векторе.
 
@@ -1972,7 +1972,7 @@ Vector length is 1.
 Vector length is now 2.
 ```
 
-## <a name="size_type"></a><a name="size_type"></a>size_type
+## <a name="size_type"></a><a name="size_type"></a> size_type
 
 Тип, считающий количество элементов в векторе.
 
@@ -1984,7 +1984,7 @@ typedef typename Allocator::size_type size_type;
 
 См. пример для [capacity](#capacity).
 
-## <a name="swap"></a><a name="swap"></a>позиции
+## <a name="swap"></a><a name="swap"></a> позиции
 
 Меняет местами элементы двух векторов.
 
@@ -2044,7 +2044,7 @@ The number of elements in v1 = 2
 The number of elements in v2 = 3
 ```
 
-## <a name="value_type"></a><a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a> value_type
 
 Тип, представляющий тип данных, хранящихся в векторе.
 
@@ -2077,7 +2077,7 @@ int main( )
 44
 ```
 
-## <a name="vector"></a><a name="vector"></a>уязвимо
+## <a name="vector"></a><a name="vector"></a> уязвимо
 
 Конструирует вектор. Перегрузки создают вектор определенного размера или с элементами определенного значения. Или, как копия какого-либо другого вектора или его части. Некоторые перегрузки также позволяют указать распределитель для использования.
 

@@ -88,12 +88,12 @@ helpviewer_keywords:
 - std::map [C++], upper_bound
 - std::map [C++], value_comp
 ms.assetid: 7876f4c9-ebb4-4878-af1e-09364c43af0a
-ms.openlocfilehash: 6166c5f1d90ab795cce39eaa1ce22f025f700d81
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: eba66debca3d866dadaba41a54549757ee05b861
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224777"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846450"
 ---
 # <a name="map-class"></a>Класс map
 
@@ -160,13 +160,13 @@ class map;
 
 ### <a name="constructors"></a>Конструкторы
 
-|||
+|Имя|Описание|
 |-|-|
-|[Таблица](#map)|Создание списка определенного размера или с элементами, обладающими указанным значением или указанным `allocator`, либо в качестве копии другого сопоставления.|
+|[map](#map)|Создание списка определенного размера или с элементами, обладающими указанным значением или указанным `allocator`, либо в качестве копии другого сопоставления.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|||
+|Имя|Описание|
 |-|-|
 |[allocator_type](#allocator_type)|Typedef для класса `allocator` для объекта сопоставления.|
 |[const_iterator](#const_iterator)|Typedef для двунаправленного итератора, который может читать **`const`** элемент в сопоставлении.|
@@ -217,12 +217,12 @@ class map;
 
 ### <a name="operators"></a>Операторы
 
-|||
+|Имя|Описание|
 |-|-|
 |[оператор&#91;&#93;](#op_at)|Вставка элемента в сопоставление с заданным значением ключа.|
 |[Оператор =](#op_eq)|Замена элементов сопоставления копией другого сопоставления.|
 
-## <a name="allocator_type"></a><a name="allocator_type"></a>allocator_type
+## <a name="allocator_type"></a><a name="allocator_type"></a> allocator_type
 
 Тип, представляющий класс распределителя для объекта-сопоставления.
 
@@ -234,7 +234,7 @@ typedef Allocator allocator_type;
 
 См. пример для [get_allocator](#get_allocator) в качестве примера использования `allocator_type`.
 
-## <a name="at"></a><a name="at"></a>в
+## <a name="at"></a><a name="at"></a> в
 
 Поиск элемента с заданным значением ключа.
 
@@ -283,7 +283,7 @@ int main()
     }
 ```
 
-## <a name="begin"></a><a name="begin"></a>начале
+## <a name="begin"></a><a name="begin"></a> начале
 
 Возвращает итератор, адресующий первый элемент в сопоставлении.
 
@@ -338,7 +338,7 @@ The first element of m1 is 0
 The first element of m1 is now 1
 ```
 
-## <a name="cbegin"></a><a name="cbegin"></a>cbegin
+## <a name="cbegin"></a><a name="cbegin"></a> cbegin
 
 Возвращает **`const`** итератор, который обращается к расположению сразу за последним элементом в диапазоне.
 
@@ -364,7 +364,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a><a name="cend"></a>cend
+## <a name="cend"></a><a name="cend"></a> cend
 
 Возвращает **`const`** итератор, который обращается к расположению сразу за последним элементом в диапазоне.
 
@@ -392,7 +392,7 @@ auto i2 = Container.cend();
 
 Значение, возвращаемое `cend`, не должно быть подвергнуто удалению ссылки.
 
-## <a name="clear"></a><a name="clear"></a>открытым
+## <a name="clear"></a><a name="clear"></a> открытым
 
 Стирает все элементы в сопоставлении.
 
@@ -436,7 +436,7 @@ The size of the map is initially 2.
 The size of the map after clearing is 0.
 ```
 
-## <a name="const_iterator"></a><a name="const_iterator"></a>const_iterator
+## <a name="const_iterator"></a><a name="const_iterator"></a> const_iterator
 
 Тип, предоставляющий двунаправленный итератор, который может читать **`const`** элемент в сопоставлении.
 
@@ -460,7 +460,7 @@ typedef implementation-defined const_iterator;
 
 См. пример для [begin](#begin) в качестве примера использования `const_iterator`.
 
-## <a name="const_pointer"></a><a name="const_pointer"></a>const_pointer
+## <a name="const_pointer"></a><a name="const_pointer"></a> const_pointer
 
 Тип, предоставляющий указатель на **`const`** элемент в сопоставлении.
 
@@ -474,7 +474,7 @@ typedef typename allocator_type::const_pointer const_pointer;
 
 В большинстве случаев для доступа к элементам в объекте-сопоставлении следует использовать [итератор](#iterator).
 
-## <a name="const_reference"></a><a name="const_reference"></a>const_reference
+## <a name="const_reference"></a><a name="const_reference"></a> const_reference
 
 Тип, предоставляющий ссылку на **`const`** элемент, хранящийся в сопоставлении для чтения и выполнения **`const`** операций.
 
@@ -524,7 +524,7 @@ The key of first element in the map is 1.
 The data value of first element in the map is 10.
 ```
 
-## <a name="const_reverse_iterator"></a><a name="const_reverse_iterator"></a>const_reverse_iterator
+## <a name="const_reverse_iterator"></a><a name="const_reverse_iterator"></a> const_reverse_iterator
 
 Тип, предоставляющий двунаправленный итератор, который может читать любой **`const`** элемент в сопоставлении.
 
@@ -548,7 +548,7 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 См. пример для [rend](#rend) в качестве примера объявления и использования `const_reverse_iterator`.
 
-## <a name="count"></a><a name="count"></a>расчета
+## <a name="count"></a><a name="count"></a> расчета
 
 Возвращает число элементов в объекте map, ключи которых соответствуют ключу, заданному параметром.
 
@@ -569,7 +569,7 @@ size_type count(const Key& key) const;
 
 Функция-член возвращает количество элементов *x* в диапазоне
 
-\[lower_bound (*ключ*), upper_bound (*ключ*))
+\[ lower_bound (*ключ*), upper_bound (*ключ*))
 
 — 0 или 1 для map, который является уникальным ассоциативным контейнером.
 
@@ -616,7 +616,7 @@ The number of elements in m1 with a sort key of 2 is: 1.
 The number of elements in m1 with a sort key of 3 is: 0.
 ```
 
-## <a name="crbegin"></a><a name="crbegin"></a>crbegin
+## <a name="crbegin"></a><a name="crbegin"></a> crbegin
 
 Возвращает константный итератор на первый элемент в обратной карте.
 
@@ -666,7 +666,7 @@ int main( )
 The first element of the reversed map m1 is 3.
 ```
 
-## <a name="crend"></a><a name="crend"></a>crend
+## <a name="crend"></a><a name="crend"></a> crend
 
 Возвращает константный итератор, адресующий положение после последнего элемента в обратном сопоставлении.
 
@@ -719,7 +719,7 @@ int main( )
 The last element of the reversed map m1 is 1.
 ```
 
-## <a name="difference_type"></a><a name="difference_type"></a>difference_type
+## <a name="difference_type"></a><a name="difference_type"></a> difference_type
 
 Целочисленный тип со знаком, который можно использовать для представления количества элементов в сопоставлении в диапазоне между элементами, на которые указывают итераторы.
 
@@ -775,7 +775,7 @@ int main( )
 The number of elements in the map m1 is: 4.
 ```
 
-## <a name="emplace"></a><a name="emplace"></a>emplace
+## <a name="emplace"></a><a name="emplace"></a> emplace
 
 Вставляет в сопоставление элемент, созданный на месте (без выполнения операций копирования или перемещения).
 
@@ -861,7 +861,7 @@ int main()
 }
 ```
 
-## <a name="emplace_hint"></a><a name="emplace_hint"></a>emplace_hint
+## <a name="emplace_hint"></a><a name="emplace_hint"></a> emplace_hint
 
 Вставляет созданный элемент на место (операции копирования или перемещения не выполняются) с указанием о размещении.
 
@@ -938,7 +938,7 @@ int main()
 }
 ```
 
-## <a name="empty"></a><a name="empty"></a>указано
+## <a name="empty"></a><a name="empty"></a> указано
 
 Проверяет, что сопоставление пустое.
 
@@ -983,7 +983,7 @@ The map m1 is not empty.
 The map m2 is empty.
 ```
 
-## <a name="end"></a><a name="end"></a>конце
+## <a name="end"></a><a name="end"></a> конце
 
 Возврат итератора после конца.
 
@@ -999,13 +999,13 @@ iterator end();
 
 ### <a name="remarks"></a>Remarks
 
-`end`используется для проверки того, прошел ли итератор конец его сопоставлений.
+`end` используется для проверки того, прошел ли итератор конец его сопоставлений.
 
 Значение, возвращаемое `end`, не должно быть подвергнуто удалению ссылки.
 
 Пример кода см. в [map::find](#find).
 
-## <a name="equal_range"></a><a name="equal_range"></a>equal_range
+## <a name="equal_range"></a><a name="equal_range"></a> equal_range
 
 Возвращает пару итераторов, представляющих [lower_bound](#lower_bound) ключа и [upper_bound](#upper_bound) ключа.
 
@@ -1084,7 +1084,7 @@ matching the 2nd element of the pair returned by equal_range( 2 ).
 The map m1 doesn't have an element with a key less than 40.
 ```
 
-## <a name="erase"></a><a name="erase"></a>резин
+## <a name="erase"></a><a name="erase"></a> резин
 
 Удаляет элемент или диапазон элементов из сопоставления из указанной позиции или удаляет элементы, которые соответствуют указанному ключу.
 
@@ -1200,7 +1200,7 @@ int main()
 }
 ```
 
-## <a name="find"></a><a name="find"></a>Найдено
+## <a name="find"></a><a name="find"></a> Найдено
 
 Возвращает итератор, ссылающийся на элемент в карте, ключ которого эквивалентен заданному ключу.
 
@@ -1287,7 +1287,7 @@ int main()
 }
 ```
 
-## <a name="get_allocator"></a><a name="get_allocator"></a>get_allocator
+## <a name="get_allocator"></a><a name="get_allocator"></a> get_allocator
 
 Возвращает копию объекта-распределителя, использованного для создания сопоставления.
 
@@ -1357,7 +1357,7 @@ int main( )
 }
 ```
 
-## <a name="insert"></a><a name="insert"></a>Вставляет
+## <a name="insert"></a><a name="insert"></a> Вставляет
 
 Вставляет элемент или диапазон элементов в сопоставление.
 
@@ -1538,7 +1538,7 @@ int main()
 }
 ```
 
-## <a name="iterator"></a><a name="iterator"></a>итераци
+## <a name="iterator"></a><a name="iterator"></a> итераци
 
 Тип, предоставляющий двунаправленный итератор, который может считывать или изменять любой элемент в сопоставлении.
 
@@ -1558,7 +1558,7 @@ typedef implementation-defined iterator;
 
 См. пример для [Begin](#begin) в качестве примера объявления и использования `iterator` .
 
-## <a name="key_comp"></a><a name="key_comp"></a>key_comp
+## <a name="key_comp"></a><a name="key_comp"></a> key_comp
 
 Извлекает копию объекта сравнения, использованного для упорядочивания ключей в сопоставлении.
 
@@ -1629,7 +1629,7 @@ kc1( 2,3 ) returns value of true, where kc1 is the function object of m1.
 kc2( 2,3 ) returns value of false, where kc2 is the function object of m2.
 ```
 
-## <a name="key_compare"></a><a name="key_compare"></a>key_compare
+## <a name="key_compare"></a><a name="key_compare"></a> key_compare
 
 Тип, предоставляющий объект функции, который может сравнить два ключа сортировки для определения относительного порядка двух элементов в схеме.
 
@@ -1639,7 +1639,7 @@ typedef Traits key_compare;
 
 ### <a name="remarks"></a>Remarks
 
-`key_compare`является синонимом для *характеристик*параметра шаблона.
+`key_compare` является синонимом для *характеристик*параметра шаблона.
 
 Дополнительные сведения о *характеристиках* см. в разделе о [классе Map](../standard-library/map-class.md) .
 
@@ -1647,7 +1647,7 @@ typedef Traits key_compare;
 
 См. пример для [key_comp](#key_comp) в качестве примера объявления и использования `key_compare`.
 
-## <a name="key_type"></a><a name="key_type"></a>key_type
+## <a name="key_type"></a><a name="key_type"></a> key_type
 
 Тип, который описывает ключ сортировки, хранящийся в каждом элементе сопоставления.
 
@@ -1657,7 +1657,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>Remarks
 
-`key_type`является синонимом для *ключа*параметра шаблона.
+`key_type` является синонимом для *ключа*параметра шаблона.
 
 Дополнительные сведения о *ключе*см. в разделе "Примечания" статьи о [классе Map](../standard-library/map-class.md) .
 
@@ -1665,7 +1665,7 @@ typedef Key key_type;
 
 См. пример для [value_type](#value_type) в качестве примера объявления и использования `key_type`.
 
-## <a name="lower_bound"></a><a name="lower_bound"></a>lower_bound
+## <a name="lower_bound"></a><a name="lower_bound"></a> lower_bound
 
 Возвращает итератор, указывающий на первый элемент в сопоставлении с ключом, значение которого больше указанного ключа или равно ему.
 
@@ -1736,7 +1736,7 @@ The map m1 doesn't have an element with a key of 4.
 The element of m1 with a key matching that of the last element is: 30.
 ```
 
-## <a name="map"></a><a name="map"></a>Таблица
+## <a name="map"></a><a name="map"></a> Таблица
 
 Создает сопоставление, которое является пустым или копией части или целого другого сопоставления.
 
@@ -1941,7 +1941,7 @@ int main()
 }
 ```
 
-## <a name="mapped_type"></a><a name="mapped_type"></a>mapped_type
+## <a name="mapped_type"></a><a name="mapped_type"></a> mapped_type
 
 Тип, который представляет данные, хранящиеся в сопоставлении.
 
@@ -1959,7 +1959,7 @@ typedef Type mapped_type;
 
 См. пример для [value_type](#value_type) в качестве примера объявления и использования `mapped_type`.
 
-## <a name="max_size"></a><a name="max_size"></a>max_size
+## <a name="max_size"></a><a name="max_size"></a> max_size
 
 Возврат максимальной длины сопоставления.
 
@@ -1992,7 +1992,7 @@ int main( )
 }
 ```
 
-## <a name="operator"></a><a name="op_at"></a>operator []
+## <a name="operator"></a><a name="op_at"></a> operator []
 
 Вставка элемента в сопоставление с заданным значением ключа.
 
@@ -2015,7 +2015,7 @@ Type& operator[](Key&& key);
 
 Если значение ключа аргумента не найдено, он вставляется вместе со значением по умолчанию для такого типа данных.
 
-`operator[]`может использоваться для вставки элементов в карту `m` с помощью `m[key] = DataValue;` WHERE, где `DataValue` — это значение `mapped_type` элемента с ключевым значением *Key*.
+`operator[]` может использоваться для вставки элементов в карту `m` с помощью `m[key] = DataValue;` WHERE, где `DataValue` — это значение `mapped_type` элемента с ключевым значением *Key*.
 
 При использовании `operator[]` для вставки элементов возвращаемая ссылка не отображает, меняет ли вставка уже существующий элемент или создает новый. Функции-члены [find](#find) и [insert](#insert) можно использовать для определения наличия элемента с указанным ключом перед вставкой.
 
@@ -2090,7 +2090,7 @@ c2[move(str)] == 0
 c2["abc"] == 1
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>Оператор =
+## <a name="operator"></a><a name="op_eq"></a> Оператор =
 
 Замена элементов сопоставления копией другого сопоставления.
 
@@ -2159,7 +2159,7 @@ typedef typename allocator_type::pointer pointer;
 
 В большинстве случаев для доступа к элементам в объекте-сопоставлении следует использовать [итератор](#iterator).
 
-## <a name="rbegin"></a><a name="rbegin"></a>rbegin
+## <a name="rbegin"></a><a name="rbegin"></a> rbegin
 
 Возвращает итератор, адресующий первый элемент в обратном сопоставлении.
 
@@ -2239,7 +2239,7 @@ The reversed map is: 3 2 1 .
 After the erasure, the first element in the reversed map is 2.
 ```
 
-## <a name="reference"></a><a name="reference"></a>IsReference
+## <a name="reference"></a><a name="reference"></a> IsReference
 
 Тип, предоставляющий ссылку на элемент, хранящийся в сопоставлении.
 
@@ -2296,7 +2296,7 @@ The data value of first element in the map is 10.
 The modified data value of first element is 15.
 ```
 
-## <a name="rend"></a><a name="rend"></a>rend
+## <a name="rend"></a><a name="rend"></a> rend
 
 Возвращает итератор, адресующий положение после последнего элемента в обратном сопоставлении.
 
@@ -2380,7 +2380,7 @@ The reversed map is: 3 2 1 .
 After the erasure, the last element in the reversed map is 2.
 ```
 
-## <a name="reverse_iterator"></a><a name="reverse_iterator"></a>reverse_iterator
+## <a name="reverse_iterator"></a><a name="reverse_iterator"></a> reverse_iterator
 
 Тип, предоставляющий двунаправленный итератор, который может читать или изменять элементы в обратном сопоставлении.
 
@@ -2402,7 +2402,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 См. пример для [rbegin](#rbegin) в качестве примера объявления и использования `reverse_iterator`.
 
-## <a name="size"></a><a name="size"></a>изменять
+## <a name="size"></a><a name="size"></a> изменять
 
 Возврат количества элементов в сопоставлении.
 
@@ -2446,7 +2446,7 @@ The map length is 1.
 The map length is now 2.
 ```
 
-## <a name="size_type"></a><a name="size_type"></a>size_type
+## <a name="size_type"></a><a name="size_type"></a> size_type
 
 Беззнаковый целочисленный тип, который может представлять количество элементов в сопоставлении.
 
@@ -2458,7 +2458,7 @@ typedef typename allocator_type::size_type size_type;
 
 См. пример объявления и использования `size_type` в разделе [size](#size).
 
-## <a name="swap"></a><a name="swap"></a>позиции
+## <a name="swap"></a><a name="swap"></a> позиции
 
 Обмен элементами между двумя сопоставлениями.
 
@@ -2528,7 +2528,7 @@ After swapping with m2, map m1 is: 100 200.
 After swapping with m3, map m1 is: 300.
 ```
 
-## <a name="upper_bound"></a><a name="upper_bound"></a>upper_bound
+## <a name="upper_bound"></a><a name="upper_bound"></a> upper_bound
 
 Возвращает итератор, указывающий на первый элемент в сопоставлении с ключом, значение которого равно указанному ключу или больше его.
 
@@ -2600,7 +2600,7 @@ The 1st element of m1 with a key greater than
 that of the initial element of m1 is: 20.
 ```
 
-## <a name="value_comp"></a><a name="value_comp"></a>value_comp
+## <a name="value_comp"></a><a name="value_comp"></a> value_comp
 
 Функция-член возвращает объект-функцию, которая определяет порядок элементов в сопоставлении путем сравнения значений их ключей.
 
@@ -2668,7 +2668,7 @@ The element ( 1,10 ) precedes the element ( 2,5 ).
 The element ( 2,5 ) does not precede the element ( 1,10 ).
 ```
 
-## <a name="value_type"></a><a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a> value_type
 
 Тип объекта, хранящегося в качестве элемента в сопоставлении.
 

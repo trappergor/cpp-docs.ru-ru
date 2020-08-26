@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::error_category::message
 - std::error_category::name
 ms.assetid: e0a71e14-852d-4905-acd6-5f8ed426706d
-ms.openlocfilehash: ced6046b93a8d5140118e1e9de848df13a8c29c4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 218596ff5b81e99f4787efe2582fdc2752533cec
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224881"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840171"
 ---
 # <a name="error_category-class"></a>Класс error_category
 
@@ -45,13 +45,13 @@ error_category(const error_category&) = delete
 
 ### <a name="typedefs"></a>Определения типов
 
-|||
+|Имя|Описание|
 |-|-|
 |[value_type](#value_type)|Тип, представляющий сохраненное значение кода ошибки.|
 
 ### <a name="functions"></a>Функции
 
-|||
+|Имя|Описание|
 |-|-|
 |[default_error_condition](#default_error_condition)|Сохраняет значение кода ошибки для объекта условия ошибки.|
 |[друг](#equivalent)|Возвращает значение, указывающее, эквивалентны ли объекты ошибок.|
@@ -62,14 +62,14 @@ error_category(const error_category&) = delete
 
 ### <a name="operators"></a>Операторы
 
-|||
+|Имя|Описание|
 |-|-|
-|[Оператор =](#op_as)||
+|[Оператор =](#op_as)|Оператор присвоения.|
 |[Оператор = =](#op_eq_eq)|Проверяет равенство между объектами `error_category`.|
 |[operator! =](#op_neq)|Проверяет неравенство между объектами `error_category`.|
 |[Оператор<](#op_lt)|Проверяет, меньше ли объект [error_category](../standard-library/error-category-class.md) переданного для сравнения объекта `error_category`.|
 
-## <a name="default_error_condition"></a><a name="default_error_condition"></a>default_error_condition
+## <a name="default_error_condition"></a><a name="default_error_condition"></a> default_error_condition
 
 Сохраняет значение кода ошибки для объекта условия ошибки.
 
@@ -113,7 +113,7 @@ virtual bool equivalent(const error_code& _Code,
 
 #### <a name="return-value"></a>Возвращаемое значение
 
-**`true`**, если категория и значение равны; в противном случае — **`false`** .
+**`true`** , если категория и значение равны; в противном случае — **`false`** .
 
 #### <a name="remarks"></a>Remarks
 
@@ -121,13 +121,13 @@ virtual bool equivalent(const error_code& _Code,
 
 Вторая функция-член возвращает значение `*this == _Code.category() && _Code.value() == _Errval`.
 
-### <a name="generic_category"></a><a name="generic"></a>generic_category
+### <a name="generic_category"></a><a name="generic"></a> generic_category
 
 ```cpp
 const error_category& generic_category();
 ```
 
-### <a name="message"></a><a name="message"></a>Сообщение
+### <a name="message"></a><a name="message"></a> Сообщение
 
 Возвращает имя указанного кода ошибки.
 
@@ -158,13 +158,13 @@ virtual const char *name() const = 0;
 
 Возвращает имя категории как строку байтов, заканчивающуюся нулем.
 
-### <a name="operator"></a><a name="op_as"></a>Оператор =
+### <a name="operator"></a><a name="op_as"></a> Оператор =
 
 ```cpp
 error_category& operator=(const error_category&) = delete;
 ```
 
-### <a name="operator"></a><a name="op_eq_eq"></a>Оператор = =
+### <a name="operator"></a><a name="op_eq_eq"></a> Оператор = =
 
 Проверяет равенство между объектами `error_category`.
 
@@ -185,7 +185,7 @@ bool operator==(const error_category& right) const;
 
 Этот оператор-член возвращает `this == &right`.
 
-### <a name="operator"></a><a name="op_neq"></a>operator! =
+### <a name="operator"></a><a name="op_neq"></a> operator! =
 
 Проверяет неравенство между объектами `error_category`.
 
@@ -206,7 +206,7 @@ bool operator!=(const error_category& right) const;
 
 Оператор-член возвращает `(!*this == right)`.
 
-### <a name="operatorlt"></a><a name="op_lt"></a>станции&lt;
+### <a name="operatorlt"></a><a name="op_lt"></a> станции&lt;
 
 Проверяет, меньше ли объект [error_category](../standard-library/error-category-class.md) переданного для сравнения объекта `error_category`.
 
@@ -227,13 +227,13 @@ bool operator<(const error_category& right) const;
 
 Оператор-член возвращает `this < &right`.
 
-### <a name="system_category"></a><a name="system"></a>system_category
+### <a name="system_category"></a><a name="system"></a> system_category
 
 ```cpp
 const error_category& system_category();
 ```
 
-### <a name="value_type"></a><a name="value_type"></a>value_type
+### <a name="value_type"></a><a name="value_type"></a> value_type
 
 Тип, представляющий сохраненное значение кода ошибки.
 

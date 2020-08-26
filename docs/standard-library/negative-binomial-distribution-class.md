@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::negative_binomial_distribution [C++], param_type
 - std::negative_binomial_distribution [C++], param_type
 ms.assetid: 7f5f0967-7fdd-4578-99d4-88f292b4fe9c
-ms.openlocfilehash: 5168bd054d045f624a970b177113203179e1fb8a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fd5153a8eb0652aed7d963fb1dbdb1277e4f6718
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212206"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836456"
 ---
 # <a name="negative_binomial_distribution-class"></a>Класс negative_binomial_distribution
 
@@ -78,10 +78,8 @@ public:
 
 Шаблон класса описывает распределение, которое создает значения указанного пользователем целочисленного типа или тип **`int`** , если он не указан, распределен в соответствии с дискретной функцией вероятности неравномерного распределения. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
-||||
-|-|-|-|
-|[negative_binomial_distribution](#negative_binomial_distribution)|`negative_binomial_distribution::k`|`negative_binomial_distribution::param`|
-|`negative_binomial_distribution::operator()`|`negative_binomial_distribution::p`|[param_type](#param_type)|
+[negative_binomial_distribution](#negative_binomial_distribution)\
+[param_type](#param_type)
 
 Элементы свойств `k()` и `p()` возвращают текущие сохраненные значения параметров распределения *k* и *p* соответственно.
 
@@ -221,7 +219,7 @@ Histogram for 100 samples:
 
 **Пространство имен:** std
 
-## <a name="negative_binomial_distributionnegative_binomial_distribution"></a><a name="negative_binomial_distribution"></a>negative_binomial_distribution:: negative_binomial_distribution
+## <a name="negative_binomial_distributionnegative_binomial_distribution"></a><a name="negative_binomial_distribution"></a> negative_binomial_distribution:: negative_binomial_distribution
 
 Формирует распределение.
 
@@ -249,7 +247,7 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 Второй конструктор создает объект, хранимые параметры которого инициализируются из *parm*. Вы можете получить и задать текущие параметры существующего распределения, вызвав функцию-член `param()`.
 
-## <a name="negative_binomial_distributionparam_type"></a><a name="param_type"></a>negative_binomial_distribution::p aram_type
+## <a name="negative_binomial_distributionparam_type"></a><a name="param_type"></a> negative_binomial_distribution::p aram_type
 
 Сохраняет параметры распределения.
 

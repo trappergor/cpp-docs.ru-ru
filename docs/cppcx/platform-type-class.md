@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Type Class
 ms.assetid: d6b03f1e-b240-49b9-a08e-53a460030475
-ms.openlocfilehash: 2c73967d287ade86e2657af70592845d2cc2085e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f94e1b37cf198f92d49efc793753892c1b138d69
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87185038"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846567"
 ---
 # <a name="platformtype-class"></a>Класс Platform::Type
 
@@ -33,23 +33,23 @@ public ref class Platform::Type :
 
 ## <a name="public-methods"></a>Открытые методы
 
-|||
-|-|-|
-|[Метод Type:: GetTypeCode](#gettypecode)|Возвращает значение [Перечисление Platform::TypeCode](../cppcx/platform-typecode-enumeration.md) для объекта.|
-|[Метод Type:: ToString](#tostring)|Возвращает имя типа, как указано в его метаданных.|
+| Имя | Описание |
+|--|--|
+| [Метод Type:: GetTypeCode](#gettypecode) | Возвращает значение [Перечисление Platform::TypeCode](../cppcx/platform-typecode-enumeration.md) для объекта. |
+| [Метод Type:: ToString](#tostring) | Возвращает имя типа, как указано в его метаданных. |
 
 ## <a name="public-properties"></a>Открытые свойства
 
-|||
-|-|-|
-|[Тип:: FullName](#fullname)|Возвращает [Класс Platform::String](../cppcx/platform-string-class.md)^, который представляет полное имя типа и использует . (точка) как разделитель, а не:: (двойное двоеточие), например `MyNamespace.MyClass` .|
+| Имя | Описание |
+|--|--|
+| [Тип:: FullName](#fullname) | Возвращает [Класс Platform::String](../cppcx/platform-string-class.md)^, который представляет полное имя типа и использует . (точка) как разделитель, а не:: (двойное двоеточие), например `MyNamespace.MyClass` . |
 
 ## <a name="conversion-operators"></a>Операторы преобразования
 
-|||
-|-|-|
-|[Тип оператора ^](../cppcx/operator-type-hat.md)|Обеспечивает преобразование `Windows::UI::Xaml::Interop::TypeName` в `Platform::Type`.|
-|[оператор Windows::UI::Xaml::Interop::TypeName](../cppcx/operator-windows-ui-xaml-interop-typename.md)|Обеспечивает преобразование `Platform::Type` в `Windows::UI::Xaml::Interop::TypeName`.|
+| Имя | Описание |
+|--|--|
+| [Тип оператора ^](../cppcx/operator-type-hat.md) | Обеспечивает преобразование `Windows::UI::Xaml::Interop::TypeName` в `Platform::Type`. |
+| [оператор Windows::UI::Xaml::Interop::TypeName](../cppcx/operator-windows-ui-xaml-interop-typename.md) | Обеспечивает преобразование `Platform::Type` в `Windows::UI::Xaml::Interop::TypeName`. |
 
 ### <a name="requirements"></a>Требования
 
@@ -73,7 +73,7 @@ String^ FullName();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Имя типа данных.
+Имя типа.
 
 ### <a name="example"></a>Пример
 
@@ -106,7 +106,7 @@ Platform::TypeCode GetTypeCode();
 
 Эквивалентом метода члена GetTypeCode () является **`typeid`** свойство.
 
-## <a name="typetostring-method"></a><a name="tostring"></a>Метод Type:: ToString
+## <a name="typetostring-method"></a><a name="tostring"></a> Метод Type:: ToString
 
 Возвращает имя типа.
 

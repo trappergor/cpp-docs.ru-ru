@@ -28,12 +28,12 @@ helpviewer_keywords:
 - ranges, message map
 - message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
-ms.openlocfilehash: e0980a5c00459b9f166296b7436d013bb8a42319
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 33b5d2eaefa11f9ccf6459aa05b4e24138731e80
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231784"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840275"
 ---
 # <a name="message-map-macros-mfc"></a>Макросы схемы сообщений (MFC)
 
@@ -41,7 +41,7 @@ ms.locfileid: "87231784"
 
 ### <a name="message-map-declaration-and-demarcation-macros"></a>Объявление схемы сообщений и макросы разделительной
 
-|||
+|Имя|Описание|
 |-|-|
 |[DECLARE_MESSAGE_MAP](#declare_message_map)|Объявляет, что схема сообщений будет использоваться в классе для преобразования сообщений в функции (необходимо использовать в объявлении класса).|
 |[BEGIN_MESSAGE_MAP](#begin_message_map)|Начинает определение схемы сообщения (необходимо использовать в реализации класса).|
@@ -50,7 +50,7 @@ ms.locfileid: "87231784"
 
 ### <a name="message-mapping-macros"></a>Макросы сопоставления сообщений
 
-|||
+|Имя|Описание|
 |-|-|
 |[ON_COMMAND](#on_command)|Указывает, какая функция будет выполнять обработку указанного сообщения команды.|
 |[ON_COMMAND_EX](#on_command_ex)|Указывает, какая функция будет выполнять обработку указанного сообщения команды.|
@@ -64,7 +64,7 @@ ms.locfileid: "87231784"
 
 ### <a name="message-map-range-macros"></a>Макросы диапазона схемы сообщения
 
-|||
+|Имя|Описание|
 |-|-|
 |[ON_COMMAND_RANGE](#on_command_range)|Указывает, какая функция будет поддерживать диапазон идентификаторов команд, указанных в первых двух параметрах макроса.|
 |[ON_UPDATE_COMMAND_UI_RANGE](#on_update_command_ui_range)|Указывает, какой обработчик обновлений будет выполнять в макросе диапазон идентификаторов команд, указанный в первых двух параметрах.|
@@ -72,7 +72,7 @@ ms.locfileid: "87231784"
 
 Дополнительные сведения о схемах сообщений, объявлениях и макросах разделительной, а также о макросах сопоставления сообщений см. в разделах [схемы сообщений](../../mfc/reference/message-maps-mfc.md) и [Обработка сообщений и сопоставление](../../mfc/message-handling-and-mapping.md). Дополнительные сведения о диапазонах карт сообщений см. в разделе [обработчики для диапазонов карт сообщений](../../mfc/handlers-for-message-map-ranges.md).
 
-## <a name="begin_message_map"></a><a name="begin_message_map"></a>BEGIN_MESSAGE_MAP
+## <a name="begin_message_map"></a><a name="begin_message_map"></a> BEGIN_MESSAGE_MAP
 
 Начинает определение схемы сообщений.
 
@@ -108,7 +108,7 @@ END_MESSAGE_MAP()
 
 **Заголовок:** afxwin.h
 
-## <a name="begin_template_message_map"></a><a name="begin_template_message_map"></a>BEGIN_TEMPLATE_MESSAGE_MAP
+## <a name="begin_template_message_map"></a><a name="begin_template_message_map"></a> BEGIN_TEMPLATE_MESSAGE_MAP
 
 Начинает определение схемы сообщений для типа класса, содержащего один аргумент шаблона.
 
@@ -141,7 +141,7 @@ BEGIN_TEMPLATE_MESSAGE_MAP( theClass, type_name, baseClass )
 
 **Заголовок:** afxwin.h
 
-## <a name="declare_message_map"></a><a name="declare_message_map"></a>DECLARE_MESSAGE_MAP
+## <a name="declare_message_map"></a><a name="declare_message_map"></a> DECLARE_MESSAGE_MAP
 
 Объявляет, что класс определяет схему сообщения. Каждый `CCmdTarget` производный класс в программе должен предоставить схему сообщений для работы с сообщениями.
 
@@ -174,7 +174,7 @@ class CMainFrame : public CMDIFrameWnd
 
 **Заголовок:** afxwin.h
 
-## <a name="end_message_map"></a><a name="end_message_map"></a>END_MESSAGE_MAP
+## <a name="end_message_map"></a><a name="end_message_map"></a> END_MESSAGE_MAP
 
 Завершает определение схемы сообщений.
 
@@ -192,7 +192,7 @@ END_MESSAGE_MAP( )
 
 **Заголовок:** afxwin.h
 
-## <a name="on_command"></a><a name="on_command"></a>ON_COMMAND
+## <a name="on_command"></a><a name="on_command"></a> ON_COMMAND
 
 Этот макрос сопоставляет командное сообщение с функцией-членом.
 
@@ -230,7 +230,7 @@ END_MESSAGE_MAP()
 
 **Заголовок:** afxmsg_. h
 
-## <a name="on_command_ex"></a><a name="on_command_ex"></a>ON_COMMAND_EX
+## <a name="on_command_ex"></a><a name="on_command_ex"></a> ON_COMMAND_EX
 
 Расширенная функция-член обработчика команд.
 
@@ -258,7 +258,7 @@ ON_COMMAND_EX(commandId, memberFxn);
 
 Заголовочный файл: afxmsg_. h
 
-## <a name="on_control"></a><a name="on_control"></a>ON_CONTROL
+## <a name="on_control"></a><a name="on_control"></a> ON_CONTROL
 
 Указывает, какая функция будет выполнять обработку сообщения уведомления пользовательского элемента управления.
 
@@ -291,7 +291,7 @@ ON_CONTROL( wNotifyCode, commandId, memberFxn )
 
 **Заголовок:** afxmsg_. h
 
-## <a name="on_message"></a><a name="on_message"></a>ON_MESSAGE
+## <a name="on_message"></a><a name="on_message"></a> ON_MESSAGE
 
 Указывает, какая функция будет выполнять обработку определяемого пользователем сообщения.
 
@@ -349,7 +349,7 @@ LRESULT CMyWnd2::OnMyMessage(WPARAM wParam, LPARAM lParam)
 
 **Заголовок:** afxmsg_. h
 
-## <a name="on_olecmd"></a><a name="on_olecmd"></a>ON_OLECMD
+## <a name="on_olecmd"></a><a name="on_olecmd"></a> ON_OLECMD
 
 Маршрутизирует команды через интерфейс диспетчеризации команд `IOleCommandTarget` .
 
@@ -372,9 +372,9 @@ ON_OLECMD( pguid, olecmdid, commandId )
 
 ### <a name="remarks"></a>Remarks
 
-`IOleCommandTarget`позволяет контейнеру получать команды, которые происходят в пользовательском интерфейсе DocObject, и позволяет контейнеру отправлять одни и те же команды (такие как New, Open, SaveAs и Print в меню файл, а также копировать, вставлять, отменять и т. д. в меню Правка) в DocObject.
+`IOleCommandTarget` позволяет контейнеру получать команды, которые происходят в пользовательском интерфейсе DocObject, и позволяет контейнеру отправлять одни и те же команды (такие как New, Open, SaveAs и Print в меню файл, а также копировать, вставлять, отменять и т. д. в меню Правка) в DocObject.
 
-`IOleCommandTarget`проще, чем OLE Automation `IDispatch` . `IOleCommandTarget`полностью опирается на стандартный набор команд, которые редко имеют аргументы, и сведения о типе не участвуют (безопасность типов также уменьшается для аргументов команды). Если нужно отправить команды с аргументами, используйте [колесервердок:: онексеколекмд](coleserverdoc-class.md#onexecolecmd).
+`IOleCommandTarget` проще, чем OLE Automation `IDispatch` . `IOleCommandTarget` полностью опирается на стандартный набор команд, которые редко имеют аргументы, и сведения о типе не участвуют (безопасность типов также уменьшается для аргументов команды). Если нужно отправить команды с аргументами, используйте [колесервердок:: онексеколекмд](coleserverdoc-class.md#onexecolecmd).
 
 `IOleCommandTarget`Стандартные команды меню реализованы в MFC в следующих макросах:
 
@@ -478,7 +478,7 @@ ON_OLECMD( pguid, olecmdid, commandId )
 
 **Заголовок:** афксдокоб. h
 
-## <a name="on_registered_message"></a><a name="on_registered_message"></a>ON_REGISTERED_MESSAGE
+## <a name="on_registered_message"></a><a name="on_registered_message"></a> ON_REGISTERED_MESSAGE
 
 Функция Windows `RegisterWindowMessage` используется для определения нового сообщения окна, которое гарантированно уникально в пределах всей системы.
 
@@ -516,7 +516,7 @@ END_MESSAGE_MAP()
 
 **Заголовок:** afxmsg_. h
 
-## <a name="on_registered_thread_message"></a><a name="on_registered_thread_message"></a>ON_REGISTERED_THREAD_MESSAGE
+## <a name="on_registered_thread_message"></a><a name="on_registered_thread_message"></a> ON_REGISTERED_THREAD_MESSAGE
 
 Указывает, какая функция будет выполнять обработку сообщения, зарегистрированного функцией Windows Регистервиндовмессаже.
 
@@ -542,7 +542,7 @@ ON_REGISTERED_THREAD_MESSAGE(nMessageVariable, memberFxn )
 
 **Заголовок:** afxmsg_. h
 
-## <a name="on_thread_message"></a><a name="on_thread_message"></a>ON_THREAD_MESSAGE
+## <a name="on_thread_message"></a><a name="on_thread_message"></a> ON_THREAD_MESSAGE
 
 Указывает, какая функция будет выполнять обработку определяемого пользователем сообщения.
 
@@ -568,7 +568,7 @@ ON_THREAD_MESSAGE необходимо использовать вместо ON_
 
 **Заголовок:** афксоле. h
 
-## <a name="on_update_command_ui"></a><a name="on_update_command_ui"></a>ON_UPDATE_COMMAND_UI
+## <a name="on_update_command_ui"></a><a name="on_update_command_ui"></a> ON_UPDATE_COMMAND_UI
 
 Этот макрос указывает, какая функция будет управлять сообщением команды обновления пользовательского интерфейса.
 
@@ -596,7 +596,7 @@ ON_UPDATE_COMMAND_UI( messageId, memberFxn )
 
 **Заголовок:** афксоле. h
 
-## <a name="on_command_range"></a><a name="on_command_range"></a>ON_COMMAND_RANGE
+## <a name="on_command_range"></a><a name="on_command_range"></a> ON_COMMAND_RANGE
 
 Используйте этот макрос для преобразования непрерывного диапазона идентификаторов команд в одну функцию обработчика сообщений.
 
@@ -651,7 +651,7 @@ void CChildFrame::OnRangeCmds(UINT nID)
 
 **Заголовок:** afxmsg_. h
 
-## <a name="on_update_command_ui_range"></a><a name="on_update_command_ui_range"></a>ON_UPDATE_COMMAND_UI_RANGE
+## <a name="on_update_command_ui_range"></a><a name="on_update_command_ui_range"></a> ON_UPDATE_COMMAND_UI_RANGE
 
 Сопоставляет непрерывный диапазон идентификаторов команд с одной функцией обработчика сообщений об обновлении.
 
@@ -682,7 +682,7 @@ ON_UPDATE_COMMAND_UI_RANGE( id1, id2, memberFxn )
 
 **Заголовок:** afxmsg_. h
 
-## <a name="on_control_range"></a><a name="on_control_range"></a>ON_CONTROL_RANGE
+## <a name="on_control_range"></a><a name="on_control_range"></a> ON_CONTROL_RANGE
 
 Используйте этот макрос для отображения непрерывного диапазона идентификаторов элементов управления для одной функции обработчика сообщений для указанного сообщения уведомления Windows, например BN_CLICKED.
 

@@ -99,12 +99,12 @@ helpviewer_keywords:
 - END_PARAM_MAP macro
 - SET_PARAM_TYPE macro
 ms.assetid: 8765eb7b-32dd-407c-bacf-8890ef959837
-ms.openlocfilehash: 0263289e75dc79ecf0b75e484b4bb97aede87ea7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 07fbdf7dfcd82937721955c5ba08e2241df162e5
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232135"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846541"
 ---
 # <a name="macros-and-global-functions-for-ole-db-consumer-templates"></a>Макросы и глобальные функции для шаблонов потребителей OLE DB
 
@@ -112,13 +112,13 @@ OLE DB шаблоны потребителей включают следующи
 
 ## <a name="global-functions"></a>Глобальные функции
 
-|||
+| Имя | Описание |
 |-|-|
 |[AtlTraceErrorRecords](#atltraceerrorrecords)|При возвращении ошибки выводит OLE DB сведения о записи об ошибке на устройство дампа.|
 
 ## <a name="accessor-map-macros"></a>Макросы для карт методов доступа
 
-|||
+| Имя | Описание |
 |-|-|
 |[BEGIN_ACCESSOR](#begin_accessor)|Помечает начало записи метода доступа.|
 |[BEGIN_ACCESSOR_MAP](#begin_accessor_map)|Отмечает начало карты записей метода доступа.|
@@ -127,7 +127,7 @@ OLE DB шаблоны потребителей включают следующи
 
 ## <a name="column-map-macros"></a>Макросы таблицы соответствия столбцов
 
-|||
+| Имя | Описание |
 |-|-|
 |[BEGIN_COLUMN_MAP](#begin_column_map)|Помечает начало записей схемы столбцов в классе записей пользователя.|
 |[BLOB_ENTRY](#blob_entry)|Используется для привязки большого двоичного объекта (BLOB).|
@@ -167,20 +167,20 @@ OLE DB шаблоны потребителей включают следующи
 
 ## <a name="command-macros"></a>Макросы команд
 
-|||
+| Имя | Описание |
 |-|-|
 |[DEFINE_COMMAND](#define_command)|Указывает команду, которая будет использоваться для создания набора строк при использовании класса [CCommand](../../data/oledb/ccommand-class.md) . Принимает только строковые типы, соответствующие указанному типу приложения (ANSI или Unicode). Вместо DEFINE_COMMAND рекомендуется использовать [DEFINE_COMMAND_EX](../../data/oledb/define-command-ex.md) .|
 |[DEFINE_COMMAND_EX](#define_command_ex)|Указывает команду, которая будет использоваться для создания набора строк при использовании класса [CCommand](../../data/oledb/ccommand-class.md) . Поддерживает приложения ANSI и Юникод.|
 
 ## <a name="parameter-map-macros"></a>Макросы схемы параметров
 
-|||
+| Имя | Описание |
 |-|-|
 |[BEGIN_PARAM_MAP](#begin_param_map)|Помечает начало записей параметра Map в классе записей пользователя.|
 |[END_PARAM_MAP](#end_param_map)|Помечает конец записей схемы параметров.|
 |[SET_PARAM_TYPE](#set_param_type)|Указывает COLUMN_ENTRY макросы, которые следуют за SET_PARAM_TYPEным макросом в качестве входных, выходных данных или входных и выходных данных.|
 
-### <a name="atltraceerrorrecords"></a><a name="atltraceerrorrecords"></a>атлтрацеерроррекордс
+### <a name="atltraceerrorrecords"></a><a name="atltraceerrorrecords"></a> атлтрацеерроррекордс
 
 При возвращении ошибки выводит OLE DB сведения о записи об ошибке на устройство дампа.
 
@@ -197,9 +197,9 @@ inline void AtlTraceErrorRecords(HRESULT hrErr = S_OK);
 
 #### <a name="remarks"></a>Remarks
 
-Если *Херр* не S_OK, `AtlTraceErrorRecords` выводит OLE DB сведения о записи об ошибке на устройство дампа (вкладка **Отладка** окна вывод или файл). Сведения о записи об ошибке, полученные от поставщика, включают номер строки, источник, описание, файл справки, контекст и идентификатор GUID для каждой записи записи об ошибке. `AtlTraceErrorRecords`выводит эти сведения только в отладочных сборках. В сборках выпуска это пустая заглушка. Дополнительные сведения см. в разделе [класс CDBErrorInfo](../../data/oledb/cdberrorinfo-class.md).
+Если *Херр* не S_OK, `AtlTraceErrorRecords` выводит OLE DB сведения о записи об ошибке на устройство дампа (вкладка **Отладка** окна вывод или файл). Сведения о записи об ошибке, полученные от поставщика, включают номер строки, источник, описание, файл справки, контекст и идентификатор GUID для каждой записи записи об ошибке. `AtlTraceErrorRecords` выводит эти сведения только в отладочных сборках. В сборках выпуска это пустая заглушка. Дополнительные сведения см. в разделе [класс CDBErrorInfo](../../data/oledb/cdberrorinfo-class.md).
 
-### <a name="begin_accessor"></a><a name="begin_accessor"></a>BEGIN_ACCESSOR
+### <a name="begin_accessor"></a><a name="begin_accessor"></a> BEGIN_ACCESSOR
 
 Помечает начало записи метода доступа.
 
@@ -225,7 +225,7 @@ BEGIN_ACCESSOR(num, bAuto)
 
 См. [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md).
 
-### <a name="begin_accessor_map"></a><a name="begin_accessor_map"></a>BEGIN_ACCESSOR_MAP
+### <a name="begin_accessor_map"></a><a name="begin_accessor_map"></a> BEGIN_ACCESSOR_MAP
 
 Отмечает начало карты записей метода доступа.
 
@@ -294,7 +294,7 @@ END_ACCESSOR_MAP()
 };
 ```
 
-### <a name="end_accessor"></a><a name="end_accessor"></a>END_ACCESSOR
+### <a name="end_accessor"></a><a name="end_accessor"></a> END_ACCESSOR
 
 Помечает конец записи метода доступа.
 
@@ -312,7 +312,7 @@ END_ACCESSOR()
 
 См. [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md).
 
-### <a name="end_accessor_map"></a><a name="end_accessor_map"></a>END_ACCESSOR_MAP
+### <a name="end_accessor_map"></a><a name="end_accessor_map"></a> END_ACCESSOR_MAP
 
 Помечает конец записей схемы метода доступа.
 
@@ -330,7 +330,7 @@ END_ACCESSOR_MAP()
 
 См. [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md).
 
-### <a name="begin_column_map"></a><a name="begin_column_map"></a>BEGIN_COLUMN_MAP
+### <a name="begin_column_map"></a><a name="begin_column_map"></a> BEGIN_COLUMN_MAP
 
 Отмечает начало карты записей столбцов.
 
@@ -359,7 +359,7 @@ BEGIN_COLUMN_MAP(x)
 
 <!--[!CODE [NVC_OLEDB_Consumer#16](../codesnippet/vs_snippets_cpp/nvc_oledb_consumer#16)]  -->
 
-### <a name="blob_entry"></a><a name="blob_entry"></a>BLOB_ENTRY
+### <a name="blob_entry"></a><a name="blob_entry"></a> BLOB_ENTRY
 
 Используется с BEGIN_COLUMN_MAP и END_COLUMN_MAP для привязки большого двоичного объекта ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))).
 
@@ -387,7 +387,7 @@ BLOB_ENTRY(nOrdinal, IID, flags, data)
 
 Узнайте [, как можно получить большой двоичный объект?](../../data/oledb/retrieving-a-blob.md).
 
-### <a name="blob_entry_length"></a><a name="blob_entry_length"></a>BLOB_ENTRY_LENGTH
+### <a name="blob_entry_length"></a><a name="blob_entry_length"></a> BLOB_ENTRY_LENGTH
 
 Используется с BEGIN_COLUMN_MAP и END_COLUMN_MAP для привязки большого двоичного объекта ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))). Аналогично [BLOB_ENTRY](../../data/oledb/blob-entry.md), за исключением того, что этот макрос также получает длину в байтах СТОЛБЦА большого двоичного объекта.
 
@@ -418,7 +418,7 @@ BLOB_ENTRY_LENGTH(nOrdinal, IID, flags, data, length)
 
 Узнайте [, как можно получить большой двоичный объект?](../../data/oledb/retrieving-a-blob.md).
 
-### <a name="blob_entry_length_status"></a><a name="blob_entry_length_status"></a>BLOB_ENTRY_LENGTH_STATUS
+### <a name="blob_entry_length_status"></a><a name="blob_entry_length_status"></a> BLOB_ENTRY_LENGTH_STATUS
 
 Используется с BEGIN_COLUMN_MAP и END_COLUMN_MAP для привязки большого двоичного объекта ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))). Аналогично [BLOB_ENTRY](../../data/oledb/blob-entry.md), за исключением того, что этот макрос также получает длину и состояние столбца большого двоичного объекта.
 
@@ -458,7 +458,7 @@ BLOB_ENTRY_LENGTH_STATUS(
 
 Узнайте [, как можно получить большой двоичный объект?](../../data/oledb/retrieving-a-blob.md).
 
-### <a name="blob_entry_status"></a><a name="blob_entry_status"></a>BLOB_ENTRY_STATUS
+### <a name="blob_entry_status"></a><a name="blob_entry_status"></a> BLOB_ENTRY_STATUS
 
 Используется с BEGIN_COLUMN_MAP или BEGIN_ACCESSOR_MAP для привязки большого двоичного объекта ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))). Аналогично [BLOB_ENTRY](../../data/oledb/blob-entry.md), за исключением того, что этот макрос также получает состояние столбца большого двоичного объекта.
 
@@ -489,7 +489,7 @@ BLOB_ENTRY_STATUS(nOrdinal, IID, flags, data, status)
 
 Узнайте [, как можно получить большой двоичный объект?](../../data/oledb/retrieving-a-blob.md).
 
-### <a name="blob_name"></a><a name="blob_name"></a>BLOB_NAME
+### <a name="blob_name"></a><a name="blob_name"></a> BLOB_NAME
 
 Используется с BEGIN_COLUMN_MAP и END_COLUMN_MAP для привязки большого двоичного объекта ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))). Аналогично [BLOB_ENTRY](../../data/oledb/blob-entry.md), за исключением того, что этот макрос принимает имя столбца вместо номера столбца.
 
@@ -517,7 +517,7 @@ BLOB_NAME(pszName, IID, flags, data )
 
 Узнайте [, как можно получить большой двоичный объект?](../../data/oledb/retrieving-a-blob.md).
 
-### <a name="blob_name_length"></a><a name="blob_name_length"></a>BLOB_NAME_LENGTH
+### <a name="blob_name_length"></a><a name="blob_name_length"></a> BLOB_NAME_LENGTH
 
 Используется с BEGIN_COLUMN_MAP и END_COLUMN_MAP для привязки большого двоичного объекта ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))). Аналогично [BLOB_NAME](../../data/oledb/blob-name.md), за исключением того, что этот макрос также получает длину в байтах столбца данных большого двоичного объекта.
 
@@ -544,7 +544,7 @@ BLOB_NAME_LENGTH(pszName, IID, flags, data, length )
 *length*<br/>
 заполняет (Фактическая) Длина столбца большого двоичного объекта в байтах.
 
-### <a name="blob_name_length_status"></a><a name="blob_name_length_status"></a>BLOB_NAME_LENGTH_STATUS
+### <a name="blob_name_length_status"></a><a name="blob_name_length_status"></a> BLOB_NAME_LENGTH_STATUS
 
 Используется с BEGIN_COLUMN_MAP и END_COLUMN_MAP для привязки большого двоичного объекта ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))). Аналогично [BLOB_NAME](../../data/oledb/blob-name.md), за исключением того, что этот макрос также получает длину и состояние столбца данных большого двоичного объекта.
 
@@ -574,7 +574,7 @@ BLOB_NAME_LENGTH_STATUS(pszName, IID, flags, data, length, status )
 *status*<br/>
 заполняет Состояние поля BLOB-объекта.
 
-### <a name="blob_name_status"></a><a name="blob_name_status"></a>BLOB_NAME_STATUS
+### <a name="blob_name_status"></a><a name="blob_name_status"></a> BLOB_NAME_STATUS
 
 Используется с BEGIN_COLUMN_MAP и END_COLUMN_MAP для привязки большого двоичного объекта ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))). Аналогично [BLOB_NAME](../../data/oledb/blob-name.md), за исключением того, что этот макрос также получает состояние столбца данных большого двоичного объекта.
 
@@ -601,7 +601,7 @@ BLOB_NAME_STATUS(pszName, IID, flags, data, status )
 *status*<br/>
 заполняет Состояние поля BLOB-объекта.
 
-### <a name="bookmark_entry"></a><a name="bookmark_entry"></a>BOOKMARK_ENTRY
+### <a name="bookmark_entry"></a><a name="bookmark_entry"></a> BOOKMARK_ENTRY
 
 Привязывает столбец закладки.
 
@@ -613,7 +613,7 @@ BOOKMARK_ENTRY(variable)
 
 #### <a name="parameters"></a>Параметры
 
-*перемен*<br/>
+*variable*<br/>
 окне Переменная, которая должна быть привязана к столбцу закладки.
 
 #### <a name="example"></a>Пример
@@ -666,7 +666,7 @@ END_COLUMN_MAP()
 
 Дополнительные сведения см. [в разделе Использование закладок](using-bookmarks.md) и [класса CBookmark](../../data/oledb/cbookmark-class.md).
 
-### <a name="column_entry"></a><a name="column_entry"></a>COLUMN_ENTRY
+### <a name="column_entry"></a><a name="column_entry"></a> COLUMN_ENTRY
 
 Представляет привязку набора строк к определенному столбцу в наборе строк.
 
@@ -700,7 +700,7 @@ COLUMN_ENTRY(nOrdinal, data)
 
 См. примеры в разделах о макросах, [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) и [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md).
 
-### <a name="column_entry_ex"></a><a name="column_entry_ex"></a>COLUMN_ENTRY_EX
+### <a name="column_entry_ex"></a><a name="column_entry_ex"></a> COLUMN_ENTRY_EX
 
 Представляет привязку набора строк к определенному столбцу в базе данных.
 
@@ -752,7 +752,7 @@ COLUMN_ENTRY_EX(nOrdinal, wType, nLength, nPrecision, nScale, data, length, stat
 
 См. [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md).
 
-### <a name="column_entry_length"></a><a name="column_entry_length"></a>COLUMN_ENTRY_LENGTH
+### <a name="column_entry_length"></a><a name="column_entry_length"></a> COLUMN_ENTRY_LENGTH
 
 Представляет привязку набора строк к определенному столбцу в базе данных.
 
@@ -785,7 +785,7 @@ COLUMN_ENTRY_LENGTH(nOrdinal, data, length)
 
 - Между [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) и [END_PARAM_MAP](../../data/oledb/end-param-map.md) макросами.
 
-### <a name="column_entry_length_status"></a><a name="column_entry_length_status"></a>COLUMN_ENTRY_LENGTH_STATUS
+### <a name="column_entry_length_status"></a><a name="column_entry_length_status"></a> COLUMN_ENTRY_LENGTH_STATUS
 
 Представляет привязку набора строк к определенному столбцу в базе данных.
 
@@ -821,7 +821,7 @@ COLUMN_ENTRY_LENGTH_STATUS(nOrdinal, data, length, status)
 
 - Между [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) и [END_PARAM_MAP](../../data/oledb/end-param-map.md) макросами.
 
-### <a name="column_entry_ps"></a><a name="column_entry_ps"></a>COLUMN_ENTRY_PS
+### <a name="column_entry_ps"></a><a name="column_entry_ps"></a> COLUMN_ENTRY_PS
 
 Представляет привязку набора строк к определенному столбцу в наборе строк.
 
@@ -857,7 +857,7 @@ COLUMN_ENTRY_PS(nOrdinal, nPrecision, nScale, data)
 
 - Между [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) и [END_PARAM_MAP](../../data/oledb/end-param-map.md) макросами.
 
-### <a name="column_entry_ps_length"></a><a name="column_entry_ps_length"></a>COLUMN_ENTRY_PS_LENGTH
+### <a name="column_entry_ps_length"></a><a name="column_entry_ps_length"></a> COLUMN_ENTRY_PS_LENGTH
 
 Представляет привязку набора строк к определенному столбцу в базе данных.
 
@@ -896,7 +896,7 @@ COLUMN_ENTRY_PS_LENGTH(nOrdinal, nPrecision, nScale, data, length)
 
 - Между [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) и [END_PARAM_MAP](../../data/oledb/end-param-map.md) макросами.
 
-### <a name="column_entry_ps_length_status"></a><a name="column_entry_ps_length_status"></a>COLUMN_ENTRY_PS_LENGTH_STATUS
+### <a name="column_entry_ps_length_status"></a><a name="column_entry_ps_length_status"></a> COLUMN_ENTRY_PS_LENGTH_STATUS
 
 Представляет привязку набора строк к определенному столбцу в базе данных.
 
@@ -938,7 +938,7 @@ COLUMN_ENTRY_PS_LENGTH_STATUS(nOrdinal, nPrecision, nScale, data, length, status
 
 - Между [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) и [END_PARAM_MAP](../../data/oledb/end-param-map.md) макросами.
 
-### <a name="column_entry_ps_status"></a><a name="column_entry_ps_status"></a>COLUMN_ENTRY_PS_STATUS
+### <a name="column_entry_ps_status"></a><a name="column_entry_ps_status"></a> COLUMN_ENTRY_PS_STATUS
 
 Представляет привязку набора строк к определенному столбцу в базе данных.
 
@@ -977,7 +977,7 @@ COLUMN_ENTRY_PS_STATUS(nOrdinal, nPrecision, nScale, data, status)
 
 - Между [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) и [END_PARAM_MAP](../../data/oledb/end-param-map.md) макросами.
 
-### <a name="column_entry_status"></a><a name="column_entry_status"></a>COLUMN_ENTRY_STATUS
+### <a name="column_entry_status"></a><a name="column_entry_status"></a> COLUMN_ENTRY_STATUS
 
 Представляет привязку набора строк к определенному столбцу в базе данных.
 
@@ -1010,7 +1010,7 @@ COLUMN_ENTRY_STATUS(nOrdinal, data, status)
 
 - Между [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) и [END_PARAM_MAP](../../data/oledb/end-param-map.md) макросами.
 
-### <a name="column_entry_type"></a><a name="column_entry_type"></a>COLUMN_ENTRY_TYPE
+### <a name="column_entry_type"></a><a name="column_entry_type"></a> COLUMN_ENTRY_TYPE
 
 Представляет привязку к определенному столбцу в базе данных. Поддерживает параметр *типа* .
 
@@ -1035,7 +1035,7 @@ COLUMN_ENTRY_TYPE (nOrdinal, wType, data)
 
 Этот макрос является специализированным вариантом макроса [COLUMN_ENTRY](../../data/oledb/column-entry.md) , который предоставляет средства для указания типа данных.
 
-### <a name="column_entry_type_size"></a><a name="column_entry_type_size"></a>COLUMN_ENTRY_TYPE_SIZE
+### <a name="column_entry_type_size"></a><a name="column_entry_type_size"></a> COLUMN_ENTRY_TYPE_SIZE
 
 Представляет привязку к определенному столбцу в базе данных. Поддерживает параметры *типа* и *размера* .
 
@@ -1063,7 +1063,7 @@ COLUMN_ENTRY_TYPE_SIZE(nOrdinal, wType, nLength, data)
 
 Этот макрос является специализированным вариантом макроса [COLUMN_ENTRY](../../data/oledb/column-entry.md) , который предоставляет средства для указания размера и типа данных.
 
-### <a name="column_name"></a><a name="column_name"></a>COLUMN_NAME
+### <a name="column_name"></a><a name="column_name"></a> COLUMN_NAME
 
 Представляет привязку набора строк к определенному столбцу в наборе строк. Аналогично [COLUMN_ENTRY](../../data/oledb/column-entry.md), за исключением того, что этот макрос принимает имя столбца вместо номера столбца.
 
@@ -1091,7 +1091,7 @@ COLUMN_NAME(pszName, data)
 
 - Между [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) и [END_PARAM_MAP](../../data/oledb/end-param-map.md) макросами.
 
-### <a name="column_name_ex"></a><a name="column_name_ex"></a>COLUMN_NAME_EX
+### <a name="column_name_ex"></a><a name="column_name_ex"></a> COLUMN_NAME_EX
 
 Представляет привязку набора строк к определенному столбцу в наборе строк. Аналогично [column_name](../../data/oledb/column-name.md), за исключением того, что этот макрос также принимает тип данных, размер, точность, масштаб, длину столбца и состояние столбца.
 
@@ -1131,7 +1131,7 @@ COLUMN_NAME_EX(pszName, wType, nLength, nPrecision, nScale, data, length, status
 
 Сведения о том, где используются макросы COLUMN_NAME_ *, см. в разделе [column_name](../../data/oledb/column-name.md) .
 
-### <a name="column_name_length"></a><a name="column_name_length"></a>COLUMN_NAME_LENGTH
+### <a name="column_name_length"></a><a name="column_name_length"></a> COLUMN_NAME_LENGTH
 
 Представляет привязку набора строк к определенному столбцу в наборе строк. Аналогично [column_name](../../data/oledb/column-name.md), за исключением того, что этот макрос также имеет длину столбца.
 
@@ -1156,7 +1156,7 @@ COLUMN_NAME_LENGTH(pszName, data, length)
 
 Сведения о том, где используются макросы COLUMN_NAME_ *, см. в разделе [column_name](../../data/oledb/column-name.md) .
 
-### <a name="column_name_length_status"></a><a name="column_name_length_status"></a>COLUMN_NAME_LENGTH_STATUS
+### <a name="column_name_length_status"></a><a name="column_name_length_status"></a> COLUMN_NAME_LENGTH_STATUS
 
 Представляет привязку набора строк к определенному столбцу в наборе строк. Аналогично [column_name](../../data/oledb/column-name.md), за исключением того, что этот макрос также принимает длину столбца и состояние столбца.
 
@@ -1184,7 +1184,7 @@ COLUMN_NAME_LENGTH_STATUS(pszName, data, length, status )
 
 Сведения о том, где используются макросы COLUMN_NAME_ *, см. в разделе [column_name](../../data/oledb/column-name.md) .
 
-### <a name="column_name_ps"></a><a name="column_name_ps"></a>COLUMN_NAME_PS
+### <a name="column_name_ps"></a><a name="column_name_ps"></a> COLUMN_NAME_PS
 
 Представляет привязку набора строк к определенному столбцу в наборе строк. Аналогично [column_name](../../data/oledb/column-name.md), за исключением того, что этот макрос также имеет точность и масштаб.
 
@@ -1212,7 +1212,7 @@ COLUMN_NAME_PS(pszName, nPrecision, nScale, data )
 
 Сведения о том, где используются макросы COLUMN_NAME_ *, см. в разделе [column_name](../../data/oledb/column-name.md) .
 
-### <a name="column_name_ps_length"></a><a name="column_name_ps_length"></a>COLUMN_NAME_PS_LENGTH
+### <a name="column_name_ps_length"></a><a name="column_name_ps_length"></a> COLUMN_NAME_PS_LENGTH
 
 Представляет привязку набора строк к определенному столбцу в наборе строк. Аналогично [column_name](../../data/oledb/column-name.md), за исключением того, что этот макрос также имеет точность, масштаб и длину столбца.
 
@@ -1243,7 +1243,7 @@ COLUMN_NAME_PS_LENGTH(pszName, nPrecision, nScale, data, length )
 
 Сведения о том, где используются макросы COLUMN_NAME_ *, см. в разделе [column_name](../../data/oledb/column-name.md) .
 
-### <a name="column_name_ps_length_status"></a><a name="column_name_ps_length_status"></a>COLUMN_NAME_PS_LENGTH_STATUS
+### <a name="column_name_ps_length_status"></a><a name="column_name_ps_length_status"></a> COLUMN_NAME_PS_LENGTH_STATUS
 
 Представляет привязку набора строк к определенному столбцу в наборе строк. Аналогично [column_name](../../data/oledb/column-name.md), за исключением того, что этот макрос также имеет точность, масштаб, длину столбца и состояние столбца.
 
@@ -1277,7 +1277,7 @@ COLUMN_NAME_PS_LENGTH_STATUS(pszName, nPrecision, nScale, data, length, status )
 
 Сведения о том, где используются макросы COLUMN_NAME_ *, см. в разделе [column_name](../../data/oledb/column-name.md) .
 
-### <a name="column_name_ps_status"></a><a name="column_name_ps_status"></a>COLUMN_NAME_PS_STATUS
+### <a name="column_name_ps_status"></a><a name="column_name_ps_status"></a> COLUMN_NAME_PS_STATUS
 
 Представляет привязку набора строк к определенному столбцу в наборе строк. Аналогично [column_name](../../data/oledb/column-name.md), за исключением того, что этот макрос также имеет точность, масштаб и состояние столбца.
 
@@ -1308,7 +1308,7 @@ COLUMN_NAME_PS_STATUS(pszName, nPrecision, nScale, data, status )
 
 Сведения о том, где используются макросы COLUMN_NAME_ *, см. в разделе [column_name](../../data/oledb/column-name.md) .
 
-### <a name="column_name_status"></a><a name="column_name_status"></a>COLUMN_NAME_STATUS
+### <a name="column_name_status"></a><a name="column_name_status"></a> COLUMN_NAME_STATUS
 
 Представляет привязку набора строк к определенному столбцу в наборе строк. Аналогично [column_name](../../data/oledb/column-name.md), за исключением того, что этот макрос также принимает состояние столбца.
 
@@ -1333,7 +1333,7 @@ COLUMN_NAME_STATUS(pszName, data, status )
 
 Сведения о том, где используются макросы COLUMN_NAME_ *, см. в разделе [column_name](../../data/oledb/column-name.md) .
 
-### <a name="column_name_type"></a><a name="column_name_type"></a>COLUMN_NAME_TYPE
+### <a name="column_name_type"></a><a name="column_name_type"></a> COLUMN_NAME_TYPE
 
 Представляет привязку набора строк к определенному столбцу в наборе строк. Аналогично [column_name](../../data/oledb/column-name.md), за исключением того, что этот макрос также принимает тип данных.
 
@@ -1358,7 +1358,7 @@ COLUMN_NAME_TYPE(pszName, wType, data)
 
 Сведения о том, где используются макросы COLUMN_NAME_ *, см. в разделе [column_name](../../data/oledb/column-name.md) .
 
-### <a name="column_name_type_ps"></a><a name="column_name_type_ps"></a>COLUMN_NAME_TYPE_PS
+### <a name="column_name_type_ps"></a><a name="column_name_type_ps"></a> COLUMN_NAME_TYPE_PS
 
 Представляет привязку набора строк к определенному столбцу в наборе строк. Аналогично [column_name](../../data/oledb/column-name.md), за исключением того, что этот макрос также принимает тип данных, точность и масштаб.
 
@@ -1389,7 +1389,7 @@ COLUMN_NAME_TYPE_PS(pszName, wType, nPrecision, nScale, data)
 
 Сведения о том, где используются макросы COLUMN_NAME_ *, см. в разделе [column_name](../../data/oledb/column-name.md) .
 
-### <a name="column_name_type_size"></a><a name="column_name_type_size"></a>COLUMN_NAME_TYPE_SIZE
+### <a name="column_name_type_size"></a><a name="column_name_type_size"></a> COLUMN_NAME_TYPE_SIZE
 
 Представляет привязку набора строк к определенному столбцу в наборе строк. Аналогично [column_name](../../data/oledb/column-name.md), за исключением того, что этот макрос также принимает тип и размер данных.
 
@@ -1417,7 +1417,7 @@ COLUMN_NAME_TYPE_SIZE(pszName, wType, nLength, data)
 
 Сведения о том, где используются макросы COLUMN_NAME_ *, см. в разделе [column_name](../../data/oledb/column-name.md) .
 
-### <a name="column_name_type_status"></a><a name="column_name_type_status"></a>COLUMN_NAME_TYPE_STATUS
+### <a name="column_name_type_status"></a><a name="column_name_type_status"></a> COLUMN_NAME_TYPE_STATUS
 
 Представляет привязку набора строк к определенному столбцу в наборе строк. Аналогично [column_name](../../data/oledb/column-name.md), за исключением того, что этот макрос также принимает данные о состоянии типа и столбца.
 
@@ -1445,7 +1445,7 @@ COLUMN_NAME_TYPE_STATUS(pszName, wType, status, data)
 
 Сведения о том, где используются макросы COLUMN_NAME_ *, см. в разделе [column_name](../../data/oledb/column-name.md) .
 
-### <a name="end_column_map"></a><a name="end_column_map"></a>END_COLUMN_MAP
+### <a name="end_column_map"></a><a name="end_column_map"></a> END_COLUMN_MAP
 
 Помечает конец записей схемы столбцов.
 
@@ -1463,7 +1463,7 @@ END_COLUMN_MAP()
 
 См. [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md).
 
-### <a name="define_command"></a><a name="define_command"></a>DEFINE_COMMAND
+### <a name="define_command"></a><a name="define_command"></a> DEFINE_COMMAND
 
 Указывает команду, которая будет использоваться для создания набора строк при использовании класса [CCommand](../../data/oledb/ccommand-class.md) . Принимает только строковые типы, соответствующие указанному типу приложения (ANSI или Unicode).
 
@@ -1494,7 +1494,7 @@ DEFINE_COMMAND(x, szCommand)
 
 См. [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md).
 
-### <a name="define_command_ex"></a><a name="define_command_ex"></a>DEFINE_COMMAND_EX
+### <a name="define_command_ex"></a><a name="define_command_ex"></a> DEFINE_COMMAND_EX
 
 Указывает команду, которая будет использоваться для создания набора строк при использовании класса [CCommand](../../data/oledb/ccommand-class.md) . Поддерживает приложения в Юникоде и ANSI.
 
@@ -1522,7 +1522,7 @@ DEFINE_COMMAND_EX(x, wszCommand)
 
 См. [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md).
 
-### <a name="begin_param_map"></a><a name="begin_param_map"></a>BEGIN_PARAM_MAP
+### <a name="begin_param_map"></a><a name="begin_param_map"></a> BEGIN_PARAM_MAP
 
 Помечает начало записей схемы параметров.
 
@@ -1545,7 +1545,7 @@ BEGIN_PARAM_MAP(x)
 
 См. пример для макроса [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) .
 
-### <a name="end_param_map"></a><a name="end_param_map"></a>END_PARAM_MAP
+### <a name="end_param_map"></a><a name="end_param_map"></a> END_PARAM_MAP
 
 Помечает конец записей схемы параметров.
 
@@ -1559,7 +1559,7 @@ END_PARAM_MAP()
 
 См. пример для макроса [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) .
 
-### <a name="set_param_type"></a><a name="set_param_type"></a>SET_PARAM_TYPE
+### <a name="set_param_type"></a><a name="set_param_type"></a> SET_PARAM_TYPE
 
 Указывает COLUMN_ENTRY макросы, которые следуют за входными, выходными и входными макросами SET_PARAM_TYPE.
 
@@ -1578,13 +1578,13 @@ SET_PARAM_TYPE(type)
 
 Поставщики поддерживают только входные и выходные типы параметров, поддерживаемые в базовом источнике данных. Тип является сочетанием одного или нескольких `DBPARAMIO` значений (см. [структуры DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) в *справочнике программиста OLE DB*):
 
-- `DBPARAMIO_NOTPARAM`Метод доступа не имеет параметров. Как правило, `eParamIO` это значение устанавливается в методы доступа к строкам для напоминания пользователю о том, что параметры игнорируются.
+- `DBPARAMIO_NOTPARAM` Метод доступа не имеет параметров. Как правило, `eParamIO` это значение устанавливается в методы доступа к строкам для напоминания пользователю о том, что параметры игнорируются.
 
-- `DBPARAMIO_INPUT`Входной параметр.
+- `DBPARAMIO_INPUT` Входной параметр.
 
-- `DBPARAMIO_OUTPUT`Выходной параметр.
+- `DBPARAMIO_OUTPUT` Выходной параметр.
 
-- `DBPARAMIO_INPUT | DBPARAMIO_OUTPUT`Параметр является как входным, так и выходным параметром.
+- `DBPARAMIO_INPUT | DBPARAMIO_OUTPUT` Параметр является как входным, так и выходным параметром.
 
 #### <a name="example"></a>Пример
 
@@ -1632,7 +1632,7 @@ END_COLUMN_MAP()
 
 **Заголовок:** atldbcli.h
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также раздел
 
 [Макросы и глобальные функции для OLE DB шаблонов потребителей](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)<br/>
 [Шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - symbols [C++], ATL predefined
 - ATL symbols
 ms.assetid: 60d8f4e6-6ed9-47f3-9051-e4bf34384456
-ms.openlocfilehash: 4ce2d8060c7218226340a591c6295a573f99dad8
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 8134f334b0143a360fd3e02c04bca7a65ce67ce0
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619765"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836391"
 ---
 # <a name="atl-predefined-symbols"></a>Предопределенные символы ATL
 
@@ -18,7 +18,7 @@ ms.locfileid: "84619765"
 
 При работе с диалоговыми окнами и элементами управления в [редакторе диалоговых окон](dialog-editor.md)эти символы будут отображаться в [окно свойств](/visualstudio/ide/reference/properties-window) , связанных с общими элементами управления. Например, если в диалоговом окне есть кнопка **"Отмена"** , эта команда будет связана с символом идканцел в окне " **свойства** ".
 
-|||
+|Имя|Описание|
 |-|-|
 |IDABORT|элемента Диалоговое окно, кнопка "прервать"|
 |IDC_STATIC|элемента Статический элемент управления|

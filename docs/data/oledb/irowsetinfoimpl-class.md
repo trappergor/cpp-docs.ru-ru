@@ -25,12 +25,12 @@ helpviewer_keywords:
 - GetReferencedRowset method
 - GetSpecification method
 ms.assetid: 9c654155-7727-464e-bd31-143e68391a47
-ms.openlocfilehash: cf72aabce58237f470d536c02727f442404db030
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: dfa3873917d5215d0069e504e0556c31744f4334
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210448"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840392"
 ---
 # <a name="irowsetinfoimpl-class"></a>Класс IRowsetInfoImpl
 
@@ -48,7 +48,7 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
 ### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Класс, производный от `IRowsetInfoImpl`.
+Класс, производный от `IRowsetInfoImpl` .
 
 *пропкласс*<br/>
 Определяемый пользователем класс свойств, который по умолчанию имеет значение *T*.
@@ -57,11 +57,11 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
 
 **Заголовок:** алтдб. h
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Элементы
 
 ### <a name="interface-methods"></a>Методы интерфейса
 
-|||
+| Имя | Описание |
 |-|-|
 |[GetProperties](#getproperties)|Возвращает текущие значения всех свойств, которые поддерживаются набором строк.|
 |[жетреференцедровсет](#getreferencedrowset)|Возвращает указатель интерфейса на набор строк, к которому применяется закладка.|
@@ -71,9 +71,9 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
 
 Обязательный интерфейс для наборов строк. Этот класс реализует свойства набора строк с помощью [схемы набора свойств](../../data/oledb/begin-propset-map.md) , определенной в классе команд. Несмотря на то, что класс набора строк использует наборы свойств класса Command, набор строк предоставляется со своей собственной копией свойств времени выполнения, когда он создается объектом команды или сеанса.
 
-## <a name="irowsetinfoimplgetproperties"></a><a name="getproperties"></a>Свойства IRowsetInfoImpl:: Properties
+## <a name="irowsetinfoimplgetproperties"></a><a name="getproperties"></a> Свойства IRowsetInfoImpl:: Properties
 
-Возвращает текущие параметры для свойств в группе `DBPROPSET_ROWSET`.
+Возвращает текущие параметры для свойств в `DBPROPSET_ROWSET` группе.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -88,7 +88,7 @@ STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,
 
 См. раздел [ировсетинфо:: Properties](/previous-versions/windows/desktop/ms719611(v=vs.85)) в *справочнике программиста OLE DB*.
 
-## <a name="irowsetinfoimplgetreferencedrowset"></a><a name="getreferencedrowset"></a>IRowsetInfoImpl:: Жетреференцедровсет
+## <a name="irowsetinfoimplgetreferencedrowset"></a><a name="getreferencedrowset"></a> IRowsetInfoImpl:: Жетреференцедровсет
 
 Возвращает указатель интерфейса на набор строк, к которому применяется закладка.
 
@@ -104,7 +104,7 @@ STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,
 
 См. раздел [ировсетинфо:: жетреференцедровсет](/previous-versions/windows/desktop/ms721145(v=vs.85)) в *справочнике программиста OLE DB*. Параметр *иординал* должен быть столбцом закладки.
 
-## <a name="irowsetinfoimplgetspecification"></a><a name="getspecification"></a>IRowsetInfoImpl::
+## <a name="irowsetinfoimplgetspecification"></a><a name="getspecification"></a> IRowsetInfoImpl::
 
 Возвращает указатель интерфейса объекта (команды или сеанса работы), создавшего этот набор строк.
 

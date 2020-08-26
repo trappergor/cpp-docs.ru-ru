@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - switch_is attribute
 ms.assetid: f1fffe5d-12d2-4e0f-8803-ccb715177d2d
-ms.openlocfilehash: 85ee066a12d4297d9a782ae07ef0fa16798f1616
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b017ba6dd2bbdfab7bfb5fa2dbf19e613e14772b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228054"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840547"
 ---
 # <a name="switch_is"></a>switch_is
 
@@ -33,9 +33,7 @@ ms.locfileid: "87228054"
 
 ## <a name="requirements"></a>Требования
 
-### <a name="attribute-context"></a>Контекст атрибута
-
-|||
+| Контекст атрибута | Значение |
 |-|-|
 |**Относится к**|**`typedef`**|
 |**REPEATABLE**|Нет|
@@ -44,7 +42,7 @@ ms.locfileid: "87228054"
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты typedef, enum, Union и struct](typedef-enum-union-and-struct-attributes.md)<br/>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - valarray header
 ms.assetid: 30835415-21c1-4801-8f24-6bbef7dd8ecd
-ms.openlocfilehash: eb782b0d16c4bc826da4ea9291756f34ca0eaf29
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9d2f3097637b3708c16f3048a34dd32b7f6fd80b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215417"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840145"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
@@ -34,7 +34,7 @@ ms.locfileid: "87215417"
 
 ### <a name="functions"></a>Функции
 
-|||
+|Имя|Описание|
 |-|-|
 |[просто](../standard-library/valarray-functions.md#abs)|Обрабатывает элементы входного valarray, возвращая массив valarray, элементы которого равны абсолютному значению элементов входного valarray.|
 |[ACOS](../standard-library/valarray-functions.md#acos)|Обрабатывает элементы входного valarray, возвращая массив valarray, элементы которого равны арккосинусу элементов входного valarray.|
@@ -58,7 +58,7 @@ ms.locfileid: "87215417"
 
 ### <a name="operators"></a>Операторы
 
-|||
+|Имя|Описание|
 |-|-|
 |[operator! =](../standard-library/valarray-operators.md#op_neq)|Проверяет, не равны ли соответствующие элементы двух одинаковых по размеру valarray или не равны ли все элементы valarray указанному значению типа элемента valarray.|
 |[станции](../standard-library/valarray-operators.md#op_mod)|Возвращает остаток от деления соответствующих элементов двух одинаковых по размеру valarray или от деления valarray на указанное значение типа элемента valarray или от деления указанного значения на valarray.|
@@ -81,7 +81,7 @@ ms.locfileid: "87215417"
 
 ### <a name="classes"></a>Классы
 
-|||
+|name|Описание|
 |-|-|
 |[Класс gslice](../standard-library/gslice-class.md)|Служебный класс, используемый для определения многомерных срезов valarray.|
 |[Класс gslice_array](../standard-library/gslice-array-class.md)|Внутренний, вспомогательный шаблон класса, поддерживающий общие объекты-срезы путем предоставления операций между массивами подмножества, определенными общим срезом valarray.|
@@ -93,7 +93,7 @@ ms.locfileid: "87215417"
 
 ### <a name="specializations"></a>Специализации
 
-|||
+|Имя|Описание|
 |-|-|
 |[\<bool>класс valarray](../standard-library/valarray-bool-class.md)|Специализированная версия шаблона класса valarray \<**Type**> к элементам типа **`bool`** .|
 

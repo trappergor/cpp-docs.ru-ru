@@ -1,17 +1,17 @@
 ---
-title: async_uuid (C++ атрибут com)
+title: async_uuid (атрибут COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.async_uuid
 helpviewer_keywords:
 - async_uuid attribute
 ms.assetid: 235cb0d7-be58-4dd9-983c-e2a21bbc42c6
-ms.openlocfilehash: 537bd6d645532d9d5d20b740125c66f3953239bc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: cb0abdcedc26c5ffe197e52d5da4fbad1ec516d2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168464"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836248"
 ---
 # <a name="async_uuid"></a>async_uuid
 
@@ -48,13 +48,11 @@ __interface ICustom {
 
 ## <a name="requirements"></a>Требования
 
-### <a name="attribute-context"></a>Контекст атрибута
-
-|||
+| Контекст атрибута | Значение |
 |-|-|
-|**Применение**|`interface`|
-|**Повторяемый**|нет|
-|**Обязательные атрибуты**|None|
+|**Относится к**|`interface`|
+|**REPEATABLE**|Нет|
+|**Требуемые атрибуты**|Нет|
 |**Недопустимые атрибуты**|**Dual**, **DISP**|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).

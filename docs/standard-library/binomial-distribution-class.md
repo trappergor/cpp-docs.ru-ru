@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::binomial_distribution [C++], param_type
 - std::binomial_distribution [C++], param_type
 ms.assetid: b7c8a26a-da8c-45a5-a3a8-208f7a3609ce
-ms.openlocfilehash: d0bba986889dfbd17fddcd0c6985c082f6f74c29
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3054a29bd1bc82861461851d4403a7095ac1fcbd
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230250"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846515"
 ---
 # <a name="binomial_distribution-class"></a>Класс binomial_distribution
 
@@ -81,10 +81,8 @@ public:
 
 Шаблон класса описывает распределение, которое формирует значения указанного пользователем целочисленного типа, или тип **`int`** , если он не указан, распределяется в соответствии с дискретным распределением по функциям вероятности. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
-||||
-|-|-|-|
-|[binomial_distribution](#binomial_distribution)|`binomial_distribution::t`|`binomial_distribution::param`|
-|`binomial_distribution::operator()`|`binomial_distribution::p`|[param_type](#param_type)|
+[binomial_distribution](#binomial_distribution)\
+[param_type](#param_type)
 
 Члены свойств `t()` и `p()` возвращают текущие сохраненные значения параметров распределения *t* и *p* соответственно.
 
@@ -231,7 +229,7 @@ Histogram for 100 samples:
 
 **Пространство имен:** std
 
-## <a name="binomial_distributionbinomial_distribution"></a><a name="binomial_distribution"></a>binomial_distribution:: binomial_distribution
+## <a name="binomial_distributionbinomial_distribution"></a><a name="binomial_distribution"></a> binomial_distribution:: binomial_distribution
 
 Формирует распределение.
 
@@ -259,7 +257,7 @@ explicit binomial_distribution(const param_type& parm);
 
 Второй конструктор создает объект, хранимые параметры которого инициализируются из *parm*. Вы можете получить и задать текущие параметры существующего распределения, вызвав функцию-член `param()`.
 
-## <a name="binomial_distributionparam_type"></a><a name="param_type"></a>binomial_distribution::p aram_type
+## <a name="binomial_distributionparam_type"></a><a name="param_type"></a> binomial_distribution::p aram_type
 
 Сохраняет все параметры распределения.
 

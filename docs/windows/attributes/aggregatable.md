@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - aggregatable attribute
 ms.assetid: 9253a46a-cd76-41f2-b3b6-86f709bb069c
-ms.openlocfilehash: 883094c85418c15455a020cfe73538a6576eddd0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6782b1ca28eb07b3f726bd85cd7fffa9b1f1bad2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224491"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836378"
 ---
 # <a name="aggregatable"></a>aggregatable
 
@@ -28,11 +28,11 @@ ms.locfileid: "87224491"
 *value*<br/>
 Используемых Параметр, указывающий, когда можно выполнить статистическую обработку объекта COM:
 
-- `never`Не удается выполнить статистическую обработку объекта COM.
+- `never` Не удается выполнить статистическую обработку объекта COM.
 
-- `allowed`COM-объект можно создать напрямую или выполнить статистическую обработку. Это значение по умолчанию.
+- `allowed` COM-объект можно создать напрямую или выполнить статистическую обработку. Это значение по умолчанию.
 
-- `always`COM-объект не может быть создан напрямую и может быть агрегирован. При вызове `CoCreateInstance` для этого объекта необходимо указать интерфейс статистического объекта `IUnknown` (Управление `IUnknown` ).
+- `always` COM-объект не может быть создан напрямую и может быть агрегирован. При вызове `CoCreateInstance` для этого объекта необходимо указать интерфейс статистического объекта `IUnknown` (Управление `IUnknown` ).
 
 ## <a name="remarks"></a>Remarks
 
@@ -68,9 +68,7 @@ class CMyClass {};
 
 ## <a name="requirements"></a>Требования
 
-### <a name="attribute-context"></a>Контекст атрибута
-
-|||
+| Контекст атрибута | Значение |
 |-|-|
 |**Относится к**|**`class`**, **`struct`**|
 |**REPEATABLE**|Нет|
@@ -79,7 +77,7 @@ class CMyClass {};
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты класса](class-attributes.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: CMFCDisableMenuAnimation Класс
+title: Класс Кмфкдисаблеменуаниматион
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCDisableMenuAnimation
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCDisableMenuAnimation [MFC], Restore
 ms.assetid: c6eb07da-c382-43d6-8028-007f2320e50e
-ms.openlocfilehash: c6d81f253016d3a292dd50b16c19f76a05e75e56
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 97a93e000b3e12d8ec4824100059581216b1b8d9
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752422"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840769"
 ---
-# <a name="cmfcdisablemenuanimation-class"></a>CMFCDisableMenuAnimation Класс
+# <a name="cmfcdisablemenuanimation-class"></a>Класс Кмфкдисаблеменуаниматион
 
-Отпугивает всплывающее меню анимации.
+Отключает анимацию всплывающего меню.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -29,51 +29,48 @@ class CMFCDisableMenuAnimation
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|||
+|name|Описание|
 |-|-|
-|Имя|Описание|
 |`CMFCDisableMenuAnimation::CMFCDisableMenuAnimation`|Формирует объект `CMFCDisableMenuAnimation`.|
 |`CMFCDisableMenuAnimation::~CMFCDisableMenuAnimation`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|||
+|name|Описание|
 |-|-|
-|Имя|Описание|
-|[CMFCDisableMenuAnimation::Восстановление](#restore)|Восстанавливает предыдущую анимацию, используемую в фрейм-меню.|
+|[Кмфкдисаблеменуаниматион:: RESTORE](#restore)|Восстанавливает предыдущую анимацию, используемую платформой для отображения всплывающего меню.|
 
 ### <a name="data-members"></a>Элементы данных
 
-|||
-|-|-|
 |Имя|Описание|
-|`CMFCDisableMenuAnimation::m_animType`|Хранит предыдущий тип анимации всплывающих меню.|
+|-|-|
+|`CMFCDisableMenuAnimation::m_animType`|Сохраняет предыдущий тип анимации всплывающего меню.|
 
 ### <a name="remarks"></a>Remarks
 
-Используйте этот класс помощников, чтобы временно отключить всплывающее меню анимации (например, при обработке команд мыши или клавиатуры).
+Используйте этот вспомогательный класс, чтобы временно отключить анимацию всплывающего меню (например, при обработке команд мыши или клавиатуры).
 
-Объект `CMFCDisableMenuAnimation` отсутживает всплывающее меню анимации в течение своего срока службы. Конструктор хранит текущий тип анимации всплывающих `m_animType` меню в поле и `CMFCPopupMenu::NO_ANIMATION`устанавливает текущий тип анимации. Деструктор восстанавливает предыдущий тип анимации.
+`CMFCDisableMenuAnimation`Объект отключает анимацию всплывающего меню в течение своего времени существования. Конструктор сохраняет текущий тип анимации всплывающего меню в `m_animType` поле и устанавливает для текущего типа анимации значение `CMFCPopupMenu::NO_ANIMATION` . Деструктор восстанавливает предыдущий тип анимации.
 
-Можно создать `CMFCDisableMenuAnimation` объект в стеке, чтобы отключить анимацию всплывающее меню на протяжении всей одной функции. Если вы хотите отключить анимацию всплывающее меню `CMFCDisableMenuAnimation` между функциями, создайте объект на куче, а затем удалите его, когда вы хотите восстановить всплывающее меню анимации.
+Можно создать `CMFCDisableMenuAnimation` объект в стеке, чтобы отключить анимацию всплывающего меню в рамках одной функции. Если вы хотите отключить анимацию всплывающего меню между функциями, создайте `CMFCDisableMenuAnimation` объект в куче, а затем удалите его, если хотите восстановить анимацию всплывающего меню.
 
 ## <a name="example"></a>Пример
 
-В следующем примере показано, как использовать стек для временного отключить анимацию меню.
+В следующем примере показано, как использовать стек для временного отключения анимации меню.
 
 [!code-cpp[NVC_MFC_Misc#1](../../mfc/reference/codesnippet/cpp/cmfcdisablemenuanimation-class_1.h)]
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
-[CMFCDisableMenuAnimation](../../mfc/reference/cmfcdisablemenuanimation-class.md)
+[кмфкдисаблеменуаниматион](../../mfc/reference/cmfcdisablemenuanimation-class.md)
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** afxpopupmenu.h
+**Заголовок:** афкспопупмену. h
 
-## <a name="cmfcdisablemenuanimationrestore"></a><a name="restore"></a>CMFCDisableMenuAnimation::Восстановление
+## <a name="cmfcdisablemenuanimationrestore"></a><a name="restore"></a> Кмфкдисаблеменуаниматион:: RESTORE
 
-Восстанавливает предыдущую анимацию, используемую в фрейм-меню.
+Восстанавливает предыдущую анимацию, используемую платформой для отображения всплывающего меню.
 
 ```cpp
 void Restore ();
@@ -81,10 +78,10 @@ void Restore ();
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод вызывается `CMFCDisableMenuAnimation` деструктором для восстановления предыдущей анимации, используемой для отображения всплывающих меню.
+Этот метод вызывается `CMFCDisableMenuAnimation` деструктором для восстановления предыдущей анимации, используемой платформой для отображения всплывающего меню.
 
 ## <a name="see-also"></a>См. также раздел
 
-[Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
+[Иерархическая диаграмма](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)<br/>
 [Класс CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)

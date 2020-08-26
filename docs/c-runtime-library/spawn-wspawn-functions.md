@@ -48,23 +48,31 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-ms.openlocfilehash: a22f5b0c401dd888bbda451504e644557294544d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2f6aa420d7e6bb736721c4a68ff6451121da26ab
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81322962"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840418"
 ---
 # <a name="_spawn-_wspawn-functions"></a>Функции _spawn, _wspawn
 
 Каждая из функций `_spawn` создает и запускает новый процесс:
 
-|||
-|-|-|
-|[_spawnl, _wspawnl](../c-runtime-library/reference/spawnl-wspawnl.md)|[_spawnv, _wspawnv](../c-runtime-library/reference/spawnv-wspawnv.md)|
-|[_spawnle, _wspawnle](../c-runtime-library/reference/spawnle-wspawnle.md)|[_spawnve, _wspawnve](../c-runtime-library/reference/spawnve-wspawnve.md)|
-|[_spawnlp, _wspawnlp](../c-runtime-library/reference/spawnlp-wspawnlp.md)|[_spawnvp, _wspawnvp](../c-runtime-library/reference/spawnvp-wspawnvp.md)|
-|[_spawnlpe, _wspawnlpe](../c-runtime-library/reference/spawnlpe-wspawnlpe.md)|[_spawnvpe, _wspawnvpe](../c-runtime-library/reference/spawnvpe-wspawnvpe.md)|
+:::row:::
+   :::column span="":::
+      [_spawnl, _wspawnl](../c-runtime-library/reference/spawnl-wspawnl.md)\
+      [_spawnle, _wspawnle](../c-runtime-library/reference/spawnle-wspawnle.md)\
+      [_spawnlp, _wspawnlp](../c-runtime-library/reference/spawnlp-wspawnlp.md)\
+      [_spawnlpe, _wspawnlpe](../c-runtime-library/reference/spawnlpe-wspawnlpe.md)\
+   :::column-end:::
+   :::column span="":::
+      [_spawnv, _wspawnv](../c-runtime-library/reference/spawnv-wspawnv.md)\
+      [_spawnve, _wspawnve](../c-runtime-library/reference/spawnve-wspawnve.md)\
+      [_spawnvp, _wspawnvp](../c-runtime-library/reference/spawnvp-wspawnvp.md)\
+      [_spawnvpe, _wspawnvpe](../c-runtime-library/reference/spawnvpe-wspawnvpe.md)\
+   :::column-end:::
+:::row-end:::
 
 Буквы в конце имени функции определяют вариацию.
 
@@ -94,7 +102,7 @@ ms.locfileid: "81322962"
 
 Для загрузки и выполнения нового процесса необходимо обеспечить достаточно памяти. Аргумент `mode` определяет действие, предпринимаемое вызывающим процессом перед вызовом функции `_spawn` и во время ее выполнения. В файле Process.h определяются следующие значения аргумента `mode`:
 
-|||
+|Значение|Описание|
 |-|-|
 | `_P_OVERLAY`  | Перекрывает вызывающий процесс новым процессом, уничтожая вызывающий процесс (тот же эффект, что и при вызовах функций `_exec`).  |
 | `_P_WAIT`  | Приостанавливает вызывающий поток до тех пор, пока не будет завершено выполнение нового процесса (синхронная функция `_spawn`).  |
@@ -130,7 +138,7 @@ ms.locfileid: "81322962"
 
 ## <a name="environment-of-the-spawned-process"></a>Среда порожденного процесса
 
-Файлы, открытые во время вызова функции `_spawn`, остаются открытыми в новом процессе. В вызовах `_spawnl`, `_spawnlp`, `_spawnv` и `_spawnvp` новый процесс наследует среду вызывающего процесса. Вызовы функций `_spawnle`, `_spawnlpe`, `_spawnve` и `_spawnvpe` изменяют среду для нового процесса, передавая список параметров среды с помощью аргумента `envp`. Аргумент `envp` — это массив указателей символов, каждый элемент которого (за исключением последнего) указывает на строку, завершающуюся символом NULL, определенную в переменной среды. Такие строки обычно имеют вид `NAME`=`value`, где `NAME` — это имя переменной среды, а `value` — строковое значение, задаваемое для данной переменной. (Обратите `value` внимание, что не заключено в двойные кавычки.) Окончательный элемент `envp` массива должен быть **NULL**. Если же значение самого параметра `envp` — **NULL**, порожденный процесс наследует параметры среды родительского процесса.
+Файлы, открытые во время вызова функции `_spawn`, остаются открытыми в новом процессе. В вызовах `_spawnl`, `_spawnlp`, `_spawnv` и `_spawnvp` новый процесс наследует среду вызывающего процесса. Вызовы функций `_spawnle`, `_spawnlpe`, `_spawnve` и `_spawnvpe` изменяют среду для нового процесса, передавая список параметров среды с помощью аргумента `envp`. Аргумент `envp` — это массив указателей символов, каждый элемент которого (за исключением последнего) указывает на строку, завершающуюся символом NULL, определенную в переменной среды. Такие строки обычно имеют вид `NAME`=`value`, где `NAME` — это имя переменной среды, а `value` — строковое значение, задаваемое для данной переменной. (Обратите внимание, что `value` не заключено в двойные кавычки.) Последний элемент `envp` массива должен иметь **значение NULL**. Если же значение самого параметра `envp` — **NULL**, порожденный процесс наследует параметры среды родительского процесса.
 
 Функции `_spawn` могут передавать все сведения об открытых файлах, включая режим преобразования, в новый процесс. Эти сведения передаются в режиме реального времени через запись `C_FILE_INFO` в среде. Обычно код запуска обрабатывает эту запись, а затем удаляет ее из среды. Если же функция `_spawn` порождает процесс, отличный от C, эта запись сохраняется в среде. При печати среды в строке определения для этой записи отображаются графические символы, так как сведения о среде передаются в формате двоичных данных в режиме реального времени. На обычную работу это не влияет. В защищенном режиме сведения о среде передаются в виде текста и поэтому не содержат графических символов.
 
@@ -232,9 +240,9 @@ from SPAWN!
 ## <a name="see-also"></a>См. также раздел
 
 [Управление процессами и средой](../c-runtime-library/process-and-environment-control.md)<br/>
-[Прервать](../c-runtime-library/reference/abort.md)<br/>
+[рвал](../c-runtime-library/reference/abort.md)<br/>
 [atexit](../c-runtime-library/reference/atexit.md)<br/>
-[_exec, _wexec функции](../c-runtime-library/exec-wexec-functions.md)<br/>
+[_exec, функции _wexec](../c-runtime-library/exec-wexec-functions.md)<br/>
 [exit, _Exit, _exit](../c-runtime-library/reference/exit-exit-exit.md)<br/>
 [_flushall](../c-runtime-library/reference/flushall.md)<br/>
 [_getmbcp](../c-runtime-library/reference/getmbcp.md)<br/>

@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::bitset [C++], to_ulong
 - std::bitset [C++], reference
 ms.assetid: 28b86964-87b4-429c-8124-b6c251b6c50b
-ms.openlocfilehash: 9a822e635ea3a1fd035a6a4b1d2b38250c96158a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 623593e723b26244cc82e9eeed3e32657cca0b94
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217848"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846489"
 ---
 # <a name="bitset-class"></a>Класс bitset
 
@@ -67,19 +67,19 @@ class bitset
 
 ### <a name="constructors"></a>Конструкторы
 
-|||
+|Имя|Описание|
 |-|-|
 |[bitset](#bitset)|Создает объект класса `bitset\<N>` и инициализирует биты с нулевым значением до определенного указанного значения или до значений, полученных из символов в строке.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|||
+|Имя|Описание|
 |-|-|
 |[element_type](#element_type)|Тип, который является синонимом для типа данных **`bool`** и может использоваться для ссылки на биты элементов в `bitset` .|
 
 ### <a name="functions"></a>Функции
 
-|||
+|Имя|Описание|
 |-|-|
 |[каждого](#all)|Проверяет все биты в этом параметре, `bitset` чтобы определить, заданы ли для них значение **`true`** .|
 |[всеми](#any)|Функция-член проверяет, равен ли какой-либо бит в последовательности 1.|
@@ -89,20 +89,20 @@ class bitset
 |[reset](#reset)|Сбрасывает все биты в `bitset` в значение 0 или сбрасывает бит в указанной позиции в 0.|
 |[set](#set)|Присваивает всем битам в `bitset` значение 1 или присваивает биту в указанной позиции значение 1.|
 |[size](#size)|Возвращает количество бит в объекте `bitset`.|
-|[Проверьте](#test)|Проверяет, присвоено ли биту в указанной позиции в `bitset` значение 1.|
+|[Тестирование](#test)|Проверяет, присвоено ли биту в указанной позиции в `bitset` значение 1.|
 |[to_string](#to_string)|Преобразует объект `bitset` в строковое представление.|
 |[to_ullong](#to_ullong)|Возвращает сумму битовых значений в `bitset` виде **`unsigned long long`** .|
 |[to_ulong](#to_ulong)|Преобразует `bitset` объект в **`unsigned long`** , который создает последовательность битов, содержащихся при использовании для инициализации `bitset` .|
 
 ### <a name="classes"></a>Классы
 
-|||
+|name|Описание|
 |-|-|
 |[reference](#reference)|Прокси-класс, который предоставляет ссылки на биты в объекте `bitset`, используемые для доступа к отдельным битам и их обработки в качестве вспомогательного класса для `operator[]` класса `bitset`.|
 
 ### <a name="operators"></a>Операторы
 
-|||
+|Имя|Описание|
 |-|-|
 |[operator! =](#op_neq)|Проверяет целевой объект `bitset` на неравенство относительно указанного объекта `bitset`.|
 |[Оператор&=](#op_and_eq)|Выполняет побитовое сочетание битовых массивов с использованием логической операции `AND`.|
@@ -118,11 +118,11 @@ class bitset
 
 ### <a name="structures"></a>Структуры
 
-|||
+|Имя|Описание|
 |-|-|
 |[hash](#hash)||
 
-### <a name="all"></a><a name="all"></a>каждого
+### <a name="all"></a><a name="all"></a> каждого
 
 Проверяет все биты в этом битовом массиве, чтобы определить, имеют ли они все значение true.
 
@@ -134,7 +134,7 @@ bool all() const;
 
 Возвращает значение true, если все биты в этом массиве имеют значение true. Возвращает **`false`** , если один или несколько битов имеют значение false.
 
-### <a name="any"></a><a name="any"></a>всеми
+### <a name="any"></a><a name="any"></a> всеми
 
 Проверяет, равен ли какой-либо бит в последовательности 1.
 
@@ -197,7 +197,7 @@ The reset bitset is: ( 00000 )
 None of the bits in bitset b1 are set to 1.
 ```
 
-### <a name="bitset"></a><a name="bitset"></a>битовом массиве
+### <a name="bitset"></a><a name="bitset"></a> битовом массиве
 
 Создает объект класса `bitset\<N>` и инициализирует биты с нулевым значением, с определенным указанным значением или со значениями, полученными из символов в строке.
 
@@ -342,7 +342,7 @@ The set of bits in bitset<11> b6( bitval5, 3, 5 ) is ( 00000010011 ).
 The set of bits in bitset<9> b7( bitval, 2 ) is ( 110011011 ).
 ```
 
-### <a name="count"></a><a name="count"></a>расчета
+### <a name="count"></a><a name="count"></a> расчета
 
 Возвращает количество бит, заданных в последовательности бит.
 
@@ -396,7 +396,7 @@ The collection of flipped bits in the modified bitset is: ( 11011 )
 The number of bits in the bitset set to 1 is: 4.
 ```
 
-### <a name="element_type"></a><a name="element_type"></a>element_type
+### <a name="element_type"></a><a name="element_type"></a> element_type
 
 Тип, который является синонимом для типа данных **`bool`** и может использоваться для ссылки на биты элементов в битовом массиве.
 
@@ -452,7 +452,7 @@ Bitset b1 modified by b1[2] = 1 is: ( 110 )
 The bit at position 2 of bitset b1has a value of 1.
 ```
 
-### <a name="flip"></a><a name="flip"></a>вернут
+### <a name="flip"></a><a name="flip"></a> вернут
 
 Инвертирует значения всех битов в битовом массиве или инвертирует один бит в указанной позиции.
 
@@ -525,14 +525,14 @@ After flipping the fourth bit, the bitset becomes: ( 10001 )
 11111  The bit flipped is in position 4.
 ```
 
-### <a name="hash"></a><a name="hash"></a>функции
+### <a name="hash"></a><a name="hash"></a> функции
 
 ```cpp
 template <class T> struct hash;
 template <size_t N> struct hash<bitset<N>>;
 ```
 
-### <a name="none"></a><a name="none"></a>None
+### <a name="none"></a><a name="none"></a> None
 
 Проверяет, присвоено ли хотя бы одному биту в объекте bitset значение 1.
 
@@ -589,7 +589,7 @@ At least one of the bits in bitset b1 is set to 1.
 None of the bits in bitset b1 are set to 1.
 ```
 
-### <a name="operator"></a><a name="op_neq"></a>operator! =
+### <a name="operator"></a><a name="op_neq"></a> operator! =
 
 Проверяет целевой битовый массив на неравенство относительно указанного битового массива.
 
@@ -651,7 +651,7 @@ Bitset b1 is the same as bitset b2.
 Bitset b1 is different from bitset b3.
 ```
 
-### <a name="operatoramp"></a><a name="op_and_eq"></a>станции&amp;=
+### <a name="operatoramp"></a><a name="op_and_eq"></a> станции&amp;=
 
 Выполняет побитовое сочетание битовых массивов с использованием логической операции `AND`.
 
@@ -718,7 +718,7 @@ the target bitset b1 becomes:   ( 00011 ).
 The parameter bitset b2 remains: ( 01011 ).
 ```
 
-### <a name="operator"></a><a name="op_lshift"></a>станции\<\<
+### <a name="operator"></a><a name="op_lshift"></a> станции\<\<
 
 Сдвигает биты в битовом массиве влево на указанное число позиций и возвращает результат в новый битовый массив.
 
@@ -770,7 +770,7 @@ int main( )
 }
 ```
 
-### <a name="operatorltlt"></a><a name="op_lshift_eq"></a>станции&lt;&lt;=
+### <a name="operatorltlt"></a><a name="op_lshift_eq"></a> станции&lt;&lt;=
 
 Сдвигает биты в массиве битов влево на указанное число позиций и возвращает результат в целевой битовый массив.
 
@@ -817,7 +817,7 @@ After shifting the bits 2 positions to the left,
 the target bitset b1 becomes: ( 11100 ).
 ```
 
-### <a name="operator"></a><a name="op_eq_eq"></a>Оператор = =
+### <a name="operator"></a><a name="op_eq_eq"></a> Оператор = =
 
 Проверяет целевой битовый массив на равенство относительно указанного битового массива.
 
@@ -878,7 +878,7 @@ Bitset b1 is the same as bitset b2.
 Bitset b1 is different from bitset b3.
 ```
 
-### <a name="operatorgtgt"></a><a name="op_rshift"></a>станции&gt;&gt;
+### <a name="operatorgtgt"></a><a name="op_rshift"></a> станции&gt;&gt;
 
 Сдвигает биты в битовом массиве вправо на указанное число позиций и возвращает результат в новый битовый массив.
 
@@ -931,7 +931,7 @@ After shifting the bits 1 position to the right,
 the bitset b3 is: ( 01110 ).
 ```
 
-### <a name="operatorgtgt"></a><a name="op_rshift_eq"></a>станции&gt;&gt;=
+### <a name="operatorgtgt"></a><a name="op_rshift_eq"></a> станции&gt;&gt;=
 
 Сдвигает биты в массиве битов вправо на указанное число позиций и возвращает результат в целевой битовый массив.
 
@@ -979,7 +979,7 @@ After shifting the bits 2 positions to the right,
 the target bitset b1 becomes: ( 00111 ).
 ```
 
-### <a name="operator"></a><a name="op_at"></a>operator []
+### <a name="operator"></a><a name="op_at"></a> operator []
 
 Возвращает ссылку на бит в указанной позиции в битовом массиве, если этот битовый массив может быть изменен; в противном случае возвращается значение бита в этой позиции.
 
@@ -1023,7 +1023,7 @@ int main( )
 }
 ```
 
-### <a name="operator"></a><a name="op_xor_eq"></a>Оператор ^ =
+### <a name="operator"></a><a name="op_xor_eq"></a> Оператор ^ =
 
 Выполняет побитовое сочетание битовых массивов с использованием эксклюзивной операции `OR`.
 
@@ -1089,7 +1089,7 @@ the target bitset b1 becomes:   ( 01100 ).
 The parameter bitset b2 remains: ( 01011 ).
 ```
 
-### <a name="operator124"></a><a name="op_or_eq"></a>Оператор&#124;=
+### <a name="operator124"></a><a name="op_or_eq"></a> Оператор&#124;=
 
 Выполняет побитовое сочетание битовых массивов с использованием инклюзивной операции `OR`.
 
@@ -1156,7 +1156,7 @@ the target bitset b1 becomes:   ( 01111 ).
 The parameter bitset b2 remains: ( 01011 ).
 ```
 
-### <a name="operator"></a><a name="op_not"></a>Оператор ~
+### <a name="operator"></a><a name="op_not"></a> Оператор ~
 
 Инвертирует все биты в целевом битовом массиве и возвращает результат.
 
@@ -1201,7 +1201,7 @@ Bitset b2 = ~b1 is: ( 11000 ).
 Bitset b3 = b1.flip( ) is: ( 11000 ).
 ```
 
-### <a name="reference"></a><a name="reference"></a>IsReference
+### <a name="reference"></a><a name="reference"></a> IsReference
 
 Прокси-класс, предоставляющий ссылки на биты в битовом массиве, который используется для доступа к отдельным битам и их обработки в качестве вспомогательного класса для `operator[]` класса bitset.
 
@@ -1323,7 +1323,7 @@ it becomes ( 00110 ).
 After a second flip, the value of the position 4 bit in b2 is now: 1.
 ```
 
-### <a name="reset"></a><a name="reset"></a>перезапуск
+### <a name="reset"></a><a name="reset"></a> перезапуск
 
 Сбрасывает все биты в битовом массиве в значение 0 или сбрасывает бит в указанной позиции в значение 0.
 
@@ -1383,7 +1383,7 @@ The collecion of bits obtained from resetting all
 the elements of the bitset b1 is: ( 00000 )
 ```
 
-### <a name="set"></a><a name="set"></a>параметр
+### <a name="set"></a><a name="set"></a> параметр
 
 Устанавливает все биты в битовом массиве в значение 1 или устанавливает в значение 1 бит в указанной позиции.
 
@@ -1449,7 +1449,7 @@ The collecion of bits obtained from setting all the
 elements of the bitset b1 is: ( 11111 )
 ```
 
-### <a name="size"></a><a name="size"></a>изменять
+### <a name="size"></a><a name="size"></a> изменять
 
 Возвращает количество бит в битовом массиве.
 
@@ -1491,7 +1491,7 @@ The set of bits in bitset<5> b1( 6 ) is: ( 00110 )
 The number of bits in bitset b1 is: 5.
 ```
 
-### <a name="test"></a><a name="test"></a>Проверьте
+### <a name="test"></a><a name="test"></a> Проверьте
 
 Проверяет, присвоено ли биту в указанной позиции в битовом массиве значение 1.
 
@@ -1512,7 +1512,7 @@ bool test(size_t _Pos) const;
 
 Функция-член вызывает исключение [out_of_range](../standard-library/out-of-range-class.md)
 
-### <a name="to_string"></a><a name="to_string"></a>to_string
+### <a name="to_string"></a><a name="to_string"></a> to_string
 
 Преобразует объект битовом массиве в строковое представление.
 
@@ -1560,7 +1560,7 @@ The string returned from the bitset b1
   by the member function to_string( ) is: 00111.
 ```
 
-### <a name="to_ullong"></a><a name="to_ullong"></a>to_ullong
+### <a name="to_ullong"></a><a name="to_ullong"></a> to_ullong
 
 Возвращает **`unsigned long long`** значение, содержащее те же биты, что и содержимое объекта битовом массиве.
 
@@ -1580,7 +1580,7 @@ unsigned long long to_ullong() const;
 
 Возвращает сумму битовых значений, которые находятся в битовой последовательности, в виде **`unsigned long long`** .
 
-### <a name="to_ulong"></a><a name="to_ulong"></a>to_ulong
+### <a name="to_ulong"></a><a name="to_ulong"></a> to_ulong
 
 Преобразует объект битовом массиве в целое число, которое будет формировать последовательность битов, содержащихся при использовании для инициализации битовом массиве.
 

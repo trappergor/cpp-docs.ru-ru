@@ -32,12 +32,12 @@ helpviewer_keywords:
 - Hash method
 - m_rgbookmarks
 ms.assetid: a8aa3149-7ce8-4976-a680-2da193fd3234
-ms.openlocfilehash: 06e860425215d9fde268b780c001301b14a1caa1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a45b7ef1a31c3ecf34b15ee35bce48559465a905
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210435"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840314"
 ---
 # <a name="irowsetlocateimpl-class"></a>Класс IRowsetLocateImpl
 
@@ -64,19 +64,19 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 ### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Класс, производный от `IRowsetLocateImpl`.
+Класс, производный от `IRowsetLocateImpl` .
 
 *ровсетинтерфаце*<br/>
-Класс, производный от `IRowsetImpl`.
+Класс, производный от `IRowsetImpl` .
 
 *ровкласс*<br/>
-Единица хранения для `HROW`.
+Единица хранения для `HROW` .
 
 *мапкласс*<br/>
 Единица хранения для всех дескрипторов строк, удерживаемых поставщиком.
 
 *букмарккэйтипе*<br/>
-Тип закладки, например LONG или String. Длина обычных закладок должна быть не меньше двух байт. (Однобайтовая длина зарезервирована для OLE DB [стандартных закладок](/previous-versions/windows/desktop/ms712954(v=vs.85))`DBBMK_FIRST`, `DBBMK_LAST`и `DBBMK_INVALID`.)
+Тип закладки, например LONG или String. Длина обычных закладок должна быть не меньше двух байт. (Однобайтовая длина зарезервирована для OLE DB [стандартных закладок](/previous-versions/windows/desktop/ms712954(v=vs.85)) `DBBMK_FIRST` , `DBBMK_LAST` и `DBBMK_INVALID` .)
 
 *букмарктипе*<br/>
 Механизм сопоставления для поддержания связей между закладками и данными.
@@ -88,11 +88,11 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 
 **Заголовок**: ATLDB. h
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Элементы
 
 ### <a name="interface-methods"></a>Методы интерфейса
 
-|||
+| Имя | Описание |
 |-|-|
 |[Сравнить](#compare)|Сравнивает две закладки.|
 |[GetRowsAt](#getrowsat)|Извлекает строки, начиная со строки, указанной смещением, из закладки.|
@@ -101,21 +101,21 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 
 ### <a name="data-members"></a>Элементы данных
 
-|||
+| Имя | Описание |
 |-|-|
 |[m_rgBookmarks](#rgbookmarks)|Массив закладок.|
 
 ## <a name="remarks"></a>Remarks
 
-`IRowsetLocateImpl` — это реализация OLE DB шаблонов интерфейса [IRowsetLocate](/previous-versions/windows/desktop/ms721190(v=vs.85)) . `IRowsetLocate` используется для выборки произвольных строк из набора строк. Набор строк, который не реализует этот интерфейс, является `sequential` набором строк. Если в наборе строк имеется `IRowsetLocate`, столбец 0 является закладкой для строк; при чтении этого столбца будет получено значение закладки, которое можно использовать для перемещения в ту же строку.
+`IRowsetLocateImpl` — Это реализация OLE DB шаблонов интерфейса [IRowsetLocate](/previous-versions/windows/desktop/ms721190(v=vs.85)) . `IRowsetLocate` используется для выборки произвольных строк из набора строк. Набор строк, который не реализует этот интерфейс, является `sequential` набором строк. Если имеется `IRowsetLocate` в наборе строк, столбец 0 является закладкой для строк; при чтении этого столбца будет получено значение закладки, которое можно использовать для перемещения в ту же строку.
 
 `IRowsetLocateImpl` используется для реализации поддержки закладок в поставщиках. Закладки — это заполнители (индексы в наборе строк), позволяющие потребителю быстро возвращаться к строке, обеспечивая высокую скорость доступа к данным. Поставщик определяет, какие закладки могут уникально идентифицировать строку. С помощью `IRowsetLocateImpl` методов можно сравнивать закладки, получать строки по смещению, получать строки по закладкам и возвращать хэш-значения для закладок.
 
 Чтобы обеспечить поддержку OLE DB закладок в наборе строк, сделайте набор строк производным от этого класса.
 
-Сведения о реализации поддержки закладок см. в статье [Поддержка поставщиков для закладок](../../data/oledb/provider-support-for-bookmarks.md) в *руководстве C++ по визуальному программисту* и [закладки](/previous-versions/windows/desktop/ms709728(v=vs.85)) в *справочнике по OLE DB программиста* в пакете Platform SDK.
+Сведения о реализации поддержки закладок см. в статье [Поддержка поставщиков для закладок](../../data/oledb/provider-support-for-bookmarks.md) в *Visual C++ руководстве программиста* и [закладок](/previous-versions/windows/desktop/ms709728(v=vs.85)) в *справочнике по OLE DB программиста* в пакете SDK для платформы.
 
-## <a name="irowsetlocateimplcompare"></a><a name="compare"></a>IRowsetLocateImpl:: Compare
+## <a name="irowsetlocateimplcompare"></a><a name="compare"></a> IRowsetLocateImpl:: Compare
 
 Сравнивает две закладки.
 
@@ -136,19 +136,19 @@ STDMETHOD (Compare )(HCHAPTER /* hReserved */,
 
 ### <a name="remarks"></a>Remarks
 
-Любая из закладок может быть стандартной стандартной [закладкой](/previous-versions/windows/desktop/ms712954(v=vs.85)) OLE DB (`DBBMK_FIRST`, `DBBMK_LAST`или `DBBMK_INVALID`). Значение, возвращаемое в `pComparison`, указывает на связь между двумя закладками:
+Любая из закладок может быть стандартной стандартной [закладкой](/previous-versions/windows/desktop/ms712954(v=vs.85)) OLE DB ( `DBBMK_FIRST` , `DBBMK_LAST` или `DBBMK_INVALID` ). Значение, возвращаемое в, `pComparison` указывает связь между двумя закладками:
 
-- DBCOMPARE_LT (`cbBookmark1` `cbBookmark2`.)
+- DBCOMPARE_LT (предшествует `cbBookmark1` `cbBookmark2` ).
 
-- DBCOMPARE_EQ (`cbBookmark1` равно `cbBookmark2`.)
+- DBCOMPARE_EQ ( `cbBookmark1` равно `cbBookmark2` .)
 
-- DBCOMPARE_GT (`cbBookmark1` находится после `cbBookmark2`.)
+- DBCOMPARE_GT ( `cbBookmark1` находится после `cbBookmark2` ).
 
 - DBCOMPARE_NE (закладки равны и не упорядочены).
 
 - DBCOMPARE_NOTCOMPARABLE (закладки нельзя сравнивать.)
 
-## <a name="irowsetlocateimplgetrowsat"></a><a name="getrowsat"></a>IRowsetLocateImpl:: GetRowsAt
+## <a name="irowsetlocateimplgetrowsat"></a><a name="getrowsat"></a> IRowsetLocateImpl:: GetRowsAt
 
 Извлекает строки, начиная со строки, указанной смещением, из закладки.
 
@@ -175,7 +175,7 @@ STDMETHOD (GetRowsAt )(HWATCHREGION /* hReserved1 */,
 
 `IRowsetLocateImpl::GetRowsAt` не изменяет позицию курсора.
 
-## <a name="irowsetlocateimplgetrowsbybookmark"></a><a name="getrowsbybookmark"></a>IRowsetLocateImpl:: Жетровсбибукмарк
+## <a name="irowsetlocateimplgetrowsbybookmark"></a><a name="getrowsbybookmark"></a> IRowsetLocateImpl:: Жетровсбибукмарк
 
 Извлекает одну или несколько строк, соответствующих указанным закладкам.
 
@@ -199,9 +199,9 @@ STDMETHOD (GetRowsByBookmark )(HCHAPTER /* hReserved */,
 
 ### <a name="remarks"></a>Remarks
 
-Закладка может быть определенным значением или OLE DB [стандартной закладками](/previous-versions/windows/desktop/ms712954(v=vs.85)) (`DBBMK_FIRST` или `DBBMK_LAST`). Не изменяет позицию курсора.
+Закладка может быть значением, определенным пользователем, или OLE DB [стандартной закладками](/previous-versions/windows/desktop/ms712954(v=vs.85)) ( `DBBMK_FIRST` или `DBBMK_LAST` ). Не изменяет позицию курсора.
 
-## <a name="irowsetlocateimplhash"></a><a name="hash"></a>IRowsetLocateImpl:: hash
+## <a name="irowsetlocateimplhash"></a><a name="hash"></a> IRowsetLocateImpl:: hash
 
 Возвращает хэш-значения для указанных закладок.
 
@@ -223,7 +223,7 @@ STDMETHOD (Hash )(HCHAPTER /* hReserved */,
 
 Другие параметры см. в разделе [IRowsetLocate:: hash](/previous-versions/windows/desktop/ms709697(v=vs.85)) в *справочнике программиста OLE DB*.
 
-## <a name="irowsetlocateimplm_rgbookmarks"></a><a name="rgbookmarks"></a>IRowsetLocateImpl:: m_rgBookmarks
+## <a name="irowsetlocateimplm_rgbookmarks"></a><a name="rgbookmarks"></a> IRowsetLocateImpl:: m_rgBookmarks
 
 Массив закладок.
 
@@ -237,6 +237,6 @@ CAtlArray<DBROWCOUNT> m_rgBookmarks;
 
 [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
-[IRowsetLocate: IRowset](/previous-versions/windows/desktop/ms721190(v=vs.85))
-[Поддержка закладок поставщика](../../data/oledb/provider-support-for-bookmarks.md)<br/>
+[IRowsetLocate: IRowset](/previous-versions/windows/desktop/ms721190(v=vs.85)) 
+ [Поддержка закладок поставщиком](../../data/oledb/provider-support-for-bookmarks.md)<br/>
 [Закладки](/previous-versions/windows/desktop/ms709728(v=vs.85))

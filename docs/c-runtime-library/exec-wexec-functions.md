@@ -56,23 +56,33 @@ helpviewer_keywords:
 - _exec function
 - _texecvpe function
 ms.assetid: a261df93-206a-4fdc-b8ac-66aa7db83bc6
-ms.openlocfilehash: 52c9727db544d8b124b37cc5beae369ae06abe10
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ecfcf88b09a4383fc050e9737a0ffe7203f9a050
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81351667"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839729"
 ---
 # <a name="_exec-_wexec-functions"></a>Функции _exec, _wexec
 
 Каждая функция в этом семействе загружает и выполняет новый процесс.
 
-|||
-|-|-|
-|[_execl, _wexecl](../c-runtime-library/reference/execl-wexecl.md)|[_execv, _wexecv](../c-runtime-library/reference/execv-wexecv.md)|
-|[_execle, _wexecle](../c-runtime-library/reference/execle-wexecle.md)|[_execve, _wexecve](../c-runtime-library/reference/execve-wexecve.md)|
-|[_execlp, _wexeclp](../c-runtime-library/reference/execlp-wexeclp.md)|[_execvp, _wexecvp](../c-runtime-library/reference/execvp-wexecvp.md)|
-|[_execlpe, _wexeclpe](../c-runtime-library/reference/execlpe-wexeclpe.md)|[_execvpe, _wexecvpe](../c-runtime-library/reference/execvpe-wexecvpe.md)|
+:::row:::
+   :::column span="":::
+      [_execl, _wexecl](../c-runtime-library/reference/execl-wexecl.md)\
+      [_execv, _wexecv](../c-runtime-library/reference/execv-wexecv.md)\
+      [_execle, _wexecle](../c-runtime-library/reference/execle-wexecle.md)
+   :::column-end:::
+   :::column span="":::
+      [_execve, _wexecve](../c-runtime-library/reference/execve-wexecve.md)\
+      [_execlp, _wexeclp](../c-runtime-library/reference/execlp-wexeclp.md)\
+      [_execvp, _wexecvp](../c-runtime-library/reference/execvp-wexecvp.md)
+   :::column-end:::
+   :::column span="":::
+      [_execlpe, _wexeclpe](../c-runtime-library/reference/execlpe-wexeclpe.md)\
+      [_execvpe, _wexecvpe](../c-runtime-library/reference/execvpe-wexecvpe.md)
+   :::column-end:::
+:::row-end:::
 
 Буква в конце имени функции определяет вариацию.
 
@@ -118,7 +128,7 @@ ms.locfileid: "81351667"
 
 Функции `_execv`, `_execve`, `_execvp` и `_execvpe` можно вызывать, когда число параметров в новом процессе не определено. Указатели на параметры передаются как массив, `argv`. Параметр `argv`[0] обычно является указателем на `cmdname`. Параметры с `argv`[1] по `argv`[`n`] указывают на строки символов, формирующие новый список параметров. Параметр `argv`[`n` +1] должен быть указателем на **NULL**, отмечающим конец списка параметров.
 
-Файлы, открытые во время вызова функции `_exec`, остаются открытыми в новом процессе. В вызовах `_execl`, `_execlp`, `_execv` и `_execvp` новый процесс наследует среду вызывающего процесса. Вызовы функций `_execle`, `_execlpe`, `_execve` и `_execvpe` изменяют среду для нового процесса, передавая список параметров среды с помощью параметра `envp`. `envp` — это массив указателей символов, каждый элемент которого (за исключением последнего) указывает на строку, завершающуюся символом null, определенную в переменной среды. Такие строки обычно имеют вид `NAME`=`value`, где `NAME` — это имя переменной среды, а `value` — строковое значение, задаваемое для данной переменной. (Обратите `value` внимание, что не заключено в двойные кавычки.) Окончательный элемент `envp` массива должен быть **NULL**. Если же значение самого параметра `envp` — **NULL**, новый процесс наследует параметры среды вызывающего процесса.
+Файлы, открытые во время вызова функции `_exec`, остаются открытыми в новом процессе. В вызовах `_execl`, `_execlp`, `_execv` и `_execvp` новый процесс наследует среду вызывающего процесса. Вызовы функций `_execle`, `_execlpe`, `_execve` и `_execvpe` изменяют среду для нового процесса, передавая список параметров среды с помощью параметра `envp`. `envp` — это массив указателей символов, каждый элемент которого (за исключением последнего) указывает на строку, завершающуюся символом null, определенную в переменной среды. Такие строки обычно имеют вид `NAME`=`value`, где `NAME` — это имя переменной среды, а `value` — строковое значение, задаваемое для данной переменной. (Обратите внимание, что `value` не заключено в двойные кавычки.) Последний элемент `envp` массива должен иметь **значение NULL**. Если же значение самого параметра `envp` — **NULL**, новый процесс наследует параметры среды вызывающего процесса.
 
 Программа, выполняемая с одной из функций `_exec`, всегда загружается в память, как если бы для поля максимального объема выделяемой памяти в заголовке EXE-файла было задано значение по умолчанию 0xFFFFH.
 
@@ -239,9 +249,9 @@ int main( int ac, char* av[] )
 ## <a name="see-also"></a>См. также раздел
 
 [Управление процессами и средой](../c-runtime-library/process-and-environment-control.md)<br/>
-[Прервать](../c-runtime-library/reference/abort.md)<br/>
+[рвал](../c-runtime-library/reference/abort.md)<br/>
 [atexit](../c-runtime-library/reference/atexit.md)<br/>
 [exit, _Exit, _exit](../c-runtime-library/reference/exit-exit-exit.md)<br/>
 [_onexit, _onexit_m](../c-runtime-library/reference/onexit-onexit-m.md)<br/>
-[Функции _spawn, _wspawn](../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, функции _wspawn](../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [system, _wsystem](../c-runtime-library/reference/system-wsystem.md)

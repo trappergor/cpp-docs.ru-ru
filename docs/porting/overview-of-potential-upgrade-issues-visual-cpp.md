@@ -2,12 +2,12 @@
 title: Общие сведения о возможных проблемах, возникающих при обновлении (Visual C++)
 ms.date: 05/03/2019
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: fcfa8e8ea334cf7c2486513ae162b04014e7f24b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d62bccfb3e508145773c01b26976f46dbcb6490f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231641"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839677"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Общие сведения о возможных проблемах, возникающих при обновлении (Visual C++)
 
@@ -98,9 +98,8 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 В следующей таблице приведены библиотеки, содержимое которых было изменено начиная с Visual Studio 2015. Для обновления нужно добавить новые имена библиотек во второй столбец к библиотекам в первом столбце. Некоторые из этих библиотек являются библиотеками импорта, но они не должны иметь значения.
 
-|||
-|-|-|
 |При использовании:|Вам потребуется использовать следующие библиотеки:|
+|-|-|
 |LIBCMT.lib|libcmt.lib, libucrt.lib, libvcruntime.lib|
 |libcmtd.lib|libcmtd.lib, libucrtd.lib, libvcruntimed.lib|
 |msvcrt.lib|msvcrt.lib, ucrt.lib, vcruntime.lib|

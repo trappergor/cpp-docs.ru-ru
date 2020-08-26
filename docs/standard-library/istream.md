@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - istream header
 ms.assetid: efcf24e4-05d1-4719-ab0b-9e7ebe845d89
-ms.openlocfilehash: 37399bb50f195c683b52eea4c8fadf8679d62852
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 15d955aca1406183cc348395068ba042b75d7417
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233097"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846463"
 ---
 # <a name="ltistreamgt"></a>&lt;istream&gt;
 
@@ -36,25 +36,25 @@ ms.locfileid: "87233097"
 
 ### <a name="manipulators"></a>Манипуляторы
 
-|||
+|Имя|Описание|
 |-|-|
 |[Протокол](../standard-library/istream-functions.md#ws)|Пропускает пробелы в потоке.|
 |[позиции](../standard-library/istream-functions.md#istream_swap)|Меняет местами два объекта потоков.|
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |[Оператор>>](../standard-library/istream-operators.md#op_gt_gt)|Извлекает символы и строки из потока.|
 
 ### <a name="classes"></a>Классы
 
-|Class|Описание:|
+|Класс|Описание|
 |-|-|
 |[basic_iostream](../standard-library/basic-iostream-class.md)|Класс потока, поддерживающий ввод и вывод.|
 |[basic_istream](../standard-library/basic-istream-class.md)|Шаблон класса описывает объект, управляющий извлечением элементов и закодированных объектов из буфера потока с элементами типа `Elem` , также известными как [char_type](../standard-library/basic-ios-class.md#char_type), признаки символов которых определяются классом `Tr` , также известным как [traits_type](../standard-library/basic-ios-class.md#traits_type).|
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также раздел
 
 [Безопасность потоков в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Программирование iostream](../standard-library/iostream-programming.md)\

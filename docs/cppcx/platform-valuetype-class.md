@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::ValueType Class
 ms.assetid: 79aa8754-b140-4974-a5b1-be046938a10a
-ms.openlocfilehash: 889cf3a53468491517d37978ca09472756ad9b7e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4ce34fa3f197424833d34bdb866712d412e69c3
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182955"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846554"
 ---
 # <a name="platformvaluetype-class"></a>Platform::ValueType - класс
 
@@ -26,11 +26,11 @@ public ref class ValueType : Object
 
 ## <a name="public-methods"></a>Открытые методы
 
-|||
-|-|-|
-|[ValueType::ToString](#tostring)|Возвращает строковое представление объекта. Наследуется от [Platform::Object](../cppcx/platform-object-class.md).|
+| Имя | Описание |
+|--|--|
+| [ValueType:: ToString](#tostring) | Возвращает строковое представление объекта. Наследуется от [Platform:: Object](../cppcx/platform-object-class.md). |
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Класс ValueType используется для создания типов значений. Класс ValueType является производным от класса Object, который содержит базовые элементы. Однако компилятор отсоединяет эти базовые элементы от типов значений, которые являются производными от класса ValueType. При упаковке типа значения компилятор снова присоединяет эти базовые элементы.
 
@@ -42,9 +42,9 @@ public ref class ValueType : Object
 
 **Пространство имен:** Platform
 
-**Метаданные:** platform.winmd
+**Метаданные:** Platform. winmd
 
-## <a name="tostring"></a> Метод ValueType::ToString
+## <a name="valuetypetostring-method"></a><a name="tostring"></a> Метод ValueType:: ToString
 
 Возвращает строковое представление объекта.
 
@@ -56,8 +56,8 @@ Platform::String ToString();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Представляющий значение Platform::String.
+Строка Platform:: String, представляющая значение.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Platform](../cppcx/platform-namespace-c-cx.md)

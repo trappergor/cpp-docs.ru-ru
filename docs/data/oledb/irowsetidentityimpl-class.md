@@ -13,12 +13,12 @@ helpviewer_keywords:
 - IRowsetIdentityImpl class
 - IsSameRow method
 ms.assetid: 56821edf-e045-40c8-96bd-231552cd5799
-ms.openlocfilehash: 20f558099c02d7de8a20b3cf631812b44a742a48
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 48ed687ff67208109b5a2acf400d98491b4c769a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210411"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836147"
 ---
 # <a name="irowsetidentityimpl-class"></a>Класс IRowsetIdentityImpl
 
@@ -35,24 +35,24 @@ class ATL_NO_VTABLE IRowsetIdentityImpl
 ### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Класс, производный от `IRowsetIdentityImpl`.
+Класс, производный от `IRowsetIdentityImpl` .
 
 *ровкласс*<br/>
-Единица хранения для `HROW`.
+Единица хранения для `HROW` .
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** atldb.h
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Элементы
 
 ### <a name="methods"></a>Методы
 
-|||
+| Имя | Описание |
 |-|-|
 |[IsSameRow](#issamerow)|Сравнивает два дескриптора строки, чтобы определить, ссылаются ли они на одну и ту же строку.|
 
-## <a name="irowsetidentityimplissamerow"></a><a name="issamerow"></a>IRowsetIdentityImpl:: IsSameRow
+## <a name="irowsetidentityimplissamerow"></a><a name="issamerow"></a> IRowsetIdentityImpl:: IsSameRow
 
 Сравнивает два дескриптора строки, чтобы определить, ссылаются ли они на одну и ту же строку.
 
@@ -69,7 +69,7 @@ STDMETHOD(IsSameRow )(HROW hThisRow,
 
 ### <a name="remarks"></a>Remarks
 
-Для сравнения дескрипторов строк этот метод приводит `HROW` дескрипторы к `RowClass`ным элементам и вызывает `memcmp` для указателей.
+Для сравнения дескрипторов строк этот метод приводит `HROW` дескрипторы к `RowClass` элементам и вызовам `memcmp` указателей.
 
 ## <a name="see-also"></a>См. также раздел
 
