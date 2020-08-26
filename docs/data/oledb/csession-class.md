@@ -40,12 +40,12 @@ helpviewer_keywords:
 - Open method
 - StartTransaction method
 ms.assetid: 83cd798f-b45d-4f11-a23c-29183390450c
-ms.openlocfilehash: 72797411b100480a06e27b71b000264070e57e32
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6858c26df5f5ee364717d089704117e650282278
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211137"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841107"
 ---
 # <a name="csession-class"></a>класс CSession
 
@@ -61,24 +61,24 @@ class CSession
 
 **Заголовок:** atldbcli.h
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Элементы
 
 ### <a name="methods"></a>Методы
 
-|||
+| Имя | Описание |
 |-|-|
-|[Abort](#abort)|Отменяет (завершает) транзакцию.|
+|[Рвал](#abort)|Отменяет (завершает) транзакцию.|
 |[Закрыть](#close)|Закрывает сеанс.|
-|[Фиксация](#commit)|Фиксирует транзакцию.|
+|[Фиксация](#commit)|Завершает транзакцию.|
 |[жеттрансактионинфо](#gettransactioninfo)|Возвращает сведения о транзакции.|
 |[Открыть](#open)|Открывает новый сеанс для объекта источника данных.|
 |[StartTransaction](#starttransaction)|Начинает новую транзакцию для этого сеанса.|
 
 ## <a name="remarks"></a>Remarks
 
-Один или несколько сеансов могут быть связаны с каждым соединением с поставщиком (источником данных), представленным объектом [CDataSource](../../data/oledb/cdatasource-class.md) . Чтобы создать новый `CSession` для `CDataSource`, вызовите [CSession:: Open](../../data/oledb/csession-open.md). Чтобы начать транзакцию базы данных, `CSession` предоставляет метод `StartTransaction`. После запуска транзакции можно зафиксировать ее с помощью метода `Commit` или отменить ее с помощью метода `Abort`.
+Один или несколько сеансов могут быть связаны с каждым соединением с поставщиком (источником данных), представленным объектом [CDataSource](../../data/oledb/cdatasource-class.md) . Чтобы создать новый объект `CSession` для `CDataSource` , вызовите [CSession:: Open](../../data/oledb/csession-open.md). Для начала транзакции базы данных `CSession` предоставляет `StartTransaction` метод. После запуска транзакции ее можно зафиксировать с помощью `Commit` метода или отменить с помощью `Abort` метода.
 
-## <a name="csessionabort"></a><a name="abort"></a>CSession:: Abort
+## <a name="csessionabort"></a><a name="abort"></a> CSession:: Abort
 
 Завершает транзакцию.
 
@@ -98,7 +98,7 @@ HRESULT Abort(BOID* pboidReason = NULL,
 
 Стандартное значение HRESULT.
 
-## <a name="csessionclose"></a><a name="close"></a>CSession:: Close
+## <a name="csessionclose"></a><a name="close"></a> CSession:: Close
 
 Закрывает сеанс, Открытый с помощью [CSession:: Open](../../data/oledb/csession-open.md).
 
@@ -110,11 +110,11 @@ void Close() throw();
 
 ### <a name="remarks"></a>Remarks
 
-Освобождает указатель `m_spOpenRowset`.
+Освобождает `m_spOpenRowset` указатель.
 
-## <a name="csessioncommit"></a><a name="commit"></a>CSession:: Commit
+## <a name="csessioncommit"></a><a name="commit"></a> CSession:: Commit
 
-Фиксирует транзакцию.
+Завершает транзакцию.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -136,7 +136,7 @@ HRESULT Commit(BOOL bRetaining = FALSE,
 
 Дополнительные сведения см. в разделе [ITransaction:: Commit](/previous-versions/windows/desktop/ms713008(v=vs.85)).
 
-## <a name="csessiongettransactioninfo"></a><a name="gettransactioninfo"></a>CSession:: Жеттрансактионинфо
+## <a name="csessiongettransactioninfo"></a><a name="gettransactioninfo"></a> CSession:: Жеттрансактионинфо
 
 Возвращает сведения о транзакции.
 
@@ -158,7 +158,7 @@ HRESULT GetTransactionInfo(XACTTRANSINFO* pInfo) const throw();
 
 Дополнительные сведения см. в разделе [ITransaction:: жеттрансактионинфо](/previous-versions/windows/desktop/ms714975(v=vs.85)) в *справочнике программиста OLE DB*.
 
-## <a name="csessionopen"></a><a name="open"></a>CSession:: Open
+## <a name="csessionopen"></a><a name="open"></a> CSession:: Open
 
 Открывает новый сеанс для объекта источника данных.
 
@@ -175,7 +175,7 @@ HRESULT Open(const CDataSource& ds,
 *DS*<br/>
 окне Источник данных, для которого должен быть открыт сеанс.
 
-*ппропсет*<br/>
+*pPropSet*<br/>
 окне Указатель на массив структур [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) , содержащий свойства и значения, которые необходимо задать. См. раздел [наборы свойств и группы свойств](/previous-versions/windows/desktop/ms713696(v=vs.85)) в *справочнике по OLE DB программисту* в Windows SDK.
 
 *улпропсетс*<br/>
@@ -187,9 +187,9 @@ HRESULT Open(const CDataSource& ds,
 
 ### <a name="remarks"></a>Remarks
 
-Необходимо открыть объект источника данных с помощью [CDataSource:: Open](../../data/oledb/cdatasource-open.md) перед его передачей в `CSession::Open`.
+Необходимо открыть объект источника данных с помощью [CDataSource:: Open](../../data/oledb/cdatasource-open.md) перед его передачей в `CSession::Open` .
 
-## <a name="csessionstarttransaction"></a><a name="starttransaction"></a>CSession:: StartTransaction
+## <a name="csessionstarttransaction"></a><a name="starttransaction"></a> CSession:: StartTransaction
 
 Начинает новую транзакцию для этого сеанса.
 
@@ -218,4 +218,4 @@ HRESULT StartTransaction(ISOLEVEL isoLevel = ISOLATIONLEVEL_READCOMMITTED,
 
 [CatDB](../../overview/visual-cpp-samples.md)<br/>
 [Шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Справочник по шаблонам потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

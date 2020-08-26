@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::subtract_with_carry_engine [C++], max
 - std::subtract_with_carry_engine [C++], seed
 ms.assetid: 94a055f2-a620-4a22-ac34-c156924bab31
-ms.openlocfilehash: 63cbbb3a1a508b41c1e0632eda3eeabe4fda6696
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: cf82c4ca3ce995fa9a53dbea21293dc8515ff491
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72685817"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840912"
 ---
 # <a name="subtract_with_carry_engine-class"></a>Класс subtract_with_carry_engine
 
@@ -36,33 +36,36 @@ class subtract_with_carry_engine;
 
 ### <a name="parameters"></a>Параметры
 
-*Уинттипе* \
-Беззнаковый целочисленный тип результата. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*уинттипе*\
+Беззнаковый целочисленный тип результата. Возможные типы см. в разделе [\<random>](../standard-library/random.md) .
 
-*W* \
-**Размер слова**. Размер каждого слова последовательности состояния в битах. **Предварительные условия**: `0 < W ≤ numeric_limits<UIntType>::digits`
+*Белая*\
+**Размер слова**. Размер каждого слова последовательности состояния в битах. **Предварительное условие**: `0 < W ≤ numeric_limits<UIntType>::digits`
 
-*S* \
-**Короткая задержка**. Количество целочисленных значений. **Предварительные условия**: `0 < S < R`
+*#D0*\
+**Короткая задержка**. Количество целочисленных значений. **Предварительное условие**: `0 < S < R`
 
-*R*\
+*Cерверный*\
 **Длинная задержка**. Определяет повторения в созданном ряду.
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Элементы
 
-||||
-|-|-|-|
-|`subtract_with_carry_engine::subtract_with_carry_engine`|`subtract_with_carry_engine::min`|`subtract_with_carry_engine::discard`|
-|`subtract_with_carry_engine::operator()`|`subtract_with_carry_engine::max`|`subtract_with_carry_engine::seed`|
-|`default_seed` — это член-константа, определенный как `19780503u` и используемый как значение по умолчанию для параметра `subtract_with_carry_engine::seed` и конструктор с одним значением.|||
+`subtract_with_carry_engine::subtract_with_carry_engine`
+`subtract_with_carry_engine::max`\
+`subtract_with_carry_engine::min`\
+`subtract_with_carry_engine::discard`\
+`subtract_with_carry_engine::operator()`\
+`subtract_with_carry_engine::seed`
 
-Дополнительные сведения о членах механизма см. в разделе [\<random>](../standard-library/random.md).
+`default_seed` — это член-константа, определенный как `19780503u` и используемый как значение по умолчанию для параметра `subtract_with_carry_engine::seed` и конструктор с одним значением.
 
-## <a name="remarks"></a>Заметки
+Дополнительные сведения о членах подсистемы см [\<random>](../standard-library/random.md) . в разделе.
 
-Шаблон `substract_with_carry_engine` класса является улучшением по сравнению с [linear_congruential_engine](../standard-library/linear-congruential-engine-class.md). Ни один из этих механизмов не обеспечивает такую же скорость и качество результатов, как механизм [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).
+## <a name="remarks"></a>Remarks
 
-Этот механизм создает значения заданного пользователем целочисленного типа без знака с помощью отношения повторения ( *period*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`, где `cy(i)` имеет значение `1` если `x(i - S) - x(i - R) - cy(i - 1) < 0`, в противном случае `0` и `M` имеет значение `2`<sup>W</sup>. Состояние механизма — это индикатор переноса и значения *R* . Эти значения состоят из последних значений *r* , возвращаемых, если `operator()` вызывался по крайней мере *R* раз, в противном случае возвращаемые значения `N` и последние `R - N` начальные значения.
+`substract_with_carry_engine`Шаблон класса является улучшением по сравнению с [linear_congruential_engine](../standard-library/linear-congruential-engine-class.md). Ни один из этих механизмов не обеспечивает такую же скорость и качество результатов, как механизм [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).
+
+Этот модуль создает значения определяемого пользователем целочисленного типа без знака с помощью отношения повторения ( *period*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M` , где `cy(i)` имеет значение `1` `x(i - S) - x(i - R) - cy(i - 1) < 0` , если, в противном случае `0` , и `M` имеет значение `2` <sup>W</sup>. Состояние механизма — это индикатор переноса и значения *R* . Эти значения состоят из последних значений *r* , возвращаемых `operator()` , если вызывался по крайней мере *R* раз, в противном случае `N` возвращаемые значения и последние `R - N` значения начальных значений.
 
 Аргумент шаблона `UIntType` должен быть достаточно большим, чтобы хранить значения до `M - 1`.
 
@@ -78,10 +81,10 @@ class subtract_with_carry_engine;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<random>
+**Заголовок:**\<random>
 
 **Пространство имен:** std
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [\<random>](../standard-library/random.md)

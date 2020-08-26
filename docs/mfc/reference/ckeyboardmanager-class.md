@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], TranslateCharToUpper
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
-ms.openlocfilehash: a2d2ae8133310f3a93b6eefc30c67045a47cd94f
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: e67bbb18b6a87edfaa4bc4c410ec28eb613ed51d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561470"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841497"
 ---
 # <a name="ckeyboardmanager-class"></a>Класс CKeyboardManager
 
@@ -51,16 +51,14 @@ class CKeyboardManager : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|||
-|-|-|
 |name|Описание|
+|-|-|
 |[CKeyboardManager:: CKeyboardManager](#ckeyboardmanager)|Формирует объект `CKeyboardManager`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|||
-|-|-|
 |name|Описание|
+|-|-|
 |[CKeyboardManager:: CleanUp](#cleanup)|Очищает таблицы сочетаний клавиш.|
 |[CKeyboardManager:: Финддефаултакцелератор](#finddefaultaccelerator)|Извлекает сочетание клавиш по умолчанию для указанной команды и окна.|
 |[CKeyboardManager:: Искэйхандлед](#iskeyhandled)|Определяет, обрабатывается ли ключ с помощью таблицы сочетаний клавиш.|
@@ -377,7 +375,7 @@ BOOL UpdateAccelTable(
 
 Эта функция используется для замены существующей таблицы ярлыка новыми сочетаниями клавиш для нескольких объектов окна фрейма. Функция получает шаблон документа в качестве параметра для получения доступа ко всем объектам окна кадров, подключенным к данному шаблону документа.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Иерархическая диаграмма](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)<br/>

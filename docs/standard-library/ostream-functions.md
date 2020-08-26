@@ -12,21 +12,21 @@ helpviewer_keywords:
 - std::endl [C++]
 - std::ends [C++]
 - std::flush [C++]
-ms.openlocfilehash: 8d93e46b0323058d93c6d0bd8c1ee566998aef61
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 4db966797202b16911aa67b6fda7c81785d98166
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425301"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842641"
 ---
 # <a name="ltostreamgt-functions"></a>Функции &lt;ostream&gt;
 
-Это глобальные функции шаблонов, определенные в &lt;ostream&gt;. Сведения о функциях элементов см. в документации по [классу basic_ostream](basic-ostream-class.md) .
+Это глобальные функции шаблонов, определенные в &lt; ostream &gt; . Сведения о функциях элементов см. в документации по [классу basic_ostream](basic-ostream-class.md) .
 
-||||
-|-|-|-|
-|[endl](#endl)|[ends](#ends)|[flush](#flush)|
-|[swap](#swap)|
+[endl](#endl)\
+[начинает](#ends)\
+[идет](#flush)\
+[позиции](#swap)
 
 ## <a name="endl"></a>endl
 
@@ -43,10 +43,10 @@ basic_ostream<Elem, Tr>& endl(
 *Elem*\
 Тип элемента.
 
-*Ostr*\
+*OSTR*\
 Объект типа **basic_ostream**.
 
-*Tr*\
+*ТС*\
 Признаки символа.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -90,10 +90,10 @@ basic_ostream<Elem, Tr>& ends(
 *Elem*\
 Тип элемента.
 
-*Ostr*\
+*OSTR*\
 Объект типа `basic_ostream`.
 
-*Tr*\
+*ТС*\
 Признаки символа.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -139,10 +139,10 @@ basic_ostream<Elem, Tr>& flush(
 *Elem*\
 Тип элемента.
 
-*Ostr*\
+*OSTR*\
 Объект типа `basic_ostream`.
 
-*Tr*\
+*ТС*\
 Признаки символа.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -187,13 +187,13 @@ void swap(
 *Elem*\
 Тип элемента.
 
-*Tr*\
+*ТС*\
 Признаки символа.
 
-*left*\
+*слева*\
 Ссылка lvalue на объект `basic_ostream`.
 
-*справа*\
+*Правильно*\
 Ссылка lvalue на объект `basic_ostream`.
 
 ### <a name="remarks"></a>Remarks

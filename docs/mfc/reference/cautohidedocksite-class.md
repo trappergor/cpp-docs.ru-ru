@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CAutoHideDockSite [MFC], UnSetAutoHideMode
 - CAutoHideDockSite [MFC], m_nExtraSpace
 ms.assetid: 2a0f6bec-c369-4ab7-977d-564e7946ebad
-ms.openlocfilehash: 2779e643b15179b0017535fbfbb144f94e1aedbe
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 14db8d93ea7706b3a4daad2ba751f8410974f6cb
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562016"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841640"
 ---
 # <a name="cautohidedocksite-class"></a>Класс CAutoHideDockSite
 
@@ -43,17 +43,17 @@ class CAutoHideDockSite : public CDockSite
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|||
+| name | Описание |
 |-|-|
-|name|Описание|
+|Имя|Описание|
 |`CAutoHideDockSite::CAutoHideDockSite`|Формирует объект `CAutoHideDockSite`.|
 |`CAutoHideDockSite::~CAutoHideDockSite`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|||
+| name | Описание |
 |-|-|
-|name|Описание|
+|Имя|Описание|
 |`CAutoHideDockSite::AllowShowOnPaneMenu`|Указывает, отображается ли элемент в `CAutoHideDockSite` меню панели.|
 |[CAutoHideDockSite:: Канакцептпане](#canacceptpane)|Определяет, является ли базовый объект области производным от [класса CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md).|
 |[CAutoHideDockSite::D Оккпане](#dockpane)|Закрепляет область для этого `CAuotHideDockSite` объекта.|
@@ -65,7 +65,7 @@ class CAutoHideDockSite : public CDockSite
 
 ### <a name="data-members"></a>Элементы данных
 
-|||
+| Имя | Описание |
 |-|-|
 |Имя|Описание|
 |[CAutoHideDockSite:: m_nExtraSpace](#m_nextraspace)|Определяет размер пространства между панелями инструментов и границей закрепляемой панели. Это пространство измеряется от левого края или верхнего края в зависимости от выравнивания для пространства закрепления.|

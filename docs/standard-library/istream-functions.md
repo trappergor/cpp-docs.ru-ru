@@ -5,20 +5,19 @@ f1_keywords:
 - istream/std::swap
 - istream/std::ws
 ms.assetid: 0301ea0d-4ded-4841-83dd-4253b55b3188
-ms.openlocfilehash: 3d647c7b05a3868ec0359410cc0e703306b874ba
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6d1fede2726d3d8f5dd678b95fd7a22a301ea95a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363076"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840977"
 ---
 # <a name="ltistreamgt-functions"></a>Функции &lt;istream&gt;
 
-|||
-|-|-|
-|[Своп](#istream_swap)|[Ws](#ws)|
+[позиции](#istream_swap)\
+[Протокол](#ws)
 
-## <a name="swap"></a><a name="istream_swap"></a>Своп
+## <a name="swap"></a><a name="istream_swap"></a> позиции
 
 Меняет местами элементы двух объектов-потоков.
 
@@ -36,13 +35,13 @@ void swap(
 
 ### <a name="parameters"></a>Параметры
 
-*Левой*\
+*слева*\
 Поток.
 
 *Правильно*\
 Поток.
 
-## <a name="ws"></a><a name="ws"></a>Ws
+## <a name="ws"></a><a name="ws"></a> Протокол
 
 Пропускает пробелы в потоке.
 
@@ -52,7 +51,7 @@ template class<Elem, Tr> basic_istream<Elem, Tr>& ws(basic_istream<Elem, Tr>& _I
 
 ### <a name="parameters"></a>Параметры
 
-*_istr*\
+*_Istr*\
 Поток.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -61,9 +60,9 @@ template class<Elem, Tr> basic_istream<Elem, Tr>& ws(basic_istream<Elem, Tr>& _I
 
 ### <a name="remarks"></a>Remarks
 
-Манипулятор извлекает и `ch` отбрасывает любые элементы, для которых [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype** \< **Elem**> > [(getloc).](../standard-library/ios-base-class.md#getloc) **is**( **ctype**\< **Elem**>:: **space**, **ch**) имеет значение true.
+Манипулятор извлекает и удаляет все элементы `ch` , для которых [use_facet](../standard-library/basic-filebuf-class.md#open) <  **CType** \< **Elem**> > ( [getloc](../standard-library/ios-base-class.md#getloc)). **имеет**значение true ( **CType** \< **Elem**> :: **Space**, **CH**).
 
-Функция вызывает [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**) при обнаружении конца файла при извлечении элементов. Он *возвращается _Istr*.
+Функция вызывает [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**) при обнаружении конца файла при извлечении элементов. Он возвращает *_Istr*.
 
 ### <a name="example"></a>Пример
 

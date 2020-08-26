@@ -1,17 +1,17 @@
 ---
-title: importlib (C++ атрибут com)
+title: importlib (атрибут COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.importlib
 helpviewer_keywords:
 - importlib attribute
 ms.assetid: f129e459-b8d3-4aca-a0bc-ee53e18b62ed
-ms.openlocfilehash: 451204aae52d884b9cbc81d7e589028f5cfefae5
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 004533282ca089a076df6b110d52701abc16f71d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166813"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842225"
 ---
 # <a name="importlib"></a>importlib
 
@@ -30,7 +30,7 @@ ms.locfileid: "80166813"
 
 ## <a name="remarks"></a>Remarks
 
-Атрибут **importlib** C++ вызывает помещение инструкции `importlib` в блок библиотеки созданного idl-файла. Атрибут **importlib** имеет те же функциональные возможности, что и атрибут [importlib](/windows/win32/Midl/importlib) MIDL.
+Атрибут **importlib** C++ вызывает `importlib` помещение инструкции в блок библиотеки созданного idl-файла. Атрибут **importlib** имеет те же функциональные возможности, что и атрибут [importlib](/windows/win32/Midl/importlib) MIDL.
 
 ## <a name="example"></a>Пример
 
@@ -45,14 +45,12 @@ ms.locfileid: "80166813"
 
 ## <a name="requirements"></a>Требования
 
-### <a name="attribute-context"></a>Контекст атрибута
-
-|||
+| Контекст атрибута | Значение |
 |-|-|
-|**Применение**|В любом месте|
-|**Повторяемый**|нет|
-|**Обязательные атрибуты**|None|
-|**Недопустимые атрибуты**|None|
+|**Относится к**|В любом месте|
+|**REPEATABLE**|Нет|
+|**Требуемые атрибуты**|Нет|
+|**Недопустимые атрибуты**|Нет|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
@@ -62,5 +60,5 @@ ms.locfileid: "80166813"
 [Изолированные атрибуты](stand-alone-attributes.md)<br/>
 [import](import.md)<br/>
 [importidl](importidl.md)<br/>
-[include](include-cpp.md)<br/>
-[includelib](includelib-cpp.md)
+[относится](include-cpp.md)<br/>
+[инклуделиб](includelib-cpp.md)

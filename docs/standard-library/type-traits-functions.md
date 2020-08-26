@@ -13,24 +13,31 @@ helpviewer_keywords:
 - std::is_trivially_copy_assignable
 - std::is_trivially_move_assignable
 - std::is_trivially_move_constructible
-ms.openlocfilehash: d330a1dcd819dd48713887db789371ed4a8fee35
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 11defadff0b1785f6e4c5aba6356f7b68a78b9fc
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215534"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841783"
 ---
 # <a name="lttype_traitsgt-functions"></a>Функции &lt;type_traits&gt;
 
-||||
-|-|-|-|
-|[is_assignable](#is_assignable)|[is_copy_assignable](#is_copy_assignable)|[is_copy_constructible](#is_copy_constructible)|
-|[is_default_constructible](#is_default_constructible)|[is_move_assignable](#is_move_assignable)|[is_move_constructible](#is_move_constructible)|
-|[is_nothrow_move_assignable](#is_nothrow_move_assignable)|[is_nothrow_swappable](#is_nothrow_swappable)|[is_nothrow_swappable_with](#is_nothrow_swappable_with)|
-|[is_swappable](#is_swappable)|[is_swappable_with](#is_swappable_with)|[is_trivially_copy_assignable](#is_trivially_copy_assignable)|
-|[is_trivially_move_assignable](#is_trivially_move_assignable)|[is_trivially_move_constructible](#is_trivially_move_constructible)|
+[is_assignable](#is_assignable)\
+[is_copy_assignable](#is_copy_assignable)\
+[is_copy_constructible](#is_copy_constructible)\
+[is_default_constructible](#is_default_constructible)\
+[is_move_assignable](#is_move_assignable)\
+[is_move_constructible](#is_move_constructible)\
+[is_nothrow_move_assignable](#is_nothrow_move_assignable)\
+[is_nothrow_swappable](#is_nothrow_swappable)\
+[is_nothrow_swappable_with](#is_nothrow_swappable_with)\
+[is_swappable](#is_swappable)\
+[is_swappable_with](#is_swappable_with)\
+[is_trivially_copy_assignable](#is_trivially_copy_assignable)\
+[is_trivially_move_assignable](#is_trivially_move_assignable)\
+[is_trivially_move_constructible](#is_trivially_move_constructible)
 
-## <a name="is_assignable"></a><a name="is_assignable"></a>is_assignable
+## <a name="is_assignable"></a><a name="is_assignable"></a> is_assignable
 
 Проверяет, может ли значение *из* типа быть присвоено типу *.*
 
@@ -51,7 +58,7 @@ struct is_assignable;
 
 Невычисленное выражение `declval<To>() = declval<From>()` должно иметь правильный формат. И *от* , и *до* должны быть полными типами, **`void`** или массивами с неизвестной границей.
 
-## <a name="is_copy_assignable"></a><a name="is_copy_assignable"></a>is_copy_assignable
+## <a name="is_copy_assignable"></a><a name="is_copy_assignable"></a> is_copy_assignable
 
 Проверяет, может ли тип быть скопирован при присвоении значения.
 
@@ -69,7 +76,7 @@ struct is_copy_assignable;
 
 Экземпляр предиката типа содержит значение true, если тип *Ty* является классом с оператором присваивания копии, в противном случае — значение false. Эквивалентно is_assignable \<Ty&, const Ty&> .
 
-## <a name="is_copy_constructible"></a><a name="is_copy_constructible"></a>is_copy_constructible
+## <a name="is_copy_constructible"></a><a name="is_copy_constructible"></a> is_copy_constructible
 
 Проверяет, есть ли у типа конструктор копии.
 
@@ -121,7 +128,7 @@ is_copy_constructible<Copyable> == true
 is_copy_constructible<NotCopyable > == false
 ```
 
-## <a name="is_default_constructible"></a><a name="is_default_constructible"></a>is_default_constructible
+## <a name="is_default_constructible"></a><a name="is_default_constructible"></a> is_default_constructible
 
 Проверяет, есть ли у типа конструктор по умолчанию.
 
@@ -173,7 +180,7 @@ is_default_constructible<Simple> == true
 is_default_constructible<Simple2> == false
 ```
 
-## <a name="is_move_assignable"></a><a name="is_move_assignable"></a>is_move_assignable
+## <a name="is_move_assignable"></a><a name="is_move_assignable"></a> is_move_assignable
 
 Проверяет, является ли тип присваиваемым при перемещении.
 
@@ -191,7 +198,7 @@ struct is_move_assignable;
 
 Тип является тип присваиваемым при перемещении, если ссылку rvalue на тип можно присвоить ссылке на тип. Предикат типа эквивалентен `is_assignable<T&, T&&>`. Перемещаемые при присваивании типы включают ссылочные скалярные типы и типы классов, в которых есть созданные компилятором или определяемые пользователем операторы присваивания.
 
-## <a name="is_move_constructible"></a><a name="is_move_constructible"></a>is_move_constructible
+## <a name="is_move_constructible"></a><a name="is_move_constructible"></a> is_move_constructible
 
 Проверяет, имеет ли тип конструктор перемещения.
 
@@ -209,7 +216,7 @@ struct is_move_constructible;
 
 Предикат типа, который возвращает значение true, если тип *T* может быть создан с помощью операции перемещения. Этот предикат эквивалентен `is_constructible<T, T&&>`.
 
-## <a name="is_nothrow_move_assignable"></a><a name="is_nothrow_move_assignable"></a>is_nothrow_move_assignable
+## <a name="is_nothrow_move_assignable"></a><a name="is_nothrow_move_assignable"></a> is_nothrow_move_assignable
 
 Проверяет, имеет ли тип **`nothrow`** оператор присваивания перемещения.
 
@@ -227,31 +234,31 @@ struct is_nothrow_move_assignable;
 
 Экземпляр предиката типа содержит значение true, если тип *Ty* имеет оператор присваивания перемещения, в противном случае — значение false.
 
-## <a name="is_nothrow_swappable"></a><a name="is_nothrow_swappable"></a>is_nothrow_swappable
+## <a name="is_nothrow_swappable"></a><a name="is_nothrow_swappable"></a> is_nothrow_swappable
 
 ```cpp
 template <class T> struct is_nothrow_swappable;
 ```
 
-## <a name="is_nothrow_swappable_with"></a><a name="is_nothrow_swappable_with"></a>is_nothrow_swappable_with
+## <a name="is_nothrow_swappable_with"></a><a name="is_nothrow_swappable_with"></a> is_nothrow_swappable_with
 
 ```cpp
 template <class T, class U> struct is_nothrow_swappable_with;
 ```
 
-## <a name="is_swappable"></a><a name="is_swappable"></a>is_swappable
+## <a name="is_swappable"></a><a name="is_swappable"></a> is_swappable
 
 ```cpp
 template <class T> struct is_swappable;
 ```
 
-## <a name="is_swappable_with"></a><a name="is_swappable_with"></a>is_swappable_with
+## <a name="is_swappable_with"></a><a name="is_swappable_with"></a> is_swappable_with
 
 ```cpp
 template <class T, class U> struct is_swappable_with;
 ```
 
-## <a name="is_trivially_copy_assignable"></a><a name="is_trivially_copy_assignable"></a>is_trivially_copy_assignable
+## <a name="is_trivially_copy_assignable"></a><a name="is_trivially_copy_assignable"></a> is_trivially_copy_assignable
 
 Проверяет, есть ли у типа тривиальный оператор присваивания копии.
 
@@ -271,7 +278,7 @@ struct is_trivially_copy_assignable;
 
 Конструктор присваивания для класса *t* является тривиальным, если он неявно предоставляется, *у класса* *t* нет виртуальных функций, а классы всех нестатических элементов данных типа класса имеют тривиальные операторы присваивания, а классы всех нестатических элементов данных массива типов имеют тривиальные операторы присваивания.
 
-## <a name="is_trivially_move_assignable"></a><a name="is_trivially_move_assignable"></a>is_trivially_move_assignable
+## <a name="is_trivially_move_assignable"></a><a name="is_trivially_move_assignable"></a> is_trivially_move_assignable
 
 Проверяет, есть ли у типа тривиальный оператор присваивания перемещением.
 
@@ -301,7 +308,7 @@ struct is_trivially_move_assignable;
 
 классы всех нестатических элементов данных массива типов класса имеют тривиальные операторы присваивания перемещением.
 
-## <a name="is_trivially_move_constructible"></a><a name="is_trivially_move_constructible"></a>is_trivially_move_constructible
+## <a name="is_trivially_move_constructible"></a><a name="is_trivially_move_constructible"></a> is_trivially_move_constructible
 
 Проверяет, есть ли у типа тривиальный конструктор перемещения.
 

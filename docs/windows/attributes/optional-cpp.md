@@ -1,17 +1,17 @@
 ---
-title: Необязательный (C++ атрибут com)
+title: необязательно (атрибут COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.optional
 helpviewer_keywords:
 - optional attribute
 ms.assetid: 86656a66-8e11-4589-8e30-9b0f34eeed03
-ms.openlocfilehash: 6a4fdcd0b8466d2dbf2c034fc4a3ee9ae2df8d0a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 31e2dbac988cdbac8aca2d01a70177825d764a5b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214691"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842173"
 ---
 # <a name="optional-c"></a>optional (C++)
 
@@ -25,7 +25,7 @@ ms.locfileid: "80214691"
 
 ## <a name="remarks"></a>Remarks
 
-**Необязательный** C++ атрибут имеет те же функциональные возможности, что и [необязательный](/windows/win32/Midl/optional) атрибут MIDL.
+**Необязательный** атрибут C++ имеет те же функциональные возможности, что и [необязательный](/windows/win32/Midl/optional) атрибут MIDL.
 
 ## <a name="example"></a>Пример
 
@@ -46,14 +46,12 @@ __interface IFireTabCtrl : IDispatch
 
 ## <a name="requirements"></a>Требования
 
-### <a name="attribute-context"></a>Контекст атрибута
-
-|||
+| Контекст атрибута | Значение |
 |-|-|
-|**Применение**|Параметр интерфейса|
-|**Повторяемый**|нет|
-|**Обязательные атрибуты**|None|
-|**Недопустимые атрибуты**|None|
+|**Относится к**|Параметр интерфейса|
+|**REPEATABLE**|Нет|
+|**Требуемые атрибуты**|Нет|
+|**Недопустимые атрибуты**|Нет|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 

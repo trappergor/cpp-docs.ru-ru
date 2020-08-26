@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - size_is attribute
 ms.assetid: 70192d09-f6c5-4d52-b3fe-303f8cb10aa5
-ms.openlocfilehash: 36b960982d1f88cd30bab707dfe7aec73381dfab
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: dd0ec8622dfffdf9a0578c86d75d313042cc3c01
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213844"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841770"
 ---
 # <a name="size_is"></a>size_is
 
@@ -38,9 +38,7 @@ ms.locfileid: "87213844"
 
 ## <a name="requirements"></a>Требования
 
-### <a name="attribute-context"></a>Контекст атрибута
-
-|||
+| Контекст атрибута | Значение |
 |-|-|
 |**Относится к**|Поле в **`struct`** или **`union`** , параметр интерфейса, метод интерфейса|
 |**REPEATABLE**|Нет|

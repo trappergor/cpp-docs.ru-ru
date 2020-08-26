@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CException [MFC], Delete
 - CException [MFC], ReportError
 ms.assetid: cfacf14d-bfe4-4666-a5c7-38b800512920
-ms.openlocfilehash: a24f324576c872e7fe509b742aa58d6c230ec24a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e27802e05c832d28d848d9eb1235d6ef5980b306
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212492"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841562"
 ---
 # <a name="cexception-class"></a>Класс CException
 
@@ -33,7 +33,7 @@ class AFX_NOVTABLE CException : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CException:: CException](#cexception)|Формирует объект `CException`.|
 
@@ -50,7 +50,7 @@ class AFX_NOVTABLE CException : public CObject
 
 Ниже перечислены производные классы и их описания.
 
-|||
+|Имя|Описание|
 |-|-|
 |[CSimpleException](../../mfc/reference/csimpleexception-class.md)|Базовый класс для исключений MFC, критических для ресурсов|
 |[CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md)|Недопустимое условие исключения аргумента|
@@ -84,7 +84,7 @@ class AFX_NOVTABLE CException : public CObject
 
 **Заголовок:** AFX. h
 
-## <a name="cexceptioncexception"></a><a name="cexception"></a>CException:: CException
+## <a name="cexceptioncexception"></a><a name="cexception"></a> CException:: CException
 
 Эта функция-член конструирует `CException` объект.
 
@@ -101,7 +101,7 @@ explicit CException(BOOL bAutoDelete);
 
 Обычно вызывать этот конструктор напрямую не требуется. Функция, вызывающая исключение, должна создать экземпляр `CException` производного класса и вызвать его конструктор или использовать одну из функций Throw MFC, например [афкссровфиликсцептион](exception-processing.md#afxthrowfileexception), для создания предопределенного типа. Эта документация предоставляется только для полноты.
 
-## <a name="cexceptiondelete"></a><a name="delete"></a>CException::D удалить
+## <a name="cexceptiondelete"></a><a name="delete"></a> CException::D удалить
 
 Эта функция проверяет, `CException` был ли объект создан в куче, и если да, то он вызывает **`delete`** оператор для объекта.
 
@@ -168,7 +168,7 @@ if (pFile != NULL)
 }
 ```
 
-## <a name="cexceptionreporterror"></a><a name="reporterror"></a>CException:: ReportError
+## <a name="cexceptionreporterror"></a><a name="reporterror"></a> CException:: ReportError
 
 Вызовите эту функцию-член, чтобы сообщить пользователю о тексте ошибки в окне сообщения.
 

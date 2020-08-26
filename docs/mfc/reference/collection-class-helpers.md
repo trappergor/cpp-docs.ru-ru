@@ -8,12 +8,12 @@ helpviewer_keywords:
 - collection classes [MFC], helper functions
 - helper functions collection class [MFC]
 ms.assetid: bc3a2368-9edd-4748-9e6a-13cba79517ca
-ms.openlocfilehash: 02bc5c5a7c1766c97d9a834c8b6b4dfb2a26ae82
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 04b142cde12a9795f217559f875eef7fcec3b0f2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231797"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841432"
 ---
 # <a name="collection-class-helpers"></a>Вспомогательные функции классов коллекции
 
@@ -23,7 +23,7 @@ ms.locfileid: "87231797"
 
 ### <a name="collection-class-helpers"></a>Вспомогательные функции классов коллекции
 
-|||
+|Имя|Описание|
 |-|-|
 |[CompareElements](#compareelements)|Указывает, совпадают ли элементы.|
 |[CopyElements](#copyelements)|Копирует элементы из одного массива в другой.|
@@ -31,7 +31,7 @@ ms.locfileid: "87231797"
 |[хашкэй](#hashkey)|Вычисляет хэш-ключ.|
 |[SerializeElements](#serializeelements)|Сохраняет или извлекает элементы из архива или из него.|
 
-## <a name="compareelements"></a><a name="compareelements"></a>компарилементс
+## <a name="compareelements"></a><a name="compareelements"></a> компарилементс
 
 Вызывается непосредственно [CList:: Find] (CList-Class. md # not_found. md # clist__find и косвенно с помощью [cmap__lookup](cmap-class.md#lookup) и [cmap__operator &#91;&#93;](cmap-class.md#operator_at).
 
@@ -73,7 +73,7 @@ CompareElements(
 
    **Заголовок:** afxtempl.h
 
-## <a name="copyelements"></a><a name="copyelements"></a>копелементс
+## <a name="copyelements"></a><a name="copyelements"></a> копелементс
 
 Эта функция вызывается напрямую с помощью [CArray:: Append](carray-class.md#append) и [CArray:: Copy](carray-class.md#copy).
 
@@ -109,7 +109,7 @@ void AFXAPI CopyElements(
 
   **Заголовок** афкстемпл. h
 
-## <a name="dumpelements"></a><a name="dumpelements"></a>думпелементс
+## <a name="dumpelements"></a><a name="dumpelements"></a> думпелементс
 
 Предоставляет потоковый вывод диагностических данных в текстовом виде для элементов коллекции при переопределении.
 
@@ -145,7 +145,7 @@ void  AFXAPI DumpElements(
 
   **Заголовок** афкстемпл. h
 
-## <a name="hashkey"></a><a name="hashkey"></a>хашкэй
+## <a name="hashkey"></a><a name="hashkey"></a> хашкэй
 
 Вычисляет хэш-значение для заданного ключа.
 
@@ -187,7 +187,7 @@ template <> UINT AFXAPI HashKey(unsigned __int64 key)
 
   **Заголовок** афкстемпл. h
 
-## <a name="serializeelements"></a><a name="serializeelements"></a>сериализилементс
+## <a name="serializeelements"></a><a name="serializeelements"></a> сериализилементс
 
 [CArray](carray-class.md), [CList](clist-class.md)и [кмап](cmap-class.md) вызывают эту функцию для сериализации элементов.
 

@@ -7,28 +7,28 @@ f1_keywords:
 helpviewer_keywords:
 - system_error header
 ms.assetid: 5e046c6e-48d9-4740-8c8a-05f3727c1215
-ms.openlocfilehash: b9ddb3117afe37060b8013be235bdb11a2a031ac
-ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.openlocfilehash: 18df18379fbee8271ba5cf851b04210f1dfddf57
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898856"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841887"
 ---
 # <a name="ltsystem_errorgt"></a>&lt;system_error&gt;
 
-Включите заголовок \<system_error >, чтобы определить класс исключений `system_error` и связанные шаблоны для обработки низкоуровневых системных ошибок.
+Включите заголовок \<system_error>, чтобы определить класс исключений `system_error` и связанные шаблоны для обработки низкоуровневых системных ошибок.
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<system_error>
+**Заголовок:**\<system_error>
 
 **Пространство имен:** std
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Элементы
 
 ### <a name="objects"></a>Объекты
 
-|||
+|Имя|Описание|
 |-|-|
 |[generic_category](../standard-library/system-error-functions.md#generic_category)|Представляет категорию общих ошибок.|
 |[is_error_code_enum_v](../standard-library/system-error-functions.md#is_error_code_enum_v)||
@@ -37,29 +37,29 @@ ms.locfileid: "74898856"
 
 ### <a name="functions"></a>Функции
 
-|||
+|Имя|Описание|
 |-|-|
 |[make_error_code](../standard-library/system-error-functions.md#make_error_code)|Создает объект `error_code`.|
 |[make_error_condition](../standard-library/system-error-functions.md#make_error_condition)|Создает объект `error_condition`.|
 
 ### <a name="operators"></a>Операторы
 
-|||
+|Имя|Описание|
 |-|-|
-|[оператор==](../standard-library/system-error-operators.md#op_eq_eq)|Проверяет равенство объекта слева от оператора объекту справа от оператора.|
-|[оператор!= ](../standard-library/system-error-operators.md#op_neq)|Проверяет неравенство объекта слева от оператора объекту справа от оператора.|
-|[оператор<](../standard-library/system-error-operators.md#op_lt)|Проверяет, меньше ли какой-либо объект переданного для сравнения объекта.|
-|[оператор<<](../standard-library/system-error-operators.md#op_ostream)||
+|[Оператор = =](../standard-library/system-error-operators.md#op_eq_eq)|Проверяет равенство объекта слева от оператора объекту справа от оператора.|
+|[operator! =](../standard-library/system-error-operators.md#op_neq)|Проверяет неравенство объекта слева от оператора объекту справа от оператора.|
+|[Оператор<](../standard-library/system-error-operators.md#op_lt)|Проверяет, меньше ли какой-либо объект переданного для сравнения объекта.|
+|[Оператор<<](../standard-library/system-error-operators.md#op_ostream)||
 
-### <a name="enums"></a>перечислениям;
+### <a name="enums"></a>Перечисления
 
-|||
+|Имя|Описание|
 |-|-|
-|[errc](../standard-library/system-error-enums.md#errc)|Предоставляет символьные имена для всех макросов кода ошибки, определенных POSIX в `<errno.h>`.|
+|[errc](../standard-library/system-error-enums.md#errc)|Предоставляет символьные имена для всех макросов кода ошибки, определенных POSIX в `<errno.h>` .|
 
 ### <a name="classes-and-structs"></a>Классы и структуры
 
-|||
+|Имя|Описание|
 |-|-|
 |[error_category](../standard-library/error-category-class.md)|Представляет абстрактный, общий базовый класс для объектов, который описывает категорию кодов ошибок.|
 |[error_code](../standard-library/error-code-class.md)|Представляет системные ошибки низкого уровня, относящиеся к конкретной специализации.|
@@ -69,6 +69,6 @@ ms.locfileid: "74898856"
 |[is_error_condition_enum](../standard-library/is-error-condition-enum-class.md)|Представляет тип предиката, проверяющий перечисление [Класс error_condition](../standard-library/error-condition-class.md).|
 |[system_error](../standard-library/system-error-class.md)|Представляет базовый класс для всех исключений, создаваемых для отчета о переполнении системы низкого уровня.|
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)

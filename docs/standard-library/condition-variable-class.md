@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::condition_variable::wait
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
-ms.openlocfilehash: a737b122e8fd9b782b0ddbe599ac8959f1929aab
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: eef0e7ef013b4faeb6393cade67258a09eda5551
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222554"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842433"
 ---
 # <a name="condition_variable-class"></a>Класс condition_variable
 
@@ -41,13 +41,13 @@ class condition_variable;
 
 ### <a name="constructors"></a>Конструкторы
 
-|||
+|Имя|Описание|
 |-|-|
 |[condition_variable](#condition_variable)|Формирует объект `condition_variable`.|
 
 ### <a name="functions"></a>Функции
 
-|||
+|Имя|Описание|
 |-|-|
 |[native_handle](#native_handle)|Возвращает тип реализации, представляющий дескриптор condition_variable.|
 |[notify_all](#notify_all)|Разблокирует все потоки, которые ожидают объект `condition_variable`.|
@@ -56,7 +56,7 @@ class condition_variable;
 |[wait_for](#wait_for)|Блокирует поток и задает интервал времени, после которого поток разблокируется.|
 |[wait_until](#wait_until)|Блокирует поток и задает максимальный момент времени, в который поток разблокируется.|
 
-## <a name="condition_variable"></a><a name="condition_variable"></a>condition_variable
+## <a name="condition_variable"></a><a name="condition_variable"></a> condition_variable
 
 Формирует объект `condition_variable`.
 
@@ -68,7 +68,7 @@ condition_variable();
 
 При недостатке памяти этот конструктор вызывает объект [system_error](../standard-library/system-error-class.md), имеющий код ошибки `not_enough_memory`. Если объект не может быть создан из-за недоступности некоторых других ресурсов, конструктор создает объект `system_error`, имеющий код ошибки `resource_unavailable_try_again`.
 
-## <a name="native_handle"></a><a name="native_handle"></a>native_handle
+## <a name="native_handle"></a><a name="native_handle"></a> native_handle
 
 Возвращает тип реализации, представляющий дескриптор condition_variable.
 
@@ -80,7 +80,7 @@ native_handle_type native_handle();
 
 `native_handle_type` определяется как указатель на внутренние структуры данных среды выполнения с параллелизмом.
 
-## <a name="notify_all"></a><a name="notify_all"></a>notify_all
+## <a name="notify_all"></a><a name="notify_all"></a> notify_all
 
 Разблокирует все потоки, которые ожидают объект `condition_variable`.
 
@@ -88,7 +88,7 @@ native_handle_type native_handle();
 void notify_all() noexcept;
 ```
 
-## <a name="notify_one"></a><a name="notify_one"></a>notify_one
+## <a name="notify_one"></a><a name="notify_one"></a> notify_one
 
 Разблокирует один из потоков, которые ожидают объект `condition_variable`.
 
@@ -96,7 +96,7 @@ void notify_all() noexcept;
 void notify_one() noexcept;
 ```
 
-## <a name="wait"></a><a name="wait"></a>ожидания
+## <a name="wait"></a><a name="wait"></a> ожидания
 
 Блокирует поток.
 
@@ -126,7 +126,7 @@ while(!Pred())
     wait(Lck);
 ```
 
-## <a name="wait_for"></a><a name="wait_for"></a>wait_for
+## <a name="wait_for"></a><a name="wait_for"></a> wait_for
 
 Блокирует поток и задает интервал времени, после которого поток разблокируется.
 
@@ -174,7 +174,7 @@ while(!Pred())
 return true;
 ```
 
-## <a name="wait_until"></a><a name="wait_until"></a>wait_until
+## <a name="wait_until"></a><a name="wait_until"></a> wait_until
 
 Блокирует поток и задает максимальный момент времени, в который поток разблокируется.
 

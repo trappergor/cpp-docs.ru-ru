@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - threading attribute
 ms.assetid: 9b558cd6-fbf0-4602-aed5-31c068550ce3
-ms.openlocfilehash: e08d25df07ad881c8843953d01d9074c815ddb85
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6f83dca442b6508207a4123fa918fc5078bdf664
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87193072"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840821"
 ---
 # <a name="threading-c"></a>threading (C++)
 
@@ -28,15 +28,15 @@ ms.locfileid: "87193072"
 *model*<br/>
 Используемых Одна из следующих потоков моделей:
 
-- `apartment`(потоковое разделение)
+- `apartment` (потоковое разделение)
 
-- `neutral`(.NET Framework компонентов без пользовательского интерфейса)
+- `neutral` (.NET Framework компонентов без пользовательского интерфейса)
 
-- `single`(простая организация потоков)
+- `single` (простая организация потоков)
 
-- `free`(свободная организация)
+- `free` (свободная организация)
 
-- `both`(потоковая подразделение и свободная организация)
+- `both` (потоковая подразделение и свободная организация)
 
 Значение по умолчанию — `apartment`.
 
@@ -54,9 +54,7 @@ ms.locfileid: "87193072"
 
 ## <a name="requirements"></a>Требования
 
-### <a name="attribute-context"></a>Контекст атрибута
-
-|||
+| Контекст атрибута | Значение |
 |-|-|
 |**Относится к**|**`class`**, **`struct`**|
 |**REPEATABLE**|Нет|

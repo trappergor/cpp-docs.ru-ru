@@ -17,12 +17,12 @@ helpviewer_keywords:
 - signal constants
 - SIGILL constant
 ms.assetid: a3b39281-dae7-4e44-8d68-e6a610c669dd
-ms.openlocfilehash: e9953e967d1c94ae56dfc1063fb0deafa342631c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: d26671b8c3d983e7f1c3fd559d8aa2029e3162fe
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738729"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841146"
 ---
 # <a name="signal-constants"></a>Константы signal
 
@@ -32,11 +32,11 @@ ms.locfileid: "57738729"
 #include <signal.h>
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Аргумент `sig` должен представлять собой одну из констант манифеста, определенных в SIGNAL.H (перечислены ниже).
 
-|||
+|Константа|Описание|
 |-|-|
 |SIGABRT|Аварийное завершение. По умолчанию завершает вызывающую программу с кодом выхода 3.  |
 |SIGABRT_COMPAT|Аналогично SIGABRT. Для обеспечения совместимости с другими платформами.  |
@@ -47,8 +47,8 @@ ms.locfileid: "57738729"
 |SIGTERM|В программу направлен запрос на прекращение. По умолчанию завершает вызывающую программу с кодом выхода 3.  |
 |SIG_ERR|Тип значения, возвращаемого из signal с информацией о произошедшей ошибке.  |
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[signal](../c-runtime-library/reference/signal.md)<br/>
-[raise](../c-runtime-library/reference/raise.md)<br/>
+[signal](../c-runtime-library/reference/signal.md);<br/>
+[вести](../c-runtime-library/reference/raise.md)<br/>
 [Глобальные константы](../c-runtime-library/global-constants.md)

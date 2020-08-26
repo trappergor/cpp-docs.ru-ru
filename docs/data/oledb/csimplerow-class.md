@@ -34,12 +34,12 @@ helpviewer_keywords:
 - m_dwRef
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
-ms.openlocfilehash: 2b08e0e8f3b5b43f79019c70e3fe32ae9064dee9
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c332fc0c653bbde3a69421b8166d4d099eaeeaf4
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211124"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841081"
 ---
 # <a name="csimplerow-class"></a>Класс CSimpleRow
 
@@ -55,11 +55,11 @@ class CSimpleRow
 
 **Заголовок:** atldb.h
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Элементы
 
 ### <a name="methods"></a>Методы
 
-|||
+| Имя | Описание |
 |-|-|
 |[аддрефров](#addrefrow)|Добавляет счетчик ссылок в дескриптор существующей строки.|
 |[Сравнить](#compare)|Сравнивает две строки, чтобы определить, ссылаются ли они на один и тот же экземпляр строки.|
@@ -68,16 +68,16 @@ class CSimpleRow
 
 ### <a name="data-members"></a>Элементы данных
 
-|||
+| Имя | Описание |
 |-|-|
 |[m_dwRef](#dwref)|Счетчик ссылок на существующий маркер строки.|
 |[m_iRowset](#irowset)|Индекс набора строк, представляющего курсор.|
 
 ## <a name="remarks"></a>Remarks
 
-Маркер строки логически является уникальным тегом для результирующей строки. `IRowsetImpl` создает новую `CSimpleRow` для каждой строки, запрашиваемой в [IRowsetImpl:: GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md). `CSimpleRow` также можно заменить собственной реализацией маркера строки, так как это аргумент шаблона по умолчанию для `IRowsetImpl`. Единственным требованием для замены этого класса является то, чтобы класс замены предоставил конструктор, принимающий один параметр типа **Long**.
+Маркер строки логически является уникальным тегом для результирующей строки. `IRowsetImpl` создает новый `CSimpleRow` для каждой строки, запрошенной в [IRowsetImpl:: GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md). `CSimpleRow` также можно заменить собственной реализацией маркера строки, так как это аргумент шаблона по умолчанию для `IRowsetImpl` . Единственным требованием для замены этого класса является то, чтобы класс замены предоставил конструктор, принимающий один параметр типа **Long**.
 
-## <a name="csimplerowaddrefrow"></a><a name="addrefrow"></a>CSimpleRow:: Аддрефров
+## <a name="csimplerowaddrefrow"></a><a name="addrefrow"></a> CSimpleRow:: Аддрефров
 
 Добавляет счетчик ссылок к существующему маркеру строки в безопасном для потоков режиме.
 
@@ -87,7 +87,7 @@ class CSimpleRow
 DWORD AddRefRow();
 ```
 
-## <a name="csimplerowcompare"></a><a name="compare"></a>CSimpleRow:: Compare
+## <a name="csimplerowcompare"></a><a name="compare"></a> CSimpleRow:: Compare
 
 Сравнивает две строки, чтобы определить, ссылаются ли они на один и тот же экземпляр строки.
 
@@ -99,14 +99,14 @@ HRESULT Compare(CSimpleRow* pRow);
 
 #### <a name="parameters"></a>Параметры
 
-*пров*<br/>
+*pRow*<br/>
 Указатель на объект `CSimpleRow`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Значение HRESULT, обычно S_OK, указывающее, что две строки являются одним и тем же экземпляром строки, или S_FALSE, указывая, что две строки различаются. Другие возможные возвращаемые значения см. в разделе [ировсетидентити:: IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) в *справочнике по программисту OLE DB* .
 
-## <a name="csimplerowcsimplerow"></a><a name="csimplerow"></a>CSimpleRow:: CSimpleRow
+## <a name="csimplerowcsimplerow"></a><a name="csimplerow"></a> CSimpleRow:: CSimpleRow
 
 Конструктор.
 
@@ -125,7 +125,7 @@ CSimpleRow(DBCOUNTITEM iRowsetCur);
 
 Задает для [m_iRowset](../../data/oledb/csimplerow-m-irowset.md) значение *ировсеткур*.
 
-## <a name="csimplerowreleaserow"></a><a name="releaserow"></a>CSimpleRow:: Релеасеров
+## <a name="csimplerowreleaserow"></a><a name="releaserow"></a> CSimpleRow:: Релеасеров
 
 Освобождает строки в безопасном для потоков режиме.
 
@@ -135,7 +135,7 @@ CSimpleRow(DBCOUNTITEM iRowsetCur);
 DWORD ReleaseRow();
 ```
 
-## <a name="csimplerowm_dwref"></a><a name="dwref"></a>CSimpleRow:: m_dwRef
+## <a name="csimplerowm_dwref"></a><a name="dwref"></a> CSimpleRow:: m_dwRef
 
 Счетчик ссылок на существующий маркер строки.
 
@@ -145,7 +145,7 @@ DWORD ReleaseRow();
 DWORD m_dwRef;
 ```
 
-## <a name="csimplerowm_irowset"></a><a name="irowset"></a>CSimpleRow:: m_iRowset
+## <a name="csimplerowm_irowset"></a><a name="irowset"></a> CSimpleRow:: m_iRowset
 
 Индекс набора строк, представляющего курсор.
 

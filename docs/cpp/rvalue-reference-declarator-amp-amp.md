@@ -1,19 +1,19 @@
 ---
-title: Декларатор ссылки rvalue:&amp;&amp;
+title: 'Декларатор ссылки rvalue: &amp;&amp;'
 ms.date: 11/04/2016
 f1_keywords:
 - '&&'
 helpviewer_keywords:
 - '&& rvalue reference declarator'
 ms.assetid: eab0ce3a-c5a3-4992-aa70-6a8ab1f7491d
-ms.openlocfilehash: 65eec84447043b89ff94b77b7aed22b1b06f58e3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 953aafe79115ad32a172c878eb910dd06b81e3f4
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227105"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842043"
 ---
-# <a name="rvalue-reference-declarator-ampamp"></a>Декларатор ссылки rvalue:&amp;&amp;
+# <a name="rvalue-reference-declarator-ampamp"></a>Декларатор ссылки rvalue: &amp;&amp;
 
 Содержит ссылку на выражение rvalue.
 
@@ -391,13 +391,12 @@ print_type_and_value<string&>(string& t)
 
 В следующей таблице приведены правила сворачивания ссылок для выведения типа аргументов шаблонов:
 
-|||
-|-|-|
-|Развернутый тип|Свернутый тип|
-|`T& &`|`T&`|
-|`T& &&`|`T&`|
-|`T&& &`|`T&`|
-|`T&& &&`|`T&&`|
+| Развернутый тип | Свернутый тип |
+|--|--|
+| `T& &` | `T&` |
+| `T& &&` | `T&` |
+| `T&& &` | `T&` |
+| `T&& &&` | `T&&` |
 
 Вывод аргументов шаблонов — это важный элемент реализации точной пересылки. Более подробно точная пересылка рассматривается выше в подразделе "Точная пересылка" этого раздела.
 

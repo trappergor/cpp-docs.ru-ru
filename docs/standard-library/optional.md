@@ -1,53 +1,53 @@
 ---
-title: '&lt;optional&gt;'
+title: '&lt;необязательный параметр&gt;'
 ms.date: 08/06/2019
 f1_keywords:
 - <optional>
 helpviewer_keywords:
 - <optional>
-ms.openlocfilehash: bce31811c98d351f3c561b3136d41f7ed23d13e0
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 31a3d9aad539e45bb835331a4ef63690d0e16f49
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687260"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842680"
 ---
-# <a name="ltoptionalgt"></a>&lt;optional&gt;
+# <a name="ltoptionalgt"></a>&lt;необязательный параметр&gt;
 
 Определяет шаблон класса контейнера `optional` и несколько вспомогательных шаблонов.
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<optional >
+**Заголовок:**\<optional>
 
 **Пространство имен:** std
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Элементы
 
 ### <a name="operators"></a>Операторы
 
-|||
+|Имя|Описание|
 |-|-|
-|[оператор==](../standard-library/optional-operators.md#op_eq_eq)|Проверяет, равен ли объект другому объекту.|
-|[оператор!= ](../standard-library/optional-operators.md#op_neq)|Проверяет, не равен ли объект другому объекту.|
-|[оператор<](../standard-library/optional-operators.md#op_lt)|Проверяет, что объект слева меньше объекта справа.|
-|[оператор<=](../standard-library/optional-operators.md#op_lt_eq)|Проверяет, что объект слева меньше или равен объекту справа.|
-|[оператор>](../standard-library/optional-operators.md#op_gt)|Проверяет, что объект слева больше объекта справа.|
-|[оператор>=](../standard-library/optional-operators.md#op_lt_eq)|Проверяет, что объект слева больше или равен объекту справа.|
+|[Оператор = =](../standard-library/optional-operators.md#op_eq_eq)|Проверяет, равен ли объект другому объекту.|
+|[operator! =](../standard-library/optional-operators.md#op_neq)|Проверяет, не равен ли объект другому объекту.|
+|[Оператор<](../standard-library/optional-operators.md#op_lt)|Проверяет, что объект слева меньше объекта справа.|
+|[Оператор<=](../standard-library/optional-operators.md#op_lt_eq)|Проверяет, что объект слева меньше или равен объекту справа.|
+|[Оператор>](../standard-library/optional-operators.md#op_gt)|Проверяет, что объект слева больше объекта справа.|
+|[Оператор>=](../standard-library/optional-operators.md#op_lt_eq)|Проверяет, что объект слева больше или равен объекту справа.|
 
 > [!NOTE]
-> В дополнение к реляционным сравнениям \<optional операторы > также поддерживают сравнение с **нуллопт** и `T`.
+> Помимо реляционных сравнений, \<optional> операторы также поддерживают сравнение с **нуллопт** и `T` .
 
 ### <a name="functions"></a>Функции
 
-|||
+|Имя|Описание|
 |-|-|
 |[make_optional](../standard-library/optional-functions.md#make_optional)|Делает объект необязательным.|
-|[swap](../standard-library/optional-functions.md#swap)|Меняет местами содержащиеся значения двух `optional` объектов.|
+|[позиции](../standard-library/optional-functions.md#swap)|Меняет местами содержащиеся значения двух `optional` объектов.|
 
 ### <a name="classes-and-structs"></a>Классы и структуры
 
-|||
+|Имя|Описание|
 |-|-|
 |hash|Возвращает хэш содержащегося объекта.|
 |[необязательный класс](../standard-library/optional-class.md)|Описывает объект, который может или не может содержать значение.|
@@ -56,10 +56,10 @@ ms.locfileid: "72687260"
 
 ### <a name="objects"></a>Объекты
 
-|||
+|Имя|Описание|
 |-|-|
 |[нуллопт](../standard-library/optional-functions.md#nullopt)|Экземпляр `nullopt_t` для сравнений.|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)

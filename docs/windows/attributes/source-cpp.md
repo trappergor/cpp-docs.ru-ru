@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - source attribute
 ms.assetid: 1878d05d-7709-4e97-b114-c62f38f5140e
-ms.openlocfilehash: 274e446aecc4d0d7096211bbae88e0f170ae44a2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f9a1f576e26805c5dd84c2d83cdf3615d0661af3
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213831"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842771"
 ---
 # <a name="source-c"></a>source (C++)
 
@@ -70,13 +70,11 @@ class NN : public b
 
 ## <a name="requirements"></a>Требования
 
-### <a name="attribute-context"></a>Контекст атрибута
-
-|||
+| Контекст атрибута | Значение |
 |-|-|
 |**Относится к**|**`class`**, **`struct`** , **интерфейс**|
 |**REPEATABLE**|Нет|
-|**Требуемые атрибуты**|`coclass`(при применении к классу или структуре)|
+|**Требуемые атрибуты**|`coclass` (при применении к классу или структуре)|
 |**Недопустимые атрибуты**|Нет|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).

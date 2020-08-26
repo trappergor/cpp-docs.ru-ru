@@ -1,17 +1,17 @@
 ---
-title: включить (C++ атрибут com)
+title: include (атрибут COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.include
 helpviewer_keywords:
 - include attribute
 ms.assetid: d23f8b91-fe5b-48fa-9371-8bd73af7b8e3
-ms.openlocfilehash: 39f991bb036dce1c50a9d2ee800d3fec65af7c55
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6b75df74ee69ee4f89eb7bf18fb6bcd77d8a6284
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166787"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842199"
 ---
 # <a name="include-c"></a>include (C++)
 
@@ -30,13 +30,13 @@ ms.locfileid: "80166787"
 
 ## <a name="remarks"></a>Remarks
 
-Атрибут **include** C++ приводит к тому, что `#include` оператор помещается под инструкцией `import "docobj.idl"` в созданном IDL-файле.
+Атрибут **include** C++ приводит к тому, что `#include` инструкция будет помещена под `import "docobj.idl"` инструкцией в созданном IDL-файле.
 
-Атрибут **include** C++ имеет те же функциональные возможности, что и атрибут [include](/windows/win32/Midl/include) в формате MIDL.
+Атрибут **include** C++ имеет те же функциональные возможности, что и атрибут [include](/windows/win32/Midl/include) языка MIDL.
 
 ## <a name="example"></a>Пример
 
-В следующем коде показан пример использования **include**. В этом примере файл include. h содержит только инструкцию `#include`.
+В следующем коде показан пример использования **include**. В этом примере файл include. h содержит только `#include` инструкцию.
 
 ```cpp
 // cpp_attr_ref_include.cpp
@@ -47,14 +47,12 @@ ms.locfileid: "80166787"
 
 ## <a name="requirements"></a>Требования
 
-### <a name="attribute-context"></a>Контекст атрибута
-
-|||
+| Контекст атрибута | Значение |
 |-|-|
-|**Применение**|В любом месте|
-|**Повторяемый**|нет|
-|**Обязательные атрибуты**|None|
-|**Недопустимые атрибуты**|None|
+|**Относится к**|В любом месте|
+|**REPEATABLE**|Нет|
+|**Требуемые атрибуты**|Нет|
+|**Недопустимые атрибуты**|Нет|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
@@ -64,5 +62,5 @@ ms.locfileid: "80166787"
 [Изолированные атрибуты](stand-alone-attributes.md)<br/>
 [import](import.md)<br/>
 [importidl](importidl.md)<br/>
-[includelib](includelib-cpp.md)<br/>
+[инклуделиб](includelib-cpp.md)<br/>
 [importlib](importlib.md)

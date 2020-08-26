@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::student_t_distribution [C++], max
 - std::student_t_distribution [C++], param_type
 ms.assetid: 87b48127-9311-4d07-95df-833ed46bf0b1
-ms.openlocfilehash: c23298b931e751a8020883bfb3cf687e35ba3276
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 23ded8704e1e29dabddadfdc0a1ced3644374ad9
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87202016"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840964"
 ---
 # <a name="student_t_distribution-class"></a>Класс student_t_distribution
 
@@ -71,10 +71,8 @@ public:
 
 Шаблон класса описывает распределение, которое создает значения указанного пользователем целочисленного типа или тип **`double`** , если он не указан, распределяется в соответствии с *t*-распределением учащегося. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
-||||
-|-|-|-|
-|[student_t_distribution](#student_t_distribution)|`student_t_distribution::n`|`student_t_distribution::param`|
-|`student_t_distribution::operator()`||[param_type](#param_type)|
+[student_t_distribution](#student_t_distribution)\
+[param_type](#param_type)
 
 Функция свойства `n()` возвращает значение для хранимого параметра распределения `n`.
 
@@ -163,7 +161,7 @@ Distribution for 10 samples:
 
 **Пространство имен:** std
 
-## <a name="student_t_distributionstudent_t_distribution"></a><a name="student_t_distribution"></a>student_t_distribution:: student_t_distribution
+## <a name="student_t_distributionstudent_t_distribution"></a><a name="student_t_distribution"></a> student_t_distribution:: student_t_distribution
 
 Формирует распределение.
 
@@ -188,7 +186,7 @@ explicit student_t_distribution(const param_type& parm);
 
 Второй конструктор создает объект, хранимые параметры которого инициализируются из *parm*. Вы можете получить и задать текущие параметры существующего распределения, вызвав функцию-член `param()`.
 
-## <a name="student_t_distributionparam_type"></a><a name="param_type"></a>student_t_distribution::p aram_type
+## <a name="student_t_distributionparam_type"></a><a name="param_type"></a> student_t_distribution::p aram_type
 
 Сохраняет все параметры распределения.
 

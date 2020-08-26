@@ -26,16 +26,16 @@ helpviewer_keywords:
 - CStreamRowset class, constructor
 - Close method
 ms.assetid: a106e953-a38a-464e-8ea5-28963d9e4811
-ms.openlocfilehash: ad4987422fd200faef141150908d4df0722f669a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 304dfe0e026a9fbba899c1ef17c06cf1baf1529b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366276"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841055"
 ---
 # <a name="cstreamrowset-class"></a>Класс CStreamRowset
 
-Используется в `CCommand` `CTable` декларации или декларации.
+Используется в `CCommand` `CTable` объявлении или.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -46,44 +46,44 @@ class CStreamRowset
 
 ### <a name="parameters"></a>Параметры
 
-*TAccessor*<br/>
-Класс аксессуаров.
+*такцессор*<br/>
+Класс метода доступа.
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** atldbcli.h
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Элементы
 
 ### <a name="methods"></a>Методы
 
-|||
+| Имя | Описание |
 |-|-|
-|[CStreamRowset](#cstreamrowset)|Конструктор. Мгновения и инициализации `CStreamRowset` объекта.|
-|[Закрыть](#close)|Выпускает указатель интерфейса [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) в классе.|
+|[CStreamRowset](#cstreamrowset)|Конструктор. Создает и инициализирует `CStreamRowset` объект.|
+|[Закрыть](#close)|Освобождает указатель интерфейса [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) в классе.|
 
 ## <a name="remarks"></a>Remarks
 
-Используйте `CStreamRowset` `CCommand` в `CTable` своей или декларации, например:
+Используйте `CStreamRowset` в `CCommand` `CTable` объявлении или, например:
 
 [!code-cpp[NVC_OLEDB_Consumer#11](../../data/oledb/codesnippet/cpp/cstreamrowset-class_1.cpp)]
 
-or
+или диспетчер конфигурации служб
 
 [!code-cpp[NVC_OLEDB_Consumer#12](../../data/oledb/codesnippet/cpp/cstreamrowset-class_2.cpp)]
 
-`ICommand::Execute`возвращает `ISequentialStream` указатель, который хранится в `m_spStream`. Затем `Read` метод для извлечения данных (строки Unicode) в формате XML. Пример:
+`ICommand::Execute` Возвращает `ISequentialStream` указатель, хранящийся в `m_spStream` . Затем используйте `Read` метод для получения данных (строки в Юникоде) в формате XML. Пример:
 
 [!code-cpp[NVC_OLEDB_Consumer#13](../../data/oledb/codesnippet/cpp/cstreamrowset-class_3.cpp)]
 
-S'L Server 2000 выполняет форматирование XML и возвращает все столбцы и все строки строки строки в виде одной строки XML.
+SQL Server 2000 выполняет форматирование XML и будет возвращать все столбцы и все строки набора строк в виде одной строки XML.
 
 > [!NOTE]
-> Эта функция работает только с сервером S'L Server 2000.
+> Эта функция работает только с SQL Server 2000.
 
-## <a name="cstreamrowsetcstreamrowset"></a><a name="cstreamrowset"></a>CStreamRowset::CStreamRowset
+## <a name="cstreamrowsetcstreamrowset"></a><a name="cstreamrowset"></a> CStreamRowset:: CStreamRowset
 
-Мгновения и инициализации `CStreamRowset` объекта.
+Создает и инициализирует `CStreamRowset` объект.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -91,9 +91,9 @@ S'L Server 2000 выполняет форматирование XML и возв�
 CStreamRowset();
 ```
 
-## <a name="cstreamrowsetclose"></a><a name="close"></a>CStreamRowset::Закрыть
+## <a name="cstreamrowsetclose"></a><a name="close"></a> CStreamRowset:: Close
 
-Выпускает указатель интерфейса [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) в классе.
+Освобождает указатель интерфейса [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) в классе.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -104,4 +104,4 @@ void Close();
 ## <a name="see-also"></a>См. также раздел
 
 [Шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[СПРАВКа о потребительских шаблонах OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Справочник по шаблонам потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

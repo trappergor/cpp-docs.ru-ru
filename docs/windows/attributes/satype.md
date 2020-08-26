@@ -1,21 +1,21 @@
 ---
-title: сатипе (C++ атрибут com)
+title: сатипе (атрибут COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.satype
 helpviewer_keywords:
 - satype attribute
 ms.assetid: 1716590b-6bcb-4aba-b1bc-82f7335f02c3
-ms.openlocfilehash: 4619deec6d5e4e9083fbc7bcab53caee0101285c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 16da256f491dbb0002d92cadaceda14a49eb2192
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166280"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842784"
 ---
 # <a name="satype"></a>satype
 
-Указывает тип данных структуры `SAFEARRAY`.
+Указывает тип данных `SAFEARRAY` структуры.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -26,25 +26,23 @@ ms.locfileid: "80166280"
 ### <a name="parameters"></a>Параметры
 
 *data_type*<br/>
-Тип данных `SAFEARRAY` структуры данных, передаваемой в качестве параметра методу интерфейса.
+Тип данных для `SAFEARRAY` структуры данных, передаваемой в качестве параметра в метод интерфейса.
 
 ## <a name="requirements"></a>Требования
 
-### <a name="attribute-context"></a>Контекст атрибута
-
-|||
+| Контекст атрибута | Значение |
 |-|-|
-|**Применение**|Параметр интерфейса, метод интерфейса|
-|**Повторяемый**|нет|
-|**Обязательные атрибуты**|None|
+|**Относится к**|Параметр интерфейса, метод интерфейса|
+|**REPEATABLE**|Нет|
+|**Требуемые атрибуты**|Нет|
 |**Недопустимые атрибуты**|None|
 
 ## <a name="remarks"></a>Remarks
 
-Атрибут **сатипе** C++ задает тип данных `SAFEARRAY`.
+Атрибут **сатипе** C++ задает тип данных `SAFEARRAY` .
 
 > [!NOTE]
-> Уровень косвенного обращения удаляется из указателя `SAFEARRAY` в созданном IDL-файле из того, как он объявлен в cpp-файле.
+> Уровень косвенного обращения удаляется из `SAFEARRAY` указателя в созданном IDL-файле из того, как он объявлен в cpp-файле.
 
 ## <a name="example"></a>Пример
 

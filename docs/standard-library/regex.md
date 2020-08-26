@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - regex header
 ms.assetid: 5dd4ef74-6063-4dbc-b692-1960bb736f0b
-ms.openlocfilehash: 9d7f84ac47979cf398ae1f94e4d01ba0915da299
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 60548e96e0922fdcff00456b03bf9fa15bb7e3b3
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217536"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841484"
 ---
 # <a name="ltregexgt"></a>&lt;regex&gt;
 
@@ -37,7 +37,7 @@ ms.locfileid: "87217536"
 
 ### <a name="classes"></a>Классы
 
-|Class|Описание:|
+|Класс|Описание|
 |-|-|
 |[basic_regex](../standard-library/basic-regex-class.md)|Создание оболочки для регулярного выражения.|
 |[match_results](../standard-library/match-results-class.md)|Содержит последовательность подстрок соответствия.|
@@ -52,7 +52,7 @@ ms.locfileid: "87217536"
 
 ### <a name="type-definitions"></a>Определения типов
 
-|||
+|Имя|Описание|
 |-|-|
 |[cmatch](../standard-library/regex-typedefs.md#cmatch)|Определение типа для **`char`** `match_results` .|
 |[cregex_iterator](../standard-library/regex-typedefs.md#cregex_iterator)|Определение типа для **`char`** `regex_iterator` .|
@@ -89,7 +89,7 @@ ms.locfileid: "87217536"
 |[Оператор = =](../standard-library/regex-operators.md#op_eq_eq)|Сравнение различных объектов, равенство.|
 |[operator! =](../standard-library/regex-operators.md#op_neq)|Сравнение различных объектов, неравенство.|
 |[Оператор<](../standard-library/regex-operators.md#op_lt)|Сравнение различных объектов, меньше.|
-|[оператор\<=](../standard-library/regex-operators.md#op_gt_eq)|Сравнение различных объектов, меньше или равно.|
+|[станции\<=](../standard-library/regex-operators.md#op_gt_eq)|Сравнение различных объектов, меньше или равно.|
 |[Оператор>](../standard-library/regex-operators.md#op_gt)|Сравнение различных объектов, больше.|
 |[Оператор>=](../standard-library/regex-operators.md#op_gt_eq)|Сравнение различных объектов, больше или равно.|
 |[Оператор<<](../standard-library/regex-operators.md#op_lt_lt)|Вставляет `sub_match` в поток.|
@@ -99,9 +99,9 @@ ms.locfileid: "87217536"
 [Регулярные выражения (C++)](../standard-library/regular-expressions-cpp.md)\
 [Класс regex_constants](../standard-library/regex-constants-class.md)\
 [Класс regex_error](../standard-library/regex-error-class.md)\
-[\<regex>функции](../standard-library/regex-functions.md)\
+[\<regex> функции](../standard-library/regex-functions.md)\
 [Класс regex_iterator](../standard-library/regex-iterator-class.md)\
-[\<regex>операторы](../standard-library/regex-operators.md)\
+[\<regex> операторы](../standard-library/regex-operators.md)\
 [Класс regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
 [Класс regex_traits](../standard-library/regex-traits-class.md)\
-[\<regex>определения типов](../standard-library/regex-typedefs.md)
+[\<regex> определения типов](../standard-library/regex-typedefs.md)

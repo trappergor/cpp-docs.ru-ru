@@ -1,17 +1,17 @@
 ---
-title: ODL (C++ атрибут com)
+title: ODL (атрибут COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.odl
 helpviewer_keywords:
 - odl attribute
 ms.assetid: 75dcb314-b50f-4a63-9180-507ac1bc78f3
-ms.openlocfilehash: 2627be876f0c46bb7d72c2c6b825cf76e24b1eb1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a2f3c58e40dc14d256ca694bb1266aed13dc9620
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214738"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842823"
 ---
 # <a name="odl"></a>odl
 
@@ -51,14 +51,12 @@ public:
 
 ## <a name="requirements"></a>Требования
 
-### <a name="attribute-context"></a>Контекст атрибута
-
-|||
+| Контекст атрибута | Значение |
 |-|-|
-|**Применение**|**interface**|
-|**Повторяемый**|нет|
-|**Обязательные атрибуты**|None|
-|**Недопустимые атрибуты**|None|
+|**Относится к**|**interface**|
+|**REPEATABLE**|Нет|
+|**Требуемые атрибуты**|Нет|
+|**Недопустимые атрибуты**|Нет|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 

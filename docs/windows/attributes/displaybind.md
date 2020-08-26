@@ -1,17 +1,17 @@
 ---
-title: дисплайбинд (C++ атрибут com)
+title: дисплайбинд (атрибут COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.displaybind
 helpviewer_keywords:
 - displaybind attribute
 ms.assetid: b3d70396-78e4-43d9-9583-16ddb8c9bb1f
-ms.openlocfilehash: 9ca5c84e859d395d71b7f37a34b1158800bceed7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e5c870aefbc73893b5bf14edec384a93fe0b057b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168256"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841666"
 ---
 # <a name="displaybind"></a>displaybind
 
@@ -33,14 +33,12 @@ ms.locfileid: "80168256"
 
 ## <a name="requirements"></a>Требования
 
-### <a name="attribute-context"></a>Контекст атрибута
-
-|||
+| Контекст атрибута | Значение |
 |-|-|
-|**Применение**|Метод интерфейса|
-|**Повторяемый**|нет|
-|**Обязательные атрибуты**|None|
-|**Недопустимые атрибуты**|None|
+|**Относится к**|Метод интерфейса|
+|**REPEATABLE**|Нет|
+|**Требуемые атрибуты**|Нет|
+|**Недопустимые атрибуты**|Нет|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 

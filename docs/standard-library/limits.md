@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - limits header
 ms.assetid: e07d6379-5b00-4a3d-a789-40d41538b59e
-ms.openlocfilehash: 2d0f4f96d25c91ac20fe5a1883fc61fc47d15d5e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1527672bd51682bf32c82601ff54a94ea4154a0b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217692"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841913"
 ---
 # <a name="ltlimitsgt"></a>&lt;limits&gt;
 
@@ -32,14 +32,14 @@ ms.locfileid: "87217692"
 
 ### <a name="enumerations"></a>Перечисления
 
-|||
+|Имя|Описание|
 |-|-|
 |[float_denorm_style](../standard-library/limits-enums.md#float_denorm_style)|Перечисление описывает различные методы, которые могут быть выбраны реализацией для представления ненормализованного значения с плавающей запятой, если оно мало для представления в качестве нормализованного значения:|
 |[float_round_style](../standard-library/limits-enums.md#float_round_style)|Перечисление описывает различные методы, которые могут быть выбраны реализацией для округления значения с плавающей запятой до целочисленного.|
 
 ### <a name="classes"></a>Классы
 
-|||
+|name|Описание|
 |-|-|
 |[Класс numeric_limits](../standard-library/numeric-limits-class.md)|Шаблон класса описывает арифметические свойства встроенных числовых типов.|
 
