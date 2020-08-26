@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: 771a2973e0254194d99ddfd46ca7df7d6cc8e5a4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 94063b2c66d201da3b0e822a7118b3e48020ed3c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224829"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833261"
 ---
 # <a name="locale-class"></a>Класс locale
 
@@ -140,7 +140,7 @@ cout.imbue(loc);
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[locale](#locale)|Создает языковой стандарт, копию языкового стандарта или копию языкового стандарта, в которой аспект или категория заменены аспектом или категорией из другого языкового стандарта.|
 
@@ -152,21 +152,21 @@ cout.imbue(loc);
 
 ### <a name="member-functions"></a>Функции элементов
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[состоят](#combine)|Вставляет аспект из определенного языкового стандарта в целевой языковой стандарт.|
 |[name](#name)|Возвращает имя сохраненного языкового стандарта.|
 
 ### <a name="static-functions"></a>Статические функции
 
-|||
+|Имя|Описание|
 |-|-|
-|[классическая](#classic)|Данная статическая функция-член возвращает объект языкового стандарта, представляющий классический языковой стандарт C.|
+|[Классические](#classic)|Данная статическая функция-член возвращает объект языкового стандарта, представляющий классический языковой стандарт C.|
 |[global](#global)|Сброс языкового стандарта программы по умолчанию.|
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |[Оператор =](#op_eq)|Назначает языковой стандарт.|
 |[operator! =](#op_neq)|Проверка двух языковых стандартов на неравенство.|
@@ -175,9 +175,9 @@ cout.imbue(loc);
 
 ### <a name="classes"></a>Классы
 
-|Class|Описание:|
+|Класс|Описание|
 |-|-|
-|[facet](#facet_class)|Класс, используемый как базовый класс для всех аспектов языкового стандарта.|
+|[устанавливают](#facet_class)|Класс, используемый как базовый класс для всех аспектов языкового стандарта.|
 |[`id`](#id_class)|Класс члена содержит уникальный идентификатор аспекта, применяемый в качестве индекса для поиска аспектов в языковом стандарте.|
 
 ## <a name="requirements"></a>Требования
@@ -186,7 +186,7 @@ cout.imbue(loc);
 
 **Пространство имен:** std
 
-## <a name="localecategory"></a><a name="category"></a>языковой стандарт:: Category
+## <a name="localecategory"></a><a name="category"></a> языковой стандарт:: Category
 
 Целочисленный тип, который содержит значения битовой маски для обозначения стандартных семейств аспектов.
 
@@ -226,7 +226,7 @@ static const int none = 0;
 
 Можно представить произвольную группу категорий с помощью `OR` с этими константами, как в `monetary` &#124; `time` .
 
-## <a name="localeclassic"></a><a name="classic"></a>locale:: классический
+## <a name="localeclassic"></a><a name="classic"></a> locale:: классический
 
 Данная статическая функция-член возвращает объект языкового стандарта, представляющий классический языковой стандарт C.
 
@@ -281,7 +281,7 @@ The previous locale was classic.
 The current locale is not classic.
 ```
 
-## <a name="localecombine"></a><a name="combine"></a>языковой стандарт:: Combine
+## <a name="localecombine"></a><a name="combine"></a> языковой стандарт:: Combine
 
 Вставляет аспект из определенного языкового стандарта в целевой языковой стандарт.
 
@@ -329,7 +329,7 @@ int main() {
 }
 ```
 
-## <a name="facet-class"></a><a name="facet_class"></a>Класс аспекта
+## <a name="facet-class"></a><a name="facet_class"></a> Класс аспекта
 
 Класс, используемый как базовый класс для всех аспектов языкового стандарта.
 
@@ -346,11 +346,11 @@ private:
 
 ### <a name="remarks"></a>Remarks
 
-Нельзя скопировать или назначить объект класса `facet` . Можно создавать и удалять объекты, производные от класса `locale::facet`, но не объекты правильного базового класса. Как правило, создается объект `_Myfac` , производный от `facet` , при создании `locale` , как в`locale loc(locale::classic(), new _Myfac);`
+Нельзя скопировать или назначить объект класса `facet` . Можно создавать и удалять объекты, производные от класса `locale::facet`, но не объекты правильного базового класса. Как правило, создается объект `_Myfac` , производный от `facet` , при создании `locale` , как в `locale loc(locale::classic(), new _Myfac);`
 
 В таких случаях конструктор базового класса `facet` должен иметь аргумент с нулевым числом *ссылок* . Если объект больше не нужен, он удаляется, поэтому аргумент ненулевых *ссылок* указывается только в редких случаях, когда ответственность за время существования объекта несется.
 
-## <a name="localeglobal"></a><a name="global"></a>locale:: Global
+## <a name="localeglobal"></a><a name="global"></a> locale:: Global
 
 Сброс языкового стандарта по умолчанию для программы. Этот вызов влияет на глобальный языковой стандарт для C и C++.
 
@@ -399,7 +399,7 @@ The current locale is: German_Germany.1252
 The previous locale was: C
 ```
 
-## <a name="id-class"></a><a name="id_class"></a>Класс ID
+## <a name="id-class"></a><a name="id_class"></a> Класс ID
 
 Класс члена содержит уникальный идентификатор аспекта, применяемый в качестве индекса для поиска аспектов в языковом стандарте.
 
@@ -416,7 +416,7 @@ class id
 
 Класс-член описывает статический объект-член, необходимый для каждого уникального аспекта языкового стандарта. Нельзя скопировать или назначить объект класса `id` .
 
-## <a name="localelocale"></a><a name="locale"></a>языковой стандарт:: locale
+## <a name="localelocale"></a><a name="locale"></a> языковой стандарт:: locale
 
 Создает языковой стандарт, копию языкового стандарта или копию языкового стандарта, в которой аспект или категория заменены аспектом или категорией из другого языкового стандарта. Также включает деструктор.
 
@@ -512,7 +512,7 @@ int main( ) {
 }
 ```
 
-## <a name="localename"></a><a name="name"></a>locale:: Name
+## <a name="localename"></a><a name="name"></a> locale:: Name
 
 Возвращает имя сохраненного языкового стандарта.
 
@@ -551,7 +551,7 @@ The name of the previous locale is: C.
 The name of the current locale is: German_Germany.1252.
 ```
 
-## <a name="localeoperator"></a><a name="op_eq"></a>языковой стандарт:: operator =
+## <a name="localeoperator"></a><a name="op_eq"></a> языковой стандарт:: operator =
 
 Назначает языковой стандарт.
 
@@ -559,7 +559,7 @@ The name of the current locale is: German_Germany.1252.
 const locale& operator=(const locale& other) noexcept;
 ```
 
-## <a name="localeoperator"></a><a name="op_neq"></a>языковой стандарт:: operator! =
+## <a name="localeoperator"></a><a name="op_neq"></a> языковой стандарт:: operator! =
 
 Проверка двух языковых стандартов на неравенство.
 
@@ -620,7 +620,7 @@ locales loc1 (German_Germany.1252) and
 loc3 (English_United States.1252) are not equal.
 ```
 
-## <a name="localeoperator"></a><a name="op_call"></a>языковой стандарт:: operator ()
+## <a name="localeoperator"></a><a name="op_call"></a> языковой стандарт:: operator ()
 
 Сравнивает два `basic_string` объекта в соответствии с правилами сравнения лексикографическим порядком, определенными аспектом std:: COLLATE этого языкового стандарта <charT> .
 
@@ -686,7 +686,7 @@ int main( )
 0
 ```
 
-## <a name="localeoperator"></a><a name="op_eq_eq"></a>языковой стандарт:: operator = =
+## <a name="localeoperator"></a><a name="op_eq_eq"></a> языковой стандарт:: operator = =
 
 Проверка двух языковых стандартов на равенство.
 

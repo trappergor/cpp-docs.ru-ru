@@ -82,12 +82,12 @@ helpviewer_keywords:
 - std::regex_constants [C++], optimize
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
-ms.openlocfilehash: ee016e5cee1bde94a49a1b339d6910d60db4cea1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 422d29f16220ae2c2db93c9f84410316bf08f5e7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331964"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845059"
 ---
 # <a name="regex_constants-namespace"></a>Пространство имен regex_constants
 
@@ -107,7 +107,7 @@ namespace regex_constants {
 
 Пространство имен `regex_constants` инкапсулирует несколько типов флажков и соответствующих им значений флажков.
 
-|||
+|Имя|Описание|
 |-|-|
 |[error_type](#error_type)|Флаги для оповещения об ошибках синтаксиса регулярного выражения.|
 |[match_flag_type](#match_flag_type)|Флаги для параметров сопоставления регулярного выражения.|
@@ -115,11 +115,11 @@ namespace regex_constants {
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<regex>
+**Заголовок:**\<regex>
 
 **Пространство имен:** std
 
-## <a name="regex_constantserror_type"></a><a name="error_type"></a>regex_constants::error_type
+## <a name="regex_constantserror_type"></a><a name="error_type"></a> regex_constants:: error_type
 
 Флаги для оповещения об ошибках синтаксиса регулярного выражения.
 
@@ -180,7 +180,7 @@ enum error_type
 
 `error_backref` -- выражение содержит недопустимую обратную ссылку
 
-## <a name="regex_constantsmatch_flag_type"></a><a name="match_flag_type"></a>regex_constants::match_flag_type
+## <a name="regex_constantsmatch_flag_type"></a><a name="match_flag_type"></a> regex_constants:: match_flag_type
 
 Флаги для параметров сопоставления регулярного выражения.
 
@@ -238,7 +238,7 @@ enum match_flag_type
 
 `format_first_only` -- не искать соответствия после нахождения первого
 
-## <a name="regex_constantssyntax_option_type"></a><a name="syntax_option_type"></a>regex_constants::syntax_option_type
+## <a name="regex_constantssyntax_option_type"></a><a name="syntax_option_type"></a> regex_constants:: syntax_option_type
 
 Флаги для выбора параметров синтаксиса.
 
@@ -291,10 +291,10 @@ enum syntax_option_type
 ## <a name="see-also"></a>См. также раздел
 
 [\<regex>](../standard-library/regex.md)\
-[regex_error класс](../standard-library/regex-error-class.md)\
-[\<функции regex>](../standard-library/regex-functions.md)\
-[класс regex_iterator](../standard-library/regex-iterator-class.md)\
-[\<операторы regex>](../standard-library/regex-operators.md)\
-[класс regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
-[класс regex_traits](../standard-library/regex-traits-class.md)\
-[\<regex> typedefs](../standard-library/regex-typedefs.md)
+[Класс regex_error](../standard-library/regex-error-class.md)\
+[\<regex> функции](../standard-library/regex-functions.md)\
+[Класс regex_iterator](../standard-library/regex-iterator-class.md)\
+[\<regex> операторы](../standard-library/regex-operators.md)\
+[Класс regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
+[Класс regex_traits](../standard-library/regex-traits-class.md)\
+[\<regex> определения типов](../standard-library/regex-typedefs.md)

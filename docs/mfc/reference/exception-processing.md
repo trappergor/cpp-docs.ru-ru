@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-ms.openlocfilehash: 08be9bd03b20c4bc6fc8f7b0ea63d628b34d033e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9d6a1c30ca0811085124a5fb5994c5f35d412ae7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222788"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837193"
 ---
 # <a name="exception-processing"></a>Обработка исключений
 
@@ -36,7 +36,7 @@ ms.locfileid: "87222788"
 
 ### <a name="exception-macros"></a>Макросы исключений
 
-|||
+|Имя|Описание|
 |-|-|
 |[Повторите](#try)|Обозначает блок кода для обработки исключений.|
 |[CATCH](#catch)|Обозначает блок кода для перехвата исключения из предыдущего блока **try** .|
@@ -45,12 +45,12 @@ ms.locfileid: "87222788"
 |[AND_CATCH_ALL](#and_catch_all)|Обозначает блок кода для перехвата всех других дополнительных типов исключений, созданных в предыдущем блоке **try** .|
 |[END_CATCH](#end_catch)|Завершает последний блок кода **catch** или **AND_CATCH** .|
 |[END_CATCH_ALL](#end_catch_all)|Завершает последний блок кода **CATCH_ALL** .|
-|[ДАЧЕ](#throw)|Создает указанное исключение.|
+|[THROW](#throw)|Создает указанное исключение.|
 |[THROW_LAST](#throw_last)|Создает текущее обработанное исключение для следующего внешнего обработчика.|
 
 ### <a name="exception-throwing-functions"></a>Функции генерации исключений
 
-|||
+|Имя|Описание|
 |-|-|
 |[AfxThrowArchiveException](#afxthrowarchiveexception)|Создает исключение архива.|
 |[AfxThrowFileException](#afxthrowfileexception)|Вызывает исключение файла.|
@@ -64,7 +64,7 @@ MFC предоставляет две функции генерации искл
 
 ### <a name="ole-exception-functions"></a>Функции исключений OLE
 
-|||
+|Имя|Описание|
 |-|-|
 |[AfxThrowOleDispatchException](#afxthrowoledispatchexception)|Создает исключение в функции OLE Automation.|
 |[AfxThrowOleException](#afxthrowoleexception)|Вызывает исключение OLE.|
@@ -73,7 +73,7 @@ MFC предоставляет две функции генерации искл
 
 ### <a name="dao-exception-functions"></a>Функции исключений DAO
 
-|||
+|Имя|Описание|
 |-|-|
 |[афкссровдаоексцептион](#afxthrowdaoexception)|Создает исключение [кдаоексцептион](../../mfc/reference/cdaoexception-class.md) из собственного кода.|
 |[AfxThrowDBException](#afxthrowdbexception)|Создает исключение [кдбексцептион](../../mfc/reference/cdbexception-class.md) из собственного кода.|
@@ -82,11 +82,11 @@ MFC предоставляет следующую функцию заверше�
 
 ### <a name="termination-functions"></a>Функции завершения
 
-|||
+|Имя|Описание|
 |-|-|
 |[AfxAbort](#afxabort)|Вызывается для завершения работы приложения при возникновении неустранимой ошибки.|
 
-## <a name="try"></a><a name="try"></a>Повторите
+## <a name="try"></a><a name="try"></a> Повторите
 
 Настраивает блок **try** .
 
@@ -108,7 +108,7 @@ TRY
 
 Заголовок: afx.h
 
-## <a name="catch"></a><a name="catch"></a>CATCH
+## <a name="catch"></a><a name="catch"></a> CATCH
 
 Определяет блок кода, который перехватывает первый тип исключения, вызванный в предыдущем блоке **try** .
 
@@ -141,7 +141,7 @@ CATCH(exception_class, exception_object_pointer_name)
 
 [!code-cpp[NVC_MFCExceptions#26](../../mfc/codesnippet/cpp/exception-processing_1.cpp)]
 
-## <a name="catch_all"></a><a name="catch_all"></a>CATCH_ALL
+## <a name="catch_all"></a><a name="catch_all"></a> CATCH_ALL
 
 Определяет блок кода, который перехватывает все типы исключений, созданные в предыдущем блоке **try** .
 
@@ -171,7 +171,7 @@ CATCH_ALL(exception_object_pointer_name)
 
   **Заголовок** AFX. h
 
-## <a name="and_catch"></a><a name="and_catch"></a>AND_CATCH
+## <a name="and_catch"></a><a name="and_catch"></a> AND_CATCH
 
 Определяет блок кода для перехвата дополнительных типов исключений, создаваемых в предыдущем блоке **try** .
 
@@ -204,7 +204,7 @@ AND_CATCH(exception_class, exception_object_pointer_name)
 
   **Заголовок** AFX. h
 
-## <a name="and_catch_all"></a><a name="and_catch_all"></a>AND_CATCH_ALL
+## <a name="and_catch_all"></a><a name="and_catch_all"></a> AND_CATCH_ALL
 
 Определяет блок кода для перехвата дополнительных типов исключений, создаваемых в предыдущем блоке **try** .
 
@@ -230,7 +230,7 @@ AND_CATCH_ALL(exception_object_pointer_name)
 
   **Заголовок** AFX. h
 
-## <a name="end_catch"></a><a name="end_catch"></a>END_CATCH
+## <a name="end_catch"></a><a name="end_catch"></a> END_CATCH
 
 Помечает конец последнего блока **catch** или **AND_CATCH** .
 
@@ -246,7 +246,7 @@ END_CATCH
 
   **Заголовок** AFX. h
 
-## <a name="end_catch_all"></a><a name="end_catch_all"></a>END_CATCH_ALL
+## <a name="end_catch_all"></a><a name="end_catch_all"></a> END_CATCH_ALL
 
 Помечает конец последнего **CATCH_ALL88** или **AND_CATCH_ALL** блока.
 
@@ -258,7 +258,7 @@ END_CATCH_ALL
 
   **Заголовок** AFX. h
 
-## <a name="throw-mfc"></a><a name="throw"></a>THROW (MFC)
+## <a name="throw-mfc"></a><a name="throw"></a> THROW (MFC)
 
 Создает указанное исключение.
 
@@ -281,7 +281,7 @@ THROW(exception_object_pointer)
 
   **Заголовок** AFX. h
 
-## <a name="throw_last"></a><a name="throw_last"></a>THROW_LAST
+## <a name="throw_last"></a><a name="throw_last"></a> THROW_LAST
 
 Вызывает исключение обратно в следующий внешний блок **catch** .
 
@@ -303,7 +303,7 @@ THROW_LAST()
 
   **Заголовок** AFX. h
 
-## <a name="afxthrowarchiveexception"></a><a name="afxthrowarchiveexception"></a>афкссроварчивиксцептион
+## <a name="afxthrowarchiveexception"></a><a name="afxthrowarchiveexception"></a> афкссроварчивиксцептион
 
 Создает исключение архива.
 
@@ -323,7 +323,7 @@ void  AfxThrowArchiveException(int cause, LPCTSTR lpszArchiveName);
 
   **Заголовок** AFX. h
 
-## <a name="afxthrowfileexception"></a><a name="afxthrowfileexception"></a>афкссровфиликсцептион
+## <a name="afxthrowfileexception"></a><a name="afxthrowfileexception"></a> афкссровфиликсцептион
 
 Вызывает исключение файла.
 
@@ -353,7 +353,7 @@ void AfxThrowFileException(
 
   **Заголовок** AFX. h
 
-## <a name="afxthrowinvalidargexception"></a><a name="afxthrowinvalidargexception"></a>афкссровинвалидаржексцептион
+## <a name="afxthrowinvalidargexception"></a><a name="afxthrowinvalidargexception"></a> афкссровинвалидаржексцептион
 
 Вызывает исключение недопустимого аргумента.
 
@@ -371,7 +371,7 @@ void AfxThrowInvalidArgException( );
 
 **Заголовок:** AFX. h
 
-## <a name="afxthrowmemoryexception"></a><a name="afxthrowmemoryexception"></a>афкссровмеморексцептион
+## <a name="afxthrowmemoryexception"></a><a name="afxthrowmemoryexception"></a> афкссровмеморексцептион
 
 Вызывает исключение памяти.
 
@@ -387,7 +387,7 @@ void AfxThrowMemoryException();
 
   **Заголовок** AFX. h
 
-## <a name="afxthrownotsupportedexception"></a><a name="afxthrownotsupportedexception"></a>афкссровнотсуппортедексцептион
+## <a name="afxthrownotsupportedexception"></a><a name="afxthrownotsupportedexception"></a> афкссровнотсуппортедексцептион
 
 Создает исключение, которое является результатом запроса неподдерживаемой функции.
 
@@ -399,7 +399,7 @@ void AfxThrowNotSupportedException();
 
   **Заголовок** AFX. h
 
-## <a name="afxthrowresourceexception"></a><a name="afxthrowresourceexception"></a>афкссровресаурцеексцептион
+## <a name="afxthrowresourceexception"></a><a name="afxthrowresourceexception"></a> афкссровресаурцеексцептион
 
 Вызывает исключение ресурса.
 
@@ -415,7 +415,7 @@ void  AfxThrowResourceException();
 
   **Заголовок** AFX. h
 
-## <a name="afxthrowuserexception"></a><a name="afxthrowuserexception"></a>афкссровусерексцептион
+## <a name="afxthrowuserexception"></a><a name="afxthrowuserexception"></a> афкссровусерексцептион
 
 Создает исключение для завершения операции пользователя.
 
@@ -431,7 +431,7 @@ void AfxThrowUserException();
 
   **Заголовок** AFX. h
 
-## <a name="afxthrowoledispatchexception"></a><a name="afxthrowoledispatchexception"></a>афкссроволедиспатчексцептион
+## <a name="afxthrowoledispatchexception"></a><a name="afxthrowoledispatchexception"></a> афкссроволедиспатчексцептион
 
 Эта функция используется для создания исключения в функции OLE Automation.
 
@@ -473,7 +473,7 @@ void AFXAPI AfxThrowOleDispatchException(
 
   **Заголовок** AFX. h
 
-## <a name="afxthrowoleexception"></a><a name="afxthrowoleexception"></a>афкссроволиксцептион
+## <a name="afxthrowoleexception"></a><a name="afxthrowoleexception"></a> афкссроволиксцептион
 
 Создает объект типа `COleException` и создает исключение.
 
@@ -498,7 +498,7 @@ void AFXAPI AfxThrowOleException(HRESULT hr);
 
   **Заголовок** афксдао. h
 
-## <a name="afxthrowdaoexception"></a><a name="afxthrowdaoexception"></a>афкссровдаоексцептион
+## <a name="afxthrowdaoexception"></a><a name="afxthrowdaoexception"></a> афкссровдаоексцептион
 
 Вызовите эту функцию, чтобы вызвать исключение типа [кдаоексцептион](../../mfc/reference/cdaoexception-class.md) из собственного кода.
 
@@ -526,7 +526,7 @@ void AFXAPI AfxThrowDaoException(
 
   **Заголовок** афксдб. h
 
-## <a name="afxthrowdbexception"></a><a name="afxthrowdbexception"></a>афкссровдбексцептион
+## <a name="afxthrowdbexception"></a><a name="afxthrowdbexception"></a> афкссровдбексцептион
 
 Вызовите эту функцию, чтобы создать исключение типа `CDBException` из собственного кода.
 
@@ -558,7 +558,7 @@ void AfxThrowDBException(
 
   **Заголовок** AFX. h
 
-## <a name="afxabort"></a><a name="afxabort"></a>афксаборт
+## <a name="afxabort"></a><a name="afxabort"></a> афксаборт
 
 Функция завершения по умолчанию, предоставляемая MFC.
 
@@ -568,7 +568,7 @@ void  AfxAbort();
 
 ### <a name="remarks"></a>Remarks
 
-`AfxAbort`вызывается внутренне функциями-членами MFC при возникновении неустранимой ошибки, например неперехваченного исключения, которое не может быть обработано. Можно вызвать `AfxAbort` в редких случаях, когда возникает фатальная ошибка, из-за которой невозможно выполнить восстановление.
+`AfxAbort` вызывается внутренне функциями-членами MFC при возникновении неустранимой ошибки, например неперехваченного исключения, которое не может быть обработано. Можно вызвать `AfxAbort` в редких случаях, когда возникает фатальная ошибка, из-за которой невозможно выполнить восстановление.
 
 ### <a name="example"></a>Пример
 

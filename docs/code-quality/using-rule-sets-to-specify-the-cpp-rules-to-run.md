@@ -4,12 +4,12 @@ ms.date: 07/27/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.rulesets.native
-ms.openlocfilehash: b132400485c041b96e81736bcda04922b2cda88c
-ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
+ms.openlocfilehash: 2f2b11d060b2f02c5fc5874ef135e1ee3550b840
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87389822"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845163"
 ---
 # <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>Использование наборов правил для задания выполняемых правил C++
 
@@ -114,7 +114,7 @@ ms.locfileid: "87389822"
 
 ## <a name="ruleset-schema"></a>Схема набора правил
 
-Следующая схема набора правил описывает схему XML-файла набора правил. Схема набора правил хранится в *`%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Schemas\RuleSet.xsd`* . Его можно использовать для создания собственных наборов правил программным способом или для проверки соответствия пользовательских наборов правил правильному формату. Дополнительные сведения см. [в разделе инструкции. Создание XML-документа на основе схемы XSD](https://docs.microsoft.com/visualstudio/xml-tools/how-to-create-an-xml-document-based-on-an-xsd-schema?view=vs-2019).
+Следующая схема набора правил описывает схему XML-файла набора правил. Схема набора правил хранится в *`%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Schemas\RuleSet.xsd`* . Его можно использовать для создания собственных наборов правил программным способом или для проверки соответствия пользовательских наборов правил правильному формату. Дополнительные сведения см. [в разделе инструкции. Создание XML-документа на основе схемы XSD](/visualstudio/xml-tools/how-to-create-an-xml-document-based-on-an-xsd-schema).
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

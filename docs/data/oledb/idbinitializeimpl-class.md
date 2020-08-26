@@ -38,12 +38,12 @@ helpviewer_keywords:
 - m_dwStatus
 - m_pCUtlPropInfo
 ms.assetid: e4182f81-0443-44f5-a0d3-e7e075d6f883
-ms.openlocfilehash: 511d67586a7adc2b26cc6acbdf39beff78f9c38a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: aff02e812d2806201a08164aeb4a8ef290550725
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218329"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845540"
 ---
 # <a name="idbinitializeimpl-class"></a>Класс IDBInitializeImpl
 
@@ -69,20 +69,20 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 
 ### <a name="methods"></a>Методы
 
-|||
+| Имя | Описание |
 |-|-|
 |[идбинитиализеимпл](#idbinitializeimpl)|Конструктор.|
 
 ### <a name="interface-methods"></a>Методы интерфейса
 
-|||
+| Имя | Описание |
 |-|-|
-|[Инициализация](#initialize)|Запускает поставщик.|
+|[Устанавливает](#initialize)|Запускает поставщик.|
 |[Отменить инициализацию](#uninitialize)|Останавливает поставщик.|
 
 ### <a name="data-members"></a>Элементы данных
 
-|||
+| Имя | Описание |
 |-|-|
 |[m_dwStatus](#dwstatus)|Флаги источника данных.|
 |[m_pCUtlPropInfo](#pcutlpropinfo)|Указатель на реализацию свойств базы данных.|
@@ -91,7 +91,7 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 
 Обязательный интерфейс для объектов источника данных и необязательный интерфейс для перечислителей.
 
-## <a name="idbinitializeimplidbinitializeimpl"></a><a name="idbinitializeimpl"></a>Идбинитиализеимпл:: Идбинитиализеимпл
+## <a name="idbinitializeimplidbinitializeimpl"></a><a name="idbinitializeimpl"></a> Идбинитиализеимпл:: Идбинитиализеимпл
 
 Конструктор.
 
@@ -105,7 +105,7 @@ IDBInitializeImpl();
 
 Инициализирует все элементы данных.
 
-## <a name="idbinitializeimplinitialize"></a><a name="initialize"></a>Идбинитиализеимпл:: Initialize
+## <a name="idbinitializeimplinitialize"></a><a name="initialize"></a> Идбинитиализеимпл:: Initialize
 
 Инициализирует объект источника данных, подготавливая поддержку его свойств.
 
@@ -119,7 +119,7 @@ STDMETHOD(Initialize)(void);
 
 См. раздел [IDBInitialize:: Initialize](/previous-versions/windows/desktop/ms718026(v=vs.85)) в *справочнике программиста OLE DB*.
 
-## <a name="idbinitializeimpluninitialize"></a><a name="uninitialize"></a>Идбинитиализеимпл:: Uninitialize
+## <a name="idbinitializeimpluninitialize"></a><a name="uninitialize"></a> Идбинитиализеимпл:: Uninitialize
 
 Помещает объект источника данных в неинициализированное состояние путем освобождения внутренних ресурсов, таких как поддержка свойств.
 
@@ -133,7 +133,7 @@ STDMETHOD(Uninitialize)(void);
 
 См. раздел [IDBInitialize:: Uninitialize](/previous-versions/windows/desktop/ms719648(v=vs.85)) в *справочнике программиста OLE DB*.
 
-## <a name="idbinitializeimplm_dwstatus"></a><a name="dwstatus"></a>Идбинитиализеимпл:: m_dwStatus
+## <a name="idbinitializeimplm_dwstatus"></a><a name="dwstatus"></a> Идбинитиализеимпл:: m_dwStatus
 
 Флаги источника данных.
 
@@ -155,13 +155,13 @@ enum DATASOURCE_FLAGS {
 };
 ```
 
-|||
+| Значение | Описание |
 |-|-|
 |`DSF_MASK_INIT`|Маска для включения восстановления неинициализированного состояния.|
 |`DSF_PERSIST_DIRTY`|Задайте значение, если для объекта источника данных требуется сохраняемость (т. е., если были внесены изменения).|
 |`DSF_INITIALIZED`|Установите, если источник данных был инициализирован.|
 
-## <a name="idbinitializeimplm_pcutlpropinfo"></a><a name="pcutlpropinfo"></a>Идбинитиализеимпл:: m_pCUtlPropInfo
+## <a name="idbinitializeimplm_pcutlpropinfo"></a><a name="pcutlpropinfo"></a> Идбинитиализеимпл:: m_pCUtlPropInfo
 
 Указатель на объект реализации со сведениями о свойствах базы данных.
 

@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: e193af8cb5c92f4a3f1ca7381783d90102e0764f
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 6a824aceae39d5aa6685176354c48a9457a40e9e
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561821"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837623"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -1364,9 +1364,8 @@ HTREEITEM HitTest(TVHITTESTINFO* pHitTestInfo) const;
 
 При вызове этой функции параметр *PT* задает координаты проверяемой точки. Функция возвращает маркер элемента в указанной точке или значение NULL, если элемент не занимает точку. Кроме того, параметр *пфлагс* содержит значение, указывающее расположение указанной точки. Возможны следующие значения:
 
-|||
+|Значение|Описание|
 |-|-|
-|Значение|Значение|
 |TVHT_ABOVE|Над клиентской областью.|
 |TVHT_BELOW|Под клиентской областью.|
 |TVHT_NOWHERE|В клиентской области, но под последним элементом.|
@@ -1379,7 +1378,6 @@ HTREEITEM HitTest(TVHITTESTINFO* pHitTestInfo) const;
 |TVHT_ONITEMSTATEICON|На значке состояния для элемента представления в виде дерева, который находится в определенном пользователем состоянии.|
 |TVHT_TOLEFT|Слева от клиентской области.|
 |TVHT_TORIGHT|Справа от клиентской области.|
-|||
 
 ### <a name="example"></a>Пример
 
@@ -2340,7 +2338,7 @@ BOOL SortChildrenCB(LPTVSORTCB pSort);
 
 [!code-cpp[NVC_MFC_CTreeCtrl#39](../../mfc/reference/codesnippet/cpp/ctreectrl-class_47.cpp)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пример CMNCTRL1 для MFC](../../overview/visual-cpp-samples.md)<br/>
 [CWnd, класс](../../mfc/reference/cwnd-class.md)<br/>

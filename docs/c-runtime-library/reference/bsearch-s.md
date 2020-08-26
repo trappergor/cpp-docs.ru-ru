@@ -28,12 +28,12 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch_s function
 ms.assetid: d5690d5e-6be3-4f1d-aa0b-5ca6dbded276
-ms.openlocfilehash: 91b015eb9005a9b447cdd9d74a38d7169bd90a73
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 20b4c482210f480730f7da4c89549d207ea6ca7d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913394"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845176"
 ---
 # <a name="bsearch_s"></a>bsearch_s
 
@@ -80,13 +80,12 @@ void *bsearch_s(
 
 ### <a name="error-conditions"></a>Условия ошибок
 
-|||||||
+|*key*|*base*|*равенств*|*number*|*width*|**`errno`**|
 |-|-|-|-|-|-|
-|*key*|*base*|*равенств*|*number*|*width*|**errno**|
-|**ЗАКАНЧИВАЮЩ**|any|any|any|any|**еинвал**|
-|any|**ЗАКАНЧИВАЮЩ**|any|!= 0|any|**еинвал**|
+|**NULL**|any|any|any|any|**еинвал**|
+|any|**NULL**|any|!= 0|any|**еинвал**|
 |any|any|any|any|= 0|**еинвал**|
-|any|any|**ЗАКАНЧИВАЮЩ**|любой|any|**еинвал**|
+|any|any|**NULL**|любой|any|**еинвал**|
 
 ## <a name="remarks"></a>Remarks
 

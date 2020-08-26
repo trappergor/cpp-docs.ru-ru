@@ -18,12 +18,12 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-ms.openlocfilehash: 4e57e0ec175abca5453c6f2ad1c05ab5a53f125e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 931545e6a79ecaa59d147e48265649ef20466fbd
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222853"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837402"
 ---
 # <a name="diagnostic-services"></a>Диагностические службы
 
@@ -47,7 +47,7 @@ ms.locfileid: "87222853"
 
 ### <a name="mfc-general-diagnostic-macros"></a>Общие диагностические макросы MFC
 
-|||
+|Имя|Описание|
 |-|-|
 |[УТВЕРЖДАЮЩЕ](#assert)|Выводит сообщение и прерывает выполнение программы, если указанное выражение равно FALSE в отладочной версии библиотеки.|
 |[ASSERT_KINDOF](#assert_kindof)|Проверяет, является ли объект объектом указанного класса или класса, производного от указанного.|
@@ -61,7 +61,7 @@ ms.locfileid: "87222853"
 
 ### <a name="mfc-general-diagnostic-variables-and-functions"></a>Общие диагностические переменные и функции MFC
 
-|||
+|Имя|Описание|
 |-|-|
 |[афксдумп](#afxdump)|Глобальная переменная, которая отправляет сведения о [CDumpContext](../../mfc/reference/cdumpcontext-class.md) в окно вывода отладчика или в терминал отладки.|
 |[afxMemDF](#afxmemdf)|Глобальная переменная, которая управляет поведением отладочного распределителя памяти.|
@@ -80,18 +80,18 @@ ms.locfileid: "87222853"
 
 ### <a name="mfc-object-diagnostic-functions"></a>Функции диагностики объектов MFC
 
-|||
+|Имя|Описание|
 |-|-|
 |[AfxDoForAllClasses](#afxdoforallclasses)|Выполняет указанную функцию для всех производных от `CObject`классов, которые поддерживают проверку типов во время выполнения.|
 |[афксдофораллобжектс](#afxdoforallobjects)|Выполняет указанную функцию для всех `CObject` объектов, производных от, которые были выделены с помощью **`new`** .|
 
 ### <a name="mfc-compilation-macros"></a>Макросы компиляции MFC
 
-|||
+|Имя|Описание|
 |-|-|
 |[_AFX_SECURE_NO_WARNINGS](#afx_secure_no_warnings)|Подавляет предупреждения компилятора для использования устаревших функций MFC.|
 
-## <a name="_afx_secure_no_warnings"></a><a name="afx_secure_no_warnings"></a>_AFX_SECURE_NO_WARNINGS
+## <a name="_afx_secure_no_warnings"></a><a name="afx_secure_no_warnings"></a> _AFX_SECURE_NO_WARNINGS
 
 Подавляет предупреждения компилятора для использования устаревших функций MFC.
 
@@ -130,13 +130,13 @@ void AfxDebugBreak( );
 
 ### <a name="remarks"></a>Remarks
 
-`AfxDebugBreak`не оказывает влияния на версии выпуска приложения MFC и должны быть удалены. Эта функция должна использоваться только в приложениях MFC. Используйте версию API Win32, `DebugBreak` , чтобы вызвать прерывание в приложениях, не относящихся к MFC.
+`AfxDebugBreak` не оказывает влияния на версии выпуска приложения MFC и должны быть удалены. Эта функция должна использоваться только в приложениях MFC. Используйте версию API Win32, `DebugBreak` , чтобы вызвать прерывание в приложениях, не относящихся к MFC.
 
 ### <a name="requirements"></a>Требования
 
 **Заголовок:** afxver_. h
 
-## <a name="assert"></a><a name="assert"></a>УТВЕРЖДАЮЩЕ
+## <a name="assert"></a><a name="assert"></a> УТВЕРЖДАЮЩЕ
 
 Вычисляет свой аргумент.
 
@@ -172,7 +172,7 @@ ASSERT(booleanExpression)
 
 **Заголовок:** AFX. h
 
-## <a name="assert_kindof"></a><a name="assert_kindof"></a>ASSERT_KINDOF
+## <a name="assert_kindof"></a><a name="assert_kindof"></a> ASSERT_KINDOF
 
 Этот макрос утверждает, что объект, на который указывает, является объектом указанного класса или является объектом класса, производного от указанного класса.
 
@@ -207,7 +207,7 @@ ASSERT_KINDOF(classname, pobject)
 
 **Заголовок:** AFX. h
 
-## <a name="assert_valid"></a><a name="assert_valid"></a>ASSERT_VALID
+## <a name="assert_valid"></a><a name="assert_valid"></a> ASSERT_VALID
 
 Используйте для проверки допущений о допустимости внутреннего состояния объекта.
 
@@ -239,7 +239,7 @@ ASSERT_VALID вызывает `AssertValid` функцию члена объек
 
 **Заголовок:** AFX. h
 
-## <a name="debug_new"></a><a name="debug_new"></a>DEBUG_NEW
+## <a name="debug_new"></a><a name="debug_new"></a> DEBUG_NEW
 
 Помогает находить утечки памяти.
 
@@ -266,7 +266,7 @@ ASSERT_VALID вызывает `AssertValid` функцию члена объек
 
 **Заголовок:** AFX. h
 
-## <a name="debug_only"></a><a name="debug_only"></a>DEBUG_ONLY
+## <a name="debug_only"></a><a name="debug_only"></a> DEBUG_ONLY
 
 В режиме отладки (если определен символ **_DEBUG** ) DEBUG_ONLY вычисляет его аргумент.
 
@@ -288,7 +288,7 @@ DEBUG_ONLY(expression)
 
 **Заголовок:** AFX. h
 
-### <a name="ensure-and-ensure_valid"></a><a name="ensure"></a>Проверка и ENSURE_VALID
+### <a name="ensure-and-ensure_valid"></a><a name="ensure"></a> Проверка и ENSURE_VALID
 
 Используйте для проверки правильности данных.
 
@@ -320,7 +320,7 @@ ENSURE_VALID вызывает макрос ASSERT_VALID (который дейс
 
 **Заголовок:** AFX. h
 
-## <a name="this_file"></a><a name="this_file"></a>THIS_FILE
+## <a name="this_file"></a><a name="this_file"></a> THIS_FILE
 
 Разворачивается до имени компилируемого файла.
 
@@ -350,7 +350,7 @@ static char THIS_FILE[] = __FILE__;
 
 **Заголовок:** AFX. h
 
-## <a name="trace"></a><a name="trace"></a>ТРАССИРОВКИ
+## <a name="trace"></a><a name="trace"></a> ТРАССИРОВКИ
 
 Отправляет указанную строку отладчику текущего приложения.
 
@@ -371,7 +371,7 @@ TRACE(DWORD  category,  UINT  level, LPCSTR lpszFormat, ...)
 
 **Заголовок:** AFX. h
 
-## <a name="verify"></a><a name="verify"></a>Проверка
+## <a name="verify"></a><a name="verify"></a> Проверка
 
 В отладочной версии MFC оценивает свой аргумент.
 
@@ -404,7 +404,7 @@ VERIFY(booleanExpression)
 
 **Заголовок:** AFX. h
 
-## <a name="afxdump-cdumpcontext-in-mfc"></a><a name="cdumpcontext_in_mfc"></a>Афксдумп (CDumpContext в MFC)
+## <a name="afxdump-cdumpcontext-in-mfc"></a><a name="cdumpcontext_in_mfc"></a> Афксдумп (CDumpContext в MFC)
 
 Предоставляет базовую возможность дампа объектов в приложении.
 
@@ -414,7 +414,7 @@ CDumpContext  afxDump;
 
 ### <a name="remarks"></a>Remarks
 
-`afxDump`— Это предопределенный объект [CDumpContext](../../mfc/reference/cdumpcontext-class.md) , позволяющий передавать `CDumpContext` информацию в окно вывода отладчика или в терминал отладки. Обычно в `afxDump` качестве параметра указывается `CObject::Dump` .
+`afxDump` — Это предопределенный объект [CDumpContext](../../mfc/reference/cdumpcontext-class.md) , позволяющий передавать `CDumpContext` информацию в окно вывода отладчика или в терминал отладки. Обычно в `afxDump` качестве параметра указывается `CObject::Dump` .
 
 В Windows NT и всех версиях Windows `afxDump` выходные данные отправляются в окно Вывод-отладка Visual C++ при отладке приложения.
 
@@ -428,7 +428,7 @@ CDumpContext  afxDump;
 
 **Заголовок:** AFX. h
 
-## <a name="afxdump-internal"></a><a name="afxdump"></a>Афксдумп (внутренний)
+## <a name="afxdump-internal"></a><a name="afxdump"></a> Афксдумп (внутренний)
 
 Внутренняя функция, используемая библиотекой MFC для дампа состояния объекта во время отладки.
 
@@ -445,7 +445,7 @@ void AfxDump(const CObject* pOb);
 
 ### <a name="remarks"></a>Remarks
 
-`AfxDump`вызывает `Dump` функцию члена объекта и отправляет информацию в расположение, указанное `afxDump` переменной. `AfxDump`доступен только в отладочной версии MFC.
+`AfxDump` вызывает `Dump` функцию члена объекта и отправляет информацию в расположение, указанное `afxDump` переменной. `AfxDump` доступен только в отладочной версии MFC.
 
 Код программы не должен вызывать метод `AfxDump` , но вместо этого следует вызывать `Dump` функцию члена соответствующего объекта.
 
@@ -453,7 +453,7 @@ void AfxDump(const CObject* pOb);
 
 **Заголовок:** AFX. h
 
-## <a name="afxmemdf"></a><a name="afxmemdf"></a>afxMemDF
+## <a name="afxmemdf"></a><a name="afxmemdf"></a> afxMemDF
 
 Эта переменная доступна из отладчика или программы и позволяет настроить диагностику выделения.
 
@@ -463,13 +463,13 @@ int  afxMemDF;
 
 ### <a name="remarks"></a>Remarks
 
-`afxMemDF`могут иметь следующие значения, указанные в перечислении `afxMemDF` :
+`afxMemDF` могут иметь следующие значения, указанные в перечислении `afxMemDF` :
 
-- `allocMemDF`Включает распределителя отладки (параметр по умолчанию в библиотеке отладки).
+- `allocMemDF` Включает распределителя отладки (параметр по умолчанию в библиотеке отладки).
 
-- `delayFreeMemDF`Задерживает освобождение памяти. Пока программа освобождает блок памяти, распределитель не возвращает эту память базовой операционной системе. При этом будет размещена максимальная нагрузка на память программы.
+- `delayFreeMemDF` Задерживает освобождение памяти. Пока программа освобождает блок памяти, распределитель не возвращает эту память базовой операционной системе. При этом будет размещена максимальная нагрузка на память программы.
 
-- `checkAlwaysMemDF`Вызывается `AfxCheckMemory` каждый раз, когда выделяется или освобождается память. Это приведет к значительному снижению выделений и освобождений памяти.
+- `checkAlwaysMemDF` Вызывается `AfxCheckMemory` каждый раз, когда выделяется или освобождается память. Это приведет к значительному снижению выделений и освобождений памяти.
 
 ### <a name="example"></a>Пример
 
@@ -479,7 +479,7 @@ int  afxMemDF;
 
 **Заголовок:** AFX. h
 
-## <a name="afxcheckerror"></a><a name="afxcheckerror"></a>афксчеккеррор
+## <a name="afxcheckerror"></a><a name="afxcheckerror"></a> афксчеккеррор
 
 Эта функция проверяет переданный SCODE на наличие ошибки.
 
@@ -506,7 +506,7 @@ throw COleException*
 
 **Заголовок:** AFX. h
 
-## <a name="afxcheckmemory"></a><a name="afxcheckmemory"></a>афксчеккмемори
+## <a name="afxcheckmemory"></a><a name="afxcheckmemory"></a> афксчеккмемори
 
 Эта функция проверяет пул свободной памяти и выводит сообщения об ошибках по мере необходимости.
 
@@ -543,7 +543,7 @@ BOOL  AfxCheckMemory();
 
 **Заголовок:** AFX. h
 
-## <a name="afxdump-mfc"></a><a name="afxdump"></a>Афксдумп (MFC)
+## <a name="afxdump-mfc"></a><a name="afxdump"></a> Афксдумп (MFC)
 
 Вызывайте эту функцию в отладчике, чтобы выгрузить состояние объекта во время отладки.
 
@@ -558,7 +558,7 @@ void AfxDump(const CObject* pOb);
 
 ### <a name="remarks"></a>Remarks
 
-`AfxDump`вызывает `Dump` функцию члена объекта и отправляет информацию в расположение, указанное `afxDump` переменной. `AfxDump`доступен только в отладочной версии MFC.
+`AfxDump` вызывает `Dump` функцию члена объекта и отправляет информацию в расположение, указанное `afxDump` переменной. `AfxDump` доступен только в отладочной версии MFC.
 
 Код программы не должен вызывать метод `AfxDump` , но вместо этого следует вызывать `Dump` функцию члена соответствующего объекта.
 
@@ -566,7 +566,7 @@ void AfxDump(const CObject* pOb);
 
 **Заголовок:** AFX. h
 
-## <a name="afxdumpstack"></a><a name="afxdumpstack"></a>афксдумпстакк
+## <a name="afxdumpstack"></a><a name="afxdumpstack"></a> афксдумпстакк
 
 Эту глобальную функцию можно использовать для создания изображения текущего стека.
 
@@ -630,7 +630,7 @@ BFF928E0: WINDOWS\SYSTEM\KERNEL32.DLL! UTUnRegister + 2492 bytes
 |`void AfxDumpStack(unsigned long)`|Прототип функции с именем.|
 |`+ 181 bytes`|Смещение в байтах от адреса прототипа функции (в данном случае `void AfxDumpStack(unsigned long)` ) к возвращаемому адресу (в данном случае `00427D55` ).|
 
-`AfxDumpStack`доступна в отладочной и неотладочной версиях библиотек MFC. Однако функция всегда связывается статически, даже если исполняемый файл использует MFC в общей библиотеке DLL. В реализациях общей библиотеки функция находится в MFCS42. Библиотека LIB (и ее разновидности).
+`AfxDumpStack` доступна в отладочной и неотладочной версиях библиотек MFC. Однако функция всегда связывается статически, даже если исполняемый файл использует MFC в общей библиотеке DLL. В реализациях общей библиотеки функция находится в MFCS42. Библиотека LIB (и ее разновидности).
 
 Для успешного использования этой функции:
 
@@ -642,7 +642,7 @@ BFF928E0: WINDOWS\SYSTEM\KERNEL32.DLL! UTUnRegister + 2492 bytes
 
 **Заголовок:** AFX. h
 
-## <a name="afxenablememoryleakdump"></a><a name="afxenablememoryleakdump"></a>афксенаблемеморилеакдумп
+## <a name="afxenablememoryleakdump"></a><a name="afxenablememoryleakdump"></a> афксенаблемеморилеакдумп
 
 Включает и отключает дамп утечки памяти в деструкторе AFX_DEBUG_STATE.
 
@@ -672,7 +672,7 @@ BOOL AFXAPI AfxEnableMemoryLeakDump(BOOL bDump);
 
 **Заголовок:** AFX. h
 
-## <a name="afxenablememorytracking"></a><a name="afxenablememorytracking"></a>афксенаблемеморитраккинг
+## <a name="afxenablememorytracking"></a><a name="afxenablememorytracking"></a> афксенаблемеморитраккинг
 
 Отслеживание памяти диагностики обычно включено в отладочной версии MFC.
 
@@ -706,7 +706,7 @@ BOOL AfxEnableMemoryTracking(BOOL bTrack);
 
 **Заголовок:** AFX. h
 
-## <a name="afxismemoryblock"></a><a name="afxismemoryblock"></a>афксисмемориблокк
+## <a name="afxismemoryblock"></a><a name="afxismemoryblock"></a> афксисмемориблокк
 
 Проверяет адрес памяти, чтобы убедиться, что он представляет текущий активный блок памяти, выделенный диагностической версией **`new`** .
 
@@ -744,7 +744,7 @@ BOOL AfxIsMemoryBlock(
 
 **Заголовок:** AFX. h
 
-## <a name="afxisvalidaddress"></a><a name="afxisvalidaddress"></a>афксисвалидаддресс
+## <a name="afxisvalidaddress"></a><a name="afxisvalidaddress"></a> афксисвалидаддресс
 
 Проверяет любой адрес памяти, чтобы убедиться, что он полностью находится в памяти программы.
 
@@ -784,7 +784,7 @@ BOOL AfxIsValidAddress(
 
 **Заголовок:** AFX. h
 
-## <a name="afxisvalidstring"></a><a name="afxisvalidstring"></a>афксисвалидстринг
+## <a name="afxisvalidstring"></a><a name="afxisvalidstring"></a> афксисвалидстринг
 
 Используйте эту функцию, чтобы определить, является ли указатель на строку допустимым.
 
@@ -816,7 +816,7 @@ BOOL  AfxIsValidString(
 
 **Заголовок:** AFX. h
 
-## <a name="afxsetallochook"></a><a name="afxsetallochook"></a>афкссеталлочук
+## <a name="afxsetallochook"></a><a name="afxsetallochook"></a> афкссеталлочук
 
 Задает обработчик, позволяющий вызывать указанную функцию до выделения каждого блока памяти.
 
@@ -854,7 +854,7 @@ AFX_ALLOC_HOOK AfxSetAllocHook(AFX_ALLOC_HOOK pfnAllocHook);
 
 **Заголовок:** AFX. h
 
-## <a name="afxdoforallclasses"></a><a name="afxdoforallclasses"></a>афксдофораллклассес
+## <a name="afxdoforallclasses"></a><a name="afxdoforallclasses"></a> афксдофораллклассес
 
 Вызывает указанную функцию итерации для всех `CObject` классов, производных от сериализуемых, в пространстве памяти приложения.
 
@@ -890,7 +890,7 @@ AFXAPI AfxDoForAllClasses(
 
 **Заголовок:** AFX. h
 
-## <a name="afxdoforallobjects"></a><a name="afxdoforallobjects"></a>афксдофораллобжектс
+## <a name="afxdoforallobjects"></a><a name="afxdoforallobjects"></a> афксдофораллобжектс
 
 Выполняет указанную функцию итерации для всех объектов, производных от `CObject` , которые были выделены с помощью **`new`** .
 

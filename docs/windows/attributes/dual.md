@@ -1,17 +1,17 @@
 ---
-title: Dual (C++ атрибут com)
+title: двойной (атрибут COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.dual
 helpviewer_keywords:
 - dual attribute
 ms.assetid: 5d4a9069-d819-42cd-ba56-bbcda17157d9
-ms.openlocfilehash: 66cd6eb9141244397609cc6421ead74d1eb8547e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 4cc974bef46a403cbdc5b290f623acb06f40722f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168217"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845410"
 ---
 # <a name="dual"></a>dual
 
@@ -25,7 +25,7 @@ ms.locfileid: "80168217"
 
 ## <a name="remarks"></a>Remarks
 
-Когда **сдвоенный** C++ атрибут предшествует интерфейсу, он приводит к помещению интерфейса в блок библиотеки в созданном IDL-файле.
+Когда **сдвоенный** атрибут C++ предшествует интерфейсу, он приводит к помещению интерфейса в блок библиотеки в созданном IDL-файле.
 
 ## <a name="example"></a>Пример
 
@@ -55,13 +55,11 @@ __interface IStatic : IDispatch
 
 ## <a name="requirements"></a>Требования
 
-### <a name="attribute-context"></a>Контекст атрибута
-
-|||
+| Контекст атрибута | Значение |
 |-|-|
-|**Применение**|**interface**|
-|**Повторяемый**|нет|
-|**Обязательные атрибуты**|None|
+|**Относится к**|**interface**|
+|**REPEATABLE**|Нет|
+|**Требуемые атрибуты**|Нет|
 |**Недопустимые атрибуты**|`dispinterface`|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
@@ -69,8 +67,8 @@ __interface IStatic : IDispatch
 ## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
-[Список атрибутов по использованию](attributes-by-usage.md)<br/>
-[custom](custom-cpp.md)<br/>
+[Атрибуты по использованию](attributes-by-usage.md)<br/>
+[настройки](custom-cpp.md)<br/>
 [dispinterface](dispinterface.md)<br/>
 [object](object-cpp.md)<br/>
 [__interface](../../cpp/interface.md)

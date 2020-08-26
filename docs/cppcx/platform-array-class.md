@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
-ms.openlocfilehash: 23548df6718b9397db8521b2bebc6e8389859dcd
-ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
+ms.openlocfilehash: 00b73b9fb113066c6948c49ec7d2039748284800
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88610703"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837765"
 ---
 # <a name="platformarray-class"></a>Класс Platform::Array
 
@@ -44,11 +44,11 @@ Platform:: Array наследует все его методы от [класс�
 
 ### <a name="properties"></a>Свойства
 
-|||
-|-|-|
-|[Массив:: значение](#value)|Получает дескриптор текущего массива.|
+| Имя | Описание |
+|--|--|
+| [Массив:: значение](#value) | Получает дескриптор текущего массива. |
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Класс Array является запечатанным и наследовать его нельзя.
 
@@ -84,7 +84,7 @@ Array(T* data, unsigned int size);
 *data*<br/>
 Указатель на массив данных типа `T`, используемый для инициализации данного объекта Array.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Дополнительные сведения о создании экземпляров Platform:: Array см. в разделе [Array и WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
 
@@ -121,7 +121,7 @@ property Array^ Value;
 
 Дескриптор текущего массива.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Platform](../cppcx/platform-namespace-c-cx.md)<br/>
 [Классы Array и WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)

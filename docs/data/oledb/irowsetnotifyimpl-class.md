@@ -20,12 +20,12 @@ helpviewer_keywords:
 - OnRowChange method
 - OnRowsetChange method
 ms.assetid: fbfd0cb2-38ff-4b42-899a-8de902f834b8
-ms.openlocfilehash: 4e6b4c3298c063038e7365496f26f50d3789be86
-ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.openlocfilehash: f938d9e92bc2f447ecfa82f2bfb27c8fda7652ab
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "79544444"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845111"
 ---
 # <a name="irowsetnotifyimpl-class"></a>Класс IRowsetNotifyImpl
 
@@ -41,23 +41,23 @@ class ATL_NO_VTABLE IRowsetNotifyImpl : public IRowsetNotify
 
 **Заголовок:** atldbcli.h
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Элементы
 
 ### <a name="methods"></a>Методы
 
-|||
+| Имя | Описание |
 |-|-|
 |[онфиелдчанже](#onfieldchange)|Уведомляет объект-получатель о любом изменении значения в столбце.|
 |[онровчанже](#onrowchange)|Уведомляет объект-получатель о первом изменении в строке или о любом изменении, оказывающем влияние на всю строку.|
 |[онровсетчанже](#onrowsetchange)|Уведомляет объект-получатель о любом изменении, влияющем на весь набор строк.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 См. статью [Получение уведомлений](../../data/oledb/receiving-notifications.md) о реализации интерфейса точки подключения на потребителе.
 
-`IRowsetNotifyImpl` предоставляет фиктивную реализацию для `IRowsetNotify`с пустыми функциями для методов `IRowsetNotify` [онфиелдчанже](/previous-versions/windows/desktop/ms715961(v=vs.85)), [онровчанже](/previous-versions/windows/desktop/ms722694(v=vs.85))и [онровсетчанже](/previous-versions/windows/desktop/ms722669(v=vs.85)). При наследовании от этого класса при реализации интерфейса `IRowsetNotify` можно реализовать только необходимые методы. Также необходимо предоставить пустые реализации для других методов самостоятельно.
+`IRowsetNotifyImpl` предоставляет фиктивную реализацию для `IRowsetNotify` , с пустыми функциями для `IRowsetNotify` методов [онфиелдчанже](/previous-versions/windows/desktop/ms715961(v=vs.85)), [онровчанже](/previous-versions/windows/desktop/ms722694(v=vs.85))и [онровсетчанже](/previous-versions/windows/desktop/ms722669(v=vs.85)). При наследовании от этого класса при реализации `IRowsetNotify` интерфейса можно реализовать только необходимые методы. Также необходимо предоставить пустые реализации для других методов самостоятельно.
 
-## <a name="irowsetnotifyimplonfieldchange"></a><a name="onfieldchange"></a>IRowsetNotifyImpl:: Онфиелдчанже
+## <a name="irowsetnotifyimplonfieldchange"></a><a name="onfieldchange"></a> IRowsetNotifyImpl:: Онфиелдчанже
 
 Уведомляет объект-получатель о любом изменении значения в столбце.
 
@@ -82,11 +82,11 @@ STDMETHOD(OnFieldChange)(
 
 Описание возвращаемого значения см. в разделе [IRowsetNotify клиента:: онфиелдчанже](/previous-versions/windows/desktop/ms715961(v=vs.85)) .
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Этот метод создает оболочку для метода [IRowsetNotify клиента:: онфиелдчанже](/previous-versions/windows/desktop/ms715961(v=vs.85)) . Дополнительные сведения см. в описании этого метода в справочнике по OLE DB программиста.
 
-## <a name="irowsetnotifyimplonrowchange"></a><a name="onrowchange"></a>IRowsetNotifyImpl:: Онровчанже
+## <a name="irowsetnotifyimplonrowchange"></a><a name="onrowchange"></a> IRowsetNotifyImpl:: Онровчанже
 
 Уведомляет объект-получатель о первом изменении в строке или о любом изменении, оказывающем влияние на всю строку.
 
@@ -110,11 +110,11 @@ STDMETHOD(OnRowChange)(
 
 Описание возвращаемого значения см. в разделе [IRowsetNotify клиента:: онровчанже](/previous-versions/windows/desktop/ms722694(v=vs.85)) .
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Этот метод создает оболочку для метода [IRowsetNotify клиента:: онровчанже](/previous-versions/windows/desktop/ms722694(v=vs.85)) . Дополнительные сведения см. в описании этого метода в справочнике по OLE DB программиста.
 
-## <a name="irowsetnotifyimplonrowsetchange"></a><a name="onrowsetchange"></a>IRowsetNotifyImpl:: Онровсетчанже
+## <a name="irowsetnotifyimplonrowsetchange"></a><a name="onrowsetchange"></a> IRowsetNotifyImpl:: Онровсетчанже
 
 Уведомляет объект-получатель о любом изменении, влияющем на весь набор строк.
 
@@ -136,12 +136,12 @@ STDMETHOD(OnRowsetChange)(
 
 Описание возвращаемого значения см. в разделе [IRowsetNotify клиента:: онровсетчанже](/previous-versions/windows/desktop/ms722669(v=vs.85)) .
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Этот метод создает оболочку для метода [IRowsetNotify клиента:: онровсетчанже](/previous-versions/windows/desktop/ms722669(v=vs.85)) . Дополнительные сведения см. в описании этого метода в справочнике по OLE DB программиста.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-Класс [irowsetnotify клиента](/previous-versions/windows/desktop/ms712959(v=vs.85))
-[IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md)
+[IRowsetNotify клиента](/previous-versions/windows/desktop/ms712959(v=vs.85)) 
+ [Класс IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md)

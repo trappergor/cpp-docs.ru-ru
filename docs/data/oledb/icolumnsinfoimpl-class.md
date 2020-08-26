@@ -26,12 +26,12 @@ helpviewer_keywords:
 - GetColumnInfo method
 - MapColumnIDs method
 ms.assetid: ba74c1c5-2eda-4452-8b57-84919fa0d066
-ms.openlocfilehash: 39aa3f5e89746d48057e0e8efe6fe62b1c2d8921
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 05e902e09c51012bd456751fb701ce2508a2fc16
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210877"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845605"
 ---
 # <a name="icolumnsinfoimpl-class"></a>Класс IColumnsInfoImpl
 
@@ -49,26 +49,26 @@ class ATL_NO_VTABLE IColumnsInfoImpl :
 ### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Класс, производный от `IColumnsInfoImpl`.
+Класс, производный от `IColumnsInfoImpl` .
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** atldb.h
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Элементы
 
 ### <a name="methods"></a>Методы
 
-|||
+| Имя | Описание |
 |-|-|
 |[GetColumnInfo](#getcolumninfo)|Возвращает метаданные столбца, требуемые большинством объектов-получателей.|
 |[мапколумнидс](#mapcolumnids)|Возвращает массив порядковых номеров столбцов в наборе данных, заданных указанными идентификаторами столбца.|
 
 ## <a name="remarks"></a>Remarks
 
-Обязательный интерфейс для наборов строк и команд. Чтобы изменить поведение реализации `IColumnsInfo` поставщика, необходимо изменить карту столбцов поставщика.
+Обязательный интерфейс для наборов строк и команд. Чтобы изменить поведение `IColumnsInfo` реализации поставщика, необходимо изменить карту столбцов поставщика.
 
-## <a name="icolumnsinfoimplgetcolumninfo"></a><a name="getcolumninfo"></a>IColumnsInfoImpl:: GetColumnInfo
+## <a name="icolumnsinfoimplgetcolumninfo"></a><a name="getcolumninfo"></a> IColumnsInfoImpl:: GetColumnInfo
 
 Возвращает метаданные столбца, требуемые большинством объектов-получателей.
 
@@ -84,7 +84,7 @@ STDMETHOD (GetColumnInfo)(DBORDINAL* pcColumns,
 
 См. раздел [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) в *справочнике программиста OLE DB*.
 
-## <a name="icolumnsinfoimplmapcolumnids"></a><a name="mapcolumnids"></a>IColumnsInfoImpl:: Мапколумнидс
+## <a name="icolumnsinfoimplmapcolumnids"></a><a name="mapcolumnids"></a> IColumnsInfoImpl:: Мапколумнидс
 
 Возвращает массив порядковых номеров столбцов в наборе данных, заданных указанными идентификаторами столбца.
 

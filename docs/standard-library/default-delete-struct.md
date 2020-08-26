@@ -1,20 +1,20 @@
 ---
-title: default_delete структуры
+title: Структура default_delete
 ms.date: 04/04/2019
 f1_keywords:
 - memory/std::default_delete
 helpviewer_keywords:
 - default_delete struct
-ms.openlocfilehash: e9e1fcc68539e55486f4ea27e6dd5c49bed11fdf
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 8baa9f5d294cf083fd55414cd529e438f328d1a1
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68269266"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845085"
 ---
-# <a name="defaultdelete-struct"></a>default_delete структуры
+# <a name="default_delete-struct"></a>Структура default_delete
 
-Стандартный объект функции, выполняет операцию деления (`operator/`) к своим аргументам.
+Стандартный объект функции, который выполняет операцию деления ( `operator/` ) в своих аргументах.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -25,25 +25,25 @@ template <class T>
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<memory>
+**Заголовок:**\<memory>
 
 **Пространство имен:** std
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Элементы
 
 ### <a name="constructors"></a>Конструкторы
 
-|||
+|Имя|Описание|
 |-|-|
 |[default_delete](#default_delete)|Конструктор для объектов типа `default_delete`.|
 
 ### <a name="operators"></a>Операторы
 
-|||
+|Имя|Описание|
 |-|-|
-|[operator()](#op_paren)|Оператор ссылки для доступа к `default_delete`.|
+|[оператор ()](#op_paren)|Ссылочный оператор для доступа `default_delete` .|
 
-## <a name="default_delete"></a> default_delete
+## <a name="default_delete"></a><a name="default_delete"></a> default_delete
 
 Конструктор для объектов типа `default_delete`.
 
@@ -53,14 +53,14 @@ template <class U>
     default_delete(const default_delete<U>&) noexcept;
 ```
 
-## <a name="op_paren"></a> Operator()
+## <a name="operator"></a><a name="op_paren"></a> оператор ()
 
-Оператор ссылки для доступа к `default_delete`.
+Ссылочный оператор для доступа `default_delete` .
 
 ```cpp
 void operator()(T*) const;
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [\<memory>](../standard-library/memory.md)

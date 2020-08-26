@@ -2,22 +2,34 @@
 title: Операторы пространства имен Concurrency (AMP)
 ms.date: 11/04/2016
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
-ms.openlocfilehash: 03079f8899f3b13c8509e1affd10a82191b1817c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1b6353e1edbe216dcb8aa5a342e139d826b82c6c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228483"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845345"
 ---
 # <a name="concurrency-namespace-operators-amp"></a>Операторы пространства имен Concurrency (AMP)
 
-||||
-|-|-|-|
-|[operator! =](#operator_neq)|[станции](#operator_mod)|[станции](#operator_star)|
-|[operator +](#operator_add)|[станции](#operator-)|[станции](#operator_div)|
-|[Оператор = =](#operator_eq_eq)|
+:::row:::
+   :::column span="":::
+      [`operator==`](#operator_eq_eq)\
+      [`operator!=`](#operator_neq)
+   :::column-end:::
+   :::column span="":::
+      [`operator+`](#operator_add)\
+      [`operator-`](#operator-)
+   :::column-end:::
+   :::column span="":::
+      [`operator*`](#operator_star)\
+      [`operator/`](#operator_div)
+   :::column-end:::
+   :::column span="":::
+      [`operator%`](#operator_mod)
+   :::column-end:::
+:::row-end:::
 
-## <a name="operator"></a><a name="operator_eq_eq"></a>Оператор = =
+## <a name="operator"></a><a name="operator_eq_eq"></a> Оператор = =
 
 Определяет, равны ли указанные аргументы.
 
@@ -46,7 +58,7 @@ bool operator== (
 
 **`true`** значение, если кортежи равны; в противном случае — **`false`** .
 
-## <a name="operator"></a><a name="operator_neq"></a>operator! =
+## <a name="operator"></a><a name="operator_neq"></a> operator! =
 
 Определяет, являются ли указанные аргументы неравными.
 
@@ -75,7 +87,7 @@ bool operator!= (
 
 **`true`** значение, если кортежи не равны; в противном случае — **`false`** .
 
-## <a name="operator"></a><a name="operator_add"></a>operator +
+## <a name="operator"></a><a name="operator_add"></a> operator +
 
 Вычисляет покомпонентную сумму указанных аргументов.
 
@@ -120,7 +132,7 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
 
 Покомпонентная сумма указанных аргументов.
 
-## <a name="operator-"></a><a name="operator-"></a>станции
+## <a name="operator-"></a><a name="operator-"></a> станции
 
 Выполняет покомпонентное различие между заданными аргументами.
 
@@ -165,7 +177,7 @@ _Tuple_type<_Rank>   operator-(
 
 Покомпонентная разница между заданными аргументами.
 
-## <a name="operator"></a><a name="operator_star"></a>станции
+## <a name="operator"></a><a name="operator_star"></a> станции
 
 Выполняет покомпонентное произведение заданных аргументов.
 
@@ -202,7 +214,7 @@ _Tuple_type<_Rank>   operator*(
 
 Покомпонентное произведение заданных аргументов.
 
-## <a name="operator"></a><a name="operator_div"></a>станции
+## <a name="operator"></a><a name="operator_div"></a> станции
 
 Выполняет покомпонентное частное от указанных аргументов.
 
@@ -239,7 +251,7 @@ _Tuple_type<_Rank>   operator/(
 
 Покомпонентное частное от указанных аргументов.
 
-## <a name="operator"></a><a name="operator_mod"></a>станции
+## <a name="operator"></a><a name="operator_mod"></a> станции
 
 Выполняет вычисление остатка первого заданного аргумента по второму указанному аргументу.
 
@@ -276,6 +288,6 @@ _Tuple_type<_Rank>   operator%(
 
 Результат первого указанного аргумента модуля, второго заданного аргумента.
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Concurrency](concurrency-namespace-cpp-amp.md)

@@ -18,14 +18,14 @@ helpviewer_keywords:
 - std::reference_wrapper [C++], type
 - std::reference_wrapper [C++], get
 ms.assetid: 90b8ed62-e6f1-44ed-acc7-9619bd58865a
-ms.openlocfilehash: 83b68d1fdf89519df0a26acd478467fddec8b662
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 623e1480bdec85120e504c8dc71b28d017c8872a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240274"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845072"
 ---
-# <a name="referencewrapper-class"></a>Класс reference_wrapper
+# <a name="reference_wrapper-class"></a>Класс reference_wrapper
 
 Создает оболочку для ссылки.
 
@@ -47,7 +47,7 @@ class reference_wrapper
 };
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 `reference_wrapper<Ty>` — это конструируемый и назначаемый копированием класс-оболочка вокруг ссылки на объект или функцию типа `Ty`. Он содержит указатель на объект этого типа. `reference_wrapper` может использоваться для хранения ссылок в стандартных контейнерах и для передачи объектов по ссылке на `std::bind`.
 
@@ -55,35 +55,35 @@ class reference_wrapper
 
 Вспомогательные функции [std::ref](functional-functions.md#ref) и [std::cref](functional-functions.md#cref) можно использовать для создания объектов `reference_wrapper`.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Элементы
 
 ### <a name="constructors"></a>Конструкторы
 
-|||
+|Имя|Описание|
 |-|-|
 |[reference_wrapper](#reference_wrapper)|Создает документ `reference_wrapper`.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|||
+|Имя|Описание|
 |-|-|
 |[result_type](#result_type)|Слабый тип результата ссылки в оболочке.|
 |[type](#type)|Тип ссылки в оболочке.|
 
 ### <a name="functions"></a>Функции
 
-|||
+|Имя|Описание|
 |-|-|
 |[get](#get)|Получает ссылку в оболочке.|
 
 ### <a name="operators"></a>Операторы
 
-|||
+|Имя|Описание|
 |-|-|
-|[Operator Ty&amp;](#op_ty_amp)|Получает указатель на ссылку в оболочке.|
-|[operator()](#op_call)|Вызывает ссылку в оболочке.|
+|[Оператор Ty&amp;](#op_ty_amp)|Получает указатель на ссылку в оболочке.|
+|[оператор ()](#op_call)|Вызывает ссылку в оболочке.|
 
-## <a name="get"></a> Получить
+## <a name="get"></a><a name="get"></a> Получить
 
 Получает ссылку в оболочке.
 
@@ -91,7 +91,7 @@ class reference_wrapper
 Ty& get() const noexcept;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Функция-член возвращает ссылку в оболочке.
 
@@ -122,7 +122,7 @@ rwi = 1
 i = -1
 ```
 
-## <a name="op_ty_amp"></a> Operator Ty&amp;
+## <a name="operator-tyamp"></a><a name="op_ty_amp"></a> Оператор Ty&amp;
 
 Получение ссылки в оболочке.
 
@@ -130,7 +130,7 @@ i = -1
 operator Ty&() const noexcept;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Оператор-член возвращает `*ptr`.
 
@@ -158,7 +158,7 @@ i = 1
 (int)rwi = 1
 ```
 
-## <a name="op_call"></a> Operator()
+## <a name="operator"></a><a name="op_call"></a> оператор ()
 
 Вызывает ссылку в оболочке.
 
@@ -169,13 +169,13 @@ auto operator()(Types&&... args);
 
 ### <a name="parameters"></a>Параметры
 
-*Типы*\
+*Типов*\
 Типы списка аргументов.
 
-*аргументы*\
+*args*\
 Список аргументов.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Элемент шаблона `operator()` возвращает `std::invoke(get(), std::forward<Types>(args)...)`.
 
@@ -204,7 +204,7 @@ int main() {
 rwi(3) = -3
 ```
 
-## <a name="reference_wrapper"></a> reference_wrapper
+## <a name="reference_wrapper"></a><a name="reference_wrapper"></a> reference_wrapper
 
 Создает документ `reference_wrapper`.
 
@@ -214,13 +214,13 @@ reference_wrapper(Ty& val) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-*За этот год*\
+*Ty*\
 Тип для упаковки.
 
 *Val*\
 Значение для упаковки.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Конструктор устанавливает сохраненное значение `ptr` в `&val`.
 
@@ -255,7 +255,7 @@ rwi = 1
 i = -1
 ```
 
-## <a name="result_type"></a> result_type
+## <a name="result_type"></a><a name="result_type"></a> result_type
 
 Слабый тип результата ссылки в оболочке.
 
@@ -263,7 +263,7 @@ i = -1
 typedef R result_type;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Определение типа `result_type` является синонимом слабого типа результата функции в оболочке. Это определение типа имеет смысл только для типов функций.
 
@@ -294,7 +294,7 @@ int main() {
 val = -3
 ```
 
-## <a name="type"></a> Тип
+## <a name="type"></a>Тип <a name="type"></a>
 
 Тип ссылки в оболочке.
 
@@ -302,7 +302,7 @@ val = -3
 typedef Ty type;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Определение типа является синонимом параметра шаблона `Ty`.
 

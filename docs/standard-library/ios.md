@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ios header
 ms.assetid: d3d4c161-2f37-4f04-93cc-0a2a89984a9c
-ms.openlocfilehash: 59ff0d1a9538bd43cc2164306e6a37a3b307067d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8ba03e5ab5dd90a6f29e08b01576803a00f0bd24
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212271"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845488"
 ---
 # <a name="ltiosgt"></a>&lt;ios&gt;
 
@@ -20,7 +20,7 @@ ms.locfileid: "87212271"
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок**:\<ios>
+**Заголовок**: \<ios>
 
 **Пространство имен:** std
 
@@ -43,7 +43,7 @@ istr>> noskipws;
 
 ### <a name="typedefs"></a>Определения типов
 
-|||
+|Имя|Описание|
 |-|-|
 |[iOS](../standard-library/ios-typedefs.md#ios)|Поддерживает класс ios из старой библиотеки iostream.|
 |[streamoff](../standard-library/ios-typedefs.md#streamoff)|Поддерживает внутренние операции.|
@@ -54,7 +54,7 @@ istr>> noskipws;
 
 ### <a name="manipulators"></a>Манипуляторы
 
-|||
+|Имя|Описание|
 |-|-|
 |[boolalpha](../standard-library/ios-functions.md#boolalpha)|Указывает, что переменные типа [bool](../cpp/bool-cpp.md) отображаются как **`true`** или **`false`** в потоке.|
 |[уменьшение](../standard-library/ios-functions.md#dec)|Устанавливает режим отображения целочисленных переменных в нотации с основанием 10.|
@@ -83,7 +83,7 @@ istr>> noskipws;
 
 ### <a name="error-reporting"></a>Отчет об ошибках
 
-|||
+|Имя|Описание|
 |-|-|
 |[io_errc](../standard-library/ios-functions.md#io_errc)||
 |[is_error_code_enum](../standard-library/ios-functions.md#is_error_code_enum)||
@@ -93,7 +93,7 @@ istr>> noskipws;
 
 ### <a name="classes"></a>Классы
 
-|||
+|name|Описание|
 |-|-|
 |[basic_ios](../standard-library/basic-ios-class.md)|Шаблон класса описывает хранилище и функции-члены, общие для входных потоков (класса Template [basic_istream](../standard-library/basic-istream-class.md)) и потоков вывода (шаблона класса [basic_ostream](../standard-library/basic-ostream-class.md)), которые зависят от параметров шаблона.|
 |[fpos](../standard-library/fpos-class.md)|Шаблон класса описывает объект, который может хранить всю информацию, необходимую для восстановления произвольного индикатора положения файла в любом потоке.|

@@ -18,22 +18,24 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (thread)
 - std::operator&lt;= (thread)
 - std::operator== (thread)
-ms.openlocfilehash: e7321831b9356fdb9ae5ce147319726def69efc7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 26ed8157685502618fe6fb82fbf9c9ad4c47cba3
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215573"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845033"
 ---
 # <a name="ltthreadgt-operators"></a>Операторы &lt;thread&gt;
 
-||||
-|-|-|-|
-|[operator! =](#op_neq)|[оператор&gt;](#op_gt)|[оператор&gt;=](#op_gt_eq)|
-|[оператор&lt;](#op_lt)|[оператор&lt;&lt;](#op_lt_lt)|[оператор&lt;=](#op_lt_eq)|
-|[Оператор = =](#op_eq_eq)|
+[operator! =](#op_neq)\
+[станции&gt;](#op_gt)\
+[станции&gt;=](#op_gt_eq)\
+[станции&lt;](#op_lt)\
+[станции&lt;&lt;](#op_lt_lt)\
+[станции&lt;=](#op_lt_eq)\
+[Оператор = =](#op_eq_eq)
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>станции&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> станции&gt;=
 
 Определяет, справедливо ли, что один из объектов `thread::id` больше другого или равен ему.
 
@@ -59,7 +61,7 @@ bool operator>= (
 
 Эта функция не вызывает исключений.
 
-## <a name="operatorgt"></a><a name="op_gt"></a>станции&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> станции&gt;
 
 Определяет, справедливо ли, что один из объектов `thread::id` больше другого или равен ему.
 
@@ -85,7 +87,7 @@ bool operator> (
 
 Эта функция не вызывает исключений.
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>станции&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> станции&lt;=
 
 Определяет, справедливо ли, что один из объектов `thread::id` меньше другого или равен ему.
 
@@ -111,7 +113,7 @@ bool operator<= (
 
 Эта функция не вызывает исключений.
 
-## <a name="operatorlt"></a><a name="op_lt"></a>станции&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> станции&lt;
 
 Определяет, справедливо ли, что один объект `thread::id` меньше другого.
 
@@ -139,7 +141,7 @@ bool operator<(
 
 Эта функция не вызывает исключений.
 
-## <a name="operator"></a><a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a> operator! =
 
 Проверяет неравенство двух объектов `thread::id`.
 
@@ -165,7 +167,7 @@ bool operator!= (
 
 Эта функция не вызывает исключений.
 
-## <a name="operator"></a><a name="op_eq_eq"></a>Оператор = =
+## <a name="operator"></a><a name="op_eq_eq"></a> Оператор = =
 
 Сравнивает два объекта `thread::id` на равенство.
 
@@ -191,7 +193,7 @@ bool operator== (
 
 Эта функция не вызывает исключений.
 
-## <a name="operatorltlt"></a><a name="op_lt_lt"></a>станции&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a> станции&lt;&lt;
 
 Вставляет текстовое представление объекта `thread::id` в поток.
 

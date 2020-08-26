@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: 515307bd79059c22b5b40cd8b47ce8809ede8f04
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: f8ca4ad2023902d40a1f63c881a8dd2fd38a9ae9
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560859"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837610"
 ---
 # <a name="cwinapp-class"></a>Класс CWinApp
 
@@ -1303,9 +1303,8 @@ DWORD m_dwRestartManagerSupportFlags;
 
 Чтобы включить диспетчер перезапуска, задайте нужное `m_dwRestartManagerSupportFlags` поведение. В следующей таблице показаны доступные флаги.
 
-|||
-|-|-|
 |Flag|Описание|
+|-|-|
 |AFX_RESTART_MANAGER_SUPPORT_RESTART|Приложение регистрируется с помощью команды [CWinApp:: регистервисрестартманажер](#registerwithrestartmanager). Диспетчер перезапуска отвечает за перезапуск приложения, если он неожиданно завершает работу.|
 |— AFX_RESTART_MANAGER_SUPPORT_RECOVERY|Приложение регистрируется в диспетчере перезапуска, а диспетчер перезапуска вызывает функцию обратного вызова восстановления при перезапуске приложения. Функция обратного вызова восстановления по умолчанию — [CWinApp:: аппликатионрековерикаллбакк](#applicationrecoverycallback).|
 |— AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART|Автосохранение включено, а диспетчер перезапуска автоматически сохраняет все открытые документы при перезапуске приложения.|
@@ -1970,7 +1969,7 @@ virtual HRESULT RegisterWithRestartManager(
 окне Строка, содержащая любые дополнительные аргументы из командной строки.
 
 *дврестартфлагс*\
-окне Необязательные флаги для диспетчера перезапуска. Дополнительные сведения см. в разделе «Примечания».
+окне Необязательные флаги для диспетчера перезапуска. Дополнительные сведения см. в разделе "Замечания".
 
 *прековерикаллбакк*\
 окне Функция обратного вызова восстановления. Эта функция должна принимать параметр ЛПВОИД в качестве входных данных и возвращать DWORD. Функция обратного вызова восстановления по умолчанию имеет значение `CWinApp::ApplicationRecoveryCallback` .
@@ -2403,7 +2402,7 @@ void SetAppID(LPCTSTR lpcszAppID);
 
 ### <a name="remarks"></a>Remarks
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс CWinThread](../../mfc/reference/cwinthread-class.md)<br/>
 [Иерархическая диаграмма](../../mfc/hierarchy-chart.md)<br/>

@@ -1,17 +1,17 @@
 ---
-title: out (C++ атрибут com)
+title: out (атрибут COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.out
 helpviewer_keywords:
 - out attribute
 ms.assetid: 5051b1bf-4949-4bf1-b82f-35e14f0f244b
-ms.openlocfilehash: 6ab8fdf691e2220087f5c5d64bb70c5deb27675c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b99e520a11c2e8110d2e63fa85ddb1dd444e56e6
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214701"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837103"
 ---
 # <a name="out-c"></a>out (C++)
 
@@ -33,14 +33,12 @@ ms.locfileid: "80214701"
 
 ## <a name="requirements"></a>Требования
 
-### <a name="attribute-context"></a>Контекст атрибута
-
-|||
+| Контекст атрибута | Значение |
 |-|-|
-|**Применение**|Параметр интерфейса|
-|**Повторяемый**|нет|
-|**Обязательные атрибуты**|None|
-|**Недопустимые атрибуты**|None|
+|**Относится к**|Параметр интерфейса|
+|**REPEATABLE**|Нет|
+|**Требуемые атрибуты**|Нет|
+|**Недопустимые атрибуты**|Нет|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
@@ -48,5 +46,5 @@ ms.locfileid: "80214701"
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты параметра](parameter-attributes.md)<br/>
-[defaultvalue](defaultvalue.md)<br/>
+[максимально](defaultvalue.md)<br/>
 [идентификатор](id.md)

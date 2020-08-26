@@ -11,12 +11,12 @@ helpviewer_keywords:
 - event sources
 - event handling, creating event source
 ms.assetid: 0983e36a-6127-4fbb-8a22-8dfec6564c16
-ms.openlocfilehash: a7231b01cd341bbc04bcccd3c2198d1a76dd5e39
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bea90020c3ec570149e11db95ff6d6f8fd0a5507
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232772"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845306"
 ---
 # <a name="event_source"></a>event_source
 
@@ -60,18 +60,16 @@ ms.locfileid: "87232772"
 
 ## <a name="requirements"></a>Требования
 
-### <a name="attribute-context"></a>Контекст атрибута
-
-|||
+| Контекст атрибута | Значение |
 |-|-|
 |**Относится к**|**`class`**, **`struct`**|
 |**REPEATABLE**|Нет|
-|**Требуемые атрибуты**|**coclass** , когда`type`=`com`|
+|**Требуемые атрибуты**|**coclass** , когда `type`=`com`|
 |**Недопустимые атрибуты**|Нет|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты компилятора](compiler-attributes.md)<br/>
 [event_receiver](event-receiver.md)<br/>

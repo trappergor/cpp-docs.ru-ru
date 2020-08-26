@@ -14,12 +14,12 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
-ms.openlocfilehash: cbf2e6d7241d019a00132c10638993d60d78beac
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f71ca7f5fb675916c9db7e5720e6c148f2131351
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210812"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845579"
 ---
 # <a name="icommandpropertiesimpl-class"></a>Класс ICommandPropertiesImpl
 
@@ -45,11 +45,11 @@ class ATL_NO_VTABLE ICommandPropertiesImpl
 
 **Заголовок:** atldb.h
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Элементы
 
 ### <a name="interface-methods"></a>Методы интерфейса
 
-|||
+| Имя | Описание |
 |-|-|
 |[GetProperties](#getproperties)|Возвращает список свойств в группе свойств набора строк, запрашиваемых в данный момент для набора строк.|
 |[SetProperties](#setproperties)|Задает свойства в группе свойств набора строк.|
@@ -58,7 +58,7 @@ class ATL_NO_VTABLE ICommandPropertiesImpl
 
 Это обязательно для команд. Реализация обеспечивается статической функцией, определенной [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) макросом.
 
-## <a name="icommandpropertiesimplgetproperties"></a><a name="getproperties"></a>Свойства ICommandPropertiesImpl:: Properties
+## <a name="icommandpropertiesimplgetproperties"></a><a name="getproperties"></a> Свойства ICommandPropertiesImpl:: Properties
 
 Возвращает все запрошенные наборы свойств с помощью схемы свойств команды.
 
@@ -79,7 +79,7 @@ STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,
 
 См. раздел [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
-## <a name="icommandpropertiesimplsetproperties"></a><a name="setproperties"></a>ICommandPropertiesImpl:: SetProperties
+## <a name="icommandpropertiesimplsetproperties"></a><a name="setproperties"></a> ICommandPropertiesImpl:: SetProperties
 
 Задает свойства для объекта команды.
 

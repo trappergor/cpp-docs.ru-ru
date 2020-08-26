@@ -51,12 +51,12 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: b235a85ccab4fd3d3377e656b53276928b425d94
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c88554d717888719ad6d805a2871489ce4b0df32
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232161"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845592"
 ---
 # <a name="icommandimpl-class"></a>Класс ICommandImpl
 
@@ -85,7 +85,7 @@ class ATL_NO_VTABLE ICommandImpl : public CommandBase
 
 ### <a name="methods"></a>Методы
 
-|||
+| Имя | Описание |
 |-|-|
 |[Отмена](#cancel)|Отменяет текущее выполнение команды.|
 |[канцелексекутион](#cancelexecution)|Отменяет текущее выполнение команды.|
@@ -96,7 +96,7 @@ class ATL_NO_VTABLE ICommandImpl : public CommandBase
 
 ### <a name="data-members"></a>Элементы данных
 
-|||
+| Имя | Описание |
 |-|-|
 |[m_bCancel](#bcancel)|Указывает, должна ли команда быть отменена.|
 |[m_bCancelWhenExecuting](#bcancelwhenexecuting)|Указывает, должна ли команда быть отменена при выполнении.|
@@ -106,7 +106,7 @@ class ATL_NO_VTABLE ICommandImpl : public CommandBase
 
 Обязательный интерфейс для объекта Command.
 
-## <a name="icommandimplcancel"></a><a name="cancel"></a>ICommandImpl:: Cancel
+## <a name="icommandimplcancel"></a><a name="cancel"></a> ICommandImpl:: Cancel
 
 Отменяет текущее выполнение команды.
 
@@ -120,7 +120,7 @@ STDMETHOD(Cancel)();
 
 См. раздел [ICommand:: Cancel](/previous-versions/windows/desktop/ms714402(v=vs.85)) в *справочнике по OLE DB программиста*.
 
-## <a name="icommandimplcancelexecution"></a><a name="cancelexecution"></a>ICommandImpl:: Канцелексекутион
+## <a name="icommandimplcancelexecution"></a><a name="cancelexecution"></a> ICommandImpl:: Канцелексекутион
 
 Отменяет текущее выполнение команды.
 
@@ -130,7 +130,7 @@ STDMETHOD(Cancel)();
 HRESULT CancelExecution();
 ```
 
-## <a name="icommandimplcreaterowset"></a><a name="createrowset"></a>ICommandImpl:: CreateRowset
+## <a name="icommandimplcreaterowset"></a><a name="createrowset"></a> ICommandImpl:: CreateRowset
 
 Вызывается инструкцией [EXECUTE](../../data/oledb/icommandimpl-execute.md) для создания одного набора строк.
 
@@ -179,7 +179,7 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 
 См. раздел [ICommand:: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) в *справочнике по OLE DB программиста.*
 
-## <a name="icommandimplexecute"></a><a name="execute"></a>ICommandImpl:: Execute
+## <a name="icommandimplexecute"></a><a name="execute"></a> ICommandImpl:: Execute
 
 Выполняет команду.
 
@@ -201,9 +201,9 @@ HRESULT Execute(IUnknown* pUnkOuter,
 
 Запрошенный исходящий интерфейс будет интерфейсом, полученным из объекта набора строк, создаваемого этой функцией.
 
-`Execute`вызывает [CreateRowset](../../data/oledb/icommandimpl-createrowset.md). Переопределите реализацию по умолчанию, чтобы создать более одного набора строк или предоставить собственные условия для создания различных наборов строк.
+`Execute` вызывает [CreateRowset](../../data/oledb/icommandimpl-createrowset.md). Переопределите реализацию по умолчанию, чтобы создать более одного набора строк или предоставить собственные условия для создания различных наборов строк.
 
-## <a name="icommandimplgetdbsession"></a><a name="getdbsession"></a>ICommandImpl:: Жетдбсессион
+## <a name="icommandimplgetdbsession"></a><a name="getdbsession"></a> ICommandImpl:: Жетдбсессион
 
 Возвращает указатель интерфейса на сеанс, создавший команду.
 
@@ -222,7 +222,7 @@ STDMETHOD (GetDBSession) (REFIID riid,
 
 Полезно для получения свойств из сеанса.
 
-## <a name="icommandimplicommandimpl"></a><a name="icommandimpl"></a>ICommandImpl:: ICommandImpl
+## <a name="icommandimplicommandimpl"></a><a name="icommandimpl"></a> ICommandImpl:: ICommandImpl
 
 Конструктор.
 
@@ -232,7 +232,7 @@ STDMETHOD (GetDBSession) (REFIID riid,
 ICommandImpl();
 ```
 
-## <a name="icommandimplm_bcancel"></a><a name="bcancel"></a>ICommandImpl:: m_bCancel
+## <a name="icommandimplm_bcancel"></a><a name="bcancel"></a> ICommandImpl:: m_bCancel
 
 Указывает, отменена ли команда.
 
@@ -246,7 +246,7 @@ unsigned m_bCancel:1;
 
 Эту переменную можно получить в `Execute` методе класса Command и при необходимости отменить.
 
-## <a name="icommandimplm_bcancelwhenexecuting"></a><a name="bcancelwhenexecuting"></a>ICommandImpl:: m_bCancelWhenExecuting
+## <a name="icommandimplm_bcancelwhenexecuting"></a><a name="bcancelwhenexecuting"></a> ICommandImpl:: m_bCancelWhenExecuting
 
 Указывает, может ли команда быть отменена при выполнении.
 
@@ -260,7 +260,7 @@ unsigned m_bCancelWhenExecuting:1;
 
 Значение по умолчанию — **`true`** (может быть отменено).
 
-## <a name="icommandimplm_bisexecuting"></a><a name="bisexecuting"></a>ICommandImpl:: m_bIsExecuting
+## <a name="icommandimplm_bisexecuting"></a><a name="bisexecuting"></a> ICommandImpl:: m_bIsExecuting
 
 Указывает, выполняется ли в данный момент команда.
 

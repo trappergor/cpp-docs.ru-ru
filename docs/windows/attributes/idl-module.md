@@ -1,17 +1,17 @@
 ---
-title: idl_module (C++ атрибут com)
+title: idl_module (атрибут COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.idl_module
 helpviewer_keywords:
 - idl_module attribute
 ms.assetid: 3578b337-e38a-4334-b747-15404c02dbc0
-ms.openlocfilehash: 6dd0a34d5d957838613bde2c9e05d5ef26a1f678
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 651d2e133d7ef08fce48feded1b7a5aff458adb1
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168048"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845228"
 ---
 # <a name="idl_module"></a>idl_module
 
@@ -44,10 +44,10 @@ function declaration
 *helpcontext*<br/>
 Используемых Идентификатор справки для этой библиотеки типов.
 
-*hidden*<br/>
+*служеб*<br/>
 Используемых Параметр, который предотвращает отображение библиотеки. Дополнительные сведения см. в описании атрибута MIDL [hidden](/windows/win32/Midl/hidden) .
 
-*restricted*<br/>
+*зона*<br/>
 Используемых Члены библиотеки не могут вызываться произвольным образом. Дополнительные сведения см. в описании атрибута MIDL [restricted](/windows/win32/Midl/restricted) .
 
 *объявление функции*<br/>
@@ -55,7 +55,7 @@ function declaration
 
 ## <a name="remarks"></a>Remarks
 
-Атрибут **idl_module** C++ позволяет указать точку входа в DLL-файле, который позволяет импортировать из DLL-файла.
+Атрибут **idl_module** C++ позволяет указать точку входа в DLL-файле, которая позволяет импортировать из DLL-файла.
 
 Атрибут **idl_module** имеет функциональные возможности, аналогичные атрибуту MIDL [модуля](/windows/win32/Midl/module) .
 
@@ -78,14 +78,12 @@ void FuncName(int i);
 
 ## <a name="requirements"></a>Требования
 
-### <a name="attribute-context"></a>Контекст атрибута
-
-|||
+| Контекст атрибута | Значение |
 |-|-|
-|**Применение**|В любом месте|
-|**Повторяемый**|нет|
-|**Обязательные атрибуты**|None|
-|**Недопустимые атрибуты**|None|
+|**Относится к**|В любом месте|
+|**REPEATABLE**|Нет|
+|**Требуемые атрибуты**|Нет|
+|**Недопустимые атрибуты**|Нет|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
@@ -93,4 +91,4 @@ void FuncName(int i);
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Изолированные атрибуты](stand-alone-attributes.md)<br/>
-[entry](entry.md)
+[операции](entry.md)

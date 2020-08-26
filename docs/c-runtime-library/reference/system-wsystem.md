@@ -35,12 +35,12 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-ms.openlocfilehash: 09353c9cda2bc85d91f57806bc3497e49a19f803
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 15e4637d709fdf4600ecb4c66c7d4a75c4fa07eb
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912392"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844981"
 ---
 # <a name="system-_wsystem"></a>system, _wsystem
 
@@ -62,14 +62,14 @@ int _wsystem(
 
 ### <a name="parameters"></a>Параметры
 
-*.*<br/>
+*command*<br/>
 Команда для выполнения.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Если *Команда* имеет **значение NULL** и обнаружен интерпретатор команд, возвращает ненулевое значение. Если интерпретатор команд не найден, возвращает 0 **и устанавливает для** **еноент**значение. Если *команда* не имеет **значение NULL**, **система** возвращает значение, возвращаемое интерпретатором команд. Она возвращает значение 0, только если интерпретатор команд возвращает значение 0. Возвращаемое значение, равное-1, указывает на ошибку **, а параметру «вывод** » задано одно из следующих значений:
 
-|||
+| Значение | Описание |
 |-|-|
 | **E2BIG** | Список аргументов (который зависит от системы) слишком велик. |
 | **еноент** | Интерпретатор команд не найден. |
@@ -80,7 +80,7 @@ int _wsystem(
 
 ## <a name="remarks"></a>Remarks
 
-**Системная** функция передает *команду* интерпретатору команд, который выполняет строку в качестве команды операционной системы. **система** использует переменные среды **ComSpec** и **path** для поиска файла интерпретатора команд Cmd. exe. Если *Команда* имеет **значение NULL**, функция просто проверяет, существует ли интерпретатор команд.
+**Системная** функция передает *команду* интерпретатору команд, который выполняет строку в качестве команды операционной системы. **система** использует переменные среды **ComSpec** и **path** для поиска файла интерпретатора команд CMD.exe. Если *Команда* имеет **значение NULL**, функция просто проверяет, существует ли интерпретатор команд.
 
 Необходимо явно очистить с помощью [fflush](fflush.md) или [_flushall](flushall.md)или закрыть любой поток перед вызовом **System**.
 
@@ -99,7 +99,7 @@ int _wsystem(
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
 |**система**|\<process.h> или \<stdlib.h>|
-|**_wsystem**|\<process.h> или \<stdlib.h> или \<wchar.h>|
+|**_wsystem**|\<process.h>, \<stdlib.h> или \<wchar.h>|
 
 Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
@@ -138,4 +138,4 @@ Line two.
 [_exec, функции _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [_flushall](flushall.md)<br/>
-[Функции _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, функции _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)<br/>

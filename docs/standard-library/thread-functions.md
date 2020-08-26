@@ -14,21 +14,22 @@ helpviewer_keywords:
 - std::sleep_until [C++]
 - std::swap [C++]
 - std::yield [C++]
-ms.openlocfilehash: 130328ca07de28e14eedd7fdc99fb8946f26c5cb
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 64a62180243d77f361c243b2a89de56b0a14920e
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232863"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845046"
 ---
 # <a name="ltthreadgt-functions"></a>Функции &lt;thread&gt;
 
-||||
-|-|-|-|
-|[get_id](#get_id)|[sleep_for](#sleep_for)|[sleep_until](#sleep_until)|
-|[позиции](#swap)|[yield](#yield)|
+[get_id](#get_id)\
+[sleep_for](#sleep_for)\
+[sleep_until](#sleep_until)\
+[позиции](#swap)\
+[yield](#yield)
 
-## <a name="get_id"></a><a name="get_id"></a>get_id
+## <a name="get_id"></a><a name="get_id"></a> get_id
 
 Уникально идентифицирует текущий поток выполнения.
 
@@ -40,7 +41,7 @@ thread::id this_thread::get_id() noexcept;
 
 Объект типа [thread::id](../standard-library/thread-class.md), который уникально идентифицирует текущий поток выполнения.
 
-## <a name="sleep_for"></a><a name="sleep_for"></a>sleep_for
+## <a name="sleep_for"></a><a name="sleep_for"></a> sleep_for
 
 Блокирует вызывающий поток.
 
@@ -59,7 +60,7 @@ inline void sleep_for(const chrono::duration<Rep, Period>& Rel_time);
 
 Функция блокирует вызывающий поток в течение как минимум времени, заданного *Rel_time*. Эта функция не вызывает исключений.
 
-## <a name="sleep_until"></a><a name="sleep_until"></a>sleep_until
+## <a name="sleep_until"></a><a name="sleep_until"></a> sleep_until
 
 Блокирует вызывающий поток по крайней мере до указанного времени.
 
@@ -79,7 +80,7 @@ void sleep_until(const xtime *Abs_time);
 
 Эта функция не вызывает исключений.
 
-## <a name="swap"></a><a name="swap"></a>позиции
+## <a name="swap"></a><a name="swap"></a> позиции
 
 Меняет местами состояния двух объектов `thread`.
 
@@ -99,7 +100,7 @@ void swap(thread& Left, thread& Right) noexcept;
 
 Функция вызывает `Left.swap(Right)`.
 
-## <a name="yield"></a><a name="yield"></a>Получает
+## <a name="yield"></a><a name="yield"></a> Получает
 
 Сигнализирует операционной системе, что необходимо запустить другие потоки, даже если в обычной ситуации текущий поток продолжал бы выполняться.
 

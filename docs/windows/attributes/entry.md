@@ -1,17 +1,17 @@
 ---
-title: запись (C++ атрибут com)
+title: Entry (атрибут COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.entry
 helpviewer_keywords:
 - entry attribute
 ms.assetid: ba4843e3-d7ad-4b86-9a15-0b4192f0f698
-ms.openlocfilehash: 9bdfc64506f26ee4e9876920821883a0fa12bc7e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 63e5ccebb1d3844af8dd11b4b094abe96e3e257c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167099"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845319"
 ---
 # <a name="entry"></a>entry
 
@@ -38,14 +38,12 @@ ms.locfileid: "80167099"
 
 ## <a name="requirements"></a>Требования
 
-### <a name="attribute-context"></a>Контекст атрибута
-
-|||
+| Контекст атрибута | Значение |
 |-|-|
-|**Применение**|Атрибут `idl_module`|
-|**Повторяемый**|нет|
-|**Обязательные атрибуты**|None|
-|**Недопустимые атрибуты**|None|
+|**Относится к**|Атрибут `idl_module`|
+|**REPEATABLE**|Нет|
+|**Требуемые атрибуты**|Нет|
+|**Недопустимые атрибуты**|Нет|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 

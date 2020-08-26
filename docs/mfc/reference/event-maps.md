@@ -4,12 +4,12 @@ ms.date: 09/07/2019
 helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
-ms.openlocfilehash: ef8ee6b87bdeb9d5da9f34d303e0c0fda89443c5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: aa11dbe1a0a3dc45893d1a05cda0ef1addb9e665
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222801"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837350"
 ---
 # <a name="event-maps"></a>Схемы событий
 
@@ -29,7 +29,7 @@ ms.locfileid: "87222801"
 
 ### <a name="event-map-declaration-and-demarcation"></a>Объявление и разделительной схемы событий
 
-|||
+|Имя|Описание|
 |-|-|
 |[DECLARE_EVENT_MAP](#declare_event_map)|Объявляет, что схема событий будет использоваться в классе для соотнесения событий с функциями обработки событий (должна использоваться в объявлении класса).|
 |[BEGIN_EVENT_MAP](#begin_event_map)|Начинает определение схемы события (необходимо использовать в реализации класса).|
@@ -37,19 +37,19 @@ ms.locfileid: "87222801"
 
 ### <a name="event-mapping-macros"></a>Макросы сопоставления событий
 
-|||
+|Имя|Описание|
 |-|-|
 |[EVENT_CUSTOM](#event_custom)|Указывает, какая функция вызывает событие, которая запускает указанное событие.|
 |[EVENT_CUSTOM_ID](#event_custom_id)|Указывает, какая из функций обработки событий будет срабатывать указанное событие с назначенным ИДЕНТИФИКАТОРом диспетчеризации.|
 
 ### <a name="message-mapping-macros"></a>Макросы сопоставления сообщений
 
-|||
+|Имя|Описание|
 |-|-|
 |[ON_OLEVERB](#on_oleverb)|Указывает пользовательскую команду, обрабатываемую элементом управления OLE.|
 |[ON_STDOLEVERB](#on_stdoleverb)|Переопределяет стандартное сопоставление глагола для элемента управления OLE.|
 
-## <a name="declare_event_map"></a><a name="declare_event_map"></a>DECLARE_EVENT_MAP
+## <a name="declare_event_map"></a><a name="declare_event_map"></a> DECLARE_EVENT_MAP
 
 Каждый `COleControl` производный класс в программе может предоставить карту событий для указания событий, которые будет срабатывать элемент управления.
 
@@ -67,7 +67,7 @@ DECLARE_EVENT_MAP()
 
 **Заголовок** afxctl. h
 
-## <a name="begin_event_map"></a><a name="begin_event_map"></a>BEGIN_EVENT_MAP
+## <a name="begin_event_map"></a><a name="begin_event_map"></a> BEGIN_EVENT_MAP
 
 Начинает определение схемы событий.
 
@@ -93,7 +93,7 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 
 **Заголовок** afxctl. h
 
-## <a name="end_event_map"></a><a name="end_event_map"></a>END_EVENT_MAP
+## <a name="end_event_map"></a><a name="end_event_map"></a> END_EVENT_MAP
 
 Используйте макрос END_EVENT_MAP, чтобы завершить определение схемы событий.
 
@@ -105,7 +105,7 @@ END_EVENT_MAP()
 
 **Заголовок** afxctl. h
 
-## <a name="event_custom"></a><a name="event_custom"></a>EVENT_CUSTOM
+## <a name="event_custom"></a><a name="event_custom"></a> EVENT_CUSTOM
 
 Определяет запись схемы событий для пользовательского события.
 
@@ -171,7 +171,7 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 
 **Заголовок** afxctl. h
 
-## <a name="event_custom_id"></a><a name="event_custom_id"></a>EVENT_CUSTOM_ID
+## <a name="event_custom_id"></a><a name="event_custom_id"></a> EVENT_CUSTOM_ID
 
 Определяет функцию обработки события для пользовательского события, принадлежащего ИДЕНТИФИКАТОРу диспетчеризации, заданному *DISPID*.
 
@@ -211,7 +211,7 @@ EVENT_CUSTOM_ID(
 
 **Заголовок** afxctl. h
 
-## <a name="on_oleverb"></a><a name="on_oleverb"></a>ON_OLEVERB
+## <a name="on_oleverb"></a><a name="on_oleverb"></a> ON_OLEVERB
 
 Этот макрос определяет запись схемы сообщений, которая сопоставляет пользовательскую команду с определенной функцией-членом элемента управления.
 
@@ -246,7 +246,7 @@ BOOL memberFxn(
 
 **Заголовок** афксоле. h
 
-## <a name="on_stdoleverb"></a><a name="on_stdoleverb"></a>ON_STDOLEVERB
+## <a name="on_stdoleverb"></a><a name="on_stdoleverb"></a> ON_STDOLEVERB
 
 Используйте этот макрос, чтобы переопределить поведение стандартной команды по умолчанию.
 

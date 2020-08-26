@@ -5,22 +5,21 @@ f1_keywords:
 - amp/Concurrency::access_type
 - amp/Concurrency::queuing_mode
 ms.assetid: 4c87457e-184f-4992-81ab-ca75e7d524ab
-ms.openlocfilehash: 2467db27ad36dfcda31dfb5bb45067ada5470d07
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3dbb8f265706f7a4c369c80d3050cd1bfd2f5acb
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376322"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845098"
 ---
 # <a name="concurrency-namespace-enums-amp"></a>Перечисления пространства имен Concurrency (AMP)
 
-|||
-|-|-|
-|[Перечисление access_type](#access_type)|[Перечисление queuing_mode](#queuing_mode)|
+[Перечисление access_type](#access_type)\
+[Перечисление queuing_mode](#queuing_mode)
 
-## <a name="access_type-enumeration"></a><a name="access_type"></a>access_type Инумерация
+## <a name="access_type-enumeration"></a><a name="access_type"></a> Перечисление access_type
 
-Тип enumeration используется для обозначения различных типов доступа к данным.
+Тип перечисления, используемый для обозначения различных типов доступа к данным.
 
 ```cpp
 enum access_type;
@@ -30,15 +29,15 @@ enum access_type;
 
 |Имя|Описание|
 |----------|-----------------|
-|`access_type_auto`|Автоматически выбирайте лучшее `access_type` для акселератора.|
-|`access_type_none`|Выделенный. Распределение доступно только на ускорителе, а не на процессоре.|
-|`access_type_read`|Общий. Распределение доступно на ускорителе и читается на процессоре.|
-|`access_type_read_write`|Общий. Распределение доступно на ускорителе и записывается на процессоре.|
-|`access_type_write`|Общий. Распределение доступно на ускорителе и является читаемым и записным на процессоре.|
+|`access_type_auto`|Автоматически выберите оптимальное значение `access_type` для ускорителя.|
+|`access_type_none`|Специальное. Выделение доступно только в ускорителе, а не на ЦП.|
+|`access_type_read`|Используемый. Выделение доступно для ускорителя и доступно для чтения на ЦП.|
+|`access_type_read_write`|Используемый. Выделение доступно для ускорителя и доступно для записи в ЦП.|
+|`access_type_write`|Используемый. Выделение доступно для ускорителя и доступно для чтения и записи в ЦП.|
 
-## <a name="queuing_mode-enumeration"></a><a name="queuing_mode"></a>queuing_mode Инумерация
+## <a name="queuing_mode-enumeration"></a><a name="queuing_mode"></a> Перечисление queuing_mode
 
-Определяет режимы очередей, которые поддерживаются на ускорителе.
+Указывает режимы работы в очереди, которые поддерживаются ускорителем.
 
 ```cpp
 enum queuing_mode;
@@ -48,9 +47,9 @@ enum queuing_mode;
 
 |Имя|Описание|
 |----------|-----------------|
-|`queuing_mode_immediate`|Режим очередей, который определяет, что любые команды, например, [parallel_for_each функция (C) AMP](concurrency-namespace-functions-amp.md#parallel_for_each), отправляются на соответствующее устройство ускорителя, как только они возвращаются к вызывающему абоненту.|
-|`queuing_mode_automatic`|Режим очередей, который определяет, что команды стоят в очереди в командной очереди, соответствующей [accelerator_view](accelerator-view-class.md) объекту. Команды отправляются на устройство, когда [accelerator_view::флеш](accelerator-view-class.md#flush) вызывается.|
+|`queuing_mode_immediate`|Режим очереди, указывающий, что любые команды, например [Parallel_for_each функции (C++ amp)](concurrency-namespace-functions-amp.md#parallel_for_each), отправляются соответствующему устройству ускорителя, как только они возвращаются вызывающему.|
+|`queuing_mode_automatic`|Режим очереди, указывающий, что команды ставятся в очередь в очереди команд, соответствующей объекту [accelerator_view](accelerator-view-class.md) . Команды отправляются на устройство при вызове [accelerator_view:: Flush](accelerator-view-class.md#flush) .|
 
 ## <a name="see-also"></a>См. также раздел
 
-[Пространство имен параллелизма (КЗ АМП)](concurrency-namespace-cpp-amp.md)
+[Пространство имен Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

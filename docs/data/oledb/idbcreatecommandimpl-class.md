@@ -11,12 +11,12 @@ helpviewer_keywords:
 - IDBCreateCommandImpl class
 - CreateCommand method
 ms.assetid: eac4755e-1668-42e1-958e-a35620c385ae
-ms.openlocfilehash: 4a4978401ba90e3a7a91ac40cc1b0668adf12ee8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b7b658b2b365eb84a39ae94cef7c77e18d7bd4a0
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210721"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845553"
 ---
 # <a name="idbcreatecommandimpl-class"></a>Класс IDBCreateCommandImpl
 
@@ -33,7 +33,7 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
 ### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Объект сеанса, производный от `IDBCreateCommandImpl`.
+Объект сеанса, производный от `IDBCreateCommandImpl` .
 
 *коммандкласс*<br/>
 Класс команд.
@@ -42,11 +42,11 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
 
 **Заголовок:** atldb.h
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Элементы
 
 ### <a name="interface-methods"></a>Методы интерфейса
 
-|||
+| Имя | Описание |
 |-|-|
 |[CreateCommand](#createcommand)|Создает новую команду.|
 
@@ -54,7 +54,7 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
 
 Необязательный интерфейс объекта Session для получения новой команды.
 
-## <a name="idbcreatecommandimplcreatecommand"></a><a name="createcommand"></a>Идбкреатекоммандимпл:: CreateCommand
+## <a name="idbcreatecommandimplcreatecommand"></a><a name="createcommand"></a> Идбкреатекоммандимпл:: CreateCommand
 
 Создает новую команду и возвращает запрошенный интерфейс.
 
@@ -70,7 +70,7 @@ STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,
 
 См. раздел [IDBCreateCommand:: CreateCommand](/previous-versions/windows/desktop/ms709772(v=vs.85)) в *справочнике программиста OLE DB*.
 
-Некоторые параметры соответствуют *OLE DB ссылочным параметрам программиста* с разными именами, которые описаны в разделе `IDBCreateCommand::CreateCommand`.
+Некоторые параметры соответствуют *OLE DB ссылочным параметрам программиста* с разными именами, которые описаны в `IDBCreateCommand::CreateCommand` :
 
 |OLE DB параметры шаблона|*OLE DB ссылочные параметры программиста*|
 |--------------------------------|------------------------------------------------|

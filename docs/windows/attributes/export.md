@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - export attribute
 ms.assetid: 70b3e848-fad6-4e09-8c72-be60ca72a4df
-ms.openlocfilehash: ae7c426466bfaf4a325ba1cafe30c8ca74f8ef95
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4854789d9f977b3b747fd9b546cb92642942be88
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228080"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845280"
 ---
 # <a name="export"></a>экспорт
 
@@ -50,18 +50,16 @@ struct MyStruct {
 
 ## <a name="requirements"></a>Требования
 
-### <a name="attribute-context"></a>Контекст атрибута
-
-|||
+| Контекст атрибута | Значение |
 |-|-|
-|**Относится к**|**`union`**,,, **`typedef`** **`enum`** **`struct`** или**`interface`**|
+|**Относится к**|**`union`**,,, **`typedef`** **`enum`** **`struct`** или **`interface`**|
 |**REPEATABLE**|Нет|
 |**Требуемые атрибуты**|Нет|
 |**Недопустимые атрибуты**|Нет|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты компилятора](compiler-attributes.md)<br/>
 [Атрибуты typedef, enum, Union и struct](typedef-enum-union-and-struct-attributes.md)
