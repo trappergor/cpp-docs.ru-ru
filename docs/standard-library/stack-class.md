@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::stack [C++], size
 - std::stack [C++], top
 ms.assetid: 02151c1e-eab0-41b8-be94-a839ead78ecf
-ms.openlocfilehash: 8c1da5d45acd68838174d02305a246ba2d2c169b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f1d44a4242542ac6856fd7208fe423c43ae79997
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224634"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844305"
 ---
 # <a name="stack-class"></a>Класс stack
 
@@ -64,13 +64,13 @@ class stack
 
 ### <a name="constructors"></a>Конструкторы
 
-|||
+|Имя|Описание|
 |-|-|
 |[ячейку](#stack)|Создает `stack`, который является пустым или копией объекта базового контейнера.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|||
+|Имя|Описание|
 |-|-|
 |[container_type](#container_type)|Тип, предоставляющий базовый контейнер для принятия `stack`.|
 |[size_type](#size_type)|Целочисленный Typedef без знака, который может представлять число элементов в `stack`.|
@@ -78,7 +78,7 @@ class stack
 
 ### <a name="functions"></a>Функции
 
-|||
+|Имя|Описание|
 |-|-|
 |[empty](#empty)|Проверяет, является ли `stack` пустым.|
 |[Рор](#pop)|Удаляет элемент из верхней части `stack`.|
@@ -86,7 +86,7 @@ class stack
 |[size](#size)|Возвращает количество элементов в контейнере `stack`.|
 |[В начало](#top)|Возвращает ссылку на элемент в верхней части `stack`.|
 
-## <a name="container_type"></a><a name="container_type"></a>container_type
+## <a name="container_type"></a><a name="container_type"></a> container_type
 
 Тип, предоставляющий базовый контейнер для изменения.
 
@@ -104,7 +104,7 @@ typedef Container container_type;
 
 См. пример объявления и использования `container_type` в разделе [stack::stack](#stack).
 
-## <a name="empty"></a><a name="empty"></a>указано
+## <a name="empty"></a><a name="empty"></a> указано
 
 Проверяет, пуст ли стек.
 
@@ -149,7 +149,7 @@ The stack s1 is not empty.
 The stack s2 is empty.
 ```
 
-## <a name="pop"></a><a name="pop"></a>Рор
+## <a name="pop"></a><a name="pop"></a> Рор
 
 Удаляет элемент из верхней части стека.
 
@@ -205,7 +205,7 @@ After a pop, the stack length is 2.
 After a pop, the element at the top of the stack is 20.
 ```
 
-## <a name="push"></a><a name="push"></a>распространение
+## <a name="push"></a><a name="push"></a> распространение
 
 Добавляет элемент в верхнюю часть стека.
 
@@ -254,7 +254,7 @@ The stack length is 3.
 The element at the top of the stack is 30.
 ```
 
-## <a name="size"></a><a name="size"></a>изменять
+## <a name="size"></a><a name="size"></a> изменять
 
 Возвращает количество элементов в стеке.
 
@@ -295,7 +295,7 @@ The stack length is 1.
 The stack length is now 2.
 ```
 
-## <a name="size_type"></a><a name="size_type"></a>size_type
+## <a name="size_type"></a><a name="size_type"></a> size_type
 
 Целочисленный тип без знака, который может представлять количество элементов в стеке.
 
@@ -311,7 +311,7 @@ typedef typename Container::size_type size_type;
 
 См. пример объявления и использования `size_type` в разделе [size](#size).
 
-## <a name="stack"></a><a name="stack"></a>ячейку
+## <a name="stack"></a><a name="stack"></a> ячейку
 
 Создает стек, который является пустым или представляет собой копию класса базового контейнера.
 
@@ -365,7 +365,7 @@ int main( )
 The element at the top of stack vsi2 is 1.
 ```
 
-## <a name="top"></a><a name="top"></a>Вверх
+## <a name="top"></a><a name="top"></a> Вверх
 
 Возвращает ссылку на элемент вверху стека.
 
@@ -416,7 +416,7 @@ The top integer of the stack s1 is 2.
 The next integer down is 1.
 ```
 
-## <a name="value_type"></a><a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a> value_type
 
 Тип, представляющий тип объекта, который хранится в стеке в виде элемента.
 

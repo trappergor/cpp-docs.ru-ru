@@ -42,12 +42,12 @@ helpviewer_keywords:
 - operator[], arrays
 - m_nRowsRead
 ms.assetid: 511427e1-73ca-4fd8-9ba1-ae9463557cb6
-ms.openlocfilehash: 0c5159ac5b834c7c31d980a412f28f8129e15b45
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c5f12afa09bc1c62d3287bab93159e217721906f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212268"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843252"
 ---
 # <a name="carrayrowset-class"></a>Класс CArrayRowset
 
@@ -71,28 +71,28 @@ class CArrayRowset :
 
 **Заголовок:** atldbcli.h
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Элементы
 
 ### <a name="methods"></a>Методы
 
-|||
-|-|-|
-|[CArrayRowset](#carrayrowset)|Конструктор.|
-|[Моментальный снимок](#snapshot)|Считывает весь набор строк в память.|
+| Имя | Описание |
+|--|--|
+| [CArrayRowset](#carrayrowset) | Конструктор. |
+| [Моментальный снимок](#snapshot) | Считывает весь набор строк в память. |
 
 ### <a name="operators"></a>Операторы
 
-|||
-|-|-|
-|[Станции&#91;&#93;](#operator)|Обращается к элементу набора строк.|
+| Имя | Описание |
+|--|--|
+| [Оператор&#91;&#93;](#operator) | Обращается к элементу набора строк. |
 
 ### <a name="data-members"></a>Элементы данных
 
-|||
-|-|-|
-|[CArrayRowset::m_nRowsRead](#nrowsread)|Число уже считанных строк.|
+| Имя | Описание |
+|--|--|
+| [CArrayRowset::m_nRowsRead](#nrowsread) | Число уже считанных строк. |
 
-## <a name="carrayrowsetcarrayrowset"></a><a name="carrayrowset"></a>CArrayRowset:: CArrayRowset
+## <a name="carrayrowsetcarrayrowset"></a><a name="carrayrowset"></a> CArrayRowset:: CArrayRowset
 
 Создает новый объект `CArrayRowset`.
 
@@ -107,7 +107,7 @@ CArrayRowset(int nMax = 100000);
 *Nмакс.*<br/>
 окне Максимальное число строк в наборе строк.
 
-## <a name="carrayrowsetsnapshot"></a><a name="snapshot"></a>CArrayRowset:: snapshot
+## <a name="carrayrowsetsnapshot"></a><a name="snapshot"></a> CArrayRowset:: snapshot
 
 Считывает весь набор строк в память, создавая изображение или его снимок.
 
@@ -117,7 +117,7 @@ CArrayRowset(int nMax = 100000);
 HRESULT Snapshot() throw();
 ```
 
-## <a name="carrayrowsetoperator"></a><a name="operator"></a>CArrayRowset:: operator
+## <a name="carrayrowsetoperator"></a><a name="operator"></a> CArrayRowset:: operator
 
 Предоставляет синтаксис, подобный массиву, для доступа к строке в наборе строк.
 
@@ -143,7 +143,7 @@ TAccessor & operator[](int nrow);
 
 Если *нров* превышает количество строк в наборе строк, возникает исключение.
 
-## <a name="carrayrowsetm_nrowsread"></a><a name="nrowsread"></a>CArrayRowset:: m_nRowsRead
+## <a name="carrayrowsetm_nrowsread"></a><a name="nrowsread"></a> CArrayRowset:: m_nRowsRead
 
 Содержит количество строк в наборе строк, которые уже считаны.
 
@@ -156,5 +156,5 @@ ULONG m_nRowsRead;
 ## <a name="see-also"></a>См. также раздел
 
 [Шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Справочник по шаблонам потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [Класс CRowset](../../data/oledb/crowset-class.md)

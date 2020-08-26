@@ -4,12 +4,12 @@ ms.date: 03/27/2019
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-ms.openlocfilehash: 6c2c5d0d9b5b4193cc68421a6bd44755ca9bfc1a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 63a82e3b05100f273be04a8718f2ecbb1510f06f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214013"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844513"
 ---
 # <a name="run-time-object-model-services"></a>Службы модели объекта во время выполнения
 
@@ -27,7 +27,7 @@ ms.locfileid: "87214013"
 
 ### <a name="run-time-object-model-services-macros"></a>Макросы служб объектной модели времени выполнения
 
-|||
+|Имя|Описание|
 |-|-|
 |[DECLARE_DYNAMIC](#declare_dynamic)|Предоставляет доступ к сведениям о классе времени выполнения (необходимо использовать в объявлении класса).|
 |[DECLARE_DYNCREATE](#declare_dyncreate)|Обеспечивает динамическое создание и доступ к сведениям о классе времени выполнения (необходимо использовать в объявлении класса).|
@@ -43,7 +43,7 @@ OLE часто требует динамического создания объ
 
 ### <a name="dynamic-creation-of-ole-objects"></a>Динамическое создание объектов OLE
 
-|||
+|Имя|Описание|
 |-|-|
 |[AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)|Определяет, реализует ли библиотека общих элементов управления указанный API.|
 |[AFX_COMCTL32_IF_EXISTS2](#afx_comctl32_if_exists2)|Определяет, реализует ли библиотека общих элементов управления указанный API.|
@@ -54,7 +54,7 @@ OLE часто требует динамического создания объ
 |[IMPLEMENT_OLECTLTYPE](#implement_olectltype)|Реализует `GetUserTypeNameID` `GetMiscStatus` функции элементов и класса элемента управления.|
 |[IMPLEMENT_OLECREATE_FLAGS](#implement_olecreate_flags)|Этот макрос или [IMPLEMENT_OLECREATE](#implement_olecreate) должны присутствовать в файле реализации для любого класса, использующего `DECLARE_OLECREATE` . |
 
-## <a name="afx_comctl32_if_exists"></a><a name="afx_comctl32_if_exists"></a>AFX_COMCTL32_IF_EXISTS
+## <a name="afx_comctl32_if_exists"></a><a name="afx_comctl32_if_exists"></a> AFX_COMCTL32_IF_EXISTS
 
 Определяет, реализует ли библиотека общих элементов управления указанный API.
 
@@ -77,7 +77,7 @@ AFX_COMCTL32_IF_EXISTS(  proc );
 
 afxcomctl32. h, afxcomctl32. inl
 
-## <a name="afx_comctl32_if_exists2"></a><a name="afx_comctl32_if_exists2"></a>AFX_COMCTL32_IF_EXISTS2
+## <a name="afx_comctl32_if_exists2"></a><a name="afx_comctl32_if_exists2"></a> AFX_COMCTL32_IF_EXISTS2
 
 Определяет, реализует ли библиотека Common Controls указанный API (это версия Юникода [AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)).
 
@@ -100,7 +100,7 @@ AFX_COMCTL32_IF_EXISTS2( proc );
 
 afxcomctl32. h, afxcomctl32. inl
 
-## <a name="declare_dynamic"></a><a name="declare_dynamic"></a>DECLARE_DYNAMIC
+## <a name="declare_dynamic"></a><a name="declare_dynamic"></a> DECLARE_DYNAMIC
 
 Добавляет возможность доступа к сведениям времени выполнения о классе объекта при наследовании класса от `CObject` .
 
@@ -131,7 +131,7 @@ DECLARE_DYNAMIC(class_name)
 
 **Заголовок:** AFX. h
 
-## <a name="declare_dyncreate"></a><a name="declare_dyncreate"></a>DECLARE_DYNCREATE
+## <a name="declare_dyncreate"></a><a name="declare_dyncreate"></a> DECLARE_DYNCREATE
 
 Позволяет `CObject` динамически создавать объекты производных классов во время выполнения.
 
@@ -165,7 +165,7 @@ DECLARE_DYNCREATE(class_name)
 
 **Заголовок:** AFX. h
 
-## <a name="declare_olectltype"></a><a name="declare_olectltype"></a>DECLARE_OLECTLTYPE
+## <a name="declare_olectltype"></a><a name="declare_olectltype"></a> DECLARE_OLECTLTYPE
 
 Объявляет `GetUserTypeNameID` `GetMiscStatus` функции члена и класса элемента управления.
 
@@ -182,13 +182,13 @@ DECLARE_OLECTLTYPE( class_name )
 
 ### <a name="remarks"></a>Remarks
 
-`GetUserTypeNameID`и `GetMiscStatus` являются чисто виртуальными функциями, объявленными в `COleControl` . Так как эти функции являются чисто виртуальными, они должны быть переопределены в классе элемента управления. В дополнение к DECLARE_OLECTLTYPE необходимо добавить макрос IMPLEMENT_OLECTLTYPE в объявление класса элемента управления.
+`GetUserTypeNameID` и `GetMiscStatus` являются чисто виртуальными функциями, объявленными в `COleControl` . Так как эти функции являются чисто виртуальными, они должны быть переопределены в классе элемента управления. В дополнение к DECLARE_OLECTLTYPE необходимо добавить макрос IMPLEMENT_OLECTLTYPE в объявление класса элемента управления.
 
 ### <a name="requirements"></a>Требования
 
 **Заголовок:** afxctl. h
 
-## <a name="declare_proppageids"></a><a name="declare_proppageids"></a>DECLARE_PROPPAGEIDS
+## <a name="declare_proppageids"></a><a name="declare_proppageids"></a> DECLARE_PROPPAGEIDS
 
 Объявляет, что элемент управления OLE предоставляет список страниц свойств для вывода его свойств.
 
@@ -213,7 +213,7 @@ DECLARE_PROPPAGEIDS( class_name )
 
 **Заголовок:** afxctl. h
 
-## <a name="declare_serial"></a><a name="declare_serial"></a>DECLARE_SERIAL
+## <a name="declare_serial"></a><a name="declare_serial"></a> DECLARE_SERIAL
 
 Создает код заголовка C++, необходимый для `CObject` класса, производного от которого можно сериализовать.
 
@@ -250,7 +250,7 @@ DECLARE_SERIAL(class_name)
 
 **Заголовок:** AFX. h
 
-## <a name="implement_dynamic"></a><a name="implement_dynamic"></a>IMPLEMENT_DYNAMIC
+## <a name="implement_dynamic"></a><a name="implement_dynamic"></a> IMPLEMENT_DYNAMIC
 
 Создает код C++, необходимый для динамического `CObject` производного класса с доступом во время выполнения к имени класса и его положению в иерархии.
 
@@ -282,7 +282,7 @@ IMPLEMENT_DYNAMIC(class_name, base_class_name)
 
 **Заголовок:** AFX. h
 
-## <a name="implement_dyncreate"></a><a name="implement_dyncreate"></a>IMPLEMENT_DYNCREATE
+## <a name="implement_dyncreate"></a><a name="implement_dyncreate"></a> IMPLEMENT_DYNCREATE
 
 Позволяет `CObject` динамически создавать объекты производных классов во время выполнения при использовании с макросом DECLARE_DYNCREATE.
 
@@ -318,7 +318,7 @@ IMPLEMENT_DYNCREATE(class_name, base_class_name)
 
 **Заголовок:** AFX. h
 
-## <a name="implement_olecreate_flags"></a><a name="implement_olecreate_flags"></a>IMPLEMENT_OLECREATE_FLAGS
+## <a name="implement_olecreate_flags"></a><a name="implement_olecreate_flags"></a> IMPLEMENT_OLECREATE_FLAGS
 
 Этот макрос или [IMPLEMENT_OLECREATE](#implement_olecreate) должны присутствовать в файле реализации для любого класса, использующего DECLARE_OLECREATE.
 
@@ -340,9 +340,9 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
 *нфлагс*<br/>
 Содержит один или несколько следующих флагов:
 
-- `afxRegInsertable`Разрешает отображение элемента управления в диалоговом окне «Вставка объекта» для объектов OLE.
-- `afxRegApartmentThreading`Задает для потоковой модели в реестре значение ThreadingModel = апартамент.
-- `afxRegFreeThreading`Задает для потоковой модели в реестре значение ThreadingModel = Free.
+- `afxRegInsertable` Разрешает отображение элемента управления в диалоговом окне «Вставка объекта» для объектов OLE.
+- `afxRegApartmentThreading` Задает для потоковой модели в реестре значение ThreadingModel = апартамент.
+- `afxRegFreeThreading` Задает для потоковой модели в реестре значение ThreadingModel = Free.
 
 Можно объединить два флага `afxRegApartmentThreading` и `afxRegFreeThreading` задать ThreadingModel = оба. Дополнительные сведения о регистрации модели потоков см. в разделе [InprocServer32](/windows/win32/com/inprocserver32) в Windows SDK.
 
@@ -361,7 +361,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
 
 **Заголовок:** afxdisp.h
 
-## <a name="implement_olectltype"></a><a name="implement_olectltype"></a>IMPLEMENT_OLECTLTYPE
+## <a name="implement_olectltype"></a><a name="implement_olectltype"></a> IMPLEMENT_OLECTLTYPE
 
 Реализует `GetUserTypeNameID` `GetMiscStatus` функции элементов и класса элемента управления.
 
@@ -386,7 +386,7 @@ DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )
 
 В дополнение к IMPLEMENT_OLECTLTYPE необходимо добавить макрос DECLARE_OLECTLTYPE в объявление класса элемента управления.
 
-`GetUserTypeNameID`Функция – член возвращает строку ресурса, определяющую класс элемента управления. `GetMiscStatus`Возвращает биты ОЛЕМИСК для элемента управления. Это перечисление задает коллекцию параметров, описывающих различные характеристики элемента управления. Полное описание параметров ОЛЕМИСК см. в разделе [олемиск](/windows/win32/api/oleidl/ne-oleidl-olemisc) в Windows SDK.
+`GetUserTypeNameID`Функция – член возвращает строку ресурса, определяющую класс элемента управления. `GetMiscStatus` Возвращает биты ОЛЕМИСК для элемента управления. Это перечисление задает коллекцию параметров, описывающих различные характеристики элемента управления. Полное описание параметров ОЛЕМИСК см. в разделе [олемиск](/windows/win32/api/oleidl/ne-oleidl-olemisc) в Windows SDK.
 
 > [!NOTE]
 > Параметры по умолчанию, используемые Контролвизард ActiveX,: OLEMISC_ACTIVATEWHENVISIBLE, OLEMISC_SETCLIENTSITEFIRST, OLEMISC_INSIDEOUT, OLEMISC_CANTLINKINSIDE и OLEMISC_RECOMPOSEONRESIZE.
@@ -395,7 +395,7 @@ DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )
 
 **Заголовок:** afxctl. h
 
-## <a name="implement_serial"></a><a name="implement_serial"></a>IMPLEMENT_SERIAL
+## <a name="implement_serial"></a><a name="implement_serial"></a> IMPLEMENT_SERIAL
 
 Создает код C++, необходимый для динамического `CObject` производного класса с доступом во время выполнения к имени класса и его положению в иерархии.
 
@@ -432,7 +432,7 @@ IMPLEMENT_SERIAL(class_name, base_class_name, wSchema)
 
 **Заголовок:** AFX. h
 
-## <a name="runtime_class"></a><a name="runtime_class"></a>RUNTIME_CLASS
+## <a name="runtime_class"></a><a name="runtime_class"></a> RUNTIME_CLASS
 
 Возвращает структуру класса времени выполнения из имени класса C++.
 
@@ -459,7 +459,7 @@ RUNTIME_CLASS возвращает указатель на структуру [�
 
 **Заголовок:** AFX. h
 
-## <a name="declare_olecreate"></a><a name="declare_olecreate"></a>DECLARE_OLECREATE
+## <a name="declare_olecreate"></a><a name="declare_olecreate"></a> DECLARE_OLECREATE
 
 Позволяет создавать объекты `CCmdTarget` производных классов с помощью OLE-автоматизации.
 
@@ -484,7 +484,7 @@ DECLARE_OLECREATE(class_name)
 
 **Заголовок**: афксдисп. h
 
-## <a name="implement_olecreate"></a><a name="implement_olecreate"></a>IMPLEMENT_OLECREATE
+## <a name="implement_olecreate"></a><a name="implement_olecreate"></a> IMPLEMENT_OLECREATE
 
 Этот макрос или [IMPLEMENT_OLECREATE_FLAGS](#implement_olecreate_flags) должны присутствовать в файле реализации для любого класса, использующего `DECLARE_OLECREATE` .
 

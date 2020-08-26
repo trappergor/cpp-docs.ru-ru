@@ -10,22 +10,21 @@ helpviewer_keywords:
 - std::array [C++], get
 - std::get [C++]
 - std::swap [C++]
-ms.openlocfilehash: d54e430853959c77b4042092409a8640a169e4c8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3389ba769d6b61a363e8cbfcf5f6a4e9ec679469
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364929"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844708"
 ---
 # <a name="ltarraygt-functions"></a>Функции &lt;array&gt;
 
-Заголовок массива \<> включает в `get` себя `swap`две функции, не являющиеся членами, и , которые работают на объектах **массива.**
+\<array>Заголовок содержит две функции, не являющиеся членами, `get` и `swap` , которые работают с объектами **Array** .
 
-|||
-|-|-|
-|[get](#get)|[Своп](#swap)|
+[Получить](#get)\
+[позиции](#swap)
 
-## <a name="get"></a><a name="get"></a>Получить
+## <a name="get"></a><a name="get"></a> Получить
 
 Возвращает ссылку на указанный элемент массива.
 
@@ -42,16 +41,16 @@ constexpr T&& get(array<T, N>&& arr) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-*Индекс*\
+*Номер*\
 Смещение элемента.
 
 *T*\
 Тип элемента.
 
-*N*\
+*\N*\
 Количество элементов в массиве.
 
-*Arr*\
+*маленькая*\
 Массив для выбора элемента.
 
 ### <a name="example"></a>Пример
@@ -86,9 +85,9 @@ int main()
 1 3
 ```
 
-## <a name="swap"></a><a name="swap"></a>Своп
+## <a name="swap"></a><a name="swap"></a> позиции
 
-Шаблон, не являющиеся `std::swap` членами организации, который меняет два объекта **массива.**
+Специализация шаблона, не относящаяся к элементу `std::swap` , которая меняет местами два объекта **массива** .
 
 ```cpp
 template <class Ty, std::size_t N>
@@ -100,10 +99,10 @@ void swap(array<Ty, N>& left, array<Ty, N>& right);
 *Ty*\
 Тип элемента.
 
-*N*\
+*\N*\
 Размер массива.
 
-*Левой*\
+*слева*\
 Первый массив для обмена.
 
 *Правильно*\
@@ -161,4 +160,4 @@ int main()
 
 ## <a name="see-also"></a>См. также раздел
 
-[\<массив>](../standard-library/array.md)
+[\<array>](../standard-library/array.md)

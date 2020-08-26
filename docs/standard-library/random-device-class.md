@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::random_device [C++], entropy
 - std::random_device [C++], entropy
 ms.assetid: 4393d515-0cb6-4e0d-a2ba-c780f05dc1bf
-ms.openlocfilehash: 396f172d6a7f9fed72e19917a528f561d0110470
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b2176ce7dcdefdcf4fc0846cd18b1b01d4de2916
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320273"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843551"
 ---
 # <a name="random_device-class"></a>Класс random_device
 
@@ -51,10 +51,9 @@ public:
 
 ## <a name="members"></a>Участники
 
-|||
-|-|-|
-|[random_device](#random_device)|[Энтропии](#entropy)|
-|[random_device::operator()](#op_call)||
+[random_device](#random_device)\
+[энтропии](#entropy)\
+[random_device::operator()](#op_call)
 
 ## <a name="remarks"></a>Remarks
 
@@ -64,7 +63,7 @@ public:
 
 Не гарантируется, что `random_device` приведет к неблокирующему вызову.
 
-В целом, `random_device` используется для получения начальных значений для других генераторов, созданных с помощью механизмов или адаптеров механизмов. Для получения дополнительной информации см [ \<>. ](../standard-library/random.md)
+В целом, `random_device` используется для получения начальных значений для других генераторов, созданных с помощью механизмов или адаптеров механизмов. Дополнительные сведения см. на веб-сайте [\<random>](../standard-library/random.md).
 
 ## <a name="example"></a>Пример
 
@@ -100,15 +99,15 @@ a random value == 3633694716
 a random value == 213725214
 ```
 
-Этот пример упрощен и не представляет собой общего примера применения этого генератора. Для более репрезентативного примера кода с [ \<>м. ](../standard-library/random.md)
+Этот пример упрощен и не представляет собой общего примера применения этого генератора. Более репрезентативный пример кода см. в разделе [\<random>](../standard-library/random.md) .
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<random>
+**Заголовок:**\<random>
 
 **Пространство имен:** std
 
-## <a name="random_devicerandom_device"></a><a name="random_device"></a>random_device::random_device
+## <a name="random_devicerandom_device"></a><a name="random_device"></a> random_device:: random_device
 
 Формирует генератор.
 
@@ -120,7 +119,7 @@ random_device(const std::string& = "");
 
 Конструктор инициализирует генератор, как требуется, игнорируя строковый параметр. Возвращает значение определенного в реализации типа, производного из [exception](../standard-library/exception-class.md), если не удалось инициализировать `random_device`.
 
-## <a name="random_deviceentropy"></a><a name="entropy"></a>random_device::энтропия
+## <a name="random_deviceentropy"></a><a name="entropy"></a> random_device:: энтропия
 
 Оценивает стохастичность источника.
 
@@ -132,7 +131,7 @@ double entropy() const noexcept;
 
 Эта функция-член возвращает оценку стохастичности источника в битах.
 
-## <a name="random_deviceoperator"></a><a name="op_call"></a>random_device:оператор()
+## <a name="random_deviceoperator"></a><a name="op_call"></a> random_device:: operator ()
 
 Возвращает случайное значение.
 
@@ -146,4 +145,4 @@ result_type operator()();
 
 ## <a name="see-also"></a>См. также раздел
 
-[\<случайные>](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

@@ -9,23 +9,25 @@ f1_keywords:
 - array/std::array::operator>=
 - array/std::array::operator==
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-ms.openlocfilehash: 531ad2936322f90a38631a9450e0ad8a210fdd87
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3d799bd584f45e93668c1ac2a753c82f41220773
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364912"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844669"
 ---
 # <a name="ltarraygt-operators"></a>Операторы &lt;array&gt;
 
-Массив \<> заголовок включает в себя эти **функции** шаблона сравнения, не являющийся членом.
+\<array>Заголовок включает эти функции **array** шаблона сравнения, не являющиеся элементами.
 
-||||
-|-|-|-|
-|[оператора!](#op_neq)|[Оператор&gt;](#op_gt)|[Оператор&gt;=](#op_gt_eq)|
-|[Оператор&lt;](#op_lt)|[Оператор&lt;=](#op_lt_eq)|[оператора](#op_eq_eq)|
+[operator! =](#op_neq)\
+[станции&gt;](#op_gt)\
+[станции&gt;=](#op_gt_eq)\
+[станции&lt;](#op_lt)\
+[станции&lt;=](#op_lt_eq)\
+[Оператор = =](#op_eq_eq)
 
-## <a name="operator"></a><a name="op_neq"></a>оператора!
+## <a name="operator"></a><a name="op_neq"></a> operator! =
 
 Сравнение массивов на неравенство.
 
@@ -41,10 +43,10 @@ bool operator!=(
 *Ty*\
 Тип элемента.
 
-*N*\
+*\N*\
 Размер массива.
 
-*Левой*\
+*слева*\
 Левый контейнер для сравнения.
 
 *Правильно*\
@@ -98,7 +100,7 @@ false
 true
 ```
 
-## <a name="operatorlt"></a><a name="op_lt"></a>Оператор&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> станции&lt;
 
 Сравнение массивов "меньше, чем".
 
@@ -114,10 +116,10 @@ bool operator<(
 *Ty*\
 Тип элемента.
 
-*N*\
+*\N*\
 Размер массива.
 
-*Левой*\
+*слева*\
 Левый контейнер для сравнения.
 
 *Правильно*\
@@ -125,7 +127,7 @@ bool operator<(
 
 ### <a name="remarks"></a>Remarks
 
-Функция шаблона перегружает `operator<` для сравнения двух объектов класса класса [шаблона класса.](../standard-library/array-class-stl.md) Функция возвращает `lexicographical_compare(left.begin(), left.end(), right.begin())`.
+Функция шаблона перегружается `operator<` для сравнения двух объектов [класса массива](../standard-library/array-class-stl.md)шаблонов класса. Функция возвращает `lexicographical_compare(left.begin(), left.end(), right.begin())`.
 
 ### <a name="example"></a>Пример
 
@@ -171,7 +173,7 @@ false
 true
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>Оператор&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> станции&lt;=
 
 Сравнение массивов "меньше или равно".
 
@@ -187,10 +189,10 @@ bool operator<=(
 *Ty*\
 Тип элемента.
 
-*N*\
+*\N*\
 Размер массива.
 
-*Левой*\
+*слева*\
 Левый контейнер для сравнения.
 
 *Правильно*\
@@ -244,7 +246,7 @@ true
 false
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>оператора
+## <a name="operator"></a><a name="op_eq_eq"></a> Оператор = =
 
 Сравнение массивов на равенство.
 
@@ -260,10 +262,10 @@ bool operator==(
 *Ty*\
 Тип элемента.
 
-*N*\
+*\N*\
 Размер массива.
 
-*Левой*\
+*слева*\
 Левый контейнер для сравнения.
 
 *Правильно*\
@@ -271,7 +273,7 @@ bool operator==(
 
 ### <a name="remarks"></a>Remarks
 
-Функция шаблона перегружает `operator==` для сравнения двух объектов класса класса [шаблона класса.](../standard-library/array-class-stl.md) Функция возвращает `equal(left.begin(), left.end(), right.begin())`.
+Функция шаблона перегружается `operator==` для сравнения двух объектов [класса массива](../standard-library/array-class-stl.md)шаблонов класса. Функция возвращает `equal(left.begin(), left.end(), right.begin())`.
 
 ### <a name="example"></a>Пример
 
@@ -317,7 +319,7 @@ true
 false
 ```
 
-## <a name="operatorgt"></a><a name="op_gt"></a>Оператор&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> станции&gt;
 
 Сравнение массивов "больше, чем".
 
@@ -333,10 +335,10 @@ bool operator>(
 *Ty*\
 Тип элемента.
 
-*N*\
+*\N*\
 Размер массива.
 
-*Левой*\
+*слева*\
 Левый контейнер для сравнения.
 
 *Правильно*\
@@ -390,7 +392,7 @@ false
 true
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>Оператор&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> станции&gt;=
 
 Сравнение массивов "больше или равно".
 
@@ -406,10 +408,10 @@ bool operator>=(
 *Ty*\
 Тип элемента.
 
-*N*\
+*\N*\
 Размер массива.
 
-*Левой*\
+*слева*\
 Левый контейнер для сравнения.
 
 *Правильно*\
@@ -465,4 +467,4 @@ false
 
 ## <a name="see-also"></a>См. также раздел
 
-[\<массив>](../standard-library/array.md)
+[\<array>](../standard-library/array.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: ca0ba254-c7dc-4c52-abec-cf895a0c6a63
-ms.openlocfilehash: 0b36e4f85b855f162e11d96f8fef296c6c07597f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 57a94ccd8ee3871742e9c8360c56381f85053380
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210305"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844838"
 ---
 # <a name="isessionpropertiesimpl-class"></a>Класс ISessionPropertiesImpl
 
@@ -35,7 +35,7 @@ class ATL_NO_VTABLE ISessionPropertiesImpl :
 ### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Класс, производный от `ISessionPropertiesImpl`.
+Класс, производный от `ISessionPropertiesImpl` .
 
 *пропкласс*<br/>
 Определяемый пользователем класс свойств, который по умолчанию имеет значение *T*.
@@ -44,11 +44,11 @@ class ATL_NO_VTABLE ISessionPropertiesImpl :
 
 **Заголовок:** atldb.h
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Элементы
 
 ### <a name="interface-methods"></a>Методы интерфейса
 
-|||
+| Имя | Описание |
 |-|-|
 |[GetProperties](#getproperties)|Возвращает список свойств в группе свойств сеанса, которые в настоящее время заданы в сеансе.|
 |[SetProperties](#setproperties)|Задает свойства в группе свойств сеанса.|
@@ -57,9 +57,9 @@ class ATL_NO_VTABLE ISessionPropertiesImpl :
 
 Обязательный интерфейс в сеансах. Этот класс реализует свойства сеанса путем вызова статической функции, определенной в [сопоставлении набора свойств](../../data/oledb/begin-propset-map.md). Схема набора свойств должна быть указана в классе сеанса.
 
-## <a name="isessionpropertiesimplgetproperties"></a><a name="getproperties"></a>Свойства ISessionPropertiesImpl:: Properties
+## <a name="isessionpropertiesimplgetproperties"></a><a name="getproperties"></a> Свойства ISessionPropertiesImpl:: Properties
 
-Возвращает список свойств в группе свойств `DBPROPSET_SESSION`, которые в настоящее время заданы в сеансе.
+Возвращает список свойств в `DBPROPSET_SESSION` группе свойств, установленных в данный момент в сеансе.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -74,9 +74,9 @@ STDMETHOD(GetProperties)(ULONG cPropertyIDSets,
 
 См. раздел [исессионпропертиес:: Properties](/previous-versions/windows/desktop/ms723643(v=vs.85)) в *справочнике программиста OLE DB*.
 
-## <a name="isessionpropertiesimplsetproperties"></a><a name="setproperties"></a>ISessionPropertiesImpl:: SetProperties
+## <a name="isessionpropertiesimplsetproperties"></a><a name="setproperties"></a> ISessionPropertiesImpl:: SetProperties
 
-Задает свойства в группе свойств `DBPROPSET_SESSION`.
+Задает свойства в `DBPROPSET_SESSION` группе свойств.
 
 ### <a name="syntax"></a>Синтаксис
 

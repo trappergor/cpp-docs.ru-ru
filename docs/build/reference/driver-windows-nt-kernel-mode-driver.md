@@ -10,48 +10,48 @@ helpviewer_keywords:
 - DRIVER linker option
 - /DRIVER linker option
 ms.assetid: aeee8e28-5d97-40f5-ba16-9f370fe8a1b8
-ms.openlocfilehash: ab7253d7e386bf385bcb3a586c5e0e1c1e860694
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5639344ede4007bd66a3d51043f4acb423426b94
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62293112"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842979"
 ---
 # <a name="driver-windows-nt-kernel-mode-driver"></a>/DRIVER (драйвер режима ядра Windows NT)
 
->/ DRIVER [: UPONLY |: WDM]
+>/DRIVER [: ТОЛЬКО ИСТЕЧЕНИЕ |: WDM]
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Используйте **/Driver** параметр компоновщика для сборки драйвера режима ядра Windows NT.
+Используйте параметр компоновщика **/Driver** для создания драйвера режима ядра Windows NT.
 
-**/DRIVER:UPONLY** указывает компоновщику добавить **битовый флаг IMAGE_FILE_UP_SYSTEM_ONLY** к характеристикам выходного заголовка для указания, что это однопроцессорный (UP) драйвер. Операционная система отклонит загрузку UP-драйвера в многопроцессорной (MP) системе.
+**/Driver: только** в случае, когда компоновщик добавляет **IMAGE_FILE_UP_SYSTEM_ONLY** бит к характеристикам в заголовке Output, чтобы указать, что это драйвер однопроцессорного (up). Операционная система отказывается загружать драйвер в многопроцессорной системе (MP).
 
-**/DRIVER:WDM** указывает компоновщику задать **битовый** бит в поле DllCharacteristics дополнительного заголовка.
+**/Driver: WDM** заставляет компоновщик установить **IMAGE_DLLCHARACTERISTICS_WDM_DRIVER** бит в поле DLLCHARACTERISTICS необязательного заголовка.
 
-Если **/Driver** не указан, эти биты установлены компоновщиком.
+Если параметр **/Driver** не указан, то эти биты не устанавливаются компоновщиком.
 
-Если **/Driver** указывается:
+Если задано значение **/Driver** :
 
-- **Компоновщике** в силу. Дополнительные сведения см. в разделе [Параметр /FIXED (фиксированный базовый адрес)](fixed-fixed-base-address.md).
+- **/Fixed: нет** действующих. Дополнительные сведения см. в разделе [Параметр /FIXED (фиксированный базовый адрес)](fixed-fixed-base-address.md).
 
-- Расширение выходного файла будет присвоено sys-файлы. Используйте **/OUT** Чтобы изменить имя файла по умолчанию и расширение. Дополнительные сведения см. в разделе [Параметр /OUT (имя выходного файла)](out-output-file-name.md).
+- Расширение выходного файла имеет значение. sys. Используйте параметр **/out** для изменения имени файла и расширения по умолчанию. Дополнительные сведения см. в разделе [Параметр /OUT (имя выходного файла)](out-output-file-name.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Подробнее см. в статье [Настройка компилятора C++ и свойства сборки в Visual Studio](../working-with-project-properties.md).
 
-1. Нажмите кнопку **компоновщика** папки.
+1. Выберите папку **компоновщика**.
 
-1. Нажмите кнопку **системы** страницу свойств.
+1. Перейдите на страницу свойств **системы** .
 
-1. Изменить **драйвер** свойство.
+1. Измените свойство **Driver** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом
 
-- См. в разделе [VCLinkerTool.driver свойство](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.vcprojectengine.vclinkertool.driver?view=visualstudiosdk-2017#Microsoft_VisualStudio_VCProjectEngine_VCLinkerTool_driver).
+- См. раздел [свойство VCLinkerTool. Driver](/dotnet/api/microsoft.visualstudio.vcprojectengine.vclinkertool.driver?view=visualstudiosdk-2017#Microsoft_VisualStudio_VCProjectEngine_VCLinkerTool_driver).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Справочник по компоновщику MSVC](linking.md)<br/>
 [Параметры компоновщика MSVC](linker-options.md)

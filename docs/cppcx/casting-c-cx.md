@@ -2,12 +2,12 @@
 title: Приведение (C++/CX)
 ms.date: 06/19/2018
 ms.assetid: 5247f6c7-6a0a-4021-97c9-21c868bd9455
-ms.openlocfilehash: a51e02b59b2f7229193987f993edbccfb56b779d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5e51f9e100be2096494e10aca38232dbd1576f40
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233526"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843486"
 ---
 # <a name="casting-ccx"></a>Приведение (C++/CX)
 
@@ -108,18 +108,18 @@ ComPtr<IInspectable> inspectable = reinterpret_cast<IInspectable*>(winRtObject);
 
 В следующей таблице перечислены случаи, в которых его можно использовать в качестве безопасного **`reinterpret_cast`** . В каждом случае приведение безопасно в обоих направлениях.
 
-|||
-|-|-|
-|`HSTRING`|`String^`|
-|`HSTRING*`|`String^*`|
-|`IInspectable*`|`Object^`|
-|`IInspectable**`|`Object^*`|
-|`IInspectable-derived-type*`|`same-interface-from-winmd^`|
-|`IInspectable-derived-type**`|`same-interface-from-winmd^*`|
-|`IDefault-interface-of-RuntimeClass*`|`same-RefClass-from-winmd^`|
-|`IDefault-interface-of-RuntimeClass**`|`same-RefClass-from-winmd^*`|
+| Приведение, приведение к | Приведение к типу, приведение из |
+|--|--|
+| `HSTRING` | `String^` |
+| `HSTRING*` | `String^*` |
+| `IInspectable*` | `Object^` |
+| `IInspectable**` | `Object^*` |
+| `IInspectable-derived-type*` | `same-interface-from-winmd^` |
+| `IInspectable-derived-type**` | `same-interface-from-winmd^*` |
+| `IDefault-interface-of-RuntimeClass*` | `same-RefClass-from-winmd^` |
+| `IDefault-interface-of-RuntimeClass**` | `same-RefClass-from-winmd^*` |
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также раздел
 
 - [Система типов](../cppcx/type-system-c-cx.md)
 - [Справочник по языку C++/CX](../cppcx/visual-c-language-reference-c-cx.md)

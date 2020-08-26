@@ -27,12 +27,12 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: 42b7d385877d68db22ccaf6665e8043dbfe2ee44
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9ad4292b69d0219aa1732638ae250758e4456f4b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233487"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843291"
 ---
 # <a name="caccessorrowset-class"></a>Класс CAccessorRowset
 
@@ -62,19 +62,19 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 
 ### <a name="methods"></a>Методы
 
-|||
-|-|-|
-|[Выполняется](#bind)|Создает привязки (используется, если `bBind` указан как **`false`** в [CCommand:: Open](../../data/oledb/ccommand-open.md)).|
-|[CAccessorRowset](#caccessorrowset)|Конструктор.|
-|[Закрыть](#close)|Закрывает набор строк и любые методы доступа.|
-|[фрирекордмемори](#freerecordmemory)|Освобождает все столбцы в текущей записи, которые необходимо освободить.|
-|[GetColumnInfo](#getcolumninfo)|Реализует [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)).|
+| Имя | Описание |
+|--|--|
+| [Выполняется](#bind) | Создает привязки (используется, если `bBind` указан как **`false`** в [CCommand:: Open](../../data/oledb/ccommand-open.md)). |
+| [CAccessorRowset](#caccessorrowset) | Конструктор. |
+| [Закрыть](#close) | Закрывает набор строк и любые методы доступа. |
+| [фрирекордмемори](#freerecordmemory) | Освобождает все столбцы в текущей записи, которые необходимо освободить. |
+| [GetColumnInfo](#getcolumninfo) | Реализует [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)). |
 
 ## <a name="remarks"></a>Remarks
 
 Класс `TAccessor` управляет методом доступа. Класс *тровсет* управляет набором строк.
 
-## <a name="caccessorrowsetbind"></a><a name="bind"></a>CAccessorRowset:: BIND
+## <a name="caccessorrowsetbind"></a><a name="bind"></a> CAccessorRowset:: BIND
 
 Создает привязки, если вы указали `bBind` как **`false`** в элементе [CCommand:: Open](../../data/oledb/ccommand-open.md).
 
@@ -88,9 +88,9 @@ HRESULT Bind();
 
 Стандартное значение HRESULT.
 
-## <a name="caccessorrowsetcaccessorrowset"></a><a name="caccessorrowset"></a>CAccessorRowset:: CAccessorRowset
+## <a name="caccessorrowsetcaccessorrowset"></a><a name="caccessorrowset"></a> CAccessorRowset:: CAccessorRowset
 
-Инициализирует объект `CAccessorRowset`.
+Выполняет инициализацию объекта `CAccessorRowset`.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -98,7 +98,7 @@ HRESULT Bind();
 CAccessorRowset();
 ```
 
-## <a name="caccessorrowsetclose"></a><a name="close"></a>CAccessorRowset:: Close
+## <a name="caccessorrowsetclose"></a><a name="close"></a> CAccessorRowset:: Close
 
 Освобождает все активные методы доступа и набор строк.
 
@@ -112,7 +112,7 @@ void Close();
 
 Освобождает любую связанную память.
 
-## <a name="caccessorrowsetfreerecordmemory"></a><a name="freerecordmemory"></a>CAccessorRowset:: Фрирекордмемори
+## <a name="caccessorrowsetfreerecordmemory"></a><a name="freerecordmemory"></a> CAccessorRowset:: Фрирекордмемори
 
 Освобождает все столбцы в текущей записи, которые необходимо освободить.
 
@@ -122,7 +122,7 @@ void Close();
 void FreeRecordMemory();
 ```
 
-## <a name="caccessorrowsetgetcolumninfo"></a><a name="getcolumninfo"></a>CAccessorRowset:: GetColumnInfo
+## <a name="caccessorrowsetgetcolumninfo"></a><a name="getcolumninfo"></a> CAccessorRowset:: GetColumnInfo
 
 Возвращает сведения о столбцах из открытого набора строк.
 
@@ -151,7 +151,7 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 
 Дополнительные сведения см. в разделе [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) в *справочнике программиста OLE DB*.
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также раздел
 
 [Шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Справочник по шаблонам потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

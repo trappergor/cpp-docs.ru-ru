@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - Control attribute
 ms.assetid: 3d046bb2-4afe-4cb8-a762-233b296e1975
-ms.openlocfilehash: 59f1a6d1ad940f79693f9c5e37c1fe6527da3805
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 14ceb3ce51396efefe77404e8f18a36a7d7a4825
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224465"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844162"
 ---
-# <a name="control"></a>элемент управления
+# <a name="control"></a>управляющие
 
 Указывает, что определяемый пользователем тип является элементом управления.
 
@@ -46,9 +46,7 @@ class CTest : public ICustom {};
 
 ## <a name="requirements"></a>Требования
 
-### <a name="attribute-context"></a>Контекст атрибута
-
-|||
+| Контекст атрибута | Значение |
 |-|-|
 |**Относится к**|**`class`**, **`struct`**|
 |**REPEATABLE**|Нет|
@@ -57,7 +55,7 @@ class CTest : public ICustom {};
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты класса](class-attributes.md)<br/>

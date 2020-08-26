@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - sstream header
 ms.assetid: 56f55bc5-549d-4e7f-aaad-99e0ffa49c9e
-ms.openlocfilehash: 6edb38e6f6c818415e9e0813b359e8e0ea6ca099
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 31a445fcc7deb5e5bade5437058cb36e28dacd40
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560300"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844331"
 ---
 # <a name="ltsstreamgt"></a>&lt;sstream&gt;
 
@@ -95,13 +95,13 @@ void swap (
 
 ### <a name="manipulators"></a>Манипуляторы
 
-|||
+|Имя|Описание|
 |-|-|
 |[позиции](../standard-library/sstream-functions.md#sstream_swap)|Меняет местами значения двух объектов `sstream`.|
 
 ### <a name="classes"></a>Классы
 
-|Class|Описание|
+|Класс|Описание|
 |-|-|
 |[basic_stringbuf](../standard-library/basic-stringbuf-class.md)|Описывает буфер потока, который управляет передачей элементов типа `Elem`, признаки символов которого определяются с помощью класса `Tr`, в последовательность элементов, сохраненную в объекте массива, и из нее.|
 |[basic_istringstream](../standard-library/basic-istringstream-class.md)|Описывает объект, управляющий извлечением элементов и закодированных объектов из буфера потока класса [basic_stringbuf](../standard-library/basic-stringbuf-class.md) < **elem**, **tr** `Alloc`>, с элементами типа `Elem` , признаки символов которых определяются классом `Tr` и элементы, выделенные распределителем класса `Alloc` .|

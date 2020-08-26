@@ -25,16 +25,16 @@ helpviewer_keywords:
 - IsAutoAccessor method
 - ReleaseAccessors method
 ms.assetid: 389b65be-11ca-4ae0-9290-60c621c4982b
-ms.openlocfilehash: e29883b2a42010daee19f915c49c31686b232cf6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: eff7eff855bcccefee7e051c67d583d28e488293
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233461"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843304"
 ---
 # <a name="caccessorbase-class"></a>Класс CAccessorBase
 
-Все методы доступа в шаблонах OLE DB являются производными от этого класса. `CAccessorBase`позволяет одному набору строк управлять множеством методов доступа. Он также предоставляет привязку для параметров и выходных столбцов.
+Все методы доступа в шаблонах OLE DB являются производными от этого класса. `CAccessorBase` позволяет одному набору строк управлять множеством методов доступа. Он также предоставляет привязку для параметров и выходных столбцов.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -46,19 +46,19 @@ ms.locfileid: "87233461"
 
 ### <a name="methods"></a>Методы
 
-|||
-|-|-|
-|[Закрыть](#close)|Закрывает методы доступа.|
-|[жесакцессор](#geth)|Извлекает маркер метода доступа.|
-|[жетнумакцессорс](#getnum)|Возвращает количество методов доступа, созданных классом.|
-|[исаутоакцессор](#isauto)|Проверяет, является ли указанный метод доступа автоматическим.|
-|[релеасеакцессорс](#release)|Освобождает методы доступа.|
+| Имя | Описание |
+|--|--|
+| [Закрыть](#close) | Закрывает методы доступа. |
+| [жесакцессор](#geth) | Извлекает маркер метода доступа. |
+| [жетнумакцессорс](#getnum) | Возвращает количество методов доступа, созданных классом. |
+| [исаутоакцессор](#isauto) | Проверяет, является ли указанный метод доступа автоматическим. |
+| [релеасеакцессорс](#release) | Освобождает методы доступа. |
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** atldbcli.h
 
-## <a name="caccessorbaseclose"></a><a name="close"></a>CAccessorBase:: Close
+## <a name="caccessorbaseclose"></a><a name="close"></a> CAccessorBase:: Close
 
 Закрывает методы доступа.
 
@@ -72,7 +72,7 @@ void Close();
 
 Сначала необходимо вызвать [релеасеакцессорс](../../data/oledb/caccessorbase-releaseaccessors.md) .
 
-## <a name="caccessorbasegethaccessor"></a><a name="geth"></a>CAccessorBase:: Жесакцессор
+## <a name="caccessorbasegethaccessor"></a><a name="geth"></a> CAccessorBase:: Жесакцессор
 
 Получает маркер метода доступа для указанного метода доступа.
 
@@ -91,7 +91,7 @@ HACCESSOR GetHAccessor(ULONG nAccessor) const;
 
 Обработчик метода доступа.
 
-## <a name="caccessorbasegetnumaccessors"></a><a name="getnum"></a>CAccessorBase:: Жетнумакцессорс
+## <a name="caccessorbasegetnumaccessors"></a><a name="getnum"></a> CAccessorBase:: Жетнумакцессорс
 
 Возвращает количество методов доступа, созданных классом.
 
@@ -105,7 +105,7 @@ ULONG GetNumAccessors() const;
 
 Количество методов доступа, созданных классом.
 
-## <a name="caccessorbaseisautoaccessor"></a><a name="isauto"></a>CAccessorBase:: Исаутоакцессор
+## <a name="caccessorbaseisautoaccessor"></a><a name="isauto"></a> CAccessorBase:: Исаутоакцессор
 
 Возвращает значение true, если данные автоматически извлекаются для метода доступа во время операции перемещения.
 
@@ -124,7 +124,7 @@ bool IsAutoAccessor(ULONG nAccessor) const;
 
 Возвращает значение, **`true`** Если метод доступа является автоматическим. В противном случае возвращается значение **`false`** .
 
-## <a name="caccessorbasereleaseaccessors"></a><a name="release"></a>CAccessorBase:: Релеасеакцессорс
+## <a name="caccessorbasereleaseaccessors"></a><a name="release"></a> CAccessorBase:: Релеасеакцессорс
 
 Освобождает методы доступа, созданные классом.
 
@@ -147,7 +147,7 @@ HRESULT ReleaseAccessors(IUnknown* pUnk);
 
 Вызывается из [CAccessorRowset:: Close](../../data/oledb/caccessorrowset-close.md).
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также раздел
 
 [Шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Справочник по шаблонам потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>

@@ -33,12 +33,12 @@ helpviewer_keywords:
 - processes, executing new
 - process creation
 ms.assetid: e171ebfa-70e7-4c44-8331-2a291fc17bd6
-ms.openlocfilehash: 4fd7275969120b35253bbc12098f8dc8f69a1fed
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8e5e20827ef67d83b008a055505ec95abbde7d49
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442498"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844175"
 ---
 # <a name="_spawnlpe-_wspawnlpe"></a>_spawnlpe, _wspawnlpe
 
@@ -86,17 +86,17 @@ intptr_t _wspawnlpe(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращаемое значение из синхронного **_spawnlpe** или **_wspawnlpe** ( **_P_WAIT** , заданное для *режима*) — это состояние выхода нового процесса. Возвращаемое значение из асинхронного **_spawnlpe** или **_wspawnlpe** ( **_P_NOWAIT** или **_P_NOWAITO** , заданное для *режима*) — это обработчик процесса. Состояние выхода имеет значение 0, если процесс завершился обычным образом. Можно задать для состояния выхода ненулевое значение, если порожденный процесс специально использует ненулевый аргумент для вызова подпрограммы **выхода** . Если новый процесс не задал положительное состояние выхода в явном виде, положительное состояние выхода указывает на аварийный выход по отмене или прерыванию. Возвращаемое значение, равное-1, указывает на ошибку (новый процесс не запущен). В этом случае для **параметра «значение возврата»** задается одно из следующих значений.
+Возвращаемое значение из синхронного **_spawnlpe** или **_wspawnlpe** (**_P_WAIT** , заданное для *режима*) — это состояние выхода нового процесса. Возвращаемое значение из асинхронного **_spawnlpe** или **_wspawnlpe** (**_P_NOWAIT** или **_P_NOWAITO** , заданное для *режима*) — это обработчик процесса. Состояние выхода имеет значение 0, если процесс завершился обычным образом. Можно задать для состояния выхода ненулевое значение, если порожденный процесс специально использует ненулевый аргумент для вызова подпрограммы **выхода** . Если новый процесс не задал положительное состояние выхода в явном виде, положительное состояние выхода указывает на аварийный выход по отмене или прерыванию. Возвращаемое значение, равное-1, указывает на ошибку (новый процесс не запущен). В этом случае для **параметра «значение возврата»** задается одно из следующих значений.
 
-|||
+| Значение | Описание |
 |-|-|
 | **E2BIG** | Длина списка аргументов превышает 1024 байта. |
-| **EINVAL** | Недопустимый аргумент *mode* . |
-| **ENOENT** | Файл или путь не найден. |
+| **еинвал** | Недопустимый аргумент *mode* . |
+| **еноент** | Файл или путь не найден. |
 | **ENOEXEC** | Указанный файл не является исполняемым или имеет недопустимый формат исполняемого файла. |
-| **ENOMEM** | Недостаточно памяти для выполнения нового процесса. |
+| **еномем** | Недостаточно памяти для выполнения нового процесса. |
 
-Дополнительные сведения об этих и других кодах возврата см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Дополнительные сведения об этих и других кодах возврата см. в разделе переввод [, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Remarks
 
@@ -111,19 +111,19 @@ intptr_t _wspawnlpe(
 |**_spawnlpe**|\<process.h>|
 |**_wspawnlpe**|\<stdio.h> или \<wchar.h>|
 
-Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
-См. пример в разделе [Функции _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md).
+См. пример в разделе [_spawn, _wspawn Functions](../../c-runtime-library/spawn-wspawn-functions.md).
 
 ## <a name="see-also"></a>См. также раздел
 
 [Управление процессами и средой](../../c-runtime-library/process-and-environment-control.md)<br/>
-[Функции _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
-[abort](abort.md)<br/>
+[_spawn, функции _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[рвал](abort.md)<br/>
 [atexit](atexit.md)<br/>
-[Функции _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[_exec, функции _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [_flushall](flushall.md)<br/>
 [_getmbcp](getmbcp.md)<br/>

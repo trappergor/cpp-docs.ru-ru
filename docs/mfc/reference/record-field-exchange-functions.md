@@ -45,12 +45,12 @@ helpviewer_keywords:
 - RFX (record field exchange), data exchange functions [MFC]
 - RFX (record field exchange)
 ms.assetid: 6e4c5c1c-acb7-4c18-bf51-bf7959a696cd
-ms.openlocfilehash: f4f1b12795252b91a2c14877822e221ca86ab39e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9bb1b7bcbce16bba8029fcfbbeea7552b1d4a0ba
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214039"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843603"
 ---
 # <a name="record-field-exchange-functions"></a>Функции обмена данными полями записей
 
@@ -70,7 +70,7 @@ ms.locfileid: "87214039"
 
 ### <a name="rfx-functions-odbc"></a>Функции RFX (ODBC)
 
-|||
+|Имя|Описание|
 |-|-|
 |[RFX_Binary](#rfx_binary)|Передает массивы байтов типа [CByteArray](cbytearray-class.md).|
 |[RFX_Bool](#rfx_bool)|Передает логический тип данных.|
@@ -85,7 +85,7 @@ ms.locfileid: "87214039"
 
 ### <a name="bulk-rfx-functions-odbc"></a>Функции Bulk RFX (ODBC)
 
-|||
+|Имя|Описание|
 |-|-|
 |[RFX_Binary_Bulk](#rfx_binary_bulk)|Передает массивы байтов данных.|
 |[RFX_Bool_Bulk](#rfx_bool_bulk)|Передает массивы логических данных.|
@@ -99,7 +99,7 @@ ms.locfileid: "87214039"
 
 ### <a name="dfx-functions-dao"></a>Функции DFX (DAO)
 
-|||
+|Имя|Описание|
 |-|-|
 |[DFX_Binary](#dfx_binary)|Передает массивы байтов типа [CByteArray](cbytearray-class.md).|
 |[DFX_Bool](#dfx_bool)|Передает логический тип данных.|
@@ -115,7 +115,7 @@ ms.locfileid: "87214039"
 
 =============================================
 
-## <a name="rfx_binary"></a><a name="rfx_binary"></a>RFX_Binary
+## <a name="rfx_binary"></a><a name="rfx_binary"></a> RFX_Binary
 
 Передает массивы байтов между элементами данных поля `CRecordset` объекта и столбцами записи в источнике данных типа ODBC SQL_BINARY, SQL_VARBINARY или SQL_LONGVARBINARY.
 
@@ -155,7 +155,7 @@ void RFX_Binary(
 
 **Заголовок:** афксдб. h
 
-## <a name="rfx_bool"></a><a name="rfx_bool"></a>RFX_Bool
+## <a name="rfx_bool"></a><a name="rfx_bool"></a> RFX_Bool
 
 Передает логические данные между элементами данных поля `CRecordset` объекта и столбцами записи в источнике данных типа ODBC SQL_BIT.
 
@@ -187,7 +187,7 @@ void RFX_Bool(
 
 **Заголовок:** афксдб. h
 
-## <a name="rfx_byte"></a><a name="rfx_byte"></a>RFX_Byte
+## <a name="rfx_byte"></a><a name="rfx_byte"></a> RFX_Byte
 
 Передает отдельные байты между элементами данных поля `CRecordset` объекта и столбцами записи в источнике данных типа ODBC SQL_TINYINT.
 
@@ -219,7 +219,7 @@ void RFX_Byte(
 
 **Заголовок:** афксдб. h
 
-## <a name="rfx_date"></a><a name="rfx_date"></a>RFX_Date
+## <a name="rfx_date"></a><a name="rfx_date"></a> RFX_Date
 
 Передает `CTime` или TIMESTAMP_STRUCT данные между элементами данных поля `CRecordset` объекта и столбцами записи в источнике данных типа ODBC SQL_DATE, SQL_TIME или SQL_TIMESTAMP.
 
@@ -269,7 +269,7 @@ void RFX_Date(
 
 **Заголовок:** афксдб. h
 
-## <a name="rfx_double"></a><a name="rfx_double"></a>RFX_Double
+## <a name="rfx_double"></a><a name="rfx_double"></a> RFX_Double
 
 Передает данные **двойной точности с плавающей запятой** между элементами данных поля `CRecordset` объекта и столбцами записи в источнике данных типа ODBC SQL_DOUBLE.
 
@@ -301,7 +301,7 @@ void RFX_Double(
 
 **Заголовок:** афксдб. h
 
-## <a name="rfx_int"></a><a name="rfx_int"></a>RFX_Int
+## <a name="rfx_int"></a><a name="rfx_int"></a> RFX_Int
 
 Передает целочисленные данные между элементами данных поля `CRecordset` объекта и столбцами записи в источнике данных типа ODBC SQL_SMALLINT.
 
@@ -333,7 +333,7 @@ void RFX_Int(
 
 **Заголовок:** афксдб. h
 
-## <a name="rfx_long"></a><a name="rfx_long"></a>RFX_Long
+## <a name="rfx_long"></a><a name="rfx_long"></a> RFX_Long
 
 Передает длинные целочисленные данные между элементами данных поля `CRecordset` объекта и столбцами записи в источнике данных типа ODBC SQL_INTEGER.
 
@@ -366,7 +366,7 @@ value );
 
 **Заголовок:** афксдб. h
 
-## <a name="rfx_longbinary"></a><a name="rfx_longbinary"></a>RFX_LongBinary
+## <a name="rfx_longbinary"></a><a name="rfx_longbinary"></a> RFX_LongBinary
 
 Передает данные больших двоичных объектов (BLOB) с помощью класса [CLongBinary](clongbinary-class.md) между элементами данных поля `CRecordset` объекта и столбцами записи в источнике данных типа ODBC SQL_LONGVARBINARY или SQL_LONGVARCHAR.
 
@@ -398,7 +398,7 @@ void RFX_LongBinary(
 
 **Заголовок:** афксдб. h
 
-## <a name="rfx_single"></a><a name="rfx_single"></a>RFX_Single
+## <a name="rfx_single"></a><a name="rfx_single"></a> RFX_Single
 
 Передает данные с плавающей запятой между элементами данных поля `CRecordset` объекта и столбцами записи в источнике данных типа ODBC SQL_REAL.
 
@@ -430,7 +430,7 @@ void RFX_Single(
 
 **Заголовок:** афксдб. h
 
-## <a name="rfx_text"></a><a name="rfx_text"></a>RFX_Text
+## <a name="rfx_text"></a><a name="rfx_text"></a> RFX_Text
 
 Передает `CString` данные между элементами данных поля `CRecordset` объекта и столбцами записи в источнике данных типа ODBC SQL_LONGVARCHAR, SQL_CHAR, SQL_VARCHAR, SQL_DECIMAL или SQL_NUMERIC.
 
@@ -496,7 +496,7 @@ void CCustomer::DoFieldExchange(CFieldExchange* pFX)
 
 **Заголовок:** афксдб. h
 
-## <a name="rfx_binary_bulk"></a><a name="rfx_binary_bulk"></a>RFX_Binary_Bulk
+## <a name="rfx_binary_bulk"></a><a name="rfx_binary_bulk"></a> RFX_Binary_Bulk
 
 Передает несколько строк байтовых данных из столбца источника данных ODBC в соответствующий массив в `CRecordset` производном от него объекте.
 
@@ -547,7 +547,7 @@ void RFX_Binary_Bulk(
 
 **Заголовок:** афксдб. h
 
-## <a name="rfx_bool_bulk"></a><a name="rfx_bool_bulk"></a>RFX_Bool_Bulk
+## <a name="rfx_bool_bulk"></a><a name="rfx_bool_bulk"></a> RFX_Bool_Bulk
 
 Передает несколько строк логических данных из столбца источника данных ODBC в соответствующий массив в `CRecordset` объекте, производном от.
 
@@ -594,7 +594,7 @@ void RFX_Bool_Bulk(
 
 **Заголовок:** афксдб. h
 
-## <a name="rfx_byte_bulk"></a><a name="rfx_byte_bulk"></a>RFX_Byte_Bulk
+## <a name="rfx_byte_bulk"></a><a name="rfx_byte_bulk"></a> RFX_Byte_Bulk
 
 Передает несколько строк из одного байта из столбца источника данных ODBC в соответствующий массив в `CRecordset` объекте, производном от.
 
@@ -641,7 +641,7 @@ void RFX_Byte_Bulk(
 
 **Заголовок:** афксдб. h
 
-## <a name="rfx_date_bulk"></a><a name="rfx_date_bulk"></a>RFX_Date_Bulk
+## <a name="rfx_date_bulk"></a><a name="rfx_date_bulk"></a> RFX_Date_Bulk
 
 Передает несколько строк данных TIMESTAMP_STRUCT из столбца источника данных ODBC в соответствующий массив в `CRecordset` объекте, производном от.
 
@@ -688,7 +688,7 @@ void RFX_Date_Bulk(
 
 **Заголовок:** афксдб. h
 
-## <a name="rfx_double_bulk"></a><a name="rfx_double_bulk"></a>RFX_Double_Bulk
+## <a name="rfx_double_bulk"></a><a name="rfx_double_bulk"></a> RFX_Double_Bulk
 
 Передает несколько строк данных двойной точности с плавающей запятой из столбца источника данных ODBC в соответствующий массив в `CRecordset` производном от него объекте.
 
@@ -735,7 +735,7 @@ void RFX_Double_Bulk(
 
 **Заголовок:** афксдб. h
 
-## <a name="rfx_int_bulk"></a><a name="rfx_int_bulk"></a>RFX_Int_Bulk
+## <a name="rfx_int_bulk"></a><a name="rfx_int_bulk"></a> RFX_Int_Bulk
 
 Передает целочисленные данные между элементами данных поля `CRecordset` объекта и столбцами записи в источнике данных типа ODBC SQL_SMALLINT.
 
@@ -767,7 +767,7 @@ void RFX_Int(
 
 **Заголовок:** афксдб. h
 
-## <a name="rfx_long_bulk"></a><a name="rfx_long_bulk"></a>RFX_Long_Bulk
+## <a name="rfx_long_bulk"></a><a name="rfx_long_bulk"></a> RFX_Long_Bulk
 
 Передает несколько строк длинных целочисленных данных из столбца источника данных ODBC в соответствующий массив в `CRecordset` объекте, производном от.
 
@@ -814,7 +814,7 @@ void RFX_Long_Bulk(
 
 **Заголовок:** афксдб. h
 
-## <a name="rfx_single_bulk"></a><a name="rfx_single_bulk"></a>RFX_Single_Bulk
+## <a name="rfx_single_bulk"></a><a name="rfx_single_bulk"></a> RFX_Single_Bulk
 
 Передает несколько строк данных с плавающей запятой из столбца источника данных ODBC в соответствующий массив в `CRecordset` производном от него объекте.
 
@@ -861,7 +861,7 @@ void RFX_Single_Bulk(
 
 **Заголовок:** афксдб. h
 
-## <a name="rfx_text_bulk"></a><a name="rfx_text_bulk"></a>RFX_Text_Bulk
+## <a name="rfx_text_bulk"></a><a name="rfx_text_bulk"></a> RFX_Text_Bulk
 
 Передает несколько строк символьных данных из столбца источника данных ODBC в соответствующий массив в `CRecordset` производном от него объекте.
 
@@ -927,7 +927,7 @@ void CMultiCustomer::DoBulkFieldExchange(CFieldExchange* pFX)
 
 **Заголовок:** афксдб. h
 
-## <a name="dfx_binary"></a><a name="dfx_binary"></a>DFX_Binary
+## <a name="dfx_binary"></a><a name="dfx_binary"></a> DFX_Binary
 
 Передает массивы байтов между элементами данных поля объекта [CDaoRecordset](cdaorecordset-class.md) и столбцами записи в источнике данных.
 
@@ -974,7 +974,7 @@ void AFXAPI DFX_Binary(
 
 **Заголовок:** афксдао. h
 
-## <a name="dfx_bool"></a><a name="dfx_bool"></a>DFX_Bool
+## <a name="dfx_bool"></a><a name="dfx_bool"></a> DFX_Bool
 
 Передает логические данные между элементами данных поля объекта [CDaoRecordset](cdaorecordset-class.md) и столбцами записи в источнике данных.
 
@@ -1017,7 +1017,7 @@ void AFXAPI DFX_Bool(
 
 **Заголовок:** афксдао. h
 
-## <a name="dfx_byte"></a><a name="dfx_byte"></a>DFX_Byte
+## <a name="dfx_byte"></a><a name="dfx_byte"></a> DFX_Byte
 
 Передает отдельные байты между элементами данных поля объекта [CDaoRecordset](cdaorecordset-class.md) и столбцами записи в источнике данных.
 
@@ -1060,7 +1060,7 @@ void AFXAPI DFX_Byte(
 
 **Заголовок:** афксдао. h
 
-## <a name="dfx_currency"></a><a name="dfx_currency"></a>DFX_Currency
+## <a name="dfx_currency"></a><a name="dfx_currency"></a> DFX_Currency
 
 Передает денежные данные между элементами данных поля объекта [CDaoRecordset](cdaorecordset-class.md) и столбцами записи в источнике данных.
 
@@ -1103,7 +1103,7 @@ void AFXAPI DFX_Currency(
 
 **Заголовок:** афксдао. h
 
-## <a name="dfx_datetime"></a><a name="dfx_datetime"></a>DFX_DateTime
+## <a name="dfx_datetime"></a><a name="dfx_datetime"></a> DFX_DateTime
 
 Передает данные о времени и датах между элементами данных поля объекта [CDaoRecordset](cdaorecordset-class.md) и столбцами записи в источнике данных.
 
@@ -1139,7 +1139,7 @@ void AFXAPI DFX_DateTime(
 Данные сопоставляются между типом DAO_DATE в DAO и Type [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) в наборе записей.
 
 > [!NOTE]
-> `COleDateTime`заменяет [CTime](../../atl-mfc-shared/reference/ctime-class.md) и TIMESTAMP_STRUCT для этой цели в классах DAO. `CTime`и TIMESTAMP_STRUCT по-прежнему используются для классов доступа к данным на основе ODBC.
+> `COleDateTime` заменяет [CTime](../../atl-mfc-shared/reference/ctime-class.md) и TIMESTAMP_STRUCT для этой цели в классах DAO. `CTime` и TIMESTAMP_STRUCT по-прежнему используются для классов доступа к данным на основе ODBC.
 
 ### <a name="example"></a>Пример
 
@@ -1149,7 +1149,7 @@ void AFXAPI DFX_DateTime(
 
 **Заголовок:** афксдао. h
 
-## <a name="dfx_double"></a><a name="dfx_double"></a>DFX_Double
+## <a name="dfx_double"></a><a name="dfx_double"></a> DFX_Double
 
 Передает данные **типа Double с плавающей запятой** между элементами данных поля объекта [CDaoRecordset](cdaorecordset-class.md) и столбцами записи в источнике данных.
 
@@ -1192,7 +1192,7 @@ void AFXAPI DFX_Double(
 
 **Заголовок:** афксдао. h
 
-## <a name="dfx_long"></a><a name="dfx_long"></a>DFX_Long
+## <a name="dfx_long"></a><a name="dfx_long"></a> DFX_Long
 
 Передает длинные целочисленные данные между элементами данных поля объекта [CDaoRecordset](cdaorecordset-class.md) и столбцами записи в источнике данных.
 
@@ -1235,7 +1235,7 @@ void AFXAPI DFX_Long(
 
 **Заголовок:** афксдао. h
 
-## <a name="dfx_longbinary"></a><a name="dfx_longbinary"></a>DFX_LongBinary
+## <a name="dfx_longbinary"></a><a name="dfx_longbinary"></a> DFX_LongBinary
 
 **Важно!** Вместо этой функции рекомендуется использовать [DFX_Binary](#dfx_binary) .
 
@@ -1272,7 +1272,7 @@ void AFXAPI DFX_LongBinary(
 
 ### <a name="remarks"></a>Remarks
 
-`DFX_LongBinary`предоставляется для обеспечения совместимости с классами ODBC MFC. Функция `DFX_LongBinary` передает данные большого двоичного объекта (BLOB) с помощью класса `CLongBinary` между элементами данных поля объекта [CDaoRecordset](cdaorecordset-class.md) и столбцами записи в источнике данных. Данные сопоставляются между типом DAO_BYTES в DAO и Type [CLongBinary](clongbinary-class.md) в наборе записей.
+`DFX_LongBinary` предоставляется для обеспечения совместимости с классами ODBC MFC. Функция `DFX_LongBinary` передает данные большого двоичного объекта (BLOB) с помощью класса `CLongBinary` между элементами данных поля объекта [CDaoRecordset](cdaorecordset-class.md) и столбцами записи в источнике данных. Данные сопоставляются между типом DAO_BYTES в DAO и Type [CLongBinary](clongbinary-class.md) в наборе записей.
 
 ### <a name="example"></a>Пример
 
@@ -1282,7 +1282,7 @@ void AFXAPI DFX_LongBinary(
 
 **Заголовок:** афксдао. h
 
-## <a name="dfx_short"></a><a name="dfx_short"></a>DFX_Short
+## <a name="dfx_short"></a><a name="dfx_short"></a> DFX_Short
 
 Передает короткие целочисленные данные между элементами данных поля объекта [CDaoRecordset](cdaorecordset-class.md) и столбцами записи в источнике данных.
 
@@ -1318,7 +1318,7 @@ void AFXAPI DFX_Short(
 Данные сопоставляются между типом DAO_I2 в DAO и типом **`short`** в наборе записей.
 
 > [!NOTE]
-> `DFX_Short`эквивалентен [RFX_Int](#rfx_int) для классов на основе ODBC.
+> `DFX_Short` эквивалентен [RFX_Int](#rfx_int) для классов на основе ODBC.
 
 ### <a name="example"></a>Пример
 
@@ -1328,7 +1328,7 @@ void AFXAPI DFX_Short(
 
 **Заголовок:** афксдао. h
 
-## <a name="dfx_single"></a><a name="dfx_single"></a>DFX_Single
+## <a name="dfx_single"></a><a name="dfx_single"></a> DFX_Single
 
 Передает данные с плавающей запятой между элементами данных поля объекта [CDaoRecordset](cdaorecordset-class.md) и столбцами записи в источнике данных.
 
@@ -1371,7 +1371,7 @@ void AFXAPI DFX_Single(
 
 **Заголовок:** афксдао. h
 
-## <a name="dfx_text"></a><a name="dfx_text"></a>DFX_Text
+## <a name="dfx_text"></a><a name="dfx_text"></a> DFX_Text
 
 Передает `CString` данные между элементами данных поля объекта [CDaoRecordset](cdaorecordset-class.md) и столбцами записи в источнике данных.
 

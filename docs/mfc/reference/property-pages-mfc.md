@@ -5,12 +5,12 @@ helpviewer_keywords:
 - property page data transfer functions in MFC
 - property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
-ms.openlocfilehash: 9689d511760752903b83b34199fb035c0e7a8d37
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9a04395aec8c2eb968e5cefaf410643a1ce03e32
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214052"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843590"
 ---
 # <a name="property-pages-mfc"></a>Страницы свойств (MFC)
 
@@ -20,7 +20,7 @@ ms.locfileid: "87214052"
 
 ### <a name="property-page-data-transfer"></a>Страница свойств Передача данных
 
-|||
+|Имя|Описание|
 |-|-|
 |[DDP_CBIndex](#ddp_cbindex)|Связывает индекс выбранной строки в поле со списком со свойством элемента управления.|
 |[DDP_CBString](#ddp_cbstring)|Связывает выбранную строку в поле со списком со свойством элемента управления. Выбранная строка может начинаться с тех же букв, что и значение свойства, но не должна полностью совпадать с ней.|
@@ -39,13 +39,13 @@ ms.locfileid: "87214052"
 
 ### <a name="property-pages"></a>Страницы свойств
 
-|||
+|Имя|Описание|
 |-|-|
 |[BEGIN_PROPPAGEIDS](#begin_proppageids)|Начинает список идентификаторов страниц свойств.|
 |[END_PROPPAGEIDS](#end_proppageids)|Завершает список идентификаторов страниц свойств.|
 |[PROPPAGEID](#proppageid)|Объявляет страницу свойств класса Control.|
 
-## <a name="ddp_cbindex"></a><a name="ddp_cbindex"></a>DDP_CBIndex
+## <a name="ddp_cbindex"></a><a name="ddp_cbindex"></a> DDP_CBIndex
 
 Вызовите эту функцию в функции страницы свойств, `DoDataExchange` чтобы синхронизировать значение целочисленного свойства с индексом текущего выделения в поле со списком на странице свойств.
 
@@ -79,7 +79,7 @@ void AFXAPI DDP_CBIndex(
 
   **Заголовок** afxctl. h
 
-## <a name="ddp_cbstring"></a><a name="ddp_cbstring"></a>DDP_CBString
+## <a name="ddp_cbstring"></a><a name="ddp_cbstring"></a> DDP_CBString
 
 Вызовите эту функцию в функции страницы свойств, `DoDataExchange` чтобы синхронизировать значение строкового свойства с текущим выделением в поле со списком на странице свойств.
 
@@ -113,7 +113,7 @@ void AFXAPI DDP_CBString(
 
   **Заголовок** afxctl. h
 
-## <a name="ddp_cbstringexact"></a><a name="ddp_cbstringexact"></a>DDP_CBStringExact
+## <a name="ddp_cbstringexact"></a><a name="ddp_cbstringexact"></a> DDP_CBStringExact
 
 Вызовите эту функцию в функции страницы свойств `DoDataExchange` , чтобы синхронизировать значение строкового свойства, которое точно соответствует текущему выделенному фрагменту в поле со списком на странице свойств.
 
@@ -147,7 +147,7 @@ void AFXAPI DDP_CBStringExact(
 
   **Заголовок** afxctl. h
 
-## <a name="ddp_check"></a><a name="ddp_check"></a>DDP_Check
+## <a name="ddp_check"></a><a name="ddp_check"></a> DDP_Check
 
 Вызовите эту функцию на странице свойств, `DoDataExchange` чтобы синхронизировать значение свойства со связанным элементом управления флажка страницы свойств.
 
@@ -181,7 +181,7 @@ void AFXAPI DDP_Check(
 
   **Заголовок** afxctl. h
 
-## <a name="ddp_lbindex"></a><a name="ddp_lbindex"></a>DDP_LBIndex
+## <a name="ddp_lbindex"></a><a name="ddp_lbindex"></a> DDP_LBIndex
 
 Вызовите эту функцию на странице свойств, `DoDataExchange` чтобы синхронизировать значение целочисленного свойства с индексом текущего выделения в поле со списком на странице свойств.
 
@@ -215,7 +215,7 @@ void AFXAPI DDP_LBIndex(
 
   **Заголовок** afxctl. h
 
-## <a name="ddp_lbstring"></a><a name="ddp_lbstring"></a>DDP_LBString
+## <a name="ddp_lbstring"></a><a name="ddp_lbstring"></a> DDP_LBString
 
 Вызовите эту функцию на странице свойств, `DoDataExchange` чтобы синхронизировать значение строкового свойства с текущим выделением в поле со списком на странице свойств.
 
@@ -249,7 +249,7 @@ void AFXAPI DDP_LBString(
 
   **Заголовок** afxctl. h
 
-## <a name="ddp_lbstringexact"></a><a name="ddp_lbstringexact"></a>DDP_LBStringExact
+## <a name="ddp_lbstringexact"></a><a name="ddp_lbstringexact"></a> DDP_LBStringExact
 
 Вызовите эту функцию на странице свойств, `DoDataExchange` чтобы синхронизировать значение строкового свойства, которое точно соответствует текущему выделенному фрагменту в поле со списком на странице свойств.
 
@@ -283,7 +283,7 @@ void AFXAPI DDP_LBStringExact(
 
   **Заголовок** afxctl. h
 
-## <a name="ddp_postprocessing"></a><a name="ddp_postprocessing"></a>DDP_PostProcessing
+## <a name="ddp_postprocessing"></a><a name="ddp_postprocessing"></a> DDP_PostProcessing
 
 Вызовите эту функцию в функции страницы свойств `DoDataExchange` , чтобы завершить перенос значений свойств со страницы свойств в элемент управления при сохранении значений свойств.
 
@@ -306,7 +306,7 @@ void AFXAPI DDP_PostProcessing(CDataExchange * pDX);
 
   **Заголовок** afxctl. h
 
-## <a name="ddp_radio"></a><a name="ddp_radio"></a>DDP_Radio
+## <a name="ddp_radio"></a><a name="ddp_radio"></a> DDP_Radio
 
 Вызовите эту функцию в функции элемента управления, `DoPropExchange` чтобы синхронизировать значение свойства со связанным элементом управления "переключатель" страницы свойств.
 
@@ -340,7 +340,7 @@ void AFXAPI DDP_Radio(
 
   **Заголовок** afxctl. h
 
-## <a name="ddp_text"></a><a name="ddp_text"></a>DDP_Text
+## <a name="ddp_text"></a><a name="ddp_text"></a> DDP_Text
 
 Вызовите эту функцию в функции элемента управления, `DoDataExchange` чтобы синхронизировать значение свойства со связанным элементом управления страницы свойств.
 
@@ -416,7 +416,7 @@ void AFXAPI DDP_Text(
 
   **Заголовок** afxctl. h
 
-## <a name="begin_proppageids"></a><a name="begin_proppageids"></a>BEGIN_PROPPAGEIDS
+## <a name="begin_proppageids"></a><a name="begin_proppageids"></a> BEGIN_PROPPAGEIDS
 
 Начинает определение списка идентификаторов страниц свойств элемента управления.
 
@@ -442,7 +442,7 @@ BEGIN_PROPPAGEIDS(class_name,  count)
 
   **Заголовок** afxctl. h
 
-## <a name="end_proppageids"></a><a name="end_proppageids"></a>END_PROPPAGEIDS
+## <a name="end_proppageids"></a><a name="end_proppageids"></a> END_PROPPAGEIDS
 
 Завершает определение списка ИДЕНТИФИКАТОРов страниц свойств.
 
@@ -459,7 +459,7 @@ END_PROPPAGEIDS(class_name)
 
   **Заголовок** afxctl. h
 
-## <a name="proppageid"></a><a name="proppageid"></a>проппажеид
+## <a name="proppageid"></a><a name="proppageid"></a> проппажеид
 
 Добавляет страницу свойств для использования элементом управления OLE.
 

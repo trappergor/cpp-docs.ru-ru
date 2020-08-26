@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CDataRecoveryHandler [MFC], SetShutdownByRestartManager
 - CDataRecoveryHandler [MFC], UpdateDocumentInfo
 ms.assetid: 7794802c-e583-4eba-90b9-2fed1a161f9c
-ms.openlocfilehash: c796f24ad37b3bae11314e2885bf25e25f85aba6
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 4bb4d4ddf291cb1efc01b887c54a6573c52df8dc
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561977"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842927"
 ---
 # <a name="cdatarecoveryhandler-class"></a>Класс Кдатарековерихандлер
 
@@ -83,13 +83,13 @@ class CDataRecoveryHandler : public CObject
 
 ### <a name="constructors"></a>Конструкторы
 
-|||
+|Имя|Описание|
 |-|-|
 |[Кдатарековерихандлер:: Кдатарековерихандлер](#cdatarecoveryhandler)|Формирует объект `CDataRecoveryHandler`.|
 
 ### <a name="methods"></a>Методы
 
-|||
+|Имя|Описание|
 |-|-|
 |[Кдатарековерихандлер:: Аутосавеаллдокументинфо](#autosavealldocumentinfo)|Автоматически сохраняет каждый файл, зарегистрированный в `CDataRecoveryHandler` классе.|
 |[Кдатарековерихандлер:: Аутосаведокументинфо](#autosavedocumentinfo)|Автоматически сохраняет указанный документ.|
@@ -121,7 +121,7 @@ class CDataRecoveryHandler : public CObject
 
 ### <a name="data-members"></a>Элементы данных
 
-|||
+|Имя|Описание|
 |-|-|
 |m_bRestoringPreviousOpenDocs|Указывает, будет ли обработчик восстановления данных открывать ранее открытые документы.|
 |m_bSaveDocumentInfoOnIdle|Указывает, будет ли обработчик восстановления данных автоматически сохранять документы в следующем цикле бездействия.|
@@ -664,7 +664,7 @@ virtual BOOL UpdateDocumentInfo(CDocument* pDocument);
 
 Чтобы использовать этот метод, AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES необходимо задать в *m_dwRestartManagerSupportFlags*.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Классы](../../mfc/reference/mfc-classes.md)<br/>
 [Иерархическая диаграмма](../../mfc/hierarchy-chart.md)<br/>

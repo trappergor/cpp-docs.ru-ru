@@ -15,12 +15,12 @@ helpviewer_keywords:
 - any/std::any::reset
 - any/std::any::swap
 - any/std::any::type
-ms.openlocfilehash: 66e74a7fa7f35aae9ac9e1f3ba7520e8d3f9b3f2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: defec0f6ab8f59219afddcefc67ea93435347978
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87203966"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844747"
 ---
 # <a name="any-class"></a>любой класс
 
@@ -38,13 +38,13 @@ class any
 
 ### <a name="constructors"></a>Конструкторы
 
-|||
+|Имя|Описание|
 |-|-|
 |[всеми](#any)|Создает объект типа `any`.|
 
 ### <a name="functions"></a>Функции
 
-|||
+|Имя|Описание|
 |-|-|
 |[emplace](#emplace)|Задает любое значение.|
 |[has_value](#has_value)|Возвращает **`true`** , если any имеет значение.|
@@ -54,11 +54,11 @@ class any
 
 ### <a name="operators"></a>Операторы
 
-|||
+|Имя|Описание|
 |-|-|
 |[Оператор =](#op_eq)|Заменяет объект на копию другого объекта.|
 
-## <a name="any"></a><a name="any"></a>всеми
+## <a name="any"></a><a name="any"></a> всеми
 
 Создает объект типа `any`. Также включает деструктор.
 
@@ -76,7 +76,7 @@ template <class T, class U, class... Args>
 ~any();
 ```
 
-## <a name="emplace"></a><a name="emplace"></a>emplace
+## <a name="emplace"></a><a name="emplace"></a> emplace
 
 Задает любое значение.
 
@@ -87,7 +87,7 @@ template <class T, class U, class... Args>
     decay_t<T>& emplace(initializer_list<U>, Args&&...);
 ```
 
-## <a name="has_value"></a><a name="has_value"></a>has_value
+## <a name="has_value"></a><a name="has_value"></a> has_value
 
 Возвращает **`true`** , если any имеет значение.
 
@@ -95,7 +95,7 @@ template <class T, class U, class... Args>
 bool has_value() const noexcept;
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>Оператор =
+## <a name="operator"></a><a name="op_eq"></a> Оператор =
 
 Заменяет объект на копию другого объекта.
 
@@ -111,7 +111,7 @@ template <class T>
 *Правильно*\
 Объект, который копируется в Any.
 
-## <a name="reset"></a><a name="reset"></a>перезапуск
+## <a name="reset"></a><a name="reset"></a> перезапуск
 
 Сбрасывает объект.
 
@@ -119,7 +119,7 @@ template <class T>
 void reset() noexcept;
 ```
 
-## <a name="swap"></a><a name="swap"></a>позиции
+## <a name="swap"></a><a name="swap"></a> позиции
 
 Меняет местами два объекта.
 

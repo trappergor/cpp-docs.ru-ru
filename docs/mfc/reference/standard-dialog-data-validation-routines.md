@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - standard dialog, data validation routines
 ms.assetid: 44dbc222-a897-4949-925e-7660e8964ccd
-ms.openlocfilehash: 2511e2ec6dbd4e27c0e12e35bdc1cd671bf72eaa
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 19d1858d67802a7c464a9be783e4c1fb96fe3fae
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213987"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844487"
 ---
 # <a name="standard-dialog-data-validation-routines"></a>Стандартные программы проверки данных диалоговых окон
 
@@ -20,7 +20,7 @@ ms.locfileid: "87213987"
 
 ### <a name="ddv-functions"></a>Функции DDV
 
-|||
+|Имя|Описание|
 |-|-|
 |[DDV_MaxChars](#ddv_maxchars)|Проверяет, что количество символов в заданном значении элемента управления не превышает заданное максимальное значение.|
 |[DDV_MinMaxByte](#ddv_minmaxbyte)|Проверяет, что данное значение элемента управления не превышает заданный диапазон **байтов** .|
@@ -38,7 +38,7 @@ ms.locfileid: "87213987"
 |[DDV_MinMaxUnsigned](#ddv_minmaxuint)|Проверяет, попадает ли заданное значение элемента управления между двумя указанными значениями.|
 |[DDV_MinMaxULongLong](#ddv_minmaxulonglong)|Проверяет, что данное значение элемента управления не превышает заданный диапазон **улонглонг** .|
 
-## <a name="ddv_maxchars"></a><a name="ddv_maxchars"></a>DDV_MaxChars
+## <a name="ddv_maxchars"></a><a name="ddv_maxchars"></a> DDV_MaxChars
 
 Вызовите метод `DDV_MaxChars` , чтобы убедиться, что количество символов в элементе управления, связанное со *значением* , не превышает *nchar*.
 
@@ -68,7 +68,7 @@ void AFXAPI DDV_MaxChars(
 
   **Заголовок** afxdd_. h
 
-## <a name="ddv_minmaxbyte"></a><a name="ddv_minmaxbyte"></a>DDV_MinMaxByte
+## <a name="ddv_minmaxbyte"></a><a name="ddv_minmaxbyte"></a> DDV_MinMaxByte
 
 Вызовите метод `DDV_MinMaxByte` , чтобы убедиться, что значение в элементе управления, связанное со *значением* , попадает в интервал между *минвал* и *максвал*.
 
@@ -102,7 +102,7 @@ void AFXAPI DDV_MinMaxByte(
 
   **Заголовок** afxdd_. h
 
-## <a name="ddv_minmaxdatetime"></a><a name="ddv_minmaxdatetime"></a>DDV_MinMaxDateTime
+## <a name="ddv_minmaxdatetime"></a><a name="ddv_minmaxdatetime"></a> DDV_MinMaxDateTime
 
 Вызовите метод, `DDV_MinMaxDateTime` чтобы убедиться, что значение времени или даты в элементе управления выбора даты и времени ( [CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)), связанного с *рефвалуе* , попадает в интервал между *рефминранже* и *рефмаксранже*.
 
@@ -142,7 +142,7 @@ void AFXAPI DDV_MinMaxDateTime(
 
   **Заголовок** afxdd_. h
 
-## <a name="ddv_minmaxdouble"></a><a name="ddv_minmaxdouble"></a>DDV_MinMaxDouble
+## <a name="ddv_minmaxdouble"></a><a name="ddv_minmaxdouble"></a> DDV_MinMaxDouble
 
 Вызовите метод `DDV_MinMaxDouble` , чтобы убедиться, что значение в элементе управления, связанное со *значением* , попадает в интервал между *минвал* и *максвал*.
 
@@ -176,7 +176,7 @@ void AFXAPI DDV_MinMaxDouble(
 
   **Заголовок** afxdd_. h
 
-## <a name="ddv_minmaxdword"></a><a name="ddv_minmaxdword"></a>DDV_MinMaxDWord
+## <a name="ddv_minmaxdword"></a><a name="ddv_minmaxdword"></a> DDV_MinMaxDWord
 
 Вызовите метод `DDV_MinMaxDWord` , чтобы убедиться, что значение в элементе управления, связанное со *значением* , попадает в интервал между *минвал* и *максвал*.
 
@@ -210,7 +210,7 @@ void AFXAPI DDV_MinMaxDWord(
 
   **Заголовок** afxdd_. h
 
-## <a name="ddv_minmaxfloat"></a><a name="ddv_minmaxfloat"></a>DDV_MinMaxFloat
+## <a name="ddv_minmaxfloat"></a><a name="ddv_minmaxfloat"></a> DDV_MinMaxFloat
 
 Вызовите метод `DDV_MinMaxFloat` , чтобы убедиться, что значение в элементе управления, связанное со *значением* , попадает в интервал между *минвал* и *максвал*.
 
@@ -244,7 +244,7 @@ void AFXAPI DDV_MinMaxFloat(
 
   **Заголовок** afxdd_. h
 
-## <a name="ddv_minmaxint"></a><a name="ddv_minmaxint"></a>DDV_MinMaxInt
+## <a name="ddv_minmaxint"></a><a name="ddv_minmaxint"></a> DDV_MinMaxInt
 
 Вызовите метод `DDV_MinMaxInt` , чтобы убедиться, что значение в элементе управления, связанное со *значением* , попадает в интервал между *минвал* и *максвал*.
 
@@ -278,7 +278,7 @@ void AFXAPI DDV_MinMaxInt(
 
   **Заголовок** afxdd_. h
 
-## <a name="ddv_minmaxlong"></a><a name="ddv_minmaxlong"></a>DDV_MinMaxLong
+## <a name="ddv_minmaxlong"></a><a name="ddv_minmaxlong"></a> DDV_MinMaxLong
 
 Вызовите метод `DDV_MinMaxLong` , чтобы убедиться, что значение в элементе управления, связанное со *значением* , попадает в интервал между *минвал* и *максвал*.
 
@@ -312,7 +312,7 @@ void AFXAPI DDV_MinMaxLong(
 
   **Заголовок** afxdd_. h
 
-## <a name="ddv_minmaxlonglong"></a><a name="ddv_minmaxlonglong"></a>DDV_MinMaxLongLong
+## <a name="ddv_minmaxlonglong"></a><a name="ddv_minmaxlonglong"></a> DDV_MinMaxLongLong
 
 Вызовите метод `DDV_MinMaxLongLong` , чтобы убедиться, что значение в элементе управления, связанное со *значением* , попадает в интервал между *минвал* и *максвал*.
 
@@ -346,7 +346,7 @@ void AFXAPI DDV_MinMaxLongLong(
 
   **Заголовок** afxdd_. h
 
-## <a name="ddv_minmaxmonth"></a><a name="ddv_minmaxmonth"></a>DDV_MinMaxMonth
+## <a name="ddv_minmaxmonth"></a><a name="ddv_minmaxmonth"></a> DDV_MinMaxMonth
 
 Вызовите, `DDV_MinMaxMonth` чтобы убедиться, что значение времени или даты в элементе управления "календарь месяца" ( [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)), связанное с *рефвалуе* , попадает в интервал между *рефминранже* и *рефмаксранже*.
 
@@ -386,7 +386,7 @@ void AFXAPI DDV_MinMaxMonth(
 
   **Заголовок** afxdd_. h
 
-## <a name="ddv_minmaxshort"></a><a name="ddv_minmaxshort"></a>DDV_MinMaxShort
+## <a name="ddv_minmaxshort"></a><a name="ddv_minmaxshort"></a> DDV_MinMaxShort
 
 Вызовите метод `DDV_MinMaxShort` , чтобы убедиться, что значение в элементе управления, связанное со *значением* , попадает в интервал между *минвал* и *максвал*.
 
@@ -420,7 +420,7 @@ void AFXAPI DDV_MinMaxShort(
 
   **Заголовок** afxdd_. h
 
-## <a name="ddv_minmaxslider"></a><a name="ddv_minmaxslider"></a>DDV_MinMaxSlider
+## <a name="ddv_minmaxslider"></a><a name="ddv_minmaxslider"></a> DDV_MinMaxSlider
 
 Вызовите метод `DDV_MinMaxSlider` , чтобы убедиться, что значение в элементе управления, связанное со *значением* , попадает в интервал между *минвал* и *максвал*.
 
@@ -454,7 +454,7 @@ void AFXAPI DDV_MinMaxSlider(
 
   **Заголовок** afxdd_. h
 
-## <a name="ddv_minmaxuint"></a><a name="ddv_minmaxuint"></a>DDV_MinMaxUInt
+## <a name="ddv_minmaxuint"></a><a name="ddv_minmaxuint"></a> DDV_MinMaxUInt
 
 Вызовите метод `DDV_MinMaxUInt` , чтобы убедиться, что значение в элементе управления, связанное со *значением* , попадает в интервал между *минвал* и *максвал*.
 
@@ -488,7 +488,7 @@ void AFXAPI DDV_MinMaxUInt(
 
   **Заголовок** afxdd_. h
 
-## <a name="ddv_minmaxulonglong"></a><a name="ddv_minmaxulonglong"></a>DDV_MinMaxULongLong
+## <a name="ddv_minmaxulonglong"></a><a name="ddv_minmaxulonglong"></a> DDV_MinMaxULongLong
 
 Вызовите метод `DDV_MinMaxULongLong` , чтобы убедиться, что значение в элементе управления, связанное со *значением* , попадает в интервал между *минвал* и *максвал*.
 

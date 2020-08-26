@@ -14,12 +14,12 @@ helpviewer_keywords:
 - IGetDataSourceImpl class
 - GetDataSource method
 ms.assetid: d63f3178-d663-4f01-8c09-8aab2dd6805a
-ms.openlocfilehash: 596dd2ea7f65040ae526662974d210c1f99a0cf2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 4c8af66f41724c5a99dfe271a7dd8babc3a993a5
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210617"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843967"
 ---
 # <a name="igetdatasourceimpl-class"></a>Класс IGetDataSourceImpl
 
@@ -35,17 +35,17 @@ class ATL_NO_VTABLE IGetDataSourceImpl : public IGetDataSource
 ### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Класс, производный от `IGetDataSourceImpl`.
+Класс, производный от `IGetDataSourceImpl` .
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** atldb.h
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Элементы
 
 ### <a name="interface-methods"></a>Методы интерфейса
 
-|||
+| Имя | Описание |
 |-|-|
 |[GetDataSource](#getdatasource)|Возвращает указатель интерфейса на объекте источника данных, который создал сеанс.|
 
@@ -53,7 +53,7 @@ class ATL_NO_VTABLE IGetDataSourceImpl : public IGetDataSource
 
 Это обязательный интерфейс в сеансе для получения указателя интерфейса на объект источника данных.
 
-## <a name="igetdatasourceimplgetdatasource"></a><a name="getdatasource"></a>Ижетдатасаурцеимпл:: DataSource
+## <a name="igetdatasourceimplgetdatasource"></a><a name="getdatasource"></a> Ижетдатасаурцеимпл:: DataSource
 
 Возвращает указатель интерфейса на объекте источника данных, который создал сеанс.
 

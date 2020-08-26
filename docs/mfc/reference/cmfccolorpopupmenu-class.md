@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCColorPopupMenu [MFC], GetMenuBar
 - CMFCColorPopupMenu [MFC], SetPropList
 ms.assetid: 0bf9efe8-aed5-4ab7-b23b-eb284b4668be
-ms.openlocfilehash: d668a7bd2b5226de906ca146c7b7e882b97f4640
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 2964f250b25ad6c77c70e8f10cd92cca0c7d11da
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560989"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844565"
 ---
 # <a name="cmfccolorpopupmenu-class"></a>Класс Кмфкколорпопупмену
 
@@ -35,17 +35,15 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|||
-|-|-|
 |name|Описание|
+|-|-|
 |[Кмфкколорпопупмену:: Кмфкколорпопупмену](#cmfccolorpopupmenu)|Формирует объект `CMFCColorPopupMenu`.|
 |`CMFCColorPopupMenu::~CMFCColorPopupMenu`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|||
-|-|-|
 |name|Описание|
+|-|-|
 |[Кмфкколорпопупмену:: Креатетеароффбар](#createtearoffbar)|Создает закрепляемую цветную полосу разрыва. (Переопределяет [CMFCPopupMenu:: креатетеароффбар](../../mfc/reference/cmfcpopupmenu-class.md#createtearoffbar).)|
 |[Кмфкколорпопупмену:: Жетменубар](#getmenubar)|Возвращает [CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md) , внедренный во всплывающее меню. (Переопределяет [CMFCPopupMenu:: жетменубар](../../mfc/reference/cmfcpopupmenu-class.md#getmenubar).)|
 |`CMFCColorPopupMenu::GetThisClass`|Используется платформой для получения указателя на объект [крунтимекласс](../../mfc/reference/cruntimeclass-structure.md) , связанный с этим типом класса.|
@@ -53,9 +51,8 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
 
 ### <a name="data-members"></a>Элементы данных
 
-|||
-|-|-|
 |Имя|Описание|
+|-|-|
 |`m_bEnabledInCustomizeMode`|Логическое значение, определяющее, следует ли отображать цветовую панель.|
 |`m_wndColorBar`|`CMFCColorBar`Объект, предоставляющий выбор цвета.|
 
@@ -242,7 +239,7 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
 *пвндлист*<br/>
 окне Указатель на объект элемента управления сетки свойств.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Иерархическая диаграмма](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)
