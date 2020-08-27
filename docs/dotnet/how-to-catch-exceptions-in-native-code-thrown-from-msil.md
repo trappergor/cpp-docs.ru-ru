@@ -1,25 +1,26 @@
 ---
-title: Практическое руководство. Исключения в машинном коде, создаваемые MSIL
+title: Практическое руководство. Перехват исключений в машинном коде, создаваемых MSIL
+description: Примеры перехвата исключений в машинном коде, созданном из MSIL.
 ms.date: 11/04/2016
 helpviewer_keywords:
 - exceptions, catching
 - catching exceptions, thrown from MSIL
 - MSIL, catching exceptions in native code
 ms.assetid: c15afd2b-8505-43bf-8a4a-f1d41532a124
-ms.openlocfilehash: 6f2de640a2427bb1ea65d099742967454ca625f6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b68a771d27e091f86331703b55bc2eb52dfbb41b
+ms.sourcegitcommit: efc8c32205c9d610f40597556273a64306dec15d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221358"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88898575"
 ---
-# <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>Практическое руководство. Исключения в машинном коде, создаваемые MSIL
+# <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>Практическое руководство. Перехват исключений в машинном коде, создаваемых MSIL
 
-В машинном коде можно перехватывать собственное исключение C++ из MSIL.  Исключения CLR можно перехватывать с помощью `__try` и **`__except`** .
+В машинном коде можно перехватывать собственное исключение C++ из MSIL.  Исключения CLR можно перехватывать с помощью **`__try`** и **`__except`** .
 
 Дополнительные сведения см. в разделе [структурированная обработка исключений (C/C++)](../cpp/structured-exception-handling-c-cpp.md) и [современные рекомендации по C++ для исключений и обработки ошибок](../cpp/errors-and-exception-handling-modern-cpp.md).
 
-## <a name="example"></a>Пример
+## <a name="example-1"></a>Пример 1
 
 В следующем примере определяется модуль с двумя функциями, один из которых создает собственное исключение, а другой вызывает исключение MSIL.
 
@@ -35,7 +36,7 @@ void Test2() {
 }
 ```
 
-## <a name="example"></a>Пример
+## <a name="example-2"></a>Пример 2
 
 В следующем примере определяется модуль, который перехватывает исключение native и MSIL.
 
@@ -77,6 +78,6 @@ error
 caught an exception
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Обработка исключений](../extensions/exception-handling-cpp-component-extensions.md)

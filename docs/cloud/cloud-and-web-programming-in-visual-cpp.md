@@ -3,12 +3,12 @@ title: Облачное и веб-программирование в Visual C++
 ms.date: 05/14/2019
 ms.assetid: b63611f1-9723-44d0-ba7f-c3ebef341313
 ms.topic: overview
-ms.openlocfilehash: 4e50557733d474d68b8e503d00b28b2ae8cb7f09
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: 675502e9ae50c9e69ad4555502000d128d5d4cbe
+ms.sourcegitcommit: efc8c32205c9d610f40597556273a64306dec15d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274648"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88898669"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Облачное и веб-программирование в Visual C++
 
@@ -30,7 +30,7 @@ ms.locfileid: "71274648"
 
 - [OneDrive и SharePoint в Microsoft Graph](https://dev.onedrive.com/README.htm)
 
-  API OneDrive предоставляет набор служб HTTP для подключения приложения к файлам и папкам в Office 365 и SharePoint Server 2016.
+  API OneDrive предоставляет набор служб HTTP для подключения приложения к файлам и папкам в Microsoft 365 и SharePoint Server 2016.
 
 ## <a name="windows-and-cross-platform-networking-apis"></a>Windows и кроссплатформенные сетевые API
 
@@ -51,7 +51,7 @@ ms.locfileid: "71274648"
 
 - [Интерфейс IXMLHTTPRequest2](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2)
 
-  Предоставляет собственный интерфейс COM, который можно использовать в приложениях среды выполнения Windows или классических приложениях Windows для подключения к Интернету по протоколу HTTP или вызова команд GET, PUT и других команд HTTP. Дополнительные сведения см. в разделе [Пошаговое руководство: подключение с использованием задач и HTTP-запросов XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md).
+  Предоставляет собственный интерфейс COM, который можно использовать в приложениях среды выполнения Windows или классических приложениях Windows для подключения к Интернету по протоколу HTTP или вызова команд GET, PUT и других команд HTTP. Дополнительные сведения см. в разделе [Пошаговое руководство. подключение с помощью задач и HTTP-запросов XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md).
 
 - [Windows Internet (WinInet)](/windows/win32/WinInet/portal)
 
