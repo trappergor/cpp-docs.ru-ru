@@ -1,6 +1,7 @@
 ---
 title: Класс CComboBox
-ms.date: 11/04/2016
+description: Справочник по API для класса поля со списком Windows MFC CComboBox
+ms.date: 08/27/2020
 f1_keywords:
 - CComboBox
 - AFXWIN/CComboBox
@@ -108,12 +109,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: 79bcb973046c418f0bea148084da239075414790
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 515a079ca4f6c3896733bbebec424f63455fb979
+ms.sourcegitcommit: c8f1605354724a13566bc3b0fac3c5d98265f1d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561678"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89062189"
 ---
 # <a name="ccombobox-class"></a>Класс CComboBox
 
@@ -645,7 +646,7 @@ int GetCount() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Число элементов. Возвращаемое значение счетчика больше значения индекса последнего элемента (индекс отсчитывается от нуля). Это CB_ERR при возникновении ошибки.
+Количество элементов. Возвращаемое значение счетчика больше значения индекса последнего элемента (индекс отсчитывается от нуля). Это CB_ERR при возникновении ошибки.
 
 ### <a name="example"></a>Пример
 
@@ -921,6 +922,7 @@ void GetLBText(
 ### <a name="remarks"></a>Remarks
 
 Вторая форма этой функции-члена заполняет `CString` объект текстом элемента.
+Если *ниндекс* является недопустимым, эта функция создает `E_INVALIDARG` исключение (код ошибки: `-2147024809` , `0x80070057` ).
 
 ### <a name="example"></a>Пример
 
@@ -1554,7 +1556,7 @@ void ShowDropDown(BOOL bShowIt = TRUE);
 
   См. пример для [CComboBox:: жетдроппедстате](#getdroppedstate).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пример CTRLBARS в MFC](../../overview/visual-cpp-samples.md)<br/>
 [CWnd, класс](../../mfc/reference/cwnd-class.md)<br/>

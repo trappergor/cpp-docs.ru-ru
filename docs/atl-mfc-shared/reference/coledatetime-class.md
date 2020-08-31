@@ -1,6 +1,7 @@
 ---
 title: Класс COleDateTime
-ms.date: 03/27/2019
+description: Справочник по API для класса MFC COleDateTime, который инкапсулирует `DATE` тип данных, используемый в OLE-автоматизации.
+ms.date: 08/27/2020
 f1_keywords:
 - COleDateTime
 - ATLCOMTIME/ATL::COleDateTime
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - dates, handling in MFC
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
-ms.openlocfilehash: 5cbc131a81afef1ee94069f39e79f22ce7addfcb
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 9ebbab02860daaeb57c24d3e0901666861adfc2b
+ms.sourcegitcommit: c8f1605354724a13566bc3b0fac3c5d98265f1d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562471"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89062162"
 ---
 # <a name="coledatetime-class"></a>Класс COleDateTime
 
@@ -455,7 +456,7 @@ int GetDay() const throw();
 
 ## <a name="coledatetimegetdayofweek"></a><a name="getdayofweek"></a> COleDateTime:: Жетдайофвик
 
-Возвращает день месяца, представленный этим значением даты и времени.
+Возвращает день недели, представленный этим значением даты и времени.
 
 ```
 int GetDayOfWeek() const throw();
@@ -1230,7 +1231,7 @@ int SetTime(
 
 См. пример для [setDate](#setdate).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс COleVariant](../../mfc/reference/colevariant-class.md)<br/>
 [Класс CTime](../../atl-mfc-shared/reference/ctime-class.md)<br/>
