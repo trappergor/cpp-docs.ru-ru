@@ -94,6 +94,15 @@
           href: ../standard-library/atomic-functions.md
         - name: Перечисления <atomic>
           href: ../standard-library/atomic-enums.md
+    - name: <bit>
+      expanded: false
+      items:
+        - name: <bit>
+          href: ../standard-library/bit.md
+        - name: Функции<bit>
+          href: ../standard-library/bit-functions.md
+        - name: Перечисление с порядком байтов
+          href: ../standard-library/bit-enum.md
     - name: <bitset>
       expanded: false
       items:
