@@ -1,16 +1,17 @@
 ---
 title: Файлы заголовков стандартной библиотеки C++
-ms.date: 07/23/2020
+description: Файлы заголовков стандартной библиотеки C++, по категориям
+ms.date: 08/31/2020
 helpviewer_keywords:
 - header files, C++ Standard Library
 - C++ Standard Library, header files
 ms.assetid: e7bf497a-0f63-48d0-9b54-cb0eef4073c4
-ms.openlocfilehash: 845fda9e020727b71752f19c38bb8432d5cf7c25
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0bbd67468c1df8b9e7c078f498d19f01f848149c
+ms.sourcegitcommit: e58918c45316d799c1952ca7797a85adbcd0c472
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228301"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89281852"
 ---
 # <a name="c-standard-library-header-files"></a>Файлы заголовков стандартной библиотеки C++
 
@@ -33,7 +34,7 @@ ms.locfileid: "87228301"
 | Переходники контейнеров | [\<queue>](queue.md), [\<stack>](stack.md) |
 | Представления контейнеров | [\<span>](span.md)<sup>20</sup> |
 | [Ошибки и обработка исключений](../cpp/errors-and-exception-handling-modern-cpp.md) | [\<cassert>](cassert.md), [\<exception>](exception.md) , [\<stdexcept>](stdexcept.md) , [\<system_error>](system-error.md) <sup>11</sup> |
-| Общие служебные программы | \<any><sup>17</sup>, [\<bitset>](bitset.md) , [\<cstdlib>](cstdlib.md) , \<execution> <sup>17</sup>, [\<functional>](functional.md) , [\<memory>](memory.md) , \<memory_resource> <sup>17</sup>, \<optional> <sup>17</sup>, [\<ratio>](ratio.md) <sup>11</sup>, [\<scoped_allocator>](scoped-allocator.md) <sup>11</sup>, [\<tuple>](tuple.md) <sup>11</sup>, [\<type_traits>](type-traits.md) <sup>11</sup>, [\<typeindex>](typeindex.md) <sup>11</sup>, [\<utility>](utility.md) , \<variant> <sup>17</sup> |
+| Общие служебные программы | \<any><sup>17</sup>, [\<bit>](bit.md) <sup>20</sup>, [\<bitset>](bitset.md) , [\<cstdlib>](cstdlib.md) , \<execution> <sup>17</sup>, [\<functional>](functional.md) , [\<memory>](memory.md) , \<memory_resource> <sup>17</sup>, \<optional> <sup>17</sup>, [\<ratio>](ratio.md) <sup>11</sup>, [\<scoped_allocator>](scoped-allocator.md) <sup>11</sup>, [\<tuple>](tuple.md) <sup>11</sup>, [\<type_traits>](type-traits.md) <sup>11</sup>, [\<typeindex>](typeindex.md) <sup>11</sup>, [\<utility>](utility.md) \<variant> <sup>17</sup> |
 | [Ввод-вывод и форматирование](../text/string-and-i-o-formatting-modern-cpp.md) | [\<cinttypes>](cinttypes.md)<sup>11</sup>, [\<cstdio>](cstdio.md) , [\<filesystem>](filesystem.md) <sup>17</sup>,,,,, [\<fstream>](fstream.md) [\<iomanip>](iomanip.md) [\<ios>](ios.md) [\<iosfwd>](iosfwd.md) [\<iostream>](iostream.md) , [\<istream>](istream.md) , [\<ostream>](ostream.md) , [\<sstream>](sstream.md) , [\<streambuf>](streambuf.md) , [\<strstream>](strstream.md) <sup>c</sup>, \<syncstream> <sup>20</sup> |
 | Iterators | [\<iterator>](iterator.md) |
 | Поддержка языков | [\<cfloat>](cfloat.md), [\<climits>](climits.md) , [\<codecvt>](codecvt.md) <sup>11 a</sup>, \<compare> <sup>20</sup>, \<contract> <sup>20</sup>, \<coroutine> <sup>20</sup>,,,,, [\<csetjmp>](csetjmp.md) [\<csignal>](csignal.md) [\<cstdarg>](cstdarg.md) [\<cstddef>](cstddef.md) [\<cstdint>](cstdint.md) <sup>11</sup>, [\<cstdlib>](cstdlib.md) , [\<exception>](exception.md) , [\<initializer_list>](initializer-list.md) <sup>11</sup>, [\<limits>](limits.md) , [\<new>](new.md) , [\<typeinfo>](typeinfo.md) , \<version> <sup>20</sup> |
@@ -44,7 +45,7 @@ ms.locfileid: "87228301"
 | Диапазоны | \<ranges><sup>20</sup> |
 | Регулярные выражения | [\<regex>](regex.md)<sup>стр</sup> |
 | Строки и символьные данные | [\<charconv>](charconv.md)<sup>17</sup>, [\<cctype>](cctype.md) , [\<cstdlib>](cstdlib.md) , [\<cstring>](cstring.md) , [\<cuchar>](cuchar.md) <sup>11</sup>, [\<cwchar>](cwchar.md) , [\<cwctype>](cwctype.md) , [\<regex>](regex.md) <sup>11</sup>, [\<string>](string.md) , [\<string_view>](string-view.md) <sup>17</sup> |
-| Time | [\<chrono>](chrono.md)<sup>11</sup>,[\<ctime>](ctime.md) |
+| Time | [\<chrono>](chrono.md)<sup>11</sup>, [\<ctime>](ctime.md) |
 
 <sup>11</sup> добавлена в стандарт c++ 11.
 <sup>14</sup> Добавлено в стандарт c++ 14.
@@ -79,7 +80,7 @@ ms.locfileid: "87228301"
 
 ::: moniker-end
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также раздел
 
 [Использование заголовков библиотеки C++](using-cpp-library-headers.md)\
 [Стандартная библиотека C++](cpp-standard-library-reference.md)
