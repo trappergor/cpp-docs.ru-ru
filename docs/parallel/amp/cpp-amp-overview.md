@@ -8,18 +8,18 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 249170e1e29d3ca8c488d15be8fa4ccd2b9070c1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2629f243f3db3b8fabbd87ee0a211380ac3d45a2
+ms.sourcegitcommit: 093f49b8b69daf86661adc125b1d2d7b1f0e0650
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222762"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89427729"
 ---
 # <a name="c-amp-overview"></a>Общие сведения о C++ AMP
 
 C++ Accelerated Massive Parallelism (C++ AMP) ускоряет выполнение кода C++, используя преимущества аппаратно-ориентированного оборудования, такого как графический процессор (GPU), на дискретной графической карте. С помощью C++ AMP можно создавать алгоритмы многомерных данных, чтобы можно было ускорить выполнение с помощью параллелизма на разнородном оборудовании. Модель программирования C++ AMP включает многомерные массивы, индексирование, перенос памяти, мозаичное заполнение и библиотеку математических функций. С помощью расширений языка C++ AMP можно управлять перемещением данных из ЦП в GPU и обратно, что позволяет повысить производительность.
 
-## <a name="system-requirements"></a>Системные требования
+## <a name="system-requirements"></a>Требования к системе
 
 - Windows 7 и более поздние версии
 
@@ -238,7 +238,7 @@ for (int i = 0; i < 5; i++)
 
 Общая память — это память, доступ к которой может осуществляться как ЦП, так и ускорителем. Использование общей памяти устраняет или значительно сокращает затраты на копирование данных между ЦП и ускорителем. Несмотря на то, что память является общей, она недоступна одновременно с ЦП и ускорителем, и это приводит к неопределенному поведению.
 
-`array`объекты можно использовать для задания точного управления использованием общей памяти, если соответствующий ускоритель поддерживает его. Поддерживает ли ускоритель совместно используемой памяти свойство [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) ускорителя, которое возвращает, **`true`** когда поддерживается общая память. Если общая память поддерживается, [Перечисление access_type](reference/concurrency-namespace-enums-amp.md#access_type) по умолчанию для выделения памяти на ускорителе определяется `default_cpu_access_type` свойством. По умолчанию `array` `array_view` объекты и принимают то же значение, `access_type` что и основной связанный объект `accelerator` .
+`array` объекты можно использовать для задания точного управления использованием общей памяти, если соответствующий ускоритель поддерживает его. Поддерживает ли ускоритель совместно используемой памяти свойство [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) ускорителя, которое возвращает, **`true`** когда поддерживается общая память. Если общая память поддерживается, [Перечисление access_type](reference/concurrency-namespace-enums-amp.md#access_type) по умолчанию для выделения памяти на ускорителе определяется `default_cpu_access_type` свойством. По умолчанию `array` `array_view` объекты и принимают то же значение, `access_type` что и основной связанный объект `accelerator` .
 
 Устанавливая явно свойство [массива Array:: Cpu_access_type данных](reference/array-class.md#cpu_access_type) `array` , вы можете точно контролировать, как используется общая память, чтобы оптимизировать приложение для характеристик производительности оборудования на основе шаблонов доступа к памяти в вычислительных ядрах. Объект соответствует тому же, что и `array_view` `cpu_access_type` объект `array` , с которым он связан; или, если array_view создается без источника данных, он `access_type` отражает среду, которая сначала вызывает выделение хранилища. То есть при первом обращении к узлу (ЦП) он ведет себя так, как если бы он был создан на основе источника данных ЦП, и совместно с объектом, `access_type` `accelerator_view` связанным с захватом, но если он первый доступ к `accelerator_view` , то он ведет себя так, как если бы он был создан `array` на основе созданного объекта `accelerator_view` и совместно использует `array` `access_type` .
 
@@ -495,7 +495,7 @@ C++ AMP содержит библиотеку графики, предназна
 
 - [Активность GPU (другие процессы)](/visualstudio/profiling/gpu-activity-other-processes)
 
-- [Каналы (представление "потоки")](/visualstudio/profiling/channels-threads-view)
+- [Каналы (представление "Потоки")](/visualstudio/profiling/channels-threads-view)
 
 - [Анализ кода C++ AMP с помощью визуализатора параллелизма](/archive/blogs/nativeconcurrency/analyzing-c-amp-code-with-the-concurrency-visualizer)
 
@@ -508,4 +508,4 @@ C++ AMP содержит библиотеку графики, предназна
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [Синтаксис лямбда-выражений](../../cpp/lambda-expression-syntax.md)<br/>
 [Справочник (C++ AMP)](../../parallel/amp/reference/reference-cpp-amp.md)<br/>
-[Блог о параллельном программировании в машинном коде](https://go.microsoft.com/fwlink/p/?linkid=238472)
+[Блог о параллельном программировании в машинном коде](/archive/blogs/nativeconcurrency/)
