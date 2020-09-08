@@ -1,5 +1,6 @@
 ---
 title: _itoa, функции _itow
+description: Справочник по API для _itoa и _itow; , который преобразует целое число в строку.
 ms.date: 4/2/2020
 api_name:
 - itoa
@@ -113,16 +114,16 @@ helpviewer_keywords:
 - converting numbers, to strings
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
-ms.openlocfilehash: 7fd776c860e8f3ba071d7fad10c99dfb7b3bf2d7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c8d64dcc1efdb9371feb98d8674a7a2c41c7ab3a
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843499"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555467"
 ---
 # <a name="itoa-_itoa-ltoa-_ltoa-ultoa-_ultoa-_i64toa-_ui64toa-_itow-_ltow-_ultow-_i64tow-_ui64tow"></a>itoa, _itoa, ltoa, _ltoa, ultoa, _ultoa, _i64toa, _ui64toa, _itow, _ltow, _ultow, _i64tow, _ui64tow
 
-Преобразует целое число в строку. Доступны более безопасные версии этих функций; см. раздел [_itoa_s, функции _itow_s](itoa-s-itow-s.md).
+Преобразует целое число в строку. Доступны более безопасные версии этих функций, см. [_itoa_s _itow_s функции](itoa-s-itow-s.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -193,9 +194,9 @@ wchar_t * _ui64tow( unsigned long long value, wchar_t (&buffer)[size],
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая из этих функций возвращает указатель на *буфер*. Ошибка не возвращается.
+Каждая из этих функций возвращает указатель на *буфер*. Ошибки не возвращаются.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
 Функции **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**и **_ui64toa** преобразуют цифры заданного аргумента *значения* в строку символов, заканчивающуюся нулем, и сохраняют результат (до 33 символов для **_itoa**, **_ltoa**и **_ultoa**и 65 для **_i64toa** и **_ui64toa**) в *буфере*. Если *основание системы счисления* равно 10, а *значение* отрицательное, то первым символом хранимой строки будет знак "минус" ( **-** ). Функции **_itow**, **_ltow**, **_ultow**, **_i64tow**и **_ui64tow** — это версии **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**и **_ui64toa**для расширенных символов соответственно.
 
@@ -348,7 +349,7 @@ base 3: 11112220022122120101211020120210210211220 (41 chars)
 base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 chars)
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>Дополнительно
 
 [Преобразование данных](../../c-runtime-library/data-conversion.md)<br/>
 [_itoa_s, функции _itow_s](itoa-s-itow-s.md)<br/>

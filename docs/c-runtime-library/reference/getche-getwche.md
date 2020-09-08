@@ -1,5 +1,6 @@
 ---
 title: _getche, _getwche
+description: Справочник по API для _getche и _getwche; , который получает символ из консоли с помощью эха.
 ms.date: 4/2/2020
 api_name:
 - _getwche
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - getwche function
 - _getche function
 ms.assetid: eac978a8-c43a-4130-938f-54f12e2a0fda
-ms.openlocfilehash: dd8c72d4c8d6eedb2485fc23e09e9118ab6d45ac
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 228251a34c3f9829f2ef7c39561af4118649e158
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910823"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556076"
 ---
 # <a name="_getche-_getwche"></a>_getche, _getwche
 
@@ -58,9 +59,9 @@ wint_t _getwche( void );
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает считанный символ. Ошибка не возвращается.
+Возвращает считанный символ. Ошибки не возвращаются.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
 Функции **_getche** и **_getwche** считывают один символ из консоли с эхо-выводом, то есть символ отображается в консоли. Эти функции нельзя использовать для считывания сочетания CTRL+C. При считывании функциональной клавиши или клавиши со стрелкой каждая из этих функций должна вызываться дважды. Первый вызов возвращает 0 или 0xE0, а второй вызов возвращает фактический код клавиши.
 
@@ -119,7 +120,7 @@ abcdefy
 Type 'Y' when finished typing keys: abcdefyY
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Ввод-вывод в консоль и порт](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cgets, _cgetws](../../c-runtime-library/cgets-cgetws.md)<br/>

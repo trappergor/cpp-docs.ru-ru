@@ -1,6 +1,7 @@
 ---
 title: asin, asinf, asinl
-ms.date: 4/2/2020
+description: Справочник по API для ASIN, асинф и ASIN; который вычисляет Арксинус значения с плавающей запятой.
+ms.date: 08/31/2020
 api_name:
 - asinf
 - asinl
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
-ms.openlocfilehash: 98f7babfbfcbfcdbf36b79b70aac33f002e3bc90
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7167debcfb605ab05720d9441943439ea9982324
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87189445"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556662"
 ---
 # <a name="asin-asinf-asinl"></a>asin, asinf, asinl
 
@@ -51,16 +52,15 @@ ms.locfileid: "87189445"
 double asin( double x );
 float asinf ( float x );
 long double asinl( long double x );
-```
+#define asin(X) // Requires C11 or higher
 
-```cpp
 float asin( float x );  // C++ only
 long double asin( long double x );  // C++ only
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*x*<br/>
+*x*\
 Значение, арксинус которого необходимо вычислить.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -75,9 +75,11 @@ long double asin( long double x );  // C++ only
 |± **КНАН**, **с**|нет|**_DOMAIN**|
 |&#124;x&#124;>1|**Недопустимый**|**_DOMAIN**|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **ASIN** со **`float`** значениями и **`long double`** . В программе на C **ASIN** всегда принимает и возвращает **`double`** .
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **ASIN** со **`float`** значениями и **`long double`** . В программе на языке C, если только вы не используете \<tgmath.h> макрос для вызова этой функции, **ASIN** всегда принимает и возвращает **`double`** .
+
+При использовании \<tgmath.h> `asin()` макроса тип аргумента определяет, какая версия функции выбрана. Подробные сведения см. в разделе [Type-Generic Math](../../c-runtime-library/tgmath.md) .
 
 По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
@@ -86,12 +88,13 @@ long double asin( long double x );  // C++ only
 |Подпрограмма|Обязательный заголовок (C)|Обязательный заголовок (C++)|
 |-------------|---------------------|-|
 |**ASIN**, **асинф**, **ASIN**|\<math.h>|\<cmath> или \<math.h>|
+|макрос **ASIN ()** | \<tgmath.h> ||
 
 ## <a name="example"></a>Пример
 
 Дополнительные сведения см. в разделе [acos, acosf, acosl](acos-acosf-acosl.md).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>Дополнительно
 
 [Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>

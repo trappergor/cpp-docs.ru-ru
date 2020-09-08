@@ -1,6 +1,7 @@
 ---
 title: lrint, lrintf, lrintl, llrint, llrintf, llrintl
-ms.date: 4/2/2020
+description: Справочник по API для лринт (), лринтф (), лринтл (), ллринт (), ллринтф () и ллринтл (); что Округляет указанное значение с плавающей запятой до ближайшего целого значения, используя текущий режим округления и направление.
+ms.date: 9/1/2020
 api_name:
 - lrint
 - lrintl
@@ -52,12 +53,12 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-ms.openlocfilehash: c692b97598e2342628c3171fc22aeead9c864d60
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f208c183400aac7a110bb6fd87398d4377fe8f06
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216912"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555024"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint, lrintf, lrintl, llrint, llrintf, llrintl
 
@@ -105,11 +106,13 @@ long long int llrintf(
 long long int llrintl(
    long double x
 );
+
+#define lrint(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*x*<br/>
+*x*\
 Значение для округления.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -120,9 +123,11 @@ long long int llrintl(
 |-----------|------------|
 |*x* находится за пределами диапазона возвращаемого типа<br /><br /> *x* = ± ∞<br /><br /> *x* = NaN|Вызывает **FE_INVALID** и возвращает ноль (0).|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **лринт** и **ллринт** , которые принимают **`float`** **`long double`** типы и. В программе на языке C **лринт** и **ллринт** всегда принимают **`double`** .
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **лринт** и **ллринт** , которые принимают **`float`** **`long double`** типы и. В программе на языке C, если только вы не используете \<tgmath.h> макрос для вызова этой функции, **лринт** и **ллринт** всегда принимают **`double`** .
+
+При использовании \<tgmath.h> `llrint()` макроса тип аргумента определяет, какая версия функции выбрана. Подробные сведения см. в разделе [Type-Generic Math](../../c-runtime-library/tgmath.md) .
 
 Если *x* не представляет эквивалент целочисленного значения с плавающей запятой, эти функции вызывают **FE_INEXACT**.
 
@@ -132,12 +137,13 @@ long long int llrintl(
 
 ## <a name="requirements"></a>Требования
 
-|Компонент|Заголовок C|Заголовок C++|
+|Функция|Заголовок C|Заголовок C++|
 |--------------|--------------|------------------|
 |**лринт**, **лринтф**, **лринтл**, **ллринт**, **ллринтф**, **ллринтл**|\<math.h>|\<cmath>|
+|макрос **лринт** | \<tgmath.h> ||
 
 Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>Дополнительно
 
-[Алфавитный справочник по функциям](crt-alphabetical-function-reference.md)<br/>
+[Алфавитный справочник по функциям](crt-alphabetical-function-reference.md)

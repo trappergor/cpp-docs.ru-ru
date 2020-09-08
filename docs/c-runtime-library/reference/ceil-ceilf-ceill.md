@@ -1,6 +1,7 @@
 ---
 title: ceil, ceilf, ceill
-ms.date: 6/5/2020
+description: Ссылка API для калкуатинга в Ceiling значения с ceil ().
+ms.date: 9/1/2020
 api_name:
 - ceilf
 - ceil
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - ceil function
 - ceilf function
 ms.assetid: f4e5acab-5c8f-4b10-9ae2-9561e6453718
-ms.openlocfilehash: 2cacd0ad9fa08e903d2ab5cff5f73611c85fab3e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3079f52c79d6d888923025357bb21adc782aa5cd
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221956"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555247"
 ---
 # <a name="ceil-ceilf-ceill"></a>ceil, ceilf, ceill
 
@@ -64,16 +65,17 @@ float ceilf(
 long double ceill(
    long double x
 );
+#define ceil(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*x*<br/>
+*x*\
 Значение с плавающей запятой.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Функции **ceil** возвращают значение с плавающей запятой, представляющее наименьшее целое число, которое больше или равно *x*. Ошибка не возвращается.
+Функции **ceil** возвращают значение с плавающей запятой, представляющее наименьшее целое число, которое больше или равно *x*. Ошибки не возвращаются.
 
 |Входные данные|Исключение SEH|Исключение Matherr|
 |-----------|-------------------|-----------------------|
@@ -81,9 +83,11 @@ long double ceill(
 
 **ceil** имеет реализацию, использующую Streaming SIMD Extensions 2 (SSE2). Сведения о реализации SSE2 и ограничениях на ее использование см. в разделе [_set_SSE2_enable](set-sse2-enable.md).
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **ceil** , которые принимают **`float`** **`long double`** типы или. В программе на языке C **ceil** всегда принимает и возвращает **`double`** .
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **ceil** , которые принимают **`float`** **`long double`** типы или. В программе на языке C, если только вы не используете \<tgmath.h> макрос для вызова этой функции, **ceil** всегда принимает и возвращает **`double`** .
+
+е используется макрос <tgmath. h> `ceil()` , тип аргумента определяет, какая версия функции выбрана. Подробные сведения см. в разделе [Type-Generic Math](../../c-runtime-library/tgmath.md) .
 
 По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
@@ -92,6 +96,7 @@ long double ceill(
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
 |**ceil**, **ceilf**, **цеилл**|\<math.h>|
+|макрос **ceil** | \<tgmath.h> ||
 
 Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
@@ -99,7 +104,7 @@ long double ceill(
 
 См. пример для [floor](floor-floorf-floorl.md).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>Дополнительно
 
 [Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [floor, floorf, floorl](floor-floorf-floorl.md)<br/>

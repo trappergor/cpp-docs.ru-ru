@@ -1,5 +1,6 @@
 ---
 title: _umask
+description: Справочник по API для _umask; Задает маску разрешений файла по умолчанию.
 ms.date: 4/2/2020
 api_name:
 - _umask
@@ -31,16 +32,16 @@ helpviewer_keywords:
 - file permissions [C++]
 - files [C++], permission settings for
 ms.assetid: 5e9a13ba-5321-4536-8721-6afb6f4c8483
-ms.openlocfilehash: 84735374a936e47691df82247f0202ecfcd86d9d
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3735ecd7ba194009945d3717982d7828ecee3c1e
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913849"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89554933"
 ---
 # <a name="_umask"></a>_umask
 
-Задает маску разрешений файла по умолчанию. Существует более безопасная версия этой функции, см. раздел [_umask_s](umask-s.md).
+Задает маску разрешений файла по умолчанию. Дополнительные сведения о более безопасной версии этой функции см. в разделе [_umask_s](umask-s.md) .
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -55,9 +56,9 @@ int _umask( int pmode );
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**_umask** возвращает предыдущее значение *пмоде*. Ошибка не возвращается.
+**_umask** возвращает предыдущее значение *пмоде*. Ошибки не возвращаются.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
 Функция **_umask** устанавливает маску разрешений файла для текущего процесса в режим, заданный параметром *пмоде*. Маска разрешений файла изменяет настройки разрешений для новых файлов, созданных с помощью **_creat**, **_open**или **_sopen**. Если бит в битовой маске равен 1, соответствующий бит в запрошенном значении разрешения имеет значение 0 (запрещено). Если бит в битовой маске равен 0, соответствующий бит остается без изменений. Параметр разрешения для нового файла не устанавливается до тех пор, пока файл не будет закрыт в первый раз.
 
@@ -116,11 +117,11 @@ int main( void )
 Oldmask = 0x0000
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Обработка файлов](../../c-runtime-library/file-handling.md)<br/>
-[Низкоуровневый ввод-вывод](../../c-runtime-library/low-level-i-o.md)<br/>
+[Низкоуровневые операции ввода-вывода](../../c-runtime-library/low-level-i-o.md)<br/>
 [_chmod, _wchmod](chmod-wchmod.md)<br/>
-[_creat, _wcreat](creat-wcreat.md)<br/>
+[Функция _creat, _wcreat](creat-wcreat.md)<br/>
 [_mkdir, _wmkdir](mkdir-wmkdir.md)<br/>
 [_open, _wopen](open-wopen.md)<br/>

@@ -1,6 +1,7 @@
 ---
 title: ilogb, ilogbf, ilogbl2
-ms.date: 04/05/2018
+description: Справочник по API для илогб, илогбф и ilogbl2; Возвращает целое число, представляющее несмещенную базовую экспоненту указанного значения.
+ms.date: 9/1/2020
 api_name:
 - ilogb
 - ilogbf
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - ilogbf function
 - ilogbl function
 ms.assetid: 9ef19d57-1caa-41d5-8233-2faad3562fcb
-ms.openlocfilehash: 6feea7a242a066f669429944226f4ca6022505b6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b27c329cca1edb9d30bb6b9b641f94d174c9c406
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232525"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556376"
 ---
 # <a name="ilogb-ilogbf-ilogbl"></a>ilogb, ilogbf, ilogbl
 
@@ -66,11 +67,13 @@ int ilogbf(
 int ilogbl(
    long double x
 );
+
+#define ilogbl(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*x*<br/>
+*x*\
 Указанное значение.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -86,9 +89,11 @@ int ilogbl(
 
 Сообщает об ошибках, как указано в [_matherr](matherr.md).
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **илогб** , которые принимают и возвращают **`float`** **`long double`** типы и. В программе на языке C **илогб** всегда принимает и возвращает **`double`** .
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **илогб** , которые принимают и возвращают **`float`** **`long double`** типы и. В программе на языке C, если только вы не используете \<tgmath.h> макрос для вызова этой функции, **илогб** всегда принимает и возвращает **`double`** .
+
+При использовании \<tgmath.h> `ilogb()` макроса тип аргумента определяет, какая версия функции выбрана. Подробные сведения см. в разделе [Type-Generic Math](../../c-runtime-library/tgmath.md) .
 
 Вызов этой функции аналогичен вызову эквивалентной функции **logb** , а затем приведению возвращаемого значения к **`int`** .
 
@@ -97,10 +102,11 @@ int ilogbl(
 |Подпрограмма|Заголовок C|Заголовок C++|
 |-------------|--------------|------------------|
 |**илогб**, **илогбф**, **илогбл**|\<math.h>|\<cmath>|
+|макрос **илогб** | \<tgmath.h> ||
 
 Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>Дополнительно
 
 [Алфавитный справочник по функциям](crt-alphabetical-function-reference.md)<br/>
 [frexp](frexp.md)<br/>

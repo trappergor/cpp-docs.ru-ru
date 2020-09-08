@@ -1,5 +1,6 @@
 ---
 title: _set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler
+description: Справочник по API для _set_invalid_parameter_handler и _set_thread_local_invalid_parameter_handler; который задает функцию, вызываемую, когда CRT обнаруживает недопустимый аргумент.
 ms.date: 4/2/2020
 api_name:
 - _set_invalid_parameter_handler
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - _set_invalid_parameter_handler function
 - _set_thread_local_invalid_parameter_handler function
 ms.assetid: c0e67934-1a41-4016-ad8e-972828f3ac11
-ms.openlocfilehash: 404a865cceb5e4014969b15e9877761187af777b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: a965bd71af18a57c31d3cfef927be02005c407c0
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913996"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555622"
 ---
 # <a name="_set_invalid_parameter_handler-_set_thread_local_invalid_parameter_handler"></a>_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler
 
@@ -64,11 +65,11 @@ _invalid_parameter_handler _set_thread_local_invalid_parameter_handler(
 
 Указатель на обработчик недопустимого параметра до вызова.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
 Многие функции времени выполнения C проверяют допустимость аргументов, передаваемых в них. Если передается недопустимый аргумент, функция может установить номер **ошибки «код возврата» или** вернуть код ошибки. В таких случаях также вызывается обработчик недопустимого параметра. Среда выполнения C предоставляет глобальный обработчик недопустимых параметров по умолчанию, который завершает программу и отображает сообщение об ошибке среды выполнения. Вы можете использовать **_set_invalid_parameter_handler** , чтобы задать собственную функцию в качестве глобального обработчика недопустимых параметров. Среда выполнения C также поддерживает локальный обработчик недопустимых параметров потока. Если обработчик локального параметра потока задан в потоке с помощью **_set_thread_local_invalid_parameter_handler**, функции среды выполнения C, вызываемые из потока, используют этот обработчик вместо глобального обработчика. Только одну функцию можно указать в качестве глобального обработчика недопустимых аргументов единовременно. Только одну функцию можно указать в качестве локального обработчика недопустимых аргументов для одного потока, но различные потоки могут иметь разные локальные обработчики потоков. Это позволяет изменять обработчик, который используется в одной части кода, не затрагивая работу других потоков.
 
-Когда среда выполнения вызывает функцию обработки недопустимого параметра, это обычно означает, что возникла неисправимая ошибка. Указанная функция обработчика недопустимого параметра должна сохранить все данные, которые возможно сохранить, и затем прерваться. Она не должна возвращать управление функции main, если вы не уверены, что ошибка исправима.
+Когда среда выполнения вызывает функцию обработки недопустимого параметра, это обычно означает, что возникла неисправимая ошибка. Указанная функция обработчика недопустимого параметра должна сохранить все данные, которые возможно сохранить, и затем прерваться. Он не должен возвращать управление функции Main, если вы не уверены, что эта ошибка может быть восстановлена.
 
 Функция обработчика недопустимого параметра должна иметь следующий прототип:
 
@@ -90,7 +91,7 @@ void _invalid_parameter(
 
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
-|**_set_invalid_parameter_handler**, **_set_thread_local_invalid_parameter_handler**|C: \<stdlib.h><br /><br /> C++: \<cstdlib> или \<stdlib.h>|
+|**_set_invalid_parameter_handler**, **_set_thread_local_invalid_parameter_handler**|Ц \<stdlib.h><br /><br /> C++: \<cstdlib> или \<stdlib.h>|
 
 Функции **_set_invalid_parameter_handler** и **_set_thread_local_invalid_parameter_handler** являются специфичными для Microsoft. Сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
@@ -140,8 +141,8 @@ Invalid parameter detected in function common_vfprintf. File: minkernel\crts\ucr
 Expression: format != nullptr
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>Дополнительно
 
 [_get_invalid_parameter_handler, _get_thread_local_invalid_parameter_handler](get-invalid-parameter-handler-get-thread-local-invalid-parameter-handler.md)<br/>
-[Версии функций CRT повышенной безопасности](../../c-runtime-library/security-enhanced-versions-of-crt-functions.md)<br/>
-[errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>
+[Версии функций CRT с повышенной безопасностью](../../c-runtime-library/security-enhanced-versions-of-crt-functions.md)<br/>
+[errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>

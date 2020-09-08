@@ -1,5 +1,6 @@
 ---
 title: ctanh, ctanhf, ctanhl
+description: Справочник по API для ктанх, ктанхф, ктанхл; который рассчитывает Комплексный гиперболический тангенс комплексного числа.
 ms.date: 11/04/2016
 api_name:
 - ctanh
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - ctanhl function
 - ctanhf function
 ms.assetid: 807f2cd1-8740-4988-afff-5911c346385b
-ms.openlocfilehash: dae59dcd4a71045b27c6ba9501580bf981b9828f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 959d48853e3edac707a7daea615270b20dad37e7
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941966"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555870"
 ---
 # <a name="ctanh-ctanhf-ctanhl"></a>ctanh, ctanhf, ctanhl
 
@@ -66,33 +67,33 @@ _Lcomplex ctanhl(
 
 ### <a name="parameters"></a>Параметры
 
-*z*<br/>
+*гармошкой*\
 Комплексное число, указывающее угол в радианах.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Сложный гиперболический тангенс *z*.
 
-|Ввод|Исключение SEH|**_matherr** Об|
+|Входные данные|Исключение SEH|**_matherr** Об|
 |-----------|-------------------|--------------------------|
-|± ∞, КНАН, ТО ЕСТЬ|none|_DOMAIN|
+|± ∞, КНАН, ТО ЕСТЬ|нет|_DOMAIN|
 |± ∞ (Tan, TANF)|INVALID|_DOMAIN|
 
 ## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **ктанх** , которые принимают и возвращают значения **_Fcomplex** и **_Lcomplex** . В программе на языке C **ктанх** всегда принимает и возвращает значение **_Dcomplex** .
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **ктанх** , которые принимают и возвращают **_Fcomplex** и **_Lcomplex** значения. В программе на языке C **ктанх** всегда принимает и возвращает значение **_Dcomplex** .
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Заголовок C|Заголовок C++|
 |-------------|--------------|------------------|
-|**ктанх**, **ктанхф**, **ктанхл**|\<complex.h>|\<ccomplex>|
+|**ктанх**,               **ктанхф**, **ктанхл**|\<complex.h>|\<ccomplex>|
 
 Сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительно
 
-[Алфавитный указатель функций](crt-alphabetical-function-reference.md)<br/>
+[Алфавитный справочник по функциям](crt-alphabetical-function-reference.md)<br/>
 [catanh, catanhf, catanhl](catanh-catanhf-catanhl.md)<br/>
 [catan, catanf, catanl](catan-catanf-catanl.md)<br/>
 [csinh, csinhf, csinhl](csinh-csinhf-csinhl.md)<br/>

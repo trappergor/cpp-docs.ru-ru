@@ -1,6 +1,7 @@
 ---
 title: frexp, frexpf, frexpl
-ms.date: 4/2/2020
+description: Справочник по API для frexp, фрекспф и фрекспл; который получает мантисса и экспоненту числа с плавающей запятой.
+ms.date: 9/1/2020
 api_name:
 - frexp
 - _o_frexp
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - frexp function
 - floating-point functions, mantissa and exponent
 ms.assetid: 9b020f2e-3967-45ec-a6a8-d467a071aa55
-ms.openlocfilehash: 34d8877d4b8372a33fb5f0f6095a7027cae50555
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a23de4160abcfab2518125bfa0fd35a389901674
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220708"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555752"
 ---
 # <a name="frexp-frexpf-frexpl"></a>frexp, frexpf, frexpl
 
@@ -58,6 +59,10 @@ long double frexpl(
    long double x,
    int * expptr
 );
+#define frexpl(X, INT_PTR) // Requires C11 or higher
+```
+
+```cpp
 float frexp(
    float x,
    int * expptr
@@ -70,29 +75,32 @@ long double frexp(
 
 ### <a name="parameters"></a>Параметры
 
-*x*<br/>
+*x*\
 Значение с плавающей запятой.
 
-*експптр*<br/>
+*експптр*\
 Указатель на сохраненное значение целой части числа.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 **frexp** возвращает мантисса. Если *x* равно 0, функция возвращает 0 для мантиссаа и экспоненты. Если *експптр* имеет **значение NULL**, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция **устанавливает** **еинвал** и возвращает 0.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
 Функция **frexp** разбивает значение с плавающей запятой (*x*) в мантисса (*m*) и экспоненту (*n*) таким, что абсолютное значение *m* больше или равно 0,5 и меньше 1,0, а *x*  =  *m* * 2<sup>*n*</sup>. Целочисленная экспонента *n* хранится в расположении, на которое указывает *експптр*.
 
-C++ допускает перегрузку, поэтому можно вызывать перегрузки **frexp**. В программе на языке C **frexp** всегда принимает **`double`** и **`int`** указатель и возвращает **`double`** .
+C++ допускает перегрузку, поэтому можно вызывать перегрузки **frexp**. В программе на языке C, если только вы не используете \<tgmath.h> макрос для вызова этой функции, **frexp** всегда принимает **`double`** и **`int`** указатель и возвращает **`double`** .
+
+При использовании \<tgmath.h> `frexp()` макроса тип аргумента определяет, какая версия функции выбрана. Подробные сведения см. в разделе [Type-Generic Math](../../c-runtime-library/tgmath.md) .
 
 По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
-|Компонент|Обязательный заголовок|
+|Функция|Обязательный заголовок|
 |--------------|---------------------|
 |**frexp**, **фрекспф**, **фрекспл**|\<math.h>|
+|макрос **frexp** | \<tgmath.h> |
 
 Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
@@ -121,7 +129,7 @@ int main( void )
 frexp( 16.400000, &n ) = 0.512500, n = 5
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [ldexp](ldexp.md)<br/>

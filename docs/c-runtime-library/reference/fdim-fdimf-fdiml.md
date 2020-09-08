@@ -1,6 +1,7 @@
 ---
 title: fdim, fdimf, fdiml
-ms.date: 04/05/2018
+description: Справочник по API для фдим, fdimf и фдимл; который определяет положительную разность между двумя значениями.
+ms.date: 9/1/2020
 api_name:
 - fdim
 - fdimf
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - fdimf function
 - fdiml function
 ms.assetid: 2d4ac639-51e9-462d-84ab-fb03b06971a0
-ms.openlocfilehash: 1a7bbeaf77c94f620a82f77fb1aad3c71c34f2ef
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 406fc5cfe543aa0865760df9ff780c62e78510fc
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221917"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89554790"
 ---
 # <a name="fdim-fdimf-fdiml"></a>fdim, fdimf, fdiml
 
@@ -71,14 +72,16 @@ long double fdiml(
    long double x,
    long double y
 );
+
+#define fdim(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*x*<br/>
+*x*\
 Первое значение в вычитании.
 
-*&*<br/>
+*&*\
 Второе значение в вычитании.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -96,25 +99,28 @@ long double fdiml(
 |-----------|------------|
 |Ошибка переполнения диапазона|+HUGE_VAL, +HUGE_VALF или +HUGE_VALL|
 |Ошибка недостаточного заполнения диапазона|правильное значение (после округления)|
-|*x* или *y* является NaN|Не число|
+|*x* или *y* является NaN|NaN|
 
 Сообщает об ошибках, как указано в [_matherr](matherr.md).
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **фдим** , которые принимают и возвращают **`float`** **`long double`** типы и. В программе на языке C **фдим** всегда принимает и возвращает **`double`** .
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **фдим** , которые принимают и возвращают **`float`** **`long double`** типы и. В программе на языке C, если только вы не используете \<tgmath.h> макрос для вызова этой функции, **фдим** всегда принимает и возвращает **`double`** .
+
+При использовании \<tgmath.h> `fdim()` макроса тип аргумента определяет, какая версия функции выбрана. Подробные сведения см. в разделе [Type-Generic Math](../../c-runtime-library/tgmath.md) .
 
 За исключением обработки NaN, эта функция эквивалентна `fmax(x - y, 0)` .
 
 ## <a name="requirements"></a>Требования
 
-|Компонент|Заголовок C|Заголовок C++|
+|Функция|Заголовок C|Заголовок C++|
 |--------------|--------------|------------------|
 |**фдим**, **fdimf**, **фдимл**|\<math.h>|\<cmath>|
+|макрос **фдим** | \<tgmath.h> ||
 
 Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>Дополнительно
 
 [Алфавитный справочник по функциям](crt-alphabetical-function-reference.md)<br/>
 [fmax, fmaxf, fmaxl](fmax-fmaxf-fmaxl.md)<br/>

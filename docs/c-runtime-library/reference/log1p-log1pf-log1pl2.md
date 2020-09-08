@@ -1,6 +1,7 @@
 ---
 title: log1p, log1pf, log1pl2
-ms.date: 4/2/2020
+description: Справочник по API для log1p, log1pf, log1pl2; который вычисляет натуральный логарифм 1 плюс указанное значение.
+ms.date: 9/1/2020
 api_name:
 - log1p
 - log1pf
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - log1pf function
 - log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
-ms.openlocfilehash: d599567e38d216e78720a3d6b330310095acdd11
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8858d761428d4dad6e3fe836b82041ae92f1827a
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218589"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556234"
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p, log1pf, log1pl
 
@@ -54,6 +55,14 @@ ms.locfileid: "87218589"
 double log1p(
    double x
 );
+float log1pf(
+   float x
+);
+long double log1pl(
+   long double x
+);
+
+#define log1p(X) // Requires C11 or higher
 
 float log1p(
    float x
@@ -62,19 +71,11 @@ float log1p(
 long double log1p(
    long double x
 ); //C++ only
-
-float log1pf(
-   float x
-);
-
-long double log1pl(
-   long double x
-);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*x*<br/>
+*x*\
 Аргумент с плавающей запятой.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -96,11 +97,13 @@ long double log1pl(
 
 Значение **возврата** устанавливается РАВНым ERANGE, если *x* =-1. Значение **возврата** устанавливается равным **Едом** , если *x* <-1.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
 Функции **log1p** могут быть более точными, чем использование, `log(x + 1)` когда *x* приближается к 0.
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **log1p** , которые принимают и возвращают **`float`** **`long double`** типы и. В программе на языке C **log1p** всегда принимает и возвращает **`double`** .
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **log1p** , которые принимают и возвращают **`float`** **`long double`** типы и. В программе на языке C, если только вы не используете \<tgmath.h> макрос для вызова этой функции, **log1p** всегда принимает и возвращает **`double`** .
+
+При использовании \<tgmath.h> `log1p()` макроса тип аргумента определяет, какая версия функции выбрана. Подробные сведения см. в разделе [Type-Generic Math](../../c-runtime-library/tgmath.md) .
 
 Если *x* является естественным числом, эта функция возвращает логарифм факториала (*x* -1).
 
@@ -108,14 +111,15 @@ long double log1pl(
 
 ## <a name="requirements"></a>Требования
 
-|Компонент|Заголовок C|Заголовок C++|
+|Функция|Заголовок C|Заголовок C++|
 |--------------|--------------|------------------|
 |**log1p**, **log1pf**, **log1pl**|\<math.h>|\<cmath>|
+|макрос **log1p** | \<tgmath.h> ||
 
 Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>Дополнительно
 
-[Алфавитный справочник по функциям](crt-alphabetical-function-reference.md)<br/>
-[log2, log2f, log2l](log2-log2f-log2l.md)<br/>
-[log, logf, log10, log10f](log-logf-log10-log10f.md)<br/>
+[Алфавитный справочник по функциям](crt-alphabetical-function-reference.md)\
+[log2, log2f, log2l](log2-log2f-log2l.md)\
+[log, logf, log10, log10f](log-logf-log10-log10f.md)

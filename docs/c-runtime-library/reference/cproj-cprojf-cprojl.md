@@ -1,6 +1,7 @@
 ---
 title: cproj, cprojf, cprojl
-ms.date: 11/04/2016
+description: Справочник по API для кпрож, кпрожф и кпрожл; который получает проекцию комплексного числа в сфере сферу Римана.
+ms.date: 9/2/2020
 api_name:
 - cproj
 - cprojf
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - cprojf function
 - cprojl function
 ms.assetid: 32b49623-13bf-4cae-802e-7912d75030fe
-ms.openlocfilehash: fdeefe10814b887af04d6f4adbb01300785e8b46
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: fcc3c0a42c8c6392130ad58ed12c4985e7ad4907
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70938953"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555947"
 ---
 # <a name="cproj-cprojf-cprojl"></a>cproj, cprojf, cprojl
 
@@ -62,11 +63,12 @@ _Fcomplex cprojf(
 _Lcomplex cprojl(
    _Lcomplex z
 );
+#define cproj(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*z*<br/>
+*гармошкой*\
 Комплексное число.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -75,19 +77,22 @@ _Lcomplex cprojl(
 
 ## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **кпрож** , которые принимают и возвращают значения **_Fcomplex** и **_Lcomplex** . В программе на языке C **кпрож** всегда принимает и возвращает значение **_Dcomplex** .
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **кпрож** , которые принимают и возвращают **_Fcomplex** и **_Lcomplex** значения. В программе на языке C, если только вы не используете \<tgmath.h> макрос для вызова этой функции, **кпрож** всегда принимает и возвращает значение **_Dcomplex** .
+
+При использовании \<tgmath.h> `cproj()` макроса тип аргумента определяет, какая версия функции выбрана. Подробные сведения см. в разделе [Type-Generic Math](../../c-runtime-library/tgmath.md) .
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Заголовок C|Заголовок C++|
 |-------------|--------------|------------------|
 |**кпрож**, **кпрожф**, **кпрожл**|\<complex.h>|\<ccomplex>|
+|макрос **кпрож** | \<tgmath.h> ||
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительно
 
-[Алфавитный указатель функций](crt-alphabetical-function-reference.md)<br/>
+[Алфавитный справочник по функциям](crt-alphabetical-function-reference.md)<br/>
 [norm, normf, norml](norm-normf-norml1.md)<br/>
 [creal, crealf, creall](creal-crealf-creall.md)<br/>
 [conj, conjf, conjl](conj-conjf-conjl.md)<br/>

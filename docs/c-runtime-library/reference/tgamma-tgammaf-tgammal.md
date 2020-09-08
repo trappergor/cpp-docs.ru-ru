@@ -1,6 +1,7 @@
 ---
 title: tgamma, tgammaf, tgammal
-ms.date: 4/2/2020
+description: Справочник по API для тгамма, tgammaf и тгаммал; , который определяет гамма-функцию указанного значения.
+ms.date: 9/1/2020
 api_name:
 - tgamma
 - tgammaf
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - tgammaf function
 - tgammal function
 ms.assetid: f1bd2681-8af2-48a9-919d-5358fd068acd
-ms.openlocfilehash: f38ae3f3ad38eeb9806803fd8dad1b8297393168
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b49020ca0697e920dccf188df4ad024820966571
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218524"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555180"
 ---
 # <a name="tgamma-tgammaf-tgammal"></a>tgamma, tgammaf, tgammal
 
@@ -55,14 +56,6 @@ double tgamma(
    double x
 );
 
-float tgamma(
-   float x
-); //C++ only
-
-long double tgamma(
-   long double x
-); //C++ only
-
 float tgammaf(
    float x
 );
@@ -70,11 +63,21 @@ float tgammaf(
 long double tgammal(
    long double x
 );
+
+#define tgamma(X) // Requires C11 or higher
+
+float tgamma(
+   float x
+); //C++ only
+
+long double tgamma(
+   long double x
+); //C++ only
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*x*<br/>
+*x*\
 Значение, для которого требуется найти гамму.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -86,20 +89,22 @@ long double tgammal(
 |Проблема|Возвращает|
 |-----------|------------|
 |x = ± 0|± Бесконечности|
-|x = negative integer|Не число|
-|x =-бесконечность|Не число|
+|x = negative integer|NaN|
+|x =-бесконечность|NaN|
 |x = +INFINITY|+INFINITY|
-|x = NaN|Не число|
-|ошибка домена|Не число|
+|x = NaN|NaN|
+|ошибка домена|NaN|
 |Ошибка полюса|± HUGE_VAL, ± HUGE_VALF или ± HUGE_VALL|
 |Ошибка переполнения диапазона|± HUGE_VAL, ± HUGE_VALF или ± HUGE_VALL|
 |ошибка недостаточного заполнения диапазона|правильное значение (после округления).|
 
 Сообщает об ошибках, как указано в [_matherr](matherr.md).
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **тгамма** , которые принимают и возвращают **`float`** **`long double`** типы и. В программе на языке C **тгамма** всегда принимает и возвращает **`double`** .
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **тгамма** , которые принимают и возвращают **`float`** **`long double`** типы и. В программе на языке C, если только вы не используете \<tgmath.h> макрос для вызова этой функции, **тгамма** всегда принимает и возвращает **`double`** .
+
+При использовании \<tgmath.h> `tgamma()` макроса тип аргумента определяет, какая версия функции выбрана. Подробные сведения см. в разделе [Type-Generic Math](../../c-runtime-library/tgmath.md) .
 
 Если x является натуральным числом, эта функция возвращает факториал (x – 1).
 
@@ -107,13 +112,14 @@ long double tgammal(
 
 ## <a name="requirements"></a>Требования
 
-|Компонент|Заголовок C|Заголовок C++|
+|Функция|Заголовок C|Заголовок C++|
 |--------------|--------------|------------------|
-|**тгамма**, **tgammaf**, **тгаммал**|\<math.h>|\<cmath>|
+|**тгамма**, **tgammaf**,  **тгаммал**|\<math.h>|\<cmath>|
+|макрос **тгамма** | \<tgmath.h> ||
 
 Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>Дополнительно
 
 [Алфавитный справочник по функциям](crt-alphabetical-function-reference.md)<br/>
 [lgamma, lgammaf, lgammal](lgamma-lgammaf-lgammal.md)<br/>

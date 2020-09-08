@@ -1,6 +1,7 @@
 ---
 title: cimag, cimagf, cimagl
-ms.date: 11/04/2016
+description: Справочник по API для Цимаг, Цимагф и Цимагл; Извлечение мнимой части комплексного числа.
+ms.date: 9/2/2020
 api_name:
 - cimag
 - cimagf
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - cimagf function
 - cimagl function
 ms.assetid: 0d8836f5-d61d-44cd-8731-6f75cb776def
-ms.openlocfilehash: af7d15ee1b5dfd863025565bf8827199f7492841
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 41631a161a47e247b12a39e312a3f40084c8f22f
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232551"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555844"
 ---
 # <a name="cimag-cimagf-cimagl"></a>cimag, cimagf, cimagl
 
@@ -50,35 +51,37 @@ ms.locfileid: "87232551"
 double cimag( _Dcomplex z );
 float cimagf( _Fcomplex z );
 long double cimagl( _Lcomplex z );
-```
+#define cimag(X) // Requires C11 or higher
 
-```cpp
-float cimag( _Fcomplex z );  // C++
-long double cimag( _Lcomplex z );  // C++
+float cimag( _Fcomplex z );  // C++ only
+long double cimag( _Lcomplex z );  // C++ only
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*гармошкой*<br/>
+*гармошкой*\
 Комплексное число.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Мнимая часть *z*.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **Цимаг** , которые принимают **_Fcomplex** или **_Lcomplex** значения, а также возвращают **`float`** **`long double`** значения или. В программе на языке C **Цимаг** всегда принимает значение **_Dcomplex** и возвращает **`double`** значение.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **Цимаг** , которые принимают **_Fcomplex** или **_Lcomplex** значения, а также возвращают **`float`** **`long double`** значения или. В программе на языке C, если только вы не используете \<tgmath.h> макрос для вызова этой функции, **Цимаг** всегда принимает значение **_Dcomplex** и возвращает **`double`** значение.
+
+При использовании \<tgmath.h> `cimag()` макроса тип аргумента определяет, какая версия функции выбрана. Подробные сведения см. в разделе [Type-Generic Math](../../c-runtime-library/tgmath.md) .
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Заголовок C|Заголовок C++|
 |-------------|--------------|------------------|
 |**Цимаг**, **Цимагф**, **Цимагл**|\<complex.h>|\<ccomplex>|
+|макрос **Цимаг** | \<tgmath.h> ||
 
 Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>Дополнительно
 
 [Алфавитный справочник по функциям](crt-alphabetical-function-reference.md)<br/>
 [norm, normf, norml](norm-normf-norml1.md)<br/>

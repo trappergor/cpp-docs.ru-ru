@@ -1,5 +1,6 @@
 ---
 title: _chgsign, _chgsignf, _chgsignl
+description: Справочник по API для _chgsign, _chgsignf и _chgsignl; который изменяет знак аргумента с плавающей запятой на противоположный.
 ms.date: 04/05/2018
 api_name:
 - _chgsignl
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - chgsign function
 - _chgsign function
 ms.assetid: a6646f8e-213d-4564-8617-f43bc66f989f
-ms.openlocfilehash: 17c8cc05efbcf2ab338d6032eded4ba13ec6197a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7dc934f3c2d22cc36abe5f31f7d64e0674ccdd3a
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943129"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555206"
 ---
 # <a name="_chgsign-_chgsignf-_chgsignl"></a>_chgsign, _chgsignf, _chgsignl
 
@@ -64,7 +65,7 @@ long double _chgsignl(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Функции **_chgsign** возвращают значение, равное аргументу *x*с плавающей запятой, но с обратным знаком. Ошибка не возвращается.
+Функции **_chgsign** возвращают значение, равное аргументу *x*с плавающей запятой, но с обратным знаком. Ошибки не возвращаются.
 
 ## <a name="requirements"></a>Требования
 
@@ -73,10 +74,10 @@ long double _chgsignl(
 |**_chgsign**|\<float.h>|
 |**_chgsignf**, **_chgsignl**|\<math.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительно
 
-[Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
+[Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)<br/>
 [copysign, copysignf, copysignl, _copysign, _copysignf, _copysignl](copysign-copysignf-copysignl-copysign-copysignf-copysignl.md)<br/>

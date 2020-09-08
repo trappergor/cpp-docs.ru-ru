@@ -1,6 +1,7 @@
 ---
 title: remainder, remainderf, remainderl
-ms.date: 4/2/2020
+description: Справочник по API для оставшейся части, ремаиндерф и остатка; который вычислит остаток от деления двух значений с плавающей запятой, округленных до ближайшего целого значения.
+ms.date: 9/1/2020
 api_name:
 - remainderl
 - remainder
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - remainderl
 - remainder
 ms.assetid: 5f721fb3-8b78-4597-9bc0-ca9bcd1f1d0e
-ms.openlocfilehash: b880054430574b6ea1e8bc456774acc35cf116ad
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ef2b326bef2288b52dba8988749e030ff0b46077
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216808"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556013"
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder, remainderf, remainderl
 
@@ -51,38 +52,40 @@ ms.locfileid: "87216808"
 double remainder( double x, double y );
 float remainderf( float x, float y );
 long double remainderl( long double x, long double y );
-```
+#define remainder(X, Y) // Requires C11 or higher
 
-```cpp
 float remainder( float x, float y ); /* C++ only */
 long double remainder( long double x, long double y ); /* C++ only */
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*x*<br/>
+*x*\
 Числитель.
 
-*&*<br/>
+*&*\
 Знаменатель.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Остаток от деления *x*y на число с плавающей запятой  /  *y*. Если значение *y* равно 0,0, то функция **остаток** возвращает нетихом NaN. Сведения о представлении нескрытого числа NaN в семействе **printf** см. в разделе [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
 Функции **остатка** вычисляют значение *x*y *остатка* с плавающей запятой  /  *y* таким, что *x*  =  *n* \* *y*  +  *r*, где *n*— целое число, ближайшее к значению *x*  /  *y* , а *n*— даже каждый раз, когда &#124; *n*  -  *x*  /  *y* &#124; = 1/2. Если *r* = 0, *r* имеет тот же знак, что и *x*.
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **остатка** , которые принимают и возвращают **`float`** **`long double`** значения или. В программе на языке C функция **остаток** всегда принимает два **`double`** аргумента и возвращает **`double`** .
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **остатка** , которые принимают и возвращают **`float`** **`long double`** значения или. В программе на языке C, если только вы не используете \<tgmath.h> макрос для вызова этой функции, функция **остаток** всегда принимает два **`double`** аргумента и возвращает **`double`** .
+
+При использовании \<tgmath.h> `remainder()` макроса тип аргумента определяет, какая версия функции выбрана. Подробные сведения см. в разделе [Type-Generic Math](../../c-runtime-library/tgmath.md) .
 
 По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
-|Компонент|Обязательный заголовок (C)|Обязательный заголовок (C++)|
+|Функция|Обязательный заголовок (C)|Обязательный заголовок (C++)|
 |--------------|---------------------|-|
 |**остаток**, **ремаиндерф**, **остаток**|\<math.h>|\<cmath> или \<math.h>|
+|макрос **остатка** | \<tgmath.h> ||
 
 Сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
@@ -108,10 +111,10 @@ int main( void )
 The remainder of -10.00 / 3.00 is -1.000000
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
-[Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
-[ldiv, lldiv](ldiv-lldiv.md)<br/>
-[imaxdiv](imaxdiv.md)<br/>
-[fmod, fmodf](fmod-fmodf.md)<br/>
-[remquo, remquof, remquol](remquo-remquof-remquol.md)<br/>
+[Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)\
+[ldiv, lldiv](ldiv-lldiv.md)\
+[imaxdiv](imaxdiv.md)\
+[FMOD, фмодф](fmod-fmodf.md)\
+[remquo, remquof, remquol](remquo-remquof-remquol.md)

@@ -1,6 +1,7 @@
 ---
 title: nearbyint, nearbyintf, nearbyintl
-ms.date: 4/2/2020
+description: Справочник по API для неарбинт, неарбинтф и неарбинтл; что Округляет указанное значение с плавающей запятой до целого числа и возвращает это значение в формате с плавающей запятой.
+ms.date: 9/1/2020
 api_name:
 - nearbyint
 - nearbyintf
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - nearbyintf function
 - nearbyintl function
 ms.assetid: dd39cb68-96b0-434b-820f-6ff2ea65584f
-ms.openlocfilehash: 898544f5b191eb68e0ed6f17d7c3c7df849e8d11
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9717559518032c6f1f2126c7ded7cb90603bce64
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216860"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556389"
 ---
 # <a name="nearbyint-nearbyintf-nearbyintl"></a>nearbyint, nearbyintf, nearbyintl
 
@@ -54,16 +55,15 @@ ms.locfileid: "87216860"
 double nearbyint( double x );
 float nearbyintf( float x );
 long double nearbyintl( long double x );
-```
+#define nearbyint( X ) // Requires C11 or higher
 
-```cpp
 float nearbyint( float x ); //C++ only
 long double nearbyint( long double x ); //C++ only
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*x*<br/>
+*x*\
 Значение для округления.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -74,29 +74,32 @@ long double nearbyint( long double x ); //C++ only
 |-----------|------------|
 |*x* = ± бесконечности|± Бесконечности, без изменений|
 |*x* = ± 0|± 0, без изменений|
-|*x* = NaN|Не число|
+|*x* = NaN|NaN|
 
 Сообщения об ошибках не передаются в [_matherr](matherr.md); в частности, эта функция не сообщает об исключениях **FE_INEXACT** .
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
 Основное различие между этой функцией и [Печать](rint-rintf-rintl.md) заключается в том, что эта функция не вызывает неточного исключения с плавающей точкой.
 
 Так как максимальные значения с плавающей запятой являются точными целыми числами, эта функция никогда не будет переполняться сама по себе; вместо этого выходные данные могут привести к переполнению возвращаемого значения в зависимости от используемой функции.
 
-C++ допускает перегрузку, поэтому можно вызывать перегрузки **неарбинт** , которые принимают и возвращают **`float`** **`long double`** Параметры или. В программе на языке C **неарбинт** всегда принимает два значения типа Double и возвращает значение типа Double.
+C++ допускает перегрузку, поэтому можно вызывать перегрузки **неарбинт** , которые принимают и возвращают **`float`** **`long double`** Параметры или. В программе на языке C, если только вы не используете \<tgmath.h> макрос для вызова этой функции, **неарбинт** всегда принимает два значения типа Double и возвращает значение типа Double.
+
+При использовании \<tgmath.h> `nearbyint()` макроса тип аргумента определяет, какая версия функции выбрана. Подробные сведения см. в разделе [Type-Generic Math](../../c-runtime-library/tgmath.md) .
 
 По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
-|Компонент|Заголовок C|Заголовок C++|
+|Функция|Заголовок C|Заголовок C++|
 |--------------|--------------|------------------|
 |**неарбинт**, **неарбинтф**, **неарбинтл**|\<math.h>|\<cmath> или \<math.h>|
+|макрос **неарбинт** | \<tgmath.h> ||
 
 Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>Дополнительно
 
 [Алфавитный справочник по функциям](crt-alphabetical-function-reference.md)<br/>
 [Поддержка математических функций для чисел с плавающей запятой](../floating-point-support.md)<br/>

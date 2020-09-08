@@ -1,6 +1,7 @@
 ---
 title: tanh, tanhf, tanhl
-ms.date: 4/2/2020
+description: Справочник по API для tanh, tanhf и танхл; который вычисляет гиперболический тангенс значения с плавающей запятой.
+ms.date: 08/31/2020
 api_name:
 - tanh
 - tanhf
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - tanhf function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: 9e280e489d5da5d66a48b72b38fe22a6943b7318
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5fa93f56ebec5e8aa06c7317534adb12ae9e68e2
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215118"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556584"
 ---
 # <a name="tanh-tanhf-tanhl"></a>tanh, tanhf, tanhl
 
@@ -52,6 +53,7 @@ ms.locfileid: "87215118"
 double tanh( double x );
 float tanhf( float x );
 long double tanhl( long double x );
+#define tanh(x) // Requires C11 or higher
 ```
 
 ```cpp
@@ -61,20 +63,22 @@ long double tanh( long double x );  // C++ only
 
 ### <a name="parameters"></a>Параметры
 
-*x*<br/>
+*x*\
 Угол в радианах.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Функции **tanh** возвращают гиперболический тангенс *x*. Ошибка не возвращается.
+Функции **tanh** возвращают гиперболический тангенс *x*. Ошибки не возвращаются.
 
 |Входные данные|Исключение SEH|**Matherr** Об|
 |-----------|-------------------|-------------------------|
 |± КНАН, С|нет|_DOMAIN|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **tanh** , которые принимают и возвращают **`float`** **`long double`** значения или. В программе на языке C **tanh** всегда принимает и возвращает **`double`** .
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **tanh** , которые принимают и возвращают **`float`** **`long double`** значения или. В программе на языке C, если только вы не используете \<tgmath.h> макрос для вызова этой функции, **tanh** всегда принимает и возвращает **`double`** .
+
+При использовании \<tgmath.h> `tanh()` макроса тип аргумента определяет, какая версия функции выбрана. Подробные сведения см. в разделе [Type-Generic Math](../../c-runtime-library/tgmath.md) .
 
 По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
@@ -83,6 +87,7 @@ long double tanh( long double x );  // C++ only
 |Подпрограмма|Обязательный заголовок (C)|Обязательный заголовок (C)|
 |-------------|---------------------|-|
 |**tanh**, **tanhf**, **танхл**|\<math.h>|\<cmath> или \<math.h>|
+|макрос **tanh ()** | \<tgmath.h> ||
 
 Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
@@ -114,7 +119,7 @@ tan( 0.785398 ) = 1.000000
 tanh( 1.000000 ) = 0.761594
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>

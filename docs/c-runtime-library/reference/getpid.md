@@ -1,5 +1,6 @@
 ---
 title: _getpid
+description: Справочник по API для _getpid, который получает идентификацию процесса.
 ms.date: 11/04/2016
 api_name:
 - _getpid
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - _getpid function
 - process identification numbers
 ms.assetid: d3e13bae-9a0c-4f33-86d3-ec9df9519285
-ms.openlocfilehash: b0848e5eb01f39c009fcdc650ea551f18e23c6fb
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: fc2de8e0b6e87d04bd9ae29ce3a945c048af00e2
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955000"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556493"
 ---
 # <a name="_getpid"></a>_getpid
 
@@ -48,7 +49,7 @@ int _getpid( void );
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает идентификатор процесса, полученный из системы. Ошибка не возвращается.
+Возвращает идентификатор процесса, полученный из системы. Ошибки не возвращаются.
 
 ## <a name="remarks"></a>Примечания
 
@@ -60,7 +61,7 @@ int _getpid( void );
 |-------------|---------------------|
 |**_getpid**|\<process.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 

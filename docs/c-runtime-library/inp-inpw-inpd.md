@@ -36,16 +36,16 @@ helpviewer_keywords:
 - I/O [CRT], port
 - _inpw function
 ms.assetid: 5d9c2e38-fc85-4294-86d5-7282cc02d1b3
-ms.openlocfilehash: f7b822c4b694969407e32ba26026465fb39bd8d6
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: aafcd633b2ee04c9ced1520d4ecd1520475d0fea
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825833"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556480"
 ---
 # <a name="inp-_inp-inpw-_inpw-_inpd"></a>InP, _inp, инпв, _inpw, _inpd
 
-Входные данные, из порта, байт (`inp`, `_inp`), слова (`inpw`, `_inpw`) или двойного слова (`_inpd`).
+Входные данные, из порта, байт ( `inp` , `_inp` ), слова ( `inpw` , `_inpw` ) или двойного слова ( `_inpd` ).
 
 > [!IMPORTANT]
 > Эти функции устарели. Начиная с Visual Studio 2015 они недоступны в CRT.
@@ -72,7 +72,7 @@ unsigned long _inpd(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Эти функции возвращают байт, слово или двойное слово, прочитанное из порта `port`. Ошибка не возвращается.
+Эти функции возвращают байт, слово или двойное слово, прочитанное из порта `port`. Ошибки не возвращаются.
 
 ## <a name="remarks"></a>Примечания
 
@@ -80,7 +80,7 @@ unsigned long _inpd(
 
 Поскольку эти функции считывают непосредственно с порта ввода-вывода, они не могут использоваться в пользовательском коде.
 
-Имена `inp` и `inpw` являются устаревшими, нерекомендуемыми именами для `_inp` функций `_inpw` и. Дополнительные сведения см. в разделе [имена функций POSIX](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
+`inp`Имена и `inpw` являются устаревшими, нерекомендуемыми именами для `_inp` `_inpw` функций и. Дополнительные сведения см. в разделе [имена функций POSIX](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
 
 ## <a name="requirements"></a>Требования
 
@@ -96,7 +96,7 @@ unsigned long _inpd(
 
 Все версии [библиотек времени выполнения языка C](../c-runtime-library/crt-library-features.md).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>Дополнительно
 
 [Ввод-вывод в консоль и порт](../c-runtime-library/console-and-port-i-o.md)\
 [ыходной, аутпв, _outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md)

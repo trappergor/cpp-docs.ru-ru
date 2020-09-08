@@ -1,6 +1,7 @@
 ---
 title: tan, tanf, tanl
-ms.date: 4/2/2020
+description: Справочник по API для Tan, TANF и танл; , который вычисляет тангенс значения с плавающей запятой.
+ms.date: 08/31/2020
 api_name:
 - tan
 - tanf
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-ms.openlocfilehash: ada853087cb0c6c127873e2929a73e4d3c92035c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8137bf4cbce59083e8e7c09557400fbff4f6b1df
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215131"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556545"
 ---
 # <a name="tan-tanf-tanl"></a>tan, tanf, tanl
 
@@ -54,6 +55,7 @@ ms.locfileid: "87215131"
 double tan( double x );
 float tanf( float x );
 long double tanl( long double x );
+#define tan(x) // Requires C11 or higher
 ```
 
 ```cpp
@@ -63,7 +65,7 @@ long double tan( long double x );  // C++ only
 
 ### <a name="parameters"></a>Параметры
 
-*x*<br/>
+*x*\
 Угол в радианах.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -75,9 +77,11 @@ long double tan( long double x );  // C++ only
 |± КНАН, С|нет|_DOMAIN|
 |± INF|**Недопустимый**|_DOMAIN|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **Tan** , которые принимают и возвращают **`float`** **`long double`** значения или. В программе на языке **Tan** всегда принимает и возвращает **`double`** .
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **Tan** , которые принимают и возвращают **`float`** **`long double`** значения или. В программе на языке C, если только вы не используете \<tgmath.h> макрос для вызова этой функции, **Tan** всегда принимает и возвращает **`double`** .
+
+При использовании \<tgmath.h> `tan()` макроса тип аргумента определяет, какая версия функции выбрана. Подробные сведения см. в разделе [Type-Generic Math](../../c-runtime-library/tgmath.md) .
 
 По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
@@ -86,6 +90,7 @@ long double tan( long double x );  // C++ only
 |Подпрограмма|Обязательный заголовок (C)|Обязательный заголовок (C++)|
 |-------------|---------------------|-|
 |**Tan**, **TANF**, **танл**|\<math.h>|\<cmath> или \<math.h>|
+|макрос **Tan ()** | \<tgmath.h> ||
 
 Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
@@ -113,7 +118,7 @@ int main( void )
 tan( 0.785398 ) = 1.000000
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>

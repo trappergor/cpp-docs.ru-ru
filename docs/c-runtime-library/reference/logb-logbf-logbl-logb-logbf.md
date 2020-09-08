@@ -1,6 +1,7 @@
 ---
 title: logb, logbf, logbl, _logb, _logbf
-ms.date: 4/2/2020
+description: Справочник по API для logb, логбф, логбл, _logb и _logbf; который извлекает значение экспоненты для аргумента с плавающей запятой.
+ms.date: 9/1/2020
 api_name:
 - logb
 - _logb
@@ -47,12 +48,12 @@ helpviewer_keywords:
 - floating-point functions, mantissa and exponent
 - exponents and mantissas
 ms.assetid: 780c4daa-6fe6-4fbc-9412-4c1ba1a1766f
-ms.openlocfilehash: d923fe3a8c23c1c5e983d8766835af2c266b17d2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1131fda94e4748d2fb2f2197f68966aaacc11d05
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218576"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556218"
 ---
 # <a name="logb-logbf-logbl-_logb-_logbf"></a>logb, logbf, logbl, _logb, _logbf
 
@@ -82,22 +83,25 @@ double _logb(
 float _logbf(
    float x
 );
+#define logb(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*x*<br/>
+*x*\
 Значение с плавающей запятой.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 **logb** возвращает Несмещенное значение экспоненты *x* как целое число со знаком, представленное в виде значения с плавающей запятой.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
 Функции **logb** извлекают экспоненциальное значение аргумента с плавающей запятой *x*, как если бы *x* были представлены с бесконечным диапазоном. Если аргумент *x* денормализован, он рассматривается как нормализованный.
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **logb** , которые принимают и возвращают **`float`** **`long double`** значения или. В программе на языке C **logb** всегда принимает и возвращает **`double`** .
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **logb** , которые принимают и возвращают **`float`** **`long double`** значения или. В программе на языке C, если только вы не используете \<tgmath.h> макрос для вызова этой функции, **logb** всегда принимает и возвращает **`double`** .
+
+При использовании \<tgmath.h> `logb()` макроса тип аргумента определяет, какая версия функции выбрана. Подробные сведения см. в разделе [Type-Generic Math](../../c-runtime-library/tgmath.md) .
 
 |Входные данные|Исключение SEH|Исключение Matherr|
 |-----------|-------------------|-----------------------|
@@ -112,6 +116,7 @@ float _logbf(
 |-------------|---------------------|
 |**_logb**|\<float.h>|
 |**logb**, **логбф**, **логбл**, **_logbf**|\<math.h>|
+|макрос **logb** | \<tgmath.h> |
 
 Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
@@ -119,7 +124,7 @@ float _logbf(
 
 Все версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>Дополнительно
 
 [Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [frexp](frexp.md)<br/>

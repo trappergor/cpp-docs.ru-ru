@@ -1,6 +1,7 @@
 ---
 title: fmod, fmodf, fmodl
-ms.date: 4/2/2020
+description: Справочник по API для FMOD, фмодф и фмодл; для вычисления остатка с плавающей запятой.
+ms.date: 9/1/2020
 api_name:
 - fmod
 - fmodf
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - fmod function
 - floating-point numbers, calculating remainders
 ms.assetid: 6962d369-d11f-40b1-a6d7-6f67239f8a23
-ms.openlocfilehash: 4fa3df46358932b8a62a6b8529baed4a5c9e5c49
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2b610dec79c98b973af09f8efb147ad6797f7946
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216977"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556090"
 ---
 # <a name="fmod-fmodf-fmodl"></a>fmod, fmodf, fmodl
 
@@ -68,30 +69,35 @@ long double fmodl(
    long double x,
    long double y
 );
+
+#define fmod(X, Y) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*x*, *y*<br/>
+*x*, *y*\
 Значения с плавающей запятой.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 **FMOD** возвращает остаток от деления *x*y на значение с плавающей запятой  /  *y*. Если значение *y* равно 0,0, **FMOD** возвращает нетихом NaN. Сведения о представлении нескрытого числа NaN в семействе **printf** см. в разделе [printf](printf-printf-l-wprintf-wprintf-l.md).
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
 Функция **FMOD** вычисляет *f* y остатка с плавающей запятой *x*  /  *y* таким образом, что *x*  =  *i* \* *y*  +  *f*, где *i* является целым числом, *f* имеет тот же знак, что и *x*, а абсолютное значение *f* меньше, чем абсолютное значение *y*.
 
-C++ допускает перегрузку, поэтому можно вызывать перегрузки **FMOD** , которые принимают и возвращают **`float`** **`long double`** значения и. В программе на языке C **FMOD** всегда принимает два **`double`** аргумента и возвращает **`double`** .
+C++ допускает перегрузку, поэтому можно вызывать перегрузки **FMOD** , которые принимают и возвращают **`float`** **`long double`** значения и. В программе на языке C, если только вы не используете \<tgmath.h> макрос для вызова этой функции, **FMOD** всегда принимает два **`double`** аргумента и возвращает **`double`** .
+
+При использовании \<tgmath.h> `fmod()` макроса тип аргумента определяет, какая версия функции выбрана. Подробные сведения см. в разделе [Type-Generic Math](../../c-runtime-library/tgmath.md) .
 
 По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
-|Компонент|Обязательный заголовок|
+|Функция|Обязательный заголовок|
 |--------------|---------------------|
 |**FMOD**, **фмодф**, **фмодл**|\<math.h>|
+|макрос **FMOD** | \<tgmath.h> |
 
 Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
@@ -117,7 +123,7 @@ int main( void )
 The remainder of -10.00 / 3.00 is -1.000000
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>

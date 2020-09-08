@@ -1,6 +1,7 @@
 ---
 title: nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl
-ms.date: 4/2/2020
+description: Справочник по API для nextafter, некстафтерф, некстафтерл, _nextafter, _nextafterf, нексттовард, нексттовардф и нексттовардл; который возвращает следующее представимое значение с плавающей точкой.
+ms.date: 9/1/2020
 api_name:
 - nextafterf
 - _nextafterf
@@ -59,12 +60,12 @@ helpviewer_keywords:
 - nexttowardf function
 - nexttowardl function
 ms.assetid: 9785bfb9-de53-4bd0-9637-f05fa0c1f6ab
-ms.openlocfilehash: 6122fd8921bdb413c4b24128b2428a70ccda0892
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cdcfb1a1d0bf1523a0252d779dba603ce1814b14
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213519"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555830"
 ---
 # <a name="nextafter-nextafterf-nextafterl-_nextafter-_nextafterf-nexttoward-nexttowardf-nexttowardl"></a>nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl
 
@@ -80,12 +81,14 @@ long double nextafterl( long double x, long double y );
 double _nextafter( double x, double y );
 float _nextafterf( float x, float y ); /* x64 only */
 
+#define nextafter(X, Y) // Requires C11 or higher
+
 double nexttoward( double x, long double y );
 float nexttowardf( float x, long double y );
 long double nexttowardl( long double x, long double y );
-```
 
-```cpp
+#define nexttoward(X, Y) // Requires C11 or higher
+
 float nextafter( float x, float y ); /* C++ only, requires <cmath> */
 long double nextafter( long double x, long double y ); /* C++ only, requires <cmath> */
 
@@ -95,21 +98,23 @@ long double nexttoward( long double x, long double y ); /* C++ only, requires <c
 
 ### <a name="parameters"></a>Параметры
 
-*x*<br/>
+*x*\
 Начальное значение с плавающей запятой.
 
-*&*<br/>
+*&*\
 Следующее значение с плавающей запятой.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Возвращает следующее представимое значение с плавающей запятой возвращаемого типа после *x* в направлении *y*. Если *x* и *y* равны, функция возвращает *y*, преобразованную в тип возвращаемого значения, без исключения. Если значение *x* не равно *y*, а результат является нормальным или нулевым, то задаются **FE_UNDERFLOW** и **FE_INEXACT** состояния исключений с плавающей запятой, и возвращается правильный результат. Если либо *x* , либо *y* является NaN, то возвращаемое значение является одним из входных значений NaN. Если *x* является конечным, а результат является бесконечным или недоступным для представления в типе, возвращается правильно подписанная бесконечность или NAN, **FE_OVERFLOW** и **FE_INEXACT** состояния исключений с плавающей запятой задаются, а параметру " **переводится** " значение **ERANGE**.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
 Семейства функций **nextafter** и **нексттовард** эквивалентны, за исключением типа параметра *y*. Если *x* и *y* равны, возвращается значение *y* , преобразованное в тип возвращаемого значения.
 
-Так как C++ допускает перегрузку, при включении \<cmath> можно вызывать перегрузки **nextafter** и **нексттовард** , которые возвращают **`float`** **`long double`** типы и. В программе на языке C **nextafter** и **нексттовард** всегда возвращают **`double`** .
+Так как C++ допускает перегрузку, при включении \<cmath> можно вызывать перегрузки **nextafter** и **нексттовард** , которые возвращают **`float`** **`long double`** типы и. В программе на языке C, если только вы не используете \<tgmath.h> макрос для вызова этой функции, **nextafter** и **нексттовард** всегда возвращают **`double`** .
+
+При использовании \<tgmath.h> `nextafter()` `nexttoward()` макроса или тип аргумента определяет, какая версия функции выбрана. Подробные сведения см. в разделе [Type-Generic Math](../../c-runtime-library/tgmath.md) .
 
 Функции **_nextafter** и **_nextafterf** являются специфичными для Microsoft. Функция **_nextafterf** доступна только при компиляции для x64.
 
@@ -121,10 +126,11 @@ long double nexttoward( long double x, long double y ); /* C++ only, requires <c
 |-------------|---------------------------|-------------------------------|
 |**nextafter**, **некстафтерф**, **некстафтерл**, **_nextafterf**, **нексттовард**, **нексттовардф**, **нексттовардл**|\<math.h>|\<math.h> или \<cmath>|
 |**_nextafter**|\<float.h>|\<float.h> или \<cfloat>|
+|макрос **nextafter** , макрос **нексттовард**| \<tgmath.h> ||
 
 Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>Дополнительно
 
-[Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
-[isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>
+[Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)\
+[isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)

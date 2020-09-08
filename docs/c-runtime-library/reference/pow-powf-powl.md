@@ -1,6 +1,7 @@
 ---
 title: pow, powf, powl
-ms.date: 4/2/2020
+description: Справочник по API для Pow, powf и Повл; для вычисления возведения в степень.
+ms.date: 08/31/2020
 api_name:
 - powl
 - pow
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - powf function
 - pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
-ms.openlocfilehash: 16038cbb2c572575a9424065825697eb4115e43f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 58d23f53de8dc5323fe0818611bccb647984fd9b
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232447"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555765"
 ---
 # <a name="pow-powf-powl"></a>pow, powf, powl
 
@@ -56,9 +57,8 @@ ms.locfileid: "87232447"
 double pow( double x, double y );
 float powf( float x, float y );
 long double powl( long double x, long double y );
-```
+define pow(X, Y) // Requires C11 or higher 
 
-```cpp
 double pow( double x, int y );  // C++ only
 float pow( float x, float y );  // C++ only
 float pow( float x, int y );  // C++ only
@@ -68,10 +68,10 @@ long double pow( long double x, int y );  // C++ only
 
 ### <a name="parameters"></a>Параметры
 
-*x*<br/>
+*x*\
 База.
 
-*&*<br/>
+*&*\
 Экспонента.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -84,13 +84,15 @@ long double pow( long double x, int y );  // C++ only
 |*x* = = 0,0 и *y* = = 0,0|1|
 |*x* = = 0,0 и *y* < 0|INF|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
 **Pow** не распознает целочисленные значения с плавающей запятой больше 2<sup>64</sup> (например, 1.0 E100).
 
 **Pow** имеет реализацию, использующую Streaming SIMD Extensions 2 (SSE2). Сведения о реализации SSE2 и ограничениях на ее использование см. в разделе [_set_SSE2_enable](set-sse2-enable.md).
 
-Поскольку C++ допускает перегрузку, можно вызвать любую из различных перегрузок **Pow**. В программе на языке C **Pow** всегда принимает два **`double`** значения и возвращает **`double`** значение.
+Поскольку C++ допускает перегрузку, можно вызвать любую из различных перегрузок **Pow**. В программе на языке C, если только вы не используете \<tgmath.h> макрос для вызова этой функции, **Pow** всегда принимает два **`double`** значения и возвращает **`double`** значение.
+
+При использовании \<tgmath.h> `pow()` макроса тип аргумента определяет, какая версия функции выбрана. Подробные сведения см. в разделе [Type-Generic Math](../../c-runtime-library/tgmath.md) .
 
 Перегрузка `pow(int, int)` более не доступна. При использовании этой перегрузки компилятор может выдать [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md). Чтобы избежать этой проблемы, приведите первый параметр к **`double`** , **`float`** или **`long double`** .
 
@@ -101,6 +103,7 @@ long double pow( long double x, int y );  // C++ only
 |Подпрограмма|Обязательный заголовок (C)|Обязательный заголовок (C++)|
 |-|-|-|
 |**Pow**, **powf**, **Повл**|\<math.h>|\<math.h> или \<cmath>|
+|макрос **Pow** | \<tgmath.h> ||
 
 Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
@@ -125,7 +128,7 @@ int main( void )
 2.0 to the power of 3.0 is 8.0
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md) <br/>
 [exp, expf, expl](exp-expf.md) <br/>

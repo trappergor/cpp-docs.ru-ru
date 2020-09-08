@@ -1,5 +1,6 @@
 ---
 title: _rotl, _rotl64, _rotr, _rotr64
+description: Справочник по API для _rotl, _rotl64, _rotr и _rotr64; поворот битов влево (_rotl) или вправо (_rotr).
 ms.date: 04/05/2018
 api_name:
 - _rotr64
@@ -43,16 +44,16 @@ helpviewer_keywords:
 - _rotr64 function
 - bits, rotating
 ms.assetid: cfce439b-366f-4584-8ab1-d527b13fcfc6
-ms.openlocfilehash: 0ae2df7d80778cd4c573192a13b1fd91fb358eef
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d2fb6b2674ed7d50cff63ae45f22af63b0120597
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949150"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556597"
 ---
 # <a name="_rotl-_rotl64-_rotr-_rotr64"></a>_rotl, _rotl64, _rotr, _rotr64
 
-Поворот битов влево ( **_rotl**) или вправо ( **_rotr**).
+Поворот битов влево (**_rotl**) или вправо (**_rotr**).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -86,11 +87,11 @@ unsigned __int64 _rotr64(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Итоговое значение. Ошибка не возвращается.
+Итоговое значение. Ошибки не возвращаются.
 
 ## <a name="remarks"></a>Примечания
 
-Функции **_rotl** и **_rotr** поворачивают *значение* без знака на биты *сдвига* . **_rotl** поворачивает значение влево. **_rotr** поворачивает значение вправо. Обе функции перемещают вытесненные с одного конца *value* биты в другой конец.
+Функции **_rotl** и **_rotr** поворачивают *значение* без знака на бит *сдвига* . **_rotl** поворачивает значение влево. **_rotr** поворачивает значение вправо. Обе функции перемещают вытесненные с одного конца *value* биты в другой конец.
 
 ## <a name="requirements"></a>Требования
 
@@ -99,7 +100,7 @@ unsigned __int64 _rotr64(
 |**_rotl**, **_rotl64**|\<stdlib.h>|
 |**_rotr**, **_rotr64**|\<stdlib.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Библиотеки
 
@@ -143,5 +144,5 @@ int main( void )
 
 ## <a name="see-also"></a>См. также
 
-[Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
+[Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [_lrotl, _lrotr](lrotl-lrotr.md)<br/>

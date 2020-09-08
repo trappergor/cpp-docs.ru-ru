@@ -1,6 +1,7 @@
 ---
 title: acosh, acoshf, acoshl
-ms.date: 4/2/2020
+description: Справочник по API для ACOSH, acoshf и акошл; который вычисляет обратный гиперболический косинус значения с плавающей запятой.
+ms.date: 08/31/2020
 api_name:
 - acoshf
 - acosh
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - acosh function
 - acoshl function
 ms.assetid: 6985c4d7-9e2a-44ce-9a9b-5a43015f15f7
-ms.openlocfilehash: a6883c23d06115c8775dd919123671feac380b99
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ef6d47ca07f96be84962303c13162b154086e5f2
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220760"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555115"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh, acoshf, acoshl
 
@@ -54,16 +55,15 @@ ms.locfileid: "87220760"
 double acosh( double x );
 float acoshf( float x );
 long double acoshl( long double x );
-```
+#define acosh(X) // Requires C11 or higher
 
-```cpp
 float acosh( float x );  // C++ only
 long double acosh( long double x );  // C++ only
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*x*<br/>
+*x*\
 Значение с плавающей запятой.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -75,17 +75,20 @@ long double acosh( long double x );  // C++ only
 |± КНАН, ТО ЖЕ, INF|нет|нет|
 |*x* < 1|нет|нет|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
-При использовании C++ можно вызывать перегрузки **ACOSH** , которые принимают и возвращают **`float`** **`long double`** значения или. В программе на языке C **ACOSH** всегда принимает и возвращает **`double`** .
+При использовании C++ можно вызывать перегрузки **ACOSH** , которые принимают и возвращают **`float`** **`long double`** значения или. В программе на языке C, если только вы не используете \<tgmath.h> макрос для вызова этой функции, **ACOSH** всегда принимает и возвращает **`double`** .
+
+При использовании \<tgmath.h> `acosh()` макроса тип аргумента определяет, какая версия функции выбрана. Подробные сведения см. в разделе [Type-Generic Math](../../c-runtime-library/tgmath.md) .
 
 По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
-|Компонент|Заголовок C|Заголовок C++|
+|Функция|Заголовок C|Заголовок C++|
 |--------------|--------------|------------------|
 |**ACOSH**, **acoshf**, **акошл**|\<math.h>|\<cmath>|
+|макрос **ACOSH ()** | \<tgmath.h> ||
 
 Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
@@ -117,7 +120,7 @@ cosh( 0.785398 ) = 1.324609
 acosh( 1.324609 ) = 0.785398
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [asinh, asinhf, asinhl](asinh-asinhf-asinhl.md)<br/>

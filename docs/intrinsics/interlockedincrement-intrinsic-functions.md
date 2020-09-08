@@ -1,6 +1,7 @@
 ---
 title: Встроенные функции _InterlockedIncrement
-ms.date: 09/02/2019
+description: Встроенные функции компилятора Microsoft C/C++ для добавочного захвата.
+ms.date: 09/03/2020
 f1_keywords:
 - _InterlockedIncrement_acq
 - _InterlockedIncrement16_rel_cpp
@@ -44,57 +45,55 @@ helpviewer_keywords:
 - _InterlockedIncrement_acq intrinsic
 - InterlockedIncrement intrinsic
 ms.assetid: 37700615-f372-438b-bcef-d76e11839482
-ms.openlocfilehash: 4dd9ae9ba5454b0afefa332689d94fa3619a07a6
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 2148ae31f3eb03e398372db3bf15fc64e4857dd1
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221986"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556325"
 ---
-# <a name="_interlockedincrement-intrinsic-functions"></a>Встроенные функции _InterlockedIncrement
+# <a name="_interlockedincrement-intrinsic-functions"></a>`_InterlockedIncrement` встроенные функции
 
-**Блок, относящийся только к системам Microsoft**
-
-Предоставьте встроенную поддержку компилятора для функции Win32 Windows SDK [интерлоккединкремент](/windows/win32/api/winnt/nf-winnt-interlockedincrement) .
+Предоставьте встроенную поддержку компилятора для функции Win32 Windows SDK [интерлоккединкремент](/windows/win32/api/winnt/nf-winnt-interlockedincrement) . `_InterlockedIncrement`Встроенные функции относятся **только к Microsoft**.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```C
 long _InterlockedIncrement(
-   long * lpAddend
+   long volatile * lpAddend
 );
 long _InterlockedIncrement_acq(
-   long * lpAddend
+   long volatile * lpAddend
 );
 long _InterlockedIncrement_rel(
-   long * lpAddend
+   long volatile * lpAddend
 );
 long _InterlockedIncrement_nf(
-   long * lpAddend
+   long volatile * lpAddend
 );
 short _InterlockedIncrement16(
-   short * lpAddend
+   short volatile * lpAddend
 );
 short _InterlockedIncrement16_acq(
-   short * lpAddend
+   short volatile * lpAddend
 );
 short _InterlockedIncrement16_rel(
-   short * lpAddend
+   short volatile * lpAddend
 );
 short _InterlockedIncrement16_nf (
-   short * lpAddend
+   short volatile * lpAddend
 );
 __int64 _InterlockedIncrement64(
-   __int64 * lpAddend
+   __int64 volatile * lpAddend
 );
 __int64 _InterlockedIncrement64_acq(
-   __int64 * lpAddend
+   __int64 volatile * lpAddend
 );
 __int64 _InterlockedIncrement64_rel(
-   __int64 * lpAddend
+   __int64 volatile * lpAddend
 );
 __int64 _InterlockedIncrement64_nf(
-   __int64 * lpAddend
+   __int64 volatile * lpAddend
 );
 ```
 
@@ -109,17 +108,17 @@ __int64 _InterlockedIncrement64_nf(
 
 ## <a name="requirements"></a>Требования
 
-|Встроенная функция|Архитектура|Header|
+|Intrinsic|Architecture|Header|
 |---------------|------------------|------------|
-|`_InterlockedIncrement`, `_InterlockedIncrement16`|x86, ARM, x64, ARM64|\<> Intrin. h|
-|`_InterlockedIncrement64`|ARM, x64, ARM64|\<> Intrin. h|
-|`_InterlockedIncrement_acq`, `_InterlockedIncrement_rel`, `_InterlockedIncrement_nf`, `_InterlockedIncrement16_acq`, `_InterlockedIncrement16_rel`, `_InterlockedIncrement16_nf`, `_InterlockedIncrement64_acq`, `_InterlockedIncrement64_rel`, `_InterlockedIncrement64_nf`|ARM, ARM64|\<> Intrin. h|
+|`_InterlockedIncrement`, `_InterlockedIncrement16`|x86, ARM, x64, ARM64|\<intrin.h>|
+|`_InterlockedIncrement64`|ARM, x64, ARM64|\<intrin.h>|
+|`_InterlockedIncrement_acq`, `_InterlockedIncrement_rel`, `_InterlockedIncrement_nf`, `_InterlockedIncrement16_acq`, `_InterlockedIncrement16_rel`, `_InterlockedIncrement16_nf`, `_InterlockedIncrement64_acq`, `_InterlockedIncrement64_rel`, `_InterlockedIncrement64_nf`|ARM, ARM64|\<intrin.h>|
 
 ## <a name="remarks"></a>Примечания
 
 Существуют несколько вариантов `_InterlockedIncrement`, они различаются в зависимости от типов данных, которые включают, и от того, используется ли семантика получения или освобождения конкретного процессора.
 
-Функция `_InterlockedIncrement` работает с 32-разрядными целыми значениями, _InterlockedDecrement16`_InterlockedIncrement16`работает с 16-разрядными целыми значениями и _InterlockedDecrement64`_InterlockedIncrement64`работает с 64-разрядными целыми значениями.
+Функция `_InterlockedIncrement` работает с 32-разрядными целыми значениями, `_InterlockedIncrement16`работает с 16-разрядными целыми значениями и `_InterlockedIncrement64`работает с 64-разрядными целыми значениями.
 
 На платформах ARM используйте встроенные функции с суффиксами `_acq` и `_rel`, если нужно получить и освободить семантику, например в начале и конце критической секции. Встроенная функция с `_nf` суффиксом ("без ограждения") не выступает в качестве барьера памяти.
 
@@ -131,12 +130,10 @@ __int64 _InterlockedIncrement64_nf(
 
 ## <a name="example"></a>Пример
 
-Пример использования `_InterlockedIncrement`см. в разделе [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
+Пример использования см `_InterlockedIncrement` . в разделе [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
 
-**Завершение блока, относящегося только к системам Майкрософт**
-
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительно
 
 [Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)\
-[Ключевые слова](../cpp/keywords-cpp.md)\
-[Конфликты с 32-разрядным (x86) компилятором](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
+[Словами](../cpp/keywords-cpp.md)\
+[Конфликтует с компилятором x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

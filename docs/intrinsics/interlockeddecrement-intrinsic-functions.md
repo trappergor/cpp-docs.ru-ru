@@ -1,6 +1,7 @@
 ---
 title: Встроенные функции _InterlockedDecrement
-ms.date: 09/02/2019
+description: Встроенные функции компилятора Microsoft C/C++ для блокируемого уменьшения.
+ms.date: 09/03/2020
 f1_keywords:
 - _InterlockedDecrement16_rel_cpp
 - _InterlockedDecrement16_acq_cpp
@@ -44,64 +45,62 @@ helpviewer_keywords:
 - _InterlockedDecrement64_nf intrinsic
 - InterlockedDecrement_rel intrinsic
 ms.assetid: 5268fce3-86b5-4b2b-b96c-2e531a3fb9b5
-ms.openlocfilehash: f6b256ff1551eea4d0b362e78c9780fce29a8513
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: b3ca624ba54f70750ecc303fb44f4fa242b4edc2
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857922"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556338"
 ---
-# <a name="_interlockeddecrement-intrinsic-functions"></a>Встроенные функции _InterlockedDecrement
+# <a name="_interlockeddecrement-intrinsic-functions"></a>`_InterlockedDecrement` встроенные функции
 
-**Блок, относящийся только к системам Microsoft**
-
-Предоставляет встроенную поддержку компилятора для функции Win32 Windows SDK [интерлоккеддекремент](/windows/win32/api/winnt/nf-winnt-interlockeddecrement) .
+Предоставляет встроенную поддержку компилятора для функции Win32 Windows SDK [интерлоккеддекремент](/windows/win32/api/winnt/nf-winnt-interlockeddecrement) . `_InterlockedDecrement`Встроенные функции относятся **только к Microsoft**.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```C
 long _InterlockedDecrement(
-   long * lpAddend
+   long volatile * lpAddend
 );
 long _InterlockedDecrement_acq(
-   long * lpAddend
+   long volatile * lpAddend
 );
 long _InterlockedDecrement_rel(
-   long * lpAddend
+   long volatile * lpAddend
 );
 long _InterlockedDecrement_nf(
-   long * lpAddend
+   long volatile * lpAddend
 );
 short _InterlockedDecrement16(
-   short * lpAddend
+   short volatile * lpAddend
 );
 short _InterlockedDecrement16_acq(
-   short * lpAddend
+   short volatile * lpAddend
 );
 short _InterlockedDecrement16_rel(
-   short * lpAddend
+   short volatile * lpAddend
 );
 short _InterlockedDecrement16_nf(
-   short * lpAddend
+   short volatile * lpAddend
 );
 __int64 _InterlockedDecrement64(
-   __int64 * lpAddend
+   __int64 volatile * lpAddend
 );
 __int64 _InterlockedDecrement64_acq(
-   __int64 * lpAddend
+   __int64 volatile * lpAddend
 );
 __int64 _InterlockedDecrement64_rel(
-   __int64 * lpAddend
+   __int64 volatile * lpAddend
 );
 __int64 _InterlockedDecrement64_nf(
-   __int64 * lpAddend
+   __int64 volatile * lpAddend
 );
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *лпадденд*\
-[вход, выход] Указатель на переменную, которую необходимо уменьшить.
+[вход, выход] Изменяемый указатель на переменную, которую необходимо уменьшить.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -109,21 +108,21 @@ __int64 _InterlockedDecrement64_nf(
 
 ## <a name="requirements"></a>Требования
 
-|Встроенная функция|Архитектура|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`_InterlockedDecrement`, `_InterlockedDecrement16`|x86, ARM, x64, ARM64|
 |`_InterlockedDecrement64`|ARM, x64, ARM64|
 |`_InterlockedDecrement_acq`, `_InterlockedDecrement_rel`, `_InterlockedDecrement_nf`, `_InterlockedDecrement16_acq`, `_InterlockedDecrement16_rel`, `_InterlockedDecrement16_nf`, `_InterlockedDecrement64_acq`, `_InterlockedDecrement64_rel`, `_InterlockedDecrement64_nf`,|ARM, ARM64|
 
-**Файл заголовка** \<Intrin. h >
+**Файл заголовка** \<intrin.h>
 
 ## <a name="remarks"></a>Примечания
 
 Существуют несколько вариантов `_InterlockedDecrement`, они различаются в зависимости от типов данных, которые включают, и от того, используется ли семантика получения или освобождения конкретного процессора.
 
-Функция `_InterlockedDecrement` работает с 32-разрядными целыми значениями, _InterlockedDecrement16`_InterlockedDecrement16`работает с 16-разрядными целыми значениями и _InterlockedDecrement64`_InterlockedDecrement64`работает с 64-разрядными целыми значениями.
+Функция `_InterlockedDecrement` работает с 32-разрядными целыми значениями, `_InterlockedDecrement16`работает с 16-разрядными целыми значениями и `_InterlockedDecrement64`работает с 64-разрядными целыми значениями.
 
-На платформах ARM используйте встроенные функции с суффиксами `_acq` и `_rel`, если нужно получить и освободить семантику, например в начале и конце критической секции. Встроенные функции с суффиксом `_nf` ("без ограждения") не являются барьером памяти.
+На платформах ARM используйте встроенные функции с суффиксами `_acq` и `_rel`, если нужно получить и освободить семантику, например в начале и конце критической секции. Встроенные функции с `_nf` суффиксом ("без ограждения") не действуют как барьер памяти.
 
 Переменная, на который указывает параметр `lpAddend`, должна быть выровнена по границе 32 разрядов; в противном случае эта функция не выполняется на многопроцессорных системах x86 и любой системе не-x86. Дополнительные сведения см. в разделе [выровняйте](../cpp/align-cpp.md).
 
@@ -197,10 +196,8 @@ void __cdecl SimpleThread(void* pParam) {
 }
 ```
 
-**Завершение блока, относящегося только к системам Майкрософт**
-
 ## <a name="see-also"></a>См. также
 
 [Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)\
-[Ключевые слова](../cpp/keywords-cpp.md)\
-[Конфликты с 32-разрядным (x86) компилятором](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
+[Словами](../cpp/keywords-cpp.md)\
+[Конфликтует с компилятором x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

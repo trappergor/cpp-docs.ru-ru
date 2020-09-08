@@ -1,6 +1,7 @@
 ---
 title: sin, sinf, sinl
-ms.date: 6/5/2020
+description: Справочник по API для SIN, sinf и sinl; , который вычисляет синус значения с плавающей запятой.
+ms.date: 08/31/2020
 api_name:
 - sinl
 - sinf
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-ms.openlocfilehash: 7e6e4d9fee0df20ab81f15483cd5f7f4de16d751
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7d1921dd4537c9dcc955c264a36992d86defada8
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216730"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556196"
 ---
 # <a name="sin-sinf-sinl"></a>sin, sinf, sinl
 
@@ -54,6 +55,7 @@ ms.locfileid: "87216730"
 double sin(double x);
 float sinf(float x);
 long double sinl(long double x);
+#define sin(x) // Requires C11 or higher
 ```
 
 ```cpp
@@ -63,7 +65,7 @@ long double sin(long double x);  // C++ only
 
 ### <a name="parameters"></a>Параметры
 
-*x*<br/>
+*x*\
 Угол в радианах.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -77,9 +79,11 @@ long double sin(long double x);  // C++ only
 
 Дополнительные сведения о кодах возврата см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **sin** , которые принимают и возвращают **`float`** **`long double`** значения или. В программе на языке C функция **sin** всегда принимает и возвращает значение **`double`** .
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **sin** , которые принимают и возвращают **`float`** **`long double`** значения или. В программе на языке C, если только вы не используете \<tgmath.h> макрос для вызова этой функции, функция **sin** всегда принимает и возвращает **`double`** .
+
+При использовании \<tgmath.h> `sin()` макроса тип аргумента определяет, какая версия функции выбрана. Подробные сведения см. в разделе [Type-Generic Math](../../c-runtime-library/tgmath.md) .
 
 По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
@@ -88,6 +92,7 @@ long double sin(long double x);  // C++ only
 |Подпрограмма|Обязательный заголовок (C)|Обязательный заголовок (C++)|
 |-|-|-|
 |**sin**, **sinf**, **sinl**|\<math.h>|\<cmath> или \<math.h>|
+|макрос **sin ()** | \<tgmath.h> ||
 
 Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
@@ -119,7 +124,7 @@ sin( 1.570796 ) = 1.000000
 cos( 1.570796 ) = 0.000000
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>

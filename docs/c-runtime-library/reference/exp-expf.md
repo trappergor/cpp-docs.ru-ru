@@ -1,6 +1,7 @@
 ---
 title: exp, expf, expl
-ms.date: 4/2/2020
+description: Справочник по API для EXP, експф и експл; который Вычисляет экспоненту.
+ms.date: 08/31/2020
 api_name:
 - expf
 - expl
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - calculating exponentials
 - exp function
 ms.assetid: 7070016d-1143-407e-9e9a-6b059bb88867
-ms.openlocfilehash: 9872a83ba3ec5346b7aed5fb51ee837d3ed827aa
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 44652e5d06d842bd2eb2e280409a1e55fc66f582
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234176"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555895"
 ---
 # <a name="exp-expf-expl"></a>exp, expf, expl
 
@@ -64,11 +65,12 @@ float expf(
 long double expl(
    long double x
 );
+#define exp(z) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*x*<br/>
+*x*\
 Значение с плавающей запятой, експонентиате основание натурального логарифма по адресу *e* .
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -84,17 +86,20 @@ long double expl(
 
 Функция **exp** имеет реализацию, использующую Streaming SIMD Extensions 2 (SSE2). Сведения о реализации SSE2 и ограничения на использование реализации SSE2 см. в разделе [_set_SSE2_enable](set-sse2-enable.md).
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
-C++ допускает перегрузку, поэтому можно вызывать перегрузки **exp** , принимающие **`float`** аргумент или **`long double`** . В программе на языке **exp** всегда принимает и возвращает **`double`** .
+C++ допускает перегрузку, поэтому можно вызывать перегрузки **exp** , принимающие **`float`** аргумент или **`long double`** . В программе на языке C, если только вы не используете \<tgmath.h> макрос для вызова этой функции, **exp** всегда принимает и возвращает **`double`** .
+
+При использовании \<tgmath.h> `exp()` макроса тип аргумента определяет, какая версия функции выбрана. Подробные сведения см. в разделе [Type-Generic Math](../../c-runtime-library/tgmath.md) .
 
 По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
-|Компонент|Обязательный заголовок C|Обязательный заголовок C++|
+|Функция|Обязательный заголовок C|Обязательный заголовок C++|
 |--------------|---------------------|---|
 |**exp**, **експф**, **експл**|\<math.h>|\<cmath> или \<math.h>|
+|макрос **exp**| \<tgmath.h> || 
 
 Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
@@ -119,7 +124,7 @@ int main( void )
 exp( 2.302585 ) = 10.000000
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [log, logf, log10, log10f](log-logf-log10-log10f.md)<br/>

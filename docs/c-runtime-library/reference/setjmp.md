@@ -1,5 +1,6 @@
 ---
 title: setjmp
+description: Справочник по API для setjmp; который сохраняет текущее состояние программы.
 ms.date: 08/14/2018
 api_name:
 - setjmp
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - current state
 - setjmp function
 ms.assetid: 684a8b27-e8eb-455b-b4a8-733ca1cbd7d2
-ms.openlocfilehash: beaf56a03c1bd157257d604bfd0ebefb219d0225
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3ea08e5379433e313e08870f735322b7d985aa64
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226155"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555609"
 ---
 # <a name="setjmp"></a>setjmp
 
@@ -47,14 +48,14 @@ int setjmp(
 
 ### <a name="parameters"></a>Параметры
 
-*переменной*<br/>
+*env*<br/>
 Переменная, в которой хранится среда.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает 0 после сохранения среды стека. Если функция **setjmp** возвращает результат `longjmp` вызова, то она возвращает аргумент *value* параметра или, `longjmp` Если аргумент value имеет *значение* 0, то функция `longjmp` **setjmp** возвращает значение 1. Ошибка не возвращается.
+Возвращает 0 после сохранения среды стека. Если функция **setjmp** возвращает результат `longjmp` вызова, то она возвращает аргумент *value* параметра или, `longjmp` Если аргумент value имеет *значение* 0, то функция `longjmp` **setjmp** возвращает значение 1. Ошибки не возвращаются.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
 Функция **setjmp** сохраняет среду стека, которую можно впоследствии восстановить с помощью `longjmp` . При совместном использовании **setjmp** в `longjmp` стандарте setjmp и предоставлении способа выполнения нелокальной **`goto`** . Обычно они используются для передачи управления выполнением в код обработки ошибок или восстановления в вызванной ранее подпрограмме без использования обычных соглашений вызова или возврата.
 
@@ -85,7 +86,7 @@ int setjmp(
 
 См. пример для [_fpreset](fpreset.md).
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>Дополнительно
 
 [Управление процессами и средой](../../c-runtime-library/process-and-environment-control.md)<br/>
 [longjmp](longjmp.md)

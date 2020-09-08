@@ -1,6 +1,7 @@
 ---
 title: atanh, atanhf, atanhl
-ms.date: 4/2/2020
+description: Справочник по API для ATANH, атанхф и атанхл; который вычисляет обратный гиперболический тангенс значения с плавающей запятой.
+ms.date: 08/31/2020
 api_name:
 - atanhl
 - atanhf
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - atanhl function
 - atanh funciton
 ms.assetid: 83a43b5b-2580-4461-854f-dc84236d9f32
-ms.openlocfilehash: 9fee03d16ab1ad7783ebf389e290856955f2dc57
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c0a8e06963519553144c7e49d26e61dbbde51c21
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232603"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555596"
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh, atanhf, atanhl
 
@@ -51,16 +52,15 @@ ms.locfileid: "87232603"
 double atanh( double x );
 float atanhf( float x );
 long double atanhl( long double x );
-```
+#define atanh(X) // Requires C11 or higher
 
-```cpp
 float atanh( float x );  // C++ only
 long double atanh( long double x );  // C++ only
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*x*<br/>
+*x*\
 Значение с плавающей запятой.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -72,17 +72,20 @@ long double atanh( long double x );  // C++ only
 |± КНАН, С|нет|нет|
 |*X* ≥ 1; *x* ≤-1|нет|нет|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **ATANH** , которые принимают и возвращают **`float`** **`long double`** значения или. В программе на языке C **ATANH** всегда принимает и возвращает **`double`** .
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **ATANH** , которые принимают и возвращают **`float`** **`long double`** значения или. В программе на языке C, если только вы не используете \<tgmath.h> макрос для вызова этой функции, **ATANH** всегда принимает и возвращает **`double`** .
+
+При использовании \<tgmath.h> `atanh()` макроса тип аргумента определяет, какая версия функции выбрана. Подробные сведения см. в разделе [Type-Generic Math](../../c-runtime-library/tgmath.md) .
 
 По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
-|Компонент|Заголовок C|Заголовок C++|
+|Функция|Заголовок C|Заголовок C++|
 |--------------|--------------|------------------|
 |**ATANH**, **атанхф**, **атанхл**|\<math.h>|\<cmath> или \<math.h>|
+|макрос **ATANH ()** | \<tgmath.h> ||
 
 Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
@@ -114,7 +117,7 @@ tanh( 0.785398 ) = 0.655794
 atanh( 0.655794 ) = 0.785398
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>

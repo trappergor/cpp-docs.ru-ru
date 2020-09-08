@@ -1,6 +1,6 @@
 ---
 title: snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
-description: Справочник по API для snprintf, _snprintf, _snprintf_l, _snwprintf, _снвпринтф_, которые записывают форматированные данные в строку.
+description: Справочник по API для snprintf, _snprintf, _snprintf_l, _snwprintf и _снвпринтф_; который записывает форматированные данные в строку.
 ms.date: 08/27/2020
 api_name:
 - _snwprintf
@@ -52,12 +52,12 @@ helpviewer_keywords:
 - sntprintf function
 - formatted text [C++]
 ms.assetid: 5976c9c8-876e-4ac9-a515-39f3f7fd0925
-ms.openlocfilehash: b4d8865d5297afe3d48f2bb48cc85a0d10535dfd
-ms.sourcegitcommit: c8f1605354724a13566bc3b0fac3c5d98265f1d0
+ms.openlocfilehash: 9a851f08e50d11d3716ea59e00e5e9028b6cd6d5
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89062202"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556116"
 ---
 # <a name="snprintf-_snprintf-_snprintf_l-_snwprintf-_snwprintf_l"></a>snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
 
@@ -165,7 +165,7 @@ int _snwprintf_l(
 
 Дополнительные сведения об этих и других кодах ошибок см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
 Функция **snprintf** и семейство функций **_snprintf** , *а также формат хранения или* меньше символов в *буфере*. Функция **snprintf** всегда сохраняет завершающий нуль-символ, при необходимости обрезая выходные данные. **_Snprintf** семейство функций добавляет завершающий нуль-символ, если длина форматированной строки строго меньше символов *Count* . Каждый *аргумент* (при его наличии) преобразуется и выводится в соответствии с соответствующей спецификацией формата в *формате*. Формат состоит из обычных символов и имеет ту же форму и функцию, что и аргумент *Format* для [printf](printf-printf-l-wprintf-wprintf-l.md). Если копирование производится между перекрывающимися строками, поведение не определено.
 
@@ -309,7 +309,7 @@ Output:
 character count = 69
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)<br/>
 [sprintf, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>

@@ -1,5 +1,6 @@
 ---
 title: _fileno
+description: Справочник по API для _fileno; который получает дескриптор файла, связанный с потоком.
 ms.date: 4/2/2020
 api_name:
 - _fileno
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - _fileno function
 - streams, getting file handles
 ms.assetid: 86474174-2f17-4100-bcc4-352dd976c7b5
-ms.openlocfilehash: 0ac0a8d2cf4185dab0aa3d335c16cf89da58c7a6
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c07f446cc3c5c29fb102a74b2b095957589eab46
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919480"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89554855"
 ---
 # <a name="_fileno"></a>_fileno
 
@@ -55,14 +56,14 @@ int _fileno(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**_fileno** возвращает дескриптор файла. Ошибка не возвращается. Результат не определен, если *поток* не задает открытый файл. Если Stream имеет **значение NULL**, **_fileno** вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, эта функция возвращает –1 и задает для **errno** значение **EINVAL**.
+**_fileno** возвращает дескриптор файла. Ошибки не возвращаются. Результат не определен, если *поток* не задает открытый файл. Если Stream имеет **значение NULL**, **_fileno** вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, эта функция возвращает –1 и задает для **errno** значение **EINVAL**.
 
 Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 > [!NOTE]
 > Если **stdout** или **stderr** не связаны с выходным потоком (например, в приложении Windows без окна консоли), возвращается дескриптор файла-2. В предыдущих версиях возвращался дескриптор файла -1. Это изменение позволяет приложениям отличить это условие от ошибки.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
 **_Fileno** подпрограммы возвращает дескриптор файла, который в настоящее время связан с *потоком*. Эта подпрограмма реализуется как функция и макрос. Дополнительные сведения о выборе любой реализации см. в разделе [Выбор между функциями и макросами](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md).
 
@@ -100,7 +101,7 @@ The file descriptor for stdout is 1
 The file descriptor for stderr is 2
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)<br/>
 [_fdopen, _wfdopen](fdopen-wfdopen.md)<br/>

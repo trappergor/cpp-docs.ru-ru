@@ -1,6 +1,7 @@
 ---
 title: lround, lroundf, lroundl, llround, llroundf, llroundl
-ms.date: 4/2/2020
+description: Справочник по API для лраунд, лраундф, лраундл, ллраунд, ллраундф и ллраундл; что Округляет значение с плавающей запятой до ближайшего целого числа.
+ms.date: 9/1/2020
 api_name:
 - llround
 - llroundf
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - llroundf function
 - lroundl function
 ms.assetid: cfb88a35-54c6-469f-85af-f7d695dcfdd8
-ms.openlocfilehash: 0be17ceb579bfc7da7b9f47ac1b6942383eebb91
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c5db62da7cdba58fdc58e8acbfe3aff0e2c386d6
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216899"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555323"
 ---
 # <a name="lround-lroundf-lroundl-llround-llroundf-llroundl"></a>lround, lroundf, lroundl, llround, llroundf, llroundl
 
@@ -90,24 +91,27 @@ long long llroundf(
 long long llroundl(
    long double x
 );
+#define lround(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*x*<br/>
+*x*\
 Округляемое значение с плавающей запятой.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Функции **лраунд** и **ллраунд** возвращают ближайшее **`long`** или **`long long`** целое число в *x*. Промежуточные значения округляются в сторону от нуля, независимо от настройки режима округления чисел с плавающей запятой. Ошибка не возвращается.
+Функции **лраунд** и **ллраунд** возвращают ближайшее **`long`** или **`long long`** целое число в *x*. Промежуточные значения округляются в сторону от нуля, независимо от настройки режима округления чисел с плавающей запятой. Ошибки не возвращаются.
 
 |Входные данные|Исключение SEH|Исключение Matherr|
 |-----------|-------------------|-----------------------|
 |± **КНАН**, **с**|нет|**_DOMAIN**|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **лраунд** или **ллраунд** , которые принимают и возвращают **`float`** **`long double`** значения и. В программе на языке C **лраунд** и **ллраунд** всегда принимают и возвращают **`double`** .
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **лраунд** или **ллраунд** , которые принимают и возвращают **`float`** **`long double`** значения и. В программе на языке C, если только вы не используете \<tgmath.h> макрос для вызова этой функции, **лраунд** и **ллраунд** всегда принимают и возвращают **`double`** .
+
+При использовании \<tgmath.h> `lround()` макроса тип аргумента определяет, какая версия функции выбрана. Подробные сведения см. в разделе [Type-Generic Math](../../c-runtime-library/tgmath.md) .
 
 По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
@@ -116,6 +120,7 @@ long long llroundl(
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
 |**лраунд**, **лраундф**, **лраундл**, **ллраунд**, **ллраундф**, **ллраундл**|\<math.h>|
+|макрос **лраунд** | \<tgmath.h> ||
 
 Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
@@ -155,7 +160,7 @@ lroundl(3.500000) is 4
 lroundl(-3.500000) is -4
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>

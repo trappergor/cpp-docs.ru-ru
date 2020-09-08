@@ -1,5 +1,6 @@
 ---
 title: _lrotl, _lrotr
+description: 'Справочник по API для _lrotl и _lrotr; поворот битов влево (_lrotl) или вправо (_lrotr). '
 ms.date: 04/04/2018
 api_name:
 - _lrotl
@@ -34,16 +35,16 @@ helpviewer_keywords:
 - _lrotl function
 - bits, rotating
 ms.assetid: d42f295b-35f9-49d2-9ee4-c66896ffe68e
-ms.openlocfilehash: ea78aeb8829a80abae345b4e9e6ac3a7bbaddf8b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ccd14f7aa6ba3c1278063593aecee20c6789110d
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953034"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555011"
 ---
 # <a name="_lrotl-_lrotr"></a>_lrotl, _lrotr
 
-Поворот битов влево ( **_lrotl**) или вправо ( **_lrotr**).
+Поворот битов влево (**_lrotl**) или вправо (**_lrotr**).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -62,7 +63,7 @@ unsigned long _lrotr( unsigned long value, int shift );
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Обе функции возвращают значение с циклическим сдвигом. Ошибка не возвращается.
+Обе функции возвращают значение с циклическим сдвигом. Ошибки не возвращаются.
 
 ## <a name="remarks"></a>Примечания
 
@@ -74,7 +75,7 @@ unsigned long _lrotr( unsigned long value, int shift );
 |-------------|---------------------|
 |**_lrotl**, **_lrotr**|\<stdlib.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -102,5 +103,5 @@ int main( void )
 
 ## <a name="see-also"></a>См. также
 
-[Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
+[Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [_rotl, _rotl64, _rotr, _rotr64](rotl-rotl64-rotr-rotr64.md)<br/>

@@ -1,6 +1,7 @@
 ---
 title: hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
-ms.date: 4/2/2020
+description: Справочник по API для hypot, хипотф, хипотл, _hypot, _hypotf и _hypotl; который вычисляет гипотенузу.
+ms.date: 9/1/2020
 api_name:
 - _hypotf
 - hypot
@@ -44,12 +45,12 @@ helpviewer_keywords:
 - calculating hypotenuses
 - _hypot function
 ms.assetid: 6a13887f-bd53-43fc-9d77-5b42d6e49925
-ms.openlocfilehash: 16db920d6e7d3836eb4a395b2029e2f9329f2681
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 199e330dcd78c372a0279cac9f0e96cb47c561e8
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919833"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556454"
 ---
 # <a name="hypot-hypotf-hypotl-_hypot-_hypotf-_hypotl"></a>hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
 
@@ -82,11 +83,12 @@ long double _hypotl(
    long double x,
    long double y
 );
+#define hypotf(X, Y) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*x*, *y*<br/>
+*x*, *y*\
 Значения с плавающей запятой.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -95,11 +97,13 @@ long double _hypotl(
 
 Дополнительные сведения о кодах возврата см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
-Функции **hypot** вычисляют длину гипотенузы правого треугольника, учитывая длину двух сторон *x* и *y* (иными словами, квадратный корень из *x*<sup>2</sup> + *y*<sup>2</sup>).
+Функции **hypot** вычисляют длину гипотенузы правого треугольника, учитывая длину двух сторон *x* и *y* (иными словами, квадратный корень из *x*<sup>2</sup>  +  *y*<sup>2</sup>).
 
 Для совместимости с более ранними стандартами используются версии функций с символом подчеркивания в начале. Их поведение идентично поведению версий, которые не имеют таких символов. В новом коде рекомендуется использовать версии без символов подчеркивания.
+
+При использовании \<tgmath.h> `hypot()` макроса тип аргумента определяет, какая версия функции выбрана. Подробные сведения см. в разделе [Type-Generic Math](../../c-runtime-library/tgmath.md) .
 
 По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
@@ -108,6 +112,7 @@ long double _hypotl(
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
 |**hypot**, **хипотф**, **хипотл**, **_hypot**, **_hypotf**, **_hypotl**|\<math.h>|
+|макрос **hypot** | \<tgmath.h> |
 
 Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
@@ -133,8 +138,8 @@ int main( void )
 If a right triangle has sides 3.0 and 4.0, its hypotenuse is 5.0
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
-[Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
+[Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [_cabs](cabs.md)<br/>
 [_matherr](matherr.md)<br/>

@@ -1,6 +1,7 @@
 ---
 title: acos, acosf, acosl
-ms.date: 4/2/2020
+description: Справочник по API для `acos` , `acosf` и `acosl` ;, который вычисляет арккосинус значения с плавающей запятой.
+ms.date: 08/31/2020
 api_name:
 - acosf
 - acos
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-ms.openlocfilehash: b6188c585d2f3b7f2bce1a50569e6bae60ee4942
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: eeee51cea2a81882ee1ed8b014312ee9f9095dc6
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220773"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555102"
 ---
 # <a name="acos-acosf-acosl"></a>acos, acosf, acosl
 
@@ -53,16 +54,15 @@ ms.locfileid: "87220773"
 double acos( double x );
 float acosf( float x );
 long double acosl( long double x );
-```
+#define acos(X) // Requires C11 or higher
 
-```cpp
 float acos( float x );   // C++ only
 long double acos( long double x );   // C++ only
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*x*<br/>
+*x*\
 Значение от-1 до 1, для которого вычисляется арккосинус (обратный косинус).
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -77,9 +77,11 @@ long double acos( long double x );   // C++ only
 |± КНАН, С|нет|_DOMAIN|
 |&#124;x&#124;>1|INVALID|_DOMAIN|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **Acos** , которые принимают и возвращают **`float`** **`long double`** типы и. В программе на языке C **Acos** всегда принимает и возвращает **`double`** .
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **Acos** , которые принимают и возвращают **`float`** **`long double`** типы и. В программе на языке C, если только вы не используете \<tgmath.h> макрос для вызова этой функции, **Acos** всегда принимает и возвращает **`double`** .
+
+При использовании \<tgmath.h> `acos()` макроса тип аргумента определяет, какая версия функции выбрана. Подробные сведения см. в разделе [Type-Generic Math](../../c-runtime-library/tgmath.md) .
 
 По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
@@ -88,6 +90,7 @@ long double acos( long double x );   // C++ only
 |Подпрограмма|Обязательный заголовок|Необязательные заголовки|
 |-------------|---------------------|----------------------|
 |**Acos**, **acosf**, **acosl**|\<math.h>|\<errno.h>|
+|макрос **ACOS ()** | \<tgmath.h> ||
 
 ## <a name="example"></a>Пример
 
@@ -139,7 +142,7 @@ Arcsine of 0.000000 = 0.000000
 Arccosine of 0.000000 = 1.570796
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>Дополнительно
 
 [Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [asin, asinf, asinl](asin-asinf-asinl.md)<br/>

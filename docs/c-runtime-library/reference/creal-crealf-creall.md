@@ -1,6 +1,7 @@
 ---
 title: creal, crealf, creall
-ms.date: 03/30/2018
+description: Справочник по API для Креал, креалф, креалл; , который получает реальную часть комплексного числа.
+ms.date: 9/2/2020
 api_name:
 - creal
 - crealf
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - crealf function
 - creall function
 ms.assetid: fa3ac62f-7aa3-4238-a71f-d6b00cd0c7c8
-ms.openlocfilehash: 14d7bc25e514a217a6ab1160d41895ce2473b409
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4f375bbe8813ba67130f8b56d8e2c99d5b734764
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87189354"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555934"
 ---
 # <a name="creal-crealf-creall"></a>creal, crealf, creall
 
@@ -50,9 +51,8 @@ ms.locfileid: "87189354"
 double creal( _Dcomplex z );
 float crealf( _Fcomplex z );
 long double creall( _Lcomplex z );
-```
+#define creal(X) // Requires C11 or higher
 
-```cpp
 float creal( _Fcomplex z );  // C++ only
 long double creal( _Lcomplex z );  // C++ only
 ```
@@ -66,19 +66,22 @@ long double creal( _Lcomplex z );  // C++ only
 
 Реальная часть *z*.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **Креал** , которые принимают **_Fcomplex** или **_Lcomplex** значения, а также возвращают **`float`** **`long double`** значения или. В программе на языке C **Креал** всегда принимает значение **_Dcomplex** и возвращает **`double`** значение.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **Креал** , которые принимают **_Fcomplex** или **_Lcomplex** значения, а также возвращают **`float`** **`long double`** значения или. В программе на языке C, если только вы не используете \<tgmath.h> макрос для вызова этой функции, **Креал** всегда принимает значение **_Dcomplex** и возвращает **`double`** значение.
+
+При использовании \<tgmath.h> `creal()` макроса тип аргумента определяет, какая версия функции выбрана. Подробные сведения см. в разделе [Type-Generic Math](../../c-runtime-library/tgmath.md) .
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Заголовок C|Заголовок C++|
 |-------------|--------------|------------------|
 |**Креал**, **креалф**, **креалл**|\<complex.h>|\<ccomplex>|
+|макрос **Креал** | \<tgmath.h> ||
 
 Типы **_Fcomplex**, **_Dcomplex**и **_Lcomplex** являются эквивалентами корпорации Майкрософт нереализованных собственных типов C99 с **плавающей запятой _Complex**, **Double _Complex**и **long double _Complex**соответственно. Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>Дополнительно
 
 [Алфавитный справочник по функциям](crt-alphabetical-function-reference.md)<br/>
 [_Cbuild, _FCbuild, _LCbuild](cbuild-fcbuild-lcbuild.md)<br/>

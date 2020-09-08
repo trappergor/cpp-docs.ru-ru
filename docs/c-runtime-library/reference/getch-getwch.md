@@ -1,5 +1,6 @@
 ---
 title: _getch, _getwch
+description: Справочник по API для _getch и _getwch; , который получает символ из консоли без вывода эха.
 ms.date: 4/2/2020
 api_name:
 - _getch
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - _getch function
 - getwch function
 ms.assetid: cc116be7-cff2-4274-970f-5e7b18ccc05c
-ms.openlocfilehash: 1c62bd0793fef0683007fe21df0fc0c2acdf1357
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 39954cdbe507baad05055770df5db8859737b9d1
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919629"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555857"
 ---
 # <a name="_getch-_getwch"></a>_getch, _getwch
 
@@ -58,9 +59,9 @@ wint_t _getwch( void );
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает считанный символ. Ошибка не возвращается.
+Возвращает считанный символ. Ошибки не возвращаются.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
 Функции **_getch** и **_getwch** считывают один символ из консоли без вывода символа. Эти функции нельзя использовать для считывания сочетания CTRL+C. При считывании функциональной клавиши или клавиши со стрелкой каждая из этих функций должна вызываться дважды. Первый вызов возвращает 0 или 0xE0, а второй вызов возвращает фактический код клавиши.
 
@@ -119,7 +120,7 @@ abcdefy
 Type 'Y' when finished typing keys: Y
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Ввод-вывод в консоль и порт](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_getche, _getwche](getche-getwche.md)<br/>

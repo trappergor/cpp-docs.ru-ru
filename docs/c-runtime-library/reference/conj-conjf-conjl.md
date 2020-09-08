@@ -1,6 +1,7 @@
 ---
 title: conj, conjf, conjl
-ms.date: 11/04/2016
+description: Справочник по API для конж, конжф и конжл; для получения комплексного сопряженного комплексного числа.
+ms.date: 9/2/2020
 api_name:
 - conj
 - conjf
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - conjf function
 - conjl function
 ms.assetid: 792fccfa-19c6-4890-99f9-a3b89effccd6
-ms.openlocfilehash: cb87e502d3fa927f10675796bae0b1d37115b2a2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b779eb2d92893b204a73b2fa4f5c89928933ffeb
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939030"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556357"
 ---
 # <a name="conj-conjf-conjl"></a>conj, conjf, conjl
 
@@ -62,11 +63,12 @@ _Fcomplex conjf(
 _Lcomplex conjl(
    _Lcomplex z
 );
+#define conj(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*z*<br/>
+*гармошкой*\
 Комплексное число.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -75,19 +77,22 @@ _Lcomplex conjl(
 
 ## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **конж** , которые принимают и возвращают значения **_Fcomplex** и **_Lcomplex** . В программе на языке C **конж** всегда принимает и возвращает значение **_Dcomplex** .
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **конж** , которые принимают и возвращают **_Fcomplex** и **_Lcomplex** значения. В программе на языке C, если только вы не используете \<tgmath.h> макрос для вызова этой функции, **конж** всегда принимает и возвращает значение **_Dcomplex** .
+
+При использовании \<tgmath.h> `conj()` макроса тип аргумента определяет, какая версия функции выбрана. Подробные сведения см. в разделе [Type-Generic Math](../../c-runtime-library/tgmath.md) .
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Заголовок C|Заголовок C++|
 |-------------|--------------|------------------|
 |**конж**, **конжф**, **конжл**|\<complex.h>|\<ccomplex>|
+|макрос **конж** | \<tgmath.h> ||
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительно
 
-[Алфавитный указатель функций](crt-alphabetical-function-reference.md)<br/>
+[Алфавитный справочник по функциям](crt-alphabetical-function-reference.md)<br/>
 [norm, normf, norml](norm-normf-norml1.md)<br/>
 [creal, crealf, creall](creal-crealf-creall.md)<br/>
 [cproj, cprojf, cprojl](cproj-cprojf-cprojl.md)<br/>

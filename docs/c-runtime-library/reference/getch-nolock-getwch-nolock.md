@@ -1,5 +1,6 @@
 ---
 title: _getch_nolock, _getwch_nolock
+description: Справочник по API для _getch_nolock и _getwch_nolock; , который получает символ из консоли без эха и не блокирует поток.
 ms.date: 4/2/2020
 api_name:
 - _getwch_nolock
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - getch_nolock function
 - gettch_nolock function
 ms.assetid: 9d248546-26ca-482c-b0c6-55812a987e83
-ms.openlocfilehash: 81a3b49287902ac0aaa4d635553cbbaac81ac356
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 36a50f215a9250b23d4dc25db2e1f1c764a085ce
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920348"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555037"
 ---
 # <a name="_getch_nolock-_getwch_nolock"></a>_getch_nolock, _getwch_nolock
 
@@ -63,9 +64,9 @@ wint_t _getwch_nolock( void );
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает считанный символ. Ошибка не возвращается.
+Возвращает считанный символ. Ошибки не возвращаются.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
 **_getch_nolock** и **_getwch_nolock** идентичны **_getch** и **_getchw** за исключением того, что они не защищены от помех от других потоков. Они могут выполняться быстрее, поскольку не создают дополнительную нагрузку, связанную с блокировкой работы других потоков. Используйте эти функции только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.
 
@@ -122,7 +123,7 @@ abcdefy
 Type 'Y' when finished typing keys: Y
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Ввод-вывод в консоль и порт](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_getche, _getwche](getche-getwche.md)<br/>

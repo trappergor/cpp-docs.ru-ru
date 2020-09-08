@@ -1,6 +1,7 @@
 ---
 title: lgamma, lgammaf, lgammal
-ms.date: 4/2/2020
+description: Справочник по API для лгамма, лгаммаф и лгаммал; , который определяет натуральный логарифм абсолютного значения гамма-функции указанного значения.
+ms.date: 9/1/2020
 api_name:
 - lgamma
 - lgammaf
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - lgammal function
 - lgammaf function
 ms.assetid: 6e326c58-7077-481a-a329-c82ae56ae9e6
-ms.openlocfilehash: d751a3487db1d7c0135d4a1ae87cb84d374825fa
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 202250f3575f61fcef1cf29a687b8fdf36e6db33
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218654"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555401"
 ---
 # <a name="lgamma-lgammaf-lgammal"></a>lgamma, lgammaf, lgammal
 
@@ -54,16 +55,15 @@ ms.locfileid: "87218654"
 double lgamma( double x );
 float lgammaf( float x );
 long double lgammal( long double x );
-```
+#define lgammal(X) // Requires C11 or higher
 
-```cpp
 float lgamma( float x ); //C++ only
 long double lgamma( long double x ); //C++ only
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*x*<br/>
+*x*\
 Вычисляемое значение.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -72,7 +72,7 @@ long double lgamma( long double x ); //C++ only
 
 |Проблема|Возвращает|
 |-----------|------------|
-|*x* = NaN|Не число|
+|*x* = NaN|NaN|
 |*x* = ± 0|+INFINITY|
 |*x*= отрицательное целое число|+INFINITY|
 |± Бесконечности|+INFINITY|
@@ -81,9 +81,11 @@ long double lgamma( long double x ); //C++ only
 
 Сообщает об ошибках, как указано в [_matherr](matherr.md).
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **лгамма** , которые принимают и возвращают **`float`** **`long double`** типы и. В программе на языке C **лгамма** всегда принимает и возвращает **`double`** .
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **лгамма** , которые принимают и возвращают **`float`** **`long double`** типы и. В программе на языке C, если только вы не используете \<tgmath.h> макрос для вызова этой функции, **лгамма** всегда принимает и возвращает **`double`** .
+
+При использовании \<tgmath.h> `lgamma()` макроса тип аргумента определяет, какая версия функции выбрана. Подробные сведения см. в разделе [Type-Generic Math](../../c-runtime-library/tgmath.md) .
 
 Если x является рациональным числом, эта функция возвращает логарифм факториала (x-1).
 
@@ -91,13 +93,14 @@ long double lgamma( long double x ); //C++ only
 
 ## <a name="requirements"></a>Требования
 
-|Компонент|Заголовок C|Заголовок C++|
+|Функция|Заголовок C|Заголовок C++|
 |--------------|--------------|------------------|
 |**лгамма**, **лгаммаф**, **лгаммал**|\<math.h>|\<cmath>|
+|макрос **лгамма** | \<tgmath.h> ||
 
 Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>Дополнительно
 
 [Алфавитный справочник по функциям](crt-alphabetical-function-reference.md)<br/>
 [tgamma, tgammaf, tgammal](tgamma-tgammaf-tgammal.md)<br/>

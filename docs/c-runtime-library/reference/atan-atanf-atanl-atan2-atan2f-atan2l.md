@@ -1,6 +1,7 @@
 ---
 title: atan, atanf, atanl, atan2, atan2f, atan2l
-ms.date: 6/5/2020
+description: Справочник по API для Atan, атанф, атанл, atan2, atan2f и atan2l; который Вычисляет арктангенс значения с плавающей запятой.
+ms.date: 08/31/2020
 api_name:
 - atan2f
 - atan2l
@@ -45,12 +46,12 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-ms.openlocfilehash: ad6bed621a0f1b5dd686909e4bf579e915662079
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1f1d33aac86d94ab3731dd5cf5b124af99ccb3f2
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232616"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555635"
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan, atanf, atanl, atan2, atan2f, atan2l
 
@@ -62,15 +63,15 @@ ms.locfileid: "87232616"
 double atan( double x );
 float atanf( float x );
 long double atanl( long double x );
+#define atan(X) // Requires C11 or higher
+
+float atan( float x );  // C++ only
+long double atan( long double x );  // C++ only
 
 double atan2( double y, double x );
 float atan2f( float y, float x );
 long double atan2l( long double y, long double x );
-```
-
-```cpp
-float atan( float x );  // C++ only
-long double atan( long double x );  // C++ only
+#define atan2(Y, X) // Requires C11 or higher
 
 float atan2( float y, float x );  // C++ only
 long double atan2( long double y, long double x );  // C++ only
@@ -78,7 +79,7 @@ long double atan2( long double y, long double x );  // C++ only
 
 ### <a name="parameters"></a>Параметры
 
-*x*, *y*<br/>
+*x*, *y*\
 Все числа.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -91,13 +92,15 @@ long double atan2( long double y, long double x );  // C++ only
 |-----------|-------------------|-----------------------|
 |± **КНАН**, **с**|нет|**_DOMAIN**|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
 Функция **ATAN** Вычисляет арктангенс (обратную функцию тангенса) для *x*. **atan2** Вычисляет арктангенс *y* / *x* (если *x* равен 0, **atan2** возвращает π/2, если *y* является положительным,-π/2, если *y* является отрицательным, или 0, если *y* равен 0).
 
+При использовании \<tgmath.h> `atan()` `atan2()` макроса или тип аргумента определяет, какая версия функции выбрана. Подробные сведения см. в разделе [Type-Generic Math](../../c-runtime-library/tgmath.md) .
+
 **ATAN** имеет реализацию, использующую Streaming SIMD Extensions 2 (SSE2). Сведения о реализации SSE2 и ограничениях на ее использование см. в разделе [_set_SSE2_enable](set-sse2-enable.md).
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **ATAN** и **atan2** , которые принимают **`float`** **`long double`** аргументы или. В программе на языке C **ATAN** и **atan2** всегда принимают **`double`** аргументы и возвращают **`double`** .
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **ATAN** и **atan2** , которые принимают **`float`** **`long double`** аргументы или. В программе на языке C, если только вы не используете \<tgmath.h> макрос для вызова этой функции, **ATAN** и **atan2** всегда принимают **`double`** аргументы и возвращают **`double`** .
 
 По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
@@ -106,6 +109,7 @@ long double atan2( long double y, long double x );  // C++ only
 |Подпрограмма|Обязательный заголовок (C)|Обязательный заголовок (C++)|
 |-------------|---------------------|-|
 |**ATAN**, **atan2**, **атанф**, **atan2f**, **атанл**, **atan2l**|\<math.h>|\<cmath> или \<math.h>|
+|**ATAN ()**, макросы **atan2** | \<tgmath.h> ||
 
 ## <a name="example"></a>Пример
 
@@ -138,7 +142,7 @@ Arctangent of 5.000000: 1.373401
 Arctangent of 0.500000 / 5.000000: 0.099669
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>

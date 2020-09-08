@@ -1,6 +1,7 @@
 ---
 title: carg, cargf, cargl
-ms.date: 11/04/2016
+description: Справочник по API для Карг, каргф и Каргл; который получает аргумент комплексного числа с ветвью, повырезанной вдоль отрицательной реальной оси.
+ms.date: 9/2/2020
 api_name:
 - carg
 - cargf
@@ -33,16 +34,16 @@ helpviewer_keywords:
 - cargf function
 - cargl function
 ms.assetid: 610d6a93-b929-46ab-a966-b77db0b804be
-ms.openlocfilehash: 883710ad4538fb9081ad0c8cfaa169380ddbaf55
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 907694904b260c44dde84724c739c62dfe46dbde
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213623"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555817"
 ---
 # <a name="carg-cargf-cargl"></a>carg, cargf, cargl
 
-Извлекает аргумент комплексного числа, ветви которого заканчиваются в отрицательной части реальной оси.
+Извлекает аргумент комплексного числа с ветвью, вырезанной вдоль отрицательной реальной оси.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -62,30 +63,34 @@ float cargf(
 long double cargl(
    _Lcomplex z
 );
+#define carg(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*гармошкой*<br/>
+*гармошкой*\
 Комплексное число.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Аргумент (также известный как фаза) *z*. Результат находится в интервале [-π, + π].
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **Карг** , которые принимают **_Fcomplex** или **_Lcomplex** значения, а также возвращают **`float`** **`long double`** значения или. В программе на языке C **Карг** всегда принимает значение **_Dcomplex** и возвращает **`double`** значение.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **Карг** , которые принимают **_Fcomplex** или **_Lcomplex** значения, а также возвращают **`float`** **`long double`** значения или. В программе на языке C, если только вы не используете \<tgmath.h> макрос для вызова этой функции, **Карг** всегда принимает значение **_Dcomplex** и возвращает **`double`** значение.
+
+При использовании \<tgmath.h> `carg()` макроса тип аргумента определяет, какая версия функции выбрана. Подробные сведения см. в разделе [Type-Generic Math](../../c-runtime-library/tgmath.md) .
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Заголовок C|Заголовок C++|
 |-------------|--------------|------------------|
 |**Карг**, **каргф**, **Каргл**|\<complex.h>|\<ccomplex>|
+|макрос **Карг** | \<tgmath.h> ||
 
 Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>Дополнительно
 
 [Алфавитный справочник по функциям](crt-alphabetical-function-reference.md)<br/>
 [norm, normf, norml](norm-normf-norml1.md)<br/>
