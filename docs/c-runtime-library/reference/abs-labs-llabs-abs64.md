@@ -1,5 +1,6 @@
 ---
 title: abs, labs, llabs, _abs64
+description: Справочник по API для ABS, Labs, ллабс и _abs64; , который вычисляет абсолютное значение значения.
 ms.date: 04/05/2018
 api_name:
 - abs
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - _abs64 function
 - calculating absolute values
 ms.assetid: 60f789d1-4a1e-49f5-9e4e-0bdb277ea26a
-ms.openlocfilehash: 96363f8d2139a5c75ee25a2c43b4c7ef55094f13
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4527950e4f5577b9285d12309742accb64b9a24a
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221995"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556753"
 ---
 # <a name="abs-labs-llabs-_abs64"></a>abs, labs, llabs, _abs64
 
@@ -69,14 +70,14 @@ float abs( float n );   // C++ only
 
 ### <a name="parameters"></a>Параметры
 
-*n*<br/>
+*\n*\
 Числовое значение.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Функции **ABS**, **Labs**, **ллабс** и **_abs64** возвращают абсолютное значение параметра *n*. Ошибка не возвращается.
+Функции **ABS**, **Labs**, **ллабс**и **_abs64** возвращают абсолютное значение параметра *n*. Ошибки не возвращаются.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
 Поскольку C++ допускает перегрузку, можно вызывать перегрузки **ABS** , которые принимают и возвращают **`long`** значения,,, **`long long`** **`float`** **`double`** и **`long double`** . Эти перегрузки определены в \<cmath> заголовке. В программе на языке **ABS** всегда принимает и возвращает **`int`** .
 
@@ -148,7 +149,7 @@ llabs(LLONG_MIN) returns -9223372036854775808
 _abs64(_I64_MIN) returns 0x8000000000000000
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>Дополнительно
 
 [Преобразование данных](../../c-runtime-library/data-conversion.md)<br/>
 [Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>

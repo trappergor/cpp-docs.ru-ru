@@ -1,6 +1,7 @@
 ---
 title: asinh, asinhf, asinhl
-ms.date: 4/2/2020
+description: Справочник по API для ASINH, асинхф и асинхл; который вычисляет обратный гиперболический синус значения с плавающей запятой.
+ms.date: 08/31/2020
 api_name:
 - asinh
 - asinhf
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-ms.openlocfilehash: 0443648d33929082042881c14562b34356cb6063
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 332e6bfc95bd297d703d879cdd468b450cfdc763
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232655"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556792"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh, asinhf, asinhl
 
@@ -51,9 +52,8 @@ ms.locfileid: "87232655"
 double asinh( double x );
 float asinhf( float x );
 long double asinhl( long double x );
-```
+#define asinh(X) // Requires C11 or higher
 
-```cpp
 float asinh( float x );  // C++ only
 long double asinh( long double x );  // C++ only
 ```
@@ -71,17 +71,21 @@ long double asinh( long double x );  // C++ only
 |-----------|-------------------|--------------------------|
 |± КНАН, ТО ЖЕ, INF|нет|нет|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
-При использовании C++ можно вызывать перегрузки **ASINH** , которые принимают и возвращают **`float`** **`long double`** значения или. В программе на языке C **ASINH** всегда принимает и возвращает **`double`** .
+При использовании C++ можно вызывать перегрузки **ASINH** , которые принимают и возвращают **`float`** **`long double`** значения или. В программе на языке C, если только вы не используете \<tgmath.h> макрос для вызова этой функции, **ASINH** всегда принимает и возвращает **`double`** .
+
+При использовании \<tgmath.h> `asinh()` макроса тип аргумента определяет, какая версия функции выбрана. Подробные сведения см. в разделе [Type-Generic Math](../../c-runtime-library/tgmath.md) .
+
 
 По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
-|Компонент|Обязательный заголовок C|Обязательный заголовок C++|
+|Функция|Обязательный заголовок C|Обязательный заголовок C++|
 |--------------|--------------|------------------|
-|**ASINH**, **асинхф**, **асинхл**|\<math.h>|\<cmath>или \< Math. h<|
+|**ASINH**, **асинхф**, **асинхл**|\<math.h>|\<cmath> или \<math.h>|
+|макрос **Asinh ()** | \<tgmath.h> ||
 
 Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 

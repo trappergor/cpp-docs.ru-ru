@@ -1,6 +1,7 @@
 ---
 title: cos, cosf, cosl
-ms.date: 6/5/2020
+description: Справочник по API для Cos, cosf и косл; , который вычисляет значение косинуса числа с плавающей запятой.
+ms.date: 08/31/2020
 api_name:
 - cos
 - cosf
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-ms.openlocfilehash: ee5cb2c3a05514b4f10f73a2b27199b8e3a5ac4b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b0e723708076067cf4d2ed896542ac08406a87ee
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221930"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556805"
 ---
 # <a name="cos-cosf-cosl"></a>cos, cosf, cosl
 
@@ -54,16 +55,15 @@ ms.locfileid: "87221930"
 double cos( double x );
 float cosf( float x );
 long double cosl( long double x );
-```
+#define cos(X) // Requires C11 or higher
 
-```cpp
 float cos( float x );  // C++ only
 long double cos( long double x );  // C++ only
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*x*<br/>
+*x*\
 Угол в радианах.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -75,9 +75,11 @@ long double cos( long double x );  // C++ only
 |± КНАН, С|нет|**_DOMAIN**|
 |± INF|**Недопустимый**|**_DOMAIN**|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **COS** , которые принимают и возвращают **`float`** **`long double`** значения или. В программе на языке C функция **COS** всегда принимает и возвращает **`double`** .
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **COS** , которые принимают и возвращают **`float`** **`long double`** значения или. В программе на языке C, если только вы не используете \<tgmath.h> макрос для вызова этой функции, функция **COS** всегда принимает и возвращает **`double`** .
+
+При использовании \<tgmath.h> `cos()` макроса тип аргумента определяет, какая версия функции выбрана. Подробные сведения см. в разделе [Type-Generic Math](../../c-runtime-library/tgmath.md) .
 
 По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
@@ -86,6 +88,7 @@ long double cos( long double x );  // C++ only
 |Подпрограмма|Обязательный заголовок C|Обязательный заголовок C++|
 |-------------|---------------------|-|
 |**COS**, **cosh**, **cosf**|\<math.h>|\<cmath> или \<math.h>|
+|макрос **cos ()** | \<tgmath.h> ||
 
 Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
@@ -93,7 +96,7 @@ long double cos( long double x );  // C++ only
 
 См. пример в [sin, sinf, sinl](sin-sinf-sinl.md).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>Дополнительно
 
 [Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>
