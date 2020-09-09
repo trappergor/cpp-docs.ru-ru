@@ -1,6 +1,7 @@
 ---
 title: /U, /u (отмена определения символов)
-ms.date: 06/08/2020
+description: Чтобы отменить символы препроцессора, используйте параметры компилятора Microsoft C/C++/U и/u.
+ms.date: 09/03/2020
 f1_keywords:
 - VC.Project.VCCLCompilerTool.UndefinePreprocessorDefinitions
 - VC.Project.VCCLWCECompilerTool.UndefinePreprocessorDefinitions
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - /U compiler option [C++]
 - U compiler option [C++]
 ms.assetid: 7bc0474f-6d1f-419b-807d-0d8816763b2a
-ms.openlocfilehash: 4d7a2b3d5df2b22dc53eb7b58bfb78cdb1824b26
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 78effabba2fa72e5ab7f2dfc6ef91f22383b063f
+ms.sourcegitcommit: 0df2b7ab4e81284c5248e4584767591dcc1950c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616665"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89609193"
 ---
 # <a name="u-u-undefine-symbols"></a>/U, /u (отмена определения символов)
 
@@ -26,7 +27,7 @@ ms.locfileid: "84616665"
 
 ## <a name="syntax"></a>Синтаксис
 
-> **`/U`**\[]*символ*\
+> **`/U`**\[ ]*символ*\
 > **`/u`**
 
 ## <a name="arguments"></a>Аргументы
@@ -34,7 +35,7 @@ ms.locfileid: "84616665"
 *знак*<br/>
 Символ препроцессора для деопределения.
 
-## <a name="remarks"></a>Комментарии
+## <a name="remarks"></a>Примечания
 
 Ни один из **`/U`** параметров и не **`/u`** может отменить определение символа, созданного с помощью **`#define`** директивы.
 
@@ -42,16 +43,16 @@ ms.locfileid: "84616665"
 
 По умолчанию компилятор может определить большое количество символов, характерных для Microsoft. Ниже приведены некоторые распространенные из них.
 
-| Символ | Компонент |
+| Символ | Функция |
 |--|--|
-| `_CHAR_UNSIGNED` | Тип char по умолчанию не подписан. Определяется при [**`/J`**](j-default-char-type-is-unsigned.md) указании параметра. |
-| `_CPPRTTI` | Определяется для кода, скомпилированного с [**`/GR`**](gr-enable-run-time-type-information.md) параметром. |
-| `_CPPUNWIND` | Определяется для кода, скомпилированного с [**`/EHsc`**](eh-exception-handling-model.md) параметром. |
-| `_DLL` | Определяется при [**`/MD`**](md-mt-ld-use-run-time-library.md) указании параметра. |
+| `_CHAR_UNSIGNED` | Тип char по умолчанию не подписан. Определяется при [`/J`](j-default-char-type-is-unsigned.md) указании параметра. |
+| `_CPPRTTI` | Определяется для кода, скомпилированного с [`/GR`](gr-enable-run-time-type-information.md) параметром. |
+| `_CPPUNWIND` | Определяется для кода, скомпилированного с [`/EHsc`](eh-exception-handling-model.md) параметром. |
+| `_DLL` | Определяется при [`/MD`](md-mt-ld-use-run-time-library.md) указании параметра. |
 | `_M_IX86` | По умолчанию для целевых объектов x86 определено значение 600. |
 | `_MSC_VER` | Определяется как уникальное целочисленное значение для каждой версии компилятора. Дополнительные сведения см. в разделе [стандартные макросы](../../preprocessor/predefined-macros.md). |
 | `_WIN32` | Определено для приложений WIN32. Определяется всегда. |
-| `_MT` | Определяется, если указан параметр [ **`/MD`** или **`/MT`** ](md-mt-ld-use-run-time-library.md) . |
+| `_MT` | Определяется, если [`/MD`](md-mt-ld-use-run-time-library.md) [`/MT`](md-mt-ld-use-run-time-library.md) указан параметр или. |
 
 Полный список предварительно определенных макросов для Microsoft см. в разделе [предопределенные макросы](../../preprocessor/predefined-macros.md).
 
@@ -71,7 +72,7 @@ ms.locfileid: "84616665"
 
 [Параметры компилятора MSVC](compiler-options.md)<br/>
 [Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)<br/>
-[**`/J`**(Тип char по умолчанию не подписан)](j-default-char-type-is-unsigned.md)<br/>
-[**`/GR`**(Включить сведения о типах времени выполнения)](gr-enable-run-time-type-information.md)<br/>
-[**`/EH`**(Модель обработки исключений)](eh-exception-handling-model.md)<br/>
+[**`/J`** (Тип char по умолчанию не подписан)](j-default-char-type-is-unsigned.md)<br/>
+[**`/GR`** (Включить сведения о типах времени выполнения)](gr-enable-run-time-type-information.md)<br/>
+[**`/EH`** (Модель обработки исключений)](eh-exception-handling-model.md)<br/>
 [**`/MD`**, **`/MT`** , **`/LD`** (Использовать библиотеку времени выполнения)](md-mt-ld-use-run-time-library.md)

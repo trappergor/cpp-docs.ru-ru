@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Callback
 ms.assetid: afb15d25-3230-44f7-b321-e17c54872943
-ms.openlocfilehash: 138ad9d5d3bd4cf9e5263845f950dbbe7971fde6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8615b92f9b46dcfc6e36867c51eeefdb7a5f5e81
+ms.sourcegitcommit: 0df2b7ab4e81284c5248e4584767591dcc1950c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214140"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89609086"
 ---
 # <a name="callback-function-wrl"></a>Функция обратного вызова (WRL)
 
@@ -24,7 +24,7 @@ template<
    typename TCallback
 >
 ComPtr<TDelegateInterface> Callback(
-   TCallbackcallback
+   TCallback callback
 );
 template<
    typename TDelegateInterface,
@@ -227,22 +227,22 @@ ComPtr<TDelegateInterface> Callback(
 *TArg9*<br/>
 Параметр шаблона, который определяет тип девятого аргумента метода обратного вызова.
 
-*обратного вызова*<br/>
+*обратный вызов*<br/>
 Объект, который представляет объект обратного вызова и его функцию-член.
 
 *object*<br/>
 Объект, функция-член которого вызывается при возникновении события.
 
-*method*<br/>
+*Method*<br/>
 Функция-член, которую необходимо вызвать при возникновении события.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Объект, функция-член которого является методом обратного вызова.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
-База объекта делегата должна быть `IUnknown`, а не `IInspectable`.
+База объекта делегата должна быть `IUnknown` , а не `IInspectable` .
 
 ## <a name="requirements"></a>Требования
 
@@ -252,4 +252,4 @@ ComPtr<TDelegateInterface> Callback(
 
 ## <a name="see-also"></a>См. также раздел
 
-[Пространство имен Microsoft::WRL](microsoft-wrl-namespace.md)
+[Пространство имен Microsoft:: WRL](microsoft-wrl-namespace.md)
