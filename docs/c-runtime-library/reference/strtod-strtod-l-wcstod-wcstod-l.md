@@ -51,12 +51,12 @@ helpviewer_keywords:
 - _strtod_l function
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
-ms.openlocfilehash: aa6f40c91f9be906e3f51df5788483410f6077a3
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: 1e75fe39c8ab7020a088307421926327d4043ba8
+ms.sourcegitcommit: efed9ed109862c6c2a042f2663b680e8ca4e16a1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89554959"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89933831"
 ---
 # <a name="strtod-_strtod_l-wcstod-_wcstod_l"></a>strtod, _strtod_l, wcstod, _wcstod_l
 
@@ -120,7 +120,7 @@ double wcstod_l(
 |**_tcstod**|**strtod**|**strtod**|**wcstod**|
 |**_tcstod_l**|**_strtod_l**|**_strtod_l**|**_wcstod_l**|
 
-Параметр категории **LC_NUMERIC** текущего языкового стандарта определяет распознавание символа точки основания в *стрсаурце*. Дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Функции без суффикса **_l** используют текущий языковой стандарт; **_strtod_l** идентичен **_strtod_l** за исключением того, что они используют переданный *языковой стандарт* . Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+Параметр категории **LC_NUMERIC** текущего языкового стандарта определяет распознавание символа точки основания в *стрсаурце*. Дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Функции без суффикса **_l** используют текущий языковой стандарт; **_strtod_l** идентична **_strtod** за исключением того, что в прежнем случае используется переданный *языковой стандарт* . Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 Если *ендптр* не **равно NULL**, то указатель на символ, который остановил просмотр, хранится в расположении, на которое указывает *ендптр*. Если не удается выполнить преобразование (не найдены допустимые цифры или указана недопустимая база), значение *стрсаурце* хранится в расположении, на которое указывает *ендптр*.
 
