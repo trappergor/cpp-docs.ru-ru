@@ -1,16 +1,17 @@
 ---
 title: '&lt;размещать&gt;'
+description: Справочник по API для пространства имен, охватывающего библиотеку стандартных шаблонов (STL), который предоставляет упрощенное представление для непрерывной последовательности объектов.
 ms.date: 05/28/2020
 f1_keywords:
 - <span>
 helpviewer_keywords:
 - span header
-ms.openlocfilehash: 7d21023c90472e5c2e1b28d9fa85e517da4a21ae
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f4c6b141dfea6464e58d06e221a39a693469d31c
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846190"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039876"
 ---
 # <a name="ltspangt"></a>&lt;размещать&gt;
 
@@ -50,7 +51,7 @@ int main()
 
 **Пространство имен:** std
 
-**Параметр компилятора:** /std: c + + Latest
+**Параметр компилятора:** [/std: c + + Latest](../build/reference/std-specify-language-standard-version.md)
 
 ## <a name="members"></a>Элементы
 
@@ -62,21 +63,21 @@ int main()
 
 ### <a name="operators"></a>Операторы
 
-|Имя|Описание|
+|name|Описание|
 |-|:-|
 |[Оператор =](span-class.md#op_eq)| Назначение диапазона |
 |[станции\[\]](span-class.md#op_at)| Доступ к элементам |
 
 ### <a name="functions"></a>Функции
 
-|Имя|Описание|
+|name|Описание|
 |-|:-|
 | [as_bytes](span-functions.md#as_bytes)| Возвращает базовые байты, которые доступны только для чтения. |
 | [as_writable_bytes](span-functions.md#as_writable_bytes) | Получение базовых байтов диапазона. |
 
 ### <a name="constants"></a>Константы
 
-|Имя|Описание|
+|name|Описание|
 |-|:-|
 | **dynamic_extent** | Указывает, что размер диапазона определяется во время выполнения, а не во времени компиляции. Когда число элементов в диапазоне известно во время компиляции, оно указывается в качестве `Extent` параметра шаблона. Если число неизвестно до времени выполнения, укажите `dynamic_extent` вместо него. |
 

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - scheduler policies
 ms.assetid: 58fb68bd-4a57-40a8-807b-6edb6f083cd9
-ms.openlocfilehash: d074646a333090138c916bc4d3b7a2e072731b3d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a962c00d23c41d97087e705d395b601afc7b1910
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228418"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042047"
 ---
 # <a name="scheduler-policies"></a>Политики планировщика
 
@@ -26,17 +26,17 @@ ms.locfileid: "87228418"
 
 Перечисление [Concurrency::P олициелементкэй](reference/concurrency-namespace-enums.md#policyelementkey) определяет ключи политики, связанные с планировщик задач. В следующей таблице описаны ключи политики и значение по умолчанию, используемое средой выполнения для каждого из них.
 
-|Ключ политики|Описание|Значение по умолчанию|
-|----------------|-----------------|-------------------|
-|`SchedulerKind`|Значение [Concurrency:: SchedulerType](reference/concurrency-namespace-enums.md#schedulertype) , указывающее тип потоков, используемых для планирования задач.|`ThreadScheduler` (используйте стандартные потоки). Это единственное допустимое значение для этого ключа.|
-|`MaxConcurrency`|**`unsigned int`** Значение, указывающее максимальное количество ресурсов параллелизма, используемых планировщиком.|[concurrency::MaxExecutionResources](reference/concurrency-namespace-constants1.md#maxexecutionresources)|
-|`MinConcurrency`|**`unsigned int`** Значение типа, указывающее минимальное количество ресурсов параллелизма, используемых планировщиком.|`1`|
-|`TargetOversubscriptionFactor`|**`unsigned int`** Значение, указывающее, сколько потоков следует выделить каждому ресурсу обработки.|`1`|
-|`LocalContextCacheSize`|**`unsigned int`** Значение, указывающее максимальное количество контекстов, которые могут быть кэшированы в локальной очереди каждого виртуального процессора.|`8`|
-|`ContextStackSize`|**`unsigned int`** Значение, указывающее размер стека (в килобайтах), резервируемого для каждого контекста.|`0`(используйте размер стека по умолчанию)|
-|`ContextPriority`|**`int`** Значение, указывающее приоритет потока каждого контекста. Это может быть любое значение, которое можно передать в [сетсреадприорити](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) или `INHERIT_THREAD_PRIORITY` .|`THREAD_PRIORITY_NORMAL`|
-
-|`SchedulingProtocol`| Значение [Concurrency:: счедулингпротоколтипе](reference/concurrency-namespace-enums.md#schedulingprotocoltype) , указывающее используемый алгоритм планирования. | `EnhanceScheduleGroupLocality` | |`DynamicProgressFeedback`| Значение параметра [Concurrency::D инамикпрогрессфидбакктипе](reference/concurrency-namespace-enums.md#dynamicprogressfeedbacktype) , указывающее, следует ли перераспределять ресурсы в соответствии со сведениями о ходе выполнения на основе статистики.<br /><br /> **Примечание** . Не задавайте эту политику, `ProgressFeedbackDisabled` так как она зарезервирована для использования средой выполнения. |`ProgressFeedbackEnabled`|
+| Ключ политики | Описание | Значение по умолчанию |
+|--|--|--|
+| `SchedulerKind` | Значение [Concurrency:: SchedulerType](reference/concurrency-namespace-enums.md#schedulertype) , указывающее тип потоков, используемых для планирования задач. | `ThreadScheduler` (используйте стандартные потоки). Это единственное допустимое значение для этого ключа. |
+| `MaxConcurrency` | **`unsigned int`** Значение, указывающее максимальное количество ресурсов параллелизма, используемых планировщиком. | [concurrency::MaxExecutionResources](reference/concurrency-namespace-constants1.md#maxexecutionresources) |
+| `MinConcurrency` | **`unsigned int`** Значение типа, указывающее минимальное количество ресурсов параллелизма, используемых планировщиком. | `1` |
+| `TargetOversubscriptionFactor` | **`unsigned int`** Значение, указывающее, сколько потоков следует выделить каждому ресурсу обработки. | `1` |
+| `LocalContextCacheSize` | **`unsigned int`** Значение, указывающее максимальное количество контекстов, которые могут быть кэшированы в локальной очереди каждого виртуального процессора. | `8` |
+| `ContextStackSize` | **`unsigned int`** Значение, указывающее размер стека (в килобайтах), резервируемого для каждого контекста. | `0` (используйте размер стека по умолчанию) |
+| `ContextPriority` | **`int`** Значение, указывающее приоритет потока каждого контекста. Это может быть любое значение, которое можно передать в [сетсреадприорити](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) или `INHERIT_THREAD_PRIORITY` . | `THREAD_PRIORITY_NORMAL` |
+| `SchedulingProtocol` | Значение [Concurrency:: счедулингпротоколтипе](reference/concurrency-namespace-enums.md#schedulingprotocoltype) , указывающее используемый алгоритм планирования. | `EnhanceScheduleGroupLocality` |
+| `DynamicProgressFeedback` | Значение параметра [Concurrency::D инамикпрогрессфидбакктипе](reference/concurrency-namespace-enums.md#dynamicprogressfeedbacktype) , указывающее, следует ли перераспределять ресурсы в соответствии со сведениями о ходе выполнения на основе статистики.<br /><br /> **Примечание** . Не задавайте эту политику, `ProgressFeedbackDisabled` так как она зарезервирована для использования средой выполнения. | `ProgressFeedbackEnabled` |
 
 Каждый планировщик использует собственную политику при планировании задач. Политики, связанные с одним планировщиком, не влияют на поведение других планировщиков. Кроме того, политику планировщика нельзя изменить после создания `Scheduler` объекта.
 
@@ -51,8 +51,8 @@ ms.locfileid: "87228418"
 
 Чтобы изучить примеры использования конкретных политик планировщика для управления поведением планировщика, см. раздел [как указать конкретные политики планировщика](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md) и [как создать агенты, использующие определенные политики планировщика](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md).
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также раздел
 
-[планировщик задач](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
+[Планировщик заданий](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [Как указать конкретные политики планировщика](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)<br/>
 [Как создавать агенты, использующие определенные политики планировщика](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)

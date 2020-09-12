@@ -1,6 +1,7 @@
 ---
 title: '&lt;&gt;операторы string_view'
-ms.date: 04/19/2019
+description: Справочник по API для `string_view` операторов, которые используются для сравнения двух `string_view` объектов, `string_view` а также и другого строкового объекта
+ms.date: 9/4/2020
 f1_keywords:
 - xstring/basic_string_view::operator!=
 - xstring/basic_string_view::operator&gt;
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - std::basic_string_view::operator&lt;
 - std::basic_string_view::operator&lt;&lt;
 - std::basic_string_view::operator&lt;=, std::basic_string_view::operator==
-ms.openlocfilehash: b0761c1af7b2ed9f34917d2e4165561b357f0a30
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 832e49aaf01a4ea124b7a6881b93bd93b7337215
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833222"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039889"
 ---
 # <a name="ltstring_viewgt-operators"></a>&lt;&gt;операторы string_view
 
@@ -70,7 +71,7 @@ bool operator!=(
 
 **`true`** Если объект в левой части оператора не лексикографически равным объекту с правой стороны; в противном случае — значение **`false`** .
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Неявное преобразование должно существовать из *convertible_string_type* string_view на другой стороне.
 
@@ -109,7 +110,7 @@ bool operator==(
 
 **`true`** значение, если объект слева от оператора лексикографически равен объекту в правой части; в противном случае — значение **`false`** .
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Неявное преобразование должно существовать из *convertible_string_type* string_view на другой стороне.
 
@@ -148,7 +149,7 @@ bool operator<(
 
 **`true`** значение, если объект слева от оператора лексикографически меньше объекта с правой стороны; в противном случае — значение **`false`** .
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Неявное преобразование должно существовать из *convertible_string_type* string_view на другой стороне.
 
@@ -209,7 +210,7 @@ bool operator<=(
 
 **`true`** значение, если объект слева от оператора лексикографически меньше или равен объекту в правой части; в противном случае — значение **`false`** .
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 См [. &lt; оператор](#op_lt).
 
@@ -235,7 +236,7 @@ String_view, который необходимо указать в потоке 
 
 поток вывода, в который выполняется запись.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Этот оператор используется для вставки содержимого string_view в поток вывода, например с помощью [std:: cout](iostream.md#cout).
 
@@ -272,7 +273,7 @@ bool operator>(
 
 **`true`** Если объект в левой части оператора лексикографически больше, чем объект string_view с правой стороны; в противном случае — значение **`false`** .
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 См [. &lt; оператор](#op_lt).
 
@@ -309,7 +310,7 @@ bool operator>=(
 
 **`true`** значение, если объект слева от оператора лексикографически больше или равен объекту с правой стороны; в противном случае — значение **`false`** .
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 См [. &lt; оператор](#op_lt).
 
@@ -329,6 +330,10 @@ using namespace literals::string_view_literals;
     u16string_view sv16{ u"Hello"sv };
     u32string_view sv32{ U"Hello"sv };
 ```
+
+## <a name="requirements"></a>Требования
+
+[/std:c++17](../build/reference/std-specify-language-standard-version.md)
 
 ## <a name="see-also"></a>См. также раздел
 

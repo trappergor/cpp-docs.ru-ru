@@ -10,18 +10,18 @@ helpviewer_keywords:
 - DRIVER linker option
 - /DRIVER linker option
 ms.assetid: aeee8e28-5d97-40f5-ba16-9f370fe8a1b8
-ms.openlocfilehash: 5639344ede4007bd66a3d51043f4acb423426b94
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c935c20d6c1c009cff64d48e0c0122c8b91bbba3
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842979"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041163"
 ---
 # <a name="driver-windows-nt-kernel-mode-driver"></a>/DRIVER (драйвер режима ядра Windows NT)
 
 >/DRIVER [: ТОЛЬКО ИСТЕЧЕНИЕ |: WDM]
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
 
 Используйте параметр компоновщика **/Driver** для создания драйвера режима ядра Windows NT.
 
@@ -33,9 +33,9 @@ ms.locfileid: "88842979"
 
 Если задано значение **/Driver** :
 
-- **/Fixed: нет** действующих. Дополнительные сведения см. в разделе [Параметр /FIXED (фиксированный базовый адрес)](fixed-fixed-base-address.md).
+- **/Fixed: нет** действующих. Дополнительные сведения см. в разделе [/fixed (фиксированный базовый адрес)](fixed-fixed-base-address.md).
 
-- Расширение выходного файла имеет значение. sys. Используйте параметр **/out** для изменения имени файла и расширения по умолчанию. Дополнительные сведения см. в разделе [Параметр /OUT (имя выходного файла)](out-output-file-name.md).
+- Расширение выходного файла имеет значение. sys. Используйте параметр **/out** для изменения имени файла и расширения по умолчанию. Дополнительные сведения см. в разделе [/out (имя выходного файла)](out-output-file-name.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
 
@@ -49,7 +49,7 @@ ms.locfileid: "88842979"
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом
 
-- См. раздел [свойство VCLinkerTool. Driver](/dotnet/api/microsoft.visualstudio.vcprojectengine.vclinkertool.driver?view=visualstudiosdk-2017#Microsoft_VisualStudio_VCProjectEngine_VCLinkerTool_driver).
+- См. раздел [свойство VCLinkerTool. Driver](/dotnet/api/microsoft.visualstudio.vcprojectengine.vclinkertool.driver).
 
 ## <a name="see-also"></a>См. также раздел
 

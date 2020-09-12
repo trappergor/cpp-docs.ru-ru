@@ -1,5 +1,5 @@
 ---
-title: '> списка &lt;(C++ комментарии к документации)'
+title: '&lt;> списка (комментарии к документации по C++)'
 ms.date: 11/04/2016
 f1_keywords:
 - list
@@ -7,20 +7,20 @@ helpviewer_keywords:
 - list C++ XML tag
 - <list> C++ XML tag
 ms.assetid: c792a10b-0451-422c-9aa0-604116e69d64
-ms.openlocfilehash: 102cf9f7b1b867a012f662ce786d97012826abd1
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 24f9b17c67b8f951743fd51c04266b05dad235c7
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79439298"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041969"
 ---
-# <a name="ltlistgt"></a>&lt;list&gt;
+# <a name="ltlistgt-and-ltlistheadergt"></a>&lt;List &gt; и &lt; лиссеадер&gt;
 
 Блок \<listheader> используется для определения строки заголовка в таблице или списке определений. При определении таблицы необходимо ввести данные для термина в заголовке.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```xml
 <list type="bullet" | "number" | "table">
    <listheader>
       <term>term</term>
@@ -35,19 +35,19 @@ ms.locfileid: "79439298"
 
 #### <a name="parameters"></a>Параметры
 
-*term*<br/>
+*термин*<br/>
 Термин, который будет определен в `description`.
 
-*Описание*<br/>
+*description*<br/>
 Либо элемент маркированного или нумерованного списка, либо определение `term`.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
 Каждый элемент в списке указывается в блоке \<item>. При создании списка определений необходимо указать одновременно `term` и `description`. Тем не менее для таблицы, маркированного или нумерованного списка достаточно ввести только `description`.
 
 Число блоков \<item> в списке или таблице не ограничено.
 
-Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](doc-process-documentation-comments-c-cpp.md).
+Скомпилируйте с [/doc](doc-process-documentation-comments-c-cpp.md) для обработки комментариев документации в файл.
 
 ## <a name="example"></a>Пример
 

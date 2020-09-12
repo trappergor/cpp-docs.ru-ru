@@ -7,28 +7,26 @@ helpviewer_keywords:
 - functions [MFC], callback
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
-ms.openlocfilehash: 19c0bd3a0685abe36c020a5dda930f5683a4baa9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 553e87320828590c9e1e9204b54622f2f1ca6d80
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87183439"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040890"
 ---
 # <a name="callback-functions-used-by-mfc"></a>Функции обратного вызова, используемые MFC
 
 В библиотека Microsoft Foundation Class появляются три функции обратного вызова. Эти функции обратного вызова передаются в [CDC:: енумобжектс](../../mfc/reference/cdc-class.md#enumobjects), [CDC:: грайстринг](../../mfc/reference/cdc-class.md#graystring)и [CDC:: SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc). Обратите внимание, что все функции обратного вызова должны перехватывать исключения MFC перед возвратом в Windows, так как исключения не могут быть вызваны через границы обратного вызова. Дополнительные сведения об исключениях см. в статье [исключения](../../mfc/exception-handling-in-mfc.md).
 
-|Имя||
-|----------|-----------------|
-|[Функция обратного вызова для CDC::EnumObjects](#enum_objects)||
-|[Функция обратного вызова для CDC::GrayString](#graystring)||
-|[Функция обратного вызова для CDC::SetAbortProc](#setabortproc)||
+[Функция обратного вызова для CDC:: Енумобжектс](#enum_objects)\
+[Функция обратного вызова для CDC:: Грайстринг](#graystring)\
+[Функция обратного вызова для CDC::SetAbortProc](#setabortproc)
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** afxwin.h
 
-## <a name="callback-function-for-cdcenumobjects"></a><a name="enum_objects"></a>Функция обратного вызова для CDC:: Енумобжектс
+## <a name="callback-function-for-cdcenumobjects"></a><a name="enum_objects"></a> Функция обратного вызова для CDC:: Енумобжектс
 
 Имя *обжектфунк* — это заполнитель для имени функции, предоставляемой приложением.
 
@@ -52,11 +50,11 @@ int CALLBACK EXPORT ObjectFunc(
 
 Функция обратного вызова возвращает **`int`** . Значение этого возврата определяется пользователем. Если функция обратного вызова возвращает значение 0, то `EnumObjects` останавливает перечисление в начале.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Действительное имя должно быть экспортировано.
 
-## <a name="callback-function-for-cdcgraystring"></a><a name="graystring"></a>Функция обратного вызова для CDC:: Грайстринг
+## <a name="callback-function-for-cdcgraystring"></a><a name="graystring"></a> Функция обратного вызова для CDC:: Грайстринг
 
 *Аутпутфунк* — это заполнитель для имени функции обратного вызова, предоставляемого приложением.
 
@@ -84,11 +82,11 @@ BOOL CALLBACK EXPORT OutputFunc(
 
 Возвращаемое значение функции обратного вызова должно быть TRUE, чтобы обозначать успешность. в противном случае — FALSE.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Функция обратного вызова (*аутпутфунк*) должна рисовать изображение относительно координат (0, 0), а не (*x*, *y*).
 
-## <a name="callback-function-for-cdcsetabortproc"></a><a name="setabortproc"></a>Функция обратного вызова для CDC:: SetAbortProc
+## <a name="callback-function-for-cdcsetabortproc"></a><a name="setabortproc"></a> Функция обратного вызова для CDC:: SetAbortProc
 
 Имя *абортфунк* — это заполнитель для имени функции, предоставляемой приложением.
 
@@ -112,7 +110,7 @@ BOOL CALLBACK EXPORT AbortFunc(
 
 Возвращаемое значение функции прерывания-обработчика не равно нулю, если задание печати должно быть продолжено, и 0, если оно отменено.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Фактическое имя должно быть экспортировано, как описано в разделе "Примечания" [CDC:: SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc).
 

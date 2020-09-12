@@ -6,12 +6,12 @@ f1_keywords:
 - <bit>
 helpviewer_keywords:
 - bit header
-ms.openlocfilehash: 7a87071d30756714e19c971281f642ce16f09d61
-ms.sourcegitcommit: 3628707bc17c99aac7aac27eb126cc2eaa4d07b4
+ms.openlocfilehash: 5652d0af767520710ee08b1827e0df27c477ee6d
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89194769"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040058"
 ---
 # <a name="ltbitgt"></a>&lt;bit&gt;
 
@@ -25,9 +25,9 @@ ms.locfileid: "89194769"
 
 **Пространство имен:** std
 
-`/std:c++latest` является обязательным
+[/std: требуется более поздняя версия c + +](../build/reference/std-specify-language-standard-version.md) .
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Элементы
 
 ### <a name="types"></a>Типы
 

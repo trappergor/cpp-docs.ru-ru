@@ -11,12 +11,12 @@ f1_keywords:
 - filesystem/std::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
-ms.openlocfilehash: 0d5b31b31f9f435c52db89521b4b753c16d86501
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3c94ec899f0ea7abf71530f6aca44638fdb216c9
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368415"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041943"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>Перечисления &lt;filesystem&gt;
 
@@ -24,11 +24,11 @@ ms.locfileid: "81368415"
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<experimental/filesystem>
+**Заголовок:**\<experimental/filesystem>
 
 **Пространство имен:** std::experimental::filesystem
 
-## <a name="copy_options"></a><a name="copy_options"></a>copy_options
+## <a name="copy_options"></a><a name="copy_options"></a> copy_options
 
 Перечисление значений битовой маски, используемое с функциями [copy](filesystem-functions.md#copy) и [copy_file](filesystem-functions.md#copy_file), чтобы указать поведение.
 
@@ -51,7 +51,7 @@ enum class copy_options {
 
 ### <a name="values"></a>Значения
 
-|`Name`|Описание|
+| name | Описание |
 |------------|-----------------|
 |`none`|Выполнять поведение по умолчанию для операции.|
 |`skip_existing`|Не копировать, если файл уже существует, не сообщать об ошибке.|
@@ -79,14 +79,14 @@ enum class directory_options {
 
 ### <a name="values"></a>Значения
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |`none`|Поведение по умолчанию: игнорировать символические ссылки на каталоги. Отказ в разрешении является ошибкой.|
 |`follow_directory_symlink`|Символьные ссылки на каталоги можно рассматривать как фактические каталоги.|
 
-## <a name="file_type"></a><a name="file_type"></a>file_type
+## <a name="file_type"></a><a name="file_type"></a> file_type
 
-Перечисление для типов файлов. Поддерживаемые значения являются регулярными, каталогами, not_found и неизвестными.
+Перечисление для типов файлов. Поддерживаемые значения: Regular, Directory, not_found и Unknown.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -120,17 +120,17 @@ enum class file_type {
 |`socket`|7|Представляет сокет в системе UNIX. (Не поддерживается.)|
 |`unknown`|8|Представляет файл, состояние которого невозможно определить.|
 
-## <a name="perm_options"></a><a name="perm_options"></a>perm_options
+## <a name="perm_options"></a><a name="perm_options"></a> perm_options
 
-Включает `replace`значения, `add` `remove`и `nofollow`.
+Включает значения `replace` , `add` , `remove` и `nofollow` .
 
 ```cpp
 enum class perm_options;
 ```
 
-## <a name="perms"></a><a name="perms"></a>Завивки
+## <a name="perms"></a><a name="perms"></a> perms
 
-Флаги разрешений файла. Поддерживаемые значения, по сути, являются "только для чтения" и все. Для файла с доступом "только для чтения" не установлен ни один из разрядов * _write. В противном случае установлен разряд `all` (0x0777).
+Флаги разрешений файла. Поддерживаемые значения по сути — ReadOnly и ALL. Для файла с доступом "только для чтения" не установлен ни один из разрядов * _write. В противном случае установлен разряд `all` (0x0777).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -163,5 +163,5 @@ enum class perms {// names for permissions
 
 ## <a name="see-also"></a>См. также раздел
 
-[Справка по файлам заголовка](../standard-library/cpp-standard-library-header-files.md)\
-[\<файловая система>](../standard-library/filesystem.md)
+[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)\
+[\<filesystem>](../standard-library/filesystem.md)

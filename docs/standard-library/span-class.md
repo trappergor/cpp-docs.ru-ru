@@ -1,5 +1,6 @@
 ---
 title: класс Span (стандартная библиотека C++) | Документация Майкрософт
+description: Справочник по API для класса span библиотеки стандартных шаблонов (STL), который предоставляет упрощенное представление для непрерывной последовательности объектов.
 ms.date: 05/28/2020
 f1_keywords:
 - span/std::span
@@ -51,12 +52,12 @@ helpviewer_keywords:
 - std::span [C++], rend
 - std::span [C++], size
 - std::span [C++], size_bytes
-ms.openlocfilehash: 4d5cf7f38d10814b3112a25a8da0e412f0d65093
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 297104820f5498e59397db9025aed1675984a060
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560456"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039968"
 ---
 # <a name="span-class-c-standard-library"></a>класс Span (стандартная библиотека C++)
 
@@ -121,7 +122,7 @@ class span;
 |[Span:: operator =](#op_eq)| Замените диапазон.|
 |[Оператор Span::\[\]](#op_at)| Получение элемента в указанной позиции. |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
 
 Все `span` функции элементов имеют неизменную сложность времени.
 
@@ -133,7 +134,7 @@ class span;
 
 **Пространство имен:** std
 
-**Параметр компилятора:** /std: c + + Latest
+**Параметр компилятора:** [/std: c + + Latest](../build/reference/std-specify-language-standard-version.md)
 
 ## <a name="spanback"></a><a name="back"></a> `span::back`
 
@@ -271,7 +272,7 @@ int main()
 using element_type = T;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Тип берется из параметра шаблона `T` при создании диапазона.
 
@@ -337,7 +338,7 @@ constexpr iterator end() const noexcept;
 
 Итератор, указывающий сразу за концом диапазона.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 `end` используется для проверки того, прошел ли итератор конец диапазона.
 
@@ -372,7 +373,7 @@ template <size_t count> constexpr auto first() const noexcept;
 
 Диапазон, содержащий `count` элементы из начала этого диапазона.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Используйте версию шаблона этой функции, если это возможно, для проверки `count` во время компиляции и для сохранения сведений о диапазоне, так как он возвращает диапазон фиксированного экстента.
 
@@ -452,7 +453,7 @@ int main()
 using iterator = implementation-defined-iterator-type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Этот тип выступает в качестве итератора над элементами в диапазоне.
 
@@ -497,7 +498,7 @@ template <size_t count> constexpr span<element_type, count> last() const noexcep
 
 Диапазон, содержащий последние `count` элементы из этого диапазона.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Используйте версию шаблона этой функции, если это возможно, для проверки `count` во время компиляции и для сохранения сведений о диапазоне, так как он возвращает диапазон фиксированного экстента.
 
@@ -589,7 +590,7 @@ constexpr span& operator=(const span& other) noexcept = default;
 
 `*this`
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Назначение выполняет неполную копию указателя данных и размера. Неполная копия является надежной, так как `span` не выделяет память для элементов, которые она содержит.
 
@@ -741,7 +742,7 @@ constexpr reverse_iterator rend() const noexcept;
 
 Обратный итератор на заполнитель, следующий за последним элементом в обращенном диапазоне; то есть заполнитель перед первым элементом в неинвертированном диапазоне.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 `rend` используется с обратным диапазоном точно так же, как [span:: end](#end) используется с диапазоном. Используйте его, чтобы проверить, достиг ли обратный итератор конца своего диапазона.
 
@@ -955,7 +956,7 @@ span(const span<T, OtherExtent>& other) noexcept
 *Cерверный*\
 Создайте диапазон из этого диапазона.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Диапазон не освобождает память для элементов в диапазоне, так как он не владеет хранилищем объектов внутри него.
 
@@ -1016,7 +1017,7 @@ constexpr auto subspan() const noexcept
 
 Диапазон, начинающийся с `offset` в этом диапазоне. Содержит `count` элементы.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Доступна версия шаблона этой функции, которая проверяет счетчик во время компиляции, что сохраняет сведения о диапазоне, возвращая диапазон фиксированного экстента.
 

@@ -5,12 +5,12 @@ f1_keywords:
 - functional/std::default_searcher
 helpviewer_keywords:
 - std::default_searcher [C++]
-ms.openlocfilehash: 3b5b05dfa2613f9eeaaa18fa8066bcd44f57d1be
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 307fc6da3b383690e0b65bff2a72f386a37d6711
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87203732"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039694"
 ---
 # <a name="default_searcher-class"></a>Класс default_searcher
 
@@ -36,14 +36,14 @@ class default_searcher
 
 ## <a name="members"></a>Участники
 
-| | |
+| Участник | Описание |
 | - | - |
 | **Конструктор** | |
-| [default_searcher](#default-searcher-constructor) | |
+| [default_searcher](#default-searcher-constructor) | Конструирует экземпляр службы поиска. |
 | **Операторы** | |
-| [оператор ()](#operator-call) | |
+| [оператор ()](#operator-call) | Вызывает операцию в последовательности. |
 
-## <a name="default_searcher-constructor"></a><a name="default-searcher-constructor"></a>Конструктор default_searcher
+## <a name="default_searcher-constructor"></a><a name="default-searcher-constructor"></a> Конструктор default_searcher
 
 Конструирует `default_searcher` объект функции с помощью последовательности для поиска и предиката равенства.
 
@@ -70,13 +70,13 @@ constexpr default_searcher(         // C++20
 *Возможен*\
 Необязательный предикат сравнения равенства для элементов последовательности. Если тип сравнения на равенство не указан, по умолчанию используется значение `std::equal_to` .
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Создает исключение, созданное конструктором копий типов *бинарипредикате* или *ForwardIterator* .
 
 Этот класс впервые появились в C++ 17. В c++ 20 создан конструктор **`constexpr`** .
 
-## <a name="operator"></a><a name="operator-call"></a>оператор ()
+## <a name="operator"></a><a name="operator-call"></a> оператор ()
 
 Оператор Call оператора Function. Ищет в последовательности аргументов `[first, last)` последовательность, указанную в конструкторе.
 
@@ -100,7 +100,7 @@ constexpr pair<ForwardIterator2, ForwardIterator2> operator()(
 *Последняя*\
 Конец последовательности, в которой необходимо выполнить поиск.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Возвращает пару итераторов. Начальный итератор, который *я принимаю* , — это эффективный результат:
 

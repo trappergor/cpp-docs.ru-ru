@@ -17,12 +17,12 @@ helpviewer_keywords:
 - optimization, linker
 - /OPT linker option
 ms.assetid: 8f229863-5f53-48a8-9478-243a647093ac
-ms.openlocfilehash: 874c4b974348d1bef8c8c3837f46c1c27d6d304b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7f576d971425a67fc533bb417583173617615e3b
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215196"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040409"
 ---
 # <a name="opt-optimizations"></a>Параметр /OPT (оптимизация)
 
@@ -30,9 +30,9 @@ ms.locfileid: "87215196"
 
 ## <a name="syntax"></a>Синтаксис
 
-> **/OPT:**{**ref**  |  **noref**} \
-> **/OPT:**{**ICF**[ **=** _итерации_] | **NOICF**} \
-> **/OPT:**{**ЛБР**  |  **нолбр**}
+> **/OPT:**{**ref** \| **noref**} \
+> **/OPT:**{**ICF** \[ **=** _итерации_ICF] \| **NOICF**} \
+> **/OPT:**{**ЛБР** \| **нолбр**}
 
 ## <a name="arguments"></a>Аргументы
 
@@ -65,7 +65,7 @@ ms.locfileid: "87215196"
 
 По умолчанию параметр **/OPT: ЛБР** устанавливается, если инкрементная компоновка не включена. Если требуется неинкрементная ссылка, но не выполняется оптимизация в течение длительного филиала, укажите **/OPT: нолбр**. Параметр **/OPT: ЛБР** отключает инкрементную компоновку.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
 
 При использовании в командной строке компоновщик по умолчанию имеет значение **/OPT: ref, ICF, ЛБР**. Если указано значение **/Debug** , по умолчанию используется параметр **/OPT: NOREF, NOICF, нолбр**.
 

@@ -1,6 +1,6 @@
 ---
 title: Встроенные объекты ARM
-description: Справочный список внутренних средств ARM64, поддерживаемый компилятором Microsoft C е в Visual Studio.
+description: Список ссылок на встроенные функции ARM, поддерживаемые компилятором Microsoft C++ в Visual Studio.
 ms.date: 09/02/2019
 f1_keywords:
 - arm_neon/vsetq_lane_p8
@@ -3857,31 +3857,31 @@ helpviewer_keywords:
 - vzipq_u32 ARM intrinsic
 - vzipq_u8 ARM intrinsic
 ms.assetid: d3d7dadd-7bd5-4508-8bff-371a66913e20
-ms.openlocfilehash: 0b0ad779ad9d4c8de1623ea84dd6bc54e30703cc
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 5a15740e5b0f3136614ef34ea481a675ca012e79
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754496"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039785"
 ---
 # <a name="arm-intrinsics"></a>Встроенные объекты ARM
 
-Компилятор Microsoft C '(MSVC) делает следующие внутренностями доступными на архитектуре ARM. Для получения дополнительной информации о ARM можно ознакомиться в разделах «Инструменты архитектуры и разработки программного обеспечения» на веб-сайте [документации разработчиков ARM.](https://developer.arm.com/docs)
+Компилятор Microsoft C++ (КОМПИЛЯТОРОМ MSVC) делает следующие встроенные функции доступными в архитектуре ARM. Дополнительные сведения о ARM см. в разделах Архитектура и средства разработки программного обеспечения на веб-сайте [документации разработчика ARM](https://developer.arm.com/docs) .
 
-## <a name="neon"></a><a name="top"></a>Неоновые
+## <a name="neon"></a><a name="top"></a> NEON
 
-Расширения инструкций по вектору NEON для ARM обеспечивают возможности single Instruction Multiple Data (SIMD), напоминающие возможности в векторных наборах MMX и SSE, которые являются общими для процессоров архитектуры x86 и x64.
+Расширения инструкций NEON Vector Set для ARM предоставляют возможности Single Instruction Multiple Data (SIMD), которые похожи на наборы командных инструкций MMX и SSE, которые являются общими для процессоров архитектуры x86 и x64.
 
-Встроенные функции NEON поддерживаются, как указано в файле заголовка `arm_neon.h`. Поддержка MSVC для внутреннозависимости NEON напоминает поддержку компилятора ARM, которая задокументирована в приложении G [инструментария ARM Compiler, Version 4.1 Compiler Reference](https://go.microsoft.com/fwlink/p/?LinkId=251083) на веб-сайте ARM Infocenter.
+Встроенные функции NEON поддерживаются, как указано в файле заголовка `arm_neon.h`. Поддержка КОМПИЛЯТОРОМ MSVC для встроенных функций NEON похожа на версию компилятора ARM, которая описана в приложении G из [справочника по компилятору ARM компилятора цепочки инструментов, версия 4,1](https://go.microsoft.com/fwlink/p/?LinkId=251083) на веб-сайте центра справочных данных ARM.
 
-Основное различие между MSVC и компилятором `_ex` ARM заключается в том, что MSVC добавляет варианты `vldX` `vstX` и векторной нагрузки и инструкций по хранению. Варианты `_ex` получают дополнительный параметр, определяющий выравнивание аргумента указателя, а все другие идентичны аналогичным не -`_ex`.
+Основное различие между КОМПИЛЯТОРОМ MSVC и компилятором ARM заключается в том, что КОМПИЛЯТОРОМ MSVC добавляет `_ex` варианты `vldX` загрузки и `vstX` инструкций Vector и Store. Варианты `_ex` получают дополнительный параметр, определяющий выравнивание аргумента указателя, а все другие идентичны аналогичным не -`_ex`.
 
-## <a name="arm-specific-intrinsics-listing"></a><a name="A"></a>ARM-специфические внутренние листинги
+## <a name="arm-specific-intrinsics-listing"></a><a name="A"></a> Список встроенных компонентов, зависящих от ARM
 
 |Имя функции|Инструкция|Прототип функции|
 |-------------------|-----------------|------------------------|
-|_arm_smlal|SMLAL|__int64 _arm_smlal\_(_RdHiLo _int64, _Rn, _Rm)|
-|_arm_umlal|UMLAL|неподписанные __int64 _arm_umlal \_(неподписанные _RdHiLo _int64, неподписанные _Rn, неподписанные int _Rm)|
+|_arm_smlal|SMLAL|__int64 _arm_smlal ( \_ _int64 _RdHiLo, int _Rn, int _Rm)|
+|_arm_umlal|UMLAL|неподписанный __int64 _arm_umlal (неподписанные \_ _int64 _RdHiLo, беззнаковое целое _Rn, Неподписанное целое число _Rm)|
 |_arm_clz|CLZ|_arm_clz тип unsigned int (целое число _Rm)|
 |_arm_qadd|QADD|int _arm_qadd (int _Rm, int _Rn)|
 |_arm_qdadd|QDADD|int _arm_qdadd (int _Rm, int _Rn)|
@@ -3891,10 +3891,10 @@ ms.locfileid: "81754496"
 |_arm_smlabt|SMLABT|int _arm_smlabt (int _Rn, int _Rm, int _Ra)|
 |_arm_smlatb|SMLATB|int _arm_smlatb (int _Rn, int _Rm, int _Ra)|
 |_arm_smlatt|SMLATT|int _arm_smlatt (int _Rn, int _Rm, int _Ra)|
-|_arm_smlalbb|SMLALBB|__int64 _arm_smlalbb\_(_int64 _RdHiLo, _Rn, _Rm)|
-|_arm_smlalbt|SMLALBT|_arm_smlalbt __int64\_(_RdHiLo _int64, _Rn, _Rm)|
-|_arm_smlaltb|SMLALTB|__int64 _arm_smlaltb\_(_int64 _RdHiLo, _Rn, _Rm)|
-|_arm_smlaltt|SMLALTT|__int64 _arm_smlaltt\_(_RdHiLo _int64, _Rn, _Rm)|
+|_arm_smlalbb|SMLALBB|__int64 _arm_smlalbb ( \_ _int64 _RdHiLo, int _Rn, int _Rm)|
+|_arm_smlalbt|SMLALBT|__int64 _arm_smlalbt ( \_ _int64 _RdHiLo, int _Rn, int _Rm)|
+|_arm_smlaltb|SMLALTB|__int64 _arm_smlaltb ( \_ _int64 _RdHiLo, int _Rn, int _Rm)|
+|_arm_smlaltt|SMLALTT|__int64 _arm_smlaltt ( \_ _int64 _RdHiLo, int _Rn, int _Rm)|
 |_arm_smlawb|SMLAWB|int _arm_smlawb (int _Rn, int _Rm, int _Ra)|
 |_arm_smlawt|SMLAWT|int _arm_smlawt (int _Rn, int _Rm, int _Ra)|
 |_arm_smulbb|SMULBB|int _arm_smulbb (int _Rn, int _Rm)|
@@ -3972,10 +3972,10 @@ ms.locfileid: "81754496"
 |_arm_smmlsr|SMMLSR|int _arm_smmlsr(int _Rn, int _Rm, int _Ra)|
 |_arm_smmul|SMMUL|int _arm_smmul(int _Rn, int _Rm)|
 |_arm_smmulr|SMMULR|int _arm_smmulr(int _Rn, int _Rm)|
-|_arm_smlald|SMLALD|__int64 _arm_smlald\_(_int64 _RdHiLo, _Rn, int _Rm)|
-|_arm_smlaldx|SMLALDX|__int64 _arm_smlaldx\_(_int64 _RdHiLo, _Rn, _Rm)|
-|_arm_smlsld|SMLSLD|__int64 _arm_smlsld\_(_RdHiLo _int64, _Rn, _Rm)|
-|_arm_smlsldx|SMLSLDX|__int64 _arm_smlsldx\_(_int64 _RdHiLo, int _Rn, int _Rm)|
+|_arm_smlald|SMLALD|__int64 _arm_smlald ( \_ _int64 _RdHiLo, int _Rn, int _Rm)|
+|_arm_smlaldx|SMLALDX|__int64 _arm_smlaldx ( \_ _int64 _RdHiLo, int _Rn, int _Rm)|
+|_arm_smlsld|SMLSLD|__int64 _arm_smlsld ( \_ _int64 _RdHiLo, int _Rn, int _Rm)|
+|_arm_smlsldx|SMLSLDX|__int64 _arm_smlsldx ( \_ _int64 _RdHiLo, int _Rn, int _Rm)|
 |_arm_smuad|SMUAD|int _arm_smuad(int _Rn, int _Rm)|
 |_arm_smuadx|SMUADX|int _arm_muadxs(int _Rn, int _Rm)|
 |_arm_smusd|SMUSD|int _arm_smusd(int _Rn, int _Rm)|
@@ -3991,51 +3991,51 @@ ms.locfileid: "81754496"
 |_arm_sdiv|SDIV|int _arm_sdiv(int _Rn, int _Rm)|
 |_arm_udiv|UDIV|unsigned int _arm_udiv(unsigned int _Rn, unsigned int _Rm)|
 |__cps|CPS|void __cps(unsigned int _Ops, unsigned int _Flags, unsigned int _Mode)|
-|__dmb|DMB|void __dmb(unsigned int `_Type`)<br /><br /> Вставляет операцию барьера памяти в поток инструкций. Параметр `_Type` указывает тип ограничения, которое накладывает барьер.<br /><br /> Для получения дополнительной информации о видах ограничений, которые могут быть введены, [см.](#BarrierRestrictions)|
-|__dsb|DSB|void __dsb(unsigned int _Type)<br /><br /> Вставляет операцию барьера памяти в поток инструкций. Параметр `_Type` указывает тип ограничения, которое накладывает барьер.<br /><br /> Для получения дополнительной информации о видах ограничений, которые могут быть введены, [см.](#BarrierRestrictions)|
-|__isb|ISB|void __isb(unsigned int _Type)<br /><br /> Вставляет операцию барьера памяти в поток инструкций. Параметр `_Type` указывает тип ограничения, которое накладывает барьер.<br /><br /> Для получения дополнительной информации о видах ограничений, которые могут быть введены, [см.](#BarrierRestrictions)|
-|__emit||аннулированный __emit \_(неподписанный _int32 opcode)<br /><br /> Вставляет указанную инструкцию в поток инструкций, который выдается компилятором.<br /><br /> Значение `opcode` должно быть константным выражением, известным во время компиляции. Размер слова инструкции составляет 16 разрядов и старшие 16 разрядов `opcode` игнорируются.<br /><br /> Компилятор не пытается интерпретировать `opcode` содержимое и не гарантирует состояние процессора или памяти до выполнения вставленной инструкции.<br /><br /> Компилятор предполагает, что состояния процессора и памяти не изменяются после выполнения инструкции вставки. Таким образом, инструкции, которые меняют состояние, могут пагубно повлиять на обычный код, генерируемый компилятором.<br /><br /> По этой причине `emit` используйте только для вставки инструкций, влияющих на состояние процессора, что компилятор обычно не `declspec(naked)`обрабатывает, например, состояние сопроцессора, или для реализации функций, которые объявляются с помощью.|
+|__dmb|DMB|void __dmb(unsigned int `_Type`)<br /><br /> Вставляет операцию барьера памяти в поток инструкций. Параметр `_Type` указывает тип ограничения, которое накладывает барьер.<br /><br /> Дополнительные сведения о типах ограничений, которые могут быть применены, см. в разделе [ограничения на барьер памяти](#BarrierRestrictions).|
+|__dsb|DSB|void __dsb(unsigned int _Type)<br /><br /> Вставляет операцию барьера памяти в поток инструкций. Параметр `_Type` указывает тип ограничения, которое накладывает барьер.<br /><br /> Дополнительные сведения о типах ограничений, которые могут быть применены, см. в разделе [ограничения на барьер памяти](#BarrierRestrictions).|
+|__isb|ISB|void __isb(unsigned int _Type)<br /><br /> Вставляет операцию барьера памяти в поток инструкций. Параметр `_Type` указывает тип ограничения, которое накладывает барьер.<br /><br /> Дополнительные сведения о типах ограничений, которые могут быть применены, см. в разделе [ограничения на барьер памяти](#BarrierRestrictions).|
+|__emit||void __emit (неподписанный \_ _int32 код операции)<br /><br /> Вставляет указанную инструкцию в поток инструкций, который выдается компилятором.<br /><br /> Значение `opcode` должно быть константным выражением, известным во время компиляции. Размер слова инструкции составляет 16 разрядов и старшие 16 разрядов `opcode` игнорируются.<br /><br /> Компилятор не пытается интерпретировать содержимое `opcode` и не гарантирует состояние ЦП или памяти до выполнения инструкции inserted.<br /><br /> Компилятор предполагает, что состояния процессора и памяти не изменяются после выполнения инструкции вставки. Поэтому инструкции, которые делают изменение состояния, могут негативно повлиять на нормальный код, создаваемый компилятором.<br /><br /> По этой причине используйте `emit` только для вставки инструкций, влияющих на состояние ЦП, которое компилятор обычно не обрабатывает (например, состояние сопроцессора) или для реализации функций, объявленных с помощью `declspec(naked)` .|
 |__hvc|HVC|unsigned int __hvc(unsigned int, ...)|
-|__iso_volatile_load16||__int16 \__iso_volatile_load16 (конст летучих \__int16) \*<br /><br /> Для получения дополнительной [информации,](#IsoVolatileLoadStore)см __iso_volatile_load / хранить внутреннюю .|
-|__iso_volatile_load32||__int32 \__iso_volatile_load32 (конст летучих \__int32) \*<br /><br /> Для получения дополнительной [информации,](#IsoVolatileLoadStore)см __iso_volatile_load / хранить внутреннюю .|
-|__iso_volatile_load64||__int64 \__iso_volatile_load64 (конст летучих \__int64) \*<br /><br /> Для получения дополнительной [информации,](#IsoVolatileLoadStore)см __iso_volatile_load / хранить внутреннюю .|
-|__iso_volatile_load8||__int8 \__iso_volatile_load8 (конст летучих \__int8) \*<br /><br /> Для получения дополнительной [информации,](#IsoVolatileLoadStore)см __iso_volatile_load / хранить внутреннюю .|
-|__iso_volatile_store16||недействительный \___iso_volatile_store16 \* \_(летучие _int16, _int16)<br /><br /> Для получения дополнительной [информации,](#IsoVolatileLoadStore)см __iso_volatile_load / хранить внутреннюю .|
-|__iso_volatile_store32||недействительные \___iso_volatile_store32 \* \_(летучие _int32, _int32)<br /><br /> Для получения дополнительной [информации,](#IsoVolatileLoadStore)см __iso_volatile_load / хранить внутреннюю .|
-|__iso_volatile_store64||пустота __iso_volatile_store64 \_ \*(летучие _int64, \__int64)<br /><br /> Для получения дополнительной [информации,](#IsoVolatileLoadStore)см __iso_volatile_load / хранить внутреннюю .|
-|__iso_volatile_store8||пустота __iso_volatile_store8 \_ \*(летучие _int8, \__int8)<br /><br /> Для получения дополнительной [информации,](#IsoVolatileLoadStore)см __iso_volatile_load / хранить внутреннюю .|
-|__ldrexd|LDREXD|__int64 \__ldrexd (конст летучих \__int64) \*|
-|__prefetch|PLD|пустота \___cdecl _prefetch \*(конст непусто )<br /><br /> Обеспечивает подсказку памяти `PLD` в системе, чья память расположена или близка к указанному адресу, и доступ к которой может осуществиться в ближайшее время. В некоторых системах можно оптимизировать шаблон доступа к памяти для повышения производительности во время выполнения. Тем не менее, с точки зрения языка C++, функция на имеет видимой активности и вообще может не предпринимать никаких действий.|
-|__rdpmccntr64||неподписанные \__rdpmccntr64 __int64 (пустота)|
+|__iso_volatile_load16||__int16 \_ _iso_volatile_load16 (const volatile \_ _int16 \* )<br /><br /> Дополнительные сведения см. в статье [__iso_volatile_load/Store встроенные функции](#IsoVolatileLoadStore).|
+|__iso_volatile_load32||__int32 \_ _iso_volatile_load32 (const volatile \_ _int32 \* )<br /><br /> Дополнительные сведения см. в статье [__iso_volatile_load/Store встроенные функции](#IsoVolatileLoadStore).|
+|__iso_volatile_load64||__int64 \_ _iso_volatile_load64 (const volatile \_ _int64 \* )<br /><br /> Дополнительные сведения см. в статье [__iso_volatile_load/Store встроенные функции](#IsoVolatileLoadStore).|
+|__iso_volatile_load8||__int8 \_ _iso_volatile_load8 (const volatile \_ _int8 \* )<br /><br /> Дополнительные сведения см. в статье [__iso_volatile_load/Store встроенные функции](#IsoVolatileLoadStore).|
+|__iso_volatile_store16||void __iso_volatile_store16 (volatile \_ _int16 \* , \_ _int16)<br /><br /> Дополнительные сведения см. в статье [__iso_volatile_load/Store встроенные функции](#IsoVolatileLoadStore).|
+|__iso_volatile_store32||void __iso_volatile_store32 (volatile \_ _int32 \* , \_ _int32)<br /><br /> Дополнительные сведения см. в статье [__iso_volatile_load/Store встроенные функции](#IsoVolatileLoadStore).|
+|__iso_volatile_store64||void __iso_volatile_store64 (volatile \_ _int64 \* , \_ _int64)<br /><br /> Дополнительные сведения см. в статье [__iso_volatile_load/Store встроенные функции](#IsoVolatileLoadStore).|
+|__iso_volatile_store8||void __iso_volatile_store8 (volatile \_ _int8 \* , \_ _int8)<br /><br /> Дополнительные сведения см. в статье [__iso_volatile_load/Store встроенные функции](#IsoVolatileLoadStore).|
+|__ldrexd|LDREXD|__int64 \_ _ldrexd (const volatile \_ _int64 \* )|
+|__prefetch|PLD|void __cdecl \_ _prefetch (const void \* )<br /><br /> Обеспечивает подсказку памяти `PLD` в системе, чья память расположена или близка к указанному адресу, и доступ к которой может осуществиться в ближайшее время. В некоторых системах можно оптимизировать шаблон доступа к памяти для повышения производительности во время выполнения. Тем не менее, с точки зрения языка C++, функция на имеет видимой активности и вообще может не предпринимать никаких действий.|
+|__rdpmccntr64||_rdpmccntr64 неподписанного __int64 \_ (void)|
 |__sev|SEV|void __sev(void)|
-|__static_assert||пустота __static_assert (int, \*const char)|
+|__static_assert||void __static_assert (int, const char \* )|
 |__swi|SVC|unsigned int __swi(unsigned int, ...)|
 |__trap|BKPT|int __trap(int, ...)|
 |__wfe|WFE|void __wfe(void)|
 |__wfi|WFI|void __wfi(void)|
 |_AddSatInt|QADD|int _AddSatInt(int, int)|
-|_CopyDoubleFromInt64||двойной\__CopyDoubleFromInt64 (_int64)|
-|_CopyFloatFromInt32||_CopyFloatFromInt32 поплавка (_int32)\_|
+|_CopyDoubleFromInt64||двойной _CopyDoubleFromInt64 ( \_ _int64)|
+|_CopyFloatFromInt32||_CopyFloatFromInt32 с плавающей запятой ( \_ _int32)|
 |_CopyInt32FromFloat||__int32 _CopyInt32FromFloat(float)|
 |_CopyInt64FromDouble||__int64 _CopyInt64FromDouble(double)|
 |_CountLeadingOnes||unsigned int _CountLeadingOnes(unsigned long)|
-|_CountLeadingOnes64||неподписанный int _CountLeadingOnes64 \_(неподписанный _int64)|
+|_CountLeadingOnes64||Целочисленное _CountLeadingOnes64 без знака (_int64 без знака \_ )|
 |_CountLeadingSigns||unsigned int _CountLeadingSigns(long)|
-|_CountLeadingSigns64||неподписанный int\__CountLeadingSigns64 (_int64)|
+|_CountLeadingSigns64||Целочисленное _CountLeadingSigns64 без знака ( \_ _int64)|
 |_CountLeadingZeros||unsigned int _CountLeadingZeros(unsigned long)|
-|_CountLeadingZeros64||неподписанный int _CountLeadingZeros64 \_(неподписанный _int64)|
+|_CountLeadingZeros64||Целочисленное _CountLeadingZeros64 без знака (_int64 без знака \_ )|
 |_CountOneBits||unsigned int _CountOneBits(unsigned long)|
-|_CountOneBits64||неподписанный int _CountOneBits64 \_(неподписанный _int64)|
+|_CountOneBits64||Целочисленное _CountOneBits64 без знака (_int64 без знака \_ )|
 |_DAddSatInt|QDADD|int _DAddSatInt(int, int)|
 |_DSubSatInt|QDSUB|int _DSubSatInt(int, int)|
 |_isunordered||int _isunordered(double, double)|
 |_isunorderedf||int _isunorderedf(float, float)|
-|_MoveFromCoprocessor|MRC|unsigned int _MoveFromCoprocessor(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> Считывает данные из сопроцессора ARM с помощью инструкций передачи данных сопроцессора. Для получения дополнительной информации см. [_MoveFromCoprocessor, _MoveFromCoprocessor2](#MoveFromCo).|
-|_MoveFromCoprocessor2|MRC2|unsigned int _MoveFromCoprocessor2(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> Считывает данные из сопроцессора ARM с помощью инструкций передачи данных сопроцессора. Для получения дополнительной информации см. [_MoveFromCoprocessor, _MoveFromCoprocessor2](#MoveFromCo).|
-|_MoveFromCoprocessor64|MRRC|unsigned __int64 _MoveFromCoprocessor64(unsigned int, unsigned int, unsigned int)<br /><br /> Считывает данные из сопроцессора ARM с помощью инструкций передачи данных сопроцессора. Для получения дополнительной информации см [_MoveFromCoprocessor64.](#MoveFromCo64)|
-|_MoveToCoprocessor|MCR|void _MoveToCoprocessor(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> Считывает данные из сопроцессора ARM с помощью инструкций передачи данных сопроцессора. Для получения дополнительной информации см. [_MoveToCoprocessor, _MoveToCoprocessor2](#MoveToCo).|
-|_MoveToCoprocessor2|MCR2|void _MoveToCoprocessor2(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> Считывает данные из сопроцессора ARM с помощью инструкций передачи данных сопроцессора. Для получения дополнительной информации см. [_MoveToCoprocessor, _MoveToCoprocessor2](#MoveToCo).|
-|_MoveToCoprocessor64|MCRR|недействительный _MoveToCoprocessor64 \_(неподписанный _int64, неподписанный int, неподписанный int, неподписанный int)<br /><br /> Считывает данные из сопроцессора ARM с помощью инструкций передачи данных сопроцессора. Для получения дополнительной информации [_MoveToCoprocessor64](#MoveToCo64)см.|
+|_MoveFromCoprocessor|MRC|unsigned int _MoveFromCoprocessor(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> Считывает данные из сопроцессора ARM с помощью инструкций передачи данных сопроцессора. Дополнительные сведения см. в разделе [_MoveFromCoprocessor, _MoveFromCoprocessor2](#MoveFromCo).|
+|_MoveFromCoprocessor2|MRC2|unsigned int _MoveFromCoprocessor2(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> Считывает данные из сопроцессора ARM с помощью инструкций передачи данных сопроцессора. Дополнительные сведения см. в разделе [_MoveFromCoprocessor, _MoveFromCoprocessor2](#MoveFromCo).|
+|_MoveFromCoprocessor64|MRRC|unsigned __int64 _MoveFromCoprocessor64(unsigned int, unsigned int, unsigned int)<br /><br /> Считывает данные из сопроцессора ARM с помощью инструкций передачи данных сопроцессора. Дополнительные сведения см. в разделе [_MoveFromCoprocessor64](#MoveFromCo64).|
+|_MoveToCoprocessor|MCR|void _MoveToCoprocessor(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> Считывает данные из сопроцессора ARM с помощью инструкций передачи данных сопроцессора. Дополнительные сведения см. в разделе [_MoveToCoprocessor, _MoveToCoprocessor2](#MoveToCo).|
+|_MoveToCoprocessor2|MCR2|void _MoveToCoprocessor2(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> Считывает данные из сопроцессора ARM с помощью инструкций передачи данных сопроцессора. Дополнительные сведения см. в разделе [_MoveToCoprocessor, _MoveToCoprocessor2](#MoveToCo).|
+|_MoveToCoprocessor64|MCRR|void _MoveToCoprocessor64 (неподписанные _int64, целое число без знака, целое число без знака, целое число \_ без подписи)<br /><br /> Считывает данные из сопроцессора ARM с помощью инструкций передачи данных сопроцессора. Дополнительные сведения см. в разделе [_MoveToCoprocessor64](#MoveToCo64).|
 |_MulHigh||long _MulHigh(long, long)|
 |_MulUnsignedHigh||unsigned long _MulUnsignedHigh(unsigned long, unsigned long)|
 |_ReadBankedReg|MRS|int _ReadBankedReg(int _Reg)|
@@ -4044,11 +4044,11 @@ ms.locfileid: "81754496"
 |_WriteBankedReg|MSR|void _WriteBankedReg(int _Value, int _Reg)|
 |_WriteStatusReg|MSR|void _WriteStatusReg(int, int, int)|
 
-Возвращение[на вершину](#top)
+[[Вернуться к началу](#top)]
 
-### <a name="memory-barrier-restrictions"></a><a name="BarrierRestrictions"></a>Ограничения барьера памяти
+### <a name="memory-barrier-restrictions"></a><a name="BarrierRestrictions"></a> Ограничения барьера памяти
 
-Внутренние функции `__dmb` (барьер памяти `__dsb` данных), (барьер синхронизации `__isb` данных) и (барьер синхронизации инструкций) используют следующие предопределенные значения для определения ограничения барьера памяти с точки зрения домена общего доступа и типа доступа, который зависит от операции.
+Встроенные функции `__dmb` (барьер памяти данных), `__dsb` (барьер синхронизации данных) и `__isb` (барьер синхронизации инструкций) используют следующие предопределенные значения для указания ограничения барьера памяти в терминах домена общего доступа и типа доступа, затрагиваемого операцией.
 
 |Restriction Value|Описание|
 |-----------------------|-----------------|
@@ -4063,9 +4063,9 @@ ms.locfileid: "81754496"
 
 Для встроенной `__isb`, единственное ограничение, которое действительно в настоящее время, это _ARM_BARRIER_SY; все остальные значения зарезервированы для архитектуры.
 
-### <a name="__iso_volatile_loadstore-intrinsics"></a><a name="IsoVolatileLoadStore"></a>__iso_volatile_load/магазин внутренностих
+### <a name="__iso_volatile_loadstore-intrinsics"></a><a name="IsoVolatileLoadStore"></a> встроенные функции/Store __iso_volatile_load
 
-Эти внутренние функции явно выполняют нагрузки и магазины, которые не подлежат оптимизации компилятора.
+Эти встроенные функции явно выполняют загрузку и хранение, которые не подчиняются оптимизации компилятора.
 
 ```C
 __int16 __iso_volatile_load16(const volatile __int16 * Location);
@@ -4085,26 +4085,26 @@ void __iso_volatile_store8(volatile __int8 * Location, __int8 Value);
 Адрес области памяти для чтения или записи.
 
 *Значение*\
-Значение для записи в указанное местоположение памяти (только для хранения внутренних хранилиров).
+Значение, записываемое в указанное расположение в памяти (только встроенные функции хранилища).
 
-#### <a name="return-value-load-intrinsics-only"></a>Значение возврата (нагрузка только внутренняя)
+#### <a name="return-value-load-intrinsics-only"></a>Возвращаемое значение (только для внутренних функций Load)
 
 Значение ячейки памяти, указанное в параметре `Location`.
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>Комментарии
 
-Вы можете `__iso_volatile_load8/16/32/64` использовать `__iso_volatile_store8/16/32/64` и внутреннюю часть для явного выполнения доступа к памяти, которые не подлежат оптимизации компилятора. Компилятор не может удалить, синтезировать или изменить относительный порядок этих операций, но он не генерирует неявные барьеры аппаратной памяти. Таким образом оборудование по-прежнему может переупорядочить возникающие операции доступа к памяти между несколькими потоками. Точнее, эти внутренностия эквивалентны следующим выражениям, составленным под **/volatile:iso**.
+`__iso_volatile_load8/16/32/64` `__iso_volatile_store8/16/32/64` Встроенные функции и можно использовать для явного выполнения доступа к памяти, которые не подчиняются оптимизации компилятора. Компилятор не может удалить, синсетизе или изменить относительный порядок этих операций, но не создает неявных барьеров аппаратной памяти. Таким образом оборудование по-прежнему может переупорядочить возникающие операции доступа к памяти между несколькими потоками. Точнее, эти встроенные функции эквивалентны следующим выражениям, скомпилированным в **/volatile: ISO**.
 
 ```cpp
 int a = __iso_volatile_load32(p);    // equivalent to: int a = *(const volatile __int32*)p;
 __iso_volatile_store32(p, a);        // equivalent to: *(volatile __int32*)p = a;
 ```
 
-Обратите внимание, что встроенные функции принимают временные указатели для размещения временных переменных. Тем не менее, нет никаких требований или рекомендаций использовать летучие указатели в качестве аргументов. Семантика этих операций точно такая же, если используется обычный, нелетучий тип.
+Обратите внимание, что встроенные функции принимают временные указатели для размещения временных переменных. Однако нет необходимости или рекомендации по использованию переменных указателей в качестве аргументов. Семантика этих операций в точности одинакова, если используется обычный, не зависящий от постоянного типа.
 
-Для получения дополнительной информации о **/летучих:iso** командной строке аргумент, [см/ летучих (летучих ключевых слов интерпретации)](../build/reference/volatile-volatile-keyword-interpretation.md).
+Дополнительные сведения о аргументе командной строки **/volatile: ISO** см. в разделе [/volatile (интерпретация ключевого слова "volatile")](../build/reference/volatile-volatile-keyword-interpretation.md).
 
-### <a name="_movefromcoprocessor-_movefromcoprocessor2"></a><a name="MoveFromCo"></a>_MoveFromCoprocessor, _MoveFromCoprocessor2
+### <a name="_movefromcoprocessor-_movefromcoprocessor2"></a><a name="MoveFromCo"></a> _MoveFromCoprocessor, _MoveFromCoprocessor2
 
 Следующие встроенные функции считывают данных  из сопроцессора ARM с помощью инструкций передачи данных сопроцессора. 
 
@@ -4128,16 +4128,16 @@ int _MoveFromCoprocessor2(
 
 #### <a name="parameters"></a>Параметры
 
-*coproc*\
+*сопроцедура*\
 Номер сопроцессора в диапазоне от 0 до 15.
 
 *opcode1*\
 Код операции конкретного сопроцессора в диапазоне от 0 до 7
 
-*Crn*\
+*крн*\
 Номер регистра сопроцессора в диапазоне от 0 до 15, задающий первый операнд инструкции.
 
-*Crm*\
+*CRM*\
 Номер регистра сопроцессора в диапазоне от 0 до 15, который задает дополнительный операнд источника или места назначения.
 
 *opcode2*\
@@ -4147,13 +4147,13 @@ int _MoveFromCoprocessor2(
 
 Значение, которое считывается из сопроцессора.
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>Комментарии
 
-Значения всех пяти параметров внутренней должны быть постоянными выражениями, которые известны во время компиляции.
+Значения всех пяти параметров встроенной функции должны быть константными выражениями, известными во время компиляции.
 
 `_MoveFromCoprocessor` использует инструкцию MRC; `_MoveFromCoprocessor2` использует MRC2. Параметры соответствуют разрядам, которые кодируются непосредственно в слово инструкции. Интерпретация параметров зависит от сопроцессора. Дополнительные сведения см. в руководстве по соответствующему сопроцессору.
 
-### <a name="_movefromcoprocessor64"></a><a name="MoveFromCo64"></a>_MoveFromCoprocessor64
+### <a name="_movefromcoprocessor64"></a><a name="MoveFromCo64"></a> _MoveFromCoprocessor64
 
 Считывает данные из сопроцессора ARM с помощью инструкций передачи данных сопроцессора.
 
@@ -4167,26 +4167,26 @@ unsigned __int64 _MoveFromCoprocessor64(
 
 #### <a name="parameters"></a>Параметры
 
-*coproc*\
+*сопроцедура*\
 Номер сопроцессора в диапазоне от 0 до 15.
 
 *opcode1*\
 Код операции конкретного сопроцессора в диапазоне от 0 до 15
 
-*Crm*\
+*CRM*\
 Номер регистра сопроцессора в диапазоне от 0 до 15, который задает дополнительный операнд источника или места назначения.
 
 #### <a name="return-value"></a>Возвращаемое значение
 
 Значение, которое считывается из сопроцессора.
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>Комментарии
 
-Значения всех трех параметров внутренней должны быть постоянными выражениями, которые известны во время компиляции.
+Значения всех трех параметров встроенных функций должны быть константными выражениями, известными во время компиляции.
 
 `_MoveFromCoprocessor64` использует инструкцию MRRC. Параметры соответствуют разрядам, которые кодируются непосредственно в слово инструкции. Интерпретация параметров зависит от сопроцессора. Дополнительные сведения см. в руководстве по соответствующему сопроцессору.
 
-### <a name="_movetocoprocessor-_movetocoprocessor2"></a><a name="MoveToCo"></a>_MoveToCoprocessor, _MoveToCoprocessor2
+### <a name="_movetocoprocessor-_movetocoprocessor2"></a><a name="MoveToCo"></a> _MoveToCoprocessor, _MoveToCoprocessor2
 
 Следующие встроенные функции записывают данные в сопроцессор ARM с помощью инструкций передачи данных сопроцессора .
 
@@ -4212,19 +4212,19 @@ void _MoveToCoprocessor2(
 
 #### <a name="parameters"></a>Параметры
 
-*Значение*\
+*значений*\
 Значение, записываемое сопроцессора.
 
-*coproc*\
+*сопроцедура*\
 Номер сопроцессора в диапазоне от 0 до 15.
 
 *opcode1*\
 Код операции конкретного сопроцессора в диапазоне от 0 до 7
 
-*Crn*\
+*крн*\
 Номер регистра сопроцессора в диапазоне от 0 до 15, задающий первый операнд инструкции.
 
-*Crm*\
+*CRM*\
 Номер регистра сопроцессора в диапазоне от 0 до 15, который задает дополнительный операнд источника или места назначения.
 
 *opcode2*\
@@ -4236,11 +4236,11 @@ void _MoveToCoprocessor2(
 
 #### <a name="remarks"></a>Remarks
 
-`coproc`Значения, `opcode1` `crn`и `opcode2` параметры внутренней должны быть постоянными выражениями, которые известны во время компиля. `crm`
+Значения `coproc` параметров,,, `opcode1` `crn` `crm` и `opcode2` встроенных функций должны быть константными выражениями, известными во время компиляции.
 
 `_MoveToCoprocessor` использует инструкцию MCR; `_MoveToCoprocessor2` использует MCR2. Параметры соответствуют разрядам, которые кодируются непосредственно в слово инструкции. Интерпретация параметров зависит от сопроцессора. Дополнительные сведения см. в руководстве по соответствующему сопроцессору.
 
-### <a name="_movetocoprocessor64"></a><a name="MoveToCo64"></a>_MoveToCoprocessor64
+### <a name="_movetocoprocessor64"></a><a name="MoveToCo64"></a> _MoveToCoprocessor64
 
 Следующие встроенные функции записывают данные в сопроцессор ARM с помощью инструкций передачи данных сопроцессора .
 
@@ -4255,13 +4255,13 @@ void _MoveFromCoprocessor64(
 
 #### <a name="parameters"></a>Параметры
 
-*coproc*\
+*сопроцедура*\
 Номер сопроцессора в диапазоне от 0 до 15.
 
 *opcode1*\
 Код операции конкретного сопроцессора в диапазоне от 0 до 15
 
-*Crm*\
+*CRM*\
 Номер регистра сопроцессора в диапазоне от 0 до 15, который задает дополнительный операнд источника или места назначения.
 
 #### <a name="return-value"></a>Возвращаемое значение
@@ -4270,62 +4270,62 @@ void _MoveFromCoprocessor64(
 
 #### <a name="remarks"></a>Remarks
 
-`coproc`Значения, `opcode1`и `crm` параметры внутренней должны быть постоянными выражениями, которые известны во время компилята.
+Значения `coproc` `opcode1` параметров, и `crm` встроенных функций должны быть константными выражениями, известными во время компиляции.
 
 `_MoveFromCoprocessor64` использует инструкцию MCRR. Параметры соответствуют разрядам, которые кодируются непосредственно в слово инструкции. Интерпретация параметров зависит от сопроцессора. Дополнительные сведения см. в руководстве по соответствующему сопроцессору.
 
-## <a name="arm-support-for-intrinsics-from-other-architectures"></a><a name="I"></a>Поддержка ARM для внутренностих из других архитектур
+## <a name="arm-support-for-intrinsics-from-other-architectures"></a><a name="I"></a> Поддержка ARM для встроенных функций из других архитектур
 
 В следующей таблице перечислены встроенные объекты из других архитектур, поддерживаемые платформами ARM. Когда поведение встроенной функции ARM отличается от ее поведения на оборудовании других архитектур, указываются дополнительные сведения.
 
 |Имя функции|Прототип функции|
 |-------------------|------------------------|
 |__assume|void __assume(int)|
-|__code_seg|пустота __code_seg (конст-символ \*)|
-|__debugbreak|пустота \___cdecl _debugbreak (пустота)|
-|__fastfail|__declspec (безвозврат) \_недействительным _fastfail (неподписанный int)|
-|__nop|аннулированный __nop (пустой) **Примечание:** На платформах ARM эта функция генерирует инструкцию NOP, если она реализована в целевой архитектуре; в противном случае генерируется альтернативная инструкция, которая не изменяет `MOV r8, r8`состояние программы или процессора, например, . Это функционально эквивалентно \__nop, присущие другим аппаратным архитектурам. Поскольку инструкция, которая не влияет на состояние программы или процессора, может быть проигнорирована целевой архитектурой в качестве оптимизации, инструкция не обязательно потребляет циклы процессора. Поэтому не используйте \__nop, присущие для управления временем выполнения последовательности кода, если вы не уверены в том, как поведет себя процессор. Вместо этого можно \_использовать _nop, присущие для выравнивания следующей инструкции с определенным 32-битным пограничным адресом.|
-|__yield|пустота __yield (пустота) **Примечание:** На платформах ARM эта функция генерирует инструкцию YIELD, которая указывает на то, что поток выполняет задачу, которая может быть временно приостановлена от выполнения, например, спинлок, без отрицательного влияния на программу. Это позволяет процессору выполнять другие задачи во время циклов выполнения, которые в противном случае были бы потрачены впустую.|
-|_AddressOfReturnAddress|пустота \* _AddressOfReturnAddress (пустота)|
-|_BitScanForward|неподписанный _BitScanForward char \* (неподписанный длинный _Index, неподписанный длинный _Mask)|
-|_BitScanReverse|неподписанный _BitScanReverse char \* (неподписанный длинный _Index, неподписанный длинный _Mask)|
-|_bittest|неподписанный _bittest (длинный \*const , длинный)|
-|_bittestandcomplement|неподписанный символ \*_bittestandcomplement (длинный, длинный)|
-|_bittestandreset|неподписанный символ \*_bittestandreset (длинный, длинный)|
-|_bittestandset|неподписанный символ \*_bittestandset (длинный, длинный)|
-|_byteswap_uint64|неподписанные \__byteswap_uint64 _cdecl \___int64 (неподписанные _int64)|
+|__code_seg|void __code_seg (const char \* )|
+|__debugbreak|void __cdecl \_ _debugbreak (void)|
+|__fastfail|__declspec (noreturn) void \_ _fastfail (беззнаковое целое)|
+|__nop|void __nop (void) **Примечание.**  на платформах ARM эта функция создает инструкцию NOP, если она реализована в целевой архитектуре. в противном случае создается альтернативная инструкция, которая не изменяет состояние программы или ЦП, например `MOV r8, r8` . Он функционально эквивалентен \_ _nop встроенной функции для других аппаратных архитектур. Так как инструкция, которая не влияет на состояние программы или ЦП, может игнорироваться целевой архитектурой как оптимизация, инструкция не обязательно потребляет циклы ЦП. Таким образом, не используйте \_ встроенную _nop, чтобы управлять временем выполнения последовательности кода, если вы не знаете, как будет вести себя ЦП. Вместо этого можно использовать \_ встроенную _nop, чтобы согласовать следующую инструкцию с конкретным адресом в 32-разрядной границе.|
+|__yield|void __yield (void) **Примечание.**  на платформах ARM эта функция создает инструкцию yield, которая указывает, что поток выполняет задачу, которая может быть временно приостановлена от выполнения, например, при взаимоблокировки, без негативного воздействия на программу. Он позволяет ЦП выполнять другие задачи во время циклов выполнения, которые в противном случае будут потеряны.|
+|_AddressOfReturnAddress|void \* _AddressOfReturnAddress (void)|
+|_BitScanForward|_BitScanForward char без знака (длинное _Index без знака \* , длинное _Mask)|
+|_BitScanReverse|_BitScanReverse char без знака (длинное _Index без знака \* , длинное _Mask)|
+|_bittest|_bittest char без знака (Long const \* , Long)|
+|_bittestandcomplement|_bittestandcomplement char без знака (длинное целое \* )|
+|_bittestandreset|_bittestandreset char без знака (длинное целое \* )|
+|_bittestandset|_bittestandset char без знака (длинное целое \* )|
+|_byteswap_uint64|неподписанный __int64 \_ _cdecl _byteswap_uint64 (без знака \_ _int64)|
 |_byteswap_ulong|unsigned long __cdecl _byteswap_ulong(unsigned long)|
 |_byteswap_ushort|unsigned short __cdecl _byteswap_ushort(unsigned short)|
-|_disable|аннулированная __cdecl _disable (пустой) **Примечание:** На платформах ARM эта функция генерирует инструкцию CPSID; он доступен только в качестве неотъемлемого.|
-|_enable|недействительный __cdecl _enable (пустой) **Примечание:** На платформах ARM эта функция генерирует инструкцию CPSIE; он доступен только в качестве неотъемлемого.|
+|_disable|void __cdecl _disable (void) **Примечание.**  на платформах ARM эта функция создает инструкцию кпсид; Он доступен только в качестве встроенного.|
+|_enable|void __cdecl _enable (void) **Примечание.**  на платформах ARM эта функция создает инструкцию кпсие; Он доступен только в качестве встроенного.|
 |_lrotl|unsigned long __cdecl _lrotl(unsigned long, int)|
 |_lrotr|unsigned long __cdecl _lrotr(unsigned long, int)|
 |_ReadBarrier|void _ReadBarrier(void)|
 |_ReadWriteBarrier|void _ReadWriteBarrier(void)|
-|_ReturnAddress|пустота \* _ReturnAddress (пустоты)|
+|_ReturnAddress|void \* _ReturnAddress (void)|
 |_rotl|unsigned int __cdecl _rotl(unsigned int _Value, int _Shift)|
 |_rotl16|unsigned short _rotl16(unsigned short _Value, unsigned char _Shift)|
-|_rotl64|неподписанные \___int64 _cdecl \__rotl64 (неподписанные _int64 _Value, _Shift)|
+|_rotl64|неподписанный __int64 \_ _cdecl _rotl64 (неподписанный \_ _int64 _Value, int _Shift)|
 |_rotl8|unsigned char _rotl8(unsigned char _Value, unsigned char _Shift)|
 |_rotr|unsigned int __cdecl _rotr(unsigned int _Value, int _Shift)|
 |_rotr16|unsigned short _rotr16(unsigned short _Value, unsigned char _Shift)|
-|_rotr64|неподписанные \___int64 _cdecl \__rotr64 (неподписанные _Value _int64, _Shift)|
+|_rotr64|неподписанный __int64 \_ _cdecl _rotr64 (неподписанный \_ _int64 _Value, int _Shift)|
 |_rotr8|unsigned char _rotr8(unsigned char _Value, unsigned char _Shift)|
 |_setjmpex|int __cdecl _setjmpex(jmp_buf)|
 |_WriteBarrier|void _WriteBarrier(void)|
 
-Возвращение[на вершину](#top)
+[[Вернуться к началу](#top)]
 
-## <a name="interlocked-intrinsics"></a>Взаимосвязанные внутренностя
+## <a name="interlocked-intrinsics"></a>Блокируемые встроенные функции
 
-Блокирующие встроенные функции представляют собой набор встроенных функций, которые используются для выполнения атомарных операций чтения, изменения и записи. Некоторые из них общие для всех платформ. Они перечислены отдельно здесь, потому что есть большое количество из них, но потому, что их определения в основном излишни, легче думать о них в общих чертах. Их имена можно использовать для понимания точного поведения.
+Блокирующие встроенные функции представляют собой набор встроенных функций, которые используются для выполнения атомарных операций чтения, изменения и записи. Некоторые из них общие для всех платформ. Они перечислены отдельно, так как они имеют большое количество, но, так как их определения в основном избыточны, проще думать об этих понятиях в общих условиях. Их имена можно использовать для понимания точного поведения.
 
-В следующей таблице перечислены поддерживаемые ARM встроенные функции с блокировкой. Каждая ячейка в таблице соответствует имени, полученном путем добавления имени операции в самой левой ячейке строки к имени типа в самой верхней ячейке столбца для `_Interlocked`. Например, ячейка на пересечении `Xor` ряда `8` и столбца соответствует `_InterlockedXor8` и полностью поддерживается. Основные поддерживаемые функции предоставляют следующие дополнительные суффиксы: `_acq`, `_rel` и `_nf`. Суффикс `_acq` указывает «получить» семантику и суффикс `_rel` указывает «освободить» семантику. Суффикс `_nf` «нет забора» является уникальным для ARM и обсуждается в следующем разделе.
+В следующей таблице перечислены поддерживаемые ARM встроенные функции с блокировкой. Каждая ячейка в таблице соответствует имени, полученном путем добавления имени операции в самой левой ячейке строки к имени типа в самой верхней ячейке столбца для `_Interlocked`. Например, ячейка на пересечении `Xor` строки и `8` столбца соответствует `_InterlockedXor8` и полностью поддерживается. Основные поддерживаемые функции предоставляют следующие дополнительные суффиксы: `_acq`, `_rel` и `_nf`. Суффикс `_acq` указывает «получить» семантику и суффикс `_rel` указывает «освободить» семантику. `_nf`Суффикс или "без ограждения" уникален для ARM и рассматривается в следующем разделе.
 
-||8|16|32|64|P|
+|Операция|8|16|32|64|P|
 |-|-------|--------|--------|--------|-------|
 |Добавить|None|None|Полное|Полное|None|
-|И|Полное|Полное|Полное|Полное|None|
+|And|Полное|Полное|Полное|Полное|None|
 |CompareExchange|Полное|Полное|Полное|Полное|Полное|
 |Decrement|None|Полное|Полное|Полное|None|
 |Exchange|Partial|Partial|Partial|Partial|Partial|
@@ -4334,176 +4334,176 @@ void _MoveFromCoprocessor64(
 |Или|Полное|Полное|Полное|Полное|None|
 |Xor|Полное|Полное|Полное|Полное|None|
 
-Раздел:
+Ключ:
 
-- **Полный**: `_acq`поддерживает `_rel`равнину, и `_nf` формы.
+- **Full**: поддерживает простые `_acq` формы,, `_rel` и `_nf` .
 
-- **Частично**: поддерживает `_acq`равнину, и `_nf` формы.
+- **Partial**: поддерживает простые `_acq` формы, и `_nf` .
 
-- **Нет**: Не поддерживается
+- **Нет**: не поддерживается
 
-### <a name="_nf-no-fence-suffix"></a><a name="nf_suffix"></a>_nf (без забора) Суффикс
+### <a name="_nf-no-fence-suffix"></a><a name="nf_suffix"></a> Суффикс _nf (без ограждения)
 
-Суффикс `_nf` «нет забора» указывает на то, что операция не ведет себя как какой-либо `_acq`барьер `_rel`памяти, в отличие от трех других форм (простые, и), которые все ведут себя как своего рода барьер. Одним из возможных видов использования `_nf` форм является поддержание счетчика статистики, который обновляется несколькими потоками одновременно, но значение которого в противном случае не используется в то время как несколько потоков исполняются.
+`_nf`Суффикс или "без ограждения" означает, что операция не работает как какой-либо барьер памяти, в отличие от других трех форм (обычных, `_acq` и `_rel` ), которые ведут себя как некоторый барьер. Одним из возможных способов использования `_nf` форм является поддержка счетчика статистики, который обновляется несколькими потоками одновременно, но значение которых не используется в течение нескольких потоков.
 
-### <a name="list-of-interlocked-intrinsics"></a>Список взаимосвязанных внутреннозависимостей
-
-|Имя функции|Прототип функции|
-|-------------------|------------------------|
-|_InterlockedAdd|длинные _InterlockedAdd \*(длинные _volatile, длинные)|
-|_InterlockedAdd64|__int64 _InterlockedAdd64\_(_int64 \_летучий, \*_int64)|
-|_InterlockedAdd64_acq|__int64 _InterlockedAdd64_acq\_(_int64 \_летучие, \*_int64)|
-|_InterlockedAdd64_nf|__int64 _InterlockedAdd64_nf\_(_int64 \_летучие, \*_int64)|
-|_InterlockedAdd64_rel|__int64 _InterlockedAdd64_rel\_(_int64 \_летучий, \*_int64)|
-|_InterlockedAdd_acq|длинные _InterlockedAdd_acq \*(длинные летучие, длинные)|
-|_InterlockedAdd_nf|длинные _InterlockedAdd_nf \*(длинные летучие, длинные)|
-|_InterlockedAdd_rel|длинные _InterlockedAdd_rel \*(длинные летучие, длинные)|
-|_InterlockedAnd|долго _InterlockedAnd (длинный летучий, \*длинный)|
-|_InterlockedAnd16|короткий _InterlockedAnd16 \*(короткий летучих, короткий)|
-|_InterlockedAnd16_acq|короткий _InterlockedAnd16_acq \*(короткий летучих, короткий)|
-|_InterlockedAnd16_nf|короткие _InterlockedAnd16_nf \*(короткие летучие, короткие)|
-|_InterlockedAnd16_rel|короткие _InterlockedAnd16_rel \*(короткие летучие, короткие)|
-|_InterlockedAnd64|__int64 _InterlockedAnd64\_(_int64 \_летучие, \*_int64)|
-|_InterlockedAnd64_acq|__int64 _InterlockedAnd64_acq\_(_int64 \_летучие, \*_int64)|
-|_InterlockedAnd64_nf|__int64 _InterlockedAnd64_nf\_(_int64 \_летучие, \*_int64)|
-|_InterlockedAnd64_rel|_InterlockedAnd64_rel __int64\_(_int64 \_летучий, \*_int64)|
-|_InterlockedAnd8|char _InterlockedAnd8 (char volatile, \*char)|
-|_InterlockedAnd8_acq|char _InterlockedAnd8_acq (char volatile, \*char)|
-|_InterlockedAnd8_nf|char _InterlockedAnd8_nf (char volatile, \*char)|
-|_InterlockedAnd8_rel|char _InterlockedAnd8_rel (char volatile, \*char)|
-|_InterlockedAnd_acq|длинные _InterlockedAnd_acq \*(длинные летучие, длинные)|
-|_InterlockedAnd_nf|долгий _InterlockedAnd_nf \*(длинный летучий, длинный)|
-|_InterlockedAnd_rel|длинные _InterlockedAnd_rel \*(длинные летучие, длинные)|
-|_InterlockedCompareExchange|длинные __cdecl _InterlockedCompareExchange \*(длинные летучие, длинные, длинные)|
-|_InterlockedCompareExchange16|короткие _InterlockedCompareExchange16 \*(короткие летучие, короткие, короткие)|
-|_InterlockedCompareExchange16_acq|короткие _InterlockedCompareExchange16_acq \*(короткие летучие, короткие, короткие)|
-|_InterlockedCompareExchange16_nf|короткие _InterlockedCompareExchange16_nf \*(короткие летучие, короткие, короткие)|
-|_InterlockedCompareExchange16_rel|короткие _InterlockedCompareExchange16_rel \*(короткие летучие, короткие, короткие)|
-|_InterlockedCompareExchange64|__int64 _InterlockedCompareExchange64\_ \*(_int64 \_летучие, _int64, \__int64)|
-|_InterlockedCompareExchange64_acq|__int64 _InterlockedCompareExchange64_acq\_ \*(_int64 \_летучие, _int64, \__int64)|
-|_InterlockedCompareExchange64_nf|__int64 _InterlockedCompareExchange64_nf\_ \*(_int64 \_летучие, _int64, \__int64)|
-|_InterlockedCompareExchange64_rel|__int64 _InterlockedCompareExchange64_rel\_ \*(_int64 \_летучие, _int64, \__int64)|
-|_InterlockedCompareExchange8|char _InterlockedCompareExchange8 (char volatile, \*char, char)|
-|_InterlockedCompareExchange8_acq|char _InterlockedCompareExchange8_acq (char летучий, \*char, char)|
-|_InterlockedCompareExchange8_nf|char _InterlockedCompareExchange8_nf (char летучий, \*char, char)|
-|_InterlockedCompareExchange8_rel|char _InterlockedCompareExchange8_rel (char летучий, \*char, char)|
-|_InterlockedCompareExchangePointer|\* пустота _InterlockedCompareExchangePointer \* \*(пустота летучих , пустота \*, пустота \*)|
-|_InterlockedCompareExchangePointer_acq|\* пустота _InterlockedCompareExchangePointer_acq \* \*(пустота летучих , пустота \*, пустота \*)|
-|_InterlockedCompareExchangePointer_nf|\* пустота _InterlockedCompareExchangePointer_nf \* \*(пустота летучих , пустота \*, пустота \*)|
-|_InterlockedCompareExchangePointer_rel|\* пустота _InterlockedCompareExchangePointer_rel \* \*(пустота летучих, пустота \*, пустота \*)|
-|_InterlockedCompareExchange_acq|длинные _InterlockedCompareExchange_acq \*(длинные летучие, длинные, длинные)|
-|_InterlockedCompareExchange_nf|длинные _InterlockedCompareExchange_nf \*(длинные летучие, длинные, длинные)|
-|_InterlockedCompareExchange_rel|длинные _InterlockedCompareExchange_rel \*(длинные летучие, длинные, длинные)|
-|_InterlockedDecrement|долгий __cdecl _InterlockedDecrement \*(длинный летучих)|
-|_InterlockedDecrement16|короткие _InterlockedDecrement16 \*(короткие летучие)|
-|_InterlockedDecrement16_acq|короткие _InterlockedDecrement16_acq \*(короткие летучие)|
-|_InterlockedDecrement16_nf|короткие _InterlockedDecrement16_nf \*(короткие летучие)|
-|_InterlockedDecrement16_rel|короткие _InterlockedDecrement16_rel \*(короткие летучие)|
-|_InterlockedDecrement64|__int64 _InterlockedDecrement64\_(_int64 летучие) \*|
-|_InterlockedDecrement64_acq|__int64 _InterlockedDecrement64_acq\_(_int64 летучие) \*|
-|_InterlockedDecrement64_nf|__int64 _InterlockedDecrement64_nf\_(_int64 летучие) \*|
-|_InterlockedDecrement64_rel|__int64 _InterlockedDecrement64_rel\_(_int64 летучие) \*|
-|_InterlockedDecrement_acq|длинные _InterlockedDecrement_acq \*(длинные летучие)|
-|_InterlockedDecrement_nf|длинные _InterlockedDecrement_nf \*(длинные летучие)|
-|_InterlockedDecrement_rel|долго _InterlockedDecrement_rel (длинный летучих) \*|
-|_InterlockedExchange|длинные __cdecl _InterlockedExchange \* (длинные летучие _Target, длинные)|
-|_InterlockedExchange16|короткие _InterlockedExchange16 \* (короткие летучие _Target, короткие)|
-|_InterlockedExchange16_acq|короткие _InterlockedExchange16_acq \* (короткие летучие _Target, короткие)|
-|_InterlockedExchange16_nf|короткие _InterlockedExchange16_nf \* (короткие летучие _Target, короткие)|
-|_InterlockedExchange64|__int64 _InterlockedExchange64\_(_int64 \* \_летучие _Target, _int64)|
-|_InterlockedExchange64_acq|__int64 _InterlockedExchange64_acq\_(_int64 \* \__Target, _int64)|
-|_InterlockedExchange64_nf|__int64 _InterlockedExchange64_nf\_(_int64 \* \__Target, _int64)|
-|_InterlockedExchange8|char _InterlockedExchange8 (char летучий \* _Target, char)|
-|_InterlockedExchange8_acq|char _InterlockedExchange8_acq (char летучий \* _Target, char)|
-|_InterlockedExchange8_nf|_InterlockedExchange8_nf (символ \* летучих _Target, char)|
-|_InterlockedExchangeAdd|длинные _InterlockedExchangeAdd __cdecl \*(длинные летучие, длинные)|
-|_InterlockedExchangeAdd16|короткие _InterlockedExchangeAdd16 \*(короткие летучие, короткие)|
-|_InterlockedExchangeAdd16_acq|короткий _InterlockedExchangeAdd16_acq \*(короткий летучих, короткий)|
-|_InterlockedExchangeAdd16_nf|короткие _InterlockedExchangeAdd16_nf \*(короткие летучие, короткие)|
-|_InterlockedExchangeAdd16_rel|короткие _InterlockedExchangeAdd16_rel \*(короткие летучие, короткие)|
-|_InterlockedExchangeAdd64|__int64 _InterlockedExchangeAdd64\_(_int64 \_летучие, \*_int64)|
-|_InterlockedExchangeAdd64_acq|__int64 _InterlockedExchangeAdd64_acq\_(_int64 \_нестабильный, \*_int64)|
-|_InterlockedExchangeAdd64_nf|__int64 _InterlockedExchangeAdd64_nf\_(_int64 \_летучие, \*_int64)|
-|_InterlockedExchangeAdd64_rel|__int64 _InterlockedExchangeAdd64_rel\_(_int64 \_летучие, \*_int64)|
-|_InterlockedExchangeAdd8|char _InterlockedExchangeAdd8 (char volatile, \*char)|
-|_InterlockedExchangeAdd8_acq|char _InterlockedExchangeAdd8_acq (char volatile, \*char)|
-|_InterlockedExchangeAdd8_nf|char _InterlockedExchangeAdd8_nf (char volatile, \*char)|
-|_InterlockedExchangeAdd8_rel|char _InterlockedExchangeAdd8_rel (char volatile, \*char)|
-|_InterlockedExchangeAdd_acq|длинные _InterlockedExchangeAdd_acq \*(длинные летучие, длинные)|
-|_InterlockedExchangeAdd_nf|длинные _InterlockedExchangeAdd_nf \*(длинные летучие, длинные)|
-|_InterlockedExchangeAdd_rel|долгий _InterlockedExchangeAdd_rel \*(длинный летучий, длинный)|
-|_InterlockedExchangePointer|пустота \* _InterlockedExchangePointer \* \* (пустота \*летучих _Target, пустота )|
-|_InterlockedExchangePointer_acq|недействительный \* \* _InterlockedExchangePointer_acq \* (пустота летучих _Target, пустота \*)|
-|_InterlockedExchangePointer_nf|пустота \* _InterlockedExchangePointer_nf \* \* (пустота \*летучих _Target, пустота )|
-|_InterlockedExchange_acq|длинные _InterlockedExchange_acq \* (длинные летучие _Target, длинные)|
-|_InterlockedExchange_nf|длинные _InterlockedExchange_nf \* (длинные летучие _Target, длинные)|
-|_InterlockedIncrement|долгий __cdecl _InterlockedIncrement \*(длинный летучих)|
-|_InterlockedIncrement16|короткие _InterlockedIncrement16 \*(короткие летучие)|
-|_InterlockedIncrement16_acq|короткие _InterlockedIncrement16_acq \*(короткие летучие)|
-|_InterlockedIncrement16_nf|короткий _InterlockedIncrement16_nf \*(короткий летучих)|
-|_InterlockedIncrement16_rel|короткие _InterlockedIncrement16_rel \*(короткие летучие)|
-|_InterlockedIncrement64|__int64 _InterlockedIncrement64\_(_int64 летучие) \*|
-|_InterlockedIncrement64_acq|__int64 _InterlockedIncrement64_acq\_(_int64 летучие) \*|
-|_InterlockedIncrement64_nf|__int64 _InterlockedIncrement64_nf\_(_int64 летучие) \*|
-|_InterlockedIncrement64_rel|__int64 _InterlockedIncrement64_rel\_(_int64 летучие) \*|
-|_InterlockedIncrement_acq|длинные _InterlockedIncrement_acq \*(длинные летучие)|
-|_InterlockedIncrement_nf|длинные _InterlockedIncrement_nf \*(длинные летучие)|
-|_InterlockedIncrement_rel|длинные _InterlockedIncrement_rel \*(длинные летучие)|
-|_InterlockedOr|длинные _InterlockedOr \*(длинные летучие, длинные)|
-|_InterlockedOr16|короткий _InterlockedOr16 \*(короткий летучих, короткий)|
-|_InterlockedOr16_acq|короткие _InterlockedOr16_acq \*(короткие летучие, короткие)|
-|_InterlockedOr16_nf|короткий _InterlockedOr16_nf \*(короткий летучих, короткий)|
-|_InterlockedOr16_rel|короткие _InterlockedOr16_rel \*(короткие летучие, короткие)|
-|_InterlockedOr64|__int64 _InterlockedOr64\_(_int64 \_летучие, \*_int64)|
-|_InterlockedOr64_acq|__int64 _InterlockedOr64_acq\_(_int64 \_летучие, \*_int64)|
-|_InterlockedOr64_nf|__int64 _InterlockedOr64_nf\_(_int64 \_летучие, \*_int64)|
-|_InterlockedOr64_rel|__int64 _InterlockedOr64_rel\_(_int64 \_летучий, \*_int64)|
-|_InterlockedOr8|char _InterlockedOr8 (char volatile, \*char)|
-|_InterlockedOr8_acq|char _InterlockedOr8_acq (char volatile, \*char)|
-|_InterlockedOr8_nf|char _InterlockedOr8_nf (char volatile, \*char)|
-|_InterlockedOr8_rel|char _InterlockedOr8_rel (char volatile, \*char)|
-|_InterlockedOr_acq|длинные _InterlockedOr_acq \*(длинные летучие, длинные)|
-|_InterlockedOr_nf|длинные _InterlockedOr_nf \*(длинные летучие, длинные)|
-|_InterlockedOr_rel|долгий _InterlockedOr_rel \*(длинный летучий, длинный)|
-|_InterlockedXor|длинные _InterlockedXor \*(длинные летучие, длинные)|
-|_InterlockedXor16|короткие _InterlockedXor16 \*(короткие летучие, короткие)|
-|_InterlockedXor16_acq|короткие _InterlockedXor16_acq \*(короткие летучие, короткие)|
-|_InterlockedXor16_nf|короткий _InterlockedXor16_nf \*(короткий летучих, короткий)|
-|_InterlockedXor16_rel|короткий _InterlockedXor16_rel \*(короткий летучих, короткий)|
-|_InterlockedXor64|__int64 _InterlockedXor64\_(_int64 \_летучие, \*_int64)|
-|_InterlockedXor64_acq|__int64 _InterlockedXor64_acq\_(_int64 \_летучие, \*_int64)|
-|_InterlockedXor64_nf|__int64 _InterlockedXor64_nf\_(_int64 \_летучий, \*_int64)|
-|_InterlockedXor64_rel|_InterlockedXor64_rel __int64\_(_int64 \_нестабильный, \*_int64)|
-|_InterlockedXor8|char _InterlockedXor8 (char volatile, \*char)|
-|_InterlockedXor8_acq|char _InterlockedXor8_acq (char volatile, \*char)|
-|_InterlockedXor8_nf|char _InterlockedXor8_nf (char volatile, \*char)|
-|_InterlockedXor8_rel|char _InterlockedXor8_rel (char volatile, \*char)|
-|_InterlockedXor_acq|длинные _InterlockedXor_acq \*(длинные летучие, длинные)|
-|_InterlockedXor_nf|длинные _InterlockedXor_nf \*(длинные летучие, длинные)|
-|_InterlockedXor_rel|длинные _InterlockedXor_rel \*(длинные летучие, длинные)|
-
-Возвращение[на вершину](#top)
-
-### <a name="_interlockedbittest-intrinsics"></a>_interlockedbittest внутренняя часть
-
-Простые взаимосвязанные детали теста intrinsics являются общими для всех платформ. ARM `_acq`добавляет `_rel`, `_nf` , и варианты, которые просто изменить барьер семантики операции, как описано в [_nf (без забора) Суффикс](#nf_suffix) ранее в этой статье.
+### <a name="list-of-interlocked-intrinsics"></a>Список блокируемых встроенных функций
 
 |Имя функции|Прототип функции|
 |-------------------|------------------------|
-|_interlockedbittestandreset|неподписанный символ _interlockedbittestandreset \*(длинный летучих , длинные)|
-|_interlockedbittestandreset_acq|неподписанный _interlockedbittestandreset_acq char \*(длинный летучий, длинный)|
-|_interlockedbittestandreset_nf|неподписанный символ _interlockedbittestandreset_nf \*(длинный летучих , длинные)|
-|_interlockedbittestandreset_rel|неподписанный символ _interlockedbittestandreset_rel \*(длинный летучих , длинные)|
-|_interlockedbittestandset|неподписанный _interlockedbittestandset char \*(длинный летучий, длинный)|
-|_interlockedbittestandset_acq|неподписанный символ _interlockedbittestandset_acq \*(длинный летучих , длинные)|
-|_interlockedbittestandset_nf|неподписанный символ _interlockedbittestandset_nf \*(длинный летучих , длинные)|
-|_interlockedbittestandset_rel|неподписанный символ _interlockedbittestandset_rel \*(длинный летучих , длинные)|
+|_InterlockedAdd|длинный _InterlockedAdd (длинный _volatile \* , длинный)|
+|_InterlockedAdd64|__int64 _InterlockedAdd64 ( \_ _int64 volatile \* , \_ _int64)|
+|_InterlockedAdd64_acq|__int64 _InterlockedAdd64_acq ( \_ _int64 volatile \* , \_ _int64)|
+|_InterlockedAdd64_nf|__int64 _InterlockedAdd64_nf ( \_ _int64 volatile \* , \_ _int64)|
+|_InterlockedAdd64_rel|__int64 _InterlockedAdd64_rel ( \_ _int64 volatile \* , \_ _int64)|
+|_InterlockedAdd_acq|длинный _InterlockedAdd_acq (Long volatile \* , Long)|
+|_InterlockedAdd_nf|длинный _InterlockedAdd_nf (Long volatile \* , Long)|
+|_InterlockedAdd_rel|длинный _InterlockedAdd_rel (Long volatile \* , Long)|
+|_InterlockedAnd|длинный _InterlockedAnd (Long volatile \* , Long)|
+|_InterlockedAnd16|короткий _InterlockedAnd16 (короткий временный \* , короткий)|
+|_InterlockedAnd16_acq|короткий _InterlockedAnd16_acq (короткий временный \* , короткий)|
+|_InterlockedAnd16_nf|короткий _InterlockedAnd16_nf (короткий временный \* , короткий)|
+|_InterlockedAnd16_rel|короткий _InterlockedAnd16_rel (короткий временный \* , короткий)|
+|_InterlockedAnd64|__int64 _InterlockedAnd64 ( \_ _int64 volatile \* , \_ _int64)|
+|_InterlockedAnd64_acq|__int64 _InterlockedAnd64_acq ( \_ _int64 volatile \* , \_ _int64)|
+|_InterlockedAnd64_nf|__int64 _InterlockedAnd64_nf ( \_ _int64 volatile \* , \_ _int64)|
+|_InterlockedAnd64_rel|__int64 _InterlockedAnd64_rel ( \_ _int64 volatile \* , \_ _int64)|
+|_InterlockedAnd8|Char _InterlockedAnd8 (char volatile \* , char)|
+|_InterlockedAnd8_acq|Char _InterlockedAnd8_acq (char volatile \* , char)|
+|_InterlockedAnd8_nf|Char _InterlockedAnd8_nf (char volatile \* , char)|
+|_InterlockedAnd8_rel|Char _InterlockedAnd8_rel (char volatile \* , char)|
+|_InterlockedAnd_acq|длинный _InterlockedAnd_acq (Long volatile \* , Long)|
+|_InterlockedAnd_nf|длинный _InterlockedAnd_nf (Long volatile \* , Long)|
+|_InterlockedAnd_rel|длинный _InterlockedAnd_rel (Long volatile \* , Long)|
+|_InterlockedCompareExchange|_InterlockedCompareExchange длинное __cdecl (Long volatile \* , Long, Long)|
+|_InterlockedCompareExchange16|короткий _InterlockedCompareExchange16 (короткий энергонезависимый \* , короткий, короткий)|
+|_InterlockedCompareExchange16_acq|короткий _InterlockedCompareExchange16_acq (короткий энергонезависимый \* , короткий, короткий)|
+|_InterlockedCompareExchange16_nf|короткий _InterlockedCompareExchange16_nf (короткий энергонезависимый \* , короткий, короткий)|
+|_InterlockedCompareExchange16_rel|короткий _InterlockedCompareExchange16_rel (короткий энергонезависимый \* , короткий, короткий)|
+|_InterlockedCompareExchange64|__int64 _InterlockedCompareExchange64 ( \_ _int64 volatile \* , \_ _int64, \_ _int64)|
+|_InterlockedCompareExchange64_acq|__int64 _InterlockedCompareExchange64_acq ( \_ _int64 volatile \* , \_ _int64, \_ _int64)|
+|_InterlockedCompareExchange64_nf|__int64 _InterlockedCompareExchange64_nf ( \_ _int64 volatile \* , \_ _int64, \_ _int64)|
+|_InterlockedCompareExchange64_rel|__int64 _InterlockedCompareExchange64_rel ( \_ _int64 volatile \* , \_ _int64, \_ _int64)|
+|_InterlockedCompareExchange8|Char _InterlockedCompareExchange8 (char volatile \* , char, char)|
+|_InterlockedCompareExchange8_acq|Char _InterlockedCompareExchange8_acq (char volatile \* , char, char)|
+|_InterlockedCompareExchange8_nf|Char _InterlockedCompareExchange8_nf (char volatile \* , char, char)|
+|_InterlockedCompareExchange8_rel|Char _InterlockedCompareExchange8_rel (char volatile \* , char, char)|
+|_InterlockedCompareExchangePointer|void \* _InterlockedCompareExchangePointer (void \* volatile \* , void \* , void \* )|
+|_InterlockedCompareExchangePointer_acq|void \* _InterlockedCompareExchangePointer_acq (void \* volatile \* , void \* , void \* )|
+|_InterlockedCompareExchangePointer_nf|void \* _InterlockedCompareExchangePointer_nf (void \* volatile \* , void \* , void \* )|
+|_InterlockedCompareExchangePointer_rel|void \* _InterlockedCompareExchangePointer_rel (void \* volatile \* , void \* , void \* )|
+|_InterlockedCompareExchange_acq|длинный _InterlockedCompareExchange_acq (Long volatile \* , Long, Long)|
+|_InterlockedCompareExchange_nf|длинный _InterlockedCompareExchange_nf (Long volatile \* , Long, Long)|
+|_InterlockedCompareExchange_rel|длинный _InterlockedCompareExchange_rel (Long volatile \* , Long, Long)|
+|_InterlockedDecrement|_InterlockedDecrement длинный __cdecl (Long volatile \* )|
+|_InterlockedDecrement16|короткий _InterlockedDecrement16 (Short volatile \* )|
+|_InterlockedDecrement16_acq|короткий _InterlockedDecrement16_acq (Short volatile \* )|
+|_InterlockedDecrement16_nf|короткий _InterlockedDecrement16_nf (Short volatile \* )|
+|_InterlockedDecrement16_rel|короткий _InterlockedDecrement16_rel (Short volatile \* )|
+|_InterlockedDecrement64|_InterlockedDecrement64 __int64 ( \_ _int64 volatile \* )|
+|_InterlockedDecrement64_acq|_InterlockedDecrement64_acq __int64 ( \_ _int64 volatile \* )|
+|_InterlockedDecrement64_nf|_InterlockedDecrement64_nf __int64 ( \_ _int64 volatile \* )|
+|_InterlockedDecrement64_rel|_InterlockedDecrement64_rel __int64 ( \_ _int64 volatile \* )|
+|_InterlockedDecrement_acq|длинный _InterlockedDecrement_acq (Long volatile \* )|
+|_InterlockedDecrement_nf|длинный _InterlockedDecrement_nf (Long volatile \* )|
+|_InterlockedDecrement_rel|длинный _InterlockedDecrement_rel (Long volatile \* )|
+|_InterlockedExchange|_InterlockedExchange длинное __cdecl (Long volatile \* _Target, Long)|
+|_InterlockedExchange16|короткий _InterlockedExchange16 (короткий временный \* _Target, короткий)|
+|_InterlockedExchange16_acq|короткий _InterlockedExchange16_acq (короткий временный \* _Target, короткий)|
+|_InterlockedExchange16_nf|короткий _InterlockedExchange16_nf (короткий временный \* _Target, короткий)|
+|_InterlockedExchange64|__int64 _InterlockedExchange64 ( \_ _int64 volatile \* _Target, \_ _int64)|
+|_InterlockedExchange64_acq|__int64 _InterlockedExchange64_acq ( \_ _int64 volatile \* _Target, \_ _int64)|
+|_InterlockedExchange64_nf|__int64 _InterlockedExchange64_nf ( \_ _int64 volatile \* _Target, \_ _int64)|
+|_InterlockedExchange8|Char _InterlockedExchange8 (char volatile \* _Target, char)|
+|_InterlockedExchange8_acq|Char _InterlockedExchange8_acq (char volatile \* _Target, char)|
+|_InterlockedExchange8_nf|Char _InterlockedExchange8_nf (char volatile \* _Target, char)|
+|_InterlockedExchangeAdd|_InterlockedExchangeAdd длинное __cdecl (Long volatile \* , Long)|
+|_InterlockedExchangeAdd16|короткий _InterlockedExchangeAdd16 (короткий временный \* , короткий)|
+|_InterlockedExchangeAdd16_acq|короткий _InterlockedExchangeAdd16_acq (короткий временный \* , короткий)|
+|_InterlockedExchangeAdd16_nf|короткий _InterlockedExchangeAdd16_nf (короткий временный \* , короткий)|
+|_InterlockedExchangeAdd16_rel|короткий _InterlockedExchangeAdd16_rel (короткий временный \* , короткий)|
+|_InterlockedExchangeAdd64|__int64 _InterlockedExchangeAdd64 ( \_ _int64 volatile \* , \_ _int64)|
+|_InterlockedExchangeAdd64_acq|__int64 _InterlockedExchangeAdd64_acq ( \_ _int64 volatile \* , \_ _int64)|
+|_InterlockedExchangeAdd64_nf|__int64 _InterlockedExchangeAdd64_nf ( \_ _int64 volatile \* , \_ _int64)|
+|_InterlockedExchangeAdd64_rel|__int64 _InterlockedExchangeAdd64_rel ( \_ _int64 volatile \* , \_ _int64)|
+|_InterlockedExchangeAdd8|Char _InterlockedExchangeAdd8 (char volatile \* , char)|
+|_InterlockedExchangeAdd8_acq|Char _InterlockedExchangeAdd8_acq (char volatile \* , char)|
+|_InterlockedExchangeAdd8_nf|Char _InterlockedExchangeAdd8_nf (char volatile \* , char)|
+|_InterlockedExchangeAdd8_rel|Char _InterlockedExchangeAdd8_rel (char volatile \* , char)|
+|_InterlockedExchangeAdd_acq|длинный _InterlockedExchangeAdd_acq (Long volatile \* , Long)|
+|_InterlockedExchangeAdd_nf|длинный _InterlockedExchangeAdd_nf (Long volatile \* , Long)|
+|_InterlockedExchangeAdd_rel|длинный _InterlockedExchangeAdd_rel (Long volatile \* , Long)|
+|_InterlockedExchangePointer|void \* _InterlockedExchangePointer (void \* volatile \* , _Target, void \* )|
+|_InterlockedExchangePointer_acq|void \* _InterlockedExchangePointer_acq (void \* volatile \* , _Target, void \* )|
+|_InterlockedExchangePointer_nf|void \* _InterlockedExchangePointer_nf (void \* volatile \* , _Target, void \* )|
+|_InterlockedExchange_acq|длинный _InterlockedExchange_acq (Long volatile \* _Target, Long)|
+|_InterlockedExchange_nf|длинный _InterlockedExchange_nf (Long volatile \* _Target, Long)|
+|_InterlockedIncrement|_InterlockedIncrement длинный __cdecl (Long volatile \* )|
+|_InterlockedIncrement16|короткий _InterlockedIncrement16 (Short volatile \* )|
+|_InterlockedIncrement16_acq|короткий _InterlockedIncrement16_acq (Short volatile \* )|
+|_InterlockedIncrement16_nf|короткий _InterlockedIncrement16_nf (Short volatile \* )|
+|_InterlockedIncrement16_rel|короткий _InterlockedIncrement16_rel (Short volatile \* )|
+|_InterlockedIncrement64|_InterlockedIncrement64 __int64 ( \_ _int64 volatile \* )|
+|_InterlockedIncrement64_acq|_InterlockedIncrement64_acq __int64 ( \_ _int64 volatile \* )|
+|_InterlockedIncrement64_nf|_InterlockedIncrement64_nf __int64 ( \_ _int64 volatile \* )|
+|_InterlockedIncrement64_rel|_InterlockedIncrement64_rel __int64 ( \_ _int64 volatile \* )|
+|_InterlockedIncrement_acq|длинный _InterlockedIncrement_acq (Long volatile \* )|
+|_InterlockedIncrement_nf|длинный _InterlockedIncrement_nf (Long volatile \* )|
+|_InterlockedIncrement_rel|длинный _InterlockedIncrement_rel (Long volatile \* )|
+|_InterlockedOr|длинный _InterlockedOr (Long volatile \* , Long)|
+|_InterlockedOr16|короткий _InterlockedOr16 (короткий временный \* , короткий)|
+|_InterlockedOr16_acq|короткий _InterlockedOr16_acq (короткий временный \* , короткий)|
+|_InterlockedOr16_nf|короткий _InterlockedOr16_nf (короткий временный \* , короткий)|
+|_InterlockedOr16_rel|короткий _InterlockedOr16_rel (короткий временный \* , короткий)|
+|_InterlockedOr64|__int64 _InterlockedOr64 ( \_ _int64 volatile \* , \_ _int64)|
+|_InterlockedOr64_acq|__int64 _InterlockedOr64_acq ( \_ _int64 volatile \* , \_ _int64)|
+|_InterlockedOr64_nf|__int64 _InterlockedOr64_nf ( \_ _int64 volatile \* , \_ _int64)|
+|_InterlockedOr64_rel|__int64 _InterlockedOr64_rel ( \_ _int64 volatile \* , \_ _int64)|
+|_InterlockedOr8|Char _InterlockedOr8 (char volatile \* , char)|
+|_InterlockedOr8_acq|Char _InterlockedOr8_acq (char volatile \* , char)|
+|_InterlockedOr8_nf|Char _InterlockedOr8_nf (char volatile \* , char)|
+|_InterlockedOr8_rel|Char _InterlockedOr8_rel (char volatile \* , char)|
+|_InterlockedOr_acq|длинный _InterlockedOr_acq (Long volatile \* , Long)|
+|_InterlockedOr_nf|длинный _InterlockedOr_nf (Long volatile \* , Long)|
+|_InterlockedOr_rel|длинный _InterlockedOr_rel (Long volatile \* , Long)|
+|_InterlockedXor|длинный _InterlockedXor (Long volatile \* , Long)|
+|_InterlockedXor16|короткий _InterlockedXor16 (короткий временный \* , короткий)|
+|_InterlockedXor16_acq|короткий _InterlockedXor16_acq (короткий временный \* , короткий)|
+|_InterlockedXor16_nf|короткий _InterlockedXor16_nf (короткий временный \* , короткий)|
+|_InterlockedXor16_rel|короткий _InterlockedXor16_rel (короткий временный \* , короткий)|
+|_InterlockedXor64|__int64 _InterlockedXor64 ( \_ _int64 volatile \* , \_ _int64)|
+|_InterlockedXor64_acq|__int64 _InterlockedXor64_acq ( \_ _int64 volatile \* , \_ _int64)|
+|_InterlockedXor64_nf|__int64 _InterlockedXor64_nf ( \_ _int64 volatile \* , \_ _int64)|
+|_InterlockedXor64_rel|__int64 _InterlockedXor64_rel ( \_ _int64 volatile \* , \_ _int64)|
+|_InterlockedXor8|Char _InterlockedXor8 (char volatile \* , char)|
+|_InterlockedXor8_acq|Char _InterlockedXor8_acq (char volatile \* , char)|
+|_InterlockedXor8_nf|Char _InterlockedXor8_nf (char volatile \* , char)|
+|_InterlockedXor8_rel|Char _InterlockedXor8_rel (char volatile \* , char)|
+|_InterlockedXor_acq|длинный _InterlockedXor_acq (Long volatile \* , Long)|
+|_InterlockedXor_nf|длинный _InterlockedXor_nf (Long volatile \* , Long)|
+|_InterlockedXor_rel|длинный _InterlockedXor_rel (Long volatile \* , Long)|
 
-Возвращение[на вершину](#top)
+[[Вернуться к началу](#top)]
+
+### <a name="_interlockedbittest-intrinsics"></a>встроенные функции _interlockedbittest
+
+Встроенные функции обычного блокируемого двоичного теста являются общими для всех платформ. ARM добавляет `_acq` `_rel` варианты, и `_nf` , которые просто изменяют семантику барьера операции, как описано в подразделе [_nf (без ограждения)](#nf_suffix) ранее в этой статье.
+
+|Имя функции|Прототип функции|
+|-------------------|------------------------|
+|_interlockedbittestandreset|_interlockedbittestandreset char без знака (Long volatile \* , Long)|
+|_interlockedbittestandreset_acq|_interlockedbittestandreset_acq char без знака (Long volatile \* , Long)|
+|_interlockedbittestandreset_nf|_interlockedbittestandreset_nf char без знака (Long volatile \* , Long)|
+|_interlockedbittestandreset_rel|_interlockedbittestandreset_rel char без знака (Long volatile \* , Long)|
+|_interlockedbittestandset|_interlockedbittestandset char без знака (Long volatile \* , Long)|
+|_interlockedbittestandset_acq|_interlockedbittestandset_acq char без знака (Long volatile \* , Long)|
+|_interlockedbittestandset_nf|_interlockedbittestandset_nf char без знака (Long volatile \* , Long)|
+|_interlockedbittestandset_rel|_interlockedbittestandset_rel char без знака (Long volatile \* , Long)|
+
+[[Вернуться к началу](#top)]
 
 ## <a name="see-also"></a>См. также раздел
 
-[Компилятор внутренностих](../intrinsics/compiler-intrinsics.md)\
-[Внутренняя часть ARM64](arm64-intrinsics.md)\
-[Ссылка на сборку ARM](../assembler/arm/arm-assembler-reference.md)\
-[Ссылка на язык СЗ](../cpp/cpp-language-reference.md)
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)\
+[Встроенные объекты ARM64](arm64-intrinsics.md)\
+[Справочник по ассемблеру ARM](../assembler/arm/arm-assembler-reference.md)\
+[Справочник по языку C++](../cpp/cpp-language-reference.md)

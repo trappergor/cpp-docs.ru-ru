@@ -1,6 +1,7 @@
 ---
 title: Класс unordered_multiset
-ms.date: 11/04/2016
+description: Справочник по API для класса контейнера стандартной библиотеки C++ `unordered_multiset` , который описывает объект, используемый для хранения и извлечения данных из коллекции, в которой значения содержащихся в них элементов не должны быть уникальными и в которых они используются в качестве ключевых значений. Данные не упорядочиваются автоматически.
+ms.date: 9/10/2020
 f1_keywords:
 - unordered_set/std::unordered_multiset
 - unordered_set/std::unordered_multiset::allocator_type
@@ -25,6 +26,7 @@ f1_keywords:
 - unordered_set/std::unordered_multiset::cbegin
 - unordered_set/std::unordered_multiset::cend
 - unordered_set/std::unordered_multiset::clear
+- unordered_set/std::unordered_multiset::contains
 - unordered_set/std::unordered_multiset::count
 - unordered_set/std::unordered_multiset::emplace
 - unordered_set/std::unordered_multiset::emplace_hint
@@ -71,6 +73,7 @@ helpviewer_keywords:
 - std::unordered_multiset::cbegin
 - std::unordered_multiset::cend
 - std::unordered_multiset::clear
+- std::unordered_multiset::contains
 - std::unordered_multiset::count
 - std::unordered_multiset::emplace
 - std::unordered_multiset::emplace_hint
@@ -134,12 +137,12 @@ helpviewer_keywords:
 - std::unordered_multiset::size
 - std::unordered_multiset::swap
 ms.assetid: 70c8dfc5-492a-4af2-84f5-1aa9cb04b71c
-ms.openlocfilehash: 83b2b1a97972fa63f7cf7d2b9a6a48b49dbeda8d
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 8252ecc7051c1bad2ca1e7683ea32206dd0f10f4
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562523"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042034"
 ---
 # <a name="unordered_multiset-class"></a>Класс unordered_multiset
 
@@ -198,6 +201,7 @@ class unordered_multiset;
 |[cbegin](#cbegin)|Задает начало управляемой последовательности.|
 |[cend](#cend)|Задает конец управляемой последовательности.|
 |[открытым](#clear)|Удаляет все элементы.|
+|[содержит](#contains)<sup>c++ 20</sup>|Проверяет, существует ли элемент с указанным ключом.|
 |[count](#count)|Определяет количество элементов, соответствующих заданному ключу.|
 |[emplace](#emplace)|Добавляет элемент, созданный на месте.|
 |[emplace_hint](#emplace_hint)|Добавляет элемент, созданный на месте, с подсказкой.|
@@ -223,7 +227,7 @@ class unordered_multiset;
 |-|-|
 |[unordered_multiset:: operator =](#op_eq)|Копирует хэш-таблицу.|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
 
 Объект упорядочивает управляемую им последовательность путем вызова двух сохраненных объектов — объекта функции сравнения типа [unordered_multiset::key_equal](#key_equal) и объекта хэш-функции типа [unordered_multiset::hasher](#hasher). Доступ к первому сохраненному объекту осуществляется путем вызова функции члена [unordered_multiset:: key_eq](#key_eq) `()` ; доступ к второму сохраненному объекту осуществляется путем вызова функции члена [unordered_multiset:: hash_function](#hash) `()` . В частности, для всех значений `X` и `Y` типа `Key` вызов `key_eq()(X, Y)` возвращает значение true, только если два значения аргументов имеют соответствующий порядок; вызов `hash_function()(keyval)` создает распределение значений типа `size_t`. В отличие от [класса Unordered_set Class](../standard-library/unordered-set-class.md), объект типа не `unordered_multiset` гарантирует, что `key_eq()(X, Y)` всегда имеет значение false для любого из двух элементов управляемой последовательности. (Ключи не обязательно должны быть уникальными.)
 
@@ -247,7 +251,7 @@ class unordered_multiset;
 typedef Alloc allocator_type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Этот тип является синонимом для параметра шаблона `Alloc`.
 
@@ -296,7 +300,7 @@ const_local_iterator begin(size_type nbucket) const;
 *нбуккет*\
 Номер сегмента.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Первые две функции-члены возвращают прямой итератор, указывающий на первый элемент последовательности (или на место сразу за концом пустой последовательности). Последние две функции-члена возвращают прямой итератор, указывающий на первый элемент контейнера *нбуккет* (или сразу за концом пустого контейнера).
 
@@ -357,7 +361,7 @@ size_type bucket(const Key& keyval) const;
 *кэйвал*\
 Значение ключа для сопоставления.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Функция-член возвращает номер контейнера, который в настоящий момент соответствует значению ключа `keyval`.
 
@@ -408,7 +412,7 @@ bucket_size(7) == 1
 size_type bucket_count() const;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Функция-член возвращает текущее число блоков.
 
@@ -498,7 +502,7 @@ size_type bucket_size(size_type nbucket) const;
 *нбуккет*\
 Номер сегмента.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Функции элементов возвращают размер сегмента *нбуккет*.
 
@@ -553,7 +557,7 @@ const_iterator cbegin() const;
 
 **`const`** Итератор прямого доступа, указывающий на первый элемент диапазона, или расположение непосредственно за концом пустого диапазона (для пустого диапазона `cbegin() == cend()` ).
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Элементы в диапазоне нельзя изменить с помощью возвращаемого значения `cbegin`.
 
@@ -579,7 +583,7 @@ const_iterator cend() const;
 
 **`const`** Итератор прямого доступа, указывающий на место сразу за концом диапазона.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 `cend` используется для проверки того, прошел ли итератор конец диапазона.
 
@@ -603,7 +607,7 @@ auto i2 = Container.cend();
 void clear();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Функция-член вызывает [unordered_multiset::erase](#erase)`(` [unordered_multiset::begin](#begin)`(),` [unordered_multiset::end](#end)`())`.
 
@@ -670,7 +674,7 @@ empty() == false
 typedef T1 const_iterator;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Тип описывает объект, который можно использовать в качестве постоянного прямого итератора для управляемой последовательности. Он описан здесь как синоним для типа `T1`, определяемого реализацией.
 
@@ -713,7 +717,7 @@ int main()
 typedef T5 const_local_iterator;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Этот тип описывает объект, который можно использовать в качестве постоянного прямого итератора для блока. Он описан здесь как синоним для типа `T5`, определяемого реализацией.
 
@@ -761,7 +765,7 @@ int main()
 typedef Alloc::const_pointer const_pointer;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Этот тип описывает объект, который можно использовать в качестве постоянного указателя на элемент управляемой последовательности.
 
@@ -807,7 +811,7 @@ int main()
 typedef Alloc::const_reference const_reference;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Тип описывает объект, который можно использовать в качестве постоянной ссылки на элемент управляемой последовательности.
 
@@ -845,6 +849,57 @@ int main()
 [c] [b] [a]
 ```
 
+## <a name="unordered_multisetcontains"></a><a name="contains"></a> unordered_multiset:: Contains
+
+Проверяет, существует ли элемент с указанным ключом в `unordered_multiset` .
+
+```cpp
+bool contains(const Key& key) const;
+template<class K> bool contains(const K& key) const;
+```
+
+### <a name="parameters"></a>Параметры
+
+*Занят*\
+Тип ключа.
+
+*раздел*\
+Искомое значение ключа элемента.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+`true` значение, если элемент найден в контейнере; `false` в противном случае — значение.
+
+### <a name="remarks"></a>Комментарии
+
+`contains()` Новое в C++ 20. Чтобы использовать его, укажите параметр компилятора [/std: c + + Latest](../build/reference/std-specify-language-standard-version.md) .
+
+`template<class K> bool contains(const K& key) const` принимает участие в разрешении перегрузки только в `key_compare` том случае, если является прозрачным.
+
+### <a name="example"></a>Пример
+
+```cpp
+// Requires /std:c++latest
+#include <unordered_set>
+#include <iostream>
+
+int main()
+{
+    std::unordered_multiset<int> theUnorderedMultiset = { 1, 2, 3 };
+
+    std::cout << std::boolalpha; // so booleans show as 'true' or 'false'
+    std::cout << theUnorderedMultiset.contains(1) << '\n';
+    std::cout << theUnorderedMultiset.contains(4) << '\n';
+
+    return 0;
+}
+```
+
+```Output
+true
+false
+```
+
 ## <a name="unordered_multisetcount"></a><a name="count"></a> unordered_multiset:: count
 
 Определяет количество элементов, соответствующих заданному ключу.
@@ -858,7 +913,7 @@ size_type count(const Key& keyval) const;
 *кэйвал*\
 Искомое значение ключа.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Функция – член возвращает количество элементов в диапазоне, ограниченном [unordered_multiset:: equal_range](#equal_range) `(keyval)` .
 
@@ -908,7 +963,7 @@ count('C') == 0
 typedef T3 difference_type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Тип целого числа со знаком описывает объект, который может представлять разницу между адресами любых двух элементов в управляемой последовательности. Он описан здесь как синоним для типа `T3`, определяемого реализацией.
 
@@ -977,7 +1032,7 @@ iterator emplace(Args&&... args);
 
 Итератор, указывающий на вновь вставленный элемент.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Эта функция не делает недействительными никакие ссылки на элементы контейнера, но она может сделать недействительными все итераторы к контейнеру.
 
@@ -1008,7 +1063,7 @@ iterator emplace_hint(
 
 Итератор, указывающий на вновь вставленный элемент.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Эта функция не делает недействительными никакие ссылки на элементы контейнера, но она может сделать недействительными все итераторы к контейнеру.
 
@@ -1024,7 +1079,7 @@ iterator emplace_hint(
 bool empty() const;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Эта функция-член возвращает значение true для пустой управляемой последовательности.
 
@@ -1099,7 +1154,7 @@ const_local_iterator end(size_type nbucket) const;
 *нбуккет*\
 Номер сегмента.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Первые две функции-члены возвращают прямой итератор, указывающий на место сразу за концом последовательности. Последние две функции-члена возвращают прямой итератор, указывающий сразу за концом сегмента *нбуккет*.
 
@@ -1166,7 +1221,7 @@ std::pair<const_iterator, const_iterator>
 *кэйвал*\
 Искомое значение ключа.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Функция-член возвращает пару итераторов `X` , что `[X.first, X.second)` разделяет только те элементы управляемой последовательности, которые имеют эквивалентное упорядочение с помощью *кэйвал*. Если таких элементов не существует, оба итератора имеют значение `end()`.
 
@@ -1254,7 +1309,7 @@ size_type erase(
 
 Для третьей функции-члена возвращает число элементов, которые были удалены из объекта unordered_multiset.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Пример кода см. в разделе [set::erase](../standard-library/set-class.md#erase).
 
@@ -1271,7 +1326,7 @@ const_iterator find(const Key& keyval) const;
 *кэйвал*\
 Искомое значение ключа.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Функция – член возвращает [unordered_multiset:: equal_range](#equal_range) `(keyval).first` .
 
@@ -1326,7 +1381,7 @@ find('b') == true: [b]
 Alloc get_allocator() const;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Функция-член возвращает сохраненный объект распределителя.
 
@@ -1364,7 +1419,7 @@ al == std::allocator() is true
 Hash hash_function() const;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Функция-член возвращает сохраненный объект хэш-функции.
 
@@ -1402,7 +1457,7 @@ hfn('b') == 1647086
 typedef Hash hasher;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Этот тип является синонимом для параметра шаблона `Hash`.
 
@@ -1499,7 +1554,7 @@ IList);
 
 Одноэлементные функции-члены с подсказкой (3) и (4) возвращают итератор, указывающий на позицию, где был вставлен новый элемент.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Эта функция не делает никакие указатели или ссылки недействительными, но она может сделать недействительными все итераторы контейнера.
 
@@ -1535,7 +1590,7 @@ typedef implementation-defined iterator;
 Pred key_eq() const;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Функция-член возвращает сохраненный объект функции сравнения.
 
@@ -1575,7 +1630,7 @@ cmpfn('a', 'b') == false
 typedef Pred key_equal;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Этот тип является синонимом для параметра шаблона `Pred`.
 
@@ -1615,7 +1670,7 @@ cmpfn('a', 'b') == false
 typedef Key key_type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Этот тип является синонимом для параметра шаблона `Key`.
 
@@ -1669,7 +1724,7 @@ int main()
 float load_factor() const;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Функция – член возвращает `(float)` [unordered_multiset:: size](#size) `() / (float)` [unordered_multiset:: bucket_count](#bucket_count) `()` , среднее число элементов на сегмент.
 
@@ -1737,7 +1792,7 @@ int main()
 typedef T4 local_iterator;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Этот тип описывает объект, который можно использовать в качестве прямого итератора для контейнера. Он описан здесь как синоним для типа `T4`, определяемого реализацией.
 
@@ -1785,7 +1840,7 @@ int main()
 size_type max_bucket_count() const;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Функция-член возвращает максимальное количество блоков, которое разрешено в настоящее время.
 
@@ -1878,7 +1933,7 @@ void max_load_factor(float factor);
 *многофакторной*\
 Новый коэффициент максимальной нагрузки.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Первая функция-член возвращает сохраненный коэффициент максимальной нагрузки. Вторая функция – член заменяет хранимую максимальную степень нагрузки на *Коэффициент*.
 
@@ -1964,7 +2019,7 @@ max_load_factor() == 0.1
 size_type max_size() const;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Функция-член возвращает длину самой длинной последовательности, которой объект может управлять.
 
@@ -2006,7 +2061,7 @@ unordered_multiset& operator=(unordered_multiset&& right);
 *Правильно*\
 [unordered_multiset](../standard-library/unordered-multiset-class.md) копируется в `unordered_multiset`.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 После стирания любых существующих элементов в `unordered_multiset` `operator=` копирует или перемещает содержимое *непосредственно* в `unordered_multiset` .
 
@@ -2055,7 +2110,7 @@ int main( )
 typedef Alloc::pointer pointer;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Этот тип описывает объект, который можно использовать в качестве указателя на элемент управляемой последовательности.
 
@@ -2102,7 +2157,7 @@ int main()
 typedef Alloc::reference reference;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Тип описывает объект, который можно использовать в качестве ссылки на элемент управляемой последовательности.
 
@@ -2154,7 +2209,7 @@ void rehash(size_type nbuckets);
 *нбуккетс*\
 Требуемое число сегментов.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Функция-член изменяет количество контейнеров, чтобы они были как минимум *нбуккетс* и перестраивает хэш-таблицу по мере необходимости.
 
@@ -2227,7 +2282,7 @@ max_load_factor() == 0.1
 size_type size() const;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Функция-член возвращает длину управляемой последовательности.
 
@@ -2294,7 +2349,7 @@ empty() == false
 typedef T2 size_type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Целочисленный тип без знака описывает объект, который может представлять длину любой управляемой последовательности. Он описан здесь как синоним для типа `T2`, определяемого реализацией.
 
@@ -2335,7 +2390,7 @@ void swap(unordered_multiset& right);
 *Правильно*\
 Контейнер для замены.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Функция – член меняет местами управляемые последовательности между **`*this`** и *вправо*. Если [unordered_multiset:: get_allocator](#get_allocator) `() == right.get_allocator()` , он делает это в константном времени, он создает исключение только в результате копирования сохраненного объекта признаков типа `Tr` и не делает недействительными ссылки, указатели или итераторы, обозначающие элементы в двух управляемых последовательностях. В противном случае она выполняет ряд назначений элементов и вызовов конструктора, пропорционально количеству элементов в двух управляемых последовательностях.
 
@@ -2469,7 +2524,7 @@ unordered_multiset(
 *Интерфейс*\
 Объект initializer_list, из которого следует выполнить копирование.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Первый конструктор задает копию последовательности, управляемой по *правому краю*. Второй конструктор определяет управляемую пустую последовательность. Третий конструктор добавляет последовательность значений элементов `[First, Last)`. Четвертый конструктор указывает копию последовательности, перемещая ее *вправо*.
 
@@ -2491,7 +2546,7 @@ unordered_multiset(
 typedef Key value_type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Тип описывает элемент управляемой последовательности.
 
@@ -2537,7 +2592,7 @@ int main()
 [d] [c] [b] [a]
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [<unordered_set>](../standard-library/unordered-set.md)\
 [Контейнера](../cpp/containers-modern-cpp.md)\

@@ -1,5 +1,5 @@
 ---
-title: float_control - прагма
+title: Прагма float_control
 description: Описывает использование и влияние директивы pragma float_control. Директива float_control управляет состоянием точной семантики с плавающей точкой и семантикой исключений во время выполнения.
 ms.date: 11/18/2019
 f1_keywords:
@@ -9,49 +9,49 @@ helpviewer_keywords:
 - float_control pragma
 - pragmas, float_control
 ms.assetid: 4f4ba5cf-3707-413e-927d-5ecdbc0a9a43
-ms.openlocfilehash: 5f907bfeb3f92f788fe951854ddc32accc83ae03
-ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
+ms.openlocfilehash: 02a8e8d80616623693fff04aca02355c505b4c3b
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78166788"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041930"
 ---
-# <a name="float_control-pragma"></a>float_control - прагма
+# <a name="float_control-pragma"></a>Прагма float_control
 
 Указывает поведение чисел с плавающей запятой для функции.
 
 ## <a name="syntax"></a>Синтаксис
 
 > **#pragma float_control**\
-> **#pragma float_control (Точная,** { **On** | **Off** } [ **, Push** ] **)** \
-> **#pragma float_control (за исключением** { **On** | **Off** } [ **, Push** ] **)** \
-> **float_control #pragma (** { **Push** | **POP** } **)**
+> **#pragma float_control (Точная,** { **On**  |  **Off** } [ **, Push** ] **)**\
+> **#pragma float_control (за исключением** { **On**  |  **Off** } [ **, Push** ] **)**\
+> **float_control #pragma (** { **Push**  |  **POP** } **)**
 
 ## <a name="options"></a>Параметры
 
-**Точная**, **при** |  **отправке**\
+**Точная**, **on**  |  **отключенная**, **Принудительная отправка**\
 Указывает, следует ли включить (**On**) или отключить (**выключить**) точную семантику с плавающей запятой. Сведения о различиях с параметром компилятора **/FP: точную** см. в разделе "Примечания". **Необязательный токен Push отправляет** текущее значение для **float_control** во внутреннем стеке компилятора.
 
-**за исключением** |  **,** **Отправка**\
+**за исключением** **on**  |  **отключения**, **принудительной отправки**\
 Указывает, следует ли включить (**On**) или отключить (**Отключить**) семантику исключений с плавающей запятой. **Необязательный токен Push отправляет** текущее значение для **float_control** во внутреннем стеке компилятора.
 
 параметр **except** может иметь значение **On** , только если параметр **точнее** также имеет значение **On**.
 
-**отправка**\
+**распространение**\
 Передает текущий параметр **float_control** в стек внутреннего компилятора.
 
-\ **POP**
+**Рор**\
 Удаляет параметр **float_control** из верхнего внутреннего стека компилятора и создает новый параметр **float_control** .
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
 
 Директива pragma **float_control** не имеет того же поведения, что и параметр компилятора [/FP](../build/reference/fp-specify-floating-point-behavior.md) . Директива pragma **float_control** управляет только частью поведения операций с плавающей запятой. Для повторного создания параметров компилятора **/FP** его необходимо сочетать с директивами pragma [fp_contract](../preprocessor/fp-contract.md) и [fenv_access](../preprocessor/fenv-access.md) . В следующей таблице приведены эквивалентные параметры директивы pragma для каждого параметра компилятора.
 
-| | float_control (Точная \*) | float_control (за исключением \*) | fp_contract (\*) | fenv_access (\*) |
+| Параметр | float_control (Точная, \* ) | float_control (за исключением, \* ) | fp_contract ( \* ) | fenv_access ( \* ) |
 |-|-|-|-|-|
-| /FP: не более             | on  | on  | off | on  |
-| /FP: точный            | on  | off | on  | off |
-| /FP: быстрый               | off | off | on  | off |
+| /fp:strict             | on  | on  | off | on  |
+| /fp:precise            | on  | off | on  | off |
+| /fp:fast               | off | off | on  | off |
 
 Иными словами, может потребоваться использовать несколько директив pragma в сочетании для эмуляции параметров командной строки **/FP: Fast**, **/FP: точных**и **/FP: строго** .
 
