@@ -56,7 +56,7 @@ class CWinFormsDialog :
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-|
 |[Квинформсдиалог:: operator —&gt;](#operator_-_gt)|Заменяет [квинформсдиалог:: oncontrol](#getcontrol) в выражениях.|
 |[Квинформсдиалог:: operator Тманажедконтрол ^](#operator-tmanagedcontrol-hat)|Приводит тип в качестве ссылки на Windows Forms пользовательский элемент управления.|

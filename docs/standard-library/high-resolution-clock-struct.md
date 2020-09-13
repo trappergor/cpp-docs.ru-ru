@@ -33,7 +33,7 @@ class high_resolution_clock
 
 ### <a name="typedefs"></a>Определения типов
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |`duration`|Синоним `nanoseconds` , определенный в \<chrono> .|
 |`period`|Синоним `nano` , определенный в \<ratio> .|
@@ -42,12 +42,12 @@ class high_resolution_clock
 
 ## <a name="functions"></a>Функции
 
-|name|Описание|
+|Имя|Описание|
 |-|-|
 |`now`|Возвращает текущее время в виде `time_point` значения.|
 
 ## <a name="constants"></a>Константы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |`is_steady`|Содержит **`true`** . Объект `high_resolution_clock` — *постоянный*.|

@@ -43,7 +43,7 @@ class CWinFormsView : public CView;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-|
 |[Квинформсвиев:: operator элемент управления ^](#operator_control)|Приводит тип в качестве указателя на элемент управления Windows Forms.|
 

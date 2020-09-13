@@ -1,16 +1,16 @@
 ---
-title: Классы коллекций ATL
+title: Классы коллекций в ATL
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - collection classes
 ms.assetid: eff95de6-78ef-4212-9d7d-1dacbdd4cc58
-ms.openlocfilehash: 09c0a64ff34a86c5581fe552ce2dbf0d12ea8e96
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: a93810b91cefd897b55cae4760ade32374900eb3
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70739524"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041423"
 ---
 # <a name="collection-classes"></a>Классы коллекций
 
@@ -78,17 +78,17 @@ ms.locfileid: "70739524"
 
 - [Ксимплемапекуалхелперфалсе](../atl/reference/csimplemapequalhelperfalse-class.md) Этот класс является вспомогательным классом для класса [ксимплемап](../atl/reference/csimplemap-class.md) .
 
-- [Кстринжелементтраитс](../atl/reference/cstringelementtraits-class.md) Этот класс предоставляет статические функции, используемые классами `CString` коллекций, в которых хранятся объекты.
+- [Кстринжелементтраитс](../atl/reference/cstringelementtraits-class.md) Этот класс предоставляет статические функции, используемые классами коллекций, в которых хранятся `CString` объекты.
 
 - [Кстринжелементтраитси](../atl/reference/cstringelementtraitsi-class.md) Этот класс предоставляет статические функции, связанные со строками, хранящимися в объектах класса коллекции. Он аналогичен [кстринжелементтраитс](../atl/reference/cstringelementtraits-class.md), но выполняет сравнения без учета регистра.
 
 - [Кстрингрефелементтраитс](../atl/reference/cstringrefelementtraits-class.md) Этот класс предоставляет статические функции, связанные со строками, хранящимися в объектах класса коллекции. Строковые объекты обрабатываются как ссылки.
 
-## <a name="related-articles"></a>Связанные статьи
+## <a name="related-articles"></a>Похожие статьи
 
-[Классы коллекций ATL](../atl/atl-collection-classes.md)
+[Общие сведения о классе коллекции ATL](../atl/atl-collection-classes.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Обзор класса](../atl/atl-class-overview.md)<br/>
+[Общие сведения о классах](../atl/atl-class-overview.md)<br/>
 [Классы коллекций](../atl/atl-collection-classes.md)
