@@ -13,12 +13,12 @@ helpviewer_keywords:
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-ms.openlocfilehash: d01768eeb179ffdd0c39ce0717b84204d988528d
-ms.sourcegitcommit: 68ae6f9ea17f32734b32bb06ffeec12d8d33f0fe
+ms.openlocfilehash: 1ec29dcc09cd338136102c0f3b769055d5143973
+ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87807775"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90075807"
 ---
 # <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>ref class и ref struct (C++/CLI и C++/CX)
 
@@ -29,7 +29,7 @@ ms.locfileid: "87807775"
 ### <a name="syntax"></a>Синтаксис
 
 ```cpp
-class_access ref class name modifier : inherit_accessbase_type {};
+class_access ref class name modifier : inherit_access base_type {};
 class_access ref struct name modifier : inherit_access base_type {};
 class_access value class name modifier : inherit_access base_type {};
 class_access value struct name modifier : inherit_access base_type {};
@@ -95,7 +95,7 @@ class_access value struct name modifier : inherit_access base_type {};
 
 При объявлении объекта с помощью ключевых слов **value class** или **value struct** время жизни объявленного объекта не контролируется. Этот объект аналогичен любому другому стандартному классу или структуре C++.
 
-### <a name="requirements"></a>Требования
+### <a name="requirements"></a>Requirements (Требования)
 
 Параметр компилятора: `/ZW`
 
@@ -114,7 +114,7 @@ class_access value struct name modifier : inherit_access base_type {};
 
 Ключевые слова **value class** и **value struct** сообщают компилятору, что значение выделенного класса или структуры передается функциям или сохраняется в элементах.
 
-### <a name="requirements"></a>Требования
+### <a name="requirements"></a>Requirements (Требования)
 
 Параметр компилятора: `/clr`
 

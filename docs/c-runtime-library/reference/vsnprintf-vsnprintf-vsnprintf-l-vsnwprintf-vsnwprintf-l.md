@@ -1,5 +1,6 @@
 ---
 title: vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
+description: Справочник по API для vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf и _vsnwprintf_l; который записывает форматированные выходные данные, используя указатель на список аргументов.
 ms.date: 06/24/2020
 api_name:
 - _vsnprintf
@@ -55,12 +56,12 @@ helpviewer_keywords:
 - formatted text [C++]
 - vsnwprintf function
 ms.assetid: a97f92df-c2f8-4ea0-9269-76920d2d566a
-ms.openlocfilehash: 1cbb41d63669644f51b4d951d5b5507f64cf3da1
-ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
+ms.openlocfilehash: 63a2cd2e6287f9fe960cd60d799f4518b47572ae
+ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737593"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90075768"
 ---
 # <a name="vsnprintf-_vsnprintf-_vsnprintf_l-_vsnwprintf-_vsnwprintf_l"></a>vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
 
@@ -171,7 +172,7 @@ int _vsnwprintf_l(
 - Если *Count* равно нулю, но значение *buffer* не **равно NULL**, запись не производится и функция возвращает `-1` .
 - Если *параметр format* имеет **значение NULL**или если *буфер* равен **null** , а значение *Count* не равно нулю, эти функции вызывают обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают-1 **и устанавливают для** **еинвал**значение.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Каждая из этих функций принимает указатель на список аргументов, затем форматирует данные и записывает *их в память, на которую* указывает *буфер*. Функция **vsnprintf** всегда записывает знак завершения null, даже если он усекает выходные данные. При использовании **_vsnprintf** и **_vsnwprintf**буфер будет завершаться нулем, только если в конце есть место (то есть если количество символов для записи меньше, чем *Count*).
 
@@ -283,7 +284,7 @@ nSize: 9, buff: Hi there!
 nSize: 10, buff: Hi there!
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)<br/>
 [Функции vprintf](../../c-runtime-library/vprintf-functions.md)<br/>

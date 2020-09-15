@@ -5,7 +5,7 @@
   items:
     - name: Препроцессор
       href: ../preprocessor/preprocessor.md
-    - name: Обзор экспериментального препроцессора
+    - name: Обзор нового препроцессора
       href: ../preprocessor/preprocessor-experimental-overview.md
     - name: Фазы трансляции
       href: ../preprocessor/phases-of-translation.md
@@ -35,7 +35,7 @@
               href: ../preprocessor/auto-search.md
             - name: embedded_idl
               href: ../preprocessor/embedded-idl.md
-            - name: 'exclude (#import)'
+            - name: exclude (#import)
               href: ../preprocessor/exclude-hash-import.md
             - name: high_method_prefix
               href: ../preprocessor/high-method-prefix.md
@@ -73,7 +73,7 @@
               href: ../preprocessor/raw-native-types.md
             - name: raw_property_prefixes
               href: ../preprocessor/raw-property-prefixes.md
-            - name: 'rename (#import)'
+            - name: rename (#import)
               href: ../preprocessor/rename-hash-import.md
             - name: rename_namespace
               href: ../preprocessor/rename-namespace.md
@@ -96,11 +96,11 @@
       items:
         - name: Операторы препроцессора
           href: ../preprocessor/preprocessor-operators.md
-        - name: 'Оператор преобразования в строку (#)'
+        - name: Оператор преобразования в строку (#)
           href: ../preprocessor/stringizing-operator-hash.md
-        - name: 'Оператор преобразования в символы (#@)'
+        - name: Оператор преобразования в символы (#@)
           href: ../preprocessor/charizing-operator-hash-at.md
-        - name: 'Оператор вставки токена (##)'
+        - name: Оператор вставки токена (##)
           href: ../preprocessor/token-pasting-operator-hash-hash.md
     - name: Макросы препроцессора (C/C++)
       expanded: false

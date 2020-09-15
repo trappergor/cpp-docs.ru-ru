@@ -6,18 +6,18 @@ helpviewer_keywords:
 - preprocessor
 - preprocessor, reference overview
 ms.assetid: e4a52843-7016-4f6d-8b40-cb1ace18f805
-ms.openlocfilehash: e53f7270a71e5e7c3f456be7d55d49eaf352aecb
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: e72146d8b88f5a4bffcaaa121f6851d740ec948b
+ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040747"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90075638"
 ---
 # <a name="cc-preprocessor-reference"></a>Справочник по препроцессору в C/C++
 
 В *справочнике по препроцессору C/c++* описывается препроцессор, реализованный в Microsoft C/c++. Препроцессор выполняет предварительные операции с файлами C и C++ перед их передачей компилятору. Препроцессор можно использовать для условной компиляции кода, вставки файлов, задания сообщений для ошибок времени компиляции, а также для применения правил, зависящих от компьютера, к разделам кода.
 
-В Visual Studio 2019 параметр компилятора [/експериментал: препроцессор](../build/reference/experimental-preprocessor.md) позволяет реализовать новую реализацию препроцессора. Новая реализация все еще выполняется и, следовательно, считается экспериментальной. В конечном итоге оно должно соответствовать C99, C11 и C++ 20. Дополнительные сведения см. в разделе [компилятором MSVC New препроцессор Overview](preprocessor-experimental-overview.md).
+В Visual Studio 2019 параметр компилятора [/Zc: препроцессор](../build/reference/zc-preprocessor.md) предоставляет полностью согласованный препроцессор C11 и C17. Это значение по умолчанию при использовании флага компилятора `/std:c11` или `/std:c17` .
 
 ## <a name="in-this-section"></a>Содержание раздела
 
