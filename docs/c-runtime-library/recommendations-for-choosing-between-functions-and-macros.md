@@ -1,5 +1,6 @@
 ---
 title: Рекомендации по выбору между функциями и макросами
+description: Объясняет различия между использованием макросов и функций в библиотеке времени выполнения Microsoft C (CRT).
 ms.date: 11/04/2016
 f1_keywords:
 - c.functions
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - functions [CRT], vs. macros
 - macros, vs. functions
 ms.assetid: 18a633d6-cf1c-470c-a649-fa7677473e2b
-ms.openlocfilehash: 234fcd8a0439240bc7585414254c5687dcb8f21b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 8c47bf1924aeb94e2e4c9ee9358627cafcf90cba
+ms.sourcegitcommit: a6b97f5d78299ad93675de2fe0f0561f528d26c7
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749312"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90569537"
 ---
 # <a name="recommendations-for-choosing-between-functions-and-macros"></a>Рекомендации по выбору между функциями и макросами
 
@@ -44,4 +45,5 @@ ms.locfileid: "57749312"
 
 ## <a name="see-also"></a>См. также
 
-[Функции библиотеки CRT](../c-runtime-library/crt-library-features.md)
+[Type — универсальные математические символы](tgmath.md)\
+[Возможности библиотеки CRT](../c-runtime-library/crt-library-features.md)

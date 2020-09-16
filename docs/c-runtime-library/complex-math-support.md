@@ -1,5 +1,6 @@
 ---
 title: Поддержка операций с комплексными числами в C
+description: Описывает поддержку сложных математических символов C-Language в библиотеке времени выполнения Microsoft C (CRT)
 ms.date: 05/14/2019
 f1_keywords:
 - c.complex
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - complex numbers, math routines
 - math routines
 - complex numbers
-ms.openlocfilehash: dac032940ed9d96764b64809c5f8901ac273898b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0616f846030e5d5260b5d781884387614e12051d
+ms.sourcegitcommit: a6b97f5d78299ad93675de2fe0f0561f528d26c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215183"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90569544"
 ---
 # <a name="c-complex-math-support"></a>Поддержка операций с комплексными числами в C
 
@@ -40,7 +41,7 @@ ms.locfileid: "87215183"
 
 ## <a name="trigonometric-functions"></a>Тригонометрические функции
 
-|Компонент|Описание|
+|Функция|Описание|
 |-|-|
 |[cacos, cacosf, cacosl](../c-runtime-library/reference/cacos-cacosf-cacosl.md)|Вычисляет комплексный арккосинус комплексного числа|
 |[casin, casinf, casinl](../c-runtime-library/reference/casin-casinf-casinl.md)|Вычисляет комплексный арксинус комплексного числа|
@@ -51,7 +52,7 @@ ms.locfileid: "87215183"
 
 ## <a name="hyperbolic-functions"></a>Гиперболические функции
 
-|Компонент|Описание|
+|Функция|Описание|
 |-|-|
 |[cacosh, cacoshf, cacoshl](../c-runtime-library/reference/cacosh-cacoshf-cacoshl.md)|Вычисляет комплексный гиперболический арккосинус комплексного числа|
 |[casinh, casinhf, casinhl](../c-runtime-library/reference/casinh-casinhf-casinhl.md)|Вычисляет комплексный гиперболический арксинус комплексного числа|
@@ -62,7 +63,7 @@ ms.locfileid: "87215183"
 
 ## <a name="exponential-and-logarithmic-functions"></a>Экспоненциальные и логарифмические функции
 
-|Компонент|Описание|
+|Функция|Описание|
 |-|-|
 |[cexp, cexpf, cexpl](../c-runtime-library/reference/cexp-cexpf-cexpl.md)|Вычисляет комплексную экспоненту комплексного числа с основанием *e*|
 |[clog, clogf, clogl](../c-runtime-library/reference/clog-clogf-clogl.md)|Вычисляет комплексный натуральный (по основанию *e*) логарифм комплексного числа|
@@ -70,7 +71,7 @@ ms.locfileid: "87215183"
 
 ## <a name="power-and-absolute-value-functions"></a>Функции возведения в степень и вычисления абсолютного значения
 
-|Компонент|Описание|
+|Функция|Описание|
 |-|-|
 |[cabs, cabsf, cabsl](../c-runtime-library/reference/cabs-cabsf-cabsl.md)|Вычисляет комплексное абсолютное значение (также называемое нормой, модулем или порядком величины) комплексного числа|
 |[cpow, cpowf, cpowl](../c-runtime-library/reference/cpow-cpowf-cpowl.md)|Возводит комплексное число в степень x<sup>y</sup>|
@@ -78,7 +79,7 @@ ms.locfileid: "87215183"
 
 ## <a name="manipulation-functions"></a>Функции обработки
 
-|Компонент|Описание|
+|Функция|Описание|
 |-|-|
 |[_Cbuild, _FCbuild, _LCbuild](../c-runtime-library/reference/cbuild-fcbuild-lcbuild.md)|Формирует комплексное число из вещественной и мнимой частей|
 |[carg, cargf, cargl](../c-runtime-library/reference/carg-cargf-cargl.md)|Вычисляет аргумент комплексного числа (также называемый фазовым углом)|
@@ -92,11 +93,12 @@ ms.locfileid: "87215183"
 
 Так как комплексные числа не относятся к собственным типам компилятора Майкрософт, для них не определены стандартные арифметические операторы. Для удобства представлены следующие библиотечные функции, которые позволяют выполнять некоторые операции с комплексными числами в пользовательском коде.
 
-|Компонент|Описание|
+|Функция|Описание|
 |-|-|
 |[_Cmulcc, _FCmulcc, _LCmulcc](../c-runtime-library/reference/cmulcc-fcmulcc-lcmulcc.md)|Произведение двух комплексных чисел|
 |[_Cmulcr, _FCmulcr, _LCmulcr](../c-runtime-library/reference/cmulcr-fcmulcr-lcmulcr.md)|Умножает комплексное число на число с плавающей запятой|
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
-[Подпрограммы универсальной среды выполнения C по категориям](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Type — универсальные математические символы](tgmath.md)\
+[Подпрограммы универсальной среды выполнения C по категориям](../c-runtime-library/run-time-routines-by-category.md)

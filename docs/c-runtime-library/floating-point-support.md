@@ -1,6 +1,7 @@
 ---
 title: Поддержка математических функций для чисел с плавающей запятой
-ms.date: 01/31/2019
+description: Описывает поддержку чисел с плавающей запятой в универсальной библиотеке времени выполнения C (Майкрософт) (UCRT)
+ms.date: 9/14/2020
 f1_keywords:
 - c.math
 helpviewer_keywords:
@@ -8,16 +9,18 @@ helpviewer_keywords:
 - math routines
 - floating-point numbers
 ms.assetid: e4fcaf69-5c8e-4854-a9bb-1f412042131e
-ms.openlocfilehash: ca1648719a4a98efc56ea3f543336b803c81c40f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 99a5de3ce816e64d4b477c8c1d3226da5f8f292e
+ms.sourcegitcommit: a6b97f5d78299ad93675de2fe0f0561f528d26c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226233"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90569590"
 ---
 # <a name="math-and-floating-point-support"></a>Поддержка математических функций для чисел с плавающей запятой
 
 Универсальная библиотека среды выполнения C (UCRT) предоставляет множество математических функций с плавающей точкой, включая все функции, предусмотренные ISO C99. Функции с плавающей запятой предназначены для балансировки производительности и правильности. Так как получение правильно округленного результата может оказаться неоправданно дорогим, эти функции позволяют получить значение, максимально приближенное к правильно округленному результату. В большинстве случаев результат будет соответствовать правильно округленному значению +/–1 ULP, хотя в некоторых случаях погрешность может быть выше.
+
+Для ISO C Standard 11 (C11) и более поздних версий \<tgmath.h> заголовок, помимо включения \<math.h> и \<complex.h> , предоставляет макросы, которые вызывают соответствующую математическую функцию на основе типов параметров. Подробные сведения см. в разделе [Type-Generic Math](tgmath.md) .
 
 Во многих функциях математической библиотеки с плавающей точкой используются различные реализации разной архитектуры ЦП. Например, в 32-разрядных CRT x86 могут использоваться не такие реализации, как в 64-разрядных CRT x64. Кроме того, некоторые функции могут содержать сразу несколько реализаций заданной архитектуры ЦП. Наиболее эффективная реализация выбирается в среде выполнения динамически в зависимости от того, какие наборы инструкций поддерживает ЦП. Например, в 32-разрядных CRT x86 некоторые функции включают сразу две реализации — x87 и SSE2. При работе на ЦП, который поддерживает SSE2, используется более быстрая реализация SSE2. При работе на ЦП, который не поддерживает SSE2, используется более медленная реализация x87. Так как различные реализации функций математической библиотеки могут использовать для получения результатов различные инструкции ЦП и разнообразные алгоритмы, эти функции могут давать различные результаты на разных ЦП. В большинстве случаев результаты находятся в пределах +/–1 ULP от правильно округленного результата, но фактические результаты могут отличаться в зависимости от ЦП.
 
@@ -34,9 +37,9 @@ ms.locfileid: "87226233"
 [asinh, asinhf, asinhl](../c-runtime-library/reference/asinh-asinhf-asinhl.md)|Вычисляет гиперболический арксинус
 [atan, atanf, atanl, atan2, atan2f, atan2l](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|Вычисляет арктангенс
 [atanh, atanhf, atanhl](../c-runtime-library/reference/atanh-atanhf-atanhl.md)|Вычисляет гиперболический арктангенс
-[_atodbl, _atodbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|Преобразует строку, зависящую от языкового стандарта, в**`double`**
-[atof, _atof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Преобразует строку в**`double`**
-[_atoflt, _atoflt_l, _atoldbl, _atoldbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|Преобразует строку, зависящую от языкового стандарта, в **`float`** или**`long double`**
+[_atodbl, _atodbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|Преобразует строку, зависящую от языкового стандарта, в **`double`**
+[atof, _atof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Преобразует строку в **`double`**
+[_atoflt, _atoflt_l, _atoldbl, _atoldbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|Преобразует строку, зависящую от языкового стандарта, в **`float`** или **`long double`**
 [cbrt, cbrtf, cbrtl](../c-runtime-library/reference/cbrt-cbrtf-cbrtl.md)|Вычисляет кубический корень
 [ceil, ceilf, ceill](../c-runtime-library/reference/ceil-ceilf-ceill.md)|Вычисляет с округлением вверх
 [_chgsign, _chgsignf, _chgsignl](../c-runtime-library/reference/chgsign-chgsignf-chgsignl.md)|Вычисляет аддитивную инверсию
@@ -88,7 +91,7 @@ ms.locfileid: "87226233"
 [imaxdiv](../c-runtime-library/reference/imaxdiv.md)|Вычисляет частное и остаток от деления двух целочисленных значений
 [isfinite, _finite, _finitef](../c-runtime-library/reference/finite-finitef.md)|Определяет, является ли значение конечным
 [isgreater, isgreaterequal, isless, islessequal, islessgreater, isunordered](../c-runtime-library/reference/floating-point-ordering.md)|Сравнивает порядок двух значений с плавающей запятой
-[isinf](../c-runtime-library/reference/isinf.md)|Определяет, является ли значение с плавающей запятой бесконечным
+[исинф](../c-runtime-library/reference/isinf.md)|Определяет, является ли значение с плавающей запятой бесконечным
 [isnan, _isnan, _isnanf](../c-runtime-library/reference/isnan-isnan-isnanf.md)|Проверяет значение с плавающей запятой для NaN
 [isnormal](../c-runtime-library/reference/isnormal.md)|Проверяет, является ли значение с плавающей запятой конечным и не субнормальным
 [_j0, _j1 _jn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|Вычисляет функцию Бесселя
@@ -126,16 +129,16 @@ ms.locfileid: "87226233"
 [sinh, sinhf, sinhl](../c-runtime-library/reference/sinh-sinhf-sinhl.md)|Вычисляет гиперболический синус
 [sqrt, sqrtf, sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|Вычисляет квадратный корень
 [_status87, _statusfp, _statusfp2](../c-runtime-library/reference/status87-statusfp-statusfp2.md)|Получает слово состояния модуля операций с плавающей запятой
-[strtof, _strtof_l](../c-runtime-library/reference/strtof-strtof-l-wcstof-wcstof-l.md)|Преобразует строку в**`float`**
-[strtold, _strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)|Преобразует строку в**`long double`**
+[strtof, _strtof_l](../c-runtime-library/reference/strtof-strtof-l-wcstof-wcstof-l.md)|Преобразует строку в **`float`**
+[strtold, _strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)|Преобразует строку в **`long double`**
 [tan, tanf, tanl](../c-runtime-library/reference/tan-tanf-tanl.md)|Вычисляет тангенс
 [tanh, tanhf, tanhl](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|Вычисляет гиперболический тангенс
 [tgamma, tgammaf, tgammal](../c-runtime-library/reference/tgamma-tgammaf-tgammal.md)|Вычисляет гамма-функцию
 [trunc, truncf, truncl](../c-runtime-library/reference/trunc-truncf-truncl.md)|Усекает дробную часть
-[_wtof, _wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Преобразует расширенную строку в**`double`**
+[_wtof, _wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Преобразует расширенную строку в **`double`**
 [_y0, _y1 _yn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|Вычисляет функцию Бесселя
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также
 
-[Подпрограммы универсальной среды выполнения C по категориям](../c-runtime-library/run-time-routines-by-category.md)<br/>
-[Примитивы с плавающей запятой](../c-runtime-library/reference/floating-point-primitives.md)<br/>
+[Универсальные подпрограммы среды выполнения C по категориям](../c-runtime-library/run-time-routines-by-category.md)\
+[Примитивы с плавающей запятой](../c-runtime-library/reference/floating-point-primitives.md)
