@@ -12,16 +12,16 @@ helpviewer_keywords:
 - IView class [MFC]
 - views [MFC], classes
 ms.assetid: 9321f299-486e-4551-bee9-d2c4a7b91548
-ms.openlocfilehash: dfe77699a51ad2670c703d02e13e9062e76debcd
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 9233ee5a8330c4b2c79ebc7b79e0616612c00204
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81751284"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743429"
 ---
 # <a name="iview-interface"></a>Интерфейс IView
 
-Реализует несколько методов, используемых [CWinFormsView](../../mfc/reference/cwinformsview-class.md) для отправки уведомлений о представлении в управляемый элемент управления.
+Реализует несколько методов, которые [квинформсвиев](../../mfc/reference/cwinformsview-class.md) использует для отправки уведомлений представления управляемому элементу управления.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -33,25 +33,25 @@ interface class IView
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
-|[IView::OnActivateView](#onactivateview)|Вызывается MFC при активации или отключении представления.|
-|[IView::OninitialUpdate](#oninitialupdate)|Вызывается фреймворком после того, как представление сначала прикрепляется к документу, но до отображения представления.|
-|[IView::OnUpdate](#onupdate)|Вызвано MFC после того, как документ представления был изменен; эта функция позволяет представлению обновлять свой дисплей, чтобы отразить изменения.|
+|[IView:: Онактиватевиев](#onactivateview)|Вызывается MFC при активации или отключении представления.|
+|[IView:: Онинитиалупдате](#oninitialupdate)|Вызывается структурой после первого присоединения представления к документу, но до первоначального отображения представления.|
+|[IView:: OnUpdate](#onupdate)|Вызывается MFC после изменения документа представления; Эта функция позволяет представлению обновлять свое отображение в соответствии с изменениями.|
 
-## <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Remarks
 
-`IView`реализует несколько методов, используемых `CWinFormsView` для переадресовывательных уведомлений общего представления в управляемый элемент управления. Это [OnInitialUpdate](#oninitialupdate), [OnUpdate](#onupdate) и [OnActivateView](#onactivateview).
+`IView` реализует несколько методов, которые `CWinFormsView` используются для пересылки общих уведомлений о представлении в размещенный управляемый элемент управления. Это [онинитиалупдате](#oninitialupdate), [OnUpdate](#onupdate) и [онактиватевиев](#onactivateview).
 
-`IView`похож на [CView,](../../mfc/reference/cview-class.md)но используется только с управляемыми представлениями и элементами управления.
+`IView` аналогичен [CView](../../mfc/reference/cview-class.md), но используется только с управляемыми представлениями и элементами управления.
 
-Для получения дополнительной информации об использовании форм Windows, [см.](../../dotnet/using-a-windows-form-user-control-in-mfc.md)
+Дополнительные сведения об использовании Windows Forms см. в разделе [Использование пользовательского элемента управления формы Windows в MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
 ## <a name="requirements"></a>Требования
 
-Заголовок: afxwinforms.h (определяется в сборке atlmfc-lib'mfcmifc80.dll)
+Заголовок: афксвинформс. h (определяется в atlmfc\lib\mfcmifc80.dll сборки)
 
-## <a name="iviewonactivateview"></a><a name="onactivateview"></a>IView::OnActivateView
+## <a name="iviewonactivateview"></a><a name="onactivateview"></a> IView:: Онактиватевиев
 
 Вызывается MFC при активации или отключении представления.
 
@@ -61,30 +61,30 @@ void OnActivateView(bool activate);
 
 ## <a name="parameters"></a>Параметры
 
-*Активировать*<br/>
-Указывает, активируется или деактивируется представление.
+*активация*<br/>
+Указывает, активируется ли представление или деактивируется.
 
-## <a name="iviewoninitialupdate"></a><a name="oninitialupdate"></a>IView::OninitialUpdate
+## <a name="iviewoninitialupdate"></a><a name="oninitialupdate"></a> IView:: Онинитиалупдате
 
-Вызывается фреймворком после того, как представление сначала прикрепляется к документу, но до отображения представления.
+Вызывается структурой после первого присоединения представления к документу, но до первоначального отображения представления.
 
 ```cpp
 void OnInitialUpdate();
 ```
 
-## <a name="iviewonupdate"></a><a name="onupdate"></a>IView::OnUpdate
+## <a name="iviewonupdate"></a><a name="onupdate"></a> IView:: OnUpdate
 
-Вызывается MFC после того, как документ представления был изменен.
+Вызывается MFC после изменения документа представления.
 
 ```cpp
 void OnUpdate();
 ```
 
-## <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Remarks
 
-Эта функция позволяет представлению обновлять свой дисплей, чтобы отразить изменения.
+Эта функция позволяет представлению обновлять свое отображение в соответствии с изменениями.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
-[Класс CWinFormsView](../../mfc/reference/cwinformsview-class.md)<br/>
+[Класс Квинформсвиев](../../mfc/reference/cwinformsview-class.md)<br/>
 [Класс CView](../../mfc/reference/cview-class.md)

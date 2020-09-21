@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2099
 ms.assetid: 30e151ee-d458-4901-b0c0-d45054a913f5
-ms.openlocfilehash: e9fb7739111d13a585579455ed97cecaca3266e4
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 84070b36506a657dde5d2e7bd5594c2b7434d81d
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301942"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743416"
 ---
 # <a name="compiler-error-c2099"></a>Ошибка компилятора C2099
 
@@ -19,7 +19,7 @@ ms.locfileid: "75301942"
 
 Эта ошибка выдается только компилятором C и возникает только для неавтоматических переменных.  Компилятор инициализирует неавтоматические переменные при запуске программы, и значения, с которыми они инициализируются, должны быть константами.
 
-## <a name="example"></a>Пример
+## <a name="examples"></a>Примеры
 
 Следующий пример приводит к возникновению ошибки C2099.
 
@@ -29,8 +29,6 @@ int j;
 int *p;
 j = *p;   // C2099 *p is not a constant
 ```
-
-## <a name="example"></a>Пример
 
 Ошибка C2099 может также возникать, если компилятор не может выполнить свертывание констант в **/fp:strict** , так как параметры среды, задающие точность вычислений с плавающей запятой (дополнительные сведения см. в разделе [_controlfp_s](../../c-runtime-library/reference/controlfp-s.md) ), могут отличаться во время компиляции и во время выполнения.
 

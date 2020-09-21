@@ -1,9 +1,10 @@
 ---
 title: 'Оператор побитового исключающего ИЛИ: ^'
 description: Исключающий и используемый в стандартном языке C++ синтаксис оператора OR.
-ms.date: 07/23/2020
+ms.date: 09/21/2020
 f1_keywords:
 - xor_cpp
+- ^
 helpviewer_keywords:
 - operators [C++], bitwise
 - exclusive OR operator
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - OR operator [C++], bitwise exclusive
 - operators [C++], logical
 ms.assetid: f9185d85-65d5-4f64-a6d6-679758d52217
-ms.openlocfilehash: b76c3d84d9548a73084b254a4179d1f679c33626
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 4823c245ffca7032347e37c0c25c2963407733a7
+ms.sourcegitcommit: f656092eebbcb148ca4d3b7a6a8508eff8f7e85f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87521165"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90836632"
 ---
 # <a name="bitwise-exclusive-or-operator-"></a>Оператор побитового исключающего ИЛИ: ^
 
@@ -26,16 +27,17 @@ ms.locfileid: "87521165"
 
 > *выражение* **`^`** *выражение*
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Оператор побитового исключающего или ( **`^`** ) сравнивает каждый бит своего первого операнда с соответствующим битом второго операнда. Если бит одного из операндов равен 0, а бит второго операнда равен 1, соответствующий бит результата устанавливается в значение 1. в противном случае — нулю.
 
 Оба операнда оператора должны иметь целочисленные типы. Обычные арифметические преобразования, охваченные [стандартными](standard-conversions.md) преобразованиями, применяются к операндам.
 
+Дополнительные сведения об альтернативном использовании **`^`** символа в c++/CLI и c++/CX см. в разделе [оператор Handle to Object (^) (c++/CLI и c++/CX)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md).
+
 ## <a name="operator-keyword-for-"></a>Ключевое слово оператора для ^
 
 C++ указывает на **`xor`** альтернативное написание для **`^`** . В языке C в качестве макроса в заголовке указывается альтернативное написание \<iso646.h> . В C++ альтернативным написанием является ключевое слово; использование \<iso646.h> или эквивалент C++ \<ciso646> не рекомендуется. В Microsoft C++ [`/permissive-`](../build/reference/permissive-standards-conformance.md) [`/Za`](../build/reference/za-ze-disable-language-extensions.md) параметр компилятора или необходим для включения альтернативного написания.
-
 
 ## <a name="example"></a>Пример
 

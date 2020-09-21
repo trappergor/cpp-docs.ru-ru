@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2001
 ms.assetid: 0c3a7821-d8e5-4398-ab5a-4116d46e8dda
-ms.openlocfilehash: 2bf9bd322812764b2f63493d4b22b58d853a25fa
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 6b40a3bd186b5c45a0ea5163f433635ab1e7b07f
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756842"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743494"
 ---
 # <a name="compiler-error-c2001"></a>Ошибка компилятора C2001
 
@@ -25,7 +25,7 @@ ms.locfileid: "74756842"
 
 Завершение первой строки с \n не является достаточным.
 
-## <a name="example"></a>Пример
+## <a name="examples"></a>Примеры
 
 Следующий пример приводит к возникновению ошибки C2001:
 
@@ -42,8 +42,6 @@ int main()
              world");
 }
 ```
-
-## <a name="example"></a>Пример
 
 Пробелы в начале следующей строки после символа продолжения строки включаются в строковую константу. Ни один из приведенных выше примеров не внедряет символ новой строки в строковую константу. Можно встроить символ новой строки, как показано ниже:
 
