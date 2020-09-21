@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2678
 ms.assetid: 1f0a4e26-b429-44f5-9f94-cb66441220c8
-ms.openlocfilehash: 390752d5d34685afc8b5fc5401fd75585bb48dd0
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: c8f5b06e6c2f9966d714f4a360525617dbff400f
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760339"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743182"
 ---
 # <a name="compiler-error-c2678"></a>Ошибка компилятора C2678
 
@@ -19,9 +19,9 @@ ms.locfileid: "74760339"
 
 Чтобы использовать этот оператор, необходимо перегрузить его для указанного типа или определить преобразование в тип, для которого определен оператор.
 
-## <a name="example"></a>Пример
-
 Ошибка C2678 может возникать, если левый операнд квалифицирован как константный, однако оператор определен для принятия неконстантного аргумента.
+
+## <a name="examples"></a>Примеры
 
 В следующем примере показано возникновение ошибки C2678 и приводятся сведения по ее устранению.
 
@@ -46,8 +46,6 @@ int main() {
    combo2 += 9; // OK - operator+= matches non-const Combo
 }
 ```
-
-## <a name="example"></a>Пример
 
 Ошибка C2678 также может возникать, если не закрепить собственный член до вызова для него функции-члена.
 

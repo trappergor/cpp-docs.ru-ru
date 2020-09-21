@@ -1,6 +1,6 @@
 ---
-title: структура FUNCTION_FORCE_INLINEE_DATA
-description: Ссылка на структуру SDK Build Insights SDK FUNCTION_FORCE_INLINEE_DATA.
+title: Структура FUNCTION_FORCE_INLINEE_DATA
+description: Справочник по структуре FUNCTION_FORCE_INLINEE_DATA из пакета SDK для Аналитики сборок C++.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: a4781c9157130cb46e92906017af98710f5637b2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: d64a23c603d1f30726f30ffc91c1889c51138ef6
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325492"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041709"
 ---
-# <a name="function_force_inlinee_data-structure"></a>структура FUNCTION_FORCE_INLINEE_DATA
+# <a name="function_force_inlinee_data-structure"></a>Структура FUNCTION_FORCE_INLINEE_DATA
 
 ::: moniker range="<=vs-2015"
 
-SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
+Пакет SDK Аналитики сборок С++ совместим с Visual Studio 2017 и более поздних версий. Чтобы увидеть документацию для этих версий, установите в данной статье селектор **Версия** Visual Studio в Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части оглавления на этой странице.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Структура `FUNCTION_FORCE_INLINEE_DATA` описывает функцию, подстеженную силой.
+В структуре `FUNCTION_FORCE_INLINEE_DATA` описывается принудительно встраиваемая функция.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -40,9 +40,9 @@ typedef struct FUNCTION_FORCE_INLINEE_DATA_TAG
 
 ## <a name="members"></a>Участники
 
-|  |  |
+| Имя | Описание |
 |--|--|
-| `Name` | Название функции, закодированное в UTF-8. |
-| `Size` | Размер функции, как ряд промежуточных инструкций. |
+| `Name` | Имя функции в кодировке UTF-8. |
+| `Size` | Размер функции, выраженный в числе инструкций промежуточного языка. |
 
 ::: moniker-end

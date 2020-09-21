@@ -1,19 +1,20 @@
 ---
 title: Пошаговое руководство. Компиляция программы на языке C из командной строки
+description: Пошаговое руководство по созданию простой программы в стиле Hello World на языке C.
 ms.custom: conceptual
-ms.date: 04/25/2019
+ms.date: 9/10/2020
 helpviewer_keywords:
 - command-line applications [C++], C programs
 - Visual C, compiling
 - compiling programs [C++]
 - C program compiling [C++]
 ms.assetid: 7e74cc2d-54b1-49de-b7ad-d3ae6b39ab8d
-ms.openlocfilehash: d807fa75b32b515c2222fec9ea9d070266303e33
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 57276f61ca8ff848db0313935bc1841de50f9874
+ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335265"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90075612"
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>Пошаговое руководство. Компиляция программы на языке C из командной строки
 
@@ -180,7 +181,7 @@ usage: cl [ option... ] filename... [ /link linkoption... ]
 
 Языки C и C++ похожи, но имеют различия. Компилятор Microsoft C/C++ (MSVC) использует простое правило для определения языка, используемого при компиляции кода. По умолчанию компилятор MSVC рассматривает все файлы с расширением .c как исходные файлы на языке С, а файлы с расширением .cpp как исходные файлы на языке С++. Если указан параметр компилятора [/Tc](reference/tc-tp-tc-tp-specify-source-file-type.md), компилятор будет рассматривать все файлы как исходные файлы на языке С вне зависимости от расширения.
 
-Компилятор MSVC совместим со стандартом ISO C99, но строго соответствует ему. В большинстве случаев переносимый код на языке C будет компилироваться и выполняться должным образом. Visual C++ не поддерживает большинство изменений в ISO C11. Некоторые функции библиотеки и имена функций POSIX являются нерекомендуемыми в компиляторе MSVC. Функции поддерживаются, но предпочтительные имена изменились. Дополнительные сведения см. в статьях [Функции безопасности в CRT](../c-runtime-library/security-features-in-the-crt.md) и [Предупреждение компилятора (уровень 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md).
+Компилятор MSVC совместим со стандартом ISO C99, но строго соответствует ему. В большинстве случаев переносимый код на языке C будет компилироваться и выполняться должным образом. Visual C++ обеспечивает поддержку изменений в ISO C11/C17. Чтобы выполнить компиляцию с поддержкой C11/C17, используйте флаг компилятора `/std:c11` или `/std:c17`. Некоторые функции библиотеки и имена функций POSIX являются нерекомендуемыми в компиляторе MSVC. Функции поддерживаются, но предпочтительные имена изменились. Дополнительные сведения см. в статьях [Функции безопасности в CRT](../c-runtime-library/security-features-in-the-crt.md) и [Предупреждение компилятора (уровень 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md).
 
 ## <a name="see-also"></a>См. также
 

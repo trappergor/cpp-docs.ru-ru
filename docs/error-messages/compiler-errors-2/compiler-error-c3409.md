@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3409
 ms.assetid: e372d9fa-230c-4b28-b6d3-6ad81ccf9dbb
-ms.openlocfilehash: 0bf8b918f254c05bfe57034e25611c8dc17a783a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 360fedc6cadf275704a790c257c42ac8bde7873d
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231966"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742064"
 ---
 # <a name="compiler-error-c3409"></a>Ошибка компилятора C3409
 
@@ -35,7 +35,7 @@ ms.locfileid: "87231966"
 
    Дополнительные сведения о синтаксисе лямбда-выражений см. в разделе [синтаксис лямбда-выражений](../../cpp/lambda-expression-syntax.md).
 
-## <a name="example"></a>Пример
+## <a name="examples"></a>Примеры
 
 Следующий пример приводит к возникновению ошибки C3409.
 
@@ -54,8 +54,6 @@ __interface x {};
 class b : public x {};
 ```
 
-## <a name="example"></a>Пример
-
 В следующем примере создается C3409, поскольку лямбда-выражение использует **`mutable`** спецификацию, но не содержит список параметров. Компилятор не может определить, являются ли квадратные скобки частью определения лямбда-выражения или блока атрибутов.
 
 ```cpp
@@ -67,7 +65,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [версию](../../windows/attributes-alphabetical-reference.md)<br/>
 [Лямбда-выражения](../../cpp/lambda-expressions-in-cpp.md)<br/>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2676
 ms.assetid: 838a5e34-c92f-4f65-a597-e150bf8cf737
-ms.openlocfilehash: 1b999875aa1c7ef34065c0a36046c634308075f5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 94e56581f6583fa69e46d4deb3d82663a65cd1d1
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218199"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743195"
 ---
 # <a name="compiler-error-c2676"></a>Ошибка компилятора C2676
 
@@ -19,7 +19,7 @@ ms.locfileid: "87218199"
 
 Чтобы использовать этот оператор, необходимо перегрузить его для указанного типа или определить преобразование в тип, для которого определен оператор.
 
-## <a name="example"></a>Пример
+## <a name="examples"></a>Примеры
 
 Следующий пример приводит к возникновению ошибки C2676.
 
@@ -50,8 +50,6 @@ int main() {
                // and then the builtin-operator==(int, int)
 }
 ```
-
-## <a name="example"></a>Пример
 
 C2676 также может возникать при попытке выполнить арифметические действия над **`this`** указателем ссылочного типа.
 

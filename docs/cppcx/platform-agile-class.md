@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-ms.openlocfilehash: 839002a614b54990fdc9180fa06737ff43039a4a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d39270b7bf05e820ea376a40310abeb8add2c5ad
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226944"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742961"
 ---
 # <a name="platformagile-class"></a>Класс Platform::Agile
 
@@ -41,18 +41,18 @@ class Agile;
 
 Класс `Agile<T>` — это стандартный класс неуправляемого кода C++, для которого требуется включаемый файл `agile.h`. Он представляет объект, отличный от Agile, и *контекст*объекта Agile. Контекст задает потоковую модель объекта Agile и поведение маршалинга. Операционная система использует контекст для определения способа маршалирования объекта.
 
-### <a name="members"></a>Элементы
+### <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Agile:: Agile](#ctor)|Инициализирует новый экземпляр класса Agile.|
 |[Деструктор Agile::~Agile](#dtor)|Ликвидирует текущий экземпляр класса Agile.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Agile::Get](#get)|Возвращает дескриптор объекта, представленного текущим объектом Agile.|
 |[Agile::GetAddressOf](#getaddressof)|Повторно инициализирует текущий объект Agile и возвращает адрес дескриптора для объекта типа `T`.|
@@ -61,7 +61,7 @@ class Agile;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Agile:: operator->](#operator-arrow)|Извлекает дескриптор объекта, представленного текущим объектом Agile.|
 |[Agile::operator=](#operator-assign)|Присваивает указанное значение текущему объекту Agile.|
@@ -82,11 +82,11 @@ class Agile;
 
 **Заголовок:** agile.h
 
-## <a name="agileagile-constructor"></a><a name="ctor"></a>Конструктор Agile:: Agile
+## <a name="agileagile-constructor"></a><a name="ctor"></a> Конструктор Agile:: Agile
 
 Инициализирует новый экземпляр класса Agile.
 
-## <a name="syntax"></a>Синтаксис
+### <a name="syntax"></a>Синтаксис
 
 ```cpp
 Agile();
@@ -107,11 +107,11 @@ Agile(Agile<T>&& object);
 
 Первая версия этого конструктора является конструктором по умолчанию. Вторая версия инициализирует новый экземпляра класса Agile из объекта, указанного параметром `object`. Третья версия является конструктором копирования. Четвертая версия является конструктором перемещения. Этот конструктор не может вызывать исключения.
 
-## <a name="agileagile-destructor"></a><a name="dtor"></a>Динамический деструктор:: ~ Agile
+## <a name="agileagile-destructor"></a><a name="dtor"></a> Динамический деструктор:: ~ Agile
 
 Ликвидирует текущий экземпляр класса Agile.
 
-## <a name="syntax"></a>Синтаксис
+### <a name="syntax"></a>Синтаксис
 
 ```cpp
 ~Agile();
@@ -121,11 +121,11 @@ Agile(Agile<T>&& object);
 
 Этот деструктор также освобождает объект, представленный текущим объектом Agile.
 
-## <a name="agileget-method"></a><a name="get"></a>Метод Agile:: Get
+## <a name="agileget-method"></a><a name="get"></a> Метод Agile:: Get
 
 Возвращает дескриптор объекта, представленного текущим объектом Agile.
 
-## <a name="syntax"></a>Синтаксис
+### <a name="syntax"></a>Синтаксис
 
 ```cpp
 T^ Get() const;
@@ -137,11 +137,11 @@ T^ Get() const;
 
 Тип возвращаемого значения фактически является скрытым внутренним типом. Удобным способом удержания возвращаемого значения является присвоение его переменной, объявленной с **`auto`** ключевым словом выведения типа. Например, `auto x = myAgileTvariable->Get();`.
 
-## <a name="agilegetaddressof-method"></a><a name="getaddressof"></a>Метод Agile:: GetAddressOf
+## <a name="agilegetaddressof-method"></a><a name="getaddressof"></a> Метод Agile:: GetAddressOf
 
 Повторно инициализирует текущий объект Agile и возвращает адрес дескриптора для объекта типа `T`.
 
-## <a name="syntax"></a>Синтаксис
+### <a name="syntax"></a>Синтаксис
 
 ```cpp
 T^* GetAddressOf() throw();
@@ -160,11 +160,11 @@ T^* GetAddressOf() throw();
 
 Эта операция освобождает текущее представление объекта типа `T` при его наличии, повторно инициализирует данные-члены объекта Agile, получает текущий контекст потока, а затем возвращает адрес переменной дескриптора для объекта, который может представлять объект, отличный от Agile. Чтобы экземпляр класса Agile предоставлял объект, используйте оператор присваивания ([Agile:: operator =](#operator-assign)), чтобы назначить объект экземпляру класса Agile.
 
-## <a name="agilegetaddressofforinout-method"></a><a name="getaddressofforinout"></a>Метод Agile:: GetAddressOfForInOut
+## <a name="agilegetaddressofforinout-method"></a><a name="getaddressofforinout"></a> Метод Agile:: GetAddressOfForInOut
 
 Возвращает адрес дескриптора объекта, представленного текущим объектом Agile.
 
-## <a name="syntax"></a>Синтаксис
+### <a name="syntax"></a>Синтаксис
 
 ```cpp
 T^* GetAddressOfForInOut()  throw();
@@ -183,11 +183,11 @@ T^* GetAddressOfForInOut()  throw();
 
 Эта операция получает текущий контекст потоков, затем возвращает адрес дескриптора основного объекта.
 
-## <a name="agilerelease-method"></a><a name="release"></a>Метод Agile:: Release
+## <a name="agilerelease-method"></a><a name="release"></a> Метод Agile:: Release
 
 Отменяет базовый объект и контекст текущего объекта Agile.
 
-## <a name="syntax"></a>Синтаксис
+### <a name="syntax"></a>Синтаксис
 
 ```cpp
 void Release() throw();
@@ -201,7 +201,7 @@ void Release() throw();
 
 Извлекает дескриптор объекта, представленного текущим объектом Agile.
 
-## <a name="syntax"></a>Синтаксис
+### <a name="syntax"></a>Синтаксис
 
 ```cpp
 T^ operator->() const throw();
@@ -213,11 +213,11 @@ T^ operator->() const throw();
 
 Этот оператор фактически возвращает скрытый внутренний тип. Удобным способом удержания возвращаемого значения является присвоение его переменной, объявленной с **`auto`** ключевым словом выведения типа.
 
-## <a name="agileoperator-operator"></a><a name="operator-assign"></a>Оператор Agile:: operator =
+## <a name="agileoperator-operator"></a><a name="operator-assign"></a> Оператор Agile:: operator =
 
 Присваивает указанный объект текущему объекту Agile.
 
-## <a name="syntax"></a>Синтаксис
+### <a name="syntax"></a>Синтаксис
 
 ```cpp
 Agile<T> operator=( T^ object ) throw();
@@ -247,6 +247,6 @@ T^ operator=( IUnknown* lp ) throw();
 
 Операция присваивания автоматически сохраняет контекст текущего объекта Agile.
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также
 
 [Пространство имен платформы](platform-namespace-c-cx.md)

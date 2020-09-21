@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2249
 ms.assetid: bdd6697c-e04b-49b9-8e40-d9eb6d74f2b6
-ms.openlocfilehash: f50cb27a239e794b87a15920a36e96529bd6a466
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ac396fe5fa3505311f5a45ebb49dae283e35248c
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212804"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90741422"
 ---
 # <a name="compiler-error-c2249"></a>Ошибка компилятора C2249
 
@@ -19,7 +19,7 @@ ms.locfileid: "87212804"
 
 `member`Класс наследуется от неоткрытого **`virtual`** базового класса или структуры.
 
-## <a name="example"></a>Пример
+## <a name="examples"></a>Примеры
 
 Следующий пример приводит к возникновению ошибки C2249.
 
@@ -39,8 +39,6 @@ int main() {
    b.pubFunc();    // OK
 }
 ```
-
-## <a name="example"></a>Пример
 
 C2249 также может возникать при попытке назначить поток из стандартной библиотеки C++ другому потоку.  Следующий пример приводит к возникновению ошибки C2249.
 

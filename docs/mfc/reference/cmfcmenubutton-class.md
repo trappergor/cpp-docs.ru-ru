@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCMenuButton [MFC], m_nMenuResult
 - CMFCMenuButton [MFC], m_bDefaultClick
 ms.assetid: 53d3d459-1e5a-47c5-8b7f-2e61f6af5187
-ms.openlocfilehash: 929fc1c8166f249fe3babc724b2c0bcd9cb99676
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2f8ef341d7f460ed6b0ec23cb8a490842eb67cbc
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369674"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743273"
 ---
 # <a name="cmfcmenubutton-class"></a>Класс CMFCMenuButton
 
@@ -45,37 +45,37 @@ class CMFCMenuButton : public CMFCButton
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
-|[CMFCМенюБаттл::CMFCMenuButton](#cmfcmenubutton)|Формирует объект `CMFCMenuButton`.|
+|[CMFCMenuButton:: CMFCMenuButton](#cmfcmenubutton)|Формирует объект `CMFCMenuButton`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
-|[CMFCMenuButton::PreTranslateMessage](#pretranslatemessage)|Вызывается инфраструктурой для перевода оконных сообщений перед отправкой. (Переопределяет `CMFCButton::PreTranslateMessage`.)|
-|[CMFCMenuButton::Sizetocontent](#sizetocontent)|Изменяет размер кнопки в зависимости от ее текста и размера изображения.|
+|[CMFCMenuButton::PreTranslateMessage](#pretranslatemessage)|Вызывается платформой для преобразования оконных сообщений до их отправки. (Переопределяет `CMFCButton::PreTranslateMessage`.)|
+|[CMFCMenuButton:: SizeToContent](#sizetocontent)|Изменяет размер кнопки в соответствии с ее размером текста и изображения.|
 
 ### <a name="data-members"></a>Элементы данных
 
 |Имя|Описание|
 |----------|-----------------|
-|[CMFCMenuButton::m_bOSMenu](#m_bosmenu)|Уточняется, отображать ли всплывающее меню системы по умолчанию или использовать [CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu).|
-|[CMFCMenuButton::m_bRightArrow](#m_brightarrow)|Уточняется, будет ли всплывающее меню отображаться под или справа от кнопки.|
-|[CMFCMenuButton::m_bStayPressed](#m_bstaypressed)|Уточняется, изменяет ли кнопка меню свое состояние после того, как пользователь выпустит кнопку.|
-|[CMFCMenuButton::m_hMenu](#m_hmenu)|Ручка к прилагаемому меню Windows.|
-|[CMFCMenuButton::m_nMenuResult](#m_nmenuresult)|Идентификатор, указывающий, какой элемент выбрал пользователь из всплывающем меню.|
-|[CMFCMenuButton::m_bDefaultClick](#m_bdefaultclick)| Разрешить обработку текста/изображения по умолчанию (на кнопке текста/изображения).|
+|[CMFCMenuButton:: m_bOSMenu](#m_bosmenu)|Указывает, следует ли отображать системное всплывающее меню по умолчанию или использовать [кконтекстменуманажер:: метод TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu).|
+|[CMFCMenuButton:: m_bRightArrow](#m_brightarrow)|Указывает, отображается ли всплывающее меню под кнопкой или справа от нее.|
+|[CMFCMenuButton:: m_bStayPressed](#m_bstaypressed)|Указывает, изменяет ли кнопка меню свое состояние после того, как пользователь отпускает кнопку.|
+|[CMFCMenuButton:: m_hMenu](#m_hmenu)|Маркер для присоединенного меню Windows.|
+|[CMFCMenuButton:: m_nMenuResult](#m_nmenuresult)|Идентификатор, указывающий, какой элемент пользователь выбрал во всплывающем меню.|
+|[CMFCMenuButton:: m_bDefaultClick](#m_bdefaultclick)| Разрешить обработку по умолчанию (с текстом или изображением кнопки).|
 
 ## <a name="remarks"></a>Remarks
 
-Класс `CMFCMenuButton` происходит от [класса CMFCButton,](../../mfc/reference/cmfcbutton-class.md) который, в свою очередь, происходит от [класса CButton.](../../mfc/reference/cbutton-class.md) Таким образом, `CMFCMenuButton` вы можете использовать в коде так же, как вы будете использовать. `CButton`
+`CMFCMenuButton`Класс является производным от [класса кмфкбуттон](../../mfc/reference/cmfcbutton-class.md) , который, в свою очередь, является производным от [класса кбуттон](../../mfc/reference/cbutton-class.md). Таким образом, вы можете использовать `CMFCMenuButton` в коде так же, как и при использовании `CButton` .
 
-При `CMFCMenuButton`создании, вы должны пройти в ручку связанного всплывающее меню. Далее позвоните `CMFCMenuButton::SizeToContent`функции . `CMFCMenuButton::SizeToContent`проверяет, что размер кнопки достаточен для включения стрелки, укоторойятой на место, где появится всплывающее окно, а именно, под или справа от кнопки.
+При создании необходимо `CMFCMenuButton` передать маркер связанному всплывающему меню. Затем вызовите функцию `CMFCMenuButton::SizeToContent` . `CMFCMenuButton::SizeToContent` проверяет, достаточно ли размера кнопки для включения стрелки, указывающей на расположение всплывающего окна под кнопкой или справа от нее.
 
 ## <a name="example"></a>Пример
 
-В следующем примере показано, как настроить ручку меню, прикрепленную к кнопке, изменить размер кнопки в соответствии с ее текстом и размером изображения, а также настроить всплывающее меню, отображаемые рамкой. Этот фрагмент кода является частью [образца new Controls.](../../overview/visual-cpp-samples.md)
+В следующем примере показано, как задать маркер меню, присоединенного к кнопке, изменить размер кнопки в соответствии с размером текста и изображения, а также задать всплывающее меню, отображаемое платформой. Этот фрагмент кода является частью [примера новых элементов управления](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#38](../../mfc/reference/codesnippet/cpp/cmfcmenubutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#39](../../mfc/reference/codesnippet/cpp/cmfcmenubutton-class_2.cpp)]
@@ -96,19 +96,19 @@ class CMFCMenuButton : public CMFCButton
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** afxmenubutton.h
+**Заголовок:** афксменубуттон. h
 
-## <a name="cmfcmenubuttoncmfcmenubutton"></a><a name="cmfcmenubutton"></a>CMFCМенюБаттл::CMFCMenuButton
+## <a name="cmfcmenubuttoncmfcmenubutton"></a><a name="cmfcmenubutton"></a> CMFCMenuButton:: CMFCMenuButton
 
-Строит новый объект [CMFCMenuButton.](../../mfc/reference/cmfcmenubutton-class.md)
+Конструирует новый объект [CMFCMenuButton](../../mfc/reference/cmfcmenubutton-class.md) .
 
 ```
 CMFCMenuButton();
 ```
 
-## <a name="cmfcmenubuttonm_bosmenu"></a><a name="m_bosmenu"></a>CMFCMenuButton::m_bOSMenu
+## <a name="cmfcmenubuttonm_bosmenu"></a><a name="m_bosmenu"></a> CMFCMenuButton:: m_bOSMenu
 
-Переменная члена Boolean, которая указывает, какое всплывающее меню отображает фреймворк.
+Логическая переменная-член, которая указывает, какое всплывающее меню отображается платформой.
 
 ```
 BOOL m_bOSMenu;
@@ -116,11 +116,11 @@ BOOL m_bOSMenu;
 
 ### <a name="remarks"></a>Remarks
 
-Если `m_bOSMenu` это правда, то фреймворк вызывает унаследованный `TrackPopupMenu` метод для этого объекта. В противном случае, фреймворк вызывает [CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu).
+Если `m_bOSMenu` имеет значение true, платформа вызывает наследуемый `TrackPopupMenu` метод для этого объекта. В противном случае платформа вызывает [кконтекстменуманажер:: метод TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu).
 
-## <a name="cmfcmenubuttonm_brightarrow"></a><a name="m_brightarrow"></a>CMFCMenuButton::m_bRightArrow
+## <a name="cmfcmenubuttonm_brightarrow"></a><a name="m_brightarrow"></a> CMFCMenuButton:: m_bRightArrow
 
-Переменная члена Boolean, указывают расположение всплывающем меню.
+Логическая переменная-член, которая указывает расположение всплывающего меню.
 
 ```
 BOOL m_bRightArrow;
@@ -128,11 +128,11 @@ BOOL m_bRightArrow;
 
 ### <a name="remarks"></a>Remarks
 
-Когда пользователь нажимает кнопку меню, приложение показывает всплывающее меню. В фреймворке будет отображаться всплывающее меню либо под кнопкой, либо справа от кнопки. Кнопка также имеет небольшую стрелку, которая указывает, где появится всплывающее меню. Если `m_bRightArrow` это правда, фреймворк отображает всплывающее меню справа от кнопки. В противном случае под кнопкой отображается всплывающее меню.
+Когда пользователь нажимает кнопку меню, приложение отображает всплывающее меню. Платформа отобразит всплывающее меню под кнопкой или справа от кнопки. Кнопка также имеет маленькую стрелку, которая указывает, где появится всплывающее меню. Если `m_bRightArrow` имеет значение true, платформа отображает всплывающее меню справа от кнопки. В противном случае отображается всплывающее меню под кнопкой.
 
-## <a name="cmfcmenubuttonm_bstaypressed"></a><a name="m_bstaypressed"></a>CMFCMenuButton::m_bStayPressed
+## <a name="cmfcmenubuttonm_bstaypressed"></a><a name="m_bstaypressed"></a> CMFCMenuButton:: m_bStayPressed
 
-Переменная члена Boolean, которая указывает, отображается ли кнопка меню нажатой, в то время как пользователь делает выбор из всплывающих меню.
+Логическая переменная-член, которая указывает, отображается ли кнопка меню во время выбора пользователем во всплывающем меню.
 
 ```
 BOOL m_bStayPressed;
@@ -140,13 +140,13 @@ BOOL m_bStayPressed;
 
 ### <a name="remarks"></a>Remarks
 
-Если `m_bStayPressed` участник FALSE, кнопка меню не становится нажатой, когда использует кнопку. В этом случае фреймворк отображает только всплывающее меню.
+Если `m_bStayPressed` элемент имеет значение false, кнопка меню не будет нажата, когда компонент использует нажатие кнопки. В этом случае платформа отображает только всплывающее меню.
 
-Если `m_bStayPressed` участник является правдой, кнопка меню становится нажатой, когда пользователь нажимает на кнопку. Он остается нажатым до тех пор, пока пользователь не закроет всплывающее меню, либо сделав выбор, либо отменив.
+Если `m_bStayPressed` элемент имеет значение true, кнопка меню становится нажатой, когда пользователь нажимает кнопку. Она остается нажатой до тех пор, пока пользователь не закроет всплывающее меню, выполнив выбор или отменив.
 
-## <a name="cmfcmenubuttonm_hmenu"></a><a name="m_hmenu"></a>CMFCMenuButton::m_hMenu
+## <a name="cmfcmenubuttonm_hmenu"></a><a name="m_hmenu"></a> CMFCMenuButton:: m_hMenu
 
-Ручка к прилагаемому меню.
+Маркер присоединенного меню.
 
 ```
 HMENU m_hMenu;
@@ -154,11 +154,11 @@ HMENU m_hMenu;
 
 ### <a name="remarks"></a>Remarks
 
-Рамки отображает меню, указанное этой переменной участника, когда пользователь нажимает кнопку меню.
+Платформа отображает меню, обозначенное этой переменной члена, когда пользователь нажимает кнопку меню.
 
-## <a name="cmfcmenubuttonm_nmenuresult"></a><a name="m_nmenuresult"></a>CMFCMenuButton::m_nMenuResult
+## <a name="cmfcmenubuttonm_nmenuresult"></a><a name="m_nmenuresult"></a> CMFCMenuButton:: m_nMenuResult
 
-Цель, которая указывает, какой элемент пользователь выбирает из всплывающем меню.
+Целое число, указывающее, какой элемент пользователь выбирает во всплывающем меню.
 
 ```
 int m_nMenuResult;
@@ -166,11 +166,11 @@ int m_nMenuResult;
 
 ### <a name="remarks"></a>Remarks
 
-Значение этой переменной участника равен нулю, если пользователь отменяет меню без выделения или если происходит ошибка.
+Значение этой переменной-члена равно нулю, если пользователь отменяет меню, не выполняя выбор или при возникновении ошибки.
 
-## <a name="cmfcmenubuttonm_bdefaultclick"></a><a name="m_bdefaultclick"></a>CMFCMenuButton::m_bDefaultClick
+## <a name="cmfcmenubuttonm_bdefaultclick"></a><a name="m_bdefaultclick"></a> CMFCMenuButton:: m_bDefaultClick
 
-Позволяет обрабатывать текст или изображения по умолчанию на кнопке.
+Разрешает обработку текста или изображений на кнопке по умолчанию.
 
 ```
 BOOL  m_bDefaultClick;
@@ -178,21 +178,11 @@ BOOL  m_bDefaultClick;
 
 ### <a name="remarks"></a>Remarks
 
-Установка m_bDefaultClick на ложные причины кнопки, чтобы показать меню, когда вы нажмете в любом месте на кнопку.
+Если присвоить параметру m_bDefaultClick значение false, при нажатии кнопки в любом месте на кнопке будет отображаться меню.
 
-## <a name="cmfcmenubuttonm_nmenuresult"></a><a name="m_nmenuresult"></a>CMFCMenuButton::m_nMenuResult
+## <a name="cmfcmenubuttonpretranslatemessage"></a><a name="pretranslatemessage"></a> CMFCMenuButton::P Ретранслатемессаже
 
-Цель, которая указывает, какой элемент пользователь выбирает из всплывающем меню.
-
-```
-int m_nMenuResult;
-```
-
-### <a name="remarks"></a>Remarks
-
-## <a name="cmfcmenubuttonpretranslatemessage"></a><a name="pretranslatemessage"></a>CMFCMenuButton::PreTranslateMessage
-
-Вызывается инфраструктурой для перевода оконных сообщений перед отправкой.
+Вызывается платформой для преобразования оконных сообщений до их отправки.
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -200,16 +190,16 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="parameters"></a>Параметры
 
-*pMsg*<br/>
-(в) Указывает на структуру [MSG,](/windows/win32/api/winuser/ns-winuser-msg) содержащую сообщение для обработки.
+*пмсг*<br/>
+окне Указывает на структуру [MSG](/windows/win32/api/winuser/ns-winuser-msg) , содержащую сообщение для обработки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Nonzero, если сообщение было переведено и не должно быть отправлено; 0, если сообщение не было переведено и должно быть отправлено.
+Ненулевое значение, если сообщение было переведено и не должно быть отправлено. 0, если сообщение не было переведено и должно быть отправлено.
 
 ### <a name="remarks"></a>Remarks
 
-## <a name="cmfcmenubuttonsizetocontent"></a><a name="sizetocontent"></a>CMFCMenuButton::Sizetocontent
+## <a name="cmfcmenubuttonsizetocontent"></a><a name="sizetocontent"></a> CMFCMenuButton:: SizeToContent
 
 Изменяет размер кнопки в зависимости от размера текста и размера изображения.
 
@@ -219,21 +209,21 @@ virtual CSize SizeToContent(BOOL bCalcOnly = FALSE);
 
 ### <a name="parameters"></a>Параметры
 
-*bCalcТолько*<br/>
-(в) Параметр Boolean, указывающий на то, изменяет ли этот метод кнопку.
+*бкалконли*<br/>
+окне Логический параметр, указывающий, изменяет ли этот метод кнопку.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Объект [CSize,](../../atl-mfc-shared/reference/csize-class.md) который определяет новый размер для кнопки.
+Объект [ксизе](../../atl-mfc-shared/reference/csize-class.md) , указывающий новый размер кнопки.
 
 ### <a name="remarks"></a>Remarks
 
-Если вы называете эту функцию и `SizeToContent` *bCalcТолько* правда, вычислит только новый размер кнопки.
+Если вызвать эту функцию, а *бкалконли* — true, `SizeToContent` будет вычислять только новый размер кнопки.
 
-Новый размер кнопки рассчитывается в соответствии с текстом кнопки, изображением и стрелкой. Фрейм также добавляет в предопределенных полях 10 пикселей для горизонтального края и 5 пикселей для вертикального края.
+Новый размер кнопки вычисляется в соответствии с текстом кнопки, изображением и стрелкой. Платформа также добавляет предварительно определенные поля с 10 пикселями для горизонтального края и 5 пикселей для вертикального края.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
-[Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
+[Иерархическая диаграмма](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)<br/>
-[Класс CMFCButton](../../mfc/reference/cmfcbutton-class.md)
+[Класс Кмфкбуттон](../../mfc/reference/cmfcbutton-class.md)

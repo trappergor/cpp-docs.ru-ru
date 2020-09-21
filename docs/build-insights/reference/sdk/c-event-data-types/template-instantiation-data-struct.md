@@ -1,6 +1,6 @@
 ---
-title: структура TEMPLATE_INSTANTIATION_DATA
-description: Ссылка на структуру СЗ Build Insights SDK TEMPLATE_INSTANTIATION_DATA.
+title: Структура TEMPLATE_INSTANTIATION_DATA
+description: Справочник по структуре TEMPLATE_INSTANTIATION_DATA из пакета SDK для Аналитики сборок C++.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: a38d19368e7c0a9912907f1da6e7a2e31ffe8d90
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: 15bbb25c3abac339201179e763bffd916dba0480
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325334"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040877"
 ---
-# <a name="template_instantiation_data-structure"></a>структура TEMPLATE_INSTANTIATION_DATA
+# <a name="template_instantiation_data-structure"></a>Структура TEMPLATE_INSTANTIATION_DATA
 
 ::: moniker range="<=vs-2015"
 
-SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
+Пакет SDK Аналитики сборок С++ совместим с Visual Studio 2017 и более поздних версий. Чтобы увидеть документацию для этих версий, установите в данной статье селектор **Версия** Visual Studio в Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части оглавления на этой странице.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Структура `TEMPLATE_INSTANTIATION_DATA` описывает мгновенное значение шаблона.
+В структуре `TEMPLATE_INSTANTIATION_DATA` описывается создание экземпляра шаблона.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -41,14 +41,14 @@ typedef struct TEMPLATE_INSTANTIATION_DATA_TAG
 
 ## <a name="members"></a>Участники
 
-|  |  |
+| Имя | Описание |
 |--|--|
-| `SpecializationSymbolKey` | Ключ для типа специализации шаблона. Это значение является уникальным в анализируемом следе. |
-| `PrimaryTemplateSymbolKey` | Ключ для основного типа шаблона, который был специализированным. Это значение является уникальным в анализируемом следе. |
-| `KindCode` | Тип мгновенного шаблона. Для получения дополнительной информации смотрите [TEMPLATE_INSTANTIATION_KIND_CODE](template-instantiation-kind-code-enum.md). |
+| `SpecializationSymbolKey` | Ключ для типа специализации шаблона. Это значение уникально в пределах анализируемой трассировки. |
+| `PrimaryTemplateSymbolKey` | Ключ для основного типа шаблона, который был специализирован. Это значение уникально в пределах анализируемой трассировки. |
+| `KindCode` | Тип специализации шаблона. Дополнительные сведения см. в статье о [TEMPLATE_INSTANTIATION_KIND_CODE](template-instantiation-kind-code-enum.md). |
 
 ## <a name="remarks"></a>Remarks
 
-Ключи в `TEMPLATE_INSTANTIATION_DATA` структуре уникальны в анализируемом следе. Тем не менее, два разных ключа, поступающие из разных проходов фронт-энда компилятора, могут указывать на два одинаковых типа. При `TEMPLATE_INSTANTIATION_DATA` употреблении информации из нескольких проходов фронт-энда компилятора используйте [SYMBOL_NAME](../event-table.md#symbol-name) события, чтобы определить, являются ли два типа одинаковыми. `SymbolName`события излучаются в конце переднего прохода компилятора, после того, как все моменты шаблона имели место.
+Ключи структуры `TEMPLATE_INSTANTIATION_DATA` уникальны в пределах анализируемой трассировки. Но два разных ключа, созданных на разных этапах внешнего интерфейса компилятора, могут указывать на два одинаковых типа. При считывании информации о `TEMPLATE_INSTANTIATION_DATA`, полученной на разных этапах внешнего интерфейса компилятора, используйте события [SYMBOL_NAME](../event-table.md#symbol-name), чтобы определить, совпадают ли два типа. События `SymbolName` возникают в конце этапа внешнего интерфейса компилятора после создания всех экземпляров шаблонов.
 
 ::: moniker-end

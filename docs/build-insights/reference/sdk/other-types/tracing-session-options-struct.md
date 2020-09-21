@@ -1,6 +1,6 @@
 ---
-title: структура TRACING_SESSION_OPTIONS
-description: Ссылка на структуру СЗ Build Insights SDK TRACING_SESSION_OPTIONS.
+title: Структура TRACING_SESSION_OPTIONS
+description: Справочник по структуре TRACING_SESSION_OPTIONS из пакета SDK для Аналитики сборок C++.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 5aeb6299aea8dc0661b9469ee524e7aa4d010aca
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: c8a248d884b5232fbc5332db1a68533220ef2fab
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323426"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041267"
 ---
-# <a name="tracing_session_options-structure"></a>структура TRACING_SESSION_OPTIONS
+# <a name="tracing_session_options-structure"></a>Структура TRACING_SESSION_OPTIONS
 
 ::: moniker range="<=vs-2015"
 
-SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
+Пакет SDK Аналитики сборок С++ совместим с Visual Studio 2017 и более поздних версий. Чтобы увидеть документацию для этих версий, установите в данной статье селектор **Версия** Visual Studio в Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части оглавления на этой странице.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Структура `TRACING_SESSION_OPTIONS` используется при инициализации [ANALYSIS_DESCRIPTOR](analysis-descriptor-struct.md) или [RELOG_DESCRIPTOR](relog-descriptor-struct.md) структуры. В нем описывается, какие события следует запечатлеть во время сбора следа.
+Структура `TRACING_SESSION_OPTIONS` используется при инициализации структуры [ANALYSIS_DESCRIPTOR](analysis-descriptor-struct.md) или [RELOG_DESCRIPTOR](relog-descriptor-struct.md). Она описывает, какие события следует отслеживать во время сбора данных трассировки.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -40,9 +40,9 @@ typedef struct TRACING_SESSION_OPTIONS_TAG
 
 ## <a name="members"></a>Участники
 
-|  |  |
+| Имя | Описание |
 |--|--|
-| `SystemEventFlags` | Битовая маска, описывающая события системы для захвата. Для получения дополнительной информации [TRACING_SESSION_SYSTEM_EVENT_FLAGS](tracing-session-system-event-flags-constants.md)см. |
-| `MsvcEventFlags` | Битовая маска, описывающая события MSVC для захвата. Для получения дополнительной информации, смотрите [TRACING_SESSION_MSVC_EVENT_FLAGS](tracing-session-msvc-event-flags-constants.md). |
+| `SystemEventFlags` | Битовая маска, описывающая системные события для отслеживания. Дополнительные сведения см. в статье о [TRACING_SESSION_SYSTEM_EVENT_FLAGS](tracing-session-system-event-flags-constants.md). |
+| `MsvcEventFlags` | Битовая маска, описывающая события MSVC для отслеживания. Дополнительные сведения см. в статье о [TRACING_SESSION_MSVC_EVENT_FLAGS](tracing-session-msvc-event-flags-constants.md). |
 
 ::: moniker-end

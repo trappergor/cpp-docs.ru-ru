@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - functions [ATL], error reporting
 ms.assetid: 11339c02-98cd-428d-b3b9-7deeb155a6a3
-ms.openlocfilehash: b4af5dd3839672152c53c902b73c1ea51b7feb6b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 10aca6862f6989c126981a9f6437c61f1c07bdae
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835472"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742792"
 ---
 # <a name="debugging-and-error-reporting-global-functions"></a>Глобальные функции отладки и отчетов об ошибках
 
@@ -195,7 +195,7 @@ __declspec(noreturn) inline void AtlThrow(HRESULT hr);
 
 [!code-cpp[NVC_ATL_Windowing#95](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_2.h)]
 
-## <a name="requirements"></a>Требования
+### <a name="requirements"></a>Требования
 
 **Заголовок:** атлдеф. h
 
@@ -217,7 +217,7 @@ inline void AtlThrowLastWin32();
 
 Если определено _ATL_NO_EXCEPTIONS, функция вызывает сбой утверждения, а не создает исключение.
 
-## <a name="requirements"></a>Требования
+### <a name="requirements"></a>Требования
 
 **Заголовок:** атлдеф. h
 

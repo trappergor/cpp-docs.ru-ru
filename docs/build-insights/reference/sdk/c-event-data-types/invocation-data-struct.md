@@ -1,6 +1,6 @@
 ---
-title: структура INVOCATION_DATA
-description: Ссылка на структуру SDK Build Insights sDK INVOCATION_DATA.
+title: Структура INVOCATION_DATA
+description: Справочник по структуре INVOCATION_DATA из пакета SDK для Аналитики сборок C++.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 4e1f428facac413d7a4a5c059452dd8cdb07be4c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: 48b4c28d3c01d61a31343894312a54ba2ab17a70
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325488"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041644"
 ---
-# <a name="invocation_data-structure"></a>структура INVOCATION_DATA
+# <a name="invocation_data-structure"></a>Структура INVOCATION_DATA
 
 ::: moniker range="<=vs-2015"
 
-SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
+Пакет SDK Аналитики сборок С++ совместим с Visual Studio 2017 и более поздних версий. Чтобы увидеть документацию для этих версий, установите в данной статье селектор **Версия** Visual Studio в Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части оглавления на этой странице.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Структура `INVOCATION_DATA` описывает вызов компилятора или ссылки.
+В структуре `INVOCATION_DATA` описывается вызов компилятора и компоновщика.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -45,12 +45,12 @@ typedef struct INVOCATION_DATA_TAG
 
 ## <a name="members"></a>Участники
 
-|  |  |
+| Имя | Описание |
 |--|--|
-| `MSVCToolCode` | Код, идентифицирующие тип вызова. Для получения дополнительной информации см [MSVC_TOOL_CODE.](msvc-tool-code-enum.md) |
-| `ToolVersion` | Объект, который хранит вызываемую версию инструмента как группу интегральных значений. |
-| `ToolVersionString` | Описывает версию вызываемого инструмента в текстовой форме. |
-| `WorkingDirectory` | Каталог, из которого был сделан призыв. |
-| `ToolPath` | Абсолютный путь вызываемого инструмента. |
+| `MSVCToolCode` | Код, определяющий тип вызова. Подробнее см. в статье о [MSVC_TOOL_CODE](msvc-tool-code-enum.md). |
+| `ToolVersion` | Объект, хранящий версию вызываемого средства в виде группы целочисленных значений. |
+| `ToolVersionString` | Описывает версию вызванного средства в текстовой форме. |
+| `WorkingDirectory` | Каталог, из которого был сделан вызов. |
+| `ToolPath` | Абсолютный путь к вызываемому средству. |
 
 ::: moniker-end

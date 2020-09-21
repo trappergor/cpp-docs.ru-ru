@@ -1,6 +1,6 @@
 ---
 title: Список встроенных объектов x86
-description: Список ссылок на встроенные функции x64 (AMD64), поддерживаемые компилятором Microsoft C++ в Visual Studio.
+description: Список ссылок на встроенные функции x86, поддерживаемые компилятором Microsoft C++ в Visual Studio.
 ms.date: 02/28/2020
 f1_keywords:
 - intrin/_addcarry_u16
@@ -2309,12 +2309,12 @@ helpviewer_keywords:
 - _xsaveopt x86 intrinsic
 - _xsetbv x86 intrinsic
 - _xtest x86 intrinsic
-ms.openlocfilehash: f13be5ddaa79382e3d58e96b2f4aaa0d7f9d6566
-ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
+ms.openlocfilehash: a5892b809e74e04806f27f06437b9fbedae68754
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88610924"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90741882"
 ---
 # <a name="x86-intrinsics-list"></a>Список встроенных объектов x86
 
@@ -2338,7 +2338,7 @@ ms.locfileid: "88610924"
 
 В следующей таблице перечислены компоненты, доступные для процессоров x 86. В технологии столбце перечислены требуется поддержка набора инструкций. Использование [__cpuid](cpuid-cpuidex.md) встроенные определить поддержку набора инструкций во время выполнения. Если две записи находятся в одной строке, они представляют разные точки входа для одной встроенной функции. [1] Указывает, что встроенный доступна только в процессорах AMD. [2] Указывает, что встроенный доступна только для процессоров Intel ®. [3] указывает, что прототип является макросом. Заголовок, требуемый для прототипа функции, указан в столбце "Заголовок". Заголовок intrin.h в целях упрощения включает как immintrin.h, так и ammintrin.h.
 
-|Имя встроенной функции|Технология|Заголовок|Прототип функции|
+|Имя встроенной функции|Технология|Header|Прототип функции|
 |--------------------|----------------|------------|------------------------|
 |_addcarry_u16||intrin.h|неподписанный char _addcarry_u16 (char без знака, Short без знака, Short без знака, короткое без знака \* )|
 |[_addcarry_u32](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_addcarry_u32)||intrin.h|тип char без знака _addcarry_u32 (char без знака, целое число без знака, целое число без знака \* )|

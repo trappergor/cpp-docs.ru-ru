@@ -1,6 +1,6 @@
 ---
-title: CL_PASS_DATA структура
-description: Ссылка на структуру SDK Build Insights sDK CL_PASS_DATA.
+title: Структура CL_PASS_DATA
+description: Справочник по структуре CL_PASS_DATA из пакета SDK для Аналитики сборок C++.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: b0a41e59068ade285f1ffa1a9ce13734ef5f1f32
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: 52ee5fdaae12784c2f59d2c47ac9a2fd80649f27
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325700"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040539"
 ---
-# <a name="cl_pass_data-structure"></a>CL_PASS_DATA структура
+# <a name="cl_pass_data-structure"></a>Структура CL_PASS_DATA
 
 ::: moniker range="<=vs-2015"
 
-SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
+Пакет SDK Аналитики сборок С++ совместим с Visual Studio 2017 и более поздних версий. Чтобы увидеть документацию для этих версий, установите в данной статье селектор **Версия** Visual Studio в Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части оглавления на этой странице.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Структура `CL_PASS_DATA` описывает компиляционный проход.
+В структуре `CL_PASS_DATA` описывается проход компиляции.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -41,10 +41,10 @@ typedef struct CL_PASS_DATA_TAG
 
 ## <a name="members"></a>Участники
 
-|  |  |
+| Имя | Описание |
 |--|--|
-| `TranslationUnitPassCode` | Код, определяющий выполняемый компиляционный пропуск. Для получения дополнительной информации см [TRANSLATION_UNIT_PASS_CODE.](translation-unit-pass-code-enum.md) |
-| `InputSourcePath` | Исходный файл C или C', на котором выполняется этот компиляционный пропуск. |
-| `OutputObjectPath` | Файл объекта, производимый компилятором. |
+| `TranslationUnitPassCode` | Код, идентифицирующий выполняемый проход компиляции. Дополнительные сведения см. в статье о [TRANSLATION_UNIT_PASS_CODE](translation-unit-pass-code-enum.md). |
+| `InputSourcePath` | Исходный файл C или C++, в котором выполняется этот проход компиляции. |
+| `OutputObjectPath` | Объектный файл, создаваемый компилятором. |
 
 ::: moniker-end

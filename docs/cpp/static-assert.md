@@ -7,12 +7,12 @@ helpviewer_keywords:
 - assertions [C++], static_assert
 - static_assert
 ms.assetid: 28dd3668-e78c-4de8-ba68-552084743426
-ms.openlocfilehash: 55181193e0364c1c6b758365c674f8e2c8a3f4c7
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: b30af5fcf5d4f58143e657d84e743ef09a34e268
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560638"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742974"
 ---
 # <a name="static_assert"></a>static_assert
 
@@ -44,21 +44,21 @@ static_assert( constant-expression ); // C++17 (Visual Studio 2017 and later)
 
 **`static_assert`** Ключевое слово можно использовать в пространстве имен, класса или области видимости блока. ( **`static_assert`** Ключевое слово является техническим объявлением, хотя оно не вводит новое имя в программу, так как оно может использоваться в области видимости пространства имен.)
 
-## <a name="description"></a>Описание
+## <a name="description-of-static_assert-with-namespace-scope"></a>Описание static_assert с областью пространства имен
 
 В следующем примере **`static_assert`** объявление имеет область пространства имен. Поскольку компилятору известен размер типа `void *`, выражение вычисляется немедленно.
 
-## <a name="example"></a>Пример
+## <a name="example-of-static_assert-with-namespace-scope"></a>Пример static_assert с областью пространства имен
 
 ```cpp
 static_assert(sizeof(void *) == 4, "64-bit code generation is not supported.");
 ```
 
-## <a name="description"></a>Описание
+## <a name="description-of-static_assert-with-class-scope"></a>Описание static_assert с областью класса
 
 В следующем примере **`static_assert`** объявление имеет область класса. **`static_assert`** Проверяет, является ли параметр шаблона *обычным старым типом данных* (Pod). Компилятор проверяет **`static_assert`** объявление при объявлении, но не вычисляет параметр *константного выражения* до тех пор, пока не `basic_string` будет создан экземпляр шаблона класса в `main()` .
 
-## <a name="example"></a>Пример
+## <a name="example-of-static_assert-with-class-scope"></a>Пример static_assert с областью класса
 
 ```cpp
 #include <type_traits>

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BackInsertIterator Class
 ms.assetid: aecee1ff-100d-4129-b84b-1966f0923dbf
-ms.openlocfilehash: 56393fd522ecd0e2f161dfa5b9fe8230563c0f65
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f5c82a776a537d469d42a16bd4f425e7bb2c13aa
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223490"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742935"
 ---
 # <a name="platformcollectionsbackinsertiterator-class"></a>Класс Platform::Collections::BackInsertIterator
 
@@ -35,17 +35,17 @@ public ::std::iterator<::std::output_iterator_tag, void, void, void, void>;
 
 Класс BackInsertIterator реализует правила, необходимые для [back_insert_iterator Class](../standard-library/back-insert-iterator-class.md).
 
-### <a name="members"></a>Элементы
+### <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[BackInsertIterator:: BackInsertIterator](#ctor)|Инициализирует новый экземпляр класса BackInsertIterator.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Оператор BackInsertIterator::operator*](#operator-dereference)|Получает ссылку на текущий объект BackInsertIterator.|
 |[Оператор BackInsertIterator:: operator + +](#operator-increment)|Возвращает ссылку на текущий объект BackInsertIterator. Итератор не изменяется.|
@@ -61,11 +61,11 @@ public ::std::iterator<::std::output_iterator_tag, void, void, void, void>;
 
 **Пространство имен:** Platform::Collections
 
-## <a name="backinsertiteratorbackinsertiterator-constructor"></a><a name="ctor"></a>Конструктор BackInsertIterator:: BackInsertIterator
+## <a name="backinsertiteratorbackinsertiterator-constructor"></a><a name="ctor"></a> Конструктор BackInsertIterator:: BackInsertIterator
 
 Инициализирует новый экземпляр класса `BackInsertIterator`.
 
-## <a name="syntax"></a>Синтаксис
+### <a name="syntax"></a>Синтаксис
 
 ```
 explicit BackInsertIterator(
@@ -81,11 +81,11 @@ explicit BackInsertIterator(
 
 `BackInsertIterator` вставляет элементы после последнего элемента объекта, указанного параметром `v`.
 
-## <a name="backinsertiteratoroperator-operator"></a><a name="operator-assign"></a>Оператор BackInsertIterator:: operator =
+## <a name="backinsertiteratoroperator-operator"></a><a name="operator-assign"></a> Оператор BackInsertIterator:: operator =
 
 Добавляет указанный объект в конец текущей упорядоченной коллекции.
 
-## <a name="syntax"></a>Синтаксис
+### <a name="syntax"></a>Синтаксис
 
 ```
 BackInsertIterator& operator=( const T& t);
@@ -100,11 +100,11 @@ BackInsertIterator& operator=( const T& t);
 
 Ссылка на текущий объект BackInsertIterator.
 
-## <a name="backinsertiteratoroperator-operator"></a><a name="operator-dereference"></a>Оператор BackInsertIterator:: operator *
+## <a name="backinsertiteratoroperator-operator"></a><a name="operator-dereference"></a> Оператор BackInsertIterator:: operator *
 
 Получает ссылку на текущий объект BackInsertIterator.
 
-## <a name="syntax"></a>Синтаксис
+### <a name="syntax"></a>Синтаксис
 
 ```
 BackInsertIterator& operator*();
@@ -118,11 +118,11 @@ BackInsertIterator& operator*();
 
 Этот оператор возвращает ссылку на текущий BackInsertIterator, а не на любой элемент в текущей коллекции.
 
-## <a name="backinsertiteratoroperator-operator"></a><a name="operator-increment"></a>Оператор BackInsertIterator:: operator + +
+## <a name="backinsertiteratoroperator-operator"></a><a name="operator-increment"></a> Оператор BackInsertIterator:: operator + +
 
 Возвращает ссылку на текущий объект BackInsertIterator. Итератор не изменяется.
 
-## <a name="syntax"></a>Синтаксис
+### <a name="syntax"></a>Синтаксис
 
 ```
 BackInsertIterator& operator++();
@@ -140,6 +140,6 @@ BackInsertIterator operator++(int);
 
 Впрочем, этот оператор не изменяет объект BackInsertIterator. Вместо этого он возвращает ссылку на текущий итератор, остающийся неизменным. Это то же поведение, что и [оператор *](#operator-dereference).
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также
 
 [Пространство имен платформы](platform-namespace-c-cx.md)

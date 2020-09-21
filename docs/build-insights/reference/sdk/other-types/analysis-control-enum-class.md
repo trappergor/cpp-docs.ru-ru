@@ -1,6 +1,6 @@
 ---
-title: АнализКонтроль enum класса
-description: Ссылка на ссылку «СИ Тиз СборкА» SDK AnalysisControl перечисляет.
+title: Класс перечисления AnalysisControl
+description: Справочник по перечислению AnalysisControl из пакета SDK для Аналитики сборок C++.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,31 +9,31 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: e9431f878390127f2cefbe8f0ee42ca509e147de
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: a7b7fc0ce404f414b3ec07449bdc110d578fa101
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323644"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042021"
 ---
-# <a name="analysiscontrol-enum-class"></a>АнализКонтроль enum класса
+# <a name="analysiscontrol-enum-class"></a>Класс перечисления AnalysisControl
 
 ::: moniker range="<=vs-2015"
 
-SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
+Пакет SDK Аналитики сборок С++ совместим с Visual Studio 2017 и более поздних версий. Чтобы увидеть документацию для этих версий, установите в данной статье селектор **Версия** Visual Studio в Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части оглавления на этой странице.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Класс `AnalysisControl` enum используется, контролируя поток сеанса анализа или перезаписи. Верните `AnalysisControl` код из функции [iAnalyzer](ianalyzer-class.md) или [IRelogger,](irelogger-class.md) чтобы контролировать, что должно произойти дальше.
+Класс перечисления `AnalysisControl` используется для управления потоком сеанса анализа или повторной записи в журнал. Он возвращает код `AnalysisControl` из функции-члена [IAnalyzer](ianalyzer-class.md) или [IRelogger](irelogger-class.md) для управления дальнейшими действиями.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
-|  |  |
+| Имя | Описание |
 |--|--|
-| `BLOCK` | Предотвращает дальнейшее распространение текущего события в группе анализатора или перелога. |
-| `CANCEL` | Отмените текущий анализ или сеанс перезаписи. |
-| `CONTINUE` | Продолжить текущий анализ или сеанс перезаписи в обычном режиме. Распространение текущего события следующему участнику группы анализатора или релоггеру. |
-| `FAILURE` | Отмените текущий анализ или сеанс перезаписи и отодвинете ошибку. |
+| `BLOCK` | Запрещает распространение текущего события в анализаторе или группе повторной записи. |
+| `CANCEL` | Отменяет текущий сеанс анализа или повторной записи в журнал. |
+| `CONTINUE` | Продолжает выполнение текущего сеанса анализа или повторной записи в журнал в обычном режиме. Распространяет текущее событие в следующий анализатор или элемент группы повторной записи в журнал. |
+| `FAILURE` | Отменяет текущий сеанс анализа или повторной записи в журнал и сигнал об ошибке. |
 
 ::: moniker-end
