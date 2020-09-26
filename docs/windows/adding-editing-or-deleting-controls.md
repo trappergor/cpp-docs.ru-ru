@@ -42,12 +42,12 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: 90e4eb659de6d1d5ed1488365f6637de2d537e57
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 79ea16e2d1737063040302a1ce111d275ae28e27
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831688"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352756"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>Как добавлять, изменять и удалять элементы управления (C++)
 
@@ -201,7 +201,7 @@ ms.locfileid: "88831688"
 >
 > Вы можете использовать текущий класс [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) с более старым элементом управления RichEdit 1,0, но `CRichEditCtrl` он предназначен только для поддержки элемента управления RichEdit 2,0. Так как RichEdit 1,0 и RichEdit 2,0 похожи, большинство методов будут работать. Однако между элементами управления 1,0 и 2,0 существуют некоторые различия, поэтому некоторые методы могут работать неправильно или вообще не работать.
 
-### <a name="activex-controls"></a>Элементы управления ActiveX
+## <a name="insert-activex-controls"></a>Вставка элементов управления ActiveX
 
 Среда разработки Visual Studio позволяет вставлять элементы ActiveX в диалоговое окно. Дополнительные сведения см. в разделе [элементы ActiveX MFC](../mfc/mfc-activex-controls.md) и [контейнеры элементов управления ActiveX](../mfc/activex-control-containers.md).
 
@@ -215,7 +215,7 @@ ms.locfileid: "88831688"
 > [!CAUTION]
 > Распространение всех элементов ActiveX в системе может быть незаконным. Ознакомьтесь с лицензионным соглашением для программного обеспечения, установившего элементы управления, или обратитесь в компанию Software.
 
-#### <a name="to-add-an-activex-control"></a>Добавление элемента управления ActiveX
+### <a name="to-add-an-activex-control"></a>Добавление элемента управления ActiveX
 
 1. Откройте диалоговое окно в **редакторе диалоговых окон**.
 
@@ -230,7 +230,7 @@ ms.locfileid: "88831688"
 > [!TIP]
 > Контекстное меню в **редакторе диалоговых окон** можно использовать для быстрого добавления зарегистрированных элементов управления ActiveX в диалоговое окно или попытаться добавить элементы управления ActiveX в окно **панели элементов** для удобного доступа.
 
-#### <a name="to-edit-properties-for-an-activex-control"></a>Изменение свойств элемента управления ActiveX
+### <a name="to-edit-properties-for-an-activex-control"></a>Изменение свойств элемента управления ActiveX
 
 Элементы управления ActiveX, предоставляемые независимыми поставщиками, могут полагаться на собственные свойства и характеристики. Эти свойства отображаются в окне **Свойства** . Все страницы свойств, созданные модулями записи элемента управления ActiveX, отображаются в диалоговом окне **страницы свойств** . (Чтобы просмотреть **страницу свойств** для определенного элемента управления ActiveX, нажмите кнопку со **страницей свойств** в [окно свойств](/visualstudio/ide/reference/properties-window)).
 

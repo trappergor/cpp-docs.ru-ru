@@ -4,12 +4,12 @@ description: Описание новых идиом программирован
 ms.date: 05/17/2020
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-ms.openlocfilehash: f2b9159e74ba7ce37c7eab1513826da939a3be49
-ms.sourcegitcommit: f1752bf90b4f869633a859ace85439ca19e208b2
+ms.openlocfilehash: 05c1fe80086e5b98d3f8a9c66c6759fddab39fa0
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "87232200"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353055"
 ---
 # <a name="welcome-back-to-c---modern-c"></a>Возвращение к C++ — современный C++
 
@@ -75,7 +75,7 @@ apple_color["Granny Smith"] = "Green";
 
 - Неупорядоченные ассоциативные контейнеры, такие как [`unordered_map`](../standard-library/unordered-map-class.md). Они имеют меньше издержек на элемент и постоянный по времени поиск, но их сложно использовать правильно и эффективно.
 
-- Сортированные `vector`. Дополнительные сведения см. в разделе [Алгоритмы](../cpp/algorithms-modern-cpp.md).
+- Сортированные `vector`. Дополнительные сведения см. в разделе [Алгоритмы](../standard-library/algorithms.md).
 
 Не используйте массивы в стиле языка C. Для более старых API, которым требуется прямой доступ к данным, используйте такие методы доступа, как `f(vec.data(), vec.size());`. Дополнительные сведения о контейнерах см. в разделе [Контейнеры стандартной библиотеки C++](../standard-library/stl-containers.md).
 

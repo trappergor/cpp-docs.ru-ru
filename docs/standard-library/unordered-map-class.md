@@ -141,12 +141,12 @@ helpviewer_keywords:
 - std::unordered_map::size
 - std::unordered_map::swap
 ms.assetid: 7cf7cfa1-16e7-461c-a9b2-3b8d8ec24e0d
-ms.openlocfilehash: 8fe2e153e3a7483d9c4698ef4a87e281ace653fc
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 2f30b5683d8487830d596fc8185430c8a4c4c7b0
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042145"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352418"
 ---
 # <a name="unordered_map-class"></a>Класс unordered_map
 
@@ -210,13 +210,13 @@ class unordered_map;
 |[bucket_size](#bucket_size)|Получает размер блока.|
 |[cbegin](#cbegin)|Задает начало управляемой последовательности.|
 |[cend](#cend)|Задает конец управляемой последовательности.|
-|[открытым](#clear)|Удаляет все элементы.|
+|[пусто](#clear)|Удаляет все элементы.|
 |[count](#count)|Определяет количество элементов, соответствующих заданному ключу.|
 |[содержит](#contains)<sup>c++ 20</sup>|Проверьте, существует ли элемент с указанным ключом в `unordered_map` .|
 |[emplace](#emplace)|Добавляет элемент, созданный на месте.|
 |[emplace_hint](#emplace_hint)|Добавляет элемент, созданный на месте, с подсказкой.|
 |[empty](#empty)|Проверяет отсутствие элементов.|
-|[конце](#end)|Задает конец управляемой последовательности.|
+|[end](#end)|Задает конец управляемой последовательности.|
 |[equal_range](#equal_range)|Находит диапазон, соответствующий указанному ключу.|
 |[erase](#erase)|Удаляет элементы в указанных позициях.|
 |[find](#find)|Определяет элемент, соответствующий указанному ключу.|
@@ -2924,6 +2924,6 @@ int main()
 ## <a name="see-also"></a>См. также раздел
 
 [<unordered_map>](../standard-library/unordered-map.md)\
-[Контейнера](../cpp/containers-modern-cpp.md)\
+[Контейнера](./stl-containers.md)\
 [Безопасность потоков в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)

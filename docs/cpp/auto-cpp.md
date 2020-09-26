@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
-ms.openlocfilehash: 675f6919b6804cfb1d2c5395d046cb5fa39e625d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: be268635e61005efbdb01ed8c4eec79c7cb9b800
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229198"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353042"
 ---
 # <a name="auto-c"></a>`auto` (C++)
 
@@ -27,7 +27,7 @@ ms.locfileid: "87229198"
 
 > **`[](auto`***param1* **`, auto`** *Param2***`) {};`**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
 
 **`auto`** Ключевое слово направляет компилятору использование выражения инициализации объявленной переменной или параметра лямбда-выражения, чтобы вывести его тип.
 
@@ -61,11 +61,11 @@ ms.locfileid: "87229198"
 
 ## <a name="trailing-return-types"></a>Отслеживание возвращаемых типов
 
-**`auto`** **`decltype`** Для создания библиотек шаблонов можно использовать вместе с описателем типа. Используйте **`auto`** и **`decltype`** для объявления функции шаблона, тип возвращаемого значения которого зависит от типов своих аргументов шаблона. Или используйте **`auto`** и **`decltype`** для объявления функции-шаблона, которая создает оболочку для вызова другой функции, а затем возвращает все, что является типом возвращаемого значения этой функции. Дополнительные сведения см. на веб-сайте [`decltype`](../cpp/decltype-cpp.md).
+**`auto`** **`decltype`** Для создания библиотек шаблонов можно использовать вместе с описателем типа. Используйте **`auto`** и **`decltype`** для объявления функции шаблона, тип возвращаемого значения которого зависит от типов своих аргументов шаблона. Или используйте **`auto`** и **`decltype`** для объявления функции-шаблона, которая создает оболочку для вызова другой функции, а затем возвращает все, что является типом возвращаемого значения этой функции. Дополнительные сведения см. в статье [`decltype`](../cpp/decltype-cpp.md).
 
 ## <a name="references-and-cv-qualifiers"></a>Ссылки и cv-квалификаторы
 
-Обратите внимание, что использование удаления **`auto`** ссылок, **`const`** квалификаторов и **`volatile`** квалификаторов. Рассмотрим следующий пример:
+Обратите внимание, что использование удаления **`auto`** ссылок, **`const`** квалификаторов и **`volatile`** квалификаторов. Рассмотрим следующий пример.
 
 ```cpp
 // cl.exe /analyze /EHsc /W4
@@ -122,7 +122,7 @@ int main()
 
 В следующей таблице перечислены ограничения на использование **`auto`** ключевого слова и соответствующее сообщение об ошибке диагностики, выдаваемое компилятором.
 
-|Номер ошибки|Описание:|
+|Номер ошибки|Описание|
 |------------------|-----------------|
 |[C3530](../error-messages/compiler-errors-2/compiler-error-c3530.md)|**`auto`** Ключевое слово не может использоваться вместе с любым другим описателем типа.|
 |[C3531](../error-messages/compiler-errors-2/compiler-error-c3531.md)|Символ, объявленный с **`auto`** ключевым словом, должен иметь инициализатор.|
@@ -218,12 +218,11 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также раздел
 
-[`auto`This](../cpp/auto-keyword.md)<br/>
 [Ключевые слова](../cpp/keywords-cpp.md)<br/>
-[`/Zc:auto`(Вывод типа переменной)](../build/reference/zc-auto-deduce-variable-type.md)<br/>
-[`sizeof`Станции](../cpp/sizeof-operator.md)<br/>
+[`/Zc:auto` (Вывод типа переменной)](../build/reference/zc-auto-deduce-variable-type.md)<br/>
+[`sizeof` Станции](../cpp/sizeof-operator.md)<br/>
 [`typeid`](../extensions/typeid-cpp-component-extensions.md)<br/>
 [`operator new`](new-operator-cpp.md)<br/>
 [Объявления и определения](declarations-and-definitions-cpp.md)<br/>

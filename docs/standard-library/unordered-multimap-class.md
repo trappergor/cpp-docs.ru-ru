@@ -140,12 +140,12 @@ helpviewer_keywords:
 - std::unordered_multimap::size
 - std::unordered_multimap::swap
 ms.assetid: 4baead6c-5870-4b85-940f-a47d6b891c27
-ms.openlocfilehash: 5ca739e4c10fbca6cfd85b182e0052bcad19bf21
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: a22e247bc683bac25e609b6c88a17cf622540352
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042073"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352652"
 ---
 # <a name="unordered_multimap-class"></a>Класс unordered_multimap
 
@@ -208,13 +208,13 @@ class unordered_multimap;
 |[bucket_size](#bucket_size)|Получает размер блока.|
 |[cbegin](#cbegin)|Задает начало управляемой последовательности.|
 |[cend](#cend)|Задает конец управляемой последовательности.|
-|[открытым](#clear)|Удаляет все элементы.|
+|[пусто](#clear)|Удаляет все элементы.|
 |[содержит](#contains)<sup>c++ 20</sup>|Проверяет, существует ли элемент с указанным ключом в `unordered_multimap` .|
 |[count](#count)|Определяет количество элементов, соответствующих заданному ключу.|
 |[emplace](#emplace)|Добавляет элемент, созданный на месте.|
 |[emplace_hint](#emplace_hint)|Добавляет элемент, созданный на месте, с подсказкой.|
 |[empty](#empty)|Проверяет отсутствие элементов.|
-|[конце](#end)|Задает конец управляемой последовательности.|
+|[end](#end)|Задает конец управляемой последовательности.|
 |[equal_range](#equal_range)|Находит диапазон, соответствующий указанному ключу.|
 |[erase](#erase)|Удаляет элементы в указанных позициях.|
 |[find](#find)|Определяет элемент, соответствующий указанному ключу.|
@@ -2822,6 +2822,6 @@ int main()
 ## <a name="see-also"></a>См. также раздел
 
 [<unordered_map>](../standard-library/unordered-map.md)\
-[Контейнера](../cpp/containers-modern-cpp.md)\
+[Контейнера](./stl-containers.md)\
 [Безопасность потоков в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)

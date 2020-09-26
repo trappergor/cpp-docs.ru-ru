@@ -13,12 +13,12 @@ helpviewer_keywords:
 - memory, managing
 - memory, memory manager
 ms.assetid: 18b2c569-25fe-4464-bdb6-3b1abef7154a
-ms.openlocfilehash: a33414ec1c1b01742382150049f8e99f4a70ae34
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b23d8f582c53114ea1434e250e8e5e64b642f733
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833430"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353016"
 ---
 # <a name="iatlmemmgr-class"></a>Класс Иатлмеммгр
 
@@ -41,7 +41,7 @@ __interface __declspec(uuid("654F7EF5-CFDF-4df9-A450-6C6A13C622C0")) IAtlMemMgr
 |[GetSize](#getsize)|Вызовите этот метод, чтобы получить размер выделенного блока памяти.|
 |[Перераспределения](#reallocate)|Вызовите этот метод, чтобы перераспределить блок памяти.|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
 
 Этот интерфейс реализуется с помощью [ккомхеап](../../atl/reference/ccomheap-class.md), [ккрсеап](../../atl/reference/ccrtheap-class.md), [CLocalHeap](../../atl/reference/clocalheap-class.md), [CCRTHeap](../../atl/reference/cglobalheap-class.md)или [CWin32Heap](../../atl/reference/cwin32heap-class.md).
 
@@ -73,7 +73,7 @@ void* Allocate(size_t nBytes) throw();
 
 Возвращает указатель на начало выделенного блока памяти.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Вызовите метод [иатлмеммгр:: Free](#free) или [иатлмеммгр:: reallocate](#reallocate) , чтобы освободить память, выделенную этим методом.
 
@@ -94,7 +94,7 @@ void Free(void* p) throw();
 *ш*<br/>
 Указатель на область памяти, выделенную ранее данным диспетчером памяти.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Используйте этот метод для освобождения памяти, полученной с помощью [иатлмеммгр:: allocate](#allocate) или [иатлмеммгр:: reallocate](#reallocate).
 
@@ -143,7 +143,7 @@ void* Reallocate(void* p, size_t nBytes) throw();
 
 Возвращает указатель на начало выделенного блока памяти.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Вызовите метод [иатлмеммгр:: Free](#free) или [иатлмеммгр:: reallocate](#reallocate) , чтобы освободить память, выделенную этим методом.
 
@@ -170,7 +170,7 @@ STDMETHOD(get_AllowContextMenu)(VARIANT_BOOL* pbAllowContextMenu);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Реализация объекта узла ATL использует VARIANT_TRUE в качестве значения этого свойства по умолчанию.
 
@@ -191,7 +191,7 @@ STDMETHOD(get_AllowShowUI)(VARIANT_BOOL* pbAllowShowUI);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Реализация объекта узла ATL использует VARIANT_FALSE в качестве значения этого свойства по умолчанию.
 
@@ -212,7 +212,7 @@ STDMETHOD(get_AllowWindowlessActivation)(VARIANT_BOOL* pbAllowWindowless);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Реализация объекта узла ATL использует VARIANT_TRUE в качестве значения этого свойства по умолчанию.
 
@@ -233,7 +233,7 @@ STDMETHOD(get_BackColor)(OLE_COLOR* pclrBackground);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Реализация объекта узла ATL использует COLOR_BTNFACE или COLOR_WINDOW как значение этого свойства по умолчанию (в зависимости от того, является ли родительский элемент главного окна диалоговым окном или нет).
 
@@ -254,7 +254,7 @@ STDMETHOD(get_DisplayAsDefault)(VARIANT_BOOL* pbDisplayAsDefault);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Реализация объекта узла ATL использует VARIANT_FALSE в качестве значения этого свойства по умолчанию.
 
@@ -275,7 +275,7 @@ STDMETHOD(get_DocHostDoubleClickFlags)(DWORD* pdwDocHostDoubleClickFlags);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Реализация объекта узла ATL использует DOCHOSTUIDBLCLK_DEFAULT в качестве значения этого свойства по умолчанию.
 
@@ -296,7 +296,7 @@ STDMETHOD(get_DocHostFlags)(DWORD* pdwDocHostFlags);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Реализация объекта узла ATL использует DOCHOSTUIFLAG_NO3DBORDER в качестве значения этого свойства по умолчанию.
 
@@ -317,7 +317,7 @@ STDMETHOD(get_Font)(IFontDisp** pFont);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Реализация объекта узла ATL использует шрифт графического пользовательского интерфейса по умолчанию или системный шрифт в качестве значения по умолчанию для этого свойства.
 
@@ -338,7 +338,7 @@ STDMETHOD(get_ForeColor)(OLE_COLOR* pclrForeground);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Реализация объекта узла ATL использует цвет текста системного окна в качестве значения по умолчанию для этого свойства.
 
@@ -359,7 +359,7 @@ STDMETHOD(get_LocaleID)(LCID* plcidLocaleID);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Реализация объекта узла ATL использует языковой стандарт по умолчанию пользователя в качестве значения этого свойства по умолчанию.
 
@@ -382,7 +382,7 @@ STDMETHOD(get_MessageReflect)(VARIANT_BOOL* pbMessageReflect);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Реализация объекта узла ATL использует VARIANT_TRUE в качестве значения этого свойства по умолчанию.
 
@@ -420,7 +420,7 @@ STDMETHOD(get_ShowGrabHandles)(VARIANT_BOOL* pbShowGrabHandles);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Реализация объекта узла ATL всегда возвращает VARIANT_FALSE в качестве значения этого свойства.
 
@@ -441,7 +441,7 @@ STDMETHOD(get_ShowHatching)(VARIANT_BOOL* pbShowHatching);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Реализация объекта узла ATL всегда возвращает VARIANT_FALSE в качестве значения этого свойства.
 
@@ -462,7 +462,7 @@ STDMETHOD(get_UserMode)(VARIANT_BOOL* pbUserMode);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Реализация объекта узла ATL использует VARIANT_TRUE в качестве значения этого свойства по умолчанию.
 
@@ -483,7 +483,7 @@ STDMETHOD(put_AllowContextMenu)(VARIANT_BOOL bAllowContextMenu);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Реализация объекта узла ATL использует VARIANT_TRUE в качестве значения этого свойства по умолчанию.
 
@@ -504,7 +504,7 @@ STDMETHOD(put_AllowShowUI)(VARIANT_BOOL bAllowShowUI);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Реализация объекта узла ATL использует VARIANT_FALSE в качестве значения этого свойства по умолчанию.
 
@@ -525,7 +525,7 @@ STDMETHOD(put_AllowWindowlessActivation)(VARIANT_BOOL bAllowWindowless);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Реализация объекта узла ATL использует VARIANT_TRUE в качестве значения этого свойства по умолчанию.
 
@@ -546,7 +546,7 @@ STDMETHOD(put_BackColor)(OLE_COLOR clrBackground);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Реализация объекта узла ATL использует COLOR_BTNFACE или COLOR_WINDOW как значение этого свойства по умолчанию (в зависимости от того, является ли родительский элемент главного окна диалоговым окном или нет).
 
@@ -567,7 +567,7 @@ STDMETHOD(put_DisplayAsDefault)(VARIANT_BOOL bDisplayAsDefault);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Реализация объекта узла ATL использует VARIANT_FALSE в качестве значения этого свойства по умолчанию.
 
@@ -588,7 +588,7 @@ STDMETHOD(put_DocHostDoubleClickFlags)(DWORD dwDocHostDoubleClickFlags);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Реализация объекта узла ATL использует DOCHOSTUIDBLCLK_DEFAULT в качестве значения этого свойства по умолчанию.
 
@@ -609,7 +609,7 @@ STDMETHOD(put_DocHostFlags)(DWORD dwDocHostFlags);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Реализация объекта узла ATL использует DOCHOSTUIFLAG_NO3DBORDER в качестве значения этого свойства по умолчанию.
 
@@ -630,7 +630,7 @@ STDMETHOD(put_Font)(IFontDisp* pFont);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Реализация объекта узла ATL использует шрифт графического пользовательского интерфейса по умолчанию или системный шрифт в качестве значения по умолчанию для этого свойства.
 
@@ -651,7 +651,7 @@ STDMETHOD(put_ForeColor)(OLE_COLOR clrForeground);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Реализация объекта узла ATL использует цвет текста системного окна в качестве значения по умолчанию для этого свойства.
 
@@ -672,7 +672,7 @@ STDMETHOD(put_LocaleID)(LCID lcidLocaleID);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Реализация объекта узла ATL использует языковой стандарт по умолчанию пользователя в качестве значения этого свойства по умолчанию.
 
@@ -693,7 +693,7 @@ STDMETHOD(put_MessageReflect)(VARIANT_BOOL bMessageReflect);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Реализация объекта узла ATL использует VARIANT_TRUE в качестве значения этого свойства по умолчанию.
 
@@ -731,7 +731,7 @@ STDMETHOD(put_UserMode)(VARIANT_BOOL bUserMode);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Реализация объекта узла ATL использует VARIANT_TRUE в качестве значения этого свойства по умолчанию.
 
@@ -752,7 +752,7 @@ virtual HRESULT STDMETHODCALLTYPE SetAmbientDispatch(IDispatch* pDispatch) = 0;
 
 Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Если `SetAmbientDispatch` метод вызывается с указателем на новый интерфейс, этот новый интерфейс будет использоваться для вызова свойств или методов, запрашиваемых размещенным элементом управления, если эти свойства еще не предоставлены [иаксвинамбиентдиспатч](../../atl/reference/iaxwinambientdispatch-interface.md).
 
@@ -802,7 +802,7 @@ STDMETHOD(CreateControl)(
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Это окно будет подклассировать объектом размещения, который предоставляет этот интерфейс, чтобы сообщения могли быть отражены в элементе управления, а другие функции контейнера будут работать.
 
@@ -848,7 +848,7 @@ STDMETHOD(CreateControlEx)(
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 В отличие от `CreateControl` метода, `CreateControlEx` также позволяет получить указатель интерфейса на только что созданном элементе управления и настроить приемник событий для получения событий, инициированных элементом управления.
 
@@ -908,7 +908,7 @@ STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Эта функция используется элементами управления (например, элементом управления веб-браузера), которые запрашивают интерфейс узла узла `IDocHostUIHandlerDispatch` .
 
@@ -929,7 +929,7 @@ STDMETHOD(CreateControlLic)(
 *бстрлик*<br/>
 окне Значение BSTR, содержащее лицензионный ключ для элемента управления.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Описание оставшихся параметров и возвращаемого значения см. в разделе [иаксвинхоствиндов:: CreateControl](#createcontrol) .
 
@@ -937,7 +937,7 @@ STDMETHOD(CreateControlLic)(
 
 ### <a name="example"></a>Пример
 
-Пример, в котором используется, см. в разделе [Размещение элементов управления ActiveX с помощью библиотеки ATL](../../atl/hosting-activex-controls-using-atl-axhost.md) `IAxWinHostWindowLic::CreateControlLic` .
+Пример, в котором используется, см. в разделе [Размещение элементов управления ActiveX с помощью библиотеки ATL](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) `IAxWinHostWindowLic::CreateControlLic` .
 
 ## <a name="iaxwinhostwindowliccreatecontrollicex"></a><a name="createcontrollicex"></a> Иаксвинхоствиндовлик:: Креатеконтроллицекс
 
@@ -959,13 +959,13 @@ STDMETHOD(CreateControlLicEx)(
 *бстрлик*<br/>
 окне Значение BSTR, содержащее лицензионный ключ для элемента управления.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Описание оставшихся параметров и возвращаемого значения см. в разделе [иаксвинхоствиндов:: креатеконтролекс](#createcontrolex) .
 
 ### <a name="example"></a>Пример
 
-Пример, в котором используется, см. в разделе [Размещение элементов управления ActiveX с помощью библиотеки ATL](../../atl/hosting-activex-controls-using-atl-axhost.md) `IAxWinHostWindowLic::CreateControlLicEx` .
+Пример, в котором используется, см. в разделе [Размещение элементов управления ActiveX с помощью библиотеки ATL](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) `IAxWinHostWindowLic::CreateControlLicEx` .
 
 ## <a name="see-also"></a>См. также раздел
 

@@ -91,12 +91,12 @@ helpviewer_keywords:
 - std::map [C++], upper_bound
 - std::map [C++], value_comp
 ms.assetid: 7876f4c9-ebb4-4878-af1e-09364c43af0a
-ms.openlocfilehash: 7ebbccb688ffcd6f2354e5f3ec243cf56303c124
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: ee98c7e694912d27585755f0ff29eafd0cdbdbca
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040513"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353107"
 ---
 # <a name="map-class"></a>Класс map
 
@@ -195,7 +195,7 @@ class map;
 |[начале](#begin)|Возвращает итератор, указывающий на первый элемент в `map`.|
 |[cbegin](#cbegin)|Возвращает константный итератор, указывающий на первый элемент в `map` .|
 |[cend](#cend)|Возврат итератора const после конца.|
-|[открытым](#clear)|Стирает все элементы в `map`.|
+|[пусто](#clear)|Стирает все элементы в `map`.|
 |[содержит](#contains)<sup>c++ 20</sup>|Проверьте, существует ли элемент с указанным ключом в `map` .|
 |[count](#count)|Возврат числа элементов в сопоставлении, ключ которого соответствует ключу, заданному в параметре.|
 |[crbegin](#crbegin)|Возвращает константный итератор, указывающий на первый элемент в обращении `map` .|
@@ -203,7 +203,7 @@ class map;
 |[emplace](#emplace)|Вставляет элемент, созданный на месте, в `map` .|
 |[emplace_hint](#emplace_hint)|Вставляет элемент, созданный на месте `map` , с указанием размещения.|
 |[empty](#empty)|Возвращает, **`true`** Если объект `map` пуст.|
-|[конце](#end)|Возврат итератора после конца.|
+|[end](#end)|Возврат итератора после конца.|
 |[equal_range](#equal_range)|Возвращает пару итераторов. Первый итератор в паре указывает на первый элемент в `map` с ключом, который больше указанного ключа. Второй итератор в паре указывает на первый элемент в `map` с ключом, который больше или равен данному ключу.|
 |[erase](#erase)|Удаление элемента или диапазона элементов в сопоставлении с заданных позиций.|
 |[find](#find)|Возвращает итератор, указывающий на расположение элемента в с `map` ключом, равным указанному ключу.|
@@ -2792,6 +2792,6 @@ int main( )
 
 ## <a name="see-also"></a>См. также раздел
 
-[Контейнера](../cpp/containers-modern-cpp.md)\
+[Контейнера](./stl-containers.md)\
 [Безопасность потоков в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)

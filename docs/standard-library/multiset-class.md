@@ -89,12 +89,12 @@ helpviewer_keywords:
 - std::multiset [C++], upper_bound
 - std::multiset [C++], value_comp
 ms.assetid: 630e8c10-0ce9-4ad9-8d79-9e91a600713f
-ms.openlocfilehash: e857a4f6369b9aa939b5dcba17e02efaf81600b0
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: cb28b0b31188fcf7fefef95ddb44c9aab813e6ac
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040955"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353185"
 ---
 # <a name="multiset-class"></a>Класс multiset
 
@@ -179,7 +179,7 @@ class multiset
 |[начале](#begin)|Возвращает итератор, указывающий на первый элемент в `multiset`.|
 |[cbegin](#cbegin)|Возвращает итератор const, обращающийся к первому элементу в `multiset`.|
 |[cend](#cend)|Возвращает итератор const, который обращается к месту, следующему за последним элементом в `multiset`.|
-|[открытым](#clear)|Стирает все элементы в `multiset`.|
+|[пусто](#clear)|Стирает все элементы в `multiset`.|
 |[содержит](#contains)<sup>c++ 20</sup>|Проверьте, существует ли элемент с указанным ключом в `multiset` .|
 |[count](#count)|Возвращает число элементов в `multiset`, ключи которых соответствуют ключу, заданному в виде параметра.|
 |[crbegin](#crbegin)|Возвращает итератор const, который обращается к первому элементу в обращенном контейнере `multiset`.|
@@ -187,7 +187,7 @@ class multiset
 |[emplace](#emplace)|Вставляет созданный на месте элемент в `multiset`.|
 |[emplace_hint](#emplace_hint)|Вставляет созданный на месте элемент в `multiset` с подсказкой о размещении.|
 |[empty](#empty)|Проверяет, пуст ли `multiset`.|
-|[конце](#end)|Возвращает итератор, указывающий на место после завершающего элемента в `multiset`.|
+|[end](#end)|Возвращает итератор, указывающий на место после завершающего элемента в `multiset`.|
 |[equal_range](#equal_range)|Возвращает пару итераторов. Первый итератор в паре указывает на первый элемент в `multiset` с ключом, который больше указанного ключа. Второй итератор в паре указывает на первый элемент в `multiset` с ключом, который больше или равен заданному ключу.|
 |[erase](#erase)|Удаляет элемент или диапазон элементов в `multiset` с заданных позиций или удаляет элементы, соответствующие заданному ключу.|
 |[find](#find)|Возвращает итератор, указывающий на первое расположение элемента в `multiset`, имеющего ключ, равный указанному ключу.|
@@ -2374,6 +2374,6 @@ The multiset has elements: 10 20.
 
 ## <a name="see-also"></a>См. также раздел
 
-[Контейнера](../cpp/containers-modern-cpp.md)\
+[Контейнера](./stl-containers.md)\
 [Безопасность потоков в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)

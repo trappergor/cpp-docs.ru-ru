@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CAxWindow class
 - ATL, hosting ActiveX controls
 ms.assetid: 85e79261-43e4-4770-bde0-1ff87f222b0f
-ms.openlocfilehash: 1301baef874ac4e482a1b2a7f0a2ee6b1b63396f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b74ecb9af2decf92f873cef8d016907b6c9474cf
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833833"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353081"
 ---
 # <a name="caxwindow-class"></a>Класс Каксвиндов
 
@@ -40,7 +40,7 @@ class CAxWindow : public CWindow
 
 ### <a name="methods"></a>Методы
 
-|Функция|Описание|
+|Компонент|Описание|
 |-|-|
 |[аттачконтрол](#attachcontrol)|Присоединяет существующий элемент управления ActiveX к `CAxWindow` объекту.|
 |[каксвиндов](#caxwindow)|Формирует объект `CAxWindow`.|
@@ -58,7 +58,7 @@ class CAxWindow : public CWindow
 |-|-|
 |[Оператор =](#operator_eq)|Присваивает HWND существующему `CAxWindow` объекту.|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
 
 Этот класс предоставляет методы для манипуляций с окном, в котором размещается элемент управления ActiveX. Размещение обеспечивается " **AtlAxWin80"**, заключенного в `CAxWindow` .
 
@@ -94,7 +94,7 @@ HRESULT AttachControl(
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Присоединяемый объект элемента управления должен быть правильно инициализирован перед вызовом `AttachControl` .
 
@@ -158,7 +158,7 @@ HRESULT CreateControl(
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Если используется вторая версия этого метода, создается HTML-элемент управления и связывается с ресурсом, идентифицируемым *двресид*.
 
@@ -170,7 +170,7 @@ HRESULT CreateControl(
 
 ### <a name="example"></a>Пример
 
-Пример, в котором используется, см. в разделе [Размещение элементов управления ActiveX с помощью библиотеки ATL](../../atl/hosting-activex-controls-using-atl-axhost.md) `CreateControl` .
+Пример, в котором используется, см. в разделе [Размещение элементов управления ActiveX с помощью библиотеки ATL](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) `CreateControl` .
 
 ## <a name="caxwindowcreatecontrolex"></a><a name="createcontrolex"></a> Каксвиндов:: Креатеконтролекс
 
@@ -234,7 +234,7 @@ HRESULT CreateControlEx(
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Этот метод аналогичен [каксвиндов:: CreateControl](#createcontrol), но в отличие от этого метода, `CreateControlEx` также позволяет получить указатель интерфейса на только что созданном элементе управления и настроить приемник событий для получения событий, инициированных элементом управления.
 
@@ -242,7 +242,7 @@ HRESULT CreateControlEx(
 
 ### <a name="example"></a>Пример
 
-Пример, в котором используется, см. в разделе [Размещение элементов управления ActiveX с помощью библиотеки ATL](../../atl/hosting-activex-controls-using-atl-axhost.md) `CreateControlEx` .
+Пример, в котором используется, см. в разделе [Размещение элементов управления ActiveX с помощью библиотеки ATL](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) `CreateControlEx` .
 
 ## <a name="caxwindowgetwndclassname"></a><a name="getwndclassname"></a> Каксвиндов:: Жетвндкласснаме
 
@@ -323,7 +323,7 @@ HRESULT QueryHost(Q** ppUnk);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Интерфейс узла предоставляет доступ к базовым функциональным возможностям кода, реализованного в `AxWin` .
 
@@ -361,7 +361,7 @@ HRESULT SetExternalUIHandler(IDocHostUIHandlerDispatch* pUIHandler);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Внешний `IDocHostUIHandlerDispatch` интерфейс используется элементами управления, которые запрашивают интерфейс узла узла `IDocHostUIHandlerDispatch` . Элемент управления WebBrowser — это один из элементов управления, который делает это.
 

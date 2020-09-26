@@ -89,12 +89,12 @@ helpviewer_keywords:
 - std::multimap [C++], upper_bound
 - std::multimap [C++], value_comp
 ms.assetid: 8796ae05-37c4-475a-9e61-75fde9d4a463
-ms.openlocfilehash: e2d0236a0e643ac92bb771b90a1f021807f03fda
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 446c1af793b885646dbb5658242e75482ebb92de
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040682"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353198"
 ---
 # <a name="multimap-class"></a>Класс multimap
 
@@ -187,7 +187,7 @@ class multimap;
 |[начале](#begin)|Возвращает итератор, обращающийся к первый элемент в контейнере `multimap`.|
 |[cbegin](#cbegin)|Возвращает итератор const, обращающийся к первому элементу в `multimap`.|
 |[cend](#cend)|Возвращает итератор const, который обращается к месту, следующему за последним элементом в `multimap`.|
-|[открытым](#clear)|Стирает все элементы в `multimap`.|
+|[пусто](#clear)|Стирает все элементы в `multimap`.|
 |[содержит](#contains)<sup>c++ 20</sup>|Проверяет, существует ли элемент с указанным ключом в `multimap` .|
 |[count](#count)|Возвращает число элементов в контейнере `multimap`, ключи которых соответствуют ключу, заданному параметром.|
 |[crbegin](#crbegin)|Возвращает итератор const, который обращается к первому элементу в обращенном контейнере `multimap`.|
@@ -195,7 +195,7 @@ class multimap;
 |[emplace](#emplace)|Вставляет созданный на месте элемент в `multimap`.|
 |[emplace_hint](#emplace_hint)|Вставляет созданный на месте элемент в `multimap` с подсказкой о размещении|
 |[empty](#empty)|Проверяет, пуст ли `multimap`.|
-|[конце](#end)|Возвращает итератор, который обращается к месту, следующему за последним элементом в контейнере `multimap`.|
+|[end](#end)|Возвращает итератор, который обращается к месту, следующему за последним элементом в контейнере `multimap`.|
 |[equal_range](#equal_range)|Находит диапазон элементов, где ключ элемента соответствует заданному значению.|
 |[erase](#erase)|Удаляет элемент или диапазон элементов в `multimap` с заданных позиций или удаляет элементы, соответствующие заданному ключу.|
 |[find](#find)|Возвращает итератор, который обращается к первому местоположению элемента в контейнере `multimap` с ключом, эквивалентным указанному ключу.|
@@ -2517,6 +2517,6 @@ The values of the mapped elements are: 10 20.
 
 ## <a name="see-also"></a>См. также раздел
 
-[Контейнера](../cpp/containers-modern-cpp.md)\
+[Контейнера](./stl-containers.md)\
 [Безопасность потоков в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)
