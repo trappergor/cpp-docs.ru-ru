@@ -3,12 +3,12 @@ title: Развертывание, запуск и отладка проекта
 description: Компиляция, выполнение и отладка кода в удаленной системе в проекте Linux на основе MSBuild C++ в Visual Studio.
 ms.date: 08/08/2020
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: 55e066201e99245db4c63902c51223047e40e687
-ms.sourcegitcommit: 2034f8e744a8b36cff8b15e9a5cfe684afebadfb
+ms.openlocfilehash: 4200e30b445f4a09fc60083db0067996c96ea953
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88043893"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686708"
 ---
 # <a name="deploy-run-and-debug-your-linux-msbuild-project"></a>Развертывание, запуск и отладка проекта MSBuild Linux
 
@@ -38,7 +38,7 @@ ms.locfileid: "88043893"
 
    GDB используется для отладки приложений на платформе Linux. При отладке в целевой системе (не WSL) GDB может работать в двух разных режимах, которые можно указать с помощью параметра **Режим отладки** на странице свойств **Отладка** проекта:
 
-   ![Параметры GDB](media/vs2019-debugger-settings.png)
+   ![Снимок экрана: диалоговое окно "Страница свойств LinuxConsoleApp" в Visual Studio 2019 с открытым разделом "Свойства конфигурации" > "Отладка", выбранным пунктом "Режим отладки" и выбранным параметром "gbd" в раскрывающемся списке.](media/vs2019-debugger-settings.png)
 
    ::: moniker-end
 
@@ -46,7 +46,7 @@ ms.locfileid: "88043893"
 
    GDB используется для отладки приложений на платформе Linux. GDB может работать в двух разных режимах, которые выбираются в параметре **Режим отладки** на странице свойств **Отладка** проекта:
 
-   ![Параметры GDB](media/vs2017-debugger-settings.png)
+   ![Снимок экрана: диалоговое окно "Страница свойств LinuxConsoleApp" в Visual Studio 2017 с открытым разделом "Свойства конфигурации" > "Отладка", выбранным пунктом "Режим отладки" и выбранным параметром "gbd" в раскрывающемся списке.](media/vs2017-debugger-settings.png)
 
    ::: moniker-end
 

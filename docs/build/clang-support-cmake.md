@@ -4,12 +4,12 @@ ms.date: 07/01/2019
 ms.description: Configure a CMake project in Visual Studio to use the Clang/LLVM toolchain.
 helpviewer_keywords:
 - Clang support for C++ CMake projects
-ms.openlocfilehash: 46bfe788c13df3a37dd9cba654d16cfe4c3fe177
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a23526cf5216e4cc37c3131a0d1ba94a6e923f56
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323178"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686435"
 ---
 # <a name="clangllvm-support-in-visual-studio-cmake-projects"></a>Поддержка Clang/LLVM в проектах Visual Studio CMake
 
@@ -57,7 +57,7 @@ Visual Studio с Clang можно использовать для изменен
 
 1. В разделе **Общие** откройте раскрывающийся список **Набор инструментов** и выберите нужный набор инструментов Clang:
 
-   ![Набор инструментов Clang для CMake](media/cmake-clang-toolset.png)
+   ![Снимок экрана: диалоговое окно "Общие" с открытым разделом "Набор инструментов" и выделенным пунктом "clang_cl_x86".](media/cmake-clang-toolset.png)
 
 ## <a name="custom-clang-locations"></a>Настраиваемые расположения Clang
 
@@ -68,7 +68,7 @@ Visual Studio с Clang можно использовать для изменен
 
 Можно указать другое расположение, задав переменные CMake **CMAKE_C_COMPILER** и **CMAKE_CXX_COMPILER** в **параметрах CMake**.
 
-![Набор инструментов Clang для CMake](media/clang-location-cmake.png)
+![Снимок экрана: диалоговое окно "CMakeSettings" с выделенным пунктом "CMAKE_CXX_COMPILER".](media/clang-location-cmake.png)
 
 ## <a name="clang-compatibility-modes"></a>Режимы совместимости Clang
 

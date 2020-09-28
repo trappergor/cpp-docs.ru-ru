@@ -3,12 +3,12 @@ title: Настройка проекта Linux на основе MSBuild C++ в 
 ms.date: 08/06/2020
 description: Настройте в Visual Studio проект Linux на основе MSBuild, чтобы выполнить его сборку.
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 7f4664dfc364cbd9a3b499e02de4cf0e7f44fe78
-ms.sourcegitcommit: 2034f8e744a8b36cff8b15e9a5cfe684afebadfb
+ms.openlocfilehash: 4e99645eea89682b4beac5452da01755ea555ec4
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88043867"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685960"
 ---
 # <a name="configure-a-linux-msbuild-c-project-in-visual-studio"></a>Настройка проекта Linux на основе MSBuild C++ в Visual Studio
 
@@ -110,13 +110,13 @@ sudo apt install zip
 
 ::: moniker range="vs-2017"
 
-![Удаленный заголовок IntelliSense](media/remote-header-intellisense.png)
+![Снимок экрана: диалоговое окно "Параметры" с открытым разделом "Кроссплатформенные" > "Диспетчер подключений" > "Диспетчер удаленных заголовков IntelliSense"](media/remote-header-intellisense.png)
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-![Удаленный заголовок IntelliSense](media/connection-manager-vs2019.png)
+![Снимок экрана: диалоговое окно "Параметры" с открытым разделом "Кроссплатформенные" > "Диспетчер подключений"](media/connection-manager-vs2019.png)
 
 Вы можете включить ведение журнала для устранения проблем:
 

@@ -2,12 +2,12 @@
 title: Настройка проектов Linux для использования санитайзера адресов
 description: Узнайте, как настроить проект C++ для Linux в Visual Studio для работы с AddressSanitizer.
 ms.date: 06/07/2019
-ms.openlocfilehash: 80e9ab46c948f2062391ae723c3425c435bd4507
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0e862e09d8178ce35fe26f2be138d7f6843b5ef1
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364311"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686669"
 ---
 # <a name="configure-linux-projects-to-use-address-sanitizer"></a>Настройка проектов Linux для использования санитайзера адресов
 
@@ -49,11 +49,11 @@ ASan — это средство обнаружения ошибок испол
 
 При этом следует выбрать конфигурацию Linux (например, **Linux-Debug**) в левой части диалогового окна:
 
-![Конфигурация отладки Linux](media/linux-debug-configuration.png)
+![Снимок экрана: панель слева с выбранным пунктом "Linux-Debug" в виде одного из параметров конфигурации](media/linux-debug-configuration.png)
 
 Параметры ASan доступны в разделе **Общие**. Введите флаги ASan среды выполнения в формате "флаг=значение", разделенные точкой с запятой.
 
-![Конфигурация отладки Linux](media/cmake-settings-asan-options.png)
+![Снимок экрана: параметр "Включить AddressSanitizer" с некоторыми флагами времени выполнения AddressSanitizer](media/cmake-settings-asan-options.png)
 
 ## <a name="install-the-asan-debug-symbols"></a>Установка отладочных символов ASan
 

@@ -1,6 +1,6 @@
 ---
 title: Структура TRACING_SESSION_STATISTICS
-description: Справочник по структуре TRACING_SESSION_OPTIONS из пакета SDK для Аналитики сборок C++.
+description: Справочник по структуре TRACING_SESSION_STATISTICS из пакета SDK для Аналитики сборок C++ Build.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 5f6126fb469dc13b814b91942fe9f7bc480ba3f1
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: c1db302d9e816591624f0fc63633351d32684097
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041189"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742766"
 ---
 # <a name="tracing_session_statistics-structure"></a>Структура TRACING_SESSION_STATISTICS
 

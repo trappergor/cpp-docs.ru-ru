@@ -3,12 +3,12 @@ title: Создание проекта Linux на основе MSBuild C++ в Vi
 ms.date: 08/04/2020
 description: Создание проекта Linux на основе MSBuild в Visual Studio.
 ms.assetid: 5d7c1d67-bc31-4f96-8622-2b4cf91372fd
-ms.openlocfilehash: 86d8b8fd2abe8970b5146d4ab08dc4251b5562d5
-ms.sourcegitcommit: 2034f8e744a8b36cff8b15e9a5cfe684afebadfb
+ms.openlocfilehash: 559a868ebdea7e3b835a82c31849d0e2fdeaa6c9
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88043854"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686695"
 ---
 # <a name="create-a-linux-msbuild-c-project-in-visual-studio"></a>Создание проекта Linux на основе MSBuild C++ в Visual Studio
 
@@ -31,7 +31,7 @@ ms.locfileid: "88043854"
 1. Выберите **Файл > Создать проект** в меню Visual Studio или нажмите клавиши **Ctrl + Shift + N**.
 1. Выберите узел **Visual C++ > Кроссплатформенный > Linux**, а затем укажите тип проекта, который вы хотите создать. Укажите **имя** и **расположение**, а затем щелкните **ОК**.
 
-   ![Новый проект Linux](media/newproject.png)
+   ![Снимок экрана: диалоговое окно "Новый проект" с открытым разделом "Visual C++" > "Кроссплатформенные" > "Linux", выбранными типами проектов и выделенными текстовыми полями "Имя" и "Расположение".](media/newproject.png)
 
    | Тип проекта | Описание |
    | ------------ | --- |
@@ -61,7 +61,7 @@ ms.locfileid: "88043854"
 1. Выберите **Файл > Создать проект** в меню Visual Studio или нажмите клавиши **Ctrl + Shift + N**.
 1. Задайте для параметра **Язык** значение **C++** и выполните введите в строку поиска Linux. Выберите тип создаваемого проекта, а затем щелкните **Далее**. Укажите **имя** и **расположение**, а затем щелкните **Создать**.
 
-   ![Новый проект Linux](media/newproject-vs2019.png)
+   ![Снимок экрана: диалоговое окно "Добавление класса" с введенным текстом Linux в поле поиска.](media/newproject-vs2019.png)
 
    | Тип проекта | Описание |
    | ------------ | --- |

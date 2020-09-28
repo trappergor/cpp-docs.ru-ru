@@ -2,18 +2,18 @@
 title: Совместная работа с использованием Live Share для C++
 description: Узнайте, как использовать Live Share для C++ в Visual Studio для совместной работы и совместного использования кода в реальном времени.
 ms.date: 05/24/2019
-ms.openlocfilehash: 0ebdd77d0e277778b48cf69024b24841f775d968
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: 60830ad6c6b98f644e1c3ddb2e78fbf7397ae919
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377288"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684525"
 ---
 # <a name="collaborate-using-live-share-for-c"></a>Совместная работа с использованием Live Share для C++
 
 В Visual Studio 2019 и Visual Studio Code можно использовать **Live Share** для совместной работы над проектами C++ в реальном времени. С помощью **Live Share** ваш код могут редактировать и отлаживать другие пользователи без необходимости устанавливать проект или его зависимости. Вы можете просматривать изменения по мере их внесения. Каждое изменение обозначается именем его создателя.
 
-![C&#43;&#43; Live Доля Редактирование](../ide/media/live-share-edit-cpp.png "Редактирование акций в реальном времени в СЗ")
+![С++: редактирование с помощью Live Share](../ide/media/live-share-edit-cpp.png "С++: редактирование с помощью Live Share")
 
 ## <a name="live-share-host-and-guests"></a>Организатор и гости Live Share
 
@@ -33,17 +33,17 @@ ms.locfileid: "81377288"
 - Выделение ссылок
 - диагностика, поиск ошибок и использование волнистых линий.
 
-![C&#43;&#43; Live Доля Debugging](../ide/media/live-share-debug-cpp.png "Отладка live Share в СЗ")
+![С++: отладка с помощью Live Share](../ide/media/live-share-debug-cpp.png "С++: отладка с помощью Live Share")
 
 ## <a name="start-and-end-a-live-share-session"></a>Запуск и завершение сеанса Live Share
 
-Чтобы начать сеанс Live Share в Visual Studio, нажмите кнопку «Поделиться» в правом верхнем ряде или перейдите на**сеанс начала работы** **с файлами.** >  Будет создана ссылка, которой вы можете поделиться с другими пользователями.
+Чтобы запустить сеанс Live Share в Visual Studio, нажмите кнопку "Совместно использовать" в правом верхнем углу или выберите **Файл** > **Начать сеанс совместной работы**. Будет создана ссылка, которой вы можете поделиться с другими пользователями.
 
-![C&#43;&#43; Live Кнопка обмена](../ide/media/live-share-button-cpp.png "Кнопка live Share")
+![Снимок экрана: кнопка Live Share](../ide/media/live-share-button-cpp.png "Кнопка Live Share")
 
 Чтобы завершить сеанс, выберите **Завершить сеанс совместной работы** в раскрывающемся списке **Общий доступ**.
 
-![C&#43;&#43; Live Кнопка обмена](../ide/media/live-share-end-session-cpp.png "Кнопка live Share")
+![Снимок экрана: раскрывающийся список "Общий доступ" с выделенным пунктом "Завершить сеанс совместной работы"](../ide/media/live-share-end-session-cpp.png "Кнопка Live Share")
 
 ## <a name="for-more-information"></a>Дополнительные сведения
 

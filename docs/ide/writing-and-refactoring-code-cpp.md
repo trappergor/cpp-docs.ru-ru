@@ -4,12 +4,12 @@ description: Используйте редактор кода C++ в Visual Stud
 ms.date: 05/31/2019
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
 ms.topic: overview
-ms.openlocfilehash: 43c4529ae0c5ac5a8c4fae2ae402ed3c6e222c37
-ms.sourcegitcommit: 426e327c9f7c3a3b02300e3f924f9786d62958e9
+ms.openlocfilehash: bf34bf39bc41841be72c9400ec63c501d7aa56a3
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206223"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686336"
 ---
 # <a name="edit-and-refactor-c-code-in-visual-studio"></a>Редактирование и рефакторинг кода C++ в Visual Studio
 
@@ -98,11 +98,11 @@ IntelliCode — это средство IntelliSense на основе ИИ, к
 
 В следующем примере мы объявили `vector`, но определение не найдено, поэтому редактор предлагает включить требуемый файл заголовка:
 
-![Быстрое исправление C&#43;&#43;](../ide/media/quick-fix-for-header-cpp.png "Быстрое исправление для С++")
+![Снимок экрана: волнистая линия, указывающая на ошибку, и быстрое исправление, предлагаемое редактором](../ide/media/quick-fix-for-header-cpp.png "Быстрое исправление для С++")
 
 Редактор также предлагает быстрые исправления для определенных функций рефакторинга. Например, если объявить класс в файле заголовка, Visual Studio предложит создать для него определение в отдельном файле .cpp.
 
-![Быстрое исправление C&#43;&#43;](../ide/media/quick-fix.png "Быстрое исправление для С++")
+![Снимок экрана: быстрое исправление с помощью выделенного пункта "Создать определение 'ChannelRouteIterator' в channels.cpp"](../ide/media/quick-fix.png "Быстрое исправление для С++")
 
 ## <a name="change-tracking"></a>Change tracking
 
