@@ -5,38 +5,38 @@ helpviewer_keywords:
 - Alloc and Free, using [Concurrency Runtime]
 - Using Alloc and Free [Concurrency Runtime]
 ms.assetid: e1fab9e8-a97d-4104-bead-e95958db79f9
-ms.openlocfilehash: 8438e833262d42c6083f48f759501c573a35c772
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: e5e5207fe435e73df60b757d4f595aacbb70fe72
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142787"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414026"
 ---
 # <a name="how-to-use-alloc-and-free-to-improve-memory-performance"></a>Практическое руководство. Использование функций Alloc и Free для повышения производительности операций с памятью
 
-В этом документе показано, как использовать функции [Concurrency:: Alloc](reference/concurrency-namespace-functions.md#alloc) и [Concurrency:: Free](reference/concurrency-namespace-functions.md#free) для повышения производительности памяти. Он сравнивает время, необходимое для изменения числа элементов массива в параллельном режиме для трех различных типов, каждый из которых указывает операторы `new` и `delete`.
+В этом документе показано, как использовать функции [Concurrency:: Alloc](reference/concurrency-namespace-functions.md#alloc) и [Concurrency:: Free](reference/concurrency-namespace-functions.md#free) для повышения производительности памяти. Он сравнивает время, необходимое для изменения числа элементов массива в параллельном режиме для трех различных типов, каждый из которых указывает `new` `delete` операторы и.
 
-Функции `Alloc` и `Free` наиболее полезны, когда несколько потоков часто вызывают как `Alloc`, так и `Free`. Среда выполнения содержит отдельный кэш памяти для каждого потока; Таким образом, среда выполнения управляет памятью без использования блокировок или барьеров памяти.
+`Alloc`Функции и `Free` наиболее полезны, когда несколько потоков часто вызывают `Alloc` и `Free` . Среда выполнения содержит отдельный кэш памяти для каждого потока; Таким образом, среда выполнения управляет памятью без использования блокировок или барьеров памяти.
 
-## <a name="example"></a>Пример
+## <a name="example-types-that-specify-new-and-delete-operators"></a>Пример. типы, задающих операторы new и DELETE
 
-В следующем примере показаны три типа, каждый из которых указывает операторы `new` и `delete`. Класс `new_delete` использует глобальные операторы `new` и `delete`, класс `malloc_free` использует [функции CRT и](../../c-runtime-library/reference/malloc.md) [Free](../../c-runtime-library/reference/free.md) среды выполнения C, а класс `Alloc_Free` использует функции среда выполнения с параллелизмом `Alloc` и `Free`.
+В следующем примере показаны три типа, каждый из которых `new` задает `delete` операторы и. `new_delete`Класс использует глобальные `new` `delete` операторы и, а `malloc_free` класс использует функции вызываемой среды [malloc](../../c-runtime-library/reference/malloc.md) выполнения C [free](../../c-runtime-library/reference/free.md) и функции, а `Alloc_Free` класс использует среда выполнения с параллелизмом `Alloc` и `Free` .
 
 [!code-cpp[concrt-allocators#1](../../parallel/concrt/codesnippet/cpp/how-to-use-alloc-and-free-to-improve-memory-performance_1.cpp)]
 
-## <a name="example"></a>Пример
+## <a name="example-swap-and-reverse_array-functions"></a>Пример: функции swap и reverse_array
 
-В следующем примере показаны функции `swap` и `reverse_array`. Функция `swap` обменивает содержимое массива по указанным индексам. Она выделяет память из кучи для временной переменной. Функция `reverse_array` создает большой массив и подсчитывает время, необходимое для того, чтобы несколько раз обращаться к этому массиву в параллельном режиме.
+В следующем примере показаны функции `swap` и `reverse_array`. `swap`Функция обменивается содержимым массива по указанным индексам. Она выделяет память из кучи для временной переменной. `reverse_array`Функция создает большой массив и подсчитывает время, необходимое для того, чтобы несколько раз обращаться к этому массиву в параллельном режиме.
 
 [!code-cpp[concrt-allocators#2](../../parallel/concrt/codesnippet/cpp/how-to-use-alloc-and-free-to-improve-memory-performance_2.cpp)]
 
-## <a name="example"></a>Пример
+## <a name="example-wmain-function"></a>Пример: Функция wmain
 
-В следующем примере показана функция `wmain`, которая вычислит время, необходимое для работы функции `reverse_array` в типах `new_delete`, `malloc_free`и `Alloc_Free`, каждая из которых использует другую схему выделения памяти.
+В следующем примере показана `wmain` функция, вычисляющая время, необходимое для `reverse_array` работы функции в `new_delete` `malloc_free` типах, и `Alloc_Free` , каждая из которых использует другую схему выделения памяти.
 
 [!code-cpp[concrt-allocators#3](../../parallel/concrt/codesnippet/cpp/how-to-use-alloc-and-free-to-improve-memory-performance_3.cpp)]
 
-## <a name="example"></a>Пример
+## <a name="complete-code-example"></a>Полный пример кода
 
 Полный пример приведен ниже.
 
@@ -50,16 +50,16 @@ Took 1672 ms with malloc/free.
 Took 656 ms with Alloc/Free.
 ```
 
-В этом примере тип, использующий функции `Alloc` и `Free`, обеспечивает лучшую производительность памяти, так как функции `Alloc` и `Free` оптимизированы для частого выделения и освобождения блоков памяти из нескольких потоков.
+В этом примере тип, использующий `Alloc` функции и, `Free` обеспечивает лучшую производительность памяти, поскольку `Alloc` функции и `Free` оптимизированы для частого выделения и освобождения блоков памяти из нескольких потоков.
 
 ## <a name="compiling-the-code"></a>Компиляция кода
 
-Скопируйте пример кода и вставьте его в проект Visual Studio или вставьте в файл с именем `allocators.cpp`, а затем выполните следующую команду в окне командной строки Visual Studio.
+Скопируйте пример кода и вставьте его в проект Visual Studio или вставьте в файл с именем, `allocators.cpp` а затем выполните следующую команду в окне командной строки Visual Studio.
 
-> **CL. exe/EHsc распределителя. cpp**
+> **cl.exe/EHsc распределителя. cpp**
 
 ## <a name="see-also"></a>См. также раздел
 
 [Функции управления памятью](../../parallel/concrt/memory-management-functions.md)<br/>
-[Alloc, функция](reference/concurrency-namespace-functions.md#alloc)<br/>
+[Функция Alloc](reference/concurrency-namespace-functions.md#alloc)<br/>
 [Бесплатная функция](reference/concurrency-namespace-functions.md#free)

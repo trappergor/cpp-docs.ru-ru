@@ -9,26 +9,26 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - Unicode, marshaling strings
 ms.assetid: 96c2141d-6c5d-43ef-a1aa-5785afb9a9aa
-ms.openlocfilehash: f666e52b604e4713f02cb14744ac12a0407366a3
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: da320dbd41e7158e3bc2482b96a73c1f4728a01b
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "79544889"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414312"
 ---
 # <a name="how-to-marshal-unicode-strings-using-c-interop"></a>Практическое руководство. Маршалирование строк Юникода с использованием взаимодействия C++
 
-В этом разделе демонстрируется один аспект C++ визуальной совместимости. Дополнительные сведения см. [в разделе C++ использование взаимодействия (неявный PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
+В этом разделе демонстрируется один аспект взаимодействия Visual C++. Дополнительные сведения см. [в разделе Использование взаимодействия C++ (неявный PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
 
 В следующих примерах кода используются [управляемые, неуправляемые](../preprocessor/managed-unmanaged.md) директивы #pragma для реализации управляемых и неуправляемых функций в одном и том же файле, но эти функции взаимодействуют одинаково, если они определены в отдельных файлах. Файлы, содержащие только неуправляемые функции, не должны компилироваться с [параметром/CLR (компиляция CLR)](../build/reference/clr-common-language-runtime-compilation.md).
 
 В этом разделе показано, как можно передавать строки Юникода из управляемой функции в неуправляемую, и наоборот. Сведения о взаимодействии с другими типами строк см. в следующих разделах:
 
-- [Практическое руководство. Маршалинг строк ANSI с использованием взаимодействия C++](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)
+- [Инструкции. маршалинг строк ANSI с помощью взаимодействия C++](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)
 
-- [Практическое руководство. Маршалинг строк COM с помощью взаимодействия C++](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)
+- [Инструкции. маршалинг строк COM с помощью взаимодействия C++](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)
 
-## <a name="example"></a>Пример
+## <a name="example-pass-unicode-string-from-managed-to-unmanaged-function"></a>Пример. Передача строки в Юникоде из управляемой функции в неуправляемую
 
 Чтобы передать строку Юникода из управляемой функции в неуправляемую, функцию Птртострингчарс (объявленную в Вкклр. h) можно использовать для доступа к памяти, где хранится управляемая строка. Поскольку этот адрес передается в собственную функцию, важно, чтобы память была закреплена с [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) , чтобы предотвратить повторное размещение строковых данных, если выполняется цикл сборки мусора во время выполнения неуправляемой функции.
 
@@ -61,9 +61,9 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Пример
+## <a name="example-data-marshaling-required-to-access-unicode-string"></a>Пример. для доступа к строке в Юникоде требуется маршалирование данных
 
-В следующем примере показана упаковка данных, необходимая для доступа к строке Юникода в управляемой функции, вызываемой неуправляемой функцией. Управляемая функция, получающая собственную строку в Юникоде, преобразует ее в управляемую строку с помощью метода <xref:System.Runtime.InteropServices.Marshal.PtrToStringUni%2A>.
+В следующем примере показана упаковка данных, необходимая для доступа к строке Юникода в управляемой функции, вызываемой неуправляемой функцией. Управляемая функция, получающая собственную строку в Юникоде, преобразует ее в управляемую строку с помощью <xref:System.Runtime.InteropServices.Marshal.PtrToStringUni%2A> метода.
 
 ```cpp
 // MarshalUnicode2.cpp
@@ -95,6 +95,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-[Использование взаимодействия языка C++ (неявный PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+[Использование взаимодействия C++ (неявный PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

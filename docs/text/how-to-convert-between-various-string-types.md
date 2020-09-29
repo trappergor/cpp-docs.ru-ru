@@ -7,20 +7,18 @@ helpviewer_keywords:
 - string conversion [C++]
 - strings [C++], converting
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
-ms.openlocfilehash: e7d8239f49e527ead0a2e9dfbcca5e7e55f8c766
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 068665c594f2fbeb531be21ded7ef16f3f5c1ef3
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224504"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414520"
 ---
 # <a name="how-to-convert-between-various-string-types"></a>Практическое руководство. Преобразование различных типов строк
 
 В этом разделе показано, как преобразовать различные Visual C++ строковые типы в другие строки. В число рассматриваемых типов строк входят `char *` , `wchar_t*` , [_bstr_t](../cpp/bstr-t-class.md), [CComBSTR](../atl/reference/ccombstr-class.md), [CString](../atl-mfc-shared/using-cstring.md), [basic_string](../standard-library/basic-string-class.md)и <xref:System.String?displayProperty=fullName> . Во всех случаях копия строки создается при преобразовании в новый тип. Любые изменения, внесенные в новую строку, не влияют на исходную строку и наоборот.
 
-## <a name="converting-from-char-"></a>Преобразование из char\*
-
-## <a name="example"></a>Пример
+## <a name="example-convert-from-char-"></a>Пример: преобразование из char *
 
 ### <a name="description"></a>Описание
 
@@ -119,9 +117,7 @@ Hello, World! (basic_string)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-wchar_t-"></a>Преобразование из wchar_t\*
-
-## <a name="example"></a>Пример
+## <a name="example-convert-from-wchar_t-"></a>Пример. преобразование из wchar_t *
 
 ### <a name="description"></a>Описание
 
@@ -243,9 +239,7 @@ Hello, World! (basic_string)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-_bstr_t"></a>Преобразование из _bstr_t
-
-## <a name="example"></a>Пример
+## <a name="example-convert-from-_bstr_t"></a>Пример. преобразование из _bstr_t
 
 ### <a name="description"></a>Описание
 
@@ -343,9 +337,7 @@ Hello, World! (basic_string)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-ccombstr"></a>Преобразование из CComBSTR
-
-## <a name="example"></a>Пример
+## <a name="example-convert-from-ccombstr"></a>Пример. преобразование из CComBSTR
 
 ### <a name="description"></a>Описание
 
@@ -453,15 +445,13 @@ Hello, World! (basic_string)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-cstring"></a>Преобразование из CString
-
-## <a name="example"></a>Пример
+## <a name="example-convert-from-cstring"></a>Пример. преобразование из CString
 
 ### <a name="description"></a>Описание
 
-В этом примере показано, как преобразовать из в в `CString` другие типы строк, перечисленные выше. `CString`основан на типе данных TCHAR, который, в свою очередь, зависит от того, `_UNICODE` определен ли символ. Если `_UNICODE` значение не определено, `TCHAR` то оно определено как char и `CString` содержит строку многобайтовых символов; если `_UNICODE` определено, `TCHAR` то оно определяется как **`wchar_t`** и `CString` содержит строку расширенных символов.
+В этом примере показано, как преобразовать из в в `CString` другие типы строк, перечисленные выше. `CString` основан на типе данных TCHAR, который, в свою очередь, зависит от того, `_UNICODE` определен ли символ. Если `_UNICODE` значение не определено, `TCHAR` то оно определено как char и `CString` содержит строку многобайтовых символов; если `_UNICODE` определено, `TCHAR` то оно определяется как **`wchar_t`** и `CString` содержит строку расширенных символов.
 
-`CStringA`всегда является версией многобайтовой строки `CString` `CStringW` . она является версией только расширенных символов. Не `CStringA` `CStringW` используйте и `_UNICODE` для определения того, как они должны компилироваться. `CStringA`и `CStringW` используются в этом примере для уточнения незначительных различий в выделении размера буфера и обработке вывода.
+`CStringA` всегда является версией многобайтовой строки `CString` `CStringW` . она является версией только расширенных символов. Не `CStringA` `CStringW` используйте и `_UNICODE` для определения того, как они должны компилироваться. `CStringA` и `CStringW` используются в этом примере для уточнения незначительных различий в выделении размера буфера и обработке вывода.
 
 ### <a name="code"></a>Код
 
@@ -597,9 +587,7 @@ Hello, World! (basic_string)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-basic_string"></a>Преобразование из basic_string
-
-## <a name="example"></a>Пример
+## <a name="example-convert-from-basic_string"></a>Пример. преобразование из basic_string
 
 ### <a name="description"></a>Описание
 
@@ -693,9 +681,7 @@ Hello, World! (CStringW)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-systemstring"></a>Преобразование из System:: String
-
-## <a name="example"></a>Пример
+## <a name="example-convert-from-systemstring"></a>Пример. преобразование из System:: String
 
 ### <a name="description"></a>Описание
 
@@ -800,7 +786,7 @@ Hello, World! (CStringW)
 Hello, World! (basic_string)
 ```
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также
 
 [Макросы преобразования строк ATL и MFC](../atl/reference/string-conversion-macros.md)<br/>
 [Операции CString, относящиеся к строкам в стиле C](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)<br/>

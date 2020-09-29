@@ -1,32 +1,32 @@
 ---
-title: Практическое руководство. Реализация различных шаблонов производитель получатель
+title: Практическое руководство. Реализация различных шаблонов "источник-приемник"
 ms.date: 11/04/2016
 helpviewer_keywords:
 - producer-consumer patterns, implementing [Concurrency Runtime]
 - implementing producer-consumer patterns [Concurrency Runtime]
 ms.assetid: 75f2c7cc-5399-49ea-98eb-847fe6747169
-ms.openlocfilehash: 113518e97b6715384b5e7b84b0d0eab63dfcfcc7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 70813adf6715a2bcaf4af7370ce43d99c44263bd
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411361"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413779"
 ---
-# <a name="how-to-implement-various-producer-consumer-patterns"></a>Практическое руководство. Реализация различных шаблонов производитель получатель
+# <a name="how-to-implement-various-producer-consumer-patterns"></a>Практическое руководство. Реализация различных шаблонов "источник-приемник"
 
-В этом разделе описывается, как для реализации шаблона производитель получатель в приложении. В этом шаблоне *производитель* отправляет сообщения в блок сообщений, а *потребитель* считывает сообщения из этого блока.
+В этом разделе описывается реализация шаблона "производитель-получатель" в приложении. В этом шаблоне *производитель* отправляет сообщения в блок сообщений, а *потребитель* считывает сообщения из этого блока.
 
-В этом разделе показано два сценария. В первом сценарии потребитель должен принять каждое сообщение, которое производитель отправляет. Во втором сценарии потребитель периодически опрашивает для данных и поэтому не нужно принять каждое сообщение.
+В этом разделе показано два сценария. В первом сценарии потребитель должен получить каждое сообщение, отправляемое производителем. Во втором сценарии потребитель периодически опрашивает данные и, следовательно, не должен принимать каждое сообщение.
 
-В обоих примерах в этом разделе используйте агенты, блоки сообщений и функции передачи сообщений для передачи сообщений от производителя к потребителю. Использует агент производителя [concurrency::send](reference/concurrency-namespace-functions.md#send) функцию для записи сообщений в [concurrency::ITarget](../../parallel/concrt/reference/itarget-class.md) объекта. Использует агент потребителя [concurrency::receive](reference/concurrency-namespace-functions.md#receive) функция для чтения сообщений из [concurrency::ISource](../../parallel/concrt/reference/isource-class.md) объекта. Оба агента содержат контрольного значения для координации о завершении обработки.
+В обоих примерах в этом разделе используются агенты, блоки сообщений и функции передачи сообщений для передачи сообщений от производителя к потребителю. Агент Producer использует функцию [Concurrency:: send](reference/concurrency-namespace-functions.md#send) для записи сообщений в объект [Concurrency:: ITarget](../../parallel/concrt/reference/itarget-class.md) . Агент потребителя использует функцию [Concurrency:: Receive](reference/concurrency-namespace-functions.md#receive) для чтения сообщений из объекта [Concurrency:: ISource](../../parallel/concrt/reference/isource-class.md) . Оба агента содержат значение Sentinel для координации завершения обработки.
 
-Дополнительные сведения об асинхронных агентов, см. в разделе [асинхронных агентов](../../parallel/concrt/asynchronous-agents.md). Дополнительные сведения о блоки сообщений и функции передачи сообщений, см. в разделе [асинхронные блоки сообщений](../../parallel/concrt/asynchronous-message-blocks.md) и [функции передачи сообщений](../../parallel/concrt/message-passing-functions.md).
+Дополнительные сведения об асинхронных агентах см. в разделе [асинхронные агенты](../../parallel/concrt/asynchronous-agents.md). Дополнительные сведения о блоках сообщений и функциях передачи сообщений см. в разделе [асинхронные блоки сообщений](../../parallel/concrt/asynchronous-message-blocks.md) и [функции передачи сообщений](../../parallel/concrt/message-passing-functions.md).
 
-## <a name="example"></a>Пример
+## <a name="example-send-series-of-numbers-to-consumer-agent"></a>Пример: отправка серии номеров агенту потребителя
 
-В этом примере агент производителя отправляет ряд чисел агент потребителя. Потребитель получает эти числа и вычисляет их среднее значение. Приложение записывает среднее значение в консоль.
+В этом примере агент-производитель отправляет в агент потребителя ряд чисел. Потребитель получает каждое из этих чисел и вычисляет среднее значение. Приложение записывает среднее значение в консоль.
 
-В этом примере используется [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) объект для разрешения для очереди сообщений. `unbounded_buffer` Класс реализует `ITarget` и `ISource` , чтобы потребитель и производитель могут отправлять и получать сообщения из общего буфера. `send` И `receive` координируют задачу передачи данных от производителя к потребителю.
+В этом примере используется объект [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) , позволяющий производителю ставить сообщения в очередь. `unbounded_buffer`Класс реализует интерфейс `ITarget` и `ISource` , чтобы производитель и потребитель могли отправлять и получать сообщения в общий буфер и из него. `send`Функции и `receive` координируют задачу распространения данных от производителя к потребителю.
 
 [!code-cpp[concrt-producer-consumer-average#1](../../parallel/concrt/codesnippet/cpp/how-to-implement-various-producer-consumer-patterns_1.cpp)]
 
@@ -36,15 +36,15 @@ ms.locfileid: "62411361"
 The average is 50.
 ```
 
-## <a name="example"></a>Пример
+## <a name="example-send-series-of-stock-quotes-to-consumer-agent"></a>Пример. Отправка ряда котировок акции в агент потребителей
 
-В этом примере агент производителя отправляет ряд биржевых котировок агент потребителя. Агент потребителя периодически считывает текущих котировок и выводит его на консоль.
+В этом примере агент производителя отправляет в агент потребителя серию котировок акции. Агент получателя периодически считывает текущую квоту и выводит его на консоль.
 
-Этот пример похож на предыдущий, за исключением того, что она использует [concurrency::overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md) для обеспечения совместного использования одного сообщения к получателю. Как показано в предыдущем примере `overwrite_buffer` класс реализует `ITarget` и `ISource` таким образом, чтобы потребитель и производитель могут действовать от буфер общих сообщений.
+Этот пример напоминает предыдущий, за исключением того, что он использует объект [Concurrency:: overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md) , позволяющий производителю совместно использовать одно сообщение с потребителем. Как и в предыдущем примере, `overwrite_buffer` класс реализует интерфейс `ITarget` и `ISource` , чтобы производитель и потребитель могли работать с общим буфером сообщений.
 
 [!code-cpp[concrt-producer-consumer-quotes#1](../../parallel/concrt/codesnippet/cpp/how-to-implement-various-producer-consumer-patterns_2.cpp)]
 
-В этом примере получается следующий результат.
+В этом примере выводится следующий пример выходных данных.
 
 ```Output
 Current quote is 24.44.
@@ -56,17 +56,17 @@ Current quote is 22.30.
 Current quote is 25.89.
 ```
 
-В отличие от с `unbounded_buffer` объекта, `receive` функция не удаляет сообщение из `overwrite_buffer` объекта. Если потребитель считывает данные из буфера сообщений более одного раза, прежде чем производитель перезапишет это сообщение, приемник получает то же сообщение каждый раз.
+В отличие от `unbounded_buffer` объекта, `receive` функция не удаляет сообщение из `overwrite_buffer` объекта. Если потребитель считывает данные из буфера сообщений более одного раза, прежде чем производитель перезапишет это сообщение, получатель получает одно и то же сообщение каждый раз.
 
 ## <a name="compiling-the-code"></a>Компиляция кода
 
-Скопируйте код примера и вставьте его в проект Visual Studio или вставьте его в файл с именем `producer-consumer.cpp` и выполните следующую команду в окне командной строки Visual Studio.
+Скопируйте пример кода и вставьте его в проект Visual Studio или вставьте в файл с именем, `producer-consumer.cpp` а затем выполните следующую команду в окне командной строки Visual Studio.
 
-**производитель/EHsc CL.exe-consumer.cpp**
+**cl.exe/EHsc продуцер-Консумер. cpp**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Библиотека асинхронных агентов](../../parallel/concrt/asynchronous-agents-library.md)<br/>
+[библиотеку асинхронных агентов](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [Асинхронные агенты](../../parallel/concrt/asynchronous-agents.md)<br/>
 [Асинхронные блоки сообщений](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
 [Функции передачи сообщений](../../parallel/concrt/message-passing-functions.md)

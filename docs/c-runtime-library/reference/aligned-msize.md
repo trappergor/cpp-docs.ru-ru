@@ -28,12 +28,12 @@ helpviewer_keywords:
 - aligned_msize function
 - _aligned_msize function
 ms.assetid: 10995edc-2110-4212-9ca9-5e0220a464f4
-ms.openlocfilehash: e3ff243ba9a135cf660d09fc5b3690f531702aab
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 1037c63af17a844959bc72e42da2c33267b43004
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912904"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414039"
 ---
 # <a name="_aligned_msize"></a>_aligned_msize
 
@@ -42,7 +42,7 @@ ms.locfileid: "82912904"
 ## <a name="syntax"></a>Синтаксис
 
 ```C
-size_t _msize(
+size_t _aligned_msize(
    void *memblock,
    size_t alignment,
    size_t offset
@@ -54,7 +54,7 @@ size_t _msize(
 *memblock*<br/>
 Указатель на блок памяти.
 
-*выравнивание*<br/>
+*Выравнивание*<br/>
 Значение выравнивания, которое должно быть целой степенью числа 2.
 
 *offset*<br/>
@@ -70,7 +70,7 @@ size_t _msize(
 
 Если приложение связано с отладочной версией библиотек времени выполнения C, **_aligned_msize** разрешается в [_aligned_msize_dbg](aligned-msize-dbg.md). Дополнительные сведения об управлении кучей в процессе отладки см. в разделе [Куча отладки CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-Эта функция проверяет свои параметры. Если *мемблокк* является пустым указателем или *Выравнивание* не является степенью числа 2, **_msize** вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если ошибка обработана, **функция устанавливает значение** по **еинвал** и возвращает-1.
+Эта функция проверяет свои параметры. Если *мемблокк* является пустым указателем или *Выравнивание* не является степенью числа 2, **_aligned_msize** вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если ошибка обработана, **функция устанавливает значение** по **еинвал** и возвращает-1.
 
 По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
@@ -78,7 +78,7 @@ size_t _msize(
 
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
-|**_msize**|\<malloc.h>|
+|**_aligned_msize**|\<malloc.h>|
 
 Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 

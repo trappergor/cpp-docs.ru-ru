@@ -6,12 +6,12 @@ helpviewer_keywords:
 - _ptr keyword
 - value types, declaring
 ms.assetid: 49eea66e-eeba-49bd-95b0-ba297be436e3
-ms.openlocfilehash: 46f8c39affe5a3c0ad8648162f0fde5371eb30ca
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b5d17f3621271faa03e30e24f259d8d7cebbb491
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87195581"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414494"
 ---
 # <a name="how-to-declare-value-types-with-the-interior_ptr-keyword-ccli"></a>Практическое руководство. Объявление типов значений с использованием ключевого слова interior_ptr (C++/CLI)
 
@@ -20,7 +20,7 @@ ms.locfileid: "87195581"
 > [!IMPORTANT]
 > Эта возможность языка поддерживается параметром компилятора `/clr`, а параметром компилятора `/ZW` не поддерживается.
 
-## <a name="example"></a>Пример
+## <a name="example-interior_ptr-with-value-type"></a>Пример: interior_ptr с типом значения
 
 ### <a name="description"></a>Описание
 
@@ -65,7 +65,7 @@ int main() {
 3
 ```
 
-## <a name="example"></a>Пример
+## <a name="example-this-pointer"></a>Пример: этот указатель
 
 ### <a name="description"></a>Описание
 
@@ -87,7 +87,7 @@ value struct V {
 };
 ```
 
-## <a name="example"></a>Пример
+## <a name="example-address-of-operator"></a>Пример: оператор взятия адреса
 
 ### <a name="description"></a>Описание
 
@@ -127,6 +127,6 @@ int main() {
 hello
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md)

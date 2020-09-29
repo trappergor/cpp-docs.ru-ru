@@ -5,20 +5,20 @@ ms.topic: reference
 helpviewer_keywords:
 - generics [C++], consuming from .NET languages
 ms.assetid: e6330ef5-e907-432e-b527-7a22f5899639
-ms.openlocfilehash: 303fa73f09220b2139d681bf3109fd843299a900
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: bea22a0d9fdc5c1ddbd9da2af7078228a6315e80
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172416"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414143"
 ---
 # <a name="consuming-generics-ccli"></a>Использование универсальных типов (C++/CLI)
 
 Универсальные шаблоны, созданные на одном языке .NET (или UWP), могут использоваться в других языках. В отличие от обычных шаблонов, универсальный шаблон в скомпилированной сборке остается универсальным. Таким образом, экземпляр универсального типа можно создать в другой сборке и даже на языке, отличном от языка сборки, в которой был определен универсальный тип.
 
-## <a name="example"></a>Пример
+## <a name="example-generic-class-defined-in-c"></a>Пример: универсальный класс, определенный в C #
 
-### <a name="description"></a>Description
+### <a name="description"></a>Описание
 
 В этом примере показан универсальный класс, определенный в C#.
 
@@ -80,9 +80,9 @@ public class CircularList<ItemType> {
 }
 ```
 
-## <a name="example"></a>Пример
+## <a name="example-consume-assembly-authored-in-c"></a>Пример. использование сборки, созданной на языке C #
 
-### <a name="description"></a>Description
+### <a name="description"></a>Описание
 
 В этом примере используется сборка, созданная в C#.
 
@@ -118,6 +118,6 @@ int main() {
 10
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Универсальные шаблоны](generics-cpp-component-extensions.md)

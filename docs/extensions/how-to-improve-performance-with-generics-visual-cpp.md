@@ -1,5 +1,5 @@
 ---
-title: Как повысить производительность с помощью универсальных шаблонов (C++/CLI)
+title: Практическое руководство. Повышение производительности с помощью универсальных шаблонов (C++/CLI)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - C++, generics
 - generics [C++], performance
 ms.assetid: f14a175b-301f-46cc-86e4-c82d35f9aa3e
-ms.openlocfilehash: a460456a383fcb3eb81e17c1ad5817f790f3c399
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 039c5b069351249e51d961d9d1757ed6b09ef99c
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181945"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414169"
 ---
-# <a name="how-to-improve-performance-with-generics-ccli"></a>Как повысить производительность с помощью универсальных шаблонов (C++/CLI)
+# <a name="how-to-improve-performance-with-generics-ccli"></a>Практическое руководство. Повышение производительности с помощью универсальных шаблонов (C++/CLI)
 
 С помощью универсальных шаблонов можно создать многократно используемый код на основе параметра типа. Определение фактического типа параметра типа откладывается до вызова из клиентского кода. Дополнительные сведения об универсальных классах см. в разделе [Generics](generics-cpp-component-extensions.md).
 
 В этой статье обсуждается, как универсальные шаблоны позволяют повысить производительность приложения, использующего коллекции.
 
-## <a name="example"></a>Пример
+## <a name="example-two-main-drawbacks-of-net-framework-collections"></a>Пример: два основных недостатка .NET Frameworkных коллекций
 
 .NET Framework поставляется с множеством классов коллекций в пространстве имен <xref:System.Collections?displayProperty=fullName>. Большинство этих коллекций работает с объектами типа <xref:System.Object?displayProperty=fullName>. Это позволяет коллекциям хранить объекты любого типа, поскольку все типы в среде .NET Framework, даже типы значений, наследуются от <xref:System.Object?displayProperty=fullName>. Однако у этого подхода есть два недостатка.
 
@@ -78,7 +78,7 @@ Popped a String: Seven
 Popped an int: 7
 ```
 
-## <a name="example"></a>Пример
+## <a name="example-benefit-of-using-generic-collection"></a>Пример. преимущество использования универсальной коллекции
 
 Новое пространство имен <xref:System.Collections.Generic?displayProperty=fullName> содержит многие из коллекций, имевшихся в пространстве имен <xref:System.Collections?displayProperty=fullName>, но они изменены, чтобы принимать параметры универсального типа. При этом исключаются два недостатка неуниверсальных коллекций: упаковка-распаковка типов значений и невозможность указания типов, которые должны храниться в коллекциях. Операции над двумя коллекциях одинаковы; они отличаются только способом создания экземпляров.
 
@@ -124,6 +124,6 @@ int main()
 14
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Универсальные шаблоны](generics-cpp-component-extensions.md)

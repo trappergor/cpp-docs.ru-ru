@@ -6,26 +6,26 @@ helpviewer_keywords:
 - .NET Framework [C++], Debug class
 - Debug class
 ms.assetid: 076bd528-1b6f-4e8a-a372-eb5849cf969a
-ms.openlocfilehash: 3a262a0d2ef429cb94f4648eb7c7180e7b130279
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47e1b949cb6e998508a3bd362b1c74961cf4cc23
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393783"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414156"
 ---
 # <a name="debug-class-ccli"></a>Класс Debug (C++/CLI)
 
-При использовании <xref:System.Diagnostics.Debug> в приложении Visual C++, поведение не меняется между отладки и выпуска.
+При использовании <xref:System.Diagnostics.Debug> в Visual C++ном приложении поведение не меняется между отладочной и окончательной сборками.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Поведение для <xref:System.Diagnostics.Trace> идентично поведению для класса Debug, но зависит от определяемого символа TRACE. Это означает, что вы должны `#ifdef` любой код, связанные с трассировкой для отключения поведения отладки в окончательной сборке.
+Поведение для аналогично <xref:System.Diagnostics.Trace> поведению для класса Debug, но зависит от определяемой трассировки символов. Это означает, что `#ifdef` для предотвращения отладки в сборке выпуска необходимо иметь любой код, связанный с трассировкой.
 
-## <a name="example"></a>Пример
+## <a name="example-always-executes-output-statements"></a>Пример: всегда выполняет выходные операторы
 
 ### <a name="description"></a>Описание
 
-Следующий пример всегда выполняет инструкции выходные данные, независимо от того, является ли компиляции с параметром **/DDEBUG** или **/DTRACE**.
+Следующий пример всегда выполняет выходные инструкции, независимо от того, выполняется ли компиляция с помощью **/ддебуг** или **/дтраце**.
 
 ### <a name="code"></a>Код
 
@@ -49,7 +49,7 @@ int main() {
 }
 ```
 
-### <a name="output"></a>Вывод
+### <a name="output"></a>Выходные данные
 
 ```Output
     Entering Main
@@ -58,11 +58,11 @@ Hello World.
 test
 ```
 
-## <a name="example"></a>Пример
+## <a name="example-use-ifdef-and-endif-directives"></a>Пример. Использование директив #ifdef и #endif
 
 ### <a name="description"></a>Описание
 
-Чтобы получить ожидаемое поведение (то есть выходные данные «test» в удобном для сборки выпуска), необходимо использовать `#ifdef` и `#endif` директивы. В предыдущем примере кода изменяется ниже приведен:
+Чтобы получить ожидаемое поведение (т. е. не выводится тестовый вывод для сборки выпуска), необходимо использовать `#ifdef` `#endif` директивы и. Предыдущий пример кода изменяется ниже, чтобы продемонстрировать это исправление:
 
 ### <a name="code"></a>Код
 

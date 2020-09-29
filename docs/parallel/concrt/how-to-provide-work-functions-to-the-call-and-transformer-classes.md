@@ -6,12 +6,12 @@ helpviewer_keywords:
 - using the transformer class [Concurrency Runtime]
 - using the call class [Concurrency Runtime]
 ms.assetid: df715ce4-8507-41ca-b204-636d11707a73
-ms.openlocfilehash: cecb8b2e6ab3f3ac8b010007018b76e6f58e0ed8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b629d0e0e11388e212c56b8e1f6bea290368c884
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87205890"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414351"
 ---
 # <a name="how-to-provide-work-functions-to-the-call-and-transformer-classes"></a>Практическое руководство. Предоставление рабочих функций классам call и transformer
 
@@ -21,7 +21,7 @@ ms.locfileid: "87205890"
 
 Для иллюстрации каждый пример в этом разделе использует `call` класс. Пример использования `transformer` класса см. в разделе [как использовать преобразователь в конвейере данных](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md).
 
-## <a name="example"></a>Пример
+## <a name="example-call-class"></a>Пример. вызов класса
 
 В следующем примере показан распространенный способ использования `call` класса. В этом примере лямбда-функция передается в `call` конструктор.
 
@@ -33,13 +33,13 @@ ms.locfileid: "87205890"
 13 squared is 169.
 ```
 
-## <a name="example"></a>Пример
+## <a name="example-call-class-with-function-object"></a>Пример: вызов класса с объектом функции
 
 Следующий пример похож на предыдущий, за исключением того, что он использует `call` класс вместе с объектом функции (функтор).
 
 [!code-cpp[concrt-call-functor#1](../../parallel/concrt/codesnippet/cpp/how-to-provide-work-functions-to-the-call-and-transformer-classes_2.cpp)]
 
-## <a name="example"></a>Пример
+## <a name="example-functions-to-bind-call-object"></a>Пример: функции для привязки объекта вызова
 
 Следующий пример похож на предыдущий, за исключением того, что он использует функции [std:: bind1st](../../standard-library/functional-functions.md#bind1st) и [std:: mem_fun](../../standard-library/functional-functions.md#mem_fun) для привязки `call` объекта к методу класса.
 

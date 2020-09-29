@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - override specifiers in native compilation, overriding
 ms.assetid: d0551836-9ac7-41eb-a6e9-a4b3ef60767d
-ms.openlocfilehash: c5ed413f403fb12f116633c0e39f9e7b32b2e9f8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 92bdc41cf9ebe2389f2d22dab211029899283266
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221332"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414598"
 ---
 # <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>Практическое руководство. Объявление спецификаторов переопределения в компиляциях машинного кода (C++/CLI)
 
@@ -18,7 +18,7 @@ ms.locfileid: "87221332"
 > [!NOTE]
 > Стандартный язык ISO C++ 11 имеет идентификатор [переопределения](../cpp/override-specifier.md) и [конечный](../cpp/final-specifier.md) идентификатор, и обе эти версии поддерживаются в Visual Studio `final` вместо **`sealed`** в коде, который должен компилироваться только как машинный код.
 
-## <a name="example"></a>Пример
+## <a name="example-sealed-is-valid"></a>Пример: Sealed является допустимым
 
 ### <a name="description"></a>Описание
 
@@ -47,7 +47,7 @@ public:
 };
 ```
 
-## <a name="example"></a>Пример
+## <a name="example-override-is-valid"></a>Пример: переопределение допустимо
 
 ### <a name="description"></a>Описание
 
@@ -69,7 +69,7 @@ public:
 };
 ```
 
-## <a name="example"></a>Пример
+## <a name="example-abstract-is-valid"></a>Пример: abstract является допустимым
 
 ### <a name="description"></a>Описание
 
@@ -86,6 +86,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Спецификаторы переопределения](../extensions/override-specifiers-cpp-component-extensions.md)
