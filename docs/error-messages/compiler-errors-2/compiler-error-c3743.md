@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3743
 ms.assetid: 7ca9a76e-7b60-46d1-ab8b-18600cf1a306
-ms.openlocfilehash: c0e2082dc87c6236aa11dd3094d056b0024dfc2f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: b4bb198ae883e53e7947ce7f123bb0d3f092aaf3
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74752474"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500400"
 ---
 # <a name="compiler-error-c3743"></a>Ошибка компилятора C3743
 
 можно только подключить или отсоединить весь интерфейс, если параметр "layout_dependent" event_receiver имеет значение true
 
-Функция [__unhook](../../cpp/unhook.md) зависит от числа параметров, которые она принимает, в зависимости от значения, переданного в параметр `layout_dependent` в классе [event_receiver](../../windows/event-receiver.md) .
+Функция [__unhook](../../cpp/unhook.md) зависит от числа параметров, которые она принимает, в зависимости от значения, переданного в `layout_dependent` параметр класса [event_receiver](../../windows/attributes/event-receiver.md) .
 
 Следующий пример приводит к возникновению ошибки C3743:
 

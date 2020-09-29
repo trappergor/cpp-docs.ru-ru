@@ -12,14 +12,14 @@ helpviewer_keywords:
 - -analyze compiler option [C++]
 - analyze compiler option [C++]
 ms.assetid: 81da536a-e030-4bd4-be18-383927597d08
-ms.openlocfilehash: 643d8428e3760926832429db5a4425e078ed776b
-ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
+ms.openlocfilehash: e970872e89132aed52190b8688f2cdaccab5ea6f
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87389796"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500091"
 ---
-# <a name="analyze-code-analysis"></a>`/analyze`(Анализ кода)
+# <a name="analyze-code-analysis"></a>`/analyze` (Анализ кода)
 
 Включает анализ кода и параметры управления.
 
@@ -84,14 +84,14 @@ ms.locfileid: "87389796"
 
 ::: moniker range="<=vs-2017"
 
-LocalEspC.dll — это подключаемый модуль, реализующий проверки кода, связанные с параллелизмом, в диапазоне предупреждений C261XX. Например, [C26100](/cpp/code-quality/c26100), [C26101](/cpp/code-quality/c26101),..., [C26167](/cpp/code-quality/c26167).
+LocalEspC.dll — это подключаемый модуль, реализующий проверки кода, связанные с параллелизмом, в диапазоне предупреждений C261XX. Например, [C26100](../../code-quality/c26100.md), [C26101](../../code-quality/c26101.md),...,  [C26167](../../code-quality/c26167.md).
 
-Чтобы запустить LocalEspC.dll, используйте следующий параметр компилятора:**`/analyze:plugin LocalEspC.dll`**
+Чтобы запустить LocalEspC.dll, используйте следующий параметр компилятора: **`/analyze:plugin LocalEspC.dll`**
 
 ::: moniker-end
 ::: moniker range=">=vs-2019"
 
-ConcurrencyCheck.dll реализует проверки кода, связанные с параллелизмом, в диапазоне предупреждений C261XX. Например, [C26100](/cpp/code-quality/c26100), [C26101](/cpp/code-quality/c26101),..., [C26167](/cpp/code-quality/c26167).
+ConcurrencyCheck.dll реализует проверки кода, связанные с параллелизмом, в диапазоне предупреждений C261XX. Например, [C26100](../../code-quality/c26100.md), [C26101](../../code-quality/c26101.md),...,  [C26167](../../code-quality/c26167.md).
 
 Чтобы запустить ConcurrencyCheck.dll, сначала выполните эту команду в командной строке разработчика:
 
@@ -136,14 +136,14 @@ set Esp.Extensions=CppCoreCheck.dll
 ::: moniker-end
 
 **`/analyze:stacksize`***число*\
-Параметр *Number* , используемый с этим параметром, задает размер (в байтах) кадра стека, для которого создается предупреждение [C6262](/cpp/code-quality/c6262) . Пробел перед *числом* является необязательным. Если этот параметр не указан, по умолчанию размер кадра стека — 16 КБ.
+Параметр *Number* , используемый с этим параметром, задает размер (в байтах) кадра стека, для которого создается предупреждение [C6262](../../code-quality/c6262.md) . Пробел перед *числом* является необязательным. Если этот параметр не указан, по умолчанию размер кадра стека — 16 КБ.
 
 **`/analyze:WX-`**\
 Предупреждения анализа кода не обрабатываются как ошибки при компиляции с помощью **`/WX`** . Дополнительные сведения см. в разделе [ `/WX` (уровень предупреждений)](compiler-option-warning-level.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Дополнительные сведения см. в разделе [анализ кода для c/c++ обзор](/cpp/code-quality/code-analysis-for-c-cpp-overview) и [анализ кода для предупреждений c/c++](/cpp/code-quality/code-analysis-for-c-cpp-warnings).
+Дополнительные сведения см. в разделе [анализ кода для c/c++ обзор](../../code-quality/code-analysis-for-c-cpp-overview.md) и [анализ кода для предупреждений c/c++](../../code-quality/code-analysis-for-c-cpp-warnings.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
@@ -157,7 +157,7 @@ set Esp.Extensions=CppCoreCheck.dll
 
 1. См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnablePREfast%2A>.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Параметры компилятора КОМПИЛЯТОРОМ MSVC](compiler-options.md)\
 [Синтаксис командной строки компилятора КОМПИЛЯТОРОМ MSVC](compiler-command-line-syntax.md)

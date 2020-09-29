@@ -22,12 +22,12 @@ helpviewer_keywords:
 - GetMoniker method
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-ms.openlocfilehash: f3e3a61028768144cbef17912952622f19ad0242
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: dfc358c06179d50cbf6442863fd2ed2c533cd00a
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838156"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498533"
 ---
 # <a name="cenumerator-class"></a>Класс CEnumerator
 
@@ -97,7 +97,7 @@ HRESULT GetMoniker(LPMONIKER* ppMoniker,
 #### <a name="parameters"></a>Параметры
 
 *ппмоникер*<br/>
-заполняет Моникер, проанализированный из отображаемого имени ([CEnumeratorAccessor:: m_szParseName](../../data/oledb/cenumeratoraccessor-m-szparsename.md)) текущей строки.
+заполняет Моникер, проанализированный из отображаемого имени ([CEnumeratorAccessor:: m_szParseName](./cenumeratoraccessor-class.md#szparsename)) текущей строки.
 
 *лпсздисплайнаме*<br/>
 окне Отображаемое имя для синтаксического анализа.

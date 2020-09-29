@@ -12,12 +12,12 @@ helpviewer_keywords:
 - merging injected code
 - /Fx compiler option [C++]
 ms.assetid: 14f0e301-3bab-45a3-bbdf-e7ce66f20560
-ms.openlocfilehash: f1a266eee4edc524fbbe49bdef31a8235f62bd3c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b928ca63171f0f6d28859d049a1ed5008b908686
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292306"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500104"
 ---
 # <a name="fx-merge-injected-code"></a>/Fx (объединение подставляемого кода)
 
@@ -29,7 +29,7 @@ ms.locfileid: "62292306"
 /Fx
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Чтобы отделить объединенный исходный файл от оригинального исходного файла, **/Fx** добавляет расширение MRG между именем файла и его расширением. Например, файл с именем MyCode.cpp, который включает код с атрибутами и собран с помощью с **/Fx** , порождает файл с именем MyCode.mrg.cpp, который содержит следующий код:
 
@@ -52,7 +52,7 @@ ms.locfileid: "62292306"
 //--- End Injected Code
 ```
 
-Атрибут [no_injected_text](../../windows/no-injected-text.md) встроен в MRG-файл, что допускает компиляцию MRG-файла без повторной подстановки текста.
+Атрибут [no_injected_text](../../windows/attributes/no-injected-text.md) встроен в MRG-файл, что допускает компиляцию MRG-файла без повторной подстановки текста.
 
 Обратите внимание, что исходный MRG-файл предназначен для представления исходного кода, подставленного компилятором. MRG-файл может компилироваться или запускаться отличным от оригинального исходного файла образом.
 
@@ -62,7 +62,7 @@ ms.locfileid: "62292306"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Подробнее см. в статье [Настройка компилятора C++ и свойства сборки в Visual Studio](../working-with-project-properties.md).
 
 1. Откройте папку **C/C++** .
 
@@ -74,8 +74,8 @@ ms.locfileid: "62292306"
 
 - См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ExpandAttributedSource%2A>.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Параметры выходного файла (/F)](output-file-f-options.md)<br/>
+[Параметры OUTPUT-File (/F)](output-file-f-options.md)<br/>
 [Параметры компилятора MSVC](compiler-options.md)<br/>
-[Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)
+[Синтаксис командной строки компилятора КОМПИЛЯТОРОМ MSVC](compiler-command-line-syntax.md)

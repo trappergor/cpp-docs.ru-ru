@@ -26,12 +26,12 @@ helpviewer_keywords:
 - Date data type, MFC encapsulation of
 - COleDateTimeSpan class
 ms.assetid: 7441526d-a30a-4019-8fb3-3fee6f897cbe
-ms.openlocfilehash: 746cfdce3265dff7e5b20a5135aa026aca9facdf
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5934a456b519d14def14018f966c7bff8206c3c4
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832104"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500132"
 ---
 # <a name="coledatetimespan-class"></a>Класс Коледатетимеспан
 
@@ -70,7 +70,7 @@ class COleDateTimeSpan
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Название|Описание|
 |-|-|
 |[operator +,-](#operator_add_-)|Добавление, вычитание и изменение знака для `COleDateTimeSpan` значений.|
 |[operator + =,-=](#operator_add_eq_-_eq)|Добавьте и вычтите `COleDateTimeSpan` значение из этого `COleDateTimeSpan` значения.|
@@ -80,7 +80,7 @@ class COleDateTimeSpan
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Название|Описание|
 |----------|-----------------|
 |[Коледатетимеспан:: m_span](#m_span)|Содержит базовый **`double`** для этого `COleDateTimeSpan` объекта.|
 |[Коледатетимеспан:: m_status](#m_status)|Содержит состояние этого `COleDateTimeSpan` объекта.|
@@ -93,7 +93,7 @@ class COleDateTimeSpan
 
 `COleDateTimeSpan` используется со своим сопутствующим классом [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md). `COleDateTime` Инкапсулирует `DATE` тип данных OLE Automation. `COleDateTime` Представляет абсолютные значения времени. Все `COleDateTime` вычисления подразумевают `COleDateTimeSpan` значения. Отношение между этими классами аналогично отношению к одному между [CTime](../../atl-mfc-shared/reference/ctime-class.md) и [ктимеспан](../../atl-mfc-shared/reference/ctimespan-class.md).
 
-Дополнительные сведения о `COleDateTime` `COleDateTimeSpan` классах и см. в статье [Дата и время: Поддержка автоматизации](../../atl-mfc-shared/date-and-time-automation-support.md).
+Дополнительные сведения о `COleDateTime` `COleDateTimeSpan` классах и см. в статье [Дата и время: Поддержка автоматизации](../date-and-time.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -162,7 +162,7 @@ COleDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 
 `COleDateTimeSpan`Для нового объекта задано допустимое состояние.
 
-Дополнительные сведения о границах для `COleDateTimeSpan` значений см. в статье [Дата и время: Поддержка автоматизации](../../atl-mfc-shared/date-and-time-automation-support.md).
+Дополнительные сведения о границах для `COleDateTimeSpan` значений см. в статье [Дата и время: Поддержка автоматизации](../date-and-time.md).
 
 ### <a name="example"></a>Пример
 
@@ -403,7 +403,7 @@ enum DateTimeSpanStatus{
 
 Дополнительные сведения об операциях, для которых может быть задано состояние "недопустимо", см. в разделе [коледатетимеспан:: operator +,-](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_-) and [коледатетимеспан:: operator + =,-=](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_eq_-_eq).
 
-Дополнительные сведения о границах для `COleDateTimeSpan` значений см. в статье [Дата и время: Поддержка автоматизации](../../atl-mfc-shared/date-and-time-automation-support.md).
+Дополнительные сведения о границах для `COleDateTimeSpan` значений см. в статье [Дата и время: Поддержка автоматизации](../date-and-time.md).
 
 ## <a name="coledatetimespangettotaldays"></a><a name="gettotaldays"></a> Коледатетимеспан:: Жеттоталдайс
 
@@ -603,7 +603,7 @@ enum DateTimeSpanStatus{
 > [!CAUTION]
 > Этот элемент данных предназначен для более сложных сценариев программирования. Следует использовать встроенные функции элементов с параметром " [Status](#getstatus) " и [SetStatus](#setstatus). Дополнительные `SetStatus` предостережения относительно явного задания этого элемента данных см. в разделе.
 
-Дополнительные сведения о границах для `COleDateTimeSpan` значений см. в статье [Дата и время: Поддержка автоматизации](../../atl-mfc-shared/date-and-time-automation-support.md).
+Дополнительные сведения о границах для `COleDateTimeSpan` значений см. в статье [Дата и время: Поддержка автоматизации](../date-and-time.md).
 
 ## <a name="coledatetimespanoperator-"></a><a name="operator_eq"></a> Коледатетимеспан:: operator =
 

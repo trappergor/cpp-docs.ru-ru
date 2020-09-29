@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - swap function
 ms.assetid: 7dd91b5c-f0de-4634-a2e2-642626706e27
-ms.openlocfilehash: 9e6cde103eefb6e14fdf2a3fc7e3299070afbc25
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: ed0e4ab7bce52d4dee54e7f9149edae535445d65
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545945"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498582"
 ---
 # <a name="swap-function-auto_handle"></a>Функция swap (auto_handle)
 
@@ -29,7 +29,7 @@ void swap(
 #### <a name="parameters"></a>Параметры
 
 *_left*<br/>
-`auto_handle`.
+Объект `auto_handle`.
 
 *_right*<br/>
 Другой объект `auto_handle`.
@@ -63,11 +63,11 @@ s1 = 'string two', s2 = 'string one'
 
 ## <a name="requirements"></a>Требования
 
-**Файл заголовка** \<мсклр \ auto_handle. h >
+**Файл заголовка** \<msclr\auto_handle.h>
 
 Мсклр **пространства имен**
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [auto_handle](../dotnet/auto-handle.md)<br/>
-[auto_handle::swap](../dotnet/auto-handle-swap.md)
+[auto_handle::swap](./auto-handle-class.md#swap)

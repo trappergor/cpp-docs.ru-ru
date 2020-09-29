@@ -7,12 +7,12 @@ helpviewer_keywords:
 - class types [C++], class statements
 - class keyword [C++]
 ms.assetid: dd23c09f-6598-4069-8bff-69c7f2518b9f
-ms.openlocfilehash: 6475bc3703ce1bd7cf6103f4be8c12edc36e98b9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1dfa0b5e2dd65567b965be756ff171a3df75370a
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226012"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499821"
 ---
 # <a name="class-c"></a>class (C++)
 
@@ -50,7 +50,7 @@ class [ms-decl-spec] [tag [: base-list ]]
 Список членов класса. Дополнительные сведения см. в разделе [Обзор членов класса](../cpp/class-member-overview.md) .
 
 *declarators*<br/>
-Список деклараторов, в котором указываются имена одного или нескольких экземпляров типа класса. Деклараторы могут включать списки инициализаторов, если все элементы данных класса имеют значение **`public`** . Это более распространено в структурах, члены данных которых **`public`** по умолчанию имеют значение, а не в классах. Дополнительные сведения см. в разделе [Общие сведения об деклараторах](../cpp/overview-of-declarators.md) .
+Список деклараторов, в котором указываются имена одного или нескольких экземпляров типа класса. Деклараторы могут включать списки инициализаторов, если все элементы данных класса имеют значение **`public`** . Это более распространено в структурах, члены данных которых **`public`** по умолчанию имеют значение, а не в классах. Дополнительные сведения см. в разделе [Общие сведения об деклараторах](./declarations-and-definitions-cpp.md) .
 
 ## <a name="remarks"></a>Remarks
 

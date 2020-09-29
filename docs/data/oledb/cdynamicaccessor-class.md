@@ -124,12 +124,12 @@ helpviewer_keywords:
 - SetStatus method
 - SetValue method
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
-ms.openlocfilehash: ecbc332fcdb7fee8f748a02b2f111d4d1abf3c0b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 31cc996b8beedadf9cba5a46b3b4da20e19268b0
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838208"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498687"
 ---
 # <a name="cdynamicaccessor-class"></a>Класс CDynamicAccessor
 
@@ -176,7 +176,7 @@ class CDynamicAccessor : public CAccessorBase
 
 Используйте `CDynamicAccessor` методы для получения таких сведений о столбцах, как имена столбцов, число столбцов, тип данных и т. д. Затем эти сведения о столбце используются для динамического создания метода доступа во время выполнения.
 
-Сведения о столбцах хранятся в буфере, который создается и управляется этим классом. Получение данных из буфера с помощью функции [GetValue](../../data/oledb/cdynamicaccessor-getvalue.md).
+Сведения о столбцах хранятся в буфере, который создается и управляется этим классом. Получение данных из буфера с помощью функции [GetValue](#getvalue).
 
 Обсуждение и примеры использования динамических классов методов доступа см. в разделе [Использование динамических методов доступа](../../data/oledb/using-dynamic-accessors.md).
 
@@ -217,10 +217,10 @@ CDynamicAccessor(DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,
 #### <a name="parameters"></a>Параметры
 
 *еблобхандлинг*<br/>
-Указывает способ обработки данных больших двоичных объектов (BLOB). Значение по умолчанию — DBBLOBHANDLING_DEFAULT. Описание значений ДББЛОБХАНДЛИНЖЕНУМ см. в разделе [сетблобхандлинг](../../data/oledb/cdynamicaccessor-setblobhandling.md) .
+Указывает способ обработки данных больших двоичных объектов (BLOB). Значение по умолчанию — DBBLOBHANDLING_DEFAULT. Описание значений ДББЛОБХАНДЛИНЖЕНУМ см. в разделе [сетблобхандлинг](#setblobhandling) .
 
 *нблобсизе*<br/>
-Максимальный размер большого двоичного объекта в байтах; данные столбца по этому значению рассматриваются как большой двоичный объект. Значение по умолчанию — 8 000. Дополнительные сведения см. в разделе [сетблобсизелимит](../../data/oledb/cdynamicaccessor-setblobsizelimit.md) .
+Максимальный размер большого двоичного объекта в байтах; данные столбца по этому значению рассматриваются как большой двоичный объект. Значение по умолчанию — 8 000. Дополнительные сведения см. в разделе [сетблобсизелимит](#setblobsizelimit) .
 
 ### <a name="remarks"></a>Remarks
 
@@ -250,7 +250,7 @@ const DBBLOBHANDLINGENUM GetBlobHandling() const;
 
 ### <a name="remarks"></a>Remarks
 
-Возвращает значение обработки BLOB-объекта *еблобхандлинг* , заданное параметром [сетблобхандлинг](../../data/oledb/cdynamicaccessor-setblobhandling.md).
+Возвращает значение обработки BLOB-объекта *еблобхандлинг* , заданное параметром [сетблобхандлинг](#setblobhandling).
 
 ## <a name="cdynamicaccessorgetblobsizelimit"></a><a name="getblobsizelimit"></a> CDynamicAccessor:: Жетблобсизелимит
 
@@ -264,7 +264,7 @@ const DBLENGTH GetBlobSizeLimit() const;
 
 ### <a name="remarks"></a>Remarks
 
-Возвращает значение обработки BLOB-объекта *нблобсизе* , заданное параметром [сетблобсизелимит](../../data/oledb/cdynamicaccessor-setblobsizelimit.md).
+Возвращает значение обработки BLOB-объекта *нблобсизе* , заданное параметром [сетблобсизелимит](#setblobsizelimit).
 
 ## <a name="cdynamicaccessorgetbookmark"></a><a name="getbookmark"></a> CDynamicAccessor:: onbookmark
 

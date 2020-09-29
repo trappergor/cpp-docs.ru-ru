@@ -12,12 +12,12 @@ helpviewer_keywords:
 - GetString method
 - SetString method
 ms.assetid: 138dc4de-c7c3-478c-863e-431e48249027
-ms.openlocfilehash: 927ea5ceef9ac74ae3cc1e06a47969b537209002
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 891c80a7c21fd046fba393b494ed6d84f731db6f
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838169"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498663"
 ---
 # <a name="cdynamicstringaccessor-class"></a>Класс CDynamicStringAccessor
 
@@ -51,7 +51,7 @@ class CDynamicStringAccessorT : public CDynamicAccessor
 
 Используйте `CDynamicStringAccessor` методы для получения сведений о столбцах. Эти сведения о столбцах используются для динамического создания метода доступа во время выполнения.
 
-Сведения о столбцах хранятся в буфере, созданном и управляемом этим классом. Получение данных из буфера с помощью [GetString](../../data/oledb/cdynamicstringaccessor-getstring.md)или сохранение их в буфер с помощью [SetString](../../data/oledb/cdynamicstringaccessor-setstring.md).
+Сведения о столбцах хранятся в буфере, созданном и управляемом этим классом. Получение данных из буфера с помощью [GetString](#getstring)или сохранение их в буфер с помощью [SetString](#setstring).
 
 Обсуждение и примеры использования динамических классов методов доступа см. в разделе [Использование динамических методов доступа](../../data/oledb/using-dynamic-accessors.md).
 

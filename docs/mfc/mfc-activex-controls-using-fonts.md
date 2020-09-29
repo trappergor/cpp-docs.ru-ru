@@ -19,12 +19,12 @@ helpviewer_keywords:
 - SelectStockFont method [MFC]
 - fonts [MFC], ActiveX controls
 ms.assetid: 7c51d602-3f5a-481d-84d1-a5d8a3a71761
-ms.openlocfilehash: 58f387ba6f4d7cdffb3ffc1f7be6f9acde8314f4
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 02c52d2544afdc9d13fc3ec67ad9eed757a3f277
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618169"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499692"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>Элементы управления MFC ActiveX: использование шрифтов
 
@@ -36,13 +36,13 @@ ms.locfileid: "84618169"
 
 - [Использование настраиваемых свойств шрифта в элементе управления](#_core_implementing_a_custom_font_property)
 
-## <a name="using-the-stock-font-property"></a><a name="_core_using_the_stock_font_property"></a>Использование свойства "шрифт акции"
+## <a name="using-the-stock-font-property"></a><a name="_core_using_the_stock_font_property"></a> Использование свойства "шрифт акции"
 
 Свойства шрифта акции реализуются с помощью класса [COleControl](reference/colecontrol-class.md). Кроме того, доступна стандартная страница свойств шрифта, позволяющая пользователю изменять различные атрибуты объекта Font, например его имя, размер и стиль.
 
 Доступ к объекту Font осуществляется с помощью функций [Font](reference/colecontrol-class.md#getfont), [сетфонт](reference/colecontrol-class.md#setfont)и [интерналжетфонт](reference/colecontrol-class.md#internalgetfont) `COleControl` . Пользователь элемента управления будет обращаться к объекту Font через `GetFont` `SetFont` функции и точно так же, как и любое другое свойство get/set. Если доступ к объекту Font требуется в элементе управления, используйте `InternalGetFont` функцию.
 
-Как обсуждалось в [элементах управления ActiveX MFC: свойства](mfc-activex-controls-properties.md), Добавление свойств хранения с помощью [мастера добавления свойств](../ide/names-add-property-wizard.md)— это просто. Вы выбираете свойство Font, и мастер добавления свойств автоматически вставляет запись о шрифте акции в карту диспетчеризации элемента управления.
+Как обсуждалось в [элементах управления ActiveX MFC: свойства](mfc-activex-controls-properties.md), Добавление свойств хранения с помощью [мастера добавления свойств](../ide/adding-a-property-visual-cpp.md#names-add-property-wizard)— это просто. Вы выбираете свойство Font, и мастер добавления свойств автоматически вставляет запись о шрифте акции в карту диспетчеризации элемента управления.
 
 #### <a name="to-add-the-stock-font-property-using-the-add-property-wizard"></a>Добавление свойства «стандартный шрифт» с помощью мастера добавления свойства
 
@@ -90,7 +90,7 @@ ms.locfileid: "84618169"
 
 [!code-cpp[NVC_MFC_AxFont#3](codesnippet/cpp/mfc-activex-controls-using-fonts_3.cpp)]
 
-## <a name="modifying-the-ondraw-function"></a><a name="_core_modifying_the_ondraw_function"></a>Изменение функции OnDraw
+## <a name="modifying-the-ondraw-function"></a><a name="_core_modifying_the_ondraw_function"></a> Изменение функции OnDraw
 
 Реализация по умолчанию `OnDraw` использует системный шрифт Windows для всего текста, отображаемого в элементе управления. Это означает, что необходимо изменить `OnDraw` код, выбрав объект Font в контексте устройства. Для этого вызовите [COleControl:: селектстоккфонт](reference/colecontrol-class.md#selectstockfont) и передайте контекст устройства элемента управления, как показано в следующем примере:
 
@@ -98,7 +98,7 @@ ms.locfileid: "84618169"
 
 После того как `OnDraw` функция будет изменена для использования объекта Font, любой текст в элементе управления будет отображаться с характеристиками из свойства «стандартный шрифт» элемента управления.
 
-## <a name="using-custom-font-properties-in-your-control"></a><a name="_core_using_custom_font_properties_in_your_control"></a>Использование настраиваемых свойств шрифта в элементе управления
+## <a name="using-custom-font-properties-in-your-control"></a><a name="_core_using_custom_font_properties_in_your_control"></a> Использование настраиваемых свойств шрифта в элементе управления
 
 Помимо свойства «стандартный шрифт», элемент управления ActiveX может иметь свойства пользовательского шрифта. Чтобы добавить свойство пользовательского шрифта, необходимо выполнить следующие действия.
 
@@ -108,7 +108,7 @@ ms.locfileid: "84618169"
 
 - [Реализация нового интерфейса уведомления шрифтов](#_core_implementing_a_new_font_notification_interface).
 
-### <a name="implementing-a-custom-font-property"></a><a name="_core_implementing_a_custom_font_property"></a>Реализация пользовательского свойства шрифта
+### <a name="implementing-a-custom-font-property"></a><a name="_core_implementing_a_custom_font_property"></a> Реализация пользовательского свойства шрифта
 
 Для реализации пользовательского свойства шрифта используйте мастер добавления свойств, чтобы добавить свойство, а затем внесите некоторые изменения в код. В следующих разделах описывается добавление пользовательского `HeadingFont` свойства в образец элемента управления.
 
@@ -198,7 +198,7 @@ ms.locfileid: "84618169"
 
 После внесения этих изменений перестройте весь проект, чтобы включить дополнительные функции.
 
-### <a name="processing-font-notifications"></a><a name="_core_processing_font_notifications"></a>Обработка уведомлений шрифтов
+### <a name="processing-font-notifications"></a><a name="_core_processing_font_notifications"></a> Обработка уведомлений шрифтов
 
 В большинстве случаев элемент управления должен иметь сведения об изменении характеристик объекта Font. Каждый объект Font способен предоставлять уведомления при изменении путем вызова функции-члена `IFontNotification` интерфейса, реализованной в `COleControl` .
 
@@ -211,7 +211,7 @@ ms.locfileid: "84618169"
 
 Одним из способов различения уведомлений объекта шрифта элемента управления является создание отдельной реализации `IFontNotification` интерфейса для каждого объекта Font в элементе управления. Этот метод позволяет оптимизировать код рисования, обновляя только строку или строки, которые используют шрифт, измененный недавно. В следующих разделах демонстрируются шаги, необходимые для реализации отдельных интерфейсов уведомлений для второго свойства Font. Второе свойство font считается `HeadingFont` свойством, которое было добавлено в предыдущем разделе.
 
-### <a name="implementing-a-new-font-notification-interface"></a><a name="_core_implementing_a_new_font_notification_interface"></a>Реализация нового интерфейса уведомления шрифтов
+### <a name="implementing-a-new-font-notification-interface"></a><a name="_core_implementing_a_new_font_notification_interface"></a> Реализация нового интерфейса уведомления шрифтов
 
 Для различения уведомлений двух или более шрифтов необходимо реализовать новый интерфейс уведомления для каждого шрифта, используемого в элементе управления. В следующих разделах описывается реализация нового интерфейса уведомления шрифтов путем изменения заголовка и файлов реализации элемента управления.
 
@@ -235,6 +235,6 @@ ms.locfileid: "84618169"
 
 ## <a name="see-also"></a>См. также раздел
 
-[Элементы ActiveX библиотеки MFC](mfc-activex-controls.md)<br/>
-[Элементы ActiveX в MFC. Использование изображений в элементе ActiveX](mfc-activex-controls-using-pictures-in-an-activex-control.md)<br/>
-[Элементы ActiveX в MFC. Использование стандартных страниц свойств](mfc-activex-controls-using-stock-property-pages.md)
+[Элементы управления ActiveX в MFC](mfc-activex-controls.md)<br/>
+[Элементы управления ActiveX в MFC. Использование изображений в элементе управления ActiveX](mfc-activex-controls-using-pictures-in-an-activex-control.md)<br/>
+[Элементы управления ActiveX в MFC. Использование страниц свойств запасов](mfc-activex-controls-using-stock-property-pages.md)

@@ -39,12 +39,12 @@ helpviewer_keywords:
 - operator<= member [STL/CLR]
 - operator< member [STL/CLR]
 ms.assetid: fb48cb75-d5ef-47ce-b526-bf60dc86c552
-ms.openlocfilehash: b21f9ec2ace54281f30f8f32134c7fb3466a1faa
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 271bc01f5c8fd9dd07bfa03035ae3d0204ebd8e7
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214858"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500595"
 ---
 # <a name="utility-stlclr"></a>utility (STL/CLR)
 
@@ -64,7 +64,7 @@ ms.locfileid: "87214858"
 
 ## <a name="declarations"></a>Объявления
 
-|Class|Описание:|
+|Класс|Описание|
 |-----------|-----------------|
 |[pair (STL/CLR)](#pair)|Создание оболочки для пары элементов.|
 
@@ -83,7 +83,7 @@ ms.locfileid: "87214858"
 
 ## <a name="members"></a>Элементы
 
-## <a name="pair-stlclr"></a><a name="pair"></a>пара (STL/CLR)
+## <a name="pair-stlclr"></a><a name="pair"></a> пара (STL/CLR)
 
 Класс шаблона описывает объект, который заключает в оболочку пару значений.
 
@@ -128,7 +128,7 @@ template<typename Value1,
 
 Объект хранит пару значений. Этот класс шаблона используется для объединения двух значений в один объект. Кроме того, объект `cliext::pair` (описанный здесь) хранит только управляемые типы; для хранения пары неуправляемых типов используйте `std::pair` , объявленную в `<utility>` .
 
-## <a name="pairfirst-stlclr"></a><a name="first"></a>пары:: First (STL/CLR)
+## <a name="pairfirst-stlclr"></a><a name="first"></a> пары:: First (STL/CLR)
 
 Первое упакованное значение.
 
@@ -165,7 +165,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairfirst_type-stlclr"></a><a name="first_type"></a>пара:: first_type (STL/CLR)
+## <a name="pairfirst_type-stlclr"></a><a name="first_type"></a> пара:: first_type (STL/CLR)
 
 Тип первого упакованного значения.
 
@@ -202,7 +202,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairoperator-stlclr"></a><a name="op_as"></a>Оператор пары:: operator = (STL/CLR)
+## <a name="pairoperator-stlclr"></a><a name="op_as"></a> Оператор пары:: operator = (STL/CLR)
 
 Заменяет сохраненную пару значений.
 
@@ -246,7 +246,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairpair-stlclr"></a><a name="pair_pair"></a>пара::p Air (STL/CLR)
+## <a name="pairpair-stlclr"></a><a name="pair_pair"></a> пара::p Air (STL/CLR)
 
 Конструирует объект-пару.
 
@@ -282,11 +282,11 @@ pair(Value1 val1, Value2 val2);
 
 `pair(pair<Value1, Value2>% right);`
 
-Инициализирует хранимую пару `right.` [парой:: First (STL/CLR)](../dotnet/pair-first-stl-clr.md) и `right.` [парой:: Second (STL/CLR)](../dotnet/pair-second-stl-clr.md).
+Инициализирует хранимую пару `right.` [парой:: First (STL/CLR)](#first) и `right.` [парой:: Second (STL/CLR)](#second).
 
 `pair(pair<Value1, Value2>^ right);`
 
-Инициализирует хранимую пару `right->` [парой:: First (STL/CLR)](../dotnet/pair-first-stl-clr.md) и `right>` [парой:: Second (STL/CLR)](../dotnet/pair-second-stl-clr.md).
+Инициализирует хранимую пару `right->` [парой:: First (STL/CLR)](#first) и `right>` [парой:: Second (STL/CLR)](#second).
 
 Конструктор:
 
@@ -331,7 +331,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairsecond-stlclr"></a><a name="second"></a>пара:: Second (STL/CLR)
+## <a name="pairsecond-stlclr"></a><a name="second"></a> пара:: Second (STL/CLR)
 
 Второе упакованное значение.
 
@@ -368,7 +368,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairsecond_type-stlclr"></a><a name="second_type"></a>пара:: second_type (STL/CLR)
+## <a name="pairsecond_type-stlclr"></a><a name="second_type"></a> пара:: second_type (STL/CLR)
 
 Тип второго упакованного значения.
 
@@ -405,7 +405,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairswap-stlclr"></a><a name="swap"></a>пары:: Swap (STL/CLR)
+## <a name="pairswap-stlclr"></a><a name="swap"></a> пары:: Swap (STL/CLR)
 
 Меняет местами содержимое двух пар.
 
@@ -474,7 +474,7 @@ x x x x x
 a b c
 ```
 
-## <a name="make_pair-stlclr"></a><a name="make_pair"></a>make_pair (STL/CLR)
+## <a name="make_pair-stlclr"></a><a name="make_pair"></a> make_pair (STL/CLR)
 
 Создайте `pair` из пары значений.
 
@@ -527,7 +527,7 @@ int main()
 [y, 4]
 ```
 
-## <a name="operator-pair-stlclr"></a><a name="op_neq"></a>operator! = (пара) (STL/CLR)
+## <a name="operator-pair-stlclr"></a><a name="op_neq"></a> operator! = (пара) (STL/CLR)
 
 Сравнение пар "не равно".
 
@@ -581,7 +581,7 @@ int main()
 [x 3] != [x 4] is True
 ```
 
-## <a name="operatorlt-pair-stlclr"></a><a name="op_lt"></a>Оператор &lt; (паре) (STL/CLR)
+## <a name="operatorlt-pair-stlclr"></a><a name="op_lt"></a> Оператор &lt; (паре) (STL/CLR)
 
 Сравнение пар "меньше".
 
@@ -635,7 +635,7 @@ int main()
 [x 3] < [x 4] is True
 ```
 
-## <a name="operatorlt-pair-stlclr"></a><a name="op_lteq"></a>operator &lt; = (пара) (STL/CLR)
+## <a name="operatorlt-pair-stlclr"></a><a name="op_lteq"></a> operator &lt; = (пара) (STL/CLR)
 
 Сравнение пар "меньше или равно".
 
@@ -689,7 +689,7 @@ int main()
 [x 4] <= [x 3] is False
 ```
 
-## <a name="operator-pair-stlclr"></a><a name="op_eq"></a>operator = = (пара) (STL/CLR)
+## <a name="operator-pair-stlclr"></a><a name="op_eq"></a> operator = = (пара) (STL/CLR)
 
 Сравнение пар "равенство".
 
@@ -743,7 +743,7 @@ int main()
 [x 3] == [x 4] is False
 ```
 
-## <a name="operatorgt-pair-stlclr"></a><a name="op_gt"></a>Оператор &gt; (паре) (STL/CLR)
+## <a name="operatorgt-pair-stlclr"></a><a name="op_gt"></a> Оператор &gt; (паре) (STL/CLR)
 
 Пара "больше, чем сравнение".
 
@@ -797,7 +797,7 @@ int main()
 [x 4] > [x 3] is True
 ```
 
-## <a name="operatorgt-pair-stlclr"></a><a name="op_gteq"></a>operator &gt; = (пара) (STL/CLR)
+## <a name="operatorgt-pair-stlclr"></a><a name="op_gteq"></a> operator &gt; = (пара) (STL/CLR)
 
 Сравнение пар "больше или равно".
 

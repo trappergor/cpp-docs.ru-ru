@@ -53,12 +53,12 @@ helpviewer_keywords:
 - top_item member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 6ee96b9f-8a33-4cf7-b7e0-6535c24bdefb
-ms.openlocfilehash: 5f5cfbb4f6125c1c72550018735b377e1507ab08
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 316899aae024fbc8d9e568d6b5684ec4cfb11558
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214895"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499658"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 
@@ -80,7 +80,7 @@ template<typename Value,
 
 ### <a name="parameters"></a>Параметры
 
-*Value*<br/>
+*Значение*<br/>
 Тип элемента в управляемой последовательности.
 
 *Контейнер*<br/>
@@ -117,7 +117,7 @@ template<typename Value,
 |[stack::top (STL/CLR)](#top)|Обращается к последнему элементу.|
 |[stack::to_array (STL/CLR)](#to_array)|Копирует управляемую последовательность в новый массив.|
 
-|Свойство|Description|
+|Свойство|Описание|
 |--------------|-----------------|
 |[stack::top_item (STL/CLR)](#top_item)|Обращается к последнему элементу.|
 
@@ -144,7 +144,7 @@ template<typename Value,
 
 ## <a name="members"></a>Элементы
 
-## <a name="stackassign-stlclr"></a><a name="assign"></a>Stack:: Assign (STL/CLR)
+## <a name="stackassign-stlclr"></a><a name="assign"></a> Stack:: Assign (STL/CLR)
 
 Заменяет все элементы.
 
@@ -198,7 +198,7 @@ a b c
 a b c
 ```
 
-## <a name="stackconst_reference-stlclr"></a><a name="const_reference"></a>Stack:: const_reference (STL/CLR)
+## <a name="stackconst_reference-stlclr"></a><a name="const_reference"></a> Stack:: const_reference (STL/CLR)
 
 Тип постоянной ссылки на элемент.
 
@@ -242,7 +242,7 @@ int main()
 c b a
 ```
 
-## <a name="stackcontainer_type-stlclr"></a><a name="container_type"></a>Stack:: container_type (STL/CLR)
+## <a name="stackcontainer_type-stlclr"></a><a name="container_type"></a> Stack:: container_type (STL/CLR)
 
 Тип базового контейнера.
 
@@ -284,7 +284,7 @@ int main()
 a b c
 ```
 
-## <a name="stackdifference_type-stlclr"></a><a name="difference_type"></a>стек: ifference_type:d (STL/CLR)
+## <a name="stackdifference_type-stlclr"></a><a name="difference_type"></a> стек: ifference_type:d (STL/CLR)
 
 Типы расстояния со знаком между двумя элементами.
 
@@ -342,7 +342,7 @@ pushing 2 = -2
 popping 3 = 3
 ```
 
-## <a name="stackempty-stlclr"></a><a name="empty"></a>Stack:: Empty (STL/CLR)
+## <a name="stackempty-stlclr"></a><a name="empty"></a> Stack:: Empty (STL/CLR)
 
 Проверяет отсутствие элементов.
 
@@ -354,7 +354,7 @@ bool empty();
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция-член возвращает значение true для пустой управляемой последовательности. Он эквивалентен [Stack:: size (STL/CLR)](../dotnet/stack-size-stl-clr.md) `() == 0` . Он используется для проверки того, пуст ли стек.
+Эта функция-член возвращает значение true для пустой управляемой последовательности. Он эквивалентен [Stack:: size (STL/CLR)](#size) `() == 0` . Он используется для проверки того, пуст ли стек.
 
 ### <a name="example"></a>Пример
 
@@ -396,7 +396,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="stackgeneric_container-stlclr"></a><a name="generic_container"></a>Stack:: generic_container (STL/CLR)
+## <a name="stackgeneric_container-stlclr"></a><a name="generic_container"></a> Stack:: generic_container (STL/CLR)
 
 Тип универсального интерфейса для адаптера контейнера.
 
@@ -459,7 +459,7 @@ a b c d
 a b c d e
 ```
 
-## <a name="stackgeneric_value-stlclr"></a><a name="generic_value"></a>Stack:: generic_value (STL/CLR)
+## <a name="stackgeneric_value-stlclr"></a><a name="generic_value"></a> Stack:: generic_value (STL/CLR)
 
 Тип элемента для использования с универсальным интерфейсом для контейнера.
 
@@ -517,7 +517,7 @@ a b c
 c b a
 ```
 
-## <a name="stackget_container-stlclr"></a><a name="get_container"></a>Stack:: get_container (STL/CLR)
+## <a name="stackget_container-stlclr"></a><a name="get_container"></a> Stack:: get_container (STL/CLR)
 
 Осуществляет доступ к базовому контейнеру.
 
@@ -559,7 +559,7 @@ int main()
 a b c
 ```
 
-## <a name="stackoperator-stlclr"></a><a name="op_as"></a>Stack:: operator = (STL/CLR)
+## <a name="stackoperator-stlclr"></a><a name="op_as"></a> Stack:: operator = (STL/CLR)
 
 Заменяет управляемую последовательность.
 
@@ -613,7 +613,7 @@ a b c
 a b c
 ```
 
-## <a name="stackpop-stlclr"></a><a name="pop"></a>Stack::p op (STL/CLR)
+## <a name="stackpop-stlclr"></a><a name="pop"></a> Stack::p op (STL/CLR)
 
 Удаляет последний элемент.
 
@@ -661,7 +661,7 @@ a b c
 a b
 ```
 
-## <a name="stackpush-stlclr"></a><a name="push"></a>Stack::p тельную (STL/CLR)
+## <a name="stackpush-stlclr"></a><a name="push"></a> Stack::p тельную (STL/CLR)
 
 Добавляет новый последний элемент.
 
@@ -702,7 +702,7 @@ int main()
 a b c
 ```
 
-## <a name="stackreference-stlclr"></a><a name="reference"></a>Stack:: Reference (STL/CLR)
+## <a name="stackreference-stlclr"></a><a name="reference"></a> Stack:: Reference (STL/CLR)
 
 Тип ссылки на элемент.
 
@@ -751,7 +751,7 @@ a b c
 a b x
 ```
 
-## <a name="stacksize-stlclr"></a><a name="size"></a>Stack:: size (STL/CLR)
+## <a name="stacksize-stlclr"></a><a name="size"></a> Stack:: size (STL/CLR)
 
 Подсчитывает количество элементов.
 
@@ -763,7 +763,7 @@ size_type size();
 
 ### <a name="remarks"></a>Remarks
 
-Функция-член возвращает длину управляемой последовательности. Он используется для определения количества элементов, находящихся в настоящий момент в управляемой последовательности. Если вас интересует только то, имеет ли последовательность ненулевой размер, см. раздел [Stack:: Empty (STL/CLR)](../dotnet/stack-empty-stl-clr.md) `()` .
+Функция-член возвращает длину управляемой последовательности. Он используется для определения количества элементов, находящихся в настоящий момент в управляемой последовательности. Если вас интересует только то, имеет ли последовательность ненулевой размер, см. раздел [Stack:: Empty (STL/CLR)](#empty) `()` .
 
 ### <a name="example"></a>Пример
 
@@ -805,7 +805,7 @@ size() = 2 after popping
 size() = 4 after adding 2
 ```
 
-## <a name="stacksize_type-stlclr"></a><a name="size_type"></a>Stack:: size_type (STL/CLR)
+## <a name="stacksize_type-stlclr"></a><a name="size_type"></a> Stack:: size_type (STL/CLR)
 
 Тип расстояния со знаком между двумя элементами.
 
@@ -854,7 +854,7 @@ a b c
 size difference = 2
 ```
 
-## <a name="stackstack-stlclr"></a><a name="stack"></a>Stack:: Stack (STL/CLR)
+## <a name="stackstack-stlclr"></a><a name="stack"></a> Stack:: Stack (STL/CLR)
 
 Конструирует объект адаптера контейнера.
 
@@ -947,7 +947,7 @@ x x x x x
 x x x x x
 ```
 
-## <a name="stackto_array-stlclr"></a><a name="to_array"></a>Stack:: to_array (STL/CLR)
+## <a name="stackto_array-stlclr"></a><a name="to_array"></a> Stack:: to_array (STL/CLR)
 
 Копирует управляемую последовательность в новый массив.
 
@@ -997,7 +997,7 @@ a b c d
 a b c
 ```
 
-## <a name="stacktop-stlclr"></a><a name="top"></a>Stack:: Top (STL/CLR)
+## <a name="stacktop-stlclr"></a><a name="top"></a> Stack:: Top (STL/CLR)
 
 Обращается к последнему элементу.
 
@@ -1049,7 +1049,7 @@ top() = c
 a b x
 ```
 
-## <a name="stacktop_item-stlclr"></a><a name="top_item"></a>Stack:: top_item (STL/CLR)
+## <a name="stacktop_item-stlclr"></a><a name="top_item"></a> Stack:: top_item (STL/CLR)
 
 Обращается к последнему элементу.
 
@@ -1101,7 +1101,7 @@ top_item = c
 a b x
 ```
 
-## <a name="stackvalue_type-stlclr"></a><a name="value_type"></a>Stack:: value_type (STL/CLR)
+## <a name="stackvalue_type-stlclr"></a><a name="value_type"></a> Stack:: value_type (STL/CLR)
 
 Тип элемента.
 
@@ -1146,7 +1146,7 @@ int main()
 c b a
 ```
 
-## <a name="operator-stack-stlclr"></a><a name="op_neq"></a>operator! = (стек) (STL/CLR)
+## <a name="operator-stack-stlclr"></a><a name="op_neq"></a> operator! = (стек) (STL/CLR)
 
 Сравнение стека не равно.
 
@@ -1217,7 +1217,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="operatorlt-stack-stlclr"></a><a name="op_lt"></a>Оператор &lt; (stack) (STL/CLR)
+## <a name="operatorlt-stack-stlclr"></a><a name="op_lt"></a> Оператор &lt; (stack) (STL/CLR)
 
 Стек меньше, чем сравнение.
 
@@ -1240,7 +1240,7 @@ template<typename Value,
 
 ### <a name="remarks"></a>Remarks
 
-Функция оператора возвращает значение true, если для наименьшей позицией, `i` для которой `!(right[i] < left[i])` также задано значение true `left[i] < right[i]` . В противном случае он возвращает `left->` [Stack:: size (STL/CLR)](../dotnet/stack-size-stl-clr.md) `() <` `right->size()` , который используется для проверки, является ли *Left* упорядоченным до *право* , если два стека сравниваются по элементу.
+Функция оператора возвращает значение true, если для наименьшей позицией, `i` для которой `!(right[i] < left[i])` также задано значение true `left[i] < right[i]` . В противном случае он возвращает `left->` [Stack:: size (STL/CLR)](#size) `() <` `right->size()` , который используется для проверки, является ли *Left* упорядоченным до *право* , если два стека сравниваются по элементу.
 
 ### <a name="example"></a>Пример
 
@@ -1288,7 +1288,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="operatorlt-stack-stlclr"></a><a name="op_lteq"></a>Оператор &lt; = (stack) (STL/CLR)
+## <a name="operatorlt-stack-stlclr"></a><a name="op_lteq"></a> Оператор &lt; = (stack) (STL/CLR)
 
 Сравнение с стеком "меньше или равно".
 
@@ -1359,7 +1359,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="operator-stack-stlclr"></a><a name="op_eq"></a>оператор = = (stack) (STL/CLR)
+## <a name="operator-stack-stlclr"></a><a name="op_eq"></a> оператор = = (stack) (STL/CLR)
 
 Сравнение с одинаковым стеком.
 
@@ -1430,7 +1430,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="operatorgt-stack-stlclr"></a><a name="op_gt"></a>Оператор &gt; (stack) (STL/CLR)
+## <a name="operatorgt-stack-stlclr"></a><a name="op_gt"></a> Оператор &gt; (stack) (STL/CLR)
 
 Стек больше, чем сравнение.
 
@@ -1501,7 +1501,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="operatorgt-stack-stlclr"></a><a name="op_gteq"></a>Оператор &gt; = (stack) (STL/CLR)
+## <a name="operatorgt-stack-stlclr"></a><a name="op_gteq"></a> Оператор &gt; = (stack) (STL/CLR)
 
 Сравнение с стеком "больше или равно".
 

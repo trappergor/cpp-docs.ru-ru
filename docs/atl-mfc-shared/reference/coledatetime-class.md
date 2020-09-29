@@ -35,12 +35,12 @@ helpviewer_keywords:
 - dates, handling in MFC
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
-ms.openlocfilehash: 9ebbab02860daaeb57c24d3e0901666861adfc2b
-ms.sourcegitcommit: c8f1605354724a13566bc3b0fac3c5d98265f1d0
+ms.openlocfilehash: 38c98793e7e1b22d166de8a869c57f510de7b284
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89062162"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500177"
 ---
 # <a name="coledatetime-class"></a>Класс COleDateTime
 
@@ -86,7 +86,7 @@ class COleDateTime
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Название|Описание|
 |----------|-----------------|
 |[COleDateTime:: operator = =, COleDateTime:: operator < и т. д.](#coledatetime_relational_operators)|Сравните два `COleDateTime` значения.|
 |[COleDateTime:: operator +, COleDateTime:: operator-](#operator_add_-)|Добавление и вычитание `COleDateTime` значений.|
@@ -96,7 +96,7 @@ class COleDateTime
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Название|Описание|
 |----------|-----------------|
 |[COleDateTime:: m_dt](#m_dt)|Содержит базовый `DATE` для этого `COleDateTime` объекта.|
 |[COleDateTime:: m_status](#m_status)|Содержит состояние этого `COleDateTime` объекта.|
@@ -120,7 +120,7 @@ class COleDateTime
 > [!CAUTION]
 > В приведенной выше таблице, несмотря на то, что значения дня становятся отрицательными до полуночи 30 декабря 1899 г., значения времени суток не используются. Например, 6:00 AM всегда представляется десятичным значением 0,25 независимо от того, является ли целое число, представляющее день, положительным (после 30 декабря 1899) или отрицательным (до 30 декабря 1899 г.). Это означает, что простое сравнение с плавающей точкой будет ошибочно сортировать значение, `COleDateTime` представляющее 6:00 AM 12/29/1899, как показано **выше** , чем значение, представляющее 7:00 в один день.
 
-`COleDateTime`Класс обрабатывает даты с 1 января 100 до 31 декабря 9999. `COleDateTime`Класс использует григорианский календарь; он не поддерживает Юлианские даты. `COleDateTime` игнорирует летнее время. (См. раздел [Дата и время: Поддержка автоматизации](../../atl-mfc-shared/date-and-time-automation-support.md).)
+`COleDateTime`Класс обрабатывает даты с 1 января 100 до 31 декабря 9999. `COleDateTime`Класс использует григорианский календарь; он не поддерживает Юлианские даты. `COleDateTime` игнорирует летнее время. (См. раздел [Дата и время: Поддержка автоматизации](../date-and-time.md).)
 
 > [!NOTE]
 > Можно использовать `%y` Формат для получения двузначного года только для дат, начиная с 1900. Если вы используете `%y` Формат на дату до 1900, код создает ошибку Assert.
@@ -135,7 +135,7 @@ class COleDateTime
 
 Базовые арифметические операции для `COleDateTime` значений используют сопутствующий класс [коледатетимеспан](../../atl-mfc-shared/reference/coledatetimespan-class.md). `COleDateTimeSpan` значения определяют интервал времени. Связь между этими классами похожа на одну между [CTime](../../atl-mfc-shared/reference/ctime-class.md) и [ктимеспан](../../atl-mfc-shared/reference/ctimespan-class.md).
 
-Дополнительные сведения о `COleDateTime` `COleDateTimeSpan` классах и см. в статье [Дата и время: Поддержка автоматизации](../../atl-mfc-shared/date-and-time-automation-support.md).
+Дополнительные сведения о `COleDateTime` `COleDateTimeSpan` классах и см. в статье [Дата и время: Поддержка автоматизации](../date-and-time.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -267,7 +267,7 @@ COleDateTime(const DBTIMESTAMP& timeStamp) throw();
 
 Дополнительные сведения см. в разделе структуры [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) и [fileTime](/windows/win32/api/minwinbase/ns-minwinbase-filetime) в Windows SDK.
 
-Дополнительные сведения о границах для `COleDateTime` значений см. в статье [Дата и время: Поддержка автоматизации](../../atl-mfc-shared/date-and-time-automation-support.md).
+Дополнительные сведения о границах для `COleDateTime` значений см. в статье [Дата и время: Поддержка автоматизации](../date-and-time.md).
 
 > [!NOTE]
 > Конструктор, использующий `DBTIMESTAMP` параметр, доступен только при включении OLEDB. h.
@@ -653,7 +653,7 @@ int GetSecond() const throw();
 > [!NOTE]
 > `COleDateTime`Класс не поддерживает високосные секунды.
 
-Дополнительные сведения о реализации `COleDateTime` см. в статье [Дата и время: Поддержка автоматизации](../../atl-mfc-shared/date-and-time-automation-support.md).
+Дополнительные сведения о реализации `COleDateTime` см. в статье [Дата и время: Поддержка автоматизации](../date-and-time.md).
 
 Сведения о других функциях элементов, которые запрашивают значение этого `COleDateTime` объекта, см. в следующих функциях элементов:
 
@@ -735,7 +735,7 @@ enum DateTimeStatus
 
 - [operator + =,-=](#operator_add_eq_-_eq)
 
-Дополнительные сведения о границах для `COleDateTime` значений см. в статье [Дата и время: Поддержка автоматизации](../../atl-mfc-shared/date-and-time-automation-support.md).
+Дополнительные сведения о границах для `COleDateTime` значений см. в статье [Дата и время: Поддержка автоматизации](../date-and-time.md).
 
 ### <a name="example"></a>Пример
 
@@ -773,7 +773,7 @@ int GetYear() const throw();
 
 - [жетдайофеар](#getdayofyear)
 
-Дополнительные сведения о границах для `COleDateTime` значений см. в статье [Дата и время: Поддержка автоматизации](../../atl-mfc-shared/date-and-time-automation-support.md).
+Дополнительные сведения о границах для `COleDateTime` значений см. в статье [Дата и время: Поддержка автоматизации](../date-and-time.md).
 
 ### <a name="example"></a>Пример
 
@@ -792,7 +792,7 @@ DATE m_dt;
 > [!CAUTION]
 > Изменение значения `DATE` объекта, к которому обращается указатель, возвращаемый этой функцией, приведет к изменению значения этого `COleDateTime` объекта. Он не изменяет состояние этого `COleDateTime` объекта.
 
-Дополнительные сведения о реализации `DATE` объекта см. в статье [Дата и время: Поддержка автоматизации](../../atl-mfc-shared/date-and-time-automation-support.md).
+Дополнительные сведения о реализации `DATE` объекта см. в статье [Дата и время: Поддержка автоматизации](../date-and-time.md).
 
 ## <a name="coledatetimem_status"></a><a name="m_status"></a> COleDateTime:: m_status
 
@@ -847,7 +847,7 @@ COleDateTime& operator=(const UDATE& uDate) throw();
 
 Дополнительные сведения см. в разделе структуры [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) и [fileTime](/windows/win32/api/minwinbase/ns-minwinbase-filetime) в Windows SDK.
 
-Дополнительные сведения о границах для `COleDateTime` значений см. в статье [Дата и время: Поддержка автоматизации](../../atl-mfc-shared/date-and-time-automation-support.md).
+Дополнительные сведения о границах для `COleDateTime` значений см. в статье [Дата и время: Поддержка автоматизации](../date-and-time.md).
 
 ## <a name="coledatetimeoperator---"></a><a name="operator_add_-"></a> COleDateTime:: operator +,-
 
@@ -873,7 +873,7 @@ COleDateTimeSpan operator-(const COleDateTime& date) const throw();
 
 Дополнительные сведения о допустимых, недопустимых и нулевых значениях состояния см. в разделе переменная члена [M_STATUS](#m_status) .
 
-Дополнительные сведения о границах для `COleDateTime` значений см. в статье [Дата и время: Поддержка автоматизации](../../atl-mfc-shared/date-and-time-automation-support.md).
+Дополнительные сведения о границах для `COleDateTime` значений см. в статье [Дата и время: Поддержка автоматизации](../date-and-time.md).
 
 ### <a name="example"></a>Пример
 
@@ -900,7 +900,7 @@ COleDateTime& operator-=(COleDateTimeSpan dateSpan) throw();
 
 **+=** Операторы и **-=** будут утверждать, если `COleDateTime` объект имеет значение null. Пример см. в разделе [реляционные операторы COleDateTime](#coledatetime_relational_operators) .
 
-Дополнительные сведения о границах для `COleDateTime` значений см. в статье [Дата и время: Поддержка автоматизации](../../atl-mfc-shared/date-and-time-automation-support.md).
+Дополнительные сведения о границах для `COleDateTime` значений см. в статье [Дата и время: Поддержка автоматизации](../date-and-time.md).
 
 ## <a name="coledatetimeoperator-date"></a><a name="operator_date"></a> COleDateTime:: Оператор DATE
 
@@ -912,7 +912,7 @@ operator DATE() const throw();
 
 ### <a name="remarks"></a>Remarks
 
-Этот оператор возвращает `DATE` объект, значение которого копируется из этого `COleDateTime` объекта. Дополнительные сведения о реализации `DATE` объекта см. в статье [Дата и время: Поддержка автоматизации](../../atl-mfc-shared/date-and-time-automation-support.md).
+Этот оператор возвращает `DATE` объект, значение которого копируется из этого `COleDateTime` объекта. Дополнительные сведения о реализации `DATE` объекта см. в статье [Дата и время: Поддержка автоматизации](../date-and-time.md).
 
 `DATE`Оператор будет утверждать, если `COleDateTime` объект имеет значение null. Пример см. в разделе [реляционные операторы COleDateTime](#coledatetime_relational_operators) .
 
@@ -975,7 +975,7 @@ bool ParseDateTime(
 
 Если строку не удалось преобразовать в значение даты-времени или произошло числовое переполнение, то состояние этого `COleDateTime` объекта недопустимо.
 
-Дополнительные сведения о границах и реализации `COleDateTime` значений см. в статье [Дата и время: Поддержка автоматизации](../../atl-mfc-shared/date-and-time-automation-support.md).
+Дополнительные сведения о границах и реализации `COleDateTime` значений см. в статье [Дата и время: Поддержка автоматизации](../date-and-time.md).
 
 ## <a name="coledatetimesetdate"></a><a name="setdate"></a> COleDateTime:: SetDate
 
@@ -1048,7 +1048,7 @@ int SetDate(
 
 - [жетдайофеар](#getdayofyear)
 
-Дополнительные сведения о границах для `COleDateTime` значений см. в статье [Дата и время: Поддержка автоматизации](../../atl-mfc-shared/date-and-time-automation-support.md).
+Дополнительные сведения о границах для `COleDateTime` значений см. в статье [Дата и время: Поддержка автоматизации](../date-and-time.md).
 
 ### <a name="example"></a>Пример
 
@@ -1132,7 +1132,7 @@ int SetDateTime(
 
 - [жетдайофеар](#getdayofyear)
 
-Дополнительные сведения о границах для `COleDateTime` значений см. в статье [Дата и время: Поддержка автоматизации](../../atl-mfc-shared/date-and-time-automation-support.md).
+Дополнительные сведения о границах для `COleDateTime` значений см. в статье [Дата и время: Поддержка автоматизации](../date-and-time.md).
 
 ### <a name="example"></a>Пример
 
@@ -1225,7 +1225,7 @@ int SetTime(
 
 - [жетдайофеар](#getdayofyear)
 
-Дополнительные сведения о границах для `COleDateTime` значений см. в статье [Дата и время: Поддержка автоматизации](../../atl-mfc-shared/date-and-time-automation-support.md).
+Дополнительные сведения о границах для `COleDateTime` значений см. в статье [Дата и время: Поддержка автоматизации](../date-and-time.md).
 
 ### <a name="example"></a>Пример
 

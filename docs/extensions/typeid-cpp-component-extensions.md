@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - typeid keyword [C++]
 ms.assetid: e9706cae-e7c4-4d6d-b474-646d73df3e70
-ms.openlocfilehash: 56319fb773b8398f85f5fd82c812f0efdb7dde15
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bfb226bc11f0fd7d3feddfb2c50ffe1aa6311d3d
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225115"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500382"
 ---
 # <a name="typeid--ccli-and-ccx"></a>typeid (C++/CLI и C++/CX)
 
@@ -74,7 +74,7 @@ type::typeid
 
 **`typeid`** должен иметь возможность оценивать имя типа (тип) во время компиляции, в то время как GetType вычисляет тип, возвращаемый во время выполнения.
 
-**`typeid`** может принимать собственное имя типа или псевдоним среды CLR для имени собственного типа; Дополнительные сведения см. [в разделе .NET Framework эквиваленты для собственных типов c++ (c++/CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md) .
+**`typeid`** может принимать собственное имя типа или псевдоним среды CLR для имени собственного типа; Дополнительные сведения см. [в разделе .NET Framework эквиваленты для собственных типов c++ (c++/CLI)](../dotnet/managed-types-cpp-cli.md#dotnet) .
 
 **`typeid`** также работает с собственными типами, хотя он по-прежнему будет возвращать `System::Type` .  Чтобы получить структуру type_info, используйте [ `typeid` оператор](../cpp/typeid-operator.md).
 
@@ -188,6 +188,6 @@ int::typeid != pointer_to_int::typeid, as expected
 int::typeid == handle_to_int::typeid, as expected
 ```
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также раздел
 
 [Расширения компонентов для .NET и UWP](component-extensions-for-runtime-platforms.md)

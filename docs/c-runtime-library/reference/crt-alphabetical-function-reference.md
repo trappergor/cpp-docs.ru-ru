@@ -1,39 +1,39 @@
-﻿---
-title: Алфавитный указатель функций UCRT
+---
+title: Справочник по алфавитной функции UCRT
 ms.date: 01/31/2019
 f1_keywords:
 - vc.tables.runtime
 ms.assetid: c2169b0e-cd86-489a-a2fa-2ee15c03b5c2
-ms.openlocfilehash: 855af5b7518ba36418d58f1dc2ac5f0bb6e54208
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 73fd08ffa58aabfd9a40e0296b21d4a5baea8750
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340343"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499397"
 ---
-# <a name="ucrt-alphabetical-function-reference"></a>Алфавитный указатель функций UCRT
+# <a name="ucrt-alphabetical-function-reference"></a>Справочник по алфавитной функции UCRT
 
-Справочная документация по библиотеке универсальной среды выполнения C (UCRT, часто называемой просто CRT) упорядочена по именам подпрограмм в алфавитном порядке. Для поиска подпрограмм CRT по их функциональности см. раздел  [Подпрограммы универсальной среды выполнения C по категориям](../../c-runtime-library/run-time-routines-by-category.md).
+Справочная документация по библиотеке универсальной среды выполнения C (UCRT, просто CRT) упорядочивается в алфавитном порядке по подпрограмме. Чтобы найти подпрограммы CRT на основе функциональных возможностей, см. раздел [универсальные подпрограммы среды выполнения C по категориям](../../c-runtime-library/run-time-routines-by-category.md).
 
-## <a name="a"></a>А
+## <a name="a"></a>Объект
 
-[abort](abort.md)
+[рвал](abort.md)
 
-[abs](abs-labs-llabs-abs64.md)
+[просто](abs-labs-llabs-abs64.md)
 
 [_abs64](abs-labs-llabs-abs64.md)
 
-[access](access-crt.md)
+[имеет](access-crt.md)
 
 [_access](access-waccess.md)
 
 [_access_s](access-s-waccess-s.md)
 
-[acos](acos-acosf-acosl.md)
+[ACOS](acos-acosf-acosl.md)
 
 [acosf](acos-acosf-acosl.md)
 
-[acosh](acosh-acoshf-acoshl.md)
+[ACOSH](acosh-acoshf-acoshl.md)
 
 [acoshf](acosh-acoshf-acoshl.md)
 
@@ -77,7 +77,7 @@ ms.locfileid: "62340343"
 
 [_amsg_exit](amsg-exit.md)
 
-[и](and.md)
+[and](and.md)
 
 [and_eq](and-eq.md)
 
@@ -85,11 +85,11 @@ ms.locfileid: "62340343"
 
 [asctime_s](asctime-s-wasctime-s.md)
 
-[asin](asin-asinf-asinl.md)
+[ASIN](asin-asinf-asinl.md)
 
 [asinf](asin-asinf-asinl.md)
 
-[asinh](asinh-asinhf-asinhl.md)
+[ASINH](asinh-asinhf-asinhl.md)
 
 [asinhf](asinh-asinhf-asinhl.md)
 
@@ -97,7 +97,7 @@ ms.locfileid: "62340343"
 
 [asinl](asin-asinf-asinl.md)
 
-[assert](assert-macro-assert-wassert.md)
+[утверждающе](assert-macro-assert-wassert.md)
 
 [_assert](assert-macro-assert-wassert.md)
 
@@ -107,7 +107,7 @@ ms.locfileid: "62340343"
 
 [_ASSERTE](assert-asserte-assert-expr-macros.md)
 
-[atan](atan-atanf-atanl-atan2-atan2f-atan2l.md)
+[Atan](atan-atanf-atanl-atan2-atan2f-atan2l.md)
 
 [atan2](atan-atanf-atanl-atan2-atan2f-atan2l.md)
 
@@ -159,7 +159,7 @@ ms.locfileid: "62340343"
 
 [_atoll_l](atoll-atoll-l-wtoll-wtoll-l.md)
 
-## <a name="b"></a>С
+## <a name="b"></a>B
 
 [_beginthread](beginthread-beginthreadex.md)
 
@@ -181,7 +181,7 @@ ms.locfileid: "62340343"
 
 [_byteswap_ushort](byteswap-uint64-byteswap-ulong-byteswap-ushort.md)
 
-## <a name="c"></a>В
+## <a name="c"></a>C
 
 [_c_exit](cexit-c-exit.md)
 
@@ -191,7 +191,7 @@ ms.locfileid: "62340343"
 
 [_cabs](cabs.md)
 
-[cabs](cabs-cabsf-cabsl.md)
+[Cabs](cabs-cabsf-cabsl.md)
 
 [cabsf](cabs-cabsf-cabsl.md)
 
@@ -299,7 +299,7 @@ ms.locfileid: "62340343"
 
 [_chmod](chmod-wchmod.md)
 
-[chsize](posix-chsize.md)
+[чсизе](posix-chsize.md)
 
 [_chsize](chsize.md)
 
@@ -343,7 +343,7 @@ ms.locfileid: "62340343"
 
 [_configthreadlocale](configthreadlocale.md)
 
-[conj](conj-conjf-conjl.md)
+[конж](conj-conjf-conjl.md)
 
 [conjf](conj-conjf-conjl.md)
 
@@ -357,7 +357,7 @@ ms.locfileid: "62340343"
 
 [_controlfp_s](controlfp-s.md)
 
-[copysign](copysign-copysignf-copysignl-copysign-copysignf-copysignl.md)
+[кописигн](copysign-copysignf-copysignl-copysign-copysignf-copysignl.md)
 
 [_copysign](copysign-copysignf-copysignl-copysign-copysignf-copysignl.md)
 
@@ -369,7 +369,7 @@ ms.locfileid: "62340343"
 
 [_copysignl](copysign-copysignf-copysignl-copysign-copysignf-copysignl.md)
 
-[cos](cos-cosf-cosl.md)
+[COS](cos-cosf-cosl.md)
 
 [cosf](cos-cosf-cosl.md)
 
@@ -521,7 +521,7 @@ ms.locfileid: "62340343"
 
 [ctanl](ctan-ctanf-ctanl.md)
 
-[ctime](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)
+[CTime](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)
 
 [ctime_s](ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)
 
@@ -535,7 +535,7 @@ ms.locfileid: "62340343"
 
 [_cwait](cwait.md)
 
-[cwait](posix-cwait.md)
+[кваит](posix-cwait.md)
 
 [_cwprintf](cprintf-cprintf-l-cwprintf-cwprintf-l.md)
 
@@ -571,7 +571,7 @@ ms.locfileid: "62340343"
 
 [_dup](dup-dup2.md)
 
-[dup](posix-dup-dup2.md)
+[DUP](posix-dup-dup2.md)
 
 [_dup2](dup-dup2.md)
 
@@ -585,7 +585,7 @@ ms.locfileid: "62340343"
 
 [_ecvt](ecvt.md)
 
-[ecvt](posix-ecvt.md)
+[еквт](posix-ecvt.md)
 
 [_ecvt_s](ecvt-s.md)
 
@@ -593,7 +593,7 @@ ms.locfileid: "62340343"
 
 [_endthreadex](endthread-endthreadex.md)
 
-[eof](posix-eof.md)
+[конца](posix-eof.md)
 
 [_eof](eof.md)
 
@@ -649,7 +649,7 @@ ms.locfileid: "62340343"
 
 [exp](exp-expf.md)
 
-[exp2](exp2-exp2f-exp2l.md)
+[EXP2](exp2-exp2f-exp2l.md)
 
 [exp2f](exp2-exp2f-exp2l.md)
 
@@ -667,7 +667,7 @@ ms.locfileid: "62340343"
 
 [expm1l](expm1-expm1f-expm1l.md)
 
-## <a name="f"></a>C
+## <a name="f"></a>F
 
 [fabs](fabs-fabsf-fabsl.md)
 
@@ -683,7 +683,7 @@ ms.locfileid: "62340343"
 
 [_fcvt](fcvt.md)
 
-[fcvt](posix-fcvt.md)
+[фквт](posix-fcvt.md)
 
 [_fcvt_s](fcvt-s.md)
 
@@ -753,7 +753,7 @@ ms.locfileid: "62340343"
 
 [_filelengthi64](filelength-filelengthi64.md)
 
-[fileno](posix-fileno.md)
+[филено](posix-fileno.md)
 
 [_fileno](fileno.md)
 
@@ -787,13 +787,13 @@ ms.locfileid: "62340343"
 
 [_finitef](finite-finitef.md)
 
-[floor](floor-floorf-floorl.md)
+[фабрич](floor-floorf-floorl.md)
 
 [floorf](floor-floorf-floorl.md)
 
 [floorl](floor-floorf-floorl.md)
 
-[flushall](posix-flushall.md)
+[флушалл](posix-flushall.md)
 
 [_flushall](flushall.md)
 
@@ -973,9 +973,9 @@ ms.locfileid: "62340343"
 
 [_fwscanf_s_l](fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md)
 
-## <a name="g"></a>П
+## <a name="g"></a>G
 
-[gcvt](posix-gcvt.md)
+[гквт](posix-gcvt.md)
 
 [_gcvt](gcvt.md)
 
@@ -1065,7 +1065,7 @@ ms.locfileid: "62340343"
 
 [_getpid](getpid.md)
 
-[getpid](posix-getpid.md)
+[жетпид](posix-getpid.md)
 
 [gets_s](gets-s-getws-s.md)
 
@@ -1115,7 +1115,7 @@ ms.locfileid: "62340343"
 
 [_hypot](hypot-hypotf-hypotl-hypot-hypotf-hypotl.md)
 
-[hypotf](hypot-hypotf-hypotl-hypot-hypotf-hypotl.md)
+[хипотф](hypot-hypotf-hypotl-hypot-hypotf-hypotl.md)
 
 [_hypotf](hypot-hypotf-hypotl-hypot-hypotf-hypotl.md)
 
@@ -1169,9 +1169,9 @@ ms.locfileid: "62340343"
 
 [_isatty](isatty.md)
 
-[isatty](posix-isatty.md)
+[исатти](posix-isatty.md)
 
-[isblank](isblank-iswblank-isblank-l-iswblank-l.md)
+[ISBLANK](isblank-iswblank-isblank-l-iswblank-l.md)
 
 [_isblank_l](isblank-iswblank-isblank-l-iswblank-l.md)
 
@@ -1181,13 +1181,13 @@ ms.locfileid: "62340343"
 
 [__iscsym](iscsym-functions.md)
 
-[iscsym](iscsym-functions.md)
+[исксим](iscsym-functions.md)
 
 [_iscsym_l](iscsym-functions.md)
 
 [__iscsymf](iscsym-functions.md)
 
-[iscsymf](iscsym-functions.md)
+[исксимф](iscsym-functions.md)
 
 [_iscsymf](iscsym-functions.md)
 
@@ -1199,27 +1199,27 @@ ms.locfileid: "62340343"
 
 [_isdigit_l](isdigit-iswdigit-isdigit-l-iswdigit-l.md)
 
-[isfinite](finite-finitef.md)
+[isFinite](finite-finitef.md)
 
 [isgraph](isgraph-iswgraph-isgraph-l-iswgraph-l.md)
 
 [_isgraph_l](isgraph-iswgraph-isgraph-l-iswgraph-l.md)
 
-[isgreater](floating-point-ordering.md)
+[комощный](floating-point-ordering.md)
 
-[isgreaterequal](floating-point-ordering.md)
+[исгреатерекуал](floating-point-ordering.md)
 
-[isinf](isinf.md)
+[исинф](isinf.md)
 
 [isleadbyte](isleadbyte-isleadbyte-l.md)
 
 [_isleadbyte_l](isleadbyte-isleadbyte-l.md)
 
-[isless](floating-point-ordering.md)
+[не больше](floating-point-ordering.md)
 
-[islessequal](floating-point-ordering.md)
+[ислессекуал](floating-point-ordering.md)
 
-[islessgreater](floating-point-ordering.md)
+[ислессгреатер](floating-point-ordering.md)
 
 [islower](islower-iswlower-islower-l-iswlower-l.md)
 
@@ -1349,7 +1349,7 @@ ms.locfileid: "62340343"
 
 [_ismbstrail_l](ismbslead-ismbstrail-ismbslead-l-ismbstrail-l.md)
 
-[isnan](isnan-isnan-isnanf.md)
+[IsNaN](isnan-isnan-isnanf.md)
 
 [_isnan](isnan-isnan-isnanf.md)
 
@@ -1369,13 +1369,13 @@ ms.locfileid: "62340343"
 
 [_isspace_l](isspace-iswspace-isspace-l-iswspace-l.md)
 
-[isunordered](floating-point-ordering.md)
+[исунордеред](floating-point-ordering.md)
 
 [isupper](isupper-isupper-l-iswupper-iswupper-l.md)
 
 [_isupper_l](isupper-isupper-l-iswupper-iswupper-l.md)
 
-[iswalnum](isalnum-iswalnum-isalnum-l-iswalnum-l.md)
+[исвалнум](isalnum-iswalnum-isalnum-l-iswalnum-l.md)
 
 [_iswalnum_l](isalnum-iswalnum-isalnum-l-iswalnum-l.md)
 
@@ -1389,7 +1389,7 @@ ms.locfileid: "62340343"
 
 [_iswblank_l](isblank-iswblank-isblank-l-iswblank-l.md)
 
-[iswcntrl](iscntrl-iswcntrl-iscntrl-l-iswcntrl-l.md)
+[исвкнтрл](iscntrl-iswcntrl-iscntrl-l-iswcntrl-l.md)
 
 [_iswcntrl_l](iscntrl-iswcntrl-iscntrl-l-iswcntrl-l.md)
 
@@ -1405,7 +1405,7 @@ ms.locfileid: "62340343"
 
 [_iswctype_l](isctype-iswctype-isctype-l-iswctype-l.md)
 
-[iswdigit](isdigit-iswdigit-isdigit-l-iswdigit-l.md)
+[исвдигит](isdigit-iswdigit-isdigit-l-iswdigit-l.md)
 
 [_iswdigit_l](isdigit-iswdigit-isdigit-l-iswdigit-l.md)
 
@@ -1425,7 +1425,7 @@ ms.locfileid: "62340343"
 
 [_iswpunct_l](ispunct-iswpunct-ispunct-l-iswpunct-l.md)
 
-[iswspace](isspace-iswspace-isspace-l-iswspace-l.md)
+[исвспаце](isspace-iswspace-isspace-l-iswspace-l.md)
 
 [_iswspace_l](isspace-iswspace-isspace-l-iswspace-l.md)
 
@@ -1441,7 +1441,7 @@ ms.locfileid: "62340343"
 
 [_isxdigit_l](isxdigit-iswxdigit-isxdigit-l-iswxdigit-l.md)
 
-[itoa](itoa-itow.md)
+[итоа](itoa-itow.md)
 
 [_itoa](itoa-itow.md)
 
@@ -1459,17 +1459,17 @@ ms.locfileid: "62340343"
 
 [_j1](bessel-functions-j0-j1-jn-y0-y1-yn.md)
 
-[j1](j0-j1-jn.md)
+[J1](j0-j1-jn.md)
 
 [_jn](bessel-functions-j0-j1-jn-y0-y1-yn.md)
 
-[jn](j0-j1-jn.md)
+[жн](j0-j1-jn.md)
 
 ## <a name="k"></a>K
 
 [_kbhit](kbhit.md)
 
-[kbhit](posix-kbhit.md)
+[кбхит](posix-kbhit.md)
 
 ## <a name="l"></a>L
 
@@ -1477,11 +1477,11 @@ ms.locfileid: "62340343"
 
 [ldexp](ldexp.md)
 
-[ldiv](ldiv-lldiv.md)
+[ldiv](./div.md)
 
 [_lfind](lfind.md)
 
-[lfind](posix-lfind.md)
+[лфинд](posix-lfind.md)
 
 [_lfind_s](lfind-s.md)
 
@@ -1493,7 +1493,7 @@ ms.locfileid: "62340343"
 
 [llabs](abs-labs-llabs-abs64.md)
 
-[lldiv](ldiv-lldiv.md)
+[lldiv](./div.md)
 
 [llrint](lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)
 
@@ -1523,13 +1523,13 @@ ms.locfileid: "62340343"
 
 [_lock_file](lock-file.md)
 
-[locking](posix-locking.md)
+[блокировкой](posix-locking.md)
 
 [_locking](locking.md)
 
-[log](log-logf-log10-log10f.md)
+[Журналь](log-logf-log10-log10f.md)
 
-[log10](log-logf-log10-log10f.md)
+[LOG10](log-logf-log10-log10f.md)
 
 [log10f](log-logf-log10-log10f.md)
 
@@ -1577,7 +1577,7 @@ ms.locfileid: "62340343"
 
 [_lsearch](lsearch.md)
 
-[lsearch](posix-lsearch.md)
+[лсеарч](posix-lsearch.md)
 
 [_lsearch_s](lsearch-s.md)
 
@@ -1587,7 +1587,7 @@ ms.locfileid: "62340343"
 
 [_lseeki64](lseek-lseeki64.md)
 
-[ltoa](itoa-itow.md)
+[лтоа](itoa-itow.md)
 
 [_ltoa](itoa-itow.md)
 
@@ -1909,7 +1909,7 @@ ms.locfileid: "62340343"
 
 [_mbtowc_l](mbtowc-mbtowc-l.md)
 
-[memccpy](posix-memccpy.md)
+[мемккпи](posix-memccpy.md)
 
 [_memccpy](memccpy.md)
 
@@ -1965,9 +1965,9 @@ ms.locfileid: "62340343"
 
 [_msize_dbg](msize-dbg.md)
 
-## <a name="n"></a>в
+## <a name="n"></a>Нет
 
-[nan](nan-nanf-nanl.md)
+[NaN](nan-nanf-nanl.md)
 
 [nanf](nan-nanf-nanl.md)
 
@@ -1983,7 +1983,7 @@ ms.locfileid: "62340343"
 
 [_nextafter](nextafter-functions.md)
 
-[nextafterf](nextafter-functions.md)
+[некстафтерф](nextafter-functions.md)
 
 [_nextafterf](nextafter-functions.md)
 
@@ -2001,7 +2001,7 @@ ms.locfileid: "62340343"
 
 [norml](norm-normf-norml1.md)
 
-[not](not.md)
+[not](not.md) (не);
 
 [not_eq](not-eq.md)
 
@@ -2019,11 +2019,11 @@ ms.locfileid: "62340343"
 
 [_open_osfhandle](open-osfhandle.md)
 
-[Или](or.md)
+[или диспетчер конфигурации служб](or.md)
 
 [or_eq](or-eq.md)
 
-## <a name="p"></a>С
+## <a name="p"></a>P
 
 [_pclose](pclose.md)
 
@@ -2033,11 +2033,11 @@ ms.locfileid: "62340343"
 
 [_popen](popen-wpopen.md)
 
-[pow](pow-powf-powl.md)
+[Pow](pow-powf-powl.md)
 
 [powf](pow-powf-powl.md)
 
-[powl](pow-powf-powl.md)
+[повл](pow-powf-powl.md)
 
 [printf](printf-printf-l-wprintf-wprintf-l.md)
 
@@ -2075,7 +2075,7 @@ ms.locfileid: "62340343"
 
 [puts](puts-putws.md)
 
-[putw](posix-putw.md)
+[путв](posix-putw.md)
 
 [_putw](putw.md)
 
@@ -2113,7 +2113,7 @@ ms.locfileid: "62340343"
 
 [rand_s](rand-s.md)
 
-[read](posix-read.md)
+[Просмотр](posix-read.md)
 
 [_read](read.md)
 
@@ -2125,7 +2125,7 @@ ms.locfileid: "62340343"
 
 [_recalloc_dbg](recalloc-dbg.md)
 
-[remainder](remainder-remainderf-remainderl.md)
+[дальнейшем](remainder-remainderf-remainderl.md)
 
 [remainderf](remainder-remainderf-remainderl.md)
 
@@ -2155,7 +2155,7 @@ ms.locfileid: "62340343"
 
 [_rmdir](rmdir-wrmdir.md)
 
-[rmtmp](posix-rmtmp.md)
+[рмтмп](posix-rmtmp.md)
 
 [_rmtmp](rmtmp.md)
 
@@ -2167,7 +2167,7 @@ ms.locfileid: "62340343"
 
 [_rotr64](rotl-rotl64-rotr-rotr64.md)
 
-[round](round-roundf-roundl.md)
+[округло](round-roundf-roundl.md)
 
 [roundf](round-roundf-roundl.md)
 
@@ -2291,11 +2291,11 @@ ms.locfileid: "62340343"
 
 [setvbuf](setvbuf.md)
 
-[signal](signal.md)
+[signal](signal.md);
 
 [signbit](signbit.md)
 
-[sin](sin-sinf-sinl.md)
+[Sin](sin-sinf-sinl.md)
 
 [sinf](sin-sinf-sinl.md)
 
@@ -2395,7 +2395,7 @@ ms.locfileid: "62340343"
 
 [_sprintf_s_l](sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)
 
-[sqrt](sqrt-sqrtf-sqrtl.md)
+[МНИМ](sqrt-sqrtf-sqrtl.md)
 
 [sqrtf](sqrt-sqrtf-sqrtl.md)
 
@@ -2459,7 +2459,7 @@ ms.locfileid: "62340343"
 
 [_strdup](strdup-wcsdup-mbsdup.md)
 
-[strdup](strdup-wcsdup.md)
+[StrDup](strdup-wcsdup.md)
 
 [_strdup_dbg](strdup-dbg-wcsdup-dbg.md)
 
@@ -2477,7 +2477,7 @@ ms.locfileid: "62340343"
 
 [_stricmp](stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)
 
-[stricmp](stricmp-wcsicmp.md)
+[стрикмп](stricmp-wcsicmp.md)
 
 [_stricmp_l](stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)
 
@@ -2491,7 +2491,7 @@ ms.locfileid: "62340343"
 
 [_strlwr](strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md)
 
-[strlwr](strlwr-wcslwr.md)
+[стрлвр](strlwr-wcslwr.md)
 
 [_strlwr_l](strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md)
 
@@ -2543,7 +2543,7 @@ ms.locfileid: "62340343"
 
 [_strnset](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)
 
-[strnset](strnset-wcsnset.md)
+[стрнсет](strnset-wcsnset.md)
 
 [_strnset_l](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)
 
@@ -2611,7 +2611,7 @@ ms.locfileid: "62340343"
 
 [_strtold_l](strtold-strtold-l-wcstold-wcstold-l.md)
 
-[strtoll](strtoll-strtoll-l-wcstoll-wcstoll-l.md)
+[стртолл](strtoll-strtoll-l-wcstoll-wcstoll-l.md)
 
 [_strtoll_l](strtoll-strtoll-l-wcstoll-wcstoll-l.md)
 
@@ -2633,7 +2633,7 @@ ms.locfileid: "62340343"
 
 [_strupr](strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md)
 
-[strupr](strupr-wcsupr.md)
+[струпр](strupr-wcsupr.md)
 
 [_strupr_l](strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md)
 
@@ -2645,7 +2645,7 @@ ms.locfileid: "62340343"
 
 [_strxfrm_l](strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)
 
-[swab](posix-swab.md)
+[сваб](posix-swab.md)
 
 [_swab](swab.md)
 
@@ -2671,11 +2671,11 @@ ms.locfileid: "62340343"
 
 [_swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)
 
-[system](system-wsystem.md)
+[система](system-wsystem.md)
 
 ## <a name="t"></a>T
 
-[tan](tan-tanf-tanl.md)
+[тангенс](tan-tanf-tanl.md)
 
 [tanf](tan-tanf-tanl.md)
 
@@ -2699,7 +2699,7 @@ ms.locfileid: "62340343"
 
 [_tempnam_dbg](tempnam-dbg-wtempnam-dbg.md)
 
-[terminate](terminate-crt.md)
+[заканчива](terminate-crt.md)
 
 [tgamma](tgamma-tgammaf-tgammal.md)
 
@@ -2731,13 +2731,13 @@ ms.locfileid: "62340343"
 
 [toascii](toascii-toascii.md)
 
-[tolower](tolower-tolower-towlower-tolower-l-towlower-l.md)
+[ToLower](tolower-tolower-towlower-tolower-l-towlower-l.md)
 
 [_tolower](tolower-tolower-towlower-tolower-l-towlower-l.md)
 
 [_tolower_l](tolower-tolower-towlower-tolower-l-towlower-l.md)
 
-[toupper](toupper-toupper-towupper-toupper-l-towupper-l.md)
+[ToUpper](toupper-toupper-towupper-toupper-l-towupper-l.md)
 
 [_toupper](toupper-toupper-towupper-toupper-l-towupper-l.md)
 
@@ -2753,13 +2753,13 @@ ms.locfileid: "62340343"
 
 [_towupper_l](toupper-toupper-towupper-toupper-l-towupper-l.md)
 
-[trunc](trunc-truncf-truncl.md)
+[TRUNC](trunc-truncf-truncl.md)
 
 [truncf](trunc-truncf-truncl.md)
 
 [truncl](trunc-truncf-truncl.md)
 
-[tzset](posix-tzset.md)
+[тзсет](posix-tzset.md)
 
 [_tzset](tzset.md)
 
@@ -2773,7 +2773,7 @@ ms.locfileid: "62340343"
 
 [_ui64tow_s](itoa-s-itow-s.md)
 
-[ultoa](itoa-itow.md)
+[ултоа](itoa-itow.md)
 
 [_ultoa](itoa-itow.md)
 
@@ -2791,7 +2791,7 @@ ms.locfileid: "62340343"
 
 [__uncaught_exception](uncaught-exception.md)
 
-[unexpected](unexpected-crt.md)
+[известно](unexpected-crt.md)
 
 [ungetc](ungetc-ungetwc.md)
 
@@ -3037,7 +3037,7 @@ ms.locfileid: "62340343"
 
 [_wcsdup](strdup-wcsdup-mbsdup.md)
 
-[wcsdup](strdup-wcsdup.md)
+[вксдуп](strdup-wcsdup.md)
 
 [_wcsdup_dbg](strdup-dbg-wcsdup-dbg.md)
 
@@ -3071,7 +3071,7 @@ ms.locfileid: "62340343"
 
 [_wcslwr](strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md)
 
-[wcslwr](strlwr-wcslwr.md)
+[вкслвр](strlwr-wcslwr.md)
 
 [_wcslwr_l](strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md)
 
@@ -3123,7 +3123,7 @@ ms.locfileid: "62340343"
 
 [_wcsnset](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)
 
-[wcsnset](strnset-wcsnset.md)
+[вкснсет](strnset-wcsnset.md)
 
 [_wcsnset_l](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)
 
@@ -3137,7 +3137,7 @@ ms.locfileid: "62340343"
 
 [_wcsrev](strrev-wcsrev-mbsrev-mbsrev-l.md)
 
-[wcsrev](strrev-wcsrev.md)
+[вксрев](strrev-wcsrev.md)
 
 [wcsrtombs](wcsrtombs.md)
 
@@ -3191,7 +3191,7 @@ ms.locfileid: "62340343"
 
 [_wcstold_l](strtold-strtold-l-wcstold-wcstold-l.md)
 
-[wcstoll](strtoll-strtoll-l-wcstoll-wcstoll-l.md)
+[вкстолл](strtoll-strtoll-l-wcstoll-wcstoll-l.md)
 
 [_wcstoll_l](strtoll-strtoll-l-wcstoll-wcstoll-l.md)
 
@@ -3211,7 +3211,7 @@ ms.locfileid: "62340343"
 
 [_wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)
 
-[wcstoull](strtoull-strtoull-l-wcstoull-wcstoull-l.md)
+[вкстаулл](strtoull-strtoull-l-wcstoull-wcstoull-l.md)
 
 [_wcstoull_l](strtoull-strtoull-l-wcstoull-wcstoull-l.md)
 
@@ -3385,7 +3385,7 @@ ms.locfileid: "62340343"
 
 [_write](write.md)
 
-[write](posix-write.md)
+[будет](posix-write.md)
 
 [_wrmdir](rmdir-wrmdir.md)
 
@@ -3491,7 +3491,7 @@ ms.locfileid: "62340343"
 
 [xor_eq](xor-eq.md)
 
-## <a name="y"></a>Y
+## <a name="y"></a>Да
 
 [_y0](bessel-functions-j0-j1-jn-y0-y1-yn.md)
 
@@ -3499,12 +3499,12 @@ ms.locfileid: "62340343"
 
 [_y1](bessel-functions-j0-j1-jn-y0-y1-yn.md)
 
-[y1](y0-y1-yn.md)
+[Y1](y0-y1-yn.md)
 
 [_yn](bessel-functions-j0-j1-jn-y0-y1-yn.md)
 
-[yn](y0-y1-yn.md)
+[YN](y0-y1-yn.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Справочник по библиотеке времени выполнения C](../../c-runtime-library/c-run-time-library-reference.md)<br/>

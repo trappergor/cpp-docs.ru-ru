@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: 688cd337d0754fc49ede0f39fd774c9990f7c79f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: dd74dd4562a3c4a8bff2c58d5f1d801f5dd06fd8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224361"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499618"
 ---
 # <a name="example-implementing-a-property-page"></a>Пример. Реализация страницы свойств
 
@@ -133,7 +133,7 @@ ms.locfileid: "87224361"
 
 Чтобы отобразить эту страницу, вам нужно создать простой вспомогательный объект. Вспомогательный объект предоставляет метод, который упрощает API `OleCreatePropertyFrame` для отображения одной страницы, подключенной к одному объекту. Этот объект будет спроектирован так, чтобы его можно было использовать из Visual Basic.
 
-Используйте [диалоговое окно "Добавление класса"](../ide/add-class-dialog-box.md) и [мастер простых объектов ATL](../atl/reference/atl-simple-object-wizard.md), чтобы создать класс, используя `Helper` в качестве его короткого имени. После создания добавьте метод, как показано в таблице ниже.
+Используйте [диалоговое окно "Добавление класса"](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) и [мастер простых объектов ATL](../atl/reference/atl-simple-object-wizard.md), чтобы создать класс, используя `Helper` в качестве его короткого имени. После создания добавьте метод, как показано в таблице ниже.
 
 |Элемент|Значение|
 |----------|-----------|
@@ -171,7 +171,7 @@ End Module
 
 ::: moniker-end
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также раздел
 
 [Страницы свойств](../atl/atl-com-property-pages.md)<br/>
 [Примеры кода на Visual C++](../overview/visual-cpp-samples.md)

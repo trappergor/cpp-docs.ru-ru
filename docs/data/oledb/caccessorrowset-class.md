@@ -27,12 +27,12 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: 9ad4292b69d0219aa1732638ae250758e4456f4b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d9dd2eec3948896487b5b977d1107db1f4a1046b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843291"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498715"
 ---
 # <a name="caccessorrowset-class"></a>Класс CAccessorRowset
 
@@ -64,7 +64,7 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 
 | Имя | Описание |
 |--|--|
-| [Выполняется](#bind) | Создает привязки (используется, если `bBind` указан как **`false`** в [CCommand:: Open](../../data/oledb/ccommand-open.md)). |
+| [Выполняется](#bind) | Создает привязки (используется, если `bBind` указан как **`false`** в [CCommand:: Open](./ccommand-class.md#open)). |
 | [CAccessorRowset](#caccessorrowset) | Конструктор. |
 | [Закрыть](#close) | Закрывает набор строк и любые методы доступа. |
 | [фрирекордмемори](#freerecordmemory) | Освобождает все столбцы в текущей записи, которые необходимо освободить. |
@@ -76,7 +76,7 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 
 ## <a name="caccessorrowsetbind"></a><a name="bind"></a> CAccessorRowset:: BIND
 
-Создает привязки, если вы указали `bBind` как **`false`** в элементе [CCommand:: Open](../../data/oledb/ccommand-open.md).
+Создает привязки, если вы указали `bBind` как **`false`** в элементе [CCommand:: Open](./ccommand-class.md#open).
 
 ### <a name="syntax"></a>Синтаксис
 

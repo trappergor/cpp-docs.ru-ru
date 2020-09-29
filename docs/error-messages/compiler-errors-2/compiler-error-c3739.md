@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3739
 ms.assetid: acffe894-08b8-4bf2-9249-9501e6e2bad3
-ms.openlocfilehash: 48d0fef86908f3ba5a547417d0625febc5226454
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 7235d86ed00663b81aaddb87fdeae957c0f73053
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74752708"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500428"
 ---
 # <a name="compiler-error-c3739"></a>Ошибка компилятора C3739
 
 "класс": синтаксис поддерживается только в том случае, если параметр "layout_dependent" event_receiver имеет значение true
 
-Вы попытались привязать весь интерфейс событий, но `layout_dependent` атрибута [event_receiver](../../windows/event-receiver.md) не имеет значения true; необходимо связать одно событие за раз.
+Вы попытались подключить весь интерфейс событий, но `layout_dependent` на [event_receiver](../../windows/attributes/event-receiver.md) атрибут не имеет значения true; необходимо одновременно присоединить одно событие.
 
 Следующий пример приводит к возникновению ошибки C3739:
 

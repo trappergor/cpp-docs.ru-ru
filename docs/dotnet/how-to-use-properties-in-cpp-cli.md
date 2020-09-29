@@ -5,12 +5,12 @@ helpviewer_keywords:
 - simple properties
 - properties [C++], simple
 ms.assetid: f5d82547-e214-4f05-9e1b-ddb6d0dc5e4c
-ms.openlocfilehash: 2b5543e9a9ff70e827778adf2aee89cbc96f0c1d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c786c7746cd40a970af3a5ae4436119def4c805b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225674"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499685"
 ---
 # <a name="how-to-use-properties-in-ccli"></a>Практическое руководство. Использование свойств в C++/CLI
 
@@ -88,7 +88,7 @@ int main() {
 
 Если используется индексированное свойство по умолчанию, можно получить доступ к структуре данных, просто ссылаясь на имя класса, но если вы используете определяемое пользователем индексированное свойство, необходимо указать имя свойства для доступа к структуре данных.
 
-Сведения о том, как использовать индексатор, написанный на языке C#, см. [в разделе как использовать индексатор c# (C++/CLI)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md).
+Сведения о том, как использовать индексатор, написанный на языке C#, см. [в разделе как использовать индексатор c# (C++/CLI)](./interoperability-with-other-dotnet-languages-cpp-cli.md#consume_indexer).
 
 В этом примере кода показано, как использовать заданные по умолчанию и определяемые пользователем индексированные свойства.
 
@@ -407,6 +407,6 @@ int main() {
 6.8
 ```
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также раздел
 
 [property](../extensions/property-cpp-component-extensions.md)

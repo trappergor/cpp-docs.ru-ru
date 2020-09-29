@@ -5,16 +5,16 @@ helpviewer_keywords:
 - converting from OpenMP to the Concurrency Runtime, reduction variables
 - reduction variables, converting from OpenMP to the Concurrency Runtime
 ms.assetid: 96623f36-5e57-4d3f-8c13-669e6cd535b1
-ms.openlocfilehash: 15ec81fb4fafd7850162a1feab28e72d469aff91
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 06418bc1a331a5c77653087434a5cc621f92e7d7
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87206007"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498547"
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-a-reduction-variable-to-use-the-concurrency-runtime"></a>Практическое руководство. Преобразование цикла OpenMP, использующего переменную сокращения для использования среды выполнения с параллелизмом
 
-В этом примере показано, как преобразовать [параллельный](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)цикл[for](../../parallel/openmp/reference/for-openmp.md) OpenMP, использующий предложение [reduction](../../parallel/openmp/reference/reduction.md) , для использования среда выполнения с параллелизмом.
+В этом примере показано, как преобразовать [параллельный](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)цикл[for](../openmp/reference/openmp-directives.md#for-openmp) OpenMP, использующий предложение [reduction](../openmp/reference/openmp-clauses.md#reduction) , для использования среда выполнения с параллелизмом.
 
 Предложение OpenMP `reduction` позволяет указать одну или несколько частных переменных потока, которые подчиняются операции сокращения в конце параллельной области. OpenMP предопределяет набор операторов сокращения. Каждая переменная сокращения должна быть скалярной (например,, **`int`** **`long`** и **`float`** ). OpenMP также определяет несколько ограничений на то, как переменные сокращения используются в параллельной области.
 

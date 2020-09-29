@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CAxDialogImpl class, implementing dialog boxes in ATL
 - ATL, dialog boxes
 ms.assetid: 478525f2-aa6a-435a-b162-68fc8aa98a8e
-ms.openlocfilehash: 7866afd26c901181f2b4193a87daf5dca2b0c67f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fa7b4122b513d48194dedeb39daecd1dfd7223eb
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226689"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499580"
 ---
 # <a name="implementing-a-dialog-box"></a>Реализация диалогового окна
 
@@ -20,7 +20,7 @@ ms.locfileid: "87226689"
 
 ## <a name="adding-a-dialog-box-with-the-atl-dialog-wizard"></a>Добавление диалогового окна с помощью мастера диалогового окна ATL
 
-В [диалоговом окне Добавление класса](../ide/add-class-dialog-box.md)выберите объект диалогового окна ATL, чтобы добавить диалоговое окно в проект ATL. Заполните мастер диалоговых окон ATL соответствующим образом и нажмите кнопку **Готово**. Мастер добавляет класс, производный от [каксдиалогимпл](../atl/reference/caxdialogimpl-class.md) , к проекту. Откройте **представление ресурсов** в меню **вид** , выберите диалоговое окно и дважды щелкните его, чтобы открыть в редакторе ресурсов.
+В [диалоговом окне Добавление класса](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box)выберите объект диалогового окна ATL, чтобы добавить диалоговое окно в проект ATL. Заполните мастер диалоговых окон ATL соответствующим образом и нажмите кнопку **Готово**. Мастер добавляет класс, производный от [каксдиалогимпл](../atl/reference/caxdialogimpl-class.md) , к проекту. Откройте **представление ресурсов** в меню **вид** , выберите диалоговое окно и дважды щелкните его, чтобы открыть в редакторе ресурсов.
 
 > [!NOTE]
 > Если диалоговое окно является производным от `CAxDialogImpl` , в нем могут размещаться элементы управления ActiveX и Windows. Если вы не хотите издержки в поддержке элементов управления ActiveX в классе диалогового окна, используйте вместо него [ксимпледиалог](../atl/reference/csimpledialog-class.md) или [CDialogImpl](../atl/reference/cdialogimpl-class.md) .
@@ -34,7 +34,7 @@ ms.locfileid: "87226689"
 > [!NOTE]
 > При создании диалогового окна с помощью мастера диалоговых окон ATL мастер автоматически добавляет член в `IDD` качестве **`enum`** типа.
 
-`CDialogImpl`позволяет реализовать модальное или немодальное диалоговое окно, в котором размещаются элементы управления Windows. `CAxDialogImpl`позволяет реализовать модальное или немодальное диалоговое окно, в котором размещаются элементы управления ActiveX и Windows.
+`CDialogImpl` позволяет реализовать модальное или немодальное диалоговое окно, в котором размещаются элементы управления Windows. `CAxDialogImpl` позволяет реализовать модальное или немодальное диалоговое окно, в котором размещаются элементы управления ActiveX и Windows.
 
 Чтобы создать модальное диалоговое окно, создайте экземпляр класса, `CDialogImpl` производного от (или `CAxDialogImpl` производного), а затем вызовите метод [DoModal](../atl/reference/cdialogimpl-class.md#domodal) . Чтобы закрыть модальное диалоговое окно, вызовите метод [EndDialog](../atl/reference/cdialogimpl-class.md#enddialog) из обработчика сообщений. Чтобы создать немодальное диалоговое окно, вызовите метод [CREATE](../atl/reference/cdialogimpl-class.md#create) вместо `DoModal` . Чтобы уничтожить немодальное диалоговое окно, вызовите [дестройвиндов](../atl/reference/cdialogimpl-class.md#destroywindow).
 
@@ -46,6 +46,6 @@ ms.locfileid: "87226689"
 
 [!code-cpp[NVC_ATL_Windowing#66](../atl/codesnippet/cpp/implementing-a-dialog-box_1.h)]
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также раздел
 
 [Классы окон](../atl/atl-window-classes.md)

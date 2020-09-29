@@ -5,12 +5,12 @@ helpviewer_keywords:
 - STL/CLR Containers [STL/CLR]
 - STL/CLR, converting to .NET collections
 ms.assetid: 70b2dfd9-869c-4e0f-9a29-b1ee0cb0d107
-ms.openlocfilehash: f5e289c330c83ac0c630a5b1f8f97b8c65fc7efb
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: a4a754bbee08e93e2db9af50f98d7603fabcd8d4
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686448"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498494"
 ---
 # <a name="how-to-convert-from-a-stlclr-container-to-a-net-collection"></a>Практическое руководство. Преобразование из контейнера STL/CLR в коллекцию .NET
 
@@ -20,7 +20,7 @@ ms.locfileid: "90686448"
 
 1. Используйте один из следующих методов.
 
-   - Чтобы преобразовать часть контейнера, вызовите функцию [make_collection](../dotnet/make-collection-stl-clr.md) и передайте итератор Begin и End итератора из контейнера STL/CLR в коллекцию .NET. Эта функция шаблона принимает итератор STL/CLR в качестве аргумента шаблона. В первом примере демонстрируется этот метод.
+   - Чтобы преобразовать часть контейнера, вызовите функцию [make_collection](./adapter-stl-clr.md#make_collection) и передайте итератор Begin и End итератора из контейнера STL/CLR в коллекцию .NET. Эта функция шаблона принимает итератор STL/CLR в качестве аргумента шаблона. В первом примере демонстрируется этот метод.
 
    - Чтобы преобразовать весь контейнер, приведите его к соответствующему интерфейсу коллекции .NET или коллекции интерфейсов. Во втором примере демонстрируется этот метод.
 
@@ -109,8 +109,8 @@ Key: 42.00 Value: 42
 Key: 74.00 Value: 74
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Справочник по библиотеке STL/CLR](../dotnet/stl-clr-library-reference.md)<br/>
 [Как преобразовать коллекцию .NET в контейнер STL/CLR](../dotnet/how-to-convert-from-a-dotnet-collection-to-a-stl-clr-container.md)<br/>
-[range_adapter (STL/CLR)](../dotnet/range-adapter-stl-clr.md)
+[range_adapter (STL/CLR)](./adapter-stl-clr.md#range_adapter)
