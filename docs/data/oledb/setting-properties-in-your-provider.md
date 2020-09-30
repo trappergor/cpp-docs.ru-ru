@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE DB providers, properties
 - properties [C++], OLE DB provider
 ms.assetid: 26a8b493-7ec4-4686-96d0-9ad5d2bca5ac
-ms.openlocfilehash: f5d5ac364096ea1a4505b2ead81f25367a9c9458
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3717282d284990b1b8038f6954ee971938cf7921
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212960"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509483"
 ---
 # <a name="setting-properties-in-your-provider"></a>Установка свойств в поставщике
 
@@ -18,7 +18,7 @@ ms.locfileid: "87212960"
 
 В коде поставщика, созданном мастером, Найдите карту свойств, соответствующую группе свойств. Имя группы свойств обычно соответствует имени объекта. Свойства команд и наборов строк можно найти в команде или наборе строк; Свойства источника данных и инициализации можно найти в объекте источника данных.
 
-В карте свойств добавьте [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md) макрос. PROPERTY_INFO_ENTRY_EX принимает четыре параметра:
+В карте свойств добавьте [PROPERTY_INFO_ENTRY_EX](./macros-for-ole-db-provider-templates.md#property_info_entry_ex) макрос. PROPERTY_INFO_ENTRY_EX принимает четыре параметра:
 
 - Идентификатор свойства, соответствующий свойству. Удалите первые семь символов ("DBPROP_") с начала имени свойства. Например, если необходимо добавить `DBPROP_MAXROWS` , передайте в `MAXROWS` качестве первого элемента. Если это пользовательское свойство, передайте полное имя GUID (например, `DBMYPROP_MYPROPERTY` ).
 
@@ -33,19 +33,19 @@ ms.locfileid: "87212960"
 - Базовое значение свойства. Это может быть `VARIANT_FALSE` логический тип или ноль для целочисленного типа, например. Свойство имеет это значение, если оно не изменилось.
 
     > [!NOTE]
-    > Некоторые свойства подключены или связаны с другими свойствами, такими как закладки или обновление. Когда потребитель устанавливает для одного свойства значение true, также может быть задано другое свойство. Шаблоны поставщика OLE DB поддерживают это с помощью метода [CUtlProps:: OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md).
+    > Некоторые свойства подключены или связаны с другими свойствами, такими как закладки или обновление. Когда потребитель устанавливает для одного свойства значение true, также может быть задано другое свойство. Шаблоны поставщика OLE DB поддерживают это с помощью метода [CUtlProps:: OnPropertyChanged](./cutlprops-class.md#onpropertychanged).
 
 ## <a name="properties-ignored-by-microsoft-ole-db-providers"></a>Свойства, игнорируемые поставщиками Microsoft OLE DB
 
 Поставщики OLE DB Майкрософт пропускают следующие свойства OLE DB:
 
-- `DBPROP_MAXROWS`работает только для поставщиков, предназначенных только для чтения (то есть, где `DBPROP_IRowsetChange` и `DBPROP_IRowsetUpdate` **`false`** ); в противном случае это свойство не поддерживается.
+- `DBPROP_MAXROWS` работает только для поставщиков, предназначенных только для чтения (то есть, где `DBPROP_IRowsetChange` и `DBPROP_IRowsetUpdate` **`false`** ); в противном случае это свойство не поддерживается.
 
-- `DBPROP_MAXPENDINGROWS`игнорируется; Поставщик задает собственное ограничение.
+- `DBPROP_MAXPENDINGROWS` игнорируется; Поставщик задает собственное ограничение.
 
-- `DBPROP_MAXOPENROWS`игнорируется; Поставщик задает собственное ограничение.
+- `DBPROP_MAXOPENROWS` игнорируется; Поставщик задает собственное ограничение.
 
-- `DBPROP_CANHOLDROWS`игнорируется; Поставщик задает собственное ограничение.
+- `DBPROP_CANHOLDROWS` игнорируется; Поставщик задает собственное ограничение.
 
 ## <a name="see-also"></a>См. также раздел
 

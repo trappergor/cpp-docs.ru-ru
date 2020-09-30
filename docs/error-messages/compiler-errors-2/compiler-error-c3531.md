@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3531
 ms.assetid: 2bdb9fdc-9ddf-403e-8b92-02763d434487
-ms.openlocfilehash: 7da9da2daedc79db619f82848dc864d1cb7bd1f1
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 4537c6c76814f2aeb8f8d62579caec86785de252
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74750095"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91510143"
 ---
 # <a name="compiler-error-c3531"></a>Ошибка компилятора C3531
 
@@ -25,7 +25,7 @@ ms.locfileid: "74750095"
 
 ## <a name="example"></a>Пример
 
-В следующем примере выдается C3531, так как переменные `x1`, `y1, y2, y3`и `z2` не инициализированы.
+В следующем примере C3531 выдается, так как переменные `x1` , `y1, y2, y3` и `z2` не инициализируются.
 
 ```cpp
 // C3531.cpp
@@ -39,6 +39,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Ключевое слово auto](../../cpp/auto-keyword.md)
+[Ключевое слово auto](../../cpp/auto-cpp.md)

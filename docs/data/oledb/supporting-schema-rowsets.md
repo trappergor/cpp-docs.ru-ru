@@ -7,28 +7,28 @@ helpviewer_keywords:
 - OLE DB providers, schema rowsets
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-ms.openlocfilehash: 1ad1a91e8a79238eee773d92a756b0238e8901d5
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: f87e6cc0a307eed4f00f1fb90ac16a840a1759af
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707489"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509453"
 ---
 # <a name="supporting-schema-rowsets"></a>Поддержка наборов строк схемы
 
-Наборы строк схемы позволяют объектам-получателям получать сведения о хранилище данных, не зная его базовой структуры или схемы. Например, в хранилище данных могут быть таблицы, организованные в определенной пользователем иерархии, поэтому невозможно будет узнать схему, не прочитав ее. (В качестве другого примера мастера Visual C++ используют наборы строк схемы, чтобы создать метод доступа для объекта-получателя). Чтобы позволить объекту-получателю сделать это, объект сеанса поставщика предоставляет методы в интерфейсе [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)). В приложениях Visual C++ для реализации `IDBSchemaRowset` используется класс [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md).
+Наборы строк схемы позволяют объектам-получателям получать сведения о хранилище данных, не зная его базовой структуры или схемы. Например, в хранилище данных могут быть таблицы, организованные в определенной пользователем иерархии, поэтому невозможно будет узнать схему, не прочитав ее. (Другой пример: мастера Visual C++ используют наборы строк схемы для создания методов доступа для потребителя.) Чтобы разрешить потребителю сделать это, объект сеанса поставщика предоставляет методы в интерфейсе [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) . В приложениях Visual C++ для реализации `IDBSchemaRowset` используется класс [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md).
 
 `IDBSchemaRowsetImpl` поддерживает следующие методы:
 
-- [CheckRestrictions](../../data/oledb/idbschemarowsetimpl-checkrestrictions.md) проверяет допустимость ограничений для набора строк схемы.
+- [CheckRestrictions](./idbschemarowsetimpl-class.md#checkrestrictions) проверяет допустимость ограничений для набора строк схемы.
 
-- [CreateSchemaRowset](../../data/oledb/idbschemarowsetimpl-createschemarowset.md) реализует функцию создателя COM-объекта для объекта, указанного параметром шаблона.
+- [CreateSchemaRowset](./idbschemarowsetimpl-class.md#createschemarowset) реализует функцию создателя COM-объекта для объекта, указанного параметром шаблона.
 
-- [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md) указывает, какие ограничения поддерживаются в определенном наборе строк схемы.
+- [SetRestrictions](./idbschemarowsetimpl-class.md#setrestrictions) указывает, какие ограничения поддерживаются в определенном наборе строк схемы.
 
-- [IDBSchemaRowset::GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md) возвращает набор строк схемы (унаследованный от интерфейса).
+- [IDBSchemaRowset::GetRowset](./idbschemarowsetimpl-class.md#getrowset) возвращает набор строк схемы (унаследованный от интерфейса).
 
-- [GetSchemas](../../data/oledb/idbschemarowsetimpl-getschemas.md) возвращает список наборов строк схемы, доступных для `IDBSchemaRowsetImpl::GetRowset` (унаследованных от интерфейса).
+- [GetSchemas](./idbschemarowsetimpl-class.md#getschemas) возвращает список наборов строк схемы, доступных для `IDBSchemaRowsetImpl::GetRowset` (унаследованных от интерфейса).
 
 ## <a name="atl-ole-db-provider-wizard-support"></a>Поддержка мастера поставщика OLE DB в ATL
 
@@ -94,7 +94,7 @@ class CUpdateSessionTRSchemaRowset :
                     ULONG cRestrictions, const VARIANT* rgRestrictions)
 ```
 
-`CUpdateSession` наследуется от `IDBSchemaRowsetImpl`, поэтому у него есть все методы обработки ограничений. Используя `CSchemaRowsetImpl`, объявите три дочерних класса (перечислены на карте схемы выше): `CUpdateSessionTRSchemaRowset`, `CUpdateSessionColSchemaRowset` и `CUpdateSessionPTSchemaRowset`. У каждого из этих дочерних классов есть метод `Execute`, который обрабатывает свой соответствующий набор ограничений (критерии поиска). Каждый метод `Execute` сравнивает значения параметров *cRestrictions* и *rgRestrictions*. Описание этих параметров см. в разделе [IDBSchemaRowsetImpl::SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md).
+`CUpdateSession` наследуется от `IDBSchemaRowsetImpl`, поэтому у него есть все методы обработки ограничений. Используя `CSchemaRowsetImpl`, объявите три дочерних класса (перечислены на карте схемы выше): `CUpdateSessionTRSchemaRowset`, `CUpdateSessionColSchemaRowset` и `CUpdateSessionPTSchemaRowset`. У каждого из этих дочерних классов есть метод `Execute`, который обрабатывает свой соответствующий набор ограничений (критерии поиска). Каждый метод `Execute` сравнивает значения параметров *cRestrictions* и *rgRestrictions*. Описание этих параметров см. в разделе [IDBSchemaRowsetImpl::SetRestrictions](./idbschemarowsetimpl-class.md#setrestrictions).
 
 Дополнительные сведения о том, какие ограничения соответствуют определенному набору строк схемы, см. в таблице GUID наборов строк схем в разделе [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) в **справочнике программиста OLE DB** в Windows SDK.
 
@@ -224,7 +224,7 @@ wcspy_s(trData.m_szDesc, OLESTR("The Directory Table"), 19);
 wcsncpy_s(trData.m_szTable, T2OLE(szFile), _TRUNCATE());
 ```
 
-`UpdatePV` настраивает только три столбца: TABLE_NAME, TABLE_TYPE и DESCRIPTION. Запишите столбцы, для которых возвращаются сведения, так как они понадобятся вам при реализации `GetDBStatus`:
+`UpdatePV` задает только три столбца: TABLE_NAME, TABLE_TYPE и DESCRIPTION. Запишите столбцы, для которых возвращаются сведения, так как они понадобятся вам при реализации `GetDBStatus`:
 
 ```cpp
     _ATLTRY
@@ -271,6 +271,6 @@ virtual DBSTATUS GetDBStatus(CSimpleRow* , ATLCOLUMNINFO* pColInfo)
 
 C примером поставщика, который поддерживает наборы строк схемы, можно ознакомиться в [этой статье](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Дополнительные способы использования поставщика](../../data/oledb/advanced-provider-techniques.md)
+[Дополнительные методы поставщика](../../data/oledb/advanced-provider-techniques.md)

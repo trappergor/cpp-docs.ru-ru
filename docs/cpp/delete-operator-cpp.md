@@ -8,12 +8,12 @@ helpviewer_keywords:
 - delete keyword [C++], deallocating objects
 - delete keyword [C++]
 ms.assetid: de39c900-3f57-489c-9598-dcb73c4b3930
-ms.openlocfilehash: 19f92e2aa62adf1ede4c0e6ab1187fd9e4106e68
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8ce9b8e606d5bbc2051af76e6dc4ac1350ec81a6
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221696"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509139"
 ---
 # <a name="delete-operator-c"></a>Оператор delete (C++)
 
@@ -50,7 +50,7 @@ delete [] set;
 
 Если операнд **`delete`** оператора является изменяемым l-значением, его значение не определено после удаления объекта.
 
-Если указан параметр компилятора [/SDL (включить дополнительные проверки безопасности)](/cpp/build/reference/sdl-enable-additional-security-checks) , операнду оператора присваивается **`delete`** недопустимое значение после удаления объекта.
+Если указан параметр компилятора [/SDL (включить дополнительные проверки безопасности)](../build/reference/sdl-enable-additional-security-checks.md) , операнду оператора присваивается **`delete`** недопустимое значение после удаления объекта.
 
 ## <a name="using-delete"></a>Использование оператора delete
 

@@ -89,12 +89,12 @@ helpviewer_keywords:
 - std::multimap [C++], upper_bound
 - std::multimap [C++], value_comp
 ms.assetid: 8796ae05-37c4-475a-9e61-75fde9d4a463
-ms.openlocfilehash: 446c1af793b885646dbb5658242e75482ebb92de
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: 7399132553205080cc784de78630e30feb0700ba
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91353198"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509936"
 ---
 # <a name="multimap-class"></a>Класс multimap
 
@@ -126,7 +126,7 @@ class multimap;
 *Выделен*\
 Тип, представляющий сохраненный объект распределителя, который инкапсулирует сведения о выделении и освобождении памяти для сопоставления. Этот аргумент является необязательным, и значением по умолчанию является `allocator<pair <const Key, Type> >`.
 
-## <a name="remarks"></a>Комментарии
+## <a name="remarks"></a>Remarks
 
 Класс multimap в стандартной библиотеке С++ — это:
 
@@ -302,7 +302,7 @@ const_iterator cbegin() const;
 
 **`const`** Итератор двунаправленного доступа, указывающий на первый элемент диапазона, или расположение непосредственно за концом пустого диапазона (для пустого диапазона `cbegin() == cend()` ).
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 С возвращаемым значением `cbegin` элементы в диапазоне нельзя изменять.
 
@@ -328,7 +328,7 @@ const_iterator cend() const;
 
 **`const`** Итератор двунаправленного доступа, указывающий на сразу за концом диапазона.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 `cend` используется для проверки того, прошел ли итератор конец диапазона.
 
@@ -396,7 +396,7 @@ The size of the multimap after clearing is 0.
 typedef implementation-defined const_iterator;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Тип `const_iterator` нельзя использовать для изменения значения элемента.
 
@@ -418,7 +418,7 @@ typedef implementation-defined const_iterator;
 typedef typename allocator_type::const_pointer const_pointer;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Тип `const_pointer` нельзя использовать для изменения значения элемента.
 
@@ -482,7 +482,7 @@ The data value of the first element in the multimap is 10.
 typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Тип `const_reverse_iterator` не может изменять значение элемента и используется для прохода по multimap в обратную.
 
@@ -517,11 +517,11 @@ template<class K> bool contains(const K& key) const;
 
 `true` значение, если элемент найден в контейнере; `false` в противном случае — значение.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 `contains()` Новое в C++ 20. Чтобы использовать его, укажите параметр компилятора [/std: c + + Latest](../build/reference/std-specify-language-standard-version.md) .
 
-`template<class K> bool contains(const K& key) const` принимает участие в разрешении перегрузки только в `key_compare` том случае, если является прозрачным. Дополнительные сведения см. [в разделе разнородный Уточняющий запрос в ассоциативных контейнерах](https://docs.microsoft.com/cpp/standard-library/stl-containers#heterogeneous-lookup-in-associative-containers-c14) .
+`template<class K> bool contains(const K& key) const` принимает участие в разрешении перегрузки только в `key_compare` том случае, если является прозрачным. Дополнительные сведения см. [в разделе разнородный Уточняющий запрос в ассоциативных контейнерах](./stl-containers.md#heterogeneous-lookup-in-associative-containers-c14) .
 
 ### <a name="example"></a>Пример
 
@@ -543,7 +543,7 @@ int main()
     // call template function
     std::multimap<std::string, int, std::less<>> m2 = {{"ten", 10}, {"twenty", 20}, {"thirty", 30}};
     std::cout << m2.contains("ten");
-    
+
     return 0;
 }
 ```
@@ -571,7 +571,7 @@ size_type count(const Key& key) const;
 
 Число элементов, ключи сортировки которых совпадают с ключом параметра. 0, если мультиотображение не содержит ни одного элемента с совпадающим ключом.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Функция-член возвращает число элементов в диапазоне
 
@@ -635,7 +635,7 @@ const_reverse_iterator crbegin() const;
 
 Константный обратный двунаправленный итератор, адресующий первый элемент в обратном [мультиотображении](../standard-library/multimap-class.md) или адресующий то, что было последним элементом в `multimap` до замены его порядка на противоположный.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 `crbegin` используется с обратным `multimap` так же, как [begin](#begin) используется с обычным `multimap`.
 
@@ -685,7 +685,7 @@ const_reverse_iterator crend() const;
 
 Константный обратный двунаправленный итератор, адресующий положение после последнего элемента в обратном [мультиотображении](../standard-library/multimap-class.md) (положение, которое предшествовало первому элементу в `multimap` до изменения его порядка на противоположный).
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 `crend` используется с обратным `multimap` так же, как [multimap::end](#end) используется с обычным `multimap`.
 
@@ -734,7 +734,7 @@ The last element of the reversed multimap m1 is 1.
 typedef typename allocator_type::difference_type difference_type;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 `difference_type` — тип, возвращаемый при вычитании или приращении через итераторы контейнера. `difference_type`Обычно используется для представления количества элементов в диапазоне [*первый*, *последний*) между итераторами `first` и `last` , включает элемент, на который указывает, `first` и диапазон элементов до, но не включая элемент, на который указывает `last` .
 
@@ -802,7 +802,7 @@ iterator emplace(Args&&... args);
 
 Итератор, указывающий на вновь вставленный элемент.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Эта функция не делает недействительными никакие ссылки на элементы контейнера, но она может сделать недействительными все итераторы к контейнеру.
 
@@ -874,7 +874,7 @@ iterator emplace_hint(
 
 Итератор, указывающий на вновь вставленный элемент.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Эта функция не делает недействительными никакие ссылки на элементы контейнера, но она может сделать недействительными все итераторы к контейнеру.
 
@@ -943,7 +943,7 @@ iterator end();
 
 Итератор после конца. Если мультикарта пуста, то `multimap::end() == multimap::begin()`.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 **end** используется для проверки, прошел ли итератор конец своего мультиотображения.
 
@@ -1068,7 +1068,7 @@ size_type erase(
 
 Для третьей функции-члена возвращается количество элементов, которые были удалены из мультиотображения.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Пример кода см. в разделе [map::erase](../standard-library/map-class.md#erase).
 
@@ -1091,7 +1091,7 @@ const_iterator find(const Key& key) const;
 
 Итератор, ссылающийся на расположение элемента с указанным ключом или на расположение элемента после последнего элемента в мультикарте (`multimap::end()`), если для ключа не найдено совпадений.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Функция-член возвращает итератор, который ссылается на элемент в мультикарте с ключом сортировки, эквивалентным ключу аргумента согласно двоичному предикату, применяющему упорядочение на основе отношения сравнения «меньше».
 
@@ -1171,7 +1171,7 @@ allocator_type get_allocator() const;
 
 Распределитель, использованный мультиотображением.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Распределители для класса multimap определяют, как класс управляет памятью. Распределителей по умолчанию в классах контейнеров стандартной библиотеки C++ достаточно для большинства задач программирования. Написание и использование собственного класса распределителя требует расширенных навыков работы с C++.
 
@@ -1298,7 +1298,7 @@ IList);
 
 Одноэлементные функции-члены с подсказкой (3) и (4) возвращают итератор, указывающий на позицию, где был вставлен новый элемент.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Эта функция не делает никакие указатели или ссылки недействительными, но она может сделать недействительными все итераторы контейнера.
 
@@ -1410,7 +1410,7 @@ int main()
 typedef implementation-defined iterator;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Объект, `iterator` определенный параметром multimap, указывает на объекты [value_type](#value_type), имеющие тип `pair<const Key, Type>` . Значение ключа доступно через первый член пары, а значение сопоставленного элемента доступно через второй член пары.
 
@@ -1436,7 +1436,7 @@ key_compare key_comp() const;
 
 Возвращает объект-функцию, которую мультиотображение использует для упорядочивания своих элементов.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Хранимый объект определяет функцию-член
 
@@ -1503,7 +1503,7 @@ kc2( 2,3 ) returns value of false, where kc2 is the function object of m2.
 typedef Traits key_compare;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 `key_compare` является синонимом для параметра-шаблона `Traits`.
 
@@ -1521,7 +1521,7 @@ typedef Traits key_compare;
 typedef Key key_type;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 `key_type` является синонимом для параметра-шаблона `Key`.
 
@@ -1627,7 +1627,7 @@ This is not the last element of multimap m1.
 typedef Type mapped_type;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 `mapped_type` является синонимом для параметра-шаблона `Type`.
 
@@ -1740,7 +1740,7 @@ multimap(
 *Интерфейс*\
 Объект initializer_list, из которого копируются элементы.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Все конструкторы сохраняют тип объекта-распределителя, управляющего памятью для мультиотображения. Затем его можно получить путем вызова [get_allocator](#get_allocator). Параметр-распределитель часто не указывается в объявлениях класса и в макросах предварительной обработки, используемых для замены альтернативных распределителей.
 
@@ -1881,7 +1881,7 @@ multimap& operator=(multimap&& right);
 *Правильно*\
 [Мультиотображение](../standard-library/multimap-class.md), которое будет копироваться в `multimap`.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 После стирания любых существующих элементов в `multimap` , `operator=` копирует или перемещает содержимое *непосредственно* в `multimap` .
 
@@ -1930,7 +1930,7 @@ int main( )
 typedef typename allocator_type::pointer pointer;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Тип `pointer` можно использовать для изменения значения элемента.
 
@@ -1950,7 +1950,7 @@ reverse_iterator rbegin();
 
 Обратный двунаправленный итератор, адресующий первый элемент в обратном мультиотображении или адресующий то, что было последним элементом в мультиотображении до изменения его порядка на противоположный.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 `rbegin` используется с обратным мультиотображением так же, как [begin](#begin) используется с прямым мультиотображением.
 
@@ -2087,7 +2087,7 @@ reverse_iterator rend();
 
 Обратный двунаправленный итератор, адресующий положение после последнего элемента в обратном мультиотображении (положение, которое предшествовало первому элементу в мультиотображении до изменения его порядка на противоположный).
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 `rend` используется с обратным мультиотображением так же, как [end](../standard-library/map-class.md#end) используется с обычным мультиотображением.
 
@@ -2165,7 +2165,7 @@ After the erasure, the last element in the reversed multimap is 2.
 typedef std::reverse_iterator<iterator> reverse_iterator;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Тип `reverse_iterator` используется для прохода по multimap в обратную.
 
@@ -2249,7 +2249,7 @@ void swap(
 *Правильно*\
 Мультиотображение, предоставляющее элементы для обмена, или мультиотображение, элементы которого должны быть заменены на элементы мультиотображения `left`.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Функция-член не делает недействительным ссылки, указатели или итераторы, обозначающие элементы в двух мультиотображениях, для которых выполняется обмен элементами.
 
@@ -2395,7 +2395,7 @@ value_compare value_comp() const;
 
 Возвращает объект-функцию сравнения, которую мультиотображение использует для упорядочения своих элементов.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Для multimap *m*, если два элемента *E1*(*K1*, *D1*) и *E2*(*априорной оценкой K2*, *D2*) являются объектами типа `value_type` , где *K1* и *априорной оценкой K2* являются ключами типа, а `key_type` *D1* и *D2* являются их данными типа `mapped_type` , то `m.value_comp(e1, e2)` эквивалентно `m.key_comp(k1, k2)` .
 

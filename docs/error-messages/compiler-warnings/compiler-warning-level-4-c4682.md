@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4682
 ms.assetid: 858ea157-1244-4a61-85df-97b3de43d418
-ms.openlocfilehash: 6af1bf2d27c04efb58e7f1af0439ed3d16b7491a
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: d9ab62d82c231a36a866597c1fad000eb616d835
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74990125"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91510009"
 ---
 # <a name="compiler-warning-level-4-c4682"></a>Предупреждение компилятора (уровень 4) C4682
 
 "параметр": не указан атрибут параметра направления, по умолчанию принимается [in]
 
-Метод для параметра в интерфейсе с атрибутом не имеет одного из атрибутов направления: [in](../../windows/in-cpp.md) или [out](../../windows/out-cpp.md). Параметр по умолчанию имеет значение в.
+Метод для параметра в интерфейсе с атрибутом не имеет одного из атрибутов направления: [in](../../windows/attributes/in-cpp.md) или [out](../../windows/attributes/out-cpp.md). Параметр по умолчанию имеет значение в.
 
 Это предупреждение отключено по умолчанию. Подробнее: [Выключенные по умолчанию предупреждения компилятора](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 

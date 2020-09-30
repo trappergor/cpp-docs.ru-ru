@@ -1,32 +1,39 @@
 ---
 title: Ошибка компилятора C3381
-ms.date: 11/04/2016
+description: Ошибка компилятора Microsoft C++ C3381, причины и способы их устранения.
+ms.date: 09/28/2020
 f1_keywords:
 - C3381
 helpviewer_keywords:
 - C3381
 ms.assetid: d276c89f-8377-4cb6-a8d4-7770885f06c4
-ms.openlocfilehash: eadc9b45b4cd4f2d9b533f387dadd66be8acc963
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 48a6c81f9506c532333b5353b8b194d17c91043f
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74749572"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91510149"
 ---
 # <a name="compiler-error-c3381"></a>Ошибка компилятора C3381
 
-"Assembly": Спецификаторы доступа сборки доступны только в коде, скомпилированном с параметром/CLR
+> "*идентификатор*": описатели доступа сборки доступны только в коде, скомпилированном с параметром/CLR
 
-Собственные типы могут быть видимыми за пределами сборки, но в компиляции **/CLR** можно указать только доступ к сборке для собственных типов.
+Тип был объявлен или определен с помощью описателя доступа, который допускается только в коде, скомпилированном с помощью **`/clr`** .
 
-Дополнительные сведения см. в разделе [видимость типов](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) и [/CLR (компиляция общеязыковой среды выполнения)](../../build/reference/clr-common-language-runtime-compilation.md).
+## <a name="remarks"></a>Remarks
+
+Эта ошибка может быть вызвана недопустимым **`public`** **`protected`** ключевым словом, или, или **`private`** отсутствием двоеточия ( **`:`** ) после спецификатора доступа в **`class`** или **`struct`** .
+
+В C++/CLI собственные типы могут быть видимыми за пределами сборки, но в компиляции можно указать только доступ к сборке машинного типа **`/clr`** . Дополнительные сведения см. в разделе [видимость типов](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) и [ `/clr` (компиляция среды CLR)](../../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Пример
 
-Следующий пример приводит к возникновению ошибки C3381.
+Следующий пример приводит к возникновению ошибки C3381. Чтобы устранить эту проблему, сначала удалите **`public`** спецификатор из `class A` определения или Скомпилируйте с помощью **`/clr`** параметра. Затем добавьте двоеточие после, **`private`** чтобы указать доступ для `class B {} b;` . Это обусловлено тем, что вложенный класс не может иметь спецификатор доступа к сборке в рамках своего объявления.
 
 ```cpp
 // C3381.cpp
 // compile with: /c
-public class A {};   // C3381
+public class A {   // C3381
+    private class B {} b;   // C3381
+};
 ```

@@ -4,18 +4,18 @@ ms.date: 08/19/2019
 helpviewer_keywords:
 - OLE DB consumers, implementing
 ms.assetid: 13828167-23a4-4e94-8b6c-878262fda464
-ms.openlocfilehash: 2f290f2a17c51682c75fbc09118757e5fd12c4f7
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 9e93b40313a215dfe5872b33dc7d41641204a2f1
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "79544708"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508980"
 ---
 # <a name="implementing-a-simple-consumer"></a>Реализация простых объектов-получателей
 
 ::: moniker range="vs-2019"
 
-Мастер объекта-получателя ATL OLE DB недоступен в Visual Studio 2019 и более поздних версиях. Эту функцию все еще можно добавить вручную. Дополнительные сведения см. в статье [Creating a Consumer Without Using a Wizard](creating-a-consumer-without-using-a-wizard.md) (Создание объекта-получателя без помощи мастера).
+Мастер объекта-получателя ATL OLE DB недоступен в Visual Studio 2019 и более поздних версиях. Эту функцию все еще можно добавить вручную. Дополнительные сведения см. в статье [Создание объекта-получателя без помощи мастера](creating-a-consumer-without-using-a-wizard.md).
 
 ::: moniker-end
 
@@ -72,7 +72,7 @@ ms.locfileid: "79544708"
 
 - Запросите столбец закладки от поставщика, задав свойство `DBPROP_IRowsetLocate`.
 
-- Добавьте запись закладки в сопоставление столбцов с помощью макроса [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md).
+- Добавьте запись закладки в сопоставление столбцов с помощью макроса [BOOKMARK_ENTRY](./macros-and-global-functions-for-ole-db-consumer-templates.md#bookmark_entry).
 
 Выполнив предыдущие шаги, вы получили поддержку закладок и объект закладки, с которым необходимо работать. Этот пример кода демонстрирует закладку следующим образом:
 
@@ -80,7 +80,7 @@ ms.locfileid: "79544708"
 
 - Выведите набор строк в файл построчно.
 
-- Переместите курсор набора строк на закладку, вызвав [MoveToBookmark](../../data/oledb/crowset-movetobookmark.md).
+- Переместите курсор набора строк на закладку, вызвав [MoveToBookmark](./crowset-class.md#movetobookmark).
 
 - Выведите добавленную в закладки строку, добавив ее в конец файла.
 
@@ -205,6 +205,6 @@ ms.locfileid: "79544708"
 
 ::: moniker-end
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-[Создание объекта-получателя OLE DB с помощью мастера](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
+[Создание OLE DB потребителя с помощью мастера](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

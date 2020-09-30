@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessor class
 ms.assetid: b2ba959f-a686-46f3-8837-176248aef748
-ms.openlocfilehash: 2b30cef2baf8c13c5001e44901b984aa1293494d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 032274d7dc85aa823cd28cf61e4606903f13ad9e
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212307"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509564"
 ---
 # <a name="caccessor-class"></a>Класс CAccessor
 
@@ -39,7 +39,7 @@ class CAccessor : public CAccessorBase, public T
 
 Используйте этот тип метода доступа, если известна структура и тип базы данных.
 
-Если метод доступа содержит поля, указывающие на память (например, `BSTR` или интерфейс), которую необходимо освободить, вызовите функцию-член [CAccessorRowset:: фрирекордмемори](../../data/oledb/caccessorrowset-freerecordmemory.md) , прежде чем будет считано следующая запись.
+Если метод доступа содержит поля, указывающие на память (например, `BSTR` интерфейс или), которая должна быть освобождена, вызовите функцию-член [CAccessorRowset:: фрирекордмемори](./caccessorrowset-class.md#freerecordmemory) , прежде чем будет считано следующая запись.
 
 ## <a name="requirements"></a>Требования
 
@@ -48,4 +48,4 @@ class CAccessor : public CAccessorBase, public T
 ## <a name="see-also"></a>См. также раздел
 
 [Шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Справочник по шаблонам потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -29,12 +29,12 @@ helpviewer_keywords:
 - OnPropertyChanged method
 - SetPropValue method
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-ms.openlocfilehash: 46fa266c5a8328bbcf7cfd1257ce1ff3e38ed2bb
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1e9e636824ff67ee93587637c0e098e625229c06
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845670"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509091"
 ---
 # <a name="cutlprops-class"></a>Класс CUtlProps
 
@@ -72,9 +72,9 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 
 Большая часть этого класса является подробным описанием реализации.
 
-`CUtlProps` содержит два элемента для внутреннего задания свойств: [жетпропвалуе](../../data/oledb/cutlprops-getpropvalue.md) и [сетпропвалуе](../../data/oledb/cutlprops-setpropvalue.md).
+`CUtlProps` содержит два элемента для внутреннего задания свойств: [жетпропвалуе](#getpropvalue) и [сетпропвалуе](#setpropvalue).
 
-Дополнительные сведения о макросах, используемых в схеме набора свойств, см. в разделе [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) и [END_PROPSET_MAP](../../data/oledb/end-propset-map.md).
+Дополнительные сведения о макросах, используемых в схеме набора свойств, см. в разделе [BEGIN_PROPSET_MAP](./macros-for-ole-db-provider-templates.md#begin_propset_map) и [END_PROPSET_MAP](./macros-for-ole-db-provider-templates.md#end_propset_map).
 
 ## <a name="cutlpropsgetpropvalue"></a><a name="getpropvalue"></a> CUtlProps:: Жетпропвалуе
 
@@ -163,7 +163,7 @@ virtual HRESULT CUtlPropsBase::OnInterfaceRequested(REFIID riid);
 
 - `IRowsetScroll`
 
-Если вы хотите обрабатывать другие интерфейсы, переопределите эту функцию в источнике данных, сеансе, команде или классе набора строк для обработки функций. Переопределение должно пройти через обычные интерфейсы set/get Properties, чтобы убедиться, что свойства настройки также устанавливают все связанные свойства (см. [OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)).
+Если вы хотите обрабатывать другие интерфейсы, переопределите эту функцию в источнике данных, сеансе, команде или классе набора строк для обработки функций. Переопределение должно пройти через обычные интерфейсы set/get Properties, чтобы убедиться, что свойства настройки также устанавливают все связанные свойства (см. [OnPropertyChanged](#onpropertychanged)).
 
 ## <a name="cutlpropsonpropertychanged"></a><a name="onpropertychanged"></a> CUtlProps:: OnPropertyChanged
 

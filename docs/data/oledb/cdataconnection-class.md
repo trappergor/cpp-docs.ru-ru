@@ -61,12 +61,12 @@ helpviewer_keywords:
 - operator CSession*
 - CSession* operator
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-ms.openlocfilehash: 118b8d09b90899eca0f257e319aabbefd92f359f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c456f4bf5891f550fcd9523fa376333d66e079a6
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838404"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509106"
 ---
 # <a name="cdataconnection-class"></a>Класс CDataConnection
 
@@ -95,7 +95,7 @@ class CDataConnection
 
 ### <a name="operators"></a>Операторы
 
-| Имя | Описание |
+| Название | Описание |
 |-|-|
 |[BOOL, оператор](#op_bool)|Определяет, открыт ли текущий сеанс.|
 |[bool, оператор](#op_bool_ole)|Определяет, открыт ли текущий сеанс.|
@@ -108,12 +108,12 @@ class CDataConnection
 
 `CDataConnection` — Это полезный класс для создания клиентов, поскольку он инкапсулирует необходимые объекты (источник данных и сеанс) и часть работы, которую необходимо выполнить при подключении к источнику данных.
 
-Без `CDataConnection` этого необходимо создать `CDataSource` объект, вызвать его метод [опенфроминитиализатионстринг](../../data/oledb/cdatasource-openfrominitializationstring.md) , затем создать экземпляр объекта [CSession](../../data/oledb/csession-class.md) , вызвать его метод [Open](../../data/oledb/csession-open.md) , а затем создать объект [CCommand](../../data/oledb/ccommand-class.md) и вызвать его `Open` методы *.
+Без `CDataConnection` этого необходимо создать `CDataSource` объект, вызвать его метод [опенфроминитиализатионстринг](./cdatasource-class.md#openfrominitializationstring) , затем создать экземпляр объекта [CSession](../../data/oledb/csession-class.md) , вызвать его метод [Open](./csession-class.md#open) , а затем создать объект [CCommand](../../data/oledb/ccommand-class.md) и вызвать его `Open` методы *.
 
 С помощью необходимо `CDataConnection` только создать объект соединения, передать ему строку инициализации, а затем использовать это соединение для открытия команд. Если вы планируете многократное использование подключения к базе данных, рекомендуется оставаться открытым и `CDataConnection` удобно для этого.
 
 > [!NOTE]
-> Если вы создаете приложение базы данных, которое должно работать с несколькими сеансами, необходимо использовать [опенневсессион](../../data/oledb/cdataconnection-opennewsession.md).
+> Если вы создаете приложение базы данных, которое должно работать с несколькими сеансами, необходимо использовать [опенневсессион](#opennewsession).
 
 ## <a name="cdataconnectioncdataconnection"></a><a name="cdataconnection"></a> CDataConnection:: CDataConnection
 
@@ -258,7 +258,7 @@ operator const CDataSource*() throw();
 
 Этот оператор возвращает указатель на содержащийся `CDataSource` объект, что позволяет передать `CDataConnection` объект, где `CDataSource` ожидается указатель.
 
-Пример использования см. в разделе [operator CDataSource&](../../data/oledb/cdataconnection-operator-cdatasource-amp.md) .
+Пример использования см. в разделе [operator CDataSource&](#op_cdata_amp) .
 
 ## <a name="cdataconnectionoperator-csessionamp"></a><a name="op_csession_amp"></a> CDataConnection:: operator CSession&amp;
 
@@ -298,7 +298,7 @@ operator const CSession*() throw();
 
 ### <a name="example"></a>Пример
 
-Пример использования см. в разделе [operator CSession&](../../data/oledb/cdataconnection-operator-csession-amp.md) .
+Пример использования см. в разделе [operator CSession&](#op_csession_amp) .
 
 ## <a name="see-also"></a>См. также раздел
 

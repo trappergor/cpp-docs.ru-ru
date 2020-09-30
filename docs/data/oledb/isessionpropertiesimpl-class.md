@@ -12,12 +12,12 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: ca0ba254-c7dc-4c52-abec-cf895a0c6a63
-ms.openlocfilehash: 57a94ccd8ee3871742e9c8360c56381f85053380
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d664f32226498326ffb092f1d3248fbdbf614d50
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844838"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509765"
 ---
 # <a name="isessionpropertiesimpl-class"></a>Класс ISessionPropertiesImpl
 
@@ -48,14 +48,14 @@ class ATL_NO_VTABLE ISessionPropertiesImpl :
 
 ### <a name="interface-methods"></a>Методы интерфейса
 
-| Имя | Описание |
+| Название | Описание |
 |-|-|
 |[GetProperties](#getproperties)|Возвращает список свойств в группе свойств сеанса, которые в настоящее время заданы в сеансе.|
 |[SetProperties](#setproperties)|Задает свойства в группе свойств сеанса.|
 
 ## <a name="remarks"></a>Remarks
 
-Обязательный интерфейс в сеансах. Этот класс реализует свойства сеанса путем вызова статической функции, определенной в [сопоставлении набора свойств](../../data/oledb/begin-propset-map.md). Схема набора свойств должна быть указана в классе сеанса.
+Обязательный интерфейс в сеансах. Этот класс реализует свойства сеанса путем вызова статической функции, определенной в [сопоставлении набора свойств](./macros-for-ole-db-provider-templates.md#begin_propset_map). Схема набора свойств должна быть указана в классе сеанса.
 
 ## <a name="isessionpropertiesimplgetproperties"></a><a name="getproperties"></a> Свойства ISessionPropertiesImpl:: Properties
 

@@ -548,12 +548,12 @@ helpviewer_keywords:
 - TABLE_NAME
 - TABLE_SCHEMA
 ms.assetid: 4bd881b3-26ca-4bdb-9226-d67560864f29
-ms.openlocfilehash: 82401ae88ea95d0e05659fa662a3621a27ef4531
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 104f7a92cdb472fc889d44cff20982e51b955014
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209707"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509500"
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>Классы схемы Rowset и Typedef
 
@@ -561,7 +561,7 @@ ms.locfileid: "80209707"
 
 Наборы строк схемы — это предопределенные наборы строк, представляющие метаданные. Наборы строк схемы обычно используются в динамическом программировании, где структура базы данных неизвестна во время компиляции. Эти наборы строк схемы можно использовать для получения сведений о базе данных во время выполнения.
 
-Используйте классы typedef для создания экземпляров наборов строк схемы. Соответствующие классы typedef и набора строк схемы перечислены ниже. После создания экземпляра набора строк схемы необходимо вызвать метод [cRestrictions:: Open](../../data/oledb/crestrictions-open.md) . Этот метод возвращает результирующий набор на основе указанных вами ограничений. Сведения о столбцах ограничений, связанных с каждым набором строк схемы, см. в разделе [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) .
+Используйте классы typedef для создания экземпляров наборов строк схемы. Соответствующие классы typedef и набора строк схемы перечислены ниже. После создания экземпляра набора строк схемы необходимо вызвать метод [cRestrictions:: Open](./crestrictions-class.md#open) . Этот метод возвращает результирующий набор на основе указанных вами ограничений. Сведения о столбцах ограничений, связанных с каждым набором строк схемы, см. в разделе [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) .
 
 В следующей таблице показаны все наборы строк схемы OLE DB и соответствующие им классы OLE DB шаблонов typedef и info.
 
@@ -588,7 +588,7 @@ ms.locfileid: "80209707"
 |[REFERENTIAL_CONSTRAINTS](/previous-versions/windows/desktop/ms719737(v=vs.85))|[CReferentialConstraints](#referentialconstraint)|[креферентиалконстраинтинфо](#referentialconstraint)|
 |[SCHEMATA](/previous-versions/windows/desktop/ms716887(v=vs.85))|[ксчемата](#schemata)|[ксчематаинфо](#schemata)|
 |[SQL_LANGUAGES](/previous-versions/windows/desktop/ms714374(v=vs.85))|[кскллангуажес](#sqllanguage)|[кскллангуажеинфо](#sqllanguage)|
-|[STATISTICS](/previous-versions/windows/desktop/ms715957(v=vs.85))|[кстатистикс](#statistic)|[кстатистиЦинфо](#statistic)|
+|[СТАТИСТИЧЕСКИ](/previous-versions/windows/desktop/ms715957(v=vs.85))|[кстатистикс](#statistic)|[кстатистиЦинфо](#statistic)|
 |[TABLE_CONSTRAINTS](/previous-versions/windows/desktop/ms715921(v=vs.85))|[ктаблеконстраинтс](#tableconstraint)|[ктаблеконстраинтинфо](#tableconstraint)|
 |[TABLES](/previous-versions/windows/desktop/ms716980(v=vs.85))|[ктаблес](#table)|[ктаблеинфо](#table)|
 |[TABLE_PRIVILEGES](/previous-versions/windows/desktop/ms725428(v=vs.85))|[ктаблепривилежес](#tableprivilege)|[ктаблепривилежеинфо](#tableprivilege)|
@@ -598,9 +598,9 @@ ms.locfileid: "80209707"
 |[VIEWS](/previous-versions/windows/desktop/ms723122(v=vs.85))|[CView](#view)|[квиевинфо](#view)|
 |[VIEW_TABLE_USAGE](/previous-versions/windows/desktop/ms719727(v=vs.85))|[квиевтаблеусаже](#viewtable)|[квиевтаблеинфо](#viewtable)|
 
-## <a name="cassertions-cassertioninfo"></a><a name="assertion"></a>Кассертионс, Кассертионинфо
+## <a name="cassertions-cassertioninfo"></a><a name="assertion"></a> Кассертионс, Кассертионинфо
 
-Вызовите класс typedef `CAssertions`, чтобы реализовать его класс параметров `CAssertionInfo`.
+Вызовите класс typedef `CAssertions` для реализации своего класса параметров `CAssertionInfo` .
 
 ### <a name="remarks"></a>Remarks
 
@@ -608,7 +608,7 @@ ms.locfileid: "80209707"
 
 Этот класс определяет утверждения, определенные в каталоге и принадлежащие данному пользователю.
 
-В следующей таблице перечислены элементы данных класса для `CAssertionInfo` и их соответствующие OLE DB столбцы. Дополнительные сведения о схеме и столбцах см. в разделе [набор строк утверждений](/previous-versions/windows/desktop/ms719776(v=vs.85)) в *справочнике по OLE DB программисту* .
+В следующей таблице перечислены элементы данных класса для `CAssertionInfo` и соответствующие OLE DB столбцы. Дополнительные сведения о схеме и столбцах см. в разделе [набор строк утверждений](/previous-versions/windows/desktop/ms719776(v=vs.85)) в *справочнике по OLE DB программисту* .
 
 |Элементы данных|OLE DB столбцы|
 |------------------|--------------------|
@@ -619,9 +619,9 @@ ms.locfileid: "80209707"
 |m_bInitiallyDeferred|INITIALLY_DEFERRED|
 |m_szDescription|DESCRIPTION|
 
-## <a name="ccatalogs-ccataloginfo"></a><a name="catalog"></a>Ккаталогс, Ккаталогинфо
+## <a name="ccatalogs-ccataloginfo"></a><a name="catalog"></a> Ккаталогс, Ккаталогинфо
 
-Вызовите класс typedef `CCatalogs`, чтобы реализовать его класс параметров `CCatalogInfo`.
+Вызовите класс typedef `CCatalogs` для реализации своего класса параметров `CCatalogInfo` .
 
 ### <a name="remarks"></a>Remarks
 
@@ -636,9 +636,9 @@ ms.locfileid: "80209707"
 |m_szName|CATALOG_NAME|
 |m_szDescription|DESCRIPTION|
 
-## <a name="ccharactersets-ccharactersetinfo"></a><a name="characterset"></a>Кчарактерсетс, Кчарактерсетинфо
+## <a name="ccharactersets-ccharactersetinfo"></a><a name="characterset"></a> Кчарактерсетс, Кчарактерсетинфо
 
-Вызовите класс typedef `CCharacterSets`, чтобы реализовать его класс параметров `CCharacterSetInfo`.
+Вызовите класс typedef `CCharacterSets` для реализации своего класса параметров `CCharacterSetInfo` .
 
 ### <a name="remarks"></a>Remarks
 
@@ -659,9 +659,9 @@ ms.locfileid: "80209707"
 |m_szCollateSchema|DEFAULT_COLLATE_SCHEMA|
 |m_szCollateName|DEFAULT_COLLATE_NAME|
 
-## <a name="ccheckconstraints-ccheckconstraintinfo"></a><a name="checkconstraint"></a>Кчеккконстраинтс, Кчеккконстраинтинфо
+## <a name="ccheckconstraints-ccheckconstraintinfo"></a><a name="checkconstraint"></a> Кчеккконстраинтс, Кчеккконстраинтинфо
 
-Вызовите класс typedef `CCheckConstraints`, чтобы реализовать его класс параметров `CCheckConstraintInfo`.
+Вызовите класс typedef `CCheckConstraints` для реализации своего класса параметров `CCheckConstraintInfo` .
 
 ### <a name="remarks"></a>Remarks
 
@@ -679,9 +679,9 @@ ms.locfileid: "80209707"
 |m_szCheckClause|CHECK_CLAUSE|
 |m_szDescription|DESCRIPTION|
 
-## <a name="ccollations-ccollationinfo"></a><a name="collation"></a>Кколлатионс, Кколлатионинфо
+## <a name="ccollations-ccollationinfo"></a><a name="collation"></a> Кколлатионс, Кколлатионинфо
 
-Вызовите класс typedef `CCollations`, чтобы реализовать его класс параметров `CCollationInfo`.
+Вызовите класс typedef `CCollations` для реализации своего класса параметров `CCollationInfo` .
 
 ### <a name="remarks"></a>Remarks
 
@@ -701,9 +701,9 @@ ms.locfileid: "80209707"
 |m_szCharSetName|CHARACTER_SET_NAME|
 |m_szPadAttribute|PAD_ATTRIBUTE|
 
-## <a name="ccolumndomainusage-ccolumndomainusageinfo"></a><a name="columndomainusage"></a>Кколумндомаинусаже, Кколумндомаинусажеинфо
+## <a name="ccolumndomainusage-ccolumndomainusageinfo"></a><a name="columndomainusage"></a> Кколумндомаинусаже, Кколумндомаинусажеинфо
 
-Вызовите класс typedef `CColumnDomainUsage`, чтобы реализовать его класс параметров `CColumnDomainUsageInfo`.
+Вызовите класс typedef `CColumnDomainUsage` для реализации своего класса параметров `CColumnDomainUsageInfo` .
 
 ### <a name="remarks"></a>Remarks
 
@@ -725,9 +725,9 @@ ms.locfileid: "80209707"
 |m_guidColumn|COLUMN_GUID|
 |m_nColumnPropID|COLUMN_PROPID|
 
-## <a name="ccolumnprivileges-ccolumnprivilegeinfo"></a><a name="columnprivilege"></a>Кколумнпривилежес, Кколумнпривилежеинфо
+## <a name="ccolumnprivileges-ccolumnprivilegeinfo"></a><a name="columnprivilege"></a> Кколумнпривилежес, Кколумнпривилежеинфо
 
-Вызовите класс typedef `CColumnPrivileges`, чтобы реализовать его класс параметров `CColumnPrivilegeInfo`.
+Вызовите класс typedef `CColumnPrivileges` для реализации своего класса параметров `CColumnPrivilegeInfo` .
 
 ### <a name="remarks"></a>Remarks
 
@@ -750,9 +750,9 @@ ms.locfileid: "80209707"
 |m_szPrivilegeType|PRIVILEGE_TYPE|
 |m_bIsGrantable|IS_GRANTABLE|
 
-## <a name="ccolumns-ccolumnsinfo"></a><a name="columns"></a>Кколумнс, Кколумнсинфо
+## <a name="ccolumns-ccolumnsinfo"></a><a name="columns"></a> Кколумнс, Кколумнсинфо
 
-Вызовите класс typedef `CColumns`, чтобы реализовать его класс параметров `CColumnsInfo`.
+Вызовите класс typedef `CColumns` для реализации своего класса параметров `CColumnsInfo` .
 
 ### <a name="remarks"></a>Remarks
 
@@ -793,9 +793,9 @@ ms.locfileid: "80209707"
 |m_szDomainName|DOMAIN_NAME|
 |m_szDescription|DESCRIPTION|
 
-## <a name="cconstraintcolumnusage-cconstraintcolumnusageinfo"></a><a name="constraintcolumnusage"></a>Кконстраинтколумнусаже, Кконстраинтколумнусажеинфо
+## <a name="cconstraintcolumnusage-cconstraintcolumnusageinfo"></a><a name="constraintcolumnusage"></a> Кконстраинтколумнусаже, Кконстраинтколумнусажеинфо
 
-Вызовите класс typedef `CConstraintColumnUsage`, чтобы реализовать его класс параметров `CConstraintColumnUsageInfo`.
+Вызовите класс typedef `CConstraintColumnUsage` для реализации своего класса параметров `CConstraintColumnUsageInfo` .
 
 ### <a name="remarks"></a>Remarks
 
@@ -817,9 +817,9 @@ ms.locfileid: "80209707"
 |m_szConstraintSchema|CONSTRAINT_SCHEMA|
 |m_szConstraintName|CONSTRAINT_NAME|
 
-## <a name="cconstrainttableusage-cconstrainttableusageinfo"></a><a name="constrainttableusage"></a>Кконстраинттаблеусаже, Кконстраинттаблеусажеинфо
+## <a name="cconstrainttableusage-cconstrainttableusageinfo"></a><a name="constrainttableusage"></a> Кконстраинттаблеусаже, Кконстраинттаблеусажеинфо
 
-Вызовите класс typedef `CConstraintTableUsage`, чтобы реализовать его класс параметров `CConstraintTableUsageInfo`.
+Вызовите класс typedef `CConstraintTableUsage` для реализации своего класса параметров `CConstraintTableUsageInfo` .
 
 ### <a name="remarks"></a>Remarks
 
@@ -838,9 +838,9 @@ ms.locfileid: "80209707"
 |m_szConstraintSchema|CONSTRAINT_SCHEMA|
 |m_szConstraintName|CONSTRAINT_NAME|
 
-## <a name="cforeignkeys-cforeignkeysinfo"></a><a name="foreignkeys"></a>Кфореигнкэйс, Кфореигнкэйсинфо
+## <a name="cforeignkeys-cforeignkeysinfo"></a><a name="foreignkeys"></a> Кфореигнкэйс, Кфореигнкэйсинфо
 
-Вызовите класс typedef `CForeignKeys`, чтобы реализовать его класс параметров `CForeignKeysInfo`.
+Вызовите класс typedef `CForeignKeys` для реализации своего класса параметров `CForeignKeysInfo` .
 
 ### <a name="remarks"></a>Remarks
 
@@ -868,9 +868,9 @@ ms.locfileid: "80209707"
 |m_szUpdateRule|UPDATE_RULE|
 |m_szDeleteRule|DELETE_RULE|
 
-## <a name="cindexes-cindexinfo"></a><a name="index"></a>Циндексес, Циндексинфо
+## <a name="cindexes-cindexinfo"></a><a name="index"></a> Циндексес, Циндексинфо
 
-Вызовите класс typedef `CIndexes`, чтобы реализовать его класс параметров `CIndexInfo`.
+Вызовите класс typedef `CIndexes` для реализации своего класса параметров `CIndexInfo` .
 
 ### <a name="remarks"></a>Remarks
 
@@ -907,9 +907,9 @@ ms.locfileid: "80209707"
 |m_nPages|PAGES|
 |m_szFilterCondition|FILTER_CONDITION|
 
-## <a name="ckeycolumns-ckeycolumninfo"></a><a name="keycolumn"></a>Ккэйколумнс, Ккэйколумнинфо
+## <a name="ckeycolumns-ckeycolumninfo"></a><a name="keycolumn"></a> Ккэйколумнс, Ккэйколумнинфо
 
-Вызовите класс typedef `CKeyColumns`, чтобы реализовать его класс параметров `CKeyColumnInfo`.
+Вызовите класс typedef `CKeyColumns` для реализации своего класса параметров `CKeyColumnInfo` .
 
 ### <a name="remarks"></a>Remarks
 
@@ -932,9 +932,9 @@ ms.locfileid: "80209707"
 |m_nColumnPropID|COLUMN_PROPID|
 |m_nOrdinalPosition|ORDINAL_POSITION|
 
-## <a name="cprimarykeys-cprimarykeyinfo"></a><a name="primarykey"></a>Кпримарикэйс, Кпримарикэйинфо
+## <a name="cprimarykeys-cprimarykeyinfo"></a><a name="primarykey"></a> Кпримарикэйс, Кпримарикэйинфо
 
-Вызовите класс typedef `CPrimaryKeys`, чтобы реализовать его класс параметров `CPrimaryKeyInfo`.
+Вызовите класс typedef `CPrimaryKeys` для реализации своего класса параметров `CPrimaryKeyInfo` .
 
 ### <a name="remarks"></a>Remarks
 
@@ -954,9 +954,9 @@ ms.locfileid: "80209707"
 |m_nColumnPropID|COLUMN_PROPID|
 |m_nOrdinal|ПОРЯДКОВЫЙ номер|
 
-## <a name="cprocedurecolumns-cprocedurecolumninfo"></a><a name="procedurecolumn"></a>Кпроцедуреколумнс, Кпроцедуреколумнинфо
+## <a name="cprocedurecolumns-cprocedurecolumninfo"></a><a name="procedurecolumn"></a> Кпроцедуреколумнс, Кпроцедуреколумнинфо
 
-Вызовите класс typedef `CProcedureColumns`, чтобы реализовать его класс параметров `CProcedureColumnInfo`.
+Вызовите класс typedef `CProcedureColumns` для реализации своего класса параметров `CProcedureColumnInfo` .
 
 ### <a name="remarks"></a>Remarks
 
@@ -985,9 +985,9 @@ ms.locfileid: "80209707"
 |m_nScale|NUMERIC_SCALE|
 |m_szDescription|DESCRIPTION|
 
-## <a name="cprocedureparameters-cprocedureparaminfo"></a><a name="procedureparam"></a>Кпроцедурепараметерс Кпроцедурепараминфо
+## <a name="cprocedureparameters-cprocedureparaminfo"></a><a name="procedureparam"></a> Кпроцедурепараметерс Кпроцедурепараминфо
 
-Вызовите класс typedef `CProcedureParameters`, чтобы реализовать его класс параметров `CProcedureParamInfo`.
+Вызовите класс typedef `CProcedureParameters` для реализации своего класса параметров `CProcedureParamInfo` .
 
 ### <a name="remarks"></a>Remarks
 
@@ -1015,9 +1015,9 @@ ms.locfileid: "80209707"
 |m_nScale|NUMERIC_SCALE|
 |m_szDescription|DESCRIPTION|
 
-## <a name="cprocedures-cprocedureinfo"></a><a name="procedure"></a>Кпроцедурес, Кпроцедуреинфо
+## <a name="cprocedures-cprocedureinfo"></a><a name="procedure"></a> Кпроцедурес, Кпроцедуреинфо
 
-Вызовите класс typedef `CProcedures`, чтобы реализовать его класс параметров `CProcedureInfo`.
+Вызовите класс typedef `CProcedures` для реализации своего класса параметров `CProcedureInfo` .
 
 ### <a name="remarks"></a>Remarks
 
@@ -1036,9 +1036,9 @@ ms.locfileid: "80209707"
 |m_szDefinition|PROCEDURE_DEFINITION|
 |m_szDescription|DESCRIPTION|
 
-## <a name="cprovidertypes-cproviderinfo"></a><a name="provider"></a>Кпровидертипес, Кпровидеринфо
+## <a name="cprovidertypes-cproviderinfo"></a><a name="provider"></a> Кпровидертипес, Кпровидеринфо
 
-Вызовите класс typedef `CProviderTypes`, чтобы реализовать его класс параметров `CProviderInfo`.
+Вызовите класс typedef `CProviderTypes` для реализации своего класса параметров `CProviderInfo` .
 
 ### <a name="remarks"></a>Remarks
 
@@ -1065,15 +1065,15 @@ ms.locfileid: "80209707"
 |m_szLocalTypeName|LOCAL_TYPE_NAME|
 |m_nMinScale|MINIMUM_SCALE|
 |m_nMaxScale|MAXIMUM_SCALE|
-|m_guidType|GUID|
+|m_guidType|Код GUID|
 |m_szTypeLib|TYPELIB|
 |m_szVersion|VERSION|
 |m_bIsLong|IS_LONG|
 |m_bBestMatch|BEST_MATCH|
 
-## <a name="creferentialconstraints-creferentialconstraintinfo"></a><a name="referentialconstraint"></a>CReferentialConstraints, Креферентиалконстраинтинфо
+## <a name="creferentialconstraints-creferentialconstraintinfo"></a><a name="referentialconstraint"></a> CReferentialConstraints, Креферентиалконстраинтинфо
 
-Вызовите класс typedef `CReferentialConstraints`, чтобы реализовать его класс параметров `CReferentialConstraintInfo`.
+Вызовите класс typedef `CReferentialConstraints` для реализации своего класса параметров `CReferentialConstraintInfo` .
 
 ### <a name="remarks"></a>Remarks
 
@@ -1096,9 +1096,9 @@ ms.locfileid: "80209707"
 |m_szDeleteRule|DELETE_RULE|
 |m_szDescription|DESCRIPTION|
 
-## <a name="cschemata-cschematainfo"></a><a name="schemata"></a>Ксчемата, Ксчематаинфо
+## <a name="cschemata-cschematainfo"></a><a name="schemata"></a> Ксчемата, Ксчематаинфо
 
-Вызовите класс typedef `CSchemata`, чтобы реализовать его класс параметров `CSchemataInfo`.
+Вызовите класс typedef `CSchemata` для реализации своего класса параметров `CSchemataInfo` .
 
 ### <a name="remarks"></a>Remarks
 
@@ -1117,9 +1117,9 @@ ms.locfileid: "80209707"
 |m_szCharSchema|DEFAULT_CHARACTER_SET_SCHEMA|
 |m_szCharName|DEFAULT_CHARACTER_SET_NAME|
 
-## <a name="csqllanguages-csqllanguageinfo"></a><a name="sqllanguage"></a>Кскллангуажес, Кскллангуажеинфо
+## <a name="csqllanguages-csqllanguageinfo"></a><a name="sqllanguage"></a> Кскллангуажес, Кскллангуажеинфо
 
-Вызовите класс typedef `CSQLLanguages`, чтобы реализовать его класс параметров `CSQLLanguageInfo`.
+Вызовите класс typedef `CSQLLanguages` для реализации своего класса параметров `CSQLLanguageInfo` .
 
 ### <a name="remarks"></a>Remarks
 
@@ -1139,9 +1139,9 @@ ms.locfileid: "80209707"
 |m_szBindingStyle|SQL_LANGUAGE_BINDING_STYLE|
 |m_szProgrammingLanguage|SQL_LANGUAGE_PROGRAMMING_LANGUAGE|
 
-## <a name="cstatistics-cstatisticinfo"></a><a name="statistic"></a>Кстатистикс, КстатистиЦинфо
+## <a name="cstatistics-cstatisticinfo"></a><a name="statistic"></a> Кстатистикс, КстатистиЦинфо
 
-Вызовите класс typedef `CStatistics`, чтобы реализовать его класс параметров `CStatisticInfo`.
+Вызовите класс typedef `CStatistics` для реализации своего класса параметров `CStatisticInfo` .
 
 ### <a name="remarks"></a>Remarks
 
@@ -1158,9 +1158,9 @@ ms.locfileid: "80209707"
 |m_szTableName|TABLE_NAME|
 |m_nCardinality|CARDINALITY|
 
-## <a name="ctableconstraints-ctableconstraintinfo"></a><a name="tableconstraint"></a>Ктаблеконстраинтс, Ктаблеконстраинтинфо
+## <a name="ctableconstraints-ctableconstraintinfo"></a><a name="tableconstraint"></a> Ктаблеконстраинтс, Ктаблеконстраинтинфо
 
-Вызовите класс typedef `CTableConstraints`, чтобы реализовать его класс параметров `CTableConstraintInfo`.
+Вызовите класс typedef `CTableConstraints` для реализации своего класса параметров `CTableConstraintInfo` .
 
 ### <a name="remarks"></a>Remarks
 
@@ -1183,9 +1183,9 @@ ms.locfileid: "80209707"
 |m_bInitiallyDeferred|INITIALLY_DEFERRED|
 |m_szDescription|DESCRIPTION|
 
-## <a name="ctableprivileges-ctableprivilegeinfo"></a><a name="tableprivilege"></a>Ктаблепривилежес, Ктаблепривилежеинфо
+## <a name="ctableprivileges-ctableprivilegeinfo"></a><a name="tableprivilege"></a> Ктаблепривилежес, Ктаблепривилежеинфо
 
-Вызовите класс typedef `CTablePrivileges`, чтобы реализовать его класс параметров `CTablePrivilegeInfo`.
+Вызовите класс typedef `CTablePrivileges` для реализации своего класса параметров `CTablePrivilegeInfo` .
 
 ### <a name="remarks"></a>Remarks
 
@@ -1205,9 +1205,9 @@ ms.locfileid: "80209707"
 |m_szType|PRIVILEGE_TYPE|
 |m_bIsGrantable|IS_GRANTABLE|
 
-## <a name="ctables-ctableinfo"></a><a name="table"></a>Ктаблес, Ктаблеинфо
+## <a name="ctables-ctableinfo"></a><a name="table"></a> Ктаблес, Ктаблеинфо
 
-Вызовите класс typedef `CTables`, чтобы реализовать его класс параметров `CTableInfo`.
+Вызовите класс typedef `CTables` для реализации своего класса параметров `CTableInfo` .
 
 ### <a name="remarks"></a>Remarks
 
@@ -1226,9 +1226,9 @@ ms.locfileid: "80209707"
 |m_guidTable|TABLE_GUID|
 |m_szDescription|DESCRIPTION|
 
-## <a name="ctranslations-ctranslationinfo"></a><a name="translation"></a>Ктранслатионс, Ктранслатионинфо
+## <a name="ctranslations-ctranslationinfo"></a><a name="translation"></a> Ктранслатионс, Ктранслатионинфо
 
-Вызовите класс typedef `CTranslations`, чтобы реализовать его класс параметров `CTranslationInfo`.
+Вызовите класс typedef `CTranslations` для реализации своего класса параметров `CTranslationInfo` .
 
 ### <a name="remarks"></a>Remarks
 
@@ -1250,9 +1250,9 @@ ms.locfileid: "80209707"
 |m_szTargetSchema|TARGET_CHARACTER_SET_SCHEMA|
 |m_szTargetName|TARGET_CHARACTER_SET_NAME|
 
-## <a name="cusageprivileges-cusageprivilegeinfo"></a><a name="usageprivilege"></a>Кусажепривилежес, Кусажепривилежеинфо
+## <a name="cusageprivileges-cusageprivilegeinfo"></a><a name="usageprivilege"></a> Кусажепривилежес, Кусажепривилежеинфо
 
-Вызовите класс typedef `CUsagePrivileges`, чтобы реализовать его класс параметров `CUsagePrivilegeInfo`.
+Вызовите класс typedef `CUsagePrivileges` для реализации своего класса параметров `CUsagePrivilegeInfo` .
 
 ### <a name="remarks"></a>Remarks
 
@@ -1273,9 +1273,9 @@ ms.locfileid: "80209707"
 |m_szPrivilegeType|PRIVILEGE_TYPE|
 |m_bIsGrantable|IS_GRANTABLE|
 
-## <a name="cviewcolumnusage-cviewcolumninfo"></a><a name="viewcolumn"></a>Квиевколумнусаже, Квиевколумнинфо
+## <a name="cviewcolumnusage-cviewcolumninfo"></a><a name="viewcolumn"></a> Квиевколумнусаже, Квиевколумнинфо
 
-Вызовите класс typedef `CViewColumnUsage`, чтобы реализовать его класс параметров `CViewColumnInfo`.
+Вызовите класс typedef `CViewColumnUsage` для реализации своего класса параметров `CViewColumnInfo` .
 
 ### <a name="remarks"></a>Remarks
 
@@ -1297,9 +1297,9 @@ ms.locfileid: "80209707"
 |m_guidColumn|COLUMN_GUID|
 |m_nColumnPropID|COLUMN_PROPID|
 
-## <a name="cviews-cviewinfo"></a><a name="view"></a>CView, Квиевинфо
+## <a name="cviews-cviewinfo"></a><a name="view"></a> CView, Квиевинфо
 
-Вызовите класс typedef `CViews`, чтобы реализовать его класс параметров `CViewInfo`.
+Вызовите класс typedef `CViews` для реализации своего класса параметров `CViewInfo` .
 
 ### <a name="remarks"></a>Remarks
 
@@ -1319,9 +1319,9 @@ ms.locfileid: "80209707"
 |m_bIsUpdatable|IS_UPDATABLE|
 |m_szDescription|DESCRIPTION|
 
-## <a name="cviewtableusage-cviewtableinfo"></a><a name="viewtable"></a>Квиевтаблеусаже, Квиевтаблеинфо
+## <a name="cviewtableusage-cviewtableinfo"></a><a name="viewtable"></a> Квиевтаблеусаже, Квиевтаблеинфо
 
-Вызовите класс typedef `CViewTableUsage`, чтобы реализовать его класс параметров `CViewTableInfo`.
+Вызовите класс typedef `CViewTableUsage` для реализации своего класса параметров `CViewTableInfo` .
 
 ### <a name="remarks"></a>Remarks
 

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::bit [C++], countr_zero
 - std::bit [C++], countr_one
 - std::bit [C++], popcount
-ms.openlocfilehash: a2408df9aa13c6e714f615561871397be17fc4a3
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 94e44493b9356b3a0717c42aa1bed510ebe460dd
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90039820"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509977"
 ---
 # <a name="ltbitgt-functions"></a>&lt;битовые &gt; функции
 
@@ -101,19 +101,22 @@ float f = inf
 std::bit_cat<int>(f) = 7f800000
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Код низкого уровня часто должен интерпретировать объект одного типа как другой тип. Переинтерпретируемый объект имеет то же битовое представление, что и исходный, но имеет другой тип.
 
 Вместо использования `reinterpret_cast` , или `memcpy()` , `bit_cast()` является лучшим способом выполнения этих преобразований. Это лучше, поскольку:
-- `bit_cast()` равно `constexpr`
+
+- `bit_cast()` имеет значение `constexpr`.
 - `bit_cast()` требует, чтобы типы были просто скопированы и иметь одинаковый размер. Это позволяет избежать потенциальных проблем, с которыми можно столкнуться при использовании `reinterpret_cast` и, `memcpy` поскольку они могут использоваться для непреднамеренного и некорректного преобразования нетривиальных копий типов. Кроме того, можно `memcpy()` использовать для непреднамеренного копирования типов, которые имеют неодинаковый размер. Например, Double (8 байт) в целое число без знака (4 байта) или наоборот.
 
 Эта перегрузка принимает участие в разрешении перегрузки только в том случае, если:
--  `sizeof(To) == sizeof(From)`
+
+- `sizeof(To) == sizeof(From)`
 - `To` и `From` являются [is_trivially_copyableми](is-trivially-copyable-class.md).
 
 Этот шаблон функции имеет значение, `constexpr` только если `To` , и `From` типы их подобъектов:
+
 - не является типом объединения или указателя
 - не является указателем на тип элемента
 - без временных квалификаторов
@@ -165,7 +168,7 @@ bit_ceil(0b0100) = 0b0100
 bit_ceil(0b0101) = 0b1000
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Эта функция шаблона участвует в разрешении перегрузки только в `T` том случае, если является целочисленным типом без знака. Например: `unsigned int` , `unsigned long` , `unsigned short` , `unsigned char` и т. д.
 
@@ -216,7 +219,7 @@ bit_floor(0b0100) = 0b0100
 bit_floor(0b0101) = 0b0100
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Эта функция шаблона участвует в разрешении перегрузки только в `T` том случае, если является целочисленным типом без знака. Например: `unsigned int` , `unsigned long` , `unsigned short` , `unsigned char` и т. д.
 
@@ -270,7 +273,7 @@ bit_width(7) = 3
 bit_width(8) = 4
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Эта функция шаблона участвует в разрешении перегрузки только в `T` том случае, если является целочисленным типом без знака. Например: `unsigned int` , `unsigned long` , `unsigned short` , `unsigned char` и т. д.
 
@@ -323,7 +326,7 @@ countl_zero(0b01000000) = 1
 countl_zero(0b10000000) = 0
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Эта функция шаблона участвует в разрешении перегрузки только в `T` том случае, если является целочисленным типом без знака. Например: `unsigned int` , `unsigned long` , `unsigned short` , `unsigned char` и т. д.
 
@@ -376,7 +379,7 @@ countl_one(0b11111110) = 7
 countl_one(0b11111111) = 8
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Эта функция шаблона участвует в разрешении перегрузки только в `T` том случае, если является целочисленным типом без знака. Например: `unsigned int` , `unsigned long` , `unsigned short` , `unsigned char` и т. д.
 
@@ -430,7 +433,7 @@ countr_zero(0b01000000) = 6
 countr_zero(0b10000000) = 7
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Эта функция шаблона участвует в разрешении перегрузки только в `T` том случае, если является целочисленным типом без знака. Например: `unsigned int` , `unsigned long` , `unsigned short` , `unsigned char` и т. д.
 
@@ -483,14 +486,14 @@ countr_one(0b01111111) = 7
 countr_one(0b11111111) = 8
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Эта функция шаблона участвует в разрешении перегрузки только в `T` том случае, если является целочисленным типом без знака. Например: `unsigned int` , `unsigned long` , `unsigned short` , `unsigned char` и т. д.
 
 ## <a name="has_single_bit"></a>`has_single_bit`
 
 Проверьте, имеет ли значение только один битовый набор. Это то же самое, что и проверка того, является ли значение степенью двух.
- 
+
 ```cpp
 template <class T>
 [[nodiscard]] constexpr bool has_single_bit(T value) noexcept;
@@ -537,14 +540,14 @@ has_single_bit(0b1000) = true
 has_single_bit(0b1001) = false
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Эта функция шаблона участвует в разрешении перегрузки только в `T` том случае, если является целочисленным типом без знака. Например: `unsigned int` , `unsigned long` , `unsigned short` , `unsigned char` и т. д.
 
 ## <a name="popcount"></a>`popcount`
 
 Подсчитайте число битов, равных одному, в целочисленном значении без знака.
- 
+
 ```cpp
 template<class T>
 [[nodiscard]] constexpr int popcount(T value) noexcept;
@@ -596,14 +599,14 @@ popcount(0b1110) = 3
 popcount(0b1111) = 4
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Эта функция шаблона участвует в разрешении перегрузки только в `T` том случае, если является целочисленным типом без знака. Например: `unsigned int` , `unsigned long` , `unsigned short` , `unsigned char` и т. д.
 
 ## <a name="rotl"></a>`rotl`
 
 Поворачивает биты целочисленного значения без знака влево на указанное число раз. Биты, которые «попадают» из самого левого бита, поворачиваются в самый правый бит.
- 
+
 ```cpp
 template<class T>
 [[nodiscard]] constexpr T rotl(T value, int s) noexcept;
@@ -658,14 +661,14 @@ rotl(0b10000000, 1) = 0b00000001
 rotl(0b00000001,-1) = 0b10000000
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Эта функция шаблона участвует в разрешении перегрузки только в `T` том случае, если является целочисленным типом без знака. Например: `unsigned int` , `unsigned long` , `unsigned short` , `unsigned char` и т. д.
 
 ## <a name="rotr"></a>`rotr`
 
 Поворачивает биты `value` справа заданное число раз. Биты, которые "попадают" из крайнего правого бита, поворачиваются обратно в самый левый бит.
- 
+
 ```cpp
 template<class T>
 [[nodiscard]] constexpr T rotr(T value, int s) noexcept;
@@ -720,7 +723,7 @@ rotr(0b00000001, 1) = 0b10000000
 rotr(0b10000000,-1) = 0b00000001
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Эта функция шаблона участвует в разрешении перегрузки только в `T` том случае, если является целочисленным типом без знака. Например: `unsigned int` , `unsigned long` , `unsigned short` , `unsigned char` и т. д.
 

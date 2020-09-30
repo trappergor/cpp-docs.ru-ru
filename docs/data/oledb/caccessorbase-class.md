@@ -25,12 +25,12 @@ helpviewer_keywords:
 - IsAutoAccessor method
 - ReleaseAccessors method
 ms.assetid: 389b65be-11ca-4ae0-9290-60c621c4982b
-ms.openlocfilehash: eff7eff855bcccefee7e051c67d583d28e488293
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 81b0ecd8ded7acb0c0e376d0869decb2bfcb590e
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843304"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509122"
 ---
 # <a name="caccessorbase-class"></a>Класс CAccessorBase
 
@@ -70,7 +70,7 @@ void Close();
 
 ### <a name="remarks"></a>Remarks
 
-Сначала необходимо вызвать [релеасеакцессорс](../../data/oledb/caccessorbase-releaseaccessors.md) .
+Сначала необходимо вызвать [релеасеакцессорс](#release) .
 
 ## <a name="caccessorbasegethaccessor"></a><a name="geth"></a> CAccessorBase:: Жесакцессор
 
@@ -145,7 +145,7 @@ HRESULT ReleaseAccessors(IUnknown* pUnk);
 
 ### <a name="remarks"></a>Remarks
 
-Вызывается из [CAccessorRowset:: Close](../../data/oledb/caccessorrowset-close.md).
+Вызывается из [CAccessorRowset:: Close](./caccessorrowset-class.md#close).
 
 ## <a name="see-also"></a>См. также раздел
 

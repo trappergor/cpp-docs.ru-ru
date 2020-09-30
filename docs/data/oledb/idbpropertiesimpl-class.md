@@ -20,12 +20,12 @@ helpviewer_keywords:
 - GetPropertyInfo method
 - SetProperties method
 ms.assetid: a7f15a8b-95b2-4316-b944-d5d03f8d74ab
-ms.openlocfilehash: 16f1a3f8ae9b50e43bfd67d9ac8c65507bf4f147
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d94c5d121386989d223a55b8ce7626444c3f8950
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834340"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509062"
 ---
 # <a name="idbpropertiesimpl-class"></a>Класс IDBPropertiesImpl
 
@@ -52,7 +52,7 @@ class ATL_NO_VTABLE IDBPropertiesImpl
 
 ### <a name="interface-methods"></a>Методы интерфейса
 
-| Имя | Описание |
+| Название | Описание |
 |-|-|
 |[GetProperties](#getproperties)|Возвращает значения свойств в источнике данных, сведения об источнике данных и группах свойств инициализации, которые в настоящее время заданы для объекта источника данных, или значения свойств в группе свойств инициализации, которые в данный момент установлены в перечислителе.|
 |[GetPropertyInfo](#getpropertyinfo)|Возвращает сведения обо всех свойствах, поддерживаемых поставщиком.|
@@ -60,7 +60,7 @@ class ATL_NO_VTABLE IDBPropertiesImpl
 
 ## <a name="remarks"></a>Remarks
 
-[Интерфейс IDBProperties](/previous-versions/windows/desktop/ms719607(v=vs.85)) является обязательным интерфейсом для объектов источника данных и необязательным интерфейсом для перечислителей. Однако если перечислитель предоставляет [IDBInitialize](/previous-versions/windows/desktop/ms713706(v=vs.85)), он должен предоставить `IDBProperties` . `IDBPropertiesImpl` реализует с `IDBProperties` помощью статической функции, определенной [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+[Интерфейс IDBProperties](/previous-versions/windows/desktop/ms719607(v=vs.85)) является обязательным интерфейсом для объектов источника данных и необязательным интерфейсом для перечислителей. Однако если перечислитель предоставляет [IDBInitialize](/previous-versions/windows/desktop/ms713706(v=vs.85)), он должен предоставить `IDBProperties` . `IDBPropertiesImpl` реализует с `IDBProperties` помощью статической функции, определенной [BEGIN_PROPSET_MAP](./macros-for-ole-db-provider-templates.md#begin_propset_map).
 
 ## <a name="idbpropertiesimplgetproperties"></a><a name="getproperties"></a> Свойства IDBPropertiesImpl:: Properties
 
@@ -119,7 +119,7 @@ STDMETHOD(GetPropertyInfo)(ULONG cPropertySets,
 
 ### <a name="remarks"></a>Remarks
 
-Использует [идбинитиализеимпл:: m_pCUtlPropInfo](../../data/oledb/idbinitializeimpl-m-pcutlpropinfo.md) для реализации этой функции.
+Использует [идбинитиализеимпл:: m_pCUtlPropInfo](./idbinitializeimpl-class.md#pcutlpropinfo) для реализации этой функции.
 
 ## <a name="idbpropertiesimplsetproperties"></a><a name="setproperties"></a> IDBPropertiesImpl:: SetProperties
 
