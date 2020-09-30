@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - lock_when enum
 ms.assetid: 6b87bbe9-63cd-450d-a02e-bb91ffd0dcea
-ms.openlocfilehash: af4e4472a33ef3d083f54da74e306562af1867a1
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 991cce4cfa6810f35c2ccb3ec1ed45adf2d849ac
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "79544835"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508685"
 ---
 # <a name="lock_when-enum"></a>Перечисление lock_when
 
@@ -28,9 +28,9 @@ enum lock_when {
 };
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-При передаче в [Lock:: lock](../dotnet/lock-lock.md)`lock_later` указывает, что блокировка не должна выполняться сейчас.
+При передаче в [блокировку:: Lock](./lock-class.md#lock) `lock_later` указывает, что блокировка не должна выполняться сейчас.
 
 ## <a name="example"></a>Пример
 
@@ -124,10 +124,10 @@ All threads completed.
 
 ## <a name="requirements"></a>Требования
 
-**Файл заголовка** \<мсклр\локк.х >
+**Файл заголовка** \<msclr\lock.h>
 
 Мсклр **пространства имен**
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [lock](../dotnet/lock.md)

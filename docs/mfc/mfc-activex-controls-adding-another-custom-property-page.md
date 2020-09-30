@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ActiveX controls [MFC], property pages
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: fcf7e119-9f29-41a9-908d-e9b1607e08af
-ms.openlocfilehash: 33fd297ee509b341d39d9db21af54a3988f6256e
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a749c5d8d676ac85c3c2085eb041328aff599ab8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618288"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508874"
 ---
 # <a name="mfc-activex-controls-adding-another-custom-property-page"></a>Элементы управления ActiveX в MFC. Добавление дополнительной страницы пользовательских свойств
 
@@ -24,9 +24,9 @@ ms.locfileid: "84618288"
 
 Дополнительные сведения об использовании страниц свойств в элементе управления ActiveX см. в следующих статьях:
 
-- [Элементы ActiveX в MFC. Страницы свойств](mfc-activex-controls-property-pages.md)
+- [Элементы управления ActiveX в MFC: страницы свойств](mfc-activex-controls-property-pages.md)
 
-- [Элементы ActiveX в MFC. Использование стандартных страниц свойств](mfc-activex-controls-using-stock-property-pages.md)
+- [Элементы управления ActiveX в MFC. Использование страниц свойств запасов](mfc-activex-controls-using-stock-property-pages.md)
 
     > [!NOTE]
     >  Настоятельно рекомендуется, чтобы новые страницы свойств соответствовали стандарту size для страниц свойств элементов управления ActiveX. Страницы свойств "изображение и цвет" на бирже измеряют единицы диалогового окна 250x62 (ДЛУ). Стандартная страница свойств шрифта — 250x110 Длус. Страница свойств по умолчанию, созданная мастером элементов управления ActiveX, использует стандарт 250x62 ДЛУ.
@@ -55,7 +55,7 @@ ms.locfileid: "84618288"
 
 1. В контекстном меню выберите **Добавить** , а затем — **Добавить класс**.
 
-   Откроется диалоговое окно [Добавление класса](../ide/add-class-dialog-box.md) .
+   Откроется диалоговое окно [Добавление класса](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) .
 
 1. Дважды щелкните шаблон **класса MFC** .
 
@@ -109,4 +109,4 @@ ms.locfileid: "84618288"
 
 ## <a name="see-also"></a>См. также раздел
 
-[Элементы ActiveX библиотеки MFC](mfc-activex-controls.md)
+[Элементы управления ActiveX в MFC](mfc-activex-controls.md)

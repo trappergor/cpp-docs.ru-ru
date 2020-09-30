@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::lock class
 ms.assetid: 5123edd9-6aed-497d-9a0b-f4b6d6c0d666
-ms.openlocfilehash: b06c293200bc85945e95996db3109c1f5fba8d8a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7b2f187ec940af95523d0bbfb9265d7d9d6f69e8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225622"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508648"
 ---
 # <a name="lock-class"></a>Класс lock
 
@@ -33,7 +33,7 @@ ref class lock;
 
 ## <a name="remarks"></a>Remarks
 
-`lock`доступен только для объектов CLR и может использоваться только в коде CLR.
+`lock` доступен только для объектов CLR и может использоваться только в коде CLR.
 
 На внутреннем уровне класс Lock использует <xref:System.Threading.Monitor> для синхронизации доступа. Дополнительные сведения см. в указанной статье.
 
@@ -41,14 +41,14 @@ ref class lock;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Название|Описание|
 |---------|-----------|
 |[lock::lock](#lock)|Создает `lock` объект, при необходимости ожидающий получения блокировки в течение заданного промежутка времени или вообще без него.|
 |[Блокировка блокировки:: ~](#tilde-lock)|Разструктура `lock` объекта.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Название|Описание|
 |---------|-----------|
 |[lock::acquire](#acquire)|Запрашивает блокировку на объект, при необходимости ожидая получения блокировки в течение заданного времени или вообще без него.|
 |[lock::is_locked](#is-locked)|Указывает, удерживается ли блокировка.|
@@ -57,7 +57,7 @@ ref class lock;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|Название|Описание|
 |---------|-----------|
 |[логический:: operator &nbsp; bool](#operator-bool)|Оператор для использования `lock` в условном выражении.|
 |[lock::operator==](#operator-equality)|Оператор равенства.|
@@ -69,7 +69,7 @@ ref class lock;
 
 Мсклр **пространства имен**
 
-## <a name="locklock"></a><a name="lock"></a>Блокировка:: Lock
+## <a name="locklock"></a><a name="lock"></a> Блокировка:: Lock
 
 Создает `lock` объект, при необходимости ожидающий получения блокировки в течение заданного промежутка времени или вообще без него.
 
@@ -107,11 +107,11 @@ template<class T> lock(
 
 Первые три формы конструктора пытаются получить блокировку в `_object` течение заданного периода ожидания (или <xref:System.Threading.Timeout.Infinite> Если ни один из них не указан).
 
-Четвертая форма конструктора не получает блокировку `_object` . `lock_later`является членом [перечисления lock_when](../dotnet/lock-when-enum.md). Чтобы получить блокировку в этом случае, используйте [блокировку:: получение](../dotnet/lock-acquire.md) или [блокировку:: try_acquire](../dotnet/lock-try-acquire.md) .
+Четвертая форма конструктора не получает блокировку `_object` . `lock_later` является членом [перечисления lock_when](../dotnet/lock-when-enum.md). Чтобы получить блокировку в этом случае, используйте [блокировку:: получение](#acquire) или [блокировку:: try_acquire](#try-acquire) .
 
 Блокировка будет автоматически освобождена при вызове деструктора.
 
-`_object`не может иметь <xref:System.Threading.ReaderWriterLock> .  Если это так, будет выдаваться ошибка компилятора.
+`_object` не может иметь <xref:System.Threading.ReaderWriterLock> .  Если это так, будет выдаваться ошибка компилятора.
 
 ### <a name="example"></a>Пример
 
@@ -203,7 +203,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="locklock"></a><a name="tilde-lock"></a>Блокировка блокировки:: ~
+## <a name="locklock"></a><a name="tilde-lock"></a> Блокировка блокировки:: ~
 
 Разструктура `lock` объекта.
 
@@ -213,7 +213,7 @@ All threads completed.
 
 ### <a name="remarks"></a>Remarks
 
-Деструктор вызывает [блокировку:: Release](../dotnet/lock-release.md).
+Деструктор вызывает [блокировку:: Release](#release).
 
 ### <a name="example"></a>Пример
 
@@ -305,7 +305,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockacquire"></a><a name="acquire"></a>Блокировка:: получение
+## <a name="lockacquire"></a><a name="acquire"></a> Блокировка:: получение
 
 Запрашивает блокировку на объект, при необходимости ожидая получения блокировки в течение заданного времени или вообще без него.
 
@@ -424,7 +424,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockis_locked"></a><a name="is-locked"></a>Блокировка:: is_locked
+## <a name="lockis_locked"></a><a name="is-locked"></a> Блокировка:: is_locked
 
 Указывает, удерживается ли блокировка.
 
@@ -527,7 +527,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockoperator-bool"></a><a name="operator-bool"></a>логический:: operator bool
+## <a name="lockoperator-bool"></a><a name="operator-bool"></a> логический:: operator bool
 
 Оператор для использования `lock` в условном выражении.
 
@@ -634,7 +634,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockrelease"></a><a name="release"></a>Блокировка:: выпуск
+## <a name="lockrelease"></a><a name="release"></a> Блокировка:: выпуск
 
 Снимает блокировку.
 
@@ -738,7 +738,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="locktry_acquire"></a><a name="try-acquire"></a>Блокировка:: try_acquire
+## <a name="locktry_acquire"></a><a name="try-acquire"></a> Блокировка:: try_acquire
 
 Получает блокировку объекта, ожидая указанного времени и возвращая **`bool`** для сообщения об успешном приобретении, а не вызывая исключение.
 
@@ -854,7 +854,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockoperator"></a><a name="operator-equality"></a>Lock:: operator = =
+## <a name="lockoperator"></a><a name="operator-equality"></a> Lock:: operator = =
 
 Оператор равенства.
 
@@ -897,7 +897,7 @@ int main () {
 Equal!
 ```
 
-## <a name="lockoperator"></a><a name="operator-inequality"></a>Lock:: operator! =
+## <a name="lockoperator"></a><a name="operator-inequality"></a> Lock:: operator! =
 
 Оператор неравенства.
 

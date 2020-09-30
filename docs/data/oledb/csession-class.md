@@ -40,12 +40,12 @@ helpviewer_keywords:
 - Open method
 - StartTransaction method
 ms.assetid: 83cd798f-b45d-4f11-a23c-29183390450c
-ms.openlocfilehash: 6858c26df5f5ee364717d089704117e650282278
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f507ed432e107f586d34bb6b08fa9d3f7dc509d8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841107"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507240"
 ---
 # <a name="csession-class"></a>класс CSession
 
@@ -76,7 +76,7 @@ class CSession
 
 ## <a name="remarks"></a>Remarks
 
-Один или несколько сеансов могут быть связаны с каждым соединением с поставщиком (источником данных), представленным объектом [CDataSource](../../data/oledb/cdatasource-class.md) . Чтобы создать новый объект `CSession` для `CDataSource` , вызовите [CSession:: Open](../../data/oledb/csession-open.md). Для начала транзакции базы данных `CSession` предоставляет `StartTransaction` метод. После запуска транзакции ее можно зафиксировать с помощью `Commit` метода или отменить с помощью `Abort` метода.
+Один или несколько сеансов могут быть связаны с каждым соединением с поставщиком (источником данных), представленным объектом [CDataSource](../../data/oledb/cdatasource-class.md) . Чтобы создать новый объект `CSession` для `CDataSource` , вызовите [CSession:: Open](#open). Для начала транзакции базы данных `CSession` предоставляет `StartTransaction` метод. После запуска транзакции ее можно зафиксировать с помощью `Commit` метода или отменить с помощью `Abort` метода.
 
 ## <a name="csessionabort"></a><a name="abort"></a> CSession:: Abort
 
@@ -100,7 +100,7 @@ HRESULT Abort(BOID* pboidReason = NULL,
 
 ## <a name="csessionclose"></a><a name="close"></a> CSession:: Close
 
-Закрывает сеанс, Открытый с помощью [CSession:: Open](../../data/oledb/csession-open.md).
+Закрывает сеанс, Открытый с помощью [CSession:: Open](#open).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -187,7 +187,7 @@ HRESULT Open(const CDataSource& ds,
 
 ### <a name="remarks"></a>Remarks
 
-Необходимо открыть объект источника данных с помощью [CDataSource:: Open](../../data/oledb/cdatasource-open.md) перед его передачей в `CSession::Open` .
+Необходимо открыть объект источника данных с помощью [CDataSource:: Open](./cdatasource-class.md#open) перед его передачей в `CSession::Open` .
 
 ## <a name="csessionstarttransaction"></a><a name="starttransaction"></a> CSession:: StartTransaction
 

@@ -1,5 +1,5 @@
 ---
-title: Работы с файлами и ввод вывод (C++выполняет)
+title: Обработка файлов и ввод-вывод (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - .NET Framework [C++], file handling
@@ -24,22 +24,22 @@ helpviewer_keywords:
 - files [C++], text
 - text files, writing in C++
 ms.assetid: 3296fd59-a83a-40d4-bd4a-6096cc13101b
-ms.openlocfilehash: 7009c0b017c403c3f0108aa84b8ddb25a1d1564f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1cfdc4239506f22368753d8c37765e550d9b835
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325004"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508933"
 ---
 # <a name="file-handling-and-io-ccli"></a>Функции работы с файлами и операции ввода-вывода (C++/CLI)
 
 Демонстрирует различные операции с файлами с помощью .NET Framework.
 
-В следующих разделах описывается использование классов, определенных в <xref:System.IO> пространство имен для выполнения различных операций с файлами.
+В следующих разделах показано использование классов, определенных в <xref:System.IO> пространстве имен, для выполнения различных файловых операций.
 
-## <a name="enumerate"></a> Перечисление файлов в каталоге
+## <a name="enumerate-files-in-a-directory"></a><a name="enumerate"></a> Перечислить файлы в каталоге
 
-В следующем примере кода показано, как получить список файлов в каталоге. Кроме того подкаталоги пронумеровываются. В следующем примере кода используется <xref:System.IO.Directory.GetFiles%2A> <xref:System.IO.Directory.GetFiles%2A> и <xref:System.IO.Directory.GetDirectories%2A> методов, чтобы отобразить содержимое каталога C:\Windows.
+В следующем примере кода показано, как получить список файлов в каталоге. Кроме того, перечисляются подкаталоги. В следующем примере кода <xref:System.IO.Directory.GetFiles%2A> <xref:System.IO.Directory.GetFiles%2A> методы и используются <xref:System.IO.Directory.GetDirectories%2A> для вывода содержимого каталога C:\Windows.
 
 ### <a name="example"></a>Пример
 
@@ -66,9 +66,9 @@ int main()
 }
 ```
 
-## <a name="monitor"></a> Монитор изменений в файловой системе
+## <a name="monitor-file-system-changes"></a><a name="monitor"></a> Мониторинг изменений файловой системы
 
-В следующем примере кода используется <xref:System.IO.FileSystemWatcher> для регистрации событий, соответствующие файлы, созданные, измененные, удаленные или переименован. Вместо периодического опроса поиск изменений в файлах в каталоге, вы можете использовать <xref:System.IO.FileSystemWatcher> класс, который создает события при обнаружении изменения.
+В следующем примере кода используется <xref:System.IO.FileSystemWatcher> для регистрации событий, соответствующих создаваемым, изменяемым, удаляемым или переименованным файлам. Вместо периодического опроса каталога на наличие изменений в файлах можно использовать <xref:System.IO.FileSystemWatcher> класс для запуска событий при обнаружении изменений.
 
 ### <a name="example"></a>Пример
 
@@ -132,11 +132,11 @@ int main()
 }
 ```
 
-## <a name="read_binary"></a> Прочитать двоичный файл
+## <a name="read-a-binary-file"></a><a name="read_binary"></a> Чтение двоичного файла
 
-В следующем примере кода демонстрируется чтение двоичных данных из файла, используя два класса из <xref:System.IO?displayProperty=fullName> пространство имен: <xref:System.IO.FileStream> и <xref:System.IO.BinaryReader>. <xref:System.IO.FileStream> представляет фактический файл. <xref:System.IO.BinaryReader> предоставляет интерфейс для потока, который разрешает двоичный доступ.
+В следующем примере кода показано, как считывать двоичные данные из файла с помощью двух классов из <xref:System.IO?displayProperty=fullName> пространства имен: <xref:System.IO.FileStream> и <xref:System.IO.BinaryReader> . <xref:System.IO.FileStream> представляет фактический файл. <xref:System.IO.BinaryReader> предоставляет интерфейс для потока, который обеспечивает двоичный доступ.
 
-В примере кода считывает файл с именем data.bin и содержит целые числа в двоичном формате. Сведения об этом файле см. в разделе [как: Запись в двоичный файл (C++выполняет)](../dotnet/how-to-write-a-binary-file-cpp-cli.md).
+Пример кода считывает файл с именем Data. bin и содержит целые числа в двоичном формате. Сведения об этом типе файлов см. в разделе [как записать двоичный файл (C++/CLI)](#write_binary).
 
 ### <a name="example"></a>Пример
 
@@ -173,11 +173,11 @@ int main()
 }
 ```
 
-## <a name="read_text"></a> Чтение из текстового файла
+## <a name="read-a-text-file"></a><a name="read_text"></a> Чтение текстового файла
 
-В следующем примере кода показано, как открыть и прочитать текст файла по одной строке за раз, с помощью <xref:System.IO.StreamReader> класс, который определен в <xref:System.IO?displayProperty=fullName> пространства имен. Экземпляр этого класса используется для открытия текстового файла и затем <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=fullName> метод используется для считывания каждой строки.
+В следующем примере кода показано, как открыть и прочитать текстовый файл по одной строке за раз с помощью <xref:System.IO.StreamReader> класса, определенного в <xref:System.IO?displayProperty=fullName> пространстве имен. Экземпляр этого класса используется для открытия текстового файла, а затем <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=fullName> метод используется для получения каждой строки.
 
-Данный пример кода считывает файл с именем textfile.txt и содержит текст. Сведения об этом файле см. в разделе [как: Запись в текстовый файл (C++выполняет)](../dotnet/how-to-write-a-text-file-cpp-cli.md).
+Этот пример кода считывает файл с именем textfile.txt и содержит текст. Сведения об этом типе файлов см. в разделе [как написать текстовый файл (C++/CLI)](#write_text).
 
 ### <a name="example"></a>Пример
 
@@ -216,11 +216,11 @@ int main()
 }
 ```
 
-## <a name="retrieve"></a> Получение сведений о файле
+## <a name="retrieve-file-information"></a><a name="retrieve"></a> Получение сведений о файле
 
-В следующем примере кода показано <xref:System.IO.FileInfo> класса. Если имя файла, этот класс можно использовать для получения сведений о файле, такие как размер файла, каталога, полное имя и Дата и время создания и последнего изменения.
+В следующем примере кода показан <xref:System.IO.FileInfo> класс. При наличии имени файла этот класс можно использовать для получения сведений о файле, таких как размер файла, каталог, полное имя, Дата и время создания и последнего изменения.
 
-Этот код извлекает информацию о файлах для Notepad.exe.
+Этот код извлекает сведения о файле для Notepad.exe.
 
 ### <a name="example"></a>Пример
 
@@ -257,11 +257,11 @@ int main()
 }
 ```
 
-## <a name="write_binary"></a> Запись в двоичный файл
+## <a name="write-a-binary-file"></a><a name="write_binary"></a> Запись двоичного файла
 
-В следующем примере кода демонстрируется запись двоичных данных в файл. Два класса из <xref:System.IO> используются пространства имен: <xref:System.IO.FileStream> и <xref:System.IO.BinaryWriter>. <xref:System.IO.FileStream> представляет фактический файл, хотя <xref:System.IO.BinaryWriter> предоставляет интерфейс для потока, который разрешает двоичный доступ.
+В следующем примере кода демонстрируется запись двоичных данных в файл. Используются два класса из <xref:System.IO> пространства имен: <xref:System.IO.FileStream> и <xref:System.IO.BinaryWriter> . <xref:System.IO.FileStream> представляет фактический файл, а <xref:System.IO.BinaryWriter> предоставляет интерфейс для потока, который обеспечивает двоичный доступ.
 
-В следующем примере кода записывает файл, содержащий целые числа в двоичном формате. Этот файл может быть считан с код в [как: Прочитать двоичный файл (C++выполняет)](../dotnet/how-to-read-a-binary-file-cpp-cli.md).
+В следующем примере кода записывается файл, содержащий целые числа в двоичном формате. Этот файл можно прочитать с помощью кода в [статье как прочитать двоичный файл (C++/CLI)](#read_binary).
 
 ### <a name="example"></a>Пример
 
@@ -300,11 +300,11 @@ int main()
 }
 ```
 
-## <a name="write_text"></a> Запись в текстовый файл
+## <a name="write-a-text-file"></a><a name="write_text"></a> Запись текстового файла
 
-В следующем примере кода показано, как для создания текстового файла и запись в него с помощью текста <xref:System.IO.StreamWriter> класс, который определен в <xref:System.IO> пространства имен. <xref:System.IO.StreamWriter> Конструктор принимает имя создаваемого файла. Если файл существует, он перезаписывается (Если передается значение false как второй <xref:System.IO.StringWriter> аргумент конструктора).
+В следующем примере кода показано, как создать текстовый файл и записать в него текст с помощью <xref:System.IO.StreamWriter> класса, который определен в <xref:System.IO> пространстве имен. <xref:System.IO.StreamWriter>Конструктор принимает имя создаваемого файла. Если файл существует, он перезаписывается (если не передается значение true в качестве второго <xref:System.IO.StringWriter> аргумента конструктора).
 
-Файл реализуется с помощью <xref:System.IO.StreamWriter.Write%2A> и <xref:System.IO.TextWriter.WriteLine%2A> функции.
+Затем файл будет храниться с помощью <xref:System.IO.StreamWriter.Write%2A> <xref:System.IO.TextWriter.WriteLine%2A> функций и.
 
 ### <a name="example"></a>Пример
 
@@ -332,7 +332,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Программирование .NET с использованием C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
 [Файловый и потоковый ввод-вывод](/dotnet/standard/io/index)<br/>

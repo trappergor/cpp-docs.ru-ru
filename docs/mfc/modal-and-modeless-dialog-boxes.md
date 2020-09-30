@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], modal
 - modal dialog boxes [MFC]
 ms.assetid: e83df336-5994-4b8f-8233-7942f997315b
-ms.openlocfilehash: 857bb3ea9e66ca0be155413faea23c0aba2abc9e
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: d3497a19ab14dcc9f14dc0419eb65ea033135b6e
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622211"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508852"
 ---
 # <a name="modal-and-modeless-dialog-boxes"></a>Модальные и немодальные диалоговые окна
 
@@ -30,7 +30,7 @@ ms.locfileid: "84622211"
 
 1. Создайте класс диалогового окна.
 
-1. Соедините [элементы управления ресурса диалогового окна с обработчиками сообщений](../windows/adding-event-handlers-for-dialog-box-controls.md) в классе диалогового окна.
+1. Соедините [элементы управления ресурса диалогового окна с обработчиками сообщений](../windows/adding-editing-or-deleting-controls.md) в классе диалогового окна.
 
 1. Добавление элементов данных, связанных с элементами управления диалогового окна, и задание [обмена данными диалога](dialog-data-exchange.md) и [проверки данных диалоговых окон](dialog-data-validation.md) для элементов управления.
 

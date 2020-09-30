@@ -5,12 +5,12 @@ f1_keywords:
 - <charconv>
 helpviewer_keywords:
 - charconv header
-ms.openlocfilehash: 59807749105512e0eb61acfdf60ef463febbc3a8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c9dfb8e18a8f7fd367ec4f6b52b1a0af74b3f939
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230193"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507707"
 ---
 # <a name="ltcharconvgt"></a>&lt;чарконв&gt;
 
@@ -39,7 +39,7 @@ ms.locfileid: "87230193"
 
 ### <a name="types"></a>Типы
 
-| Тип | Description |
+| Type | Описание |
 |-|:-|
 | [chars_format](chars-format-class.md) | Задает тип форматирования, например научный, Hex и т. д. |
 | [from_chars_result](from-chars-result-structure.md) | Содержит результат `from_chars` преобразования. |
@@ -55,4 +55,3 @@ ms.locfileid: "87230193"
 ## <a name="see-also"></a>См. также раздел
 
 [Справочник по файлам заголовков](cpp-standard-library-header-files.md)
-

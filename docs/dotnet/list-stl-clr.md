@@ -108,12 +108,12 @@ helpviewer_keywords:
 - operator>(list) member [STL/CLR]
 - operator>=(list) member [STL/CLR]
 ms.assetid: a70c45c8-a257-4f6b-8434-b27ff6685bac
-ms.openlocfilehash: 1c05aff71b16c3edf1348466df325caacb027554
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9ef9f68c6bef72bf251d270b3bc8142448016a11
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225635"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508723"
 ---
 # <a name="list-stlclr"></a>list (STL/CLR)
 
@@ -138,7 +138,7 @@ template<typename Value>
 
 ### <a name="parameters"></a>Параметры
 
-*Value*<br/>
+*Значение*<br/>
 Тип элемента в управляемой последовательности.
 
 ## <a name="requirements"></a>Требования
@@ -149,7 +149,7 @@ template<typename Value>
 
 ## <a name="declarations"></a>Объявления
 
-|Определение типа|Описание:|
+|Определение типа|Описание|
 |---------------------|-----------------|
 |[list::const_iterator (STL/CLR)](#const_iterator)|Тип постоянного итератора для управляемой последовательности.|
 |[list::const_reference (STL/CLR)](#const_reference)|Тип постоянной ссылки на элемент.|
@@ -165,7 +165,7 @@ template<typename Value>
 |[list::size_type (STL/CLR)](#size_type)|Тип расстояния со знаком между двумя элементами.|
 |[list::value_type (STL/CLR)](#value_type)|Тип элемента.|
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |---------------------|-----------------|
 |[list::assign (STL/CLR)](#assign)|Заменяет все элементы.|
 |[list::back (STL/CLR)](#back)|Обращается к последнему элементу.|
@@ -195,18 +195,18 @@ template<typename Value>
 |[list::to_array (STL/CLR)](#to_array)|Копирует управляемую последовательность в новый массив.|
 |[list::unique (STL/CLR)](#unique)|Удаляет смежные элементы, которые прошли заданный тест.|
 
-|Свойство|Описание:|
+|Свойство|Описание|
 |--------------|-----------------|
 |[list::back_item (STL/CLR)](#back_item)|Обращается к последнему элементу.|
 |[list::front_item (STL/CLR)](#front_item)|Обращается к первому элементу.|
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |--------------|-----------------|
 |[list::operator= (STL/CLR)](#op_as)|Заменяет управляемую последовательность.|
 |[operator!= (list) (STL/CLR)](#op_neq)|Определяет `list` , не равен ли объект другому `list` объекту.|
 |[Оператор< (List) (STL/CLR)](#op_lt)|Определяет `list` , меньше ли объект, чем другой `list` объект.|
 |[Оператор<= (List) (STL/CLR)](#op_lteq)|Определяет, `list` является ли объект меньшим или равным другому `list` объекту.|
-|[operator = = (List) (STL/CLR)](#op_eq)|Определяет `list` , равен ли объект другому `list` объекту.|
+|[operator== (list) (STL/CLR)](#op_eq)|Определяет `list` , равен ли объект другому `list` объекту.|
 |[Оператор> (List) (STL/CLR)](#op_gt)|Определяет `list` , больше ли объект, чем другой `list` объект.|
 |[Оператор>= (List) (STL/CLR)](#op_gteq)|Определяет `list` , больше или равен ли объект другому `list` объекту.|
 
@@ -225,7 +225,7 @@ template<typename Value>
 
 Объект выделяет и освобождает хранилище для последовательности, которую он контролирует как отдельные узлы в списке двунаправленных ссылок. Он переупорядочивает элементы, изменяя связи между узлами, не копируя содержимое одного узла в другой. Это означает, что можно свободно вставлять и удалять элементы без нарушения работы остальных элементов. Таким же, список является хорошим кандидатом для базового контейнера для очереди класса шаблона [(STL/CLR)](../dotnet/queue-stl-clr.md) или [стека классов шаблонов (STL/CLR)](../dotnet/stack-stl-clr.md).
 
-`list`Объект поддерживает двунаправленные итераторы. Это означает, что можно пошагово перейти к смежным элементам с помощью итератора, который обозначает элемент в управляемой последовательности. Специальный головной узел соответствует итератору, возвращенному [List:: end (STL/CLR)](../dotnet/list-end-stl-clr.md) `()` . Можно уменьшить этот итератор, чтобы достичь последнего элемента в управляемой последовательности, если он есть. Можно увеличить итератор списка, чтобы достигнуть головного узла, а затем сравнить его со значением `end()` . Но нельзя разыменование итератора, возвращаемого методом `end()` .
+`list`Объект поддерживает двунаправленные итераторы. Это означает, что можно пошагово перейти к смежным элементам с помощью итератора, который обозначает элемент в управляемой последовательности. Специальный головной узел соответствует итератору, возвращенному [List:: end (STL/CLR)](#end) `()` . Можно уменьшить этот итератор, чтобы достичь последнего элемента в управляемой последовательности, если он есть. Можно увеличить итератор списка, чтобы достигнуть головного узла, а затем сравнить его со значением `end()` . Но нельзя разыменование итератора, возвращаемого методом `end()` .
 
 Обратите внимание, что нельзя ссылаться на элемент списка напрямую, учитывая его числовое значение, для которого требуется итератор произвольного доступа. Поэтому список *не* может использоваться в качестве базового контейнера для класса шаблона [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md).
 
@@ -235,7 +235,7 @@ template<typename Value>
 
 ## <a name="members"></a>Элементы
 
-## <a name="listassign-stlclr"></a><a name="assign"></a>List:: Assign (STL/CLR)
+## <a name="listassign-stlclr"></a><a name="assign"></a> List:: Assign (STL/CLR)
 
 Заменяет все элементы.
 
@@ -317,7 +317,7 @@ a b
 a b c
 ```
 
-## <a name="listback-stlclr"></a><a name="back"></a>List:: Back (STL/CLR)
+## <a name="listback-stlclr"></a><a name="back"></a> List:: Back (STL/CLR)
 
 Обращается к последнему элементу.
 
@@ -368,7 +368,7 @@ back() = c
 a b x
 ```
 
-## <a name="listback_item-stlclr"></a><a name="back_item"></a>List:: back_item (STL/CLR)
+## <a name="listback_item-stlclr"></a><a name="back_item"></a> List:: back_item (STL/CLR)
 
 Обращается к последнему элементу.
 
@@ -419,7 +419,7 @@ back_item = c
 a b x
 ```
 
-## <a name="listbegin-stlclr"></a><a name="begin"></a>List:: Begin (STL/CLR)
+## <a name="listbegin-stlclr"></a><a name="begin"></a> List:: Begin (STL/CLR)
 
 Задает начало управляемой последовательности.
 
@@ -474,7 +474,7 @@ a b c
 x y c
 ```
 
-## <a name="listclear-stlclr"></a><a name="clear"></a>List:: Clear (STL/CLR)
+## <a name="listclear-stlclr"></a><a name="clear"></a> List:: Clear (STL/CLR)
 
 Удаляет все элементы.
 
@@ -486,7 +486,7 @@ void clear();
 
 ### <a name="remarks"></a>Remarks
 
-Функция-член фактически вызывает [List:: Erase (STL/CLR)](../dotnet/list-erase-stl-clr.md) `(` [List:: Begin (STL/CLR)](../dotnet/list-begin-stl-clr.md) `(),` [List:: end (STL/CLR)](../dotnet/list-end-stl-clr.md) `())` . Он используется, чтобы гарантировать, что управляемая последовательность пуста.
+Функция-член фактически вызывает [List:: Erase (STL/CLR)](#erase) `(` [List:: Begin (STL/CLR)](#begin) `(),` [List:: end (STL/CLR)](#end) `())` . Он используется, чтобы гарантировать, что управляемая последовательность пуста.
 
 ### <a name="example"></a>Пример
 
@@ -531,7 +531,7 @@ a b
 size() = 0
 ```
 
-## <a name="listconst_iterator-stlclr"></a><a name="const_iterator"></a>List:: const_iterator (STL/CLR)
+## <a name="listconst_iterator-stlclr"></a><a name="const_iterator"></a> List:: const_iterator (STL/CLR)
 
 Тип постоянного итератора для управляемой последовательности.
 
@@ -572,7 +572,7 @@ int main()
 a b c
 ```
 
-## <a name="listconst_reference-stlclr"></a><a name="const_reference"></a>List:: const_reference (STL/CLR)
+## <a name="listconst_reference-stlclr"></a><a name="const_reference"></a> List:: const_reference (STL/CLR)
 
 Тип постоянной ссылки на элемент.
 
@@ -616,7 +616,7 @@ int main()
 a b c
 ```
 
-## <a name="listconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>List:: const_reverse_iterator (STL/CLR)
+## <a name="listconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a> List:: const_reverse_iterator (STL/CLR)
 
 Тип константного реверсивного итератора для управляемой последовательности.
 
@@ -658,7 +658,7 @@ int main()
 c b a
 ```
 
-## <a name="listdifference_type-stlclr"></a><a name="difference_type"></a>список::d ifference_type (STL/CLR)
+## <a name="listdifference_type-stlclr"></a><a name="difference_type"></a> список::d ifference_type (STL/CLR)
 
 Типы расстояния со знаком между двумя элементами.
 
@@ -712,7 +712,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="listempty-stlclr"></a><a name="empty"></a>List:: Empty (STL/CLR)
+## <a name="listempty-stlclr"></a><a name="empty"></a> List:: Empty (STL/CLR)
 
 Проверяет отсутствие элементов.
 
@@ -724,7 +724,7 @@ bool empty();
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция-член возвращает значение true для пустой управляемой последовательности. Он эквивалентен [List:: size (STL/CLR)](../dotnet/list-size-stl-clr.md) `() == 0` . Он используется для проверки, является ли список пустым.
+Эта функция-член возвращает значение true для пустой управляемой последовательности. Он эквивалентен [List:: size (STL/CLR)](#size) `() == 0` . Он используется для проверки, является ли список пустым.
 
 ### <a name="example"></a>Пример
 
@@ -763,7 +763,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="listend-stlclr"></a><a name="end"></a>List:: end (STL/CLR)
+## <a name="listend-stlclr"></a><a name="end"></a> List:: end (STL/CLR)
 
 Задает конец управляемой последовательности.
 
@@ -819,7 +819,7 @@ a b c
 a x y
 ```
 
-## <a name="listerase-stlclr"></a><a name="erase"></a>List:: Erase (STL/CLR)
+## <a name="listerase-stlclr"></a><a name="erase"></a> List:: Erase (STL/CLR)
 
 Удаляет элементы в указанных позициях.
 
@@ -847,7 +847,7 @@ iterator erase(iterator first, iterator last);
 
 Вторая функция-член удаляет элементы управляемой последовательности в диапазоне [`first`, `last`). Он используется для удаления непрерывных или более смежных элементов.
 
-Обе функции-члены возвращают итератор, который обозначает первый элемент, оставшийся после удаления элементов, или [List:: end (STL/CLR)](../dotnet/list-end-stl-clr.md) , `()` Если такого элемента не существует.
+Обе функции-члены возвращают итератор, который обозначает первый элемент, оставшийся после удаления элементов, или [List:: end (STL/CLR)](#end) , `()` Если такого элемента не существует.
 
 При удалении элементов число копий элементов линейно в числе элементов между концом очистки и ближайшим концом последовательности. (При удалении одного или нескольких элементов в любом конце последовательности не происходит копирования элементов.)
 
@@ -898,7 +898,7 @@ erase(begin(), end()-1) = e
 size() = 1
 ```
 
-## <a name="listfront-stlclr"></a><a name="front"></a>List:: Front (STL/CLR)
+## <a name="listfront-stlclr"></a><a name="front"></a> List:: Front (STL/CLR)
 
 Обращается к первому элементу.
 
@@ -949,7 +949,7 @@ front() = a
 x b c
 ```
 
-## <a name="listfront_item-stlclr"></a><a name="front_item"></a>List:: front_item (STL/CLR)
+## <a name="listfront_item-stlclr"></a><a name="front_item"></a> List:: front_item (STL/CLR)
 
 Обращается к первому элементу.
 
@@ -1000,7 +1000,7 @@ front_item = a
 x b c
 ```
 
-## <a name="listgeneric_container-stlclr"></a><a name="generic_container"></a>List:: generic_container (STL/CLR)
+## <a name="listgeneric_container-stlclr"></a><a name="generic_container"></a> List:: generic_container (STL/CLR)
 
 Тип универсального интерфейса для контейнера.
 
@@ -1066,7 +1066,7 @@ a b c d
 a b c d e
 ```
 
-## <a name="listgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>List:: generic_iterator (STL/CLR)
+## <a name="listgeneric_iterator-stlclr"></a><a name="generic_iterator"></a> List:: generic_iterator (STL/CLR)
 
 Тип итератора для использования с универсальным интерфейсом для контейнера.
 
@@ -1124,7 +1124,7 @@ a b c
 a a c
 ```
 
-## <a name="listgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>List:: generic_reverse_iterator (STL/CLR)
+## <a name="listgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a> List:: generic_reverse_iterator (STL/CLR)
 
 Тип реверсивного итератора для использования с универсальным интерфейсом для контейнера.
 
@@ -1181,7 +1181,7 @@ a b c
 a c c
 ```
 
-## <a name="listgeneric_value-stlclr"></a><a name="generic_value"></a>List:: generic_value (STL/CLR)
+## <a name="listgeneric_value-stlclr"></a><a name="generic_value"></a> List:: generic_value (STL/CLR)
 
 Тип элемента для использования с универсальным интерфейсом для контейнера.
 
@@ -1237,7 +1237,7 @@ a b c
 a a c
 ```
 
-## <a name="listinsert-stlclr"></a><a name="insert"></a>List:: Insert (STL/CLR)
+## <a name="listinsert-stlclr"></a><a name="insert"></a> List:: Insert (STL/CLR)
 
 Добавляет элементы в указанную позиции.
 
@@ -1355,7 +1355,7 @@ y y a x b
 a x b c y y a x b
 ```
 
-## <a name="listiterator-stlclr"></a><a name="iterator"></a>List:: iterator (STL/CLR)
+## <a name="listiterator-stlclr"></a><a name="iterator"></a> List:: iterator (STL/CLR)
 
 Тип итератора для управляемой последовательности.
 
@@ -1404,7 +1404,7 @@ a b c
 x b c
 ```
 
-## <a name="listlist-stlclr"></a><a name="list"></a>List:: List (STL/CLR)
+## <a name="listlist-stlclr"></a><a name="list"></a> List:: List (STL/CLR)
 
 Создает объект контейнера.
 
@@ -1549,7 +1549,7 @@ x x x x x x
 x x x x x x
 ```
 
-## <a name="listmerge-stlclr"></a><a name="merge"></a>List:: Merge (STL/CLR)
+## <a name="listmerge-stlclr"></a><a name="merge"></a> List:: Merge (STL/CLR)
 
 Объединяет две упорядоченные управляемые последовательности.
 
@@ -1646,7 +1646,7 @@ f e e d c c b a a
 c1.size() = 0
 ```
 
-## <a name="listoperator-stlclr"></a><a name="op_as"></a>List:: operator = (STL/CLR)
+## <a name="listoperator-stlclr"></a><a name="op_as"></a> List:: operator = (STL/CLR)
 
 Заменяет управляемую последовательность.
 
@@ -1699,7 +1699,7 @@ a b c
 a b c
 ```
 
-## <a name="listpop_back-stlclr"></a><a name="pop_back"></a>список::p op_back (STL/CLR)
+## <a name="listpop_back-stlclr"></a><a name="pop_back"></a> список::p op_back (STL/CLR)
 
 Удаляет последний элемент.
 
@@ -1746,7 +1746,7 @@ a b c
 a b
 ```
 
-## <a name="listpop_front-stlclr"></a><a name="pop_front"></a>список::p op_front (STL/CLR)
+## <a name="listpop_front-stlclr"></a><a name="pop_front"></a> список::p op_front (STL/CLR)
 
 Удаляет первый элемент.
 
@@ -1793,7 +1793,7 @@ a b c
 b c
 ```
 
-## <a name="listpush_back-stlclr"></a><a name="push_back"></a>список::p ush_back (STL/CLR)
+## <a name="listpush_back-stlclr"></a><a name="push_back"></a> список::p ush_back (STL/CLR)
 
 Добавляет новый последний элемент.
 
@@ -1833,7 +1833,7 @@ int main()
 a b c
 ```
 
-## <a name="listpush_front-stlclr"></a><a name="push_front"></a>список::p ush_front (STL/CLR)
+## <a name="listpush_front-stlclr"></a><a name="push_front"></a> список::p ush_front (STL/CLR)
 
 Добавляет новый первый элемент.
 
@@ -1873,7 +1873,7 @@ int main()
 c b a
 ```
 
-## <a name="listrbegin-stlclr"></a><a name="rbegin"></a>List:: rbegin (STL/CLR)
+## <a name="listrbegin-stlclr"></a><a name="rbegin"></a> List:: rbegin (STL/CLR)
 
 Задает начало обратной управляемой последовательности.
 
@@ -1928,7 +1928,7 @@ a b c
 a y x
 ```
 
-## <a name="listreference-stlclr"></a><a name="reference"></a>List:: Reference (STL/CLR)
+## <a name="listreference-stlclr"></a><a name="reference"></a> List:: Reference (STL/CLR)
 
 Тип ссылки на элемент.
 
@@ -1983,7 +1983,7 @@ a b c
 A B C
 ```
 
-## <a name="listremove-stlclr"></a><a name="remove"></a>List:: Remove (STL/CLR)
+## <a name="listremove-stlclr"></a><a name="remove"></a> List:: Remove (STL/CLR)
 
 Удаляет элемент с указанным значением.
 
@@ -2042,7 +2042,7 @@ a b c
 a c
 ```
 
-## <a name="listremove_if-stlclr"></a><a name="remove_if"></a>List:: remove_if (STL/CLR)
+## <a name="listremove_if-stlclr"></a><a name="remove_if"></a> List:: remove_if (STL/CLR)
 
 Удаляет элементы, которые прошли указанный тест.
 
@@ -2106,7 +2106,7 @@ a b b b c
 b b b
 ```
 
-## <a name="listrend-stlclr"></a><a name="rend"></a>List:: rend (STL/CLR)
+## <a name="listrend-stlclr"></a><a name="rend"></a> List:: rend (STL/CLR)
 
 Задает конец обратной управляемой последовательности.
 
@@ -2162,7 +2162,7 @@ a b c
 y x c
 ```
 
-## <a name="listresize-stlclr"></a><a name="resize"></a>List:: изменение размера (STL/CLR)
+## <a name="listresize-stlclr"></a><a name="resize"></a> List:: изменение размера (STL/CLR)
 
 Изменяет количество элементов.
 
@@ -2183,7 +2183,7 @@ void resize(size_type new_size, value_type val);
 
 ### <a name="remarks"></a>Remarks
 
-Функции-члены гарантируют, что [List:: size (STL/CLR)](../dotnet/list-size-stl-clr.md) `()` исходя этого возвращает *new_size*. Если необходимо, чтобы управляемая последовательность была длиннее, первая функция члена добавляет элементы со значением `value_type()` , а вторая функция – добавляет элементы со значением *Val*. Чтобы сделать управляемую последовательность короче, обе функции-члены фактически удаляют время последнего элемента [List:: size (STL/CLR)](../dotnet/list-size-stl-clr.md) `() -` `new_size` . Он используется для обеспечения *new_size*размера управляемой последовательности путем усечения или заполнения текущей управляемой последовательности.
+Функции-члены гарантируют, что [List:: size (STL/CLR)](#size) `()` исходя этого возвращает *new_size*. Если необходимо, чтобы управляемая последовательность была длиннее, первая функция члена добавляет элементы со значением `value_type()` , а вторая функция – добавляет элементы со значением *Val*. Чтобы сделать управляемую последовательность короче, обе функции-члены фактически удаляют время последнего элемента [List:: size (STL/CLR)](#size) `() -` `new_size` . Он используется для обеспечения *new_size*размера управляемой последовательности путем усечения или заполнения текущей управляемой последовательности.
 
 ### <a name="example"></a>Пример
 
@@ -2222,7 +2222,7 @@ size() = 0
 x x x x x
 ```
 
-## <a name="listreverse-stlclr"></a><a name="reverse"></a>List:: Reverse (STL/CLR)
+## <a name="listreverse-stlclr"></a><a name="reverse"></a> List:: Reverse (STL/CLR)
 
 Изменяет направление управляемой последовательности на противоположную.
 
@@ -2269,7 +2269,7 @@ a b c
 c b a
 ```
 
-## <a name="listreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>List:: reverse_iterator (STL/CLR)
+## <a name="listreverse_iterator-stlclr"></a><a name="reverse_iterator"></a> List:: reverse_iterator (STL/CLR)
 
 Тип обратного итератора для управляемой последовательности.
 
@@ -2318,7 +2318,7 @@ c b a
 x b a
 ```
 
-## <a name="listsize-stlclr"></a><a name="size"></a>List:: size (STL/CLR)
+## <a name="listsize-stlclr"></a><a name="size"></a> List:: size (STL/CLR)
 
 Подсчитывает количество элементов.
 
@@ -2330,7 +2330,7 @@ size_type size();
 
 ### <a name="remarks"></a>Remarks
 
-Функция-член возвращает длину управляемой последовательности. Он используется для определения количества элементов, находящихся в настоящий момент в управляемой последовательности. Если вас интересует только то, имеет ли последовательность ненулевой размер, см. раздел [List:: Empty (STL/CLR)](../dotnet/list-empty-stl-clr.md) `()` .
+Функция-член возвращает длину управляемой последовательности. Он используется для определения количества элементов, находящихся в настоящий момент в управляемой последовательности. Если вас интересует только то, имеет ли последовательность ненулевой размер, см. раздел [List:: Empty (STL/CLR)](#empty) `()` .
 
 ### <a name="example"></a>Пример
 
@@ -2371,7 +2371,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="listsize_type-stlclr"></a><a name="size_type"></a>List:: size_type (STL/CLR)
+## <a name="listsize_type-stlclr"></a><a name="size_type"></a> List:: size_type (STL/CLR)
 
 Тип расстояния со знаком между двумя элементами.
 
@@ -2419,7 +2419,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="listsort-stlclr"></a><a name="sort"></a>List:: Sort (STL/CLR)
+## <a name="listsort-stlclr"></a><a name="sort"></a> List:: Sort (STL/CLR)
 
 Упорядочивает управляемую последовательность.
 
@@ -2484,7 +2484,7 @@ c b a
 a b c
 ```
 
-## <a name="listsplice-stlclr"></a><a name="splice"></a>List:: splice (STL/CLR)
+## <a name="listsplice-stlclr"></a><a name="splice"></a> List:: splice (STL/CLR)
 
 Ресшивка ссылок между узлами.
 
@@ -2577,7 +2577,7 @@ b c a
 c2.size() = 0
 ```
 
-## <a name="listswap-stlclr"></a><a name="swap"></a>List:: Swap (STL/CLR)
+## <a name="listswap-stlclr"></a><a name="swap"></a> List:: Swap (STL/CLR)
 
 Меняет местами содержимое двух контейнеров.
 
@@ -2641,7 +2641,7 @@ x x x x x
 a b c
 ```
 
-## <a name="listto_array-stlclr"></a><a name="to_array"></a>List:: to_array (STL/CLR)
+## <a name="listto_array-stlclr"></a><a name="to_array"></a> List:: to_array (STL/CLR)
 
 Копирует управляемую последовательность в новый массив.
 
@@ -2690,7 +2690,7 @@ a b c d
 a b c
 ```
 
-## <a name="listunique-stlclr"></a><a name="unique"></a>List:: Unique (STL/CLR)
+## <a name="listunique-stlclr"></a><a name="unique"></a> List:: Unique (STL/CLR)
 
 Удаляет смежные элементы, которые прошли заданный тест.
 
@@ -2709,7 +2709,7 @@ template<typename Pred2>
 
 ### <a name="remarks"></a>Remarks
 
-Первая функция-член удаляет из управляемой последовательности (стирает) каждый элемент, который сравнивается с предшествующим элементом, если элемент `X` находится перед элементом, `Y` а `X == Y` функция-член удаляется `Y` . Он используется для удаления всех вложенных последовательностей соседних элементов, которые равны, кроме одной копии. Обратите внимание, что если управляемая последовательность упорядочена, например, путем вызова [List:: Sort (STL/CLR)](../dotnet/list-sort-stl-clr.md) `()` , функция-член оставляет только элементы с уникальными значениями. (Поэтому они так и называются.)
+Первая функция-член удаляет из управляемой последовательности (стирает) каждый элемент, который сравнивается с предшествующим элементом, если элемент `X` находится перед элементом, `Y` а `X == Y` функция-член удаляется `Y` . Он используется для удаления всех вложенных последовательностей соседних элементов, которые равны, кроме одной копии. Обратите внимание, что если управляемая последовательность упорядочена, например, путем вызова [List:: Sort (STL/CLR)](#sort) `()` , функция-член оставляет только элементы с уникальными значениями. (Поэтому они так и называются.)
 
 Вторая функция члена ведет себя так же, как первая, за исключением того, что она удаляет каждый элемент `Y` после элемента, `X` для которого `pred(X, Y)` . Он используется для удаления всех вложенных последовательностей смежных элементов, которые соответствуют указанной функции предиката или делегата. Обратите внимание, что если управляемая последовательность упорядочена, например, с помощью вызова `sort(pred)` , функция-член оставляет только те элементы, которые не имеют эквивалентного упорядочения с другими элементами.
 
@@ -2756,7 +2756,7 @@ a b c
 a a
 ```
 
-## <a name="listvalue_type-stlclr"></a><a name="value_type"></a>List:: value_type (STL/CLR)
+## <a name="listvalue_type-stlclr"></a><a name="value_type"></a> List:: value_type (STL/CLR)
 
 Тип элемента.
 
@@ -2801,7 +2801,7 @@ int main()
 a b c
 ```
 
-## <a name="operator-list-stlclr"></a><a name="op_neq"></a>operator! = (List) (STL/CLR)
+## <a name="operator-list-stlclr"></a><a name="op_neq"></a> operator! = (List) (STL/CLR)
 
 Сравнение списка "не равно".
 
@@ -2870,7 +2870,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="operatorlt-list-stlclr"></a><a name="op_lt"></a>Оператор &lt; (List) (STL/CLR)
+## <a name="operatorlt-list-stlclr"></a><a name="op_lt"></a> Оператор &lt; (List) (STL/CLR)
 
 Сравнение списка "меньше".
 
@@ -2939,7 +2939,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="operatorlt-list-stlclr"></a><a name="op_lteq"></a>operator &lt; = (List) (STL/CLR)
+## <a name="operatorlt-list-stlclr"></a><a name="op_lteq"></a> operator &lt; = (List) (STL/CLR)
 
 Сравнение списка "меньше или равно".
 
@@ -3008,7 +3008,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="operator-list-stlclr"></a><a name="op_eq"></a>operator = = (List) (STL/CLR)
+## <a name="operator-list-stlclr"></a><a name="op_eq"></a> operator = = (List) (STL/CLR)
 
 Сравнение списка равно.
 
@@ -3077,7 +3077,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="operatorgt-list-stlclr"></a><a name="op_gt"></a>Оператор &gt; (List) (STL/CLR)
+## <a name="operatorgt-list-stlclr"></a><a name="op_gt"></a> Оператор &gt; (List) (STL/CLR)
 
 Список "больше сравнения".
 
@@ -3146,7 +3146,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="operatorgt-list-stlclr"></a><a name="op_gteq"></a>operator &gt; = (List) (STL/CLR)
+## <a name="operatorgt-list-stlclr"></a><a name="op_gteq"></a> operator &gt; = (List) (STL/CLR)
 
 Сравнение списка "больше или равно".
 

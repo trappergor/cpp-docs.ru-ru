@@ -34,12 +34,12 @@ helpviewer_keywords:
 - m_dwRef
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
-ms.openlocfilehash: c332fc0c653bbde3a69421b8166d4d099eaeeaf4
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c0d7ea0966b9a582e4a6969573458bca2e8a0fea
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841081"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507224"
 ---
 # <a name="csimplerow-class"></a>Класс CSimpleRow
 
@@ -68,14 +68,14 @@ class CSimpleRow
 
 ### <a name="data-members"></a>Элементы данных
 
-| Имя | Описание |
+| Название | Описание |
 |-|-|
 |[m_dwRef](#dwref)|Счетчик ссылок на существующий маркер строки.|
 |[m_iRowset](#irowset)|Индекс набора строк, представляющего курсор.|
 
 ## <a name="remarks"></a>Remarks
 
-Маркер строки логически является уникальным тегом для результирующей строки. `IRowsetImpl` создает новый `CSimpleRow` для каждой строки, запрошенной в [IRowsetImpl:: GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md). `CSimpleRow` также можно заменить собственной реализацией маркера строки, так как это аргумент шаблона по умолчанию для `IRowsetImpl` . Единственным требованием для замены этого класса является то, чтобы класс замены предоставил конструктор, принимающий один параметр типа **Long**.
+Маркер строки логически является уникальным тегом для результирующей строки. `IRowsetImpl` создает новый `CSimpleRow` для каждой строки, запрошенной в [IRowsetImpl:: GetNextRows](./irowsetimpl-class.md#getnextrows). `CSimpleRow` также можно заменить собственной реализацией маркера строки, так как это аргумент шаблона по умолчанию для `IRowsetImpl` . Единственным требованием для замены этого класса является то, чтобы класс замены предоставил конструктор, принимающий один параметр типа **Long**.
 
 ## <a name="csimplerowaddrefrow"></a><a name="addrefrow"></a> CSimpleRow:: Аддрефров
 
@@ -123,7 +123,7 @@ CSimpleRow(DBCOUNTITEM iRowsetCur);
 
 ### <a name="remarks"></a>Remarks
 
-Задает для [m_iRowset](../../data/oledb/csimplerow-m-irowset.md) значение *ировсеткур*.
+Задает для [m_iRowset](#irowset) значение *ировсеткур*.
 
 ## <a name="csimplerowreleaserow"></a><a name="releaserow"></a> CSimpleRow:: Релеасеров
 

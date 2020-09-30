@@ -1,6 +1,6 @@
 ---
-title: __argcзначение __argvзначение __wargv
-description: Описание глобальных констант библиотеки среды выполнения Microsoft C __argc, __argvи __wargv.
+title: __argc, __argv, __wargv
+description: Описание глобальных констант библиотеки времени выполнения Microsoft C __argc , __argv и __wargv .
 ms.date: 11/04/2016
 api_name:
 - __wargv
@@ -27,14 +27,14 @@ no-loc:
 - __wargv
 - main
 - wmain
-ms.openlocfilehash: 86a22a7391c7bde34d7734631a2970a45851dda3
-ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
+ms.openlocfilehash: 02c130be0d2dcb8e48d2bb5c75438c94003fc9dd
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76123985"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507590"
 ---
-# <a name="opno-loc__argc-opno-loc__argv-opno-loc__wargv"></a>__argcзначение __argvзначение __wargv
+# <a name="no-loc__argc-no-loc__argv-no-loc__wargv"></a>__argc, __argv, __wargv
 
 Глобальная переменная `__argc` — это счетчик числа аргументов командной строки, переданных программе. `__argv` — указатель на массив одно- или многобайтовых строк, который содержит аргументы программы, а `__wargv` — указатель на массив строк расширенных символов, который содержит аргументы программы. Эти глобальные переменные обеспечивают аргументы для `main` или `wmain`.
 
@@ -46,7 +46,7 @@ extern char ** __argv;
 extern wchar_t ** __wargv;
 ```
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
 В программе, которая использует функцию `main`, `__argc` и `__argv` инициализируются при запуске программы на основе командной строки, которая используется для запуска программы. Командная строка разбирается на отдельные аргументы, а подстановочные знаки разворачиваются. Число аргументов назначается функции `__argc`, строки аргументов выделяются в куче, а указатель на массив аргументов назначается `__argv`. В программе, которая скомпилирована для использования расширенных символов и функции `wmain`, аргументы анализируются и подстановочные знаки разворачиваются как строки расширенных символов, а указатель на массив строк аргументов назначается `__wargv`.
 
@@ -62,12 +62,12 @@ extern wchar_t ** __wargv;
 
 |Глобальная переменная|Обязательный заголовок|
 |---------------------|---------------------|
-|`__argc`значение `__argv`значение `__wargv`|\<stdlib.h>, \<cstdlib> (C++)|
+|`__argc`, `__argv`, `__wargv`|\<stdlib.h>, \<cstdlib> (C++)|
 
 `__argc`, `__argv` и `__wargv` являются расширениями Майкрософт. Сведения о совместимости см. в разделе [Совместимость](../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Глобальные переменные](../c-runtime-library/global-variables.md)\
-[функцииmain и аргументы командной строкиC++()](../cpp/main-function-command-line-args.md)\
-[Использование wmain вместо main](../cpp/using-wmain-instead-of-main.md)
+[main аргументы функции и командной строки (C++)](../cpp/main-function-command-line-args.md)\
+[Использование wmain вместо main](../cpp/main-function-command-line-args.md)

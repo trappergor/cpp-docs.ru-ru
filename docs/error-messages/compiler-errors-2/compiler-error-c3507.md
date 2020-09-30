@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3507
 ms.assetid: 75f89767-f6f9-40f6-9820-81a49e09abdf
-ms.openlocfilehash: 848536e0808d7d6a82ef387e0ca9c64b68ad0007
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: a38efcc0d74bbea0e0bf767cb9e5a11561ab4fb8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74753800"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507129"
 ---
 # <a name="compiler-error-c3507"></a>Ошибка компилятора C3507
 
 Идентификатор ProgID может содержать не более 39 символов "ID"; и не содержат знаков препинания, отличных от "."; или не начинаться с цифры
 
-Атрибут [ProgID](../../windows/progid.md) имеет ограничения на значения, которые он может принимать.
+Атрибут [ProgID](../../windows/attributes/progid.md) имеет ограничения на значения, которые он может принимать.
 
 Следующий пример приводит к возникновению ошибки C3507:
 

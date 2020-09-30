@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3707
 ms.assetid: ac63a5dd-7a4b-48d2-9f2a-be9cb090134c
-ms.openlocfilehash: 6faf035c0f4f68b10b187c56bea4cafc776998cf
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: a09bf080c72e154a37cec5cdb75e714c12dd7150
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757960"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507984"
 ---
 # <a name="compiler-error-c3707"></a>Ошибка компилятора C3707
 
 "функция": метод disp-интерфейса должен иметь DISPID
 
-При использовании метода `dispinterface` его необходимо назначить `dispid`. Чтобы устранить эту ошибку, присвойте `dispid` методу `dispinterface`, например, раскомментируйте атрибут `id` в методе в примере ниже. Дополнительные сведения см. в разделе атрибуты и [идентификатор](../../windows/id.md) [интерфейса](../../windows/dispinterface.md) .
+При использовании `dispinterface` метода его необходимо назначить `dispid` . Чтобы устранить эту ошибку, назначьте `dispid` `dispinterface` методу, например, раскомментируйте `id` атрибут в методе в примере ниже. Дополнительные сведения см. в разделе атрибуты и [идентификатор](../../windows/attributes/id.md) [интерфейса](../../windows/attributes/dispinterface.md) .
 
 Следующий пример приводит к возникновению ошибки C3707:
 

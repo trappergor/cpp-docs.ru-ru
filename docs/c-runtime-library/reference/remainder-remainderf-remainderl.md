@@ -35,12 +35,12 @@ helpviewer_keywords:
 - remainderl
 - remainder
 ms.assetid: 5f721fb3-8b78-4597-9bc0-ca9bcd1f1d0e
-ms.openlocfilehash: ef2b326bef2288b52dba8988749e030ff0b46077
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: 288d6b0d373a5b318a139b030181c671e2c01048
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89556013"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507574"
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder, remainderf, remainderl
 
@@ -70,7 +70,7 @@ long double remainder( long double x, long double y ); /* C++ only */
 
 Остаток от деления *x*y на число с плавающей запятой  /  *y*. Если значение *y* равно 0,0, то функция **остаток** возвращает нетихом NaN. Сведения о представлении нескрытого числа NaN в семействе **printf** см. в разделе [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Функции **остатка** вычисляют значение *x*y *остатка* с плавающей запятой  /  *y* таким, что *x*  =  *n* \* *y*  +  *r*, где *n*— целое число, ближайшее к значению *x*  /  *y* , а *n*— даже каждый раз, когда &#124; *n*  -  *x*  /  *y* &#124; = 1/2. Если *r* = 0, *r* имеет тот же знак, что и *x*.
 
@@ -82,9 +82,9 @@ long double remainder( long double x, long double y ); /* C++ only */
 
 ## <a name="requirements"></a>Требования
 
-|Функция|Обязательный заголовок (C)|Обязательный заголовок (C++)|
+|Компонент|Обязательный заголовок (C)|Обязательный заголовок (C++)|
 |--------------|---------------------|-|
-|**остаток**, **ремаиндерф**, **остаток**|\<math.h>|\<cmath> или \<math.h>|
+|**остаток**, **ремаиндерф**, **остаток**|\<math.h>|\<cmath> либо \<math.h>|
 |макрос **остатка** | \<tgmath.h> ||
 
 Сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
@@ -111,10 +111,10 @@ int main( void )
 The remainder of -10.00 / 3.00 is -1.000000
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)\
-[ldiv, lldiv](ldiv-lldiv.md)\
+[ldiv, lldiv](./div.md)\
 [imaxdiv](imaxdiv.md)\
 [FMOD, фмодф](fmod-fmodf.md)\
 [remquo, remquof, remquol](remquo-remquof-remquol.md)

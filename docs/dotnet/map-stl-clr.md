@@ -99,12 +99,12 @@ helpviewer_keywords:
 - operator> (map) member [STL/CLR]
 - operator>= (map) member [STL/CLR]
 ms.assetid: 8b0a7764-b5e4-4175-a802-82b72eb8662a
-ms.openlocfilehash: cd06942d3795dda9e6c6aaa8794957018fa96ace
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 31d696c1bf85cdcb1d662474042c82524abdfcf1
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216379"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508601"
 ---
 # <a name="map-stlclr"></a>map (STL/CLR)
 
@@ -114,11 +114,11 @@ ms.locfileid: "87216379"
 
 `Microsoft::VisualC::StlClr::GenericPair<GKey, GMapped>`
 
-где:
+Где:
 
-`GKey`совпадает с *ключом* , если только второй не является ссылочным типом, в этом случае`Key^`
+`GKey` совпадает с *ключом* , если только второй не является ссылочным типом, в этом случае `Key^`
 
-`GMapped`совпадает с *сопоставлением* , если только второй не является ссылочным типом, в этом случае`Mapped^`
+`GMapped` совпадает с *сопоставлением* , если только второй не является ссылочным типом, в этом случае `Mapped^`
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -143,7 +143,7 @@ template<typename Key,
 *Key*<br/>
 Тип ключа для элемента в управляемой последовательности.
 
-*Mapped*<br/>
+*Управляем*<br/>
 Тип дополнительного компонента элемента в управляемой последовательности.
 
 ## <a name="requirements"></a>Требования
@@ -224,11 +224,11 @@ template<typename Key,
 
 Объект выделяет и освобождает хранилище для последовательности, которую он контролирует как отдельные узлы. Он вставляет элементы в (почти) сбалансированное дерево, которое оно продолжает упорядочивать, изменяя связи между узлами, не копируя содержимое одного узла в другой. Это означает, что можно свободно вставлять и удалять элементы без нарушения работы остальных элементов.
 
-Объект упорядочивает последовательность, которую он управляет, вызывая сохраненный объект делегата типа [Map:: key_compare (STL/CLR)](../dotnet/map-key-compare-stl-clr.md). При создании схемы можно указать сохраненный объект делегата. Если объект делегата не указан, по умолчанию используется сравнение `operator<(key_type, key_type)` . Доступ к этому сохраненному объекту осуществляется путем вызова функции [-члена Map:: key_comp (STL/CLR)](../dotnet/map-key-comp-stl-clr.md) `()` .
+Объект упорядочивает последовательность, которую он управляет, вызывая сохраненный объект делегата типа [Map:: key_compare (STL/CLR)](#key_compare). При создании схемы можно указать сохраненный объект делегата. Если объект делегата не указан, по умолчанию используется сравнение `operator<(key_type, key_type)` . Доступ к этому сохраненному объекту осуществляется путем вызова функции [-члена Map:: key_comp (STL/CLR)](#key_comp) `()` .
 
-Такой объект делегата должен накладывать строгое слабое упорядочение на ключи типа [Map:: key_type (STL/CLR)](../dotnet/map-key-type-stl-clr.md). Это означает, что для любых двух ключей `X` и `Y` :
+Такой объект делегата должен накладывать строгое слабое упорядочение на ключи типа [Map:: key_type (STL/CLR)](#key_type). Это означает, что для любых двух ключей `X` и `Y` :
 
-`key_comp()(X, Y)`Возвращает один и тот же логический результат при каждом вызове.
+`key_comp()(X, Y)` Возвращает один и тот же логический результат при каждом вызове.
 
 Если `key_comp()(X, Y)` имеет значение true, то оно `key_comp()(Y, X)` должно иметь значение false.
 
@@ -240,7 +240,7 @@ template<typename Key,
 
 Каждый элемент содержит отдельный ключ и сопоставленное значение. Последовательность представляется способом, который позволяет выполнять поиск, вставку и удаление произвольного элемента с несколькими операциями, пропорционально логарифму числа элементов в последовательности (логарифмическое время). Кроме того, вставка элементов не делает итераторы недействительными, а при удалении элементов недействительными становятся только итераторы, указывающие на удаленный элемент.
 
-На карте поддерживаются двунаправленные итераторы. Это означает, что можно пошагово перейти к смежным элементам с помощью итератора, который обозначает элемент в управляемой последовательности. Специальный головной узел соответствует итератору, возвращенному [Map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md) `()` . Можно уменьшить этот итератор, чтобы достичь последнего элемента в управляемой последовательности, если он есть. Можно увеличить итератор на карту, чтобы достичь головного узла, а затем сравнить равно `end()` . Но нельзя разыменование итератора, возвращаемого методом `end()` .
+На карте поддерживаются двунаправленные итераторы. Это означает, что можно пошагово перейти к смежным элементам с помощью итератора, который обозначает элемент в управляемой последовательности. Специальный головной узел соответствует итератору, возвращенному [Map:: end (STL/CLR)](#end) `()` . Можно уменьшить этот итератор, чтобы достичь последнего элемента в управляемой последовательности, если он есть. Можно увеличить итератор на карту, чтобы достичь головного узла, а затем сравнить равно `end()` . Но нельзя разыменование итератора, возвращаемого методом `end()` .
 
 Обратите внимание, что нельзя ссылаться на элемент Map напрямую, учитывая его числовое значение, для которого требуется итератор произвольного доступа.
 
@@ -250,7 +250,7 @@ template<typename Key,
 
 ## <a name="members"></a>Элементы
 
-## <a name="mapbegin-stlclr"></a><a name="begin"></a>Map:: Begin (STL/CLR)
+## <a name="mapbegin-stlclr"></a><a name="begin"></a> Map:: Begin (STL/CLR)
 
 Задает начало управляемой последовательности.
 
@@ -301,7 +301,7 @@ int main()
 *++begin() = [b 2]
 ```
 
-## <a name="mapclear-stlclr"></a><a name="clear"></a>Map:: Clear (STL/CLR)
+## <a name="mapclear-stlclr"></a><a name="clear"></a> Map:: Clear (STL/CLR)
 
 Удаляет все элементы.
 
@@ -313,7 +313,7 @@ void clear();
 
 ### <a name="remarks"></a>Remarks
 
-Функция-член фактически вызывает Map [:: стирания (STL/CLR)](../dotnet/map-erase-stl-clr.md) `(` [Map:: Begin (STL/CLR)](../dotnet/map-begin-stl-clr.md) `(),` [Map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md) `())` . Он используется, чтобы гарантировать, что управляемая последовательность пуста.
+Функция-член фактически вызывает Map [:: стирания (STL/CLR)](#erase) `(` [Map:: Begin (STL/CLR)](#begin) `(),` [Map:: end (STL/CLR)](#end) `())` . Он используется, чтобы гарантировать, что управляемая последовательность пуста.
 
 ### <a name="example"></a>Пример
 
@@ -359,7 +359,7 @@ size() = 0
 size() = 0
 ```
 
-## <a name="mapconst_iterator-stlclr"></a><a name="const_iterator"></a>Map:: const_iterator (STL/CLR)
+## <a name="mapconst_iterator-stlclr"></a><a name="const_iterator"></a> Map:: const_iterator (STL/CLR)
 
 Тип постоянного итератора для управляемой последовательности.
 
@@ -401,7 +401,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="mapconst_reference-stlclr"></a><a name="const_reference"></a>Map:: const_reference (STL/CLR)
+## <a name="mapconst_reference-stlclr"></a><a name="const_reference"></a> Map:: const_reference (STL/CLR)
 
 Тип постоянной ссылки на элемент.
 
@@ -446,7 +446,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="mapconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>Map:: const_reverse_iterator (STL/CLR)
+## <a name="mapconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a> Map:: const_reverse_iterator (STL/CLR)
 
 Тип константного реверсивного итератора для управляемой последовательности.
 
@@ -488,7 +488,7 @@ int main()
 [c 3] [b 2] [a 1]
 ```
 
-## <a name="mapcount-stlclr"></a><a name="count"></a>Map:: count (STL/CLR)
+## <a name="mapcount-stlclr"></a><a name="count"></a> Map:: count (STL/CLR)
 
 Определяет количество элементов, соответствующих заданному ключу.
 
@@ -541,7 +541,7 @@ count(L'b') = 1
 count(L'C') = 0
 ```
 
-## <a name="mapdifference_type-stlclr"></a><a name="difference_type"></a>Map::d ifference_type (STL/CLR)
+## <a name="mapdifference_type-stlclr"></a><a name="difference_type"></a> Map::d ifference_type (STL/CLR)
 
 Типы расстояния со знаком между двумя элементами.
 
@@ -596,7 +596,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="mapempty-stlclr"></a><a name="empty"></a>Map:: Empty (STL/CLR)
+## <a name="mapempty-stlclr"></a><a name="empty"></a> Map:: Empty (STL/CLR)
 
 Проверяет отсутствие элементов.
 
@@ -608,7 +608,7 @@ bool empty();
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция-член возвращает значение true для пустой управляемой последовательности. Он эквивалентен [Map:: size (STL/CLR)](../dotnet/map-size-stl-clr.md) `() == 0` . Он используется для проверки, пуста ли схема.
+Эта функция-член возвращает значение true для пустой управляемой последовательности. Он эквивалентен [Map:: size (STL/CLR)](#size) `() == 0` . Он используется для проверки, пуста ли схема.
 
 ### <a name="example"></a>Пример
 
@@ -648,7 +648,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="mapend-stlclr"></a><a name="end"></a>Map:: end (STL/CLR)
+## <a name="mapend-stlclr"></a><a name="end"></a> Map:: end (STL/CLR)
 
 Задает конец управляемой последовательности.
 
@@ -695,7 +695,7 @@ int main()
     }
 ```
 
-## <a name="mapequal_range-stlclr"></a><a name="equal_range"></a>Map:: equal_range (STL/CLR)
+## <a name="mapequal_range-stlclr"></a><a name="equal_range"></a> Map:: equal_range (STL/CLR)
 
 Находит диапазон, соответствующий указанному ключу.
 
@@ -712,7 +712,7 @@ cliext::pair<iterator, iterator> equal_range(key_type key);
 
 ### <a name="remarks"></a>Remarks
 
-Функция-член возвращает пару итераторов `cliext::pair<iterator, iterator>(` [Map:: lower_bound (STL/CLR)](../dotnet/map-lower-bound-stl-clr.md) `(key),` [Map:: upper_bound (STL/CLR)](../dotnet/map-upper-bound-stl-clr.md) `(key))` . Он используется для определения диапазона элементов, находящихся в настоящий момент в управляемой последовательности, соответствующей указанному ключу.
+Функция-член возвращает пару итераторов `cliext::pair<iterator, iterator>(` [Map:: lower_bound (STL/CLR)](#lower_bound) `(key),` [Map:: upper_bound (STL/CLR)](#upper_bound) `(key))` . Он используется для определения диапазона элементов, находящихся в настоящий момент в управляемой последовательности, соответствующей указанному ключу.
 
 ### <a name="example"></a>Пример
 
@@ -756,7 +756,7 @@ equal_range(L'x') empty = True
 [b 2]
 ```
 
-## <a name="maperase-stlclr"></a><a name="erase"></a>Map:: Erase (STL/CLR)
+## <a name="maperase-stlclr"></a><a name="erase"></a> Map:: Erase (STL/CLR)
 
 Удаляет элементы в указанных позициях.
 
@@ -784,7 +784,7 @@ bool erase(key_type key)
 
 ### <a name="remarks"></a>Remarks
 
-Первая функция-член удаляет элемент управляемой *последовательности, на который указывает, и*возвращает итератор, который обозначает первый элемент, оставшийся после удаления элемента, или [сопоставьте:: end (STL/CLR)](../dotnet/map-end-stl-clr.md) , `()` Если такого элемента не существует. Он используется для удаления одного элемента.
+Первая функция-член удаляет элемент управляемой *последовательности, на который указывает, и*возвращает итератор, который обозначает первый элемент, оставшийся после удаления элемента, или [сопоставьте:: end (STL/CLR)](#end) , `()` Если такого элемента не существует. Он используется для удаления одного элемента.
 
 Вторая функция-член удаляет элементы управляемой последовательности в диапазоне [ `first` , `last` ) и возвращает итератор, который обозначает первый элемент, оставшийся после удаления элементов, или значение, `end()` Если такого элемента не существует. Он используется для удаления непрерывных или более смежных элементов.
 
@@ -849,7 +849,7 @@ erase(L'x') = 0
 erase(L'e') = 1
 ```
 
-## <a name="mapfind-stlclr"></a><a name="find"></a>Map:: Find (STL/CLR)
+## <a name="mapfind-stlclr"></a><a name="find"></a> Map:: Find (STL/CLR)
 
 Определяет элемент, соответствующий указанному ключу.
 
@@ -866,7 +866,7 @@ iterator find(key_type key);
 
 ### <a name="remarks"></a>Remarks
 
-Если хотя бы один элемент в управляемой последовательности имеет эквивалентное упорядочение с *ключом*, функция – член возвращает итератор, обозначающий один из этих элементов. в противном случае возвращается [Map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md) `()` . Его можно использовать для поиска элемента, находящегося в управляемой последовательности, соответствующей указанному ключу.
+Если хотя бы один элемент в управляемой последовательности имеет эквивалентное упорядочение с *ключом*, функция – член возвращает итератор, обозначающий один из этих элементов. в противном случае возвращается [Map:: end (STL/CLR)](#end) `()` . Его можно использовать для поиска элемента, находящегося в управляемой последовательности, соответствующей указанному ключу.
 
 ### <a name="example"></a>Пример
 
@@ -908,7 +908,7 @@ find b = [b 2]
 find C = False
 ```
 
-## <a name="mapgeneric_container-stlclr"></a><a name="generic_container"></a>Map:: generic_container (STL/CLR)
+## <a name="mapgeneric_container-stlclr"></a><a name="generic_container"></a> Map:: generic_container (STL/CLR)
 
 Тип универсального интерфейса для контейнера.
 
@@ -972,7 +972,7 @@ int main()
 [a 1] [b 2] [c 3] [d 4] [e 5]
 ```
 
-## <a name="mapgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>Map:: generic_iterator (STL/CLR)
+## <a name="mapgeneric_iterator-stlclr"></a><a name="generic_iterator"></a> Map:: generic_iterator (STL/CLR)
 
 Тип итератора для использования с универсальным интерфейсом для контейнера.
 
@@ -1029,7 +1029,7 @@ int main()
 [a 1]
 ```
 
-## <a name="mapgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>Map:: generic_reverse_iterator (STL/CLR)
+## <a name="mapgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a> Map:: generic_reverse_iterator (STL/CLR)
 
 Тип реверсивного итератора для использования с универсальным интерфейсом для контейнера.
 
@@ -1085,7 +1085,7 @@ int main()
 [c 3]
 ```
 
-## <a name="mapgeneric_value-stlclr"></a><a name="generic_value"></a>Map:: generic_value (STL/CLR)
+## <a name="mapgeneric_value-stlclr"></a><a name="generic_value"></a> Map:: generic_value (STL/CLR)
 
 Тип элемента для использования с универсальным интерфейсом для контейнера.
 
@@ -1139,7 +1139,7 @@ int main()
 [a 1]
 ```
 
-## <a name="mapinsert-stlclr"></a><a name="insert"></a>Map:: Insert (STL/CLR)
+## <a name="mapinsert-stlclr"></a><a name="insert"></a> Map:: Insert (STL/CLR)
 
 Добавляет элементы.
 
@@ -1259,7 +1259,7 @@ insert(begin(), [L'y' 25]) = [y 25]
 [a 1] [b 2] [c 3] [x 24] [y 25]
 ```
 
-## <a name="mapiterator-stlclr"></a><a name="iterator"></a>Map:: итератор (STL/CLR)
+## <a name="mapiterator-stlclr"></a><a name="iterator"></a> Map:: итератор (STL/CLR)
 
 Тип итератора для управляемой последовательности.
 
@@ -1301,7 +1301,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="mapkey_comp-stlclr"></a><a name="key_comp"></a>Map:: key_comp (STL/CLR)
+## <a name="mapkey_comp-stlclr"></a><a name="key_comp"></a> Map:: key_comp (STL/CLR)
 
 Копирует делегат упорядочения для двух ключей.
 
@@ -1360,7 +1360,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="mapkey_compare-stlclr"></a><a name="key_compare"></a>Map:: key_compare (STL/CLR)
+## <a name="mapkey_compare-stlclr"></a><a name="key_compare"></a> Map:: key_compare (STL/CLR)
 
 Делегат упорядочения для двух ключей.
 
@@ -1420,7 +1420,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="mapkey_type-stlclr"></a><a name="key_type"></a>Map:: key_type (STL/CLR)
+## <a name="mapkey_type-stlclr"></a><a name="key_type"></a> Map:: key_type (STL/CLR)
 
 Тип ключа упорядочения.
 
@@ -1465,7 +1465,7 @@ int main()
 a b c
 ```
 
-## <a name="maplower_bound-stlclr"></a><a name="lower_bound"></a>Map:: lower_bound (STL/CLR)
+## <a name="maplower_bound-stlclr"></a><a name="lower_bound"></a> Map:: lower_bound (STL/CLR)
 
 Находит начало диапазона, совпадающее с указанным ключом.
 
@@ -1482,7 +1482,7 @@ iterator lower_bound(key_type key);
 
 ### <a name="remarks"></a>Remarks
 
-Функция члена определяет первый элемент `X` в управляемой последовательности, который имеет эквивалентное упорядочение к *ключу*. Если такого элемента не существует, возвращается [Map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md) `()` ; в противном случае возвращается итератор, обозначающий `X` . Он используется для поиска начала последовательности элементов, находящихся в управляемой последовательности, соответствующей указанному ключу.
+Функция члена определяет первый элемент `X` в управляемой последовательности, который имеет эквивалентное упорядочение к *ключу*. Если такого элемента не существует, возвращается [Map:: end (STL/CLR)](#end) `()` ; в противном случае возвращается итератор, обозначающий `X` . Он используется для поиска начала последовательности элементов, находящихся в управляемой последовательности, соответствующей указанному ключу.
 
 ### <a name="example"></a>Пример
 
@@ -1524,7 +1524,7 @@ lower_bound(L'x')==end() = True
 *lower_bound(L'b') = [b 2]
 ```
 
-## <a name="mapmake_value-stlclr"></a><a name="make_value"></a>Map:: make_value (STL/CLR)
+## <a name="mapmake_value-stlclr"></a><a name="make_value"></a> Map:: make_value (STL/CLR)
 
 Конструирует объект значения.
 
@@ -1539,7 +1539,7 @@ static value_type make_value(key_type key, mapped_type mapped);
 *key*<br/>
 Используемое значение ключа.
 
-*управляем*<br/>
+*Сопоставлено*<br/>
 Сопоставленное значение для поиска.
 
 ### <a name="remarks"></a>Remarks
@@ -1573,7 +1573,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="mapmap-stlclr"></a><a name="map"></a>Map:: Map (STL/CLR)
+## <a name="mapmap-stlclr"></a><a name="map"></a> Map:: Map (STL/CLR)
 
 Создает объект контейнера.
 
@@ -1746,7 +1746,7 @@ size() = 0
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="mapmapped_type-stlclr"></a><a name="mapped_type"></a>Map:: mapped_type (STL/CLR)
+## <a name="mapmapped_type-stlclr"></a><a name="mapped_type"></a> Map:: mapped_type (STL/CLR)
 
 Тип сопоставленного значения, связанного с каждым ключом.
 
@@ -1791,7 +1791,7 @@ int main()
 1 2 3
 ```
 
-## <a name="mapoperator-stlclr"></a><a name="op_as"></a>Map:: operator = (STL/CLR)
+## <a name="mapoperator-stlclr"></a><a name="op_as"></a> Map:: operator = (STL/CLR)
 
 Заменяет управляемую последовательность.
 
@@ -1846,7 +1846,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="mapoperatorstlclr"></a><a name="op"></a>Оператор Map:: operator (STL/CLR)
+## <a name="mapoperatorstlclr"></a><a name="op"></a> Оператор Map:: operator (STL/CLR)
 
 Сопоставляет ключ с соответствующим сопоставленным значением.
 
@@ -1913,7 +1913,7 @@ c1[b] = 2
 [A 10] [a 1] [b 2] [c 13]
 ```
 
-## <a name="maprbegin-stlclr"></a><a name="rbegin"></a>Map:: rbegin (STL/CLR)
+## <a name="maprbegin-stlclr"></a><a name="rbegin"></a> Map:: rbegin (STL/CLR)
 
 Задает начало обратной управляемой последовательности.
 
@@ -1964,7 +1964,7 @@ int main()
 *++rbegin() = [b 2]
 ```
 
-## <a name="mapreference-stlclr"></a><a name="reference"></a>Map:: Reference (STL/CLR)
+## <a name="mapreference-stlclr"></a><a name="reference"></a> Map:: Reference (STL/CLR)
 
 Тип ссылки на элемент.
 
@@ -2009,7 +2009,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="maprend-stlclr"></a><a name="rend"></a>Map:: rend (STL/CLR)
+## <a name="maprend-stlclr"></a><a name="rend"></a> Map:: rend (STL/CLR)
 
 Задает конец обратной управляемой последовательности.
 
@@ -2062,7 +2062,7 @@ int main()
 *--rend() = [a 1]
 ```
 
-## <a name="mapreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>Map:: reverse_iterator (STL/CLR)
+## <a name="mapreverse_iterator-stlclr"></a><a name="reverse_iterator"></a> Map:: reverse_iterator (STL/CLR)
 
 Тип обратного итератора для управляемой последовательности.
 
@@ -2104,7 +2104,7 @@ int main()
 [c 3] [b 2] [a 1]
 ```
 
-## <a name="mapsize-stlclr"></a><a name="size"></a>Map:: size (STL/CLR)
+## <a name="mapsize-stlclr"></a><a name="size"></a> Map:: size (STL/CLR)
 
 Подсчитывает количество элементов.
 
@@ -2116,7 +2116,7 @@ size_type size();
 
 ### <a name="remarks"></a>Remarks
 
-Функция-член возвращает длину управляемой последовательности. Он используется для определения количества элементов, находящихся в настоящий момент в управляемой последовательности. Если вас интересует только то, имеет ли последовательность ненулевой размер, см. раздел [Map:: Empty (STL/CLR)](../dotnet/map-empty-stl-clr.md) `()` .
+Функция-член возвращает длину управляемой последовательности. Он используется для определения количества элементов, находящихся в настоящий момент в управляемой последовательности. Если вас интересует только то, имеет ли последовательность ненулевой размер, см. раздел [Map:: Empty (STL/CLR)](#empty) `()` .
 
 ### <a name="example"></a>Пример
 
@@ -2156,7 +2156,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="mapsize_type-stlclr"></a><a name="size_type"></a>Map:: size_type (STL/CLR)
+## <a name="mapsize_type-stlclr"></a><a name="size_type"></a> Map:: size_type (STL/CLR)
 
 Тип расстояния со знаком между двумя элементами.
 
@@ -2204,7 +2204,7 @@ int main()
 end()-begin() = 3
 ```
 
-## <a name="mapswap-stlclr"></a><a name="swap"></a>Map:: Swap (STL/CLR)
+## <a name="mapswap-stlclr"></a><a name="swap"></a> Map:: Swap (STL/CLR)
 
 Меняет местами содержимое двух контейнеров.
 
@@ -2272,7 +2272,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="mapto_array-stlclr"></a><a name="to_array"></a>Map:: to_array (STL/CLR)
+## <a name="mapto_array-stlclr"></a><a name="to_array"></a> Map:: to_array (STL/CLR)
 
 Копирует управляемую последовательность в новый массив.
 
@@ -2322,7 +2322,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="mapupper_bound-stlclr"></a><a name="upper_bound"></a>Map:: upper_bound (STL/CLR)
+## <a name="mapupper_bound-stlclr"></a><a name="upper_bound"></a> Map:: upper_bound (STL/CLR)
 
 Находит конец диапазона, соответствующий указанному ключу.
 
@@ -2339,7 +2339,7 @@ iterator upper_bound(key_type key);
 
 ### <a name="remarks"></a>Remarks
 
-Функция члена определяет последний элемент `X` в управляемой последовательности, который имеет эквивалентное упорядочивание с *ключом*. Если такого элемента не существует или если `X` является последним элементом управляемой последовательности, возвращается [Map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md) `()` ; в противном случае возвращается итератор, обозначающий первый элемент за пределами `X` . Он используется для поиска конца последовательности элементов, находящихся в управляемой последовательности, соответствующей указанному ключу.
+Функция члена определяет последний элемент `X` в управляемой последовательности, который имеет эквивалентное упорядочивание с *ключом*. Если такого элемента не существует или если `X` является последним элементом управляемой последовательности, возвращается [Map:: end (STL/CLR)](#end) `()` ; в противном случае возвращается итератор, обозначающий первый элемент за пределами `X` . Он используется для поиска конца последовательности элементов, находящихся в управляемой последовательности, соответствующей указанному ключу.
 
 ### <a name="example"></a>Пример
 
@@ -2381,7 +2381,7 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = [c 3]
 ```
 
-## <a name="mapvalue_comp-stlclr"></a><a name="value_comp"></a>Map:: value_comp (STL/CLR)
+## <a name="mapvalue_comp-stlclr"></a><a name="value_comp"></a> Map:: value_comp (STL/CLR)
 
 Копирует делегат упорядочения для двух значений элементов.
 
@@ -2428,7 +2428,7 @@ compare([L'a', 1], [L'b', 2]) = True
 compare([L'b', 2], [L'a', 1]) = False
 ```
 
-## <a name="mapvalue_compare-stlclr"></a><a name="value_compare"></a>Map:: value_compare (STL/CLR)
+## <a name="mapvalue_compare-stlclr"></a><a name="value_compare"></a> Map:: value_compare (STL/CLR)
 
 Делегат упорядочивания для двух значений элементов.
 
@@ -2476,7 +2476,7 @@ compare([L'a', 1], [L'b', 2]) = True
 compare([L'b', 2], [L'a', 1]) = False
 ```
 
-## <a name="mapvalue_type-stlclr"></a><a name="value_type"></a>Map:: value_type (STL/CLR)
+## <a name="mapvalue_type-stlclr"></a><a name="value_type"></a> Map:: value_type (STL/CLR)
 
 Тип элемента.
 
@@ -2520,7 +2520,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="operator-map-stlclr"></a><a name="op_neq"></a>оператор! = (Map) (STL/CLR)
+## <a name="operator-map-stlclr"></a><a name="op_neq"></a> оператор! = (Map) (STL/CLR)
 
 Сравнение списка "не равно".
 
@@ -2591,7 +2591,7 @@ int main()
 [a b c] != [a b d] is True
 ```
 
-## <a name="operatorlt-map-stlclr"></a><a name="op_lt"></a>Оператор &lt; (Map) (STL/CLR)
+## <a name="operatorlt-map-stlclr"></a><a name="op_lt"></a> Оператор &lt; (Map) (STL/CLR)
 
 Сравнение списка "меньше".
 
@@ -2662,7 +2662,7 @@ int main()
 [a b c] < [a b d] is True
 ```
 
-## <a name="operatorlt-map-stlclr"></a><a name="op_lteq"></a>Оператор &lt; = (Map) (STL/CLR)
+## <a name="operatorlt-map-stlclr"></a><a name="op_lteq"></a> Оператор &lt; = (Map) (STL/CLR)
 
 Сравнение списка "меньше или равно".
 
@@ -2733,7 +2733,7 @@ int main()
 [a b d] <= [a b c] is False
 ```
 
-## <a name="operator-map-stlclr"></a><a name="op_eq"></a>оператор = = (Map) (STL/CLR)
+## <a name="operator-map-stlclr"></a><a name="op_eq"></a> оператор = = (Map) (STL/CLR)
 
 Сравнение списка равно.
 
@@ -2804,7 +2804,7 @@ int main()
 [a b c] == [a b d] is False
 ```
 
-## <a name="operatorgt-map-stlclr"></a><a name="op_gt"></a>Оператор &gt; (Map) (STL/CLR)
+## <a name="operatorgt-map-stlclr"></a><a name="op_gt"></a> Оператор &gt; (Map) (STL/CLR)
 
 Список "больше сравнения".
 
@@ -2875,7 +2875,7 @@ int main()
 [a b d] > [a b c] is True
 ```
 
-## <a name="operatorgt-map-stlclr"></a><a name="op_gteq"></a>Оператор &gt; = (Map) (STL/CLR)
+## <a name="operatorgt-map-stlclr"></a><a name="op_gteq"></a> Оператор &gt; = (Map) (STL/CLR)
 
 Сравнение списка "больше или равно".
 

@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3706
 ms.assetid: d20a33eb-d625-46c5-ac87-32075a590d07
-ms.openlocfilehash: 810ec59a814b04349913648fb49a03eb63912cd9
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 461850b2c1686343f23c77274b8fb2ca6fd9071e
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757986"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508012"
 ---
 # <a name="compiler-error-c3706"></a>Ошибка компилятора C3706
 
 "функция": должен быть COM-интерфейсом для запуска COM-событий
 
-Интерфейс событий, используемый для запуска COM-событий, должен быть COM-интерфейсом. В этом случае интерфейс должен либо быть определен с помощью визуального C++ атрибута, либо импортирован с помощью [#import](../../preprocessor/hash-import-directive-cpp.md) из библиотеки типов с атрибутом #import embedded_idl.
+Интерфейс событий, используемый для запуска COM-событий, должен быть COM-интерфейсом. В этом случае интерфейс должен либо быть определен с помощью атрибута Visual C++, либо импортирован с помощью [#import](../../preprocessor/hash-import-directive-cpp.md) из библиотеки типов с атрибутом embedded_idl #import.
 
-Обратите внимание, что `#include` строки файлов заголовков ATL, показанные в примере ниже, необходимы для использования COM-событий. Чтобы устранить эту ошибку, сделайте `IEvents` (интерфейс событий) COM-интерфейсом, применив к определению интерфейса один из следующих атрибутов: [объект](../../windows/object-cpp.md), [двойной](../../windows/dual.md)или [интерфейсный](../../windows/dispinterface.md)интерфейс.
+Обратите внимание, что `#include` строки файлов заголовков ATL, показанные в приведенном ниже примере, необходимы для использования COM-событий. Чтобы устранить эту ошибку, сделайте `IEvents` (интерфейс событий) COM-интерфейс, применив к определению интерфейса один из следующих атрибутов: [Object](../../windows/attributes/object-cpp.md), [Dual](../../windows/attributes/dual.md)или [DISP](../../windows/attributes/dispinterface.md).
 
 Если интерфейс получен из файла заголовка, созданного с помощью MIDL, компилятор не сможет распознать его как COM-интерфейс.
 

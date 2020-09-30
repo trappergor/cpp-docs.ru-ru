@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2348
 ms.assetid: 4c4d701f-ccf1-46fe-9ddb-3f341684f269
-ms.openlocfilehash: 716fdf244f19fa8f0960a0279da3c39af1546178
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a0f74179e187baea80993c5dda3f35f602f876c1
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218264"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508529"
 ---
 # <a name="compiler-error-c2348"></a>Ошибка компилятора C2348
 
 "имя типа": не является статистическим выражением в стиле C, не может быть экспортировано во внедренный IDL
 
-Чтобы поместить **`struct`** в IDL-файл с атрибутом [Export](../../windows/export.md) , параметр **`struct`** должен содержать только данные.
+Чтобы поместить **`struct`** в IDL-файл с атрибутом [Export](../../windows/attributes/export.md) , параметр **`struct`** должен содержать только данные.
 
 Следующий пример приводит к возникновению ошибки C2348:
 

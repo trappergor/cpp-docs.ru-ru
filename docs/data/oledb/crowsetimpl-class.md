@@ -33,12 +33,12 @@ helpviewer_keywords:
 - m_strCommandText
 - m_strIndexText
 ms.assetid: e97614b3-b11d-4806-a0d3-b9401331473f
-ms.openlocfilehash: dbd1629070b78f43d94efd06155f2f12c2a9e76e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: cca74504c80b964b14742e7405953ad68764aa62
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841120"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507262"
 ---
 # <a name="crowsetimpl-class"></a>Класс CRowsetImpl
 
@@ -66,7 +66,7 @@ class CRowsetImpl :
 *T*<br/>
 Класс пользователя, производный от `CRowsetImpl` .
 
-*Память*<br/>
+*Хранилище*<br/>
 Класс записей пользователя.
 
 *креаторкласс*<br/>
@@ -86,19 +86,19 @@ class CRowsetImpl :
 | Имя | Описание |
 |-|-|
 |[намефромдбид](#namefromdbid)|Извлекает строку из `DBID` и копирует ее в переданный объект *BSTR* .|
-|[SetCommandText](#setcommandtext)|Проверяет и сохраняет `DBID` s в двух строках ([m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) и [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md)).|
+|[SetCommandText](#setcommandtext)|Проверяет и сохраняет `DBID` s в двух строках ([m_strCommandText](#strcommandtext) и [m_strIndexText](#strindextext)).|
 
 ### <a name="overridable-methods"></a>Переопределяемые методы
 
-| Имя | Описание |
+| Название | Описание |
 |-|-|
 |[GetColumnInfo](#getcolumninfo)|Возвращает сведения о столбце для конкретного запроса клиента.|
-|[жеткоммандфромид](#getcommandfromid)|Проверяет, содержат ли один или оба параметра строковые значения, и, если да, копирует строковые значения в элементы данных [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) и [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md).|
-|[валидатекоммандид](#validatecommandid)|Проверяет, содержат ли один или оба `DBID` строковые значения, и, если да, копирует их в элементы данных [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) и [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md).|
+|[жеткоммандфромид](#getcommandfromid)|Проверяет, содержат ли один или оба параметра строковые значения, и, если да, копирует строковые значения в элементы данных [m_strCommandText](#strcommandtext) и [m_strIndexText](#strindextext).|
+|[валидатекоммандид](#validatecommandid)|Проверяет, содержат ли один или оба `DBID` строковые значения, и, если да, копирует их в элементы данных [m_strCommandText](#strcommandtext) и [m_strIndexText](#strindextext).|
 
 ### <a name="data-members"></a>Элементы данных
 
-| Имя | Описание |
+| Название | Описание |
 |-|-|
 |[m_rgRowData](#rgrowdata)|По умолчанию, `CAtlArray` темплатизес в аргументе шаблона записи пользователя в `CRowsetImpl` . Другой класс типа массива можно использовать, изменив `ArrayType` аргумент шаблона на `CRowsetImpl` .|
 |[m_strCommandText](#strcommandtext)|Содержит начальную команду набора строк.|
@@ -114,7 +114,7 @@ class CRowsetImpl :
 
 `HRESULT Execute(LONG* pcRows, DBPARAMS* pParams)`
 
-Для реализации любого из `CRowsetImpl` методов, производных от `Execute` , необходимо заполнить внутренние буферы данных ([m_rgRowData](../../data/oledb/crowsetimpl-m-rgrowdata.md)).
+Для реализации любого из `CRowsetImpl` методов, производных от `Execute` , необходимо заполнить внутренние буферы данных ([m_rgRowData](#rgrowdata)).
 
 ## <a name="crowsetimplnamefromdbid"></a><a name="namefromdbid"></a> CRowsetImpl:: Намефромдбид
 
@@ -133,7 +133,7 @@ HRESULT CRowsetBaseImpl::NameFromDBID(DBID* pDBID,
 *пдбид*<br/>
 окне Указатель на объект, `DBID` из которого извлекается строка.
 
-*bstr*<br/>
+*освобождаемой*<br/>
 окне Ссылка на [CComBSTR](../../atl/reference/ccombstr-class.md) для размещения копии `DBID` строки.
 
 *биндекс*<br/>
@@ -145,11 +145,11 @@ HRESULT CRowsetBaseImpl::NameFromDBID(DBID* pDBID,
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод вызывается `CRowsetImpl` реализациями [Валидатекоммандид](../../data/oledb/crowsetimpl-validatecommandid.md) и [жеткоммандфромид](../../data/oledb/crowsetimpl-getcommandfromid.md).
+Этот метод вызывается `CRowsetImpl` реализациями [Валидатекоммандид](#validatecommandid) и [жеткоммандфромид](#getcommandfromid).
 
 ## <a name="crowsetimplsetcommandtext"></a><a name="setcommandtext"></a> CRowsetImpl:: SetCommandText
 
-Проверяет и сохраняет `DBID` s в двух строках ([m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) и [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md)).
+Проверяет и сохраняет `DBID` s в двух строках ([m_strCommandText](#strcommandtext) и [m_strIndexText](#strindextext)).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -174,7 +174,7 @@ HRESULT CRowsetBaseImpl::SetCommandText(DBID* pTableID,
 
 `SetCommentText`Метод вызывается `CreateRowset` статическим методом преобразованный метода `IOpenRowsetImpl` .
 
-Этот метод делегирует свою работу, вызывая [валидатекоммандид](../../data/oledb/crowsetimpl-validatecommandid.md) и [жеткоммандфромид](../../data/oledb/crowsetimpl-getcommandfromid.md) с помощью преобразованного указателя.
+Этот метод делегирует свою работу, вызывая [валидатекоммандид](#validatecommandid) и [жеткоммандфромид](#getcommandfromid) с помощью преобразованного указателя.
 
 ## <a name="crowsetimplgetcolumninfo"></a><a name="getcolumninfo"></a> CRowsetImpl:: GetColumnInfo
 
@@ -211,7 +211,7 @@ static ATLCOLUMNINFO* CRowsetBaseImpl::GetColumnInfo(T* pv,
 
 ## <a name="crowsetimplgetcommandfromid"></a><a name="getcommandfromid"></a> CRowsetImpl:: Жеткоммандфромид
 
-Проверяет, содержат ли один или оба параметра строковые значения, и, если да, копирует строковые значения в элементы данных [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) и [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md).
+Проверяет, содержат ли один или оба параметра строковые значения, и, если да, копирует строковые значения в элементы данных [m_strCommandText](#strcommandtext) и [m_strIndexText](#strindextext).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -234,11 +234,11 @@ HRESULT CRowsetBaseImpl::GetCommandFromID(DBID* pTableID,
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод вызывается через статическое преобразование, `CRowsetImpl` чтобы заполнить элементы данных [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) и [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md). По умолчанию этот метод проверяет, содержат ли один или оба параметра строковые значения. Если они содержат строковые значения, этот метод копирует строковые значения в элементы данных. Поместив метод с этой сигнатурой в `CRowsetImpl` производный класс, вместо базовой реализации будет вызываться метод.
+Этот метод вызывается через статическое преобразование, `CRowsetImpl` чтобы заполнить элементы данных [m_strCommandText](#strcommandtext) и [m_strIndexText](#strindextext). По умолчанию этот метод проверяет, содержат ли один или оба параметра строковые значения. Если они содержат строковые значения, этот метод копирует строковые значения в элементы данных. Поместив метод с этой сигнатурой в `CRowsetImpl` производный класс, вместо базовой реализации будет вызываться метод.
 
 ## <a name="crowsetimplvalidatecommandid"></a><a name="validatecommandid"></a> CRowsetImpl:: Валидатекоммандид
 
-Проверяет, содержат ли один или оба `DBID` строковые значения, и, если да, копирует их в элементы данных [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) и [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md).
+Проверяет, содержат ли один или оба `DBID` строковые значения, и, если да, копирует их в элементы данных [m_strCommandText](#strcommandtext) и [m_strIndexText](#strindextext).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -261,7 +261,7 @@ HRESULT CRowsetBaseImpl::ValidateCommandID(DBID* pTableID,
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод вызывается с помощью статического приведения by `CRowsetImpl` для заполнения его элементов данных [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) и [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md). По умолчанию этот метод проверяет, содержат ли один или оба `DBID` строковые значения, и, если да, копирует их в элементы данных. Поместив метод с этой сигнатурой в `CRowsetImpl` производный класс, вместо базовой реализации будет вызываться метод.
+Этот метод вызывается с помощью статического приведения by `CRowsetImpl` для заполнения его элементов данных [m_strCommandText](#strcommandtext) и [m_strIndexText](#strindextext). По умолчанию этот метод проверяет, содержат ли один или оба `DBID` строковые значения, и, если да, копирует их в элементы данных. Поместив метод с этой сигнатурой в `CRowsetImpl` производный класс, вместо базовой реализации будет вызываться метод.
 
 ## <a name="crowsetimplm_rgrowdata"></a><a name="rgrowdata"></a> CRowsetImpl:: m_rgRowData
 

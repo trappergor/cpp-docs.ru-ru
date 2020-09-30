@@ -95,12 +95,12 @@ helpviewer_keywords:
 - value_compare member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 8462bd21-6829-4dd3-ac81-c42d6fdf92f0
-ms.openlocfilehash: 8f7858628b16f6ed2364a78186685fabb6d578ea
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b5aae5830437309e95f808567a2d3a7ea093c8f8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221397"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507169"
 ---
 # <a name="hash_multiset-stlclr"></a>hash_multiset (STL/CLR)
 
@@ -204,11 +204,11 @@ template<typename Key>
 
 Объект выделяет и освобождает хранилище для последовательности, которую он контролирует как отдельные узлы в двунаправленном связанном списке. Для ускорения доступа объект также поддерживает массив указателей различной длины в список (хэш-таблицу), эффективно управляя всем списком в виде последовательности подсписков или контейнеров. Он вставляет элементы в контейнер, который сохраняется в порядке, изменяя связи между узлами, не копируя содержимое одного узла в другой. Это означает, что можно свободно вставлять и удалять элементы без нарушения работы остальных элементов.
 
-Объект упорядочивает каждый контейнер, управляющий, путем вызова сохраненного объекта делегата типа [hash_set:: key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md). При создании hash_set можно указать сохраненный объект делегата; Если объект делегата не указан, по умолчанию используется сравнение `operator<=(key_type, key_type)` .
+Объект упорядочивает каждый контейнер, управляющий, путем вызова сохраненного объекта делегата типа [hash_set:: key_compare (STL/CLR)](./hash-set-stl-clr.md#key_compare). При создании hash_set можно указать сохраненный объект делегата; Если объект делегата не указан, по умолчанию используется сравнение `operator<=(key_type, key_type)` .
 
-Доступ к сохраненному объекту делегата осуществляется путем вызова функции-члена [hash_set:: key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md) `()` . Такой объект-делегат должен определять эквивалентное упорядочение между ключами типа [hash_set:: key_type (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md). Это означает, что для любых двух ключей `X` и `Y` :
+Доступ к сохраненному объекту делегата осуществляется путем вызова функции-члена [hash_set:: key_comp (STL/CLR)](./hash-set-stl-clr.md#key_comp) `()` . Такой объект-делегат должен определять эквивалентное упорядочение между ключами типа [hash_set:: key_type (STL/CLR)](./hash-set-stl-clr.md#key_type). Это означает, что для любых двух ключей `X` и `Y` :
 
-`key_comp()(X, Y)`Возвращает один и тот же логический результат при каждом вызове.
+`key_comp()(X, Y)` Возвращает один и тот же логический результат при каждом вызове.
 
 Если `key_comp()(X, Y) && key_comp()(Y, X)` имеет значение true, то `X` и `Y` говорят, что они имеют эквивалентное упорядочение.
 
@@ -216,17 +216,17 @@ template<typename Key>
 
 Обратите внимание, что контейнер гарантирует, что все элементы, ключи которых имеют эквивалентное упорядочение (и какой хэш для одного и того же целого значения) являются смежными внутри контейнера. В отличие от класса шаблона [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md), объект класса шаблона не `hash_multiset` требует уникальности ключей для всех элементов. (Два или более ключа могут иметь эквивалентное упорядочение.)
 
-Объект определяет, какой сегмент должен содержать заданный ключ упорядочения, вызывая хранимый объект делегата типа [hash_set:: hashing (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md). Доступ к этому сохраненному объекту осуществляется путем вызова функции [-члена hash_set:: hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md) `()` для получения целочисленного значения, которое зависит от значения ключа. При создании hash_set можно указать сохраненный объект делегата; Если объект делегата не указан, по умолчанию используется функция `System::Object::hash_value(key_type)` . Это означает, что для любых ключей `X` и `Y` :
+Объект определяет, какой сегмент должен содержать заданный ключ упорядочения, вызывая хранимый объект делегата типа [hash_set:: hashing (STL/CLR)](./hash-set-stl-clr.md#hasher). Доступ к этому сохраненному объекту осуществляется путем вызова функции [-члена hash_set:: hash_delegate (STL/CLR)](./hash-set-stl-clr.md#hash_delegate) `()` для получения целочисленного значения, которое зависит от значения ключа. При создании hash_set можно указать сохраненный объект делегата; Если объект делегата не указан, по умолчанию используется функция `System::Object::hash_value(key_type)` . Это означает, что для любых ключей `X` и `Y` :
 
-`hash_delegate()(X)`Возвращает один и тот же целочисленный результат при каждом вызове.
+`hash_delegate()(X)` Возвращает один и тот же целочисленный результат при каждом вызове.
 
 Если `X` и `Y` имеют эквивалентное упорядочение, то `hash_delegate()(X)` должен возвращать тот же самый целочисленный результат, что и `hash_delegate()(Y)` .
 
 Каждый элемент выступает в качестве ключа и значения. Последовательность представляется способом, который позволяет выполнять поиск, вставку и удаление произвольного элемента с несколькими операциями, не зависящими от числа элементов в последовательности (постоянное время) — по крайней мере, в лучших случаях. Кроме того, вставка элементов не делает итераторы недействительными, а при удалении элементов недействительными становятся только итераторы, указывающие на удаленный элемент.
 
-Однако, если Хэшированные значения не распределяются равномерно, хэш-таблица может быть десформирована. В экстремальной — для хэш-функции, которая всегда возвращает одно и то же значение--Уточняющий запрос, вставка и удаление пропорциональны количеству элементов в последовательности (линейное время). Контейнер пытается выбрать разумную хэш-функцию, среднее значение размера контейнера и размер таблицы хэша (общее количество контейнеров), но можно переопределить любой из этих вариантов или все эти варианты. См., например, функции [hash_set:: max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md) и [hash_set:: rehash (STL/CLR)](../dotnet/hash-set-rehash-stl-clr.md).
+Однако, если Хэшированные значения не распределяются равномерно, хэш-таблица может быть десформирована. В экстремальной — для хэш-функции, которая всегда возвращает одно и то же значение--Уточняющий запрос, вставка и удаление пропорциональны количеству элементов в последовательности (линейное время). Контейнер пытается выбрать разумную хэш-функцию, среднее значение размера контейнера и размер таблицы хэша (общее количество контейнеров), но можно переопределить любой из этих вариантов или все эти варианты. См., например, функции [hash_set:: max_load_factor (STL/CLR)](./hash-set-stl-clr.md#max_load_factor) и [hash_set:: rehash (STL/CLR)](./hash-set-stl-clr.md#rehash).
 
-Hash_multiset поддерживает двунаправленные итераторы. Это означает, что можно пошагово перейти к смежным элементам с помощью итератора, который обозначает элемент в управляемой последовательности. Специальный головной узел соответствует итератору, возвращенному [hash_multiset:: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md) `()` . Можно уменьшить этот итератор, чтобы достичь последнего элемента в управляемой последовательности, если он есть. Вы можете увеличить hash_multiset итератора, чтобы достичь головного узла, а затем сравнить его со значением `end()` . Но нельзя разыменование итератора, возвращаемого методом `end()` .
+Hash_multiset поддерживает двунаправленные итераторы. Это означает, что можно пошагово перейти к смежным элементам с помощью итератора, который обозначает элемент в управляемой последовательности. Специальный головной узел соответствует итератору, возвращенному [hash_multiset:: end (STL/CLR)](#end) `()` . Можно уменьшить этот итератор, чтобы достичь последнего элемента в управляемой последовательности, если он есть. Вы можете увеличить hash_multiset итератора, чтобы достичь головного узла, а затем сравнить его со значением `end()` . Но нельзя разыменование итератора, возвращаемого методом `end()` .
 
 Обратите внимание, что нельзя ссылаться на элемент hash_multiset напрямую, используя его числовое значение, для которого требуется итератор произвольного доступа.
 
@@ -236,7 +236,7 @@ Hash_multiset поддерживает двунаправленные итера
 
 ## <a name="members"></a>Элементы
 
-## <a name="hash_multisetbegin-stlclr"></a><a name="begin"></a>hash_multiset:: Begin (STL/CLR)
+## <a name="hash_multisetbegin-stlclr"></a><a name="begin"></a> hash_multiset:: Begin (STL/CLR)
 
 Задает начало управляемой последовательности.
 
@@ -284,7 +284,7 @@ a b c
 *++begin() = b
 ```
 
-## <a name="hash_multisetbucket_count-stlclr"></a><a name="bucket_count"></a>hash_multiset:: bucket_count (STL/CLR)
+## <a name="hash_multisetbucket_count-stlclr"></a><a name="bucket_count"></a> hash_multiset:: bucket_count (STL/CLR)
 
 Подсчитывает количество сегментов.
 
@@ -358,7 +358,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="hash_multisetclear-stlclr"></a><a name="clear"></a>hash_multiset:: Clear (STL/CLR)
+## <a name="hash_multisetclear-stlclr"></a><a name="clear"></a> hash_multiset:: Clear (STL/CLR)
 
 Удаляет все элементы.
 
@@ -370,7 +370,7 @@ void clear();
 
 ### <a name="remarks"></a>Remarks
 
-Функция-член фактически вызывает [hash_multiset:: Erase (STL/CLR)](../dotnet/hash-multiset-erase-stl-clr.md) `(` [hash_multiset:: Begin (STL/CLR)](../dotnet/hash-multiset-begin-stl-clr.md) `(),` [hash_multiset:: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md) `())` . Он используется, чтобы гарантировать, что управляемая последовательность пуста.
+Функция-член фактически вызывает [hash_multiset:: Erase (STL/CLR)](#erase) `(` [hash_multiset:: Begin (STL/CLR)](#begin) `(),` [hash_multiset:: end (STL/CLR)](#end) `())` . Он используется, чтобы гарантировать, что управляемая последовательность пуста.
 
 ### <a name="example"></a>Пример
 
@@ -416,7 +416,7 @@ a b
 size() = 0
 ```
 
-## <a name="hash_multisetconst_iterator-stlclr"></a><a name="const_iterator"></a>hash_multiset:: const_iterator (STL/CLR)
+## <a name="hash_multisetconst_iterator-stlclr"></a><a name="const_iterator"></a> hash_multiset:: const_iterator (STL/CLR)
 
 Тип постоянного итератора для управляемой последовательности.
 
@@ -458,7 +458,7 @@ int main()
 a b c
 ```
 
-## <a name="hash_multisetconst_reference-stlclr"></a><a name="const_reference"></a>hash_multiset:: const_reference (STL/CLR)
+## <a name="hash_multisetconst_reference-stlclr"></a><a name="const_reference"></a> hash_multiset:: const_reference (STL/CLR)
 
 Тип постоянной ссылки на элемент.
 
@@ -503,7 +503,7 @@ int main()
 a b c
 ```
 
-## <a name="hash_multisetconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>hash_multiset:: const_reverse_iterator (STL/CLR)
+## <a name="hash_multisetconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a> hash_multiset:: const_reverse_iterator (STL/CLR)
 
 Тип константного реверсивного итератора для управляемой последовательности.
 
@@ -545,7 +545,7 @@ int main()
 c b a
 ```
 
-## <a name="hash_multisetcount-stlclr"></a><a name="count"></a>hash_multiset:: count (STL/CLR)
+## <a name="hash_multisetcount-stlclr"></a><a name="count"></a> hash_multiset:: count (STL/CLR)
 
 Определяет количество элементов, соответствующих заданному ключу.
 
@@ -598,7 +598,7 @@ count(L'b') = 1
 count(L'C') = 0
 ```
 
-## <a name="hash_multisetdifference_type-stlclr"></a><a name="difference_type"></a>hash_multiset::d ifference_type (STL/CLR)
+## <a name="hash_multisetdifference_type-stlclr"></a><a name="difference_type"></a> hash_multiset::d ifference_type (STL/CLR)
 
 Типы расстояния со знаком между двумя элементами.
 
@@ -653,7 +653,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="hash_multisetempty-stlclr"></a><a name="empty"></a>hash_multiset:: Empty (STL/CLR)
+## <a name="hash_multisetempty-stlclr"></a><a name="empty"></a> hash_multiset:: Empty (STL/CLR)
 
 Проверяет отсутствие элементов.
 
@@ -665,7 +665,7 @@ bool empty();
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция-член возвращает значение true для пустой управляемой последовательности. Он эквивалентен [hash_multiset:: size (STL/CLR)](../dotnet/hash-multiset-size-stl-clr.md) `() == 0` . Он используется для проверки того, является ли hash_multiset пустым.
+Эта функция-член возвращает значение true для пустой управляемой последовательности. Он эквивалентен [hash_multiset:: size (STL/CLR)](#size) `() == 0` . Он используется для проверки того, является ли hash_multiset пустым.
 
 ### <a name="example"></a>Пример
 
@@ -705,7 +705,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="hash_multisetend-stlclr"></a><a name="end"></a>hash_multiset:: end (STL/CLR)
+## <a name="hash_multisetend-stlclr"></a><a name="end"></a> hash_multiset:: end (STL/CLR)
 
 Задает конец управляемой последовательности.
 
@@ -754,7 +754,7 @@ a b c
 *--end() = c
 ```
 
-## <a name="hash_multisetequal_range-stlclr"></a><a name="equal_range"></a>hash_multiset:: equal_range (STL/CLR)
+## <a name="hash_multisetequal_range-stlclr"></a><a name="equal_range"></a> hash_multiset:: equal_range (STL/CLR)
 
 Находит диапазон, соответствующий указанному ключу.
 
@@ -771,7 +771,7 @@ cliext::pair<iterator, iterator> equal_range(key_type key);
 
 ### <a name="remarks"></a>Remarks
 
-Функция-член возвращает пару итераторов `cliext::pair<iterator, iterator>(` [hash_multiset:: lower_bound (STL/CLR)](../dotnet/hash-multiset-lower-bound-stl-clr.md) `(key),` [hash_multiset:: upper_bound (STL/CLR)](../dotnet/hash-multiset-upper-bound-stl-clr.md) `(key))` . Он используется для определения диапазона элементов, находящихся в настоящий момент в управляемой последовательности, соответствующей указанному ключу.
+Функция-член возвращает пару итераторов `cliext::pair<iterator, iterator>(` [hash_multiset:: lower_bound (STL/CLR)](#lower_bound) `(key),` [hash_multiset:: upper_bound (STL/CLR)](#upper_bound) `(key))` . Он используется для определения диапазона элементов, находящихся в настоящий момент в управляемой последовательности, соответствующей указанному ключу.
 
 ### <a name="example"></a>Пример
 
@@ -814,7 +814,7 @@ equal_range(L'x') empty = True
 b
 ```
 
-## <a name="hash_multiseterase-stlclr"></a><a name="erase"></a>hash_multiset:: Erase (STL/CLR)
+## <a name="hash_multiseterase-stlclr"></a><a name="erase"></a> hash_multiset:: Erase (STL/CLR)
 
 Удаляет элементы в указанных позициях.
 
@@ -842,7 +842,7 @@ bool erase(key_type key)
 
 ### <a name="remarks"></a>Remarks
 
-Первая функция-член удаляет элемент управляемой *последовательности, на который указывает, и*возвращает итератор, который обозначает первый элемент, оставшийся после удаления элемента, или [hash_multiset:: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md) , `()` Если такого элемента не существует. Он используется для удаления одного элемента.
+Первая функция-член удаляет элемент управляемой *последовательности, на который указывает, и*возвращает итератор, который обозначает первый элемент, оставшийся после удаления элемента, или [hash_multiset:: end (STL/CLR)](#end) , `()` Если такого элемента не существует. Он используется для удаления одного элемента.
 
 Вторая функция-член удаляет элементы управляемой последовательности в диапазоне [ `first` , `last` ) и возвращает итератор, который обозначает первый элемент, оставшийся после удаления элементов, или значение, `end()` Если такого элемента не существует. Он используется для удаления непрерывных или более смежных элементов.
 
@@ -898,7 +898,7 @@ erase(begin(), end()-1) = e
 size() = 1
 ```
 
-## <a name="hash_multisetfind-stlclr"></a><a name="find"></a>hash_multiset:: Find (STL/CLR)
+## <a name="hash_multisetfind-stlclr"></a><a name="find"></a> hash_multiset:: Find (STL/CLR)
 
 Определяет элемент, соответствующий указанному ключу.
 
@@ -915,7 +915,7 @@ iterator find(key_type key);
 
 ### <a name="remarks"></a>Remarks
 
-Если хотя бы один элемент в управляемой последовательности имеет эквивалентное упорядочение с *ключом*, функция – член возвращает итератор, обозначающий один из этих элементов. в противном случае возвращается [hash_multiset:: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md) `()` . Его можно использовать для поиска элемента, находящегося в управляемой последовательности, соответствующей указанному ключу.
+Если хотя бы один элемент в управляемой последовательности имеет эквивалентное упорядочение с *ключом*, функция – член возвращает итератор, обозначающий один из этих элементов. в противном случае возвращается [hash_multiset:: end (STL/CLR)](#end) `()` . Его можно использовать для поиска элемента, находящегося в управляемой последовательности, соответствующей указанному ключу.
 
 ### <a name="example"></a>Пример
 
@@ -954,7 +954,7 @@ find b = b
 find C = False
 ```
 
-## <a name="hash_multisetgeneric_container-stlclr"></a><a name="generic_container"></a>hash_multiset:: generic_container (STL/CLR)
+## <a name="hash_multisetgeneric_container-stlclr"></a><a name="generic_container"></a> hash_multiset:: generic_container (STL/CLR)
 
 Тип универсального интерфейса для контейнера.
 
@@ -1018,7 +1018,7 @@ a b c d
 a b c d e
 ```
 
-## <a name="hash_multisetgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>hash_multiset:: generic_iterator (STL/CLR)
+## <a name="hash_multisetgeneric_iterator-stlclr"></a><a name="generic_iterator"></a> hash_multiset:: generic_iterator (STL/CLR)
 
 Тип итератора для использования с универсальным интерфейсом для контейнера.
 
@@ -1074,7 +1074,7 @@ a b c
 a
 ```
 
-## <a name="hash_multisetgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>hash_multiset:: generic_reverse_iterator (STL/CLR)
+## <a name="hash_multisetgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a> hash_multiset:: generic_reverse_iterator (STL/CLR)
 
 Тип реверсивного итератора для использования с универсальным интерфейсом для контейнера.
 
@@ -1130,7 +1130,7 @@ a b c
 c
 ```
 
-## <a name="hash_multisetgeneric_value-stlclr"></a><a name="generic_value"></a>hash_multiset:: generic_value (STL/CLR)
+## <a name="hash_multisetgeneric_value-stlclr"></a><a name="generic_value"></a> hash_multiset:: generic_value (STL/CLR)
 
 Тип элемента для использования с универсальным интерфейсом для контейнера.
 
@@ -1184,7 +1184,7 @@ a b c
 a
 ```
 
-## <a name="hash_multisethash_delegate-stlclr"></a><a name="hash_delegate"></a>hash_multiset:: hash_delegate (STL/CLR)
+## <a name="hash_multisethash_delegate-stlclr"></a><a name="hash_delegate"></a> hash_multiset:: hash_delegate (STL/CLR)
 
 Определяет элемент, соответствующий указанному ключу.
 
@@ -1222,7 +1222,7 @@ hash(L'a') = 1616896120
 hash(L'b') = 570892832
 ```
 
-## <a name="hash_multisethash_multiset-stlclr"></a><a name="hash_multiset"></a>hash_multiset:: hash_multiset (STL/CLR)
+## <a name="hash_multisethash_multiset-stlclr"></a><a name="hash_multiset"></a> hash_multiset:: hash_multiset (STL/CLR)
 
 Создает объект контейнера.
 
@@ -1462,7 +1462,7 @@ a b c
 a b c
 ```
 
-## <a name="hash_multisethasher-stlclr"></a><a name="hasher"></a>hash_multiset:: hashing (STL/CLR)
+## <a name="hash_multisethasher-stlclr"></a><a name="hasher"></a> hash_multiset:: hashing (STL/CLR)
 
 Делегат хеширования для ключа.
 
@@ -1501,7 +1501,7 @@ hash(L'a') = 1616896120
 hash(L'b') = 570892832
 ```
 
-## <a name="hash_multisetinsert-stlclr"></a><a name="insert"></a>hash_multiset:: Insert (STL/CLR)
+## <a name="hash_multisetinsert-stlclr"></a><a name="insert"></a> hash_multiset:: Insert (STL/CLR)
 
 Добавляет элементы.
 
@@ -1614,7 +1614,7 @@ a b b c x
 a b b c x y
 ```
 
-## <a name="hash_multisetiterator-stlclr"></a><a name="iterator"></a>hash_multiset:: iterator (STL/CLR)
+## <a name="hash_multisetiterator-stlclr"></a><a name="iterator"></a> hash_multiset:: iterator (STL/CLR)
 
 Тип итератора для управляемой последовательности.
 
@@ -1656,7 +1656,7 @@ int main()
 a b c
 ```
 
-## <a name="hash_multisetkey_comp-stlclr"></a><a name="key_comp"></a>hash_multiset:: key_comp (STL/CLR)
+## <a name="hash_multisetkey_comp-stlclr"></a><a name="key_comp"></a> hash_multiset:: key_comp (STL/CLR)
 
 Копирует делегат упорядочения для двух ключей.
 
@@ -1715,7 +1715,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="hash_multisetkey_compare-stlclr"></a><a name="key_compare"></a>hash_multiset:: key_compare (STL/CLR)
+## <a name="hash_multisetkey_compare-stlclr"></a><a name="key_compare"></a> hash_multiset:: key_compare (STL/CLR)
 
 Делегат упорядочения для двух ключей.
 
@@ -1775,7 +1775,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="hash_multisetkey_type-stlclr"></a><a name="key_type"></a>hash_multiset:: key_type (STL/CLR)
+## <a name="hash_multisetkey_type-stlclr"></a><a name="key_type"></a> hash_multiset:: key_type (STL/CLR)
 
 Тип ключа упорядочения.
 
@@ -1820,7 +1820,7 @@ int main()
 a b c
 ```
 
-## <a name="hash_multisetload_factor-stlclr"></a><a name="load_factor"></a>hash_multiset:: load_factor (STL/CLR)
+## <a name="hash_multisetload_factor-stlclr"></a><a name="load_factor"></a> hash_multiset:: load_factor (STL/CLR)
 
 Подсчитывает среднее число элементов в блоке.
 
@@ -1832,7 +1832,7 @@ float load_factor();
 
 ### <a name="remarks"></a>Remarks
 
-Функция-член возвращает `(float)` [hash_multiset:: size (STL/CLR)](../dotnet/hash-multiset-size-stl-clr.md) `() /` [hash_multiset:: bucket_count (STL/CLR)](../dotnet/hash-multiset-bucket-count-stl-clr.md) `()` . Он используется для определения среднего размера контейнера.
+Функция-член возвращает `(float)` [hash_multiset:: size (STL/CLR)](#size) `() /` [hash_multiset:: bucket_count (STL/CLR)](#count) `()` . Он используется для определения среднего размера контейнера.
 
 ### <a name="example"></a>Пример
 
@@ -1894,7 +1894,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="hash_multisetlower_bound-stlclr"></a><a name="lower_bound"></a>hash_multiset:: lower_bound (STL/CLR)
+## <a name="hash_multisetlower_bound-stlclr"></a><a name="lower_bound"></a> hash_multiset:: lower_bound (STL/CLR)
 
 Находит начало диапазона, совпадающее с указанным ключом.
 
@@ -1911,7 +1911,7 @@ iterator lower_bound(key_type key);
 
 ### <a name="remarks"></a>Remarks
 
-Функция-член определяет первый элемент `X` в управляемой последовательности, который хэшируется в тот же контейнер, что и *ключ* , и имеет эквивалентное упорядочение к *ключу*. Если такого элемента не существует, он возвращает [hash_multiset:: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md) `()` ; в противном случае возвращается итератор, который обозначает `X` . Он используется для поиска начала последовательности элементов, находящихся в управляемой последовательности, соответствующей указанному ключу.
+Функция-член определяет первый элемент `X` в управляемой последовательности, который хэшируется в тот же контейнер, что и *ключ* , и имеет эквивалентное упорядочение к *ключу*. Если такого элемента не существует, он возвращает [hash_multiset:: end (STL/CLR)](#end) `()` ; в противном случае возвращается итератор, который обозначает `X` . Он используется для поиска начала последовательности элементов, находящихся в управляемой последовательности, соответствующей указанному ключу.
 
 ### <a name="example"></a>Пример
 
@@ -1951,7 +1951,7 @@ lower_bound(L'x')==end() = True
 *lower_bound(L'b') = b
 ```
 
-## <a name="hash_multisetmake_value-stlclr"></a><a name="make_value"></a>hash_multiset:: make_value (STL/CLR)
+## <a name="hash_multisetmake_value-stlclr"></a><a name="make_value"></a> hash_multiset:: make_value (STL/CLR)
 
 Конструирует объект значения.
 
@@ -1997,7 +1997,7 @@ int main()
 a b c
 ```
 
-## <a name="hash_multisetmax_load_factor-stlclr"></a><a name="max_load_factor"></a>hash_multiset:: max_load_factor (STL/CLR)
+## <a name="hash_multisetmax_load_factor-stlclr"></a><a name="max_load_factor"></a> hash_multiset:: max_load_factor (STL/CLR)
 
 Возвращает или задает максимальное количество элементов в блоке.
 
@@ -2079,7 +2079,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="hash_multisetoperator-stlclr"></a><a name="op"></a>hash_multiset:: operator = (STL/CLR)
+## <a name="hash_multisetoperator-stlclr"></a><a name="op"></a> hash_multiset:: operator = (STL/CLR)
 
 Заменяет управляемую последовательность.
 
@@ -2134,7 +2134,7 @@ a b c
 a b c
 ```
 
-## <a name="hash_multisetrbegin-stlclr"></a><a name="rbegin"></a>hash_multiset:: rbegin (STL/CLR)
+## <a name="hash_multisetrbegin-stlclr"></a><a name="rbegin"></a> hash_multiset:: rbegin (STL/CLR)
 
 Задает начало обратной управляемой последовательности.
 
@@ -2182,7 +2182,7 @@ a b c
 *++rbegin() = b
 ```
 
-## <a name="hash_multisetreference-stlclr"></a><a name="reference"></a>hash_multiset:: Reference (STL/CLR)
+## <a name="hash_multisetreference-stlclr"></a><a name="reference"></a> hash_multiset:: Reference (STL/CLR)
 
 Тип ссылки на элемент.
 
@@ -2227,7 +2227,7 @@ int main()
 a b c
 ```
 
-## <a name="hash_multisetrehash-stlclr"></a><a name="rehash"></a>hash_multiset:: rehash (STL/CLR)
+## <a name="hash_multisetrehash-stlclr"></a><a name="rehash"></a> hash_multiset:: rehash (STL/CLR)
 
 Повторно создает хэш-таблицу.
 
@@ -2239,7 +2239,7 @@ void rehash();
 
 ### <a name="remarks"></a>Remarks
 
-Функция-член перестраивает таблицу хэширования, гарантируя, что [hash_multiset:: load_factor (STL/CLR)](../dotnet/hash-multiset-load-factor-stl-clr.md) `() <=` [hash_multiset:: max_load_factor (STL/CLR)](../dotnet/hash-multiset-max-load-factor-stl-clr.md). В противном случае размер хэш-таблицы увеличивается только по мере необходимости после вставки. (Размер не уменьшается автоматически.) Он используется для корректировки размера хэш-таблицы.
+Функция-член перестраивает таблицу хэширования, гарантируя, что [hash_multiset:: load_factor (STL/CLR)](#load_factor) `() <=` [hash_multiset:: max_load_factor (STL/CLR)](#max_load_factor). В противном случае размер хэш-таблицы увеличивается только по мере необходимости после вставки. (Размер не уменьшается автоматически.) Он используется для корректировки размера хэш-таблицы.
 
 ### <a name="example"></a>Пример
 
@@ -2301,7 +2301,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="hash_multisetrend-stlclr"></a><a name="rend"></a>hash_multiset:: rend (STL/CLR)
+## <a name="hash_multisetrend-stlclr"></a><a name="rend"></a> hash_multiset:: rend (STL/CLR)
 
 Задает конец обратной управляемой последовательности.
 
@@ -2350,7 +2350,7 @@ a b c
 *--rend() = a
 ```
 
-## <a name="hash_multisetreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>hash_multiset:: reverse_iterator (STL/CLR)
+## <a name="hash_multisetreverse_iterator-stlclr"></a><a name="reverse_iterator"></a> hash_multiset:: reverse_iterator (STL/CLR)
 
 Тип обратного итератора для управляемой последовательности.
 
@@ -2392,7 +2392,7 @@ int main()
 c b a
 ```
 
-## <a name="hash_multisetsize-stlclr"></a><a name="size"></a>hash_multiset:: size (STL/CLR)
+## <a name="hash_multisetsize-stlclr"></a><a name="size"></a> hash_multiset:: size (STL/CLR)
 
 Подсчитывает количество элементов.
 
@@ -2404,7 +2404,7 @@ size_type size();
 
 ### <a name="remarks"></a>Remarks
 
-Функция-член возвращает длину управляемой последовательности. Он используется для определения количества элементов, находящихся в настоящий момент в управляемой последовательности. Если вас интересует только то, имеет ли последовательность ненулевой размер, см. раздел [hash_multiset:: Empty (STL/CLR)](../dotnet/hash-multiset-empty-stl-clr.md) `()` .
+Функция-член возвращает длину управляемой последовательности. Он используется для определения количества элементов, находящихся в настоящий момент в управляемой последовательности. Если вас интересует только то, имеет ли последовательность ненулевой размер, см. раздел [hash_multiset:: Empty (STL/CLR)](#empty) `()` .
 
 ### <a name="example"></a>Пример
 
@@ -2446,7 +2446,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="hash_multisetsize_type-stlclr"></a><a name="size_type"></a>hash_multiset:: size_type (STL/CLR)
+## <a name="hash_multisetsize_type-stlclr"></a><a name="size_type"></a> hash_multiset:: size_type (STL/CLR)
 
 Тип расстояния со знаком между двумя элементами.
 
@@ -2494,7 +2494,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="hash_multisetswap-stlclr"></a><a name="swap"></a>hash_multiset:: Swap (STL/CLR)
+## <a name="hash_multisetswap-stlclr"></a><a name="swap"></a> hash_multiset:: Swap (STL/CLR)
 
 Меняет местами содержимое двух контейнеров.
 
@@ -2562,7 +2562,7 @@ d e f
 a b c
 ```
 
-## <a name="hash_multisetto_array-stlclr"></a><a name="to_array"></a>hash_multiset:: to_array (STL/CLR)
+## <a name="hash_multisetto_array-stlclr"></a><a name="to_array"></a> hash_multiset:: to_array (STL/CLR)
 
 Копирует управляемую последовательность в новый массив.
 
@@ -2612,7 +2612,7 @@ a b c d
 a b c
 ```
 
-## <a name="hash_multisetupper_bound-stlclr"></a><a name="upper_bound"></a>hash_multiset:: upper_bound (STL/CLR)
+## <a name="hash_multisetupper_bound-stlclr"></a><a name="upper_bound"></a> hash_multiset:: upper_bound (STL/CLR)
 
 Находит конец диапазона, соответствующий указанному ключу.
 
@@ -2629,7 +2629,7 @@ iterator upper_bound(key_type key);
 
 ### <a name="remarks"></a>Remarks
 
-Функция-член определяет последний элемент `X` в управляемой последовательности, который хэшируется в тот же контейнер, что и *ключ* , и имеет эквивалентное упорядочение к *ключу*. Если такого элемента не существует или если `X` является последним элементом управляемой последовательности, возвращается [hash_multiset:: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md) `()` ; в противном случае возвращается итератор, обозначающий первый элемент за пределами `X` . Он используется для поиска конца последовательности элементов, находящихся в управляемой последовательности, соответствующей указанному ключу.
+Функция-член определяет последний элемент `X` в управляемой последовательности, который хэшируется в тот же контейнер, что и *ключ* , и имеет эквивалентное упорядочение к *ключу*. Если такого элемента не существует или если `X` является последним элементом управляемой последовательности, возвращается [hash_multiset:: end (STL/CLR)](#end) `()` ; в противном случае возвращается итератор, обозначающий первый элемент за пределами `X` . Он используется для поиска конца последовательности элементов, находящихся в управляемой последовательности, соответствующей указанному ключу.
 
 ### <a name="example"></a>Пример
 
@@ -2669,7 +2669,7 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = c
 ```
 
-## <a name="hash_multisetvalue_comp-stlclr"></a><a name="value_comp"></a>hash_multiset:: value_comp (STL/CLR)
+## <a name="hash_multisetvalue_comp-stlclr"></a><a name="value_comp"></a> hash_multiset:: value_comp (STL/CLR)
 
 Копирует делегат упорядочения для двух значений элементов.
 
@@ -2713,7 +2713,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="hash_multisetvalue_compare-stlclr"></a><a name="value_compare"></a>hash_multiset:: value_compare (STL/CLR)
+## <a name="hash_multisetvalue_compare-stlclr"></a><a name="value_compare"></a> hash_multiset:: value_compare (STL/CLR)
 
 Делегат упорядочивания для двух значений элементов.
 
@@ -2758,7 +2758,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="hash_multisetvalue_type-stlclr"></a><a name="value_type"></a>hash_multiset:: value_type (STL/CLR)
+## <a name="hash_multisetvalue_type-stlclr"></a><a name="value_type"></a> hash_multiset:: value_type (STL/CLR)
 
 Тип элемента.
 

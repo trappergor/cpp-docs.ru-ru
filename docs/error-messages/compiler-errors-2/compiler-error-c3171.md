@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3171
 ms.assetid: 1ce26997-7ef1-4c9f-84da-003ea1a4251e
-ms.openlocfilehash: a3af19fa6b4f4def9bb42325f648109cfafcdaef
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 14f0cedc5448005a29d74f05ae3e68e74eb5cf1c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761755"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508305"
 ---
 # <a name="compiler-error-c3171"></a>Ошибка компилятора C3171
 
 "модуль": невозможно указать разные атрибуты модуля в проекте
 
-атрибуты [модуля](../../windows/module-cpp.md) с различными списками параметров были найдены в двух файлах в компиляции. Для каждой компиляции можно указать только один уникальный атрибут `module`.
+атрибуты [модуля](../../windows/attributes/module-cpp.md) с различными списками параметров были найдены в двух файлах в компиляции. `module`Для каждой компиляции можно указать только один уникальный атрибут.
 
 Идентичные `module` атрибуты могут быть указаны в нескольких файлах исходного кода.
 
-Например, если найдены следующие атрибуты `module`:
+Например, если `module` были найдены следующие атрибуты:
 
 ```cpp
 // C3171.cpp

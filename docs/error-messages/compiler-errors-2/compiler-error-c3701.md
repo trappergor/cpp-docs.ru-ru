@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3701
 ms.assetid: a7faaa87-d2f5-4d6a-9a2f-5cab2d24a648
-ms.openlocfilehash: 6852d130b0f10282b8c22b0053760eca120252c7
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: c15cd9ce841d79787b3be9829c76038803b54d4d
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758025"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508052"
 ---
 # <a name="compiler-error-c3701"></a>Ошибка компилятора C3701
 
 "функция": event_source не имеет событий
 
-Предпринята попытка использовать [event_source](../../windows/event-source.md) для класса, не имеющего методов событий. Чтобы устранить эту ошибку, добавьте в класс одно или несколько событий.
+Предпринята попытка использовать [event_source](../../windows/attributes/event-source.md) для класса, не имеющего методов событий. Чтобы устранить эту ошибку, добавьте в класс одно или несколько событий.
 
 Следующий пример приводит к возникновению ошибки C3701:
 
