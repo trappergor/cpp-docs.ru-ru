@@ -6,19 +6,19 @@ helpviewer_keywords:
 - resources [C++], about resource files
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
-ms.openlocfilehash: 142a9120e0b6b95e659fcb47c275653fbefd8cbe
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3e387a1cefb6577760a34c7957d4f5019b1d49ef
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80165890"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502903"
 ---
 # <a name="working-with-resource-files"></a>Работа с файлами ресурсов
 
 > [!WARNING]
 > Этот раздел относится к классическим приложениям Windows, написанным на C++.
 >
-> Сведения о ресурсах в универсальная платформа Windows приложениях, написанных C++в, см. в разделе [Определение ресурсов приложения](/windows/uwp/app-resources/)или C++о добавлении ресурсов в проекты/CLI (управляемые), см. в разделе [ресурсы в классических приложениях](/dotnet/framework/resources/index) статьи .NET Framework разработчика.
+> Сведения о ресурсах в универсальная платформа Windows приложениях, написанных на C++, см. в разделе [Определение ресурсов приложения](/windows/uwp/app-resources/)или о добавлении ресурсов в проекты C++/CLI (управляемые), см. в разделе [ресурсы в классических приложениях](/dotnet/framework/resources/index) статьи .NET Framework разработчика.
 
 Ресурсы могут состоять из широкого диапазона элементов, например:
 
@@ -57,5 +57,5 @@ ms.locfileid: "80165890"
 
 ## <a name="see-also"></a>См. также раздел
 
-[Классические приложения Windows](../windows/windows-desktop-applications-cpp.md)<br/>
+[Классические приложения Windows](./desktop-applications-visual-cpp.md)<br/>
 [Меню и другие ресурсы](/windows/win32/menurc/resources)

@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - code analysis, C++ core check
 ms.assetid: f1429463-136e-41ed-8a75-a8dbf0b4fd89
-ms.openlocfilehash: e85ce8baed9a1ef39e0ab759ab86a5b570a42fa6
-ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
+ms.openlocfilehash: a4dc50395a1da0eda68148123651123cf1607184
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87389952"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503384"
 ---
 # <a name="c-core-guidelines-checker-reference"></a>Справочник по средствам проверки C++ Core Guidelines
 
-В этом разделе перечислены предупреждения средства проверки C++ Core Guidelines. Дополнительные сведения об анализе кода см. в разделе [ `/analyze` (анализ кода)](/cpp/build/reference/analyze-code-analysis) и [быстрое начало: анализ кода для C/C++](../code-quality/quick-start-code-analysis-for-c-cpp.md).
+В этом разделе перечислены предупреждения средства проверки C++ Core Guidelines. Дополнительные сведения об анализе кода см. в разделе [ `/analyze` (анализ кода)](../build/reference/analyze-code-analysis.md) и [быстрое начало: анализ кода для C/C++](../code-quality/quick-start-code-analysis-for-c-cpp.md).
 
 > [!NOTE]
 > Некоторые предупреждения относятся к более чем одной группе, а не ко всем предупреждениям — полный справочный раздел.
@@ -196,7 +196,7 @@ ms.locfileid: "87389952"
 Не фрагментировать. См. [C++ Core GUIDELINES ES. 63](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#es63-dont-slice).
 
 [C26465 NO_CONST_CAST_UNNECESSARY](c26465.md)\
-Не используйте `const_cast` для приведения `const` . `const_cast`не является обязательным; Константа или изменчивости не удаляется этим преобразованием. См. [C++ Core Guidelines Type. 3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Pro-type-constcast).
+Не используйте `const_cast` для приведения `const` . `const_cast` не является обязательным; Константа или изменчивости не удаляется этим преобразованием. См. [C++ Core Guidelines Type. 3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Pro-type-constcast).
 
 [C26466 NO_STATIC_DOWNCAST_POLYMORPHIC](c26466.md)\
 Не используйте `static_cast` образования производных типов. Приведение из полиморфизма типа должно использовать dynamic_cast. См. раздел [тип C++ Core Guidelines. 2](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Pro-type-downcast).
@@ -264,7 +264,7 @@ ms.locfileid: "87389952"
 Рассмотрите возможность использования `gsl::finally` , если планируется финальное действие. См. раздел [C++ Core Guidelines: GSL. util: Utilities](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-utilities).
 
 [C26449 NO_SPAN_FROM_TEMPORARY](c26449.md)\
-`gsl::span`или `std::string_view` создается из временной папки, если временная проверка становится недействительной. См. раздел [C++ Core Guidelines: GSL. View: views](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#gslview-views).
+`gsl::span` или `std::string_view` создается из временной папки, если временная проверка становится недействительной. См. раздел [C++ Core Guidelines: GSL. View: views](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#gslview-views).
 
 ## <a name="deprecated-warnings"></a>Устаревшие предупреждения
 
@@ -280,6 +280,6 @@ ms.locfileid: "87389952"
 - 26425 ASSIGNING_TO_STATIC
 - 26499 NO_LIFETIME_TRACKING
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Использование средств проверки C++ Core Guidelines](using-the-cpp-core-guidelines-checkers.md)

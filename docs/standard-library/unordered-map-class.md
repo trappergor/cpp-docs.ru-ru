@@ -141,12 +141,12 @@ helpviewer_keywords:
 - std::unordered_map::size
 - std::unordered_map::swap
 ms.assetid: 7cf7cfa1-16e7-461c-a9b2-3b8d8ec24e0d
-ms.openlocfilehash: 2f30b5683d8487830d596fc8185430c8a4c4c7b0
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: f8ffd7b3990f2d0ab40f8059e65f0aba4d4c8e0c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352418"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503585"
 ---
 # <a name="unordered_map-class"></a>Класс unordered_map
 
@@ -238,7 +238,7 @@ class unordered_map;
 |[unordered_map:: operator []](#op_at)|Находит или вставляет элемент с указанным ключом.|
 |[unordered_map::operator=](#op_eq)|Копирует хэш-таблицу.|
 
-## <a name="remarks"></a>Комментарии
+## <a name="remarks"></a>Remarks
 
 Объект упорядочивает управляемую им последовательность путем вызова двух сохраненных объектов, объекта функции сравнения типа [unordered_map::key_equal](#key_equal) и объекта хэш-функции типа [unordered_map::hasher](#hasher). Доступ к первому сохраненному объекту осуществляется путем вызова функции члена [unordered_map:: key_eq](#key_eq) `()` ; доступ к второму сохраненному объекту осуществляется путем вызова функции члена [unordered_map:: hash_function](#hash) `()` . В частности, для всех значений `X` и `Y` типа `Key` вызов `key_eq()(X, Y)` возвращает значение true, только если два значения аргументов имеют соответствующий порядок; вызов `hash_function()(keyval)` создает распределение значений типа `size_t`. В отличие от [класса Unordered_multimap Class](../standard-library/unordered-multimap-class.md), объект типа `unordered_map` гарантирует, что `key_eq()(X, Y)` всегда имеет значение false для любого из двух элементов управляемой последовательности. (Ключи уникальны).
 
@@ -262,7 +262,7 @@ class unordered_map;
 typedef Alloc allocator_type;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Этот тип является синонимом для параметра шаблона `Alloc`.
 
@@ -310,7 +310,7 @@ const Ty& at(const Key& key) const;
 
 Ссылка на значение данных найденного элемента.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Если значение ключа аргумента не найдено, функция создает объект класса `out_of_range`.
 
@@ -357,7 +357,7 @@ const_local_iterator begin(size_type nbucket) const;
 *нбуккет*\
 Номер сегмента.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Первые две функции-члены возвращают прямой итератор, указывающий на первый элемент последовательности (или на место сразу за концом пустой последовательности). Последние две функции-члена возвращают прямой итератор, указывающий на первый элемент контейнера *нбуккет* (или сразу за концом пустого контейнера).
 
@@ -418,7 +418,7 @@ size_type bucket(const Key& keyval) const;
 *кэйвал*\
 Значение ключа для сопоставления.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Функция – член возвращает номер контейнера, который в настоящее время соответствует значению ключа *кэйвал*.
 
@@ -469,7 +469,7 @@ bucket_size(7) == 1
 size_type bucket_count() const;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Функция-член возвращает текущее число блоков.
 
@@ -560,7 +560,7 @@ size_type bucket_size(size_type nbucket) const;
 *нбуккет*\
 Номер сегмента.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Функции элементов возвращают размер сегмента *нбуккет*.
 
@@ -615,7 +615,7 @@ const_iterator cbegin() const;
 
 **`const`** Итератор прямого доступа, указывающий на первый элемент диапазона, или расположение непосредственно за концом пустого диапазона (для пустого диапазона `cbegin() == cend()` ).
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Элементы в диапазоне нельзя изменить с помощью возвращаемого значения `cbegin`.
 
@@ -641,7 +641,7 @@ const_iterator cend() const;
 
 **`const`** Итератор прямого доступа, указывающий на место сразу за концом диапазона.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 `cend` используется для проверки того, прошел ли итератор конец диапазона.
 
@@ -664,7 +664,7 @@ auto i2 = Container.cend();
 void clear();
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Функция-член вызывает [unordered_map::erase](#erase)`(` [unordered_map::begin](#begin)`(),` [unordered_map::end](#end)`())`.
 
@@ -731,7 +731,7 @@ empty() == false
 typedef T1 const_iterator;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Тип описывает объект, который можно использовать в качестве постоянного прямого итератора для управляемой последовательности. Он описан здесь как синоним для типа `T1`, определяемого реализацией.
 
@@ -774,7 +774,7 @@ int main()
 typedef T5 const_local_iterator;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Этот тип описывает объект, который можно использовать в качестве постоянного прямого итератора для блока. Он описан здесь как синоним для типа `T5`, определяемого реализацией.
 
@@ -822,7 +822,7 @@ int main()
 typedef Alloc::const_pointer const_pointer;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Этот тип описывает объект, который можно использовать в качестве постоянного указателя на элемент управляемой последовательности.
 
@@ -868,7 +868,7 @@ int main()
 typedef Alloc::const_reference const_reference;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Тип описывает объект, который можно использовать в качестве постоянной ссылки на элемент управляемой последовательности.
 
@@ -926,9 +926,9 @@ bool contains(const Key& key) const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` значение, если элемент найден в контейнере; `false` в противном случае — значение. 
+`true` значение, если элемент найден в контейнере; `false` в противном случае — значение.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 `contains()` Новое в C++ 20. Чтобы использовать его, укажите параметр компилятора [/std: c + + Latest](../build/reference/std-specify-language-standard-version.md) .
 
@@ -948,7 +948,7 @@ int main()
     std::cout << std::boolalpha; // so booleans show as 'true' or 'false'
     std::cout << theUnorderedMap.contains(1) << '\n';
     std::cout << theUnorderedMap.contains(2) << '\n';
-    
+
     return 0;
 }
 ```
@@ -971,7 +971,7 @@ size_type count(const Key& keyval) const;
 *кэйвал*\
 Искомое значение ключа.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Функция – член возвращает количество элементов в диапазоне, ограниченном [unordered_map:: equal_range](#equal_range) `(keyval)` .
 
@@ -1021,7 +1021,7 @@ count('C') == 0
 typedef T3 difference_type;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Тип целого числа со знаком описывает объект, который может представлять разницу между адресами любых двух элементов в управляемой последовательности. Он описан здесь как синоним для типа `T3`, определяемого реализацией.
 
@@ -1092,7 +1092,7 @@ pair<iterator, bool>  emplace( Args&&... args);
 
 Для доступа к компоненту итератора пары `pr`, возвращенной этой функцией-членом, используйте `pr.first` и разыменуйте ее с помощью `*(pr.first)`. Для доступа к **`bool`** компоненту пары `pr` , возвращаемой этой функцией-членом, используйте `pr.second` .
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Эта функция не делает недействительными никакие итераторы или ссылки.
 
@@ -1123,7 +1123,7 @@ iterator emplace_hint(const_iterator where, Args&&... args);
 
 Если не удалось вставить элемент, так как он уже существует, возвращается итератор на существующий элемент.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Эта функция не делает ссылки недействительными.
 
@@ -1141,7 +1141,7 @@ iterator emplace_hint(const_iterator where, Args&&... args);
 bool empty() const;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Эта функция-член возвращает значение true для пустой управляемой последовательности.
 
@@ -1216,7 +1216,7 @@ const_local_iterator end(size_type nbucket) const;
 *нбуккет*\
 Номер сегмента.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Первые две функции-члены возвращают прямой итератор, указывающий на место сразу за концом последовательности. Последние две функции-члена возвращают прямой итератор, указывающий сразу за концом сегмента *нбуккет*.
 
@@ -1234,7 +1234,7 @@ std::pair<const_iterator, const_iterator>  equal_range(const Key& keyval) const;
 *кэйвал*\
 Искомое значение ключа.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Функция-член возвращает пару итераторов `X` , что `[X.first, X.second)` разделяет только те элементы управляемой последовательности, которые имеют эквивалентное упорядочение с помощью *кэйвал*. Если таких элементов не существует, оба итератора имеют значение `end()`.
 
@@ -1318,7 +1318,7 @@ size_type erase(const key_type& Key);
 
 Для третьей функции-члена возвращает число элементов, которые были удалены из объекта unordered_map.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Пример кода см. в разделе [map::erase](../standard-library/map-class.md#erase).
 
@@ -1335,7 +1335,7 @@ const_iterator find(const Key& keyval) const;
 *кэйвал*\
 Искомое значение ключа.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Функция – член возвращает [unordered_map:: equal_range](#equal_range) `(keyval).first` .
 
@@ -1390,7 +1390,7 @@ find('b') == true: [b, 2]
 Alloc get_allocator() const;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Функция-член возвращает сохраненный объект распределителя.
 
@@ -1428,7 +1428,7 @@ al == std::allocator() is true
 Hash hash_function() const;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Функция-член возвращает сохраненный объект хэш-функции.
 
@@ -1466,7 +1466,7 @@ hfn('b') == 1647086
 typedef Hash hasher;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Этот тип является синонимом для параметра шаблона `Hash`.
 
@@ -1557,7 +1557,7 @@ IList);
 
 Одноэлементные функции-члены с подсказкой (3) и (4) возвращают итератор, который указывает на позицию, где новый элемент был вставлен, или, если элемент с эквивалентным ключом уже существует, указывает на существующий элемент.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Эта функция не делает никакие итераторы, указатели или ссылки недействительными.
 
@@ -1583,7 +1583,7 @@ IList);
 typedef T0 iterator;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Тип описывает объект, который можно использовать в качестве прямого итератора для управляемой последовательности. Он описан здесь как синоним для типа `T0`, определяемого реализацией.
 
@@ -1626,7 +1626,7 @@ int main()
 Pred key_eq() const;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Функция-член возвращает сохраненный объект функции сравнения.
 
@@ -1666,7 +1666,7 @@ cmpfn('a', 'b') == false
 typedef Pred key_equal;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Этот тип является синонимом для параметра шаблона `Pred`.
 
@@ -1706,7 +1706,7 @@ cmpfn('a', 'b') == false
 typedef Key key_type;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Этот тип является синонимом для параметра шаблона `Key`.
 
@@ -1761,7 +1761,7 @@ int main()
 float load_factor() const;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Функция – член возвращает `(float)` [unordered_map:: size](#size) `() / (float)` [unordered_map:: bucket_count](#bucket_count) `()` , среднее число элементов на сегмент.
 
@@ -1847,7 +1847,7 @@ max_load_factor() == 0.1
 typedef T4 local_iterator;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Этот тип описывает объект, который можно использовать в качестве прямого итератора для контейнера. Он описан здесь как синоним для типа `T4`, определяемого реализацией.
 
@@ -1895,7 +1895,7 @@ int main()
 typedef Ty mapped_type;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Этот тип является синонимом для параметра шаблона `Ty`.
 
@@ -1950,7 +1950,7 @@ int main()
 size_type max_bucket_count() const;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Функция-член возвращает максимальное количество блоков, которое разрешено в настоящее время.
 
@@ -2043,7 +2043,7 @@ void max_load_factor(float factor);
 *многофакторной*\
 Новый коэффициент максимальной нагрузки.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Первая функция-член возвращает сохраненный коэффициент максимальной нагрузки. Вторая функция – член заменяет хранимую максимальную степень нагрузки на *Коэффициент*.
 
@@ -2129,7 +2129,7 @@ max_load_factor() == 0.1
 size_type max_size() const;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Функция-член возвращает длину самой длинной последовательности, которой объект может управлять.
 
@@ -2175,7 +2175,7 @@ Ty& operator[](Key&& keyval);
 
 Ссылка на значение данных вставленного элемента.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Если значение ключа аргумента не найдено, он вставляется вместе со значением по умолчанию для такого типа данных.
 
@@ -2238,7 +2238,7 @@ c2[move(str)] == 0
 c2["abc"] == 1
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Функция-член определяет итератор `where` в качестве возвращаемого значения [unordered_map::insert](#insert)`(` [unordered_map::value_type](#value_type)`(keyval, Ty())`. (Он вставляет элемент с указанным ключом, если такого элемента не существует.) Затем он возвращает ссылку на `(*where).second` .
 
@@ -2257,7 +2257,7 @@ unordered_map& operator=(unordered_map&& right);
 *Правильно*\
 Контейнер unordered_map, из которого функция оператора назначает содержимое.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Первая версия копирует все элементы из *правой части* в эту unordered_map.
 
@@ -2310,7 +2310,7 @@ int main( )
 typedef Alloc::pointer pointer;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Этот тип описывает объект, который можно использовать в качестве указателя на элемент управляемой последовательности.
 
@@ -2356,7 +2356,7 @@ int main()
 typedef Alloc::reference reference;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Тип описывает объект, который можно использовать в качестве ссылки на элемент управляемой последовательности.
 
@@ -2407,7 +2407,7 @@ void rehash(size_type nbuckets);
 *нбуккетс*\
 Требуемое число сегментов.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Функция-член изменяет количество контейнеров, чтобы они были как минимум *нбуккетс* и перестраивает хэш-таблицу по мере необходимости.
 
@@ -2480,7 +2480,7 @@ max_load_factor() == 0.1
 size_type size() const;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Функция-член возвращает длину управляемой последовательности.
 
@@ -2547,7 +2547,7 @@ empty() == false
 typedef T2 size_type;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Целочисленный тип без знака описывает объект, который может представлять длину любой управляемой последовательности. Он описан здесь как синоним для типа `T2`, определяемого реализацией.
 
@@ -2588,7 +2588,7 @@ void swap(unordered_map& right);
 *Правильно*\
 Контейнер для замены.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Функция – член меняет местами управляемые последовательности между **`*this`** и *вправо*. Если [unordered_map:: get_allocator](#get_allocator) `() == right.get_allocator()` , он делает это в константном времени, он создает исключение только в результате копирования сохраненного объекта признаков типа `Tr` и не делает недействительными ссылки, указатели или итераторы, обозначающие элементы в двух управляемых последовательностях. В противном случае она выполняет ряд назначений элементов и вызовов конструктора, пропорционально количеству элементов в двух управляемых последовательностях.
 
@@ -2718,7 +2718,7 @@ unordered_map(
 *Интерфейс*\
 Список initializer_list с элементами, которые необходимо скопировать.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Первый конструктор определяет копию последовательности, управляемой `right`. Второй конструктор определяет управляемую пустую последовательность. Третий конструктор добавляет последовательность значений элементов `[first, last)`. Четвертый конструктор задает копию последовательности путем перемещения `right`.
 
@@ -2874,7 +2874,7 @@ int main()
 typedef std::pair<const Key, Ty> value_type;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Тип описывает элемент управляемой последовательности.
 
@@ -2924,6 +2924,4 @@ int main()
 ## <a name="see-also"></a>См. также раздел
 
 [<unordered_map>](../standard-library/unordered-map.md)\
-[Контейнера](./stl-containers.md)\
 [Безопасность потоков в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)

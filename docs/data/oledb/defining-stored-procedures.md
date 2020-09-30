@@ -7,16 +7,16 @@ helpviewer_keywords:
 - stored procedures, defining
 - stored procedures, OLE DB
 ms.assetid: 54949b81-3275-4dd9-96e4-3eda1ed755f2
-ms.openlocfilehash: 9bab086bf6982eae5779d3199cfd2ac2c8efe77f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 47f68bcf5c62aa54cc5ee60de166e1085f5a3fc5
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211008"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500928"
 ---
 # <a name="defining-stored-procedures"></a>Определение хранимых процедур
 
-Перед вызовом хранимой процедуры необходимо сначала определить ее с помощью макроса [DEFINE_COMMAND](../../data/oledb/define-command.md) . При определении команды обопомните параметры с вопросительным знаком (?) в качестве маркера параметра:
+Перед вызовом хранимой процедуры необходимо сначала определить ее с помощью макроса [DEFINE_COMMAND](./macros-and-global-functions-for-ole-db-consumer-templates.md#define_command) . При определении команды обопомните параметры с вопросительным знаком (?) в качестве маркера параметра:
 
 ```cpp
 DEFINE_COMMAND_EX(CMySProcAccessor, _T("{INSERT {name, phone} INTO shippers (?,?)}"))
@@ -35,7 +35,7 @@ BEGIN_PARAM_MAP(CMySProcAccessor)
 END_PARAM_MAP()
 ```
 
-В предыдущем примере хранимая процедура определяется по мере того, как она происходит. Как правило, для эффективного повторного использования кода база данных содержит набор предопределенных хранимых процедур с такими именами, как `Sales by Year` или `dt_adduserobject`. Их определения можно просмотреть с помощью диспетчера SQL Server Enterprise. Их можно вызвать следующим образом (расположение *?* параметры зависят от интерфейса хранимой процедуры):
+В предыдущем примере хранимая процедура определяется по мере того, как она происходит. Как правило, для эффективного повторного использования кода база данных содержит набор предопределенных хранимых процедур с такими именами, как `Sales by Year` или `dt_adduserobject` . Их определения можно просмотреть с помощью диспетчера SQL Server Enterprise. Их можно вызвать следующим образом (расположение *?* параметры зависят от интерфейса хранимой процедуры):
 
 ```cpp
 DEFINE_COMMAND_EX(CMySProcAccessor, _T("{CALL \"Sales by Year\" (?,?) }"))
@@ -59,7 +59,7 @@ HRESULT OpenRowset()
 }
 ```
 
-Также обратите внимание, что хранимую процедуру можно определить с помощью атрибута базы данных [db_command](../../windows/db-command.md) следующим образом:
+Также обратите внимание, что хранимую процедуру можно определить с помощью атрибута базы данных [db_command](../../windows/attributes/db-command.md) следующим образом:
 
 ```cpp
 db_command("{ ? = CALL dbo.dt_adduserobject }")

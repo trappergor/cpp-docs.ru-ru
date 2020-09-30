@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: 01b1f4a1d021dee6d1d7afbf55bbd13211af247d
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: c729fa183a03860de012e64d110f3b3ac7e7e8d0
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686604"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503666"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Пошаговое руководство. создание традиционного классического приложения Windows (C++)
 
@@ -141,7 +141,7 @@ API Windows (также известный как API Win32, Windows Desktop API
    Сведения о параметрах и возвращаемом значении этой функции см. в разделе [WinMain Entry Point](/windows/win32/api/winbase/nf-winbase-winmain).
 
    > [!NOTE]
-   > Что такое дополнительные слова, такие как, или `CALLBACK` `HINSTANCE` , или `_In_` ? Традиционные API Windows часто используют определения типов и макросов препроцессора для абстракции некоторых сведений о типах и кода для конкретной платформы, таких как соглашения о вызовах, **`__declspec`** объявления и директивы pragma компилятора. В Visual Studio можно использовать функцию " [быстрые сведения](/visualstudio/ide/using-intellisense#quick-info) " IntelliSense, чтобы увидеть, что определяются этими определениями и макросами. Наведите указатель мыши на интересующую слово или выберите его и нажмите клавиши **CTRL** + **K**, **CTRL** + **I** для небольшого всплывающего окна, содержащего определение. Дополнительные сведения см. в разделе [Using IntelliSense](/visualstudio/ide/using-intellisense). Параметры и возвращаемые типы часто используют *аннотации SAL* , чтобы помочь в перехвате ошибок программирования. Дополнительные сведения см. [в разделе Использование аннотаций SAL для сокращения числа дефектов кода C/C++](/cpp/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
+   > Что такое дополнительные слова, такие как, или `CALLBACK` `HINSTANCE` , или `_In_` ? Традиционные API Windows часто используют определения типов и макросов препроцессора для абстракции некоторых сведений о типах и кода для конкретной платформы, таких как соглашения о вызовах, **`__declspec`** объявления и директивы pragma компилятора. В Visual Studio можно использовать функцию " [быстрые сведения](/visualstudio/ide/using-intellisense#quick-info) " IntelliSense, чтобы увидеть, что определяются этими определениями и макросами. Наведите указатель мыши на интересующую слово или выберите его и нажмите клавиши **CTRL** + **K**, **CTRL** + **I** для небольшого всплывающего окна, содержащего определение. Дополнительные сведения см. в разделе [Using IntelliSense](/visualstudio/ide/using-intellisense). Параметры и возвращаемые типы часто используют *аннотации SAL* , чтобы помочь в перехвате ошибок программирования. Дополнительные сведения см. [в разделе Использование аннотаций SAL для сокращения числа дефектов кода C/C++](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md).
 
 1. Для настольных программ Windows требуется &lt;> Windows. h. &lt;в файле Tchar. h> определен `TCHAR` макрос, который в конечном итоге разрешается в, **`wchar_t`** Если в проекте ОПРЕДЕЛЕН символ Юникода, в противном случае — значение **`char`** .  Если вы всегда создаете Юникод с включенным параметром UNICODE, то не нужно использовать TCHAR и может быть просто использоваться **`wchar_t`** напрямую.
 
@@ -590,6 +590,6 @@ API Windows (также известный как API Win32, Windows Desktop API
 
 Поздравляем! Вы выполнили это пошаговое руководство и создали традиционное классическое приложение для Windows.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Классические приложения Windows](../windows/windows-desktop-applications-cpp.md)
+[Классические приложения Windows](./desktop-applications-visual-cpp.md)

@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: e8241cfe-5faf-48f8-9de3-241203de020b
-ms.openlocfilehash: fff4146681e31f0f1fea9fbaa559de7c722740d2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 65add1fe0d47253cd8d7ae7a273286d712ce9db2
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211462"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500654"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>Создание объекта-получателя без помощи мастера
 
@@ -17,7 +17,7 @@ ms.locfileid: "80211462"
 
 Чтобы добавить поддержку потребителя OLE DB без использования **Мастера потребителя ATL OLE DB** выполните приведенные далее действия.
 
-- В файле *PCH. h* добавьте следующие `#include` операторы:
+- В файле *PCH. h* добавьте следующие `#include` инструкции:
 
     ```cpp
     #include <atlbase.h>
@@ -46,7 +46,7 @@ ms.locfileid: "80211462"
     HRESULT hr = CoInitialize(NULL);
     ```
 
-- Вызовите команду [CDataSource::Open](../../data/oledb/cdatasource-open.md) или один из ее вариантов.
+- Вызовите команду [CDataSource::Open](./cdatasource-class.md#open) или один из ее вариантов.
 
 - Откройте подключение к источнику данных, откройте сеанс, откройте и инициализируйте набор строк (если вы видите команду, также выполните ее).
 
@@ -68,7 +68,7 @@ ms.locfileid: "80211462"
     ds.Close();
     ```
 
-   Если вы используете команды, может потребоваться вызвать `ReleaseCommand` после `Close`. Пример кода в [CCommand::Close](../../data/oledb/ccommand-close.md) показывает способ вызова `Close` и `ReleaseCommand`.
+   Если вы используете команды, может потребоваться вызвать `ReleaseCommand` после `Close`. Пример кода в [CCommand::Close](./ccommand-class.md#close) показывает способ вызова `Close` и `ReleaseCommand`.
 
 - Вызовите `CoUnInitialize` для отмены инициализации COM. Эту команду нужно вызывать в основном коде.
 
@@ -78,4 +78,4 @@ ms.locfileid: "80211462"
 
 ## <a name="see-also"></a>См. также раздел
 
-[Создание объекта-получателя OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)
+[Создание OLE DB потребителя](../../data/oledb/creating-an-ole-db-consumer.md)

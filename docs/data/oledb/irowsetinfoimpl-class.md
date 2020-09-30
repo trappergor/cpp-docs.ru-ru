@@ -25,12 +25,12 @@ helpviewer_keywords:
 - GetReferencedRowset method
 - GetSpecification method
 ms.assetid: 9c654155-7727-464e-bd31-143e68391a47
-ms.openlocfilehash: dfa3873917d5215d0069e504e0556c31744f4334
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7ceaf30318c176b13cb6f81c8401501863b988a4
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840392"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504044"
 ---
 # <a name="irowsetinfoimpl-class"></a>Класс IRowsetInfoImpl
 
@@ -61,7 +61,7 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
 
 ### <a name="interface-methods"></a>Методы интерфейса
 
-| Имя | Описание |
+| Название | Описание |
 |-|-|
 |[GetProperties](#getproperties)|Возвращает текущие значения всех свойств, которые поддерживаются набором строк.|
 |[жетреференцедровсет](#getreferencedrowset)|Возвращает указатель интерфейса на набор строк, к которому применяется закладка.|
@@ -69,7 +69,7 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
 
 ## <a name="remarks"></a>Remarks
 
-Обязательный интерфейс для наборов строк. Этот класс реализует свойства набора строк с помощью [схемы набора свойств](../../data/oledb/begin-propset-map.md) , определенной в классе команд. Несмотря на то, что класс набора строк использует наборы свойств класса Command, набор строк предоставляется со своей собственной копией свойств времени выполнения, когда он создается объектом команды или сеанса.
+Обязательный интерфейс для наборов строк. Этот класс реализует свойства набора строк с помощью [схемы набора свойств](./macros-for-ole-db-provider-templates.md#begin_propset_map) , определенной в классе команд. Несмотря на то, что класс набора строк использует наборы свойств класса Command, набор строк предоставляется со своей собственной копией свойств времени выполнения, когда он создается объектом команды или сеанса.
 
 ## <a name="irowsetinfoimplgetproperties"></a><a name="getproperties"></a> Свойства IRowsetInfoImpl:: Properties
 

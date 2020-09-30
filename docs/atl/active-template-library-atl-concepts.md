@@ -4,20 +4,20 @@ ms.date: 05/06/2019
 helpviewer_keywords:
 - ATL, about ATL
 ms.assetid: a3960991-4d76-4da5-9568-3fa7fde53ff4
-ms.openlocfilehash: cc96b5ed931713ca64a0582ca1cc18a8526ea8af
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c87eedff5b6ce7d906c05ac0678425af575f0af8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616687"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504276"
 ---
 # <a name="active-template-library-atl-concepts"></a>Основные понятия активной библиотеки шаблонных классов (ATL)
 
 Библиотека шаблонных классов ATL — это набор классов C++, которые позволяют создавать небольшие и быстрые объекты модели COM. Он имеет специальную поддержку для основных компонентов модели COM, включая стандартные реализации, сдвоенные интерфейсы, стандартные интерфейсы перечислителя COM, точки подключения, перемещаемые интерфейсы и элементы управления ActiveX.
 
-Если вы много работаете с ATL, следует узнать больше о модели COM и атрибутах .NET, которые предназначены для упрощения программирования COM. Дополнительные сведения см. в разделе [Атрибутивное программирование](../windows/attributed-programming-concepts.md). (Атрибуты COM и .NET не следует путать с \[\[attribute]] — функцией в стандарте C++.)
+Если вы много работаете с ATL, следует узнать больше о модели COM и атрибутах .NET, которые предназначены для упрощения программирования COM. Дополнительные сведения см. в разделе [Атрибутивное программирование](../windows/attributes/cpp-attributes-com-net.md). (Атрибуты COM и .NET не следует путать с \[\[attribute]] — функцией в стандарте C++.)
 
-## <a name="in-this-section"></a>В этом разделе
+## <a name="in-this-section"></a>в этом разделе
 
 [Введение в модель COM и ATL](introduction-to-com-and-atl.md)<br/>
 Объясняет основные понятия модели COM. В этой статье также приводится краткое описание библиотеки ATL и вариантов ее использования.
@@ -70,7 +70,7 @@ ms.locfileid: "84616687"
 [Компонент реестра ATL (регистратор)](atl-registry-component-registrar.md)<br/>
 Описывает синтаксис и заменяемые параметры в скрипте ATL. Также описывает настройку статической ссылки на регистратор.
 
-[Программирование с использованием ATL и кода среды выполнения C](programming-with-atl-and-c-run-time-code.md)<br/>
+[Программирование с помощью ATL и кода времени выполнения C](programming-with-atl-and-c-run-time-code.md)<br/>
 Описывает преимущества статического или динамического связывания в библиотеке среды выполнения C (CRT).
 
 [Программирование с использованием CComBSTR](programming-with-ccombstr-atl.md)<br/>
@@ -82,12 +82,12 @@ ms.locfileid: "84616687"
 [Справочник по служебным программам](atl-utilities-reference.md)<br/>
 Предоставляет код для управления путями и URL-адресами в форме [CPathT](reference/cpatht-class.md) и [CUrl](reference/curl-class.md). Пул потоков [CThreadPool](reference/cthreadpool-class.md) можно использовать в собственных приложениях. Этот код можно найти в файлах atlpath.h и atlutil.h.
 
-## <a name="related-sections"></a>Связанные разделы
+## <a name="related-sections"></a>См. также
 
 [Учебник по ATL](active-template-library-atl-tutorial.md)<br/>
 Описывает создание элементов управления и демонстрирует некоторые основные сведения об ATL в процессе.
 
-[Примеры библиотек ATL](../overview/visual-cpp-samples.md)<br/>
+[Примеры ATL](../overview/visual-cpp-samples.md)<br/>
 Предоставляет описания и ссылки на примеры программ ATL.
 
 [Создание проекта ATL](reference/creating-an-atl-project.md)<br/>
@@ -96,7 +96,7 @@ ms.locfileid: "84616687"
 [Мастер элементов управления ATL](reference/atl-control-wizard.md)<br/>
 Обсуждает способ добавления классов.
 
-[Атрибутивное программирование](../windows/attributed-programming-concepts.md)<br/>
+[Атрибутивное программирование](../windows/attributes/cpp-attributes-com-net.md)<br/>
 Общие сведения об использовании атрибутов для упрощения программирования с моделью COM, а также ссылки на более подробные разделы.
 
 [Общие сведения о классе ATL](atl-class-overview.md)<br/>

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -PROFILE linker option
 - /PROFILE linker option
 ms.assetid: e676baa1-5063-47a3-a357-ba0d1f0d1699
-ms.openlocfilehash: cf07154c6b681e2ad30a85a62a0db996c3f3d911
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 07952c979fd66291b1744521d83e4556f010d297
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078310"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500786"
 ---
 # <a name="profile-performance-tools-profiler"></a>/PROFILE (профилировщик средств обеспечения производительности)
 
@@ -24,7 +24,7 @@ ms.locfileid: "80078310"
 /PROFILE
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 /PROFILE подразумевает следующие параметры компоновщика:
 
@@ -38,7 +38,7 @@ ms.locfileid: "80078310"
 
 /PROFILE заставляет компоновщик создать раздел перемещения в образе программы.  Раздел перемещения позволяет профилировщику преобразовать образ программы для получения данных профиля.
 
-**/Profile** доступен только в версиях Enterprise (коллективная разработка).  Дополнительные сведения о экспресс-анализе см. в разделе [анализ кода дляC++ C/обзор](/cpp/code-quality/code-analysis-for-c-cpp-overview).
+**/Profile** доступен только в версиях Enterprise (коллективная разработка).  Дополнительные сведения о экспресс-анализе см. в разделе [анализ кода для C/C++ обзор](../../code-quality/code-analysis-for-c-cpp-overview.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
 
@@ -58,13 +58,13 @@ ms.locfileid: "80078310"
 
 ### <a name="to-set-this-linker-option-within-visual-studio-cmake-project"></a>Установка этого параметра компоновщика в проекте CMak в Visual Studio
 
-В проекте **CMAK** нет **страниц свойств**, параметры компоновщика можно задать с помощью Интернете CMakeLists. txt.
+В проекте **CMAK** нет **страниц свойств**, параметры компоновщика можно задать, Интернете CMakeLists.txt.
 
-1. Откройте CMakeLists. txt в корневом каталоге проекта.
+1. Откройте CMakeLists.txt в корневом каталоге проекта.
 
 1. Добавьте код ниже. Дополнительные сведения см. в разделе [Справочники по CMAK](https://cmake.org/cmake/help/v3.0/command/set_target_properties.html) .
 
-1. Постройте решение заново.
+1. Перестройте решение.
 
 ```
 SET_TARGET_PROPERTIES(${PROJECT_NAME} PROPERTIES LINK_FLAGS "/PROFILE")

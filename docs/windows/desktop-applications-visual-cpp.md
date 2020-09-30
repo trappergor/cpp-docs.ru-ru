@@ -3,12 +3,12 @@ title: Классические приложения (Visual C++)
 ms.date: 07/28/2019
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
 ms.topic: overview
-ms.openlocfilehash: f8e3dd386aee835ff383ba7567a5c320f206476e
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 26448ca65b3162e2adfe6988dfd8c9e85432429c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404965"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504445"
 ---
 # <a name="desktop-applications-visual-c"></a>Классические приложения (Visual C++)
 
@@ -38,13 +38,13 @@ ms.locfileid: "86404965"
 
 |Заголовок|Описание|
 |-----------|-----------------|
-|[Консольные приложения Windows (C++)](console-applications-in-visual-cpp.md)|Содержит сведения о консольных приложениях. Консольное приложение Win32 (или Win64) не имеет собственного окна и цикла обработки сообщений. Оно выполняется в окне консоли, а ввод и вывод обрабатываются через командную строку.|
+|[Консольные приложения Windows (C++)](./overview-of-windows-programming-in-cpp.md)|Содержит сведения о консольных приложениях. Консольное приложение Win32 (или Win64) не имеет собственного окна и цикла обработки сообщений. Оно выполняется в окне консоли, а ввод и вывод обрабатываются через командную строку.|
 |[Пошаговое руководство. Создание классических приложений Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Создание простого классического приложения Windows.|
-|[Создание пустого классического приложения Windows](creating-an-empty-windows-desktop-application.md)|Создание проекта для настольных систем Windows, не имеющего файлов по умолчанию.|
-|[Добавление файлов в пустые приложения Win32](adding-files-to-an-empty-win32-applications.md)|Добавление файлов в пустой проект.|
+|[Создание пустого классического приложения Windows](./overview-of-windows-programming-in-cpp.md)|Создание проекта для настольных систем Windows, не имеющего файлов по умолчанию.|
+|[Добавление файлов в пустые приложения Win32](./overview-of-windows-programming-in-cpp.md)|Добавление файлов в пустой проект.|
 |[Работа с файлами ресурсов](working-with-resource-files.md)|Добавление изображений, значков, таблиц строк и других ресурсов в классическое приложение.|
 |[Ресурсы для создания игры с использованием DirectX (C++)](resources-for-creating-a-game-using-directx.md)|Ссылки на материалы по созданию игр на C++.|
-|[Пошаговое руководство. Создание и использование статической библиотеки](walkthrough-creating-and-using-a-static-library-cpp.md)|Создание двоичного файла. lib.|
+|[Пошаговое руководство. Создание и использование статической библиотеки](../build/walkthrough-creating-and-using-a-static-library-cpp.md)|Создание двоичного файла. lib.|
 |[Как использовать пакет SDK для Windows 10 в классическом приложении Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Содержит инструкции по настройке проекта для построения с помощью пакета SDK для Windows 10.|
 
 ## <a name="related-articles"></a>Связанные статьи

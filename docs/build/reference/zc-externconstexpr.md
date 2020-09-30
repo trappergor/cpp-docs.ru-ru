@@ -7,14 +7,14 @@ helpviewer_keywords:
 - -Zc:externConstexpr compiler option (C++)
 - extern constexpr variables (C++)
 ms.assetid: 4da5e33a-2e4d-4ed2-8616-bd8f43265c27
-ms.openlocfilehash: 7546ab6d81137a2abb053cd18f0d5d74913c3b00
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: db5a8892bcc11538c3ff883a0e9a3a27db0ee14f
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211909"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502808"
 ---
-# <a name="zcexternconstexpr-enable-extern-constexpr-variables"></a>`/Zc:externConstexpr`(Включить внешние переменные constexpr)
+# <a name="zcexternconstexpr-enable-extern-constexpr-variables"></a>`/Zc:externConstexpr` (Включить внешние переменные constexpr)
 
 **`/Zc:externConstexpr`** Параметр компилятора указывает компилятору на соответствие стандарту C++ и разрешать внешнюю компоновку для **`constexpr`** переменных. По умолчанию Visual Studio всегда предоставляет **`constexpr`** переменную внутреннюю компоновку, даже если указано **`extern`** ключевое слово.
 
@@ -38,5 +38,5 @@ ms.locfileid: "87211909"
 
 ## <a name="see-also"></a>См. также раздел
 
-[`/Zc`Соответствия](zc-conformance.md)<br/>
-[`auto`This](../../cpp/auto-keyword.md)
+[`/Zc` Соответствия](zc-conformance.md)<br/>
+[Ключевое слово `auto`](../../cpp/auto-cpp.md)

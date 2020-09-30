@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC, adding classes from type libraries
 - type libraries, adding MFC classes from
 ms.assetid: aba40476-3cfb-47af-990e-ae2e9e0d79cf
-ms.openlocfilehash: 4e8d0f74a73048f172a8030d4bfb081c803e7170
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 45bad00155cc1587980e6f3b25843a7a22e7e754
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86405121"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503037"
 ---
 # <a name="adding-an-mfc-class-from-a-type-library"></a>Добавление класса MFC из библиотеки типов
 
@@ -28,13 +28,13 @@ ms.locfileid: "86405121"
 
 1. В контекстном меню выберите команду **Добавить**, а затем — **Добавить класс**.
 
-1. В диалоговом окне [Добавление класса](../../ide/add-class-dialog-box.md) в области Шаблоны щелкните **класс MFC из библиотеки типов**и нажмите кнопку **Открыть** , чтобы открыть [Мастер добавления класса из typelib](../../mfc/reference/add-class-from-typelib-wizard.md).
+1. В диалоговом окне [Добавление класса](../../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) в области Шаблоны щелкните **класс MFC из библиотеки типов**и нажмите кнопку **Открыть** , чтобы открыть [Мастер добавления класса из typelib](../../mfc/reference/add-class-from-typelib-wizard.md).
 
 В мастере можно добавить более одного класса в библиотеку типов. Аналогичным образом можно добавлять классы из нескольких библиотек типов в одном сеансе мастера.
 
-Мастер создает класс MFC, производный от [COleDispatchDriver](../../mfc/reference/coledispatchdriver-class.md), для каждого интерфейса, добавляемого из выбранной библиотеки типов. `COleDispatchDriver`реализует клиентскую сторону OLE Automation.
+Мастер создает класс MFC, производный от [COleDispatchDriver](../../mfc/reference/coledispatchdriver-class.md), для каждого интерфейса, добавляемого из выбранной библиотеки типов. `COleDispatchDriver` реализует клиентскую сторону OLE Automation.
 
 ## <a name="see-also"></a>См. также раздел
 
-[Automation Clients](../../mfc/automation-clients.md)<br/>
-[Клиенты автоматизации. Использование библиотек типов](../../mfc/automation-clients-using-type-libraries.md)
+[Клиенты автоматизации](../../mfc/automation-clients.md)<br/>
+[Клиенты автоматизации: использование библиотек типов](../../mfc/automation-clients-using-type-libraries.md)

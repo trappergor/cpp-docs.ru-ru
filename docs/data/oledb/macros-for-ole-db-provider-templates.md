@@ -50,12 +50,12 @@ helpviewer_keywords:
 - END_SCHEMA_MAP macro
 - SCHEMA_ENTRY macro
 ms.assetid: 909482c5-64ab-4e52-84a9-1c07091db183
-ms.openlocfilehash: 53ea92c2eece31829a7554c0f9accf2e56d727a9
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: e72204102bfa47a9dd162499030a38c07bbfe46c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840730"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504014"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>Макросы для шаблонов поставщика OLE DB
 
@@ -63,7 +63,7 @@ ms.locfileid: "88840730"
 
 ## <a name="property-set-map-macros"></a>Макросы для задания схемы набора свойств
 
-| Имя | Описание |
+| Название | Описание |
 |-|-|
 |[BEGIN_PROPERTY_SET](#begin_property_set)|Помечает начало набора свойств.|
 |[BEGIN_PROPERTY_SET_EX](#begin_property_set_ex)|Помечает начало набора свойств.|
@@ -77,7 +77,7 @@ ms.locfileid: "88840730"
 
 ## <a name="column-map-macros"></a>Макросы таблицы соответствия столбцов
 
-| Имя | Описание |
+| Название | Описание |
 |-|-|
 |[BEGIN_PROVIDER_COLUMN_MAP](#begin_provider_column_map)|Помечает начало записей схемы столбца поставщика.|
 |[END_PROVIDER_COLUMN_MAP](#end_provider_column_map)|Помечает конец записей схемы столбца поставщика.|
@@ -91,7 +91,7 @@ ms.locfileid: "88840730"
 
 ## <a name="schema-rowset-macros"></a>Макросы наборов строк схемы
 
-| Имя | Описание |
+| Название | Описание |
 |-|-|
 |[BEGIN_SCHEMA_MAP](#begin_schema_map)|Помечает начало гиперкарты схемы.|
 |[END_SCHEMA_MAP](#end_schema_map)|Помечает конец гиперкарты схемы.|
@@ -118,7 +118,7 @@ BEGIN_PROPERTY_SET(guid)
 
 #### <a name="example"></a>Пример
 
-См. раздел [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+См. раздел [BEGIN_PROPSET_MAP](#begin_propset_map).
 
 ### <a name="begin_property_set_ex"></a><a name="begin_property_set_ex"></a> BEGIN_PROPERTY_SET_EX
 
@@ -140,7 +140,7 @@ BEGIN_PROPERTY_SET_EX(guid, flags)
 
 #### <a name="example"></a>Пример
 
-См. раздел [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+См. раздел [BEGIN_PROPSET_MAP](#begin_propset_map).
 
 ### <a name="begin_propset_map"></a><a name="begin_propset_map"></a> BEGIN_PROPSET_MAP
 
@@ -208,7 +208,7 @@ END_PROPERTY_SET(guid)
 
 #### <a name="example"></a>Пример
 
-См. раздел [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+См. раздел [BEGIN_PROPSET_MAP](#begin_propset_map).
 
 ### <a name="end_propset_map"></a><a name="end_propset_map"></a> END_PROPSET_MAP
 
@@ -222,7 +222,7 @@ END_PROPSET_MAP()
 
 #### <a name="example"></a>Пример
 
-См. раздел [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+См. раздел [BEGIN_PROPSET_MAP](#begin_propset_map).
 
 ### <a name="property_info_entry"></a><a name="property_info_entry"></a> PROPERTY_INFO_ENTRY
 
@@ -241,11 +241,11 @@ PROPERTY_INFO_ENTRY(dwPropID)
 
 #### <a name="remarks"></a>Remarks
 
-Этот макрос задает в качестве значения свойства типа `DWORD` значение по умолчанию, определенное в ATLDB.H. Чтобы задать свойству нужное вам значение, используйте [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md). Чтобы задать `VARTYPE` и [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342(v=vs.85)) для свойства одновременно, используйте [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).
+Этот макрос задает в качестве значения свойства типа `DWORD` значение по умолчанию, определенное в ATLDB.H. Чтобы задать свойству нужное вам значение, используйте [PROPERTY_INFO_ENTRY_VALUE](#property_info_entry_value). Чтобы задать `VARTYPE` и [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342(v=vs.85)) для свойства одновременно, используйте [PROPERTY_INFO_ENTRY_EX](#property_info_entry_ex).
 
 #### <a name="example"></a>Пример
 
-См. раздел [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+См. раздел [BEGIN_PROPSET_MAP](#begin_propset_map).
 
 ### <a name="property_info_entry_ex"></a><a name="property_info_entry_ex"></a> PROPERTY_INFO_ENTRY_EX
 
@@ -276,11 +276,11 @@ DBPROPOPTIONS_REQUIRED или DBPROPOPTIONS_SETIFCHEAP. Как правило, �
 
 #### <a name="remarks"></a>Remarks
 
-С помощью этого макроса можно напрямую указать значение свойства типа `DWORD` , а также параметры и флаги. Чтобы задать свойству значение по умолчанию, определенное в ATLDB. H, используйте [PROPERTY_INFO_ENTRY](../../data/oledb/property-info-entry.md). Чтобы задать свойству значение по своему усмотрению без параметров или флагов, используйте [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md).
+С помощью этого макроса можно напрямую указать значение свойства типа `DWORD` , а также параметры и флаги. Чтобы задать свойству значение по умолчанию, определенное в ATLDB. H, используйте [PROPERTY_INFO_ENTRY](#property_info_entry). Чтобы задать свойству значение по своему усмотрению без параметров или флагов, используйте [PROPERTY_INFO_ENTRY_VALUE](#property_info_entry_value).
 
 #### <a name="example"></a>Пример
 
-См. раздел [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+См. раздел [BEGIN_PROPSET_MAP](#begin_propset_map).
 
 ### <a name="property_info_entry_value"></a><a name="property_info_entry_value"></a> PROPERTY_INFO_ENTRY_VALUE
 
@@ -302,11 +302,11 @@ PROPERTY_INFO_ENTRY_VALUE(dwPropID, value)
 
 #### <a name="remarks"></a>Remarks
 
-С помощью этого макроса можно напрямую указать значение свойства типа `DWORD` . Чтобы задать для свойства значение по умолчанию, определенное в ATLDB. H, используйте [PROPERTY_INFO_ENTRY](../../data/oledb/property-info-entry.md). Чтобы задать значение, флаги и параметры для свойства, используйте [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).
+С помощью этого макроса можно напрямую указать значение свойства типа `DWORD` . Чтобы задать для свойства значение по умолчанию, определенное в ATLDB. H, используйте [PROPERTY_INFO_ENTRY](#property_info_entry). Чтобы задать значение, флаги и параметры для свойства, используйте [PROPERTY_INFO_ENTRY_EX](#property_info_entry_ex).
 
 #### <a name="example"></a>Пример
 
-См. раздел [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+См. раздел [BEGIN_PROPSET_MAP](#begin_propset_map).
 
 ### <a name="begin_provider_column_map"></a><a name="begin_provider_column_map"></a> BEGIN_PROVIDER_COLUMN_MAP
 
@@ -341,7 +341,7 @@ END_PROVIDER_COLUMN_MAP()
 
 #### <a name="example"></a>Пример
 
-См. [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).
+См. [BEGIN_PROVIDER_COLUMN_MAP](#begin_provider_column_map).
 
 ### <a name="provider_column_entry"></a><a name="provider_column_entry"></a> PROVIDER_COLUMN_ENTRY
 
@@ -358,7 +358,7 @@ PROVIDER_COLUMN_ENTRY (name, ordinal, member)
 *name*<br/>
 окне Имя столбца.
 
-*ordinal*<br/>
+*порядковый номер*<br/>
 окне Номер столбца. Если столбец не является столбцом закладки, то номер столбца не должен быть равен 0.
 
 *участниками*<br/>
@@ -379,7 +379,7 @@ PROVIDER_COLUMN_ENTRY_FIXED(name, ordinal, dbtype, member)
 *name*<br/>
 окне Имя столбца.
 
-*ordinal*<br/>
+*порядковый номер*<br/>
 окне Номер столбца. Если столбец не является столбцом закладки, то номер столбца не должен быть равен 0.
 
 *типом*<br/>
@@ -394,7 +394,7 @@ PROVIDER_COLUMN_ENTRY_FIXED(name, ordinal, dbtype, member)
 
 #### <a name="example"></a>Пример
 
-См. [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).
+См. [BEGIN_PROVIDER_COLUMN_MAP](#begin_provider_column_map).
 
 ### <a name="provider_column_entry_gn"></a><a name="provider_column_entry_gn"></a> PROVIDER_COLUMN_ENTRY_GN
 
@@ -411,7 +411,7 @@ PROVIDER_COLUMN_ENTRY_GN (name, ordinal, flags, colSize, dbtype, precision, scal
 *name*<br/>
 окне Имя столбца.
 
-*ordinal*<br/>
+*порядковый номер*<br/>
 окне Номер столбца. Если столбец не является столбцом закладки, то номер столбца не должен быть равен 0.
 
 *flags*<br/>
@@ -451,7 +451,7 @@ PROVIDER_COLUMN_ENTRY_LENGTH(name, ordinal, size, member)
 *name*<br/>
 окне Имя столбца.
 
-*ordinal*<br/>
+*порядковый номер*<br/>
 окне Номер столбца. Если столбец не является столбцом закладки, то номер столбца не должен быть равен 0.
 
 *size*<br/>
@@ -466,7 +466,7 @@ PROVIDER_COLUMN_ENTRY_LENGTH(name, ordinal, size, member)
 
 #### <a name="example"></a>Пример
 
-См. [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).
+См. [BEGIN_PROVIDER_COLUMN_MAP](#begin_provider_column_map).
 
 ### <a name="provider_column_entry_str"></a><a name="provider_column_entry_str"></a> PROVIDER_COLUMN_ENTRY_STR
 
@@ -483,7 +483,7 @@ PROVIDER_COLUMN_ENTRY_STR(name, ordinal, member)
 *name*<br/>
 окне Имя столбца.
 
-*ordinal*<br/>
+*порядковый номер*<br/>
 окне Номер столбца. Если столбец не является столбцом закладки, то номер столбца не должен быть равен 0.
 
 *участниками*<br/>
@@ -495,7 +495,7 @@ PROVIDER_COLUMN_ENTRY_STR(name, ordinal, member)
 
 #### <a name="example"></a>Пример
 
-См. [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).
+См. [BEGIN_PROVIDER_COLUMN_MAP](#begin_provider_column_map).
 
 ### <a name="provider_column_entry_type_length"></a><a name="provider_column_entry_type_length"></a> PROVIDER_COLUMN_ENTRY_TYPE_LENGTH
 
@@ -512,7 +512,7 @@ PROVIDER_COLUMN_ENTRY_TYPE_LENGTH(name, ordinal, dbtype, size, member)
 *name*<br/>
 окне Имя столбца.
 
-*ordinal*<br/>
+*порядковый номер*<br/>
 окне Номер столбца. Если столбец не является столбцом закладки, то номер столбца не должен быть равен 0.
 
 *типом*<br/>
@@ -526,7 +526,7 @@ PROVIDER_COLUMN_ENTRY_TYPE_LENGTH(name, ordinal, dbtype, size, member)
 
 #### <a name="remarks"></a>Remarks
 
-Аналогично [PROVIDER_COLUMN_ENTRY_LENGTH](../../data/oledb/provider-column-entry-length.md) , но также позволяет указать тип данных столбца, а также размер.
+Аналогично [PROVIDER_COLUMN_ENTRY_LENGTH](#provider_column_entry_length) , но также позволяет указать тип данных столбца, а также размер.
 
 ### <a name="provider_column_entry_wstr"></a><a name="provider_column_entry_wstr"></a> PROVIDER_COLUMN_ENTRY_WSTR
 
@@ -543,7 +543,7 @@ PROVIDER_COLUMN_ENTRY_WSTR(name, ordinal, member)
 *name*<br/>
 окне Имя столбца.
 
-*ordinal*<br/>
+*порядковый номер*<br/>
 окне Номер столбца. Если столбец не является столбцом закладки, то номер столбца не должен быть равен 0.
 
 *участниками*<br/>

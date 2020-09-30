@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
-ms.openlocfilehash: 805fffcc6cafe92df91af6b01bb53240a0d70f51
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: af1ca2d63abcb112bfe1e7d7538dbf70fb817ae5
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230497"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503880"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>Элементы управления ActiveX в MFC. Добавление пользовательских свойств
 
@@ -40,7 +40,7 @@ ms.locfileid: "87230497"
 
    Параметризованная реализация поддерживается мастером добавления свойств. Параметризованное свойство (иногда называемое массивом свойств) можно использовать для доступа к набору значений через одно свойство элемента управления. Для этой реализации указан DISP_PROPERTY_PARAMный макрос записи диспетчеризации. Дополнительные сведения о реализации этого типа см. в разделе [Реализация параметризованного свойства](mfc-activex-controls-advanced-topics.md) статьи элементы управления ActiveX: дополнительные разделы.
 
-## <a name="using-the-add-property-wizard-to-add-a-custom-property"></a><a name="_core_using_classwizard_to_add_a_custom_property"></a>Добавление пользовательского свойства с помощью мастера добавления свойств
+## <a name="using-the-add-property-wizard-to-add-a-custom-property"></a><a name="_core_using_classwizard_to_add_a_custom_property"></a> Добавление пользовательского свойства с помощью мастера добавления свойств
 
 В следующей процедуре показано добавление пользовательского свойства Цирклеоффсет, использующего реализацию методов Get/Set. Пользовательское свойство Цирклеоффсет позволяет пользователю элемента управления сдвигать окружность от центра ограничивающего прямоугольника элемента управления. Процедура добавления пользовательских свойств с реализацией, отличной от методов Get/Set, очень похожа.
 
@@ -56,7 +56,7 @@ ms.locfileid: "87230497"
 
 1. В контекстном меню выберите **Добавить** , а затем — **Добавить свойство**.
 
-   Откроется [Мастер добавления свойств](../ide/names-add-property-wizard.md).
+   Откроется [Мастер добавления свойств](../ide/adding-a-property-visual-cpp.md#names-add-property-wizard).
 
 1. В поле **имя свойства** введите *Цирклеоффсет*.
 
@@ -68,7 +68,7 @@ ms.locfileid: "87230497"
 
 1. Нажмите кнопку **Готово**.
 
-## <a name="add-property-wizard-changes-for-custom-properties"></a><a name="_core_classwizard_changes_for_custom_properties"></a>Изменение мастера добавления свойств для пользовательских свойств
+## <a name="add-property-wizard-changes-for-custom-properties"></a><a name="_core_classwizard_changes_for_custom_properties"></a> Изменение мастера добавления свойств для пользовательских свойств
 
 При добавлении пользовательского свойства Цирклеоффсет мастер добавления свойств вносит изменения в заголовок (. H) и реализацию (. CPP) файлов класса Control.
 

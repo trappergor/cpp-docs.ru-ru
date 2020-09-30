@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - ^ handle to object [C++]
 ms.assetid: 70c411e6-be57-4468-a944-6ea7be89f392
-ms.openlocfilehash: f09fd5f112e3538fa2d7fb04c755031d413de9b8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c8927ef0e34f2c2b12722d453e0dde6f7357eb33
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225154"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503135"
 ---
 # <a name="handle-to-object-operator---ccli-and-ccx"></a>Оператор дескриптора объекта (^) (C++/CLI и C++/CX)
 
-*Декларатор Handle* ( `^` , произносится как "Hat") изменяет [спецификатор](../cpp/overview-of-declarators.md) типа так, что объявленный объект должен быть автоматически удален, когда система определит, что объект больше недоступен.
+*Декларатор Handle* ( `^` , произносится как "Hat") изменяет [спецификатор](../cpp/declarations-and-definitions-cpp.md) типа так, что объявленный объект должен быть автоматически удален, когда система определит, что объект больше недоступен.
 
 ## <a name="accessing-the-declared-object"></a>Доступ к объявленному объекту
 
@@ -221,7 +221,7 @@ int main() {
 
 Параметр компилятора: `/clr`
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также раздел
 
 [Расширения компонентов для .NET и UWP](component-extensions-for-runtime-platforms.md)<br/>
 [Отслеживаемый оператор ссылки](tracking-reference-operator-cpp-component-extensions.md)

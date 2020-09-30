@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_column attribute
 ms.assetid: 58da4afc-f69c-4ae6-af9a-3f9515f56081
-ms.openlocfilehash: 2828a33a31d806c04cfce76a3156674778efbe6e
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 05f734a9b083d93f2501172d9455b7889c65a5a6
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686487"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503549"
 ---
 # <a name="db_column"></a>db_column
 
@@ -50,7 +50,7 @@ ms.locfileid: "90686487"
 
 ## <a name="remarks"></a>Remarks
 
-**db_column** привязывает указанный столбец таблицы к переменной в наборе строк. Он разделяет данные элементов, которые могут участвовать в `IAccessor` привязке на основе OLE DB. Этот атрибут настраивает карту столбцов, обычно определенную с помощью OLE DB пользовательских макросов [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md), [END_COLUMN_MAP](../../data/oledb/end-column-map.md)и [COLUMN_ENTRY](../../data/oledb/column-entry.md). Они управляют [структурой OLE DB DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) для привязки указанного столбца. Каждый элемент, помеченный атрибутом **db_column** , будет занимать одну запись в сопоставлении столбцов в форме записи столбца. Таким образом, этот атрибут вызывается в том случае, если необходимо разместить карту столбцов, то есть в классе Command или Table.
+**db_column** привязывает указанный столбец таблицы к переменной в наборе строк. Он разделяет данные элементов, которые могут участвовать в `IAccessor` привязке на основе OLE DB. Этот атрибут настраивает карту столбцов, обычно определенную с помощью OLE DB пользовательских макросов [BEGIN_COLUMN_MAP](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#begin_column_map), [END_COLUMN_MAP](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#end_column_map)и [COLUMN_ENTRY](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#column_entry). Они управляют [структурой OLE DB DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) для привязки указанного столбца. Каждый элемент, помеченный атрибутом **db_column** , будет занимать одну запись в сопоставлении столбцов в форме записи столбца. Таким образом, этот атрибут вызывается в том случае, если необходимо разместить карту столбцов, то есть в классе Command или Table.
 
 Используйте **db_column** в сочетании с атрибутами [db_table](db-table.md) или [db_command](db-command.md) .
 
@@ -101,13 +101,13 @@ class CProducts {
 | Контекст атрибута | Значение |
 |-|-|
 |**Относится к**|**`class`**, **`struct`** , член, метод|
-|**REPEATABLE**|нет|
-|**Требуемые атрибуты**|Нет|
-|**Недопустимые атрибуты**|Нет|
+|**REPEATABLE**|Нет|
+|**Требуемые атрибуты**|Отсутствуют|
+|**Недопустимые атрибуты**|Отсутствуют|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [OLE DB атрибуты потребителя](ole-db-consumer-attributes.md)<br/>
 [Атрибуты класса](class-attributes.md)

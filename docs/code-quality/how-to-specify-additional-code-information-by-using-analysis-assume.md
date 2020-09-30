@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - _Analysis_assume
 ms.assetid: 51205d97-4084-4cf4-a5ed-3eeaf67deb1b
-ms.openlocfilehash: 00577e6cc5ebd30e38e4fb7204b93c3ecf3fe112
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: f427afdcab07b41430a5d4b5fc7f300aa671e30b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "79467141"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503291"
 ---
 # <a name="how-to-specify-additional-code-information-by-using-_analysis_assume"></a>Инструкции. Указание дополнительных сведений о коде с помощью _Analysis_assume
 
-Вы можете предоставить подсказки средству анализа кода для C/C++ Code, которые помогут анализировать процесс анализа и сокращать предупреждения. Чтобы предоставить дополнительные сведения, используйте следующую функцию:
+Вы можете предоставить подсказки средству анализа кода для кода C/C++, который поможет анализировать процесс анализа и сократить число предупреждений. Чтобы предоставить дополнительные сведения, используйте следующую функцию:
 
 `_Analysis_assume(`  `expr`  `)`
 
@@ -29,7 +29,7 @@ ms.locfileid: "79467141"
 
 ## <a name="example"></a>Пример
 
-Следующий код использует `_Analysis_assume` для исправления предупреждения анализа кода [C6388](../code-quality/c6388.md):
+Следующий код используется `_Analysis_assume` для исправления предупреждения анализа кода [C6388](../code-quality/c6388.md):
 
 ```cpp
 #include<windows.h>
@@ -54,4 +54,4 @@ void test()
 
 ## <a name="see-also"></a>См. также раздел
 
-- [__assume](/cpp/intrinsics/assume)
+- [__assume](../intrinsics/assume.md)

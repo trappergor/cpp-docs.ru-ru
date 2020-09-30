@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CreateAccessor method
 - CreateParameterAccessor method
 ms.assetid: a0088074-7135-465c-b228-69097a50b8cc
-ms.openlocfilehash: 32ab31734b8c6e3f72053e1e4f2a8a9233b73995
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 24938812ea254fe0150cbabf58dd72bf45ebd0a1
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838104"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504103"
 ---
 # <a name="cmanualaccessor-class"></a>Класс CManualAccessor
 
@@ -104,7 +104,7 @@ void AddBindEntry(DBORDINAL nOrdinal,
 
 ### <a name="remarks"></a>Remarks
 
-Чтобы использовать эту функцию, необходимо сначала вызвать [CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md). Нельзя добавить больше записей, чем количество столбцов, указанное в `CreateAccessor` .
+Чтобы использовать эту функцию, необходимо сначала вызвать [CreateAccessor](#createaccessor). Нельзя добавить больше записей, чем количество столбцов, указанное в `CreateAccessor` .
 
 ## <a name="cmanualaccessoraddparameterentry"></a><a name="addparameterentry"></a> CManualAccessor:: Аддпараметерентри
 
@@ -148,7 +148,7 @@ void AddParameterEntry(DBORDINAL nOrdinal,
 
 ### <a name="remarks"></a>Remarks
 
-Чтобы использовать эту функцию, необходимо сначала вызвать [креатепараметеракцессор](../../data/oledb/cmanualaccessor-createparameteraccessor.md).
+Чтобы использовать эту функцию, необходимо сначала вызвать [креатепараметеракцессор](#createparameteraccessor).
 
 ## <a name="cmanualaccessorcreateaccessor"></a><a name="createaccessor"></a> CManualAccessor:: CreateAccessor
 
@@ -165,7 +165,7 @@ HRESULT CreateAccessor(int nBindEntries,
 #### <a name="parameters"></a>Параметры
 
 *нбиндентриес*<br/>
-окне Число столбцов. Это число должно соответствовать числу вызовов функции [CManualAccessor:: AddBindEntry](../../data/oledb/cmanualaccessor-addbindentry.md) .
+окне Число столбцов. Это число должно соответствовать числу вызовов функции [CManualAccessor:: AddBindEntry](#addbindentry) .
 
 *pBuffer*<br/>
 окне Указатель на буфер, в котором хранятся выходные столбцы.
@@ -210,7 +210,7 @@ HRESULT CreateParameterAccessor(int nBindEntries,
 
 ### <a name="remarks"></a>Remarks
 
-Эту функцию необходимо вызвать перед вызовом [аддпараметерентри](../../data/oledb/cmanualaccessor-addparameterentry.md).
+Эту функцию необходимо вызвать перед вызовом [аддпараметерентри](#addparameterentry).
 
 ## <a name="see-also"></a>См. также раздел
 

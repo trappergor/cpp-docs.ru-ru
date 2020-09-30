@@ -12,12 +12,12 @@ helpviewer_keywords:
 - multidimensional arrays
 - arrays [C++]
 ms.assetid: 49445812-d775-4db1-a231-869598dbb955
-ms.openlocfilehash: ecd8425bf7bcc9772d7b1327add79b89aea629a7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 814be57caafed117a1403105d46326ac53682578
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182244"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500896"
 ---
 # <a name="arrays-ccli-and-ccx"></a>Массивы (C++/CLI и C++/CX)
 
@@ -32,9 +32,9 @@ ms.locfileid: "80182244"
 
 Дополнительные сведения о массивах см. в следующих разделах:
 
-- [Практическое руководство. Использование массивов в C++/CLI](../dotnet/how-to-use-arrays-in-cpp-cli.md)
+- [Как использовать массивы в C++/CLI](../dotnet/how-to-use-arrays-in-cpp-cli.md)
 
-- [Списки аргументов переменной длины (...) (C++/CLI)](variable-argument-lists-dot-dot-dot-cpp-cli.md)
+- [Списки аргументов переменных (...) (C++/CLI)](variable-argument-lists-dot-dot-dot-cpp-cli.md)
 
 ## <a name="windows-runtime"></a>Среда выполнения Windows
 
@@ -52,13 +52,13 @@ ms.locfileid: "80182244"
     {initialization-list [,...]}
 ```
 
-*qualifiers*<br/>
-(Необязательно) Один или несколько из следующих спецификаторов класса хранения: [mutable](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [static](../cpp/static-members-cpp.md).
+*"Me."*<br/>
+(Необязательно) Один или несколько из следующих спецификаторов класса хранения: [mutable](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/extern-cpp.md), [static](../cpp/static-members-cpp.md).
 
-*array-type*<br/>
+*тип массива*<br/>
 Тип переменной массива. Допустимые типы: основные типы и классы среды выполнения Windows, ссылочные классы и структуры, классы и структуры значений, а также собственные указатели (`type*`).
 
-*rank*<br/>
+*Рейтинг*<br/>
 (Необязательно) Получает число измерений массива. Должен иметь значение 1.
 
 *identifier*<br/>
@@ -72,7 +72,7 @@ ms.locfileid: "80182244"
 
 ### <a name="remarks"></a>Remarks
 
-Во время компиляции с помощью `__is_ref_array(type)` можно определить, является ли тип массивом с подсчетом ссылок. Подробные сведения см. в статье [Compiler Support for Type Traits (C++/CLI and C++/CX)](compiler-support-for-type-traits-cpp-component-extensions.md) (Поддержка характеристик типов компилятором (C++/CLI and C++/CX)).
+Во время компиляции с помощью `__is_ref_array(type)` можно определить, является ли тип массивом с подсчетом ссылок. Дополнительные сведения см. в статье [Compiler Support for Type Traits (C++/CLI and C++/CX)](compiler-support-for-type-traits-cpp-component-extensions.md) (Поддержка характеристик типов компилятором (C++/CLI and C++/CX)).
 
 ### <a name="requirements"></a>Требования
 
@@ -108,13 +108,13 @@ int main() {
     {initialization-list [,...]}
 ```
 
-*qualifiers*<br/>
-(Необязательно) Один или несколько из следующих спецификаторов класса хранения: [mutable](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [static](../cpp/static-members-cpp.md).
+*"Me."*<br/>
+(Необязательно) Один или несколько из следующих спецификаторов класса хранения: [mutable](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/extern-cpp.md), [static](../cpp/static-members-cpp.md).
 
-*array-type*<br/>
+*тип массива*<br/>
 Тип переменной массива. Допустимые типы: основные типы и классы среды выполнения Windows, ссылочные классы и структуры, классы и структуры значений, собственные указатели (`type*`) и собственные типы POD.
 
-*rank*<br/>
+*Рейтинг*<br/>
 (Необязательно) Получает число измерений массива. Значение по умолчанию — 1; максимальное число — 32. Каждое измерение массива само является массивом.
 
 *identifier*<br/>
@@ -141,9 +141,9 @@ int main() {
 
 При создании массива указателей на управляемый класс элементы массива инициализируются нулем.
 
-При создании массива, тип элементов которого является типом значения `V`, к каждому элементу массива применяется конструктор по умолчанию для `V`. Дополнительные сведения см. в разделе [Эквиваленты собственным типам C++ в .NET framework](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md).
+При создании массива, тип элементов которого является типом значения `V`, к каждому элементу массива применяется конструктор по умолчанию для `V`. Дополнительные сведения см. в разделе [Эквиваленты собственным типам C++ в .NET framework](../dotnet/managed-types-cpp-cli.md#dotnet).
 
-Во время компиляции с помощью `__is_ref_array(type)` можно определить, является ли тип массивом среды CLR. Подробные сведения см. в статье [Compiler Support for Type Traits (C++/CLI and C++/CX)](compiler-support-for-type-traits-cpp-component-extensions.md) (Поддержка характеристик типов компилятором (C++/CLI and C++/CX)).
+Во время компиляции с помощью `__is_ref_array(type)` можно определить, является ли тип массивом среды CLR. Дополнительные сведения см. в статье [Compiler Support for Type Traits (C++/CLI and C++/CX)](compiler-support-for-type-traits-cpp-component-extensions.md) (Поддержка характеристик типов компилятором (C++/CLI and C++/CX)).
 
 ### <a name="requirements"></a>Требования
 
