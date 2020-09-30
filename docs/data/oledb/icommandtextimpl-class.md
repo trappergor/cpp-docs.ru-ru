@@ -22,12 +22,12 @@ helpviewer_keywords:
 - m_strCommandText
 - SetCommandText method
 ms.assetid: 9c2715cc-1e55-4468-8327-85341617ed46
-ms.openlocfilehash: 8d435cd8c5c8723d008be98482631f081c967058
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7d31933b162a74db31bdd3c65dc68e396a3896c4
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845124"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501724"
 ---
 # <a name="icommandtextimpl-class"></a>Класс ICommandTextImpl
 
@@ -54,14 +54,14 @@ class ATL_NO_VTABLE ICommandTextImpl
 
 ### <a name="interface-methods"></a>Методы интерфейса
 
-| Имя | Описание |
+| Название | Описание |
 |-|-|
-|[жеткоммандтекст](#getcommandtext)|Возвращает текстовую команду, заданную последним вызовом метода [SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md).|
+|[жеткоммандтекст](#getcommandtext)|Возвращает текстовую команду, заданную последним вызовом метода [SetCommandText](#setcommandtext).|
 |[SetCommandText](#setcommandtext)|Задает текст команды, заменяя существующий текст команды.|
 
 ### <a name="data-members"></a>Элементы данных
 
-| Имя | Описание |
+| Название | Описание |
 |-|-|
 |[m_strCommandText](#strcommandtext)|Сохраняет текст команды.|
 
@@ -71,7 +71,7 @@ class ATL_NO_VTABLE ICommandTextImpl
 
 ## <a name="icommandtextimplgetcommandtext"></a><a name="getcommandtext"></a> ICommandTextImpl:: Жеткоммандтекст
 
-Возвращает текстовую команду, заданную последним вызовом метода [SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md).
+Возвращает текстовую команду, заданную последним вызовом метода [SetCommandText](#setcommandtext).
 
 ### <a name="syntax"></a>Синтаксис
 

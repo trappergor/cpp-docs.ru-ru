@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DDV (dialog data validation) [MFC]
 - data validation [MFC], message boxes
 ms.assetid: f070c309-2044-4ff2-8c92-1ec1ea84af58
-ms.openlocfilehash: 99540214d1b903c66d350145c08ab657d12ef8f7
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 9de2db002d7f06e797531c09af0a021c402eec7d
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616758"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502284"
 ---
 # <a name="dialog-data-validation"></a>Проверка данных диалогового окна
 
@@ -22,10 +22,10 @@ ms.locfileid: "84616758"
 
 Вы также можете определить собственные пользовательские подпрограммы DDX и DDV. Дополнительные сведения об этом и других аспектах DDX и DDV см. в [техническом заметке MFC 26](tn026-ddx-and-ddv-routines.md).
 
-[Мастер добавления переменной члена](../ide/add-member-variable-wizard.md) будет записывать все вызовы DDX и DDV в карте данных.
+[Мастер добавления переменной члена](../ide/adding-a-member-variable-visual-cpp.md#add-member-variable-wizard) будет записывать все вызовы DDX и DDV в карте данных.
 
 ## <a name="see-also"></a>См. также раздел
 
-[Обмен данными диалоговых окон и их проверка](dialog-data-exchange-and-validation.md)<br/>
+[Обмен и проверка данных диалоговых окон](dialog-data-exchange-and-validation.md)<br/>
 [Работа с диалоговыми окнами в MFC](life-cycle-of-a-dialog-box.md)<br/>
 [Обмен данными диалоговых окон](dialog-data-exchange.md)

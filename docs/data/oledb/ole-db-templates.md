@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB templates
 ms.assetid: 73918f6f-1fd7-4fa2-a0ff-7f9d792fce7e
-ms.openlocfilehash: 00a54a65b6f23df358d1e140eeb1c3f9174a6ace
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d3b709bbebdf040ac818d2d2d44576cf49aafdd4
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209876"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500905"
 ---
 # <a name="ole-db-templates"></a>Шаблоны OLE DB
 
@@ -42,16 +42,16 @@ ms.locfileid: "80209876"
 [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 Описывает концептуальный материал шаблонов поставщика OLE DB.
 
-[Создание объекта-получателя OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)<br/>
+[Создание OLE DB потребителя](../../data/oledb/creating-an-ole-db-consumer.md)<br/>
 Описывает создание шаблонов объекта-получателя OLE DB.
 
-[Создание простого поставщика только для чтения](../../data/oledb/creating-a-simple-read-only-provider.md)<br/>
+[Создание простого поставщика, доступного только для чтения](../../data/oledb/creating-a-simple-read-only-provider.md)<br/>
 Описывает создание простого поставщика с доступом только для чтения, который считывает пару строк.
 
-[Создание поставщика с возможностью записи](../../data/oledb/creating-an-updatable-provider.md)<br/>
+[Создание обновляемого поставщика](../../data/oledb/creating-an-updatable-provider.md)<br/>
 Описывает создание поставщиков, которые могут осуществлять запись в хранилище данных.
 
-[Атрибуты объекта-получателя OLE DB](../../windows/ole-db-consumer-attributes.md)<br/>
+[OLE DB атрибуты потребителя](../../windows/attributes/ole-db-consumer-attributes.md)<br/>
 Описывает упрощенный интерфейс для вставки кода с учетом шаблонов объекта-получателя OLE DB для создания рабочих объектов-получателей OLE DB.
 
 [Компоненты ATL COM Desktop](../../atl/atl-com-desktop-components.md)<br/>

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3247
 ms.assetid: f9a2bbb5-3fce-40bf-9fd3-835a5f164dbb
-ms.openlocfilehash: 81dc5d5e54551aff49adad2ada2eb25f57a37ec2
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: c1b8aaddac32af4e0936ce7d45fbc59c3835dda2
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74754385"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501383"
 ---
 # <a name="compiler-error-c3247"></a>Ошибка компилятора C3247
 
 "класс1": класс coclass не может наследовать от другого класса coclass "класс2"
 
-Класс, помеченный атрибутом [coclass](../../windows/coclass.md) , не может наследовать от другого класса, помеченного атрибутом `coclass` .
+Класс, помеченный атрибутом [coclass](../../windows/attributes/coclass.md) , не может наследовать от другого класса, помеченного атрибутом `coclass` .
 
 Следующий пример приводит к возникновению ошибки C3247:
 

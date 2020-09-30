@@ -49,12 +49,12 @@ helpviewer_keywords:
 - SetParameterInfo method
 - Unprepare method
 ms.assetid: 0760bfc5-b9ee-4aee-8e54-31bd78714d3a
-ms.openlocfilehash: beabe73ff4ce0e6be8aaccfcdc636adc1ba04d5c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 109998dd742828b3c41672fa2afa8716e4687f6a
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838442"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501007"
 ---
 # <a name="ccommand-class"></a>Класс CCommand
 
@@ -99,12 +99,12 @@ class CCommand :
 
 ### <a name="inherited-methods"></a>Наследуемые методы
 
-| Имя | Описание |
+| Название | Описание |
 |-|-|
 |[Создание](#create)|Создает новую команду для указанного сеанса, а затем задает текст команды.|
 |[CreateCommand](#createcommand)|Создает новую команду.|
 |[GetParameterInfo](#getparameterinfo)|Возвращает список параметров команды, их имена и типы.|
-|[Обеспечьте](#prepare)|Проверяет и оптимизирует текущую команду.|
+|[Подготовка.](#prepare)|Проверяет и оптимизирует текущую команду.|
 |[релеасекомманд](#releasecommand)|При необходимости освобождает метод доступа к параметру, а затем освобождает команду.|
 |[SetParameterInfo](#setparameterinfo)|Задает собственный тип для каждого параметра команды.|
 |[Unprepare](#unprepare)|Отменяет текущий план выполнения команды.|
@@ -131,7 +131,7 @@ void Close();
 
 Команда использует набор строк, метод доступа set Result и (необязательно) метод доступа к параметру (в отличие от таблиц, которые не поддерживают параметры и не требуют метода доступа к параметрам).
 
-При выполнении команды необходимо вызвать обе функции `Close` и [релеасекомманд](../../data/oledb/ccommand-releasecommand.md) после команды.
+При выполнении команды необходимо вызвать обе функции `Close` и [релеасекомманд](#releasecommand) после команды.
 
 Если необходимо повторно выполнить одну и ту же команду, следует освободить метод доступа к результирующему набору, вызвав `Close` перед вызовом метода `Execute` . В конце серии необходимо освободить метод доступа к параметру, вызвав `ReleaseCommand` . Другой распространенный сценарий — вызов хранимой процедуры, которая имеет выходные параметры. Во многих поставщиках (например, поставщик OLE DB для SQL Server) значения выходных параметров будут недоступны до закрытия метода доступа к результирующему набору. Вызовите, `Close` чтобы закрыть возвращаемый набор строк и метод доступа к результирующему набору, но не метод доступа к параметру, что позволяет получить значения выходных параметров.
 
@@ -213,7 +213,7 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
 окне Сеанс, в котором выполняется команда.
 
 *всзкомманд*<br/>
-окне Выполняемая команда, передаваемая как строка в Юникоде. Может иметь значение NULL при использовании `CAccessor` , в этом случае команда будет получена из значения, переданного в макрос [DEFINE_COMMAND](../../data/oledb/define-command.md) . Дополнительные сведения см. в разделе [ICommand:: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) в *OLE DB справочнике программиста* .
+окне Выполняемая команда, передаваемая как строка в Юникоде. Может иметь значение NULL при использовании `CAccessor` , в этом случае команда будет получена из значения, переданного в макрос [DEFINE_COMMAND](./macros-and-global-functions-for-ole-db-consumer-templates.md#define_command) . Дополнительные сведения см. в разделе [ICommand:: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) в *OLE DB справочнике программиста* .
 
 *сзкомманд*<br/>
 окне То же, что и *всзкомманд* , за исключением того, что этот параметр принимает строку команды ANSI. Четвертая форма этого метода может принимать значение NULL. Дополнительные сведения см. в разделе "Примечания" Далее в этом разделе.
@@ -253,14 +253,14 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
 
 Третья форма `Open` позволяет строке команды иметь значение null, так как тип **`int`** со значением по умолчанию NULL. Он предоставляется для вызова `Open(session, NULL);` или, `Open(session);` поскольку null имеет тип **`int`** . Эта версия требует и утверждает, что **`int`** параметр имеет значение null.
 
-Используйте четвертую форму, `Open` Если вы уже создали команду и хотите выполнить одну [подготовку](../../data/oledb/ccommand-prepare.md) и несколько выполнений.
+Используйте четвертую форму, `Open` Если вы уже создали команду и хотите выполнить одну [подготовку](#prepare) и несколько выполнений.
 
 > [!NOTE]
 > `Open` вызовы `Execute` , которые, в свою очередь, вызывают `GetNextResult` .
 
 ## <a name="ccommandcreate"></a><a name="create"></a> CCommand:: Create
 
-Вызывает метод [CCommand:: CreateCommand](../../data/oledb/ccommand-createcommand.md) , чтобы создать команду для указанного сеанса, а затем вызывает [ICommandText:: SetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85)) , чтобы указать текст команды.
+Вызывает метод [CCommand:: CreateCommand](#createcommand) , чтобы создать команду для указанного сеанса, а затем вызывает [ICommandText:: SetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85)) , чтобы указать текст команды.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -374,7 +374,7 @@ void CCommandBase::ReleaseCommand() throw();
 
 ### <a name="remarks"></a>Remarks
 
-`ReleaseCommand` используется в сочетании с `Close` . Сведения об использовании см. в разделе " [Закрыть](../../data/oledb/ccommand-close.md) ".
+`ReleaseCommand` используется в сочетании с `Close` . Сведения об использовании см. в разделе " [Закрыть](#close) ".
 
 ## <a name="ccommandsetparameterinfo"></a><a name="setparameterinfo"></a> CCommand:: SetParameterInfo
 

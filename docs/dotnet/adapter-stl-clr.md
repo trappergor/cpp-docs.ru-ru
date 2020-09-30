@@ -48,12 +48,12 @@ helpviewer_keywords:
 - operator= member [STL/CLR]
 - range_adapter member [STL/CLR]
 ms.assetid: 71ce7e51-42b6-4f70-9595-303791a97677
-ms.openlocfilehash: 7730b5a8dbb8c92d85b4c8c5732657d28bf5b229
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3278371cc7afb08f0d461c77cde9578e1f2840c6
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216444"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502420"
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
 
@@ -73,7 +73,7 @@ ms.locfileid: "87216444"
 
 ## <a name="declarations"></a>Объявления
 
-|Class|Описание:|
+|Класс|Описание|
 |-----------|-----------------|
 |[collection_adapter (STL/CLR)](#collection_adapter)|Создает оболочку для коллекции базовых классов (BCL) в виде диапазона.|
 |[range_adapter (STL/CLR)](#range_adapter)|Заключает диапазон в оболочку в качестве коллекции BCL.|
@@ -84,7 +84,7 @@ ms.locfileid: "87216444"
 
 ## <a name="members"></a>Элементы
 
-## <a name="collection_adapter-stlclr"></a><a name="collection_adapter"></a>collection_adapter (STL/CLR)
+## <a name="collection_adapter-stlclr"></a><a name="collection_adapter"></a> collection_adapter (STL/CLR)
 
 Создает оболочку для коллекции .NET для использования в качестве контейнера STL/CLR. `collection_adapter`— Это класс шаблона, описывающий простой объект контейнера STL/CLR. Он создает оболочку для интерфейса библиотеки базовых классов (BCL) и возвращает пару итераторов, которая используется для управления управляемой последовательностью.
 
@@ -168,7 +168,7 @@ template<typename Key,
 
 Этот класс шаблона используется для управления контейнером BCL в качестве контейнера STL/CLR. Объект `collection_adapter` хранит обработчик для интерфейса BCL, который, в свою очередь, управляет последовательностью элементов. `collection_adapter`Объект `X` возвращает пару итераторов ввода `X.begin()` и `X.end()` используется для посещения элементов по порядку. Некоторые специализации также позволяют писать, `X.size()` чтобы определить длину управляемой последовательности.
 
-## <a name="collection_adapterbase-stlclr"></a><a name="base"></a>collection_adapter:: Base (STL/CLR)
+## <a name="collection_adapterbase-stlclr"></a><a name="base"></a> collection_adapter:: Base (STL/CLR)
 
 Обозначает инкапсулированный интерфейс BCL.
 
@@ -212,7 +212,7 @@ x x x x x x
 base() same = True
 ```
 
-## <a name="collection_adapterbegin-stlclr"></a><a name="begin"></a>collection_adapter:: Begin (STL/CLR)
+## <a name="collection_adapterbegin-stlclr"></a><a name="begin"></a> collection_adapter:: Begin (STL/CLR)
 
 Задает начало управляемой последовательности.
 
@@ -263,7 +263,7 @@ a b c
 *++begin() = b
 ```
 
-## <a name="collection_adaptercollection_adapter-stlclr"></a><a name="collection_adapter_collection_adapter"></a>collection_adapter:: collection_adapter (STL/CLR)
+## <a name="collection_adaptercollection_adapter-stlclr"></a><a name="collection_adapter_collection_adapter"></a> collection_adapter:: collection_adapter (STL/CLR)
 
 Конструирует объект адаптера.
 
@@ -296,13 +296,13 @@ collection_adapter(Coll^ collection);
 
 `collection_adapter(collection_adapter<Coll>% right);`
 
-Инициализирует хранимый маркер `right.` [collection_adapter:: Base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md) `()` .
+Инициализирует хранимый маркер `right.` [collection_adapter:: Base (STL/CLR)](#base) `()` .
 
 Конструктор:
 
 `collection_adapter(collection_adapter<Coll>^ right);`
 
-Инициализирует хранимый маркер `right->` [collection_adapter:: Base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md) `()` .
+Инициализирует хранимый маркер `right->` [collection_adapter:: Base (STL/CLR)](#base) `()` .
 
 Конструктор:
 
@@ -357,7 +357,7 @@ x x x x x x
 x x x x x x
 ```
 
-## <a name="collection_adapterdifference_type-stlclr"></a><a name="difference_type"></a>collection_adapter::d ifference_type (STL/CLR)
+## <a name="collection_adapterdifference_type-stlclr"></a><a name="difference_type"></a> collection_adapter::d ifference_type (STL/CLR)
 
 Типы расстояния со знаком между двумя элементами.
 
@@ -409,7 +409,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="collection_adapterend-stlclr"></a><a name="end"></a>collection_adapter:: end (STL/CLR)
+## <a name="collection_adapterend-stlclr"></a><a name="end"></a> collection_adapter:: end (STL/CLR)
 
 Задает конец управляемой последовательности.
 
@@ -454,7 +454,7 @@ int main()
 a b c
 ```
 
-## <a name="collection_adapteriterator-stlclr"></a><a name="iterator"></a>collection_adapter:: iterator (STL/CLR)
+## <a name="collection_adapteriterator-stlclr"></a><a name="iterator"></a> collection_adapter:: iterator (STL/CLR)
 
 Тип итератора для управляемой последовательности.
 
@@ -499,7 +499,7 @@ int main()
 a b c
 ```
 
-## <a name="collection_adapterkey_type-stlclr"></a><a name="key_type"></a>collection_adapter:: key_type (STL/CLR)
+## <a name="collection_adapterkey_type-stlclr"></a><a name="key_type"></a> collection_adapter:: key_type (STL/CLR)
 
 Тип ключа словаря.
 
@@ -549,7 +549,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="collection_adaptermapped_type-stlclr"></a><a name="mapped_type"></a>collection_adapter:: mapped_type (STL/CLR)
+## <a name="collection_adaptermapped_type-stlclr"></a><a name="mapped_type"></a> collection_adapter:: mapped_type (STL/CLR)
 
 Тип значения словаря.
 
@@ -599,7 +599,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="collection_adapteroperator-stlclr"></a><a name="op_eq"></a>collection_adapter:: operator = (STL/CLR)
+## <a name="collection_adapteroperator-stlclr"></a><a name="op_eq"></a> collection_adapter:: operator = (STL/CLR)
 
 Заменяет сохраненный обработчик BCL.
 
@@ -656,7 +656,7 @@ a b c
 a b c
 ```
 
-## <a name="collection_adapterreference-stlclr"></a><a name="reference"></a>collection_adapter:: Reference (STL/CLR)
+## <a name="collection_adapterreference-stlclr"></a><a name="reference"></a> collection_adapter:: Reference (STL/CLR)
 
 Тип ссылки на элемент.
 
@@ -704,7 +704,7 @@ int main()
 a b c
 ```
 
-## <a name="collection_adaptersize-stlclr"></a><a name="size"></a>collection_adapter:: size (STL/CLR)
+## <a name="collection_adaptersize-stlclr"></a><a name="size"></a> collection_adapter:: size (STL/CLR)
 
 Подсчитывает количество элементов.
 
@@ -747,7 +747,7 @@ x x x x x x
 size() = 6
 ```
 
-## <a name="collection_adaptersize_type-stlclr"></a><a name="size_type"></a>collection_adapter:: size_type (STL/CLR)
+## <a name="collection_adaptersize_type-stlclr"></a><a name="size_type"></a> collection_adapter:: size_type (STL/CLR)
 
 Тип расстояния со знаком между двумя элементами.
 
@@ -792,7 +792,7 @@ x x x x x x
 size() = 6
 ```
 
-## <a name="collection_adapterswap-stlclr"></a><a name="swap"></a>collection_adapter:: Swap (STL/CLR)
+## <a name="collection_adapterswap-stlclr"></a><a name="swap"></a> collection_adapter:: Swap (STL/CLR)
 
 Меняет местами содержимое двух контейнеров.
 
@@ -861,7 +861,7 @@ x x x x x
 a b c
 ```
 
-## <a name="collection_adaptervalue_type-stlclr"></a><a name="value_type"></a>collection_adapter:: value_type (STL/CLR)
+## <a name="collection_adaptervalue_type-stlclr"></a><a name="value_type"></a> collection_adapter:: value_type (STL/CLR)
 
 Тип элемента.
 
@@ -910,7 +910,7 @@ int main()
 a b c
 ```
 
-## <a name="make_collection-stlclr"></a><a name="make_collection"></a>make_collection (STL/CLR)
+## <a name="make_collection-stlclr"></a><a name="make_collection"></a> make_collection (STL/CLR)
 
 Сделать `range_adapter` из пары итератора.
 
@@ -988,7 +988,7 @@ SyncRoot not nullptr = True
 | a b c |
 ```
 
-## <a name="range_adapter-stlclr"></a><a name="range_adapter"></a>range_adapter (STL/CLR)
+## <a name="range_adapter-stlclr"></a><a name="range_adapter"></a> range_adapter (STL/CLR)
 
 Класс шаблона, который служит оболочкой для пары итераторов, используемых для реализации нескольких интерфейсов библиотеки базовых классов (BCL). Используйте range_adapter для управления диапазоном STL/CLR, как если бы он был коллекцией BCL.
 
@@ -1033,7 +1033,7 @@ template<typename Iter>
 
 Range_adapter хранит пару итераторов, которые, в свою очередь, разделяют последовательность элементов. Объект реализует четыре интерфейса BCL, которые позволяют выполнять итерацию по элементам по порядку. Этот класс шаблона используется для управления диапазонами STL/CLR практически подобно контейнерам BCL.
 
-## <a name="range_adapteroperator-stlclr"></a><a name="range_adapter_op_eq"></a>range_adapter:: operator = (STL/CLR)
+## <a name="range_adapteroperator-stlclr"></a><a name="range_adapter_op_eq"></a> range_adapter:: operator = (STL/CLR)
 
 Заменяет сохраненную пару итераторов.
 
@@ -1090,7 +1090,7 @@ a b c
 a b c
 ```
 
-## <a name="range_adapterrange_adapter-stlclr"></a><a name="range_adapter_range_adapter"></a>range_adapter:: range_adapter (STL/CLR)
+## <a name="range_adapterrange_adapter-stlclr"></a><a name="range_adapter_range_adapter"></a> range_adapter:: range_adapter (STL/CLR)
 
 Конструирует объект адаптера.
 

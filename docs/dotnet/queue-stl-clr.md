@@ -57,12 +57,12 @@ helpviewer_keywords:
 - to_array member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 9ea7dec3-ea98-48ff-87d0-a5afc924aaf2
-ms.openlocfilehash: ce4b3ca37fc5e13ace3058cb9ec9e9daad073b47
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2d5c1d30704838cdb69516d68d328c90a094a08e
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87210934"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502388"
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
 
@@ -84,7 +84,7 @@ template<typename Value,
 
 ### <a name="parameters"></a>Параметры
 
-*Value*<br/>
+*Значение*<br/>
 Тип элемента в управляемой последовательности.
 
 *Контейнер*<br/>
@@ -122,7 +122,7 @@ template<typename Value,
 |[queue::size (STL/CLR)](#size)|Подсчитывает количество элементов.|
 |[queue::to_array (STL/CLR)](#to_array)|Копирует управляемую последовательность в новый массив.|
 
-|Свойство|Description|
+|Свойство|Описание|
 |--------------|-----------------|
 |[queue::back_item (STL/CLR)](#back_item)|Обращается к последнему элементу.|
 |[queue::front_item (STL/CLR)](#front_item)|Обращается к первому элементу.|
@@ -150,7 +150,7 @@ template<typename Value,
 
 ## <a name="members"></a>Элементы
 
-## <a name="queueassign-stlclr"></a><a name="assign"></a>Queue:: Assign (STL/CLR)
+## <a name="queueassign-stlclr"></a><a name="assign"></a> Queue:: Assign (STL/CLR)
 
 Заменяет все элементы.
 
@@ -204,7 +204,7 @@ a b c
 a b c
 ```
 
-## <a name="queueback-stlclr"></a><a name="back"></a>очередь:: назад (STL/CLR)
+## <a name="queueback-stlclr"></a><a name="back"></a> очередь:: назад (STL/CLR)
 
 Обращается к последнему элементу.
 
@@ -256,7 +256,7 @@ back() = c
 a b x
 ```
 
-## <a name="queueback_item-stlclr"></a><a name="back_item"></a>Queue:: back_item (STL/CLR)
+## <a name="queueback_item-stlclr"></a><a name="back_item"></a> Queue:: back_item (STL/CLR)
 
 Обращается к последнему элементу.
 
@@ -308,7 +308,7 @@ back_item = c
 a b x
 ```
 
-## <a name="queueconst_reference-stlclr"></a><a name="const_reference"></a>Queue:: const_reference (STL/CLR)
+## <a name="queueconst_reference-stlclr"></a><a name="const_reference"></a> Queue:: const_reference (STL/CLR)
 
 Тип постоянной ссылки на элемент.
 
@@ -352,7 +352,7 @@ int main()
 a b c
 ```
 
-## <a name="queuecontainer_type-stlclr"></a><a name="container_type"></a>Queue:: container_type (STL/CLR)
+## <a name="queuecontainer_type-stlclr"></a><a name="container_type"></a> Queue:: container_type (STL/CLR)
 
 Тип базового контейнера.
 
@@ -394,7 +394,7 @@ int main()
 a b c
 ```
 
-## <a name="queuedifference_type-stlclr"></a><a name="difference_type"></a>очередь: ifference_type:d (STL/CLR)
+## <a name="queuedifference_type-stlclr"></a><a name="difference_type"></a> очередь: ifference_type:d (STL/CLR)
 
 Типы расстояния со знаком между двумя элементами.
 
@@ -452,7 +452,7 @@ pushing 2 = -2
 popping 3 = 3
 ```
 
-## <a name="queueempty-stlclr"></a><a name="empty"></a>очередь:: Empty (STL/CLR)
+## <a name="queueempty-stlclr"></a><a name="empty"></a> очередь:: Empty (STL/CLR)
 
 Проверяет отсутствие элементов.
 
@@ -464,7 +464,7 @@ bool empty();
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция-член возвращает значение true для пустой управляемой последовательности. Он эквивалентен [очереди:: size (STL/CLR)](../dotnet/queue-size-stl-clr.md) `() == 0` . Он используется для проверки, пуста ли очередь.
+Эта функция-член возвращает значение true для пустой управляемой последовательности. Он эквивалентен [очереди:: size (STL/CLR)](#size) `() == 0` . Он используется для проверки, пуста ли очередь.
 
 ### <a name="example"></a>Пример
 
@@ -506,7 +506,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="queuefront-stlclr"></a><a name="front"></a>Queue:: Front (STL/CLR)
+## <a name="queuefront-stlclr"></a><a name="front"></a> Queue:: Front (STL/CLR)
 
 Обращается к первому элементу.
 
@@ -558,7 +558,7 @@ front() = a
 x b c
 ```
 
-## <a name="queuefront_item-stlclr"></a><a name="front_item"></a>Queue:: front_item (STL/CLR)
+## <a name="queuefront_item-stlclr"></a><a name="front_item"></a> Queue:: front_item (STL/CLR)
 
 Обращается к первому элементу.
 
@@ -610,7 +610,7 @@ front_item = a
 x b c
 ```
 
-## <a name="queuegeneric_container-stlclr"></a><a name="generic_container"></a>Queue:: generic_container (STL/CLR)
+## <a name="queuegeneric_container-stlclr"></a><a name="generic_container"></a> Queue:: generic_container (STL/CLR)
 
 Тип универсального интерфейса для адаптера контейнера.
 
@@ -673,7 +673,7 @@ a b c d
 a b c d e
 ```
 
-## <a name="queuegeneric_value-stlclr"></a><a name="generic_value"></a>Queue:: generic_value (STL/CLR)
+## <a name="queuegeneric_value-stlclr"></a><a name="generic_value"></a> Queue:: generic_value (STL/CLR)
 
 Тип элемента для использования с универсальным интерфейсом для контейнера.
 
@@ -731,7 +731,7 @@ a b c
 a b c
 ```
 
-## <a name="queueget_container-stlclr"></a><a name="get_container"></a>Queue:: get_container (STL/CLR)
+## <a name="queueget_container-stlclr"></a><a name="get_container"></a> Queue:: get_container (STL/CLR)
 
 Осуществляет доступ к базовому контейнеру.
 
@@ -772,7 +772,7 @@ int main()
 a b c
 ```
 
-## <a name="queueoperator-stlclr"></a><a name="op_as"></a>Queue:: operator = (STL/CLR)
+## <a name="queueoperator-stlclr"></a><a name="op_as"></a> Queue:: operator = (STL/CLR)
 
 Заменяет управляемую последовательность.
 
@@ -826,7 +826,7 @@ a b c
 a b c
 ```
 
-## <a name="queuepop-stlclr"></a><a name="pop"></a>очередь::p op (STL/CLR)
+## <a name="queuepop-stlclr"></a><a name="pop"></a> очередь::p op (STL/CLR)
 
 Удаляет последний элемент.
 
@@ -874,7 +874,7 @@ a b c
 b c
 ```
 
-## <a name="queuepush-stlclr"></a><a name="push"></a>очередь::p тельную (STL/CLR)
+## <a name="queuepush-stlclr"></a><a name="push"></a> очередь::p тельную (STL/CLR)
 
 Добавляет новый последний элемент.
 
@@ -915,7 +915,7 @@ int main()
 a b c
 ```
 
-## <a name="queuequeue-stlclr"></a><a name="queue"></a>очередь:: очередь (STL/CLR)
+## <a name="queuequeue-stlclr"></a><a name="queue"></a> очередь:: очередь (STL/CLR)
 
 Конструирует объект адаптера контейнера.
 
@@ -1008,7 +1008,7 @@ x x x x x
 x x x x x
 ```
 
-## <a name="queuereference-stlclr"></a><a name="reference"></a>очередь:: Reference (STL/CLR)
+## <a name="queuereference-stlclr"></a><a name="reference"></a> очередь:: Reference (STL/CLR)
 
 Тип ссылки на элемент.
 
@@ -1057,7 +1057,7 @@ a b c
 a b x
 ```
 
-## <a name="queuesize-stlclr"></a><a name="size"></a>очередь:: размер (STL/CLR)
+## <a name="queuesize-stlclr"></a><a name="size"></a> очередь:: размер (STL/CLR)
 
 Подсчитывает количество элементов.
 
@@ -1069,7 +1069,7 @@ size_type size();
 
 ### <a name="remarks"></a>Remarks
 
-Функция-член возвращает длину управляемой последовательности. Он используется для определения количества элементов, находящихся в настоящий момент в управляемой последовательности. Если вас интересует только то, имеет ли последовательность ненулевой размер, см. раздел [queue:: Empty (STL/CLR)](../dotnet/queue-empty-stl-clr.md) `()` .
+Функция-член возвращает длину управляемой последовательности. Он используется для определения количества элементов, находящихся в настоящий момент в управляемой последовательности. Если вас интересует только то, имеет ли последовательность ненулевой размер, см. раздел [queue:: Empty (STL/CLR)](#empty) `()` .
 
 ### <a name="example"></a>Пример
 
@@ -1111,7 +1111,7 @@ size() = 2 after popping
 size() = 4 after adding 2
 ```
 
-## <a name="queuesize_type-stlclr"></a><a name="size_type"></a>Queue:: size_type (STL/CLR)
+## <a name="queuesize_type-stlclr"></a><a name="size_type"></a> Queue:: size_type (STL/CLR)
 
 Тип расстояния со знаком между двумя элементами.
 
@@ -1160,7 +1160,7 @@ a b c
 size difference = 2
 ```
 
-## <a name="queueto_array-stlclr"></a><a name="to_array"></a>Queue:: to_array (STL/CLR)
+## <a name="queueto_array-stlclr"></a><a name="to_array"></a> Queue:: to_array (STL/CLR)
 
 Копирует управляемую последовательность в новый массив.
 
@@ -1210,7 +1210,7 @@ a b c d
 a b c
 ```
 
-## <a name="queuevalue_type-stlclr"></a><a name="value_type"></a>Queue:: value_type (STL/CLR)
+## <a name="queuevalue_type-stlclr"></a><a name="value_type"></a> Queue:: value_type (STL/CLR)
 
 Тип элемента.
 
@@ -1255,7 +1255,7 @@ int main()
 a b c
 ```
 
-## <a name="operator-queue-stlclr"></a><a name="op_neq"></a>operator! = (очередь) (STL/CLR)
+## <a name="operator-queue-stlclr"></a><a name="op_neq"></a> operator! = (очередь) (STL/CLR)
 
 Сравнение очереди не равно.
 
@@ -1326,7 +1326,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="operatorlt-queue-stlclr"></a><a name="op_lt"></a>Оператор &lt; (Queue) (STL/CLR)
+## <a name="operatorlt-queue-stlclr"></a><a name="op_lt"></a> Оператор &lt; (Queue) (STL/CLR)
 
 Queue меньше, чем сравнение.
 
@@ -1349,7 +1349,7 @@ template<typename Value,
 
 ### <a name="remarks"></a>Remarks
 
-Функция оператора возвращает значение true, если для наименьшей позицией, `i` для которой `!(right[i] < left[i])` также задано значение true `left[i] < right[i]` . В противном случае возвращается `left->` [очередь:: size (STL/CLR)](../dotnet/queue-size-stl-clr.md) `() <` `right->size()` , которая используется для проверки того, является ли *Left* упорядоченным до *право* , когда две очереди сравниваются по элементу.
+Функция оператора возвращает значение true, если для наименьшей позицией, `i` для которой `!(right[i] < left[i])` также задано значение true `left[i] < right[i]` . В противном случае возвращается `left->` [очередь:: size (STL/CLR)](#size) `() <` `right->size()` , которая используется для проверки того, является ли *Left* упорядоченным до *право* , когда две очереди сравниваются по элементу.
 
 ### <a name="example"></a>Пример
 
@@ -1397,7 +1397,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="operatorlt-queue-stlclr"></a><a name="op_lteq"></a>operator &lt; = (очередь) (STL/CLR)
+## <a name="operatorlt-queue-stlclr"></a><a name="op_lteq"></a> operator &lt; = (очередь) (STL/CLR)
 
 Сравнение "меньше или равно" в очереди.
 
@@ -1468,7 +1468,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="operator-queue-stlclr"></a><a name="op_eq"></a>оператор = = (очередь) (STL/CLR)
+## <a name="operator-queue-stlclr"></a><a name="op_eq"></a> оператор = = (очередь) (STL/CLR)
 
 Сравнение постановки в очередь.
 
@@ -1539,7 +1539,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="operatorgt-queue-stlclr"></a><a name="op_gt"></a>Оператор &gt; (Queue) (STL/CLR)
+## <a name="operatorgt-queue-stlclr"></a><a name="op_gt"></a> Оператор &gt; (Queue) (STL/CLR)
 
 Очередь больше, чем сравнение.
 
@@ -1610,7 +1610,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="operatorgt-queue-stlclr"></a><a name="op_gteq"></a>operator &gt; = (очередь) (STL/CLR)
+## <a name="operatorgt-queue-stlclr"></a><a name="op_gteq"></a> operator &gt; = (очередь) (STL/CLR)
 
 Сравнение в очереди больше или равно.
 

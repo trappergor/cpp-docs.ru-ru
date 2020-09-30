@@ -51,12 +51,12 @@ helpviewer_keywords:
 - value_compare member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 4d0000d3-68ff-4c4b-8157-7060540136f5
-ms.openlocfilehash: 6c5a37cc76f6ac3a3f92cf54b440960d7476daa9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fd87c39db279fb70d5c5b5f20e583251dc519755
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211041"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502404"
 ---
 # <a name="priority_queue-stlclr"></a>priority_queue (STL/CLR)
 
@@ -77,7 +77,7 @@ template<typename Value,
 
 ### <a name="parameters"></a>Параметры
 
-*Value*<br/>
+*Значение*<br/>
 Тип элемента в управляемой последовательности.
 
 *Контейнер*<br/>
@@ -116,7 +116,7 @@ template<typename Value,
 |[priority_queue::to_array (STL/CLR)](#to_array)|Копирует управляемую последовательность в новый массив.|
 |[priority_queue::value_comp (STL/CLR)](#value_comp)|Копирует делегат упорядочения для двух элементов.|
 
-|Свойство|Description|
+|Свойство|Описание|
 |--------------|-----------------|
 |[priority_queue::top_item (STL/CLR)](#top_item)|Обращается к элементу с самым высоким приоритетом.|
 
@@ -135,11 +135,11 @@ template<typename Value,
 
 Объект выделяет и освобождает хранилище для последовательности, которая управляется через базовый контейнер типа `Container` , который хранит `Value` элементы и растет по запросу. Последовательность упорядочивается в виде кучи, при этом элемент с наивысшим приоритетом (верхний элемент) легко становится доступным и съемным. Объект предоставляет доступ к отправке новых элементов и выталкивания только элемента с самым высоким приоритетом, реализуя очередь приоритетов.
 
-Объект упорядочивает последовательность, которую он управляет, вызывая сохраненный объект делегата типа [priority_queue:: value_compare (STL/CLR)](../dotnet/priority-queue-value-compare-stl-clr.md). При создании priority_queue можно указать сохраненный объект делегата; Если объект делегата не указан, по умолчанию используется сравнение `operator<(value_type, value_type)` . Доступ к этому сохраненному объекту осуществляется путем вызова функции [-члена priority_queue:: value_comp (STL/CLR)](../dotnet/priority-queue-value-comp-stl-clr.md) `()` .
+Объект упорядочивает последовательность, которую он управляет, вызывая сохраненный объект делегата типа [priority_queue:: value_compare (STL/CLR)](#value_compare). При создании priority_queue можно указать сохраненный объект делегата; Если объект делегата не указан, по умолчанию используется сравнение `operator<(value_type, value_type)` . Доступ к этому сохраненному объекту осуществляется путем вызова функции [-члена priority_queue:: value_comp (STL/CLR)](#value_comp) `()` .
 
-Такой объект делегата должен накладывать строгое слабое упорядочивание значений типа [priority_queue:: value_type (STL/CLR)](../dotnet/priority-queue-value-type-stl-clr.md). Это означает, что для любых двух ключей `X` и `Y` :
+Такой объект делегата должен накладывать строгое слабое упорядочивание значений типа [priority_queue:: value_type (STL/CLR)](#value_type). Это означает, что для любых двух ключей `X` и `Y` :
 
-`value_comp()(X, Y)`Возвращает один и тот же логический результат при каждом вызове.
+`value_comp()(X, Y)` Возвращает один и тот же логический результат при каждом вызове.
 
 Если `value_comp()(X, Y)` имеет значение true, то оно `value_comp()(Y, X)` должно иметь значение false.
 
@@ -161,7 +161,7 @@ template<typename Value,
 
 ## <a name="members"></a>Элементы
 
-## <a name="priority_queueassign-stlclr"></a><a name="assign"></a>priority_queue:: Assign (STL/CLR)
+## <a name="priority_queueassign-stlclr"></a><a name="assign"></a> priority_queue:: Assign (STL/CLR)
 
 Заменяет все элементы.
 
@@ -215,7 +215,7 @@ c a b
 c a b
 ```
 
-## <a name="priority_queueconst_reference-stlclr"></a><a name="const_reference"></a>priority_queue:: const_reference (STL/CLR)
+## <a name="priority_queueconst_reference-stlclr"></a><a name="const_reference"></a> priority_queue:: const_reference (STL/CLR)
 
 Тип постоянной ссылки на элемент.
 
@@ -259,7 +259,7 @@ int main()
 c b a
 ```
 
-## <a name="priority_queuecontainer_type-stlclr"></a><a name="container_type"></a>priority_queue:: container_type (STL/CLR)
+## <a name="priority_queuecontainer_type-stlclr"></a><a name="container_type"></a> priority_queue:: container_type (STL/CLR)
 
 Тип базового контейнера.
 
@@ -301,7 +301,7 @@ int main()
 c a b
 ```
 
-## <a name="priority_queuedifference_type-stlclr"></a><a name="difference_type"></a>priority_queue::d ifference_type (STL/CLR)
+## <a name="priority_queuedifference_type-stlclr"></a><a name="difference_type"></a> priority_queue::d ifference_type (STL/CLR)
 
 Типы расстояния со знаком между двумя элементами.
 
@@ -359,7 +359,7 @@ pushing 2 = -2
 popping 3 = 3
 ```
 
-## <a name="priority_queueempty-stlclr"></a><a name="empty"></a>priority_queue:: Empty (STL/CLR)
+## <a name="priority_queueempty-stlclr"></a><a name="empty"></a> priority_queue:: Empty (STL/CLR)
 
 Проверяет отсутствие элементов.
 
@@ -371,7 +371,7 @@ bool empty();
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция-член возвращает значение true для пустой управляемой последовательности. Он эквивалентен [priority_queue:: size (STL/CLR)](../dotnet/priority-queue-size-stl-clr.md) `() == 0` . Он используется для проверки того, является ли priority_queue пустым.
+Эта функция-член возвращает значение true для пустой управляемой последовательности. Он эквивалентен [priority_queue:: size (STL/CLR)](#size) `() == 0` . Он используется для проверки того, является ли priority_queue пустым.
 
 ### <a name="example"></a>Пример
 
@@ -413,7 +413,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="priority_queuegeneric_container-stlclr"></a><a name="generic_container"></a>priority_queue:: generic_container (STL/CLR)
+## <a name="priority_queuegeneric_container-stlclr"></a><a name="generic_container"></a> priority_queue:: generic_container (STL/CLR)
 
 Тип универсального интерфейса для контейнера.
 
@@ -476,7 +476,7 @@ d c b a
 e d b a c
 ```
 
-## <a name="priority_queuegeneric_value-stlclr"></a><a name="generic_value"></a>priority_queue:: generic_value (STL/CLR)
+## <a name="priority_queuegeneric_value-stlclr"></a><a name="generic_value"></a> priority_queue:: generic_value (STL/CLR)
 
 Тип элемента для использования с универсальным интерфейсом для контейнера.
 
@@ -534,7 +534,7 @@ c a b
 c b a
 ```
 
-## <a name="priority_queueget_container-stlclr"></a><a name="get_container"></a>priority_queue:: get_container (STL/CLR)
+## <a name="priority_queueget_container-stlclr"></a><a name="get_container"></a> priority_queue:: get_container (STL/CLR)
 
 Осуществляет доступ к базовому контейнеру.
 
@@ -575,7 +575,7 @@ int main()
 c a b
 ```
 
-## <a name="priority_queueoperator-stlclr"></a><a name="op_as"></a>priority_queue:: operator = (STL/CLR)
+## <a name="priority_queueoperator-stlclr"></a><a name="op_as"></a> priority_queue:: operator = (STL/CLR)
 
 Заменяет управляемую последовательность.
 
@@ -629,7 +629,7 @@ c a b
 c a b
 ```
 
-## <a name="priority_queuepop-stlclr"></a><a name="pop"></a>priority_queue::p op (STL/CLR)
+## <a name="priority_queuepop-stlclr"></a><a name="pop"></a> priority_queue::p op (STL/CLR)
 
 Удаляет элемент с наибольшим проирити.
 
@@ -677,7 +677,7 @@ c a b
 b a
 ```
 
-## <a name="priority_queuepriority_queue-stlclr"></a><a name="priority_queue"></a>priority_queue::p riority_queue (STL/CLR)
+## <a name="priority_queuepriority_queue-stlclr"></a><a name="priority_queue"></a> priority_queue::p riority_queue (STL/CLR)
 
 Конструирует объект адаптера контейнера.
 
@@ -864,7 +864,7 @@ c a b
 a c b
 ```
 
-## <a name="priority_queuepush-stlclr"></a><a name="push"></a>priority_queue::p тельную (STL/CLR)
+## <a name="priority_queuepush-stlclr"></a><a name="push"></a> priority_queue::p тельную (STL/CLR)
 
 Добавляет новый элемент.
 
@@ -905,7 +905,7 @@ int main()
 c a b
 ```
 
-## <a name="priority_queuereference-stlclr"></a><a name="reference"></a>priority_queue:: Reference (STL/CLR)
+## <a name="priority_queuereference-stlclr"></a><a name="reference"></a> priority_queue:: Reference (STL/CLR)
 
 Тип ссылки на элемент.
 
@@ -954,7 +954,7 @@ c a b
 x a b
 ```
 
-## <a name="priority_queuesize-stlclr"></a><a name="size"></a>priority_queue:: size (STL/CLR)
+## <a name="priority_queuesize-stlclr"></a><a name="size"></a> priority_queue:: size (STL/CLR)
 
 Подсчитывает количество элементов.
 
@@ -966,7 +966,7 @@ size_type size();
 
 ### <a name="remarks"></a>Remarks
 
-Функция-член возвращает длину управляемой последовательности. Он используется для определения количества элементов, находящихся в настоящий момент в управляемой последовательности. Если вас интересует только то, имеет ли последовательность ненулевой размер, см. раздел [priority_queue:: Empty (STL/CLR)](../dotnet/priority-queue-empty-stl-clr.md) `()` .
+Функция-член возвращает длину управляемой последовательности. Он используется для определения количества элементов, находящихся в настоящий момент в управляемой последовательности. Если вас интересует только то, имеет ли последовательность ненулевой размер, см. раздел [priority_queue:: Empty (STL/CLR)](#empty) `()` .
 
 ### <a name="example"></a>Пример
 
@@ -1008,7 +1008,7 @@ size() = 2 after popping
 size() = 4 after adding 2
 ```
 
-## <a name="priority_queuesize_type-stlclr"></a><a name="size_type"></a>priority_queue:: size_type (STL/CLR)
+## <a name="priority_queuesize_type-stlclr"></a><a name="size_type"></a> priority_queue:: size_type (STL/CLR)
 
 Тип расстояния со знаком между двумя элементами.
 
@@ -1057,7 +1057,7 @@ c a b
 size difference = 2
 ```
 
-## <a name="priority_queueto_array-stlclr"></a><a name="to_array"></a>priority_queue:: to_array (STL/CLR)
+## <a name="priority_queueto_array-stlclr"></a><a name="to_array"></a> priority_queue:: to_array (STL/CLR)
 
 Копирует управляемую последовательность в новый массив.
 
@@ -1107,7 +1107,7 @@ d c b a
 c a b
 ```
 
-## <a name="priority_queuetop-stlclr"></a><a name="top"></a>priority_queue:: Top (STL/CLR)
+## <a name="priority_queuetop-stlclr"></a><a name="top"></a> priority_queue:: Top (STL/CLR)
 
 Обращается к элементу с самым высоким приоритетом.
 
@@ -1153,7 +1153,7 @@ int main()
     }
 ```
 
-## <a name="priority_queuetop_item-stlclr"></a><a name="top_item"></a>priority_queue:: top_item (STL/CLR)
+## <a name="priority_queuetop_item-stlclr"></a><a name="top_item"></a> priority_queue:: top_item (STL/CLR)
 
 Обращается к элементу с самым высоким приоритетом.
 
@@ -1205,7 +1205,7 @@ top_item = c
 x a b
 ```
 
-## <a name="priority_queuevalue_comp-stlclr"></a><a name="value_comp"></a>priority_queue:: value_comp (STL/CLR)
+## <a name="priority_queuevalue_comp-stlclr"></a><a name="value_comp"></a> priority_queue:: value_comp (STL/CLR)
 
 Копирует делегат упорядочения для двух элементов.
 
@@ -1264,7 +1264,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="priority_queuevalue_compare-stlclr"></a><a name="value_compare"></a>priority_queue:: value_compare (STL/CLR)
+## <a name="priority_queuevalue_compare-stlclr"></a><a name="value_compare"></a> priority_queue:: value_compare (STL/CLR)
 
 Делегат упорядочивания для двух значений.
 
@@ -1323,7 +1323,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="priority_queuevalue_type-stlclr"></a><a name="value_type"></a>priority_queue:: value_type (STL/CLR)
+## <a name="priority_queuevalue_type-stlclr"></a><a name="value_type"></a> priority_queue:: value_type (STL/CLR)
 
 Тип элемента.
 

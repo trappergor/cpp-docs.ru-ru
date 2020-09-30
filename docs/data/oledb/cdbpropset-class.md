@@ -32,12 +32,12 @@ helpviewer_keywords:
 - SetGUID method
 - AddProperty method
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
-ms.openlocfilehash: 48aa2e3e26bed7c9306ca3005231e464d7b7555b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 45772896cac520eba35ec475f8b6ae7bd2993045
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838261"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502466"
 ---
 # <a name="cdbpropset-class"></a>Класс CDBPropSet
 
@@ -65,7 +65,7 @@ class CDBPropSet : public tagDBPROPSET
 
 ### <a name="operators"></a>Операторы
 
-| Имя | Описание |
+| Название | Описание |
 |-|-|
 |[Оператор =](#op_equal)|Присваивает содержимому одного свойства значение другого.|
 
@@ -163,7 +163,7 @@ void SetGUID(const GUID& guid) throw();
 
 ### <a name="remarks"></a>Remarks
 
-Это поле также может быть задано [конструктором](../../data/oledb/cdbpropset-cdbpropset.md) .
+Это поле также может быть задано [конструктором](#cdbpropset) .
 
 ## <a name="cdbpropsetoperator-"></a><a name="op_equal"></a> Кдбпропсет:: operator =
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dynamic column binding
 - providers [C++], dynamic column binding
 ms.assetid: 45e811e3-f5a7-4627-98cc-bf817c4e556e
-ms.openlocfilehash: 8a0b4c399bf25137be86d95102da9723c3116d51
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3eee52004e1418b3e756a78c8c2a04040d0bd7ff
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210981"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501857"
 ---
 # <a name="dynamically-binding-columns-in-your-provider"></a>Динамическое связывание столбцов в поставщике
 
@@ -23,7 +23,7 @@ ms.locfileid: "80210981"
 
 ## <a name="to-implement-dynamic-column-binding"></a>Реализация динамической привязки столбцов
 
-1. Удалите все `PROVIDER_COLUMN_MAP`s из кода.
+1. Удалите все `PROVIDER_COLUMN_MAP` элементы из кода.
 
 1. В записи пользователя (структура) добавьте следующее объявление:
 
@@ -31,9 +31,9 @@ ms.locfileid: "80210981"
     static ATLCOLUMNINFO* GetColumnInfo(void* pThis, ULONG* pcCols);
     ```
 
-1. Реализуйте функцию `GetColumnInfo`. Эта функция размещает сведения о том, как хранятся данные. Для этой функции может потребоваться получить свойства или другую информацию. Для добавления собственной информации может потребоваться создать макрос, аналогичный макросу [COLUMN_ENTRY](../../data/oledb/column-entry.md) .
+1. Реализуйте `GetColumnInfo` функцию. Эта функция размещает сведения о том, как хранятся данные. Для этой функции может потребоваться получить свойства или другую информацию. Для добавления собственной информации может потребоваться создать макрос, аналогичный макросу [COLUMN_ENTRY](./macros-and-global-functions-for-ole-db-consumer-templates.md#column_entry) .
 
-   В следующем примере показана функция `GetColumnInfo`.
+   В следующем примере показана `GetColumnInfo` функция.
 
     ```cpp
     // Check the property flag for bookmarks, if it is set, set the zero

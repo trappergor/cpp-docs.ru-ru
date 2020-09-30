@@ -51,12 +51,12 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: c88554d717888719ad6d805a2871489ce4b0df32
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2f2d3938d63e5e67fc501d52d269c06f6b144ac8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845592"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501822"
 ---
 # <a name="icommandimpl-class"></a>Класс ICommandImpl
 
@@ -96,7 +96,7 @@ class ATL_NO_VTABLE ICommandImpl : public CommandBase
 
 ### <a name="data-members"></a>Элементы данных
 
-| Имя | Описание |
+| Название | Описание |
 |-|-|
 |[m_bCancel](#bcancel)|Указывает, должна ли команда быть отменена.|
 |[m_bCancelWhenExecuting](#bcancelwhenexecuting)|Указывает, должна ли команда быть отменена при выполнении.|
@@ -132,7 +132,7 @@ HRESULT CancelExecution();
 
 ## <a name="icommandimplcreaterowset"></a><a name="createrowset"></a> ICommandImpl:: CreateRowset
 
-Вызывается инструкцией [EXECUTE](../../data/oledb/icommandimpl-execute.md) для создания одного набора строк.
+Вызывается инструкцией [EXECUTE](#execute) для создания одного набора строк.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -201,7 +201,7 @@ HRESULT Execute(IUnknown* pUnkOuter,
 
 Запрошенный исходящий интерфейс будет интерфейсом, полученным из объекта набора строк, создаваемого этой функцией.
 
-`Execute` вызывает [CreateRowset](../../data/oledb/icommandimpl-createrowset.md). Переопределите реализацию по умолчанию, чтобы создать более одного набора строк или предоставить собственные условия для создания различных наборов строк.
+`Execute` вызывает [CreateRowset](#createrowset). Переопределите реализацию по умолчанию, чтобы создать более одного набора строк или предоставить собственные условия для создания различных наборов строк.
 
 ## <a name="icommandimplgetdbsession"></a><a name="getdbsession"></a> ICommandImpl:: Жетдбсессион
 

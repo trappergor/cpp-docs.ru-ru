@@ -31,16 +31,16 @@ helpviewer_keywords:
 - operator=, property sets
 - SetGUID method
 ms.assetid: 52bb806c-9581-494d-9af7-50d8a4834805
-ms.openlocfilehash: 24cc621e522ed1939fe3127d97e8d54b75fa1618
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4de218188326dad434c5b0d355a3a15d39bb576c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838299"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502499"
 ---
 # <a name="cdbpropidset-class"></a>Класс CDBPropIDSet
 
-Наследует от `DBPROPIDSET` структуры и добавляет конструктор, который инициализирует ключевые поля, а также метод доступа [аддпропертид](../../data/oledb/cdbpropidset-addpropertyid.md) .
+Наследует от `DBPROPIDSET` структуры и добавляет конструктор, который инициализирует ключевые поля, а также метод доступа [аддпропертид](#addpropertyid) .
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -64,7 +64,7 @@ class CDBPropIDSet : public tagDBPROPIDSET
 
 ### <a name="operators"></a>Операторы
 
-| Имя | Описание |
+| Название | Описание |
 |-|-|
 |[Оператор =](#op_equal)|Присваивает содержимому одного идентификатора свойства другое значение.|
 
@@ -126,7 +126,7 @@ void SetGUID(const GUID& guid) throw();
 
 ### <a name="remarks"></a>Remarks
 
-Это поле также может быть задано [конструктором](../../data/oledb/cdbpropidset-cdbpropidset.md) . Вызывайте эту функцию, если для этого класса используется конструктор по умолчанию.
+Это поле также может быть задано [конструктором](#cdbpropidset) . Вызывайте эту функцию, если для этого класса используется конструктор по умолчанию.
 
 ## <a name="cdbpropidsetoperator-"></a><a name="op_equal"></a> Кдбпропидсет:: operator =
 

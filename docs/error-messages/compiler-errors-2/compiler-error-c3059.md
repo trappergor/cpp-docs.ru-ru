@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3059
 ms.assetid: 57220324-8286-4cab-a1ab-45385eb1eae0
-ms.openlocfilehash: 897ed2beb7634cec787f0776616d9a60596a979f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 9b1efc0969373b6a91b0800ae71477b2371814bb
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756465"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501442"
 ---
 # <a name="compiler-error-c3059"></a>Ошибка компилятора C3059
 
 var: символ threadprivate нельзя использовать в предложении "предложение"
 
-Символ [threadprivate](../../parallel/openmp/reference/threadprivate.md) использовался в предложении.
+Символ [threadprivate](../../parallel/openmp/reference/openmp-directives.md#threadprivate) использовался в предложении.
 
 В следующем примере возникает ошибка C3059:
 
@@ -36,7 +36,7 @@ int main() {
 }
 ```
 
-Возможное решение
+Возможное решение:
 
 ```cpp
 // C3059b.cpp

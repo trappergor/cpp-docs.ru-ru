@@ -91,12 +91,12 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 - vector member [STL/CLR]
 ms.assetid: f90060d5-097a-4e9d-9a26-a634b5b9c6c2
-ms.openlocfilehash: a01025732699e755a624d7f67071f575ac52ec96
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9abecfa6e0bbdf74514e2b7162d1d22a84fa01b2
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214845"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502416"
 ---
 # <a name="vector-stlclr"></a>vector (STL/CLR)
 
@@ -122,7 +122,7 @@ template<typename Value>
 
 ### <a name="parameters"></a>Параметры
 
-*Value*<br/>
+*Значение*<br/>
 Тип элемента в управляемой последовательности.
 
 ## <a name="requirements"></a>Требования
@@ -215,7 +215,7 @@ template<typename Value>
 
 ## <a name="members"></a>Элементы
 
-## <a name="vectorassign-stlclr"></a><a name="assign"></a>Vector:: Assign (STL/CLR)
+## <a name="vectorassign-stlclr"></a><a name="assign"></a> Vector:: Assign (STL/CLR)
 
 Заменяет все элементы.
 
@@ -296,7 +296,7 @@ a b
 a b c
 ```
 
-## <a name="vectorat-stlclr"></a><a name="at"></a>Vector:: at (STL/CLR)
+## <a name="vectorat-stlclr"></a><a name="at"></a> Vector:: at (STL/CLR)
 
 Обращается к элементу в указанной позиции.
 
@@ -348,7 +348,7 @@ a b c
 a x c
 ```
 
-## <a name="vectorback-stlclr"></a><a name="back"></a>вектор:: Back (STL/CLR)
+## <a name="vectorback-stlclr"></a><a name="back"></a> вектор:: Back (STL/CLR)
 
 Обращается к последнему элементу.
 
@@ -399,7 +399,7 @@ back() = c
 a b x
 ```
 
-## <a name="vectorback_item-stlclr"></a><a name="back_item"></a>Vector:: back_item (STL/CLR)
+## <a name="vectorback_item-stlclr"></a><a name="back_item"></a> Vector:: back_item (STL/CLR)
 
 Обращается к последнему элементу.
 
@@ -450,7 +450,7 @@ back_item = c
 a b x
 ```
 
-## <a name="vectorbegin-stlclr"></a><a name="begin"></a>вектор:: Begin (STL/CLR)
+## <a name="vectorbegin-stlclr"></a><a name="begin"></a> вектор:: Begin (STL/CLR)
 
 Задает начало управляемой последовательности.
 
@@ -505,7 +505,7 @@ a b c
 x y c
 ```
 
-## <a name="vectorcapacity-stlclr"></a><a name="capacity"></a>вектор:: Capacity (STL/CLR)
+## <a name="vectorcapacity-stlclr"></a><a name="capacity"></a> вектор:: Capacity (STL/CLR)
 
 Возвращает объем пространства, выделенного для хранения контейнера.
 
@@ -517,7 +517,7 @@ size_type capacity();
 
 ### <a name="remarks"></a>Remarks
 
-Функция-член возвращает хранилище, выделенное в настоящий момент для хранения управляемой последовательности, значение по крайней мере равное [вектору:: size (STL/CLR)](../dotnet/vector-size-stl-clr.md) `()` . Он используется для определения того, насколько может расти контейнер, прежде чем он должен будет перераспределить хранилище для управляемой последовательности.
+Функция-член возвращает хранилище, выделенное в настоящий момент для хранения управляемой последовательности, значение по крайней мере равное [вектору:: size (STL/CLR)](#size) `()` . Он используется для определения того, насколько может расти контейнер, прежде чем он должен будет перераспределить хранилище для управляемой последовательности.
 
 ### <a name="example"></a>Пример
 
@@ -555,7 +555,7 @@ capacity() = 4, ok = True
 capacity() = 9, ok = True
 ```
 
-## <a name="vectorclear-stlclr"></a><a name="clear"></a>Vector:: Clear (STL/CLR)
+## <a name="vectorclear-stlclr"></a><a name="clear"></a> Vector:: Clear (STL/CLR)
 
 Удаляет все элементы.
 
@@ -567,7 +567,7 @@ void clear();
 
 ### <a name="remarks"></a>Remarks
 
-Функция-член фактически вызывает метод [vector:: стирания (STL/CLR)](../dotnet/vector-erase-stl-clr.md) `(` [vector:: Begin (STL/CLR)](../dotnet/vector-begin-stl-clr.md) `(),` [vector:: end (STL/CLR)](../dotnet/vector-end-stl-clr.md) `())` . Он используется, чтобы гарантировать, что управляемая последовательность пуста.
+Функция-член фактически вызывает метод [vector:: стирания (STL/CLR)](#erase) `(` [vector:: Begin (STL/CLR)](#begin) `(),` [vector:: end (STL/CLR)](#end) `())` . Он используется, чтобы гарантировать, что управляемая последовательность пуста.
 
 ### <a name="example"></a>Пример
 
@@ -612,7 +612,7 @@ a b
 size() = 0
 ```
 
-## <a name="vectorconst_iterator-stlclr"></a><a name="const_iterator"></a>Vector:: const_iterator (STL/CLR)
+## <a name="vectorconst_iterator-stlclr"></a><a name="const_iterator"></a> Vector:: const_iterator (STL/CLR)
 
 Тип постоянного итератора для управляемой последовательности.
 
@@ -653,7 +653,7 @@ int main()
 a b c
 ```
 
-## <a name="vectorconst_reference-stlclr"></a><a name="const_reference"></a>Vector:: const_reference (STL/CLR)
+## <a name="vectorconst_reference-stlclr"></a><a name="const_reference"></a> Vector:: const_reference (STL/CLR)
 
 Тип постоянной ссылки на элемент.
 
@@ -697,7 +697,7 @@ int main()
 a b c
 ```
 
-## <a name="vectorconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>Vector:: const_reverse_iterator (STL/CLR)
+## <a name="vectorconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a> Vector:: const_reverse_iterator (STL/CLR)
 
 Тип константного реверсивного итератора для управляемой последовательности.
 
@@ -739,7 +739,7 @@ int main()
 c b a
 ```
 
-## <a name="vectordifference_type-stlclr"></a><a name="difference_type"></a>Vector::d ifference_type (STL/CLR)
+## <a name="vectordifference_type-stlclr"></a><a name="difference_type"></a> Vector::d ifference_type (STL/CLR)
 
 Типы расстояния со знаком между двумя элементами.
 
@@ -793,7 +793,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="vectorempty-stlclr"></a><a name="empty"></a>Vector:: Empty (STL/CLR)
+## <a name="vectorempty-stlclr"></a><a name="empty"></a> Vector:: Empty (STL/CLR)
 
 Проверяет отсутствие элементов.
 
@@ -805,7 +805,7 @@ bool empty();
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция-член возвращает значение true для пустой управляемой последовательности. Он эквивалентен [вектору:: size (STL/CLR)](../dotnet/vector-size-stl-clr.md) `() == 0` . Он используется для проверки, является ли вектор пустым.
+Эта функция-член возвращает значение true для пустой управляемой последовательности. Он эквивалентен [вектору:: size (STL/CLR)](#size) `() == 0` . Он используется для проверки, является ли вектор пустым.
 
 ### <a name="example"></a>Пример
 
@@ -844,7 +844,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="vectorend-stlclr"></a><a name="end"></a>Vector:: end (STL/CLR)
+## <a name="vectorend-stlclr"></a><a name="end"></a> Vector:: end (STL/CLR)
 
 Задает конец управляемой последовательности.
 
@@ -900,7 +900,7 @@ a b c
 a x y
 ```
 
-## <a name="vectorerase-stlclr"></a><a name="erase"></a>Vector:: Erase (STL/CLR)
+## <a name="vectorerase-stlclr"></a><a name="erase"></a> Vector:: Erase (STL/CLR)
 
 Удаляет элементы в указанных позициях.
 
@@ -928,7 +928,7 @@ iterator erase(iterator first, iterator last);
 
 Вторая функция-член удаляет элементы управляемой последовательности в диапазоне [`first`, `last`). Он используется для удаления непрерывных или более смежных элементов.
 
-Обе функции-члены возвращают итератор, который обозначает первый элемент, оставшийся после удаления элементов, или [vector:: end (STL/CLR)](../dotnet/vector-end-stl-clr.md) , `()` Если такого элемента не существует.
+Обе функции-члены возвращают итератор, который обозначает первый элемент, оставшийся после удаления элементов, или [vector:: end (STL/CLR)](#end) , `()` Если такого элемента не существует.
 
 При удалении элементов число копий элементов линейно в числе элементов между концом очистки и ближайшим концом последовательности. (При удалении одного или нескольких элементов в любом конце последовательности не происходит копирования элементов.)
 
@@ -979,7 +979,7 @@ erase(begin(), end()-1) = e
 size() = 1
 ```
 
-## <a name="vectorfront-stlclr"></a><a name="front"></a>вектор:: Front (STL/CLR)
+## <a name="vectorfront-stlclr"></a><a name="front"></a> вектор:: Front (STL/CLR)
 
 Обращается к первому элементу.
 
@@ -1030,7 +1030,7 @@ front() = a
 x b c
 ```
 
-## <a name="vectorfront_item-stlclr"></a><a name="front_item"></a>Vector:: front_item (STL/CLR)
+## <a name="vectorfront_item-stlclr"></a><a name="front_item"></a> Vector:: front_item (STL/CLR)
 
 Обращается к первому элементу.
 
@@ -1081,7 +1081,7 @@ front_item = a
 x b c
 ```
 
-## <a name="vectorgeneric_container-stlclr"></a><a name="generic_container"></a>Vector:: generic_container (STL/CLR)
+## <a name="vectorgeneric_container-stlclr"></a><a name="generic_container"></a> Vector:: generic_container (STL/CLR)
 
 Тип универсального интерфейса для контейнера.
 
@@ -1147,7 +1147,7 @@ a b c d
 a b c d e
 ```
 
-## <a name="vectorgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>Vector:: generic_iterator (STL/CLR)
+## <a name="vectorgeneric_iterator-stlclr"></a><a name="generic_iterator"></a> Vector:: generic_iterator (STL/CLR)
 
 Тип итератора для использования с универсальным интерфейсом для контейнера.
 
@@ -1205,7 +1205,7 @@ a b c
 a a c
 ```
 
-## <a name="vectorgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>Vector:: generic_reverse_iterator (STL/CLR)
+## <a name="vectorgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a> Vector:: generic_reverse_iterator (STL/CLR)
 
 Тип реверсивного итератора для использования с универсальным интерфейсом для контейнера.
 
@@ -1262,7 +1262,7 @@ a b c
 a c c
 ```
 
-## <a name="vectorgeneric_value-stlclr"></a><a name="generic_value"></a>Vector:: generic_value (STL/CLR)
+## <a name="vectorgeneric_value-stlclr"></a><a name="generic_value"></a> Vector:: generic_value (STL/CLR)
 
 Тип элемента для использования с универсальным интерфейсом для контейнера.
 
@@ -1318,7 +1318,7 @@ a b c
 a a c
 ```
 
-## <a name="vectorinsert-stlclr"></a><a name="insert"></a>Vector:: Insert (STL/CLR)
+## <a name="vectorinsert-stlclr"></a><a name="insert"></a> Vector:: Insert (STL/CLR)
 
 Добавляет элементы в указанную позиции.
 
@@ -1427,7 +1427,7 @@ y y a x b
 a x b c y y a x b
 ```
 
-## <a name="vectoriterator-stlclr"></a><a name="iterator"></a>Vector:: итератор (STL/CLR)
+## <a name="vectoriterator-stlclr"></a><a name="iterator"></a> Vector:: итератор (STL/CLR)
 
 Тип итератора для управляемой последовательности.
 
@@ -1476,7 +1476,7 @@ a b c
 x b c
 ```
 
-## <a name="vectoroperator-stlclr"></a><a name="op_as"></a>Vector:: operator = (STL/CLR)
+## <a name="vectoroperator-stlclr"></a><a name="op_as"></a> Vector:: operator = (STL/CLR)
 
 Заменяет управляемую последовательность.
 
@@ -1529,7 +1529,7 @@ a b c
 a b c
 ```
 
-## <a name="vectoroperatorstlclr"></a><a name="op"></a>Vector:: оператор (STL/CLR)
+## <a name="vectoroperatorstlclr"></a><a name="op"></a> Vector:: оператор (STL/CLR)
 
 Обращается к элементу в указанной позиции.
 
@@ -1581,7 +1581,7 @@ a b c
 a x c
 ```
 
-## <a name="vectorpop_back-stlclr"></a><a name="pop_back"></a>Vector::p op_back (STL/CLR)
+## <a name="vectorpop_back-stlclr"></a><a name="pop_back"></a> Vector::p op_back (STL/CLR)
 
 Удаляет последний элемент.
 
@@ -1628,7 +1628,7 @@ a b c
 a b
 ```
 
-## <a name="vectorpush_back-stlclr"></a><a name="push_back"></a>Vector::p ush_back (STL/CLR)
+## <a name="vectorpush_back-stlclr"></a><a name="push_back"></a> Vector::p ush_back (STL/CLR)
 
 Добавляет новый последний элемент.
 
@@ -1668,7 +1668,7 @@ int main()
 a b c
 ```
 
-## <a name="vectorrbegin-stlclr"></a><a name="rbegin"></a>Vector:: rbegin (STL/CLR)
+## <a name="vectorrbegin-stlclr"></a><a name="rbegin"></a> Vector:: rbegin (STL/CLR)
 
 Задает начало обратной управляемой последовательности.
 
@@ -1723,7 +1723,7 @@ a b c
 a y x
 ```
 
-## <a name="vectorreference-stlclr"></a><a name="reference"></a>Vector:: Reference (STL/CLR)
+## <a name="vectorreference-stlclr"></a><a name="reference"></a> Vector:: Reference (STL/CLR)
 
 Тип ссылки на элемент.
 
@@ -1778,7 +1778,7 @@ a b c
 A B C
 ```
 
-## <a name="vectorrend-stlclr"></a><a name="rend"></a>Vector:: rend (STL/CLR)
+## <a name="vectorrend-stlclr"></a><a name="rend"></a> Vector:: rend (STL/CLR)
 
 Задает конец обратной управляемой последовательности.
 
@@ -1834,7 +1834,7 @@ a b c
 y x c
 ```
 
-## <a name="vectorreserve-stlclr"></a><a name="reserve"></a>Vector:: Reserve (STL/CLR)
+## <a name="vectorreserve-stlclr"></a><a name="reserve"></a> Vector:: Reserve (STL/CLR)
 
 Обеспечивает минимальный объем роста для контейнера.
 
@@ -1889,7 +1889,7 @@ capacity() = 4, ok = True
 capacity() = 9, ok = True
 ```
 
-## <a name="vectorresize-stlclr"></a><a name="resize"></a>Vector:: изменение размера (STL/CLR)
+## <a name="vectorresize-stlclr"></a><a name="resize"></a> Vector:: изменение размера (STL/CLR)
 
 Изменяет количество элементов.
 
@@ -1910,7 +1910,7 @@ void resize(size_type new_size, value_type val);
 
 ### <a name="remarks"></a>Remarks
 
-Функции-члены гарантируют, что метод [vector:: size (STL/CLR)](../dotnet/vector-size-stl-clr.md) `()` исходя этого возвращает *new_size*. Если необходимо, чтобы управляемая последовательность была длиннее, первая функция члена добавляет элементы со значением `value_type()` , а вторая функция – добавляет элементы со значением *Val*. Чтобы сделать управляемую последовательность короче, обе функции-члены фактически удаляют время последнего элемента [vector:: size (STL/CLR)](../dotnet/vector-size-stl-clr.md) `() -` `new_size` . Он используется для обеспечения *new_size*размера управляемой последовательности путем усечения или заполнения текущей управляемой последовательности.
+Функции-члены гарантируют, что метод [vector:: size (STL/CLR)](#size) `()` исходя этого возвращает *new_size*. Если необходимо, чтобы управляемая последовательность была длиннее, первая функция члена добавляет элементы со значением `value_type()` , а вторая функция – добавляет элементы со значением *Val*. Чтобы сделать управляемую последовательность короче, обе функции-члены фактически удаляют время последнего элемента [vector:: size (STL/CLR)](#size) `() -` `new_size` . Он используется для обеспечения *new_size*размера управляемой последовательности путем усечения или заполнения текущей управляемой последовательности.
 
 ### <a name="example"></a>Пример
 
@@ -1949,7 +1949,7 @@ size() = 0
 x x x x x
 ```
 
-## <a name="vectorreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>Vector:: reverse_iterator (STL/CLR)
+## <a name="vectorreverse_iterator-stlclr"></a><a name="reverse_iterator"></a> Vector:: reverse_iterator (STL/CLR)
 
 Тип обратного итератора для управляемой последовательности.
 
@@ -1998,7 +1998,7 @@ c b a
 x b a
 ```
 
-## <a name="vectorsize-stlclr"></a><a name="size"></a>вектор:: size (STL/CLR)
+## <a name="vectorsize-stlclr"></a><a name="size"></a> вектор:: size (STL/CLR)
 
 Подсчитывает количество элементов.
 
@@ -2010,7 +2010,7 @@ size_type size();
 
 ### <a name="remarks"></a>Remarks
 
-Функция-член возвращает длину управляемой последовательности. Он используется для определения количества элементов, находящихся в настоящий момент в управляемой последовательности. Если вас интересует только то, имеет ли последовательность ненулевой размер, см. раздел [vector:: Empty (STL/CLR)](../dotnet/vector-empty-stl-clr.md) `()` .
+Функция-член возвращает длину управляемой последовательности. Он используется для определения количества элементов, находящихся в настоящий момент в управляемой последовательности. Если вас интересует только то, имеет ли последовательность ненулевой размер, см. раздел [vector:: Empty (STL/CLR)](#empty) `()` .
 
 ### <a name="example"></a>Пример
 
@@ -2051,7 +2051,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="vectorsize_type-stlclr"></a><a name="size_type"></a>Vector:: size_type (STL/CLR)
+## <a name="vectorsize_type-stlclr"></a><a name="size_type"></a> Vector:: size_type (STL/CLR)
 
 Тип расстояния со знаком между двумя элементами.
 
@@ -2096,7 +2096,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="vectorswap-stlclr"></a><a name="swap"></a>Vector:: Swap (STL/CLR)
+## <a name="vectorswap-stlclr"></a><a name="swap"></a> Vector:: Swap (STL/CLR)
 
 Меняет местами содержимое двух контейнеров.
 
@@ -2160,7 +2160,7 @@ x x x x x
 a b c
 ```
 
-## <a name="vectorto_array-stlclr"></a><a name="to_array"></a>Vector:: to_array (STL/CLR)
+## <a name="vectorto_array-stlclr"></a><a name="to_array"></a> Vector:: to_array (STL/CLR)
 
 Копирует управляемую последовательность в новый массив.
 
@@ -2209,7 +2209,7 @@ a b c d
 a b c
 ```
 
-## <a name="vectorvalue_type-stlclr"></a><a name="value_type"></a>Vector:: value_type (STL/CLR)
+## <a name="vectorvalue_type-stlclr"></a><a name="value_type"></a> Vector:: value_type (STL/CLR)
 
 Тип элемента.
 
@@ -2254,7 +2254,7 @@ int main()
 a b c
 ```
 
-## <a name="vectorvector-stlclr"></a><a name="vector"></a>Vector:: Vector (STL/CLR)
+## <a name="vectorvector-stlclr"></a><a name="vector"></a> Vector:: Vector (STL/CLR)
 
 Создает объект контейнера.
 
@@ -2399,7 +2399,7 @@ x x x x x x
 x x x x x x
 ```
 
-## <a name="operator-vector-stlclr"></a><a name="op_neq"></a>operator! = (вектор) (STL/CLR)
+## <a name="operator-vector-stlclr"></a><a name="op_neq"></a> operator! = (вектор) (STL/CLR)
 
 Сравнение векторного и неравенства.
 
@@ -2468,7 +2468,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="operatorlt-vector-stlclr"></a><a name="op_lt"></a>Оператор &lt; (Vector) (STL/CLR)
+## <a name="operatorlt-vector-stlclr"></a><a name="op_lt"></a> Оператор &lt; (Vector) (STL/CLR)
 
 Vector меньше, чем сравнение.
 
@@ -2537,7 +2537,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="operatorlt-vector-stlclr"></a><a name="op_lteq"></a>Оператор &lt; = (Vector) (STL/CLR)
+## <a name="operatorlt-vector-stlclr"></a><a name="op_lteq"></a> Оператор &lt; = (Vector) (STL/CLR)
 
 Сравнение с вектором "меньше или равно".
 
@@ -2606,7 +2606,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="operator-vector-stlclr"></a><a name="op_eq"></a>оператор = = (Vector) (STL/CLR)
+## <a name="operator-vector-stlclr"></a><a name="op_eq"></a> оператор = = (Vector) (STL/CLR)
 
 Сравнение векторно равного.
 
@@ -2675,7 +2675,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="operatorgt-vector-stlclr"></a><a name="op_gt"></a>Оператор &gt; (Vector) (STL/CLR)
+## <a name="operatorgt-vector-stlclr"></a><a name="op_gt"></a> Оператор &gt; (Vector) (STL/CLR)
 
 Вектор больше, чем сравнение.
 
@@ -2744,7 +2744,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="operatorgt-vector-stlclr"></a><a name="op_gteq"></a>Оператор &gt; = (Vector) (STL/CLR)
+## <a name="operatorgt-vector-stlclr"></a><a name="op_gteq"></a> Оператор &gt; = (Vector) (STL/CLR)
 
 Сравнение вектора "больше или равно".
 

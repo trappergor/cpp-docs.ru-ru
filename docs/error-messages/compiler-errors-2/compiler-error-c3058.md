@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3058
 ms.assetid: 669d08c8-0b58-4351-88aa-c6e6e1af481c
-ms.openlocfilehash: 618c9bd127a4e8a11cd858ab9642a5c52eee8d30
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 2c0615f78bf9068311ec691f70c4c1a60ef728b0
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761132"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501480"
 ---
 # <a name="compiler-error-c3058"></a>Ошибка компилятора C3058
 
 "символ": символ не объявлен как threadprivate до его использования в предложении copyin
 
-Символ нужно сначала объявить как [threadprivate](../../parallel/openmp/reference/threadprivate.md) перед тем, как его можно будет использовать в предложении [copyin](../../parallel/openmp/reference/copyin.md) .
+Символ нужно сначала объявить как [threadprivate](../../parallel/openmp/reference/openmp-directives.md#threadprivate) перед тем, как его можно будет использовать в предложении [copyin](../../parallel/openmp/reference/openmp-clauses.md#copyin) .
 
 При компиляции следующего примера возникнет ошибка C3058:
 
@@ -34,7 +34,7 @@ void test() {
 }
 ```
 
-Возможное решение
+Возможное решение:
 
 ```cpp
 // C3058b.cpp

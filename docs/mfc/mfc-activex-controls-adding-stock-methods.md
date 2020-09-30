@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], methods
 - DoClick method [MFC]
 ms.assetid: bc4fad78-cabd-4cc0-a798-464b1a682f0b
-ms.openlocfilehash: 42d8dfecd32b4aecd0daa4034497ec9abff6d11a
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: b4b01e4fb202cfd7a923d22cb57ce5ec6988e11d
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619942"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502291"
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>Элементы управления ActiveX в MFC. Добавление стандартных методов
 
@@ -20,16 +20,16 @@ ms.locfileid: "84619942"
 >[!IMPORTANT]
 > ActiveX — это устаревшая технология, которую не следует использовать для новой разработки. Дополнительные сведения о современных технологиях, которые заменяют ActiveX, см. в разделе [элементы управления ActiveX](activex-controls.md).
 
-`COleControl`поддерживает два метода хранения: DoClick и Refresh. Обновление вызывается пользователем элемента управления для немедленного обновления внешнего вида элемента управления; DoClick вызывается для срабатывания события Click элемента управления.
+`COleControl` поддерживает два метода хранения: DoClick и Refresh. Обновление вызывается пользователем элемента управления для немедленного обновления внешнего вида элемента управления; DoClick вызывается для срабатывания события Click элемента управления.
 
 |Метод|Запись схемы диспетчеризации|Комментировать|
 |------------|------------------------|-------------|
 |`DoClick`|**DISP_STOCKPROP_DOCLICK ()**|Вызывает событие щелчка.|
 |`Refresh`|**DISP_STOCKPROP_REFRESH ()**|Немедленно обновляет внешний вид элемента управления.|
 
-## <a name="adding-a-stock-method-using-the-add-method-wizard"></a><a name="_core_adding_a_stock_method_using_classwizard"></a>Добавление метода акции с помощью мастера добавления метода
+## <a name="adding-a-stock-method-using-the-add-method-wizard"></a><a name="_core_adding_a_stock_method_using_classwizard"></a> Добавление метода акции с помощью мастера добавления метода
 
-Добавление метода акции упрощается с помощью [мастера добавления метода](../ide/add-method-wizard.md). В следующей процедуре показано добавление метода Refresh к элементу управления, созданному с помощью мастера элементов управления ActiveX MFC.
+Добавление метода акции упрощается с помощью [мастера добавления метода](../ide/adding-a-method-visual-cpp.md#add-method-wizard). В следующей процедуре показано добавление метода Refresh к элементу управления, созданному с помощью мастера элементов управления ActiveX MFC.
 
 #### <a name="to-add-the-stock-refresh-method-using-the-add-method-wizard"></a>Добавление метода обновления запасов с помощью мастера добавления метода
 
@@ -47,7 +47,7 @@ ms.locfileid: "84619942"
 
 1. Нажмите кнопку **Готово**.
 
-## <a name="add-method-wizard-changes-for-stock-methods"></a><a name="_core_classwizard_changes_for_stock_methods"></a>Изменение мастера добавления метода для стандартных методов
+## <a name="add-method-wizard-changes-for-stock-methods"></a><a name="_core_classwizard_changes_for_stock_methods"></a> Изменение мастера добавления метода для стандартных методов
 
 Так как метод обновления запасов поддерживается базовым классом элемента управления, **Мастер добавления метода** не изменяет объявление класса элемента управления каким-либо образом. Он добавляет запись для метода в карту диспетчеризации элемента управления и в ее. IDL-файл. Следующая строка добавляется в карту диспетчеризации элемента управления, расположенную в его реализации (. Файл CPP):
 
@@ -63,4 +63,4 @@ ms.locfileid: "84619942"
 
 ## <a name="see-also"></a>См. также раздел
 
-[Элементы ActiveX библиотеки MFC](mfc-activex-controls.md)
+[Элементы управления ActiveX в MFC](mfc-activex-controls.md)
