@@ -7,12 +7,12 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 8bbcc43ef19adfd85a3679a2136d471333a74a10
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a5b13ee08becd472b3bc52319212b84a9c8ffc25
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224101"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508811"
 ---
 # <a name="reference-windows-performance-analyzer-views"></a>Справочные материалы. Представления Windows Performance Analyzer
 
@@ -28,7 +28,7 @@ ms.locfileid: "87224101"
 - описания столбцов данных;
 - доступные предустановки для каждого представления, включая сведения о предполагаемом использовании и предпочтительном режиме просмотра.
 
-Если вы еще не знакомы с WPA, мы рекомендуем сначала узнать об [использовании WPA с Аналитикой сборок C++](/cpp/build-insights/tutorials/wpa-basics).
+Если вы еще не знакомы с WPA, мы рекомендуем сначала узнать об [использовании WPA с Аналитикой сборок C++](../tutorials/wpa-basics.md).
 
 ## <a name="build-explorer"></a>Обозреватель сборок
 
@@ -130,9 +130,9 @@ ms.locfileid: "87224101"
 
 ## <a name="see-also"></a>См. также раздел
 
-[Начало работы с аналитикой сборки C++](/cpp/build-insights/get-started-with-cpp-build-insights)\
+[Начало работы с аналитикой сборки C++](../get-started-with-cpp-build-insights.md)\
 [Справочник: команды vcperf](vcperf-commands.md)\
-[Руководство. Основы использования Windows Performance Analyzer](/cpp/build-insights/tutorials/wpa-basics)\
+[Руководство. Основы использования Windows Performance Analyzer](../tutorials/wpa-basics.md)\
 [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer)
 
 ::: moniker-end
