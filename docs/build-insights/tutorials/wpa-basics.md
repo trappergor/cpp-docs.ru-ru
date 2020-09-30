@@ -7,12 +7,12 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 449fc2ddabc2bcf5b9b9f130a5e6816cdf4bc98d
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 2d4473e3682a6e00e0eef61cb73d7450976bcc0c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90685519"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507723"
 ---
 # <a name="tutorial-windows-performance-analyzer-basics"></a>Руководство. Основы использования Windows Performance Analyzer
 
@@ -59,8 +59,8 @@ WPA предлагает два базовых режима для просмо�
 ## <a name="see-also"></a>См. также раздел
 
 [Руководство. Средство vcperf и Windows Performance Analyzer](vcperf-and-wpa.md)\
-[Справочник: команды vcperf](/cpp/build-insights/reference/vcperf-commands)\
-[Общие сведения Представления Windows Performance Analyzer](/cpp/build-insights/reference/wpa-views)\
+[Справочник: команды vcperf](../reference/vcperf-commands.md)\
+[Общие сведения Представления Windows Performance Analyzer](../reference/wpa-views.md)\
 [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer)
 
 ::: moniker-end

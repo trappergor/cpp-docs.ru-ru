@@ -7,12 +7,12 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: f3a0b4a9c57fd55c6788481adbf91c48e362444e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b82c1f7105b3fd03d8c21dd79617dbc66f3e090c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833404"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507769"
 ---
 # <a name="tutorial-vcperf-and-windows-performance-analyzer"></a>Руководство. Средство vcperf и Windows Performance Analyzer
 
@@ -123,10 +123,10 @@ Windows Performance Analyzer (WPA) — это средство просмотр
 [Учебник. Основы использования Windows Performance Analyzer](wpa-basics.md)\
 Сведения об распространенных операциях WPA, которые могут помочь при анализе трассировок сборки.
 
-[Справочник: команды vcperf](/cpp/build-insights/reference/vcperf-commands)\
+[Справочник: команды vcperf](../reference/vcperf-commands.md)\
 В справочнике по командам *vcperf.exe* перечислены все доступные параметры команд.
 
-[Общие сведения Представления Windows Performance Analyzer](/cpp/build-insights/reference/wpa-views)\
+[Общие сведения Представления Windows Performance Analyzer](../reference/wpa-views.md)\
 В этой статье приведены подробные сведения о представлениях C++ Build Insights в WPA.
 
 [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer)\
