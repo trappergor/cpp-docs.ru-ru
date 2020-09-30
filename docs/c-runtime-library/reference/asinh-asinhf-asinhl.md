@@ -35,12 +35,12 @@ helpviewer_keywords:
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-ms.openlocfilehash: 332e6bfc95bd297d703d879cdd468b450cfdc763
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: face2eb5f7c6220e1a4369ae0aa11514a918d21c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89556792"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505606"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh, asinhf, asinhl
 
@@ -71,20 +71,19 @@ long double asinh( long double x );  // C++ only
 |-----------|-------------------|--------------------------|
 |± КНАН, ТО ЖЕ, INF|нет|нет|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 При использовании C++ можно вызывать перегрузки **ASINH** , которые принимают и возвращают **`float`** **`long double`** значения или. В программе на языке C, если только вы не используете \<tgmath.h> макрос для вызова этой функции, **ASINH** всегда принимает и возвращает **`double`** .
 
 При использовании \<tgmath.h> `asinh()` макроса тип аргумента определяет, какая версия функции выбрана. Подробные сведения см. в разделе [Type-Generic Math](../../c-runtime-library/tgmath.md) .
 
-
 По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
-|Функция|Обязательный заголовок C|Обязательный заголовок C++|
+|Компонент|Обязательный заголовок C|Обязательный заголовок C++|
 |--------------|--------------|------------------|
-|**ASINH**, **асинхф**, **асинхл**|\<math.h>|\<cmath> или \<math.h>|
+|**ASINH**, **асинхф**, **асинхл**|\<math.h>|\<cmath> либо \<math.h>|
 |макрос **Asinh ()** | \<tgmath.h> ||
 
 Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
@@ -117,7 +116,7 @@ sinh( 0.785398 ) = 0.868671
 asinh( 0.868671 ) = 0.785398
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>

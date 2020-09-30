@@ -13,12 +13,12 @@ helpviewer_keywords:
 - dialog box controls [C++], custom (user) controls
 - Dialog Editor [C++], custom controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
-ms.openlocfilehash: c79021387de2c8bc8f7f106a93797b7efb07d6df
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 449e60e968916f7741422ca2766375ad29afd062
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160415"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505713"
 ---
 # <a name="dialog-box-controls-c"></a>Элементы управления "диалоговое окно" (C++)
 
@@ -39,36 +39,36 @@ ms.locfileid: "80160415"
 |Имя элемента управления|Событие по умолчанию|
 |---|---|
 |[Элемент управления Button](../mfc/reference/cbutton-class.md)|BN_CLICKED|
-|[Элемент управления "флажок"](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
-|[Элемент управления "поле со списком"](../mfc/reference/ccombobox-class.md)|CBN_SELCHANGE|
-|[Изменить элемент управления](../mfc/reference/cedit-class.md)|EN_CHANGE|
+|[Элемент управления "Флажок"](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
+|[Элемент управления "Поле со списком"](../mfc/reference/ccombobox-class.md)|CBN_SELCHANGE|
+|[Элемент управления "Поле ввода"](../mfc/reference/cedit-class.md)|EN_CHANGE|
 |Группа|(неприменимо)|
 |[Элемент управления "список"](../mfc/reference/clistbox-class.md)|LBN_SELCHANGE|
-|[Элемент управления "переключатель"](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
-|[Элемент управления "статический текст"](../mfc/reference/cstatic-class.md)|(неприменимо)|
-|[Элемент управления рисунка](../mfc/reference/cpictureholder-class.md)|(неприменимо)|
-|[Форматируемый элемент управления 2,0](../mfc/using-cricheditctrl.md)|EN_CHANGE|
-|[Элемент управления полосы прокрутки](../mfc/reference/cscrollbar-class.md)|NM_THEMECHANGED|
+|[Элемент управления "Переключатель"](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
+|[Элемент управления "Надпись"](../mfc/reference/cstatic-class.md)|(неприменимо)|
+|[Элемент управления "Рисунок"](../mfc/reference/cpictureholder-class.md)|(неприменимо)|
+|[Элемент управления Rich Edit 2.0](../mfc/using-cricheditctrl.md)|EN_CHANGE|
+|[Элемент управления "Полоса прокрутки"](../mfc/reference/cscrollbar-class.md)|NM_THEMECHANGED|
 
 > [!NOTE]
-> Дополнительные сведения об использовании элемента управления **richedit 1,0** с MFC см. в разделе [использование элемента управления RichEdit 1,0 с](../windows/using-the-richedit-1-0-control-with-mfc.md) [примерами элементов управления MFC и Rich Edit](../mfc/rich-edit-control-examples.md).
+> Дополнительные сведения об использовании элемента управления **richedit 1,0** с MFC см. в разделе [использование элемента управления RichEdit 1,0 с](./adding-editing-or-deleting-controls.md) [примерами элементов управления MFC и Rich Edit](../mfc/rich-edit-control-examples.md).
 
 [Стандартные элементы управления Windows](../mfc/controls-mfc.md) , доступные на **панели элементов** для обеспечения расширенной функциональности:
 
 |Имя элемента управления|Событие по умолчанию|
 |---|---|
-|[Элемент управления Slider](../mfc/slider-control-styles.md)|NM_CUSTOMDRAW|
-|[Элемент управления "Счетчик"](../mfc/using-cspinbuttonctrl.md)|UDN_DELTAPOS|
-|[Управление ходом выполнения](../mfc/styles-for-the-progress-control.md)|NM_CUSTOMDRAW|
-|[Элемент управления горячими ключами](../mfc/using-a-hot-key-control.md)|NM_OUTOFMEMORY|
-|[Элемент управления List](../mfc/list-control-and-list-view.md)|LVN_ITEMCHANGE|
-|[Элемент управления "дерево"](../mfc/tree-control-styles.md)|TVN_SELCHANGE|
-|[Элемент управления Tab](../mfc/tab-controls-and-property-sheets.md)|TCN_SELCHANGE|
-|[Элемент управления анимации](../mfc/using-an-animation-control.md)|ACN_START|
+|[Ползунок - элемент управления](../mfc/slider-control-styles.md)|NM_CUSTOMDRAW|
+|[Spin control](../mfc/using-cspinbuttonctrl.md)|UDN_DELTAPOS|
+|[Progress control](../mfc/styles-for-the-progress-control.md)|NM_CUSTOMDRAW|
+|[Элемент управления "Сочетание клавиш"](../mfc/using-a-hot-key-control.md)|NM_OUTOFMEMORY|
+|[Элемент управления "Список"](../mfc/list-control-and-list-view.md)|LVN_ITEMCHANGE|
+|[Элемент управления "Дерево"](../mfc/tree-control-styles.md)|TVN_SELCHANGE|
+|[Элемент управления табуляции](../mfc/tab-controls-and-property-sheets.md)|TCN_SELCHANGE|
+|[Элемент управления "Анимация"](../mfc/using-an-animation-control.md)|ACN_START|
 |[Элемент выбора даты и времени](../mfc/creating-the-date-and-time-picker-control.md)|DTN_DATETIMECHANGE|
-|[Элемент управления "Календарь на месяц"](../mfc/month-calendar-control-examples.md)|MCN_SELCHANGE|
-|[Управление IP-адресами](../mfc/reference/cipaddressctrl-class.md)|IPN_FIELDCHANGED|
-|[Расширенный элемент управления "поле со списком"](../mfc/creating-an-extended-combo-box-control.md)||
+|[Элемент управления "Календарь месяца"](../mfc/month-calendar-control-examples.md)|MCN_SELCHANGE|
+|[Элемент управления "IP-адрес"](../mfc/reference/cipaddressctrl-class.md)|IPN_FIELDCHANGED|
+|[Элемент управления "Расширенное поле со списком"](../mfc/creating-an-extended-combo-box-control.md)||
 |Пользовательский элемент управления|TTN_GETDISPINFO|
 
 ## <a name="custom-controls"></a>Пользовательские элементы управления
@@ -78,7 +78,7 @@ ms.locfileid: "80160415"
 > [!NOTE]
 > В этом смысле пользовательские элементы управления не следует путать с элементами управления ActiveX. Элементы управления ActiveX иногда называются пользовательскими элементами управления OLE. Кроме того, не путайте эти элементы управления с элементами управления, рисуемыми владельцем в Windows.
 
-Эта функция предназначена для использования элементов управления, отличных от предоставляемых Windows. Во время выполнения элемент управления связывается с классом окна (а не с C++ классом). Более распространенный способ выполнения этой же задачи заключается в установке любого элемента управления, например статического элемента управления, в диалоговом окне. Затем во время выполнения в функции [онинитдиалог](../mfc/reference/cdialog-class.md#oninitdialog) удалите этот элемент управления и замените его своим пользовательским элементом управления.
+Эта функция предназначена для использования элементов управления, отличных от предоставляемых Windows. Во время выполнения элемент управления связывается с классом окна (а не с классом C++). Более распространенный способ выполнения этой же задачи заключается в установке любого элемента управления, например статического элемента управления, в диалоговом окне. Затем во время выполнения в функции [онинитдиалог](../mfc/reference/cdialog-class.md#oninitdialog) удалите этот элемент управления и замените его своим пользовательским элементом управления.
 
 > [!NOTE]
 > Это старая методика. Сегодня рекомендуется в большинстве случаев написать элемент управления ActiveX или подкласс общего элемента управления Windows.
@@ -104,6 +104,6 @@ Win32
 [Редактор диалоговых окон](../windows/dialog-editor.md)
 
 <!--
-[Adding Event Handlers for Dialog Box Controls](../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
-[Dialog Box Controls and Variable Types](../ide/dialog-box-controls-and-variable-types.md)<br/>
+[Adding Event Handlers for Dialog Box Controls](./adding-editing-or-deleting-controls.md)<br/>
+[Dialog Box Controls and Variable Types](../ide/adding-a-member-variable-visual-cpp.md#dialog-box-controls-and-variable-types)<br/>
 [Controls](../mfc/controls-mfc.md)<br/>-->

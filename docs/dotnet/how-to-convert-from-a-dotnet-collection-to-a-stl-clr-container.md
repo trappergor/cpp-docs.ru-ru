@@ -5,12 +5,12 @@ helpviewer_keywords:
 - STL/CLR, converting from .NET collections
 - STL/CLR Containers [STL/CLR]
 ms.assetid: bb927c48-78e8-4150-bd0b-787c651f4a87
-ms.openlocfilehash: a7b2ee94f02e663690287ecfa6bc8a7230830a95
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 4993571d479924edc71a277887a8bd95fc4fd463
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686461"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506438"
 ---
 # <a name="how-to-convert-from-a-net-collection-to-a-stlclr-container"></a>Практическое руководство. Преобразование из коллекции .NET в контейнер STL/CLR
 
@@ -24,7 +24,7 @@ ms.locfileid: "90686461"
 
 -или-
 
-1. Создайте универсальный контейнер STL/CLR, создав объект [collection_adapter](../dotnet/collection-adapter-stl-clr.md) . Этот класс шаблона принимает в качестве аргумента интерфейс коллекции .NET. Сведения о том, какие интерфейсы поддерживаются, см. в разделе [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md).
+1. Создайте универсальный контейнер STL/CLR, создав объект [collection_adapter](./adapter-stl-clr.md#collection_adapter) . Этот класс шаблона принимает в качестве аргумента интерфейс коллекции .NET. Сведения о том, какие интерфейсы поддерживаются, см. в разделе [collection_adapter (STL/CLR)](./adapter-stl-clr.md#collection_adapter).
 
 1. Скопируйте содержимое коллекции .NET в контейнер. Это можно сделать с помощью [алгоритма](../dotnet/algorithm-stl-clr.md)STL/CLR или путем прохода по коллекции .NET и вставки копии каждого элемента в контейнер STL/CLR.
 
@@ -126,7 +126,7 @@ Key: 42.00 Value: 42
 Key: 74.00 Value: 74
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Справочник по библиотеке STL/CLR](../dotnet/stl-clr-library-reference.md)<br/>
 [adapter (STL/CLR)](../dotnet/adapter-stl-clr.md)<br/>

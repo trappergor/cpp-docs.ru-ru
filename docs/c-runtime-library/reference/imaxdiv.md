@@ -24,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - imaxdiv function
 ms.assetid: 7d90126f-fdc2-4986-9cdf-94e4c9123d26
-ms.openlocfilehash: 72bbb1198b79d79bb81acc35ce6c2a836fdd5f1d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 298356da8e8e76c132b963ef4f71db6a3d0e74f7
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954636"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505629"
 ---
 # <a name="imaxdiv"></a>imaxdiv
 
@@ -56,9 +56,9 @@ imaxdiv_t imaxdiv(
 
 **imaxdiv** , вызванный с аргументами типа [intmax_t](../../c-runtime-library/standard-types.md) , возвращает структуру типа [imaxdiv_t](../../c-runtime-library/standard-types.md) , которая состоит из частного и остатка.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Функция **imaxdiv** делит *число ключей* на *Деном* и, таким образом, вычислит частную и оставшуюся стороны. Структура **imaxdiv_t** содержит частное, **intmax_t** **quot**, а также остаток **intmax_t** **REM**. Знак частного совпадает со знаком математического частного. Его абсолютное значение представляет собой наибольшее целое число, которое меньше абсолютного значения математического частного. Если знаменатель равен 0, выполнение программы прекратится и появится сообщение об ошибке.
+Функция **imaxdiv** делит *число ключей* на *Деном* и, таким образом, вычислит частную и оставшуюся стороны. Структура **imaxdiv_t** содержит частное, **intmax_t** **quot**и остаток **intmax_t** **REM**. Знак частного является таким же, как и у математического частного. Его абсолютное значение представляет собой наибольшее целое число, которое меньше абсолютного значения математического частного. Если знаменатель равен 0, выполнение программы прекратится и появится сообщение об ошибке.
 
 ## <a name="requirements"></a>Требования
 
@@ -66,7 +66,7 @@ imaxdiv_t imaxdiv(
 |-------------|---------------------|
 |**imaxdiv**|\<inttypes.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -103,8 +103,8 @@ The call to imaxdiv(9460730470000000, 8766)
 results in a quotient of 1079252848505, and a remainder of 5170
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
+[Поддержка операций с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [div](div.md)<br/>
-[ldiv, lldiv](ldiv-lldiv.md)<br/>
+[ldiv, lldiv](./div.md)<br/>

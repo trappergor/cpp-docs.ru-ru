@@ -1,6 +1,6 @@
 ---
 title: Класс initializer_list
-description: Ссылка на initializer_list класс в библиотеке стандарта СЗ, реализованная корпорацией Майкрософт в Visual Studio.
+description: Ссылка на класс initializer_list в стандартной библиотеке C++, реализованная корпорацией Майкрософт в Visual Studio.
 ms.date: 01/28/2020
 f1_keywords:
 - initializer_list/std::initializer_list::initializer_list
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - std::initializer_list::begin
 - std::initializer_list::end
 - std::initializer_list::size
-ms.openlocfilehash: b1d33ce484948e731f8d3062b7a99df06ef26073
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 232855fbcac1e4df9af7cf956fda80201326a401
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373361"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504641"
 ---
 # <a name="initializer_list-class"></a>Класс initializer_list
 
@@ -44,7 +44,7 @@ class initializer_list
 initializer_list<int> i1{ 1, 2, 3, 4 };
 ```
 
-компилятор преобразует списки заключенного в фигурные скобки инициализатора с однородными элементами в `initializer_list` каждый раз, когда сигнатуре функции требуется `initializer_list`. Для получения дополнительной `initializer_list`информации об использовании, см. [Единая инициализация и делегирование конструкторов](../cpp/uniform-initialization-and-delegating-constructors.md)
+компилятор преобразует списки заключенного в фигурные скобки инициализатора с однородными элементами в `initializer_list` каждый раз, когда сигнатуре функции требуется `initializer_list`. Дополнительные сведения об использовании см. в `initializer_list` разделе [унифицированная инициализация и делегирование конструкторов](../cpp/initializing-classes-and-structs-without-constructors-cpp.md) .
 
 ### <a name="constructors"></a>Конструкторы
 
@@ -67,17 +67,17 @@ initializer_list<int> i1{ 1, 2, 3, 4 };
 
 |Функция-член|Описание|
 |-|-|
-|[Начать](#begin)|Возвращает указатель на первый элемент в `initializer_list`.|
+|[начале](#begin)|Возвращает указатель на первый элемент в `initializer_list`.|
 |[end](#end)|Возвращает указатель на позицию, следующую за последним элементом в `initializer_list`.|
-|[Размер](#size)|Возвращает количество элементов в контейнере `initializer_list`.|
+|[size](#size)|Возвращает количество элементов в контейнере `initializer_list`.|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<initializer_list>
+**Заголовок:**\<initializer_list>
 
 **Пространство имен:** std
 
-## <a name="initializer_listbegin"></a><a name="begin"></a>initializer_list::начало
+## <a name="initializer_listbegin"></a><a name="begin"></a> initializer_list:: Begin
 
 Возвращает указатель на первый элемент в `initializer_list`.
 
@@ -89,7 +89,7 @@ constexpr const InputIterator* begin() const noexcept;
 
 Указатель на первый элемент `initializer_list`. Если список пуст, указателем будет одинаковым для начала и конца списка.
 
-## <a name="initializer_listend"></a><a name="end"></a>initializer_list::end
+## <a name="initializer_listend"></a><a name="end"></a> initializer_list:: end
 
 Возвращает указатель на позицию, следующую за последним элементом в `initializer list`.
 
@@ -99,9 +99,9 @@ constexpr const InputIterator* end() const noexcept;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на позицию, следующую за последним элементом в списке. Если список пуст, он такой же, как указатель на первый элемент в списке.
+Указатель на позицию, следующую за последним элементом в списке. Если список пуст, то он совпадает с указателем на первый элемент в списке.
 
-## <a name="initializer_listinitializer_list"></a><a name="initializer_list"></a>initializer_list::initializer_list
+## <a name="initializer_listinitializer_list"></a><a name="initializer_list"></a> initializer_list:: initializer_list
 
 Создает объект типа `initializer_list`.
 
@@ -112,15 +112,15 @@ initializer_list(const InputIterator First, const InputIterator Last);
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*\
+*Началь*\
 Положение первого элемента в диапазоне копируемых элементов.
 
-*Последний*\
+*Последняя*\
 Положение первого элемента после диапазона копируемых элементов.
 
 ### <a name="remarks"></a>Remarks
 
-Объект `initializer_list` основан на массиве объектов указанного типа. Копирование `initializer_list` создает второй экземпляр списка, указывающий на те же объекты; основные объекты не копируется.
+Объект `initializer_list` основан на массиве объектов указанного типа. При копировании `initializer_list` создается второй экземпляр списка, указывающий на те же объекты; базовые объекты не копируются.
 
 ### <a name="example"></a>Пример
 
@@ -183,7 +183,7 @@ c3 = 5 4 3 2 1
 c5 = 5 4
 ```
 
-## <a name="initializer_listsize"></a><a name="size"></a>initializer_list:размер
+## <a name="initializer_listsize"></a><a name="size"></a> initializer_list:: size
 
 Возвращает количество элементов в списке.
 

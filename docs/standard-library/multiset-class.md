@@ -89,12 +89,12 @@ helpviewer_keywords:
 - std::multiset [C++], upper_bound
 - std::multiset [C++], value_comp
 ms.assetid: 630e8c10-0ce9-4ad9-8d79-9e91a600713f
-ms.openlocfilehash: cb28b0b31188fcf7fefef95ddb44c9aab813e6ac
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: cf7f071ab98cb872537af076b89e0a1b07a1a6a1
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91353185"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505885"
 ---
 # <a name="multiset-class"></a>Класс multiset
 
@@ -223,7 +223,7 @@ class multiset
 typedef Allocator allocator_type;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 `allocator_type` является синонимом для параметра-шаблона `Allocator`.
 
@@ -298,7 +298,7 @@ const_iterator cbegin() const;
 
 **`const`** Итератор двунаправленного доступа, указывающий на первый элемент диапазона, или расположение непосредственно за концом пустого диапазона (для пустого диапазона `cbegin() == cend()` ).
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 С возвращаемым значением `cbegin` элементы в диапазоне нельзя изменять.
 
@@ -324,7 +324,7 @@ const_iterator cend() const;
 
 **`const`** Итератор двунаправленного доступа, указывающий на сразу за концом диапазона.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 `cend` используется для проверки того, прошел ли итератор конец диапазона.
 
@@ -386,7 +386,7 @@ The size of the multiset after clearing is 0.
 typedef implementation-defined const_iterator;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Тип `const_iterator` нельзя использовать для изменения значения элемента.
 
@@ -402,7 +402,7 @@ typedef implementation-defined const_iterator;
 typedef typename allocator_type::const_pointer const_pointer;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Тип `const_pointer` нельзя использовать для изменения значения элемента.
 
@@ -457,7 +457,7 @@ The first element in the multiset is 10.
 typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Тип `const_reverse_iterator` не может изменять значение элемента и используется для перебора мультинабора в обратную.
 
@@ -486,11 +486,11 @@ template<class K> bool contains(const K& key) const;
 
 `true` значение, если элемент найден в контейнере; `false` в противном случае — значение.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 `contains()` Новое в C++ 20. Чтобы использовать его, укажите параметр компилятора [/std: c + + Latest](../build/reference/std-specify-language-standard-version.md) .
 
-`template<class K> bool contains(const K& key) const` принимает участие в разрешении перегрузки только в `key_compare` том случае, если является прозрачным. Дополнительные сведения см. [в разделе разнородный Уточняющий запрос в ассоциативных контейнерах](https://docs.microsoft.com/cpp/standard-library/stl-containers#heterogeneous-lookup-in-associative-containers-c14) .
+`template<class K> bool contains(const K& key) const` принимает участие в разрешении перегрузки только в `key_compare` том случае, если является прозрачным. Дополнительные сведения см. [в разделе разнородный Уточняющий запрос в ассоциативных контейнерах](./stl-containers.md#heterogeneous-lookup-in-associative-containers-c14) .
 
 ### <a name="example"></a>Пример
 
@@ -506,7 +506,7 @@ int main()
     std::cout << std::boolalpha; // so booleans show as 'true' or 'false'
     std::cout << theMultiSet.contains(2) << '\n';
     std::cout << theMultiSet.contains(3) << '\n';
-    
+
     return 0;
 }
 ```
@@ -533,7 +533,7 @@ size_type count(const Key& key) const;
 
 Количество элементов в multiset, ключ сортировки которых совпадает с ключом параметра.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Функция-член возвращает количество элементов *x* в диапазоне
 
@@ -593,7 +593,7 @@ const_reverse_iterator crbegin() const;
 
 Константный обратный двунаправленный итератор, указывающий на первый элемент в обратном мультинаборе или указывающий на элемент, ранее бывший последним элементом в мультинаборе до изменения его порядка на обратный.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 `crbegin` используется с обратным мультинабором точно так же, как begin используется с обычным мультинабором.
 
@@ -641,7 +641,7 @@ const_reverse_iterator crend() const;
 
 Константный обратный двунаправленный итератор, который адресует положение после последнего элемента в обратном мультинаборе (положение, которое предшествовало первому элементу мультинабора до изменения его порядка на противоположный).
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 `crend` используется с обратным мультинабором точно так же, как [end](#end) — с обычным мультинабором.
 
@@ -683,7 +683,7 @@ int main() {
 typedef typename allocator_type::difference_type difference_type;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 `difference_type` — тип, возвращаемый при вычитании или приращении через итераторы контейнера. `difference_type` обычно используется для представления количества элементов в диапазоне [`first`, `last`) между итераторами `first` и `last`, включает элемент, на который указывает `first`, и диапазон элементов до элемента (не включая этот элемент), на который указывает `last`.
 
@@ -765,7 +765,7 @@ iterator emplace(Args&&... args);
 
 Итератор, указывающий на вновь вставленный элемент.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Эта функция не делает недействительными никакие ссылки на элементы контейнера, но она может сделать недействительными все итераторы к контейнеру.
 
@@ -835,7 +835,7 @@ iterator emplace_hint(
 
 Итератор, указывающий на вновь вставленный элемент.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Эта функция не делает недействительными никакие ссылки на элементы контейнера, но она может сделать недействительными все итераторы к контейнеру.
 
@@ -900,7 +900,7 @@ iterator end();
 
 Итератор после конца. Если мультинабор пуст, то `multiset::end() == multiset::begin()`.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 **end** используется для проверки, прошел ли итератор через конец своего мультинабора.
 
@@ -1023,7 +1023,7 @@ size_type erase(
 
 Третья функция-член возвращает количество элементов, удаленных из мультинабора.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Пример кода см. в разделе [set::erase](../standard-library/set-class.md#erase).
 
@@ -1046,7 +1046,7 @@ const_iterator find(const Key& key) const;
 
 Итератор, который ссылается на положение элемента с указанным ключом, или на положение после последнего элемента в мультинаборе ( `multiset::end()`), если соответствие для ключа не найдено.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Функция-член возвращает итератор, который ссылается на элемент в Мультинаборе, ключ которого эквивалентен *ключу* аргумента в бинарном предикате, который вызывает упорядочивание на основе отношения сравнения "меньше".
 
@@ -1125,7 +1125,7 @@ allocator_type get_allocator() const;
 
 Распределитель, использованный мультинабором.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Распределители для класса multiset определяют, как класс управляет памятью. Распределителей по умолчанию в классах контейнеров стандартной библиотеки C++ достаточно для большинства задач программирования. Написание и использование собственного класса распределителя требует расширенных навыков работы с C++.
 
@@ -1248,7 +1248,7 @@ IList);
 
 Одноэлементные функции-члены с подсказкой (3) и (4) возвращают итератор, указывающий на позицию, где был вставлен новый элемент.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Эта функция не делает никакие указатели или ссылки недействительными, но она может сделать недействительными все итераторы контейнера.
 
@@ -1378,7 +1378,7 @@ key_compare key_comp() const;
 
 Более подробную информацию по `Compare` см. в разделе "Примечания" в документации к [классу multiset](../standard-library/multiset-class.md).
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Сохраненный объект определяет функцию-член:
 
@@ -1447,7 +1447,7 @@ kc2( 2,3 ) returns value of false, where kc2 is the function object of ms2.
 typedef Compare key_compare;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 `key_compare` является синонимом для параметра-шаблона `Compare`.
 
@@ -1465,7 +1465,7 @@ typedef Compare key_compare;
 typedef Key key_type;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 `key_type` является синонимом для параметра-шаблона `Key`.
 
@@ -1646,7 +1646,7 @@ multiset (
 *Интерфейс*\
 Объект initializer_list, из которого копируются элементы.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Все конструкторы сохраняют тип объекта-распределителя, который управляет памятью для мультинабора и который позже можно получить с помощью вызова [get_allocator](#get_allocator). Параметр-распределитель часто не указывается в объявлениях класса и в макросах предварительной обработки, используемых для замены альтернативных распределителей.
 
@@ -1780,7 +1780,7 @@ multiset& operator=(multiset&& right);
 *Правильно*\
 `multiset`, из которого копируются или перемещаются элементы.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 `operator=` копирует или перемещает элементы *непосредственно* в это `multiset` , в зависимости от используемого ссылочного типа (lvalue или rvalue). Элементы, которые находились в этом `multiset` перед выполнением `operator=`, игнорируются.
 
@@ -1829,7 +1829,7 @@ int main( )
 typedef typename allocator_type::pointer pointer;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Тип **pointer** можно использовать для изменения значения элемента.
 
@@ -1849,7 +1849,7 @@ reverse_iterator rbegin();
 
 Обратный двунаправленный итератор, указывающий на первый элемент в обратном мультинаборе или указывающий на элемент, ранее бывший последним элементом в мультинаборе до изменения его порядка на обратный.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 `rbegin` используется с обратным мультинабором точно так же, как rbegin используется с обычным мультинабором.
 
@@ -1962,7 +1962,7 @@ reverse_iterator rend();
 
 Обратный двунаправленный итератор, который адресует положение после последнего элемента в обратном мультинаборе (положение перед первым элементом в мультинаборе до изменения его порядка на противоположный).
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 `rend` используется с обратным мультинабором точно так же, как [end](#end) — с обычным мультинабором.
 
@@ -2029,7 +2029,7 @@ int main() {
 typedef std::reverse_iterator<iterator> reverse_iterator;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Тип `reverse_iterator` используется для прохода по мультинабору в обратную.
 
@@ -2104,7 +2104,7 @@ void swap(
 *Правильно*\
 Мультинабор-аргумент, который предоставляет элементы для обмена с элементами целевого мультинабора.
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Функция-член не делает недействительными никакие ссылки, указатели или итераторы, которые обозначают элементы в двух мультинаборах, элементы которых обмениваются.
 
@@ -2240,7 +2240,7 @@ value_compare value_comp() const;
 
 Более подробную информацию по `Compare` см. в разделе "Примечания" в документации к [классу multiset](../standard-library/multiset-class.md).
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 Сохраненный объект определяет функцию-член:
 
@@ -2309,7 +2309,7 @@ vc2( 2,3 ) returns value of false, where vc2 is the function object of ms2.
 typedef key_compare value_compare;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 `value_compare` является синонимом для параметра-шаблона `Compare`.
 
@@ -2329,7 +2329,7 @@ typedef key_compare value_compare;
 typedef Key value_type;
 ```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 `value_type` является синонимом для параметра-шаблона `Key`.
 

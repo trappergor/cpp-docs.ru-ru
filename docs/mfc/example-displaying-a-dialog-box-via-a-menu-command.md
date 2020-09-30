@@ -10,12 +10,12 @@ helpviewer_keywords:
 - examples [MFC], dialog boxes
 - menu items [MFC], examples
 ms.assetid: e8692549-acd7-478f-9c5e-ba310ce8cccd
-ms.openlocfilehash: 281fa77f4954691002268d1e597146a615264695
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 1cada8124cd7ea71a24367626508782b522cc746
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616038"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506765"
 ---
 # <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>Пример. Отображение диалогового окна через команду меню
 
@@ -38,7 +38,7 @@ ms.locfileid: "84616038"
 
 ### <a name="to-display-a-modal-dialog-box"></a>Отображение модального диалогового окна
 
-1. Создайте команду меню; см. раздел [Создание меню или пунктов меню](../windows/creating-a-menu.md).
+1. Создайте команду меню; см. раздел [Создание меню или пунктов меню](../windows/menu-editor.md).
 
 1. Создайте диалоговое окно. см. раздел [Запуск редактора диалоговых окон](../windows/creating-a-new-dialog-box.md).
 

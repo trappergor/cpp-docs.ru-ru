@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3045
 ms.assetid: 9351ba3e-3d3f-455f-ac90-a810fa9fd947
-ms.openlocfilehash: 88c0c9747f98c6850f3e9b4341bdcdef915ac754
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: fc5c2b526133ea0de70d11c3a01269436701de79
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761355"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506286"
 ---
 # <a name="compiler-error-c3045"></a>Ошибка компилятора C3045
 
 Ожидается составной оператор, следующий за директивой OpenMP "sections". Отсутствует "{"
 
-Блок кода, ограниченный фигурными скобками, должен следовать за директивой [sections](../../parallel/openmp/reference/sections-openmp.md) .
+Блок кода, ограниченный фигурными скобками, должен следовать за директивой [sections](../../parallel/openmp/reference/openmp-directives.md#sections-openmp) .
 
 Следующий пример приводит к возникновению ошибки C3045:
 
