@@ -3,12 +3,12 @@ title: Улучшение соответствия C++
 ms.date: 08/04/2020
 description: Microsoft C++ в Visual Studio развивается в сторону полного соответствия стандарту языка C++20.
 ms.technology: cpp-language
-ms.openlocfilehash: 3a0e21bf08fcf7861feedd3fd43666bd3768deee
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 3cf06b092b79068b22e62dfdbbcfbd2c2cf5ad91
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042125"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500251"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Улучшения соответствия C++ в Visual Studio
 
@@ -1432,7 +1432,7 @@ int main()
 
 - Добавлены перегрузки для компонентных функций слияния и извлечения контейнеров, которые принимают контейнеры rvalue. Дополнительные сведения см. в документе [P0083 "Соединение карт и наборов"](https://wg21.link/p0083r3).
 
-### <a name="stdbasic_istreamread-processing-of-rn--n"></a>Обработка `\r\n`` => `\n` в `std::basic_istream::read`
+### <a name="stdbasic_istreamread-processing-of-rn-n"></a>Обработка `\r\n`` =>`\n` в `std::basic_istream::read`
 
 `std::basic_istream::read` исправлен так, чтобы не записывать временные данные в части предоставленного буфера при обработке операции `\r\n` => `\n`. Это изменение несколько нивелирует преимущество в производительности, достигнутое в Visual Studio 2017 15.8 для операций чтения размером более 4 КБ. Но при этом сохраняется повышенная эффективность за счет избавления от трех виртуальных вызовов на каждый символ.
 
@@ -1621,7 +1621,7 @@ void f(E e) {
 
 ## <a name="conformance-improvements-in-visual-studio-2017-rtw-version-150"></a><a name="improvements_150"></a> Улучшения соответствия в Visual Studio 2017 RTW (версия 15.0)
 
-Благодаря поддержке обобщенного выражения **`constexpr`** и NSDMI (нестатическая инициализация элементов данных) для статистических выражений, компилятор Microsoft C++ в Visual Studio 2017 теперь включает все функции, добавленные в стандарте C++14. Обратите внимание, что в компиляторе по-прежнему отсутствуют несколько функций из стандартов C++11 и C++98. Сведения о текущем состоянии компилятора см. в статье [Таблица соответствия Microsoft Visual C++ стандартам языка](../visual-cpp-language-conformance.md).
+Благодаря поддержке обобщенного выражения **`constexpr`** и NSDMI (нестатическая инициализация элементов данных) для статистических выражений, компилятор Microsoft C++ в Visual Studio 2017 теперь включает все функции, добавленные в стандарте C++14. Обратите внимание, что в компиляторе по-прежнему отсутствуют несколько функций из стандартов C++11 и C++98. Сведения о текущем состоянии компилятора см. в статье [Таблица соответствия Microsoft Visual C++ стандартам языка](./visual-cpp-language-conformance.md).
 
 ### <a name="c11-expression-sfinae-support-in-more-libraries"></a>C++11 Поддержка выражения SFINAE в большем числе библиотек
 
@@ -3647,7 +3647,7 @@ note: see usage of 'g'.
 
 ## <a name="c-conformance-improvements-in-visual-studio-2015"></a>Улучшения соответствия стандарту C++ в Visual Studio 2015
 
-Мы предлагаем полный список улучшений соответствия вплоть до Visual Studio 2015 с обновлением 3. Дополнительные сведения см. в статье [Visual C++ What's New 2003 through 2015](/cpp/porting/visual-cpp-what-s-new-2003-through-2015) (Новые возможности Visual C++ 2003–2015).
+Мы предлагаем полный список улучшений соответствия вплоть до Visual Studio 2015 с обновлением 3. Дополнительные сведения см. в статье [Visual C++ What's New 2003 through 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md) (Новые возможности Visual C++ 2003–2015).
 
 ::: moniker-end
 

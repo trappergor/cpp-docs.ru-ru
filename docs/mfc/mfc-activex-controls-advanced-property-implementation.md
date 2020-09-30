@@ -71,7 +71,7 @@ ms.locfileid: "91502200"
 
 Дополнительные сведения о сообщениях об исключениях в других областях кода см. в разделах [COleControl:: фириррор](reference/colecontrol-class.md#fireerror) и [Обработка ошибок в элементе управления ActiveX](mfc-activex-controls-advanced-topics.md) статьи элементы управления ActiveX: дополнительные разделы.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Элементы управления ActiveX в MFC](mfc-activex-controls.md)<br/>
 [Элементы управления ActiveX в MFC: свойства](mfc-activex-controls-properties.md)<br/>

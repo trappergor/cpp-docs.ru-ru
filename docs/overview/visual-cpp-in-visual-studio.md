@@ -1,16 +1,16 @@
-﻿---
+---
 title: C++ в Visual Studio
 description: Под Visual C++ подразумевается компилятор Microsoft C++, редактор кода и связанные инструменты в Интегрированной среде разработки Visual Studio. Используйте Visual C++ для разработки программ для Windows, Linux, Android и iOS.
 ms.date: 07/02/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
-ms.openlocfilehash: adcf1334979fd083a4f32074f13b0bc204405a5c
-ms.sourcegitcommit: f7ebdfc3a260778c2ef938747cba1376c70ced15
+ms.openlocfilehash: cde4bf73548df2dd7f65e20aa39fa7275dd7e11b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84108436"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500161"
 ---
 # <a name="c-in-visual-studio"></a>C++ в Visual Studio
 
@@ -82,7 +82,7 @@ Visual Studio 2015, 2017 и 2019 можно установить паралле
 [Отладка машинного кода](/visualstudio/debugger/debugging-native-code)<br/>
 Сведения об использовании отладчика Visual Studio с проектами C++.
 
-[Общие сведения об анализе кода на C и C++](/cpp/code-quality/code-analysis-for-c-cpp-overview)<br/>
+[Общие сведения об анализе кода на C и C++](../code-quality/code-analysis-for-c-cpp-overview.md)<br/>
 Используйте заметки SAL или средства проверки C++ Core Guidelines для выполнения статического анализа.
 
 [Написание модульных тестов для C/C++ в Visual Studio](/visualstudio/test/writing-unit-tests-for-c-cpp)<br/>
@@ -152,7 +152,7 @@ Visual Studio 2015, 2017 и 2019 можно установить паралле
 [C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 Массово-параллельные алгоритмы, выполняемые на GPU.
 
-[Библиотека шаблонов среды выполнения Windows (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)<br/>
+[Библиотека шаблонов среды выполнения Windows (WRL)](../cppcx/wrl/windows-runtime-cpp-template-library-wrl.md)<br/>
 Приложения и компоненты универсальной платформы Windows (UWP).
 
 [Программирование .NET с использованием C++/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
