@@ -1,6 +1,8 @@
 ---
-title: Соответствие ANSI C
+title: Совместимость ANSI с C
+description: Обзор соглашений об именовании среды выполнения Microsoft C для обеспечения соответствия стандарту ANSI C.
 ms.date: 11/04/2016
+ms.topic: conceptual
 f1_keywords:
 - Ansi
 helpviewer_keywords:
@@ -13,14 +15,14 @@ helpviewer_keywords:
 - ANSI [C++], C standard
 - Microsoft extensions naming conventions
 ms.assetid: 6be271bf-eecf-491a-a928-0ee2dd60e3b9
-ms.openlocfilehash: 7a4462e84ec01bd236849c6aed024b636b315243
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 39a3f9299be7dbef4783faa8e6d08fe6ad8461f5
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742823"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91590307"
 ---
-# <a name="ansi-c-compliance"></a>Соответствие ANSI C
+# <a name="ansi-c-compliance"></a>Совместимость ANSI с C
 
 Соглашение об именовании для всех относящихся к системам Microsoft идентификаторов в системе времени выполнения (например, функций, макросов, констант, переменных и определений типов) соответствует стандарту ANSI. В этой документации любая функция времени выполнения, которая соответствует стандартам ANSI/ISO C, помечена как ANSI-совместимая. ANSI-совместимые приложения должны использовать только эти функции, соответствующие стандарту ANSI.
 

@@ -1,17 +1,18 @@
 ---
-title: Type — универсальные математические символы
+title: Математические символы универсального типа
 description: Описание макросов в <tgmath. h>, упрощающих написание кода на языке C, который вызывает правую математическую функцию на основе типа аргумента.
+ms.topic: conceptual
 ms.date: 9/3/2020
 helpviewer_keywords:
 - CRT tgmath.h
-ms.openlocfilehash: 8994edcaa05247a16d90b47bca8ec26fca27cda7
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: 98c786d91963973ad9384cea2fe6563d1e3174ac
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89557779"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91590229"
 ---
-# <a name="type-generic-math"></a>Type — универсальные математические символы
+# <a name="type-generic-math"></a>Математические символы универсального типа
 
 Для ISO C Standard 11 (C11) и более поздних версий \<tgmath.h> заголовок, помимо включения \<math.h> и \<complex.h> , предоставляет макросы, которые вызывают соответствующую математическую функцию на основе типов параметров.
 
@@ -28,9 +29,9 @@ ms.locfileid: "89557779"
 |Макрос  |Real</br>`float`  | Real</br>`double` | Real</br>`long double` | Complex</br>`float` | Complex</br>`double` | Complex</br>`long double` |
 |---------|---------|---------|---------|---------|---------|---------|
 `acos` | [acosf](reference/mbsnbicmp-mbsnbicmp-l.md) | [ACOS](reference/mbsnbicmp-mbsnbicmp-l.md) | [acosl](reference/mbsnbicmp-mbsnbicmp-l.md) | [cacosf](reference/cacos-cacosf-cacosl.md) | [cacos](reference/cacos-cacosf-cacosl.md) | [cacosl](reference/cacos-cacosf-cacosl.md) |
-`acosh` | [acoshf](reference/acosh-acoshf-acoshl.md) | [acosh](reference/acosh-acoshf-acoshl.md) | [acoshl](reference/acosh-acoshf-acoshl.md) | [cacoshf](reference/cacosh-cacoshf-cacoshl.md) | [cacosh](reference/cacosh-cacoshf-cacoshl.md) | [cacoshl](reference/cacosh-cacoshf-cacoshl.md) |
+`acosh` | [acoshf](reference/acosh-acoshf-acoshl.md) | [ACOSH](reference/acosh-acoshf-acoshl.md) | [acoshl](reference/acosh-acoshf-acoshl.md) | [cacoshf](reference/cacosh-cacoshf-cacoshl.md) | [cacosh](reference/cacosh-cacoshf-cacoshl.md) | [cacoshl](reference/cacosh-cacoshf-cacoshl.md) |
 `asin` | [asinf](reference/asin-asinf-asinl.md) | [ASIN](reference/asin-asinf-asinl.md) | [asinl](reference/asin-asinf-asinl.md) | [casinf](reference/casin-casinf-casinl.md) | [casin](reference/casin-casinf-casinl.md) | [casinl](reference/casin-casinf-casinl.md) |
-`asinh` | [asinhf](reference/asin-asinf-asinl.md) | [asinh](reference/asin-asinf-asinl.md) | [asinhl](reference/asin-asinf-asinl.md) | [casinhf](reference/casinh-casinhf-casinhl.md) | [casinh](reference/casinh-casinhf-casinhl.md) | [casinhl](reference/casinh-casinhf-casinhl.md) |
+`asinh` | [asinhf](reference/asin-asinf-asinl.md) | [ASINH](reference/asin-asinf-asinl.md) | [asinhl](reference/asin-asinf-asinl.md) | [casinhf](reference/casinh-casinhf-casinhl.md) | [casinh](reference/casinh-casinhf-casinhl.md) | [casinhl](reference/casinh-casinhf-casinhl.md) |
 `atan` | [atanf](reference/atan-atanf-atanl-atan2-atan2f-atan2l.md) | [Atan](reference/atan-atanf-atanl-atan2-atan2f-atan2l.md) | [atanl](reference/atan-atanf-atanl-atan2-atan2f-atan2l.md) | [catanf](reference/catan-catanf-catanl.md) | [catan](reference/catan-catanf-catanl.md) | [catanl](reference/catan-catanf-catanl.md) |
 `atanh` | [atanhf](reference/atanh-atanhf-atanhl.md) | [atanh](reference/atanh-atanhf-atanhl.md) | [atanhl](reference/atanh-atanhf-atanhl.md) | [catanhf](reference/catanh-catanhf-catanhl.md) | [catanh](reference/catanh-catanhf-catanhl.md) | [catanhl](reference/catanh-catanhf-catanhl.md) |
 `cos` | [cosf](reference/cos-cosf-cosl.md) | [COS](reference/cos-cosf-cosl.md) | [cosl](reference/cos-cosf-cosl.md) | [ccosf](reference/ccos-ccosf-ccosl.md) | [ccos](reference/ccos-ccosf-ccosl.md) | [ccosl](reference/ccos-ccosf-ccosl.md) |
@@ -88,12 +89,12 @@ ms.locfileid: "89557779"
 `cimag` | - | - | - | [cimagf](reference/cimag-cimagf-cimagl.md) | [cimag](reference/cimag-cimagf-cimagl.md) | [cimagl](reference/cimag-cimagf-cimagl.md) |
 `cproj` | - | - | - | [cprojf](reference/cproj-cprojf-cprojl.md) | [cproj](reference/cproj-cprojf-cprojl.md) | [cprojl](reference/cproj-cprojf-cprojl.md) |
 
-## <a name="requirements"></a>Требования
+## <a name="requirements"></a>Requirements (Требования)
 
 [std: требуется c++ 11](../build/reference/std-specify-language-standard-version.md) или более поздней версии.
 
 Windows SDK версии 10.0.20201.0 или более поздней.
 
-## <a name="see-also"></a>Дополнительно
+## <a name="see-also"></a>См. также
 
 [Справочник по библиотеке времени выполнения C](c-run-time-library-reference.md)

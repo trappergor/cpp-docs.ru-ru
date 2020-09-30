@@ -1,18 +1,20 @@
 ---
 title: Производительность многопотоковых библиотек
+description: Общие сведения о том, как получить максимальную производительность из многопоточных библиотек среды выполнения Microsoft C.
 ms.date: 11/04/2016
+ms.topic: conceptual
 helpviewer_keywords:
 - threading [C++], performance
 - libraries, multithreaded
 - performance, multithreading
 - multithreaded libraries
 ms.assetid: faa5d808-087c-463d-8f0d-8c478d137296
-ms.openlocfilehash: 48f491b6d82acb566669302e4d607e85faf9012a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: edfbbf3055e9023c74cf0e154577d4b1853f557b
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748372"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91590203"
 ---
 # <a name="multithreaded-libraries-performance"></a>Производительность многопотоковых библиотек
 
@@ -36,4 +38,4 @@ ms.locfileid: "57748372"
 
 ## <a name="see-also"></a>См. также
 
-[Функции библиотеки CRT](../c-runtime-library/crt-library-features.md)
+[Возможности библиотеки CRT](../c-runtime-library/crt-library-features.md)

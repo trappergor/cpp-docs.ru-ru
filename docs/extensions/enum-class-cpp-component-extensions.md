@@ -3,12 +3,12 @@ title: enum class (C++/CLI и C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 ms.assetid: 8010fa8c-bad6-45b4-8214-b4db64d7ffe1
-ms.openlocfilehash: a1b99cb2265c9a9bdb40a7239a21412123772570
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9acf93976b2f7751e85bf3ed0ddd2735c29e121c
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219720"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91590320"
 ---
 # <a name="enum-class--ccli-and-ccx"></a>enum class (C++/CLI и C++/CX)
 
@@ -59,13 +59,13 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 
 Обратите внимание, что компилятор выводит сообщения об ошибках, если константное выражение, задающее значение перечислителя, не может быть представлено *underlying-type*.  Однако компилятор не сообщает об ошибке для значения, недопустимого для базового типа. Пример:
 
-- Если тип *underlying-type* числовой и перечислитель определяет максимальное значение для этого типа, то нельзя представить значение следующего неявно указанного перечисления.
+- Если *базовый тип* является числовым, а перечислитель задает максимальное значение для этого типа, то значение следующего неявно определенного перечисления не может быть представлено.
 
 - Если *базовый тип* имеет значение **`bool`** , а более двух перечислителей неявно определены, перечислители после первых двух не могут быть представлены.
 
 - Если *underlying-type* является `char16`и значение перечисления в диапазоне от 0xD800 до 0xDFFF, то значение можно представить. Однако логически значение неверно, так как оно представляет половину пары символов-заместителей Юникода и не должно отображаться в изоляции.
 
-### <a name="requirements"></a>Требования
+### <a name="requirements"></a>Requirements (Требования)
 
 Параметр компилятора: `/ZW`
 
@@ -174,7 +174,7 @@ void f(E)
 
 - [Базовый тип перечисления](../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md)
 
-### <a name="requirements"></a>Требования
+### <a name="requirements"></a>Requirements (Требования)
 
 Параметр компилятора: `/clr`
 
@@ -219,6 +219,6 @@ convert to int: 1
 1
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Расширения компонентов для .NET и UWP](component-extensions-for-runtime-platforms.md)

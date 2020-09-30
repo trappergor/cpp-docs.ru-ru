@@ -1,18 +1,20 @@
 ---
 title: Обязательные и необязательные файлы заголовков
+description: Когда следует использовать обязательные и необязательные файлы заголовков из библиотеки времени выполнения Microsoft C.
 ms.date: 11/04/2016
+ms.topic: conceptual
 f1_keywords:
 - c.headers
 helpviewer_keywords:
 - include files, required in run time
 - header files, required in run time
 ms.assetid: f64d0bf5-e2c3-4b42-97d0-443b3d901d9f
-ms.openlocfilehash: 8d1547ae7dd3b6adb33271e93e85022f04859886
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 79a45aaba5e2872b23e70f3fd276d6f3cae11167
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211610"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589813"
 ---
 # <a name="required-and-optional-header-files"></a>Обязательные и необязательные файлы заголовков
 
@@ -26,6 +28,6 @@ ms.locfileid: "87211610"
 
 Файлы заголовков библиотеки времени выполнения предоставляют объявления функций в стиле, рекомендованном стандартом ANSI/ISO С. Компилятор выполняет проверку типов для любой ссылки на подпрограмму, которая встретилась после объявления соответствующей функции. Объявления функций особенно важны для подпрограмм, возвращающих значение какого-либо типа, отличного от **`int`** , что является значением по умолчанию. Компилятор возвращает **`int`** , что может привести к непредвиденным результатам, если в их объявлении не указаны соответствующие возвращаемые значения. Дополнительные сведения см. в статье о [проверке типов](../c-runtime-library/type-checking-crt.md).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Возможности библиотеки CRT](../c-runtime-library/crt-library-features.md)

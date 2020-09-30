@@ -1,16 +1,18 @@
 ---
 title: Файлы и потоки
+description: Общие сведения о файлах и потоках в библиотеке времени выполнения Microsoft C.
 ms.date: 11/04/2016
+ms.topic: conceptual
 helpviewer_keywords:
 - files [C++]
 - streams
 ms.assetid: f61e712b-eac9-4c28-bb18-97c3786ef387
-ms.openlocfilehash: ea11ea76ade8a68c2d8a92e08d3652035c996d3d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 39133cfdb4784c42561a159d6d176bcbd23644af
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750797"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589969"
 ---
 # <a name="files-and-streams"></a>Файлы и потоки
 
@@ -26,7 +28,7 @@ ms.locfileid: "57750797"
 
 Перед выполнением большинства операций над файлом его необходимо открыть. Открытие файла связывает его с потоком — структурой данных в стандартной библиотеке C, которая сглаживает большинство различий между файлами различных типов. Библиотека поддерживает состояние каждого потока в объекте типа FILE.
 
-Перед запуском программы целевая среда открывает три файла. Вы можете открыть файл, вызвав функцию библиотеки [fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md) с двумя аргументами. (Функция `fopen` не рекомендуется к использованию, используйте вместо нее [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)). Первым аргументом является имя файла. Вторым аргументом является строка C, определяющая:
+Перед запуском программы целевая среда открывает три файла. Вы можете открыть файл, вызвав функцию библиотеки [fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md) с двумя аргументами. ( `fopen` Функция является устаревшей, используйте вместо нее [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md) .) Первым аргументом является имя файла. Вторым аргументом является строка C, определяющая:
 
 - предполагается ли считывание данных из файла или запись в него данных (либо и то, и другое);
 

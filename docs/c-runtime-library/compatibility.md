@@ -2,17 +2,18 @@
 title: Совместимость
 description: Описывает совместимость библиотеки Microsoft универсального времени выполнения C (UCRT) со стандартной библиотекой C, POSIX, безопасностью CRT и приложениями Магазина.
 ms.date: 9/11/2020
+ms.topic: conceptual
 helpviewer_keywords:
 - CRT, compatibility
 - compatibility, C runtime libraries
 - compatibility
 ms.assetid: 346709cb-edda-4909-9a19-3d253eddb6b7
-ms.openlocfilehash: 711d5b3c95269413a0d94f568d3e3cb7b7dff721
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 10c21f3f471c105ac4e40bda449aaf8987edba25
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91506875"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91590047"
 ---
 # <a name="compatibility"></a>Совместимость
 

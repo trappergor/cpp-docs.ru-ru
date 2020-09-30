@@ -1,15 +1,16 @@
 ---
 title: Глобальное состояние в CRT
-description: Описывает, как общее глобальное состояние обрабатывается в универсальной среде выполнения C.
+description: Описывает, как общее глобальное состояние обрабатывается в универсальной среде выполнения C (Майкрософт).
+ms.topic: conceptual
 ms.date: 04/02/2020
 helpviewer_keywords:
 - CRT global state
-ms.openlocfilehash: d1c787147ea3df36ce120837ef5b2c68b1bf58b1
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: 60532fbdb905bd8ea78b4ce705ec8ecc3e374d9d
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89554673"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589735"
 ---
 # <a name="global-state-in-the-crt"></a>Глобальное состояние в CRT
 
@@ -54,6 +55,6 @@ ms.locfileid: "89554673"
 - [фмоде] (text-and-binary-mode-file-i-o.md)
 - [Сведения о часовом поясе](time-management.md)
 
-## <a name="see-also"></a>Дополнительно
+## <a name="see-also"></a>См. также
 
 [Справочник по библиотеке времени выполнения C](c-run-time-library-reference.md)

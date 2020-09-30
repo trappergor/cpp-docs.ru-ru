@@ -1,7 +1,8 @@
 ---
 title: Особенности библиотеки CRT
-description: Файлы, содержащие библиотеки времени выполнения Microsoft C и связанные с ними параметры компилятора и директивы препроцессора.
+description: Список файлов, содержащих библиотеки времени выполнения Microsoft C, а также связанные с ними параметры компилятора и директивы препроцессора.
 ms.date: 09/03/2020
+ms.topic: conceptual
 helpviewer_keywords:
 - MSVCR71.dll
 - libraries [C++], multithreaded
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - libraries [C++], run-time
 - linking [C++], libraries
 ms.assetid: a889fd39-807d-48f2-807f-81492612463f
-ms.openlocfilehash: 2f46577ba81c57c2050f0cae4ae2af73152ba2a4
-ms.sourcegitcommit: 0df2b7ab4e81284c5248e4584767591dcc1950c3
+ms.openlocfilehash: 0e0d34c1121f0bf4e2fdfabc521e0365084761eb
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89609111"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589787"
 ---
 # <a name="crt-library-features"></a>Особенности библиотеки CRT
 
@@ -113,6 +114,6 @@ ms.locfileid: "89609111"
 
 Будьте внимательны, если программа передает определенные ресурсы CRT через границы DLL. Такие ресурсы, как дескрипторы файлов, языковые стандарты и переменные среды, могут вызывать проблемы даже при использовании той же версии CRT. Дополнительные сведения о связанных проблемах и способах их устранения см. в разделе [Потенциальные ошибки при передаче объектов CRT через границы DLL](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 - [Справочник по библиотеке времени выполнения C](../c-runtime-library/c-run-time-library-reference.md)
