@@ -2,15 +2,15 @@
 title: Глобальное состояние в CRT
 description: Описывает, как общее глобальное состояние обрабатывается в универсальной среде выполнения C (Майкрософт).
 ms.topic: conceptual
-ms.date: 04/02/2020
+ms.date: 10/02/2020
 helpviewer_keywords:
 - CRT global state
-ms.openlocfilehash: 60532fbdb905bd8ea78b4ce705ec8ecc3e374d9d
-ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.openlocfilehash: 6c8b97e2bd6fa71891aedacb1fbfec2bbe382d84
+ms.sourcegitcommit: faedcc3be78b29c78e5d51e3c7c7c2f448c745bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91589735"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91717519"
 ---
 # <a name="global-state-in-the-crt"></a>Глобальное состояние в CRT
 
@@ -31,8 +31,8 @@ ms.locfileid: "91589735"
 
 Существует два способа изолировать состояние CRT компонента из состояния CRT приложения:
 
-- Статическая компоновка компонента с помощью параметров компилятора/MT (Release) или MTd (Debug). Дополнительные сведения см. в разделе [/MD,/MT,/LD](../build/reference/md-mt-ld-use-run-time-library.md). Обратите внимание, что статическая компоновка может значительно увеличить двоичный размер.
-- Начиная с Windows 10 20H2, получить изоляцию состояния CRT, динамически связываясь с CRT, но вызвав экспорты в режиме операционной системы (функции, начинающиеся с _o_). Чтобы вызвать экспорты в режиме операционной системы, статическая компоновка как и прежде, но игнорировать статический UCRT с помощью параметра компоновщика `/NODEFAULTLIB:libucrt.lib` (Release) или `/NODEFAULTLIB:libucrtd.lib` (Debug) см. Дополнительные сведения о параметре [/NODEFAULTLIB (игнорировать библиотеки)](../build/reference/nodefaultlib-ignore-libraries.md) . И добавьте `ucrt.osmode.lib` к входным данным компоновщика.
+- Статическая компоновка компонента с помощью параметров компилятора `/MT` (Release) или `/MTd` (Отладка). Дополнительные сведения см. в разделе [/MD,/MT,/LD](../build/reference/md-mt-ld-use-run-time-library.md). Статическая компоновка может значительно увеличить двоичный размер.
+- Начиная с Windows 10 версии 2004, динамически связываются с CRT, но вызываются экспорты в режиме операционной системы (функции, начинающиеся с _o_). Для вызова экспортов в режиме операционной системы статическим образом, как и прежде, но игнорировать статический UCRT с помощью параметра компоновщика `/NODEFAULTLIB:libucrt.lib` (Release) или `/NODEFAULTLIB:libucrtd.lib` (Debug). И добавьте `ucrt.osmode.lib` к входным данным компоновщика. Дополнительные сведения см. в разделе параметр [/NODEFAULTLIB (Ignore Library)](../build/reference/nodefaultlib-ignore-libraries.md) .
 
 > [!Note]
 > В исходном коде напишите `setlocale()` , а не `_o_setlocale()` . При связывании с `ucrt.osmode.lib` Компоновщик автоматически подставляет версию функции, зависящую от ОС. То есть `setlocale()` будет заменено на `_o_setlocale()` .
@@ -52,7 +52,7 @@ ms.locfileid: "91589735"
 - Буфер [, используемый _putch _putwch](reference/putch-putwch.md)
 - [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md)
 - [_set_new_handler](reference/set-new-handler.md) и [_set_new_mode](reference/set-new-mode.md)
-- [фмоде] (text-and-binary-mode-file-i-o.md)
+- [фмоде](text-and-binary-mode-file-i-o.md)
 - [Сведения о часовом поясе](time-management.md)
 
 ## <a name="see-also"></a>См. также
