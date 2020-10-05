@@ -1,13 +1,13 @@
 ---
 title: Настройка проектов Linux для использования санитайзера адресов
 description: Узнайте, как настроить проект C++ для Linux в Visual Studio для работы с AddressSanitizer.
-ms.date: 06/07/2019
-ms.openlocfilehash: 0e862e09d8178ce35fe26f2be138d7f6843b5ef1
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.date: 09/25/2020
+ms.openlocfilehash: 7e68d0af4d2ab27820f894bafc58bed444f141d9
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686669"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414206"
 ---
 # <a name="configure-linux-projects-to-use-address-sanitizer"></a>Настройка проектов Linux для использования санитайзера адресов
 
@@ -33,7 +33,7 @@ ASan — это средство обнаружения ошибок испол
 ## <a name="enable-asan-for-msbuild-based-linux-projects"></a>Включение ASan для проектов Linux на основе MSBuild
 
 > [!NOTE]
-> Начиная с версии 16.4 Visual Studio 2019, AddressSanitizer для проектов Linux включается в разделе **Свойства конфигурации** > **C/C++**  > **Enable AddressSanitizer** (Включить AddressSanitizer).
+> Начиная с версии Visual Studio 2019 16.4 AddressSanitizer для проектов Linux включается в разделе **Свойства проекта** > **Свойства конфигурации** > **C/C++**  > **Enable Address Sanitizer** (Включить AddressSanitizer).
 
 Чтобы включить ASan для проектов Linux на основе MSBuild, щелкните правой кнопкой мыши проект в **обозревателе решений** и выберите **Свойства**. Затем перейдите в меню **Свойства конфигурации** > **C/C++**  > **Санитайзеры**. ASan включается с помощью флагов компоновщика и компилятора. При этом проект должен быть перекомпилирован.
 
@@ -51,7 +51,7 @@ ASan — это средство обнаружения ошибок испол
 
 ![Снимок экрана: панель слева с выбранным пунктом "Linux-Debug" в виде одного из параметров конфигурации](media/linux-debug-configuration.png)
 
-Параметры ASan доступны в разделе **Общие**. Введите флаги ASan среды выполнения в формате "флаг=значение", разделенные точкой с запятой.
+Параметры ASan доступны в разделе **Общие**. Введите флаги ASan среды выполнения в формате "флаг=значение", разделенные пробелами. Интерфейс пользователя ошибочно предлагает использовать точку с запятой. Используйте пробелы или двоеточия для разделения флагов.
 
 ![Снимок экрана: параметр "Включить AddressSanitizer" с некоторыми флагами времени выполнения AddressSanitizer](media/cmake-settings-asan-options.png)
 
