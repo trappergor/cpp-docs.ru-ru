@@ -1,5 +1,6 @@
 ---
 title: /RTC (проверки ошибок во время выполнения)
+description: Параметры параметра/RTC компилятора Microsoft C/C++ для проверок ошибок во время выполнения.
 ms.date: 07/31/2020
 f1_keywords:
 - /rtc
@@ -25,14 +26,14 @@ helpviewer_keywords:
 - RTCc compiler option
 - -RTCc compiler option [C++]
 ms.assetid: 9702c558-412c-4004-acd5-80761f589368
-ms.openlocfilehash: eefec0956bebe9f72324f3cbc61fccbc5e2e24d7
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 888a81d0d5c21b0b85420a43d534c5b2742aa082
+ms.sourcegitcommit: 30792632548d1c71894f9fecbe2f554294b86020
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520542"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765231"
 ---
-# <a name="rtc-run-time-error-checks"></a>`/RTC`(Проверки ошибок во время выполнения)
+# <a name="rtc-run-time-error-checks"></a>`/RTC` (Проверки ошибок во время выполнения)
 
 Используется для включения и отключения функции проверки ошибок во время выполнения в сочетании с директивой pragma [runtime_checks](../../preprocessor/runtime-checks.md) .
 
@@ -93,7 +94,7 @@ c = a;  // No run-time error with /RTCu
 
 Если переменная могла быть инициализирована, она не сообщается во время выполнения **`/RTCu`** . Например, после присвоения псевдонима переменной через указатель компилятор не будет фиксировать переменную и отчет неинициализированные использования. По сути, можно инициализировать переменную, используя ее адрес. **`&`** В этом случае оператор работает как оператор присваивания.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Проверки ошибок во время выполнения — это способ поиска проблем в выполняемом коде; Дополнительные сведения см. [в разделе инструкции. Использование проверок во время выполнения машинного кода](/visualstudio/debugger/how-to-use-native-run-time-checks).
 
@@ -109,7 +110,7 @@ c = a;  // No run-time error with /RTCu
 
 1. Откройте диалоговое окно **Страницы свойств** проекта. Подробнее см. в статье [Настройка компилятора C++ и свойства сборки в Visual Studio](../working-with-project-properties.md).
 
-1. Выберите страницу свойств **Свойства "**  >  **Создание кода** **C/C++**".  
+1. Выберите страницу свойств **Свойства "**  >  Создание кода**C/C++**"  >  **Code Generation** .
 
 1. Измените одно или оба из следующих свойств: **Обычная проверка времени выполнения** или **Проверка типа меньшего размера**.
 
@@ -117,8 +118,8 @@ c = a;  // No run-time error with /RTCu
 
 - См. описание свойств <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BasicRuntimeChecks%2A> и <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.SmallerTypeCheck%2A>.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Параметры компилятора КОМПИЛЯТОРОМ MSVC](compiler-options.md)<br/>
+[Параметры компилятора MSVC](compiler-options.md)<br/>
 [Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)<br/>
 [Практическое руководство. Проверки времени выполнения машинного кода](/visualstudio/debugger/how-to-use-native-run-time-checks)

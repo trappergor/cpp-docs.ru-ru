@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CRT_REPORT_HOOK type
 - _finddata_t type
 ms.assetid: 23312dd2-4a6a-4d70-9b48-2a5d0d8c9f28
-ms.openlocfilehash: bf90adbdbc739a2dd26d8e59ab38e56aef3bd312
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: 376c29371fb9213ed46435b41bea1666058c7b4e
+ms.sourcegitcommit: 30792632548d1c71894f9fecbe2f554294b86020
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352938"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765313"
 ---
 # <a name="standard-types"></a>Стандартные типы
 
@@ -199,7 +199,7 @@ ms.locfileid: "91352938"
 |`_CRT_REPORT_HOOK`,<br /><br /> `_CRT_REPORT_HOOKW`,<br /><br /> `_CRT_REPORT_HOOKW_M`|Определение типа для функции обратного вызова, к которой обращается [_CrtDbgReport](../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md).<br /><br /> Параметры для данной функции: тип отчета, выходное сообщение и возвращаемое значение функции обратного вызова.|CRTDBG.H|
 |`dev_t`, `_dev_t` короткое целое или целое без знака|Представляет дескрипторы устройства.|SYS\TYPES.H|
 |Структура `_diskfree_t`|Содержит сведения о диске. Используется в [_getdiskfree](../c-runtime-library/reference/getdiskfree.md)**.**|DOS.H и DIRECT.H|
-|Структуры `div_t`, `ldiv_t` и `lldiv_t`|Хранят значения, возвращаемые [div](reference/div.md), [ldiv](../c-runtime-library/reference/ldiv-lldiv.md) и [lldiv](../c-runtime-library/reference/ldiv-lldiv.md), соответственно.|STDLIB.H|
+|Структуры `div_t`, `ldiv_t` и `lldiv_t`|Хранят значения, возвращаемые [div](reference/div.md), [ldiv](./reference/div.md) и [lldiv](./reference/div.md), соответственно.|STDLIB.H|
 |Целое число `errno_t`|Используется для параметра или типа возвращаемого функцией значения, который относится к кодам ошибок `errno`.|STDDEF.H,<br /><br /> CRTDEFS.H|
 |Структура `_exception`|Хранит сведения об ошибке для [_matherr](../c-runtime-library/reference/matherr.md).|MATH.H|
 |`_EXCEPTION_POINTERS`|Содержит запись исключения. Дополнительные сведения см. в разделе [EXCEPTION_POINTERS](/windows/win32/api/winnt/ns-winnt-exception_pointers).|FPIEEE.H|

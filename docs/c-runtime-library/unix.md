@@ -11,12 +11,12 @@ helpviewer_keywords:
 - POSIX file names
 - UNIX, compatibility
 ms.assetid: 40792414-7a5b-415d-bfa8-2bfb1ebb3731
-ms.openlocfilehash: 07f5ffeec8696ded5880c45ed2ea1a5107bee48c
-ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.openlocfilehash: 3975db2407943b329fa7eded0d72d63524428210
+ms.sourcegitcommit: 30792632548d1c71894f9fecbe2f554294b86020
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91590151"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765223"
 ---
 # <a name="unix"></a>UNIX
 
@@ -29,8 +29,8 @@ ms.locfileid: "91590151"
 - Используйте пути и имена файлов, которые правильно работают в UNIX, что чувствительно к регистру. Файловая система файловой системы FAT в операционных системах Win32 не учитывает регистр. Файловая система NTFS сохраняет регистр в списках каталогов, но не учитывает регистр при поиске файлов и других системных операциях.
 
 > [!NOTE]
->  В этой версии Visual C++ информация о совместимости с UNIX была удалена из описаний функций.
+> В этой версии Visual C++ информация о совместимости с UNIX была удалена из описаний функций.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Совместимость](../c-runtime-library/compatibility.md)

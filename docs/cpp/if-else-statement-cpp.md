@@ -1,7 +1,7 @@
 ---
-title: Оператор if-else (C++)
-ms.date: 07/20/2019
-description: Используйте инструкции if-else в C++ для управления условным ветвлением.
+title: оператор if-else (C++)
+description: Используйте if-else, if-else с инициализатором и инструкции If-constexpr для управления условным ветвлением.
+ms.date: 10/02/2020
 f1_keywords:
 - else_cpp
 - if_cpp
@@ -9,62 +9,69 @@ helpviewer_keywords:
 - if keyword [C++]
 - else keyword [C++]
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
-ms.openlocfilehash: a9256e32c89890635c5473a85b4bb3b56bec26d4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 20d828bf00a79687fe0a9fffbeb1a9cc56fae08c
+ms.sourcegitcommit: 30792632548d1c71894f9fecbe2f554294b86020
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87187573"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765302"
 ---
-# <a name="if-else-statement-c"></a>Оператор if-else (C++)
+# <a name="if-else-statement-c"></a>оператор if-else (C++)
 
-Управляет условным ветвлением. Операторы в *блоке if* выполняются только в том случае, если параметр *-Expression* принимает ненулевое значение (или **`true`** ). Если значение *Expression* не равно нулю, то *оператор1* и все другие операторы в блоке выполняются, а else-Block, если он есть, пропускается. Если значение *Expression* равно нулю, то параметр if-Block пропускается и выполняется else-Block, если он есть. Выражения, результатом которых является ненулевое значение, являются
+Оператор if-else управляет условным ветвлением. Операторы в *`if-branch`* выполняются, только если *`condition`* результатом вычисления является ненулевое значение (или **`true`** ). Если значение *`condition`* не равно нулю, выполняется следующая инструкция, а инструкция, следующая за необязательным, **`else`** пропускается. В противном случае пропускается Следующая инструкция, и, если имеется **`else`** оператор после оператора, **`else`** выполняется инструкция.
+
+*`condition`* выражения, принимающие ненулевые значения:
 
 - **`true`**
 - указатель, отличный от NULL,
 - любое ненулевое арифметическое значение или
-- тип класса, определяющий однозначное преобразование к арифметическому, логическому или типу указателя. (Дополнительные сведения о преобразованиях см. в разделе [стандартные преобразования](../cpp/standard-conversions.md).)
+- тип класса, определяющий однозначное преобразование в арифметический, логический или тип указателя. (Дополнительные сведения о преобразованиях см. в разделе [стандартные преобразования](../cpp/standard-conversions.md).)
 
 ## <a name="syntax"></a>Синтаксис
 
-```cpp
-if ( expression )
-{
-   statement1;
-   ...
-}
-else  // optional
-{
-   statement2;
-   ...
-}
+*`init-statement`*:\
+&emsp; *`expression-statement`*\
+&emsp; *`simple-declaration`*
 
-// C++17 - Visual Studio 2017 version 15.3 and later:
-if ( initialization; expression )
-{
-   statement1;
-   ...
-}
-else  // optional
-{
-   statement2;
-   ...
-}
+*`condition`*:\
+&emsp; *`expression`*\
+&emsp;*`attribute-specifier-seq`* <sub>*неявное согласие*</sub> *`decl-specifier-seq`* *`declarator`**`brace-or-equal-initializer`*
 
-// C++17 - Visual Studio 2017 version 15.3 and later:
-if constexpr (expression)
-{
-    statement1;
-    ...
-}
-else  // optional
-{
-   statement2;
-   ...
-}
-```
+*`statement`*:\
+&emsp; *`expression-statement`*\
+&emsp; *`compound-statement`*
 
-## <a name="example"></a>Пример
+*`expression-statement`*:\
+&emsp;*`expression`* <sub>*неявное согласие*</sub>**`;`**
+
+*`compound-statement`*:\
+&emsp;**`{`** *`statement-seq`* <sub>*неявное согласие*</sub>**`}`**
+
+*`statement-seq`*:\
+&emsp; *`statement`*\
+&emsp; *`statement-seq`* *`statement`*
+
+*`if-branch`*:\
+&emsp; *`statement`*
+
+*`else-branch`*:\
+&emsp; *`statement`*
+
+*`selection-statement`*:\
+&emsp;**`if`** **`constexpr`** <sub>*отказ*</sub>от<sup>17</sup> **`(`** *`init-statement`* <sub>*OPT*</sub><sup>17</sup> 17 *`condition`* **`)`***`if-branch`*\
+&emsp;**`if`** **`constexpr`** <sub>*отказ*</sub>от<sup>17</sup> **`(`** *`init-statement`* <sub>*OPT*</sub><sup>17</sup> 17 *`condition`* **`)`** *`if-branch`* **`else`***`else-branch`*
+
+<sup>17</sup> этот необязательный элемент доступен начиная с c++ 17.
+
+## <a name="if-else-statements"></a>операторы if-else
+
+Для всех форм **`if`** инструкции, *`condition`* которая может иметь любое значение, кроме структуры, вычисляется, включая все побочные эффекты. Управление передается из **`if`** оператора в следующий оператор в программе, если только не выполняется *`if-branch`* или не *`else-branch`* содержит [`break`](../cpp/break-statement-cpp.md) , [`continue`](../cpp/continue-statement-cpp.md) или [`goto`](../cpp/goto-statement-cpp.md) .
+
+**`else`** Предложение `if...else` оператора связано с ближайшим предыдущим **`if`** оператором в той же области, у которой нет соответствующей **`else`** инструкции.
+
+### <a name="example"></a>Например, .
+
+В этом примере кода показано **`if`** Использование нескольких использованных операторов как с, так и без него **`else`** :
 
 ```cpp
 // if_else_statement.cpp
@@ -111,11 +118,11 @@ int main()
 }
 ```
 
-## <a name="if-statement-with-an-initializer"></a><a name="if_with_init"></a>Оператор If с инициализатором
+## <a name="if-statement-with-an-initializer"></a><a name="if_with_init"></a> Оператор If с инициализатором
 
-**Visual Studio 2017 версии 15,3 и более поздних версий** (доступно с [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): **`if`** оператор также может содержать выражение, которое объявляет и инициализирует именованную переменную. Используйте эту форму оператора if, если переменная необходима только в области видимости блока if.
+Начиная с C++ 17, **`if`** оператор может также содержать *`init-statement`* выражение, которое объявляет и инициализирует именованную переменную. Используйте эту форму оператора if, если переменная необходима только в области действия оператора if. Для **Microsoft**. Эта форма доступна в Visual Studio 2017 версии 15,3, и для нее требуется по крайней мере [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) параметр компилятора.
 
-## <a name="example"></a>Пример
+### <a name="example"></a>Например, .
 
 ```cpp
 #include <iostream>
@@ -159,13 +166,13 @@ int main()
 }
 ```
 
-Во всех формах **`if`** оператора *выражение*, которое может иметь любое значение, кроме структуры, вычисляется, включая все побочные эффекты. Управление передается **`if`** оператору следующему оператору в программе, если только одна из *инструкций*не содержит [break](../cpp/break-statement-cpp.md), [Continue](../cpp/continue-statement-cpp.md)или [goto](../cpp/goto-statement-cpp.md).
+## <a name="a-nameif_constexpr-if-constexpr-statements"></a><a name="if_constexpr"> If constexpr, операторы
 
-**`else`** Предложение `if...else` оператора связано с ближайшим предыдущим **`if`** оператором в той же области, которая не имеет соответствующего **`else`** оператора.
+Начиная с C++ 17, можно использовать **`if constexpr`** инструкцию в шаблонах функций, чтобы принимать решения о ветвлении во время компиляции без необходимости прибегать к нескольким перегрузкам функций. Для **Microsoft**. Эта форма доступна в Visual Studio 2017 версии 15,3, и для нее требуется по крайней мере [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) параметр компилятора.
 
-## <a name="a-nameif_constexpr-if-constexpr-statements"></a><a name="if_constexpr">If constexpr, операторы
+### <a name="example"></a>Например, .
 
-**Visual Studio 2017 версии 15,3 и более поздних версий** (доступно в [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): в шаблонах функций можно использовать оператор **If constexpr** для принятия решений о ветвлении во время компиляции без необходимости прибегать к нескольким перегрузкам функций. Например, можно написать одну функцию, которая обрабатывает распаковку параметров (без перегрузки нулевого параметра):
+В этом примере показано, как можно написать одну функцию, которая обрабатывает распаковку параметров. Никаких перегрузок с нулевым параметром не требуется:
 
 ```cpp
 template <class T, class... Rest>
@@ -188,6 +195,6 @@ void f(T&& t, Rest&&... r)
 
 ## <a name="see-also"></a>См. также раздел
 
-[Инструкции выбора](../cpp/selection-statements-cpp.md)<br/>
-[Ключевые слова](../cpp/keywords-cpp.md)<br/>
-[Оператор Switch (C++)](../cpp/switch-statement-cpp.md)
+[Операторы выбора](../cpp/selection-statements-cpp.md)\
+[Словами](../cpp/keywords-cpp.md)\
+[Оператор `switch` (C++)](../cpp/switch-statement-cpp.md)
