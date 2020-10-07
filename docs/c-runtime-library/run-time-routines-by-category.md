@@ -1,5 +1,6 @@
 ---
 title: Подпрограммы универсальной среды выполнения C по категориям
+description: Список подпрограмм библиотеки Microsoft универсальной среды выполнения C (UCRT) по категориям.
 ms.date: 04/06/2018
 helpviewer_keywords:
 - routines, run-time
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - categories, run-time functions
 - functions [CRT]
 ms.assetid: de6f5ac4-2226-4dad-be9f-deeb31138c9d
-ms.openlocfilehash: be58ce7550c8f15c1c12eafa1dd4187f12fb71cd
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3106c97bfcaf6ed273ba9f826edf7b268fdca782
+ms.sourcegitcommit: 8caaf5e00aeb727741a273aecafa15de293426cf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846346"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91806543"
 ---
 # <a name="universal-c-runtime-routines-by-category"></a>Подпрограммы универсальной среды выполнения C по категориям
 
-В этом разделе перечислены и описаны универсальные подпрограммы библиотеки времени выполнения C (UCRT) по категориям. Для удобства пользования справочником некоторые подпрограммы присутствуют в нескольких категориях. Подпрограммы для работы с многобайтовыми символами и расширенными символами сгруппированы с их аналогами для однобайтовых символов, если последние существуют.
+В этом разделе перечислены подпрограммы библиотеки универсальной среды выполнения C (UCRT) по категориям. Для удобства пользования справочником некоторые подпрограммы присутствуют в нескольких категориях. Подпрограммы для работы с многобайтовыми символами и расширенными символами сгруппированы с их аналогами для однобайтовых символов, если последние существуют.
 
 ## <a name="ucrt-library-routine-categories"></a>Категории подпрограмм библиотеки UCRT
 
@@ -52,6 +53,6 @@ ms.locfileid: "88846346"
    :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Справочник по библиотеке времени выполнения C](../c-runtime-library/c-run-time-library-reference.md)<br/>
