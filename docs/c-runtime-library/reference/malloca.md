@@ -26,12 +26,12 @@ helpviewer_keywords:
 - malloca function
 - _malloca function
 ms.assetid: 293992df-cfca-4bc9-b313-0a733a6bb936
-ms.openlocfilehash: d4604a6e2dfb00502e3c942c9735a077e1632843
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 64bed4dac2bbaeb60c7b04a600af38f455caf08d
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232499"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008261"
 ---
 # <a name="_malloca"></a>_malloca
 
@@ -56,7 +56,7 @@ void *_malloca(
 
 Если *Размер* больше **_ALLOCA_S_THRESHOLD**, **_malloca** пытается выделить память в куче и возвращает пустой указатель, если пространство невозможно выделить. Если *Размер* меньше или равен **_ALLOCA_S_THRESHOLD**, **_malloca** пытается выделить значение в стеке, и создается исключение переполнения стека, если не удается выделить пространство. Исключение переполнения стека не является исключением C++; это структурированное исключение. Вместо использования обработки исключений C++ необходимо использовать [структурированную обработку исключений](../../cpp/structured-exception-handling-c-cpp.md) (SEH) для перехвата этого исключения.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
 
 **_malloca** выделяет байты *размера* из стека программы или кучи, если запрос превышает определенный размер в байтах, заданный в **_ALLOCA_S_THRESHOLD**. Различие между **_malloca** и **_alloca** заключается в том, что **_alloca** всегда выделяется в стеке независимо от размера. В отличие от **_alloca**, в которых не требуется или не разрешен вызов **для освобождения** памяти, чтобы освободить память, **_malloca** требует использования [_freea](freea.md) для освобождения памяти. В режиме отладки **_malloca** всегда выделяет память из кучи.
 
@@ -81,7 +81,7 @@ void *_malloca(
 |-------------|---------------------|
 |**_malloca**|\<malloc.h>|
 
-## <a name="example"></a>Пример
+## <a name="example-malloca"></a>Пример: malloc
 
 ```C
 // crt_malloca_simple.c
@@ -101,7 +101,7 @@ int main()
 }
 ```
 
-## <a name="example"></a>Пример
+## <a name="example-malloca-exception"></a>Пример: исключение malloc
 
 ```C
 // crt_malloca_exception.c
@@ -173,7 +173,7 @@ int main()
 Enter the number of bytes to allocate using _malloca: 1000
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [Выделение памяти](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>

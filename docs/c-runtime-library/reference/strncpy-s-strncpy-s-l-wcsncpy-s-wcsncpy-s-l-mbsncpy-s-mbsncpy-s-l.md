@@ -54,12 +54,12 @@ helpviewer_keywords:
 - _tcsncpy_s function
 - wcsncpy_s_l function
 ms.assetid: a971c800-94d1-4d88-92f3-a2fe236a4546
-ms.openlocfilehash: 1fa2cc24f4ec610e1cc892ddd8d3bf8971ddf687
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 08921ff44d2d69ab77eb210b2123016ea61c4f67
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919297"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008270"
 ---
 # <a name="strncpy_s-_strncpy_s_l-wcsncpy_s-_wcsncpy_s_l-_mbsncpy_s-_mbsncpy_s_l"></a>strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
 
@@ -176,18 +176,18 @@ errno_t _mbsncpy_s_l(
 
 |*стрдест*|*numberOfElements*|*стрсаурце*|Возвращаемое значение|Содержимое *стрдест*|
 |---------------|------------------------|-----------------|------------------|---------------------------|
-|**ЗАКАНЧИВАЮЩ**|any|any|**еинвал**|не изменено|
-|any|any|**ЗАКАНЧИВАЮЩ**|**еинвал**|*стрдест*[0] имеет значение 0|
+|**NULL**|any|any|**еинвал**|не изменено|
+|any|any|**NULL**|**еинвал**|*стрдест*[0] имеет значение 0|
 |any|0|any|**еинвал**|не изменено|
 |не **null**|слишком мало|any|**ERANGE**|*стрдест*[0] имеет значение 0|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
 
 Эти функции пытаются скопировать первые *D* символов из *стрсаурце* в *стрдест*, где *D* — это меньшее *количество и длина* *стрсаурце*. Если эти *D* -символы помещаются в *стрдест* (чей размер задан как *numberOfElements*) и все еще оставляет место для нулевого терминатора, то эти символы копируются и добавляется завершающее значение null. в противном случае для *стрдест*[0] задается символ NULL и вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).
 
 Для вышеприведенного абзаца есть исключения. Если параметр *Count* имеет значение **_TRUNCATE**, то *стрсаурце* , как помещается в *стрдест* , копируется, оставляя место для завершающего значения NULL, которое всегда добавляется.
 
-Например,
+Например:
 
 ```C
 char dst[5];
@@ -239,7 +239,7 @@ strncpy_s(dst, 5, "a long string", 4);
 
 Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Пример
+## <a name="example-copy-chars-to-a-buffer"></a>Пример. копирование символов в буфер
 
 ```cpp
 // crt_strncpy_s_1.cpp
@@ -366,7 +366,7 @@ Invalid parameter handler invoked: (L"Buffer is too small" && 0)
     new contents of dest: ''
 ```
 
-## <a name="example"></a>Пример
+## <a name="example-strncpy-and-strncpy_s"></a>Пример: strncpy и strncpy_s
 
 ```C
 // crt_strncpy_s_2.c
@@ -410,11 +410,11 @@ After strncpy_s (with null-termination):
    'mice'
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [Управление строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
-[Интерпретация последовательностей многобайтовых символов](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Локаль](../../c-runtime-library/locale.md)<br/>
+[Интерпретация последовательностей Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcpy, _mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md)<br/>
 [strcat_s, wcscat_s, _mbscat_s](strcat-s-wcscat-s-mbscat-s.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>

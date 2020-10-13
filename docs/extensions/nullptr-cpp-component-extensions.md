@@ -6,12 +6,12 @@ helpviewer_keywords:
 - __nullptr keyword (C++)
 - nullptr keyword [C++]
 ms.assetid: 594cfbf7-06cb-4366-9ede-c0b703e1d095
-ms.openlocfilehash: 5e7a5d3f9a42968dee35f82d3f19d0fdb6da5d0c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7e9cf88fdc0444f736f1cfac0d06dfc675a162cc
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214234"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008355"
 ---
 # <a name="nullptr--ccli-and-ccx"></a>nullptr (C++/CLI и C++/CX)
 
@@ -51,7 +51,7 @@ ms.locfileid: "87214234"
 
 Нельзя инициализировать нулевой маркер; **`nullptr`** можно использовать только. При присвоении константы 0 дескриптору объекта создаются упакованный тип `Int32` и приведение к типу `Object^`.
 
-## <a name="example"></a>Пример
+## <a name="example-nullptr-keyword"></a>Пример: `nullptr` ключевое слово
 
 В следующем примере кода показано, что **`nullptr`** ключевое слово можно использовать везде, где можно использовать обработчик, собственный указатель или аргумент функции. В примере показано, что **`nullptr`** ключевое слово можно использовать для проверки ссылки перед ее использованием.
 
@@ -80,7 +80,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Пример
+## <a name="example-use-nullptr-and-zero-interchangeably"></a>Пример. Использование `nullptr` и нулевое взаимозаменяемость
 
 В следующем примере кода показано, что **`nullptr`** и ноль могут использоваться в собственных указателях в качестве взаимозаменяемых.
 
@@ -119,7 +119,7 @@ pMyClass == nullptr
 pMyClass == 0
 ```
 
-## <a name="example"></a>Пример
+## <a name="example-interpret-nullptr-as-a-handle"></a>Пример: интерпретировать `nullptr` как маркер
 
 В следующем примере кода показано, что **`nullptr`** интерпретируется как Handle в любой тип или собственный указатель на любой тип. В случае перегрузки функции с дескрипторами различных типов создается ошибка неоднозначности. Необходимо **`nullptr`** явно привести к типу.
 
@@ -137,7 +137,7 @@ void f_null() {
 }
 ```
 
-## <a name="example"></a>Пример
+## <a name="example-cast-nullptr"></a>Пример: CAST `nullptr`
 
 В следующем примере кода показано, что приведение **`nullptr`** разрешено и возвращает указатель или обработчик для типа приведения, содержащего **`nullptr`** значение.
 
@@ -158,7 +158,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Пример
+## <a name="example-pass-nullptr-as-a-function-parameter"></a>Пример. Передача `nullptr` в качестве параметра функции
 
 В следующем примере кода показано, что **`nullptr`** можно использовать в качестве параметра функции.
 
@@ -179,7 +179,7 @@ int main() {
 test
 ```
 
-## <a name="example"></a>Пример
+## <a name="example-default-initialization"></a>Пример: инициализация по умолчанию
 
 В следующем примере кода показано, что когда дескрипторы объявляются и не инициализируются явно, они инициализируются значением по умолчанию **`nullptr`** .
 
@@ -206,7 +206,7 @@ int main() {
 NULL
 ```
 
-## <a name="example"></a>Пример
+## <a name="example-assign-nullptr-to-a-native-pointer"></a>Пример. Назначение `nullptr` в собственный указатель
 
 В следующем примере кода показано, что **`nullptr`** можно присвоить собственный указатель при компиляции с помощью `/clr` .
 
@@ -223,7 +223,7 @@ int main() {
 
 Параметр компилятора: необязателен; поддерживается всеми параметрами создания кода, включая `/ZW` и `/clr`.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [Расширения компонентов для .NET и UWP](component-extensions-for-runtime-platforms.md)<br/>
 [nullptr](../cpp/nullptr.md)

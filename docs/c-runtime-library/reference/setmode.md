@@ -31,12 +31,12 @@ helpviewer_keywords:
 - files [C++], translation
 - setmode function
 ms.assetid: 996ff7cb-11d1-43f4-9810-f6097182642a
-ms.openlocfilehash: 1995d54e972f99543773fff374e56c0dd7cf4988
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: abedba6f1d414191732859e3e44b54cc16acc4e9
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915807"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008418"
 ---
 # <a name="_setmode"></a>_setmode
 
@@ -67,14 +67,14 @@ int _setmode (
 
 Дополнительные сведения об этих и других кодах возврата см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
 
 Функция **_setmode** *задает для режима преобразования файла, заданного* параметром \ " *демон*\". Передача **_O_TEXT** как *mode* устанавливает режим текста (т. е. переведенный). Сочетания символов возврата каретки и перевода строки (CR-LF) преобразуются в один символ перевода строки во входных данных. Символы перевода строки преобразуются в комбинацию CR-LF в выводе. Передача **_O_BINARY** задает двоичный (непреобразованный) режим, в котором эти переводы подавляются.
 
 Можно также передать **_O_U16TEXT**, **_O_U8TEXT**или **_O_WTEXT** , чтобы включить режим Юникода, как показано во втором примере далее в этом документе.
 
 > [!CAUTION]
-> Режим Юникода предназначен для расширенных функций печати (например, `wprintf`) и не поддерживается для узких функций печати. Использование небольшой функции печати в потоке режима Юникод вызывает утверждение.
+> Режим Юникода предназначен для расширенных функций печати (например, `wprintf` ) и не поддерживается для узких функций печати. Использование небольшой функции печати в потоке режима Юникод вызывает утверждение.
 
 **_setmode** обычно используется для изменения режима преобразования **stdin** и **stdout**по умолчанию, но его можно использовать в любом файле. При применении **_setmode** к дескриптору файла для потока вызовите метод **_setmode** , прежде чем выполнять операции ввода или вывода в потоке.
 
@@ -91,7 +91,7 @@ int _setmode (
 
 Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Пример
+## <a name="example-use-_setmode-to-change-stdin"></a>Пример. Использование _setmode для изменения stdin
 
 ```C
 // crt_setmode.c
@@ -119,7 +119,7 @@ int main( void )
 'stdin' successfully changed to binary mode
 ```
 
-## <a name="example"></a>Пример
+## <a name="example-use-_setmode-to-change-stdout"></a>Пример. Использование _setmode для изменения stdout
 
 ```C
 // crt_setmodeunicode.c
@@ -139,10 +139,10 @@ int main(void) {
 }
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [Обработка файлов](../../c-runtime-library/file-handling.md)<br/>
-[_creat, _wcreat](creat-wcreat.md)<br/>
+[Функция _creat, _wcreat](creat-wcreat.md)<br/>
 [fopen, _wfopen](fopen-wfopen.md)<br/>
 [_open, _wopen](open-wopen.md)<br/>
 [_set_fmode](set-fmode.md)<br/>

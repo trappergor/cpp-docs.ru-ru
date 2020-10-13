@@ -5,12 +5,12 @@ helpviewer_keywords:
 - accessors [C++], dynamic
 - dynamic accessors
 ms.assetid: e5d5bfa6-2b1d-49d0-8ced-914666422431
-ms.openlocfilehash: eea1c6199fed5a4e6e331c1c76f34b96090b709a
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 4f42d6f20da819cf325cad06a04878b46e52352a
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509413"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008678"
 ---
 # <a name="using-dynamic-accessors"></a>Использование динамических методов доступа
 
@@ -22,7 +22,7 @@ ms.locfileid: "91509413"
 
 [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) позволяет получить доступ к источнику данных, когда нет сведений о схеме базы данных (базовой структуре базы данных). `CDynamicAccessor` методы получают сведения о столбцах, такие как имена столбцов, количество и тип данных. Эти сведения о столбцах используются для динамического создания метода доступа во время выполнения. Сведения о столбцах хранятся в буфере, который создается и управляется этим классом. Получение данных из буфера с помощью метода [GetValue](./cdynamicaccessor-class.md#getvalue) .
 
-## <a name="example"></a>Пример
+## <a name="example-cdynamic-accessors"></a>Пример: методы доступа Кдинамик
 
 ```cpp
 // Using_Dynamic_Accessors.cpp
@@ -94,7 +94,7 @@ int main(int argc, char* argv[] )
 
 Используйте `CDynamicStringAccessor` методы для получения сведений о столбцах. Эти сведения о столбцах используются для динамического создания метода доступа во время выполнения. Сведения о столбцах хранятся в буфере, созданном и управляемом этим классом. Получение данных из буфера с помощью [CDynamicStringAccessor:: GetString](./cdynamicstringaccessor-class.md#getstring) или сохранение их в буфер с помощью [CDynamicStringAccessor:: SetString](./cdynamicstringaccessor-class.md#setstring).
 
-## <a name="example"></a>Пример
+## <a name="example-cdynamicstringaccessor"></a>Пример: CDynamicStringAccessor
 
 ```cpp
 // Using_Dynamic_Accessors_b.cpp
@@ -156,7 +156,7 @@ int main(int argc, char* argv[] )
 
 Пример использования этого класса для выполнения хранимой процедуры SQL Server и получения значений выходных параметров см. в примере кода [динамикконсумер](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer) в репозитории [Microsoft Вксамплес](https://github.com/Microsoft/VCSamples) на сайте GitHub.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [Использование методов доступа](../../data/oledb/using-accessors.md)<br/>
 [Класс CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)<br/>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - std::tuple_element
 ms.assetid: 4c51a6c1-ce81-462f-8c6c-291d69f2b77c
-ms.openlocfilehash: 21efed39fdaabe0f95f83e9dc5cdfcc508a147c5
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: be9d9fe56d35e96e4179eb511edccd475a369f32
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72684459"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008293"
 ---
 # <a name="tuple_element-class"></a>Класс tuple_element
 
@@ -56,37 +56,37 @@ template <class T1, class T2>
 
 ### <a name="parameters"></a>Параметры
 
-@No__t_1 *индекса*
+*Номер*\
 Индекс указанного элемента.
 
-@No__t_1 *кортежа*
+*Кортеж*\
 Тип кортежа.
 
-*Elem* \
+*Elem*\
 Тип элемента массива.
 
-*Размер* \
+*Изменять*\
 Размер массива.
 
-@No__t_1 *T1*
+*T1*\
 Тип первого элемента в паре.
 
-*T2* \
+*T2*\
 Тип второго элемента в паре.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Комментарии
 
-Шаблон класса `tuple_element` имеет вложенную `type` typedef, которая является синонимом для типа по индексу *индекса* *кортежа*типа кортежа.
+Шаблон класса `tuple_element` имеет вложенное typedef `type` , который является синонимом для типа по индексу *индекса* *кортежа*типа кортежа.
 
 Определение типа `tuple_element_t` является удобным псевдонимом для `tuple_element<Index, Tuple>::type`.
 
-Специализация шаблона класса для массивов предоставляет интерфейс `array` в виде кортежа `Size` элементов, каждый из которых имеет один и тот же тип. Каждая специализация имеет вложенную `type` typedef, которая является синонимом для типа элемента *индекса* `array` с сохранением любых квалификаций const-volatile.
+Специализация шаблона класса для массивов предоставляет интерфейс в `array` качестве кортежа `Size` элементов, каждый из которых имеет один и тот же тип. Каждая специализация имеет вложенное typedef `type` , который является синонимом для типа элемента *индекса* объекта `array` , с сохранением любых квалификаций const-volatile.
 
 Специализации шаблона для типов `pair` предоставляют по одному определению типа члена, `type`, которое является синонимом типа элемента в указанной позиции в паре с сохранением всех квалификаторов const и(или) volatile. Определение типа `tuple_element_t` является удобным псевдонимом для `tuple_element<N, pair<T1, T2>>::type`.
 
-Используйте [функцию get &lt;utility &gt;](../standard-library/utility-functions.md#get) для возврата элемента в указанной позиции или указанного типа.
+Используйте [ &lt; служебную программу &gt; Get](../standard-library/utility-functions.md#get) для возврата элемента в указанной позиции или указанного типа.
 
-## <a name="example"></a>Пример
+## <a name="example-get-an-element-from-a-tuple"></a>Пример. получение элемента из кортежа
 
 ```cpp
 #include <tuple>
@@ -111,7 +111,7 @@ int main() {
 0 1.5 Tail
 ```
 
-## <a name="example"></a>Пример
+## <a name="example-get-an-element-from-an-array"></a>Пример. получение элемента из массива
 
 ```cpp
 #include <array>
@@ -141,7 +141,7 @@ int main()
 0
 ```
 
-## <a name="example"></a>Пример
+## <a name="example-get-an-element-from-a-pair"></a>Пример. получение элемента из пары
 
 ```cpp
 #include <utility>
@@ -174,10 +174,10 @@ int main() {
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<tuple>
+**Заголовок:**\<tuple>
 
 **Заголовок:** \<array> (для специализации массива)
 
-**Заголовок:** \<utility > (для специализаций пар)
+**Заголовок:** \<utility> (для пар специализаций)
 
 **Пространство имен:** std

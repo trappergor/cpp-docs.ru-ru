@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - function templates, member functions
 ms.assetid: 83d51835-6a27-40ed-997c-7d90dc9182d8
-ms.openlocfilehash: ee36d4f33f3e4216e2ad9c434ac1da4ca3aa83e8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8514c8ffe630f5bc44d8d287d6ccf08c7755e3a0
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80177985"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008568"
 ---
 # <a name="member-function-templates"></a>Шаблоны функций-членов
 
@@ -17,7 +17,7 @@ ms.locfileid: "80177985"
 
 Функции-члены могут являться функциями-шаблонами в нескольких контекстах. Все функции шаблонов классов являются общими, однако они не являются шаблонами элементов или шаблонами функций-членов. Если такие функции-члены принимают собственные аргументы шаблона, они считаются шаблонами функций-членов.
 
-## <a name="example"></a>Пример
+## <a name="example-declare-member-function-templates"></a>Пример. объявление шаблонов функций элементов
 
 Шаблоны функции-члена нешаблонных или шаблонных классов объявляются в виде шаблонов функций с собственными шаблонными параметрами.
 
@@ -36,7 +36,7 @@ int main()
 }
 ```
 
-## <a name="example"></a>Пример
+## <a name="example-member-function-template-of-template-class"></a>Пример: шаблон функции члена класса шаблона
 
 В следующем примере показан шаблон функции-члена шаблонного класса.
 
@@ -57,7 +57,7 @@ int main()
 }
 ```
 
-## <a name="example"></a>Пример
+## <a name="example-define-member-templates-outside-class"></a>Пример: Определение шаблонов элементов за пределами класса
 
 ```cpp
 // defining_member_templates_outside_class.cpp
@@ -79,7 +79,7 @@ int main()
 }
 ```
 
-## <a name="example"></a>Пример
+## <a name="example-templated-user-defined-conversion"></a>Пример. шаблонное определяемое пользователем преобразование
 
 Локальные классы не могут иметь шаблоны элементов.
 
@@ -105,6 +105,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [Шаблоны функций](../cpp/function-templates.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - message-block filters, using [Concurrency Runtime]
 - using message-block filters [Concurrency Runtime]
 ms.assetid: db6b99fb-288d-4477-96dc-b9751772ebb2
-ms.openlocfilehash: a5814536e88add5b15f577588d571a06eda6151c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ac58ef2240d2ea6ba34b334106c08595e70b02e8
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226715"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008639"
 ---
 # <a name="how-to-use-a-message-block-filter"></a>Практическое руководство. Использование фильтра блоков сообщений
 
@@ -20,9 +20,9 @@ ms.locfileid: "87226715"
 
 Функции фильтров важны, так как они позволяют подключать блоки сообщений для формирования *сетей потоков*данных. В сети потока данных блоки сообщений управляют ходом обработки сообщений, обрабатывая только те сообщения, которые удовлетворяют определенным условиям. Сравните это с моделью потока управления, где поток данных регулируется с помощью структур управления, таких как условные операторы, циклы и т. д.
 
-В этом документе представлен простой пример использования фильтра сообщений. Дополнительные примеры использования фильтров сообщений и модели потоков данных для подключения блоков сообщений см. в разделе [Пошаговое руководство. Создание агента потоков](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md) данных и [Пошаговое руководство. Создание сети обработки изображений](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
+В этом документе представлен простой пример использования фильтра сообщений. Дополнительные примеры использования фильтров сообщений и модели потоков данных для подключения блоков сообщений см. в разделе [Пошаговое руководство. Создание агента потоков](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md) данных и [Пошаговое руководство. Создание Image-Processing сети](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
 
-## <a name="example"></a>Пример
+## <a name="example-count_primes-function"></a>Пример: Функция count_primes
 
 Рассмотрим следующую функцию, `count_primes` которая иллюстрирует базовое использование блока сообщений, который не фильтрует входящие сообщения. Блок сообщений добавляет простые числа к объекту [std:: Vector](../../standard-library/vector-class.md) . `count_primes`Функция отправляет несколько чисел в блок сообщений, получает выходные значения из блока сообщений и выводит эти числа, которые являются простыми в консоли.
 
@@ -30,7 +30,7 @@ ms.locfileid: "87226715"
 
 `transformer`Объект обрабатывает все входные значения, однако для него требуются только простые значения. Несмотря на то, что приложение может быть написано таким образом, чтобы отправитель сообщений отправлял только простые числа, требования получателя сообщений не всегда известны.
 
-## <a name="example"></a>Пример
+## <a name="example-count_primes_filter-function"></a>Пример: функция count_primes_filter
 
 Следующая функция, `count_primes_filter` , выполняет ту же задачу, что и `count_primes` функция. Однако `transformer` объект в этой версии использует функцию Filter, чтобы принимать только те значения, которые являются простыми. Функция, которая выполняет действие, получает только простые числа; Поэтому не нужно вызывать `is_prime` функцию.
 
@@ -40,7 +40,7 @@ ms.locfileid: "87226715"
 
 `transformer`Теперь объект обрабатывает только те значения, которые являются простыми. В предыдущем примере `transformer` объект обрабатывает все сообщения. Поэтому в предыдущем примере должно быть получено то же количество отправленных сообщений. В этом примере используется результат функции [Concurrency:: send](reference/concurrency-namespace-functions.md#send) , чтобы определить количество сообщений, получаемых из `transformer` объекта. `send`Функция возвращает, **`true`** когда буфер сообщений принимает сообщение, и **`false`** когда буфер сообщений отклоняет сообщение. Таким образом, количество простых чисел в буфере сообщений соответствует числу значений.
 
-## <a name="example"></a>Пример
+## <a name="example-finished-message-block-filter-code-sample"></a>Пример. завершен пример кода для фильтра блокировки сообщений
 
 Ниже приведен полный пример кода. В примере вызывается `count_primes` и функция, и `count_primes_filter` функция.
 
@@ -67,5 +67,5 @@ bool (T const &)
 
 [библиотеку асинхронных агентов](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [Пошаговое руководство. Создание агента потока данных](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)<br/>
-[Пошаговое руководство. Создание сети обработки изображений](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
+[Пошаговое руководство. Создание Image-Processing сети](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
 [Класс transformer](../../parallel/concrt/reference/transformer-class.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __declspec keyword [C++], selectany
 - selectany __declspec keyword
 ms.assetid: 9c353017-5a42-4f50-b741-bd13da1ce84d
-ms.openlocfilehash: e279184322c239e7768eb8fd4321ee451b2cb94c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6cd2ec4e22d94c42432a1fc3e39afd5540302d22
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213233"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008208"
 ---
 # `selectany`
 
@@ -24,7 +24,7 @@ ms.locfileid: "87213233"
 
 > **`__declspec( selectany )`***декларатор*
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
 
 Во время компоновки, если отображается несколько определений COMDAT, компоновщик выбирает один из них и игнорирует остальные. Если выбран параметр компоновщика [`/OPT:REF`](../build/reference/opt-optimizations.md) (оптимизации), то будет удалено исключение COMDAT, чтобы удалить все элементы данных, которые не ссылаются на выходные данные компоновщика.
 
@@ -37,7 +37,7 @@ ms.locfileid: "87213233"
 > [!NOTE]
 > **`selectany`** может применяться только к фактической инициализации элементов глобальных данных, видимых извне.
 
-## <a name="example"></a>Пример
+## <a name="example-selectany-attribute"></a>Пример: `selectany` атрибут
 
 В этом коде показано, как использовать **`selectany`** атрибут:
 
@@ -71,7 +71,7 @@ int i;
 __declspec(selectany) X x(1);
 ```
 
-## <a name="example"></a>Пример
+## <a name="example-use-selectany-attribute-to-ensure-data-comdat-folding"></a>Пример: использование `selectany` атрибута для свертывания данных COMDAT
 
 В этом коде показано, как с помощью **`selectany`** атрибута обеспечить сворачивание данных COMDAT при использовании [`/OPT:ICF`](../build/reference/opt-optimizations.md) параметра компоновщика. Обратите внимание, что данные должны быть помечены **`selectany`** и помещены в **`const`** раздел (ReadOnly). Раздел, доступный только для чтения, необходимо указать явно.
 

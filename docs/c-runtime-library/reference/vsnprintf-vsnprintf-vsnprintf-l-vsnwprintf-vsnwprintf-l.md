@@ -56,12 +56,12 @@ helpviewer_keywords:
 - formatted text [C++]
 - vsnwprintf function
 ms.assetid: a97f92df-c2f8-4ea0-9269-76920d2d566a
-ms.openlocfilehash: 63a2cd2e6287f9fe960cd60d799f4518b47572ae
-ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
+ms.openlocfilehash: e6ed3d146458f514691fe0b20a4c88ffebb5f877
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90075768"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008691"
 ---
 # <a name="vsnprintf-_vsnprintf-_vsnprintf_l-_vsnwprintf-_vsnwprintf_l"></a>vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
 
@@ -172,7 +172,7 @@ int _vsnwprintf_l(
 - Если *Count* равно нулю, но значение *buffer* не **равно NULL**, запись не производится и функция возвращает `-1` .
 - Если *параметр format* имеет **значение NULL**или если *буфер* равен **null** , а значение *Count* не равно нулю, эти функции вызывают обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают-1 **и устанавливают для** **еинвал**значение.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
 
 Каждая из этих функций принимает указатель на список аргументов, затем форматирует данные и записывает *их в память, на которую* указывает *буфер*. Функция **vsnprintf** всегда записывает знак завершения null, даже если он усекает выходные данные. При использовании **_vsnprintf** и **_vsnwprintf**буфер будет завершаться нулем, только если в конце есть место (то есть если количество символов для записи меньше, чем *Count*).
 
@@ -206,7 +206,7 @@ int _vsnwprintf_l(
 
 Функции **_vsnprintf**, **_vsnprintf_l**, **_vsnwprintf** и **_vsnwprintf_l** являются специфичными для Microsoft. Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Пример
+## <a name="example-use-wide-characters-with-_vsnwprintf"></a>Пример. Использование расширенных символов с `_vsnwprintf()`
 
 ```C
 // crt_vsnwprintf.c
@@ -248,7 +248,7 @@ nSize: -1, buff: Hi there!
 
 Поведение изменяется в том случае, если вместо этого использовать vsnprintf с узкими строковыми параметрами. Параметр *Count* может быть целым размером буфера, а возвращаемое значение — число символов, которые были бы записаны, если *количество* было достаточно большим:
 
-## <a name="example"></a>Пример
+## <a name="example-use-vsnprintf-with-narrow-strings"></a>Пример. Использование `vsnprintf()` с узкими строками
 
 ```C
 // crt_vsnprintf.c
@@ -284,7 +284,7 @@ nSize: 9, buff: Hi there!
 nSize: 10, buff: Hi there!
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)<br/>
 [Функции vprintf](../../c-runtime-library/vprintf-functions.md)<br/>

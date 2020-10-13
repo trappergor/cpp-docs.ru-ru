@@ -5,12 +5,12 @@ helpviewer_keywords:
 - search algorithm, writing [Concurrency Runtime]
 - writing a search algorithm [Concurrency Runtime]
 ms.assetid: 16d7278c-2d10-4014-9f58-f1899e719ff9
-ms.openlocfilehash: 9cf42df0926022f93633a6b5b1365ae9fc646a1a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f6842e3093a577289c0c4432d96298e3c7b2bb92
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213922"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008500"
 ---
 # <a name="how-to-use-exception-handling-to-break-from-a-parallel-loop"></a>Практическое руководство. Использование обработки исключений для выхода из параллельного цикла
 
@@ -18,19 +18,19 @@ ms.locfileid: "87213922"
 
 В разделе [Отмена](cancellation-in-the-ppl.md) статьи объясняется роль отмены в библиотеке параллельных шаблонов. Использование обработки исключений является менее эффективным способом отмены параллельной работы, чем использование методов [Concurrency:: task_group:: Cancel](reference/task-group-class.md#cancel) и [concurrency:: structured_task_group:: Cancel](reference/structured-task-group-class.md#cancel) . Однако одним из сценариев, в которых используется обработка исключений для отмены работы, является ситуация, когда вы вызываете библиотеку стороннего производителя, которая использует задачи или параллельные алгоритмы, но не `task_group` предоставляет `structured_task_group` объект или для отмены.
 
-## <a name="example"></a>Пример
+## <a name="example-basic-tree-type"></a>Пример: базовый тип дерева
 
 В следующем примере показан базовый `tree` тип, содержащий элемент данных и список дочерних узлов. В следующем разделе показан текст `for_all` метода, который рекурсивно выполняет рабочую функцию на каждом дочернем узле.
 
 [!code-cpp[concrt-task-tree-search#2](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_1.cpp)]
 
-## <a name="example"></a>Пример
+## <a name="example-perform-work-in-parallel"></a>Пример. Параллельное выполнение работы
 
 В следующем примере показан `for_all` метод. В нем используется алгоритм [параллелизма::p arallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) для выполнения рабочей функции на каждом узле дерева параллельно.
 
 [!code-cpp[concrt-task-tree-search#1](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_2.cpp)]
 
-## <a name="example"></a>Пример
+## <a name="example--search-the-tree-for-a-value"></a>Пример. Поиск значения в дереве
 
 В следующем примере показана функция `search_for_value`, которая выполняет поиск значения в предоставленном объекте `tree`. Эта функция передает в `for_all` метод рабочую функцию, которая создает исключение при обнаружении узла дерева, содержащего указанное значение.
 
@@ -40,7 +40,7 @@ ms.locfileid: "87213922"
 
 [!code-cpp[concrt-task-tree-search#3](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_3.cpp)]
 
-## <a name="example"></a>Пример
+## <a name="example-create-and-search-a-tree-in-parallel"></a>Пример: параллельное создание и поиск в дереве
 
 В следующем примере создается `tree` объект и выполняется поиск нескольких значений в параллельном режиме. `build_tree`Эта функция показана далее в этом разделе.
 
@@ -48,7 +48,7 @@ ms.locfileid: "87213922"
 
 В этом примере используется алгоритм [arallel_invoke Concurrency::p](reference/concurrency-namespace-functions.md#parallel_invoke) для параллельного поиска значений. Дополнительные сведения об этом алгоритме см. в разделе [Параллельные алгоритмы](../../parallel/concrt/parallel-algorithms.md).
 
-## <a name="example"></a>Пример
+## <a name="example-finished-exception-handling-code-sample"></a>Пример. завершенный пример кода обработки исключений
 
 В следующем полном примере используется обработка исключений для поиска значений в простой древовидной структуре.
 
@@ -68,7 +68,7 @@ Did not find node with value 17522.
 
 > **cl.exe/EHsc ТАСК-три-СЕАРЧ. cpp**
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [Отмена в библиотеке параллельных шаблонов](cancellation-in-the-ppl.md)<br/>
 [Обработка исключений](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)<br/>

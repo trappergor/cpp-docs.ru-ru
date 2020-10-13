@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - DLL conflicts [C++]
 ms.assetid: c217ffd2-5d9a-4678-a1df-62a637a96460
-ms.openlocfilehash: f6d831ac8b86be8a6669e8ee6c66da64507d129f
-ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.openlocfilehash: 2d42803b5eca7a43f122d209b7d9e2d4e45c38de
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91590190"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008944"
 ---
 # <a name="potential-errors-passing-crt-objects-across-dll-boundaries"></a>Потенциальные ошибки при передаче объектов CRT через границы DLL
 
@@ -33,7 +33,7 @@ ms.locfileid: "91590190"
 
 Библиотека DLL и ее клиенты используют одну и ту же копию библиотеки CRT, только если при загрузке они будут связаны с одной и той же версией DLL CRT. Так как версия библиотеки DLL универсальной библиотеки CRT, используемой Visual Studio 2015 и более поздних версий в Windows 10, теперь является центрально развернутым компонентом Windows (ucrtbase.dll), это то же самое, что и для приложений, созданных с помощью Visual Studio 2015 и более поздних версий. Однако даже если код CRT идентичен, нельзя выделить память, выделенную в одной куче, компоненту, использующему другую кучу.
 
-## <a name="example"></a>Пример
+## <a name="example-pass-file-handle-across-dll-boundary"></a>Пример. Передача обработчика файла через границу DLL
 
 ### <a name="description"></a>Описание
 
@@ -75,7 +75,7 @@ int main(void)
 this is a string
 ```
 
-## <a name="example"></a>Пример
+## <a name="example-pass-environment-variables-across-dll-boundary"></a>Пример. Передача переменных среды через границу DLL
 
 ### <a name="description"></a>Описание
 
@@ -128,6 +128,6 @@ MYLIB has not been set.
 New MYLIB variable is: c:\mylib;c:\yourlib
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также статью
 
 [Возможности библиотеки CRT](../c-runtime-library/crt-library-features.md)
