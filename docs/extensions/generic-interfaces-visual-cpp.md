@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic interfaces
 - interfaces, generic [C++}
 ms.assetid: f3da788a-ba83-4db7-9dcf-9b95a8fb9d1a
-ms.openlocfilehash: f5a74eaafa7ff348079ec367a7c2318f86081f15
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 61ab514d244c8b41d467d382fa97e30556ccbb32
+ms.sourcegitcommit: ced5ff1431ffbd25b20d106901955532723bd188
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218030"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92135532"
 ---
 # <a name="generic-interfaces-ccli"></a>Универсальные интерфейсы (C++/CLI)
 
@@ -59,7 +59,7 @@ ms.locfileid: "87218030"
 *declarators*<br/>
 (Необязательно) Объявления переменных на основе этого типа.
 
-## <a name="example"></a>Пример
+## <a name="example-how-to-declare-and-instantiate-a-generic-interface"></a>Пример. как объявить и создать экземпляр универсального интерфейса
 
 В следующем примере показано, как объявить и создать экземпляр универсального интерфейса. В примере универсального интерфейса объявлен `IList<ItemType>`. Затем он реализуется двумя универсальными классами `List1<ItemType>` и `List2<ItemType>` с различными реализациями.
 
@@ -236,7 +236,7 @@ Array List
 List2
 ```
 
-## <a name="example"></a>Пример
+## <a name="example-declare-a-generic-interface"></a>Пример. объявление универсального интерфейса
 
 В этом примере объявляется универсальный интерфейс (`IMyGenIface`) и два неуниверсальных интерфейса (`IMySpecializedInt` и `ImySpecializedString`), которые специализируют `IMyGenIface`. Два специализированных интерфейса реализуются двумя классами — `MyIntClass` и `MyStringClass`. В этом примере продемонстрирована специализация универсальных интерфейсов, создание экземпляров универсальных и неуниверсальных интерфейсов и вызов явно реализованных элементов в интерфейсах.
 

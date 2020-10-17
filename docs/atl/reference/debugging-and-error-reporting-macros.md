@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: 2bcdfb474ee852e55bd54f1b125716e7785f28be
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6b969cfb841a9a95d695eacc0a25f9dd378379ac
+ms.sourcegitcommit: ced5ff1431ffbd25b20d106901955532723bd188
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833482"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92135545"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Макросы отладки и отчетов об ошибках
 
@@ -40,7 +40,7 @@ ms.locfileid: "88833482"
 #define _ATL_DEBUG_INTERFACES
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Отобразятся выходные данные трассировки, как показано ниже.
 
@@ -71,7 +71,7 @@ ms.locfileid: "88833482"
 #define _ATL_DEBUG_QI
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 В случае сбоя вызова в `QueryInterface` окне вывода отобразится следующее:
 
@@ -90,11 +90,11 @@ ATLASSERT(booleanExpression);
 *булеанекспрессион*<br/>
 Выражение (включая указатели), результат вычисления которого отличен от нуля или равен нулю.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 В отладочных сборках АТЛАССЕРТ оценивает *булеанекспрессион* и создает отчет об отладке, если результат имеет значение false.
 
-## <a name="requirements"></a>Требования
+### <a name="requirements"></a>Требования
 
 **Заголовок:** атлдеф. h
 
@@ -115,7 +115,7 @@ ATLENSURE_THROW(booleanExpression, hr);
 *ч*<br/>
 Указывает возвращаемый код ошибки.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Эти макросы предоставляют механизм для обнаружения и уведомления пользователя о неправильном использовании параметра.
 
@@ -131,7 +131,7 @@ ATLENSURE_THROW(booleanExpression, hr);
 
 [!code-cpp[NVC_ATL_Utilities#108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]
 
-## <a name="requirements"></a>Требования
+### <a name="requirements"></a>Требования
 
 **Заголовок:** AFX. h
 
@@ -148,7 +148,7 @@ ATLTRACENOTIMPL(funcname);
 *funcname*<br/>
 окне Строка, содержащая имя функции, которая не реализована.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 В сборках выпуска просто возвращает E_NOTIMPL.
 
@@ -156,7 +156,7 @@ ATLTRACENOTIMPL(funcname);
 
 [!code-cpp[NVC_ATL_Utilities#127](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_2.cpp)]
 
-## <a name="requirements"></a>Требования
+### <a name="requirements"></a>Требования
 
 **Заголовок:** ATLTRACE. h
 
@@ -181,13 +181,13 @@ ATLTRACE(
 *category*<br/>
 окне Тип события или метода для отчета. Список категорий см. в разделе "Примечания".
 
-*уровень*<br/>
+*level*<br/>
 окне Уровень трассировки для отчета. Дополнительные сведения см. в примечаниях.
 
 *лпсзформат*<br/>
 окне Отформатированная строка для отправки на устройство дампа.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Описание ATLTRACE см. в разделе [ATLTRACE2](#atltrace2) . ATLTRACE и ATLTRACE2 имеют одинаковое поведение, ATLTRACE входит в целях обратной совместимости.
 
@@ -212,13 +212,13 @@ ATLTRACE2(
 *category*<br/>
 окне Тип события или метода для отчета. Список категорий см. в разделе "Примечания".
 
-*уровень*<br/>
+*level*<br/>
 окне Уровень трассировки для отчета. Дополнительные сведения см. в примечаниях.
 
 *лпсзформат*<br/>
 окне `printf`Строка формата в стиле, используемая для создания строки, отправляемой на устройство дампа.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Краткая форма ATLTRACE2 записывает строку в окно вывода отладчика. Вторая форма ATLTRACE2 также записывает выходные данные в окно вывода отладчика, но в соответствии с настройками средства трассировки ATL/MFC (см. [Пример атлтрацетул](../../overview/visual-cpp-samples.md)). Например, если задать для параметра *уровень* значение 4, а для средства трассировки ATL/MFC — уровень 0, сообщение отображаться не будет. *уровень* может быть равен 0, 1, 2, 3 или 4. По умолчанию 0 сообщает только о самых серьезных проблемах.
 
@@ -283,7 +283,7 @@ ATLTRACE и ATLTRACE2 имеют одинаковое поведение, ATLTRA
 
 [!code-cpp[NVC_ATL_Utilities#111](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_5.cpp)]
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Макросы](../../atl/reference/atl-macros.md)<br/>
 [Глобальные функции отладки и отчетов об ошибках](../../atl/reference/debugging-and-error-reporting-global-functions.md)
