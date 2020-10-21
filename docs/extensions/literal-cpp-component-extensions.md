@@ -1,23 +1,23 @@
 ---
-title: literal (C++/CLI и C++/CX)
-ms.date: 10/12/2018
+title: Literal (C++/CLI)
+description: Ключевое слово Literal — это ключевое слово Microsoft C++/CLI, зависящее от контекста, для константы времени компиляции.
+ms.date: 10/20/2020
 ms.topic: reference
 f1_keywords:
 - literal
 - literal_cpp
 helpviewer_keywords:
 - literal keyword [C++]
-ms.assetid: 6b1a1f36-2e1d-4a23-8eb6-172f4f3c477f
-ms.openlocfilehash: 2687352c02bed609ffaa60ee8b1df40b51126d21
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 2d71a535252ba51f89407670b474a34b407eaffc
+ms.sourcegitcommit: 59b7c18703d1ffd66827db0e2eeece490d3d8789
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686734"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92337217"
 ---
-# <a name="literal-ccli-and-ccx"></a>literal (C++/CLI и C++/CX)
+# <a name="literal-ccli"></a>`literal` (C++/CLI)
 
-Переменная (элемент данных), помеченная как **literal** в компиляции **/clr** является нативной эквивалентой переменной **static const**.
+Переменная (член данных), помеченная как **`literal`** в **`/clr`** компиляции, является константой времени компиляции. Это собственный эквивалент [`const`](/dotnet/csharp/language-reference/keywords/const) переменной C#.
 
 ## <a name="all-platforms"></a>Все платформы
 
@@ -31,27 +31,21 @@ ms.locfileid: "90686734"
 
 (Отсутствуют комментарии для этой возможности языка, которая применяется только в среде выполнения Windows).
 
-### <a name="requirements"></a>Требования
-
-Параметр компилятора: `/ZW`
-
 ## <a name="common-language-runtime"></a>Среда CLR
 
 ## <a name="remarks"></a>Remarks
 
-Элемент данных, помеченный как **literal**, необходимо инициализировать при объявлении, а его значение должно быть целочисленной константой, перечислением или строковым типом. Преобразование из типа выражения инициализации в тип статического константного элемента данных не должно требовать определенного пользователем преобразования.
+Член данных, помеченный как, **`literal`** должен быть инициализирован при объявлении. И значение должно быть константным целым, перечислением или строковым типом. Преобразование из типа выражения инициализации в тип **`literal`** элемента данных не может требовать определенного пользователем преобразования.
 
-Во время выполнения для полей литералов память не выделяется; компилятор только вставляет свое значение в метаданные класса.
+Не выделяется память для **`literal`** поля во время выполнения; компилятор вставляет в метаданные класса только его значение. **`literal`** Значение рассматривается как константа времени компиляции. Ближайший эквивалент в стандартном C++ — **`constexpr`** , но элемент данных не может находиться **`constexpr`** в c++/CLI.
 
-Переменная, помеченная как **static const**, не будет доступна в метаданных другим компиляторам.
+Переменная, помеченная как, **`literal`** отличается от помеченной **`static const`** . **`static const`** Элемент данных не становится доступным в метаданных для других компиляторов. Дополнительные сведения см. в разделах [`static`](../cpp/storage-classes-cpp.md) и [`const`](../cpp/const-cpp.md).
 
-Подробные сведения см. в статьях [Классы хранения](../cpp/storage-classes-cpp.md) и [const](../cpp/const-cpp.md).
-
-**literal** — контекстно-зависимое ключевое слово. Подробные сведения см. в статье [Context-Sensitive Keywords (C++/CLI and C++/CX)](context-sensitive-keywords-cpp-component-extensions.md) (Контекстно-зависимые ключевые слова (C++/CLI and C++/CX)).
+**`literal`** контекстно-зависимое ключевое слово. Дополнительные сведения см. в разделе [контекстно-зависимые ключевые слова](context-sensitive-keywords-cpp-component-extensions.md).
 
 ## <a name="examples"></a>Примеры
 
-В этом примере показано, что предполагается **литеральная** переменная **`static`** .
+В этом примере показано, что **`literal`** переменная подразумевает **`static`** .
 
 ```cpp
 // mcppv2_literal.cpp
@@ -65,7 +59,7 @@ int main() {
 }
 ```
 
-В следующем примере показано влияние литералов в метаданных.
+В следующем примере показан результат действия **`literal`** в метаданных.
 
 ```cpp
 // mcppv2_literal2.cpp
@@ -78,15 +72,15 @@ public ref struct A {
 
 Обратите внимание на разницу в метаданных для `sc` и `lit`: директива `modopt` применяется к `sc` и поэтому она может игнорироваться другими компиляторами.
 
-```
-.field public static int32 modopt([mscorlib]System.Runtime.CompilerServices.IsConst) sc = int32(0x0000000A)
-```
-
-```
-.field public static literal int32 lit = int32(0x0000000A)
+```MSIL
+.field public static int32 modopt([mscorlib]System.Runtime.CompilerServices.IsConst) sc = int32(0x00000001)
 ```
 
-В следующем примере, написанном на языке C#, приводится ссылка на метаданные, созданные в предыдущем примере, и показывается влияние переменных **literal** и **static const**:
+```MSIL
+.field public static literal int32 lit = int32(0x00000000)
+```
+
+Следующий пример, созданный в C#, ссылается на метаданные, созданные в предыдущем примере, и демонстрирует результат **`literal`** **`static const`** переменных и.
 
 ```csharp
 // mcppv2_literal3.cs
@@ -121,6 +115,6 @@ class B {
 
 Параметр компилятора: `/clr`
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также статью
 
 [Расширения компонентов для .NET и UWP](component-extensions-for-runtime-platforms.md)
