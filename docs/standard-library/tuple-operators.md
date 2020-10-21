@@ -10,15 +10,15 @@ f1_keywords:
 - tuple/std::operator==
 ms.assetid: f25752dc-d3e2-4e12-b5ac-9a8682ca60ed
 ms.openlocfilehash: 5554f08f32048bafde5bdb2c316e12e1e01c6ffb
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.sourcegitcommit: 19016630f9d35f365e9ba249e0f3617515d7ca33
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79427809"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92274628"
 ---
 # <a name="lttuplegt-operators"></a>Операторы &lt;tuple&gt;
 
-## <a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a> operator! =
 
 Сравнивает объекты `tuple` на неравенство.
 
@@ -31,7 +31,7 @@ bool operator!=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Параметры
 
-\ *тн*
+*КОД*\
 Тип N-го элемента кортежа.
 
 ### <a name="remarks"></a>Remarks
@@ -83,7 +83,7 @@ false
 true
 ```
 
-## <a name="op_lt">Оператор </a>&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> станции&lt;
 
 Сравнение объектов `tuple` на предмет меньшинства.
 
@@ -96,7 +96,7 @@ bool operator<(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Параметры
 
-\ *тн*
+*КОД*\
 Тип N-го элемента кортежа.
 
 ### <a name="remarks"></a>Remarks
@@ -148,7 +148,7 @@ false
 true
 ```
 
-## <a name="op_lt_eq"></a>&lt;оператора =
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> станции&lt;=
 
 Сравнение объектов `tuple` на предмет отношения меньше или равно.
 
@@ -161,7 +161,7 @@ bool operator<=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Параметры
 
-\ *тн*
+*КОД*\
 Тип N-го элемента кортежа.
 
 ### <a name="remarks"></a>Remarks
@@ -213,7 +213,7 @@ true
 false
 ```
 
-## <a name="op_eq_eq"></a>Оператор = =
+## <a name="operator"></a><a name="op_eq_eq"></a> Оператор = =
 
 Сравнение объектов `tuple` на равенство.
 
@@ -226,7 +226,7 @@ bool operator==(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Параметры
 
-\ *тн*
+*КОД*\
 Тип N-го элемента кортежа.
 
 ### <a name="remarks"></a>Remarks
@@ -278,7 +278,7 @@ true
 false
 ```
 
-## <a name="op_gt">Оператор </a>&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> станции&gt;
 
 Сравнение объектов `tuple` на предмет большинства.
 
@@ -291,7 +291,7 @@ bool operator>(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Параметры
 
-\ *тн*
+*КОД*\
 Тип N-го элемента кортежа.
 
 ### <a name="remarks"></a>Remarks
@@ -343,7 +343,7 @@ false
 true
 ```
 
-## <a name="op_gt_eq"></a>&gt;оператора =
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> станции&gt;=
 
 Сравнение объектов `tuple` на предмет большинства или равенства.
 
@@ -356,7 +356,7 @@ bool operator>=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Параметры
 
-\ *тн*
+*КОД*\
 Тип N-го элемента кортежа.
 
 ### <a name="remarks"></a>Remarks

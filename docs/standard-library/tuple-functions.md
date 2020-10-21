@@ -14,15 +14,15 @@ helpviewer_keywords:
 - std::make_tuple [C++]
 - std::tie [C++]
 ms.openlocfilehash: 46c386ecffb8fbbf7c07d40b334afd91d261ebcf
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.sourcegitcommit: 19016630f9d35f365e9ba249e0f3617515d7ca33
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79427815"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92274520"
 ---
 # <a name="lttuplegt-functions"></a>Функции &lt;tuple&gt;
 
-## <a name="apply"></a>касаться
+## <a name="apply"></a><a name="apply"></a> касаться
 
 ```cpp
 template <class F, class Tuple> constexpr decltype(auto) apply(F&& f, Tuple&& t);
@@ -32,7 +32,7 @@ template <class F, class Tuple> constexpr decltype(auto) apply(F&& f, Tuple&& t)
 
 Вызывает функцию *F* с кортежем *t*.
 
-## <a name="forward"></a>forward_as_tuple
+## <a name="forward_as_tuple"></a><a name="forward"></a> forward_as_tuple
 
 ```cpp
 template <class... TTypes>
@@ -47,7 +47,7 @@ template <class... TTypes>
 
 Конструирует кортеж ссылок на аргументы в *t* , подходящие для пересылки в качестве аргументов в функцию.
 
-## <a name="get"></a>Получить
+## <a name="get"></a><a name="get"></a> Получить
 
 Получает элемент из объекта `tuple` по индексу или по типу (в C++14).
 
@@ -81,21 +81,21 @@ template <class T, class... Types>
 
 ### <a name="parameters"></a>Параметры
 
-*Индекс*\
+*Номер*\
 Индекс элемента, который нужно получить.
 
-*Типы*\
+*Типов*\
 Последовательность типов, заявленных в кортеж, в порядке объявления.
 
 *T*\
 Тип элемента, который нужно получить.
 
-\ *кортежа*
-`std::tuple`, содержащий любое количество элементов.
+*Кортеж*\
+Значение типа `std::tuple` , содержащее любое количество элементов.
 
 ### <a name="remarks"></a>Remarks
 
-Функции-шаблоны возвращают ссылку на значение *по индексу индекса или*типа *T* в объекте `tuple`.
+Функции-шаблоны возвращают ссылку на значение *по индексу индекса или*типа *T* в `tuple` объекте.
 
 Вызов функции `get<T>(Tuple)` приведет к ошибке компилятора, если кортеж содержит больше или меньше одного элемента типа T.
 
@@ -128,7 +128,7 @@ int main() {
 0 1.42 Call me Tuple
 ```
 
-## <a name="make_from_tuple"></a>make_from_tuple
+## <a name="make_from_tuple"></a><a name="make_from_tuple"></a> make_from_tuple
 
 ```cpp
 template <class T, class Tuple> constexpr T make_from_tuple(Tuple&& t);
@@ -138,7 +138,7 @@ template <class T, class Tuple> constexpr T make_from_tuple(Tuple&& t);
 
 Эквивалентно `return make_from_tuple_impl<T>(forward<Tuple>(t), make_index_sequence<tuple_size_v<decay_t<Tuple>>>{})`.
 
-## <a name="make_tuple"></a>make_tuple
+## <a name="make_tuple"></a><a name="make_tuple"></a> make_tuple
 
 Создает `tuple` из значений элементов.
 
@@ -149,15 +149,15 @@ template <class T1, class T2, ..., class TN>
 
 ### <a name="parameters"></a>Параметры
 
-\ *тн*
+*КОД*\
 Тип этого N-ного параметра функции.
 
-\ *тн*
+*Код*\
 Значение N-ного параметра функции.
 
 ### <a name="remarks"></a>Remarks
 
-Функция-шаблон возвращает `tuple<V1, V2, ..., VN>(t1, t2, ..., tN)`, где каждый тип `Vi` `X&`, когда `Ti` соответствующего типа `cv` `reference_wrapper<X>`; в противном случае это `Ti`.
+Функция-шаблон возвращает `tuple<V1, V2, ..., VN>(t1, t2, ..., tN)` , где каждый тип `Vi` имеет значение, `X&` если соответствующий тип. `Ti` `cv` `reference_wrapper<X>` в противном случае — значение `Ti` .
 
 Одно из преимуществ `make_tuple` заключается в том, что сохраненные типы объектов автоматически определяются компилятором, и их не требуется задавать явным образом. Не используйте явные аргументы шаблона, например `make_tuple<int, int>(1, 2)`, при использовании `make_tuple`, так как для них характерна избыточная подробность, которая создает дополнительные проблемы со сложными ссылками rvalue, способные вызвать сбой компиляции.
 
@@ -196,14 +196,14 @@ int main() {
 4 5 6 7
 ```
 
-## <a name="swap"></a>позиции
+## <a name="swap"></a><a name="swap"></a> позиции
 
 ```cpp
 template <class... Types>
     void swap(tuple<Types...>& x, tuple<Types...>& y) noexcept(see below );
 ```
 
-## <a name="tie"></a>привязать
+## <a name="tie"></a><a name="tie"></a> привязать
 
 Создает `tuple` из ссылок на элементы.
 
@@ -214,12 +214,12 @@ tuple<T1&, T2&, ..., TN&> tie(T1& t1, T2& t2, ..., TN& tN);
 
 ### <a name="parameters"></a>Параметры
 
-\ *тн*
+*КОД*\
 Базовый тип N-го элемента кортежа.
 
 ### <a name="remarks"></a>Remarks
 
-Функция-шаблон возвращает `tuple<T1&, T2&, ..., TN&>(t1, t2, ..., tN)`.
+Функция шаблона возвращает `tuple<T1&, T2&, ..., TN&>(t1, t2, ..., tN)`.
 
 ### <a name="example"></a>Пример
 
@@ -262,7 +262,7 @@ int main() {
 0 1 2 3
 ```
 
-## <a name="tuple_cat"></a>tuple_cat
+## <a name="tuple_cat"></a><a name="tuple_cat"></a> tuple_cat
 
 ```cpp
 template <class... Tuples> constexpr tuple<CTypes...> tuple_cat(Tuples&&...);
@@ -272,14 +272,14 @@ template <class... Tuples> constexpr tuple<CTypes...> tuple_cat(Tuples&&...);
 
 Объект кортежа, созданный путем инициализации каждого элемента типа.
 
-## <a name="tuple_element_t"></a>tuple_element_t
+## <a name="tuple_element_t"></a><a name="tuple_element_t"></a> tuple_element_t
 
 ```cpp
 template <size_t I, class T>
     using tuple_element_t = typename tuple_element<I, T>::type;
 ```
 
-## <a name="tuple_size_v"></a>tuple_size_v
+## <a name="tuple_size_v"></a><a name="tuple_size_v"></a> tuple_size_v
 
 ```cpp
 template <class T>

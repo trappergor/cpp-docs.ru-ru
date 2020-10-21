@@ -5,15 +5,15 @@ f1_keywords:
 - deque/std::swap
 ms.assetid: 1d14be53-b0b7-4f66-90cc-65bdeac563fd
 ms.openlocfilehash: e1bbdb864aabf892ca34860911412e4cf737e8cd
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.sourcegitcommit: 19016630f9d35f365e9ba249e0f3617515d7ca33
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79427143"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92274679"
 ---
 # <a name="ltdequegt-functions"></a>Функции &lt;deque&gt;
 
-## <a name="swap"></a>позиции
+## <a name="swap"></a><a name="swap"></a> позиции
 
 Меняет местами элементы двух объектов deque.
 
@@ -25,10 +25,10 @@ void swap(
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*слева*\
 Объект типа `deque`.
 
-*справа*\
+*Правильно*\
 Объект типа `deque`.
 
 ### <a name="example"></a>Пример
