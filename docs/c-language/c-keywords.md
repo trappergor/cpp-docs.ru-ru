@@ -1,22 +1,22 @@
 ---
 title: Ключевые слова в C
 description: Ключевые слова в расширениях компилятора стандартного языка C and Microsoft C.
-ms.date: 09/12/2020
+ms.date: 10/15/2020
 helpviewer_keywords:
 - keywords [C]
 - redefining keywords
 - Microsoft-specific keywords
 ms.assetid: 2d932335-97bf-45cd-b367-4ae00db0ff42
-ms.openlocfilehash: f459b81c2b3f314218108f3f367eec0c1bf17f26
-ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
+ms.openlocfilehash: 24981c8d70cb56b4578fd905a30ccc57eaa83d45
+ms.sourcegitcommit: f19f02f217b80804ab321d463c76ce6f681abcc6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90075742"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92176229"
 ---
 # <a name="c-keywords"></a>Ключевые слова в C
 
-*Ключевыми словами* называются слова, которые имеют особое значение для компилятора C. На 7 и 8 этапах трансляции идентификатор не может иметь такое же написание и регистр записи, что и ключевое слово C. Дополнительные сведения см. в разделе [Этапы преобразования](../preprocessor/phases-of-translation.md) *Справочника по препроцессору*. Дополнительные сведения об идентификаторах см. в [этом разделе](../c-language/c-identifiers.md).
+*Ключевыми словами* называются слова, которые имеют особое значение для компилятора C. На 7 и 8 этапах трансляции идентификатор не может иметь такое же написание и регистр записи, что и ключевое слово C. Дополнительные сведения см. в разделе [Этапы преобразования](../preprocessor/phases-of-translation.md) *Справочника по препроцессору* . Дополнительные сведения об идентификаторах см. в [этом разделе](../c-language/c-identifiers.md).
 
 ## <a name="standard-c-keywords"></a>Ключевые слова стандартного языка C
 
@@ -119,7 +119,8 @@ ms.locfileid: "90075742"
         **`__try`** <sup>5</sup>\
         **`dllexport`** <sup>4</sup>\
         **`__inline`** <sup>5</sup>\
-        **`__leave`** <sup>5</sup>
+        **`__leave`** <sup>5</sup>\
+        **`static_assert`** <sup>6</sup>
     :::column-end:::
 :::row-end:::
 
@@ -128,6 +129,8 @@ ms.locfileid: "90075742"
 <sup>4</sup> Если эти ключевые слова используются с ключевым словом **`__declspec`** , они являются особыми идентификаторами. В других контекстах они могут использоваться без ограничений.
 
 <sup>5</sup> Для совместимости с предыдущими версиями эти ключевые слова доступны как с двумя символами подчеркивания в начале, так и с одним при включении расширений Microsoft.
+
+<sup>6</sup> Если файл <assert.h> не включен, компилятор Microsoft Visual C сопоставляет **`static_assert`** с ключевым словом C11 **`_Static_assert`** .
 
 Расширения Microsoft по умолчанию включены. Чтобы помочь в создании переносимого кода, расширения Microsoft можно отключить, указав во время компиляции параметр [/Za \(Отключить расширения языка) ](../build/reference/za-ze-disable-language-extensions.md). При этом некоторые ключевые слова для систем Microsoft будут отключены.
 
