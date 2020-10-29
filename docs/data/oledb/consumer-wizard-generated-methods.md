@@ -4,22 +4,22 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, wizard-generated classes and methods
 ms.assetid: d80ee51c-8bb3-4dca-8760-5808e0fb47b4
-ms.openlocfilehash: f3bcc799f2a9591cfe7b2fc364b03161b5c0da33
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 15d41aabee174a409ad11e4422292bcea5f10bbf
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500700"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919128"
 ---
 # <a name="consumer-wizard-generated-methods"></a>Методы, создаваемые мастером объекта-получателя
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 Мастер объекта-получателя ATL OLE DB недоступен в Visual Studio 2019 и более поздних версиях. Эту функцию все еще можно добавить вручную.
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 **Мастер потребителя ATLE OLE DB** и **Мастер приложений MFC** имеют определенные функции, о которых необходимо знать. Некоторые методы по-разному выполняются в проектах с атрибутами, поэтому существует несколько предостережений. Каждый случай рассматривается ниже. Сведения о просмотре внедренного кода см. в разделе [Отладка внедренного кода](/visualstudio/debugger/how-to-debug-injected-code).
 
@@ -31,7 +31,7 @@ ms.locfileid: "91500700"
 
 - `GetRowsetProperties` возвращает указатель на набор свойств набора строк, с помощью которого можно задать свойства.
 
-- `OpenDataSource` открывает источник данных, используя строку инициализации, указанную в диалоговом окне **Свойства канала передачи данных**.
+- `OpenDataSource` открывает источник данных, используя строку инициализации, указанную в диалоговом окне **Свойства канала передачи данных** .
 
 - `CloseDataSource` закрывает источник данных в соответствующем порядке.
 
@@ -159,6 +159,6 @@ void CloseDataSource();
 
 ::: moniker-end
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [Создание OLE DB потребителя с помощью мастера](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

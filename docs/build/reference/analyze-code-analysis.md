@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -analyze compiler option [C++]
 - analyze compiler option [C++]
 ms.assetid: 81da536a-e030-4bd4-be18-383927597d08
-ms.openlocfilehash: e970872e89132aed52190b8688f2cdaccab5ea6f
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: dcf44f1d282a9dd39205aecb4e75b59a6e8481f9
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500091"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919102"
 ---
 # <a name="analyze-code-analysis"></a>`/analyze` (Анализ кода)
 
@@ -25,7 +25,7 @@ ms.locfileid: "91500091"
 
 ## <a name="syntax"></a>Синтаксис
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 > **`/analyze`**\
 > **`/analyze-`**\
@@ -42,7 +42,7 @@ ms.locfileid: "91500091"
 > **`/analyze:WX-`**
 
 ::: moniker-end
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 > **`/analyze`**\
 > **`/analyze-`**\
@@ -68,10 +68,10 @@ ms.locfileid: "91500091"
 Подробные результаты анализатора записываются в виде XML в файл с тем же базовым именем, что и у исходного файла, и расширением *`.pftlog`* . **`/analyze:autolog-`** отключает этот файл журнала.
 
 **`/analyze:autolog:ext`***расширение*\
-Подробные результаты анализатора записываются в виде XML в файл с тем же базовым именем, что и у исходного файла, и расширением *расширения*.
+Подробные результаты анализатора записываются в виде XML в файл с тем же базовым именем, что и у исходного файла, и расширением *расширения* .
 
 **`/analyze:log`***имя файла*\
-Подробные результаты анализа записываются в формате XML в файл, указанный в параметре *filename*.
+Подробные результаты анализа записываются в формате XML в файл, указанный в параметре *filename* .
 
 **`/analyze:max_paths`***число*\
 Параметр *Number* , используемый с этим параметром, задает максимальное количество ветвей кода для анализа. Если этот параметр не указан, по умолчанию используется значение 256. Большие значения приводят к более тщательной проверке, но анализ может занять больше времени.
@@ -82,14 +82,14 @@ ms.locfileid: "91500091"
 **`/analyze:plugin`***подключаемый модуль — DLL*\
 Включает указанный быстрый подключаемый модуль в ходе выполнения анализа кода.
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 LocalEspC.dll — это подключаемый модуль, реализующий проверки кода, связанные с параллелизмом, в диапазоне предупреждений C261XX. Например, [C26100](../../code-quality/c26100.md), [C26101](../../code-quality/c26101.md),...,  [C26167](../../code-quality/c26167.md).
 
 Чтобы запустить LocalEspC.dll, используйте следующий параметр компилятора: **`/analyze:plugin LocalEspC.dll`**
 
 ::: moniker-end
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 ConcurrencyCheck.dll реализует проверки кода, связанные с параллелизмом, в диапазоне предупреждений C261XX. Например, [C26100](../../code-quality/c26100.md), [C26101](../../code-quality/c26101.md),...,  [C26167](../../code-quality/c26167.md).
 
@@ -114,7 +114,7 @@ set Esp.Extensions=CppCoreCheck.dll
 **`/analyze:quiet`**\
 Отключает вывод анализатора на консоли или в окне **вывода** Visual Studio.
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 **`/analyze:ruleset`***FILE_PATH. RuleSet*\
 Позволяет указать, какие наборы правил следует анализировать, включая настраиваемые наборы правил, которые можно создать самостоятельно. Если этот параметр задан, обработчик правил более эффективен, так как перед выполнением исключает элементы, не являющиеся членами указанного набора правил. В противном случае подсистема проверяет все правила.
@@ -157,7 +157,7 @@ set Esp.Extensions=CppCoreCheck.dll
 
 1. См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnablePREfast%2A>.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [Параметры компилятора КОМПИЛЯТОРОМ MSVC](compiler-options.md)\
-[Синтаксис командной строки компилятора КОМПИЛЯТОРОМ MSVC](compiler-command-line-syntax.md)
+[Синтаксис Command-Line компилятора КОМПИЛЯТОРОМ MSVC](compiler-command-line-syntax.md)

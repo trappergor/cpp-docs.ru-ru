@@ -4,39 +4,39 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: efefd4c0-4491-4072-aa9b-59545641efb3
-ms.openlocfilehash: dd731862adb741db068fc3465acb64b42e673522
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 08abbae2e8d3cb791117225c74b09aaf8dbf2ecb
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707605"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921325"
 ---
 # <a name="creating-an-ole-db-consumer-using-a-wizard"></a>Создание объекта-получателя OLE DB с помощью мастера
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
-Мастер объекта-получателя ATL OLE DB недоступен в Visual Studio 2019 и более поздних версиях. Эту функцию все еще можно добавить вручную. Дополнительные сведения см. в статье [Creating a Consumer Without Using a Wizard](creating-a-consumer-without-using-a-wizard.md) (Создание объекта-получателя без использования мастера).
+Мастер объекта-получателя ATL OLE DB недоступен в Visual Studio 2019 и более поздних версиях. Эту функцию все еще можно добавить вручную. Дополнительные сведения см. в статье [Создание объекта-получателя без помощи мастера](creating-a-consumer-without-using-a-wizard.md).
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 В этой процедуре показано, как можно использовать **мастер проектов ATL** и **мастер объекта-получателя ATL OLE DB** для создания объекта-получателя шаблонов OLE DB и изменения основного кода консольного приложения для получения и отображения данных из таблицы базы данных.
 
 В последних двух разделах приводится объяснение кода, который создается мастером объекта-получателя OLE DB.
 
-Данный раздел охватывает следующее:
+В этом разделе описываются следующие темы:
 
-- [Создание простого объекта-получателя](../../data/oledb/creating-a-simple-consumer.md)
+- [Создание простого потребителя](../../data/oledb/creating-a-simple-consumer.md)
 
-- [Реализация простых объектов-получателей](../../data/oledb/implementing-a-simple-consumer.md)
+- [Реализация простого потребителя](../../data/oledb/implementing-a-simple-consumer.md)
 
-- [Классы, создаваемые мастером объекта-получателя](../../data/oledb/consumer-wizard-generated-classes.md)
+- [Классы Wizard-Generated потребителя](../../data/oledb/consumer-wizard-generated-classes.md)
 
-- [Методы, создаваемые мастером объекта-получателя](../../data/oledb/consumer-wizard-generated-methods.md)
+- [Методы Wizard-Generated потребителя](../../data/oledb/consumer-wizard-generated-methods.md)
 
 ::: moniker-end
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также статью
 
-[Создание объекта-получателя OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)
+[Создание OLE DB потребителя](../../data/oledb/creating-an-ole-db-consumer.md)

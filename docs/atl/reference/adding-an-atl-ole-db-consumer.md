@@ -4,22 +4,22 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - ATL OLE DB consumers
 ms.assetid: f940a513-4e42-4148-b521-dd0d7dc89fa2
-ms.openlocfilehash: 1e384a283a2a149faa5b8d6e0817eac3cacfeff9
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: c298a841bf0d37f90bcd6b53bc0c6cdf501f4dd3
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65706909"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921156"
 ---
 # <a name="adding-an-atl-ole-db-consumer"></a>Добавление потребителя ATL OLE DB
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 Мастер объекта-получателя ATL OLE DB недоступен в Visual Studio 2019 и более поздних версиях. Эту функцию все еще можно добавить вручную. Дополнительные сведения см. в статье [Создание объекта-получателя без помощи мастера](../../data/oledb/creating-a-consumer-without-using-a-wizard.md).
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 Этот мастер используется для добавления потребителя ATL OLE DB в проект. Потребитель ATL OLE DB содержит класс OLE DB и привязки данных для доступа к источнику данных. Проект необходимо создать как ATL COM-приложение либо как приложение MFC или Win32, содержащее поддержку ATL (которая автоматически добавляет мастер потребителя ATL OLE DB).
 
@@ -28,18 +28,18 @@ ms.locfileid: "65706909"
 
 ## <a name="to-add-an-atl-ole-db-consumer-to-your-project"></a>Добавление потребителя ATL OLE DB в проект
 
-1. В разделе **Представление классов** щелкните проект правой кнопкой мыши. В контекстном меню выберите команду **Добавить**, а затем — **Добавить класс**.
+1. В разделе **Представление классов** щелкните проект правой кнопкой мыши. В контекстном меню выберите команду **Добавить** , а затем — **Добавить класс** .
 
-1. В папке Visual C++ дважды щелкните значок **ATL OLE DB Consumer** (Потребитель ATL OLE DB) или выберите его и нажмите кнопку **Открыть**.
+1. В папке Visual C++ дважды щелкните значок **ATL OLE DB Consumer** (Потребитель ATL OLE DB) или выберите его и нажмите кнопку **Открыть** .
 
    Откроется Мастер потребителя ATL OLE DB.
 
 1. Задайте параметры, как описано в разделе [Мастер потребителя ATL OLE DB](../../atl/reference/atl-ole-db-consumer-wizard.md).
 
-1. Чтобы закрыть мастер, нажмите кнопку **Готово**. Созданный код потребителя OLE DB будет вставлен в проект.
+1. Нажмите кнопку **Готово** , чтобы закрыть мастер. Созданный код потребителя OLE DB будет вставлен в проект.
 
 ::: moniker-end
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также статью
 
 [Добавление функциональных возможностей с помощью мастеров кода](../../ide/adding-functionality-with-code-wizards-cpp.md)

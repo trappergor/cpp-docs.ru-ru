@@ -4,34 +4,34 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - ATL projects, adding ATL OLE DB providers
 ms.assetid: cf91ba78-01d1-4d12-b673-e95d96bfbebe
-ms.openlocfilehash: 91384d6c61368ee56ed303622e5c1bdfad09bd8a
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 43b8ed4507b004f1e78bc1b9dda64c44ff56e1d7
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65706968"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921143"
 ---
 # <a name="atl-ole-db-provider-wizard"></a>Мастер поставщика ATL OLE DB
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 Этот мастер недоступен в Visual Studio 2019 и более поздних версиях.
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Начиная с Visual Studio 2008, сценарий регистрации, созданный этим мастером, зарегистрирует свои компоненты COM в разделе **HKEY_CURRENT_USER** вместо **HKEY_LOCAL_MACHINE**. Чтобы изменить это, задайте в мастере ATL параметр **Register component for all users** (Регистрация компонентов для всех пользователей).
+Начиная с Visual Studio 2008, сценарий регистрации, созданный этим мастером, зарегистрирует свои компоненты COM в разделе **HKEY_CURRENT_USER** вместо **HKEY_LOCAL_MACHINE** . Чтобы изменить это, задайте в мастере ATL параметр **Register component for all users** (Регистрация компонентов для всех пользователей).
 
 В следующей таблице описаны параметры мастера поставщика ATL OLE DB.
 
-- **Короткое имя**
+- **короткое имя;**
 
    Для создания введите краткое имя провайдера. Другие поля редактирования в мастере будут автоматически заполнены в зависимости от данных, введенных здесь. Остальные поля можно отредактировать по необходимости.
 
-- **Coclass**
+- **Компонентного класса**
 
    Имя компонентного класса. Имя программного идентификатора будет приведено в соответствие с указанным именем.
 
@@ -41,17 +41,17 @@ ms.locfileid: "65706968"
 
    Если вы выберете этот параметр при создании проекта без атрибутов, мастер предупредит вас о том, что проект будет преобразован в проект с атрибутами, и спросит вас, нужно ли продолжить работу.
 
-- **ProgID**
+- **ProgID:**
 
-   Программный идентификатор — это текстовая строка, которая может использоваться приложением вместо GUID. Имя программного идентификатора имеет следующий вид: *Projectname.CoClassname*.
+   Программный идентификатор — это текстовая строка, которая может использоваться приложением вместо GUID. Имя программного идентификатора имеет следующий вид: *Projectname.CoClassname* .
 
 - **Version**
 
    Номер версии поставщика услуг. Значение по умолчанию — 1.
 
-- **DataSource class**
+- **Класс DataSource**
 
-   Имя класса источника данных, форма C*Shortname*Source.
+   Имя класса источника данных, форма C *Shortname* Source.
 
 - **DataSource .h file**
 
@@ -59,7 +59,7 @@ ms.locfileid: "65706968"
 
 - **Session class**
 
-   Имя класса сеанса, форма C*Shortname*Session.
+   Имя класса сеанса, форма C *Shortname* Session.
 
 - **Session .h file**
 
@@ -67,7 +67,7 @@ ms.locfileid: "65706968"
 
 - **Command class**
 
-   Имя класса команды, форма C*Shortname*Command.
+   Имя класса команды, форма C *Shortname* Command.
 
 - **Command .h file**
 
@@ -75,7 +75,7 @@ ms.locfileid: "65706968"
 
 - **Rowset class**
 
-   Имя класса набора строк, форма C*Shortname*Rowset.
+   Имя класса набора строк, форма C *Shortname* Rowset.
 
 - **Rowset .h file**
 
@@ -87,6 +87,6 @@ ms.locfileid: "65706968"
 
 ::: moniker-end
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также статью
 
-[Поставщик ATL OLE DB](../../atl/reference/adding-an-atl-ole-db-provider.md)
+[Поставщик ATL OLE DB](../../atl/reference/adding-an-atl-ole-db-provider.md)
