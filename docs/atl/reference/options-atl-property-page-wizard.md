@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Property Page Wizard, options
 ms.assetid: a7107779-b2ea-4f99-b84b-7f3e0c504bc8
-ms.openlocfilehash: a46a55cca221293e83a72bf0c2670e2343c744b0
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 74cf72feedd8dc8e1186d54a8abe840195964620
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076216"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923662"
 ---
 # <a name="options-atl-property-page-wizard"></a>Параметры, мастер страниц свойств ATL
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 Мастер страницы свойств в ATL недоступен в Visual Studio 2019 и более поздних версиях.
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 Эта страница мастера используется для определения потоковой модели и уровня агрегирования страницы свойств, которые вы создаете.
 
-- **Потоковая модель**
+- **Модель потоков**
 
    Указывает потоковую модель, используемую на странице свойств.
 
@@ -33,10 +33,10 @@ ms.locfileid: "80076216"
 
    |Параметр|Описание|
    |------------|-----------------|
-   |**Один**|Страница свойств выполняется только в первичном COM-потоке.|
-   |**Подразделение**|Страница свойств может быть создана в любом подразделении с одним потоком. По умолчанию.|
+   |**Single**|Страница свойств выполняется только в первичном COM-потоке.|
+   |**Разделение**|Страница свойств может быть создана в любом подразделении с одним потоком. Это значение используется по умолчанию.|
 
-- **Агрегирование**
+- **Статистической обработки**
 
    Добавляет поддержку агрегирования для страницы свойств, которую вы создаете. Подробные сведения см. в статье [Aggregation](../../atl/aggregation.md) (Агрегирование).
 
@@ -48,7 +48,7 @@ ms.locfileid: "80076216"
 
 ::: moniker-end
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также статью
 
 [Мастер страницы свойств ATL](../../atl/reference/atl-property-page-wizard.md)<br/>
-[Строки, мастер страницы свойств ATL](../../atl/reference/strings-atl-property-page-wizard.md)
+[Строки, мастер страниц свойств ATL](../../atl/reference/strings-atl-property-page-wizard.md)

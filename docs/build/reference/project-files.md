@@ -5,33 +5,33 @@ helpviewer_keywords:
 - .vcxproj files
 - C++ projects, project file format
 ms.assetid: 5261cf45-3136-40a6-899e-dc1339551401
-ms.openlocfilehash: 97224380a591f4fa3fe23d25a898c112702f5a5c
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: eef28961ab8c4d3a34a74999c7e0c69a4fc3fced
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078303"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924010"
 ---
 # <a name="project-files"></a>Файлы проекта
 
-Файл C++ проекта в Visual Studio представляет собой XML-файл с расширением VCXPROJ и содержит сведения, необходимые для построения C++ проекта. Обратите внимание, что файл проекта импортирует различные файлы проекта, имеющие расширение ". props" или ". targets". Эти файлы содержат дополнительные сведения о сборке и могут ссылаться на другие файлы ". props" и ". targets". Макросы в пути к файлу (например, `$(VCTargetsPath)`) зависят от текущей установки Visual Studio. Дополнительные сведения об этих макросах и файлах ". props" и ". targets" см. в разделе [Страница свойств каталогов VC + +](vcpp-directories-property-page.md), [Установка C++ свойств компилятора и сборки в Visual Studio](../working-with-project-properties.md) и [Общие макросы для команд и свойств сборки](common-macros-for-build-commands-and-properties.md).
+Файл проекта C++ в Visual Studio — это файл на основе XML с расширением VCXPROJ и содержащий сведения, необходимые для построения проекта C++. Обратите внимание, что файл проекта импортирует различные файлы проекта, имеющие расширение ". props" или ". targets". Эти файлы содержат дополнительные сведения о сборке и могут ссылаться на другие файлы ". props" и ". targets". Макросы в пути к файлу (например, `$(VCTargetsPath)`) зависят от текущей установки Visual Studio. Дополнительные сведения об этих макросах и файлах ". props" и ". targets" см. в разделе [Страница свойств каталогов VC + +](vcpp-directories-property-page.md), [Установка компилятора C++ и свойств сборки в Visual Studio](../working-with-project-properties.md) и [Общие макросы для команд и свойств сборки](common-macros-for-build-commands-and-properties.md).
 
 ## <a name="example"></a>Пример
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 Следующий пример файла VCXPROJ был создан с помощью **мастера рабочего стола Windows** в диалоговом окне " **Создание проекта** ". Для обработки файла проекта используйте средство msbuild.exe из командной строки или команду **Сборка** в IDE. (Этот образец не может быть обработан, так как не предоставлены требуемые исходный файл и файлы заголовка.) Дополнительные сведения об элементах XML в файле проекта см. в разделе [Справочник по схеме файла проекта](/visualstudio/msbuild/msbuild-project-file-schema-reference).
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
-Для создания приведенного ниже примера файла VCXPROJ было задано значение **Консольное приложение Win32** в диалоговом окне **Новый проект**. Для обработки файла проекта используйте средство msbuild.exe из командной строки или команду **Сборка** в IDE. (Этот образец не может быть обработан, так как не предоставлены требуемые исходный файл и файлы заголовка.) Дополнительные сведения об элементах XML в файле проекта см. в разделе [Справочник по схеме файла проекта](/visualstudio/msbuild/msbuild-project-file-schema-reference).
+Для создания приведенного ниже примера файла VCXPROJ было задано значение **Консольное приложение Win32** в диалоговом окне **Новый проект** . Для обработки файла проекта используйте средство msbuild.exe из командной строки или команду **Сборка** в IDE. (Этот образец не может быть обработан, так как не предоставлены требуемые исходный файл и файлы заголовка.) Дополнительные сведения об элементах XML в файле проекта см. в разделе [Справочник по схеме файла проекта](/visualstudio/msbuild/msbuild-project-file-schema-reference).
 
 ::: moniker-end
 
 >[!NOTE]
-> Для проектов в Visual Studio 2017 и более ранних версий измените `pch.h` на `stdafx.h` и `pch.cpp` `stdafx.cpp`.
+> Для проектов в Visual Studio 2017 и более ранних версий измените `pch.h` на `stdafx.h` и `pch.cpp` на `stdafx.cpp` .
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -131,7 +131,7 @@ ms.locfileid: "80078303"
 </Project>
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Проекты Visual Studio — C++](../creating-and-managing-visual-cpp-projects.md)<br>
 [Настройка компилятора C++ и свойства сборки в Visual Studio](../working-with-project-properties.md)

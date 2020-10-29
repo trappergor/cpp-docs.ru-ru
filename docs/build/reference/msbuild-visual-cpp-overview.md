@@ -4,12 +4,12 @@ description: Файлы поддержки, свойства и целевые �
 ms.date: 10/14/2020
 helpviewer_keywords:
 - MSBuild overview
-ms.openlocfilehash: b08db751bfe04c7cd3ce2c2f4741c9ee8956cf74
-ms.sourcegitcommit: 6e5429e076e552b32e8bdc49480c51498d7924c1
+ms.openlocfilehash: e99b9a428d9c6149debc06e1dfab7a69c3590196
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099684"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924384"
 ---
 # <a name="msbuild-internals-for-c-projects"></a>Внутренние компоненты MSBuild для проектов C++
 
@@ -21,7 +21,7 @@ ms.locfileid: "92099684"
 
 По умолчанию основные файлы поддержки Visual Studio расположены в указанных ниже каталогах. Эти сведения относятся к конкретной версии.
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 ### <a name="visual-studio-2019"></a>Visual Studio 2019
 
@@ -39,7 +39,7 @@ ms.locfileid: "92099684"
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 ### <a name="visual-studio-2017"></a>Visual Studio 2017
 
@@ -133,9 +133,9 @@ ms.locfileid: "92099684"
 | XSD | Запускает средство определения схемы XML xsd.exe. *См. Примечание.* |
 
 > [!NOTE]
-> В Visual Studio 2017 и более поздних версий поддержка проектов C++ для файлов **XSD** отмечена как нерекомендуемая. Вы можете продолжать использовать **Microsoft.VisualC.CppCodeProvider**, вручную добавив **CppCodeProvider.dll** в глобальный кэш сборок.
+> В Visual Studio 2017 и более поздних версий поддержка проектов C++ для файлов **XSD** отмечена как нерекомендуемая. Вы можете продолжать использовать **Microsoft.VisualC.CppCodeProvider** , вручную добавив **CppCodeProvider.dll** в глобальный кэш сборок.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [Справочник по задачам MSBuild](/visualstudio/msbuild/msbuild-task-reference)\
 [Задача BscMake](/visualstudio/msbuild/bscmake-task)\

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4727
 ms.assetid: 991b0087-3a50-40f5-9cdb-cdc367cd472c
-ms.openlocfilehash: 6b0ca74bbd03682f91206c21c3413d4ad168b60a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e1eeb7e466e325772d6a1522e77983fd3de04293
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80185871"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923960"
 ---
 # <a name="compiler-warning-level-1-c4727"></a>Предупреждение компилятора (уровень 1) C4727
 
@@ -20,13 +20,13 @@ ms.locfileid: "80185871"
 > [!NOTE]
 > В Visual Studio 2017 и более ранних версиях предкомпилированный заголовок по умолчанию называется *stdafx. h* , а в visual Studio 2019 и более поздних версий он называется *PCH. h* по умолчанию.
 
-C4727 возникает при компиляции нескольких компиляндов с параметром **/Yc**и в том месте, где компилятору удалось пометить все OBJ-файлы с одинаковой меткой времени PCH.
+C4727 возникает при компиляции нескольких компиляндов с параметром **/Yc** и в том месте, где компилятору удалось пометить все OBJ-файлы с одинаковой меткой времени PCH.
 
 Для устранения ошибки скомпилируйте один исходный файл с параметром **/Yc/c** (создает PCH), а остальные компилируются отдельно с **/Yu/c** (использует PCH), а затем свяжите их вместе.
 
 Итак, если вы выполнили следующие действия и создаете C4727:
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 **CL/CLR/GL a. cpp b. cpp c. cpp/Икстдафкс.х**
 
@@ -38,7 +38,7 @@ C4727 возникает при компиляции нескольких ком
 
 ::: moniker-end
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 **CL/CLR/GL a. cpp b. cpp c. cpp/ИКПЧ.х**
 
@@ -52,6 +52,6 @@ C4727 возникает при компиляции нескольких ком
 
 Дополнительные сведения см. в разделе
 
-- [/Yc (создание предкомпилированного файла заголовка)](../../build/reference/yc-create-precompiled-header-file.md)
+- [/Yc (создание файла предкомпилированного заголовка)](../../build/reference/yc-create-precompiled-header-file.md)
 
 - [/Yu (использование файла предкомпилированного заголовка)](../../build/reference/yu-use-precompiled-header-file.md)

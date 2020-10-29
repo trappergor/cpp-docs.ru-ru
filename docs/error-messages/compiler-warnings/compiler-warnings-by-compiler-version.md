@@ -5,12 +5,12 @@ ms.date: 10/18/2020
 helpviewer_keywords:
 - warnings, by compiler version
 - cl.exe compiler, setting warning options
-ms.openlocfilehash: b470663e3cea8ec62a1737fb19e9ec5a277d27cc
-ms.sourcegitcommit: f19f02f217b80804ab321d463c76ce6f681abcc6
+ms.openlocfilehash: 5718642f6a7f714dd0a38ec34211ddc0be4e8fd2
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92176315"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924696"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Предупреждения компилятора по версии компилятора
 
@@ -51,7 +51,7 @@ ms.locfileid: "92176315"
 
 В следующих разделах перечислены предупреждения, появившиеся в каждой версии Visual C++, которые можно подавлять с помощью **`/Wv`** параметра компилятора. **`/Wv`** Параметр не может отключить предупреждения, которые отсутствуют в списке, что указывает на то, что указанные версии компилятора являются датами.
 
-::: moniker range=">= vs-2019"
+::: moniker range=">= msvc-160"
 
 ## <a name="warnings-introduced-in-visual-studio-2019-version-167-compiler-version-1927291120"></a>Предупреждения, появившиеся в Visual Studio 2019 версии 16,7 (компилятор версии 19.27.29112.0)
 
@@ -151,7 +151,7 @@ ms.locfileid: "92176315"
 | C5051 | `attribute 'attribute-name' requires at least 'standard-level'; ignored` |
 
 ::: moniker-end
-::: moniker range=">= vs-2017"
+::: moniker range=">= msvc-150"
 
 ## <a name="warnings-introduced-in-visual-studio-2017-version-158-compiler-version-1915267260"></a>Предупреждения, появившиеся в Visual Studio 2017 версии 15,8 (компилятор версии 19.15.26726.0)
 
@@ -768,7 +768,7 @@ ms.locfileid: "92176315"
 | C4997 | `'type': coclass does not implement a COM interface or pseudo-interface` |
 | C4998 | `EXPECTATION FAILED: description(number)` |
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [Ошибки и предупреждения для компилятора C/C++ и средств сборки](../compiler-errors-1/c-cpp-build-errors.md) \
 [Предупреждения компилятора C4000-C5999](compiler-warnings-c4000-c5999.md) \

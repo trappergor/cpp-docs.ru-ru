@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE DB providers, schema rowsets
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-ms.openlocfilehash: f87e6cc0a307eed4f00f1fb90ac16a840a1759af
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 156fe9c7a2b15f7254fb0c83f8b25982aa5ad09a
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509453"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924309"
 ---
 # <a name="supporting-schema-rowsets"></a>Поддержка наборов строк схемы
 
@@ -32,21 +32,21 @@ ms.locfileid: "91509453"
 
 ## <a name="atl-ole-db-provider-wizard-support"></a>Поддержка мастера поставщика OLE DB в ATL
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 Мастер поставщика OLE DB в ATL недоступен в Visual Studio 2019 и более поздних версиях.
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 **Мастер поставщика OLE DB в ATL** создает три класса схемы в файле заголовка сеанса:
 
-- **C**<em>ShortName</em>**SessionTRSchemaRowset**;
+- **C**<em>ShortName</em>**SessionTRSchemaRowset** ;
 
-- **C**<em>ShortName</em>**SessionColSchemaRowset**;
+- **C**<em>ShortName</em>**SessionColSchemaRowset** ;
 
-- **C**<em>ShortName</em>**SessionPTSchemaRowset**.
+- **C**<em>ShortName</em>**SessionPTSchemaRowset** .
 
 Эти классы отвечают на запросы объектов-получателей сведений о схеме. Обратите внимание, что спецификация OLE DB требует поддержки этих трех наборов строк схемы:
 
@@ -94,7 +94,7 @@ class CUpdateSessionTRSchemaRowset :
                     ULONG cRestrictions, const VARIANT* rgRestrictions)
 ```
 
-`CUpdateSession` наследуется от `IDBSchemaRowsetImpl`, поэтому у него есть все методы обработки ограничений. Используя `CSchemaRowsetImpl`, объявите три дочерних класса (перечислены на карте схемы выше): `CUpdateSessionTRSchemaRowset`, `CUpdateSessionColSchemaRowset` и `CUpdateSessionPTSchemaRowset`. У каждого из этих дочерних классов есть метод `Execute`, который обрабатывает свой соответствующий набор ограничений (критерии поиска). Каждый метод `Execute` сравнивает значения параметров *cRestrictions* и *rgRestrictions*. Описание этих параметров см. в разделе [IDBSchemaRowsetImpl::SetRestrictions](./idbschemarowsetimpl-class.md#setrestrictions).
+`CUpdateSession` наследуется от `IDBSchemaRowsetImpl`, поэтому у него есть все методы обработки ограничений. Используя `CSchemaRowsetImpl`, объявите три дочерних класса (перечислены на карте схемы выше): `CUpdateSessionTRSchemaRowset`, `CUpdateSessionColSchemaRowset` и `CUpdateSessionPTSchemaRowset`. У каждого из этих дочерних классов есть метод `Execute`, который обрабатывает свой соответствующий набор ограничений (критерии поиска). Каждый метод `Execute` сравнивает значения параметров *cRestrictions* и *rgRestrictions* . Описание этих параметров см. в разделе [IDBSchemaRowsetImpl::SetRestrictions](./idbschemarowsetimpl-class.md#setrestrictions).
 
 Дополнительные сведения о том, какие ограничения соответствуют определенному набору строк схемы, см. в таблице GUID наборов строк схем в разделе [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) в **справочнике программиста OLE DB** в Windows SDK.
 
@@ -146,14 +146,14 @@ if (InlineIsEqualGUID(rguidSchema[l], DBSCHEMA_TABLES))
     rgRestrictions[l] = 0x0C;
 ```
 
-Следующая функция `Execute` аналогична функциям в обычных наборах строк. У вас есть три аргумента: *pcRowsActed*, *cRestrictions* и *rgRestrictions*. Переменная *pcRowsActed* является параметром вывода, с помощью которого поставщик может возвращать количество строк в наборе строк схемы. Параметр *cRestrictions* является входным параметром, содержащим количество ограничений, переданных объектом-получателем поставщику. Параметр *rgRestrictions* является массивом значений VARIANT, который содержат значения ограничений.
+Следующая функция `Execute` аналогична функциям в обычных наборах строк. У вас есть три аргумента: *pcRowsActed* , *cRestrictions* и *rgRestrictions* . Переменная *pcRowsActed* является параметром вывода, с помощью которого поставщик может возвращать количество строк в наборе строк схемы. Параметр *cRestrictions* является входным параметром, содержащим количество ограничений, переданных объектом-получателем поставщику. Параметр *rgRestrictions* является массивом значений VARIANT, который содержат значения ограничений.
 
 ```cpp
 HRESULT Execute(DBROWCOUNT* pcRowsAffected, ULONG cRestrictions,
                 const VARIANT* rgRestrictions)
 ```
 
-Переменная *cRestrictions* основана на общем количестве ограничений для набора строк схемы, независимо от того, поддерживает ли их поставщик. Так как UpdatePv поддерживает два ограничения (третье и четвертое), этот код ищет только значение *cRestrictions*, большее или равное третьему.
+Переменная *cRestrictions* основана на общем количестве ограничений для набора строк схемы, независимо от того, поддерживает ли их поставщик. Так как UpdatePv поддерживает два ограничения (третье и четвертое), этот код ищет только значение *cRestrictions* , большее или равное третьему.
 
 Значение для ограничения TABLE_NAME хранится в *rgRestrictions[2]* (третьим ограничением в массиве, начинающемся с нуля, является 2). Убедитесь, что ограничение не имеет значение VT_EMPTY, чтобы фактически его поддерживать. Обратите внимание, что VT_NULL не равно VT_EMPTY. VT_NULL указывает допустимое значение ограничения.
 
@@ -265,12 +265,12 @@ virtual DBSTATUS GetDBStatus(CSimpleRow* , ATLCOLUMNINFO* pColInfo)
 
 Так как функция `Execute` возвращает данные для полей TABLE_NAME, TABLE_TYPE и DESCRIPTION из набора строк TABLES, с помощью **Приложения B** спецификации OLE DB можно определить (считая сверху вниз), что они являются порядковыми числами 3, 4 и 6. Для каждого из этих столбцов возвращается DBSTATUS_S_OK. Для всех остальных столбцов возвращается DBSTATUS_S_ISNULL. Важно вернуть это состояние, так как объект-получатель может не понимать, что возвращаемое значение равно NULL или другому значению. Снова обратите внимание, что NULL не эквивалентно пустому значению.
 
-Дополнительные сведения об интерфейсе набора строк схемы OLE DB см. в статье о [классе IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) в **справочнике программиста OLE DB**.
+Дополнительные сведения об интерфейсе набора строк схемы OLE DB см. в статье о [классе IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) в **справочнике программиста OLE DB** .
 
 Дополнительные сведения о том, как объекты-получатели могут использовать методы `IDBSchemaRowset`, см. в статье [Obtaining Metadata with Schema Rowsets](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) (Получение метаданных с наборами строк схемы).
 
 C примером поставщика, который поддерживает наборы строк схемы, можно ознакомиться в [этой статье](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [Дополнительные методы поставщика](../../data/oledb/advanced-provider-techniques.md)

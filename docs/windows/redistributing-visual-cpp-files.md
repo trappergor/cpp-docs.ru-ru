@@ -9,12 +9,12 @@ helpviewer_keywords:
 - file redistribution [C++]
 - redistributing applications [C++], about redistributing applications
 ms.assetid: d201b2ce-36f1-44e5-a96c-0db81a1ba652
-ms.openlocfilehash: 7a639f7ad7deb76cade47b0162012dcb70cb0d69
-ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
+ms.openlocfilehash: a660e67b2664417438ea9fa7acddbde4c20c307a
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86446757"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924140"
 ---
 # <a name="redistributing-visual-c-files"></a>Распространение файлов Visual C++
 
@@ -25,19 +25,19 @@ ms.locfileid: "86446757"
 
 При развертывании приложения необходимо также развернуть файлы, поддерживающие это приложение. Если какие – либо из этих файлов предоставляются корпорацией Майкрософт, проверьте, разрешено ли их распространение. Ссылка на условия лицензии Visual Studio находится в интегрированной среде разработки. Используйте ссылку условия лицензии в диалоговом окне о Microsoft Visual Studio. Или загрузите соответствующие лицензионные соглашения и лицензии из [каталога лицензий](https://visualstudio.microsoft.com/license-terms/)Visual Studio.
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 Чтобы просмотреть список Redist, указанный в разделе "распространяемый код" условий лицензионного соглашения на использование программного обеспечения Microsoft Visual Studio 2019, ознакомьтесь с разделом [файлы распространяемого кода для Microsoft Visual Studio 2019](/visualstudio/releases/2019/redistribution#-distributable-code-files-for-visual-studio-2019)
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 Чтобы просмотреть список Redist, указанный в разделе "распространяемый код" условий лицензионного соглашения на использование программного обеспечения Microsoft Visual Studio 2017, ознакомьтесь с разделом [файлы распространяемого кода для Microsoft Visual Studio 2017](/visualstudio/productinfo/2017-redistribution-vs#-distributable-code-files-for-visual-studio-2017).
 
 ::: moniker-end
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 Чтобы просмотреть список Redist, указанный в разделе "распространяемый код" условий лицензионного соглашения на использование программного обеспечения Microsoft Visual Studio 2015, ознакомьтесь с разделом [файлы распространяемого кода для Microsoft Visual Studio 2015](/visualstudio/productinfo/2015-redistribution-vs#-distributable-code-files-for-visual-studio-2015).
 
@@ -65,15 +65,15 @@ ms.locfileid: "86446757"
 
 ## <a name="install-individual-redistributable-files"></a>Установка отдельных распространяемых файлов
 
-Также можно напрямую установить распространяемые DLL-файлы в *локальную папку приложения*. Это папка, содержащая файл исполняемого приложения. В целях обслуживания мы не рекомендуем использовать это расположение установки.
+Также можно напрямую установить распространяемые DLL-файлы в *локальную папку приложения* . Это папка, содержащая файл исполняемого приложения. В целях обслуживания мы не рекомендуем использовать это расположение установки.
 
 ## <a name="potential-run-time-errors"></a>Потенциальные ошибки времени выполнения
 
-Если Windows не удается найти одну из распространяемых библиотек DLL, необходимых для приложения, может отобразиться сообщение следующего вида: "не удалось запустить приложение, так как *Библиотека*DLL не найдена. Переустановка приложения может устранить эту проблему. "
+Если Windows не удается найти одну из распространяемых библиотек DLL, необходимых для приложения, может отобразиться сообщение следующего вида: "не удалось запустить приложение, так как *Библиотека* DLL не найдена. Переустановка приложения может устранить эту проблему. "
 
 Чтобы устранить эту ошибку, убедитесь, что установщик приложения построен правильно. Убедитесь, что распространяемые библиотеки правильно развернуты в целевой системе. Дополнительные сведения см. в разделе [Основные сведения о зависимостях приложения Visual C++](understanding-the-dependencies-of-a-visual-cpp-application.md).
 
-## <a name="related-articles"></a>Похожие статьи
+## <a name="related-articles"></a>Связанные статьи
 
 [Распространение с помощью модулей слияния](redistributing-components-by-using-merge-modules.md)\
 Описывает использование Visual C++ распространяемых модулей слияния для установки библиотек среды выполнения Visual C++ в качестве общих библиотек DLL в *`%windir%\system32\`* папке.

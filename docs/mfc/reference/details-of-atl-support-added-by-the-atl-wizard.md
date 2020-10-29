@@ -7,28 +7,28 @@ helpviewer_keywords:
 - MFC, ATL support
 - ATL, MFC projects
 ms.assetid: aa66bad0-008f-4886-94c1-2a0a0d04bce4
-ms.openlocfilehash: 10bafc9bd06ee94398f91d5af478a6e1cd7ca617
-ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
+ms.openlocfilehash: aeac01ce58deb429f14058c06524dff53abde060
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70108456"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924446"
 ---
 # <a name="details-of-atl-support-added-by-the-atl-wizard"></a>Сведения о добавлении поддержки ATL мастером ATL
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
-При [добавлении поддержки ATL к существующему исполняемому файлу MFC или библиотеке DLL](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)Visual Studio добавляет файл заголовка *Framework. h* по умолчанию, который содержит `#include` директивы препроцессора, и `#define` позволяет использовать ATL в проекте. Дополнительные файлы или классы не добавляются, как было сделано в предыдущих версиях Visual Studio.
+При [добавлении поддержки ATL к существующему исполняемому файлу MFC или библиотеке DLL](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)Visual Studio добавляет файл заголовка *Framework. h* по умолчанию, который содержит `#include` `#define` директивы препроцессора, и позволяет использовать ATL в проекте. Дополнительные файлы или классы не добавляются, как было сделано в предыдущих версиях Visual Studio.
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
-При [добавлении поддержки ATL в существующий исполняемый файл MFC или библиотеку DLL](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)Visual Studio вносит следующие изменения в существующий проект MFC (в этом примере вызывается `MFCEXE`проект):
+При [добавлении поддержки ATL в существующий исполняемый файл MFC или библиотеку DLL](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)Visual Studio вносит следующие изменения в существующий проект MFC (в этом примере вызывается проект `MFCEXE` ):
 
 - Добавляются два новых файла (IDL-файл и файл. rgs, используемый для регистрации сервера).
 
-- В основном файле заголовка приложения и файлов реализации (мфцексе. h и мфцексе. cpp) добавляется новый класс (производный `CAtlMFCModule`от). В дополнение к новому классу код добавляется в `InitInstance` для регистрации. Код также добавляется в `ExitInstance` функцию для отмены объекта класса. В файле заголовка, наконец, в файл реализации включены два новых файла заголовков (инитгуид. h и Mfcexe_i. c), объявляя и инициализируя новые идентификаторы GUID для класса `CAtlMFCModule`, производного от.
+- В основном файле заголовка приложения и файлов реализации (Мфцексе. h и Мфцексе. cpp) добавляется новый класс (производный от `CAtlMFCModule` ). В дополнение к новому классу код добавляется в `InitInstance` для регистрации. Код также добавляется в `ExitInstance` функцию для отмены объекта класса. В файле заголовка, наконец, в файл реализации включены два новых файла заголовков (Инитгуид. h и Mfcexe_i. c), объявляя и инициализируя новые идентификаторы GUID для `CAtlMFCModule` класса, производного от.
 
 - Для правильной регистрации сервера в файл ресурсов проекта добавляется запись для нового RGS-файла.
 
@@ -38,7 +38,7 @@ ms.locfileid: "70108456"
 
 При добавлении поддержки ATL в проект MFC DLL вы увидите некоторые различия. Код добавляется в `DLLRegisterServer` функции и `DLLUnregisterServer` для регистрации и отмены регистрации библиотеки DLL. Код также добавляется в [DllCanUnloadNow](../../atl/reference/catldllmodulet-class.md#dllcanunloadnow) и [DllGetClassObject](../../atl/reference/catldllmodulet-class.md#dllgetclassobject).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также статью
 
 [Поддержка ATL в проекте MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)<br/>
 [Добавление функциональных возможностей с помощью мастеров кода](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>

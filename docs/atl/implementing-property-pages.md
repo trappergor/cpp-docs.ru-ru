@@ -6,22 +6,22 @@ helpviewer_keywords:
 - IPropertyPage class
 - property pages, implementing
 ms.assetid: 62f29440-33a7-40eb-a1ef-3634c95f640c
-ms.openlocfilehash: 6544f5ddf0b81fdec893308bb10e0c19cea73005
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: c9b1c0c159a15ec7d9a5c99208baa2ed6af2d6d1
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499443"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923901"
 ---
 # <a name="implementing-property-pages"></a>Реализация страниц свойств
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 Мастер страницы свойств в ATL недоступен в Visual Studio 2019 и более поздних версиях.
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 Страницы свойств — это COM-объекты, которые реализуют интерфейс `IPropertyPage` или `IPropertyPage2`. Библиотека ATL обеспечивает поддержку реализации страниц свойств с помощью [Мастера страниц свойств ATL](../atl/reference/atl-property-page-wizard.md) в диалоговом окне [Диалоговое окно "Добавление класса"](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box).
 
@@ -29,7 +29,7 @@ ms.locfileid: "91499443"
 
 - Создайте или откройте проект сервера библиотеки динамической компоновки (DLL) ATL.
 
-- Откройте [Диалоговое окно "Добавление класса"](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) и выберите **Страница свойств ATL**.
+- Откройте [Диалоговое окно "Добавление класса"](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) и выберите **Страница свойств ATL** .
 
 - Убедитесь, что на странице свойств есть подразделение потока (поскольку она имеет пользовательский интерфейс).
 
@@ -51,11 +51,11 @@ ms.locfileid: "91499443"
 Пример реализации страницы свойств см. в разделе [пример. Реализация страницы свойств](../atl/example-implementing-a-property-page.md).
 
 > [!NOTE]
-> Если вы хотите разместить элементы управления ActiveX на своей странице свойств, нужно изменить происхождение созданного мастером класса. Замените **CDialogImpl \<CYourClass> ** на **каксдиалогимпл \<CYourClass> ** в списке базовых классов.
+> Если вы хотите разместить элементы управления ActiveX на своей странице свойств, нужно изменить происхождение созданного мастером класса. Замените **CDialogImpl \<CYourClass>** на **каксдиалогимпл \<CYourClass>** в списке базовых классов.
 
 ::: moniker-end
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [Страницы свойств](../atl/atl-com-property-pages.md)<br/>
 [Примеры кода на Visual C++](../overview/visual-cpp-samples.md)
