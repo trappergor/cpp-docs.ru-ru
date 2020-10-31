@@ -1,6 +1,7 @@
 ---
 title: _configthreadlocale
-ms.date: 4/2/2020
+ms.date: 10/29/2020
+description: Описывает функцию среды выполнения Microsoft C, `_configthreadlocale`  используемую для настройки параметров языкового стандарта для каждого потока.
 api_name:
 - _configthreadlocale
 - _o__configthreadlocale
@@ -31,14 +32,14 @@ helpviewer_keywords:
 - per-thread locale
 - thread locale
 ms.assetid: 10e4050e-b587-4f30-80bc-6c76b35fc770
-ms.openlocfilehash: 26bcfe0d93a8c2b1a14e6afc0d413a5c7e4a7f6e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3ffea30f8547088d6117ee980cdf28f017e87e83
+ms.sourcegitcommit: 868838273eda35eb72c78dccf4121940dcc04706
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917322"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93102328"
 ---
-# <a name="_configthreadlocale"></a>_configthreadlocale
+# `_configthreadlocale`
 
 Настраивает параметры языкового стандарта для каждого потока.
 
@@ -50,28 +51,28 @@ int _configthreadlocale( int per_thread_locale_type );
 
 ### <a name="parameters"></a>Параметры
 
-*per_thread_locale_type*<br/>
+*`per_thread_locale_type`*\
 Задаваемый параметр. Один из параметров, перечисленных в следующей таблице.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Предыдущее состояние языкового стандарта для каждого потока (**_DISABLE_PER_THREAD_LOCALE** или **_ENABLE_PER_THREAD_LOCALE**) или-1 в случае сбоя.
+Предыдущее состояние языкового стандарта для каждого потока ( **`_DISABLE_PER_THREAD_LOCALE`** или **`_ENABLE_PER_THREAD_LOCALE`** ) или-1 при сбое.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
 
-Функция **_configurethreadlocale** используется для управления использованием языков, зависящих от конкретного потока. Используйте один из этих *per_thread_locale_type* параметров, чтобы указать или определить состояние языкового стандарта для каждого потока:
+**`_configthreadlocale`** Функция используется для управления использованием языков, зависящих от конкретного потока. Используйте один из этих *`per_thread_locale_type`* параметров, чтобы указать или определить состояние языкового стандарта для каждого потока.
 
 | Параметр | Описание |
 |-|-|
-| **_ENABLE_PER_THREAD_LOCALE** | В текущем потоке будет использоваться заданный конкретно для него языковой стандарт. Последующие вызовы **setlocale** в этом потоке влияют только на собственный языковой стандарт потока. |
-| **_DISABLE_PER_THREAD_LOCALE** | В текущем потоке будет использоваться глобальный языковой стандарт. Последующие вызовы **setlocale** в этом потоке влияют на другие потоки, использующие глобальный языковой стандарт. |
+| **`_ENABLE_PER_THREAD_LOCALE`** | В текущем потоке будет использоваться заданный конкретно для него языковой стандарт. Последующие вызовы **`setlocale`** в этом потоке влияют только на собственный языковой стандарт потока. |
+| **`_DISABLE_PER_THREAD_LOCALE`** | В текущем потоке будет использоваться глобальный языковой стандарт. Последующие вызовы **`setlocale`** в этом потоке влияют на другие потоки, использующие глобальный языковой стандарт. |
 | **0** | Извлекает текущую настройку для данного потока. |
 
-Эти функции влияют на поведение **setlocale**, **_tsetlocale**, **_wsetlocale**и **_setmbcp**. Если языковой стандарт для каждого потока отключен, любой последующий вызов **setlocale** или **_wsetlocale** изменяет языковой стандарт для всех потоков, использующих глобальный языковой стандарт. Если языковой стандарт для каждого потока включен, **setlocale** или **_wsetlocale** влияет только на языковой стандарт текущего потока.
+Эти функции влияют на поведение **`setlocale`** ,, **`_tsetlocale`** **`_wsetlocale`** и **`_setmbcp`** . Если языковой стандарт для каждого потока отключен, любой последующий вызов **`setlocale`** или **`_wsetlocale`** изменяет языковой стандарт для всех потоков, использующих глобальный языковой стандарт. Если языковой стандарт для каждого потока включен **`setlocale`** или **`_wsetlocale`** влияет только на языковой стандарт текущего потока.
 
-Если для включения языкового стандарта для каждого потока используется **_configurethreadlocale** , рекомендуется вызвать **setlocale** или **_wsetlocale** , чтобы немедленно установить предпочтительный языковой стандарт в этом потоке.
+Если вы используете **`_configthreadlocale`** , чтобы включить языковой стандарт для каждого потока, рекомендуется вызвать метод **`setlocale`** или, **`_wsetlocale`** чтобы сразу же установить предпочтительный языковой стандарт в этом потоке.
 
-Если *per_thread_locale_type* не является одним из значений, перечисленных в таблице, эта функция вызывает обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция **устанавливает** **еинвал** и возвращает-1.
+Если *`per_thread_locale_type`* не является одним из значений, перечисленных в таблице, эта функция вызывает обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция задает **`errno`** для значение **`EINVAL`** и возвращает значение-1.
 
 По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
@@ -79,7 +80,7 @@ int _configthreadlocale( int per_thread_locale_type );
 
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
-|**_configthreadlocale**|\<locale.h>|
+|**`_configthreadlocale`**|\`<locale. h>"|
 
 ## <a name="example"></a>Пример
 
@@ -192,7 +193,7 @@ The time in German locale is: 'Mittwoch, 12. Mai 2004'
 
 ## <a name="see-also"></a>См. также раздел
 
-[setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
-[_beginthread, _beginthreadex](beginthread-beginthreadex.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
-[Многопоточность и языковые стандарты](../../parallel/multithreading-and-locales.md)<br/>
+[`setlocale`, `_wsetlocale`](setlocale-wsetlocale.md)\
+[`_beginthread`, `_beginthreadex`](beginthread-beginthreadex.md)\
+[Языкового стандарта](../../c-runtime-library/locale.md)\
+[Многопоточность и языковые стандарты](../../parallel/multithreading-and-locales.md)
