@@ -1,7 +1,7 @@
 ---
 title: /std (определение стандартной версии языка)
 description: Параметр компилятора КОМПИЛЯТОРОМ MSVC/STD указывает стандарт языка C или C++, поддерживаемый компилятором.
-ms.date: 09/11/2020
+ms.date: 10/29/2020
 f1_keywords:
 - /std
 - -std
@@ -11,12 +11,12 @@ f1_keywords:
 - /std:c17
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-ms.openlocfilehash: 82f37377dc223bfe3f5e578e1c7f390da91752a1
-ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
+ms.openlocfilehash: 208789071ff028107d3c7311c3b5c6cf3eea7c1d
+ms.sourcegitcommit: 4abc6c4c9694f91685cfd77940987e29a51e3143
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90075833"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93238477"
 ---
 # <a name="std-specify-language-standard-version"></a>`/std` (Укажите версию Standard языка)
 
@@ -77,13 +77,13 @@ ms.locfileid: "90075833"
 
 При указании **`/std:c11`** или **`/std:c17`** компилятором MSVC поддерживает все необходимые функции C11 и C17. Параметры компилятора обеспечивают поддержку этих функций:
 
-- **`_Pragma`**
+- [`_Pragma`](../../preprocessor/pragma-directives-and-the-pragma-keyword.md#the-_pragma-preprocessing-operator-c99-c11)
 
 - **`restrict`**
 
 - **`_Noreturn`** перетаскивани \<stdnoreturn.h>
 
-- **`_Alignas`**, **`_Alignof`** и \<stdalign.h>
+- **`_Alignas`** , **`_Alignof`** и \<stdalign.h>
 
 - **`_Generic`** перетаскивани \<tgmath.h>
 
@@ -107,11 +107,11 @@ ms.locfileid: "90075833"
 
 1. Откройте диалоговое окно **Страницы свойств** проекта. Подробнее см. в статье [Настройка компилятора C++ и свойства сборки в Visual Studio](../working-with-project-properties.md).
 
-1. Выберите **Свойства конфигурации**, **C/C++**, **Язык**.
+1. Выберите **Свойства конфигурации** , **C/C++** , **Язык** .
 
-1. В **стандартном языке C++** (или для языка c, **стандарта c**) выберите языковой стандарт, который требуется поддерживать, из раскрывающегося списка, а затем нажмите кнопку **ОК** или **Применить** , чтобы сохранить изменения.
+1. В **стандартном языке C++** (или для языка c, **стандарта c** ) выберите языковой стандарт, который требуется поддерживать, из раскрывающегося списка, а затем нажмите кнопку **ОК** или **Применить** , чтобы сохранить изменения.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [Параметры компилятора MSVC](compiler-options.md)<br/>
-[Синтаксис командной строки компилятора КОМПИЛЯТОРОМ MSVC](compiler-command-line-syntax.md)
+[Синтаксис Command-Line компилятора КОМПИЛЯТОРОМ MSVC](compiler-command-line-syntax.md)
