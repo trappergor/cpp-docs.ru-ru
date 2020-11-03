@@ -481,23 +481,7 @@
         - name: Определения и соглашения
           href: ../c-language/definitions-and-conventions.md
         - name: Лексическая грамматика
-          items:
-            - name: Лексическая грамматика
-              href: ../c-language/lexical-grammar.md
-            - name: Общие сведения о токенах
-              href: ../c-language/summary-of-tokens.md
-            - name: Общие сведения о ключевых словах
-              href: ../c-language/summary-of-keywords.md
-            - name: Общие сведения об идентификаторах
-              href: ../c-language/summary-of-identifiers.md
-            - name: Общие сведения о константах
-              href: ../c-language/summary-of-constants.md
-            - name: Общие сведения о строковых литералах
-              href: ../c-language/summary-of-string-literals.md
-            - name: Операторы (C)
-              href: ../c-language/operators-c.md
-            - name: Символы пунктуации
-              href: ../c-language/punctuators.md
+          href: ../c-language/lexical-grammar.md
         - name: Грамматика структуры фразы
           items:
             - name: Грамматика структуры фразы
