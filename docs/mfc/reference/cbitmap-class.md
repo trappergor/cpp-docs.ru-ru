@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-ms.openlocfilehash: adb2a461de5e82fa76ce0ed9961d970f46dbe26a
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 8c19a54584390312cfd1657e88898cdb044179d0
+ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834990"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93344583"
 ---
 # <a name="cbitmap-class"></a>Класс CBitmap
 
@@ -83,7 +83,7 @@ class CBitmap : public CGdiObject
 |----------|-----------------|
 |[CBitmap:: operator ХБИТМАП](#operator_hbitmap)|Возвращает маркер Windows, присоединенный к `CBitmap` объекту.|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
 
 Чтобы использовать `CBitmap` объект, создайте объект, прикрепите к нему маркер точечного рисунка с помощью одной из функций-членов инициализации, а затем вызовите функции-члены объекта.
 
@@ -97,7 +97,7 @@ class CBitmap : public CGdiObject
 
 `CBitmap`
 
-## <a name="requirements"></a>Требования
+## <a name="requirements"></a>Requirements (Требования)
 
 **Заголовок:** afxwin.h
 
@@ -109,7 +109,7 @@ class CBitmap : public CGdiObject
 CBitmap();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Полученный объект должен инициализироваться одной из функций элементов инициализации.
 
@@ -147,7 +147,7 @@ BOOL CreateBitmap(
 
 Имеет ненулевое значение в случае успешного выполнения, иначе — 0.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Для цветового битового изображения параметр *нпланес* или *нбиткаунт* должен иметь значение 1. Если оба этих параметра имеют значение 1, `CreateBitmap` создает монохромную битовую карту.
 
@@ -174,7 +174,7 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 
 Имеет ненулевое значение в случае успешного выполнения, иначе — 0.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Хотя точечный рисунок нельзя выбрать непосредственно для устройства вывода, его можно выбрать в качестве текущего точечного рисунка для контекста устройства памяти с помощью [CDC:: SelectObject](../../mfc/reference/cdc-class.md#selectobject) и скопировать в любой совместимый контекст устройства с помощью функции [CDC:: BitBlt](../../mfc/reference/cdc-class.md#bitblt) или [CDC:: стретчблт](../../mfc/reference/cdc-class.md#stretchblt) . (Функция [CDC::P атблт](../../mfc/reference/cdc-class.md#patblt) может скопировать точечный рисунок для текущей кисти непосредственно в контекст дисплея устройства.)
 
@@ -208,7 +208,7 @@ BOOL CreateCompatibleBitmap(
 
 Имеет ненулевое значение в случае успешного выполнения, иначе — 0.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Точечный рисунок имеет то же количество цветовых плоскостей или тот же формат битов на пиксель, что и в указанном контексте устройства. Его можно выбрать в качестве текущего растрового изображения для любого устройства памяти, совместимого с указанным *PDC*.
 
@@ -246,7 +246,7 @@ BOOL CreateDiscardableBitmap(
 
 Имеет ненулевое значение в случае успешного выполнения, иначе — 0.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Точечный рисунок имеет то же количество цветовых плоскостей или тот же формат битов на пиксель, что и в указанном контексте устройства. Приложение может выбрать этот рисунок в качестве текущего точечного рисунка для устройства памяти, совместимого с указанным *PDC*.
 
@@ -271,7 +271,7 @@ static CBitmap* PASCAL FromHandle(HBITMAP hBitmap);
 
 Указатель на объект в случае `CBitmap` успеха; в противном случае — null.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Если `CBitmap` объект еще не присоединен к обработчику, `CBitmap` создается и прикрепляется временный объект. Этот временный `CBitmap` объект действителен только до тех пор, пока приложение не найдет время простоя в цикле событий, во время которого все временные графические объекты будут удалены. Другой способ сказать, что временный объект допустим только во время обработки одного сообщения окна.
 
@@ -292,7 +292,7 @@ int GetBitmap(BITMAP* pBitMap);
 
 Ненулевое значение, если метод был успешным; в противном случае — 0.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 ## <a name="cbitmapgetbitmapbits"></a><a name="getbitmapbits"></a> CBitmap:: Жетбитмапбитс
 
@@ -316,7 +316,7 @@ DWORD GetBitmapBits(
 
 Число байтов, скопированных в буфер при успешном выполнении метода; в противном случае — 0.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Используйте [CBitmap:: onbitmap](#getbitmap) , чтобы определить требуемый размер буфера.
 
@@ -332,7 +332,7 @@ CSize GetBitmapDimension() const;
 
 Ширина и высота растрового изображения, измеряемая в единицах измерения 0,1-миллиметра. Высота находится в элементе `cy` `CSize` объекта, а ширина — в элементе `cx` . Если ширина и высота точечного рисунка не были заданы с помощью `SetBitmapDimension` , то возвращаемое значение равно 0.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Предполагается, что высота и ширина были заданы ранее с помощью функции члена [сетбитмапдименсион](#setbitmapdimension) .
 
@@ -357,7 +357,7 @@ BOOL LoadBitmap(UINT nIDResource);
 
 Имеет ненулевое значение в случае успешного выполнения, иначе — 0.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Загруженный точечный рисунок прикрепляется к `CBitmap` объекту.
 
@@ -404,11 +404,11 @@ BOOL LoadMappedBitmap(
 
 Имеет ненулевое значение в случае успешного выполнения, иначе — 0.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 По умолчанию `LoadMappedBitmap` будет сопоставлять цвета, часто используемые в глифах кнопок.
 
-Сведения о создании сопоставленного точечного рисунка см. в разделе Windows Function [креатемаппедбитмап](https://go.microsoft.com/fwlink/p/?linkid=230562) и структура [колормап](/windows/win32/api/commctrl/ns-commctrl-colormap) в Windows SDK.
+Сведения о создании сопоставленного точечного рисунка см. в разделе Windows Function [креатемаппедбитмап](/windows/win32/api/commctrl/nf-commctrl-createmappedbitmap) и структура [колормап](/windows/win32/api/commctrl/ns-commctrl-colormap) в Windows SDK.
 
 ## <a name="cbitmaploadoembitmap"></a><a name="loadoembitmap"></a> CBitmap:: Лоадоембитмап
 
@@ -470,7 +470,7 @@ BOOL LoadOEMBitmap(UINT nIDBitmap);
 
 Имеет ненулевое значение в случае успешного выполнения, иначе — 0.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Битовые имена, начинающиеся с OBM_OLD, представляют точечные рисунки, используемые версиями Windows до 3,0.
 
@@ -488,7 +488,7 @@ operator HBITMAP() const;
 
 В случае успеха — обработчик для объекта Windows GDI, представленного `CBitmap` объектом; в противном случае — null.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Этот оператор является оператором приведения, который поддерживает прямое использование `HBITMAP` объекта.
 
@@ -538,11 +538,11 @@ CSize SetBitmapDimension(
 
 Предыдущие размеры растрового изображения. Высота находится в `cy` переменной-члене `CSize` объекта, а ширина — в переменной- `cx` члене.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 GDI не использует эти значения, кроме возврата их при вызове приложением функции члена [жетбитмапдименсион](#getbitmapdimension) .
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [Образец MDI-формы MFC](../../overview/visual-cpp-samples.md)<br/>
 [Класс Кгдиобжект](../../mfc/reference/cgdiobject-class.md)<br/>

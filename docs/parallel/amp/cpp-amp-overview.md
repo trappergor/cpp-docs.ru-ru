@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 2629f243f3db3b8fabbd87ee0a211380ac3d45a2
-ms.sourcegitcommit: 093f49b8b69daf86661adc125b1d2d7b1f0e0650
+ms.openlocfilehash: 0eeda43a279be74ea71669b55356603e980cab40
+ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89427729"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93344752"
 ---
 # <a name="c-amp-overview"></a>Общие сведения о C++ AMP
 
@@ -473,9 +473,9 @@ C++ AMP содержит библиотеку графики, предназна
 
 - [Использование C++ AMP в приложениях UWP](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)
 
-- [Пошаговое руководство. Создание базового среда выполнения Windows компонента в C++ и вызов его из JavaScript](https://go.microsoft.com/fwlink/p/?linkid=249077)
+- [Пошаговое руководство. Создание базового среда выполнения Windows компонента в C++ и вызов его из JavaScript](/previous-versions/windows/apps/hh755833(v=vs.140))
 
-- [Оптимизатор веб-карт Bing, приложение для Магазина Windows на JavaScript и C++](https://go.microsoft.com/fwlink/p/?linkid=249078)
+- [Оптимизатор веб-карт Bing, приложение для Магазина Windows на JavaScript и C++](/previous-versions/windows/apps/hh699893(v=vs.140))
 
 - [Использование C++ AMP из C# с помощью среда выполнения Windows](https://devblogs.microsoft.com/pfxteam/how-to-use-c-amp-from-c-using-winrt/)
 
@@ -503,7 +503,7 @@ C++ AMP содержит библиотеку графики, предназна
 
 Модуль и деление целых чисел без знака значительно улучшили производительность, чем модуль и деление целых чисел со знаком. Рекомендуется использовать целые числа без знака, если это возможно.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [Синтаксис лямбда-выражений](../../cpp/lambda-expression-syntax.md)<br/>
