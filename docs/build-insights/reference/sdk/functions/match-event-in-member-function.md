@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: d3fdc015b0744cb5d0f98a1c9025343b93489ed9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 62a7bf6bde62dee7fdf5b1d2ce9044491a123f94
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224153"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920194"
 ---
 # <a name="matcheventinmemberfunction"></a>MatchEventInMemberFunction
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 Пакет SDK Аналитики сборок С++ совместим с Visual Studio 2017 и более поздних версий. Чтобы увидеть документацию для этих версий, установите в данной статье селектор **Версия** Visual Studio в Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части оглавления на этой странице.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 Функция `MatchEventInMemberFunction` используется для сопоставления событий с типом, который описывается в первом параметре функции-члена. Подходящее событие пересылается функции-члену для дальнейшей обработки.
 
@@ -78,7 +78,7 @@ bool MatchEventInMemberFunction(
 
 ## <a name="remarks"></a>Remarks
 
-Тип события для параметра *TEvent*, можно выбрать из списка *классов захвата*. Список событий и классы захвата, которые можно использовать для сопоставления, см. в [таблице событий](../event-table.md).
+Тип события для параметра *TEvent* , можно выбрать из списка *классов захвата*. Список событий и классы захвата, которые можно использовать для сопоставления, см. в [таблице событий](../event-table.md).
 
 ## <a name="example"></a>Пример
 

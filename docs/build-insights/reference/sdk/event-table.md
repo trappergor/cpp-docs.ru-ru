@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 6b1cf6871329fcce3166495e173360a88ac38ee0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2a6270e8e166bb38754314fcb308b86232dbb68b
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224218"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922913"
 ---
 # <a name="c-build-insights-sdk-event-table"></a>Пакет SDK Аналитики сборок C++: таблица событий
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 Пакет SDK Аналитики сборок С++ совместим с Visual Studio 2017 и более поздних версий. Чтобы увидеть документацию для этих версий, установите в данной статье селектор **Версия** Visual Studio в Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части оглавления на этой странице.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 ## <a name="compiler-events"></a>События компилятора
 
@@ -92,13 +92,13 @@ ms.locfileid: "87224218"
 |  | Дети | [FRONT_END_FILE](#front-end-file)<br/>[SYMBOL_NAME](#symbol-name)<br/>[TEMPLATE_INSTANTIATION](#template-instantiation) |
 |  | Свойства | None |
 |  | Классы фиксации | [Действие](cpp-event-data-types/activity.md)<br/>[C1DLL](cpp-event-data-types/c1-dll.md) |
-|  | Описание | Возникает при запуске и окончании вызова *c1.dll* или *c1xx.dll*. Эти библиотеки DLL являются внешним интерфейсом компилятора для C и C++. Они вызываются только драйвером компилятора (*cl.exe*). |
+|  | Описание | Возникает при запуске и окончании вызова *c1.dll* или *c1xx.dll*. Эти библиотеки DLL являются внешним интерфейсом компилятора для C и C++. Они вызываются только драйвером компилятора ( *cl.exe* ). |
 | <a name="c2-dll"></a> C2_DLL | Тип | Действие |
 |  | Parents | [BACK_END_PASS](#back-end-pass)<br/>[LTCG](#ltcg) |
 |  | Дети | [CODE_GENERATION](#code-generation)<br/>[WHOLE_PROGRAM_ANALYSIS](#whole-program-analysis) |
 |  | Свойства | None |
 |  | Классы фиксации | [Действие](cpp-event-data-types/activity.md)<br/>[C2DLL](cpp-event-data-types/c2-dll.md) |
-|  | Описание | Возникает при запуске и окончании вызова *c2.dll*. Эта библиотека DLL является внутренней частью компилятора. Она вызывается драйвером компилятора (*cl.exe*). Также она вызывается компоновщиком (*link.exe*), если используется создание кода во время компоновки. |
+|  | Описание | Возникает при запуске и окончании вызова *c2.dll*. Эта библиотека DLL является внутренней частью компилятора. Она вызывается драйвером компилятора ( *cl.exe* ). Также она вызывается компоновщиком ( *link.exe* ), если используется создание кода во время компоновки. |
 | <a name="code-generation"></a> CODE_GENERATION | Тип | Действие |
 |  | Parents | [C2_DLL](#c2-dll) |
 |  | Дети | [FUNCTION](#function)<br/>[THREAD](#thread) |
@@ -110,7 +110,7 @@ ms.locfileid: "87224218"
 |  | Дети | None |
 |  | Свойства | — Командная строка, которая использовалась для вызова *cl.dll* или *link.dll*. |
 |  | Классы фиксации | [SimpleEvent](cpp-event-data-types/simple-event.md)<br/>[CommandLine](cpp-event-data-types/command-line.md) |
-|  | Описание | Возникает, когда компилятор и компоновщик завершают анализ командной строки. Проанализированная командная строка включает все параметры *cl.dll* или *link.dll*, передаваемые через файл ответов. Она также включает параметры *cl.dll* или *link.dll*, переданные через переменные среды, как, например, CL, \_CL\_, LINK и \_LINK\_. |
+|  | Описание | Возникает, когда компилятор и компоновщик завершают анализ командной строки. Проанализированная командная строка включает все параметры *cl.dll* или *link.dll* , передаваемые через файл ответов. Она также включает параметры *cl.dll* или *link.dll* , переданные через переменные среды, как, например, CL, \_CL\_, LINK и \_LINK\_. |
 | <a name="compiler"></a> COMPILER | Тип | Действие |
 |  | Parents | None |
 |  | Дети | [BACK_END_PASS](#back-end-pass)<br/>[COMMAND_LINE](#command-line)<br/>[ENVIRONMENT_VARIABLE](#environment-variable)<br/>[FILE_INPUT](#file-input)<br/>[OBJ_OUTPUT](#obj-output)<br/>[FRONT_END_PASS](#front-end-pass) |
@@ -194,7 +194,7 @@ ms.locfileid: "87224218"
 |  | Дети | None |
 |  | Свойства | — Абсолютный путь к выходному файлу *.obj*. |
 |  | Классы фиксации | [SimpleEvent](cpp-event-data-types/simple-event.md)<br/>[FileOutput](cpp-event-data-types/file-output.md)<br/>[ObjOutput](cpp-event-data-types/obj-output.md) |
-|  | Описание | Возникает один раз для каждого выходного файла *.obj*, создаваемого *cl.exe*. |
+|  | Описание | Возникает один раз для каждого выходного файла *.obj* , создаваемого *cl.exe*. |
 | <a name="opt-icf"></a> OPT_ICF | Тип | Действие |
 |  | Parents | [PASS1](#pass1) |
 |  | Дети | None |

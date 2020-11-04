@@ -4,12 +4,12 @@ description: Пошаговое руководство, в котором пок
 ms.date: 10/08/2020
 helpviewer_keywords:
 - 'MSBuild (C++), walkthrough: create a project'
-ms.openlocfilehash: 4f17cd8c4f5f48d8be5cd7cb25940db87029e111
-ms.sourcegitcommit: 6e5429e076e552b32e8bdc49480c51498d7924c1
+ms.openlocfilehash: b3d4e8881f926e80e95832a27f7a5106ce876265
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099736"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924335"
 ---
 # <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>Пошаговое руководство. Создание проекта Visual C++ с помощью MSBuild
 
@@ -36,21 +36,21 @@ ms.locfileid: "92099736"
 
 - Общее представление о системе MSBuild.
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 > [!NOTE]
 > Большинство низкоуровневых инструкций сборки содержится в файлах *`.targets`* и *`.props`* , которые определяются в заданном по умолчанию целевом каталоге, хранящемся в свойстве `$(VCTargetsPath)`. В нем вы найдете такие файлы, как *`Microsoft.Cpp.Common.props`* . По умолчанию в Visual Studio 2015 и более ранних версий эти файлы находятся по пути *`%ProgramFiles(x86)%\MSBuild\Microsoft.Cpp\v4.0\<version>\`* .
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 > [!NOTE]
 > Большинство низкоуровневых инструкций сборки содержится в файлах *`.targets`* и *`.props`* , которые определяются в заданном по умолчанию целевом каталоге, хранящемся в свойстве `$(VCTargetsPath)`. В нем вы найдете такие файлы, как *`Microsoft.Cpp.Common.props`* . По умолчанию в Visual Studio 2017 эти файлы находятся по пути *`%VSINSTALLDIR%Common7\IDE\VC\VCTargets\`* . В Visual Studio 2015 и более ранних версий они хранились по пути *`%ProgramFiles(x86)%\MSBuild\Microsoft.Cpp\v4.0\<version>\`* .
 
 ::: moniker-end
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 > [!NOTE]
 > Большинство низкоуровневых инструкций сборки содержится в файлах *`.targets`* и *`.props`* , которые определяются в заданном по умолчанию целевом каталоге, хранящемся в свойстве `$(VCTargetsPath)`. В нем вы найдете такие файлы, как *`Microsoft.Cpp.Common.props`* . По умолчанию эти файлы находятся по пути *`%VSINSTALLDIR%MSBuild\Microsoft\VC\<version>\`* . Значение элемента пути `<version>` зависит от версии Visual Studio. *`v160`* соответствует версии Visual Studio 2019. В Visual Studio 2017 эти файлы хранятся по пути *`%VSINSTALLDIR%Common7\IDE\VC\VCTargets\`* . В Visual Studio 2015 и более ранних версий они хранились по пути *`%ProgramFiles(x86)%\MSBuild\Microsoft.Cpp\v4.0\<version>\`* .

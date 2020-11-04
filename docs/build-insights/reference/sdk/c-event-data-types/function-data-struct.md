@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 1034ce01bba6422d0c47fc34b308cafcc113e32b
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 42dcb5a8633f0b7a6cb2fbee8a227cd3f00e2572
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041748"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921000"
 ---
 # <a name="function_data-structure"></a>Структура FUNCTION_DATA
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 Пакет SDK Аналитики сборок С++ совместим с Visual Studio 2017 и более поздних версий. Чтобы увидеть документацию для этих версий, установите в данной статье селектор **Версия** Visual Studio в Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части оглавления на этой странице.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 В структуре `FUNCTION_DATA` описывается функция.
 

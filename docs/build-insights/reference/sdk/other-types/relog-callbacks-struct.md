@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 55f63b05691e3d729ee42ed21049669b94053559
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 2b3beb656aa72ce4c8519c56c4c8bf6ca6577cf4
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041436"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919803"
 ---
 # <a name="relog_callbacks-structure"></a>Структура RELOG_CALLBACKS
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 Пакет SDK Аналитики сборок С++ совместим с Visual Studio 2017 и более поздних версий. Чтобы увидеть документацию для этих версий, установите в данной статье селектор **Версия** Visual Studio в Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части оглавления на этой странице.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 Структура `RELOG_CALLBACKS` используется при инициализации объекта [RELOG_DESCRIPTOR](relog-descriptor-struct.md). Она указывает, какие функции следует вызвать во время повторной записи трассировки событий Windows (ETW).
 

@@ -4,16 +4,16 @@ ms.date: 05/21/2019
 helpviewer_keywords:
 - tools and platforms [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-ms.openlocfilehash: 00c096203ae056c96c87d67a491d3c84b3d1fb3a
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c2ef6c539d5845beee044a963e0056d3287ba679
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845358"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924810"
 ---
 # <a name="c-tools-and-features-in-visual-studio-editions"></a>Инструменты и функции C++ в выпусках Visual Studio
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 Следующие функции C++ доступны в Visual Studio 2019. Если не указано иное, все функции доступны во всех выпусках: Visual Studio Community, Visual Studio Professional и Visual Studio Enterprise. Некоторые функции требуют конкретных рабочих нагрузок или дополнительных компонентов, которые можно установить с помощью Visual Studio Installer.
 
@@ -309,7 +309,7 @@ Linux:
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 В следующей таблице перечислены компоненты Visual C++, доступные в Visual Studio 2017. Крестик в ячейке указывает, что компонент доступен. Пустая ячейка означает, что компонент недоступен. Примечания в скобках означают, что компонент доступен с ограничениями.
 

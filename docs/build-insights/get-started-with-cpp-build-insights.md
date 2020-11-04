@@ -7,21 +7,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 28d7e0758ea521af424129c546297fc97e3d6659
-ms.sourcegitcommit: 8c8ed02a6f3bcb5ee008e3fe30ba7595d7c4c922
+ms.openlocfilehash: c4ebbb280a5cccaa35b5efc7f90e9b570600c47b
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83759229"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923630"
 ---
 # <a name="get-started-with-c-build-insights"></a>Начало работы с аналитикой сборки C++
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 Средства C++ Build Insights доступны в Visual Studio 2019. Чтобы отобразилась документация для этой версии, установите в этой статье селектор **Версия** Visual Studio в положение "Visual Studio 2019". Он находится в верхней части оглавления на этой странице.
 
 ::: moniker-end
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 C++ Build Insights — это набор инструментов, предоставляющих подробные сведения о цепочке инструментов Microsoft Visual C++ (MSVC). Инструменты собирают данные о сборках C++ и представляют их в формате, который может помочь вам получить ответы на распространенные вопросы, например:
 
@@ -31,7 +31,7 @@ C++ Build Insights — это набор инструментов, предос
 
 Основные компоненты этой технологии:
 
-- *vcperf.exe* — служебная программа командной строки, которую можно использовать для получения трассировок сборок;
+- *vcperf.exe*  — служебная программа командной строки, которую можно использовать для получения трассировок сборок;
 - расширение Windows Performance Analyzer (WPA), позволяющее просматривать трассировки сборок в WPA;
 - пакет SDK для C++ Build Insights для создания собственных инструментов, использующих данные C++ Build Insights.
 

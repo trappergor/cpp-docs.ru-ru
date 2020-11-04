@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: b74ee778ffafbcb4c292b4b36b309d5ff4d66c27
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1d49f15a14675f265e1f63ef8795f442f49ad5d4
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224166"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920207"
 ---
 # <a name="makestaticreloggergroup"></a>MakeStaticReloggerGroup
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 Пакет SDK Аналитики сборок С++ совместим с Visual Studio 2017 и более поздних версий. Чтобы увидеть документацию для этих версий, установите в данной статье селектор **Версия** Visual Studio в Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части оглавления на этой странице.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 Функция `MakeStaticReloggerGroup` используется для создания статической группы повторной записи, которую можно передать в такие функции, как [Relog](relog.md). Члены группы повторной записи в журнал получают события по одному слева направо, пока не будут обработаны все события в трассировке.
 

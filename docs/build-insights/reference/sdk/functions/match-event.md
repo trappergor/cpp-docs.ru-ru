@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 8ec2c6bfcacf28998058dc66b5f363fbf1ea5d70
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1486a76aab7b9a4f3b4da209f4f163b4c65b0ac4
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224114"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920103"
 ---
 # <a name="matchevent"></a>MatchEvent
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 Пакет SDK Аналитики сборок С++ совместим с Visual Studio 2017 и более поздних версий. Чтобы увидеть документацию для этих версий, установите в данной статье селектор **Версия** Visual Studio в Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части оглавления на этой странице.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 Функция `MatchEvent` используется для сопоставления событий со списком типов событий. Если событие соответствует типу в этом списке, оно передается обработчику для дальнейшей обработки.
 
@@ -59,7 +59,7 @@ bool MatchEvent(
 Событие для сопоставления с типом события, который описан в *TEvent* и *TEvents*.
 
 *callable*\
-`MatchEvent` вызывает *callable* после успешного сопоставления события с любым из типов событий, которые описаны в *TEvent* и *TEvents*. Первый аргумент, передаваемый в *callable*, является значением r для сопоставленного типа события. Пакет параметров *extraArgs* передается в неизменном виде в остальных параметрах *callable*.  
+`MatchEvent` вызывает *callable* после успешного сопоставления события с любым из типов событий, которые описаны в *TEvent* и *TEvents*. Первый аргумент, передаваемый в *callable* , является значением r для сопоставленного типа события. Пакет параметров *extraArgs* передается в неизменном виде в остальных параметрах *callable*.  
 
 *extraArgs*\
 Аргументы, которые без изменений перенаправляются в *callable* вместе с сопоставленным типом события.

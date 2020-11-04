@@ -2,22 +2,22 @@
 title: Свойства копирования источников проекта (Linux C++)
 ms.date: 10/16/2019
 ms.assetid: 1a44230d-5dd8-4d33-93b4-e77e03e00150
-ms.openlocfilehash: 732a13520a223f1aa73733cd4098c247052f8d3b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 393f1b92bb5185bcd5ce93999e0c13f7d370e78d
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "79441386"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924551"
 ---
 # <a name="copy-sources-project-properties-linux-c"></a>Свойства копирования источников проекта (Linux C++)
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 Поддержка Linux реализована в Visual Studio версии 2017 и выше.
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 Свойства, заданные на этой странице свойств, применяются ко всем файлам в проекте, за исключением тех, свойства уровня файла которых уже заданы.
 
@@ -27,7 +27,7 @@ ms.locfileid: "79441386"
 | Копирование источников | Определяет, требуется ли копировать источники в удаленную систему. |
 | Дополнительные источники для копирования | Задает дополнительные источники для копирования в удаленную систему. При необходимости можно указать пары сопоставлений локальной и удаленной версии со следующим синтаксисом: fulllocalpath1:=fullremotepath1;fulllocalpath2:=fullremotepath2, где локальный файл можно скопировать в указанное удаленное расположение в удаленной системе. |
 
-@SourcesToCopyRemotely и @DataFilesToCopyRemotely ссылаются на группы элементов в файле проекта. Чтобы изменить источники или файлы данных для удаленного копирования, отредактируйте файл *VCXPROJ*, как показано далее.
+@SourcesToCopyRemotely и @DataFilesToCopyRemotely ссылаются на группы элементов в файле проекта. Чтобы изменить источники или файлы данных для удаленного копирования, отредактируйте файл *VCXPROJ* , как показано далее.
 
 ```xml
 <ItemGroup>

@@ -3,18 +3,18 @@ title: Улучшение соответствия C++
 ms.date: 08/04/2020
 description: Microsoft C++ в Visual Studio развивается в сторону полного соответствия стандарту языка C++20.
 ms.technology: cpp-language
-ms.openlocfilehash: 3cf06b092b79068b22e62dfdbbcfbd2c2cf5ad91
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: fc88406a3d2e291d06e01c3e92261b8dfc624ced
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500251"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921429"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Улучшения соответствия C++ в Visual Studio
 
 В каждом выпуске Microsoft C++ добавляются улучшения соответствия и исправления ошибок. В этой статье перечислены улучшения в разбивке по основным выпускам и версиям системы. Также здесь перечислены основные исправления ошибок в разбивке по версиям. Чтобы перейти непосредственно к изменениям в конкретной версии, используйте список из **этой статьи**.
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ## <a name="conformance-improvements-in-visual-studio-2019-rtw-version-160"></a><a name="improvements_160"></a> Улучшения соответствия в Visual Studio 2019 RTW (версия 16.0)
 
@@ -341,7 +341,7 @@ std::equal(std::begin(a), std::end(a), std::begin(b), std::end(b));
 
 ### <a name="effect-of-defining-spaceship-operator-on--and-"></a>Результат определения оператора трехстороннего сравнения в `==` и `!=`
 
-Определение оператора трехстороннего сравнения ( **`<=>`** ) больше не будет переписывать выражения, включающие **`==`** или **`!=`** , если оператор не помечен как **`= default`** ([P1185R2](https://wg21.link/p1185r2)). Следующий пример компилируется в Visual Studio 2019 RTW и версии 16.1, но вызывает C2678 в Visual Studio 2019 версии 16.2:
+Определение оператора трехстороннего сравнения ( **`<=>`** ) больше не будет переписывать выражения, включающие **`==`** или **`!=`** , если оператор не помечен как **`= default`** ( [P1185R2](https://wg21.link/p1185r2)). Следующий пример компилируется в Visual Studio 2019 RTW и версии 16.1, но вызывает C2678 в Visual Studio 2019 версии 16.2:
 
 ```cpp
 #include <compare>
@@ -1617,7 +1617,7 @@ void f(E e) {
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 ## <a name="conformance-improvements-in-visual-studio-2017-rtw-version-150"></a><a name="improvements_150"></a> Улучшения соответствия в Visual Studio 2017 RTW (версия 15.0)
 
@@ -3357,7 +3357,7 @@ public:
 
 ### <a name="offsetof-with-constant-expressions"></a>Постоянные выражения для `offsetof`
 
-Макрос [offsetof](../c-runtime-library/reference/offsetof-macro.md) обычно реализовывался с помощью макроса, требующего [reinterpret_cast](../cpp/reinterpret-cast-operator.md). Такое использование недопустимо в контекстах, требующих константного выражения, но обычно компилятор Microsoft C++ разрешал его. Макрос `offsetof`, входящий в состав стандартной библиотеки, правильно использует встроенную конструкцию компилятора ( **__builtin_offsetof**), но многие разработчики применяли эту особенность для определения собственных `offsetof`.
+Макрос [offsetof](../c-runtime-library/reference/offsetof-macro.md) обычно реализовывался с помощью макроса, требующего [reinterpret_cast](../cpp/reinterpret-cast-operator.md). Такое использование недопустимо в контекстах, требующих константного выражения, но обычно компилятор Microsoft C++ разрешал его. Макрос `offsetof`, входящий в состав стандартной библиотеки, правильно использует встроенную конструкцию компилятора ( **__builtin_offsetof** ), но многие разработчики применяли эту особенность для определения собственных `offsetof`.
 
 В Visual Studio 2017 версии 15.8 компилятор ограничивает области, в которых можно использовать операторы **`reinterpret_cast`** в режиме по умолчанию, чтобы поведение кода лучше соответствовало стандарту C++. В режиме [`/permissive-`](../build/reference/permissive-standards-conformance.md) ограничения еще строже. Использование результата `offsetof` в тех случаях, когда требуются константные выражения, может привести к тому, что код вызовет предупреждение C4644 `usage of the macro-based offsetof pattern in constant expressions is non-standard; use offsetof defined in the C++ standard library instead` или C2975 `invalid template argument, expected compile-time constant expression`.
 
@@ -3643,7 +3643,7 @@ note: see usage of 'g'.
 
 ::: moniker-end
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 ## <a name="c-conformance-improvements-in-visual-studio-2015"></a>Улучшения соответствия стандарту C++ в Visual Studio 2015
 

@@ -7,21 +7,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 2d4473e3682a6e00e0eef61cb73d7450976bcc0c
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 75f45244b9e9b38b7dc65b604940199acafa0ede
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507723"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922222"
 ---
 # <a name="tutorial-windows-performance-analyzer-basics"></a>Руководство. Основы использования Windows Performance Analyzer
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 Средства C++ Build Insights доступны в Visual Studio 2019. Чтобы отобразилась документация для этой версии, установите в этой статье селектор **Версия** Visual Studio в положение "Visual Studio 2019". Он находится в верхней части оглавления на этой странице.
 
 ::: moniker-end
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 Эффективное использование C++ Build Insights требует некоторого опыта работы с Windows Performance Analyzer (WPA). Из этой статьи вы узнаете о стандартных операциях WPA. Дополнительные сведения об использовании WPA см. в документации по [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer).
 

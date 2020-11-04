@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: c0d1348be8878e686aeba4a58c407264264c5bc4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6bfa5bfbe8a61148f925ba185fccc035fd44d02d
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224192"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920272"
 ---
 # <a name="makedynamicreloggergroup"></a>MakeDynamicReloggerGroup
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 Пакет SDK Аналитики сборок С++ совместим с Visual Studio 2017 и более поздних версий. Чтобы увидеть документацию для этих версий, установите в данной статье селектор **Версия** Visual Studio в Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части оглавления на этой странице.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 Функция `MakeDynamicReloggerGroup` используется для создания динамической группы повторной записи в журнал. Члены группы повторной записи в журнал получают события по одному слева направо, пока не будут обработаны все события в трассировке.
 

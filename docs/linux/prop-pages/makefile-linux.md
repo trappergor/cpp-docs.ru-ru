@@ -2,22 +2,22 @@
 title: Общие свойства (проект Makefile в Linux C++) | Документы Майкрософт
 ms.date: 06/07/2019
 ms.assetid: 3dec6853-43f6-412b-9806-9bfad333a204
-ms.openlocfilehash: 72a7919bc94be80acdbf7a2cef5b4a9875595545
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dd92d77069024456020a09b22de3596b8192c5af
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "79446149"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924660"
 ---
 # <a name="makefile-project-properties-linux-c"></a>Свойства проекта Makefile (Linux C++)
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 Поддержка Linux реализована в Visual Studio версии 2017 и выше.
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 Это неполный список свойств, доступных в проекте Linux Makefile. Многие свойства проекта Makefile идентичны свойствам проекта консольного приложения C++ Linux.
 
