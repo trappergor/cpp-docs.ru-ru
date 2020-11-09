@@ -10,12 +10,12 @@ metadata:
   author: corob-msft
   ms.author: corob
   ms.date: 06/04/2020
-  ms.openlocfilehash: 6bfbf763e738a5c53f0b6df0b4790b762ab901f2
-  ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+  ms.openlocfilehash: 487556549e382e6ce8b763229b1c037749263dc7
+  ms.sourcegitcommit: 12eb6a824dd7187a065d44fceca4c410f58e121e
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 09/29/2020
-  ms.locfileid: "91509725"
+  ms.lasthandoff: 11/06/2020
+  ms.locfileid: "94334135"
 highlightedContent:
   items:
   - title: Установка Visual Studio и выбор рабочих нагрузок C++
@@ -182,4 +182,4 @@ additionalContent:
         url: cloud/cloud-and-web-programming-in-visual-cpp.md
       - text: Библиотеки универсальной платформы Windows
         url: cppcx/namespaces-reference-c-cx.md
-  footer: '[Блоги](https://devblogs.microsoft.com/cppblog/) - [Twitter](https://twitter.com/visualc) - [Stack Overflow](https://stackoverflow.com/questions/tagged/visual-c++) - [Сообщить о проблеме](overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md) - [Сообщество разработчиков](https://developercommunity.visualstudio.com/spaces/62/index.html) — принять участие в разработке документации по C++: Ознакомьтесь с нашим [руководством для соавторов](/contribute/).'
+  footer: '[Вопросы и ответы в Документации Майкрософт](/answers/topics/c%2B%2B.html) - [Блог группы разработчиков C++](https://devblogs.microsoft.com/cppblog/) - [Twitter](https://twitter.com/visualc) - [Сообщество разработчиков](https://aka.ms/vsfeedback/browsecpp) - [Stack Overflow](https://stackoverflow.com/questions/tagged/visual-c++) - [Как сообщить о проблеме](overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md) - [Предложить функцию](https://aka.ms/feedback/suggest?space=62) — участие в разработке документации по C++: ознакомьтесь с нашим [руководством для соавторов](/contribute/).'
