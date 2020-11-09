@@ -121,12 +121,12 @@ helpviewer_keywords:
 - std::basic_string [C++], substr
 - std::basic_string [C++], swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
-ms.openlocfilehash: fa2e6813d6cfb55ea1924bc976ef03396b88ca92
-ms.sourcegitcommit: 9c801a43ee0d4d84956b03fd387716c818705e0d
+ms.openlocfilehash: 87eda4064ff63a22add49b2872a26c76ac15bc6a
+ms.sourcegitcommit: 3f0c1dcdcce25865d1a1022bcc5b9eec79f69025
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92907575"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94381653"
 ---
 # <a name="basic_string-class"></a>Класс `basic_string`
 
@@ -231,7 +231,7 @@ class basic_string;
 |[`operator=`](#op_eq)|Назначает значения новых символов содержимому строки.|
 |[`operator`&#91;&#93;](#op_at)|Предоставляет ссылку на символ с указанным индексом в строке.|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
 
 Если функция запрашивает создание последовательности дольше [`max_size`](#max_size) , чем элементы, функция сообщает об ошибке длины, вызывая объект типа [`length_error`](../standard-library/length-error-class.md) .
 
@@ -251,7 +251,7 @@ class basic_string;
 typedef Allocator allocator_type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Этот тип является синонимом для параметра шаблона `Allocator`.
 
@@ -339,7 +339,7 @@ C-строка для добавления.
 
 Ссылка на добавляемый объект строки с символами, переданными функцией-членом.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Символы могут быть добавлены к строке с помощью [`operator+=`](#op_add_eq) функций или или `append` [`push_back`](#push_back) . `operator+=` Добавляет значения с одним аргументом, а функция-член с несколькими аргументами `append` позволяет указать определенную часть строки для добавления.
 
@@ -500,7 +500,7 @@ basic_string<CharType, Traits, Allocator>& assign(
 
 Ссылка на объект строки, которому функция-член будет присваивать новые символы.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Строкам можно присваивать новые символьные значения. Новое значение может быть строкой, C-строкой или одним символом. [`operator=`](#op_eq)Может использоваться, если новое значение можно описать с помощью одного параметра; в противном случае можно использовать функцию-член с `assign` несколькими параметрами, чтобы указать, какая часть строки должна быть назначена целевой строке.
 
@@ -615,7 +615,7 @@ reference at(size_type offset);
 
 Ссылка на символ строки в позиции, указанной с помощью индекса параметра.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Первый элемент строки имеет нулевой индекс, и следующие элементы индексируются последовательно положительными целыми числами, поэтому строка длиной *n* имеет *n* -й элемент, индексируемый по числу *n –* 1.
 
@@ -678,7 +678,7 @@ reference back();
 
 Ссылка на последний элемент строки, которая не должна быть пустой.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 ## <a name="basic_stringbasic_string"></a><a name="basic_string"></a> `basic_string::basic_string`
 
@@ -782,7 +782,7 @@ C-строка, символы могут использоваться для и
 
 Ссылка на строковый объект, создаваемый конструкторами.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Все конструкторы хранят [`basic_string::allocator_type`](#allocator_type) и инициализируют управляемую последовательность. Объектом распределителя является аргумент `al`, если он существует. Для конструктора копии это `right.` [`basic_string::get_allocator`](#get_allocator) `()` . В противном случае распределитель имеет значение `Alloc()` .
 
@@ -899,7 +899,7 @@ const value_type *c_str() const;
 
 Указатель на версию вызываемой С-строки.  Значение указателя не является допустимым после вызова `const` функции, не являющейся, включая деструктор, в классе basic_string объекта.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Объекты типа String, принадлежащие шаблону класса, `basic_string<char>` не обязательно завершаются нулем. Символ NULL '\0' используется как специальный символ в C-строке для пометки ее конца, но не имеет специального значения в объекте типа String и может быть частью строки так же, как любой другой символ. Существует автоматическое преобразование из `const char *` в строки, но класс String не обеспечивает автоматическое преобразование из строк в стиле C в объекты типа `basic_string<char>` .
 
@@ -963,7 +963,7 @@ size_type capacity() const;
 
 Размер хранилища, выделенного в текущий момент в памяти для хранения строки.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Функция-член возвращает хранилище, выделенное в настоящий момент для хранения управляемой последовательности, значение по крайней мере до [`size`](#size) .
 
@@ -1033,7 +1033,7 @@ const_iterator cbegin() const;
 
 Итератор случайного доступа `const`, который указывает на первый элемент диапазона или расположение прямо за концом пустого диапазона (`cbegin() == cend()` для пустого диапазона).
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 С возвращаемым значением `cbegin` элементы в диапазоне нельзя изменять.
 
@@ -1059,7 +1059,7 @@ const_iterator cend() const;
 
 Итератор `const` с произвольным доступом, который указывает конец диапазона.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 `cend` используется для проверки того, прошел ли итератор конец диапазона.
 
@@ -1083,7 +1083,7 @@ auto i2 = Container.cend();
 void clear();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Строка, для которой вызывается функция-член, будет пустой.
 
@@ -1188,7 +1188,7 @@ int compare(
 
 Отрицательное значение, если строка операнда меньше, чем строка параметра; ноль, если две строки равны; или положительное значение, если строка операнда больше, чем строка параметра.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 `compare`Функции элементов сравнивают либо все, либо часть строк параметров и операндов в зависимости от используемого объекта.
 
@@ -1395,7 +1395,7 @@ the first 3 characters of the parameter C-string.
 typedef implementation-defined const_iterator;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Тип `const_iterator` нельзя использовать для изменения значения символа и используется для прохода по строке в прямом направлении.
 
@@ -1411,7 +1411,7 @@ typedef implementation-defined const_iterator;
 typedef typename allocator_type::const_pointer const_pointer;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Тип является синонимом `allocator_type::const_pointer`.
 
@@ -1451,7 +1451,7 @@ The C-string cstr1c is: Out There.
 typedef typename allocator_type::const_reference const_reference;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Тип `const_reference` нельзя использовать для изменения значения элемента.
 
@@ -1469,7 +1469,7 @@ typedef typename allocator_type::const_reference const_reference;
 typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Тип `const_reverse_iterator` не может изменить значение символа и используется для перебора строки в обратную.
 
@@ -1504,7 +1504,7 @@ size_type copy(
 
 Число скопированных символов.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Символ NULL не добавляется в конец копии.
 
@@ -1581,7 +1581,7 @@ const_reverse_iterator crend() const;
 
 `const`Обратный итератор, который обращается к расположению, следующему за последним элементом в обращенной строке (расположении, предшествующем первому элементу в неизмененной строке).
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 ## <a name="basic_string_copy_s"></a><a name="copy_s"></a> `basic_string::_Copy_s`
 
@@ -1601,7 +1601,7 @@ size_type _Copy_s(
 Целевой массив символов, в который должны быть скопированы элементы.
 
 *`dest_size`*\
-Размер *dest* .
+Размер *dest*.
 
 *`count`* Число символов, которые будут копироваться не более чем из исходной строки.
 
@@ -1612,7 +1612,7 @@ size_type _Copy_s(
 
 Число фактически скопированных символов.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Символ NULL не добавляется в конец копии.
 
@@ -1676,7 +1676,7 @@ value_type *data() noexcept;
 
 Указатель на первый элемент массива, заканчивающегося нулем, который содержит содержимое строки. Для пустой строки указатель указывает на один символ null, равный `value_type()` .
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Указатель, возвращенный `data` точками в допустимом диапазоне `[data(), data() + size()]` . Каждый элемент в диапазоне соответствует текущим данным в строке. То есть для каждого допустимого смещения *`n`* в диапазоне `data() + n == addressof(operator[](n))` .
 
@@ -1740,7 +1740,7 @@ The length of C-style string str1 = 11
 typedef typename allocator_type::difference_type difference_type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Тип целого числа со знаком описывает объект, который может представлять разницу между адресами любых двух элементов в управляемой последовательности.
 
@@ -1792,7 +1792,7 @@ bool empty() const;
 
 `true` значение, если строковый объект не содержит символов; `false` , если у него есть хотя бы один символ.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Эта функция-член эквивалентна [size](#size) == 0.
 
@@ -1842,7 +1842,7 @@ iterator end();
 
 Возвращает итератор произвольного доступа, указывающий расположение за последним элементом в строке.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 `end` часто используется для проверки того, достиг ли итератор конца строки. Значение, возвращаемое, `end` не должно быть разыменовано.
 
@@ -1927,7 +1927,7 @@ bool ends_with(const basic_string_view sv) const noexcept;
 
 `true` значение, если строка заканчивается указанным суффиксом; `false` в противном случае — значение.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 `ends_with()` Новое в C++ 20. Чтобы использовать его, укажите [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) параметр компилятора.
 
@@ -1999,7 +1999,7 @@ basic_string<CharType, Traits, Allocator>& erase(
 
 Для первых двух функций-членов это итератор, указывающий первый символ после последнего символа, удаленного функцией-членом. Для третьей функции-члена это ссылка на объект string, из которого удалены элементы.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Третья функция – член возвращает значение `*this` .
 
@@ -2179,7 +2179,7 @@ int main( )
       cout << "The index of the 1st element of sample "
            << "in str3 is: " << indexCh3a << endl;
    else
-      cout << "The substring 'perfect' was not found in str3 ."
+      cout << "The substring 'sample' was not found in str3 ."
            << endl;
 
    const char *cstr3b = "for";
@@ -2991,7 +2991,7 @@ reference front();
 
 Ссылка на первый элемент строки, который не должен быть пустым.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 ## <a name="basic_stringget_allocator"></a><a name="get_allocator"></a> `basic_string::get_allocator`
 
@@ -3005,7 +3005,7 @@ allocator_type get_allocator() const;
 
 Распределитель, используемый строкой.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Функция-член возвращает сохраненный объект распределителя.
 
@@ -3223,7 +3223,7 @@ The string with a character inserted from a range is: ABCDeeeHIJ
 typedef implementation-defined iterator;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Тип `iterator` можно использовать для изменения значения символа и используется для прохода по строке в прямом направлении.
 
@@ -3239,7 +3239,7 @@ typedef implementation-defined iterator;
 size_type length() const;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Функция-член совпадает с [`size`](#size) .
 
@@ -3309,7 +3309,7 @@ size_type max_size() const;
 
 Максимальное количество символов, которое может содержать строка.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Исключение типа [Length_error класс](../standard-library/length-error-class.md) создается, когда операция создает строку с длиной, превышающей максимальный размер.
 
@@ -3375,7 +3375,7 @@ int main( )
 static const size_type npos = -1;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Если возвращаемое значение должно быть проверено на `npos` значение, оно может не работать, если только возвращаемое значение не имеет тип [`size_type`](#size_type) , а не либо `int` `unsigned` .
 
@@ -3413,7 +3413,7 @@ basic_string<CharType, Traits, Allocator>& operator+=(
 
 Ссылка на добавляемый объект строки с символами, переданными функцией-членом.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Символы могут быть добавлены к строке с помощью `operator+=` функций или или [`append`](#append) [`push_back`](#push_back) . `operator+=` добавляет значения одиночных аргументов, а функция-член append с несколькими аргументами позволяет указывать для добавления определенную часть строки.
 
@@ -3505,7 +3505,7 @@ basic_string<CharType, Traits, Allocator>& operator=(
 
 Ссылка на объект строки, которому функция-член будет присваивать новые символы.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Строкам можно присваивать новые символьные значения. Новое значение может быть строкой, C-строкой или одним символом. `operator=`Может использоваться, если новое значение можно описать с помощью одного параметра, в противном случае можно использовать функцию-член с [`assign`](#assign) несколькими параметрами, чтобы указать, какая часть строки должна быть назначена целевой строке.
 
@@ -3584,7 +3584,7 @@ reference operator[](size_type offset);
 
 Ссылка на символ строки в позиции, указанной с помощью индекса параметра.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Первый элемент строки имеет индекс 0, и следующие элементы последовательно индексируются положительными целыми числами, так что в строке длины *n**n* -й элемент имеет индекс *n* – 1.
 
@@ -3643,7 +3643,7 @@ int main( )
 typedef typename allocator_type::pointer pointer;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Тип является синонимом `allocator_type::pointer`.
 
@@ -3680,7 +3680,7 @@ The C-string cstr1b is: Out There.
 void pop_back();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Эта функция-член вызывает `erase(size() - 1)`, чтобы удалить последний элемент последовательности, который должен быть непустым.
 
@@ -3697,7 +3697,7 @@ void push_back(value_type char_value);
 *`char_value`*\
 Символ, который нужно добавить в конец строки.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Функция-член фактически вызывает [`insert`](#insert) ( [`end`](#end) , *char_value* ).
 
@@ -3753,7 +3753,7 @@ reverse_iterator rbegin();
 
 Возвращает итератор произвольного доступа в первый элемент обращенной строки, указывая элемент, который был бы последним элементом в соответствующей необращенной строке.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 `rbegin` используется с обратным строкой так же, как [`begin`](#begin) используется со строкой.
 
@@ -3823,7 +3823,7 @@ The string str2 is empty.
 typedef typename allocator_type::reference reference;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Тип `reference` можно использовать для изменения значения элемента.
 
@@ -3849,7 +3849,7 @@ reverse_iterator rend();
 
 Обратный итератор произвольного доступа, который указывает место, следующее за последним элементом в обращенной строке.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 `rend` используется с обратным строкой так же, как [`end`](#end) используется со строкой.
 
@@ -4223,7 +4223,7 @@ void reserve(size_type count = 0);
 *`count`*\
 Число символов, для которых резервируется память.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Наличие достаточной емкости очень важно, так как перераспределения занимают много времени и делают недействительными все ссылки, указатели и итераторы, которые ссылаются на символы в строке.
 
@@ -4321,7 +4321,7 @@ void resize(
 *`char_value`*\
 Значение, с которым инициализируются добавляемые символы, если требуются дополнительные элементы.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Если конечный размер превышает максимальное количество символов, форма вызывает `length_error`.
 
@@ -4418,7 +4418,7 @@ The capacity of downsized string str1 is: 47.
 typedef std::reverse_iterator<iterator> reverse_iterator;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Тип `reverse_iterator` может изменять значение символа и используется для последовательного выполнения итерации по строке в обратном направлении.
 
@@ -4609,7 +4609,7 @@ The index of the 1st element of 'clear' in str4 is: 17
 void shrink_to_fit();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Эта функция-член удаляет все ненужное хранилище в контейнере.
 
@@ -4687,7 +4687,7 @@ int main( )
 typedef typename allocator_type::size_type size_type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Он эквивалентен `allocator_type::size_type` .
 
@@ -4748,7 +4748,7 @@ bool starts_with(const basic_string_view sv) const noexcept;
 
 `true` значение, если строка начинается с указанного префикса; `false` в противном случае — значение.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 `starts_with()` Новое в C++ 20. Чтобы использовать его, укажите [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) параметр компилятора.
 
@@ -4855,7 +4855,7 @@ void swap(
 *`str`*\
 Исходная строка, элементы которой должны заменить элементы целевой строки.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Если переставляемые строки имеют один и тот же объект allocator, то функция-член `swap`:
 
@@ -4908,7 +4908,7 @@ The basic_string s2 = Tweedledee.
 typedef Traits traits_type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Тип является синонимом второго параметра шаблона `Traits` .
 
@@ -4926,7 +4926,7 @@ typedef Traits traits_type;
 typedef typename allocator_type::value_type value_type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Он эквивалентен `traits_type::char_type` и эквивалентен `char` для объектов типа `string` .
 

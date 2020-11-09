@@ -1,6 +1,7 @@
 ---
-title: Определения типов &lt;ios&gt;
-ms.date: 11/04/2016
+title: Определения типов `<ios>`
+description: Описывает определения типов библиотеки стандартных шаблонов C++ (STL) `<ios>` , которые поддерживают `ios` класс из старой `iostream` библиотеки.
+ms.date: 11/06/2020
 f1_keywords:
 - iosfwd/std::ios
 - iosfwd/std::streamoff
@@ -8,29 +9,28 @@ f1_keywords:
 - iosfwd/std::streamsize
 - iosfwd/std::wios
 - iosfwd/std::wstreampos
-ms.assetid: 0b962632-3439-44de-bf26-20c67a7f0ff3
-ms.openlocfilehash: 6167856c579acfca2bde600b2dd4d457199cafcc
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4af9636ab3317e7b81eb73dc74aef065b1287e21
+ms.sourcegitcommit: 3f0c1dcdcce25865d1a1022bcc5b9eec79f69025
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212284"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94381640"
 ---
-# <a name="ltiosgt-typedefs"></a>Определения типов &lt;ios&gt;
+# <a name="ios-typedefs"></a>Определения типов `<ios>`
 
-## <a name="ios"></a><a name="ios"></a>iOS
+## `ios`
 
-Поддерживает класс ios из старой библиотеки iostream.
+Поддерживает `ios` класс из старой `iostream` библиотеки.
 
 ```cpp
 typedef basic_ios<char, char_traits<char>> ios;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
-Тип является синонимом [basic_ios](../standard-library/basic-ios-class.md)шаблона класса, специализированного для элементов типа **`char`** с признаками символа по умолчанию.
+Этот тип является синонимом для шаблона класса [`basic_ios`](../standard-library/basic-ios-class.md) , специализированного для элементов типа **`char`** с признаками символа по умолчанию.
 
-## <a name="streamoff"></a><a name="streamoff"></a>streamoff
+## `streamoff`
 
 Поддерживает внутренние операции.
 
@@ -42,11 +42,11 @@ typedef basic_ios<char, char_traits<char>> ios;
 #endif
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
-Тип — целое число со знаком, описывающее объект, который может хранить смещение в байтах, участвующее в различных операциях размещения потока. Его представление имеет по крайней мере 32 бита значения. Оно не обязательно достаточно велико для представления произвольных позиций внутри потока. Значение `streamoff(-1)` обычно указывает на ошибочное смещение.
+Тип является целым числом со знаком. Он описывает объект, который может хранить смещение в байтах в операциях позиционирования потока. Его представление имеет по крайней мере 32 бита значения. Он не обязательно достаточно велик, чтобы представлять произвольную байтовую точку в потоке. Значение `streamoff(-1)` обычно указывает на ошибочное смещение.
 
-## <a name="streampos"></a><a name="streampos"></a>streampos
+## `streampos`
 
 Содержит текущее положение указателя буфера или указателя файла.
 
@@ -54,9 +54,9 @@ typedef basic_ios<char, char_traits<char>> ios;
 typedef fpos<mbstate_t> streampos;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
-Этот тип является синонимом> [fpos](../standard-library/fpos-class.md) <  `mbstate_t` .
+Тип является синонимом для [`fpos`](../standard-library/fpos-class.md) <  `mbstate_t`>.
 
 ### <a name="example"></a>Пример
 
@@ -73,7 +73,7 @@ int main( )
    ofstream x( "iostream.txt" );
    x << "testing";
    streampos y = x.tellp( );
-   cout << y << endl;
+   cout << streamoff(y) << '\n';
 }
 ```
 
@@ -81,7 +81,7 @@ int main( )
 7
 ```
 
-## <a name="streamsize"></a><a name="streamsize"></a>данные streamsize
+## `streamsize`
 
 Указывает размер потока.
 
@@ -93,13 +93,13 @@ int main( )
 #endif
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
-Тип — целое число со знаком, описывающее объект, который может хранить количество элементов, участвующих в различных операциях размещения потока. Его представление имеет по крайней мере 16 битов значения. Оно не обязательно достаточно велико для представления произвольных позиций внутри потока.
+Тип — целое число со знаком, описывающее объект, который может хранить количество элементов, участвующих в различных операциях размещения потока. Его представление имеет по крайней мере 16 битов значения. Он не обязательно достаточно велик, чтобы представлять произвольную байтовую точку в потоке.
 
 ### <a name="example"></a>Пример
 
-После компиляции и запуска следующей программы рассмотрим файл Test.txt, чтобы увидеть влияние параметра `streamsize`.
+После компиляции и запуска следующей программы Взгляните на файл, `test.txt` чтобы увидеть результат настройки `streamsize` .
 
 ```cpp
 // ios_streamsize.cpp
@@ -117,19 +117,19 @@ int main( )
 }
 ```
 
-## <a name="wios"></a><a name="wios"></a>виос
+## `wios`
 
-Поддерживает класс wios из старой библиотеки iostream.
+Поддерживает `wios` класс из старой `iostream` библиотеки.
 
 ```cpp
 typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
-Тип является синонимом [basic_ios](../standard-library/basic-ios-class.md)шаблона класса, специализированного для элементов типа **`wchar_t`** с признаками символа по умолчанию.
+Этот тип является синонимом для шаблона класса [`basic_ios`](../standard-library/basic-ios-class.md) , специализированного для элементов типа **`wchar_t`** с признаками символа по умолчанию.
 
-## <a name="wstreampos"></a><a name="wstreampos"></a>встреампос
+## `wstreampos`
 
 Содержит текущее положение указателя буфера или указателя файла.
 
@@ -137,9 +137,9 @@ typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
 typedef fpos<mbstate_t> wstreampos;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
-Этот тип является синонимом> [fpos](../standard-library/fpos-class.md) <  `mbstate_t` .
+Тип является синонимом для [`fpos`](../standard-library/fpos-class.md) <  `mbstate_t`>.
 
 ### <a name="example"></a>Пример
 

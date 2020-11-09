@@ -14,12 +14,12 @@ helpviewer_keywords:
 - preprocessor, pragmas
 - pragma directives (#pragma)
 ms.assetid: 9867b438-ac64-4e10-973f-c3955209873f
-ms.openlocfilehash: bf4bbdcf74808edd8ef54149f8258f47bd94c600
-ms.sourcegitcommit: 4abc6c4c9694f91685cfd77940987e29a51e3143
+ms.openlocfilehash: 784cd413b6b81033c9e49b22d979ece72e5ee101
+ms.sourcegitcommit: 3f0c1dcdcce25865d1a1022bcc5b9eec79f69025
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93238412"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94381549"
 ---
 # <a name="pragma-directives-and-the-__pragma-keyword"></a>Директивы pragma и ключевое слово __pragma
 
@@ -30,7 +30,7 @@ ms.locfileid: "93238412"
 > **#`pragma`***Строка токена*\
 > **`__pragma(`***строка* **`)`** токена два символа подчеркивания в начале — строка расширения, определяемая корпорацией Майкрософт **`_Pragma(`** *— литерал* **`)`** //C99
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
 
 Каждая реализация C и C++ поддерживает некоторые возможности, уникальные для хост-компьютера или операционной системы. Некоторые программы, например, должны выполнять точный контроль над расположением данных в памяти или управлять способом получения параметров определенными функциями. Директивы **#pragma** предлагают каждому компилятору возможность предоставлять функции для конкретного компьютера и операционной системы, сохраняя общую совместимость с языками C и C++.
 
@@ -148,7 +148,7 @@ return _hr; \
 Строковый литерал должен быть таким же, как в противном случае после *`#pragma`* оператора. Пример:
 
 ```c
-#pragma message("--the #pragma way")
+#pragma message("the #pragma way")
 _Pragma ("message( \"the _Pragma way\")") 
 ```
 
@@ -181,7 +181,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также
 
 [Справочник по препроцессору C/C++](../preprocessor/c-cpp-preprocessor-reference.md)\
 [Директивы pragma](../c-language/c-pragmas.md)\
