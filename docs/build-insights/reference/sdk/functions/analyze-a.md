@@ -1,6 +1,6 @@
 ---
-title: АнализA
-description: Ссылка на функцию SDK AnalyseA в сборке сборки.
+title: AnalyzeA
+description: Справочник по функции AnalyzeA пакета SDK для C++ Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 7c7602c49ab5f3ce67693424019e253727563293
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: a2b014c35c2ebc6096b97dd3c0f86bd57e293451
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324150"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920311"
 ---
-# <a name="analyzea"></a>АнализA
+# <a name="analyzea"></a>AnalyzeA
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
+Пакет SDK Аналитики сборок С++ совместим с Visual Studio 2017 и более поздних версий. Чтобы увидеть документацию для этих версий, установите в данной статье селектор **Версия** Visual Studio в Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части оглавления на этой странице.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-Функция `AnalyzeA` используется для анализа событий MSVC, считываемых из отслеживания событий ввода для отслеживания Windows (ETW).
+Функция `AnalyzeA` используется для анализа событий MSVC, считанных из входных данных трассировки событий Windows (ETW).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -37,14 +37,14 @@ enum RESULT_CODE AnalyzeA(
 
 ### <a name="parameters"></a>Параметры
 
-*вхотливыйLogFile*\
-Входный след ETW, из которого вы хотите прочитать события.
+*inputLogFile*\
+Входная трассировка ETW, из которой нужно считать события.
 
-*анализДескриптор*\
-Указатель на [ANALYSIS_DESCRIPTOR](../other-types/analysis-descriptor-struct.md) объект. Используйте этот объект для настройки анализа.
+*analysisDescriptor*\
+Указатель на объект [ANALYSIS_DESCRIPTOR](../other-types/analysis-descriptor-struct.md). Используйте этот объект для настройки анализа.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Код результата из [RESULT_CODE](../other-types/result-code-enum.md) enum.
+Код результата из перечисления [RESULT_CODE](../other-types/result-code-enum.md).
 
 ::: moniker-end

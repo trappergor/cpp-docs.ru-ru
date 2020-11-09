@@ -1,6 +1,6 @@
 ---
-title: OnRelogEventFunc typedef
-description: Ссылка на шрифт SDK OnRelogEventFunc.
+title: Ключевое слово typedef для OnRelogEventFunc
+description: Справочник ключевому слову typedef для OnRelogEventFunc пакета SDK для C++ Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 2df8646d530c089b1239978d716b2b619a5b4b61
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: ed639ab59b900f97d29dc69240e45b2f52f2f3b3
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329070"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919752"
 ---
-# <a name="onrelogeventfunc-typedef"></a>OnRelogEventFunc typedef
+# <a name="onrelogeventfunc-typedef"></a>Ключевое слово typedef для OnRelogEventFunc
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
+Пакет SDK Аналитики сборок С++ совместим с Visual Studio 2017 и более поздних версий. Чтобы увидеть документацию для этих версий, установите в данной статье селектор **Версия** Visual Studio в Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части оглавления на этой странице.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-Typedef `OnRelogEventFunc` является одной из подписей функций, используемых в [структуре RELOG_CALLBACKS.](relog-callbacks-struct.md)
+Ключевое слово typedef `OnRelogEventFunc` — это одна из сигнатур функций, используемых в структуре [RELOG_CALLBACKS](relog-callbacks-struct.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -38,17 +38,17 @@ typedef enum CALLBACK_CODE (BUILD_INSIGHTS_API *OnRelogEventFunc)(
 
 ### <a name="parameters"></a>Параметры
 
-*EventStack*\
-Стек события для текущего события. Для получения дополнительной информации [Events](../event-table.md)о стеках событий см.
+*eventStack*\
+Стек событий для текущего события. Дополнительные сведения о стеках событий см. в [этой статье](../event-table.md).
 
-*relogСессия*\
-Указатель сеанса для использования при вызове [In-Event.](../functions/inject-event.md)
+*relogSession*\
+Указатель сеанса повторной записи в журнал для использования при вызове [InjectEvent](../functions/inject-event.md).
 
-*обратный вызовКонтекст*\
-Значение контекста, которое было установлено для этого обратного вызова [в RELOG_DESCRIPTOR.](analysis-descriptor-struct.md)
+*callbackContext*\
+Значение контекста, заданное для этого обратного вызова в [RELOG_DESCRIPTOR](analysis-descriptor-struct.md).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-[Значение CALLBACK_CODE,](callback-code-enum.md) которое контролирует, что должно произойти дальше.
+Значение [CALLBACK_CODE](callback-code-enum.md), определяющее следующее действие.
 
 ::: moniker-end

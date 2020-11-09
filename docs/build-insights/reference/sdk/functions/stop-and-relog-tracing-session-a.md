@@ -1,6 +1,6 @@
 ---
-title: СтопАндрелогТрейсингСея
-description: Ссылка на функцию «СИ Тиз» построить исследования SDK StopAndRelogRacingSessionA.
+title: StopAndRelogTracingSessionA
+description: Справочник по функции StopAndRelogTracingSessionA пакета SDK для C++ Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: fa70d50ba79a7829adb985ab4d884b5773b5d40f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: de69ca379c6f0ef46e23d2b4a78c72518e997572
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323671"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919973"
 ---
-# <a name="stopandrelogtracingsessiona"></a>СтопАндрелогТрейсингСея
+# <a name="stopandrelogtracingsessiona"></a>StopAndRelogTracingSessionA
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
+Пакет SDK Аналитики сборок С++ совместим с Visual Studio 2017 и более поздних версий. Чтобы увидеть документацию для этих версий, установите в данной статье селектор **Версия** Visual Studio в Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части оглавления на этой странице.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-Функция `StopAndRelogTracingSessionA` останавливает текущий сеанс отслеживания и сохраняет полученный след во временном файле. Затем сеанс перезаписи немедленно начинает использовать временный файл в качестве ввода. Окончательный перезаписированный след, производимый сеансом перезаписи, сохраняется в файле, указанном абонентом. Исполнители вызова этой функции должны иметь привилегии администратора.
+Функция `StopAndRelogTracingSessionA` останавливает текущий сеанс трассировки и сохраняет итоговую трассировку во временном файле. Затем сразу же запускается сеанс повторной записи в журнал с использованием временного файла в качестве входных данных. Окончательные повторно записанные данные трассировки, созданные сеансом повторной записи в журнал, сохраняются в файле, указанном вызывающей стороной. Исполняемые файлы, вызывающие эту функцию, должны иметь привилегии администратора.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -40,19 +40,19 @@ enum RESULT_CODE StopAndRelogTracingSessionA(
 ### <a name="parameters"></a>Параметры
 
 *sessionName*\
-Название сеанса отслеживания, чтобы остановить. Используйте то же имя сеанса, что и имя, которое было передано [StartTracingSession,](start-tracing-session.md) [StartTracingSessionA](start-tracing-session-a.md)или [StartTracingSessionW.](start-tracing-session-w.md)
+Имя останавливаемого сеанса трассировки. Используйте то же имя сеанса, которое было передано в [StartTracingSession](start-tracing-session.md), [StartTracingSessionA](start-tracing-session-a.md) или [StartTracingSessionW](start-tracing-session-w.md).
 
-*выходНопок*\
-Файл, в котором можно написать перезаписированный след, созданный сеансом перезаписи.
+*outputLogFile*\
+Файл, в который записываются повторно записанные данные трассировки, созданные сеансом повторной записи в журнал.
 
-*Статистика*\
-Указатель на [TRACING_SESSION_STATISTICS](../other-types/tracing-session-statistics-struct.md) объект. `StopAndRelogTracingSessionA`записывает статистику сбора следов на этом объекте перед возвращением.
+*statistics*\
+Указатель на объект [TRACING_SESSION_STATISTICS](../other-types/tracing-session-statistics-struct.md). `StopAndRelogTracingSessionA` записывает статистику сбора трассировки в этот объект перед возвратом.
 
-*анализДескриптор*\
-Указатель на [RELOG_DESCRIPTOR](../other-types/analysis-descriptor-struct.md) объект. Используйте этот объект для настройки сеанса `StopAndRelogTracingSessionA`перезаписи, который начался с.
+*analysisDescriptor*\
+Указатель на объект [RELOG_DESCRIPTOR](../other-types/analysis-descriptor-struct.md). Используйте этот объект для настройки сеанса повторной записи в журнал, запущенного `StopAndRelogTracingSessionA`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Код результата из [RESULT_CODE](../other-types/result-code-enum.md) enum.
+Код результата из перечисления [RESULT_CODE](../other-types/result-code-enum.md).
 
 ::: moniker-end

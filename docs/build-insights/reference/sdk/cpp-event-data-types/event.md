@@ -1,6 +1,6 @@
 ---
 title: Класс событий
-description: Ссылка на класс событий SDK Build Insights.
+description: Справочник по классу Event пакета SDK для C++ Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 25d58f642a1c314e48ddff62553394bcc65e4717
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: 7dd96ffa3518c58e1b18312bb4fe2c36df26bd67
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324967"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923295"
 ---
 # <a name="event-class"></a>Класс событий
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
+Пакет SDK Аналитики сборок С++ совместим с Visual Studio 2017 и более поздних версий. Чтобы увидеть документацию для этих версий, установите в данной статье селектор **Версия** Visual Studio в Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части оглавления на этой странице.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-Класс `Event` используется с функциями [MatchEvent,](../functions/match-event.md) [MatchEventInMemberFunction,](../functions/match-event-in-member-function.md) [MatchEventStack](../functions/match-event-stack.md)и [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Используйте его, чтобы соответствовать любому событию.
+Класс `Event` используется с функциями [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md) и [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md). Используйте его для сопоставления любого события.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -47,7 +47,7 @@ public:
 };
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="constructors"></a>Конструкторы
 
@@ -55,15 +55,15 @@ public:
 
 ### <a name="functions"></a>Функции
 
-[Данные](#data)
+[Data](#data)
 [EventId](#event-id)\
 [EventInstanceId](#event-instance-id)\
 [EventName](#event-name)\
 [EventWideName](#event-wide-name)\
 [ProcessId](#process-id)\
-[ПроцессорИндекс](#processor-index)\
+[ProcessorIndex](#processor-index)\
 [ThreadId](#thread-id)\
-[ТикЧастота](#tick-frequency)\
+[TickFrequency](#tick-frequency)\
 [Timestamp](#timestamp)
 
 ## <a name="event"></a>Событие<a name="entity"></a>
@@ -74,10 +74,10 @@ Event(const RawEvent& event);
 
 ### <a name="parameters"></a>Параметры
 
-*Событие*\
+*event*\
 Любое событие.
 
-## <a name="data"></a><a name="data"></a>Данных
+## <a name="data"></a><a name="data"></a> Data
 
 ```cpp
 const void* Data() const;
@@ -85,9 +85,9 @@ const void* Data() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на дополнительные данные, содержащиеся в этом событии. Для получения дополнительной информации о том, как интерпретировать это поле, см [EVENT_DATA.](../c-event-data-types/event-data-struct.md)
+Указатель на дополнительные данные, содержащиеся в этом событии. Сведения об интерпретации этого поля см. в статье [EVENT_DATA](../c-event-data-types/event-data-struct.md).
 
-## <a name="eventid"></a><a name="event-id"></a>Eventid
+## <a name="eventid"></a><a name="event-id"></a> EventId
 
 ```cpp
 const unsigned short& EventId() const;
@@ -95,9 +95,9 @@ const unsigned short& EventId() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Номер, идентифицирующие тип события. Список идентификаторов событий можно узнать [EVENT_ID.](../c-event-data-types/event-id-enum.md)
+Номер, который указывает на тип события. Список идентификаторов можно узнать в справочнике по [EVENT_ID](../c-event-data-types/event-id-enum.md).
 
-## <a name="eventinstanceid"></a><a name="event-instance-id"></a>EventInstanceId
+## <a name="eventinstanceid"></a><a name="event-instance-id"></a> EventInstanceId
 
 ```cpp
 const unsigned long long& EventInstanceId() const;
@@ -105,9 +105,9 @@ const unsigned long long& EventInstanceId() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Номер, который однозначно идентифицирует событие внутри следа. Это значение не изменяется при анализе или повторном прослеживании одного и того же следа несколько раз. Используйте это значение для определения одного и того же события в нескольких анализа или перезаписи проходов по тому же следу.
+Это число, которое уникальным образом идентифицирует событие в пределах трассировки. Это значение не изменяется при многократном анализе или повторной записи одной и той же трассировки. Используйте это значение для обнаружения одного и того же события при множественных операциях анализа или повторной записи в журнал, в ходе одной трассировки.
 
-## <a name="eventname"></a><a name="event-name"></a>EventName
+## <a name="eventname"></a><a name="event-name"></a> EventName
 
 ```cpp
 const char* EventName() const;
@@ -115,9 +115,9 @@ const char* EventName() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Строка ANSI, содержащая имя типа события, идентифицированного [EventId.](#event-id)
+Строка ANSI, которая содержит название типа события, определяемого по [EventId](#event-id).
 
-## <a name="eventwidename"></a><a name="event-wide-name"></a>EventWideName
+## <a name="eventwidename"></a><a name="event-wide-name"></a> EventWideName
 
 ```cpp
 const wchar_t* EventWideName() const;
@@ -125,9 +125,9 @@ const wchar_t* EventWideName() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Широкая строка, содержащая название события, идентифицированного [EventId](#event-id).
+Строка содержит название события, идентифицируемого [EventId](#event-id).
 
-## <a name="processid"></a><a name="process-id"></a>ProcessId
+## <a name="processid"></a><a name="process-id"></a> ProcessId
 
 ```cpp
 const unsigned long& ProcessId() const;
@@ -135,9 +135,9 @@ const unsigned long& ProcessId() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Идентификатор процесса, в котором произошло событие.
+Идентификатор процесса, в котором возникло текущее событие.
 
-## <a name="processorindex"></a><a name="processor-index"></a>ПроцессорИндекс
+## <a name="processorindex"></a><a name="processor-index"></a> ProcessorIndex
 
 ```cpp
 const unsigned short& ProcessorIndex() const;
@@ -145,9 +145,9 @@ const unsigned short& ProcessorIndex() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Индекс с нулевым уровнем для логического процессора, на котором произошло событие.
+Нулевой индекс для логического процессора, на котором произошло событие.
 
-## <a name="threadid"></a><a name="thread-id"></a>ThreadId
+## <a name="threadid"></a><a name="thread-id"></a> ThreadId
 
 ```cpp
 const unsigned long& ThreadId() const;
@@ -155,9 +155,9 @@ const unsigned long& ThreadId() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Идентификатор для потока, в котором произошло событие.
+Идентификатор потока, в котором возникло текущее событие.
 
-## <a name="tickfrequency"></a><a name="tick-frequency"></a>ТикЧастота
+## <a name="tickfrequency"></a><a name="tick-frequency"></a> TickFrequency
 
 ```cpp
 const long long& TickFrequency() const;
@@ -165,9 +165,9 @@ const long long& TickFrequency() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Количество тиков в секунду для использования при оценке продолжительности, измеренной в тиках для этого события.
+Число тактов в секунду, используемое при вычислении длительности в тактах для этого события.
 
-## <a name="timestamp"></a><a name="timestamp"></a>Timestamp
+## <a name="timestamp"></a><a name="timestamp"></a> Timestamp
 
 ```cpp
 const long long& Timestamp() const;
@@ -175,6 +175,6 @@ const long long& Timestamp() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если событие является действием, эта функция возвращает значение тика, захваченное во время начала действия. Для простого события эта функция возвращает значение тика, захваченное во время события.
+Если событие имеет тип "действие", эта функция возвращает значение тактов, захваченное в момент запуска действия. Для простого события эта функция возвращает значение тактов, захваченное в момент создания этого события.
 
 ::: moniker-end

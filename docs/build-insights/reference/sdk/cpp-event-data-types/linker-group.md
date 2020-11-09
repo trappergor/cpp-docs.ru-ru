@@ -1,6 +1,6 @@
 ---
 title: Класс LinkerGroup
-description: Ссылка на исследования в отношении SDK LinkerGroup.
+description: Справочник по классу LinkerGroup пакета SDK для C++ Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: c59d62938e5bd7b839ad12a321a03510e708e0fd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: 8a818cf7524405d4e2f29a1987e93b77371607cc
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324651"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923112"
 ---
 # <a name="linkergroup-class"></a>Класс LinkerGroup
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
+Пакет SDK Аналитики сборок С++ совместим с Visual Studio 2017 и более поздних версий. Чтобы увидеть документацию для этих версий, установите в данной статье селектор **Версия** Visual Studio в Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части оглавления на этой странице.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-Класс `LinkerGroup` используется с функциями [MatchEventStack](../functions/match-event-stack.md) и [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Используйте его для сопоставления групп событий [LINKER.](../event-table.md#linker)
+Класс `LinkerGroup` используется с функциями [MatchEventStack](../functions/match-event-stack.md) и [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md). Используйте этот класс для сопоставления групп событий [LINKER](../event-table.md#linker).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -37,15 +37,15 @@ public:
 };
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
-Наряду с унаследованных членов из своего `LinkerGroup` класса базы [EventGroup\<Linker,\> ](event-group.md) класс содержит следующие члены:
+Наряду с наследуемыми элементами от базового класса [EventGroup\<Linker\>](event-group.md) класс `LinkerGroup` включает следующие элементы:
 
 ### <a name="constructors"></a>Конструкторы
 
-[ЛинкерГрупп](#linker-group)
+[LinkerGroup](#linker-group)
 
-## <a name="linkergroup"></a><a name="linker-group"></a>ЛинкерГрупп
+## <a name="linkergroup"></a><a name="linker-group"></a> LinkerGroup
 
 ```cpp
 LinkerGroup(std::deque<Linker>&& group);
@@ -53,7 +53,7 @@ LinkerGroup(std::deque<Linker>&& group);
 
 ### <a name="parameters"></a>Параметры
 
-*Группы*\
-Группа мероприятий [LINKER.](../event-table.md#linker)
+*group*\
+Группа событий [LINKER](../event-table.md#linker).
 
 ::: moniker-end

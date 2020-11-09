@@ -1,6 +1,6 @@
 ---
-title: Релог
-description: Ссылка на функцию SDK Relog в сборке СЗ.
+title: Relog
+description: Справочник по классу Relog пакета SDK Аналитики сборок C++.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 28b290d2bf2880ce2f534fa1cd91750890e2fead
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: 628f60042a10cf80c0b077d28387ed75466e925b
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323780"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922756"
 ---
-# <a name="relog"></a>Релог
+# <a name="relog"></a>Relog
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
+Пакет SDK Аналитики сборок С++ совместим с Visual Studio 2017 и более поздних версий. Чтобы увидеть документацию для этих версий, установите в данной статье селектор **Версия** Visual Studio в Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части оглавления на этой странице.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-Функция `Relog` используется для чтения событий MSVC из трассировки событий для отслеживания Windows (ETW) и записывания их в новый, измененный след ETW.
+Функция `Relog` используется для чтения событий MSVC из трассировки событий Windows (ETW) и записи этих событий в новую, измененную трассировку ETW.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -55,38 +55,38 @@ RESULT_CODE Relog(
 
 ### <a name="parameters"></a>Параметры
 
-*TAnalyzerGroupЧлены*\
-Этот параметр всегда выводится.
+*TAnalyzerGroupMembers*\
+Этот параметр выводится во всех случаях.
 
-*TReloggerGroupЧлены*\
-Этот параметр всегда выводится.
+*TReloggerGroupMembers*\
+Этот параметр выводится во всех случаях.
 
-*вхотливыйLogFile*\
-Входный след ETW, из которого вы хотите прочитать события.
+*inputLogFile*\
+Входная трассировка ETW, из которой нужно считать события.
 
-*выходНопок*\
-Файл, в котором можно написать новые события.
+*outputLogFile*\
+Файл, в который записываются новые события.
 
 *numberOfAnalysisPasses*\
-Количество анализов проходит для выполнения на входе следа. След проходит через предоставленную группу анализаторов один раз за анализ.
+Количество проходов анализа для выполнения во входной трассировке. Трассировка передается через предоставленную группу анализатора один раз для каждого выполнения анализа.
 
-*системаСобытияУтУдержаниеФлаги*\
-Битовая маска, которая определяет, какая система ETW событий держать в перелогированных след. Для получения дополнительной информации см [RELOG_RETENTION_SYSTEM_EVENT_FLAGS.](../other-types/relog-retention-system-event-flags-constants.md)
+*systemEventsRetentionFlags*\
+Битовая маска, указывающая, какие системные события трассировки событий Windows следует сохранить в повторно записанных трассировках. Дополнительные сведения см. в статье [RELOG_RETENTION_SYSTEM_EVENT_FLAGS](../other-types/relog-retention-system-event-flags-constants.md).
 
-*анализаторГруппа*\
-Группа анализаторов, используемая для фазы анализа сеанса перезаписи. Позвоните [MakeStaticAnalyzerGroup,](make-static-analyzer-group.md) чтобы создать группу анализаторов. Чтобы использовать группу динамического анализатора, полученную от [MakeDynamicAnalyzerGroup,](make-dynamic-analyzer-group.md)сначала инкапсулируют `MakeStaticAnalyzerGroup`его внутри группы статического анализатора, передав его адрес .
+*analyzerGroup*\
+Группа анализатора, используемая для анализа сеанса повторной записи. Вызовите [MakeStaticAnalyzerGroup](make-static-analyzer-group.md), чтобы создать группу анализатора. Чтобы использовать группу динамического анализатора, полученную из [MakeDynamicAnalyzerGroup](make-dynamic-analyzer-group.md), сначала необходимо инкапсулировать ее в статическую группу анализатора, передав ее адрес в `MakeStaticAnalyzerGroup`.
 
 *reloggerGroup*\
-Группа перелогов, которая переобораживает события в файл трассировки, указанный в *outputLogFile.* Позвоните [MakeStaticReloggerGroup,](make-static-relogger-group.md) чтобы создать группу перелогов. Чтобы использовать динамическую группу релоггеров, полученную от [MakeDynamicReloggerGroup,](make-dynamic-relogger-group.md)сначала инкапсулируйте его `MakeStaticReloggerGroup`внутри статической группы релоггеров, передав свой адрес.
+Группа перезаписи, которая выполняет перезапись событий в файл трассировки, указанный в *outputLogFile*. Вызовите [MakeStaticReloggerGroup](make-static-relogger-group.md), чтобы создать группу перезаписи. Чтобы использовать группу динамической перезаписи, полученную из [MakeDynamicReloggerGroup](make-dynamic-relogger-group.md), сначала нужно инкапсулировать ее в группу динамической перезаписи, передав ее адрес в `MakeStaticReloggerGroup`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Код результата из [RESULT_CODE](../other-types/result-code-enum.md) enum.
+Код результата из перечисления [RESULT_CODE](../other-types/result-code-enum.md).
 
 ### <a name="remark"></a>Комментарий
 
-Вхотовый след проходит через номер группы *анализатораOfAnalysisPasses* раз. Аналогичной опции для перезаписи пропусков нет. След передается корыта relogger группы только один раз, после того, как все анализ проходит завершены.
+Входная трассировка передается через группу анализатора значения времени *numberOfAnalysisPasses* раз. Для проходов перезаписи не существует аналогичного параметра. Трассировка передается через группу перезаписи только один раз после завершения всех этапов анализа.
 
-Повторная запись системных событий, таких как образцы процессора из класса relogger, не поддерживается. Используйте параметр *systemEventsRetentionFlags,* чтобы решить, какие события системы следует держать в выходном следе.
+Повторная запись системных событий, таких как примеры ЦП, из класса перезаписи не поддерживается. Используйте параметр *systemEventsRetentionFlags* , чтобы решить, какие системные события следует хранить в выходной трассировке.
 
 ::: moniker-end

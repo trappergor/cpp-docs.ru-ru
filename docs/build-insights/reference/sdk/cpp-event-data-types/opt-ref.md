@@ -1,6 +1,6 @@
 ---
 title: Класс OptRef
-description: Ссылка на исследования в отношении СДК OptRef.
+description: Справочник по классу OptRef пакета SDK для C++ Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: dca8cc62eed4b7136f88ed5ba6a1a168b2de56c3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: 72d3867456ecc2bb643239ddb0186668e43f69ef
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324448"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920519"
 ---
 # <a name="optref-class"></a>Класс OptRef
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
+Пакет SDK Аналитики сборок С++ совместим с Visual Studio 2017 и более поздних версий. Чтобы увидеть документацию для этих версий, установите в данной статье селектор **Версия** Visual Studio в Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части оглавления на этой странице.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-Класс `OptRef` используется с функциями [MatchEvent,](../functions/match-event.md) [MatchEventInMemberFunction,](../functions/match-event-in-member-function.md) [MatchEventStack](../functions/match-event-stack.md)и [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Используйте его для соответствия [OPT_REF](../event-table.md#opt-ref) событию.
+Класс `OptRef` используется с функциями [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md) и [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md). Используйте этот класс для сопоставления события [OPT_REF](../event-table.md#opt-ref).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -39,13 +39,13 @@ public:
 
 ## <a name="members"></a>Участники
 
-Наряду с унаследованные члены `OptRef` из своего базового класса [деятельности,](activity.md) класс содержит следующие члены:
+Наряду с наследуемыми элементами от базового класса [Activity](activity.md) класс `OptRef` также включает следующие элементы:
 
 ### <a name="constructors"></a>Конструкторы
 
 [OptRef](#opt-ref)
 
-## <a name="optref"></a><a name="opt-ref"></a>OptRef
+## <a name="optref"></a><a name="opt-ref"></a> OptRef
 
 ```cpp
 OptRef(const RawEvent& event);
@@ -53,7 +53,7 @@ OptRef(const RawEvent& event);
 
 ### <a name="parameters"></a>Параметры
 
-*Событие*\
-[Событие OPT_REF.](../event-table.md#opt-ref)
+*event*\
+Событие [OPT_REF](../event-table.md#opt-ref).
 
 ::: moniker-end

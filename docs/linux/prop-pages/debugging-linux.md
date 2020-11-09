@@ -2,22 +2,22 @@
 title: Свойства отладчика (Linux C++) | Документы Майкрософт
 ms.date: 06/07/2019
 ms.assetid: 0c1c0fcc-a49b-451c-a5cb-ce9711fac064
-ms.openlocfilehash: bebee7a2b3bcfd880a538acae35c9616b3b1bd46
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2b55a0db001c98be72ac88c17c62b21e98ec4888
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "79446176"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924523"
 ---
 # <a name="c-debugging-properties-linux-c"></a>Свойства отладки C++ (Linux C++)
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 Поддержка Linux реализована в Visual Studio версии 2017 и выше.
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 | Свойство. | Описание | Варианты |
 |--|--|--|

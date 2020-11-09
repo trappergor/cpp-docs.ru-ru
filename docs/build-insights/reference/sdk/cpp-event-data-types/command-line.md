@@ -1,6 +1,6 @@
 ---
 title: Класс CommandLine
-description: Ссылка на класс SDK CommandLine по сборке.
+description: Справочник по классу CommandLine пакета SDK для C++ Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: b35d688acf06579cc27f2fee053ef58032e204e0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: 5214f2970329510088184dc3092db66607f4d67e
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325050"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923342"
 ---
 # <a name="commandline-class"></a>Класс CommandLine
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
+Пакет SDK Аналитики сборок С++ совместим с Visual Studio 2017 и более поздних версий. Чтобы увидеть документацию для этих версий, установите в данной статье селектор **Версия** Visual Studio в Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части оглавления на этой странице.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-Класс `CommandLine` используется с функциями [MatchEvent,](../functions/match-event.md) [MatchEventInMemberFunction,](../functions/match-event-in-member-function.md) [MatchEventStack](../functions/match-event-stack.md)и [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Используйте его для сопоставления [COMMAND_LINE](../event-table.md#command-line) события.
+Класс `CommandLine` используется с функциями [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md) и [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md). Используйте этот класс для сопоставления события [COMMAND_LINE](../event-table.md#command-line).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -39,19 +39,19 @@ public:
 };
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
-Наряду с унаследованных членов из `CommandLine` своего базового класса [SimpleEvent,](simple-event.md) класс содержит следующие члены:
+Наряду с наследуемыми элементами от базового класса [SimpleEvent](simple-event.md) класс `CommandLine` включает следующие элементы:
 
 ### <a name="constructors"></a>Конструкторы
 
-[Командный пункт](#command-line)
+[CommandLine](#command-line)
 
 ### <a name="functions"></a>Функции
 
 [Значение](#value)
 
-## <a name="commandline"></a><a name="command-line"></a>Командный пункт
+## <a name="commandline"></a><a name="command-line"></a> CommandLine
 
 ```cpp
 CommandLine(const RawEvent& event);
@@ -59,10 +59,10 @@ CommandLine(const RawEvent& event);
 
 ### <a name="parameters"></a>Параметры
 
-*Событие*\
-Событие [COMMAND_LINE.](../event-table.md#command-line)
+*event*\
+Событие [COMMAND_LINE](../event-table.md#command-line).
 
-## <a name="value"></a><a name="value"></a> Значение
+## <a name="value"></a>Значение <a name="value"></a>
 
 ```cpp
 const wchar_t Value() const;
@@ -70,6 +70,6 @@ const wchar_t Value() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Строка, содержащая командную строку. Значение включает аргументы, которые были получены из файла ответа \_и\_из переменных среды, таких как CL, CL, Link и \_LINK\_.
+Строка, содержащая командную строку. Значение включает аргументы, полученные из файла ответов и из переменных среды, таких как CL, \_CL\_, Link и \_LINK\_.
 
 ::: moniker-end

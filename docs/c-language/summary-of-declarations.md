@@ -1,179 +1,225 @@
 ---
 title: Общие сведения об объявлениях
-ms.date: 11/04/2016
+description: Сведения о стандартной грамматике C для объявлений, реализуемых компилятором Microsoft C/C++.
+ms.date: 10/30/2020
 ms.assetid: 53a5e9e5-1a33-40b5-9dea-7f669b479329
-ms.openlocfilehash: 894ed5e39ac8019048b6730d5e3b34de22f3a0c7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 691424cc6f4efa59411397a13850d2057d4fcc50
+ms.sourcegitcommit: 4abc6c4c9694f91685cfd77940987e29a51e3143
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220851"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93238464"
 ---
 # <a name="summary-of-declarations"></a>Общие сведения об объявлениях
 
-*`declaration`* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`declaration-specifiers`* *`attribute-seq`* <sub>необ.</sub> *`init-declarator-list`* <sub>необ.</sub> **`;`**
+*`declaration`* :\
+&emsp; *`declaration-specifiers`* *`attribute-seq`* <sub>необ.</sub><sup>1</sup> *`init-declarator-list`* <sub>необ.</sub> **`;`** \
+&emsp;*`static_assert-declaration`*
 
-*`declaration-specifiers`* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`storage-class-specifier`* *`declaration-specifiers`* <sub>необ.</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`type-specifier`* *`declaration-specifiers`* <sub>необ.</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`type-qualifier`* *`declaration-specifiers`* <sub>необ.</sub>
+*`declaration-specifiers`* :\
+&emsp; *`storage-class-specifier`* *`declaration-specifiers`* <sub>необ.</sub>\ 
+&emsp; *`type-specifier`* *`declaration-specifiers`* <sub>необ.</sub>\ 
+&emsp; *`type-qualifier`* *`declaration-specifiers`* <sub>необ.</sub>\ 
+&emsp; *`function-specifier`* *`declaration-specifiers`* <sub>необ.</sub>\ 
+&emsp; *`alignment-specifier`* *`declaration-specifiers`* <sub>необ.</sub>
 
-*`attribute-seq`* :&nbsp;&nbsp;&nbsp;&nbsp;/\* Только для систем Майкрософт \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`attribute`* *`attribute-seq`* <sub>необ.</sub>
+*`attribute-seq`* <sup>1</sup>:\
+&emsp; *`attribute`* <sup>1</sup> *`attribute-seq`* <sub>необ.</sub><sup>1</sup>
 
-*`attribute`* : один из&nbsp;&nbsp;&nbsp;&nbsp;/\* Только для систем Майкрософт \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[`__asm`](../assembler/inline/asm.md) [`__clrcall`](../cpp/clrcall.md) [`__stdcall`](../cpp/stdcall.md) [`__based`](../cpp/based-grammar.md) [`__fastcall`](../cpp/fastcall.md) [`__thiscall`](../cpp/thiscall.md) [`__cdecl`](../cpp/cdecl.md) [`__inline`](../cpp/inline-functions-cpp.md) [`__vectorcall`](../cpp/vectorcall.md)
+*`attribute`* <sup>1, 2</sup>: один из символов\
+&emsp;**`__asm`** **`__based`** **`__cdecl`** **`__clrcall`** **`__fastcall`** **`__inline`** **`__stdcall`** **`__thiscall`** **`__vectorcall`**
 
-*`init-declarator-list`* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`init-declarator`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`init-declarator-list`*  **`,`**  *`init-declarator`*
+*`init-declarator-list`* :\
+&emsp;*`init-declarator`*\
+&emsp;*`init-declarator-list`* **`,`** *`init-declarator`*
 
-*`init-declarator`* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`declarator`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`declarator`*  **`=`**  *`initializer`*  /\* Для инициализации скалярных типов \*/
+*`init-declarator`* :\
+&emsp;*`declarator`*\
+&emsp;*`declarator`* **`=`** *`initializer`*
 
-*`storage-class-specifier`* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **`auto`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **`register`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **`static`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **`extern`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **`typedef`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **`__declspec (`** *`extended-decl-modifier-seq`* **`)`**  /\* Только для систем Майкрософт \*/
+*`storage-class-specifier`* :\
+&emsp;**`auto`**\
+&emsp;**`extern`**\
+&emsp;**`register`**\
+&emsp;**`static`**\
+&emsp;**`_Thread_local`**\
+&emsp;**`typedef`**\
+&emsp; **`__declspec`** **`(`** *`extended-decl-modifier-seq`* **`)`** <sup>1</sup>
 
-*`type-specifier`* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **`void`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **`char`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **`short`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **`int`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **`__int8`**  /\* Только для систем Майкрософт \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **`__int16`**  /\* Только для систем Майкрософт \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **`__int32`**  /\* Только для систем Майкрософт \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **`__int64`**  /\* Только для систем Майкрософт \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **`long`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **`float`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **`double`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **`signed`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **`unsigned`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`struct-or-union-specifier`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`enum-specifier`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`typedef-name`*
+*`extended-decl-modifier-seq`* <sup>1</sup>:\
+&emsp; *`extended-decl-modifier`* <sub>необ.</sub> \
+&emsp;*`extended-decl-modifier-seq`* *`extended-decl-modifier`*
 
-*`type-qualifier`* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **`const`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **`volatile`**
+*`extended-decl-modifier`* <sup>1</sup>:\
+&emsp;**`thread`**\
+&emsp;**`naked`**\
+&emsp;**`dllimport`**\
+&emsp;**`dllexport`**
 
-*`declarator`* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`pointer`* <sub>необ.</sub> *`direct-declarator`*
+*`type-specifier`* :\
+&emsp;**`void`**\
+&emsp;**`char`**\
+&emsp;**`short`**\
+&emsp;**`int`**\
+&emsp; **`__int8`** <sup>1</sup>\
+&emsp; **`__int16`** <sup>1</sup>\
+&emsp; **`__int32`** <sup>1</sup>\
+&emsp; **`__int64`** <sup>1</sup>\
+&emsp;**`long`**\
+&emsp;**`float`**\
+&emsp;**`double`**\
+&emsp;**`signed`**\
+&emsp;**`unsigned`**\
+&emsp;**`_Bool`**\
+&emsp;**`_Complex`**\
+&emsp;*`atomic-type-specifier`*\
+&emsp;*`struct-or-union-specifier`*\
+&emsp;*`enum-specifier`*\
+&emsp;*`typedef-name`*
 
-*`direct-declarator`* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`identifier`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **`(`** *`declarator`* **`)`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`direct-declarator`* **`[`** *`constant-expression`* <sub>необ.</sub> **`]`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`direct-declarator`* **`(`** *`parameter-type-list`* **`)`**  /\* Оператор объявления нового стиля \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`direct-declarator`* **`(`** *`identifier-list`* <sub>необ.</sub> **`)`**  /\* Оператор объявления старого стиля \*/
+*`struct-or-union-specifier`* :\
+&emsp; *`struct-or-union`* *`identifier`* <sub>необ.</sub> **`{`** *`struct-declaration-list`* **`}`** \
+&emsp;*`struct-or-union`* *`identifier`*
 
-*`pointer`* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>`*`</strong> *`type-qualifier-list`* <sub>необ.</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>`*`</strong> *`type-qualifier-list`* <sub>необ.</sub> *`pointer`*
+*`struct-or-union`* :\
+&emsp;**`struct`**\
+&emsp;**`union`**
 
-*`parameter-type-list`* :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/\* Список параметров \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`parameter-list`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`parameter-list`* **`, ...`**
+*`struct-declaration-list`* :\
+&emsp;*`struct-declaration`*\
+&emsp;*`struct-declaration-list`* *`struct-declaration`*
 
-*`parameter-list`* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`parameter-declaration`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`parameter-list`* **`,`** *`parameter-declaration`*
+*`struct-declaration`* :\
+&emsp; *`specifier-qualifier-list`* *`struct-declarator-list`* <sub>необ.</sub> **`;`**\ 
+&emsp;*`static_assert-declaration`*
 
-*`type-qualifier-list`* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`type-qualifier`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`type-qualifier-list`* *`type-qualifier`*
+*`specifier-qualifier-list`* :\
+&emsp; *`type-specifier`* *`specifier-qualifier-list`* <sub>необ.</sub>\ 
+&emsp; *`type-qualifier`* *`specifier-qualifier-list`* <sub>необ.</sub>\ 
+&emsp; *`alignment-specifier`* *`specifier-qualifier-list`* <sub>необ.</sub>
 
-*`enum-specifier`* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **`enum`** *`identifier`* <sub>необ.</sub> **`{`** *`enumerator-list`* **`}`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **`enum`** *`identifier`*
+*`struct-declarator-list`* :\
+&emsp;*`struct-declarator`*\
+&emsp;*`struct-declarator-list`* **`,`** *`struct-declarator`*
 
-*`enumerator-list`* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`enumerator`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`enumerator-list`* **`,`** *`enumerator`*
+*`struct-declarator`* :\
+&emsp;*`declarator`*\
+&emsp; *`declarator`* <sub>необ.</sub> **`:`** *`constant-expression`*
 
-*`enumerator`* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`enumeration-constant`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`enumeration-constant`* **`=`** *`constant-expression`*
+*`enum-specifier`* :\
+&emsp; **`enum`** *`identifier`* <sub>необ.</sub> **`{`** *`enumerator-list`* **`}`** \
+&emsp; **`enum`** *`identifier`* <sub>необ.</sub> **`{`** *`enumerator-list`* **`,`** **`}`** \
+&emsp;**`enum`** *`identifier`*
 
-*`enumeration-constant`* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`identifier`*
+*`enumerator-list`* :\
+&emsp;*`enumerator`*\
+&emsp;*`enumerator-list`* **`,`** *`enumerator`*
 
-*`struct-or-union-specifier`* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`struct-or-union`* *`identifier`* <sub>необ.</sub> **`{`** *`struct-declaration-list`* **`}`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`struct-or-union`* *`identifier`*
+*`enumerator`* :\
+&emsp;*`enumeration-constant`*\
+&emsp;*`enumeration-constant`* **`=`** *`constant-expression`*
 
-*`struct-or-union`* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **`struct`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **`union`**
+*`atomic-type-specifier`* :\
+&emsp;**`_Atomic`** **`(`** *`type-name`* **`)`**
 
-*`struct-declaration-list`* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`struct-declaration`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`struct-declaration-list`* *`struct-declaration`*
+*`type-qualifier`* :\
+&emsp;**`const`**\
+&emsp;**`restrict`**\
+&emsp;**`volatile`**\
+&emsp;**`_Atomic`**
 
-*`struct-declaration`* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`specifier-qualifier-list`* *`struct-declarator-list`* **`;`**
+*`function-specifier`* :\
+&emsp;**`inline`**\
+&emsp;**`_Noreturn`**
 
-*`specifier-qualifier-list`* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`type-specifier`* *`specifier-qualifier-list`* <sub>необ.</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`type-qualifier`* *`specifier-qualifier-list`* <sub>необ.</sub>
+*`alignment-specifier`* :\
+&emsp;**`_Alignas`** **`(`** *`type-name`* **`)`**\
+&emsp;**`_Alignas`** **`(`** *`constant-expression`* **`)`**
 
-*`struct-declarator-list`* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`struct-declarator`* *`struct-declarator-list`* **`,`** *`struct-declarator`*
+*`declarator`* :\
+&emsp; *`pointer`* <sub>необ.</sub> *`direct-declarator`*
 
-*`struct-declarator`* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`declarator`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`type-specifier`* *`declarator`* <sub>необ.</sub> **`:`** *`constant-expression`*
+*`direct-declarator`* :\
+&emsp;*`identifier`*\
+&emsp;**`(`** *`declarator`* **`)`**\
+&emsp; *`direct-declarator`* **`[`** *`type-qualifier-list`* <sub>необ.</sub> *`assignment-expression`* <sub>необ.</sub> **`]`** \
+&emsp; *`direct-declarator`* **`[`** **`static`** *`type-qualifier-list`* <sub>необ.</sub> *`assignment-expression`* **`]`** \
+&emsp;*`direct-declarator`* **`[`** *`type-qualifier-list`* **`static`** *`assignment-expression`* **`]`**\
+&emsp; *`direct-declarator`* **`[`** *`type-qualifier-list`* <sub>необ.</sub> **`*`** **`]`** \
+&emsp;*`direct-declarator`* **`(`** *`parameter-type-list`* **`)`**\
+&emsp; *`direct-declarator`* **`(`** *`identifier-list`* <sub>необ.</sub> **`)`** <sup>3</sup>
 
-*`parameter-declaration`* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`declaration-specifiers`* *`declarator`*  /\* Именованный оператор объявления \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`declaration-specifiers`* *`abstract-declarator`* <sub>необ.</sub> /\* Анонимный оператор объявления \*/
+*`pointer`* :\
+&emsp; **`*`** *`type-qualifier-list`* <sub>необ.</sub>\ 
+&emsp; **`*`** *`type-qualifier-list`* <sub>необ.</sub> *`pointer`*
 
-*`identifier-list`* : /\* Для оператора объявления старого стиля \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`identifier`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`identifier-list`* **`,`** *`identifier`*
+*`type-qualifier-list`* :\
+&emsp;*`type-qualifier`*\
+&emsp;*`type-qualifier-list`* *`type-qualifier`*
 
-*`abstract-declarator`* : /\* Используется с анонимными операторами объявления \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`pointer`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`pointer`* <sub>необ.</sub> *`direct-abstract-declarator`*
+*`parameter-type-list`* :\
+&emsp;*`parameter-list`*\
+&emsp;*`parameter-list`* **`,`** **`...`**
 
-*`direct-abstract-declarator`* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **`(`** *`abstract-declarator`* **`)`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`direct-abstract-declarator`* <sub>необ.</sub> **`[`** *`constant-expression`* <sub>необ.</sub> **`]`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`direct-abstract-declarator`* <sub>необ.</sub> **`(`** *`parameter-type-list`* <sub>необ.</sub> **`)`**
+*`parameter-list`* :\
+&emsp;*`parameter-declaration`*\
+&emsp;*`parameter-list`* **`,`** *`parameter-declaration`*
 
-*`initializer`* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`assignment-expression`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **`{`** *`initializer-list`* **`}`**  /\* Для агрегатной инициализации \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **`{`** *`initializer-list`* **`, }`**
+*`parameter-declaration`* :\
+&emsp;*`declaration-specifiers`* *`declarator`*\
+&emsp; *`declaration-specifiers`* *`abstract-declarator`* <sub>необ.</sub>
 
-*`initializer-list`* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`initializer`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`initializer-list`* **`,`** *`initializer`*
+*`identifier-list`* : /\* Для оператора объявления старого стиля \*/\
+&emsp;*`identifier`*\
+&emsp;*`identifier-list`* **`,`** *`identifier`*
 
-*`type-name`* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`specifier-qualifier-list`* *`abstract-declarator`* <sub>необ.</sub>
+*`type-name`* :\
+&emsp; *`specifier-qualifier-list`* *`abstract-declarator`* <sub>необ.</sub>
 
-*`typedef-name`* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`identifier`*
+*`abstract-declarator`* :\
+&emsp;*`pointer`*\
+&emsp; *`pointer`* <sub>необ.</sub> *`direct-abstract-declarator`*
 
-*`extended-decl-modifier-seq`* :&nbsp;&nbsp;&nbsp;&nbsp;/\* Только для систем Майкрософт \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`extended-decl-modifier`* <sub>необ.</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`extended-decl-modifier-seq`* *`extended-decl-modifier`*
+*`direct-abstract-declarator`* :\
+&emsp;**`(`** *`abstract-declarator`* **`)`**\
+&emsp; *`direct-abstract-declarator`* **`[`** *`type-qualifier-list`* <sub>необ.</sub> *`assignment-expression`* <sub>необ.</sub> **`]`** \
+&emsp; *`direct-abstract-declarator`* **`[`** **`static`** *`type-qualifier-list`* <sub>необ.</sub> *`assignment-expression`* **`]`** \
+&emsp;*`direct-abstract-declarator`* **`[`** *`type-qualifier-list`* **`static`** *`assignment-expression`* **`]`**\
+&emsp; *`direct-abstract-declarator`* **`[`** *`type-qualifier-list`* <sub>необ.</sub> **`*`** **`]`** \
+&emsp; *`direct-abstract-declarator`* <sub>необ.</sub> **`(`** *`parameter-type-list`* <sub>необ.</sub> **`)`**
 
-*`extended-decl-modifier`* :&nbsp;&nbsp;&nbsp;&nbsp;/\* Только для систем Майкрософт \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **`thread`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **`naked`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **`dllimport`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **`dllexport`**
+*`typedef-name`* :\
+&emsp;*`identifier`*
 
-## <a name="see-also"></a>См. также
+*`initializer`* :\
+&emsp;*`assignment-expression`*\
+&emsp;**`{`** *`initializer-list`* **`}`**\
+&emsp;**`{`** *`initializer-list`* **`, }`**
 
-[Соглашения о вызовах](../cpp/calling-conventions.md)<br/>
-[Грамматика структуры фразы](../c-language/phrase-structure-grammar.md)<br/>
+*`initializer-list`* :\
+&emsp; *`designation`* <sub>необ.</sub> *`initializer`* \
+&emsp; *`initializer-list`* **`,`** *`designation`* <sub>необ.</sub> *`initializer`*
+
+*`designation`* :\
+&emsp;*`designator-list`* **`=`**
+
+*`designator-list`* :\
+&emsp;*`designator`*\
+&emsp;*`designator-list`* *`designator`*
+
+*`designator`* :\
+&emsp;**`[`** *`constant-expression`* **`]`**\
+&emsp;**`.`** *`identifier`*
+
+*`static_assert-declaration`* :\
+&emsp;**`_Static_assert`** **`(`** *`constant-expression`* **`,`** *`string-literal`* **`)`** **`;`**
+
+<sup>1</sup> Этот элемент грамматики используется только в системах Майкрософт.\
+<sup>2</sup> Дополнительные сведения об этих элементах см. в статьях о [`__asm`](../assembler/inline/asm.md), [`__clrcall`](../cpp/clrcall.md), [`__stdcall`](../cpp/stdcall.md), [`__based`](../cpp/based-grammar.md), [`__fastcall`](../cpp/fastcall.md), [`__thiscall`](../cpp/thiscall.md), [`__cdecl`](../cpp/cdecl.md), [`__inline`](../cpp/inline-functions-cpp.md) и [`__vectorcall`](../cpp/vectorcall.md).
+<sup>3</sup> Этот стиль устарел.
+
+## <a name="see-also"></a>См. также раздел
+
+[Соглашения о вызовах](../cpp/calling-conventions.md)\
+[Грамматика структуры фразы](./phrase-structure-grammar.md)\
 [Устаревшие соглашения о вызовах](../cpp/obsolete-calling-conventions.md)

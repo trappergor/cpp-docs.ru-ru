@@ -1,6 +1,6 @@
 ---
-title: Класс функций
-description: Ссылка на класс SDK Build Insights SDK.
+title: Класс Function
+description: Справочник по классу Function пакета SDK для C++ Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 69acbe4d6630de37120aec89a24a9f33d447009e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: 874477b9ca31095bfcf4ba3c7a6fd220dc073415
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324714"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920649"
 ---
-# <a name="function-class"></a>Класс функций
+# <a name="function-class"></a>Класс Function
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
+Пакет SDK Аналитики сборок С++ совместим с Visual Studio 2017 и более поздних версий. Чтобы увидеть документацию для этих версий, установите в данной статье селектор **Версия** Visual Studio в Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части оглавления на этой странице.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-Класс `Function` используется с функциями [MatchEvent,](../functions/match-event.md) [MatchEventInMemberFunction,](../functions/match-event-in-member-function.md) [MatchEventStack](../functions/match-event-stack.md)и [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Используйте его для соответствия событию [FUNCTION.](../event-table.md#function)
+Класс `Function` используется с функциями [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md) и [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md). Используйте этот класс для сопоставления события [FUNCTION](../event-table.md#function).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -41,17 +41,17 @@ public:
 
 ## <a name="members"></a>Участники
 
-Наряду с унаследованные члены `Function` из своего базового класса [деятельности,](activity.md) класс содержит следующие члены:
+Наряду с наследуемыми элементами от базового класса [Activity](activity.md) класс `Function` также включает следующие элементы:
 
 ### <a name="constructors"></a>Конструкторы
 
-[Функция](#function)
+[Function](#function)
 
 ### <a name="functions"></a>Функции
 
 [имя](#name);
 
-## <a name="function"></a><a name="function"></a>Функции
+## <a name="function"></a><a name="function"></a> Function
 
 ```cpp
 Function(const RawEvent& event);
@@ -59,10 +59,10 @@ Function(const RawEvent& event);
 
 ### <a name="parameters"></a>Параметры
 
-*Событие*\
-[Событие FUNCTION.](../event-table.md#function)
+*event*\
+Событие [FUNCTION](../event-table.md#function).
 
-## <a name="name"></a><a name="name"></a>Имя
+## <a name="name"></a><a name="name"></a> Name
 
 ```cpp
 const char* Name() const;
@@ -70,6 +70,6 @@ const char* Name() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Название функции, закодированное в UTF-8.
+Имя функции в кодировке UTF-8.
 
 ::: moniker-end

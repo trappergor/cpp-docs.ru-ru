@@ -1,6 +1,6 @@
 ---
 title: Класс SymbolName
-description: Ссылка на s' Build Insights SDK SymbolName.
+description: Справочник по классу SymbolName пакета SDK для C++ Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 1306fb43d6c2140a75b36c5f142532916cf26ae4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: a749d95b3812df8b1cc0cd7d2da037e98467cefc
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324356"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920480"
 ---
 # <a name="symbolname-class"></a>Класс SymbolName
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
+Пакет SDK Аналитики сборок С++ совместим с Visual Studio 2017 и более поздних версий. Чтобы увидеть документацию для этих версий, установите в данной статье селектор **Версия** Visual Studio в Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части оглавления на этой странице.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-Класс `SymbolName` используется с функциями [MatchEvent,](../functions/match-event.md) [MatchEventInMemberFunction,](../functions/match-event-in-member-function.md) [MatchEventStack](../functions/match-event-stack.md)и [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Используйте его для соответствия [SYMBOL_NAME](../event-table.md#symbol-name) событию.
+Класс `SymbolName` используется с функциями [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md) и [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md). Используйте этот класс для сопоставления события [SYMBOL_NAME](../event-table.md#symbol-name).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -40,20 +40,20 @@ public:
 };
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
-Наряду с унаследованных членов из `SymbolName` своего базового класса [SimpleEvent,](simple-event.md) класс содержит следующие члены:
+Наряду с наследуемыми элементами от базового класса [SimpleEvent](simple-event.md) класс `SymbolName` включает следующие элементы:
 
 ### <a name="constructors"></a>Конструкторы
 
-[СимволИ](#symbol-name)
+[SymbolName](#symbol-name)
 
 ### <a name="functions"></a>Функции
 
-[Имя ключа](#key)
+[Key](#key)
 [Name](#name)
 
-## <a name="key"></a><a name="key"></a>Ключ
+## <a name="key"></a><a name="key"></a> Key
 
 ```cpp
 const unsigned long long& Key() const;
@@ -61,9 +61,9 @@ const unsigned long long& Key() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Численный идентификатор для типа, представленного этим символом. Этот идентификатор уникален в компиляторе переднего прохода.
+Числовой идентификатор для типа, представленного этим символом. Этот идентификатор уникален в пределах этапа внешнего интерфейса компилятора.
 
-## <a name="name"></a><a name="name"></a>Имя
+## <a name="name"></a><a name="name"></a> Name
 
 ```cpp
 const char* Name() const;
@@ -71,9 +71,9 @@ const char* Name() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Название типа, представленного символом, закодировано в UTF-8.
+Имя типа, представленного символом в кодировке UTF-8.
 
-## <a name="symbolname"></a><a name="symbol-name"></a>СимволИ
+## <a name="symbolname"></a><a name="symbol-name"></a> SymbolName
 
 ```cpp
 SymbolName(const RawEvent& event);
@@ -81,7 +81,7 @@ SymbolName(const RawEvent& event);
 
 ### <a name="parameters"></a>Параметры
 
-*Событие*\
-[Событие SYMBOL_NAME.](../event-table.md#symbol-name)
+*event*\
+Событие [SYMBOL_NAME](../event-table.md#symbol-name).
 
 ::: moniker-end

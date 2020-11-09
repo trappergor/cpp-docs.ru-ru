@@ -1,6 +1,6 @@
 ---
 title: Класс FrontEndPass
-description: Ссылка на класс SDK FrontEndPass.
+description: Справочник по классу FrontEndPass пакета SDK для C++ Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 137f553f1e495b7658ae89e69a48cec6b1988a81
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: c2959b1b80163819287b1907c9d25ca75aa5bbc2
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324725"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923210"
 ---
 # <a name="frontendpass-class"></a>Класс FrontEndPass
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
+Пакет SDK Аналитики сборок С++ совместим с Visual Studio 2017 и более поздних версий. Чтобы увидеть документацию для этих версий, установите в данной статье селектор **Версия** Visual Studio в Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части оглавления на этой странице.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-Класс `FrontEndPass` используется с функциями [MatchEvent,](../functions/match-event.md) [MatchEventInMemberFunction,](../functions/match-event-in-member-function.md) [MatchEventStack](../functions/match-event-stack.md)и [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Используйте его для соответствия [FRONT_END_PASS](../event-table.md#front-end-pass) событию.
+Класс `FrontEndPass` используется с функциями [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md) и [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md). Используйте этот класс для сопоставления события [FRONT_END_PASS](../event-table.md#front-end-pass).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -37,15 +37,15 @@ public:
 };
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
-Наряду с унаследованных членов из `FrontEndPass` своего базового класса [CompilerPass,](compiler-pass.md) класс содержит следующие члены:
+Наряду с наследуемыми элементами от базового класса [CompilerPass](compiler-pass.md) класс `FrontEndPass` включает следующие элементы:
 
 ### <a name="constructors"></a>Конструкторы
 
 [FrontEndPass](#front-end-pass)
 
-## <a name="frontendpass"></a><a name="front-end-pass"></a>FrontEndPass
+## <a name="frontendpass"></a><a name="front-end-pass"></a> FrontEndPass
 
 ```cpp
 FrontEndPass(const RawEvent& event);
@@ -53,7 +53,7 @@ FrontEndPass(const RawEvent& event);
 
 ### <a name="parameters"></a>Параметры
 
-*Событие*\
-[Событие FRONT_END_PASS.](../event-table.md#front-end-pass)
+*event*\
+Событие [FRONT_END_PASS](../event-table.md#front-end-pass).
 
 ::: moniker-end

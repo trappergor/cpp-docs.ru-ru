@@ -1,6 +1,6 @@
 ---
 title: Класс TraceInfo
-description: Ссылка на класс SDK TraceInfo.
+description: Справочник по классу TraceInfo пакета SDK для C++ Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 75d53937e3999f5692dee0ecf419e0ce5f49a274
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: b772cc13981720c73238e56a561ca92144775cb4
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324174"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922926"
 ---
 # <a name="traceinfo-class"></a>Класс TraceInfo
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
+Пакет SDK Аналитики сборок С++ совместим с Visual Studio 2017 и более поздних версий. Чтобы увидеть документацию для этих версий, установите в данной статье селектор **Версия** Visual Studio в Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части оглавления на этой странице.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-Класс `TraceInfo` используется для доступа к полезным свойствам о анализируемом или перелогированном следе.
+Класс `TraceInfo` обеспечивает доступ к полезным свойствам анализируемой или повторно регистрируемой трассировки.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -47,11 +47,11 @@ public:
 
 ## <a name="remarks"></a>Remarks
 
-`StartTimestamp` Вычтите `StopTimestamp` из, чтобы получить количество клещей, прошедших в течение всего следа. Используйте `TickFrequency` для преобразования полученного значения в единицу времени. Пример преобразования тиков во время можно [EVENT_DATA.](../c-event-data-types/event-data-struct.md)
+Вычтите `StartTimestamp` из `StopTimestamp`, чтобы получить число тактов, прошедших во время всей трассировки. Используйте `TickFrequency`, чтобы преобразовать полученное значение в единицу времени. Пример преобразования тактов во время см. в статье об [EVENT_DATA](../c-event-data-types/event-data-struct.md).
 
-Если вы не хотите преобразовывать `TraceInfo` тики самостоятельно, класс предоставляет функцию члена, которая возвращает продолжительность трассировки в наносекундах. Используйте стандартную `chrono` библиотеку СЗ, чтобы преобразовать это значение в другие единицы времени.
+Если вы не хотите самостоятельно преобразовывать такты, класс `TraceInfo` предоставляет функции элементов, которые возвращают значение длительности трассировки в наносекундах. Используйте стандартную библиотеку C++ `chrono` для преобразования значения в другие единицы времени.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="constructors"></a>Конструкторы
 
@@ -59,13 +59,13 @@ public:
 
 ### <a name="functions"></a>Функции
 
-[Длительность](#duration)
+[Duration](#duration)
 [LogicalProcessorCount](#logical-processor-count)
 [StartTimestamp](#start-timestamp)
 [StopTimestamp](#stop-timestamp)
 [TickFrequency](#tick-frequency)
 
-## <a name="duration"></a><a name="duration"></a>Длительность
+## <a name="duration"></a><a name="duration"></a> Duration
 
 ```cpp
 std::chrono::nanoseconds Duration() const;
@@ -73,9 +73,9 @@ std::chrono::nanoseconds Duration() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Продолжительность активности в наносекундах.
+Длительность действия в наносекундах.
 
-## <a name="logicalprocessorcount"></a><a name="logical-processor-count"></a>ЛогическийПроцессорCount
+## <a name="logicalprocessorcount"></a><a name="logical-processor-count"></a> LogicalProcessorCount
 
 ```cpp
 const unsigned long& LogicalProcessorCount() const;
@@ -83,9 +83,9 @@ const unsigned long& LogicalProcessorCount() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Количество логических процессоров на машине, где был собран след.
+Количество логических процессоров на компьютере, на котором производилась трассировка.
 
-## <a name="starttimestamp"></a><a name="start-timestamp"></a>StartTimestamp
+## <a name="starttimestamp"></a><a name="start-timestamp"></a> StartTimestamp
 
 ```cpp
 const long long& StartTimestamp() const;
@@ -93,9 +93,9 @@ const long long& StartTimestamp() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение тика, захваченное во время запуска трассы.
+Значение тактов, захваченное в момент запуска действия.
 
-## <a name="stoptimestamp"></a><a name="stop-timestamp"></a>Стоп-таймштамп
+## <a name="stoptimestamp"></a><a name="stop-timestamp"></a> StopTimestamp
 
 ```cpp
 const long long& StopTimestamp() const;
@@ -103,9 +103,9 @@ const long long& StopTimestamp() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение тика, захваченное во время остановки трассы.
+Значение тактов, захваченное в момент остановки действия.
 
-## <a name="tickfrequency"></a><a name="tick-frequency"></a>ТикЧастота
+## <a name="tickfrequency"></a><a name="tick-frequency"></a> TickFrequency
 
 ```cpp
 const long long& TickFrequency() const;
@@ -113,9 +113,9 @@ const long long& TickFrequency() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Количество тиков в секунду для использования при оценке продолжительности, измеренной в клещах.
+Количество тактов в секунду, которое используется при оценке длительности, изменяемой в тактах.
 
-## <a name="traceinfo"></a><a name="trace-info"></a>TraceInfo
+## <a name="traceinfo"></a><a name="trace-info"></a> TraceInfo
 
 ```cpp
 TraceInfo(const TRACE_INFO_DATA& data);
@@ -123,7 +123,7 @@ TraceInfo(const TRACE_INFO_DATA& data);
 
 ### <a name="parameters"></a>Параметры
 
-*Данных*\
-Данные, содержащие информацию о следе.
+*data*\
+Данные, содержащие сведения о трассировке.
 
 ::: moniker-end

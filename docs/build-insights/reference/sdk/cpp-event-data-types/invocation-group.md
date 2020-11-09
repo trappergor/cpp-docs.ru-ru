@@ -1,6 +1,6 @@
 ---
-title: Класс Группы вызова
-description: Ссылка на класс SDK InvocationGroup.
+title: Класс InvocationGroup
+description: Справочник по классу InvocationGroup пакета SDK для C++ Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: ff5a73d5304a21c314c0fc5ce442e0ffc23b28fd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: 1a8d4786a228ab25551ee36ce22637d44dc07307
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324693"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920636"
 ---
-# <a name="invocationgroup-class"></a>Класс Группы вызова
+# <a name="invocationgroup-class"></a>Класс InvocationGroup
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
+Пакет SDK Аналитики сборок С++ совместим с Visual Studio 2017 и более поздних версий. Чтобы увидеть документацию для этих версий, установите в данной статье селектор **Версия** Visual Studio в Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части оглавления на этой странице.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-Класс `InvocationGroup` используется с функциями [MatchEventStack](../functions/match-event-stack.md) и [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Используйте его для сопоставления групп, содержащих сочетание событий [COMPILER](../event-table.md#compiler) и [LINKER.](../event-table.md#linker)
+Класс `InvocationGroup` используется с функциями [MatchEventStack](../functions/match-event-stack.md) и [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md). Используйте его для сопоставления групп, содержащих сочетание событий [COMPILER](../event-table.md#compiler) и [LINKER](../event-table.md#linker).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -37,15 +37,15 @@ public:
 };
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
-Наряду с унаследованные члены из `InvocationGroup` своего [класса EventGroup\<Вызов\> ](event-group.md) базы, класс содержит следующие члены:
+Наряду с наследуемыми элементами от базового класса [EventGroup\<Invocation\>](event-group.md) класс `InvocationGroup` включает следующие элементы:
 
 ### <a name="constructors"></a>Конструкторы
 
-[Призывгруппа](#invocation-group)
+[InvocationGroup](#invocation-group)
 
-## <a name="invocationgroup"></a><a name="invocation-group"></a>Призывгруппа
+## <a name="invocationgroup"></a><a name="invocation-group"></a> InvocationGroup
 
 ```cpp
 InvocationGroup(std::deque<Invocation>&& group);
@@ -53,7 +53,7 @@ InvocationGroup(std::deque<Invocation>&& group);
 
 ### <a name="parameters"></a>Параметры
 
-*Группы*\
-Группа, содержащая смесь мероприятий [COMPILER](../event-table.md#compiler) и [LINKER.](../event-table.md#linker)
+*group*\
+Группа, содержащая сочетание событий [COMPILER](../event-table.md#compiler) и [LINKER](../event-table.md#linker).
 
 ::: moniker-end

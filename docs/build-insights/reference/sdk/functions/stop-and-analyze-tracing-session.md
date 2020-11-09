@@ -1,6 +1,6 @@
 ---
-title: StopandAnalyzeTracingSession
-description: Ссылка на функцию «Си- Сборка» SDK StopAndAnalyzeTracingSession.
+title: StopAndAnalyzeTracingSession
+description: Справочник по функции StopAndAnalyzeTracingSession пакета SDK для C++ Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 9c9bd4a092c22dfcdfb6d463b74207ec11ee6d64
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: 81a8ce43ecedfa51874508193637969411ae52d6
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323705"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922708"
 ---
-# <a name="stopandanalyzetracingsession"></a>StopandAnalyzeTracingSession
+# <a name="stopandanalyzetracingsession"></a>StopAndAnalyzeTracingSession
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
+Пакет SDK Аналитики сборок С++ совместим с Visual Studio 2017 и более поздних версий. Чтобы увидеть документацию для этих версий, установите в данной статье селектор **Версия** Visual Studio в Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части оглавления на этой странице.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-Функция `StopAndAnalyzeTracingSession` останавливает текущий сеанс отслеживания и сохраняет полученный след во временном файле. Затем сеанс анализа немедленно начинает использовать временный файл в качестве ввода. Исполнители вызова этой функции должны иметь привилегии администратора.
+Функция `StopAndAnalyzeTracingSession` останавливает текущий сеанс трассировки и сохраняет итоговую трассировку во временном файле. Затем сразу же запускается сеанс анализа с использованием временного файла в качестве входных данных. Исполняемые файлы, вызывающие эту функцию, должны иметь привилегии администратора.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -48,19 +48,19 @@ RESULT_CODE StopAndAnalyzeTracingSession(
 ### <a name="parameters"></a>Параметры
 
 *sessionName*\
-Название сеанса отслеживания, чтобы остановить. Используйте то же имя сеанса, что и имя, которое было передано [StartTracingSession,](start-tracing-session.md) [StartTracingSessionA](start-tracing-session-a.md)или [StartTracingSessionW.](start-tracing-session-w.md)
+Имя останавливаемого сеанса трассировки. Используйте то же имя сеанса, которое было передано в [StartTracingSession](start-tracing-session.md), [StartTracingSessionA](start-tracing-session-a.md) или [StartTracingSessionW](start-tracing-session-w.md).
 
 *numberOfAnalysisPasses*\
-Количество анализов проходит для запуска на следе. След проходит через предоставленную группу анализаторов один раз за анализ.
+Количество проходов анализа для выполнения в трассировке. Трассировка передается через предоставленную группу анализатора один раз для каждого выполнения анализа.
 
-*Статистика*\
-Указатель на [TRACING_SESSION_STATISTICS](../other-types/tracing-session-statistics-struct.md) объект. `StopAndAnalyzeTracingSession`записывает статистику сбора следов на этом объекте перед возвращением.
+*statistics*\
+Указатель на объект [TRACING_SESSION_STATISTICS](../other-types/tracing-session-statistics-struct.md). `StopAndAnalyzeTracingSession` записывает статистику сбора трассировки в этот объект перед возвратом.
 
-*анализаторГруппа*\
-Группа анализаторов, используемая для анализа. Позвоните [MakeStaticAnalyzerGroup,](make-static-analyzer-group.md) чтобы создать группу анализаторов. Если вы хотите использовать динамическую группу анализаторов, полученную от [MakeDynamicAnalyzerGroup,](make-dynamic-analyzer-group.md)сначала инкапсулируйте `MakeStaticAnalyzerGroup`его внутри группы статического анализатора, передав его адрес .
+*analyzerGroup*\
+Группа анализатора, используемая для анализа. Вызовите [MakeStaticAnalyzerGroup](make-static-analyzer-group.md), чтобы создать группу анализатора. Чтобы использовать динамическую группу анализаторов, полученную из [MakeDynamicAnalyzerGroup](make-dynamic-analyzer-group.md), сначала инкапсулируйте ее в статической группе анализаторов, передав ее адрес в `MakeStaticAnalyzerGroup`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Код результата из [RESULT_CODE](../other-types/result-code-enum.md) enum.
+Код результата из перечисления [RESULT_CODE](../other-types/result-code-enum.md).
 
 ::: moniker-end

@@ -1,6 +1,6 @@
 ---
 title: Класс EventGroup
-description: Ссылка на класс SDK EventGroup по сборке.
+description: Справочник по классу EventGroup пакета SDK для C++ Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 596c18ca0e9b4d7b26c4ed5209b16871952c4af2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: 57cbc7a053132909149aee182b9560e2ee33c161
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324986"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923306"
 ---
 # <a name="eventgroup-class"></a>Класс EventGroup
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
+Пакет SDK Аналитики сборок С++ совместим с Visual Studio 2017 и более поздних версий. Чтобы увидеть документацию для этих версий, установите в данной статье селектор **Версия** Visual Studio в Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части оглавления на этой странице.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-Шаблон `EventGroup` класса является базовым классом для всех классов группового захвата.
+Шаблон класса `EventGroup` — это базовый класс для всех классов отслеживания групп.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -47,20 +47,20 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*TActivity* Тип действия, содержащийся в группе.
+*TActivity*  — это тип действия, содержащийся в группе.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="functions"></a>Функции
 
-[Назад](#back)
-[начать](#begin)
-[конец](#end)
-Фронт[оператора](#front)
-[»](#subscript-operator)
-[Размер](#size)
+[Back](#back)
+[begin](#begin)
+[end](#end)
+[Front](#front)
+[operator[]](#subscript-operator)
+[Size](#size)
 
-## <a name="back"></a><a name="back"></a>Назад
+## <a name="back"></a><a name="back"></a> Back
 
 ```cpp
 const TActivity& Back() const;
@@ -68,9 +68,9 @@ const TActivity& Back() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ссылка на последнее событие активности в группе.
+Ссылка на последнее событие действия в группе.
 
-## <a name="begin"></a><a name="begin"></a>Начать
+## <a name="begin"></a><a name="begin"></a> begin
 
 ```cpp
 std::deque<TActivity>::const_iterator begin() const;
@@ -78,9 +78,9 @@ std::deque<TActivity>::const_iterator begin() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Итератор указывает на начало группы событий активности.
+Итератор, указывающий на начало группы событий действий.
 
-## <a name="end"></a><a name="end"></a>Конец
+## <a name="end"></a><a name="end"></a> end
 
 ```cpp
 std::deque<TActivity>::const_iterator end() const;
@@ -88,9 +88,9 @@ std::deque<TActivity>::const_iterator end() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Итератор, указывающий одну позицию мимо конца группы событий активности.
+Итератор, указывающий на одну позицию после окончания группы событий действий.
 
-## <a name="front"></a><a name="front"></a>Перед
+## <a name="front"></a><a name="front"></a> Front
 
 ```cpp
 const TActivity& Front() const;
@@ -98,9 +98,9 @@ const TActivity& Front() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ссылка на первое событие активности в группе.
+Ссылка на первое событие действия в группе.
 
-## <a name="operator"></a><a name="subscript-operator"></a>оператор
+## <a name="operator"></a><a name="subscript-operator"></a> operator[]
 
 ```cpp
 const TActivity& operator[](size_t index) const;
@@ -108,12 +108,12 @@ const TActivity& operator[](size_t index) const;
 
 ### <a name="parameters"></a>Параметры
 
-*Индекс*\
-Индекс элемента для доступа в группе событий активности.
+*index*\
+Индекс элемента для доступа в группе событий действия.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Событие из стека событий хранится в позиции, указанной *индексом.*
+Событие из стека событий, хранящегося в позиции, которая указана в *индексе*.
 
 ## <a name="size"></a><a name="size"></a> Размер
 

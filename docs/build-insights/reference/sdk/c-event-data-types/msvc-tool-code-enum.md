@@ -1,6 +1,6 @@
 ---
-title: MSVC_TOOL_CODE enum
-description: SDK Build Insights sDK MSVC_TOOL_CODE ссылки.
+title: Перечисление MSVC_TOOL_CODE
+description: Справочник по перечислению MSVC_TOOL_CODE пакета SDK для C++ Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,33 +9,33 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 96b650b5bce304ad6e487cb100f2b8f85df34eb9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: 4f539401f304d5d39983ec8f97cc8c99b19399d9
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325455"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920961"
 ---
-# <a name="msvc_tool_code-enum"></a>MSVC_TOOL_CODE enum
+# <a name="msvc_tool_code-enum"></a>Перечисление MSVC_TOOL_CODE
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
+Пакет SDK Аналитики сборок С++ совместим с Visual Studio 2017 и более поздних версий. Чтобы увидеть документацию для этих версий, установите в данной статье селектор **Версия** Visual Studio в Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части оглавления на этой странице.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-В `MSVC_TOOL_CODE` enum.
+Перечисление `MSVC_TOOL_CODE`.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
-| name | Значение | Описание |
+| Имя | Значение | Описание |
 |--|--|--|
-| `MSVC_TOOL_CODE_CL` | 0 (0x0000000000) | Компилятор (cl.exe). |
-| `MSVC_TOOL_CODE_LINK` | 1 (0x00000001) | Связующее звено (link.exe). |
+| `MSVC_TOOL_CODE_CL` | 0 (0x00000000) | Компилятор (cl.exe). |
+| `MSVC_TOOL_CODE_LINK` | 1 (0x00000001) | Компоновщик (link.exe). |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
 
-Используется функциями C SDK.
+Используется в функциях пакета SDK для C.
 
 ::: moniker-end

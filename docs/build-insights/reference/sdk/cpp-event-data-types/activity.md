@@ -1,6 +1,6 @@
 ---
 title: Класс Activity
-description: Ссылка на класс активности SDK Построить СЗД.
+description: Справочник по классу Activity пакета SDK Аналитики сборок C++.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 2ea04150aec9c0b2366d97e6e4c15de557a4f47c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: ce7e4083411f1654064ca4628d10a767c7be1b7f
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325249"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923397"
 ---
 # <a name="activity-class"></a>Класс Activity
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
+Пакет SDK Аналитики сборок С++ совместим с Visual Studio 2017 и более поздних версий. Чтобы увидеть документацию для этих версий, установите в данной статье селектор **Версия** Visual Studio в Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части оглавления на этой странице.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-Класс `Activity` используется с функциями [MatchEvent,](../functions/match-event.md) [MatchEventInMemberFunction,](../functions/match-event-in-member-function.md) [MatchEventStack](../functions/match-event-stack.md)и [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Используйте его для соответствия любому событию активности. Обратитесь в [таблицу событий,](../event-table.md) чтобы просмотреть все события, которые могут быть сопоставлены с классом. `Activity`
+Класс `Activity` используется с функциями [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md) и [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md). Используйте его для сопоставления любого события действия. Чтобы просмотреть все события, которые можно сопоставить с помощью класса `Activity`, см. [таблицу событий](../event-table.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -54,13 +54,13 @@ public:
 
 ## <a name="remarks"></a>Remarks
 
-Несколько функций `Activity` участника в классе возвращают количество тиков. В качестве источника тиков используется счетчик производительности Windows. Подсчет тиков должен использоваться с частотой тика, чтобы преобразовать его в единицу времени, такую как секунды. Функция `TickFrequency` участника, доступная в базовом классе [Event,](event.md) может быть вызвана для получения частоты тика. На [странице EVENT_DATA](../c-event-data-types/event-data-struct.md#tick-conversion-example) показан пример преобразования тиков в единицу времени.
+Несколько функций членов в классе `Activity` возвращают счетчик тактов. Аналитика сборок C++ использует в качестве источника тактов счетчик производительности Windows. Счетчик тактов необходимо использовать с частотой тактов, чтобы преобразовать их в единицу времени, например в секунды. Чтобы получить частоту тактов, можно вызвать функцию члена `TickFrequency`, доступную в базовом классе [Event](event.md). На странице [EVENT_DATA](../c-event-data-types/event-data-struct.md#tick-conversion-example) показан пример преобразования тактов в единицу времени.
 
-Если вы не хотите преобразовывать тики `Activity` в единицы времени самостоятельно, класс предоставляет функции членов, которые возвращают значения времени в наносекундах. Используйте стандартную `chrono` библиотеку СЗ, чтобы преобразовать их в другие единицы времени.
+Если вы не хотите самостоятельно преобразовывать такты в единицы времени, класс `Activity` предоставляет функции членов, которые возвращают значения времени в наносекундах. Используйте стандартную библиотеку C++ `chrono` для преобразования тактов в другие единицы времени.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
-Наряду со своими членами, унаследованные от базового класса [Event,](event.md) `Activity` класс содержит следующие члены:
+Наряду с членами, унаследованными от базового класса [Event](event.md), класс `Activity` содержит следующие члены:
 
 ### <a name="constructor"></a>Конструктор
 
@@ -70,17 +70,17 @@ public:
 
 [CPUTicks](#cpu-ticks)\
 [CPUTime](#cpu-time)\
-[Длительность](#duration)\
-[ЭксклюзивныеCPUTicks](#exclusive-cpu-ticks)\
+[Duration](#duration)\
+[ExclusiveCPUTicks](#exclusive-cpu-ticks)\
 [ExclusiveCPUTime](#exclusive-cpu-time)\
 [ExclusiveDuration](#exclusive-duration)\
-[ЭксклюзивныеDurationTicks](#exclusive-duration-ticks)\
-[ExclusiveWallClockTimeОтветственность](#exclusive-wall-clock-time-responsibility)\
-[ExclusiveWallClockTimeОтветственностьTicks](#exclusive-wall-clock-time-responsibility-ticks)\
+[ExclusiveDurationTicks](#exclusive-duration-ticks)\
+[ExclusiveWallClockTimeResponsibility](#exclusive-wall-clock-time-responsibility)\
+[ExclusiveWallClockTimeResponsibilityTicks](#exclusive-wall-clock-time-responsibility-ticks)\
 [StartTimestamp](#start-timestamp)\
-[Стоп-таймштамп](#stop-timestamp)\
-[WallClockTimeОтветственность](#wall-clock-time-responsibility)\
-[WallClockTimeОтветственностьTicks](#wall-clock-time-responsibility-ticks)
+[StopTimestamp](#stop-timestamp)\
+[WallClockTimeResponsibility](#wall-clock-time-responsibility)\
+[WallClockTimeResponsibilityTicks](#wall-clock-time-responsibility-ticks)
 
 ## <a name="activity"></a><a name="activity"></a> Действие
 
@@ -90,10 +90,10 @@ Activity(const RawEvent& event);
 
 ### <a name="parameters"></a>Параметры
 
-*Событие*\
-Любое событие активности.
+*event*\
+Любое событие действия.
 
-## <a name="cputicks"></a><a name="cpu-ticks"></a>CPUTicks
+## <a name="cputicks"></a><a name="cpu-ticks"></a> CPUTicks
 
 ```cpp
 const long long& CPUTicks() const;
@@ -101,9 +101,9 @@ const long long& CPUTicks() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Количество тиков процессора, которые произошли во время этого действия. Тик процессора отличается от обычного тика. Клещи процессора учитываются только тогда, когда CPU исполняет код в действии. Тики процессора не учитываются при сном потоке, связанном с действием.
+Число тактов ЦП, произошедших во время этого действия. Такт ЦП отличается от обычного такта. Такты ЦП учитываются только тогда, когда ЦП исполняет код в этом действии. Такты ЦП не учитываются, пока связанный с действием поток находится в спящем режиме.
 
-## <a name="cputime"></a><a name="cpu-time"></a>CPUTime
+## <a name="cputime"></a><a name="cpu-time"></a> CPUTime
 
 ```cpp
 std::chrono::nanoseconds CPUTime()() const;
@@ -111,9 +111,9 @@ std::chrono::nanoseconds CPUTime()() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Время выполнения процессором кода внутри этого действия. Это значение может быть выше, чем продолжительность действия, если действия ребенка выполняются на отдельных потоках. Значение возвращается в наносекундах.
+Время, в течение которого ЦП выполнял код в рамках этого действия. Это значение может превышать длительность действия, если дочерние действия выполняются в отдельных потоках. Значение возвращается в наносекундах.
 
-## <a name="duration"></a><a name="duration"></a>Длительность
+## <a name="duration"></a><a name="duration"></a> Duration
 
 ```cpp
 std::chrono::nanoseconds Duration() const;
@@ -121,9 +121,9 @@ std::chrono::nanoseconds Duration() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Продолжительность активности в наносекундах.
+Длительность действия в наносекундах.
 
-## <a name="exclusivecputicks"></a><a name="exclusive-cpu-ticks"></a>ЭксклюзивныеCPUTicks
+## <a name="exclusivecputicks"></a><a name="exclusive-cpu-ticks"></a> ExclusiveCPUTicks
 
 ```cpp
 const long long& ExclusiveCPUTicks() const;
@@ -131,9 +131,9 @@ const long long& ExclusiveCPUTicks() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-То же [самое, что и CPUTicks,](#cpu-ticks)но не включая клещи процессора, которые произошли в детской деятельности.
+Аналогичное значению [CPUTicks](#cpu-ticks), однако не содержит такты ЦП, которые произошли в дочерних действиях.
 
-## <a name="exclusivecputime"></a><a name="exclusive-cpu-time"></a>ExclusiveCPUTime
+## <a name="exclusivecputime"></a><a name="exclusive-cpu-time"></a> ExclusiveCPUTime
 
 ```cpp
 std::chrono::nanoseconds ExclusiveCPUTime() const;
@@ -141,9 +141,9 @@ std::chrono::nanoseconds ExclusiveCPUTime() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-То же самое, что [и CPUTime](#cpu-time), за исключением того, что время действия ребенка в цОС не включено.
+Аналогичное значению [CPUTime](#cpu-time), за исключением того, что в нем не содержится время ЦП дочерних действий.
 
-## <a name="exclusiveduration"></a><a name="exclusive-duration"></a>ExclusiveDuration
+## <a name="exclusiveduration"></a><a name="exclusive-duration"></a> ExclusiveDuration
 
 ```cpp
 std::chrono::nanoseconds ExclusiveDuration() const;
@@ -151,9 +151,9 @@ std::chrono::nanoseconds ExclusiveDuration() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Продолжительность деятельности в наносекундах, не считая количества времени, затраченного на детскую деятельность.
+Длительность действия в наносекундах, за исключением времени, затраченного на выполнение дочерних действий.
 
-## <a name="exclusivedurationticks"></a><a name="exclusive-duration-ticks"></a>ЭксклюзивныеDurationTicks
+## <a name="exclusivedurationticks"></a><a name="exclusive-duration-ticks"></a> ExclusiveDurationTicks
 
 ```cpp
 const long long& ExclusiveDurationTicks() const;
@@ -161,9 +161,9 @@ const long long& ExclusiveDurationTicks() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Количество тиков, которые произошли в этом действии, исключая количество тиков, которые произошли в деятельности ребенка.
+Количество тактов, произошедших в этом действии, за исключением количества тактов, произошедших в дочерних действиях.
 
-## <a name="exclusivewallclocktimeresponsibility"></a><a name="exclusive-wall-clock-time-responsibility"></a>ExclusiveWallClockTimeОтветственность
+## <a name="exclusivewallclocktimeresponsibility"></a><a name="exclusive-wall-clock-time-responsibility"></a> ExclusiveWallClockTimeResponsibility
 
 ```cpp
 std::chrono::nanoseconds ExclusiveWallClockTimeResponsibility() const;
@@ -171,9 +171,9 @@ std::chrono::nanoseconds ExclusiveWallClockTimeResponsibility() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-То же, [что WallClockTimeResponsibility](#wall-clock-time-responsibility), но не включая настенные часы ответственность за деятельность ребенка.
+Аналогичное значению [WallClockTimeResponsibility](#wall-clock-time-responsibility), однако не содержит физическое время выполнения дочерних действий.
 
-## <a name="exclusivewallclocktimeresponsibilityticks"></a><a name="exclusive-wall-clock-time-responsibility-ticks"></a>ExclusiveWallClockTimeОтветственностьTicks
+## <a name="exclusivewallclocktimeresponsibilityticks"></a><a name="exclusive-wall-clock-time-responsibility-ticks"></a> ExclusiveWallClockTimeResponsibilityTicks
 
 ```cpp
 const long long& ExclusiveWallClockTimeResponsibilityTicks() const;
@@ -181,9 +181,9 @@ const long long& ExclusiveWallClockTimeResponsibilityTicks() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-То же, [что WallClockTimeResponsibilityTicks](#wall-clock-time-responsibility-ticks), но не включая настенные часы ответственность тикает деятельности ребенка.
+Аналогичное значению [WallClockTimeResponsibilityTicks](#wall-clock-time-responsibility-ticks), однако не содержит такты физического времени выполнения дочерних действий.
 
-## <a name="starttimestamp"></a><a name="start-timestamp"></a>StartTimestamp
+## <a name="starttimestamp"></a><a name="start-timestamp"></a> StartTimestamp
 
 ```cpp
 const long long& StartTimestamp() const;
@@ -191,9 +191,9 @@ const long long& StartTimestamp() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение тика, захваченное во время начала действия.
+Значение такта, зафиксированное во время начала действия.
 
-## <a name="stoptimestamp"></a><a name="stop-timestamp"></a>Стоп-таймштамп
+## <a name="stoptimestamp"></a><a name="stop-timestamp"></a> StopTimestamp
 
 ```cpp
 const long long& StopTimestamp() const;
@@ -201,9 +201,9 @@ const long long& StopTimestamp() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение тика, захваченное во время остановки действия.
+Значение такта, зафиксированное во время остановки действия.
 
-## <a name="wallclocktimeresponsibility"></a><a name="wall-clock-time-responsibility"></a>WallClockTimeОтветственность
+## <a name="wallclocktimeresponsibility"></a><a name="wall-clock-time-responsibility"></a> WallClockTimeResponsibility
 
 ```cpp
 std::chrono::nanoseconds WallClockTimeResponsibility() const;
@@ -211,9 +211,9 @@ std::chrono::nanoseconds WallClockTimeResponsibility() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Настенные часы ответственность за эту деятельность, в наносекундах. Для получения дополнительной информации о том, что настенные часы время ответственность означает, см [WallClockTimeResponsibilityTicks](#wall-clock-time-responsibility-ticks).
+Физическое время выполнения для этой операции в наносекундах. Дополнительные сведения о том, что означает физическое время выполнения, см. в разделе [WallClockTimeResponsibilityTicks](#wall-clock-time-responsibility-ticks).
 
-## <a name="wallclocktimeresponsibilityticks"></a><a name="wall-clock-time-responsibility-ticks"></a>WallClockTimeОтветственностьTicks
+## <a name="wallclocktimeresponsibilityticks"></a><a name="wall-clock-time-responsibility-ticks"></a> WallClockTimeResponsibilityTicks
 
 ```cpp
 const long long& WallClockTimeResponsibilityTicks() const;
@@ -221,6 +221,6 @@ const long long& WallClockTimeResponsibilityTicks() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Подсчет тиков, представляющий вклад этой деятельности в общее время настенных часов. Настенные часы время ответственность тик отличается от обычного тика. Ответственность за время стены учитывает параллелизм между действиями. Два параллельных действия могут иметь продолжительность 50 тиков, и то же время начала и остановки. В этом случае обоим назначена ответственность за время настенных часов в размере 25 тиков.
+Счетчик тактов, который представляет вклад этого действия в общее физическое время выполнения. Такт реального времени выполнения часах отличается от обычного такта. В тактах реального времени выполнения учитывается параллелизм при выполнении действий. Два действия, которые выполняются параллельно, могут иметь длительность 50 тактов, а также идентичное время начала и завершения. В этом случае обоим процессам будет присвоено значение 25 тактов физического времени.
 
 ::: moniker-end

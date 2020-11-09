@@ -1,6 +1,6 @@
 ---
-title: ИнжектСобытие
-description: Ссылка на функцию SDK InjectEvent.
+title: InjectEvent
+description: Справочник по функции InjectEvent пакета SDK для Аналитики сборок C++.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: c82aad5923eff60e5c72ceccaa39aa136f942665
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: b4d85f17a6d553d9dffa727824e6d4de94518645
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324035"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922840"
 ---
-# <a name="injectevent"></a>ИнжектСобытие
+# <a name="injectevent"></a>InjectEvent
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
+Пакет SDK Аналитики сборок С++ совместим с Visual Studio 2017 и более поздних версий. Чтобы увидеть документацию для этих версий, установите в данной статье селектор **Версия** Visual Studio в Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части оглавления на этой странице.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-Функция `InjectEvent` вызывается в перелогере, реализуя интерфейс [IRelogger.](../other-types/irelogger-class.md) Он используется для записи события Отслеживания для Windows (ETW) событие в файле вывода следа сеанса relogging.
+Функция `InjectEvent` вызывается средством перезаписи при реализации интерфейса [IRelogger](../other-types/irelogger-class.md). Она используется для записи события трассировки событий Windows (ETW) в выходном файле трассировки сеанса перезаписи.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -44,35 +44,35 @@ void InjectEvent(
 
 ### <a name="parameters"></a>Параметры
 
-*relogСессия*\
-Указатель на сеанс перезаписи. Сеанс перезаписи предоставляется перелогерам, реализующим `IRelogger` интерфейс. Для получения дополнительной [IRelogger](../other-types/irelogger-class.md)информации см.
+*relogSession*\
+Указатель на сеанс перезаписи. Сеанс перезаписи предоставляется средствам перезаписи, которые реализуют интерфейс `IRelogger`. Дополнительные сведения см. в разделе [IRelogger](../other-types/irelogger-class.md).
 
 *providerId*\
-Отслеживание событий для поставщика УСЛУГ Windows (ETW), в соответствии с которым событие ETW перерегистрируется.
+GUID поставщика трассировки событий Windows (ETW), под которым событие ETW проходит перезапись.
 
 *eventDescriptor*\
-Дескриптор события ETW для перезаписи события ETW.
+Дескриптор события трассировки событий Windows для события ETW, проходящего перезапись.
 
 *processId*\
-Идентификатор процесса (PID) для перезаписи события ETW.
+Идентификатор процесса события трассировки событий Windows, проходящего перезапись.
 
 *threadId*\
-Идентификатор потока (TID) для перезаписи события ETW.
+Идентификатор потока (TID) для события трассировки событий Windows, которое проходит перезапись.
 
-*процессорИндекс*\
-Перезагруженный индекс процессора для события ETW.
+*processorIndex*\
+Индекс процессора для события трассировки событий Windows, которое проходит перезапись.
 
-*Timestamp*\
-Отметка времени для перезавеченного события ETW.
+*timestamp*\
+Метка времени для события трассировки событий Windows, проходящего перезапись.
 
-*Данных*\
-Указатель на данные, которые должны быть включены в перезаписи события ETW.
+*data*\
+Указатель на данные, которые должны быть включены в перезаписанное событие трассировки событий Windows.
 
 *byteCount*\
-Размер данных, в байтах, указывается на *данные*.
+Размер данных в байтах, на который указывает параметр *data*.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
 
-Для получения дополнительной информации о концепциях ETW, таких как [ETW documentation](/windows/win32/etw/about-event-tracing) *провайдер GUID* и *дескриптор событий,* см. Для получения подробной информации о том, как начать сеанс перезаписи [Relog](relog.md)с помощью SDK Build Insights, см.
+Дополнительные сведения об основных понятиях трассировки событий Windows, таких как *GUID поставщика* и *дескриптор события* , см. в [документации по трассировке событий Windows](/windows/win32/etw/about-event-tracing). Дополнительные сведения о том, как запустить сеанс перезаписи с помощью пакета SDK Аналитики сборки C++, см. в статье о функции [Relog](relog.md).
 
 ::: moniker-end

@@ -1,6 +1,6 @@
 ---
 title: Класс TopDown
-description: Ссылка на исследования sDK TopDown.
+description: Справочник по классу TopDown пакета SDK для C++ Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 7c0c957fa17daaec34710debeda634192c63d1da
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: 88622461b27a6037d8d7fbb73cd324978302c941
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324213"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920428"
 ---
 # <a name="topdown-class"></a>Класс TopDown
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
+Пакет SDK Аналитики сборок С++ совместим с Visual Studio 2017 и более поздних версий. Чтобы увидеть документацию для этих версий, установите в данной статье селектор **Версия** Visual Studio в Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части оглавления на этой странице.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-Класс `TopDown` используется с функциями [MatchEvent,](../functions/match-event.md) [MatchEventInMemberFunction,](../functions/match-event-in-member-function.md) [MatchEventStack](../functions/match-event-stack.md)и [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Используйте его для соответствия [TOP_DOWN](../event-table.md#top-down) событию.
+Класс `TopDown` используется с функциями [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md) и [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md). Используйте этот класс для сопоставления события [TOP_DOWN](../event-table.md#top-down).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -39,13 +39,13 @@ public:
 
 ## <a name="members"></a>Участники
 
-Наряду с унаследованные члены `TopDown` из своего базового класса [деятельности,](activity.md) класс содержит следующие члены:
+Наряду с наследуемыми элементами от базового класса [Activity](activity.md) класс `TopDown` также включает следующие элементы:
 
 ### <a name="constructors"></a>Конструкторы
 
-[ТопДаун](#top-down)
+[TopDown](#top-down)
 
-## <a name="topdown"></a><a name="top-down"></a>ТопДаун
+## <a name="topdown"></a><a name="top-down"></a> TopDown
 
 ```cpp
 TopDown(const RawEvent& event);
@@ -53,7 +53,7 @@ TopDown(const RawEvent& event);
 
 ### <a name="parameters"></a>Параметры
 
-*Событие*\
-Событие [TOP_DOWN.](../event-table.md#top-down)
+*event*\
+Событие [TOP_DOWN](../event-table.md#top-down).
 
 ::: moniker-end

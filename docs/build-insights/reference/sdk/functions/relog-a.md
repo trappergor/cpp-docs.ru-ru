@@ -1,6 +1,6 @@
 ---
-title: Релога
-description: Ссылка на функцию «Исследования сборки SDK RelogA».
+title: RelogA
+description: Справочник по классу RelogA пакета SDK для C++ Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 5a772b1156fc69eeef39514afe401c549c3b7c38
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: 4e4882bca2241c520d4cb6ba0a8eb9c32704eaef
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323846"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922803"
 ---
-# <a name="reloga"></a>Релога
+# <a name="reloga"></a>RelogA
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
+Пакет SDK Аналитики сборок С++ совместим с Visual Studio 2017 и более поздних версий. Чтобы увидеть документацию для этих версий, установите в данной статье селектор **Версия** Visual Studio в Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части оглавления на этой странице.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-Функция `RelogA` используется для чтения событий MSVC из трассировки событий для отслеживания Windows (ETW) и записывания их в новый, измененный след ETW.
+Функция `RelogA` используется для чтения событий MSVC из трассировки событий Windows (ETW) и записи этих событий в новую, измененную трассировку ETW.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -38,17 +38,17 @@ enum RESULT_CODE RelogA(
 
 ### <a name="parameters"></a>Параметры
 
-*вхотливыйLogFile*\
-Входный след ETW, из которого вы хотите прочитать события.
+*inputLogFile*\
+Входная трассировка ETW, из которой нужно считать события.
 
-*выходНопок*\
-Файл, в котором можно написать новые события.
+*outputLogFile*\
+Файл, в который записываются новые события.
 
-*релогДескриптор*\
-Указатель на [RELOG_DESCRIPTOR](../other-types/relog-descriptor-struct.md) объект. Используйте этот объект для настройки сеанса перезаписи.
+*relogDescriptor*\
+Указатель на объект [RELOG_DESCRIPTOR](../other-types/relog-descriptor-struct.md). Используйте этот объект для настройки сеанса повторной записи в журнал.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Код результата из [RESULT_CODE](../other-types/result-code-enum.md) enum.
+Код результата из перечисления [RESULT_CODE](../other-types/result-code-enum.md).
 
 ::: moniker-end
