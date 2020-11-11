@@ -5,12 +5,12 @@ ms.date: 10/18/2020
 helpviewer_keywords:
 - warnings, by compiler version
 - cl.exe compiler, setting warning options
-ms.openlocfilehash: 5718642f6a7f714dd0a38ec34211ddc0be4e8fd2
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 1fdc4f79a7ae3cd45b66cb312a9297754acfc964
+ms.sourcegitcommit: 1f85841f403e76d041c34a7c77089dab389960a2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924696"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94518821"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Предупреждения компилятора по версии компилятора
 
@@ -45,7 +45,7 @@ ms.locfileid: "92924696"
 | Visual Studio 2019 версии 16.4 | 19.24.28314.0 |
 | Visual Studio 2019, версия 16.5 | 19.25.28610.0 |
 | Visual Studio 2019 версии 16.6 | 19.26.28805.0 |
-| Visual Studio 2019 версии 16.7 | 19.26.29112.0 |
+| Visual Studio 2019 версии 16.7 | 19.27.29112.0 |
 
 Для параметра можно указать только основной номер, основной и дополнительный номера, а также номера основной, дополнительный и номер сборки **`/Wv`** . Компилятор сообщает обо всех предупреждениях, соответствующих версиям, начинающимся с указанного числа. Он подавляет все предупреждения для версий, превышающих указанное число. Например, **`/Wv:17`** сообщает о предупреждениях, введенных в или до любой версии Visual Studio 2012, и подавляет предупреждения, появившиеся компилятором Visual Studio 2013 (версия 18) или более поздней версии. Чтобы отключить предупреждения, появившиеся в Visual Studio 2015 с обновлением 2 и более поздних версий, можно использовать **`/Wv:19.00.23506`** . Используйте **`/Wv:19.11`** , чтобы сообщать о предупреждениях, появившихся в любой версии Visual Studio, до Visual studio 2017 версии 15,5, но отключать предупреждения, появившиеся в Visual studio 2017 версии 15,5 и более поздних.
 
@@ -768,7 +768,7 @@ ms.locfileid: "92924696"
 | C4997 | `'type': coclass does not implement a COM interface or pseudo-interface` |
 | C4998 | `EXPECTATION FAILED: description(number)` |
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также раздел
 
 [Ошибки и предупреждения для компилятора C/C++ и средств сборки](../compiler-errors-1/c-cpp-build-errors.md) \
 [Предупреждения компилятора C4000-C5999](compiler-warnings-c4000-c5999.md) \
