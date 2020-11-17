@@ -1,14 +1,14 @@
 ---
 title: Улучшение соответствия C++
-ms.date: 08/04/2020
 description: Microsoft C++ в Visual Studio развивается в сторону полного соответствия стандарту языка C++20.
+ms.date: 11/10/2020
 ms.technology: cpp-language
-ms.openlocfilehash: fc88406a3d2e291d06e01c3e92261b8dfc624ced
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: ff4d75626b75c55e001601ef7005bc23be60869d
+ms.sourcegitcommit: 25f6d52eb9e5d84bd0218c46372db85572af81da
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92921429"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94448494"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Улучшения соответствия C++ в Visual Studio
 
@@ -341,7 +341,7 @@ std::equal(std::begin(a), std::end(a), std::begin(b), std::end(b));
 
 ### <a name="effect-of-defining-spaceship-operator-on--and-"></a>Результат определения оператора трехстороннего сравнения в `==` и `!=`
 
-Определение оператора трехстороннего сравнения ( **`<=>`** ) больше не будет переписывать выражения, включающие **`==`** или **`!=`** , если оператор не помечен как **`= default`** ( [P1185R2](https://wg21.link/p1185r2)). Следующий пример компилируется в Visual Studio 2019 RTW и версии 16.1, но вызывает C2678 в Visual Studio 2019 версии 16.2:
+Определение оператора трехстороннего сравнения ( **`<=>`** ) больше не будет переписывать выражения, включающие **`==`** или **`!=`** , если оператор не помечен как **`= default`** ([P1185R2](https://wg21.link/p1185r2)). Следующий пример компилируется в Visual Studio 2019 RTW и версии 16.1, но вызывает C2678 в Visual Studio 2019 версии 16.2:
 
 ```cpp
 #include <compare>
@@ -1154,6 +1154,338 @@ void f() {
     B b2[1]; // OK: calls default ctor for each array element
 }
 ```
+
+## <a name="conformance-improvements-in-visual-studio-2019-version-168"></a><a name="improvements_168"></a> Улучшения соответствия в Visual Studio 2019 версии 16.8
+
+### <a name="class-rvalue-used-as-lvalue-extension"></a>Расширение "Класс rvalue, используемый как lvalue"
+
+В MSVC есть расширение, которое позволяет использовать класс rvalue в качестве lvalue. Это расширение не продлевает время существования класса rvalue, что может привести к неопределенному поведению во время выполнения. Теперь мы принудительно применяем стандартное правило, запрещая это расширение в **`/permissive-`** .
+Если вы пока не можете использовать **`/permissive-`** , запретите расширение явным образом с помощью **`/we4238`** . Пример:
+
+```cpp
+// Compiling with /permissive- now gives:
+// error C2102: '&' requires l-value
+struct S {};
+
+S f();
+
+void g()
+{
+    auto p1 = &(f()); // The temporary returned by 'f' is destructed after this statement. So 'p1' points to an invalid object.
+
+    const auto &r = f(); // This extends the lifetime of the temporary returned by 'f'
+    auto p2 = &r; // 'p2' points to a valid object
+}
+```
+
+### <a name="explicit-specialization-in-non-namespace-scope-extension"></a>Расширение "Явная специализация в области, отличной от пространства имен"
+
+MSVC имеет расширение, которое позволяло использовать явную специализацию в области, отличной от пространства имен. Теперь, после разрешения CWG 727, это поведение считается стандартным. При этом есть различия в поведении. Мы скорректировали поведение нашего компилятора в соответствии со стандартом.
+
+```cpp
+// Compiling with 'cl a.cpp b.cpp /permissive-' now gives:
+//   error LNK2005: "public: void __thiscall S::f<int>(int)" (??$f@H@S@@QAEXH@Z) already defined in a.obj
+// To fix the linker error,
+// 1. Mark the explicit specialization with 'inline' explicitly. Or,
+// 2. Move its definition to a source file.
+
+// common.h
+struct S {
+    template<typename T> void f(T);
+    template<> void f(int);
+};
+
+// This explicit specialization is implicitly inline in the default mode.
+template<> void S::f(int) {}
+
+// a.cpp
+#include "common.h"
+
+int main() {}
+
+// b.cpp
+#include "common.h"
+```
+
+### <a name="checking-for-abstract-class-types"></a>Проверка на наличие типов абстрактного класса
+
+Стандарт C++20 изменил процесс, который компилятор использует для обнаружения типа абстрактного класса в параметрах функции. В частности, это больше не считается ошибкой SFINAE. Ранее, если компилятор обнаруживал, что в специализации шаблона функции есть параметр функции, тип которого является экземпляром абстрактного класса, такая специализация объявлялась неправильным форматом. Она не добавлялась в набор подходящих функций. В C++20 проверка параметра с типом абстрактного класса не выполняется до самого вызова функции. Это означает, что код при компиляции не будет вызывать ошибку. Пример:
+
+```cpp
+class Node {
+public:
+    int index() const;
+};
+
+class String : public Node {
+public:
+    virtual int size() const = 0;
+};
+
+class Identifier : public Node {
+public:
+    const String& string() const;
+};
+
+template<typename T>
+int compare(T x, T y)
+{
+    return x < y ? -1 : (x > y ? 1 : 0);
+}
+
+int compare(const Node& x, const Node& y)
+{
+    return compare(x.index(), y.index());
+}
+
+int f(const Identifier& x, const String& y)
+{
+    return compare(x.string(), y);
+}
+```
+
+Ранее вызов `compare` попытался бы специализировать шаблон функции `compare`, указывая для аргумента шаблона `T` тип `String`. Такая специализация считалась бы недопустимой, так как `String` является абстрактным классом. В качестве единственного подходящего кандидата можно было бы использовать `compare(const Node&, const Node&)`. Но теперь в C++20 проверка на тип абстрактного класса не выполняется до самого вызова функции. Таким образом, специализация `compare(String, String)` добавляется в набор подходящих кандидатов и выбирается как лучший вариант, так как преобразование из `const String&` в `String` считается более правильным, чем преобразование из `const String&` в `const Node&`.
+
+Чтобы исправить этот пример, в C++20 можно использовать концепции; то есть измените определение `compare` следующим образом:
+
+```cpp
+template<typename T>
+int compare(T x, T y) requires !std::is_abstract_v<T>
+{
+    return x < y ? -1 : (x > y ? 1 : 0);
+}
+```
+
+Или, если концепции C++ недоступны, можно вернуться к SFINAE:
+
+```cpp
+template<typename T, std::enable_if_t<!std::is_abstract_v<T>, int> = 0>
+int compare(T x, T y)
+{
+    return x < y ? -1 : (x > y ? 1 : 0);
+}
+```
+
+### <a name="support-for-p0960r3---allow-initializing-aggregates-from-a-parenthesized-list-of-values"></a>Поддержка P0960R3 — разрешение инициализации агрегатов из списка значений в скобках
+
+В C++20 включена поддержка инициализации агрегата с помощью списка инициализатора, заключенного в скобки. Например, в C++20 подходящим считается следующий код:
+
+```cpp
+struct S {
+    int i;
+    int j;
+};
+
+S s(1, 2);
+```
+
+Эта функция является в основном аддитивной, то есть она позволяет компилировать код, который не компилировался ранее. Но она также изменяет поведение `std::is_constructible`. В режиме C++17 использование **`static_assert`** приводит к ошибке, но в режиме C++20 код выполняется успешно:
+
+`static_assert(std::is_constructible_v<S, int, int>, "Assertion failed!");`
+
+Если эта характеристика типа используется для управления разрешением перегрузки, это может привести к изменению поведения при переходе с версии C++17 на C++20.
+
+### <a name="overload-resolution-involving-function-templates"></a>Разрешение перегрузки с использованием шаблонов функций
+
+Ранее компилятор разрешал в режиме **`/permissive-`** компиляцию некоторых фрагментов кода, которые не должны компилироваться. Это приводило к тому, что компилятор вызывал неверную функцию и изменял поведение во время выполнения:
+
+```cpp
+int f(int);
+
+namespace N
+{
+    using ::f;
+    template<typename T>
+    T f(T);
+}
+
+template<typename T>
+void g(T&& t)
+{
+}
+
+void h()
+{
+    using namespace N;
+    g(f);
+}
+```
+
+Этот вызов `g` использует набор перегрузок, который содержит две функции: `::f` и `N::f`. Так как `N::f` является шаблоном функции, компилятор должен обрабатывать аргумент функции как *невыведенный контекст*. В этом примере это означает, что вызов `g` должен завершиться ошибкой, так как компилятор не может вывести тип для параметра шаблона `T`. К сожалению, компилятор не мог не учитывать то, что уже счел `::f` хорошим соответствием для вызова этой функции. Так что вместо завершения с ошибкой компилятор создал бы код для вызова `g` с аргументом `::f`.
+
+Учитывая, что во многих случаях использование `::f` в качестве аргумента функции является ожидаемым для пользователя поведением, ошибка возникает, только если код компилируется с **`/permissive-`** .
+
+### <a name="migrating-from-await-to-c20-coroutines"></a>Переход от `/await` к сопрограммам C++20
+
+Стандартные сопрограммы C++20 теперь по умолчанию включены в **`/std:c++latest`** . Они отличаются от сопрограмм TS и их поддержка включается параметром **`/await`** . Переход от **`/await`** к стандартным сопрограммам может потребовать некоторых изменений в исходном коде.
+
+#### <a name="non-standard-keywords"></a>Нестандартные ключевые слова
+
+Старые ключевые слова **`await`** и **`yield`** не поддерживаются в режиме C++20. Вместо них в коде необходимо использовать **`co_await`** и **`co_yield`** . Также стандартный режим не позволяет использовать `return` в сопрограмме. Все **`return`** в сопрограмме должны использовать **`co_return`** .
+
+```cpp
+// /await
+task f_legacy() {
+    ...
+    await g();
+    return n;
+}
+// /std:c++latest
+task f() {
+    ...
+    co_await g();
+    co_return n;
+}
+```
+
+#### <a name="types-of-initial_suspendfinal_suspend"></a>Типы initial_suspend и final_suspend
+
+В режиме **`/await`** функции обещания начальной и окончательной приостановки могут объявляться как возвращающие значение **`bool`** . Такое поведение не является стандартным. В C++20 такие функции должны возвращать тип класса, поддерживающий ожидание, например тривиальный `std::suspend_always`, если функция ранее возвращала **`true`** , или `std::suspend_never`, если она возвращала **`false`** .
+
+```cpp
+// /await
+struct promise_type_legacy {
+    bool initial_suspend() noexcept { return false; }
+    bool final_suspend() noexcept { return true; }
+    ...
+};
+
+// /std:c++latest
+struct promise_type {
+    auto initial_susepend() noexcept { return std::suspend_never{}; }
+    auto final_suspend() noexcept { return std::suspend_always{}; }
+    ...
+};
+```
+
+#### <a name="type-of-yield_value"></a>Тип `yield_value`
+
+В C++20 функция обещания `yield_value` должна возвращать тип, поддерживающий ожидание. В режиме **`/await`** функция `yield_value` могла возвращать **`void`** и всегда приостанавливала работу. Такие функции можно заменить функцией, которая возвращает `std::suspend_always`.
+
+```cpp
+// /await
+struct promise_type_legacy {
+    ...
+    void yield_value(int x) { next = x; };
+};
+
+// /std:c++latest
+struct promise_type {
+    ...
+    auto yield_value(int x) { next = x; return std::suspend_always{}; }
+};
+```
+
+#### <a name="exception-handling-function"></a>Функция обработки исключений
+
+**`/await`** поддерживает тип обещания без функции обработки исключений или с функцией обработки исключений с именем `set_exception`, которая принимает `std::exception_ptr`. В C++20 тип обещания должен иметь функцию с именем `unhandled_exception`, которая не принимает аргументы. При необходимости можно получить объект исключения из `std::current_exception`.
+
+```cpp
+// /await
+struct promise_type_legacy {
+    void set_exception(std::exception_ptr e) { saved_exception = e; }
+    ...
+};
+// /std:c++latest
+struct promise_type {
+    void unhandled_exception() { saved_exception = std::current_exception(); }
+    ...
+};
+```
+
+#### <a name="deduced-return-types-of-coroutines-not-supported"></a>Выведенные возвращаемые типы сопрограмм не поддерживаются
+
+В C++20 не поддерживаются сопрограммы с типом возвращаемого значения, который включает тип заполнителя, например **`auto`** . Типы возвращаемых значений в сопрограммах должны быть объявлены явно. В режиме **`/await`** эти выведенные типы всегда используют экспериментальный тип и требуют включать заголовок с определением требуемого типа: Это может быть `std::experimental::task<T>`, `std::experimental::generator<T>` или `std::experimental::async_stream<T>`.
+
+```cpp
+// /await
+auto my_generator() {
+    ...
+    co_yield next;
+};
+
+// /std:c++latest
+#include <experimental/generator>
+std::experimental::generator<int> my_generator() {
+    ...
+    co_yield next;
+};
+```
+
+#### <a name="return-type-of-return_value"></a>Тип возвращаемого значения `return_value`
+
+Возвращаемое значение функции обещания `return_value` должно иметь тип **`void`** . В режиме **`/await`** тип возвращаемого значения может быть любым и он игнорируется. Такая диагностика помогает обнаружить неочевидные ошибки, вызванные ошибочным предположением, что вызывающему объекту возвращается значение `return_value`.
+
+```cpp
+// /await
+struct promise_type_legacy {
+    ...
+    int return_value(int x) { return x; } // incorrect, the return value of this function is unused and the value is lost.
+};
+
+// /std:c++latest
+struct promise_type {
+    ...
+    void return_value(int x) { value = x; }; // save return value
+};
+```
+
+#### <a name="return-object-conversion-behavior"></a>Поведение при преобразовании возвращаемого объекта
+
+Если объявленный тип возвращаемого значения сопрограммы не совпадает с типом возвращаемого значения функции обещания `get_return_object`, то возвращаемый из `get_return_object` объект преобразуется в тип возвращаемого значения сопрограммы. В режиме **`/await`** такое преобразование выполняется раньше, еще до выполнения основного текста сопрограммы. В **`/std:c++latest`** такое преобразование выполняется, только когда значение фактически возвращается вызывающему объекту. Благодаря этому сопрограммы, которые не приостанавливаются в начальной точке приостановки, могут использовать в ходе выполнения объект, возвращаемый из `get_return_object`.
+
+#### <a name="coroutine-promise-parameters"></a>Параметры обещаний сопрограмм
+
+В C++20 компилятор пытается передать параметры сопрограммы (если они есть) в конструктор типа обещания. В случае неудачи он повторяет попытку с конструктором по умолчанию. В режиме **`/await`** использовался только конструктор по умолчанию. Это изменение может привести к изменению поведения, если в обещании есть несколько конструкторов или используется преобразование из параметра сопрограммы в тип обещания.
+
+```cpp
+struct coro {
+    struct promise_type {
+        promise_type() { ... }
+        promise_type(int x) { ... }
+        ...
+    };
+};
+
+coro f1(int x);
+
+// Under /await the promise gets constructed using the default constructor.
+// Under /std:c++latest the promise gets constructed using the 1-argument constructor.
+f1(0);
+
+struct Object {
+template <typename T> operator T() { ... } // Converts to anything!
+};
+
+coro f2(Object o);
+
+// Under /await the promise gets constructed using the default constructor
+// Under /std:c++latest the promise gets copy- or move-constructed from the result of
+// Object::operator coro::promise_type().
+f2(Object{});
+```
+
+### <a name="permissive--and-c20-modules-are-on-by-default-under-stdclatest"></a>Модули `/permissive-` и C++20 в `/std:c++latest` по умолчанию включены
+
+Поддержка модулей C++20 по умолчанию включена в **`/std:c++latest`** . Дополнительные сведения об этом изменении и о тех сценариях, в которых **`module`** и **`import`** условно рассматриваются как ключевые слова, см. в блоге [Standard C++20 Modules support with MSVC in Visual Studio 2019 version 16.8](https://devblogs.microsoft.com/cppblog/standard-c20-modules-support-with-msvc-in-visual-studio-2019-version-16-8/) (Поддержка стандартных модулей C++20 в MSVC при работе с Visual Studio 2019 версии 16.8).
+
+В качестве обязательного условия для поддержки модулей теперь **`permissive-`** по умолчанию включается при указании **`/std:c++latest`** . Дополнительные сведения см. в разделе [`/permissive-`](../build/reference/permissive-standards-conformance.md).
+
+Если код ранее компилировался в **`/std:c++latest`** и для него нужно другое поведение компилятора, вы можете отключить в компиляторе режим строгого соответствия с помощью **`permissive`** . Этот параметр компилятора нужно включить в список аргументов командной строки после **`/std:c++latest`** . При этом использование **`permissive`** приведет к такой ошибке, если обнаружится использования модулей:
+
+> error C1214: Modules conflict with non-standard behavior requested via '*option*' (Ошибка C1214. Модули конфликтуют с нестандартным поведением, запрошенным параметром option).
+
+Здесь параметр *option* чаще всего принимает следующие значения:
+
+| Параметр | Описание |
+|--|--|
+| **`/Zc:twoPhase-`** | Двухэтапный поиск имен является обязательным для модулей C++20 и подразумевается параметром **`permissive-`** . |
+| **`/Zc:hiddenFriend-`** | Включает стандартные правила для поиска скрытых дружественных имен. Является обязательным для модулей C++20 и подразумевается параметром **`permissive-`** . |
+| **`/Zc:preprocessor-`** | Соответствующий препроцессор требуется только для использования и создания блока заголовка C++20. Для именованных модулей этот параметр не требуется. |
+
+Параметр [`/experimental:module`](../build/reference/experimental-module.md) по-прежнему требуется для использования модулей *`std.*`* , которые поставляются в комплекте с Visual Studio, так как они еще не стандартизированы.
+
+Параметр **`/experimental:module`** также подразумевает **`/Zc:twoPhase`** и **`/Zc:hiddenFriend`** . Ранее для кода, компилируемого с использованием модулей, иногда применялся режим **`/Zc:twoPhase-`** , если модуль только использовался. Такое поведение больше не поддерживается.
 
 ## <a name="bug-fixes-and-behavior-changes-in-visual-studio-2019"></a><a name="update_160"></a> Исправления ошибок и изменения в поведении в Visual Studio 2019
 
@@ -3357,7 +3689,7 @@ public:
 
 ### <a name="offsetof-with-constant-expressions"></a>Постоянные выражения для `offsetof`
 
-Макрос [offsetof](../c-runtime-library/reference/offsetof-macro.md) обычно реализовывался с помощью макроса, требующего [reinterpret_cast](../cpp/reinterpret-cast-operator.md). Такое использование недопустимо в контекстах, требующих константного выражения, но обычно компилятор Microsoft C++ разрешал его. Макрос `offsetof`, входящий в состав стандартной библиотеки, правильно использует встроенную конструкцию компилятора ( **__builtin_offsetof** ), но многие разработчики применяли эту особенность для определения собственных `offsetof`.
+Макрос [offsetof](../c-runtime-library/reference/offsetof-macro.md) обычно реализовывался с помощью макроса, требующего [reinterpret_cast](../cpp/reinterpret-cast-operator.md). Такое использование недопустимо в контекстах, требующих константного выражения, но обычно компилятор Microsoft C++ разрешал его. Макрос `offsetof`, входящий в состав стандартной библиотеки, правильно использует встроенную конструкцию компилятора ( **__builtin_offsetof**), но многие разработчики применяли эту особенность для определения собственных `offsetof`.
 
 В Visual Studio 2017 версии 15.8 компилятор ограничивает области, в которых можно использовать операторы **`reinterpret_cast`** в режиме по умолчанию, чтобы поведение кода лучше соответствовало стандарту C++. В режиме [`/permissive-`](../build/reference/permissive-standards-conformance.md) ограничения еще строже. Использование результата `offsetof` в тех случаях, когда требуются константные выражения, может привести к тому, что код вызовет предупреждение C4644 `usage of the macro-based offsetof pattern in constant expressions is non-standard; use offsetof defined in the C++ standard library instead` или C2975 `invalid template argument, expected compile-time constant expression`.
 
