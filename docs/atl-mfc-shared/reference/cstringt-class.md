@@ -1,6 +1,7 @@
 ---
-title: Класс CStringT
-ms.date: 03/27/2019
+title: '**`CStringT`** См'
+description: Справочник по API для класса Microsoft ATL **`CStringT`**
+ms.date: 11/13/2020
 f1_keywords:
 - CStringT
 - ATLSTR/ATL::CStringT
@@ -79,21 +80,20 @@ helpviewer_keywords:
 - strings [C++], in ATL
 - shared classes, CStringT
 - CStringT class
-ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
-ms.openlocfilehash: 3e6d61bdf296e85bee5d41ec2131fa3d83122c2b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 80ea59b5f50fc9f430aa588a37e73d4526e3fd94
+ms.sourcegitcommit: 07408df5f4b2cbf070d9bb4bb40d821bfd5d8a62
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832091"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94703515"
 ---
 # <a name="cstringt-class"></a>Класс CStringT
 
-Этот класс представляет `CStringT` объект.
+Этот класс представляет **`CStringT`** объект.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 template<typename BaseType, class StringTraits>
 class CStringT :
     public CSimpleStringT<BaseType,
@@ -102,31 +102,31 @@ class CStringT :
 
 #### <a name="parameters"></a>Параметры
 
-*BaseType*<br/>
+*`BaseType`*\
 Символьный тип класса String. Может применяться один из перечисленных ниже типов.
 
 - **`char`** (для строк символов ANSI).
 
 - **`wchar_t`** (для символьных строк Юникода).
 
-- TCHAR (для символьных строк ANSI и Unicode).
+- **`TCHAR`** (для символьных строк ANSI и Юникод).
 
-*стрингтраитс*<br/>
-Определяет, требуется ли классу String поддержка библиотеки времени выполнения C (CRT) и где находятся строковые ресурсы. Может применяться один из перечисленных ниже типов.
+*`StringTraits`*\
+Определяет, требуется ли для класса строк поддержка библиотеки C Run-Time (CRT) и где находятся строковые ресурсы. Может применяться один из перечисленных ниже типов.
 
-- **Стртраитатл< wchar_t** &#124; **`char`** &#124; **tchar, чтраитскрт< wchar_t** &#124; **`char`** &#124; **TCHAR > >**
+- **`StrTraitATL<wchar_t | char | TCHAR, ChTraitsCRT<wchar_t | char | TCHAR>>`**
 
    Класс требует поддержки CRT и ищет строки ресурсов в модуле, указанном `m_hInstResource` (членом класса модуля приложения).
 
-- **Стртраитатл< wchar_t** &#124; **`char`** &#124; **tchar, чтраитсос< wchar_t** &#124; **`char`** &#124; **TCHAR > >**
+- **`StrTraitATL<wchar_t | char | TCHAR, ChTraitsOS<wchar_t | char |TCHAR>>`**
 
    Класс не требует поддержки CRT и ищет строки ресурсов в модуле, указанном `m_hInstResource` (членом класса модуля приложения).
 
-- **Стртраитмфк< wchar_t** &#124; **`char`** &#124; **tchar, чтраитскрт< wchar_t** &#124; **`char`** &#124; **TCHAR > >**
+- **`StrTraitMFC<wchar_t | char | TCHAR, ChTraitsCRT<wchar_t | char | TCHAR>>`**
 
    Класс требует поддержки CRT и ищет строки ресурсов с помощью стандартного алгоритма поиска MFC.
 
-- **Стртраитмфк< wchar_t** &#124; **`char`** &#124; **tchar, чтраитсос< wchar_t** &#124; **`char`** &#124; **TCHAR > >**
+- **`StrTraitMFC<wchar_t | char | TCHAR, ChTraitsOS<wchar_t | char | TCHAR>>`**
 
    Класс не требует поддержки CRT и ищет строки ресурсов с помощью стандартного алгоритма поиска MFC.
 
@@ -136,79 +136,79 @@ class CStringT :
 
 |name|Описание|
 |----------|-----------------|
-|[CStringT:: CStringT](#cstringt)|Конструирует `CStringT` объект различными способами.|
-|[CStringT:: ~ CStringT](#_dtorcstringt)|Уничтожает объект `CStringT` .|
+|[`CStringT::CStringT`](#cstringt)|Конструирует **`CStringT`** объект различными способами.|
+|[`CStringT::~CStringT`](#_dtorcstringt)|Уничтожает **`CStringT`** объект.|
 
 ### <a name="public-methods"></a>Открытые методы
 
 |name|Описание|
 |----------|-----------------|
-|[CStringT:: Аллоксисстринг](#allocsysstring)|Выделяет строку BSTR из `CStringT` данных.|
-|[CStringT:: Анситуем](#ansitooem)|Выполняет преобразование на месте из набора символов ANSI в набор символов OEM.|
-|[CStringT:: AppendFormat](#appendformat)|Добавляет форматированные данные к существующему `CStringT` объекту.|
-|[CStringT:: COLLATE](#collate)|Сравнивает две строки (с учетом регистра, использует сведения, относящиеся к языку).|
-|[CStringT:: Коллатенокасе](#collatenocase)|Сравнивает две строки (без учета регистра, использует сведения, относящиеся к языку).|
-|[CStringT:: Compare](#compare)|Сравнивает две строки (с учетом регистра).|
-|[CStringT:: Компаренокасе](#comparenocase)|Сравнивает две строки (без учета регистра).|
-|[CStringT::D удалить](#delete)|Удаляет символ или символы из строки.|
-|[CStringT:: Find](#find)|Находит символ или подстроку в более длинной строке.|
-|[CStringT:: Финдонеоф](#findoneof)|Находит первый соответствующий символ из набора.|
-|[CStringT:: Format](#format)|Форматирует строку как `sprintf` есть.|
-|[CStringT:: FormatMessage](#formatmessage)|Форматирует строку сообщения.|
-|[CStringT:: Форматмессажев](#formatmessagev)|Форматирует строку сообщения с помощью переменного списка аргументов.|
-|[CStringT:: Форматв](#formatv)|Форматирует строку, используя переменный список аргументов.|
-|[CStringT:: GetEnvironmentVariable](#getenvironmentvariable)|Присваивает строке значение указанной переменной среды.|
-|[CStringT:: INSERT](#insert)|Вставляет в строку один символ или подстроку с заданным индексом.|
-|[CStringT:: Left](#left)|Извлекает левую часть строки.|
-|[CStringT:: Лоадстринг](#loadstring)|Загружает существующий `CStringT` объект из ресурса Windows.|
-|[CStringT:: Макеловер](#makelower)|Преобразует все символы в этой строке в символы нижнего регистра.|
-|[CStringT:: Макереверсе](#makereverse)|Изменяет направление строки на противоположную.|
-|[CStringT:: Макеуппер](#makeupper)|Преобразует все символы в этой строке в символы верхнего регистра.|
-|[CStringT:: mid](#mid)|Извлекает среднюю часть строки.|
-|[CStringT:: Оемтоанси](#oemtoansi)|Выполняет преобразование на месте из набора символов OEM в кодировку ANSI.|
-|[CStringT:: Remove](#remove)|Удаляет указанные символы из строки.|
-|[CStringT:: Replace](#replace)|Заменяет указанные символы другими символами.|
-|[CStringT:: Реверсефинд](#reversefind)|Находит символ в более длинной строке; начинается с конца.|
-|[CStringT:: right](#right)|Извлекает правую часть строки.|
-|[CStringT:: Сетсисстринг](#setsysstring)|Устанавливает существующий объект BSTR с данными из `CStringT` объекта.|
-|[CStringT:: Спанексклудинг](#spanexcluding)|Извлекает из строки символы, начиная с первого символа, которые не входят в набор символов, определяемых параметром `pszCharSet` .|
-|[CStringT:: Спанинклудинг](#spanincluding)|Извлекает подстроку, содержащую только символы в наборе.|
-|[CStringT:: маркировка](#tokenize)|Извлекает указанные токены в целевой строке.|
-|[CStringT:: Trim](#trim)|Обрезает все начальные и конечные символы пробела из строки.|
-|[CStringT:: Тримлефт](#trimleft)|Обрезает начальные символы пробела из строки.|
-|[CStringT:: Тримригхт](#trimright)|Обрезает пробелы в конце строки.|
+|[`CStringT::AllocSysString`](#allocsysstring)|Выделяет `BSTR` **`CStringT`** данные из данных.|
+|[`CStringT::AnsiToOem`](#ansitooem)|Выполняет преобразование на месте из набора символов ANSI в набор символов OEM.|
+|[`CStringT::AppendFormat`](#appendformat)|Добавляет форматированные данные к существующему **`CStringT`** объекту.|
+|[`CStringT::Collate`](#collate)|Сравнивает две строки (с учетом регистра, использует сведения, относящиеся к языку).|
+|[`CStringT::CollateNoCase`](#collatenocase)|Сравнивает две строки (без учета регистра, использует сведения, зависящие от локали).|
+|[`CStringT::Compare`](#compare)|Сравнивает две строки (с учетом регистра).|
+|[`CStringT::CompareNoCase`](#comparenocase)|Сравнивает две строки (без учета регистра).|
+|[`CStringT::Delete`](#delete)|Удаляет символ или символы из строки.|
+|[`CStringT::Find`](#find)|Находит символ или подстроку в более длинной строке.|
+|[`CStringT::FindOneOf`](#findoneof)|Находит первый соответствующий символ из набора.|
+|[`CStringT::Format`](#format)|Форматирует строку как `sprintf` есть.|
+|[`CStringT::FormatMessage`](#formatmessage)|Форматирует строку сообщения.|
+|[`CStringT::FormatMessageV`](#formatmessagev)|Форматирует строку сообщения с помощью переменного списка аргументов.|
+|[`CStringT::FormatV`](#formatv)|Форматирует строку, используя переменный список аргументов.|
+|[`CStringT::GetEnvironmentVariable`](#getenvironmentvariable)|Присваивает строке значение указанной переменной среды.|
+|[`CStringT::Insert`](#insert)|Вставляет в строку один символ или подстроку с заданным индексом.|
+|[`CStringT::Left`](#left)|Извлекает левую часть строки.|
+|[`CStringT::LoadString`](#loadstring)|Загружает существующий **`CStringT`** объект из ресурса Windows.|
+|[`CStringT::MakeLower`](#makelower)|Преобразует все символы в этой строке в символы нижнего регистра.|
+|[`CStringT::MakeReverse`](#makereverse)|Изменяет направление строки на противоположную.|
+|[`CStringT::MakeUpper`](#makeupper)|Преобразует все символы в этой строке в символы верхнего регистра.|
+|[`CStringT::Mid`](#mid)|Извлекает среднюю часть строки.|
+|[`CStringT::OemToAnsi`](#oemtoansi)|Выполняет преобразование на месте из набора символов OEM в кодировку ANSI.|
+|[`CStringT::Remove`](#remove)|Удаляет указанные символы из строки.|
+|[`CStringT::Replace`](#replace)|Заменяет указанные символы другими символами.|
+|[`CStringT::ReverseFind`](#reversefind)|Находит символ в более длинной строке; начинается с конца.|
+|[`CStringT::Right`](#right)|Извлекает правую часть строки.|
+|[`CStringT::SetSysString`](#setsysstring)|Устанавливает существующий `BSTR` объект с данными из **`CStringT`** объекта.|
+|[`CStringT::SpanExcluding`](#spanexcluding)|Извлекает из строки символы, начиная с первого символа, которые не входят в набор символов, определяемый параметром `pszCharSet` .|
+|[`CStringT::SpanIncluding`](#spanincluding)|Извлекает подстроку, содержащую только символы в наборе.|
+|[`CStringT::Tokenize`](#tokenize)|Извлекает указанные токены в целевой строке.|
+|[`CStringT::Trim`](#trim)|Обрезает все начальные и конечные символы пробела из строки.|
+|[`CStringT::TrimLeft`](#trimleft)|Обрезает начальные символы пробела из строки.|
+|[`CStringT::TrimRight`](#trimright)|Обрезает пробелы в конце строки.|
 
 ### <a name="operators"></a>Операторы
 
 |Имя|Описание|
 |-|-|
-|[CStringT:: operator =](#operator_eq)|Присваивает новое значение `CStringT` объекту.|
-|[CStringT:: operator +](#operator_add)|Сцепляет две строки или символ и строку.|
-|[CStringT:: operator + =](#operator_add_eq)|Сцепляет новую строку до конца существующей строки.|
-|[CStringT:: operator = =](#operator_eq_eq)|Определяет логическую равенство двух строк.|
-|[CStringT:: operator! =](#operator_neq)|Определяет логическую неравенство двух строк.|
-|[CStringT:: operator &lt;](#operator_lt)|Определяет, является ли строка в левой части оператора меньше, чем строка с правой стороны.|
-|[CStringT:: operator &gt;](#operator_gt)|Определяет, что строка в левой части оператора больше, чем строка с правой стороны.|
-|[CStringT:: operator &lt;=](#operator_lt_eq)|Определяет, является ли строка в левой части оператора меньше или равна строке в правой части.|
-|[CStringT:: operator &gt;=](#operator_gt_eq)|Определяет, является ли строка в левой части оператора больше или равна строке в правой части.|
+|[`CStringT::operator =`](#operator_eq)|Присваивает новое значение **`CStringT`** объекту.|
+|[`CStringT::operator +`](#operator_add)|Сцепляет две строки, символ и строку.|
+|[`CStringT::operator +=`](#operator_add_eq)|Сцепляет новую строку до конца существующей строки.|
+|[`CStringT::operator ==`](#operator_eq_eq)|Определяет логическую равенство двух строк.|
+|[`CStringT::operator !=`](#operator_neq)|Определяет, являются ли две строки логически равными.|
+|[`CStringT::operator <`](#operator_lt)|Определяет, является ли строка в левой части оператора меньше, чем строка с правой стороны.|
+|[`CStringT::operator >`](#operator_gt)|Определяет, что строка в левой части оператора больше, чем строка с правой стороны.|
+|[`CStringT::operator <=`](#operator_lt_eq)|Определяет, является ли строка в левой части оператора меньше или равна строке в правой части.|
+|[`CStringT::operator >=`](#operator_gt_eq)|Определяет, является ли строка в левой части оператора больше или равна строке в правой части.|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
 
-`CStringT` наследует от [класса ксимплестрингт](../../atl-mfc-shared/reference/csimplestringt-class.md). Дополнительные функции, такие как обработка символов, упорядочение и поиск, реализуются с помощью `CStringT` .
-
-> [!NOTE]
-> `CStringT` объекты способны создавать исключения. Это происходит, когда `CStringT` по какой-либо причине объекту не хватает памяти.
-
-`CStringT`Объект состоит из последовательности символов с переменной длиной. `CStringT` предоставляет функции и операторы, используя синтаксис, аналогичный базовому. Операторы объединения и сравнения, а также упрощенное управление памятью упрощают `CStringT` использование объектов, чем обычные массивы символов.
+**`CStringT`** наследует от [класса ксимплестрингт](../../atl-mfc-shared/reference/csimplestringt-class.md). Дополнительные функции, такие как обработка символов, упорядочение и поиск, реализуются с помощью **`CStringT`** .
 
 > [!NOTE]
-> Несмотря на то `CStringT` , что можно создавать экземпляры, содержащие внедренные символы NULL, для них рекомендуется использовать. Вызов методов и операторов для `CStringT` объектов, содержащих внедренные символы NULL, может привести к непредвиденным результатам.
+> **`CStringT`** объекты способны создавать исключения. Это происходит, когда **`CStringT`** по какой-либо причине объекту не хватает памяти.
 
-Используя разные сочетания `BaseType` `StringTraits` параметров и, `CStringT` объекты могут поступать в следующие типы, которые были предопределены библиотеками ATL.
+**`CStringT`** Объект состоит из последовательности символов с переменной длиной. **`CStringT`** предоставляет функции и операторы, используя синтаксис, аналогичный базовому. Операторы объединения и сравнения, а также упрощенное управление памятью упрощают **`CStringT`** использование объектов, чем обычные массивы символов.
+
+> [!NOTE]
+> Несмотря на то **`CStringT`** , что можно создавать экземпляры, содержащие внедренные символы NULL, для них рекомендуется использовать. Вызов методов и операторов для **`CStringT`** объектов, содержащих внедренные символы NULL, может привести к непредвиденным результатам.
+
+Используя разные сочетания `BaseType` `StringTraits` параметров и, **`CStringT`** объекты могут поступать в следующие типы, которые были предопределены библиотеками ATL.
 
 При использовании в приложении ATL:
 
-`CString`, `CStringA` и `CStringW` экспортируются из библиотеки DLL MFC (MFC90.DLL), никогда не из пользовательских библиотек DLL. Это делается для предотвращения `CStringT` определения множественного умножения.
+`CString`, `CStringA` и `CStringW` экспортируются из библиотеки DLL MFC (MFC90.DLL), никогда не из пользовательских библиотек DLL. Это делается для предотвращения **`CStringT`** неоднократного определения.
 
 > [!NOTE]
 > Если в коде содержится обходной путь для ошибок компоновщика, описанный в разделе [Экспорт строковых классов с помощью CStringT](../../atl-mfc-shared/exporting-string-classes-using-cstringt.md), следует удалить этот код. Он больше не требуется.
@@ -221,7 +221,7 @@ class CStringT :
 |`CStringW`|Строка типа символов Юникода с поддержкой CRT.|
 |`CString`|Типы символов ANSI и Юникод с поддержкой CRT.|
 
-В проектах, в которых определено ATL_CSTRING_NO_CRT, доступны следующие типы строк:
+В проектах, где определено, доступны следующие типы строк `ATL_CSTRING_NO_CRT` :
 
 |Тип CStringT|Объявление|
 |-------------------|-----------------|
@@ -229,7 +229,7 @@ class CStringT :
 |`CAtlStringW`|Строка типа символов Юникода без поддержки CRT.|
 |`CAtlString`|Типы символов ANSI и Юникод без поддержки CRT.|
 
-В проектах, где не определен ATL_CSTRING_NO_CRT, доступны следующие типы строк:
+В проектах, где не определено, доступны следующие типы строк `ATL_CSTRING_NO_CRT` :
 
 |Тип CStringT|Объявление|
 |-------------------|-----------------|
@@ -239,35 +239,35 @@ class CStringT :
 
 `CString` объекты также имеют следующие характеристики.
 
-- `CStringT` объекты могут увеличиваться в результате операций объединения.
+- **`CStringT`** объекты могут увеличиваться из-за операций объединения.
 
-- `CStringT` объекты следуют за семантикой значений. Представьте себе `CStringT` объект как фактическую строку, а не указатель на строку.
+- **`CStringT`** объекты следуют за семантикой значений. Представьте себе **`CStringT`** объект как фактическую строку, а не указатель на строку.
 
-- Можно свободно заменять `CStringT` объекты для `PCXSTR` аргументов функции.
+- Можно свободно заменять **`CStringT`** объекты для `PCXSTR` аргументов функции.
 
 - Пользовательское управление памятью для буферов строк. Дополнительные сведения см. в разделе [Управление памятью и CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
 ## <a name="cstringt-predefined-types"></a>Предопределенные типы CStringT
 
-Поскольку `CStringT` использует аргумент шаблона для определения типа символа ( [wchar_t](../../c-runtime-library/standard-types.md) или [char](../../c-runtime-library/standard-types.md)), типы параметров метода могут быть сложными в моменты времени. Для упрощения этой проблемы набор предопределенных типов определяется и используется во всем `CStringT` классе. В следующей таблице перечислены различные типы.
+Поскольку **`CStringT`** использует аргумент шаблона для определения типа символа ( [wchar_t](../../c-runtime-library/standard-types.md) или [char](../../c-runtime-library/standard-types.md)), типы параметров метода могут быть сложными в моменты времени. Для упрощения этой проблемы набор предопределенных типов определяется и используется во всем **`CStringT`** классе. В следующей таблице перечислены различные типы.
 
 |Имя|Описание|
 |----------|-----------------|
-|`XCHAR`|Одиночный символ ( **`wchar_t`** или **`char`** ) с тем же типом символов, что и у `CStringT` объекта.|
-|`YCHAR`|Один символ ( **`wchar_t`** или **`char`** ) с противоположным типом символа в качестве `CStringT` объекта.|
-|`PXSTR`|Указатель на символьную строку ( **`wchar_t`** или **`char`** ) с тем же типом символов, что и у `CStringT` объекта.|
-|`PYSTR`|Указатель на символьную строку ( **`wchar_t`** или **`char`** ) с противоположным типом символа в качестве `CStringT` объекта.|
-|`PCXSTR`|Указатель на **`const`** символьную строку ( **`wchar_t`** или **`char`** ) с тем же типом символов, что и у `CStringT` объекта.|
-|`PCYSTR`|Указатель на **`const`** символьную строку ( **`wchar_t`** или **`char`** ) с противоположным типом символа в качестве `CStringT` объекта.|
+|`XCHAR`|Одиночный символ ( **`wchar_t`** или **`char`** ) с тем же типом символов, что и у **`CStringT`** объекта.|
+|`YCHAR`|Один символ ( **`wchar_t`** или **`char`** ) с противоположным типом символа в качестве **`CStringT`** объекта.|
+|`PXSTR`|Указатель на символьную строку ( **`wchar_t`** или **`char`** ) с тем же типом символов, что и в объекте * * * * * * * `CStringT` * *.|
+|`PYSTR`|Указатель на символьную строку ( **`wchar_t`** или **`char`** ) с противоположным типом символа в качестве **`CStringT`** объекта.|
+|`PCXSTR`|Указатель на **`const`** символьную строку ( **`wchar_t`** или **`char`** ) с тем же типом символов, что и у **`CStringT`** объекта.|
+|`PCYSTR`|Указатель на **`const`** символьную строку ( **`wchar_t`** или **`char`** ) с противоположным типом символа в качестве **`CStringT`** объекта.|
 
 > [!NOTE]
-> Код, который ранее использовал недокументированные методы `CString` (например, `AssignCopy` ), должен быть заменен кодом, который использует приведенные ниже документированные методы `CStringT` (например, `GetBuffer` или `ReleaseBuffer` ). Эти методы наследуются от `CSimpleStringT` .
+> Код, который ранее использовал недокументированные методы `CString` (например, `AssignCopy` ), должен быть заменен кодом, который использует приведенные ниже документированные методы **`CStringT`** (например, `GetBuffer` или `ReleaseBuffer` ). Эти методы наследуются от `CSimpleStringT` .
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
 [ксимплестрингт](../../atl-mfc-shared/reference/csimplestringt-class.md)
 
-`CStringT`
+**`CStringT`**
 
 ## <a name="requirements"></a>Требования
 
@@ -276,11 +276,11 @@ class CStringT :
 |CStringT. h|Строковые объекты только MFC|
 |atlstr. h|Объекты-строки, не относящиеся к MFC|
 
-## <a name="cstringtallocsysstring"></a><a name="allocsysstring"></a> CStringT:: Аллоксисстринг
+## <a name="cstringtallocsysstring"></a><a name="allocsysstring"></a> `CStringT::AllocSysString`
 
-Выделяет совместимую со службой автоматизации строку типа BSTR и копирует в `CStringT` нее содержимое объекта, включая завершающий нуль-символ.
+Выделяет строку типа, совместимую с автоматизацией `BSTR` , и копирует в **`CStringT`** нее содержимое объекта, включая завершающий нуль-символ.
 
-```
+```cpp
 BSTR AllocSysString() const;
 ```
 
@@ -288,11 +288,11 @@ BSTR AllocSysString() const;
 
 Вновь выделенная строка.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 В программах MFC создается [класс CMemoryException](../../mfc/reference/cmemoryexception-class.md) , если недостаточно памяти. В программах ATL создается исключение [катлексцептион](../../atl/reference/catlexception-class.md) . Эта функция обычно используется для возврата строк для автоматизации.
 
-Как правило, если эта строка передается в COM-функцию в качестве параметра [in], то для этого необходимо, чтобы вызывающий объект освободит строку. Это можно сделать с помощью [сисфристринг](/windows/win32/api/oleauto/nf-oleauto-sysfreestring), как описано в Windows SDK. Дополнительные сведения см. в разделе [выделение и освобождение памяти для BSTR](../../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md).
+Как правило, если эта строка передается в COM-функцию в качестве `[in]` параметра, то для этого необходимо, чтобы вызывающий объект освободит строку. Это можно сделать с помощью [сисфристринг](/windows/win32/api/oleauto/nf-oleauto-sysfreestring), как описано в Windows SDK. Дополнительные сведения см. в разделе [выделение и освобождение памяти для BSTR](../../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md).
 
 Дополнительные сведения о функциях выделения OLE в Windows см. в разделе [сисаллокстринг](/windows/win32/api/oleauto/nf-oleauto-sysallocstring) в Windows SDK.
 
@@ -302,25 +302,25 @@ BSTR AllocSysString() const;
 
 [!code-cpp[NVC_ATLMFC_Utilities#105](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_1.cpp)]
 
-## <a name="cstringtansitooem"></a><a name="ansitooem"></a> CStringT:: Анситуем
+## <a name="cstringtansitooem"></a><a name="ansitooem"></a> `CStringT::AnsiToOem`
 
-Преобразует все символы в этом `CStringT` объекте из набора символов ANSI в набор символов OEM.
+Преобразует все символы в этом **`CStringT`** объекте из набора символов ANSI в набор символов OEM.
 
 ```cpp
 void AnsiToOem();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
-Функция недоступна, если определен _UNICODE.
+Функция недоступна, если `_UNICODE` определен.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATLMFC_Utilities#106](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_2.cpp)]
 
-## <a name="cstringtappendformat"></a><a name="appendformat"></a> CStringT:: AppendFormat
+## <a name="cstringtappendformat"></a><a name="appendformat"></a> `CStringT::AppendFormat`
 
-Добавляет форматированные данные к существующему `CStringT` объекту.
+Добавляет форматированные данные к существующему **`CStringT`** объекту.
 
 ```cpp
 void __cdecl AppendFormat(PCXSTR pszFormat, [, argument] ...);
@@ -329,62 +329,62 @@ void __cdecl AppendFormat(UINT nFormatID, [, argument] ...);
 
 ### <a name="parameters"></a>Параметры
 
-*псзформат*<br/>
+*`pszFormat`*\
 Строка управления форматированием.
 
-*нформатид*<br/>
+*`nFormatID`*\
 Строковый идентификатор ресурса, содержащий строку управления форматированием.
 
-*argument*<br/>
+*`argument`*\
 Необязательные аргументы.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
-Эта функция форматирует и добавляет ряд символов и значений в `CStringT` . Каждый необязательный аргумент (при его наличии) преобразуется и добавляется в соответствии с соответствующей спецификацией формата в *псзформат* или из строкового ресурса, определенного параметром *нформатид*.
+Эта функция форматирует и добавляет ряд символов и значений в **`CStringT`** . Каждый необязательный аргумент (при его наличии) преобразуется и добавляется в соответствии с соответствующей спецификацией формата в *`pszFormat`* или из строкового ресурса, определенного параметром *`nFormatID`* .
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATLMFC_Utilities#107](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_3.cpp)]
 
-## <a name="cstringtcollate"></a><a name="collate"></a> CStringT:: COLLATE
+## <a name="cstringtcollate"></a><a name="collate"></a> `CStringT::Collate`
 
 Сравнивает две строки с помощью функции Generic-Text `_tcscoll` .
 
-```
+```cpp
 int Collate(PCXSTR psz) const throw();
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*псз*<br/>
+*`psz`*\
 Другая строка, используемая для сравнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Нуль, если строки идентичны, < 0, если этот `CStringT` объект меньше *ПСЗ*, или > 0, если этот `CStringT` объект больше *ПСЗ*.
+Нуль, если строки идентичны, < 0, если этот **`CStringT`** объект меньше *`psz`* , или > 0, если этот **`CStringT`** объект больше *`psz`* .
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
-Универсальная текстовая функция `_tcscoll` , определенная в файле Tchar. H, сопоставляется либо с, либо, в зависимости от кодировки `strcoll` `wcscoll` `_mbscoll` , определенной во время компиляции. Каждая функция выполняет сравнение строк с учетом регистра в соответствии с используемой в настоящий момент кодовой страницей. Дополнительные сведения см. в разделе [strcoll, вксколл, _mbscoll, _strcoll_l, _wcscoll_l _mbscoll_l](../../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md).
+Универсальная текстовая функция `_tcscoll` , определенная в файле Tchar. H, сопоставляется либо с, либо, в зависимости от кодировки `strcoll` `wcscoll` `_mbscoll` , определенной во время компиляции. Каждая функция учитывает регистр строк в соответствии с используемой в настоящий момент кодовой страницей. Дополнительные сведения см. в разделе [strcoll, вксколл, _mbscoll, _strcoll_l, _wcscoll_l _mbscoll_l](../../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md).
 
-## <a name="cstringtcollatenocase"></a><a name="collatenocase"></a> CStringT:: Коллатенокасе
+## <a name="cstringtcollatenocase"></a><a name="collatenocase"></a> `CStringT::CollateNoCase`
 
 Сравнивает две строки с помощью функции Generic-Text `_tcscoll` .
 
-```
+```cpp
 int CollateNoCase(PCXSTR psz) const throw();
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*псз*<br/>
+*`psz`*\
 Другая строка, используемая для сравнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Нуль, если строки идентичны (без учета регистра), < 0, если этот `CStringT` объект меньше *ПСЗ* (без учета регистра), или > 0, если этот `CStringT` объект больше *ПСЗ* (без учета регистра).
+Нуль, если строки идентичны (без учета регистра), < 0, если этот **`CStringT`** объект меньше *`psz`* (без учета регистра), или > 0, если этот **`CStringT`** объект больше *`psz`* (без учета регистра).
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Универсальная текстовая функция `_tcscoll` , определенная в файле Tchar. H, сопоставляется либо с, либо, в зависимости от кодировки `stricoll` `wcsicoll` `_mbsicoll` , определенной во время компиляции. Каждая функция выполняет сравнение строк без учета регистра в соответствии с используемой в настоящий момент кодовой страницей. Дополнительные сведения см. в разделе [strcoll, вксколл, _mbscoll, _strcoll_l, _wcscoll_l _mbscoll_l](../../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md).
 
@@ -392,24 +392,24 @@ int CollateNoCase(PCXSTR psz) const throw();
 
 [!code-cpp[NVC_ATLMFC_Utilities#109](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_4.cpp)]
 
-## <a name="cstringtcompare"></a><a name="compare"></a> CStringT:: Compare
+## <a name="cstringtcompare"></a><a name="compare"></a> `CStringT::Compare`
 
 Сравнивает две строки (с учетом регистра).
 
-```
+```cpp
 int Compare(PCXSTR psz) const;
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*псз*<br/>
+*`psz`*\
 Другая строка, используемая для сравнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Нуль, если строки идентичны, < 0, если этот `CStringT` объект меньше *ПСЗ*, или > 0, если этот `CStringT` объект больше *ПСЗ*.
+Нуль, если строки идентичны, < 0, если этот **`CStringT`** объект меньше *`psz`* , или > 0, если этот **`CStringT`** объект больше *`psz`* .
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Универсальная текстовая функция `_tcscmp` , определенная в файле Tchar. H, сопоставляется либо с, либо, в зависимости от кодировки `strcmp` `wcscmp` `_mbscmp` , определенной во время компиляции. Каждая функция выполняет сравнение строк с учетом регистра и не влияет на языковой стандарт. Дополнительные сведения см. в разделе [strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md).
 
@@ -421,24 +421,24 @@ int Compare(PCXSTR psz) const;
 
 [!code-cpp[NVC_ATLMFC_Utilities#110](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_5.cpp)]
 
-## <a name="cstringtcomparenocase"></a><a name="comparenocase"></a> CStringT:: Компаренокасе
+## <a name="cstringtcomparenocase"></a><a name="comparenocase"></a> `CStringT::CompareNoCase`
 
 Сравнивает две строки (без учета регистра).
 
-```
+```cpp
 int CompareNoCase(PCXSTR psz) const throw();
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*псз*<br/>
+*`psz`*\
 Другая строка, используемая для сравнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Нуль, если строки идентичны (без учета регистра), <0, если этот `CStringT` объект меньше *ПСЗ* (без учета регистра), или >0, если этот `CStringT` объект больше *ПСЗ* (без учета регистра).
+Нуль, если строки идентичны (без учета регистра), <0, если этот **`CStringT`** объект меньше *`psz`* (без учета регистра), или >0, если этот **`CStringT`** объект больше *`psz`* (без учета регистра).
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Универсальная текстовая функция `_tcsicmp` , определенная в файле Tchar. H, сопоставляется либо с `_stricmp` , либо, в зависимости от кодировки `_wcsicmp` `_mbsicmp` , определенной во время компиляции. Каждая функция выполняет сравнение строк без учета регистра. Сравнение зависит от LC_CTYPEного аспекта языкового стандарта, но не LC_COLLATE. Дополнительные сведения см. в разделе [_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md).
 
@@ -446,11 +446,11 @@ int CompareNoCase(PCXSTR psz) const throw();
 
 [!code-cpp[NVC_ATLMFC_Utilities#111](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_6.cpp)]
 
-## <a name="cstringtcstringt"></a><a name="cstringt"></a> CStringT:: CStringT
+## <a name="cstringtcstringt"></a><a name="cstringt"></a> `CStringT::CStringT`
 
-Формирует объект `CStringT`.
+Конструирует **`CStringT`** объект.
 
-```
+```cpp
 CStringT() throw() :
     CThisSimpleString(StringTraits::GetDefaultManager());
 
@@ -525,104 +525,104 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
 
 ### <a name="parameters"></a>Параметры
 
-*PCH*<br/>
+*`pch`*\
 Указатель на массив символов длины *нленгс*, а не заканчивающийся символом NULL.
 
-*нленгс*<br/>
+*`nLength`*\
 Число символов в *PCH*.
 
-*канал*<br/>
+*`ch`*\
 Один символ.
 
-*псзсрк*<br/>
-Строка, завершающаяся нулем, для копирования в этот `CStringT` объект.
+*`pszSrc`*\
+Строка, завершающаяся нулем, для копирования в этот **`CStringT`** объект.
 
-*пстрингмгр*<br/>
-Указатель на диспетчер памяти для `CStringT` объекта. Дополнительные сведения о `IAtlStringMgr` и управлении памятью для `CStringT` см. в разделе [Управление памятью с помощью CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
+*`pStringMgr`*\
+Указатель на диспетчер памяти для **`CStringT`** объекта. Дополнительные сведения о `IAtlStringMgr` и управлении памятью для **`CStringT`** см. в разделе [Управление памятью с помощью CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-*стрсрк*<br/>
-Существующий `CStringT` объект, который будет скопирован в этот `CStringT` объект. Дополнительные сведения о `CThisString` и см `CThisSimpleString` . в разделе "Примечания".
+*`strSrc`*\
+Существующий **`CStringT`** объект, который будет скопирован в этот **`CStringT`** объект. Дополнительные сведения о `CThisString` и см `CThisSimpleString` . в разделе "Примечания".
 
-*varSrc*<br/>
-Объект Variant, который необходимо скопировать в этот `CStringT` объект.
+*`varSrc`*\
+Объект Variant, который необходимо скопировать в этот **`CStringT`** объект.
 
-*BaseType*<br/>
+*`BaseType`*\
 Символьный тип класса String. Может применяться один из перечисленных ниже типов.
 
 **`char`** (для строк символов ANSI).
 
 **`wchar_t`** (для символьных строк Юникода).
 
-TCHAR (для символьных строк ANSI и Unicode).
+`TCHAR` (для символьных строк ANSI и Юникод).
 
-*бмфкдлл*<br/>
-Логическое значение, указывающее, является ли проект DLL-библиотекой MFC (TRUE) или нет (FALSE).
+*`bMFCDLL`*\
+Логическое значение, указывающее, является ли проект DLL-библиотекой MFC ( `TRUE` ) или нет ( `FALSE` ).
 
-*системстринг*<br/>
-Должен быть `System::String` , а проект должен быть скомпилирован с помощью/CLR.
+*`SystemString`*\
+Должен быть `System::String` , а проект должен быть скомпилирован с помощью `/clr` .
 
-*пстринг*<br/>
-Маркер для `CStringT` объекта.
+*`pString`*\
+Маркер для **`CStringT`** объекта.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
-Поскольку конструкторы копируют входные данные в новое выделенное хранилище, следует помнить, что могут возникнуть исключения памяти. Обратите внимание, что некоторые из этих конструкторов действуют как функции преобразования. Это позволяет заменить, например, LPTSTR, где `CStringT` ожидается объект.
+Поскольку конструкторы копируют входные данные в новое выделенное хранилище, могут возникнуть исключения памяти. Некоторые из этих конструкторов действуют как функции преобразования. Это позволяет заменить, например, **`LPTSTR`** место, где **`CStringT`** ожидается объект.
 
-- `CStringT`( `LPCSTR` `lpsz` ): Формирует Юникод `CStringT` из строки ANSI. Этот конструктор также можно использовать для загрузки строкового ресурса, как показано в примере ниже.
+- **`CStringT`**( `LPCSTR` `lpsz` ): Формирует Юникод **`CStringT`** из строки ANSI. Этот конструктор также можно использовать для загрузки строкового ресурса, как показано в примере ниже.
 
-- `CStringT(``LPCWSTR` `lpsz` ): Конструирует объект `CStringT` из строки в Юникоде.
+- `CStringT(``LPCWSTR` `lpsz` ): Конструирует объект **`CStringT`** из строки в Юникоде.
 
-- `CStringT`( `const unsigned char*` `psz` ): Позволяет создать объект `CStringT` из указателя на **`unsigned char`** .
-
-> [!NOTE]
-> Определите _CSTRING_DISABLE_NARROW_WIDE_CONVERSION макрос, чтобы отключить неявное преобразование строк между строками ANSI и Юникод. Макрос исключает из конструкторов компиляции, поддерживающих преобразование.
-
-Обратите внимание, что параметр *стрсрк* может быть `CStringT` либо `CThisSimpleString` объектом, либо. Для `CStringT` используйте один из экземпляров по умолчанию ( `CString` , `CStringA` или `CStringW` ); для `CThisSimpleString` Используйте **`this`** указатель. `CThisSimpleString` объявляет экземпляр [класса ксимплестрингт](../../atl-mfc-shared/reference/csimplestringt-class.md), который представляет собой класс строк меньшего размера с менее встроенными функциями, чем `CStringT` класс.
-
-Оператор перегрузки `CSimpleStringT<>&()` конструирует `CStringT` объект из `CSimpleStringT` объявления.
+- **`CStringT`**( `const unsigned char*` `psz` ): Позволяет создать объект **`CStringT`** из указателя на **`unsigned char`** .
 
 > [!NOTE]
-> Несмотря на то `CStringT` , что можно создавать экземпляры, содержащие внедренные символы NULL, для них рекомендуется использовать. Вызов методов и операторов для `CStringT` объектов, содержащих внедренные символы NULL, может привести к непредвиденным результатам.
+> Определите ` _CSTRING_DISABLE_NARROW_WIDE_CONVERSION` макрос, чтобы отключить неявное преобразование строк между строками ANSI и Юникод. Макрос исключает из конструкторов компиляции, поддерживающих преобразование.
+
+*`strSrc`* Параметр может быть либо объектом, **`CStringT`** либо `CThisSimpleString` . Для **`CStringT`** используйте один из экземпляров по умолчанию ( `CString` , `CStringA` или `CStringW` ); для `CThisSimpleString` Используйте **`this`** указатель. `CThisSimpleString` объявляет экземпляр [класса ксимплестрингт](../../atl-mfc-shared/reference/csimplestringt-class.md), который представляет собой класс строк меньшего размера с менее встроенными функциями, чем **`CStringT`** класс.
+
+Оператор перегрузки `CSimpleStringT<>&()` конструирует **`CStringT`** объект из `CSimpleStringT` объявления.
+
+> [!NOTE]
+> Несмотря на то **`CStringT`** , что можно создавать экземпляры, содержащие внедренные символы NULL, для них рекомендуется использовать. Вызов методов и операторов для **`CStringT`** объектов, содержащих внедренные символы NULL, может привести к непредвиденным результатам.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATLMFC_Utilities#112](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_7.cpp)]
 
-## <a name="cstringtcstringt"></a><a name="_dtorcstringt"></a> CStringT:: ~ CStringT
+## <a name="cstringtcstringt"></a><a name="_dtorcstringt"></a> `CStringT::~CStringT`
 
-Уничтожает `CStringT` объект.
+Уничтожает **`CStringT`** объект.
 
-```
+```cpp
 ~CStringT() throw();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
-Уничтожает `CStringT` объект.
+Уничтожает **`CStringT`** объект.
 
-## <a name="cstringtdelete"></a><a name="delete"></a> CStringT::D удалить
+## <a name="cstringtdelete"></a><a name="delete"></a> `CStringT::Delete`
 
 Удаляет символ или символы из строки, начинающейся с символа по указанному индексу.
 
-```
+```cpp
 int Delete(int iIndex, int nCount = 1);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*ииндекс*<br/>
-Отсчитываемый от нуля индекс первого символа в `CStringT` объекте, который необходимо удалить.
+*`iIndex`*\
+Отсчитываемый от нуля индекс первого символа в **`CStringT`** объекте, который необходимо удалить.
 
-*нкаунт*<br/>
+*`nCount`*\
 Число удаляемых символов.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Длина измененной строки.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
-Если *нкаунт* длиннее, чем строка, оставшаяся часть строки будет удалена.
+Если *`nCount`* длиннее, чем строка, оставшаяся часть строки будет удалена.
 
 ### <a name="example"></a>Пример
 
@@ -635,31 +635,31 @@ After: Soccer best,
     but hockey is quicker!
 ```
 
-## <a name="cstringtfind"></a><a name="find"></a> CStringT:: Find
+## <a name="cstringtfind"></a><a name="find"></a> `CStringT::Find`
 
 Ищет в этой строке первое совпадение символа или подстроки.
 
-```
+```cpp
 int Find(PCXSTR pszSub, int iStart=0) const throw();
 int Find(XCHAR ch, int iStart=0) const throw();
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*псзсуб*<br/>
+*`pszSub`*\
 Подстрока для поиска.
 
-*истарт*<br/>
+*`iStart`*\
 Индекс символа в строке, с которого начинается поиск, или значение 0, чтобы начать с начала.
 
-*канал*<br/>
+*`ch`*\
 Один символ для поиска.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Отсчитываемый от нуля индекс первого символа в этом `CStringT` объекте, соответствующего запрошенной подстроке или символам;-1, если не найдена подстрока или символ.
+Отсчитываемый от нуля индекс первого символа в этом **`CStringT`** объекте, который соответствует запрошенной подстроке или символам;-1, если не найдена подстрока или символ.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Функция перегружена, чтобы принимать как одиночные символы (аналогично функции времени выполнения `strchr` ), так и строки (аналогично `strstr` ).
 
@@ -667,34 +667,34 @@ int Find(XCHAR ch, int iStart=0) const throw();
 
 [!code-cpp[NVC_ATLMFC_Utilities#114](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_9.cpp)]
 
-## <a name="cstringtfindoneof"></a><a name="findoneof"></a> CStringT:: Финдонеоф
+## <a name="cstringtfindoneof"></a><a name="findoneof"></a> `CStringT::FindOneOf`
 
-Ищет в этой строке первый символ, совпадающий с любым символом, содержащимся в *псзчарсет*.
+Ищет в этой строке первый символ, совпадающий с любым символом, содержащимся в *`pszCharSet`* .
 
-```
+```cpp
 int FindOneOf(PCXSTR pszCharSet) const throw();
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*псзчарсет*<br/>
+*`pszCharSet`*\
 Строка, содержащая символы для сопоставления.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Отсчитываемый от нуля индекс первого символа в этой строке, который также находится в *псзчарсет*; -1, если совпадений нет.
+Отсчитываемый от нуля индекс первого символа в этой строке, который также имеет значение *`pszCharSet`* ;-1, если совпадений нет.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
-Находит первое вхождение любого из символов в *псзчарсет*.
+Находит первое вхождение любого из символов в *`pszCharSet`* .
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATLMFC_Utilities#115](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_10.cpp)]
 
-## <a name="cstringtformat"></a><a name="format"></a> CStringT:: Format
+## <a name="cstringtformat"></a><a name="format"></a> `CStringT::Format`
 
-Записывает форматированные данные в, `CStringT` точно так же, как [sprintf_s](../../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md) форматирует данные в массив символов в стиле C.
+Записывает форматированные данные в, **`CStringT`** точно так же, как [sprintf_s](../../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md) форматирует данные в массив символов в стиле C.
 
 ```cpp
 void __cdecl Format(UINT nFormatID, [, argument]...);
@@ -703,18 +703,18 @@ void __cdecl Format(PCXSTR pszFormat,  [, argument] ...);
 
 ### <a name="parameters"></a>Параметры
 
-*нформатид*<br/>
+*`nFormatID`*\
 Строковый идентификатор ресурса, содержащий строку управления форматированием.
 
-*псзформат*<br/>
+*`pszFormat`*\
 Строка управления форматированием.
 
-*argument*<br/>
+*`argument`*\
 Необязательные аргументы.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
-Эта функция форматирует и сохраняет ряд символов и значений в `CStringT` . Каждый необязательный аргумент (при его наличии) преобразуется и выводится в соответствии с соответствующей спецификацией формата в *псзформат* или из строкового ресурса, определенного параметром *нформатид*.
+Эта функция форматирует и сохраняет ряд символов и значений в **`CStringT`** . Каждый необязательный аргумент (при его наличии) преобразуется и выводится в соответствии с соответствующей спецификацией формата в *`pszFormat`* или из строкового ресурса, определенного параметром *`nFormatID`* .
 
 Вызов завершится ошибкой, если сам строковый объект предлагается в качестве параметра для `Format` . Например, следующий код приведет к непредсказуемым результатам:
 
@@ -726,7 +726,7 @@ void __cdecl Format(PCXSTR pszFormat,  [, argument] ...);
 
 [!code-cpp[NVC_ATLMFC_Utilities#117](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_12.cpp)]
 
-## <a name="cstringtformatmessage"></a><a name="formatmessage"></a> CStringT:: FormatMessage
+## <a name="cstringtformatmessage"></a><a name="formatmessage"></a> `CStringT::FormatMessage`
 
 Форматирует строку сообщения.
 
@@ -737,29 +737,29 @@ void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
 
 ### <a name="parameters"></a>Параметры
 
-*нформатид*<br/>
+*`nFormatID`*\
 Строковый идентификатор ресурса, содержащий неформатированный текст сообщения.
 
-*псзформат*<br/>
+*`pszFormat`*\
 Указывает на строку управления форматированием. Он будет проверяться на наличие вставок и отформатировано соответствующим образом. Строка формата похожа на строки формата в стиле *printf*-Style, за исключением того, что она позволяет вставлять параметры в произвольный порядок.
 
-*argument*<br/>
+*`argument`*\
 Необязательные аргументы.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
-Для функции требуется определение сообщения в качестве входных данных. Определение сообщения определяется с помощью *псзформат* или из строкового ресурса, определенного параметром *нформатид*. Функция копирует форматированный текст сообщения в `CStringT` объект, обрабатывая все внедренные последовательности вставки по запросу.
+Для функции требуется определение сообщения в качестве входных данных. Определение сообщения определяется *`pszFormat`* или из строкового ресурса, определенного параметром *`nFormatID`* . Функция копирует форматированный текст сообщения в **`CStringT`** объект, обрабатывая все внедренные последовательности вставки по запросу.
 
 > [!NOTE]
 > `FormatMessage` пытается выделить системную память для вновь отформатированной строки. В случае сбоя этой попытки автоматически создается исключение памяти.
 
-Каждая Вставка должна иметь соответствующий параметр после параметра *псзформат* или *нформатид* . В тексте сообщения для динамического форматирования сообщения поддерживаются несколько escape-последовательностей. Дополнительные сведения см. в описании функции [FormatMessage](/windows/win32/api/winbase/nf-winbase-formatmessage) Windows в Windows SDK.
+Каждая Вставка должна иметь соответствующий параметр после *`pszFormat`* *`nFormatID`* параметра или. В тексте сообщения для динамического форматирования сообщения поддерживаются несколько escape-последовательностей. Дополнительные сведения см. в описании функции [FormatMessage](/windows/win32/api/winbase/nf-winbase-formatmessage) Windows в Windows SDK.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATLMFC_Utilities#118](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_13.cpp)]
 
-## <a name="cstringtformatmessagev"></a><a name="formatmessagev"></a> CStringT:: Форматмессажев
+## <a name="cstringtformatmessagev"></a><a name="formatmessagev"></a> `CStringT::FormatMessageV`
 
 Форматирует строку сообщения с помощью переменного списка аргументов.
 
@@ -769,22 +769,22 @@ void FormatMessageV(PCXSTR pszFormat, va_list* pArgList);
 
 ### <a name="parameters"></a>Параметры
 
-*псзформат*<br/>
+*`pszFormat`*\
 Указывает на строку управления форматированием. Он будет проверяться на наличие вставок и отформатировано соответствующим образом. Строка формата похожа на строки формата в стиле функции времени выполнения `printf` , за исключением того, что она позволяет вставлять параметры в произвольный порядок.
 
-*парглист*<br/>
+*`pArgList`*\
 Указатель на список аргументов.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
-Функции требуется определение сообщения в качестве входных данных, определяемое *псзформат*. Функция копирует форматированный текст сообщения и переменный список аргументов в `CStringT` объект, обрабатывая все внедренные последовательности вставки по запросу.
+Функции требуется определение сообщения в качестве входных данных, определяемое *`pszFormat`* . Функция копирует форматированный текст сообщения и переменный список аргументов в **`CStringT`** объект, обрабатывая все внедренные последовательности вставки по запросу.
 
 > [!NOTE]
 > `FormatMessageV` вызывает метод [CStringT:: FormatMessage](#formatmessage), который пытается выделить системную память для вновь отформатированной строки. В случае сбоя этой попытки автоматически создается исключение памяти.
 
 Дополнительные сведения см. в описании функции [FormatMessage](/windows/win32/api/winbase/nf-winbase-formatmessage) Windows в Windows SDK.
 
-## <a name="cstringtformatv"></a><a name="formatv"></a> CStringT:: Форматв
+## <a name="cstringtformatv"></a><a name="formatv"></a> `CStringT::FormatV`
 
 Форматирует строку сообщения с помощью переменного списка аргументов.
 
@@ -794,15 +794,15 @@ void FormatV(PCXSTR pszFormat, va_list args);
 
 ### <a name="parameters"></a>Параметры
 
-*псзформат*<br/>
+*`pszFormat`*\
 Указывает на строку управления форматированием. Он будет проверяться на наличие вставок и отформатировано соответствующим образом. Строка формата похожа на строки формата в стиле функции времени выполнения `printf` , за исключением того, что она позволяет вставлять параметры в произвольный порядок.
 
-*args*<br/>
+*`args`*\
 Указатель на список аргументов.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
-Записывает отформатированную строку и переменный список аргументов в `CStringT` строку таким же образом, чтобы `vsprintf_s` форматировать данные в массив символов в стиле C.
+Записывает отформатированную строку и переменный список аргументов в **`CStringT`** строку таким же образом, чтобы `vsprintf_s` форматировать данные в массив символов в стиле C.
 
 ### <a name="example"></a>Пример
 
@@ -810,24 +810,24 @@ void FormatV(PCXSTR pszFormat, va_list args);
 
 [!code-cpp[NVC_ATLMFC_Utilities#120](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_15.cpp)]
 
-## <a name="cstringtgetenvironmentvariable"></a><a name="getenvironmentvariable"></a> CStringT:: GetEnvironmentVariable
+## <a name="cstringtgetenvironmentvariable"></a><a name="getenvironmentvariable"></a> `CStringT::GetEnvironmentVariable`
 
 Присваивает строке значение указанной переменной среды.
 
-```
+```cpp
 BOOL GetEnvironmentVariable(PCXSTR pszVar);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*псзвар*<br/>
+*`pszVar`*\
 Указатель на строку, завершающуюся нулем, которая указывает переменную среды.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Имеет ненулевое значение в случае успешного выполнения, иначе — 0.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Получает значение указанной переменной из блока среды вызывающего процесса. Значение в виде строки символов, завершающейся нулем.
 
@@ -835,70 +835,70 @@ BOOL GetEnvironmentVariable(PCXSTR pszVar);
 
 [!code-cpp[NVC_ATLMFC_Utilities#121](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_16.cpp)]
 
-## <a name="cstringtinsert"></a><a name="insert"></a> CStringT:: INSERT
+## <a name="cstringtinsert"></a><a name="insert"></a> `CStringT::Insert`
 
 Вставляет в строку один символ или подстроку с заданным индексом.
 
-```
+```cpp
 int Insert(int iIndex, PCXSTR psz);
 int Insert(int iIndex, XCHAR ch);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*ииндекс*<br/>
+*`iIndex`*\
 Индекс символа, перед которым будет выполнена вставка.
 
-*псз*<br/>
+*`psz`*\
 Указатель на подстроку для вставки.
 
-*канал*<br/>
+*`ch`*\
 Вставляемый символ.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Длина измененной строки.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
-Параметр *ииндекс* определяет первый символ, который будет перемещен, чтобы освободить место для символа или подстроки. Если *ниндекс* равен нулю, вставка выполняется перед всей строкой. Если *ниндекс* превышает длину строки, функция объединяет текущую строку и новый материал, предоставляемый *CH* или *ПСЗ*.
+*`iIndex`* Параметр определяет первый символ, который будет перемещен, чтобы освободить место для символа или подстроки. Если *ниндекс* равен нулю, вставка выполняется перед всей строкой. Если *ниндекс* превышает длину строки, функция объединит текущую строку и новый материал, предоставленный либо либо *`ch`* *`psz`* .
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATLMFC_Utilities#122](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_17.cpp)]
 
-## <a name="cstringtleft"></a><a name="left"></a> CStringT:: Left
+## <a name="cstringtleft"></a><a name="left"></a> `CStringT::Left`
 
-Извлекает крайние левые *нкаунт* символы из этого `CStringT` объекта и возвращает копию извлеченной подстроки.
+Извлекает крайние левые *`nCount`* символы из этого **`CStringT`** объекта и возвращает копию извлеченной подстроки.
 
-```
+```cpp
 CStringT Left(int nCount) const;
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*нкаунт*<br/>
-Число символов, извлекаемых из данного объекта `CStringT`.
+*`nCount`*\
+Число символов, извлекаемых из этого **`CStringT`** объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Объект `CStringT`, содержащий копию указанного диапазона символов. Возвращенный объект `CStringT` может быть пустым.
+**`CStringT`** Объект, содержащий копию указанного диапазона символов. Возвращаемый **`CStringT`** объект может быть пустым.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
-Если *нкаунт* превышает длину строки, извлекается вся строка. Функция `Left` аналогична функции `Left` в языке Basic.
+Если *`nCount`* превышает длину строки, извлекается вся строка. Функция `Left` аналогична функции `Left` в языке Basic.
 
-Для многобайтовых кодировок (MBCS) *нкаунт* обрабатывает каждую 8-разрядную последовательность как символ, поэтому *нкаунт* возвращает число многобайтовых символов, умноженное на два.
+Для многобайтовых кодировок (MBCS) *`nCount`* обрабатывает каждую 8-разрядную последовательность как символ, поэтому *`nCount`* возвращает число многобайтовых символов, умноженное на два.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATLMFC_Utilities#123](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_18.cpp)]
 
-## <a name="cstringtloadstring"></a><a name="loadstring"></a> CStringT:: Лоадстринг
+## <a name="cstringtloadstring"></a><a name="loadstring"></a> `CStringT::LoadString`
 
-Считывает строковый ресурс Windows, идентифицируемый *NID*, в существующий `CStringT` объект.
+Считывает строковый ресурс Windows, идентифицируемый *NID*, в существующий **`CStringT`** объект.
 
-```
+```cpp
 BOOL LoadString(HINSTANCE hInstance, UINT nID, WORD wLanguageID);
 BOOL LoadString(HINSTANCE hInstance, UINT nID);
 BOOL LoadString(UINT nID);
@@ -906,20 +906,20 @@ BOOL LoadString(UINT nID);
 
 ### <a name="parameters"></a>Параметры
 
-*hInstance*<br/>
+*`hInstance`*\
 Маркер экземпляра модуля.
 
-*nID*<br/>
+*`nID`*\
 Идентификатор ресурса строки Windows.
 
-*влангуажеид*<br/>
+*`wLanguageID`*\
 Язык строкового ресурса.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Ненулевое значение, если загрузка ресурса прошла успешно; в противном случае — 0.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Загружает строковый ресурс (*NID*) из указанного модуля (*HINSTANCE*), используя указанный язык (*влангуаже*).
 
@@ -927,11 +927,11 @@ BOOL LoadString(UINT nID);
 
 [!code-cpp[NVC_ATLMFC_Utilities#124](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_19.cpp)]
 
-## <a name="cstringtmakelower"></a><a name="makelower"></a> CStringT:: Макеловер
+## <a name="cstringtmakelower"></a><a name="makelower"></a> `CStringT::MakeLower`
 
-Преобразует `CStringT` объект в строку нижнего регистра.
+Преобразует **`CStringT`** объект в строку нижнего регистра.
 
-```
+```cpp
 CStringT& MakeLower();
 ```
 
@@ -943,11 +943,11 @@ CStringT& MakeLower();
 
 [!code-cpp[NVC_ATLMFC_Utilities#125](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_20.cpp)]
 
-## <a name="cstringtmakereverse"></a><a name="makereverse"></a> CStringT:: Макереверсе
+## <a name="cstringtmakereverse"></a><a name="makereverse"></a> `CStringT::MakeReverse`
 
-Изменяет порядок символов в объекте на обратный `CStringT` .
+Изменяет порядок символов в объекте на обратный **`CStringT`** .
 
-```
+```cpp
 CStringT& MakeReverse();
 ```
 
@@ -959,11 +959,11 @@ CStringT& MakeReverse();
 
 [!code-cpp[NVC_ATLMFC_Utilities#126](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_21.cpp)]
 
-## <a name="cstringtmakeupper"></a><a name="makeupper"></a> CStringT:: Макеуппер
+## <a name="cstringtmakeupper"></a><a name="makeupper"></a> `CStringT::MakeUpper`
 
-Преобразует `CStringT` объект в строку в верхнем регистре.
+Преобразует **`CStringT`** объект в строку в верхнем регистре.
 
-```
+```cpp
 CStringT& MakeUpper();
 ```
 
@@ -977,63 +977,62 @@ CStringT& MakeUpper();
 
 [!code-cpp[NVC_ATLMFC_Utilities#127](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_22.cpp)]
 
-## <a name="cstringtmid"></a><a name="mid"></a> CStringT:: mid
+## <a name="cstringtmid"></a><a name="mid"></a> `CStringT::Mid`
 
-Извлекает подстроку длиной *нкаунт* символов из этого `CStringT` объекта, начиная с позиции *ифирст* (с нуля).
+Извлекает подстроку *`nCount`* символов длины из этого **`CStringT`** объекта, начиная с позиции (с *`iFirst`* отсчетом от нуля).
 
-```
+```cpp
 CStringT Mid(int iFirst, int nCount) const;
 CStringT Mid(int iFirst) const;
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*ифирст*<br/>
-Отсчитываемый от нуля индекс первого символа в этом `CStringT` объекте, который должен быть включен в извлеченную подстроку.
+*`iFirst`*\
+Отсчитываемый от нуля индекс первого символа в этом **`CStringT`** объекте, который должен быть включен в извлеченную подстроку.
 
-*нкаунт*<br/>
-Число символов, извлекаемых из данного объекта `CStringT`. Если этот параметр не указан, извлекается оставшаяся часть строки.
+*`nCount`*\
+Число символов, извлекаемых из этого **`CStringT`** объекта. Если этот параметр не указан, то извлекается остальная часть строки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Объект `CStringT`, содержащий копию указанного диапазона символов. Обратите внимание, что возвращаемый `CStringT` объект может быть пустым.
+**`CStringT`** Объект, содержащий копию указанного диапазона символов. Возвращаемый **`CStringT`** объект может быть пустым.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Функция возвращает копию извлеченной подстроки. `Mid` функция аналогична базовой функции Mid (за исключением того, что индексы в базовых основаны на единицу).
 
-Для многобайтовых кодировок (MBCS) *нкаунт* ссылается на каждый 8-разрядный символ; Таким образом, ведущий и младший байт в одном многобайтном символе считаются двумя символами.
+Для многобайтовых кодировок (MBCS) *`nCount`* ссылается на каждый 8-разрядный символ, т. е. ведущий и младший байт в одном многобайтовой кодировке считаются двумя символами.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATLMFC_Utilities#128](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_23.cpp)]
 
-## <a name="cstringtoemtoansi"></a><a name="oemtoansi"></a> CStringT:: Оемтоанси
+## <a name="cstringtoemtoansi"></a><a name="oemtoansi"></a> `CStringT::OemToAnsi`
 
-Преобразует все символы в этом `CStringT` объекте из набора символов OEM в кодировку ANSI.
+Преобразует все символы в этом **`CStringT`** объекте из набора символов OEM в кодировку ANSI.
 
-```cpp
+```cppcpp
 void OemToAnsi();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
-Эта функция недоступна, если определен _UNICODE.
+Эта функция недоступна `_UNICODE` , если определена.
 
 ### <a name="example"></a>Пример
 
 См. пример для [CStringT:: анситуем](#ansitooem).
 
-## <a name="cstringtoperator-"></a><a name="operator_eq"></a> CStringT:: operator =
+## <a name="cstringtoperator-"></a><a name="operator_eq"></a> `CStringT::operator =`
 
 Назначает новое значение строке.
 
-```
+```cpp
 CStringT& operator=(const CStringT& strSrc);
 
 template<bool bMFCDLL>
 CStringT& operator=(const CSimpleStringT<BaseType, bMFCDLL>& str);
-
 CStringT& operator=(PCXSTR pszSrc);
 CStringT& operator=(PCYSTR pszSrc);
 CStringT& operator=(const unsigned char* pszSrc);
@@ -1044,41 +1043,41 @@ CStringT& operator=(const VARIANT& var);
 
 ### <a name="parameters"></a>Параметры
 
-*стрсрк*<br/>
-Объект, `CStringT` присваиваемый этой строке.
+*`strSrc`*\
+Объект, **`CStringT`** присваиваемый этой строке.
 
-*str*<br/>
+*`str`*\
 Ссылка на объект `CThisSimpleString`.
 
-*бмфкдлл*<br/>
+*`bMFCDLL`*\
 Логическое значение, указывающее, является ли проект библиотекой DLL MFC.
 
-*BaseType*<br/>
+*`BaseType`*\
 Базовый тип строки.
 
-*var*<br/>
+*`var`*\
 Объект Variant, присваиваемый этой строке.
 
-*канал*<br/>
+*`ch`*\
 Символ ANSI или Unicode, присваиваемый строке.
 
-*псзсрк*<br/>
+*`pszSrc`*\
 Указатель на исходную строку, которой присваивается значение.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
-Оператор присваивания принимает другой `CStringT` объект, указатель на символ или один символ. Следует иметь в виду, что при использовании этого оператора могут возникнуть исключения памяти, так как может быть выделено новое хранилище.
+Оператор присваивания принимает другой **`CStringT`** объект, указатель на символ или один символ. Исключения памяти могут возникать при использовании этого оператора, так как может быть выделено новое хранилище.
 
 Дополнительные сведения о см `CThisSimpleString` . в подразделе "Примечания" раздела [CStringT:: CStringT](#cstringt).
 
 > [!NOTE]
-> Несмотря на то `CStringT` , что можно создавать экземпляры, содержащие внедренные символы NULL, для них рекомендуется использовать. Вызов методов и операторов для `CStringT` объектов, содержащих внедренные символы NULL, может привести к непредвиденным результатам.
+> Несмотря на то **`CStringT`** , что можно создавать экземпляры, содержащие внедренные символы NULL, для них рекомендуется использовать. Вызов методов и операторов для **`CStringT`** объектов, содержащих внедренные символы NULL, может привести к непредвиденным результатам.
 
-## <a name="cstringtoperator-"></a><a name="operator_add"></a> CStringT:: operator +
+## <a name="cstringtoperator-"></a><a name="operator_add"></a> `CStringT::operator +`
 
 Сцепляет две строки или символ и строку.
 
-```
+```cpp
 friend CStringT operator+(const CStringT& str1, const CStringT& str2);
 friend CStringT operator+(const CStringT& str1, PCXSTR psz2);
 friend CStringT operator+(PCXSTR psz1, const CStringT& str2,);
@@ -1090,40 +1089,40 @@ friend CStringT operator+(wchar_t ch1, const CStringT& str2,);
 
 ### <a name="parameters"></a>Параметры
 
-*ch1*<br/>
+*`ch1`*\
 Символ ANSI или Unicode для сцепления со строкой.
 
-*ch2*<br/>
+*`ch2`*\
 Символ ANSI или Unicode для сцепления со строкой.
 
-*str1*<br/>
-Объект `CStringT` для сцепления со строкой или символом.
+*`str1`*\
+Объект **`CStringT`** для сцепления со строкой или символом.
 
-*str2*<br/>
-Объект `CStringT` для сцепления со строкой или символом.
+*`str2`*\
+Объект **`CStringT`** для сцепления со строкой или символом.
 
-*psz1*<br/>
+*`psz1`*\
 Указатель на строку, завершающуюся нулем, для сцепления со строкой или символом.
 
-*psz2*<br/>
+*`psz2`*\
 Указатель на строку, которую необходимо сцепить со строкой или символом.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
-Существует семь форм перегруженных `CStringT::operator+` функций функции. Первая версия объединяет два существующих `CStringT` объекта. Следующие два сцепления `CStringT` объекта и строки с завершающим нулем. Следующие два сцепления `CStringT` объекта и СИМВОЛА ANSI. Последние два присоединяются к `CStringT` объекту и символу Юникода.
+Существует семь форм перегруженных `CStringT::operator+` функций функции. Первая версия объединяет два существующих **`CStringT`** объекта. Следующие два сцепления **`CStringT`** объекта и строки с завершающим нулем. Следующие два сцепления **`CStringT`** объекта и СИМВОЛА ANSI. Последние два присоединяются к **`CStringT`** объекту и символу Юникода.
 
 > [!NOTE]
-> Несмотря на то `CStringT` , что можно создавать экземпляры, содержащие внедренные символы NULL, для них рекомендуется использовать. Вызов методов и операторов для `CStringT` объектов, содержащих внедренные символы NULL, может привести к непредвиденным результатам.
+> Несмотря на то **`CStringT`** , что можно создавать экземпляры, содержащие внедренные символы NULL, для них рекомендуется использовать. Вызов методов и операторов для **`CStringT`** объектов, содержащих внедренные символы NULL, может привести к непредвиденным результатам.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATLMFC_Utilities#140](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_24.cpp)]
 
-## <a name="cstringtoperator-"></a><a name="operator_add_eq"></a> CStringT:: operator + =
+## <a name="cstringtoperator-"></a><a name="operator_add_eq"></a> `CStringT::operator +=`
 
 Сцепляет символы в конец строки.
 
-```
+```cpp
 CStringT& operator+=(const CThisSimpleString& str);
 
 template<bool bMFCDLL>
@@ -1141,45 +1140,45 @@ CStringT& operator+=(const VARIANT& var);
 
 ### <a name="parameters"></a>Параметры
 
-*str*<br/>
+*`str`*\
 Ссылка на объект `CThisSimpleString`.
 
-*бмфкдлл*<br/>
+*`bMFCDLL`*\
 Логическое значение, указывающее, является ли проект библиотекой DLL MFC.
 
-*BaseType*<br/>
+*`BaseType`*\
 Базовый тип строки.
 
-*var*<br/>
+*`var`*\
 Объект Variant для сцепления с этой строкой.
 
-*канал*<br/>
+*`ch`*\
 Символ ANSI или Unicode для сцепления со строкой.
 
-*псзсрк*<br/>
+*`pszSrc`*\
 Указатель на исходную строку, в которой выполняется сцепление.
 
-*стрсрк*<br/>
-Объект `CStringT` для сцепления с этой строкой.
+*`strSrc`*\
+Объект **`CStringT`** для сцепления с этой строкой.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
-Оператор принимает другой `CStringT` объект, указатель на символ или один символ. Следует иметь в виду, что исключения памяти могут возникать при каждом использовании оператора объединения, так как для символов, добавляемых в этот объект, можно выделить новое хранилище `CStringT` .
+Оператор принимает другой **`CStringT`** объект, указатель на символ или один символ. Исключения памяти могут возникать при использовании этого оператора объединения, так как для символов, добавляемых в этот объект, можно выделить новое хранилище **`CStringT`** .
 
 Дополнительные сведения о см `CThisSimpleString` . в подразделе "Примечания" раздела [CStringT:: CStringT](#cstringt).
 
 > [!NOTE]
-> Несмотря на то `CStringT` , что можно создавать экземпляры, содержащие внедренные символы NULL, для них рекомендуется использовать. Вызов методов и операторов для `CStringT` объектов, содержащих внедренные символы NULL, может привести к непредвиденным результатам.
+> Несмотря на то **`CStringT`** , что можно создавать экземпляры, содержащие внедренные символы NULL, для них рекомендуется использовать. Вызов методов и операторов для **`CStringT`** объектов, содержащих внедренные символы NULL, может привести к непредвиденным результатам.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATLMFC_Utilities#141](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_25.cpp)]
 
-## <a name="cstringtoperator-"></a><a name="operator_eq_eq"></a> CStringT:: operator = =
+## <a name="cstringtoperator-"></a><a name="operator_eq_eq"></a> `CStringT::operator ==`
 
 Определяет, являются ли две строки логически равными.
 
-```
+```cpp
 friend bool operator==(const CStringT& str1, const CStringT& str2) throw();
 friend bool operator==(const CStringT& str1, PCXSTR psz2) throw();
 friend bool operator==(const CStringT& str1, PCYSTR psz2) throw();
@@ -1191,37 +1190,37 @@ friend bool operator==(XCHAR ch1, const CStringT& str2,) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*ch1*<br/>
+*`ch1`*\
 Символ ANSI или Unicode для сравнения.
 
-*ch2*<br/>
+*`ch2`*\
 Символ ANSI или Unicode для сравнения.
 
-*str1*<br/>
-`CStringT`Для сравнения.
+*`str1`*\
+**`CStringT`** Для сравнения.
 
-*str2*<br/>
-`CStringT`Для сравнения.
+*`str2`*\
+**`CStringT`** Для сравнения.
 
-*psz1*<br/>
+*`psz1`*\
 Указатель на строку, завершающуюся нулем, для сравнения.
 
-*psz2*<br/>
+*`psz2`*\
 Указатель на строку, завершающуюся нулем, для сравнения.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
-Проверяет, равен ли строка или символ в левой части строке или символу справа, и соответственно возвращает значение TRUE или FALSE.
+Проверяет, равна ли строка или символ в левой части строке или символу справа, и возвращает `TRUE` или `FALSE` соответственно.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATLMFC_Utilities#142](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_26.cpp)]
 
-## <a name="cstringtoperator-"></a><a name="operator_neq"></a> CStringT:: operator! =
+## <a name="cstringtoperator-"></a><a name="operator_neq"></a> `CStringT::operator !=`
 
 Определяет, логически не равны ли две строки.
 
-```
+```cpp
 friend bool operator!=(const CStringT& str1, const CStringT& str2) throw();
 friend bool operator!=(const CStringT& str1, PCXSTR psz2) throw();
 friend bool operator!=(const CStringT& str1, PCYSTR psz2) throw();
@@ -1233,37 +1232,37 @@ friend bool operator!=(XCHAR ch1, const CStringT& str2,) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*ch1*<br/>
+*`ch1`*\
 Символ ANSI или Unicode для сцепления со строкой.
 
-*ch2*<br/>
+*`ch2`*\
 Символ ANSI или Unicode для сцепления со строкой.
 
-*str1*<br/>
-`CStringT`Для сравнения.
+*`str1`*\
+**`CStringT`** Для сравнения.
 
-*str2*<br/>
-`CStringT`Для сравнения.
+*`str2`*\
+**`CStringT`** Для сравнения.
 
-*psz1*<br/>
+*`psz1`*\
 Указатель на строку, завершающуюся нулем, для сравнения.
 
-*psz2*<br/>
+*`psz2`*\
 Указатель на строку, завершающуюся нулем, для сравнения.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
-Проверяет, не равен ли строка или символ в левой части строке или символу в правой части.
+Проверяет, не равен ли строка или символ в левой части строке или символу справа.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATLMFC_Utilities#143](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_27.cpp)]
 
-## <a name="cstringtoperator-lt"></a><a name="operator_lt"></a> CStringT:: operator &lt;
+## <a name="cstringtoperator-"></a><a name="operator_lt"></a> `CStringT::operator <`
 
 Определяет, меньше ли строка в левой части оператора, чем строка с правой стороны.
 
-```
+```cpp
 friend bool operator<(const CStringT& str1, const CStringT& str2) throw();
 friend bool operator<(const CStringT& str1, PCXSTR psz2) throw();
 friend bool operator<(PCXSTR psz1, const CStringT& str2) throw();
@@ -1271,19 +1270,19 @@ friend bool operator<(PCXSTR psz1, const CStringT& str2) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*str1*<br/>
-`CStringT`Для сравнения.
+*`str1`*\
+**`CStringT`** Для сравнения.
 
-*str2*<br/>
-`CStringT`Для сравнения.
+*`str2`*\
+**`CStringT`** Для сравнения.
 
-*psz1*<br/>
+*`psz1`*\
 Указатель на строку, завершающуюся нулем, для сравнения.
 
-*psz2*<br/>
+*`psz2`*\
 Указатель на строку, завершающуюся нулем, для сравнения.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Лексикографическом сравнение строк, символ по символу до:
 
@@ -1297,11 +1296,11 @@ friend bool operator<(PCXSTR psz1, const CStringT& str2) throw();
 
 [!code-cpp[NVC_ATLMFC_Utilities#144](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_28.cpp)]
 
-## <a name="cstringtoperator-gt"></a><a name="operator_gt"></a> CStringT:: operator &gt;
+## <a name="cstringtoperator-"></a><a name="operator_gt"></a> `CStringT::operator >`
 
 Определяет, больше ли строка в левой части оператора, чем строка с правой стороны.
 
-```
+```cpp
 friend bool operator>(const CStringT& str1, const CStringT& str2) throw();
 friend bool operator>(const CStringT& str1, PCXSTR psz2) throw();
 friend bool operator>(PCXSTR psz1, const CStringT& str2) throw();
@@ -1309,19 +1308,19 @@ friend bool operator>(PCXSTR psz1, const CStringT& str2) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*str1*<br/>
-`CStringT`Для сравнения.
+*`str1`*\
+**`CStringT`** Для сравнения.
 
-*str2*<br/>
-`CStringT`Для сравнения.
+*`str2`*\
+**`CStringT`** Для сравнения.
 
-*psz1*<br/>
+*`psz1`*\
 Указатель на строку, завершающуюся нулем, для сравнения.
 
-*psz2*<br/>
+*`psz2`*\
 Указатель на строку, завершающуюся нулем, для сравнения.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Лексикографическом сравнение строк, символ по символу до:
 
@@ -1335,11 +1334,11 @@ friend bool operator>(PCXSTR psz1, const CStringT& str2) throw();
 
 [!code-cpp[NVC_ATLMFC_Utilities#145](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_29.cpp)]
 
-## <a name="cstringtoperator-lt"></a><a name="operator_lt_eq"></a> CStringT:: operator &lt;=
+## <a name="cstringtoperator-"></a><a name="operator_lt_eq"></a> `CStringT::operator <=`
 
 Определяет, является ли строка в левой части оператора меньше или равна строке в правой части.
 
-```
+```cpp
 friend bool operator<=(const CStringT& str1, const CStringT& str2) throw();
 friend bool operator<=(const CStringT& str1, PCXSTR psz2) throw();
 friend bool operator<=(PCXSTR psz1, const CStringT& str2) throw();
@@ -1347,19 +1346,19 @@ friend bool operator<=(PCXSTR psz1, const CStringT& str2) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*str1*<br/>
-`CStringT`Для сравнения.
+*`str1`*\
+**`CStringT`** Для сравнения.
 
-*str2*<br/>
-`CStringT`Для сравнения.
+*`str2`*\
+**`CStringT`** Для сравнения.
 
-*psz1*<br/>
+*`psz1`*\
 Указатель на строку, завершающуюся нулем, для сравнения.
 
-*psz2*<br/>
+*`psz2`*\
 Указатель на строку, завершающуюся нулем, для сравнения.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Лексикографическом сравнение строк, символ по символу до:
 
@@ -1373,11 +1372,11 @@ friend bool operator<=(PCXSTR psz1, const CStringT& str2) throw();
 
 [!code-cpp[NVC_ATLMFC_Utilities#146](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_30.cpp)]
 
-## <a name="cstringtoperator-gt"></a><a name="operator_gt_eq"></a> CStringT:: operator &gt;=
+## <a name="cstringtoperator-"></a><a name="operator_gt_eq"></a> `CStringT::operator >=`
 
 Определяет, является ли строка в левой части оператора больше или равна строке в правой части.
 
-```
+```cpp
 friend bool operator>=(const CStringT& str1, const CStringT& str2) throw();
 friend bool operator>=(const CStringT& str1, PCXSTR psz2) throw();
 friend bool operator>=(PCXSTR psz1, const CStringT& str2) throw();
@@ -1385,19 +1384,19 @@ friend bool operator>=(PCXSTR psz1, const CStringT& str2) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*str1*<br/>
-`CStringT`Для сравнения.
+*`str1`*\
+**`CStringT`** Для сравнения.
 
-*str2*<br/>
-`CStringT`Для сравнения.
+*`str2`*\
+**`CStringT`** Для сравнения.
 
-*psz1*<br/>
+*`psz1`*\
 Указатель на строку для сравнения.
 
-*psz2*<br/>
+*`psz2`*\
 Указатель на строку для сравнения.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Лексикографическом сравнение строк, символ по символу до:
 
@@ -1411,24 +1410,24 @@ friend bool operator>=(PCXSTR psz1, const CStringT& str2) throw();
 
 [!code-cpp[NVC_ATLMFC_Utilities#147](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_31.cpp)]
 
-## <a name="cstringtremove"></a><a name="remove"></a> CStringT:: Remove
+## <a name="cstringtremove"></a><a name="remove"></a> `CStringT::Remove`
 
 Удаляет все экземпляры указанного символа из строки.
 
-```
+```cpp
 int Remove(XCHAR chRemove);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*чремове*<br/>
+*`chRemove`*\
 Символ, удаляемый из строки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Число символов, удаленных из строки. Нуль, если строка не изменяется.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 При сравнении символов учитывается регистр.
 
@@ -1436,38 +1435,38 @@ int Remove(XCHAR chRemove);
 
 [!code-cpp[NVC_ATLMFC_Utilities#129](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_32.cpp)]
 
-## <a name="cstringtreplace"></a><a name="replace"></a> CStringT:: Replace
+## <a name="cstringtreplace"></a><a name="replace"></a> `CStringT::Replace`
 
-Существует две версии `Replace` . Первая версия заменяет одну или несколько копий подстроки с помощью другой подстроки. Обе подстроки завершаются нулем. Вторая версия заменяет одну или несколько копий символа, используя другой символ. Обе версии работают с символьными данными, хранящимися в `CStringT` .
+Существует две версии `Replace` . Первая версия заменяет одну или несколько копий подстроки с помощью другой подстроки. Обе подстроки завершаются нулем. Вторая версия заменяет одну или несколько копий символа, используя другой символ. Обе версии работают с символьными данными, хранящимися в **`CStringT`** .
 
-```
+```cpp
 int Replace(PCXSTR pszOld, PCXSTR pszNew);
 int Replace(XCHAR chOld, XCHAR chNew);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*псзолд*<br/>
-Указатель на строку, завершающуюся нулем, которую необходимо заменить на *псзнев*.
+*`pszOld`*\
+Указатель на строку, завершающуюся нулем, которую необходимо заменить на *`pszNew`* .
 
-*псзнев*<br/>
-Указатель на строку, завершающуюся нулем, которая заменяет *псзолд*.
+*`pszNew`*\
+Указатель на строку, завершающуюся нулем, которая заменяет *`pszOld`* .
 
-*чолд*<br/>
-Символ, заменяемый *чнев*.
+*`chOld`*\
+Символ, который должен быть заменен *`chNew`* .
 
-*чнев*<br/>
-Символ, заменяющий *чолд*.
+*`chNew`*\
+Символ, заменяющий *`chOld`* .
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает количество замененных экземпляров символа или подстроки или нуль, если строка не была изменена.
+Возвращает количество замененных экземпляров символа или подстроки или нуль, если строка не изменяется.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
-`Replace` может изменить длину строки, так как *псзнев* и *псзолд* не должны иметь одинаковую длину, и несколько копий старой подстроки можно изменить на новую. Функция выполняет совпадение с учетом регистра.
+`Replace` может изменить длину строки, так как она *`pszNew`* *`pszOld`* не должна иметь одинаковую длину, и несколько копий старой подстроки можно изменить на новую. Функция выполняет совпадение с учетом регистра.
 
-Примеры `CStringT` экземпляров: `CString` , `CStringA` и `CStringW` .
+Примеры **`CStringT`** экземпляров: `CString` , `CStringA` и `CStringW` .
 
 Для `CStringA` `Replace` параметр работает с символами ANSI или многобайтовой кодировкой (MBCS). Для `CStringW` службы `Replace` работает с расширенными символами.
 
@@ -1475,8 +1474,8 @@ int Replace(XCHAR chOld, XCHAR chNew);
 
 |Определенная константа|Символьный тип данных|
 |----------------------|-------------------------|
-|_UNICODE|Расширенные символы|
-|_MBCS|Многобайтовые символы|
+|`_UNICODE`|Расширенные символы|
+|`_MBCS`|Многобайтовые символы|
 |Нет|Однобайтовые символы|
 |Оба|Не определено.|
 
@@ -1484,24 +1483,24 @@ int Replace(XCHAR chOld, XCHAR chNew);
 
 [!code-cpp[NVC_ATLMFC_Utilities#200](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_33.cpp)]
 
-## <a name="cstringtreversefind"></a><a name="reversefind"></a> CStringT:: Реверсефинд
+## <a name="cstringtreversefind"></a><a name="reversefind"></a> `CStringT::ReverseFind`
 
-Поиск `CStringT` последнего совпадения символа в этом объекте.
+Поиск **`CStringT`** последнего совпадения символа в этом объекте.
 
-```
+```cpp
 int ReverseFind(XCHAR ch) const throw();
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*канал*<br/>
+*`ch`*\
 Искомый символ.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Отсчитываемый от нуля индекс последнего символа в этом `CStringT` объекте, соответствующего запрошенному символу, или значение-1, если символ не найден.
+Отсчитываемый от нуля индекс последнего символа в этом **`CStringT`** объекте, соответствующего запрошенному символу, или значение-1, если символ не найден.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Функция аналогична функции времени выполнения `strrchr` .
 
@@ -1509,53 +1508,53 @@ int ReverseFind(XCHAR ch) const throw();
 
 [!code-cpp[NVC_ATLMFC_Utilities#130](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_34.cpp)]
 
-## <a name="cstringtright"></a><a name="right"></a> CStringT:: right
+## <a name="cstringtright"></a><a name="right"></a> `CStringT::Right`
 
-Извлекает последние (то есть самые правые) *нкаунт* символы из этого `CStringT` объекта и возвращает копию извлеченной подстроки.
+Извлекает последние (то есть самые правые) *`nCount`* символы из этого **`CStringT`** объекта и возвращает копию извлеченной подстроки.
 
-```
+```cpp
 CStringT Right(int nCount) const;
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*нкаунт*<br/>
-Число символов, извлекаемых из данного объекта `CStringT`.
+*`nCount`*\
+Число символов, извлекаемых из этого **`CStringT`** объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Объект `CStringT`, содержащий копию указанного диапазона символов. Обратите внимание, что возвращаемый `CStringT` объект может быть пустым.
+**`CStringT`** Объект, содержащий копию указанного диапазона символов. Возвращаемый **`CStringT`** объект может быть пустым.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
-Если *нкаунт* превышает длину строки, извлекается вся строка. `Right` функция аналогична базовой `Right` функции (за исключением того, что индексы в Basic отсчитываются от нуля).
+Если *`nCount`* превышает длину строки, извлекается вся строка. `Right` функция аналогична базовой `Right` функции (за исключением того, что индексы в Basic отсчитываются от нуля).
 
-Для многобайтовых кодировок (MBCS) *нкаунт* ссылается на каждый 8-разрядный символ; Таким образом, ведущий и младший байт в одном многобайтном символе считаются двумя символами.
+Для многобайтовых кодировок (MBCS) *`nCount`* ссылается на каждый 8-разрядный символ, т. е. ведущий и младший байт в одном многобайтовой кодировке считаются двумя символами.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATLMFC_Utilities#131](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_35.cpp)]
 
-## <a name="cstringtsetsysstring"></a><a name="setsysstring"></a> CStringT:: Сетсисстринг
+## <a name="cstringtsetsysstring"></a><a name="setsysstring"></a> `CStringT::SetSysString`
 
-Перераспределяет BSTR, на который указывает *пбстр* , и копирует в `CStringT` него содержимое объекта, включая символ null.
+Перераспределяет объект, **`BSTR`** на который указывает, *`pbstr`* и копирует в него содержимое **`CStringT`** объекта, включая символ null.
 
-```
+```cpp
 BSTR SetSysString(BSTR* pbstr) const;
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*пбстр*<br/>
+*`pbstr`*\
 Указатель на символьную строку.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Новая строка.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
-В зависимости от содержимого `CStringT` объекта значение BSTR, на которое ссылается *пбстр* , может измениться. Функция вызывает исключение, `CMemoryException` если недостаточно памяти.
+В зависимости от содержимого **`CStringT`** объекта значение, на **`BSTR`** которое ссылается объект, *`pbstr`* может измениться. Функция вызывает исключение, `CMemoryException` если недостаточно памяти.
 
 Эта функция обычно используется для изменения значения строк, передаваемых по ссылке для службы автоматизации.
 
@@ -1563,49 +1562,49 @@ BSTR SetSysString(BSTR* pbstr) const;
 
 [!code-cpp[NVC_ATLMFC_Utilities#132](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_36.cpp)]
 
-## <a name="cstringtspanexcluding"></a><a name="spanexcluding"></a> CStringT:: Спанексклудинг
+## <a name="cstringtspanexcluding"></a><a name="spanexcluding"></a> `CStringT::SpanExcluding`
 
-Извлекает из строки символы, начиная с первого символа, которые не входят в набор символов, определяемых параметром *псзчарсет*.
+Извлекает из строки символы, начиная с первого символа, которые не входят в набор символов, определяемый параметром *`pszCharSet`* .
 
-```
+```cpp
 CStringT SpanExcluding(PCXSTR pszCharSet) const;
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*псзчарсет*<br/>
+*`pszCharSet`*\
 Строка, интерпретируемая как набор символов.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Подстрока, содержащая символы в строке, которые не находятся в *псзчарсет*, начиная с первого символа в строке и заканчивая первым символом в строке, который также находится в *псзчарсет* (т. е. Начиная с первого символа в строке и до, но исключая первый символ в строке, найденной *псзчарсет*). Он возвращает всю строку, если в строке не найден символ *псзчарсет* .
+Подстрока, содержащая символы в строке, не содержащиеся в *`pszCharSet`* , начиная с первого символа в строке и заканчивая первым символом в строке, который также находится в (т. е. *`pszCharSet`* начиная с первого символа в строке и до, но исключая первый символ в найденной строке *`pszCharSet`* ). Он возвращает всю строку, если *`pszCharSet`* в строке не найден символ.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
-`SpanExcluding` Извлекает и возвращает все символы, предшествующие первому вхождению символа из *псзчарсет* (иными словами, символ из *псзчарсет* и все символы, следующие за ним в строке, не возвращаются). Если в строке не найден символ из *псзчарсет* , `SpanExcluding` возвращается вся строка.
+`SpanExcluding` Извлекает и возвращает все символы перед первым вхождением символа из *`pszCharSet`* (иными словами, символ из *`pszCharSet`* и все символы, следующие за ним в строке, не возвращаются). Если *`pszCharSet`* в строке не найден символ, `SpanExcluding` возвращается вся строка.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATLMFC_Utilities#133](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_37.cpp)]
 
-## <a name="cstringtspanincluding"></a><a name="spanincluding"></a> CStringT:: Спанинклудинг
+## <a name="cstringtspanincluding"></a><a name="spanincluding"></a> `CStringT::SpanIncluding`
 
-Извлекает из строки символы, начиная с первого символа, которые находятся в наборе символов, определяемых параметром *псзчарсет*.
+Извлекает из строки символы, начиная с первого символа, которые находятся в наборе символов, определяемых параметром *`pszCharSet`* .
 
-```
+```cpp
 CStringT SpanIncluding(PCXSTR pszCharSet) const;
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*псзчарсет*<br/>
+*`pszCharSet`*\
 Строка, интерпретируемая как набор символов.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Подстрока, содержащая символы в строке, находящиеся в *псзчарсет*, начиная с первого символа в строке и заканчивая при обнаружении символа в строке, которая не находится в *псзчарсет*. `SpanIncluding` Возвращает пустую подстроку, если первый символ в строке отсутствует в указанном наборе.
+Подстрока, содержащая символы в строке, *`pszCharSet`* начиная с первого символа в строке и заканчивая при обнаружении символа в строке, не содержащейся в *`pszCharSet`* . `SpanIncluding` Возвращает пустую подстроку, если первый символ в строке отсутствует в указанном наборе.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Если первый символ строки не находится в кодировке, `SpanIncluding` возвращается пустая строка. В противном случае возвращается последовательность последовательных символов, находящиеся в наборе.
 
@@ -1613,37 +1612,37 @@ CStringT SpanIncluding(PCXSTR pszCharSet) const;
 
 [!code-cpp[NVC_ATLMFC_Utilities#134](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_38.cpp)]
 
-## <a name="cstringttokenize"></a><a name="tokenize"></a> CStringT:: маркировка
+## <a name="cstringttokenize"></a><a name="tokenize"></a> `CStringT::Tokenize`
 
 Находит следующий токен в целевой строке
 
-```
+```cpp
 CStringT Tokenize(PCXSTR pszTokens, int& iStart) const;
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*псзтокенс*<br/>
+*`pszTokens`*\
 Строка, содержащая разделители токенов. Порядок этих разделителей не важен.
 
-*истарт*<br/>
+*`iStart`*\
 Отсчитываемый от нуля индекс, с которого начинается поиск.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`CStringT`Объект, содержащий текущее значение токена.
+**`CStringT`** Объект, содержащий текущее значение токена.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
-`Tokenize`Функция находит следующий токен в целевой строке. Набор символов в *псзтокенс* указывает возможные разделители для найденных токенов. При каждом вызове `Tokenize` функции начинается с *истарт*, пропускает начальные разделители и возвращает `CStringT` объект, содержащий текущий токен, который представляет собой строку символов вплоть до следующего символа-разделителя. Значение *истарт* обновляется до позиции, следующей за завершающим символом-разделителем, или – 1, если достигнут конец строки. Дополнительные токены могут быть разбиты из оставшейся части целевой строки на последовательность вызовов `Tokenize` , используя *истарт* для наблюдения за тем, где в строке находится следующий токен для считывания. Если больше нет токенов, функция возвратит пустую строку, а для *истарт* будет задано значение-1.
+`Tokenize`Функция находит следующий токен в целевой строке. Набор символов в *псзтокенс* указывает возможные разделители для найденных токенов. При каждом вызове `Tokenize` функции начинается с *`iStart`* , пропускает начальные разделители и возвращает **`CStringT`** объект, содержащий текущий токен, который представляет собой строку символов вплоть до следующего символа-разделителя. Значение *`iStart`* обновляется до позиции, следующей за завершающим символом-разделителем, или – 1, если достигнут конец строки. Дополнительные токены могут быть разбиты из оставшейся части целевой строки на последовательность вызовов `Tokenize` , используя для наблюдения за *`iStart`* тем, где в строке находится следующий токен для считывания. Если маркеров больше нет, функция возвратит пустую строку и *`iStart`* будет иметь значение-1.
 
-В отличие от таких функций CRT, как [strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l](../../c-runtime-library/reference/strtok-s-strtok-s-l-wcstok-s-wcstok-s-l-mbstok-s-mbstok-s-l.md), не `Tokenize` изменяет целевую строку.
+В отличие от функций CRT, таких как [`strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l`](../../c-runtime-library/reference/strtok-s-strtok-s-l-wcstok-s-wcstok-s-l-mbstok-s-mbstok-s-l.md) , `Tokenize` не изменяет целевую строку.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATLMFC_Utilities#135](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_39.cpp)]
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Выходные данные этого примера выглядят следующим образом:
 
@@ -1653,11 +1652,11 @@ Resulting Token: Second
 Resulting Token: Third
 ```
 
-## <a name="cstringttrim"></a><a name="trim"></a> CStringT:: Trim
+## <a name="cstringttrim"></a><a name="trim"></a> `CStringT::Trim`
 
 Обрезает начальные и конечные символы из строки.
 
-```
+```cpp
 CStringT& Trim(XCHAR chTarget);
 CStringT& Trim(PCXSTR pszTargets);
 CStringT& Trim();
@@ -1665,23 +1664,23 @@ CStringT& Trim();
 
 ### <a name="parameters"></a>Параметры
 
-*чтаржет*<br/>
+*`chTarget`*\
 Целевой символ для усечения.
 
-*псзтаржетс*<br/>
-Указатель на строку, содержащую целевые символы для усечения. Все начальные и конечные вхождения символов в *псзтаржет* будут обрезаны из `CStringT` объекта.
+*`pszTargets`*\
+Указатель на строку, содержащую целевые символы для усечения. Все начальные и конечные вхождения символов в *`pszTargets`* будут обрезаны из **`CStringT`** объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Возвращает обрезанную строку.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Удаляет все начальные и конечные вхождения одного из следующих элементов:
 
-- Символ, указанный параметром *чтаржет*.
+- Символ, заданный параметром *`chTarget`* .
 
-- Все символы, найденные в строке, указанной параметром *псзтаржетс*.
+- Все символы, найденные в строке, указанной параметром *`pszTargets`* .
 
 - Бель.
 
@@ -1689,7 +1688,7 @@ CStringT& Trim();
 
 [!code-cpp[NVC_ATLMFC_Utilities#136](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_40.cpp)]
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Выходные данные этого примера выглядят следующим образом:
 
@@ -1698,11 +1697,11 @@ Before: "******Soccer is best, but liquor is quicker!!!!!"
 After : "Soccer is best, but liquor is quicker"
 ```
 
-## <a name="cstringttrimleft"></a><a name="trimleft"></a> CStringT:: Тримлефт
+## <a name="cstringttrimleft"></a><a name="trimleft"></a> `CStringT::TrimLeft`
 
 Обрезает начальные символы из строки.
 
-```
+```cpp
 CStringT& TrimLeft(XCHAR chTarget);
 CStringT& TrimLeft(PCXSTR pszTargets);
 CStringT& TrimLeft();
@@ -1710,23 +1709,23 @@ CStringT& TrimLeft();
 
 ### <a name="parameters"></a>Параметры
 
-*чтаржет*<br/>
+*`chTarget`*\
 Целевой символ для усечения.
 
-*псзтаржетс*<br/>
-Указатель на строку, содержащую целевые символы для усечения. Все ведущие экземпляры символов в *псзтаржет* будут обрезаны из `CStringT` объекта.
+*`pszTargets`*\
+Указатель на строку, содержащую целевые символы для усечения. Все ведущие вхождения символов в *`pszTargets`* будут обрезаны из **`CStringT`** объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Результирующая усеченная строка.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Удаляет все начальные и конечные вхождения одного из следующих элементов:
 
-- Символ, указанный параметром *чтаржет*.
+- Символ, заданный параметром *`chTarget`* .
 
-- Все символы, найденные в строке, указанной параметром *псзтаржетс*.
+- Все символы, найденные в строке, указанной параметром *`pszTargets`* .
 
 - Бель.
 
@@ -1734,11 +1733,11 @@ CStringT& TrimLeft();
 
 [!code-cpp[NVC_ATLMFC_Utilities#137](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_41.cpp)]
 
-## <a name="cstringttrimright"></a><a name="trimright"></a> CStringT:: Тримригхт
+## <a name="cstringttrimright"></a><a name="trimright"></a> `CStringT::TrimRight`
 
 Обрезает конечные символы из строки.
 
-```
+```cpp
 CStringT& TrimRight(XCHAR chTarget);
 CStringT& TrimRight(PCXSTR pszTargets);
 CStringT& TrimRight();
@@ -1746,40 +1745,38 @@ CStringT& TrimRight();
 
 ### <a name="parameters"></a>Параметры
 
-*чтаржет*<br/>
+*`chTarget`*\
 Целевой символ для усечения.
 
-*псзтаржетс*<br/>
-Указатель на строку, содержащую целевые символы для усечения. Все конечные вхождения символов в *псзтаржет* будут обрезаны из `CStringT` объекта.
+*`pszTargets`*\
+Указатель на строку, содержащую целевые символы для усечения. Все завершающие вхождения символов в *`pszTargets`* будут обрезаны из **`CStringT`** объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает `CStringT` объект, содержащий обрезанную строку.
+Возвращает **`CStringT`** объект, содержащий обрезанную строку.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Комментарии
 
 Удаляет конечные вхождения одного из следующих элементов:
 
-- Символ, указанный параметром *чтаржет*.
+- Символ, заданный параметром *`chTarget`* .
 
-- Все символы, найденные в строке, указанной параметром *псзтаржетс*.
+- Все символы, найденные в строке, указанной параметром *`pszTargets`* .
 
 - Бель.
 
-`CStringT& TrimRight(XCHAR chTarget)`Версия принимает один символьный параметр и удаляет все копии этого символа из конца `CStringT` строковых данных. Он начинается с конца строки и работает в направлении к началу. Она останавливается при обнаружении другого символа или при `CSTringT` нехватке символьных данных.
+`CStringT& TrimRight(XCHAR chTarget)`Версия принимает один символьный параметр и удаляет все копии этого символа из конца **`CStringT`** строковых данных. Он начинается с конца строки и работает в направлении к началу. Она останавливается при обнаружении другого символа или при **`CStringT`** нехватке символьных данных.
 
-`CStringT& TrimRight(PCXSTR pszTargets)`Версия принимает строку, завершающуюся нулем, которая содержит все различные символы для поиска. Он удаляет все копии этих символов в `CStringT` объекте. Он начинается в конце строки и работает в направлении к началу. Он останавливается при обнаружении символа, не находящейся в целевой строке, или при `CStringT` отсутствии символьных данных. Он не пытается сопоставить всю целевую строку с подстрокой в конце `CStringT` .
+`CStringT& TrimRight(PCXSTR pszTargets)`Версия принимает строку, завершающуюся нулем, которая содержит все различные символы для поиска. Он удаляет все копии этих символов в **`CStringT`** объекте. Он начинается в конце строки и работает в направлении к началу. Она останавливается при обнаружении символа, не находящейся в целевой строке, или при **`CStringT`** отсутствии символьных данных. Он не пытается сопоставить всю целевую строку с подстрокой в конце **`CStringT`** .
 
-Для `CStringT& TrimRight()` версии не требуются параметры. Все конечные пробелы в конце строки обрезаются `CStringT` . Символы пробела могут быть разрывами строк, пробелами или символами табуляции.
-
--
+Для `CStringT& TrimRight()` версии не требуются параметры. Все конечные пробелы в конце строки обрезаются **`CStringT`** . Символы пробела могут быть разрывами строк, пробелами или символами табуляции.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATLMFC_Utilities#138](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_42.cpp)]
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
-[Иерархическая диаграмма](../../mfc/hierarchy-chart.md)<br/>
-[Общие классы ATL и MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)<br/>
+[Иерархическая диаграмма](../../mfc/hierarchy-chart.md)\
+[Общие классы ATL и MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)\
 [Класс Ксимплестрингт](../../atl-mfc-shared/reference/csimplestringt-class.md)
