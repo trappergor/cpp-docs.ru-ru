@@ -21,9 +21,9 @@ ms.locfileid: "81320303"
 
 ### <a name="to-fix-this-error-try-the-following-possible-solutions"></a>Чтобы устранить эту проблему, попробуйте следующие возможные решения
 
-1. Если компилятор также выдает ошибки [C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md) и [C3859,](../../error-messages/compiler-errors-2/compiler-error-c3859.md)используйте опцию компилятора [/M,](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) чтобы снизить лимит распределения памяти. Если уменьшить распределение оставшейся памяти, в куче останется больше места для вашего приложения.
+1. Если компилятор также выдает ошибки [C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md) и [C3859,](../../error-messages/compiler-errors-2/compiler-error-c3859.md)используйте опцию компилятора [/Zm,](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) чтобы снизить лимит распределения памяти. Если уменьшить распределение оставшейся памяти, в куче останется больше места для вашего приложения.
 
-   Если опция [/Зм](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) уже установлена, попробуйте удалить его. Место в куче может быть исчерпано из-за того, что предел распределения памяти, заданный с помощью этого параметра, слишком велик. Компилятор использует лимит по умолчанию, если вы удалите опцию [/ ММ.](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md)
+   Если опция [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) уже установлена, попробуйте удалить его. Место в куче может быть исчерпано из-за того, что предел распределения памяти, заданный с помощью этого параметра, слишком велик. Компилятор использует лимит по умолчанию, если вы удалите опцию [/Zm.](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md)
 
 1. Если компиляция происходит на 64-разрядной платформе, используйте 64-разрядный набор средств компиляции. Для получения информации [см. Как: Включить 64-битный визуальный набор c ' на командной строке](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md).
 
