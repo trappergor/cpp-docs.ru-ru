@@ -1,32 +1,33 @@
 ---
 title: __raise
-ms.date: 11/04/2016
+description: Узнайте, как использовать ключевое слово расширения Microsoft C++ `__raise` для обработки собственных событий.
+ms.date: 11/20/2020
 f1_keywords:
 - __raise
 - __raise_cpp
 helpviewer_keywords:
 - __raise keyword [C++]
-ms.assetid: 6f1ae418-5f0f-48b6-9f6e-8ea7e66b239a
-ms.openlocfilehash: db6ba1693e4d3144b95530646b061e9cd7a58a5a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c9df602803062bc51b8c0cee13f17263cdc91786
+ms.sourcegitcommit: b02c61667ff7f38e7add266d0aabd8463f2dbfa1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227131"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95483154"
 ---
-# <a name="__raise"></a>__raise
+# <a name="__raise-keyword"></a>`__raise` This
 
 Выделяет место вызова события.
 
+> [!NOTE]
+> Атрибуты событий в машинном коде C++ несовместимы со стандартным C++. Они не компилируются при указании [`/permissive-`](../build/reference/permissive-standards-conformance.md) режима соответствия.
+
 ## <a name="syntax"></a>Синтаксис
 
-```
-__raise method-declarator;
-```
+> **`__raise`** *`method-declarator`* **`;`**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
 
-Событие из управляемого кода можно вызвать только в пределах класса, где оно определено. Дополнительные сведения см. в описании [события](../extensions/event-cpp-component-extensions.md) .
+Из управляемого кода событие может быть вызвано только из класса, в котором он определен. Дополнительные сведения см. в разделе [`event`](../extensions/event-cpp-component-extensions.md).
 
 Ключевое слово **`__raise`** вызывает ошибку при вызове события, не являющегося событием.
 
@@ -59,8 +60,11 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
-[Ключевые слова](../cpp/keywords-cpp.md)<br/>
-[Обработка событий](../cpp/event-handling.md)<br/>
-[Расширения компонентов для платформ среды выполнения](../extensions/component-extensions-for-runtime-platforms.md)
+[Словами](../cpp/keywords-cpp.md)\
+[Обработка событий](../cpp/event-handling.md)\
+[`__event`](../cpp/event.md)\
+[`__hook`](../cpp/hook.md)\
+[`__unhook`](../cpp/unhook.md)\
+[Расширения компонентов для .NET и UWP](../extensions/component-extensions-for-runtime-platforms.md)
